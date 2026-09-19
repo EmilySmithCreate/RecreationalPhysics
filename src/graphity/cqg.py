@@ -42,8 +42,8 @@ ASSUMPTION Q4 (move): bipartite edge switch (u1,v1),(u2,v2) -> (u1,v2),(u2,v1).
   [NB99]. Ergodicity inside the constrained space is NOT established (O2).
   Connectedness is not enforced.
 
-ASSUMPTION Q5 (start state): an L x L periodic square lattice, L even and
-  >= 6, melted by running at infinite temperature. Ours.
+ASSUMPTION Q5 (start state): an lx x ly periodic square lattice, both sides
+  even and >= 6, melted by running at infinite temperature. Ours.
 """
 import numpy as np
 from numba import njit
@@ -53,18 +53,27 @@ MAX_CODEGREE = 2   # no K_{2,3}                                  (Q2)
 ENERGY_PER_SQUARE = 16.0   # H = 16 (N - S)                      (Q1)
 
 
-def torus(side: int):
-    """Adjacency (N,4) and bipartition (0/1 per vertex) of the L x L torus."""
-    if side % 2 or side < 6:
-        raise ValueError("side must be even and >= 6 (the 4x4 torus is the 4-cube, see Q3)")
-    n = side * side
+def torus(lx: int, ly: int = None):
+    """Adjacency (N,4) and bipartition (0/1 per vertex) of the lx x ly torus.
+
+    torus(L) is the L x L torus. Both sides must be even, so that the lattice is
+    bipartite, and >= 6: a side of 4 closes a 4-cycle around the torus, which puts
+    three squares on half the edges and breaks the cap (checked by brute force:
+    4 x 6 has S = 1.25 N). The 4 x 4 case is the 4-cube of Q3.
+    """
+    if ly is None:
+        ly = lx
+    if lx % 2 or ly % 2 or min(lx, ly) < 6:
+        raise ValueError("both sides must be even and >= 6 (a side of 4 wraps into extra "
+                         "squares; the 4x4 torus is the 4-cube, see Q3)")
+    n = lx * ly
     adj = np.empty((n, 4), dtype=np.int64)
     part = np.empty(n, dtype=np.int64)
-    for x in range(side):
-        for y in range(side):
-            i = x * side + y
-            adj[i] = [((x + 1) % side) * side + y, ((x - 1) % side) * side + y,
-                      x * side + (y + 1) % side, x * side + (y - 1) % side]
+    for x in range(lx):
+        for y in range(ly):
+            i = x * ly + y
+            adj[i] = [((x + 1) % lx) * ly + y, ((x - 1) % lx) * ly + y,
+                      x * ly + (y + 1) % ly, x * ly + (y - 1) % ly]
             part[i] = (x + y) % 2
     return adj, part
 

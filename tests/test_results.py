@@ -106,3 +106,34 @@ def test_unknown_heat_start_is_rejected(tmp_path):
     _, path = tiny_config(tmp_path, heat_start="hexagons")
     with pytest.raises(ValueError):
         load_runner().main(path, tmp_path)
+
+
+def test_runner_accepts_a_rectangle(tmp_path):
+    cfg, path = tiny_config(tmp_path, seed_scheme="independent")
+    cfg["sides"] = [[8, 6]]
+    path.write_text(json.dumps(cfg))
+    load_runner().main(path, tmp_path)
+    rows = read_rows(tmp_path / "tiny.csv")
+    assert {(r["N"], r["lx"], r["ly"]) for r in rows} == {("48", "8", "6")}
+
+
+def test_rectangle_is_refused_under_the_legacy_seed_scheme(tmp_path):
+    cfg, path = tiny_config(tmp_path)
+    cfg["sides"] = [[8, 6]]
+    path.write_text(json.dumps(cfg))
+    with pytest.raises(ValueError):
+        load_runner().main(path, tmp_path)
+    assert list(tmp_path.glob("*.csv*")) == []                # refused before any file was made
+
+
+def test_seed_schemes():
+    runner = load_runner()
+    legacy = dict(seed=100)
+    assert runner.seeder(legacy, 10, 0)(5) == runner.seeder(legacy, 14, 0)(1)     # the known flaw (Q7)
+
+    cfg = dict(seed=100, seed_scheme="independent")
+    seeds = {runner.seeder(cfg, entry, rep)(step)
+             for entry in (10, 14, [16, 10], [10, 16]) for rep in (0, 1) for step in range(40)}
+    assert len(seeds) == 4 * 2 * 40                            # no two alike
+    assert all(0 <= s < 2**32 for s in seeds)                  # what numba's generator accepts
+    assert runner.seeder(cfg, [16, 10], 1)(7) == runner.seeder(cfg, [16, 10], 1)(7)
