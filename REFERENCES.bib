@@ -1,0 +1,231 @@
+% Reading status is recorded in the "note" field of every entry.
+%   read-full      = read in full during this project
+%   abstract-only  = only the abstract was read
+%   unread         = found but not yet read; do not rely on it
+%   secondary      = statement confirmed through other papers quoting it
+
+@article{KMS06,
+  author  = {Konopka, Tomasz and Markopoulou, Fotini and Smolin, Lee},
+  title   = {Quantum Graphity},
+  year    = {2006},
+  eprint  = {hep-th/0611197},
+  archivePrefix = {arXiv},
+  note    = {read-full}
+}
+
+@article{KMSev08,
+  author  = {Konopka, Tomasz and Markopoulou, Fotini and Severini, Simone},
+  title   = {Quantum Graphity: a model of emergent locality},
+  journal = {Phys. Rev. D},
+  volume  = {77},
+  pages   = {104029},
+  year    = {2008},
+  eprint  = {0801.0861},
+  archivePrefix = {arXiv},
+  note    = {unread. This is where the Hamiltonian and the moves are defined in detail; reading it would settle assumptions A3 and A5.}
+}
+
+@article{K08,
+  author  = {Konopka, Tomasz},
+  title   = {Statistical Mechanics of Graphity Models},
+  journal = {Phys. Rev. D},
+  volume  = {78},
+  pages   = {044032},
+  year    = {2008},
+  eprint  = {0805.2283},
+  archivePrefix = {arXiv},
+  note    = {read-full. Java source "Graphity Monte Carlo" is in the arXiv source package (its ref. 29); not yet inspected; licence unknown, so not redistributed here.}
+}
+
+@article{CP12,
+  author  = {Chen, Si and Plotkin, Steven S.},
+  title   = {Statistical mechanics of graph models and their implications for emergent spacetime manifolds},
+  journal = {Phys. Rev. D},
+  volume  = {87},
+  pages   = {084011},
+  year    = {2013},
+  doi     = {10.1103/PhysRevD.87.084011},
+  eprint  = {1210.3372},
+  archivePrefix = {arXiv},
+  note    = {read-full}
+}
+
+@article{CM11,
+  author  = {Caravelli, Francesco and Markopoulou, Fotini},
+  title   = {Properties of Quantum Graphity at Low Temperature},
+  journal = {Phys. Rev. D},
+  volume  = {84},
+  pages   = {024002},
+  year    = {2011},
+  eprint  = {1008.1340},
+  archivePrefix = {arXiv},
+  note    = {abstract-only. Maps graphity onto an Ising model on the line graph of the complete graph.}
+}
+
+@article{Conrady11,
+  author  = {Conrady, Florian},
+  journal = {J. Statist. Phys.},
+  volume  = {142},
+  pages   = {898},
+  year    = {2011},
+  eprint  = {1009.3195},
+  archivePrefix = {arXiv},
+  note    = {unread. Title omitted until checked; bibliographic data as cited in CP12 ref. 14.}
+}
+
+@article{Trugenberger23,
+  author  = {Trugenberger, Carlo A.},
+  title   = {Combinatorial quantum gravity and emergent 3D quantum behaviour},
+  year    = {2023},
+  eprint  = {2311.17526},
+  archivePrefix = {arXiv},
+  note    = {read-full}
+}
+
+@article{KT19,
+  author  = {Kelly, Christy and Trugenberger, Carlo A.},
+  year    = {2018},
+  eprint  = {1811.12905},
+  archivePrefix = {arXiv},
+  note    = {read-full. Title to be filled in from the arXiv record.}
+}
+
+@article{WG15,
+  author  = {Wilkinson, Samuel A. and Greentree, Andrew D.},
+  title   = {Geometrogenesis under Quantum Graphity: problems with the ripening Universe},
+  year    = {2015},
+  eprint  = {1506.07588},
+  archivePrefix = {arXiv},
+  note    = {unread. Found by search on 2026-09-19. First author from the e-mail address in the search snippet; second author from memory -- VERIFY BOTH against the arXiv record.}
+}
+
+@misc{DQM25,
+  title   = {Dynamical Quantum Multigraphs},
+  year    = {2025},
+  eprint  = {2509.08296},
+  archivePrefix = {arXiv},
+  note    = {unread. Found by search on 2026-09-19 via a third-party review page; authors not yet looked up. Reported to show the transition again moving with ln N.}
+}
+
+@incollection{W99,
+  author    = {Wormald, Nicholas C.},
+  title     = {Models of random regular graphs},
+  booktitle = {Surveys in Combinatorics, 1999},
+  series    = {London Math. Soc. Lecture Note Ser.},
+  volume    = {267},
+  pages     = {239--298},
+  publisher = {Cambridge University Press},
+  year      = {1999},
+  note      = {secondary. Short-cycle theorem (Thm 2.5 per Dunfield and Thurston, arXiv:math/0502567): cycle counts of fixed length in random d-regular graphs are asymptotically independent Poisson with mean (d-1)^k/(2k). Original proofs: Bollobas (1980), Wormald (1981).}
+}
+
+@article{MWW04,
+  author  = {McKay, Brendan D. and Wormald, Nicholas C. and Wysocka, Beata},
+  title   = {Short cycles in random regular graphs},
+  journal = {Electron. J. Combin.},
+  volume  = {11},
+  number  = {1},
+  pages   = {R66},
+  year    = {2004},
+  note    = {abstract-only. Poisson behaviour persists for growing degree while (d-1)^(2g-1) = o(n). Article number R66 from memory -- verify.}
+}
+
+@article{SW99,
+  author  = {Steger, Angelika and Wormald, Nicholas C.},
+  title   = {Generating random regular graphs quickly},
+  journal = {Combinatorics, Probability and Computing},
+  volume  = {8},
+  pages   = {377--396},
+  year    = {1999},
+  note    = {secondary, as cited in K08 ref. 30; implemented by networkx.random_regular_graph.}
+}
+
+@book{NB99,
+  author    = {Newman, M. E. J. and Barkema, G. T.},
+  title     = {Monte Carlo Methods in Statistical Physics},
+  publisher = {Oxford University Press},
+  year      = {1999},
+  note      = {Standard textbook, cited by both K08 and CP12 for the Metropolis method. Relied on from general knowledge; chapter numbers quoted in the code should be checked against the book.}
+}
+
+@article{KTB19,
+  author  = {Kelly, Christy and Trugenberger, Carlo A. and Biancalana, Fabio},
+  title   = {Self-Assembly of Geometric Space from Random Graphs},
+  journal = {Class. Quantum Grav.},
+  volume  = {36},
+  number  = {12},
+  pages   = {125012},
+  year    = {2019},
+  doi     = {10.1088/1361-6382/ab1c7d},
+  eprint  = {1901.09870},
+  archivePrefix = {arXiv},
+  note    = {read-full (2026-09-19). Main numerical paper for combinatorial quantum gravity: D = 2 and D = 3, N about 200, bipartite hard-core regular graphs.}
+}
+
+@article{GV21,
+  title   = {Interacting thermofield doubles and critical behavior in random regular graphs},
+  journal = {Phys. Rev. D},
+  volume  = {103},
+  pages   = {106013},
+  year    = {2021},
+  eprint  = {2101.04072},
+  archivePrefix = {arXiv},
+  author  = {Gorsky, A. and Valba, O.},
+  note    = {abstract-only. Reports a first-order transition with hysteresis in the mean-field version of combinatorial quantum gravity with the hard-core constraint. Authorship confirmed from the reference list of T22 (its ref. 28).}
+}
+
+@article{T22,
+  author  = {Trugenberger, Carlo A.},
+  title   = {Emergent time, cosmological constant and boundary dimension at infinity in combinatorial quantum gravity},
+  journal = {JHEP},
+  volume  = {04},
+  pages   = {019},
+  year    = {2022},
+  eprint  = {2112.03778},
+  archivePrefix = {arXiv},
+  note    = {read-full (2026-09-19). N = 2000 (2D) and N = 500 (3D); states that the continuous nature of the transition still needs large-scale simulations.}
+}
+
+@article{T23,
+  author  = {Trugenberger, Carlo A.},
+  title   = {Effective de Sitter space, quantum behaviour and large-scale spectral dimension (3+1)},
+  journal = {JHEP},
+  volume  = {03},
+  pages   = {186},
+  year    = {2023},
+  eprint  = {2211.01002},
+  archivePrefix = {arXiv},
+  note    = {read-full (2026-09-19). Absolute universal time; emergent coordinate time; states that general relativity is not yet derived in the asymptotic region.}
+}
+
+@article{T24,
+  author  = {Trugenberger, Carlo A.},
+  title   = {Dark matter and dark energy in combinatorial quantum gravity},
+  year    = {2024},
+  eprint  = {2409.09385},
+  archivePrefix = {arXiv},
+  note    = {read-full (2026-09-19), arXiv v1. Dark matter as metastable allotropes of the space-time graph; topological inflation; no simulations. Journal reference not checked.}
+}
+
+@article{T25,
+  author  = {Trugenberger, Carlo A.},
+  title   = {Networks as the fundamental constituents of the universe},
+  journal = {J. Phys. Complex.},
+  volume  = {6},
+  pages   = {042001},
+  year    = {2025},
+  doi     = {10.1088/2632-072X/ae29d3},
+  eprint  = {2512.17676},
+  archivePrefix = {arXiv},
+  note    = {read-full (2026-09-19), arXiv HTML version dated 2026-04-29. Pointed out by the author of this repo; missed by our earlier searches. Corrigendum: J. Phys. Complex. 7, 029501 (2026), correcting Eqs. (49) and (51) (black-hole free energy and temperature/entropy); corrigendum itself not read. Most complete statement of the model: full Hamiltonian Eq. (22), Glauber rule Eq. (28), order-parameter curve Fig. 3 at N = 160.}
+}
+
+@article{WL01,
+  author  = {Wang, Fugao and Landau, D. P.},
+  title   = {Efficient, multiple-range random walk algorithm to calculate the density of states},
+  journal = {Phys. Rev. Lett.},
+  volume  = {86},
+  pages   = {2050},
+  year    = {2001},
+  note    = {From general knowledge; not read by us. Standard method for measuring the entropy (density of states) directly. Bibliographic details to be verified.}
+}

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geometrogenesis"
+version = "0.1.0"
+description = "Monte Carlo experiments on the order of the geometry-forming transition in graph models of emergent space"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "numba>=0.59", "networkx>=3.2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+plots = ["matplotlib>=3.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
