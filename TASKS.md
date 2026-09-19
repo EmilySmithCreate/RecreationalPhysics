@@ -4,11 +4,13 @@ Each task has an acceptance test. Do them in order; do not start a task whose pr
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).
 
-## T1. Rectangular torus  ☐
+## T1. Rectangular torus  ☑ (2026-09-19)
 
 `torus(side)` only builds L×L. Add `torus(lx, ly)` (both even). Needed because the published curve is at N = 160 (e.g. 16×10).
 
 Accept: tests for 16×10: 4-regular, bipartite, S = N, every S_e = 2, `is_valid` true.
+
+Done: `test_rectangular_torus`. Both sides must also be ≥ 6 (ASSUMPTIONS Q5). The runner takes `[lx, ly]` entries in `"sides"`, which need `"seed_scheme": "independent"` (Q7). `torus(L)` is unchanged, so `cqg_first_look` still reproduces bit for bit.
 
 ## T2. Full Hamiltonian with the λ knob  ☐
 
@@ -43,6 +45,11 @@ Accept: at λ = 0, several sizes, cooling and heating: hysteresis around the tra
 Published: N = 160, φ against log g, cooled from random and heated from the torus, no hysteresis, random-phase floor 0.126.
 
 Accept: floor 0.126 ± 0.01; heating and cooling agree within errors through the crossover; cold end above 0.9 when heated from the torus. **Human step for Emily:** open arXiv:2512.17676 Fig. 3 and compare the position of the rise by eye; record the comparison in ASSUMPTIONS section D. If the figure's axis cannot be matched, write to the author rather than guessing.
+
+Note, 2026-09-19 (the criteria above are unchanged; this records what is known about them, for the owner to decide):
+- The floor does not depend on the energy, and measurement shows it cannot tell the capped variant from the uncapped one (ASSUMPTIONS O5). Our floor is 0.120: inside ±0.01, but 5 % below 0.126. **Second human step:** find out whether the published 0.126 was measured or is the theory value 20.25/160.
+- The capped variant, known not to be the published model, already shows heating and cooling agreeing, and a chain started on the torus at low g stays above 0.9 because it is frozen there. So as written, the only criterion that tests the Hamiltonian is the by-eye position of the rise. Options: digitise the figure and put a number and a tolerance on g at φ = 0.5; run the capped variant through the gate as a control that ought to fail.
+- Check what the g on the published axis is. VISION's comparison table notes a coupling rescaled with system size ([KTB19] Sec. 3.1.1); if the axis uses it, positions cannot be compared until the convention is known.
 
 ## T4. Ergodicity check  ☐
 

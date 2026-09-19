@@ -17,7 +17,7 @@ This is a hobby project by a software engineer, not a physicist. It exists to te
 
 ## Status
 
-- **Test bed:** the 2D combinatorial quantum gravity model of Trugenberger and collaborators (`src/graphity/cqg.py`). Kernel tested; one external check passed (random-phase square density matches the published value at four sizes).
+- **Test bed:** the 2D combinatorial quantum gravity model of Trugenberger and collaborators (`src/graphity/cqg.py`). Kernel tested; one external check so far, and a partial one: the random-phase square density agrees with the published value to a few per cent at four sizes, but at the published size N = 160 it is 5 % low (0.120 against 0.126), for a reason that is understood but not yet resolved (`ASSUMPTIONS.md`, O5).
 - **Not yet done:** the published model's soft local term (the current code uses a hard cap instead), and both reproduction gates. Until the gates pass, nothing in `results/` should be read as a finding.
 - **Parked:** an earlier study on Konopka's graphity model and a "restricted menu" idea (`energy.py`, `mc.py`, `graphs.py`, `docs/parked/`). Its ground-state energy (−12.207 per node) matches the published −12.2.
 
@@ -54,7 +54,7 @@ src/graphity/graphs.py     parked: start states and menus
 scripts/                   config-driven runners
 configs/                   experiment definitions
 results/                   outputs (append-only)
-tests/                     25 tests
+tests/                     32 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 ```

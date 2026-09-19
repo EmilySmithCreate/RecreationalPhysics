@@ -6,11 +6,21 @@ Writes results/<name>.csv and .meta.json, and refuses to overwrite either (see
 graphity/results.py). phi = S/N is the order parameter (1 on the flat torus, ~0
 on a large random graph) [KTB19 Eq. (32), D = 2].
 
+Config key "sides": each entry is either L (an L x L torus) or [lx, ly].
+
 Optional config key "heat_start":
     "continue" (default)  the heating leg carries on from the cold end of the
                           cooling leg, whatever state that froze into.
     "torus"               the heating leg starts from a fresh flat torus, as in
                           the published protocol [T25 Fig. 3].
+
+Optional config key "seed_scheme" (ASSUMPTION Q7):
+    "legacy" (default)    seed + 100000 * replica + L + step. Kept so that old
+                          configs reproduce bit for bit. It reuses seeds across
+                          sizes and has no meaning for a rectangle, so [lx, ly]
+                          entries are refused under it.
+    "independent"         every (shape, replica, step) gets its own statistically
+                          independent seed. Use this for every new config.
 
 Columns phi_err and chi_err are block-bootstrap error bars and tau_int is the
 autocorrelation time in sweeps (ASSUMPTION Q6). Do not trust the error bars of a
@@ -30,21 +40,46 @@ from graphity.cqg import is_valid, run_chain, torus
 from graphity.results import ResultWriter
 
 
+def shape_of(entry):
+    """A "sides" entry is either L, meaning L x L, or a pair [lx, ly]."""
+    if isinstance(entry, int):
+        return entry, entry
+    lx, ly = entry
+    return int(lx), int(ly)
+
+
+def seeder(cfg, entry, rep):
+    """Return f(step) -> seed. Step 0 is the melt, then one step per coupling visited."""
+    scheme = cfg.get("seed_scheme", "legacy")
+    lx, ly = shape_of(entry)
+    if scheme == "legacy":
+        if not isinstance(entry, int):
+            raise ValueError('[lx, ly] entries need "seed_scheme": "independent"')
+        return lambda step: cfg["seed"] + 100000 * rep + entry + step
+    if scheme == "independent":
+        return lambda step: int(np.random.SeedSequence(
+            [cfg["seed"], lx, ly, rep, step]).generate_state(1)[0])
+    raise ValueError(f"seed_scheme must be 'legacy' or 'independent', not {scheme!r}")
+
+
 def main(path, out_dir="results"):
     cfg = json.loads(Path(path).read_text())
     heat_start = cfg.get("heat_start", "continue")
     if heat_start not in ("continue", "torus"):
         raise ValueError(f"heat_start must be 'continue' or 'torus', not {heat_start!r}")
+    for entry in cfg["sides"]:                                               # fail before any work is done
+        seeder(cfg, entry, 0)
     meta = dict(config=cfg, package=__version__, python=platform.python_version(),
                 numpy=np.__version__, numba=numba.__version__)
     with ResultWriter(cfg["name"], meta, out_dir) as out:
-        for side in cfg["sides"]:
-            n = side * side
+        for entry in cfg["sides"]:
+            lx, ly = shape_of(entry)
+            n = lx * ly
             for rep in range(cfg["replicas"]):
-                seed = cfg["seed"] + 100000 * rep + side
-                adj, part = torus(side)
+                seed_of = seeder(cfg, entry, rep)
+                adj, part = torus(lx, ly)
                 side_u = np.flatnonzero(part == 0)
-                run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed)          # hot start (Q5)
+                run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0))    # hot start (Q5)
                 gs = cfg["couplings"]
                 if heat_start == "torus":
                     legs = [("cool", gs), ("heat", gs[::-1])]
@@ -54,16 +89,17 @@ def main(path, out_dir="results"):
                 for leg, values in legs:
                     if leg == "heat" and heat_start == "torus":
                         assert is_valid(adj)                                 # check the cooled state before dropping it
-                        adj, _ = torus(side)
+                        adj, _ = torus(lx, ly)
                     for g in values:
                         k += 1
-                        s, acc = run_chain(adj, side_u, 1.0 / g, cfg["n_equil"], cfg["n_meas"], seed + k)
+                        s, acc = run_chain(adj, side_u, 1.0 / g, cfg["n_equil"], cfg["n_meas"], seed_of(k))
                         phi = s / n
-                        _, phi_err, _, var_err = block_bootstrap_mean_var(phi, seed=seed + k)
+                        _, phi_err, _, var_err = block_bootstrap_mean_var(phi, seed=seed_of(k))
                         row = dict(N=n, replica=rep, leg=leg, g=g, phi=float(phi.mean()),
                                    phi_sd=float(phi.std()), chi=float(n * phi.var()),
                                    acceptance=float(acc), phi_err=phi_err,
-                                   chi_err=n * var_err, tau_int=autocorr_time(phi))
+                                   chi_err=n * var_err, tau_int=autocorr_time(phi),
+                                   lx=lx, ly=ly)
                         out.write(row)
                         print(row, flush=True)
                 assert is_valid(adj)

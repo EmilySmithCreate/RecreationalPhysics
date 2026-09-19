@@ -42,10 +42,10 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 ## Known state (2026-09-19)
 
 - `cqg.py` implements global term + a **hard cap** of two squares per edge. The published model uses a **soft local penalty** instead ([T25] Eq. 22). The first-look results therefore test neither published case. Fixing this is task T2.
-- Hot-phase square density matches the published Poisson floor 20.25/N at four sizes. This is the only external check passed so far for `cqg.py`.
+- Hot-phase square density agrees with the published Poisson floor 20.25/N to a few per cent at four sizes. This is the only external check so far for `cqg.py`, and it is weaker than it first looked: at infinite temperature and N = 160 the code gives 0.120 against the published 0.126, because of the hard-core rule, not the cap (ASSUMPTIONS O5). Whether that is a discrepancy depends on how the published number was obtained; unresolved.
 - An apparent drift of the crossover with ln N was seen in the capped variant. Unexplained; do not cite it as a result.
 - Chains freeze at low coupling (acceptance < 1 %). Parallel tempering is task T5.
-- Ergodicity of the move set inside the constrained space is unproven (task T9).
+- Ergodicity of the move set inside the constrained space is unproven (task T4).
 
 ## Disclosure
 
