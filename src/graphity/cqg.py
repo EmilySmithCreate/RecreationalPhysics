@@ -1,71 +1,99 @@
 """2D combinatorial quantum gravity (CQG): Monte Carlo on incompressible graphs.
 
-Model, as we read it from the sources (keys in REFERENCES.bib):
+Model, as we read it from the sources (keys in REFERENCES.bib). Q1-Q3 were
+checked against the text of [T25] and [KTB19] on 2026-09-19; see ASSUMPTIONS.md.
 
 * Configuration space: 4-regular graphs on N vertices in which short cycles
   (triangles, squares, pentagons) share at most one edge ("incompressible" /
-  hard-core condition) [T22 Sec. "Combinatorial quantum gravity"; T24 Eq. (1)].
-* Energy: total Ollivier-Ricci curvature. On these graphs the edge curvature
-  is  kappa = T/2D - [1-(2+T+S)/2D]_+ - [1-(2+T+S+P)/2D]_+  [T22 Eq. (2)].
-* Simplification used in the published simulations: bipartite graphs only
-  (no triangles or pentagons can occur) [T24, text below Eq. (4); KTB19
-  Sec. 3.1.1], and no edge carrying more than 2D-2 = 2 squares [KTB19
-  Sec. 3.1.1, as we read it].
-* Weight exp(-H/g) with g the coupling, playing the role of temperature
-  [T24 Eq. (1)].
+  hard-core condition) [T25 Def. 2 and Fig. 1; T22; T24 Eq. (1)].
+* Energy: total Ollivier-Ricci curvature, H = -2D sum_i sum_{j~i} kappa(ij)
+  [T25 Eq. (21)], with edge curvature
+  kappa = T/2D - [1-(2+T+S)/2D]_+ - [1-(2+T+S+P)/2D]_+  [T25 Eq. (8)].
+* Simplification used in the published simulations: bipartite graphs only, so
+  no triangles or pentagons can occur [T25; T24; KTB19 Sec. 4].
+* Weight exp(-H/g) with g the dimensionless coupling, playing the role of
+  temperature [T25 Eq. (20)].
 
-ASSUMPTION Q1 (energy, derived by us from [T22 Eq. (2)] with D = 2, T = P = 0):
+ASSUMPTION Q1 (energy; [T25 Eqs. (8), (21)] at D = 2 with T = P = 0):
     kappa(e) = -(2 - S_e)_+ / 2,
-    H = -4 sum_i sum_{j~i} kappa(ij) = 4 sum_e (2 - S_e)_+
-      = 16 (N - S) + 4 sum_e (S_e - 2)_+ .
-  With the cap S_e <= 2 the last term vanishes and H = 16 (N - S), which
-  matches the published global term [T24 Eq. (4)] and the mean-field action
-  8ND(D-1)(1 - phi) of [KTB19 Eq. (35)] at D = 2. Checks: random graph
-  (S ~ 0) gives H = 16N; the square-lattice torus (S = N) gives H = 0.
+    H = 4 sum_e (2 - S_e)_+  =  16 (N - S) + 4 X,     X = sum_e (S_e - 2)_+ .
+  S is the number of squares, S_e the number on edge e, and X counts the
+  surplus squares on edges that carry more than two. 16 (N - S) is the "global"
+  term, 4 X the "local" one [T25 Eq. (22)]. Checks: a random graph (S ~ 0)
+  has H = 16N; the flat torus (S = N, X = 0) has H = 0; the 4-cube (N = 16,
+  S = 24, every S_e = 3, so X = 32) has H = -128 + 128 = 0, the degeneracy
+  stated in [T25].
 
-ASSUMPTION Q2 (hard-core rule, derived by us): in a bipartite graph two
-  distinct squares can share two edges only if the edges are adjacent, which
-  makes a K_{2,3}. So "incompressible" is equivalent to "no two vertices have
-  more than two common neighbours". Not yet checked against the excluded
-  subgraphs drawn in [KTB19 Fig. 2].
+THE LAMBDA FAMILY (VISION, first knob; the interpolation is ours):
+    H = 16 (N - S) + 4 lam X .
+  lam = 0   global term only. Published: first order, hypercubes [T25; GV21].
+  lam = 1   the full Ollivier curvature [T25 Eq. (22)].
+  cap = 2   edges with S_e > 2 forbidden outright, which is lam -> infinity.
+            This is the model simulated in [KTB19 Sec. 4] (Q3). X is then
+            always zero and H = 16 (N - S) whatever lam is.
 
-ASSUMPTION Q3 (why the cap matters): without the cap the 4-cube Q4 (= 4x4
-  torus) has S/N = 1.5 and S_e = 3; by Q1 its energy is 0, degenerate with the
-  flat torus. Imposing S_e <= 2 removes it, and then S <= N with equality for
-  the torus. The soft (uncapped) version of the model is parked.
+ASSUMPTION Q2 (hard-core rule): in a bipartite graph two distinct squares can
+  share two edges only if the edges are adjacent, which makes a K_{2,3}. So
+  "incompressible" is equivalent to "no two vertices have more than two common
+  neighbours". Confirmed: K_{2,3} is excluded subgraph (b) of [T25 Fig. 1].
+  Consequence used below: an edge carries at most 2D - 1 = 3 squares. (A square
+  u-v-a-b on edge (u,v) uses a common neighbour b of u and a other than v, and
+  there is at most one.) Hence "no cap" and "cap = 3" are the same thing.
 
-ASSUMPTION Q4 (move): bipartite edge switch (u1,v1),(u2,v2) -> (u1,v2),(u2,v1).
-  [KTB19 Sec. 4] says "edge switches"; details not given there. Proposal is
-  symmetric (two edges chosen uniformly; the reverse move picks the two new
-  edges with the same probability), moves leading outside the configuration
-  space are rejected, so Metropolis acceptance satisfies detailed balance
-  [NB99]. Ergodicity inside the constrained space is NOT established (O2).
-  Connectedness is not enforced.
+ASSUMPTION Q3 (the cap is optional): cap = CAP = 2 gives the [KTB19 Sec. 4]
+  model, cap = NO_CAP the space of [T25]. Without the cap the 4x4 torus, which
+  is the 4-cube, is a valid state, so torus() allows a side of 4 there.
+
+ASSUMPTION Q4 (move and acceptance): bipartite edge switch
+  (u1,v1),(u2,v2) -> (u1,v2),(u2,v1). [KTB19 Sec. 4] says "edge switches";
+  details not given there. The proposal is symmetric: two edges are chosen
+  uniformly, and the reverse move picks the two new edges with the same
+  probability. Moves leading outside the configuration space are rejected.
+  Two acceptance rules are offered, with a = exp(-dH / g):
+      Metropolis   p = min(1, a)                    [NB99]
+      Glauber      p = 1 / (1 + 1/a)                [T25 Eq. (28)]
+  Both satisfy p(dH) / p(-dH) = a, which with a symmetric proposal is detailed
+  balance, so both sample exp(-H/g); they differ only in how fast. Ergodicity
+  inside the constrained space is NOT established (O2). Connectedness is not
+  enforced.
+
+  How dH is obtained exactly. dS: squares lost are those through the removed
+  edges, squares gained those through the added ones, and no square contains
+  both removed or both added edges (it would need the other pair as well). dX:
+  S_e can change only on an edge of a lost or a gained square. Those edges are
+  listed, X is summed over the list in the new graph, the move is switched
+  back, X is summed over the same list in the old graph, and the move is
+  switched forward again. Edges absent from a graph contribute nothing.
 
 ASSUMPTION Q5 (start state): an lx x ly periodic square lattice, both sides
-  even and >= 6, melted by running at infinite temperature. Ours.
+  even and >= 6 under the cap (>= 4 without it), melted by running at infinite
+  temperature. Ours.
 """
 import numpy as np
 from numba import njit
 
-CAP = 2            # max squares per edge, 2D - 2 with D = 2   (Q3)
-MAX_CODEGREE = 2   # no K_{2,3}                                  (Q2)
-ENERGY_PER_SQUARE = 16.0   # H = 16 (N - S)                      (Q1)
+CAP = 2                    # squares allowed per edge in the capped model, 2D - 2      (Q3)
+NO_CAP = 3                 # the hard-core rule alone already stops at 2D - 1 = 3      (Q2)
+MAX_CODEGREE = 2           # no K_{2,3}                                                 (Q2)
+ENERGY_PER_SQUARE = 16.0   # global term 16 (N - S)                                     (Q1)
+ENERGY_PER_SURPLUS = 4.0   # local term 4 lam X                                         (Q1)
 
 
-def torus(lx: int, ly: int = None):
+def torus(lx: int, ly: int = None, cap: int = CAP):
     """Adjacency (N,4) and bipartition (0/1 per vertex) of the lx x ly torus.
 
     torus(L) is the L x L torus. Both sides must be even, so that the lattice is
-    bipartite, and >= 6: a side of 4 closes a 4-cycle around the torus, which puts
-    three squares on half the edges and breaks the cap (checked by brute force:
-    4 x 6 has S = 1.25 N). The 4 x 4 case is the 4-cube of Q3.
+    bipartite. Under the cap they must also be >= 6: a side of 4 closes a 4-cycle
+    around the torus, which puts three squares on half the edges (checked by brute
+    force: 4 x 6 has S = 1.25 N). Without the cap a side of 4 is allowed; the
+    4 x 4 torus is then the 4-cube of Q1.
     """
     if ly is None:
         ly = lx
-    if lx % 2 or ly % 2 or min(lx, ly) < 6:
-        raise ValueError("both sides must be even and >= 6 (a side of 4 wraps into extra "
-                         "squares; the 4x4 torus is the 4-cube, see Q3)")
+    shortest = 6 if cap < NO_CAP else 4
+    if lx % 2 or ly % 2 or min(lx, ly) < shortest:
+        raise ValueError(f"both sides must be even and >= {shortest} (under the cap a side "
+                         "of 4 wraps into extra squares; the 4x4 torus is the 4-cube, see Q3)")
     n = lx * ly
     adj = np.empty((n, 4), dtype=np.int64)
     part = np.empty(n, dtype=np.int64)
@@ -125,8 +153,29 @@ def total_squares(adj):
 
 
 @njit(cache=True)
-def is_valid(adj):
-    """4-regular, simple, codegree <= 2 everywhere, squares per edge <= CAP."""
+def surplus(adj):
+    """X = sum over edges of (S_e - 2)_+, computed from scratch."""
+    x = 0
+    for u in range(adj.shape[0]):
+        for k in range(4):
+            v = adj[u, k]
+            if v > u:
+                s_e = squares_on_edge(adj, u, v)
+                if s_e > 2:
+                    x += s_e - 2
+    return x
+
+
+@njit(cache=True)
+def hamiltonian(adj, lam):
+    """H = 16 (N - S) + 4 lam X, computed from scratch (Q1)."""
+    return (ENERGY_PER_SQUARE * (adj.shape[0] - total_squares(adj))
+            + ENERGY_PER_SURPLUS * lam * surplus(adj))
+
+
+@njit(cache=True)
+def is_valid(adj, cap=CAP):
+    """4-regular, simple, codegree <= 2 everywhere, squares per edge <= cap."""
     n = adj.shape[0]
     for u in range(n):
         for k in range(4):
@@ -136,7 +185,7 @@ def is_valid(adj):
             for m in range(k + 1, 4):
                 if adj[u, m] == v:
                     return False
-            if squares_on_edge(adj, u, v) > CAP:
+            if squares_on_edge(adj, u, v) > cap:
                 return False
             for m in range(4):          # pairs at distance two through v
                 w = adj[v, m]
@@ -154,7 +203,19 @@ def _replace(adj, u, old, new):
 
 
 @njit(cache=True)
-def _new_edge_ok(adj, p, q):
+def _switch(adj, u1, v1, u2, v2):
+    """(u1,v1),(u2,v2) -> (u1,v2),(u2,v1); each new neighbour takes the old one's slot.
+
+    _switch(adj, u1, v2, u2, v1) is the exact reverse, slots included.
+    """
+    _replace(adj, u1, v1, v2)
+    _replace(adj, v1, u1, u2)
+    _replace(adj, u2, v2, v1)
+    _replace(adj, v2, u2, u1)
+
+
+@njit(cache=True)
+def _new_edge_ok(adj, p, q, cap):
     """Constraints that adding edge (p, q) could have broken."""
     for k in range(4):
         x = adj[q, k]
@@ -163,7 +224,7 @@ def _new_edge_ok(adj, p, q):
         y = adj[p, k]
         if y != q and codegree(adj, q, y) > MAX_CODEGREE:
             return False
-    if squares_on_edge(adj, p, q) > CAP:
+    if squares_on_edge(adj, p, q) > cap:
         return False
     for i in range(4):                  # other edges of every square through (p, q)
         a = adj[q, i]
@@ -174,25 +235,76 @@ def _new_edge_ok(adj, p, q):
             if b == q:
                 continue
             if has_edge(adj, a, b):
-                if (squares_on_edge(adj, q, a) > CAP or squares_on_edge(adj, a, b) > CAP
-                        or squares_on_edge(adj, b, p) > CAP):
+                if (squares_on_edge(adj, q, a) > cap or squares_on_edge(adj, a, b) > cap
+                        or squares_on_edge(adj, b, p) > cap):
                     return False
     return True
 
 
 @njit(cache=True)
-def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed):
-    """Metropolis chain at coupling g = 1 / inv_g. Modifies adj in place.
+def _note_edge(edges, n, a, b):
+    """Add edge (a, b) to the first n rows of `edges` unless it is there; return the new n."""
+    lo, hi = (a, b) if a < b else (b, a)
+    for i in range(n):
+        if edges[i, 0] == lo and edges[i, 1] == hi:
+            return n
+    edges[n, 0] = lo
+    edges[n, 1] = hi
+    return n + 1
 
-    side_u : array of the vertices in one half of the bipartition.
-    Returns (squares after each measurement sweep, acceptance rate).
+
+@njit(cache=True)
+def _note_square_edges(adj, p, q, edges, n):
+    """Note (p, q) and the other three edges of every square through it."""
+    n = _note_edge(edges, n, p, q)
+    for i in range(4):
+        a = adj[q, i]
+        if a < 0 or a == p:
+            continue
+        for j in range(4):
+            b = adj[p, j]
+            if b < 0 or b == q:
+                continue
+            if has_edge(adj, a, b):
+                n = _note_edge(edges, n, q, a)
+                n = _note_edge(edges, n, a, b)
+                n = _note_edge(edges, n, b, p)
+    return n
+
+
+@njit(cache=True)
+def _surplus_on(adj, edges, n):
+    """Sum of (S_e - 2)_+ over those of the noted edges that exist in adj."""
+    x = 0
+    for i in range(n):
+        a, b = edges[i, 0], edges[i, 1]
+        if has_edge(adj, a, b):
+            s_e = squares_on_edge(adj, a, b)
+            if s_e > 2:
+                x += s_e - 2
+    return x
+
+
+@njit(cache=True)
+def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glauber=False):
+    """Markov chain at coupling g = 1 / inv_g. Modifies adj in place.
+
+    side_u  : array of the vertices in one half of the bipartition.
+    lam     : strength of the local term. Irrelevant under the cap, where X = 0.
+    cap     : CAP (2) or NO_CAP.
+    glauber : False for Metropolis, True for the rule of [T25 Eq. (28)].
+    Returns (S after each measurement sweep, X after each, acceptance rate).
     One sweep = 2N attempted switches (one per edge).
     """
     np.random.seed(seed)
     n = adj.shape[0]
     nu = side_u.shape[0]
+    track_x = cap > CAP                 # under the cap X is identically zero
+    edges = np.empty((64, 2), dtype=np.int64)   # at most 4 edges x (1 + 3 squares x 3) = 40 rows
     s = total_squares(adj)
-    out = np.zeros(n_meas, dtype=np.int64)
+    x = surplus(adj)
+    out_s = np.zeros(n_meas, dtype=np.int64)
+    out_x = np.zeros(n_meas, dtype=np.int64)
     attempted = 0
     accepted = 0
     for sweep in range(n_equil + n_meas):
@@ -204,6 +316,10 @@ def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed):
             v2 = adj[u2, np.random.randint(0, 4)]
             if u1 == u2 or v1 == v2 or has_edge(adj, u1, v2) or has_edge(adj, u2, v1):
                 continue
+            n_edges = 0
+            if track_x:                 # edges of the squares about to be lost
+                n_edges = _note_square_edges(adj, u1, v1, edges, n_edges)
+                n_edges = _note_square_edges(adj, u2, v2, edges, n_edges)
             lost = squares_on_edge(adj, u1, v1)
             _replace(adj, u1, v1, -1)
             _replace(adj, v1, u1, -1)
@@ -217,19 +333,30 @@ def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed):
             _replace(adj, v1, -1, u2)
             gained += squares_on_edge(adj, u2, v1)
             d_s = gained - lost
-            ok = _new_edge_ok(adj, u1, v2) and _new_edge_ok(adj, u2, v1)
+            d_x = 0
+            ok = _new_edge_ok(adj, u1, v2, cap) and _new_edge_ok(adj, u2, v1, cap)
+            if ok and track_x:          # the new graph is valid, so the list stays short
+                n_edges = _note_square_edges(adj, u1, v2, edges, n_edges)
+                n_edges = _note_square_edges(adj, u2, v1, edges, n_edges)
+                after = _surplus_on(adj, edges, n_edges)
+                _switch(adj, u1, v2, u2, v1)            # back to the old graph
+                before = _surplus_on(adj, edges, n_edges)
+                _switch(adj, u1, v1, u2, v2)            # forward again
+                d_x = after - before
             if ok:
-                d_h = -ENERGY_PER_SQUARE * d_s
-                if d_h > 0.0 and np.random.random() >= np.exp(-inv_g * d_h):
+                d_h = -ENERGY_PER_SQUARE * d_s + ENERGY_PER_SURPLUS * lam * d_x
+                if glauber:
+                    if np.random.random() >= 1.0 / (1.0 + np.exp(inv_g * d_h)):
+                        ok = False
+                elif d_h > 0.0 and np.random.random() >= np.exp(-inv_g * d_h):
                     ok = False
             if ok:
                 s += d_s
+                x += d_x
                 accepted += 1
             else:
-                _replace(adj, u1, v2, v1)
-                _replace(adj, v1, u2, u1)
-                _replace(adj, u2, v1, v2)
-                _replace(adj, v2, u1, u2)
+                _switch(adj, u1, v2, u2, v1)
         if sweep >= n_equil:
-            out[sweep - n_equil] = s
-    return out, accepted / max(attempted, 1)
+            out_s[sweep - n_equil] = s
+            out_x[sweep - n_equil] = x
+    return out_s, out_x, accepted / max(attempted, 1)

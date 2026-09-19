@@ -12,7 +12,7 @@ Accept: tests for 16×10: 4-regular, bipartite, S = N, every S_e = 2, `is_valid`
 
 Done: `test_rectangular_torus`. Both sides must also be ≥ 6 (ASSUMPTIONS Q5). The runner takes `[lx, ly]` entries in `"sides"`, which need `"seed_scheme": "independent"` (Q7). `torus(L)` is unchanged, so `cqg_first_look` still reproduces bit for bit.
 
-## T2. Full Hamiltonian with the λ knob  ☐
+## T2. Full Hamiltonian with the λ knob  ☑ (2026-09-19)
 
 Replace the hard cap by the soft local term (ASSUMPTIONS Q1, Q3; [T25] Eq. 22):
 
@@ -27,6 +27,11 @@ Accept:
 - Flat torus: H = 0 for every λ. Melted large graph: H ≈ 16N.
 - Incremental ΔH equals full recomputation after 10⁴ random moves at λ ∈ {0, 0.5, 1}.
 - λ = 1 with `cap=2` reproduces the existing capped results bit for bit (regression). "Bit for bit" means the eight columns of `results/cqg_first_look.csv`; newer runs carry three extra columns (`phi_err`, `chi_err`, `tau_int`). This holds across machines: checked Linux against Windows on 2026-09-19.
+
+Done. `run_chain(..., lam, cap, glauber)` now returns (S, X, acceptance), where X = Σ_e (S_e − 2)₊ is the number of surplus squares on over-full edges, so H = 16(N − S) + 4λX. Decisions taken, all in the docstring of `cqg.py`:
+- The cap was kept as an option, not removed: it is a published model ([KTB19] Sec. 4; ASSUMPTIONS Q3). `cap=2` or `NO_CAP`; in a config, `"cap": null`. "No cap" and "cap = 3" are the same thing, because the hard-core rule alone limits an edge to three squares.
+- ΔX is found as the task suggested: list the edges of every lost and gained square, sum X over the list in the new graph, switch the move back, sum over the same list in the old graph, switch forward.
+- Acceptance tests: `test_four_cube_energies`, `test_flat_torus_has_zero_energy_for_every_lambda`, `test_melted_graph_has_energy_near_16n`, `test_incremental_energy_is_exact` (λ = 0, 0.5, 1), and the regression as a permanent unit test, `test_capped_kernel_is_bit_for_bit_what_it_was`, pinned to numbers recorded before the change. The full-size regression on `cqg_first_look` was also re-run by hand. Rule 6 checks for a new kernel (networkx brute force, constraint preservation, same-seed) are in `tests/test_cqg.py`; Metropolis and Glauber are tested to agree.
 
 ## T3. Connectivity observables  ☐
 
@@ -52,6 +57,7 @@ Note, 2026-09-19 (the criteria above are unchanged; this records what is known a
 - **The figure has been digitised** (`docs/published/T25_fig3_digitised.csv`, 22 points), so "by eye" is no longer needed.
 - **Demonstrated: the written criteria do not discriminate.** The capped kernel at N = 160 passes all three (floor 0.128; heating and cooling agree to 0.001 through the crossover; 1.000 at the cold end) and still differs from the published curve by up to 0.44 on the cold side (`results/cqg_n160_capped_vs_t25fig3.csv`). On the hot side it agrees to about 0.01.
 - **Proposed replacement, NOT adopted; the owner decides.** Accept when, at λ = 1 without the cap, the largest difference from the 22 digitised points is below 0.05 (the published dots scatter by about 0.02 among themselves), using only couplings where our heating and cooling agree and τ is far below the block length. The capped kernel scores 0.44 on this and fails, as a control should. If λ = 1 fails too, stop and write to the authors: the text of [T25] does not say which model Fig. 3 shows, nor how long its runs were.
+- **Outcome, same day (exploratory; ASSUMPTIONS section D): λ = 1 fails too**, 0.41 on this criterion, with the curve smooth and in equilibrium. But the same run reproduces the *other* published N = 160 curve, [KTB19] Fig. 8a, to rms 0.005. So the kernel is not the problem; the two published figures disagree with each other (0.62 against 0.99 at g = 5). **Gate B as a reproduction of [T25] Fig. 3 cannot pass with either published variant, and the reason is not in the papers.** Decisions for the owner: (1) whether [KTB19] Fig. 8a, the gate VISION step 2 originally named, should be the λ = 1 gate instead, in which case the exploratory evidence says it would pass; (2) whether to write to the authors now, with the two digitised curves and our two runs attached, rather than after both gates as planned below. Gate A does not depend on either decision.
 
 ## T4. Ergodicity check  ☐
 
