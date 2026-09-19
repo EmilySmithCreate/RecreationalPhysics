@@ -61,7 +61,11 @@ docs/parked/               pre-registration draft of the parked menu study
 
 ## Licence
 
-Not chosen yet. Until a `LICENSE` file is added, others cannot legally reuse the code. MIT and BSD-3-Clause are the usual choices for research code.
+MIT (see [`LICENSE`](LICENSE)). Anyone may use, copy, change and share the code and the documents, for any purpose, provided the copyright notice stays with them. There is no warranty.
+
+## Contributing
+
+Pull requests are welcome from anyone. Only the owner merges into `main`. A pull request needs to pass the tests (they run automatically on every pull request) and follow the working rules in [`CLAUDE.md`](CLAUDE.md): every assumption sourced or marked "Ours", nothing in `results/` overwritten, and nothing described as a finding before its gate has passed. Contributions are accepted under the same MIT licence.
 
 ## Disclosure
 
