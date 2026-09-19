@@ -30,12 +30,14 @@ pytest
 python scripts/run_cqg_sweep.py configs/cqg_first_look.json   # about 3 minutes on a laptop
 ```
 
-Outputs: `results/<name>.csv` and `results/<name>.meta.json` (config, seeds, package versions).
+Outputs: `results/<name>.csv` and `results/<name>.meta.json` (config, seeds, package versions). A runner refuses to start if its output already exists; to run a config again, copy it under a new name. While a run is in progress its rows go to `<name>.csv.partial`, so a crash keeps what had finished.
+
+Checked on 2026-09-19: re-running `configs/cqg_first_look.json` on a second machine (Windows, numpy 2.5.3, against the original Linux, numpy 2.4.4) reproduced `results/cqg_first_look.csv` byte for byte.
 
 ## Reproducibility rules
 
 1. Every number comes from a config in `configs/` and a script in `scripts/`. No hand-edited data.
-2. Seeds live in the config. Results are append-only.
+2. Seeds live in the config. Results are append-only, and the runners enforce it (`src/graphity/results.py`).
 3. Predictions are committed (`PREREGISTRATION.md`) before the runs that test them.
 4. Whole parameter maps are published, not selected members.
 5. Pin the environment before production runs (`pip freeze > requirements.lock`) and archive tagged releases (e.g. Zenodo) for a DOI.
@@ -44,14 +46,15 @@ Outputs: `results/<name>.csv` and `results/<name>.meta.json` (config, seeds, pac
 
 ```
 src/graphity/cqg.py        2D combinatorial quantum gravity kernel (current focus)
-src/graphity/analysis.py   fluctuation measures, block bootstrap
+src/graphity/analysis.py   fluctuation measures, block bootstrap, autocorrelation time
+src/graphity/results.py    result writer that never overwrites
 src/graphity/energy.py     parked: Konopka cycle energy
 src/graphity/mc.py         parked: Konopka Monte Carlo
 src/graphity/graphs.py     parked: start states and menus
 scripts/                   config-driven runners
 configs/                   experiment definitions
 results/                   outputs (append-only)
-tests/                     12 tests
+tests/                     25 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 ```
