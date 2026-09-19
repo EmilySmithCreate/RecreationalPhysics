@@ -41,9 +41,11 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 
 ## Known state (2026-09-19)
 
-- `cqg.py` implements global term + a **hard cap** of two squares per edge. The published model uses a **soft local penalty** instead ([T25] Eq. 22). The first-look results therefore test neither published case. Fixing this is task T2.
-- Hot-phase square density agrees with the published Poisson floor 20.25/N to a few per cent at four sizes. This is the only external check so far for `cqg.py`, and it is weaker than it first looked: at infinite temperature and N = 160 the code gives 0.120 against the published 0.126, because of the hard-core rule, not the cap (ASSUMPTIONS O5). Whether that is a discrepancy depends on how the published number was obtained; unresolved.
-- An apparent drift of the crossover with ln N was seen in the capped variant. Unexplained; do not cite it as a result.
+- `cqg.py` implements global term + a **hard cap** of two squares per edge. That IS a published case: the one simulated in [KTB19] Sec. 4, Figs. 8 and 9 (ASSUMPTIONS Q3, corrected after reading the source directly). [T25] Eq. 22 describes a **soft local penalty** instead. Both are points on the λ line of VISION (cap = λ → ∞). T2 is still needed for λ = 0 and λ = 1.
+- Checked against the sources on 2026-09-19: the energy (Q1) and the hard-core rule (Q2, [T25] Fig. 1b) are read correctly. The published floor 0.126 is a theory value, so our 0.120 at N = 160 is not a discrepancy (O5).
+- External check, exploratory (ASSUMPTIONS section D): at N = 160 the capped code agrees with the digitised [T25] Fig. 3 to about 0.01 on the hot side (g ≥ 6.3) and disagrees by up to 0.44 below it, where the published curve jumps and ours rises smoothly. Ours is in equilibrium there (opposite starts agree to 0.001) and resembles the capped-model figure of [KTB19]. Probable reason: Fig. 3 shows the uncapped model. Unverified; do not call it a finding.
+- The drift of the crossover with ln N: the published N-independence turns out to be a theoretical argument, never measured, and [KTB19] Fig. 8a shows the same non-collapse. Still one replica; do not cite it as a result (T9).
+- **When reading papers, search the text; do not rely on a summary.** arXiv HTML converts to searchable text with formulas intact. Two published figures here use different log bases (natural in [KTB19] Fig. 8, base 10 in [T25] Fig. 3).
 - Chains freeze at low coupling (acceptance < 1 %). Parallel tempering is task T5.
 - Ergodicity of the move set inside the constrained space is unproven (task T4).
 

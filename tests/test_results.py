@@ -13,12 +13,31 @@ from graphity.results import ResultWriter
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def load_runner():
-    """scripts/ is not a package, so load the runner by file path."""
-    spec = importlib.util.spec_from_file_location("run_cqg_sweep", ROOT / "scripts" / "run_cqg_sweep.py")
+def load_script(name):
+    """scripts/ is not a package, so load a script by file path."""
+    spec = importlib.util.spec_from_file_location(name, ROOT / "scripts" / f"{name}.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def load_runner():
+    return load_script("run_cqg_sweep")
+
+
+def test_comparison_with_published_points(tmp_path, capsys):
+    """Matches each published point to the nearest coupling on the same leg, averaging replicas."""
+    ours = tmp_path / "ours.csv"
+    ours.write_text("leg,g,phi\ncool,10,0.30\ncool,10,0.34\ncool,5,0.60\nheat,10,0.90\n")
+    published = tmp_path / "published.csv"
+    published.write_text("series,log10_g,g,S_over_N\ncool_from_random_blue,0.996,9.9,0.31\n"
+                         "heat_from_torus_red,0.996,9.9,0.50\n")
+    load_script("compare_with_published").main(ours, published)
+    lines = capsys.readouterr().out.splitlines()
+    cool, heat = (next(l for l in lines if l.startswith(leg)).split() for leg in ("cool", "heat"))
+    assert (float(cool[2]), float(cool[4]), float(cool[6])) == (10.0, 0.32, 0.01)     # mean of 0.30 and 0.34
+    assert (float(heat[2]), float(heat[4]), float(heat[6])) == (10.0, 0.90, 0.40)     # own leg, not the cool one
+    assert lines[-1] == "largest |difference| = 0.400"
 
 
 def tiny_config(tmp_path, **extra):

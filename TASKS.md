@@ -46,10 +46,12 @@ Published: N = 160, φ against log g, cooled from random and heated from the tor
 
 Accept: floor 0.126 ± 0.01; heating and cooling agree within errors through the crossover; cold end above 0.9 when heated from the torus. **Human step for Emily:** open arXiv:2512.17676 Fig. 3 and compare the position of the rise by eye; record the comparison in ASSUMPTIONS section D. If the figure's axis cannot be matched, write to the author rather than guessing.
 
-Note, 2026-09-19 (the criteria above are unchanged; this records what is known about them, for the owner to decide):
-- The floor does not depend on the energy, and measurement shows it cannot tell the capped variant from the uncapped one (ASSUMPTIONS O5). Our floor is 0.120: inside ±0.01, but 5 % below 0.126. **Second human step:** find out whether the published 0.126 was measured or is the theory value 20.25/160.
-- The capped variant, known not to be the published model, already shows heating and cooling agreeing, and a chain started on the torus at low g stays above 0.9 because it is frozen there. So as written, the only criterion that tests the Hamiltonian is the by-eye position of the rise. Options: digitise the figure and put a number and a tolerance on g at φ = 0.5; run the capped variant through the gate as a control that ought to fail.
-- Check what the g on the published axis is. VISION's comparison table notes a coupling rescaled with system size ([KTB19] Sec. 3.1.1); if the axis uses it, positions cannot be compared until the convention is known.
+Note, 2026-09-19 (the criteria above are unchanged; this records what is known about them, for the owner to decide). Both human steps have been done from the sources; details and quotations in ASSUMPTIONS section D and O5.
+- **The 0.126 is theory, not data.** [T25] writes it as (3⁴/4)/160. The measured points of Fig. 3 sit at 0.129. Our 0.120 at infinite temperature is the correct finite-size value for the hard-core rule, which [T25] Fig. 1(b) confirms we read correctly.
+- **The axis is the plain coupling, log base 10.** The published rescaling is |V|^(1−2/D), which is no rescaling at D = 2. ([KTB19] Fig. 8a uses a *natural* log; do not mix the two.)
+- **The figure has been digitised** (`docs/published/T25_fig3_digitised.csv`, 22 points), so "by eye" is no longer needed.
+- **Demonstrated: the written criteria do not discriminate.** The capped kernel at N = 160 passes all three (floor 0.128; heating and cooling agree to 0.001 through the crossover; 1.000 at the cold end) and still differs from the published curve by up to 0.44 on the cold side (`results/cqg_n160_capped_vs_t25fig3.csv`). On the hot side it agrees to about 0.01.
+- **Proposed replacement, NOT adopted; the owner decides.** Accept when, at λ = 1 without the cap, the largest difference from the 22 digitised points is below 0.05 (the published dots scatter by about 0.02 among themselves), using only couplings where our heating and cooling agree and τ is far below the block length. The capped kernel scores 0.44 on this and fails, as a control should. If λ = 1 fails too, stop and write to the authors: the text of [T25] does not say which model Fig. 3 shows, nor how long its runs were.
 
 ## T4. Ergodicity check  ☐
 
@@ -76,6 +78,8 @@ Questions: at which λ does the order change? Is there any λ with a first-order
 ## T9. Unexplained drift  ☐
 
 The capped variant showed the half-order coupling moving with ln N (ASSUMPTIONS D). Repeat the measurement at λ = 1 with parallel tempering and several replicas. Either it disappears, or it is characterised properly (fit 1/g against ln N with errors) and compared with the N-independence stated in [T22].
+
+Note, 2026-09-19, from the sources (ASSUMPTIONS, first-look section): the N-independence in [T22] is a consequence of a continuum-limit argument in [KTB19] Sec. 3.1.1, not a measurement, and [KTB19] Fig. 8a itself shows curves for N = 100 to 200 that do not collapse, in the direction of our drift. So the thing to explain is no longer why we see a drift, but whether it is logarithmic. The prediction to test is a slope of 1 for 16/g against ln N; the first look gave 1.12 with one replica and no error bar.
 
 ## Later
 
