@@ -11,6 +11,8 @@ status of every assumption in ASSUMPTIONS.md):
           Phys. Rev. D 78, 044032 (2008), arXiv:0805.2283
   [CP12]  Chen & Plotkin, arXiv:1210.3372
   [NB99]  Newman & Barkema, "Monte Carlo Methods in Statistical Physics" (1999)
+  [S97]   Sokal, "Monte Carlo Methods in Statistical Mechanics: Foundations and
+          New Algorithms" (1997)
   [T25]   Trugenberger, "Networks as the fundamental constituents of the universe",
           J. Phys. Complex. 6, 042001 (2025), arXiv:2512.17676
   [KTB19] Kelly, Trugenberger, Biancalana, Class. Quantum Grav. 36, 125012 (2019)

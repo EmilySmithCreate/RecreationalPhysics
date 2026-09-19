@@ -26,6 +26,52 @@ def block_bootstrap(energies, beta, n_blocks=20, n_boot=500, seed=0):
             specific_heat(energies, beta), float(np.std(heats)))
 
 
+def block_bootstrap_mean_var(series, n_blocks=20, n_boot=500, seed=0):
+    """Return (mean, err_mean, var, err_var) of any correlated series.
+
+    Same method as block_bootstrap above, without the specific-heat factor
+    (ASSUMPTION Q6). The error bars can be trusted only where a block is much
+    longer than the autocorrelation time (see autocorr_time). Where the chain is
+    freezing they are UNDERESTIMATES, which would make heating and cooling look
+    more different than they are.
+    """
+    rng = np.random.default_rng(seed)
+    series = np.asarray(series, dtype=np.float64)
+    usable = len(series) - len(series) % n_blocks
+    blocks = series[:usable].reshape(n_blocks, -1)
+    means, variances = [], []
+    for _ in range(n_boot):
+        sample = blocks[rng.integers(0, n_blocks, n_blocks)].ravel()
+        means.append(sample.mean())
+        variances.append(sample.var())
+    return (float(series.mean()), float(np.std(means)),
+            float(series.var()), float(np.std(variances)))
+
+
+def autocorr_time(series, c=5.0):
+    """Integrated autocorrelation time in sweeps: tau = 1/2 + sum_{t>=1} rho(t).
+
+    rho(t) is the normalised autocorrelation of the series. Roughly, 2*tau sweeps
+    are needed for one independent sample; independent samples give tau = 0.5.
+    The sum stops at the first t >= c * tau, because beyond that the terms are
+    noise (automatic windowing [S97]; ASSUMPTION Q6). Two caveats: if the series
+    never decorrelates within its own length the value is a LOWER bound, and a
+    series that never changes (a frozen chain) has no estimate, so NaN is returned.
+    """
+    x = np.asarray(series, dtype=np.float64)
+    if x.min() == x.max():               # frozen; test the raw values, since subtracting
+        return float("nan")              # the mean leaves rounding residue, not exact zeros
+    x = x - x.mean()
+    n = len(x)
+    var = np.dot(x, x) / n
+    tau = 0.5
+    for t in range(1, n // 2):
+        tau += np.dot(x[:-t], x[t:]) / ((n - t) * var)
+        if t >= c * tau:
+            break
+    return float(tau)
+
+
 def random_menu_energy_bound(k: int, r: float, l_max: int, g_b: float = 1.0) -> float:
     """Upper bound on the TOTAL ordering energy available inside a random menu.
 

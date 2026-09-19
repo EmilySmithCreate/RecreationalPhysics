@@ -24,7 +24,7 @@ Accept:
 - Q4 (4×4 torus, N = 16, S = 24, every S_e = 3): H = 0 at λ = 1 and H = −128 at λ = 0.
 - Flat torus: H = 0 for every λ. Melted large graph: H ≈ 16N.
 - Incremental ΔH equals full recomputation after 10⁴ random moves at λ ∈ {0, 0.5, 1}.
-- λ = 1 with `cap=2` reproduces the existing capped results bit for bit (regression).
+- λ = 1 with `cap=2` reproduces the existing capped results bit for bit (regression). "Bit for bit" means the eight columns of `results/cqg_first_look.csv`; newer runs carry three extra columns (`phi_err`, `chi_err`, `tau_int`). This holds across machines: checked Linux against Windows on 2026-09-19.
 
 ## T3. Connectivity observables  ☐
 

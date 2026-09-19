@@ -5,4 +5,5 @@ __pycache__/
 *.nbi
 *.nbc
 requirements.lock.tmp
+*.partial
 .DS_Store
