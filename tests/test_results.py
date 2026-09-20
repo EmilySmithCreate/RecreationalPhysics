@@ -237,3 +237,15 @@ def test_ergodicity_script(tmp_path):
     path.write_text(json.dumps(dict(name="erg2", sizes=[7], caps=[3])))
     with pytest.raises(ValueError):
         load_script("check_ergodicity").main(path, tmp_path)
+
+
+def test_dip_census_script(tmp_path):
+    """At N = 16 and lambda = 0.5 the 4-cube is the only dip and the cheapest way out of it costs 32 (1 - lambda)."""
+    path = tmp_path / "dips.json"
+    path.write_text(json.dumps(dict(name="dips", sizes=[6, 8], lambdas=[0.5, 1.5])))
+    load_script("dip_census").main(path, tmp_path)
+    rows = read_rows(tmp_path / "dips.csv")
+    assert {r["N"] for r in rows} == {"16"} and len(rows) == 2 * 5        # n = 6 has no states and is skipped
+    dips = [r for r in rows if r["is_dip"] == "True"]
+    assert [(r["lam"], r["squares"], float(r["way_out"]), float(r["above_ground"])) for r in dips] == [
+        ("0.5", "24", 16.0, 0.0)]
