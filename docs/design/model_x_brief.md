@@ -38,7 +38,9 @@ Think of the graph as a street map. A **square** is a city block: four streets c
 | from about 1.6 to very large | folding loses, more and more heavily | the flat sheet is lowest and, at N = 18, nothing is a dip above it. Nothing new happens on the way up: folds simply get rarer. At N = 18 and g = 10 the share of the weight on folded states is 49 % at λ = 2, 17 % at 3, 3 % at 5 and 0.1 % at 10; at g = 5 it is 7 %, 1 %, 0.1 % and nil. By λ of about 5 to 10 the model is the capped one in all but name (`scripts/exact_small_averages.py`) |
 | very large | folding is forbidden outright | the "cap" of the 2019 paper |
 
-Why it is the project's first knob: the two published results sit at its two ends (abrupt without a space at 0, gradual with a space at 1), and the hypothesis needs abrupt *with* a space. The question is whether any setting gives both.
+Why it is the project's first knob: **three published models sit on this one line** (*ours*: the line, not the points). λ = 0 is the global term alone, abrupt but with no space; λ = 1 is the full curvature of [T25], a space but gradual; λ → ∞ is the hard cap of [KTB19] Sec. 4, since an infinite penalty is a prohibition. The hypothesis needs abrupt *with* a space, and the question is whether any setting gives both.
+
+Note where the design work below actually sits: **between λ = 1 and about 1.6**, which is between the full curvature and the cap, not between the first two. Below λ = 1 the knots win and the flat sheet is the state that gives way, which is claim 4 wired backwards. Above λ = 1 the flat sheet is lowest, and up to about 1.6 there are still other specific arrangements sitting in dips above it. That window is the only place in the published family where the wiring runs the right way round.
 
 ### Why reward small loops at all? (the owner's question, 2026-09-20)
 
