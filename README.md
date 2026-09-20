@@ -25,7 +25,7 @@ This is a hobby project by a software engineer, not a physicist. It exists to te
 - **Gate A passed (2026-09-20, owner's decision):** the published behaviour of the global term alone is reproduced. That is a check on our reading of the model and on the sampler, not a finding of our own.
 - **Sampler checked against exact answers (task T4):** at N = 14, 16 and 18 every state of the model has been listed (1.8 × 10¹² labelled states at N = 18), the move set joins all of them up to renaming, and the chain reproduces the exact averages. Beyond N = 18 ergodicity is unproven, as in the published work.
 - **Parallel tempering (task T5):** checked against exact answers, then used at N = 160, where it extends the range in which our curve can be trusted from g ≥ 5 down to g of about 3. The curve is smooth all the way; under the cap it is steepest and slowest near g = 2.85.
-- **Design track:** a brief for a model of X (`docs/design/`), and a first rehearsal in which a perfect flat sheet, stable for now, gives way abruptly in steps that land on exactly predicted energies, the first step a dimension curling up. It runs the wrong way round for the hypothesis (space is what gives way). **The right way round has now been seen as well, at toy size:** at λ = 1.25 a tube, with one large dimension, lasts thousands of sweeps and then opens out abruptly into a connected flat sheet, giving off exactly the energy known in advance. Sixty-four to ninety-six points, four runs each, fixed temperature; the caveats are in `ASSUMPTIONS.md`, section D.
+- **Design track:** a brief for a model of X (`docs/design/`), and a first rehearsal in which a perfect flat sheet, stable for now, gives way abruptly in steps that land on exactly predicted energies, the first step a dimension curling up. It runs the wrong way round for the hypothesis (space is what gives way). **The right way round has now been seen as well, at toy size:** at λ = 1.25 a tube, with one large dimension, lasts thousands of sweeps and then opens out abruptly into a connected flat sheet, giving off exactly the energy known in advance. Sixty-four to ninety-six points, four runs each, fixed temperature; the caveats are in `ASSUMPTIONS.md`, section D. **A prediction we then made about the mechanism was refuted:** the waiting time does not fall with size as local nucleation would require (VISION Update 9). The end state and the energy given off per vertex are unchanged at every size tried.
 - **Not yet done:** reproduction gate B (λ = 1), which cannot pass against Trugenberger (2025) Fig. 3 for the reason above; whether Kelly et al. (2019) Fig. 8a should be the gate instead is an open decision. Until it is settled, nothing in `results/` should be read as a finding.
 - **Parked:** an earlier study on Konopka's graphity model and a "restricted menu" idea (`energy.py`, `mc.py`, `graphs.py`, `docs/parked/`). Its ground-state energy (−12.207 per node) matches the published −12.2.
 
@@ -59,6 +59,7 @@ src/graphity/squares.py    the two smallest graph readers, shared by the two mod
 src/graphity/small_graphs.py  every state at the smallest sizes; can the moves reach them all? (task T4)
 src/graphity/full_curvature.py  slow exact reference for the energy with triangles and pentagons allowed
 src/graphity/tempering.py  parallel tempering: all couplings at once, graphs swapping between them (task T5)
+src/graphity/sealed.py     sealed and leaky runs: the energy given off stays in, or escapes at a chosen rate
 src/graphity/analysis.py   fluctuation measures, block bootstrap, autocorrelation time
 src/graphity/results.py    result writer that never overwrites
 src/graphity/energy.py     parked: Konopka cycle energy
@@ -67,7 +68,7 @@ src/graphity/graphs.py     parked: start states and menus
 scripts/                   config-driven runners (sweep over couplings; quench at one); exhaustive checks at the smallest sizes (ergodicity, energy dips, exact averages); digitiser and comparison for published figures
 configs/                   experiment definitions
 results/                   outputs (append-only)
-tests/                     91 tests
+tests/                     99 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 docs/design/               design brief for a model of X (VISION plan step 5); nothing built yet
