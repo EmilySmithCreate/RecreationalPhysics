@@ -120,6 +120,35 @@ The first run of the T2 kernel. Identical to the capped control above in every r
 - **How far down it can be trusted.** Four independent replicas from random starts agree to 0.002 for g ≥ 3.2 and to 0.004 at g = 3.0, with τ far below the run length. A single chain could be trusted only for g ≥ 5, so the equilibrium curve now reaches from φ = 0.57 to φ = 0.83. Below g = 3 the replicas differ by up to 0.02, τ is one to two thousand sweeps, and graphs made one round trip per replica or none in 18 000 rounds: treat those rows as approximate. The cold graphs are ordered with a few frozen-in defects.
 - **What the curve looks like.** Smooth from 0.48 to 0.96, with no jump anywhere. It is steepest near g = 2.85, where τ peaks and the fluctuation measure χ rises to 0.18 and then falls by a factor of four within one step of the ladder. Something orders there at this size. Whether that is a continuous change or a weak abrupt one cannot be told from one size and no histograms; it says where T6 should look under the cap. It is nowhere near g of 5 to 6, where [T25] Fig. 3 has its jump to 0.99: at g = 5 equilibrium is 0.574, now from two independent methods.
 
+### Has anyone already tried to falsify "continuous"? Traced to its source (2026-09-20, at the author's asking)
+
+[T25] supports its claim that the transition is continuous with two things: no hysteresis in its own Fig. 3, and
+
+> "Of course, several other diagnostics for a second order transition have been tested [29], with positive results."
+
+**Reference [29] is [KTB19]**, the 2019 paper we have read in full and whose Fig. 8a we reproduce. So the decisive evidence traces to one paper, and that paper states its own limits plainly:
+
+> "Computational runtimes have prevented us from a more complete characterisation of the classical phase (via, for instance Hausdorff dimension calculations) or of the critical behaviour of the system. A finite size scaling analysis may well help to improve matters in this regard, though **at present even such an analysis is precluded**: an examination of figure 8 at the coupling values around criticality (as obtained from figure 9) indicate that **we are some way off the asymptotic regime**." ([KTB19] Sec. 5)
+
+What [KTB19] does offer is a correlation length that shows a "divergent tendency" (its Fig. 9), which its own Sec. 4–5 calls a "reasonable indication" in D = 2.
+
+- **So the decisive test has not been attempted by anyone, and the published record says so.** Finite-size scaling, which is what distinguishes a weak first-order transition from a continuous one, is named as out of reach in the only paper carrying the evidence, and the 2025 review cites that paper without repeating the caveat.
+- **This is not a criticism of the reading, it is a statement of what is open.** Their reading may well be right. But "continuous" is an inference from one correlation-length plot at N ≈ 200, not a measurement that survived an attempt to kill it.
+- **It is also exactly the gap task T6 fills**, and we are better placed than they were: parallel tempering reaches the cold couplings a single chain could not (T5), and the exhaustive enumeration at N ≤ 18 gives a density of states a Wang-Landau sampler must reproduce exactly, which is a validation nobody in the published work had. The barrier between two humps, and how it grows with N, is the measurement neither paper made.
+
+### Why is the released energy always assumed to have somewhere to go? (2026-09-20, at the author's asking)
+
+Every calculation in [T25] and [KTB19] weights an arrangement by exp(−H/g) at a fixed g. That is the canonical ensemble, and it carries an assumption that is rarely stated: the system is in contact with an unlimited reservoir at temperature g, which absorbs any energy released and supplies any energy needed. Nobody writes it down because for ordinary physics it is true — a sample in a laboratory really does sit in a room.
+
+Three reasons it is the default, and one reason it matters here (*the first three are standard; the fourth is ours, unverified*):
+
+1. It is far easier. The partition function factorises and free energies can be computed.
+2. For most quantities and large systems the canonical and the fixed-total-energy (microcanonical) treatments agree, so the choice usually does not matter.
+3. In cosmology the expansion of space supplies the cooling, so a falling temperature is a reasonable stand-in for it. Neither paper models expansion; the coupling is simply turned by hand.
+4. **But the agreement in (2) is known to fail at exactly one place: a first-order transition.** At fixed total energy a system can sit in the coexistence region, where the two phases are both present and the released energy is visibly raising the temperature of what is left. The canonical ensemble cannot represent that state at all: it jumps across the coexistence region, and the latent heat appears only as a discontinuity, never as something the system does. So the standard choice of ensemble is blind in precisely the place VISION claims 4, 5 and 6 live.
+
+This is why the sealed machinery of Q12 is not an optional extra. It is the setting in which the question can be asked at all, and it is genuinely absent from the published work in this model family.
+
 ### Which log is the axis of [T25] Fig. 3? Re-checked, and what it shows (2026-09-20, at the author's asking)
 
 The whole "not reproduced" conclusion rests on reading the axis, labelled `log[g]`, as base 10, so it was checked again from the numbers rather than from the earlier note. Three independent ways, all agreeing:
