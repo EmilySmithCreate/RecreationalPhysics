@@ -22,9 +22,19 @@ Optional config key "seed_scheme" (ASSUMPTION Q7):
     "independent"         every (shape, replica, step) gets its own statistically
                           independent seed. Use this for every new config.
 
+Optional config keys for the model (ASSUMPTIONS Q1, Q3, Q4). The defaults are
+the model of the first look, so old configs reproduce bit for bit:
+    "cap"         2 (default): no edge may carry more than two squares, the model
+                  of [KTB19 Sec. 4]. null: no cap, the space of [T25].
+    "lambda"      strength of the local term, default 1.0. H = 16 (N - S) + 4
+                  lambda X. It has no effect under the cap, where X is zero.
+    "acceptance"  "metropolis" (default) or "glauber" [T25 Eq. (28)].
+
 Columns phi_err and chi_err are block-bootstrap error bars and tau_int is the
 autocorrelation time in sweeps (ASSUMPTION Q6). Do not trust the error bars of a
 row whose tau_int is not far below n_meas / 20, or is NaN (frozen chain).
+Column surplus is X/N, the surplus squares on over-full edges per vertex: zero
+under the cap and on a flat torus, 2 on a 4-cube. Without the cap phi can exceed 1.
 """
 import json
 import platform
@@ -36,7 +46,7 @@ import numpy as np
 
 from graphity import __version__
 from graphity.analysis import autocorr_time, block_bootstrap_mean_var
-from graphity.cqg import is_valid, run_chain, torus
+from graphity.cqg import CAP, NO_CAP, is_valid, run_chain, torus
 from graphity.results import ResultWriter
 
 
@@ -62,11 +72,23 @@ def seeder(cfg, entry, rep):
     raise ValueError(f"seed_scheme must be 'legacy' or 'independent', not {scheme!r}")
 
 
+def model_of(cfg):
+    """Return (lam, cap, glauber) from the optional model keys; the defaults are the first-look model."""
+    cap = cfg.get("cap", CAP)
+    if cap not in (CAP, None):
+        raise ValueError(f"cap must be {CAP} or null, not {cap!r}")
+    acceptance = cfg.get("acceptance", "metropolis")
+    if acceptance not in ("metropolis", "glauber"):
+        raise ValueError(f"acceptance must be 'metropolis' or 'glauber', not {acceptance!r}")
+    return float(cfg.get("lambda", 1.0)), (NO_CAP if cap is None else CAP), acceptance == "glauber"
+
+
 def main(path, out_dir="results"):
     cfg = json.loads(Path(path).read_text())
     heat_start = cfg.get("heat_start", "continue")
     if heat_start not in ("continue", "torus"):
         raise ValueError(f"heat_start must be 'continue' or 'torus', not {heat_start!r}")
+    lam, cap, glauber = model_of(cfg)
     for entry in cfg["sides"]:                                               # fail before any work is done
         seeder(cfg, entry, 0)
     meta = dict(config=cfg, package=__version__, python=platform.python_version(),
@@ -77,9 +99,9 @@ def main(path, out_dir="results"):
             n = lx * ly
             for rep in range(cfg["replicas"]):
                 seed_of = seeder(cfg, entry, rep)
-                adj, part = torus(lx, ly)
+                adj, part = torus(lx, ly, cap)
                 side_u = np.flatnonzero(part == 0)
-                run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0))    # hot start (Q5)
+                run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0), lam, cap, glauber)   # hot start (Q5)
                 gs = cfg["couplings"]
                 if heat_start == "torus":
                     legs = [("cool", gs), ("heat", gs[::-1])]
@@ -88,21 +110,23 @@ def main(path, out_dir="results"):
                 k = 0
                 for leg, values in legs:
                     if leg == "heat" and heat_start == "torus":
-                        assert is_valid(adj)                                 # check the cooled state before dropping it
-                        adj, _ = torus(lx, ly)
+                        assert is_valid(adj, cap)                            # check the cooled state before dropping it
+                        adj, _ = torus(lx, ly, cap)
                     for g in values:
                         k += 1
-                        s, acc = run_chain(adj, side_u, 1.0 / g, cfg["n_equil"], cfg["n_meas"], seed_of(k))
+                        s, x, acc = run_chain(adj, side_u, 1.0 / g, cfg["n_equil"], cfg["n_meas"],
+                                              seed_of(k), lam, cap, glauber)
                         phi = s / n
                         _, phi_err, _, var_err = block_bootstrap_mean_var(phi, seed=seed_of(k))
                         row = dict(N=n, replica=rep, leg=leg, g=g, phi=float(phi.mean()),
                                    phi_sd=float(phi.std()), chi=float(n * phi.var()),
                                    acceptance=float(acc), phi_err=phi_err,
                                    chi_err=n * var_err, tau_int=autocorr_time(phi),
-                                   lx=lx, ly=ly)
+                                   lx=lx, ly=ly, lam=lam, cap=("none" if cap == NO_CAP else cap),
+                                   surplus=float(x.mean() / n))
                         out.write(row)
                         print(row, flush=True)
-                assert is_valid(adj)
+                assert is_valid(adj, cap)
 
 
 if __name__ == "__main__":

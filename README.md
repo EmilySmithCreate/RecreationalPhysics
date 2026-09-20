@@ -18,8 +18,9 @@ This is a hobby project by a software engineer, not a physicist. It exists to te
 ## Status
 
 - **Test bed:** the 2D combinatorial quantum gravity model of Trugenberger and collaborators (`src/graphity/cqg.py`). Kernel tested. The energy, the hard-core rule and the conventions of the published figures have been checked against the text of the source papers. The code as it stands (a hard cap of two squares per edge) is the model simulated in Kelly, Trugenberger and Biancalana (2019), Sec. 4.
-- **External check so far, exploratory:** at the published size N = 160 the code agrees with the digitised points of Trugenberger (2025) Fig. 3 to about 0.01 across the hot side of the transition, and the rise starts in the same place. Below that the published curve jumps and ours rises smoothly, by up to 0.44. Ours is in equilibrium there, so the likely reason is that the figure shows the other published variant, a soft penalty instead of the cap. Details in `ASSUMPTIONS.md`, section D. This is a reading, not a finding.
-- **Not yet done:** the soft-penalty variant (task T2), and both reproduction gates. Until the gates pass, nothing in `results/` should be read as a finding.
+- **External checks so far, exploratory, at the published size N = 160:** the soft-penalty model reproduces the digitised curve of Kelly, Trugenberger and Biancalana (2019) Fig. 8a to an rms of 0.005 wherever our simulation reaches equilibrium. Neither variant reproduces the sharp jump in Trugenberger (2025) Fig. 3: both agree with it on the hot side and rise smoothly where it jumps, by up to 0.4. Since the two published figures also disagree with each other there, that is an open question for the authors. Neither variant shows any sign of a first-order transition at this size. Details in `ASSUMPTIONS.md`, section D. These are observations, not findings.
+- **Built (task T2):** the soft-penalty variant and the λ knob between the published models; the cap is now an option. See `ASSUMPTIONS.md`, section D, for what the first exploratory run of it shows.
+- **Not yet done:** both reproduction gates. Until the gates pass, nothing in `results/` should be read as a finding.
 - **Parked:** an earlier study on Konopka's graphity model and a "restricted menu" idea (`energy.py`, `mc.py`, `graphs.py`, `docs/parked/`). Its ground-state energy (−12.207 per node) matches the published −12.2.
 
 ## Run it
@@ -55,7 +56,7 @@ src/graphity/graphs.py     parked: start states and menus
 scripts/                   config-driven runners; digitiser and comparison for published figures
 configs/                   experiment definitions
 results/                   outputs (append-only)
-tests/                     33 tests
+tests/                     44 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 docs/published/            data points read off published figures (the images themselves are not kept)

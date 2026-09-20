@@ -37,7 +37,15 @@ def test_comparison_with_published_points(tmp_path, capsys):
     cool, heat = (next(l for l in lines if l.startswith(leg)).split() for leg in ("cool", "heat"))
     assert (float(cool[2]), float(cool[4]), float(cool[6])) == (10.0, 0.32, 0.01)     # mean of 0.30 and 0.34
     assert (float(heat[2]), float(heat[4]), float(heat[6])) == (10.0, 0.90, 0.40)     # own leg, not the cool one
-    assert lines[-1] == "largest |difference| = 0.400"
+    assert lines[-2] == "largest |difference| = 0.400"
+
+    # interpolation, for published grids that differ from ours: linear in ln g, points outside skipped
+    published.write_text("series,log10_g,g,S_over_N\ncool_N160,0,7.0711,0.40\ncool_N160,0,50,0.10\n"
+                         "cool_N160,0,5.5,0.55\n")
+    load_script("compare_with_published").main(ours, published, interpolate=True, g_min=6.0)
+    rows = [l.split() for l in capsys.readouterr().out.splitlines() if l.startswith("cool")]
+    assert len(rows) == 1                                   # g = 50 is outside our couplings, g = 5.5 below g_min
+    assert float(rows[0][4]) == 0.46                        # halfway in ln g between 0.60 at g = 5 and 0.32 at g = 10
 
 
 def tiny_config(tmp_path, **extra):
@@ -96,12 +104,31 @@ def test_runner_reproduces_direct_chain_calls(tmp_path):
     side_u = np.flatnonzero(part == 0)
     run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed)
     for k, row in enumerate(rows, start=1):
-        s, acc = run_chain(adj, side_u, 1.0 / float(row["g"]), cfg["n_equil"], cfg["n_meas"], seed + k)
+        s, _, acc = run_chain(adj, side_u, 1.0 / float(row["g"]), cfg["n_equil"], cfg["n_meas"], seed + k)
         phi = s / side**2
         assert float(row["phi"]) == phi.mean()
         assert float(row["chi"]) == side**2 * phi.var()
         assert float(row["acceptance"]) == acc
         assert float(row["phi_err"]) >= 0 and float(row["chi_err"]) >= 0
+        assert (row["lam"], row["cap"], float(row["surplus"])) == ("1.0", "2", 0.0)   # the defaults
+
+
+def test_runner_model_keys(tmp_path):
+    """cap: null lifts the cap, lambda and acceptance reach the kernel, and bad values are refused."""
+    cfg, path = tiny_config(tmp_path, cap=None, acceptance="glauber", seed_scheme="independent")
+    cfg["lambda"] = 0.0
+    cfg["couplings"] = [50, 3]
+    path.write_text(json.dumps(cfg))
+    load_runner().main(path, tmp_path)
+    rows = read_rows(tmp_path / "tiny.csv")
+    assert {(r["lam"], r["cap"]) for r in rows} == {("0.0", "none")}
+    cold = [r for r in rows if r["leg"] == "cool" and float(r["g"]) == 3][0]
+    assert float(cold["surplus"]) > 0            # with no cap and no penalty, over-full edges appear
+
+    for key, bad in [("cap", 3), ("acceptance", "heat-bath")]:
+        cfg2, path2 = tiny_config(tmp_path, **{key: bad})
+        with pytest.raises(ValueError):
+            load_runner().main(path2, tmp_path)
 
 
 def test_runner_refuses_a_second_run(tmp_path):

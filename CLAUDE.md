@@ -35,15 +35,16 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 
 - Python 3.10+, NumPy, Numba for inner loops (`@njit(cache=True)`), networkx only for setup and tests.
 - Graph state: `(N, degree)` int64 neighbour array; `-1` marks a temporarily empty slot during a move.
+- `cqg.run_chain` returns `(S, X, acceptance)`: squares and surplus squares after each measurement sweep. H = 16(N − S) + 4λX.
 - Monte Carlo moves must have a written detailed-balance argument in the module docstring.
 - Source keys in comments (`[T25]`, `[KTB19]`, ...) match `REFERENCES.bib`, whose `note` fields record whether each paper was read in full, abstract only, or not at all.
 - Keep modules small and readable; the owner must be able to follow every line.
 
 ## Known state (2026-09-19)
 
-- `cqg.py` implements global term + a **hard cap** of two squares per edge. That IS a published case: the one simulated in [KTB19] Sec. 4, Figs. 8 and 9 (ASSUMPTIONS Q3, corrected after reading the source directly). [T25] Eq. 22 describes a **soft local penalty** instead. Both are points on the λ line of VISION (cap = λ → ∞). T2 is still needed for λ = 0 and λ = 1.
+- `cqg.py` implements global term + a **hard cap** of two squares per edge. That IS a published case: the one simulated in [KTB19] Sec. 4, Figs. 8 and 9 (ASSUMPTIONS Q3, corrected after reading the source directly). [T25] Eq. 22 describes a **soft local penalty** instead. Both are points on the λ line of VISION (cap = λ → ∞). Since T2 the kernel does all of them: `run_chain(..., lam, cap, glauber)` with `cap=CAP` (2) or `NO_CAP`; in a config, `"cap": null`, `"lambda"`, `"acceptance"`. The defaults are the first-look model, and a unit test pins the capped path bit for bit to its pre-T2 output.
 - Checked against the sources on 2026-09-19: the energy (Q1) and the hard-core rule (Q2, [T25] Fig. 1b) are read correctly. The published floor 0.126 is a theory value, so our 0.120 at N = 160 is not a discrepancy (O5).
-- External check, exploratory (ASSUMPTIONS section D): at N = 160 the capped code agrees with the digitised [T25] Fig. 3 to about 0.01 on the hot side (g ≥ 6.3) and disagrees by up to 0.44 below it, where the published curve jumps and ours rises smoothly. Ours is in equilibrium there (opposite starts agree to 0.001) and resembles the capped-model figure of [KTB19]. Probable reason: Fig. 3 shows the uncapped model. Unverified; do not call it a finding.
+- External checks at N = 160, exploratory (ASSUMPTIONS section D). **Reproduced:** λ = 1 without the cap matches the digitised [KTB19] Fig. 8a to rms 0.005 over the 14 points where our chain equilibrates (g ≥ 4.9). **Not reproduced:** the cold-side jump of [T25] Fig. 3, by up to 0.41–0.44, with either variant; both of ours are smooth and in equilibrium there (opposite starts agree to 0.003). The two published figures conflict with each other, so this is a question for the authors, not a bug hunt. An earlier guess that Fig. 3 shows the uncapped model was tested and withdrawn. No first-order signal at this size in either variant. Do not call any of this a finding.
 - The drift of the crossover with ln N: the published N-independence turns out to be a theoretical argument, never measured, and [KTB19] Fig. 8a shows the same non-collapse. Still one replica; do not cite it as a result (T9).
 - **When reading papers, search the text; do not rely on a summary.** arXiv HTML converts to searchable text with formulas intact. Two published figures here use different log bases (natural in [KTB19] Fig. 8, base 10 in [T25] Fig. 3).
 - Chains freeze at low coupling (acceptance < 1 %). Parallel tempering is task T5.
