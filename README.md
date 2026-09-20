@@ -56,7 +56,7 @@ src/graphity/graphs.py     parked: start states and menus
 scripts/                   config-driven runners; digitiser and comparison for published figures
 configs/                   experiment definitions
 results/                   outputs (append-only)
-tests/                     44 tests
+tests/                     48 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 docs/published/            data points read off published figures (the images themselves are not kept)
