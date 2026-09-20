@@ -121,7 +121,11 @@ So the wiring the hypothesis needs (a specific arrangement, higher in F than the
 ## First experiments, cheapest first
 
 1. **Done:** the dip census at N ≤ 18.
-2. **Rehearse the measurement on the backwards reaction.** For 0 < λ < 1 start from the flat sheet and watch it fall into cubes. The energy released per converted vertex is known in advance, 8(1 − λ), so this tests our way of measuring S3 against an exact number before it is needed for real.
+2. **Done (exploratory; ASSUMPTIONS section D): the rehearsal on the backwards reaction.** For 0 < λ < 1 the flat sheet, started perfect, sits at exactly zero energy for hundreds to thousands of sweeps and then gives way abruptly. Its first step is one dimension curling up (a tube, exactly −4(1 − λ) per vertex), later steps make knots, and every plateau is an exact mixture of the rungs of the ladder, so the energy given off per converted vertex can be read off and checked: 5.92 to 5.96 against an exact 6 in the fullest conversion. Too warm, and the sheet melts into the random phase and takes energy up.
+
+   ![A flat sheet that is stable for now, giving way in exact steps](../figures/sheet_decay.png)
+
+   What it shows for the design: requirements R2 (a dip that lasts), R5 (an abrupt change with a measurable release) and the ladder of dimensions can all be seen in one run. What it lacks is the direction (space is the state that gives way) and a sealed or semi-permeable wall, without which the energy given off cannot set off anything else.
 3. **Direction A at N = 64 to 160**, once T5 exists.
 
 ## What this brief is not

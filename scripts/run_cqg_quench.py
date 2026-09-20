@@ -12,13 +12,19 @@ The paper defines neither its sweep nor the temperature of its quench, so only
 shapes and heights can be compared with it, not the clock.
 
 Config keys: name, sides, n_melt, n_sweeps, replicas, seed, and
-    "g"             the coupling quenched to. 0 means zero temperature: a switch
-                    is accepted only if it does not raise H (Metropolis only).
+    "g"             the coupling quenched to, or a list of them (each gets its own
+                    fresh start). 0 means zero temperature: a switch is accepted
+                    only if it does not raise H (Metropolis only).
+    "start"         "melt" (default): from a melted torus, as in the published
+                    quenches. "torus": from the flat torus itself, to watch a
+                    stable-for-now sheet give way (design brief, experiment 2).
     "record_every"  write every k-th sweep (default 1).
     "cap", "lambda", "acceptance", "seed_scheme": as in run_cqg_sweep.py.
-One sweep = 2N attempted switches. Seed step 0 is the melt, step 1 the quench.
+One sweep = 2N attempted switches. Seed step 0 is the melt, step 1 + i the quench
+to the i-th coupling.
 
-Columns: phi = S/N, surplus = X/N, and the connectivity numbers of ASSUMPTIONS
+Columns: phi = S/N, surplus = X/N, energy = H/N = 16 (1 - phi) + 4 lambda surplus,
+and the connectivity numbers of ASSUMPTIONS
 Q8 as they stand after that sweep (not averages): pieces, largest_frac,
 baby_frac, cube_frac.
 """
@@ -43,10 +49,12 @@ ZERO_TEMPERATURE = 1e300       # 1/g for g = 0: exp(-dH / g) underflows to exact
 def main(path, out_dir="results"):
     cfg = json.loads(Path(path).read_text())
     lam, cap, glauber = model_of(cfg)
-    g = float(cfg["g"])
-    if g < 0 or (g == 0 and glauber):
+    couplings = [float(g) for g in (cfg["g"] if isinstance(cfg["g"], list) else [cfg["g"]])]
+    if any(g < 0 or (g == 0 and glauber) for g in couplings):
         raise ValueError("g must be >= 0, and g = 0 (zero temperature) needs the Metropolis rule")
-    inv_g = ZERO_TEMPERATURE if g == 0 else 1.0 / g
+    start = cfg.get("start", "melt")
+    if start not in ("melt", "torus"):
+        raise ValueError(f"start must be 'melt' or 'torus', not {start!r}")
     every = int(cfg.get("record_every", 1))
     for entry in cfg["sides"]:                                               # fail before any work is done
         seeder(cfg, entry, 0)
@@ -58,19 +66,24 @@ def main(path, out_dir="results"):
             n = lx * ly
             for rep in range(cfg["replicas"]):
                 seed_of = seeder(cfg, entry, rep)
-                adj, part = torus(lx, ly, cap)
-                side_u = np.flatnonzero(part == 0)
-                run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0), lam, cap, glauber)   # hot start (Q5)
-                conn = np.zeros((cfg["n_sweeps"], 4), dtype=np.int64)
-                s, x, acc = run_chain(adj, side_u, inv_g, 0, cfg["n_sweeps"], seed_of(1), lam, cap, glauber, conn)
-                assert is_valid(adj, cap)
-                for i in range(every - 1, cfg["n_sweeps"], every):
-                    out.write(dict(N=n, replica=rep, sweep=i + 1, phi=float(s[i] / n), surplus=float(x[i] / n),
-                                   pieces=int(conn[i, 0]), largest_frac=float(conn[i, 1] / n),
-                                   baby_frac=float(conn[i, 2] / n), cube_frac=float(16 * conn[i, 3] / n),
-                                   lx=lx, ly=ly, lam=lam, cap=("none" if cap == NO_CAP else cap), g=g))
-                print(f"N = {n}, replica {rep}: phi {s[0] / n:.3f} -> {s[-1] / n:.3f}, "
-                      f"pieces {conn[-1, 0]}, acceptance {acc:.4f}", flush=True)
+                for i, g in enumerate(couplings):
+                    inv_g = ZERO_TEMPERATURE if g == 0 else 1.0 / g
+                    adj, part = torus(lx, ly, cap)
+                    side_u = np.flatnonzero(part == 0)
+                    if start == "melt":
+                        run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0), lam, cap, glauber)   # hot start (Q5)
+                    conn = np.zeros((cfg["n_sweeps"], 4), dtype=np.int64)
+                    s, x, acc = run_chain(adj, side_u, inv_g, 0, cfg["n_sweeps"], seed_of(1 + i), lam, cap, glauber,
+                                          conn)
+                    assert is_valid(adj, cap)
+                    for j in range(every - 1, cfg["n_sweeps"], every):
+                        out.write(dict(N=n, replica=rep, sweep=j + 1, phi=float(s[j] / n), surplus=float(x[j] / n),
+                                       pieces=int(conn[j, 0]), largest_frac=float(conn[j, 1] / n),
+                                       baby_frac=float(conn[j, 2] / n), cube_frac=float(16 * conn[j, 3] / n),
+                                       lx=lx, ly=ly, lam=lam, cap=("none" if cap == NO_CAP else cap), g=g,
+                                       energy=float(16 * (1 - s[j] / n) + 4 * lam * x[j] / n)))
+                    print(f"N = {n}, replica {rep}, g = {g}: phi {s[0] / n:.3f} -> {s[-1] / n:.3f}, "
+                          f"pieces {conn[-1, 0]}, acceptance {acc:.4f}", flush=True)
 
 
 if __name__ == "__main__":

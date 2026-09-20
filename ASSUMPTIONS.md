@@ -93,6 +93,35 @@ The first run of the T2 kernel. Identical to the capped control above in every r
 - **Unexplained, and not resolvable from the papers.** [T25] does not say which variant Fig. 3 shows, how long its runs were, or whether its points are averages. Only the authors can say. This is the case the proposed Gate B text provides for: stop and write to them.
 - **What it means for the working question, stated plainly because it is not the answer hoped for.** Neither published variant we can build shows any first-order signal at N = 160: no jump, no hysteresis between opposite starts, no growth of χ. At this size both are smooth crossovers, which is what the published "continuous" claim predicts. The one published figure that looks like a first-order jump is the one we cannot reproduce. λ = 0 (Gate A), where first order is the *published* result, is now the natural next test of the kernel and of the hypothesis.
 
+### A flat sheet that is stable for now, giving way (2026-09-20; `configs/cqg_sheet_decay_lam050.json`, `configs/cqg_sheet_decay_lam025.json`; EXPLORATORY, four replicas)
+
+Design brief, experiment 2. Below λ = 1 the flat sheet is a dip of the energy but not the lowest state (Q-ladder: tube −4(1 − λ) per vertex, 4-cubes −8(1 − λ); `test_sheet_tube_cube_ladder`, `test_which_arrangements_are_dips`). Each run starts as a perfect flat sheet at one coupling, no cap, Metropolis, 20 000 sweeps, energy per vertex recorded every 50 (`scripts/run_cqg_quench.py` with `"start": "torus"`). Figure: `docs/figures/sheet_decay.png`.
+
+| λ (levels: tube, cubes; way out of the sheet) | N | g | Runs that left the sheet, and when (sweep) | Energy per vertex over the last 2000 sweeps |
+|---|---|---|---|---|
+| 0.5 (−2, −4; 8) | 64 | 2.5 | none of 4 (one brief excursion and back) | 0 |
+| | 64 | 3.0 | 3 of 4: 5400, 11 700, 13 450 | −1.99 (one tube, one piece), −2.95, −3.36; the fourth still 0 |
+| | 64 | 3.5 | 4 of 4: 650 to 5650 | −2.94 to −3.83 |
+| | 64 | 4.0 | 4 of 4: 50 to 4300 | −2.35 to −3.72 |
+| | 144 | 2.5 | none of 4 | 0 |
+| | 144 | 3.0 | 1 of 4: 5300 | −3.30; the others 0 |
+| | 144 | 3.5 | 4 of 4: 3050 to 6200 | −2.59 to −3.42 |
+| | 144 | 4.0 | 4 of 4: 350 to 2200, **into the random phase** | +2.6 to +3.3 (energy taken up, not given off) |
+| 0.25 (−3, −6; 4) | 64 | 2.5 | 1 of 4: 3250 | −3.00 exactly (φ = 1.250, X/N = 1.00, one piece: a tube) |
+| | 64 | 3.0 | 3 of 4: 1600, 2000, 3500 | −3.75, −4.50, −5.04 |
+| | 64 | 4.0 | 4 of 4: 350 to 750 | −3.71 to −5.95 |
+| | 64 | 5.0 | 4 of 4: 50 to 150 | −4.78 to −5.83 |
+| | 144 | 2.5 | 1 of 4: 6000 | −4.05; the others 0 |
+| | 144 | 3.0 | 3 of 4: 1250, 7850, 15 300 | −3.66, −4.00, −4.56 |
+| | 144 | 4.0 | 4 of 4: 800 to 1450 | −5.30 to −5.96, in 8 or 9 pieces (N/16 = 9), 76 to 97 % in baby universes |
+| | 144 | 5.0 | 4 of 4: 100 to 250, **into the random phase** | +4.8 to +5.1 |
+
+- **Stable for now, then abrupt.** At the colder couplings the sheet survives the whole run; at intermediate ones it sits at exactly zero for hundreds to fifteen thousand sweeps and then drops within a few hundred. Runs at the same coupling leave at very different times, which is what crossing a wall by chance looks like.
+- **The first step is a dimension curling up.** Several runs stop at exactly the tube level, in one piece, with φ = 1.25 and one surplus square per vertex: one of the sheet's two large dimensions has looped in.
+- **The plateaus are exact mixtures of the rungs.** −3.75 at N = 64, λ = 0.25 is one 4-cube and a 48-vertex tube, (16·(−6) + 48·(−3))/64; −4.50 is two cubes and a 32-vertex tube; −4.00 at N = 144 is 48 vertices in cubes and 96 in tubes. So the energy given off per converted vertex can be read off and checked against a number known in advance, which was the purpose of the rehearsal. The fullest conversion, λ = 0.25, N = 144, g = 4, gives off 5.92 to 5.96 per vertex against the exact 6.
+- **What it gives way into depends on the coupling.** Cold enough, the knots; too warm, the random phase, and then energy is taken up.
+- **What this is not.** It is the mechanism of VISION claim 4 running the wrong way round: space is the state that gives way, and what it gives way to is not a space. It is at fixed temperature, so the energy given off is carried away and cannot set anything off (the design brief's "what happens to the released energy"). No waiting-time statistics should be read from four runs.
+
 ### The chain against exact averages at N = 16 and N = 18 (2026-09-20; task T4; a test of the sampler, not a physics result)
 
 Every state at these sizes is known with its energy (Q9), so ⟨S⟩ at any coupling is a finite sum. Sixteen independent chains of 8000 sweeps each, started from the 4-cube; "diff/err" is the difference from the exact value in units of the chain's own standard error.

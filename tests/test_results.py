@@ -260,3 +260,45 @@ def test_exact_small_averages_script(capsys):
     assert lines[0] == "N = 16: 5 classes, 635,040,000 labelled states"
     values = [l.split("|")[1].split() for l in lines[2:]]
     assert [v[0] for v in values] == ["1.3000", "1.3000"] and not any("cap" in l for l in lines)
+
+
+def test_tempering_runner(tmp_path):
+    """One row per coupling, hottest first, with a swap rate for every coupling but the coldest."""
+    cfg = dict(name="pt", sides=[[8, 6]], couplings=[9.0, 7.0, 5.5], n_melt=30, sweeps_per_round=2,
+               rounds_equil=10, rounds_meas=40, replicas=1, seed=11)
+    path = tmp_path / "pt.json"
+    path.write_text(json.dumps(cfg))
+    load_script("run_cqg_tempering").main(path, tmp_path)
+    rows = read_rows(tmp_path / "pt.csv")
+    assert [(r["N"], r["leg"], float(r["g"])) for r in rows] == [("48", "temper", 9.0), ("48", "temper", 7.0),
+                                                                  ("48", "temper", 5.5)]
+    assert [r["swap_rate"] == "" for r in rows] == [False, False, True]
+    assert all(0 < float(r["phi"]) < 1.2 and float(r["acceptance"]) > 0 for r in rows)
+    assert float(rows[0]["phi"]) < float(rows[2]["phi"])          # colder is more ordered
+    with pytest.raises(FileExistsError):
+        load_script("run_cqg_tempering").main(path, tmp_path)
+    cfg.update(name="pt2", couplings=[5.0, 7.0])
+    path.write_text(json.dumps(cfg))
+    with pytest.raises(ValueError):                               # coldest first
+        load_script("run_cqg_tempering").main(path, tmp_path)
+
+
+def test_quench_from_the_flat_torus_at_several_couplings(tmp_path):
+    """start = torus: every coupling gets a fresh flat sheet, whose energy is exactly 0 until something gives.
+    At lambda = 0.5 and g = 1 nothing does (the cheapest way out costs 16 lambda = 8, against g = 1)."""
+    cfg, path = quench_config(tmp_path, start="torus", **{"lambda": 0.5})
+    cfg.update(g=[1.0, 40.0], sides=[[8, 6]], n_sweeps=40)
+    path.write_text(json.dumps(cfg))
+    load_script("run_cqg_quench").main(path, tmp_path)
+    rows = read_rows(tmp_path / "tinyq.csv")
+    cold = [r for r in rows if float(r["g"]) == 1.0]
+    hot = [r for r in rows if float(r["g"]) == 40.0]
+    assert len(cold) == len(hot) == 2 * 40
+    assert all(float(r["energy"]) == 0 and float(r["phi"]) == 1 for r in cold)
+    assert float(hot[-1]["energy"]) > 5                           # melted: most squares gone
+    assert all(float(r["energy"]) == pytest.approx(16 * (1 - float(r["phi"])) + 4 * 0.5 * float(r["surplus"]))
+               for r in rows)
+    cfg2, path2 = quench_config(tmp_path, start="cubes")
+    (tmp_path / "tinyq.csv").unlink(), (tmp_path / "tinyq.meta.json").unlink()
+    with pytest.raises(ValueError):
+        load_script("run_cqg_quench").main(path2, tmp_path)
