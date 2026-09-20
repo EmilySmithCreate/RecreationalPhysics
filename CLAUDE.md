@@ -40,7 +40,7 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 - Source keys in comments (`[T25]`, `[KTB19]`, ...) match `REFERENCES.bib`, whose `note` fields record whether each paper was read in full, abstract only, or not at all.
 - Keep modules small and readable; the owner must be able to follow every line.
 
-## Known state (2026-09-19)
+## Known state (2026-09-20)
 
 - `cqg.py` implements global term + a **hard cap** of two squares per edge. That IS a published case: the one simulated in [KTB19] Sec. 4, Figs. 8 and 9 (ASSUMPTIONS Q3, corrected after reading the source directly). [T25] Eq. 22 describes a **soft local penalty** instead. Both are points on the λ line of VISION (cap = λ → ∞). Since T2 the kernel does all of them: `run_chain(..., lam, cap, glauber)` with `cap=CAP` (2) or `NO_CAP`; in a config, `"cap": null`, `"lambda"`, `"acceptance"`. The defaults are the first-look model, and a unit test pins the capped path bit for bit to its pre-T2 output.
 - Checked against the sources on 2026-09-19: the energy (Q1) and the hard-core rule (Q2, [T25] Fig. 1b) are read correctly. The published floor 0.126 is a theory value, so our 0.120 at N = 160 is not a discrepancy (O5).
@@ -48,6 +48,7 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 - The drift of the crossover with ln N: the published N-independence turns out to be a theoretical argument, never measured, and [KTB19] Fig. 8a shows the same non-collapse. Still one replica; do not cite it as a result (T9).
 - **When reading papers, search the text; do not rely on a summary.** arXiv HTML converts to searchable text with formulas intact. Two published figures here use different log bases (natural in [KTB19] Fig. 8, base 10 in [T25] Fig. 3).
 - **Never call the model's hot phase "X"** (owner's correction, 2026-09-20; VISION "What X is" and Update 5). X is a specific, relatively stable arrangement; the model's hot side is a random graph, a stand-in at best. Write "the random phase" or "the model's hot phase". What the gates test is whether geometry forms first order *out of a random phase*, which is narrower than VISION claim 4. The order of work is unchanged: reproduce the published results first.
+- λ = 0, exploratory (2026-09-20, ASSUMPTIONS section D): hysteresis loop about 2 wide in g at N = 64, 96, 160, two states about 0.85 apart in φ, cold phase shattered into baby universes (4-cubes and the 14-vertex biplane graph of Q8). Quenches reproduce [KTB19] Figs. 6 and 7 in kind (`scripts/run_cqg_quench.py`). Whether this passes Gate A is the owner's decision; do not tick it for her.
 - Chains freeze at low coupling (acceptance < 1 %). Parallel tempering is task T5.
 - Ergodicity of the move set inside the constrained space is unproven (task T4).
 
