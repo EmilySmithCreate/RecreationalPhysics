@@ -186,3 +186,39 @@ def test_seed_schemes():
     assert len(seeds) == 4 * 2 * 40                            # no two alike
     assert all(0 <= s < 2**32 for s in seeds)                  # what numba's generator accepts
     assert runner.seeder(cfg, [16, 10], 1)(7) == runner.seeder(cfg, [16, 10], 1)(7)
+
+
+def quench_config(tmp_path, **extra):
+    cfg = dict(name="tinyq", sides=[[8, 4]], g=0, n_melt=30, n_sweeps=60, replicas=2, seed=9,
+               seed_scheme="independent", cap=None, **extra)
+    cfg.setdefault("lambda", 0.0)
+    path = tmp_path / "tinyq.json"
+    path.write_text(json.dumps(cfg))
+    return cfg, path
+
+
+@pytest.mark.parametrize("lam", [0.0, 1.0])
+def test_zero_temperature_quench_never_raises_the_energy(tmp_path, lam):
+    """g = 0: a switch is accepted only if H does not go up, so H per vertex falls or stays, sweep after sweep."""
+    cfg, path = quench_config(tmp_path, **{"lambda": lam})
+    load_script("run_cqg_quench").main(path, tmp_path)
+    rows = read_rows(tmp_path / "tinyq.csv")
+    assert len(rows) == 2 * 60 and {r["N"] for r in rows} == {"32"}
+    for rep in ("0", "1"):
+        mine = [r for r in rows if r["replica"] == rep]
+        assert [int(r["sweep"]) for r in mine] == list(range(1, 61))
+        h = [16 * (1 - float(r["phi"])) + 4 * lam * float(r["surplus"]) for r in mine]
+        assert all(b <= a + 1e-12 for a, b in zip(h, h[1:])) and h[-1] < h[0]
+        assert all(1 <= int(r["pieces"]) and 0 <= float(r["cube_frac"]) <= float(r["baby_frac"]) <= 1 for r in mine)
+
+
+def test_quench_options(tmp_path):
+    cfg, path = quench_config(tmp_path, record_every=20)
+    load_script("run_cqg_quench").main(path, tmp_path)
+    assert [int(r["sweep"]) for r in read_rows(tmp_path / "tinyq.csv") if r["replica"] == "0"] == [20, 40, 60]
+    with pytest.raises(FileExistsError):                          # append-only, like the sweep runner
+        load_script("run_cqg_quench").main(path, tmp_path)
+    cfg2, path2 = quench_config(tmp_path, acceptance="glauber")
+    (tmp_path / "tinyq.csv").unlink(), (tmp_path / "tinyq.meta.json").unlink()
+    with pytest.raises(ValueError):                               # zero temperature is defined for Metropolis only
+        load_script("run_cqg_quench").main(path2, tmp_path)

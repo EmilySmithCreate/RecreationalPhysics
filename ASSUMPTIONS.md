@@ -91,6 +91,39 @@ The first run of the T2 kernel. Identical to the capped control above in every r
 - **Unexplained, and not resolvable from the papers.** [T25] does not say which variant Fig. 3 shows, how long its runs were, or whether its points are averages. Only the authors can say. This is the case the proposed Gate B text provides for: stop and write to them.
 - **What it means for the working question, stated plainly because it is not the answer hoped for.** Neither published variant we can build shows any first-order signal at N = 160: no jump, no hysteresis between opposite starts, no growth of χ. At this size both are smooth crossovers, which is what the published "continuous" claim predicts. The one published figure that looks like a first-order jump is the one we cannot reproduce. λ = 0 (Gate A), where first order is the *published* result, is now the natural next test of the kernel and of the hypothesis.
 
+### Quenches at λ = 0 and λ = 1 against [KTB19] Figs. 6 and 7 (2026-09-20; EXPLORATORY, four replicas, not a gate)
+
+`configs/cqg_quench_lam0_vs_ktb19fig6.json` and `configs/cqg_quench_lam1_vs_ktb19fig7.json`, run by the new `scripts/run_cqg_quench.py`: melt, then zero temperature (a switch is accepted only if it does not raise H), 1000 sweeps, at the six published sizes N = 100 to 200. [KTB19] shows one run per size and defines neither its sweep nor the temperature of its quench, so shapes and heights can be compared, not the clock. The published values below were read off the figures by eye, not digitised. φ is the mean of our four replicas.
+
+| | Published | Ours |
+|---|---|---|
+| λ = 0, does φ pass 1? | Yes, within a few hundred sweeps (Fig. 6) | Yes, in all 24 runs, at sweep 80 to 190; later for larger N, as published |
+| λ = 0, φ at sweep 1000 | 1.17 to 1.36 | 1.37 to 1.42 (single runs 1.29 to 1.47); at our sweep 500, 1.28 to 1.38 |
+| λ = 0, what the graph becomes | Breaks into baby universes (Fig. 5: four 16-vertex pieces and one larger, unfinished) | On average 5.5 to 10 pieces (single runs 4 to 12); 52 to 73 % of vertices in finished baby universes, the rest in one or two larger unfinished pieces |
+| λ = 1, is φ held near 1? | Yes: "an (approximate) upper barrier", with "minor breaches" (Fig. 7); about 0.93 to 1.02 at sweep 1000, 0.97 to 1.04 by sweep 10 000 | Yes: 0.95 to 1.02 at sweep 1000 (single runs 0.92 to 1.07); 7 of 24 runs pass 1 at some point, and the highest value recorded in any run is 1.10 |
+| λ = 1, connected? | Not stated | One piece in 22 of 24 runs, two in the others; no baby universes |
+
+- **Reading.** Both published behaviours are reproduced in kind: the global term alone drives the graph past the torus value and shatters it, and the local term stops it at the torus value and keeps it connected. Ours runs roughly twice as fast per sweep as the published curves, which would fit a published sweep of N attempted switches against our 2N, but that is a guess.
+- **The 14-vertex baby universe appears by itself, often.** At sweep 1000 the 24 quenches at λ = 0 hold 123 finished 4-cubes and 20 other baby universes, and in every run the vertices in baby universes that are not 4-cubes number 0, 14 or 28 (from `baby_frac` and `cube_frac` in the result file). For the eight runs at N = 100 and N = 160 the final graphs were rebuilt from the config's seeds in a scratch script and every piece was put through a networkx isomorphism test: 32 4-cubes, 6 biplane graphs, 9 unfinished pieces, nothing else. That script is not in the repository; the counts from the result file are. So the published description of the λ = 0 cold phase as hypercubic is incomplete, at least for this sampler: about one finished piece in seven is the biplane graph of Q8. *Ours, unverified; exploratory.*
+- **What this does not show.** A quench is not equilibrium, and none of this bears on the order of the transition. It checks the model reading and the sampler against two more published figures, at λ = 0 for the first time.
+
+### λ = 0, cooling and heating at N = 64, 96, 160 (2026-09-20, `configs/cqg_lam0_first_look.json`; EXPLORATORY, four replicas, not a gate run)
+
+Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 couplings from g = 100 to g = 3, then heated back from whatever the cold end froze into; 2000 + 4000 sweeps per coupling. Sizes are multiples of 16 so that a perfect tiling by 4-cubes exists. φ = 1.5 on perfect baby universes.
+
+| N | Cooling: φ jumps between | Heating: φ falls back between | Largest heat − cool (replica mean) | Cold end, g = 3: φ; pieces (N/16); `baby_frac`; `cube_frac` |
+|---|---|---|---|---|
+| 64 | g = 6.5 (0.81) and 6.0 (1.46) | g = 7.5 and 9 | 0.66 at g = 6.5 | 1.48; 4.0 (4); 0.93; 0.87 |
+| 96 | g = 6.0 (0.74) and 5.0 (1.48) | g = 7.0 and 8 | 0.82 at g = 7.0 | 1.49; 6.0 (6); 0.95; 0.87 |
+| 160 | g = 5.5 (0.64) and 4.5 (1.45) | g = 5.5 and 7.5 | 0.82 at g = 5.5 | 1.46; 9.2 (10); 0.84; 0.75 |
+
+- **Two states, nothing in between.** Inside the loop every replica sits in one of two well-separated states at the same coupling. N = 160, heating, g = 6.0: three replicas at 1.45 to 1.49 and one at 0.62, while all four cooling replicas are at 0.58. N = 96, cooling, g = 5.5: one at 0.80, three at 1.44 to 1.50. The only intermediate averages come from runs that switch during the measurement (`phi_sd` of 0.2 to 0.3 against 0.01 to 0.06 otherwise). The gap is about 0.85 in φ, which is about 13.6 in H per vertex.
+- **On the hot side the two legs agree**: for g ≥ 9 the largest difference in any replica is 0.005, with τ of 1 to 3 sweeps. So the disagreement is confined to the loop; it is not a general failure to equilibrate.
+- **The cold phase is shattered and made of baby universes**, mostly 4-cubes; at N = 160 about 14 vertices per replica are in baby universes that are not 4-cubes, which is one 14-vertex piece of Q8. It is not a space: VISION S4 fails here, as published.
+- **This is what [T25] and [GV21] report for the global term alone** (first order, hysteresis, isolated hypercubic complexes), now seen with our own kernel, and it is the opposite of what the same kernel does at λ = 1 and under the cap, where the two legs agree to 0.003 and the graph stays in one piece.
+- **Not claimed.** Hysteresis in a sweep of finite length shows two long-lived states, which is what a first-order transition produces, but it is not by itself proof of one. The loop's position moves to lower g with N (the cooling jump from about 6.2 to about 5.0) while its width stays near 2, and we have not yet asked why. The proof VISION S2 asks for is a two-humped histogram whose valley deepens with N, or a dent in s(φ) (T6). Inside the loop τ reaches 300 sweeps and the error bars there mean nothing (Q6). Four replicas, one run length, couplings chosen by eye.
+- **For the owner:** Gate A reads "at λ = 0, several sizes, cooling and heating: hysteresis around the transition, and a cold phase dominated by Q4 components". This run shows both at three sizes. Whether an exploratory run may pass a reproduction gate, and whether "Q4 components" should read "baby universes", are her decisions (see the note under Gate A in `TASKS.md`).
+
 ## Open issues
 
 - **O1 Trapping.** At N = 36, β = 0.2, runs from random starts reached −7 to −9 per node; a slow anneal reached −10.1 to −11.2; none found −12.2, and none went below it. [K08] Sec. IV reports the same ruggedness and mentions simulated tempering. Plan: add parallel tempering and the second move type before any production run.
