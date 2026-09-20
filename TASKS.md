@@ -82,9 +82,14 @@ Done (ASSUMPTIONS Q9; `src/graphity/small_graphs.py`; `scripts/check_ergodicity.
 - **A bonus the task did not ask for:** with every state known, ⟨S⟩ is exact at N = 16 and 18, and the chain reproduces it for λ = 0, 0.5, 1 under both acceptance rules. This is now the strongest test of the kernel.
 - **Not shown:** anything for N ≥ 20 (the count at N = 20 did not finish in about 40 minutes). The neighbourhood swap was not needed at these sizes and has not been added. If a freezing problem at large N turns out to be a connectivity problem, this is where to look again; T5 (parallel tempering) addresses slowness, not reachability.
 
-## T5. Parallel tempering  ☐
+## T5. Parallel tempering  ☑ (2026-09-20)
 
 Replica exchange across the g grid. Accept: exchange rates 20–40 % between neighbours; cold replicas reach φ > 0.95 from a random start at N = 160; results consistent with plain runs where those equilibrate.
+
+Done (`src/graphity/tempering.py`, `scripts/run_cqg_tempering.py`, ASSUMPTIONS Q11 and section D). Validated first against exact averages at N = 18, which is a stronger check than the three criteria. Then the capped model at N = 160 from random starts: swap rates 0.24 to 0.45 on average, cold end φ = 0.958 to 0.974 in all four replicas, and agreement with the plain run to 0.0007 at the three couplings they share.
+- **What it bought:** the equilibrium curve can now be trusted down to g of about 3 (four replicas agree to 0.002 to 0.004) where a single chain stopped at 5.
+- **What it did not:** below g = 3 graphs made at most one round trip per replica in 18 000 rounds, replicas differ by up to 0.02 and τ is in the thousands. The ordered cold graphs carry frozen-in defects. More rounds, not a finer ladder, is the remedy, or the neighbourhood move of [T25] Fig. 8.
+- **Seen on the way:** under the cap at N = 160 the curve is steepest, slowest and most fluctuating at g ≈ 2.85. That is where T6 should look for that model.
 
 ## T6. Entropy curve s(φ) by Wang–Landau  ☐
 
