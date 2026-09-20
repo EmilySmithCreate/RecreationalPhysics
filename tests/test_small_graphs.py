@@ -6,7 +6,8 @@ import numpy as np
 import pytest
 
 from graphity.cqg import CAP, NO_CAP, run_chain, total_squares, torus
-from graphity.small_graphs import check, count_labelled_states, explore, one_switch_away, sides_first
+from graphity.small_graphs import (check, circulant, count_labelled_states, explore, one_switch_away,
+                                   sides_first)
 
 
 def brute_force_labelled(n):
@@ -111,16 +112,6 @@ def test_explore_finds_the_same_classes_from_any_start():
         assert all(joined[k] for k in range(5))
 
 
-def circulant_eighteen():
-    """A valid N = 18 state built by hand: vertex i of one side is joined to i, i+1, i+3, i+7 (mod 9) of the other.
-    Every difference between two of those four offsets occurs at most twice, which is the hard-core rule."""
-    adj = np.empty((18, 4), dtype=np.int64)
-    for i in range(9):
-        adj[i] = [9 + (i + d) % 9 for d in (0, 1, 3, 7)]
-        adj[9 + i] = [(i - d) % 9 for d in (0, 1, 3, 7)]
-    return adj
-
-
 @pytest.mark.parametrize("lam, inv_g", [(0.0, 0.10), (1.0, 0.10), (1.0, 0.25)])
 def test_chain_matches_the_exact_average_at_eighteen_vertices(lam, inv_g):
     """As at N = 16, but here the full energy (lam = 1) is not zero on every state, so the local term is tested
@@ -138,7 +129,7 @@ def test_chain_matches_the_exact_average_at_eighteen_vertices(lam, inv_g):
     exact = sum(w * int(r["squares"]) for w, r in zip(weights, classes)) / sum(weights)
     means = []
     for seed in range(12):
-        adj = circulant_eighteen()
+        adj = circulant(9)
         assert is_valid(adj, NO_CAP)
         s, _, _ = run_chain(adj, np.arange(9), inv_g, 300, 4000, 300 + seed, lam, NO_CAP, seed % 2 == 1)
         means.append(s.mean())

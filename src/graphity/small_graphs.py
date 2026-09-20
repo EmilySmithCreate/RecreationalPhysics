@@ -177,6 +177,19 @@ def sides_first(adj, part):
     return new_name[adj[order]]
 
 
+def circulant(n, offsets=(0, 1, 3, 7)):
+    """Vertex i of side 0 joined to i + d (mod n) of side 1 for each offset d: a quick valid state by hand.
+
+    With the default offsets and n = 9 every difference between two offsets occurs at most twice, which is
+    the hard-core rule; check other choices with cqg.is_valid.
+    """
+    adj = np.empty((2 * n, 4), dtype=np.int64)
+    for i in range(n):
+        adj[i] = [n + (i + d) % n for d in offsets]
+        adj[n + i] = [(i - d) % n for d in offsets]
+    return adj
+
+
 def _check_numbering(adj):
     n = len(adj) // 2
     if not ((adj[:n] >= n).all() and (adj[n:] < n).all()):
