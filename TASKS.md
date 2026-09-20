@@ -108,7 +108,7 @@ Note, 2026-09-19, from the sources (ASSUMPTIONS, first-look section): the N-inde
 
 ## Design track (VISION plan step 5)
 
-Brief: `docs/design/model_x_brief.md`. Done so far: the dip census at N ≤ 18 (`scripts/dip_census.py`, `configs/dip_census_small.json`). Next, cheapest first: (1) rehearse the S3 measurement on the backwards reaction, sheet to cubes at 0 < λ < 1, where the energy released per vertex is known exactly, 8(1 − λ); (2) after T5, look for dips above the flat ground state at N = 64 to 160 for 1 < λ < 2. Exact small-size work may run alongside the tasks above; anything that interprets new physics waits for the gates.
+Brief: `docs/design/model_x_brief.md`. Done so far: the dip census at N ≤ 18 (`scripts/dip_census.py`, `configs/dip_census_small.json`), and a finer one at N = 18 (`configs/dip_census_fine.json`): dips above the flat ground state for 1 < λ < 1.6, none above. `scripts/exact_small_averages.py` gives exact averages at N = 16 and 18 for any g and λ; T5 and T6 should be validated against it. Next, cheapest first: (1) rehearse the S3 measurement on the backwards reaction, sheet to cubes at 0 < λ < 1, where the energy released per vertex is known exactly, 8(1 − λ); (2) after T5, look for dips above the flat ground state at N = 64 to 160 for 1 < λ < 2. Exact small-size work may run alongside the tasks above; anything that interprets new physics waits for the gates.
 
 ## Later
 

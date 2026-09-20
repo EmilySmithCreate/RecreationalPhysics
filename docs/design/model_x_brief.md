@@ -32,7 +32,8 @@ Think of the graph as a street map. A **square** is a city block: four streets c
 | 0 | no fine | blocks are crammed in everywhere; the map folds into tight closed knots, the 4-cubes, and falls apart into pieces. Published: abrupt change, no space |
 | between 0 and 1 | folding still pays, but less | cubes are still lowest; the flat sheet is a dip above them |
 | 1 | the fine exactly cancels what an overcrowding block earns | cubes, tubes and the flat sheet all tie. This is the value at which the energy is the true curvature formula, the one tied to general relativity. Published: gradual change, a space forms |
-| above 1 | folding loses | the flat sheet is lowest. Between 1 and 2, at N = 18, some folded arrangements are dips above it |
+| from 1 to about 1.6 | folding loses, narrowly | the flat sheet is lowest, and at N = 18 some folded arrangements are dips above it: the candidates for X |
+| from about 1.6 to very large | folding loses, more and more heavily | the flat sheet is lowest and, at N = 18, nothing is a dip above it. Nothing new happens on the way up: folds simply get rarer. At N = 18 and g = 10 the share of the weight on folded states is 49 % at λ = 2, 17 % at 3, 3 % at 5 and 0.1 % at 10; at g = 5 it is 7 %, 1 %, 0.1 % and nil. By λ of about 5 to 10 the model is the capped one in all but name (`scripts/exact_small_averages.py`) |
 | very large | folding is forbidden outright | the "cap" of the 2019 paper |
 
 Why it is the project's first knob: the two published results sit at its two ends (abrupt without a space at 0, gradual with a space at 1), and the hypothesis needs abrupt *with* a space. The question is whether any setting gives both.
@@ -88,6 +89,8 @@ So "a dimension collapses and loops in", the author's illustration in VISION, al
 | 1.25 | 22 | 16 | 1 |
 | 1.5 | 21 | 24 | 2 |
 | 2.0, 3.0 | none | | |
+
+A finer scan at N = 18 (`results/dip_census_fine.csv`, 23 values of λ) places the window exactly: there is a dip above the flat ground state at every value tried from 1.05 to 1.55, two of them up to 1.3, and none from 1.6 upwards, up to λ = 30. Where the window ends may well depend on N, so a search at larger sizes should still cover 1 < λ < 2.
 
 So the wiring the hypothesis needs (a specific arrangement, higher in F than the space-like one, with a wall round it) does occur in the published family, in miniature, for λ between 1 and 2. Eighteen vertices are not a space, the walls are low, and nothing is known about larger sizes. It tells us where on the knob to look, no more. [T24] describes the large-scale relative of this: long-lived "allotropes", regions stuck in another discrete arrangement. In his picture they are leftovers; in the author's, X is such an arrangement that once filled everything.
 
