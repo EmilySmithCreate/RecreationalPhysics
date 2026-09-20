@@ -68,7 +68,7 @@ It then makes an observation that matters for your picture: a bubble of random p
 
 - **We implement exactly this acceptance rule.** It is the "Glauber" option in our code, and our tests check it gives the same answers as the more usual Metropolis rule.
 - **We do not implement their move.** We use a different one, the bipartite edge switch. Task T4 listed every arrangement up to 18 points and proved our move can reach all of them, which is more than the papers establish for theirs. At the sizes we actually simulate, neither is proved.
-- Their time is counted in Monte Carlo steps, and so is ours. Your claim 6 says X has its own ordering and that our time is emergent. That is the same choice he makes.
+- Their time is counted in Monte Carlo steps, and so is ours. *(Corrected 2026-09-20 at the author's asking: an earlier draft said "our time is emergent", which overstates it. Her own illustration has X carrying a time dimension that is tiny and then becomes large, so time may be inherited and rescaled rather than created. What has to emerge is **geometry**, the sense in which there is a "where". Whether time emerges too is a separate question the claims do not settle.)*
 
 **Bears on:** claim 6 (an ordering that is not our time), and the speed limit is a first step towards claim 2.
 
@@ -118,7 +118,15 @@ and
 
 You both make matter out of the same stuff as space, which is your claim 3, and you agree it is not a separate ingredient. The disagreement is about the route. **His account needs no latent heat at all**, which is exactly why he can be comfortable with a continuous transition and you cannot.
 
-One thing worth noticing: his bubbles are the *unconverted remainder*. That is your claim 5, the part that did not convert, doing the work your claim 4 assigns to the released energy.
+**But the two may not be alternatives at all** *(ours, 2026-09-20, unverified; prompted by the author asking why one would choose between them)*. His account is written at a fixed coupling, which means an unlimited bath: the energy a conversion gives off is carried away and plays no further part, so the only way to have random-phase regions left over is for the conversion to have been incomplete. A universe has no bath. In our sealed runs, where the released energy has nowhere to go, it does something very specific: it prevents the result from ever reaching the perfect flat sheet. A tube that converts sealed ends at φ = 0.945 to 0.971 rather than 1.000, and that shortfall is two to four squares' worth of disorder scattered through an otherwise geometric network (`ASSUMPTIONS.md`, sealed runs).
+
+Those scattered disordered patches are, in his own definition, matter. So the released energy of claim 4 and the leftover random phase of his section 6.1 can be the same physical thing approached from opposite ends: **the latent heat is what manufactures the random-phase regions.** Claim 4 says where the energy came from; he says what it turned into. Read that way, claim 4 also gains the thing it most lacked, which is a concrete answer to "what is matter made of" in a network model.
+
+What still separates them, and is worth keeping separate:
+
+- **What sets how much matter there is.** On his reading it is kinetics: how fast the universe cooled and how much failed to convert. On claim 4 it is thermodynamics: the latent heat per unit converted, a number fixed by the model rather than by history. Those are different kinds of prediction.
+- **The order still matters, and still discriminates.** Leftover bubbles are compatible with either order; a latent heat is not. If the transition is continuous there is no lump to speak of and his kinetic account has to carry the whole weight. If it is first order, both mechanisms operate and the latent heat may dominate.
+- **Neither has said why matter is stable.** A random bubble has higher free energy than the space around it, so something must stop it shrinking away. That problem belongs to both accounts equally.
 
 **Bears on:** claim 4 (as its rival), claim 3, claim 2.
 
