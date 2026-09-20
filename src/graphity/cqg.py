@@ -54,8 +54,8 @@ ASSUMPTION Q4 (move and acceptance): bipartite edge switch
       Glauber      p = 1 / (1 + 1/a)                [T25 Eq. (28)]
   Both satisfy p(dH) / p(-dH) = a, which with a symmetric proposal is detailed
   balance, so both sample exp(-H/g); they differ only in how fast. Ergodicity
-  inside the constrained space is NOT established (O2). Connectedness is not
-  enforced.
+  inside the constrained space is proved by exhaustive listing for N <= 18 and
+  unproven beyond (Q9; small_graphs.py). Connectedness is not enforced.
 
   How dH is obtained exactly. dS: squares lost are those through the removed
   edges, squares gained those through the added ones, and no square contains
