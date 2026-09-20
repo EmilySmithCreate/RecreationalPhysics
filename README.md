@@ -55,6 +55,7 @@ src/graphity/cqg.py        2D combinatorial quantum gravity kernel (current focu
 src/graphity/connectivity.py  connected pieces, baby universes, 4-cubes (has the graph shattered?)
 src/graphity/squares.py    the two smallest graph readers, shared by the two modules above
 src/graphity/small_graphs.py  every state at the smallest sizes; can the moves reach them all? (task T4)
+src/graphity/full_curvature.py  slow exact reference for the energy with triangles and pentagons allowed
 src/graphity/analysis.py   fluctuation measures, block bootstrap, autocorrelation time
 src/graphity/results.py    result writer that never overwrites
 src/graphity/energy.py     parked: Konopka cycle energy
@@ -63,7 +64,7 @@ src/graphity/graphs.py     parked: start states and menus
 scripts/                   config-driven runners (sweep over couplings; quench at one); exhaustive checks at the smallest sizes (ergodicity, energy dips, exact averages); digitiser and comparison for published figures
 configs/                   experiment definitions
 results/                   outputs (append-only)
-tests/                     79 tests
+tests/                     85 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 docs/design/               design brief for a model of X (VISION plan step 5); nothing built yet
