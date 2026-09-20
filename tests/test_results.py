@@ -222,3 +222,18 @@ def test_quench_options(tmp_path):
     (tmp_path / "tinyq.csv").unlink(), (tmp_path / "tinyq.meta.json").unlink()
     with pytest.raises(ValueError):                               # zero temperature is defined for Metropolis only
         load_script("run_cqg_quench").main(path2, tmp_path)
+
+
+def test_ergodicity_script(tmp_path):
+    """One row per class, a marker row for a size with no states, and the append-only rule as everywhere."""
+    path = tmp_path / "erg.json"
+    path.write_text(json.dumps(dict(name="erg", sizes=[6, 7], caps=[None])))
+    load_script("check_ergodicity").main(path, tmp_path)
+    rows = read_rows(tmp_path / "erg.csv")
+    assert [(r["N"], r["class_id"], r["labelled_total"], r["all_joined"]) for r in rows] == [
+        ("12", "-1", "0", ""), ("14", "0", "151200", "True")]
+    with pytest.raises(FileExistsError):
+        load_script("check_ergodicity").main(path, tmp_path)
+    path.write_text(json.dumps(dict(name="erg2", sizes=[7], caps=[3])))
+    with pytest.raises(ValueError):
+        load_script("check_ergodicity").main(path, tmp_path)

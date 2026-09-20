@@ -50,7 +50,7 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 - **Never call the model's hot phase "X"** (owner's correction, 2026-09-20; VISION "What X is" and Update 5). X is a specific, relatively stable arrangement; the model's hot side is a random graph, a stand-in at best. Write "the random phase" or "the model's hot phase". What the gates test is whether geometry forms first order *out of a random phase*, which is narrower than VISION claim 4. The order of work is unchanged: reproduce the published results first.
 - λ = 0, exploratory (2026-09-20, ASSUMPTIONS section D): hysteresis loop about 2 wide in g at N = 64, 96, 160, two states about 0.85 apart in φ, cold phase shattered into baby universes (4-cubes and the 14-vertex biplane graph of Q8). Quenches reproduce [KTB19] Figs. 6 and 7 in kind (`scripts/run_cqg_quench.py`). **Gate A passed on 2026-09-20 by the owner's decision**, with its wording changed by her from "Q4 components" to "baby universes, reporting how many are 4-cubes". Gate B is still open, and T4 onwards are sampler and tooling work that interpret no new result.
 - Chains freeze at low coupling (acceptance < 1 %). Parallel tempering is task T5.
-- Ergodicity of the move set inside the constrained space is unproven (task T4).
+- Ergodicity (T4, ASSUMPTIONS Q9): proved by exhaustive listing for N ≤ 18, with and without the cap, up to renaming vertices within a side, which is all our observables need. Unproven beyond. The chain reproduces exact averages at N = 16 and 18; keep those tests green when touching the kernel. `small_graphs.py` expects side 0 to be vertices 0..n−1 (`sides_first` converts a torus).
 
 ## Disclosure
 

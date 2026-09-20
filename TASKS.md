@@ -72,9 +72,15 @@ Note, 2026-09-19 (the criteria above are unchanged; this records what is known a
 - **Proposed replacement, NOT adopted; the owner decides.** Accept when, at λ = 1 without the cap, the largest difference from the 22 digitised points is below 0.05 (the published dots scatter by about 0.02 among themselves), using only couplings where our heating and cooling agree and τ is far below the block length. The capped kernel scores 0.44 on this and fails, as a control should. If λ = 1 fails too, stop and write to the authors: the text of [T25] does not say which model Fig. 3 shows, nor how long its runs were.
 - **Outcome, same day (exploratory; ASSUMPTIONS section D): λ = 1 fails too**, 0.41 on this criterion, with the curve smooth and in equilibrium. But the same run reproduces the *other* published N = 160 curve, [KTB19] Fig. 8a, to rms 0.005. So the kernel is not the problem; the two published figures disagree with each other (0.62 against 0.99 at g = 5). **Gate B as a reproduction of [T25] Fig. 3 cannot pass with either published variant, and the reason is not in the papers.** Decisions for the owner: (1) whether [KTB19] Fig. 8a, the gate VISION step 2 originally named, should be the λ = 1 gate instead, in which case the exploratory evidence says it would pass; (2) whether to write to the authors now, with the two digitised curves and our two runs attached, rather than after both gates as planned below. Gate A does not depend on either decision.
 
-## T4. Ergodicity check  ☐
+## T4. Ergodicity check  ☑ (2026-09-20)
 
 For the smallest sizes that admit valid graphs, enumerate the configuration space exhaustively and confirm the move set connects it (or document which parts it cannot reach). Add the "neighbourhood swap" move of [T25] Fig. 8 if needed.
+
+Done (ASSUMPTIONS Q9; `src/graphity/small_graphs.py`; `scripts/check_ergodicity.py` with `configs/ergodicity_small.json`; `tests/test_small_graphs.py`). Started while Gate B was still open, because it checks the sampler and interprets no new result.
+- **Exhaustive result:** no states for N ≤ 12; N = 14 has one class and the chain cannot move in it (harmless); N = 16 has 5 classes and N = 18 has 26, all joined by the switch; under the cap the first states appear at N = 18, 3 classes, all joined. Completeness is proved by counting: the labelled states are counted directly (1 785 021 235 200 at N = 18) and the classes the switch reaches add up to exactly that.
+- **What "joined" has to mean** (ours): all classes up to renaming vertices, not all labelled states. That is enough for every observable we use, and the docstring of `small_graphs.py` says why.
+- **A bonus the task did not ask for:** with every state known, ⟨S⟩ is exact at N = 16 and 18, and the chain reproduces it for λ = 0, 0.5, 1 under both acceptance rules. This is now the strongest test of the kernel.
+- **Not shown:** anything for N ≥ 20 (the count at N = 20 did not finish in about 40 minutes). The neighbourhood swap was not needed at these sizes and has not been added. If a freezing problem at large N turns out to be a connectivity problem, this is where to look again; T5 (parallel tempering) addresses slowness, not reachability.
 
 ## T5. Parallel tempering  ☐
 

@@ -231,3 +231,31 @@ def test_glauber_and_metropolis_sample_the_same_distribution():
         errs.append(e)
     assert abs(means[0] - means[1]) < 4 * np.hypot(*errs)
     assert 0.3 < means[0] < 0.9                                     # in the crossover, not at an end
+
+
+@pytest.mark.parametrize("cap, lam, inv_g", [(CAP, 1.0, 0.12), (NO_CAP, 0.0, 0.12), (NO_CAP, 1.0, 0.0)])
+def test_quick_validity_check_agrees_with_the_full_one(cap, lam, inv_g):
+    """T4: the kernel decides whether a switch stays inside the configuration space by looking only near the
+    two new edges. Tried here on EVERY possible switch from a few states, against is_valid on the whole graph.
+    A quick check that refused valid moves would bias the sampling; one that let invalid ones through would leave
+    the space."""
+    from graphity.cqg import _new_edge_ok, _switch
+    adj, part = torus(6, 6, cap) if cap == CAP else torus(6, 4, cap)
+    side_u = np.flatnonzero(part == 0)
+    tried = allowed = 0
+    for stage in range(3):
+        run_chain(adj, side_u, inv_g, 40, 1, 60 + stage, lam, cap, False)
+        assert is_valid(adj, cap)
+        for u1 in side_u:
+            for u2 in side_u:
+                for v1 in adj[u1].copy():
+                    for v2 in adj[u2].copy():
+                        if u1 == u2 or v1 == v2 or v2 in adj[u1] or v1 in adj[u2]:
+                            continue
+                        _switch(adj, u1, v1, u2, v2)
+                        quick = _new_edge_ok(adj, u1, v2, cap) and _new_edge_ok(adj, u2, v1, cap)
+                        assert quick == is_valid(adj, cap)
+                        _switch(adj, u1, v2, u2, v1)
+                        tried += 1
+                        allowed += quick
+    assert tried > 1000 and 0 < allowed < tried
