@@ -141,6 +141,8 @@ The same ladder and protocol as the capped run above, at λ = 1 without the cap:
 | 2.25 | 0.9843 | 0.0050 | | 0.26 | 452 |
 | 2.00 | 1.0134 | 0.0044 | (0.99, frozen) | | 1817 |
 
+Figure: `docs/figures/equilibrium_curves.png`, which puts both tempering runs, the plain runs and both published figures on one axis.
+
 - **Against the published figures, now in equilibrium.** [KTB19] Fig. 8a: our curve passes through its digitised points to 0.003 to 0.005 at g = 4, 5 and 6; at its coldest point, g = 2, we are 0.106 above it (1.013 against 0.907), which is where that paper's single quenches would be furthest from equilibrium. [T25] Fig. 3: still not reproduced, rms 0.297 over the seven digitised points in this range, worst 0.404. At g = 5 the published figure reads 0.99 and our equilibrium value is 0.618, now from two independent methods (plain chains agreeing between opposite starts, and tempering with round trips).
 - **No jump anywhere.** The curve is smooth from 0.51 to 1.01 across the whole ladder, and τ rises steadily rather than exploding at one coupling. Unlike the capped model, there is no single place where the fluctuations spike: χ was flat within 15 % down to g = 2.5.
 - **Trustworthy range.** Four independent replicas from random starts agree to 0.002 down to g = 2.7 and to 0.005 at g = 2.0, with 2 to 4 round trips each.
@@ -149,32 +151,36 @@ The same ladder and protocol as the capped run above, at λ = 1 without the cap:
 
 The config records a prediction written **before** the run: if the tube gives way by nucleation, one region going over a wall and the rest following, the typical waiting time should fall roughly like 1/N, because a larger tube offers more places to start. Perfect tubes at λ = 1.25, g = 1.5, four sizes, twelve replicas each, 30 000 sweeps.
 
-| N | Runs that left the tube | Mean waiting time (sweeps) | Median | What 1/N predicted | Off by |
-|---|---|---|---|---|---|
-| 64 | 12 of 12 | 1119 ± 187 | 1175 | (the reference) | |
-| 96 | 12 of 12 | 1533 ± 393 | 900 | 746 | +2.0 σ |
-| 144 | 12 of 12 | 1127 ± 250 | 825 | 497 | +2.5 σ |
-| 192 | 12 of 12 | 2200 ± 366 | 1675 | 373 | +5.0 σ |
+**A mistake of ours, found and corrected the same day.** The first reading of these runs asked when the energy per vertex had moved by 0.3, which is an *absolute* energy of 0.3 N: at N = 64 one event of 12 units was nearly enough, at N = 192 five were needed. That biased the waiting time upwards for large systems, in exactly the direction of the conclusion, and it was reported before the flaw was noticed. Both readings are given below; the corrected one is the second.
 
-- **The prediction is wrong.** The waiting time does not fall with size. It is flat or slightly rising, and at N = 192 the 1/N prediction is out by five standard errors. Whatever sets the waiting time here is not a count of independent places where a conversion could start.
+| N | Mean wait, corrected criterion (the graph leaves the exact tube) | Median | What 1/N predicted | Off by | Mean wait, first (flawed) criterion |
+|---|---|---|---|---|---|
+| 64 | 835 ± 200 | 762 | (the reference) | | 1119 ± 187 |
+| 96 | 1048 ± 340 | 688 | 557 | +1.4 σ | 1533 ± 393 |
+| 144 | 752 ± 261 | 425 | 371 | +1.5 σ | 1127 ± 250 |
+| 192 | 1165 ± 302 | 762 | 278 | +2.9 σ | 2200 ± 366 |
+
+- **The prediction is still not supported, but much less strongly than first reported.** The corrected waiting times are flat with size where 1/N would have them fall threefold, and the largest size is 2.9 standard errors from the prediction, not 5.0. With twelve runs and waiting times that are spread exponentially, that is suggestive and not conclusive: it needs more replicas before anything is made of it.
 - **The other half of the prediction holds.** The end state is the same at every size: 9 to 11 runs in 12 end as a *perfectly* flat sheet (energy exactly 0, φ exactly 1), and the average energy per vertex at the end is 0.01 to 0.12 against the tube's 1.00. So the energy given off per vertex is the exact 4(λ − 1) at every size tried, which is what the rehearsal was built to measure.
-- **What it costs the picture.** VISION Update 8 calls this an existence demonstration of the *shape* of claim 4. It still is: something stable for now, a threshold, an abrupt change, a definite energy given off, a flat connected result. But "the tube gives way where a wall is crossed locally" was our guess about the mechanism, and the first test of it failed. Two readings are open and untested: the conversion may need a rearrangement that is not local (the curled direction is only four steps around, so uncurling may have to happen everywhere at once), or the wall may be mostly entropic. The spark measurement below bears on this and points the other way, which is not yet resolved.
+- **What it costs the picture.** VISION Update 8 calls this an existence demonstration of the *shape* of claim 4. It still is: something stable for now, a threshold, an abrupt change, a definite energy given off, a flat connected result. But "the tube gives way where a wall is crossed locally" was our guess about the mechanism, and the first test of it does not support it. The sealed measurement below says the wall itself *is* local and sharply 12 units at every size, so if both hold, what varies with size is not the wall but how often the system tries and fails. The two are not yet reconciled, and the honest position is that the mechanism is unknown.
 - **Limits:** one coupling, one λ, twelve replicas, tubes whose curled side is always 4. Waiting times of this kind are usually spread exponentially, so twelve runs give about 30 % on each mean.
 
-### Sealed runs: what becomes of the energy given off (2026-09-20; EXPLORATORY, scratch runs, three to six replicas)
+### Sealed runs: what becomes of the energy given off (2026-09-20; `configs/cqg_spark_threshold_lam125.json`; EXPLORATORY, eight replicas)
+
+Figure: `docs/figures/sealed_story.png`, which puts this beside the waiting-time measurement above.
 
 `src/graphity/sealed.py` (Q12). λ = 1.25, perfect tubes, nothing added and nothing removed (leak = 0), 12 000 to 20 000 sweeps. The demon starts with a fixed lump, the "spark", and there is no other source of energy.
 
-| Spark (whole system) | N = 64 | N = 144 | What happens |
-|---|---|---|---|
-| 0 | stays a tube | stays a tube | acceptance is 0.4 %, so the graph does move, but only through switches that leave S and X alone. It can never pay the wall. |
-| 4, 8 | stays a tube | stays a tube | the same |
-| 16 and up | converts | converts | the tube is left; the run ends as a single connected sheet with φ ≈ 0.94, energy per vertex 1.1 to 2.0 |
+`configs/cqg_spark_threshold_lam125.json` sweeps the spark against the size: eight sparks from 4 to 16, five sizes from N = 48 to 192, eight replicas each, 320 runs. The answer is the same at every size and perfectly sharp.
 
-- **A sealed system with nothing to spare cannot start.** This is the plainest statement the sealed runs make, and it is what the author's supercooled water says too: the bottle needs the tap. It is now a permanent test (`test_a_sealed_tube_with_nothing_to_spare_cannot_convert`).
-- **The spark needed does not grow with size:** between 8 and 16 units of energy at N = 64 and at N = 144 alike, while the energy the conversion gives off is 1 per vertex, i.e. 64 and 144. So the larger the system, the more the energy given off exceeds the cost of starting it, which is the condition for a runaway. *This points the opposite way from the waiting-time measurement above, and the two are not yet reconciled.*
-- **What the system converts into is decided by the energy it is given, not by the energy it started with.** Sealed, the released energy has nowhere to go but back into the graph, so the run settles at a temperature set by the total. At N = 64 with a spark of 16 the end state is a sheet at φ ≈ 0.94, not the perfect sheet the fixed-temperature runs reach. That is claim 5's picture measured: what did not convert (here, what converted and then partly melted again) is warmer than it began.
-- **Not claimed:** none of this is a measurement of a latent heat in the thermodynamic sense, the runs are scratch runs rather than configs in `configs/`, and the reconciliation with the waiting-time result is open.
+| Spark given to the whole system | 4 | 8 | 10 | 11 | 11.5 | 12 | 13 | 16 |
+|---|---|---|---|---|---|---|---|---|
+| Runs of 8 that converted, at **every** size (48, 64, 96, 144, 192) | 0 | 0 | 0 | 0 | 0 | 8 | 8 | 8 |
+
+- **A sealed system with nothing to spare cannot start.** With an empty demon the tube sits for ever, although the state it would convert to is lower: acceptance is 0.4 %, so the graph does move, but only through switches that leave S and X alone, and it can never pay the wall. That is what the author's supercooled water says: the bottle needs the tap. It is now a permanent test (`test_a_sealed_tube_with_nothing_to_spare_cannot_convert`).
+- **The wall is exactly 12, and it does not grow with the system.** Nothing below 12 ever started a conversion and nothing at 12 or above ever failed to, at any of the five sizes. Twelve is exactly the cheapest move out of the tube the energy allows: losing two squares and four surplus squares costs 32 − 20 = 12 at λ = 1.25. So the cost of *starting* is local and fixed while the energy given off, 1 per vertex, grows with the system. That is the condition for a runaway. *It points the opposite way from the waiting-time measurement above, and the two are not reconciled.*
+- **Sealed, where it ends is fixed by what it was given.** The released energy has nowhere to go but back into the graph, so the end state sits on the line "total energy in", 1 + spark/N per vertex: 1.19 measured against 1.25 expected at N = 64 with a spark of 16, the difference being what the demon still holds. It never reaches the perfect flat sheet that the fixed-temperature runs reach. That is claim 5 measured: what came out of the change is warmer than what went in.
+- **Not claimed:** none of this is a measurement of a latent heat in the thermodynamic sense, and the reconciliation with the waiting-time result is open.
 
 ### A curled-up dimension opening out into the flat sheet (2026-09-20; `configs/cqg_tube_uncurls_lam125.json`, `configs/cqg_tube_uncurls_lam150.json`; EXPLORATORY, four replicas)
 

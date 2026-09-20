@@ -130,7 +130,15 @@ So the wiring the hypothesis needs (a specific arrangement, higher in F than the
 
    ![A curled-up dimension opening out into a flat sheet](../figures/tube_uncurls.png)
 
-   Not shown: that it survives larger sizes, that the tube is a strict dip (it is not: some moves out of it cost nothing), where a tube would come from, or anything about what happens to the energy given off. Next on this line: the same at N = 144 and 256 with more replicas, waiting time against g (is there a wall, and how high); then tempering at λ = 1.25 from random starts, to see whether cooling alone ever lands in a tube; then sealed and leaky runs.
+   Not shown: that it survives larger sizes, that the tube is a strict dip (it is not: some moves out of it cost nothing), or where a tube would come from.
+
+4. **Done, same day: the wall, the waiting time, and what becomes of the energy** (ASSUMPTIONS section D; VISION Update 9).
+
+   ![Three things the sealed runs say](../figures/sealed_story.png)
+
+   The wall round the tube is exactly 12 units and does not grow with the system, while the energy given off does, which is the condition for a runaway; a sealed system with nothing to spare can never start; and sealed, the end state is fixed by the energy put in and never reaches the flat sheet. Against that, a prediction of ours about the waiting time was not supported. The last two bear directly on the factors table above: "dips and walls" and "what happens to the released energy" are now measured rather than argued.
+
+5. **Next on this line:** reconcile the wall and the waiting time (waiting time against g, and where in the graph a conversion starts); leaky runs across a range of leak rates, the author's semi-permeable wall; tempering at λ = 1.25 from random starts, to see whether cooling alone ever lands in a tube.
 
 ## What this brief is not
 

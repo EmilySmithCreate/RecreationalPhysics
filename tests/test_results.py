@@ -302,3 +302,24 @@ def test_quench_from_the_flat_torus_at_several_couplings(tmp_path):
     (tmp_path / "tinyq.csv").unlink(), (tmp_path / "tinyq.meta.json").unlink()
     with pytest.raises(ValueError):
         load_script("run_cqg_quench").main(path2, tmp_path)
+
+
+def test_spark_threshold_script(tmp_path):
+    """Sealed runs from a perfect tube: below the wall nothing moves, above it every run leaves."""
+    cfg = dict(name="spark", sides=[[8, 4]], sparks=[4, 16], n_sweeps=600, replicas=2, seed=13,
+               seed_scheme="independent", cap=None, acceptance="metropolis")
+    cfg["lambda"] = 1.25
+    path = tmp_path / "spark.json"
+    path.write_text(json.dumps(cfg))
+    load_script("run_spark_threshold").main(path, tmp_path)
+    rows = read_rows(tmp_path / "spark.csv")
+    assert len(rows) == 4 and {r["N"] for r in rows} == {"32"}
+    small = [r for r in rows if float(r["spark"]) == 4]
+    big = [r for r in rows if float(r["spark"]) == 16]
+    assert all(r["left"] == "False" and r["first_change"] == "" for r in small)
+    assert all(float(r["energy_start"]) == 1.0 and float(r["phi_start"]) == 1.25 for r in rows)
+    assert all(r["left"] == "True" and int(r["first_change"]) > 0 for r in big)
+    cfg["acceptance"] = "glauber"
+    path.write_text(json.dumps(cfg))
+    with pytest.raises(ValueError):                               # a sealed run has no acceptance rule to choose
+        load_script("run_spark_threshold").main(path, tmp_path)
