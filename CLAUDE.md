@@ -35,7 +35,7 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 
 - Python 3.10+, NumPy, Numba for inner loops (`@njit(cache=True)`), networkx only for setup and tests.
 - Graph state: `(N, degree)` int64 neighbour array; `-1` marks a temporarily empty slot during a move.
-- `cqg.run_chain` returns `(S, X, acceptance)`: squares and surplus squares after each measurement sweep. H = 16(N − S) + 4λX.
+- `cqg.run_chain` returns `(S, X, acceptance)`: squares and surplus squares after each measurement sweep. H = 16(N − S) + 4λX. Its optional last argument `conn`, an `(n_meas, 4)` integer array, receives the connectivity numbers of `connectivity.py` (pieces, largest, vertices in baby universes, 4-cubes) without changing the chain.
 - Monte Carlo moves must have a written detailed-balance argument in the module docstring.
 - Source keys in comments (`[T25]`, `[KTB19]`, ...) match `REFERENCES.bib`, whose `note` fields record whether each paper was read in full, abstract only, or not at all.
 - Keep modules small and readable; the owner must be able to follow every line.
