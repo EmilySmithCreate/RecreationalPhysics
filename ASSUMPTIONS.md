@@ -120,6 +120,32 @@ The first run of the T2 kernel. Identical to the capped control above in every r
 - **How far down it can be trusted.** Four independent replicas from random starts agree to 0.002 for g ≥ 3.2 and to 0.004 at g = 3.0, with τ far below the run length. A single chain could be trusted only for g ≥ 5, so the equilibrium curve now reaches from φ = 0.57 to φ = 0.83. Below g = 3 the replicas differ by up to 0.02, τ is one to two thousand sweeps, and graphs made one round trip per replica or none in 18 000 rounds: treat those rows as approximate. The cold graphs are ordered with a few frozen-in defects.
 - **What the curve looks like.** Smooth from 0.48 to 0.96, with no jump anywhere. It is steepest near g = 2.85, where τ peaks and the fluctuation measure χ rises to 0.18 and then falls by a factor of four within one step of the ladder. Something orders there at this size. Whether that is a continuous change or a weak abrupt one cannot be told from one size and no histograms; it says where T6 should look under the cap. It is nowhere near g of 5 to 6, where [T25] Fig. 3 has its jump to 0.99: at g = 5 equilibrium is 0.574, now from two independent methods.
 
+### Which log is the axis of [T25] Fig. 3? Re-checked, and what it shows (2026-09-20, at the author's asking)
+
+The whole "not reproduced" conclusion rests on reading the axis, labelled `log[g]`, as base 10, so it was checked again from the numbers rather than from the earlier note. Three independent ways, all agreeing:
+
+1. **The label and the floor.** The axis runs from −1.0 to 2.25. Base 10 puts the hot end at g = 178, where the published S/N is 0.129; the random-phase value is 0.126 by the paper's own formula (O5). A natural log would put that end at g = 9.5, where our equilibrium value is 0.37 and the curve is nowhere near flat.
+2. **Our own curve, on the hot side.** Read base 10, eleven consecutive published points from g = 6.3 to 178 sit on our equilibrium curve to between 0.001 and 0.039. Read as a natural log, no point anywhere agrees: the differences run from 0.15 to 0.61.
+3. **Overall.** rms difference over the points inside our range: 0.186 base 10 against 0.393 natural. *(The 0.186 is dominated entirely by the window in the next paragraph; outside it the agreement is near-perfect.)*
+
+**So the axis is base 10, and the earlier reading stands. But the disagreement is much narrower than "rms 0.30" suggested, and stating it properly matters.** Taking each published point against our equilibrium curve:
+
+| log[g] | g | Published S/N | Ours | Difference |
+|---|---|---|---|---|
+| 2.25 down to 0.80 | 178 down to 6.3 | 0.129 rising to 0.481 | | **0.001 to 0.039, eleven points** |
+| 0.78 | 6.03 | 0.728 | 0.532 | −0.196 |
+| 0.77 | 5.88 | 0.887 | 0.543 | −0.344 |
+| 0.76 | 5.73 | 0.844 | 0.555 | −0.289 |
+| 0.75 | 5.59 | 0.970 | 0.566 | −0.404 |
+| 0.70 | 5.06 | 0.992 | 0.613 | −0.379 |
+| 0.60 | 3.95 | 0.997 | 0.736 | −0.261 |
+| 0.31 | 2.02 | 0.970 | 1.011 | **+0.041** |
+| below 0.31 | below 2 | 0.96 to 1.00 | (outside our range, but our curve has already reached 1.01) | |
+
+- **The two curves agree at both ends and differ only in between.** Both start at the random-phase floor of about 0.13 and both reach about 1 at g ≈ 2. What differs is how they get there: the published points drop almost vertically at one coupling, log[g] between 0.75 and 0.80, while ours rises smoothly across the whole window from g = 6.3 down to 2. This is not a disagreement about which phases exist. It is a disagreement about the shape of the crossing, which is precisely the question this project asks.
+- **[T25]'s own reading of its figure is that the transition is continuous**, on the ground that its two legs show no hysteresis (its text under Fig. 3). Ours show no hysteresis either. So the two of us agree on that much and differ on the steepness.
+- **One candidate explanation we had not considered, and cannot settle from the papers.** Our runs and [KTB19]'s forbid triangles and pentagons outright by working with bipartite graphs, which [KTB19] Sec. 4 states plainly of its own simulations. [T25] says only that "to make numerical simulations less computationally intensive one can use bipartite graphs", which is permissive and does not say what Fig. 3 did. Triangles earn more than squares in its energy (9/8 against 1, Eq. 22), so allowing them could move and steepen the rise. That would explain why we reproduce [KTB19] Fig. 8a and not [T25] Fig. 3. It is testable with `src/graphity/full_curvature.py` at small sizes, and it is now the first question for the authors.
+
 ### Parallel tempering at N = 160 with the full Hamiltonian (2026-09-20; `configs/cqg_n160_lam1_nocap_tempering.json`; EXPLORATORY, four replicas)
 
 The same ladder and protocol as the capped run above, at λ = 1 without the cap: the model of [T25], in the range below g = 5 where a single chain freezes and where the two published figures disagree most. Graphs made 2 to 4 round trips per replica, against 0 to 1 under the cap, so this ladder circulates better.
@@ -143,7 +169,7 @@ The same ladder and protocol as the capped run above, at λ = 1 without the cap:
 
 Figure: `docs/figures/equilibrium_curves.png`, which puts both tempering runs, the plain runs and both published figures on one axis.
 
-- **Against the published figures, now in equilibrium.** [KTB19] Fig. 8a: our curve passes through its digitised points to 0.003 to 0.005 at g = 4, 5 and 6; at its coldest point, g = 2, we are 0.106 above it (1.013 against 0.907), which is where that paper's single quenches would be furthest from equilibrium. [T25] Fig. 3: still not reproduced, rms 0.297 over the seven digitised points in this range, worst 0.404. At g = 5 the published figure reads 0.99 and our equilibrium value is 0.618, now from two independent methods (plain chains agreeing between opposite starts, and tempering with round trips).
+- **Against the published figures, now in equilibrium.** [KTB19] Fig. 8a: our curve passes through its digitised points to 0.003 to 0.005 at g = 4, 5 and 6; at its coldest point, g = 2, we are 0.106 above it (1.013 against 0.907), which is where that paper's single quenches would be furthest from equilibrium. [T25] Fig. 3: still not reproduced, rms 0.297 over the seven digitised points in this range, worst 0.404. At g = 5 the published figure reads 0.99 and our equilibrium value is 0.618, now from two independent methods (plain chains agreeing between opposite starts, and tempering with round trips). See the axis section above for where exactly the two disagree: only between g = 2 and g = 6.3, and not at either end.
 - **No jump anywhere.** The curve is smooth from 0.51 to 1.01 across the whole ladder, and τ rises steadily rather than exploding at one coupling. Unlike the capped model, there is no single place where the fluctuations spike: χ was flat within 15 % down to g = 2.5.
 - **Trustworthy range.** Four independent replicas from random starts agree to 0.002 down to g = 2.7 and to 0.005 at g = 2.0, with 2 to 4 round trips each.
 
