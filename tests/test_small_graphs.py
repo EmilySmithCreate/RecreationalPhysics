@@ -145,3 +145,30 @@ def test_chain_matches_the_exact_average_at_eighteen_vertices(lam, inv_g):
     mean, err = np.mean(means), np.std(means, ddof=1) / np.sqrt(len(means))
     assert err < 0.03
     assert abs(mean - exact) < 5 * err, (mean, err, exact)
+
+
+def test_sheet_tube_cube_ladder():
+    """VISION Update 7: curling a side of the torus to length 4 adds a quarter of a square per vertex, and the energy
+    per vertex is -4 (1 - lam) for every curled side. Large dimensions: sheet 2, tube 1, cube 0."""
+    from graphity.cqg import hamiltonian
+    for shape, curled in (((8, 8), 0), ((8, 4), 1), ((4, 4), 2)):
+        adj, _ = torus(shape[0], shape[1], NO_CAP)
+        n = len(adj)
+        assert total_squares(adj) / n == 1 + 0.25 * curled
+        for lam in (0.0, 0.5, 1.0, 1.5):
+            assert hamiltonian(adj, lam) / n == -4 * (1 - lam) * curled
+
+
+def test_which_arrangements_are_dips():
+    """A dip: every valid single switch raises H. The sheet is one for every lam > 0 (cheapest way out 16 lam); the
+    4-cube is one only for lam < 1 (cheapest way out 32 (1 - lam)). So for 0 < lam < 1 both are dips and the cube is
+    the lower one, and for lam > 1 the cube is no dip at all and cannot be a stable-for-now state above the sheet."""
+    from graphity.cqg import hamiltonian
+    sheet = sides_first(*torus(6, 6, NO_CAP))
+    cube = sides_first(*torus(4, 4, NO_CAP))
+    for adj, cheapest in ((sheet, lambda lam: 16 * lam), (cube, lambda lam: 32 * (1 - lam))):
+        around = one_switch_away(adj)
+        assert len(around) > 40
+        for lam in (0.0, 0.5, 0.9, 1.0, 1.1, 1.5):
+            way_out = min(hamiltonian(b, lam) - hamiltonian(adj, lam) for b in around)
+            assert way_out == pytest.approx(cheapest(lam))

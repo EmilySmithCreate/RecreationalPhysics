@@ -106,6 +106,10 @@ The capped variant showed the half-order coupling moving with ln N (ASSUMPTIONS 
 
 Note, 2026-09-19, from the sources (ASSUMPTIONS, first-look section): the N-independence in [T22] is a consequence of a continuum-limit argument in [KTB19] Sec. 3.1.1, not a measurement, and [KTB19] Fig. 8a itself shows curves for N = 100 to 200 that do not collapse, in the direction of our drift. So the thing to explain is no longer why we see a drift, but whether it is logarithmic. The prediction to test is a slope of 1 for 16/g against ln N; the first look gave 1.12 with one replica and no error bar.
 
+## Design track (VISION plan step 5)
+
+Brief: `docs/design/model_x_brief.md`. Done so far: the dip census at N ≤ 18 (`scripts/dip_census.py`, `configs/dip_census_small.json`). Next, cheapest first: (1) rehearse the S3 measurement on the backwards reaction, sheet to cubes at 0 < λ < 1, where the energy released per vertex is known exactly, 8(1 − λ); (2) after T5, look for dips above the flat ground state at N = 64 to 160 for 1 < λ < 2. Exact small-size work may run alongside the tasks above; anything that interprets new physics waits for the gates.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?
