@@ -161,6 +161,17 @@ def test_flat_torus_has_zero_energy_for_every_lambda():
         assert all(hamiltonian(adj, lam) == 0 for lam in (0.0, 0.5, 1.0, 7.0))
 
 
+@pytest.mark.parametrize("lam", [0.0, 0.5, 1.0, 3.0])
+def test_energy_edge_by_edge(lam):
+    """VISION Update 5: H = 4 * sum over edges of [(2 - S_e) + lam * (S_e - 2)+], and no edge carries
+    more than 3 squares. So each edge is cheapest at S_e = 3 below lam = 1 and at S_e = 2 above it."""
+    adj, part = torus(8, cap=NO_CAP)
+    run_chain(adj, np.flatnonzero(part == 0), 0.12, 40, 1, 5, 0.0, NO_CAP, False)   # lam = 0: over-full edges appear
+    s_e = [squares_on_edge(adj, u, int(v)) for u in range(len(adj)) for v in adj[u] if u < v]
+    assert len(s_e) == 2 * len(adj) and {2, 3} <= set(s_e) and max(s_e) == 3
+    assert 4 * sum((2 - k) + lam * max(k - 2, 0) for k in s_e) == hamiltonian(adj, lam)
+
+
 def test_melted_graph_has_energy_near_16n():
     adj, part = torus(30, cap=NO_CAP)
     run_chain(adj, np.flatnonzero(part == 0), 0.0, 300, 1, 8, 1.0, NO_CAP, False)
