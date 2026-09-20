@@ -94,15 +94,21 @@ The author's real goal is a designed model: one set of ingredients in a specific
 - **Below λ = 1 the model has the author's mechanism, wired backwards.** The flat sheet and the knots both sit in dips, and the knots are the lower one. The state that is stable for now and would convert with a release of energy is the *space-like* one.
 - **Just above λ = 1 it has it the right way round, in miniature.** At 18 points, for λ between 1 and about 1.6, there are specific folded arrangements sitting in dips *above* the flat one: stable for now, higher in energy, with a wall to get over. Above about 1.6 there are none, and the model simply fades into the one where folding is forbidden.
 
-Eighteen points are not a space, and the walls are low. This tells us where on the knob to look at sizes we can simulate, and no more than that.
+Eighteen points are not a space, and the walls are low. That told us where on the knob to look at sizes we can simulate. Looking there gave the first result in this project that points towards the hypothesis.
+
+**It has now been seen to happen, at toy size** *(added later on 20 September 2026; exploratory, four runs each)*. At λ = 1.25 we start a network of 64 or 96 points as a perfect tube: one large dimension, and exactly 1 unit of energy per point above the flat sheet. At low temperature it just sits there, for thousands of steps; in the coldest runs half of them outlast the whole run. Then, within a few hundred steps, it opens out into one connected, perfectly flat sheet with two large dimensions, and the energy it gives off is exactly the 1 per point known in advance.
+
+![A curled-up dimension opening out into a flat sheet and giving off energy](../docs/figures/tube_uncurls.png)
+
+That is the shape of the author's claim in miniature: something specific and stable for now, a threshold, an abrupt rearrangement, a definite amount of energy given off, and a flat, connected, space-like arrangement at the end, with more large dimensions than it started with. What it is not: sixty-four points are not a space; nothing is yet known about how this behaves as the network grows, which is what decides whether it is a true abrupt change of state; the tube is long-lived but some moves out of it cost nothing, so it is not strictly walled in; nothing says how a tube would come to be there; and at a fixed temperature the energy given off is simply carried away. At λ = 1.5 the tube does not last at all, in line with the exact result at 18 points. We also ran it the other way round as a rehearsal: below λ = 1 a perfect flat sheet waits, then drops in steps that land on exactly predicted energies, the first step being one dimension curling up.
 
 ## What comes next
 
-1. A better sampling method for cold networks, where our runs currently freeze. Both tracks need it.
-2. A rehearsal: start from the flat sheet below λ = 1 and watch it fall into knots. The energy released per point is known exactly in advance, which tests our way of measuring it before we need it for real.
-3. A search for those "dips above the flat state" at sizes of 64 to 160 points.
+1. The same experiment at larger sizes with more runs, and how the waiting time depends on temperature: is there a real wall, and how high?
+2. Cooling from a random start at λ = 1.25, using the new sampling method for cold networks (now built and checked against exact answers): does cooling alone ever land in a tube?
+3. Sealed and leaky runs, in which released energy stays inside the system, or escapes only slowly, as in the bottle of supercooled water. Every run so far has been at a fixed temperature, where released energy is simply carried away.
 4. The sharper measurement of whether a change is abrupt, first at the two published ends of the knob and then along it.
-5. Sealed runs, in which released energy stays inside the system, as it does in the bottle of supercooled water. Every run so far has been at a fixed temperature, where released energy is simply carried away.
+5. Finishing the reproduction stage, and the note to the authors.
 
 ## An earlier version of the question (parked)
 

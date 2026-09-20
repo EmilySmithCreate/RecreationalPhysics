@@ -126,7 +126,11 @@ So the wiring the hypothesis needs (a specific arrangement, higher in F than the
    ![A flat sheet that is stable for now, giving way in exact steps](../figures/sheet_decay.png)
 
    What it shows for the design: requirements R2 (a dip that lasts), R5 (an abrupt change with a measurable release) and the ladder of dimensions can all be seen in one run. What it lacks is the direction (space is the state that gives way) and a sealed or semi-permeable wall, without which the energy given off cannot set off anything else.
-3. **Direction A at N = 64 to 160**, once T5 exists.
+3. **Direction A, first result (exploratory; ASSUMPTIONS section D).** At λ = 1.25 a perfect tube, one large dimension and exactly 1 per vertex above the flat sheet, lasts thousands of sweeps at low coupling and then opens out abruptly into one connected, perfectly flat sheet, giving off exactly that energy. At λ = 1.5 it does not last at all, in line with the N = 18 census. So requirements R1 to R5 can be seen working together, the right way round, inside the published family and without a new knob, at 64 and 96 vertices.
+
+   ![A curled-up dimension opening out into a flat sheet](../figures/tube_uncurls.png)
+
+   Not shown: that it survives larger sizes, that the tube is a strict dip (it is not: some moves out of it cost nothing), where a tube would come from, or anything about what happens to the energy given off. Next on this line: the same at N = 144 and 256 with more replicas, waiting time against g (is there a wall, and how high); then tempering at λ = 1.25 from random starts, to see whether cooling alone ever lands in a tube; then sealed and leaky runs.
 
 ## What this brief is not
 
