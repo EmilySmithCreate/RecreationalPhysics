@@ -249,3 +249,14 @@ def test_dip_census_script(tmp_path):
     dips = [r for r in rows if r["is_dip"] == "True"]
     assert [(r["lam"], r["squares"], float(r["way_out"]), float(r["above_ground"])) for r in dips] == [
         ("0.5", "24", 16.0, 0.0)]
+
+
+def test_exact_small_averages_script(capsys):
+    """At N = 16 and lambda = 1 every state has H = 0, so phi is plain counting, 20.8 / 16, whatever g is; and no
+    state that small is valid under the cap, so no 'cap' line is printed."""
+    table = ROOT / "results" / "ergodicity_small.csv"
+    load_script("exact_small_averages").main(table, 16, [5.0, 50.0], [1.0])
+    lines = capsys.readouterr().out.splitlines()
+    assert lines[0] == "N = 16: 5 classes, 635,040,000 labelled states"
+    values = [l.split("|")[1].split() for l in lines[2:]]
+    assert [v[0] for v in values] == ["1.3000", "1.3000"] and not any("cap" in l for l in lines)
