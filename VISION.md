@@ -145,6 +145,7 @@ Update 6 (2026-09-20): first look at the λ = 0 end of the knob with our own ker
 - **For claim 4 this is a possibility shown, no more.** It shows that a graph energy of this family can produce two coexisting states with a definite energy gap, which is what a latent heat is. It does not show it for a transition that ends in geometry, and per Update 5 none of these transitions starts from anything like X.
 - **A small finding of our own.** The published ground-state pieces at λ = 0 are described as hypercubic. There is a second one, a 14-vertex graph (the points and blocks of the 7-point biplane), which ties with the 4-cube in energy at every λ and forms by itself in about one finished piece in seven. *Ours, checked by computer, unreviewed.* Worth a line in the note to the authors.
 - **Not claimed:** that the transition at λ = 0 is first order. Hysteresis shows two long-lived states; S2 asks for the histogram or the entropy curve, which is T6.
+- *Added the same day:* the owner decided that these runs pass Gate A (`TASKS.md`), the reproduction check for λ = 0. Gate B, the one for λ = 1, is still open.
 
 ## The target ("the spot")
 
