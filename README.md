@@ -9,7 +9,8 @@ This is a hobby project by a software engineer, not a physicist. It exists to te
 | Read this | For |
 |---|---|
 | [`VISION.md`](VISION.md) | the hypothesis, the working question, how it differs from published work, success criteria, plan |
-| [`paper/introduction_plain_language.md`](paper/introduction_plain_language.md) | a non-scientist's introduction to the idea |
+| [`paper/introduction_plain_language.md`](paper/introduction_plain_language.md) | a non-scientist's introduction to the idea, with pictures, and where the work stands |
+| [`docs/design/model_x_brief.md`](docs/design/model_x_brief.md) | design brief for a model of X: requirements, the factors at play between two phases, candidate directions |
 | [`ASSUMPTIONS.md`](ASSUMPTIONS.md) | every assumption, its source, and how far it has been checked; first-look results with caveats |
 | [`TASKS.md`](TASKS.md) | what happens next, with acceptance tests and two reproduction gates |
 | [`REFERENCES.bib`](REFERENCES.bib) | sources, each marked read-in-full / abstract-only / unread |
@@ -66,6 +67,7 @@ tests/                     79 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 docs/design/               design brief for a model of X (VISION plan step 5); nothing built yet
+docs/figures/              figures used in the documents, each made by a scripts/plot_*.py
 docs/published/            data points read off published figures (the images themselves are not kept)
 ```
 

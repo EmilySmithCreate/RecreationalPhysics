@@ -23,6 +23,8 @@ The two arrangements: **X**, specific and stable for now, and **S**, space-like,
 
 ### The knob λ, in plain words
 
+![The energy as a street map, and what the knob does](../figures/lambda_street_map.png)
+
 Think of the graph as a street map. A **square** is a city block: four streets closing a loop. The energy pays 16 for every block, so the network wants as many blocks as it can get. In a flat street grid every stretch of street has exactly two blocks beside it, one on each side. A third block on the same stretch of street cannot lie flat: the map has to fold over on itself there.
 
 **λ is the fine for that folding.** Each block beyond two on a stretch of street is fined 4λ, and a block that overcrowds all four of its streets is fined 16λ in all, which is λ times what it earns.
