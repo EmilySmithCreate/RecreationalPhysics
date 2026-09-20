@@ -120,6 +120,71 @@ The first run of the T2 kernel. Identical to the capped control above in every r
 - **How far down it can be trusted.** Four independent replicas from random starts agree to 0.002 for g ≥ 3.2 and to 0.004 at g = 3.0, with τ far below the run length. A single chain could be trusted only for g ≥ 5, so the equilibrium curve now reaches from φ = 0.57 to φ = 0.83. Below g = 3 the replicas differ by up to 0.02, τ is one to two thousand sweeps, and graphs made one round trip per replica or none in 18 000 rounds: treat those rows as approximate. The cold graphs are ordered with a few frozen-in defects.
 - **What the curve looks like.** Smooth from 0.48 to 0.96, with no jump anywhere. It is steepest near g = 2.85, where τ peaks and the fluctuation measure χ rises to 0.18 and then falls by a factor of four within one step of the ladder. Something orders there at this size. Whether that is a continuous change or a weak abrupt one cannot be told from one size and no histograms; it says where T6 should look under the cap. It is nowhere near g of 5 to 6, where [T25] Fig. 3 has its jump to 0.99: at g = 5 equilibrium is 0.574, now from two independent methods.
 
+### Has anyone already tried to falsify "continuous"? Traced to its source (2026-09-20, at the author's asking)
+
+[T25] supports its claim that the transition is continuous with two things: no hysteresis in its own Fig. 3, and
+
+> "Of course, several other diagnostics for a second order transition have been tested [29], with positive results."
+
+**Reference [29] is [KTB19]**, the 2019 paper we have read in full and whose Fig. 8a we reproduce. So the decisive evidence traces to one paper, and that paper states its own limits plainly:
+
+> "Computational runtimes have prevented us from a more complete characterisation of the classical phase (via, for instance Hausdorff dimension calculations) or of the critical behaviour of the system. A finite size scaling analysis may well help to improve matters in this regard, though **at present even such an analysis is precluded**: an examination of figure 8 at the coupling values around criticality (as obtained from figure 9) indicate that **we are some way off the asymptotic regime**." ([KTB19] Sec. 5)
+
+What [KTB19] does offer is a correlation length that shows a "divergent tendency" (its Fig. 9), which its own Sec. 4–5 calls a "reasonable indication" in D = 2.
+
+- **So the decisive test has not been attempted by anyone, and the published record says so.** Finite-size scaling, which is what distinguishes a weak first-order transition from a continuous one, is named as out of reach in the only paper carrying the evidence, and the 2025 review cites that paper without repeating the caveat.
+- **This is not a criticism of the reading, it is a statement of what is open.** Their reading may well be right. But "continuous" is an inference from one correlation-length plot at N ≈ 200, not a measurement that survived an attempt to kill it.
+- **It is also exactly the gap task T6 fills**, and we are better placed than they were: parallel tempering reaches the cold couplings a single chain could not (T5), and the exhaustive enumeration at N ≤ 18 gives a density of states a Wang-Landau sampler must reproduce exactly, which is a validation nobody in the published work had. The barrier between two humps, and how it grows with N, is the measurement neither paper made.
+
+### Why is the released energy always assumed to have somewhere to go? (2026-09-20, at the author's asking)
+
+Every calculation in [T25] and [KTB19] weights an arrangement by exp(−H/g) at a fixed g. That is the canonical ensemble, and it carries an assumption that is rarely stated: the system is in contact with an unlimited reservoir at temperature g, which absorbs any energy released and supplies any energy needed. Nobody writes it down because for ordinary physics it is true — a sample in a laboratory really does sit in a room.
+
+Three reasons it is the default, and one reason it matters here (*the first three are standard; the fourth is ours, unverified*):
+
+1. It is far easier. The partition function factorises and free energies can be computed.
+2. For most quantities and large systems the canonical and the fixed-total-energy (microcanonical) treatments agree, so the choice usually does not matter.
+3. In cosmology the expansion of space supplies the cooling, so a falling temperature is a reasonable stand-in for it. Neither paper models expansion; the coupling is simply turned by hand.
+4. **But the agreement in (2) is known to fail at exactly one place: a first-order transition.** At fixed total energy a system can sit in the coexistence region, where the two phases are both present and the released energy is visibly raising the temperature of what is left. The canonical ensemble cannot represent that state at all: it jumps across the coexistence region, and the latent heat appears only as a discontinuity, never as something the system does. So the standard choice of ensemble is blind in precisely the place VISION claims 4, 5 and 6 live.
+
+This is why the sealed machinery of Q12 is not an optional extra. It is the setting in which the question can be asked at all, and it is genuinely absent from the published work in this model family.
+
+### Which log is the axis of [T25] Fig. 3? Re-checked, and what it shows (2026-09-20, at the author's asking)
+
+The whole "not reproduced" conclusion rests on reading the axis, labelled `log[g]`, as base 10, so it was checked again from the numbers rather than from the earlier note. Three independent ways, all agreeing:
+
+1. **The label and the floor.** The axis runs from −1.0 to 2.25. Base 10 puts the hot end at g = 178, where the published S/N is 0.129; the random-phase value is 0.126 by the paper's own formula (O5). A natural log would put that end at g = 9.5, where our equilibrium value is 0.37 and the curve is nowhere near flat.
+2. **Our own curve, on the hot side.** Read base 10, eleven consecutive published points from g = 6.3 to 178 sit on our equilibrium curve to between 0.001 and 0.039. Read as a natural log, no point anywhere agrees: the differences run from 0.15 to 0.61.
+3. **Overall.** rms difference over the points inside our range: 0.186 base 10 against 0.393 natural. *(The 0.186 is dominated entirely by the window in the next paragraph; outside it the agreement is near-perfect.)*
+
+**So the axis is base 10, and the earlier reading stands. But the disagreement is much narrower than "rms 0.30" suggested, and stating it properly matters.** Taking each published point against our equilibrium curve:
+
+| log[g] | g | Published S/N | Ours | Difference |
+|---|---|---|---|---|
+| 2.25 down to 0.80 | 178 down to 6.3 | 0.129 rising to 0.481 | | **0.001 to 0.039, eleven points** |
+| 0.78 | 6.03 | 0.728 | 0.532 | −0.196 |
+| 0.77 | 5.88 | 0.887 | 0.543 | −0.344 |
+| 0.76 | 5.73 | 0.844 | 0.555 | −0.289 |
+| 0.75 | 5.59 | 0.970 | 0.566 | −0.404 |
+| 0.70 | 5.06 | 0.992 | 0.613 | −0.379 |
+| 0.60 | 3.95 | 0.997 | 0.736 | −0.261 |
+| 0.31 | 2.02 | 0.970 | 1.011 | **+0.041** |
+| below 0.31 | below 2 | 0.96 to 1.00 | (outside our range, but our curve has already reached 1.01) | |
+
+- **The two curves agree at both ends and differ only in between.** Both start at the random-phase floor of about 0.13 and both reach about 1 at g ≈ 2. What differs is how they get there: the published points drop almost vertically at one coupling, log[g] between 0.75 and 0.80, while ours rises smoothly across the whole window from g = 6.3 down to 2. This is not a disagreement about which phases exist. It is a disagreement about the shape of the crossing, which is precisely the question this project asks.
+- **[T25]'s own reading of its figure is that the transition is continuous**, on the ground that its two legs show no hysteresis (its text under Fig. 3). Ours show no hysteresis either. So the two of us agree on that much and differ on the steepness.
+- **A candidate explanation, raised by the author, tested, and ruled out by the figure itself.** [T25]'s energy, Eq. (22), is written with triangles, squares and pentagons. It then argues the first and last away: "triangles and pentagons can survive only as isolated defects but are excluded for an homogenous ground state and we can henceforth neglect them", followed by "to make numerical simulations less computationally intensive one can use bipartite graphs". The author pointed out, rightly, that this is permissive rather than a statement about Fig. 3, and that the argument for dropping them is about the *ground state* while Fig. 3 is about the *transition*, where the paper's own words leave them alive as defects. Since triangles earn 9/8 against a square's 1, allowing them could plausibly have steepened the rise, which would have explained why we reproduce [KTB19] Fig. 8a and not this figure.
+  **It does not survive contact with the hot end of the figure.** At infinite temperature, where the arrangement is whatever is most numerous, the number of squares per vertex is (`src/graphity/full_curvature.py`, scratch runs; general graphs melted by valid switches of the general edge switch, Q10):
+
+  | N | (3⁴/4)/N, the value [T25] quotes | Bipartite (no triangles or pentagons) | General (both allowed) |
+  |---|---|---|---|
+  | 48 | 0.422 | 0.377 ± 0.002 | 0.194 ± 0.014 |
+  | 64 | 0.316 | 0.288 ± 0.001 | 0.120 ± 0.023 |
+  | 160 | 0.127 | 0.120 (our published-size run) | not measured; the trend above is away from bipartite, not towards it |
+
+  Triangles and pentagons compete for the same edges under the hard-core rule, so allowing them roughly halves the square count, and the gap widens with N (the general value is 46 % of the quoted figure at N = 48 and 38 % at N = 64). **[T25]'s own measured hot dots sit at 0.129 at N = 160, within digitising error of the 0.126 it quotes, and our bipartite runs give 0.120.** A run with triangles and pentagons would sit at roughly half that. So Fig. 3's hot end is bipartite, and the disagreement between it and our curve is *not* explained by triangles. *Caveat: the general-graph melting is a slow scratch random walk whose ergodicity is unproven (Q10); the effect is a factor of two, far larger than any plausible error in it, but it has not been made a recorded run.*
+- **So the disagreement remains unexplained**, and the question for the authors is the narrow one: between g = 2 and g = 6.3 their points drop almost vertically where ours rise smoothly, while we agree at both ends. What configuration space, run length and protocol produced that window?
+
 ### Parallel tempering at N = 160 with the full Hamiltonian (2026-09-20; `configs/cqg_n160_lam1_nocap_tempering.json`; EXPLORATORY, four replicas)
 
 The same ladder and protocol as the capped run above, at λ = 1 without the cap: the model of [T25], in the range below g = 5 where a single chain freezes and where the two published figures disagree most. Graphs made 2 to 4 round trips per replica, against 0 to 1 under the cap, so this ladder circulates better.
@@ -141,7 +206,9 @@ The same ladder and protocol as the capped run above, at λ = 1 without the cap:
 | 2.25 | 0.9843 | 0.0050 | | 0.26 | 452 |
 | 2.00 | 1.0134 | 0.0044 | (0.99, frozen) | | 1817 |
 
-- **Against the published figures, now in equilibrium.** [KTB19] Fig. 8a: our curve passes through its digitised points to 0.003 to 0.005 at g = 4, 5 and 6; at its coldest point, g = 2, we are 0.106 above it (1.013 against 0.907), which is where that paper's single quenches would be furthest from equilibrium. [T25] Fig. 3: still not reproduced, rms 0.297 over the seven digitised points in this range, worst 0.404. At g = 5 the published figure reads 0.99 and our equilibrium value is 0.618, now from two independent methods (plain chains agreeing between opposite starts, and tempering with round trips).
+Figure: `docs/figures/equilibrium_curves.png`, which puts both tempering runs, the plain runs and both published figures on one axis.
+
+- **Against the published figures, now in equilibrium.** [KTB19] Fig. 8a: our curve passes through its digitised points to 0.003 to 0.005 at g = 4, 5 and 6; at its coldest point, g = 2, we are 0.106 above it (1.013 against 0.907), which is where that paper's single quenches would be furthest from equilibrium. [T25] Fig. 3: still not reproduced, rms 0.297 over the seven digitised points in this range, worst 0.404. At g = 5 the published figure reads 0.99 and our equilibrium value is 0.618, now from two independent methods (plain chains agreeing between opposite starts, and tempering with round trips). See the axis section above for where exactly the two disagree: only between g = 2 and g = 6.3, and not at either end.
 - **No jump anywhere.** The curve is smooth from 0.51 to 1.01 across the whole ladder, and τ rises steadily rather than exploding at one coupling. Unlike the capped model, there is no single place where the fluctuations spike: χ was flat within 15 % down to g = 2.5.
 - **Trustworthy range.** Four independent replicas from random starts agree to 0.002 down to g = 2.7 and to 0.005 at g = 2.0, with 2 to 4 round trips each.
 
@@ -149,32 +216,37 @@ The same ladder and protocol as the capped run above, at λ = 1 without the cap:
 
 The config records a prediction written **before** the run: if the tube gives way by nucleation, one region going over a wall and the rest following, the typical waiting time should fall roughly like 1/N, because a larger tube offers more places to start. Perfect tubes at λ = 1.25, g = 1.5, four sizes, twelve replicas each, 30 000 sweeps.
 
-| N | Runs that left the tube | Mean waiting time (sweeps) | Median | What 1/N predicted | Off by |
-|---|---|---|---|---|---|
-| 64 | 12 of 12 | 1119 ± 187 | 1175 | (the reference) | |
-| 96 | 12 of 12 | 1533 ± 393 | 900 | 746 | +2.0 σ |
-| 144 | 12 of 12 | 1127 ± 250 | 825 | 497 | +2.5 σ |
-| 192 | 12 of 12 | 2200 ± 366 | 1675 | 373 | +5.0 σ |
+**A mistake of ours, found and corrected the same day.** The first reading of these runs asked when the energy per vertex had moved by 0.3, which is an *absolute* energy of 0.3 N: at N = 64 one event of 12 units was nearly enough, at N = 192 five were needed. That biased the waiting time upwards for large systems, in exactly the direction of the conclusion, and it was reported before the flaw was noticed. Both readings are given below; the corrected one is the second.
 
-- **The prediction is wrong.** The waiting time does not fall with size. It is flat or slightly rising, and at N = 192 the 1/N prediction is out by five standard errors. Whatever sets the waiting time here is not a count of independent places where a conversion could start.
+| N | Mean wait, corrected criterion (the graph leaves the exact tube) | Median | What 1/N predicted | Off by | Mean wait, first (flawed) criterion |
+|---|---|---|---|---|---|
+| 64 | 835 ± 200 | 762 | (the reference) | | 1119 ± 187 |
+| 96 | 1048 ± 340 | 688 | 557 | +1.4 σ | 1533 ± 393 |
+| 144 | 752 ± 261 | 425 | 371 | +1.5 σ | 1127 ± 250 |
+| 192 | 1165 ± 302 | 762 | 278 | +2.9 σ | 2200 ± 366 |
+
+- **The prediction is still not supported, but much less strongly than first reported.** The corrected waiting times are flat with size where 1/N would have them fall threefold, and the largest size is 2.9 standard errors from the prediction, not 5.0. With twelve runs and waiting times that are spread exponentially, that is suggestive and not conclusive: it needs more replicas before anything is made of it.
 - **The other half of the prediction holds.** The end state is the same at every size: 9 to 11 runs in 12 end as a *perfectly* flat sheet (energy exactly 0, φ exactly 1), and the average energy per vertex at the end is 0.01 to 0.12 against the tube's 1.00. So the energy given off per vertex is the exact 4(λ − 1) at every size tried, which is what the rehearsal was built to measure.
-- **What it costs the picture.** VISION Update 8 calls this an existence demonstration of the *shape* of claim 4. It still is: something stable for now, a threshold, an abrupt change, a definite energy given off, a flat connected result. But "the tube gives way where a wall is crossed locally" was our guess about the mechanism, and the first test of it failed. Two readings are open and untested: the conversion may need a rearrangement that is not local (the curled direction is only four steps around, so uncurling may have to happen everywhere at once), or the wall may be mostly entropic. The spark measurement below bears on this and points the other way, which is not yet resolved.
+- **What it costs the picture.** VISION Update 8 calls this an existence demonstration of the *shape* of claim 4. It still is: something stable for now, a threshold, an abrupt change, a definite energy given off, a flat connected result. But "the tube gives way where a wall is crossed locally" was our guess about the mechanism, and the first test of it does not support it. The sealed measurement below says the wall itself *is* local and sharply 12 units at every size, so if both hold, what varies with size is not the wall but how often the system tries and fails. The two are not yet reconciled, and the honest position is that the mechanism is unknown.
 - **Limits:** one coupling, one λ, twelve replicas, tubes whose curled side is always 4. Waiting times of this kind are usually spread exponentially, so twelve runs give about 30 % on each mean.
 
-### Sealed runs: what becomes of the energy given off (2026-09-20; EXPLORATORY, scratch runs, three to six replicas)
+### Sealed runs: what becomes of the energy given off (2026-09-20; `configs/cqg_spark_threshold_lam125.json`; EXPLORATORY, eight replicas)
+
+Figure: `docs/figures/sealed_story.png`, which puts this beside the waiting-time measurement above.
 
 `src/graphity/sealed.py` (Q12). λ = 1.25, perfect tubes, nothing added and nothing removed (leak = 0), 12 000 to 20 000 sweeps. The demon starts with a fixed lump, the "spark", and there is no other source of energy.
 
-| Spark (whole system) | N = 64 | N = 144 | What happens |
-|---|---|---|---|
-| 0 | stays a tube | stays a tube | acceptance is 0.4 %, so the graph does move, but only through switches that leave S and X alone. It can never pay the wall. |
-| 4, 8 | stays a tube | stays a tube | the same |
-| 16 and up | converts | converts | the tube is left; the run ends as a single connected sheet with φ ≈ 0.94, energy per vertex 1.1 to 2.0 |
+`configs/cqg_spark_threshold_lam125.json` sweeps the spark against the size: eight sparks from 4 to 16, five sizes from N = 48 to 192, eight replicas each, 320 runs. The answer is the same at every size and perfectly sharp.
 
-- **A sealed system with nothing to spare cannot start.** This is the plainest statement the sealed runs make, and it is what the author's supercooled water says too: the bottle needs the tap. It is now a permanent test (`test_a_sealed_tube_with_nothing_to_spare_cannot_convert`).
-- **The spark needed does not grow with size:** between 8 and 16 units of energy at N = 64 and at N = 144 alike, while the energy the conversion gives off is 1 per vertex, i.e. 64 and 144. So the larger the system, the more the energy given off exceeds the cost of starting it, which is the condition for a runaway. *This points the opposite way from the waiting-time measurement above, and the two are not yet reconciled.*
-- **What the system converts into is decided by the energy it is given, not by the energy it started with.** Sealed, the released energy has nowhere to go but back into the graph, so the run settles at a temperature set by the total. At N = 64 with a spark of 16 the end state is a sheet at φ ≈ 0.94, not the perfect sheet the fixed-temperature runs reach. That is claim 5's picture measured: what did not convert (here, what converted and then partly melted again) is warmer than it began.
-- **Not claimed:** none of this is a measurement of a latent heat in the thermodynamic sense, the runs are scratch runs rather than configs in `configs/`, and the reconciliation with the waiting-time result is open.
+| Spark given to the whole system | 4 | 8 | 10 | 11 | 11.5 | 12 | 13 | 16 |
+|---|---|---|---|---|---|---|---|---|
+| Runs of 8 that converted, at **every** size (48, 64, 96, 144, 192) | 0 | 0 | 0 | 0 | 0 | 8 | 8 | 8 |
+
+- **A sealed system with nothing to spare cannot start.** With an empty demon the tube sits for ever, although the state it would convert to is lower: acceptance is 0.4 %, so the graph does move, but only through switches that leave S and X alone, and it can never pay the wall. That is what the author's supercooled water says: the bottle needs the tap. It is now a permanent test (`test_a_sealed_tube_with_nothing_to_spare_cannot_convert`).
+- **The wall is exactly 12, and it does not grow with the system.** Nothing below 12 ever started a conversion and nothing at 12 or above ever failed to, at any of the five sizes. Twelve is exactly the cheapest move out of the tube the energy allows: losing two squares and four surplus squares costs 32 − 20 = 12 at λ = 1.25. So the cost of *starting* is local and fixed while the energy given off, 1 per vertex, grows with the system. That is the condition for a runaway. *It points the opposite way from the waiting-time measurement above, and the two are not reconciled.*
+- **Sealed, where it ends is fixed by what it was given.** The released energy has nowhere to go but back into the graph, so the end state sits on the line "total energy in", 1 + spark/N per vertex: 1.19 measured against 1.25 expected at N = 64 with a spark of 16, the difference being what the demon still holds. It never reaches the perfect flat sheet that the fixed-temperature runs reach. That is claim 5 measured: what came out of the change is warmer than what went in.
+- **Sealed, the released energy manufactures exactly what [T25] Sec. VI.1 calls matter** (*ours, unverified*; recorded 2026-09-20 after the author asked why one would choose between claim 4 and his account). At N = 64 a converted tube ends at φ = 0.971, 0.957 and 0.945 for sparks of 12, 13 and 16, never at the perfect 1.000 that the same conversion reaches at fixed temperature. The shortfall, about two to four squares' worth, is random-phase disorder scattered through a geometric network, which is his definition of a matter particle. So the two accounts of where matter comes from may be one account seen from two ends: the latent heat is what makes the random regions. His is written at fixed coupling, where the energy leaves and only incomplete conversion can leave anything behind; a universe has no bath. What still separates them is what sets the *amount* (his: how fast it cooled; claim 4: the latent heat, fixed by the model) and the fact that leftover bubbles are compatible with either order of transition while a latent heat is not.
+- **Not claimed:** none of this is a measurement of a latent heat in the thermodynamic sense, the identification of those defects with matter is a reading and not a measurement, nothing here says whether such a defect is stable, and the reconciliation with the waiting-time result is open.
 
 ### A curled-up dimension opening out into the flat sheet (2026-09-20; `configs/cqg_tube_uncurls_lam125.json`, `configs/cqg_tube_uncurls_lam150.json`; EXPLORATORY, four replicas)
 
