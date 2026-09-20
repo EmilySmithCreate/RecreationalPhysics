@@ -48,17 +48,20 @@ def published(path, prefix):
 
 
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 11})
-fig, ax = plt.subplots(figsize=(12.0, 7.0), dpi=160, facecolor=SURFACE)
+fig, ax = plt.subplots(figsize=(13.0, 7.0), dpi=160, facecolor=SURFACE)
 ax.set_facecolor(SURFACE)
 
-# the region where a single chain freezes, so that the reader knows why tempering was needed
-ax.axvspan(1.8, 5.0, color="#f2f1ed", zorder=0, lw=0)
-ax.text(1.95, 0.06, "a single chain freezes in here.\nEverything shown in this band comes from\nrunning all couplings at once and letting\nthe graphs swap between them.",
-        color=INK2, fontsize=10, va="bottom", ha="left")
+# the two regions we cannot speak for, marked so the reader sees the whole published range
+ax.axvspan(0.08, 2.0, color="#f2f1ed", zorder=0, lw=0)
+ax.text(0.095, 0.06, "neither method reaches\nequilibrium in here",
+        color=INK2, fontsize=9.5, va="bottom", ha="left")
+ax.axvspan(2.0, 5.0, color="#f8f7f3", zorder=0, lw=0)
+ax.text(2.1, 0.06, "a single chain freezes here;\nthese points come from running\nall couplings at once",
+        color=INK2, fontsize=9.5, va="bottom", ha="left")
 
 for level, label in ((1.0, "flat sheet"), (1.5, "closed knots")):
-    ax.plot([1.8, 40], [level, level], color=INK2, lw=1, ls=(0, (2, 3)), zorder=1)
-    ax.text(40.5, level, label, ha="left", va="center", fontsize=9.5, color=INK2)
+    ax.plot([0.08, 220], [level, level], color=INK2, lw=1, ls=(0, (2, 3)), zorder=1)
+    ax.text(225, level, label, ha="left", va="center", fontsize=9.5, color=INK2)
 
 gs, phi = tempered("cqg_n160_lam1_nocap_tempering")
 ax.plot(gs, phi, color=INK, lw=2.6, marker="o", ms=6, mec=SURFACE, mew=1.2, zorder=5,
@@ -67,7 +70,7 @@ gs2, phi2 = tempered("cqg_n160_capped_tempering")
 ax.plot(gs2, phi2, color=INK2, lw=2.2, ls=(0, (5, 3)), marker="s", ms=5, mec=SURFACE, mew=1.2, zorder=4,
         label="Ours, folding forbidden (the cap)")
 gs3, phi3 = plain("cqg_n160_lam1_nocap_vs_t25fig3", 5.0)
-ax.plot(gs3, phi3, color=INK, lw=0, marker="o", ms=11, mfc="none", mew=1.6, zorder=6,
+ax.plot(gs3, phi3, color=INK, lw=2.6, marker="o", ms=6, mfc="none", mew=1.6, zorder=6,
         label="Ours, full energy, one chain at a time")
 
 x8, y8 = published("KTB19_fig8a_N160_digitised.csv", "cool")
@@ -80,18 +83,18 @@ x3h, y3h = published("T25_fig3_digitised.csv", "heat")
 ax.scatter(x3h, y3h, s=75, facecolors=SURFACE, edgecolors=ORANGE, linewidths=2.2, zorder=7,
            label="Published: Trugenberger 2025, Fig. 3 (heating)")
 
-ax.annotate("The 2025 figure climbs to 0.99 by g = 5.\nOur equilibrium value there is 0.62, from\nboth of our methods. This is the one\npublished result we cannot reproduce.",
-            xy=(5.06, 0.992), xytext=(2.45, 1.44), color=INK, fontsize=10.5, va="top",
+ax.annotate("Here the 2025 figure climbs to 0.99 while we are\nstill at 0.62. This narrow window is the whole\nof the disagreement, and it is unexplained.",
+            xy=(5.06, 0.992), xytext=(0.115, 1.45), color=INK, fontsize=10.5, va="top",
             arrowprops=dict(arrowstyle="-", color=INK2, lw=1))
-ax.annotate("Our curve passes through the 2019\npoints to 0.005 wherever it covers them",
-            xy=(7.0, 0.467), xytext=(9.5, 0.78), color=INK, fontsize=10.5,
+ax.annotate("Everywhere out here we sit on the published points,\nboth papers', to between 0.001 and 0.04",
+            xy=(30, 0.191), xytext=(11, 0.74), color=INK, fontsize=10.5,
             arrowprops=dict(arrowstyle="-", color=INK2, lw=1))
 
 ax.set_xscale("log")
-ax.set_xlim(1.8, 40)
+ax.set_xlim(0.08, 220)
 ax.set_ylim(0, 1.62)
-ax.set_xticks([2, 3, 4, 5, 6, 8, 10, 15, 20, 30])
-ax.set_xticklabels(["2", "3", "4", "5", "6", "8", "10", "15", "20", "30"])
+ax.set_xticks([0.1, 0.3, 1, 2, 3, 5, 10, 30, 100])
+ax.set_xticklabels(["0.1", "0.3", "1", "2", "3", "5", "10", "30", "100"])
 ax.minorticks_off()
 ax.grid(True, which="major", color=GRID, lw=1)
 ax.tick_params(colors=INK2, length=0)
@@ -100,7 +103,7 @@ for side in ("top", "right", "left"):
 ax.spines["bottom"].set_color(GRID)
 ax.set_xlabel("coupling g  (acts like temperature: cold on the left, hot on the right)", color=INK2)
 ax.set_ylabel("blocks per crossing, φ", color=INK2)
-fig.suptitle("Our equilibrium curve now reaches the cold side, and it has no jump anywhere",
+fig.suptitle("Over the whole published range we sit on their points, except in one narrow window",
              x=0.04, y=0.975, ha="left", fontsize=14, color=INK, fontweight="bold")
 ax.set_title("N = 160 points, four independent runs each, agreeing to 0.002 down to g = 2.7. Where both our "
              "methods reach, they agree to 0.0005. Exploratory.",
