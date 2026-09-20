@@ -21,6 +21,22 @@ Four choices, and two arrangements they must produce.
 
 The two arrangements: **X**, specific and stable for now, and **S**, space-like, lower in F.
 
+### The knob λ, in plain words
+
+Think of the graph as a street map. A **square** is a city block: four streets closing a loop. The energy pays 16 for every block, so the network wants as many blocks as it can get. In a flat street grid every stretch of street has exactly two blocks beside it, one on each side. A third block on the same stretch of street cannot lie flat: the map has to fold over on itself there.
+
+**λ is the fine for that folding.** Each block beyond two on a stretch of street is fined 4λ, and a block that overcrowds all four of its streets is fined 16λ in all, which is λ times what it earns.
+
+| λ | What the fine does | What the cold network becomes |
+|---|---|---|
+| 0 | no fine | blocks are crammed in everywhere; the map folds into tight closed knots, the 4-cubes, and falls apart into pieces. Published: abrupt change, no space |
+| between 0 and 1 | folding still pays, but less | cubes are still lowest; the flat sheet is a dip above them |
+| 1 | the fine exactly cancels what an overcrowding block earns | cubes, tubes and the flat sheet all tie. This is the value at which the energy is the true curvature formula, the one tied to general relativity. Published: gradual change, a space forms |
+| above 1 | folding loses | the flat sheet is lowest. Between 1 and 2, at N = 18, some folded arrangements are dips above it |
+| very large | folding is forbidden outright | the "cap" of the 2019 paper |
+
+Why it is the project's first knob: the two published results sit at its two ends (abrupt without a space at 0, gradual with a space at 1), and the hypothesis needs abrupt *with* a space. The question is whether any setting gives both.
+
 ## Requirements
 
 | # | Requirement | From | How it would be checked |
@@ -28,7 +44,7 @@ The two arrangements: **X**, specific and stable for now, and **S**, space-like,
 | R1 | One F covers X, S and everything between | claim 3 | by construction |
 | R2 | X is a **dip**: every single move out of it raises F. It is specific (one arrangement up to renaming), not a crowd of typical ones | claims 1, 4 | the dip check of `scripts/dip_census.py`; lifetime in a run |
 | R3 | S is a dip too, lower than X, and passes "the spot": connected, a finite dimension, flat, local | claim 4, S4 | connectivity columns; dimension measures (not built yet) |
-| R4 | The knob that triggers the change is named in advance. Cooling is one option; a rule or the membership changing is another, and fits the author's picture better | claim 4 | by construction |
+| R4 | The knob that triggers the change is named in advance. **Cooling is fine** (author, 2026-09-20, correcting the assistant, who had written that her picture called for some other trigger): what matters is that a threshold is reached which causes a rearrangement that releases energy and gives geometric spacetime. In physics terms that is supercooling: X is carried below the point where it stopped being the most stable arrangement, stays put because of its wall, and converts when the wall is finally crossed | claim 4 | by construction; then measured as the gap between where the two arrangements tie and where the change actually happens |
 | R5 | The change is abrupt: two states coexist, and the energy released per converted vertex is measured | S2, S3 | histogram or entropy curve (T6); sealed runs |
 | R6 | X is more symmetric than S, and S can sit inside X in three or more equivalent ways, which favours an abrupt change | claim 3; Landau theory, textbook, *ours in the application* | count the ways; then measure, because it is a tendency, not a guarantee |
 | R7 | What is conserved across the change is stated; leftovers (X that did not convert, other arrangements) are allowed and counted | claims 5, 6 | bookkeeping columns |
@@ -41,7 +57,8 @@ The two arrangements: **X**, specific and stable for now, and **S**, space-like,
 | Which is lower in F, and where they tie | which arrangement the rules prefer at each knob setting | 4-cubes and the flat sheet tie at exactly λ = 1 |
 | How many ways each can be arranged | heat favours the one with more ways | the random phase wins at high g by numbers alone |
 | The knob | what triggers the change | g in all published work; λ is the other knob we have |
-| Dips and walls | "stable for now" means a dip with a wall round it; the wall's height sets how long it lasts | the dip census below |
+| Dips and walls | "stable for now" means a dip with a wall round it; the wall's height sets how long it lasts. **The first move costs energy, the later ones give back more**: pay the wall, collect the wall plus the height of the dip above the ground. That is an activation energy, as in striking a match | the dip census below: at N = 18, λ = 1.25, pay 5 to get over the wall, and the way down to the flat ground state gives back 17 in all, a net release of 12 |
+| What happens to the released energy | In a run at fixed temperature it is carried away and nothing more happens. In a sealed system it stays, and then two things compete: it can carry neighbouring regions over their walls (a chain reaction, an explosion), and it reheats what has not converted, which can stop the change part-way. Supercooled water does the second: tapped, only part of it freezes, and the slush ends up warmer than it started. That is claim 5, "what did not convert remained as hotter X" | not yet met: every run so far is at fixed temperature. It is what the sealed runs of VISION step 3 and S3 are for |
 | The symmetry relation | two equivalent ways allow a gradual change; three or more usually make it abrupt | four equal dimensions with one singled out is four ways; four edges at a vertex pairing into two axes is three ways |
 | The energy gap where they coexist | the latent heat, Δρ | about 13.6 per vertex at λ = 0 (exploratory) |
 | What is conserved | the bookkeeping | same vertices and edges throughout; only the arrangement differs |
