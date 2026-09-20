@@ -48,6 +48,8 @@ Checked on 2026-09-19: re-running `configs/cqg_first_look.json` on a second mach
 
 ```
 src/graphity/cqg.py        2D combinatorial quantum gravity kernel (current focus)
+src/graphity/connectivity.py  connected pieces, baby universes, 4-cubes (has the graph shattered?)
+src/graphity/squares.py    the two smallest graph readers, shared by the two modules above
 src/graphity/analysis.py   fluctuation measures, block bootstrap, autocorrelation time
 src/graphity/results.py    result writer that never overwrites
 src/graphity/energy.py     parked: Konopka cycle energy
@@ -56,7 +58,7 @@ src/graphity/graphs.py     parked: start states and menus
 scripts/                   config-driven runners; digitiser and comparison for published figures
 configs/                   experiment definitions
 results/                   outputs (append-only)
-tests/                     48 tests
+tests/                     56 tests
 paper/                     text
 docs/parked/               pre-registration draft of the parked menu study
 docs/published/            data points read off published figures (the images themselves are not kept)

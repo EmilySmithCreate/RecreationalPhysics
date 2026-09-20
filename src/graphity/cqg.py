@@ -72,6 +72,9 @@ ASSUMPTION Q5 (start state): an lx x ly periodic square lattice, both sides
 import numpy as np
 from numba import njit
 
+from graphity.connectivity import connectivity
+from graphity.squares import has_edge, squares_on_edge      # moved there so connectivity.py can share them
+
 CAP = 2                    # squares allowed per edge in the capped model, 2D - 2      (Q3)
 NO_CAP = 3                 # the hard-core rule alone already stops at 2D - 1 = 3      (Q2)
 MAX_CODEGREE = 2           # no K_{2,3}                                                 (Q2)
@@ -104,31 +107,6 @@ def torus(lx: int, ly: int = None, cap: int = CAP):
                       x * ly + (y + 1) % ly, x * ly + (y - 1) % ly]
             part[i] = (x + y) % 2
     return adj, part
-
-
-@njit(cache=True)
-def has_edge(adj, a, b):
-    for k in range(4):
-        if adj[a, k] == b:
-            return True
-    return False
-
-
-@njit(cache=True)
-def squares_on_edge(adj, u, v):
-    """Number of 4-cycles u - v - a - b - u containing the edge (u, v)."""
-    count = 0
-    for i in range(4):
-        a = adj[v, i]
-        if a < 0 or a == u:
-            continue
-        for j in range(4):
-            b = adj[u, j]
-            if b < 0 or b == v:
-                continue
-            if has_edge(adj, a, b):
-                count += 1
-    return count
 
 
 @njit(cache=True)
@@ -286,13 +264,17 @@ def _surplus_on(adj, edges, n):
 
 
 @njit(cache=True)
-def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glauber=False):
+def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glauber=False, conn=None):
     """Markov chain at coupling g = 1 / inv_g. Modifies adj in place.
 
     side_u  : array of the vertices in one half of the bipartition.
     lam     : strength of the local term. Irrelevant under the cap, where X = 0.
     cap     : CAP (2) or NO_CAP.
     glauber : False for Metropolis, True for the rule of [T25 Eq. (28)].
+    conn    : optional (n_meas, 4) integer array. If given, row i receives, after
+              measurement sweep i, the four numbers of connectivity.connectivity:
+              pieces, size of the largest, vertices in baby universes, 4-cubes.
+              Looking uses no random numbers, so the chain is the same either way.
     Returns (S after each measurement sweep, X after each, acceptance rate).
     One sweep = 2N attempted switches (one per edge).
     """
@@ -359,4 +341,10 @@ def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glaub
         if sweep >= n_equil:
             out_s[sweep - n_equil] = s
             out_x[sweep - n_equil] = x
+            if conn is not None:
+                pieces, largest, in_babies, cubes = connectivity(adj)
+                conn[sweep - n_equil, 0] = pieces
+                conn[sweep - n_equil, 1] = largest
+                conn[sweep - n_equil, 2] = in_babies
+                conn[sweep - n_equil, 3] = cubes
     return out_s, out_x, accepted / max(attempted, 1)

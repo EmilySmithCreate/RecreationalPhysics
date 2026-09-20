@@ -33,17 +33,27 @@ Done. `run_chain(..., lam, cap, glauber)` now returns (S, X, acceptance), where 
 - ΔX is found as the task suggested: list the edges of every lost and gained square, sum X over the list in the new graph, switch the move back, sum over the same list in the old graph, switch forward.
 - Acceptance tests: `test_four_cube_energies`, `test_flat_torus_has_zero_energy_for_every_lambda`, `test_melted_graph_has_energy_near_16n`, `test_incremental_energy_is_exact` (λ = 0, 0.5, 1), and the regression as a permanent unit test, `test_capped_kernel_is_bit_for_bit_what_it_was`, pinned to numbers recorded before the change. The full-size regression on `cqg_first_look` was also re-run by hand. Rule 6 checks for a new kernel (networkx brute force, constraint preservation, same-seed) are in `tests/test_cqg.py`; Metropolis and Glauber are tested to agree.
 
-## T3. Connectivity observables  ☐
+## T3. Connectivity observables  ☑ (2026-09-20)
 
 Number of connected components, size of the largest, and a census of isolated Q4 components. Needed to detect the published "shattering into hypercubes" at λ = 0 and to check success condition S4 (a connected space).
 
 Accept: unit tests on hand-built graphs (one torus; two disjoint tori; a torus plus a Q4).
+
+Done: `src/graphity/connectivity.py`, tests in `tests/test_connectivity.py` (the three hand-built cases, plus a comparison with networkx on graphs the chain shattered by itself). `run_chain` takes an optional `conn` array and the runner writes four new columns: `pieces`, `largest_frac`, `baby_frac`, `cube_frac` (ASSUMPTIONS Q8). Looking does not change the chain; `cqg_first_look` re-run at full size is identical on its original columns.
+- The census follows the published definition, not only "Q4": [KTB19] Sec. 3.3.1 defines the λ = 0 ground-state pieces as "baby universes", connected pieces with three squares on every edge, and its Fig. 5 draws them as 4-cubes. 4-cubes are counted separately among them.
+- **Finding on the way (ours): the 4-cube is not the only one.** A 14-vertex graph (points and blocks of the 7-point biplane) qualifies too and ties with the 4-cube in energy at every λ. It matters for Gate A's wording below, and for T7.
+- To make the two smallest readers (`has_edge`, `squares_on_edge`) usable from both modules they moved, unchanged, to `src/graphity/squares.py`; `cqg.py` still exports them.
 
 ## GATE A. Reproduce the published λ = 0 behaviour  ☐
 
 Published: with the global term only, the transition is first order and the graph decomposes into isolated hypercubic complexes ([T25] "Cycle condensation"; [KTB19]; [GV21]).
 
 Accept: at λ = 0, several sizes, cooling and heating: hysteresis around the transition, and a cold phase dominated by Q4 components. If this does not appear, stop: either our model reading or our sampling is wrong.
+
+Note, 2026-09-20 (the criterion above is unchanged; this records what T3 turned up, for the owner to decide).
+- **"Dominated by Q4 components" may be too narrow.** The published definition of the λ = 0 ground-state pieces is the baby universe ([KTB19] Sec. 3.3.1), and the 4-cube is not the only one (ASSUMPTIONS Q8). Proposed reading, NOT adopted: "a cold phase dominated by baby universes (`baby_frac`), reporting how many of them are 4-cubes (`cube_frac`)". If only 4-cubes ever appear the two readings agree.
+- **A second published curve exists for this gate:** [KTB19] Fig. 6, a quench at λ = 0 for N = 100 to 200, where φ passes 1 within a few hundred sweeps and reaches 1.2 to 1.35 by sweep 1000. It can be digitised as Fig. 8a was. Its "sweep" is not defined in the paper, so only the shape and the heights are comparable, not the clock.
+- Sizes should be chosen knowing that perfect shattering into 4-cubes needs N divisible by 16, and into the 14-vertex piece N = 14a + 16b.
 
 ## GATE B. Reproduce [T25] Fig. 3 at λ = 1  ☐
 

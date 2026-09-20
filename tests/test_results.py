@@ -111,6 +111,8 @@ def test_runner_reproduces_direct_chain_calls(tmp_path):
         assert float(row["acceptance"]) == acc
         assert float(row["phi_err"]) >= 0 and float(row["chi_err"]) >= 0
         assert (row["lam"], row["cap"], float(row["surplus"])) == ("1.0", "2", 0.0)   # the defaults
+        assert float(row["pieces"]) >= 1 and 0 < float(row["largest_frac"]) <= 1
+        assert float(row["baby_frac"]) == float(row["cube_frac"]) == 0   # three squares on an edge: not under the cap
 
 
 def test_runner_model_keys(tmp_path):
@@ -124,6 +126,7 @@ def test_runner_model_keys(tmp_path):
     assert {(r["lam"], r["cap"]) for r in rows} == {("0.0", "none")}
     cold = [r for r in rows if r["leg"] == "cool" and float(r["g"]) == 3][0]
     assert float(cold["surplus"]) > 0            # with no cap and no penalty, over-full edges appear
+    assert {"pieces", "largest_frac", "baby_frac", "cube_frac"} <= set(cold)
 
     for key, bad in [("cap", 3), ("acceptance", "heat-bath")]:
         cfg2, path2 = tiny_config(tmp_path, **{key: bad})

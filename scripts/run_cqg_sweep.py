@@ -35,6 +35,15 @@ autocorrelation time in sweeps (ASSUMPTION Q6). Do not trust the error bars of a
 row whose tau_int is not far below n_meas / 20, or is NaN (frozen chain).
 Column surplus is X/N, the surplus squares on over-full edges per vertex: zero
 under the cap and on a flat torus, 2 on a 4-cube. Without the cap phi can exceed 1.
+
+Connectivity columns (task T3; graphity/connectivity.py), each an average over the
+measurement sweeps: pieces is the number of connected pieces, largest_frac the
+share of vertices in the largest piece, baby_frac the share of vertices in "baby
+universes" (pieces with three squares on every edge, the lowest-energy pieces at
+lambda = 0 [KTB19 Sec. 3.3.1]) and cube_frac the share in those baby universes
+that are 4-cubes. A connected space has 1, 1, 0, 0; a graph shattered into 4-cubes
+has N/16, 16/N, 1, 1. Looking uses no random numbers, so it leaves the chain, and
+therefore every other column, exactly as it was.
 """
 import json
 import platform
@@ -114,8 +123,9 @@ def main(path, out_dir="results"):
                         adj, _ = torus(lx, ly, cap)
                     for g in values:
                         k += 1
+                        conn = np.zeros((cfg["n_meas"], 4), dtype=np.int64)
                         s, x, acc = run_chain(adj, side_u, 1.0 / g, cfg["n_equil"], cfg["n_meas"],
-                                              seed_of(k), lam, cap, glauber)
+                                              seed_of(k), lam, cap, glauber, conn)
                         phi = s / n
                         _, phi_err, _, var_err = block_bootstrap_mean_var(phi, seed=seed_of(k))
                         row = dict(N=n, replica=rep, leg=leg, g=g, phi=float(phi.mean()),
@@ -123,7 +133,11 @@ def main(path, out_dir="results"):
                                    acceptance=float(acc), phi_err=phi_err,
                                    chi_err=n * var_err, tau_int=autocorr_time(phi),
                                    lx=lx, ly=ly, lam=lam, cap=("none" if cap == NO_CAP else cap),
-                                   surplus=float(x.mean() / n))
+                                   surplus=float(x.mean() / n),
+                                   pieces=float(conn[:, 0].mean()),
+                                   largest_frac=float(conn[:, 1].mean() / n),
+                                   baby_frac=float(conn[:, 2].mean() / n),
+                                   cube_frac=float(16 * conn[:, 3].mean() / n))
                         out.write(row)
                         print(row, flush=True)
                 assert is_valid(adj, cap)
