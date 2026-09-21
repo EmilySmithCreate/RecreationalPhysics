@@ -12,8 +12,44 @@ locates the transition. Reweighting is only trustworthy while the two distributi
 the shift is reported and one that is too large is refused rather than quietly used.
 
 DISCRETENESS. [Kelly22] warns that a discrete action spectrum can make one hump look like
-several. Our energies are discrete too, so a candidate pair of humps must be separated by more
-than a few energy levels before it is counted; the separation used is reported.
+several. Two separate things can fake a pair of humps, and each needs its own guard.
+
+  A comb. If the reachable energies sit on a coarser lattice than the recorded bins, or are
+  simply reached unevenly, the histogram alternates up-down-up-down from one bin to the next.
+  Every other bin is then a local maximum, so a minimum separation does NOT help: at a period of
+  two bins there are spurious peaks at every even spacing, including whatever separation you
+  demanded. The guard is to smooth with a binomial [1,2,1]/4 filter, which annihilates a
+  one-bin alternation exactly (it has a zero at that frequency) while leaving structure tens of
+  bins wide almost untouched. Peaks, valley and depth are all measured on the smoothed curve,
+  which can only shrink a real barrier, never invent one.
+
+  Counting noise. A valley one standard error deep is not a valley. The depth is required to
+  beat the counting error on the three bins it is built from, by NOISE_SIGMAS.
+
+AN EMPTY BIN IS NOT A DEEP BIN. A bin with no counts means the run never went there, which is
+not the same as the run going there rarely, and the difference is not a detail: taking the
+logarithm of nothing produces a valley of unlimited depth out of a place we have no information
+about. Measured here, that single confusion invented a barrier in six of twenty-five histograms
+that were one hump plus counting noise, each time reporting the same depth of about 690, which
+is nothing but the logarithm of the floor the code had clamped to. So the analysis is restricted
+to the longest unbroken stretch of energies the run actually visited. This matches what a
+barrier means: to measure the cost of crossing a valley the run has to have crossed it. A valley
+so deep the run never got over it does not show up here as a big number, it shows up as no
+round trips, which is a gate in its own right.
+
+HOW FAR A REWEIGHT MAY GO. Reweighting multiplies each bin by exp(-H(1/g' - 1/g)), which over a
+wide energy range is a very steep tilt, and it is applied to bins the run barely visited. Push
+far enough and a couple of stray counts in the sparse tail are amplified into the tallest
+feature on the plot, with a deep clean valley in front of them; measured here, that alone
+manufactured a barrier in six of twenty-five noise-only histograms. A limit on the shift in g
+does not catch it, because whether a given shift is safe depends on how wide the histogram is.
+The honest measure is the effective sample size: how many of the recorded sweeps still carry
+weight after the tilt. If reweighting concentrates the answer onto a handful of them, the
+answer is about those sweeps and not about the system, so it is refused.
+
+Every guard here errs towards reporting no barrier. That is the safe direction: the claim under
+test would be supported by finding a barrier, so the instrument must not be able to manufacture
+one.
 """
 import csv
 import sys
@@ -24,6 +60,10 @@ import numpy as np
 
 MAX_SHIFT = 0.25          # refuse a reweight of more than this fraction in 1/g
 MIN_LEVELS_APART = 4      # humps closer than this many energy levels are one hump (discreteness)
+SMOOTH_PASSES = 2         # binomial passes before peak-finding; kills a one-bin alternation
+NOISE_SIGMAS = 3.0        # a valley must be this many counting errors deep to count
+MIN_ESS_FRAC = 0.02       # a reweight may not throw away more than this much of the sample
+MIN_ESS = 500.0           # ...nor leave fewer than this many sweeps carrying the answer
 
 
 def reweight(levels, counts, g_from, g_to):
@@ -33,37 +73,85 @@ def reweight(levels, counts, g_from, g_to):
     return p / p.sum()
 
 
-def two_humps(levels, p):
-    """Deepest genuine pair of humps, or None. Returns (low, high, valley) as indices."""
-    interior = np.arange(1, len(p) - 1)
-    maxima = [i for i in interior if p[i] >= p[i - 1] and p[i] >= p[i + 1]]
+def visited_stretch(levels, counts):
+    """The longest unbroken run of energies the run actually reached. See the header."""
+    seen = np.asarray(counts) > 0
+    best_i, best_n, i = 0, 0, 0
+    while i < len(seen):
+        if not seen[i]:
+            i += 1
+            continue
+        j = i
+        while j < len(seen) and seen[j]:
+            j += 1
+        if j - i > best_n:
+            best_i, best_n = i, j - i
+        i = j
+    sl = slice(best_i, best_i + best_n)
+    return levels[sl], np.asarray(counts, float)[sl]
+
+
+def effective_sample_size(levels, counts, g_from, g_to):
+    """Kish's effective sample size of the tilt: (sum w)^2 / sum w^2, counted over sweeps."""
+    lw = -levels * (1.0 / g_to - 1.0 / g_from)
+    lw -= lw.max()
+    w = np.exp(lw)
+    s2 = float((w * w * counts).sum())
+    if s2 <= 0.0:
+        return 0.0
+    return float((w * counts).sum()) ** 2 / s2
+
+
+def smooth(y, passes=SMOOTH_PASSES):
+    """Binomial [1,2,1]/4, edge-padded. One pass exactly annihilates a one-bin alternation."""
+    y = np.asarray(y, float)
+    for _ in range(passes):
+        y = np.convolve(np.r_[y[0], y, y[-1]], [0.25, 0.5, 0.25], mode="valid")
+    return y
+
+
+def two_humps(p, raw):
+    """Deepest genuine pair of humps, or None. Returns (low, high, valley, smoothed p)."""
+    ps = smooth(p)
+    ps = ps / ps.sum()
+    cs = smooth(raw)                      # counts behind each bin, smoothed the same way
+    interior = range(1, len(ps) - 1)
+    maxima = [i for i in interior if ps[i] >= ps[i - 1] and ps[i] >= ps[i + 1]]
     best, best_depth = None, -np.inf
     for ai, a in enumerate(maxima):
         for b in maxima[ai + 1:]:
             if b - a < MIN_LEVELS_APART:
                 continue
-            v = a + int(np.argmin(p[a:b + 1]))
+            v = a + int(np.argmin(ps[a:b + 1]))
             if v in (a, b):
                 continue
-            depth = np.log(min(p[a], p[b])) - np.log(max(p[v], 1e-300))
+            depth = np.log(min(ps[a], ps[b])) - np.log(max(ps[v], 1e-300))
+            err = np.sqrt(sum(1.0 / max(cs[i], 1.0) for i in (a, b, v)))
+            if depth <= NOISE_SIGMAS * err:
+                continue
             if depth > best_depth:
-                best, best_depth = (a, b, v), depth
+                best, best_depth = (a, b, v, ps), depth
     return best
 
 
 def observables(levels, counts, g0, n):
     """Scan for the coupling where the humps balance; return the pre-registered four."""
+    levels, counts = visited_stretch(levels, counts)
+    if len(levels) < 2 * MIN_LEVELS_APART:
+        return None
     best = None
+    floor = max(MIN_ESS, MIN_ESS_FRAC * float(np.sum(counts)))
     for g in np.linspace(g0 * (1 - MAX_SHIFT), g0 * (1 + MAX_SHIFT), 241):
-        p = reweight(levels, counts, g0, g)
-        hh = two_humps(levels, p)
+        if effective_sample_size(levels, counts, g0, g) < floor:
+            continue
+        hh = two_humps(reweight(levels, counts, g0, g), counts)
         if hh is None:
             continue
-        a, b, v = hh
-        below = p[:v + 1].sum()
+        a, b, v, ps = hh
+        below = ps[:v + 1].sum()
         imbalance = abs(np.log(max(below, 1e-300) / max(1 - below, 1e-300)))
         if best is None or imbalance < best[0]:
-            best = (imbalance, g, a, b, v, p)
+            best = (imbalance, g, a, b, v, ps)
     if best is None:
         return None
     imbalance, g, a, b, v, p = best
