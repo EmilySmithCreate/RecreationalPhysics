@@ -139,6 +139,28 @@ This is a knob, so under S1 it needs a dated VISION decision before any run, and
 
 **Free head start, done 2026-09-21 (exact, exploratory, no new runs):** `results/ergodicity_small.csv` already records the symmetry count and the labelled-state count of every class at N = 16 and 18, so both ensembles can be evaluated exactly by arithmetic. The labelled ensemble weights a class by (n!)²/A and the unlabelled one weights it by 1, so the unlabelled ensemble favours a class by exactly its symmetry count A. At N = 16 the 4-cube has A = 192 against a typical few, and its share of the ensemble rises **from 1.3 % to 20 %, a factor of 15**, at λ = 1 where every class is degenerate; at λ = 0, g = 20 it rises from 0.13 to 0.73 and φ moves from 1.347 to 1.454, towards the shattered value of 1.5. At N = 18, where no 4-cube fits, the shift in φ is smaller and at λ = 1 runs the other way (−0.02 to −0.07). **So the mechanism is real and exactly quantified, and at the smallest size where a knot exists it points where the owner said it would.** These sizes cannot shatter — one piece only — so this demonstrates the mechanism, not its consequence. *Ours, unverified; a state of k identical 4-cubes would carry symmetry of order 192^k·k!, so the enhancement should grow steeply with size.*
 
+## T12. Read the coarse-grained literature before building anything there  ☐
+
+**Added 2026-09-21** (owner's proposal, and owner's question about whether anyone has worked there).
+
+**The proposal.** A second model whose state is not a network of points but **the dials themselves** — which directions are large, which are small, how many of each, and how they relate — with the energy written over configurations of dials rather than over wirings.
+
+**Why it is worth considering.** It sidesteps the size problem completely: a network standing in for the observable universe would need of order 10^122 points and we run 160. And the argument of ASSUMPTIONS Q15 licenses it — energy, what cannot happen, and the character of a change are the three things that survive a change of level, and those three are claims 4, 5 and 6. A coarse model cannot derive geometry from relationships, but it can ask whether a change between two settings of the dials is sharp and what it releases.
+
+**Why it is not a free lunch.** Putting the dials in by hand is the move VISION's own filter rejects: a model that already contains dimensions cannot answer where dimensions come from. It would be a *second* model answering different claims, not a replacement, and the write-up has to say so.
+
+**The answer to "has anyone done this" is yes, extensively — and this repository already recorded several of them and has read none.** That is the actual state, and it is the reason this task is a reading task.
+
+Read in this order:
+1. **[BV89]** — why three directions grow large and the rest stay small, argued at exactly this level. Already in the bibliography, unread.
+2. **[W82]** — a spacetime with a curled-up direction shown to be unstable and able to decay: a transition between two dial settings, and the nearest published relative of the illustration in VISION. Already in the bibliography, unread.
+3. **[BP00]** — the landscape: vast numbers of stable dial settings with first-order transitions between them. Claim 4's shape, at scale, in print. Added today.
+4. **[Carlip17]** — review of the convergence on effective dimension falling to about 2 at short distances. Added today.
+5. **[AJL05]** — causal dynamical triangulations, a competitor approach VISION's survey does not mention, whose main observable is one we already plan to measure. Added today.
+6. **[C77]**, **[G81]**, **[GW83]**, **[BGG87]** — the false-vacuum and old-inflation group, all already recorded and all unread. They are the same shape of argument one level up.
+
+Accept: a written summary of what each says, what is already settled, and what — if anything — a hobby project could add. **If the honest answer is "nothing", that is the result and the task ends there**, which is a perfectly good outcome and cheaper than finding out later. Building a second model needs its own dated VISION decision after this, under S1.
+
 ## T11. What does the half-converted state look like?  ☐
 
 **Added 2026-09-21** (owner's question; VISION Update 12). Every statement in this project about the S2-against-S4 tension, first order but no space at lambda = 0 and a space but no latent heat at lambda = 1, is about the **fully settled** state: the ground state, or a run cooled far past the transition. Nothing is ever in that state. A universe with matter in it is partly converted, which is [T25]'s own position, since for him matter *is* the unconverted part.
