@@ -213,6 +213,28 @@ Figure: `docs/figures/equilibrium_curves.png`, which puts both tempering runs, t
 - **No jump anywhere.** The curve is smooth from 0.51 to 1.01 across the whole ladder, and τ rises steadily rather than exploding at one coupling. Unlike the capped model, there is no single place where the fluctuations spike: χ was flat within 15 % down to g = 2.5.
 - **Trustworthy range.** Four independent replicas from random starts agree to 0.002 down to g = 2.7 and to 0.005 at g = 2.0, with 2 to 4 round trips each.
 
+### Claim 5 as a prediction, and the prediction tested (2026-09-20; `configs/cqg_n64_lam125_tempering.json` and `configs/cqg_spark_wide_lam125.json`; EXPLORATORY, ten replicas)
+
+Update 11 argued that claim 5 could be narrowed from "there is a leftover" to **the leftover is fixed by the energy released, with no freedom**, because a sealed run conserves its total energy exactly and the state it settles into is then not a free choice. That is testable in two steps, and both were run here.
+
+**Step one, the right-hand side.** The equilibrium curve at λ = 1.25, N = 64, by parallel tempering, because a single chain freezes below g = 3 there. A first attempt with ordinary chains gave energies that jumped about between neighbouring couplings, which was the freezing showing itself in the data; the tempered run makes 6 to 9 round trips per replica and four replicas agree to 0.003 in φ.
+
+**Step two, the prediction.** Sealed runs starting from a perfect tube with a fixed spark, so the total energy per vertex is 1 + spark/N and never changes. The predicted φ was read off the equilibrium curve and written into `configs/cqg_spark_wide_lam125.json` before the run.
+
+| Spark | Total energy per vertex | φ predicted | φ measured | Difference |
+|---|---|---|---|---|
+| 12 | 1.1875 | 0.952 | 0.966 ± 0.008 | +0.014 |
+| 24 | 1.3750 | 0.943 | 0.952 ± 0.003 | +0.008 |
+| 48 | 1.7500 | 0.923 | 0.922 ± 0.003 | −0.001 |
+| 96 | 2.5000 | 0.880 | 0.878 ± 0.008 | −0.002 |
+| 160 | 3.5000 | 0.814 | 0.811 ± 0.006 | −0.003 |
+
+- **The prediction holds across the range it was built to test.** φ falls by 0.14 from the smallest spark to the largest, and the three largest sparks land on the predicted curve to 0.003. Figure: `docs/figures/leftover_determined.png`.
+- **This test replaced a weak one, and the weak one is worth recording.** The first comparison used sparks of 12, 13 and 16, whose predicted φ differ by only 0.003; it agreed, but it confirmed the level and could say nothing about the trend. Reporting that as a success would have overstated it.
+- **The two smallest sparks sit 0.008 and 0.014 high**, which at spark 24 is three standard errors. The likeliest reason is incomplete settling: with little spare energy a sealed run explores slowly, and 25 000 sweeps may not be enough. That is a check to run, not a conclusion.
+- **What it means for the claim.** Claim 5 is no longer only bookkeeping. In this model family, at this λ and size, the amount of leftover disorder is a determined function of the energy released and of nothing else. The step that is not tested is the one that matters for the hypothesis: whether a *real* transition releases a latent heat at all, which is task T6.
+- **Limits:** one λ, one size, one starting arrangement, ten runs a point, and the identification of the leftover disorder with matter remains a reading rather than a measurement.
+
 ### The wall measured against temperature: a prediction with nothing fitted (2026-09-20; `configs/cqg_tube_arrhenius_lam125.json`; EXPLORATORY, sixteen replicas)
 
 Counting exactly beforehand (Q13): the cheapest way out of a perfect tube costs 12, and the sampler offers exactly 3 such moves a sweep at every size, so the waiting time should be 1/(3 exp(−12/g)) sweeps with nothing fitted at all. Perfect tubes at λ = 1.25, sixteen runs at each of six couplings and two sizes.
