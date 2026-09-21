@@ -229,11 +229,13 @@ Counting exactly beforehand (Q13): the cheapest way out of a perfect tube costs 
 | 144 | 1.50 | 878 ± 223 | 994 | 0.88 ± 0.22 |
 | 144 | 1.60 | 457 ± 120 | 603 | 0.76 ± 0.20 |
 | 144 | 1.75 | 266 ± 49 | 317 | 0.84 ± 0.16 |
+| 144 | 2.00 | 151 ± 34 | 134 | 1.12 ± 0.25 |
+| 144 | 2.50 | 29 ± 6 | 41 | 0.71 ± 0.14 |
 
-- **The prediction holds.** Over ten conditions spanning waiting times from 30 to 2550 sweeps, an eighty-five-fold range, and two sizes, the plain mean of the ratios is 0.997 and the weighted mean is 0.906 ± 0.068, which is 1.4 standard errors from 1. Nothing was fitted: both the barrier and the prefactor were counted from the starting arrangement before the run.
+- **The prediction holds.** Over twelve conditions, sixteen runs each, spanning waiting times from 29 to 2552 sweeps (a ninety-fold range) and two sizes, the plain mean of the ratios is 0.983 and the weighted mean is 0.884 ± 0.060; every single ratio lies between 0.71 and 1.62. Nothing was fitted: both the barrier and the prefactor were counted from the starting arrangement before the run. The weighted mean sits 1.9 standard errors below 1, which is worth watching rather than explaining away: it would be consistent with the tube occasionally leaving by a route a little cheaper than the one we counted, and a wider range of couplings would settle it.
 - **What that settles.** The wall round the tube is the single local move, height 12, and the rate at which the sampler offers a way over it is the counted 3 a sweep. There is no collective barrier hiding behind the measurement.
-- **A straight-line fit gives a worse answer than the direct test, and it is worth saying why.** Fitting ln(wait) against 1/g gives a barrier of 14.4 ± 1.0 at N = 64 and 10.9 ± 1.7 at N = 144, straddling 12 but disagreeing with each other. The reason is that 1/g spans only 0.40 to 0.71 here, so the slope and the intercept trade off and neither is determined alone. The ratio test uses both counted numbers together and does not have that weakness. Reporting the fit alone would have made a clean result look muddy.
-- **Limits:** one λ, one starting arrangement, tubes whose curled side is always 4, sixteen runs a point, and the two coldest couplings at N = 144 were still running when this was written.
+- **The fitted barrier, for completeness.** A weighted straight-line fit of ln(wait) against 1/g gives 14.4 ± 1.0 at N = 64 and **12.07 ± 0.87 at N = 144**, the latter landing on the counted 12 exactly. The fit is poorly conditioned either way, because 1/g spans only 0.40 to 0.71, so the slope and the intercept trade off and neither is well determined alone; the intercepts come out at 0.09 and 0.27 chances a sweep against the counted 3, which is the trade-off showing itself rather than a real disagreement. The ratio test above uses both counted numbers together and does not have that weakness.
+- **Limits:** one λ, one starting arrangement, tubes whose curled side is always 4, sixteen runs a point, and a range of 1/g too narrow to separate the barrier from the prefactor by fitting.
 
 ### The waiting time and size: a prediction of ours, twice misread, now resolved (2026-09-20; `configs/cqg_tube_waiting_lam125.json`; EXPLORATORY, twelve replicas)
 
