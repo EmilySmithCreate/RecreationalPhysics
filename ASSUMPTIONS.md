@@ -452,6 +452,24 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** These are synthetic Gaussian histograms. They test the arithmetic of the analysis, not whether tempering equilibrates, and a real histogram can be wrong in ways a Gaussian cannot.
 
+- **O7 One coupling ladder cannot serve three sizes, and the failure is the physics.** (2026-09-21, exploratory.) The first T6 control used a single 18-rung ladder for N = 36, 64 and 100. At N = 36 it worked: 48 to 58 round trips per replica, four replicas started from different couplings all reweighting onto g_c = 7.39 to 7.55, latent heat about 5.8 per point, barrier about 0.9. At N = 64 it gave **zero round trips in every replica**, and the run says why:
+
+  | k | g | φ | swap acceptance |
+  |---|---|---|---|
+  | 6 | 7.50 | 0.710 | 0.65 |
+  | 7 | 7.00 | 0.756 | **0.27** |
+  | 8 | 6.60 | 1.176 | 0.46 |
+  | 9 | 6.30 | 1.455 | 0.80 |
+
+  Acceptance is 0.62 to 0.80 along the whole ladder and collapses only where φ jumps. That is not a tuning failure, it is the latent heat: across the transition neighbouring rungs stop sharing any energies in common, so no replica can cross, so the ladder is severed exactly where the measurement has to happen. It gets worse with size because the gap grows with size.
+
+  Consequences, and what was changed:
+  - **The ladder spacing must fall like 1/N.** Two rungs exchange when the tilt between them times the energy gap is of order one, and the gap is about 5.8 N. `scripts/make_t6_ladder.py` now places rungs uniformly in 1/g (not in g, which crowds the hot end and starves the cold) at spacing 1.5/(5.8 N), finely through a window around g_c and three times coarser outside. This gives 13 rungs at N = 36, 24 at N = 64, 37 at N = 100.
+  - **One config per size**, since a shared `couplings` list cannot express this. Also lets the three sizes run at once.
+  - **The cold tail was cut.** The coldest rungs of the first attempt had a move acceptance of 0.0001 — frozen, contributing nothing but extra ladder for a replica to diffuse across.
+  - **Zero round trips is a gate failure, not a result.** Gate 4 caught this. The severed run was stopped rather than left to spend hours at N = 100 producing data that could not pass.
+  - **Not claimed.** That the repaired ladder restores round trips at N = 64 and 100 is the expectation behind the redesign, not yet an observation. If it does not, tempering is the wrong instrument at these sizes and that is the finding — Wang-Landau already failed here (Q17), and the honest outcome would be an upper bound on the barrier rather than a measurement of it.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
