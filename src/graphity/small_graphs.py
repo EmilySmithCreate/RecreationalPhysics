@@ -236,8 +236,12 @@ class ClassList:
         return sum(1 for _ in GraphMatcher(g, g, node_match=_SAME_SIDE).isomorphisms_iter())
 
 
-def one_switch_away(adj, cap=NO_CAP):
-    """Every valid state one edge switch from `adj` (the kernel's move, Q4), as adjacency arrays."""
+def one_switch_away(adj, cap=NO_CAP, connected=False):
+    """Every valid state one edge switch from `adj` (the kernel's move, Q4), as adjacency arrays.
+
+    connected=True refuses any switch that would break the graph into pieces, which is the
+    move set of a chain restricted to connected graphs (ASSUMPTIONS Q16).
+    """
     _check_numbering(adj)
     n = len(adj) // 2
     out = []
@@ -250,21 +254,25 @@ def one_switch_away(adj, cap=NO_CAP):
                     if v1 == v2 or has_edge(work, u1, v2) or has_edge(work, u2, v1):
                         continue
                     _switch(work, u1, v1, u2, v2)
-                    if is_valid(work, cap):
+                    if is_valid(work, cap) and not (connected and connectivity(work)[0] > 1):
                         out.append(work.copy())
                     _switch(work, u1, v2, u2, v1)
     return out
 
 
-def explore(start, cap=NO_CAP):
-    """Walk outwards from `start` by switches. Returns (ClassList, {class: set of neighbouring classes})."""
+def explore(start, cap=NO_CAP, connected=False):
+    """Walk outwards from `start` by switches. Returns (ClassList, {class: set of neighbouring classes}).
+
+    connected=True restricts the walk to connected graphs, refusing any move that would come
+    apart. `start` must itself be connected.
+    """
     classes = ClassList()
     joined = defaultdict(set)
     todo = [classes.index_of(start)]
     seen = set(todo)
     while todo:
         k = todo.pop()
-        for other in one_switch_away(classes.reps[k][0], cap):
+        for other in one_switch_away(classes.reps[k][0], cap, connected):
             j = classes.index_of(other)
             if j != k:
                 joined[k].add(j)
