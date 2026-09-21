@@ -124,7 +124,8 @@
   year    = {2020},
   eprint  = {2008.11779},
   archivePrefix = {arXiv},
-  note    = {unread. Cited by GV21 as agreeing with its degree-3 result (a single closed ribbon). Authors assumed from the arXiv identifier and the citing context; verify.}
+  title   = {Emergence of the circle in a statistical model of random cubic graphs},
+  note    = {**Abstract read directly (2026-09-21); full text not read.** Cited by GV21 as agreeing with its degree-3 result. 3-regular graphs with the Ollivier curvature; Hausdorff and spectral dimensions approach 1 and the scaling limit is argued to be a circle, provably so for girth at least 4. **The sentence that matters here:** "We also present strong evidence for the existence of a second-order phase transition through an analysis of finite size effects." **So the finite-size analysis that KTB19 calls precluded HAS been done by this group -- for the cubic case, which is one-dimensional.** Our claim that nobody has done it must therefore be narrowed to the degree-4, two-dimensional case that this project simulates, where Kelly22's abstract calls the higher-degree results "less conclusive". Authors were assumed from the arXiv identifier and the citing context and are still to be verified.}
 }
 
 @incollection{W99,
@@ -363,4 +364,48 @@
   title   = {The spectral dimension of the universe},
   year    = {2005},
   note    = {unread; from general knowledge, details to verify. Causal dynamical triangulations: a serious competitor route to emergent geometry in which the measured dimension runs from about 4 at large scales to about 2 at small ones. Two reasons to record it. VISION's survey of alternatives does not currently mention it, which is a gap; and its main observable, the dimension a random walker feels, is one this project already plans to measure.}
+}
+
+@phdthesis{Kelly22,
+  author  = {Kelly, Christy},
+  title   = {Emergent geometry and discrete curvature in random graphs},
+  school  = {Heriot-Watt University},
+  year    = {2022},
+  month   = {April},
+  url     = {https://www.ros.hw.ac.uk/handle/10399/4591},
+  note    = {**ABSTRACT READ DIRECTLY (2026-09-21); full text NOT read -- the repository PDF link 404s and must be obtained another way. Read it before this entry is relied on for anything.** By the first author of KTB19. Three statements from the abstract, quoted exactly. (1) For cubic graphs: "numerical evidence suggests that the transition to this geometric phase is continuous". (2) **"Higher degree results are less conclusive and the phase transition appears to become first-order, but there are good analytical and numerical indications that configurations retain a nearly geometric phase."** (3) "The critical temperature appears to be asymptotically nonfinite". **Why this matters more than anything else found so far.** Sentence (2) is the combination VISION claim 4 needs -- first order AND a space -- stated by the group's own first author, for degrees above 3, which includes the degree-4 case this project simulates. It sits against [T25], which reports the transition as continuous, and beside [GV21], which finds first order for degree > 3 independently. Our own framing that "where it is sharp there is no space and where there is a space it is smooth" is a statement about the ground state at two settings of lambda, and this is evidence that it does not hold for the transition itself. **Caveats, all the author's own or ours:** "less conclusive"; "appears to"; "nearly geometric" is not geometric; we have read one paragraph. Unknown from the abstract: which degrees "higher degree" covers, which variant of the energy, and what sizes. Sentence (3) also bears on T9: a critical temperature that is not asymptotically finite is the same phenomenon as the drift of the crossover with ln N that we measure.}
+}
+
+@article{Lamas25,
+  author  = {Lamas, Jorge},
+  title   = {Emergent spectral geometry in the Coherence--Curvature Model},
+  year    = {2025},
+  eprint  = {2511.13423},
+  archivePrefix = {arXiv},
+  note    = {**Abstract read directly (2026-09-21); full text not read.** Submitted 17 November 2025, so the most recent thing in this bibliography. An independent model: connected graphs under a Hamiltonian coupling algebraic connectivity, Ollivier-Ricci curvature and an edge-density penalty, explored by "connected simulated annealing". **Three reasons to read it.** (a) It does finite-size scaling and reports spectral dimension growing with size towards about 4 and Hausdorff dimension towards about 3 -- which is methodology for exactly the measurement this project has not yet made. (b) Its Hamiltonian contains a *connectivity* term and its sampler is described as connected, which is the machinery Gate A's re-run needs and which we do not have. **Read this and [VL05] BEFORE designing any connectivity-preserving move**, rather than building one and discovering afterwards that two groups already did it better. (c) It does not cite Trugenberger's programme at all, which is worth knowing about the state of the field. Author single; affiliation and venue not checked.}
+}
+
+@inproceedings{VL05,
+  author  = {Viger, Fabien and Latapy, Matthieu},
+  title   = {Efficient and simple generation of random simple connected graphs with prescribed degree sequence},
+  year    = {2005},
+  note    = {unread; bibliographic details to verify. **DECISION AFTER READING, 2026-09-21: do not implement this.** Its abstract was read; the full text was not, and does not need to be. It solves a different problem -- generating graphs uniformly *from scratch* for arbitrary real-world degree sequences -- and its contribution is efficiency at large sparse sizes, not correctness. For an MCMC that is already running, Taylor81 makes the simple approach correct, so the clever machinery buys nothing here. Original note follows. **This is the algorithm, and it is the thing to read, not the papers citing it.** [GV21] uses degree-preserving link swaps citing this work, and its connectivity-preserving variant is what produces its Fig. 7 (a closed chain of hypercubes under a connectedness constraint). The owner's reading notes record that GV21 does not give the details, so the details have to come from here. **We have no connectivity-preserving move.** Needed for: the Gate A re-run against GV21 Figs. 3B and 7; and T11, where the question is whether the half-converted state contains a connected geometric region. NOT needed for T6, which samples the whole state space including disconnected configurations.}
+}
+
+@incollection{Taylor81,
+  author    = {Taylor, Richard},
+  title     = {Constrained switchings in graphs},
+  booktitle = {Combinatorial Mathematics VIII},
+  series    = {Lecture Notes in Mathematics},
+  publisher = {Springer},
+  year      = {1981},
+  note      = {**Secondary; the statement below is quoted from several sources that cite it, not read in the original -- verify before relying on it.** The theorem that settles how to sample connected graphs: any connected graph can be turned into any other connected graph of the same degree sequence by a sequence of edge switchings **with every intermediate graph also connected**, for simple graphs, multigraphs and pseudographs. Consequence for us: "switch, and reject the move if it disconnects the graph" is an irreducible chain on connected graphs, and detailed balance is automatic because a restricted state space with a symmetric proposal is still detailed-balanced. **So no special machinery is needed for correctness.** What the theorem does NOT cover is our extra hard-core constraint; see the next entry, which shows that added constraints can break exactly this property.}
+}
+
+@article{Swap17,
+  title   = {Swap connectivity for two graph spaces between simple and pseudo graphs, and disconnectivity for triangle constraints},
+  year    = {2017},
+  eprint  = {1704.01951},
+  archivePrefix = {arXiv},
+  note    = {unread; found 2026-09-21; authors not looked up. **The reason the empirical check below is not optional.** Its title states that swap connectivity, which Taylor81 guarantees for plain degree-constrained spaces, **fails once a triangle constraint is added.** Our space carries a hard-core constraint (no two points sharing more than two neighbours) on top of connectedness, so Taylor's guarantee does not automatically extend to it. Read before any connected run is interpreted.}
 }

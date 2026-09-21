@@ -93,6 +93,29 @@ Done (`src/graphity/tempering.py`, `scripts/run_cqg_tempering.py`, ASSUMPTIONS Q
 - **What it did not:** below g = 3 graphs made at most one round trip per replica in 18 000 rounds, replicas differ by up to 0.02 and τ is in the thousands. The ordered cold graphs carry frozen-in defects. More rounds, not a finer ladder, is the remedy, or the neighbourhood move of [T25] Fig. 8.
 - **Seen on the way:** under the cap at N = 160 the curve is steepest, slowest and most fluctuating at g ≈ 2.85. That is where T6 should look for that model.
 
+## Sequencing note, 2026-09-21 (owner's question: must the connected-sampler papers be read before planning the computation?)
+
+**Yes for some of the work and no for T6, and the split is clean.**
+
+- **T6 does not need a connectivity-preserving move.** It samples the whole state space, disconnected configurations included; that is the point of a flat-histogram walk over the energy. It is pre-registered and can run now.
+- **Gate A's re-run and T11 do need one, and we do not have one.** [GV21]'s Fig. 7 (a closed chain of hypercubes under a connectedness constraint) and its Fig. 3B (the ribbon fraction) both come from a connectivity-preserving sampler, and T11 asks whether the half-converted state holds a connected geometric region, which is unanswerable without one.
+- **Read before building it, not after:** [VL05], which is the actual algorithm [GV21] cites, and [Lamas25], which describes a connected sampler and a Hamiltonian with a connectivity term. Building our own first and discovering afterwards that two groups already did it better is the expensive order.
+
+## Connected sampling: decided by reading, 2026-09-21
+
+The owner asked that the sources be read before the machinery was designed. They were, and the answer is that **most of the machinery should not be built.**
+
+**What the reading found.**
+- **[Lamas25]** (abstract and method section read): its "connected sampler" is the naive one — propose, check, reject if disconnected. It also uses edge *addition and deletion* rather than switches, so it does not preserve degree and its ensemble is not ours; and it runs simulated annealing, which finds low-energy configurations but does not sample an equilibrium distribution, so nothing like a density of states or a free-energy barrier can come out of it. **Not transferable.** Its sizes are N = 128 to 1024 with 16 000 steps and 10 runs, which is a much lighter computation than ours.
+- **[VL05]**: solves a different problem (uniform generation from scratch for arbitrary degree sequences); its value is efficiency at large sparse sizes. **Decided: do not implement.**
+- **[Taylor81]**: the theorem that settles it. Any connected graph reaches any other of the same degree sequence by switches **with every intermediate graph connected.** So *switch, and reject if the graph would come apart* is irreducible on connected graphs, and detailed balance is automatic because a restricted state space with a symmetric proposal is still detailed-balanced.
+
+**The approach, therefore.** Add a `connected=True` option to the existing kernel that rejects any switch which would disconnect the graph. No new move, no new algorithm. `connectivity.py` already counts pieces and is compiled, and the check need only run on moves that are otherwise accepted, so the cost falls with the acceptance rate.
+
+**Checked 2026-09-21, and the check came out vacuous** (`scripts/check_connected_ergodicity.py`; ASSUMPTIONS Q16). The restricted walk reaches every connected class at N = 16 and 18 with and without the cap — but the restriction refused **zero** moves at both sizes, because every valid state that small is connected anyway (the smallest valid piece is 14 vertices, so two pieces need 28, and enumeration cannot reach 28). So the property is **unproven on our space**, Taylor's guarantee is not inherited through the hard-core constraint, and every connected run must report the share of proposals refused for disconnection so a reader can judge how hard the restriction was working. Original note follows.
+
+**The one thing that must be checked before any of it is interpreted.** Taylor's theorem covers a degree-constrained space. Ours also carries the hard-core constraint, and **[Swap17] states in its title that adding a constraint can destroy exactly this swap-connectivity.** So irreducibility on our space is not inherited and has to be demonstrated: restrict T4's exhaustive enumeration to connected valid states at N = 16 and 18 and check that the switch, refusing disconnecting moves, still joins them all. That machinery exists (`small_graphs.explore`); it needs one filter. **If it fails, the plan changes and we report that it failed.**
+
 ## T6. Entropy curve s(φ) by Wang–Landau  ☐
 
 [WL01]. Flat-histogram sampling over S. Validate first on a system with a known answer (e.g. 2D Ising on a small lattice, exact density of states available), then apply to the graph model.
@@ -158,6 +181,8 @@ Read in this order:
 4. **[Carlip17]** — review of the convergence on effective dimension falling to about 2 at short distances. Added today.
 5. **[AJL05]** — causal dynamical triangulations, a competitor approach VISION's survey does not mention, whose main observable is one we already plan to measure. Added today.
 6. **[C77]**, **[G81]**, **[GW83]**, **[BGG87]** — the false-vacuum and old-inflation group, all already recorded and all unread. They are the same shape of argument one level up.
+
+**A specific thing to look for while reading** (ours, unverified, and the reason this task is worth doing rather than skipping). The network model already contains a dial model: the sheet/tube/knot ladder of T3 is "how many directions are large", except that here the dials are *derived from the wiring* rather than put in by hand, and they change by themselves. So the tube experiment of the design track is not only a waiting-time measurement — it is **a dimension changing from one to two in a model where no dimension was assumed, with the released energy measured**. If [BV89] and its successors ask "why three directions" with the directions assumed, that is the same question asked one level down. **Find out whether anyone has already framed it that way.** If they have, read them; if they have not, that is the one place where this project has something a mature field does not, and it should be the centre of any write-up.
 
 Accept: a written summary of what each says, what is already settled, and what — if anything — a hobby project could add. **If the honest answer is "nothing", that is the result and the task ends there**, which is a perfectly good outcome and cheaper than finding out later. Building a second model needs its own dated VISION decision after this, under S1.
 
