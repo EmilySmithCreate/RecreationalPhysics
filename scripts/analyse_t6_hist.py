@@ -14,14 +14,33 @@ the shift is reported and one that is too large is refused rather than quietly u
 DISCRETENESS. [Kelly22] warns that a discrete action spectrum can make one hump look like
 several. Two separate things can fake a pair of humps, and each needs its own guard.
 
-  A comb. If the reachable energies sit on a coarser lattice than the recorded bins, or are
-  simply reached unevenly, the histogram alternates up-down-up-down from one bin to the next.
-  Every other bin is then a local maximum, so a minimum separation does NOT help: at a period of
-  two bins there are spurious peaks at every even spacing, including whatever separation you
-  demanded. The guard is to smooth with a binomial [1,2,1]/4 filter, which annihilates a
-  one-bin alternation exactly (it has a zero at that frequency) while leaving structure tens of
-  bins wide almost untouched. Peaks, valley and depth are all measured on the smoothed curve,
-  which can only shrink a real barrier, never invent one.
+  A comb, period two. If the reachable energies sit on a coarser lattice than the recorded bins,
+  the histogram alternates up-down-up-down from one bin to the next. Every other bin is then a
+  local maximum, so a minimum separation does NOT help: at a period of two bins there are
+  spurious peaks at every even spacing, including whatever separation you demanded. The guard is
+  to smooth with a binomial [1,2,1]/4 filter, which annihilates a one-bin alternation exactly
+  (it has a zero at that frequency) while leaving structure tens of bins wide almost untouched.
+  Peaks, valley and depth are all measured on the smoothed curve, which can only shrink a real
+  barrier, never invent one.
+
+  A comb of longer period, which is the one this model actually produces. The energy is
+  16(N - S) + 4*lambda*X, a sum over two integers with two different quanta, so which energies
+  are reachable at all -- and how many ways each can be reached -- depends on arithmetic between
+  16 and 4*lambda. When 4*lambda divides 16 the reachable energies form a uniform lattice and
+  there is no comb: lambda = 0 (quantum 16) and lambda = 1 (quantum 4) are both of this kind.
+  When it does not, the histogram develops teeth. Measured at lambda = 1.25, where the quanta are
+  16 and 5, the counts at N = 36 ran 2899, 30, 181, 1024, 2046, 1964, 34 on consecutive levels --
+  teeth about every five levels -- and the analysis duly reported two of those teeth as humps 19
+  levels apart with a barrier of 1.7, which is arithmetic and not physics. No fixed smoothing
+  width can handle this, because the period depends on lambda.
+
+  The guard that does work is coarse-graining. A real barrier is a feature of the energy
+  landscape and survives looking at it more coarsely; a comb tooth is a feature of the lattice
+  and dies as soon as the bins are wider than the teeth. So the fit must be found BOTH at full
+  resolution and again after rebinning the visited range into COARSE_BINS wide bins, with the two
+  humps landing in about the same places. Failing the coarse check vetoes the fit. Passing it
+  reports the full-resolution numbers, so nothing is lost in accuracy -- the coarse pass is only
+  ever a veto.
 
   Counting noise. A valley one standard error deep is not a valley. The depth is required to
   beat the counting error on the three bins it is built from, by NOISE_SIGMAS.
@@ -64,6 +83,8 @@ SMOOTH_PASSES = 2         # binomial passes before peak-finding; kills a one-bin
 NOISE_SIGMAS = 3.0        # a valley must be this many counting errors deep to count
 MIN_ESS_FRAC = 0.02       # a reweight may not throw away more than this much of the sample
 MIN_ESS = 500.0           # ...nor leave fewer than this many sweeps carrying the answer
+COARSE_BINS = 12          # a real barrier must survive being looked at this coarsely
+COARSE_TOL = 0.35         # ...with the humps landing within this fraction of the range
 
 
 def reweight(levels, counts, g_from, g_to):
@@ -91,6 +112,32 @@ def visited_stretch(levels, counts):
     return levels[sl], np.asarray(counts, float)[sl]
 
 
+def rebin(levels, counts, n_bins):
+    """Pour the histogram into n_bins uniform bins across its range. Empty bins are dropped."""
+    lo, hi = float(levels[0]), float(levels[-1])
+    if hi <= lo:
+        return levels, counts
+    w = (hi - lo) / n_bins
+    idx = np.minimum(((levels - lo) / w).astype(int), n_bins - 1)
+    c = np.bincount(idx, weights=counts, minlength=n_bins)
+    e = lo + (np.arange(n_bins) + 0.5) * w
+    keep = c > 0
+    return e[keep], c[keep]
+
+
+def survives_coarsening(levels, counts, g_from, g_to, e_lo, e_hi):
+    """Is the same pair of humps still there when the energy is resolved coarsely? See header."""
+    cl, cc = rebin(levels, counts, COARSE_BINS)
+    if len(cl) < 2 * MIN_LEVELS_APART:
+        return True                      # too few bins to coarsen further; nothing to check
+    hh = two_humps(reweight(cl, cc, g_from, g_to), cc, passes=0)
+    if hh is None:
+        return False
+    a, b, _, _ = hh
+    span = float(levels[-1] - levels[0]) or 1.0
+    return (abs(cl[a] - e_lo) / span < COARSE_TOL) and (abs(cl[b] - e_hi) / span < COARSE_TOL)
+
+
 def effective_sample_size(levels, counts, g_from, g_to):
     """Kish's effective sample size of the tilt: (sum w)^2 / sum w^2, counted over sweeps."""
     lw = -levels * (1.0 / g_to - 1.0 / g_from)
@@ -110,11 +157,15 @@ def smooth(y, passes=SMOOTH_PASSES):
     return y
 
 
-def two_humps(p, raw):
-    """Deepest genuine pair of humps, or None. Returns (low, high, valley, smoothed p)."""
-    ps = smooth(p)
+def two_humps(p, raw, passes=SMOOTH_PASSES):
+    """Deepest genuine pair of humps, or None. Returns (low, high, valley, smoothed p).
+
+    `passes` is 0 for the coarse-graining check, where rebinning has already done the smoothing
+    and filtering again would wash out the very valley being looked for.
+    """
+    ps = smooth(p, passes)
     ps = ps / ps.sum()
-    cs = smooth(raw)                      # counts behind each bin, smoothed the same way
+    cs = smooth(raw, passes)              # counts behind each bin, smoothed the same way
     interior = range(1, len(ps) - 1)
     maxima = [i for i in interior if ps[i] >= ps[i - 1] and ps[i] >= ps[i + 1]]
     best, best_depth = None, -np.inf
@@ -148,6 +199,8 @@ def observables(levels, counts, g0, n):
         if hh is None:
             continue
         a, b, v, ps = hh
+        if not survives_coarsening(levels, counts, g0, g, levels[a], levels[b]):
+            continue
         below = ps[:v + 1].sum()
         imbalance = abs(np.log(max(below, 1e-300) / max(1 - below, 1e-300)))
         if best is None or imbalance < best[0]:

@@ -470,6 +470,24 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   - **Zero round trips is a gate failure, not a result.** Gate 4 caught this. The severed run was stopped rather than left to spend hours at N = 100 producing data that could not pass.
   - **Not claimed.** That the repaired ladder restores round trips at N = 64 and 100 is the expectation behind the redesign, not yet an observation. If it does not, tempering is the wrong instrument at these sizes and that is the finding — Wang-Landau already failed here (Q17), and the honest outcome would be an upper bound on the barrier rather than a measurement of it.
 
+- **O8 The transition coupling is measurable; the barrier is not yet, and the energy is the wrong ruler.** (2026-09-21, exploratory.) Two findings, and a disclosure.
+
+  **The barrier does not survive being asked twice.** A barrier is a property of the system, so reweighting to it from one rung of the ladder or from another are two routes to one number. At λ = 0, N = 36, of 13 rungs the three that can see the transition give:
+
+  | rung g | g_c | latent | barrier |
+  |---|---|---|---|
+  | 8.731 | 8.040 | 5.78 | 0.700 |
+  | 8.216 | 7.993 | 6.37 | 0.436 |
+  | 7.758 | 7.968 | 5.78 | 0.416 |
+
+  Spread across rungs: **g_c 0.9 %, latent heat 9.9 %, barrier 54.9 %.** So g_c is a measurement, the latent heat is marginal, and the barrier is not a measurement at all — and the barrier is the observable the first-order verdict leans on hardest, since the pre-registered criterion is how it grows with size. A quantity that changes by half its value depending on which rung you approach it from cannot be fitted against √N. **No barrier number should be quoted from this data.**
+
+  **The energy spectrum is a comb at most λ, and H is therefore a poor reaction coordinate.** The energy is 16(N − S) + 4λX, a sum of two integers with two quanta, so which energies are reachable — and how many ways each is reached — is arithmetic between 16 and 4λ. Where 4λ divides 16 the lattice is uniform and there is no comb: λ = 0 (quantum 16) and λ = 1 (quantum 4). Where it does not, the histogram grows teeth. At λ = 1.25 (quanta 16 and 5) the counts at N = 36 ran 2899, 30, 181, 1024, 2046, 1964, 34 on consecutive levels, and the analysis read two teeth as humps 19 levels apart with a barrier of 1.7. That is arithmetic, not physics. Note this hits two of the four pre-registered λ values: 1.25 and 1.5 (quanta 16 and 6) are combed; 0 and 1 are clean.
+
+  **The fix worth considering, which is a change to a pre-registered method and so is Emily's call.** Use S — equivalently φ = S/N, the order parameter the transition is actually defined by — as the reaction coordinate instead of H. S is an integer with uniform spacing at every λ, so there is no comb by construction. The two phases are then identified in φ, the latent heat remains an *energy* difference between them (it must, that is what a latent heat is), and the free-energy barrier is measured along φ, which is standard practice. This needs `run_t6_tempering.py` to store the joint (S, X) histogram rather than the H histogram — the per-sweep S and X already exist in the run and are simply not saved. Two side benefits: one run would then serve every λ, since H is derived; and the stored object would be the same one the Wang-Landau work used.
+
+  **Disclosure, because it matters for how the numbers are read.** Three guards in the analysis were repaired today (O6) for reasons independent of any result: each was demonstrably wrong on synthetic histograms whose answer was known by construction. The coarse-graining veto, by contrast, was added *after* seeing the λ = 1.25 data it rejects, and its two constants (`COARSE_BINS`, `COARSE_TOL`) are choices that move the numbers — adding it changed the λ = 0, N = 36 barrier from 0.969 to 0.436. That is tuning an instrument while looking at what it measures, which is the thing the pre-registration exists to prevent. It is recorded here rather than quietly kept. The veto is still the right idea — a real barrier should survive coarse-graining and a comb tooth should not — but it wants fixing at the source, by choosing a coordinate with no comb in it, rather than by a threshold that has seen the answer.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
