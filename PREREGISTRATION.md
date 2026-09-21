@@ -72,7 +72,26 @@ Anything about the real universe; anything about X, which is not what this model
 
 ### Amendments
 
-*(None since the revision above. Add below with a date, leaving the original standing.)*
+*(Add below with a date, leaving the original standing.)*
+
+#### Amendment 1, 21 September 2026 — the reaction coordinate changes from H to φ
+
+**Status: written after the λ = 0 control ran at N = 36 and N = 64, and before any run under the new coordinate.** That ordering is the whole point of writing it down, and the original text above stands unaltered.
+
+**What is wrong with the original.** The four observables were to be read off the histogram of the energy H = 16(N − S) + 4λX. H is a sum of two integers with two different quanta, so which energies are reachable — and how many ways each is reached — is arithmetic between 16 and 4λ. Where 4λ divides 16 the reachable energies form a uniform lattice; where it does not, the histogram grows teeth at the period of that arithmetic. Two of the four pre-registered λ values are of the second kind: λ = 1.25 (quanta 16 and 5) and λ = 1.5 (quanta 16 and 6). Measured at λ = 1.25, N = 36, the counts on consecutive levels ran 2899, 30, 181, 1024, 2046, 1964, 34, and the analysis read two teeth as humps 19 levels apart with a barrier of 1.7. **This is a defect of the coordinate, provable from the arithmetic of 16 and 4λ without reference to any result.** It is not a judgement about which answer is wanted.
+
+**What changes.** The reaction coordinate becomes S, equivalently φ = S/N — the order parameter by which the transition is defined in the first place. S is an integer with unit spacing at every λ, so there is no comb by construction. Runs will store the joint (S, X) histogram, from which H follows exactly for any λ; the per-sweep values already exist in the run and were simply not saved.
+
+**What does not change, and is restated here so that it cannot be quietly adjusted later:**
+
+- **The four observables keep their meanings.** In particular the latent heat stays an *energy* difference between the two phases — that is what a latent heat is. What changes is only that the two phases are identified in φ before their energies are compared.
+- **The free-energy barrier is measured along φ.** This is the one observable whose definition genuinely moves, from a valley in the energy histogram to a valley in the φ histogram. Both are standard; the second is the one that is well defined at every λ.
+- **The gates, the fit, the three verdicts and the falsification clause are untouched**, including the clause that a transition too weak to detect is too weak to do claim 4's job, and that the write-up will then state the measured upper bound.
+- **The λ values stay {0, 1, 1.25, 1.5}.** They are not being trimmed to the ones with convenient arithmetic.
+
+**What is discarded and why.** No barrier measured under the old coordinate will be quoted, including at λ = 0 and λ = 1, where the lattice is uniform and the comb does not arise. The reason is separate and is recorded as O8 in `ASSUMPTIONS.md`: at λ = 0, N = 36 the three ladder rungs that can see the transition disagree about the barrier by 54.9 %, against 0.9 % for the transition coupling. A number that depends that strongly on which rung it is approached from is not a measurement, whatever the coordinate. The transition coupling g_c, which is stable, is not affected by this and stands.
+
+**A guard added under the old coordinate is withdrawn.** `analyse_t6_hist.py` gained a coarse-graining veto that was written after seeing the λ = 1.25 data it rejects, and it moved the λ = 0, N = 36 barrier from 0.969 to 0.436. Tuning a threshold against the data it judges is the thing this document exists to prevent. The veto's idea — that a real barrier survives coarse-graining and a lattice artefact does not — is sound, and under φ it is not needed, because there is no comb to veto.
 
 ---
 

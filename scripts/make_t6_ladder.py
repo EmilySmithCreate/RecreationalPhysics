@@ -57,7 +57,9 @@ def main(lam, tag, out=Path("configs")):
         side = int(round(n ** 0.5))
         assert side * side == n, n
         gs = ladder(n, g_c)
-        name = "t6_%s_n%d" % (tag, n)
+        # "t6b" marks T6 run under amendment 1 (phi as the reaction coordinate, joint (S, X)
+        # storage). The pre-amendment results keep their own names and are not overwritten.
+        name = "t6b_%s_n%d" % (tag, n)
         cfg = {
             "_purpose": ("T6 at lambda = %g, size %d, one size per config so the coupling ladder "
                          "can be sized for the gap at THIS size. Ladder built by "
