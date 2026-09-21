@@ -100,11 +100,31 @@
 }
 
 @misc{DQM25,
+  author  = {Betre and Lewis},
   title   = {Dynamical Quantum Multigraphs},
   year    = {2025},
   eprint  = {2509.08296},
   archivePrefix = {arXiv},
-  note    = {unread. Found by search on 2026-09-19 via a third-party review page; authors not yet looked up. Reported to show the transition again moving with ln N.}
+  note    = {read-full (2026-09-21, by the owner). Surnames only; initials and given names not yet recorded -- check the arXiv record before citing. **WITHDRAWN CLAIM: the previous note here said this paper shows the transition moving with ln N. It does not.** That came from a third-party review page, not from the paper, and is exactly the failure mode CLAUDE.md warns about. What the paper is actually about: **labelled versus unlabelled vertices.** Labelled means every point has its own identity; unlabelled means points are interchangeable, as identical particles are, so each graph SHAPE counts once. Every run in this repository, and as far as we know every published CQG run, is labelled. Results at N = 10-24: the labelled free model is Erdos-Renyi G(N,p) with an analytic free energy, so no transition; the unlabelled free model and an unlabelled ferromagnetic "graph Ising" model both show transitions (diverging specific heat, critical slowing), with the largest-component fraction as order parameter, and the authors do not settle whether the critical temperature stays finite as N grows; the unlabelled antiferromagnet shows none, because connected graphs almost never have symmetries. Sampling rule for unlabelled graphs, Eq. (72): the Metropolis acceptance is multiplied by |Aut(G')| / |Aut(G)|, which needs the automorphism-group size at every step (nauty or similar) and is expensive. Their ensemble is different from ours -- edges on or off on the complete graph, not regular graphs, and no curvature energy; the "quantum" part is Hilbert-space formalism over classical Boltzmann thermodynamics. Read only Sec. 4 (Eqs. 60-91) and Appendix A; Secs. 2-3 are the Hilbert-space construction. They cite EK25 for a first-order transition in unlabelled random networks that is absent when labelled.}
+}
+
+@article{EK25,
+  author  = {Evnin and Krioukov},
+  title   = {Title to be filled in from the journal record},
+  journal = {Phys. Rev. Lett.},
+  volume  = {134},
+  pages   = {207401},
+  year    = {2025},
+  note    = {unread. Surnames only, as cited by DQM25; verify authors, title and page before relying on it. Reported there to show a first-order transition in unlabelled random networks which is absent in the labelled version. **Read this before starting T10** (labelled versus unlabelled), because it is the closest published statement of the effect that task is about.}
+}
+
+@article{KTB20,
+  author  = {Kelly, Christy and Trugenberger, Carlo A. and Biancalana, Fabio},
+  title   = {Title to be filled in from the arXiv record},
+  year    = {2020},
+  eprint  = {2008.11779},
+  archivePrefix = {arXiv},
+  note    = {unread. Cited by GV21 as agreeing with its degree-3 result (a single closed ribbon). Authors assumed from the arXiv identifier and the citing context; verify.}
 }
 
 @incollection{W99,
@@ -181,7 +201,7 @@
   eprint  = {2101.04072},
   archivePrefix = {arXiv},
   author  = {Gorsky, A. and Valba, O.},
-  note    = {abstract-only. Reports a first-order transition with hysteresis in the mean-field version of combinatorial quantum gravity with the hard-core constraint. Authorship confirmed from the reference list of T22 (its ref. 28).}
+  note    = {read-full (2026-09-21, by the owner, arXiv version). **Two corrections to what this entry used to say.** (1) It is NOT mean-field: it is Monte Carlo on real graphs. (2) It was marked abstract-only. Only Sec. 2 bears on this project. Energy is the square count alone -- Eq. (2.6) gives R_ij = -(1/d)[(2d-2) - N4(ij)] with no saturation bracket, so this is our lambda = 0 (penalty-off) case; H = mu4 Tr A^4, Eq. (2.3). Hard-core rule as ours (two squares share at most one link). **Bipartiteness is not imposed**: they start from ordinary random regular graphs and bipartiteness EMERGES in the clustered phase (Sec. 2.3), where our kernel imposes it. For degree > 3 they report a **first-order transition with clear hysteresis** (Fig. 3A, d = 4 at several N; Fig. 6, N = 256 across degrees). Cold phase: about N/2^d isolated or weakly interacting d-hypercubes (Eq. 2.11) PLUS one closed bipartite "ribbon" holding the leftover nodes, whose share depends on mu4 (Fig. 3B). Under a connectedness constraint, a closed chain of weakly linked hypercubes (Fig. 7, N = 128), all 4-cycles in hypercubes. Degree 3 gives a single closed ribbon, agreeing with KTB20 (unread). Sizes N = 128, 256; degrees 3-8. **They criticise the Trugenberger group's earlier runs as too small to hold more than one hypercube**, so the configuration looked homogeneous -- the same finite-size argument this project makes, in print since 2021 and for the penalty-off energy only. Secs. 3 and 4 (thermofield doubles as eternal black holes; Hilbert-space fragmentation) are the authors' conjectures and are not testable with our code. **To verify before comparing any number:** coupling units (on a d-regular graph Tr A^4 = 8 x squares + const, so mu4 maps to 8 mu4 per square; ours, unverified) and the sign convention of Eq. (2.1), which writes exp(-mu4 N4) while the text maximises 4-cycles -- read the axis as "larger mu4 favours more squares" and confirm against Fig. 3A. Their Metropolis uses degree-preserving link swaps (citing Viger-Latapy); the connectivity-preserving variant is not detailed.}
 }
 
 @article{T22,
