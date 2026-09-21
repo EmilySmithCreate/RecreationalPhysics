@@ -7,3 +7,7 @@ __pycache__/
 requirements.lock.tmp
 *.partial
 .DS_Store
+
+# Papers downloaded for reading. Third-party copyright: kept locally, never committed.
+# What we take from them lives in REFERENCES.bib notes and ASSUMPTIONS.md, in our own words.
+docs/reading/*.pdf

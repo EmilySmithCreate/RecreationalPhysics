@@ -77,7 +77,7 @@ from graphity.cqg import (CAP, ENERGY_PER_SQUARE, ENERGY_PER_SURPLUS, NO_CAP, _n
 
 
 def anneal(advance, shape, seed=0, ln_f_final=1e-6, flat=0.8, sweeps_per_check=50,
-           max_moves=2 * 10 ** 9, one_over_t=True):
+           max_moves=2 * 10 ** 9, one_over_t=True, max_rounds_per_step=40):
     """Run the Wang-Landau schedule until ln f falls below `ln_f_final` or the move budget runs out.
 
     advance(lng, hist, seen, ln_f, n_sweeps, seed) -> (moves, accepted) runs that many
@@ -88,17 +88,23 @@ def anneal(advance, shape, seed=0, ln_f_final=1e-6, flat=0.8, sweeps_per_check=5
     flat   : a round ends when the least-visited seen bin has at least this share of the
              mean over seen bins. Ignored once the 1/t rule has taken over.
 
+    max_rounds_per_step : halve ln f after this many rounds even if the histogram is not flat.
+             Not a tuning knob but a guarantee. Measured at N = 36 with 738 bins: without it
+             the flatness target was never reached, ln f never left its starting value of 1,
+             the accumulated weights ran to a spread of 25 000, and the frozen-weight stage
+             then could not move at all (one bin visited). Stage one only has to find the
+             SHAPE of ln g; `refine` is what makes it accurate.
+
     Returns a dict: lng, seen, rounds (one row each, for the report), moves, ln_f, accept,
-    and `discovery_round`, the last round in which a new bin was found. That last number is
-    the one to look at first: if bins are still being discovered after the first few rounds,
-    the ones found late carry an offset that the schedule can no longer correct, and the run
-    should be started again with more sweeps per round.
+    `discovery_round` (the last round in which a new bin was found) and `stalled` (True if the
+    move budget ran out before ln f reached its target). Look at `stalled` and at ln_f first:
+    a run that ends with ln_f still near 1 has not measured anything.
     """
     lng = np.zeros(shape, dtype=np.float64)
     hist = np.zeros(shape, dtype=np.int64)
     seen = np.zeros(shape, dtype=np.bool_)
     ln_f, moves, accepted, rounds = 1.0, 0, 0, []
-    n_seen, discovery_round, tail = 0, 0, False
+    n_seen, discovery_round, tail, since_step = 0, 0, False, 0
     first = int(np.random.SeedSequence(seed).generate_state(1)[0])
     while ln_f > ln_f_final and moves < max_moves:
         sub = first if not rounds else -1      # seed once, then carry the stream on (Q14)
@@ -107,8 +113,14 @@ def anneal(advance, shape, seed=0, ln_f_final=1e-6, flat=0.8, sweeps_per_check=5
         accepted += ok
         grew = int(seen.sum()) > n_seen
         n_seen = int(seen.sum())
+        since_step += 1
         if grew:
+            # While new bins are still turning up, flatness is meaningless: every bin found
+            # late has almost no counts and drags the minimum down, so the criterion can never
+            # be met and ln f would never fall. Start the window again instead.
             discovery_round = len(rounds)
+            hist[:] = 0
+            since_step = 0
         counts = hist[seen]
         flatness = counts.min() / counts.mean() if counts.size and counts.mean() > 0 else 0.0
         if tail:
@@ -116,13 +128,19 @@ def anneal(advance, shape, seed=0, ln_f_final=1e-6, flat=0.8, sweeps_per_check=5
         elif one_over_t and ln_f < n_seen / moves:
             tail = True
             ln_f = n_seen / moves
-        elif flatness >= flat:
+        elif flatness >= flat or since_step >= max_rounds_per_step:
+            # The second condition is a guarantee, not an optimisation. With many bins the
+            # histogram may never reach the flatness target in any reasonable time, and without
+            # this the schedule stalls with ln f at its starting value and the weights run away.
+            # Stage one only has to find the SHAPE; `refine` is what makes it accurate.
             ln_f /= 2.0
             hist[:] = 0
+            since_step = 0
         rounds.append(dict(round=len(rounds), moves=moves, ln_f=ln_f, flatness=flatness,
                            bins=n_seen, one_over_t=tail))
     return dict(lng=lng, seen=seen, rounds=rounds, moves=moves, ln_f=ln_f,
-                accept=accepted / max(moves, 1), discovery_round=discovery_round)
+                accept=accepted / max(moves, 1), discovery_round=discovery_round,
+                stalled=ln_f > ln_f_final and moves >= max_moves)
 
 
 def refine(advance, lng, seen, n_sweeps, seed=0, passes=2, sweeps_per_block=None):
@@ -256,6 +274,10 @@ def _wl_sweeps(adj, side_u, lng, hist, seen, ln_f, n_sweeps, seed, s_min, x_min,
     track_x = cap > CAP
     edges = np.empty((64, 2), dtype=np.int64)
     s, x = state[0], state[1]
+    # state[2] = which end of the window was touched last (0 neither, 1 low, 2 high)
+    # state[3] = completed round trips, low end to high end and back (ASSUMPTION Q17)
+    last_end, trips = state[2], state[3]
+    low_s, high_s = 0, n_s - 1
     attempted, accepted = 0, 0
     for _ in range(n_sweeps):
         for _ in range(2 * n):
@@ -312,13 +334,25 @@ def _wl_sweeps(adj, side_u, lng, hist, seen, ln_f, n_sweeps, seed, s_min, x_min,
                 lng[i, j] = floor            # a fresh bin starts level with the lowest
             lng[i, j] += ln_f
             hist[i, j] += 1
+            if i == low_s:
+                if last_end == 2:
+                    trips += 1               # came back from the far end: one round trip
+                last_end = 1
+            elif i == high_s:
+                last_end = 2
     state[0], state[1] = s, x
+    state[2], state[3] = last_end, trips
     return attempted, accepted
 
 
 def graph_sweeper(adj, side_u, s_min, x_min, cap=NO_CAP):
-    """An `advance` function for `anneal` that walks the graph model. Modifies adj in place."""
-    state = np.array([total_squares(adj), surplus(adj)], dtype=np.int64)
+    """An `advance` function for `anneal` that walks the graph model. Modifies adj in place.
+
+    `advance.state` is [S, X, which end was last touched, completed round trips]. The last of
+    these is the diagnostic the T6 pre-registration requires with every run: a flat-histogram
+    walk that has not crossed its window many times has not measured the far end (Q17).
+    """
+    state = np.array([total_squares(adj), surplus(adj), 0, 0], dtype=np.int64)
 
     def advance(lng, hist, seen, ln_f, n_sweeps, seed):
         floor = float(lng[seen].min()) if seen.any() else 0.0
@@ -337,11 +371,13 @@ def both_stages(advance, shape, seed=0, refine_sweeps=0, passes=2, **kw):
     """
     out = anneal(advance, shape, seed=seed, **kw)
     out["stage_one_lng"] = out["lng"].copy()
+    out["round_trips_stage_one"] = int(getattr(advance, "state", [0, 0, 0, 0])[3])
     if refine_sweeps:
         second = refine(advance, out["lng"], out["seen"], refine_sweeps, seed=None, passes=passes)
         out.update(lng=second["lng"], seen=second["seen"], err=second["err"],
                    passes=second["passes"], flatness=second["flatness"],
                    unvisited=second["unvisited"])
+    out["round_trips"] = int(getattr(advance, "state", [0, 0, 0, 0])[3])
     return out
 
 
