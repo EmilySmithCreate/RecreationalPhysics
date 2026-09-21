@@ -39,7 +39,7 @@ simulation kernel depends on this module.
 """
 from collections import defaultdict
 from itertools import combinations
-from math import comb, factorial
+from math import comb, factorial, lgamma, log
 
 import networkx as nx
 import numpy as np
@@ -273,6 +273,51 @@ def explore(start, cap=NO_CAP):
                 seen.add(j)
                 todo.append(j)
     return classes, joined
+
+
+def log_automorphisms(adj):
+    """ln of the number of renamings that leave every relationship intact, piece by piece.
+
+    WHAT IT IS FOR (task T10). Two points are the same point, as far as anything can tell, when
+    no fact about who connects to whom distinguishes them. The renamings that leave the whole
+    network unchanged are exactly the ones nothing can detect, so counting them measures how
+    much of an arrangement is genuinely interchangeable. That count is also the factor between
+    the two ways of weighting an ensemble: treating points as named weights an arrangement by
+    how many distinct named versions it has, and treating them as interchangeable weights every
+    shape once, so the second favours a shape by exactly this number (ASSUMPTION Q15).
+
+    WHY PIECE BY PIECE. A shattered arrangement has an astronomically large group -- far too
+    large to list one by one -- but the group of a graph in separate pieces factorises. With k
+    pieces of one shape, each having A of its own, that shape contributes A^k k!, and the whole
+    is the product over shapes. So the arrangements whose groups are too big to list are exactly
+    the ones that come apart, which makes them the cheap case rather than the impossible one.
+
+    COST, measured at N = 160 (`scripts/measure_symmetry_cost.py`): about 0.2 s for a fully
+    shattered state, 17 s for a perfect sheet, and 8 minutes for a melted random graph. The
+    ordering is the opposite of the obvious guess: the random graph is slow because the work
+    goes into proving there is no symmetry, and its answer is always ln 1 = 0. Do not call this
+    inside a chain; use it on measured configurations, or per energy level.
+
+    Returns the natural log, because the number itself overflows. Renamings must keep each point
+    on its own side of the bipartition, which is what the chain's moves do and therefore what the
+    ensemble is over; this is the same convention as `symmetries` above, and it needs the module's
+    numbering (`sides_first` converts a graph from elsewhere).
+    """
+    _check_numbering(adj)
+    g = _graph(adj)
+    kinds = []                                  # [representative, how many, ln |Aut| of one]
+    for part in nx.connected_components(g):
+        piece = g.subgraph(part).copy()
+        for kind in kinds:
+            rep = kind[0]
+            if (len(rep) == len(piece) and rep.number_of_edges() == piece.number_of_edges()
+                    and GraphMatcher(rep, piece, node_match=_SAME_SIDE).is_isomorphic()):
+                kind[1] += 1
+                break
+        else:
+            own = sum(1 for _ in GraphMatcher(piece, piece, node_match=_SAME_SIDE).isomorphisms_iter())
+            kinds.append([piece, 1, log(own)])
+    return sum(count * own + lgamma(count + 1) for _, count, own in kinds)
 
 
 def check(n, cap=NO_CAP):

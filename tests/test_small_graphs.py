@@ -163,3 +163,44 @@ def test_which_arrangements_are_dips():
         for lam in (0.0, 0.5, 0.9, 1.0, 1.1, 1.5):
             way_out = min(hamiltonian(b, lam) - hamiltonian(adj, lam) for b in around)
             assert way_out == pytest.approx(cheapest(lam))
+
+
+def test_counting_renamings_matches_known_groups_and_factorises_over_pieces():
+    """T10's symmetry count, against two groups whose order is known, and its factorisation.
+
+    The 4-cube's full automorphism group has order 2^4 * 4! = 384; half of those swap the two
+    sides, so the side-preserving count this project uses is 192 -- which is also what the
+    exhaustive enumeration independently records for that class. The 16x10 torus has 16*10
+    translations times 2 reflections = 320 side-preserving renamings.
+    """
+    from math import exp, isclose, lgamma, log
+
+    import numpy as np
+
+    from graphity.cqg import NO_CAP, torus
+    from graphity.small_graphs import log_automorphisms, sides_first
+
+    cube, cube_part = torus(4, 4, cap=NO_CAP)
+    one = sides_first(cube, cube_part)
+    assert isclose(exp(log_automorphisms(one)), 192.0, rel_tol=1e-9)
+
+    sheet, sheet_part = torus(16, 10, cap=NO_CAP)
+    assert isclose(exp(log_automorphisms(sides_first(sheet, sheet_part))), 320.0, rel_tol=1e-9)
+
+    for k in (2, 3):
+        adj = np.concatenate([cube + 16 * i for i in range(k)])
+        part = np.concatenate([cube_part] * k)
+        want = k * log(192.0) + lgamma(k + 1)          # A^k * k! for k copies of one shape
+        assert isclose(log_automorphisms(sides_first(adj, part)), want, rel_tol=1e-9)
+
+
+def test_a_melted_graph_has_no_renamings_at_all():
+    """Almost every graph is rigid, and that is why the two ways of counting agree for one."""
+    import numpy as np
+
+    from graphity.cqg import NO_CAP, run_chain, torus
+    from graphity.small_graphs import log_automorphisms, sides_first
+
+    adj, part = torus(6, 6, cap=NO_CAP)
+    run_chain(adj, np.flatnonzero(part == 0), 0.0, 200, 1, 77, 1.0, NO_CAP)
+    assert log_automorphisms(sides_first(adj, part)) == 0.0
