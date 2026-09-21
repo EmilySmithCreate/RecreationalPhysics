@@ -24,9 +24,14 @@ the exact averages at N = 18 (tests/test_tempering.py).
 ASSUMPTION Q11 (ours: the details). Swaps are offered between neighbours only,
 pairs (1,2), (3,4), ... on even rounds and (2,3), (4,5), ... on odd rounds. One
 round = `sweeps_per_round` sweeps of every copy, then one set of swap offers.
-Random numbers: every (round, copy) gets its own seed for the sweeps, and the swap
-decisions have their own stream, all drawn from one numpy SeedSequence, so a run is
-reproducible from a single seed.
+
+Random numbers, CHANGED 2026-09-20 (ASSUMPTION Q14; this changes results, and the
+runs made before it are listed there). The sweeps used to take a fresh seed for
+every (round, copy). That is wrong when a round is short: re-seeding the generator
+thousands of times measurably spoils the chain, and these runs re-seed it about two
+hundred thousand times, five sweeps apart. The sweeps now take one seed at the start
+and carry the same stream on through every round and copy. The swap decisions keep
+their own separate stream. A run is still reproducible from a single seed.
 """
 import numpy as np
 
@@ -53,7 +58,7 @@ def temper(graphs, side_u, couplings, n_rounds, sweeps_per_round, seed_sequence,
     inv_g = [1.0 / g for g in couplings]
     sweep_seeds, swap_seed = seed_sequence.spawn(2)
     rng = np.random.default_rng(swap_seed)
-    seeds = sweep_seeds.generate_state(n_rounds * k_total).reshape(n_rounds, k_total)
+    sweep_seed = int(sweep_seeds.generate_state(1)[0])      # once; then -1 carries the stream on (Q14)
     recorded = (n_rounds - measure_from) * sweeps_per_round
     s_out = np.zeros((k_total, recorded), dtype=np.int64)
     x_out = np.zeros((k_total, recorded), dtype=np.int64)
@@ -71,8 +76,8 @@ def temper(graphs, side_u, couplings, n_rounds, sweeps_per_round, seed_sequence,
         energy = np.zeros(k_total)
         for k in range(k_total):
             conn = np.zeros((sweeps_per_round, 4), dtype=np.int64)
-            s, x, acc = run_chain(graphs[k], side_u, inv_g[k], 0, sweeps_per_round, int(seeds[r, k]), lam, cap,
-                                  glauber, conn)
+            s, x, acc = run_chain(graphs[k], side_u, inv_g[k], 0, sweeps_per_round,
+                                  sweep_seed if (r == 0 and k == 0) else -1, lam, cap, glauber, conn)
             energy[k] = ENERGY_PER_SQUARE * (n - s[-1]) + ENERGY_PER_SURPLUS * lam * x[-1]
             accepted[k] += acc
             if r >= measure_from:

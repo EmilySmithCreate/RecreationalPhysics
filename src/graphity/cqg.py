@@ -275,10 +275,18 @@ def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glaub
               measurement sweep i, the four numbers of connectivity.connectivity:
               pieces, size of the largest, vertices in baby universes, 4-cubes.
               Looking uses no random numbers, so the chain is the same either way.
+    seed    : seeds the random stream. **seed < 0 carries on the stream from the
+              previous call instead.** Anything that calls this repeatedly in short
+              blocks must use that, because re-seeding often makes the chain worse:
+              measured on a flat-histogram walk with exactly known weights, the
+              histogram went from 1.5 % uneven in one call to 24 % uneven in a
+              thousand re-seeded blocks of the same total length (ASSUMPTIONS Q14).
+              A single long call is unaffected, which is what every script here does.
     Returns (S after each measurement sweep, X after each, acceptance rate).
     One sweep = 2N attempted switches (one per edge).
     """
-    np.random.seed(seed)
+    if seed >= 0:
+        np.random.seed(seed)
     n = adj.shape[0]
     nu = side_u.shape[0]
     track_x = cap > CAP                 # under the cap X is identically zero
