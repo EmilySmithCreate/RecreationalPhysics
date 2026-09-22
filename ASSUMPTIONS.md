@@ -766,11 +766,17 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   not something space does by itself -- which is the author's own point that space refolds at a singularity
   and not everywhere. Predicted, and it held. **(2) Two closed 30-point pieces** survive exactly where the
   sheet does, to g = 4, and at g = 8 they melt and merge into one. Predicted, and it held: the refolded
-  arrangement is as durable as space and no more. **(3) A melted patch cooled** at g = 1 for 800 sweeps falls
-  from +5 per point to +2.0 and +2.2 and stops there, with acceptance 0.002. **Predicted: it would cool into
-  closed pieces. It did not.** It jams in a defective state that is neither space nor a knot. That is a
-  kinetic statement, not an equilibrium one -- at that acceptance the chain has nearly stopped -- and it is
-  the third of these three predictions, so the run that mattered most is the one that failed.
+  arrangement is as durable as space and no more. **(3) A melted patch cooled** for 800 sweeps, six runs at g = 1 and 2, falls
+  from about +5 per point to between +1.73 and +2.23 and stops there, every run one connected piece with a
+  mixture of triangles, squares and pentagons (0 to 11 triangles, 34 to 52 squares, 8 to 13 pentagons) and
+  acceptance 0.002. **Predicted: it would cool into closed pieces. It did not.** It jams at about +2 a point
+  in a defective state that is neither space nor a knot, and the six runs agree closely enough that the level
+  looks characteristic rather than accidental. That is a kinetic statement and not an equilibrium one -- at
+  that acceptance the chain has nearly stopped -- and it is the third of these three predictions, so the run
+  that mattered most is the one that failed. *Read against the author's picture of a black hole interior
+  (2026-09-22): a region that has been melted and then left cold does not become space again and does not
+  become a knot; it stays jammed and disordered, which is at least the right shape for something nothing
+  comes back out of.*
 
 ## Provenance
 
