@@ -206,6 +206,19 @@ Gate 3 was written as an energy-conservation check: is the lump the known 4(λ �
 
 **Enacted wording (the author's choice among the options put to her, 22 September 2026).** Gate 3: every counted decay's released energy per point, at the end of the settle, is within 1 % of 4(λ − 1) *either* for the full sheet *or* less one ring's energy, (24λ − 16)/N — 14/N at λ = 1.25 — for the ledge, the ledge having been identified as one ring of the tube (O13; `scripts/diagnose_ledge_and_start.py`). Both values are exact arithmetic; nothing is read off the data. This is stricter than the proposed wording, which would have taken the modal ledge value from the data: a decay resting on anything other than the full sheet or a single ring fails the gate, and is reported as such rather than accommodated. Decays on the ledge are counted for predictions (a), (b) and (c) as in the proposed wording. `scripts/analyse_t7.py` implements this.
 
+**Outcome under it (same day):** gate 3 still fails at every size, because 2 to 6 decays per size were still moving when amendment 1's 30,000-sweep cap ended them; every decay that settled is at the sheet or the one-ring ledge. Details in `ASSUMPTIONS.md` O13. The verdict stays withheld.
+
+#### PROPOSED amendment 3 — not enacted; Emily's decision — what to do with decays that had not settled at the cap
+
+**Status: written after the outcome above, before any further run.**
+
+Amendment 1 set a settle cap of 30,000 sweeps and did not say what gate 3 makes of a decay that reaches the cap without two consecutive windows agreeing. As enacted, such a decay fails the gate, although it is not in any state to be checked. Two options, in the order recommended:
+
+- **(i) Finish the measurement, no rule change.** The affected decays are reproducible from the seeds recorded with them. Replay those seeds with the cap raised to 100,000 sweeps and read where they settle; then apply gate 3 exactly as enacted. A longer settle cannot manufacture a pass — it can only reveal the resting state — and a decay that settles on anything other than the sheet or one ring fails as written.
+- **(ii) Amend gate 3:** it applies to settled decays only (two consecutive windows agreeing, as amendment 1 defines); the number of unsettled decays is reported for each size and must be fewer than half. This is the weaker option, because it lets a minority of decays go unexamined.
+
+Either is honest; leaving the gate to fail on decays that never settled is a statement about the cap, not about the change.
+
 **Why proposed rather than made.** It changes a gate after the data it judges were seen. What makes it defensible: the three predictions are met at every size on both the first run and the rerun with fresh seeds, and the change concerns only which decays are admitted, not what is measured on them; and the thing it admits — a decay resting on a second sharp step — is more of what claim 4 describes, not less. **If adopted:** the λ = 1.25 verdict is TWO-STATE CHANGE. **If not:** the verdict is withheld and the three predictions are reported as met with the gate outstanding.
 
 **Recorded, and not a change to anything:** at λ = 1.5 the tube is not metastable at g = 1.5 — it is at φ = 0.95 by sweep 50 in every replica, as it was in the design-track pilot at g = 1.0. There is no waiting time to measure and no switch to see. The section above listed λ = 1.5 assuming a long-lived tube there, and it is not one. Those runs are reported as what they are: the unstable case, which the verdict language was not written for and to which no verdict is applied.

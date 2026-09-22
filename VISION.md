@@ -207,6 +207,12 @@ Update 13 (2026-09-22): the vision audited against T6, T7 and the first sealed r
 - **Task numbering.** PREREGISTRATION's T7, T8 and T9 are not TASKS.md's; the map is at the top of TASKS.md.
 - **The author's extension of the same day** (tube opens at the Big Bang; gravity as the wish to refold; black holes as re-curled regions; colliding black holes seeding a new space) is parked under rule 2, with the two pieces the model can reach marked as step-4 items: `docs/parked/extension_2026-09-22.md`.
 
+Update 14 (2026-09-22, later the same day): two rule decisions made by the author, and what each returned. Why this page changes: Update 13 left two pre-registered verdicts withheld by rules that had failed on positive cases; both are now decided. Details: `PREREGISTRATION.md` T6 amendment 4 and T7 amendment 2; `ASSUMPTIONS.md` O11 and O13 addenda.
+
+- **λ = 0 is FIRST ORDER by the pre-registered verdict**, under amendment 4 (criterion 3 compared to the two-spike prediction, adopted by the author). A lump of 12.5 per point, a barrier growing at 34 standard errors, the Binder minimum 0.020 from its own two-spike value and closing. S2 is met at the penalty-off end of the knob — where, as Update 6 said, the cold phase is knots and not a space. Recorded with it: the rule was adopted after the data it changes the verdict on; the control, not the test cases, exposed the defect.
+- **The tube → sheet verdict stays withheld, and now for a stated reason.** Under amendment 2 in its strict form (the energy checked at the sheet or at the one-ring ledge, both exact), every decay that settled passes; 2 to 6 per size were still moving at the 30,000-sweep cap and are not in any state to check. All three predictions hold at every size in both runs. What to do about the unsettled decays is proposed amendment 3 — replay them from their seeds with a longer cap, or gate only settled decays — and is the author's call.
+- **T9 is complete: BONFIRE WITH A THRESHOLD at all three sizes.** And the leftover in the coldest box is one ring at every size, which makes T10's committed prediction that it grows with the space likely to fail; O14 says so before T10 finishes. Whether the one ring is a seam is pre-registered as T11 and running.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

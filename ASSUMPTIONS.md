@@ -534,6 +534,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** Sizes 48–96 only; N = 128 needs a walk roughly seven times longer (3 round trips on a unit walk); 160 longer still. Whether the barrier grows like L or like N. Any connectivity observable in the valley, which the walk does not record and the pre-registration asks to have reported alongside.
 
+  **Addendum, 2026-09-22, later: amendment 4 enacted by Emily; the verdict re-issued.** Her choice, among three put to her (adopt; drop criterion 3 as uninformative; keep as written), was to adopt: criterion 3 is now that the Binder minimum lies below 2/3 at every size, within 0.05 of the two-spike prediction at the largest size, and with the gap shrinking with N. Re-run on the same walks (`scripts/analyse_wl_lam0.py`, nothing else changed): gaps 0.120, 0.061, 0.020 at N = 48, 64, 96 — shrinking, and 0.020 at the largest size against a tolerance of 0.05 (or the 0.03 first proposed; either passes). Criterion 3 MET; criteria 1 and 2 as before. **PRE-REGISTERED VERDICT, λ = 0, sizes 48/64/96: FIRST ORDER.** Recorded with it: the rule was adopted after seeing the data it changes the verdict on; what makes that defensible is that the formula has no free parameter and that the control exposed the defect. The same criterion 3 now applies at λ ≥ 1, where the `t6c_*` reruns are still going; there the question is moot unless criteria 1 and 2 are met, and O12's one-hump result says they will not be.
+
 - **O12 λ ≥ 1 complete at 36 / 64 / 100: no two-phase structure at the transition, the lump bounded and falling, and gate 4 failing for a reason that is not a wall.** (2026-09-22. Runs `t6b_lam1`, `t6b_lam125`, `t6b_lam15`, tempering along φ under amendment 1.)
 
   **The bound, which is the falsification clause's required output.** Largest latent heat that could hide in a single hump, per point:
@@ -579,6 +581,10 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** That X is a tube. Anything about the universe. The word "first order" in the thermodynamic sense (this is a decay at fixed temperature; the pre-registration defined "sharp" for that case and the data meet that definition). Where the metastable window in λ ends. What the ledge state is, structurally — only that it is one state, at 0.78, every time. What happens in a sealed box (T8).
 
+  **Addendum, 2026-09-22, later: amendment 2 enacted by Emily, in its strict form; gate 3 still fails, and the reason is now known.** Her choice was to check the energy at whichever state the decay reached, with the ledge fixed as one ring — the lump less (24λ − 16)/N — rather than the modal ledge value first proposed. Re-run (`scripts/analyse_t7.py`, `t7b`): at the end of the settle **24 to 28 of 30 decays per size are at the sheet within 1 %, 0 to 1 on the one-ring ledge, and 2, 4, 2 and 6 at neither** (N = 64, 96, 144, 192). The rerun's ledge decays mostly finished: 16 to 21 of 30 paused, and all but the "neither" ones then completed. **Every one of the 14 "neither" decays has `settle_sweeps` = 30,000: they were still moving when amendment 1's cap ended them.** They are not resting states. Their final S is N (a sheet by square count, with surplus edges still carrying energy: released 0.28 to 0.87), N + 2, N + 4 or N + 5 (partly uncurled): defected sheets annealing slowly at g = 1.5, caught mid-way. So gate 3 as enacted fails at every size for one reason only — a minority of decays had not settled by the cap — and no rule about *which* states count could pass them, because they were not in a state. **The verdict is withheld by the letter.** Predictions (a), (b) and (c) hold at every size in both runs, as before.
+
+  **Two ways forward, both Emily's, neither enacted.** (i) *Finish the measurement:* the fourteen decays are reproducible from their recorded seeds; replay them with the cap raised from 30,000 to 100,000 sweeps and read where they settle. This changes a protocol parameter (amendment 1's cap), not a rule: a longer settle cannot manufacture agreement, it can only reveal the resting state, and if that is neither sheet nor ring the gate fails honestly. (ii) *Amend the gate:* gate 3 applies to settled decays only, the unsettled count is reported per size and must be a minority. Proposed as T7 amendment 3 in `PREREGISTRATION.md`; my recommendation is (i) first, and (ii) only if (i) is refused or the replays still do not settle.
+
 - **O14 T9: the sealed tube is a bonfire with a threshold; no slush; the leftover is one ring — at every size.** (2026-09-22. `t9_n{64,96,192}_C*`, 21 configs, 420 runs; `scripts/analyse_t9.py`; PREREGISTRATION T9, no amendments.)
 
   **The verdict as written: BONFIRE WITH A THRESHOLD.** Every run converted (the spark is still the spark, gate 2), energy conserved to the last unit in all 420 (gate 1), twenty replicas each (gate 3).
@@ -604,6 +610,38 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   **Why one?** *Ours, unverified, and a follow-up worth pre-registering.* The tube is periodic. The front starts at one place (O13: anywhere, nucleus two rings) and spreads both ways; the two ends meet on the far side. A seam where two fronts meet is one place per tube whatever its length, and a ring that neither front uncurled is what a seam would leave. If that is the mechanism, the leftover ring sits at the antipode of the nucleation site, and the count is 1 by topology, 0 when the seam closes cleanly, 2 rarely. Testable with the departure positions `diagnose_ledge_and_start.py` already records plus the ring's position, at N = 64 in minutes. At warmer baths (C ≤ N/2) the count rises to 1–3 and pieces larger than a ring appear: thermal defects on top of the seam, not the front's doing.
 
   **Not claimed.** T10's verdict. What C means beyond "how many other places the energy can go". The seam mechanism. Anything at λ ≠ 1.25.
+
+- **O15 T10: ONE RING, HOWEVER LARGE — prediction (a) failed, as O14 said it would; and the reading check found a second, smaller leftover.** (2026-09-22. `t10_n{64,96,192,288}`, 80 runs, fresh seeds, C = 2N; `scripts/analyse_t10.py`; PREREGISTRATION T10, no amendments.)
+
+  | N | rings per sheet (mean ± sd) | largest d = 1 piece | 14 units per ring | bath g at end | (c) |
+  |---|---|---|---|---|---|
+  | 64 | 0.90 ± 0.31 | 4 | 19 of 20 | 0.49 | holds |
+  | 96 | 0.85 ± 0.37 | 4 | 17 of 20 | 0.49 | holds |
+  | 192 | 1.05 ± 0.22 | 4 | 19 of 20 | 0.49 | holds |
+  | 288 | 0.95 ± 0.22 | 4 | 16 of 20 | 0.49 | holds |
+
+  Gate 1 exact; gate 2 twenty each; gate 3: every replica converted, f_final = 1.0 at every size, so the 12-unit spark suffices at 288 too. **(a) fails:** slope 0.0003 ± 0.0003 rings per point (1.0 standard errors); mean(288) − mean(64) = 0.05 against a scatter of 0.31. **(c) holds:** the bath ends at 0.49 everywhere and nothing leaves. **PRE-REGISTERED VERDICT: ONE RING, HOWEVER LARGE.**
+
+  **(b) fails on 9 of 80 replicas, and that is the check doing its job.** Each of the nine has S = N, X = 4, 20 units of excess — two vertices at d = 1 and two at d = 3 — which is not a ring (a ring is four vertices at d = 1 in one column, S = N + 1, X = 6, 14 units). A second leftover species: a twist two points wide costing 20 units, in 9 of 80 boxes (one box holds two of them, X = 8). The pre-registered count is "pieces at d = 1" and stands as written; recounting with "ring = a piece of exactly four" gives 0.85, 0.75, 1.00, 0.75, the same verdict, reported alongside.
+
+  **Against claim 5, plainly.** In this model, in a cold box, what the change leaves behind is one ring — and rarely a twist — however large the space. A single defect, not a density: at 288 points it is 1.4 % of the points, at a universe's size it is nothing. Claim 5's leftover is back to bookkeeping here, as VISION Update 13 and section T10 said in advance it would be if this came out this way. What could change that is a leftover that is *thermal* rather than the front's: T9's warmer baths (C ≤ N/2) left one to three rings and larger pieces, which is a different question with a different prediction, and is not run. Why the front leaves exactly one is T11, running.
+
+  **Not claimed.** T11's verdict. Anything at warmer C. That the twist is stable rather than slow.
+
+- **O16 T11: NEITHER — the leftover sits anywhere along the tube; the seam guess of O14 is refuted. And a correction: it is not a ring.** (2026-09-22. `t11_seam_n64` (40 replicas), `t11_seam_n96` (30), cold box C = 2N, fresh seeds; `scripts/run_seam_check.py`, `scripts/analyse_t11.py`; PREREGISTRATION T11, no amendments.)
+
+  **The data.** Single-leftover replicas 36 of 40 and 28 of 30 (gate 2 met; conservation exact). Distance, in columns along the tube, from where the change started (circular mean of the first non-tube columns) to the leftover (circular mean of its columns):
+
+  | N | half-length | at the far side (≥ ¾ of half) | random would give | within 1.5 of the start | random | median | mean | random mean |
+  |---|---|---|---|---|---|---|---|---|
+  | 64 | 8 | 36 % | ≈ 31 % | 19 % | ≈ 19 % | 4.5 | 4.17 | 4.0 |
+  | 96 | 12 | 32 % | ≈ 29 % | 4 % | ≈ 13 % | 6.5 | 6.38 | 6.0 |
+
+  **PRE-REGISTERED VERDICT: NEITHER.** Not a seam, not at the seed: the position is indistinguishable from uniform. The front does not leave its remnant where its two ends meet, nor where it started. **Why the cold box ends with exactly one is open**, and O14's guess is withdrawn.
+
+  **Correction to the record: the leftover is not a ring.** The runner filled its `dist` column only when the leftover occupied a single column, on my assumption that it is a ring *around* the tube — four vertices at one position along it. It is not: the four d = 1 vertices span one to four columns, mostly two or three, lying *along* the tube. The distance was therefore computed in `analyse_t11.py` from the recorded columns of the d = 1 vertices via their circular mean, which is the pre-registered observable as written; the runner's `dist` is blank in all but one row and is superseded (the correction is in the analysis, not the data; the result files are as run). **"One ring of the tube" in O13, O14, O15, PREREGISTRATION T10 and T11, and the page, was a geometric guess made from the count alone** — four d = 1 vertices, the tube's circumference — and was never checked until this run. What *is* established: one cluster of four tube-like points, one extra square, six surplus edges, 14 units, one per cold box, along the tube. Earlier entries are left as written; from here the word is "the four-point remnant". A second thing the departure snapshots show: the first non-tube vertices number four to six, in four to five adjacent columns — a short line along the tube, not "two adjacent rings" as O13 inferred from a count of eight at a later threshold.
+
+  **Not claimed.** Any mechanism for the count of one. Anything at warmer baths. What the remnant is, beyond its size, energy and orientation.
 
 ## Provenance
 
