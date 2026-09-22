@@ -714,6 +714,12 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** That dark matter is leftover X. That scraps are stable over cosmic times, slow-moving ("cold") or able to clump. How a model point maps onto a physical volume, which the scrap-per-point figure depends on. Anything beyond a first look.
 
+- **O19 The 2025 review's text around Eq. (22), read again for what it says about Fig. 3.** (2026-09-22, the author reading the source; no run.)
+
+  Checked because the outreach note asks which variant Fig. 3 shows. **It does not say.** What the passage does settle, and each item agrees with what we already had: the global term alone is minimised by isolated hypercubic complexes and gives a first-order transition, while "if the full Hamiltonian is used, instead the model undergoes a continuous phase transition"; triangles and pentagons are excluded from a homogeneous ground state because 9/8 + 5/8 < 2 (Q10's arithmetic, and the reason our triangles test was the right control); **bipartite graphs are explicitly allowed** as a computational convenience, so our bipartite runs are the right configuration space; the maximum per edge is 2D − 1 = 3 by regularity (Q3); configurations above 2D − 2 squares per edge are **degenerate** with the ground state at λ = 1, which is the degeneracy our own cold end runs into (O10, O12); and the random-phase floor is the formula (3⁴/4)/160 = 0.126 "for N = 160 in the example below", confirming O5 and that Fig. 3 is at N = 160.
+
+  **What is still not stated, and it is what our disagreement turns on:** the run length and how equilibration was checked; whether the hard-core restriction of [KTB19] Sec. 4 was imposed in the Fig. 3 runs; whether the points are from cooling, heating or both. Our disagreement is not about the end values — we match 0.126 and 1 — but about *where* the rise happens, and a short or unequilibrated run moves a curve in exactly that direction. The outreach note's first question is narrowed to that.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
