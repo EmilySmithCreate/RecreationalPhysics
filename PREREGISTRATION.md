@@ -117,7 +117,9 @@ Anything about the real universe; anything about X, which is not what this model
 
 Three sizes (48, 64, 96) pass gates 3 and 4. Criterion 1 met (latent heat 12.5 ± 0.02 per point at N = 96). Criterion 2 met (barrier slope +1.59 ± 0.05 against L, 34 standard errors). Criterion 3 not met as written: the Binder minima 0.381, 0.480, 0.575 are below 2/3 but rising. The rules say the criteria disagreeing is INCONCLUSIVE and is not to be resolved afterwards by changing the rule. It is not. Full table in `ASSUMPTIONS.md` O11.
 
-#### PROPOSED amendment 4 — not enacted; Emily's decision — criterion 3 is mis-specified
+#### Amendment 4, 22 September 2026 — ENACTED at the author's decision — criterion 3 is compared to the two-spike prediction
+
+**Status: proposed after the λ = 0 control had run (text below, as proposed); adopted by the author on 22 September 2026 with the wording in "Enacted wording" at the end of this amendment. The λ = 0 verdict is re-issued under it in `ASSUMPTIONS.md` O11; the same rule applies unchanged to λ ≥ 1.**
 
 **Written after the λ = 0 verdict above, and it would change that verdict. That is stated first so it cannot be missed.**
 
@@ -126,6 +128,8 @@ The value a first-order transition predicts for the Binder minimum is not 2/3. F
 **Proposed wording.** Criterion 3: the Binder minimum lies below 2/3 at every size, and at the largest size lies within 0.03 of the two-spike prediction computed from that size's measured phase energies. The prediction has no free parameter.
 
 **Why this is proposed rather than made.** It is a rule change after seeing data, which this document forbids me to make. What makes it defensible for Emily to make is (a) the formula is textbook, (b) the defect was found on the control and not on the cases under test, and (c) the alternative — issuing λ ≥ 1 verdicts under a criterion that fails the positive case — is worse. **If adopted:** λ = 0 becomes FIRST ORDER, and the same criterion applies unchanged at λ ≥ 1. **If not adopted:** λ = 0 stays INCONCLUSIVE, and criterion 3 must be declared uninformative and dropped from the λ ≥ 1 verdicts *before* they are read, for the same reason. Either way is honest; leaving it as it stands is not.
+
+**Enacted wording (the author's choice among the options put to her, 22 September 2026).** Criterion 3: the Binder minimum lies below 2/3 at every size; at the largest size it lies within 0.05 of the two-spike prediction computed from that size's measured phase energies; and the gap between prediction and measurement shrinks with N. The prediction has no free parameter. The tolerance in the proposed wording above was 0.03; the measured gap at N = 96 is 0.019, so the case is decided the same way under either, and the choice of tolerance is not what decides it. `scripts/analyse_wl_lam0.py` implements this wording.
 
 ---
 
@@ -188,7 +192,9 @@ That X *is* a tube, or that the universe did this. That a lump large enough for 
 
 **What is not changed.** The three observables, the three predictions and the verdicts. Gate 3 as a criterion.
 
-#### PROPOSED amendment 2 — not enacted; Emily's decision — gate 3 asks the wrong question
+#### Amendment 2, 22 September 2026 — ENACTED at the author's decision — gate 3 checks the energy at whichever state the decay reached
+
+**Status: proposed after the ledge was seen (text below, as proposed); adopted by the author on 22 September 2026 with the wording in "Enacted wording" at the end of this amendment. The verdicts are re-issued under it in `ASSUMPTIONS.md` O13.**
 
 **Written after the rerun `t7b_lam125_n*`, which it would change the verdict of. Stated first.**
 
@@ -197,6 +203,21 @@ Under amendment 1 the settle runs until the released energy has stopped changing
 Gate 3 was written as an energy-conservation check: is the lump the known 4(λ − 1)? The answer is yes — every decay that completes its second step releases 1.00 to within 1 %, and every decay on the ledge releases the ledge's own value, the same 0.78 each time. What gate 3 actually tests, as written, is whether every decay completes *both* steps inside the run, which is a question about the ledge's lifetime and not about the lump.
 
 **Proposed wording.** Gate 3: every counted decay's released energy, at the end of the settle, is within 1 % of *either* 4(λ − 1) *or* the ledge value (the modal first-window release across decays at that size). Energy is thereby checked exactly at whichever state the decay has reached. Decays on the ledge are counted for predictions (a), (b) and (c), which concern the first switch and are measured at half conversion, before the ledge is reached.
+
+**Enacted wording (the author's choice among the options put to her, 22 September 2026).** Gate 3: every counted decay's released energy per point, at the end of the settle, is within 1 % of 4(λ − 1) *either* for the full sheet *or* less one ring's energy, (24λ − 16)/N — 14/N at λ = 1.25 — for the ledge, the ledge having been identified as one ring of the tube (O13; `scripts/diagnose_ledge_and_start.py`). Both values are exact arithmetic; nothing is read off the data. This is stricter than the proposed wording, which would have taken the modal ledge value from the data: a decay resting on anything other than the full sheet or a single ring fails the gate, and is reported as such rather than accommodated. Decays on the ledge are counted for predictions (a), (b) and (c) as in the proposed wording. `scripts/analyse_t7.py` implements this.
+
+**Outcome under it (same day):** gate 3 still fails at every size, because 2 to 6 decays per size were still moving when amendment 1's 30,000-sweep cap ended them; every decay that settled is at the sheet or the one-ring ledge. Details in `ASSUMPTIONS.md` O13. The verdict stays withheld.
+
+#### PROPOSED amendment 3 — not enacted; Emily's decision — what to do with decays that had not settled at the cap
+
+**Status: written after the outcome above, before any further run.**
+
+Amendment 1 set a settle cap of 30,000 sweeps and did not say what gate 3 makes of a decay that reaches the cap without two consecutive windows agreeing. As enacted, such a decay fails the gate, although it is not in any state to be checked. Two options, in the order recommended:
+
+- **(i) Finish the measurement, no rule change.** The affected decays are reproducible from the seeds recorded with them. Replay those seeds with the cap raised to 100,000 sweeps and read where they settle; then apply gate 3 exactly as enacted. A longer settle cannot manufacture a pass — it can only reveal the resting state — and a decay that settles on anything other than the sheet or one ring fails as written.
+- **(ii) Amend gate 3:** it applies to settled decays only (two consecutive windows agreeing, as amendment 1 defines); the number of unsettled decays is reported for each size and must be fewer than half. This is the weaker option, because it lets a minority of decays go unexamined.
+
+Either is honest; leaving the gate to fail on decays that never settled is a statement about the cap, not about the change.
 
 **Why proposed rather than made.** It changes a gate after the data it judges were seen. What makes it defensible: the three predictions are met at every size on both the first run and the rerun with fresh seeds, and the change concerns only which decays are admitted, not what is measured on them; and the thing it admits — a decay resting on a second sharp step — is more of what claim 4 describes, not less. **If adopted:** the λ = 1.25 verdict is TWO-STATE CHANGE. **If not:** the verdict is withheld and the three predictions are reported as met with the gate outstanding.
 
@@ -299,5 +320,39 @@ Tubes 16×4, 24×4, 48×4, 72×4 (N = 64, 96, 192, 288), λ = 1.25, sealed, spar
 ### What this cannot show
 
 Anything at other C, where the bath is warm enough for rings to come and go and the leftover is thermal rather than kinetic; that is a different question with a different prediction and is not run here. What a ring is for the universe. Whether rings attract one another: (b) reads separated rings, and pieces of eight are only counted.
+
+## T11. Is the leftover ring a seam?
+
+**Written 2026-09-22, after T9 (ASSUMPTIONS O14) and while T10 runs, before any run of this design.** What had been seen: T9's ring counts (one ring in 18 or 19 of 20 coldest-box sheets at every size); T7's departure positions (flat along the tube) and nucleus (two adjacent rings). The ring's position relative to where the change started had not been read anywhere.
+
+### The question
+
+One ring however long the tube is what a seam would leave. The tube is a loop; the front spreads both ways from where it starts; its two ends meet once, on the far side. If that is the mechanism, the ring sits at the antipode of the start. The alternative in the same data is that the ring is the seed's partner, left at the start. Or neither: anywhere.
+
+### What will be run
+
+A cold sealed box as T10 (C = 2N, spark 12 in one demon, λ = 1.25): tubes 16×4 (forty replicas) and 24×4 (thirty), fresh seeds, run in blocks of five sweeps so that the first departure from the tube is caught. Recorded per replica: the columns along the tube of the first non-tube vertices; at the end, the columns of the vertices at d = 1 and the number of rings; the circular distance in columns from the start (the circular mean of the first non-tube columns) to the ring. Each replica runs to 90 % conversion plus 2,000 sweeps, cap 30,000. `scripts/run_seam_check.py`; `scripts/analyse_t11.py`.
+
+### Predictions, written before looking
+
+*Ours, unverified.* Only replicas ending with exactly one ring enter.
+
+- (a) **Seam**: at each size, at least 60 % of single-ring replicas have the ring at a distance of at least three quarters of the half-length from the start, and the median distance is at least that. A ring placed at random would give about 25 %.
+- (b) **Not at the start**: fewer than 30 % within 1.5 columns of the start (random: about 19 %).
+
+### Gates
+
+1. Energy conservation exact. 2. At least 15 single-ring replicas per size.
+
+### Verdicts
+
+- **SEAM** — (a) and (b) at both sizes.
+- **AT THE SEED** — at least 60 % within 1.5 columns of the start, at both sizes.
+- **NEITHER** — anything else that passes the gates.
+- **INCONCLUSIVE** — a gate fails.
+
+### What this cannot show
+
+Why a meeting of fronts leaves a ring rather than closing cleanly. Anything at warmer baths, where rings are thermal as well. Anything at other λ. Whether the result carries to a sheet with two large directions, where "the far side" is a line and not a point.
 
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.
