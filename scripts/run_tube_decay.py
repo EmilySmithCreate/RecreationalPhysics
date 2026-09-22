@@ -90,17 +90,32 @@ def main(path, out_dir="results"):
                             hit[m] = (sweeps_done,) + snapshot(adj)
                     if f >= stop_at:
                         break
-                # the final energy is an average over a settling stretch after conversion, so a
-                # thermal defect or two at g = 1.5 does not masquerade as energy not released
-                hs = []
-                for _ in range(max(1, settle // block)):
-                    s, x, _ = run_chain(adj, side_u, 1.0 / g, 0, block, -1, lam, NO_CAP, False)
-                    hs.append((ENERGY_PER_SQUARE * (n - s[-1]) + ENERGY_PER_SURPLUS * lam * x[-1]) / n)
-                sweeps_done += max(1, settle // block) * block
-                h1 = float(np.mean(hs))
+                # T7 amendment 1: settle until the released energy has stopped changing. The
+                # first runs settled for a fixed 300 sweeps and caught half the decays on a ledge
+                # -- a defected sheet holding 0.22 per point -- which then released the rest in
+                # one step hundreds to thousands of sweeps later. So the energy is read in windows
+                # of `settle` sweeps and accepted when two consecutive windows agree to 0.5 % of
+                # 4(lambda - 1), up to `settle_max` sweeps. The ledge is recorded: the released
+                # energy after the first window, and how long the plateau lasted.
+                settle_max = int(cfg.get("settle_max", 20000))
+                windows, spent = [], 0
+                while spent < settle_max:
+                    hs = []
+                    for _ in range(max(1, settle // block)):
+                        s, x, _ = run_chain(adj, side_u, 1.0 / g, 0, block, -1, lam, NO_CAP, False)
+                        hs.append((ENERGY_PER_SQUARE * (n - s[-1]) + ENERGY_PER_SURPLUS * lam * x[-1]) / n)
+                    spent += max(1, settle // block) * block
+                    windows.append(h0 - float(np.mean(hs)))
+                    if len(windows) >= 2 and abs(windows[-1] - windows[-2]) <= 0.005 * 4.0 * (lam - 1.0)                             and abs(windows[-1] - 4.0 * (lam - 1.0)) <= 0.01 * 4.0 * (lam - 1.0):
+                        break
+                sweeps_done += spent
+                h1 = h0 - windows[-1]
+                first_window = windows[0]
+                ledge = sum(1 for w in windows[:-1] if abs(w - windows[-1]) > 0.05 * 4.0 * (lam - 1.0)) * settle
                 row = dict(N=n, lx=lx, ly=ly, replica=rep, lam=lam, g=g, seed=seed,
                            sweeps=sweeps_done, waiting=(waited if waited is not None else ""),
                            phi_final=phis[-1], released=(h0 - h1), expected=4.0 * (lam - 1.0),
+                           released_first_window=first_window, ledge_sweeps=ledge, settle_sweeps=spent,
                            reached=max([0.0] + [m for m in hit]))
                 for m in MARKS:
                     tag = "%d" % int(100 * m)

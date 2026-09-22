@@ -176,6 +176,20 @@ Tubes 16×4, 24×4, 36×4, 48×4 (N = 64, 96, 144, 192), λ = 1.25 and 1.5, g = 
 
 That X *is* a tube, or that the universe did this. That a lump large enough for claim 4 exists — 4(λ − 1) is a model constant. Anything about a sealed system: that is T8, the bonfire-or-slush question, which needs its own pre-registration and this result first.
 
+### Amendments
+
+#### Amendment 1, 22 September 2026 — how long to wait before reading the released energy
+
+**Status: written after the first runs (`t7_lam125_n*`, `t7_lam15_n*`) and before the rerun (`t7b_lam125_n*`). The first runs stand and are reported.**
+
+**What went wrong.** The section above did not say how long to wait after conversion before reading the final energy; the runner waited a fixed 300 sweeps. Gate 3 then failed on every decay at both λ. Eight decays followed for 6,000 sweeps show why: about half release the full 4(λ − 1) at once, and the other half release **0.78 of it, sit on that value for hundreds to thousands of sweeps, and then release the rest in one step**. The same 0.78 every time — a specific defected sheet, a second metastable state on the way down, which then also switches sharply. A 300-sweep read catches the system on that ledge. Read after 6,000 sweeps, all eight give 1.00.
+
+**What changes.** The final energy is read in windows of 600 sweeps and accepted when two consecutive windows agree to 0.5 % of 4(λ − 1) and the value is within gate 3's 1 % of it, up to a cap of 30,000 sweeps. The release after the first window and the length of any ledge are recorded with every decay, since the ledge is itself the kind of sharp step claim 4 describes and should not be thrown away by the protocol that was blind to it. Gate 3 is unchanged; only the point at which it is applied is fixed.
+
+**What is not changed.** The three observables, the three predictions and the verdicts. Gate 3 as a criterion.
+
+**Recorded, and not a change to anything:** at λ = 1.5 the tube is not metastable at g = 1.5 — it is at φ = 0.95 by sweep 50 in every replica, as it was in the design-track pilot at g = 1.0. There is no waiting time to measure and no switch to see. The section above listed λ = 1.5 assuming a long-lived tube there, and it is not one. Those runs are reported as what they are: the unstable case, which the verdict language was not written for and to which no verdict is applied.
+
 ---
 
 ## T8. The λ map (formerly T7)
