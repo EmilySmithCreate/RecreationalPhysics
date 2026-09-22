@@ -132,6 +132,94 @@ def run_sealed(adj, side_u, demon, n_sweeps, seed, lam=1.0, cap=CAP, leak=0.0, c
     return out_s, out_x, out_demon, out_lost, accepted / max(attempted, 1)
 
 
+@njit(cache=True)
+def run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam=1.0, cap=CAP, conn=None):
+    """PREREGISTRATION T9: sealed, with a bath of C demons instead of one. Modifies adj in place.
+
+    demons : float array of length C, the energy each demon starts with. Each attempted move
+             picks one demon at random to pay for it or be paid by it; a move the chosen demon
+             cannot afford is refused. H + sum(demons) is conserved exactly. The demons' mean
+             energy reads the temperature, and C sets how far that temperature rises per unit
+             of energy released -- which is the knob the experiment scans. With C = 1 no random
+             choice is made and the run is bit-for-bit run_sealed with leak = 0 (tested).
+    Returns (S after each sweep, X, mean demon energy, sum of demon energy, acceptance rate).
+    """
+    np.random.seed(seed)
+    n = adj.shape[0]
+    nu = side_u.shape[0]
+    track_x = cap > CAP
+    edges = np.empty((64, 2), dtype=np.int64)
+    s = total_squares(adj)
+    x = surplus(adj)
+    out_s = np.zeros(n_sweeps, dtype=np.int64)
+    out_x = np.zeros(n_sweeps, dtype=np.int64)
+    c = demons.shape[0]
+    out_mean = np.zeros(n_sweeps, dtype=np.float64)
+    out_sum = np.zeros(n_sweeps, dtype=np.float64)
+    attempted = 0
+    accepted = 0
+    for sweep in range(n_sweeps):
+        for _ in range(2 * n):
+            attempted += 1
+            u1 = side_u[np.random.randint(0, nu)]
+            v1 = adj[u1, np.random.randint(0, 4)]
+            u2 = side_u[np.random.randint(0, nu)]
+            v2 = adj[u2, np.random.randint(0, 4)]
+            if u1 == u2 or v1 == v2 or has_edge(adj, u1, v2) or has_edge(adj, u2, v1):
+                continue
+            n_edges = 0
+            if track_x:
+                n_edges = _note_square_edges(adj, u1, v1, edges, n_edges)
+                n_edges = _note_square_edges(adj, u2, v2, edges, n_edges)
+            lost_squares = squares_on_edge(adj, u1, v1)
+            _replace(adj, u1, v1, -1)
+            _replace(adj, v1, u1, -1)
+            lost_squares += squares_on_edge(adj, u2, v2)
+            _replace(adj, u2, v2, -1)
+            _replace(adj, v2, u2, -1)
+            _replace(adj, u1, -1, v2)
+            _replace(adj, v2, -1, u1)
+            gained = squares_on_edge(adj, u1, v2)
+            _replace(adj, u2, -1, v1)
+            _replace(adj, v1, -1, u2)
+            gained += squares_on_edge(adj, u2, v1)
+            d_s = gained - lost_squares
+            d_x = 0
+            ok = _new_edge_ok(adj, u1, v2, cap) and _new_edge_ok(adj, u2, v1, cap)
+            if ok and track_x:
+                n_edges = _note_square_edges(adj, u1, v2, edges, n_edges)
+                n_edges = _note_square_edges(adj, u2, v1, edges, n_edges)
+                after = _surplus_on(adj, edges, n_edges)
+                _switch(adj, u1, v2, u2, v1)
+                before = _surplus_on(adj, edges, n_edges)
+                _switch(adj, u1, v1, u2, v2)
+                d_x = after - before
+            if ok:
+                d_h = -ENERGY_PER_SQUARE * d_s + ENERGY_PER_SURPLUS * lam * d_x
+                k = 0 if c == 1 else np.random.randint(0, c)
+                if d_h > demons[k]:                  # this demon cannot pay for it
+                    ok = False
+                else:
+                    demons[k] -= d_h                 # it pays, or is paid
+            if ok:
+                s += d_s
+                x += d_x
+                accepted += 1
+            else:
+                _switch(adj, u1, v2, u2, v1)
+        out_s[sweep] = s
+        out_x[sweep] = x
+        out_sum[sweep] = demons.sum()
+        out_mean[sweep] = out_sum[sweep] / c
+        if conn is not None:
+            pieces, largest, in_babies, cubes = connectivity(adj)
+            conn[sweep, 0] = pieces
+            conn[sweep, 1] = largest
+            conn[sweep, 2] = in_babies
+            conn[sweep, 3] = cubes
+    return out_s, out_x, out_mean, out_sum, accepted / max(attempted, 1)
+
+
 def demon_temperature(demon_series, step=None):
     """The coupling g the system has reached, read off the demon's own energy.
 

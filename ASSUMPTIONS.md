@@ -534,6 +534,77 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** Sizes 48–96 only; N = 128 needs a walk roughly seven times longer (3 round trips on a unit walk); 160 longer still. Whether the barrier grows like L or like N. Any connectivity observable in the valley, which the walk does not record and the pre-registration asks to have reported alongside.
 
+- **O12 λ ≥ 1 complete at 36 / 64 / 100: no two-phase structure at the transition, the lump bounded and falling, and gate 4 failing for a reason that is not a wall.** (2026-09-22. Runs `t6b_lam1`, `t6b_lam125`, `t6b_lam15`, tempering along φ under amendment 1.)
+
+  **The bound, which is the falsification clause's required output.** Largest latent heat that could hide in a single hump, per point:
+
+  | λ | N = 36 | N = 64 | N = 100 |
+  |---|---|---|---|
+  | 1 | < 1.65 | < 1.51 | < 1.30 |
+  | 1.25 | < 1.60 | < 1.47 | < 1.27 |
+  | 1.5 | < 1.66 | < 1.45 | < 1.26 |
+
+  Against 10.3, 11.3, 12.5 *measured* at λ = 0 on the clean sizes. The bound falls with N at every λ, which is how a continuous transition's energy fluctuations behave and the opposite of a latent heat, which holds its value. **Any lump at λ ≥ 1 is at least eight times smaller than the one at λ = 0 and shrinking.**
+
+  **No two-phase structure at the geometry-forming change.** λ = 1.5: none at any coupling, size or replica. λ = 1.25: one replica at N = 64 found φ = 1.000 | 1.062 at g = 1.35 with a latent heat of 0.04 and a rung spread of 183 % — the perfect sheet against a sheet with one defect, at the cold end, not a transition. λ = 1: pairs at g_c 1.6 to 2.1, Δφ 0.08 to 0.13, rung spreads 33 to 339 % — the degenerate manifold of O10 (sheet, tube and cubes tie in energy at λ = 1, so reweighting in g cannot set their balance), at the cold end below the transition. **At every λ ≥ 1 and every size, the region where φ actually changes, g ≈ 2.5 to 5, shows one hump.**
+
+  **Gate 4 fails at N ≥ 64, and the reason is diagnosed.** Round trips (minimum over replicas): λ = 1: 102 / 15 / 1; λ = 1.25: 32 / 11 / 3; λ = 1.5: 26 / 15 / 0 at N = 36 / 64 / 100. Not a severed ladder — swap acceptance is 0.20 to 0.74 at every link, with no collapse anywhere, and φ moves smoothly through every rung (no jump, which is the continuous transition itself). It is diffusion: eighteen rungs, a hot end coarse in 1/g (the top link accepts 0.20), and a cold tail of four to five rungs where the move acceptance is 0.001 and φ has saturated. The pre-registered rule is per run and it fails. **So no verdict is issued at λ ≥ 1 from these runs.**
+
+  **What does not depend on round trips.** Four independent replicas, started from independent melts, agree on φ at N = 100 to **0.001 to 0.01 at every rung with g ≥ 2.2**, for all three λ, with integrated autocorrelation times of a few hundred sweeps against 60,000 measured. The only disagreement is at λ = 1's two coldest rungs (0.06 to 0.07, τ ≈ 1700 sweeps) — the degenerate manifold, below the transition, where the choice between sheet, tube and cubes is slow. For a continuous transition there are no two phases that a ladder crossing has to mix; the direct evidence of equilibration in the transition region is replica agreement, and it is there. This is why the bound in the table is stated as exploratory rather than withheld.
+
+  **What is being done about it.** `t6c_*` runs: N = 64 and 100 at each λ ≥ 1, the ladder trimmed to fourteen rungs (hot end refined, the frozen tail below g = 2.35 cut) and the measured rounds tripled. Sampling-efficiency changes only; the same distributions. Expected to meet gate 4 as written, at which point the λ ≥ 1 verdicts follow under whatever criterion 3 Emily settles (O11). N = 36 already passes and is not re-run.
+
+  **Not claimed.** Any verdict at λ ≥ 1. The word "continuous" (the pre-registration reserves it). Anything about λ between 1 and 1.5 other than the three values run.
+
+- **O13 T7: the change from one order to another is a switch, by a front, and it happens twice.** (2026-09-22. `t7_lam125_n*` and the rerun `t7b_lam125_n*` with fresh seeds; `t7_lam15_n*`; PREREGISTRATION T7 and its amendments.)
+
+  **Why this and not T6.** Emily's hypothesis was always a change from one *arrangement* to another, never from disorder (her correction of 2026-09-20; claim 3). T6 tested the disorder route because that is the transition the published work measures, and I did not re-scope when corrected. T7 tests the order → order change the published family contains: the tube, one dimension curled, 4(λ − 1) above the sheet, metastable, decaying into the sheet.
+
+  **The three predictions, written before looking, hold at every size on two independent sets of seeds** (λ = 1.25, g = 1.5, tubes 16×4 to 48×4, thirty decays each):
+
+  | N | wait (sweeps) | CV | vertices at d ∈ {1, 2} at half conversion | largest sheet piece | pieces |
+  |---|---|---|---|---|---|
+  | 64 | 871 / 660 | 0.91 / 0.84 | 0.990 / 0.998 | 0.98 / 0.99 | 1.3 / 1.1 |
+  | 96 | 913 / 928 | 1.10 / 1.02 | 0.990 / 0.988 | 0.95 / 0.96 | 1.6 / 1.5 |
+  | 144 | 856 / 743 | 1.01 / 0.76 | 0.997 / 0.997 | 0.92 / 0.96 | 1.4 / 1.2 |
+  | 192 | 1039 / — | 0.87 / — | 0.995 / — | 0.85 / — | 1.8 / — |
+
+  (first run / rerun; N = 192 rerun in progress.) In words: the wait is memoryless — the change starts by a rare event, not on a schedule; at the halfway point **99 % of vertices are either still tube or already sheet, with essentially none in between**; and the sheet-like vertices form **one connected front**. That is a first-order change between two orders, in the sense the pre-registration defined before the runs, at every size tried. The mean wait does not fall with N (recorded, not predicted; it refutes homogeneous per-site nucleation and was already known from Update 9).
+
+  **The verdict is withheld by the letter, because gate 3 fails — and gate 3 found something.** The energy released was to be within 1 % of 4(λ − 1). With a fixed 300-sweep settle, half the decays read 0.5 to 0.9. Followed for 6,000 sweeps, half release 1.00 at once and half release **0.78, sit on that value, and then release the rest in a single step** — the same 0.78 every time, a specific defected sheet, a second metastable state which itself switches sharply. With the settle run until the energy stops changing (T7 amendment 1), 16 to 21 of 30 decays at each size pause on that ledge for 600 to 27,000 sweeps, and a few are still on it at the 30,000-sweep cap. **The ledge outlives the tube.** So the tube → sheet change is two sharp steps with two memoryless waits, releasing 0.78 and then 0.22 of the lump. Gate 3, as written, asks every decay to complete both steps inside the run, which no finite run can guarantee; proposed amendment 2 checks the energy exactly at whichever state the decay has reached. Emily's call; if adopted, λ = 1.25 is TWO-STATE CHANGE.
+
+  **λ = 1.5 is the unstable case, not the metastable one.** φ = 0.95 by sweep 50 in every replica, as in the design-track pilot. No waiting time (CV = 0 by construction), 25 to 30 % of vertices at neither the tube nor the sheet value at half conversion, and the converted region in 8 pieces at N = 192. The tube there is past its spinodal: it does not switch, it falls apart everywhere at once. The pre-registration listed λ = 1.5 assuming a long-lived tube; the metastable window at g = 1.5 lies below 1.5, and where in 1 < λ < 1.5 it closes is a measurement for T8.
+
+  **Against the claims, plainly.** Claim 4 says the change from X to space was sharp and released a lump. In this family the change from *disorder* to space is not sharp (T6, and the published work). The change from *one order* to space — the tube uncurling — is sharp in every way the pre-registration asked: it waits, it starts somewhere, it sweeps across as a front with the two orders coexisting on either side, and it releases a definite energy. Then it does it again. That is the mechanism the right way round, in the published model, with no new ingredient — at one λ, one temperature, in two dimensions, with a stand-in for X that is a curled sheet and nothing more.
+
+  **Not claimed.** That X is a tube. Anything about the universe. The word "first order" in the thermodynamic sense (this is a decay at fixed temperature; the pre-registration defined "sharp" for that case and the data meet that definition). Where the metastable window in λ ends. What the ledge state is, structurally — only that it is one state, at 0.78, every time. What happens in a sealed box (T8).
+
+- **O14 T9: the sealed tube is a bonfire with a threshold; no slush; the leftover is one ring — at every size.** (2026-09-22. `t9_n{64,96,192}_C*`, 21 configs, 420 runs; `scripts/analyse_t9.py`; PREREGISTRATION T9, no amendments.)
+
+  **The verdict as written: BONFIRE WITH A THRESHOLD.** Every run converted (the spark is still the spark, gate 2), energy conserved to the last unit in all 420 (gate 1), twenty replicas each (gate 3).
+
+  | N | C = 1 … N/16 … N/8 | N/4 | N/2 | N | 2N |
+  |---|---|---|---|---|---|
+  | 64 | melted 17, 17, 12 of 20 | 3 sheet / 4 melted / 13 neither | 18 sheet | 20 sheet | 20 sheet |
+  | 96 | melted 18, 18, 9 | 1 / 2 / 17 | 19 sheet | 19 sheet | 20 sheet |
+  | 192 | melted 20, 19, 16 | 0 / 2 / 18 | 19 sheet | 20 sheet | 20 sheet |
+
+  **(a) holds.** First majority-sheet C = N/2 and last majority-melted C ≤ N/8 at every size; C*/N is 0.5, 0.5, 0.5 on the grid, so it scales with N. The predicted N/3.5 lies inside the interval (N/4, N/2] at every size; the grid is too coarse to place it more finely. At C = N/4 the product is mostly "neither" — partly melted or not fully converted — at all three sizes: the crossover is a band, not a line. **(b) holds:** not one run in 420 halted with tube and sheet both present, the bath below g_melt and nothing melting. The tube has no coexistence temperature with the sheet, as argued. **(c) holds:** a ring in 83 to 100 % of sheets at C ≥ N/2.
+
+  **The ring count, read after T10 was committed and launched** (commit 8398209 for the pre-registration, 09:38 for the launch; these counts read at 09:45). This is T9's observable 3, not a T10 result, and it is disclosed here because it bears on T10's prediction (a):
+
+  | N | rings per sheet at C = 2N (20 runs) | at C = N | excess energy per ring |
+  |---|---|---|---|
+  | 64 | 0 ×1, 1 ×18, 2 ×1 | 1 ×20 | 13.8, 14.0 |
+  | 96 | 0 ×1, 1 ×19 | 0 ×3, 1 ×15, 2 ×2 | 14.0, 16.3 |
+  | 192 | 0 ×1, 1 ×19 | 0 ×1, 1 ×15, 2 ×4 | 14.3, 14.4 |
+
+  **One ring, however large the tube.** In the coldest box the count is 1 in 18 or 19 of 20 sheets at 64, 96 and 192 alike, and the excess energy is 14 per ring — additive, as T10 (b) predicts. **So T10's prediction (a), that the count grows with N, is very likely to fail**, and by T10's own verdict table the outcome would be ONE RING, HOWEVER LARGE. The prediction stays as committed; T10 runs on fresh seeds and its verdict is whatever it returns. Recorded before it finishes so that it cannot be read as a surprise afterwards. If it returns that verdict, claim 5's leftover in this model is a single defect, negligible at scale, and the claim is back to bookkeeping — VISION Update 13 says so in advance.
+
+  **Why one?** *Ours, unverified, and a follow-up worth pre-registering.* The tube is periodic. The front starts at one place (O13: anywhere, nucleus two rings) and spreads both ways; the two ends meet on the far side. A seam where two fronts meet is one place per tube whatever its length, and a ring that neither front uncurled is what a seam would leave. If that is the mechanism, the leftover ring sits at the antipode of the nucleation site, and the count is 1 by topology, 0 when the seam closes cleanly, 2 rarely. Testable with the departure positions `diagnose_ledge_and_start.py` already records plus the ring's position, at N = 64 in minutes. At warmer baths (C ≤ N/2) the count rises to 1–3 and pieces larger than a ring appear: thermal defects on top of the seam, not the front's doing.
+
+  **Not claimed.** T10's verdict. What C means beyond "how many other places the energy can go". The seam mechanism. Anything at λ ≠ 1.25.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

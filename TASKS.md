@@ -4,6 +4,8 @@ Each task has an acceptance test. Do them in order; do not start a task whose pr
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).
 
+**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads.
+
 ## T1. Rectangular torus  ☑ (2026-09-19)
 
 `torus(side)` only builds L×L. Add `torus(lx, ly)` (both even). Needed because the published curve is at N = 160 (e.g. 16×10).
