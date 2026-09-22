@@ -30,8 +30,8 @@ per point above the flat sheet at λ > 1, metastable at λ = 1.25 and g = 1.5, u
 | Test | Question | Verdict | Where |
 |---|---|---|---|
 | T6, λ = 0 (control) | Is the penalty-off transition first order? | **FIRST ORDER** under amendment 4 (Emily's) — lump 12.5/pt, barrier +34σ with size | O11 + addendum |
-| T6, λ ≥ 1 | Out of the random phase, with the rule on? | One hump at 36/64/100; any lump < 1.3/pt and shrinking; **no verdict yet** (gate 4 failed by diffusion; `t6c_*` reruns going) | O12 |
-| T7, λ = 1.25 | Is the tube → sheet change sharp? | All three predictions hold at 4 sizes × 2 seed sets. **Verdict withheld**: gate 3 fails on 14 of 240 decays that had not settled at the 30,000-sweep cap. **Amendment 3 proposed, Emily deciding** | O13 + addendum |
+| T6, λ ≥ 1 | Out of the random phase, with the rule on? | Reruns done, gate 4 met (46–400 trips). One hump at every λ/size/replica in the transition window; any lump < 1.3/pt at N = 100 and shrinking. **INCONCLUSIVE by the letter**: criterion 3 (Binder energy cumulant) cannot be read where the cold phase sits at H = 0. **T6 amendment 5 proposed, Emily deciding** | O12, O17 |
+| T7, λ = 1.25 | Is the tube → sheet change sharp? | All three predictions hold at 4 sizes × 2 seed sets. **Verdict withheld**: after the replays (amendment 3, enacted), 12 of 240 decays rest on states that are neither the sheet nor the four-point remnant (6 unchanged over 70,000 extra sweeps). **T7 amendment 4 proposed (read the states from the graph), Emily deciding** | O13 + two addenda |
 | T9 | Sealed tube: bonfire or slush? | **BONFIRE WITH A THRESHOLD** at 64/96/192; no stall in 420 runs; crossover ∈ (N/4, N/2], predicted N/3.5 inside | O14 |
 | T10 | Does the leftover grow with the space? | **ONE RING, HOWEVER LARGE** (0.9–1.05 per box at 64–288). Claim 5 is bookkeeping in this model | O15 |
 | T11 | Is the one leftover a seam where the front's ends meet? | **NEITHER** — position uniform. Why exactly one: **open** | O16 |
@@ -55,21 +55,24 @@ threshold; the leftover is one small defect however big the space.
 - The early-universe changes (electroweak, QCD) are **crossovers**; freeze-out is **not** a phase transition — it
   is a precedent for claim 6 (accounting), not claim 4 (sharpness). A reader corrected this on the page.
 
-## 4. The last decision, made: T7 amendment 3, option (i)
+## 4. Two decisions open for Emily (explain them if she has not answered)
 
-Under amendment 2 (enacted), every decay that *settled* passes gate 3; 14 of 240 were cut off by the
-30,000-sweep settle cap while still moving. Emily chose **(i)**: replay those 14 from their seeds with the cap
-at 100,000 and apply the gate as it stands (PREREGISTRATION T7 amendment 3, enacted wording). Configs
-`configs/t7c_lam125_n{64,96,144,192a,192b}.json` (`replica_ids` names the replicas; `run_tube_decay.py`
-honours it); results land as `results/t7c_lam125_n*.csv`. **When they are in:**
-`python scripts/analyse_t7.py lam125 t7b t7c` — it swaps the replays into the t7b table, rejects any replay whose
-`waiting`/`released_first_window` differ from the original (not the same decay), and prints the verdict. Record
-the outcome as an O13 addendum and in VISION Update 14. If some replays still hit 100,000, they fail the gate as
-written; option (ii) would then be a new proposal for Emily, not something to enact.
+- **T7 amendment 4.** The replays (amendment 3, done: `results/t7c_lam125_n*.csv`, `python scripts/analyse_t7.py lam125 t7b t7c`)
+  showed 12 of 240 decays resting on states that are neither the sheet nor the four-point remnant, energies 8–45
+  units. Gate 3's list of allowed final states was an assumption. Options: **(a)** replay the twelve once more with
+  the final adjacency saved, read each state from the graph, and pass gate 3 when the released energy equals the
+  exact energy of the structure read (recommended); **(b)** gate only decays that reached the full release and
+  report the rest. Note: a decay with `settle_sweeps` = cap did *not* "keep moving" — amendment 1's settle loop
+  terminates only at the full release, so any ledge runs to the cap. Do not repeat that misreading (O13, second addendum).
+- **T6 amendment 5.** At λ ≥ 1 the cold phase is the sheet at H = 0, and the Binder *energy* cumulant collapses
+  there (it is not shift-invariant), so criterion 3 cannot be read and the verdict is INCONCLUSIVE by the letter.
+  Options: **(a)** use the fourth-order cumulant of φ instead, computed from the `t6c` files as they stand
+  (recommended); **(b)** declare criterion 3 uninformative at λ ≥ 1 and issue the verdict on criteria 1–2 with the
+  bound. Expected outcome under either: NO EVIDENCE OF FIRST ORDER AT THESE SIZES.
 
 ## 5. What is running or queued
 
-- **T7 replays** (five jobs, N = 192 slowest: up to 100,000 settle sweeps per decay, hours). See section 4.
+- Nothing. All runs of 22 September are complete and committed.
 
 - `t6c_lam{1,125,15}_n{64,100}` (six jobs, slow): T6 λ ≥ 1 reruns with a trimmed 14-rung ladder. When
   `results/t6c_*.csv` exist (no `.partial`), run `python scripts/analyse_t6_phi.py t6c_lam1_n64` etc. If gate 4

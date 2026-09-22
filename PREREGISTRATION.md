@@ -131,6 +131,16 @@ The value a first-order transition predicts for the Binder minimum is not 2/3. F
 
 **Enacted wording (the author's choice among the options put to her, 22 September 2026).** Criterion 3: the Binder minimum lies below 2/3 at every size; at the largest size it lies within 0.05 of the two-spike prediction computed from that size's measured phase energies; and the gap between prediction and measurement shrinks with N. The prediction has no free parameter. The tolerance in the proposed wording above was 0.03; the measured gap at N = 96 is 0.019, so the case is decided the same way under either, and the choice of tolerance is not what decides it. `scripts/analyse_wl_lam0.py` implements this wording.
 
+#### Verdict at λ = 1, 1.25 and 1.5 under the rules above, 22 September 2026: INCONCLUSIVE
+
+Reruns with a trimmed ladder meet gate 4 everywhere (46 to 400 round trips per replica). In the region where φ changes there is one hump at every λ, size and replica; the largest latent heat that could hide in it is below 1.30, 1.28 and 1.26 per point at N = 100 and falling with size, against 12.5 measured at λ = 0 (the falsification clause's required output). Criteria 1 and 2 therefore come out in the direction of "no evidence". **Criterion 3 cannot be evaluated:** the Binder energy cumulant depends on where the energy zero sits, and at λ ≥ 1 the cold phase is the flat sheet at exactly zero energy, where the cumulant collapses whatever the shape of the distribution (`ASSUMPTIONS.md` O17). The rules make a criterion that cannot be read INCONCLUSIVE, and say it is not to be resolved afterwards by changing the rule. It is not.
+
+#### PROPOSED amendment 5 — not enacted; Emily's decision — criterion 3 at λ ≥ 1 needs a statistic that does not depend on the energy zero
+
+**Status: written after the λ ≥ 1 verdict above, and it would change how that verdict is read. Stated first so it cannot be missed.**
+
+At λ = 0 both phases sit far from zero energy and the Binder energy cumulant behaves; at λ ≥ 1 the cold phase *is* the zero, and the cumulant is undefined in effect. Two options: **(a)** criterion 3 at λ ≥ 1 uses the fourth-order cumulant of φ, the order parameter, which does not move when the energy zero does — computed from the `t6c` files as they are, and the verdict re-read (expected: NO EVIDENCE OF FIRST ORDER AT THESE SIZES, if the φ-cumulant minimum approaches 2/3 with size, as its energy cousin appears to in the transition window); **(b)** criterion 3 is declared uninformative at λ ≥ 1, and the verdict rests on criteria 1 and 2 with the bound. Either is honest. What is not honest is issuing a verdict at λ ≥ 1 under a criterion that cannot be read, in either direction.
+
 ---
 
 ## T7. Is the change from one order to another sharp? The tube → sheet decay
@@ -222,6 +232,19 @@ Amendment 1 set a settle cap of 30,000 sweeps and did not say what gate 3 makes 
 Either is honest; leaving the gate to fail on decays that never settled is a statement about the cap, not about the change.
 
 **Enacted wording (option (i), the author's choice, 22 September 2026).** The fourteen decays of `t7b_lam125_n*` that reached the 30,000-sweep settle cap — N = 64: replicas 1, 25; N = 96: 3, 10, 20, 23; N = 144: 3, 5; N = 192: 3, 5, 8, 10, 20, 22 — are replayed from the same configuration seeds (20261057, 20261065, 20261077, 20261089), the same replica indices and the same code path, with `settle_max` raised from 30,000 to 100,000 sweeps and nothing else changed; results under `t7c_lam125_n*` (`replica_ids` in the config names the replicas). **Reproducibility gate:** a replay must reproduce its original decay up to the old cap — identical `waiting` and identical `released_first_window` — or it is not the same decay, is left out of the table and is reported. **The verdict** is then gate 3 exactly as enacted in amendment 2, applied to the t7b table with those fourteen rows replaced by their replays (`scripts/analyse_t7.py lam125 t7b t7c`). A replay that has still not settled at 100,000 sweeps fails the gate as written and is reported; option (ii) is not enacted by this amendment.
+
+**Outcome (same day, 10:42).** All fourteen replays reproduced their originals; two finished to the sheet (N = 64 replica 1 at 44,400 sweeps; N = 192 replica 10 at 84,600); twelve reached 100,000, six of them with their released energy unchanged to the last digit since 30,000. Gate 3 fails at every size as written; the verdict stays withheld. Details: `ASSUMPTIONS.md` O13, second addendum, which also corrects an earlier inference — a decay at the cap is one that did not reach the full release, not necessarily one still moving, because amendment 1's settle loop terminates only at the full release.
+
+#### PROPOSED amendment 4 — not enacted; Emily's decision — identify the resting states instead of assuming them
+
+**Status: written after the outcome of amendment 3, before any further run.**
+
+Gate 3's list of final states that count (the sheet; one four-point remnant) was an assumption, and twelve decays rest on states outside it, with retained energies from 8 to 45 units. Two options:
+
+- **(a) Identify, then check.** Replay the twelve from their seeds once more, with the final adjacency saved (`results/t7d_*` plus a small `.npz` per decay); read each resting state — local-dimension histogram, connected pieces at d ≠ 2, extra squares, surplus edges — and pass gate 3 for a decay exactly when its released energy equals the exact energy of the structure read, to within the same 1 %. Nothing is assumed about which structures occur; each is named from the graph and its energy computed from its wiring. A decay whose energy does not match its own read structure fails.
+- **(b) Option (ii) of amendment 3:** gate 3 applies only to decays that reached the full release; the number that did not is reported per size and must be fewer than half. Weaker: it leaves the twelve unread.
+
+Recommended: (a). Either way the three predictions, which concern the first switch, are unaffected.
 
 **Why proposed rather than made.** It changes a gate after the data it judges were seen. What makes it defensible: the three predictions are met at every size on both the first run and the rerun with fresh seeds, and the change concerns only which decays are admitted, not what is measured on them; and the thing it admits — a decay resting on a second sharp step — is more of what claim 4 describes, not less. **If adopted:** the λ = 1.25 verdict is TWO-STATE CHANGE. **If not:** the verdict is withheld and the three predictions are reported as met with the gate outstanding.
 
