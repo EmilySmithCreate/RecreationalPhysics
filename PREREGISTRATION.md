@@ -129,8 +129,175 @@ The value a first-order transition predicts for the Binder minimum is not 2/3. F
 
 ---
 
-## T7. The λ map
+## T7. Is the change from one order to another sharp? The tube → sheet decay
 
-To be written before T8 runs. It may reuse the criteria above, and if it does it will say so explicitly rather than restating them.
+**Written 2026-09-22, before any run under it.** The existing traces in `results/cqg_tube_waiting_lam125.csv` were recorded for a different question (how long the wait is) and have been looked at only as means; their *shape* has not been examined and the predictions below are made before it is.
+
+### Why this and not T6
+
+T6 asked whether the change from the model's disordered phase to a geometry is sharp. It is not, at any setting where the cold state is a sheet, and the published work agrees. But the hypothesis under test was never about the disordered phase. Claim 3 says X is an *arrangement* — with its own degrees of freedom and its own order — and claim 4 says the change from that arrangement to space was sharp and released a lump. That is a change from one order to another, and T6 did not test it. This does.
+
+The published family contains such a change with no new ingredient. For λ > 1 a torus with one side curled to length 4 — the tube, one large dimension and one curled — sits above the flat sheet by exactly 4(λ − 1) per point and is long-lived (thousands of sweeps at g = 1.5), and then uncurls into the sheet, releasing exactly that energy (VISION Update 9; the design brief). The tube is a stand-in for X: an arrangement, more symmetric than the sheet in the sense that one direction has been identified with itself, higher in energy, metastable. The sheet is space. **The question is whether the change between them is sharp in the sense claim 4 needs.**
+
+### What "sharp" means when there is no temperature to sweep
+
+A metastable state decays at fixed temperature, so the T6 machinery (two humps in a histogram over a coupling scan) does not apply. For an order → order change, "first order" means: the two arrangements are distinct states; the change begins at a place and spreads, with old and new order coexisting across an interface while it happens; and the energy comes out as the interface moves. "Continuous" means the whole system deforms smoothly through intermediate arrangements, everywhere at once, with no coexistence. These are distinguishable by looking at the system *while it changes*, which the existing runs never did — they recorded only φ.
+
+### The observables
+
+A vertex has four edges and six pairs of edges. Each pair that closes no square is a direction that stays large; the count is the vertex's **local dimension** d(v): 2 on the sheet, 1 on the tube, 0 in a cube (`test_sheet_tube_cube_ladder`; to be extended to a per-vertex function and validated on those three exact states before use).
+
+1. **Waiting-time distribution.** The time from the start until the decay begins, over many independent replicas. A change that starts by a rare local event is memoryless: the waiting times are exponentially distributed, with standard deviation equal to the mean (coefficient of variation ≈ 1). A smooth deformation has a characteristic time and a narrow distribution (CV ≪ 1).
+2. **Coexistence.** At the moment the system is half converted (φ halfway between the tube's and the sheet's), the histogram of d(v) over vertices. Two-state: most vertices at d = 1 or d = 2 and few in between. Continuous: mass in the intermediate values, or a single hump that has moved.
+3. **Where the new order is.** At quarter, half and three-quarter conversion, the vertices with d(v) = 2 as a set: how many connected pieces, and the largest piece's share. A front: one piece holding most of it. Everywhere at once: many pieces, none dominant.
+4. **The lump.** Energy released per point, against the exact 4(λ − 1). A check, not a question.
+
+### What will be run
+
+Tubes 16×4, 24×4, 36×4, 48×4 (N = 64, 96, 144, 192), λ = 1.25 and 1.5, g = 1.5, starting from the exact tube, Metropolis, independent seeds; at least 30 decays per (size, λ). During each run, when φ first crosses 25 %, 50 % and 75 % of the way from the tube's value to the sheet's, the adjacency is snapshotted and d(v) computed for every vertex. The waiting time is the sweep at which φ first leaves the tube's value by more than the run's own resting fluctuation (defined as three times the standard deviation of φ over the first 200 sweeps, before any decay).
+
+### Predictions, written before looking
+
+*Ours, unverified.* If claim 4's mechanism is what the tube shows: (a) CV of the waiting time between 0.7 and 1.3 at every size; (b) at half conversion, at least 80 % of vertices at d ∈ {1, 2}; (c) at half conversion, the largest connected d = 2 piece holds at least 70 % of the converted vertices. Recorded and not predicted: how the mean waiting time scales with N (the earlier 1/N prediction was refuted at 2.9σ, Update 9).
+
+### Gates
+
+1. d(v) reproduces 2 / 1 / 0 on the exact sheet, tube and 4-cube, every vertex.
+2. At least 30 decays per (size, λ) that reached 75 % conversion within the run.
+3. The released energy per point within 1 % of 4(λ − 1) in every decay counted.
+
+### Verdicts
+
+- **TWO-STATE CHANGE** — (a), (b) and (c) all hold at every size run. This is what a first-order order → order change looks like, and it is the shape claim 4 needs.
+- **CONTINUOUS DEFORMATION** — CV < 0.4 at every size, and fewer than 50 % of vertices at d ∈ {1, 2} at half conversion. The tube does not *switch* to the sheet; it slides. Claim 4's "sharp" fails in this family at the one order → order change it contains.
+- **INCONCLUSIVE** — anything else. As in T6, not to be resolved by adjusting thresholds afterwards.
+
+### What this cannot show
+
+That X *is* a tube, or that the universe did this. That a lump large enough for claim 4 exists — 4(λ − 1) is a model constant. Anything about a sealed system: that is T8, the bonfire-or-slush question, which needs its own pre-registration and this result first.
+
+### Amendments
+
+#### Amendment 1, 22 September 2026 — how long to wait before reading the released energy
+
+**Status: written after the first runs (`t7_lam125_n*`, `t7_lam15_n*`) and before the rerun (`t7b_lam125_n*`). The first runs stand and are reported.**
+
+**What went wrong.** The section above did not say how long to wait after conversion before reading the final energy; the runner waited a fixed 300 sweeps. Gate 3 then failed on every decay at both λ. Eight decays followed for 6,000 sweeps show why: about half release the full 4(λ − 1) at once, and the other half release **0.78 of it, sit on that value for hundreds to thousands of sweeps, and then release the rest in one step**. The same 0.78 every time — a specific defected sheet, a second metastable state on the way down, which then also switches sharply. A 300-sweep read catches the system on that ledge. Read after 6,000 sweeps, all eight give 1.00.
+
+**What changes.** The final energy is read in windows of 600 sweeps and accepted when two consecutive windows agree to 0.5 % of 4(λ − 1) and the value is within gate 3's 1 % of it, up to a cap of 30,000 sweeps. The release after the first window and the length of any ledge are recorded with every decay, since the ledge is itself the kind of sharp step claim 4 describes and should not be thrown away by the protocol that was blind to it. Gate 3 is unchanged; only the point at which it is applied is fixed.
+
+**What is not changed.** The three observables, the three predictions and the verdicts. Gate 3 as a criterion.
+
+#### PROPOSED amendment 2 — not enacted; Emily's decision — gate 3 asks the wrong question
+
+**Written after the rerun `t7b_lam125_n*`, which it would change the verdict of. Stated first.**
+
+Under amendment 1 the settle runs until the released energy has stopped changing, up to 30,000 sweeps. Gate 3 still fails at every size: 16 to 21 of 30 decays pause on the ledge at 0.76 to 0.87 of the full release, and a few are still there at the cap, having sat on it for 21,000 to 27,000 sweeps. **The ledge is longer-lived than the tube** (which waits 700 to 900 sweeps). No finite settle can make every decay finish, because the second step has its own long, apparently memoryless wait.
+
+Gate 3 was written as an energy-conservation check: is the lump the known 4(λ − 1)? The answer is yes — every decay that completes its second step releases 1.00 to within 1 %, and every decay on the ledge releases the ledge's own value, the same 0.78 each time. What gate 3 actually tests, as written, is whether every decay completes *both* steps inside the run, which is a question about the ledge's lifetime and not about the lump.
+
+**Proposed wording.** Gate 3: every counted decay's released energy, at the end of the settle, is within 1 % of *either* 4(λ − 1) *or* the ledge value (the modal first-window release across decays at that size). Energy is thereby checked exactly at whichever state the decay has reached. Decays on the ledge are counted for predictions (a), (b) and (c), which concern the first switch and are measured at half conversion, before the ledge is reached.
+
+**Why proposed rather than made.** It changes a gate after the data it judges were seen. What makes it defensible: the three predictions are met at every size on both the first run and the rerun with fresh seeds, and the change concerns only which decays are admitted, not what is measured on them; and the thing it admits — a decay resting on a second sharp step — is more of what claim 4 describes, not less. **If adopted:** the λ = 1.25 verdict is TWO-STATE CHANGE. **If not:** the verdict is withheld and the three predictions are reported as met with the gate outstanding.
+
+**Recorded, and not a change to anything:** at λ = 1.5 the tube is not metastable at g = 1.5 — it is at φ = 0.95 by sweep 50 in every replica, as it was in the design-track pilot at g = 1.0. There is no waiting time to measure and no switch to see. The section above listed λ = 1.5 assuming a long-lived tube there, and it is not one. Those runs are reported as what they are: the unstable case, which the verdict language was not written for and to which no verdict is applied.
+
+---
+
+## T8. The λ map (formerly T7)
+
+To be written before it runs. It may reuse the criteria above, and if it does it will say so explicitly rather than restating them.
+
+---
+
+## T9. Bonfire or slush: the tube in a sealed box
+
+**Written 2026-09-22, after T7 and before any sealed run of a tube.** The only sealed runs so far (Update 9) established that a tube with an empty demon never converts and that the spark costs exactly 12 units; none followed a conversion.
+
+### The question
+
+Every T7 run was at fixed temperature: an unlimited bath carried the lump away the instant it appeared. Claims 4 and 5 are about what happens when it cannot. The author's three cases (design brief): wide open, semi-permeable, sealed. In a sealed system the energy a converting region releases stays, and either feeds the change onward — a bonfire — or heats the rest until it stops — the slush of supercooled water — or does something else. T7 says the change is a front releasing 4(λ − 1) per point as it goes; this asks what that front does to its own surroundings.
+
+### The knob that has to be declared, and why
+
+The Creutz demon of `sealed.py` is one number. Its temperature is its mean energy, so a tube releasing N × 4(λ − 1) units into one demon reaches g ≈ N × 4(λ − 1) — 64 at N = 64, λ = 1.25 — against a sheet that melts near g ≈ 3 to 4. A one-demon box cannot hold the lump at any size; the outcome would be set by the bookkeeping and not by the physics. **So the bath has a capacity, C: C demons, each move paying or receiving from one chosen at random.** Energy is still conserved exactly and the demons' mean energy still reads the temperature; C sets how much the temperature rises per unit released, 1/C. This is a modelling choice — how many other degrees of freedom the released energy can go into — and it is the knob of this experiment. It is stated here before a run and it will be scanned, not tuned.
+
+### What will be run
+
+Tubes 16×4, 24×4, 48×4 (N = 64, 96, 192), λ = 1.25, sealed (leak = 0). One demon starts with the spark, 12 units; the rest start empty. C ∈ {1, N/16, N/8, N/4, N/2, N, 2N}. Twenty replicas per (N, C), 30,000 sweeps. Recorded every 25 sweeps: φ, X, the mean demon energy (the bath temperature), and at the end the local-dimension histogram and the pieces of the vertices at each d.
+
+### Observables
+
+1. **Conversion fraction at the end**, f = (φ_tube − φ)/(φ_tube − φ_sheet), and its time course.
+2. **Bath temperature**, the mean demon energy, against conversion fraction.
+3. **What the product is**, from the final local-dimension histogram: sheet (d = 2 nearly everywhere), sheet with leftover rings (a few clusters at d = 1, as in T7's ledge), tube (d = 1), or melted (mass at d ≥ 3 and at 0).
+4. **Energy bookkeeping**: H + Σ demons constant to the last unit, every sweep. A gate, not an observable.
+
+### Predictions, written before looking
+
+*Ours, unverified.* Let g_melt be the coupling at which the λ = 1.25 sheet's φ has fallen to 0.9 on the equilibrium curve — about 3.5 at N = 64 (`cqg_n64_lam125_tempering`). The bath reaches temperature (12 + f N · 4(λ − 1)) / C when a fraction f has converted.
+
+- (a) **A crossover in C, at C* ≈ N · 4(λ − 1) / g_melt** (about N/3.5). For C well above C*, the bath never reaches g_melt: conversion completes and the product is a sheet — bonfire. For C well below C*, the bath passes g_melt while conversion is under way: the converted part melts and the product is disordered — boil-off, not slush. The predicted C* grows in proportion to N.
+- (b) **No supercooled-water stall.** In water the released heat brings the mixture to the temperature where ice and liquid have equal free energy, and the change stops there with both present. That needs a coexistence temperature. The tube is above the sheet in energy at every g and, being the more symmetric arrangement, has no more configurational entropy, so I predict no coupling at which the two have equal free energy and therefore no run in which conversion halts with tube and sheet both present, the bath warm but below g_melt, and nothing melting. If such runs occur, prediction (b) fails and the tube has a coexistence temperature I have argued it cannot.
+- (c) **Leftover rings survive the bonfire.** For C above C*, T7's ledge — one or two rings of the tube left behind — should appear in the sealed product at about the rate it does at fixed temperature, since the front is the same front.
+
+### Gates
+
+1. Energy conservation exact in every run.
+2. With C = 1 and the spark, the tube converts at least once (so the spark is still the spark).
+3. Twenty replicas per (N, C).
+
+### Verdicts
+
+- **BONFIRE WITH A THRESHOLD** — (a) holds: complete conversion to a sheet above a C* that scales with N, boil-off below it; and (b) holds.
+- **SLUSH** — a band of C in which conversion halts partway with tube and sheet both present, the bath below g_melt, stable to the end of the run, at every size. Prediction (b) fails; claim 5's mechanism is thermodynamic, not kinetic.
+- **INCONCLUSIVE** — anything else, including a crossover that does not scale with N.
+
+### What this cannot show
+
+Whether the universe had a bath. What C means physically beyond "how many other places the energy can go". Anything at λ ≠ 1.25 or off the tube.
+
+## T10. Does the leftover grow with the space? Leftover rings in a cold sealed box
+
+**Written 2026-09-22, while T9 runs and before any run of this design.** It is the test VISION S2′ names as the unmet, falsifiable part. **Disclosure of what had been seen when it was written:** T9's N = 64 and N = 96 tables (every C) and the verdict they give; in those, the sheets at C ≥ N/2 hold a leftover ring in 83 to 100 % of replicas, and the number of rings per sheet had not been read. T7b's ledges at N = 144 and 192 sit at released fractions consistent with one to three rings (0.77 to 0.90, where one ring is 0.90 to 0.93). No N = 192 sealed end state had been read. This section adds nothing to T9's verdict items.
+
+### The question
+
+Claim 5 says what did not convert accounts for the rest of the books. If the leftover in a cold sealed box is one ring however large the tube, it is a single defect, negligible at scale, and claim 5 is bookkeeping (VISION Update 10's worry, back again). If it grows in proportion to the space — a density — claim 5 is a statement about the universe's contents. At C = 2N the bath ends near g ≈ 0.5, far below the temperature at which a ring can climb out (at g = 1.5 the ledge lasts 600 to 27,000 sweeps; O13), so whatever the front leaves behind is frozen and the count is the front's own doing: a rate per length swept, or a one-off.
+
+### What will be run
+
+Tubes 16×4, 24×4, 48×4, 72×4 (N = 64, 96, 192, 288), λ = 1.25, sealed, spark 12, **C = 2N**, twenty replicas, 30,000 sweeps, a fresh seed (not T9's). `scripts/run_sealed_tube.py`, unchanged; the same observables as T9.
+
+### Observables
+
+1. **Rings**: the number of connected pieces of vertices at d = 1 in the final state, and the size of the largest.
+2. **Excess energy** of the final state over the perfect sheet, H − 0, in units.
+3. **Conversion fraction** over the last 3,000 sweeps.
+4. Energy bookkeeping, exact. A gate.
+
+### Predictions, written before looking
+
+*Ours, unverified.*
+
+- (a) **The leftover grows with the space.** The mean number of rings rises with N: a straight line through the four means has positive slope at more than three standard errors, and the mean at N = 288 exceeds the mean at N = 64 by more than the replica scatter at either size.
+- (b) **Rings are additive.** Excess energy = 14 units per ring when the rings are separate pieces of four. For this energy, which is a sum over edges, two rings sharing no edge contribute independently, so this is a check that "ring" is being read correctly, not a physics prediction. Pieces of eight (two rings adjacent) are recorded, not predicted.
+- (c) **Nothing leaves.** The conversion fraction changes by less than 14/N (one ring's worth) over the last 3,000 sweeps in every replica, and the bath ends below g = 1 at every N.
+
+### Gates
+
+1. Energy conservation exact in every run.
+2. Twenty replicas per N.
+3. Every replica converts (f_final ≥ 0.9). Update 9 found the 12-unit spark sufficient at every size to 192; N = 288 is new. A size at which the spark fails is reported and excluded, and the verdict is then over the sizes that converted, with that said.
+
+### Verdicts
+
+- **THE LEFTOVER GROWS WITH THE SPACE** — (a) and (c) hold.
+- **ONE RING, HOWEVER LARGE** — the mean count is within the replica scatter of 1 at every size and the slope is not positive at three standard errors; (c) holds.
+- **INCONCLUSIVE** — anything else, including (c) failing (rings leaving within the run, so the count is not the front's).
+
+### What this cannot show
+
+Anything at other C, where the bath is warm enough for rings to come and go and the leftover is thermal rather than kinetic; that is a different question with a different prediction and is not run here. What a ring is for the universe. Whether rings attract one another: (b) reads separated rings, and pieces of eight are only counted.
 
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.
