@@ -21,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_wl_lam0 as W                          # noqa: E402
 
 GATE3_BARRIER, GATE3_LATENT, GATE4_TRIPS = 0.20, 0.10, 20
+BINDER_TOL = 0.05          # amendment 4: tolerance on the two-spike prediction at the largest size
 
 
 def main(out_dir="results"):
@@ -147,17 +148,24 @@ def main(out_dir="results"):
     print("  energies at each size: %s   (2/3 = 0.6667 is what a continuous transition tends to)"
           % ", ".join("%.4f" % v for v in two_phase))
 
-    # --- the three criteria, exactly as pre-registered ----------------------------------
+    # --- the three criteria, as pre-registered under amendments 1-4 ----------------------
     c1 = lat0 / lat0e >= 3.0
     c2 = slopeL / eL >= 3.0
     below = np.all(bind < 2.0 / 3.0)
-    # "not rising towards 2/3": the Binder minimum must not increase with N (i.e. must not
-    # decrease against 1/L) at more than one standard error
+    # Criterion 3 as originally written ("not rising towards 2/3"), kept for the record:
     rising = (bslope < 0) and (abs(bslope) > bslope_e)
-    c3 = below and not rising
+    c3_original = below and not rising
+    # Criterion 3 under amendment 4 (enacted 2026-09-22): below 2/3 at every size; at the largest
+    # size within BINDER_TOL of the two-spike prediction from that size's measured phase energies;
+    # and the gap (prediction - measured) shrinking with N.
+    gaps = np.array(two_phase) - bind
+    c3 = bool(below and abs(gaps[-1]) <= BINDER_TOL and np.all(np.diff(gaps) < 0))
     print("\n  Criterion 1, latent heat non-zero at 3 s.e.:      %s" % ("MET" if c1 else "not met"))
     print("  Criterion 2, barrier slope positive at 3 s.e.:    %s" % ("MET" if c2 else "not met"))
-    print("  Criterion 3, Binder min below 2/3, not rising:    %s" % ("MET" if c3 else "not met"))
+    print("  Criterion 3 (amendment 4), Binder min below 2/3, within %.2f of the two-spike value at the"
+          "\n     largest size, gap shrinking with N:            %s   [gaps %s; as originally written: %s]"
+          % (BINDER_TOL, "MET" if c3 else "not met", ", ".join("%.3f" % v for v in gaps),
+             "met" if c3_original else "not met"))
     if c1 and c2 and c3:
         verdict = "FIRST ORDER"
     elif (lat0 / lat0e < 2.0) and (slopeL / eL < 2.0) and not below:

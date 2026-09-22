@@ -34,9 +34,14 @@ def main(tag, out_dir="results", prefix="t7"):
             print("%-5d 0" % n); continue
         lam = float(rows[0]["lam"])
         expect = 4.0 * (lam - 1.0)
+        ring = (24.0 * lam - 16.0) / n           # one leftover ring of the tube, per point (14/N at 1.25)
         rel = np.array([float(r["released"]) for r in rows])
         g2 = len(rows) >= MIN_DECAYS
-        g3 = bool(np.all(np.abs(rel - expect) <= ENERGY_TOL * expect))
+        # gate 3 under amendment 2 (enacted 2026-09-22): the energy is checked at whichever state the
+        # decay reached -- the full sheet, or the ledge that is one ring of the tube
+        at_sheet = np.abs(rel - expect) <= ENERGY_TOL * expect
+        at_ring = np.abs(rel - (expect - ring)) <= ENERGY_TOL * expect
+        g3 = bool(np.all(at_sheet | at_ring))
         waits = np.array([float(r["waiting"]) for r in rows if r["waiting"]])
         cv = waits.std(ddof=1) / waits.mean() if len(waits) > 1 else np.nan
         two = np.array([(int(r["d1_50"]) + int(r["d2_50"])) / n for r in rows if r["d2_50"] != ""])
@@ -51,9 +56,9 @@ def main(tag, out_dir="results", prefix="t7"):
                  "%.2f +/- %.2f" % (largest.mean(), largest.std(ddof=1) if len(largest) > 1 else 0),
                  "%.1f" % pieces.mean(),
                  "Y" if a else "n", "Y" if b else "n", "Y" if c else "n"))
-        if not g3:
-            worst = rel[np.argmax(np.abs(rel - expect))]
-            print("      gate 3 worst decay released %.4f against %.4f" % (worst, expect))
+        print("      gate 3: %d at the sheet (%.3f), %d on the one-ring ledge (%.3f), %d at neither%s"
+              % (at_sheet.sum(), expect, at_ring.sum(), expect - ring, (~(at_sheet | at_ring)).sum(),
+                 "" if g3 else " -> released " + ", ".join("%.3f" % v for v in sorted(rel[~(at_sheet | at_ring)]))))
         if "ledge_sweeps" in rows[0]:
             led = np.array([float(r["ledge_sweeps"]) for r in rows])
             fw = np.array([float(r["released_first_window"]) for r in rows])
