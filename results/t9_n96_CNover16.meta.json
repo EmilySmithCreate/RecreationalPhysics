@@ -1,0 +1,25 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T9: the 24x4 tube at lambda = 1.25 in a sealed box with a bath of C = N/16 demons. One demon starts with the 12-unit spark, the rest empty. Twenty replicas, the full 30,000 sweeps each, nothing stopped early. C is the declared knob and is scanned across configs, not tuned within one.",
+    "name": "t9_n96_CNover16",
+    "side": [
+      24,
+      4
+    ],
+    "capacities": [
+      "N/16"
+    ],
+    "spark": 12.0,
+    "replicas": 20,
+    "n_sweeps": 30000,
+    "record_every": 100,
+    "seed": 20260974,
+    "lambda": 1.25
+  },
+  "config_path": "configs/t9_n96_CNover16.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T9, written 2026-09-22"
+}
