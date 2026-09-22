@@ -225,6 +225,8 @@ Accept: rung 1 reproduces [T25]'s published dimensions with our tools before any
 
 **Added 2026-09-22** (author's question). Every tube so far opened from one seed (every cold T10 box caught mid-conversion, 78 of 80, had one sheet patch), so whether each seed leaves a scrap is untested. Plant k = 1, 2, 4, 8 seeds with a local spark on a long tube in a cold sealed box and count leftovers; or use tubes long enough (N ≳ 400) for seeds to form naturally. Pre-register: leftovers ∝ k against leftovers = 1 whatever k. Shares the local-spark code with T13 rung 3. Details in the plan above.
 
+*Added the same evening:* the author's hypothesis that the leftover is dark matter (VISION Update 16). A first look (ASSUMPTIONS O18) says a sparse sprinkle of scraps could be enough, because matter thins out more slowly than radiation; the needed share at the conversion is about 0.7 eV divided by the starting temperature. So the test should also measure **how the leftover scales with the number of seeds**, which is what would turn a seed density into a dark-matter amount.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?
