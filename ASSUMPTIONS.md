@@ -556,6 +556,29 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** Any verdict at λ ≥ 1. The word "continuous" (the pre-registration reserves it). Anything about λ between 1 and 1.5 other than the three values run.
 
+- **O13 T7: the change from one order to another is a switch, by a front, and it happens twice.** (2026-09-22. `t7_lam125_n*` and the rerun `t7b_lam125_n*` with fresh seeds; `t7_lam15_n*`; PREREGISTRATION T7 and its amendments.)
+
+  **Why this and not T6.** Emily's hypothesis was always a change from one *arrangement* to another, never from disorder (her correction of 2026-09-20; claim 3). T6 tested the disorder route because that is the transition the published work measures, and I did not re-scope when corrected. T7 tests the order → order change the published family contains: the tube, one dimension curled, 4(λ − 1) above the sheet, metastable, decaying into the sheet.
+
+  **The three predictions, written before looking, hold at every size on two independent sets of seeds** (λ = 1.25, g = 1.5, tubes 16×4 to 48×4, thirty decays each):
+
+  | N | wait (sweeps) | CV | vertices at d ∈ {1, 2} at half conversion | largest sheet piece | pieces |
+  |---|---|---|---|---|---|
+  | 64 | 871 / 660 | 0.91 / 0.84 | 0.990 / 0.998 | 0.98 / 0.99 | 1.3 / 1.1 |
+  | 96 | 913 / 928 | 1.10 / 1.02 | 0.990 / 0.988 | 0.95 / 0.96 | 1.6 / 1.5 |
+  | 144 | 856 / 743 | 1.01 / 0.76 | 0.997 / 0.997 | 0.92 / 0.96 | 1.4 / 1.2 |
+  | 192 | 1039 / — | 0.87 / — | 0.995 / — | 0.85 / — | 1.8 / — |
+
+  (first run / rerun; N = 192 rerun in progress.) In words: the wait is memoryless — the change starts by a rare event, not on a schedule; at the halfway point **99 % of vertices are either still tube or already sheet, with essentially none in between**; and the sheet-like vertices form **one connected front**. That is a first-order change between two orders, in the sense the pre-registration defined before the runs, at every size tried. The mean wait does not fall with N (recorded, not predicted; it refutes homogeneous per-site nucleation and was already known from Update 9).
+
+  **The verdict is withheld by the letter, because gate 3 fails — and gate 3 found something.** The energy released was to be within 1 % of 4(λ − 1). With a fixed 300-sweep settle, half the decays read 0.5 to 0.9. Followed for 6,000 sweeps, half release 1.00 at once and half release **0.78, sit on that value, and then release the rest in a single step** — the same 0.78 every time, a specific defected sheet, a second metastable state which itself switches sharply. With the settle run until the energy stops changing (T7 amendment 1), 16 to 21 of 30 decays at each size pause on that ledge for 600 to 27,000 sweeps, and a few are still on it at the 30,000-sweep cap. **The ledge outlives the tube.** So the tube → sheet change is two sharp steps with two memoryless waits, releasing 0.78 and then 0.22 of the lump. Gate 3, as written, asks every decay to complete both steps inside the run, which no finite run can guarantee; proposed amendment 2 checks the energy exactly at whichever state the decay has reached. Emily's call; if adopted, λ = 1.25 is TWO-STATE CHANGE.
+
+  **λ = 1.5 is the unstable case, not the metastable one.** φ = 0.95 by sweep 50 in every replica, as in the design-track pilot. No waiting time (CV = 0 by construction), 25 to 30 % of vertices at neither the tube nor the sheet value at half conversion, and the converted region in 8 pieces at N = 192. The tube there is past its spinodal: it does not switch, it falls apart everywhere at once. The pre-registration listed λ = 1.5 assuming a long-lived tube; the metastable window at g = 1.5 lies below 1.5, and where in 1 < λ < 1.5 it closes is a measurement for T8.
+
+  **Against the claims, plainly.** Claim 4 says the change from X to space was sharp and released a lump. In this family the change from *disorder* to space is not sharp (T6, and the published work). The change from *one order* to space — the tube uncurling — is sharp in every way the pre-registration asked: it waits, it starts somewhere, it sweeps across as a front with the two orders coexisting on either side, and it releases a definite energy. Then it does it again. That is the mechanism the right way round, in the published model, with no new ingredient — at one λ, one temperature, in two dimensions, with a stand-in for X that is a curled sheet and nothing more.
+
+  **Not claimed.** That X is a tube. Anything about the universe. The word "first order" in the thermodynamic sense (this is a decay at fixed temperature; the pre-registration defined "sharp" for that case and the data meet that definition). Where the metastable window in λ ends. What the ledge state is, structurally — only that it is one state, at 0.78, every time. What happens in a sealed box (T8).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

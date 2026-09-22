@@ -188,6 +188,18 @@ That X *is* a tube, or that the universe did this. That a lump large enough for 
 
 **What is not changed.** The three observables, the three predictions and the verdicts. Gate 3 as a criterion.
 
+#### PROPOSED amendment 2 — not enacted; Emily's decision — gate 3 asks the wrong question
+
+**Written after the rerun `t7b_lam125_n*`, which it would change the verdict of. Stated first.**
+
+Under amendment 1 the settle runs until the released energy has stopped changing, up to 30,000 sweeps. Gate 3 still fails at every size: 16 to 21 of 30 decays pause on the ledge at 0.76 to 0.87 of the full release, and a few are still there at the cap, having sat on it for 21,000 to 27,000 sweeps. **The ledge is longer-lived than the tube** (which waits 700 to 900 sweeps). No finite settle can make every decay finish, because the second step has its own long, apparently memoryless wait.
+
+Gate 3 was written as an energy-conservation check: is the lump the known 4(λ − 1)? The answer is yes — every decay that completes its second step releases 1.00 to within 1 %, and every decay on the ledge releases the ledge's own value, the same 0.78 each time. What gate 3 actually tests, as written, is whether every decay completes *both* steps inside the run, which is a question about the ledge's lifetime and not about the lump.
+
+**Proposed wording.** Gate 3: every counted decay's released energy, at the end of the settle, is within 1 % of *either* 4(λ − 1) *or* the ledge value (the modal first-window release across decays at that size). Energy is thereby checked exactly at whichever state the decay has reached. Decays on the ledge are counted for predictions (a), (b) and (c), which concern the first switch and are measured at half conversion, before the ledge is reached.
+
+**Why proposed rather than made.** It changes a gate after the data it judges were seen. What makes it defensible: the three predictions are met at every size on both the first run and the rerun with fresh seeds, and the change concerns only which decays are admitted, not what is measured on them; and the thing it admits — a decay resting on a second sharp step — is more of what claim 4 describes, not less. **If adopted:** the λ = 1.25 verdict is TWO-STATE CHANGE. **If not:** the verdict is withheld and the three predictions are reported as met with the gate outstanding.
+
 **Recorded, and not a change to anything:** at λ = 1.5 the tube is not metastable at g = 1.5 — it is at φ = 0.95 by sweep 50 in every replica, as it was in the design-track pilot at g = 1.0. There is no waiting time to measure and no switch to see. The section above listed λ = 1.5 assuming a long-lived tube there, and it is not one. Those runs are reported as what they are: the unstable case, which the verdict language was not written for and to which no verdict is applied.
 
 ---

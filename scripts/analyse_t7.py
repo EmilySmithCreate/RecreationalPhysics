@@ -19,8 +19,8 @@ FRONT_FRAC = 0.70          # prediction (c): largest sheet piece's share of conv
 CONT_CV, CONT_FRAC = 0.4, 0.5
 
 
-def main(tag, out_dir="results"):
-    files = sorted(Path(out_dir).glob("t7_%s_n*.csv" % tag), key=lambda p: int(p.stem.split("_n")[-1]))
+def main(tag, out_dir="results", prefix="t7"):
+    files = sorted(Path(out_dir).glob("%s_%s_n*.csv" % (prefix, tag)), key=lambda p: int(p.stem.split("_n")[-1]))
     if not files:
         print("no results for", tag); return
     print("T7, %s. PREREGISTRATION.md section T7.\n" % tag)
@@ -54,6 +54,13 @@ def main(tag, out_dir="results"):
         if not g3:
             worst = rel[np.argmax(np.abs(rel - expect))]
             print("      gate 3 worst decay released %.4f against %.4f" % (worst, expect))
+        if "ledge_sweeps" in rows[0]:
+            led = np.array([float(r["ledge_sweeps"]) for r in rows])
+            fw = np.array([float(r["released_first_window"]) for r in rows])
+            on = led > 0
+            print("      ledge: %d of %d decays paused on the way down (first-window release %.2f of %.2f), "
+                  "for %.0f to %.0f sweeps" % (on.sum(), len(rows), fw[on].mean() if on.any() else float('nan'),
+                                               expect, led[on].min() if on.any() else 0, led[on].max() if on.any() else 0))
         per_size.append(dict(N=n, g=g2 and g3, a=a, b=b, c=c, cv=cv, two=two.mean()))
 
     gated = [p for p in per_size if p["g"]]
@@ -72,4 +79,4 @@ def main(tag, out_dir="results"):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "lam125")
+    main(sys.argv[1] if len(sys.argv) > 1 else "lam125", prefix=(sys.argv[2] if len(sys.argv) > 2 else "t7"))
