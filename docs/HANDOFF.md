@@ -30,7 +30,7 @@ per point above the flat sheet at λ > 1, metastable at λ = 1.25 and g = 1.5, u
 | Test | Question | Verdict | Where |
 |---|---|---|---|
 | T6, λ = 0 (control) | Is the penalty-off transition first order? | **FIRST ORDER** under amendment 4 (Emily's) — lump 12.5/pt, barrier +34σ with size | O11 + addendum |
-| T6, λ ≥ 1 | Out of the random phase, with the rule on? | Reruns done, gate 4 met (46–400 trips). One hump at every λ/size/replica; any lump < 1.3/pt at N = 100 and shrinking. Amendment 5 (a) enacted by Emily (φ cumulant): **still INCONCLUSIVE**, because the enacted wording (the assistant's) takes U_φ's minimum over all couplings and U_φ has no dip — the minimum is always the hot edge (g = 10). **Open: Emily's call** among (i) leave INCONCLUSIVE, (ii) option (b) after all, (iii) restrict to the window (not recommended) | O12, O17 + addendum |
+| T6, λ ≥ 1 | Out of the random phase, with the rule on? | One hump at every λ/size/replica; any lump < 1.3/pt at N = 100 and shrinking. **INCONCLUSIVE, final** — criterion 3 unreadable as an energy cumulant, and the φ-cumulant version (amendment 5 (a)) reads the hot edge; Emily decided to leave it there (not the hypothesis's route) | O12, O17 + addendum |
 | T7, λ = 1.25 | Is the tube → sheet change sharp? | Amendment 4 (a) enacted by Emily: the twelve read from their wiring (`t7d_*`, `scripts/analyse_t7_states.py`). **TWO-STATE CHANGE at N = 64, 96, 192**; N = 144 fails gate 3 on one decay (changed state inside its last measuring window). Predictions hold at all four sizes. `python scripts/analyse_t7.py lam125 t7b t7c t7d` | O13 + three addenda |
 | T9 | Sealed tube: bonfire or slush? | **BONFIRE WITH A THRESHOLD** at 64/96/192; no stall in 420 runs; crossover ∈ (N/4, N/2], predicted N/3.5 inside | O14 |
 | T10 | Does the leftover grow with the space? | **ONE RING, HOWEVER LARGE** (0.9–1.05 per box at 64–288). Claim 5 is bookkeeping in this model | O15 |
@@ -57,10 +57,9 @@ threshold; the leftover is one small defect however big the space.
 
 ## 4. Decisions (updated 2026-09-22, evening)
 
-Both decisions below were made by Emily (option (a) each) and enacted; results in section 2. **One is open
-again:** what to do with T6 criterion 3 at λ ≥ 1 now that the φ-cumulant wording turned out to read the hot
-edge (ASSUMPTIONS O17 addendum lists the three options). The text below is kept as the record of what was put
-to her.
+Both decisions below were made by Emily (option (a) each) and enacted; results in section 2. The one that
+reopened (T6 criterion 3 at λ ≥ 1) was settled the same evening: left INCONCLUSIVE, no further rule change.
+Nothing is waiting on her. The text below is kept as the record of what was put to her.
 
 ### As put to her
 
@@ -94,7 +93,7 @@ to her.
 0. **New, at Emily's request:** the known-physics ladder (`docs/design/known_physics_plan.md`, TASKS T13) and
    the leftover-per-seed test (TASKS T14). Start with the reading and rung 1's reproduction gate.
 
-1. T7 replays (if Emily chooses (i)).
+1. ~~T7 replays~~ done (amendments 3 and 4).
 2. Why one remnant per cold box — no hypothesis in hand after the seam refutation. A read of *what* the remnant is
    (its edges, its exact shape) would come before any new mechanism guess.
 3. Step-4 items from Emily's parked extension (`docs/parked/extension_2026-09-22.md`): do remnants attract one
