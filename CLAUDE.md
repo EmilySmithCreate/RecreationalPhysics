@@ -1,12 +1,14 @@
 # Project memory for Claude Code
 
-Read this first. Then read @VISION.md (the fixed reference for what we are testing and why) and @TASKS.md (what to do next, in order). Read `ASSUMPTIONS.md` before touching any model code.
+Read this first, then **`docs/HANDOFF.md`** (the state as of 2026-09-22, the open decision, what is running, and the corrections that must not be undone — it is newer than the "Known state" section below). Then read @VISION.md (the fixed reference for what we are testing and why; Updates 13 and 14 are the current statement) and @TASKS.md (what to do next, in order). Read `ASSUMPTIONS.md` before touching any model code.
 
 ## What this project is
 
 A hobbyist's hypothesis about emergent spacetime, tested honestly on toy models. The owner, Emily, is a software engineer, not a physicist. The work asks one question:
 
-> In graph models where geometry forms from a random network, which ingredients of the energy function make the transition first order (latent heat) and which make it continuous?
+> When one specific, stable-for-now arrangement changes into another that looks like space, is the change sharp — a seed, a front, a definite lump of energy released — and what does the lump do when it has nowhere to go?
+
+*(Re-scoped 2026-09-22, VISION Update 13. The earlier form of the question — whether geometry forms first order **out of a random network** — is the published question, was tested first (T6), and is not the hypothesis's: X is a specific arrangement, never a random tangle. The model's stand-in for X is the tube of VISION Update 8.)*
 
 Current test bed: Trugenberger's 2D combinatorial quantum gravity model (`src/graphity/cqg.py`). Earlier work on Konopka's graphity model and a "restricted menu" idea is parked but kept (`energy.py`, `mc.py`, `graphs.py`, `docs/parked/`).
 
