@@ -78,9 +78,11 @@ def observables(lng, seen, s_min, n, g_lo=3.0, g_hi=14.0):
                 barrier=float(np.log(min(sm[a], sm[b])) - np.log(sm[v])))
 
 
-def main(sizes, seed=20260921, out_dir="results", moves_mult=1.0, tag=""):
-    """moves_mult scales the length of the real walk; the first pass at each size showed how
-    many round trips a unit walk buys (N = 64: 52; 96: 16; 128: 3), and gate 4 wants 20."""
+def main(sizes, seed=20260921, out_dir="results", moves_mult=1.0, tag="", refine=None):
+    """moves_mult scales the cap on stage one, which rarely binds: stage one ends when ln f has
+    converged. Round trips come mostly from stage one and then accrue with the length of stage
+    two, so `refine` (sweeps per pass in stage two) is the knob that buys them. Unit walks gave
+    52 (N = 64), 16 (96), 3 (128); doubling moves_mult alone left N = 96 at 15 to 17."""
     out = Path(out_dir)
     for tok in sizes:
         lx, ly = parse_size(tok)
@@ -104,7 +106,7 @@ def main(sizes, seed=20260921, out_dir="results", moves_mult=1.0, tag=""):
         res = dos_graph(adj, side_u, s_range, None, cap=NO_CAP, seed=seed + n + 2,
                         ln_f_final=1e-6, flat=0.8, sweeps_per_check=500,
                         max_moves=int(400_000_000 * max(1, n // 36) * moves_mult),
-                        refine_sweeps=int(200_000 * moves_mult))
+                        refine_sweeps=int(refine if refine else 200_000 * moves_mult))
         lng, seen = res["lng"][:, 0].copy(), res["seen"][:, 0].copy()
         got = observables(lng, seen, res["s_min"], n)
 
@@ -113,6 +115,7 @@ def main(sizes, seed=20260921, out_dir="results", moves_mult=1.0, tag=""):
                             round_trips_stage_one=res["round_trips_stage_one"],
                             ln_f_final=res.get("ln_f", np.nan), flatness=res.get("flatness", np.nan))
         row = dict(N=n, lx=lx, ly=ly, seed=seed, tag=tag, moves_mult=moves_mult,
+                   refine_sweeps=int(refine if refine else 200_000 * moves_mult),
                    s_lo=s_range[0], s_hi=s_range[1],
                    bins=int(seen.sum()), round_trips=int(res["round_trips"]),
                    round_trips_stage_one=int(res["round_trips_stage_one"]),
@@ -130,8 +133,8 @@ def main(sizes, seed=20260921, out_dir="results", moves_mult=1.0, tag=""):
 
 
 if __name__ == "__main__":
-    # usage: run_wl_lam0.py SIZE [SIZE ...] [--seed N] [--mult X] [--tag T]
-    args, seed, mult, tag = [], 20260921, 1.0, ""
+    # usage: run_wl_lam0.py SIZE [SIZE ...] [--seed N] [--mult X] [--tag T] [--refine SWEEPS]
+    args, seed, mult, tag, refine = [], 20260921, 1.0, "", None
     it = iter(sys.argv[1:])
     for a in it:
         if a == "--seed":
@@ -140,6 +143,8 @@ if __name__ == "__main__":
             mult = float(next(it))
         elif a == "--tag":
             tag = next(it)
+        elif a == "--refine":
+            refine = int(next(it))
         else:
             args.append(a)
-    main(args or ["36"], seed=seed, moves_mult=mult, tag=tag)
+    main(args or ["36"], seed=seed, moves_mult=mult, tag=tag, refine=refine)
