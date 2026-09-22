@@ -229,6 +229,13 @@ Needs no new machinery: `sealed.py` and `connectivity.py` both exist. Pre-regist
 
 Accept: rung 1 reproduces [T25]'s published dimensions with our tools before any number of ours is read.
 
+**Rung 4, given content 2026-09-22 (VISION Update 17, the author's quantum hypothesis).** Three exact,
+cheap checks before any reading: (i) the renaming count of the saved T10 leftovers (the four-point remnant
+and the twist), by the method of Q15; (ii) their Laplacian spectra, to see whether the two leftover types
+have distinct frequencies; (iii) whether an ordered region's renaming count drops to 1 when joined to a
+melted one. The bar that matters, Bell-type correlations, needs a notion of a measurement in the model and
+is not designed. None of these is run.
+
 **Rung 3, first half, done 2026-09-22 and it is exact (O22).** Two defects in a flat sheet cost exactly
 twice one at every separation, and 16 less than twice only where they touch. The energy is a sum of
 per-edge terms, so this holds for any defects that share no square: **there is no long-range force between
