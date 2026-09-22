@@ -55,6 +55,17 @@ Pre-registered verdicts are in `PREREGISTRATION.md`; the numbers behind each are
 | **T10** leftover | Does the leftover grow with the space? | N = 64–288, fresh seeds, 80 runs | **ONE RING, HOWEVER LARGE**: 0.85–1.05 per box, slope indistinguishable from zero. The committed prediction failed |
 | **T11** seam | Is the leftover where the front's two ends meet? | N = 64, 96, 70 boxes | **NEITHER**: its position is indistinguishable from uniform. Why exactly one is open |
 
+Four more, added 22 September, on whether the model can hold a black hole, a pull back towards symmetry,
+and space that is only stable for now. Two are exact arithmetic and two are exploratory runs.
+
+| Question | How it was settled | Answer |
+|---|---|---|
+| Does anything lie **below** flat space, so that space could be storing energy? | exact; the hard-core rule forbids a triangle beside a square and two triangles on an edge, so every legal edge has curvature ≤ 0 (`general_chain.py`, Q18) | **No.** Zero is the floor with every kind of small loop allowed. Space is stable, and the cuboctahedron — the obvious lower candidate — is illegal |
+| Do two leftovers **pull on each other**, as gravity would need? | exact, every separation on a 10 × 10 torus, λ = 1 and 1.25 (O22) | **Only by touching**: −16 when the damage overlaps, exactly 0 beyond. H is a sum of per-edge terms, so this is a theorem for any defects sharing no square. Gravity here, if any, must be entropic |
+| Does concentrated energy **fold** space or **melt** it? | sealed boxes, budgets 0.5–16 per point, λ = 1.05–2.0, N = 144 and 160 (O20) | **Melts** at every budget and every λ, though folding is four times cheaper per square: there are far more ways to break a loop than to make one. Read O20's correction — melted is the random phase, which [T25] calls matter, and equilibrium heating randomises by construction |
+| Left alone, does space **fold by itself**? | braces chain at four couplings (O21) | **No**: a cold sheet accepted no move at all; closed braced pieces survive exactly where the sheet does. Folding needs energy delivered |
+
+
 Exploratory, and labelled so (`ASSUMPTIONS.md` section D and O1–O18): the Arrhenius waiting time
 (measured/predicted 0.98 over a ninetyfold range, nothing fitted); the 12-unit spark threshold, the
 same at N = 48–192; the leftover fixed by the energy released (predicted from a separate equilibrium
@@ -75,6 +86,9 @@ incidence graph of the 7-point biplane) that ties with the 4-cube in energy at e
 | 4 — the change was sharp, releasing a lump | Split by route: **not sharp** out of disorder at N ≤ 100 (bound < 1.3/point, falling); **sharp** from one order to another (T7). S2′ was written after four of its five parts were met, so T7 does not count as clearing it |
 | 5 — a leftover remains | Holds, but small: one four-point remnant per box however large. The author's hypothesis that it is dark matter is recorded in VISION Update 16 and tested by TASKS T14 |
 | 6 — the books balance | Holds by construction, and the construction survived 420 sealed conversions |
+
+Not in the model, and now known to be absent rather than merely unmeasured: **any long-range force between
+leftovers** (O22, exact). Whatever plays gravity here cannot be carried by the energy.
 
 **Open decisions and gaps:** whether Kelly et al. (2019) Fig. 8a should replace Trugenberger (2025)
 Fig. 3 as Gate B; where the metastable window closes between λ = 1.25 and 1.5; why a cold box ends

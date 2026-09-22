@@ -778,6 +778,26 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   become a knot; it stays jammed and disordered, which is at least the right shape for something nothing
   comes back out of.*
 
+- **O22 Leftovers in this model attract only by touching, and that is a theorem, not a measurement.**
+  (2026-09-22, EXACT, no sampling; `scripts/run_defect_interaction.py`, `configs/defect_interaction.json`,
+  `tests/test_defect_interaction.py`; TASKS T13 rung 3; the author's question of the same day about gravity
+  as a pull back towards symmetry.) **The measurement:** make the cheapest defect in a perfect flat sheet
+  (one switch, costing 32 on a 10 x 10 torus at λ = 1 and 1.25), make the same defect again a known distance
+  away, and compare the pair with twice the single. At every separation on the torus the answer is **exactly
+  zero** except where the two touch, where it is **−16**: half of one defect, because the overlapping damage
+  breaks a square they then pay for once. Both λ, every placement, 64 placements in all.
+  **Why it has to be so, which is worth more than the measurement:** H is a sum over edges of terms that
+  depend only on that edge's own squares, so two defects sharing no square contribute independently and
+  their energies add exactly. **No long-range force between leftovers is possible here at fixed wiring, for
+  any kind of defect, by the form of the energy.** The prediction that this would be a contact interaction
+  was written in the config before the run and is what came out.
+  **What follows** (*ours, unverified*): if anything like gravity exists in this model it cannot be a force
+  carried by the energy between leftovers; it would have to be **entropic** -- a free-energy effect from the
+  number of arrangements at a given separation, not from their energies -- which is a measurable thing and
+  has not been measured. (That is the shape of Verlinde's entropic-gravity proposal, 2011; general knowledge,
+  not read by us, details to verify.) It also means the defect-defect interaction of O13's third addendum is
+  a contact effect and not evidence of a field.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

@@ -88,6 +88,31 @@ Nothing is waiting on her. The text below is kept as the record of what was put 
 
 *Update, evening:* nothing running. The `t7d_*` replays finished and are read.
 
+*Update, late evening (22 Sept), after a run of questions from Emily about gravity, dark energy and black
+holes.* Five new pieces of work, all committed, all EXPLORATORY except the two that are exact:
+
+- **Q18 (exact): zero is the floor.** A chain on graphs that allow triangles and pentagons
+  (`general_chain.py`, built for this) plus a short argument: the hard-core rule forbids a triangle beside a
+  square and two triangles on an edge, so every valid edge has curvature at most zero and **nothing sits
+  below flat space**. Space is stable; the cuboctahedron, the obvious lower candidate, is illegal.
+- **O20: a sealed sheet given energy melts rather than folds**, at four λ and budgets 0.5 to 16 a point.
+  Folding is four times cheaper per square and still loses. **Read the correction under O20 before quoting
+  it:** melted is the random phase, which [T25] calls matter, and equilibrium heating randomises by
+  construction, so this is weaker than it first sounds.
+- **O21: three braces runs.** A cold sheet accepts no move at all; two closed pieces survive exactly where
+  the sheet does; a cooled melt jams at about +2 a point. **The jam is the doubtful one** — Emily challenged
+  it and she is likely right. A check of whether any downhill move exists from the jammed state was running
+  when this was written (`scratchpad/is_the_jam_real.py`); if downhill moves exist the jam is a stuck
+  sampler, not a state, and O21's third bullet must be rewritten.
+- **O22 (exact): no long-range force between leftovers, and it is a theorem.** Two defects cost exactly
+  twice one at every separation, and 16 less only where they touch. H is a sum of per-edge terms, so any
+  defects sharing no square are additive. Gravity here, if it exists, must be entropic.
+- **Emily's positions changed twice and both are recorded** (`docs/parked/extension_2026-09-22.md`):
+  refolding is *expensive* and paid for by concentrated energy, so space never needs to be metastable (the
+  dark-energy-as-excess leg is dropped, and the page says so); and gravity may be a pull back towards
+  symmetry, which in standard language is symmetry restoration at high density. Smolin's cosmological
+  natural selection is the closest published relative of her loop and **neither of us has read it**.
+
 ## 6. Natural next lines (none started; pre-register before running)
 
 0. **New, at Emily's request:** the known-physics ladder (`docs/design/known_physics_plan.md`, TASKS T13) and
@@ -96,14 +121,16 @@ Nothing is waiting on her. The text below is kept as the record of what was put 
 1. ~~T7 replays~~ done (amendments 3 and 4).
 2. Why one remnant per cold box — no hypothesis in hand after the seam refutation. A read of *what* the remnant is
    (its edges, its exact shape) would come before any new mechanism guess.
-3. Step-4 items from Emily's parked extension (`docs/parked/extension_2026-09-22.md`): do remnants attract one
-   another (readable from T9/T10 files: excess energy vs. separation); does a *local* spark on a flat sheet re-curl
-   it or melt it (discriminates her black-hole picture from [T25]'s).
+3. ~~Do remnants attract one another~~ **answered exactly, O22: only by touching, and no long-range force is
+   possible.** What remains of that item is the other half: does a *local* spark on a flat sheet re-curl it or melt
+   it (discriminates Emily's black-hole picture from [T25]'s). It needs a local-spark protocol — energy delivered
+   to one patch rather than to a shared demon — which does not exist yet and is the single most useful thing to
+   build next. Everything measured so far heats the whole sheet, and equilibrium heating always randomises.
 4. Where the metastable window closes between λ = 1.25 and 1.5 (PREREGISTRATION T8, the λ map).
 5. Writing to the authors (both groups) — draft was given in chat only, never in the repo; VISION "Before anything
    is shown to anyone" lists the items. Then a physicist reader (S5).
 
-## 7. The public-facing page
+## 7. The public-facing pages
 
 "The Shape of a Phase-Changing Reality", a claude.ai artifact owned by Emily:
 https://claude.ai/artifact/TTC9knKGJFkR43X2JjsjZ5 — version 10, 31 sections, updated through T11. Written for a
@@ -111,6 +138,14 @@ non-scientist and a physicist reader. To update: `Artifact read` the URL (it sav
 republish with `url`. Its figures are published files alongside (kept on republish). Rules for it: every claim
 says whose it is (the coloured boxes); no process narration (who reminded whom, when) — that goes in commits and
 `ASSUMPTIONS.md`; lattice citations in section 1 are marked "to verify" and are not in `REFERENCES.bib`.
+
+**The short page, which is the one being published:** "Did space snap open?",
+https://claude.ai/artifact/5eDjM2Jh9AjUWSyqad563w — Version 13 at this writing. Saved verbatim at
+`docs/public/did-space-snap-open_v1.html`; `scripts/make_site_page.py` builds `docs/public/site/index.html`
+from that copy for sidenerdapps.com (own head, sharing tags, public links, no-JavaScript notes, every picture
+inline SVG). **Update all three together**: edit the scratchpad copy, republish the artifact, copy to
+`docs/public/`, rerun the build. It now carries the loop section, the gravity rung and the dropped
+dark-energy leg.
 
 ## 8. How Emily works, and the rules that bit us
 

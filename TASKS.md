@@ -229,6 +229,14 @@ Needs no new machinery: `sealed.py` and `connectivity.py` both exist. Pre-regist
 
 Accept: rung 1 reproduces [T25]'s published dimensions with our tools before any number of ours is read.
 
+**Rung 3, first half, done 2026-09-22 and it is exact (O22).** Two defects in a flat sheet cost exactly
+twice one at every separation, and 16 less than twice only where they touch. The energy is a sum of
+per-edge terms, so this holds for any defects that share no square: **there is no long-range force between
+leftovers in this model at fixed wiring.** Anything like gravity here would have to be entropic, which is a
+different measurement and has not been made. The rest of rung 3 -- what a local jolt does to a flat sheet,
+which is the one route left for the author's re-curled black hole (O20, O21) -- still needs the local-spark
+protocol of T14 and is the next thing on this track.
+
 ## T14. Leftover per seed: could the leftover be a real share?  ☐
 
 **Added 2026-09-22** (author's question). Every tube so far opened from one seed (every cold T10 box caught mid-conversion, 78 of 80, had one sheet patch), so whether each seed leaves a scrap is untested. Plant k = 1, 2, 4, 8 seeds with a local spark on a long tube in a cold sealed box and count leftovers; or use tubes long enough (N ≳ 400) for seeds to form naturally. Pre-register: leftovers ∝ k against leftovers = 1 whatever k. Shares the local-spark code with T13 rung 3. Details in the plan above.
