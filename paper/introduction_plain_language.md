@@ -1,5 +1,7 @@
 # Where does "where" come from?
 
+**Superseded on 2026-09-22 by the Version 1 write-up in `docs/public/did-space-snap-open_v1.html`**, which covers the verdicts this draft predates. Kept for history.
+
 *A plain-language introduction. Draft 3 (2026-09-20). It describes an idea, how we are testing it, and where the work stands today. Nothing in it is a finding yet: every run described here is exploratory, and no physicist has reviewed any of it.*
 
 *What changed from Draft 2: the page now says where things stand. It adds the author's two refinements of her picture (cooling is a fine trigger as long as a threshold is crossed; the first move costs energy and the rest pays back more), a picture of the model as a street map, what has and has not been reproduced, and the first steps towards designing a model of our own. Draft 1's question, about contact lists, stays parked near the end.*
