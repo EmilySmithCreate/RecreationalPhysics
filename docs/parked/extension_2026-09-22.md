@@ -108,3 +108,71 @@ What the model says (*ours, unverified*):
 - **The cheap discriminating test is already on the list:** what a local spark does to a flat sheet
   (item 3(ii) above; `docs/design/known_physics_plan.md` rung 3). Re-curling supports the author's
   black hole; melting supports [T25]'s.
+
+## Superseded the same day: the loop does not need space to be metastable
+
+The section above analysed the author's loop on the assumption that space must have somewhere lower to
+fall to, and concluded that no single λ can give both that and X above space. **The author rejected the
+assumption, and she is right that nothing in her picture requires it.** Her position, in her words put in
+order: space is allowed to be stable and to stay stable; it does not need to go anywhere to be part of the
+loop. Folding space back up is *expensive*, which is the same fact as the Big Bang having released energy
+when it unfolded, and a black hole is the one place with enough concentrated energy to pay for it.
+
+What that changes:
+
+- **The obstruction is withdrawn.** With the return leg paid for rather than fallen into, the loop needs
+  only λ > 1, which is the track this project already runs: space lowest and stable, curled arrangements
+  above it, and a supplied push to get back up. That is the vision's own setting (VISION Update 13).
+- **Q18 changes sides.** "Nothing sits below flat space" was written up as counting against the picture; on
+  the author's reading it supports it, because space being the bottom of the well is what the loop wants.
+- **The casualty is dark energy as space's own excess**, which needed space to be metastable. The author
+  dropped that leg on 2026-09-22 and the public page records it as dropped rather than quietly removed. Her
+  remaining suggestion, untested and speculative: the change may not be finished, and dark energy is the
+  rest of it still coming out.
+- **What is still testable, and is the one thing left of O20's question:** a jolt delivered into one small
+  patch of a cold sheet (T14's local-spark protocol). A shared energy budget heats the whole sheet, and
+  heating at equilibrium randomises whatever it is given; concentrating energy in one place against cold
+  surroundings is a different act and this model has never been asked it.
+
+## Added 2026-09-22, later: gravity as a pull back towards symmetry, and an endless loop
+
+**The author's words, put in order.** Gravity may be the drive towards dimensional symmetry. The large
+dimensions we have are unfolded, and something wants the symmetry back. For that to happen matter has to
+come together again, and the way it does that is by grouping into ever bigger things, and the biggest
+things fold space. The drive never wins, but it does not have to: it is enough that it keeps a loop
+turning. A loop needs no beginning and no end, and that is how she thinks reality has to work.
+
+**What it is in standard language** (*ours; general knowledge, none of it read by us, all of it to
+verify before it is cited anywhere*). This is **symmetry restoration at high density**, which is
+mainstream: the high-energy phase of a system is the symmetric one, and it is restored by concentrating
+energy, not by cooling. So "gravity gathers matter until the symmetric phase comes back locally" is the
+ordinary thermodynamic statement of her picture, and black holes are where the density is enough.
+
+**It flips how O20 reads.** That run put energy into a sheet and the space went to the random phase. The
+assistant recorded it as pointing away from the author's re-curled black hole. Under this framing the
+same measurement says: **concentrated energy restores the symmetric phase**, which is her mechanism. What
+remains genuinely open is *which* symmetric state the model restores -- its random phase, or a curled
+arrangement like the tube -- and that is a question about the interior, not about whether the loop turns.
+
+**Published relatives, to read before any of this is claimed as new.**
+- **Smolin's cosmological natural selection** (1992; and his 1997 book): black holes give birth to new
+  universes, with the constants varying slightly at each birth, so universes that make many black holes
+  come to dominate. It makes a real prediction, that our constants should be near-best for black-hole
+  production, and there is a known line of attack on it through the maximum mass of neutron stars. **This
+  is the closest published relative of the loop above and neither of us has read it.** *Details to verify.*
+- **Cyclic cosmologies**: Penrose's conformal cyclic cosmology, and the ekpyrotic/cyclic models of
+  Steinhardt and Turok. Both are endless-loop pictures with no beginning. *Details to verify.*
+- **The standing objection to any eternal cycle** is Tolman's: entropy accumulates from one cycle to the
+  next, so a loop needs somewhere to put it. A picture in which black holes swallow the disorder and hand
+  back a fresh symmetric region has an answer in principle, and saying so is not the same as showing it.
+
+**What the model can be asked, and it is already on the list.** Gravity in this picture must at minimum
+make folded defects attract one another. T9's files already show a defect-defect interaction that is not
+zero (O13, third addendum), and TASKS T13 rung 3 is where its sign gets measured. That is the cheap first
+rung: if the leftovers of a conversion repel, the whole framing fails at once.
+
+**What it does not yet have** (*ours*): a force law. To be gravity it must be attractive, universal, act
+on every kind of energy, and fall off with distance in the right way. Nothing here supplies that, and in
+the model this project uses, gravity is meant to come *out* of the curvature term rather than be added
+beside it.
+

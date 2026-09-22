@@ -721,6 +721,57 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **What is still not stated, and it is what our disagreement turns on:** the run length and how equilibration was checked; whether the hard-core restriction of [KTB19] Sec. 4 was imposed in the Fig. 3 runs; whether the points are from cooling, heating or both. Our disagreement is not about the end values — we match 0.126 and 1 — but about *where* the rise happens, and a short or unequilibrated run moves a curve in exactly that direction. The outreach note's first question is narrowed to that.
 
+- **O20 Concentrated energy melts space; it does not fold it.** (2026-09-22, EXPLORATORY; the author's
+  picture of a black hole; TASKS T13 rung 3; `configs/sealed_sheet_budget_lam*.json`.) **A black hole is a
+  sealed system** -- nothing gets out -- which is exactly the fixed-total-energy machinery of Q12. So a
+  perfect flat sheet was given a budget of energy it cannot lose, and the end state was read by the local
+  dimension of every vertex: below 2 is folded, above 2 is melted. **The prediction was written in the
+  config first and it failed.** It reasoned from price: at λ = 1.25 an extra square on a full edge costs 4
+  and a destroyed square costs 16, so folding is four times cheaper per square and small budgets should buy
+  folds. **Measured** (N = 144 and 160, three replicas a point, 4000 sweeps, budgets 0.5 to 16 per point,
+  λ = 1.05, 1.25, 1.5, 2.0): melted vertices outnumber folded ones at **every budget and every λ tried**.
+  The folded share of the damage is 23, 22, 17, 4 % at λ = 1.05 for budgets 0.5, 1, 2, 4; 5, 7, 10, 4, 0, 0 %
+  at λ = 1.25; about 2 % at λ = 1.5; and 0 to 2 % at λ = 2.0. **So price moves it in the predicted direction
+  -- the cheaper folding is, the more of it appears -- and never decides it: what decides it is the number of
+  ways, and there are far more ways to break a square than to add one.** At 16 per point the box cannot
+  absorb its own budget (the demon still holds 192 to 384 units at the end) and every vertex is melted, which
+  is the boil-off of O14 in another setting. **Reading (ours, unverified):** within this model the published
+  black hole -- a region reverted to the random phase [T25] -- is what concentrated energy makes, and the
+  author's re-curled region is not. **What is not tested:** energy delivered to one small patch rather than
+  shared across the whole sheet. The demon is a single global store, so this is a sheet with a budget, not a
+  jolt in one place; that needs the local-spark protocol of T14 and is the one route left for the author's
+  version.
+
+  **CORRECTION the same day, the author's, and it holds.** Three things were wrong with how the run above
+  was read. **(1) "Melted" is not damage.** In this model the melted state is the random phase, and [T25]
+  reads that phase as matter and energy, with a black hole a large region returned to it. So "the energy
+  melted the space" may be nothing more than what a great deal of energy in one place looks like, which is
+  close to what a singularity means; it is not obviously the opposite of the author's picture, only a
+  different account of the interior. **(2) Heating at equilibrium randomises by construction**, so a sealed
+  box given a large budget was always going to end in the random phase; the part of the run with real
+  content is narrower and is the fair contest between two ways of absorbing the *same* energy, folded
+  against melted, which folded lost at every setting. **(3) The loop does not need space to be metastable.**
+  The assistant had treated "space is only stable for now" as a requirement of the author's picture and
+  therefore read the floor result (Q18) as evidence against it. The author's position is that space is
+  allowed to be stable and stay stable: the return leg of the loop is *paid for* by concentrated energy, not
+  fallen into. Under that reading Q18 **supports** the picture rather than counting against it, and the only
+  casualty is the separate idea that dark energy is space's own excess, which the author dropped on
+  2026-09-22. **What survives as a test:** a jolt into one small patch with cold space around it, which is
+  what gravity does and what a shared budget cannot imitate (T14).
+
+- **O21 With braces allowed, space left alone does not refold, and a cooled hot patch jams.** (2026-09-22,
+  EXPLORATORY; `configs/refold_*.json`, the chain of Q18.) Three runs, each with its prediction committed
+  before it. **(1) A flat sheet left alone** at g = 1, 2 and 4 sits at exactly H = 0 with *no accepted move at
+  all*; at g = 8 it climbs to +7.9 per point. So the way out of space is disorder, not folding, and folding is
+  not something space does by itself -- which is the author's own point that space refolds at a singularity
+  and not everywhere. Predicted, and it held. **(2) Two closed 30-point pieces** survive exactly where the
+  sheet does, to g = 4, and at g = 8 they melt and merge into one. Predicted, and it held: the refolded
+  arrangement is as durable as space and no more. **(3) A melted patch cooled** at g = 1 for 800 sweeps falls
+  from +5 per point to +2.0 and +2.2 and stops there, with acceptance 0.002. **Predicted: it would cool into
+  closed pieces. It did not.** It jams in a defective state that is neither space nor a knot. That is a
+  kinetic statement, not an equilibrium one -- at that acceptance the chain has nearly stopped -- and it is
+  the third of these three predictions, so the run that mattered most is the one that failed.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
