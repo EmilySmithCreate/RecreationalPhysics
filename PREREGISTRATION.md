@@ -129,8 +129,57 @@ The value a first-order transition predicts for the Binder minimum is not 2/3. F
 
 ---
 
-## T7. The λ map
+## T7. Is the change from one order to another sharp? The tube → sheet decay
 
-To be written before T8 runs. It may reuse the criteria above, and if it does it will say so explicitly rather than restating them.
+**Written 2026-09-22, before any run under it.** The existing traces in `results/cqg_tube_waiting_lam125.csv` were recorded for a different question (how long the wait is) and have been looked at only as means; their *shape* has not been examined and the predictions below are made before it is.
+
+### Why this and not T6
+
+T6 asked whether the change from the model's disordered phase to a geometry is sharp. It is not, at any setting where the cold state is a sheet, and the published work agrees. But the hypothesis under test was never about the disordered phase. Claim 3 says X is an *arrangement* — with its own degrees of freedom and its own order — and claim 4 says the change from that arrangement to space was sharp and released a lump. That is a change from one order to another, and T6 did not test it. This does.
+
+The published family contains such a change with no new ingredient. For λ > 1 a torus with one side curled to length 4 — the tube, one large dimension and one curled — sits above the flat sheet by exactly 4(λ − 1) per point and is long-lived (thousands of sweeps at g = 1.5), and then uncurls into the sheet, releasing exactly that energy (VISION Update 9; the design brief). The tube is a stand-in for X: an arrangement, more symmetric than the sheet in the sense that one direction has been identified with itself, higher in energy, metastable. The sheet is space. **The question is whether the change between them is sharp in the sense claim 4 needs.**
+
+### What "sharp" means when there is no temperature to sweep
+
+A metastable state decays at fixed temperature, so the T6 machinery (two humps in a histogram over a coupling scan) does not apply. For an order → order change, "first order" means: the two arrangements are distinct states; the change begins at a place and spreads, with old and new order coexisting across an interface while it happens; and the energy comes out as the interface moves. "Continuous" means the whole system deforms smoothly through intermediate arrangements, everywhere at once, with no coexistence. These are distinguishable by looking at the system *while it changes*, which the existing runs never did — they recorded only φ.
+
+### The observables
+
+A vertex has four edges and six pairs of edges. Each pair that closes no square is a direction that stays large; the count is the vertex's **local dimension** d(v): 2 on the sheet, 1 on the tube, 0 in a cube (`test_sheet_tube_cube_ladder`; to be extended to a per-vertex function and validated on those three exact states before use).
+
+1. **Waiting-time distribution.** The time from the start until the decay begins, over many independent replicas. A change that starts by a rare local event is memoryless: the waiting times are exponentially distributed, with standard deviation equal to the mean (coefficient of variation ≈ 1). A smooth deformation has a characteristic time and a narrow distribution (CV ≪ 1).
+2. **Coexistence.** At the moment the system is half converted (φ halfway between the tube's and the sheet's), the histogram of d(v) over vertices. Two-state: most vertices at d = 1 or d = 2 and few in between. Continuous: mass in the intermediate values, or a single hump that has moved.
+3. **Where the new order is.** At quarter, half and three-quarter conversion, the vertices with d(v) = 2 as a set: how many connected pieces, and the largest piece's share. A front: one piece holding most of it. Everywhere at once: many pieces, none dominant.
+4. **The lump.** Energy released per point, against the exact 4(λ − 1). A check, not a question.
+
+### What will be run
+
+Tubes 16×4, 24×4, 36×4, 48×4 (N = 64, 96, 144, 192), λ = 1.25 and 1.5, g = 1.5, starting from the exact tube, Metropolis, independent seeds; at least 30 decays per (size, λ). During each run, when φ first crosses 25 %, 50 % and 75 % of the way from the tube's value to the sheet's, the adjacency is snapshotted and d(v) computed for every vertex. The waiting time is the sweep at which φ first leaves the tube's value by more than the run's own resting fluctuation (defined as three times the standard deviation of φ over the first 200 sweeps, before any decay).
+
+### Predictions, written before looking
+
+*Ours, unverified.* If claim 4's mechanism is what the tube shows: (a) CV of the waiting time between 0.7 and 1.3 at every size; (b) at half conversion, at least 80 % of vertices at d ∈ {1, 2}; (c) at half conversion, the largest connected d = 2 piece holds at least 70 % of the converted vertices. Recorded and not predicted: how the mean waiting time scales with N (the earlier 1/N prediction was refuted at 2.9σ, Update 9).
+
+### Gates
+
+1. d(v) reproduces 2 / 1 / 0 on the exact sheet, tube and 4-cube, every vertex.
+2. At least 30 decays per (size, λ) that reached 75 % conversion within the run.
+3. The released energy per point within 1 % of 4(λ − 1) in every decay counted.
+
+### Verdicts
+
+- **TWO-STATE CHANGE** — (a), (b) and (c) all hold at every size run. This is what a first-order order → order change looks like, and it is the shape claim 4 needs.
+- **CONTINUOUS DEFORMATION** — CV < 0.4 at every size, and fewer than 50 % of vertices at d ∈ {1, 2} at half conversion. The tube does not *switch* to the sheet; it slides. Claim 4's "sharp" fails in this family at the one order → order change it contains.
+- **INCONCLUSIVE** — anything else. As in T6, not to be resolved by adjusting thresholds afterwards.
+
+### What this cannot show
+
+That X *is* a tube, or that the universe did this. That a lump large enough for claim 4 exists — 4(λ − 1) is a model constant. Anything about a sealed system: that is T8, the bonfire-or-slush question, which needs its own pre-registration and this result first.
+
+---
+
+## T8. The λ map (formerly T7)
+
+To be written before it runs. It may reuse the criteria above, and if it does it will say so explicitly rather than restating them.
 
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.
