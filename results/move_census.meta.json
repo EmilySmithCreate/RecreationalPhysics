@@ -1,0 +1,36 @@
+{
+  "config": {
+    "name": "move_census",
+    "_purpose": "EXACT, exploratory. Explains O20. From an arrangement, how many single moves add a square (the only way to curl) and how many lose one? Checks the 'more ways to break than to make' explanation, which turns out to be too weak.",
+    "lambda": 1.25,
+    "sheets": [
+      [
+        10,
+        10
+      ],
+      [
+        12,
+        12
+      ]
+    ],
+    "tubes": [
+      24,
+      36
+    ],
+    "melted_from": [
+      [
+        10,
+        10
+      ]
+    ],
+    "melt_g": 200.0,
+    "melt_sweeps": 300,
+    "seed": 20260922
+  },
+  "config_path": "configs/move_census.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "purpose": "EXACT, exploratory. Explains O20. From an arrangement, how many single moves add a square (the only way to curl) and how many lose one? Checks the 'more ways to break than to make' explanation, which turns out to be too weak."
+}

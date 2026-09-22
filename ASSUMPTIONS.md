@@ -846,6 +846,22 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   both microscopic rules agree on it to three decimals, so the part of the description that does work is
   not an artefact of one rule.
 
+- **O25 Out of an ordered arrangement there is no move that builds. Not few: none.** (2026-09-22,
+  EXACT; `scripts/run_move_census.py`, `configs/move_census.json`.) O20 was explained by counting ways
+  -- more ways to break a loop than to make one -- and **that explanation was too weak and is replaced
+  by this one.** Enumerating every valid single switch: out of a perfect flat sheet at N = 100 and 144,
+  **zero** moves add a square and 68 400 / 149 184 lose one; out of a perfect tube at N = 96 and 144,
+  **zero** add and 64 320 / 151 776 lose, the cheapest losing move costing exactly 12, which is the
+  spark threshold of Q13 seen from the other side. Out of a **melted** graph the picture reverses: 10 254
+  moves add a square, and the cheapest of them is **downhill by 75**. So building is not merely rarer
+  than breaking; **from order it is impossible in one step, and it becomes both possible and favourable
+  only out of disorder.** Curling needs squares added (a tube carries 1.25 a point against a sheet's 1),
+  so the consequence for O20 is structural rather than statistical: **energy put into space cannot fold
+  it, because the first step of folding does not exist; the only thing one move can do to order is break
+  it.** A fold would have to go through a melted intermediate, and the quench of O21 says a cooled melt
+  arrives at a jammed defective state rather than a curl. *Ours, unverified, and it is arithmetic rather
+  than sampling, so it does not depend on any chain.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
