@@ -82,3 +82,29 @@ knowledge, not read):
   energy that cannot be absorbed piles up at the moving fronts (bubble walls), which is lumpy, the
   opposite of dark energy's evenness; in the T9 sealed boxes, heat with too little room melted the
   new space rather than forming a smooth background.
+
+## Added later on 2026-09-22: the four pieces are one mechanism, and what blocks it here
+
+The author's point, put in order: dark energy, gravity, black holes and a new Big Bang are not four
+ideas but one. If space is only stable for now, the excess it holds *is* dark energy; having
+somewhere to fall to *is* gravity; a region that has finished falling is a black hole, which is a
+re-curled region, which is X again; and two of those colliding supply the activation for a new
+space. X opens into space, space refolds into X, and the loop closes.
+
+What the model says (*ours, unverified*):
+
+- **The loop cannot be built at one λ.** Both curls scale the same way: a tube costs 4(λ − 1) per
+  vertex and a knot 8(λ − 1), so they are always on the same side of the flat sheet. Above λ = 1 the
+  sheet is the ground state and curled things decay into it (the track T7 tests); below λ = 1 curling
+  pays and the sheet decays into knots (the rehearsal of VISION Update 8). **A cycle needs space to
+  be both the product of a conversion and metastable against re-curling, and no single λ gives
+  that.** Building it would need an ingredient the model does not have, which under S1 needs a dated
+  VISION decision before any run.
+- **One hint that such an ingredient may exist inside the published family.** With triangles and
+  pentagons allowed (`full_curvature.py`, Q10), a closed 30-vertex piece sits at exactly the energy
+  of the flat sheet at the published prices. That is a re-curled object that costs nothing to form,
+  which is the shape "space wants to refold" needs. It is exact arithmetic at one size, the sampler
+  there is slow and its ergodicity unproven, and nothing has been run.
+- **The cheap discriminating test is already on the list:** what a local spark does to a flat sheet
+  (item 3(ii) above; `docs/design/known_physics_plan.md` rung 3). Re-curling supports the author's
+  black hole; melting supports [T25]'s.
