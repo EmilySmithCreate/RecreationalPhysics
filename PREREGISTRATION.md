@@ -257,4 +257,47 @@ Tubes 16×4, 24×4, 48×4 (N = 64, 96, 192), λ = 1.25, sealed (leak = 0). One d
 
 Whether the universe had a bath. What C means physically beyond "how many other places the energy can go". Anything at λ ≠ 1.25 or off the tube.
 
+## T10. Does the leftover grow with the space? Leftover rings in a cold sealed box
+
+**Written 2026-09-22, while T9 runs and before any run of this design.** It is the test VISION S2′ names as the unmet, falsifiable part. **Disclosure of what had been seen when it was written:** T9's N = 64 and N = 96 tables (every C) and the verdict they give; in those, the sheets at C ≥ N/2 hold a leftover ring in 83 to 100 % of replicas, and the number of rings per sheet had not been read. T7b's ledges at N = 144 and 192 sit at released fractions consistent with one to three rings (0.77 to 0.90, where one ring is 0.90 to 0.93). No N = 192 sealed end state had been read. This section adds nothing to T9's verdict items.
+
+### The question
+
+Claim 5 says what did not convert accounts for the rest of the books. If the leftover in a cold sealed box is one ring however large the tube, it is a single defect, negligible at scale, and claim 5 is bookkeeping (VISION Update 10's worry, back again). If it grows in proportion to the space — a density — claim 5 is a statement about the universe's contents. At C = 2N the bath ends near g ≈ 0.5, far below the temperature at which a ring can climb out (at g = 1.5 the ledge lasts 600 to 27,000 sweeps; O13), so whatever the front leaves behind is frozen and the count is the front's own doing: a rate per length swept, or a one-off.
+
+### What will be run
+
+Tubes 16×4, 24×4, 48×4, 72×4 (N = 64, 96, 192, 288), λ = 1.25, sealed, spark 12, **C = 2N**, twenty replicas, 30,000 sweeps, a fresh seed (not T9's). `scripts/run_sealed_tube.py`, unchanged; the same observables as T9.
+
+### Observables
+
+1. **Rings**: the number of connected pieces of vertices at d = 1 in the final state, and the size of the largest.
+2. **Excess energy** of the final state over the perfect sheet, H − 0, in units.
+3. **Conversion fraction** over the last 3,000 sweeps.
+4. Energy bookkeeping, exact. A gate.
+
+### Predictions, written before looking
+
+*Ours, unverified.*
+
+- (a) **The leftover grows with the space.** The mean number of rings rises with N: a straight line through the four means has positive slope at more than three standard errors, and the mean at N = 288 exceeds the mean at N = 64 by more than the replica scatter at either size.
+- (b) **Rings are additive.** Excess energy = 14 units per ring when the rings are separate pieces of four. For this energy, which is a sum over edges, two rings sharing no edge contribute independently, so this is a check that "ring" is being read correctly, not a physics prediction. Pieces of eight (two rings adjacent) are recorded, not predicted.
+- (c) **Nothing leaves.** The conversion fraction changes by less than 14/N (one ring's worth) over the last 3,000 sweeps in every replica, and the bath ends below g = 1 at every N.
+
+### Gates
+
+1. Energy conservation exact in every run.
+2. Twenty replicas per N.
+3. Every replica converts (f_final ≥ 0.9). Update 9 found the 12-unit spark sufficient at every size to 192; N = 288 is new. A size at which the spark fails is reported and excluded, and the verdict is then over the sizes that converted, with that said.
+
+### Verdicts
+
+- **THE LEFTOVER GROWS WITH THE SPACE** — (a) and (c) hold.
+- **ONE RING, HOWEVER LARGE** — the mean count is within the replica scatter of 1 at every size and the slope is not positive at three standard errors; (c) holds.
+- **INCONCLUSIVE** — anything else, including (c) failing (rings leaving within the run, so the count is not the front's).
+
+### What this cannot show
+
+Anything at other C, where the bath is warm enough for rings to come and go and the leftover is thermal rather than kinetic; that is a different question with a different prediction and is not run here. What a ring is for the universe. Whether rings attract one another: (b) reads separated rings, and pieces of eight are only counted.
+
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.
