@@ -203,9 +203,10 @@
   .num { font-variant-numeric: tabular-nums; }
   .lg .c-t { font-size: 15px; } .lg .c-tm { font-size: 14px; } .lg .c-tb { font-size: 15.5px; }
   ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.7rem; counter-reset: st; }
-  ol.steps > li { counter-increment: st; display: grid; grid-template-columns: 2.1rem 1fr; gap: .95rem; align-items: start; }
-  ol.steps > li::before { content: counter(st); font: 800 .8rem/1 var(--ui); color: var(--x); border-top: 2px solid var(--x);
-                          padding-top: .45rem; letter-spacing: .04em; }
+  ol.steps > li { counter-increment: st; display: grid; grid-template-columns: 2.1rem 1fr; column-gap: .95rem; row-gap: 0; align-items: start; }
+  ol.steps > li > * { grid-column: 2; }          /* keep every child out of the number column */
+  ol.steps > li::before { content: counter(st); grid-column: 1; grid-row: 1; font: 800 .8rem/1 var(--ui);
+                          color: var(--x); border-top: 2px solid var(--x); padding-top: .45rem; letter-spacing: .04em; }
   ol.steps h3 { margin: 0 0 .35rem; font-size: 1.06rem; }
   ol.steps p { margin: 0 0 .5rem; }
   ol.steps figure.fig { margin-top: .9rem; }
