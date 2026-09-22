@@ -1,6 +1,8 @@
 # Design brief: a model of X turning into space
 
-*Started 2026-09-20 at the author's request. A brief, not a model: nothing here has been built. It says what a design has to achieve, which factors decide how two phases relate, what the published model family already gives us, and which cheap experiments come first. Physics reasoning in it is ours and unreviewed unless a source is given.*
+**Status, 2026-09-22: much of the "cheap experiments" half of this brief has since been run.** The tube (the stand-in for X) has a pre-registered verdict of TWO-STATE CHANGE at N = 64, 96, 192 (`PREREGISTRATION.md` T7), the sealed runs are BONFIRE WITH A THRESHOLD (T9), and the leftover is one four-point remnant however large the space (T10, T11). `docs/HANDOFF.md` has the current state, and `docs/design/known_physics_plan.md` carries the next ladder. The brief below is left as written.
+
+*Started 2026-09-20 at the author's request. A brief, not a model: nothing in it had been built when it was written. It says what a design has to achieve, which factors decide how two phases relate, what the published model family already gives us, and which cheap experiments come first. Physics reasoning in it is ours and unreviewed unless a source is given.*
 
 ## The goal, in the author's words
 

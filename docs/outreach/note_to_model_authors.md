@@ -1,15 +1,23 @@
 # Draft note to the model's authors (not sent)
 
 Drafted 2026-09-22 for Emily to send if she chooses. VISION S5 and TASKS "Before anything is shown to
-anyone" list what it should contain. Addresses are deliberately not filled in here. Before sending:
-make sure the repository is public, and check each number against `ASSUMPTIONS.md` once more.
+anyone" list what it should contain. Before sending: make sure the repository is public, and check each
+number against `ASSUMPTIONS.md` once more.
+
+**Addresses, found 2026-09-22 from published sources.** Carlo A. Trugenberger (SwissScientific
+Technologies SA, Geneva): ca.trugenberger@bluewin.ch, listed on the IOPscience page of his 2024
+Classical and Quantum Gravity paper. Fabio Biancalana (Associate Professor, Heriot-Watt):
+F.Biancalana@hw.ac.uk, from his university staff page. Christy Koji Kelly has no published address
+we could find; as of 2025 they were a Special Postdoctoral Researcher at RIKEN iTHEMS. Either use
+arXiv's "view email" link on arXiv:1901.09870, which reveals the submitting author's address after a
+check, or ask Fabio Biancalana to pass the note on.
 
 ---
 
-**To:** C. Trugenberger, C. Kelly, F. Biancalana
+**To:** ca.trugenberger@bluewin.ch, F.Biancalana@hw.ac.uk (and Christy Kelly, if an address can be found)
 **Subject:** Reproducing your combinatorial quantum gravity model: two questions (Fig. 3, and order at degree 4)
 
-Dear Dr Trugenberger, Dr Kelly and Dr Biancalana,
+Dear Dr Trugenberger, Dr Biancalana and Dr Kelly,
 
 I'm a software engineer who has spent the past few weeks reproducing your 2D combinatorial quantum
 gravity model as a hobby project, with the code and pre-registered analyses in the open:
@@ -18,12 +26,16 @@ questions, and thought two small observations might interest you.
 
 **Questions**
 
-1. *Fig. 3 of the 2025 review (arXiv:2512.17676).* At N = 160 our code reproduces Fig. 8a of the
-   2019 paper to within 0.005, and matches Fig. 3 at both ends (g ≥ 6.3, and g ≈ 2), but not in
-   between: there Fig. 3's points drop almost vertically while ours — with the hard cap and with
-   the soft penalty, in equilibrium — rise smoothly. The two published figures also differ from
-   each other at g = 5 (0.62 against 0.99). Could you tell me which variant, and roughly what run
-   length, Fig. 3 used?
+1. *The numerical protocol behind Fig. 3 of the 2025 review (arXiv:2512.17676).* The text says the
+   full Hamiltonian gives the continuous transition and that bipartite graphs may be used, which is
+   what we run, and our curve meets Fig. 3 at both ends: S/N = 0.126 in the random phase and 1 in
+   the geometric one. The difference is where the rise happens. Between g ≈ 2 and 6.3 Fig. 3's
+   points drop almost vertically while ours rises smoothly, up to 0.41 apart, and the same code and
+   run reproduces Fig. 8a of the 2019 paper to an rms of 0.005; the two figures also differ from
+   each other at g = 5 (0.62 against 0.99). Could you say roughly how long the Fig. 3 runs were and
+   how equilibration was checked, and whether the hard-core restriction of the 2019 paper (no edge
+   above 2D − 2 squares) was imposed in those runs? Ours agree to 0.003 between opposite starting
+   states there, so I would like to know what we are doing differently.
 2. *Order at degree 4.* The 2019 paper describes a finite-size analysis as out of reach, and
    Dr Kelly's thesis abstract says higher-degree results appear first-order while staying nearly
    geometric. Is there a degree-4 finite-size analysis I have missed? Ours, with the full rule at

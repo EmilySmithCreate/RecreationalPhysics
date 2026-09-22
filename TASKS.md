@@ -118,7 +118,9 @@ The owner asked that the sources be read before the machinery was designed. They
 
 **The one thing that must be checked before any of it is interpreted.** Taylor's theorem covers a degree-constrained space. Ours also carries the hard-core constraint, and **[Swap17] states in its title that adding a constraint can destroy exactly this swap-connectivity.** So irreducibility on our space is not inherited and has to be demonstrated: restrict T4's exhaustive enumeration to connected valid states at N = 16 and 18 and check that the switch, refusing disconnecting moves, still joins them all. That machinery exists (`small_graphs.explore`); it needs one filter. **If it fails, the plan changes and we report that it failed.**
 
-## T6. The order of the transition  ☐  — REDIRECTED 2026-09-21, from flat-histogram sampling to parallel tempering
+## T6. The order of the transition  ☑ (2026-09-22, both ends; the λ ≥ 1 verdict left INCONCLUSIVE by the author)  — REDIRECTED 2026-09-21, from flat-histogram sampling to parallel tempering
+
+**Status, 2026-09-22.** Run at both ends and the verdicts are on the record (`PREREGISTRATION.md` T6; `ASSUMPTIONS.md` O11, O12, O17). **λ = 0, the control: FIRST ORDER** — latent heat 10.32 / 11.27 / 12.50 per point at N = 48 / 64 / 96, barrier growing at 34 standard errors, under criterion 3 as repaired by the author (amendment 4). **λ = 1, 1.25, 1.5: INCONCLUSIVE, final** — one hump at every λ, size and replica, any latent heat below 1.30 / 1.28 / 1.26 per point at N = 100 and falling; criterion 3 cannot be read where the cold phase sits at H = 0, the φ-cumulant replacement (amendment 5 (a)) reads the hot edge instead of the transition, and the author chose to leave the verdict there. The pre-registered sizes 144 and 256 were not reached.
 
 **Why the change.** The flat-histogram instrument was built, validated against two exactly known answers, and then failed on the real problem for a structural reason (ASSUMPTIONS Q17): at N = 36 it made **zero round trips** across its own window, so ln f never fell, the weights ran to a spread of 24 796 against a true spread of order 90, and the second stage froze in a single bin. A restricted window does produce round trips, which locates the fault in the diffusion distance rather than in the kernel — but the measurement needs a window spanning both phases, which is the wide one that cannot be crossed.
 
@@ -152,13 +154,17 @@ Accept: Ising check within tolerance; s(φ) curves for N ∈ {36, 64, 100, 160} 
 
 Write `PREREGISTRATION.md`: λ ∈ {0, 0.25, 0.5, 0.75, 1}; sizes; observables (dent in s(φ) and its scaling with N; hysteresis width; largest-component fraction; Q4 census); what counts as first order, as continuous, as inconclusive; what would count against the hypothesis. Commit before running.
 
-## T8. Run the λ map, then the sealed runs  ☐
+## T8. Run the λ map, then the sealed runs  ◑ (the sealed half done 2026-09-22)
+
+**Status, 2026-09-22.** The sealed half is done for the order → order change: `PREREGISTRATION.md` T9, verdict BONFIRE WITH A THRESHOLD (`ASSUMPTIONS.md` O14), plus T10 and T11 on the leftover. The λ map itself has not been run; what is known about where the metastable window closes is that the tube is metastable at λ = 1.25 and already unstable at 1.5 (O13), so the edge lies between.
 
 **Reframed 2026-09-21.** This is not an open question nobody has looked at; it is a **live disagreement between two groups, each of which has only looked at one end of the knob.** [GV21] finds first order with hysteresis at λ = 0, where the cold phase is knots and not a space, and says the Trugenberger group's earlier runs were too small to hold more than one hypercube so the configuration looked homogeneous. [T25] reports a continuous transition at λ = 1, where the cold phase *is* a space. **They are not contradicting each other on the same model.** No published work runs both energies in one code at matched sizes and asks how the barrier scales, which is exactly what T6 plus this task would do. Say so in the write-up and in the letter.
 
 Questions: at which λ does the order change? Is there any λ with a first-order transition **and** a connected space (VISION S2 and S4 together)? Then fixed-total (sealed) runs as in VISION step 3.
 
 ## T9. Unexplained drift  ☐
+
+**Status, 2026-09-22.** Not attempted since. Kelly's thesis abstract ("the critical temperature appears to be asymptotically nonfinite") is the one published statement that bears on it; the thesis PDF is now in `docs/reading/` locally (PDFs are gitignored) and has not been read.
 
 **Correction, 2026-09-21: the supporting citation is withdrawn.** [DQM25] was recorded as reporting the transition moving with ln N; it was read in full by the owner and **it does not say that.** The claim came from a third-party review page, not the paper. The drift is now supported by our own measurement and by the non-collapse visible in [KTB19] Fig. 8a, and by nothing else.
 
@@ -205,7 +211,9 @@ Read in this order:
 
 Accept: a written summary of what each says, what is already settled, and what — if anything — a hobby project could add. **If the honest answer is "nothing", that is the result and the task ends there**, which is a perfectly good outcome and cheaper than finding out later. Building a second model needs its own dated VISION decision after this, under S1.
 
-## T11. What does the half-converted state look like?  ☐
+## T11. What does the half-converted state look like?  ◑ (answered for the order → order change)
+
+**Status, 2026-09-22.** For the tube → sheet change it is answered: at half conversion 98.8 to 99.8 % of vertices are at d ∈ {1, 2} and 85 to 99 % of the converted part is one connected front, at N = 64 to 192 (`ASSUMPTIONS.md` O13), and sealed it ends as a clean sheet with one four-point remnant (O14, O15). **For the change out of the random phase it is still not looked at**, by us or in anything we have read.
 
 **Added 2026-09-21** (owner's question; VISION Update 12). Every statement in this project about the S2-against-S4 tension, first order but no space at lambda = 0 and a space but no latent heat at lambda = 1, is about the **fully settled** state: the ground state, or a run cooled far past the transition. Nothing is ever in that state. A universe with matter in it is partly converted, which is [T25]'s own position, since for him matter *is* the unconverted part.
 
@@ -221,6 +229,14 @@ Needs no new machinery: `sealed.py` and `connectivity.py` both exist. Pre-regist
 
 Accept: rung 1 reproduces [T25]'s published dimensions with our tools before any number of ours is read.
 
+**Rung 3, first half, done 2026-09-22 and it is exact (O22).** Two defects in a flat sheet cost exactly
+twice one at every separation, and 16 less than twice only where they touch. The energy is a sum of
+per-edge terms, so this holds for any defects that share no square: **there is no long-range force between
+leftovers in this model at fixed wiring.** Anything like gravity here would have to be entropic, which is a
+different measurement and has not been made. The rest of rung 3 -- what a local jolt does to a flat sheet,
+which is the one route left for the author's re-curled black hole (O20, O21) -- still needs the local-spark
+protocol of T14 and is the next thing on this track.
+
 ## T14. Leftover per seed: could the leftover be a real share?  ☐
 
 **Added 2026-09-22** (author's question). Every tube so far opened from one seed (every cold T10 box caught mid-conversion, 78 of 80, had one sheet patch), so whether each seed leaves a scrap is untested. Plant k = 1, 2, 4, 8 seeds with a local spark on a long tube in a cold sealed box and count leftovers; or use tubes long enough (N ≳ 400) for seeds to form naturally. Pre-register: leftovers ∝ k against leftovers = 1 whatever k. Shares the local-spark code with T13 rung 3. Details in the plan above.
@@ -232,5 +248,7 @@ Accept: rung 1 reproduces [T25]'s published dimensions with our tools before any
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?
 
 ## Before anything is shown to anyone
+
+**Status, 2026-09-22.** The note is drafted and not sent: `docs/outreach/note_to_model_authors.md`, with the two addresses that are published (C. A. Trugenberger, F. Biancalana) and the route for the third. A plain-language write-up for a general audience is in `docs/public/`. Nothing has been sent or posted yet.
 
 VISION S5: a physicist reads it. Draft a short, honest note to C. Kelly, F. Biancalana or C. Trugenberger once Gates A and B have passed: what was reproduced, what was not, the code link, and a request for a sanity check. **Ask also where the evidence for "continuous" lives.** [T25] cites [29] for "several other diagnostics ... with positive results", and [29] is [KTB19], which says of itself that a finite-size-scaling analysis is "at present even ... precluded" and that "we are some way off the asymptotic regime". So the decisive test has not been attempted by anyone (ASSUMPTIONS, section D). That is the gap T6 fills, and we are better placed than they were. The sharpest way to put the disagreement (ASSUMPTIONS, axis section): we match Fig. 3 at both ends, to 0.001 to 0.039 over eleven points from g = 6.3 to 178 and to 0.04 at g = 2, and differ only in between, where its points drop almost vertically at one coupling and ours rise smoothly. The author asked whether Fig. 3 might have allowed triangles and pentagons, since [T25]'s Eq. (22) includes them and it says only that one *can* use bipartite graphs. Tested and ruled out: allowing them roughly halves the square count in the hot phase, while Fig. 3's hot dots sit where the bipartite value is (ASSUMPTIONS, axis section). So the question for the authors is the narrow one about the window between g = 2 and g = 6.3. Also worth a line each: the 14-vertex baby universe (Q8) and the 30-vertex triangle-and-pentagon piece with H = 0 (Q10).
