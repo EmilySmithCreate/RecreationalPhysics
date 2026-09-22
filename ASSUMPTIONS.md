@@ -593,6 +593,29 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** What the twelve states are. That they are stable rather than slow (six unchanged over 70,000 sweeps; six drifting). Any verdict.
 
+  **Third addendum, 2026-09-22, later: amendment 4 (a) enacted by Emily and run — the twelve read from their wiring; verdict TWO-STATE CHANGE at N = 64, 96, 192.** Replays `configs/t7d_lam125_n{64,96,144,192a,192b}.json` (same seeds, same 100,000 cap, final adjacency saved to `results/t7d_lam125_n*_adj/`), all twelve reproducing their originals exactly. Read by `scripts/analyse_t7_states.py` (tests: sheet holds 0, tube holds 1 per point and is one d = 1 piece, naming, the 1 % tolerance):
+
+  | N | replica | held (units) | S − N, X | off the sheet | gate 3 |
+  |---|---|---|---|---|---|
+  | 64 | 25 | 18 | 2, 10 | two 4-point d = 1 pieces | pass |
+  | 96 | 3 | 16 | 4, 16 | two 8-point d = 1 pieces | pass |
+  | 96 | 10 | 38 | 2, 14 | one 8-point d = 1 piece; two d = 3 pairs; two d = 1 pairs | pass |
+  | 96 | 20 | 40 | 0, 8 | two d = 1 pairs, two d = 3 pairs, a d = 1 and a d = 3 singleton | pass |
+  | 96 | 23 | 20 | 0, 4 | **nothing** — every vertex at d = 2 | pass |
+  | 144 | 3 | 8 (final) | 2, 8 | two 4-point d = 1 pieces | **FAIL** — held ≈ 23 units from 30,000 to nearly 100,000 sweeps, then dropped to 8 inside the last measuring window, so the recorded release is that window's average and does not match the final structure |
+  | 144 | 5 | 18 | 2, 10 | two 4-point d = 1 pieces | pass |
+  | 192 | 3 | 34 | 1, 10 | one 4-point d = 1 piece; two d = 3 pairs; two d = 1 pairs | pass |
+  | 192 | 5 | 38 | 2, 14 | one 8-point d = 1 piece; two d = 3 pairs; two d = 1 pairs | pass |
+  | 192 | 8 | 45 | 5, 25 | two 8-point and one 4-point d = 1 pieces; a 3-point d = 1 and a 3-point d = 3 piece | pass |
+  | 192 | 20 | 8 | 2, 8 | two 4-point d = 1 pieces | pass |
+  | 192 | 22 | 34 | 1, 10 | one 4-point d = 1 piece; two d = 3 pairs; two d = 1 pairs | pass |
+
+  **Gate 3 under the enacted wording:** eleven pass; N = 144 replica 3 fails, so N = 144 fails gate 3 and is reported and not interpreted (`scripts/analyse_t7.py lam125 t7b t7c t7d`). **PRE-REGISTERED VERDICT, λ = 1.25, sizes 64, 96, 192: TWO-STATE CHANGE.** Predictions (a), (b), (c) hold at 144 too; only the energy gate fails there, on one decay.
+
+  **What the rare resting states are, as far as the graph says.** Not new arrangements: combinations of small defects in an otherwise flat sheet. Four-point d = 1 pieces (the remnant's composition) appear in pairs holding 8 or 18 units together, not the 28 two isolated remnants would hold, so paired pieces are not two independent remnants — they share surplus edges or sit adjacent (*ours, unverified*; positions not yet read). Eight-point d = 1 pieces hold what two merged remnants might. Pairs of d = 1 and d = 3 vertices recur, the ingredients of O15's twist, here split into separate two-point pieces. And one state (N = 96, replica 23) holds 20 units with every vertex at d = 2: surplus squares on four edges that the local-dimension count does not see. All are fixed-size — 8 to 45 units, however large the tube — so they change nothing about O15's reading of claim 5.
+
+  **Not claimed.** Which of the twelve are stable rather than slow beyond the six already seen unchanged; the geometry of the paired pieces; that the list of species is complete.
+
 - **O14 T9: the sealed tube is a bonfire with a threshold; no slush; the leftover is one ring — at every size.** (2026-09-22. `t9_n{64,96,192}_C*`, 21 configs, 420 runs; `scripts/analyse_t9.py`; PREREGISTRATION T9, no amendments.)
 
   **The verdict as written: BONFIRE WITH A THRESHOLD.** Every run converted (the spark is still the spark, gate 2), energy conserved to the last unit in all 420 (gate 1), twenty replicas each (gate 3).
@@ -666,6 +689,18 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   **Proposed as T6 amendment 5, for Emily, not enacted.** At λ ≥ 1, criterion 3 uses a statistic that does not depend on where the energy zero sits: the fourth-order cumulant of φ itself (the order parameter), or the energy cumulant with H measured from the hot-phase mean. Computable from the `t6c` files as they stand; nothing re-run. If not adopted, the alternative is to declare criterion 3 uninformative at λ ≥ 1 and issue NO EVIDENCE OF FIRST ORDER AT THESE SIZES on criteria 1 and 2 with the bound — also her decision, not mine.
 
   **Not claimed.** The word "continuous". Anything between the three λ values or above N = 100. That the λ = 1 cold-end pair is a transition (it is a degeneracy).
+
+  **Addendum, 2026-09-22, later: amendment 5 enacted by Emily, option (a); criterion 3 still does not decide, and the enacted wording is the reason.** `scripts/analyse_t6_phi_binder.py` (tests in `tests/test_t6_phi_binder.py`: the two-spike value, a narrow single hump, the criterion's monotonicity) computes U_φ = 1 − ⟨φ⁴⟩/3⟨φ²⟩² from every rung's joint histogram, reweighted within the φ analysis's usual range, and takes the minimum per replica as the enacted wording says:
+
+  | λ | U_min, N = 36 / 64 / 100 | 2/3 − U_min | replica spread | where the minimum sits |
+  |---|---|---|---|---|
+  | 1 | 0.65661 / 0.65509 / 0.65524 | 0.0101 / 0.0116 / 0.0114 | ≤ 0.0006 | g = 10.0, every replica |
+  | 1.25 | 0.65673 / 0.65539 / 0.65493 | 0.0099 / 0.0113 / 0.0117 | ≤ 0.0006 | g = 10.0, every replica |
+  | 1.5 | 0.65692 / 0.65542 / 0.65522 | 0.0098 / 0.0113 / 0.0114 | ≤ 0.0007 | g = 10.0, every replica |
+
+  The gap does not shrink at each step, so criterion 3 is NOT MET as enacted and the verdict stays **INCONCLUSIVE**. But the table's last column says why, and it is not physics: **U_φ has no dip at the transition.** Read at each rung's own coupling it falls monotonically from 2/3 as g rises — at λ = 1.25, N = 100: 0.6664 at g = 2.35 (φ = 0.97), 0.6645 at 3.65 (φ = 0.82), 0.6621 at 5.5 (φ = 0.66), 0.6580 at 8.0 (φ = 0.52); N = 64 and 36 the same shape — because 2/3 − U is set by the relative width of P(φ), and that grows as the mean of φ falls. So the minimum over every coupling is always the hottest coupling the reweight admits (g = 10, 25 % above the top rung), in the random phase, and it measures how the hot-phase φ at fixed g falls with N (the drift of O5 and T9, and the 1/N random-phase floor), not the transition. The energy cumulant has a real dip because the energy fluctuations peak at the transition; the φ cumulant of a single hump has none. **This is a defect in the enacted wording, which I drafted**: it was fixed before any value was computed, as required, but I did not check the shape of U_φ first. The measurements that carry the result are untouched — one hump at every λ, size and replica, any lump below 1.30, 1.28, 1.26 per point at N = 100 and falling.
+
+  **What is open, and it is Emily's decision, not enacted.** (i) Leave INCONCLUSIVE as the final word from these runs; the bound stands as the result. (ii) Option (b) of amendment 5: declare criterion 3 uninformative at λ ≥ 1 and issue NO EVIDENCE OF FIRST ORDER AT THESE SIZES on criteria 1 and 2 with the bound — now a choice made after seeing option (a) fail on a technicality, and to be recorded as such. (iii) Restrict U_min to the transition window — not recommended: it would be a third rule change for this test, and a single-hump U_φ has no feature there to read anyway.
 
 ## Provenance
 

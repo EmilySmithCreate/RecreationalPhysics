@@ -113,6 +113,15 @@ def main(path, out_dir="results"):
                     if len(windows) >= 2 and abs(windows[-1] - windows[-2]) <= 0.005 * 4.0 * (lam - 1.0)                             and abs(windows[-1] - 4.0 * (lam - 1.0)) <= 0.01 * 4.0 * (lam - 1.0):
                         break
                 sweeps_done += spent
+                # T7 amendment 4 (a): keep the resting state, so it can be read from its wiring
+                # instead of assumed. Saving reads the graph and uses no random numbers.
+                if cfg.get("save_adjacency"):
+                    adj_dir = Path(out_dir) / (cfg["name"] + "_adj")
+                    adj_dir.mkdir(parents=True, exist_ok=True)
+                    target = adj_dir / ("N%d_rep%d.npz" % (n, rep))
+                    if target.exists():
+                        raise FileExistsError("results are append-only; %s exists" % target)
+                    np.savez(target, adj=adj, part=part, lam=lam, g=g, h0=h0 * n)
                 h1 = h0 - windows[-1]
                 first_window = windows[0]
                 ledge = sum(1 for w in windows[:-1] if abs(w - windows[-1]) > 0.05 * 4.0 * (lam - 1.0)) * settle

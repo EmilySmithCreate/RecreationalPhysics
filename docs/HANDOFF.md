@@ -30,8 +30,8 @@ per point above the flat sheet at λ > 1, metastable at λ = 1.25 and g = 1.5, u
 | Test | Question | Verdict | Where |
 |---|---|---|---|
 | T6, λ = 0 (control) | Is the penalty-off transition first order? | **FIRST ORDER** under amendment 4 (Emily's) — lump 12.5/pt, barrier +34σ with size | O11 + addendum |
-| T6, λ ≥ 1 | Out of the random phase, with the rule on? | Reruns done, gate 4 met (46–400 trips). One hump at every λ/size/replica in the transition window; any lump < 1.3/pt at N = 100 and shrinking. **INCONCLUSIVE by the letter**: criterion 3 (Binder energy cumulant) cannot be read where the cold phase sits at H = 0. **T6 amendment 5 proposed, Emily deciding** | O12, O17 |
-| T7, λ = 1.25 | Is the tube → sheet change sharp? | All three predictions hold at 4 sizes × 2 seed sets. **Verdict withheld**: after the replays (amendment 3, enacted), 12 of 240 decays rest on states that are neither the sheet nor the four-point remnant (6 unchanged over 70,000 extra sweeps). **T7 amendment 4 proposed (read the states from the graph), Emily deciding** | O13 + two addenda |
+| T6, λ ≥ 1 | Out of the random phase, with the rule on? | Reruns done, gate 4 met (46–400 trips). One hump at every λ/size/replica; any lump < 1.3/pt at N = 100 and shrinking. Amendment 5 (a) enacted by Emily (φ cumulant): **still INCONCLUSIVE**, because the enacted wording (the assistant's) takes U_φ's minimum over all couplings and U_φ has no dip — the minimum is always the hot edge (g = 10). **Open: Emily's call** among (i) leave INCONCLUSIVE, (ii) option (b) after all, (iii) restrict to the window (not recommended) | O12, O17 + addendum |
+| T7, λ = 1.25 | Is the tube → sheet change sharp? | Amendment 4 (a) enacted by Emily: the twelve read from their wiring (`t7d_*`, `scripts/analyse_t7_states.py`). **TWO-STATE CHANGE at N = 64, 96, 192**; N = 144 fails gate 3 on one decay (changed state inside its last measuring window). Predictions hold at all four sizes. `python scripts/analyse_t7.py lam125 t7b t7c t7d` | O13 + three addenda |
 | T9 | Sealed tube: bonfire or slush? | **BONFIRE WITH A THRESHOLD** at 64/96/192; no stall in 420 runs; crossover ∈ (N/4, N/2], predicted N/3.5 inside | O14 |
 | T10 | Does the leftover grow with the space? | **ONE RING, HOWEVER LARGE** (0.9–1.05 per box at 64–288). Claim 5 is bookkeeping in this model | O15 |
 | T11 | Is the one leftover a seam where the front's ends meet? | **NEITHER** — position uniform. Why exactly one: **open** | O16 |
@@ -55,7 +55,14 @@ threshold; the leftover is one small defect however big the space.
 - The early-universe changes (electroweak, QCD) are **crossovers**; freeze-out is **not** a phase transition — it
   is a precedent for claim 6 (accounting), not claim 4 (sharpness). A reader corrected this on the page.
 
-## 4. Two decisions open for Emily (explain them if she has not answered)
+## 4. Decisions (updated 2026-09-22, evening)
+
+Both decisions below were made by Emily (option (a) each) and enacted; results in section 2. **One is open
+again:** what to do with T6 criterion 3 at λ ≥ 1 now that the φ-cumulant wording turned out to read the hot
+edge (ASSUMPTIONS O17 addendum lists the three options). The text below is kept as the record of what was put
+to her.
+
+### As put to her
 
 - **T7 amendment 4.** The replays (amendment 3, done: `results/t7c_lam125_n*.csv`, `python scripts/analyse_t7.py lam125 t7b t7c`)
   showed 12 of 240 decays resting on states that are neither the sheet nor the four-point remnant, energies 8–45
@@ -80,7 +87,12 @@ threshold; the leftover is one small defect however big the space.
   order (one hump); say so plainly and record it as O17.
 - Nothing else. The laptop has 8 physical cores; do not run more than ~8 jobs.
 
+*Update, evening:* nothing running. The `t7d_*` replays finished and are read.
+
 ## 6. Natural next lines (none started; pre-register before running)
+
+0. **New, at Emily's request:** the known-physics ladder (`docs/design/known_physics_plan.md`, TASKS T13) and
+   the leftover-per-seed test (TASKS T14). Start with the reading and rung 1's reproduction gate.
 
 1. T7 replays (if Emily chooses (i)).
 2. Why one remnant per cold box — no hypothesis in hand after the seam refutation. A read of *what* the remnant is

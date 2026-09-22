@@ -215,6 +215,16 @@ Accept: sealed runs (Q12) at a total energy inside the coexistence gap, at lambd
 
 Needs no new machinery: `sealed.py` and `connectivity.py` both exist. Pre-register first (rule 4).
 
+## T13. Known physics out of the model (claim 2): the ladder  ☐
+
+**Added 2026-09-22** at the author's request. Plan: `docs/design/known_physics_plan.md`. Rungs, cheapest first: (1) is what the tube opens into really space (volume-growth and spectral dimension, curvature, locality; reproduce [T25]'s dimension numbers first); (2) is there a speed limit (front position against time; spread of a local disturbance); (3) does matter curve space and do defects attract (energy against curvature; defect–defect interaction, already seen to be non-zero in O13's third addendum; what a local spark does to a flat sheet); (4) the 3+1 and quantum claim of [T23–T25], after reading. Each run pre-registered; no new energy knob without a VISION decision.
+
+Accept: rung 1 reproduces [T25]'s published dimensions with our tools before any number of ours is read.
+
+## T14. Leftover per seed: could the leftover be a real share?  ☐
+
+**Added 2026-09-22** (author's question). Every tube so far opened from one seed (every cold T10 box caught mid-conversion, 78 of 80, had one sheet patch), so whether each seed leaves a scrap is untested. Plant k = 1, 2, 4, 8 seeds with a local spark on a long tube in a cold sealed box and count leftovers; or use tubes long enough (N ≳ 400) for seeds to form naturally. Pre-register: leftovers ∝ k against leftovers = 1 whatever k. Shares the local-spark code with T13 rung 3. Details in the plan above.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

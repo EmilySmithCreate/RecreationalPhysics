@@ -3,6 +3,9 @@
     python scripts/analyse_t7.py lam125             (reads results/t7_lam125_n*.csv)
     python scripts/analyse_t7.py lam125 t7b         (the rerun under amendment 1)
     python scripts/analyse_t7.py lam125 t7b t7c     (amendment 3: t7b with its replayed decays swapped in)
+    python scripts/analyse_t7.py lam125 t7b t7c t7d (amendment 4 (a): decays whose resting state was
+                                                     read from its wiring pass gate 3 when their
+                                                     energy matches it; scripts/analyse_t7_states.py)
 
 Applies PREREGISTRATION.md section T7 exactly: gates 2 and 3, the three predictions, and the
 three verdicts. With a replay prefix, rows of the replay files replace the base rows with the
@@ -65,7 +68,12 @@ def merge_replays(base, replay):
     return merged, dict(replaced), dict(rejected)
 
 
-def main(tag, out_dir="results", prefix="t7", replay_prefix=None):
+def main(tag, out_dir="results", prefix="t7", replay_prefix=None, identified_prefix=None):
+    identified = {}
+    if identified_prefix:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import analyse_t7_states                                  # noqa: E402
+        identified = analyse_t7_states.check_all(out_dir, identified_prefix, tag)
     by_n = load(prefix, tag, out_dir)
     if not by_n:
         print("no results for", tag); return
@@ -92,7 +100,13 @@ def main(tag, out_dir="results", prefix="t7", replay_prefix=None):
         # decay reached -- the full sheet, or the ledge that is the four-point remnant
         at_sheet = np.abs(rel - expect) <= ENERGY_TOL * expect
         at_ring = np.abs(rel - (expect - ring)) <= ENERGY_TOL * expect
-        g3 = bool(np.all(at_sheet | at_ring))
+        # gate 3 under amendment 4 (a): a decay whose resting state was read from its wiring passes
+        # exactly when its recorded release matches the energy of that structure
+        read = np.array([(n, int(r["replica"])) in identified and identified[(n, int(r["replica"]))]["ok"]
+                         for r in rows], dtype=bool)
+        at_ring = at_ring & ~read
+        at_sheet = at_sheet & ~read
+        g3 = bool(np.all(at_sheet | at_ring | read))
         waits = np.array([float(r["waiting"]) for r in rows if r["waiting"]])
         cv = waits.std(ddof=1) / waits.mean() if len(waits) > 1 else np.nan
         two = np.array([(int(r["d1_50"]) + int(r["d2_50"])) / n for r in rows if r["d2_50"] != ""])
@@ -107,9 +121,12 @@ def main(tag, out_dir="results", prefix="t7", replay_prefix=None):
                  "%.2f +/- %.2f" % (largest.mean(), largest.std(ddof=1) if len(largest) > 1 else 0),
                  "%.1f" % pieces.mean(),
                  "Y" if a else "n", "Y" if b else "n", "Y" if c else "n"))
-        print("      gate 3: %d at the sheet (%.3f), %d on the four-point ledge (%.3f), %d at neither%s"
-              % (at_sheet.sum(), expect, at_ring.sum(), expect - ring, (~(at_sheet | at_ring)).sum(),
-                 "" if g3 else " -> released " + ", ".join("%.3f" % v for v in sorted(rel[~(at_sheet | at_ring)]))))
+        neither = ~(at_sheet | at_ring | read)
+        print("      gate 3: %d at the sheet (%.3f), %d on the four-point ledge (%.3f), %s%d at neither%s"
+              % (at_sheet.sum(), expect, at_ring.sum(), expect - ring,
+                 ("%d read from their wiring and matching, " % read.sum()) if identified else "",
+                 neither.sum(),
+                 "" if g3 else " -> released " + ", ".join("%.3f" % v for v in sorted(rel[neither]))))
         if "settle_sweeps" in rows[0]:
             caps = sorted(int(r["replica"]) for r in rows if r["settle_sweeps"] and float(r["settle_sweeps"]) >= 100000)
             unsettled = sorted(int(r["replica"]) for r in rows if r["settle_sweeps"] and float(r["settle_sweeps"]) >= 30000 and int(r["replica"]) not in caps)
@@ -142,4 +159,5 @@ def main(tag, out_dir="results", prefix="t7", replay_prefix=None):
 if __name__ == "__main__":
     main(sys.argv[1] if len(sys.argv) > 1 else "lam125",
          prefix=(sys.argv[2] if len(sys.argv) > 2 else "t7"),
-         replay_prefix=(sys.argv[3] if len(sys.argv) > 3 else None))
+         replay_prefix=(sys.argv[3] if len(sys.argv) > 3 else None),
+         identified_prefix=(sys.argv[4] if len(sys.argv) > 4 else None))
