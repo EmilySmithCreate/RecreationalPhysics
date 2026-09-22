@@ -773,10 +773,20 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   in a defective state that is neither space nor a knot, and the six runs agree closely enough that the level
   looks characteristic rather than accidental. That is a kinetic statement and not an equilibrium one -- at
   that acceptance the chain has nearly stopped -- and it is the third of these three predictions, so the run
-  that mattered most is the one that failed. *Read against the author's picture of a black hole interior
-  (2026-09-22): a region that has been melted and then left cold does not become space again and does not
-  become a knot; it stays jammed and disordered, which is at least the right shape for something nothing
-  comes back out of.*
+  that mattered most is the one that failed.
+
+  **WITHDRAWN the same evening, and the author called it before the check was run.** She asked whether
+  anyone has ever seen such a jam and said she did not believe it exists: there should be two phases and
+  nothing between them. **The check agrees with her.** From where each run stopped, the only question that
+  separates a resting place from a stopped walker is whether any single valid move goes downhill, and moves
+  do: 2 of the 4264 valid moves out of the first end state lower the energy, the best by 4 units, and 1 of
+  4646 out of the second, by 2. A genuine dip has none by definition, which is how the tube and the sheet
+  were verified. **So the jam is an artefact of a slow chain that had nearly stopped (acceptance 0.0016)
+  and not a third state.** Nothing in this repository shows a stable arrangement between space and the
+  random phase, and the best-sampled runs say the opposite: during a tube to sheet conversion 98.8 to
+  99.8 % of points read as one order or the other with a front between them (O13). *The lesson, and it is
+  the third time this project has learned it: a chain that has stopped and a state that is resting look
+  identical in a plot of energy against time. Ask for the moves out.*
 
 - **O22 Leftovers in this model attract only by touching, and that is a theorem, not a measurement.**
   (2026-09-22, EXACT, no sampling; `scripts/run_defect_interaction.py`, `configs/defect_interaction.json`,

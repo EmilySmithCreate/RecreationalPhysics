@@ -100,10 +100,11 @@ holes.* Five new pieces of work, all committed, all EXPLORATORY except the two t
   it:** melted is the random phase, which [T25] calls matter, and equilibrium heating randomises by
   construction, so this is weaker than it first sounds.
 - **O21: three braces runs.** A cold sheet accepts no move at all; two closed pieces survive exactly where
-  the sheet does; a cooled melt jams at about +2 a point. **The jam is the doubtful one** — Emily challenged
-  it and she is likely right. A check of whether any downhill move exists from the jammed state was running
-  when this was written (`scratchpad/is_the_jam_real.py`); if downhill moves exist the jam is a stuck
-  sampler, not a state, and O21's third bullet must be rewritten.
+  the sheet does; a cooled melt jams at about +2 a point. **The jam was not real and is withdrawn.** Emily challenged it —
+  she said she did not believe such a state exists and that there should be two phases with nothing between
+  — and the check agrees: downhill moves exist from both end states (2 of 4264, and 1 of 4646), so the chain
+  had stopped rather than settled. O21 now records that, with the lesson: a stopped chain and a resting
+  state look identical in an energy trace, so ask for the moves out.
 - **O22 (exact): no long-range force between leftovers, and it is a theorem.** Two defects cost exactly
   twice one at every separation, and 16 less only where they touch. H is a sum of per-edge terms, so any
   defects sharing no square are additive. Gravity here, if it exists, must be entropic.
