@@ -82,6 +82,28 @@ def test_graph_density_of_states_matches_the_exhaustive_enumeration():
         assert abs(got - want) < 0.12, (k, got, want)
 
 
+def test_one_dimensional_walk_in_s_matches_the_exhaustive_count_summed_over_x():
+    """The lambda = 0 instrument: bins are S alone, and the count in each is the sum over X."""
+    exact = defaultdict(int)
+    with (ROOT / "results" / "ergodicity_small.csv").open(newline="") as fh:
+        for r in csv.DictReader(fh):
+            if r["N"] == "16" and r["cap"] == "none" and r["class_id"] != "-1":
+                exact[int(r["squares"])] += int(r["labelled_states"])
+    _, adj = count_labelled_states(8, NO_CAP)
+    s_lo, s_hi = min(exact), max(exact)
+    out = dos_graph(adj.copy(), np.arange(8), (s_lo, s_hi), None, cap=NO_CAP, seed=5,
+                    ln_f_final=1e-3, sweeps_per_check=2000, max_moves=20_000_000,
+                    refine_sweeps=200_000)
+    assert out["lng"].shape == (s_hi - s_lo + 1, 1)
+    found = {i + out["s_min"] for i, _ in np.argwhere(out["seen"])}
+    assert found == set(exact), (sorted(found), sorted(exact))
+    ref = min(exact)
+    for s in sorted(exact):
+        got = out["lng"][s - s_lo, 0] - out["lng"][ref - s_lo, 0]
+        want = log(exact[s] / exact[ref])
+        assert abs(got - want) < 0.12, (s, got, want)
+
+
 def test_averages_rebuilt_from_an_exact_density_of_states_are_exact():
     """Pure arithmetic, no sampling: canonical() must reproduce the enumeration's own averages."""
     exact = defaultdict(int)

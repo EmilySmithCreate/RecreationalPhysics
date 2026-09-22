@@ -250,8 +250,13 @@ def energy_histogram(lng, seen, s_min, x_min, n, g, lam, places=6):
 
 
 @njit(cache=True)
-def _wl_sweeps(adj, side_u, lng, hist, seen, ln_f, n_sweeps, seed, s_min, x_min, cap, state, floor):
+def _wl_sweeps(adj, side_u, lng, hist, seen, ln_f, n_sweeps, seed, s_min, x_min, cap, state, floor,
+               track_x):
     """Wang-Landau sweeps of the graph model. state = [S, X], read and written in place.
+
+    track_x = False walks in S alone: X is neither computed nor binned (the grid is n_s by 1 and
+    j is always 0). That is exact at lambda = 0, where X does not enter the energy, and it turns
+    a walk over hundreds of (S, X) bins into one over tens of S bins.
 
     The move, the validity rules and the bookkeeping of Delta X are the kernel's own
     (cqg.run_chain); only the acceptance rule differs. A move out of the grid is refused,
@@ -271,7 +276,6 @@ def _wl_sweeps(adj, side_u, lng, hist, seen, ln_f, n_sweeps, seed, s_min, x_min,
     n = adj.shape[0]
     nu = side_u.shape[0]
     n_s, n_x = lng.shape
-    track_x = cap > CAP
     edges = np.empty((64, 2), dtype=np.int64)
     s, x = state[0], state[1]
     # state[2] = which end of the window was touched last (0 neither, 1 low, 2 high)
@@ -345,19 +349,26 @@ def _wl_sweeps(adj, side_u, lng, hist, seen, ln_f, n_sweeps, seed, s_min, x_min,
     return attempted, accepted
 
 
-def graph_sweeper(adj, side_u, s_min, x_min, cap=NO_CAP):
+def graph_sweeper(adj, side_u, s_min, x_min, cap=NO_CAP, track_x=None):
     """An `advance` function for `anneal` that walks the graph model. Modifies adj in place.
 
     `advance.state` is [S, X, which end was last touched, completed round trips]. The last of
     these is the diagnostic the T6 pre-registration requires with every run: a flat-histogram
     walk that has not crossed its window many times has not measured the far end (Q17).
+
+    track_x defaults to "whenever the cap is off", which is when X can vary. Pass False to walk
+    in S alone (one-dimensional; exact at lambda = 0), in which case x_min is ignored.
     """
-    state = np.array([total_squares(adj), surplus(adj), 0, 0], dtype=np.int64)
+    if track_x is None:
+        track_x = cap > CAP
+    if not track_x:
+        x_min = 0
+    state = np.array([total_squares(adj), surplus(adj) if track_x else 0, 0, 0], dtype=np.int64)
 
     def advance(lng, hist, seen, ln_f, n_sweeps, seed):
         floor = float(lng[seen].min()) if seen.any() else 0.0
         return _wl_sweeps(adj, side_u, lng, hist, seen, ln_f, n_sweeps, seed,
-                          s_min, x_min, cap, state, floor)
+                          s_min, x_min, cap, state, floor, track_x)
 
     advance.state = state
     return advance
@@ -381,16 +392,25 @@ def both_stages(advance, shape, seed=0, refine_sweeps=0, passes=2, **kw):
     return out
 
 
-def dos_graph(adj, side_u, s_range, x_range, cap=NO_CAP, **kw):
+def dos_graph(adj, side_u, s_range, x_range=None, cap=NO_CAP, **kw):
     """Density of states of the graph model over a window of (S, X). Modifies adj in place.
 
     s_range, x_range : inclusive (low, high) pairs. The walk is refused outside them, which
     is a legitimate restriction: ln g comes out right inside the window, up to the usual
     constant, provided the window is connected under the move.
 
+    x_range = None walks in S alone and returns ln g with shape (n_s, 1). This is exact at
+    lambda = 0, where X does not enter the energy, and it is the difference between a walk
+    over hundreds of bins and one over tens.
+
     Returns the dict of `both_stages` with s_min and x_min added.
     """
     s_min, s_max = s_range
+    if x_range is None:
+        advance = graph_sweeper(adj, side_u, s_min, 0, cap, track_x=False)
+        out = both_stages(advance, (s_max - s_min + 1, 1), **kw)
+        out["s_min"], out["x_min"] = s_min, 0
+        return out
     x_min, x_max = x_range
     advance = graph_sweeper(adj, side_u, s_min, x_min, cap)
     out = both_stages(advance, (s_max - s_min + 1, x_max - x_min + 1), **kw)

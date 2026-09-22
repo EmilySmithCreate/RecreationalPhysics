@@ -72,7 +72,60 @@ Anything about the real universe; anything about X, which is not what this model
 
 ### Amendments
 
-*(None since the revision above. Add below with a date, leaving the original standing.)*
+*(Add below with a date, leaving the original standing.)*
+
+#### Amendment 1, 21 September 2026 — the reaction coordinate changes from H to φ
+
+**Status: written after the λ = 0 control ran at N = 36 and N = 64, and before any run under the new coordinate.** That ordering is the whole point of writing it down, and the original text above stands unaltered.
+
+**What is wrong with the original.** The four observables were to be read off the histogram of the energy H = 16(N − S) + 4λX. H is a sum of two integers with two different quanta, so which energies are reachable — and how many ways each is reached — is arithmetic between 16 and 4λ. Where 4λ divides 16 the reachable energies form a uniform lattice; where it does not, the histogram grows teeth at the period of that arithmetic. Two of the four pre-registered λ values are of the second kind: λ = 1.25 (quanta 16 and 5) and λ = 1.5 (quanta 16 and 6). Measured at λ = 1.25, N = 36, the counts on consecutive levels ran 2899, 30, 181, 1024, 2046, 1964, 34, and the analysis read two teeth as humps 19 levels apart with a barrier of 1.7. **This is a defect of the coordinate, provable from the arithmetic of 16 and 4λ without reference to any result.** It is not a judgement about which answer is wanted.
+
+**What changes.** The reaction coordinate becomes S, equivalently φ = S/N — the order parameter by which the transition is defined in the first place. S is an integer with unit spacing at every λ, so there is no comb by construction. Runs will store the joint (S, X) histogram, from which H follows exactly for any λ; the per-sweep values already exist in the run and were simply not saved.
+
+**What does not change, and is restated here so that it cannot be quietly adjusted later:**
+
+- **The four observables keep their meanings.** In particular the latent heat stays an *energy* difference between the two phases — that is what a latent heat is. What changes is only that the two phases are identified in φ before their energies are compared.
+- **The free-energy barrier is measured along φ.** This is the one observable whose definition genuinely moves, from a valley in the energy histogram to a valley in the φ histogram. Both are standard; the second is the one that is well defined at every λ.
+- **The gates, the fit, the three verdicts and the falsification clause are untouched**, including the clause that a transition too weak to detect is too weak to do claim 4's job, and that the write-up will then state the measured upper bound.
+- **The λ values stay {0, 1, 1.25, 1.5}.** They are not being trimmed to the ones with convenient arithmetic.
+
+**What is discarded and why.** No barrier measured under the old coordinate will be quoted, including at λ = 0 and λ = 1, where the lattice is uniform and the comb does not arise. The reason is separate and is recorded as O8 in `ASSUMPTIONS.md`: at λ = 0, N = 36 the three ladder rungs that can see the transition disagree about the barrier by 54.9 %, against 0.9 % for the transition coupling. A number that depends that strongly on which rung it is approached from is not a measurement, whatever the coordinate. The transition coupling g_c, which is stable, is not affected by this and stands.
+
+**A guard added under the old coordinate is withdrawn.** `analyse_t6_hist.py` gained a coarse-graining veto that was written after seeing the λ = 1.25 data it rejects, and it moved the λ = 0, N = 36 barrier from 0.969 to 0.436. Tuning a threshold against the data it judges is the thing this document exists to prevent. The veto's idea — that a real barrier survives coarse-graining and a lattice artefact does not — is sound, and under φ it is not needed, because there is no comb to veto.
+
+#### Amendment 2, 21 September 2026 — the λ = 0 size sequence is multiples of 16
+
+**Status: written after λ = 0 ran at N = 36 and N = 64 under amendment 1, and before any run at the sizes it adds.**
+
+**What is wrong with the original.** The pre-registered sizes are square tori, N = 36, 64, 100. At λ = 0 the cold phase shatters into 16-point knots, and the smallest valid piece has 14 points. So N = 64 = 4 × 16 shatters into four whole knots (measured φ = 1.422), while N = 36 = 2 × 16 + 4 cannot — its cold phase is one knot plus a 20-point ribbon (measured φ = 1.278) — and N = 100 = 6 × 16 + 4 is knots-plus-ribbon again. **These are two different cold phases with different energies**, which is why the latent heat measured 5.8 per point at N = 36 and 9.5 at N = 64: not statistics, structure. A finite-size fit across 36 / 64 / 100 would be fitting a line through a structural step. This is arithmetic (section 19 of the write-up, the ribbon, applied to the size list) and does not depend on any result.
+
+**What changes.** For λ = 0 the sizes entering the fit are multiples of 16: **64, 96 (16 × 6), 128 (16 × 8)**, with 144 (12 × 12) and 160 (16 × 10) if affordable. These are the Gate A sizes. The already-run 36 and the pre-registered 100 are reported but do not enter the λ = 0 fit.
+
+**What does not change.** For λ ≥ 1 the cold phase is the flat sheet, which exists at every size, so the square tori stand there. The observables, gates, verdicts and falsification clause are untouched.
+
+#### Amendment 3, 21 September 2026 — the λ = 0 barrier is measured by a one-dimensional flat-histogram walk
+
+**Status: written after the walk was validated against exact counts at N = 16 and against tempering at N = 36, and before its result at any larger size was seen.**
+
+**What is wrong with the method as run.** Tempering across the λ = 0 transition collapses at the transition rung — swap acceptance 0.26 at g ≈ 6.75 at N = 64 on both a shared ladder and a per-size one — because across a first-order transition adjacent rungs stop sharing energies, and the gap grows with N. Densifying the ladder does not remove this; it is the textbook case for a flat-histogram method, which walks through the valley rather than trying to hop it. The original pre-registration named Wang-Landau as the instrument and moved to tempering when the two-dimensional walk over (S, X) failed at N = 36 (Q17). But at λ = 0 the energy is 16(N − S) alone: X never enters, the density of states is one-dimensional in S, and the walk is over tens of bins rather than hundreds.
+
+**What changes.** At λ = 0 the four observables are read from the one-dimensional density of states in S (`scripts/run_wl_lam0.py`), which gives the full P(φ) at every coupling. The walk must reproduce the exact N = 16 counts (it does: `test_one_dimensional_walk_in_s_matches_the_exhaustive_count_summed_over_x`) and must agree with tempering where tempering works (at N = 36: phases at φ = 0.917 | 1.278 by both; g_c 7.34 against 7.51). Round trips across the reachable range of S are reported with every row, and gate 4 applies to them.
+
+**What does not change.** Tempering remains the instrument at λ ≥ 1, where there is no wall, and remains a cross-check at λ = 0 where it can reach. Observables, gates, verdicts, falsification clause untouched.
+
+#### Verdict at λ = 0 under the rules above, 22 September 2026: INCONCLUSIVE
+
+Three sizes (48, 64, 96) pass gates 3 and 4. Criterion 1 met (latent heat 12.5 ± 0.02 per point at N = 96). Criterion 2 met (barrier slope +1.59 ± 0.05 against L, 34 standard errors). Criterion 3 not met as written: the Binder minima 0.381, 0.480, 0.575 are below 2/3 but rising. The rules say the criteria disagreeing is INCONCLUSIVE and is not to be resolved afterwards by changing the rule. It is not. Full table in `ASSUMPTIONS.md` O11.
+
+#### PROPOSED amendment 4 — not enacted; Emily's decision — criterion 3 is mis-specified
+
+**Written after the λ = 0 verdict above, and it would change that verdict. That is stated first so it cannot be missed.**
+
+The value a first-order transition predicts for the Binder minimum is not 2/3. For two phases at energies e₊ and e₋ per point it is 1 − 2(e₊⁴ + e₋⁴)/(3(e₊² + e₋²)²), which is 2/3 only when |e₊| = |e₋| (Challa, Landau and Binder 1986). In this model the cold phase sits at φ = 1.5 (e₋ = −8) and the hot one near 0.7 (e₊ ≈ 4.8), so the first-order limit is about 0.59, and the finite-size approach to it is from below. The measured minima are rising towards 0.59, not towards 2/3; at N = 96 the measured value is 0.575 against a predicted 0.594. As written, criterion 3 can never return FIRST ORDER in this model, whatever the physics — and it is the positive control, where the transition is known to be first order, that exposed this.
+
+**Proposed wording.** Criterion 3: the Binder minimum lies below 2/3 at every size, and at the largest size lies within 0.03 of the two-spike prediction computed from that size's measured phase energies. The prediction has no free parameter.
+
+**Why this is proposed rather than made.** It is a rule change after seeing data, which this document forbids me to make. What makes it defensible for Emily to make is (a) the formula is textbook, (b) the defect was found on the control and not on the cases under test, and (c) the alternative — issuing λ ≥ 1 verdicts under a criterion that fails the positive case — is worse. **If adopted:** λ = 0 becomes FIRST ORDER, and the same criterion applies unchanged at λ ≥ 1. **If not adopted:** λ = 0 stays INCONCLUSIVE, and criterion 3 must be declared uninformative and dropped from the λ ≥ 1 verdicts *before* they are read, for the same reason. Either way is honest; leaving it as it stands is not.
 
 ---
 

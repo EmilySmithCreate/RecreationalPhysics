@@ -84,8 +84,18 @@ def main(path, out_dir="results"):
                     x = res["surplus"][k].astype(np.int64)
                     h = ENERGY_PER_SQUARE * (n - s) + ENERGY_PER_SURPLUS * lam * x
                     levels, counts = np.unique(h, return_counts=True)
+                    # The joint (S, X) histogram, which is what the analysis now works from.
+                    # S is an integer with unit spacing at every lambda, so a histogram in S has
+                    # no comb in it; H does, because which energies are reachable is arithmetic
+                    # between 16 and 4*lambda (PREREGISTRATION.md, T6 amendment 1). Storing the
+                    # pair also fixes H exactly for any lambda, rather than only the one run.
+                    pairs, pair_counts = np.unique(np.stack([s, x], axis=1), axis=0,
+                                                   return_counts=True)
                     np.savez_compressed(store / ("N%d_rep%d_k%d.npz" % (n, rep, k)),
-                                        levels=levels, counts=counts, g=g, lam=lam, N=n)
+                                        levels=levels, counts=counts, g=g, lam=lam, N=n,
+                                        s_bin=pairs[:, 0].astype(np.int32),
+                                        x_bin=pairs[:, 1].astype(np.int32),
+                                        sx_counts=pair_counts.astype(np.int64))
                     conn = res["connectivity"][k]
                     out.write(dict(
                         N=n, lx=lx, ly=ly, replica=rep, k=k, g=g, lam=lam,
@@ -113,4 +123,6 @@ def main(path, out_dir="results"):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    # The second argument is the output directory. It was silently ignored before, so a smoke
+    # test aimed at a scratch directory wrote into results/ instead.
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "results")
