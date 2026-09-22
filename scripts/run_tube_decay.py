@@ -60,7 +60,11 @@ def main(path, out_dir="results"):
     with ResultWriter(cfg["name"], meta, out_dir) as out:
         for lx, ly in cfg["sides"]:
             n = lx * ly
-            for rep in range(int(cfg["replicas"])):
+            # T7 amendment 3 (i): a config may name the replicas to run, to replay chosen decays
+            # with a longer settle cap. The seed derivation below does not change, so a replayed
+            # replica reproduces its original random stream exactly up to the old cap.
+            reps = [int(r) for r in cfg["replica_ids"]] if "replica_ids" in cfg else range(int(cfg["replicas"]))
+            for rep in reps:
                 adj, part = torus(lx, ly, NO_CAP)
                 side_u = np.flatnonzero(part == 0)
                 seed = int(np.random.SeedSequence([int(cfg["seed"]), lx, ly, rep]).generate_state(1)[0])

@@ -55,17 +55,21 @@ threshold; the leftover is one small defect however big the space.
 - The early-universe changes (electroweak, QCD) are **crossovers**; freeze-out is **not** a phase transition — it
   is a precedent for claim 6 (accounting), not claim 4 (sharpness). A reader corrected this on the page.
 
-## 4. Open decision for Emily (explain it to her if she has not answered)
+## 4. The last decision, made: T7 amendment 3, option (i)
 
-**T7 amendment 3.** Under amendment 2 (enacted), every decay that *settled* passes gate 3; 14 of 240 were
-cut off by the 30,000-sweep settle cap while still moving (`settle_sweeps = 30000` in `results/t7b_lam125_n*.csv`;
-their seeds are in the `seed` column). Options: **(i)** replay those 14 seeds with the cap at 100,000 and apply
-the gate as it stands — a run-length change, cannot manufacture a pass, recommended; **(ii)** gate only settled
-decays and report the unsettled count, which must be a minority; **(iii)** leave the verdict withheld.
-If (i): `scripts/run_tube_decay.py` needs a way to run a chosen replica list with a larger `settle_max`
-(check its config keys first); write a config `t7c_*` naming the seeds; results under a new name.
+Under amendment 2 (enacted), every decay that *settled* passes gate 3; 14 of 240 were cut off by the
+30,000-sweep settle cap while still moving. Emily chose **(i)**: replay those 14 from their seeds with the cap
+at 100,000 and apply the gate as it stands (PREREGISTRATION T7 amendment 3, enacted wording). Configs
+`configs/t7c_lam125_n{64,96,144,192a,192b}.json` (`replica_ids` names the replicas; `run_tube_decay.py`
+honours it); results land as `results/t7c_lam125_n*.csv`. **When they are in:**
+`python scripts/analyse_t7.py lam125 t7b t7c` — it swaps the replays into the t7b table, rejects any replay whose
+`waiting`/`released_first_window` differ from the original (not the same decay), and prints the verdict. Record
+the outcome as an O13 addendum and in VISION Update 14. If some replays still hit 100,000, they fail the gate as
+written; option (ii) would then be a new proposal for Emily, not something to enact.
 
 ## 5. What is running or queued
+
+- **T7 replays** (five jobs, N = 192 slowest: up to 100,000 settle sweeps per decay, hours). See section 4.
 
 - `t6c_lam{1,125,15}_n{64,100}` (six jobs, slow): T6 λ ≥ 1 reruns with a trimmed 14-rung ladder. When
   `results/t6c_*.csv` exist (no `.partial`), run `python scripts/analyse_t6_phi.py t6c_lam1_n64` etc. If gate 4

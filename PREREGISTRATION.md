@@ -208,7 +208,9 @@ Gate 3 was written as an energy-conservation check: is the lump the known 4(λ �
 
 **Outcome under it (same day):** gate 3 still fails at every size, because 2 to 6 decays per size were still moving when amendment 1's 30,000-sweep cap ended them; every decay that settled is at the sheet or the one-ring ledge. Details in `ASSUMPTIONS.md` O13. The verdict stays withheld.
 
-#### PROPOSED amendment 3 — not enacted; Emily's decision — what to do with decays that had not settled at the cap
+#### Amendment 3, 22 September 2026 — ENACTED at the author's decision, option (i): the unsettled decays are replayed with a longer cap
+
+**Status: proposed after the outcome of amendment 2 (text below, as proposed); the author chose option (i) on 22 September 2026, with the wording in "Enacted wording" at the end of this amendment, before any replay was run.**
 
 **Status: written after the outcome above, before any further run.**
 
@@ -218,6 +220,8 @@ Amendment 1 set a settle cap of 30,000 sweeps and did not say what gate 3 makes 
 - **(ii) Amend gate 3:** it applies to settled decays only (two consecutive windows agreeing, as amendment 1 defines); the number of unsettled decays is reported for each size and must be fewer than half. This is the weaker option, because it lets a minority of decays go unexamined.
 
 Either is honest; leaving the gate to fail on decays that never settled is a statement about the cap, not about the change.
+
+**Enacted wording (option (i), the author's choice, 22 September 2026).** The fourteen decays of `t7b_lam125_n*` that reached the 30,000-sweep settle cap — N = 64: replicas 1, 25; N = 96: 3, 10, 20, 23; N = 144: 3, 5; N = 192: 3, 5, 8, 10, 20, 22 — are replayed from the same configuration seeds (20261057, 20261065, 20261077, 20261089), the same replica indices and the same code path, with `settle_max` raised from 30,000 to 100,000 sweeps and nothing else changed; results under `t7c_lam125_n*` (`replica_ids` in the config names the replicas). **Reproducibility gate:** a replay must reproduce its original decay up to the old cap — identical `waiting` and identical `released_first_window` — or it is not the same decay, is left out of the table and is reported. **The verdict** is then gate 3 exactly as enacted in amendment 2, applied to the t7b table with those fourteen rows replaced by their replays (`scripts/analyse_t7.py lam125 t7b t7c`). A replay that has still not settled at 100,000 sweeps fails the gate as written and is reported; option (ii) is not enacted by this amendment.
 
 **Why proposed rather than made.** It changes a gate after the data it judges were seen. What makes it defensible: the three predictions are met at every size on both the first run and the rerun with fresh seeds, and the change concerns only which decays are admitted, not what is measured on them; and the thing it admits — a decay resting on a second sharp step — is more of what claim 4 describes, not less. **If adopted:** the λ = 1.25 verdict is TWO-STATE CHANGE. **If not:** the verdict is withheld and the three predictions are reported as met with the gate outstanding.
 
