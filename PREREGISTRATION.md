@@ -208,4 +208,53 @@ Gate 3 was written as an energy-conservation check: is the lump the known 4(λ �
 
 To be written before it runs. It may reuse the criteria above, and if it does it will say so explicitly rather than restating them.
 
+---
+
+## T9. Bonfire or slush: the tube in a sealed box
+
+**Written 2026-09-22, after T7 and before any sealed run of a tube.** The only sealed runs so far (Update 9) established that a tube with an empty demon never converts and that the spark costs exactly 12 units; none followed a conversion.
+
+### The question
+
+Every T7 run was at fixed temperature: an unlimited bath carried the lump away the instant it appeared. Claims 4 and 5 are about what happens when it cannot. The author's three cases (design brief): wide open, semi-permeable, sealed. In a sealed system the energy a converting region releases stays, and either feeds the change onward — a bonfire — or heats the rest until it stops — the slush of supercooled water — or does something else. T7 says the change is a front releasing 4(λ − 1) per point as it goes; this asks what that front does to its own surroundings.
+
+### The knob that has to be declared, and why
+
+The Creutz demon of `sealed.py` is one number. Its temperature is its mean energy, so a tube releasing N × 4(λ − 1) units into one demon reaches g ≈ N × 4(λ − 1) — 64 at N = 64, λ = 1.25 — against a sheet that melts near g ≈ 3 to 4. A one-demon box cannot hold the lump at any size; the outcome would be set by the bookkeeping and not by the physics. **So the bath has a capacity, C: C demons, each move paying or receiving from one chosen at random.** Energy is still conserved exactly and the demons' mean energy still reads the temperature; C sets how much the temperature rises per unit released, 1/C. This is a modelling choice — how many other degrees of freedom the released energy can go into — and it is the knob of this experiment. It is stated here before a run and it will be scanned, not tuned.
+
+### What will be run
+
+Tubes 16×4, 24×4, 48×4 (N = 64, 96, 192), λ = 1.25, sealed (leak = 0). One demon starts with the spark, 12 units; the rest start empty. C ∈ {1, N/16, N/8, N/4, N/2, N, 2N}. Twenty replicas per (N, C), 30,000 sweeps. Recorded every 25 sweeps: φ, X, the mean demon energy (the bath temperature), and at the end the local-dimension histogram and the pieces of the vertices at each d.
+
+### Observables
+
+1. **Conversion fraction at the end**, f = (φ_tube − φ)/(φ_tube − φ_sheet), and its time course.
+2. **Bath temperature**, the mean demon energy, against conversion fraction.
+3. **What the product is**, from the final local-dimension histogram: sheet (d = 2 nearly everywhere), sheet with leftover rings (a few clusters at d = 1, as in T7's ledge), tube (d = 1), or melted (mass at d ≥ 3 and at 0).
+4. **Energy bookkeeping**: H + Σ demons constant to the last unit, every sweep. A gate, not an observable.
+
+### Predictions, written before looking
+
+*Ours, unverified.* Let g_melt be the coupling at which the λ = 1.25 sheet's φ has fallen to 0.9 on the equilibrium curve — about 3.5 at N = 64 (`cqg_n64_lam125_tempering`). The bath reaches temperature (12 + f N · 4(λ − 1)) / C when a fraction f has converted.
+
+- (a) **A crossover in C, at C* ≈ N · 4(λ − 1) / g_melt** (about N/3.5). For C well above C*, the bath never reaches g_melt: conversion completes and the product is a sheet — bonfire. For C well below C*, the bath passes g_melt while conversion is under way: the converted part melts and the product is disordered — boil-off, not slush. The predicted C* grows in proportion to N.
+- (b) **No supercooled-water stall.** In water the released heat brings the mixture to the temperature where ice and liquid have equal free energy, and the change stops there with both present. That needs a coexistence temperature. The tube is above the sheet in energy at every g and, being the more symmetric arrangement, has no more configurational entropy, so I predict no coupling at which the two have equal free energy and therefore no run in which conversion halts with tube and sheet both present, the bath warm but below g_melt, and nothing melting. If such runs occur, prediction (b) fails and the tube has a coexistence temperature I have argued it cannot.
+- (c) **Leftover rings survive the bonfire.** For C above C*, T7's ledge — one or two rings of the tube left behind — should appear in the sealed product at about the rate it does at fixed temperature, since the front is the same front.
+
+### Gates
+
+1. Energy conservation exact in every run.
+2. With C = 1 and the spark, the tube converts at least once (so the spark is still the spark).
+3. Twenty replicas per (N, C).
+
+### Verdicts
+
+- **BONFIRE WITH A THRESHOLD** — (a) holds: complete conversion to a sheet above a C* that scales with N, boil-off below it; and (b) holds.
+- **SLUSH** — a band of C in which conversion halts partway with tube and sheet both present, the bath below g_melt, stable to the end of the run, at every size. Prediction (b) fails; claim 5's mechanism is thermodynamic, not kinetic.
+- **INCONCLUSIVE** — anything else, including a crossover that does not scale with N.
+
+### What this cannot show
+
+Whether the universe had a bath. What C means physically beyond "how many other places the energy can go". Anything at λ ≠ 1.25 or off the tube.
+
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.
