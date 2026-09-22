@@ -827,6 +827,25 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   and nothing here derives an attraction between two regions of the *same* order. Saying "there is a
   long-range force in this model" is true and is not the same sentence as "gravity is here".
 
+- **O24 The coarse law does not govern, by the standard set in advance (PREREGISTRATION T12,
+  2026-09-22).** 64 tube decays at λ = 1.25, N = 64 to 192, two couplings, both acceptance rules,
+  `configs/front_law_lam125.json`. **Verdict: NOT ESTABLISHED.** Criterion 2 passes (the cost of a front
+  is one number, 11.3 ± 3.7, with no trend across sizes); criteria 1, 3 and 4 fail. Criterion 1 fails on
+  both readings of its wording, per replica and per cell, and both were computed and reported. **Where it
+  fails is informative:** the two coldest, largest cells recover the exact gap to 0.15 % and 1.03 %, and
+  every badly failing cell is at the warm coupling, where the converted count is read from a local
+  dimension that thermal noise makes flicker and where conversions start in several places at once. This
+  run cannot separate a failure of the coarse law from a failure of that proxy, and saying which needs a
+  cleaner measure of conversion, i.e. a new test. **Criterion 3 was mis-derived by the assistant:** it
+  asked for a rate flat in N, where the counting of Q13 gives 1/N for a local front; the measured rate
+  follows neither, falling about as N^−0.7, so the dynamics escape both versions. **An unregistered
+  success:** runs that converted in two patches show twice the front cost of runs that converted in one,
+  which is what the model says should happen when four fronts are divided by two. **What follows for the
+  author's strange-loop reading** (`docs/design/strange_loop_note.md`): its item 3, that the coarse level
+  has laws of its own, is not established; what stands is that the front cost is size-independent and that
+  both microscopic rules agree on it to three decimals, so the part of the description that does work is
+  not an artefact of one rule.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

@@ -456,4 +456,51 @@ separately) are reported separately, since the coarse model assumes one converte
 **What would make this test worthless:** fitting σ per size, or per coupling, or dropping runs that
 do not fit. σ is fitted once over everything, and every run that nucleated is in the fit.
 
+### T12 VERDICT (2026-09-22, same day): NOT ESTABLISHED
+
+64 replicas, 59 nucleated, 5 never did; 21 of the 59 converted in more than one patch, which is
+outside the coarse model's own assumption of a single converted region and is reported separately
+below as the pre-registration says.
+
+| Criterion | Result | |
+|---|---|---|
+| 1 linearity | slope −1.51 to −0.76 per run; median exactly −1.000, mean −0.980 | **FAIL** |
+| 2 front cost fixed | σ = 11.3 ± 3.7, no trend with N (one-patch runs) | **PASS** |
+| 3 front advances locally | 0.236, 0.163, 0.136, 0.113 points a sweep at N = 64, 96, 144, 192 | **FAIL** |
+| 4 same under both rules | Glauber −0.980 / σ 11.2; Metropolis −0.980 / σ 11.3 | **FAIL** on the 2 % bound, though the two rules agree to three decimals |
+
+**Criterion 1 fails on both readings of its own wording.** Taken per replica the worst run is 51 %
+off; taken per cell of size and coupling, which is what "at every size and coupling" most naturally
+means, the worst cell is 15 % off. There is nothing here for the author to adjudicate, and the
+looser reading was computed and is reported precisely so that it cannot be said the strict one was
+chosen to suit the answer.
+
+**The failure is not spread evenly, and that is the useful part.** The two coldest, largest cells
+land at 0.15 % and 1.03 % of the exact gap. Every badly failing cell is at g = 2.0, where the chain
+is warm and "converted" is read off a local dimension that thermal noise makes flicker, and where
+conversions also start in several places at once (most warm runs are in the multi-patch group, which
+is why those cells hold one run each). So the honest statement is that the coarse energy law is
+recovered where the measurement is clean and is not recovered where it is noisy, and **this run
+cannot separate a failure of the law from a failure of the proxy.** Doing so needs a cleaner measure
+of what has converted, which is a new test and not a reinterpretation of this one.
+
+**Criterion 3 was mis-derived by the assistant and would have been wrong even if it had passed.** It
+predicted a rate flat in N. By the same counting that Q13 did for nucleation — a sweep is 2N
+attempts, proposals go as N², and the moves that advance a *front* are a fixed handful rather than
+one per site — a local front should advance as 1/N in sweeps, not flat. The measured rate follows
+neither: it falls roughly as N^−0.7, between the two. So the dynamics are not captured by either
+version of the coarse picture, and the defect in the prediction is the assistant's.
+
+**What held that was never registered.** Runs whose sheet arrived in more than one patch give
+σ = 25.3 ± 24.5, about twice the 11.3 of the single-patch runs — which is what the coarse model
+says should happen, because two converted regions have four fronts and the fit divides by two. The
+model got a prediction right that nobody asked it for.
+
+**What this means for the strange-loop reading** (`docs/design/strange_loop_note.md`, item 3): the
+claim that the coarse level has autonomous laws is **not established**. What is established is
+narrower and still worth something: the cost of a front is one number that does not move with size,
+and both acceptance rules give the same two numbers to three decimals, so what the coarse
+description does capture is not an artefact of one microscopic rule. The dynamics are not captured
+at all.
+
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.

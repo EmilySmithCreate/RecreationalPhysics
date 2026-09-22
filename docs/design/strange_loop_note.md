@@ -74,7 +74,15 @@ energy against separation, which has not been made.
 
 ## The order of work this implies
 
-1. **T12** — does the coarse law govern? Running. Everything else waits on it.
+1. **T12 — does the coarse law govern? RUN, AND THE ANSWER IS NO** (2026-09-22; O24;
+   `PREREGISTRATION.md` T12). Not established, by the standard written before the runs. The cost of a
+   front is one size-independent number and both microscopic rules agree on it to three decimals, so
+   *something* coarse-grains; the gap per point is recovered to 1 % in the cold, large cells and badly
+   missed in the warm ones, where the measure of what has converted is itself noisy; and the dynamics
+   are not captured at all, by either the registered prediction or the corrected one. **So item 3 of
+   this note is not earned yet, and items 1, 2 and 4 rest on it.** The note stays as written, with this
+   at the top of it: the first test of the framing did not clear the bar it set itself. What would
+   settle it is a cleaner measure of conversion, at cold couplings, which is a new test.
 2. **The closure test.** The local-spark run (TASKS T14, T13 rung 3) is the step that makes the
    hierarchy tangled rather than merely layered: does concentrated energy in one patch remake the
    substrate? Same experiment as before, sharper meaning.
