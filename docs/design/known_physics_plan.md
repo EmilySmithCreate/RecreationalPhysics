@@ -140,3 +140,38 @@ space with a speed limit, in which defects curve the geometry and attract one an
 first fingerprints of relativity and gravity, and [T25] claims them for this model on paper; we
 would be measuring them. It would not be claim 2: that needs three large dimensions, time and
 quantum behaviour, which this model does not contain.
+
+## What the runs so far do and do not say about the two known hurdles (added 2026-09-22)
+
+The author asked whether anything has been learned about the two hurdles on the public page: old
+inflation's bubbles never joining up, and the pattern of ripples in the sky. Honest answers, in order.
+
+**The bubbles-never-join problem (graceful exit).** Not addressed, and it cannot be in this model,
+which has no expansion at all: the failure mode needs the old phase to be a space that grows faster
+than the bubbles do, and here nothing grows. What the runs *do* supply are two of the inputs such a
+calculation needs, both exact and neither fitted: the nucleation rate, 3·exp(−12/g) per sweep with
+the 12 counted from the energy (Q13), and the driving force on a front, a fixed 4(λ − 1) per point
+swept, the same at every size (O23). Having the inputs is not having the answer. VISION already
+records the one escape route, untouched by any run: the failure needs the old phase to be an
+expanding space, and X need not be one.
+
+**The ripple spectrum.** Nothing, and nothing is reachable: no time, no expansion, no quantum
+fluctuations. *One indirect reading, ours, unverified:* the ripples in the standard account come from
+a field that varies from place to place, and T10 found the leftover of a conversion is **one** small
+remnant however large the system. A single defect cannot carry a spatial pattern. If anything in this
+picture is to play that role it has to come from *many* seeds, each leaving its own scrap, which is
+exactly what TASKS T14 tests and what has never been run.
+
+**What X is made of.** In the model, answered completely and it is worth separating from the real
+question: the stand-in for X is a specific arrangement (the tube), its dimensions are a count at each
+point, it is metastable, its gap above space is exact, and its activation cost is exactly 12 units at
+every size. Today's Q18 adds that **space is the floor** — nothing at all lies below it — so X must
+be a higher arrangement and cannot be confused with a lower one. About what the real X would be made
+of, nothing.
+
+**What sets the size of the gap.** In the model this is now exact (O23): the gap is 4(λ − 1) per
+point, measured at N = 36 to 600 and at three values of λ. So the gap is not free — it is set by one
+knob, and its size is the distance of that knob from λ = 1, the point where curled and flat cost the
+same. *Ours, unverified, and worth stating because it is a real consequence:* a small gap in the real
+thing would mean sitting very close to that tie, which is a near-critical condition and a
+fine-tuning question of its own rather than an answer to one.
