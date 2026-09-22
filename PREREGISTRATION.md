@@ -396,4 +396,64 @@ A cold sealed box as T10 (C = 2N, spark 12 in one demon, λ = 1.25): tubes 16×4
 
 Why a meeting of fronts leaves a ring rather than closing cleanly. Anything at warmer baths, where rings are thermal as well. Anything at other λ. Whether the result carries to a sheet with two large directions, where "the far side" is a line and not a point.
 
+## T12. Does the coarse law govern? (written 2026-09-22, before the runs)
+
+**Why this test exists.** The author reads her picture as a strange loop in Hofstadter's sense: a
+coarse level (space, dimensions, matter) made of a fine level (the network), which then acts back on
+the fine level. That reading is only worth anything if **the coarse level has laws of its own**. In
+physics that has a technical meaning and a standard test: a coarse law is real when it predicts what
+the microscopic system does *without* using microscopic detail, and when it keeps predicting it as
+the microscopic details are changed. If the coarse description predicts nothing, the strange loop is
+a way of speaking and adds no physics, and the honest thing is to find that out before building on
+it. Nothing here needs a new knob (S1 untouched).
+
+**The coarse model, written down in full before any run.** A tube part-converted into a sheet is
+described by two numbers and nothing else: the fraction f of points converted, and the two fronts
+between the orders. Then
+
+    H(f) = H(tube) − Δ · f · N + 2σ ,   with Δ = 4(λ − 1) the gap per point and σ the cost of one front.
+
+Δ is known exactly and is not fitted. σ is one number, fitted once, and must then be the same
+everywhere.
+
+**Predictions (ours; no free parameters except σ).**
+
+1. **Linearity.** H against the number of converted points is a straight line through the run, with
+   slope exactly −4(λ − 1) per point. Pass: the fitted slope is within 2 % of the exact value at
+   every size and coupling.
+2. **The front cost does not change with size.** σ read off the intercept is the same at N = 64, 96,
+   144 and 192 to within its own scatter. Pass: no trend with N at more than two standard errors.
+3. **The front advances at a rate set locally.** A tube's front is a ring of fixed size whatever the
+   tube's length, so **points converted per sweep is independent of N**, and therefore the converted
+   *fraction* per sweep falls as 1/N. Pass: points per sweep flat in N (no trend at more than two
+   standard errors) and fraction per sweep consistent with 1/N.
+4. **The coarse law survives a change of microscopic rule.** Metropolis and Glauber acceptance are
+   different microscopic dynamics with the same equilibrium. Predictions 1 and 2 must hold for both,
+   with the same Δ and the same σ. Rates in prediction 3 may differ between the two; the
+   N-independence may not.
+
+**What each outcome means.**
+
+- **All four hold:** the coarse level predicts the microscopic runs without microscopic input and
+  survives a change of rule. That is what "the upper level is real" means in physics, and the strange
+  loop reading has something under it. It is *not* evidence for the cosmology; it is evidence that
+  the two-level description is doing work.
+- **1 and 2 hold, 3 fails:** the energy bookkeeping is coarse-grainable but the dynamics are not. The
+  upper level describes what states cost and not what happens, which is weaker and must be said.
+- **1 fails:** there is no two-number description, the front is not a front in the sense assumed, and
+  the whole framing goes back in the box.
+- **4 fails while 1–3 hold:** the coarse law is an artefact of one acceptance rule, which would be a
+  surprise worth its own investigation, and it would mean the coarse level is not autonomous.
+
+**Fixed before running.** λ = 1.25 (the vision's track; the tube is metastable there and not at 1.5).
+g = 1.5 and 2.0. N = 64, 96, 144, 192. Four replicas per cell, both acceptance rules, seeds derived
+from one recorded seed. Blocks of 25 sweeps; a run stops when the converted fraction passes 0.98 or
+at 20 000 sweeps. Only the stretch between 10 % and 90 % converted is fitted, so that nucleation at
+one end and the last defects at the other cannot flatter the fit. Runs that never nucleate are
+reported and excluded from the fits; runs that nucleate more than once (two fronts starting
+separately) are reported separately, since the coarse model assumes one converted region.
+
+**What would make this test worthless:** fitting σ per size, or per coupling, or dropping runs that
+do not fit. σ is fitted once over everything, and every run that nucleated is in the fit.
+
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.
