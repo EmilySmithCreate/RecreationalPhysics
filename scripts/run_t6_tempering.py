@@ -123,4 +123,6 @@ def main(path, out_dir="results"):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    # The second argument is the output directory. It was silently ignored before, so a smoke
+    # test aimed at a scratch directory wrote into results/ instead.
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "results")
