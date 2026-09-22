@@ -136,3 +136,42 @@ appear on the scorecard and must not.
 **What it will meet.** The standard technical objection to any eternal-past cosmology is that
 inflationary spacetimes are past-incomplete (Borde, Guth and Vilenkin). *From general knowledge, not
 read by us, to verify before it is cited.* Anyone shown this argument will raise it.
+
+## Added 2026-09-22, late: counting reframes O20, and it is the author's lens not ours
+
+**Her claim.** There are always more ways to be arranged inside a black hole, or inside X, than in
+ordinary space. Gravity is the drift towards where there are more ways.
+
+**The first half is standard physics, not a hunch.** A black hole is taken to be the
+maximum-entropy object for its size; nothing built in that volume has more ways to be arranged.
+*(Bekenstein and Hawking; general knowledge, not read by us, to verify.)* So "more ways inside"
+is the textbook position and it carries the usual consequences: an entropic drift is weak,
+universal, always attractive, and has no microscopic counterpart to quantise.
+
+**What it does to O20, and this is the useful part.** O20 put energy into a sheet and the space went
+to the random phase; it was written up as pointing away from the author's black hole. Under her lens
+the same measurement reads as the mechanism working: **the energy drove the region to the state with
+the most ways**, which is what a black hole is. And it supplies what the loop has lacked all day, a
+payer for the uphill return leg: free energy is energy minus temperature times ways, so where it is
+hot and dense enough, **entropy pays for what energy cannot.** Nothing in the measurements changes;
+the reading of them does.
+
+**What it costs her, and she should choose deliberately** (*ours*): the high-count state is the
+**disordered** one. Ordered curled arrangements are rare, not common — at N = 16 the fully curled
+knot is one class of five and about 1.3 % of the labelled ensemble (Q15), and O25 shows nothing
+builds out of order at all. So counting favours a black hole interior that is **the substrate
+unarranged**, which is [T25]'s picture, and works against the tidy curled interior of her earlier
+version. It also sits against VISION claim 1, which says X is not a random or structureless state:
+if the interior is disordered it is not yet X, and becoming X would need the second stage, building
+out of the mess, which O25 shows is possible and downhill but which nobody has watched happen.
+
+**What would test it.** Two measurements, neither made: free energy against separation between two
+leftovers (the only way a force can exist here at all, O22); and the count of arrangements at each
+energy, to see whether curled ones outnumber flat ones — exact at N = 16 and 18 already, and
+reachable at larger sizes with the flat-histogram machinery that exists.
+
+**The page was recalibrated to match** (2026-09-22): step 7 of the public story no longer reads
+"tested and it went the other way". It reads that the written prediction failed, that melted is the
+highest-count state and therefore a description of a black hole rather than a refutation of one,
+that building out of a melt is possible and downhill so the route is open, and that what a squeezed
+melt rebuilds into is untested because this model cannot squeeze.
