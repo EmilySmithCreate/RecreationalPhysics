@@ -70,16 +70,23 @@ def main(path, out_dir="results"):
                 # the two orders at this size: a flat sheet, and a tube (one side curled to 4)
                 sheet, _ = torus(lx, ly, NO_CAP)
                 h_sheet = hamiltonian(sheet, lam)
-                tube, _ = torus(n // 4, 4, NO_CAP)
-                h_tube = hamiltonian(tube, lam)
+                long_side = n // 4                 # the tube is this size with one side curled to 4
+                if long_side * 4 != n or long_side % 2 or long_side < 4:
+                    h_tube = None                      # no tube of exactly this many points
+                else:
+                    tube, _ = torus(long_side, 4, NO_CAP)
+                    h_tube = hamiltonian(tube, lam)
                 out.write(dict(lam=lam, lx=lx, ly=ly, n=n,
                                point_defect=cost,
                                point_defect_per_point=None if cost is None else cost / n,
                                sheet=h_sheet, tube=h_tube,
-                               gap=h_tube - h_sheet, gap_per_point=(h_tube - h_sheet) / n,
+                               gap=None if h_tube is None else h_tube - h_sheet,
+                               gap_per_point=None if h_tube is None else (h_tube - h_sheet) / n,
                                expected_gap_per_point=4 * (lam - 1)))
-                print("lambda %.2f  N=%4d: point defect %s, gap per point %+.3f (expected %+.3f)"
-                      % (lam, n, cost, (h_tube - h_sheet) / n, 4 * (lam - 1)), flush=True)
+                gpp = None if h_tube is None else (h_tube - h_sheet) / n
+                print("lambda %.2f  N=%4d: point defect %s, gap per point %s (expected %+.3f)"
+                      % (lam, n, cost, "none at this size" if gpp is None else "%+.3f" % gpp,
+                         4 * (lam - 1)), flush=True)
 
 
 if __name__ == "__main__":

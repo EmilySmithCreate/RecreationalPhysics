@@ -808,6 +808,25 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   not read by us, details to verify.) It also means the defect-defect interaction of O13's third addendum is
   a contact effect and not evidence of a field.
 
+- **O23 A long-range force does exist here, and it is between boundaries, not between points.**
+  (2026-09-22, EXACT; `scripts/run_force_census.py`, `configs/force_census.json`; follows O22 and answers the
+  author's question of whether O22's obstruction can be resolved.) O22's proof needs the damage to sit in a
+  patch. The standard way to tell a local defect from one whose damage cannot be confined is to **price it at
+  several sizes**, and both objects were priced at N = 36 to 600, at λ = 1, 1.25 and 1.5. **The point defect
+  costs exactly 32 at every size**, so it is local and O22 applies to it: no force. **The gap between the two
+  orders is exactly 4(λ − 1) per point at every size** -- 0, 1 and 2 -- so a boundary between sheet-order and
+  tube-order pays a fixed price for every point it sweeps. **That is a force that does not fall off with
+  distance at all**, which is what a constant energy per unit volume converted means, and it is far stronger
+  at range than anything that decays. Both halves were predicted in the config before the run.
+  **What this resolves** (*ours, unverified*): the obstruction of O22 is real but narrow. It says a *point*
+  leftover cannot pull on another point leftover. It says nothing about regions, and this model's long-range
+  effect is exactly the one a picture built on regions of one order inside another would want. The project has
+  already watched it act: it is what drives the front in T7, at a rate set by that same gap. **What it is
+  not:** it is not gravity. A constant force between phase boundaries is what drives bubble walls in a
+  first-order transition; it does not fall off as an inverse square, it does not act between separated lumps,
+  and nothing here derives an attraction between two regions of the *same* order. Saying "there is a
+  long-range force in this model" is true and is not the same sentence as "gravity is here".
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
