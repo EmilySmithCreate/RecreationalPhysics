@@ -1,15 +1,23 @@
 # Draft note to the model's authors (not sent)
 
 Drafted 2026-09-22 for Emily to send if she chooses. VISION S5 and TASKS "Before anything is shown to
-anyone" list what it should contain. Addresses are deliberately not filled in here. Before sending:
-make sure the repository is public, and check each number against `ASSUMPTIONS.md` once more.
+anyone" list what it should contain. Before sending: make sure the repository is public, and check each
+number against `ASSUMPTIONS.md` once more.
+
+**Addresses, found 2026-09-22 from published sources.** Carlo A. Trugenberger (SwissScientific
+Technologies SA, Geneva): ca.trugenberger@bluewin.ch, listed on the IOPscience page of his 2024
+Classical and Quantum Gravity paper. Fabio Biancalana (Associate Professor, Heriot-Watt):
+F.Biancalana@hw.ac.uk, from his university staff page. Christy Koji Kelly has no published address
+we could find; as of 2025 they were a Special Postdoctoral Researcher at RIKEN iTHEMS. Either use
+arXiv's "view email" link on arXiv:1901.09870, which reveals the submitting author's address after a
+check, or ask Fabio Biancalana to pass the note on.
 
 ---
 
-**To:** C. Trugenberger, C. Kelly, F. Biancalana
+**To:** ca.trugenberger@bluewin.ch, F.Biancalana@hw.ac.uk (and Christy Kelly, if an address can be found)
 **Subject:** Reproducing your combinatorial quantum gravity model: two questions (Fig. 3, and order at degree 4)
 
-Dear Dr Trugenberger, Dr Kelly and Dr Biancalana,
+Dear Dr Trugenberger, Dr Biancalana and Dr Kelly,
 
 I'm a software engineer who has spent the past few weeks reproducing your 2D combinatorial quantum
 gravity model as a hobby project, with the code and pre-registered analyses in the open:
