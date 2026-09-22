@@ -90,3 +90,49 @@ energy against separation, which has not been made.
    is the only way a force can exist here at all.
 4. Item 1 is reading and argument, not a run, and it stays parked until someone qualified has looked
    (S5).
+
+## Why a loop at all: the author's argument, and what it has to beat (added 2026-09-22)
+
+**Her argument, in her words put in order.** The whole thing has to be a loop, because only a loop
+is eternal. Among all the things reality could be, it cannot be something with a start and an end:
+such things become vanishingly rare as the ordering runs on, by definition. So the loop is what
+survives, and what survives is what there is.
+
+**A correction she had to make twice, and the assistant should not have needed.** The objection
+raised against this was that counting occurrences "over time" assumes a time to count in, while the
+loop is supposed to explain where time came from. **That objection is void**, and by her own fixed
+reference: VISION's comparison table has said since 2026-09-21 that *time is not created by the
+change* — X already has something time-like about it, an ordering, and the change rearranges it as
+it rearranges the spatial directions. Space happened; time did not. The bare ordering is assumed on
+both sides and derived by neither, which is also the published model's own position ([T23]). So
+there is an ordering in which to count, and the argument is not circular.
+
+**What survives of the objections** (*ours*):
+
+- **The measure problem is real and unsolved.** Comparing "how many" looping realities there are
+  against non-looping ones, over an unbounded ordering with infinitely many of each, needs a way of
+  measuring sets that nobody has. "Infinitesimally fewer" has no definition until one exists. This
+  is a known open problem in cosmology and not an objection invented here.
+- **The rival is not what she named.** A structure with a start *and an end* does lose the argument.
+  But the real competitor is a structure with a start and **no** end that simply runs down: a universe
+  that expands for ever into cold emptiness. That is eternal without being a loop, it is what current
+  cosmology actually predicts, and any argument from survival has to beat it rather than the easier
+  case.
+- **Her picture has an answer to that, and it is a good one** (*ours, drawn from her position*): each
+  individual space may run down, while the loop continues elsewhere, because black holes keep making
+  X and X keeps opening. The continuation is relocated rather than sustained in place. That is the
+  same structure eternal inflation uses, where each bubble ends and the whole never does.
+
+**The stronger form of her argument, offered and not yet adopted.** Counting is the weaker ground.
+The stronger one is **closure**: a structure with a beginning demands an account *of* the beginning,
+which demands one of its own, without end. A loop is the only structure that requires nothing outside
+itself. That needs no measure and no vantage point outside the ordering.
+
+**Status: philosophy, and labelled as such.** No measurement distinguishes "reality is a loop" from
+"reality began", and none is proposed. It is a statement about which kinds of theory the author will
+accept — which is a legitimate and common way to choose a direction, and is not a result. It does not
+appear on the scorecard and must not.
+
+**What it will meet.** The standard technical objection to any eternal-past cosmology is that
+inflationary spacetimes are past-incomplete (Borde, Guth and Vilenkin). *From general knowledge, not
+read by us, to verify before it is cited.* Anyone shown this argument will raise it.
