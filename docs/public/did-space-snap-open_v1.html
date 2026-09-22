@@ -244,6 +244,9 @@
   .checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
   .check { display: grid; grid-template-columns: 26px 1fr; align-content: start; gap: .1rem .6rem; padding: .8rem .9rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--ground); }
   .check svg { width: 22px; height: 22px; grid-row: span 2; margin-top: .1rem; }
+  .checks .check:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  p.aside { font-size: .92rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: .85rem; }
+
   .check .ck-h { font-family: var(--display); font-weight: 700; font-size: .95rem; }
   .check p { font-size: .9rem; color: var(--ink-2); line-height: 1.45; }
   @media (max-width: 620px) { .checks { grid-template-columns: 1fr; } }
@@ -701,12 +704,8 @@
         <p class="ck-h">Matches exact answers</p>
         <p>At the smallest sizes we listed every possible arrangement, about 1.8 trillion, and the simulation matches the exact averages.</p>
       </div>
-      <div class="check">
-        <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" style="fill:var(--critical)"/><path d="M7.5,7.5 L14.5,14.5 M14.5,7.5 L7.5,14.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
-        <p class="ck-h">One figure we can't match</p>
-        <p>A 2025 figure from the same group differs from ours in one middle range. It also disagrees with their 2019 curve, so that's a question for the authors.</p>
-      </div>
     </div>
+    <p class="aside"><b>One check did not pass, and it is worth a line rather than a section.</b> A 2025 figure from the same group differs from ours over one middle stretch &mdash; but it also disagrees with that group's <i>own</i> 2019 curve, the one we match to half a per cent. So it is a question for them rather than a fault in ours, and the full comparison is in the repository.</p>
     <p>The question the published researchers ask is whether space forms <em>suddenly out of a random tangle</em> of links. Here is the lump we measured at several sizes.</p>
     <figure class="fig">
       <p class="fig-title">How big is the lump, and what happens to it as the network grows?</p>
