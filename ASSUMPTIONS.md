@@ -534,6 +534,28 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** Sizes 48–96 only; N = 128 needs a walk roughly seven times longer (3 round trips on a unit walk); 160 longer still. Whether the barrier grows like L or like N. Any connectivity observable in the valley, which the walk does not record and the pre-registration asks to have reported alongside.
 
+- **O12 λ ≥ 1 complete at 36 / 64 / 100: no two-phase structure at the transition, the lump bounded and falling, and gate 4 failing for a reason that is not a wall.** (2026-09-22. Runs `t6b_lam1`, `t6b_lam125`, `t6b_lam15`, tempering along φ under amendment 1.)
+
+  **The bound, which is the falsification clause's required output.** Largest latent heat that could hide in a single hump, per point:
+
+  | λ | N = 36 | N = 64 | N = 100 |
+  |---|---|---|---|
+  | 1 | < 1.65 | < 1.51 | < 1.30 |
+  | 1.25 | < 1.60 | < 1.47 | < 1.27 |
+  | 1.5 | < 1.66 | < 1.45 | < 1.26 |
+
+  Against 10.3, 11.3, 12.5 *measured* at λ = 0 on the clean sizes. The bound falls with N at every λ, which is how a continuous transition's energy fluctuations behave and the opposite of a latent heat, which holds its value. **Any lump at λ ≥ 1 is at least eight times smaller than the one at λ = 0 and shrinking.**
+
+  **No two-phase structure at the geometry-forming change.** λ = 1.5: none at any coupling, size or replica. λ = 1.25: one replica at N = 64 found φ = 1.000 | 1.062 at g = 1.35 with a latent heat of 0.04 and a rung spread of 183 % — the perfect sheet against a sheet with one defect, at the cold end, not a transition. λ = 1: pairs at g_c 1.6 to 2.1, Δφ 0.08 to 0.13, rung spreads 33 to 339 % — the degenerate manifold of O10 (sheet, tube and cubes tie in energy at λ = 1, so reweighting in g cannot set their balance), at the cold end below the transition. **At every λ ≥ 1 and every size, the region where φ actually changes, g ≈ 2.5 to 5, shows one hump.**
+
+  **Gate 4 fails at N ≥ 64, and the reason is diagnosed.** Round trips (minimum over replicas): λ = 1: 102 / 15 / 1; λ = 1.25: 32 / 11 / 3; λ = 1.5: 26 / 15 / 0 at N = 36 / 64 / 100. Not a severed ladder — swap acceptance is 0.20 to 0.74 at every link, with no collapse anywhere, and φ moves smoothly through every rung (no jump, which is the continuous transition itself). It is diffusion: eighteen rungs, a hot end coarse in 1/g (the top link accepts 0.20), and a cold tail of four to five rungs where the move acceptance is 0.001 and φ has saturated. The pre-registered rule is per run and it fails. **So no verdict is issued at λ ≥ 1 from these runs.**
+
+  **What does not depend on round trips.** Four independent replicas, started from independent melts, agree on φ at N = 100 to **0.001 to 0.01 at every rung with g ≥ 2.2**, for all three λ, with integrated autocorrelation times of a few hundred sweeps against 60,000 measured. The only disagreement is at λ = 1's two coldest rungs (0.06 to 0.07, τ ≈ 1700 sweeps) — the degenerate manifold, below the transition, where the choice between sheet, tube and cubes is slow. For a continuous transition there are no two phases that a ladder crossing has to mix; the direct evidence of equilibration in the transition region is replica agreement, and it is there. This is why the bound in the table is stated as exploratory rather than withheld.
+
+  **What is being done about it.** `t6c_*` runs: N = 64 and 100 at each λ ≥ 1, the ladder trimmed to fourteen rungs (hot end refined, the frozen tail below g = 2.35 cut) and the measured rounds tripled. Sampling-efficiency changes only; the same distributions. Expected to meet gate 4 as written, at which point the λ ≥ 1 verdicts follow under whatever criterion 3 Emily settles (O11). N = 36 already passes and is not re-run.
+
+  **Not claimed.** Any verdict at λ ≥ 1. The word "continuous" (the pre-registration reserves it). Anything about λ between 1 and 1.5 other than the three values run.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
