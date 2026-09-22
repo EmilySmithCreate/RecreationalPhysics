@@ -113,6 +113,20 @@ Anything about the real universe; anything about X, which is not what this model
 
 **What does not change.** Tempering remains the instrument at λ ≥ 1, where there is no wall, and remains a cross-check at λ = 0 where it can reach. Observables, gates, verdicts, falsification clause untouched.
 
+#### Verdict at λ = 0 under the rules above, 22 September 2026: INCONCLUSIVE
+
+Three sizes (48, 64, 96) pass gates 3 and 4. Criterion 1 met (latent heat 12.5 ± 0.02 per point at N = 96). Criterion 2 met (barrier slope +1.59 ± 0.05 against L, 34 standard errors). Criterion 3 not met as written: the Binder minima 0.381, 0.480, 0.575 are below 2/3 but rising. The rules say the criteria disagreeing is INCONCLUSIVE and is not to be resolved afterwards by changing the rule. It is not. Full table in `ASSUMPTIONS.md` O11.
+
+#### PROPOSED amendment 4 — not enacted; Emily's decision — criterion 3 is mis-specified
+
+**Written after the λ = 0 verdict above, and it would change that verdict. That is stated first so it cannot be missed.**
+
+The value a first-order transition predicts for the Binder minimum is not 2/3. For two phases at energies e₊ and e₋ per point it is 1 − 2(e₊⁴ + e₋⁴)/(3(e₊² + e₋²)²), which is 2/3 only when |e₊| = |e₋| (Challa, Landau and Binder 1986). In this model the cold phase sits at φ = 1.5 (e₋ = −8) and the hot one near 0.7 (e₊ ≈ 4.8), so the first-order limit is about 0.59, and the finite-size approach to it is from below. The measured minima are rising towards 0.59, not towards 2/3; at N = 96 the measured value is 0.575 against a predicted 0.594. As written, criterion 3 can never return FIRST ORDER in this model, whatever the physics — and it is the positive control, where the transition is known to be first order, that exposed this.
+
+**Proposed wording.** Criterion 3: the Binder minimum lies below 2/3 at every size, and at the largest size lies within 0.03 of the two-spike prediction computed from that size's measured phase energies. The prediction has no free parameter.
+
+**Why this is proposed rather than made.** It is a rule change after seeing data, which this document forbids me to make. What makes it defensible for Emily to make is (a) the formula is textbook, (b) the defect was found on the control and not on the cases under test, and (c) the alternative — issuing λ ≥ 1 verdicts under a criterion that fails the positive case — is worse. **If adopted:** λ = 0 becomes FIRST ORDER, and the same criterion applies unchanged at λ ≥ 1. **If not adopted:** λ = 0 stays INCONCLUSIVE, and criterion 3 must be declared uninformative and dropped from the λ ≥ 1 verdicts *before* they are read, for the same reason. Either way is honest; leaving it as it stands is not.
+
 ---
 
 ## T7. The λ map

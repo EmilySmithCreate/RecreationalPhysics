@@ -73,19 +73,101 @@ def main(out_dir="results"):
     if len(passing) < 3:
         print("The pre-registered verdict needs at least three. No verdict from this table.")
         return
-    L = np.array([p["L"] for p in passing]); b = np.array([p["barrier"] for p in passing])
-    lat = np.array([p["latent"] for p in passing]); n = np.array([p["N"] for p in passing], float)
-    # barrier against L (interface picture, 2D: dF = 2 sigma L) and against N (no interface)
-    sL = np.linalg.lstsq(np.vstack([L, np.ones_like(L)]).T, b, rcond=None)[0]
-    sN = np.linalg.lstsq(np.vstack([n, np.ones_like(n)]).T, b, rcond=None)[0]
-    resL = b - (sL[0] * L + sL[1]); resN = b - (sN[0] * n + sN[1])
-    lat0 = np.linalg.lstsq(np.vstack([1 / L, np.ones_like(L)]).T, lat, rcond=None)[0][1]
-    print("\n  barrier = %.3f * L %+.3f   (rms residual %.3f)" % (sL[0], sL[1], np.sqrt((resL ** 2).mean())))
-    print("  barrier = %.4f * N %+.3f  (rms residual %.3f)" % (sN[0], sN[1], np.sqrt((resN ** 2).mean())))
-    print("  latent heat extrapolated to infinite size (against 1/L): %.3f per point" % lat0)
-    print("\n  A barrier that grows with size, and a latent heat that stays finite, is the pre-registered")
-    print("  FIRST ORDER signature. Which of L or N it grows with is not part of the verdict but is")
-    print("  physics worth recording: L means an interface, N means none (knots cost nothing to separate).")
+
+    # --- the other two observables, from the same density of states ---------------------
+    # Binder energy cumulant B(g) = 1 - <H^4> / 3<H^2>^2 with H = 16(N - S), and the specific
+    # heat C(g)/N = var(H) / (g^2 N); both scanned over g and the extremum kept. Per seed, then
+    # averaged, so the seed scatter is the error bar here too.
+    for p in passing:
+        bmins, cmaxs = [], []
+        for r in runs[p["N"]]:
+            if not (r["got"] and r["trips"] >= GATE4_TRIPS):
+                continue
+            d = np.load(next(Path(out_dir).glob("wl_lam0_N%d%s.npz"
+                                                % (p["N"], "" if r["tag"] == "(untagged)" else r["tag"]))))
+            lng, seen, s0 = d["lng"], d["seen"], int(d["s_min"])
+            bmin, cmax = np.inf, -np.inf
+            for g in np.linspace(3.0, 14.0, 551):
+                s, pr = W.profile(lng, seen, s0, p["N"], g)
+                h = W.E_SQ * (p["N"] - s)
+                m2, m4 = (pr * h ** 2).sum(), (pr * h ** 4).sum()
+                m1 = (pr * h).sum()
+                bmin = min(bmin, 1.0 - m4 / (3.0 * m2 * m2))
+                cmax = max(cmax, (m2 - m1 * m1) / (g * g * p["N"]))
+            bmins.append(bmin); cmaxs.append(cmax)
+        p["binder"], p["bind_err"] = np.mean(bmins), np.std(bmins, ddof=1) / np.sqrt(len(bmins))
+        p["cmax"], p["c_err"] = np.mean(cmaxs), np.std(cmaxs, ddof=1) / np.sqrt(len(cmaxs))
+
+    print("\n%-5s %-16s %-16s %-16s %-14s" % ("N", "latent", "barrier", "Binder min", "C_max / N"))
+    for p in passing:
+        print("%-5d %6.3f +/- %5.3f %6.3f +/- %5.3f %7.4f +/- %6.4f %6.3f +/- %5.3f"
+              % (p["N"], p["latent"], p["l_err"], p["barrier"], p["b_err"], p["binder"], p["bind_err"],
+                 p["cmax"], p["c_err"]))
+
+    # --- weighted straight-line fits, with the slope's and intercept's standard errors ------
+    def wfit(x, y, sig):
+        w = 1.0 / np.maximum(sig, 1e-9) ** 2
+        A = np.vstack([x, np.ones_like(x)]).T
+        cov = np.linalg.inv(A.T @ (w[:, None] * A))
+        beta = cov @ A.T @ (w * y)
+        return beta, np.sqrt(np.diag(cov))
+
+    L = np.array([p["L"] for p in passing]); n = np.array([p["N"] for p in passing], float)
+    b = np.array([p["barrier"] for p in passing]); be = np.array([p["b_err"] for p in passing])
+    lat = np.array([p["latent"] for p in passing]); le = np.array([p["l_err"] for p in passing])
+    bind = np.array([p["binder"] for p in passing])
+
+    (slopeL, icL), (eL, _) = wfit(L, b, be)
+    (slopeN, icN), (eN, _) = wfit(n, b, be)
+    (_, lat0), (_, lat0e) = wfit(1.0 / L, lat, le)
+    (bslope, _), (bslope_e, _) = wfit(1.0 / L, bind, np.array([p["bind_err"] for p in passing]))
+
+    print("\n  barrier against L:  slope %+.3f +/- %.3f   (%.1f standard errors from zero)"
+          % (slopeL, eL, slopeL / eL))
+    print("  barrier against N:  slope %+.4f +/- %.4f  (%.1f standard errors from zero)"
+          % (slopeN, eN, slopeN / eN))
+    print("  latent heat at infinite size (intercept against 1/L): %.2f +/- %.2f per point"
+          "  (%.1f standard errors from zero)" % (lat0, lat0e, lat0 / lat0e))
+    print("  Binder minimum: %s ; trend with size (slope against 1/L): %+.4f +/- %.4f"
+          % (", ".join("%.4f" % v for v in bind), bslope, bslope_e))
+    # What a first-order transition predicts the Binder minimum tends to. For a distribution
+    # that is two spikes at the phase energies e+ and e- (per point; the factor N cancels),
+    # B = 1 - 2(e+^4 + e-^4) / (3 (e+^2 + e-^2)^2), which is 2/3 only when |e+| = |e-| and is
+    # otherwise BELOW 2/3 by an amount fixed by the two energies. Here e+ = 16(1 - phi_hot)
+    # and e- = 16(1 - phi_cold) = -8. So the limit is size-independent and computable, and the
+    # question is whether the measured minima are heading for it or for 2/3.
+    two_phase = []
+    for p in passing:
+        r0 = [r for r in runs[p["N"]] if r["got"] and r["trips"] >= GATE4_TRIPS]
+        ep = np.mean([W.E_SQ * (1 - r["got"]["phi_lo"]) for r in r0])
+        em = np.mean([W.E_SQ * (1 - r["got"]["phi_hi"]) for r in r0])
+        a, c = ep * ep, em * em
+        two_phase.append(1.0 - 2.0 * (a * a + c * c) / (3.0 * (a + c) ** 2))
+    print("  Two-spike prediction for the Binder minimum at infinite size, from the measured phase")
+    print("  energies at each size: %s   (2/3 = 0.6667 is what a continuous transition tends to)"
+          % ", ".join("%.4f" % v for v in two_phase))
+
+    # --- the three criteria, exactly as pre-registered ----------------------------------
+    c1 = lat0 / lat0e >= 3.0
+    c2 = slopeL / eL >= 3.0
+    below = np.all(bind < 2.0 / 3.0)
+    # "not rising towards 2/3": the Binder minimum must not increase with N (i.e. must not
+    # decrease against 1/L) at more than one standard error
+    rising = (bslope < 0) and (abs(bslope) > bslope_e)
+    c3 = below and not rising
+    print("\n  Criterion 1, latent heat non-zero at 3 s.e.:      %s" % ("MET" if c1 else "not met"))
+    print("  Criterion 2, barrier slope positive at 3 s.e.:    %s" % ("MET" if c2 else "not met"))
+    print("  Criterion 3, Binder min below 2/3, not rising:    %s" % ("MET" if c3 else "not met"))
+    if c1 and c2 and c3:
+        verdict = "FIRST ORDER"
+    elif (lat0 / lat0e < 2.0) and (slopeL / eL < 2.0) and not below:
+        verdict = "NO EVIDENCE OF FIRST ORDER AT THESE SIZES"
+    else:
+        verdict = "INCONCLUSIVE"
+    print("\n  PRE-REGISTERED VERDICT, lambda = 0, sizes %s:  %s" % ([p["N"] for p in passing], verdict))
+    print("\n  Recorded alongside, not part of the verdict: the barrier grows with L at %.1f s.e. and"
+          "\n  with N at %.1f s.e.; whichever fits better says whether there is an interface (L) or"
+          "\n  none (N: knots cost nothing to separate)." % (slopeL / eL, slopeN / eN))
 
 
 if __name__ == "__main__":
