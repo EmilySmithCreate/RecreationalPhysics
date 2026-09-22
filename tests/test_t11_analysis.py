@@ -52,6 +52,19 @@ def test_too_few_single_ring_replicas_is_inconclusive():
     assert v == "INCONCLUSIVE"
 
 
+def test_distance_is_derived_from_the_recorded_columns_when_the_runner_left_it_blank():
+    # leftover across columns 7 and 8 (mean 7.5), change started at 15.5: 8 columns apart on a 16-loop
+    r = dict(N="64", rings="1", dist="nan", half_length="8.0", ring_cols="7 8", start="15.5")
+    d, half = a11.distance_of(r)
+    assert abs(d - 8.0) < 1e-9 and half == 8.0
+    # wraparound: columns 0 and 15 (mean 15.5), start at 0.5: one column apart
+    r = dict(N="64", rings="1", dist="nan", half_length="8.0", ring_cols="0 15", start="0.5")
+    assert abs(a11.distance_of(r)[0] - 1.0) < 1e-9
+    # a numeric dist from the runner is used as is
+    r = dict(N="64", rings="1", dist="3.0", half_length="8.0", ring_cols="4", start="1.0")
+    assert a11.distance_of(r)[0] == 3.0
+
+
 def test_multi_ring_replicas_are_left_out():
     rows = _rows({64: [8.0] * 40, 96: [12.0] * 30}) + _rows({64: [0.0] * 40}, rings=2)
     v, lines = a11.verdict(rows)

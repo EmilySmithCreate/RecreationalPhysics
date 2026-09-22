@@ -27,12 +27,37 @@ def load(out_dir="results"):
     return rows
 
 
+def circular_mean(cols, lx):
+    ang = 2.0 * np.pi * np.asarray(cols, float) / lx
+    m = np.arctan2(np.sin(ang).mean(), np.cos(ang).mean())
+    return float((m * lx / (2.0 * np.pi)) % lx)
+
+
+def distance_of(r):
+    """The circular distance from the start to the leftover, in columns. The runner filled `dist`
+    only when the leftover occupied one column; the leftover in fact spans two or three (it lies
+    along the tube, not around it), so the distance is taken here from the recorded columns of
+    the d = 1 vertices, as the pre-registration's observable says, via their circular mean."""
+    half = float(r["half_length"])
+    lx = 2.0 * half
+    if r.get("dist", "") not in ("", "nan"):
+        return float(r["dist"]), half
+    cols = [int(c) for c in str(r.get("ring_cols", "")).split()]
+    if not cols or r.get("start", "") in ("", "nan"):
+        return float("nan"), half
+    d = abs(circular_mean(cols, lx) - float(r["start"])) % lx
+    return float(min(d, lx - d)), half
+
+
 def verdict(rows):
     """Returns (verdict, report lines). Pure function of the parsed rows."""
     by_n = defaultdict(list)
     for r in rows:
-        if int(r["rings"]) == 1 and r["dist"] not in ("", "nan"):
-            by_n[int(r["N"])].append((float(r["dist"]), float(r["half_length"])))
+        if int(r["rings"]) != 1:
+            continue
+        d, half = distance_of(r)
+        if np.isfinite(d):
+            by_n[int(r["N"])].append((d, half))
     lines = ["%-5s %-8s %-10s %-10s %-10s  %s" % ("N", "1-ring", "near far", "at start", "median", "gate")]
     seam, atseed, gated = [], [], []
     for n in sorted(by_n):
