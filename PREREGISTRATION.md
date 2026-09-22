@@ -93,6 +93,26 @@ Anything about the real universe; anything about X, which is not what this model
 
 **A guard added under the old coordinate is withdrawn.** `analyse_t6_hist.py` gained a coarse-graining veto that was written after seeing the λ = 1.25 data it rejects, and it moved the λ = 0, N = 36 barrier from 0.969 to 0.436. Tuning a threshold against the data it judges is the thing this document exists to prevent. The veto's idea — that a real barrier survives coarse-graining and a lattice artefact does not — is sound, and under φ it is not needed, because there is no comb to veto.
 
+#### Amendment 2, 21 September 2026 — the λ = 0 size sequence is multiples of 16
+
+**Status: written after λ = 0 ran at N = 36 and N = 64 under amendment 1, and before any run at the sizes it adds.**
+
+**What is wrong with the original.** The pre-registered sizes are square tori, N = 36, 64, 100. At λ = 0 the cold phase shatters into 16-point knots, and the smallest valid piece has 14 points. So N = 64 = 4 × 16 shatters into four whole knots (measured φ = 1.422), while N = 36 = 2 × 16 + 4 cannot — its cold phase is one knot plus a 20-point ribbon (measured φ = 1.278) — and N = 100 = 6 × 16 + 4 is knots-plus-ribbon again. **These are two different cold phases with different energies**, which is why the latent heat measured 5.8 per point at N = 36 and 9.5 at N = 64: not statistics, structure. A finite-size fit across 36 / 64 / 100 would be fitting a line through a structural step. This is arithmetic (section 19 of the write-up, the ribbon, applied to the size list) and does not depend on any result.
+
+**What changes.** For λ = 0 the sizes entering the fit are multiples of 16: **64, 96 (16 × 6), 128 (16 × 8)**, with 144 (12 × 12) and 160 (16 × 10) if affordable. These are the Gate A sizes. The already-run 36 and the pre-registered 100 are reported but do not enter the λ = 0 fit.
+
+**What does not change.** For λ ≥ 1 the cold phase is the flat sheet, which exists at every size, so the square tori stand there. The observables, gates, verdicts and falsification clause are untouched.
+
+#### Amendment 3, 21 September 2026 — the λ = 0 barrier is measured by a one-dimensional flat-histogram walk
+
+**Status: written after the walk was validated against exact counts at N = 16 and against tempering at N = 36, and before its result at any larger size was seen.**
+
+**What is wrong with the method as run.** Tempering across the λ = 0 transition collapses at the transition rung — swap acceptance 0.26 at g ≈ 6.75 at N = 64 on both a shared ladder and a per-size one — because across a first-order transition adjacent rungs stop sharing energies, and the gap grows with N. Densifying the ladder does not remove this; it is the textbook case for a flat-histogram method, which walks through the valley rather than trying to hop it. The original pre-registration named Wang-Landau as the instrument and moved to tempering when the two-dimensional walk over (S, X) failed at N = 36 (Q17). But at λ = 0 the energy is 16(N − S) alone: X never enters, the density of states is one-dimensional in S, and the walk is over tens of bins rather than hundreds.
+
+**What changes.** At λ = 0 the four observables are read from the one-dimensional density of states in S (`scripts/run_wl_lam0.py`), which gives the full P(φ) at every coupling. The walk must reproduce the exact N = 16 counts (it does: `test_one_dimensional_walk_in_s_matches_the_exhaustive_count_summed_over_x`) and must agree with tempering where tempering works (at N = 36: phases at φ = 0.917 | 1.278 by both; g_c 7.34 against 7.51). Round trips across the reachable range of S are reported with every row, and gate 4 applies to them.
+
+**What does not change.** Tempering remains the instrument at λ ≥ 1, where there is no wall, and remains a cross-check at λ = 0 where it can reach. Observables, gates, verdicts, falsification clause untouched.
+
 ---
 
 ## T7. The λ map

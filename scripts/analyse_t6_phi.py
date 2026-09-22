@@ -130,6 +130,24 @@ def main(name, out_dir="results"):
             per_rung[(n, k)].append(got)
 
     print("T6 along phi, %s. PREREGISTRATION.md T6 as amended 21 Sep 2026.\n" % name)
+
+    # The falsification clause: a transition too weak to see is reported as a BOUND, not an
+    # absence. Two phases separated in energy by less than about twice the width of one hump
+    # do not produce a visible dip, so the largest latent heat that could hide in a single hump
+    # is about 2 sigma_E / N, taken where the energy fluctuations are largest (the specific-heat
+    # peak). Reported for every size; where two humps ARE found it should sit below the latent
+    # heat measured, which is a consistency check on both.
+    bound = defaultdict(float)
+    for r in rows:
+        if r.get("e_var"):
+            n = int(r["N"])
+            bound[n] = max(bound[n], 2.0 * float(r["e_var"]) ** 0.5 / n)
+    print("Largest latent heat that could hide in a single hump, per point, by size:")
+    for n in sorted(bound):
+        print("   N=%-4d  < %.3f   (lambda = 0 measured 5.8 at N = 36, 9.5 at N = 64, for scale)"
+              % (n, bound[n]))
+    print()
+
     if not per_size:
         print("  no two-hump structure in phi at any coupling, size or replica.")
         return

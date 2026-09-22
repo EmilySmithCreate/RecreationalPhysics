@@ -166,8 +166,12 @@ def two_humps(p, raw, passes=SMOOTH_PASSES):
     ps = smooth(p, passes)
     ps = ps / ps.sum()
     cs = smooth(raw, passes)              # counts behind each bin, smoothed the same way
-    interior = range(1, len(ps) - 1)
-    maxima = [i for i in interior if ps[i] >= ps[i - 1] and ps[i] >= ps[i + 1]]
+    # An end bin higher than its one neighbour is a maximum too. This matters: at lambda = 0
+    # the ground state is the highest reachable S, so the cold hump sits exactly on the edge of
+    # the visited range, and an interior-only rule cannot see it (found on the N = 64 walk,
+    # which had a valley 4 deep that the analysis reported as 0.04).
+    maxima = [i for i in range(len(ps))
+              if (i == 0 or ps[i] >= ps[i - 1]) and (i == len(ps) - 1 or ps[i] >= ps[i + 1])]
     best, best_depth = None, -np.inf
     for ai, a in enumerate(maxima):
         for b in maxima[ai + 1:]:
