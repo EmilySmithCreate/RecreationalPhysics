@@ -1,0 +1,1443 @@
+<title>Did Space Snap Open?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --ground: #f3f4ef;
+    --paper: #fcfcfa;
+    --ink: #16181d;
+    --ink-2: #454a54;
+    --ink-3: #6f747e;
+    --rule: #d9dcd3;
+    --grid: #e4e6de;
+    --gridline: #e1e0d9;
+    --axis: #c3c2b7;
+    --muted: #7c7a74;
+
+    --x: #4a3aa7;       --x-wash: rgba(74, 58, 167, .11);   --on-x: #ffffff;
+    --space: #2a78d6;   --space-wash: rgba(42, 120, 214, .11);
+    --lump: #eb6834;    --lump-wash: rgba(235, 104, 52, .16); --on-lump: #16181d;
+    --push: #1baf7a;
+    --o1: #86b6ef; --o2: #2a78d6; --o3: #104281;
+    --good: #0ca30c; --warn: #d99100; --critical: #d03b3b; --neutral: #9a9ea6;
+
+    --tag-settled-bg: #e6e8e1; --tag-settled-fg: #3d424a;
+    --tag-pub-bg: #fbe6dc;     --tag-pub-fg: #8a3212;
+    --tag-ours-bg: #e0ecfa;    --tag-ours-fg: #1b4d8c;
+    --tag-idea-bg: #eae7f8;    --tag-idea-fg: #3b2e8c;
+
+    --shadow: 0 1px 2px rgba(22, 24, 29, .06), 0 4px 14px rgba(22, 24, 29, .05);
+    --i-x: var(--x); --i-xw: var(--x-wash); --i-space: var(--space); --i-spacew: var(--space-wash);
+    --i-lump: var(--lump); --i-on-lump: var(--on-lump); --i-ink: var(--ink); --i-ink2: var(--ink-2); --i-ink3: var(--ink-3);
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --ui: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #111317; --paper: #1a1c20; --ink: #eef0f2; --ink-2: #b9bdc5; --ink-3: #8a8f98;
+      --rule: #2d3137; --grid: #1f2226; --gridline: #2c2c2a; --axis: #42423e; --muted: #92908a;
+      --x: #9085e9; --x-wash: rgba(144, 133, 233, .15); --on-x: #111317;
+      --space: #3987e5; --space-wash: rgba(57, 135, 229, .15);
+      --lump: #d95926; --lump-wash: rgba(217, 89, 38, .2); --on-lump: #111317;
+      --push: #199e70;
+      --o1: #b7d3f6; --o2: #5598e7; --o3: #1c5cab;
+      --good: #0ca30c; --warn: #fab219; --critical: #e66767; --neutral: #7d828b;
+      --tag-settled-bg: #262a30; --tag-settled-fg: #c6cad1;
+      --tag-pub-bg: #3a2318;     --tag-pub-fg: #f3a582;
+      --tag-ours-bg: #172a40;    --tag-ours-fg: #93bff2;
+      --tag-idea-bg: #25203e;    --tag-idea-fg: #bdb4f4;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #111317; --paper: #1a1c20; --ink: #eef0f2; --ink-2: #b9bdc5; --ink-3: #8a8f98;
+    --rule: #2d3137; --grid: #1f2226; --gridline: #2c2c2a; --axis: #42423e; --muted: #92908a;
+    --x: #9085e9; --x-wash: rgba(144, 133, 233, .15); --on-x: #111317;
+    --space: #3987e5; --space-wash: rgba(57, 135, 229, .15);
+    --lump: #d95926; --lump-wash: rgba(217, 89, 38, .2); --on-lump: #111317;
+    --push: #199e70;
+    --o1: #b7d3f6; --o2: #5598e7; --o3: #1c5cab;
+    --good: #0ca30c; --warn: #fab219; --critical: #e66767; --neutral: #7d828b;
+    --tag-settled-bg: #262a30; --tag-settled-fg: #c6cad1;
+    --tag-pub-bg: #3a2318;     --tag-pub-fg: #f3a582;
+    --tag-ours-bg: #172a40;    --tag-ours-fg: #93bff2;
+    --tag-idea-bg: #25203e;    --tag-idea-fg: #bdb4f4;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: var(--body); font-size: 1.0625rem; line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  p, ul, ol, h1, h2, h3, figure { margin: 0; }
+  a { color: var(--space); text-underline-offset: .18em; }
+  a:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--space); outline-offset: 3px; border-radius: 3px; }
+  b, strong { font-weight: 700; }
+
+  .wrap { max-width: 46rem; margin: 0 auto; padding-inline: 20px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    background-color: var(--ground);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: -1px -1px;
+  }
+  .hero .wrap { padding-block: 3.2rem 2.4rem; display: grid; gap: 1.1rem; }
+  .eyebrow {
+    font-family: var(--display); font-weight: 700; font-size: .74rem;
+    letter-spacing: .13em; text-transform: uppercase; color: var(--ink-3);
+  }
+  h1 {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(2.5rem, 9vw, 4.1rem); line-height: 1.0; letter-spacing: -.025em;
+    text-wrap: balance;
+  }
+  h1 .curl { color: var(--x); }
+  h1 .open { color: var(--space); }
+  .standfirst { font-size: 1.2rem; line-height: 1.5; color: var(--ink-2); max-width: 36rem; }
+  .byline { font-family: var(--ui); font-size: .86rem; color: var(--ink-3); }
+  .links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .3rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .45rem;
+    font-family: var(--ui); font-size: .9rem; font-weight: 600;
+    padding: .5rem .85rem; border-radius: 6px; text-decoration: none;
+    border: 1px solid var(--rule); background: var(--paper); color: var(--ink);
+  }
+  .btn:hover { border-color: var(--ink-3); }
+  .btn.soon { color: var(--ink-3); border-style: dashed; cursor: default; }
+
+  /* ---------- short answer + legend ---------- */
+  .answer {
+    margin-top: 2.2rem; background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 10px; box-shadow: var(--shadow); padding: 1.4rem 1.5rem; display: grid; gap: .9rem;
+  }
+  .answer h2 { font-family: var(--display); font-size: 1.25rem; font-weight: 700; }
+  .answer ul { padding-left: 1.15rem; display: grid; gap: .6rem; }
+  .legend-line { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; font-size: .9rem; color: var(--ink-2); margin-top: 1.4rem; }
+  .legend-line > span:first-child { margin-right: .2rem; }
+
+  .tag {
+    display: inline-block; font-family: var(--display); font-weight: 700;
+    font-size: .68rem; letter-spacing: .07em; text-transform: uppercase;
+    padding: .18rem .55rem; border-radius: 999px; line-height: 1.35; white-space: nowrap;
+    vertical-align: .12em;
+  }
+  .tag.settled { background: var(--tag-settled-bg); color: var(--tag-settled-fg); }
+  .tag.pub     { background: var(--tag-pub-bg);     color: var(--tag-pub-fg); }
+  .tag.ours    { background: var(--tag-ours-bg);    color: var(--tag-ours-fg); }
+  .tag.idea    { background: var(--tag-idea-bg);    color: var(--tag-idea-fg); }
+  .tag.reading { background: transparent; color: var(--tag-ours-fg); border: 1px dashed var(--tag-ours-fg); padding: .12rem .5rem; }
+
+  /* ---------- sections ---------- */
+  main { display: grid; gap: 0; padding-block: 0 4rem; }
+  section { padding-block: 3.2rem 0; display: grid; gap: 1rem; }
+  section > .rule { border: 0; border-top: 1px solid var(--rule); margin: 0 0 .6rem; }
+  h2.sec {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(1.55rem, 5vw, 2.05rem); line-height: 1.12; letter-spacing: -.015em; text-wrap: balance;
+  }
+  h3 { font-family: var(--display); font-weight: 700; font-size: 1.12rem; line-height: 1.3; }
+  .lede { font-size: 1.12rem; color: var(--ink-2); }
+  .claims { padding-left: 1.5rem; display: grid; gap: .45rem; }
+  .claims li::marker { font-family: var(--display); font-weight: 700; color: var(--x); }
+  .plain { padding-left: 1.15rem; display: grid; gap: .45rem; }
+
+  .means {
+    background: var(--x-wash); border-radius: 6px; padding: 1rem 1.2rem; display: grid; gap: .45rem;
+  }
+  .means .eyebrow { color: var(--tag-idea-fg); letter-spacing: .1em; }
+  .note { font-family: var(--ui); font-size: .88rem; color: var(--ink-3); }
+
+  /* ---------- figures ---------- */
+  figure.fig {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 10px;
+    padding: 1.1rem 1.1rem 1rem; display: grid; gap: .8rem; margin-block: .4rem;
+  }
+  .fig-title { font-family: var(--display); font-weight: 700; font-size: 1rem; }
+  figcaption { font-family: var(--ui); font-size: .84rem; line-height: 1.5; color: var(--ink-3); }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .scroll > svg { display: block; width: 100%; height: auto; min-width: 540px; }
+  svg.plain-svg { display: block; width: 100%; height: auto; }
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .two > div { display: grid; gap: .5rem; align-content: start; }
+  .pcap { font-size: .95rem; color: var(--ink-2); }
+  .pcap b { color: var(--ink); }
+  @media (max-width: 620px) { .two { grid-template-columns: 1fr; } }
+
+  .keys { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; font-family: var(--ui); font-size: .84rem; color: var(--ink-2); }
+  .key { display: inline-flex; align-items: center; gap: .4rem; }
+  .sw { display: inline-block; width: 14px; height: 10px; border-radius: 2px; }
+  .sw.line { height: 2px; width: 16px; border-radius: 1px; }
+  .sw.x { background: var(--x); } .sw.space { background: var(--space); } .sw.lump { background: var(--lump); }
+  .sw.lumpw { background: var(--lump-wash); box-shadow: inset 0 2px 0 var(--lump); }
+  .sw.push { background: var(--push); }
+  .sw.o1 { background: var(--o1); } .sw.o2 { background: var(--o2); } .sw.o3 { background: var(--o3); }
+  .sw.dash { background: repeating-linear-gradient(90deg, var(--muted) 0 5px, transparent 5px 9px); height: 2px; width: 18px; }
+
+  details.data { font-family: var(--ui); font-size: .84rem; color: var(--ink-2); }
+  details.data summary { cursor: pointer; color: var(--ink-3); width: max-content; }
+  details.data .tw { overflow-x: auto; margin-top: .5rem; }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: .35rem .6rem; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+  th { font-weight: 600; color: var(--ink-3); font-size: .78rem; }
+
+  /* chart ink (SVG) */
+  .c-gl { stroke: var(--gridline); stroke-width: 1; }
+  .c-ax { stroke: var(--axis); stroke-width: 1; }
+  .c-t  { fill: var(--ink-2); font: 12.5px var(--ui); }
+  .c-tm { fill: var(--muted); font: 12px var(--ui); }
+  .c-tb { fill: var(--ink); font: 700 13px var(--ui); }
+  .c-in-x { fill: var(--on-x); font: 600 12px var(--ui); }
+  .c-in-lump { fill: var(--on-lump); font: 600 12px var(--ui); }
+  .num { font-variant-numeric: tabular-nums; }
+  .lg .c-t { font-size: 15px; } .lg .c-tm { font-size: 14px; } .lg .c-tb { font-size: 15.5px; }
+  .f-x { fill: var(--x); } .s-x { stroke: var(--x); } .fw-x { fill: var(--x-wash); }
+  .f-space { fill: var(--space); } .s-space { stroke: var(--space); } .fw-space { fill: var(--space-wash); }
+  .f-lump { fill: var(--lump); } .s-lump { stroke: var(--lump); } .fw-lump { fill: var(--lump-wash); }
+  .f-push { fill: var(--push); } .s-push { stroke: var(--push); }
+  .f-o1 { fill: var(--o1); } .s-o1 { stroke: var(--o1); }
+  .f-o2 { fill: var(--o2); } .s-o2 { stroke: var(--o2); }
+  .f-o3 { fill: var(--o3); } .s-o3 { stroke: var(--o3); }
+  .f-ink2 { fill: var(--ink-2); } .s-ink2 { stroke: var(--ink-2); } .s-ink3 { stroke: var(--ink-3); } .f-ink3 { fill: var(--ink-3); }
+  .s-muted { stroke: var(--muted); } .f-muted { fill: var(--muted); }
+  .f-paper { fill: var(--paper); } .ring { stroke: var(--paper); stroke-width: 2; }
+  .hit { fill: transparent; }
+  .mark { transition: opacity .12s; }
+  .mark.on { opacity: .72; }
+  .xhair { stroke: var(--ink-3); stroke-width: 1; }
+
+  /* tooltip */
+  .tip {
+    position: fixed; z-index: 10; pointer-events: none; max-width: 260px;
+    background: var(--paper); color: var(--ink); border: 1px solid var(--rule); border-radius: 6px;
+    box-shadow: var(--shadow); padding: .5rem .65rem; font: 12.5px/1.45 var(--ui);
+  }
+  .tip-h { color: var(--ink-3); margin-bottom: .2rem; }
+  .tip-r { display: flex; align-items: center; gap: .45rem; }
+  .tip-r b { font-variant-numeric: tabular-nums; }
+  .tip-r span:last-child { color: var(--ink-2); }
+  .tip-k { display: inline-block; width: 12px; height: 2px; border-radius: 1px; flex: none; }
+  .k-x { background: var(--x); } .k-lump { background: var(--lump); } .k-push { background: var(--push); }
+  .k-o1 { background: var(--o1); } .k-o2 { background: var(--o2); } .k-o3 { background: var(--o3); }
+  .k-muted { background: var(--muted); }
+
+  /* checks */
+  .checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+  .check { display: grid; grid-template-columns: 26px 1fr; align-content: start; gap: .1rem .6rem; padding: .8rem .9rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--ground); }
+  .check svg { width: 22px; height: 22px; grid-row: span 2; margin-top: .1rem; }
+  .check .ck-h { font-family: var(--display); font-weight: 700; font-size: .95rem; }
+  .check p { font-size: .9rem; color: var(--ink-2); line-height: 1.45; }
+  @media (max-width: 620px) { .checks { grid-template-columns: 1fr; } }
+
+  /* tests row */
+  .tests { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
+  .test { border-top: 3px solid var(--good); padding-top: .55rem; display: grid; gap: .25rem; }
+  .test .t-big { font-family: var(--display); font-weight: 800; font-size: 1.3rem; line-height: 1.1; }
+  .test .t-h { font-family: var(--display); font-weight: 700; font-size: .95rem; display: flex; align-items: center; gap: .35rem; }
+  .test p { font-size: .88rem; color: var(--ink-2); line-height: 1.45; }
+  .test svg { width: 16px; height: 16px; flex: none; }
+  @media (max-width: 620px) { .tests { grid-template-columns: 1fr; } }
+  .onhold { display: flex; gap: .7rem; align-items: flex-start; padding: .8rem .95rem; border: 1px dashed var(--warn); border-radius: 8px; font-size: .92rem; color: var(--ink-2); }
+  .onhold svg { width: 20px; height: 20px; flex: none; margin-top: .1rem; }
+
+  /* stat strip */
+  .stat { display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
+  .stat .big { font-family: var(--display); font-weight: 800; font-size: 2.3rem; line-height: 1; }
+  .stat p { font-size: .95rem; color: var(--ink-2); flex: 1 1 16rem; }
+
+  /* relationship facts */
+  .facts { display: grid; gap: .8rem; }
+  .fact { display: grid; grid-template-columns: 7.2rem 1fr; gap: .9rem; padding-block: .8rem; border-top: 1px solid var(--rule); }
+  .fact:first-child { border-top: 0; padding-top: 0; }
+  .fact .who { font-family: var(--display); font-weight: 700; font-size: 1rem; display: flex; align-items: flex-start; gap: .45rem; }
+  .fact .who i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-top: .45rem; flex: none; }
+  .fact .body { display: grid; gap: .4rem; font-size: 1rem; }
+  @media (max-width: 560px) { .fact { grid-template-columns: 1fr; gap: .3rem; } }
+
+  /* scorecard */
+  .scores { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+  .score { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: .95rem 1rem 1rem; display: grid; gap: .5rem; align-content: start; }
+  .score .n { font-family: var(--display); font-weight: 800; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+  .score .claim { font-family: var(--display); font-weight: 700; font-size: 1rem; line-height: 1.3; }
+  .status { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--ui); font-weight: 600; font-size: .84rem; color: var(--ink); }
+  .status svg { width: 16px; height: 16px; flex: none; }
+  .score p.why { font-size: .88rem; color: var(--ink-2); line-height: 1.45; }
+  @media (max-width: 760px) { .scores { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 480px) { .scores { grid-template-columns: 1fr; } }
+
+  /* evidence ladder */
+  .ladder { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .5rem; align-items: end; }
+  .ladder li { display: grid; gap: .45rem; align-content: end; }
+  .ladder .bar { display: block; height: calc(var(--h) * 1px); border-radius: 4px 4px 0 0; border: 1.5px solid var(--space); background: transparent; }
+  .ladder li.done .bar { background: var(--space); }
+  .ladder .lbl { font-family: var(--ui); font-size: .8rem; line-height: 1.3; color: var(--ink-2); min-height: 4em; }
+  .ladder li.done .lbl { color: var(--ink); font-weight: 600; }
+  .here { font-family: var(--display); font-weight: 800; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: #16181d; background: var(--warn); padding: .15rem .45rem; border-radius: 3px; width: max-content; }
+  .here-spacer { height: 1.35rem; }
+  @media (max-width: 620px) {
+    .ladder { grid-template-columns: 1fr; gap: .45rem; }
+    .ladder li { grid-template-columns: 1fr; }
+    .ladder .bar { height: 12px; width: calc(var(--h) * .72%); border-radius: 0 4px 4px 0; }
+    .ladder .lbl { min-height: 0; }
+    .here-spacer { display: none; }
+  }
+
+  .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .col { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.1rem; display: grid; gap: .6rem; align-content: start; }
+  .col h3 { display: flex; align-items: center; gap: .5rem; }
+  .col h3 svg { width: 18px; height: 18px; flex: none; }
+  .col ul { padding-left: 1.1rem; display: grid; gap: .5rem; font-size: .95rem; }
+  @media (max-width: 620px) { .cols { grid-template-columns: 1fr; } }
+
+  /* roadmap */
+  .road { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; position: relative; }
+  .road li { display: grid; gap: .45rem; align-content: start; position: relative; }
+  .road .dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--ink-3); background: var(--paper); display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: .8rem; color: var(--ink-2); position: relative; z-index: 1; }
+  .road li:not(:last-child)::after { content: ""; position: absolute; top: 12px; left: 30px; right: -.8rem; height: 2px; background: var(--rule); }
+  .road .rt { font-family: var(--display); font-weight: 700; font-size: .98rem; line-height: 1.3; }
+  .road p { font-size: .88rem; color: var(--ink-2); line-height: 1.45; }
+  @media (max-width: 620px) {
+    .road { grid-template-columns: 1fr; }
+    .road li { grid-template-columns: 26px 1fr; column-gap: .75rem; }
+    .road li > :not(.dot) { grid-column: 2; }
+    .road .dot { grid-row: span 2; }
+    .road li:not(:last-child)::after { top: 30px; bottom: -.8rem; left: 12px; right: auto; width: 2px; height: auto; }
+  }
+
+  /* claim icons */
+  .ico { display: inline-block; width: 1.35em; height: 1.35em; vertical-align: -.32em; flex: none; }
+  .claimgrid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+  .claimgrid li { display: grid; grid-template-columns: 54px 1fr; gap: .85rem; align-items: center; padding: .8rem .95rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; }
+  .claimgrid svg { width: 54px; height: 40px; }
+  .claimgrid .cn { font-family: var(--display); font-weight: 800; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+  .claimgrid p { font-size: .98rem; line-height: 1.4; }
+  @media (max-width: 620px) { .claimgrid { grid-template-columns: 1fr; } }
+  .bears { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .5rem; font-family: var(--ui); font-size: .84rem; color: var(--ink-3); }
+  .bear { display: inline-flex; align-items: center; gap: .4rem; padding: .22rem .65rem .22rem .45rem; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); background: var(--paper); }
+  .bear svg { width: 26px; height: 20px; flex: none; }
+  .fig-title { display: flex; align-items: center; gap: .55rem; }
+  .fig-title svg { width: 30px; height: 24px; flex: none; }
+  .score .n { display: flex; align-items: center; gap: .55rem; }
+  .score .n svg { width: 36px; height: 28px; flex: none; }
+  .fact .who svg { width: 32px; height: 28px; flex: none; margin-top: -.15rem; }
+  .xwrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; background: var(--paper); }
+  .xtab { min-width: 620px; }
+  .xtab th, .xtab td { white-space: normal; vertical-align: top; padding: .7rem .8rem; font-size: .9rem; line-height: 1.45; }
+  .xtab th { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; }
+  .xtab tr:last-child td { border-bottom: 0; }
+  .outcome { display: flex; gap: 2px; height: 30px; border-radius: 6px; overflow: hidden; }
+  .outcome span { display: flex; align-items: center; justify-content: center; font: 600 .85rem var(--ui); min-width: 0; }
+  .oc-space { background: var(--space); color: #fff; }
+  .oc-mid { background: var(--neutral); color: #16181d; }
+  .oc-melt { background: var(--lump); color: #16181d; }
+  .chk { display: flex; align-items: center; gap: .35rem; width: max-content; font: 600 .78rem var(--ui); color: var(--ink); margin-bottom: .3rem; }
+  .chk svg { width: 15px; height: 15px; flex: none; }
+
+  footer { margin-top: 3.4rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); font-family: var(--ui); font-size: .85rem; line-height: 1.6; color: var(--ink-3); display: grid; gap: .6rem; }
+  code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .9em; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-c1" viewBox="0 0 32 32">
+    <path d="M6,6 H26 M6,16 H26 M6,26 H26 M6,6 V26 M16,6 V26 M26,6 V26" fill="none" style="stroke:var(--i-space)" stroke-width="2"/>
+    <g style="fill:var(--i-space)"><circle cx="6" cy="6" r="2.6"/><circle cx="16" cy="6" r="2.6"/><circle cx="26" cy="6" r="2.6"/><circle cx="6" cy="16" r="2.6"/><circle cx="16" cy="16" r="2.6"/><circle cx="26" cy="16" r="2.6"/><circle cx="6" cy="26" r="2.6"/><circle cx="16" cy="26" r="2.6"/><circle cx="26" cy="26" r="2.6"/></g>
+  </symbol>
+  <symbol id="i-c2" viewBox="0 0 32 32">
+    <rect x="4" y="4" width="24" height="24" rx="6" fill="none" style="stroke:var(--i-ink3)" stroke-width="2"/>
+    <path d="M9.5,16.5 L14,21 L23,10.5" fill="none" style="stroke:var(--i-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-c3" viewBox="0 0 52 32">
+    <path d="M5,10 H15 A3,6 0 0 1 15,22 H5 Z" style="fill:var(--i-xw)"/>
+    <ellipse cx="5" cy="16" rx="3" ry="6" style="fill:var(--i-xw);stroke:var(--i-x)" stroke-width="1.8"/>
+    <path d="M5,10 H15 M5,22 H15 M15,10 A3,6 0 0 1 15,22" fill="none" style="stroke:var(--i-x)" stroke-width="1.8"/>
+    <path d="M26,25 V11" style="stroke:var(--i-lump)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M21.5,12.5 L26,6.5 L30.5,12.5 Z" style="fill:var(--i-lump)"/>
+    <path d="M37,11 L50,11 L47,21 L34,21 Z" style="fill:var(--i-spacew);stroke:var(--i-space)" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M41.3,11 L38.3,21 M45.6,11 L42.6,21 M35.5,16 H48.5" fill="none" style="stroke:var(--i-space)" stroke-width="1" opacity=".6"/>
+  </symbol>
+  <symbol id="i-c4" viewBox="0 0 32 32">
+    <path d="M2,27 H30" style="stroke:var(--i-ink3)" stroke-width="1.5"/>
+    <path d="M3,26 C7,26 7.5,7 11,7 C14,7 14,18.5 16,18.5 C18,18.5 18,7 21,7 C24.5,7 25,26 29,26" style="fill:var(--i-spacew);stroke:var(--i-space)" stroke-width="2.4" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-lump" viewBox="0 0 32 32">
+    <g style="stroke:var(--i-lump)" stroke-width="2.6" stroke-linecap="round"><path d="M15,8 V2.5"/><path d="M23.8,17 H29.5"/><path d="M9,23.4 L4.5,27.9"/></g>
+    <path d="M15,9.5 C19.8,9.3 22.6,12.6 22.4,17.2 C22.2,21.6 19.4,24.6 14.8,24.5 C10.4,24.4 7.5,21.5 7.6,17 C7.7,12.6 10.6,9.7 15,9.5 Z" style="fill:var(--i-lump)"/>
+    <circle cx="12.5" cy="15.8" r="1.15" style="fill:var(--i-on-lump)"/><circle cx="17.5" cy="15.8" r="1.15" style="fill:var(--i-on-lump)"/>
+    <path d="M12,19 Q15,21.8 18,19" fill="none" style="stroke:var(--i-on-lump)" stroke-width="1.4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-c5" viewBox="0 0 32 32">
+    <path d="M9,9 L29,9 L24,23 L4,23 Z" style="fill:var(--i-spacew);stroke:var(--i-space)" stroke-width="2" stroke-linejoin="round"/>
+    <g style="fill:var(--i-x)"><circle cx="14" cy="17" r="2"/><circle cx="18" cy="17" r="2"/><circle cx="22" cy="17" r="2"/></g>
+  </symbol>
+  <symbol id="i-c6" viewBox="0 0 32 32">
+    <g fill="none" style="stroke:var(--i-ink2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16,7 V27 M10,27 H22 M5,10 H27"/>
+      <path d="M5,10 L1.8,19 M5,10 L8.2,19 M27,10 L23.8,19 M27,10 L30.2,19"/>
+      <path d="M1.5,19 Q5,23.5 8.5,19 Z M23.5,19 Q27,23.5 30.5,19 Z"/>
+    </g>
+    <circle cx="16" cy="6" r="2" style="fill:var(--i-ink2)"/>
+  </symbol>
+  <symbol id="i-x" viewBox="0 0 32 32">
+    <path d="M8,10 H24 A3.5,6 0 0 1 24,22 H8 Z" style="fill:var(--i-xw)"/>
+    <ellipse cx="8" cy="16" rx="3.5" ry="6" style="fill:var(--i-xw);stroke:var(--i-x)" stroke-width="2"/>
+    <path d="M8,10 H24 M8,22 H24 M24,10 A3.5,6 0 0 1 24,22" fill="none" style="stroke:var(--i-x)" stroke-width="2"/>
+    <path d="M16,10 A3.5,6 0 0 1 16,22" fill="none" style="stroke:var(--i-x)" stroke-width="1" opacity=".6"/>
+  </symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">A hobby physics project &middot; the plain-language version</p>
+    <h1>Did space <span class="open">snap open</span>?</h1>
+    <p class="standfirst">An idea about where space came from: that it snapped open out of something curled up, and the energy it let go became everything in it. What the idea says, what a computer model showed, and what it would mean.</p>
+    <p class="byline">Emily Smith, with Claude (Anthropic) &middot; Version 1, 22 September 2026 &middot; Not yet reviewed by a physicist</p>
+    <div class="links">
+      <span class="btn soon" aria-disabled="true">Full methods and results (paper) &mdash; link coming soon</span>
+      <a class="btn" href="https://claude.ai/artifact/TTC9knKGJFkR43X2JjsjZ5">The long version of this page &rarr;</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="answer">
+    <h2>The short answer</h2>
+    <ul>
+      <li><b>In a computer model, a curled-up arrangement opened out suddenly into a flat, space-like one.</b> It gave off exactly the burst of energy worked out in advance, and the energy books balanced to the last unit. That is the change the idea describes, working.</li>
+      <li><b>It passed every test of sharpness we wrote down before the runs.</b> One prediction failed: the leftover scrap doesn't grow as the space grows, so in this model it stays tiny. The idea doesn't need it to: the lump is what carries the energy.</li>
+      <li><b>What's ahead are the bigger tests:</b> much larger networks, getting known physics out of it, and a physicist's review. Those are what would turn a working mechanism into an account of our universe.</li>
+    </ul>
+  </div>
+
+  <p class="legend-line">
+    <span>Who is saying what:</span>
+    <span class="tag settled">Settled science</span>
+    <span class="tag pub">Other researchers</span>
+    <span class="tag ours">Our result</span>
+    <span class="tag idea">The idea</span>
+    <span class="tag reading">Our reading, unreviewed</span>
+  </p>
+
+<main>
+
+  <!-- ============ 1. two ways ============ -->
+  <section id="two-ways">
+    <p class="eyebrow">Background</p>
+    <h2 class="sec">Things change in two ways</h2>
+    <p><span class="tag settled">Settled science</span> Cool water and nothing much happens until it reaches 0&nbsp;&deg;C. Then it freezes all at once, giving off heat as it goes, with ice and water side by side. Very clean water can even stay liquid below zero until something jolts it. It is stuck behind a hill it can't get over on its own.</p>
+    <p>Heat a fridge magnet instead and its pull just fades away to nothing. There is no hill, no burst of heat and no moment when half of it has changed. Physicists call the first kind of change <b>first-order</b> (sharp) and the second <b>continuous</b> (smooth).</p>
+
+    <figure class="fig">
+      <p class="fig-title">The two kinds of change, as a ball rolling on a landscape</p>
+      <div class="two">
+        <div>
+          <svg class="plain-svg lg" viewBox="0 0 430 230" role="img" aria-label="Sharp change: a ball sits in a higher valley, a hill separates it from a lower valley, and the drop between the two valleys is the lump of energy given off.">
+            <defs>
+              <marker id="a1-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="f-ink3"/></marker>
+              <marker id="a1-lump" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="f-lump"/></marker>
+            </defs>
+            <line x1="30" y1="20" x2="30" y2="200" class="c-ax"/>
+            <line x1="30" y1="200" x2="330" y2="200" class="c-ax"/>
+            <text x="18" y="110" class="c-tm" text-anchor="middle" transform="rotate(-90 18 110)">energy</text>
+            <text x="330" y="218" class="c-tm" text-anchor="end">arrangement</text>
+            <line x1="104" y1="122" x2="345" y2="122" class="s-muted" stroke-width="1" stroke-dasharray="2 4"/>
+            <line x1="262" y1="168" x2="345" y2="168" class="s-muted" stroke-width="1" stroke-dasharray="2 4"/>
+            <path d="M40,62 C60,112 75,122 95,122 C120,122 140,62 170,62 C200,62 225,168 255,168 C280,168 300,112 318,72" fill="none" class="s-ink2" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M106,102 C130,16 214,16 246,150" fill="none" class="s-ink3" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#a1-arr)"/>
+            <circle cx="95" cy="112" r="9" class="f-x ring"/>
+            <text x="176" y="14" class="c-t" text-anchor="middle">a push gets it over the hill</text>
+            <text x="168" y="95" class="c-tm" text-anchor="middle">the hill</text>
+            <text x="95" y="146" class="c-t" text-anchor="middle">stable for now</text>
+            <text x="255" y="190" class="c-t" text-anchor="middle">more stable</text>
+            <line x1="338" y1="126" x2="338" y2="164" class="s-lump" stroke-width="2.5" marker-start="url(#a1-lump)" marker-end="url(#a1-lump)"/>
+            <text x="346" y="136" class="c-tb">the lump</text>
+            <text x="346" y="152" class="c-t">of energy</text>
+            <text x="346" y="168" class="c-t">given off</text>
+          </svg>
+          <p class="pcap"><b>Sharp</b>, like water freezing. It waits behind a hill, needs a push, and then gives off a definite lump of energy. It can stall, like supercooled water.</p>
+        </div>
+        <div>
+          <svg class="plain-svg lg" viewBox="0 0 430 230" role="img" aria-label="Smooth change: a single valley whose lowest point slides gradually from left to right. There is no hill and nothing is given off.">
+            <defs>
+              <marker id="a2-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="f-ink3"/></marker>
+            </defs>
+            <line x1="30" y1="20" x2="30" y2="200" class="c-ax"/>
+            <line x1="30" y1="200" x2="350" y2="200" class="c-ax"/>
+            <text x="18" y="110" class="c-tm" text-anchor="middle" transform="rotate(-90 18 110)">energy</text>
+            <text x="350" y="218" class="c-tm" text-anchor="end">arrangement</text>
+            <path d="M35,60 C70,170 95,170 120,170 C145,170 170,170 205,60" fill="none" class="s-ink3" stroke-width="2" opacity=".35"/>
+            <path d="M105,60 C140,170 165,170 190,170 C215,170 240,170 275,60" fill="none" class="s-ink3" stroke-width="2" opacity=".6"/>
+            <path d="M175,60 C210,170 235,170 260,170 C285,170 310,170 345,60" fill="none" class="s-ink2" stroke-width="2.5"/>
+            <circle cx="260" cy="160" r="9" class="f-x ring"/>
+            <line x1="120" y1="40" x2="250" y2="40" class="s-ink3" stroke-width="1.5" marker-end="url(#a2-arr)"/>
+            <text x="185" y="26" class="c-t" text-anchor="middle">the lowest point just slides over</text>
+            <text x="40" y="190" class="c-t">no hill, no lump</text>
+          </svg>
+          <p class="pcap"><b>Smooth</b>, like a magnet losing its pull as it warms. The best arrangement shifts gradually. Nothing is stuck and nothing is given off.</p>
+        </div>
+      </div>
+      <figcaption>A sketch, not data. Height is energy; the ball is the system. The idea tested here needs the left-hand kind.</figcaption>
+    </figure>
+
+    <p><b>How do you tell which kind you have?</b> <span class="tag settled">Settled science</span> Let the system jiggle for a long time and count how often it turns up at each energy. That count is the statistical view of the same landscape, seen from underneath.</p>
+
+    <figure class="fig">
+      <p class="fig-title"><svg aria-hidden="true"><use href="#i-c4"/></svg>What we measure: two humps, or one</p>
+      <div class="keys">
+        <span class="key"><i class="sw o1"></i>small system</span>
+        <span class="key"><i class="sw o2"></i>medium</span>
+        <span class="key"><i class="sw o3"></i>large</span>
+      </div>
+      <div class="two">
+        <div>
+          <svg class="plain-svg lg" viewBox="0 0 430 236" role="img" aria-label="Sharp change, statistical view: two humps with a valley between them. The gap between the humps is the lump. As the system grows, the valley gets deeper.">
+            <defs>
+              <marker id="h1-lump" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="f-lump"/></marker>
+            </defs>
+            <line x1="30" y1="24" x2="30" y2="200" class="c-ax"/>
+            <line x1="30" y1="200" x2="400" y2="200" class="c-ax"/>
+            <text x="18" y="112" class="c-tm" text-anchor="middle" transform="rotate(-90 18 112)">how often</text>
+            <text x="400" y="222" class="c-tm" text-anchor="end">energy</text>
+            <path d="M40,200 C85,200 95,100 120,100 C145,100 170,120 195,120 C220,120 245,100 270,100 C295,100 305,200 350,200" fill="none" class="s-o1" stroke-width="2.2"/>
+            <path d="M60,200 C95,200 100,70 120,70 C140,70 170,160 195,160 C220,160 250,70 270,70 C290,70 295,200 330,200" fill="none" class="s-o2" stroke-width="2.2"/>
+            <path d="M80,200 C105,200 108,42 120,42 C132,42 170,194 195,194 C220,194 258,42 270,42 C282,42 285,200 310,200" fill="none" class="s-o3" stroke-width="2.4"/>
+            <line x1="124" y1="30" x2="266" y2="30" class="s-lump" stroke-width="2.2" marker-start="url(#h1-lump)" marker-end="url(#h1-lump)"/>
+            <text x="195" y="20" class="c-tb" text-anchor="middle">gap = the lump</text>
+            <text x="120" y="222" class="c-t" text-anchor="middle">one state</text>
+            <text x="270" y="222" class="c-t" text-anchor="middle">the other</text>
+            <text x="195" y="222" class="c-tm" text-anchor="middle">valley</text>
+          </svg>
+          <p class="pcap"><b>Sharp: two humps with a valley.</b> The system is almost always in one state or the other, rarely in between. As the system grows, the valley deepens.</p>
+        </div>
+        <div>
+          <svg class="plain-svg lg" viewBox="0 0 430 236" role="img" aria-label="Smooth change, statistical view: a single hump that simply gets narrower as the system grows. No valley, no gap.">
+            <line x1="30" y1="24" x2="30" y2="200" class="c-ax"/>
+            <line x1="30" y1="200" x2="400" y2="200" class="c-ax"/>
+            <text x="18" y="112" class="c-tm" text-anchor="middle" transform="rotate(-90 18 112)">how often</text>
+            <text x="400" y="222" class="c-tm" text-anchor="end">energy</text>
+            <path d="M60,200 C130,200 160,95 215,95 C270,95 300,200 370,200" fill="none" class="s-o1" stroke-width="2.2"/>
+            <path d="M100,200 C160,200 180,62 215,62 C250,62 270,200 330,200" fill="none" class="s-o2" stroke-width="2.2"/>
+            <path d="M140,200 C185,200 195,36 215,36 C235,36 245,200 290,200" fill="none" class="s-o3" stroke-width="2.4"/>
+            <text x="40" y="36" class="c-t">one hump at every size</text>
+          </svg>
+          <p class="pcap"><b>Smooth: one hump.</b> It just narrows as the system grows. There is no valley and no gap, so nothing is given off.</p>
+        </div>
+      </div>
+      <figcaption>A sketch, not data. The valley is the hill from the first picture, seen from underneath: states that cost extra are states the system rarely visits.</figcaption>
+    </figure>
+
+    <p><span class="tag settled">Settled science</span> Two things make this hard to measure. <b>Small systems hide the hill:</b> with only a few pieces, everything can flip at once, so even a sharp change can look like one broad hump. The real test is whether the valley <b>deepens as the system gets bigger</b>. And <b>not every change is either kind.</b> The best-understood changes in the early universe were gradual handovers with no sharp moment at all. So the kind of change has to be measured, not assumed.</p>
+  </section>
+
+  <!-- ============ 2. the idea ============ -->
+  <section id="idea">
+    <hr class="rule">
+    <p class="eyebrow">The idea</p>
+    <h2 class="sec">Space as a change of arrangement</h2>
+    <p><span class="tag idea">The idea</span> Space isn't the stage everything happens on. It is one settled arrangement of something deeper, which we call <b>X</b> because nobody knows what it is. X isn't random chaos. It is a specific arrangement that is stable for now, like a chemical that will react if something gives it a push. In this picture X is curled up, with fewer large directions than space has, and the change uncurls it.</p>
+
+    <figure class="fig">
+      <div class="scroll">
+        <svg viewBox="0 0 720 250" role="img" aria-label="The idea as a picture: X, a curled-up tube, gets a push, opens out into a flat sheet that stands for space, gives off a lump of energy, and leaves a small scrap behind. Total energy is the same before and after.">
+          <defs>
+            <marker id="b-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="f-ink2"/></marker>
+          </defs>
+          <!-- tube -->
+          <path d="M60,80 H210 A14,40 0 0 1 210,160 H60 Z" class="fw-x"/>
+          <ellipse cx="60" cy="120" rx="14" ry="40" class="fw-x s-x" stroke-width="2"/>
+          <path d="M60,80 H210 M60,160 H210" class="s-x" stroke-width="2" fill="none"/>
+          <path d="M210,80 A14,40 0 0 1 210,160" class="s-x" stroke-width="2" fill="none"/>
+          <path d="M97.5,80 A14,40 0 0 1 97.5,160 M135,80 A14,40 0 0 1 135,160 M172.5,80 A14,40 0 0 1 172.5,160" class="s-x" stroke-width="1" fill="none" opacity=".55"/>
+          <path d="M72,100 H222 M74,120 H224 M72,140 H222" class="s-x" stroke-width="1" fill="none" opacity=".45"/>
+          <text x="135" y="196" class="c-tb" text-anchor="middle">X: curled up</text>
+          <text x="135" y="214" class="c-t" text-anchor="middle">stable for now</text>
+          <!-- arrow -->
+          <line x1="248" y1="120" x2="384" y2="120" class="s-ink2" stroke-width="2" marker-end="url(#b-arr)"/>
+          <text x="316" y="106" class="c-t" text-anchor="middle">a small push</text>
+          <text x="316" y="142" class="c-tm" text-anchor="middle">starts at one spot,</text>
+          <text x="316" y="158" class="c-tm" text-anchor="middle">then spreads as a front</text>
+          <!-- sheet -->
+          <path d="M440,90 L700,90 L670,170 L410,170 Z" class="fw-space s-space" stroke-width="2"/>
+          <path d="M483,90 L453,170 M527,90 L497,170 M570,90 L540,170 M613,90 L583,170 M657,90 L627,170 M429,117 L690,117 M419,143 L680,143" class="s-space" stroke-width="1" fill="none" opacity=".5"/>
+          <!-- the lump -->
+          <use href="#i-lump" x="470" y="30" width="44" height="44"/>
+          <text x="520" y="50" class="c-tb">a lump of energy</text>
+          <text x="520" y="67" class="c-t">is given off</text>
+          <!-- leftover -->
+          <g class="f-x ring"><circle cx="598" cy="152" r="4.5"/><circle cx="610" cy="152" r="4.5"/><circle cx="622" cy="152" r="4.5"/><circle cx="634" cy="152" r="4.5"/></g>
+          <line x1="640" y1="158" x2="662" y2="186" class="s-ink3" stroke-width="1"/>
+          <text x="715" y="200" class="c-t" text-anchor="end">a small leftover</text>
+          <text x="480" y="200" class="c-tb" text-anchor="middle">Space: opened out</text>
+          <text x="360" y="240" class="c-tm" text-anchor="middle">Total energy is the same before and after.</text>
+        </svg>
+      </div>
+      <figcaption>The idea in one picture. The left is X, curled up. The right is space, opened out. The little sun is the lump of energy given off, its three rays standing for the three directions of space. The four dots are a leftover scrap.</figcaption>
+    </figure>
+
+    <p>The idea has six parts, called <b>claims</b>. They are numbered because each can hold or fail on its own. The icons come back later, wherever a result speaks to that claim.</p>
+    <ol class="claimgrid">
+      <li><svg aria-hidden="true"><use href="#i-c1"/></svg><div><p class="cn">Claim 1</p><p>Space is one settled arrangement of something deeper, X.</p></div></li>
+      <li><svg aria-hidden="true"><use href="#i-c2"/></svg><div><p class="cn">Claim 2</p><p>Whatever X is, known physics (relativity, quantum mechanics) has to come back out of it.</p></div></li>
+      <li><svg aria-hidden="true"><use href="#i-c3"/></svg><div><p class="cn">Claim 3</p><p>X and space are two arrangements of the same stuff. One can turn into the other.</p></div></li>
+      <li><svg aria-hidden="true"><use href="#i-c4"/></svg><div><p class="cn">Claim 4</p><p>The change was <b>sharp</b> (two humps, not one) and gave off a lump of energy that became matter and light.</p></div></li>
+      <li><svg aria-hidden="true"><use href="#i-c5"/></svg><div><p class="cn">Claim 5</p><p>Not everything converted. A leftover remains: either leftover X, or a different arrangement, called <b>X2</b>.</p></div></li>
+      <li><svg aria-hidden="true"><use href="#i-c6"/></svg><div><p class="cn">Claim 6</p><p>The energy books balance across the change.</p></div></li>
+    </ol>
+    <p class="note">This is the author's proposal. It is not established, not published, and not tested except as described below.</p>
+  </section>
+
+  <!-- ============ 3. the test ============ -->
+  <section id="toy">
+    <hr class="rule">
+    <p class="eyebrow">The test</p>
+    <h2 class="sec">A toy universe made of links</h2>
+    <p>You can't test this on the universe, so we tested it on a published model by the physicist Christof Trugenberger and colleagues. The model is a network of dots and links, and it has <b>no positions at all</b>. Each dot is linked to exactly four others. Small closed loops of links earn points. A computer reshuffles the links millions of times and we watch what pattern settles. Nothing in the model knows about space, so if something space-like appears, it appeared by itself.</p>
+    <p>Counting loops tells you the network's shape from the inside. It can settle as a <b>flat sheet</b>, a <b>tube</b> (one direction curled up), or a closed <b>knot</b>. The tube is our stand-in for X: a specific curled-up arrangement, stable for now, and higher in energy than the sheet. It is a stand-in, not X.</p>
+
+    <figure class="fig">
+      <div class="two">
+        <div>
+          <svg class="plain-svg" viewBox="0 0 260 200" role="img" aria-label="A patch of the network: dots on a grid, each with exactly four links; one square loop of four links is highlighted as a block that earns points.">
+            <rect x="100" y="45" width="60" height="60" class="fw-space"/>
+            <g class="s-ink3" stroke-width="1.5" opacity=".45">
+              <line x1="14" y1="45" x2="40" y2="45"/><line x1="14" y1="105" x2="40" y2="105"/><line x1="14" y1="165" x2="40" y2="165"/>
+              <line x1="220" y1="45" x2="246" y2="45"/><line x1="220" y1="105" x2="246" y2="105"/><line x1="220" y1="165" x2="246" y2="165"/>
+              <line x1="40" y1="19" x2="40" y2="45"/><line x1="100" y1="19" x2="100" y2="45"/><line x1="160" y1="19" x2="160" y2="45"/><line x1="220" y1="19" x2="220" y2="45"/>
+              <line x1="40" y1="165" x2="40" y2="191"/><line x1="100" y1="165" x2="100" y2="191"/><line x1="160" y1="165" x2="160" y2="191"/><line x1="220" y1="165" x2="220" y2="191"/>
+            </g>
+            <g class="s-ink3" stroke-width="1.5">
+              <line x1="40" y1="45" x2="220" y2="45"/><line x1="40" y1="105" x2="220" y2="105"/><line x1="40" y1="165" x2="220" y2="165"/>
+              <line x1="40" y1="45" x2="40" y2="165"/><line x1="100" y1="45" x2="100" y2="165"/><line x1="160" y1="45" x2="160" y2="165"/><line x1="220" y1="45" x2="220" y2="165"/>
+            </g>
+            <path d="M100,45 H160 V105 H100 Z" fill="none" class="s-space" stroke-width="3"/>
+            <text x="130" y="80" class="c-t" text-anchor="middle">a loop</text>
+            <g class="f-ink2 ring">
+              <circle cx="40" cy="45" r="5"/><circle cx="100" cy="45" r="5"/><circle cx="160" cy="45" r="5"/><circle cx="220" cy="45" r="5"/>
+              <circle cx="40" cy="105" r="5"/><circle cx="100" cy="105" r="5"/><circle cx="160" cy="105" r="5"/><circle cx="220" cy="105" r="5"/>
+              <circle cx="40" cy="165" r="5"/><circle cx="100" cy="165" r="5"/><circle cx="160" cy="165" r="5"/><circle cx="220" cy="165" r="5"/>
+            </g>
+          </svg>
+          <p class="pcap"><b>The whole model.</b> Every dot has four links. Loops of four links earn points. The links get reshuffled over and over.</p>
+        </div>
+        <div>
+          <svg class="plain-svg lg" viewBox="0 0 460 250" role="img" aria-label="An energy ladder: the flat sheet is lowest at zero, the tube is one unit per point higher, and the closed knot is two units per point higher.">
+            <defs>
+              <marker id="c-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="f-ink3"/></marker>
+            </defs>
+            <line x1="34" y1="232" x2="34" y2="16" class="s-ink3" stroke-width="1.5" marker-end="url(#c-arr)"/>
+            <text x="16" y="128" class="c-tm" text-anchor="middle" transform="rotate(-90 16 128)">energy per point</text>
+            <text x="46" y="63" class="c-t num">+2</text>
+            <text x="46" y="133" class="c-t num">+1</text>
+            <text x="46" y="203" class="c-t num">0</text>
+            <!-- knot -->
+            <g class="s-ink3" stroke-width="1.5" fill="none">
+              <rect x="108" y="36" width="44" height="44"/><rect x="119" y="47" width="22" height="22"/>
+              <path d="M108,36 L119,47 M152,36 L141,47 M108,80 L119,69 M152,80 L141,69"/>
+            </g>
+            <!-- tube -->
+            <path d="M92,110 H168 A7,18 0 0 1 168,146 H92 Z" class="fw-x"/>
+            <ellipse cx="92" cy="128" rx="7" ry="18" class="fw-x s-x" stroke-width="1.8"/>
+            <path d="M92,110 H168 M92,146 H168 M168,110 A7,18 0 0 1 168,146" class="s-x" stroke-width="1.8" fill="none"/>
+            <path d="M117,110 A7,18 0 0 1 117,146 M143,110 A7,18 0 0 1 143,146 M99,128 H175" class="s-x" stroke-width="1" fill="none" opacity=".5"/>
+            <!-- sheet -->
+            <path d="M95,180 L180,180 L165,216 L80,216 Z" class="fw-space s-space" stroke-width="1.8"/>
+            <path d="M116,180 L101,216 M138,180 L123,216 M159,180 L144,216 M88,198 L173,198" class="s-space" stroke-width="1" fill="none" opacity=".5"/>
+            <text x="200" y="54" class="c-tb">Knot</text>
+            <text x="200" y="72" class="c-t">curled both ways, closed</text>
+            <text x="200" y="124" class="c-tb">Tube: our stand-in for X</text>
+            <text x="200" y="142" class="c-t">one direction curled up</text>
+            <text x="200" y="194" class="c-tb">Flat sheet: space</text>
+            <text x="200" y="212" class="c-t">two open directions</text>
+          </svg>
+          <p class="pcap"><b>Three shapes, one set of links.</b> At the rule setting we used, the flat sheet is lowest. The tube sits 1 unit per point above it and the knot 2.</p>
+        </div>
+      </div>
+      <figcaption>Every shape uses the same dots and links, only rewired. Below a rule setting of 1 the ladder flips and knots become the lowest, so which shape counts as "space" is set by the rules.</figcaption>
+    </figure>
+
+    <p><b>Why the sizes are small, and why these ones.</b> The networks here have 36 to 288 points. A tube is always 4 points around, the tightest curl the network can make, and its length sets the size: 16, 24, 36, 48 or 72 points long gives 64, 96, 144, 192 or 288 points. Each experiment's sizes were fixed in its written plan before it ran, and every size we ran is shown. The smaller ones repeat earlier experiments so results can be compared; the largest is as far as run time on one laptop allows.</p>
+  </section>
+
+  <!-- ============ 4. replication ============ -->
+  <section id="replication">
+    <hr class="rule">
+    <p class="eyebrow">Checking the published work</p>
+    <h2 class="sec">First, we repeated what others found</h2>
+    <p class="bears"><span>The published question:</span><span class="bear"><svg aria-hidden="true"><use href="#i-c4"/></svg>sharp or smooth, out of random chaos?</span></p>
+    <p>Before testing the idea's own change, we repeated the published work: the same model, the same question, and the same kind of measurement other researchers use (the two-humps test above). If our tools couldn't reproduce their answers, nothing new from them would be worth trusting.</p>
+    <div class="checks">
+      <div class="check">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" style="fill:var(--good)"/><path d="M6.5,11.5 L9.5,14.5 L15.5,8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="ck-h">Matches a published curve</p>
+        <p>Our simulation lands on the model's published 2019 curve at the same size, typically within 0.005.</p>
+      </div>
+      <div class="check">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" style="fill:var(--good)"/><path d="M6.5,11.5 L9.5,14.5 L15.5,8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="ck-h">Reproduces a published sharp change</p>
+        <p>With one penalty switched off, two groups report a sharp change that shatters the network into knots. We see the same at three sizes.</p>
+      </div>
+      <div class="check">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" style="fill:var(--good)"/><path d="M6.5,11.5 L9.5,14.5 L15.5,8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="ck-h">Matches exact answers</p>
+        <p>At the smallest sizes we listed every possible arrangement, about 1.8 trillion, and the simulation matches the exact averages.</p>
+      </div>
+      <div class="check">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" style="fill:var(--critical)"/><path d="M7.5,7.5 L14.5,14.5 M14.5,7.5 L7.5,14.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <p class="ck-h">One figure we can't match</p>
+        <p>A 2025 figure from the same group differs from ours in one middle range. It also disagrees with their 2019 curve, so that's a question for the authors.</p>
+      </div>
+    </div>
+    <p>The question the published researchers ask is whether space forms <em>suddenly out of a random tangle</em> of links. Here is the lump we measured at several sizes.</p>
+    <figure class="fig">
+      <p class="fig-title">How big is the lump, and what happens to it as the network grows?</p>
+      <div class="keys">
+        <span class="key"><i class="sw lump"></i>measured lump</span>
+        <span class="key"><i class="sw lumpw"></i>upper limit: the true lump could be zero</span>
+      </div>
+      <div class="scroll" id="c-lump"></div>
+      <figcaption><span class="tag ours">Our result</span> Pre-registered runs. The right-hand panel is for the full rule; rule settings 1.25 and 1.5 give the same picture (limits of 1.26 to 1.66). Their formal verdict stays &ldquo;inconclusive&rdquo; on a technicality; the measurements shown here are the result.</figcaption>
+      <details class="data"><summary>See the numbers</summary><div class="tw"><table>
+        <thead><tr><th>Setting</th><th>Size (points)</th><th>Energy given off per point</th></tr></thead>
+        <tbody>
+          <tr><td>Penalty off</td><td>48</td><td>10.32</td></tr>
+          <tr><td>Penalty off</td><td>64</td><td>11.27</td></tr>
+          <tr><td>Penalty off</td><td>96</td><td>12.50</td></tr>
+          <tr><td>Full rule</td><td>36</td><td>at most 1.65</td></tr>
+          <tr><td>Full rule</td><td>64</td><td>at most 1.51</td></tr>
+          <tr><td>Full rule</td><td>100</td><td>at most 1.30</td></tr>
+        </tbody></table></div></details>
+    </figure>
+    <p><span class="tag ours">Our result</span> <span class="tag pub">Other researchers</span> <b>We got the same answer they did.</b> With one penalty switched off, the change is sharp, with a lump that grows with size, but the network ends up as separate knots, not space. With the full rule, which does make space, the change is smooth. <b>We added one thing:</b> a comparison across several sizes, which the original paper said was out of reach. The smooth result held.</p>
+    <div class="means">
+      <p class="eyebrow">What this means for the idea</p>
+      <p>Space doesn't condense sharply out of random chaos in this model, at these sizes. That isn't the idea's question, since X is a specific arrangement rather than chaos, so it neither supports nor rules out the idea. What it does show is that our tools give the same answers as the published work, which is why the results that follow are worth taking seriously.</p>
+    </div>
+  </section>
+
+  <!-- ============ 5. result 1 ============ -->
+  <section id="result-2">
+    <hr class="rule">
+    <p class="eyebrow">Result 1</p>
+    <p class="bears"><span>Speaks to</span><span class="bear"><svg aria-hidden="true"><use href="#i-c3"/></svg>Claim 3</span><span class="bear"><svg aria-hidden="true"><use href="#i-c4"/></svg>Claim 4</span></p>
+    <h2 class="sec">One arrangement into another: sharp</h2>
+    <p>This is the change the idea actually describes. We start the network as a perfect tube and hold it at a fixed temperature. The tube sits 1 energy unit per point above a flat sheet, and at first it stays put.</p>
+
+    <figure class="fig">
+      <p class="fig-title">Four tubes opening out into flat space</p>
+      <div class="scroll" id="c-traces"></div>
+      <figcaption><span class="tag ours">Our result</span> Every run at this setting (64 points, rule 1.25), none left out. These four were exploratory. The pre-registered tests below used 240 more runs. Hover or tab into the chart to read values.</figcaption>
+      <details class="data"><summary>See the numbers</summary><div class="tw"><table id="t-traces">
+        <thead><tr><th>Run</th><th>Starts to open (rounds)</th><th>Energy at round 4,000</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>about 350</td><td>0</td></tr>
+          <tr><td>2</td><td>about 2,300 (pauses on the leftover)</td><td>0</td></tr>
+          <tr><td>3</td><td>about 2,450</td><td>0.44 (still carrying leftovers)</td></tr>
+          <tr><td>4</td><td>about 750</td><td>0</td></tr>
+        </tbody></table></div></details>
+    </figure>
+
+    <p>Each run waits, then opens out into a flat sheet within a few hundred rounds. It gives off exactly the energy worked out beforehand by arithmetic, 1 unit per point. Some runs pause part-way on a small leftover (the dotted line) before they finish. <b>Before running the main test, we wrote down three things "sharp" would have to mean:</b></p>
+
+    <div class="tests">
+      <div class="test">
+        <p class="t-h"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Held</p>
+        <p class="t-big">Starts by chance</p>
+        <p>The waiting time is random, like a radioactive atom, not a timer running down.</p>
+      </div>
+      <div class="test">
+        <p class="t-h"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Held</p>
+        <p class="t-big">99% one or the other</p>
+        <p>Halfway through, 99% of points are either still tube or already sheet. Almost nothing is in between.</p>
+      </div>
+      <div class="test">
+        <p class="t-h"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Held</p>
+        <p class="t-big">One front</p>
+        <p>The new space grows as one connected region spreading along the tube, not as scattered patches.</p>
+      </div>
+    </div>
+    <p><span class="tag ours">Our result</span> All three held at four sizes (64 to 192 points), on two independent sets of 30 runs each.</p>
+    <div class="onhold" style="border-color:var(--good)">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9.5" style="fill:var(--good)"/><path d="M5.5,10.4 L8.7,13.4 L14.5,7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p><b>The formal verdict: a sharp change, in two steps.</b> That is the pre-registered verdict at 64, 96 and 192 points. Twelve runs had come to rest on rarer leftovers, so we replayed them, saved the final network and read what each one is. Eleven matched their energy exactly. One, at 144 points, changed state in the very last stretch of its run, so that size is set aside, though the three tests above hold there too.</p>
+    </div>
+    <div class="means">
+      <p class="eyebrow">What this means for the idea</p>
+      <p><b>This is the core of what we were looking for.</b> A curled-up arrangement opens out, one direction becoming large, and gives off a definite lump of energy. It happens sharply, with every piece claim 4 asks for: stable for now, a push, a seed, a spreading front and an exact lump. And it happens in a published model, with nothing added to make it happen.</p>
+      <p>One thing it isn't: energy from nowhere. The energy was stored in the curled shape and let go, and the books balance.</p>
+    </div>
+  </section>
+
+  <!-- ============ 6. result 2 ============ -->
+  <section id="result-3">
+    <hr class="rule">
+    <p class="eyebrow">Result 2</p>
+    <p class="bears"><span>Speaks to</span><span class="bear"><svg aria-hidden="true"><use href="#i-c4"/></svg>Claim 4</span><span class="bear"><svg aria-hidden="true"><use href="#i-c6"/></svg>Claim 6</span></p>
+    <h2 class="sec">In a sealed box: a bonfire, not slush</h2>
+    <p>In the runs above, a heat bath carried the lump away instantly. The idea is about what happens when it can't. So we sealed the box: no energy gets in or out, and the lump has to go somewhere inside. Would it feed the change like a bonfire, or smother it into half-and-half slush?</p>
+
+    <figure class="fig">
+      <p class="fig-title">Runs that ended as clean, flat space, by how much room the heat had</p>
+      <div class="keys">
+        <span class="key"><i class="sw o1"></i>tube of 64 points</span>
+        <span class="key"><i class="sw o2"></i>96 points</span>
+        <span class="key"><i class="sw o3"></i>192 points</span>
+        <span class="key"><i class="sw dash"></i>switch-over predicted before the runs</span>
+      </div>
+      <div class="scroll" id="c-bonfire"></div>
+      <figcaption><span class="tag ours">Our result</span> Pre-registered. 20 runs behind every point, 420 runs in all. "Room" means how many places the released heat can spread into, per point of tube.</figcaption>
+      <details class="data"><summary>See the numbers</summary><div class="tw"><table>
+        <thead><tr><th>Room for the heat</th><th>64 points</th><th>96 points</th><th>192 points</th></tr></thead>
+        <tbody>
+          <tr><td>1 place per 16 points</td><td>0 of 20</td><td>0 of 20</td><td>0 of 20</td></tr>
+          <tr><td>1 per 8</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>1 per 4</td><td>3</td><td>1</td><td>0</td></tr>
+          <tr><td>1 per 2</td><td>18</td><td>19</td><td>19</td></tr>
+          <tr><td>1 per point</td><td>20</td><td>19</td><td>20</td></tr>
+          <tr><td>2 per point</td><td>20</td><td>20</td><td>20</td></tr>
+        </tbody></table></div></details>
+    </figure>
+
+    <figure class="fig">
+      <p class="fig-title">What came back from all 420 sealed runs</p>
+      <div class="outcome" role="img" aria-label="Of 420 sealed runs: 179 ended as clean flat space, 87 in between, 154 melted, and none as slush.">
+        <span class="oc-space" style="flex:179">179</span><span class="oc-mid" style="flex:87">87</span><span class="oc-melt" style="flex:154">154</span>
+      </div>
+      <div class="keys">
+        <span class="key"><i class="sw space"></i>179 clean, flat space (each with its small scrap)</span>
+        <span class="key"><i class="sw" style="background:var(--neutral)"></i>87 in between: partly converted, partly melted</span>
+        <span class="key"><i class="sw lump"></i>154 melted: too little room for the heat</span>
+        <span class="key"><b>0 slush</b></span>
+      </div>
+      <figcaption><span class="tag ours">Our result</span> Three sizes, seven amounts of room for the heat, twenty runs each. Clean space came almost entirely where the heat had room, melting where it didn't, and the in-between cases mostly at or below the switch-over.</figcaption>
+    </figure>
+    <p><b>None ended as slush:</b> part tube and part sheet, sitting still, with nothing melting. Our reasoning said slush was impossible, because it needs a temperature at which tube and sheet are equally happy and no such temperature exists. A single case would have shown that reasoning wrong.</p>
+    <p><span class="tag ours">Our result</span> <b>A bonfire, with a threshold.</b> With enough room for the heat, the tube converts completely into a clean sheet. With too little, the heat melts the new space it has just made. At every size the switch-over falls between 1 place per 4 points and 1 per 2, where we had predicted 1 per 3.5. It moves in step with size, as predicted. <b>Energy balanced to the last unit in every run</b>, which is claim 6 holding in the model.</p>
+  </section>
+
+  <!-- ============ 7. result 3 ============ -->
+  <section id="result-4">
+    <hr class="rule">
+    <p class="eyebrow">Result 3</p>
+    <p class="bears"><span>Speaks to</span><span class="bear"><svg aria-hidden="true"><use href="#i-c5"/></svg>Claim 5</span></p>
+    <h2 class="sec">The leftover: one small scrap, however big</h2>
+    <p>Almost every sealed sheet kept a leftover: four points of tube that the spreading front swept past without uncurling.</p>
+    <p><b>Why we expected it to grow.</b> Freeze water quickly and air bubbles get trapped in the ice, and a bigger block traps more bubbles. If the spreading front left scraps behind at a steady rate as it swept along, a longer tube would end with more of them. The leftover would then be a fixed <em>share</em> of the space, like bubbles in ice, and could add up to a real part of a universe's contents. We wrote that prediction down before measuring.</p>
+
+    <figure class="fig">
+      <p class="fig-title">Leftover scraps per box, against the size of the space</p>
+      <div class="keys">
+        <span class="key"><i class="sw x"></i>measured (average and spread over 20 runs)</span>
+        <span class="key"><i class="sw dash"></i>what "growing with the space" would look like</span>
+      </div>
+      <div class="scroll" id="c-leftover"></div>
+      <figcaption><span class="tag ours">Our result</span> Pre-registered, 80 fresh runs. Our prediction said only that the count would rise. The dashed line shows what a leftover growing in step with the space would have looked like.</figcaption>
+      <details class="data"><summary>See the numbers</summary><div class="tw"><table>
+        <thead><tr><th>Size (points)</th><th>Leftovers per box</th><th>Spread (±)</th></tr></thead>
+        <tbody>
+          <tr><td>64</td><td>0.90</td><td>0.31</td></tr>
+          <tr><td>96</td><td>0.85</td><td>0.37</td></tr>
+          <tr><td>192</td><td>1.05</td><td>0.22</td></tr>
+          <tr><td>288</td><td>0.95</td><td>0.22</td></tr>
+        </tbody></table></div></details>
+    </figure>
+
+    <p><span class="tag ours">Our result</span> <b>It didn't grow.</b> There was about one scrap per box at every size from 64 to 288 points, like a single bubble however big the block. Our prediction failed, and we report it as prominently as the ones that held. A rarer second kind of leftover also turned up: a small twist, in 9 of 80 boxes. Why there is exactly one scrap is still unknown.</p>
+    <div class="means">
+      <p class="eyebrow">What this means for the idea</p>
+      <p><b>What "one scrap" means at scale.</b> A scrap is 4 points. In a 288-point box that is 1.4% of the points. In a box ten times bigger it would be 0.14%. If a whole universe opened from a single seed, its leftover would be one grain of sand on a beach. <b>The idea doesn't need more:</b> what matters is that the lump can carry the energy. A leftover too small to notice also fits what we see, since no relic defects from the early universe have been found.</p>
+      <p><b>What it doesn't undo.</b> The energy given off and the opening of a direction both <em>do</em> grow with size: a bigger tube gives a bigger lump. That is Result 1, and it stands. Only the leftover stays small.</p>
+      <p><span class="tag reading">Our reading, unreviewed</span> One way the leftover could still matter: if a real conversion started from many separate seeds, and each left a scrap. Surprisingly few might be needed for dark matter; see "Is the leftover dark matter?" below. Our tubes almost always opened from a single seed, so this is untested.</p>
+    </div>
+  </section>
+
+  <!-- ============ 8. X, X2, lump ============ -->
+  <section id="relations">
+    <hr class="rule">
+    <p class="eyebrow">Putting it together</p>
+    <h2 class="sec">What the model says about X, X2 and the lump</h2>
+    <p class="lede">The idea names three things: X, the leftover (X2), and the lump of energy released between them. The model has a working stand-in for each: the tube for X, the four-point scrap for the leftover, and the measured burst for the lump. Here is how they behave, and how they fit together.</p>
+
+    <figure class="fig">
+      <div class="scroll">
+        <svg viewBox="0 0 720 330" role="img" aria-label="How X, the lump, the leftover and space relate in the model: X opens into space after a fixed push of 12 units; the change releases a lump of 1 unit per point, which heats the surroundings; space keeps one 14-unit scrap of X as the leftover.">
+          <defs>
+            <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="f-ink2"/></marker>
+          </defs>
+          <!-- X -->
+          <rect x="16" y="30" width="212" height="96" rx="10" class="fw-x s-x" stroke-width="2"/>
+          <text x="32" y="58" class="c-tb">X (the tube)</text>
+          <use href="#i-x" x="182" y="36" width="36" height="36"/>
+          <text x="32" y="80" class="c-t">curled up, stable for now</text>
+          <text x="32" y="100" class="c-t">+1 unit per point above space</text>
+          <!-- space -->
+          <rect x="504" y="30" width="200" height="124" rx="10" class="fw-space s-space" stroke-width="2"/>
+          <text x="520" y="58" class="c-tb">Space (flat sheet)</text>
+          <text x="520" y="80" class="c-t">lowest energy at this setting</text>
+          <rect x="518" y="94" width="172" height="46" rx="6" class="f-paper s-x" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="530" y="113" class="c-t">leftover: a scrap of X</text>
+          <text x="530" y="130" class="c-tm">4 points · 14 units</text>
+          <!-- X -> space -->
+          <line x1="228" y1="70" x2="500" y2="70" class="s-ink2" stroke-width="2" marker-end="url(#d-arr)"/>
+          <text x="364" y="58" class="c-t" text-anchor="middle">opens out sharply: a seed, then a front</text>
+          <text x="240" y="94" class="c-t">push to start: 12 units,</text>
+          <text x="240" y="111" class="c-tm">the same at every size</text>
+          <!-- down to lump -->
+          <line x1="420" y1="70" x2="420" y2="196" class="s-lump" stroke-width="2" marker-end="url(#d-arr)"/>
+          <text x="428" y="160" class="c-t">releases</text>
+          <!-- lump -->
+          <rect x="320" y="200" width="226" height="86" rx="10" class="fw-lump s-lump" stroke-width="2"/>
+          <text x="336" y="226" class="c-tb">The lump</text>
+          <use href="#i-lump" x="502" y="204" width="38" height="38"/>
+          <text x="336" y="248" class="c-t">exactly the gap: 1 per point,</text>
+          <text x="336" y="268" class="c-t">so it grows with the size of X</text>
+          <!-- lump -> surroundings -->
+          <line x1="320" y1="243" x2="238" y2="243" class="s-ink2" stroke-width="2" marker-end="url(#d-arr)"/>
+          <text x="279" y="234" class="c-tm" text-anchor="middle">heats</text>
+          <rect x="16" y="200" width="218" height="86" rx="10" fill="none" class="s-ink3" stroke-width="1.5"/>
+          <text x="32" y="226" class="c-tb">The surroundings</text>
+          <text x="32" y="248" class="c-t">enough room: clean space</text>
+          <text x="32" y="268" class="c-t">too little: the heat melts it</text>
+          <text x="360" y="316" class="c-tm" text-anchor="middle">Same links, rewired, with nothing added or removed. Total energy identical before and after.</text>
+        </svg>
+      </div>
+      <figcaption><span class="tag ours">Our result</span> Every number here was measured in the runs above, or worked out exactly and then confirmed.</figcaption>
+    </figure>
+
+    <div class="facts">
+      <div class="fact">
+        <p class="who"><svg aria-hidden="true"><use href="#i-x"/></svg>X</p>
+        <div class="body">
+          <p>The tube sits a fixed amount above space: 1 unit per point at the setting we used. It is <b>stable for now only inside a window</b>. At rule setting 1.25 it waits hundreds to thousands of rounds. At 1.5, where the lump per point would be twice as big, it falls apart within 50 rounds. So in this model, <b>a bigger lump comes with a less stable X.</b> Exactly where the window closes hasn't been measured yet.</p>
+        </div>
+      </div>
+      <div class="fact">
+        <p class="who"><svg aria-hidden="true"><use href="#i-lump"/></svg>The lump</p>
+        <div class="body">
+          <p>The lump is exactly the energy gap between X and space. We worked it out by arithmetic before running, and then measured it. It <b>grows in step with the size of X</b>. What happens next depends on where it can go. With enough room it leaves clean space; with too little it melts the space it just made.</p>
+        </div>
+      </div>
+      <div class="fact">
+        <p class="who"><svg aria-hidden="true"><use href="#i-c5"/></svg>X2, the leftover</p>
+        <div class="body">
+          <p>What's usually left is <b>a scrap of X itself</b>, not a new kind of arrangement. In claim 5's terms, that is the "leftover X" option. The only candidates for a genuinely separate X2 are rarer leftovers: a small twist in some sealed boxes, and a handful of other resting states that turned out, once read, to be combinations of small defects in the sheet. All of them are small and fixed in size. The author's hypothesis is that the leftover is dark matter; see below.</p>
+        </div>
+      </div>
+      <div class="fact">
+        <p class="who"><svg aria-hidden="true"><use href="#i-c6"/></svg>Between them</p>
+        <div class="body">
+          <p><b>The push stays fixed while the lump grows.</b> At 64 points the lump is about 5 times the push that starts it; at 288 points it is 24 times. Once started, the change runs away by itself.</p>
+          <p><b>The leftover stays fixed while the lump grows.</b> Its share of X's extra energy falls from about a fifth at 64 points to about a twentieth at 288.</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <p class="fig-title">The energy books, before and after, for a small tube and a large one</p>
+      <div class="keys">
+        <span class="key"><i class="sw x"></i>X's extra energy (after: the scrap still left)</span>
+        <span class="key"><i class="sw push"></i>the push that starts it</span>
+        <span class="key"><i class="sw lump"></i>heat given off (the lump, plus the push)</span>
+      </div>
+      <div class="scroll" id="c-budget"></div>
+      <figcaption><span class="tag ours">Our result</span> Energy units, at rule setting 1.25 in a sealed box. The before and after bars are the same length because nothing is lost. The push and the leftover don't change with size; the lump does.</figcaption>
+      <details class="data"><summary>See the numbers</summary><div class="tw"><table>
+        <thead><tr><th>Tube</th><th>Before: X's extra + push</th><th>After: heat + leftover</th><th>Leftover share of X's extra</th></tr></thead>
+        <tbody>
+          <tr><td>64 points</td><td>64 + 12 = 76</td><td>62 + 14 = 76</td><td>22%</td></tr>
+          <tr><td>288 points</td><td>288 + 12 = 300</td><td>286 + 14 = 300</td><td>5%</td></tr>
+        </tbody></table></div></details>
+    </figure>
+
+    <p><span class="tag reading">Our reading, unreviewed</span> When the heat has too little room, it melts patches of the new space into disorder. In Trugenberger's published account, disorder inside space is what matter <em>is</em>. So "the lump becomes matter" has a concrete counterpart in the model. That link is our reading, and nobody qualified has checked it.</p>
+        <h3>Is the leftover dark matter?</h3>
+    <p><span class="tag idea">The author's hypothesis</span> Ordinary matter comes from the lump. <b>Dark matter is the leftover:</b> the part of X that didn't convert, made in the same moment. It doesn't interact with ordinary matter in the usual ways because it isn't made of the same stuff, but it carries energy, so it feels gravity.</p>
+    <p><span class="tag pub">Other researchers</span> The closest published idea is Trugenberger's: dark matter as patches of the network stuck in a different arrangement, the way diamond survives where graphite would be more stable.</p>
+    <figure class="fig">
+      <p class="fig-title">Why a tiny leftover can grow into a big share</p>
+      <div class="keys">
+        <span class="key"><i class="sw line lump"></i>radiation: the lump's energy, as light</span>
+        <span class="key"><i class="sw line x"></i>matter, mostly dark: the leftover, in this hypothesis</span>
+      </div>
+      <div class="scroll">
+        <svg viewBox="0 0 640 230" role="img" aria-label="Sketch of standard cosmology: radiation starts with almost all the energy and matter with a tiny share; as space expands radiation thins out faster, and matter overtakes it about 50,000 years after the start.">
+          <line x1="70" y1="180" x2="600" y2="180" class="c-ax"/>
+          <line x1="70" y1="34" x2="600" y2="34" class="c-gl"/>
+          <text x="62" y="184" class="c-tm num" text-anchor="end">0</text>
+          <text x="62" y="38" class="c-tm" text-anchor="end">all</text>
+          <text x="18" y="107.0" class="c-tm" text-anchor="middle" transform="rotate(-90 18 107.0)">share of the energy</text>
+          <polyline points="70.0,34.0 77.0,34.0 83.9,34.0 90.9,34.0 97.9,34.0 104.9,34.0 111.8,34.0 118.8,34.0 125.8,34.0 132.8,34.0 139.7,34.0 146.7,34.0 153.7,34.0 160.7,34.0 167.6,34.0 174.6,34.0 181.6,34.0 188.6,34.0 195.5,34.0 202.5,34.0 209.5,34.0 216.4,34.1 223.4,34.1 230.4,34.1 237.4,34.1 244.3,34.2 251.3,34.3 258.3,34.3 265.3,34.5 272.2,34.6 279.2,34.8 286.2,35.1 293.2,35.4 300.1,35.9 307.1,36.6 314.1,37.4 321.1,38.5 328.0,39.9 335.0,41.8 342.0,44.2 348.9,47.3 355.9,51.2 362.9,56.0 369.9,62.0 376.8,69.1 383.8,77.3 390.8,86.6 397.8,96.6 404.7,107.0 411.7,117.4 418.7,127.4 425.7,136.7 432.6,144.9 439.6,152.0 446.6,158.0 453.6,162.8 460.5,166.7 467.5,169.8 474.5,172.2 481.4,174.1 488.4,175.5 495.4,176.6 502.4,177.4 509.3,178.1 516.3,178.6 523.3,178.9 530.3,179.2 537.2,179.4 544.2,179.5 551.2,179.7 558.2,179.7 565.1,179.8 572.1,179.9 579.1,179.9 586.1,179.9 593.0,179.9 600.0,180.0" fill="none" class="s-lump" stroke-width="2.5" stroke-linejoin="round"/>
+          <polyline points="70.0,180.0 77.0,180.0 83.9,180.0 90.9,180.0 97.9,180.0 104.9,180.0 111.8,180.0 118.8,180.0 125.8,180.0 132.8,180.0 139.7,180.0 146.7,180.0 153.7,180.0 160.7,180.0 167.6,180.0 174.6,180.0 181.6,180.0 188.6,180.0 195.5,180.0 202.5,180.0 209.5,180.0 216.4,179.9 223.4,179.9 230.4,179.9 237.4,179.9 244.3,179.8 251.3,179.7 258.3,179.7 265.3,179.5 272.2,179.4 279.2,179.2 286.2,178.9 293.2,178.6 300.1,178.1 307.1,177.4 314.1,176.6 321.1,175.5 328.0,174.1 335.0,172.2 342.0,169.8 348.9,166.7 355.9,162.8 362.9,158.0 369.9,152.0 376.8,144.9 383.8,136.7 390.8,127.4 397.8,117.4 404.7,107.0 411.7,96.6 418.7,86.6 425.7,77.3 432.6,69.1 439.6,62.0 446.6,56.0 453.6,51.2 460.5,47.3 467.5,44.2 474.5,41.8 481.4,39.9 488.4,38.5 495.4,37.4 502.4,36.6 509.3,35.9 516.3,35.4 523.3,35.1 530.3,34.8 537.2,34.6 544.2,34.5 551.2,34.3 558.2,34.3 565.1,34.2 572.1,34.1 579.1,34.1 586.1,34.1 593.0,34.1 600.0,34.0" fill="none" class="s-x" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="404.7" y1="34" x2="404.7" y2="180" class="s-muted" stroke-width="1" stroke-dasharray="3 4"/>
+          <circle cx="404.7" cy="107.0" r="4.5" class="f-ink2 ring"/>
+          <text x="440" y="112" class="c-t">matter overtakes radiation,</text>
+          <text x="440" y="128" class="c-t">about 50,000 years in</text>
+          <text x="76" y="170" class="c-t">at the start, matter's share can be tiny</text>
+          <text x="70" y="200" class="c-tm">the change</text>
+          <text x="600" y="200" class="c-tm" text-anchor="end">today</text>
+          <text x="335.0" y="220" class="c-tm" text-anchor="middle">time, stretched: each step to the right is ten times more expansion</text>
+        </svg>
+      </div>
+      <figcaption><span class="tag settled">Settled science</span> A sketch of the standard history of the universe. Radiation thins out faster than matter as space expands, so matter's share keeps growing.</figcaption>
+    </figure>
+    <p><span class="tag reading">Our reading, unreviewed</span> <b>A tiny leftover may be exactly enough.</b> Dark matter is about five times ordinary matter today, but because matter's share grows as space expands, at the start it only needed to be a sliver of the energy: roughly one part in a million if the universe began at about 10 billion degrees, and far less if it began hotter. So the leftover doesn't need to be big. It needs enough seeds, each leaving a scrap, and the number needed is tied to how hot the universe began.</p>
+    <p><b>Two ways it could add up</b>, both the author's: <b>many seeds</b>, each leaving a scrap, or <b>a quality of spacetime</b>, energy kept spread through the geometry itself. A first look at the sealed runs favours the first. Clean sheets kept only 7 to 20% of the energy in the geometry, almost all of it the one scrap; every run whose geometry kept more than about half was one whose new space had melted.</p>
+    <p><b>What would test it:</b> plant several seeds and see whether each leaves a scrap (the multi-seed test), check that the scraps last, and check whether they attract one another, the first hint of gravity in the model.</p>
+  </section>
+
+  <!-- ============ 8b. known physics ============ -->
+  <section id="known-physics">
+    <hr class="rule">
+    <p class="eyebrow">Checked against known physics</p>
+    <h2 class="sec">Does anything we know rule it out?</h2>
+    <p class="bears"><span>Speaks to</span><span class="bear"><svg aria-hidden="true"><use href="#i-c2"/></svg>Claim 2</span></p>
+    <p><span class="tag reading">Our reading, unreviewed</span> Assume the real change followed the model's rules, and set the consequences beside what is known about the early universe. <b>Nothing we know of flatly rules out the core of the idea:</b> a sharp change whose released energy became the hot early universe. There are two known hurdles, and each consequence suggests a test.</p>
+    <div class="xwrap"><table class="xtab">
+      <thead><tr><th>If it happened this way</th><th>What known physics says</th><th>What would test it</th></tr></thead>
+      <tbody>
+        <tr><td><b>The universe starts equally hot everywhere</b>, at a temperature set by X's energy gap.</td>
+            <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fits</span> The early universe's temperature is the same everywhere to 1 part in 100,000, and it was at least about 50 billion degrees. Still open: the exact pattern of the tiny differences, which inflation explains closely, hasn't been worked out for this idea.</td>
+            <td>A physicist working out what pattern of ripples a sharp opening would leave in the sky.</td></tr>
+        <tr><td><b>A long wait with energy stored in X, then one sharp release:</b> the Big Bang.</td>
+            <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--warn)"/><path d="M8,4 V9 M8,11.6 V12" stroke="#16181d" stroke-width="2" stroke-linecap="round"/></svg>Known hurdle</span> This is the same order as inflation: stored energy first, then heat. But the sharp version, Guth's 1981 "old inflation", failed because its bubbles of new space never joined up. The idea may escape this, since no space exists yet for bubbles to race against, but nobody has checked.</td>
+            <td>The first question for a physicist.</td></tr>
+        <tr><td><b>Where fronts from different seeds collide, they leave a faint hum of gravitational waves.</b></td>
+            <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>Open</span> Not seen from this source. Pulsar-timing arrays reported a gravitational-wave background in 2023; its origin is debated, and sharp changes in the early universe are one candidate.</td>
+            <td>Gravitational-wave searches: pulsar timing now, the LISA space mission in the 2030s. Which one could see it depends on how hot the universe was at the change.</td></tr>
+        <tr><td><b>The leftover is rare scraps of X</b>, one per seed, and could be dark matter.</td>
+            <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fits so far</span> No relics of this kind have been seen, and dark matter's share at the start only had to be tiny. Unknown: whether scraps would be slow-moving, long-lived and invisible, as dark matter must be.</td>
+            <td>In the model: plant several seeds and count the scraps; check the scraps last and attract one another.</td></tr>
+        <tr><td><b>Space itself is only stable for now</b>, holding a little extra energy in every bit: dark energy.</td>
+            <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>Fits in shape</span> Dark energy is the same in every bit of space and doesn't thin out, which is what this describes. It doesn't explain why dark energy is so weak; no idea does yet. It also means space has a finite lifetime, which nothing rules out.</td>
+            <td>Nothing practical yet. Recorded as the author's idea.</td></tr>
+      </tbody>
+    </table></div>
+    <p><b>The two hurdles, in plain terms.</b> The sharp version of inflation failed once, because its bubbles never joined up, and this idea has to show that it escapes that. The standard picture also explains the exact pattern of tiny temperature ripples across the sky, and this idea has to reproduce it. Neither can be settled with our model; both are questions for a physicist. <b>Open everywhere, not only here:</b> what X is made of, and what sets the size of its energy gap.</p>
+  </section>
+
+  <!-- ============ 9. scorecard ============ -->
+  <section id="scorecard">
+    <hr class="rule">
+    <p class="eyebrow">The scorecard</p>
+    <h2 class="sec">The six claims, where they stand</h2>
+    <div class="scores">
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c1"/></svg>Claim 1</p>
+        <p class="claim">Space is a settled arrangement of something deeper</p>
+        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Holds in the model</span>
+        <p class="why">Networks with no positions do settle into space-like shapes. Published work agrees, including a reported proof for the simplest case.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c2"/></svg>Claim 2</p>
+        <p class="claim">Known physics comes back out</p>
+        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" style="stroke:var(--neutral)" stroke-width="2" stroke-dasharray="3 2.2"/></svg>Not tested</span>
+        <p class="why">Out of reach: the model has no time and no quantum behaviour. No approach to this question has cleared this bar yet.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c3"/></svg>Claim 3</p>
+        <p class="claim">X and space are two arrangements of one thing</p>
+        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Holds in the model</span>
+        <p class="why">Tube, sheet and knot are the same links rewired. Nothing is added or removed.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c4"/></svg>Claim 4</p>
+        <p class="claim">The change was sharp and gave off a lump</p>
+        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Shown in the model</span>
+        <p class="why">The tube opens sharply and gives off exactly the predicted lump. Pre-registered verdict: a sharp change in two steps, at 64, 96 and 192 points.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c5"/></svg>Claim 5</p>
+        <p class="claim">A leftover remains</p>
+        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><circle cx="8" cy="8" r="2.4" style="fill:var(--warn)"/></svg>Holds, but small</span>
+        <p class="why">A scrap of X is left inside the new space and survives. It stays the same size however big the space, and that's fine: the idea only needs the lump to carry the energy. The author's hypothesis: it is dark matter.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c6"/></svg>Claim 6</p>
+        <p class="claim">The energy books balance</p>
+        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Holds (built in)</span>
+        <p class="why">Exact in every sealed run. The model is built to conserve energy, and that held up through a conversion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. believe ============ -->
+  <section id="believe">
+    <hr class="rule">
+    <p class="eyebrow">Where this stands</p>
+    <h2 class="sec">The case for it, and what's left to test</h2>
+    <p><span class="tag idea">The author's view</span> <b>I think this is how it happened.</b> The idea is simple. It follows a pattern nature uses everywhere else: something stable for now, a push, a sharp change, a lump of energy released. And every test of its central claim has come back the way it said it would. A curled-up arrangement really does open out sharply, give off exactly the predicted energy, and balance its books to the last unit. When a simple idea keeps passing the tests put to it, that is worth taking seriously.</p>
+    <p><span class="tag ours">What the evidence shows</span> The mechanism works, in one published model, under every test we could run. The steps that would turn a strong bet into an account of our universe are still ahead, and each is a test the idea could fail:</p>
+
+    <figure class="fig">
+      <ol class="ladder" aria-label="The ladder of evidence, with this work on the second step">
+        <li class="done"><span class="here-spacer"></span><span class="bar" style="--h:26"></span><span class="lbl">An idea</span></li>
+        <li class="done"><span class="here">We are here</span><span class="bar" style="--h:48"></span><span class="lbl">Works in a toy model</span></li>
+        <li><span class="here-spacer"></span><span class="bar" style="--h:70"></span><span class="lbl">Holds at much larger sizes</span></li>
+        <li><span class="here-spacer"></span><span class="bar" style="--h:92"></span><span class="lbl">Checked by physicists</span></li>
+        <li><span class="here-spacer"></span><span class="bar" style="--h:114"></span><span class="lbl">Gives back known physics</span></li>
+        <li><span class="here-spacer"></span><span class="bar" style="--h:136"></span><span class="lbl">Predicts something new that is then seen</span></li>
+      </ol>
+      <figcaption>A way to place any claim about the universe. Each step up is a harder test. The idea has cleared the first.</figcaption>
+    </figure>
+
+    <div class="cols">
+      <div class="col">
+        <h3><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.5" style="fill:var(--good)"/><path d="M9,4.5 V13.5 M4.5,9 H13.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>Why it deserves attention</h3>
+        <ul>
+          <li>The mechanism shows up in a model someone else published, with no new ingredient added to produce it.</li>
+          <li>Predictions were written down before the runs, and the key ones held: sharpness, the exact lump, the bonfire threshold, no stalling.</li>
+          <li>Some predictions failed, and they are reported alongside the ones that held.</li>
+          <li>The tools were checked against published results and exact answers before anything new was run.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.5" style="fill:var(--critical)"/><path d="M4.5,9 H13.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>What could still sink it</h3>
+        <ul>
+          <li><b>Size.</b> Networks of at most 288 points. That isn't about the number of rules: nature seems to run on few, and so does the model (three). It's that sharpness only shows up clearly in big systems, so what counts is whether results hold steady as size grows. So far they do (the lump per point and the push don't change), with one trend to watch: in longer tubes the new space more often forms in several patches.</li>
+          <li><b>The stand-in is our choice.</b> Nothing says X is a tube.</li>
+          <li><b>Why start ordered?</b> Space doesn't form sharply out of random chaos in this model; the idea needs X to be a specific arrangement. A critic will ask where that order came from, and the idea doesn't answer that yet.</li>
+          <li><b>Some yardsticks came late.</b> The bar this kind of change has to clear was set after the tube runs had already met most of it, and two pre-written test rules had to be fixed when they failed on cases where the answer was already known.</li>
+          <li><b>It has failed before.</b> <span class="tag pub">Other researchers</span> Alan Guth's 1981 "old inflation" had a sharp change releasing the universe's energy. It was abandoned because bubbles of the new state never merged into one smooth universe. Whether this idea escapes that problem is unknown.</li>
+          <li><b>Nothing here touches time, quantum behaviour or relativity</b> (claim 2).</li>
+          <li><b>No physicist has reviewed it</b>, and reasoning done with an AI assistant is unreviewed, however confident it sounds.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>What would count against it</h3>
+    <ul class="plain">
+      <li>In larger networks, the tube stops opening sharply: more points stuck in between, or the new space growing in scattered patches rather than one front.</li>
+      <li>X stops being stable-for-now in bigger networks. X only waits before opening inside a window of rule settings (at 1.25 it waits; at 1.5 it falls apart at once). If that window narrowed as networks grow, nothing like X would wait long enough to convert. So far the signs say it doesn't: the push needed and the waiting time stay the same from 48 to 192 points.</li>
+      <li>A physicist finds that we have misread the model.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 11. next ============ -->
+  <section id="next">
+    <hr class="rule">
+    <p class="eyebrow">What happens next</p>
+    <h2 class="sec">Planned tests, and why we're doing them</h2>
+    <p>Each test is written down before it runs, with what would count as failing, and every result gets reported, whichever way it comes out.</p>
+    <div class="scores">
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c5"/></svg>Leftover</p>
+        <p class="claim">Plant several seeds and count the scraps</p>
+        <p class="why"><b>Why:</b> the dark-matter idea needs leftovers to add up with the number of seeds.</p>
+        <p class="why"><b>Could fail if:</b> one scrap appears however many seeds there are.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c3"/></svg>X itself</p>
+        <p class="claim">Find where X stops waiting</p>
+        <p class="why"><b>Why:</b> to know how narrow the stable-for-now window is (somewhere between rule settings 1.25 and 1.5) and whether it holds as networks grow.</p>
+        <p class="why"><b>Could fail if:</b> the window shrinks with size.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c1"/></svg>The product</p>
+        <p class="claim">Check that what the tube opens into is really space</p>
+        <p class="why"><b>Why:</b> it has to measure as flat, two-dimensional space, not just be called space. First we reproduce the published measurements.</p>
+        <p class="why"><b>Could fail if:</b> it isn't two-dimensional and flat at large scale.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c2"/></svg>Relativity</p>
+        <p class="claim">Look for a speed limit</p>
+        <p class="why"><b>Why:</b> a fixed top speed, not built into the rules, is the first fingerprint of relativity.</p>
+        <p class="why"><b>Could fail if:</b> the opening front and small nudges have no fixed top speed.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-lump"/></svg>Gravity</p>
+        <p class="claim">Do scraps attract? What does a local spark do?</p>
+        <p class="why"><b>Why:</b> attraction is the first hint of gravity, and a spark on flat space tells the author's black hole (re-curled space) from the published one (melted space).</p>
+        <p class="why"><b>Could fail if:</b> scraps ignore or repel each other.</p>
+      </div>
+      <div class="score">
+        <p class="n"><svg aria-hidden="true"><use href="#i-c4"/></svg>The bar</p>
+        <p class="claim">One fresh run to clear the success bar properly</p>
+        <p class="why"><b>Why:</b> the bar for this kind of change was written after the first tube runs, so it needs a run at conditions nobody has seen, such as more points or another rule setting.</p>
+        <p class="why"><b>Could fail if:</b> the change isn't sharp there.</p>
+      </div>
+    </div>
+    <p><b>And the one that matters most:</b> someone qualified reads it. Nothing here counts until a physicist has checked it; a first note to the model's authors is the next step.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p><b>More detail.</b> Full methods and results will be in the paper (link coming soon). The long version of this page covers every step in 31 sections: <a href="https://claude.ai/artifact/TTC9knKGJFkR43X2JjsjZ5">read it here</a>. Code, configurations and every result file: <code>EmilySmithCreate/RecreationalPhysics</code>.</p>
+  <p><b>How the results were kept honest.</b> Predictions were committed before the runs that tested them. Result files are never edited. Every setting that was run is reported, including the ones with unwelcome answers.</p>
+  <p><b>Disclosure.</b> All code and documents in this project were drafted with Claude (Anthropic) in conversation with the author.</p>
+</footer>
+
+</div>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(function () {
+  const NS = "http://www.w3.org/2000/svg";
+  const tip = document.getElementById("tip");
+
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function txt(parent, x, y, s, cls, anchor, extra) {
+    const t = el("text", Object.assign({ x: x, y: y, class: cls || "c-t" }, anchor ? { "text-anchor": anchor } : {}, extra || {}), parent);
+    t.textContent = s;
+    return t;
+  }
+  function root(id, w, h, label) {
+    const box = document.getElementById(id);
+    const s = el("svg", { viewBox: "0 0 " + w + " " + h, role: "img", "aria-label": label });
+    box.appendChild(s);
+    return s;
+  }
+  function topBar(x, yTop, w, yBase, r) {
+    r = Math.min(r, (yBase - yTop));
+    return "M" + x + "," + yBase + " V" + (yTop + r) + " Q" + x + "," + yTop + " " + (x + r) + "," + yTop +
+      " H" + (x + w - r) + " Q" + (x + w) + "," + yTop + " " + (x + w) + "," + (yTop + r) + " V" + yBase + " Z";
+  }
+
+  // ---- tooltip ----
+  function showTip(cx, cy, title, rows) {
+    tip.replaceChildren();
+    const h = document.createElement("div");
+    h.className = "tip-h"; h.textContent = title; tip.appendChild(h);
+    rows.forEach(function (r) {
+      const row = document.createElement("div"); row.className = "tip-r";
+      const k = document.createElement("span"); k.className = "tip-k " + (r.key || "k-muted");
+      const v = document.createElement("b"); v.textContent = r.value;
+      const l = document.createElement("span"); l.textContent = r.label || "";
+      row.append(k, v, l); tip.appendChild(row);
+    });
+    tip.hidden = false;
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    let left = cx + 14, top = cy + 14;
+    if (left + tw > window.innerWidth - 8) left = cx - tw - 14;
+    if (top + th > window.innerHeight - 8) top = cy - th - 14;
+    tip.style.left = Math.max(8, left) + "px";
+    tip.style.top = Math.max(8, top) + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+  function bindMark(hit, mark, title, rows) {
+    hit.setAttribute("tabindex", "0");
+    hit.setAttribute("aria-label", title + ": " + rows.map(function (r) { return r.value + " " + (r.label || ""); }).join(", "));
+    function on(e) {
+      if (mark) mark.classList.add("on");
+      if (e && e.clientX !== undefined && e.type !== "focus") showTip(e.clientX, e.clientY, title, rows);
+      else { const b = hit.getBoundingClientRect(); showTip(b.right, b.top, title, rows); }
+    }
+    function off() { if (mark) mark.classList.remove("on"); hideTip(); }
+    hit.addEventListener("pointermove", on);
+    hit.addEventListener("pointerleave", off);
+    hit.addEventListener("focus", on);
+    hit.addEventListener("blur", off);
+  }
+
+  // ---- chart: the lump (result 1) ----
+  (function () {
+    const s = root("c-lump", 640, 296, "Energy given off per point. With the penalty off: 10.3, 11.3 and 12.5 at 48, 64 and 96 points, growing with size. With the full rule: at most 1.65, 1.51 and 1.30 at 36, 64 and 100 points, shrinking with size.");
+    const y = function (v) { return 240 - v * (190 / 14); };
+    [0, 5, 10].forEach(function (v) {
+      el("line", { x1: 64, x2: 616, y1: y(v), y2: y(v), class: v === 0 ? "c-ax" : "c-gl" }, s);
+      txt(s, 56, y(v) + 4, String(v), "c-tm num", "end");
+    });
+    txt(s, 18, 145, "energy given off per point", "c-tm", "middle", { transform: "rotate(-90 18 145)" });
+    txt(s, 200, 22, "Penalty off: ends as knots", "c-tb", "middle");
+    txt(s, 200, 40, "grows with size", "c-tm", "middle");
+    txt(s, 510, 22, "Full rule: ends as space", "c-tb", "middle");
+    txt(s, 510, 40, "shrinks with size", "c-tm", "middle");
+    const left = [{ n: 48, v: 10.32 }, { n: 64, v: 11.27 }, { n: 96, v: 12.50 }];
+    const right = [{ n: 36, v: 1.65 }, { n: 64, v: 1.51 }, { n: 100, v: 1.30 }];
+    const lx = [125, 200, 275], rx = [435, 510, 585];
+    left.forEach(function (d, i) {
+      const g = el("g", { class: "mark" }, s);
+      el("path", { d: topBar(lx[i] - 12, y(d.v), 24, 240, 4), class: "f-lump" }, g);
+      txt(s, lx[i], y(d.v) - 8, d.v.toFixed(1), "c-t num", "middle");
+      txt(s, lx[i], 260, d.n + " points", "c-tm", "middle");
+      const hit = el("rect", { x: lx[i] - 30, y: 50, width: 60, height: 190, class: "hit" }, s);
+      bindMark(hit, g, "Penalty off, " + d.n + " points", [{ key: "k-lump", value: d.v.toFixed(2), label: "per point, measured" }]);
+    });
+    right.forEach(function (d, i) {
+      const g = el("g", { class: "mark" }, s);
+      el("path", { d: topBar(rx[i] - 12, y(d.v), 24, 240, 3), class: "fw-lump" }, g);
+      el("line", { x1: rx[i] - 12, x2: rx[i] + 12, y1: y(d.v), y2: y(d.v), class: "s-lump", "stroke-width": 2 }, g);
+      txt(s, rx[i], y(d.v) - 8, "≤ " + d.v.toFixed(2), "c-t num", "middle");
+      txt(s, rx[i], 260, d.n + " points", "c-tm", "middle");
+      const hit = el("rect", { x: rx[i] - 30, y: 50, width: 60, height: 190, class: "hit" }, s);
+      bindMark(hit, g, "Full rule, " + d.n + " points", [{ key: "k-lump", value: "≤ " + d.v.toFixed(2), label: "per point, upper limit" }]);
+    });
+    txt(s, 340, 286, "size of the network", "c-tm", "middle");
+  })();
+
+  // ---- chart: tube traces (result 2) ----
+  (function () {
+    const RUNS = [[1.0,1.0,1.0,1.0,1.0,1.125,1.125,0.9375,0.75,0.4375,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.1875,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.125,0.625,0.4375,0.2188,0.2188,0.2188,0.2188,0.2188,0.2188,0.2188,0.3125,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.1875,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.1875,0.7812,0.5938,0.5312,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375,0.4375],[1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0625,0.9375,0.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]];
+    const s = root("c-traces", 640, 300, "Energy above flat space, per point, for four runs over 4,000 rounds. Each starts at 1, the tube, waits between about 300 and 2,450 rounds, then drops to 0, flat space, within a few hundred rounds. One pauses at 0.22, the four-point leftover; one is still at 0.44 at the end of the window.");
+    const X0 = 64, X1 = 616;
+    const x = function (sw) { return X0 + sw * ((X1 - X0) / 4000); };
+    const y = function (v) { return 250 - v * 168; };
+    [0, 0.5, 1].forEach(function (v) {
+      el("line", { x1: X0, x2: X1, y1: y(v), y2: y(v), class: v === 0 ? "c-ax" : "c-gl" }, s);
+      txt(s, X0 - 8, y(v) + 4, v === 0 ? "0" : v.toFixed(1), "c-tm num", "end");
+    });
+    [0, 1000, 2000, 3000, 4000].forEach(function (sw) {
+      txt(s, x(sw), 268, sw.toLocaleString("en-US"), "c-tm num", "middle");
+    });
+    txt(s, 340, 292, "rounds of reshuffling", "c-tm", "middle");
+    txt(s, 18, 150, "energy above flat space, per point", "c-tm", "middle", { transform: "rotate(-90 18 150)" });
+    el("line", { x1: X0, x2: X1, y1: y(0.21875), y2: y(0.21875), class: "s-muted", "stroke-width": 1, "stroke-dasharray": "2 4" }, s);
+    txt(s, X1, y(1) - 8, "tube (X)", "c-t", "end");
+    txt(s, X1, y(0.21875) - 7, "four-point leftover", "c-tm", "end");
+    txt(s, X1, y(0) - 7, "flat space", "c-t", "end");
+    txt(s, 212, 140, "waits, then drops fast", "c-t");
+    RUNS.forEach(function (run) {
+      const pts = run.map(function (v, i) { return x(i * 50).toFixed(1) + "," + y(v).toFixed(1); }).join(" ");
+      el("polyline", { points: pts, fill: "none", class: "s-x", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }, s);
+    });
+    // crosshair
+    const xh = el("line", { x1: 0, x2: 0, y1: 36, y2: 250, class: "xhair", visibility: "hidden" }, s);
+    const overlay = el("rect", { x: X0, y: 30, width: X1 - X0, height: 222, class: "hit", tabindex: "0", "aria-label": "Chart of four runs. Use the left and right arrow keys to step through time." }, s);
+    let idx = 0;
+    function render(i, cx, cy) {
+      idx = Math.max(0, Math.min(80, i));
+      const px = x(idx * 50);
+      xh.setAttribute("x1", px); xh.setAttribute("x2", px); xh.setAttribute("visibility", "visible");
+      const rows = RUNS.map(function (r, k) { return { key: "k-x", value: r[idx].toFixed(2), label: "run " + (k + 1) }; });
+      showTip(cx, cy, "Round " + (idx * 50).toLocaleString("en-US"), rows);
+    }
+    overlay.addEventListener("pointermove", function (e) {
+      const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(s.getScreenCTM().inverse());
+      render(Math.round(((p.x - X0) / (X1 - X0)) * 80), e.clientX, e.clientY);
+    });
+    overlay.addEventListener("pointerleave", function () { xh.setAttribute("visibility", "hidden"); hideTip(); });
+    overlay.addEventListener("focus", function () { const b = overlay.getBoundingClientRect(); render(idx, b.left + b.width / 2, b.top); });
+    overlay.addEventListener("blur", function () { xh.setAttribute("visibility", "hidden"); hideTip(); });
+    overlay.addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+      const b = overlay.getBoundingClientRect();
+      const ni = idx + (e.key === "ArrowRight" ? 2 : -2);
+      render(ni, b.left + (x(Math.max(0, Math.min(80, ni)) * 50) - X0) / (X1 - X0) * b.width, b.top);
+    });
+  })();
+
+  // ---- chart: bonfire (result 3) ----
+  (function () {
+    const s = root("c-bonfire", 640, 300, "Share of sealed runs ending as clean flat space, by room for the heat. At 1 place per 16 or per 8 points: none, at every size. At 1 per 4: 15, 5 and 0 percent for 64, 96 and 192 points. At 1 per 2: 90 to 95 percent. At 1 or 2 per point: 95 to 100 percent. The predicted switch-over, 1 per 3.5, lies between 1 per 4 and 1 per 2.");
+    const cats = ["1 per 16", "1 per 8", "1 per 4", "1 per 2", "1 per 1", "2 per 1"];
+    const cx = [90, 190, 290, 390, 490, 590];
+    const y = function (p) { return 240 - p * 1.9; };
+    [0, 50, 100].forEach(function (v) {
+      el("line", { x1: 70, x2: 612, y1: y(v), y2: y(v), class: v === 0 ? "c-ax" : "c-gl" }, s);
+      txt(s, 62, y(v) + 4, v + "%", "c-tm num", "end");
+    });
+    cats.forEach(function (c, i) { txt(s, cx[i], 262, c, "c-tm", "middle"); });
+    txt(s, 341, 290, "room for the heat: places it can spread into, per point of tube", "c-tm", "middle");
+    const thr = 290 + (Math.log2(1 / 3.5) + 2) * 100;
+    el("line", { x1: thr, x2: thr, y1: 50, y2: 240, class: "s-muted", "stroke-width": 1.5, "stroke-dasharray": "5 4" }, s);
+    txt(s, thr - 6, 64, "predicted switch-over", "c-tm", "end");
+    txt(s, 100, 128, "too little room:", "c-t");
+    txt(s, 100, 146, "the heat melts the new space", "c-t");
+    txt(s, 596, 150, "enough room:", "c-t", "end");
+    txt(s, 596, 168, "converts to clean space", "c-t", "end");
+    const series = [
+      { n: 64, c: "o1", v: [0, 0, 15, 90, 100, 100], dx: -5 },
+      { n: 96, c: "o2", v: [0, 0, 5, 95, 95, 100], dx: 0 },
+      { n: 192, c: "o3", v: [0, 0, 0, 95, 100, 100], dx: 5 }
+    ];
+    series.forEach(function (sr) {
+      const pts = sr.v.map(function (p, i) { return (cx[i] + sr.dx) + "," + y(p); }).join(" ");
+      el("polyline", { points: pts, fill: "none", class: "s-" + sr.c, "stroke-width": 2, "stroke-linejoin": "round" }, s);
+    });
+    cats.forEach(function (cat, i) {
+      const g = el("g", { class: "mark" }, s);
+      series.forEach(function (sr) {
+        el("circle", { cx: cx[i] + sr.dx, cy: y(sr.v[i]), r: 4.5, class: "f-" + sr.c + " ring" }, g);
+      });
+      const hit = el("rect", { x: cx[i] - 50, y: 44, width: 100, height: 204, class: "hit" }, s);
+      bindMark(hit, g, "Room for the heat: " + cat, series.map(function (sr) {
+        return { key: "k-" + sr.c, value: sr.v[i] + "%", label: sr.n + " points (" + Math.round(sr.v[i] / 5) + " of 20)" };
+      }));
+    });
+  })();
+
+  // ---- chart: leftover count (result 4) ----
+  (function () {
+    const s = root("c-leftover", 640, 296, "Leftover scraps per box against size: 0.90 at 64 points, 0.85 at 96, 1.05 at 192, 0.95 at 288. Flat at about one. A leftover growing in step with the space would have reached about 4 at 288 points.");
+    const x = function (n) { return 70 + n * (540 / 320); };
+    const y = function (v) { return 240 - v * (200 / 4.5); };
+    [0, 1, 2, 3, 4].forEach(function (v) {
+      el("line", { x1: 64, x2: 616, y1: y(v), y2: y(v), class: v === 0 ? "c-ax" : "c-gl" }, s);
+      txt(s, 56, y(v) + 4, String(v), "c-tm num", "end");
+    });
+    const data = [{ n: 64, m: 0.90, sd: 0.31 }, { n: 96, m: 0.85, sd: 0.37 }, { n: 192, m: 1.05, sd: 0.22 }, { n: 288, m: 0.95, sd: 0.22 }];
+    data.forEach(function (d) { txt(s, x(d.n), 260, String(d.n), "c-tm num", "middle"); });
+    txt(s, 340, 286, "size of the space (points)", "c-tm", "middle");
+    txt(s, 18, 140, "leftover scraps per box", "c-tm", "middle", { transform: "rotate(-90 18 140)" });
+    el("line", { x1: x(64), y1: y(0.9), x2: x(288), y2: y(0.9 * 288 / 64), class: "s-muted", "stroke-width": 1.5, "stroke-dasharray": "6 5" }, s);
+    txt(s, x(288) - 10, y(0.9 * 288 / 64) - 10, "if it grew in step with the space", "c-tm", "end");
+    txt(s, 470, 160, "measured: about one per box", "c-t", "middle");
+    data.forEach(function (d) {
+      const g = el("g", { class: "mark" }, s);
+      el("line", { x1: x(d.n), x2: x(d.n), y1: y(d.m + d.sd), y2: y(d.m - d.sd), class: "s-x", "stroke-width": 1.5 }, g);
+      el("line", { x1: x(d.n) - 5, x2: x(d.n) + 5, y1: y(d.m + d.sd), y2: y(d.m + d.sd), class: "s-x", "stroke-width": 1.5 }, g);
+      el("line", { x1: x(d.n) - 5, x2: x(d.n) + 5, y1: y(d.m - d.sd), y2: y(d.m - d.sd), class: "s-x", "stroke-width": 1.5 }, g);
+      el("circle", { cx: x(d.n), cy: y(d.m), r: 5, class: "f-x ring" }, g);
+      const hit = el("circle", { cx: x(d.n), cy: y(d.m), r: 16, class: "hit" }, s);
+      bindMark(hit, g, d.n + " points", [{ key: "k-x", value: d.m.toFixed(2), label: "leftovers per box (±" + d.sd.toFixed(2) + ")" }]);
+    });
+  })();
+
+  // ---- chart: energy books (X, lump, leftover) ----
+  (function () {
+    const s = root("c-budget", 660, 250, "Energy books. Tube of 64 points: before, X's extra energy 64 plus a push of 12 makes 76; after, heat 62 plus a leftover of 14 makes 76. Tube of 288 points: before, 288 plus 12 makes 300; after, heat 286 plus leftover 14 makes 300.");
+    const x = function (u) { return 150 + u * 1.3; };
+    [0, 100, 200, 300].forEach(function (u) {
+      el("line", { x1: x(u), x2: x(u), y1: 32, y2: 198, class: u === 0 ? "c-ax" : "c-gl" }, s);
+      txt(s, x(u), 216, String(u), "c-tm num", "middle");
+    });
+    txt(s, 345, 240, "energy units", "c-tm", "middle");
+    const groups = [
+      { label: "Tube of 64 points", gy: 22, rows: [
+        { name: "before", y: 32, segs: [{ u: 64, c: "x", t: "X 64", lab: "X's extra energy" }, { u: 12, c: "push", out: "push 12", lab: "the push" }] },
+        { name: "after", y: 62, segs: [{ u: 62, c: "lump", t: "heat 62", lab: "heat given off" }, { u: 14, c: "x", out: "leftover 14 · 22%", lab: "leftover scrap of X" }] }
+      ] },
+      { label: "Tube of 288 points", gy: 122, rows: [
+        { name: "before", y: 132, segs: [{ u: 288, c: "x", t: "X's extra energy: 288", lab: "X's extra energy" }, { u: 12, c: "push", out: "push 12", lab: "the push" }] },
+        { name: "after", y: 162, segs: [{ u: 286, c: "lump", t: "heat given off: 286", lab: "heat given off" }, { u: 14, c: "x", out: "leftover 14 · 5%", lab: "leftover scrap of X" }] }
+      ] }
+    ];
+    groups.forEach(function (gp) {
+      txt(s, 16, gp.gy, gp.label, "c-tb");
+      gp.rows.forEach(function (r) {
+        txt(s, 140, r.y + 16, r.name, "c-t", "end");
+        let u0 = 0; let endX = x(0);
+        r.segs.forEach(function (sg, i) {
+          const x0 = x(u0) + (i > 0 ? 2 : 0);
+          const w = Math.max(2, x(u0 + sg.u) - x0);
+          const g = el("g", { class: "mark" }, s);
+          el("rect", { x: x0, y: r.y, width: w, height: 22, rx: i === r.segs.length - 1 ? 3 : 0, class: "f-" + sg.c }, g);
+          if (sg.t) txt(s, x0 + 8, r.y + 15.5, sg.t, sg.c === "x" ? "c-in-x" : "c-in-lump");
+          const hit = el("rect", { x: x0, y: r.y - 3, width: Math.max(w, 18), height: 28, class: "hit" }, s);
+          bindMark(hit, g, gp.label + ", " + r.name, [{ key: "k-" + (sg.c === "push" ? "push" : sg.c), value: String(sg.u), label: sg.lab }]);
+          u0 += sg.u; endX = x0 + w;
+          if (sg.out) txt(s, endX + 6, r.y + 15.5, sg.out, "c-t num");
+        });
+      });
+    });
+  })();
+})();
+</script>

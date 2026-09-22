@@ -55,3 +55,30 @@ along this line.
 T9 finished and read; then, if the author wants it, a short pre-registration for 3(i) and 3(ii)
 as step-4 items: the sign of the ring–ring interaction, and what a local spark does to a flat
 sheet at λ = 1.25 (curl, melt, or nothing).
+
+## Added later on 2026-09-22: dark energy, and whether the change released two lumps
+
+The author's words, put in order: dark energy and ordinary matter-energy might both come from the
+change, with different rules for how they interact; a first round releases dark energy, everywhere
+and strong, and the hot Big Bang follows fast; dark energy might be the energy that could not fit
+into spacetime, given a speed limit.
+
+What was kept, what was set aside, and why (*ours, unverified*; the physics facts are general
+knowledge, not read):
+
+- **Kept, and on the public page: dark energy as spacetime being only stable for now.** If each bit
+  of space holds a little more energy than whatever arrangement lies below it, that energy stays
+  the same per bit as space grows and does not clump, which is how dark energy behaves. It is the
+  same shape as X being stable for now, and it implies space has a finite lifetime (VISION
+  Update 10 already accepts that). It does not explain why dark energy is so weak (the
+  cosmological-constant problem, open for everyone). Not reachable in this model: no expansion,
+  and the flat sheet holds exactly zero energy at λ > 1.
+- **The "first round, then the Big Bang" order matches inflation**, where a dark-energy-like phase
+  of stored energy converts into matter and radiation. Mapped onto the idea, that is *one* release:
+  X's stored energy is the waiting phase and the opening is the release. It is also the structure
+  of old inflation, whose failure (bubbles that never merge) is the idea's main known hurdle.
+  Today's dark energy is far too weak to be a second lump of comparable size.
+- **Set aside: dark energy as energy that "could not fit, given a speed limit".** In sharp changes,
+  energy that cannot be absorbed piles up at the moving fronts (bubble walls), which is lumpy, the
+  opposite of dark energy's evenness; in the T9 sealed boxes, heat with too little room melted the
+  new space rather than forming a smooth background.
