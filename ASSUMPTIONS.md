@@ -579,6 +579,32 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
   **Not claimed.** That X is a tube. Anything about the universe. The word "first order" in the thermodynamic sense (this is a decay at fixed temperature; the pre-registration defined "sharp" for that case and the data meet that definition). Where the metastable window in λ ends. What the ledge state is, structurally — only that it is one state, at 0.78, every time. What happens in a sealed box (T8).
 
+- **O14 T9: the sealed tube is a bonfire with a threshold; no slush; the leftover is one ring — at every size.** (2026-09-22. `t9_n{64,96,192}_C*`, 21 configs, 420 runs; `scripts/analyse_t9.py`; PREREGISTRATION T9, no amendments.)
+
+  **The verdict as written: BONFIRE WITH A THRESHOLD.** Every run converted (the spark is still the spark, gate 2), energy conserved to the last unit in all 420 (gate 1), twenty replicas each (gate 3).
+
+  | N | C = 1 … N/16 … N/8 | N/4 | N/2 | N | 2N |
+  |---|---|---|---|---|---|
+  | 64 | melted 17, 17, 12 of 20 | 3 sheet / 4 melted / 13 neither | 18 sheet | 20 sheet | 20 sheet |
+  | 96 | melted 18, 18, 9 | 1 / 2 / 17 | 19 sheet | 19 sheet | 20 sheet |
+  | 192 | melted 20, 19, 16 | 0 / 2 / 18 | 19 sheet | 20 sheet | 20 sheet |
+
+  **(a) holds.** First majority-sheet C = N/2 and last majority-melted C ≤ N/8 at every size; C*/N is 0.5, 0.5, 0.5 on the grid, so it scales with N. The predicted N/3.5 lies inside the interval (N/4, N/2] at every size; the grid is too coarse to place it more finely. At C = N/4 the product is mostly "neither" — partly melted or not fully converted — at all three sizes: the crossover is a band, not a line. **(b) holds:** not one run in 420 halted with tube and sheet both present, the bath below g_melt and nothing melting. The tube has no coexistence temperature with the sheet, as argued. **(c) holds:** a ring in 83 to 100 % of sheets at C ≥ N/2.
+
+  **The ring count, read after T10 was committed and launched** (commit 8398209 for the pre-registration, 09:38 for the launch; these counts read at 09:45). This is T9's observable 3, not a T10 result, and it is disclosed here because it bears on T10's prediction (a):
+
+  | N | rings per sheet at C = 2N (20 runs) | at C = N | excess energy per ring |
+  |---|---|---|---|
+  | 64 | 0 ×1, 1 ×18, 2 ×1 | 1 ×20 | 13.8, 14.0 |
+  | 96 | 0 ×1, 1 ×19 | 0 ×3, 1 ×15, 2 ×2 | 14.0, 16.3 |
+  | 192 | 0 ×1, 1 ×19 | 0 ×1, 1 ×15, 2 ×4 | 14.3, 14.4 |
+
+  **One ring, however large the tube.** In the coldest box the count is 1 in 18 or 19 of 20 sheets at 64, 96 and 192 alike, and the excess energy is 14 per ring — additive, as T10 (b) predicts. **So T10's prediction (a), that the count grows with N, is very likely to fail**, and by T10's own verdict table the outcome would be ONE RING, HOWEVER LARGE. The prediction stays as committed; T10 runs on fresh seeds and its verdict is whatever it returns. Recorded before it finishes so that it cannot be read as a surprise afterwards. If it returns that verdict, claim 5's leftover in this model is a single defect, negligible at scale, and the claim is back to bookkeeping — VISION Update 13 says so in advance.
+
+  **Why one?** *Ours, unverified, and a follow-up worth pre-registering.* The tube is periodic. The front starts at one place (O13: anywhere, nucleus two rings) and spreads both ways; the two ends meet on the far side. A seam where two fronts meet is one place per tube whatever its length, and a ring that neither front uncurled is what a seam would leave. If that is the mechanism, the leftover ring sits at the antipode of the nucleation site, and the count is 1 by topology, 0 when the seam closes cleanly, 2 rarely. Testable with the departure positions `diagnose_ledge_and_start.py` already records plus the ring's position, at N = 64 in minutes. At warmer baths (C ≤ N/2) the count rises to 1–3 and pieces larger than a ring appear: thermal defects on top of the seam, not the front's doing.
+
+  **Not claimed.** T10's verdict. What C means beyond "how many other places the energy can go". The seam mechanism. Anything at λ ≠ 1.25.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
