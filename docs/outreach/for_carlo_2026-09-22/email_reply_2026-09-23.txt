@@ -3,11 +3,10 @@ Subject: Re: Reproducing your model: your postscript reproduced at N = 196, pict
 Dear Carlo,
 
 Thank you for the reply and for the postscript, which turned out to be exactly what our runs show. I
-should say plainly what I am: a software engineer doing this as a hobby. What I can offer you is an
-independent reproduction with the numbers, an object in your model that I think you will want to see,
-and cheap rented compute for the large-size runs you have said are hard to obtain; what I would like
-from you is at the end of this letter. Pictures are attached this time rather than links, and my
-home-made words are translated into yours below.
+should say plainly what I am: a software engineer doing this as a hobby, with no schedule. What I can
+offer you is an independent reproduction with the numbers, and an object in your model that I think you
+will want to see; what I would like from you is at the end of this letter. Pictures are attached this
+time rather than links, and my home-made words are translated into yours below.
 
 Your postscript, at N = 196 (p = 7). Two protocols have finished at this size, on the full Hamiltonian
 with only the hard-core restriction (picture 4). The first is your procedure as you described it: 40
@@ -19,8 +18,8 @@ hot and cold ends. The result is what you suggested: on heating, the lattice sur
 transition and collapses between g ≈ 3.5 and 2.7, in three chains of four, with the heating curve up to
 0.16 above the cooling curve there; the cooling curve agrees with replica exchange to 0.004 at every
 coupling; replica exchange gives one smooth curve and no jump anywhere. So at this size the jump is the
-metastable lattice branch, and it appears in a faithful copy of your procedure. I will send 484 and 676
-as pictures when they finish.
+metastable lattice branch, and it appears in a faithful copy of your procedure. Runs at 484 and 676 are
+in progress; their curves will be in the public repository below when they finish.
 
 One question about Fig. 3 of the review, in case it is useful to you. Fig. 3 sits above Fig. 8a of the
 2019 paper in both directions, cooling from random as well as heating from the lattice, by up to 0.4
@@ -34,8 +33,8 @@ A difficulty at the larger sizes, and a question about your code. At N = 484 (p 
 with single edge switches, 30 couplings from g = 7.5 to 2.0 and 128,000 sweeps, makes no round trips at
 all: the cold end freezes. From a random start the coldest replica reaches S/N = 0.955; from the lattice
 torus it stays at 0.999; the two never meet. Do you use the neighbourhood-swap move of Fig. 8 of the
-review at N = 1024, and did you find single switches insufficient at low coupling? If so I will build
-that move before trusting anything at 484 and 676.
+review at N = 1024, and did you find single switches insufficient at low coupling? If so, that is the
+move a faithful comparison at these sizes would need.
 
 What I meant by my words. "Flat sheet" is the lattice torus. "A torus with one side curled to length
 4" is the 4 x L lattice torus (picture 1): its short direction is a 4-cycle, so every wrap-around loop
@@ -63,10 +62,9 @@ energy zero, the global and local terms cancelling as the review says of the den
 the sizes you recommend, N = 4p^2, happen to be exactly the sizes at which neither the 4 x L torus nor
 the 4-cube can exist, which I take to be why the ground state is unique there. So: is the coefficient
 of the local term fixed at exactly 1 in your programme, or is it effective and free to move? And is the
-degeneracy at exactly 1 a nuisance you remove by the choice of N, or physics? If the coefficient may
-sit above 1, I would like to run this change at your sizes and to your specification, alongside the
-finite-size study of the random-to-lattice transition, on rented compute that costs a few dollars a
-size.
+degeneracy at exactly 1 a nuisance you remove by the choice of N, or physics? Everything behind this
+paragraph, the configurations, the seeds and the saved final graphs, is in the repository below, and
+the energies can be checked by hand.
 
 For your new code, in case it is useful: at N = 18 we listed every valid graph exhaustively (about
 1.8 x 10^12 labelled graphs in 26 classes), so the averages there are exact sums, and the attached

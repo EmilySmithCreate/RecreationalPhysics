@@ -13,11 +13,10 @@ hypothesis, the loop or the public pages, and his email stays private.
 Dear Carlo,
 
 Thank you for the reply and for the postscript, which turned out to be exactly what our runs show. I
-should say plainly what I am: a software engineer doing this as a hobby. What I can offer you is an
-independent reproduction with the numbers, an object in your model that I think you will want to see,
-and cheap rented compute for the large-size runs you have said are hard to obtain; what I would like
-from you is at the end of this letter. Pictures are attached this time rather than links, and my
-home-made words are translated into yours below.
+should say plainly what I am: a software engineer doing this as a hobby, with no schedule. What I can
+offer you is an independent reproduction with the numbers, and an object in your model that I think you
+will want to see; what I would like from you is at the end of this letter. Pictures are attached this
+time rather than links, and my home-made words are translated into yours below.
 
 **Your postscript, at N = 196 (p = 7).** Two protocols have finished at this size, on the full
 Hamiltonian with only the hard-core restriction (picture 4). The first is your procedure as you
@@ -29,8 +28,8 @@ trips between the hot and cold ends. The result is what you suggested: on heatin
 past the transition and collapses between g ≈ 3.5 and 2.7, in three chains of four, with the heating
 curve up to 0.16 above the cooling curve there; the cooling curve agrees with replica exchange to 0.004
 at every coupling; replica exchange gives one smooth curve and no jump anywhere. So at this size the
-jump is the metastable lattice branch, and it appears in a faithful copy of your procedure. I will send
-484 and 676 as pictures when they finish.
+jump is the metastable lattice branch, and it appears in a faithful copy of your procedure. Runs at 484
+and 676 are in progress; their curves will be in the public repository below when they finish.
 
 **One question about Fig. 3 of the review, in case it is useful to you.** Fig. 3 sits above Fig. 8a of
 the 2019 paper in *both* directions, cooling from random as well as heating from the lattice, by up to
@@ -44,8 +43,8 @@ different size, or with the coupling normalised differently?
 exchange with single edge switches, 30 couplings from g = 7.5 to 2.0 and 128,000 sweeps, makes no round
 trips at all: the cold end freezes. From a random start the coldest replica reaches S/N = 0.955; from
 the lattice torus it stays at 0.999; the two never meet. Do you use the neighbourhood-swap move of
-Fig. 8 of the review at N = 1024, and did you find single switches insufficient at low coupling? If so
-I will build that move before trusting anything at 484 and 676.
+Fig. 8 of the review at N = 1024, and did you find single switches insufficient at low coupling? If so,
+that is the move a faithful comparison at these sizes would need.
 
 **What I meant by my words.** "Flat sheet" is the lattice torus. "A torus with one side curled to
 length 4" is the 4 × L lattice torus (picture 1): its short direction is a 4-cycle, so every
@@ -73,9 +72,9 @@ global and local terms cancelling as the review says of the denser configuration
 recommend, N = 4p², happen to be exactly the sizes at which neither the 4 × L torus nor the 4-cube can
 exist, which I take to be why the ground state is unique there. **So: is the coefficient of the local
 term fixed at exactly 1 in your programme, or is it effective and free to move? And is the degeneracy at
-exactly 1 a nuisance you remove by the choice of N, or physics?** If the coefficient may sit above 1, I
-would like to run this change at your sizes and to your specification, alongside the finite-size study
-of the random-to-lattice transition, on rented compute that costs a few dollars a size.
+exactly 1 a nuisance you remove by the choice of N, or physics?** Everything behind this paragraph, the
+configurations, the seeds and the saved final graphs, is in the repository below, and the energies can
+be checked by hand.
 
 **For your new code**, in case it is useful: at N = 18 we listed every valid graph exhaustively (about
 1.8 × 10¹² labelled graphs in 26 classes), so the averages there are exact sums, and the attached table
@@ -110,8 +109,12 @@ Read this before sending. If any line is not something you would say yourself, c
 - **The vocabulary paragraph** is the 22 September content compressed: his words for ours, the cap
   admission, the 14-vertex clarification. Picture 1 is the one that shows the tube.
 - **The benchmark table** is unchanged: a check that costs him nothing.
-- **The opening line** says what we offer (a reproduction, the object, compute) as well as what you are,
-  because your question was what we bring him.
+- **The opening line** says what we offer (a reproduction and the object) as well as what you are, and
+  adds "with no schedule" so that no pace of work is implied anywhere. **The compute offer is out**, at
+  your decision: he has run 1024 and 2000 himself, his difficulty at large sizes is mixing, not CPU, and
+  our own evidence does not need his sizes (the tube route's size-dependent quantities are already exact
+  at every size tried). Every "I will send" and "I will build" is gone with it; results appear in the
+  public repository when they exist.
 - **The object paragraph is the lead, in your words**, because that is what you are interested in and it
   is his own idea instantiated: his dark-matter paper proposes allotropes and reports no simulations, and
   this is one, made by his Hamiltonian by itself. The allotrope question comes first; the coefficient
@@ -121,8 +124,9 @@ Read this before sending. If any line is not something you would say yourself, c
   `test_sheet_tube_cube_ladder`); the degeneracy at exactly 1 is his own review's statement. Either
   answer helps us: "fixed at 1" means the tube track is a deformation of his model and we say so
   everywhere; "effective" means it sits inside his programme. The tube opening *is* claim 4 in his terms,
-  without a word of the hypothesis. The compute offer is real (`terraform/`, not applied) and is tied to
-  the problem he has called out of reach three times.
+  without a word of the hypothesis.
+- **The 484 question** asks for information, not for help, and promises nothing in return: if he names
+  the move, it goes on our list with no date.
 - **The N = 18 benchmark** is two sentences and an attachment, no more: it is a correctness check for the
   new code he mentioned (the move set, detailed balance, the hard-core check and the square count all
   show up as a bias in ⟨S⟩, and seven exact numbers catch any of them in minutes), not a physics result,
