@@ -1,106 +1,106 @@
-<title>The Loop and the Floor</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<title>Did Space Snap Open?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
   :root {
     color-scheme: light;
-    --ground: #f4f5f8;
-    --paper: #ffffff;
-    --ink: #14161c;
-    --ink-2: #3f4450;
-    --ink-3: #6c7180;
-    --rule: #d7dae2;
-    --grid: #e6e8ee;
-    --x: #4a3aa7;      --x-wash: rgba(74, 58, 167, .12);  --on-x: #ffffff;
-    --space: #2a78d6;  --space-wash: rgba(42, 120, 214, .12);
-    --lump: #eb6834;   --lump-wash: rgba(235, 104, 52, .16);
+    --ground: #f3f4ef; --paper: #fcfcfa; --ink: #16181d; --ink-2: #454a54; --ink-3: #6f747e;
+    --rule: #d9dcd3; --grid: #e4e6de;
+    --x: #4a3aa7;       --x-wash: rgba(74, 58, 167, .11);   --on-x: #ffffff;
+    --space: #2a78d6;   --space-wash: rgba(42, 120, 214, .11);
+    --lump: #eb6834;    --lump-wash: rgba(235, 104, 52, .16); --on-lump: #16181d;
     --push: #1baf7a;
-    --melt: #8b909b;   --melt-wash: rgba(139, 144, 155, .18);
+    --melt: #7c7a74;    --melt-wash: rgba(124, 122, 116, .16);
+    --tag-settled-bg: #e6e8e1; --tag-settled-fg: #3d424a;
+    --tag-ours-bg: #e0ecfa;    --tag-ours-fg: #1b4d8c;
+    --tag-idea-bg: #eae7f8;    --tag-idea-fg: #3b2e8c;
+    --shadow: 0 1px 2px rgba(22, 24, 29, .06), 0 4px 14px rgba(22, 24, 29, .05);
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --ui: system-ui, -apple-system, "Segoe UI", sans-serif;
     --accent: var(--x);
-    --shadow: 0 1px 2px rgba(20, 22, 28, .06), 0 6px 18px rgba(20, 22, 28, .05);
-    --display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-    --body: "Source Serif 4", "Iowan Old Style", Georgia, "Times New Roman", serif;
-    --ui: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       color-scheme: dark;
-      --ground: #101216; --paper: #171a20; --ink: #eceef2; --ink-2: #b7bcc6; --ink-3: #868c98;
-      --rule: #2b2f37; --grid: #22262d;
-      --x: #9a8fee; --x-wash: rgba(154, 143, 238, .16); --on-x: #101216;
-      --space: #4a92e8; --space-wash: rgba(74, 146, 232, .16);
-      --lump: #ef7a4a; --lump-wash: rgba(239, 122, 74, .2);
-      --push: #2cc08a;
-      --melt: #9aa0ab; --melt-wash: rgba(154, 160, 171, .2);
-      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .35);
+      --ground: #111317; --paper: #1a1c20; --ink: #eef0f2; --ink-2: #b9bdc5; --ink-3: #8a8f98;
+      --rule: #2d3137; --grid: #1f2226;
+      --x: #9085e9; --x-wash: rgba(144, 133, 233, .15); --on-x: #111317;
+      --space: #3987e5; --space-wash: rgba(57, 135, 229, .15);
+      --lump: #d95926; --lump-wash: rgba(217, 89, 38, .2); --on-lump: #111317;
+      --push: #199e70;
+      --melt: #92908a; --melt-wash: rgba(146, 144, 138, .2);
+      --tag-settled-bg: #262a30; --tag-settled-fg: #c6cad1;
+      --tag-ours-bg: #172a40;    --tag-ours-fg: #93bff2;
+      --tag-idea-bg: #25203e;    --tag-idea-fg: #bdb4f4;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35);
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --ground: #101216; --paper: #171a20; --ink: #eceef2; --ink-2: #b7bcc6; --ink-3: #868c98;
-    --rule: #2b2f37; --grid: #22262d;
-    --x: #9a8fee; --x-wash: rgba(154, 143, 238, .16); --on-x: #101216;
-    --space: #4a92e8; --space-wash: rgba(74, 146, 232, .16);
-    --lump: #ef7a4a; --lump-wash: rgba(239, 122, 74, .2);
-    --push: #2cc08a;
-    --melt: #9aa0ab; --melt-wash: rgba(154, 160, 171, .2);
-    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .35);
+    --ground: #111317; --paper: #1a1c20; --ink: #eef0f2; --ink-2: #b9bdc5; --ink-3: #8a8f98;
+    --rule: #2d3137; --grid: #1f2226;
+    --x: #9085e9; --x-wash: rgba(144, 133, 233, .15); --on-x: #111317;
+    --space: #3987e5; --space-wash: rgba(57, 135, 229, .15);
+    --lump: #d95926; --lump-wash: rgba(217, 89, 38, .2); --on-lump: #111317;
+    --push: #199e70;
+    --melt: #92908a; --melt-wash: rgba(146, 144, 138, .2);
+    --tag-settled-bg: #262a30; --tag-settled-fg: #c6cad1;
+    --tag-ours-bg: #172a40;    --tag-ours-fg: #93bff2;
+    --tag-idea-bg: #25203e;    --tag-idea-fg: #bdb4f4;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .35);
   }
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0; background: var(--ground); color: var(--ink);
-    font-family: var(--body); font-size: 1.08rem; line-height: 1.62;
-    padding-inline: 16px; padding-block: 0 4rem;
-    font-optical-sizing: auto;
-  }
-  a { color: var(--space); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:focus-visible, summary:focus-visible { outline: 2px solid var(--space); outline-offset: 3px; }
-  .sheet { max-width: 46rem; margin: 0 auto; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.62; -webkit-font-smoothing: antialiased; padding-block: 0 4rem; }
+  p, ul, ol, h1, h2, h3, figure { margin: 0; }
+  p { margin-bottom: 1rem; }
+  a { color: var(--space); text-underline-offset: .18em; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--space); outline-offset: 3px; border-radius: 3px; }
+  b, strong { font-weight: 700; }
+  .sheet { max-width: 46rem; margin: 0 auto; padding-inline: 20px; }
   .wide { max-width: 54rem; margin-inline: auto; }
-  p { margin: 0 0 1.05rem; }
-  b { font-weight: 600; }
-  h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.12; letter-spacing: -.01em; text-wrap: balance; margin: 0; }
-  h2 { font-size: clamp(1.7rem, 1.2rem + 2.2vw, 2.5rem); font-weight: 600; }
-  h3 { font-size: 1.32rem; margin: 2rem 0 .6rem; }
-  .eyebrow { font-family: var(--ui); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
-
-  /* ---- cover ---- */
-  .cover { padding-block: 4.2rem 2.6rem; display: grid; gap: 1.2rem; }
-  .cover .eyebrow { color: var(--accent); }
-  .cover h1 { font-size: clamp(2.8rem, 2rem + 4.6vw, 5.2rem); font-weight: 300; letter-spacing: -.02em; }
-  .cover h1 em { font-style: italic; font-weight: 400; }
-  .cover .stand { font-family: var(--display); font-weight: 300; font-size: clamp(1.15rem, 1rem + .8vw, 1.45rem); line-height: 1.4; color: var(--ink-2); max-width: 36rem; }
-  .cover .by { font-family: var(--ui); font-size: .86rem; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
-  .thesis { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); padding-block: 1.3rem; margin-block: .6rem 0; display: grid; gap: .8rem; }
-  .thesis p { margin: 0; font-family: var(--display); font-size: 1.22rem; line-height: 1.45; font-weight: 400; }
-  .thesis p:first-child { font-weight: 600; }
-  .contents { font-family: var(--ui); font-size: .9rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .6rem 1.4rem; padding-block: 1.2rem; }
-  .contents a { color: var(--ink-2); text-decoration: none; display: grid; grid-template-columns: 2rem 1fr; gap: .3rem; align-items: baseline; }
-  .contents a span:first-child { font-family: var(--display); font-weight: 600; color: var(--accent); }
-  .contents a:hover span:last-child { text-decoration: underline; }
-
-  /* ---- parts ---- */
-  .part { margin-top: 4.6rem; padding-top: 2.4rem; border-top: 1px solid var(--ink); }
-  .part-head { display: grid; gap: .55rem; margin-bottom: 1.7rem; }
-  .part-head .num { font-family: var(--display); font-weight: 300; font-size: 3.4rem; line-height: 1; color: var(--accent); }
-  .part-head .stand { font-family: var(--display); font-weight: 300; font-size: 1.2rem; line-height: 1.45; color: var(--ink-2); max-width: 36rem; }
-  .lead::first-letter { font-family: var(--display); font-weight: 600; font-size: 3.4rem; line-height: .8; float: left; padding: .35rem .5rem 0 0; color: var(--accent); }
-  .pull { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.38; color: var(--ink); border-left: 3px solid var(--accent); padding: .2rem 0 .2rem 1.1rem; margin: 1.7rem 0; }
-  .note { font-family: var(--ui); font-size: .92rem; line-height: 1.55; color: var(--ink-2); background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: .9rem 1.05rem; margin: 1.3rem 0; }
-  .note b { color: var(--ink); }
   .term { font-style: italic; }
 
-  /* ---- figures ---- */
-  figure.fig { margin: 1.6rem auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.05rem .9rem; display: grid; gap: .7rem; box-shadow: var(--shadow); }
-  figure.fig .ft { font-family: var(--ui); font-weight: 600; font-size: .95rem; color: var(--ink); }
+  /* ---------- hero ---------- */
+  .hero { border-bottom: 1px solid var(--rule); background-color: var(--ground);
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px; background-position: -1px -1px; }
+  .hero .sheet { padding-block: 3.2rem 2.4rem; display: grid; gap: 1.1rem; }
+  .eyebrow { font-family: var(--display); font-weight: 700; font-size: .74rem; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-3); }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 9vw, 4.1rem); line-height: 1.0; letter-spacing: -.025em; text-wrap: balance; }
+  h1 .open { color: var(--space); }
+  .standfirst { font-size: 1.2rem; line-height: 1.5; color: var(--ink-2); max-width: 36rem; }
+  .byline { font-family: var(--ui); font-size: .86rem; color: var(--ink-3); }
+  .answer { margin-top: .6rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: 1.4rem 1.5rem; display: grid; gap: .8rem; }
+  .answer h2 { font-family: var(--display); font-size: 1.25rem; font-weight: 700; }
+  .answer p { margin: 0; }
+  .contents { font-family: var(--ui); font-size: .9rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .5rem 1.4rem; }
+  .contents a { color: var(--ink-2); text-decoration: none; display: grid; grid-template-columns: 2rem 1fr; gap: .3rem; align-items: baseline; }
+  .contents a span:first-child { font-family: var(--display); font-weight: 800; color: var(--x); }
+  .contents a:hover span:last-child { text-decoration: underline; }
+  .tag { display: inline-block; font-family: var(--display); font-weight: 700; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px; line-height: 1.35; white-space: nowrap; vertical-align: .12em; }
+  .tag.settled { background: var(--tag-settled-bg); color: var(--tag-settled-fg); }
+  .tag.ours { background: var(--tag-ours-bg); color: var(--tag-ours-fg); }
+  .tag.idea { background: var(--tag-idea-bg); color: var(--tag-idea-fg); }
+
+  /* ---------- parts ---------- */
+  .part { padding-top: 3.2rem; }
+  .part-head { border-top: 1px solid var(--rule); padding-top: 1.6rem; display: grid; gap: .5rem; margin-bottom: 1.4rem; }
+  .part-head .num { font-family: var(--display); font-weight: 800; font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; color: var(--x); }
+  .part-head .num::before { content: "Part "; }
+  .part-head h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.55rem, 5vw, 2.05rem); line-height: 1.12; letter-spacing: -.015em; text-wrap: balance; }
+  .part-head .stand { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); max-width: 36rem; }
+  h3 { font-family: var(--display); font-weight: 700; font-size: 1.12rem; line-height: 1.3; margin: 1.6rem 0 .5rem; }
+  .lead::first-letter { font-family: var(--display); font-weight: 800; font-size: 3rem; line-height: .8; float: left; padding: .3rem .45rem 0 0; color: var(--x); }
+  .pull { font-family: var(--display); font-weight: 700; font-size: 1.28rem; line-height: 1.35; letter-spacing: -.01em; border-left: 3px solid var(--x); padding: .15rem 0 .15rem 1rem; margin: 1.4rem 0; }
+  .note { font-family: var(--ui); font-size: .92rem; line-height: 1.55; color: var(--ink-2); background: var(--x-wash); border-radius: 6px; padding: .9rem 1.05rem; margin: 1.2rem 0; }
+  .note b { color: var(--ink); }
+
+  /* ---------- figures ---------- */
+  figure.fig { margin: 1.4rem auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: 1.1rem 1.1rem 1rem; display: grid; gap: .8rem; }
+  figure.fig .ft { font-family: var(--display); font-weight: 700; font-size: 1rem; }
   figure.fig svg { display: block; width: 100%; height: auto; max-width: 100%; }
-  figure.fig figcaption { font-family: var(--ui); font-size: .86rem; line-height: 1.55; color: var(--ink-3); }
+  figure.fig figcaption { font-family: var(--ui); font-size: .84rem; line-height: 1.5; color: var(--ink-3); }
   figure.fig figcaption b { color: var(--ink-2); }
-  .scroll { overflow-x: auto; }
-  .scroll > svg { min-width: 520px; }
-  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-  @media (max-width: 640px) { .two { grid-template-columns: 1fr; } }
-  /* svg ink */
   .t { font-family: var(--ui); font-size: 12px; fill: var(--ink-2); }
   .t.s { font-size: 10.5px; fill: var(--ink-3); }
   .t.k { font-weight: 600; fill: var(--ink); }
@@ -113,60 +113,59 @@
   .box { fill: var(--paper); stroke: var(--rule); }
   .floor { fill: var(--grid); }
 
-  /* ---- how we know ---- */
-  .know { margin: 2.2rem 0 .4rem; border-top: 2px solid var(--ink); padding-top: .9rem; display: grid; gap: .9rem; }
+  /* ---------- how we know ---------- */
+  .know { margin: 2rem 0 .4rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: 1.1rem 1.2rem 1.2rem; display: grid; gap: .9rem; }
   .know .eyebrow { color: var(--ink); }
   .know-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
   @media (max-width: 720px) { .know-grid { grid-template-columns: 1fr; } }
   .know-col { font-family: var(--ui); font-size: .88rem; line-height: 1.55; color: var(--ink-2); display: grid; gap: .45rem; align-content: start; }
-  .know-col .lab { font-weight: 600; font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; padding-bottom: .35rem; border-bottom: 1px solid var(--rule); }
-  .know-col.est .lab { color: var(--ink-3); } .know-col.meas .lab { color: var(--push); } .know-col.thy .lab { color: var(--x); }
+  .know-col .lab { display: inline-block; width: max-content; font-family: var(--display); font-weight: 700; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px; line-height: 1.35; }
+  .know-col.est .lab { background: var(--tag-settled-bg); color: var(--tag-settled-fg); }
+  .know-col.meas .lab { background: var(--tag-ours-bg); color: var(--tag-ours-fg); }
+  .know-col.thy .lab { background: var(--tag-idea-bg); color: var(--tag-idea-fg); }
   .know-col ul { margin: 0; padding-left: 1.05rem; display: grid; gap: .35rem; }
 
-  /* ---- numbers strip ---- */
+  /* ---------- numbers strip ---------- */
   .strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .8rem; margin: 1.4rem 0; }
   .stat { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: .8rem .9rem; display: grid; gap: .2rem; }
-  .stat .n { font-family: var(--display); font-weight: 600; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat .n { font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
   .stat .l { font-family: var(--ui); font-size: .8rem; line-height: 1.4; color: var(--ink-3); }
   .stat.x .n { color: var(--x); } .stat.sp .n { color: var(--space); } .stat.lu .n { color: var(--lump); } .stat.pu .n { color: var(--push); }
 
-  /* ---- coda / colophon ---- */
-  .coda { margin-top: 4.6rem; padding-top: 2.4rem; border-top: 1px solid var(--ink); }
-  .coda p { font-family: var(--display); font-weight: 400; font-size: 1.28rem; line-height: 1.45; }
-  .coda p.last { font-weight: 600; }
-  footer { margin-top: 3rem; padding-top: 1.1rem; border-top: 1px solid var(--rule); font-family: var(--ui); font-size: .84rem; line-height: 1.55; color: var(--ink-3); display: grid; gap: .5rem; }
+  /* ---------- coda / footer ---------- */
+  .coda { padding-top: 3.2rem; }
+  .coda .eyebrow { border-top: 1px solid var(--rule); padding-top: 1.6rem; margin-bottom: .8rem; }
+  .coda p { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); }
+  .coda p.last { font-family: var(--display); font-weight: 700; font-size: 1.28rem; color: var(--ink); }
+  footer { margin-top: 3.4rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); font-family: var(--ui); font-size: .85rem; line-height: 1.6; color: var(--ink-3); display: grid; gap: .6rem; }
   code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .9em; }
-
   @media print {
-    body { background: #fff; color: #000; font-size: 11pt; padding-inline: 0; }
-    .part, .coda { break-before: page; border-top: none; margin-top: 0; padding-top: 1rem; }
-    figure.fig { box-shadow: none; break-inside: avoid; }
-    .know { break-inside: avoid; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .part, .coda { break-before: page; }
+    figure.fig, .know { box-shadow: none; break-inside: avoid; }
     a { color: inherit; text-decoration: none; }
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .cover h1 { animation: settle .9s ease-out both; }
-    @keyframes settle { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
   }
 </style>
 
-<header class="sheet cover">
-  <div class="eyebrow">An account of reality, told whole</div>
-  <h1>The Loop <em>and</em> the Floor</h1>
-  <p class="stand">Space is the floor of everything. It was opened out of something curled by a push so small it can be counted, and the energy it let go became every particle and every ray of light. This account begins with that change, worked out and measured, and follows where the numbers lead: to gravity, to what happens at the ends of stars, to why the world beneath you is quantum, and to why you were always going to find yourself standing on the floor.</p>
-  <div class="by"><span>Emily Smith, with Claude (Anthropic)</span><span>22 September 2026</span><span>Illustrated</span></div>
-  <div class="thesis">
-    <p>Space is a floor, and it was opened.</p>
-    <p>It is the one arrangement of the underlying stuff that nothing lies beneath, and it came from an arrangement that sits above it, the way ice comes out of supercooled water: all at once, after a push, giving off heat. That heat became everything.</p>
-    <p>Those two facts were established first, with the numbers worked out before they were measured. Everything else in this account, gravity, the ends of stars, the quantum world and the shape of the whole, follows from them and from physics already known.</p>
+<header class="hero">
+  <div class="sheet">
+    <p class="eyebrow">A hobby physics project &middot; the whole account, told without hedges</p>
+    <h1>Did space <span class="open">snap open</span>?</h1>
+    <p class="standfirst">Space is the floor of everything. It was opened out of something curled by a push so small it can be counted, and the energy it let go became every particle and every ray of light. This account begins with that change, worked out and measured, and follows where the numbers lead: to gravity, to what happens at the ends of stars, to why the world beneath you is quantum, and to why you were always going to find yourself standing on the floor.</p>
+    <p class="byline">Emily Smith, with Claude (Anthropic) &middot; Version 1, 22 September 2026 &middot; Written as the account would read with the theory accepted; the tests and open questions are in the repository</p>
+    <div class="answer">
+      <h2>Space is a floor, and it was opened.</h2>
+      <p>It is the one arrangement of the underlying stuff that nothing lies beneath, and it came from an arrangement that sits above it, the way ice comes out of supercooled water: all at once, after a push, giving off heat. That heat became everything.</p>
+      <p>Those two facts were established first, with the numbers worked out before they were measured. Everything else in this account, gravity, the ends of stars, the quantum world and the shape of the whole, follows from them and from physics already known.</p>
+    </div>
+    <nav class="contents" aria-label="Contents">
+      <a href="#part1"><span>I</span><span>From X to space</span></a>
+      <a href="#part2"><span>II</span><span>Gravity</span></a>
+      <a href="#part3"><span>III</span><span>Black holes</span></a>
+      <a href="#part4"><span>IV</span><span>Why you are here</span></a>
+      <a href="#part5"><span>V</span><span>Why the world is quantum</span></a>
+    </nav>
   </div>
-  <nav class="contents" aria-label="Contents">
-    <a href="#part1"><span>I</span><span>From X to space</span></a>
-    <a href="#part2"><span>II</span><span>Gravity</span></a>
-    <a href="#part3"><span>III</span><span>Black holes</span></a>
-    <a href="#part4"><span>IV</span><span>Why you are here</span></a>
-    <a href="#part5"><span>V</span><span>Why the world is quantum</span></a>
-  </nav>
 </header>
 
 <main>
@@ -366,7 +365,7 @@
   </div>
 
   <div class="know">
-    <div class="eyebrow">How we know: Part I</div>
+    <div class="eyebrow">How we know &middot; Part I</div>
     <div class="know-grid">
       <div class="know-col est"><div class="lab">Established physics</div><ul>
         <li>Changes come in two kinds. The sharp kind (water freezing) has a hill, a wait, and a burst of latent heat; the smooth kind (a magnet warming) has none.</li>
@@ -453,7 +452,7 @@
   <p>Then the universe does the thing it does for most of its life. Matter drifts down the slope. Gas gathers into stars, stars into galaxies, galaxies into clusters. Where stars burn out, their cores collapse, and the densest of them cross the line into black holes, which then grow by swallowing whatever drifts in and by merging with each other. Energy that began spread evenly across the new space ends up gathered into fewer and fewer, denser and denser places. It takes billions of years, and it is the calm middle of the story, and it is where we live.</p>
 
   <div class="know">
-    <div class="eyebrow">How we know: Part II</div>
+    <div class="eyebrow">How we know &middot; Part II</div>
     <div class="know-grid">
       <div class="know-col est"><div class="lab">Established physics</div><ul>
         <li>General relativity: matter curves space, curvature steers matter. Tested from the laboratory to merging black holes.</li>
@@ -599,7 +598,7 @@
   <p>Every proposal for an eternal cycle has had to answer one objection, first raised by Richard Tolman in the 1930s: disorder accumulates. Each turn of a cycle leaves the universe messier than the last, so the cycles should grow and finally stop. This loop answers it in the way the objection itself suggests. Disorder does not accumulate across the loop, because black holes are where the disorder goes. The melted phase, the phase with the most ways, is what collects inside a horizon, and it is spent there: it is the very thing that pays for the substrate to be rebuilt. What comes out the far side of the crush is a curled arrangement with fewer ways to be and more energy stored in it. The loop hands its mess to its black holes and gets back a wound spring. The books close every turn.</p>
 
   <div class="know">
-    <div class="eyebrow">How we know: Part III</div>
+    <div class="eyebrow">How we know &middot; Part III</div>
     <div class="know-grid">
       <div class="know-col est"><div class="lab">Established physics</div><ul>
         <li>Black holes exist, nothing escapes their horizon, and general relativity describes them exactly down to the ring of light around the shadow imaged in 2019.</li>
@@ -720,7 +719,7 @@
   <p>Anything with a beginning owes you an account of the beginning. Whatever you name as its cause, you can ask what put that there, and what put that there, without end. A loop owes nothing outside itself. Every part of it is accounted for by the part before, the whole way round, and there is no outside to point at. It is like a dictionary: every word in it defined by other words in it, and not one of them needing a word from beyond the covers. Of all the shapes a reality could have, the loop is the only one that is complete.</p>
 
   <div class="know">
-    <div class="eyebrow">How we know: Part IV</div>
+    <div class="eyebrow">How we know &middot; Part IV</div>
     <div class="know-grid">
       <div class="know-col est"><div class="lab">Established mathematics and physics</div><ul>
         <li>A finite system run by a fixed rule must revisit a state and then cycle (the pigeonhole principle). Poincaré's recurrence theorem, 1890, is the physical form; with chance in the rule, every reachable state recurs endlessly.</li>
@@ -819,7 +818,7 @@
   <p>This is the last piece of the strange loop. The upper level, space with matter in it, is where interactions happen and namings become facts. The lower level, the network, holds every naming at once. Space reaching down into its substrate is a black hole; the substrate reaching up into space is a measurement. Both are the same hierarchy, tangled, seen from opposite ends.</p>
 
   <div class="know">
-    <div class="eyebrow">How we know: Part V</div>
+    <div class="eyebrow">How we know &middot; Part V</div>
     <div class="know-grid">
       <div class="know-col est"><div class="lab">Established physics</div><ul>
         <li>Identical particles cannot be told apart, and quantum mechanics is built to hold every assignment of them at once. This exchange symmetry underlies the periodic table and laser light.</li>
