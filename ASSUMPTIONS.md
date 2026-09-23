@@ -951,6 +951,25 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   three, distinguished by X, and the count "14 units per ring" in O15 is the cold-box member only. The
   9-unit form appears in the state that passes gate 3, the 4-unit form in the one that failed it.
 
+- **O29 The counting picture cannot violate Bell or GHZ: a renaming of a fixed arrangement is a complete
+  instruction set.** (2026-09-23, an argument, no run; PREREGISTRATION T15 rung 3a, its reading; *ours,
+  unverified*, unreviewed.) Under VISION Update 17 a version is a renaming that changes no relationship
+  and a measurement is an interaction that splits the versions into classes. Rung 3a was pre-registered
+  with the author's prediction (strongly contextual) and the definitions were then worked through for
+  what any arrangement gives. Every renaming that keeps the loops in place either fixes or swaps each
+  loop's side-0 pair and each loop's side-1 pair, so it assigns an outcome to every setting of every loop
+  at once; the support of a context is the set of colour triples those renamings give at that context's
+  setting points; attaching detectors changes which renamings survive, hence the classes, never the
+  colours. So an instruction set exists for every arrangement (**CLASSICAL** for GHZ) and, with
+  equal-weight namings, every probability is a mixture over instruction sets (S ≤ 2 for CHSH). **The
+  naming is a hidden variable in Bell's sense, and Bell's theorem applies.** Two smaller facts found on
+  the way, both exact: two loops whose edges all carry three squares cannot be joined by an edge under
+  the hard-core rule, and a symmetric triangle of loops cannot be linked by edges (parity); both are in
+  the pre-registration. **What survives of Update 17:** rungs 0 to 2, which are about the counting and
+  not about Bell; and interference (rung 4), which was always going to need a dynamical rule. What does
+  not survive is the claim that counting the versions of a fixed arrangement reproduces quantum
+  correlations; the brief's section 5 said in advance that this ends the quantum leg as stated.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

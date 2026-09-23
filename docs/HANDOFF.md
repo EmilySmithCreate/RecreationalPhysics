@@ -25,6 +25,13 @@ Read it before `CLAUDE.md`'s "Known state" section, which is older than this pag
   symmetries surviving the defect placement. The four-point remnant is, by wiring, a closed loop of four; the
   eight-point piece is the 3-cube. Two post-hoc readings under which every prediction holds are **put to her,
   not enacted**.
+- **T15 rung 3a (GHZ) was pre-registered with Emily's prediction (strongly contextual) and then settled by
+  argument before any arrangement was built: CLASSICAL for every arrangement** (PREREGISTRATION T15 rung 3a;
+  ASSUMPTIONS O29; VISION Update 20). A renaming of a fixed arrangement is a complete instruction set, so the
+  naming is a Bell hidden variable and no counting test of this kind can violate Bell or GHZ. Her prediction
+  fails. What survives: rungs 0 to 2 and interference (rung 4, needs a dynamical rule). **Waiting on her:**
+  whether Part V of the public document is restated as identical-particle symmetry, or the hypothesis is
+  reformulated over histories (a different claim). Do not build the GHZ arrangement; it would add nothing.
 - **Rented compute** exists as code and nothing else: `terraform/`, `Dockerfile`, `docker/run.sh`,
   `.github/workflows/{deploy_manual,run_simulation}.yml`, following SideNerdApps conventions (AWS Batch on
   Fargate, spot off by arithmetic). **Nothing applied; account ids are `000000000000` on purpose.** The real

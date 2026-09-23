@@ -301,6 +301,16 @@ prediction 3 fails only between composition names that differ in d while being t
 (per remnant type; type by wiring), under which every prediction holds, are put to the author and not enacted. Rung 1
 is next and needs nothing new.
 
+**Rung 3a pre-registered and settled by argument, 2026-09-23, later the same morning** (PREREGISTRATION T15 rung
+3a; ASSUMPTIONS O29). The author predicted strongly contextual. Working through the pre-registered definitions
+before any arrangement was built: a renaming of a fixed arrangement fixes or swaps each loop's two pairs of points
+at once, so it is a complete instruction set, and attaching detectors changes which renamings survive but not the
+colours they give. **CLASSICAL for every arrangement; S ≤ 2 for rung 3b by the same argument.** The naming is a
+hidden variable in Bell's sense. Rungs 0 to 2 are untouched (they test the counting, not Bell); rung 4 needs a
+dynamical rule and a VISION decision; a hypothesis over histories rather than arrangements would be a different
+claim. Two exact side results in the pre-registration: three-square loops cannot be joined by an edge, and a
+symmetric triangle of loops cannot be linked by edges.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

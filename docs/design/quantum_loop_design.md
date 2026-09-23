@@ -127,6 +127,13 @@ Carlo where enumeration is impossible), or design (needs a construction that may
 
 ### Rung 3a. GHZ: a yes/no test with four-point loops (design, then exact)
 
+> **Settled by argument, 2026-09-23, before any construction** (PREREGISTRATION T15 rung 3a, its reading;
+> ASSUMPTIONS O29). A renaming of a fixed arrangement fixes or swaps each loop's two pairs of points at
+> once, so it is a complete instruction set; attaching detectors changes which renamings survive, not the
+> colours they give. CLASSICAL for every arrangement, and S ≤ 2 for rung 3b by the same argument. The fork
+> below was wrong as written: "which namings survive" changes the classes, never the supports. Section 5's
+> consequence applies. Kept as written so that the mistake can be read.
+
 The reading moved this above CHSH: it needs only **two settings per particle**, which a four-point
 loop supplies (attachment points 90° apart), so it can be run on objects the model already makes, and
 its verdict is a logical contradiction rather than a statistic [Mermin90].
