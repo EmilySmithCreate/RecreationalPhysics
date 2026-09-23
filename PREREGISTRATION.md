@@ -764,3 +764,42 @@ Any measured number: the test is dimensionless and compares supports, not probab
 **What it closes and what it does not.** It closes every test in which the versions are the renamings of one fixed arrangement and a measurement reads them: the naming is a hidden variable, and Bell's theorem applies, exactly as the brief's "honest expectation" said and now for a reason rather than a hunch. It does not touch rungs 0 to 2, which test the counting and not Bell. It does not touch rung 4, interference, which was always going to need a dynamical rule and a VISION decision. And it does not touch a picture in which the versions are versions of *histories* rather than of arrangements ([Gorard20]'s multiway systems, not read), which is a different hypothesis from Update 17's and would need its own statement. *Ours, unverified: a short argument, unreviewed by a physicist.*
 
 **Recorded as a lesson.** The fork in the brief, "if the joint attachments decide which namings survive … the supports can be the quantum ones", was wrong as written: survival changes the classes, not their colours. It should have been checked before the section above was written, and it was checked about an hour after. The two obstructions recorded above stand on their own and are still true.
+
+---
+
+## T15 rung 0b. Is the closed loop of four a resonator inside the sheet? (written 2026-09-23, before the run)
+
+### Why this rung, and why now
+
+Update 17 says a particle is an allowed vibration of a small closed loop. Rung 0 found the loop, a closed loop of four that is one column of the tube left curled, and its vibrations in isolation: Laplacian eigenvalues 0, 2, 2, 4, frequencies √2, √2, 2. Rung 3a showed that counting versions cannot give quantum correlations, and `docs/design/amplitude_rule_brief.md` says the missing ingredient is a rule for combining amplitudes, which the author chose the same day to hold until this rung has run. This rung asks the question any such rule would need answered first: **when the loop sits in a sheet, does it still vibrate as a thing of its own?** A resonator in a sheet is a localised mode of the whole arrangement's Laplacian; a defect that merely scatters the sheet's own modes is not one. Counting and the wave rule share the Laplacian, so this needs no decision.
+
+### What will be run
+
+No simulation. Inputs: every saved resting state of T7 amendment 4 that contains at least one closed loop of four (`results/t7d_lam125_n*_adj/*.npz`; by rung 0's reading, seven of the twelve: N = 64 replica 25; N = 144 replicas 3 and 5; N = 192 replicas 3, 8, 20 and 22). States with a 3-cube are read beside, for the cube, and take no part in the verdict. Controls: the isolated loop of four; a perfect 12 × 12 sheet with an eight-point set made of two disjoint squares; and, in each leftover state, twenty random eight-point sets, seeds in the config.
+
+### Definitions, fixed now
+
+- **The operator** is L = D − A of the whole arrangement. Eigenvalues are grouped within 1e-9 into eigenspaces. The constant mode, λ = 0, is excluded: it belongs to the whole sheet.
+- **Localisation** of an eigenspace on a point set S is the largest eigenvalue of that eigenspace's projector restricted to S: the most weight any unit vector in the eigenspace can carry on S. It is 1 exactly when some mode lives on S alone, and a mode spread evenly over N points carries |S|/N. This is basis-independent, which matters because two identical loops in one sheet share their modes in symmetric and antisymmetric pairs.
+- **A mode is localised on the loops** when its eigenspace has localisation at least 0.5 on the union of the state's loop-of-four points (8 points of 64 to 192, so 0.04 to 0.125 if spread evenly). The union, not one loop, for the reason just given; the per-loop number, and the number on loops plus their collars, are reported beside.
+- **At the isolated frequency** means an eigenvalue within 0.25 of 2 or of 4.
+- **Per state:** ISOLATED when localised modes exist within 0.25 of both 2 and 4; RETUNED when localised modes exist but not at both; DISSOLVED when no localised mode exists.
+
+### Prediction (the author's, 2026-09-23, chosen from three options)
+
+**They survive, localised on the loop, at the isolated frequencies:** every loop-of-four state is ISOLATED. *Recorded beside it, ours:* a curled column inside an opened sheet is a piece of tube, and a tube's own modes are a cylinder's, so some retuning by the collar would not surprise us; we make no prediction of our own.
+
+### Gates
+
+The isolated loop must give localisation 1 at eigenvalues 2 and 4. The perfect sheet with the two-square set must give localisation below 0.5 at every eigenvalue. In every leftover state all twenty random eight-point sets must stay below 0.5 at every eigenvalue. If any gate fails the threshold does not discriminate and nothing else is read.
+
+### Verdicts
+
+- **RESONATOR AT THE ISOLATED FREQUENCIES** — every loop-of-four state is ISOLATED. The prediction holds; "a particle is a vibration of a small closed loop" holds structurally in this model.
+- **RESONATOR, RETUNED** — every state has a localised mode, and not every state is ISOLATED.
+- **NOT A RESONATOR** — every state is DISSOLVED. The loop is a defect, not a resonator, and the particle picture fails here whatever rule combines amplitudes.
+- **INCONCLUSIVE** — any other mix of states, or a gate failing.
+
+### What this cannot show
+
+Which rule combines amplitudes: both share the operator. Anything dynamical: an eigenvector is a standing pattern, not a motion. Anything about real particles. The 3-cube's modes are reported and not judged.

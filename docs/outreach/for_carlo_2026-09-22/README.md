@@ -10,6 +10,7 @@ pictures and paste or attach the table; `email_reply.txt` is the letter as draft
 | `picture3_exact_averages_N18.png` | the exact averages at N = 18 as an image | the table attached |
 | `table_exact_averages_N18.md` | the same table as text, with the assumptions stated | the table attached |
 | `picture4_N196_his_protocol_vs_replica_exchange.png` | N = 196: his protocol (cooling and heating, four chains each) beside replica exchange from a random graph; added 2026-09-23 after N = 196 finished (`scripts/plot_t13_two_protocols.py`) | picture 4 |
-| `email_reply.txt` | the letter, plain text, ready to paste | |
+| `email_reply.txt` | the letter as drafted on 22 September, superseded | |
+| `email_reply_2026-09-23.txt` | **the current letter**, plain text, ready to paste (source: `../reply_draft_2026-09-23.md`); attaches pictures 1, 2, 4 and the table | |
 
 When the N = 484 and 676 runs finish (PREREGISTRATION T13), their curves go in a second folder for the next mail.

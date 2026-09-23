@@ -17,8 +17,11 @@ Read it before `CLAUDE.md`'s "Known state" section, which is older than this pag
   starting each coupling from the previous coupling's graph may accentuate the jump by trapping the wrong
   phase — T13's reading (b), which the N = 196 data already shows. **Checked as an explanation of Gate B's
   Fig. 3 and it does not fit** (ASSUMPTIONS O27; `scripts/compare_gate_b_gap.py`): Fig. 3 is high in both
-  directions and its crossover is at a larger g. The reply draft carries the N = 196 result and the narrowed
-  question, with a figure for him (`docs/figures/t13_n196_two_protocols.png`). Not sent.
+  directions and its crossover is at a larger g. **The current letter is `docs/outreach/reply_draft_2026-09-23.md`**
+  (plain text and attachments in `for_carlo_2026-09-22/`): his postscript confirmed at N = 196 with a figure
+  (`docs/figures/t13_n196_two_protocols.png`), the narrowed Fig. 3 question, and a question about the
+  neighbourhood-swap move, since our tempering at 484 makes no round trips in 128,000 sweeps and the two
+  starts never meet (0.955 against 0.999 at the cold end). Not sent; Emily decides.
 - **Emily decided: matter is the structured leftover, not the melt** (VISION Update 19). T15 rung 0 was
   pre-registered with her predictions and run the same morning: **INCONCLUSIVE by the letter** (ASSUMPTIONS
   O28; PREREGISTRATION T15 rung 0). Melt: one version at every size. Sheet with a defect: versions on the
