@@ -48,6 +48,26 @@ you described it (cold ascent from the lattice, 240 sweeps of warm-up, 10,000 sw
 the same sizes. I will send you the curves as pictures when they finish. If your jump appears at the same
 g in both directions, I will have reproduced it and will be glad to say so.
 
+*(Paragraph added 2026-09-23, after his postscript and after N = 196 finished; the two above stand for
+484 and 676, which are still running.)*
+
+**At N = 196 both have now finished, and your postscript is what we see** (picture 4). Your protocol, each coupling
+starting from the previous coupling's final graph, gives on ascent a lattice that survives past the
+transition and collapses between g ≈ 3.5 and 2.7, in three of four independent chains, with the ascent
+curve up to 0.16 above the descent curve there; the descent curve itself agrees with replica exchange
+to 0.004 at every coupling. Replica exchange from a random start, with 5 to 15 round trips between
+g = 9 and 2.2 in every replica, gives one smooth curve and no jump anywhere. So at this size the jump
+is the metastable lattice branch, exactly as you suggest, and it appears in a faithful copy of your
+procedure. Whether the same holds at 484 and 676 I will know within days.
+
+One thing the postscript does not seem to explain, which I mention only in case it is useful to you.
+Fig. 3 of the review sits above Fig. 8a of the 2019 paper in *both* directions, cooling from random as
+well as heating from the lattice, by up to 0.4 across the whole transition, and its rise is at g ≈ 6
+where Fig. 8a's is at g ≈ 5. Trapping on descent would keep the random phase and put the cooling curve
+*below* equilibrium, and our copy of your protocol shows no departure on descent at all. Could Fig. 3
+have been made at a different size, or with the coupling normalised differently? Our runs match Fig. 8a
+to 0.005 and Fig. 3 at both ends, so the difference is confined to that middle stretch.
+
 **Something that may be useful to you**, since you mentioned a new code. At N = 18 we listed every valid
 graph exhaustively (about 1.8 × 10¹² labelled graphs in 26 classes), so the averages there are exact
 sums, not simulations. The table attached gives ⟨S⟩/N at seven couplings for the full Hamiltonian, with
@@ -98,6 +118,18 @@ letter; nothing below is needed for the letter to work.
 - **Sizes.** He said use N = 4p² with p prime. We are: 196, 484, 676. "Replica exchange" is parallel
   tempering, our tool for getting the cold side to equilibrate. "A copy of your protocol" is exactly
   what he described. Both are running now (T13). The promise to send pictures is one you can keep.
+- **The N = 196 paragraph** (added 2026-09-23). His postscript said his own procedure might exaggerate the
+  jump by trapping the lattice. Our copy of his procedure at 196 points shows exactly that: heating from
+  the lattice, the lattice hangs on past the transition and then collapses, in three chains of four;
+  cooling, and replica exchange, show no jump. Telling him this is the most useful thing we have, and it
+  is his own suggestion confirmed. "Round trips" are graphs that travelled from the hottest coupling to
+  the coldest and back, the check that replica exchange actually mixed.
+- **The Fig. 3 paragraph** (added 2026-09-23). We checked whether his postscript explains why his two
+  published curves at 160 points disagree with each other (ASSUMPTIONS O27). It does not: Fig. 3 is high
+  on the cooling side too, where trapping would make it low, and its whole rise sits at a larger coupling.
+  The paragraph asks the one question that remains, size or coupling, and says where we agree with him
+  (Fig. 8a to 0.005, Fig. 3 at both ends) so that it reads as help rather than complaint. Cut it if it
+  feels like too much for one letter; it can wait for his answer to the first questions.
 - **The benchmark table.** At 18 points we listed every possible arrangement, so the averages are exact
   arithmetic, not simulation. A code that samples the same thing must land on those numbers. He said he
   has a new code written with Claude; this is a way to test it that costs him nothing. The assumptions

@@ -878,6 +878,69 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   are of that form and 64 is not. Not in this file's scope: S5, which is not met (he has not seen plots or
   code).
 
+- **O27 Gate B check: [T25] Fig. 3 is not the author's continuation procedure trapping the lattice branch.
+  The shape is wrong on three counts.** (2026-09-23, EXPLORATORY; a comparison of committed data, no new
+  run; `scripts/compare_gate_b_gap.py`, prints only.) On 23 September the author added that starting each
+  coupling from the previous coupling's final graph may accentuate the jump by trapping configurations in
+  the wrong phase (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`, second note).
+  If Fig. 3 was made that way, its excess over [KTB19] Fig. 8a at N = 160 should have the shape of the
+  excess that our copy of his protocol (T13 protocol P) shows over equilibrium (T13 protocol E) at the
+  neighbouring size N = 196. Interpolated in ln g:
+
+  | gap | peak | at g | above 0.10 for g in |
+  |---|---|---|---|
+  | Fig. 3 heat − Fig. 8a (N = 160, published against published) | +0.41 | 5.6 | 2.2 to 6.2 |
+  | Fig. 3 cool − Fig. 8a (N = 160) | +0.38 | 5.1 | 2.3 to 7.6 |
+  | Fig. 3 heat − our N = 160 tempering | +0.40 | 5.6 | 2.8 to 6.2 |
+  | P heat − E (N = 196, his protocol against equilibrium, both ours) | +0.16 | 3.2 | 2.7 to 3.5 |
+  | P cool − E (N = 196) | +0.004 | — | nowhere |
+
+  **(1) Direction.** Trapping keeps a graph in the phase it came from. On descent from a melt that is the
+  random phase, which would put the cooling curve *below* equilibrium. Fig. 3's cooling curve is *above*
+  Fig. 8a by up to 0.38, and our own descent under his protocol sits on equilibrium to 0.004 at every
+  coupling. **(2) Extent.** Our ascent under his protocol leaves equilibrium only below g ≈ 3.5, where the
+  lattice can survive, and by 0.16 at most; Fig. 3 sits above Fig. 8a across the whole transition, from
+  g ≈ 2 to 6.2 on heating and to 7.6 on cooling. **(3) Position.** Fig. 3 crosses φ = 0.6 at g = 6.2
+  (heating) and about 7.0 (cooling, coarsely: only two digitised points lie between g = 6.0 and 9.9);
+  Fig. 8a and our N = 160 tempering both cross at 5.2, and every curve of ours at N = 196, his protocol
+  and equilibrium alike, at 4.8. Fig. 3's transition is somewhere else, in both directions; it is not a
+  trapped version of Fig. 8a's.
+
+  *Ours, unverified.* What moves a whole curve by a factor of 1.2 to 1.35 in g, in both directions, is a
+  different normalisation of the coupling or a different size, not a protocol: the crossover drifts *down*
+  with N (5.2 at 160, 4.8 at 196 here; O10, TASKS T9), so a curve crossing at 6.2 to 7.0 would belong to a
+  size *below* 160. Gate B stays open, and the question for the author narrows to the coupling axis or the
+  size of Fig. 3. **What the check does support:** his continuation does at N = 196 exactly what his
+  postscript says, an ascent-only tail below g ≈ 3.5 in three of four chains, which is T13's reading (b)
+  and the second reading of O26, reproduced in our copy of his protocol.
+
+- **O28 T15 rung 0: INCONCLUSIVE by the letter. Versions exist in the parts; in the whole, only while the
+  world is symmetric.** (2026-09-23, exact, pre-registered the same morning with the author's predictions;
+  `configs/t15_rung0.json`, `scripts/analyse_t15_rung0.py`, `results/t15_rung0.csv`; PREREGISTRATION T15
+  rung 0, no amendment enacted; the table and both post-hoc readings are there.) Renamings that change no
+  relationship, kept within sides as in Q15, counted for the twelve saved resting states of T7 amendment 4,
+  a perfect sheet, the tube and a melt at N = 64 to 192; every whole-graph count agreed exactly between
+  two isomorphism engines. **A melt has exactly one at every size** (prediction 2 holds). **A sheet with a
+  defect in it has more than one on the isolated count in 11 of 11 states** (4 to 36,864) **and on the
+  whole-graph count in 10 of 11**; the eleventh, three different defects at generic positions, has exactly
+  one. The whole-graph renamings are the sheet's own symmetries surviving where the defects sit — they move
+  every sheet point, and none but the identity fixes the sheet — so that count is a property of the
+  arrangement of the world, not of the object: 2 or 4 for one symmetric defect, 16 or 224 for two identical
+  loops placed symmetrically, 1 for three different things. **The leftover types, read from their wiring by
+  direct isomorphism:** the four-point remnant is a closed loop of four (Laplacian 0, 2, 2, 4; 4 renamings
+  within sides), the eight-point piece of O13's rare states is the 3-cube (0, 2, 2, 2, 4, 4, 4, 6; 24), and
+  the rest are an open line of three, single edges and single points; the five spectra are pairwise
+  distinct, and prediction 3 fails by the letter only between composition names that differ in d while
+  being the same graph. A perfect sheet has 4N renamings when square and 2N otherwise; the tube 2N.
+
+  **For VISION Update 17, plainly** (*ours, unverified*). "Superposition is the set of undetectably
+  different versions of the world" survives only for symmetric worlds; the first world with three
+  different things in it has one version, as the melt does. What survives is the object-level statement:
+  an isolated small loop has versions, and its spectrum labels its structure. The author decided the same
+  morning, before this ran, that matter is the structured leftover and not the melt (Update 19); this
+  result is consistent with that decision and does not test it. **Not claimed:** that any count here is a
+  superposition (rung 1); what the 224 is.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

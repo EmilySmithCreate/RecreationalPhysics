@@ -1,9 +1,38 @@
-# Start here: handoff for the next assistant (state as of 2026-09-22, evening)
+# Start here: handoff for the next assistant (state as of 2026-09-23, morning)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she will read it too.
 Read it before `CLAUDE.md`'s "Known state" section, which is older than this page.
 
-## 0. Newest first: the author replied (2026-09-22, night)
+## 0. Newest first: 23 September, morning
+
+- **T13 at N = 196 is read (PREREGISTRATION T13, "Reading at N = 196"): NO VERDICT, one size of three.**
+  Protocol P (his protocol copied): hysteresis 0.159, ascent jump in 3 of 4 replicas. Protocol E from the melt:
+  gate passed, smooth, no jump. E from the torus: 0 round trips, not interpreted. Three amendments to T13 were
+  decided by Emily that morning, **all post-hoc for N = 196 and labelled so**: (1) a jump is read across a
+  window of 12 % in g, not only between neighbours — the control being that no smooth curve becomes a jump;
+  (2) equilibrium agreement is read among gate-passing starts; (3) per replica, the majority decides, the mean
+  reported beside. `python scripts/analyse_t13.py 196 484 676`; known-answer tests in `tests/test_t13.py`.
+- **The author wrote again** (second note; paraphrased in the correspondence file, private): his procedure of
+  starting each coupling from the previous coupling's graph may accentuate the jump by trapping the wrong
+  phase — T13's reading (b), which the N = 196 data already shows. **Checked as an explanation of Gate B's
+  Fig. 3 and it does not fit** (ASSUMPTIONS O27; `scripts/compare_gate_b_gap.py`): Fig. 3 is high in both
+  directions and its crossover is at a larger g. The reply draft carries the N = 196 result and the narrowed
+  question, with a figure for him (`docs/figures/t13_n196_two_protocols.png`). Not sent.
+- **Emily decided: matter is the structured leftover, not the melt** (VISION Update 19). T15 rung 0 was
+  pre-registered with her predictions and run the same morning: **INCONCLUSIVE by the letter** (ASSUMPTIONS
+  O28; PREREGISTRATION T15 rung 0). Melt: one version at every size. Sheet with a defect: versions on the
+  isolated count always, on the whole-world count in 10 of 11 — the whole's versions are the sheet's
+  symmetries surviving the defect placement. The four-point remnant is, by wiring, a closed loop of four; the
+  eight-point piece is the 3-cube. Two post-hoc readings under which every prediction holds are **put to her,
+  not enacted**.
+- **Rented compute** exists as code and nothing else: `terraform/`, `Dockerfile`, `docker/run.sh`,
+  `.github/workflows/{deploy_manual,run_simulation}.yml`, following SideNerdApps conventions (AWS Batch on
+  Fargate, spot off by arithmetic). **Nothing applied; account ids are `000000000000` on purpose.** The real
+  saving is `replica_ids` for the tempering and sweep runners, which needs seeding tests first
+  (`terraform/README.md`).
+- Four T13 jobs are still running (section 5).
+
+## 0b. The author replied (2026-09-22, night)
 
 Carlo Trugenberger answered Emily's note the same day. **Private email; paraphrased in
 `docs/outreach/correspondence_2026-09-22_trugenberger.md`; never quote it publicly.** What it moves:
@@ -93,22 +122,18 @@ Nothing is waiting on her. The text below is kept as the record of what was put 
 
 ## 5. What is running or queued
 
-- **T13 (PREREGISTRATION.md, written 2026-09-22 night, before launch): nine jobs, launched the same night.**
-  Protocol P (his protocol copied; `scripts/run_cqg_sweep.py`): `t13_seq_n196`, `t13_seq_n484`, `t13_seq_n676`.
-  Protocol E (tempering with histograms; `scripts/run_t6_tempering.py`): `t13_temper_n{196,484,676}_{melt,torus}`.
-  Eight started at once; `t13_temper_n676_torus` is chained to start when `t13_seq_n196` finishes.
-  Progress: line counts of `results/t13_*.partial`. Expected wall time: 2 h (196) to about 7 h (484, 676 tempering).
-  When a `results/t13_*.csv` exists (no `.partial`), read it against PREREGISTRATION T13's definitions;
-  `scripts/analyse_t6_phi.py <name>` gives the two-hump reading for the E runs. Do not interpret an E size whose
-  `round_trips` is below its gate (5 at 196, 3 at 484 and 676); report it as not converged.
-
-- `t6c_lam{1,125,15}_n{64,100}` (six jobs, slow): T6 λ ≥ 1 reruns with a trimmed 14-rung ladder. When
-  `results/t6c_*.csv` exist (no `.partial`), run `python scripts/analyse_t6_phi.py t6c_lam1_n64` etc. If gate 4
-  (round trips) is met, issue the λ ≥ 1 verdicts under criterion 3 *as enacted* (amendment 4). Expected: not first
-  order (one hump); say so plainly and record it as O17.
+- **T13: four of nine jobs still running** (launched 2026-09-22 at 21:08 by the previous session;
+  `t13_temper_n484_{melt,torus}` and `t13_temper_n676_{melt,torus}`, `scripts/run_t6_tempering.py`). The machine
+  throttled overnight (one N = 196 replica took 6 h instead of 50 min); Emily has turned her sleep timer off.
+  Progress: `results/t13_*.partial` line counts and the `_hist/` dirs, which stay untracked until the run finishes.
+  Done and committed: `t13_seq_n{196,484,676}`, `t13_temper_n196_{melt,torus}`. When a CSV lands, commit it with
+  its meta and `_hist/`, then `python scripts/analyse_t13.py 196 484 676`. **Known already:** replica 0 of both
+  N = 484 runs returned `round_trips` = 0 against a gate of 3. If E fails its gate at both larger sizes, T13 cannot
+  reach a verdict and the sampler is the bottleneck — the neighbourhood move of [T25] Fig. 8 is the candidate,
+  and Emily chose to wait for the runs before deciding that.
 - Nothing else. The laptop has 8 physical cores; do not run more than ~8 jobs.
 
-*Update, evening:* nothing running. The `t7d_*` replays finished and are read.
+*22 September, evening:* the `t7d_*` replays and the `t6c_*` reruns finished and are read (O13, O17).
 
 *Update, late evening (22 Sept), after a run of questions from Emily about gravity, dark energy and black
 holes.* Five new pieces of work, all committed, all EXPLORATORY except the two that are exact:
@@ -136,9 +161,16 @@ holes.* Five new pieces of work, all committed, all EXPLORATORY except the two t
   symmetry, which in standard language is symmetry restoration at high density. Smolin's cosmological
   natural selection is the closest published relative of her loop and **neither of us has read it**.
 
-## 6. Natural next lines (none started; pre-register before running)
+## 6. Natural next lines (pre-register before running)
 
-0. **New, at Emily's request:** the known-physics ladder (`docs/design/known_physics_plan.md`, TASKS T13) and
+**Waiting on Emily (23 September):** (a) the two post-hoc readings of T15 rung 0 — per remnant type, and type by
+wiring — accept either, both or neither; (b) whether to send the reply to the author (`docs/outreach/reply_draft_2026-09-22.md`)
+with the new N = 196 paragraph and picture; (c) after 484 and 676 land, whether to build the neighbourhood move if
+protocol E fails its gate there. **Ready with nothing new needed:** T15 rung 1 (exact at N = 16, 18 in the unlabelled
+ensemble; `results/ergodicity_small.csv` already holds every class's symmetry count); `replica_ids` for the tempering
+and sweep runners, with a seeding test that replica k alone reproduces replica k inside a full run, before any cloud run.
+
+0. **At Emily's request:** the known-physics ladder (`docs/design/known_physics_plan.md`, TASKS T13) and
    the leftover-per-seed test (TASKS T14). Start with the reading and rung 1's reproduction gate.
 
 1. ~~T7 replays~~ done (amendments 3 and 4).
@@ -209,8 +241,11 @@ JavaScript and every picture inline, to be copied into the SideNerdMarketing rep
 
 ## 10. Where things are
 
-`VISION.md` (claims, Updates 1–14) · `TASKS.md` (task list; note the numbering map at the top: PREREGISTRATION's
-T7/T8/T9/T10/T11 ≠ TASKS' T7/T8/T9) · `PREREGISTRATION.md` (T6–T11 with amendments) · `ASSUMPTIONS.md` (O1–O16 and
-Q-items) · `docs/parked/` (the menu study; the 2026-09-22 extension) · `docs/design/model_x_brief.md` ·
-`scripts/analyse_*.py` (one verdict script per test, each a pure function of parsed rows with known-answer tests in
-`tests/test_*_analysis.py`) · `src/graphity/{cqg,sealed,dimension,wang_landau,tempering,connectivity}.py`.
+`VISION.md` (claims, Updates 1–19) · `TASKS.md` (task list; note the numbering map at the top: PREREGISTRATION's
+T7/T8/T9/T10/T11 ≠ TASKS' T7/T8/T9) · `PREREGISTRATION.md` (T6–T13 with amendments, and T15 rung 0) · `ASSUMPTIONS.md`
+(O1–O28 and Q-items) · `docs/parked/` (the menu study; the 2026-09-22 extension) · `docs/design/model_x_brief.md`,
+`known_physics_plan.md`, `quantum_loop_design.md` · `docs/outreach/` (the note, the author's replies paraphrased, the
+reply draft and its picture folder) · `scripts/analyse_*.py` (one verdict script per test, each a pure function of
+parsed rows with known-answer tests in `tests/test_*.py`; `analyse_t13.py`, `analyse_t15_rung0.py` newest) ·
+`scripts/compare_gate_b_gap.py` (prints only) · `terraform/`, `Dockerfile`, `docker/`, `.github/workflows/` (rented
+compute, not applied) · `src/graphity/{cqg,sealed,dimension,wang_landau,tempering,connectivity,small_graphs}.py`.

@@ -71,6 +71,15 @@ comparison with his model. **Next, pre-registered before it runs:** T6 at N = 4p
 directions, tempering; a jump at the same g both ways reproduces his figure and reopens the λ = 1 verdict;
 a jump on ascent only is the lattice branch surviving past the transition.
 
+**Check, 2026-09-23** (`scripts/compare_gate_b_gap.py`; ASSUMPTIONS O27; no new run). The author's postscript of
+23 September, that starting each coupling from the previous coupling's graph may accentuate the jump by trapping
+the wrong phase, was tested as an explanation of Fig. 3 against our own copy of his protocol at N = 196 (T13
+protocol P against protocol E). **It does not fit.** Fig. 3 sits above Fig. 8a in *both* directions, across the
+whole transition, and crosses φ = 0.6 at g ≈ 6.2 to 7.0 where Fig. 8a and our N = 160 runs cross at 5.2; our copy
+of his protocol departs from equilibrium on ascent only, below g ≈ 3.5, by 0.16 at most, and on descent not at all.
+Trapping on descent would hold the random phase and put the cooling curve *below* equilibrium, the opposite of
+Fig. 3. Gate B stays open; the question for him narrows to Fig. 3's coupling axis or size (*ours, unverified*: the
+crossover drifts down with N, so a curve at 6.2 to 7.0 would belong to a size below 160).
 
 Published: N = 160, φ against log g, cooled from random and heated from the torus, no hysteresis, random-phase floor 0.126.
 
@@ -242,7 +251,8 @@ cheap checks before any reading: (i) the renaming count of the saved T10 leftove
 and the twist), by the method of Q15; (ii) their Laplacian spectra, to see whether the two leftover types
 have distinct frequencies; (iii) whether an ordered region's renaming count drops to 1 when joined to a
 melted one. The bar that matters, Bell-type correlations, needs a notion of a measurement in the model and
-is not designed. None of these is run.
+is not designed. **(i) and (ii) were run on 2026-09-23 as T15 rung 0** (PREREGISTRATION T15 rung 0;
+ASSUMPTIONS O28): INCONCLUSIVE by the letter, with the two post-hoc readings put to the author. (iii) is not run.
 
 **Rung 3, first half, done 2026-09-22 and it is exact (O22).** Two defects in a flat sheet cost exactly
 twice one at every separation, and 16 less than twice only where they touch. The energy is a sum of
@@ -279,6 +289,17 @@ Accept, rung by rung: 0, a remnant in a sheet has more than one renaming and a m
 and time-fractions agree within sampling error; 2, swap-related outcomes are equiprobable; 3a, the 111
 context's support reported, whichever it is; 3b, compatibility checked, the global-section question
 answered, and S reported whichever side of 2 it falls.
+
+**Rung 0 run, 2026-09-23** (pre-registered the same morning with the author's predictions; `configs/t15_rung0.json`,
+`scripts/analyse_t15_rung0.py`, `results/t15_rung0.csv`, tests in `tests/test_t15_rung0.py`; ASSUMPTIONS O28).
+**INCONCLUSIVE by the letter.** A melt has exactly one renaming at every size. A sheet with a defect has more than
+one on the isolated count in 11 of 11 states and on the whole-graph count in 10 of 11; the eleventh, three different
+defects at generic positions, has exactly one — the whole-graph renamings are the sheet's symmetries surviving where
+the defects sit, not anything the object carries. Read from their wiring, the leftovers are a closed loop of four
+(the four-point remnant), the 3-cube, an open line of three, single edges and points, with pairwise distinct spectra;
+prediction 3 fails only between composition names that differ in d while being the same graph. Two post-hoc readings
+(per remnant type; type by wiring), under which every prediction holds, are put to the author and not enacted. Rung 1
+is next and needs nothing new.
 
 ## Later
 

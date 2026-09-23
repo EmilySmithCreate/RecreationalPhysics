@@ -673,3 +673,37 @@ None beyond arithmetic. Every count is exact and every input is committed. The o
 ### What this cannot show
 
 Anything about quantum observations: no experimental data enters this test and none is compared to. Whether these versions behave like superposition (rung 1 asks whether the time-fractions match the counts; rung 2 asks about measurement). Anything about Bell correlations, which need a notion of measurement in the model that does not exist. And, as everywhere in this project, anything about the real universe.
+
+### Reading, 2026-09-23, the same morning (`configs/t15_rung0.json`, `scripts/analyse_t15_rung0.py`, `results/t15_rung0.csv`; the analyser's known-answer tests in `tests/test_t15_rung0.py`)
+
+**PRE-REGISTERED VERDICT: INCONCLUSIVE.** Prediction 2 holds. Predictions 1 and 3 fail by the letter, each on a point stated below that is the author's to rule on. Nothing in the definitions was changed after the numbers were seen; the two readings that would change the verdict are proposed here and not enacted.
+
+**Gate.** `log_automorphisms` returned 320 for the 16 × 10 sheet and 1 for Q15's melt (seed 2024); the helper used on defect subgraphs, which the named tool cannot take, returned 320 on the same sheet. Every whole-graph count below was also re-derived with a second isomorphism engine (networkx VF2++, a separate implementation) and agreed exactly.
+
+| object | N | whole graph | defect only | pieces off the sheet, read from the wiring |
+|---|---|---|---|---|
+| N64 rep 25 | 64 | 2 | 32 | two closed loops of four |
+| N96 rep 3 | 96 | 8 | 1152 | two 3-cubes |
+| N96 rep 10 | 96 | 2 | 576 | a 3-cube; four single edges (two at d = 1, two at d = 3) |
+| N96 rep 20 | 96 | **1** | 48 | four single edges (two at d = 1, two at d = 3); a point at d = 1; a point at d = 3 |
+| N96 rep 23 | 96 | 4 | — | none: flat everywhere (S = N, X = 4); takes no part |
+| N144 rep 3 | 144 | 16 | 32 | two closed loops of four |
+| N144 rep 5 | 144 | 224 | 32 | two closed loops of four |
+| N192 rep 3 | 192 | 2 | 96 | a closed loop of four; four single edges |
+| N192 rep 5 | 192 | 2 | 576 | a 3-cube; four single edges |
+| N192 rep 8 | 192 | 4 | 36864 | two 3-cubes; a closed loop of four; two open lines of three |
+| N192 rep 20 | 192 | 16 | 32 | two closed loops of four |
+| N192 rep 22 | 192 | 2 | 96 | a closed loop of four; four single edges |
+| perfect sheet | 64 / 96 / 144 / 192 | 256 / 192 / 576 / 384 | 1 | none (4N for a square torus, 2N otherwise) |
+| tube, the start of every decay | 64 / 96 / 144 / 192 | 128 / 192 / 288 / 384 | same | every point is at d = 1 (2N) |
+| melt | 64 / 96 / 144 / 192 | 1 / 1 / 1 / 1 | 1 | |
+
+"Closed loop of four" is the piece `analyse_t7_states.py` names the four-point remnant; "3-cube" is its "8 at d = 1"; each identification was made by direct isomorphism (networkx) against the named graph, not from a count or a spectrum. The twist of O15 (two at d = 1, two at d = 3) never appears as one piece: its two pairs are not adjacent, so the induced subgraph shows it as two single edges.
+
+**Prediction 1 — FAILS by the letter.** Whole graph > 1 in 10 of 11 states with a defect; defect only > 1 in 11 of 11. The exception is N = 96 replica 20: two twists and a separate two-point fragment, three different defects at generic positions, and no renaming of the whole survives. **What the whole-graph renamings are** (read, not assumed): in every state they move the sheet points as well as the defect, and no renaming other than the identity fixes every sheet point. They are the sheet's own symmetries that happen to survive where the defects sit. A single symmetric defect keeps a reflection or two (2, 4); two identical loops at symmetric positions keep more (16; and 224 at N = 144, a group of order 2⁵ · 7 acting on every point, confirmed by both engines and not read further); three different defects keep none. So the whole-graph count measures the symmetry of the arrangement of the world, not anything the object carries. *Post-hoc, the author's call:* read prediction 1 per remnant type rather than per state, under which every state containing a closed loop of four (7 of 7) has more than one renaming on both counts; or leave the letter, which says that a world with three different things in it has exactly one version, as the melt does.
+
+**Prediction 2 — HOLDS.** Exactly one renaming at N = 64, 96, 144 and 192, on both counts.
+
+**Prediction 3 — FAILS by the letter, and each failure is between names, not between spectra.** The three clashes are an edge at d = 1 against an edge at d = 3 (both 0, 2), a point at d = 1 against a point at d = 3 (both 0), and an open line of three at d = 1 against one at d = 3 (both 0, 1, 3): the composition name carries d, and the induced subgraph has no d in it. By wiring the pieces are of five kinds, and their spectra are pairwise distinct: the closed loop of four (0, 2, 2, 4; frequencies √2, √2, 2, exactly as VISION Update 17 computed for such a loop before any leftover was read; 4 renamings within sides, 8 in all), the 3-cube (0, 2, 2, 2, 4, 4, 4, 6; 24 within sides), the open line of three (0, 1, 3), the single edge (0, 2) and the single point (0). *Post-hoc, the author's call:* type by wiring, under which prediction 3 holds; or by the composition name as the definition says, under which it fails.
+
+**Not claimed.** That any of this is superposition; rung 1 asks whether the counts are what the loop's time-fractions equal. What the 224 is. The defect-only count treats isomorphic fragments as interchangeable, so 576 at N = 96 replica 10 includes the 4! orderings of four single edges that the whole graph tells apart by d; it is the pre-registered number, kept with the same-side rule, and the any-side count is beside it in the file.

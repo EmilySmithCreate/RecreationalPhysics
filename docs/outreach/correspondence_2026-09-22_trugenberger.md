@@ -117,6 +117,17 @@ and E at N = 196. **The check is cheap and we have all four curves:** compare th
 N = 196 with the Fig.3-minus-Fig.8a gap at N = 160, in position and in size. If they match, the
 two-year-old disagreement between his own figures has an explanation, and it is his.
 
+**Checked the same day, and it does not fit** (`scripts/compare_gate_b_gap.py`; ASSUMPTIONS O27).
+Three mismatches. *Direction:* Fig. 3 is above Fig. 8a on the *cooling* leg too (by 0.38), where
+trapping would hold the random phase and put the curve *below*; our own descent under his protocol
+sits on equilibrium to 0.004. *Extent:* our ascent under his protocol departs from equilibrium only
+below g ≈ 3.5 and by 0.16 at most; Fig. 3 is above Fig. 8a from g ≈ 2 to 6.2 (heating) and 7.6
+(cooling). *Position:* Fig. 3 crosses φ = 0.6 at g ≈ 6.2 to 7.0; Fig. 8a and our N = 160 runs at
+5.2; all our N = 196 curves at 4.8. Fig. 3's transition is somewhere else in both directions, not a
+trapped copy of Fig. 8a's. What *is* confirmed is the postscript itself: his continuation gives an
+ascent-only tail at N = 196, exactly as he says. The question for him narrows to Fig. 3's coupling
+axis or size.
+
 ### What it does not change
 
 No definition, gate, prediction or verdict in T13. The amendments of 23 September were decided by
@@ -128,6 +139,8 @@ sampler is currently least able to deliver.
 
 ### Actions
 
-1. Run the Gate B check in point 4. It needs no new runs.
-2. Tell him what the two protocols gave at N = 196, since it speaks directly to his postscript.
+1. ~~Run the Gate B check in point 4.~~ Done 2026-09-23; it does not fit (above, and ASSUMPTIONS O27).
+2. Tell him what the two protocols gave at N = 196, since it speaks directly to his postscript, and
+   ask the narrowed Gate B question (coupling axis or size of Fig. 3). Both are now in
+   `reply_draft_2026-09-22.md`, in the paragraph added 2026-09-23.
 3. The sampling problem at 484 and 676 is now the bottleneck on the question he cares about.
