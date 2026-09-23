@@ -74,3 +74,60 @@ own record (`ASSUMPTIONS.md` Q3 and O26, `VISION.md` Update 18, Gate B, T6).
    jump appears at the same g in both directions, it is a discontinuity and T6's λ = 1 verdict is revisited
    at the new sizes. If it appears on ascent only, it is metastability of the lattice branch.
 3. Ask him for the "hybrid transition" reference for network models, and read it.
+
+---
+
+## Second note from him, received 2026-09-23 (paraphrase; his words are private)
+
+He added a postscript of his own accord, after the exchange above. Paraphrased:
+
+- In his last codes he used **the final graph at one coupling as the starting point for the next**.
+- That procedure **may have accentuated the apparent jump** in the middle of the transition.
+- It **tends to accentuate trapped configurations in the wrong phase**, though it is faster and is
+  what allows the larger networks.
+- The real behaviour around the transition is **difficult to obtain for large graphs**.
+- A diverging correlation length and susceptibility, finite-size, indicate the transition is
+  **either continuous or mixed**, and the two are hard to disentangle.
+
+### What it bears on
+
+**1. He has named reading (b) of T13 himself.** T13 was written on 22 September to separate two
+readings of his jump: (a) an equilibrium discontinuity above our sizes, or (b) the lattice branch
+surviving past the transition on a protocol that carries state from one coupling to the next. His
+postscript describes (b), as a caution about his own method, without having seen our runs.
+
+**2. Our N = 196 data already shows the shape of (b), and it was read before this note arrived.**
+Protocol P, a faithful copy of his method, gives hysteresis of 0.159 and an ascent jump in three of
+four replicas. Protocol E at the same size, parallel tempering from a melt, passes its round-trip
+gate and is smooth with no jump anywhere. Two protocols, one size, one kernel, opposite answers —
+which is the disentangling he says is hard, done at a size where it is affordable.
+
+**3. His own diagnostic points continuous.** A diverging correlation length is the signature of a
+*continuous* transition; at a first-order transition it stays finite while the autocorrelation time
+diverges ([RdF15], recorded in `TASKS.md` T6). So the evidence he cites for "continuous or mixed"
+is evidence against first order, and he says so himself.
+
+**4. It is a candidate explanation for Gate B** (*ours, unverified, and it should be checked before
+it is believed*). Gate B has never passed because [T25] Fig. 3 and [KTB19] Fig. 8a disagree with
+each other at the same N = 160 — 0.99 against 0.62 at g = 5 — and our equilibrium runs match Fig. 8a
+to rms 0.005 while differing from Fig. 3 by up to 0.41, only in the middle of the transition. If
+Fig. 3 was produced by the continuation procedure he has just described, then its high middle is
+trapped configurations, which is the same shape and the same region as the gap between our own P
+and E at N = 196. **The check is cheap and we have all four curves:** compare the P-minus-E gap at
+N = 196 with the Fig.3-minus-Fig.8a gap at N = 160, in position and in size. If they match, the
+two-year-old disagreement between his own figures has an explanation, and it is his.
+
+### What it does not change
+
+No definition, gate, prediction or verdict in T13. The amendments of 23 September were decided by
+Emily earlier the same day, **before this note was pasted into the session**, and the reading of
+N = 196 under the original wording is on the record above them. Nothing here is a reason to relax
+a gate: T13 still needs two or more sizes, and protocol E at N = 484 has so far returned 0 round
+trips on its first replica, which is the measurement his note makes most valuable and the one our
+sampler is currently least able to deliver.
+
+### Actions
+
+1. Run the Gate B check in point 4. It needs no new runs.
+2. Tell him what the two protocols gave at N = 196, since it speaks directly to his postscript.
+3. The sampling problem at 484 and 676 is now the bottleneck on the question he cares about.

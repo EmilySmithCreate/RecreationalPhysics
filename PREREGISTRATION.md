@@ -599,3 +599,77 @@ The opposite repair — counting a stalled start as evidence *for* metastability
 **Enacted wording (the author's decision, 23 September 2026).** Equilibrium agreement (E) is read within the starts that pass their gate: the replicas of a gate-passing start agree within 0.03 in φ in the crossover region (0.3 < φ < 0.9), and where two or more starts pass their gates at a size, those starts agree within 0.03 at every rung. A start that fails its gate is reported as not converged and takes no part in the verdict; its difference from a gate-passing start is reported at every rung as a diagnostic, prominently and with its round trips beside it, and is read as neither agreement nor disagreement. A size at which no start passes its gate is reported as not converged and its E result is not interpreted, as before. Nothing else changes, and in particular the verdicts still require two or more sizes.
 
 **What this does not do.** It does not make the lattice start's failure evidence for anything, and it does not lower the round-trip gate. The proper resolution is a sampler able to mix from the lattice — the neighbourhood move of [T25] Fig. 8, noted in `TASKS.md` T4 as not built — which stays the follow-up and needs its own pre-registration. Until then, a size whose lattice start stalls carries E on its melt start alone, and the stall is reported as an open question rather than an answer.
+
+#### Amendment 3, 23 September 2026 — ENACTED at the author's decision — each replica is a curve, and a majority of them decides
+
+**Status: proposed after the N = 196 reading and adopted by the author on 23 September 2026, both before N = 484 and N = 676 were read. Those two sizes were still running when this was written, so for them this amendment is not post-hoc; for N = 196 it is, and that is why it is here rather than in the original text.**
+
+The definitions say "a jump in a curve" and never say, where a protocol has replicas, whether the curve is the replica mean or each replica separately. At N = 196 the two readings disagree: the replica mean moves 0.211 across a 12 % window and does not jump, while three of four replicas individually move 0.266, 0.281 and 0.257 and do. Both numbers are correct; they answer different questions.
+
+The reason they differ is not noise. Replicas collapse at slightly different couplings, and averaging curves whose step is in different places flattens the step — the same reason one does not average hysteresis loops with different coercive fields and then report that the loop has gone. Under the mean, a collapse that every single run shows can read as no collapse at all, and that failure gets worse with more replicas, not better.
+
+Against that: reading per replica is the reading that returns "jump" at N = 196, which is the answer we expected, and the author is adopting it having been told so plainly.
+
+**Enacted wording (the author's decision, 23 September 2026).** Where a protocol has replicas, each replica is a curve, and the protocol shows a jump at a size when **more than half of its replicas do**. The replica-mean reading is computed and reported beside it at every size, and any size where the two disagree is flagged in the output, so that a reader can apply either. Thresholds, window and everything else stand as written. `scripts/analyse_t13.py` implements this wording.
+
+**What it returns at N = 196:** three of four ascent replicas jump, so protocol P shows an ascent jump, and with hysteresis already met (0.159) prediction 2 is met in full at this size rather than in substance only. Nothing follows for the verdict, which still needs two or more sizes.
+
+---
+
+## T15 rung 0. Do the versions exist where the hypothesis says? (written 2026-09-23, before the run)
+
+### Why this test, now
+
+VISION Update 17 reads superposition as the set of undetectably different versions of an arrangement: the renamings that leave every relationship intact. It also names a strain against itself. [T25] Sec. VI.1 calls the melted phase matter, and Q15 measured a melted graph at N = 160 to have **exactly one** renaming — so under Update 17 the object [T25] calls matter is the one object in the model with nothing to be in superposition of.
+
+**The author resolved that strain on 23 September 2026: the melt is not what plays the particle; the structured leftover is** (her words: "why call melted phase matter? That's not matter"). Her reasons, put in order: matter has species, conserved quantities and discrete masses, and a maximum-entropy tangle offers none of them; the leftovers this project actually measured are structured defects of fixed size, 8 to 45 units (O13 third addendum, O15, O16), not blobs of melt; and [T24] itself moves the same way, making dark matter *allotropes* — metastable arrangements — rather than melt. Recorded in VISION as a dated decision.
+
+This rung tests the decision rather than assuming it. If the structured leftover is the wavelike object, it must be the thing that carries versions.
+
+### What will be run
+
+No simulation. Every input is already on disk and every number is exact.
+
+| Object | Where from |
+|---|---|
+| The leftovers | the 12 saved final states of `results/t7d_lam125_n{64,96,144,192a,192b}_adj/*.npz`, each an (N, 4) neighbour array read by T7 amendment 4 |
+| A perfect sheet | `torus(lx, ly)` at each matching size |
+| A melt | the same kernel run hot, at each matching size, seeds in the config |
+
+### Observables
+
+For every object, both of these, **reported side by side** (the author's choice, 23 September 2026, fixed before the run because it changes the answer):
+
+- **whole graph** — the renamings of the entire arrangement, sheet and defect together. This is Update 17's claim as written: points that can be swapped without changing *any* relationship. A defect pins a location and destroys the sheet's translations, so this number is expected to be small.
+- **defect only** — the renamings of the subgraph induced on the vertices whose local dimension is not 2. This isolates the object, but a defect is not a thing on its own, so it measures something slightly weaker than the claim.
+
+And the **Laplacian spectrum** (eigenvalues of D − A) of each defect, to ask whether the distinct leftover types have distinct frequencies. `graphity.small_graphs.log_automorphisms` gives the counts; `graphity.dimension.local_dimension` names the defect vertices.
+
+### Definitions, fixed now
+
+- **A version exists** when the renaming count is greater than 1; the count is reported as an integer wherever it is small enough to be exact, and as its logarithm otherwise.
+- **Two spectra differ** when their sorted non-zero eigenvalues differ by more than 1e-9 in any position, or differ in length. Exact arithmetic on integers; the tolerance is for floating point only.
+- **A leftover type** is a defect structure as `scripts/analyse_t7_states.py` names it from the wiring, not from a count (CLAUDE.md: read positions before naming a geometry).
+
+### Predictions, written before looking (the author's, 23 September 2026)
+
+**Chosen from four options put to her, of which two would have counted against Update 17.** She chose the strongest.
+
+1. **A remnant in a sheet has more than one renaming**, on both counts.
+2. **A melt has exactly one**, at every size (this half is close to settled: Q15 measured it at N = 160).
+3. **The distinct leftover types have distinct Laplacian spectra** — the frequency labels the type, which is what "a particle is an allowed vibration of a small closed loop, and the frequency sets its type" requires.
+
+### Gates
+
+None beyond arithmetic. Every count is exact and every input is committed. The one check: `log_automorphisms` must return 0 (ln 1) for a graph known to be rigid and the published 320 for the N = 160 sheet of Q15, or the tool is wrong and nothing else is read.
+
+### Verdicts
+
+- **VERSIONS EXIST AND LABEL TYPE** — all three predictions hold. Update 17's first two steps survive their cheapest test, and rung 3 has a target to be designed against.
+- **VERSIONS EXIST** — 1 and 2 hold, 3 fails. The leftover is wavelike but frequency does not label species; the particle-type half of Update 17 is withdrawn or redesigned.
+- **NO VERSIONS IN ANYTHING REAL** — 1 fails: remnants have exactly one renaming, as the melt does. Then only idealised perfect arrangements carry versions, and VISION Update 12 already says nothing is ever in those. Update 17 loses its footing in this model and should say so.
+- **INCONCLUSIVE** — anything else, including the tool failing its check.
+
+### What this cannot show
+
+Anything about quantum observations: no experimental data enters this test and none is compared to. Whether these versions behave like superposition (rung 1 asks whether the time-fractions match the counts; rung 2 asks about measurement). Anything about Bell correlations, which need a notion of measurement in the model that does not exist. And, as everywhere in this project, anything about the real universe.

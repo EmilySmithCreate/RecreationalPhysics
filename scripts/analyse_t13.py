@@ -12,13 +12,10 @@ Implements PREREGISTRATION.md section T13 as amended on 23 September 2026:
                a start that fails its gate takes no part in the verdict, and its difference from
                a gate-passing start is reported as a diagnostic, not as agreement or disagreement.
 
-ONE THING THE PRE-REGISTRATION DOES NOT SAY, AND THIS SCRIPT DOES NOT DECIDE. "A jump in a curve"
-does not say whether the curve is the replica mean or each replica separately. It matters: replicas
-collapse at slightly different couplings, so averaging them smooths a collapse that is sharp in
-every one of them, the same way averaging hysteresis loops with different coercive fields erases
-the loop. Both readings are computed and printed. Where they disagree the script says so and
-returns INCONCLUSIVE with the disagreement named, rather than picking one. Deciding it is Emily's,
-and the rules want it decided before the data it applies to is read.
+  amendment 3  where a protocol has replicas, each replica is a curve and the protocol shows a
+               jump when more than half of them do. The replica mean is computed and reported
+               beside it, and a size where the two readings disagree is flagged, so a reader can
+               apply either. Decided before N = 484 and N = 676 were read.
 
 WHAT IS MEASURED. phi = S/N against the coupling g, for protocol P (single chains, cold descent
 then cold ascent) and protocol E (parallel tempering from two starts). The verdicts need two or
@@ -167,15 +164,16 @@ def verdict(sizes):
         e_jump = any(v["windowed"][0] > JUMP for k, v in e.items() if v["gate"])
         mean_j = p["legs"]["heat"]["mean_jump"]
         reps_j = p["legs"]["heat"]["replicas_jumping"]
-        split = (mean_j != (reps_j > p["replicas"] / 2))
+        ascent_jump = reps_j > p["replicas"] / 2          # amendment 3: the majority decides
+        split = (mean_j != ascent_jump)                   # reported, no longer verdict-changing
 
         lines.append("N = %d" % n)
         lines.append("  P  hysteresis %.3f at g = %.3f  -> %s"
                      % (p["hysteresis"][0], p["hysteresis"][1],
                         "MET" if p["hysteresis_met"] else "not met"))
-        lines.append("  P  ascent jump: replica mean %.3f (%s); %d of %d replicas jump%s"
-                     % (p["legs"]["heat"]["mean_windowed"][0], "jump" if mean_j else "no jump",
-                        reps_j, p["replicas"],
+        lines.append("  P  ascent jump: %d of %d replicas -> %s; replica mean %.3f (%s)%s"
+                     % (reps_j, p["replicas"], "JUMP" if ascent_jump else "no jump",
+                        p["legs"]["heat"]["mean_windowed"][0], "jump" if mean_j else "no jump",
                         "   <-- the two readings disagree" if split else ""))
         for k in sorted(e):
             v = e[k]
@@ -193,10 +191,8 @@ def verdict(sizes):
         if not passing:
             lines.append("  -> E not interpreted at this size")
             continue
-        if split:
-            lines.append("  -> the jump reading is ambiguous at this size and is not resolved here")
         ready.append({"n": n, "p": p, "e_jump": e_jump, "agree": agree,
-                      "hyst": p["hysteresis_met"], "mean_jump": mean_j, "reps_jump": reps_j,
+                      "hyst": p["hysteresis_met"], "jump": ascent_jump, "mean_jump": mean_j,
                       "split": split, "passing": passing})
 
     if len(ready) < 2:
@@ -205,18 +201,15 @@ def verdict(sizes):
                      % len(ready))
         return lines, "NO VERDICT"
 
-    if any(r["split"] for r in ready):
-        lines.append("")
-        lines.append("INCONCLUSIVE: the replica-mean and per-replica readings of the ascent jump "
-                     "disagree at %s, and the pre-registration does not say which is the curve."
-                     % ", ".join("N = %d" % r["n"] for r in ready if r["split"]))
-        return lines, "INCONCLUSIVE"
-
     eq = [r for r in ready if r["e_jump"] and r["agree"] is True]
-    meta = [r for r in ready if r["hyst"] and r["mean_jump"] and not r["e_jump"]
+    meta = [r for r in ready if r["hyst"] and r["jump"] and not r["e_jump"]
             and r["agree"] is not False]
 
     lines.append("")
+    if any(r["split"] for r in ready):
+        lines.append("Note: the replica-mean reading differs from the majority reading at %s. "
+                     "Amendment 3 makes the majority the verdict; the mean is above."
+                     % ", ".join("N = %d" % r["n"] for r in ready if r["split"]))
     if len(eq) >= 2:
         lines.append("EQUILIBRIUM JUMP at %s" % ", ".join("N = %d" % r["n"] for r in eq))
         return lines, "EQUILIBRIUM JUMP"

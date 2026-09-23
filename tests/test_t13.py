@@ -186,17 +186,36 @@ def test_everything_smooth_is_inconclusive():
     assert out == "INCONCLUSIVE", "\n".join(lines)
 
 
-def test_a_size_where_the_two_jump_readings_disagree_is_reported_and_not_resolved():
+def test_the_majority_decides_where_the_mean_would_erase_the_collapse():
+    """Amendment 3. Every replica collapses in one step, at its own coupling, so the mean is
+    smooth and the majority is unanimous. The majority must win, and the mean must still be said."""
     rows = []
     for rep, at in enumerate((5.0, 4.0, 3.2, 2.6)):
         for r in seq_rows(replicas=1, collapse_at=at, steps=1):
             r["replica"] = str(rep)
             rows.append(r)
+    p = read_p(rows)
+    assert p["legs"]["heat"]["replicas_jumping"] == 4 and not p["legs"]["heat"]["mean_jump"]
+
     sizes = {}
     for n in (196, 484):
-        sizes[n] = {"p": read_p(rows),
+        sizes[n] = {"p": p,
                     "e": {"melt": read_e(temper_rows(n=n), n),
                           "torus": read_e(temper_rows(n=n, trips=0), n)}}
     lines, out = verdict(sizes)
-    assert out == "INCONCLUSIVE"
-    assert any("disagree" in ln for ln in lines), "\n".join(lines)
+    assert out == "METASTABLE BRANCH", "\n".join(lines)
+    assert any("replica-mean reading differs" in ln for ln in lines), "\n".join(lines)
+
+
+def test_a_minority_of_replicas_jumping_is_not_a_jump():
+    """One replica in four is not the protocol showing a jump."""
+    rows = []
+    for rep, at in enumerate((4.0, None, None, None)):
+        for r in seq_rows(replicas=1, collapse_at=at or 1.0, steps=1, smooth=at is None):
+            r["replica"] = str(rep)
+            rows.append(r)
+    p = read_p(rows)
+    assert p["legs"]["heat"]["replicas_jumping"] == 1
+    sizes = {n: {"p": p, "e": {"melt": read_e(temper_rows(n=n), n)}} for n in (196, 484)}
+    lines, out = verdict(sizes)
+    assert out == "INCONCLUSIVE", "\n".join(lines)
