@@ -418,3 +418,93 @@
   archivePrefix = {arXiv},
   note    = {**Read in part (abstract, Secs. 1, 2.2-2.4) on 2026-09-21; supplied by the owner from her own reading folder as `docs/reading/Euclidian Dynamical triangulation revisited 2021.pdf`.** The filename says 2021 and the title page carries a 2021 compile date, but the arXiv stamp on the PDF is 1503.03706v2, 10 June 2015 -- **verify which before citing a year.** This is the most directly useful methodological source found for T6, for five reasons. (1) **The same historical arc as ours, in a neighbouring model:** the 4D EDT transition "was long believed to be of second order until in 1996 first order behavior was found for sufficiently large systems", and this paper confirms first order up to 64k simplices. That is the finite-size argument of this project, already played out elsewhere. (2) **They beat critical slowing down with parallel tempering, not with flat-histogram sampling**, using the same swap rule `tempering.py` implements. (3) **The reason a plain chain cannot do it, stated cleanly:** at a first-order transition the correlation length stays finite, but the autocorrelation time diverges anyway because transitions between the two coexisting phases become *exponentially suppressed with increasing system size*. (4) **A warning about soft constraints:** earlier work controlled the volume with a harmonic potential, which "introduces a systematic error for all moves which change N4"; they use an infinite potential well instead. Our (S, X) window is the same kind of device and the same caution applies. They also take measurements after a fixed number of *attempted* rather than accepted moves, calling the latter a systematic error -- our sweep is already 2N attempts, so we comply. (5) **They have our ergodicity problem and say so:** "there is no set of ergodic moves known for the space of triangulations of fixed N4", so they run quasi-canonically. Useful precedent for how to report Q16 honestly. **And one thing that bears directly on T10:** they close by proposing "a class of modified path-integral measures that might remove the metastability of the Markov chain and turn the phase transition into 2nd order". A change of *measure* changing the *order* of the transition is exactly what the labelled-versus-interchangeable question asks, published, in a neighbouring model.}
 }
+
+% Quantum behaviour from counting (docs/design/quantum_loop_design.md, 2026-09-22). Read status per entry.
+
+@article{Zurek05,
+  author  = {Zurek, Wojciech Hubert},
+  title   = {Probabilities from entanglement, Born's rule $p_k = |\psi_k|^2$ from envariance},
+  journal = {Phys. Rev. A},
+  volume  = {71},
+  pages   = {052105},
+  year    = {2005},
+  eprint  = {quant-ph/0405161},
+  archivePrefix = {arXiv},
+  note    = {Read in part on 2026-09-22 (the envariance definition, the swap argument and the fine-graining step, from the arXiv text). Equal Schmidt coefficients give equal probabilities because a swap on the system can be undone on the environment; unequal ones are fine-grained into m_k equal-amplitude orthonormal pieces and counted, p_k = m_k/M. The counting assumes exclusive outcomes, equal amplitudes and additivity. Journal details from general knowledge, to verify.}
+}
+
+@article{CSW14,
+  author  = {Cabello, Ad\'an and Severini, Simone and Winter, Andreas},
+  title   = {Graph-theoretic approach to quantum correlations},
+  journal = {Phys. Rev. Lett.},
+  volume  = {112},
+  pages   = {040401},
+  year    = {2014},
+  eprint  = {1401.7081},
+  archivePrefix = {arXiv},
+  note    = {Read in part on 2026-09-22 (abstract and the CHSH example, from the arXiv text). Correlations as positive sums of event probabilities; exclusive events adjacent in a graph; classical, quantum and no-disturbance maxima are the independence number, Lov\'asz number and fractional packing number. CHSH: graph Ci_8(1,4), bounds 3, 2+sqrt(2), 4. Journal details from general knowledge, to verify.}
+}
+
+@article{AB11,
+  author  = {Abramsky, Samson and Brandenburger, Adam},
+  title   = {The sheaf-theoretic structure of non-locality and contextuality},
+  journal = {New J. Phys.},
+  volume  = {13},
+  pages   = {113036},
+  year    = {2011},
+  eprint  = {1102.0264},
+  archivePrefix = {arXiv},
+  note    = {Read in part on 2026-09-22 (the definitions of empirical model, measurement cover, compatibility and global section, and the hierarchy, from the arXiv text). Contextuality is the absence of a global section; three strict levels: probabilistic (Bell), possibilistic (Hardy), strong (GHZ). Journal details from general knowledge, to verify.}
+}
+
+@article{Mermin90,
+  author  = {Mermin, N. David},
+  title   = {Quantum mysteries revisited},
+  journal = {Am. J. Phys.},
+  volume  = {58},
+  pages   = {731--734},
+  year    = {1990},
+  note    = {Read on 2026-09-22 (a copy found online; the text extracted and searched). Three detectors, two settings, red or green. Settings 122, 212, 221: an odd number of red always; 111: an odd number of red never. Eight instruction sets satisfy the first rule and every one of them fails the second.}
+}
+
+@article{Saunders21,
+  author  = {Saunders, Simon},
+  title   = {Branch-counting in the Everett interpretation of quantum mechanics},
+  journal = {Proc. R. Soc. A},
+  year    = {2021},
+  eprint  = {2201.06087},
+  archivePrefix = {arXiv},
+  note    = {Abstract only, 2026-09-22. A state-dependent branch-counting rule, defined through decoherent-histories branch structure, whose ratios agree with the Born rule; tied to Boltzmann's and Planck's combinatorics. The objection that naive branch counting fails (Wallace) is from secondary sources. Journal details to verify.}
+}
+
+@book{tHooft14,
+  author  = {'t Hooft, Gerard},
+  title   = {The Cellular Automaton Interpretation of Quantum Mechanics},
+  publisher = {Springer},
+  year    = {2016},
+  eprint  = {1405.1548},
+  archivePrefix = {arXiv},
+  note    = {Abstract only, 2026-09-22. Quantum mechanics as a tool for analysing an underlying classical system; Bell's theorem met by superdeterminism (measurement choices not independent of the system). Our fork in the quantum design is contextuality, not superdeterminism.}
+}
+
+@article{Rovelli96,
+  author  = {Rovelli, Carlo},
+  title   = {Relational quantum mechanics},
+  journal = {Int. J. Theor. Phys.},
+  volume  = {35},
+  pages   = {1637--1678},
+  year    = {1996},
+  eprint  = {quant-ph/9609002},
+  archivePrefix = {arXiv},
+  note    = {Abstract only, 2026-09-22. No observer-independent state; the theory describes the information systems have about each other; measurement is interaction between equivalent systems. Journal details from general knowledge, to verify.}
+}
+
+@article{Gorard20,
+  author  = {Gorard, Jonathan},
+  title   = {Some quantum mechanical properties of the Wolfram model},
+  journal = {Complex Systems},
+  volume  = {29},
+  number  = {2},
+  year    = {2020},
+  note    = {Not read; search summary only, 2026-09-22. Multiway rewriting systems hold every branch at once; a branchial space; the Born rule read from path weights and interference from cancelling weights; observers collapse branches by a completion operation. The closest computational cousin of "every version at once". Read before any interference rung is designed.}
+}

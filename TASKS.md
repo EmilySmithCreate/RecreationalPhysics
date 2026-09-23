@@ -257,14 +257,20 @@ A ladder: (0) do the versions exist where the hypothesis says (renaming counts a
 T10 leftovers, a torus, a melt; exact); (1) do the loop's long-run time-fractions equal the counts (exact
 at N = 16, 18 in the unlabelled ensemble, then a run with the per-configuration correction of T10); (2)
 swap-invariance and additivity of outcome probabilities when a detector defect attaches to a small loop
-(exact); (3) the bar: two eight-point loops sharing one link across a sheet, CHSH from the classes the
-joint attachments split the namings into, with the fork written first (S ≤ 2 fails, 2 < S ≤ 2√2 passes,
-S > 2√2 fails the other way), preceded by the design task of whether such a valid arrangement exists at all.
-Interference is not designed: it would need a dynamical rule and a VISION decision. Pre-register each rung.
+(exact); (3a) GHZ, the yes/no test, on three four-point loops pairwise linked inside a sheet, two
+settings each: do the four contexts' supports admit an instruction set (classical) or not (strongly
+contextual), read from the classes the joint attachments split the namings into; (3b) CHSH on two
+eight-point loops sharing one link, with the diagnostics of the sheaf treatment in order (compatibility,
+global section by linear programme, then S) and the fork written first (a global section or S ≤ 2 fails,
+2 < S ≤ 2√2 passes, S > 2√2 or any signalling fails the other way). Each preceded by the design task of
+whether such a valid arrangement exists. The published relatives were read on 2026-09-22 (brief, section
+7) and the predicted probabilities tabulated (section 4) before any construction exists. Interference is
+not designed: it would need a dynamical rule and a VISION decision. Pre-register each rung.
 
 Accept, rung by rung: 0, a remnant in a sheet has more than one renaming and a melt exactly one; 1, counts
-and time-fractions agree within sampling error; 2, swap-related outcomes are equiprobable; 3, S computed
-and reported whichever side of 2 it falls.
+and time-fractions agree within sampling error; 2, swap-related outcomes are equiprobable; 3a, the 111
+context's support reported, whichever it is; 3b, compatibility checked, the global-section question
+answered, and S reported whichever side of 2 it falls.
 
 ## Later
 
