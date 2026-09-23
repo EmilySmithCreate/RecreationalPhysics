@@ -14,3 +14,4 @@ pictures and paste or attach the table; `email_reply.txt` is the letter as draft
 | `email_reply_2026-09-23.txt` | **the current letter**, plain text, ready to paste (source: `../reply_draft_2026-09-23.md`); attaches pictures 1, 2, 4 and the table | |
 
 When the N = 484 and 676 runs finish (PREREGISTRATION T13), their curves go in a second folder for the next mail.
+| `picture5_N196_484_676_his_protocol_vs_replica_exchange.png` | N = 196, 484, 676: his protocol (both legs) beside replica exchange from both starts; the lattice-started runs, which never converged, are drawn so that the window below g ≈ 3.2 where the starts disagree is visible (`scripts/plot_t13_three_sizes.py`) | picture 5, second reply (`../reply_draft_2026-09-23_second.md`, not yet sent) |

@@ -4,6 +4,28 @@ Written for the AI assistant that opens this repository next. Emily is the owner
 Read it before `CLAUDE.md`'s "Known state" section, which is older than this page. Everything below is
 on branch `feat/results-meta-and-followups`, pushed; `main` is behind it and Emily merges.
 
+## Update, 23 September, evening (read this before section 0)
+
+- **The letter of 23 September was sent.** He replied the same day (third note, paraphrased in
+  `docs/outreach/correspondence_2026-09-22_trugenberger.md`): the coefficient **must be 1**; our curled
+  column is **not** an allotrope; he asks whether replica exchange can show there is no hysteresis, and for
+  the correlation-length plot of [KTB19] Fig. 9a for a talk on **5 October**; he raises a joint paper.
+  **Emily's condition: she collaborates only on work that includes the order → order question (X).**
+- **T13 is read at all three sizes: INCONCLUSIVE** (E fails its gate at 484 and 676). Section 5 below is
+  out of date. **Correction owed and made in the draft reply:** the 23 September letter said the N = 196
+  jump "is the metastable lattice branch"; below g ≈ 3.2 which branch is the equilibrium is not known.
+  Figure: `docs/figures/t13_three_sizes.png`.
+- **T16 (his correlation-length request) is pre-registered and running**: 24 jobs, one per replica,
+  launched about 18:00 via `xargs -P 7`; logs and `done.txt` in that session's scratchpad `t16logs/`.
+  Progress: `results/t16_*.partial`. Expect 4 to 6 hours. When all `.csv` exist: commit them with
+  `.meta.json` and `_curves/`, write `scripts/analyse_t16.py` to PREREGISTRATION T16's reading rules,
+  make picture 6, and fill the **[RESULTS]** paragraph of `docs/outreach/reply_draft_2026-09-23_second.md`.
+  The draft must not be sent before then.
+- **At exactly λ = 1 nothing is stuck above the flat torus at N = 18** (`results/dip_census_fine.csv`); the
+  tube → sheet work is a neighbour of his model, not in it. The bridge proposed in the draft: his
+  allotropes are order → order objects at λ = 1, and whether one is stuck and how it gives way is the
+  collaboration Emily can give time to. It needs a concrete allotrope construction from him.
+
 ## 0. The first ten minutes
 
 1. **Four T13 jobs may still be running** (section 5). Check with

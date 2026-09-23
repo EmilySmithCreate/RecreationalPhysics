@@ -144,3 +144,44 @@ sampler is currently least able to deliver.
    ask the narrowed Gate B question (coupling axis or size of Fig. 3). Both are now in
    `reply_draft_2026-09-22.md`, in the paragraph added 2026-09-23.
 3. The sampling problem at 484 and 676 is now the bottleneck on the question he cares about.
+
+---
+
+## Third note from him, received 2026-09-23, in answer to our letter of the same day (paraphrase; private)
+
+- Warm thanks; he sees our skills as complementary and calls himself a poor programmer.
+- **The coefficient of the local term must be exactly 1.** Only then is the Hamiltonian the total
+  combinatorial curvature of the graph, and so the Einstein-Hilbert action on graphs. He knows the
+  degeneracy at 1; the 2019 paper argues it does not matter on cooling, because squares form up to two
+  per edge and then it pays to form squares elsewhere rather than add a third. What we called the cap
+  helps reach the torus and speeds simulations.
+- That argument assumes one torus ground state. At N other than 4p², p prime, several tori exist (the
+  4 × L torus, whose handles are single 4-cycles, is his example), which is extra degeneracy even when a
+  torus is reached; a finite-size effect absent at infinite N; hence N = 4p².
+- **Our curled column is not an allotrope.** His example of one: a hyperbolic tessellation with three
+  squares at each vertex, with an embedded region where some vertices have two; higher energy than the
+  background, not matter, a different "space crystal", like graphite and diamond.
+- **For physics a smooth plot is much better than the jump.** Starting each coupling from the previous
+  one's final state makes long metastable trapping likely. He asks whether replica exchange can prove
+  there is no hysteresis, i.e. that cooling and heating give the same curve.
+- **He asks for the correlation-length plot of [KTB19] Fig. 9a**, for a talk at an important conference
+  on 5 October, where he would present our plots with full credit for the numerical work.
+- He raises a possible joint technical paper on these questions.
+
+### What it bears on (ours)
+
+- **The coefficient.** With λ = 1 fixed by him, the tube → sheet change of T7, T9, T10 (λ = 1.25) is not
+  in his model: at λ = 1 the tube and the sheet have the same energy and nothing is released, and the
+  exhaustive census at N = 18 finds no stuck state above the flat torus at exactly λ = 1
+  (`results/dip_census_fine.csv`; the dips' height above the flat torus falls to zero as λ → 1). This does
+  not change any result; it changes what they can be said to be about: a neighbour of his model.
+- **His allotropes are order → order objects at λ = 1.** A stuck region of one ordered arrangement inside
+  another is the shape of VISION claim 4 (Update 13), inside his model and his programme (dark matter as
+  allotropes, [T24]). Whether any such patch is stuck at all in the 4-regular case, and how it gives way,
+  has not been looked at by us; it needs a construction from him.
+- **Hysteresis.** T13 at three sizes (PREREGISTRATION T13, reading of 23 September evening): no hysteresis
+  above g ≈ 3.2; below it, no sampler used here reaches equilibrium at 484 or 676, and at 196 the
+  lattice-started replica exchange never unlocked. **Our letter of 23 September overstated this** when it
+  said the N = 196 jump "is the metastable lattice branch": which branch is the equilibrium below g ≈ 3.2
+  is not known. The reply corrects it.
+- **The correlation length** is pre-registered as T16 and running.
