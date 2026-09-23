@@ -39,7 +39,7 @@ from graphity.cqg import ENERGY_PER_SQUARE, ENERGY_PER_SURPLUS, run_chain
 
 
 def temper(graphs, side_u, couplings, n_rounds, sweeps_per_round, seed_sequence, lam, cap, glauber=False,
-           measure_from=0):
+           measure_from=0, on_round=None):
     """Run parallel tempering. Modifies `graphs` (one adjacency array per coupling) in place.
 
     couplings     : g values, hottest first. graphs[k] starts at couplings[k].
@@ -50,6 +50,11 @@ def temper(graphs, side_u, couplings, n_rounds, sweeps_per_round, seed_sequence,
     to the coldest and back (the usual sign that tempering is doing its job), and `at_cold_end`,
     which of the starting graphs (numbered by the coupling it started at) sat at the coldest coupling
     after each round.
+
+    on_round      : optional function on_round(r, graphs), called after the swaps of every recorded
+                    round, with graphs[k] the graph now at couplings[k]. It must only read the graphs.
+                    It draws no random numbers, so a run with it is bit for bit the run without it
+                    (tests/test_tempering.py). Added for T16's snapshots.
     """
     k_total = len(couplings)
     if len(graphs) != k_total or any(a <= b for a, b in zip(couplings, couplings[1:])):
@@ -100,6 +105,8 @@ def temper(graphs, side_u, couplings, n_rounds, sweeps_per_round, seed_sequence,
             round_trips += 1                           # and back at the hot end: a full trip
         stage[hot] = 1
         at_cold_end[r] = cold
+        if on_round is not None and r >= measure_from:
+            on_round(r, graphs)
     return dict(squares=s_out, surplus=x_out, connectivity=conn_out, acceptance=accepted / n_rounds,
                 swap_rate=swaps_taken / np.maximum(swaps_offered, 1), round_trips=round_trips,
                 at_cold_end=at_cold_end)

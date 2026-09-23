@@ -841,3 +841,37 @@ Which rule combines amplitudes: both share the operator. Anything dynamical: an 
 
 **A process fault, owned.** The commit that timestamped this section (36924d1) was made with one test failing. The test assumed an 8 × 8 sheet keeps every mode below 0.5 on eight points, which is false for so small and so symmetric a sheet (a degenerate eigenspace of dimension d can put d · 8/64 on them), and the tail of the test output hid the failure. The pre-registered gate is at 12 × 12, where the value is 0.444, and it passed. The test was corrected in the commit that carries this reading; nothing in the definitions or the data changed.
 
+## T16. The correlation length of [KTB19] Fig. 9a at N = 4p², with the susceptibility (written 2026-09-23, evening, before the runs)
+
+### Why this measurement, and what it is not
+
+The model's author asked for it in his reply of 23 September (private; paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`): the correlation-length plot of [KTB19] Fig. 9a, for a talk he gives on 5 October, and whether replica exchange can show that cooling and heating give the same curve. **It is a measurement made at his request on the disorder → order route, the published question, not the hypothesis's (VISION Update 13).** It tests no claim of VISION, and there is no prediction of the owner's to record; she asked for it to be run. It is labelled exploratory in every config.
+
+### What will be run
+
+| Choice | Value | Why |
+|---|---|---|
+| Model | λ = 1, no cap, hard-core rule, Metropolis | His model, as in T13. |
+| **Protocol E** (equilibrium) | parallel tempering from melted tori, T13's N = 196 ladder for every size (20 rungs, g = 9.0 → 2.2), 4 sweeps per round, 5,000 + 25,000 rounds, a snapshot of every coupling every 25 rounds (1,000 per coupling); N = 36, 100, 196 (6 × 6, 10 × 10, 14 × 14; p = 3, 5, 7); 4 replicas | The sizes at which tempering mixes: T13 found 5 to 15 round trips at 196 and none at 484 or 676. |
+| **Protocol P** (his procedure) | T13 protocol P exactly (40 couplings g = 12 → 1.5, 240 sweeps warm-up, 10,000 measured, cold descent from a melt then cold ascent from the lattice torus), a snapshot every 100 sweeps (100 per coupling); N = 196, 484, 676; 4 replicas | The sizes he can use for a talk, read only where they are trustworthy (below). |
+| Code | `src/graphity/correlation.py` (ASSUMPTIONS Q19), `scripts/run_t16_correlation.py`, configs `configs/t16_{temper,seq}_n*.json`, one process per replica | Seeds inside the configs. |
+
+### Observables
+
+Per row (size, replica, protocol, leg, coupling): φ; the susceptibility χ = N var(φ); ξ / diameter by [KTB19] Eq. (4.15) under Q19's choices, its mean and standard error over snapshots; the same computed once from the snapshot-averaged C(r); the counts of snapshots skipped for no fluctuation or no usable distance; the averaged C(r) itself (stored).
+
+### Rules for reading, fixed now
+
+- **E gate**, as T13: every replica makes at least 5 round trips and every swap rate lies in 0.15 to 0.6. A size that fails is reported and not read.
+- **P is read only where it is at equilibrium by its own evidence**: at couplings where the replica-mean φ of the cooling and heating legs differ by less than 0.03. Elsewhere its rows are reported as the protocol's branches, not as equilibrium. (At N = 484 and 676 in T13 this held for g above about 3.3, where both tempering starts agreed as well.)
+- **Peaks.** For each size and protocol, the coupling and height of the largest χ and the largest ξ / diameter among the rows that are read. A peak at the first or last read coupling is "at the edge" and not a peak.
+- **Divergent tendency** (the words of [KTB19] Fig. 9): the peak height of ξ / diameter rises with N across every read size, by more than two standard errors between the smallest and the largest. **None**: it does not. **Not readable**: a peak at the edge, or more than half the snapshots at the peak coupling skipped.
+- **The author's hysteresis question**, answered as far as these runs allow: for P at each size, the largest heat-minus-cool difference in φ and in ξ / diameter; for E, one start only, so this run adds nothing to T13 on hysteresis below g ≈ 3.2, and the write-up says so.
+
+### Our expectation (ours, unverified)
+
+χ peaks near the crossover, at g ≈ 5.9, 4.3 and 3.9 for N = 196, 484, 676 (T13's measured crossovers), with a peak height that grows with N. ξ / diameter under the literal definition will be noisy, because it is read from only 5 to 26 distances, and its peak, if any, will sit near χ's. Whether its height rises with N we do not know; Kelly's thesis warns that correlation lengths may not be well defined in this model.
+
+### What this cannot show
+
+The order of the transition: a correlation length that grows over three sizes is what a continuous transition predicts and does not exclude a weak first-order one, and three sizes fit no exponent. Anything below g ≈ 3.2 at 484 and 676 on the heating side, where T13's samplers do not mix. Anything about the tube.
