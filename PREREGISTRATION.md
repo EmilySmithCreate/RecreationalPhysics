@@ -555,3 +555,47 @@ The model's author replied to our note on 2026-09-22 (paraphrased in `docs/outre
 ### What this cannot show
 
 Anything at N = 1024 or beyond; the critical scaling that would make a jump "hybrid" rather than first order (no exponents are measured); anything about the hypothesis's own route (the tube), which is not touched by this test; and anything about his code, which we have not seen.
+
+#### Reading at N = 196 under the rules above, 23 September 2026: NO VERDICT — one size of three
+
+All three verdicts require two or more sizes. N = 484 and 676 were still running when this was written, so nothing is decided here; what follows is the first size read against the definitions as originally written, recorded before the amendments below so that the amendments cannot be mistaken for the reading that prompted them.
+
+**Protocol P.** Descent and ascent agree to within 0.004 from g = 12 down to 3.7. Below that the ascent, started from the lattice torus, stays near φ = 1.000 while the descent rises smoothly. **Hysteresis is met:** ascent exceeds descent by 0.159 at g = 3.164 (0.158 and 0.154 at the couplings either side), against 0.15. **A jump is not met as written:** no single step exceeds 0.25 on either leg in the replica mean, and per replica only one of four does (rep 1, 0.737 → 0.991). The largest single step on ascent is 0.172, 0.254, 0.133, 0.209 in replicas 0 to 3.
+
+**Protocol E, melt start: passes every gate.** Round trips 5, 15, 8, 12 against a gate of 5; swap rates 0.202 to 0.575 inside 0.15 to 0.6; replica spread below 0.03 across the crossover. No jump anywhere. Crossover φ = 0.5 at g = 5.90, against prediction 1's 5.4 ± 0.5 — inside, at the upper edge.
+
+**Protocol E, lattice start: fails every gate.** Round trips 0 in all four replicas; swap rates 0.046 to 0.997, outside the gate; replica spread 0.173 at g = 3.19. Reported as not converged and not interpreted, as the gate requires.
+
+**Predictions.** Prediction 1 is half met: E from the melt is smooth, and its crossover is inside the predicted band, but start-independence could not be demonstrated because one start did not converge. Prediction 2 is met in substance and fails on its letter: the lattice does survive on ascent and produces hysteresis, but the collapse does not register as a jump under the per-step definition. Prediction 3 needs the larger sizes.
+
+**The bound.** T6's φ reading on the gate-passing melt run (`scripts/analyse_t6_phi.py t13_temper_n196_melt`) puts any latent heat hiding in a single hump below **0.955 per point at N = 196**, against below 1.30 at N = 100 (T6, amendment 5 verdict). The bound tightens with size.
+
+#### Amendment 1, 23 September 2026 — ENACTED at the author's decision — a jump is measured across a window in g, not between neighbours
+
+**Status: proposed after the N = 196 reading above (text below, as proposed); adopted by the author on 23 September 2026 with the wording in "Enacted wording" at the end of this amendment. No run is repeated and no data is re-collected; only the reading changes.**
+
+**Written after the N = 196 reading above, and it would change that reading. Stated first so it cannot be missed.**
+
+The definition asks how far φ moves **between neighbouring couplings**. The spacing of those neighbours is a choice we made, not a property of the model: protocol P uses 40 couplings from g = 12 to 1.5, so neighbours are 5.3 % apart. On ascent at N = 196 the curve moves from φ = 0.74 to 1.00 — a move of 0.26 — but it takes two couplings to do it, so every single step is below 0.25 and the rule returns "no jump". With 20 couplings (11 % apart) the same collapse would be one step and would count; with 80 (2.6 % apart) it would split four ways and read as smooth. The "less than 12 % apart" clause sets a ceiling on the separation and no floor, so a fine grid dilutes a jump without limit. This is the same shape of defect as the one already on the record in `CLAUDE.md`: a criterion that moves with a quantity we chose rather than with the physics.
+
+**Proposed wording.** A jump in a curve: φ changes by more than **0.25** between two couplings on that curve less than **12 %** apart in g, which need not be neighbouring. Threshold, window and curves are unchanged; only "neighbouring" is dropped.
+
+**The control, run before this was proposed.** A repair is honest only if it does not manufacture jumps in curves that are smooth. Applied to the smooth curves in the same data, the windowed rule returns **0.040** in all four replicas of the gate-passing melt run and **0.060 to 0.064** in all four replicas of protocol P's descent leg — four to seven times below the 0.25 threshold. Applied to the ascent it returns 0.266, 0.281, 0.204, 0.257 where the per-step rule returned 0.172, 0.254, 0.133, 0.209. One further property: at protocol E's rung spacing (7.2 % at N = 196, 4.5 % and 3.5 % above) at most one step fits inside a 12 % window at N = 196, so **this amendment does not change any E reading at that size**; it bears on protocol P, whose grid is fine enough to split a collapse.
+
+**Why this is a post-hoc repair, said plainly.** It was proposed after the data it changes, which this document forbids the assistant to enact. What makes it defensible for Emily to enact is (a) the control above, computed before adoption and reported whichever way it came out, (b) it applies identically to every size, both legs and both protocols, and (c) it removes a dependence on a sampling choice rather than adding a free parameter — there is no tolerance in it to tune. What it costs is stated without hedging: three of four ascent replicas at N = 196 change from "no jump" to "jump" under it, and that is a change in the direction we expected, which is exactly why the control matters more than the argument.
+
+**Enacted wording (the author's decision, 23 September 2026).** A jump in a curve: φ changes by more than 0.25 between two couplings on that curve less than 12 % apart in g, not necessarily neighbouring. All other definitions, thresholds, gates, predictions and verdicts stand as written. `scripts/analyse_t13.py` implements this wording, and reports the per-step value beside the windowed one at every size so that both readings stay visible.
+
+#### Amendment 2, 23 September 2026 — ENACTED at the author's decision — equilibrium agreement is read within the starts that pass their gate
+
+**Status: proposed after the N = 196 reading above (text below, as proposed); adopted by the author on 23 September 2026 with the wording in "Enacted wording" at the end of this amendment.**
+
+**Written after the N = 196 reading above, and it changes which verdicts are reachable. Stated first so it cannot be missed.**
+
+Three sentences of this section lock against each other. "Equilibrium agreement" is defined as a comparison **between the two starts**. The gate says a run below its round-trip threshold is **not interpreted**. The METASTABLE BRANCH verdict **requires** "E shows equilibrium agreement". At N = 196 the melt start passes its gate and the lattice start fails it with 0 round trips in all four replicas, so the clause needs a run the gate forbids interpreting, and the verdict needs the clause. As written, **whenever the lattice start does not mix, METASTABLE BRANCH is unreachable** — although a lattice start that will not mix is exactly what a metastable branch would look like. The test cannot return its own most likely answer. That is a defect in the wording and not a result.
+
+The opposite repair — counting a stalled start as evidence *for* metastability — is proposed and **rejected here**, so that it is on the record as considered. Zero round trips is equally consistent with the sampler being too weak at that size, which is the precise confusion the gate exists to prevent. Reading it as physics would be the motivated choice.
+
+**Enacted wording (the author's decision, 23 September 2026).** Equilibrium agreement (E) is read within the starts that pass their gate: the replicas of a gate-passing start agree within 0.03 in φ in the crossover region (0.3 < φ < 0.9), and where two or more starts pass their gates at a size, those starts agree within 0.03 at every rung. A start that fails its gate is reported as not converged and takes no part in the verdict; its difference from a gate-passing start is reported at every rung as a diagnostic, prominently and with its round trips beside it, and is read as neither agreement nor disagreement. A size at which no start passes its gate is reported as not converged and its E result is not interpreted, as before. Nothing else changes, and in particular the verdicts still require two or more sizes.
+
+**What this does not do.** It does not make the lattice start's failure evidence for anything, and it does not lower the round-trip gate. The proper resolution is a sampler able to mix from the lattice — the neighbourhood move of [T25] Fig. 8, noted in `TASKS.md` T4 as not built — which stays the follow-up and needs its own pre-registration. Until then, a size whose lattice start stalls carries E on its melt start alone, and the stall is reported as an open question rather than an answer.
