@@ -3,6 +3,21 @@
 Written for the AI assistant that opens this repository next. Emily is the owner; she will read it too.
 Read it before `CLAUDE.md`'s "Known state" section, which is older than this page.
 
+## 0. Newest first: the author replied (2026-09-22, night)
+
+Carlo Trugenberger answered Emily's note the same day. **Private email; paraphrased in
+`docs/outreach/correspondence_2026-09-22_trugenberger.md`; never quote it publicly.** What it moves:
+the "cap" (Q3) is disputed by him and is no longer a published case; his own current view of the λ = 1
+transition is a **hybrid** one, two continuous branches with a jump, at N = 1024 on cold ascent; and
+he advises N = 4p² with p prime for a unique ground state. A reply is drafted in
+`docs/outreach/reply_draft_2026-09-22.md` with a picture made for him
+(`docs/figures/for_authors_torus_vs_tube.png`). The next run on the disorder → order track is T6 at
+N = 196, 484, 676 in both directions with tempering, pre-registered first, to tell an equilibrium jump
+from a metastable ascent branch. S5 is not met; he has seen words, not plots or code. Also new on
+22 September, night: the public document `docs/public/the-loop-and-the-floor_v1.html` (five parts, the
+loop withheld until Part III), VISION Update 17 (the author's quantum hypothesis) and the design brief
+`docs/design/quantum_loop_design.md` (T15).
+
 ## 1. What this project is, in one paragraph — and what changed on 22 September
 
 Emily's hypothesis (`VISION.md`, claims 1–6): our spacetime is one settled arrangement of something

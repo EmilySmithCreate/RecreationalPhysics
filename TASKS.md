@@ -64,6 +64,14 @@ Note, 2026-09-20 (the criterion above is unchanged; this records what T3 turned 
 
 ## GATE B. Reproduce [T25] Fig. 3 at λ = 1  ☐
 
+**The author's reply, 2026-09-22** (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`;
+private). His own runs at N = 1024 show a hybrid transition, two continuous branches with a jump, on cold
+ascent with a 240-sweep warm-up; he has no "cap" in his code, so the capped comparison below is not a
+comparison with his model. **Next, pre-registered before it runs:** T6 at N = 4p² (196, 484, 676), both
+directions, tempering; a jump at the same g both ways reproduces his figure and reopens the λ = 1 verdict;
+a jump on ascent only is the lattice branch surviving past the transition.
+
+
 Published: N = 160, φ against log g, cooled from random and heated from the torus, no hysteresis, random-phase floor 0.126.
 
 Accept: floor 0.126 ± 0.01; heating and cooling agree within errors through the crossover; cold end above 0.9 when heated from the torus. **Human step for Emily:** open arXiv:2512.17676 Fig. 3 and compare the position of the rise by eye; record the comparison in ASSUMPTIONS section D. If the figure's axis cannot be matched, write to the author rather than guessing.
