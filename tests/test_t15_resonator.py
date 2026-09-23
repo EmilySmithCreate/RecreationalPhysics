@@ -29,11 +29,17 @@ def test_two_disjoint_loops_share_degenerate_eigenspaces_and_each_still_lives_on
         assert localisation(b, [0, 1, 2, 3]) == pytest.approx(1.0)
 
 
-def test_a_mode_spread_over_a_sheet_carries_only_its_share_on_eight_points():
+def test_on_a_perfect_sheet_localisation_is_bounded_by_the_eigenspace_share_and_the_gate_sheet_stays_below_half():
+    """On a torus every eigenspace is translation-invariant, so its projector has d/N on the diagonal
+    and the most weight any of its modes can put on |S| points is d|S|/N. An 8 x 8 sheet is small and
+    symmetric enough for that to exceed 0.5, which is why the pre-registered gate is at 12 x 12."""
     adj, _ = torus(8, 8, NO_CAP)
     pts = [0, 1, 8, 9, 36, 37, 44, 45]
-    worst = max(localisation(b, pts) for lam, b in spaces_of(dense(adj)))
-    assert worst < 0.5                                   # the sheet gate, at a smaller size
+    for lam, b in spaces_of(dense(adj)):
+        assert localisation(b, pts) <= b.shape[1] * len(pts) / 64 + 1e-9
+    adj, _ = torus(12, 12, NO_CAP)
+    pts = [x * 12 + y for x, y in ((0, 0), (0, 1), (1, 0), (1, 1), (6, 6), (6, 7), (7, 6), (7, 7))]
+    assert max(localisation(b, pts) for lam, b in spaces_of(dense(adj))) < 0.5
 
 
 def test_participation_ratio_counts_points():

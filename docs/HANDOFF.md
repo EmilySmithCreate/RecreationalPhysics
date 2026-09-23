@@ -42,9 +42,15 @@ Read it before `CLAUDE.md`'s "Known state" section, which is older than this pag
   are the Fourier modes of its versions; a loop of four carries only signs under the side rule, a loop of
   eight the quarter-turn phases), and **a proposed rule for her decision under S1**: amplitudes on a loop's
   points evolving by its Laplacian, which is Hardy's fifth axiom adopted as a postulate and puts quantum
-  mechanics in rather than deriving it. The interference test is drafted there. **Ready without any
-  decision:** whether a loop's vibration survives as a localised mode when the loop sits in a sheet (the
-  brief's section 5, on the saved two-loop states); pre-register with her prediction, then run.
+  mechanics in rather than deriving it. The interference test is drafted there. **She held the rule** until
+  the resonator question was answered, and predicted the loop's vibrations survive at the isolated
+  frequencies. **Run (T15 rung 0b; O30): INCONCLUSIVE by the letter, prediction fails.** Six of seven
+  states DISSOLVED, one RETUNED at the threshold: the loop of four is not a resonator; the cap (loop plus
+  collar) is, in two states of seven, at other frequencies. **Waiting on her:** redefine the object as the
+  cap (new pre-registration), adopt the wave rule anyway, or leave the quantum leg where rung 3a put it.
+  A process fault is owned in the pre-registration: the timestamp commit carried a failing test (an 8 × 8
+  sheet assumption), hidden by a truncated log; the gate at 12 × 12 was never in doubt. **Lesson for the
+  next assistant: never pipe pytest through `tail`; read the exit status.**
 - **Rented compute** exists as code and nothing else: `terraform/`, `Dockerfile`, `docker/run.sh`,
   `.github/workflows/{deploy_manual,run_simulation}.yml`, following SideNerdApps conventions (AWS Batch on
   Fargate, spot off by arithmetic). **Nothing applied; account ids are `000000000000` on purpose.** The real

@@ -803,3 +803,27 @@ The isolated loop must give localisation 1 at eigenvalues 2 and 4. The perfect s
 ### What this cannot show
 
 Which rule combines amplitudes: both share the operator. Anything dynamical: an eigenvector is a standing pattern, not a motion. Anything about real particles. The 3-cube's modes are reported and not judged.
+
+### Reading, 2026-09-23, the same afternoon (`configs/t15_resonator.json`, `scripts/analyse_t15_resonator.py`, `results/t15_resonator.csv`)
+
+**PRE-REGISTERED VERDICT: INCONCLUSIVE by the letter, and the prediction fails: no state is ISOLATED.** Six of the seven loop-of-four states are DISSOLVED; the seventh is RETUNED, at the threshold. Gates: the isolated loop gives 1.000 at eigenvalues 2 and 4; the 12 × 12 sheet gives 0.444 at most; every random eight-point set in every state stays below 0.5 (the largest, 0.472, is in the one RETUNED state).
+
+| state | loops | most weight any mode carries on the loops (eigenvalue) | even spread | with the collars | class |
+|---|---|---|---|---|---|
+| N = 64 rep 25 | 2 | 0.249 (0.16 and 7.84) | 0.125 | 0.670 | DISSOLVED |
+| N = 144 rep 3 | 2 | 0.111 | 0.056 | 0.307 | DISSOLVED |
+| N = 144 rep 5 | 2 | 0.511 (2.10 and 5.90); 0.501 (2.79 and 5.21) | 0.056 | 0.586; 0.946 | RETUNED |
+| N = 192 rep 3 | 1 | 0.057 | 0.021 | 0.169 | DISSOLVED |
+| N = 192 rep 8 | 1, and two cubes | 0.154 | 0.021 | 0.444 | DISSOLVED |
+| N = 192 rep 20 | 2 | 0.083 | 0.042 | 0.247 | DISSOLVED |
+| N = 192 rep 22 | 1 | 0.169 | 0.021 | 0.475 | DISSOLVED |
+
+**What the numbers say, plainly.** In six states of seven no mode of the whole arrangement carries more than a quarter of its weight on the loop, and in four of them no more than about twice what an evenly spread mode would carry. The loop's own vibrations at 2, 2 and 4 do not survive its embedding: they dissolve into the sheet's modes. Eigenvalues near 2 and 4 do occur in the whole spectrum (2.009, 3.94 and 4.06 at N = 192 replica 3), with loop weight 0.05; those are the sheet's modes passing through the loop, not the loop's own. The one RETUNED state crosses the threshold by 0.001 and 0.011, in the same state where random eight-point sets reach 0.472, so its localisation is barely distinguishable from what that state's symmetry (224 renamings, rung 0) hands any eight points. **The closed loop of four is not a resonator in this model.** Its eigenvalue pairs are mirror images about 4, as every bipartite spectrum's are.
+
+**Reported beside, post-hoc, not judged: where anything resonates, it is the cap, not the loop.** With the collars included (twelve points per loop), N = 144 replica 5 has a mode carrying 0.946 of its weight at eigenvalues 2.79 and 5.21, and N = 64 replica 25 one carrying 0.670 at 0.16 and 7.84; the other five reach 0.17 to 0.48. So a resonator exists in two states of seven, and it is the curled column together with its double-wound collar, at frequencies that are not the isolated loop's. Whether the object of Update 17 should be the cap rather than the loop is the author's call and would be a new pre-registration, not a re-reading of this one.
+
+**The 3-cube**, beside: at most 0.36 of any mode's weight on the cube's points, at eigenvalues 3.3 and 4.7, against the isolated cube's 2, 4 and 6. Not a resonator either, by the same measure.
+
+**Not claimed.** Anything dynamical. That no combining rule could rescue the picture: the wave rule was held pending this, and what this says is that the loop alone is not the object such a rule would act on. Anything about real particles. `pr_best` is "inf" in the file where an eigenspace has no weight on the loops at all; it is a faithful output, not an error.
+
+**A process fault, owned.** The commit that timestamped this section (36924d1) was made with one test failing. The test assumed an 8 × 8 sheet keeps every mode below 0.5 on eight points, which is false for so small and so symmetric a sheet (a degenerate eigenspace of dimension d can put d · 8/64 on them), and the tail of the test output hid the failure. The pre-registered gate is at 12 × 12, where the value is 0.444, and it passed. The test was corrected in the commit that carries this reading; nothing in the definitions or the data changed.

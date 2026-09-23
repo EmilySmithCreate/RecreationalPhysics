@@ -323,6 +323,13 @@ interference test is drafted (the loop of four: probability across the loop sinâ
 under counting). **Needs no decision and comes first:** whether a loop's vibration survives as a localised mode of the
 whole arrangement's Laplacian when the loop sits in a sheet, on the saved two-loop states; pre-register, then run.
 
+**Rung 0b run, 2026-09-23, afternoon** (PREREGISTRATION T15 rung 0b; ASSUMPTIONS O30; `scripts/analyse_t15_resonator.py`,
+`results/t15_resonator.csv`; the author predicted survival at the isolated frequencies). **INCONCLUSIVE by the letter;
+the prediction fails.** Six states of seven DISSOLVED (no mode above 0.25 of its weight on the loop), one RETUNED at the
+threshold. The loop of four is not a resonator in this model; where anything resonates it is the cap, loop plus collar,
+in two states of seven, at other frequencies. The wave rule stays undecided; whether to redefine the object as the cap
+is the author's call and would be a new pre-registration.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

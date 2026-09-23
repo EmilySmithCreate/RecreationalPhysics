@@ -970,6 +970,26 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   not survive is the claim that counting the versions of a fixed arrangement reproduces quantum
   correlations; the brief's section 5 said in advance that this ends the quantum leg as stated.
 
+- **O30 T15 rung 0b: the closed loop of four is not a resonator inside the sheet. INCONCLUSIVE by the
+  letter; the prediction fails.** (2026-09-23, exact, pre-registered with the author's prediction the
+  same afternoon; `configs/t15_resonator.json`, `scripts/analyse_t15_resonator.py`,
+  `results/t15_resonator.csv`; PREREGISTRATION T15 rung 0b, the table is there.) The Laplacian of each
+  saved state holding a loop of four, its eigenspaces, and the most weight any mode of an eigenspace can
+  carry on the loop's points (the top eigenvalue of the projector restricted there). Gates pass: 1.000
+  on the isolated loop at 2 and 4, 0.444 at most on a 12 × 12 sheet, below 0.5 for every random
+  eight-point set. **Six states of seven: DISSOLVED**, no mode above 0.25 on the loop and most within
+  twice an even spread; **one: RETUNED at the threshold** (0.511 and 0.501, where random sets reach 0.472
+  in the same, 224-fold symmetric state). The loop's vibrations at 2, 2, 4 do not survive embedding;
+  eigenvalues near 2 and 4 in the whole spectrum belong to the sheet. **Beside, post-hoc:** with the
+  collar included the cap resonates in two states of seven (0.946 at 2.79 and 5.21 at N = 144 replica 5;
+  0.670 at 0.16 and 7.84 at N = 64 replica 25), at frequencies that are not the loop's; the 3-cube reaches
+  0.36 at most. **For Update 17:** "a particle is an allowed vibration of a small closed loop" fails in
+  this model as stated, whatever rule combines amplitudes; if any object here is a resonator it is the
+  curled column with its collar, sometimes. Whether to redefine the object is the author's call. A
+  process fault is recorded in the pre-registration: the timestamp commit carried a failing test, on a
+  wrong assumption about an 8 × 8 sheet, hidden by a truncated test log; the gate at 12 × 12 was never
+  in doubt.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
