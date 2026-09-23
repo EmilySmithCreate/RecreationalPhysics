@@ -116,10 +116,11 @@
   /* ---------- how we know ---------- */
   .know { margin: 2rem 0 .4rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: 1.1rem 1.2rem 1.2rem; display: grid; gap: .9rem; }
   .know .eyebrow { color: var(--ink); }
-  .know-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .know-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+  @media (max-width: 900px) { .know-grid { grid-template-columns: 1fr; } }
   @media (max-width: 720px) { .know-grid { grid-template-columns: 1fr; } }
-  .know-col { font-family: var(--ui); font-size: .88rem; line-height: 1.55; color: var(--ink-2); display: grid; gap: .45rem; align-content: start; }
-  .know-col .lab { display: inline-block; width: max-content; font-family: var(--display); font-weight: 700; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px; line-height: 1.35; }
+  .know-col { min-width: 0; font-family: var(--ui); font-size: .88rem; line-height: 1.55; color: var(--ink-2); display: grid; gap: .45rem; align-content: start; overflow-wrap: anywhere; }
+  .know-col .lab { display: inline-block; justify-self: start; max-width: 100%; white-space: normal; font-family: var(--display); font-weight: 700; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px; line-height: 1.35; }
   .know-col.est .lab { background: var(--tag-settled-bg); color: var(--tag-settled-fg); }
   .know-col.meas .lab { background: var(--tag-ours-bg); color: var(--tag-ours-fg); }
   .know-col.thy .lab { background: var(--tag-idea-bg); color: var(--tag-idea-fg); }
