@@ -14,10 +14,10 @@ Dear Carlo,
 
 Thank you for the reply and for the postscript, which turned out to be exactly what our runs show. I
 should say plainly what I am: a software engineer doing this as a hobby. What I can offer you is an
-exact benchmark for your new code, an independent reproduction with the numbers, and cheap rented
-compute for the large-size runs you have said are hard to obtain; what I would like from you is one
-answer about a coefficient, at the end of this letter. Pictures are attached this time rather than
-links, and my home-made words are translated into yours below.
+independent reproduction with the numbers, an object in your model that I think you will want to see,
+and cheap rented compute for the large-size runs you have said are hard to obtain; what I would like
+from you is at the end of this letter. Pictures are attached this time rather than links, and my
+home-made words are translated into yours below.
 
 **Your postscript, at N = 196 (p = 7).** Two protocols have finished at this size, on the full
 Hamiltonian with only the hard-core restriction (picture 4). The first is your procedure as you
@@ -58,33 +58,35 @@ network breaks into pieces with three squares on every edge as in Gorsky and Val
 where the incidence graph of the 7-point biplane ties with the 4-cube per vertex; it says nothing about
 the lattice ground state.
 
-**Something that may be useful for your new code.** At N = 18 we listed every valid graph exhaustively
-(about 1.8 × 10¹² labelled graphs in 26 classes), so the averages there are exact sums. The attached
-table gives ⟨S⟩/N at seven couplings for the full Hamiltonian, with the assumptions stated; any code
-sampling the same ensemble should land on those numbers, and ours does to 0.03 %. The whole code and
-every result file can be downloaded as one zip without a GitHub account:
+**The object, and the question I most want to ask you.** With the coefficient of your local term raised
+from 1 to 1.25 and g = 1.5, the 4 × L lattice torus is metastable: every single switch out of it costs
+12, it sits for thousands of sweeps, then a front runs along it and it opens into the flat lattice torus,
+releasing exactly 4(λ − 1) = 1 per vertex. In almost every run one column stays curled: a 4-cycle whose
+four edges still carry three squares, sitting 4, 9 or 14 units above the flat torus depending on how many
+neighbouring edges keep a third square, and it never anneals away at this coupling. So inside your
+Hamiltonian, a hair above your coefficient, there is a sharp, front-driven change from one ordered
+arrangement to another, with a latent heat and a leftover, and the leftover is a long-lived region stuck
+in a different discrete arrangement. That reads to me like what you call an allotrope, and I would be
+glad to know whether it is. What decides whether it lives in your model or only next to it is the
+coefficient. At exactly 1 the flat torus, the 4 × L torus and the 4-cube all have energy zero, the
+global and local terms cancelling as the review says of the denser configurations, and the sizes you
+recommend, N = 4p², happen to be exactly the sizes at which neither the 4 × L torus nor the 4-cube can
+exist, which I take to be why the ground state is unique there. **So: is the coefficient of the local
+term fixed at exactly 1 in your programme, or is it effective and free to move? And is the degeneracy at
+exactly 1 a nuisance you remove by the choice of N, or physics?** If the coefficient may sit above 1, I
+would like to run this change at your sizes and to your specification, alongside the finite-size study
+of the random-to-lattice transition, on rented compute that costs a few dollars a size.
+
+**For your new code**, in case it is useful: at N = 18 we listed every valid graph exhaustively (about
+1.8 × 10¹² labelled graphs in 26 classes), so the averages there are exact sums, and the attached table
+gives ⟨S⟩/N at seven couplings for the full Hamiltonian with the assumptions stated. Any code sampling
+the same ensemble must land on those numbers; ours does to 0.03 %. The whole code and every result file
+can be downloaded as one zip without a GitHub account:
 https://github.com/EmilySmithCreate/RecreationalPhysics/archive/refs/heads/main.zip
 
 On my second question, sorry for the confusion: I was asking whether anyone had measured how the
 transition moves with N, since the curves in Fig. 8a for N = 100 to 200 do not lie on top of one
 another. Your answer, that no finite-size scaling has been derived, answers it.
-
-**The question I most want to ask you.** At the coefficient of your Eq. (22) exactly, the flat lattice
-torus, the 4 × L lattice torus and the 4-cube all have energy zero: the global and local terms cancel,
-as the review says of the denser configurations. The sizes you recommend, N = 4p², happen to be exactly
-the sizes at which neither the 4 × L torus nor the 4-cube can exist, which I take to be why the ground
-state is unique there. At other sizes, with the coefficient of the local term raised by a quarter, the
-4 × L torus is metastable: every single switch out of it costs 12, it sits for thousands of sweeps at
-g = 1.5, then a front runs along it and it opens into the flat torus, releasing exactly 4(λ − 1) = 1 per
-vertex, and in nearly every run one column stays curled, at 4, 9 or 14 units above the flat torus, and
-never anneals away. So inside your Hamiltonian, a hair above your coefficient, there is a sharp,
-front-driven change from one ordered phase to another, with a latent heat and a leftover, and it is a
-different transition from the one in your Fig. 3. My question is whether it is yours: **is the
-coefficient of the local term fixed at exactly 1 in your programme, or is it effective and free to
-move? And is the degeneracy at exactly 1 a nuisance you remove by the choice of N, or physics?** If the
-coefficient may sit above 1, I would like to run this change at your sizes and to your specification,
-alongside the finite-size study of the random-to-lattice transition, on rented compute that costs a few
-dollars a size.
 
 With thanks, and with real appreciation for your time,
 
@@ -108,16 +110,23 @@ Read this before sending. If any line is not something you would say yourself, c
 - **The vocabulary paragraph** is the 22 September content compressed: his words for ours, the cap
   admission, the 14-vertex clarification. Picture 1 is the one that shows the tube.
 - **The benchmark table** is unchanged: a check that costs him nothing.
-- **The opening line** now says what we offer (a benchmark, a reproduction, compute) as well as what you
-  are, because your question was what we bring him: those three things, and one question.
-- **The closing question** is the one most likely to draw him in, because it is about a coefficient in
-  his own equation and about a degeneracy his own review states in words. Every energy in it is exact
+- **The opening line** says what we offer (a reproduction, the object, compute) as well as what you are,
+  because your question was what we bring him.
+- **The object paragraph is the lead, in your words**, because that is what you are interested in and it
+  is his own idea instantiated: his dark-matter paper proposes allotropes and reports no simulations, and
+  this is one, made by his Hamiltonian by itself. The allotrope question comes first; the coefficient
+  question follows because it is what decides whether the object is in his model or beside it, and it
+  forces a substantive answer where "is it an allotrope?" could be waved off. Every energy in it is exact
   and he can check them in a minute (`tests/test_cqg.py::test_four_cube_energies`,
-  `test_sheet_tube_cube_ladder`). It puts our whole problem inside his model without asking him to read
-  the hypothesis: the tube opening *is* claim 4 in his terms. Either answer helps us: "fixed at 1" means
-  our tube track is a deformation of his model and we say so everywhere; "effective" means it sits
-  inside his programme. The compute offer is real (`terraform/`, not yet applied) and is tied to the
-  problem he has called out of reach three times. It replaces the tentative allotrope paragraph.
+  `test_sheet_tube_cube_ladder`); the degeneracy at exactly 1 is his own review's statement. Either
+  answer helps us: "fixed at 1" means the tube track is a deformation of his model and we say so
+  everywhere; "effective" means it sits inside his programme. The tube opening *is* claim 4 in his terms,
+  without a word of the hypothesis. The compute offer is real (`terraform/`, not applied) and is tied to
+  the problem he has called out of reach three times.
+- **The N = 18 benchmark** is two sentences and an attachment, no more: it is a correctness check for the
+  new code he mentioned (the move set, detailed balance, the hard-core check and the square count all
+  show up as a bias in ⟨S⟩, and seven exact numbers catch any of them in minutes), not a physics result,
+  and it says nothing about large sizes or mixing.
 - **A caveat kept out of the letter, for you to know:** at N = 196 fourteen copies of the 14-vertex
   biplane graph also have energy zero at his coefficient (14 × 14 = 196), so "unique" is not strictly
   true even at his sizes; it holds in practice because the flat torus has vastly more labelled copies.
