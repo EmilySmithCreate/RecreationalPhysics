@@ -170,6 +170,12 @@ inline SVG). **Update all three together**: edit the scratchpad copy, republish 
 `docs/public/`, rerun the build. It now carries the loop section, the gravity rung and the dropped
 dark-energy leg.
 
+**The whole account, for sidenerdapps.com/physics** (added 2026-09-22, night): `docs/public/the-loop-and-the-floor_v1.html`
+is the artifact source (title "Did Space Snap Open?", the short page's design, five parts, the author's own coda);
+`scripts/make_physics_page.py` builds `docs/public/site/physics/index.html` from it, a complete document with no
+JavaScript and every picture inline, to be copied into the SideNerdMarketing repository at the path that serves
+`/physics/`. Update the source, republish the artifact, rerun the build, and copy the output across.
+
 ## 8. How Emily works, and the rules that bit us
 
 - She is a software engineer, not a physicist. Lead with the answer, plain English, analogies (chemical reaction,
