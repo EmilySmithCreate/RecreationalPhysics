@@ -941,6 +941,16 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   result is consistent with that decision and does not test it. **Not claimed:** that any count here is a
   superposition (rung 1); what the 224 is.
 
+  *Addendum, the same morning, from reading the wiring* (`t7d` N = 144 replica 3, N = 64 replica 25). The
+  closed loop of four is **one column of the tube that stayed curled** while the columns round it opened:
+  in N = 144 replica 3 it is the original column 3 with its original eight neighbours, now a collar of
+  sheet points at d = 2, with the sheet sewn together round it. Every loop edge lies in three squares, the
+  loop's own and one to either side. It occurs at three energies at λ = 1.25 — **4, 9 and 14 units** —
+  according to whether none, two or four collar edges carry a third square (X = 4, 5, 6 with S − N = 1);
+  O16's cold-box remnant is the 14-unit form. So "the four-point remnant" of O13 to O16 is a family of
+  three, distinguished by X, and the count "14 units per ring" in O15 is the cold-box member only. The
+  9-unit form appears in the state that passes gate 3, the 4-unit form in the one that failed it.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
