@@ -311,6 +311,18 @@ dynamical rule and a VISION decision; a hypothesis over histories rather than ar
 claim. Two exact side results in the pre-registration: three-square loops cannot be joined by an edge, and a
 symmetric triangle of loops cannot be linked by edges.
 
+**Rung 4 given content, 2026-09-23, after the author asked how else the quantum predictions could be tested**
+(`docs/design/amplitude_rule_brief.md`; [Hardy01] and [Gorard20] read in part first). The gap is exact: the same
+set of versions carrying positive weights against complex amplitudes; Hardy's fifth axiom (a continuous reversible
+transformation between pure states) is the one ingredient counting lacks, and Gorard's multiway model puts the phase
+in through its norm and meets Bell by non-locality. The bridge is exact too: a loop's vibrations are the Fourier
+modes of its versions, and under the model's own side rule a loop of four carries only signs while a loop of eight
+carries the quarter-turn phases. Proposed, **for the author to decide under S1**: amplitudes on the loop's points
+evolving by the loop's Laplacian (Hardy's axiom adopted as a postulate; quantum mechanics put in, not derived). The
+interference test is drafted (the loop of four: probability across the loop sin⁴ t under the rule, (1 − e^{−2t})²/4
+under counting). **Needs no decision and comes first:** whether a loop's vibration survives as a localised mode of the
+whole arrangement's Laplacian when the loop sits in a sheet, on the saved two-loop states; pre-register, then run.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

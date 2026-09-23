@@ -33,6 +33,15 @@ Read it before `CLAUDE.md`'s "Known state" section, which is older than this pag
   fails. What survives: rungs 0 to 2 and interference (rung 4, needs a dynamical rule). **Waiting on her:**
   whether Part V of the public document is restated as identical-particle symmetry, or the hypothesis is
   reformulated over histories (a different claim). Do not build the GHZ arrangement; it would add nothing.
+- **She then asked how else the quantum predictions could be tested, and said proceed.** [Hardy01] and
+  [Gorard20] were read in part and recorded; `docs/design/amplitude_rule_brief.md` states the gap exactly
+  (positive weights against complex amplitudes on the same versions), the exact bridge (a loop's vibrations
+  are the Fourier modes of its versions; a loop of four carries only signs under the side rule, a loop of
+  eight the quarter-turn phases), and **a proposed rule for her decision under S1**: amplitudes on a loop's
+  points evolving by its Laplacian, which is Hardy's fifth axiom adopted as a postulate and puts quantum
+  mechanics in rather than deriving it. The interference test is drafted there. **Ready without any
+  decision:** whether a loop's vibration survives as a localised mode when the loop sits in a sheet (the
+  brief's section 5, on the saved two-loop states); pre-register with her prediction, then run.
 - **Rented compute** exists as code and nothing else: `terraform/`, `Dockerfile`, `docker/run.sh`,
   `.github/workflows/{deploy_manual,run_simulation}.yml`, following SideNerdApps conventions (AWS Batch on
   Fargate, spot off by arithmetic). **Nothing applied; account ids are `000000000000` on purpose.** The real
