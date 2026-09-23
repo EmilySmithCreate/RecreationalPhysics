@@ -1,10 +1,7 @@
 # Draft reply to Carlo Trugenberger (not sent)
 
 Drafted 2026-09-22 for Emily to send if she chooses; revised the same night after she asked that it be
-short, in his words, and useful to him. Attach three files: `docs/figures/for_authors_torus_vs_tube.png`
-(picture 1), `docs/figures/equilibrium_curves.png` (picture 2), and `docs/outreach/exact_benchmark_n18.md`
-(the table; paste it into the mail or attach it as a PDF). Check the repository is public before sending
-the zip link.
+short, in his words, and useful to him. Everything to attach is copied into `docs/outreach/for_carlo_2026-09-22/` with the names the letter uses (picture 1, picture 2, the table), plus the letter as plain text. The repository is public, so the zip link works.
 
 ---
 
