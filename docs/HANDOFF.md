@@ -5,6 +5,7 @@ Read it before `CLAUDE.md`'s "Known state" section, which is older than this pag
 
 ## 0. Newest first: 23 September, morning
 
+- **Outreach letters reviewed (23 September, afternoon):** `docs/outreach/outreach_letters_2026-09-23.md` reviews Emily's seven draft cold emails against each recipient's 2024 to 2026 work and the repo's record, adds two UVA people the list was missing (Vucelja for sampling, Vaman for emergent gravity), and holds the refined letters. It recommends sending the existing Trugenberger reply first and not the contextuality follow-up.
 - **T13 at N = 196 is read (PREREGISTRATION T13, "Reading at N = 196"): NO VERDICT, one size of three.**
   Protocol P (his protocol copied): hysteresis 0.159, ascent jump in 3 of 4 replicas. Protocol E from the melt:
   gate passed, smooth, no jump. E from the torus: 0 round trips, not interpreted. Three amendments to T13 were
