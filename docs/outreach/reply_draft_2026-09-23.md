@@ -8,14 +8,16 @@ hypothesis, the loop or the public pages, and his email stays private.
 
 ---
 
-**Subject:** Re: Reproducing your model: your postscript reproduced at N = 196, pictures attached, and one question about Fig. 3
+**Subject:** Re: Reproducing your model: your postscript reproduced at N = 196, pictures attached, and a question about the coefficient of your local term
 
 Dear Carlo,
 
 Thank you for the reply and for the postscript, which turned out to be exactly what our runs show. I
-should say plainly what I am: a software engineer doing this as a hobby, keeping to the reproduction
-of your model, where I can be useful to you. Pictures are attached this time rather than links, and my
-home-made words are translated into yours below.
+should say plainly what I am: a software engineer doing this as a hobby. What I can offer you is an
+exact benchmark for your new code, an independent reproduction with the numbers, and cheap rented
+compute for the large-size runs you have said are hard to obtain; what I would like from you is one
+answer about a coefficient, at the end of this letter. Pictures are attached this time rather than
+links, and my home-made words are translated into yours below.
 
 **Your postscript, at N = 196 (p = 7).** Two protocols have finished at this size, on the full
 Hamiltonian with only the hard-core restriction (picture 4). The first is your procedure as you
@@ -63,17 +65,26 @@ sampling the same ensemble should land on those numbers, and ours does to 0.03 %
 every result file can be downloaded as one zip without a GitHub account:
 https://github.com/EmilySmithCreate/RecreationalPhysics/archive/refs/heads/main.zip
 
-**One observation about the 4 × L torus, offered in case it touches your allotropes.** With the local
-term's coefficient raised to 1.25 and g = 1.5, the 4 × L torus is metastable: it sits for thousands of
-sweeps and then opens into the lattice torus, releasing exactly 1 per vertex. In almost every run one
-column stays curled: a 4-cycle whose four edges still carry three squares, at 4, 9 or 14 units above
-the lattice depending on how many neighbouring edges keep a third square, and it never anneals away at
-this coupling. If that object is close to what you call an allotrope, I would be glad to know; if it is
-not, please ignore this paragraph.
-
 On my second question, sorry for the confusion: I was asking whether anyone had measured how the
 transition moves with N, since the curves in Fig. 8a for N = 100 to 200 do not lie on top of one
 another. Your answer, that no finite-size scaling has been derived, answers it.
+
+**The question I most want to ask you.** At the coefficient of your Eq. (22) exactly, the flat lattice
+torus, the 4 × L lattice torus and the 4-cube all have energy zero: the global and local terms cancel,
+as the review says of the denser configurations. The sizes you recommend, N = 4p², happen to be exactly
+the sizes at which neither the 4 × L torus nor the 4-cube can exist, which I take to be why the ground
+state is unique there. At other sizes, with the coefficient of the local term raised by a quarter, the
+4 × L torus is metastable: every single switch out of it costs 12, it sits for thousands of sweeps at
+g = 1.5, then a front runs along it and it opens into the flat torus, releasing exactly 4(λ − 1) = 1 per
+vertex, and in nearly every run one column stays curled, at 4, 9 or 14 units above the flat torus, and
+never anneals away. So inside your Hamiltonian, a hair above your coefficient, there is a sharp,
+front-driven change from one ordered phase to another, with a latent heat and a leftover, and it is a
+different transition from the one in your Fig. 3. My question is whether it is yours: **is the
+coefficient of the local term fixed at exactly 1 in your programme, or is it effective and free to
+move? And is the degeneracy at exactly 1 a nuisance you remove by the choice of N, or physics?** If the
+coefficient may sit above 1, I would like to run this change at your sizes and to your specification,
+alongside the finite-size study of the random-to-lattice transition, on rented compute that costs a few
+dollars a size.
 
 With thanks, and with real appreciation for your time,
 
@@ -97,8 +108,21 @@ Read this before sending. If any line is not something you would say yourself, c
 - **The vocabulary paragraph** is the 22 September content compressed: his words for ours, the cap
   admission, the 14-vertex clarification. Picture 1 is the one that shows the tube.
 - **The benchmark table** is unchanged: a check that costs him nothing.
-- **The allotrope paragraph** is optional and is the only new thing that touches our own track. It is
-  about his concept applied to his model, not about the hypothesis, and it is phrased so that "ignore
-  this" is a fine answer. Cut it if you would rather keep the first exchange purely to reproduction.
-- **Not in the letter:** anything about the hypothesis, the loop, rung 0 or the public pages. His email
-  is private and is paraphrased in `correspondence_2026-09-22_trugenberger.md`; never quote it publicly.
+- **The opening line** now says what we offer (a benchmark, a reproduction, compute) as well as what you
+  are, because your question was what we bring him: those three things, and one question.
+- **The closing question** is the one most likely to draw him in, because it is about a coefficient in
+  his own equation and about a degeneracy his own review states in words. Every energy in it is exact
+  and he can check them in a minute (`tests/test_cqg.py::test_four_cube_energies`,
+  `test_sheet_tube_cube_ladder`). It puts our whole problem inside his model without asking him to read
+  the hypothesis: the tube opening *is* claim 4 in his terms. Either answer helps us: "fixed at 1" means
+  our tube track is a deformation of his model and we say so everywhere; "effective" means it sits
+  inside his programme. The compute offer is real (`terraform/`, not yet applied) and is tied to the
+  problem he has called out of reach three times. It replaces the tentative allotrope paragraph.
+- **A caveat kept out of the letter, for you to know:** at N = 196 fourteen copies of the 14-vertex
+  biplane graph also have energy zero at his coefficient (14 × 14 = 196), so "unique" is not strictly
+  true even at his sizes; it holds in practice because the flat torus has vastly more labelled copies.
+  He found the 14-vertex graph confusing last time, so the letter claims only what it needs: that the
+  4 × L torus and the 4-cube cannot exist at N = 4p². Raise the biplane point only if he engages.
+- **Not in the letter:** anything about the hypothesis by name, the loop, rung 0 or the public pages.
+  His email is private and is paraphrased in `correspondence_2026-09-22_trugenberger.md`; never quote it
+  publicly.
