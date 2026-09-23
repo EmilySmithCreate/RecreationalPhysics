@@ -1,0 +1,77 @@
+# Terraform for the batch-compute stack, in the shape SideNerdApps uses: manual only, dry-run by
+# default, OIDC into the target account, workspaces rather than tfvars.
+name: deploy_manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "dry-run plans and stops; deploy applies"
+        type: choice
+        options: [dry-run, deploy]
+        default: dry-run
+      environment:
+        description: "Terraform workspace"
+        type: choice
+        options: [dev, prod]
+        default: dev
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      AWS_REGION: us-east-1
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::968208857824:role/github_actions
+          aws-region: us-east-1
+          role-duration-seconds: 3600
+
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: 1.7.5
+
+      # TF_WORKSPACE is deliberately not set at job level: it makes init hang when the workspace
+      # does not exist yet. It is set per step below, as in SideNerdApps.
+      - name: init
+        working-directory: terraform
+        run: terraform init -input=false
+
+      - name: select or create the workspace
+        working-directory: terraform
+        run: |
+          terraform workspace select "${{ inputs.environment }}" \
+            || terraform workspace new "${{ inputs.environment }}"
+          test "$(terraform workspace show)" = "${{ inputs.environment }}"
+
+      - name: validate
+        working-directory: terraform
+        run: terraform validate
+
+      - name: plan
+        working-directory: terraform
+        env:
+          TF_WORKSPACE: ${{ inputs.environment }}
+        run: terraform plan -input=false -out=my.tfplan
+
+      - name: show the plan
+        working-directory: terraform
+        env:
+          TF_WORKSPACE: ${{ inputs.environment }}
+        run: terraform show -no-color my.tfplan
+
+      - name: apply
+        if: ${{ inputs.action == 'deploy' }}
+        working-directory: terraform
+        env:
+          TF_WORKSPACE: ${{ inputs.environment }}
+        run: terraform apply -input=false -auto-approve my.tfplan

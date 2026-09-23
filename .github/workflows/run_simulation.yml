@@ -1,0 +1,92 @@
+# Build the runner image and submit one config to AWS Batch.
+#
+# This does not wait for the job and does not commit anything. A finished run lands in the results
+# bucket; a person downloads it, checks it, and commits it. That is on purpose: rule 5 says results
+# are append-only and every one has a config behind it, and a robot that commits its own output is
+# how that stops being checkable.
+name: run_simulation
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        description: "script in scripts/, without the .py"
+        type: choice
+        options:
+          - run_cqg_sweep
+          - run_t6_tempering
+          - run_cqg_tempering
+          - run_sealed_tube
+          - run_tube_decay
+          - run_front_law
+        default: run_cqg_sweep
+      config:
+        description: "config in configs/, without the .json"
+        type: string
+        required: true
+      environment:
+        description: "Terraform workspace the stack was deployed to"
+        type: choice
+        options: [dev, prod]
+        default: dev
+      build_image:
+        description: "rebuild and push the image first"
+        type: boolean
+        default: true
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_REGION: us-east-1
+      SUFFIX: ${{ inputs.environment == 'prod' && '' || '-dev' }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: the config must exist, before anything is billed
+        run: test -f "configs/${{ inputs.config }}.json" && test -f "scripts/${{ inputs.runner }}.py"
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::968208857824:role/github_actions
+          aws-region: us-east-1
+          role-duration-seconds: 3600
+
+      - name: into the target account
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/ci_cd
+          aws-region: us-east-1
+          role-chaining: true
+
+      - uses: aws-actions/amazon-ecr-login@v2
+        id: ecr
+
+      - name: build and push
+        if: ${{ inputs.build_image }}
+        env:
+          REGISTRY: ${{ steps.ecr.outputs.registry }}
+        run: |
+          IMAGE="$REGISTRY/recphys$SUFFIX"
+          docker build -t "$IMAGE:latest" -t "$IMAGE:${GITHUB_SHA::12}" .
+          docker push "$IMAGE:latest"
+          docker push "$IMAGE:${GITHUB_SHA::12}"
+
+      - name: submit
+        run: |
+          ID=$(aws batch submit-job \
+            --job-name "${{ inputs.config }}-${GITHUB_SHA::7}" \
+            --job-queue "recphys$SUFFIX" \
+            --job-definition "recphys$SUFFIX-run-config" \
+            --parameters runner=${{ inputs.runner }},config=${{ inputs.config }} \
+            --query jobId --output text)
+          echo "submitted $ID"
+          echo "### submitted \`${{ inputs.config }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "job id \`$ID\`, queue \`recphys$SUFFIX\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "results will appear under \`s3://recphys-results$SUFFIX/${{ inputs.config }}/\`" >> "$GITHUB_STEP_SUMMARY"

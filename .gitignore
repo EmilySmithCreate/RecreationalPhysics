@@ -8,6 +8,13 @@ requirements.lock.tmp
 *.partial
 .DS_Store
 
+# Terraform. The provider lock file (.terraform.lock.hcl) is committed on purpose, as in
+# SideNerdApps: it is what pins the provider version for everyone.
+terraform/.terraform/
+*.tfplan
+*.tfstate
+*.tfstate.*
+
 # Papers downloaded for reading. Third-party copyright: kept locally, never committed.
 # What we take from them lives in REFERENCES.bib notes and ASSUMPTIONS.md, in our own words.
 docs/reading/*.pdf
