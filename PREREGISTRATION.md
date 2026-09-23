@@ -614,6 +614,19 @@ Against that: reading per replica is the reading that returns "jump" at N = 196,
 
 **What it returns at N = 196:** three of four ascent replicas jump, so protocol P shows an ascent jump, and with hysteresis already met (0.159) prediction 2 is met in full at this size rather than in substance only. Nothing follows for the verdict, which still needs two or more sizes.
 
+
+#### Reading at N = 196, 484 and 676, 23 September 2026, evening: INCONCLUSIVE — protocol E fails its gate at 484 and 676
+
+All nine jobs finished; `python scripts/analyse_t13.py 196 484 676`, under the three enacted amendments. **The verdict is INCONCLUSIVE by the rule written in advance ("including E failing its gates at 484 and 676").** Both verdicts that name a mechanism need E read at two or more sizes, and E can be read at one.
+
+**Protocol P, his procedure: the lattice branch at every size, growing.** Hysteresis 0.159, 0.292, 0.342 at N = 196, 484, 676, each largest at g = 3.164; ascent jump in 3, 4 and 4 of 4 replicas (replica mean 0.211, 0.321, 0.401). The heating leg leaves φ = 1 at g ≈ 3.3 to 3.5 at every size, while the equilibrium crossover moves down (φ = 0.5 at g ≈ 5.9, 4.3, 3.9). **So the lattice breaks at a coupling that does not move with N, and the curve it falls onto is lower at each larger size, which is why the jump grows.** Prediction 3 is met on size and fails on position: the ascent jump is larger at 676 than at 196, but it does not move to higher g. Descent agrees with the melt-start tempering curve to 0.002 or better at every coupling above g ≈ 3.3 (interpolated between rungs).
+
+**Protocol E: fails its gate at 484 and 676, not interpreted.** Round trips 0 in every replica from both starts. Descriptively, and not as a result: the melt start and the torus start agree to 0.001 in φ at every rung above g ≈ 3.2 (484) and 3.1 (676) and never meet below it, the torus start staying at φ ≈ 1 and the melt start rising smoothly to 0.95. At N = 196 the melt start passes (reading above) and the torus start does not.
+
+**Predictions.** 1: the crossovers came out 5.9, 4.3 and 3.9 against the predicted 5.4, 4.3 and 3.9 ± 0.5, all inside the band; start-independence could not be shown at any size below g ≈ 3.2. 2: met at all three sizes. 3: met on size, fails on position.
+
+**What this leaves.** Above g ≈ 3.2, four ways of producing the curve (both legs of P, both starts of E) agree at every size, so there is no hysteresis there. Below it, no sampler used here reaches equilibrium at 484 or 676, and even at 196 the lattice start never unlocked. Whether the lattice or the defected melt branch is the equilibrium state in that window is the open question, and it is his question about hysteresis. The two ways to answer it are a move that mixes (the neighbourhood swap of [T25] Fig. 8) or a direct comparison of the two branches' free energies; which one, if either, is the owner's decision (HANDOFF section 4).
+
 ---
 
 ## T15 rung 0. Do the versions exist where the hypothesis says? (written 2026-09-23, before the run)
@@ -827,3 +840,4 @@ Which rule combines amplitudes: both share the operator. Anything dynamical: an 
 **Not claimed.** Anything dynamical. That no combining rule could rescue the picture: the wave rule was held pending this, and what this says is that the loop alone is not the object such a rule would act on. Anything about real particles. `pr_best` is "inf" in the file where an eigenspace has no weight on the loops at all; it is a faithful output, not an error.
 
 **A process fault, owned.** The commit that timestamped this section (36924d1) was made with one test failing. The test assumed an 8 × 8 sheet keeps every mode below 0.5 on eight points, which is false for so small and so symmetric a sheet (a degenerate eigenspace of dimension d can put d · 8/64 on them), and the tail of the test output hid the failure. The pre-registered gate is at 12 × 12, where the value is 0.444, and it passed. The test was corrected in the commit that carries this reading; nothing in the definitions or the data changed.
+
