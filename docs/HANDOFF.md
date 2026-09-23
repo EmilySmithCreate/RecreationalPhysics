@@ -93,7 +93,14 @@ Nothing is waiting on her. The text below is kept as the record of what was put 
 
 ## 5. What is running or queued
 
-- Nothing. All runs of 22 September are complete and committed.
+- **T13 (PREREGISTRATION.md, written 2026-09-22 night, before launch): nine jobs, launched the same night.**
+  Protocol P (his protocol copied; `scripts/run_cqg_sweep.py`): `t13_seq_n196`, `t13_seq_n484`, `t13_seq_n676`.
+  Protocol E (tempering with histograms; `scripts/run_t6_tempering.py`): `t13_temper_n{196,484,676}_{melt,torus}`.
+  Eight started at once; `t13_temper_n676_torus` is chained to start when `t13_seq_n196` finishes.
+  Progress: line counts of `results/t13_*.partial`. Expected wall time: 2 h (196) to about 7 h (484, 676 tempering).
+  When a `results/t13_*.csv` exists (no `.partial`), read it against PREREGISTRATION T13's definitions;
+  `scripts/analyse_t6_phi.py <name>` gives the two-hump reading for the E runs. Do not interpret an E size whose
+  `round_trips` is below its gate (5 at 196, 3 at 484 and 676); report it as not converged.
 
 - `t6c_lam{1,125,15}_n{64,100}` (six jobs, slow): T6 λ ≥ 1 reruns with a trimmed 14-rung ladder. When
   `results/t6c_*.csv` exist (no `.partial`), run `python scripts/analyse_t6_phi.py t6c_lam1_n64` etc. If gate 4

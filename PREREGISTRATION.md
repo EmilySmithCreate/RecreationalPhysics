@@ -504,3 +504,54 @@ description does capture is not an artefact of one microscopic rule. The dynamic
 at all.
 
 The draft for the parked menu study is in `docs/parked/PREREGISTRATION_menu_study.md`.
+
+---
+
+## T13. The λ = 1 transition at N = 4p²: an equilibrium jump, or a lattice branch surviving on ascent? (written 2026-09-22, night, before the runs)
+
+### Why this test, now
+
+The model's author replied to our note on 2026-09-22 (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`; private). His current view of the transition at λ = 1 is a **hybrid** one: two continuous branches with a jump between them, seen in his own runs at N = 1024 under a protocol of cold ascent, each coupling starting from the previous, smaller one's final state, with 240 sweeps of warm-up and 10,000 sweeps per coupling. Our equilibrium runs at N ≤ 160 (ASSUMPTIONS O10, O12, O17) show no jump in either direction. Two readings are open and this test separates them: **(a)** the jump is an equilibrium discontinuity that appears only at sizes above ours; **(b)** the jump is the lattice branch surviving past the transition on ascent and then collapsing, which is metastability of the protocol and not a property of the equilibrium curve. He also advised N = 4p² with p prime, where he states the ground state is unique; those are the sizes used.
+
+### What will be run
+
+| Choice | Value | Why |
+|---|---|---|
+| Model | λ = 1, no cap, hard-core rule, Metropolis | His model as he describes it: the full Hamiltonian with the hard-core restriction always imposed. The "cap" is not used anywhere in this test. |
+| Sizes | N = 196, 484, 676 (14 × 14, 22 × 22, 26 × 26; p = 7, 11, 13) | His form N = 4p². 1024 is not of that form and is beyond one laptop for tempering; 676 is as far as the budget allows. |
+| **Protocol P** (copy of his) | one chain per replica; 40 couplings geometric from g = 12.0 to 1.5 (5.3 % apart); cold descent from a melted torus, then cold ascent from a fresh lattice torus (`heat_start: torus`); 240 sweeps warm-up and 10,000 measured sweeps per coupling; 4 replicas | As close to his stated protocol as his description allows. Not known and therefore assumed: his coupling range (ours brackets the crossover generously), his move set, and that his ascent starts from the lattice torus. |
+| **Protocol E** (equilibrium) | parallel tempering by T6's runner, `scripts/run_t6_tempering.py`, which writes the (S, X) histograms (its meta file names T6's pre-registration because the runner is T6's, unchanged; the config's `_purpose` names this section); ladders 9.0 → 2.2 in 20 rungs (196), 7.5 → 2.0 in 30 (484), 7.0 → 2.0 in 36 (676), spacings 7.2, 4.5, 3.5 %; 4 sweeps per round; 5,000 + 25,000 rounds (196), 8,000 + 32,000 (484, 676); **two starts**, every copy melted and every copy the lattice torus; 4, 3 and 2 replicas per start | Rung spacing shrinks as 1/√N so that swaps keep being accepted. The two starts are the equilibrium check: a curve that depends on where it started is not an equilibrium curve. |
+| Configs | `configs/t13_seq_n{196,484,676}.json`, `configs/t13_temper_n{196,484,676}_{melt,torus}.json` | Seeds inside. |
+
+### Observables
+
+φ(g) per leg (P) and per start (E); for P the ascent-minus-descent difference at each coupling; for E the melt-minus-torus difference and the spread between replicas; the (S, X) histograms per coupling that the tempering runner writes, for T6's two-hump reading; `swap_rate`, `round_trips`, `tau_int`, `acceptance`; the connectivity columns.
+
+### Definitions, fixed now
+
+- **A jump** in a curve: φ changes by more than **0.25** between two neighbouring couplings that are less than 12 % apart in g. (Our smooth N = 160 curve never moves more than about 0.1 between neighbours at that spacing; Fig. 3 of the 2025 review moves about 0.45 within 7 %.)
+- **Hysteresis** (P): at some coupling the ascent φ exceeds the descent φ by more than **0.15**.
+- **Equilibrium agreement** (E): the two starts agree within **0.03** in φ at every rung, and replicas agree within 0.03 in the crossover region (0.3 < φ < 0.9).
+- **An equilibrium jump**: E shows a jump at the same rung (± one rung) from both starts, with equilibrium agreement, **and** the (S, X) histogram at the nearest rung shows two humps by T6's reading (`scripts/analyse_t6_phi.py`).
+- **A metastable branch**: P shows hysteresis and a jump on ascent, while E shows equilibrium agreement and no jump.
+
+### Predictions, written before looking (ours, unverified)
+
+1. **E is smooth and start-independent at every size.** Both starts agree within 0.03 at every rung at N = 196, as they did at 160, and we predict the same at 484 and 676. The crossover (φ = 0.5) moves to lower g with size, roughly as ln N: about 5.4, 4.3 and 3.9 ± 0.5 at 196, 484 and 676, from the capped first look's drift line (ASSUMPTIONS section D; a rough guide, the uncapped curve sits slightly higher).
+2. **P shows the lattice surviving on ascent.** Heating from the lattice torus with 240 sweeps of warm-up, the chain stays near φ = 1 past the equilibrium crossover and then collapses within a few couplings: a jump on ascent and hysteresis against descent. Descent agrees with E within 0.05 wherever the single chain still moves (g above about 3) and freezes below that, as in O10.
+3. **The ascent jump grows and moves with size:** larger at 676 than at 196, and at a higher g, because the lattice branch's metastability grows with the interface it would have to nucleate.
+
+### Gates
+
+- E: swap rates between 0.15 and 0.6 at every link; `round_trips` at least 5 per replica at 196 and at least 3 at 484 and 676 (the budget at these sizes does not reach T6's 20; the number is reported, and a size below its gate is reported as not converged and its E result is not interpreted); replica spread within 0.03 in the crossover region.
+- P: no gate; it is a protocol whose non-equilibrium behaviour, if any, is the thing being looked for. `acceptance` and `tau_int` are reported for every row.
+
+### Verdicts
+
+- **EQUILIBRIUM JUMP** — E meets the equilibrium-jump definition at two or more sizes that pass the gates. Consequence: the author's hybrid reading is reproduced at equilibrium; T6's λ ≥ 1 verdict is reopened at these sizes, and the latent-heat bound is re-measured there.
+- **METASTABLE BRANCH** — P shows hysteresis and an ascent jump at two or more sizes, and E shows equilibrium agreement and no jump at those sizes. Consequence: the jump in the 2025 figure and in the 1024-node runs is a property of cold ascent with a short warm-up, not of the equilibrium curve; T6's bound on the latent heat is extended to N = 676 and reported.
+- **INCONCLUSIVE** — anything else, including E failing its gates at 484 and 676, or P showing no jump anywhere (in which case his protocol as we copied it does not reproduce his figure, and that is a question back to him rather than a result).
+
+### What this cannot show
+
+Anything at N = 1024 or beyond; the critical scaling that would make a jump "hybrid" rather than first order (no exponents are measured); anything about the hypothesis's own route (the tube), which is not touched by this test; and anything about his code, which we have not seen.
