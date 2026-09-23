@@ -250,6 +250,22 @@ protocol of T14 and is the next thing on this track.
 
 *Added the same evening:* the author's hypothesis that the leftover is dark matter (VISION Update 16). A first look (ASSUMPTIONS O18) says a sparse sprinkle of scraps could be enough, because matter thins out more slowly than radiation; the needed share at the conversion is about 0.7 eV divided by the starting temperature. So the test should also measure **how the leftover scales with the number of seeds**, which is what would turn a seed density into a dark-matter amount.
 
+## T15. Quantum behaviour from counting, up to Bell  ☐
+
+**Added 2026-09-22** (the author's request, after VISION Update 17). Brief: `docs/design/quantum_loop_design.md`.
+A ladder: (0) do the versions exist where the hypothesis says (renaming counts and spectra of the saved
+T10 leftovers, a torus, a melt; exact); (1) do the loop's long-run time-fractions equal the counts (exact
+at N = 16, 18 in the unlabelled ensemble, then a run with the per-configuration correction of T10); (2)
+swap-invariance and additivity of outcome probabilities when a detector defect attaches to a small loop
+(exact); (3) the bar: two eight-point loops sharing one link across a sheet, CHSH from the classes the
+joint attachments split the namings into, with the fork written first (S ≤ 2 fails, 2 < S ≤ 2√2 passes,
+S > 2√2 fails the other way), preceded by the design task of whether such a valid arrangement exists at all.
+Interference is not designed: it would need a dynamical rule and a VISION decision. Pre-register each rung.
+
+Accept, rung by rung: 0, a remnant in a sheet has more than one renaming and a melt exactly one; 1, counts
+and time-fractions agree within sampling error; 2, swap-related outcomes are equiprobable; 3, S computed
+and reported whichever side of 2 it falls.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?
