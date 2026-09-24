@@ -1120,3 +1120,31 @@ Anything quantum. It checks that "probability = share of the versions" is what a
 #### Reading, 24 September 2026: BETWEEN
 
 `python scripts/analyse_t17.py` (tests in `tests/test_t17.py`). Gate 1: energy exact in all 80 runs. Gate 2: every run at every k converted. Leftovers per tube (pieces at d = 1), mean over twenty: **1.10, 2.15, 2.50, 3.40** at k = 1, 2, 4, 8 (pieces of exactly four: 1.05, 1.80, 2.25, 2.35). **Slope 0.288 ± 0.039 leftovers per extra seed: BETWEEN.** The owner's option (a), ONE PER SEED, holds at k = 2 and fails beyond it; ours, leaning ONE PER TUBE, also fails: the count grows with the number of seeds. Stated plainly: the slope is about one standard error above the 0.25 boundary with ONE PER TUBE, and a straight line is a poor description of means that rise by 1.05, then 0.35, then 0.90; the growth looks less than proportional, and whether extra leftovers anneal or merge when fronts meet was not measured. "Mean near 1" in ONE PER TUBE's definition had no number; the verdict is read on the slope, as the verdict table states, and the means are given so the other reading can be checked (they are not near 1 beyond k = 1, so it gives the same answer).
+
+## T19. Does a leftover move, stay, or anneal away? (series papers 2 and 5; written 2026-09-24, before the runs)
+
+### Why
+
+Paper 5 asks whether leftovers pull on each other. If a leftover never moves, a pull cannot be seen by watching two of them and must be measured by holding them at chosen separations. Paper 2 needs to know whether the scrap lasts: in the owner's picture it is dark matter, which must be long-lived.
+
+### What will be run
+
+`scripts/run_leftover_mobility.py`, config `configs/t19_mobility.json`. Each replica makes a sheet with leftovers exactly as T17 at k = 1 (24 × 4 tube, λ = 1.25, one planted seed, cold sealed box of 2N empty demons, 30,000 sweeps); a replica not ending with exactly one leftover piece is recorded and not followed. The sheet is then run at fixed coupling g ∈ {1.0, 1.25, 1.5} for 100,000 sweeps; every 500 sweeps the vertices at d = 1 are read and the **displacement** recorded: the shortest graph distance, in the current graph, from the leftover's current vertices to those it started on. Ten replicas per g.
+
+**Disclosed:** a smoke run (two replicas, g = 1.5, 2,000 sweeps followed) checked the code: one leftover stayed in place, one annealed away between 1,500 and 2,000 sweeps.
+
+### Definitions, fixed now
+
+Per followed replica: **moved** if its displacement reaches 2 or more at any block while a leftover exists; **annealed** if, never having moved, it has no vertex at d = 1 at the end; **stayed** if, never having moved, it still exists at the end. Per g, the verdict is the outcome of more than half the followed replicas (MOVES, ANNEALS, STAYS), otherwise MIXED. At least six followed replicas per g are required; otherwise NOT READ.
+
+### Predictions
+
+The owner's pick has not been given. Options: (a) MOVES at some g; (b) ANNEALS at the warmer couplings, STAYS at the colder; (c) STAYS at every g. **Ours, unverified:** (b): STAYS at g = 1.0, ANNEALS at 1.5, MIXED at 1.25. At fixed g = 1.5 the decays of T8 mostly end at the flat torus, which says a leftover can anneal there; in T10's cold box (bath near 0.5) it survived 30,000 sweeps.
+
+### Named or interchangeable points
+
+Named. Interchangeable weighting favours the flat sheet (4N symmetries) over a sheet with one leftover (a few), so it should hasten annealing; recorded as expected, not checked.
+
+### What this cannot show
+
+How long a leftover would last at a universe's temperatures; anything about two leftovers.
