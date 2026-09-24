@@ -89,7 +89,8 @@ code and data are public.
 It is my first arXiv submission, so arXiv asks for an endorsement from someone who already publishes in the
 category, and gr-qc is yours. As I understand it, an endorsement is not a review of the results: it confirms
 that the paper is on topic for the category. Would you look at it and, if you think it belongs in gr-qc,
-endorse it? If you see anything wrong, I would of course rather hear it before it is posted.
+endorse it? The link arXiv gave me is [endorsement link; in the sent email only, kept out of this public
+repository]. If you see anything wrong, I would of course rather hear it before it is posted.
 
 **5. Allotropes.** Thank you for the example. The question I am here for is this: can a specific ordered
 arrangement, stable for a while, turn into the space around it sharply (starting at one spot, spreading as
