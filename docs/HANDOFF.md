@@ -77,6 +77,9 @@ number is carried into a claim about gravity.
   Emily pastes it into the SideNerdMarketing repository, which deploys). Version 2 carries today's corrections.
   The whole-account page (`the-loop-and-the-floor_v1.html`) is corrected to version 2 but **not published**;
   its build writes to `docs/public/site/account/` with a placeholder URL. Do not publish either without her.
+  The programme page is `docs/public/programme.html`, mirrored as the private artifact
+  https://claude.ai/artifact/JLtR2aqHmL2FghWmNZU8xW; its text source is `docs/papers/programme_draft.md`, and the
+  two are updated together.
   Every claim says whose it is; no process narration.
 
 ## 4. Waiting on Emily

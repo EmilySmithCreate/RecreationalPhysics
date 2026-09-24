@@ -1,0 +1,405 @@
+<title>A Phase-Changing Reality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground: #F2F4F7;
+  --surface: #FFFFFF;
+  --ink: #17202B;
+  --ink-2: #4A5566;
+  --ink-3: #6E7A8C;
+  --rule: #D6DCE4;
+  --accent: #2E49A6;
+  --t-measured: #007C59;
+  --t-mixed: #969037;
+  --t-exact: #1380C7;
+  --t-against: #A84811;
+  --t-author: #62488C;
+  --t-designed: #6E7A8C;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #11151B; --surface: #181E27; --ink: #E5E9EF; --ink-2: #A6B0BF; --ink-3: #7F8A9B;
+    --rule: #2A3340; --accent: #93A9FF;
+    --t-measured: #0F825E;
+    --t-mixed: #A19705;
+    --t-exact: #559AD3;
+    --t-against: #AB5200;
+    --t-author: #7F51C1;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #11151B; --surface: #181E27; --ink: #E5E9EF; --ink-2: #A6B0BF; --ink-3: #7F8A9B;
+  --rule: #2A3340; --accent: #93A9FF;
+  --t-measured: #0F825E;
+  --t-mixed: #A19705;
+  --t-exact: #559AD3;
+  --t-against: #AB5200;
+  --t-author: #7F51C1;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  padding-inline: 16px;
+  padding-block: 0 64px;
+}
+.wrap { max-width: 760px; margin: 0 auto; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+.draft-bar {
+  font-family: var(--sans); font-size: 12.5px; letter-spacing: 0.04em;
+  color: var(--ink-2); border-bottom: 1px solid var(--rule);
+  padding-block: 12px; display: flex; flex-wrap: wrap; gap: 6px 18px;
+}
+.draft-bar strong { color: var(--ink); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+
+header { padding-block: 40px 8px; display: grid; gap: 18px; }
+h1 {
+  font-size: clamp(34px, 6vw, 50px); line-height: 1.05; font-weight: 500;
+  letter-spacing: -0.01em; margin: 0; text-wrap: balance;
+}
+.dek { font-size: 20px; color: var(--ink-2); margin: 0; max-width: 60ch; }
+.byline { font-family: var(--sans); font-size: 13.5px; color: var(--ink-3); margin: 0; }
+.tube { width: 100%; max-width: 420px; height: auto; color: var(--ink-3); }
+
+h2 {
+  font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-2); margin: 0 0 14px;
+}
+section { padding-block: 28px; border-top: 1px solid var(--rule); }
+section:first-of-type { border-top: 0; }
+p { margin: 0 0 14px; max-width: 66ch; }
+
+.idea {
+  font-size: 21px; line-height: 1.55; margin: 0;
+  padding-left: 20px; border-left: 3px solid var(--t-author);
+}
+.idea-src { font-family: var(--sans); font-size: 13px; color: var(--ink-3); margin-top: 10px; padding-left: 23px; }
+
+.key { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px 20px; margin: 0; }
+.key div { font-size: 15.5px; color: var(--ink-2); }
+.key dt { font-family: var(--sans); font-weight: 600; font-size: 13.5px; color: var(--ink); }
+.key dd { margin: 2px 0 0; }
+
+.caveat { font-style: italic; color: var(--ink-2); }
+
+/* scorecard */
+.score { list-style: none; padding: 0; margin: 18px 0 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+.score a {
+  display: grid; grid-template-columns: 26px 1fr; gap: 2px 8px; align-items: baseline;
+  text-decoration: none; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--rule); border-radius: 6px; padding: 9px 11px;
+  font-family: var(--sans); font-size: 13.5px; line-height: 1.3; height: 100%; box-sizing: border-box;
+}
+.score a:hover { border-color: var(--ink-3); }
+.score .n { font-family: var(--mono); font-size: 13px; color: var(--ink-3); grid-row: span 2; }
+.score .lbl { font-size: 12px; font-weight: 600; color: var(--ink-2); display: inline-flex; align-items: center; gap: 6px; }
+.score .lbl::before, .chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--tone); flex: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--sans); font-size: 12.5px; color: var(--ink-2); margin: 0; padding: 0; list-style: none; }
+.legend li { display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; background: var(--tone); }
+
+.t-measured, .bg-measured { --tone: var(--t-measured); }
+.t-mixed, .bg-mixed { --tone: var(--t-mixed); }
+.t-exact, .bg-exact { --tone: var(--t-exact); }
+.t-against, .bg-against { --tone: var(--t-against); }
+.t-author, .bg-author { --tone: var(--t-author); }
+.t-designed, .bg-designed { --tone: var(--t-designed); }
+
+/* pieces */
+.pieces { display: grid; gap: 14px; margin-top: 18px; }
+.piece {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 20px 22px 16px; display: grid; gap: 12px; scroll-margin-top: 16px;
+}
+.piece-head { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; align-items: baseline; }
+.piece-n { font-family: var(--mono); font-size: 15px; color: var(--ink-3); grid-row: span 2; }
+.piece h3 { font-size: 22px; line-height: 1.25; font-weight: 600; margin: 0; text-wrap: balance; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.chip {
+  font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
+  padding: 3px 10px 3px 8px; border-radius: 999px; display: inline-flex; align-items: center; gap: 7px;
+  color: var(--ink); background: var(--surface); border: 1px solid var(--rule);
+}
+.src { font-family: var(--mono); font-size: 12.5px; color: var(--ink-3); }
+.row { display: grid; grid-template-columns: 150px 1fr; gap: 4px 18px; }
+.row + .row { border-top: 1px dashed var(--rule); padding-top: 12px; }
+.row-lbl { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); padding-top: 4px; }
+.row p { margin: 0 0 8px; font-size: 17px; }
+.row p:last-child { margin-bottom: 0; }
+.ours { font-family: var(--sans); font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.num { font-family: var(--mono); font-size: 0.88em; white-space: nowrap; }
+
+.epigraph { margin: 26px 0 8px; padding: 4px 0 4px 22px; border-left: 3px solid var(--rule); }
+.epigraph blockquote { margin: 0; font-size: 22px; font-style: italic; line-height: 1.45; }
+.epigraph figcaption { font-family: var(--sans); font-size: 13px; color: var(--ink-3); margin-top: 8px; }
+
+.foot p { font-size: 17px; }
+.foot a { word-break: break-word; }
+
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .row { grid-template-columns: 1fr; }
+  .row-lbl { padding-top: 0; }
+  .piece { padding: 16px 16px 14px; }
+  .idea { font-size: 19px; padding-left: 14px; }
+  .idea-src { padding-left: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+
+<div class="wrap">
+  <div class="draft-bar">
+    <span><strong>Draft</strong> for the author's review</span>
+    <span>24 September 2026, revised the same afternoon</span>
+    <span>Not for publication</span>
+  </div>
+
+  <header>
+    <svg class="tube" viewBox="0 0 420 96" role="img" aria-label="A tube, one direction curled, opening into a flat sheet">
+      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+        <ellipse cx="18" cy="48" rx="9" ry="30"/>
+        <path d="M18 18 H132 M18 78 H132"/>
+        <path d="M46 18 a9 30 0 0 1 0 60" opacity=".55"/>
+        <path d="M74 18 a9 30 0 0 1 0 60" opacity=".55"/>
+        <path d="M102 18 a9 30 0 0 1 0 60" opacity=".55"/>
+        <path d="M132 18 a9 30 0 0 1 0 60"/>
+        <path d="M18 33 H132 M18 63 H132" opacity=".35"/>
+        <path d="M156 48 H196" />
+        <path d="M188 42 L196 48 L188 54" />
+        <path d="M222 14 L400 14 L386 82 L208 82 Z"/>
+        <g opacity=".55">
+          <path d="M253.6 14 L239.6 82 M285.2 14 L271.2 82 M316.8 14 L302.8 82 M348.4 14 L334.4 82 M380 14 L366 82"/>
+          <path d="M219.2 27.6 L397.2 27.6 M216.4 41.2 L394.4 41.2 M213.6 54.8 L391.6 54.8 M210.8 68.4 L388.8 68.4"/>
+        </g>
+      </g>
+    </svg>
+    <h1>A phase-changing reality</h1>
+    <p class="dek">The programme, and where each piece stands.</p>
+    <p class="byline">Emily Smith · Charlottesville · analysis drafted with Claude (Anthropic)</p>
+  </header>
+
+  <section>
+    <h2>The claim, in the author's words</h2>
+    <p class="idea">Our spacetime is one settled arrangement of something deeper, X: a specific, relatively stable arrangement with its own dimensions, curled where ours are open. X was stable for now, not for ever. A push started a change at one place; it spread as a front, X opened into space, and the change came out as a burp: a fixed release of energy that became the Big Bang's matter and radiation. What did not convert remained as a scrap: dark matter. Energy was conserved across the change. The rules of the two phases are their constants and do not change from one generation to the next. Inside the space that forms, black holes are regions that re-curl towards X; one that grows large enough gets the activation energy and burps a new space: the same burp, the same scrap. Every possible arrangement of what a Big Bang produces therefore gets to exist. The quantum world is the set of undetectably different versions of an arrangement, all standing at once, until an interaction makes them distinguishable.</p>
+    <p class="idea-src">The author's hypothesis</p>
+  </section>
+
+  <section>
+    <h2>Whose claim is whose</h2>
+    <dl class="key">
+      <div><dt>The author's</dt><dd>Emily Smith's hypothesis.</dd></div>
+      <div><dt>Measured</dt><dd>A pre-registered test in the public repository, with its verdict.</dd></div>
+      <div><dt>Exact</dt><dd>Arithmetic or complete enumeration.</dd></div>
+      <div><dt>Ours</dt><dd>Analysis drafted with Claude, unreviewed by a physicist.</dd></div>
+    </dl>
+    <p class="caveat" style="margin-top:16px">Nothing here has yet been read by a physicist. The author's own bar for that, S5, is not met.</p>
+  </section>
+
+  <section>
+    <h2>Where each piece stands</h2>
+    <p>The tests use one published model of emergent geometry, Trugenberger's combinatorial quantum gravity, as a toy. Space is a network; X's stand-in is a torus with one direction curled (spherical cows being unavailable); the model's local-term coefficient <span class="num">λ</span> is a knob. Only <span class="num">λ = 1</span> is his model. The torus results are at <span class="num">λ &gt; 1</span>, where the energy is no longer a curvature, so they are about a close cousin of his model and are never called combinatorial quantum gravity. Anything about gravity is tested in three dimensions only: in two, even Einstein's gravity gives no pull between masses at rest <span class="ours">(general knowledge, to verify)</span>, so no number measured in 2D is carried into a claim about gravity. <strong>A toy model can show that a mechanism is possible or impossible inside a class of models; on its own it cannot show that reality works this way.</strong> That is the author's claim, and the model is how she tests its pieces.</p>
+
+    <ul class="legend" aria-label="Status key">
+      <li class="t-measured"><span class="dot"></span><span style="color:var(--ink-2)">Measured</span></li>
+      <li class="t-mixed"><span class="dot"></span><span style="color:var(--ink-2)">Measured, inconclusive</span></li>
+      <li class="t-exact"><span class="dot"></span><span style="color:var(--ink-2)">Exact</span></li>
+      <li class="t-against"><span class="dot"></span><span style="color:var(--ink-2)">In progress: first version didn't hold</span></li>
+      <li class="t-author"><span class="dot"></span><span style="color:var(--ink-2)">The author's, untested</span></li>
+      <li class="t-designed"><span class="dot"></span><span style="color:var(--ink-2)">Designed, not yet run</span></li>
+    </ul>
+
+    <ul class="score">
+      <li><a href="#p1"><span class="n">1</span><span>Opens sharply into space</span><span class="lbl t-measured">Measured</span></a></li>
+      <li><a href="#p2"><span class="n">2</span><span>Not a fluke of one setting</span><span class="lbl t-mixed">Measured, inconclusive</span></a></li>
+      <li><a href="#p3"><span class="n">3</span><span>Only λ above 1 gives a burp</span><span class="lbl t-exact">Exact</span></a></li>
+      <li><a href="#p4"><span class="n">4</span><span>Room for the burp</span><span class="lbl t-measured">Measured</span></a></li>
+      <li><a href="#p5"><span class="n">5</span><span>The scrap: fixed size, more seeds more scrap</span><span class="lbl t-measured">Measured</span></a></li>
+      <li><a href="#p6"><span class="n">6</span><span>The scrap lasts</span><span class="lbl t-against">In progress</span></a></li>
+      <li><a href="#p7"><span class="n">7</span><span>Curve-first gravity: gravity from counting</span><span class="lbl t-against">In progress</span></a></li>
+      <li><a href="#p8"><span class="n">8</span><span>Black holes as re-curled regions</span><span class="lbl t-against">In progress</span></a></li>
+      <li><a href="#p9"><span class="n">9</span><span>Quantum from counting versions</span><span class="lbl t-against">In progress</span></a></li>
+      <li><a href="#p10"><span class="n">10</span><span>The cycle: a strange loop</span><span class="lbl t-author">The author's, untested</span></a></li>
+      <li><a href="#p11"><span class="n">11</span><span>Three directions curl together (3D)</span><span class="lbl t-exact">Exact so far</span></a></li>
+      <li><a href="#p12"><span class="n">12</span><span>Stuck patches in the published model</span><span class="lbl t-designed">Designed</span></a></li>
+    </ul>
+
+    <div class="pieces">
+
+      <article class="piece" id="p1">
+        <div class="piece-head">
+          <span class="piece-n">1</span>
+          <h3>A stable-for-now arrangement opens sharply into space</h3>
+          <div class="meta"><span class="chip bg-measured">Measured</span><span class="src">T7 · T9 · T10 · T11 · paper 1</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>At <span class="num">λ = 1.25</span> the curled torus decompactifies (its curled direction opens): it waits, starts at one place, runs as one front with the two orders side by side, releases exactly <span class="num">ε = 4(λ − 1)</span> per point, has an activation energy of exactly 12 at every size, and leaves one small relic.</p></div></div>
+        <div class="row"><div class="row-lbl">How it could be wrong</div><div><p>A slide instead of a switch; a push that grows with size. Neither happened.</p></div></div>
+      </article>
+
+      <article class="piece" id="p2">
+        <div class="piece-head">
+          <span class="piece-n">2</span>
+          <h3>It is not a fluke of one setting</h3>
+          <div class="meta"><span class="chip bg-mixed">Measured · inconclusive by the letter, for a stated reason</span><span class="src">T8</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>From <span class="num">λ = 1.05</span> to <span class="num">1.35</span> the change is stuck for now, runs as one front with the two orders side by side, and releases exactly the predicted burp at every size. It is cleanest near <span class="num">λ = 1</span> and leaves more defects as <span class="num">λ</span> grows; above <span class="num">1.35</span> the curled torus is not stuck. Waiting times follow a formula with nothing fitted over two decades; counted move by move, the first exit arrives exactly when the formula says, and about a third of exits fall back before the front takes hold, at every λ (T22).</p><p>The pre-registered verdict is inconclusive because one criterion (memoryless waits) was set too tight for thirty decays per setting.</p></div></div>
+        <div class="row"><div class="row-lbl">How it could be wrong</div><div><p>A floor below which the change stops being sharp: none found down to <span class="num">1.05</span>.</p></div></div>
+      </article>
+
+      <article class="piece" id="p3">
+        <div class="piece-head">
+          <span class="piece-n">3</span>
+          <h3>Only a coefficient above 1 gives a burp</h3>
+          <div class="meta"><span class="chip bg-exact">Exact</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>The burp per point is <span class="num">ε = 4(λ − 1)</span>: zero at <span class="num">λ = 1</span>, and below 1 the change runs the wrong way. The model's published energy has <span class="num">λ = 1</span>, the only value at which it is a curvature; the author holds that our reality has <span class="num">λ</span> above 1, about <span class="num">1.25</span> in 2D (in 3D her fully curled X is stuck only for <span class="num">1 &lt; λ &lt; 1.2</span>; piece 11).</p></div></div>
+        <div class="row"><div class="row-lbl">How it could be wrong</div><div><p>Nothing in the model can decide between the two authors; it maps what each value gives.</p></div></div>
+      </article>
+
+      <article class="piece" id="p4">
+        <div class="piece-head">
+          <span class="piece-n">4</span>
+          <h3>The new space must have room for the burp</h3>
+          <div class="meta"><span class="chip bg-measured">Measured</span><span class="src">T9 · T18</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>Sealed, the change completes only if the surroundings can absorb the burp; otherwise the new space melts. The room needed grows with the size of the space, and faster than the burp as <span class="num">λ</span> rises (<span class="num">12, 36, 72</span> stores at <span class="num">λ = 1.10, 1.25, 1.40</span>): a bigger burp is a harder birth.</p></div></div>
+        <div class="row"><div class="row-lbl">A condition to meet</div><div><p>In the author's theory melting is not real, so the burp must always have somewhere to go.</p></div></div>
+      </article>
+
+      <article class="piece" id="p5">
+        <div class="piece-head">
+          <span class="piece-n">5</span>
+          <h3>The scrap: fixed size, and more seeds make more</h3>
+          <div class="meta"><span class="chip bg-measured">Measured</span><span class="src">T10 · T17</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>One relic (the scrap) of fixed size per tube, however large, from one seed. With <span class="num">1, 2, 4, 8</span> seeds, <span class="num">1.10, 2.15, 2.50, 3.40</span> relics: more seeds, more scrap, but fewer than one each (pre-registered verdict: BETWEEN). At fixed temperature near <span class="num">λ = 1</span>, the change leaves no scrap at all.</p></div></div>
+        <div class="row"><div class="row-lbl">How it could be wrong</div><div><p>A scrap that grows with the space, or more seeds leaving no more scrap. Neither happened.</p><p>The two guesses at the exact count both missed: the author's one per seed held up to two seeds and fell short beyond; ours, one per tube, was wrong from two seeds. The truth lies between.</p></div></div>
+      </article>
+
+      <article class="piece" id="p6">
+        <div class="piece-head">
+          <span class="piece-n">6</span>
+          <h3>The scrap lasts</h3>
+          <div class="meta"><span class="chip bg-against">First version didn't hold · in progress</span><span class="src">T19</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>Held at one fixed temperature, every relic heals away in the end: within <span class="num">500</span> to <span class="num">13,000</span> sweeps at coupling <span class="num">1.25</span>, and <span class="num">4,000</span> to <span class="num">80,500</span> at <span class="num">1.0</span>. In a very cold sealed box (T10) it lasted the whole run. The colder, the longer it lasts.</p></div></div>
+        <div class="row"><div class="row-lbl">Next</div><div><p>Reality cools as it expands, so the right test is a race: does the scrap freeze in before it heals? Cosmology calls this freeze-out <span class="ours">(ours, general knowledge)</span>. Cool the box on a schedule after the burp and count the survivors. It fails if the scrap heals at every cooling speed.</p></div></div>
+      </article>
+
+      <article class="piece" id="p7">
+        <div class="piece-head">
+          <span class="piece-n">7</span>
+          <h3>Gravity from counting what we cannot see: curve-first gravity</h3>
+          <div class="meta"><span class="chip bg-against">First version didn't hold · in progress</span><span class="src">O22 · O32</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>Tested so far only with space frozen. With the wiring held fixed, two relics exert no pull on each other through energy (exact), and with points interchangeable, counting does not pull them together either (it slightly prefers them exactly opposite).</p><p><span class="ours">Ours</span> Frozen space cannot bend, so nothing can carry a pull. In Einstein's gravity too, masses pull through the bending of the space between them.</p><p><strong>The author's position: it is not a wish.</strong> Gravity is a mathematical result of some local degrees of freedom being interchangeable and unobserved from our large-scale view of reality. Cost and count can both act, as the two halves of one free energy: refolding costs energy, counting favours it, and it happens where enough energy is packed in to pay. In her framing, curved space moves matter: space curves using energy that matter provides, and the three space directions curl together, never one alone. Published relatives of gravity from counting: Jacobson (1995) and Verlinde (2011) <span class="ours">(general knowledge, not read by us)</span>.</p><p><strong>Curve-first gravity</strong> (the author's term): space has its own drive to curve, and matter supplies the energy that starts the curve rather than causing it. Gravity belongs to the spacetime phase, not to X's rules, and the barrier X sits behind is in F, not in gravitational energy. It differs from general relativity in the cause, and must agree with it wherever general relativity has been measured (claim 2).</p></div></div>
+        <div class="row"><div class="row-lbl">Next</div><div><p><strong>In her terms: does curved space move matter?</strong> The real case: space free to bend, relics free to move, and points interchangeable, measuring the average pull at each separation (the standard name is the potential of mean force). In the model that needs a sheet warm enough to rearrange but not so warm that it melts (a cold sheet accepts no moves at all), so the first job is to find that window.</p><p><span class="ours">Caution</span> The model's space is two-dimensional, and in two space dimensions even Einstein's gravity gives no pull between masses at rest (general knowledge, not read by us, to verify). This model may be the wrong place to see a pull even if the idea is right. <strong>Decided: the pull is tested in three dimensions (piece 11), never read from 2D.</strong></p><p>What would earn the name gravity: a pull that attracts, grows with the energy present, is the same for every kind of relic, and in 3D weakens with distance roughly as 1/r².</p></div></div>
+      </article>
+
+      <article class="piece" id="p8">
+        <div class="piece-head">
+          <span class="piece-n">8</span>
+          <h3>Black holes as re-curled regions</h3>
+          <div class="meta"><span class="chip bg-against">First version didn't hold · in progress</span><span class="src">O20 · T21</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div><p>Energy spread evenly through a sealed sheet melts it rather than folding it, with named points and, at 64 points where complete folds exist, with interchangeable points too; at 36 points, a fragile lean towards folding.</p><p><strong>The author's position:</strong> the melt is not a real phase with any stability, so melting briefly is fine as long as the region folds soon after. The melt can be the barrier between a new space and the black hole that birthed it, closing until the next 12 is available.</p></div></div>
+        <div class="row"><div class="row-lbl">Next</div><div><p>A black hole is not energy spread evenly; it is energy packed into one place. The untested case is a local push into cold surroundings (the local-spark protocol, still to be built). It fails if a local push also melts rather than folds.</p><p>Second test, in the author's terms: in the model a melt lasts as long as its energy stays, so let the energy leak away at several speeds and see whether the melt folds before it flattens. It fails if every melt ends flat.</p></div></div>
+      </article>
+
+      <figure class="epigraph">
+        <blockquote>"But there is only one you, and only one system identical quantum mechanically to your cat Emily."</blockquote>
+        <figcaption>Lee Smolin, <cite>A real ensemble interpretation of quantum mechanics</cite> (2011)</figcaption>
+      </figure>
+
+      <article class="piece" id="p9">
+        <div class="piece-head">
+          <span class="piece-n">9</span>
+          <h3>Quantum behaviour from counting versions</h3>
+          <div class="meta"><span class="chip bg-against">First version didn't hold · in progress</span><span class="src">T15 rungs 0b · 1 · 3a</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div>
+          <p><strong>The author's framing: counting was a probe, not the expected mechanism.</strong> It was tried because its mathematics was already in hand (the model's own renaming counts), not because she expected it to work.</p>
+          <p>Counting alone can never beat Bell's inequality, for any fixed arrangement (argument, rung 3a), and the model's small loop is not a resonator inside the sheet (rung 0b). The next rung passed: with interchangeable points, time spent in each arrangement equals its share of the count (rung 1, validation).</p>
+          <p><span class="ours">Ours</span> Why counting falls short: a count gives every version a positive weight, and positive weights only add, so two versions can never cancel. Quantum mechanics needs cancelling (interference), which is what a phase supplies. Smolin's real-ensemble quantum mechanics, the closest published relative, has it: his versions are real copies that affect one another, and they carry a phase.</p>
+        </div></div>
+        <div class="row"><div class="row-lbl">Next</div><div><p><strong>The author's position: versions do not affect one another; they are not different in the first place.</strong> What is needed is a rule under which versions can cancel one another. The author expects it to come from the loop (piece 10) and has not yet chosen one. It fails if the rule cannot reproduce the Bell violations that experiments measure.</p><p><span class="ours">Ours</span> The most concrete candidate we know of (general knowledge, not read by us) is the exchange phase. Swapping two identical things gives back the same state up to a sign: −1 for fermions, and Pauli exclusion is two swapped versions cancelling. In two dimensions a swap can give any phase at all (anyons), because the swap traces a loop that cannot be undone. The phase belongs to the swap, not to either version. Whether this gets past rung 3a's argument is not known.</p></div></div>
+      </article>
+
+      <article class="piece" id="p10">
+        <div class="piece-head">
+          <span class="piece-n">10</span>
+          <h3>The cycle: new spaces from black holes, every arrangement existing</h3>
+          <div class="meta"><span class="chip bg-author">The author's · untestable in the model</span><span class="src">a strange loop, after Hofstadter</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div>
+          <p>The network model used here (Trugenberger's, not Smolin's) has no black holes and no expansion. It can map the ingredients (how stuck X is, the push, the burp, the room, the scrap), not count offspring.</p>
+          <p><strong>The author's position: versions are not copies</strong>, neither the renamings of one arrangement nor identical arrangements in other spacetimes. So Smolin's route to quantum behaviour is not hers. She expects the missing rule of piece 9 to come from the loop itself: something about a strange loop that his picture does not use.</p>
+        </div></div>
+        <div class="row"><div class="row-lbl">How it could be wrong</div><div>
+          <p>Smolin's argument: if a large object had copies, it would behave quantum-mechanically. The author's answer is that other spacetimes' arrangements do not count as copies.</p>
+          <p><span class="ours">Ours</span> The counting already makes large objects classical without copies: a complicated arrangement has exactly one version (rung 0: a melt, and a sheet with three different defects, each have one).</p>
+        </div></div>
+      </article>
+
+      <article class="piece" id="p11">
+        <div class="piece-head">
+          <span class="piece-n">11</span>
+          <h3>The three space directions curl together</h3>
+          <div class="meta"><span class="chip bg-exact">Exact so far · reproduction gate running</span><span class="src">O40 · O41 · Gate C</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div>
+          <p><strong>The author's rule:</strong> the three directions are intertwined; they curl together and open together, so one activation releases the whole burp.</p>
+          <p>In 2D the rule cannot be tested: a gas of fully curled pieces is not stuck at any <span class="num">λ &gt; 1</span> (exact, O40). In 3D, with six links per point (exact, O41), the fully curled state, the 6-cube, is stuck for now only for <span class="num">1 &lt; λ &lt; 1.2</span>, and each curled direction holds a third of the burp. Like the 2D torus, this window lies off <span class="num">λ = 1</span>, so results there are about a close cousin of the published model.</p>
+        </div></div>
+        <div class="row"><div class="row-lbl">Next</div><div>
+          <p>First, reproduce the published 3D curve (Trugenberger 2022, Fig. 3; 500 points; <span class="num">λ = 1</span>) before any 3D result is read. Then: does one push open all three directions at once, and does a curved region pull a relic towards it?</p>
+          <p>It fails if the directions open one at a time, or if no pull appears.</p>
+        </div></div>
+      </article>
+
+      <article class="piece" id="p12">
+        <div class="piece-head">
+          <span class="piece-n">12</span>
+          <h3>Stuck arrangements inside the published model itself</h3>
+          <div class="meta"><span class="chip bg-designed">Designed · waiting on the graph</span><span class="src">allotropes</span></div>
+        </div>
+        <div class="row"><div class="row-lbl">The model shows</div><div>
+          <p>The model's author proposes dark matter as <strong>allotropes</strong>: regions of the network stuck in a different discrete arrangement, as diamond survives where graphite is more stable (Trugenberger 2024; the smallest example is Fig. 9 of his 2025 review, drawn by Eryk Kopczyński). These sit at <span class="num">λ = 1</span>, inside his model, and they are the author's order-to-order question asked there.</p>
+          <p><span class="ours">Ours, exact</span> If no edge carries three squares, the local term vanishes and the question does not depend on <span class="num">λ</span> at all.</p>
+        </div></div>
+        <div class="row"><div class="row-lbl">Next</div><div>
+          <p>Build the allotrope from its actual wiring (requested, not guessed from the drawing). Then ask whether it is stuck, how high its barrier is, and how its lifetime grows with its size.</p>
+          <p><span class="ours">Ours, unverified</span> The curved background is favoured only at finite temperature, so whether the patch is stuck is partly a question of entropy. It fails, for the author's picture, if the region dissolves with no wait.</p>
+        </div></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="foot">
+    <h2>What is new here, as far as we have found</h2>
+    <p>We have not found published work that varies the coefficient of the model's local term, or that studies one ordered arrangement of it turning into another (literature check of 24 September, recorded in the repository). That is the ground of paper 1. The one place where the author's question meets the published model at its own value of <span class="num">λ</span> is the allotrope (piece 12).</p>
+  </section>
+
+  <section class="foot">
+    <h2>What is claimed, and by whom</h2>
+    <p>The author claims that reality works this way. The claim at the top is hers, stated to be argued with. The model's results are narrower: in the model, piece 1 is established, and the others are measured, in progress or untested, as marked. No physicist has checked any of it yet.</p>
+  </section>
+
+  <section class="foot">
+    <h2>Where everything is</h2>
+    <p>The public repository holds every configuration, seed, result file, pre-registration and amendment: <a href="https://github.com/EmilySmithCreate/RecreationalPhysics">github.com/EmilySmithCreate/RecreationalPhysics</a>. Code, analysis and text were drafted with Claude (Anthropic), directed and checked by the author.</p>
+  </section>
+</div>
