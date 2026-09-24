@@ -187,4 +187,6 @@ finding before its gate has passed.
 ## Disclosure
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the author. Physics
-arguments marked "Ours" in `ASSUMPTIONS.md` have not been reviewed by a physicist.
+arguments marked "Ours" in `ASSUMPTIONS.md` have not been reviewed by a physicist. The curled-torus paper
+was also revised after a review generated with ChatGPT (OpenAI); what it prompted is recorded in
+`ASSUMPTIONS.md` (O42) and disclosed in the paper.

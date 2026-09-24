@@ -2,7 +2,7 @@
 
     python scripts/exact_torus_level.py
 
-EXACT, no simulation (ASSUMPTIONS Q13 and O42; paper 1, Eq. (2)). Two things a reader of Eq. (2) asked
+EXACT, no simulation (ASSUMPTIONS Q13 and O42; paper 1, Eq. (2)). Two things a review of Eq. (2) (generated with ChatGPT) asked
 to see made explicit (2026-09-24):
 
 1. Ordered proposals. cqg.run_chain draws a vertex of side 0 and one of its four slots, twice, so it makes

@@ -1111,10 +1111,10 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     the ladder are 8 (three curled), 8 (two curled) and 43 (one curled). The release of one rung could pay the next
     wall in a large enough system (N ≳ 110 for the last), which is the energetic room for her cascade. Whether the
     released energy stays where the next wall is, is a question about the dynamics.
-- **O42 Paper 1 after a reader's review: Eq. (2) made explicit, the waits tested as a whole distribution, and one
+- **O42 Paper 1 after a review generated with ChatGPT: Eq. (2) made explicit, the waits tested as a whole distribution, and one
   unexplained tail.** (2026-09-24; NOT PRE-REGISTERED, committed data, no new simulation;
   `scripts/exact_torus_level.py` (exact) and `scripts/analyse_paper_stats.py`, tested in `tests/test_paper_stats.py`.)
-  A reader asked for the dynamics to be named whenever kinetics are discussed, for the counting behind Eq. (2) to be
+  The review (ChatGPT, OpenAI, obtained by the owner) asked for the dynamics to be named whenever kinetics are discussed, for the counting behind Eq. (2) to be
   unambiguous, and for "memoryless" and "uniform" to rest on named tests. What checking that turned up:
   - **Eq. (2)'s factor of two, confirmed.** The chain draws an ordered pair of edges, (2N)² = 4N² proposals, and
     each switch arises from two of them. From the perfect 4 × L torus there are exactly 3N distinct A switches (6N

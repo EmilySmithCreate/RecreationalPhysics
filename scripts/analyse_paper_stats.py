@@ -2,7 +2,7 @@
 
     python scripts/analyse_paper_stats.py
 
-NOT PRE-REGISTERED. Asked for by a reader's review of paper 1 (2026-09-24), run on data already
+NOT PRE-REGISTERED. Asked for in a review of paper 1 generated with ChatGPT (OpenAI; 2026-09-24), run on data already
 committed, with no new simulation; ASSUMPTIONS O42. Prints and writes nothing.
 
 1. Are the waiting times exponential? The pre-registered test of "memoryless" was the coefficient

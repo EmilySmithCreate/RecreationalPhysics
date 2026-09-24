@@ -9,7 +9,7 @@ Reads committed files only.
       1/(3 exp(-12/g) + 2 exp(-14/g)) (PREREGISTRATION T8, exact move counts).
   (b) the share of vertices at each local dimension d when half the torus has converted
       (results/t7b_lam125_n*.csv, columns d0_50 .. d3_50, every decay that reached 50 %).
-  (c) added 2026-09-24 at a reader's request, NOT pre-registered (ASSUMPTIONS O42): the share of tori still
+  (c) added 2026-09-24 at the request of a review generated with ChatGPT, NOT pre-registered (ASSUMPTIONS O42): the share of tori still
       waiting against time in units of each condition's mean, pooled, on a log scale, with the exponential
       exp(-x) that a memoryless wait gives. Two sets, from scripts/analyse_paper_stats.survival_sets: every
       first exit (the Arrhenius runs and T22), and T8's waits beyond the 200-sweep watch for tori that had

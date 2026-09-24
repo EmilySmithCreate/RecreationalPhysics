@@ -4,7 +4,7 @@
 
 Reads results/t8_lam*.csv (and T7's t7b_lam125_n*.csv for lambda = 1.25, which T8 does not rerun).
 (a) mean waiting time against lambda for each size where the tube is stuck (T8's definition), with one
-    standard error of the mean (added 2026-09-24 at a reader's request), with Eq. (2)
+    standard error of the mean (added 2026-09-24 at the request of a review generated with ChatGPT), with Eq. (2)
     (moves A and B, nothing fitted), the same prediction as it would be recorded given the 200-sweep watch
     (205 + tau exp(-205/tau), also nothing fitted), and the 200-sweep line;
 (b) how each decay ended: the share of decays at the flat torus, and the share of vertices at d in {1, 2}
