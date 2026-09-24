@@ -248,3 +248,26 @@ exactly 4(λ − 1) per point, every time (T7 gate 3, O13). The scrap is almost 
 it comes in a few discrete sizes, 4, 9 or 14 units at λ = 1.25 (O28 addendum), with rarer states of 8 to
 45 units (O13). So "the same lump every time" holds exactly; "the same scrap every time" holds up to a
 small menu of scraps.
+
+## The author's positions, 24 September 2026
+
+**Recorded as hers, in her words put in order.**
+
+1. **Gravity is not a wish.** It is a mathematical result of some local degrees of freedom being
+   interchangeable and unobserved from our large-scale view of reality. Asked whether "space refolds because
+   more arrangements are curled" (entropy) and "space refolds only where energy is packed in to pay for it"
+   (cost) can both be true: yes. *Ours:* they are the two halves of one free energy, which is how the model
+   already weighs states, a count times e^(−E/g). Relatives of gravity from counting: Jacobson (1995),
+   Verlinde (2011); general knowledge, not read by us.
+2. **The melt is brief.** A melt is not a real phase with any stability, so a region that melts briefly is
+   fine as long as it folds soon after. The melt can be the barrier between a new space and the black hole
+   that birthed it, closing until the next 12 is available. *Ours:* in the model a melt lasts as long as its
+   energy stays (T21), so "brief" needs the energy to leave; the testable form is a leaky or cooling box that
+   asks whether a melt folds before it flattens.
+3. **Versions do not affect one another; they are not different in the first place.** And closed loops are
+   where phases come from (her "checks" to that). *Ours:* the most concrete standard mechanism fitting both
+   is the exchange phase: swapping identical things returns the same state up to a sign (−1 for fermions;
+   any phase in two dimensions, anyons). General knowledge, not read by us; whether it survives rung 3a's
+   argument is not known.
+
+Names now follow `docs/papers/glossary.md` (burp, ε, ΔE‡, relic, κ, decompactification).

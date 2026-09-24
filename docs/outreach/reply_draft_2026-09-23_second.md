@@ -11,7 +11,8 @@ plots were the favour; a joint paper must include point 4's question). Four thin
 collaboration paragraph (its condition is yours, and the wording should be too), whether he may show the plots (he offered full credit; he may not
 want to now), whether the correction in paragraph 2 stays as blunt as it is (I recommend it does), and
 the proposed T16 amendment (the swap-rate ceiling), which changes no verdict and is not mentioned in the
-letter beyond one clause.
+letter beyond one clause. *24 September: paragraph 4 renamed to match the paper's new title and terms
+(`docs/papers/glossary.md`).*
 
 ---
 
@@ -46,10 +47,10 @@ exactly 1 the 4 × L torus and the flat torus have the same energy, so nothing i
 where we listed every graph, nothing is stuck above the flat torus. The change I described lives next to
 your model, not in it.
 
-**4. A short paper, and a request.** I have written up that change as a short technical paper (draft
-attached). For the coefficient above 1: the curled torus decays by one front with the two orders
-coexisting, releases exactly 4(λ − 1) per vertex, is started by a local push of exactly 12 at every size,
-and leaves one small defect however large the torus; a final section maps it down towards 1. I would be
+**4. A short paper, and a request.** I have written up that change as a short technical paper, "The curled
+torus burps" (draft attached). For the coefficient above 1, the curled torus decompactifies by one front with
+the two orders coexisting: it releases exactly ε = 4(λ − 1) per vertex, its activation energy is 12 at every
+size, and it leaves one relic defect however large the torus. A final section maps it down towards 1. I would be
 grateful if you would read it and, if you think it appropriate, endorse my first submission to gr-qc,
 which arXiv asks of new authors. Beyond that, your allotropes are where the same question lives at
 coefficient 1, and a joint paper on how they give way is one I would gladly work on with you. My time is
