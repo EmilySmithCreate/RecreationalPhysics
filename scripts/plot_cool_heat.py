@@ -6,7 +6,7 @@
 First argument: the repository root. Reads committed result files only
 (cqg_n160_lam1_nocap_vs_t25fig3.csv and cqg_lam0_first_look.csv), one line per
 replica, nothing averaged across replicas. Both runs are exploratory and the figure
-says so. Used in paper/introduction_plain_language.md.
+says so. Was used in paper/introduction_plain_language.md (removed 2026-09-24, superseded).
 """
 import csv
 import sys

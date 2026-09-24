@@ -6,7 +6,7 @@
 A drawing, not a plot of data. The statements in panel 4 come from the exhaustive
 results at N = 18: results/dip_census_fine.csv (the window 1 < lambda < 1.6) and
 scripts/exact_small_averages.py (folds fading out above it). If those change, change
-the text here. Used in paper/introduction_plain_language.md and docs/design/.
+the text here. Used in docs/design/ (and formerly in paper/introduction_plain_language.md, removed 2026-09-24).
 """
 import sys
 

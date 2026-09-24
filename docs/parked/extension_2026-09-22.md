@@ -346,6 +346,16 @@ consistently about curved space moving matter, so that readers start thinking th
   (twice the curled torus's). With interchangeable points the knots carry enormous symmetry (Q15), so counting
   will make them stickier than the torus.
 - Open, for her: if curling is all or nothing, what is the gentle curvature around a planet made of?
+- **Checked the same day, exact (ASSUMPTIONS O40), and it changes the test above.** In 2D a gas of baby universes
+  is not stuck at any λ > 1: moves inside a knot and moves joining two knots both lower the energy, so it falls
+  apart everywhere at once with no wait and no push. The 2D test as proposed is therefore moot. What the 2D
+  model says is inconvenient for the rule: above λ = 1 the only stuck-for-now curled state is the partial one.
+  Whether all three curled directions can be stuck for now in 3D is the first exact question for the six-link
+  model.
+- **Answered the same day (O41, exact, with the derived 3D energy):** yes, but in a narrow window. In 3D the fully
+  curled state, the 6-cube, is stuck for now for 1 < λ < 1.2, and falls apart with no wait above that. Each curled
+  direction costs the same, 4(λ − 1) per point, so the energy splits a third per direction. Her 2D value of
+  about 1.25 does not carry over: for her X in three dimensions, λ must lie between 1 and 1.2.
 
 **Confirmed by the author the same day:** "no matter, nothing to start the curve" is her position. Matter does
 not have to sit where the curve is; it is what starts the curve, and curving takes energy that it supplies.

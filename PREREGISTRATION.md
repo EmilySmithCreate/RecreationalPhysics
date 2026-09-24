@@ -1245,3 +1245,78 @@ E close to 1 at the control, λ = 1.25; it is about 1.5 there too.
   except at λ = 1.10, N = 96 (2.2).
 
 In the paper's terms (glossary), the transmission coefficient is κ = 1/E = 0.56 to 0.68, the same at λ = 1.25 as near 1.
+
+## T23. The λ map again, four times the decays, with the memoryless check sized to the sample (written 2026-09-24, before any run)
+
+### Why
+
+T8 came out INCONCLUSIVE for two stated reasons. **(1) The memoryless check was mis-sized.** It asked that the
+coefficient of variation (CV) of the waiting time lie between 0.7 and 1.3. Simulated now: thirty truly memoryless
+waits fall outside that band 5.5 % of the time, so a false fail somewhere in 28 cells was likely. It was also
+applied to the whole wait, including the 200-sweep resting stretch, which pulls the CV below 1 wherever waits are
+short. **(2)** At λ = 1.35 the energy gate failed for two to five decays per size. The owner wants piece 2 of the
+programme settled. Re-reading T8's data under repaired rules would be an after-the-fact amendment, so this is a
+new run with fresh seeds, and the rules are fixed first.
+
+### What will be run
+
+T8's protocol exactly (`scripts/run_tube_decay.py`: g = 1.5, block 5, stop at 98 %, `n_sweeps` 100,000, settle
+600 with `settle_max` 100,000, `save_adjacency`, `record_f_200`) at λ = 1.05, 1.10, 1.15, 1.20, 1.25, 1.30 and
+1.35, and N = 64, 96, 144 and 192 (tubes 16, 24, 36 and 48 × 4), with **120 decays per (λ, N)**. Fresh seeds, one
+per λ (20262405 to 20262435), each decay's stream drawn from SeedSequence(seed, lx, ly, replica) as before. One
+config per (λ, N), 28 in all (`configs/t23_lam<tag>_n<N>.json`, written by `scripts/make_t23_configs.py`).
+λ = 1.25 is run this time, where T8 took it from T7. λ = 1.40 and 1.45 are not rerun: T8 found them not stuck,
+and nothing here asks about them. The runs go on the rented machines (`terraform/`, one Batch job per config) or
+the laptop; the image pins the laptop's versions. `docker/run.sh` now uploads the saved final graphs as well,
+because gate 3 reads resting states from them.
+
+### Definitions, fixed now
+
+- Metastable, reached (at least 75 % converted), (b) two orders side by side (at least 80 % of vertices at
+  d ∈ {1, 2} at half conversion), (c) one front (the largest converted piece holds at least 70 %), gate 2 (at
+  least 30 decays reaching 75 %) and gate 3 (the release matches the sheet, the ledge at 24λ − 16, or a state read
+  from its saved wiring): **all exactly as T8**, by calling `analyse_t8.cell`.
+- **(a′) Memoryless, replacing (a).** From the decays that reach 75 % in a metastable cell, take r = waiting − 200,
+  the time after the resting stretch. If the process is memoryless, r is exponential with the same mean. (a′)
+  holds when the sample CV of r (ddof 1) lies inside the central 99.9 % band of the CV of n independent
+  exponential draws, where n is the number of decays read. The analysis computes the band from 200,000 simulated
+  samples with seed 20262399. For reference: n = 120, 0.756 to 1.379; 90, 0.728 to 1.455; 60, 0.678 to 1.531;
+  40, 0.619 to 1.671; 30, 0.568 to 1.774. A memoryless cell fails it one time in a thousand, so a false fail
+  somewhere in the 24 window cells has a chance of about 2.4 %.
+- **Sharp at (λ, N):** (a′), (b) and (c). **Status per λ:** T8's `lam_status` (sharp, not sharp, unread, not
+  metastable).
+
+### The hypothesis has two parts, and each has its own verdict
+
+- **The window, λ = 1.05 to 1.30.** SHARP ACROSS THE WINDOW if every λ has status "sharp"; NOT SHARP AT (the
+  list) if every λ is "sharp" or "not sharp" and at least one is "not sharp"; otherwise INCONCLUSIVE, with the
+  reason.
+- **The edge, λ = 1.35, reported separately and not part of the window verdict.** Pooled over sizes and compared
+  with λ = 1.30: **(E1)** the share of decays ending at the flat torus is lower at 1.35, by more than two standard
+  errors of the difference; **(E2)** the share of decays whose converted region is in more than one piece at 25 %
+  conversion (`pieces_25` > 1, several seeds at once) is higher at 1.35, by more than two standard errors.
+  BREAK-UP BEGINS AT THE EDGE if both hold; NO BREAK-UP if neither; PARTIAL if one.
+
+`scripts/analyse_t23.py`, tested in `tests/test_t23.py` before any run.
+
+### Predictions
+
+**The owner's (24 September): SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE.** Said plainly: this was
+chosen after seeing T8, and that is what a repeat is for. T8's shares ending flat, 79 % at 1.30 and 46 % at 1.35,
+informed the edge half. Her reality sits at about λ = 1.25, in the middle of the window.
+
+**Ours: the same.** In the window we expect (a′) to hold everywhere. T22 found the first exit on time from 1.05 to
+1.25, and recrossings do not break memorylessness, because a random number of memoryless tries is still
+memoryless. The waiting-time law (mean wait within 25 % of τ) is reported as before and not scored.
+
+### Named or interchangeable points
+
+Named, for T8's reason (the per-move symmetry count is unaffordable at these sizes). The expected effect of
+interchangeable points is T8's: waits multiplied by about N, and the release and the front unchanged (the front
+still to verify).
+
+### What this cannot show
+
+Anything at other couplings, at sizes beyond 192, with interchangeable points, or outside λ = 1.05 to 1.35. It
+is still the 2D model: one curled direction and one open, the partial state the owner's rule for three
+dimensions forbids (O40, VISION Update 22).
