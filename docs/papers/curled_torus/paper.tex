@@ -62,8 +62,16 @@ reaches zero.
 
 \emph{Ladder.} The $4\times L$ torus has $S = 5N/4$ and $X = N$ (the edges of each wrap-around 4-cycle
 carry three squares), so $H/N = 4(\lambda - 1)$; the 4-cube has $H/N = 8(\lambda-1)$. Each curled direction
-costs $4(\lambda - 1)$ per vertex. We call $d(v)$, the number of pairs of edges at $v$ that close no
+costs $4(\lambda - 1)$ per vertex (Fig.~\ref{fig:tori}). We call $d(v)$, the number of pairs of edges at $v$ that close no
 square, the local dimension: 2 on the flat torus, 1 on the curled torus, 0 on the 4-cube.
+
+\begin{figure*}[t]
+\includegraphics[width=\textwidth]{fig_tori.pdf}
+\caption{(a) The flat lattice torus. (b) The $4\times L$ torus drawn as a tube: its short direction is a single
+square, so the edges round each column carry three squares. (c) Schematic of the change of Sec.~III, not a
+simulation snapshot: the curled order on one side of a single front, the flat order on the other.}
+\label{fig:tori}
+\end{figure*}
 
 \emph{Metastability window.} Enumerating every valid graph at $N = 18$ (26 classes up to relabelling)
 \cite{repo}, states above the ground state from which every single move costs energy exist for
@@ -88,7 +96,7 @@ with A the cheaper for $\lambda < 4/3$.
 At $\lambda = 1.25$ the barrier is $12$. Over twelve conditions ($g = 1.4$ to 2.5, $N = 64$ and 144,
 16 runs each), the measured mean waiting time against the move-A term of Eq.~(\ref{eq:tau}) has a plain
 mean ratio of 0.98 and a weighted mean of $0.88 \pm 0.06$, every ratio between 0.71 and 1.62, over a
-ninety-fold range of times; a fit of the barrier at $N = 144$ gives $12.1 \pm 0.9$ [Fig.~\ref{fig:1}(a)].
+ninety-fold range of times; a fit of the barrier at $N = 144$ gives $12.1 \pm 0.9$ [Fig.~\ref{fig:data}(a)].
 Including move B lowers the predicted waiting time by 15\% at $g = 1.5$; which of the two describes the data better is
 open (Sec.~\ref{sec:lambda}).
 
@@ -98,7 +106,7 @@ The predictions were a memoryless waiting time (coefficient of variation between
 80\% of vertices at $d \in \{1,2\}$ at half conversion, and the converted vertices in one piece holding at
 least 70\% of them. All three hold at every size and on two independent sets of seeds (Table~\ref{tab:t7}):
 the change starts at one place and runs as a single front, with the two orders on either side of it and
-almost nothing in between [Fig.~\ref{fig:1}(b)]. The mean waiting time does not fall with $N$, as a local
+almost nothing in between [Fig.~\ref{fig:data}(b)]. The mean waiting time does not fall with $N$, as a local
 barrier offered at an $N$-independent rate per sweep requires.
 
 \begin{table}[b]
@@ -123,7 +131,7 @@ $N$ & mean wait & CV & $d \in \{1,2\}$ at 50\% & largest piece \\
 sixteen runs per point, with Eq.~(\ref{eq:tau}) using move A only (solid) and moves A and B (dashed);
 nothing is fitted. (b) Share of vertices at each local dimension $d$ when half the torus has converted,
 averaged over thirty decays per size.}
-\label{fig:1}
+\label{fig:data}
 \end{figure*}
 
 The released energy is exact. After the change, 24 to 28 of 30 decays per size rest on the flat torus with
@@ -190,6 +198,13 @@ fixed coupling, and ``sharp'' is used in the pre-registered sense above); anythi
 the cold box leaves exactly one defect. All runs label vertices; treating them as interchangeable
 \cite{DQM25} weights each state by its number of symmetries, which is $2N$ for the curled torus and 2 one
 move away, so the escape would be slower by a factor of about $N$, with the release unchanged.
+
+\emph{Outlook (motivation, not a result).} This work is motivated by the hypothesis that space emerged from a
+specific ordered precursor through a sharp change of this kind, releasing a definite energy and leaving
+remnants behind. Nothing here tests that hypothesis beyond showing that a model of emergent geometry contains
+such a change. We note only that the remnant found here, of fixed size and one per change however large the
+system, is the kind of object a dark-matter remnant of such a change would have to be, and that the change
+needs a push of fixed size while what it releases grows with the system.
 
 \section*{Methods and data}
 
