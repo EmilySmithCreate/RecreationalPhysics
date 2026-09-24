@@ -2,30 +2,29 @@
 
 Run one config, on one rented CPU, and put the result in S3 for a person to download and commit.
 
-Nothing here is applied yet. The account ids in `_variables.tf` are placeholders and an apply
-against them will fail on purpose.
+Nothing here is applied yet.
 
-## What was copied, and what had to be invented
+## How it is set up
 
-Copied from SideNerdApps, so that this looks like the rest of the estate: AWS in `us-east-1`; one
-flat `terraform/` directory with `_provider.tf` and `_variables.tf` first and then a file per
-service; the same S3 state bucket and DynamoDB lock table under its own `workspace_key_prefix`;
-environments as Terraform **workspaces** keyed through a `locals` account map, with no `.tfvars`
-anywhere; `default_tags` on the provider rather than per-resource tags; exact version pins and
-`terraform_version: 1.7.5` in CI; workflows that are `workflow_dispatch` only, with a `dry-run` /
-`deploy` choice and OIDC role-chaining from the org account's `github_actions` role into `ci_cd`.
+**One AWS account, on its own.** There is no organisation account, no role chain, no shared state
+and nothing in common with any other project. GitHub Actions signs straight into this account with
+OIDC and assumes its `ci_cd` role; Terraform's state lives in a bucket in the same account. The
+account id is not written anywhere in this public repository: workflows read it from the repository
+variable `AWS_ACCOUNT_ID`, Terraform takes it as `var.aws_account_id`, and the provider refuses to
+act in any other account (`allowed_account_ids`).
 
-Invented here, because SideNerdApps has no precedent for any of it:
+Otherwise it is plain: AWS in `us-east-1`; one flat `terraform/` directory with `_provider.tf` and
+`_variables.tf` first and then a file per service; no workspaces and no `.tfvars`; `default_tags` on
+the provider; exact version pins and `terraform_version: 1.7.5` in CI; workflows that are
+`workflow_dispatch` only, with a `dry-run` / `deploy` choice.
 
-- **Batch compute.** Everything there is Lambda behind a 60-second ceiling. These runs take four
-  to fourteen hours, so this is AWS Batch on Fargate — the first long-running compute in the
-  estate.
-- **A VPC.** There is no networking Terraform in SideNerdApps at all. This uses the **default VPC's
-  public subnets** with a public IP, which needs no NAT gateway. A private-subnet design would add
-  about $32 a month in NAT charges, which is several times the compute bill below.
-- **A container image.** There is no Dockerfile or ECR there. There has to be one here, because
-  the point of the exercise is that a result computed in the cloud is comparable with one computed
-  on the laptop. `Dockerfile` pins python 3.12.10, numpy 2.0.0 and numba 0.67.0 — exactly what the
+- **Batch compute.** These runs take four to fourteen hours, far past any Lambda ceiling, so this
+  is AWS Batch on Fargate.
+- **A VPC.** This uses the **default VPC's public subnets** with a public IP, which needs no NAT
+  gateway. A private-subnet design would add about $32 a month in NAT charges, which is several
+  times the compute bill below.
+- **A container image.** A result computed in the cloud must be comparable with one computed on the
+  laptop. `Dockerfile` pins python 3.12.10, numpy 2.0.0 and numba 0.67.0, exactly what the
   `.meta.json` of every run already on the record says.
 
 ## What it costs, and why spot is switched off
@@ -65,17 +64,64 @@ Doing that also removes the spot objection: a reclaimed one-replica job costs on
 
 ## Before the first apply
 
-1. Fill in the account ids in `_variables.tf`. They are `000000000000` on purpose.
-2. Set the repository variable `AWS_ACCOUNT_ID` to the same account, for `run_simulation.yml`.
-3. Confirm the `ci_cd` role exists in that account and that the org `github_actions` role may
-   assume it — the same chain SideNerdApps uses.
-4. Run `deploy_manual` with `action: dry-run` and read the plan.
+Once, by hand, in the account (the console or CloudShell), in this order.
+
+1. **Let GitHub sign in.** IAM → Identity providers → Add provider → OpenID Connect; provider URL
+   `https://token.actions.githubusercontent.com`, audience `sts.amazonaws.com`.
+2. **Create the `ci_cd` role** with this custom trust policy (put in the account id), and
+   AdministratorAccess as its permissions. Only workflows run from a branch of this repository can
+   assume it: forks have a different repository name, and pull requests have a different subject.
+
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Sid": "GithubActionsFromThisRepository",
+         "Effect": "Allow",
+         "Principal": { "Federated": "arn:aws:iam::<ACCOUNT_ID>:oidc-provider/token.actions.githubusercontent.com" },
+         "Action": "sts:AssumeRoleWithWebIdentity",
+         "Condition": {
+           "StringEquals": { "token.actions.githubusercontent.com:aud": "sts.amazonaws.com" },
+           "StringLike": { "token.actions.githubusercontent.com:sub": "repo:EmilySmithCreate/RecreationalPhysics:ref:refs/heads/*" }
+         }
+       }
+     ]
+   }
+   ```
+
+3. **Create the state bucket and lock table** (CloudShell):
+
+   ```bash
+   ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
+   aws s3api create-bucket --bucket "recphys-tfstate-$ACCOUNT" --region us-east-1
+   aws s3api put-bucket-versioning --bucket "recphys-tfstate-$ACCOUNT" \
+     --versioning-configuration Status=Enabled
+   aws s3api put-public-access-block --bucket "recphys-tfstate-$ACCOUNT" \
+     --public-access-block-configuration \
+     BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true
+   aws dynamodb create-table --table-name recphys-tf-locks --region us-east-1 \
+     --attribute-definitions AttributeName=LockID,AttributeType=S \
+     --key-schema AttributeName=LockID,KeyType=HASH --billing-mode PAY_PER_REQUEST
+   ```
+
+4. **Set the repository variable** `AWS_ACCOUNT_ID` (GitHub → Settings → Secrets and variables →
+   Actions → Variables).
+5. Run `deploy_manual` with `action: dry-run` and read the plan.
+
+To run Terraform from the laptop instead, with credentials for the account loaded:
+
+```bash
+export TF_VAR_aws_account_id=<ACCOUNT_ID>
+terraform init -backend-config="bucket=recphys-tfstate-$TF_VAR_aws_account_id"
+terraform plan
+```
 
 ## Running something
 
 `run_simulation` takes a runner and a config, builds and pushes the image, and submits one Batch
 job. It does not wait for it and it commits nothing. Results land under
-`s3://recphys-results-dev/<config>/`; scratch from a run that died lands under `partial/` and is
-expired after fourteen days.
+`s3://recphys-results-<ACCOUNT_ID>/<config>/`; scratch from a run that died lands under `partial/`
+and is expired after fourteen days.
 
 Download, check, commit. The commit is where a result becomes a result.

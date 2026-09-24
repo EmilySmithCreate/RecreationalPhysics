@@ -8,30 +8,29 @@ terraform {
     }
   }
 
-  # The same state bucket and lock table as SideNerdApps, under its own workspace prefix so the
-  # two projects cannot collide. The bucket and table already exist; nothing here creates them.
+  # This project's own state, in its own account. Nothing is shared with any other project. The
+  # bucket and lock table are created once by hand (terraform/README.md, "Before the first apply").
+  # The bucket's name carries the account id, which is kept out of this public repository, so it is
+  # passed at init: `-backend-config="bucket=recphys-tfstate-<account id>"`, in CI and locally alike.
   backend "s3" {
-    bucket               = "sidenerd-terraform-state"
-    key                  = "terraform.tfstate"
-    dynamodb_table       = "terraform_locks"
-    encrypt              = true
-    region               = "us-east-1"
-    workspace_key_prefix = "sidenerd-recreationalphysics"
+    key            = "recphys/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "recphys-tf-locks"
+    encrypt        = true
   }
 }
 
 provider "aws" {
   region = local.region
 
-  assume_role {
-    role_arn = "arn:aws:iam::${local.aws_account_id}:role/ci_cd"
-  }
+  # Refuse to touch any other account, whatever credentials happen to be loaded. This replaces the
+  # old placeholder ids: a wrong-account apply is worse than a failed one.
+  allowed_account_ids = [var.aws_account_id]
 
   default_tags {
     tags = {
-      Environment = terraform.workspace
-      Owner       = "Terraform"
-      Project     = "sidenerd-recreationalphysics"
+      Owner   = "Terraform"
+      Project = "recreationalphysics"
     }
   }
 }

@@ -1,25 +1,19 @@
-locals {
-  # Workspace-keyed account map, as in SideNerdApps. FILL IN the account ids before the first
-  # apply; the placeholder below is not a real account and apply will fail against it, which is
-  # deliberate — a wrong-account apply is worse than a failed one.
-  aws_accounts = {
-    dev = {
-      account_id         = "000000000000" # TODO: the account these runs should bill to
-      region             = "us-east-1"
-      environment_suffix = "-dev"
-    }
-    prod = {
-      account_id         = "000000000000" # TODO
-      region             = "us-east-1"
-      environment_suffix = ""
-    }
+# The one AWS account this stack lives in, standalone: no organisation account, no shared state, no
+# workspaces. Kept out of this public repository: CI supplies it from the repository variable
+# AWS_ACCOUNT_ID, and locally it is `export TF_VAR_aws_account_id=...`.
+variable "aws_account_id" {
+  description = "The AWS account this stack lives in"
+  type        = string
+
+  validation {
+    condition     = can(regex("^[0-9]{12}$", var.aws_account_id))
+    error_message = "aws_account_id must be a 12-digit AWS account id."
   }
+}
 
-  aws_account_id     = local.aws_accounts[terraform.workspace].account_id
-  region             = local.aws_accounts[terraform.workspace].region
-  environment_suffix = local.aws_accounts[terraform.workspace].environment_suffix
-
-  name = "recphys${local.environment_suffix}"
+locals {
+  region = "us-east-1"
+  name   = "recphys"
 
   # One vCPU and 2 GB. The chain is single-threaded and the largest job measured here held 199 MB,
   # so this is generous; raising vcpu buys nothing because numba does not thread these kernels.

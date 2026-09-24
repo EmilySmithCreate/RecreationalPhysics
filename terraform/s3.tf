@@ -1,5 +1,6 @@
+# Bucket names are global across all of AWS, so the account id makes this one unique.
 resource "aws_s3_bucket" "results" {
-  bucket        = "recphys-results${local.environment_suffix}"
+  bucket        = "recphys-results-${var.aws_account_id}"
   force_destroy = false
 }
 

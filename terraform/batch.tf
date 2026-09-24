@@ -1,6 +1,5 @@
-# AWS Batch on Fargate. SideNerdApps has no batch-compute pattern to copy -- everything there is
-# Lambda behind a 60-second ceiling -- so this is the first long-running compute in the account
-# family and the choices are argued in terraform/README.md rather than inherited.
+# AWS Batch on Fargate. The runs take four to fourteen hours, far past any Lambda ceiling, so this is
+# long-running compute; the choices are argued in terraform/README.md.
 
 resource "aws_security_group" "job" {
   name        = "${local.name}-job"
