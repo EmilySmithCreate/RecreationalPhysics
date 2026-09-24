@@ -346,3 +346,9 @@ consistently about curved space moving matter, so that readers start thinking th
   (twice the curled torus's). With interchangeable points the knots carry enormous symmetry (Q15), so counting
   will make them stickier than the torus.
 - Open, for her: if curling is all or nothing, what is the gentle curvature around a planet made of?
+
+**Confirmed by the author the same day:** "no matter, nothing to start the curve" is her position. Matter does
+not have to sit where the curve is; it is what starts the curve, and curving takes energy that it supplies.
+*Ours, unverified:* on the same logic, empty space can curve when its own stored excess pays for it. That is
+the dark energy of the kept idea above (space only stable for now), which is separate from the scrap: the scrap
+is a lump that clumps, which makes it dark matter; dark energy is spread evenly and does not clump.
