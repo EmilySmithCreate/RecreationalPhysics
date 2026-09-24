@@ -1,8 +1,51 @@
-# Start here: handoff for the next assistant (state as of 2026-09-23, mid-afternoon)
+# Start here: handoff for the next assistant (state as of 2026-09-24, early morning)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she will read it too.
 Read it before `CLAUDE.md`'s "Known state" section, which is older than this page. Everything below is
 on branch `feat/results-meta-and-followups`, pushed; `main` is behind it and Emily merges.
+
+## Update, 24 September, early morning: the night's independent work (read this first)
+
+Emily asked for a series of papers and for the other pieces to be worked through overnight, with new
+experiments and predictions designed where needed, and said she hopes to publish the set within a week. She
+was told plainly that one piece is established and the rest are designed, running or failed, and that the
+honest form to publish is paper 1 plus a *programme* with a status beside each piece (`docs/papers/series_plan.md`,
+paper 7). **Where a test needed her prediction, the options and ours were written and hers is marked not yet
+given; she picks in the morning.**
+
+**Read `docs/papers/series_plan.md` first.** Then, in order:
+
+- **Paper 1** (`docs/papers/curled_torus/`; review page https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR):
+  four pages, schematic Fig. 1 and a short labelled outlook added at her choice. **Section V waits on T8.**
+  The letter to Carlo (`docs/outreach/reply_draft_2026-09-23_second.md`) is tight, tit for tat (her rule),
+  asks him to read the draft and endorse a first gr-qc submission; do not send before section V is filled.
+- **T8 (λ map)**: 1.05 to 1.30 done and committed; 1.35, 1.40, 1.45 were still running (watcher task in the
+  session; `results/t8_lam*.csv.partial`). `scripts/analyse_t8.py` is written and tested. **Known before the
+  verdict:** prediction (a) (CV 0.7 to 1.3) fails at λ = 1.30 at three sizes (0.65 to 0.67), almost certainly
+  because T7's waiting time cannot be shorter than its 200-sweep rest and at λ = 1.30 the mean wait is about
+  twice that; propose (do not enact) reading the CV of wait − 200. Near λ = 1 the waits run 15 to 43 % longer
+  than Eq. (2) at N ≥ 96. At λ = 1.05 every decay ends at the flat torus (no leftover); the leftover share
+  grows with λ. Figure script `scripts/plot_paper_fig_lambda.py`.
+- **T17 (leftover per seed)**: **BETWEEN** (O33): 1.10, 2.15, 2.50, 3.40 leftovers at k = 1, 2, 4, 8 seeds;
+  slope 0.29 ± 0.04. Her ONE PER SEED and our ONE PER TUBE both failed.
+- **T18 (room the new space needs vs λ)**: pre-registered, running (λ = 1.10, 1.25, 1.40; N = 96).
+- **T21 (the black-hole piece: does a sealed sheet fold when points are interchangeable?)**: pre-registered;
+  named half done and committed (not read); interchangeable half running. Read with `scripts/run_refold.py`'s
+  columns against PREREGISTRATION T21's verdicts; no analysis script yet.
+- **T15 rung 1 (quantum validation)**: pre-registered, not yet launched (`configs/t15_rung1_n{16,18}.json`).
+- **O32 (exact)**: counting with interchangeable points does not pull two identical defects together (1 or 2
+  symmetries at every ordinary separation, 4 only exactly opposite).
+- **New tools (Q20)**: `graphity.symmetry` (igraph/bliss: a millisecond per count where Q15's took up to 45 s;
+  `canonical_key`), `graphity.interchangeable` (a chain with interchangeable points, canonical or sealed,
+  validated against exact averages at N = 18). igraph added to the dev extras.
+- **Corrections made tonight**: the move census counted impossible moves (O20 correction; qualitative results
+  stand); "order only from disorder" reworded at Emily's objection; VISION Update 9's "0.997 over ten
+  conditions" corrected to the detailed record (0.98 plain, 0.88 ± 0.06 weighted, twelve conditions);
+  the small-N step of the black-hole plan withdrawn (no flat sheet exists at N ≤ 18).
+- **Her decisions recorded tonight** (parked extension file): rules fixed between generations; black holes
+  as space-creation machines that burp identical lumps and scraps; the strange loop as the anthropic
+  multiplier. Memory: tit-for-tat collaboration; state named vs interchangeable points in every
+  pre-registration; lean on her on edge-of-field conceptual questions.
 
 ## Update, 23 September, evening (read this before section 0)
 
