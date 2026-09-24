@@ -352,6 +352,18 @@ H = 16(3N − S) + 4λX (ours, derived as Q1). Gate C's target is [T22] Fig. 3 (
 [KTB19] Fig. 8b (capped). Step 2 done (O41, exact): the ladder is additive; the fully curled 6-cube is stuck for now
 only for 1 < λ < 1.2, and one curled direction for 1 < λ < 2. Next: step 3, the kernel.
 
+**Step 3 done, 2026-09-24:** `src/graphity/cqg_d.py`; at four links it makes `cqg.run_chain`'s chain draw for draw.
+**Gate C, set up before any comparison.** Target `docs/published/T22_fig3_digitised.csv` (71 points; natural log;
+squares per vertex 4S/N). Runs: `configs/gatec_t22_fig3_{p1a,p1b,p2}.json` with `scripts/run_cqg_d_sweep.py`,
+N = 500 from a start with no squares, λ = 1, no cap, cooling over the published couplings and heating back. The
+published protocol is not stated, so two are run: P1 (2,000 + 2,000 sweeps per coupling, two replicas) and P2
+(10,000 + 5,000). **Proposed acceptance, the owner decides:** where our two legs agree (within 0.1 squares per
+vertex, with tau_int well below n_meas / 20), the largest difference from the digitised points, interpolated in
+ln g, is below 0.3 squares per vertex (0.025 in φ); and the coupling where the curve crosses 6 squares per vertex
+agrees within 0.05 in ln g. The cold plateau is reported, not scored, unless both legs agree there. If our curve is
+offset by ln N^(1/3) = 2.07 in ln g, that settles Q21's open question on how the coupling scales with N, and it is
+reported as that.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?
