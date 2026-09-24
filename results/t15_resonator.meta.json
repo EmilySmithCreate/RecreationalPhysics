@@ -1,0 +1,37 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T15 rung 0b, written 2026-09-23 before this ran: is the closed loop of four a resonator inside the sheet? The Laplacian of each saved T7 amendment 4 state that holds a loop of four, its eigenspaces, and how much weight a mode can carry on the loop points. Exact; the only random numbers choose the control point sets.",
+    "name": "t15_resonator",
+    "states": "results/t7d_lam125_n*_adj/*.npz",
+    "localised_at_least": 0.5,
+    "window": 0.25,
+    "isolated_eigenvalues": [
+      2.0,
+      4.0
+    ],
+    "group_tolerance": 1e-09,
+    "controls": {
+      "sheet": [
+        12,
+        12
+      ],
+      "sheet_points": "two disjoint squares: (0,0),(0,1),(1,0),(1,1) and (6,6),(6,7),(7,6),(7,7)",
+      "random_sets": 20,
+      "random_seed": 20260923
+    }
+  },
+  "config_path": "configs/t15_resonator.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "networkx": "3.6.1",
+  "gates": {
+    "loop": {
+      "2.0": 1.0000000000000004,
+      "4.0": 1.0
+    },
+    "sheet_max": 0.4444444444444447
+  },
+  "preregistration": "PREREGISTRATION.md section T15 rung 0b, written 2026-09-23"
+}

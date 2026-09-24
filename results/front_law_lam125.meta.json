@@ -1,0 +1,32 @@
+{
+  "config": {
+    "name": "front_law_lam125",
+    "_purpose": "PREREGISTRATION T12. Does a two-number coarse law (the gap per point, and the cost of a front) predict the microscopic tube-to-sheet runs, and does it survive a change of the acceptance rule? Written before the runs; the criteria are in PREREGISTRATION.md.",
+    "lambda": 1.25,
+    "sizes": [
+      64,
+      96,
+      144,
+      192
+    ],
+    "couplings": [
+      1.5,
+      2.0
+    ],
+    "acceptance": [
+      false,
+      true
+    ],
+    "replicas": 4,
+    "block": 25,
+    "n_sweeps": 20000,
+    "stop_at": 0.98,
+    "seed": 20260922
+  },
+  "config_path": "configs/front_law_lam125.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T12, written 2026-09-22"
+}

@@ -4,7 +4,7 @@ Each task has an acceptance test. Do them in order; do not start a task whose pr
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).
 
-**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads.
+**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads. PREREGISTRATION **T12** (does the coarse law govern) and **T13** (the λ = 1 transition at N = 4p², after the author's reply) have no entries here either; T13 is the Gate B follow-up named under that gate. **Added 2026-09-24:** PREREGISTRATION **T16** (the correlation length of [KTB19] Fig. 9a, at the model author's request); **T8** is now written and running (the λ map along the tube, for paper 1's section V); **T17** = this page's T14 (leftover per seed); **T18** (room the new space needs, against λ); **T19** (does a leftover move, stay or anneal); **T21** (the black-hole piece: does a sealed sheet fold with interchangeable points); **T15 rung 1** (time-fractions against counts); **T22** (near λ = 1, do exits from the curled torus fall back? read 24 September: FALL-BACKS by the letter, first exit on time, κ = 0.56 to 0.68 at every λ). The series these serve is `docs/papers/series_plan.md`.
 
 ## T1. Rectangular torus  ☑ (2026-09-19)
 
@@ -63,6 +63,23 @@ Note, 2026-09-20 (the criterion above is unchanged; this records what T3 turned 
 - **Outcome of a first look, same day (exploratory; ASSUMPTIONS section D).** At N = 64, 96 and 160, four replicas: on cooling φ jumps from about 0.65 to about 1.46 between two neighbouring couplings; on heating the shattered state survives to a coupling about 2 higher; inside that loop each replica sits in one of two states about 0.85 apart in φ and nothing sits between; on the hot side of it the two legs agree to 0.005. The cold phase is about N/16 pieces, 84 to 95 % of vertices in baby universes, 75 to 87 % in 4-cubes. The two quench figures of [KTB19] (Fig. 6 at λ = 0, Fig. 7 at λ = 1) are reproduced in kind as well. **Decisions for the owner:** (1) does this pass Gate A, given that the run was exploratory and the gate is a reproduction check, not a test of the hypothesis; (2) adopt the "baby universes" reading above or keep "Q4 components", which this run also meets. Gate B's two open decisions are unchanged. **Both decided by the owner on 2026-09-20: yes, and adopt; see the top of this section.**
 
 ## GATE B. Reproduce [T25] Fig. 3 at λ = 1  ☐
+
+**The author's reply, 2026-09-22** (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`;
+private). His own runs at N = 1024 show a hybrid transition, two continuous branches with a jump, on cold
+ascent with a 240-sweep warm-up; he has no "cap" in his code, so the capped comparison below is not a
+comparison with his model. **Next, pre-registered before it runs:** T6 at N = 4p² (196, 484, 676), both
+directions, tempering; a jump at the same g both ways reproduces his figure and reopens the λ = 1 verdict;
+a jump on ascent only is the lattice branch surviving past the transition.
+
+**Check, 2026-09-23** (`scripts/compare_gate_b_gap.py`; ASSUMPTIONS O27; no new run). The author's postscript of
+23 September, that starting each coupling from the previous coupling's graph may accentuate the jump by trapping
+the wrong phase, was tested as an explanation of Fig. 3 against our own copy of his protocol at N = 196 (T13
+protocol P against protocol E). **It does not fit.** Fig. 3 sits above Fig. 8a in *both* directions, across the
+whole transition, and crosses φ = 0.6 at g ≈ 6.2 to 7.0 where Fig. 8a and our N = 160 runs cross at 5.2; our copy
+of his protocol departs from equilibrium on ascent only, below g ≈ 3.5, by 0.16 at most, and on descent not at all.
+Trapping on descent would hold the random phase and put the cooling curve *below* equilibrium, the opposite of
+Fig. 3. Gate B stays open; the question for him narrows to Fig. 3's coupling axis or size (*ours, unverified*: the
+crossover drifts down with N, so a curve at 6.2 to 7.0 would belong to a size below 160).
 
 Published: N = 160, φ against log g, cooled from random and heated from the torus, no hysteresis, random-phase floor 0.126.
 
@@ -229,6 +246,14 @@ Needs no new machinery: `sealed.py` and `connectivity.py` both exist. Pre-regist
 
 Accept: rung 1 reproduces [T25]'s published dimensions with our tools before any number of ours is read.
 
+**Rung 4, given content 2026-09-22 (VISION Update 17, the author's quantum hypothesis).** Three exact,
+cheap checks before any reading: (i) the renaming count of the saved T10 leftovers (the four-point remnant
+and the twist), by the method of Q15; (ii) their Laplacian spectra, to see whether the two leftover types
+have distinct frequencies; (iii) whether an ordered region's renaming count drops to 1 when joined to a
+melted one. The bar that matters, Bell-type correlations, needs a notion of a measurement in the model and
+is not designed. **(i) and (ii) were run on 2026-09-23 as T15 rung 0** (PREREGISTRATION T15 rung 0;
+ASSUMPTIONS O28): INCONCLUSIVE by the letter, with the two post-hoc readings put to the author. (iii) is not run.
+
 **Rung 3, first half, done 2026-09-22 and it is exact (O22).** Two defects in a flat sheet cost exactly
 twice one at every separation, and 16 less than twice only where they touch. The energy is a sum of
 per-edge terms, so this holds for any defects that share no square: **there is no long-range force between
@@ -242,6 +267,84 @@ protocol of T14 and is the next thing on this track.
 **Added 2026-09-22** (author's question). Every tube so far opened from one seed (every cold T10 box caught mid-conversion, 78 of 80, had one sheet patch), so whether each seed leaves a scrap is untested. Plant k = 1, 2, 4, 8 seeds with a local spark on a long tube in a cold sealed box and count leftovers; or use tubes long enough (N ≳ 400) for seeds to form naturally. Pre-register: leftovers ∝ k against leftovers = 1 whatever k. Shares the local-spark code with T13 rung 3. Details in the plan above.
 
 *Added the same evening:* the author's hypothesis that the leftover is dark matter (VISION Update 16). A first look (ASSUMPTIONS O18) says a sparse sprinkle of scraps could be enough, because matter thins out more slowly than radiation; the needed share at the conversion is about 0.7 eV divided by the starting temperature. So the test should also measure **how the leftover scales with the number of seeds**, which is what would turn a seed density into a dark-matter amount.
+
+## T15. Quantum behaviour from counting, up to Bell  ☐
+
+**Added 2026-09-22** (the author's request, after VISION Update 17). Brief: `docs/design/quantum_loop_design.md`.
+A ladder: (0) do the versions exist where the hypothesis says (renaming counts and spectra of the saved
+T10 leftovers, a torus, a melt; exact); (1) do the loop's long-run time-fractions equal the counts (exact
+at N = 16, 18 in the unlabelled ensemble, then a run with the per-configuration correction of T10); (2)
+swap-invariance and additivity of outcome probabilities when a detector defect attaches to a small loop
+(exact); (3a) GHZ, the yes/no test, on three four-point loops pairwise linked inside a sheet, two
+settings each: do the four contexts' supports admit an instruction set (classical) or not (strongly
+contextual), read from the classes the joint attachments split the namings into; (3b) CHSH on two
+eight-point loops sharing one link, with the diagnostics of the sheaf treatment in order (compatibility,
+global section by linear programme, then S) and the fork written first (a global section or S ≤ 2 fails,
+2 < S ≤ 2√2 passes, S > 2√2 or any signalling fails the other way). Each preceded by the design task of
+whether such a valid arrangement exists. The published relatives were read on 2026-09-22 (brief, section
+7) and the predicted probabilities tabulated (section 4) before any construction exists. Interference is
+not designed: it would need a dynamical rule and a VISION decision. Pre-register each rung.
+
+Accept, rung by rung: 0, a remnant in a sheet has more than one renaming and a melt exactly one; 1, counts
+and time-fractions agree within sampling error; 2, swap-related outcomes are equiprobable; 3a, the 111
+context's support reported, whichever it is; 3b, compatibility checked, the global-section question
+answered, and S reported whichever side of 2 it falls.
+
+**Rung 0 run, 2026-09-23** (pre-registered the same morning with the author's predictions; `configs/t15_rung0.json`,
+`scripts/analyse_t15_rung0.py`, `results/t15_rung0.csv`, tests in `tests/test_t15_rung0.py`; ASSUMPTIONS O28).
+**INCONCLUSIVE by the letter.** A melt has exactly one renaming at every size. A sheet with a defect has more than
+one on the isolated count in 11 of 11 states and on the whole-graph count in 10 of 11; the eleventh, three different
+defects at generic positions, has exactly one — the whole-graph renamings are the sheet's symmetries surviving where
+the defects sit, not anything the object carries. Read from their wiring, the leftovers are a closed loop of four
+(the four-point remnant), the 3-cube, an open line of three, single edges and points, with pairwise distinct spectra;
+prediction 3 fails only between composition names that differ in d while being the same graph. Two post-hoc readings
+(per remnant type; type by wiring), under which every prediction holds, are put to the author and not enacted. Rung 1
+is next and needs nothing new.
+
+**Rung 3a pre-registered and settled by argument, 2026-09-23, later the same morning** (PREREGISTRATION T15 rung
+3a; ASSUMPTIONS O29). The author predicted strongly contextual. Working through the pre-registered definitions
+before any arrangement was built: a renaming of a fixed arrangement fixes or swaps each loop's two pairs of points
+at once, so it is a complete instruction set, and attaching detectors changes which renamings survive but not the
+colours they give. **CLASSICAL for every arrangement; S ≤ 2 for rung 3b by the same argument.** The naming is a
+hidden variable in Bell's sense. Rungs 0 to 2 are untouched (they test the counting, not Bell); rung 4 needs a
+dynamical rule and a VISION decision; a hypothesis over histories rather than arrangements would be a different
+claim. Two exact side results in the pre-registration: three-square loops cannot be joined by an edge, and a
+symmetric triangle of loops cannot be linked by edges.
+
+**Rung 4 given content, 2026-09-23, after the author asked how else the quantum predictions could be tested**
+(`docs/design/amplitude_rule_brief.md`; [Hardy01] and [Gorard20] read in part first). The gap is exact: the same
+set of versions carrying positive weights against complex amplitudes; Hardy's fifth axiom (a continuous reversible
+transformation between pure states) is the one ingredient counting lacks, and Gorard's multiway model puts the phase
+in through its norm and meets Bell by non-locality. The bridge is exact too: a loop's vibrations are the Fourier
+modes of its versions, and under the model's own side rule a loop of four carries only signs while a loop of eight
+carries the quarter-turn phases. Proposed, **for the author to decide under S1**: amplitudes on the loop's points
+evolving by the loop's Laplacian (Hardy's axiom adopted as a postulate; quantum mechanics put in, not derived). The
+interference test is drafted (the loop of four: probability across the loop sin⁴ t under the rule, (1 − e^{−2t})²/4
+under counting). **Needs no decision and comes first:** whether a loop's vibration survives as a localised mode of the
+whole arrangement's Laplacian when the loop sits in a sheet, on the saved two-loop states; pre-register, then run.
+
+**Rung 0b run, 2026-09-23, afternoon** (PREREGISTRATION T15 rung 0b; ASSUMPTIONS O30; `scripts/analyse_t15_resonator.py`,
+`results/t15_resonator.csv`; the author predicted survival at the isolated frequencies). **INCONCLUSIVE by the letter;
+the prediction fails.** Six states of seven DISSOLVED (no mode above 0.25 of its weight on the loop), one RETUNED at the
+threshold. The loop of four is not a resonator in this model; where anything resonates it is the cap, loop plus collar,
+in two states of seven, at other frequencies. The wave rule stays undecided; whether to redefine the object as the cap
+is the author's call and would be a new pre-registration.
+
+## Six links per point (D = 3)  ☐
+
+**Added 2026-09-24** (VISION Update 22, the author's decision). In order, each step gated on the last:
+1. **Read** the D = 3 definitions in [KTB19] and [T25], searching the text: the energy and its coefficients,
+   where the local term saturates, the hard-core rule, and the published D = 3 curve (sizes, axis, log base).
+   Record each in ASSUMPTIONS with its status.
+2. **Exact results, no run:** energies of the 3D ladder (flat L×L×L; one, two and three directions curled) and
+   the cheapest exits from each, counted as in paper 1's Eq. (2).
+3. **Kernel:** generalise `cqg.py` from four links to 2D links (it hard-codes four in places), with the rule-6
+   tests: networkx brute force, incremental exactness, constraint preservation, same-seed reproducibility.
+   The 2D path must stay bit for bit what it is.
+4. **Gate C:** reproduce the published D = 3 curve of [KTB19].
+5. Then the companion paper's measurements, each pre-registered with the author's prediction.
+
+Accept: Gate C passed, and step 2's numbers checked against the kernel on the built states.
 
 ## Later
 

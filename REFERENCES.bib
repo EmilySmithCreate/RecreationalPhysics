@@ -100,22 +100,24 @@
 }
 
 @misc{DQM25,
-  author  = {Betre and Lewis},
+  author  = {Betre, Kassahun and Lewis, Nathan},
   title   = {Dynamical Quantum Multigraphs},
   year    = {2025},
   eprint  = {2509.08296},
   archivePrefix = {arXiv},
-  note    = {read-full (2026-09-21, by the owner). Surnames only; initials and given names not yet recorded -- check the arXiv record before citing. **WITHDRAWN CLAIM: the previous note here said this paper shows the transition moving with ln N. It does not.** That came from a third-party review page, not from the paper, and is exactly the failure mode CLAUDE.md warns about. What the paper is actually about: **labelled versus unlabelled vertices.** Labelled means every point has its own identity; unlabelled means points are interchangeable, as identical particles are, so each graph SHAPE counts once. Every run in this repository, and as far as we know every published CQG run, is labelled. Results at N = 10-24: the labelled free model is Erdos-Renyi G(N,p) with an analytic free energy, so no transition; the unlabelled free model and an unlabelled ferromagnetic "graph Ising" model both show transitions (diverging specific heat, critical slowing), with the largest-component fraction as order parameter, and the authors do not settle whether the critical temperature stays finite as N grows; the unlabelled antiferromagnet shows none, because connected graphs almost never have symmetries. Sampling rule for unlabelled graphs, Eq. (72): the Metropolis acceptance is multiplied by |Aut(G')| / |Aut(G)|, which needs the automorphism-group size at every step (nauty or similar) and is expensive. Their ensemble is different from ours -- edges on or off on the complete graph, not regular graphs, and no curvature energy; the "quantum" part is Hilbert-space formalism over classical Boltzmann thermodynamics. Read only Sec. 4 (Eqs. 60-91) and Appendix A; Secs. 2-3 are the Hilbert-space construction. They cite EK25 for a first-order transition in unlabelled random networks that is absent when labelled.}
+  note    = {read-full (2026-09-21, by the owner). Given names and affiliations taken from the arXiv record on 2026-09-23: Kassahun Betre (San Jose State University) and Nathan Lewis (Mission College). **WITHDRAWN CLAIM: the previous note here said this paper shows the transition moving with ln N. It does not.** That came from a third-party review page, not from the paper, and is exactly the failure mode CLAUDE.md warns about. What the paper is actually about: **labelled versus unlabelled vertices.** Labelled means every point has its own identity; unlabelled means points are interchangeable, as identical particles are, so each graph SHAPE counts once. Every run in this repository, and as far as we know every published CQG run, is labelled. Results at N = 10-24: the labelled free model is Erdos-Renyi G(N,p) with an analytic free energy, so no transition; the unlabelled free model and an unlabelled ferromagnetic "graph Ising" model both show transitions (diverging specific heat, critical slowing), with the largest-component fraction as order parameter, and the authors do not settle whether the critical temperature stays finite as N grows; the unlabelled antiferromagnet shows none, because connected graphs almost never have symmetries. Sampling rule for unlabelled graphs, Eq. (72): the Metropolis acceptance is multiplied by |Aut(G')| / |Aut(G)|, which needs the automorphism-group size at every step (nauty or similar) and is expensive. Their ensemble is different from ours -- edges on or off on the complete graph, not regular graphs, and no curvature energy; the "quantum" part is Hilbert-space formalism over classical Boltzmann thermodynamics. Read only Sec. 4 (Eqs. 60-91) and Appendix A; Secs. 2-3 are the Hilbert-space construction. They cite EK25 for a first-order transition in unlabelled random networks that is absent when labelled.}
 }
 
 @article{EK25,
-  author  = {Evnin and Krioukov},
-  title   = {Title to be filled in from the journal record},
+  author  = {Evnin, Oleg and Krioukov, Dmitri},
+  title   = {Ensemble inequivalence and phase transitions in unlabeled networks},
   journal = {Phys. Rev. Lett.},
   volume  = {134},
   pages   = {207401},
   year    = {2025},
-  note    = {unread. Surnames only, as cited by DQM25; verify authors, title and page before relying on it. Reported there to show a first-order transition in unlabelled random networks which is absent in the labelled version. **Read this before starting T10** (labelled versus unlabelled), because it is the closest published statement of the effect that task is about.}
+  eprint  = {2411.02739},
+  archivePrefix = {arXiv},
+  note    = {unread. Authors, title and arXiv ID taken from the arXiv abstract page on 2026-09-23 (outreach research pass); the paper itself has not been read. Reported there to show a first-order transition in unlabelled random networks which is absent in the labelled version. **Read this before starting T10** (labelled versus unlabelled), because it is the closest published statement of the effect that task is about.}
 }
 
 @article{KTB20,
@@ -418,3 +420,148 @@
   archivePrefix = {arXiv},
   note    = {**Read in part (abstract, Secs. 1, 2.2-2.4) on 2026-09-21; supplied by the owner from her own reading folder as `docs/reading/Euclidian Dynamical triangulation revisited 2021.pdf`.** The filename says 2021 and the title page carries a 2021 compile date, but the arXiv stamp on the PDF is 1503.03706v2, 10 June 2015 -- **verify which before citing a year.** This is the most directly useful methodological source found for T6, for five reasons. (1) **The same historical arc as ours, in a neighbouring model:** the 4D EDT transition "was long believed to be of second order until in 1996 first order behavior was found for sufficiently large systems", and this paper confirms first order up to 64k simplices. That is the finite-size argument of this project, already played out elsewhere. (2) **They beat critical slowing down with parallel tempering, not with flat-histogram sampling**, using the same swap rule `tempering.py` implements. (3) **The reason a plain chain cannot do it, stated cleanly:** at a first-order transition the correlation length stays finite, but the autocorrelation time diverges anyway because transitions between the two coexisting phases become *exponentially suppressed with increasing system size*. (4) **A warning about soft constraints:** earlier work controlled the volume with a harmonic potential, which "introduces a systematic error for all moves which change N4"; they use an infinite potential well instead. Our (S, X) window is the same kind of device and the same caution applies. They also take measurements after a fixed number of *attempted* rather than accepted moves, calling the latter a systematic error -- our sweep is already 2N attempts, so we comply. (5) **They have our ergodicity problem and say so:** "there is no set of ergodic moves known for the space of triangulations of fixed N4", so they run quasi-canonically. Useful precedent for how to report Q16 honestly. **And one thing that bears directly on T10:** they close by proposing "a class of modified path-integral measures that might remove the metastability of the Markov chain and turn the phase transition into 2nd order". A change of *measure* changing the *order* of the transition is exactly what the labelled-versus-interchangeable question asks, published, in a neighbouring model.}
 }
+
+% Quantum behaviour from counting (docs/design/quantum_loop_design.md, 2026-09-22). Read status per entry.
+
+@article{Zurek05,
+  author  = {Zurek, Wojciech Hubert},
+  title   = {Probabilities from entanglement, Born's rule $p_k = |\psi_k|^2$ from envariance},
+  journal = {Phys. Rev. A},
+  volume  = {71},
+  pages   = {052105},
+  year    = {2005},
+  eprint  = {quant-ph/0405161},
+  archivePrefix = {arXiv},
+  note    = {Read in part on 2026-09-22 (the envariance definition, the swap argument and the fine-graining step, from the arXiv text). Equal Schmidt coefficients give equal probabilities because a swap on the system can be undone on the environment; unequal ones are fine-grained into m_k equal-amplitude orthonormal pieces and counted, p_k = m_k/M. The counting assumes exclusive outcomes, equal amplitudes and additivity. Journal details from general knowledge, to verify.}
+}
+
+@article{CSW14,
+  author  = {Cabello, Ad\'an and Severini, Simone and Winter, Andreas},
+  title   = {Graph-theoretic approach to quantum correlations},
+  journal = {Phys. Rev. Lett.},
+  volume  = {112},
+  pages   = {040401},
+  year    = {2014},
+  eprint  = {1401.7081},
+  archivePrefix = {arXiv},
+  note    = {Read in part on 2026-09-22 (abstract and the CHSH example, from the arXiv text). Correlations as positive sums of event probabilities; exclusive events adjacent in a graph; classical, quantum and no-disturbance maxima are the independence number, Lov\'asz number and fractional packing number. CHSH: graph Ci_8(1,4), bounds 3, 2+sqrt(2), 4. Journal details from general knowledge, to verify.}
+}
+
+@article{AB11,
+  author  = {Abramsky, Samson and Brandenburger, Adam},
+  title   = {The sheaf-theoretic structure of non-locality and contextuality},
+  journal = {New J. Phys.},
+  volume  = {13},
+  pages   = {113036},
+  year    = {2011},
+  eprint  = {1102.0264},
+  archivePrefix = {arXiv},
+  note    = {Read in part on 2026-09-22 (the definitions of empirical model, measurement cover, compatibility and global section, and the hierarchy, from the arXiv text). Contextuality is the absence of a global section; three strict levels: probabilistic (Bell), possibilistic (Hardy), strong (GHZ). Journal details from general knowledge, to verify.}
+}
+
+@article{Mermin90,
+  author  = {Mermin, N. David},
+  title   = {Quantum mysteries revisited},
+  journal = {Am. J. Phys.},
+  volume  = {58},
+  pages   = {731--734},
+  year    = {1990},
+  note    = {Read on 2026-09-22 (a copy found online; the text extracted and searched). Three detectors, two settings, red or green. Settings 122, 212, 221: an odd number of red always; 111: an odd number of red never. Eight instruction sets satisfy the first rule and every one of them fails the second.}
+}
+
+@article{Saunders21,
+  author  = {Saunders, Simon},
+  title   = {Branch-counting in the Everett interpretation of quantum mechanics},
+  journal = {Proc. R. Soc. A},
+  year    = {2021},
+  eprint  = {2201.06087},
+  archivePrefix = {arXiv},
+  note    = {Abstract only, 2026-09-22. A state-dependent branch-counting rule, defined through decoherent-histories branch structure, whose ratios agree with the Born rule; tied to Boltzmann's and Planck's combinatorics. The objection that naive branch counting fails (Wallace) is from secondary sources. Journal details to verify.}
+}
+
+@book{tHooft14,
+  author  = {'t Hooft, Gerard},
+  title   = {The Cellular Automaton Interpretation of Quantum Mechanics},
+  publisher = {Springer},
+  year    = {2016},
+  eprint  = {1405.1548},
+  archivePrefix = {arXiv},
+  note    = {Abstract only, 2026-09-22. Quantum mechanics as a tool for analysing an underlying classical system; Bell's theorem met by superdeterminism (measurement choices not independent of the system). Our fork in the quantum design is contextuality, not superdeterminism.}
+}
+
+@article{Rovelli96,
+  author  = {Rovelli, Carlo},
+  title   = {Relational quantum mechanics},
+  journal = {Int. J. Theor. Phys.},
+  volume  = {35},
+  pages   = {1637--1678},
+  year    = {1996},
+  eprint  = {quant-ph/9609002},
+  archivePrefix = {arXiv},
+  note    = {Abstract only, 2026-09-22. No observer-independent state; the theory describes the information systems have about each other; measurement is interaction between equivalent systems. Journal details from general knowledge, to verify.}
+}
+
+@article{Gorard20,
+  author  = {Gorard, Jonathan},
+  title   = {Some quantum mechanical properties of the Wolfram model},
+  journal = {Complex Systems},
+  volume  = {29},
+  number  = {2},
+  year    = {2020},
+  pages   = {537--598},
+  note    = {Read in part on 2026-09-23 (Sections 2.2, 2.3, the signature argument on pp. 566--567, and the Bell subsection on pp. 587--588, from the text of the publisher's PDF; local copy in docs/reading/). A multiway system runs every rewriting order at once; branches are read as orthonormal eigenstates and a "branchlike hypersurface" as their superposition (eq. 25). The amplitudes are not derived from counting branches: they are "concretely specified by a sum of the incoming path weights", computed with a "discrete multiway norm" whose complex signature is argued from the need for three distinct signs in the metric of the multiway causal graph (p. 567), so the phase enters through the norm. The Born rule is imposed as the square of that amplitude (eq. 29, "the multiway Born rule"). Bell is met by making the theory explicitly non-local across branches, "in much the same way as ... de Broglie--Bohm" (p. 588). For us: the closest cousin of "every version at once" puts the phase in by hand and escapes Bell by non-locality; it does not get either from counting.}
+}
+
+@article{Hardy01,
+  author  = {Hardy, Lucien},
+  title   = {Quantum theory from five reasonable axioms},
+  year    = {2001},
+  eprint  = {quant-ph/0101012},
+  archivePrefix = {arXiv},
+  note    = {Read in part on 2026-09-23 (the abstract and the five axioms, from the ar5iv rendering; local PDF in docs/reading/). Axioms 1--4 (probabilities, simplicity, subspaces, composite systems) hold for both classical probability and quantum theory and give K = N^r for the number of degrees of freedom against the number of distinguishable states. Axiom 5, "there exists a continuous reversible transformation on a system between any two pure states", rules out the classical case (K = N, finitely many pure states, nothing continuous between them) and forces K = N^2, the complex Hilbert space; drop axiom 5, or only the word "continuous", and classical probability returns. For us: the one ingredient that separates counting versions from quantum mechanics has a name, and discrete renamings do not have it. Unpublished preprint as far as we know; to verify.}
+}
+
+@article{Smolin06,
+  author  = {Smolin, Lee},
+  title   = {The status of cosmological natural selection},
+  year    = {2006},
+  eprint  = {hep-th/0612185},
+  archivePrefix = {arXiv},
+  note    = {**Read 2026-09-23 from the arXiv HTML, text searched directly: abstract, Secs. 1 to 3 in full, Sec. 4.1 and 4.2.1 to 4.2.3; the rest of Sec. 4 (the reply to Vilenkin) skimmed.** Journal reference not checked. The hypotheses (Sec. 2.2): black-hole singularities bounce into new expanding universes; each birth changes the low-energy parameters by a small random step; so the fitness of a set of parameters is the average number of black holes a universe with them makes. **Master prediction:** almost no small change of our parameters increases the number of black holes. **Three published predictions (Sec. 3.2):** neutron stars are kaon-condensate stars with an upper mass limit near 1.6 solar masses; inflation, if true, is single-parameter, so the fluctuation size and the number of e-folds are anti-correlated; little early massive-star formation. *Ours, from general knowledge, to verify before any use:* neutron stars of about 2 solar masses were measured after this review (from 2010), which would count against the first prediction. **Why it is here:** the owner's cosmology (docs/parked/extension_2026-09-22.md) is a cousin: new spacetimes born where black holes collide rather than inside each one, with λ > 1 needed for any lump. The local file docs/reading/smolin_cosmological_natural_selection.html is NOT this paper: it is a note written from general knowledge by an earlier session, and says so.}
+}
+
+@article{Smolin11,
+  author  = {Smolin, Lee},
+  title   = {A real ensemble interpretation of quantum mechanics},
+  year    = {2011},
+  eprint  = {1104.2822},
+  archivePrefix = {arXiv},
+  note    = {**Read in full 2026-09-23 from the arXiv HTML** (equations followed in outline, not re-derived). Journal reference to verify (from memory, Foundations of Physics, 2012). A quantum state describes a REAL ensemble: all the similarly prepared copies of a small system in the universe. Probabilities are relative frequencies in it. Each copy carries two "beables": the value of an observable and a PHASE. Copies evolve by a stochastic copy rule (system I takes on the beables of system J, at a rate that depends on how many copies hold each value and on their phase difference, not on where they are) plus a continuous phase evolution; with the rates chosen, the ensemble frequencies obey the Schrödinger equation (Sec. III). **Macroscopic systems are classical because they have no copies anywhere** ("a member of an ensemble of one"). Non-local by construction, which is how it escapes Bell. **Predicted departures from quantum mechanics** for systems in states with few copies in the universe (Secs. VI, VII); the "nodes" problem (a value with zero copies can never be copied into) is his most serious open issue. **Why it matters here (ours, unverified):** it is the closest published relative found so far of VISION Update 17. Shared: probabilities as counts of real versions; classicality as having one version, which T15 rung 0 found for the melt and for a world with three different defects (O28). Different, and exactly where our rungs failed: his versions INTERACT through a copy dynamics, which is what escapes Bell (our fixed-arrangement counting cannot, O29); and he puts in a phase per copy by hand, the same missing ingredient the amplitude-rule brief names (Hardy's fifth axiom). His closing remark bears on the owner's "every arrangement exists forever": if the universe held exact copies of macroscopic bodies they would obey superposition, and he takes their not doing so as evidence that the universe is finite.}
+}
+
+@article{Akara21,
+  author  = {Akara-pipattana, Pawat and Chotibut, Thiparat and Evnin, Oleg},
+  title   = {The birth of geometry in exponential random graphs},
+  journal = {J. Phys. A},
+  year    = {2021},
+  doi     = {10.1088/1751-8121/ac2474},
+  note    = {**Abstract only (read 2026-09-23 via OpenAlex).** Exponential random graph models built from paths of length 2 that form many triangles or squares with a roughly constant degree and avoid the collapse of naive square-counting Hamiltonians; small lattice pieces and cubes emerge unprogrammed. Related in aim (geometry from graphs, cubes as emergent pieces); a different energy, no local term to weight. Found in the 2026-09-23 search for work varying the local term's coefficient (see [T25] note there).}
+}
+
+@article{Roost24,
+  author  = {Roost, Michelle and Devriendt, Karel and Zucal, Giulio and Jost, J{\"u}rgen},
+  title   = {Exploring the space of graphs with fixed discrete curvatures},
+  year    = {2024},
+  eprint  = {2402.18203},
+  archivePrefix = {arXiv},
+  note    = {**Abstract only (read 2026-09-23).** Sampling graphs with prescribed discrete curvatures; for Forman curvature, a finite set of rewiring moves (a Markov basis) that connects all graphs of fixed curvature. Relevant to our move set and ergodicity questions (Q9, Q16), not to the coefficient of the local term.}
+}
+
+% LITERATURE CHECK, 2026-09-23 (the owner asked whether anyone varies the coefficient of the local term).
+% Searched: arXiv API (author Trugenberger, all papers since 2021; abstracts containing "combinatorial
+% quantum gravity", "Ollivier" with "hard-core" or "quantum gravity"); OpenAlex lists of every work citing
+% [KTB19] (27), [T17] JHEP 2017 (42) and [GV21] (17); web search; and a full-text search of [Kelly22]'s thesis,
+% which compares the mean-field and exact actions (our lambda = 0 and 1) and varies nothing in between or
+% beyond. We have not found any published work that varies the coefficient of the local term away from 0
+% and 1, or that studies a change between two ordered arrangements (a curled torus opening into the flat
+% one) in this model. Unpublished work, including the author's own, cannot be checked this way.

@@ -61,3 +61,19 @@ def test_bad_input_is_refused():
         temper(graphs, SIDE_U, [5.0, 8.0], 2, 1, np.random.SeedSequence(1), 1.0, NO_CAP)      # coldest first
     with pytest.raises(ValueError):
         temper(graphs, SIDE_U, [8.0, 5.0, 3.0], 2, 1, np.random.SeedSequence(1), 1.0, NO_CAP)  # three couplings, two graphs
+
+
+def test_a_reading_hook_changes_nothing():
+    """T16 reads snapshots through on_round; the run must be bit for bit the run without it."""
+    couplings = [12.0, 9.0, 7.0, 5.5]
+    seen = []
+    runs = []
+    for hook in (None, lambda r, gs: seen.append((r, [g.copy() for g in gs]))):
+        graphs = [circulant(9) for _ in couplings]
+        out = temper(graphs, SIDE_U, couplings, 60, 2, np.random.SeedSequence(9), 1.0, NO_CAP,
+                     measure_from=20, on_round=hook)
+        runs.append((out["squares"].copy(), out["round_trips"], [g.copy() for g in graphs]))
+    assert (runs[0][0] == runs[1][0]).all() and runs[0][1] == runs[1][1]
+    assert all((a == b).all() for a, b in zip(runs[0][2], runs[1][2]))
+    assert [r for r, _ in seen] == list(range(20, 60))
+    assert all((a == b).all() for a, b in zip(seen[-1][1], runs[1][2]))     # the hook saw the final graphs

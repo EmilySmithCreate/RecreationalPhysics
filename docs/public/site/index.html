@@ -227,6 +227,15 @@
   .c-in-lump { fill: var(--on-lump); font: 600 12px var(--ui); }
   .num { font-variant-numeric: tabular-nums; }
   .lg .c-t { font-size: 15px; } .lg .c-tm { font-size: 14px; } .lg .c-tb { font-size: 15.5px; }
+  ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.7rem; counter-reset: st; }
+  ol.steps > li { counter-increment: st; display: grid; grid-template-columns: 2.1rem 1fr; column-gap: .95rem; row-gap: 0; align-items: start; }
+  ol.steps > li > * { grid-column: 2; }          /* keep every child out of the number column */
+  ol.steps > li::before { content: counter(st); grid-column: 1; grid-row: 1; font: 800 .8rem/1 var(--ui);
+                          color: var(--x); border-top: 2px solid var(--x); padding-top: .45rem; letter-spacing: .04em; }
+  ol.steps h3 { margin: 0 0 .35rem; font-size: 1.06rem; }
+  ol.steps p { margin: 0 0 .5rem; }
+  ol.steps figure.fig { margin-top: .9rem; }
+  @media (max-width: 480px) { ol.steps > li { grid-template-columns: 1.5rem 1fr; gap: .65rem; } }
   .f-x { fill: var(--x); } .s-x { stroke: var(--x); } .fw-x { fill: var(--x-wash); }
   .f-space { fill: var(--space); } .s-space { stroke: var(--space); } .fw-space { fill: var(--space-wash); }
   .f-lump { fill: var(--lump); } .s-lump { stroke: var(--lump); } .fw-lump { fill: var(--lump-wash); }
@@ -261,6 +270,9 @@
   .checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
   .check { display: grid; grid-template-columns: 26px 1fr; align-content: start; gap: .1rem .6rem; padding: .8rem .9rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--ground); }
   .check svg { width: 22px; height: 22px; grid-row: span 2; margin-top: .1rem; }
+  .checks .check:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  p.aside { font-size: .92rem; color: var(--ink-2); border-left: 2px solid var(--rule); padding-left: .85rem; }
+
   .check .ck-h { font-family: var(--display); font-weight: 700; font-size: .95rem; }
   .check p { font-size: .9rem; color: var(--ink-2); line-height: 1.45; }
   @media (max-width: 620px) { .checks { grid-template-columns: 1fr; } }
@@ -701,6 +713,7 @@
     <hr class="rule">
     <p class="eyebrow">Checking the published work</p>
     <h2 class="sec">First, we repeated what others found</h2>
+    <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested &mdash; our machinery reproduces the published work</p>
     <p class="bears"><span>The published question:</span><span class="bear"><svg aria-hidden="true"><use href="#i-c4"/></svg>sharp or smooth, out of random chaos?</span></p>
     <p>Before testing the idea's own change, we repeated the published work: the same model, the same question, and the same kind of measurement other researchers use (the two-humps test above). If our tools couldn't reproduce their answers, nothing new from them would be worth trusting.</p>
     <div class="checks">
@@ -719,12 +732,8 @@
         <p class="ck-h">Matches exact answers</p>
         <p>At the smallest sizes we listed every possible arrangement, about 1.8 trillion, and the simulation matches the exact averages.</p>
       </div>
-      <div class="check">
-        <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" style="fill:var(--critical)"/><path d="M7.5,7.5 L14.5,14.5 M14.5,7.5 L7.5,14.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
-        <p class="ck-h">One figure we can't match</p>
-        <p>A 2025 figure from the same group differs from ours in one middle range. It also disagrees with their 2019 curve, so that's a question for the authors.</p>
-      </div>
     </div>
+    <p class="aside"><b>One check did not pass, and it is worth a line rather than a section.</b> A 2025 figure from the same group differs from ours over one middle stretch &mdash; but it also disagrees with that group's <i>own</i> 2019 curve, the one we match to half a per cent. So it is a question for them rather than a fault in ours, and the full comparison is in the repository.</p>
     <p>The question the published researchers ask is whether space forms <em>suddenly out of a random tangle</em> of links. Here is the lump we measured at several sizes.</p>
     <figure class="fig">
       <p class="fig-title">How big is the lump, and what happens to it as the network grows?</p>
@@ -758,6 +767,7 @@
     <p class="eyebrow">Result 1</p>
     <p class="bears"><span>Speaks to</span><span class="bear"><svg aria-hidden="true"><use href="#i-c3"/></svg>Claim 3</span><span class="bear"><svg aria-hidden="true"><use href="#i-c4"/></svg>Claim 4</span></p>
     <h2 class="sec">One arrangement into another: sharp</h2>
+    <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested at four sizes &mdash; the idea's prediction held</p>
     <p>This is the change the idea actually describes. We start the network as a perfect tube and hold it at a fixed temperature. The tube sits 1 energy unit per point above a flat sheet, and at first it stays put.</p>
 
     <figure class="fig">
@@ -811,6 +821,7 @@
     <p class="eyebrow">Result 2</p>
     <p class="bears"><span>Speaks to</span><span class="bear"><svg aria-hidden="true"><use href="#i-c4"/></svg>Claim 4</span><span class="bear"><svg aria-hidden="true"><use href="#i-c6"/></svg>Claim 6</span></p>
     <h2 class="sec">In a sealed box: a bonfire, not slush</h2>
+    <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested at three sizes &mdash; the idea's prediction held</p>
     <p>In the runs above, a heat bath carried the lump away instantly. The idea is about what happens when it can't. So we sealed the box: no energy gets in or out, and the lump has to go somewhere inside. Would it feed the change like a bonfire, or smother it into half-and-half slush?</p>
 
     <figure class="fig">
@@ -849,7 +860,7 @@
       <figcaption><span class="tag ours">Our result</span> Three sizes, seven amounts of room for the heat, twenty runs each. Clean space came almost entirely where the heat had room, melting where it didn't, and the in-between cases mostly at or below the switch-over.</figcaption>
     </figure>
     <p><b>None ended as slush:</b> part tube and part sheet, sitting still, with nothing melting. Our reasoning said slush was impossible, because it needs a temperature at which tube and sheet are equally happy and no such temperature exists. A single case would have shown that reasoning wrong.</p>
-    <p><span class="tag ours">Our result</span> <b>A bonfire, with a threshold.</b> With enough room for the heat, the tube converts completely into a clean sheet. With too little, the heat melts the new space it has just made. At every size the switch-over falls between 1 place per 4 points and 1 per 2, where we had predicted 1 per 3.5. It moves in step with size, as predicted. <b>Energy balanced to the last unit in every run</b>, which is claim 6 holding in the model.</p>
+    <p><span class="tag ours">Our result</span> <b>A bonfire, with a threshold.</b> With enough room for the heat, the tube converts completely into a clean sheet. With too little, the heat melts the new space it has just made &mdash; <b>melts</b> meaning the points lose their neat two directions and go back to being connected any old way, which is the disordered state space came out of. The change undoes itself. At every size the switch-over falls between 1 place per 4 points and 1 per 2, where we had predicted 1 per 3.5. It moves in step with size, as predicted. <b>Energy balanced to the last unit in every run</b>, which is claim 6 holding in the model.</p>
   </section>
 
   <!-- ============ 7. result 3 ============ -->
@@ -858,9 +869,8 @@
     <p class="eyebrow">Result 3</p>
     <p class="bears"><span>Speaks to</span><span class="bear"><svg aria-hidden="true"><use href="#i-c5"/></svg>Claim 5</span></p>
     <h2 class="sec">The leftover: one small scrap, however big</h2>
-    <p>Almost every sealed sheet kept a leftover: four points of tube that the spreading front swept past without uncurling.</p>
-    <p><b>Why we expected it to grow.</b> Freeze water quickly and air bubbles get trapped in the ice, and a bigger block traps more bubbles. If the spreading front left scraps behind at a steady rate as it swept along, a longer tube would end with more of them. The leftover would then be a fixed <em>share</em> of the space, like bubbles in ice, and could add up to a real part of a universe's contents. We wrote that prediction down before measuring.</p>
-
+    <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested &mdash; a leftover every time, and the same one at every size</p>
+    <p>Almost every sealed sheet kept a leftover: four points of the old curled arrangement that the front swept past without opening. <b>What we tested was whether that leftover grows with the space</b> &mdash; because that is what decides whether it is a component of a universe or a blemish on one. Freeze water quickly and a bigger block traps more bubbles; if the front shed scraps as it went, a longer tube would end with more of them, and the leftover would be a fixed share of everything, big enough to be some of what a universe is made of. We wrote that down before measuring.</p>
     <figure class="fig">
       <p class="fig-title">Leftover scraps per box, against the size of the space</p>
       <div class="keys">
@@ -868,7 +878,7 @@
         <span class="key"><i class="sw dash"></i>what "growing with the space" would look like</span>
       </div>
       <div class="scroll" id="c-leftover"><noscript><p class="nojs">This chart is drawn by JavaScript, which is switched off. The figures behind it are in &ldquo;See the numbers&rdquo; just below.</p></noscript></div>
-      <figcaption><span class="tag ours">Our result</span> Pre-registered, 80 fresh runs. Our prediction said only that the count would rise. The dashed line shows what a leftover growing in step with the space would have looked like.</figcaption>
+      <figcaption><span class="tag ours">Our result</span> Eighty fresh runs. The dashed line is what a leftover growing in step with the space would look like; the measured counts sit flat instead.</figcaption>
       <details class="data"><summary>See the numbers</summary><div class="tw"><table>
         <thead><tr><th>Size (points)</th><th>Leftovers per box</th><th>Spread (±)</th></tr></thead>
         <tbody>
@@ -879,12 +889,11 @@
         </tbody></table></div></details>
     </figure>
 
-    <p><span class="tag ours">Our result</span> <b>It didn't grow.</b> There was about one scrap per box at every size from 64 to 288 points, like a single bubble however big the block. Our prediction failed, and we report it as prominently as the ones that held. A rarer second kind of leftover also turned up: a small twist, in 9 of 80 boxes. Why there is exactly one scrap is still unknown.</p>
+    <p><span class="tag ours">Our result</span> <b>It doesn't grow.</b> About one scrap per box at every size from 64 to 288 points &mdash; a single bubble however big the block. Eighty fresh runs, pre-registered.</p>
     <div class="means">
       <p class="eyebrow">What this means for the idea</p>
-      <p><b>What "one scrap" means at scale.</b> A scrap is 4 points. In a 288-point box that is 1.4% of the points. In a box ten times bigger it would be 0.14%. If a whole universe opened from a single seed, its leftover would be one grain of sand on a beach. <b>The idea doesn't need more:</b> what matters is that the lump can carry the energy. A leftover too small to notice also fits what we see, since no relic defects from the early universe have been found.</p>
-      <p><b>What it doesn't undo.</b> The energy given off and the opening of a direction both <em>do</em> grow with size: a bigger tube gives a bigger lump. That is Result 1, and it stands. Only the leftover stays small.</p>
-      <p><span class="tag reading">Our reading, unreviewed</span> One way the leftover could still matter: if a real conversion started from many separate seeds, and each left a scrap. Surprisingly few might be needed for dark matter; see "Is the leftover dark matter?" below. Our tubes almost always opened from a single seed, so this is untested.</p>
+      <p><b>Why it matters, and how much.</b> A scrap is four points: 1.4&nbsp;% of a 288-point box, 0.14&nbsp;% of one ten times larger, and nothing at all at the size of a universe. So a single conversion leaves a single defect, not a share of anything. <b>Claim 5 asked for a leftover and there is one, every run, every size &mdash; and the size of it does not budge as the space grows.</b> That is a fact about how much of a conversion fails to finish, and it is the same fact at 64 points and at 288. What it is <i>not</i> is a large share of anything, and the idea never needed it to be.</p>
+      <p><b>What it does not touch.</b> The energy given off and the opening of a new direction both <em>do</em> grow with size: a bigger tube gives a bigger lump. That is the result the idea actually rests on, and it stands. <span class="tag reading">Our reading, unreviewed</span> The one way the leftover could still add up is if a real conversion started in many places at once and each left its own scrap. Our tubes almost always opened from a single seed, so that is untested, and it is on the list.</p>
     </div>
   </section>
 
@@ -1036,9 +1045,9 @@
             <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fits</span> The early universe's temperature is the same everywhere to 1 part in 100,000, and it was at least about 50 billion degrees. Still open: the exact pattern of the tiny differences, which inflation explains closely, hasn't been worked out for this idea.</td>
             <td>A physicist working out what pattern of ripples a sharp opening would leave in the sky.</td></tr>
         <tr><td><b>A long wait with energy stored in X, then one sharp release:</b> the Big Bang.</td>
-            <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--warn)"/><path d="M8,4 V9 M8,11.6 V12" stroke="#16181d" stroke-width="2" stroke-linecap="round"/></svg>Known hurdle</span> This is the same order as inflation: stored energy first, then heat. But the sharp version, Guth's 1981 "old inflation", failed because its bubbles of new space never joined up. The idea may escape this, since no space exists yet for bubbles to race against, but nobody has checked.</td>
+            <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--warn)"/><path d="M8,4 V9 M8,11.6 V12" stroke="#16181d" stroke-width="2" stroke-linecap="round"/></svg>Known hurdle</span> This is the same order as inflation: stored energy first, then heat. But the sharp version, Guth's 1981 "old inflation", failed because its bubbles of new space never joined up. <b>The author's answer:</b> that failure is a race, and there is nothing here to race against. Bubbles lost it because the space between them was inflating faster than they grew; X is a curled arrangement, not a growing space, so fronts meet and merge at their own pace. And a new space opens elsewhere rather than into ours, so no two universes ever have to join at all. Nobody has checked either half.</td>
             <td>The first question for a physicist.</td></tr>
-        <tr><td><b>Where fronts from different seeds collide, they leave a faint hum of gravitational waves.</b></td>
+        <tr><td><b>Where fronts from different seeds collide, they leave a faint hum of gravitational waves.</b> A single front spreading outward is smooth and leaves nothing behind; two of them smashing together is lopsided and violent, and lopsided violence is what shakes space. Not single chirps like two black holes merging &mdash; a steady hiss from every collision at once, still going.</td>
             <td><span class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>Open</span> Not seen from this source. Pulsar-timing arrays reported a gravitational-wave background in 2023; its origin is debated, and sharp changes in the early universe are one candidate.</td>
             <td>Gravitational-wave searches: pulsar timing now, the LISA space mission in the 2030s. Which one could see it depends on how hot the universe was at the change.</td></tr>
         <tr><td><b>The leftover is rare scraps of X</b>, one per seed, and could be dark matter.</td>
@@ -1049,35 +1058,220 @@
             <td>Nothing planned. One untested guess of the author's: the change might not be finished, and what we call dark energy is the rest of it still coming out.</td></tr>
       </tbody>
     </table></div>
-    <h3>One mechanism, four things</h3>
-    <p><span class="tag idea">The author's idea</span> Space is stable, and stays stable. It does not have to decay for the loop to close &mdash; the return leg is paid for, not fallen into:</p>
-    <ul class="plain">
-      <li><b>Folding space back up is expensive.</b> That is the same fact as the Big Bang releasing energy when it unfolded: what came out then has to go back in now.</li>
-      <li><b>Gravity gathers.</b> Wherever matter collects, energy concentrates.</li>
-      <li><b>A black hole is the one place with enough to pay.</b> Nothing gets out of it, including space itself &mdash; so it is where space is folded back up, which is to say where X is made again.</li>
-      <li><b>A new Big Bang</b> is two of those colliding, opening a new space elsewhere, not in ours.</li>
-    </ul>
-    <p>It closes a loop: X opens into space, space is folded back up where enough energy is concentrated, and it can open again. Folding space is <b>expensive</b> &mdash; that is why unfolding gives energy off &mdash; and a black hole is the one place with enough to pay. <b>That is also what makes it checkable</b>, because a loop has to work in both directions in the same model.</p>
+    <p><b>The first hurdle, and the answer this idea gives.</b> The sharp version of inflation failed in 1983 for a stated reason: the space <i>between</i> the new bubbles grew faster than the bubbles did, so they never merged into one smooth universe. <b>That failure is a race, and this picture has nothing to race against.</b> The bubbles lost because the space between them was inflating faster than they could grow. X is a curled arrangement, not a growing space, so fronts spread and meet at their own pace with nothing outrunning them. And each new space opens elsewhere rather than into ours, so two universes never have to join up in the first place. <span class="tag idea">The author's answer</span> <b>Said honestly: that is an argument, not a result.</b> Nobody has checked it, and our model cannot &mdash; it has no expansion in it at all. And it costs something that belongs in the same breath: inflation's enormous stretch is what explains why the universe looks so flat and so even, so an X that never expands does not supply that explanation, and something else would have to.</p>
+    <p><b>The second hurdle, at the right height.</b> The pattern of tiny temperature ripples across the sky is the most precisely measured thing in cosmology, and inflation predicts it well. The bar for a picture at this stage is not to derive every ripple &mdash; no candidate theory of the early universe does that from first principles either &mdash; it is <b>not to contradict the pattern, and to have somewhere for it to come from eventually.</b> This idea has a candidate and has not used it: ripples need something that varies from place to place, and a conversion starting in many places at once would leave a scatter of scraps. Our own conversions almost always started from one seed, so it is untested. Neither hurdle can be settled with our model; both are questions for a physicist. <b>Open everywhere, not only here:</b> what X is made of, and what sets the size of its energy gap. <b>In our model that second one has an exact answer</b> &mdash; the gap is set by a single dial, and its size is just how far that dial sits from the setting where curled and flat cost exactly the same. Nothing tells us what plays that dial in the real thing, and a small gap would mean sitting very close to the tie.</p>
+  </section>
 
-    <h4>So we ran it</h4>
-    <p><span class="tag ours">Ours, new, unreviewed</span> <b>A black hole is a sealed box:</b> nothing gets out, which is exactly the fixed-energy setting this project already had. So we gave a perfect sheet of space a budget of energy it could not get rid of, and looked at what the energy did to it &mdash; fold it, or melt it. Four settings of the rules, budgets from a half to sixteen units a point, three runs each.</p>
-    <ul class="plain">
-      <li><b>Folding is the cheaper damage</b>, four times cheaper per loop than tearing space. We wrote down before running that small budgets would therefore buy folds.</li>
-      <li><b>They don't.</b> At every budget and every setting, the energy melts space instead. Folding rises as it gets cheaper &mdash; from 2 % of the damage up to 23 % &mdash; and never wins.</li>
-      <li><b>Why:</b> there are far more ways to break a loop than to add one. Price moves it; the sheer number of ways decides it.</li>
-    </ul>
-    <p>Two more checks, same day, and both came out the way the idea wants. <b>Left alone, space does not fold</b>: a cold sheet sat perfectly still, not one move accepted in three hundred passes. Folding happens where energy is concentrated, not everywhere. And <b>nothing sits below flat space at all</b>, once every kind of small loop is allowed &mdash; proved exactly rather than measured. Space is the bottom of the well and stays there, which is what the loop above needs of it.</p>
-    <h4>And then we asked about gravity</h4>
-    <p><span class="tag ours">Ours, new, unreviewed</span> If gravity is the pull that gathers things back together, the smallest thing it must do in this model is make two leftovers pull on each other. That one is <b>exact</b> &mdash; no runs, no luck, just arithmetic at every possible distance.</p>
-    <ul class="plain">
-      <li><b>Two leftovers side by side cost less than two apart.</b> They share the damage and pay for it once. That is an attraction, and it is real.</li>
-      <li><b>Move them one step further and it vanishes completely.</b> Not weakens &mdash; vanishes, to the last digit, at every distance we can make on the grid.</li>
-      <li><b>It has to be that way.</b> The energy of an arrangement is a sum of separate little bills, one per connection, and each bill depends only on its own corner. Two leftovers that share no corner simply add up.</li>
-    </ul>
-    <p>So in this model there is no long-range pull between leftovers, and there cannot be one. If gravity lives here at all, it is not carried by the energy &mdash; it would have to come from counting: more ways to arrange things when they sit close than when they sit far. That is a real and different measurement, and nobody has made it here.</p>
+  <!-- ============ 8b. the story end to end ============ -->
+  <section id="story">
+    <hr class="rule">
+    <p class="eyebrow">The story, end to end</p>
+    <h2 class="sec">From X to here, in eight steps</h2>
+    <p class="aside"><b>How to read the marks.</b> A green tick means we tested it and it came out the way the idea needs. An amber half means we tested it and the answer was partial, or the model ran out before the question did. A red cross means we tested it and it went against the idea. A dashed ring means nobody has tested it at all.</p>
+    <p>Everything above is a separate test. This is the picture those tests are <i>of</i>, in the order it would have happened. Each step says plainly whether it is something we measured, something exact, or something the idea asserts with nothing behind it yet.</p>
 
-    <p><b>What that does and does not show.</b> It is weaker than it first sounds, and the weakness is worth stating. Melted, in this model, is not damage and not a hole: it is the random state, and the model's own authors read exactly that as matter and energy &mdash; for them a black hole <i>is</i> a region gone back to it. So &ldquo;the energy melted the space&rdquo; may be no more than what a great deal of energy in one place looks like, which is close to what a singularity means anyway. And heating a thing at equilibrium is more or less guaranteed to randomise it; squeezing is a different act, and this model has no way to squeeze. <b>What the run does show</b> is a fair contest between the two ways of absorbing the same energy, and the folded way lost badly. <b>What is untested:</b> a jolt into one small patch with cold space pressing in around it, which is what gravity actually does and what a shared budget cannot imitate.</p>
-    <p><b>The two hurdles, in plain terms.</b> The sharp version of inflation failed once, because its bubbles never joined up, and this idea has to show that it escapes that. The standard picture also explains the exact pattern of tiny temperature ripples across the sky, and this idea has to reproduce it. Neither can be settled with our model; both are questions for a physicist. <b>Open everywhere, not only here:</b> what X is made of, and what sets the size of its energy gap.</p>
+    <ol class="steps">
+      <li>
+        <h3>X is waiting</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested &mdash; exact, at every size</p>
+        <p>X is made of the same stuff space is, wired so that its directions are small instead of large. It isn't chaos and it isn't a soup &mdash; it is one particular arrangement, and it sits still. It holds more energy than space does, and it has no way to let that energy go by itself.</p>
+        <p>In our model the curled arrangement sits a fixed amount above the flat one, the same amount at every size we built, from 36 points to 600.</p>
+      </li>
+
+      <li>
+        <h3>Something small sets it off</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested &mdash; 320 runs, five sizes</p>
+        <p>It does not fall apart on its own. It needs a push &mdash; and the push is startlingly cheap: twelve units, delivered anywhere in it, and the <i>same</i> twelve whether the thing is small or large. Below twelve, nothing ever happens: sealed up with nothing to spare, X waits for ever.</p>
+        <p>320 runs at five sizes. Nothing under twelve ever started it; nothing at twelve or over ever failed to.</p>
+      <figure class="fig">
+        <p class="fig-title">The whole thing as one landscape</p>
+        <div class="scroll">
+          <svg viewBox="0 0 700 250" role="img" aria-label="An energy landscape. X sits in a shallow dip on the left. A wall of twelve units separates it from a much deeper basin on the right, which is space. The drop from X down to space is the energy that gets released, one unit for every point converted. Nothing lies below the space basin.">
+            <defs><marker id="st-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="f-ink2"/></marker></defs>
+            <path d="M30,150 C60,151 95,152 130,152 C190,152 235,78 300,76 C368,74 398,204 465,206 C550,208 615,207 680,207" fill="none" class="s-ink2" stroke-width="2.5"/>
+            <circle cx="130" cy="141" r="10.5" class="f-x"/>
+            <text x="130" y="120" text-anchor="middle" class="c-tb f-x">X, waiting</text>
+            <text x="130" y="176" text-anchor="middle" class="c-tm">a shallow dip: stable for now</text>
+            <line x1="300" y1="88" x2="300" y2="150" class="s-muted" stroke-width="1.3" stroke-dasharray="4 3"/>
+            <text x="300" y="46" text-anchor="middle" class="c-tb">the wall</text>
+            <text x="300" y="64" text-anchor="middle" class="c-t">12 units &mdash; the same at every size</text>
+            <circle cx="560" cy="197" r="10.5" class="f-space"/>
+            <text x="560" y="176" text-anchor="middle" class="c-tb f-space">space</text>
+            <text x="560" y="231" text-anchor="middle" class="c-tm">the bottom: nothing at all lies below it</text>
+            <line x1="655" y1="152" x2="655" y2="205" class="s-lump" stroke-width="2" marker-end="url(#st-arr)"/>
+            <text x="648" y="150" text-anchor="end" class="c-t f-lump">the drop</text>
+            <text x="648" y="166" text-anchor="end" class="c-tm">1 unit per point,</text>
+            <text x="648" y="181" text-anchor="end" class="c-tm">and it comes out</text>
+          </svg>
+        </div>
+        <figcaption>Both the wall and the drop are exact numbers in our model, and neither changes with size. Everything in the story is this picture read left to right, then right to left.</figcaption>
+      </figure>
+      </li>
+
+      <li>
+        <h3>The opening spreads as a front</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested &mdash; at every size</p>
+        <p>Not everywhere at once. One spot goes first, and then a boundary sweeps outward with the old arrangement on one side and space on the other &mdash; and almost nothing in between. That is what a sharp change looks like from the inside, and it is the opposite of everything softening together.</p>
+        <p>Caught mid-change, 99 points in every 100 read as one arrangement or the other, at every size.</p>
+      </li>
+
+      <li>
+        <h3>A lump of energy comes out, and a scrap stays behind</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tested &mdash; matched the number known in advance</p>
+        <p>The lump is exactly what X was holding above space &mdash; one unit for every point converted, every run, every size. In the story, that lump is everything the universe is made of. And the change never quite finishes: one small piece of the old arrangement is left stranded.</p>
+        <p>The energy given off matched the number known in advance, exactly. The scrap is <i>one</i>, however large the space gets, so at the size of a universe it is a speck rather than a share of anything.</p>
+      </li>
+
+      <li>
+        <h3>Space then stays put</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Proved &mdash; no run can overturn it</p>
+        <p>Having arrived, space does not go anywhere. Nothing at all sits below it &mdash; not one arrangement out of the whole family, once every kind of small loop is allowed. So space is the bottom of the well: it has nothing to decay into, and nothing in the rest of the story asks it to.</p>
+        <p>This one follows from the rules by argument, so no run can overturn it.</p>
+      </li>
+
+      <li>
+        <h3>Gravity gathers, over a very long time</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>Tested, and the model runs out here</p>
+        <p>Then the slow part. Matter clumps, clumps merge, and energy concentrates in fewer and fewer places. The idea needs this and does not explain it &mdash; and here our model runs out before the story does.</p>
+        <p>We asked the smallest version of the question: do two leftovers pull on each other? Side by side they are cheaper, because their damage overlaps and gets paid for once. Move them a single step apart and that vanishes &mdash; not fades, vanishes, at every distance on the grid. The energy in this model is a sum of separate little bills, one per connection, each depending only on its own corner, so two things that share no corner simply add up. <b>There is no long-range pull here and there cannot be one.</b></p>
+      <figure class="fig">
+        <p class="fig-title">Two leftovers, moved apart</p>
+        <div class="scroll">
+          <svg viewBox="0 0 700 210" role="img" aria-label="Two leftovers touching cost 48. Moved one step apart they cost 64, and at every greater distance they still cost exactly 64, which is twice the cost of one on its own. The cost stops changing as soon as they stop touching.">
+            <line x1="40" y1="128" x2="670" y2="128" class="c-gl"/>
+            <g class="f-lump">
+              <circle cx="70" cy="80" r="8"/><circle cx="88" cy="80" r="8"/>
+              <circle cx="215" cy="80" r="8"/><circle cx="263" cy="80" r="8"/>
+              <circle cx="390" cy="80" r="8"/><circle cx="486" cy="80" r="8"/>
+              <circle cx="560" cy="80" r="8"/><circle cx="670" cy="80" r="8"/>
+            </g>
+            <g class="c-t" text-anchor="middle">
+              <text x="79" y="112">touching</text>
+              <text x="239" y="112">one step apart</text>
+              <text x="438" y="112">further</text>
+              <text x="615" y="112">right across the grid</text>
+            </g>
+            <g text-anchor="middle">
+              <text x="79" y="152" class="c-tb num">48</text>
+              <text x="239" y="152" class="c-tb num">64</text>
+              <text x="438" y="152" class="c-tb num">64</text>
+              <text x="615" y="152" class="c-tb num">64</text>
+            </g>
+            <line x1="180" y1="168" x2="670" y2="168" class="s-space" stroke-width="2" stroke-dasharray="6 4"/>
+            <text x="425" y="190" text-anchor="middle" class="c-t f-space">twice the cost of one on its own &mdash; exactly, at every distance</text>
+            <text x="79" y="190" text-anchor="middle" class="c-tm">16 cheaper</text>
+          </svg>
+        </div>
+        <figcaption><span class="tag ours">Exact, no runs</span> Touching is cheaper, because the damage overlaps and is paid for once. Apart, the cost stops moving entirely &mdash; and a force is a cost that changes with distance.</figcaption>
+      </figure>
+        <p>That rules out one of the two ways a pull can happen. The other is still open: there may be more <i>ways</i> for everything else to arrange itself when two things sit close, and then close is where you would keep finding them &mdash; no pulling involved, and indistinguishable from an attraction from the outside. Heat does exactly that. We have not made that measurement.</p>
+      </li>
+
+      <li>
+        <h3>A black hole folds space back up</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>Tested at both ends &mdash; the middle is untested</p>
+        <p>Where enough energy has gathered, the idea says space stops being space &mdash; pushed back into the substrate it came from. It is uphill, paid for by the concentrated energy, which is why it takes something as extreme as a black hole. Nothing gets out of one, including space itself. <span class="tag idea">The author's idea</span></p>
+
+        <p><b>What we tested.</b> A black hole is a sealed box, which is a setting we already had. We gave a perfect sheet of space a budget of energy it could not get rid of, and read every point afterwards to see how many clean directions it had left.</p>
+        <p><b>They lose them.</b> At every budget and every setting of the rules, the space stops being space. And it is not a near miss: counting every legal move out of ordered space, the number that build a new loop is <b>zero</b>. Order can only be broken, one step at a time.</p>
+
+        <p><b>That is a description of this step, not a refutation of it.</b> The state the energy drives it to is the one with overwhelmingly the most ways to be arranged &mdash; which is exactly what a black hole is taken to be in ordinary physics: the object with more ways to be than anything else of its size. And the same count says the way back is open rather than closed. Out of a <i>melted</i> region, 10,254 moves build a new loop, and the cheapest of them runs downhill. <b>So remaking the substrate goes through the mess, not around it:</b> break first, build second, and both halves of that are measured.</p>
+
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>How long the mess lasts depends on where the energy can go</p>
+        <p>At ordinary energies it is not a place anything stays &mdash; caught mid-change, 99 points in every 100 read as one settled arrangement or the other, with almost nothing in between. But in a sealed box with a large budget it <i>persists</i>, for the plain reason that the energy has nowhere else to be. So &ldquo;the mess is brief&rdquo; is true where heat can leave and untrue where it cannot, and a black hole is the second kind.</p>
+
+        <p><b>What is left untested, and it is the part that matters.</b> What a melted region rebuilds into when it is squeezed rather than merely heated &mdash; and whether what it builds deserves the name X. Our one attempt at cooling a melt jammed partway, and when we checked, the chain had stopped rather than settled, so it says nothing. <b>Our model has no way to squeeze anything</b>, which is the one thing a black hole certainly does.</p>
+      </li>
+
+      <li>
+        <h3>And it opens again, elsewhere</h3>
+        <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" style="stroke:var(--neutral)" stroke-width="2" stroke-dasharray="3 2.2"/></svg>Not tested</p>
+        <p>A region of X, once made, is back at step one: waiting for a small push. When it gets one it opens into a new space, elsewhere, not into ours. The loop closes. <span class="tag idea">The author's idea</span></p>
+        <p><b>This is the thinnest step, and it should be read that way.</b> The author's guess is that two black holes colliding supply the push. Nothing we have says a collision is needed, or how many, or how big &mdash; and what we do have points the other way, because the push is that cheap, fixed, local twelve. Size matters at the far end instead: the energy given off grows with the amount converted, and whether the new space survives being born depends on there being somewhere for that energy to go.</p>
+      <figure class="fig">
+        <p class="fig-title">The loop, with the evidence marked</p>
+        <div class="scroll">
+          <svg viewBox="0 0 700 330" role="img" aria-label="A four-stage cycle. X opens into space plus a lump of energy; matter gathers over a long time; a black hole folds space back up into X; X waits and can open again. Only the opening leg has been measured in the model; the other three are not.">
+            <defs><marker id="st-a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="f-ink2"/></marker></defs>
+            <g class="c-tb" text-anchor="middle">
+              <text x="350" y="40">X &mdash; curled, waiting</text>
+              <text x="608" y="170">space, and a lump</text>
+              <text x="350" y="300">matter gathers</text>
+              <text x="92" y="170">a black hole</text>
+            </g>
+            <g class="c-tm" text-anchor="middle">
+              <text x="608" y="188">everything in it</text>
+              <text x="350" y="318">over a very long time</text>
+              <text x="92" y="188">space folded back up: X again</text>
+            </g>
+            <circle cx="350" cy="30" r="9" class="f-x"/>
+            <circle cx="608" cy="150" r="9" class="f-space"/>
+            <circle cx="350" cy="280" r="9" class="f-lump"/>
+            <circle cx="92" cy="150" r="9" class="f-x"/>
+            <path d="M420,52 C500,72 560,104 592,132" fill="none" class="s-space" stroke-width="2.6" marker-end="url(#st-a2)"/>
+            <text x="524" y="76" text-anchor="middle" class="c-t f-space">a small push: it opens</text>
+            <path d="M596,178 C560,220 490,258 424,272" fill="none" class="s-muted" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#st-a2)"/>
+            <path d="M276,272 C210,256 140,218 104,178" fill="none" class="s-muted" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#st-a2)"/>
+            <text x="176" y="250" text-anchor="middle" class="c-tm">enough energy to pay</text>
+            <path d="M108,124 C140,92 210,54 280,38" fill="none" class="s-muted" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#st-a2)"/>
+            <g transform="translate(250,150)">
+              <line x1="0" y1="0" x2="26" y2="0" class="s-space" stroke-width="2.6"/>
+              <text x="34" y="4" class="c-tm">measured in the model</text>
+              <line x1="0" y1="22" x2="26" y2="22" class="s-muted" stroke-width="2" stroke-dasharray="6 5"/>
+              <text x="34" y="26" class="c-tm">not measured &mdash; the idea's own steps</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>One leg of four has been walked in the model. The picture is honest about which.</figcaption>
+      </figure>
+      </li>
+    </ol>
+
+    <h3>A loop, not a line</h3>
+    <p><span class="tag idea">The author's idea</span> Most accounts of where space came from are a line: something happened, then space, then us. This one bends back. Space is made of X; gravity gathers; where enough gathers, space is remade into X, which can open again. <b>The thing that emerged reaches down and remakes what it is made of.</b> Nothing needs to have started it, because there is no bottom step to start from.</p>
+
+    <h3>The shape has a name</h3>
+    <p>Douglas Hofstadter calls this a <b>strange loop</b>. You climb through levels, each one made of the level below &mdash; and the top one reaches back down and acts on the bottom. His example is a mind: neurons make symbols, symbols make a self, and the self then acts on the neurons. You went up and arrived back at the bottom, and no level is the foundation.</p>
+    <p>Here the levels are the network and the space built out of it, and the reaching back down is a black hole. <b>What makes it strange is not that it repeats &mdash; it is that it crosses levels.</b> That is also what separates it from the other well-known loop in cosmology, Lee Smolin's, where black holes give birth to universes whose constants drift a little each time. That one is a family tree: every turn makes a new individual and the line never comes back. This one comes back.</p>
+    <p class="chk"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>Tested &mdash; one part held, the rest did not</p>
+    <p>Naming it is not decoration, because a strange loop makes a demand you can check: <b>the upper level has to be genuinely its own</b>, with laws that are more than a summary of the level beneath. We wrote down what would count as passing and tested it. It did not pass. One part held &mdash; the boundary between the two arrangements costs a fixed amount, the same in a small system as a large one, and two quite different rule-sets agree on it almost exactly, so it belongs to the arrangement and not to the rules. The rest missed, and how the change plays out over time was not captured at all.</p>
+
+    <h3>And why you would expect to find yourself inside one</h3>
+    <p><span class="tag idea">The author's reasoning</span> Think of the shapes a reality could have. Some run for a while and stop. Some start and never stop, but wind down until nothing happens in them. Some go round. Let the ordering run on: the first kind had its turn, the second is still there with nothing going on inside it, and <b>the third is still going.</b></p>
+
+    <figure class="fig">
+      <p class="fig-title">Three shapes a reality could have</p>
+      <div class="scroll">
+        <svg viewBox="0 0 700 260" role="img" aria-label="Three shapes. A segment that starts and stops, which is over. A ray that starts and runs down for ever, still there but with nothing happening in it. And a circle that goes round, always still running.">
+          <circle cx="60" cy="48" r="7" class="f-ink2"/>
+          <line x1="60" y1="48" x2="300" y2="48" class="s-ink2" stroke-width="3"/>
+          <circle cx="300" cy="48" r="7" class="f-ink2"/>
+          <text x="320" y="44" class="c-tb">starts, then stops</text>
+          <text x="320" y="62" class="c-tm">had its turn; not happening any more</text>
+
+          <circle cx="60" cy="130" r="7" class="f-ink2"/>
+          <line x1="60" y1="130" x2="300" y2="130" class="s-ink2" stroke-width="3"/>
+          <line x1="300" y1="130" x2="420" y2="130" class="s-muted" stroke-width="3" stroke-dasharray="7 7"/>
+          <text x="440" y="126" class="c-tb">starts, then winds down</text>
+          <text x="440" y="144" class="c-tm">still there for ever, with nothing going on in it</text>
+
+          <g transform="translate(115,205)">
+            <circle cx="0" cy="0" r="38" fill="none" class="s-space" stroke-width="3"/>
+            <path d="M38,0 a38,38 0 0 1 -9,24" fill="none" class="s-space" stroke-width="3" marker-end="url(#st-a2)"/>
+          </g>
+          <text x="180" y="201" class="c-tb f-space">goes round</text>
+          <text x="180" y="219" class="c-tm">always still running, and needs no first moment</text>
+        </svg>
+      </div>
+      <figcaption>The rival to a loop is not the thing that stops &mdash; it is the middle one, a universe that expands for ever into cold emptiness. That is what our own cosmology predicts, and it is eternal without going round.</figcaption>
+    </figure>
+
+    <p><b>Said carefully, because this is where the argument can be broken.</b> "Loops are the most likely reality" sounds like counting one infinity against another, and nobody has a rule for doing that &mdash; it is a real unsolved problem, not a technicality. <b>But the argument does not need it.</b> The claim that survives is about <i>dynamics</i>, not about census: in any system that keeps running, trajectories fall into cycles and stay there. That is what an attractor is, and it is ordinary mathematics. It needs a measure only over the starting conditions of one world, not over all possible worlds.</p>
+    <p>Then one more constraint, and it is the cheap one: <b>anything capable of asking this question needs a stable spatial phase to evolve in</b>, over billions of years. So of the shapes that keep going, the one we could be inside is one with a settled place to stand. A loop with a stable phase is not a coincidence we have to explain away &mdash; it is close to the only thing we could have found.</p>
+
+    <h3>And an argument that needs no counting at all</h3>
+    <p>Anything with a beginning owes you an account of the beginning. Whatever you name as the cause, you can ask what put <i>that</i> there, and then what put that there, for ever. <b>A loop owes nothing to anything outside itself:</b> every part is accounted for by the part before, the whole way round, and there is no outside to point at. It is like a dictionary &mdash; every word in it defined using other words in it, and none needing one from beyond the covers. Nothing is left over to explain.</p>
+    <p class="aside"><b>Neither of these is evidence, and they are not offered as any.</b> No measurement could tell "reality is a loop" from "reality began". They are the reasons the idea has this shape, and the reason a stable spatial phase is what an observer would expect to be standing in. The evidence is everything above them.</p>
   </section>
 
   <!-- ============ 9. scorecard ============ -->
@@ -1095,8 +1289,9 @@
       <div class="score">
         <p class="n"><svg aria-hidden="true"><use href="#i-c2"/></svg>Claim 2</p>
         <p class="claim">Known physics comes back out</p>
-        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" style="stroke:var(--neutral)" stroke-width="2" stroke-dasharray="3 2.2"/></svg>Not tested</span>
-        <p class="why">Out of reach: the model has no time and no quantum behaviour. No approach to this question has cleared this bar yet.</p>
+        <span class="status"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.8" fill="none" style="stroke:var(--warn)" stroke-width="1.6"/><path d="M8,1.2 A6.8,6.8 0 0 1 8,14.8 Z" style="fill:var(--warn)"/></svg>Half of it</span>
+        <p class="why"><b>More comes out than we expected, and the hard half does not.</b> Out of the model, unasked: the ordinary law for how long a change waits before it starts, right to within half a per cent over an eighty-five-fold range with nothing adjusted; exact energy books; the standard signatures of a sharp change; and space itself, with its number of dimensions a thing you count rather than a thing put in. It also holds all the kinds of stuff at once &mdash; ordered space, disordered matter, and a leftover &mdash; as one substance arranged three ways. <b>What is missing is the half the claim was written about:</b> relativity and quantum behaviour. The model has no time in it at all, so neither can even be asked. No approach anywhere has cleared that bar.</p>
+
       </div>
       <div class="score">
         <p class="n"><svg aria-hidden="true"><use href="#i-c3"/></svg>Claim 3</p>

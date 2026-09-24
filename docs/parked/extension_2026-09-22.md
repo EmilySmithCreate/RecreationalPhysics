@@ -176,3 +176,179 @@ on every kind of energy, and fall off with distance in the right way. Nothing he
 the model this project uses, gravity is meant to come *out* of the curvature term rather than be added
 beside it.
 
+
+---
+
+## Addition, 23 September 2026, night: the cycle, why λ > 1, and "every arrangement exists forever"
+
+**The author's words, put in order.** λ is above 1 in the reality we live in, probably about 1.25, and
+it may be a property of this particular strange loop. At λ = 1 a change costs and releases nothing: no
+lump, no new spacetime, no loop, so that is a very unlikely version of reality for us to observe. Once
+space exists there is a long flat phase that is never left as a whole. Parts of it can revert to X, and
+those are black holes. Eventually a lonely black hole in the expanding universe never meets another with
+enough activation energy to trigger a new spacetime. By then that spacetime has already made a
+trillion new ones, so it does not matter: every possible arrangement of the result of a Big Bang still
+gets to exist, for ever. The author asked that this last statement be captured even though the model
+cannot test it, because it may bear on something else that matters.
+
+**What already bears on it (*ours, unverified*).**
+- **It is the same claim as Update 17's "every version exists".** That update says that because the loop
+  is eternal, every version that can come out of the lump does come out. So "every arrangement exists for
+  ever" is not only cosmology: it is the ground of the author's quantum picture.
+- **And it meets a specific objection.** In Smolin's real-ensemble quantum mechanics ([Smolin11]), a
+  thing behaves quantum-mechanically because it has copies, and a macroscopic body is classical because it
+  has none. He argues that exact copies of macroscopic bodies would make them obey superposition, and
+  takes their not doing so as evidence that the universe is finite. For the author's picture the
+  question this raises is precise: **do versions in other spacetimes count as copies of things in this
+  one?** If they do, macroscopic bodies here would have copies, and the picture predicts something not
+  seen. If they do not (for example because separate spacetimes share no relationships at all), the
+  statement is safe, and "copies count only within one connected spacetime" becomes part of the theory.
+  The author decides which.
+- **Why λ > 1, as selection.** The reasoning is anthropic in form (we can only be in a universe that makes
+  a lump), and it has a published relative with a mechanism: Smolin's cosmological natural selection
+  ([Smolin06]), in which black holes bounce into new universes whose constants differ slightly, so the
+  constants we see are the ones that make the most black holes. In the author's version the trigger is a
+  collision of black holes supplying the activation energy, and λ > 1 is needed for any lump. **Whether λ
+  varies between parent and child spacetime is the question that decides which kind of argument this is**:
+  if it does, selection (Smolin's kind, which makes predictions); if it does not, a fixed rule plus an
+  observation-selection effect, which makes fewer.
+- **What the model already agrees with, exactly:** space is the energy floor (Q18); no single move builds
+  a fold out of space (move census, corrected 23 September); leaving the flat sheet costs 32 at every λ;
+  the push that triggers a conversion is a sharp threshold that does not grow with size (Update 9); a tube
+  with no spare energy never converts. A lonely black hole that never meets a big enough push is the
+  model's "nothing to spare".
+- **What the model can measure next, and it is the λ scan reframed** (PREREGISTRATION T8 draft): across
+  the window where X is stuck for now, how the lump, the push threshold, how long X stays stuck, the
+  capacity the surroundings need to take the lump without boiling off (T9), and the size of the leftover
+  depend on λ. In a selection picture those are the ingredients of fertility.
+
+---
+
+## The author's decisions, 23 September 2026, late night
+
+**Recorded as her decisions, in her words put in order.**
+
+1. **The rules do not change between parent and child.** There are two phases, and their rules are their
+   constants. If the constants changed with each new spacetime, we would not be in the optimal, largest-
+   scale strange loop, which is a problem. There may be other loops; ours is the one to establish first.
+   *Consequence (ours):* this is not Smolin's mechanism, which needs heredity with small variation. What is
+   left of his logic is counting: if there are many loops, a universe drawn at random most likely belongs
+   to the most prolific one, so our rules should be close to those that make the most offspring. That keeps
+   his master prediction's shape without his mutation step.
+2. **The anthropic piece is the strange loop itself**, and it is a multiplier: every black hole that gets the
+   activation energy makes a very large number of new spacetimes ("a trillion").
+3. **A black hole is a space-creation machine.** It gets the activation energy by growing, eating stars;
+   collisions of black holes are not needed (this replaces item 5 of the extension above). When it gets
+   the activation energy it "burps" a new universe. It can keep doing so.
+4. **Every burp is the same**: exactly the same released energy, and the same dark-matter scrap goes with
+   it into the new space. The loop is maximized.
+
+**What the model already says about item 4 (*ours, from the records*).** In the tube runs the release is
+exactly 4(λ − 1) per point, every time (T7 gate 3, O13). The scrap is almost always one curled column, but
+it comes in a few discrete sizes, 4, 9 or 14 units at λ = 1.25 (O28 addendum), with rarer states of 8 to
+45 units (O13). So "the same lump every time" holds exactly; "the same scrap every time" holds up to a
+small menu of scraps.
+
+## The author's positions, 24 September 2026
+
+**Recorded as hers, in her words put in order.**
+
+1. **Gravity is not a wish.** It is a mathematical result of some local degrees of freedom being
+   interchangeable and unobserved from our large-scale view of reality. Asked whether "space refolds because
+   more arrangements are curled" (entropy) and "space refolds only where energy is packed in to pay for it"
+   (cost) can both be true: yes. *Ours:* they are the two halves of one free energy, which is how the model
+   already weighs states, a count times e^(−E/g). Relatives of gravity from counting: Jacobson (1995),
+   Verlinde (2011); general knowledge, not read by us.
+2. **The melt is brief.** A melt is not a real phase with any stability, so a region that melts briefly is
+   fine as long as it folds soon after. The melt can be the barrier between a new space and the black hole
+   that birthed it, closing until the next 12 is available. *Ours:* in the model a melt lasts as long as its
+   energy stays (T21), so "brief" needs the energy to leave; the testable form is a leaky or cooling box that
+   asks whether a melt folds before it flattens.
+3. **Versions do not affect one another; they are not different in the first place.** And closed loops are
+   where phases come from (her "checks" to that). *Ours:* the most concrete standard mechanism fitting both
+   is the exchange phase: swapping identical things returns the same state up to a sign (−1 for fermions;
+   any phase in two dimensions, anyons). General knowledge, not read by us; whether it survives rung 3a's
+   argument is not known.
+
+Names now follow `docs/papers/glossary.md` (burp, ε, ΔE‡, relic, κ, decompactification).
+
+## The author's idea, 24 September 2026, later: directions come in threes
+
+**Hers, in her words put in order.** Perhaps the relationships between the degrees of freedom come in threes.
+The push of 12 uncurls one direction, and the other two come with it, because that is a law of X. The energy
+released when the other two uncurl may be the Big Bang: all the energy and matter.
+
+**What it touches (ours, unverified).**
+- In the 2D model each curled direction costs the same, 4(λ − 1) per vertex, so uncurling adds up. If that
+  carries over to a 3D version, the first direction releases a third of the total and the two that follow
+  release two thirds, most of the energy.
+- There is a mechanism for "the others come with it": the first release can pay the next wall. The cost of
+  starting is fixed while the release grows with the size (VISION Update 9), which is the condition for a
+  runaway. In a sealed box the first burp heats its surroundings, and that heat is available for the next push.
+- A cascade between rungs of the dimension ladder has already been seen, the wrong way round: below λ = 1 a
+  flat sheet decays in steps that land on the exact rungs (VISION Update 8).
+- Why three is the parked "why 3+1" question. Its published cousin is [BV89] (not read by us).
+
+**The test it implies.** It needs the 3D version of the model (degree 6, a VISION decision under S1): a torus
+with all three directions curled, given one push, sealed. Do all three uncurl in a cascade, and is the energy
+split one third to two thirds?
+
+## The author's intuition, 24 September 2026: scale symmetry of reality's degrees of freedom feels important
+
+**Recorded as hers; not yet a claim.** *Ours, unverified:* a continuous scale symmetry (the same at every size)
+would conflict with her own claim 1, where X has its own scale, and with a first-order burp, which releases a
+definite amount. A **discrete** scale symmetry would not conflict: the same pattern repeating at a ladder of
+sizes. Her loop already has that shape, since every burp is the same and each new space follows its parent's
+rules. A curiosity that touches the threes as well (general knowledge, not read by us): the Efimov effect,
+where three particles form an endless ladder of bound states, each larger than the last by a fixed factor.
+
+## The author's position, 24 September 2026: curving moves matter, not the other way round
+
+**Hers, in her words put in order.** Mass and energy curving spacetime is the opposite of how this hypothesis
+sees it. Spacetime curving moves matter. Spacetime wants to curve because symmetry in dimensional scale gives
+more arrangements. Perhaps the spatial dimensions need some aspect of mass in order to curve, so no matter
+means no curve.
+
+**What it touches (ours, unverified).**
+- The half "curving moves matter" is already Einstein's; the difference is what makes space curve. For
+  Einstein, mass-energy is the source. Here space has its own drive to curve, and matter is what lets it act.
+  That has the same shape as the burp: a change that is wanted but needs a trigger.
+- What it must still reproduce (claim 2): the curvature scales with the mass-energy present (twice the mass,
+  twice the pull), so the aspect of mass cannot be an on/off switch; curvature reaches into the empty space
+  around matter, which is how the Sun holds the Earth, and gravitational waves cross empty space; and empty
+  space is not quite flat (the accelerating expansion). So "no matter, no curve" has to mean "no matter,
+  nothing to start the curve", not "curve only where matter is".
+- What the model already says (exact, Q15 and T10): with interchangeable points, symmetry strongly favours
+  fully curled knots (a shattered state by about 10^29 at N = 160), but a single curled direction has fewer
+  symmetries than flat space (2N against 4N). Symmetry in the model pushes towards curling all the way into
+  knots, not towards the gentle curvature gravity needs.
+- The test it implies, asked her way round (T13 rung 3): **does curved space move matter?** Put a relic near a
+  curved patch in a warm sheet with interchangeable points, and measure whether it drifts towards the patch
+  (the average pull at each separation). The other half, whether space around a relic curves using its
+  energy, is measured on the same runs.
+
+**Refined the same day, her words put in order.** Curving takes some kind of energy, and mass provides it;
+perhaps something about the particles. You cannot have only one direction curling: the three space directions
+are intertwined, so they must curl together, and that may be why one activation releases the whole burp. Talk
+consistently about curved space moving matter, so that readers start thinking the opposite way from Einstein.
+
+**What that touches (ours, unverified).**
+- "Curving takes energy" is exactly the model's energy: above λ = 1 every curled direction costs energy. And
+  if matter supplies that energy, the dose comes out right, since more mass means more energy to spend. The
+  property has to be energy, not rest mass: light carries energy with no mass, and it is bent (measured) and
+  in Einstein's theory it curves space too.
+- The rule "all three curl together" conflicts with the stand-in for X used so far. The curled torus has exactly
+  one curled direction and one open, which is the partial state the rule forbids. In the 2D model the rule's
+  X is the fully curled state, both directions closed: the 4-cube, and at larger sizes a gas of them, which the
+  published work calls **baby universes** ([KTB19] Sec. 3.3.1).
+- That gives a test the 2D code can already run, with no new knob: start from a gas of baby universes at
+  λ = 1.25 and ask whether it opens into one flat sheet, sharply and all at once, releasing 8(λ − 1) per point
+  (twice the curled torus's). With interchangeable points the knots carry enormous symmetry (Q15), so counting
+  will make them stickier than the torus.
+- Open, for her: if curling is all or nothing, what is the gentle curvature around a planet made of?
+
+**Confirmed by the author the same day:** "no matter, nothing to start the curve" is her position. Matter does
+not have to sit where the curve is; it is what starts the curve, and curving takes energy that it supplies.
+*Ours, unverified:* on the same logic, empty space can curve when its own stored excess pays for it. That is
+the dark energy of the kept idea above (space only stable for now), which is separate from the scrap: the scrap
+is a lump that clumps, which makes it dark matter; dark energy is spread evenly and does not clump.

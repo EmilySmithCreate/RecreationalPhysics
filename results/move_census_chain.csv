@@ -1,0 +1,6 @@
+arrangement,n,lam,squares,h,adds,loses,neither,cheapest_add,cheapest_lose
+flat sheet 10x10,100,1.25,100,0.0,0,14900,0,,32.0
+flat sheet 12x12,144,1.25,144,0.0,0,34128,0,,32.0
+tube 24x4,96,1.25,120,96.0,0,14400,48,,12.0
+tube 36x4,144,1.25,180,144.0,0,35424,72,,12.0
+melted from 10x10,100,1.25,19,1296.0,5127,5377,6218,-75.0,16.0

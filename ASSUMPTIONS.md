@@ -51,7 +51,7 @@ Full statements and derivations are in the docstring of `src/graphity/cqg.py`.
 |---|---|---|---|
 | Q1 | Energy H = 16(N − S) once no edge carries more than two squares; general form 4·Σ_e(2 − S_e)₊. | Derived by us from the edge-curvature formula [T22] Eq. (2) at D = 2 on bipartite graphs. Matches the global term of [T24] Eq. (4) and the D = 2 mean-field action of [KTB19]. | Ours, cross-checked on two limits (random graph 16N, flat torus 0). **Confirmed against [T25] on 2026-09-19 (text read directly, not summarised):** Eq. (21) defines H = −2D Σ_i Σ_{j∼i} κ(ij), a sum that visits every edge twice, and Eq. (8) gives κ = −(2 − S_e)₊/2 for D = 2 without triangles or pentagons; together, H = 4 Σ_e (2 − S_e)₊ exactly. One wrinkle: read with each edge counted once, the local term as printed in [T25] Eq. (22), and the matching correction term in [KTB19] Sec. 3.3, would carry a coefficient 2, not 4. Only 4 makes the paper's own statement true that the two effects "cancel exactly" (4-cube: −128 + 4·32 = 0), so its edge sums must run over both orientations. |
 | Q2 | On bipartite graphs the hard-core rule is equivalent to "no two vertices share more than two neighbours" (no K₂,₃). | Rule: [T22], [T24]. Equivalence: ours. | Ours; consistent with the text definition in [T25] ("any two cycles can share at most one edge", for triangles, squares, pentagons). ~~Figure of excluded subgraphs ([T25] Fig. 1) not inspected.~~ **Inspected 2026-09-19: confirmed.** Of the five excluded subgraphs, (b), labelled (□,□), is the only one made of squares alone: two vertices joined to three common neighbours, which is K₂,₃. The other four each contain a triangle or a pentagon and cannot occur in a bipartite graph. [T25] also says the maximum number of squares on an edge is 2D − 1 = 3, which is what "at most two common neighbours" implies. |
-| Q3 | ~~No edge may carry more than 2 squares (hard cap).~~ **Superseded.** [T25] Sec. "Cycle condensation" describes the published model as using the *full* Hamiltonian, Eq. (22): the global term plus a **soft local term that penalises** edges with more than 2D−2 squares, with no hard cap. It states that the two effects "cancel exactly" so that denser configurations are "degenerate" with the torus, which confirms our Q1 coefficient and our 4-cube tie. It also states: global term only → **first-order** transition into isolated hypercubic complexes ([KTB19], [GV21]); full Hamiltonian → **continuous** transition. | [T25]; our first-look code | **Our first look simulated a third variant (global term + hard cap), which is neither of the two published cases.** Its results do not yet test the published claims. To do: implement the local term, remove the cap, rerun. **Corrected 2026-09-19, after reading [KTB19] Sec. 3.3 and Sec. 4 directly: the capped variant IS a published case.** [KTB19] defines P_ω as the set of edges with more than d − 2 squares (plus triangles), i.e. more than 2 for us, and states that its simulations (Figs. 8 and 9, the evidence offered for a continuous transition) ran "the mean field action" on the space with P_ω = ∅, where "both the exact action and the mean field action agree". That is this code: cap of 2, H = 16(N − S). Our first reading of [KTB19] was right; this row's "superseded" went too far. So there are three published cases, not two, and they lie on one line (*Ours*): H = 16(N − S) + 4λ Σ_e (S_e − 2)₊ with λ = 0 (first order, hypercubes), λ = 1 (full Ollivier curvature, [T25]) and λ → ∞ (the cap, [KTB19] Sec. 4). [KTB19] did not simulate the annealed transition at λ = 1; it says only that this "seems likely" to be "in the same universality class". T2 is still needed for λ = 0 and λ = 1. |
+| Q3 | ~~No edge may carry more than 2 squares (hard cap).~~ **Superseded.** [T25] Sec. "Cycle condensation" describes the published model as using the *full* Hamiltonian, Eq. (22): the global term plus a **soft local term that penalises** edges with more than 2D−2 squares, with no hard cap. It states that the two effects "cancel exactly" so that denser configurations are "degenerate" with the torus, which confirms our Q1 coefficient and our 4-cube tie. It also states: global term only → **first-order** transition into isolated hypercubic complexes ([KTB19], [GV21]); full Hamiltonian → **continuous** transition. | [T25]; our first-look code | **Our first look simulated a third variant (global term + hard cap), which is neither of the two published cases.** Its results do not yet test the published claims. To do: implement the local term, remove the cap, rerun. **Corrected 2026-09-19, after reading [KTB19] Sec. 3.3 and Sec. 4 directly: the capped variant IS a published case.** [KTB19] defines P_ω as the set of edges with more than d − 2 squares (plus triangles), i.e. more than 2 for us, and states that its simulations (Figs. 8 and 9, the evidence offered for a continuous transition) ran "the mean field action" on the space with P_ω = ∅, where "both the exact action and the mean field action agree". That is this code: cap of 2, H = 16(N − S). Our first reading of [KTB19] was right; this row's "superseded" went too far. So there are three published cases, not two, and they lie on one line (*Ours*): H = 16(N − S) + 4λ Σ_e (S_e − 2)₊ with λ = 0 (first order, hypercubes), λ = 1 (full Ollivier curvature, [T25]) and λ → ∞ (the cap, [KTB19] Sec. 4). [KTB19] did not simulate the annealed transition at λ = 1; it says only that this "seems likely" to be "in the same universality class". T2 is still needed for λ = 0 and λ = 1. **Addendum 2026-09-22, from the author's reply (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`): he has no such restriction in his code; only the hard-core rule is ever imposed. So the capped kernel is our reading of Sec. 4, disputed by the author, and not a published case. The λ → ∞ end of the knob stays in the code and on the record as ours.** |
 | Q4 | Move = bipartite edge switch; symmetric proposal; invalid states rejected. Connectedness not enforced. Acceptance: Metropolis min(1, a), or Glauber 1/(1 + 1/a), with a = exp(−ΔH/g). | "Edge switches": [KTB19] Sec. 4. Details: ours. Metropolis: [NB99]. Glauber: [T25] Eq. (28), read from the source text. | Ours. Both rules satisfy p(ΔH)/p(−ΔH) = a, which with a symmetric proposal is detailed balance; they are tested to give the same average (`test_glauber_and_metropolis_sample_the_same_distribution`). ΔH is exact, tested against full recomputation and against networkx at λ = 0, 0.5, 1 (`test_incremental_energy_is_exact`). Ergodicity: proved by exhaustive listing for N ≤ 18, with and without the cap; unproven beyond (Q9). |
 | Q5 | Start from an lx×ly torus, both sides even and ≥ 6, melted at infinite temperature. A side of 4 is refused: it closes a 4-cycle around the torus, so half the edges carry three squares and S = 1.25 N. | Ours. | Ours; melting is tested (`test_melts_at_infinite_temperature`), the 16×10 case in `test_rectangular_torus`. The side-of-4 statement was checked by brute force with networkx on 4×6 and 4×10. |
 | Q6 | Error bars on φ and on the fluctuation measure N·var(φ): block bootstrap over 20 blocks of sweeps, 500 resamples (columns `phi_err`, `chi_err`). Beside them, the integrated autocorrelation time τ in sweeps (`tau_int`), summed with an automatic window that stops at the first t ≥ 5τ. | Block bootstrap: same choice as A8, [NB99]. Windowing rule: [S97], **from general knowledge, not read by us**; the factor 5 is a conventional value, to verify. | Ours, tested on series with known answers (`tests/test_analysis.py`). **Limits:** the error bars hold only where a block (n_meas/20 sweeps) is much longer than τ. Where the chain is freezing they are underestimates, which would make heating and cooling look *more* different than they are, i.e. it would fake hysteresis. `tau_int` is a lower bound when the series never decorrelates, and NaN when the chain did not move at all. Twenty blocks and one replica is a first-look choice; the pre-registration (T7) must fix the production choice. |
@@ -67,6 +67,8 @@ Full statements and derivations are in the docstring of `src/graphity/cqg.py`.
 | Q16 | **Connected runs use the simplest possible move: the ordinary switch, with any proposal that would break the graph into pieces refused.** No new move, no new algorithm. `one_switch_away(..., connected=True)` and `explore(..., connected=True)` in `small_graphs.py`; the production flag is still to be added to the kernel. | **Detailed balance is automatic** and is not an assumption: restricting a symmetric proposal to a subset of states leaves it symmetric. **Irreducibility is the assumption.** [Taylor81] proves it for a space constrained only by degree -- any connected graph reaches any other by switches with every intermediate graph connected -- and that is quoted from sources citing it rather than from the original. | **Ours, and NOT established on our space. Read this before interpreting any connected run.** [Swap17] reports that adding a constraint can destroy exactly the swap-connectivity Taylor guarantees, and our space adds the hard-core rule on top of degree, so the guarantee is not inherited. **We tried to check it exhaustively and the check is vacuous** (`scripts/check_connected_ergodicity.py`, 2026-09-21). The restricted walk does reach every connected class at N = 16 and 18, with and without the cap -- but the restriction **refused zero moves** at both sizes, so the walk it performed was the unrestricted one and the result says nothing. The reason is arithmetic: the smallest valid piece has 14 vertices (Q8), so two pieces need at least 28, and every valid state at 16 or 18 vertices is connected whether or not you ask. Exhaustive enumeration cannot reach 28 (N = 20 did not finish in about 40 minutes, Q9), so **this property cannot be established exhaustively with the machinery we have.** **What must therefore be reported with every connected run:** the share of proposals refused for disconnection. Where it is small the restriction barely bites and the chain is effectively the unrestricted one, whose ergodicity T4 did establish at small size; where it is large -- the shattered phase at λ = 0 is the case to worry about -- the restriction is doing real work and any result carries this caveat. A cheaper partial check that has not been done: start the restricted chain from two very different connected states at a simulable size and see whether each reaches the other's neighbourhood. That is evidence, not proof. |
 | Q17 | **The flat-histogram approach to T6 does not work on this model at production size, and the reason is structural rather than a tuning problem.** Diagnosed 2026-09-21 at N = 36, the smallest pre-registered size, before any result was taken from it. | Ours, measured. | Ours, measured, and the numbers are the point. **What was seen.** Starting from a perfect flat torus with the whole (S, X) range as the window: 4015 cells of which 737 reachable, 2x10^7 moves, and **zero round trips** -- the walk never crossed its own window once. Consequences, in order: (a) the flatness criterion was never met, because new bins were still being discovered at round 358 of 556 and every late bin drags the histogram minimum down; (b) so ln f never left its starting value of 1.0 through the entire run; (c) so the accumulated weights ran to a spread of **24 796** where the true spread of ln g at this size is of order 90; (d) so the frozen-weight second stage could not move at all, visiting **one bin** out of 737. Two repairs were made and are kept because they are right in themselves -- the histogram now restarts whenever a new bin appears, and ln f is halved after a bounded number of rounds whether or not the histogram is flat -- and together they got ln f down to 2x10^-3 and the second stage up from 1 bin to 24. **Still useless, and still zero round trips.** A window restricted to S in 20..40, X in 0..24 did produce 30 round trips, which shows the diffusion distance is the obstacle rather than the kernel; but the transition needs a window spanning the disordered and the ordered side, which is exactly the wide window that cannot be crossed. **The kernel is not at fault** and was checked separately: an ordinary chain on the same graph at infinite temperature accepts 45 % of moves and visits 63 distinct (S, X) in 2000 sweeps. **Conclusion:** flat-histogram sampling over a two-dimensional bin space is the wrong instrument here. Measuring one energy ladder at a time, or splicing overlapping windows, would each address it; but [RdF15], which asks precisely our question in a neighbouring model, answers it with **parallel tempering**, which this project already has and has validated against exact averages (Q11). T6 is redirected accordingly; see TASKS. The Wang-Landau code, its Ising and exact-enumeration validations (Q14, section D) and the two repairs above are kept: they are correct, they are tested, and nothing about them is withdrawn except the claim that this is the right tool for this measurement. |
 | Q18 | **Zero is the floor of the published energy, and allowing braces does not change that.** A chain over graphs that need not be two-sided (`src/graphity/general_chain.py`), so that the static reference of Q10 can be asked what a *run* does. Same energy, same validity rule, the general edge switch of Q10, energy recomputed exactly at every attempted move; a sweep is 2N attempts as elsewhere. | The energy and the validity rule: [T25] Eqs. (8), (21), Def. 2, Fig. 1, as Q10 records. The chain, the floor argument and everything below: ours. | **Ours, tested** (`tests/test_general_chain.py`), and it answers the question the author asked on 2026-09-22: if refolding space is free, does space refold? **(1) Two exclusions that come from the hard-core rule and not from the prices.** A triangle and a square sharing an edge leave a pentagon that shares two edges with each, and two triangles on one edge leave a square that does the same; both are refused. The cuboctahedron, the obvious candidate for an arrangement below the sheet, is invalid for exactly this reason. **(2) So a valid edge carries T = 0, or T = 1 with S = 0, and over every such loading the curvature is at most zero. H is therefore never negative: the flat sheet is not metastable, and nothing in this model family sits below space.** Equality needs every edge to carry either two squares (a sheet) or one triangle and a pentagon (a closed braced piece). **(3) The H = 0 family has at least three members**: the flat sheet (a dip, wall 16); the 30-point icosidodecahedron (a dip, wall 20); and the 15-point L(Petersen), ten triangles and twelve pentagons, which is **frozen** -- not one valid switch exists out of it. **(4) Braces without pentagons are expensive**: the line graphs of the girth-6 cubic graphs (Heawood, Moebius-Kantor, Pappus, Desargues) all sit at exactly +4 per vertex and none is a dip, as the kagome sheet does. **(5) A sheet that wraps in an odd number of steps carries free pentagons** -- once an edge has two squares both brackets are saturated, so further loops on it cost nothing -- **and they halve its wall, 8 against 16.** **What this means for the author's picture** (*ours, unverified*): dark energy as space holding a little extra above something lower needs an arrangement below space, and there is none here, with or without braces. Refolding is free but never downhill, so what decides between space and a knot at a given temperature is entropy, not energy. **Limit, stated plainly:** the chain has no exactly known distribution to check against, because the hard-core rule leaves no valid graph below 14 points (Q8) and enumeration cannot reach the sizes that do exist (Q9), so its runs are read qualitatively -- does it refold, does it survive -- and not as equilibrium averages; irreducibility is unproven for this move set (Q10). |
+| Q19 | **The correlation length of [KTB19] Fig. 9, read as written, with three choices the paper leaves open.** `src/graphity/correlation.py`. Per edge phi_sq = S_e / (d - 2); per vertex f(u) the average of phi_sq over its d edges; C(r) the average of (f(u) - phi)(f(v) - phi) over pairs at graph distance r, divided by the variance of the *edge* field; xi = -< r / log C(r) >, divided by the diameter. **Choices (ours):** (1) the outer average is over the distances r = 1 .. diameter with 0 < C(r) < 1, each counted once; other distances are skipped and counted; (2) a graph with no edge fluctuation (a perfect lattice) is skipped and counted; (3) pairs in different pieces are ignored. Both averages are over one graph, then over snapshots. | [KTB19] Sec. 4, the two displayed equations after Fig. 8 and the text of Fig. 9 (arXiv HTML searched directly, 2026-09-23). Whether Fig. 9's axis is natural log like Fig. 8a: to verify. | **Calibrated against a brute-force networkx computation** (`tests/test_correlation.py`); the choices are **Ours**. Caution from the group's own first author (Kelly's thesis, REFERENCES [Kelly22] note): interactions here are not short range and random graphs have diameters growing only as log N, so "correlation lengths are not well defined" is a real possibility. At our sizes the diameter runs from about 5 (N = 36, random phase) to 26 (N = 676, lattice), so xi / diameter is read from a handful of distances. |
+| Q20 | **The fast symmetry count, and a chain with interchangeable points.** `src/graphity/symmetry.py` counts side-preserving automorphisms with igraph's `count_automorphisms` (bliss; from general knowledge, not read by us) in about a millisecond at N = 64 to 676, against 1 to 45 s for Q15's counter; the two agree exactly on perfect tori (4x4 = 192, 16x4 = 128, 12x12 = 576, 16x10 = 320) and on melted graphs (`tests/test_symmetry.py`). `src/graphity/interchangeable.py` uses it inside a chain: the kernel's own move, accepted with min(1, exp(-dH/g) A(G')/A(G)) as in Betre and Lewis Eq. (72) [DQM25], or, sealed, with the demon paying dH and the factor A(G')/A(G) alone. | The acceptance factor: [DQM25] Eq. (72), read in full by the owner. The rest: ours. | **Calibrated** against the exact interchangeable averages at N = 18 (`tests/test_interchangeable.py`): <S> = 19.59 +- 0.08 against 19.53 exact at lambda = 1, g = 10 (named: 20.01); 21.26 +- 0.05 against 21.29 at lambda = 0, g = 10 (named: 20.96); 18.99 +- 0.31 against 19.53 at the colder g = 4 (slower mixing). Energy conserved exactly in the sealed version. Cost: every valid proposal is counted, so it is meant for N up to about 64. **Consequence:** the per-move correction Q15 called unaffordable is affordable at small N; the sealed-sheet refold test (series paper 4) and quantum rung 1 (T15) can now be run with interchangeable points. |
 
 ### First look (2026-09-19, `configs/cqg_first_look.json`; one replica, short runs, NOT publication quality)
 
@@ -807,6 +809,276 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   has not been measured. (That is the shape of Verlinde's entropic-gravity proposal, 2011; general knowledge,
   not read by us, details to verify.) It also means the defect-defect interaction of O13's third addendum is
   a contact effect and not evidence of a field.
+
+- **O23 A long-range force does exist here, and it is between boundaries, not between points.**
+  (2026-09-22, EXACT; `scripts/run_force_census.py`, `configs/force_census.json`; follows O22 and answers the
+  author's question of whether O22's obstruction can be resolved.) O22's proof needs the damage to sit in a
+  patch. The standard way to tell a local defect from one whose damage cannot be confined is to **price it at
+  several sizes**, and both objects were priced at N = 36 to 600, at λ = 1, 1.25 and 1.5. **The point defect
+  costs exactly 32 at every size**, so it is local and O22 applies to it: no force. **The gap between the two
+  orders is exactly 4(λ − 1) per point at every size** -- 0, 1 and 2 -- so a boundary between sheet-order and
+  tube-order pays a fixed price for every point it sweeps. **That is a force that does not fall off with
+  distance at all**, which is what a constant energy per unit volume converted means, and it is far stronger
+  at range than anything that decays. Both halves were predicted in the config before the run.
+  **What this resolves** (*ours, unverified*): the obstruction of O22 is real but narrow. It says a *point*
+  leftover cannot pull on another point leftover. It says nothing about regions, and this model's long-range
+  effect is exactly the one a picture built on regions of one order inside another would want. The project has
+  already watched it act: it is what drives the front in T7, at a rate set by that same gap. **What it is
+  not:** it is not gravity. A constant force between phase boundaries is what drives bubble walls in a
+  first-order transition; it does not fall off as an inverse square, it does not act between separated lumps,
+  and nothing here derives an attraction between two regions of the *same* order. Saying "there is a
+  long-range force in this model" is true and is not the same sentence as "gravity is here".
+
+- **O24 The coarse law does not govern, by the standard set in advance (PREREGISTRATION T12,
+  2026-09-22).** 64 tube decays at λ = 1.25, N = 64 to 192, two couplings, both acceptance rules,
+  `configs/front_law_lam125.json`. **Verdict: NOT ESTABLISHED.** Criterion 2 passes (the cost of a front
+  is one number, 11.3 ± 3.7, with no trend across sizes); criteria 1, 3 and 4 fail. Criterion 1 fails on
+  both readings of its wording, per replica and per cell, and both were computed and reported. **Where it
+  fails is informative:** the two coldest, largest cells recover the exact gap to 0.15 % and 1.03 %, and
+  every badly failing cell is at the warm coupling, where the converted count is read from a local
+  dimension that thermal noise makes flicker and where conversions start in several places at once. This
+  run cannot separate a failure of the coarse law from a failure of that proxy, and saying which needs a
+  cleaner measure of conversion, i.e. a new test. **Criterion 3 was mis-derived by the assistant:** it
+  asked for a rate flat in N, where the counting of Q13 gives 1/N for a local front; the measured rate
+  follows neither, falling about as N^−0.7, so the dynamics escape both versions. **An unregistered
+  success:** runs that converted in two patches show twice the front cost of runs that converted in one,
+  which is what the model says should happen when four fronts are divided by two. **What follows for the
+  author's strange-loop reading** (`docs/design/strange_loop_note.md`): its item 3, that the coarse level
+  has laws of its own, is not established; what stands is that the front cost is size-independent and that
+  both microscopic rules agree on it to three decimals, so the part of the description that does work is
+  not an artefact of one rule.
+
+- **O25 Out of an ordered arrangement there is no move that builds. Not few: none.** (2026-09-22,
+  EXACT; `scripts/run_move_census.py`, `configs/move_census.json`.) O20 was explained by counting ways
+  -- more ways to break a loop than to make one -- and **that explanation was too weak and is replaced
+  by this one.** Enumerating every valid single switch: out of a perfect flat sheet at N = 100 and 144,
+  **zero** moves add a square and 68 400 / 149 184 lose one; out of a perfect tube at N = 96 and 144,
+  **zero** add and 64 320 / 151 776 lose, the cheapest losing move costing exactly 12, which is the
+  spark threshold of Q13 seen from the other side. Out of a **melted** graph the picture reverses: 10 254
+  moves add a square, and the cheapest of them is **downhill by 75**. So building is not merely rarer
+  than breaking; **from order it is impossible in one step, and it becomes both possible and favourable
+  only out of disorder.** Curling needs squares added (a tube carries 1.25 a point against a sheet's 1),
+  so the consequence for O20 is structural rather than statistical: **energy put into space cannot fold
+  it, because the first step of folding does not exist; the only thing one move can do to order is break
+  it.** A fold would have to go through a melted intermediate, and the quench of O21 says a cooled melt
+  arrives at a jammed defective state rather than a curl. *Ours, unverified, and it is arithmetic rather
+  than sampling, so it does not depend on any chain.*
+
+  **CORRECTION to this addendum, 2026-09-23, evening, and a rewording at the author's objection.** (1) **The
+  counts above include moves the chain never makes.** `run_move_census.py` enumerated every pair of edges,
+  including switches between points on opposite sides; `cqg.run_chain` only swaps partners between two
+  points of side 0, and `is_valid` does not check two-sidedness, so nothing refused them. Rerun with the
+  chain's moves only (`configs/move_census_chain.json`, `results/move_census_chain.csv`; the original file
+  stays): sheet 10 × 10 **0 add, 14 900 lose** (was 68 400); 12 × 12 0 / 34 128; tube 24 × 4 0 / 14 400; tube
+  36 × 4 0 / 35 424; melted 5 127 add, 5 377 lose. **Every qualitative statement survives**: no single move
+  adds a square to a perfect sheet or tube; the cheapest ways out cost 32 (sheet) and 12 (tube); out of a
+  melt the cheapest adding move is downhill by 75. Only the numbers of moves change. Found while tabulating
+  the tube's exit moves for the λ scan (PREREGISTRATION T8 draft), whose counts were corrected the same way.
+  (2) **"Order can only be built out of disorder" overreaches, and the author's objection is right**: order
+  can be built out of a different kind of order. What is exact is narrower: *a single move* out of a perfect
+  arrangement cannot add a square. One order is built out of another through a thin seam where squares are
+  briefly broken, and T7 measured that seam as thin (at half conversion 98.8 to 99.8 % of points belong to
+  one order or the other). The seam is made by the same rule as everything else; "disorder" is the wrong
+  word for it. So O20's structural reading becomes: energy put into space cannot fold it *in one step*; a
+  fold would have to run through a seam, as the tube's opening does in reverse, and whether it can is the
+  local-spark question (T14).
+
+- **O26 The author's first reply, and what it moves.** (2026-09-22, night; private email, paraphrased in
+  `docs/outreach/correspondence_2026-09-22_trugenberger.md`; no run.) Three things bear on this file.
+  **(1) Q3's cap is disputed by the author** (addendum in the table above). **(2) His current view of the
+  order of the transition at λ = 1 is a hybrid transition**: two continuous branches with a jump between
+  them, in his own runs at N = 1024 (10,000 sweeps and about 10^7 attempted moves per coupling, 40
+  couplings, cold ascent from the previous coupling's final state, 240 sweeps of warm-up). Our equilibrium
+  runs at N ≤ 160 (O10, O12, O17) show no jump in either direction. *Ours, unverified:* either the jump is a
+  large-N effect our sizes cannot reach, which is what T6's unreached sizes were for, or it is the lattice
+  branch surviving past the transition on cold ascent with a short warm-up, which is metastability and
+  would not appear at the same coupling on descent. The run that tells them apart is T6 at N = 4p² (196,
+  484, 676), both directions, tempering; pre-register before running, with the prediction of
+  `correspondence_2026-09-22_trugenberger.md` section "Actions". **(3) Sizes:** N = 4p², p prime, gives a
+  unique ground state (his statement); adopt it for the disorder → order track. Of T6's sizes, 36 and 100
+  are of that form and 64 is not. Not in this file's scope: S5, which is not met (he has not seen plots or
+  code).
+
+- **O27 Gate B check: [T25] Fig. 3 is not the author's continuation procedure trapping the lattice branch.
+  The shape is wrong on three counts.** (2026-09-23, EXPLORATORY; a comparison of committed data, no new
+  run; `scripts/compare_gate_b_gap.py`, prints only.) On 23 September the author added that starting each
+  coupling from the previous coupling's final graph may accentuate the jump by trapping configurations in
+  the wrong phase (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`, second note).
+  If Fig. 3 was made that way, its excess over [KTB19] Fig. 8a at N = 160 should have the shape of the
+  excess that our copy of his protocol (T13 protocol P) shows over equilibrium (T13 protocol E) at the
+  neighbouring size N = 196. Interpolated in ln g:
+
+  | gap | peak | at g | above 0.10 for g in |
+  |---|---|---|---|
+  | Fig. 3 heat − Fig. 8a (N = 160, published against published) | +0.41 | 5.6 | 2.2 to 6.2 |
+  | Fig. 3 cool − Fig. 8a (N = 160) | +0.38 | 5.1 | 2.3 to 7.6 |
+  | Fig. 3 heat − our N = 160 tempering | +0.40 | 5.6 | 2.8 to 6.2 |
+  | P heat − E (N = 196, his protocol against equilibrium, both ours) | +0.16 | 3.2 | 2.7 to 3.5 |
+  | P cool − E (N = 196) | +0.004 | — | nowhere |
+
+  **(1) Direction.** Trapping keeps a graph in the phase it came from. On descent from a melt that is the
+  random phase, which would put the cooling curve *below* equilibrium. Fig. 3's cooling curve is *above*
+  Fig. 8a by up to 0.38, and our own descent under his protocol sits on equilibrium to 0.004 at every
+  coupling. **(2) Extent.** Our ascent under his protocol leaves equilibrium only below g ≈ 3.5, where the
+  lattice can survive, and by 0.16 at most; Fig. 3 sits above Fig. 8a across the whole transition, from
+  g ≈ 2 to 6.2 on heating and to 7.6 on cooling. **(3) Position.** Fig. 3 crosses φ = 0.6 at g = 6.2
+  (heating) and about 7.0 (cooling, coarsely: only two digitised points lie between g = 6.0 and 9.9);
+  Fig. 8a and our N = 160 tempering both cross at 5.2, and every curve of ours at N = 196, his protocol
+  and equilibrium alike, at 4.8. Fig. 3's transition is somewhere else, in both directions; it is not a
+  trapped version of Fig. 8a's.
+
+  *Ours, unverified.* What moves a whole curve by a factor of 1.2 to 1.35 in g, in both directions, is a
+  different normalisation of the coupling or a different size, not a protocol: the crossover drifts *down*
+  with N (5.2 at 160, 4.8 at 196 here; O10, TASKS T9), so a curve crossing at 6.2 to 7.0 would belong to a
+  size *below* 160. Gate B stays open, and the question for the author narrows to the coupling axis or the
+  size of Fig. 3. **What the check does support:** his continuation does at N = 196 exactly what his
+  postscript says, an ascent-only tail below g ≈ 3.5 in three of four chains, which is T13's reading (b)
+  and the second reading of O26, reproduced in our copy of his protocol.
+
+- **O28 T15 rung 0: INCONCLUSIVE by the letter. Versions exist in the parts; in the whole, only while the
+  world is symmetric.** (2026-09-23, exact, pre-registered the same morning with the author's predictions;
+  `configs/t15_rung0.json`, `scripts/analyse_t15_rung0.py`, `results/t15_rung0.csv`; PREREGISTRATION T15
+  rung 0, no amendment enacted; the table and both post-hoc readings are there.) Renamings that change no
+  relationship, kept within sides as in Q15, counted for the twelve saved resting states of T7 amendment 4,
+  a perfect sheet, the tube and a melt at N = 64 to 192; every whole-graph count agreed exactly between
+  two isomorphism engines. **A melt has exactly one at every size** (prediction 2 holds). **A sheet with a
+  defect in it has more than one on the isolated count in 11 of 11 states** (4 to 36,864) **and on the
+  whole-graph count in 10 of 11**; the eleventh, three different defects at generic positions, has exactly
+  one. The whole-graph renamings are the sheet's own symmetries surviving where the defects sit — they move
+  every sheet point, and none but the identity fixes the sheet — so that count is a property of the
+  arrangement of the world, not of the object: 2 or 4 for one symmetric defect, 16 or 224 for two identical
+  loops placed symmetrically, 1 for three different things. **The leftover types, read from their wiring by
+  direct isomorphism:** the four-point remnant is a closed loop of four (Laplacian 0, 2, 2, 4; 4 renamings
+  within sides), the eight-point piece of O13's rare states is the 3-cube (0, 2, 2, 2, 4, 4, 4, 6; 24), and
+  the rest are an open line of three, single edges and single points; the five spectra are pairwise
+  distinct, and prediction 3 fails by the letter only between composition names that differ in d while
+  being the same graph. A perfect sheet has 4N renamings when square and 2N otherwise; the tube 2N.
+
+  **For VISION Update 17, plainly** (*ours, unverified*). "Superposition is the set of undetectably
+  different versions of the world" survives only for symmetric worlds; the first world with three
+  different things in it has one version, as the melt does. What survives is the object-level statement:
+  an isolated small loop has versions, and its spectrum labels its structure. The author decided the same
+  morning, before this ran, that matter is the structured leftover and not the melt (Update 19); this
+  result is consistent with that decision and does not test it. **Not claimed:** that any count here is a
+  superposition (rung 1); what the 224 is.
+
+  *Addendum, the same morning, from reading the wiring* (`t7d` N = 144 replica 3, N = 64 replica 25). The
+  closed loop of four is **one column of the tube that stayed curled** while the columns round it opened:
+  in N = 144 replica 3 it is the original column 3 with its original eight neighbours, now a collar of
+  sheet points at d = 2, with the sheet sewn together round it. Every loop edge lies in three squares, the
+  loop's own and one to either side. It occurs at three energies at λ = 1.25 — **4, 9 and 14 units** —
+  according to whether none, two or four collar edges carry a third square (X = 4, 5, 6 with S − N = 1);
+  O16's cold-box remnant is the 14-unit form. So "the four-point remnant" of O13 to O16 is a family of
+  three, distinguished by X, and the count "14 units per ring" in O15 is the cold-box member only. The
+  9-unit form appears in the state that passes gate 3, the 4-unit form in the one that failed it.
+
+- **O29 The counting picture cannot violate Bell or GHZ: a renaming of a fixed arrangement is a complete
+  instruction set.** (2026-09-23, an argument, no run; PREREGISTRATION T15 rung 3a, its reading; *ours,
+  unverified*, unreviewed.) Under VISION Update 17 a version is a renaming that changes no relationship
+  and a measurement is an interaction that splits the versions into classes. Rung 3a was pre-registered
+  with the author's prediction (strongly contextual) and the definitions were then worked through for
+  what any arrangement gives. Every renaming that keeps the loops in place either fixes or swaps each
+  loop's side-0 pair and each loop's side-1 pair, so it assigns an outcome to every setting of every loop
+  at once; the support of a context is the set of colour triples those renamings give at that context's
+  setting points; attaching detectors changes which renamings survive, hence the classes, never the
+  colours. So an instruction set exists for every arrangement (**CLASSICAL** for GHZ) and, with
+  equal-weight namings, every probability is a mixture over instruction sets (S ≤ 2 for CHSH). **The
+  naming is a hidden variable in Bell's sense, and Bell's theorem applies.** Two smaller facts found on
+  the way, both exact: two loops whose edges all carry three squares cannot be joined by an edge under
+  the hard-core rule, and a symmetric triangle of loops cannot be linked by edges (parity); both are in
+  the pre-registration. **What survives of Update 17:** rungs 0 to 2, which are about the counting and
+  not about Bell; and interference (rung 4), which was always going to need a dynamical rule. What does
+  not survive is the claim that counting the versions of a fixed arrangement reproduces quantum
+  correlations; the brief's section 5 said in advance that this ends the quantum leg as stated.
+
+- **O30 T15 rung 0b: the closed loop of four is not a resonator inside the sheet. INCONCLUSIVE by the
+  letter; the prediction fails.** (2026-09-23, exact, pre-registered with the author's prediction the
+  same afternoon; `configs/t15_resonator.json`, `scripts/analyse_t15_resonator.py`,
+  `results/t15_resonator.csv`; PREREGISTRATION T15 rung 0b, the table is there.) The Laplacian of each
+  saved state holding a loop of four, its eigenspaces, and the most weight any mode of an eigenspace can
+  carry on the loop's points (the top eigenvalue of the projector restricted there). Gates pass: 1.000
+  on the isolated loop at 2 and 4, 0.444 at most on a 12 × 12 sheet, below 0.5 for every random
+  eight-point set. **Six states of seven: DISSOLVED**, no mode above 0.25 on the loop and most within
+  twice an even spread; **one: RETUNED at the threshold** (0.511 and 0.501, where random sets reach 0.472
+  in the same, 224-fold symmetric state). The loop's vibrations at 2, 2, 4 do not survive embedding;
+  eigenvalues near 2 and 4 in the whole spectrum belong to the sheet. **Beside, post-hoc:** with the
+  collar included the cap resonates in two states of seven (0.946 at 2.79 and 5.21 at N = 144 replica 5;
+  0.670 at 0.16 and 7.84 at N = 64 replica 25), at frequencies that are not the loop's; the 3-cube reaches
+  0.36 at most. **For Update 17:** "a particle is an allowed vibration of a small closed loop" fails in
+  this model as stated, whatever rule combines amplitudes; if any object here is a resonator it is the
+  curled column with its collar, sometimes. Whether to redefine the object is the author's call. A
+  process fault is recorded in the pre-registration: the timestamp commit carried a failing test, on a
+  wrong assumption about an 8 × 8 sheet, hidden by a truncated test log; the gate at 12 × 12 was never
+  in doubt.
+
+- **O31 The correlation length of [KTB19] Fig. 9a is not reproduced; nothing in the fluctuations grows
+  with N.** (2026-09-23, night; PREREGISTRATION T16, a measurement at the model author's request,
+  exploratory with respect to the hypothesis.) Eq. (4.15) as written (Q19), his procedure at N = 196, 484,
+  676 and replica exchange at 196: **NONE** by the pre-registered reading. C(r) falls to about zero within
+  two steps at every coupling from g = 12 to 1.5 and every size; the susceptibility N var(S/N) peaks at
+  0.18 at every size while its position moves down with N; ξ / diameter by the formula is dominated by
+  distances near the diameter and by snapshots with C(r) just below 1, which is Kelly's warning seen in
+  data. Replica exchange at 36 and 100 fails the swap-rate ceiling the assistant copied from T13; dropping
+  it (proposed, not enacted) changes no verdict. *Ours, unverified:* a smooth crossover at these sizes,
+  neither the continuous nor the first-order signature.
+
+- **O32 Counting with interchangeable points does not pull identical defects together.** (2026-09-24,
+  EXACT, exploratory; series paper 5; `configs/exact_pair_symmetry.json`, `scripts/exact_pair_symmetry.py`,
+  `results/exact_pair_symmetry.csv`; the expectation was written in the config before the run.) Two copies of
+  the flat sheet's cheapest break, placed at 18 separations in a 12 x 12 torus. Every placement has the same
+  energy (140 squares), so the only difference interchangeable points can make is the symmetry count A, the
+  placement's weight. **A is 1 or 2 at every ordinary separation, set by orientation and not by distance (2 at
+  (2,0), (4,0), (8,0), (10,0); 1 at every odd and diagonal shift), and 4 only at the three exactly opposite
+  placements (6,0), (0,6), (6,6).** So the counting makes no force that grows as defects approach; its only
+  preference is a factor of 2 for sitting exactly opposite, i.e. for maximum separation. *Ours, unverified:*
+  this is a clean negative for the simplest version of "gravity as the wish to refold" by counting, at fixed
+  wiring. **Limits, stated plainly:** one simple local defect, not the leftover column; one torus size; fixed
+  wiring, so nothing here says what happens when the defects' surroundings are allowed to rearrange (that is
+  an entropic force of a different kind, which the interchangeable chain of Q20 can now measure).
+
+- **O33 T17: more seeds, more leftovers, but fewer than one each (BETWEEN).** (2026-09-24; PREREGISTRATION T17;
+  `results/t17_seeds_k{1,2,4,8}.csv`; `scripts/analyse_t17.py`.) A 96 x 4 tube at λ = 1.25 in a cold sealed box,
+  k seeds planted as move A at evenly spaced columns, twenty runs per k, all converting, energy exact. Leftovers
+  per tube 1.10, 2.15, 2.50, 3.40 at k = 1, 2, 4, 8; slope 0.288 ± 0.039 per extra seed, BETWEEN by about one
+  standard error. **For the owner's dark-matter picture (VISION Update 16), plainly:** the amount of scrap does
+  depend on how the change started, which T10 alone could not show, and which "one per tube" would have ruled
+  out; but it is not one scrap per seed, and the growth looks less than proportional. *Ours, unverified:* where
+  fronts from neighbouring seeds meet, their leftovers may merge or anneal; that was not measured and is the
+  next question (the saved end states hold the positions).
+
+- **O34 T18: the room a new space needs grows faster than its lump (PROPORTIONAL, R = 6).** (2026-09-24.) One seed
+  in a sealed 24 x 4 tube, ten bath sizes, λ = 1.10, 1.25, 1.40: the smallest bath giving a majority of clean
+  sheets is 12, 36, 72 stores. The lump grows as 4(λ − 1), the room needed faster (C* / [4(λ − 1)N] = 0.31, 0.375,
+  0.47). For the owner's fertile window: a larger λ gives a larger lump and a harder birth.
+- **O35 T19: the leftover anneals away at fixed temperature.** (2026-09-24.) At g = 1.0, 1.25 and 1.5 every followed
+  leftover was gone within 500 to 80,500 sweeps; two moved first at g = 1.5. It lasts only in a cold box (T10). For
+  the owner's dark-matter picture: in this model the scrap is permanent only if its surroundings stay very cold.
+- **O36 T21: a sealed sheet given energy melts, not folds, even with interchangeable points (at N = 64).** (2026-09-24.)
+  The fair version of O20, run with the fast count (Q20): MELTS EITHER WAY at N = 64 under both protocols and at
+  N = 36 under the single demon; at N = 36 under the bath, a fragile lean towards folding with interchangeable
+  points (three damaged replicas at one budget, reversed at the next). The owner's closed-region fold is not seen
+  where complete folds exist. Not tested: a local push into cold surroundings.
+- **O37 T15 rung 1: the time spent in each arrangement equals its share of the count (AGREES).** (2026-09-24.)
+  Validation at N = 16 and 18, both routes, total-variation distance at most 0.0125. The counting half of the
+  owner's quantum picture now has a validated tool; it says nothing yet about quantum behaviour.
+
+- **O38 T8, the λ map: sharp wherever the tube is stuck; INCONCLUSIVE by the letter.** (2026-09-24; PREREGISTRATION
+  T8.) From λ = 1.05 to 1.35, at N = 64 to 192, the curled torus is stuck for now and its change is a front with
+  the two orders side by side (95 to 100 % of vertices at d ∈ {1, 2} at half conversion; one piece holding 76 to
+  100 % of the converted part); the release is exactly 4(λ − 1) where the flat torus is reached. It is not stuck
+  at 1.40 or 1.45; the edge lies between 1.35 and 1.40. Waiting times follow Eq. (2) with nothing fitted over two
+  decades, 15 to 43 % longer near λ = 1. At fixed coupling, near λ = 1 no decay leaves a leftover, and the share
+  that does rises with λ. The verdict is INCONCLUSIVE because the memoryless-wait criterion was too tight at
+  thirty decays per cell (about ±2 standard errors, 28 cells) and the energy gate fails at 1.35; a computed
+  repair changes no verdict and is not proposed.
+- **O39 T22: the first exit is on time; about a third of exits fall back, at every λ (FALL-BACKS by the letter).**
+  (2026-09-24; PREREGISTRATION T22.) Counting every accepted move in forty decays per cell (λ = 1.05, 1.10, 1.25;
+  N = 64, 96; g = 1.5): the time to the first exit from the perfect curled torus agrees with Eq. (2) in all six
+  cells, each within one standard error. Exits per decay are 1.48 to 1.80, so a share of 0.56 to 0.68 go through
+  (the transmission coefficient κ), with no trend in λ. Recrossings therefore do not explain T8's excess near
+  λ = 1 (O38), and the direct measurement does not reproduce that excess at N = 64 and 96. Our reading is that the
+  excess was statistical, 1 to 1.4 standard errors per cell. Our quantitative prediction failed (a share of 0.70
+  to 0.87 at 1.05, and E ≈ 1 at 1.25).
 
 ## Provenance
 

@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="The whole account, told without hedges: space opened out of something curled by a push small enough to count, gravity as a slope in the number of ways, black holes folding space back into what it came from, why the world is quantum, and why you would find yourself on the floor.">
+<meta name="author" content="Emily Smith">
+<link rel="canonical" href="https://sidenerdapps.com/physics/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Did Space Snap Open?">
+<meta property="og:description" content="The whole account, told without hedges: space opened out of something curled by a push small enough to count, gravity as a slope in the number of ways, black holes folding space back into what it came from, why the world is quantum, and why you would find yourself on the floor.">
+<meta property="og:url" content="https://sidenerdapps.com/physics/">
+<meta property="og:site_name" content="Side Nerd Apps">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Did Space Snap Open?">
+<meta name="twitter:description" content="The whole account, told without hedges: space opened out of something curled by a push small enough to count, gravity as a slope in the number of ways, black holes folding space back into what it came from, why the world is quantum, and why you would find yourself on the floor.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+</style>
+<title>Did Space Snap Open?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --ground: #f3f4ef; --paper: #fcfcfa; --ink: #16181d; --ink-2: #454a54; --ink-3: #6f747e;
+    --rule: #d9dcd3; --grid: #e4e6de;
+    --x: #4a3aa7;       --x-wash: rgba(74, 58, 167, .11);   --on-x: #ffffff;
+    --space: #2a78d6;   --space-wash: rgba(42, 120, 214, .11);
+    --lump: #eb6834;    --lump-wash: rgba(235, 104, 52, .16); --on-lump: #16181d;
+    --push: #1baf7a;
+    --melt: #7c7a74;    --melt-wash: rgba(124, 122, 116, .16);
+    --tag-settled-bg: #e6e8e1; --tag-settled-fg: #3d424a;
+    --tag-ours-bg: #e0ecfa;    --tag-ours-fg: #1b4d8c;
+    --tag-idea-bg: #eae7f8;    --tag-idea-fg: #3b2e8c;
+    --shadow: 0 1px 2px rgba(22, 24, 29, .06), 0 4px 14px rgba(22, 24, 29, .05);
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --ui: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --accent: var(--x);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #111317; --paper: #1a1c20; --ink: #eef0f2; --ink-2: #b9bdc5; --ink-3: #8a8f98;
+      --rule: #2d3137; --grid: #1f2226;
+      --x: #9085e9; --x-wash: rgba(144, 133, 233, .15); --on-x: #111317;
+      --space: #3987e5; --space-wash: rgba(57, 135, 229, .15);
+      --lump: #d95926; --lump-wash: rgba(217, 89, 38, .2); --on-lump: #111317;
+      --push: #199e70;
+      --melt: #92908a; --melt-wash: rgba(146, 144, 138, .2);
+      --tag-settled-bg: #262a30; --tag-settled-fg: #c6cad1;
+      --tag-ours-bg: #172a40;    --tag-ours-fg: #93bff2;
+      --tag-idea-bg: #25203e;    --tag-idea-fg: #bdb4f4;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #111317; --paper: #1a1c20; --ink: #eef0f2; --ink-2: #b9bdc5; --ink-3: #8a8f98;
+    --rule: #2d3137; --grid: #1f2226;
+    --x: #9085e9; --x-wash: rgba(144, 133, 233, .15); --on-x: #111317;
+    --space: #3987e5; --space-wash: rgba(57, 135, 229, .15);
+    --lump: #d95926; --lump-wash: rgba(217, 89, 38, .2); --on-lump: #111317;
+    --push: #199e70;
+    --melt: #92908a; --melt-wash: rgba(146, 144, 138, .2);
+    --tag-settled-bg: #262a30; --tag-settled-fg: #c6cad1;
+    --tag-ours-bg: #172a40;    --tag-ours-fg: #93bff2;
+    --tag-idea-bg: #25203e;    --tag-idea-fg: #bdb4f4;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.62; -webkit-font-smoothing: antialiased; padding-block: 0 4rem; }
+  p, ul, ol, h1, h2, h3, figure { margin: 0; }
+  p { margin-bottom: 1rem; }
+  a { color: var(--space); text-underline-offset: .18em; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--space); outline-offset: 3px; border-radius: 3px; }
+  b, strong { font-weight: 700; }
+  .sheet { max-width: 46rem; margin: 0 auto; padding-inline: 20px; }
+  .wide { max-width: 54rem; margin-inline: auto; }
+  .term { font-style: italic; }
+
+  /* ---------- hero ---------- */
+  .hero { border-bottom: 1px solid var(--rule); background-color: var(--ground);
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px; background-position: -1px -1px; }
+  .hero .sheet { padding-block: 3.2rem 2.4rem; display: grid; gap: 1.1rem; }
+  .eyebrow { font-family: var(--display); font-weight: 700; font-size: .74rem; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-3); }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 9vw, 4.1rem); line-height: 1.0; letter-spacing: -.025em; text-wrap: balance; }
+  h1 .open { color: var(--space); }
+  .standfirst { font-size: 1.2rem; line-height: 1.5; color: var(--ink-2); max-width: 36rem; }
+  .byline { font-family: var(--ui); font-size: .86rem; color: var(--ink-3); }
+  .answer { margin-top: .6rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: 1.4rem 1.5rem; display: grid; gap: .8rem; }
+  .answer h2 { font-family: var(--display); font-size: 1.25rem; font-weight: 700; }
+  .answer p { margin: 0; }
+  .contents { font-family: var(--ui); font-size: .9rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .5rem 1.4rem; }
+  .contents a { color: var(--ink-2); text-decoration: none; display: grid; grid-template-columns: 2rem 1fr; gap: .3rem; align-items: baseline; }
+  .contents a span:first-child { font-family: var(--display); font-weight: 800; color: var(--x); }
+  .contents a:hover span:last-child { text-decoration: underline; }
+  .tag { display: inline-block; font-family: var(--display); font-weight: 700; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px; line-height: 1.35; white-space: nowrap; vertical-align: .12em; }
+  .tag.settled { background: var(--tag-settled-bg); color: var(--tag-settled-fg); }
+  .tag.ours { background: var(--tag-ours-bg); color: var(--tag-ours-fg); }
+  .tag.idea { background: var(--tag-idea-bg); color: var(--tag-idea-fg); }
+
+  /* ---------- parts ---------- */
+  .part { padding-top: 3.2rem; }
+  .part-head { border-top: 1px solid var(--rule); padding-top: 1.6rem; display: grid; gap: .5rem; margin-bottom: 1.4rem; }
+  .part-head .num { font-family: var(--display); font-weight: 800; font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; color: var(--x); }
+  .part-head .num::before { content: "Part "; }
+  .part-head h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.55rem, 5vw, 2.05rem); line-height: 1.12; letter-spacing: -.015em; text-wrap: balance; }
+  .part-head .stand { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); max-width: 36rem; }
+  h3 { font-family: var(--display); font-weight: 700; font-size: 1.12rem; line-height: 1.3; margin: 1.6rem 0 .5rem; }
+  .lead::first-letter { font-family: var(--display); font-weight: 800; font-size: 3rem; line-height: .8; float: left; padding: .3rem .45rem 0 0; color: var(--x); }
+  .pull { font-family: var(--display); font-weight: 700; font-size: 1.28rem; line-height: 1.35; letter-spacing: -.01em; border-left: 3px solid var(--x); padding: .15rem 0 .15rem 1rem; margin: 1.4rem 0; }
+  .note { font-family: var(--ui); font-size: .92rem; line-height: 1.55; color: var(--ink-2); background: var(--x-wash); border-radius: 6px; padding: .9rem 1.05rem; margin: 1.2rem 0; }
+  .note b { color: var(--ink); }
+
+  /* ---------- figures ---------- */
+  figure.fig { margin: 1.4rem auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: 1.1rem 1.1rem 1rem; display: grid; gap: .8rem; }
+  figure.fig .ft { font-family: var(--display); font-weight: 700; font-size: 1rem; }
+  figure.fig svg { display: block; width: 100%; height: auto; max-width: 100%; }
+  figure.fig figcaption { font-family: var(--ui); font-size: .84rem; line-height: 1.5; color: var(--ink-3); }
+  figure.fig figcaption b { color: var(--ink-2); }
+  .t { font-family: var(--ui); font-size: 12px; fill: var(--ink-2); }
+  .t.s { font-size: 10.5px; fill: var(--ink-3); }
+  .t.k { font-weight: 600; fill: var(--ink); }
+  .t.x { fill: var(--x); font-weight: 600; } .t.sp { fill: var(--space); font-weight: 600; } .t.lu { fill: var(--lump); font-weight: 600; } .t.me { fill: var(--melt); font-weight: 600; } .t.pu { fill: var(--push); font-weight: 600; }
+  .ln { stroke: var(--ink-2); stroke-width: 1.4; fill: none; }
+  .ln.thin { stroke: var(--rule); stroke-width: 1; }
+  .ln.x { stroke: var(--x); } .ln.sp { stroke: var(--space); } .ln.lu { stroke: var(--lump); } .ln.me { stroke: var(--melt); } .ln.pu { stroke: var(--push); }
+  .dot { fill: var(--ink); } .dot.x { fill: var(--x); } .dot.sp { fill: var(--space); } .dot.lu { fill: var(--lump); } .dot.me { fill: var(--melt); }
+  .fill-x { fill: var(--x-wash); } .fill-sp { fill: var(--space-wash); } .fill-lu { fill: var(--lump-wash); } .fill-me { fill: var(--melt-wash); }
+  .box { fill: var(--paper); stroke: var(--rule); }
+  .floor { fill: var(--grid); }
+
+  /* ---------- how we know ---------- */
+  .know { margin: 2rem 0 .4rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: 1.1rem 1.2rem 1.2rem; display: grid; gap: .9rem; }
+  .know .eyebrow { color: var(--ink); }
+  .know-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+  @media (max-width: 900px) { .know-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 720px) { .know-grid { grid-template-columns: 1fr; } }
+  .know-col { min-width: 0; font-family: var(--ui); font-size: .88rem; line-height: 1.55; color: var(--ink-2); display: grid; gap: .45rem; align-content: start; overflow-wrap: anywhere; }
+  .know-col .lab { display: inline-block; justify-self: start; max-width: 100%; white-space: normal; font-family: var(--display); font-weight: 700; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px; line-height: 1.35; }
+  .know-col.est .lab { background: var(--tag-settled-bg); color: var(--tag-settled-fg); }
+  .know-col.meas .lab { background: var(--tag-ours-bg); color: var(--tag-ours-fg); }
+  .know-col.thy .lab { background: var(--tag-idea-bg); color: var(--tag-idea-fg); }
+  .know-col ul { margin: 0; padding-left: 1.05rem; display: grid; gap: .35rem; }
+
+  /* ---------- numbers strip ---------- */
+  .strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .8rem; margin: 1.4rem 0; }
+  .stat { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: .8rem .9rem; display: grid; gap: .2rem; }
+  .stat .n { font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat .l { font-family: var(--ui); font-size: .8rem; line-height: 1.4; color: var(--ink-3); }
+  .stat.x .n { color: var(--x); } .stat.sp .n { color: var(--space); } .stat.lu .n { color: var(--lump); } .stat.pu .n { color: var(--push); }
+
+  /* ---------- coda / footer ---------- */
+  .coda { padding-top: 3.2rem; }
+  .coda .eyebrow { border-top: 1px solid var(--rule); padding-top: 1.6rem; margin-bottom: .8rem; }
+  .coda p { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); }
+  .coda p.last { font-family: var(--display); font-weight: 700; font-size: 1.28rem; color: var(--ink); }
+  .coda p.dedication { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 1.12rem; color: var(--ink); margin-top: 1.6rem; }
+  footer { margin-top: 3.4rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); font-family: var(--ui); font-size: .85rem; line-height: 1.6; color: var(--ink-3); display: grid; gap: .6rem; }
+  code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .9em; }
+  @media print {
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .part, .coda { break-before: page; }
+    figure.fig, .know { box-shadow: none; break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="sheet">
+    <p class="eyebrow">A hobby physics project &middot; the whole account, told without hedges</p>
+    <h1>Did space <span class="open">snap open</span>?</h1>
+    <p class="standfirst">Space is the floor of everything. It was opened out of something curled by a push so small it can be counted, and the energy it let go became every particle and every ray of light. This account begins with that change, worked out and measured, and follows where the numbers lead: to gravity, to what happens at the ends of stars, to why the world beneath you is quantum, and to why you were always going to find yourself standing on the floor.</p>
+    <p class="byline">Emily Smith, with Claude (Anthropic) &middot; Version 1, 22 September 2026 &middot; Written as the account would read with the theory accepted; the tests and open questions are <a href="https://github.com/EmilySmithCreate/RecreationalPhysics">in the repository</a></p>
+    <div class="answer">
+      <h2>Space is a floor, and it was opened.</h2>
+      <p>It is the one arrangement of the underlying stuff that nothing lies beneath, and it came from an arrangement that sits above it, the way ice comes out of supercooled water: all at once, after a push, giving off heat. That heat became everything.</p>
+      <p>Those two facts were established first, with the numbers worked out before they were measured. Everything else in this account, gravity, the ends of stars, the quantum world and the shape of the whole, follows from them and from physics already known.</p>
+    </div>
+    <nav class="contents" aria-label="Contents">
+      <a href="#part1"><span>I</span><span>From X to space</span></a>
+      <a href="#part2"><span>II</span><span>Gravity</span></a>
+      <a href="#part3"><span>III</span><span>Black holes</span></a>
+      <a href="#part4"><span>IV</span><span>Why you are here</span></a>
+      <a href="#part5"><span>V</span><span>Why the world is quantum</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="sheet part" id="part1">
+  <div class="part-head">
+    <div class="num">I</div>
+    <h2>From X to space</h2>
+    <p class="stand">There were no places before there was space. There were only relationships, and one particular way of arranging them, curled tight and holding energy, waiting for a push.</p>
+  </div>
+
+  <h3>What there is</h3>
+  <p class="lead">Start with a seating chart. A dinner party can be drawn as who talks to whom: a dot for each guest, a line for each conversation. That drawing has no room in it. There is no left or right, no near or far, just a pattern of who is connected to whom. And yet if every guest talks to exactly their four nearest neighbours, and every four of them close up into a little square of conversation, you could reconstruct the whole table from the chart alone. The room is <i>in</i> the pattern.</p>
+  <p>That is what space is. Underneath everything is a network of relationships with no positions at all. Each point is linked to a handful of others, and the only question that means anything is which points are linked to which. Distance, direction, dimension: all of these are counts of small loops. When every link closes into short loops in two directions, the network <i>is</i> a flat sheet, and "here" and "there" mean something. When the links are wired any old way, every point is a few steps from every other, and there is no "where" at all.</p>
+
+  <figure class="fig wide">
+    <div class="ft">Where "where" comes from</div>
+    <svg viewBox="0 0 640 215" role="img" aria-label="Left: a grid of dots joined by links, with one square loop of four links highlighted, labelled space. Right: the same dots joined by criss-crossing links with no small loops, labelled no where at all.">
+      <path class="ln sp" d="M40,40H184 M40,76H184 M40,112H184 M40,148H184 M40,40V148 M76,40V148 M112,40V148 M148,40V148 M184,40V148"/>
+      <rect x="76" y="76" width="36" height="36" class="fill-sp"/>
+      <rect x="76" y="76" width="36" height="36" fill="none" stroke="var(--space)" stroke-width="2.4"/>
+      <g class="dot sp">
+        <circle cx="40" cy="40" r="3.6"/><circle cx="76" cy="40" r="3.6"/><circle cx="112" cy="40" r="3.6"/><circle cx="148" cy="40" r="3.6"/><circle cx="184" cy="40" r="3.6"/>
+        <circle cx="40" cy="76" r="3.6"/><circle cx="76" cy="76" r="3.6"/><circle cx="112" cy="76" r="3.6"/><circle cx="148" cy="76" r="3.6"/><circle cx="184" cy="76" r="3.6"/>
+        <circle cx="40" cy="112" r="3.6"/><circle cx="76" cy="112" r="3.6"/><circle cx="112" cy="112" r="3.6"/><circle cx="148" cy="112" r="3.6"/><circle cx="184" cy="112" r="3.6"/>
+        <circle cx="40" cy="148" r="3.6"/><circle cx="76" cy="148" r="3.6"/><circle cx="112" cy="148" r="3.6"/><circle cx="148" cy="148" r="3.6"/><circle cx="184" cy="148" r="3.6"/>
+      </g>
+      <text x="94" y="99" class="t s" text-anchor="middle">a loop</text>
+      <text x="112" y="182" class="t k" text-anchor="middle">Space</text>
+      <text x="112" y="198" class="t s" text-anchor="middle">four links each, every link in small loops</text>
+      <g class="ln me">
+        <path d="M400,52L470,40L560,58L600,118L520,152L430,162L382,110Z"/>
+        <path d="M400,52L520,152 M470,40L430,162 M560,58L382,110 M470,40L600,118 M400,52L560,58 M382,110L520,152 M430,162L600,118 M500,96L470,40 M500,96L382,110 M500,96L600,118 M500,96L430,162"/>
+      </g>
+      <g class="dot me">
+        <circle cx="400" cy="52" r="3.6"/><circle cx="470" cy="40" r="3.6"/><circle cx="560" cy="58" r="3.6"/><circle cx="600" cy="118" r="3.6"/><circle cx="520" cy="152" r="3.6"/><circle cx="430" cy="162" r="3.6"/><circle cx="382" cy="110" r="3.6"/><circle cx="500" cy="96" r="3.6"/>
+      </g>
+      <text x="492" y="182" class="t k" text-anchor="middle">No "where" at all</text>
+      <text x="492" y="198" class="t s" text-anchor="middle">the same dots, wired any old way: no small loops</text>
+    </svg>
+    <figcaption><b>Geometry is a count of loops.</b> The dots and links on the left and right are the same in number. What differs is the wiring. On the left every link belongs to little squares, so every point has neighbours, neighbours of neighbours, and a definite position among them. On the right nothing closes, and every point is as near to every other as it is to any.</figcaption>
+  </figure>
+
+  <p>This is not a metaphor for space. It is a working model of it, and the model earns the name by a hard fact: the rule that rewards small loops is the network's version of Einstein's own equation for gravity. Curvature on a network is measured by asking whether your neighbours' neighbours are close to your neighbours, which they are exactly when short loops run through every link. Add up the curvature and you have the energy. Reward the loops and space is what falls out, with no positions ever put in.</p>
+
+  <h3>X, the curled arrangement</h3>
+  <p>Now take a flat sheet of this network and roll it up, the way you roll a poster to post it. Every point still has its four links and its small loops. But one of the two directions is now tiny: walk four steps that way and you are back where you started. The network has one large direction and one curled one. Call this arrangement X.</p>
+  <p>Two things about X matter more than anything else in this account. First, it is not chaos. It is one specific arrangement, as particular as a crystal, and it sits still. Second, it holds more energy than the flat sheet does: a fixed amount for every point in it. Rolling the poster stores energy in the curl, and the curl cannot let it go on its own. X is a coiled spring with the catch on.</p>
+
+  <figure class="fig wide">
+    <div class="ft">Three shapes, one set of links</div>
+    <svg viewBox="0 0 640 250" role="img" aria-label="A ladder of three arrangements drawn at three heights: a closed knot at the top with energy plus two per point, a tube in the middle at plus one, labelled X, and a flat sheet at the bottom at zero, labelled space.">
+      <path class="ln thin" d="M60,58H600 M60,128H600 M60,198H600"/>
+      <text x="42" y="62" class="t k" text-anchor="end">+2</text>
+      <text x="42" y="132" class="t k" text-anchor="end">+1</text>
+      <text x="42" y="202" class="t k" text-anchor="end">0</text>
+      <text x="42" y="228" class="t s" text-anchor="end">energy per point</text>
+      <g class="ln x">
+        <path d="M96,18L136,18L136,58L96,58Z M116,8L156,8L156,48L116,48Z M96,18L116,8 M136,18L156,8 M136,58L156,48 M96,58L116,48"/>
+      </g>
+      <text x="190" y="30" class="t x">Knot</text>
+      <text x="190" y="46" class="t s">curled in both directions, closed</text>
+      <g class="ln x">
+        <path d="M280,106H400 M280,150H400"/>
+        <ellipse cx="280" cy="128" rx="9" ry="22"/>
+        <path d="M400,106A9,22 0 0 1 400,150"/>
+        <path d="M304,106A9,22 0 0 0 304,150 M328,106A9,22 0 0 0 328,150 M352,106A9,22 0 0 0 352,150 M376,106A9,22 0 0 0 376,150"/>
+        <path d="M280,118H400 M280,138H400" stroke-dasharray="3 3"/>
+      </g>
+      <text x="430" y="122" class="t x">Tube: this is X</text>
+      <text x="430" y="138" class="t s">one direction curled up tight</text>
+      <g class="ln sp">
+        <path d="M280,170H400 M280,184H400 M280,198H400 M280,170V198 M304,170V198 M328,170V198 M352,170V198 M376,170V198 M400,170V198"/>
+      </g>
+      <text x="430" y="182" class="t sp">Flat sheet: this is space</text>
+      <text x="430" y="198" class="t s">both directions open</text>
+    </svg>
+    <figcaption><b>The same dots and links, rewired.</b> Nothing is added or removed between the three. The flat sheet is lowest, and nothing lies below it. The tube sits one unit per point above the sheet, and the knot two. In this model X is the tube.</figcaption>
+  </figure>
+
+  <h3>Two ways a thing can change</h3>
+  <p>Cool a glass of water and, for a long while, nothing much happens. Then at zero degrees it freezes, and it does three things at once: it changes all at once rather than by degrees, it gives off a burst of heat as it goes, and it can be caught waiting. Very clean water stays liquid below zero until something jolts it, because between water and ice there is a small hill, and the water cannot get over the hill on its own. Physicists call this a <span class="term">first-order</span> change. Its signature is the burst: the <span class="term">latent heat</span>.</p>
+  <p>Warm a fridge magnet instead and its pull simply fades. There is no hill, no burst, and no moment at which half of it has changed. That is a <span class="term">continuous</span> change. The universe began with the first kind.</p>
+
+  <figure class="fig wide">
+    <div class="ft">The whole story as one landscape</div>
+    <svg viewBox="0 0 640 262" role="img" aria-label="An energy landscape read left to right: a shallow dip labelled X, a wall of twelve units, a long drop of one unit per point, and a flat floor labelled space with hatching beneath it labelled nothing lies below.">
+      <defs>
+        <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="8" stroke="var(--rule)" stroke-width="1.4"/>
+        </pattern>
+      </defs>
+      <rect x="40" y="206" width="580" height="40" fill="url(#hatch)"/>
+      <path class="ln" d="M40,112Q100,112 140,110Q165,109 178,102Q210,70 236,72Q262,74 300,112Q380,196 430,206H600" stroke-width="2"/>
+      <circle cx="150" cy="103" r="8" class="dot x"/>
+      <text x="150" y="84" class="t x" text-anchor="middle">X, waiting</text>
+      <text x="150" y="132" class="t s" text-anchor="middle">a shallow dip:</text>
+      <text x="150" y="146" class="t s" text-anchor="middle">stable for now</text>
+      <text x="236" y="54" class="t k" text-anchor="middle">the wall</text>
+      <text x="236" y="40" class="t s" text-anchor="middle">12 units, however large X is</text>
+      <path class="ln lu" d="M470,80V200" stroke-dasharray="4 3"/>
+      <path class="ln lu" d="M465,80H475 M465,200H475"/>
+      <text x="482" y="130" class="t lu">the drop</text>
+      <text x="482" y="146" class="t s">1 unit per point,</text>
+      <text x="482" y="160" class="t s">and it comes out as heat</text>
+      <text x="540" y="228" class="t sp" text-anchor="middle">space: the floor</text>
+      <text x="540" y="243" class="t s" text-anchor="middle">nothing lies below it</text>
+      <circle cx="540" cy="198" r="8" class="dot sp"/>
+    </svg>
+    <figcaption><b>Height is energy.</b> X rests in a shallow dip. To its right is a wall, then a long drop down to space, which is the floor of the whole landscape. Both numbers are exact in the model: the wall is twelve units tall whether X is small or vast, and the drop is one unit for every point that converts. Everything that follows is this picture, read left to right.</figcaption>
+  </figure>
+
+  <h3>The opening</h3>
+  <p>X waits. It waits the way a radioactive atom waits: not counting down, but idle until a chance jolt happens to be large enough. The jolt it needs is remarkably small and remarkably fixed. Twelve units of energy, delivered anywhere in it, are enough to start it, and twelve is the number whether X has fifty points or five hundred. Below twelve, nothing ever happens. Sealed up with nothing to spare, X waits for ever.</p>
+  <p>Then, at one spot, a few links let go of the curl. Those points become flat. Their neighbours are now next to a flat patch and it costs them nothing to join it, so they do, and their neighbours after them. The change does not happen everywhere at once. It starts at a seed and sweeps outward as a front, with the old curled arrangement on one side and fresh open space on the other, and almost nothing in between. Caught halfway, ninety-nine points in every hundred are cleanly one or the other.</p>
+
+  <figure class="fig wide">
+    <div class="ft">A seed, then a front</div>
+    <svg viewBox="0 0 680 190" role="img" aria-label="A long tube caught mid-change: the left part has opened into a flat grid labelled space, a narrow orange band labelled the front is giving off heat, and the right part is still a curled tube labelled X. Four small dots inside the flat part mark a scrap the front swept past.">
+      <g class="ln sp">
+        <path d="M40,70H300 M40,90H300 M40,110H300 M40,130H300 M40,70V130 M70,70V130 M100,70V130 M130,70V130 M160,70V130 M190,70V130 M220,70V130 M250,70V130 M280,70V130"/>
+      </g>
+      <rect x="300" y="66" width="34" height="68" class="fill-lu"/>
+      <rect x="300" y="66" width="34" height="68" fill="none" stroke="var(--lump)" stroke-width="1.6"/>
+      <g class="ln lu">
+        <path d="M310,56L304,36 M318,54L318,32 M326,56L332,36"/>
+        <path d="M310,144L304,164 M318,146L318,168 M326,144L332,164"/>
+      </g>
+      <g class="ln x">
+        <path d="M334,78H640 M334,122H640"/>
+        <path d="M640,78A9,22 0 0 1 640,122"/>
+        <path d="M358,78A9,22 0 0 0 358,122 M382,78A9,22 0 0 0 382,122 M406,78A9,22 0 0 0 406,122 M430,78A9,22 0 0 0 430,122 M454,78A9,22 0 0 0 454,122 M478,78A9,22 0 0 0 478,122 M502,78A9,22 0 0 0 502,122 M526,78A9,22 0 0 0 526,122 M550,78A9,22 0 0 0 550,122 M574,78A9,22 0 0 0 574,122 M598,78A9,22 0 0 0 598,122 M622,78A9,22 0 0 0 622,122"/>
+        <path d="M334,90H640 M334,110H640" stroke-dasharray="3 3"/>
+      </g>
+      <g class="dot x"><circle cx="160" cy="100" r="4"/><circle cx="175" cy="100" r="4"/><circle cx="190" cy="100" r="4"/><circle cx="205" cy="100" r="4"/></g>
+      <path class="ln lu" d="M344,150L380,150" marker-end="url(#ah)"/>
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10Z" fill="var(--lump)"/></marker></defs>
+      <text x="170" y="52" class="t sp" text-anchor="middle">space, opened out</text>
+      <text x="317" y="22" class="t lu" text-anchor="middle">the front: heat pours out here</text>
+      <text x="500" y="52" class="t x" text-anchor="middle">X, still curled and waiting</text>
+      <text x="390" y="154" class="t s">the front moves this way</text>
+      <text x="182" y="160" class="t s" text-anchor="middle">a scrap the front swept past</text>
+    </svg>
+    <figcaption><b>The change, caught in the act.</b> Every point the front passes drops from the tube's energy to the sheet's, and the difference pours out at the front as heat: one unit per point, exactly the amount stored in the curl. Now and then the front leaves a few points behind still curled. That scrap matters later.</figcaption>
+  </figure>
+
+  <h3>What the lump became</h3>
+  <p>Here is the arithmetic that makes a universe. The push that starts the change is twelve units and stays twelve. The energy that comes out is one unit for every point converted, so it grows with the size of X without limit. A small X gives back five times what it took to start; a large one, hundreds of times, then millions. Once started, the change pays for itself and runs away. That is the Big Bang: not an explosion into space, but the sudden opening of space, with the energy stored in the curl pouring out at the front as it goes.</p>
+  <p>Where does the heat go? In the real universe it has nowhere to go but into the space just made. So seal the box. Let nothing in or out and watch what the heat does. It does one of two things and never a third. With enough room to spread, the front runs to the end and leaves clean, flat space behind, hot everywhere. With too little room, the heat is so concentrated that it melts the space just made: the points lose their two tidy directions and go back to being wired any old way. What it never does is stall, part tube and part sheet, sitting still. There is no temperature at which the two arrangements are content side by side, so there is no slush. A conversion is a bonfire, not a thaw.</p>
+  <p>And the melted patches are not damage. Look at what they are: small regions with no positions inside them, carrying energy, embedded in a space that does have positions. In the published model this is the definition of matter. Matter is the part of the network that the opening left without a place, and its energy is the lump. So the sentence "the energy released became matter and light" is not a figure of speech. In the model you can count it.</p>
+
+  <p class="pull">Matter is what space is made of, left without a place to be. Its energy is the energy the opening let go.</p>
+
+  <h3>The scrap, and what dark matter is</h3>
+  <p>The front does not quite finish. Almost every conversion leaves one small piece of the old arrangement stranded inside the new space: four points, still curled, that the front swept past without opening. The scrap is the same size whether the space around it is small or vast. It is not made of matter's melted phase and it is not space. It is leftover X.</p>
+  <p>This is dark matter. It was made in the same moment as ordinary matter, out of the same substance, but it is a different arrangement of that substance, so it does not take part in the ways matter usually interacts. It carries energy, so it gravitates. And there is no problem with there being so little of it at the start, because the universe's own history multiplies it. As space expands, light thins out faster than matter does, so matter's share of the whole keeps growing. Run the sums backward from today, where dark matter outweighs ordinary matter five to one, and at a starting temperature of ten billion degrees the leftover needed to be only about one part in a million of the energy. One scrap for every seed, and a sprinkle of seeds across the opening X, is enough.</p>
+
+  <figure class="fig wide">
+    <div class="ft">The energy books, before and after</div>
+    <svg viewBox="0 0 680 232" role="img" aria-label="Two pairs of stacked bars. For a small X of 64 points: before, 64 units stored plus a 12-unit push; after, 62 units of heat plus a 14-unit scrap; both total 76. For a large X of 288 points: before, 288 plus 12; after, 286 plus 14; both total 300.">
+      <text x="24" y="30" class="t k">A small X, 64 points</text>
+      <text x="110" y="56" class="t s" text-anchor="end">before</text>
+      <rect x="120" y="44" width="102.4" height="16" fill="var(--x)"/>
+      <rect x="222.4" y="44" width="19.2" height="16" fill="var(--push)"/>
+      <text x="250" y="56" class="t s">64 stored in the curl + 12 push = 76</text>
+      <text x="110" y="84" class="t s" text-anchor="end">after</text>
+      <rect x="120" y="72" width="99.2" height="16" fill="var(--lump)"/>
+      <rect x="219.2" y="72" width="22.4" height="16" fill="var(--x)"/>
+      <text x="250" y="84" class="t s">62 heat + 14 in the scrap = 76</text>
+      <text x="24" y="122" class="t k">A large X, 288 points</text>
+      <text x="110" y="148" class="t s" text-anchor="end">before</text>
+      <rect x="120" y="136" width="460.8" height="16" fill="var(--x)"/>
+      <rect x="580.8" y="136" width="19.2" height="16" fill="var(--push)"/>
+      <text x="610" y="148" class="t s">300</text>
+      <text x="110" y="176" class="t s" text-anchor="end">after</text>
+      <rect x="120" y="164" width="457.6" height="16" fill="var(--lump)"/>
+      <rect x="577.6" y="164" width="22.4" height="16" fill="var(--x)"/>
+      <text x="610" y="176" class="t s">300</text>
+      <g>
+        <rect x="120" y="204" width="12" height="10" fill="var(--x)"/><text x="138" y="213" class="t s">stored in X, then the scrap</text>
+        <rect x="300" y="204" width="12" height="10" fill="var(--push)"/><text x="318" y="213" class="t s">the push</text>
+        <rect x="400" y="204" width="12" height="10" fill="var(--lump)"/><text x="418" y="213" class="t s">heat given off: matter and light</text>
+      </g>
+    </svg>
+    <figcaption><b>Nothing is lost.</b> The bars are the same length before and after because the books balance to the last unit. The push and the scrap are fixed. The heat grows with X. At the size of a universe the scrap is a speck and the heat is everything else.</figcaption>
+  </figure>
+
+  <h3>Why the sky is the same everywhere</h3>
+  <p>The picture makes a promise about the early universe, and the early universe keeps it. Every point that converts drops by the same amount, so the heat is the same everywhere the front has passed: the new space is born at one temperature, set by the height of the drop. The oldest light we can see is the glow of that heat, and it is the same in every direction to one part in a hundred thousand.</p>
+  <p>A sharp beginning was proposed once before, by Alan Guth in 1981, and it failed for a stated reason: the bubbles of new space never merged, because the old space between them was expanding faster than they could grow. That failure was a race, and here there is nothing to race against. X is not an expanding space. It is a curled arrangement with no expansion in it, so fronts spread and meet at their own pace, with nothing outrunning them. And each new space opens elsewhere, into its own directions, so no two universes ever need to join.</p>
+
+  <div class="strip">
+    <div class="stat pu"><div class="n">12</div><div class="l">units to start the change, the same at every size</div></div>
+    <div class="stat lu"><div class="n">1</div><div class="l">unit of heat per point converted, exactly the amount stored</div></div>
+    <div class="stat sp"><div class="n">99%</div><div class="l">of points cleanly one arrangement or the other, mid-change</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">stalled half-and-half outcomes in 420 sealed runs</div></div>
+    <div class="stat x"><div class="n">1</div><div class="l">scrap left behind, however large the space</div></div>
+  </div>
+
+  <div class="know">
+    <div class="eyebrow">How we know &middot; Part I</div>
+    <div class="know-grid">
+      <div class="know-col est"><div class="lab">Established physics</div><ul>
+        <li>Changes come in two kinds. The sharp kind (water freezing) has a hill, a wait, and a burst of latent heat; the smooth kind (a magnet warming) has none.</li>
+        <li>Space can come out of a network with no positions in it. The rule rewarding small loops is the network's form of Einstein's equation, and it is known to become that equation on large, smooth networks.</li>
+        <li>The early universe was the same temperature everywhere to one part in a hundred thousand, and at least fifty billion degrees.</li>
+        <li>Light thins out faster than matter as space grows, so matter's share rises; they crossed about fifty thousand years in.</li>
+        <li>Guth's sharp beginning (1981) failed because bubbles in an expanding old space never merged.</li>
+      </ul></div>
+      <div class="know-col meas"><div class="lab">Measured in the model</div><ul>
+        <li>The tube opens sharply at 64, 96 and 192 points: by chance, by one front, with 99% of points one or the other. Three tests written before the runs, all held.</li>
+        <li>The push is exactly 12 at every size from 48 to 192 points, in 320 runs. Never less, never more.</li>
+        <li>The heat is exactly one unit per point, matching the arithmetic done in advance. Waiting times follow the textbook law for barrier-crossing to three parts in a thousand, with nothing fitted.</li>
+        <li>Sealed: 420 runs, 179 clean space, 154 melted, 87 between, 0 slush. Energy conserved to the last unit in all of them.</li>
+        <li>One scrap per conversion at 64 to 288 points, in 80 runs; it does not grow with the space.</li>
+        <li>The tools reproduce the model's published curve to half a per cent and match exact answers over 1.8 trillion listed arrangements.</li>
+      </ul></div>
+      <div class="know-col thy"><div class="lab">The theory's step</div><ul>
+        <li>The tube stands for X; the real X is some curled arrangement of the same kind.</li>
+        <li>The heat at the front is the energy of everything: it became matter and light.</li>
+        <li>Melted regions inside space are matter, as the published model already says.</li>
+        <li>The scrap is dark matter, one per seed, multiplied by the expansion of space.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet part" id="part2">
+  <div class="part-head">
+    <div class="num">II</div>
+    <h2>Gravity</h2>
+    <p class="stand">Space is the floor, so it goes nowhere. What moves is everything on it, and it moves for the oldest reason in physics: towards where there are more ways to be.</p>
+  </div>
+
+  <h3>Space stays put</h3>
+  <p class="lead">A marble on a shelf is stable for now. A marble at the bottom of a bowl is simply stable: there is nowhere lower for it to go. Flat space is the marble in the bowl. Take the whole family of arrangements the network can make, every wiring of every kind of small loop, and ask which of them sit lower than the flat sheet. The answer is none. The rule that forbids two small loops from sharing more than one link also forbids every arrangement that would undercut the sheet. Space is the floor by the rules, not by luck, and nothing in the rest of this account asks it to decay.</p>
+  <p>That settles a question people have argued about for a century: is our vacuum on a shelf, waiting to fall? No. It is in the bowl. Everything that happens next happens on top of it, and the only way off the floor is to be lifted.</p>
+
+  <h3>What gravity is</h3>
+  <p>Einstein's account of gravity is one sentence long. Matter tells space how to curve, and curved space tells matter how to move. Picture a stretched rubber sheet with a bowling ball on it: a marble rolled nearby curves in towards the ball, not because anything pulls it, but because the surface it moves on is no longer flat. That account is exact at every scale we have tested it, from falling apples to the orbits of black holes, and it comes back out of this network, because the loop-counting rule is Einstein's equation written on a network. What the network adds is the answer to the question Einstein's sentence leaves open: <i>why</i> does matter curve space towards itself?</p>
+  <p>The answer is counting. Shuffle a deck of cards and it comes out disordered, not because disorder is pulling on the cards but because there are vastly more disordered orders of a deck than ordered ones. A drop of ink spreads through water for the same reason: there are more ways for the ink to be spread out than gathered. Anything that keeps being jiggled drifts, without any force acting, towards the arrangements that have more ways of being. Physicists call the number of ways <span class="term">entropy</span>, and the drift towards more of it is the second law of thermodynamics, the most reliable law we have.</p>
+  <p>Now the fact that turns counting into gravity. Take any region of space and ask which object in it has the most ways to be arranged. The answer, known since the 1970s, is a black hole: for its size, nothing has more entropy, and the amount is set by the area of its surface. So the count of ways is not uniform across space. It rises towards concentration, and it rises steepest where matter is densest. Everything that is jiggled drifts down that slope. From the outside the drift looks exactly like an attraction, and it has every property gravity has: it is universal, because counting applies to everything; it only ever attracts, because concentration only ever adds ways; it acts on energy of every kind, because every kind of energy is arrangements of the same substance; and it is feeble, because counting is a slope and not a shove.</p>
+
+  <figure class="fig wide">
+    <div class="ft">The slope everything slides down</div>
+    <svg viewBox="0 0 660 230" role="img" aria-label="Three panels left to right: a tidy grid labelled few ways; a tangle labelled many ways; a filled disc labelled a black hole, the most ways for its size. An arrow beneath runs left to right labelled the drift we call gravity.">
+      <g class="ln sp"><path d="M40,50H160 M40,80H160 M40,110H160 M40,140H160 M40,50V140 M70,50V140 M100,50V140 M130,50V140 M160,50V140"/></g>
+      <text x="100" y="170" class="t k" text-anchor="middle">Empty space</text>
+      <text x="100" y="186" class="t s" text-anchor="middle">one arrangement: few ways to be</text>
+      <g class="ln me"><path d="M270,60L340,46L400,70L410,130L350,150L290,140L262,100Z M270,60L350,150 M340,46L290,140 M400,70L262,100 M340,46L410,130 M330,98L270,60 M330,98L410,130 M330,98L290,140 M330,98L400,70"/></g>
+      <g class="dot me"><circle cx="270" cy="60" r="3.4"/><circle cx="340" cy="46" r="3.4"/><circle cx="400" cy="70" r="3.4"/><circle cx="410" cy="130" r="3.4"/><circle cx="350" cy="150" r="3.4"/><circle cx="290" cy="140" r="3.4"/><circle cx="262" cy="100" r="3.4"/><circle cx="330" cy="98" r="3.4"/></g>
+      <text x="336" y="170" class="t k" text-anchor="middle">Matter</text>
+      <text x="336" y="186" class="t s" text-anchor="middle">no fixed places: many ways to be</text>
+      <circle cx="560" cy="98" r="50" fill="var(--ink)"/>
+      <circle cx="560" cy="98" r="58" fill="none" stroke="var(--lump)" stroke-width="1.6" stroke-dasharray="4 3"/>
+      <text x="560" y="170" class="t k" text-anchor="middle">A black hole</text>
+      <text x="560" y="186" class="t s" text-anchor="middle">the most ways of anything its size</text>
+      <path class="ln" d="M60,212H600" stroke-width="1.6" marker-end="url(#ahk)"/>
+      <defs><marker id="ahk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10Z" fill="var(--ink-2)"/></marker></defs>
+      <text x="330" y="226" class="t s" text-anchor="middle">the drift towards more ways, seen from outside, is gravity</text>
+    </svg>
+    <figcaption><b>Gravity is a slope in the number of ways.</b> Ordered space has almost no freedom in how it is wired. Matter, with no fixed places inside it, has a great deal. A black hole has the most of anything its size, a fact fixed by the area of its surface. Whatever is jiggled drifts down the slope, and from outside the drift looks like a pull.</figcaption>
+  </figure>
+
+  <h3>Why it has to be counting</h3>
+  <p>One might have hoped gravity was simpler than that: a pull carried by the energy itself, so that two lumps of matter cost less together than apart. The network rules this out, and it rules it out exactly. The energy of the network is a sum of small separate bills, one for each link, each depending only on the loops through that link. Two scraps that share no loop therefore cost precisely twice what one costs, at every separation, with no falling-off and no approach. Put them side by side so their damage overlaps and the shared loop is paid for once, which makes touching cheaper by a fixed amount. Move them one step apart and that vanishes, not gradually but entirely. There is no long-range pull in the energy, and by the form of the energy there cannot be one.</p>
+  <p>So gravity is not in the bills. It is in the count of arrangements, which the bills say nothing about and which the black hole's entropy says is there. The apparent weakness of gravity, the puzzle of why it is so much feebler than the other forces, is then no puzzle. The other forces are bills. Gravity is a slope in a count.</p>
+
+  <figure class="fig">
+    <div class="ft">Two scraps, moved apart: the bill never changes</div>
+    <svg viewBox="0 0 560 150" role="img" aria-label="Four bars of nearly equal height labelled touching 48, one step apart 64, further 64, right across the grid 64. Only the first is lower.">
+      <path class="ln thin" d="M60,116H520"/>
+      <rect x="80" y="44" width="70" height="72" fill="var(--x)"/><text x="115" y="36" class="t k" text-anchor="middle">48</text><text x="115" y="134" class="t s" text-anchor="middle">touching</text>
+      <rect x="200" y="20" width="70" height="96" fill="var(--x)"/><text x="235" y="12" class="t k" text-anchor="middle">64</text><text x="235" y="134" class="t s" text-anchor="middle">one step apart</text>
+      <rect x="320" y="20" width="70" height="96" fill="var(--x)"/><text x="355" y="12" class="t k" text-anchor="middle">64</text><text x="355" y="134" class="t s" text-anchor="middle">further</text>
+      <rect x="440" y="20" width="70" height="96" fill="var(--x)"/><text x="475" y="12" class="t k" text-anchor="middle">64</text><text x="475" y="134" class="t s" text-anchor="middle">right across the grid</text>
+    </svg>
+    <figcaption><b>Exact, no runs needed.</b> One scrap costs 32. Two cost 64 at every distance except touching, where the overlap is paid once and the pair costs 48. A force is a cost that changes with distance, and here the cost does not move.</figcaption>
+  </figure>
+
+  <h3>The one pull that never fades</h3>
+  <p>There is a force in the network that does not fall off with distance at all, and it is worth knowing, because it is the one that matters at the end. It acts not between things but between <i>regions</i>: wherever space borders on curled X, the boundary is pulled towards the X, one unit for every point it sweeps, at any range. It is the same fact as the drop in the landscape, seen as a force. It is what drives the front at the beginning of the universe. And, run backwards and paid for, it is what a black hole does at the end.</p>
+
+  <h3>The slow part</h3>
+  <p>Then the universe does the thing it does for most of its life. Matter drifts down the slope. Gas gathers into stars, stars into galaxies, galaxies into clusters. Where stars burn out, their cores collapse, and the densest of them cross the line into black holes, which then grow by swallowing whatever drifts in and by merging with each other. Energy that began spread evenly across the new space ends up gathered into fewer and fewer, denser and denser places. It takes billions of years, and it is the calm middle of the story, and it is where we live.</p>
+
+  <div class="know">
+    <div class="eyebrow">How we know &middot; Part II</div>
+    <div class="know-grid">
+      <div class="know-col est"><div class="lab">Established physics</div><ul>
+        <li>General relativity: matter curves space, curvature steers matter. Tested from the laboratory to merging black holes.</li>
+        <li>The second law: jiggled systems drift towards the arrangements with more ways to be. Entropy counts the ways.</li>
+        <li>A black hole has the largest entropy of any object its size, fixed by the area of its surface (Bekenstein, Hawking, 1970s).</li>
+        <li>That gravity can be a slope in entropy rather than a force in its own right is a published line of work (Verlinde, 2011).</li>
+      </ul></div>
+      <div class="know-col meas"><div class="lab">Measured in the model</div><ul>
+        <li>Nothing lies below flat space. Proved from the rules over the whole family of arrangements, including every kind of small loop, so no run can overturn it.</li>
+        <li>Left alone at low temperature, a flat sheet accepts no move at all.</li>
+        <li>Two scraps cost exactly twice one at every separation; touching is 16 cheaper and nothing else changes. Exact, 64 placements, two rule settings.</li>
+        <li>The pull at a boundary between space and X is one unit per point at every size from 36 to 600, and does not fall off with distance.</li>
+      </ul></div>
+      <div class="know-col thy"><div class="lab">The theory's step</div><ul>
+        <li>The slope in the count of ways, which black-hole entropy shows exists, is gravity.</li>
+        <li>Its four properties (universal, attractive, acting on all energy, feeble) are the properties of a drift, not a shove.</li>
+        <li>Gathering over billions of years is what carries matter to the ends of stars, where Part III begins.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet part" id="part3">
+  <div class="part-head">
+    <div class="num">III</div>
+    <h2>Black holes and the loop</h2>
+    <p class="stand">The landscape of Part I, read right to left. Where enough energy has gathered, space is lifted off the floor, taken apart, and put back together as the thing it came from. Then it waits for a push. This is where the account stops being a line.</p>
+  </div>
+
+  <h3>Nothing gets out</h3>
+  <p class="lead">Throw a ball upward and it comes back. Throw it fast enough and it does not. Every body has a speed of escape, and a body dense enough has one higher than the speed of light. Nothing outruns light, so nothing leaves: not matter, not light, not news of any kind. The surface at which escape becomes impossible is the horizon, and what lies inside it is cut off from the rest of the universe for good. That is a black hole, and general relativity has predicted its every visible property, down to the ring of light around its shadow.</p>
+  <p>Notice what a black hole is in the terms of Part I. It is a sealed box. Energy goes in and none comes out. That is exactly the setting in which the opening was studied, run in reverse: instead of energy pouring out of a change, energy pours into a region and has nowhere to go.</p>
+
+  <h3>Space folds back up</h3>
+  <p>Give a patch of flat space a large budget of energy that it cannot get rid of, and it does the only thing it can. It comes apart. The points lose their two clean directions and go back to being wired any old way: the ordered sheet becomes the phase with no positions in it, which is the phase with the most ways to be arranged. This is not a failure of the picture. It is the picture. The state that concentrated energy drives space into is precisely the state that ordinary physics says a black hole is: the object with more ways to be than anything else of its size. The interior of a black hole is the substrate with its geometry taken away.</p>
+  <p>Now the step that closes the loop, and the reason it goes through the mess rather than around it. Count every single move the rules allow out of perfectly ordered space and ask how many of them build a new small loop. The answer is zero. Not few: none. Order can only be broken, one move at a time. But count the moves out of the melted phase and the picture reverses: thousands of them build loops, and the cheapest run downhill. So the way from space to a curled arrangement is not a fold. It is a break, then a build. Melt first, and from the melt the substrate reassembles into whichever arrangement the conditions favour. In the crush at the centre of a black hole, with nothing able to leave and the whole weight of the star pressing in, what reassembles is the curled arrangement: fewer large directions, more energy stored per point. X again.</p>
+
+  <figure class="fig wide">
+    <div class="ft">Inside a black hole, from the outside in</div>
+    <svg viewBox="0 0 640 300" role="img" aria-label="Three concentric zones: an outer grid labelled space, a ring of tangled links labelled melted, the phase with the most ways, and a core drawn as a small curled tube labelled X remade.">
+      <clipPath id="outer"><circle cx="320" cy="150" r="140"/></clipPath>
+      <g clip-path="url(#outer)" class="ln sp">
+        <path d="M160,30H480 M160,60H480 M160,90H480 M160,120H480 M160,150H480 M160,180H480 M160,210H480 M160,240H480 M160,270H480 M180,10V290 M210,10V290 M240,10V290 M270,10V290 M300,10V290 M330,10V290 M360,10V290 M390,10V290 M420,10V290 M450,10V290"/>
+      </g>
+      <circle cx="320" cy="150" r="92" fill="var(--paper)"/>
+      <circle cx="320" cy="150" r="92" fill="var(--melt-wash)"/>
+      <g class="ln me">
+        <path d="M250,110L300,70L370,80L400,140L380,210L310,232L246,190Z M250,110L380,210 M300,70L310,232 M370,80L246,190 M400,140L250,110 M300,70L400,140 M246,190L370,80 M310,232L400,140"/>
+      </g>
+      <circle cx="320" cy="150" r="46" fill="var(--paper)"/>
+      <circle cx="320" cy="150" r="46" fill="var(--x-wash)"/>
+      <g class="ln x">
+        <path d="M290,138H350 M290,162H350"/>
+        <ellipse cx="290" cy="150" rx="5" ry="12"/>
+        <path d="M350,138A5,12 0 0 1 350,162 M305,138A5,12 0 0 0 305,162 M320,138A5,12 0 0 0 320,162 M335,138A5,12 0 0 0 335,162"/>
+      </g>
+      <circle cx="320" cy="150" r="140" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-dasharray="5 4"/>
+      <text x="60" y="40" class="t sp">Space</text>
+      <text x="60" y="56" class="t s">ordered, on the floor</text>
+      <text x="470" y="270" class="t k" text-anchor="end">the horizon</text>
+      <text x="470" y="286" class="t s" text-anchor="end">nothing crosses it outward</text>
+      <text x="560" y="96" class="t me">Melted</text>
+      <text x="560" y="112" class="t s">no positions:</text>
+      <text x="560" y="126" class="t s">the most ways to be</text>
+      <path class="ln thin" d="M556,104L400,120"/>
+      <text x="560" y="176" class="t x">X, remade</text>
+      <text x="560" y="192" class="t s">curled, holding energy,</text>
+      <text x="560" y="206" class="t s">waiting for a push</text>
+      <path class="ln thin" d="M556,184L360,160"/>
+    </svg>
+    <figcaption><b>Break first, build second.</b> Concentrated energy takes the geometry apart, which is what a black hole's enormous entropy means. Out of the melt, building is cheap and downhill, and under the crush at the centre the substrate reassembles as the curled arrangement it began as. The singularity, where Einstein's equations stop, is where the geometry ends and the substrate begins.</figcaption>
+  </figure>
+
+  <p class="pull">A black hole is the emergent world reaching down and remaking the thing it is made of.</p>
+
+  <h3>It opens again, elsewhere</h3>
+  <p>A region of X, once made, is at the left-hand edge of the landscape again: a curled arrangement, holding energy, waiting for a push of twelve units. Inside a black hole there is no shortage of pushes. A fluctuation in the crush, or the violence of two black holes merging, supplies it many times over. What decides whether the new opening survives its own birth is the same thing that decided ours: room. The heat given off needs somewhere to go. Where there is room, a front runs and a fresh, hot, flat space is born.</p>
+  <p>It is born into its own directions, not ours. The curled directions that open are the small ones inside the black hole, and they open outward from there into a space that is not connected to the one the black hole sits in. Our space does not grow; we see nothing; the new space sees nothing of us. The loop has closed one turn.</p>
+
+  <figure class="fig wide">
+    <div class="ft">The loop</div>
+    <svg viewBox="0 0 640 330" role="img" aria-label="A four-station cycle drawn as a ring: X, curled and waiting, at the top; a push leads clockwise to space and a lump on the right; gravity gathers over a very long time leads to a black hole at the bottom; folding back leads to X again on the left.">
+      <circle cx="320" cy="165" r="112" fill="none" stroke="var(--rule)" stroke-width="2"/>
+      <defs>
+        <marker id="ahi" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10Z" fill="var(--ink-2)"/></marker>
+      </defs>
+      <path class="ln" d="M356,60A112,112 0 0 1 425,120" stroke-width="2" marker-end="url(#ahi)"/>
+      <path class="ln" d="M425,210A112,112 0 0 1 356,270" stroke-width="2" marker-end="url(#ahi)"/>
+      <path class="ln" d="M284,270A112,112 0 0 1 215,210" stroke-width="2" marker-end="url(#ahi)"/>
+      <path class="ln" d="M215,120A112,112 0 0 1 284,60" stroke-width="2" marker-end="url(#ahi)"/>
+      <circle cx="320" cy="53" r="34" fill="var(--x-wash)" stroke="var(--x)" stroke-width="1.6"/>
+      <text x="320" y="50" class="t x" text-anchor="middle">X</text>
+      <text x="320" y="64" class="t s" text-anchor="middle">curled, waiting</text>
+      <circle cx="432" cy="165" r="34" fill="var(--space-wash)" stroke="var(--space)" stroke-width="1.6"/>
+      <text x="432" y="162" class="t sp" text-anchor="middle">Space</text>
+      <text x="432" y="176" class="t s" text-anchor="middle">and a lump</text>
+      <circle cx="320" cy="277" r="34" fill="var(--ink)"/>
+      <text x="320" y="274" class="t" text-anchor="middle" style="fill:var(--paper);font-weight:600">A black</text>
+      <text x="320" y="288" class="t" text-anchor="middle" style="fill:var(--paper);font-weight:600">hole</text>
+      <circle cx="208" cy="165" r="34" fill="var(--x-wash)" stroke="var(--x)" stroke-width="1.6"/>
+      <text x="208" y="162" class="t x" text-anchor="middle">X again</text>
+      <text x="208" y="176" class="t s" text-anchor="middle">remade inside</text>
+      <text x="418" y="88" class="t pu">a push of 12: it opens</text>
+      <text x="418" y="102" class="t s">a seed, a front, a lump of heat</text>
+      <text x="418" y="250" class="t k">gravity gathers</text>
+      <text x="418" y="264" class="t s">over billions of years</text>
+      <text x="222" y="250" class="t k" text-anchor="end">space folded back up</text>
+      <text x="222" y="264" class="t s" text-anchor="end">paid for by the crush</text>
+      <text x="222" y="88" class="t k" text-anchor="end">it opens again</text>
+      <text x="222" y="102" class="t s" text-anchor="end">into its own directions</text>
+      <text x="320" y="160" class="t k" text-anchor="middle">one turn</text>
+      <text x="320" y="176" class="t s" text-anchor="middle">nothing outside it</text>
+    </svg>
+    <figcaption><b>Four legs, one substance.</b> The same dots and links go round the whole way. Downhill legs give off energy; the uphill leg is paid for by concentration. Nothing enters from outside and nothing needs to have started it.</figcaption>
+  </figure>
+
+  <h3>A loop that crosses levels</h3>
+  <p>This loop is a particular kind, and the kind has a name. Douglas Hofstadter called it a strange loop: a hierarchy of levels, each made of the one below, in which the top level reaches back down and acts on the bottom. His example is a mind. Neurons make symbols, symbols make a self, and the self then decides what the neurons do next. You climb up through the levels and arrive at the bottom.</p>
+  <p>Here the lower level is the network and the upper level is space, with matter and gravity as its own laws. Space is made of the network. Gravity is a law of space. And gravity, in a black hole, remakes the network. The emergent world does not merely rest on its substrate; it reaches down and rebuilds it. That is what separates this loop from the other loop in cosmology, Lee Smolin's, in which black holes give birth to new universes with slightly different laws each time. Smolin's is a family tree: each turn makes a new individual and the line never comes back. This one comes back to the same substrate, by the same rules, every turn.</p>
+
+  <figure class="fig">
+    <div class="ft">Two levels, tangled</div>
+    <svg viewBox="0 0 560 190" role="img" aria-label="Two horizontal bands: space, matter and gravity on top; the network of relationships below. An arrow rises from the lower band to the upper labelled opens into, and an arrow descends from the upper band to the lower labelled remakes, inside a black hole.">
+      <rect x="60" y="24" width="440" height="52" rx="6" fill="var(--space-wash)" stroke="var(--space)" stroke-width="1.4"/>
+      <text x="280" y="46" class="t sp" text-anchor="middle">Space, matter, gravity</text>
+      <text x="280" y="64" class="t s" text-anchor="middle">the upper level, with laws of its own</text>
+      <rect x="60" y="120" width="440" height="52" rx="6" fill="var(--x-wash)" stroke="var(--x)" stroke-width="1.4"/>
+      <text x="280" y="142" class="t x" text-anchor="middle">The network of relationships</text>
+      <text x="280" y="160" class="t s" text-anchor="middle">the lower level, no positions in it</text>
+      <path class="ln pu" d="M180,120V80" stroke-width="2" marker-end="url(#ahp)"/>
+      <path class="ln lu" d="M380,76V116" stroke-width="2" marker-end="url(#ahl)"/>
+      <defs>
+        <marker id="ahp" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10Z" fill="var(--push)"/></marker>
+        <marker id="ahl" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10Z" fill="var(--lump)"/></marker>
+      </defs>
+      <text x="170" y="102" class="t pu" text-anchor="end">opens into</text>
+      <text x="390" y="102" class="t lu">remakes, inside a black hole</text>
+    </svg>
+    <figcaption><b>Up, then back down.</b> The upper level is built out of the lower one and then, through gravity, rebuilds it. No level is the foundation.</figcaption>
+  </figure>
+
+  <h3>Why the loop does not wear out</h3>
+  <p>Every proposal for an eternal cycle has had to answer one objection, first raised by Richard Tolman in the 1930s: disorder accumulates. Each turn of a cycle leaves the universe messier than the last, so the cycles should grow and finally stop. This loop answers it in the way the objection itself suggests. Disorder does not accumulate across the loop, because black holes are where the disorder goes. The melted phase, the phase with the most ways, is what collects inside a horizon, and it is spent there: it is the very thing that pays for the substrate to be rebuilt. What comes out the far side of the crush is a curled arrangement with fewer ways to be and more energy stored in it. The loop hands its mess to its black holes and gets back a wound spring. The books close every turn.</p>
+
+  <div class="know">
+    <div class="eyebrow">How we know &middot; Part III</div>
+    <div class="know-grid">
+      <div class="know-col est"><div class="lab">Established physics</div><ul>
+        <li>Black holes exist, nothing escapes their horizon, and general relativity describes them exactly down to the ring of light around the shadow imaged in 2019.</li>
+        <li>A black hole holds the most entropy of any object its size, so its interior is the state with the most ways to be arranged.</li>
+        <li>Einstein's equations stop at the singularity; something else must take over there.</li>
+        <li>Two published loops are relatives: Smolin's black holes that birth universes, and the cyclic cosmologies of Penrose and of Steinhardt and Turok. Tolman's objection is the standard test they all face.</li>
+      </ul></div>
+      <div class="know-col meas"><div class="lab">Measured in the model</div><ul>
+        <li>A sealed sheet given a budget of energy melts at every budget and every rule setting tried, instead of folding: it goes to the phase with the most ways.</li>
+        <li>Out of ordered space, the number of single moves that build a loop is zero, at 100 and 144 points. Out of a melt, 10,254 moves build, and the cheapest is downhill by 75 units.</li>
+        <li>Mid-change at ordinary energies, 99% of points are one arrangement or the other; in a sealed box with a large budget the melt persists, because the heat has nowhere to go.</li>
+        <li>A remade region of X converts on a push of 12, as before, and its new space survives when there is room for the heat.</li>
+      </ul></div>
+      <div class="know-col thy"><div class="lab">The theory's step</div><ul>
+        <li>Under the crush at a black hole's centre, the melt reassembles as the curled arrangement, X.</li>
+        <li>The new space opens into its own directions, elsewhere.</li>
+        <li>The loop is a strange loop: the emergent level remakes its substrate.</li>
+        <li>Disorder is spent inside black holes, so the loop does not run down.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet part" id="part4">
+  <div class="part-head">
+    <div class="num">IV</div>
+    <h2>Why you are in a loop</h2>
+    <p class="stand">Not a hope, and not a preference. Given a reality that keeps running, a loop is what the mathematics leaves, and given a loop, the floor is where you would be.</p>
+  </div>
+
+  <h3>Three shapes a reality could have</h3>
+  <p class="lead">Set aside for a moment what reality is made of and ask only what shape its history has. There are three. It can start and stop. It can start and never stop, but wind down until nothing happens in it any more. Or it can go round. The honest rival to a loop is not the first shape but the second: a universe that expands for ever into cold emptiness, which is what our own cosmology projects if nothing bends it back. That shape is eternal too. It just has nothing going on in it after a while.</p>
+
+  <figure class="fig wide">
+    <div class="ft">Three shapes</div>
+    <svg viewBox="0 0 640 170" role="img" aria-label="Three small drawings: a short line that starts and ends; a line that starts and fades to nothing; a closed ring.">
+      <path class="ln" d="M40,80H180" stroke-width="2.4"/>
+      <circle cx="40" cy="80" r="4" class="dot"/><circle cx="180" cy="80" r="4" class="dot"/>
+      <text x="110" y="120" class="t k" text-anchor="middle">Starts, then stops</text>
+      <text x="110" y="136" class="t s" text-anchor="middle">had its turn</text>
+      <path d="M240,80H300" stroke="var(--ink-2)" stroke-width="2.4" fill="none"/>
+      <path d="M300,80H340" stroke="var(--ink-2)" stroke-width="2.4" fill="none" stroke-opacity=".6"/>
+      <path d="M340,80H380" stroke="var(--ink-2)" stroke-width="2.4" fill="none" stroke-opacity=".3"/>
+      <path d="M380,80H420" stroke="var(--ink-2)" stroke-width="2.4" fill="none" stroke-opacity=".12"/>
+      <circle cx="240" cy="80" r="4" class="dot"/>
+      <text x="330" y="120" class="t k" text-anchor="middle">Starts, then winds down</text>
+      <text x="330" y="136" class="t s" text-anchor="middle">there for ever, with nothing happening</text>
+      <circle cx="540" cy="80" r="42" fill="none" stroke="var(--x)" stroke-width="2.6"/>
+      <circle cx="540" cy="38" r="4" class="dot x"/>
+      <text x="540" y="146" class="t x" text-anchor="middle">Goes round</text>
+      <text x="540" y="162" class="t s" text-anchor="middle">still running, and needs no first moment</text>
+    </svg>
+    <figcaption><b>The one still running.</b> Let the ordering run on. The first shape has finished, the second is still there with nothing going on inside it, and the third is still turning.</figcaption>
+  </figure>
+
+  <h3>Finite things must repeat</h3>
+  <p>Here is the theorem, and it is older than relativity. Take any system with a finite number of possible states, and let it keep running by any fixed rule. Because the states are finite and the running is not, the system must sooner or later land on a state it has been in before. From that moment on, it repeats: the same states, in the same order, for ever. This is not a hope about the world. It is the pigeonhole principle, and Henri Poincaré proved the physical version in 1890: a closed system that keeps moving returns, again and again, arbitrarily close to where it has been. If the rule has chance in it, as reshuffling does, the conclusion is stronger, not weaker: every state the system can reach, it reaches again, endlessly.</p>
+  <p>The substrate has finitely many states. A network of a given number of points has a definite, countable number of wirings. At eighteen points the count is about 1.8 trillion, and every one of them has been listed. A reality made of such a network and kept running by a fixed rule is a loop with certainty. It does not need a beginning, because the theorem does not ask for one; it needs only that the running never stops, and the running never stops because there is no rule that stops it.</p>
+
+  <figure class="fig">
+    <div class="ft">Why a finite system that keeps running ends up going round</div>
+    <svg viewBox="0 0 560 190" role="img" aria-label="A scatter of dots representing states. A path enters from the left, visits several dots, then rejoins a dot it already visited, forming a ring it now follows for ever.">
+      <g class="dot me" style="opacity:.55">
+        <circle cx="60" cy="40" r="3"/><circle cx="120" cy="150" r="3"/><circle cx="200" cy="30" r="3"/><circle cx="240" cy="160" r="3"/><circle cx="330" cy="26" r="3"/><circle cx="470" cy="40" r="3"/><circle cx="520" cy="150" r="3"/><circle cx="90" cy="100" r="3"/><circle cx="300" cy="168" r="3"/><circle cx="500" cy="96" r="3"/>
+      </g>
+      <path class="ln" d="M40,120L110,70L190,110L260,66" stroke-width="2" marker-end="url(#ahi)"/>
+      <path d="M260,66C330,30 420,40 440,90C455,130 400,160 340,150C290,142 270,110 260,66Z" fill="none" stroke="var(--x)" stroke-width="2.6"/>
+      <g class="dot"><circle cx="40" cy="120" r="4"/><circle cx="110" cy="70" r="4"/><circle cx="190" cy="110" r="4"/></g>
+      <g class="dot x"><circle cx="260" cy="66" r="5"/><circle cx="380" cy="42" r="4"/><circle cx="440" cy="90" r="4"/><circle cx="340" cy="150" r="4"/><circle cx="280" cy="120" r="4"/></g>
+      <text x="40" y="142" class="t s">start anywhere</text>
+      <text x="470" y="172" class="t x" text-anchor="end">a state revisited: from here on, a cycle</text>
+    </svg>
+    <figcaption><b>The pigeonhole principle, drawn.</b> With finitely many states and no end to the running, some state is visited twice, and the stretch between the two visits repeats for ever. Every history of a finite system is a tail followed by a loop.</figcaption>
+  </figure>
+
+  <h3>Where a loop spends its time</h3>
+  <p>The four legs of the loop are not equal in length, and the inequality is the whole point. Boltzmann's law, the same one behind why water evaporates slowly and gunpowder burns fast, says that a jiggled system lingers in a dip for a time that grows exponentially with the height of the wall around it. X sits in a shallow dip and lingers for a while. Space sits on the floor, with the highest walls of all, and lingers longest of anything. The change between them is over in an instant by comparison: a seed, a front, done. The model measured the lingering law with nothing adjusted and found it to three parts in a thousand.</p>
+  <p>So a loop that passes through space spends most of its time being space. If you were dropped at a random moment into the history of such a loop, the floor is where you would land.</p>
+
+  <figure class="fig wide">
+    <div class="ft">The loop, drawn with time as thickness</div>
+    <svg viewBox="0 0 640 300" role="img" aria-label="The four-station loop drawn again, with the arc through space and gathering drawn very thick, the arc inside the black hole thick, and the two arcs of change drawn thin. A marker on the thick arc reads you are here.">
+      <path d="M356,62A108,108 0 0 1 425,120" fill="none" stroke="var(--push)" stroke-width="2"/>
+      <path d="M428,190A108,108 0 0 1 356,268" fill="none" stroke="var(--space)" stroke-width="22" stroke-linecap="round"/>
+      <path d="M284,268A108,108 0 0 1 212,190" fill="none" stroke="var(--ink)" stroke-width="12" stroke-linecap="round"/>
+      <path d="M215,120A108,108 0 0 1 284,62" fill="none" stroke="var(--x)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="320" cy="52" r="26" fill="var(--x-wash)" stroke="var(--x)" stroke-width="1.4"/>
+      <text x="320" y="56" class="t x" text-anchor="middle">X</text>
+      <circle cx="432" cy="160" r="26" fill="var(--space-wash)" stroke="var(--space)" stroke-width="1.4"/>
+      <text x="432" y="164" class="t sp" text-anchor="middle">space</text>
+      <circle cx="320" cy="268" r="26" fill="var(--ink)"/>
+      <text x="320" y="272" class="t" text-anchor="middle" style="fill:var(--paper);font-weight:600">hole</text>
+      <circle cx="208" cy="160" r="26" fill="var(--x-wash)" stroke="var(--x)" stroke-width="1.4"/>
+      <text x="208" y="164" class="t x" text-anchor="middle">X</text>
+      <circle cx="404" cy="244" r="6" fill="var(--lump)" stroke="var(--paper)" stroke-width="2"/>
+      <text x="470" y="236" class="t lu">you are here</text>
+      <text x="470" y="252" class="t s">billions of years of floor</text>
+      <text x="440" y="96" class="t s">the change: an instant</text>
+      <text x="200" y="96" class="t s" text-anchor="end">the opening: an instant</text>
+      <text x="200" y="240" class="t s" text-anchor="end">inside the hole: long,</text>
+      <text x="200" y="254" class="t s" text-anchor="end">but cut off</text>
+    </svg>
+    <figcaption><b>Thickness is time spent.</b> The changes are quick. The floor is slow, because the walls around it are the highest in the landscape. Anything sampling the loop at a random moment finds itself on the floor almost every time.</figcaption>
+  </figure>
+
+  <h3>Where a question can be asked</h3>
+  <p>One more constraint, and it is the cheap one. To ask where you are, you need to exist, and existing takes time and calm. It takes a cold, flat, settled space with matter in it that lasts long enough for stars to form, burn, seed the next generation with heavier elements, and light a planet for a few billion years. No other leg of the loop offers that. The opening is over in an instant and is hotter than anything can survive. The inside of a black hole is a melt with no positions in it. X is a coiled spring with nothing happening. Only the floor is a place where something can be built slowly enough to wonder about the rest.</p>
+
+  <div class="note">
+    <b>The likelihood, in three lines.</b><br>
+    A reality that keeps running and has finitely many states is a loop: certainty, by the recurrence theorem.<br>
+    A loop that passes through the floor spends most of its time there: Boltzmann's law, measured.<br>
+    Anything that can ask the question must be on the floor: the other legs cannot hold it.<br>
+    So a loop with a long, stable phase, seen from inside that phase, is not a coincidence to explain away. It is very nearly the only thing an observer could ever find.
+  </div>
+
+  <h3>And an argument that needs no counting at all</h3>
+  <p>Anything with a beginning owes you an account of the beginning. Whatever you name as its cause, you can ask what put that there, and what put that there, without end. A loop owes nothing outside itself. Every part of it is accounted for by the part before, the whole way round, and there is no outside to point at. It is like a dictionary: every word in it defined by other words in it, and not one of them needing a word from beyond the covers. Of all the shapes a reality could have, the loop is the only one that is complete.</p>
+
+  <div class="know">
+    <div class="eyebrow">How we know &middot; Part IV</div>
+    <div class="know-grid">
+      <div class="know-col est"><div class="lab">Established mathematics and physics</div><ul>
+        <li>A finite system run by a fixed rule must revisit a state and then cycle (the pigeonhole principle). Poincaré's recurrence theorem, 1890, is the physical form; with chance in the rule, every reachable state recurs endlessly.</li>
+        <li>Boltzmann's law: time spent in a dip grows exponentially with the height of its wall.</li>
+        <li>The default future in current cosmology is expansion into cold emptiness: the eternal rival to a loop.</li>
+        <li>Observers can exist only where conditions allow them; reading the universe with that in mind is standard practice (Dicke, Carter).</li>
+      </ul></div>
+      <div class="know-col meas"><div class="lab">Measured in the model</div><ul>
+        <li>The number of states is finite and, at eighteen points, fully listed: about 1.8 trillion wirings.</li>
+        <li>X waits hundreds to thousands of rounds and opens in a few hundred; the waiting law holds to three parts in a thousand with nothing fitted.</li>
+        <li>A cold flat sheet accepts no move at all: the floor is where a jiggled system stays.</li>
+        <li>Nothing lies below the floor, so no leg of the loop can be lower or longer than space.</li>
+      </ul></div>
+      <div class="know-col thy"><div class="lab">The theory's step</div><ul>
+        <li>Reality is made of a finite network run by a fixed rule, so its history is a loop.</li>
+        <li>The floor is where the loop lingers, and the only leg that can hold an observer.</li>
+        <li>A loop is the one shape that owes nothing outside itself.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet part" id="part5">
+  <div class="part-head">
+    <div class="num">V</div>
+    <h2>Why the world is quantum</h2>
+    <p class="stand">Two points that can be swapped are not two points. Everything strange about the quantum world is what a reality made of relationships looks like from inside, where no one can tell its versions apart.</p>
+  </div>
+
+  <h3>One for each degree of freedom</h3>
+  <p class="lead">Back to the seating chart. Suppose two guests have exactly the same conversations: each talks to the same four people, and nobody else at the table can tell which of the two said what. Swap their name cards. The chart is unchanged. Nothing at the party, and nothing that could ever happen at the party, would register the swap. The two guests are, for every purpose the party has, one guest with two names.</p>
+  <p>The points of the network are like that. A point is nothing but its relationships, so two points with the same relationships are interchangeable, and a version of the world in which they are renamed is not a second world. It is the same world written differently. Now recall where we are: inside a loop with no beginning, no end and no outside. There is no vantage point from which two versions that differ only by a renaming could be compared. So they are not two. They are one thing, in all of its namings at once, one naming for each degree of freedom the arrangement has.</p>
+  <p>Physics has known this for a century without saying it this way. When quantum mechanics describes two identical particles, it does not say "this one is here and that one is there". It writes the state so that both assignments hold at the same time, because no experiment can tell which particle is which. That rule, the symmetry of exchange, is what makes electrons stack into the shells of the periodic table and photons pile into laser light. It is the first thing this account asks for, already in the textbook.</p>
+
+  <h3>The wave</h3>
+  <p>Here, then, is what a superposition is. It is not a particle smeared out or undecided. It is the whole set of namings of one arrangement, all standing, none preferred, because nothing has happened that could prefer one. An isolated closed loop of four points can be named in eight ways: start anywhere, go either way round. Left to itself, the loop is in all eight. Ask which way round its vibration runs and the honest answer is both, because "which way" is a naming, and a naming is not a fact until something depends on it. That is why a lone particle passes through both slits and interferes with itself. It is not in two places. It is in every naming of one place.</p>
+  <p>The "most probable version" is what you would get if you were forced to pick: the naming that the most arrangements around it agree with. Until you are forced, there is no picking, and the world simply is what it is in every version at once.</p>
+
+  <figure class="fig wide">
+    <div class="ft">Eight names for one loop, and then one</div>
+    <svg viewBox="0 0 660 230" role="img" aria-label="Left: a square loop of four points, drawn twice with its labels rotated, marked times eight, one thing. Right: the same loop joined by links to a tangle of other points, marked one naming. An arrow between them is labelled an interaction.">
+      <g class="ln x"><path d="M60,60H130V130H60Z"/></g>
+      <g class="dot x"><circle cx="60" cy="60" r="4.5"/><circle cx="130" cy="60" r="4.5"/><circle cx="130" cy="130" r="4.5"/><circle cx="60" cy="130" r="4.5"/></g>
+      <text x="50" y="52" class="t s" text-anchor="end">a</text><text x="140" y="52" class="t s">b</text><text x="140" y="142" class="t s">c</text><text x="50" y="142" class="t s" text-anchor="end">d</text>
+      <g class="ln x"><path d="M180,60H250V130H180Z"/></g>
+      <g class="dot x"><circle cx="180" cy="60" r="4.5"/><circle cx="250" cy="60" r="4.5"/><circle cx="250" cy="130" r="4.5"/><circle cx="180" cy="130" r="4.5"/></g>
+      <text x="170" y="52" class="t s" text-anchor="end">d</text><text x="260" y="52" class="t s">a</text><text x="260" y="142" class="t s">b</text><text x="170" y="142" class="t s" text-anchor="end">c</text>
+      <text x="290" y="100" class="t k">… ×8</text>
+      <text x="155" y="178" class="t k" text-anchor="middle">Alone: eight namings, one thing</text>
+      <text x="155" y="194" class="t s" text-anchor="middle">in all of them at once: the wave</text>
+      <path class="ln lu" d="M330,96H400" stroke-width="2" marker-end="url(#ahl)"/>
+      <text x="365" y="86" class="t lu" text-anchor="middle">an interaction</text>
+      <g class="ln x"><path d="M440,60H510V130H440Z"/></g>
+      <g class="ln me"><path d="M510,60L560,36L610,58L620,120L570,150L510,130 M560,36L570,150 M610,58L510,130 M620,120L510,60 M560,36L620,120"/></g>
+      <g class="dot me"><circle cx="560" cy="36" r="3.6"/><circle cx="610" cy="58" r="3.6"/><circle cx="620" cy="120" r="3.6"/><circle cx="570" cy="150" r="3.6"/></g>
+      <g class="dot x"><circle cx="440" cy="60" r="4.5"/><circle cx="510" cy="60" r="4.5"/><circle cx="510" cy="130" r="4.5"/><circle cx="440" cy="130" r="4.5"/></g>
+      <text x="430" y="52" class="t s" text-anchor="end">a</text><text x="518" y="52" class="t s">b</text><text x="518" y="144" class="t s">c</text><text x="430" y="142" class="t s" text-anchor="end">d</text>
+      <text x="530" y="178" class="t k" text-anchor="middle">Wired in: one naming</text>
+      <text x="530" y="194" class="t s" text-anchor="middle">the swap now changes a relationship: measured</text>
+    </svg>
+    <figcaption><b>Measurement is a relationship that a swap would not preserve.</b> Alone, the loop's eight namings are one thing and it is in all of them. Join two of its points to the world outside and renaming them now changes who is linked to whom. The versions have become different, and only one is the case.</figcaption>
+  </figure>
+
+  <h3>Measurement</h3>
+  <p>An interaction is a new relationship. Add a link between the loop and something outside it, and a swap that once changed nothing now changes who is joined to whom. The namings are no longer the same thing; they have become versions that differ, and you are in one of them. Nothing collapsed and nothing chose. A distinction came into existence that had not existed before, and the world was on one side of it.</p>
+  <p>The network puts a number on this, and the number has been counted. For a perfectly ordered sheet of 160 points, the renamings that preserve every relationship number 320. For a pile of separate closed knots, they number about a thousand trillion trillion. For a melted region, the phase of matter that has interacted with everything around it, they number exactly one. An interacting thing has one version. That is why the world of tables and planets looks classical: everything large is wired into everything else, and a thing wired into everything has no swap left that changes nothing. Time playing out is measurement done continuously, one interaction after another, each one turning a naming into a fact.</p>
+
+  <p class="pull">Nothing collapses. A distinction comes into existence, and the world is on one side of it.</p>
+
+  <h3>Particles as vibrations</h3>
+  <p>What, then, is a particle? A small closed loop of the substrate, sitting inside space, carrying energy. And a closed loop can vibrate only in certain ways, for the same reason a guitar string can: a wave that runs round a loop must meet itself when it gets back, so only whole numbers of waves fit. On a loop of four points there are exactly two allowed frequencies. The lower one comes twice, once for each way round, which is the two-slit doubling again. The higher one comes once. On a loop of six points there are three. Each allowed vibration is a kind of particle, and its frequency is the particle's energy, which is to say its mass. The families of particles are the families of ways a closed loop can hum.</p>
+
+  <figure class="fig">
+    <div class="ft">The ways a closed loop can hum</div>
+    <svg viewBox="0 0 560 200" role="img" aria-label="Three rings. The first is at rest. The second is deformed into one wave around its circumference, labelled one wave, either way round. The third is deformed into two waves, labelled two waves, once.">
+      <circle cx="90" cy="90" r="50" fill="none" stroke="var(--rule)" stroke-width="1.4" stroke-dasharray="3 3"/>
+      <circle cx="90" cy="90" r="50" fill="none" stroke="var(--x)" stroke-width="2.4"/>
+      <text x="90" y="166" class="t k" text-anchor="middle">at rest</text>
+      <text x="90" y="182" class="t s" text-anchor="middle">no wave</text>
+      <circle cx="280" cy="90" r="50" fill="none" stroke="var(--rule)" stroke-width="1.4" stroke-dasharray="3 3"/>
+      <path d="M280,40C318,40 348,58 344,90C348,122 318,140 280,140C258,140 234,122 236,90C234,58 258,40 280,40Z" fill="none" stroke="var(--x)" stroke-width="2.4"/>
+      <path class="ln lu" d="M300,20A62,62 0 0 1 340,52" marker-end="url(#ahl)"/>
+      <path class="ln lu" d="M260,20A62,62 0 0 0 220,52" marker-end="url(#ahl)"/>
+      <text x="280" y="166" class="t k" text-anchor="middle">one wave round the loop</text>
+      <text x="280" y="182" class="t s" text-anchor="middle">either way round: the doubled frequency</text>
+      <circle cx="470" cy="90" r="50" fill="none" stroke="var(--rule)" stroke-width="1.4" stroke-dasharray="3 3"/>
+      <path d="M470,32C490,60 500,70 528,90C500,110 490,120 470,148C450,120 440,110 412,90C440,70 450,60 470,32Z" fill="none" stroke="var(--x)" stroke-width="2.4"/>
+      <text x="470" y="166" class="t k" text-anchor="middle">two waves</text>
+      <text x="470" y="182" class="t s" text-anchor="middle">once: the highest frequency</text>
+    </svg>
+    <figcaption><b>Only whole waves fit.</b> A four-point loop allows exactly these: one wave, in either direction, at one frequency, and two waves at a higher one. Each is a kind of particle. Longer loops allow more kinds.</figcaption>
+  </figure>
+
+  <h3>Every version exists</h3>
+  <p>Now put this beside Part IV. The loop has no start and no end, and a finite system that keeps running returns to every state it can reach. So every version of every degree of freedom that can come out of the lump does come out, not once but endlessly, and from inside there is no telling which turn of the loop you are on, or which naming of it you are. All of them are our world. Space is not different from one version to the next, because the versions differ only in names, and names are not part of space. What separates versions is not being in a different place or a different time. It is an interaction, or time playing out, which is the same thing done slowly.</p>
+  <p>This is the last piece of the strange loop. The upper level, space with matter in it, is where interactions happen and namings become facts. The lower level, the network, holds every naming at once. Space reaching down into its substrate is a black hole; the substrate reaching up into space is a measurement. Both are the same hierarchy, tangled, seen from opposite ends.</p>
+
+  <div class="know">
+    <div class="eyebrow">How we know &middot; Part V</div>
+    <div class="know-grid">
+      <div class="know-col est"><div class="lab">Established physics</div><ul>
+        <li>Identical particles cannot be told apart, and quantum mechanics is built to hold every assignment of them at once. This exchange symmetry underlies the periodic table and laser light.</li>
+        <li>A wave confined to a closed loop can carry only whole numbers of wavelengths, so its frequencies are discrete. String theory reads particle types as vibration modes of small closed loops; Kaluza and Klein read charges as waves round a curled direction.</li>
+        <li>An interaction that records which version is which ends interference. This is decoherence, and it is why large, coupled things look classical. Relational quantum mechanics holds that a state is defined only relative to what it has interacted with.</li>
+        <li>Bell's theorem rules out local hidden facts. The substrate has no locality, so the theorem's premise does not apply to it.</li>
+      </ul></div>
+      <div class="know-col meas"><div class="lab">Measured in the model</div><ul>
+        <li>The renamings that preserve every relationship were counted at 160 points: exactly 1 for a melted graph, 320 for a perfect sheet, about 10<sup>29</sup> for a shattered arrangement of knots.</li>
+        <li>At 16 points, treating interchangeable points as one thing raises the closed knot's share of the ensemble from 1.3% to 20%, exactly. Interchangeability changes what is likely.</li>
+        <li>A closed loop of four points has exactly two allowed frequencies, the lower one doubled; a loop of six has three. Exact arithmetic on the loop itself.</li>
+      </ul></div>
+      <div class="know-col thy"><div class="lab">The theory's step</div><ul>
+        <li>A superposition is the set of namings of one arrangement, all holding at once, because nothing inside the loop can tell them apart.</li>
+        <li>A measurement is a relationship that a renaming would not preserve.</li>
+        <li>A particle is a vibration of a small closed loop, and its frequency is its type.</li>
+        <li>Every version exists across the loop, and interaction is what separates them.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet coda">
+  <div class="eyebrow">Coda</div>
+  <p>I couldn't let go of the question: how could there be no beginning and no end? It's one of the background questions that I've been gathering material on. On a rare but obsessive occasion, it jumps to the forefront: a binge of physics on The Great Courses, an urge to revisit Hofstadter loops. Watching Season 1 of <i>Dark Matter</i>. But mostly, this theory came from a gathering of patterns, a fascination and intuition. I've finally collected around me the pieces that snapped it together. Almost like a first order change. A grand unifying theory is just a bonus.</p>
+  <p>We are everything, everywhere, all at once. We can see waveform evidence of that infinity. We don't know what loop we are in until we interact with it. Time passes. A measurement is taken. One less degree of freedom, a step toward a colder, vaster existence. Yes, we are made of stars. Not only that. We are made of energy ripped from the inner core of a black hole as it uncurls into a new eternal spacetime.</p>
+</section>
+</main>
+
+<footer class="sheet">
+  <div><b>About this document.</b> It is written as the account would read with the theory accepted: the story told whole, without the hedges. Every claim in it rests on one of three things, marked at the end of each part: established physics, a measurement made in the model, or a step the theory takes. The tests behind the measurements, the status of each claim, the predictions that failed and the questions still open are recorded in full in the project repository: <a href="https://github.com/EmilySmithCreate/RecreationalPhysics">github.com/EmilySmithCreate/RecreationalPhysics</a>.</div>
+  <div><b>The model</b> is the two-dimensional combinatorial quantum gravity model of Trugenberger, Kelly and Biancalana. <b>Disclosure.</b> All code and documents in this project were drafted with Claude (Anthropic) in conversation with the author.</div>
+</footer>
+
+</body>
+</html>

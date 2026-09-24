@@ -1,0 +1,25 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T17 (written 2026-09-23 before the runs): k = 8 seeds planted as move A at evenly spaced columns of a 96 x 4 tube, lambda = 1.25, cold sealed box with C = 2N empty demons; counts the leftovers. Not exploratory.",
+    "name": "t17_seeds_k8",
+    "side": [
+      96,
+      4
+    ],
+    "capacity": "2*N",
+    "seeds": [
+      8
+    ],
+    "replicas": 20,
+    "n_sweeps": 30000,
+    "record_every": 100,
+    "seed": 20261304,
+    "lambda": 1.25
+  },
+  "config_path": "configs/t17_seeds_k8.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T17, written 2026-09-23"
+}

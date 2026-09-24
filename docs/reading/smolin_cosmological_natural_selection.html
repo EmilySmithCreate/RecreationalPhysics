@@ -1,0 +1,378 @@
+<title>Cosmological Natural Selection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --ground: #F6F8F6;
+    --panel: #FFFFFF;
+    --sunk: #EDF1EE;
+    --ink: #161C19;
+    --ink-soft: #57625C;
+    --ink-faint: #828D87;
+    --line: #DBE3DE;
+    --jade: #1A7A66;
+    --jade-soft: #E0EFE9;
+    --clay: #A44E2C;
+    --clay-soft: #F7E9E1;
+    --shadow: 0 1px 2px rgba(22,28,25,.05), 0 8px 24px rgba(22,28,25,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0E1412;
+      --panel: #151D1A;
+      --sunk: #121A17;
+      --ink: #E7EEEA;
+      --ink-soft: #9DABA4;
+      --ink-faint: #76847D;
+      --line: #25322D;
+      --jade: #63CBAE;
+      --jade-soft: #14302A;
+      --clay: #E2916A;
+      --clay-soft: #33211A;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0E1412;
+    --panel: #151D1A;
+    --sunk: #121A17;
+    --ink: #E7EEEA;
+    --ink-soft: #9DABA4;
+    --ink-faint: #76847D;
+    --line: #25322D;
+    --jade: #63CBAE;
+    --jade-soft: #14302A;
+    --clay: #E2916A;
+    --clay-soft: #33211A;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font: 400 18px/1.62 "Source Serif 4", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 3.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  h1, h2, h3 { font-family: "Newsreader", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(2.1rem, 6.5vw, 3.1rem); line-height: 1.08; letter-spacing: -.015em; }
+  h2 { font-size: 1.55rem; line-height: 1.2; }
+  h3 { font-size: 1.08rem; line-height: 1.3; }
+  p { margin: 0; }
+  a { color: var(--jade); text-underline-offset: 2px; }
+  strong { font-weight: 600; }
+  em.lead { font-style: italic; color: var(--ink-soft); }
+
+  .eyebrow {
+    font: 500 11.5px/1 "IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .standfirst { font-size: 1.16rem; color: var(--ink-soft); max-width: 36rem; }
+
+  section { display: flex; flex-direction: column; gap: 1rem; }
+  section > p + p { margin-top: -.15rem; }
+
+  .banner {
+    border: 1px solid var(--clay);
+    background: var(--clay-soft);
+    border-radius: 3px;
+    padding: 1.1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: .97rem;
+  }
+  .banner b { color: var(--clay); font-family: "Newsreader", Georgia, serif; font-size: 1.05rem; }
+
+  .chip {
+    display: inline-block;
+    font: 500 10.5px/1.55 "IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: .1rem .42rem;
+    border-radius: 2px;
+    vertical-align: .12em;
+    white-space: nowrap;
+  }
+  .chip.verify { background: var(--clay-soft); color: var(--clay); border: 1px solid color-mix(in oklab, var(--clay) 35%, transparent); }
+  .chip.ours { background: var(--jade-soft); color: var(--jade); border: 1px solid color-mix(in oklab, var(--jade) 35%, transparent); }
+
+  ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.05rem; counter-reset: s; }
+  ol.steps li {
+    counter-increment: s;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: .9rem;
+    align-items: baseline;
+  }
+  ol.steps li::before {
+    content: counter(s);
+    font: 500 12px/1 "IBM Plex Mono", ui-monospace, monospace;
+    color: var(--jade);
+    border-top: 2px solid var(--jade);
+    padding-top: .45rem;
+  }
+  ol.steps h3 { margin-bottom: .18rem; }
+
+  ul.plain { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: .55rem; }
+  ul.plain li { padding-left: .15rem; }
+
+  figure { margin: 0; display: flex; flex-direction: column; gap: .6rem; }
+  figure svg { width: 100%; height: auto; display: block; }
+  figcaption { font-size: .9rem; color: var(--ink-soft); }
+  .framed {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1.4rem 1.2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; min-width: 30rem; }
+  th, td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bottom: 1px solid var(--line); }
+  thead th {
+    font: 500 10.5px/1.4 "IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-bottom: 1px solid var(--ink-faint);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .pull {
+    border-left: 2px solid var(--jade);
+    padding: .2rem 0 .2rem 1.1rem;
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.22rem;
+    line-height: 1.38;
+    color: var(--ink);
+  }
+
+  .note { background: var(--sunk); border-radius: 3px; padding: 1rem 1.1rem; font-size: .96rem; color: var(--ink-soft); }
+  .note b { color: var(--ink); }
+
+  hr { border: none; border-top: 1px solid var(--line); margin: 0; }
+  footer { font-size: .9rem; color: var(--ink-faint); display: flex; flex-direction: column; gap: .4rem; }
+
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    ol.steps li { grid-template-columns: 1.4rem 1fr; gap: .7rem; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header style="display:flex; flex-direction:column; gap:.9rem;">
+    <span class="eyebrow">Reading note &middot; for the RecreationalPhysics project</span>
+    <h1>Cosmological natural selection</h1>
+    <p class="standfirst">Lee Smolin&rsquo;s proposal that universes have offspring, that black holes are how they have them, and that the laws we live under are the ones that turned out to be good at it. Written because your own loop is its cousin.</p>
+  </header>
+
+  <div class="banner">
+    <b>Nobody here has read him.</b>
+    <p>This is written from general knowledge, not from Smolin&rsquo;s papers or his book. It is a map of the idea so you know what you are walking into &mdash; not a source. Every specific number, date and title below carries a <span class="chip verify">verify</span> mark, and none of it should be cited anywhere until it has been checked against the original.</p>
+  </div>
+
+  <section>
+    <h2>The idea in one paragraph</h2>
+    <p>Black holes, on this proposal, do not end in a point of infinite density. They bounce, and on the far side of the bounce a new universe expands &mdash; not inside ours, not reachable from ours, just <em>elsewhere</em>. Each newborn universe inherits its parent&rsquo;s laws with small random changes, the way a child inherits a genome with small copying errors. A universe whose laws happen to make many black holes therefore leaves many descendants; one whose laws make few leaves few. Run that for enough generations and the typical universe is one that is good at making black holes &mdash; not because anything intended it, but for exactly the reason that most living things are good at surviving. Smolin&rsquo;s claim is that ours is such a universe, and that this is why the constants of nature have the values they do.</p>
+  </section>
+
+  <section>
+    <h2>The problem it was built to solve</h2>
+    <p>The constants of physics look tuned. Nudge the strength of the nuclear force or the mass of the electron a little and you get a universe with no chemistry, no stars, nothing. There are two standard responses and Smolin disliked both.</p>
+    <p>One is coincidence, which explains nothing. The other is the anthropic argument: there are countless universes with every combination of constants, and of course we find ourselves in one that permits observers, because we could not find ourselves anywhere else. That is not wrong, but it makes no prediction &mdash; there is no measurement that could come out against it. <span class="chip verify">verify</span> Smolin&rsquo;s objection was that a theory which cannot fail is not doing scientific work.</p>
+    <p class="pull">His move was to keep the many universes and add a mechanism that makes some of them more common than others &mdash; which turns an explanation into a prediction.</p>
+  </section>
+
+  <section>
+    <h2>Darwin&rsquo;s recipe, applied to universes</h2>
+    <p>Natural selection is not really about life. It is a piece of logic that grinds out an answer whenever four conditions hold at once, and Smolin&rsquo;s argument is that black holes supply all four.</p>
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Reproduction</h3>
+          <p>Universes have offspring. Each black hole that forms produces one new universe on the other side of its bounce. A universe with a hundred billion black holes has a hundred billion children.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Heredity</h3>
+          <p>A child&rsquo;s laws resemble its parent&rsquo;s. The constants carry over nearly unchanged &mdash; otherwise nothing accumulates and every generation starts from scratch.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Variation</h3>
+          <p>&ldquo;Nearly&rdquo; is doing real work here. At each birth the constants shift by a small random amount. Without variation there is nothing for selection to act on.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Differential success</h3>
+          <p>Some settings of the constants produce far more black holes than others. Those settings spread through the population of universes, simply by being copied more often.</p>
+        </div>
+      </li>
+    </ol>
+    <p>Notice what this buys and what it costs. It buys an explanation of fine-tuning that does not appeal to observers at all &mdash; life is incidental, a side-effect of the conditions that also make stars heavy enough to collapse. It costs three assumptions that are not established: that black holes bounce, that laws are inherited, and that they vary.</p>
+  </section>
+
+  <figure class="framed">
+    <svg viewBox="0 0 640 250" role="img" aria-label="A universe makes black holes; each black hole bounces into a new universe whose constants have shifted slightly; those universes make black holes in turn.">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M0,1 L9,5 L0,9 z" fill="currentColor"/>
+        </marker>
+      </defs>
+      <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".85">
+        <ellipse cx="96" cy="120" rx="62" ry="46"/>
+        <ellipse cx="330" cy="70" rx="52" ry="38"/>
+        <ellipse cx="330" cy="186" rx="52" ry="38"/>
+        <ellipse cx="556" cy="70" rx="44" ry="32" stroke-dasharray="3 4"/>
+        <ellipse cx="556" cy="186" rx="44" ry="32" stroke-dasharray="3 4"/>
+      </g>
+      <g fill="currentColor" font-family="'IBM Plex Mono', monospace" font-size="11">
+        <text x="96" y="118" text-anchor="middle">a universe</text>
+        <text x="96" y="134" text-anchor="middle" opacity=".6">its own constants</text>
+        <text x="330" y="68" text-anchor="middle">child</text>
+        <text x="330" y="184" text-anchor="middle">child</text>
+        <text x="556" y="68" text-anchor="middle" opacity=".6">grandchildren</text>
+        <text x="556" y="184" text-anchor="middle" opacity=".6">grandchildren</text>
+      </g>
+      <g fill="none" stroke-width="1.6" marker-end="url(#ar)" style="stroke: var(--jade)">
+        <path d="M156,104 C205,86 238,78 276,72"/>
+        <path d="M156,140 C205,160 238,172 276,182"/>
+        <path d="M382,68 L508,68"/>
+        <path d="M382,186 L508,186"/>
+      </g>
+      <g font-family="'IBM Plex Mono', monospace" font-size="10.5" style="fill: var(--jade)">
+        <text x="216" y="76">black hole</text>
+        <text x="216" y="182">black hole</text>
+        <text x="445" y="58" text-anchor="middle">constants drift</text>
+        <text x="445" y="176" text-anchor="middle">constants drift</text>
+      </g>
+      <g fill="currentColor" font-family="'IBM Plex Mono', monospace" font-size="10.5" opacity=".65">
+        <text x="330" y="232" text-anchor="middle">more black holes &rarr; more descendants &rarr; those constants become typical</text>
+      </g>
+    </svg>
+    <figcaption>Every black hole is a birth. Nothing selects for life, or for anything else we would recognise as a purpose &mdash; only for making more black holes.</figcaption>
+  </figure>
+
+  <section>
+    <h2>The prediction that could kill it</h2>
+    <p>This is the part worth studying, because it is the part that makes the idea science rather than a story. If universes have been selected for black-hole production over many generations, then ours should sit at or very near a <strong>local maximum</strong>: almost any small change to any constant should make black holes <em>rarer</em>, not commoner. That is a strong claim, and a single counterexample sinks it.</p>
+    <p>The best-known attempt to find one goes through neutron stars. <span class="chip verify">verify</span> The argument runs roughly: the physics that governs how heavy a neutron star can get before collapsing also governs how many collapse into black holes, so Smolin derived an upper limit on neutron-star mass &mdash; around one and a half to two times the Sun&rsquo;s &mdash; and said that a heavier one would count against him. Heavier ones have since been measured. He has replied. I do not know the current state of that exchange, and neither should you until one of us reads it.</p>
+    <div class="note"><b>Why this matters for your project more than the cosmology does.</b> Smolin did the thing this repository keeps insisting on: he stated in advance what observation would count against his idea, and he named a measurement that could be made. That is the same discipline as the pre-registration file, applied to a picture at least as speculative as yours.</div>
+  </section>
+
+  <section>
+    <h2>Where it is weak</h2>
+    <ul class="plain">
+      <li><strong>The bounce is assumed, not derived.</strong> Nobody has shown that a collapsing black hole interior turns around instead of ending. It is a common expectation in quantum-gravity circles &mdash; Smolin is one of the founders of loop quantum gravity, where such bounces are hoped for &mdash; but it is the load-bearing assumption and it is not established. <span class="chip verify">verify</span></li>
+      <li><strong>Nothing says why the constants should vary.</strong> The scheme needs small random changes at each birth, and there is no mechanism for them. It is the step where a biologist would want to be shown the copying machinery.</li>
+      <li><strong>The population is invisible.</strong> We can observe exactly one universe. Statements about what is typical across a population rest on the argument, never on a sample.</li>
+      <li><strong>It has been attacked by serious people.</strong> Susskind and Smolin ran a public exchange over it. <span class="chip verify">verify</span> Find that exchange before you decide how the idea has held up; an idea&rsquo;s critics are usually more informative than its author.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How it lines up with your loop</h2>
+    <p>Yours and his agree on the shape and differ on the engine. Both say black holes are where new space comes from and that reality needs no first moment. But he is running <em>evolution</em> &mdash; a population, heredity, variation, selection &mdash; and you are running a <em>cycle</em>: the same physics, recycling, with no offspring and nothing being selected.</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Question</th><th>Smolin</th><th>Yours</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Where does a new universe come from?</td><td>A black hole bounces</td><td>Enough energy is concentrated to fold space back into X, and X can open again</td></tr>
+          <tr><td>What happens at that moment?</td><td>Unspecified &mdash; a bounce, mechanism owed to quantum gravity</td><td>A phase change with a definite latent heat, which is the thing being measured in this project</td></tr>
+          <tr><td>Do the laws change?</td><td>Yes, slightly, at every birth &mdash; this is the whole engine</td><td>No. Same rules throughout</td></tr>
+          <tr><td>Why are the constants what they are?</td><td>Selection: they are good at making black holes</td><td>Unanswered, and the picture does not claim to answer it</td></tr>
+          <tr><td>Beginning?</td><td>None needed</td><td>None needed</td></tr>
+          <tr><td>What could refute it?</td><td>A small change to a constant that would make <em>more</em> black holes</td><td>No latent heat at the change &mdash; a continuous transition rather than a sharp one</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pull">The overlap is more interesting than the difference: <strong>the step Smolin has to assume is the step you are trying to build.</strong></p>
+    <p><span class="chip ours">our reading</span> He needs black holes to turn into new universes and has no mechanism for it. Your picture proposes one &mdash; space folded back up is X again, and X is a thing that can open. If that mechanism were ever made to work in a model, it would be a candidate answer to the question his whole scheme rests on. That is a far more defensible way to present your idea than as a rival account of everything: <em>here is a possible mechanism for a step a well-known proposal leaves open.</em></p>
+    <p>The cost of the comparison, stated plainly: if you ever want the explanatory prize he is after &mdash; why <em>these</em> constants &mdash; you have to import his machinery, and with it his weakest joints, variation and heredity. Your loop as it stands does not explain fine-tuning and should not be sold as though it does.</p>
+  </section>
+
+  <section>
+    <h2>Three things called a loop</h2>
+    <p>You said your sense of loops comes from Hofstadter. It is worth separating the three, because they are genuinely different animals and only one of them is his.</p>
+    <figure class="framed">
+      <svg viewBox="0 0 640 210" role="img" aria-label="Three diagrams: a strange loop climbing levels and arriving back at the bottom; a branching tree of universes; and a closed cycle.">
+        <g fill="none" stroke="currentColor" stroke-width="1.3">
+          <line x1="30" y1="150" x2="170" y2="150"/><line x1="30" y1="118" x2="170" y2="118"/><line x1="30" y1="86" x2="170" y2="86"/>
+        </g>
+        <path d="M150,86 C196,86 196,150 150,150" fill="none" stroke-width="1.7" marker-end="url(#ar2)" style="stroke: var(--clay)"/>
+        <defs>
+          <marker id="ar2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+            <path d="M0,1 L9,5 L0,9 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="none" stroke-width="1.5" style="stroke: var(--jade)">
+          <path d="M300,160 L300,130"/><path d="M300,130 L270,100"/><path d="M300,130 L330,100"/>
+          <path d="M270,100 L252,70"/><path d="M270,100 L288,70"/><path d="M330,100 L312,70"/><path d="M330,100 L348,70"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="300" cy="162" r="3"/><circle cx="270" cy="100" r="3"/><circle cx="330" cy="100" r="3"/>
+          <circle cx="252" cy="68" r="3"/><circle cx="288" cy="68" r="3"/><circle cx="312" cy="68" r="3"/><circle cx="348" cy="68" r="3"/>
+        </g>
+        <circle cx="530" cy="112" r="46" fill="none" stroke-width="1.7" style="stroke: var(--jade)" stroke-dasharray="1 0"/>
+        <path d="M576,112 a46,46 0 0,1 -10,29" fill="none" stroke-width="1.7" marker-end="url(#ar2)" style="stroke: var(--jade)"/>
+        <g fill="currentColor" font-family="'IBM Plex Mono', monospace" font-size="10.5" opacity=".75">
+          <text x="530" y="108" text-anchor="middle">X &rarr; space</text>
+          <text x="530" y="124" text-anchor="middle">&rarr; black hole &rarr; X</text>
+        </g>
+        <g fill="currentColor" font-family="'IBM Plex Mono', monospace" font-size="11">
+          <text x="30" y="188">strange loop</text>
+          <text x="252" y="188">reproductive</text>
+          <text x="484" y="188">cycle</text>
+        </g>
+        <g fill="currentColor" font-family="'IBM Plex Mono', monospace" font-size="10" opacity=".55">
+          <text x="30" y="204">Hofstadter</text>
+          <text x="252" y="204">Smolin</text>
+          <text x="484" y="204">yours</text>
+        </g>
+      </svg>
+      <figcaption>Climbing levels and landing where you started; a family tree; a wheel. Only the middle one has descendants, and only the left one is about self-reference.</figcaption>
+    </figure>
+    <ul class="plain">
+      <li><strong>Hofstadter&rsquo;s strange loop</strong> is about <em>levels of description</em>. You climb from neurons to symbols to a self, and the top level turns out to reach back down and act on the bottom &mdash; a hierarchy that tangles. The loop is in the describing, not in time.</li>
+      <li><strong>Smolin&rsquo;s loop</strong> is reproduction. It is not a wheel at all but a tree: each universe has many children, and the line never comes back to where it started.</li>
+      <li><strong>Yours</strong> is a cycle in one world: the same stuff going round, no offspring, no selection.</li>
+    </ul>
+    <p><span class="chip ours">our reading</span> But yours has a Hofstadter feature the other two lack, and it may be the most interesting thing in it. Your loop <em>crosses levels</em>: spacetime is the coarse level, the thing it is made of is the fine level, and a black hole is where the coarse level reaches back down and regenerates the fine one. That is a tangled hierarchy, not just a wheel. If you ever want to say what is distinctive about your picture in one sentence, it is closer to that than to anything about black holes.</p>
+  </section>
+
+  <section>
+    <h2>What to read, in what order</h2>
+    <ul class="plain">
+      <li><strong>The 1992 paper.</strong> <span class="chip verify">verify</span> Recorded as &ldquo;Did the universe evolve?&rdquo;, <em>Classical and Quantum Gravity</em>. Short, and the argument is all there. Check the title and journal before citing.</li>
+      <li><strong><em>The Life of the Cosmos</em>, 1997.</strong> <span class="chip verify">verify</span> The book-length version, written for general readers. This is the one pitched at the level you asked for.</li>
+      <li><strong>The critics, next &mdash; not last.</strong> The Susskind exchange, and whatever has been written about the neutron-star limit since. <span class="chip verify">verify</span></li>
+    </ul>
+    <p>One practical note, which this project has learned the hard way twice: <strong>search the text, do not rely on a summary of it</strong> &mdash; including this one. Two of our records of other people&rsquo;s papers turned out to be wrong in ways that changed what we thought was original.</p>
+  </section>
+
+  <hr>
+  <footer>
+    <p>Written for Emily, 22 September 2026, as background for the cosmological extension parked in <span style="font-family:'IBM Plex Mono',monospace; font-size:.85em;">docs/parked/extension_2026-09-22.md</span>.</p>
+    <p>Drafted by Claude (Anthropic) from general knowledge. Nothing here has been checked against Smolin&rsquo;s own writing, and the marked items must be verified before any of it is repeated.</p>
+  </footer>
+
+</div>

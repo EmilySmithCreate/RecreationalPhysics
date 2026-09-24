@@ -1,0 +1,62 @@
+# Terraform for the batch-compute stack: manual only, dry-run by default, GitHub OIDC straight into
+# this project's own AWS account. There is no organisation account and nothing is shared with any
+# other project. The account id comes from the repository variable AWS_ACCOUNT_ID.
+name: deploy_manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "dry-run plans and stops; deploy applies"
+        type: choice
+        options: [dry-run, deploy]
+        default: dry-run
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      AWS_REGION: us-east-1
+      TF_VAR_aws_account_id: ${{ vars.AWS_ACCOUNT_ID }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: the account must be set, before anything is assumed
+        run: test -n "${{ vars.AWS_ACCOUNT_ID }}"
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/ci_cd
+          aws-region: us-east-1
+          role-duration-seconds: 3600
+
+      - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: 1.7.5
+
+      - name: init
+        working-directory: terraform
+        run: terraform init -input=false -backend-config="bucket=recphys-tfstate-${{ vars.AWS_ACCOUNT_ID }}"
+
+      - name: validate
+        working-directory: terraform
+        run: terraform validate
+
+      - name: plan
+        working-directory: terraform
+        run: terraform plan -input=false -out=my.tfplan
+
+      - name: show the plan
+        working-directory: terraform
+        run: terraform show -no-color my.tfplan
+
+      - name: apply
+        if: ${{ inputs.action == 'deploy' }}
+        working-directory: terraform
+        run: terraform apply -input=false -auto-approve my.tfplan
