@@ -6,7 +6,7 @@
 
 \begin{document}
 
-\title{The curled torus burps: front-driven decompactification in combinatorial quantum gravity}
+\title{The curled torus burps: front-driven decompactification in a graph model of emergent geometry}
 
 \author{Emily Smith}
 \email{emilysmithcreate@gmail.com}
@@ -15,10 +15,12 @@
 \date{DRAFT, 24 September 2026}
 
 \begin{abstract}
-Combinatorial quantum gravity assigns to a four-regular bipartite graph an energy built from its total
-Ollivier curvature, which splits into a global term that rewards squares and a local term that removes
-the reward for a third square on an edge. We treat the coefficient $\lambda$ of the local term as a
-control parameter; $\lambda = 1$ is the published model. For $\lambda \ge 1$ the flat lattice torus is
+In combinatorial quantum gravity (CQG) the energy of a four-regular bipartite graph is built from its total
+Ollivier curvature, which splits into a global term that rewards squares and a local term that removes the reward
+for a third square on an edge. We study the family of graph energies obtained by multiplying the local
+term by a coefficient $\lambda$. Only $\lambda = 1$ is CQG; for $\lambda \ne 1$ the energy is no longer a
+curvature, and every result below is at $\lambda > 1$, in this neighbouring family and not in CQG itself.
+For $\lambda \ge 1$ the flat lattice torus is
 the ground state exactly, and a $4 \times L$ torus, one direction curled to a single square, lies
 $4(\lambda - 1)$ per vertex above it. At $\lambda = 1.25$ the curled torus is metastable, and its
 decompactification at fixed coupling proceeds by a memoryless nucleation followed by a single front: at half
@@ -29,7 +31,7 @@ the activation energy, 12 units, starts the change at every size from 48 to 192 
 does, while the release grows with the system. Sealed, the change completes only if the reservoir can absorb
 the release, and it leaves one relic defect of fixed size however large the torus. Mapped from $\lambda = 1.05$ to 1.45, the torus is metastable
 up to 1.35 and the change keeps its two-order, single-front character wherever it is, finishing cleanly near
-$\lambda = 1$ and leaving more defects as $\lambda$ grows. The release vanishes at $\lambda = 1$. Every verdict quoted was pre-registered.
+$\lambda = 1$ and leaving more defects as $\lambda$ grows. The release vanishes at $\lambda = 1$, the CQG value. Every verdict quoted was pre-registered.
 \end{abstract}
 
 \maketitle
@@ -39,15 +41,17 @@ $\lambda = 1$ and leaving more defects as $\lambda$ grows. The release vanishes 
 In combinatorial quantum gravity (CQG) \cite{T17,KTB19,T25} geometry emerges from random graphs driven by
 a discrete Ricci curvature. The question studied so far is whether geometry forms out of the random phase
 sharply or smoothly: a first-order transition with hysteresis when only the global term is kept
-\cite{GV21}, a continuous or hybrid one with the full action \cite{KTB19,T25}. A different kind of
+\cite{GV21}, a continuous one with the full action \cite{KTB19,T25}. A different kind of
 change has not, as far as we have found, been studied in this model: one \emph{ordered} arrangement
 turning into another. Such changes matter for the proposal that dark matter consists of long-lived
-regions of the graph stuck in a different discrete arrangement \cite{T24}. We study the simplest case the
-model offers, a torus with one direction curled, opening into the flat torus. It is a decompactification in
+regions of the graph stuck in a different discrete arrangement \cite{T24}. We study the simplest such
+change we have found, a torus with one direction curled, opening into the flat torus. It exists as a
+metastable state only when the local term is weighted by a coefficient $\lambda > 1$, where the energy is no
+longer the total curvature; this is therefore a study next to CQG, not in it, and the curled torus is not an
+allotrope in the sense of Ref.~\cite{T24}. It is a decompactification in
 miniature: a curled direction opens to full size, and the local dimension defined below rises from 1 to 2.
 Because the change waits quietly and then releases a fixed amount of energy all at once, we call the whole
-event a burp. The curled torus exists as a metastable state only for $\lambda > 1$; we map it along
-$\lambda$ and follow its decay.
+event a burp. We map it along $\lambda$, down to $\lambda = 1.05$, and follow its decay.
 
 \section{Model and exact results}
 
@@ -58,8 +62,8 @@ $X = \sum_e (S_e - 2)_+$,
 H = 16\,(N - S) + 4\lambda X = 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr].
 \label{eq:H}
 \end{equation}
-At $\lambda = 1$, $H$ is the total combinatorial curvature of Refs.~\cite{KTB19,T25}; $\lambda$ multiplies
-the local (saturation) term. The hard-core rule limits $S_e \le 3$. Three exact consequences follow.
+At $\lambda = 1$, $H$ is the total combinatorial curvature of Refs.~\cite{KTB19,T25}, the CQG action;
+$\lambda$ multiplies the local (saturation) term, and for $\lambda \ne 1$ $H$ is not a curvature. The hard-core rule limits $S_e \le 3$. Three exact consequences follow.
 
 \emph{Ground state.} For $\lambda \ge 1$ every term in the sum is non-negative, so $H \ge 0$, with $H = 0$
 for any graph with two squares on every edge: the flat lattice torus. For $\lambda > 1$ nothing else
@@ -152,7 +156,7 @@ written, with all three predictions holding there too.
 
 For contrast: at the same $\lambda = 1.25$ the change out of the random phase shows one hump in the
 energy distribution at every coupling, size and replica we ran, with any latent heat below 1.28 per vertex
-at $N = 100$ and falling with $N$ \cite{repo}. In this model the sharp change is between orders.
+at $N = 100$ and falling with $N$ \cite{repo}. At this $\lambda$ the sharp change is between orders.
 
 \section{Sealed system}
 
@@ -253,13 +257,12 @@ torus, pooled over sizes.}
 
 \section{Discussion}
 
-At $\lambda = 1$, the published model, the flat, curled and 4-cube tori are degenerate and the change
-releases nothing; the $N = 4p^2$ sizes recommended for the random-to-lattice problem admit neither of the
-latter two. The burp described here therefore belongs to the family on the $\lambda > 1$ side; the map of
+At $\lambda = 1$, which is CQG, the flat, curled and 4-cube tori are degenerate and the change
+releases nothing. The burp described here therefore belongs to the family on the $\lambda > 1$ side; the map of
 Sec.~\ref{sec:lambda} shows it keeping its character down to $\lambda = 1.05$, where it is cleanest, with a
-release $\varepsilon = 4(\lambda - 1)$ that vanishes at the published value. The same
-questions can be asked at $\lambda = 1$ of regions stuck in a different discrete arrangement inside a
-curved background \cite{T24}: whether such a region is metastable, and whether it gives way by a front with a
+release $\varepsilon = 4(\lambda - 1)$ that vanishes at the CQG value. The same
+questions can be asked in CQG itself, at $\lambda = 1$, of regions stuck in a different discrete arrangement
+inside a curved background \cite{T24}, such as the allotrope of Ref.~\cite{T25} (Fig.~9): whether such a region is metastable, and whether it gives way by a front with a
 definite release. The tools used here (exact barrier counting, front tracking, sealed baths) apply
 unchanged.
 
@@ -273,7 +276,7 @@ move away, so the escape would be slower by a factor of about $N$, with the rele
 \emph{Outlook (motivation, not a result).} This work is motivated by the hypothesis that space emerged from a
 specific ordered precursor through a sharp change of this kind, a lattice cousin of false-vacuum decay
 \cite{C77}, releasing a definite energy and leaving relics behind. Nothing here tests that hypothesis beyond
-showing that a model of emergent geometry contains such a change. We note only that the relic found here, of
+showing that a graph energy one coefficient away from a model of emergent geometry contains such a change. We note only that the relic found here, of
 fixed size and one per change however large the system, is the kind of object a dark-matter relic of such a
 change would have to be, and that the change
 needs a push of fixed size while what it releases grows with the system.

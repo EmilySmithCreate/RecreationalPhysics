@@ -13,7 +13,8 @@ not hold. *Designed*: pre-registered or drafted, not yet run. *Idea*: the owner'
 
 ## Paper 1. Metastable curled tori and their front-driven decay (drafted)
 
-**Claim.** In combinatorial quantum gravity with the local term's coefficient λ above 1, a torus with one
+**Claim.** In the graph energy of combinatorial quantum gravity with its local term's coefficient raised
+above 1 (not CQG itself, which is λ = 1 only; the author's condition of 24 September), a torus with one
 direction curled is metastable and opens into flat space sharply: a memoryless start, one front, two orders
 side by side, an exact release, a local push of fixed size, one leftover of fixed size.
 

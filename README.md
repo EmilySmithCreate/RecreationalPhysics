@@ -38,6 +38,10 @@ The hypothesis's own change is **order → order**: a *tube* (a torus with one s
 question is **disorder → order**: geometry forming out of a random graph. Both are measured here;
 they are not the same question (VISION Updates 5 and 13).
 
+**Naming.** Only λ = 1 is combinatorial quantum gravity; at any other λ the energy is not a curvature
+(the model's author, 2026-09-24). The tube results are at λ > 1, so they are about a neighbour of his
+model, not about his model, and are never described as "combinatorial (quantum) gravity".
+
 ## What has been done and tested
 
 Pre-registered verdicts are in `PREREGISTRATION.md`; the numbers behind each are in `ASSUMPTIONS.md`.
@@ -92,8 +96,8 @@ leftovers** (O22, exact). Whatever plays gravity here cannot be carried by the e
 
 **Open decisions and gaps:** whether Kelly et al. (2019) Fig. 8a should replace Trugenberger (2025)
 Fig. 3 as Gate B; where the metastable window closes between λ = 1.25 and 1.5; why a cold box ends
-with exactly one remnant; and S5 — no physicist has read any of this. A draft note to the model's
-authors is in [`docs/outreach/`](docs/outreach/note_to_model_authors.md).
+with exactly one remnant; and S5 — no physicist has read any of this. Correspondence with the model's authors is private and
+is not kept in this repository.
 
 ## Run it
 
@@ -154,7 +158,6 @@ tests/                         156 tests
 docs/HANDOFF.md                start here for the current state
 docs/design/                   the model-X brief and the known-physics plan
 docs/public/                   the plain-language write-up and a draft post
-docs/outreach/                 draft note to the model's authors
 docs/parked/                   the menu study and the cosmological extension
 docs/reading/                  walkthroughs of the sources (PDFs are local, not committed)
 docs/figures/                  figures, each made by a scripts/plot_*.py
