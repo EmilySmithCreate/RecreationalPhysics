@@ -330,6 +330,22 @@ threshold. The loop of four is not a resonator in this model; where anything res
 in two states of seven, at other frequencies. The wave rule stays undecided; whether to redefine the object as the cap
 is the author's call and would be a new pre-registration.
 
+## Six links per point (D = 3)  ☐
+
+**Added 2026-09-24** (VISION Update 22, the author's decision). In order, each step gated on the last:
+1. **Read** the D = 3 definitions in [KTB19] and [T25], searching the text: the energy and its coefficients,
+   where the local term saturates, the hard-core rule, and the published D = 3 curve (sizes, axis, log base).
+   Record each in ASSUMPTIONS with its status.
+2. **Exact results, no run:** energies of the 3D ladder (flat L×L×L; one, two and three directions curled) and
+   the cheapest exits from each, counted as in paper 1's Eq. (2).
+3. **Kernel:** generalise `cqg.py` from four links to 2D links (it hard-codes four in places), with the rule-6
+   tests: networkx brute force, incremental exactness, constraint preservation, same-seed reproducibility.
+   The 2D path must stay bit for bit what it is.
+4. **Gate C:** reproduce the published D = 3 curve of [KTB19].
+5. Then the companion paper's measurements, each pre-registered with the author's prediction.
+
+Accept: Gate C passed, and step 2's numbers checked against the kernel on the built states.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?
