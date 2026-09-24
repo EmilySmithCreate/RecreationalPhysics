@@ -357,7 +357,7 @@ only for 1 < λ < 1.2, and one curled direction for 1 < λ < 2. Next: step 3, th
 squares per vertex 4S/N). Runs: `configs/gatec_t22_fig3_{p1a,p1b,p2}.json` with `scripts/run_cqg_d_sweep.py`,
 N = 500 from a start with no squares, λ = 1, no cap, cooling over the published couplings and heating back. The
 published protocol is not stated, so two are run: P1 (2,000 + 2,000 sweeps per coupling, two replicas) and P2
-(10,000 + 5,000). **Proposed acceptance, the owner decides:** where our two legs agree (within 0.1 squares per
+(10,000 + 5,000). **Acceptance, accepted by the owner on 2026-09-24, before any comparison:** where our two legs agree (within 0.1 squares per
 vertex, with tau_int well below n_meas / 20), the largest difference from the digitised points, interpolated in
 ln g, is below 0.3 squares per vertex (0.025 in φ); and the coupling where the curve crosses 6 squares per vertex
 agrees within 0.05 in ln g. The cold plateau is reported, not scored, unless both legs agree there. If our curve is
