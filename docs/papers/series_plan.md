@@ -90,15 +90,16 @@ nothing. That is the one route by which folding could win, and it is exactly the
 cannot see. Doing it properly needs the symmetry count of every proposed state, which costs 0.1 to 24 s per
 count at N = 160 with the present tool (Q15).
 
-**Designed, not built.** Three steps, cheapest first:
-1. *Exact, small.* At N = 16 and 18 every class is listed with its symmetry count (`results/ergodicity_small.csv`).
-   At a fixed total energy (the sealed box), compute the share of folded, flat and random classes under named
-   and under interchangeable weighting. A toy answer, exact, no new code beyond arithmetic.
-2. *A fast symmetry count.* Replace the present counter with a canonical-labelling library (nauty-style) and
-   time it at N = 64 to 160. If per-move counting becomes affordable at N = 64, run the sealed sheet of O20
-   with interchangeable weighting directly.
-3. *Only then* pre-register the closed-region test with the owner's prediction (her statement: open space
-   spreads and heals; a closed region folds).
+**Designed, and the blocking tool now exists.**
+1. ~~*Exact, small.*~~ *Withdrawn the same night:* at N = 16 and 18, the only enumerable sizes, there is no flat
+   sheet at all (the 4 x 4 torus is the 4-cube; the first flat torus is 6 x 6 = 36), so fold against melt cannot
+   be posed there.
+2. *A fast symmetry count: done (Q20).* igraph counts in about a millisecond where the old counter took up to
+   45 s, agreeing exactly; a chain with interchangeable points built on it reproduces the exact interchangeable
+   averages at N = 18. Per-move counting is affordable up to about N = 64.
+3. *Next:* pre-register the closed-region test with the owner's prediction (her statement: open space spreads
+   and heals; a closed region folds): O20's sealed sheet at N = 36 and 64, λ = 1.25, the same budgets, run with
+   named and with interchangeable points side by side; the reading is the folded share of the damage.
 
 **What would count against.** A sealed sheet that still melts under interchangeable weighting.
 
@@ -123,6 +124,10 @@ counting.
   count is large only at special placements (exactly opposite, aligned), so the "force" it makes is a set of
   preferred symmetric placements, not a smooth attraction. If so, that is a clean negative for the simplest
   version of the mechanism, and it should be said.
+- **Run the same night (O32), and it came out that way:** at 18 separations in a 12 x 12 torus, two identical
+  simple defects have 1 or 2 symmetries at every ordinary distance and 4 only when exactly opposite. No pull;
+  a factor-2 preference for maximum separation. What remains open is the entropic force when the surroundings
+  are free to rearrange, which the interchangeable chain (Q20) can now measure.
 
 **What would count against.** Immobile leftovers, or a pull that depends on wiring for defects of equal energy.
 

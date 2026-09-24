@@ -1022,6 +1022,20 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   it (proposed, not enacted) changes no verdict. *Ours, unverified:* a smooth crossover at these sizes,
   neither the continuous nor the first-order signature.
 
+- **O32 Counting with interchangeable points does not pull identical defects together.** (2026-09-24,
+  EXACT, exploratory; series paper 5; `configs/exact_pair_symmetry.json`, `scripts/exact_pair_symmetry.py`,
+  `results/exact_pair_symmetry.csv`; the expectation was written in the config before the run.) Two copies of
+  the flat sheet's cheapest break, placed at 18 separations in a 12 x 12 torus. Every placement has the same
+  energy (140 squares), so the only difference interchangeable points can make is the symmetry count A, the
+  placement's weight. **A is 1 or 2 at every ordinary separation, set by orientation and not by distance (2 at
+  (2,0), (4,0), (8,0), (10,0); 1 at every odd and diagonal shift), and 4 only at the three exactly opposite
+  placements (6,0), (0,6), (6,6).** So the counting makes no force that grows as defects approach; its only
+  preference is a factor of 2 for sitting exactly opposite, i.e. for maximum separation. *Ours, unverified:*
+  this is a clean negative for the simplest version of "gravity as the wish to refold" by counting, at fixed
+  wiring. **Limits, stated plainly:** one simple local defect, not the leftover column; one torus size; fixed
+  wiring, so nothing here says what happens when the defects' surroundings are allowed to rearrange (that is
+  an entropic force of a different kind, which the interchangeable chain of Q20 can now measure).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
