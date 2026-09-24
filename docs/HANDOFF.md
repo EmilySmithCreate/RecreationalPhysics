@@ -10,9 +10,13 @@ git history.
 
 1. **Two sessions may be working this repository at once.** Run `git status` and `git log -5` before assuming
    the tree is as described, and re-read a file if the tool says it changed on disk.
-2. **Running (24 September):** Gate C, three local jobs (`results/gatec_t22_fig3_{p1a,p1b,p2}.csv.partial`), and
-   T23, 28 AWS Batch jobs whose results are downloaded later as `results/t23_*`. A finished local job has a
-   `.csv` and no `.partial`. Never commit a result a live job is still writing.
+2. **Running (24 September, evening):** Gate C's long protocol P2 (`results/gatec_t22_fig3_p2.csv.partial`,
+   local), and the last 3 of T23's 28 AWS Batch jobs (downloaded later as `results/t23_*`). A finished local job
+   has a `.csv` and no `.partial`. Never commit a result a live job is still writing.
+   **Gate C has FAILED (ASSUMPTIONS O42):** the six-link code does not reproduce [T22] Fig. 3 at the unscaled
+   couplings or at couplings × N^(1/3), and the shapes differ. By rule 2 the six-link (D = 3) track is stopped:
+   no D = 3 result, including O41's window, is quoted or interpreted until it is resolved. The question for the
+   model's author: [T22] Fig. 3's protocol, its Boltzmann weight, and whether its graphs are bipartite.
    Note: commit `0746203` (labelled as the Gate C criterion) also carries the removal of `docs/outreach/` and
    the old `docs/public/site/index.html` from the tracked tree, swept in from the shared index.
 3. **Read section 3 before writing anything public or anything to a physicist.**
@@ -105,7 +109,8 @@ number is carried into a claim about gravity.
 
 ## 5. Natural next lines (pre-register before running)
 
-1. Gate C: read when it lands, under the criterion she accepted (TASKS, Gate C).
+1. Gate C: failed (O42). Report P2 when it lands, and put the narrow question to the model's author before any
+   more six-link work.
 2. T23: download from S3 when the Batch jobs finish, check, commit with `.meta.json`, read.
 3. The allotrope, once the graph arrives: stuck or not at λ = 1, its barrier, its lifetime against size.
 4. If not yet done: a cloud result checked bit for bit against the same config run on the laptop.
