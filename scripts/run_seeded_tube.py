@@ -85,36 +85,40 @@ def main(path, out_dir="results"):
     n_sweeps, every = int(cfg["n_sweeps"]), int(cfg.get("record_every", 100))
     lx, ly = cfg["side"]
     n = lx * ly
-    c_bath = int(round(eval(str(cfg["capacity"]), {"N": n})))
+    # T18 (2026-09-23): a list of bath sizes. With "capacities" the seed derivation includes C; with a
+    # single "capacity" (T17) it is unchanged, so T17's runs reproduce exactly.
+    many = "capacities" in cfg
+    baths = [int(round(eval(str(c), {"N": n}))) for c in (cfg["capacities"] if many else [cfg["capacity"]])]
     meta = dict(config=cfg, config_path=str(path), package=__version__,
                 python=platform.python_version(), numpy=np.__version__, numba=numba.__version__,
-                preregistration="PREREGISTRATION.md section T17, written 2026-09-23")
+                preregistration="PREREGISTRATION.md section %s" % cfg.get("section", "T17"))
+    runs = [(c, k, rep) for c in baths for k in cfg["seeds"] for rep in range(int(cfg["replicas"]))]
     with ResultWriter(cfg["name"], meta, out_dir) as out:
-        for k in cfg["seeds"]:
-            for rep in range(int(cfg["replicas"])):
-                adj, part = torus(lx, ly, NO_CAP)
-                side_u = np.flatnonzero(part == 0)
-                h_tube = hamiltonian(adj, lam)
-                cols = plant_seeds(adj, part, lx, ly, k)
-                h_planted = hamiltonian(adj, lam)
-                demons = np.zeros(c_bath)
-                e0 = h_planted
-                seed = int(np.random.SeedSequence([int(cfg["seed"]), n, k, rep]).generate_state(1)[0])
-                s, x, mean, tot, acc = run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam, NO_CAP)
-                h = 16.0 * (n - s) + 4.0 * lam * x
-                drift = float(np.abs(h + tot - e0).max())
-                d = local_dimension(adj)
-                hist = np.bincount(d, minlength=D_BINS)[:D_BINS]
-                p1 = pieces_of(adj, d == 1)
-                f_final = (PHI_TUBE - s[-1] / n) / (PHI_TUBE - PHI_SHEET)
-                out.write(dict(N=n, k=k, replica=rep, seed_columns=" ".join(map(str, cols)),
-                               planted_cost=h_planted - h_tube, f_final=f_final, phi_final=s[-1] / n,
-                               bath_T=mean[-1], drift=drift, acceptance=acc,
-                               **{"d%d" % i: int(hist[i]) for i in range(D_BINS)},
-                               pieces_d1=len(p1), sizes_d1=" ".join(map(str, p1)),
-                               h_final=float(h[-1])))
-                print("N=%d k=%d rep=%-2d cost %.0f f_final=%.2f d1 pieces %d sizes %s drift %.1e"
-                      % (n, k, rep, h_planted - h_tube, f_final, len(p1), p1[:6], drift), flush=True)
+        for c_bath, k, rep in runs:
+            adj, part = torus(lx, ly, NO_CAP)
+            side_u = np.flatnonzero(part == 0)
+            h_tube = hamiltonian(adj, lam)
+            cols = plant_seeds(adj, part, lx, ly, k)
+            h_planted = hamiltonian(adj, lam)
+            demons = np.zeros(c_bath)
+            e0 = h_planted
+            parts = [int(cfg["seed"]), n, k, rep] + ([c_bath] if many else [])
+            seed = int(np.random.SeedSequence(parts).generate_state(1)[0])
+            s, x, mean, tot, acc = run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam, NO_CAP)
+            h = 16.0 * (n - s) + 4.0 * lam * x
+            drift = float(np.abs(h + tot - e0).max())
+            d = local_dimension(adj)
+            hist = np.bincount(d, minlength=D_BINS)[:D_BINS]
+            p1 = pieces_of(adj, d == 1)
+            f_final = (PHI_TUBE - s[-1] / n) / (PHI_TUBE - PHI_SHEET)
+            out.write(dict(N=n, C=c_bath, lam=lam, k=k, replica=rep, seed_columns=" ".join(map(str, cols)),
+                           planted_cost=h_planted - h_tube, f_final=f_final, phi_final=s[-1] / n,
+                           bath_T=mean[-1], drift=drift, acceptance=acc,
+                           **{"d%d" % i: int(hist[i]) for i in range(D_BINS)},
+                           pieces_d1=len(p1), sizes_d1=" ".join(map(str, p1)),
+                           h_final=float(h[-1])))
+            print("N=%d C=%d k=%d rep=%-2d cost %.1f f_final=%.2f d1 pieces %d sizes %s drift %.1e"
+                  % (n, c_bath, k, rep, h_planted - h_tube, f_final, len(p1), p1[:6], drift), flush=True)
 
 
 if __name__ == "__main__":

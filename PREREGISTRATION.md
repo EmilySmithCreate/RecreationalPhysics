@@ -1011,3 +1011,39 @@ Named, for the reason in T8. The expected effect of interchangeable points on th
 ### What this cannot show
 
 Anything about the amount of dark matter in the universe. How seeds arise without being planted. Anything at another λ or size.
+
+## T18. How much room does the new space need, as λ changes? (written 2026-09-23, night, before the runs)
+
+### Why
+
+T9 found that, sealed, the change completes only if its surroundings can take the lump (BONFIRE WITH A THRESHOLD), and that the room needed scales with N, as a release of 4(λ − 1)N into C stores against a melting coupling predicts. That was at λ = 1.25 only. Paper 3 of the series (`docs/papers/series_plan.md`) needs it across λ: the lump grows with λ − 1, so the room the new space needs to survive its own birth should grow too. This measures it at λ = 1.10, 1.25 and 1.40.
+
+### What will be run
+
+One tube 24 × 4 (N = 96); one seed planted as in T17 (move A at column 0; cost 32 − 16λ), every demon empty; sealed; C ∈ {N/32, N/16, N/8, 3N/16, N/4, 3N/8, N/2, 3N/4, N, 2N} = {3, 6, 12, 18, 24, 36, 48, 72, 96, 192}; twenty replicas per (λ, C); 30,000 sweeps; λ ∈ {1.10, 1.25, 1.40}. `scripts/run_seeded_tube.py` with a list of capacities (its seed derivation then includes C; T17's single-capacity runs are unchanged, checked by rerunning the T17 smoke test bit for bit). Configs `configs/t18_room_lam{110,125,140}.json`.
+
+### Observables and definitions, fixed now
+
+Each run's product is classified by T9's rules exactly (`scripts/analyse_t9.py`, `classify`): sheet, melted, tube, stalled, other. **C\*(λ)** is the smallest C at which a majority of the twenty runs end as a sheet. The ratio **R = C\*(1.40) / C\*(1.10)** is the reading.
+
+### Gates
+
+Energy conserved to the last unit in every run. At each λ, some C has a majority of sheets (otherwise C\* is undefined and that λ is reported as never clean at N = 96).
+
+### Predictions
+
+The owner has not given a pick (she asked for the night's tests to be designed in her absence). **Ours, unverified:** the room needed grows in proportion to the lump, C\* ∝ N · 4(λ − 1) / g_melt, with g_melt the melting coupling of the flat sheet, which should depend weakly on λ because λ acts only on edges with three squares, which a sheet near melting rarely has. Then R ≈ 4(0.40) / 4(0.10) = 4.
+
+- (a) **PROPORTIONAL**: R ≥ 2.5.
+- (b) **WEAKER THAN PROPORTIONAL**: 1.5 < R < 2.5.
+- (c) **FLAT**: R ≤ 1.5 (the room needed does not depend on the lump).
+
+Ours: (a). The grid steps by factors of 4/3 to 2, so R is read on the grid and reported with the grid's resolution.
+
+### Named or interchangeable points
+
+Named. Interchangeable weighting would favour the flat sheet (4N symmetries against about 1 for a melt), so it would lower C\* at every λ by a similar factor; the ratio R should be affected less than C\* itself. Recorded as expected, not checked.
+
+### What this cannot show
+
+The actual room a new universe has; anything at N other than 96; the melting coupling at λ = 1.10 and 1.40, which is assumed close to 1.25's, not measured.
