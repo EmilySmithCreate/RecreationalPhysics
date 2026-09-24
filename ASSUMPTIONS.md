@@ -1111,7 +1111,9 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     the ladder are 8 (three curled), 8 (two curled) and 43 (one curled). The release of one rung could pay the next
     wall in a large enough system (N ≳ 110 for the last), which is the energetic room for her cascade. Whether the
     released energy stays where the next wall is, is a question about the dynamics.
-- **O42 Gate C fails: the six-link code does not reproduce [T22] Fig. 3, under either reading of its axis.**
+- **O43 Gate C fails: the six-link code does not reproduce [T22] Fig. 3, under either reading of its axis.**
+  *(Numbered O42 when first written; renumbered the same evening because O42 was already taken by the review of
+  paper 1.)*
   (2026-09-24; `scripts/compare_gate_c.py`; results `gatec_t22_fig3_p1a`, `p1b`, `p1s_a`, `p1s_b`; the criterion was
   accepted by the owner before any comparison.) All four runs use N = 500, λ = 1, no cap, cooling from a start with
   no squares and heating back, with 2,000 + 2,000 sweeps per coupling.

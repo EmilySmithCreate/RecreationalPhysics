@@ -13,7 +13,7 @@ git history.
 2. **Running (24 September, evening):** Gate C's long protocol P2 (`results/gatec_t22_fig3_p2.csv.partial`,
    local), and the last 3 of T23's 28 AWS Batch jobs (downloaded later as `results/t23_*`). A finished local job
    has a `.csv` and no `.partial`. Never commit a result a live job is still writing.
-   **Gate C has FAILED (ASSUMPTIONS O42):** the six-link code does not reproduce [T22] Fig. 3 at the unscaled
+   **Gate C has FAILED (ASSUMPTIONS O43):** the six-link code does not reproduce [T22] Fig. 3 at the unscaled
    couplings or at couplings × N^(1/3), and the shapes differ. By rule 2 the six-link (D = 3) track is stopped:
    no D = 3 result, including O41's window, is quoted or interpreted until it is resolved. The question for the
    model's author: [T22] Fig. 3's protocol, its Boltzmann weight, and whether its graphs are bipartite.
@@ -109,7 +109,7 @@ number is carried into a claim about gravity.
 
 ## 5. Natural next lines (pre-register before running)
 
-1. Gate C: failed (O42). Report P2 when it lands, and put the narrow question to the model's author before any
+1. Gate C: failed (O43). Report P2 when it lands, and put the narrow question to the model's author before any
    more six-link work.
 2. T23: download from S3 when the Batch jobs finish, check, commit with `.meta.json`, read.
 3. The allotrope, once the graph arrives: stuck or not at λ = 1, its barrier, its lifetime against size.
