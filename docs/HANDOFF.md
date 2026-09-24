@@ -11,8 +11,8 @@ git history.
 1. **Two sessions may be working this repository at once.** Run `git status` and `git log -5` before assuming
    the tree is as described, and re-read a file if the tool says it changed on disk.
 2. **Running (24 September, evening):** Gate C's long protocol P2 (`results/gatec_t22_fig3_p2.csv.partial`,
-   local), and the last 3 of T23's 28 AWS Batch jobs (downloaded later as `results/t23_*`). A finished local job
-   has a `.csv` and no `.partial`. Never commit a result a live job is still writing.
+   local). A finished local job has a `.csv` and no `.partial`. Never commit a result a live job is still writing.
+   T23 is done and read (O44).
    **Gate C has FAILED (ASSUMPTIONS O43):** the six-link code does not reproduce [T22] Fig. 3 at the unscaled
    couplings or at couplings × N^(1/3), and the shapes differ. By rule 2 the six-link (D = 3) track is stopped:
    no D = 3 result, including O41's window, is quoted or interpreted until it is resolved. The question for the
@@ -44,7 +44,8 @@ number is carried into a claim about gravity.
 | T6, λ = 0 (control) | FIRST ORDER (amendment 4) |
 | T6, λ ≥ 1 | INCONCLUSIVE, final; one hump, any lump < 1.3 per point at N = 100 |
 | T7, tube → sheet, λ = 1.25 | TWO-STATE CHANGE at N = 64, 96, 192 |
-| T8, the λ map | INCONCLUSIVE by the letter (memoryless criterion too tight); sharp wherever stuck, 1.05 to 1.35; edge between 1.35 and 1.40 (O38). T23 re-runs it at 120 decays per cell (pre-registered; running on AWS) |
+| T8, the λ map | INCONCLUSIVE by the letter (memoryless criterion too tight); sharp wherever stuck, 1.05 to 1.35; edge between 1.35 and 1.40 (O38) |
+| T23, the λ map again at 120 decays | Window INCONCLUSIVE by the letter: the energy gate, unchanged from T8, fails at λ = 1.30 at every size (3 to 5 decays of 120); memoryless in 20 of 20 cells to 1.25. Edge: BREAK-UP BEGINS AT THE EDGE, as predicted (O44) |
 | T9 sealed tube | BONFIRE WITH A THRESHOLD |
 | T10 leftover vs size | ONE RING, HOWEVER LARGE |
 | T11 | NEITHER |
@@ -111,7 +112,7 @@ number is carried into a claim about gravity.
 
 1. Gate C: failed (O43). Report P2 when it lands, and put the narrow question to the model's author before any
    more six-link work.
-2. T23: download from S3 when the Batch jobs finish, check, commit with `.meta.json`, read.
+2. T23: read (O44). Piece 2 is still not green by the letter; a repair of the energy gate needs a new pre-registration, if Emily wants one.
 3. The allotrope, once the graph arrives: stuck or not at λ = 1, its barrier, its lifetime against size.
 4. If not yet done: a cloud result checked bit for bit against the same config run on the laptop.
 5. The scrap race (does it freeze in as the box cools?), and the local-spark protocol (TASKS T14).
