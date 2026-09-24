@@ -1,0 +1,220 @@
+\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Metastable curled tori and their front-driven decay in combinatorial quantum gravity}
+
+\author{Emily Smith}
+\email{emilysmithcreate@gmail.com}
+\affiliation{Independent researcher, Charlottesville, Virginia, USA}
+
+\date{DRAFT, 23 September 2026}
+
+\begin{abstract}
+Combinatorial quantum gravity assigns to a four-regular bipartite graph an energy built from its total
+Ollivier curvature, which splits into a global term that rewards squares and a local term that removes
+the reward for a third square on an edge. We treat the coefficient $\lambda$ of the local term as a
+control parameter; $\lambda = 1$ is the published model. For $\lambda \ge 1$ the flat lattice torus is
+the ground state exactly, and a $4 \times L$ torus, one direction curled to a single square, lies
+$4(\lambda - 1)$ per vertex above it. At $\lambda = 1.25$ the curled torus is metastable and decays at
+fixed coupling by a memoryless nucleation followed by a single front: at half conversion 98.8 to 99.8\%
+of vertices belong to one ordered state or the other, and the released energy is exactly $4(\lambda-1)$
+per vertex. The barrier is a single local move. In a sealed system a seed of 12 energy units starts the
+change at every size from 48 to 192 vertices and nothing smaller does, while the release grows with the
+system. Sealed, the change completes only if its surroundings can absorb the release, and it leaves one
+defect of fixed size however large the torus. [$\lambda$ scan: one sentence, pending.] The release
+vanishes at $\lambda = 1$. Every verdict quoted was pre-registered.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+In combinatorial quantum gravity (CQG) \cite{T17,KTB19,T25} geometry emerges from random graphs driven by
+a discrete Ricci curvature. The question studied so far is whether geometry forms out of the random phase
+sharply or smoothly: a first-order transition with hysteresis when only the global term is kept
+\cite{GV21}, a continuous or hybrid one with the full action \cite{KTB19,T25}. A different kind of
+change has not, as far as we have found, been studied in this model: one \emph{ordered} arrangement
+turning into another. Such changes matter for the proposal that dark matter consists of long-lived
+regions of the graph stuck in a different discrete arrangement \cite{T24}. We study the simplest case the
+model offers, a torus with one direction curled, opening into the flat torus. It exists as a metastable
+state only for $\lambda > 1$; we map it along $\lambda$ and follow its decay.
+
+\section{Model and exact results}
+
+States are four-regular bipartite graphs obeying the hard-core rule (no two vertices share more than two
+neighbours) \cite{KTB19,T25}. With $S$ the number of squares, $S_e$ the squares on edge $e$ and
+$X = \sum_e (S_e - 2)_+$,
+\begin{equation}
+H = 16\,(N - S) + 4\lambda X = 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr].
+\label{eq:H}
+\end{equation}
+At $\lambda = 1$, $H$ is the total combinatorial curvature of Refs.~\cite{KTB19,T25}; $\lambda$ multiplies
+the local (saturation) term. The hard-core rule limits $S_e \le 3$. Three exact consequences follow.
+
+\emph{Ground state.} For $\lambda \ge 1$ every term in the sum is non-negative, so $H \ge 0$, with $H = 0$
+for any graph with two squares on every edge: the flat lattice torus. For $\lambda > 1$ nothing else
+reaches zero.
+
+\emph{Ladder.} The $4\times L$ torus has $S = 5N/4$ and $X = N$ (the edges of each wrap-around 4-cycle
+carry three squares), so $H/N = 4(\lambda - 1)$; the 4-cube has $H/N = 8(\lambda-1)$. Each curled direction
+costs $4(\lambda - 1)$ per vertex. We call $d(v)$, the number of pairs of edges at $v$ that close no
+square, the local dimension: 2 on the flat torus, 1 on the curled torus, 0 on the 4-cube.
+
+\emph{Metastability window.} Enumerating every valid graph at $N = 18$ (26 classes up to relabelling)
+\cite{repo}, states above the ground state from which every single move costs energy exist for
+$1 < \lambda < 1.6$, and at neither $\lambda = 1$ nor any $\lambda \ge 1.6$ (steps of 0.05 up to 1.7, coarser
+to 30).
+
+\emph{The way out.} The Markov chain swaps one partner each between two vertices of the same side
+(an edge switch preserving the bipartition; Metropolis; the hard-core rule is enforced) \cite{repo}.
+From the perfect $4\times L$ torus the cheapest moves are of two kinds, counted exactly:
+move A ($\Delta S = -2$, $\Delta X = -4$; cost $32 - 16\lambda$; $3N$ moves) and move B
+($\Delta S = -4$, $\Delta X = -10$; cost $64 - 40\lambda$; $2N$ moves). A sweep is $2N$ attempts drawn from
+$4N^2$ equally likely proposals, so A is offered 3 times and B twice per sweep, independent of $N$.
+The mean time to the first exit is therefore predicted without free parameters,
+\begin{equation}
+\tau(\lambda, g) = \bigl[3 e^{-(32 - 16\lambda)/g} + 2 e^{-(64-40\lambda)/g}\bigr]^{-1},
+\label{eq:tau}
+\end{equation}
+with A the cheaper for $\lambda < 4/3$.
+
+\section{Decay at fixed coupling}
+
+At $\lambda = 1.25$ the barrier is $12$. Over twelve conditions ($g = 1.4$ to 2.5, $N = 64$ and 144,
+16 runs each), the measured mean waiting time against the move-A term of Eq.~(\ref{eq:tau}) has a plain
+mean ratio of 0.98 and a weighted mean of $0.88 \pm 0.06$, every ratio between 0.71 and 1.62, over a
+ninety-fold range of times; a fit of the barrier at $N = 144$ gives $12.1 \pm 0.9$ [Fig.~\ref{fig:1}(a)].
+Including move B lowers the predicted waiting time by 15\% at $g = 1.5$; which of the two describes the data better is
+open (Sec.~\ref{sec:lambda}).
+
+The decay itself was pre-registered \cite{repo}: at $\lambda = 1.25$, $g = 1.5$, thirty decays at each of
+$N = 64, 96, 144, 192$, and the adjacency read when the conversion fraction first crossed 25, 50 and 75\%.
+The predictions were a memoryless waiting time (coefficient of variation between 0.7 and 1.3), at least
+80\% of vertices at $d \in \{1,2\}$ at half conversion, and the converted vertices in one piece holding at
+least 70\% of them. All three hold at every size and on two independent sets of seeds (Table~\ref{tab:t7}):
+the change starts at one place and runs as a single front, with the two orders on either side of it and
+almost nothing in between [Fig.~\ref{fig:1}(b)]. The mean waiting time does not fall with $N$, as a local
+barrier offered at an $N$-independent rate per sweep requires.
+
+\begin{table}[b]
+\caption{The decay of the $4\times L$ torus at $\lambda = 1.25$, $g = 1.5$ (first run / independent rerun,
+thirty decays each).}
+\label{tab:t7}
+\begin{ruledtabular}
+\begin{tabular}{lcccc}
+$N$ & mean wait & CV & $d \in \{1,2\}$ at 50\% & largest piece \\
+\hline
+64  & 871 / 660  & 0.91 / 0.84 & 0.990 / 0.998 & 0.98 / 0.99 \\
+96  & 913 / 928  & 1.10 / 1.02 & 0.990 / 0.988 & 0.95 / 0.96 \\
+144 & 856 / 743  & 1.01 / 0.76 & 0.997 / 0.997 & 0.92 / 0.96 \\
+192 & 1039 / -- & 0.87 / --   & 0.995 / --    & 0.85 / --   \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{figure*}
+\includegraphics[width=\textwidth]{fig1.pdf}
+\caption{(a) Mean waiting time of the perfect $4\times L$ torus at $\lambda = 1.25$ against inverse coupling,
+sixteen runs per point, with Eq.~(\ref{eq:tau}) using move A only (solid) and moves A and B (dashed);
+nothing is fitted. (b) Share of vertices at each local dimension $d$ when half the torus has converted,
+averaged over thirty decays per size.}
+\label{fig:1}
+\end{figure*}
+
+The released energy is exact. After the change, 24 to 28 of 30 decays per size rest on the flat torus with
+release $4(\lambda - 1)$ per vertex to within 1\%. The others settle on metastable defected sheets, read from
+their wiring: most often one column of the torus left curled, four vertices at $d = 1$ with $S = N + 1$,
+$X = 6$, costing $24\lambda - 16$ (14 at $\lambda = 1.25$); more rarely combinations of small defects of 8 to
+45 units. The pre-registered verdict, a two-state change, holds at $N = 64$, 96 and 192; at $N = 144$ one
+decay changed state inside its final measuring window and the size was set aside by the energy gate as
+written, with all three predictions holding there too.
+
+For contrast: at the same $\lambda = 1.25$ the change out of the random phase shows one hump in the
+energy distribution at every coupling, size and replica we ran, with any latent heat below 1.28 per vertex
+at $N = 100$ and falling with $N$ \cite{repo}. In this model the sharp change is between orders.
+
+\section{Sealed system}
+
+To follow the released energy we replace the heat bath by Creutz demons \cite{Creutz83}: $C$ stores, each
+never negative; each attempted move picks one store to pay for it or be paid, and is refused if that store
+cannot pay. $H$ plus the stores' contents is conserved exactly, checked to the last unit in every run, and
+the stores' mean reads the temperature.
+
+\emph{A local, size-independent threshold.} With one store holding a seed $s$ and nothing else, the torus
+converted in 8 of 8 runs for $s \ge 12$ and in 0 of 8 for $s \le 11.5$ (seeds 4 to 16), at each of
+$N = 48, 64, 96, 144, 192$ (320 runs). Twelve is the cost of move A. With nothing to spare the torus never
+converts, although the flat torus is lower. The cost of starting is fixed while the release, $4(\lambda-1)N$,
+grows with the system.
+
+\emph{The surroundings must absorb the release.} With the seed in one of $C$ stores
+($N = 64, 96, 192$; twenty runs each; 420 runs): the converted region melts into the random
+phase in 17 to 20 of 20 runs for $C \le N/16$ and in 9 to 16 of 20 at $C = N/8$; at $C = N/4$ most runs
+end partly converted or partly melted; for $C \ge N/2$ the flat torus results in 18 to 20 of 20. The crossover scales with $N$, as a release of $4(\lambda-1)N$ into $C$
+stores against a melting coupling near 3.5 predicts ($C^* \approx N/3.5$). No run stalled with both orders
+present and the bath below the melting coupling: the curled torus has no coexistence temperature with the
+flat one.
+
+\emph{One leftover, however large.} In the coldest box ($C = 2N$), the number of leftover defects per
+converted torus is $0.90 \pm 0.31$, $0.85 \pm 0.37$, $1.05 \pm 0.22$ and $0.95 \pm 0.22$ at
+$N = 64, 96, 192, 288$ (twenty runs each; slope $0.0003 \pm 0.0003$ per vertex); the defect is the curled
+column above (14 units), occasionally a two-vertex twist (20 units). Its position relative to where the
+change started is indistinguishable from uniform.
+
+\section{Dependence on \texorpdfstring{$\lambda$}{lambda}}
+\label{sec:lambda}
+
+[PENDING: the pre-registered map at $\lambda = 1.05$ to 1.45, all four sizes, thirty decays each.
+Exact inputs already fixed: the barrier $\min(32-16\lambda,\,64-40\lambda)$, the waiting time of
+Eq.~(\ref{eq:tau}) (8330 sweeps at $\lambda = 1.05$ down to 22 at 1.45 for $g = 1.5$), the release
+$4(\lambda-1)$ per vertex, and the curled column's share of the release, $(24\lambda-16)/[4(\lambda-1)N]$,
+which is 22\% at $\lambda = 1.25$ and 72\% at 1.05 for $N = 64$. Table and one figure.]
+
+\section{Discussion}
+
+At $\lambda = 1$, the published model, the flat, curled and 4-cube tori are degenerate and the change
+releases nothing; the $N = 4p^2$ sizes recommended for the random-to-lattice problem admit neither of the
+latter two. The sharp change between two orders described here therefore belongs to the family on the
+$\lambda > 1$ side, [and the map of Sec.~\ref{sec:lambda} shows how it approaches $\lambda = 1$]. The same
+questions can be asked at $\lambda = 1$ of regions stuck in a different discrete arrangement inside a
+curved background \cite{T24}: whether such a region is metastable, and whether it gives way by a front with a
+definite release. The tools used here (exact barrier counting, front tracking, sealed baths) apply
+unchanged.
+
+Not claimed: a first-order transition in the thermodynamic sense (this is the decay of a metastable state at
+fixed coupling, and ``sharp'' is used in the pre-registered sense above); anything at sizes beyond 288; why
+the cold box leaves exactly one defect. All runs label vertices; treating them as interchangeable
+\cite{DQM25} weights each state by its number of symmetries, which is $2N$ for the curled torus and 2 one
+move away, so the escape would be slower by a factor of about $N$, with the release unchanged.
+
+\section*{Methods and data}
+
+Simulations use single-edge switches that preserve the bipartition, with Metropolis acceptance; the chain
+reproduces exact averages computed by enumerating every valid graph at $N = 16$ and 18, and the published
+square density of Ref.~\cite{KTB19} (Fig.~8a) at $N = 160$ to rms 0.005. Seeds are fixed in configuration
+files; every result file carries its configuration and software versions. Predictions and analysis rules
+were committed before the runs they concern, with every amendment recorded. Code, data, configurations and
+pre-registrations: \cite{repo}.
+
+\begin{acknowledgments}
+Code, analysis and text were drafted with Claude (Anthropic), directed and checked by the author; every
+kernel is tested against an independent computation before use. We thank C.~A.~Trugenberger for
+correspondence.
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+\bibitem{T17} C.~A. Trugenberger, J. High Energy Phys. \textbf{09} (2017) 045, arXiv:1610.05934.
+\bibitem{KTB19} C.~Kelly, C.~A. Trugenberger, and F.~Biancalana, Class. Quantum Grav. \textbf{36}, 125012 (2019), arXiv:1901.09870.
+\bibitem{T25} C.~A. Trugenberger, \emph{Networks as the fundamental constituents of the universe}, arXiv:2512.17676.
+\bibitem{GV21} A.~Gorsky and O.~Valba, Phys. Rev. D \textbf{103}, 106013 (2021), arXiv:2101.04072.
+\bibitem{T24} C.~A. Trugenberger, \emph{Dark matter and dark energy in combinatorial quantum gravity}, arXiv:2409.09385.
+\bibitem{Creutz83} M.~Creutz, Phys. Rev. Lett. \textbf{50}, 1411 (1983).
+\bibitem{DQM25} K.~Betre and N.~Lewis, \emph{Dynamical quantum multigraphs}, arXiv:2509.08296 (2025).
+\bibitem{repo} E.~Smith, RecreationalPhysics, \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+\end{thebibliography}
+
+\end{document}
