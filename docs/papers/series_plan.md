@@ -69,8 +69,8 @@ if its surroundings can hold the lump; the needed room scales with N). At λ = 1
 
 **Running.** T8, the λ map of stuckness, sharpness, release and scrap.
 
-**Designed tonight.** T18: T9's room-needed measurement at λ = 1.10 and 1.40 beside the existing 1.25, so the
-room needed per point, C*/N, can be read against λ (draft below, pre-registered before its runs).
+**Measured the same night (T18, O34): PROPORTIONAL.** The room needed is 12, 36, 72 stores at λ = 1.10, 1.25,
+1.40 (N = 96): it grows faster than the lump. A bigger λ gives a bigger lump and a harder birth.
 
 **Honest limit.** The model has no black holes, so it cannot count offspring. It can map the ingredients
 (stuckness, push, lump, room, scrap); fertility itself is the owner's framework.
@@ -103,7 +103,9 @@ count at N = 160 with the present tool (Q15).
    and heals; a closed region folds): O20's sealed sheet at N = 36 and 64, λ = 1.25, the same budgets, run with
    named and with interchangeable points side by side; the reading is the folded share of the damage.
 
-**What would count against.** A sealed sheet that still melts under interchangeable weighting.
+**Measured the same night (T21, O36): MELTS EITHER WAY at N = 64**, the size where complete folds exist; a
+fragile lean towards folding at N = 36 under the bath. The owner's closed-region fold is not seen for energy
+spread through a box. The untested route is a local push with cold space around it.
 
 ---
 
@@ -184,7 +186,7 @@ T17 (leftover per seed) is committed and running. T18 (room needed against λ) i
 (see PREREGISTRATION.md). T19 (leftover mobility) and T20 (quantum rung 1) are drafted in this file only, for
 the owner's predictions in the morning; nothing is run under them.
 
-### T19 draft: does a leftover move?
+### T19 (pre-registered and run): ANNEALS at every coupling (O35)
 
 Take the final states of T10 or T17 that hold exactly one curled column in an otherwise flat torus. Continue
 each at λ = 1.25 and g = 1.5 (and a warmer g = 2.0) for 100,000 sweeps, recording every 500 sweeps the
@@ -193,7 +195,7 @@ and whether the leftover survives. Predictions for the owner: (a) it moves (diff
 moves only at the warmer coupling; (c) it does not move before it anneals away or at all. Ours: (c) at
 g = 1.5, since T10's leftovers stayed in place over 30,000 sweeps in a cold box; unknown at 2.0.
 
-### T20 draft: quantum rung 1
+### Quantum rung 1 (pre-registered as T15 rung 1): AGREES (O37)
 
 As `docs/design/quantum_loop_design.md` rung 1: at N = 16 and 18, the interchangeable-ensemble probability of
 each class (exact, from the counts) against the chain's long-run time-fraction with the renaming correction

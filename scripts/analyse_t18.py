@@ -42,7 +42,9 @@ def main():
     for f in sorted(glob.glob("results/t18_room_lam*.csv")):
         rows = list(csv.DictReader(open(f, newline="")))
         lam = float(rows[0]["lam"])
-        exact = exact and all(float(r["drift"]) == 0.0 for r in rows)
+        # "to the last unit": energy steps are multiples of 4 lambda (4.4, 5.6 are not exact in binary), so
+        # floating-point rounding of order 1e-13 is not a failure; 1e-6 is far below the smallest step
+        exact = exact and all(float(r["drift"]) < 1e-6 for r in rows)
         by_c = defaultdict(list)
         for r in rows:
             by_c[int(r["C"])].append(classify(r))      # T9's rules: N, d0..d6 and f_final

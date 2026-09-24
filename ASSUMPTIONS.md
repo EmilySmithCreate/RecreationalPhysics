@@ -1046,6 +1046,22 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   fronts from neighbouring seeds meet, their leftovers may merge or anneal; that was not measured and is the
   next question (the saved end states hold the positions).
 
+- **O34 T18: the room a new space needs grows faster than its lump (PROPORTIONAL, R = 6).** (2026-09-24.) One seed
+  in a sealed 24 x 4 tube, ten bath sizes, λ = 1.10, 1.25, 1.40: the smallest bath giving a majority of clean
+  sheets is 12, 36, 72 stores. The lump grows as 4(λ − 1), the room needed faster (C* / [4(λ − 1)N] = 0.31, 0.375,
+  0.47). For the owner's fertile window: a larger λ gives a larger lump and a harder birth.
+- **O35 T19: the leftover anneals away at fixed temperature.** (2026-09-24.) At g = 1.0, 1.25 and 1.5 every followed
+  leftover was gone within 500 to 80,500 sweeps; two moved first at g = 1.5. It lasts only in a cold box (T10). For
+  the owner's dark-matter picture: in this model the scrap is permanent only if its surroundings stay very cold.
+- **O36 T21: a sealed sheet given energy melts, not folds, even with interchangeable points (at N = 64).** (2026-09-24.)
+  The fair version of O20, run with the fast count (Q20): MELTS EITHER WAY at N = 64 under both protocols and at
+  N = 36 under the single demon; at N = 36 under the bath, a fragile lean towards folding with interchangeable
+  points (three damaged replicas at one budget, reversed at the next). The owner's closed-region fold is not seen
+  where complete folds exist. Not tested: a local push into cold surroundings.
+- **O37 T15 rung 1: the time spent in each arrangement equals its share of the count (AGREES).** (2026-09-24.)
+  Validation at N = 16 and 18, both routes, total-variation distance at most 0.0125. The counting half of the
+  owner's quantum picture now has a validated tool; it says nothing yet about quantum behaviour.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

@@ -1048,6 +1048,10 @@ Named. Interchangeable weighting would favour the flat sheet (4N symmetries agai
 
 The actual room a new universe has; anything at N other than 96; the melting coupling at λ = 1.10 and 1.40, which is assumed close to 1.25's, not measured.
 
+#### Reading, 24 September 2026: PROPORTIONAL (R = 6.0)
+
+`python scripts/analyse_t18.py` (tests `tests/test_t18.py`). **A correction to the script before the reading, stated plainly:** its energy gate first tested drift == 0 and reported a failure; the drifts are floating-point rounding (largest 1.7e-13 at λ = 1.40; exactly 0 at λ = 1.25, where 4λ is exact in binary) against energy steps of 4.4 and more, so energy is conserved to the last unit as the gate asks; the test now uses 1e-6. C\* = **12, 36, 72** at λ = 1.10, 1.25, 1.40 (C\*/N = 0.125, 0.375, 0.75). **R = 6.0: PROPORTIONAL.** Our prediction held on the rule and undershot the size: we expected R ≈ 4, and the room needed grows faster than the lump (C\* / [4(λ − 1)N] = 0.31, 0.375, 0.47), so the melting coupling of the new sheet probably falls as λ rises, which was assumed away and not measured. At λ = 1.40 even the largest bath (C = 2N) gave a clean sheet in only 16 of 20 runs.
+
 ## T21. Does a sealed sheet given energy fold rather than melt when the points are interchangeable? (series paper 4; written 2026-09-24, before the runs)
 
 ### Why
@@ -1089,6 +1093,10 @@ The owner's statement (a closed region folds) corresponds to FOLDS WITH INTERCHA
 
 Anything about real black holes; anything above N = 64; a local, concentrated spark (the budget is spread through the whole box, as in O20); anything at other λ.
 
+#### Reading, 24 September 2026: MELTS EITHER WAY (the overall reading, N = 64, bath)
+
+`python scripts/analyse_t21.py` (tests `tests/test_t21.py`). Energy exact in every run. **N = 64, bath: MELTS EITHER WAY**; folded share at most 0.27 (interchangeable) against 0.18 (named) at budget 2, falling to 0.02 both ways at 16. N = 64, single: MELTS EITHER WAY. N = 36, single: MELTS EITHER WAY. **N = 36, bath: FOLDS WITH INTERCHANGEABLE POINTS by the letter, and fragile**: at budget 2 the interchangeable share is 0.61 from only three damaged replicas against a named 0.43, and at budget 4 the order reverses (0.25 against 0.40). The owner's prediction (a closed region folds) fails at the size where complete folds exist; ours (MELTS EITHER WAY) holds there and fails at N = 36 under the bath. What this does not test, recorded again: a local push with cold space around it; the budget is spread through the whole box, as in O20.
+
 ## T15 rung 1. Does the time spent in each arrangement equal the count's prediction? (written 2026-09-24, before the run)
 
 ### Why
@@ -1121,6 +1129,10 @@ Anything quantum. It checks that "probability = share of the versions" is what a
 
 `python scripts/analyse_t17.py` (tests in `tests/test_t17.py`). Gate 1: energy exact in all 80 runs. Gate 2: every run at every k converted. Leftovers per tube (pieces at d = 1), mean over twenty: **1.10, 2.15, 2.50, 3.40** at k = 1, 2, 4, 8 (pieces of exactly four: 1.05, 1.80, 2.25, 2.35). **Slope 0.288 ± 0.039 leftovers per extra seed: BETWEEN.** The owner's option (a), ONE PER SEED, holds at k = 2 and fails beyond it; ours, leaning ONE PER TUBE, also fails: the count grows with the number of seeds. Stated plainly: the slope is about one standard error above the 0.25 boundary with ONE PER TUBE, and a straight line is a poor description of means that rise by 1.05, then 0.35, then 0.90; the growth looks less than proportional, and whether extra leftovers anneal or merge when fronts meet was not measured. "Mean near 1" in ONE PER TUBE's definition had no number; the verdict is read on the slope, as the verdict table states, and the means are given so the other reading can be checked (they are not near 1 beyond k = 1, so it gives the same answer).
 
+#### Reading, 24 September 2026: AGREES
+
+`python scripts/analyse_t15_rung1.py` (tests `tests/test_t19_rung1.py`). At N = 16 and 18, λ = 0 and 1, g = 10, both routes agree with the exact interchangeable probabilities: total-variation distances 0.0040, 0.0052, 0.0067, 0.0097 (route A) and 0.0007, 0.0062, 0.0046, 0.0125 (route B), every class within its bound; the controls agree too (0.0013 to 0.0075). **AGREES.** Validation only: with interchangeable points, the time the chain spends in each arrangement is that arrangement's share of the count. Every later rung can now rely on it.
+
 ## T19. Does a leftover move, stay, or anneal away? (series papers 2 and 5; written 2026-09-24, before the runs)
 
 ### Why
@@ -1148,3 +1160,7 @@ Named. Interchangeable weighting favours the flat sheet (4N symmetries) over a s
 ### What this cannot show
 
 How long a leftover would last at a universe's temperatures; anything about two leftovers.
+
+#### Reading, 24 September 2026: ANNEALS at every coupling
+
+`python scripts/analyse_t19.py` (tests `tests/test_t19_rung1.py`). Followed replicas 9, 10, 10 (one at g = 1.0 did not end with exactly one leftover). **g = 1.0: 9 of 9 annealed**, first sweep without a leftover between 4,000 and 80,500; **g = 1.25: 10 of 10 annealed** within 500 to 13,000; **g = 1.5: 8 annealed, 2 moved** first, all gone within 11,000. Verdict ANNEALS at every g. Our prediction (b) held at the warmer couplings and failed at g = 1.0, where we expected STAYS. **Inconvenient for the owner's picture, and said as plainly:** the leftover is not permanent at fixed temperature in this model; it lasted the full 30,000 sweeps only in T10's cold boxes, whose bath ends near 0.5. Whether it moves before it goes is answered only at g = 1.5, twice.
