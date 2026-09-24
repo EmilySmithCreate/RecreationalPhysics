@@ -4,7 +4,8 @@
 
 Reads results/t8_lam*.csv (and T7's t7b_lam125_n*.csv for lambda = 1.25, which T8 does not rerun).
 (a) mean waiting time against lambda for each size where the tube is stuck (T8's definition), with Eq. (2)
-    (moves A and B, nothing fitted) and the 200-sweep resting stretch below which the waiting time cannot fall;
+    (moves A and B, nothing fitted), the same prediction as it would be recorded given the 200-sweep watch
+    (205 + tau exp(-205/tau), also nothing fitted), and the 200-sweep line;
 (b) how each decay ended: the share of decays at the flat torus, and the share of vertices at d in {1, 2}
     at half conversion (the two orders side by side), per lambda, pooled over sizes.
 """
@@ -55,13 +56,18 @@ for n in (64, 96, 144, 192):
     ax.plot(xs, ys, lw=0, marker=MARKERS[n], ms=4.5, color=COLORS[n], label="N = %d" % n)
 lx = np.linspace(1.03, 1.47, 200)
 ax.plot(lx, [tau(l) for l in lx], color=INK, lw=1.2, label="Eq. (2), nothing fitted")
-ax.axhline(200, color=INK2, lw=0.8, ls=":")
-ax.text(1.03, 170, "200-sweep rest", ha="left", va="top", fontsize=7, color=INK2)
+# The waiting time cannot be recorded before the 200-sweep watch ends (first check at 205): for exponential
+# waits of mean tau the expected recorded mean is about E[max(T, 205)] = 205 + tau exp(-205/tau). Also fitted to
+# nothing; approximate, because a tube that breaks during the watch also disturbs the watch itself.
+ax.plot(lx, [205 + tau(l) * math.exp(-205 / tau(l)) for l in lx], color=INK2, lw=1.1, ls="--",
+        label="as measured (200-sweep watch)")
+ax.axhline(200, color=INK2, lw=0.8, ls=":", label="200 sweeps (the watch)")
+
 ax.set_yscale("log")
 ax.set_xlabel("λ")
 ax.set_ylabel("mean waiting time (sweeps)")
 ax.set_title("(a) how long the curled torus lasts", fontsize=9, loc="left")
-ax.legend(frameon=False, fontsize=7, loc="lower left", bbox_to_anchor=(0.28, 0.0))
+ax.legend(frameon=False, fontsize=6.5, loc="lower left")
 
 share_sheet, share_two, xl = [], [], []
 for l in lams:

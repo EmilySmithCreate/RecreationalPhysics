@@ -1175,3 +1175,37 @@ How long a leftover would last at a universe's temperatures; anything about two 
 #### Reading, 24 September 2026: ANNEALS at every coupling
 
 `python scripts/analyse_t19.py` (tests `tests/test_t19_rung1.py`). Followed replicas 9, 10, 10 (one at g = 1.0 did not end with exactly one leftover). **g = 1.0: 9 of 9 annealed**, first sweep without a leftover between 4,000 and 80,500; **g = 1.25: 10 of 10 annealed** within 500 to 13,000; **g = 1.5: 8 annealed, 2 moved** first, all gone within 11,000. Verdict ANNEALS at every g. Our prediction (b) held at the warmer couplings and failed at g = 1.0, where we expected STAYS. **Inconvenient for the owner's picture, and said as plainly:** the leftover is not permanent at fixed temperature in this model; it lasted the full 30,000 sweeps only in T10's cold boxes, whose bath ends near 0.5. Whether it moves before it goes is answered only at g = 1.5, twice.
+
+## T22. Near λ = 1, do exits from the curled torus fall back? (written 2026-09-24, before the runs)
+
+### Why
+
+In T8 the measured waits near λ = 1 run 15 to 43 % longer than Eq. (2) of the curled-torus paper (the owner noticed the pattern in Fig. 3(a) and asked whether the curve should change; it should not, being fitted to nothing). Eq. (2) predicts the time to the **first exit** from the perfect torus. Two readings of the gap, and this test separates them: **(i) fall-backs**: exits happen at Eq. (2)'s rate, but when the release is small some fall back into the torus instead of growing into a front, so the wait counts several exits; **(ii) a late first exit**: the exit rate itself is below Eq. (2) (a move counted as available is refused more often than assumed). At the other end of Fig. 3(a) the gap is the 200-sweep watch (paper, Sec. V); this test has no watch.
+
+### What will be run
+
+`graphity.exits.run_until_through` (tested in `tests/test_exits.py`: one more exit than fall-backs in every decay that goes through; reproducible from its seed; samples the kernel's ensemble at N = 18 against the exact average). It uses the kernel's move and counts **every** accepted move, so an exit that heals within a sweep is seen. The perfect 4 × L torus at g = 1.5; λ = 1.05, 1.10, 1.25; N = 64, 96; **forty decays** per (λ, N); a decay ends when a quarter of the torus has converted (it has gone through), or at 100,000 sweeps. `scripts/run_exits.py`, configs `configs/t22_exits_n{64,96}_lam{105,110,125}.json`. Recorded per decay: exits, fall-backs, sweeps to the first exit, sweeps to going through.
+
+### Definitions, fixed now
+
+At each (λ, N): the mean number of exits per decay, E, with its standard error over decays; the mean time to the first exit, T1, in sweeps (attempts / 2N), with its standard error; τ from Eq. (2). **F** (fall-backs present): E − 1 > 2 standard errors. **L** (first exit late): T1 − τ > 2 standard errors. The share of exits that go through is reported as 1/E.
+
+### Verdicts, read at λ = 1.05 (λ = 1.10 and 1.25 reported beside, 1.25 as the control where T8 found no gap)
+
+- **FALL-BACKS**: F and not L at both sizes.
+- **LATE FIRST EXIT**: L and not F at both sizes.
+- **BOTH**: F and L at both sizes.
+- **NEITHER**: neither at both sizes (the gap is not reproduced by this measurement).
+- **MIXED**: the sizes disagree.
+
+### Predictions
+
+The owner's pick has not been given (she asked for the test after seeing the figure). **Ours, unverified: FALL-BACKS**, with about 70 to 87 % of exits going through at λ = 1.05 (E ≈ 1.15 to 1.43), inferred from the size of T8's gap; at λ = 1.25, E close to 1.
+
+### Named or interchangeable points
+
+Named. With interchangeable points the torus carries 2N symmetries and a state one move away about 2, so exits would be about N times rarer and **returns to the torus about N times more favoured**: fall-backs would become more common, not less. Recorded as expected, not checked.
+
+### What this cannot show
+
+Why a fall-back happens (the arrangement at the moment of return is not recorded); anything at other couplings or sizes.

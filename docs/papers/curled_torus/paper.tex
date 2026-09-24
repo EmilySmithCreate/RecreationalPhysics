@@ -186,8 +186,16 @@ The torus is stuck from $\lambda = 1.05$ to 1.35 at every size and not at 1.40 o
 the mean wait at 200 sweeps near $\lambda = 1.33$. Wherever it is stuck, the change keeps the character of
 Sec.~III: at half conversion 95 to 100\% of vertices belong to one order or the other, the converted region is
 one piece holding 76 to 100\% of it, and the release is exactly $4(\lambda - 1)$ per vertex wherever the flat
-torus is reached. The mean waiting time follows Eq.~(\ref{eq:tau}) with nothing fitted over two decades, running
-15 to 43\% longer than predicted near $\lambda = 1$ [Fig.~\ref{fig:lambda}(a)]. How completely the change finishes
+torus is reached. The mean waiting time follows Eq.~(\ref{eq:tau}) with nothing fitted over two decades
+[Fig.~\ref{fig:lambda}(a)], and departs from it at both ends for different reasons. Near the edge the departure
+is in the measurement: a wait cannot be recorded before the 200-sweep watch ends (first check at 205), and for
+waits spread exponentially with mean $\tau$ the expected recorded mean is about $205 + \tau e^{-205/\tau}$
+(dashed; also fitted to nothing): 462 at $\lambda = 1.30$ and 265 at 1.35, against 403--505 and 280--350
+measured. Near $\lambda = 1$ the measured waits run 15 to 43\% longer than Eq.~(\ref{eq:tau}), which the
+formula does not contain. Eq.~(\ref{eq:tau}) gives the time to the \emph{first} exit; when the release is small,
+some first exits may fall back into the torus instead of growing into a front, and if so about 70 to 87\% of
+first exits go through at $\lambda = 1.05$. That reading is tested directly by counting exits and fall-backs
+(PREREGISTRATION T22 in Ref.~\cite{repo}). How completely the change finishes
 depends on $\lambda$ [Fig.~\ref{fig:lambda}(b)]: at $\lambda = 1.05$ every decay ends at the flat torus, while the
 share ending on a defected sheet rises to 21\% at 1.30 and 54\% at 1.35. At fixed coupling, then, the leftover is
 a feature of the larger coefficients, and near $\lambda = 1$ the change is clean. Beyond the edge
@@ -225,7 +233,8 @@ $\lambda$ & $\tau$, Eq.~(\ref{eq:tau}) & mean wait & two orders & flat \\
 \begin{figure*}
 \includegraphics[width=\textwidth]{fig_lambda.pdf}
 \caption{The map along $\lambda$ at $g = 1.5$. (a) Mean waiting time where the torus is stuck, four sizes, with
-Eq.~(\ref{eq:tau}) (nothing fitted) and the 200-sweep rest; shaded, the $\lambda$ at which it is not stuck.
+Eq.~(\ref{eq:tau}) (solid) and the same prediction as it would be recorded given the 200-sweep watch,
+$205 + \tau e^{-205/\tau}$ (dashed); both fitted to nothing. Shaded, the $\lambda$ at which it is not stuck.
 (b) Share of vertices in one order or the other at half conversion, and share of decays ending at the flat
 torus, pooled over sizes.}
 \label{fig:lambda}
