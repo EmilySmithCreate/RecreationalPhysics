@@ -14,7 +14,7 @@ knowledge unless a source is named, and a source not yet read is marked so.
 | the push of 12 | activation energy; nucleation barrier | ΔE‡ = 32 − 16λ (12 at λ = 1.25) | The cost of move A. It does not grow with N. |
 | the waiting-time formula | an Arrhenius law with counted attempt frequencies | τ, Eq. (2) | The 3 and the 2 per sweep are counted, not fitted. |
 | starts at one place, runs as a front | nucleation and growth; front (interface, domain wall) | | The alternative, conversion everywhere at once, is spinodal decomposition. |
-| fall-backs | recrossings | κ, the transmission coefficient | Transition-state theory: τ_measured ≈ τ/κ. T22 measures κ. |
+| fall-backs | recrossings | κ, the transmission coefficient | Transition-state theory. Measured by T22: κ = 0.56 to 0.68 from λ = 1.05 to 1.25, with no trend; the first exit itself arrives on time. |
 | the scrap; the leftover | relic defect; relic | | The curled column, costing 24λ − 16 (14 at λ = 1.25). Not an allotrope (below), and not called "topological" (not shown). |
 | room the new space needs | the reservoir's heat capacity | C (number of stores) | The burp completes only if C exceeds about N/3.5 at λ = 1.25. |
 | sealed box / open to a bath | microcanonical / canonical | | Creutz demons [Creutz83] make it microcanonical. |

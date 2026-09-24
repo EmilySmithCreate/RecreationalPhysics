@@ -1071,6 +1071,14 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   that does rises with λ. The verdict is INCONCLUSIVE because the memoryless-wait criterion was too tight at
   thirty decays per cell (about ±2 standard errors, 28 cells) and the energy gate fails at 1.35; a computed
   repair changes no verdict and is not proposed.
+- **O39 T22: the first exit is on time; about a third of exits fall back, at every λ (FALL-BACKS by the letter).**
+  (2026-09-24; PREREGISTRATION T22.) Counting every accepted move in forty decays per cell (λ = 1.05, 1.10, 1.25;
+  N = 64, 96; g = 1.5): the time to the first exit from the perfect curled torus agrees with Eq. (2) in all six
+  cells, each within one standard error. Exits per decay are 1.48 to 1.80, so a share of 0.56 to 0.68 go through
+  (the transmission coefficient κ), with no trend in λ. Recrossings therefore do not explain T8's excess near
+  λ = 1 (O38), and the direct measurement does not reproduce that excess at N = 64 and 96. Our reading is that the
+  excess was statistical, 1 to 1.4 standard errors per cell. Our quantitative prediction failed (a share of 0.70
+  to 0.87 at 1.05, and E ≈ 1 at 1.25).
 
 ## Provenance
 

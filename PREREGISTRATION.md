@@ -1209,3 +1209,39 @@ Named. With interchangeable points the torus carries 2N symmetries and a state o
 ### What this cannot show
 
 Why a fall-back happens (the arrangement at the moment of return is not recorded); anything at other couplings or sizes.
+
+#### Reading, 24 September 2026: FALL-BACKS by the letter, and the explanation it was written to test does not hold
+
+`python3 scripts/analyse_t22.py` (tests `tests/test_exits.py`). Forty decays per cell; all went through except one at
+λ = 1.05, N = 96, which was still a torus at 100,000 sweeps.
+
+| λ | N | exits per decay E | share going through 1/E | F | first exit T1 (sweeps) | τ, Eq. (2) | L |
+|---|---|---|---|---|---|---|---|
+| 1.05 | 64 | 1.50 ± 0.12 | 0.67 | yes | 10174 ± 2466 | 8330 | no |
+| 1.05 | 96 | 1.79 ± 0.21 | 0.56 | yes | 7485 ± 1506 | 8330 | no |
+| 1.10 | 64 | 1.80 ± 0.15 | 0.56 | yes | 5134 ± 791 | 4844 | no |
+| 1.10 | 96 | 1.65 ± 0.14 | 0.61 | yes | 4326 ± 560 | 4844 | no |
+| 1.25 | 64 | 1.48 ± 0.11 | 0.68 | yes | 824 ± 110 | 845 | no |
+| 1.25 | 96 | 1.52 ± 0.11 | 0.66 | yes | 905 ± 111 | 845 | no |
+
+**Verdict at λ = 1.05: FALL-BACKS** (F and not L at both sizes). Our predicted verdict held; **our numbers did not**.
+We predicted that 70 to 87 % of exits would go through at λ = 1.05; the measured share is 56 to 67 %. We also predicted
+E close to 1 at the control, λ = 1.25; it is about 1.5 there too.
+
+**What this means, said plainly.**
+- **The first exit is on time.** Measured move by move, with no watch, T1 agrees with Eq. (2) in all six cells, each
+  within one standard error. This is the most direct check of Eq. (2)'s counted attempt frequencies so far.
+- **Recrossings are a general feature, not a near-λ = 1 effect.** About one exit in three returns to the torus at
+  every λ tested. So they cannot explain an excess that appears only near λ = 1, which was the point of the test.
+- **T8's excess is not reproduced.** T8's waits at the same cells: 9941 ± 1685 and 11915 ± 2767 at λ = 1.05, and
+  5767 ± 674 and 6847 ± 1397 at 1.10 (N = 64, 96). These agree with T1 here within 1 standard error at N = 64, and
+  are 1.4 and 1.7 standard errors above it at N = 96. The premise of reading (i) was partly mistaken: T8's wait is
+  in effect the first exit visible at a check, because at λ ≤ 1.10 the resting fluctuation that sets its threshold
+  is almost always zero. It counts several exits only when an exit heals between two checks. **Ours:** the simplest
+  reading of T8's excess near λ = 1 is statistical, 1 to 1.4 standard errors per cell. T8's larger sizes, 144 and
+  192, were not re-tested here.
+- **The time to go through**, to a quarter converted, is 1.5 to 1.7 times the first exit at every λ. It includes
+  the recrossings and the early growth. T8's times to the same quarter agree with it within 1.2 standard errors,
+  except at λ = 1.10, N = 96 (2.2).
+
+In the paper's terms (glossary), the transmission coefficient is κ = 1/E = 0.56 to 0.68, the same at λ = 1.25 as near 1.
