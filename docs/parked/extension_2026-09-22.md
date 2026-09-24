@@ -221,3 +221,30 @@ cannot test it, because it may bear on something else that matters.
   the window where X is stuck for now, how the lump, the push threshold, how long X stays stuck, the
   capacity the surroundings need to take the lump without boiling off (T9), and the size of the leftover
   depend on λ. In a selection picture those are the ingredients of fertility.
+
+---
+
+## The author's decisions, 23 September 2026, late night
+
+**Recorded as her decisions, in her words put in order.**
+
+1. **The rules do not change between parent and child.** There are two phases, and their rules are their
+   constants. If the constants changed with each new spacetime, we would not be in the optimal, largest-
+   scale strange loop, which is a problem. There may be other loops; ours is the one to establish first.
+   *Consequence (ours):* this is not Smolin's mechanism, which needs heredity with small variation. What is
+   left of his logic is counting: if there are many loops, a universe drawn at random most likely belongs
+   to the most prolific one, so our rules should be close to those that make the most offspring. That keeps
+   his master prediction's shape without his mutation step.
+2. **The anthropic piece is the strange loop itself**, and it is a multiplier: every black hole that gets the
+   activation energy makes a very large number of new spacetimes ("a trillion").
+3. **A black hole is a space-creation machine.** It gets the activation energy by growing, eating stars;
+   collisions of black holes are not needed (this replaces item 5 of the extension above). When it gets
+   the activation energy it "burps" a new universe. It can keep doing so.
+4. **Every burp is the same**: exactly the same released energy, and the same dark-matter scrap goes with
+   it into the new space. The loop is maximized.
+
+**What the model already says about item 4 (*ours, from the records*).** In the tube runs the release is
+exactly 4(λ − 1) per point, every time (T7 gate 3, O13). The scrap is almost always one curled column, but
+it comes in a few discrete sizes, 4, 9 or 14 units at λ = 1.25 (O28 addendum), with rarer states of 8 to
+45 units (O13). So "the same lump every time" holds exactly; "the same scrap every time" holds up to a
+small menu of scraps.

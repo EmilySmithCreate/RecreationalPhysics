@@ -71,6 +71,7 @@ def main(path, out_dir="results"):
                 h0 = (ENERGY_PER_SQUARE * (n - total_squares(adj))
                       + ENERGY_PER_SURPLUS * lam * surplus(adj)) / n
                 phis, sweeps_done, first = [], 0, True
+                f_200 = ""
                 hit = {}
                 waited = None
                 thresh = None
@@ -81,6 +82,10 @@ def main(path, out_dir="results"):
                     sweeps_done += block
                     phi = float(s[-1]) / n
                     phis.append(phi)
+                    if sweeps_done == 200:
+                        # T8 (2026-09-23): how far the tube had converted when its resting stretch
+                        # ended, so that "still a tube at sweep 200" can be read. Reading only.
+                        f_200 = (PHI_TUBE - phi) / (PHI_TUBE - PHI_SHEET)
                     if sweeps_done <= 200:
                         continue
                     if thresh is None:
@@ -130,6 +135,8 @@ def main(path, out_dir="results"):
                            phi_final=phis[-1], released=(h0 - h1), expected=4.0 * (lam - 1.0),
                            released_first_window=first_window, ledge_sweeps=ledge, settle_sweeps=spent,
                            reached=max([0.0] + [m for m in hit]))
+                if cfg.get("record_f_200"):
+                    row["f_200"] = f_200                   # T8; absent from T7's files, which predate it
                 for m in MARKS:
                     tag = "%d" % int(100 * m)
                     if m in hit:

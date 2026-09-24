@@ -270,6 +270,78 @@ The twelve replays (`configs/t7d_lam125_n*.json`) reproduced their originals exa
 
 To be written before it runs. It may reuse the criteria above, and if it does it will say so explicitly rather than restating them.
 
+### Written 23 September 2026, late night, before any run
+
+**The λ map along the tube: does the order → order change stay sharp as the coefficient comes down towards 1?**
+
+#### Why
+
+Every result on the order → order route (T7, T9, T10, T11) is at λ = 1.25, and the only other setting run on the tube, λ = 1.5, has no metastable tube to study. The model's author has said the coefficient must be exactly 1 (third note, 23 September), and at exactly 1 the tube and the sheet have the same energy, so nothing is released. **This map asks what happens between: is 1.25 a lucky point, or the middle of a family in which the change is sharp all the way down, with the release shrinking to zero as λ → 1?** Under S1 the whole map is published, whichever way it comes out. **The owner's framing, the same night:** in her theory λ is above 1, probably about 1.25, because only λ > 1 releases a lump; if there are many loops, a universe drawn at random belongs to the most prolific one, so the scan maps the ingredients of fertility (how long X stays stuck, the push that starts it, the lump, what the new space must absorb, the scrap left behind). She also asked for it because the model's author will need it before he engages with anything above 1 (docs/parked/extension_2026-09-22.md, decisions of 23 September).
+
+#### Exact facts, computed before any run (to be committed as `scripts/tube_exit_moves.py` with its output)
+
+Every switch the chain can propose out of the 16 × 4 and 24 × 4 tubes was listed (corrected the same evening: a first listing also counted switches between opposite sides, which the chain never makes; ASSUMPTIONS O20, correction) and sorted by its change in squares (ΔS) and surplus squares (ΔX); the cost of a move is −16ΔS + 4λΔX. Two families are cheapest:
+
+| Move | (ΔS, ΔX) | Count | Cost | λ where it is the cheapest way out |
+|---|---|---|---|---|
+| A (the one of Update 9) | (−2, −4) | 3N | 32 − 16λ | below 4/3 |
+| B | (−4, −10) | 2N | 64 − 40λ | above 4/3 |
+
+A sweep is 2N attempts out of 4N² equally likely proposals, so 3N moves are offered 3 times a sweep at every size, which is Update 9's count, and 2N moves twice. Hence, at g = 1.5, **the mean waiting time before the first exit** is predicted with nothing fitted as
+  τ(λ) = 1 / [ 3 exp(−(32 − 16λ)/g) + 2 exp(−(64 − 40λ)/g) ]:
+
+| λ | 1.05 | 1.10 | 1.15 | 1.20 | 1.25 | 1.30 | 1.35 | 1.40 | 1.45 | 1.50 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| τ, sweeps | 8,330 | 4,844 | 2,788 | 1,570 | 845 | 419 | 183 | 68 | 22 | 7 |
+| release per point, 4(λ − 1) | 0.2 | 0.4 | 0.6 | 0.8 | 1.0 | 1.2 | 1.4 | 1.6 | 1.8 | 2.0 |
+
+**The scrap near λ = 1, exact.** T7's analysis prices the common resting state, one curled column (the four-point remnant), at 24λ − 16 above the sheet (14 at λ = 1.25). It does not vanish as λ → 1, while the lump 4(λ − 1)N does. As a share of the lump: at N = 64, 22 % at λ = 1.25, 41 % at 1.10, 72 % at 1.05; at N = 192, 7 %, 14 % and 24 %. Below λ = 1 + 8/(4N − 24) (1.035 at N = 64, 1.011 at N = 192) a column left behind would cost more than the whole lump, so the tube could not end on it downhill. **So near λ = 1 the scrap keeps a large share of the lump, and the share falls with N.**
+
+*Caveat, ours:* Update 9's check (mean observed over predicted 0.997) used move A alone; at g = 1.5 and λ = 1.25 move B adds about 18 % to the rate, so either B-moves mostly fall back into the tube or the earlier check was at couplings where B was negligible. That is checked first, from the existing T7 waiting times, before any new run is interpreted.
+
+#### Named or interchangeable points: which, why, and the expected effect
+
+**In the owner's theory the points are interchangeable** (VISION Update 12). The runs below use named points, as every run on the tube has, for one reason: the interchangeable version needs a count of each proposed arrangement's symmetries at every move, which is unaffordable at these sizes (ASSUMPTIONS Q15). **What the switch would change is computable exactly, and it is stated here so that the named-points result is not read as the theory's.** Counted before any run: the perfect tube has **2N** symmetries (128 at N = 64, 192 at N = 96), and one move out of it leaves **2** by either of the two cheapest ways out (1 to 4 by the other kinds of move; one arrangement checked per kind); the perfect square sheet has 4N, and one move out of it leaves 1 to 4. With interchangeable points each arrangement is weighted by its symmetry count relative to named points, so:
+
+- **The first step out of the tube is N times rarer.** The effective wall rises by g ln N (6.8 at N = 96, g = 1.5), and **the waiting time is multiplied by N**: 81,000 sweeps instead of 845 at λ = 1.25, N = 96. With named points the wait does not depend on N (Update 9); with interchangeable points it grows in proportion to it. A larger X is more stable for longer.
+- **The lump is unchanged**: the tube and the sheet differ in symmetry by a factor of about 2, a free-energy difference of g ln 2 ≈ 1 against a release of 4(λ − 1)N.
+- **The front is expected to be unchanged**: while the change runs, the arrangement has 1 to 4 symmetries, so the two weightings differ by at most a factor of 4 on any step. *To verify* on the saved T7 snapshots before this is relied on.
+- *Ours, unverified:* this is transition-state reasoning. The equilibrium weights are fixed by the choice of points; the kinetics are not uniquely fixed by them, so "N times rarer" is the change in the effective barrier, not a derived clock.
+
+**Reported with every waiting time:** the named-points value measured, and the interchangeable-points value it implies (× N).
+
+#### What will be run
+
+T7's protocol and its enacted amendments exactly (`scripts/run_tube_decay.py`, observables (a) to (c), gates 2 and 3 as amended, and the resting-state reading of amendment 4 (a)), at λ = 1.05, 1.10, 1.15, 1.20, 1.30, 1.35, 1.40, 1.45; **all four T7 sizes**, N = 64, 96, 144, 192 (tubes 16, 24, 36, 48 × 4); g = 1.5; 30 decays per (size, λ); block 5; stop at 98 % conversion; `n_sweeps` 100,000 (up from T7's 30,000, because the predicted mean wait at λ = 1.05 is 8,330 sweeps); settle windows of 600 sweeps with `settle_max` 100,000 (T7 amendment 3); the final graph saved (`save_adjacency`, as T7 amendment 4 (a)); and one new column, `f_200`, the conversion fraction at sweep 200, recorded by reading the graph only (checked the same night: two committed T7b decays replayed with it are identical in every column). Configs `configs/t8_lam{105,110,115,120,130,135,140,145}.json`, one per λ with the four sizes, seeds inside. λ = 1.25 and 1.5 are already on the record and are not rerun.
+
+#### Definitions, fixed now
+
+- **Metastable at (λ, N)**: in more than half the decays, `f_200` < 0.25: the tube is still a tube when its 200-sweep resting stretch ends. (T7's waiting time needs that stretch to define the tube's own fluctuation; a tube that has already gone has no resting state to leave, and its waiting time is not read.) *Corrected before any run: the draft said "median waiting time at least 200 sweeps", which is undefined for a tube that breaks up inside its resting stretch.*
+- **Sharp at (λ, N)**: T7's TWO-STATE CHANGE criteria (a), (b), (c) all hold.
+- **Reaches the sheet**: the decay ends at the sheet or at one of the resting states read from the wiring (T7 amendment 4 (a)), with its released energy matching that state exactly.
+- **Waiting-time law holds**: the mean waiting time is within 25 % of τ(λ) above.
+- **Gates**, as T7: gate 2 (at least 30 decays reaching 75 % conversion) and gate 3 as amended (each decay's release matches the sheet, the four-point ledge at 24λ − 16, or a resting state read from its wiring). A (λ, N) that fails a gate is reported and not read; a (λ, N) that is not metastable has no decay to gate and is reported as such.
+- **Scrap**, reported at every (λ, N) and not part of any verdict: the share of decays ending at the sheet, on the four-point ledge, and elsewhere; and the mean release as a share of 4(λ − 1).
+
+#### Predictions
+
+1. **As λ comes down towards 1:** (a) sharp at every metastable λ, the release shrinking as 4(λ − 1); (b) sharp down to some λ, then the change stalls or slides because the release is too small to drive a front; (c) near 1 the opened patch re-curls, and the tube never converts within the cap.
+2. **Where metastability ends at g = 1.5:** (a) below 1.3; (b) between 1.3 and 1.4; (c) between 1.4 and 1.5.
+3. **The waiting-time law** is the assistant's arithmetic, not the owner's theory, so it is recorded as ours only and is a check, not a prediction: it holds within 25 % at every metastable λ.
+
+**The owner did not choose among these.** Her position, recorded the same night: λ is above 1 in her theory, probably about 1.25, and only λ > 1 gives a lump. That is recorded as her expectation that a window above λ = 1 exists in which X is stuck for now and releases a lump; it is not a pick among 1 (a) to (c) or 2 (a) to (c).
+
+**Ours, unverified:** 1 (a), because the front at 1.25 ran freely with release 1 per point and nothing in the move costs changes character below 4/3; 2 (b), at about 1.33, where move B takes over and the predicted wait falls through 200 sweeps. And on the scrap, not scored: the share of decays resting on the column rises as λ → 1 and falls with N, following the exact shares above.
+
+#### Verdicts
+
+- **SHARP DOWN TO 1** — metastable and sharp at every λ from 1.05 to the metastable edge, at every size that passes its gates, releasing 4(λ − 1). Consequence: the author's model at exactly 1 is the limit of a family in which the order → order change is sharp, with a release that vanishes there.
+- **A FLOOR** — sharp from the metastable edge down to some λ*, and not sharp (stalls, slides or re-curls) below it at every size that passes its gates. λ* is reported; 1.25 was not a lucky point, but the mechanism needs the coefficient at least λ* above 1.
+- **INCONCLUSIVE** — anything else.
+
+#### What this cannot show
+
+Anything at exactly λ = 1, where there is no release. Anything at other couplings: g is fixed at 1.5 as in T7, and near λ = 1 a colder g would lengthen the waits beyond the cap. That X is a tube.
 
 ---
 
