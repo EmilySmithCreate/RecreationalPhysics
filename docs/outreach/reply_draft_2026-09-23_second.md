@@ -6,8 +6,9 @@
 (`for_carlo_2026-09-22/picture6_correlation_length_and_susceptibility.png`). **The results paragraph is now
 filled in (T16, PREREGISTRATION reading of 23 September, night), and it is not the result he wanted for
 his talk**: no divergent tendency, correlations one or two steps long at every coupling, a susceptibility
-peak that does not grow with N. Four things are your call: the collaboration paragraph (its condition is
-yours, and the wording should be too), whether he may show the plots (he offered full credit; he may not
+peak that does not grow with N. Rewritten the same night at your direction: no offers of further work; point 5 is tit for tat (the
+plots were the favour; a joint paper must include point 4's question). Four things are your call: the
+collaboration paragraph (its condition is yours, and the wording should be too), whether he may show the plots (he offered full credit; he may not
 want to now), whether the correction in paragraph 2 stays as blunt as it is (I recommend it does), and
 the proposed T16 amendment (the swap-rate ceiling), which changes no verdict and is not mentioned in the
 letter beyond one clause.
@@ -16,8 +17,8 @@ letter beyond one clause.
 
 Dear Carlo,
 
-Thank you. Your reply was generous, and I agree that we complement each other: you know what the
-model means, and I can make the computer do what you want. One thing you should know: I write the code
+Thank you. Your reply was generous, and I agree that our skills are complementary: you know what the
+model means, and I build the tests. One thing you should know: I write the code
 and the analysis with Claude (Anthropic's AI), which I direct and check; every new piece of code is tested against an
 independent calculation before any result from it is trusted. You mentioned your newest code was
 written with Claude too.
@@ -49,8 +50,8 @@ So with the definition as I read it, and at these sizes, I cannot reproduce a di
 see looks like a smooth crossover in which nothing grows with N, which is neither the signature of a
 continuous transition nor that of a first-order one, and larger N could change that. If your code
 computed ξ differently (a fit of C(r) to exp(−r/ξ), only small distances, a different normalisation, or
-an average at fixed pairs of vertices over the run), tell me: every C(r) curve is stored, so it can be
-computed your way quickly. You are welcome to show any of these plots, with the sizes and
+an average at fixed pairs of vertices over the run), that difference may be the whole story, and I
+would like to know it. You are welcome to show any of these plots, with the sizes and
 protocols stated.
 
 **2. Can replica exchange prove there is no hysteresis?** Partly, and I have to correct something I told
@@ -92,10 +93,10 @@ in a 4-regular graph. If you can describe one — what the region looks like and
 find out whether it is stuck at all at coefficient 1, and, if it is, how it gives way.
 
 **5. A joint paper.** Yes, I would like that, and I should be plain about one thing now rather than later.
-The time I can give this comes from the question in point 4. A paper that studies the transition in
-detail and also asks how allotropes (or any stuck ordered region) give way in your model is one I would
-gladly work on. A paper on the random-to-lattice transition alone is further from what I can give time
-to, although I am happy to keep answering questions about it, as with the plots for your talk.
+My time for this is limited, and it goes to the question in point 4. I was glad to make the plots for
+your talk. From here, a paper that asks how allotropes (or any stuck ordered region) give way in your
+model, with the transition studied in detail alongside, is one I would gladly work on with you. A paper
+on the random-to-lattice transition alone is not something I can take on.
 
 With thanks,
 

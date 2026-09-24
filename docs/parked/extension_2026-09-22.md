@@ -176,3 +176,48 @@ on every kind of energy, and fall off with distance in the right way. Nothing he
 the model this project uses, gravity is meant to come *out* of the curvature term rather than be added
 beside it.
 
+
+---
+
+## Addition, 23 September 2026, night: the cycle, why λ > 1, and "every arrangement exists forever"
+
+**The author's words, put in order.** λ is above 1 in the reality we live in, probably about 1.25, and
+it may be a property of this particular strange loop. At λ = 1 a change costs and releases nothing: no
+lump, no new spacetime, no loop, so that is a very unlikely version of reality for us to observe. Once
+space exists there is a long flat phase that is never left as a whole. Parts of it can revert to X, and
+those are black holes. Eventually a lonely black hole in the expanding universe never meets another with
+enough activation energy to trigger a new spacetime. By then that spacetime has already made a
+trillion new ones, so it does not matter: every possible arrangement of the result of a Big Bang still
+gets to exist, for ever. The author asked that this last statement be captured even though the model
+cannot test it, because it may bear on something else that matters.
+
+**What already bears on it (*ours, unverified*).**
+- **It is the same claim as Update 17's "every version exists".** That update says that because the loop
+  is eternal, every version that can come out of the lump does come out. So "every arrangement exists for
+  ever" is not only cosmology: it is the ground of the author's quantum picture.
+- **And it meets a specific objection.** In Smolin's real-ensemble quantum mechanics ([Smolin11]), a
+  thing behaves quantum-mechanically because it has copies, and a macroscopic body is classical because it
+  has none. He argues that exact copies of macroscopic bodies would make them obey superposition, and
+  takes their not doing so as evidence that the universe is finite. For the author's picture the
+  question this raises is precise: **do versions in other spacetimes count as copies of things in this
+  one?** If they do, macroscopic bodies here would have copies, and the picture predicts something not
+  seen. If they do not (for example because separate spacetimes share no relationships at all), the
+  statement is safe, and "copies count only within one connected spacetime" becomes part of the theory.
+  The author decides which.
+- **Why λ > 1, as selection.** The reasoning is anthropic in form (we can only be in a universe that makes
+  a lump), and it has a published relative with a mechanism: Smolin's cosmological natural selection
+  ([Smolin06]), in which black holes bounce into new universes whose constants differ slightly, so the
+  constants we see are the ones that make the most black holes. In the author's version the trigger is a
+  collision of black holes supplying the activation energy, and λ > 1 is needed for any lump. **Whether λ
+  varies between parent and child spacetime is the question that decides which kind of argument this is**:
+  if it does, selection (Smolin's kind, which makes predictions); if it does not, a fixed rule plus an
+  observation-selection effect, which makes fewer.
+- **What the model already agrees with, exactly:** space is the energy floor (Q18); no single move builds
+  a fold out of space (move census, corrected 23 September); leaving the flat sheet costs 32 at every λ;
+  the push that triggers a conversion is a sharp threshold that does not grow with size (Update 9); a tube
+  with no spare energy never converts. A lonely black hole that never meets a big enough push is the
+  model's "nothing to spare".
+- **What the model can measure next, and it is the λ scan reframed** (PREREGISTRATION T8 draft): across
+  the window where X is stuck for now, how the lump, the push threshold, how long X stays stuck, the
+  capacity the surroundings need to take the lump without boiling off (T9), and the size of the leftover
+  depend on λ. In a selection picture those are the ingredients of fertility.
