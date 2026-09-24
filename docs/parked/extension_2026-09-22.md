@@ -322,6 +322,27 @@ means no curve.
   fully curled knots (a shattered state by about 10^29 at N = 160), but a single curled direction has fewer
   symmetries than flat space (2N against 4N). Symmetry in the model pushes towards curling all the way into
   knots, not towards the gentle curvature gravity needs.
-- The test it implies is T13 rung 3, "does matter curve space": plant a relic in a warm sheet with
-  interchangeable points, measure the curvature around it against the empty sheet, and check that it grows
-  with the relic's energy.
+- The test it implies, asked her way round (T13 rung 3): **does curved space move matter?** Put a relic near a
+  curved patch in a warm sheet with interchangeable points, and measure whether it drifts towards the patch
+  (the average pull at each separation). The other half, whether space around a relic curves using its
+  energy, is measured on the same runs.
+
+**Refined the same day, her words put in order.** Curving takes some kind of energy, and mass provides it;
+perhaps something about the particles. You cannot have only one direction curling: the three space directions
+are intertwined, so they must curl together, and that may be why one activation releases the whole burp. Talk
+consistently about curved space moving matter, so that readers start thinking the opposite way from Einstein.
+
+**What that touches (ours, unverified).**
+- "Curving takes energy" is exactly the model's energy: above λ = 1 every curled direction costs energy. And
+  if matter supplies that energy, the dose comes out right, since more mass means more energy to spend. The
+  property has to be energy, not rest mass: light carries energy with no mass, and it is bent (measured) and
+  in Einstein's theory it curves space too.
+- The rule "all three curl together" conflicts with the stand-in for X used so far. The curled torus has exactly
+  one curled direction and one open, which is the partial state the rule forbids. In the 2D model the rule's
+  X is the fully curled state, both directions closed: the 4-cube, and at larger sizes a gas of them, which the
+  published work calls **baby universes** ([KTB19] Sec. 3.3.1).
+- That gives a test the 2D code can already run, with no new knob: start from a gas of baby universes at
+  λ = 1.25 and ask whether it opens into one flat sheet, sharply and all at once, releasing 8(λ − 1) per point
+  (twice the curled torus's). With interchangeable points the knots carry enormous symmetry (Q15), so counting
+  will make them stickier than the torus.
+- Open, for her: if curling is all or nothing, what is the gentle curvature around a planet made of?

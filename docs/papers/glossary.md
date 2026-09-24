@@ -21,6 +21,7 @@ knowledge unless a source is named, and a source not yet read is marked so.
 | interchangeable points | unlabelled graphs | \|Aut(G)\| | Relative to named points, a state gains a factor of its number of symmetries. |
 | versions | relabellings (automorphisms) | | The discrete cousin of diffeomorphism invariance (ours, unverified). |
 | the strange loop | strange loop, after Hofstadter (*Gödel, Escher, Bach*, 1979; *I Am a Strange Loop*, 2007) | | His term: through the levels of a hierarchy and back to the start. Used with credit, never as ours. |
+| curved space moves matter | (the author's framing, 24 September) | | Say it this way round in our pages. Einstein has both directions ("matter tells spacetime how to curve; spacetime tells matter how to move"); what is really opposite here is the cause of the curve: space's own drive to curve, with matter supplying the energy it takes. |
 | the melt | the random phase | | [T25] calls it matter; the owner does not (VISION Update 19). |
 
 ## Not used, and why
