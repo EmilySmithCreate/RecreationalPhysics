@@ -271,3 +271,24 @@ small menu of scraps.
    argument is not known.
 
 Names now follow `docs/papers/glossary.md` (burp, ε, ΔE‡, relic, κ, decompactification).
+
+## The author's idea, 24 September 2026, later: directions come in threes
+
+**Hers, in her words put in order.** Perhaps the relationships between the degrees of freedom come in threes.
+The push of 12 uncurls one direction, and the other two come with it, because that is a law of X. The energy
+released when the other two uncurl may be the Big Bang: all the energy and matter.
+
+**What it touches (ours, unverified).**
+- In the 2D model each curled direction costs the same, 4(λ − 1) per vertex, so uncurling adds up. If that
+  carries over to a 3D version, the first direction releases a third of the total and the two that follow
+  release two thirds, most of the energy.
+- There is a mechanism for "the others come with it": the first release can pay the next wall. The cost of
+  starting is fixed while the release grows with the size (VISION Update 9), which is the condition for a
+  runaway. In a sealed box the first burp heats its surroundings, and that heat is available for the next push.
+- A cascade between rungs of the dimension ladder has already been seen, the wrong way round: below λ = 1 a
+  flat sheet decays in steps that land on the exact rungs (VISION Update 8).
+- Why three is the parked "why 3+1" question. Its published cousin is [BV89] (not read by us).
+
+**The test it implies.** It needs the 3D version of the model (degree 6, a VISION decision under S1): a torus
+with all three directions curled, given one push, sealed. Do all three uncurl in a cascade, and is the energy
+split one third to two thirds?
