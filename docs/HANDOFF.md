@@ -61,8 +61,9 @@ number is carried into a claim about gravity.
   (removed from the public tree on 24 September; older commits still hold copies, and whether to rewrite
   history is Emily's decision, deferred). Never commit anything from it. Never quote or closely paraphrase a
   private email in a tracked file.
-- **Still to decide (Emily):** tracked files written before that rule paraphrase his emails: VISION Update 18,
-  TASKS Gate B, ASSUMPTIONS O26/O27, PREREGISTRATION T13 and T16 (frozen). Options were put to her.
+- **Decided (Emily, 24 September): leave as they are.** Tracked files written before that rule paraphrase his
+  emails (VISION Update 18, TASKS Gate B, ASSUMPTIONS O26/O27, PREREGISTRATION T13 and T16); that is ordinary
+  "private communication" practice in science. New text follows the rule above.
 - **His note of 24 September** (paraphrased locally): he will endorse paper 1 for gr-qc, on the naming condition
   above; he asks whether our moves are single switches and suspects low-coupling equilibration needs global
   moves; allotropes decay, and the question is how long they take ([T25] Fig. 9); his focus is the order of the
@@ -81,13 +82,12 @@ number is carried into a claim about gravity.
 ## 4. Waiting on Emily
 
 1. Whether to send the reply to Carlo (and the PDF), and when to submit to arXiv.
-2. The paraphrases in tracked files (section 3).
-3. The allotrope of [T25] Fig. 9: the reply asks for its adjacency list. **Do not build it from the drawing:**
+2. The allotrope of [T25] Fig. 9: the reply asks for its adjacency list. **Do not build it from the drawing:**
    every coloured face looks four-sided, which does not fit the caption. Exact and ready once the graph exists:
    if no edge carries three squares, the local term is zero and the question does not depend on λ.
-4. The quantum leg after rungs 3a and 0b (redefine the object as the cap; a rule for cancelling versions;
+3. The quantum leg after rungs 3a and 0b (redefine the object as the cap; a rule for cancelling versions;
    her position that it comes from the loop). Nothing is built until she decides.
-5. T15 rung 0's two post-hoc readings; T8's proposed repair.
+4. T15 rung 0's two post-hoc readings; T8's proposed repair.
 
 ## 5. Natural next lines (pre-register before running)
 
