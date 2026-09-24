@@ -1047,3 +1047,44 @@ Named. Interchangeable weighting would favour the flat sheet (4N symmetries agai
 ### What this cannot show
 
 The actual room a new universe has; anything at N other than 96; the melting coupling at λ = 1.10 and 1.40, which is assumed close to 1.25's, not measured.
+
+## T21. Does a sealed sheet given energy fold rather than melt when the points are interchangeable? (series paper 4; written 2026-09-24, before the runs)
+
+### Why
+
+The owner's picture of a black hole is a closed region in which concentrated energy re-curls space towards X (her statement of 23 September: in open space energy spreads and space heals; in a closed region it folds). O20 put a budget of energy into a sealed flat sheet and found melting, not folding, at every budget and λ tried, with named points. Her theory has interchangeable points (VISION Update 12), and under that weighting an arrangement gains its symmetry count: a complete fold (a whole 4-cube, 192 symmetries; a whole curled tube, 2N) gains a great deal, a melt gains nothing. That is the one route by which folding could win, and O20 could not see it. The fast count (Q20) now makes the interchangeable version runnable at N = 36 and 64.
+
+### What will be run
+
+λ = 1.25; flat tori 6 × 6 (N = 36) and 8 × 8 (N = 64); named and interchangeable points (`scripts/run_refold.py`; interchangeable runs use `graphity.interchangeable`, validated against exact averages at N = 18); two sealed protocols:
+- **single**: O20's own, one demon holding the budget. Budgets 0.5, 1, 2, 4 per point, as O20. *Stated plainly: one demon holding the whole budget samples the graph almost uniformly below the total energy, which favours disorder; it is kept so the comparison with O20 is like for like.*
+- **bath**: C = 2N demons, the budget starting in one (T9's bath, a proper temperature near budget/2). Budgets 2, 4, 8, 16 per point.
+
+Six replicas per (size, points, protocol, budget); 4,000 sweeps; configs `configs/t21_refold_n{36,64}_{named,interchangeable}.json`, seeds inside. A four-run smoke test at N = 36 (200 sweeps) checked both code paths and energy conservation and is disclosed: at budget 1 the single demon left 8 melted vertices both ways, the bath left the sheet flat both ways.
+
+**Structural fact, exact, fixed before the runs:** at N = 36 no complete fold exists (36 is not a multiple of 16, and a 4 × 9 torus is not bipartite), so N = 36 tests partial folds only; at N = 64 both complete folds exist (four 4-cubes; the 16 × 4 tube).
+
+### Observables
+
+As O20: at the end, vertices at local dimension below 2 (folded), at 2 (flat), above 2 (melted); **the folded share of the damage**, folded / (folded + melted), where there is damage; the symmetry count of the final graph; energy drift.
+
+### Gates
+
+Energy conserved to the last unit in every run.
+
+### Definitions and verdicts, fixed now
+
+At a (size, protocol, budget) the **folded share** is the mean over replicas with damage. For each size and protocol:
+- **FOLDS WITH INTERCHANGEABLE POINTS**: at some budget, the interchangeable folded share is at least 0.5 while the named one is below 0.5.
+- **MELTS EITHER WAY**: at every budget with damage, both folded shares are below 0.5.
+- **FOLDS EITHER WAY**: at some budget both are at least 0.5 (O20 would then not reproduce at these sizes).
+- **INCONCLUSIVE**: anything else.
+The overall reading is the verdict at N = 64 under the bath protocol, which is the one with complete folds on offer and a proper temperature; the others are reported beside it.
+
+### Predictions
+
+The owner's statement (a closed region folds) corresponds to FOLDS WITH INTERCHANGEABLE POINTS; her pick is not yet given. **Ours, unverified: MELTS EITHER WAY**, at both sizes. The symmetry gain is large only for complete folds; a partly folded sheet has one to a few symmetries, like a melt; and the number of distinct melted arrangements grows so fast with the energy that a factor of 192⁴ · 4! (four identical 4-cubes) is unlikely to beat it at N = 64 above the melting temperature, while below it nothing breaks at all.
+
+### What this cannot show
+
+Anything about real black holes; anything above N = 64; a local, concentrated spark (the budget is spread through the whole box, as in O20); anything at other λ.
