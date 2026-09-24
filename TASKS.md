@@ -346,6 +346,12 @@ is the author's call and would be a new pre-registration.
 
 Accept: Gate C passed, and step 2's numbers checked against the kernel on the built states.
 
+**Status, 2026-09-24.** Step 1 done by an assistant agent reading the arXiv text (ASSUMPTIONS Q21; the owner has not
+read those passages): 6 links, the same hard-core rule, flat from 4 squares per edge, at most 5, and energy
+H = 16(3N − S) + 4λX (ours, derived as Q1). Gate C's target is [T22] Fig. 3 (N = 500, full curvature), not
+[KTB19] Fig. 8b (capped). Step 2 done (O41, exact): the ladder is additive; the fully curled 6-cube is stuck for now
+only for 1 < λ < 1.2, and one curled direction for 1 < λ < 2. Next: step 3, the kernel.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

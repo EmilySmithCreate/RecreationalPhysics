@@ -352,6 +352,10 @@ consistently about curved space moving matter, so that readers start thinking th
   model says is inconvenient for the rule: above λ = 1 the only stuck-for-now curled state is the partial one.
   Whether all three curled directions can be stuck for now in 3D is the first exact question for the six-link
   model.
+- **Answered the same day (O41, exact, with the derived 3D energy):** yes, but in a narrow window. In 3D the fully
+  curled state, the 6-cube, is stuck for now for 1 < λ < 1.2, and falls apart with no wait above that. Each curled
+  direction costs the same, 4(λ − 1) per point, so the energy splits a third per direction. Her 2D value of
+  about 1.25 does not carry over: for her X in three dimensions, λ must lie between 1 and 1.2.
 
 **Confirmed by the author the same day:** "no matter, nothing to start the curve" is her position. Matter does
 not have to sit where the curve is; it is what starts the curve, and curving takes energy that it supplies.
