@@ -964,3 +964,50 @@ The order of the transition: a correlation length that grows over three sizes is
 **Exploratory, and labelled so because it is not among the reading rules.** (1) The averaged C(r) is 0.10 to 0.23 at r = 1, 0.01 to 0.04 at r = 2, and within about ±0.01 of zero beyond, at every coupling from g = 12 to 1.5 and at every size; it does not reach further near the crossover. (2) The largest contributions to Eq. (4.15) come from distances near the diameter, where few pairs exist (e.g. C(8) = 0.22 at N = 196, g = 9), and from snapshots in which C(r) is just below 1; the formula measures those, not the decay of C(r). (3) χ's peak moves to lower g with N, as the crossover does, while its height stays put.
 
 **What this says (ours, unverified).** At these sizes nothing in the fluctuations grows with N at the crossover: correlations stay one to two steps long and the susceptibility peak keeps its height. That is neither the continuous signature (χ and ξ growing) nor the first-order one (χ's peak growing like N). It looks like a smooth crossover at these sizes, and it cannot rule out either kind of transition at larger N. **It does not reproduce the divergent tendency of [KTB19] Fig. 9a**, with that paper's definition as we read it (ASSUMPTIONS Q19); whether that paper computed ξ differently is a question for its authors.
+
+## T17. Does each seed leave its own leftover? (TASKS T14; written 2026-09-23, night, before the runs)
+
+### Why
+
+T10 found one leftover per converted tube, however large the tube, and every one of those tubes opened from a single seed. The owner's hypothesis about dark matter (VISION Update 16; her decisions of 23 September in `docs/parked/extension_2026-09-22.md`) needs the leftover to be made **per seed**: many seeds, each leaving a scrap, so that the amount of leftover tracks how the change started rather than being one defect per space. This test plants k seeds in one tube and counts.
+
+### What will be run
+
+λ = 1.25; one tube 96 × 4 (N = 384, longer than any T10 tube, so eight seeds sit twelve columns apart); a cold sealed box as T10 (C = 2N demons) but **every demon empty**: instead of a 12-unit spark, **k seeds are planted before the run**, each being move A (ΔS = −2, ΔX = −4, cost 12; the step the spark pays for) at columns j · 96/k, chosen deterministically (`scripts/run_seeded_tube.py`, `plant_seeds`, tested in `tests/test_seeded_tube.py`: k seeds cost exactly 12k and touch only their own columns). k ∈ {1, 2, 4, 8}; twenty replicas each; 30,000 sweeps; configs `configs/t17_seeds_k{1,2,4,8}.json`, seeds inside.
+
+**Disclosed:** a smoke run of the protocol at N = 96 (six decays, 6,000 sweeps, scratchpad, not a result) was made to check that a planted seed converts a tube with empty demons. It does; the leftover counts were 1, 1, 1 (k = 1) and 1, 2, 1 (k = 2).
+
+### Observables
+
+At the end of each run, as T10: the local-dimension histogram; the connected pieces of vertices at d = 1 and their sizes (**the leftover count** is the number of pieces, T10's observable); the count of pieces of exactly four (T10's alternative reading, reported beside); the conversion fraction; the energy retained, H at the end; energy drift.
+
+### Gates
+
+1. Energy conserved to the last unit in every run (drift 0).
+2. At every k, at least 18 of 20 runs convert (final conversion fraction at least 0.9).
+
+### Definitions, fixed now
+
+The **slope** is the least-squares slope of the leftover count against k over all runs that pass gate 2, with its standard error; the mean count per k is reported.
+
+### Predictions
+
+The owner's stated hypothesis (Update 16) is option (a); **her pick among the options has not been given**, and she asked on 23 September that the night's work design tests and predictions in her absence.
+
+- (a) **ONE PER SEED**: slope between 0.75 and 1.25.
+- (b) **ONE PER TUBE**: slope within ±0.25 of zero, mean near 1 at every k.
+- (c) **BETWEEN**: slope from 0.25 to 0.75.
+
+**Ours, unverified:** (c) leaning (b). T11 found the single leftover's position uniform, neither at the seed nor where the two fronts meet, which argues against leftovers being made at seams; if the leftover is instead a defect the conversion must leave for a global reason (a 4 × L torus turning into a flat torus of a different shape), the count stays near one, and extra seeds add only leftovers that anneal before the end.
+
+### Verdicts
+
+ONE PER SEED, ONE PER TUBE or BETWEEN as defined above, if both gates pass at every k; otherwise INCONCLUSIVE.
+
+### Named or interchangeable points
+
+Named, for the reason in T8. The expected effect of interchangeable points on the count is small: final states with one, two or more leftovers at generic positions have one to a few symmetries each, so the weights differ by small factors; only leftovers placed symmetrically (evenly spaced, as planted seeds could make them) gain more, and that bias would favour counts equal to k. Recorded so it can be checked on the saved states if the result sits near a boundary.
+
+### What this cannot show
+
+Anything about the amount of dark matter in the universe. How seeds arise without being planted. Anything at another λ or size.
