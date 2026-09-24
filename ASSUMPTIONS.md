@@ -1186,6 +1186,15 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   - **Paper 1 also corrected on the way:** Table 1's N = 192 rerun (1428 / 1.19 / 0.995 / 0.92) had been left as
     "—" from O13's in-progress table; and the paper quoted only the N = 144 barrier fit (12.1 ± 0.9), omitting
     N = 64's 14.4 ± 1.0. Both are now in.
+- **O44 T23, the λ map again at 120 decays per cell: the window INCONCLUSIVE by the letter; the edge BREAK-UP
+  BEGINS AT THE EDGE.** (2026-09-24; PREREGISTRATION T23; 28 AWS Batch jobs.) The memoryless check, now sized to
+  the sample, holds in every metastable cell from λ = 1.05 to 1.25 (20 of 20) and at 1.30 in 3 of 4 sizes (it
+  fails at N = 64, CV 2.63). Two orders side by side and one front hold in every window cell. But the energy check
+  (gate 3), kept as T8 wrote it, fails a cell if any single decay of 120 ends on an unrecognised state, and at
+  λ = 1.30 that happens at every size (3 to 5 decays each). So λ = 1.30 is unread and the window is INCONCLUSIVE,
+  a sizing problem of the same kind as T8's, not repaired after the fact. The owner's edge prediction holds: from
+  1.30 to 1.35 the share ending flat falls from 0.71 to 0.47, and the share with several converted pieces at 25 %
+  rises from 0.44 to 0.69, each by more than two standard errors.
 
 ## Provenance
 

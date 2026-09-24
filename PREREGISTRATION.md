@@ -1320,3 +1320,44 @@ still to verify).
 Anything at other couplings, at sizes beyond 192, with interchangeable points, or outside λ = 1.05 to 1.35. It
 is still the 2D model: one curled direction and one open, the partial state the owner's rule for three
 dimensions forbids (O40, VISION Update 22).
+
+#### Reading, 24 September 2026, evening: the window INCONCLUSIVE by the letter; the edge BREAK-UP BEGINS AT THE EDGE
+
+`python scripts/analyse_t23.py` (tests `tests/test_t23.py`), on all 28 cells (`results/t23_lam*_n*.csv`, 120 decays
+each, run on AWS Batch). **Window: INCONCLUSIVE (1.30 unread). Edge: BREAK-UP BEGINS AT THE EDGE.**
+
+**Why the window is inconclusive, said plainly.** Gate 3, the energy check, was kept exactly as T8 wrote it. It
+fails a whole cell if even one decay that reached 75 % ends on a state whose release matches none of the allowed
+ones. With four times the decays, such decays turn up more often:
+
+| λ | N = 64 | 96 | 144 | 192 |
+|---|---|---|---|---|
+| 1.10 | 0 | 1 of 120 | 0 | 0 |
+| 1.20 | 2 of 120 | 0 | 0 | 0 |
+| 1.25 | 0 | 1 | 1 | 2 |
+| 1.30 | 5 | 3 | 3 | 3 |
+| 1.35 | 2 | 7 | 17 | 18 |
+
+At λ = 1.30 all four sizes fail the gate, so no size can be read there, and the window verdict needs every λ.
+Every other λ in the window has at least one size that passes, and is "sharp". This is the same kind of problem as
+(a) in T8: an all-or-nothing rule sized for thirty decays, applied to 120. **It is not repaired after the fact.**
+A repair belongs to a new pre-registration, if the owner wants one.
+
+**What the new memoryless check shows.** (a′) holds in every metastable cell from λ = 1.05 to 1.25 (20 of 20),
+and at 1.30 in three of four sizes. It fails at N = 64, where the CV of the time after the rest is 2.63 against a
+band of 0.754 to 1.381. At 1.35 it holds at N = 144 and fails narrowly at 192 (1.367, with (c) also failing
+there). **Two orders side by side, (b), and one front, (c), hold in every window cell** (d ∈ {1, 2} at half
+conversion: 0.978 to 1.000; largest piece 0.81 to 1.00).
+
+**The edge, as the owner predicted.** Pooled over sizes, from λ = 1.30 to 1.35: the share of decays ending at the
+flat torus falls from 0.71 to 0.47 (E1), and the share whose converted region is in more than one piece at 25 %
+conversion rises from 0.44 to 0.69 (E2). Both hold by more than two standard errors. At 1.35, N = 64 and 96 count
+as not stuck (median f_200 = 0.25, on the line).
+
+**Not scored, reported:** the mean wait against τ runs from −2 % to +14 % at λ = 1.05, and about +17 % to +25 % at
+1.25. Near the edge the 200-sweep watch inflates it, as in T8.
+
+**Said plainly for the programme:** both of the owner's predictions were right about the physics. Every cell in
+the window that could be read is sharp and memoryless except one, and the break-up begins at the edge. **But
+piece 2 is not green by the letter**, because the energy check, unchanged from T8, fails at λ = 1.30 at every
+size.
