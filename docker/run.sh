@@ -58,4 +58,10 @@ if [ -d "results/${CONFIG}_hist" ]; then
     aws s3 cp --recursive "results/${CONFIG}_hist" "${DEST}/${CONFIG}_hist"
 fi
 
+# The tube-decay runner saves each decay's final graph when `save_adjacency` is set. Energy gate 3 reads
+# the resting states from those files, so a result without them cannot be gated.
+if [ -d "results/${CONFIG}_adj" ]; then
+    aws s3 cp --recursive "results/${CONFIG}_adj" "${DEST}/${CONFIG}_adj"
+fi
+
 echo "--- done"
