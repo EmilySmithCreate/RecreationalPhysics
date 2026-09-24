@@ -18,3 +18,7 @@ terraform/.terraform/
 # Papers downloaded for reading. Third-party copyright: kept locally, never committed.
 # What we take from them lives in REFERENCES.bib notes and ASSUMPTIONS.md, in our own words.
 docs/reading/*.pdf
+
+# Local secrets (AWS keys etc.). Never commit: this repository is public.
+.env
+.env.*
