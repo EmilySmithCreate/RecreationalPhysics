@@ -1,0 +1,27 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T19 (written 2026-09-24 before the runs): does a leftover move, stay or anneal at fixed coupling? Not exploratory.",
+    "name": "t19_mobility",
+    "side": [
+      24,
+      4
+    ],
+    "lambda": 1.25,
+    "couplings": [
+      1.0,
+      1.25,
+      1.5
+    ],
+    "replicas": 10,
+    "make_sweeps": 30000,
+    "follow_sweeps": 100000,
+    "block": 500,
+    "seed": 20261701
+  },
+  "config_path": "configs/t19_mobility.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T19, written 2026-09-24"
+}
