@@ -1,4 +1,7 @@
-"""Combinatorial quantum gravity at any dimension D: Monte Carlo on 2D-regular bipartite graphs.
+"""The model graph family at any dimension D: Monte Carlo on 2D-regular bipartite graphs, with the knob lambda.
+
+Naming (the model's author's condition, 24 September 2026): only lambda = 1 is combinatorial quantum gravity (CQG).
+Every other lambda is our family around it, and results there are never written up as CQG.
 
 The same model and the same chain as cqg.py, with the number of links per point read from the array instead of
 fixed at 4. Written for the six-link (D = 3) model of VISION Update 22. cqg.py is left untouched, so every 2D

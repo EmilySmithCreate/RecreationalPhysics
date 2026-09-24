@@ -268,6 +268,9 @@ Update 22 (2026-09-24): **DECISION (the author's): build the three-dimensional v
 - **Reproduce before extending (rule 2).** Gate C: match the published D = 3 curve of [KTB19] before any D = 3 result is interpreted. The energy's form at D = 3, the saturation point of the local term and the hard-core rule are to be read from the text, not assumed (to verify). Exhaustive listing, which validated the 2D kernel, will not reach the smallest valid D = 3 graphs, so the published gate carries more weight here.
 - **What follows.** Exact results first, with no run: the energies of the 3D ladder (none, one, two or three directions curled) and the cheapest way out of each, which gives the 3D form of Eq. (2) and says whether the energy released by opening one direction can pay the wall of the next. Then paper 1's measurements in three directions, each pre-registered with the author's prediction: whether a fully curled state opens all at once, how the energy splits between the first direction and the other two, and whether the activation energy stays fixed with size. Then curved space moving matter.
 - **Paper 1 stands as written.** The 3D work is a companion paper with new results, not a new version of the 2D one.
+- **Naming (added the same day, the model's author's condition for endorsing paper 1).** Only λ = 1 is CQG. Gate C, at λ = 1,
+  is CQG. The window 1 < λ < 1.2 where the fully curled 6-cube is stuck for now (ASSUMPTIONS O41) is off-CQG: our
+  family around his model, and never written up as combinatorial quantum gravity.
 
 ## The target ("the spot")
 

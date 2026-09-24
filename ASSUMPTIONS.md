@@ -1105,7 +1105,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
       λ → 1, 8 at 1.1, 0 at 1.2), offered 6.67 times per sweep; the next is 160 − 128λ.
     - Above λ = 1.2 the 6-cube falls apart with no wait, as the 2D knots do at every λ > 1 (O40).
   - **So the author's "all three curl together" X can be stuck for now in 3D, which it cannot be in 2D, but only
-    for λ between 1 and 1.2.** Her 2D value of about 1.25 does not carry over.
+    for λ between 1 and 1.2.** Her 2D value of about 1.25 does not carry over. **That window is off-CQG:** by the
+    model's author's condition only λ = 1 is combinatorial quantum gravity, so none of this is written up as CQG.
   - *Ours, unverified, energy accounting only:* at λ = 1.1 each rung releases 0.4 per point, while the walls down
     the ladder are 8 (three curled), 8 (two curled) and 43 (one curled). The release of one rung could pay the next
     wall in a large enough system (N ≳ 110 for the last), which is the energetic room for her cascade. Whether the
