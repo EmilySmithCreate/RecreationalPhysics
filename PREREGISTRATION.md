@@ -1116,3 +1116,7 @@ Validation, so the prediction is agreement (ours, and the design's). The owner's
 ### What this cannot show
 
 Anything quantum. It checks that "probability = share of the versions" is what a chain with interchangeable points actually does, at the two sizes where the versions can be listed.
+
+#### Reading, 24 September 2026: BETWEEN
+
+`python scripts/analyse_t17.py` (tests in `tests/test_t17.py`). Gate 1: energy exact in all 80 runs. Gate 2: every run at every k converted. Leftovers per tube (pieces at d = 1), mean over twenty: **1.10, 2.15, 2.50, 3.40** at k = 1, 2, 4, 8 (pieces of exactly four: 1.05, 1.80, 2.25, 2.35). **Slope 0.288 ± 0.039 leftovers per extra seed: BETWEEN.** The owner's option (a), ONE PER SEED, holds at k = 2 and fails beyond it; ours, leaning ONE PER TUBE, also fails: the count grows with the number of seeds. Stated plainly: the slope is about one standard error above the 0.25 boundary with ONE PER TUBE, and a straight line is a poor description of means that rise by 1.05, then 0.35, then 0.90; the growth looks less than proportional, and whether extra leftovers anneal or merge when fronts meet was not measured. "Mean near 1" in ONE PER TUBE's definition had no number; the verdict is read on the slope, as the verdict table states, and the means are given so the other reading can be checked (they are not near 1 beyond k = 1, so it gives the same answer).

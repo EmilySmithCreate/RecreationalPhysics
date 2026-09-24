@@ -42,16 +42,18 @@ combination of small defects (8 to 45 units) (O13, O15, O28).
 **Exact, new tonight (T8 pre-registration).** Near λ = 1 the column keeps a large share of the lump:
 (24λ − 16)/(4(λ − 1)N), 22 % at λ = 1.25 and 72 % at λ = 1.05 for N = 64, falling with N.
 
-**Running.** T17, one to eight planted seeds in one tube (pre-registered; the owner's hypothesis is
-ONE PER SEED; ours leans ONE PER TUBE).
+**Established the same night (T17, O33): BETWEEN.** One to eight planted seeds in one tube leave 1.10, 2.15,
+2.50, 3.40 leftovers on average; slope 0.29 ± 0.04 per extra seed. More seeds, more scrap, but fewer than one
+each; both the owner's ONE PER SEED and our ONE PER TUBE failed. Next: where do the extra leftovers go when
+fronts meet (merge, anneal)?
 
 **Still to design.**
 - *Does a leftover move?* Needed by papers 2 and 5. A column in a flat sheet, fixed coupling, followed for
   a long run; record its position every block. Cheap. Draft below (T19).
 - *Does the leftover's share depend on λ as the exact formula says?* Read from T8's saved final states.
 
-**What would count against the owner's picture.** ONE PER TUBE in T17: then the scrap is one defect per
-space, negligible at scale, and "abundant through many seeds" needs another mechanism.
+**What would have counted against the owner's picture, and did not happen.** ONE PER TUBE in T17. What did
+happen is weaker than her hypothesis: the scrap grows with the number of seeds, but less than one per seed.
 
 ---
 

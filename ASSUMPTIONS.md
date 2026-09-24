@@ -1036,6 +1036,16 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   wiring, so nothing here says what happens when the defects' surroundings are allowed to rearrange (that is
   an entropic force of a different kind, which the interchangeable chain of Q20 can now measure).
 
+- **O33 T17: more seeds, more leftovers, but fewer than one each (BETWEEN).** (2026-09-24; PREREGISTRATION T17;
+  `results/t17_seeds_k{1,2,4,8}.csv`; `scripts/analyse_t17.py`.) A 96 x 4 tube at λ = 1.25 in a cold sealed box,
+  k seeds planted as move A at evenly spaced columns, twenty runs per k, all converting, energy exact. Leftovers
+  per tube 1.10, 2.15, 2.50, 3.40 at k = 1, 2, 4, 8; slope 0.288 ± 0.039 per extra seed, BETWEEN by about one
+  standard error. **For the owner's dark-matter picture (VISION Update 16), plainly:** the amount of scrap does
+  depend on how the change started, which T10 alone could not show, and which "one per tube" would have ruled
+  out; but it is not one scrap per seed, and the growth looks less than proportional. *Ours, unverified:* where
+  fronts from neighbouring seeds meet, their leftovers may merge or anneal; that was not measured and is the
+  next question (the saved end states hold the positions).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
