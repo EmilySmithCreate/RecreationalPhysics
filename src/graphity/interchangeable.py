@@ -29,11 +29,12 @@ def energy(adj, lam):
     return ENERGY_PER_SQUARE * (n - total_squares(adj)) + ENERGY_PER_SURPLUS * lam * surplus(adj)
 
 
-def run(adj, part, n_sweeps, seed, lam, cap, g=None, demons=None):
+def run(adj, part, n_sweeps, seed, lam, cap, g=None, demons=None, on_sweep=None):
     """Run in place. Exactly one of g (canonical) or demons (sealed; float array, modified) is given.
 
     Returns per sweep: S, X, the symmetry count A, and (sealed) the demons' total. One sweep is 2N
-    attempted switches, as in cqg.run_chain.
+    attempted switches, as in cqg.run_chain. `on_sweep(sweep, adj)`, if given, is called after every
+    sweep and must only read the graph (T15 rung 1 identifies the arrangement with it).
     """
     if (g is None) == (demons is None):
         raise ValueError("give g for a canonical run or demons for a sealed one, not both")
@@ -74,4 +75,6 @@ def run(adj, part, n_sweeps, seed, lam, cap, g=None, demons=None):
         out_x[sweep] = surplus(adj)
         out_a[sweep] = a
         out_d[sweep] = demons.sum() if demons is not None else 0.0
+        if on_sweep is not None:
+            on_sweep(sweep, adj)
     return out_s, out_x, out_a, out_d

@@ -31,3 +31,17 @@ def count(adj, part):
     edges = [(u, int(v)) for u in range(n) for v in adj[u] if u < v]
     g = _ig.Graph(n=n, edges=edges)
     return int(g.count_automorphisms(color=[int(c) for c in np.asarray(part)]))
+
+
+def canonical_key(adj, part):
+    """A hashable form that two graphs share exactly when a side-preserving renaming maps one onto the
+    other (igraph's canonical labelling, the same bliss algorithm as `count`)."""
+    if _ig is None:
+        raise ImportError("igraph is not installed")
+    n = adj.shape[0]
+    colour = [int(c) for c in np.asarray(part)]
+    edges = [(u, int(v)) for u in range(n) for v in adj[u] if u < v]
+    g = _ig.Graph(n=n, edges=edges)
+    g.vs["side"] = colour                              # carried through the permutation by igraph itself
+    h = g.permute_vertices(g.canonical_permutation(color=colour))
+    return tuple(h.vs["side"]), tuple(sorted(tuple(sorted(e)) for e in h.get_edgelist()))

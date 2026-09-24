@@ -1088,3 +1088,31 @@ The owner's statement (a closed region folds) corresponds to FOLDS WITH INTERCHA
 ### What this cannot show
 
 Anything about real black holes; anything above N = 64; a local, concentrated spark (the budget is spread through the whole box, as in O20); anything at other λ.
+
+## T15 rung 1. Does the time spent in each arrangement equal the count's prediction? (written 2026-09-24, before the run)
+
+### Why
+
+`docs/design/quantum_loop_design.md` puts rung 1 first because nothing above it can be trusted without it: in the owner's quantum picture (VISION Update 17) the probability of a version is its share of the count, so a chain with interchangeable points must spend its time in each arrangement in exactly those proportions. It is validation, not physics. The tools it needs were built the same night (ASSUMPTIONS Q20; `graphity.symmetry.canonical_key`, tested to be blind to renaming within sides and to separate distinct arrangements).
+
+### What will be run
+
+N = 16 and 18 (every arrangement listed: 5 and 26 classes, symmetry counts identical to `results/ergodicity_small.csv`, checked before this was written); (λ, g) = (1.0, 10.0) and (0.0, 10.0); six replicas per (N, λ, g); 500 sweeps discarded, 20,000 measured; `scripts/run_t15_rung1.py`, configs `configs/t15_rung1_n16.json` and `configs/t15_rung1_n18.json`. Two routes: **A**, the interchangeable chain's fraction of sweeps in each class; **B**, the named chain's fraction reweighted by each class's symmetry count. **Control**: the named chain's raw fractions against the named probabilities. A 700-sweep smoke run of both routes (two replicas) checked the machinery and is disclosed; it is far too short to read.
+
+### Definitions, fixed now
+
+For each (N, λ, g) and route: the replica-mean fraction per class, its standard error over replicas, and the total-variation distance TV = ½ Σ |mean − p| against the exact interchangeable probabilities.
+
+### Verdicts
+
+- **AGREES**: for both routes at every (N, λ, g), TV < 0.03, and every class with p ≥ 0.02 lies within 4 standard errors + 0.005 of p.
+- **DISAGREES**: any route at any setting fails while its control passes.
+- **INCONCLUSIVE**: the control fails at some setting (then the machinery, not the physics, is at fault), or anything else.
+
+### Predictions
+
+Validation, so the prediction is agreement (ours, and the design's). The owner's pick has not been given; this rung does not test her picture, only the tool every later rung needs.
+
+### What this cannot show
+
+Anything quantum. It checks that "probability = share of the versions" is what a chain with interchangeable points actually does, at the two sizes where the versions can be listed.
