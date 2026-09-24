@@ -364,6 +364,12 @@ agrees within 0.05 in ln g. The cold plateau is reported, not scored, unless bot
 offset by ln N^(1/3) = 2.07 in ln g, that settles Q21's open question on how the coupling scales with N, and it is
 reported as that.
 
+**Gate C FAILED, 2026-09-24 (ASSUMPTIONS O42).** Not reproduced under either reading of the axis, the unscaled
+couplings or couplings × N^(1/3), and the shapes differ, so no single rescaling fixes it. By rule 2 the six-link
+track stops: no D = 3 result is interpreted until this is resolved. Next: ask the model's author for [T22] Fig. 3's
+protocol, its Boltzmann weight and whether its graphs are bipartite. A second D = 3 target exists, [KTB19] Fig. 8b,
+but it used the cap he disputes.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

@@ -1111,6 +1111,29 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     the ladder are 8 (three curled), 8 (two curled) and 43 (one curled). The release of one rung could pay the next
     wall in a large enough system (N ≳ 110 for the last), which is the energetic room for her cascade. Whether the
     released energy stays where the next wall is, is a question about the dynamics.
+- **O42 Gate C fails: the six-link code does not reproduce [T22] Fig. 3, under either reading of its axis.**
+  (2026-09-24; `scripts/compare_gate_c.py`; results `gatec_t22_fig3_p1a`, `p1b`, `p1s_a`, `p1s_b`; the criterion was
+  accepted by the owner before any comparison.) All four runs use N = 500, λ = 1, no cap, cooling from a start with
+  no squares and heating back, with 2,000 + 2,000 sweeps per coupling.
+  - **(i) Axis read as our coupling** (g = 0.40 to 4.00): ours is nearly perfectly ordered and nearly frozen at every
+    coupling. At g = 4 we have 8.3 (cooling) and 11.2 (heating) squares per vertex against the published 1.1, and
+    11.5 to 11.6 at every g ≤ 3, where the published curve is 5.2 to 10.1. The legs agree at only 2 and 4 of 72
+    couplings.
+  - **(ii) Axis read as our coupling divided by N^(1/3) = 7.937**, the rescaling [T22] Sec. II states: the legs agree
+    at 67 of 72 couplings, but ours melts too early. It crosses 6 squares per vertex at published-axis ln g = −0.41
+    and −0.42 (our g ≈ 5.2), against the published 0.996 (2.7). The largest difference where the legs agree is 6.9
+    squares per vertex.
+  - **The shapes differ, so no single rescaling fixes it.** The published curve falls from about 10 to 1.09 within a
+    factor of about 2.7 in coupling, and 1.09 is already our infinite-temperature floor (measured: 1.147 ± 0.012 at
+    N = 500). Ours takes a factor well above 8 to fall from 10 to 1.7. The digitisation was checked by overlay.
+  - *Ours, unverified; possible causes, none tested:* (a) the published protocol (sweeps per coupling, start state),
+    which is not stated; a short anneal lags on cooling and can make a crossover look steeper; (b) the axis or the
+    energy normalisation at D = 3; our energy is derived (Q21), not quoted; (c) whether [T22]'s graphs are
+    bipartite (its hot end at 1.09 fits our bipartite floor, not a non-bipartite one near half that).
+  - **By rule 2 the six-link track stops here:** no D = 3 result is interpreted until this is resolved. The long
+    protocol P2 (unscaled) is still running and will be reported. The 2D work is unaffected: at four links `cqg_d`
+    is `cqg` draw for draw. The question for the model's author is narrow: [T22] Fig. 3's protocol, what "ħg" is in
+    its Boltzmann weight, and whether its graphs are bipartite.
 - **O42 Paper 1 after a review generated with ChatGPT: Eq. (2) made explicit, the waits tested as a whole distribution, and one
   unexplained tail.** (2026-09-24; NOT PRE-REGISTERED, committed data, no new simulation;
   `scripts/exact_torus_level.py` (exact) and `scripts/analyse_paper_stats.py`, tested in `tests/test_paper_stats.py`.)
