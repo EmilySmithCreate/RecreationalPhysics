@@ -4,6 +4,16 @@ Written for the AI assistant that opens this repository next. Emily is the owner
 Read it before `CLAUDE.md`'s "Known state" section, which is older than this page. Everything below is
 on branch `feat/results-meta-and-followups`, pushed; `main` is behind it and Emily merges.
 
+## Status at the end of the night, 24 September (read this first)
+
+Every run of the night has finished and been read under its pre-registered rules: **T8 INCONCLUSIVE by the letter**
+(sharp wherever stuck, 1.05 to 1.35; edge between 1.35 and 1.40; criterion (a) too tight, O38); **T17 BETWEEN**
+(O33); **T18 PROPORTIONAL**, R = 6 (O34); **T19 ANNEALS** at every coupling (O35); **T21 MELTS EITHER WAY** at
+N = 64 (O36); **T15 rung 1 AGREES** (O37); O32 exact. Paper 1 is complete (five pages, section V filled;
+`docs/papers/curled_torus/paper.pdf`; review page version 3). The owner's predictions on T17 to T21 and rung 1
+were not given before the runs and cannot now be given as predictions; say so if she offers them. Nothing is
+running. The section below is the night's detail.
+
 ## Update, 24 September, early morning: the night's independent work (read this first)
 
 Emily asked for a series of papers and for the other pieces to be worked through overnight, with new

@@ -1062,6 +1062,16 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   Validation at N = 16 and 18, both routes, total-variation distance at most 0.0125. The counting half of the
   owner's quantum picture now has a validated tool; it says nothing yet about quantum behaviour.
 
+- **O38 T8, the λ map: sharp wherever the tube is stuck; INCONCLUSIVE by the letter.** (2026-09-24; PREREGISTRATION
+  T8.) From λ = 1.05 to 1.35, at N = 64 to 192, the curled torus is stuck for now and its change is a front with
+  the two orders side by side (95 to 100 % of vertices at d ∈ {1, 2} at half conversion; one piece holding 76 to
+  100 % of the converted part); the release is exactly 4(λ − 1) where the flat torus is reached. It is not stuck
+  at 1.40 or 1.45; the edge lies between 1.35 and 1.40. Waiting times follow Eq. (2) with nothing fitted over two
+  decades, 15 to 43 % longer near λ = 1. At fixed coupling, near λ = 1 no decay leaves a leftover, and the share
+  that does rises with λ. The verdict is INCONCLUSIVE because the memoryless-wait criterion was too tight at
+  thirty decays per cell (about ±2 standard errors, 28 cells) and the energy gate fails at 1.35; a computed
+  repair changes no verdict and is not proposed.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

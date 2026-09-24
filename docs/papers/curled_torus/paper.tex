@@ -12,7 +12,7 @@
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 23 September 2026}
+\date{DRAFT, 24 September 2026}
 
 \begin{abstract}
 Combinatorial quantum gravity assigns to a four-regular bipartite graph an energy built from its total
@@ -26,8 +26,9 @@ of vertices belong to one ordered state or the other, and the released energy is
 per vertex. The barrier is a single local move. In a sealed system a seed of 12 energy units starts the
 change at every size from 48 to 192 vertices and nothing smaller does, while the release grows with the
 system. Sealed, the change completes only if its surroundings can absorb the release, and it leaves one
-defect of fixed size however large the torus. [$\lambda$ scan: one sentence, pending.] The release
-vanishes at $\lambda = 1$. Every verdict quoted was pre-registered.
+defect of fixed size however large the torus. Mapped from $\lambda = 1.05$ to 1.45, the torus is metastable
+up to 1.35 and the change keeps its two-order, single-front character wherever it is, finishing cleanly near
+$\lambda = 1$ and leaving more defects as $\lambda$ grows. The release vanishes at $\lambda = 1$. Every verdict quoted was pre-registered.
 \end{abstract}
 
 \maketitle
@@ -97,8 +98,8 @@ At $\lambda = 1.25$ the barrier is $12$. Over twelve conditions ($g = 1.4$ to 2.
 16 runs each), the measured mean waiting time against the move-A term of Eq.~(\ref{eq:tau}) has a plain
 mean ratio of 0.98 and a weighted mean of $0.88 \pm 0.06$, every ratio between 0.71 and 1.62, over a
 ninety-fold range of times; a fit of the barrier at $N = 144$ gives $12.1 \pm 0.9$ [Fig.~\ref{fig:data}(a)].
-Including move B lowers the predicted waiting time by 15\% at $g = 1.5$; which of the two describes the data better is
-open (Sec.~\ref{sec:lambda}).
+Including move B lowers the predicted waiting time by 15\% at $g = 1.5$; across $\lambda$, the full
+Eq.~(\ref{eq:tau}) describes the measured waits over two decades (Sec.~\ref{sec:lambda}).
 
 The decay itself was pre-registered \cite{repo}: at $\lambda = 1.25$, $g = 1.5$, thirty decays at each of
 $N = 64, 96, 144, 192$, and the adjacency read when the conversion fraction first crossed 25, 50 and 75\%.
@@ -176,18 +177,67 @@ change started is indistinguishable from uniform.
 \section{Dependence on \texorpdfstring{$\lambda$}{lambda}}
 \label{sec:lambda}
 
-[PENDING: the pre-registered map at $\lambda = 1.05$ to 1.45, all four sizes, thirty decays each.
-Exact inputs already fixed: the barrier $\min(32-16\lambda,\,64-40\lambda)$, the waiting time of
-Eq.~(\ref{eq:tau}) (8330 sweeps at $\lambda = 1.05$ down to 22 at 1.45 for $g = 1.5$), the release
-$4(\lambda-1)$ per vertex, and the curled column's share of the release, $(24\lambda-16)/[4(\lambda-1)N]$,
-which is 22\% at $\lambda = 1.25$ and 72\% at 1.05 for $N = 64$. Table and one figure.]
+The decay was mapped at $\lambda = 1.05$ to 1.45 in steps of 0.05, with the protocol of Sec.~III at all four
+sizes and thirty decays per ($\lambda$, $N$) (Table~\ref{tab:lambda}, Fig.~\ref{fig:lambda}). The torus counts as
+stuck at ($\lambda$, $N$) when more than half its decays are still at least 75\% torus after the 200-sweep rest
+that defines the waiting time.
+
+The torus is stuck from $\lambda = 1.05$ to 1.35 at every size and not at 1.40 or 1.45; Eq.~(\ref{eq:tau}) puts
+the mean wait at 200 sweeps near $\lambda = 1.33$. Wherever it is stuck, the change keeps the character of
+Sec.~III: at half conversion 95 to 100\% of vertices belong to one order or the other, the converted region is
+one piece holding 76 to 100\% of it, and the release is exactly $4(\lambda - 1)$ per vertex wherever the flat
+torus is reached. The mean waiting time follows Eq.~(\ref{eq:tau}) with nothing fitted over two decades, running
+15 to 43\% longer than predicted near $\lambda = 1$ [Fig.~\ref{fig:lambda}(a)]. How completely the change finishes
+depends on $\lambda$ [Fig.~\ref{fig:lambda}(b)]: at $\lambda = 1.05$ every decay ends at the flat torus, while the
+share ending on a defected sheet rises to 21\% at 1.30 and 54\% at 1.35. At fixed coupling, then, the leftover is
+a feature of the larger coefficients, and near $\lambda = 1$ the change is clean. Beyond the edge
+($\lambda \ge 1.40$) the torus falls apart everywhere at once and ends mostly as a defected sheet.
+
+The pre-registered verdict for the map as a whole is inconclusive, and the reason is stated. Besides the
+coexistence and single-front criteria, which hold everywhere the torus is stuck, it required the waiting times to
+be memoryless, with a coefficient of variation between 0.7 and 1.3; at thirty decays that band is about two
+standard errors wide, and it fails in five of the 28 stuck cells (at $\lambda = 1.10$, 1.30 and 1.35). At
+$\lambda = 1.35$ the energy check also fails for two to five decays per size, whose final states match none of
+the allowed ones. A repair computed before being proposed (the variation of the time after the rest) changes no
+verdict.
+
+\begin{table}[b]
+\caption{The map along $\lambda$ at $g = 1.5$ (ranges over $N = 64$ to 192; thirty decays per cell; $\lambda = 1.25$
+from Table~\ref{tab:t7}). Two orders: share of vertices at $d \in \{1,2\}$ at half conversion. Flat: share of
+decays ending at the flat torus.}
+\label{tab:lambda}
+\begin{ruledtabular}
+\begin{tabular}{lcccc}
+$\lambda$ & $\tau$, Eq.~(\ref{eq:tau}) & mean wait & two orders & flat \\
+\hline
+1.05 & 8330 & 9617--11915 & 1.000 & 100\% \\
+1.10 & 4844 & 4154--6626 & 0.998--1.000 & 98\% \\
+1.15 & 2788 & 2191--3834 & 0.996--0.999 & 97\% \\
+1.20 & 1570 & 1132--1716 & 0.996--0.998 & 93\% \\
+1.30 & 419 & 403--505 & 0.980--0.984 & 79\% \\
+1.35 & 183 & 280--350 & 0.948--0.963 & 46\% \\
+1.40 & 68 & not stuck & 0.911--0.924 & 31\% \\
+1.45 & 22 & not stuck & 0.799--0.837 & 7\% \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\begin{figure*}
+\includegraphics[width=\textwidth]{fig_lambda.pdf}
+\caption{The map along $\lambda$ at $g = 1.5$. (a) Mean waiting time where the torus is stuck, four sizes, with
+Eq.~(\ref{eq:tau}) (nothing fitted) and the 200-sweep rest; shaded, the $\lambda$ at which it is not stuck.
+(b) Share of vertices in one order or the other at half conversion, and share of decays ending at the flat
+torus, pooled over sizes.}
+\label{fig:lambda}
+\end{figure*}
 
 \section{Discussion}
 
 At $\lambda = 1$, the published model, the flat, curled and 4-cube tori are degenerate and the change
 releases nothing; the $N = 4p^2$ sizes recommended for the random-to-lattice problem admit neither of the
 latter two. The sharp change between two orders described here therefore belongs to the family on the
-$\lambda > 1$ side, [and the map of Sec.~\ref{sec:lambda} shows how it approaches $\lambda = 1$]. The same
+$\lambda > 1$ side; the map of Sec.~\ref{sec:lambda} shows it keeping its character down to $\lambda = 1.05$,
+where it is cleanest, with a release that shrinks as $4(\lambda - 1)$ and vanishes at the published value. The same
 questions can be asked at $\lambda = 1$ of regions stuck in a different discrete arrangement inside a
 curved background \cite{T24}: whether such a region is metastable, and whether it gives way by a front with a
 definite release. The tools used here (exact barrier counting, front tracking, sealed baths) apply

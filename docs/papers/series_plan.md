@@ -17,10 +17,11 @@ not hold. *Designed*: pre-registered or drafted, not yet run. *Idea*: the owner'
 direction curled is metastable and opens into flat space sharply: a memoryless start, one front, two orders
 side by side, an exact release, a local push of fixed size, one leftover of fixed size.
 
-**Status.** Established at λ = 1.25 (T7, T9, T10, T11); exact results for all λ (ground state, ladder,
-window, exit moves). The λ map (T8) is running; the analysis is written and tested.
+**Status.** Established at λ = 1.25 (T7, T9, T10, T11); exact results for all λ; the λ map (T8, O38) run and
+written into section V: sharp wherever the torus is stuck (1.05 to 1.35), edge between 1.35 and 1.40, verdict
+inconclusive by the letter for a stated reason (the memoryless-wait criterion was too tight).
 
-**Missing.** Section V from T8. Then the owner's review, then the endorsement request to Carlo
+**Missing.** Only the owner's review, then the endorsement request to Carlo
 (`docs/outreach/reply_draft_2026-09-23_second.md`).
 
 **Draft.** `docs/papers/curled_torus/paper.tex`, `paper.pdf`; review page

@@ -3,8 +3,8 @@
     python scripts/plot_paper_fig_lambda.py docs/papers/curled_torus/fig_lambda.pdf
 
 Reads results/t8_lam*.csv (and T7's t7b_lam125_n*.csv for lambda = 1.25, which T8 does not rerun).
-(a) mean waiting time against lambda for each size, with Eq. (2) (moves A and B, nothing fitted) and the
-    200-sweep resting stretch below which T7's waiting time cannot fall;
+(a) mean waiting time against lambda for each size where the tube is stuck (T8's definition), with Eq. (2)
+    (moves A and B, nothing fitted) and the 200-sweep resting stretch below which the waiting time cannot fall;
 (b) how each decay ended: the share of decays at the flat torus, and the share of vertices at d in {1, 2}
     at half conversion (the two orders side by side), per lambda, pooled over sizes.
 """
@@ -45,20 +45,23 @@ lams = sorted({l for l, _ in rows})
 for n in (64, 96, 144, 192):
     xs, ys = [], []
     for l in lams:
-        w = [float(r["waiting"]) for r in rows.get((l, n), []) if r["waiting"] not in ("", None) and r["reached"] and float(r["reached"]) >= 0.75]
-        if len(w) >= 10:
+        cell = rows.get((l, n), [])
+        f200 = [float(r["f_200"]) for r in cell if r.get("f_200", "") not in ("", None)]
+        stuck = (not f200) or sum(1 for x in f200 if x < 0.25) > len(f200) / 2   # T8's definition; T7 rows lack f_200
+        w = [float(r["waiting"]) for r in cell if r["waiting"] not in ("", None) and r["reached"] and float(r["reached"]) >= 0.75]
+        if stuck and len(w) >= 10:
             xs.append(l + (n - 120) / 12000.0)
             ys.append(np.mean(w))
     ax.plot(xs, ys, lw=0, marker=MARKERS[n], ms=4.5, color=COLORS[n], label="N = %d" % n)
 lx = np.linspace(1.03, 1.47, 200)
 ax.plot(lx, [tau(l) for l in lx], color=INK, lw=1.2, label="Eq. (2), nothing fitted")
 ax.axhline(200, color=INK2, lw=0.8, ls=":")
-ax.text(1.46, 230, "200-sweep rest", ha="right", va="bottom", fontsize=7, color=INK2)
+ax.text(1.03, 170, "200-sweep rest", ha="left", va="top", fontsize=7, color=INK2)
 ax.set_yscale("log")
 ax.set_xlabel("λ")
 ax.set_ylabel("mean waiting time (sweeps)")
 ax.set_title("(a) how long the curled torus lasts", fontsize=9, loc="left")
-ax.legend(frameon=False, fontsize=7)
+ax.legend(frameon=False, fontsize=7, loc="lower left", bbox_to_anchor=(0.28, 0.0))
 
 share_sheet, share_two, xl = [], [], []
 for l in lams:
@@ -73,11 +76,16 @@ for l in lams:
     share_two.append(np.mean(two) if two else float("nan"))
 bx.plot(xl, share_two, color="#2a78d6", marker="o", ms=4, lw=1.4, label="vertices in one order or the other at 50%")
 bx.plot(xl, share_sheet, color="#eb6834", marker="s", ms=4, lw=1.4, label="decays ending at the flat torus")
-bx.set_ylim(0.5, 1.03)
+bx.axvspan(1.375, 1.47, color="#e6e5e1", zorder=0)
+bx.text(1.42, 0.53, "not stuck", ha="center", fontsize=7, color=INK2)
+ax.axvspan(1.375, 1.47, color="#e6e5e1", zorder=0)
+bx.set_ylim(0.0, 1.03)
 bx.set_xlabel("λ")
 bx.set_ylabel("share")
 bx.set_title("(b) sharpness and completeness", fontsize=9, loc="left")
 bx.legend(frameon=False, fontsize=7, loc="lower left")
+bx.set_xlim(1.02, 1.47)
+ax.set_xlim(1.02, 1.47)
 fig.tight_layout()
 fig.savefig(out, dpi=220 if out.endswith(".png") else None)
 print("wrote", out, "lambdas", xl)

@@ -343,6 +343,17 @@ T7's protocol and its enacted amendments exactly (`scripts/run_tube_decay.py`, o
 
 Anything at exactly λ = 1, where there is no release. Anything at other couplings: g is fixed at 1.5 as in T7, and near λ = 1 a colder g would lengthen the waits beyond the cap. That X is a tube.
 
+
+#### Reading, 24 September 2026: INCONCLUSIVE by the letter; the change is sharp at every λ where the tube is stuck
+
+`python scripts/analyse_t8.py` (tests `tests/test_t8.py`); figure `docs/papers/curled_torus/fig_lambda.pdf`.
+
+**Per λ, by the rules as written.** 1.05, 1.15, 1.20: **sharp** at every size that passes its gates (1.20, N = 96 fails gate 3 on one decay). 1.10: **unread**, criterion (a) fails at N = 64 (CV 0.64) and N = 192 (1.36). 1.30: **unread**, (a) fails at N = 96, 144, 192 (0.65 to 0.67). 1.35: **unread**, gate 3 fails at every size (2 to 5 decays per size end in states whose energy matches none of the allowed ones) and (a) fails (0.37 to 0.62). 1.40, 1.45: **not metastable** (median f_200 0.28 to 1.12). λ = 1.25 is T7's TWO-STATE CHANGE, not rerun. **Verdict: INCONCLUSIVE.**
+
+**What holds everywhere the tube is stuck (1.05 to 1.35, every size):** predictions (b) and (c), the two orders side by side (95 to 100 % of vertices at d ∈ {1, 2} at half conversion) and one front (the largest converted piece 76 to 100 % of the converted vertices); the release exactly 4(λ − 1) wherever the decay reaches the flat torus. **The metastable edge lies between 1.35 and 1.40**; our prediction put it near 1.33 (2 (b), between 1.3 and 1.4: holds). Near λ = 1 every decay ends at the flat torus (100 % at 1.05); the share ending on a defected sheet rises with λ (13 % at 1.25 in T7b, the same protocol; 21 % at 1.30; 54 % at 1.35). The waiting-time law (ours, a check) holds within 25 % at 1.15 to 1.30 at most sizes and fails near λ = 1 (observed 1.15 to 1.43 times Eq. (2)) and at 1.35, where the mean wait is pressed against the 200-sweep floor.
+
+**A design weakness, owned.** Criterion (a) asks the coefficient of variation of thirty waiting times to lie in 0.7 to 1.3. For exponential waits its standard error at thirty decays is about 0.13 to 0.18, so the band is about ±2 standard errors, and across 28 cells several failures are expected by chance alone. It also interacts with the 200-sweep rest: where the mean wait is only a few times 200, the spread is compressed. **A repair was computed before being proposed** (the CV of wait − 200): it fixes λ = 1.30 at three sizes, overcorrects at N = 64 (1.54), still fails two sizes at 1.35, and leaves 1.10 unchanged, so **it changes no verdict and is not proposed.** The honest reading is that criterion (a) was too tight to be decisive at thirty decays per cell; (b), (c) and the release carry the result.
+
 ---
 
 ## T9. Bonfire or slush: the tube in a sealed box
