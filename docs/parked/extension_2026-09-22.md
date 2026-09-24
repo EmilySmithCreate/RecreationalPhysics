@@ -301,3 +301,27 @@ definite amount. A **discrete** scale symmetry would not conflict: the same patt
 sizes. Her loop already has that shape, since every burp is the same and each new space follows its parent's
 rules. A curiosity that touches the threes as well (general knowledge, not read by us): the Efimov effect,
 where three particles form an endless ladder of bound states, each larger than the last by a fixed factor.
+
+## The author's position, 24 September 2026: curving moves matter, not the other way round
+
+**Hers, in her words put in order.** Mass and energy curving spacetime is the opposite of how this hypothesis
+sees it. Spacetime curving moves matter. Spacetime wants to curve because symmetry in dimensional scale gives
+more arrangements. Perhaps the spatial dimensions need some aspect of mass in order to curve, so no matter
+means no curve.
+
+**What it touches (ours, unverified).**
+- The half "curving moves matter" is already Einstein's; the difference is what makes space curve. For
+  Einstein, mass-energy is the source. Here space has its own drive to curve, and matter is what lets it act.
+  That has the same shape as the burp: a change that is wanted but needs a trigger.
+- What it must still reproduce (claim 2): the curvature scales with the mass-energy present (twice the mass,
+  twice the pull), so the aspect of mass cannot be an on/off switch; curvature reaches into the empty space
+  around matter, which is how the Sun holds the Earth, and gravitational waves cross empty space; and empty
+  space is not quite flat (the accelerating expansion). So "no matter, no curve" has to mean "no matter,
+  nothing to start the curve", not "curve only where matter is".
+- What the model already says (exact, Q15 and T10): with interchangeable points, symmetry strongly favours
+  fully curled knots (a shattered state by about 10^29 at N = 160), but a single curled direction has fewer
+  symmetries than flat space (2N against 4N). Symmetry in the model pushes towards curling all the way into
+  knots, not towards the gentle curvature gravity needs.
+- The test it implies is T13 rung 3, "does matter curve space": plant a relic in a warm sheet with
+  interchangeable points, measure the curvature around it against the empty sheet, and check that it grows
+  with the relic's energy.
