@@ -863,6 +863,25 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   arrives at a jammed defective state rather than a curl. *Ours, unverified, and it is arithmetic rather
   than sampling, so it does not depend on any chain.*
 
+  **CORRECTION to this addendum, 2026-09-23, evening, and a rewording at the author's objection.** (1) **The
+  counts above include moves the chain never makes.** `run_move_census.py` enumerated every pair of edges,
+  including switches between points on opposite sides; `cqg.run_chain` only swaps partners between two
+  points of side 0, and `is_valid` does not check two-sidedness, so nothing refused them. Rerun with the
+  chain's moves only (`configs/move_census_chain.json`, `results/move_census_chain.csv`; the original file
+  stays): sheet 10 × 10 **0 add, 14 900 lose** (was 68 400); 12 × 12 0 / 34 128; tube 24 × 4 0 / 14 400; tube
+  36 × 4 0 / 35 424; melted 5 127 add, 5 377 lose. **Every qualitative statement survives**: no single move
+  adds a square to a perfect sheet or tube; the cheapest ways out cost 32 (sheet) and 12 (tube); out of a
+  melt the cheapest adding move is downhill by 75. Only the numbers of moves change. Found while tabulating
+  the tube's exit moves for the λ scan (PREREGISTRATION T8 draft), whose counts were corrected the same way.
+  (2) **"Order can only be built out of disorder" overreaches, and the author's objection is right**: order
+  can be built out of a different kind of order. What is exact is narrower: *a single move* out of a perfect
+  arrangement cannot add a square. One order is built out of another through a thin seam where squares are
+  briefly broken, and T7 measured that seam as thin (at half conversion 98.8 to 99.8 % of points belong to
+  one order or the other). The seam is made by the same rule as everything else; "disorder" is the wrong
+  word for it. So O20's structural reading becomes: energy put into space cannot fold it *in one step*; a
+  fold would have to run through a seam, as the tube's opening does in reverse, and whether it can is the
+  local-spark question (T14).
+
 - **O26 The author's first reply, and what it moves.** (2026-09-22, night; private email, paraphrased in
   `docs/outreach/correspondence_2026-09-22_trugenberger.md`; no run.) Three things bear on this file.
   **(1) Q3's cap is disputed by the author** (addendum in the table above). **(2) His current view of the
