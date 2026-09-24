@@ -292,3 +292,12 @@ released when the other two uncurl may be the Big Bang: all the energy and matte
 **The test it implies.** It needs the 3D version of the model (degree 6, a VISION decision under S1): a torus
 with all three directions curled, given one push, sealed. Do all three uncurl in a cascade, and is the energy
 split one third to two thirds?
+
+## The author's intuition, 24 September 2026: scale symmetry of reality's degrees of freedom feels important
+
+**Recorded as hers; not yet a claim.** *Ours, unverified:* a continuous scale symmetry (the same at every size)
+would conflict with her own claim 1, where X has its own scale, and with a first-order burp, which releases a
+definite amount. A **discrete** scale symmetry would not conflict: the same pattern repeating at a ladder of
+sizes. Her loop already has that shape, since every burp is the same and each new space follows its parent's
+rules. A curiosity that touches the threes as well (general knowledge, not read by us): the Efimov effect,
+where three particles form an endless ladder of bound states, each larger than the last by a fixed factor.
