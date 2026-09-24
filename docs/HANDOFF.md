@@ -72,6 +72,13 @@ number is carried into a claim about gravity.
   text say only λ = 1 is CQG; content from his private emails removed ("hybrid", the N = 4p² advice). The PDF
   was rebuilt with Tectonic (not installed system-wide; fetched into a session scratchpad). **Plan:** send the
   reply with the PDF, he endorses, submit to arXiv, then publish the web page linking to it.
+  **Revised the same afternoon after a reader's review (ASSUMPTIONS O42):** the dynamics is named wherever
+  kinetics appear (Introduction, Discussion); "the nucleation barrier" became the minimum energetic barrier to the
+  first exit, with κ as the rest of nucleation; Eq. (2)'s ordered-proposal count is explicit, with the twisted
+  same-energy family and the distant-edge exits it leaves out; labelled vs interchangeable has its own paragraph;
+  "however large" and "no coexistence temperature" were softened to what was measured; d(v) is defined as an order
+  parameter; a "why deform λ" paragraph; Fig. 2(c) survival panel and SE bars on Fig. 3(a); Table I's N = 192
+  rerun filled in; both barrier fits quoted. Title and the cow line kept. Now 7 pages.
 - **Web pages.** `/physics` on sidenerdapps.com is now the plain-language page
   (`docs/public/did-space-snap-open_v1.html` → `scripts/make_site_page.py` → `docs/public/site/physics/index.html`;
   Emily pastes it into the SideNerdMarketing repository, which deploys). Version 2 carries today's corrections.
@@ -100,6 +107,8 @@ number is carried into a claim about gravity.
 4. If not yet done: a cloud result checked bit for bit against the same config run on the laptop.
 5. The scrap race (does it freeze in as the box cools?), and the local-spark protocol (TASKS T14).
 6. `replica_ids` for the tempering and sweep runners, with the seeding test, before large cloud runs.
+7. The long tail at λ = 1.05 (O42, unexplained): 3 of 200 waits near 80,000 sweeps where an exponential gives 0.19.
+   Many first exits at λ = 1.05 (the T22 kernel, a few hundred replicas) would say whether it recurs. Pre-register.
 
 ## 6. Corrections that must not be undone
 

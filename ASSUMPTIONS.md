@@ -1111,6 +1111,56 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     the ladder are 8 (three curled), 8 (two curled) and 43 (one curled). The release of one rung could pay the next
     wall in a large enough system (N ≳ 110 for the last), which is the energetic room for her cascade. Whether the
     released energy stays where the next wall is, is a question about the dynamics.
+- **O42 Paper 1 after a reader's review: Eq. (2) made explicit, the waits tested as a whole distribution, and one
+  unexplained tail.** (2026-09-24; NOT PRE-REGISTERED, committed data, no new simulation;
+  `scripts/exact_torus_level.py` (exact) and `scripts/analyse_paper_stats.py`, tested in `tests/test_paper_stats.py`.)
+  A reader asked for the dynamics to be named whenever kinetics are discussed, for the counting behind Eq. (2) to be
+  unambiguous, and for "memoryless" and "uniform" to rest on named tests. What checking that turned up:
+  - **Eq. (2)'s factor of two, confirmed.** The chain draws an ordered pair of edges, (2N)² = 4N² proposals, and
+    each switch arises from two of them. From the perfect 4 × L torus there are exactly 3N distinct A switches (6N
+    ordered proposals, 3 per sweep) and 2N B switches (2 per sweep), at N = 32, 48, 64. Q13 already said 6N; the
+    paper's "3N moves" read as proposals and invited 2N · 3N/4N² = 1.5.
+  - **The torus's energy is a family, not one state.** N/2 switches change neither S nor X. Each joins two
+    neighbouring columns at opposite points, a reflection of the square: the torus is twisted globally and is no
+    longer isomorphic to the perfect one (0 of 32 neutral products are, at N = 64), but every neighbourhood is
+    unchanged. The chain wanders this family while it waits (0.5 neutral offers per sweep against 3e^(−12/g) exits).
+    Every arrangement met along a 60-step walk has exactly the perfect torus's 3N A, 2N B and N/2 neutral switches,
+    so Eq. (2) holds across the family. The walk met 3 isomorphism classes, with 2N or N side-preserving symmetries;
+    every arrangement one move A away has 2.
+  - **What Eq. (2) leaves out, counted.** Every other exit costs at least 10 more than the cheaper of A and B for
+    1.05 ≤ λ ≤ 1.45. But switches of two distant edges (ΔS = −4, ΔX = −8, cost 64 − 32λ) number 23N, 39N, 63N, 87N
+    distinct at N = 64, 96, 144, 192, so they are offered in proportion to N per sweep. They add at most 1.7 % to
+    the exit rate at g = 1.5 (λ = 1.35, N = 192), and 16 % at g = 2.5, N = 144, the hottest Arrhenius point, whose
+    measured 29 ± 6 sits between Eq. (2)'s 31.2 and the full count's 26.9. **This bears on "The wall measured
+    against temperature" (section D):** its weighted ratio 0.88 ± 0.06, "worth watching", is against move A alone;
+    move B and then these extra exits both push it the way it went, so no route cheaper than A is needed to explain
+    it. Not refitted.
+  - **The N-independence of the waiting time is a property of the proposal**, not of the barrier: the chain draws
+    its edges from the whole graph, so a region is offered a way out ~1/N as often. A dynamics that updated each
+    region at its own rate would give a wait falling as 1/N. This is Q13's cancellation read the other way, and the
+    paper now says so.
+  - **Waits against an exponential (bootstrap KS on each time over its condition's mean, 10,000 sets).** First
+    exits, 18 conditions, 432 times: D = 0.035, p = 0.53 (2 of 18 singly below 0.05, both T22 at λ = 1.05). T22
+    against Eq. (2)'s own mean, nothing estimated: 240 times, p = 0.85. Pre-registered decay waits beyond the first
+    check (W − 205, W > 205): all of T7 and T8, 865 times, p = 0.03, with an excess of short residuals (7.1 % below
+    0.05 of the mean against 4.9 %). **Cause, identified:** a torus that began converting during the 200-sweep watch
+    widens the resting spread that sets the threshold and is detected late; T8 records f_200, and 56 such waits
+    pile up near zero. T8 without them, 24 cells, 589 times: p = 0.55. T7 predates f_200 and alone gives
+    p < 10⁻³ from sweep 205, fading to 0.012, 0.094 and 0.66 from 255, 305 and 405 (the whole scan is reported,
+    not the passing end of it).
+  - **Unexplained: a long tail at λ = 1.05.** 3 of 200 waits there exceed 75,000 sweeps (80,985 and 80,174 among
+    T22's 80 first exits; 78,205 among T8's 120 decays, in the N = 96 cell, whose mean it lifts from 9,629 to
+    11,915); exponentials with the measured means give 0.19, three or more with probability 10⁻³. Against Eq. (2)'s
+    mean with nothing estimated, both T22 cells still pass the plain KS test (p = 0.63, 0.27), and without their
+    outlier they sit on it (8,358 and 7,485 against 8,330). The exit counts are the same everywhere the walk went
+    in the torus's family, so a stickier member of it is not the explanation as far as we have looked. Chance, or
+    something not identified that slows some runs; open. It accounts for part, not all,
+    of the map's excess at λ = 1.05 (the other cells stay 3 to 27 % above without their largest wait).
+  - **Relic position, named test.** Rotating each T11 relic through every column with the start held fixed: mean
+    distance 4.17 against 4.00 (N = 64, 36 runs, p = 0.67) and 6.38 against 6.00 (N = 96, 28 runs, p = 0.59).
+  - **Paper 1 also corrected on the way:** Table 1's N = 192 rerun (1428 / 1.19 / 0.995 / 0.92) had been left as
+    "—" from O13's in-progress table; and the paper quoted only the N = 144 barrier fit (12.1 ± 0.9), omitting
+    N = 64's 14.4 ± 1.0. Both are now in.
 
 ## Provenance
 

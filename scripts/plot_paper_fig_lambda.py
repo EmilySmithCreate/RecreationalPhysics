@@ -3,7 +3,8 @@
     python scripts/plot_paper_fig_lambda.py docs/papers/curled_torus/fig_lambda.pdf
 
 Reads results/t8_lam*.csv (and T7's t7b_lam125_n*.csv for lambda = 1.25, which T8 does not rerun).
-(a) mean waiting time against lambda for each size where the tube is stuck (T8's definition), with Eq. (2)
+(a) mean waiting time against lambda for each size where the tube is stuck (T8's definition), with one
+    standard error of the mean (added 2026-09-24 at a reader's request), with Eq. (2)
     (moves A and B, nothing fitted), the same prediction as it would be recorded given the 200-sweep watch
     (205 + tau exp(-205/tau), also nothing fitted), and the 200-sweep line;
 (b) how each decay ended: the share of decays at the flat torus, and the share of vertices at d in {1, 2}
@@ -44,7 +45,7 @@ for a in (ax, bx):
 
 lams = sorted({l for l, _ in rows})
 for n in (64, 96, 144, 192):
-    xs, ys = [], []
+    xs, ys, es = [], [], []
     for l in lams:
         cell = rows.get((l, n), [])
         f200 = [float(r["f_200"]) for r in cell if r.get("f_200", "") not in ("", None)]
@@ -53,7 +54,9 @@ for n in (64, 96, 144, 192):
         if stuck and len(w) >= 10:
             xs.append(l + (n - 120) / 12000.0)
             ys.append(np.mean(w))
-    ax.plot(xs, ys, lw=0, marker=MARKERS[n], ms=4.5, color=COLORS[n], label="N = %d" % n)
+            es.append(np.std(w, ddof=1) / math.sqrt(len(w)))     # one standard error of the mean
+    ax.errorbar(xs, ys, yerr=es, lw=0, elinewidth=0.9, capsize=1.5, marker=MARKERS[n], ms=4.5, color=COLORS[n],
+                label="N = %d" % n)
 lx = np.linspace(1.03, 1.47, 200)
 ax.plot(lx, [tau(l) for l in lx], color=INK, lw=1.2, label="Eq. (2), nothing fitted")
 # The waiting time cannot be recorded before the 200-sweep watch ends (first check at 205): for exponential
