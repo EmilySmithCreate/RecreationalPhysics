@@ -1079,6 +1079,17 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   λ = 1 (O38), and the direct measurement does not reproduce that excess at N = 64 and 96. Our reading is that the
   excess was statistical, 1 to 1.4 standard errors per cell. Our quantitative prediction failed (a share of 0.70
   to 0.87 at 1.05, and E ≈ 1 at 1.25).
+- **O40 A gas of fully curled knots is not stuck at any λ > 1 in 2D (exact).** (2026-09-24;
+  `scripts/knot_gas_exits.py`.) Asked before pre-registering the author's rule that all directions curl together:
+  every single move out of a gas of 4-cubes (k = 2 and 4, N = 32 and 64) was listed and priced. There are two
+  kinds, and the rates per sweep are the same at both sizes. A move **inside one knot** has ΔS = −2 and ΔX = −8,
+  costs 32 − 32λ, and is offered 3 times per sweep: it is **downhill for every λ > 1** (−8 at λ = 1.25). A move
+  **joining two knots** has ΔS = −6 and ΔX = −20, costs 96 − 80λ (−4 at 1.25; downhill above λ = 1.2), and is
+  offered 32 and 96 times per sweep at the two sizes. So above λ = 1 the fully curled state has no wall at all. It
+  falls apart everywhere at once, with no waiting and no seed: spinodal, not a burp. It is stuck only below λ = 1,
+  where it is the ground state. **In the 2D model, the only curled state that is stuck for now above λ = 1 is the
+  partial one**, the curled torus, with one direction curled and one open: the state the author's rule forbids.
+  Whether the same holds in 3D is the first exact question for the six-link model (VISION Update 22).
 
 ## Provenance
 
