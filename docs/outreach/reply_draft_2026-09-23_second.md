@@ -2,11 +2,15 @@
 
 **For Emily, not for the letter.** Answers his third note (paraphrased in
 `correspondence_2026-09-22_trugenberger.md`). Attach picture 5
-(`for_carlo_2026-09-22/picture5_N196_484_676_his_protocol_vs_replica_exchange.png`). The paragraph marked
-**[RESULTS]** is filled in when T16 finishes, with a picture 6; **do not send before then**, so the letter
-promises nothing. Three things are your call: the collaboration paragraph (its condition is yours, and
-the wording should be too), whether he may show the plots (he offered full credit), and whether the
-correction in paragraph 2 stays as blunt as it is (I recommend it does).
+(`for_carlo_2026-09-22/picture5_N196_484_676_his_protocol_vs_replica_exchange.png`) and picture 6
+(`for_carlo_2026-09-22/picture6_correlation_length_and_susceptibility.png`). **The results paragraph is now
+filled in (T16, PREREGISTRATION reading of 23 September, night), and it is not the result he wanted for
+his talk**: no divergent tendency, correlations one or two steps long at every coupling, a susceptibility
+peak that does not grow with N. Four things are your call: the collaboration paragraph (its condition is
+yours, and the wording should be too), whether he may show the plots (he offered full credit; he may not
+want to now), whether the correction in paragraph 2 stays as blunt as it is (I recommend it does), and
+the proposed T16 amendment (the swap-rate ceiling), which changes no verdict and is not mentioned in the
+letter beyond one clause.
 
 ---
 
@@ -18,21 +22,36 @@ and the analysis with Claude (Anthropic's AI), which I direct and check; every n
 independent calculation before any result from it is trusted. You mentioned your newest code was
 written with Claude too.
 
-**1. The correlation length, for your talk.** Yes, gladly. It is running now, defined exactly as in Sec. 4
-of the 2019 paper: the field on a vertex is the average of (squares on the edge)/2 over its four edges;
-C(r) is the correlation of its fluctuations at graph distance r, divided by the variance of the edge
-field; ξ = −⟨r / log C(r)⟩, divided by the diameter. The paper leaves three details open, and I fixed them
-before any run: the average is over the distances where 0 < C(r) < 1; a perfect lattice, which has no
-fluctuations, is skipped and counted; pairs in different pieces are ignored. I also record the
-susceptibility N·var(S/N). Two protocols: replica exchange at N = 36, 100 and 196 (p = 3, 5, 7), where it
-mixes, and your procedure, cooling and heating, at N = 196, 484 and 676. The 484 and 676 curves are read
-only at couplings where cooling and heating agree, which is where both are at equilibrium.
+**1. The correlation length, for your talk.** I ran it, defined exactly as in Sec. 4 of the 2019 paper:
+the field on a vertex is the average of (squares on the edge)/2 over its four edges; C(r) is the
+correlation of its fluctuations at graph distance r, divided by the variance of the edge field;
+ξ = −⟨r / log C(r)⟩, divided by the diameter. The paper leaves three details open, and I fixed them before
+any run: the average is over the distances where 0 < C(r) < 1; a perfect lattice, which has no
+fluctuations, is skipped and counted; pairs in different pieces are ignored. I also recorded the
+susceptibility N·var(S/N). Two protocols: your procedure, cooling and heating, at N = 196, 484 and 676,
+read only at couplings where cooling and heating agree; and replica exchange at N = 196. (It ran at 36 and
+100 too, but a check I set in advance on how often the copies swap turned out too strict for the smaller
+sizes, so I leave those out.)
 
-**[RESULTS: filled in from T16 when it finishes; picture 6.]**
+What came out is in picture 6, and it does not show what Fig. 9a shows, so I will say it plainly.
 
-You are welcome to show these plots, with the sizes and protocols stated. One caution you will know
-better than I do: Christy Kelly's thesis warns that correlation lengths may not be well defined in this
-model, since the diameters are short; at our sizes ξ is read from only 5 to 26 distances.
+- **The correlation reaches one or two steps, at every coupling and every size.** C(1) is 0.1 to 0.2, C(2)
+  is 0.01 to 0.04, and beyond that C(r) is zero to within about 0.01, from g = 12 down to 1.5 and from
+  N = 196 to 676. It does not reach further near the transition.
+- **The susceptibility peaks at about 0.18 at every size**: 0.183 at N = 196, 0.181 at 484, 0.180 at 676.
+  Its peak moves to lower g as N grows, as the curve does, but it does not get higher.
+- **ξ / diameter, computed by the formula, shows spikes at single couplings and no trend with N.** Its
+  largest values come from distances near the diameter, where there are few pairs and C(r) is noisy, and
+  from snapshots in which C(r) at some distance is just below 1, where −r / log C runs away. That seems to
+  be the difficulty Christy Kelly's thesis warns about.
+
+So with the definition as I read it, and at these sizes, I cannot reproduce a divergent tendency. What I
+see looks like a smooth crossover in which nothing grows with N, which is neither the signature of a
+continuous transition nor that of a first-order one, and larger N could change that. If your code
+computed ξ differently (a fit of C(r) to exp(−r/ξ), only small distances, a different normalisation, or
+an average at fixed pairs of vertices over the run), tell me: every C(r) curve is stored, so it can be
+computed your way quickly. You are welcome to show any of these plots, with the sizes and
+protocols stated.
 
 **2. Can replica exchange prove there is no hysteresis?** Partly, and I have to correct something I told
 you. Picture 5 shows all three sizes, now with replica exchange started both from random graphs and from

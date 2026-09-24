@@ -15,3 +15,4 @@ pictures and paste or attach the table; `email_reply.txt` is the letter as draft
 
 When the N = 484 and 676 runs finish (PREREGISTRATION T13), their curves go in a second folder for the next mail.
 | `picture5_N196_484_676_his_protocol_vs_replica_exchange.png` | N = 196, 484, 676: his protocol (both legs) beside replica exchange from both starts; the lattice-started runs, which never converged, are drawn so that the window below g ≈ 3.2 where the starts disagree is visible (`scripts/plot_t13_three_sizes.py`) | picture 5, second reply (`../reply_draft_2026-09-23_second.md`, not yet sent) |
+| `picture6_correlation_length_and_susceptibility.png` | T16, his request: C(r) at several couplings (N = 676), the susceptibility and ξ / diameter by Eq. (4.15) of the 2019 paper against g, his procedure at 196, 484, 676 and replica exchange at 196, only at couplings that are read (`scripts/plot_t16_correlation.py`) | picture 6, second reply |

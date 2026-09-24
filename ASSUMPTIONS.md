@@ -1010,6 +1010,17 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   wrong assumption about an 8 × 8 sheet, hidden by a truncated test log; the gate at 12 × 12 was never
   in doubt.
 
+- **O31 The correlation length of [KTB19] Fig. 9a is not reproduced; nothing in the fluctuations grows
+  with N.** (2026-09-23, night; PREREGISTRATION T16, a measurement at the model author's request,
+  exploratory with respect to the hypothesis.) Eq. (4.15) as written (Q19), his procedure at N = 196, 484,
+  676 and replica exchange at 196: **NONE** by the pre-registered reading. C(r) falls to about zero within
+  two steps at every coupling from g = 12 to 1.5 and every size; the susceptibility N var(S/N) peaks at
+  0.18 at every size while its position moves down with N; ξ / diameter by the formula is dominated by
+  distances near the diameter and by snapshots with C(r) just below 1, which is Kelly's warning seen in
+  data. Replica exchange at 36 and 100 fails the swap-rate ceiling the assistant copied from T13; dropping
+  it (proposed, not enacted) changes no verdict. *Ours, unverified:* a smooth crossover at these sizes,
+  neither the continuous nor the first-order signature.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

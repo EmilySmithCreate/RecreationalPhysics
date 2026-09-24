@@ -270,6 +270,7 @@ The twelve replays (`configs/t7d_lam125_n*.json`) reproduced their originals exa
 
 To be written before it runs. It may reuse the criteria above, and if it does it will say so explicitly rather than restating them.
 
+
 ---
 
 ## T9. Bonfire or slush: the tube in a sealed box
@@ -875,3 +876,19 @@ Per row (size, replica, protocol, leg, coupling): φ; the susceptibility χ = N 
 ### What this cannot show
 
 The order of the transition: a correlation length that grows over three sizes is what a continuous transition predicts and does not exclude a weak first-order one, and three sizes fit no exponent. Anything below g ≈ 3.2 at 484 and 676 on the heating side, where T13's samplers do not mix. Anything about the tube.
+
+#### Reading, 23 September 2026, night: replica exchange readable at one size only; his procedure NONE
+
+`python scripts/analyse_t16.py` (rules as pre-registered; tests in `tests/test_t16.py`); figure `docs/figures/t16_correlation.png`.
+
+**Protocol E gate: N = 196 passes; N = 36 and 100 fail, on the swap-rate ceiling only.** Round trips 529 to 626 (N = 36) and 44 to 60 (N = 100), far above the gate of 5, but swap rates reach 0.889 and 0.689 against the ceiling of 0.6. N = 196: 9 to 13 round trips, swap rates 0.195 to 0.577. **The fault is the assistant's drafting:** the ceiling was copied from T13, where each size had its own ladder, and here one ladder serves three sizes, so the smaller ones swap more than they need to. A high swap rate costs efficiency, not correctness. **Proposed amendment, not enacted (the owner's decision): drop the ceiling.** What it would return, computed before any decision: at N = 36 and 100, Eq. (4.15) runs away to 10^10 to 10^12 at several rungs (single snapshots in which C(r) is just below 1 at some distance), so the peak heights would fall with N and the reading would be NONE, as it is for P. **The amendment changes no verdict.** With one readable size, E's tendency is NOT READABLE.
+
+**Protocol P, read where its legs agree (26, 26 and 27 of 40 couplings at N = 196, 484, 676): NONE.** Peaks of ξ / diameter: 0.645 ± 0.174 at g = 8.71, 1.339 ± 0.536 at g = 8.71, 1.170 ± 0.844 at g = 1.58 (half its snapshots skipped, the lattice). Not rising at each step, and the largest minus the smallest is 0.525 against 2σ = 1.724.
+
+**Susceptibility.** Peaks 0.183 (g = 6.33), 0.181 (g = 4.60), 0.180 (g = 4.60) for P at 196, 484, 676; 0.183 (g = 7.21) for E at 196.
+
+**Our expectation, against the result.** χ peaks near the crossover: held (peaks at g ≈ 6.3, 4.6, 4.6 against crossovers 5.9, 4.3, 3.9). χ's peak height grows with N: **failed**, flat at 0.18 across a size range of 3.4. ξ noisy: held.
+
+**Exploratory, and labelled so because it is not among the reading rules.** (1) The averaged C(r) is 0.10 to 0.23 at r = 1, 0.01 to 0.04 at r = 2, and within about ±0.01 of zero beyond, at every coupling from g = 12 to 1.5 and at every size; it does not reach further near the crossover. (2) The largest contributions to Eq. (4.15) come from distances near the diameter, where few pairs exist (e.g. C(8) = 0.22 at N = 196, g = 9), and from snapshots in which C(r) is just below 1; the formula measures those, not the decay of C(r). (3) χ's peak moves to lower g with N, as the crossover does, while its height stays put.
+
+**What this says (ours, unverified).** At these sizes nothing in the fluctuations grows with N at the crossover: correlations stay one to two steps long and the susceptibility peak keeps its height. That is neither the continuous signature (χ and ξ growing) nor the first-order one (χ's peak growing like N). It looks like a smooth crossover at these sizes, and it cannot rule out either kind of transition at larger N. **It does not reproduce the divergent tendency of [KTB19] Fig. 9a**, with that paper's definition as we read it (ASSUMPTIONS Q19); whether that paper computed ξ differently is a question for its authors.
