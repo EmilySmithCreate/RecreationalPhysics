@@ -4,7 +4,7 @@
 whose it is: **the author's** (Emily Smith's hypothesis), **measured** (a pre-registered test in the public
 repository, with its verdict), **exact** (arithmetic or complete enumeration), or **ours** (the analysis
 drafted with Claude, unreviewed by a physicist). Nothing here has yet been read by a physicist (the author's
-own bar, S5, is not met).*
+own bar, S5, is not met; paper 1 was submitted to arXiv on 25 September 2026 with the model's author's endorsement).*
 
 ---
 
@@ -28,6 +28,10 @@ makes them distinguishable.
 Newest first. Each entry says which results came in and which pieces they touched; every piece's row carries the
 date of its last change in its status cell.
 
+- **25 Sep 2026, afternoon.** Paper 1 submitted to arXiv with the model's author's endorsement (S5: the door is open).
+  The author's direction: other models with loop and exchange rules; gravity as the target, at least directionally, at
+  one λ; the four-, six- and eight-link runs as groundwork. Exact for piece 7: in six links at fixed wiring no pull at a
+  distance from energy or counting, as in four; the stable six-link relic not yet shown to exist. Two design briefs.
 - **25 Sep 2026, midday.** The author's black-hole mechanism recorded (piece 8); two exact results follow it: the
   nucleation excess of each successive fold halves (piece 8), and the counting drive to curve exists, is worth a quarter
   of a unit per point at 512 points, appears only at full curling and beats the curling cost only within 2% of λ = 1

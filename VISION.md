@@ -387,6 +387,30 @@ itself, even if the activation only hit one direction, because of how space is s
 - **Time.** The model cannot say which direction is time, so "does it collapse time first" is not a question it can be
   asked; the pattern in which directions fold is.
 
+Update 28 (2026-09-25, afternoon): **S5 moves; three decisions of the author's; and what the four-, six- and eight-link
+runs are for.** Her words, put in order.
+
+- **S5.** Paper 1 has been submitted to arXiv and should appear within days. The model's author endorsed it. Her
+  expectation is that he will read it when he can, within a couple of weeks, and respond. Until then the pages say: the
+  door is open, the paper is submitted with his endorsement, and no physicist has yet read the record. Nothing is sent to
+  prompt him.
+- **DECISION: other models.** "We cannot just keep using Trugenberger's models. We need to start using other models, get
+  more deeply into loop and exchange rules." Her framing of the work so far: "these experiments are helping us understand
+  the mechanics of folding and unfolding, so that we build that model in a way that is likely to be successful, based on
+  what we know about the relationships between four, six and eight links at various λ." *Ours:* the (D, λ) map
+  (Update 26; `docs/papers/series_plan.md`) is therefore the specification the new model has to meet or beat; a design
+  brief for loop and exchange rules is `docs/design/loop_exchange_brief.md`, with candidate rules for her to choose
+  among under S1. Nothing is built until she chooses.
+- **DECISION: gravity is the target, and one λ is enough.** "I really think we can get our model to output the measures
+  of gravity, at least directionally; and if we get a little closer, we can invest more money and compute. It does not
+  have to work every way; it has to show at one measure of λ." And the prerequisite she names: "we have to define how
+  many dimensions and degrees of freedom we are working with, so that we can do those other calculations and return
+  values that are close to the measured results." *Ours:* the definitions, the observable (the average pull between two
+  relics against their separation: its sign, then its shape, then its universality), the targets it is compared with, the
+  protocol and the compute estimate are `docs/design/gravity_brief.md`. What is exact today (O56): at fixed wiring the
+  six-link space behaves as the four-link did, no pull at a distance from energy or counting; and the stable relic the
+  pull would act on has not been shown to exist in six links, which is the first thing the brief asks for.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

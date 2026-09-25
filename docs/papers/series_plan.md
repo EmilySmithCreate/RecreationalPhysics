@@ -352,3 +352,14 @@ energy; if it exists in reality it is an ingredient this family lacks, which is 
 - **The six-link companion, drafted:** `docs/papers/six_links/paper.tex` (O41, O49, O50, T32, T30, the gas; the
   reproduction gate as its own section; the eight-link section left for T33).
 - None has a PDF (Tectonic is not installed system-wide); all are American-spelled; none has been read by the owner.
+
+### 25 September, afternoon: S5 moves; the owner's direction
+
+- **Paper 1 submitted to arXiv with the model's author's endorsement** (the owner's report). His reading is awaited, not
+  prompted.
+- **The owner's direction** (VISION Update 28): other models with loop and exchange rules (`docs/design/loop_exchange_brief.md`);
+  gravity as the target, at least directionally, at one λ (`docs/design/gravity_brief.md`); the (D, λ) map is groundwork for
+  the new model.
+- **Exact today (O56):** the one-switch curled column in six-link flat space is not a relic (120 units, not a dip); at fixed
+  wiring there is no pull at a distance from energy or counting, as in two dimensions. The stable six-link relic is the
+  first thing the gravity test needs, and it is not yet shown to exist.

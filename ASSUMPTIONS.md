@@ -1359,6 +1359,19 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   constant and the energy per cube is constant, so the crossover λ does not move with N in the gas; for connected
   arrangements it is not computed. *Ours, exact; unreviewed.*
 
+- **O56 Six links, exact: the one-switch curled column is not a relic, and two of them pull on each other neither by
+  energy nor by counting except at contact and at symmetric placements.** (2026-09-25; `scripts/exact_relic_d.py`; flat
+  8 × 8 × 8 at λ = 1.02.) The switch that closes a line of four points into a 4-cycle along one axis costs 120.5 above
+  flat space, not the 24λ − 16 of the four-link relic, because it loses squares rather than adding surplus ones; it is not
+  a dip (one move out is downhill by 0.32); it carries 16 symmetries against flat space's 12,288. Two such objects: energy
+  exactly additive at every separation except contact along y or z (an attraction of 64, the shared squares) and the
+  degenerate placement four steps along x (the two switches coincide); symmetry count 8 at generic separations, 16 at
+  exactly opposite, 32 along the column's own axis, 4 on a diagonal. So at fixed wiring, three dimensions repeat O22 and
+  O32: no force at a distance from the energy, and from counting only a preference for symmetric placements. **The stable
+  six-link relic, a curled object that is a dip inside flat space, has not been shown to exist**; the four-link one costs
+  14 and is a dip, and its six-link analog, if there is one, needs more than one switch. T34's saved end states are the
+  first place to look; a search over two- and three-switch constructions is the exact alternative. *Ours, exact.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

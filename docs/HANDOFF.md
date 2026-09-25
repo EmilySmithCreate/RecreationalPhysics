@@ -102,6 +102,9 @@ number is carried into a claim about gravity.
   Eryk Kopczyński; RogueViz may produce one), to predict its lifetime at λ = 1. Allotropes wait until after his
   work on the order of the transition. **Not yet asked:** Gate C's question (O43: [T22] Fig. 3's protocol,
   moves and weight). Keep it for his reply, one question at a time.
+- **S5, 25 September (the owner's report):** paper 1 has been submitted to arXiv, the model's author having endorsed it;
+  it should appear within days, and she expects him to read it and respond within a couple of weeks. Do not prompt him.
+  The pages say the door is open and the record is not yet read by a physicist.
 - **Paper 1** (`docs/papers/curled_torus/`): retitled "…in a graph model of emergent geometry"; abstract and
   text say only λ = 1 is CQG; content from his private emails removed ("hybrid", the N = 4p² advice). The PDF
   was rebuilt with Tectonic (not installed system-wide; fetched into a session scratchpad). **Plan:** send the
@@ -145,6 +148,10 @@ number is carried into a claim about gravity.
 
 ## 5. Natural next lines (pre-register before running)
 
+0. **The owner's direction, 25 September afternoon (VISION Update 28):** other models with loop and exchange rules
+   (`docs/design/loop_exchange_brief.md`, candidate rules for her to choose under S1; nothing built); gravity as the
+   target, at least directionally, at one λ (`docs/design/gravity_brief.md`: definitions, observable, targets, protocol,
+   what is missing). The four-, six- and eight-link runs are groundwork for the new model.
 0. **Papers:** five drafts exist (`curled_torus`, `relic`, `fertile_window`, `black_hole`, `six_links`), all in line
    with the record as of 25 September morning, none with a PDF, none read by the owner. The six-link one has an empty
    eight-link section waiting for T33. The programme page now carries a dated change log and a per-piece date; keep both
