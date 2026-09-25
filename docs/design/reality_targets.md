@@ -53,6 +53,11 @@ Earlier predictions stay on the record as written.
   the rest for more burps of the red kind. Model counterpart: the largest share of a burp flat three-direction space can
   absorb without melting (piece 4, T9, T18), to be computed against the burp's release (VISION Update 30).
 
+- **Targets 3 and 5, clarified (17:50 ET):** the red direction's release is 5 % of the universe's measured energy;
+  dark matter and dark energy are the releases of the other two directions; what remains returns to the black hole, to
+  start another burp or wait. Dark matter is therefore not the scrap and not the allotrope (Update 16 revised). The 17:17
+  reading (an absorption limit of 5 % of a burp) was the assistant's and is withdrawn (VISION Update 30).
+
 ## Questions for the owner (answer by voice is fine)
 
 For each, in a sentence: how do you expect reality to work, and if the model does not show it, what is it missing?

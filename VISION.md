@@ -498,6 +498,20 @@ there is a factor, or a couple of constants, related to the interconnectedness o
   against the burp's own release per point. If that share came out near 5 % without being tuned, it would be the first
   measured number in the programme to land on an observed one. It also changes the ordering problem raised with the
   triad: red need not release the least; the new space may only be able to accept a small part of what red offers.
+- **The author's clarification, 17:50 ET, which corrects the assistant's reading of her previous answer and revises Update
+  16.** Her words, put in order: it is not 5 % of the burp; the amount the burp's red direction can deliver is 5 % of the
+  measured energy in the universe. Dark matter and dark energy are the energy released by the other two space directions
+  after our red one. What remains is returned to the black hole, where it can start another burp or wait. And that stops
+  dark matter from being the allotrope: the allotrope has to be something else. **What this changes:** (a) the reading
+  recorded at 17:17 ET (a new space that can absorb only 5 % of a burp) is the assistant's and is withdrawn; her claim is
+  that the three directions' releases stand in the proportions of today's budget, ordinary : dark matter : dark energy
+  about 5 : 27 : 68. (b) **Update 16's identification of dark matter with the leftover of the change is replaced**: dark
+  matter is a direction's release, not a scrap, and not [T24]'s allotrope; what the scraps (paper 2) and the allotropes
+  (piece 12) are becomes open again. *Ours, unverified:* in the model a direction's release is set by its curling cost,
+  4(λ − 1) per point, so the claim needs three unequal curling costs in the ratio of about 1 : 5.4 : 14, with red, the
+  smallest, opening first; in the present energy the first direction to open is the one with the largest cost, so either
+  the triad's own terms reverse that ordering or the push reaches red by a route other than cheapness. Choosing three costs
+  to match three numbers would be a fit; the claim becomes a prediction only if the model's requirements pin the costs.
 
 ## The target ("the spot")
 
