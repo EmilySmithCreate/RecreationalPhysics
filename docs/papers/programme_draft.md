@@ -28,6 +28,10 @@ makes them distinguishable.
 Newest first. Each entry says which results came in and which pieces they touched; every piece's row carries the
 date of its last change in its status cell.
 
+- **25 Sep 2026, 14:32 ET.** The model author's smallest allotrope built as a finite graph (O67): at λ = 1 no energy
+  barrier holds it; its lifetime at finite temperature launched (T43, piece 12); his text and caption disagree on more
+  or fewer squares. Damaged six-link flat space heals completely when cooled: no relic (O66; pieces 7, 8). The five
+  unsubmitted drafts corrected after a referee reading; paper 1's checked corrections listed for the author.
 - **25 Sep 2026, 13:33 ET.** A referee reading of the drafts found three errors in our record: T30's tori read NEVER
   OPENS once the gas is reported separately as registered (piece 11); T26 has 27 cells, one healed (piece 8); T27's melt
   count was one row (134 of 144 melted). No verdict on the author's predictions changes (O64).
