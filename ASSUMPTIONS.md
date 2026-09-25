@@ -1133,7 +1133,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     which is not stated; a short anneal lags on cooling and can make a crossover look steeper; (b) the axis or the
     energy normalisation at D = 3; our energy is derived (Q21), not quoted; (c) whether [T22]'s graphs are
     bipartite (its hot end at 1.09 fits our bipartite floor, not a non-bipartite one near half that).
-  - **By rule 2 the six-link track stops here:** no D = 3 result is interpreted until this is resolved. The long
+  - **By rule 2 the six-link track stops here:** no D = 3 result is interpreted until this is resolved. *(Set aside
+    the same night by the owner's decision, VISION Update 24: proceed with the six-link work now, reproduction later.)* The long
     protocol P2 (unscaled, 10,000 + 5,000 sweeps) finished the same evening and fails the same way as P1:
     nearly perfect order (11.5 to 11.7 squares per vertex) and frozen at every coupling up to 4, with its legs
     agreeing at 1 of 72 couplings. The 2D work is unaffected: at four links `cqg_d`
