@@ -13,9 +13,10 @@ own bar, S5, is not met; paper 1 was submitted to arXiv on 25 September 2026 wit
 Our spacetime is one settled arrangement of something deeper, X: a specific, relatively stable arrangement
 with its own dimensions, curled where ours are open. X was stable for now, not for ever. A push started the
 change in one small part of X; it spread as a front, X opened into space, and the change came out as a burp: a fixed
-release of energy. X's curled directions open in turn, like a triad (red, green and blue): the direction the
-push hits, red, releases ordinary matter and radiation, the Big Bang's energy; the other two release dark
-matter and dark energy, each opened by energy of its own kind. What the burp does not deliver returns to the
+release of energy. X's three curled directions are alike and open in turn, like a triad (red, green and
+blue); which goes first is chance, and the order sets what each releases: the first, red, releases ordinary
+matter and radiation, the Big Bang's energy; the second releases dark matter; the third, dark energy. The same
+kind of energy opens all three. What the burp does not deliver returns to the
 black hole, ready to start another burp. What did not convert remained as a scrap. Energy was conserved across
 the change. The rules of the two phases are their constants and do
 not change from one generation to the next. Inside the space that forms, black holes are regions that re-curl

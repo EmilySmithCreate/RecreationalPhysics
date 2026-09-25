@@ -537,7 +537,8 @@ in the currency of energy that that particular curl can release." Put in order w
 type its opening releases; ordinary energy opens red, the direction whose release is ordinary matter and energy; the other
 two directions are opened by their own types, and need less and less. Why this page changes: the exact scans of O70 show
 that a tie alone cannot give both today's budget and a cascade in which the first push is the largest; her picture
-supplies the missing ingredient, energy that carries a type.
+supplies the missing ingredient, energy that carries a type. *Its typed stores are withdrawn by the author in Update 32: the order of
+opening, not a type of energy, sets the kind of release.*
 
 - **What is decided:** energy in the model gets a type, one per curled direction; a store of one type pays only the moves
   that open or close its own direction; the release of a direction's opening goes to its own type. Under S1 this is a new
@@ -547,6 +548,39 @@ supplies the missing ingredient, energy that carries a type.
   budget ordinary : dark matter : dark energy, and the cycle in which the black hole keeps the remainder for more burps.
 - *Ours, unverified:* typed energy is the model's version of conserved charges that do not mix, which physics has (baryon
   number, lepton number); in her picture the type is the direction a unit of energy belongs to.
+
+Update 32 (2026-09-25, 18:46 ET): **The author's revision of Update 31: one kind of energy, and the order of opening
+defines the kind of release.** Her words, put in order: once it is space, the three directions are interchangeable, as
+they were before, in X; so it is random which of the three becomes red. There are not really three types of energy: all
+three directions need the same kind of energy to unfold. The three directions are defined by the order in which they
+unfold, and the order defines the type of matter or energy: the first opening releases ordinary matter and energy, the
+second dark matter, the third dark energy. Why this page changes: Update 31 gave energy a type per direction; the
+assistant then pointed out that in the model the directions cannot be told apart in X, and are interchangeable again in
+open space, and asked whether the color rides on the energy. Her answer: it rides on the order.
+
+- **Withdrawn:** Update 31's typed stores (a store of one type paying only for its own direction). What stands from
+  Update 31 is its aim: the black hole supplies each opening's push, the later pushes are smaller, and the targets are
+  1, 3 and 5 of `docs/design/reality_targets.md`.
+- **Decided:** one kind of energy pays every push; which direction opens first is chance; what an opening releases is
+  set by its place in the order (first, second, third). This adds no new state to the model: an opening's place in the
+  order is the rung it starts from (how many directions are already open), which the model already reads
+  (`graphity.dimension.local_dimension_d`).
+- *Ours, exact (group theory; to be checked in code in the design brief):* the fully curled six-link state, a
+  4 × 4 × 4 torus, is the 6-cube, whose 23,040 renamings mix all six of its axes, so X does not single out three
+  directions at all. In a state with one direction open, the curled part is a 4-cube, so the two still curled are not
+  separate either. A flat cubic torus has the renamings that permute its three directions. So the directions differ only
+  in the order in which they open.
+- *Ours, unverified:* in standard language this is spontaneous symmetry breaking (general knowledge, to verify): the
+  rules treat the three directions alike, and the history picks an order. A direction tie that depends only on how many
+  directions are open at a point (Update 30's follow form; O68, O70) already makes each opening's release depend on its
+  place in the order, never on which direction it is; the curling cost alone gives three equal releases. With
+  interchangeable points the first opening loses almost all of X's renamings (O55) and the later ones almost none, so
+  the first push would pay a cost the later ones do not: one way her "red takes the most" could come out of the model.
+- *Ours:* the quark colors are a good image for three that belong together, but not for the symmetry itself: quark
+  color is never broken (red, green and blue stay interchangeable, and everything observed is color-neutral), while the
+  triad's three releases are observably different, which makes it a symmetry that breaks, closer to the Higgs story
+  (general knowledge, to verify).
+- The design brief is `docs/design/release_order_brief.md` (in progress), in place of the typed-energy brief.
 
 ## The target ("the spot")
 
