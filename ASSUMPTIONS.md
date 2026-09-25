@@ -1261,10 +1261,11 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   night; PREREGISTRATION T27; `results/t27_leak_n144_*.csv`; `scripts/analyse_t26.py`.) T21's bath (the whole energy in one
   store of 2N) at 2, 4 and 8 per point, drained by 0.001, 0.01, 0.1 and 1.0 per block of 100 sweeps, twelve replicas each,
   and the sealed control: every one of the fifteen cells has a MELTED majority (57 of the 60 leaking replicas melted; the
-  largest folded piece anywhere 16 vertices). The quench (leak 1.0) freezes the disorder as it stands; the slow leaks do
+  largest folded piece anywhere 16 vertices) [*corrected, O64 (3): 134 of the 144 draining replicas melted; 57 of 60 was
+  one energy's row with the control*]. The quench (leak 1.0) freezes the disorder as it stands; the slow leaks do
   not anneal it within 30,000 sweeps either. Ours (STAYS MELTED) held; the prediction inferred for the owner (FOLDS BEFORE
   IT FLATTENS) fails. **T26, the sealed local spark, read 25 September when its last cell landed: MELTS** (22 of 22 cells
-  with a MELTED majority; no cell folds; the largest folded piece anywhere 11 points; PREREGISTRATION T26 reading).
+  with a MELTED majority [*corrected, O64 (2): 27 cells, 26 melted, one healed 10 of 10*]; no cell folds; the largest folded piece anywhere 11 points; PREREGISTRATION T26 reading).
   The owner's confirmed prediction (RE-CURLS) fails. In two dimensions the model has now been asked three ways whether
   concentrated energy re-curls space (O20/T21 spread evenly, T26 in one place, T27 leaking) and has answered melt each
   time. *Ours, unverified:* the fold the owner means is of three intertwined directions, so the next form of the question
@@ -1359,7 +1360,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   way, 15 to 24 % still two-curled; in 3, at the hottest baths, it went past the rung toward a defective flat state. So
   the analyzer's OTHER in the torus cells was mostly unfinished openings, not a finished rung carrying thermal defects,
   and no torus cell has a MIDDLE majority. **FIRST ONLY stands by the letter, but the MIDDLE majority it rests on is the
-  gas cell's**, where the cubes went two rungs down, not one. Traced block by block, all 21 gas replicas that reached
+  gas cell's** [*corrected again, O64 (1): the gas is reported separately, so the torus verdict is NEVER OPENS*], where the cubes went two rungs down, not one. Traced block by block, all 21 gas replicas that reached
   the two-opened level passed the one-opened level without resting on it for the pre-registered 5,000 sweeps (longest
   stay within 10 % of it: 400 to 3,800 sweeps), though the whole descent took 10,000 to 46,000 sweeps: gradual, neither a
   cascade nor a staircase. Stated correctly: in a torus, the second direction never opened in a cold bath (its wall of 36
@@ -1547,6 +1548,31 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   meet would give 1 − p: 0.38 at k = 4, where it fits, and 0.57 at k = 8, where the counts are more regular than that.
   *Ours, unverified:* at high seed density the leftovers are not independent: nearby scraps merge or anneal together,
   which fits the growth of leftovers per seed falling as seeds are added. T37 measures the same thing with natural seeds.
+
+- **O64 Three errors in the record, found by a referee reading of the drafts and checked against the committed data.**
+  (2026-09-25, 13:33 ET; an assistant agent read the six drafts against this file and PREREGISTRATION as a skeptical
+  referee; each claim below was rerun from `results/` before being written here.) All three are ours.
+  (1) **T30's verdict for the tori is NEVER OPENS, not FIRST ONLY.** The pre-registration reads the gas "by the same rules"
+  and reports its verdict "separately as T30-gas", but `scripts/analyse_t30.py` pooled the gas with the tori, so the gas
+  cell's MIDDLE majority decided the torus verdict. Read as registered (the script now does): no torus cell has a FLAT or a
+  MIDDLE majority, so **T30 (tori): NEVER OPENS**; **T30-gas: FIRST ONLY** by the letter, which for the gas means it reached
+  the level with one direction still curled, two of three open. The owner's prediction (ALL AT ONCE) fails either way;
+  ours (FIRST ONLY) also fails for the tori by the letter: the first direction opened fully in only 28 of 84 replicas (O54,
+  correction), a majority in no cell. What stands: the second direction never opened in a cold bath. This morning's
+  correction to O54 said FIRST ONLY stood "by the letter, carried by the gas cell"; that was wrong, because the gas is not
+  part of the torus verdict.
+  (2) **T26 has 27 cells, not 22, and one healed.** By the analyzer's own cell key the committed data hold 27 cells (500
+  replicas); 26 have a MELTED majority and one, N = 64 with interchangeable points at E = 32, healed 10 of 10. The verdict
+  (MELTS: some cell melted, none folded) is unchanged; "22 of 22 cells melted" in O48, the T26 reading, paper 4 and the
+  series plan was wrong.
+  (3) **T27: 134 of the 144 draining replicas melted** (10 folded). "57 of the 60 leaking replicas" in O48 and the T27
+  reading was the E = 288 row across all five settings, the sealed control included. The verdict (STAYS MELTED) is
+  unchanged.
+  The same reading lists many smaller issues in the six drafts (overstatements, numbers, missing caveats); the most serious
+  for the submitted paper 1 are that two results it quotes, the Arrhenius waiting-time test and the 12-unit spark
+  threshold, were exploratory while its abstract says every verdict quoted was pre-registered, and that its two-state
+  verdict came after four amendments of one gate, three written after the data. Those are for the owner (a replacement of
+  the arXiv version is hers to decide); the other drafts are being corrected.
 
 ## Provenance
 

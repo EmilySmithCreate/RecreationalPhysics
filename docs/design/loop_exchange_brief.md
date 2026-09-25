@@ -53,7 +53,7 @@ the Pauli principle from antisymmetry; anyons in two dimensions.
 **B. A coupling between directions (the intertwining).** Keep the ladder; add a term that makes the second fold cheaper
 once the first has happened, beyond the lowering the walls already give: for example, a reward for a point whose open
 directions are all open or all curled, penalizing the partial state 4 × 4 × L that the author's rule forbids. *First
-test, exact:* the walls and windows recomputed with the term; the coupled model should turn T30's FIRST ONLY into a
+test, exact:* the walls and windows recomputed with the term; the coupled model should turn T30's NEVER OPENS (for the tori; O64) into a
 cascade at some λ. *What would kill it:* no coefficient gives a cascade without also melting flat space (its wall must
 stay above the rungs').
 

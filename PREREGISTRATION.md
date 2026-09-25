@@ -1588,6 +1588,10 @@ the largest folded piece anywhere is 11 points; melt-then-fold occurs in at most
 owner's prediction, confirmed as hers before the reading (RE-CURLS), fails; ours (MELTS) held, with the patch-in-a-cold-
 bath cells melting rather than healing as we expected at 144 and 256 points. Details in ASSUMPTIONS O48.
 
+**Correction, 25 September, 13:33 ET (ASSUMPTIONS O64 (2)):** the data hold 27 cells, not 22, and not every one has a MELTED
+majority: the interchangeable patch at N = 64, E = 32 healed 10 of 10, as the paragraph above itself says. 26 cells
+melted, one healed, none folded. The verdict, MELTS, is unchanged.
+
 ## T27. Does a melt fold before it flattens, when its energy is allowed to leave? (series paper 4; programme piece 8, second test; written 2026-09-24, night, before any run)
 
 ### Why
@@ -1641,6 +1645,9 @@ As T26. The leak is a protocol knob (ASSUMPTIONS Q12), declared here, and the mo
 control), twelve replicas each: every cell has a MELTED majority, 57 of 60 leaking replicas melted, no FOLDED majority
 anywhere, no melt-then-fold. **Verdict STAYS MELTED.** Ours held; the prediction inferred for the owner (FOLDS BEFORE IT
 FLATTENS) fails. Details in ASSUMPTIONS O48.
+
+**Correction, 25 September, 13:33 ET (ASSUMPTIONS O64 (3)):** 134 of the 144 draining replicas melted (10 folded); "57 of
+60" above was the E = 288 row with the sealed control. The verdict is unchanged.
 
 ## Gate C′. Which reading of [T22] Fig. 3's axis is ours, and does the same reading hold for its 2D figure? (six-link track; written 2026-09-24, night, before the runs)
 
@@ -1836,7 +1843,9 @@ ONLY) holds**, with the gas going further than we expected. Details in ASSUMPTIO
 local-dimension census, the first direction opened completely in 28 of the 84 torus replicas at λ = 1.25; 32 stalled
 early (36 to 53 % of points still two-curled), 21 went most of the way (15 to 24 % still two-curled), 3 went past the
 rung at the hottest baths. No torus cell has a MIDDLE majority; the FIRST ONLY verdict is carried, by the letter, by the
-gas cell, which went two rungs down without resting between them. The second direction of a torus never opened in a
+gas cell, which went two rungs down without resting between them. **Corrected again, 13:33 ET (ASSUMPTIONS O64 (1)):**
+this section reports the gas separately as T30-gas, and the analyzer had pooled it. Read as registered, **T30 (tori):
+NEVER OPENS**; T30-gas: FIRST ONLY by the letter (two of three directions open). Both predictions fail for the tori. The second direction of a torus never opened in a
 cold bath. ASSUMPTIONS O54, correction.
 
 ## T32. Six links: is the activation fixed with size? (piece 11; written 2026-09-25, before any run)

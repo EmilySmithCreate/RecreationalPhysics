@@ -353,7 +353,7 @@ the inferred predictions confirmed or replaced by the owner before any verdict i
 
 **All four read, 25 September (O47, O48, O52):** T25 FREEZES IN (hers, confirmed after the reading), T26 MELTS (her confirmed
 prediction fails), T27 STAYS MELTED (ours), T24 INCONCLUSIVE by the letter for a third reason (one extreme wait in 120 at four
-cells) with the edge BREAK-UP a third time. Gate C′ (O53): run A FAILS, run B ONE POWER. T30 FIRST ONLY and T32 FIXED
+cells) with the edge BREAK-UP a third time. Gate C′ (O53): run A FAILS, run B ONE POWER. T30 NEVER OPENS for the tori (O64; first read as FIRST ONLY) and T32 FIXED
 WALL (O54).
 
 ## The fold run backwards (piece 8 in six links)  ◑

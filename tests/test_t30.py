@@ -97,3 +97,8 @@ def test_t32_threshold_fixed_grows_and_sharp():
     assert v == "GROWS" and not sharp
     rows = rows_for(192, 8.0) + [block(20000, 0.0, left=False, c=1, spark=e, rep=r, n=288) for e in (4.0, 8.0) for r in range(3)]
     assert a.verdict_t32(a.read_t32(rows))[0] == "NOT READ"
+
+
+def test_the_gas_is_told_apart_from_the_tori():
+    """The pre-registration reports the gas separately (T30-gas); the reader tells it by its dims label."""
+    assert a.is_gas({"dims": "8x(4 4 4)"}) and not a.is_gas({"dims": "4 4 18"})

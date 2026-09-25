@@ -323,7 +323,7 @@ time run more slowly, so time and space are not separate things. She asked for s
 - **The naming condition stands**: at λ ≠ 1 this is our family around the model, never combinatorial quantum gravity.
 - **The author's reaction to the six-link result, 25 September, morning** (T30, FIRST ONLY: given its push, the two-curled
   torus opens one direction and stops; ASSUMPTIONS O54; *corrected the same day: it opened that direction fully in a
-  third of the runs, and the verdict rests on the gas cell, O54 correction*): "first only actually makes a lot of sense to me." Recorded as her
+  third of the runs, and read as registered the tori's verdict is NEVER OPENS, O64*): "first only actually makes a lot of sense to me." Recorded as her
   reaction, not as a changed prediction: T33's pre-registered prediction stands as written above. *Ours:* it fits the
   singleton half of this update, one direction opening on its own, which T33 scores as SINGLETON PLUS THREE from the
   gas; whether the three that remain open together is what T33 measures.
@@ -343,7 +343,7 @@ order, on reading T24 (the window inconclusive by the letter for a third time, o
   dimensions match what level of λ, how interconnected the group of three or four dimensions is ideally, how the snap
   works in relation to the degree-of-freedom relationships." *Ours:* this is the fertile-window question (series paper 3)
   extended over the number of directions; the entries that exist exactly are tabulated in `docs/papers/series_plan.md`
-  ("The (D, λ) map"), and the interconnection is what T30 (FIRST ONLY in three directions) and T33 (the pattern in four)
+  ("The (D, λ) map"), and the interconnection is what T30 (in three directions; corrected to NEVER OPENS for the tori, O64) and T33 (the pattern in four)
   measure.
 - **The strange-loop measure.** "We are most likely to observe, and be part of, a strange loop with a particular
   arrangement that has one of the largest possible infinities: one of the largest possible amounts of time, matter and

@@ -149,19 +149,30 @@ def verdict_t32(shares):
     return "NOT MONOTONE", e_star, sharp
 
 
+def is_gas(row):
+    """A gas of separate 6-cubes: the runner labels its dims 'k x(a b c)'."""
+    return "x(" in row["dims"]
+
+
 def main(out_dir="results"):
     rows = []
     for f in sorted(glob.glob(str(Path(out_dir) / "t30_*.csv"))):
         rows += list(csv.DictReader(open(f, newline="")))
     print("== T30")
     if rows:
-        s = read_t30(rows)
-        for k in sorted(s["cells"]):
-            print("  lambda=%.2f N=%-4d C=%-5d %s -> %s" % (*k, s["cells"][k], s["majority"][k]))
-        for k, c in sorted(s["c_star"].items()):
-            print("  C* (smallest bath with a FLAT majority) at lambda=%.2f N=%d: %d" % (*k, c))
-        print("  flat-reaching replicas: cascaded %d, stepwise %d" % (s["cascaded"], s["stepwise"]))
-        print("VERDICT T30:", verdict_t30(s))
+        # The pre-registration reads the gas "by the same rules" and reports its verdict "separately as T30-gas".
+        # Until 2026-09-25 this script pooled the gas with the tori, which let the gas cell decide the torus verdict
+        # (found by a referee reading; ASSUMPTIONS O64). The two are now read apart, as registered.
+        for label, subset in (("T30 (tori)", [r for r in rows if not is_gas(r)]), ("T30-gas", [r for r in rows if is_gas(r)])):
+            if not subset:
+                continue
+            s = read_t30(subset)
+            for k in sorted(s["cells"]):
+                print("  lambda=%.2f N=%-4d C=%-5d %s -> %s" % (*k, s["cells"][k], s["majority"][k]))
+            for k, c in sorted(s["c_star"].items()):
+                print("  C* (smallest bath with a FLAT majority) at lambda=%.2f N=%d: %d" % (*k, c))
+            print("  flat-reaching replicas: cascaded %d, stepwise %d" % (s["cascaded"], s["stepwise"]))
+            print("VERDICT %s: %s" % (label, verdict_t30(s)))
     else:
         print("  no results yet")
     rows = []

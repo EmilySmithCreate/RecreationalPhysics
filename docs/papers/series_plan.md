@@ -286,7 +286,7 @@ that rearranges without melting, which nobody has measured. What does not block 
 ### 25 September, early morning: verdicts and the 3D launch
 
 - **Paper 2:** T25 read, FREEZES IN, t* = 30,000 sweeps (O47). The paper's section 7 can now be written from the record.
-- **Paper 4:** T27 read, STAYS MELTED (O48); T26 at 21 of 22 cells, all MELTED, the owner's confirmed prediction heading
+- **Paper 4:** T27 read, STAYS MELTED (O48); T26 at 21 of 22 cells, all MELTED [corrected: 27 cells, 26 melted, one healed; O64], the owner's confirmed prediction heading
   for a fail. The next version of the black-hole question is three-dimensional (the fold she means is of three
   intertwined directions), after T30 shows what a curled region looks like at six links.
 - **Piece 11 / the companion paper:** the owner's decision to proceed (VISION Update 24); T30 and T32 on Batch with her
@@ -294,7 +294,7 @@ that rearranges without melting, which nobody has measured. What does not block 
 
 ### 25 September, morning: the four-direction test, and T26's verdict
 
-- **T26 read: MELTS** (22 of 22 cells). The owner's confirmed prediction failed. Piece 8's next form is six-link.
+- **T26 read: MELTS** (22 of 22 cells; corrected, O64: 27 cells, 26 melted, one healed). The owner's confirmed prediction failed. Piece 8's next form is six-link.
 - **Piece 13 (VISION Update 25):** time as a fourth curled direction. T33 on Batch with her prediction (a tied pattern:
   three together from the three-curled start; four together or a singleton then three from the gas) and ours (one at a
   time). Exact before the runs (O50): the walls rise from rung to rung (doubling exactly at λ = 1.25 only) and the flat state's wall is 128, so a hot bath
@@ -307,7 +307,8 @@ that rearranges without melting, which nobody has measured. What does not block 
   rare long wait (24 to 76 τ) at small N is the thing to study next (O52). The edge break-up held a third time.
 - **The six-link companion:** T32 FIXED WALL (16 at every size, sharp); T30 FIRST ONLY (the directions open one at a
   time; the gas of 6-cubes descends two rungs) (O54). *Corrected 25 September, midday:* the first direction opened
-  fully in 28 of 84 torus replicas, partly in most others; the verdict is carried by the gas cell (O54, correction). The reproduction gate: Gate C′ run A FAILS, run B ONE POWER; a
+  fully in 28 of 84 torus replicas, partly in most others; the verdict is carried by the gas cell (O54, correction). *Corrected again (O64):* the gas is reported separately as
+  registered, so the tori's verdict is NEVER OPENS. The reproduction gate: Gate C′ run A FAILS, run B ONE POWER; a
   factor of two matches the ordered side and the hot tail points at non-bipartite graphs (O53). The companion paper can
   now be drafted from T30, T32, O41, O49 and O50, with the open gate stated.
 - **Who to ask, updated:** the model's author, one question: whether his 3D action sums over edges once (a factor of 2
