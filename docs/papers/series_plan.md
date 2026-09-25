@@ -367,3 +367,32 @@ energy; if it exists in reality it is an ingredient this family lacks, which is 
 - **Exact today (O56):** the one-switch curled column in six-link flat space is not a relic (120 units, not a dip); at fixed
   wiring there is no pull at a distance from energy or counting, as in two dimensions. The stable six-link relic is the
   first thing the gravity test needs, and it is not yet shown to exist.
+
+---
+
+## The two-week plan (written 25 September 2026, 13:12 ET, at the owner's direction)
+
+The owner's direction of 25 September: run every claim at once, iterate each several times, use the rented machines
+generously, read widely in parallel, write the papers here; do it by the book, because that is what persuades; the goal is
+a body of work she can hand to physicists within about two weeks. What that means for each paper, as of today. "In flight"
+means pre-registered and on the Batch queue.
+
+| Paper (pieces) | Where it stands | In flight | Next iteration | What finishes it |
+|---|---|---|---|---|
+| 1, the burp (1, 2) | Submitted to arXiv; the window inconclusive by the letter three times, for stated reasons | T38 (the rare long wait: what the stragglers are) | A fourth λ map written with the owner's bar (a majority sharp at some size, stragglers reported), if she wants one | Her read of T38; a v2 with the stragglers explained |
+| 2, the relic (5, 6) | Drafted; T10, T11, T17, T19, T25 on the record | T37 (many natural seeds; nucleation-and-growth with nothing fitted) | If long tubes end defected: does a defected space heal or last (a planted defected state followed in time) | T37 read and written in; the question of the defected end state answered |
+| 3, the fertile window (4, 11, 13) | Drafted; the (D, λ) map table | T39 (the cascade window), T40 (the push in four directions), T41 (room for the burp in three) | The window's edges in λ with the owner's parameter questions (how many directions, what λ); a clean domain's size per seed against λ (from T37) | T39 to T41 read and written in; the map complete for two and three directions |
+| 4, black holes (8) | Drafted; three melts in two dimensions; T34 melts at its first size | T34 (512 points), T42 (interchangeable points at λ = 1.02, the counting half) | If T42 folds: the packed protocol with interchangeable points, larger sizes | T34 and T42 read; the paper states which half of her mechanism this family can host |
+| 5, gravity (7) | Drafted today: no pull at a distance in this family, and why (a gapped flat space); what a pull needs | Nothing: the next step needs her decision (gravity brief, section 6) | With option A adopted: two relics drifting together in two directions, then the 1/r shape in three, then clumping and re-curling | Her decision, then those three runs |
+| six links (11, 13) | Drafted; the eight-link section written from T33 | T39, T40, T41 | T40's pattern at and above the true push | T39 to T41 read; the reproduction gate still open (a question for the model's author, held for this paper) |
+| allotropes (12) | T36 read: none lasting on a torus | A construction being designed (a planted allotrope) | The planted allotrope's lifetime at λ = 1, the model author's own question | Its reading, sent with the six-link paper |
+| quantum (9) | Weakest leg; the phase-per-swap form does not exist as stated | Nothing | Needs her decisions: the sign convention; whether to adopt a rule over histories | Her decisions |
+
+**Compute.** The Batch environment runs 16 one-CPU jobs at once (about $0.78 an hour when full); the account allows 30. On
+25 September about 140 jobs were queued (T37 to T42), roughly 150 CPU-hours, about $7. To use the budget the owner named
+(at least $20 a day), the ceiling must rise: `terraform/batch.tf` `max_vcpus` from 16 to 30 and the deploy workflow run
+(`deploy_manual`, "deploy"); that is hers to apply. Above 30 needs a quota request to AWS.
+
+**Decisions waiting on her, in order of what they unblock:** (1) the gravity rule (option A of the gravity brief:
+a massless field on the points with relics as its sources); (2) the exchange sign's convention (points or pairs);
+(3) confirming or replacing the predictions inferred for her in T36 to T42; (4) whether to write a fourth λ map with her bar.
