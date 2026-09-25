@@ -1195,6 +1195,22 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   a sizing problem of the same kind as T8's, not repaired after the fact. The owner's edge prediction holds: from
   1.30 to 1.35 the share ending flat falls from 0.71 to 0.47, and the share with several converted pieces at 25 %
   rises from 0.44 to 0.69, each by more than two standard errors.
+- **O45 Exploratory, after Gate C failed: a fast heating leg reproduces [T22] Fig. 3's shape.** (2026-09-24;
+  `scripts/explore_gate_c_protocols.py`; `results/explore_c_*`; the question, the measure and our expectation were
+  committed before the runs.) The measure is the width in ln g between 9 and 2 squares per vertex: 0.645 for the
+  published curve, and 1.69 (cooling) and 1.46 (heating) for our slow equilibrium-like runs.
+  - **Fast cooling widens the curve** (3.76 at 100 sweeps per coupling).
+  - **Fast heating from a slowly cooled state narrows it, steadily with speed:** 1.35, 1.06 and 0.76 at 500, 100 and
+    20 sweeps per coupling. It also reproduces the plateau (highest 10.2 to 10.6, published 10.1).
+  - To line up, the published axis would be our coupling divided by about 5 to 6: 4.9 at the 9 crossing for the
+    fastest heating, and 5.6 at the 2 crossing, where our curve is at equilibrium. That is neither 1, 2 nor
+    N^(1/3) = 7.94, and it is unexplained.
+  - *Ours, unverified:* this supports the reading that [T22] Fig. 3 is a heating curve that lags equilibrium, which
+    fits the model's author's own suspicion that single switches do not equilibrate at low coupling. But two free
+    choices, the heating speed and the axis factor, are fitting two numbers, the width and the position, so it is
+    suggestive and not a match. **Gate C stays failed (O43)**, and the six-link track stays stopped. The question for
+    him narrows: was Fig. 3 a heating run from an ordered start, how many sweeps per coupling, and how is ħg defined
+    in its weight.
 
 ## Provenance
 
