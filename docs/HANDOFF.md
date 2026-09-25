@@ -1,4 +1,4 @@
-# Start here: handoff for the next assistant (state as of 2026-09-25, early morning)
+# Start here: handoff for the next assistant (state as of 2026-09-25, 15:15 ET)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". Work is on branch `feat/cloud-runs-and-3d` (shared by two sessions in one
@@ -10,39 +10,31 @@ git history.
 
 1. **Two sessions may be working this repository at once.** Run `git status` and `git log -5` before assuming
    the tree is as described, and re-read a file if the tool says it changed on disk.
-2. **Running (25 September, early morning).** Nothing on the laptop: Gate C's P2 finished and is read (O46 addendum: fully ordered to g = 4 with
-   long equilibration, which undercuts the 1/g² reading), and the exploratory 3D window scans are read (O51: no coupling
-   at which a flat 3D sheet rearranges without melting). On AWS Batch,
-   each set submitted by the push-triggered workflow `.github/workflows/run_queue.yml` from a manifest under
-   `cloud/queue/`: **T24** (28 jobs, `2026-09-24_t24.txt`), **Gate C′** (4 jobs, `2026-09-24_gatec2.txt`; O46;
-   `scripts/analyse_gatec2.py`), and **T30 and T32** (14 jobs, `2026-09-25_t30_t32.txt`; the six-link tests of piece 11,
-   read with `scripts/analyse_t30.py`), and **T33** (6 jobs, `2026-09-25_t33.txt`; the eight-link pattern test of piece 13,
-   read with `scripts/analyse_t33.py`; about eight hours a job), and **T34** (4 jobs, `2026-09-25_t34.txt`; the six-link
-   folding test of piece 8, `scripts/analyse_t34.py`). Results land in the bucket; download, check and commit them as
-   T23's were (`download_results.ps1` and `check_and_copy.py` in the 25 September session's scratchpad do it). **To see the Batch jobs' state from a laptop without the project account's credentials:** push a
-   change to `cloud/status/request.txt` (any text); the `queue_status` workflow then writes `cloud/status/latest.md`
-   (job states and the bucket's finished results) and commits it, readable from the repository.
-   **Read and recorded (24 to 25 September):** T25 FREEZES IN (O47), T27 STAYS MELTED and T26 MELTS (O48), T24 INCONCLUSIVE
-   by the letter with the edge BREAK-UP (O52), Gate C′ run A FAILS and run B ONE POWER (O53), T32 FIXED WALL and T30
-   FIRST ONLY (O54). **Downloading from the bucket:** the keys in the repository's git-ignored `.env` are the project
-   account's (the owner said so on 25 September); `scratchpad/download_results.ps1` of that session loaded them into its
-   own process, synced the bucket, and `check_and_copy.py` compared each set's recorded config with the committed one
-   before copying it into `results/`. Never print or commit them. **Still running on Batch: T33** (six jobs). A finished local job has a `.csv` and
-   no `.partial`. Never commit a result a live job is still writing. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
-   `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O46 onward; O45 is the other session's exploratory Gate C reading), the
-   pre-registration section, and the programme page. **The owner's predictions in T25 to T27 are inferred from
-   her stated positions** (PREREGISTRATION says so in each); ask her to confirm or replace them before any
-   verdict is quoted as hers. `results/explore_c_fastboth.csv` is the other session's untracked result: not ours
-   to commit. T23 is done and read (O44). American spelling in everything written from tonight on (her request).
-   **Gate C has FAILED (ASSUMPTIONS O43):** the six-link code does not reproduce [T22] Fig. 3 at the unscaled
-   couplings or at couplings × N^(1/3), and the shapes differ. By rule 2 the six-link (D = 3) track is stopped:
-   no D = 3 result, including O41's window, is quoted or interpreted until it is resolved. **Exploratory (O45):** a
-   fast heating leg (20 sweeps per coupling) from a slowly cooled state reproduces Fig. 3's steepness and plateau,
-   with its axis about our g / 5 to 6, which suggests the figure is a heating curve that lags equilibrium. The
-   question for the model's author: was Fig. 3 a heating run from an ordered start, how many sweeps per coupling,
-   and how is ħg defined in its weight. Hold it for his next reply.
-   Note: commit `0746203` (labelled as the Gate C criterion) also carries the removal of `docs/outreach/` and
-   the old `docs/public/site/index.html` from the tracked tree, swept in from the shared index.
+2. **The owner's direction of 25 September (memory `pace-and-scale`):** run the programme at full speed and scale while
+   she is on vacation, many pre-registered tests at once, the cloud used generously, literature read in parallel, still by
+   the book. **Running on AWS Batch (25 September, 15:15 ET)**, all submitted by `.github/workflows/run_queue.yml` from
+   manifests in `cloud/queue/` (the workflow now reads several queue files per push; it failed on the first such push and
+   was fixed, commit 590f6ff): **T34** (two 512-point jobs left), **T37** (34 jobs, many natural seeds in long tubes,
+   paper 2; `scripts/analyse_t37.py`), **T38** (48 jobs, the rare long wait, paper 1; `analyse_t38.py`), **T39** (15 jobs,
+   the cascade window, six and eight links; `analyse_t39.py`; its eight-link cells are expected to stall, see O62), **T40**
+   (11 jobs, the push that starts the change in four directions; `analyse_t40.py`). The compute environment runs 16 jobs at
+   once (terraform `max_vcpus = 16`); the account's Fargate quota is 30, and raising the ceiling is an infrastructure change
+   the owner applies herself (the deploy workflow; the assistant's attempt to change it directly was refused by the
+   harness, rightly). **Downloading:** the project account's keys are in the git-ignored `.env`; the 25 September session's
+   scratchpad scripts `download_results.ps1` and `check_and_copy.py` load them into their own process, sync the bucket and
+   compare each set's recorded config with the committed one before copying into `results/`; `aws_jobs.ps1` counts jobs
+   by status, read only. Never print or commit the keys. **Read each finished test with its analyzer** and record it in
+   ASSUMPTIONS (next number O63), the pre-registration and the programme page (dated, clock time, US Eastern).
+   **Read and recorded on 25 September:** T36 TRANSIENT (O59), the six-link relic search negative (O58), T30 corrected
+   (O54: the first direction opened fully in 28 of 84), the walls halve exactly only at one setting (O55), four literature
+   reviews (O60; notes in `docs/reading/notes/`), the exact field-on-the-points calculation (O61), T33 NO CASCADE with every
+   replica stalled after one move (O62). **T34 at 216 points reads MELTS; its verdict waits for the 512-point cells.**
+   **Waiting on the owner:** the gravity rule (`docs/design/gravity_brief.md` section 6: a massless field on the points
+   with relics as its sources, recommended; flat space in this family has an energy gap, so no pull at a distance is
+   possible without a new ingredient); the exchange sign's convention (O60 (b)); her confirmation of the inferred
+   predictions in T36 to T40. **Exploratory pilots of T37 (disclosed in its pre-registration) are in the scratchpad, not
+   `results/`:** at 4 × 1024 and g = 1.5 the change started in 37 places and ended in a defected space 2.5 per point
+   above flat, which is why T37 scores the scrap by the energy left.
 3. **Read section 3 before writing anything public or anything to a physicist.**
 4. Interpreter with numba: `C:\Users\emily\AppData\Local\Microsoft\WindowsApps\python.exe`. Run
    `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`.
