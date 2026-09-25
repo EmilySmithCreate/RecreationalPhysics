@@ -1629,6 +1629,26 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   fewer (0 < s_i < s̄); the figure shows fewer. A lifetime test at finite coupling is designed in the note (not yet
   pre-registered).
 
+- **O68 Exact, the direction tie of VISION Update 30: the first form was wrong; a "follow" form gives the owner's triad in
+  six links.** (2026-09-25, 15:59 ET; `scripts/exact_walls_tie_d.py` and `scripts/exact_walls_tie_follow_d.py`, brute force
+  over every switch, tested; `docs/design/direction_tie_first_look.md`; exploratory: the knob of Update 30, no run.) (a)
+  **The form fixed in Update 30, κ d(D − d), rewards damage** (the assistant's error): at a broken point the count of open
+  pairs d exceeds D (up to 10 here), so d(D − d) is negative and the term lowers the energy of broken points; flat space
+  itself then breaks at κ = 8/11 with six links and 8/15 with eight. Even with broken points counted as zero, a symmetric
+  penalty on partly open points makes the middle of the ladder the hardest step (from d = 1 to 2 is uphill), so no cascade
+  can run from the curled side; with eight links the three-curled rung gets more stuck as κ grows. "Three open, one
+  curled" is never favored by a symmetric tie. (b) **The owner's triad picture is asymmetric**: the push opens one
+  direction, and once one is open the others are driven to follow. The simplest form with that shape, written before its
+  calculation: f(d) = κ(D − d) for 1 ≤ d ≤ D, f(0) = 0, and 0 for a broken point. **Six links, exact:** the fully curled
+  gas's wall rises as −4 + 24κ at λ = 1.25 (8 + 24κ at 1.10), so X is stuck and harder to start; the two-curled torus's
+  wall falls to zero near κ = 0.75 at λ = 1.25 (1.3 at 1.10) and the one-curled torus's at κ = 2.25 (2.7), after which both
+  partly open states have a downhill move and cannot hold; flat space's wall stays 64 at every κ (the tie never touches a
+  flat point); and the burp's total release is unchanged, since the tie is zero at both ends. **So for κ ≳ 2.3 at
+  λ = 1.25 (≳ 2.7 at 1.10) the energy has the triad's shape: X stuck, a push of about 50 to open the first direction, and
+  no resting place until flat.** Whether a run then cascades to flat space rather than to damage is the dynamical test,
+  not yet run. Eight links are being computed. What the follow form does not do: select three (with four directions it
+  drives all four open); that is the second constant of Update 30.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

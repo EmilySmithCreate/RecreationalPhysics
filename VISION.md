@@ -459,6 +459,12 @@ there is a factor, or a couple of constants, related to the interconnectedness o
 - **First tests, exact, before any run:** the walls and windows of the six- and eight-link ladders with the term, as
   functions of κ: does a κ exist at which the second wall falls below the first (a cascade) while flat space's own wall
   stays above the rungs? Then T30's and T33's protocols rerun with that κ, pre-registered with her claim about reality.
+- **Amendment, 15:59 ET, before any run: the first form above is withdrawn** (the assistant's error, found by the exact
+  test the update names; ASSUMPTIONS O68): κ d(D − d) rewards broken points, and a symmetric penalty cannot give a
+  cascade. **The working form is the "follow" form**, f(d) = κ(D − d) for a point with 1 ≤ d ≤ D open directions, 0 for a
+  fully curled or a broken point: once one direction at a point has opened, each still curled costs κ. It is the shape of
+  the author's triad below (the push opens one; the others are driven to follow), and it was written before its exact
+  test. Its constant κ is the tie's strength; the second constant, the size of the tied group, is still to be written.
 - **The author's idea, the same afternoon (15:40 ET): the three directions as a triad, and the dark-to-ordinary ratio.**
   Her words, put in order: there is about five times as much dark matter as ordinary matter; two times three is six, so
   ordinary matter would be one part in six. Some aspect of the uncurling and the interconnectedness of the three
