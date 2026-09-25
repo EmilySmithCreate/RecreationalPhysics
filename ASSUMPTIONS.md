@@ -1574,6 +1574,39 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   verdict came after four amendments of one gate, three written after the data. Those are for the owner (a replacement of
   the arXiv version is hers to decide); the other drafts are being corrected.
 
+- **O65 Six more imprecisions in our record, found while the drafts were corrected and checked here.** (2026-09-25,
+  14:05 ET; the agent that applied the referee's fixes listed them without editing the record; items 2 and 6 were rerun or
+  reread here, the others follow from numbers already in this file.) All are ours.
+  (1) **T24, O52:** "each failure is one or two extreme waits of 24 to 76 τ" holds for the two N = 64 cells only; the
+  failures at N = 192, λ = 1.30 and N = 144, λ = 1.35 are on the spread of the waits (CV 1.53 and 1.41), with no wait
+  beyond about six times the mean.
+  (2) **T23 reading:** at λ = 1.35, N = 192 the memoryless check does not "fail narrowly": its CV, 1.367, is inside the
+  band [0.758, 1.379], so it passes; what fails there is the single front (largest piece 0.67 against 0.70).
+  (3) **O61:** "about 10⁻³ g at contact" is the three-direction value; in two directions the fluctuation term is 0.024 g at
+  contact. "0.0026 g per point per direction" is the one-curled value (two curled: 0.0039 g per direction); and "the same
+  as lowering λ by about 0.004 g" holds with four links only (with six, about 0.0007 g to 0.001 g).
+  (4) **O34 and the T18 reading:** "the room grows faster than the lump" is not resolved by the grid of bath sizes used
+  (steps of 4/3 to 2); what the data show is a room that grows with λ at least as fast as the lump.
+  (5) **O50:** the inference that four directions can be "driven hot without melting the flat state, unlike two
+  dimensions (32 against the tube's 12)" runs the wrong way: the ratio of flat space's wall to the rung walls is 32/12 =
+  2.7 in two directions and 128/80 = 1.6 for the last rung in four, so four directions leave less room between paying a
+  rung and melting, not more. T39's pre-registered rule (a window only where the ratio is at least 2) already uses the
+  right direction.
+  (6) **T17 reading:** "ours, leaning ONE PER TUBE, also fails" is wrong: our registered prediction was (c), BETWEEN,
+  leaning (b); the verdict is (c), so ours held and only its lean was wrong.
+
+- **O66 Six-link flat space heals every heat damage it was given: no relic appears when damaged tori are quenched.**
+  (2026-09-25; `configs/quench_relics_d.json`, the question and expectation written before the run; exploratory;
+  `scripts/quench_relics_d.py`; `results/quench_relics_d.csv`.) All 80 final graphs of T34 at N = 216 (flat 6 × 6 × 6 at
+  λ = 1.25 given 64 to 500 units, packed or spread; 0 to 202 units above flat at the end), quenched for 5,000 sweeps at
+  zero temperature (only moves that do not raise the energy), came to rest on perfectly flat space: 80 of 80 at exactly
+  zero energy, no defect piece left, so no dip to test. **Two readings follow.** For T34: its "melted" end states were
+  thermal excitations of flat space that the cold removes completely, not a trapped disorder; the verdict (MELTS, by its
+  registered rule on the final census) stands, but it says less than the word suggests, as the referee reading also
+  noted for the two-dimensional tests. For gravity step 1: heat damage in six-link flat space leaves no small stable object
+  behind, which together with O58 (none among one- and two-switch constructions) makes the six-link relic, if it exists,
+  something that only a curled region's opening can leave (T30, T39 and T41 end states are the next place to look).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

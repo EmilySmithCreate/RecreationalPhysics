@@ -1023,6 +1023,9 @@ Named, for the reason in T8. The expected effect of interchangeable points on th
 
 Anything about the amount of dark matter in the universe. How seeds arise without being planted. Anything at another λ or size.
 
+
+**Note, 25 September, 14:05 ET (ASSUMPTIONS O65 (6)):** our registered prediction was (c) leaning (b); the verdict (c) means ours held and only its lean was wrong, not that ours "also fails".
+
 ## T18. How much room does the new space need, as λ changes? (written 2026-09-23, night, before the runs)
 
 ### Why
@@ -1362,6 +1365,9 @@ the window that could be read is sharp and memoryless except one, and the break-
 piece 2 is not green by the letter**, because the energy check, unchanged from T8, fails at λ = 1.30 at every
 size.
 
+
+**Note, 25 September, 14:05 ET (ASSUMPTIONS O65 (2)):** at λ = 1.35, N = 192 the memoryless check passes (CV 1.367 inside [0.758, 1.379]); only the single front fails there.
+
 ## T24. The λ map a third time, with the energy check read from the saved wiring (written 2026-09-24, night, before any run)
 
 ### Why
@@ -1439,6 +1445,9 @@ in 17 of 24 window cells, running 20 to 50 % long at λ ≥ 1.25 with the 200-sw
 three different criteria tripped (the band, the energy catalog, one extreme wait in 120), and the physics has read
 the same each time; the rare very long wait at small N is now seen at three settings and is a thing to study, not to
 legislate away. A repair, if the owner wants one, is a new pre-registration. Details in ASSUMPTIONS O52.
+
+
+**Note, 25 September, 14:05 ET (ASSUMPTIONS O65 (1)):** only the two N = 64 failures are extreme waits; the N = 192 (λ = 1.30) and N = 144 (λ = 1.35) failures are on the spread of the waits.
 
 ## T25. Does the scrap freeze in before it heals, when the box cools? (series paper 2; programme piece 6; written 2026-09-24, night, before any run)
 
