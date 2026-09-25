@@ -15,3 +15,4 @@ run_sealed_curled_d t39_eight_lam125_n1024_cn16
 run_sealed_curled_d t39_eight_lam150_n1024_cn2
 run_sealed_curled_d t39_eight_lam150_n1024_cn3
 run_sealed_curled_d t39_eight_lam150_n1024_cn6
+# Resubmitted 2026-09-25 after the workflow could not read three queue files in one push; nothing had been submitted.

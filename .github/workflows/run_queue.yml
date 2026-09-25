@@ -49,10 +49,12 @@ jobs:
           echo "queue files: $CHANGED"
           test -n "$CHANGED"
 
+      # The list of changed queue files is newline-separated. Pasting it bare after `cat` split the command at the first
+      # newline, so a push carrying two queue files failed here (2026-09-25, T37 to T39); it is read through xargs.
       - name: every runner and config named must exist, before anything is billed
         run: |
           test -n "$ACCOUNT"
-          cat ${{ steps.files.outputs.changed }} | grep -v '^\s*#' | grep -v '^\s*$' | while read -r RUNNER CONFIG; do
+          echo "${{ steps.files.outputs.changed }}" | xargs cat | grep -v '^\s*#' | grep -v '^\s*$' | while read -r RUNNER CONFIG; do
             test -f "scripts/${RUNNER}.py" || { echo "no such runner: $RUNNER"; exit 1; }
             test -f "configs/${CONFIG}.json" || { echo "no such config: $CONFIG"; exit 1; }
           done
@@ -78,7 +80,7 @@ jobs:
       - name: submit one job per line
         run: |
           echo "### submitted from \`${GITHUB_SHA::7}\`" >> "$GITHUB_STEP_SUMMARY"
-          cat ${{ steps.files.outputs.changed }} | grep -v '^\s*#' | grep -v '^\s*$' | while read -r RUNNER CONFIG; do
+          echo "${{ steps.files.outputs.changed }}" | xargs cat | grep -v '^\s*#' | grep -v '^\s*$' | while read -r RUNNER CONFIG; do
             ID=$(aws batch submit-job \
               --job-name "${CONFIG}-${GITHUB_SHA::7}" \
               --job-queue recphys \
