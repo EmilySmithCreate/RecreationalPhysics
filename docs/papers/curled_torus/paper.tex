@@ -13,7 +13,7 @@ emergent geometry}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 25 September 2026}
+\date{Corrected version, 25 September 2026}
 
 \begin{abstract}
 In combinatorial quantum gravity (CQG) the energy of a four-regular bipartite graph is built from its total
@@ -21,20 +21,25 @@ Ollivier curvature, which splits into a global term that rewards squares and a l
 for a third square on an edge. We study the family of graph energies obtained by multiplying the local
 term by a coefficient $\lambda$. Only $\lambda = 1$ is CQG; for $\lambda \ne 1$ the energy is no longer a
 curvature, and every result below is at $\lambda > 1$, in this neighbouring family and not in CQG itself.
-For $\lambda \ge 1$ the flat lattice torus is
-the ground state exactly, and a $4 \times L$ torus, one direction curled to a single square, lies
+For $\lambda \ge 1$ the flat lattice torus is a ground state exactly, and a $4 \times L$ torus, one direction curled to a single square, lies
 $4(\lambda - 1)$ per vertex above it. At $\lambda = 1.25$ the curled torus is metastable. Under the local
-edge-switch Metropolis dynamics used to sample the model, the minimum energetic barrier to leave it is a single
-move, $\Delta E^\ddagger = 12$, offered at a rate we count exactly, so the mean waiting time follows an
-Arrhenius law with nothing fitted, and the wait is memoryless. After the first exit the conversion spreads as a
+edge-switch dynamics used to sample the model, with Metropolis acceptance, the minimum energetic barrier to leave
+it is a single move, $\Delta E^\ddagger = 12$, offered at a rate we count exactly, so the mean waiting time follows
+an Arrhenius law with nothing fitted, and the wait is close to memoryless (the pre-registered checks pass in most
+cells and fail in some, on a band too tight for the sample, on rare very long waits, or on a wide spread of waits;
+Sec.~\ref{sec:lambda}). After the first exit the conversion spreads as a
 single front: at half conversion 98.8 to 99.8\% of vertices belong to one ordered state or the other, and the
 energy released is exactly $\varepsilon = 4(\lambda-1)$ per vertex. Under an energy-conserving version of the
 same dynamics, a seed equal to the barrier, 12 units, sets off the change at every size from 48 to 192
 vertices and nothing smaller does, while the release grows with the system. The change then completes only if
 the reservoir can absorb the release, and it leaves about one relic defect of fixed size at every size tested,
-from 64 to 288 vertices. Mapped from $\lambda = 1.05$ to 1.45, the torus is metastable
-up to 1.35 and the change keeps its two-order, single-front character wherever it is, finishing cleanly near
-$\lambda = 1$ and leaving more defects as $\lambda$ grows. The release vanishes at $\lambda = 1$, the CQG value. Every verdict quoted was pre-registered.
+from 64 to 288 vertices. Mapped from $\lambda = 1.05$ to 1.45 in three pre-registered runs, each inconclusive
+by the letter of its rules, the torus is metastable up to 1.35; the change keeps its two-order, single-front
+character from 1.05 to 1.30 in all three runs and begins to break up at 1.35, finishing cleanly near
+$\lambda = 1$ and leaving more defects as $\lambda$ grows. The release vanishes at $\lambda = 1$, the CQG value.
+The Arrhenius test and the seed threshold were exploratory; every verdict quoted was pre-registered, and the
+two-state verdict at $\lambda = 1.25$ was reached after amendments to its energy gate, three of them written after
+the data they judged.
 \end{abstract}
 
 \maketitle
@@ -59,13 +64,15 @@ event a burp. We map it along $\lambda$, down to $\lambda = 1.05$, and follow it
 Why deform CQG at all? At $\lambda = 1$ an edge carrying three squares costs exactly what an edge carrying two
 costs, so the flat torus, the curled torus and the 4-cube are degenerate, and no ordered arrangement can turn
 into another with any release. The coefficient $\lambda$ lifts that degeneracy and changes nothing else: the
-states, the moves and the hard-core rule are those of CQG. For $\lambda > 1$ the flat torus is the unique ground
-state and each curled direction costs a known energy per vertex. The family is therefore a controlled
+states, the moves and the hard-core rule are those of CQG. For $\lambda > 1$ the ground states are the arrangements with two
+squares on every edge, the flat torus and its twisted relatives, and each curled direction costs a known energy
+per vertex. The family is therefore a controlled
 laboratory for a change between two ordered arrangements, in which the barrier, the release and the relic can
 each be counted exactly, and $\lambda \to 1$ connects it to CQG.
 
 Every kinetic statement below, about waiting times, barriers and fronts, concerns one Markov chain: the local
-edge switch with Metropolis acceptance, as used to sample the model \cite{KTB19}. It samples the model's
+edge switch used to sample the model \cite{KTB19}, with Metropolis acceptance and an ordered-pair proposal that
+are our choices (Ref.~\cite{T25} uses Glauber acceptance). It samples the model's
 equilibrium distribution; we do not claim it is the physical time evolution of emergent space. What does not
 depend on it is the energetics: the gap between the two arrangements, the cost of the cheapest single move out,
 and hence the least energy a sealed system needs to leave by such moves. What does depend on it are the rates,
@@ -84,8 +91,8 @@ At $\lambda = 1$, $H$ is the total combinatorial curvature of Refs.~\cite{KTB19,
 $\lambda$ multiplies the local (saturation) term, and for $\lambda \ne 1$ $H$ is not a curvature. The hard-core rule limits $S_e \le 3$. Three exact consequences follow.
 
 \emph{Ground state.} For $\lambda \ge 1$ every term in the sum is non-negative, so $H \ge 0$, with $H = 0$
-for any graph with two squares on every edge: the flat lattice torus. For $\lambda > 1$ nothing else
-reaches zero.
+for any graph with two squares on every edge: the flat lattice torus and its twisted relatives, of which there
+can be several (three classes at $N = 18$). For $\lambda > 1$ nothing else reaches zero.
 
 \emph{Ladder.} The $4\times L$ torus has $S = 5N/4$ and $X = N$ (the edges of each wrap-around 4-cycle
 carry three squares), so $H/N = 4(\lambda - 1) \equiv \varepsilon$, the energy a burp releases per vertex;
@@ -121,8 +128,8 @@ proposals) and move B ($\Delta S = -4$, $\Delta X = -10$; cost $64 - 40\lambda$;
 proposals). Move A is therefore offered $2N \times 6N/4N^2 = 3$ times per sweep and B twice, independent of
 $N$. Switches that change neither $S$ nor $X$ ($N/2$ of them) do not leave this energy: each reconnects two
 neighbouring columns at opposite points, a reflection of the square that twists the torus globally but leaves
-every neighbourhood as it was, and every arrangement they lead to has the same counts of A and B (checked by
-enumeration along a walk of such switches \cite{repo}). The mean time to the first exit is therefore an
+every neighbourhood as it was, and every arrangement met along a 60-step walk of such switches (three classes
+up to relabelling) has the same counts of A and B \cite{repo}. The mean time to the first exit is therefore an
 Arrhenius law whose attempt frequencies are counted, not fitted,
 \begin{equation}
 \tau(\lambda, g) = \bigl[3 e^{-(32 - 16\lambda)/g} + 2 e^{-(64-40\lambda)/g}\bigr]^{-1},
@@ -142,7 +149,9 @@ $1/N$.
 
 At $\lambda = 1.25$ the minimum energetic barrier to leave the perfect curled torus, the cost of move A, is
 $\Delta E^\ddagger = 12$. It is the barrier to the first exit; whether an exit then grows into a front is a
-separate question, answered in Sec.~\ref{sec:lambda}. Over twelve conditions ($g = 1.4$ to 2.5, $N = 64$ and 144,
+separate question, answered in Sec.~\ref{sec:lambda}. In an exploratory test (the prediction was written into
+the run's configuration before it ran, but not pre-registered), over twelve conditions ($g = 1.4$ to 2.5,
+$N = 64$ and 144,
 16 runs each), the measured mean waiting time against the move-A term of Eq.~(\ref{eq:tau}) has a plain
 mean ratio of 0.98 and a weighted mean of $0.88 \pm 0.06$ (standard error), every ratio between 0.71 and 1.62,
 over a ninety-fold range of times [Fig.~\ref{fig:data}(a)]. A weighted straight-line fit of $\ln\tau$ against
@@ -159,7 +168,13 @@ The predictions were a memoryless waiting time (coefficient of variation between
 least 70\% of them. All three hold at every size and on two independent sets of seeds (Table~\ref{tab:t7}):
 under this dynamics the change starts at one place and runs as a single front, with the two orders on either
 side of it and almost nothing in between [Fig.~\ref{fig:data}(b)]. The mean waiting time does not fall with
-$N$, as the proposal's $N$-independent rate of exits requires (Sec.~II).
+$N$, as the proposal's $N$-independent rate of exits requires (Sec.~II). The same pre-registration listed
+$\lambda = 1.5$; there the torus is not metastable at $g = 1.5$ (its number of squares per vertex falls to 0.95,
+below the flat torus's 1, within 50 sweeps in every replica), and no verdict was applied. A separate
+pre-registered test of whether a coarse law of a single front governs these decays (T12 in Ref.~\cite{repo};
+64 decays at $g = 1.5$ and 2.0, under Metropolis and Glauber acceptance) came out NOT ESTABLISHED: 21 of the 59
+that nucleated converted in more than one patch, mostly at the warmer coupling, and the front's rate fell roughly
+as $N^{-0.7}$.
 
 The coefficient of variation is a coarse test of memorylessness. Checked afterwards and not pre-registered,
 the whole distribution is exponential too [Fig.~\ref{fig:data}(c)]: pooled over conditions after dividing each
@@ -200,16 +215,23 @@ the watch ended (Methods). Not pre-registered.}
 \end{figure*}
 
 The energy released is exact. After the burp, 24 to 28 of 30 decays per size rest on the flat torus with
-release $\varepsilon$ per vertex to within 1\%. The others settle on metastable defected sheets, read from
-their wiring: most often one column of the torus left curled, four vertices at $d = 1$ with $S = N + 1$,
-$X = 6$, costing $24\lambda - 16$ (14 at $\lambda = 1.25$), the relic defect of Sec.~IV; more rarely combinations of small defects of 8 to
-45 units. The pre-registered verdict, a two-state change, holds at $N = 64$, 96 and 192; at $N = 144$ one
-decay changed state inside its final measuring window and the size was set aside by the energy gate as
-written, with all three predictions holding there too.
+release $\varepsilon$ per vertex to within 1\%. The others settle on defected sheets, read from their wiring:
+most often combinations of small defects of 8 to 45 units, and less often the four-point relic of Sec.~IV, a
+closed loop of four vertices at $d = 1$ with $S = N + 1$ and, in its commonest form, $X = 6$, costing
+$24\lambda - 16$ (14 at $\lambda = 1.25$). Whether these states are stable or only slow is not known. The
+pre-registered verdict, a two-state change, holds at $N = 64$, 96 and 192, under an energy gate the author
+amended four times: once after the first runs, to fix when the release is read, and three times after the rerun
+whose verdict each amendment bore on (to allow the four-point relic, to replay the decays that reached the settle
+cap, and to read unusual resting states from their wiring); every amendment is on the record with its timing
+\cite{repo}. The three predictions, which concern the first switch, were not amended and held on both sets of
+seeds. At $N = 144$ one decay changed state inside its final measuring window and the size was set aside by the
+energy gate as written, with all three predictions holding there too.
 
 For contrast: at the same $\lambda = 1.25$ the change out of the random phase shows one hump in the
 energy distribution at every coupling, size and replica we ran, with any latent heat below 1.28 per vertex
-at $N = 100$ and falling with $N$ \cite{repo}. At this $\lambda$ the sharp change is between orders.
+at $N = 100$ and falling with $N$ \cite{repo}; the pre-registered verdict there is INCONCLUSIVE, because one of
+its criteria cannot be read where the cold phase sits at zero energy and the replacement adopted for it reads the
+edge of the scan rather than the transition. At this $\lambda$ the sharp change is between orders.
 
 \section{Sealed system}
 
@@ -220,11 +242,13 @@ cannot pay. $H$ plus the stores' contents is conserved exactly, checked to the l
 the stores' mean reads the temperature. This is one energy-conserving version of the same local dynamics, not
 the unique dynamics of a sealed system, and what follows is about it.
 
-\emph{A local, size-independent threshold.} With one store holding a seed $s$ and nothing else, the torus
+\emph{A local, size-independent threshold (exploratory).} With one store holding a seed $s$ and nothing else,
+the torus
 converted in 8 of 8 runs for $s \ge 12$ and in 0 of 8 for $s \le 11.5$ (seeds 4 to 16), at each of
 $N = 48, 64, 96, 144, 192$ (320 runs). Twelve is $\Delta E^\ddagger$, the cost of move A. With nothing to
-spare the torus never converts, although the flat torus is lower. That nothing below 12 can set it off holds
-for any energy-conserving dynamics made of single switches, since no switch out costs less; that 12 always
+spare the torus never converts, although the flat torus is lower. That nothing below 12 can set it off, from the
+perfect torus and from the twisted arrangements met by the walk of Sec.~II, holds for any energy-conserving dynamics made of
+single switches, since no switch out of them costs less; that 12 always
 sufficed is a property of this one. The activation energy is fixed while the release, $\varepsilon N$, grows
 with the system.
 
@@ -239,8 +263,9 @@ which the curled and flat tori coexist.
 \emph{About one relic at every size.} In the coldest box ($C = 2N$), the number of relic defects per
 converted torus is $0.90 \pm 0.31$, $0.85 \pm 0.37$, $1.05 \pm 0.22$ and $0.95 \pm 0.22$ at
 $N = 64, 96, 192, 288$ (mean $\pm$ standard deviation over twenty runs each; a weighted fit against $N$ gives
-a slope of $0.0003 \pm 0.0003$ per vertex, standard error); the defect is the curled column above (14 units),
-occasionally a two-vertex twist (20 units). So the count is of order one, with no measurable growth, across the
+a slope of $0.0003 \pm 0.0003$ per vertex, standard error). The defect is the four-point loop above (14 units),
+its points spanning one to four of the torus's original columns and lying along the torus, or occasionally a
+two-vertex twist (20 units). So the count is of order one, with no measurable growth, across the
 sizes we could reach. We find no dependence of where the relic sits on where the change started: the pre-registered
 test of whether it sits opposite the start or at it finds neither \cite{repo}, and, checked afterwards, a
 randomisation test that rotates each relic through every column of its torus with the start held fixed places
@@ -252,10 +277,10 @@ the observed mean distance at $p = 0.67$ and $0.59$ ($N = 64$ and 96; 36 and 28 
 The decay was mapped at $\lambda = 1.05$ to 1.45 in steps of 0.05, with the protocol of Sec.~III at all four
 sizes and thirty decays per ($\lambda$, $N$) (Table~\ref{tab:lambda}, Fig.~\ref{fig:lambda}). The torus counts as
 stuck at ($\lambda$, $N$) when more than half its decays are still at least 75\% torus after the 200-sweep rest
-that defines the waiting time.
+that defines the waiting time (the pre-registered definition, PREREGISTRATION T8 in Ref.~\cite{repo}).
 
 The torus is stuck from $\lambda = 1.05$ to 1.35 at every size and not at 1.40 or 1.45; Eq.~(\ref{eq:tau}) puts
-the mean wait at 200 sweeps near $\lambda = 1.33$. Wherever it is stuck, the change keeps the character of
+the mean wait at 200 sweeps at $\lambda = 1.345$, just above $4/3$, where move B takes over. Wherever it is stuck, the change keeps the character of
 Sec.~III: at half conversion 95 to 100\% of vertices belong to one order or the other, the converted region is
 one piece holding 76 to 100\% of it, and the release is exactly $\varepsilon$ per vertex wherever the flat
 torus is reached. The mean waiting time follows Eq.~(\ref{eq:tau}) with nothing fitted over two decades
@@ -278,12 +303,14 @@ other cells stay 3 to 27\% above Eq.~(\ref{eq:tau}) without their largest wait. 
 depends on $\lambda$ [Fig.~\ref{fig:lambda}(b)]: at $\lambda = 1.05$ every decay ends at the flat torus, while the
 share ending on a defected sheet rises to 21\% at 1.30 and 54\% at 1.35. At fixed coupling, then, the relic is
 a feature of the larger coefficients, and near $\lambda = 1$ the change is clean. Beyond the edge
-($\lambda \ge 1.40$) the torus falls apart everywhere at once and ends mostly as a defected sheet.
+($\lambda \ge 1.40$) the change starts more and more often in several places at once (in about half the decays at
+$N = 64$ and in all of them at $N = 192$) and ends mostly as a defected sheet.
 
 The pre-registered verdict for the map as a whole is inconclusive, and the reason is stated. Besides the
 coexistence and single-front criteria, which hold everywhere the torus is stuck, it required the waiting times to
 be memoryless, with a coefficient of variation between 0.7 and 1.3; at thirty decays that band is about two
-standard errors wide, and it fails in five of the 28 stuck cells (at $\lambda = 1.10$, 1.30 and 1.35). At
+standard errors wide, and it fails in nine of the 24 stuck cells the map ran (at two sizes at $\lambda = 1.10$,
+three at 1.30 and all four at 1.35). At
 $\lambda = 1.35$ the energy check also fails for two to five decays per size, whose final states match none of
 the allowed ones. A repair computed before being proposed (the variation of the time after the rest) changes no
 verdict. Tested afterwards on the whole distribution rather than its coefficient of variation, the waits of the
@@ -294,12 +321,15 @@ The map was repeated twice with 120 decays per cell and fresh seeds, each repeat
 fixed before it ran \cite{repo}. The first repeat replaced the memoryless band by the central 99.9\% range of the
 coefficient of variation of an exponential sample of the same size, applied to the time after the rest; that check
 then held in every stuck cell up to $\lambda = 1.25$ and in three of four sizes at 1.30, but the unchanged energy
-check failed one cell per size at 1.30, because it compared a window average of the energy with the exact energy of
-the final graph and the sheet's own thermal excitations at $g = 1.5$ exceed its 1\% tolerance in a few decays per
-hundred. The second repeat read the energy exactly from each decay's saved final graph, and that check passed in all
-28 cells, with two orders and one front in every cell as before; the memoryless check now failed in four cells, each
-on one or two waits of 24 to 76 times the mean at $N = 64$ and 192. So three runs have tripped three different
-criteria, on a band, a catalog, and a single extreme wait in 120, while the physics has read the same each time.
+check failed at every size at 1.30. The reason, read after the fact and not scored, is that it compared a window
+average of the energy with the exact energy of the final graph, and the sheet's own thermal excitations at
+$g = 1.5$ exceed its 1\% tolerance in a few decays per hundred. The second repeat replaced that check with one that asked only that each
+decay's saved final graph exist and be valid, which held in all 28 cells, and read the energy exactly from those
+graphs, reporting it rather than gating on it; two orders and one front held in every cell up to 1.30 as before.
+The memoryless check now failed in four cells: at $N = 64$ ($\lambda = 1.25$ and 1.30), each on a single wait 24
+and 76 times the predicted mean $\tau$, and at $N = 192$ (1.30) and 144 (1.35), with coefficients of variation of
+1.53 and 1.41 against a band ending at 1.38. So three runs have tripped three different criteria, on a band, a
+catalog, and the spread of the waits, while the physics has read the same each time.
 The break-up at the edge (Sec.~\ref{sec:lambda}) appeared in both repeats: pooled over sizes from $\lambda = 1.30$
 to 1.35, the share of decays ending at the flat torus falls from 0.71 to 0.47 and from 0.74 to 0.49, and the share
 whose converted region is in several pieces at a quarter conversion rises from 0.44 to 0.69 and from 0.43 to 0.68.
@@ -308,7 +338,7 @@ always at the smaller sizes; it is a feature to study on the saved graphs, not a
 
 \begin{table}[b]
 \caption{The map along $\lambda$ at $g = 1.5$ (ranges over $N = 64$ to 192; thirty decays per cell; $\lambda = 1.25$
-from Table~\ref{tab:t7}). Two orders: share of vertices at $d \in \{1,2\}$ at half conversion. Flat: share of
+from the two runs of Table~\ref{tab:t7}, not rerun in the map, its flat share from the second). Two orders: share of vertices at $d \in \{1,2\}$ at half conversion. Flat: share of
 decays ending at the flat torus.}
 \label{tab:lambda}
 \begin{ruledtabular}
@@ -319,6 +349,7 @@ $\lambda$ & $\tau$, Eq.~(\ref{eq:tau}) & mean wait & two orders & flat \\
 1.10 & 4844 & 4154--6626 & 0.998--1.000 & 98\% \\
 1.15 & 2788 & 2191--3834 & 0.996--0.999 & 97\% \\
 1.20 & 1570 & 1132--1716 & 0.996--0.998 & 93\% \\
+1.25 & 845 & 660--1428 & 0.988--0.998 & 88\% \\
 1.30 & 419 & 403--505 & 0.980--0.984 & 79\% \\
 1.35 & 183 & 280--350 & 0.948--0.963 & 46\% \\
 1.40 & 68 & not stuck & 0.911--0.924 & 31\% \\
@@ -366,8 +397,9 @@ $\Delta E^\ddagger$, the existence of the one-move path and the least seed a sea
 the rates. The perfect curled torus has $2N$ symmetries, the twisted arrangements it reaches without leaving
 its energy have $N$ or $2N$, and every arrangement one move A away has 2 (counted exactly at $N = 64$ and
 96 \cite{repo}), so each exit would be accepted $N/2$ to $N$ times less often: the escape would be slower by a
-factor of order $N$, and the waiting time would grow with the system instead of staying flat. We have not run
-the decay with interchangeable vertices.
+factor of order $N$, and the waiting time would grow with the system instead of staying flat. This is
+transition-state reasoning: the choice fixes the equilibrium weights but not the kinetics, so ``of order $N$'' is
+the change in the effective barrier, not a derived clock. We have not run the decay with interchangeable vertices.
 
 Not claimed: that this chain is the physical time evolution of anything; a first-order transition in the
 thermodynamic sense (this is the decay of a metastable state at fixed coupling, and ``sharp'' is used in the
@@ -378,14 +410,18 @@ specific ordered precursor through a sharp change of this kind, a lattice cousin
 \cite{C77}, releasing a definite energy and leaving relics behind. Nothing here tests that hypothesis beyond
 showing that a graph energy one coefficient away from a model of emergent geometry contains such a change. We note only that the relic found here, of
 fixed size and about one per change at every size we reached, is the kind of object a dark-matter relic of such a
-change would have to be, and that the change
+change would have to be, though it anneals away at every fixed coupling we tried, survives when the box cools
+faster than it heals, and grows in number with the number of seeds that start the change \cite{repo}; and that the
+change
 needs a push of fixed size while what it releases grows with the system.
 
 \section*{Methods and data}
 
 Simulations use single-edge switches that preserve the bipartition, with Metropolis acceptance; the chain
 reproduces exact averages computed by enumerating every valid graph at $N = 16$ and 18, and the published
-square density of Ref.~\cite{KTB19} (Fig.~8a) at $N = 160$ to rms 0.005. Every kinetic quantity quoted is
+square density of Ref.~\cite{KTB19} (Fig.~8a) at $N = 160$ to rms 0.005; it does not reproduce the steeper
+curve of Ref.~\cite{T25} (Fig.~3) at the same size, from which it differs by up to 0.41 between $g = 2$ and 6.3, a
+disagreement between the two published figures that is still open. Every kinetic quantity quoted is
 for this chain (Introduction). Seeds are fixed in configuration
 files; every result file carries its configuration and software versions. Predictions and analysis rules
 were committed before the runs they concern, with every amendment recorded. Code, data, configurations and
@@ -413,6 +449,30 @@ more with probability $10^{-3}$. Whether this is chance, or something we have no
 runs, is open.
 The exit counts behind Eq.~(\ref{eq:tau}), the twisted arrangements at the torus's energy and their symmetry
 counts are enumerated exactly, with no simulation \cite{repo}.
+
+\section*{Changes from the first version}
+
+A referee-style reading of the first version, generated with Claude (Anthropic) and checked point by point
+against the record and the committed data \cite{repo}, found the following, all corrected here; no result was
+removed and no verdict changed. The first version said every verdict quoted was pre-registered; two results it
+quoted, the Arrhenius test of the waiting time and the 12-unit seed threshold, were exploratory, and are now
+labeled so. The two-state verdict at $\lambda = 1.25$ was reached after four amendments to its energy gate, three
+written after the data they judged; this is now stated in the abstract and Sec.~III. ``Memoryless'' is now ``close
+to memoryless'', with the failing checks named, and the abstract's summary of the $\lambda$ map now says that all
+three runs were inconclusive by the letter and that the single front begins to break up at $\lambda = 1.35$.
+Corrected counts and descriptions: the memoryless check of the map failed in nine of 24 stuck cells, not five of
+28; the second repeat's gate asked only for a complete, valid record of final graphs, and of its four memoryless
+failures two are single very long waits at $N = 64$ and two are wide spreads; beyond the edge the change starts in
+several places in a stated share of decays, rather than ``everywhere at once''; Eq.~(\ref{eq:tau}) crosses 200
+sweeps at $\lambda = 1.345$, not 1.33; Table~\ref{tab:lambda} gains its $\lambda = 1.25$ row. The commonest
+resting state after the burp is a combination of small defects, not the four-point relic, and the relic is a
+closed loop of four whose points lie along the torus, rather than always one curled column. For $\lambda > 1$ the
+ground state is a family, the flat torus and its twisted relatives, not unique, and the twisted family was checked
+along a walk, not exhaustively. The Metropolis acceptance and the ordered-pair proposal are our choices, not the published
+sampler's. Added caveats: the coarse front law (T12) was not established; at $\lambda = 1.5$ the torus is not
+metastable; the chain does not reproduce Ref.~\cite{T25} Fig.~3; the random-phase verdict at $\lambda = 1.25$ is
+inconclusive; the interchangeable-vertex estimate is transition-state reasoning; the relic anneals at fixed
+coupling and its number grows with the number of seeds; and ``stuck'' is the pre-registered definition.
 
 \begin{acknowledgments}
 Code, analysis and text were drafted with Claude (Anthropic), directed and checked by the author; every
