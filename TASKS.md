@@ -359,7 +359,7 @@ WALL (O54).
 ## The fold run backwards (piece 8 in six links)  ◑
 
 **Added 2026-09-25, midday** (VISION Update 27, the owner's mechanism). Exact first (O55): each successive fold's nucleation
-excess halves; the counting drive to curl appears only at full curling and beats the curling cost only below λ ≈ 1.02.
+excess falls (halving exactly only with eight links at λ = 1.25); the counting drive to curl appears only at full curling and beats the curling cost only below λ ≈ 1.02.
 PREREGISTRATION **T34** with her prediction (re-curls, one direction then the rest) and ours (melts): four Batch jobs, read with
 `scripts/analyse_t34.py`. Designed, not run: the same with interchangeable points near λ = 1.02, where the counting could pay.
 

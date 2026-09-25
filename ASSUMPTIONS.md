@@ -1287,7 +1287,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   10 squares and 28 surplus squares, 160 − 112λ); two curled **40** (160 − 96λ); one curled **80** (160 − 64λ); flat
   space **128** (losing 8 squares and no surplus, the same at every λ); the 8-cube, alone or in a gas, 160 − 128λ, which
   is **0 at λ = 1.25 and 19.2 at 1.10**, so the fully curled four-direction state is stuck for now only for 1 < λ < 1.25.
-  Two things worth saying plainly. The walls double from rung to rung, so nothing in the energy ties the directions
+  Two things worth saying plainly. The walls rise from rung to rung (they double exactly only here, at eight links and
+  λ = 1.25; corrected 25 September, see O55's addendum), so nothing in the energy ties the directions
   together: a tied pattern in T33 would be a surprise with no term to explain it. And the flat state's wall (128) sits
   far above every rung's wall, unlike two dimensions (32 against the tube's 12), so a bath hot enough to pay the later
   rungs need not melt the flat state; the room a four-direction change needs is a different question from T18's.
@@ -1382,6 +1383,15 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   constant and the energy per cube is constant, so the crossover λ does not move with N in the gas; for connected
   arrangements it is not computed. *Ours, exact; unreviewed.*
 
+  **Correction, 25 September, midday (the assistant's; found by checking the formulas while reading the published
+  work on decompactification):** "halves" and "doubles" hold only at λ = 1.25, and exactly only with eight links. From
+  O49 and O50's own formulas the walls out of successive rungs are, with six links, 96 − 80λ, 96 − 64λ, 96 − 48λ (at
+  λ = 1.25: downhill, 16, 36; at 1.10: 8, 25.6, 43.2) and, with eight, 160 − 128λ, 160 − 112λ, 160 − 96λ, 160 − 64λ (at
+  1.25: 0, 20, 40, 80; at 1.10: 19.2, 36.8, 54.4, 89.6). What holds at every λ > 1: each wall is lower than the one
+  before it by 16λ or 32λ, so each fold makes the next easier, and nothing in the energy ties the directions together.
+  What does not: a factor of two. Corrected in O50, VISION Update 27 (a pointer), the six-link paper, paper 3, the
+  series plan, the loop-and-exchange brief and the programme page.
+
 - **O56 Six links, exact: the one-switch curled column is not a relic, and two of them pull on each other neither by
   energy nor by counting except at contact and at symmetric placements.** (2026-09-25; `scripts/exact_relic_d.py`; flat
   8 × 8 × 8 at λ = 1.02.) The switch that closes a line of four points into a 4-cycle along one axis costs 120.5 above
@@ -1414,6 +1424,9 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   these sizes: it prunes arrangements with a twofold symmetry of odd parity, including one of three flat ones, and does
   not move the thermodynamics. Not yet asked: the anyonic form (a phase per swap), which is where cancellation, not
   only pruning, would enter.
+  **Addendum, 25 September (O60 (b)):** the anyonic form does not exist as stated (renamings have only the trivial and
+  the sign representation), and what the sign forbids depends on a convention (points or pairs) that is the owner's to
+  choose under S1.
 
 - **O58 Gravity, step 1: no six-link relic among one- and two-switch constructions; the search's two "dips" were an
   artifact of its partial move list.** (2026-09-25; `scripts/exact_relic_search_d.py`, `scripts/exact_relic_confirm_d.py`;
@@ -1443,6 +1456,62 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   stuck regions; the allotrope of [T25] Fig. 9 lives on an infinite hyperbolic graph, and a torus does not test it.
   What would: a region planted in the lattice with two squares per point and a boundary to the three-square background,
   followed at fixed coupling (the allotrope's own lifetime, the model author's question), which is the natural next run.
+
+- **O60 Reading, 25 September (four literature reviews by assistant agents; notes in `docs/reading/notes/`, every paper
+  fetched and searched, quotes to be checked against the papers before any is published): what the published work says
+  about the programme's open questions.** *The agents' reading and our inferences, unverified by a physicist.*
+  (a) **Gravity.** A medium with an energy gap passes on only forces that die off exponentially (Kardar and Golestanian;
+  Hastings and Koma, Thm. 2.8; a massive mediator gives Yukawa's e^(−mr)/r). The model's flat space is gapped in the
+  extreme: every move out of it costs 32, 64 or 128 (O22, O51, O50). So no pull at a distance can come from this energy
+  at any λ in the geometric phase; the model's author writes that both phases have a finite correlation length
+  ([T25] v2, around Eq. 23). A 1/r pull needs three things together: a gapless mode, a relic that is a source for it in
+  proportion to its energy (a Gauss-law charge), and a mode of the kind that makes like sources attract (a scalar, as in
+  Nordström's theory, or the tensor of Einstein's; the vector modes that hard local constraints produce make like
+  defects repel). **Correction to our reading of O31:** short curvature correlations do not show a gap (in Einstein
+  gravity the curvature correlator is a contact term at tree level; Laiho and Ratliff 2025, Eqs. 218, 223); the frozen
+  flat space does. The one discrete random-geometry model that has shown a Newtonian pull is four-dimensional dynamical
+  triangulations, with test particles (de Bakker and Smit 1997; Dai et al. 2021).
+  (b) **Exchange rules.** The "anyonic form" named after O57 does not exist as stated: renamings form the symmetric group,
+  whose only one-dimensional representations are the trivial one and the sign, so any phase summed over one
+  arrangement's renamings gives the count or zero (Betre and Lewis, Sec. 3). Anyons need paths of exchanges (braids),
+  which is a rule over histories (VISION Update 20); and our graphs, bipartite with four or more links, are not planar,
+  where Harrison, Keating, Robbins and Sawicki (2014, Thm. 4) allow only bosons or fermions on the well-connected parts.
+  **O57's forbidding depends on a convention:** with the sign taken on pairs rather than points (Betre and Lewis),
+  nothing is forbidden; which sign representation is meant is a choice for the owner under S1. And an exchange sign is a
+  flat connection and carries no force (Maciążek and Sawicki 2019, Sec. 1).
+  (c) **The leftover.** Kibble–Zurek scaling is built for continuous transitions; for a first-order change the count of
+  domains, and so of places where fronts meet, is set by nucleation and growth (KJMA): in one dimension
+  ½√(πI/v) seeds per unit length (Jun and coworkers, Eq. 1). T37 is built on this. The leftover's nearest published
+  relative is a trapped pocket of the old phase (Fermi-ball dark matter), not a topological defect.
+  (d) **Directions opening.** Nothing read says curled directions must open together unless something ties them; string
+  gas cosmology caps the number of large directions at three and does not make them open at once; a published
+  successive-push study (Greene, Kabat and Marnerides 2013) is the closest analog of T30. **Correction:** the walls
+  "double" only at λ = 1.25 with eight links (O55, correction).
+  (e) **Black holes.** The owner's ordered interior sits with gravastars and condensate pictures, not with fuzzballs;
+  what would tell them apart is where the entropy lives, a threshold for forming, and tidal response.
+
+- **O61 Exact, exploratory: a massless field on the graph's points would give a pull, a fast Casimir one from its
+  fluctuations and a Newton-shaped one if relics are its sources.** (2026-09-25; `scripts/exact_tree_count_pull.py`;
+  `configs/exact_tree_count_pull.json` and `_3d.json`, each with its expectation written before the calculation;
+  `results/exact_tree_count_pull*.csv`.) Neither term is in the model; this says what each candidate would add. A field
+  on the points with energy Σ over links of the squared difference, integrated out exactly, leaves (g/2) ln det′L in the
+  free energy of a wiring (Kirchhoff: det′L = N × the number of spanning trees τ), and, if a relic is a source q, a
+  cross term −q₁ᵀL⁺q₂ between two relics. For two copies of O56's curled line of four at every even separation:
+  **ln τ is lower when they are close**, by 0.048, 0.0068, 0.0014, 0.00034 at r = 2, 4, 6, 8 in a 24 × 24 sheet and by
+  0.0032, 0.00017, 0.000014 at r = 2, 4, 6 in a 16 × 16 × 16 torus: an attraction under the field reading (a repulsion
+  if spanning trees are counted as hidden structure), falling roughly as r⁻⁴ and r⁻⁶, and worth about 10⁻³ g at contact,
+  far too weak and too short to be gravity (the literature's "passes sign, fails shape"). **The source term grows as the
+  relics approach**: q₁ᵀL⁺q₂ minus its farthest value is 0.369, 0.105, 0.022 at r = 2, 4, 6 along an axis and 0.243,
+  0.062, 0.012 on the diagonal at 16³, consistent with the 1/r of the lattice Green's function reduced by the torus's
+  images; in two directions it grows like −ln r. So the minimal rule that gives a Newton-shaped, like-attracting pull is
+  a massless scalar on the points with relics as its sources in proportion to their energy; the pull then travels
+  through the emergent wiring, which is what would be new. That the pull is put in by the rule, not derived, must be
+  said wherever this is used. Whether to adopt it is the owner's decision under S1 (`docs/design/gravity_brief.md`,
+  section 6).
+  *A note on the two files:* `exact_tree_count_pull.csv` was written by the script's first version, which referred both
+  kinds of placement in 8 × 8 × 8 to the axis's farthest one and used a pseudo-inverse; the second version (a direct
+  solve, each kind referred to its own farthest; the pseudo-inverse failed at 16³) wrote `exact_tree_count_pull_3d.csv`.
+  The raw columns (`log_trees`, `cross`) of both are comparable; `cross` differs between versions by a constant.
 
 ## Provenance
 

@@ -14,7 +14,7 @@ From the (D, λ) map (`docs/papers/series_plan.md`) and the verdicts on record:
 - **A ladder of curled directions, additive, with an exact release per rung** (papers 1 and 3). The burp: one seed, one
   front, a fixed activation, an exact release. This is the part of the picture that worked at every size and every λ
   tried, and any new model must reproduce it or explain why it should not.
-- **Walls that double from rung to rung**, in four, six and eight links, so that nothing in this energy ties the
+- **Walls that rise from rung to rung** (doubling exactly only with eight links at λ = 1.25), in four, six and eight links, so that nothing in this energy ties the
   directions together; they open one at a time (T30). The author's rule that the directions curl and open together is
   therefore an ingredient the new model must *add*: a term or a rule that couples the directions.
 - **The counting drive appears only at full curling** (O55). If gravity is to come from counting (her curve-first
@@ -51,7 +51,7 @@ vanishes anywhere, or the signed weight breaks positivity in a way that makes no
 the Pauli principle from antisymmetry; anyons in two dimensions.
 
 **B. A coupling between directions (the intertwining).** Keep the ladder; add a term that makes the second fold cheaper
-once the first has happened, beyond the halving the walls already give: for example, a reward for a point whose open
+once the first has happened, beyond the lowering the walls already give: for example, a reward for a point whose open
 directions are all open or all curled, penalizing the partial state 4 × 4 × L that the author's rule forbids. *First
 test, exact:* the walls and windows recomputed with the term; the coupled model should turn T30's FIRST ONLY into a
 cascade at some λ. *What would kill it:* no coefficient gives a cascade without also melting flat space (its wall must
@@ -75,3 +75,18 @@ A is the cheapest and speaks to the two open legs at once (the quantum leg's nee
 of arrangements); its first test runs on files already saved. B speaks directly to piece 11 and can be pre-registered
 against T30's verdict. C is already on the table and waiting. D is a new project. Under S1 the choice is hers; once she
 chooses, the first exact test is a day's work and needs no compute.
+
+## 5. What the reading of 25 September changes (ASSUMPTIONS O60 (b))
+
+- **The "anyonic form" of rule A does not exist as stated.** Renamings form the symmetric group, whose only
+  one-dimensional representations are the trivial one and the sign; any phase summed over one arrangement's renamings
+  gives either the count or zero. Anyons need paths of exchanges (braids), a rule over histories (VISION Update 20), and
+  our graphs are not planar, where the published classification allows only bosons and fermions on their well-connected
+  parts.
+- **What rule A forbids depends on a convention**: with the sign on points (O57) a few per cent of damaged sheets are
+  forbidden; with the sign on pairs (Betre and Lewis) nothing is. The choice is the owner's under S1.
+- **No exchange sign carries a force** (a flat connection); so rule A cannot help the gravity leg. The loop rules that
+  give modes with no gap, which the gravity leg needs, are continuous fields: a phase on each square (option B of
+  `gravity_brief.md` section 6, vector-like, so like relics repel) or a field on the points (option A there, scalar, so
+  like relics attract). A field on the points is the recommended first rule for gravity; phases on squares stay the
+  candidate for light and for the quantum leg.

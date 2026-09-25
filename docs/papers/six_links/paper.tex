@@ -6,7 +6,7 @@
 
 \begin{document}
 
-\title{Curled tori with six and eight links: an additive ladder of directions, walls that double at every rung, a
+\title{Curled tori with six and eight links: an additive ladder of directions, walls that rise at every rung, a
 push fixed with size, and directions that open one at a time}
 
 \author{Emily Smith}
@@ -20,7 +20,7 @@ We extend the curled-torus study of a companion paper \cite{paper1} from four li
 the family of graph energies obtained from combinatorial quantum gravity (CQG) by raising the coefficient
 $\lambda$ of its local term above 1 (only $\lambda = 1$ is CQG; everything here is at $\lambda > 1$, next to CQG and
 not in it). Exact: the ladder of curled directions is additive at every number of links, $4(\lambda - 1)$ per vertex
-per curled direction; the cheapest single move out of each rung, listed by brute force, doubles in cost from rung to
+per curled direction; the cheapest single move out of each rung, listed by brute force, rises in cost from rung to
 rung (with six links 16, 36; with eight, 20, 40, 80, at $\lambda = 1.25$), so nothing in the energy ties the
 directions together; and the cheapest move out of flat space costs 32, 64 and 128 with four, six and eight links,
 the same at every $\lambda$. Measured, pre-registered, sealed and energy-conserving: the push that starts the change
@@ -72,8 +72,9 @@ directions: $D$ on the flat torus, one less per curled direction, above $D$ wher
 Every switch the chain can propose out of each curled torus was listed and priced at $-16\,\Delta S + 4\lambda\,\Delta X$;
 by translation symmetry one vertex serves as the first of the pair, and the cheapest moves are always among nearby
 partners, which was checked against the full search on the six-link tori \cite{repo}. Table~\ref{tab:walls} gives the
-cheapest kind for every rung at the sizes used. Three things follow. The walls double from rung to rung: with six
-links 16 then 36, with eight links 20, 40, 80. So the energy ties nothing together; each direction has its own wall,
+cheapest kind for every rung at the sizes used. Three things follow. The walls rise from rung to rung: with six
+links 16 then 36, with eight links 20, 40, 80 at $\lambda = 1.25$ (each lower wall is less by $16\lambda$ or
+$32\lambda$, so the factor of two at eight links holds at this $\lambda$ only). So the energy ties nothing together; each direction has its own wall,
 and the second is the higher. The window of $\lambda$ in which a rung is stuck for now widens as more directions
 are open (with eight links, 1.25 for the gas, 1.43, 1.67, 2.5 up the ladder). And the wall of flat space itself, the
 cheapest move out of the perfect lattice, is 32, 64 and 128 with four, six and eight links, independent of $\lambda$:
@@ -183,10 +184,12 @@ own terms, and not about the published model.
 
 \section{Discussion}
 
-Three exact facts and two measured ones. The ladder is additive at every number of links; the walls double from rung
+Three exact facts and two measured ones. The ladder is additive at every number of links; the walls rise from rung
 to rung; flat space's own wall grows with the number of links faster than any rung's. The push that starts a change
-is fixed with size in three dimensions as in two. And given that push, the directions open one at a time: the first
-as a front, the second behind a wall the first release does not pay in a cold bath. The author's rule that the
+is fixed with size in three dimensions as in two. And given that push, a torus's directions do not open together: the
+first opens fully in a third of the runs and partly in most of the rest, and the second sits behind a wall the first
+release does not pay in a cold bath; the gas of cubes, where no direction is singled out, opens two of three without a
+rest between them. The author's rule that the
 directions curl and open together therefore describes an ingredient this energy does not contain, which the map now
 says plainly; the eight-link test will say whether a singleton-then-three pattern, which she found natural on seeing
 the six-link result, appears from the fully curled start. What would carry the question further is a term that

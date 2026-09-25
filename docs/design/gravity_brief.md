@@ -78,3 +78,55 @@ Against: no relic that is a dip in six links; a relic that anneals before it mov
 depends on the relic's wiring at equal energy. Cannot show: any number with units; anything about time or light; the
 strength of gravity; whether the author's account or Einstein's is the cause, since the model has only one candidate
 cause to test.
+
+## 6. What the reading and the exact calculation change (25 September 2026, 13:45 ET), and the decision they ask for
+
+Four literature reviews were run the same day (ASSUMPTIONS O60; notes in `docs/reading/notes/`), and one exact
+calculation (O61). Together they change this brief's plan. *Ours, unverified by a physicist.*
+
+**Why T35 as designed cannot find gravity in this family.** A pull at a distance has to be carried by something, and a
+medium with an energy gap carries forces only over its correlation length, which dies off exponentially. The model's
+flat space is gapped in the extreme: every move out of it costs 32, 64 or 128 whatever λ is (O22, O51, O50), and the
+model's author writes that both of its phases have a finite correlation length. So O22, O32, O56 and O58 are not four
+separate negatives; they are one fact seen four times. Running T35 in this family would at best measure a contact-range
+effect. **Recommended: do not spend compute on T35 as written; record the negative with its reason** (paper 5, part
+one: "why this energy has no gravity, and what a model needs to have it").
+
+**What a model needs (O60 (a)).** Three things together: a mode with no gap; each relic a source for that mode in
+proportion to its energy (so the pull scales with the energies and not with the wiring, the equivalence principle); and
+a mode of the kind that makes like sources attract, a scalar (as in Nordström's 1913 theory) or a tensor (as in
+Einstein's). The vector modes that hard local constraints produce (the "Coulomb phase" of dimers and spin ice) make like
+defects repel, so they give electricity-like behavior, not gravity. And 1/r needs three large directions.
+
+**The exact calculation (O61).** A field on the points of the graph, with energy the sum over links of the squared
+difference across the link, is the simplest mode with no gap that a graph carries for free, and its propagator is the
+graph's own Green's function, so it follows the emergent geometry. Integrated out exactly on fixed wirings of two
+identical defects: its fluctuations alone give a Casimir-type attraction (the count of spanning trees falls when the
+defects approach), falling as roughly r⁻⁴ in two directions and r⁻⁶ in three and worth about a thousandth of g, too weak
+and too short to be gravity; with each defect a source, the cross term falls like 1/r in three directions (and like
+−ln r in two): Newton's shape.
+
+**The decision (the owner's, under S1), with our recommendation first.**
+
+- **A. Recommended: a massless field on the points, with relics as its sources in proportion to their curling energy.**
+  What is put in: the field and its coupling, so the 1/r law itself is not derived, and every page must say so. What is
+  new and testable: the pull travels through the emergent wiring, not a fixed lattice; and it can act back on the
+  geometry. Three pre-registered questions, in order: (i) in two directions, cheap: do two relics drift together in a
+  sealed run, and does the field change the burp (the field's fluctuation term weights a tube and a sheet differently,
+  computable exactly first); (ii) in three directions: the potential of mean force between two relics, its sign, its
+  1/r shape and its scaling with E₁E₂; (iii) the one that joins pieces 7 and 8: do many relics clump under the pull, and
+  does a dense clump re-curl space (her black-hole mechanism, with gravity doing the packing). Cost: the field makes
+  the weight non-local; each accepted move needs a low-rank update of the Green's function and of ln det L, about N²
+  operations, feasible to about a thousand points on one CPU, a few CPU-days per condition on Batch.
+- **B. Loop phases (a phase on each square, coupled between neighboring squares).** Closer to "loop and exchange rules"
+  and to Konopka, Markopoulou and Smolin's photons, but the literature says it gives vector modes (like relics repel) and
+  on six links is likely confined. A route to light, not to gravity; worth keeping for the quantum leg.
+- **C. Stay in the published family and look at its critical point** (λ = 1, the coupling where the gap closes). O31
+  found no growing correlation length up to 676 points; the reading says gravity would live only at that one coupling.
+  Low expected value at our sizes.
+- **D. Test particles moving on the geometry** (de Bakker and Smit's route in dynamical triangulations, the one published
+  discrete Newtonian pull). Needs a geometry that fluctuates without melting, which ours does not do.
+
+"Gravity from counting what we cannot see" (the owner's name for piece 7) maps onto A's fluctuation part literally: it is
+a count of spanning trees, hidden structure. But that part alone is the weak, fast Casimir pull; Newton's shape needs the
+source.

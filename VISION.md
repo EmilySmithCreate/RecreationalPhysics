@@ -372,7 +372,9 @@ itself, even if the activation only hit one direction, because of how space is s
 - **What is exact about the first half** (*ours; ASSUMPTIONS O55*). The nucleation cost of each successive fold, beyond
   the energy the fold itself costs, is the wall out of the more-curled state (the barrier is the same from either side):
   with six links 36, 16 and none for the first, second and third fold at λ = 1.25; with eight links 80, 40, 20 and 0. Each
-  fold halves the excess of the one before. That is her catalysis, in the walls. The energy each fold costs, 4(λ − 1)
+  fold halves the excess of the one before (*corrected the same day: exactly so only with eight links at λ = 1.25; at
+  every λ > 1 each fold lowers the next one's excess, by less than half with six links; O55, correction*). That is her
+  catalysis, in the walls. The energy each fold costs, 4(λ − 1)
   per point per direction, is what the walls do not pay and her picture says the mass does.
 - **What is exact about the second half.** With interchangeable points the symmetric state weighs more, and at 512
   points the weights are: flat 8 × 8 × 8, 1.2 × 10⁴ symmetries; one curled, 2.0 × 10³; two curled, 1.2 × 10⁴; the fully

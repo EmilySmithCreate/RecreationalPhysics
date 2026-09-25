@@ -297,7 +297,7 @@ that rearranges without melting, which nobody has measured. What does not block 
 - **T26 read: MELTS** (22 of 22 cells). The owner's confirmed prediction failed. Piece 8's next form is six-link.
 - **Piece 13 (VISION Update 25):** time as a fourth curled direction. T33 on Batch with her prediction (a tied pattern:
   three together from the three-curled start; four together or a singleton then three from the gas) and ours (one at a
-  time). Exact before the runs (O50): the walls double from rung to rung and the flat state's wall is 128, so a hot bath
+  time). Exact before the runs (O50): the walls rise from rung to rung (doubling exactly at λ = 1.25 only) and the flat state's wall is 128, so a hot bath
   can drive a cascade in four dimensions without melting the flat state. A companion paper for the four-direction result
   would follow the three-direction one; neither is drafted.
 
@@ -336,7 +336,8 @@ measured entries and exact for the walls. Every curled direction costs 4(λ − 
 | 4 (8) | all four (a gas of 8-cubes) | 1 < λ < 1.25 (160 − 128λ) | downhill | | T33 running at λ = 1.10 | O50 |
 | flat space's own wall | 2D: 32; 3D: 64; 4D: 128 (the same at every λ) | | | | a cold sheet accepts no move in any D | O22, O51, O50 |
 
-What the map says so far (*ours*): the walls double from rung to rung at every D, so nothing in the energy ties the
+What the map says so far (*ours*): the walls rise from rung to rung at every D (they double exactly only with eight links at
+λ = 1.25; O55, correction), so nothing in the energy ties the
 directions together, and the release of one rung in a cold bath does not pay the next; more directions widen the
 window in λ for the partly curled states and raise the flat state's own wall, so a four-direction change can be driven
 hot without melting where a two-direction one cannot. The "interconnection" the owner asks about is therefore not in this
