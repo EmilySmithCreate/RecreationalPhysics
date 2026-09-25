@@ -1947,6 +1947,20 @@ Which direction is time (nothing in the model distinguishes one); anything about
 with a physical clock rather than sweeps. A tied pattern, if it appeared, would be a surprise this energy has no
 term for, and would need an explanation before it was called support.
 
+#### Reading, 25 September 2026, 14:30 ET: NO CASCADE from both starts, because every replica stalled after one move
+
+`python scripts/analyse_t33.py`, six cells of six replicas from AWS Batch. **Every replica reads STALLS, so both
+verdicts are NO CASCADE by the letter.** From the three-curled torus at λ = 1.25 (C = 2N, N/2, N/4, N/8) and from the gas
+of nine 8-cubes at λ = 1.10 (C = 2N, N/4), the spark bought one move, the energy rose by that move's cost (3.000 → 3.009
+and 1.600 → 1.608 per point), the bath was left at zero, and nothing changed again in 50,000 sweeps: from the state one
+move out, no move is downhill. **Neither prediction was tested in the sense intended:** no pattern appeared, tied or one at
+a time, because nothing opened. The design gave each start exactly the cost of its cheapest first move, which in three
+directions at λ = 1.25 was enough for the first direction to open in a third of the runs (T30, corrected); in four it is
+not, and the true activation is the height of the pass over several moves. What the verdict says, then, is about the push,
+not about how the directions are tied. The owner's prediction (a tied pattern) is not supported; ours (one at a time where
+the bath is hot enough, a stall where it is not) is supported only in its second half, and for a reason we did not
+anticipate (the bath was empty, not cool). ASSUMPTIONS O62.
+
 ## T34. Six links: does concentrated energy fold flat space, one direction and then the rest? (piece 8; VISION Update 27; written 2026-09-25, midday, before any run)
 
 ### Why
@@ -2245,3 +2259,50 @@ Named, as T30.
 
 Anything at λ = 1, the published model (six links: VISION Update 24's caveat; eight links: no published curve); whether a
 physical universe has a bath of the right size; the gas's pattern, which T30 and T33 test.
+
+## T40. Four directions: how big a push starts the change, and in what pattern does it then go? (piece 13; written 2026-09-25, 15:00 ET, before any run)
+
+### Why
+
+T33 (reading; O62) gave each four-direction start exactly the cost of its cheapest first move, and every replica stalled
+after that one move, with an empty bath and no downhill move from there. So the owner's question, in what pattern four
+curled directions open (VISION Update 25: all four tied, or a singleton beside three tied), was not tested. This test
+finds the push that does start the change, by scanning its size, and reads the pattern at and above it.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py`, eight links, one store holding the spark and C = N/2 stores in all, 50,000 sweeps, read
+every 250, six replicas per spark, final graphs saved. Exact walls rechecked today on these starts
+(`scripts/exact_walls_d.py --near=4`): 20 out of the 4 × 4 × 4 × 12 torus at λ = 1.25 (next kinds 22, 33, 40), and
+19.2 out of the gas of four 8-cubes at λ = 1.10 (next 30.4).
+- Three curled, one open: 4 × 4 × 4 × 12 (N = 768), λ = 1.25, sparks 20, 30, 40, 60, 80, 120, 160.
+- The gas, all four curled: four 8-cubes (N = 1,024), λ = 1.10, sparks 20, 40, 80, 160.
+11 Batch jobs (`cloud/queue/2026-09-25_t40.txt`), seeds 20264020 to 20264660.
+
+### Definitions, fixed now (`scripts/analyse_t40.py`, tested in `tests/test_t40.py` before any run)
+
+T33's rules, with one repair: melted is read from the histogram as points with more than four open directions (the
+runner's own `melted` column counts flat points at eight links). Per replica: LEAVES if some block's majority rung is above
+the start's; the pattern (FOUR TOGETHER, SINGLETON PLUS THREE, THREE TOGETHER, ONE AT A TIME, STALLS, MELTED, OTHER). Per
+spark: the share that leaves and the majority pattern. **E\*** per start: the smallest spark at which a majority leaves.
+**Verdict per start:** the majority pattern if one pattern holds the majority at every spark from E\* up; MIXED otherwise;
+NEVER STARTS if no spark reaches E\*.
+
+### Predictions
+
+**The owner's (VISION Update 25; inferred for this design): once the push is enough, a tied pattern**, THREE TOGETHER
+from the three-curled torus and FOUR TOGETHER or SINGLETON PLUS THREE from the gas.
+
+**Ours, unverified:** E\* between 40 and 80 from the three-curled torus (the pass is several moves high, and the next kinds
+of first move cost 22 to 40), and the pattern ONE AT A TIME or STALLS at the second rung (each rung's wall is higher than
+the last: 40, then 80), MELTED at the largest sparks only if the bath heats past about 128 / 18 ≈ 7 per store, which C =
+N/2 does not reach; from the gas, E\* at 40 or 80 and the cubes joining without reaching flat space in 50,000 sweeps
+(STALLS or ONE AT A TIME).
+
+### Named or interchangeable points
+
+Named, as T33.
+
+### What this cannot show
+
+Which direction is time; anything at λ = 1; the pattern with a physical clock.

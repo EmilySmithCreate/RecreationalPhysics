@@ -1513,6 +1513,19 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   solve, each kind referred to its own farthest; the pseudo-inverse failed at 16³) wrote `exact_tree_count_pull_3d.csv`.
   The raw columns (`log_trees`, `cross`) of both are comparable; `cross` differs between versions by a constant.
 
+- **O62 T33: in four directions, a push equal to the cheapest first move stalls (NO CASCADE, every replica STALLS).**
+  (2026-09-25; PREREGISTRATION T33, reading; `results/t33_*.csv`, six cells of six replicas, 8 links, N = 2,304.) From the
+  4 × 4 × 4 × 36 torus at λ = 1.25 and from the gas of nine 8-cubes at λ = 1.10, at every bath size, the spark (20, the
+  exact cheapest exit) bought one move and nothing followed for 50,000 sweeps: the energy rose by the move's cost, the bath
+  sat at zero, and no downhill move existed from there. So no pattern was observed, and the owner's tied pattern and our
+  one-at-a-time were not tested in the sense intended. **What it does show:** in four directions the activation of the
+  change is not the cheapest single move (as it was in two, where 12 was exactly the push that worked, and in three at
+  λ = 1.25, where 16 started the first direction in a third of the runs) but the height of a pass over several moves. The
+  exact cost of the second move from the stalled states is being computed. T39's eight-link cells were written before
+  this was read and give a spark equal to the wall (40 at λ = 1.25, 16 at 1.50) with an empty bath; they are expected to
+  stall for the same reason, and are left to run as registered. A pre-registered follow-up with larger pushes is the next
+  test for piece 13. *Every eight-link result carries VISION Update 24's caveat.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
