@@ -1236,6 +1236,17 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   author's 2D figure of 2025, matched us under one power of g on its hot side (Gate B). So Gate C′ runs both a
   3D check of the reading and a 2D width test at N = 2000, with the outcome pairs and what each means fixed
   before the runs. *Ours, unverified; nothing here is a reading of the gate.*
+  **Addendum, 25 September, morning: Gate C's long protocol P2 undercuts the 1/g² reading.** With 10,000 + 5,000 sweeps
+  per coupling (`results/gatec_t22_fig3_p2.csv`, N = 500, λ = 1, from a melt, cooling then heating), both legs sit at
+  11.7 squares per vertex at every coupling from 4.0 down to 0.4, with zero acceptance: fully ordered, no hysteresis,
+  no drop anywhere in the published range. The fast runs the ranking used (500 sweeps per coupling on cooling) showed a
+  9-crossing at g ≈ 3.6 because they lagged on cooling from the melt; P1 (2,000 + 2,000) showed 8.3 against 11.2 at g = 4
+  for the same reason. So the equilibrium transition of our 3D model at N = 500 lies above g = 4, the 1/g² reading's
+  9-crossing (g ≈ 3.8) is not where the equilibrium curve crosses, and the free fit's slope of 0.45 was fitted to a
+  lagging curve. What survives: a factor of about 5 (reading (v); O45) or the N^(1/3) scaling (reading (ii), 7.9) put
+  the position in the right region, and the shape difference is then the published run's protocol, which the paper
+  does not state, or a model difference. Gate C′'s run A (2,000 + 2,000 sweeps) will lag as P1 did, and its verdict
+  under reading (iv) is expected to be FAILS; it is read as pre-registered and reported either way. *Ours, unverified.*
 
 - **O47 T25: the scrap freezes in when the box cools faster than it heals (FREEZES IN, t\* = 30,000 sweeps).** (2026-09-24,
   night; PREREGISTRATION T25; `results/t25_race_tc*.csv`; `scripts/analyse_t25.py`.) A sheet with one leftover, made as
@@ -1290,7 +1301,15 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   Exact, the same morning (`exact_walls_d.py --near=4 1.25 6,6,6`): the cheapest way out of flat three-dimensional
   space costs **64** at every λ (losing four squares and no surplus), against 32 in two dimensions and 128 in four
   (O50). So the coupling window in which a 3D sheet rearranges without melting, which the gravity test T28 needs,
-  lies above g = 6 if it exists at all; a third exploratory scan at g = 6 to 20 (`explore_3d_window3_*`) is the next look.
+  lies above g = 6 if it exists at all. **The third scan (`explore_3d_window3_*`, g = 6 to 20, read the same morning):
+  it does not exist.** At λ = 1.25 and at 1.10 the flat 6 × 6 × 6 torus holds 12.000 squares per vertex at g = 6 and 11.96
+  at g = 8 (a handful of moves), and at g = 10 it is melted, 5.1 squares per vertex, falling to 3.7 at 20; brought back
+  down it does not re-order (7.1 at g = 6). Between frozen and melted there is nothing: no coupling at which a 3D
+  sheet rearranges and stays a sheet. **For the gravity test (T28):** the dynamic measurement, two relics free to move in
+  a warm sheet, cannot be made at equilibrium in three dimensions any more than in two ("a cold sheet accepts no
+  moves at all"). What remains is the exact counting rung (the symmetry count of the torus with two relics at every
+  separation, O32's measurement in 3D) and a sealed variant in which relics move only when energy is delivered to
+  them, which would be a new protocol to declare. *Ours; exploratory; the six-link gate is open.*
 
 ## Provenance
 
