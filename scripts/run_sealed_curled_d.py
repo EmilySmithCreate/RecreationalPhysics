@@ -13,7 +13,10 @@ the arrangement ever left its start (T32's question). The final graph is saved w
 
 Config keys: name, section, dims (e.g. [4, 4, 18]) or gas ({"dims": [4, 4, 4], "copies": 8}: that many separate
 tori, the literal form of the owner's fully curled X), lambda, capacities (expressions in N, as T18), sparks (a
-list of E), replicas, n_sweeps, record_every, seed, save_adjacency.
+list of E), replicas, n_sweeps, record_every, seed, save_adjacency, and "local_heat" (T34): true puts the spark in
+the store of the first side-0 vertex under the per-vertex bath (sealed_d.run_sealed_bath_d with by_vertex), so only a
+move made from that vertex can spend it and released energy stays where it is released; capacities are then ignored
+and C is recorded as N.
 """
 import json
 import platform
@@ -65,7 +68,8 @@ def main(path, out_dir="results"):
     adj0, part0, label = start_of(cfg)
     n = adj0.shape[0]
     every, n_sweeps = int(cfg.get("record_every", 100)), int(cfg["n_sweeps"])
-    baths = [int(round(eval(str(c), {"N": n}))) for c in cfg["capacities"]]
+    local_heat = bool(cfg.get("local_heat", False))
+    baths = [n] if local_heat else [int(round(eval(str(c), {"N": n}))) for c in cfg["capacities"]]
     meta = dict(config=cfg, config_path=str(path), package=__version__, python=platform.python_version(),
                 numpy=np.__version__, numba=numba.__version__,
                 preregistration="PREREGISTRATION.md section %s, written 2026-09-25" % cfg.get("section", "T30"))
@@ -77,20 +81,21 @@ def main(path, out_dir="results"):
                     adj, part = adj0.copy(), part0.copy()
                     side_u = np.flatnonzero(part == 0)
                     stores = np.zeros(c_bath)
-                    stores[0] = float(spark)
+                    stores[int(side_u[0]) if local_heat else 0] = float(spark)
                     h0 = energy_d(adj, lam)
                     e0 = h0 + stores.sum()
                     s_start, x_start = int(total_squares(adj)), int(surplus(adj))
                     seed = int(np.random.SeedSequence([int(cfg["seed"]), n, c_bath, int(round(float(spark) * 100)), rep]).generate_state(1)[0])
                     left = False
                     left_at = ""
-                    base = dict(N=n, dims=label, C=c_bath, spark=float(spark), replica=rep, lam=lam)
+                    base = dict(N=n, dims=label, C=c_bath, spark=float(spark), replica=rep, lam=lam, local_heat=local_heat)
                     c0 = census(adj, lam)
                     out.write(dict(**base, sweep=0, **c0, bath_T=float(stores.mean()), total=float(stores.sum()),
                                    drift=0.0, left=False, final=False))
                     blocks = n_sweeps // every
                     for b in range(1, blocks + 1):
-                        s, x, mean, tot, _ = run_sealed_bath_d(adj, side_u, stores, every, seed if b == 1 else -1, lam)
+                        s, x, mean, tot, _ = run_sealed_bath_d(adj, side_u, stores, every, seed if b == 1 else -1, lam,
+                                                               by_vertex=local_heat)
                         if not left and ((s != s_start).any() or (x != x_start).any()):
                             left = True
                             left_at = b * every

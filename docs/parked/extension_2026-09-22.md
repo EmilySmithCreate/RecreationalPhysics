@@ -378,3 +378,16 @@ sense to me."
 
 **What they touch** (*ours*): VISION Update 26 records the bar, the map and the measure with their published relatives;
 the (D, λ) map is in `docs/papers/series_plan.md`.
+
+## The author's mechanism for the black hole, 25 September 2026, midday
+
+**Hers, in her words put in order.** The area to understand now: the relationship between the activation energy, the
+three space directions and time. Inside a black hole gravity has won and reality is in a symmetric state; the mass
+supplies the energy to be space and the energy to collapse it; the collapse probably begins on one direction (as the
+six-link result suggests for opening); stratification may be the compacting of one or two directions; speed may collapse
+time too, and which comes first is open. If the energy hits one direction and it must curl, then once curled we are
+closer to the symmetric state, which catalyzes the gravitational drive, and the grouped directions collapse together, a
+fold accelerated by the change itself, because of how space is shaped.
+
+**What it touches** (*ours*): VISION Update 27; ASSUMPTIONS O55 (the folding walls halve at every rung; the counting
+drive exists only at full curling and beats the curling cost only below λ ≈ 1.02); PREREGISTRATION T34.

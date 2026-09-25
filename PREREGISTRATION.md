@@ -1939,3 +1939,61 @@ Named. Not run interchangeably (the per-move count is unaffordable at N = 2304).
 Which direction is time (nothing in the model distinguishes one); anything about the published model; the pattern
 with a physical clock rather than sweeps. A tied pattern, if it appeared, would be a surprise this energy has no
 term for, and would need an explanation before it was called support.
+
+## T34. Six links: does concentrated energy fold flat space, one direction and then the rest? (piece 8; VISION Update 27; written 2026-09-25, midday, before any run)
+
+### Why
+
+In two dimensions the model was asked three ways whether concentrated energy re-curls space, and it melted every time
+(O20, T21, T26, T27). The owner's fold is three-dimensional, and her mechanism (VISION Update 27) is specific: the
+collapse begins on one direction, and once one direction has curled the next folds are easier, so the grouped
+directions collapse together. Two things are exact before any run (O55): each successive fold's nucleation excess
+halves (36, 16, none, at six links and λ = 1.25), which is the "easier" of her mechanism; and with named points nothing
+favors curling beyond that, while with interchangeable points the counting drive appears only at full curling and pays
+only below λ ≈ 1.02. This run is with named points at λ = 1.25, so it tests the walls' half of her mechanism, not the
+counting's.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` on the flat six-link torus (nothing curled), sealed, energy given at the start and
+conserved, 50,000 sweeps read every 250, eight replicas per cell, the final graph saved; on Batch through the queue
+(`cloud/queue/2026-09-25_t34.txt`):
+- **Spread:** a shared bath of 2N stores with the whole energy in one of them (T21's protocol), N = 216 (6 × 6 × 6)
+  and 512 (8 × 8 × 8). `t34_spread_n216`, `t34_spread_n512`.
+- **Packed:** the whole energy in the store of one vertex under the per-vertex bath (`local_heat`, Q22 at six links),
+  the same sizes. `t34_packed_n216`, `t34_packed_n512`.
+- Energies E = 64 (the cheapest exit from flat 3D space), 128, 256, and one and two directions' worth plus a wall:
+  at N = 216, 260 and 500; at N = 512, 560 and 1060 (a direction costs 4(λ − 1)N = 216 and 512; the first fold's
+  excess is 36, the second's 16).
+
+### Definitions, fixed now (`scripts/analyse_t34.py`, tested in `tests/test_t34.py` before any run)
+
+- Per replica, from the final block: **folded** = vertices at d < 3, **melted** = vertices at d > 3, damage = their sum.
+  FOLDED: damage ≥ 4 and folded ≥ melted. MELTED: damage ≥ 4 and folded < melted. HEALED: damage < 4. Four is the
+  smallest curled object (one column of a curled direction).
+- Per cell (protocol, N, E): the majority outcome, else MIXED; at least six replicas.
+- **RE-CURLS:** some cell has a FOLDED majority. **MELTS:** none has, and some cell has a MELTED majority. **HEALS:**
+  every read cell HEALED. **MIXED:** otherwise.
+- Reported, not scored: **ONE DIRECTION** replicas, in which the folded count reaches at least N/3 at some block (a
+  whole direction's worth of points curled), and **CASCADE** replicas, in which it reaches 2N/3; the largest folded
+  piece at the end; the share that melt first and fold later; the bath temperature.
+
+### Predictions
+
+**The owner's** (her words of 25 September, midday, put in order): **RE-CURLS**, beginning on one direction and then, once
+one has curled, the rest collapsing together: ONE DIRECTION reached, then CASCADE.
+
+**Ours, unverified: MELTS.** The cheapest move out of flat 3D space loses four squares (O51) and no single move from
+the perfect lattice adds a surplus square, so the energy is spent on melting first, as in two dimensions; the folding
+walls' halving (O55) helps only once a direction has curled, and nothing with named points at λ = 1.25 starts that.
+We expect no ONE DIRECTION replica. If one appears, the walls' half of her mechanism has something to work with and
+the counting half becomes the next run (interchangeable points near λ = 1.02).
+
+### Named or interchangeable points
+
+Named. The counting drive is exact (O55) and absent here by construction; its run is the designed follow-up.
+
+### What this cannot show
+
+Which direction is time; anything about gravity as a force; anything at λ = 1, where nothing is released or paid. It
+carries VISION Update 24's caveat: the published six-link curve is not reproduced.

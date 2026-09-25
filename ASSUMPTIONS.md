@@ -1344,6 +1344,21 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   walls (8, then the joining moves) allowed at λ = 1.10 where the 4 × 4 × 18 torus's second wall (43) did not.
   *Every six-link result carries VISION Update 24's caveat.*
 
+- **O55 The fold run backwards, exact: each successive fold halves its nucleation excess, and the counting drive toward
+  curling appears only at full curling, beating the curling cost only below λ ≈ 1.02.** (2026-09-25; VISION Update 27;
+  `scripts/exact_walls_d.py` for the walls, `graphity.symmetry` for the counts.) **Walls.** The barrier between two rungs
+  is the same from either side, so the excess cost of nucleating a fold, beyond the fold's own energy 4(λ − 1) per point,
+  is the wall out of the more-curled rung: six links 36, 16, then downhill (at λ = 1.25); eight links 80, 40, 20, 0
+  (O49, O50). **Counts, N = 512, side-preserving automorphisms:** 8 × 8 × 8, 12,288; 4 × 8 × 16, 2,048; 4 × 4 × 32,
+  12,288; eight separate 6-cubes, 3.20 × 10³⁹ (ln A = 90.96, of which ln 8! = 10.6 is the permutation of the cubes). So
+  the partial folds carry no more symmetry than flat space, and the fully curled state carries 10³⁵ times more. With
+  interchangeable points the free energy is E − g ln A: flat −14.1, the gas 6144(λ − 1) − 136.4 at g = 1.5, which cross
+  at λ = 1.020 (1.013 at g = 1.0). **For the owner's curve-first gravity (piece 7):** the drive to curve from counting
+  exists, is exact, and is 0.24 units per point at this size against a curling cost of 12(λ − 1) per point; it wins only
+  when the curling cost is within about 2 % of the tie at λ = 1. Whether the ratio holds at larger N: ln A per cube is
+  constant and the energy per cube is constant, so the crossover λ does not move with N in the gas; for connected
+  arrangements it is not computed. *Ours, exact; unreviewed.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

@@ -17,8 +17,9 @@ git history.
    `cloud/queue/`: **T24** (28 jobs, `2026-09-24_t24.txt`), **Gate C′** (4 jobs, `2026-09-24_gatec2.txt`; O46;
    `scripts/analyse_gatec2.py`), and **T30 and T32** (14 jobs, `2026-09-25_t30_t32.txt`; the six-link tests of piece 11,
    read with `scripts/analyse_t30.py`), and **T33** (6 jobs, `2026-09-25_t33.txt`; the eight-link pattern test of piece 13,
-   read with `scripts/analyse_t33.py`; about eight hours a job). Results land in the bucket; download, check and commit
-   them as T23's were. **To see the Batch jobs' state from a laptop without the project account's credentials:** push a
+   read with `scripts/analyse_t33.py`; about eight hours a job), and **T34** (4 jobs, `2026-09-25_t34.txt`; the six-link
+   folding test of piece 8, `scripts/analyse_t34.py`). Results land in the bucket; download, check and commit them as
+   T23's were (`download_results.ps1` and `check_and_copy.py` in the 25 September session's scratchpad do it). **To see the Batch jobs' state from a laptop without the project account's credentials:** push a
    change to `cloud/status/request.txt` (any text); the `queue_status` workflow then writes `cloud/status/latest.md`
    (job states and the bucket's finished results) and commits it, readable from the repository.
    **Read and recorded (24 to 25 September):** T25 FREEZES IN (O47), T27 STAYS MELTED and T26 MELTS (O48), T24 INCONCLUSIVE

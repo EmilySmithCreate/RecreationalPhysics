@@ -357,6 +357,36 @@ order, on reading T24 (the window inconclusive by the letter for a third time, o
   loop (Update 23). The model has no observers and cannot count them; its counterpart is the (D, λ) map of how much
   stable phase, matter and room each setting yields per turn.
 
+Update 27 (2026-09-25, midday): **the black hole run backwards: the author's folding mechanism, and what is exact about
+it.** Her words, put in order. The area to understand now is the relationship between the activation energy, the three
+space directions and time. Inside a black hole gravity has won and reality is in a symmetric state. The mass is so great
+that it supplies not only the energy needed to be space but the energy to collapse it, and the collapse probably begins
+on one direction, given the six-link result that the directions open one at a time. Stratification may be the compacting
+of one direction, or two; how fast the thing is moving may collapse time as well; which comes first inside a black hole
+is open. So there could be a role for one direction at a time: if the energy is applied to one direction and it is
+enough that the direction must curl, then once it has curled we are closer to the symmetric state, which catalyzes the
+gravitational drive, so that the three or four grouped directions collapse together, a fold accelerated by the change
+itself, even if the activation only hit one direction, because of how space is shaped.
+
+- **What is exact about the first half** (*ours; ASSUMPTIONS O55*). The nucleation cost of each successive fold, beyond
+  the energy the fold itself costs, is the wall out of the more-curled state (the barrier is the same from either side):
+  with six links 36, 16 and none for the first, second and third fold at λ = 1.25; with eight links 80, 40, 20 and 0. Each
+  fold halves the excess of the one before. That is her catalysis, in the walls. The energy each fold costs, 4(λ − 1)
+  per point per direction, is what the walls do not pay and her picture says the mass does.
+- **What is exact about the second half.** With interchangeable points the symmetric state weighs more, and at 512
+  points the weights are: flat 8 × 8 × 8, 1.2 × 10⁴ symmetries; one curled, 2.0 × 10³; two curled, 1.2 × 10⁴; the fully
+  curled gas of eight 6-cubes, 3.2 × 10³⁹. So the counting gives no gradual drive through the partial folds, and a large
+  one only at full curling: g ln A rises by 122 units at g = 1.5 from flat to fully curled, against a curling cost of
+  12(λ − 1) × 512. The two balance at λ ≈ 1.02; below it the fully curled state has the lower free energy and space
+  folds on its own, above it space holds. In her terms: **the walls say one direction at a time, the counting says all
+  together, and λ decides which wins.** The partial rungs are never favored by counting.
+- **What runs next** (PREREGISTRATION T34, with her prediction from this update): flat six-link space given concentrated
+  energy, packed into one place and spread through a bath, at λ = 1.25: does it fold one direction and then the rest,
+  or melt as in two dimensions? Named points, so the counting drive above is not in the run; an interchangeable run
+  near λ = 1.02 is the designed follow-up, where the counting could pay.
+- **Time.** The model cannot say which direction is time, so "does it collapse time first" is not a question it can be
+  asked; the pattern in which directions fold is.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

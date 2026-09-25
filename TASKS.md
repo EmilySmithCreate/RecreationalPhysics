@@ -356,6 +356,13 @@ prediction fails), T27 STAYS MELTED (ours), T24 INCONCLUSIVE by the letter for a
 cells) with the edge BREAK-UP a third time. Gate C′ (O53): run A FAILS, run B ONE POWER. T30 FIRST ONLY and T32 FIXED
 WALL (O54).
 
+## The fold run backwards (piece 8 in six links)  ◑
+
+**Added 2026-09-25, midday** (VISION Update 27, the owner's mechanism). Exact first (O55): each successive fold's nucleation
+excess halves; the counting drive to curl appears only at full curling and beats the curling cost only below λ ≈ 1.02.
+PREREGISTRATION **T34** with her prediction (re-curls, one direction then the rest) and ours (melts): four Batch jobs, read with
+`scripts/analyse_t34.py`. Designed, not run: the same with interchangeable points near λ = 1.02, where the counting could pay.
+
 ## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
 
 **Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a

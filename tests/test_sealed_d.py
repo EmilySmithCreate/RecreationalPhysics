@@ -101,3 +101,23 @@ def test_the_runner_gas_start_is_separate_valid_tori_that_conserve_energy():
     e0 = energy_d(adj, lam) + stores.sum()
     s, x, _, tot, _ = run_sealed_bath_d(adj, side_u, stores, 100, 5, lam)
     assert abs(energy_d(adj, lam) + stores.sum() - e0) < 1e-9
+
+
+def test_the_runner_local_heat_puts_the_spark_in_one_vertex_store_and_conserves(tmp_path):
+    import csv
+    import importlib.util
+    import json
+    from pathlib import Path
+    spec = importlib.util.spec_from_file_location("run_sealed_curled_d", Path(__file__).resolve().parents[1] / "scripts" / "run_sealed_curled_d.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    cfg = dict(name="smoke_local", dims=[6, 6, 6], capacities=["2*N"], sparks=[80.0], replicas=1, n_sweeps=40,
+               record_every=20, seed=3, local_heat=True)
+    cfg["lambda"] = 1.25
+    p = tmp_path / "smoke_local.json"
+    p.write_text(json.dumps(cfg))
+    m.main(str(p), str(tmp_path))
+    rows = list(csv.DictReader(open(tmp_path / "smoke_local.csv", newline="")))
+    assert rows[0]["C"] == "216" and rows[0]["local_heat"] == "True"
+    assert all(float(r["drift"]) < 1e-9 for r in rows)
+    assert float(rows[0]["total"]) == 80.0
