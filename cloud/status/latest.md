@@ -1,4 +1,4 @@
-# Batch queue and results bucket, as of 2026-09-25 11:35 UTC (commit 54daa6c)
+# Batch queue and results bucket, as of 2026-09-25 12:09 UTC (commit 84fb102)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
