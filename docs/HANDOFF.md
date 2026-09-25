@@ -15,8 +15,11 @@ git history.
    T23 is done and read (O44).
    **Gate C has FAILED (ASSUMPTIONS O43):** the six-link code does not reproduce [T22] Fig. 3 at the unscaled
    couplings or at couplings × N^(1/3), and the shapes differ. By rule 2 the six-link (D = 3) track is stopped:
-   no D = 3 result, including O41's window, is quoted or interpreted until it is resolved. The question for the
-   model's author: [T22] Fig. 3's protocol, its Boltzmann weight, and whether its graphs are bipartite.
+   no D = 3 result, including O41's window, is quoted or interpreted until it is resolved. **Exploratory (O45):** a
+   fast heating leg (20 sweeps per coupling) from a slowly cooled state reproduces Fig. 3's steepness and plateau,
+   with its axis about our g / 5 to 6, which suggests the figure is a heating curve that lags equilibrium. The
+   question for the model's author: was Fig. 3 a heating run from an ordered start, how many sweeps per coupling,
+   and how is ħg defined in its weight. Hold it for his next reply.
    Note: commit `0746203` (labelled as the Gate C criterion) also carries the removal of `docs/outreach/` and
    the old `docs/public/site/index.html` from the tracked tree, swept in from the shared index.
 3. **Read section 3 before writing anything public or anything to a physicist.**
