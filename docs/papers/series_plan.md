@@ -311,3 +311,30 @@ that rearranges without melting, which nobody has measured. What does not block 
   now be drafted from T30, T32, O41, O49 and O50, with the open gate stated.
 - **Who to ask, updated:** the model's author, one question: whether his 3D action sums over edges once (a factor of 2
   against ours) and whether his 3D graphs carry triangles and pentagons; the data to attach is O53's table.
+
+---
+
+## The (D, λ) map: what parameters lead to a burp, exact and measured so far (25 September 2026)
+
+The owner's program (VISION Update 26): which number of directions goes with which λ, how interconnected the directions
+are, and how the snap relates to the degree-of-freedom relationships. What is on the record, all at g = 1.5 for the
+measured entries and exact for the walls. Every curled direction costs 4(λ − 1) per point, at every D (O41, O50).
+
+| D (links) | Curled state | Stuck for now (exact wall > 0) | Wall at λ = 1.25 | Fixed with size? | Opening pattern | Source |
+|---|---|---|---|---|---|---|
+| 2 (4) | one curled (the tube) | 1 < λ < 2 (wall 32 − 16λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | one front, memoryless, the exact release; one relic | paper 1; T7 to T24 |
+| 2 (4) | both curled (a gas of 4-cubes) | never above λ = 1 | downhill | | falls apart at once | O40 |
+| 3 (6) | one curled (4 × L × L′) | 1 < λ < 2 (96 − 48λ) | 36 | | not run | O41 |
+| 3 (6) | two curled (4 × 4 × L, L ≥ 18) | 1 < λ < 1.5 (96 − 64λ) | 16 | yes, 192 to 512 points (T32) | first direction only, as a front; the second's wall (36) unpaid; near-flat only at a hot bath (T30) | O49, O54 |
+| 3 (6) | all three (a gas of 6-cubes) | 1 < λ < 1.2 (96 − 80λ) | downhill | | at λ = 1.10: joins and opens two of three directions in 21 of 24, never one space (T30-gas) | O41, O54 |
+| 4 (8) | one curled | 1 < λ < 2.5 (160 − 64λ) | 80 | | not run | O50 |
+| 4 (8) | two curled | 1 < λ < 1.67 (160 − 96λ) | 40 | | not run | O50 |
+| 4 (8) | three curled (4 × 4 × 4 × 36) | 1 < λ < 1.43 (160 − 112λ) | 20 | | T33 running | O50 |
+| 4 (8) | all four (a gas of 8-cubes) | 1 < λ < 1.25 (160 − 128λ) | downhill | | T33 running at λ = 1.10 | O50 |
+| flat space's own wall | 2D: 32; 3D: 64; 4D: 128 (the same at every λ) | | | | a cold sheet accepts no move in any D | O22, O51, O50 |
+
+What the map says so far (*ours*): the walls double from rung to rung at every D, so nothing in the energy ties the
+directions together, and the release of one rung in a cold bath does not pay the next; more directions widen the
+window in λ for the partly curled states and raise the flat state's own wall, so a four-direction change can be driven
+hot without melting where a two-direction one cannot. The "interconnection" the owner asks about is therefore not in this
+energy; if it exists in reality it is an ingredient this family lacks, which is a thing the map can say plainly.

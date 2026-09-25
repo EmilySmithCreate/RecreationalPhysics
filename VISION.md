@@ -327,6 +327,36 @@ time run more slowly, so time and space are not separate things. She asked for s
   singleton half of this update, one direction opening on its own, which T33 scores as SINGLETON PLUS THREE from the
   gas; whether the three that remain open together is what T33 measures.
 
+Update 26 (2026-09-25, morning): **the author's bar, the parameter map, and the strange-loop measure.** Her words, put in
+order, on reading T24 (the window inconclusive by the letter for a third time, on a rare very long wait in four cells).
+
+- **Her bar.** "I don't think this arrangement of reality requires the same thing to happen at every size in every
+  instance. It has to happen at one size and lead to this trillion new strange loops." *Ours:* the rule "sharp at every
+  λ, at every size, in every cell" (T8, T23, T24) and S2′'s "at every size tried" were written by the assistant as the bar
+  for a mechanism claim, and she accepted them; her theory's own claim is existence and fertility: at some size, the change
+  goes and produces a stable phase, and a memoryless population with rare stragglers satisfies it. The verdicts on the
+  record stand as scored; a fourth run, if she wants one, would be pre-registered with a bar written her way (for example:
+  at each λ, a majority of instances at at least one size go sharply to the flat state, with stragglers reported and not
+  counted against). **Proposed, not enacted.** The sharpness map itself (which λ, which N, how sharp) stays the measurement.
+- **The parameter map.** "We will work towards figuring out what sort of parameters lead to our reality: how many
+  dimensions match what level of λ, how interconnected the group of three or four dimensions is ideally, how the snap
+  works in relation to the degree-of-freedom relationships." *Ours:* this is the fertile-window question (series paper 3)
+  extended over the number of directions; the entries that exist exactly are tabulated in `docs/papers/series_plan.md`
+  ("The (D, λ) map"), and the interconnection is what T30 (FIRST ONLY in three directions) and T33 (the pattern in four)
+  measure.
+- **The strange-loop measure.** "We are most likely to observe, and be part of, a strange loop with a particular
+  arrangement that has one of the largest possible infinities: one of the largest possible amounts of time, matter and
+  energy in a stable phase. Our stable phase really never ends, because space expands and time continues, so it is a
+  really populous spacetime; it would not end until the last star is eaten by the last black hole. And the chance of our
+  being at that point in time is a smaller version of infinity, because there are fewer options where an observer could
+  have evolved to the point of observation." She asked that this be held in working memory, not only on the page.
+  *Ours; general knowledge, none of it read by us, all to verify before it is cited:* the first half is a
+  self-sampling argument (an observer is most likely in the arrangement with the most observer-moments; Carter, Bostrom),
+  the second is the argument for why an observer finds itself in the stellar era rather than at the end (Dicke, 1961), and
+  the comparison of infinities is the measure problem of eternal inflation in her terms, where her unit is the turn of the
+  loop (Update 23). The model has no observers and cannot count them; its counterpart is the (D, λ) map of how much
+  stable phase, matter and room each setting yields per turn.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
