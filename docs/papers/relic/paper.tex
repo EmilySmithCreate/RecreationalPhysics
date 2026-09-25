@@ -1,0 +1,189 @@
+\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{What the burp leaves behind: a relic defect of fixed size in a graph model of emergent geometry, its
+number, its position, and how long it lasts}
+
+\author{Emily Smith}
+\email{emilysmithcreate@gmail.com}
+\affiliation{Independent researcher, Charlottesville, Virginia, USA}
+
+\date{DRAFT, 24 September 2026 (night); one section awaits a running test}
+
+\begin{abstract}
+In a companion paper we showed that, in the family of graph energies obtained from combinatorial quantum
+gravity (CQG) by raising the coefficient $\lambda$ of its local term above 1 (only $\lambda = 1$ is CQG; every
+result here is at $\lambda > 1$, next to CQG and not in it), a $4 \times L$ torus with one direction curled is
+metastable and opens into the flat torus by a single front, releasing exactly $\varepsilon = 4(\lambda - 1)$ per
+vertex. Here we study what the change leaves behind. Sealed, with a bath cold enough to hold the release, the
+conversion ends as a flat sheet with about one relic defect, at every size from 64 to 288 vertices: the relic does
+not grow with the space. Read from its wiring it is one column of the torus left curled, costing $24\lambda - 16$
+above the flat torus (14 at $\lambda = 1.25$), with rarer variants of 8 to 45 units. Its position is neither the
+seed nor the place where fronts meet. Planting $k = 1, 2, 4, 8$ seeds leaves $1.10, 2.15, 2.50, 3.40$ relics on
+average: more seeds make more scrap, but fewer than one each. Held at any fixed coupling from 1.0 to 1.5 the relic
+anneals away within $500$ to $80{,}500$ sweeps, so it is permanent only where its surroundings stay very cold;
+whether it freezes in when the box cools faster than it heals is a pre-registered test whose result this draft
+awaits. Every verdict quoted was pre-registered before its run.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+A change from one ordered arrangement to another releases energy and, in a sealed system, cannot end in the perfect
+product: whatever the release cannot carry away stays behind as disorder. In the companion paper
+\cite{paper1} (the curled torus) the change is a decompactification in miniature: a $4 \times L$ torus, one
+direction curled to a single square, opens into the flat torus once the local term of CQG \cite{T17,KTB19,T25} is
+weighted by a coefficient $\lambda > 1$. That paper measured the wait, the barrier, the front and the release. This
+one measures the remainder: its size, its number, where it sits, and how long it lasts.
+
+The question is narrow and the answer is measurable, but the reason for asking is the author's hypothesis that
+what does not convert in such a change is a candidate for dark matter, either as many small relics or as a property
+of the geometry itself (recorded in the project's VISION, Update 16). Ref.~\cite{T24} proposes something in the same
+family for CQG itself: allotropes, regions of the network stuck in a different discrete arrangement, as diamond
+survives where graphite is stable. The relic studied here is not an allotrope in that sense: it is a single object
+of fixed size, made by the burp, at $\lambda > 1$. The two are cousins, and we say so where it matters.
+
+Every kinetic statement below concerns one Markov chain, the local edge switch with Metropolis acceptance used to
+sample the model \cite{KTB19}, and the sealed version of it built from Creutz demons \cite{Creutz83}. Energies,
+the relic's cost and the exact classification of end states do not depend on the chain; waiting times, annealing
+times and the count of relics per seed do.
+
+\section{Model, sealed dynamics, and how a relic is read}
+
+The state is a four-regular bipartite graph on $N$ vertices obeying the hard-core rule of CQG (no two vertices share
+more than two neighbors). With $S$ the number of squares and $X = \sum_e (S_e - 2)_+$ the number of surplus squares
+on edges carrying more than two, the energy is
+\begin{equation}
+  H = 16(N - S) + 4\lambda X,
+  \label{eq:H}
+\end{equation}
+which for $\lambda = 1$ is the total Ollivier curvature of CQG \cite{T25}, and for $\lambda \ne 1$ is not a curvature.
+Written edge by edge, $H = 4\sum_e [(2 - S_e) + \lambda (S_e - 2)_+]$: the flat torus, with two squares on every
+edge, sits at $H = 0$ and is the ground state for $\lambda \ge 1$; each curled direction costs $4(\lambda - 1)$ per
+vertex above it.
+
+The local dimension $d(v)$ of a vertex is the number of its six edge pairs that close no square: 2 on the flat sheet,
+1 on the curled torus, 0 in a 4-cube. A relic is a connected set of vertices with $d < 2$ in an otherwise flat sheet,
+and its energy above the flat torus is read exactly from Eq.~\eqref{eq:H} on the saved wiring.
+
+Sealed runs keep a bath of $C$ stores beside the graph. A proposed switch picks one store at random, is refused if
+that store cannot pay for it, and otherwise pays or is paid; $H + \sum \text{stores}$ is conserved to the last unit
+in every run reported here. The stores' mean energy reads the temperature the system reaches by itself; $C$ sets
+how far that temperature rises per unit released, and the companion paper showed the change completes only when $C$
+exceeds about $N/3.5$ at $\lambda = 1.25$. All runs below use $C = 2N$ empty stores, cold enough that the release
+is held and the sheet does not melt.
+
+\section{One relic, however large the space}
+
+\emph{Pre-registered as T10.} Twenty sealed conversions at each of $N = 64, 96, 192, 288$ ($4 \times L$ tori,
+$\lambda = 1.25$, $C = 2N$, a 12-unit spark to start the change, 30,000 sweeps). The prediction on record was that
+the number of leftover vertices grows with the space; the verdict was ONE RING, HOWEVER LARGE: at every size the
+product is a flat sheet with about one relic of about four vertices, and the share of boxes holding exactly one
+relic does not fall with $N$. (The pre-registered label keeps the word ``ring''; the object is not a ring around
+the tube but a column lying along it, as the next section shows.)
+
+\section{What the relic is, read from its wiring}
+
+Read from the saved final graphs of the companion paper's decays and of T10's boxes, the common relic is one
+column of the torus left curled: four vertices at $d = 1$, one square still closing round the short direction,
+costing exactly $24\lambda - 16$ above the flat torus ($14$ at $\lambda = 1.25$). Rarer resting states, 8 to 45
+units, are combinations of small defects in the sheet: a two-point twist (20 units), a 3-cube, an open line of
+three, single edges and single points; eleven of twelve unusual states read this way matched their recorded
+release exactly, and the twelfth was set aside as a decay that changed state inside its last measuring window.
+These states are fixed in size: more of the same scrap, never a larger one.
+
+The relic's share of the release is exact: $(24\lambda - 16)/[4(\lambda - 1)N]$, which is 22\% at $\lambda = 1.25$
+and $N = 64$, 72\% at $\lambda = 1.05$, and falls as $1/N$. Near $\lambda = 1$ the scrap keeps a large share of
+the lump; in a large space it is negligible.
+
+\section{Where it sits}
+
+\emph{Pre-registered as T11.} Two readings were possible: the relic marks the seed, or it marks the seam where
+fronts meet. Its position in the saved boxes is uniform along the torus: neither. The verdict on record is NEITHER.
+
+\section{How many: one per tube, or one per seed?}
+
+\emph{Pre-registered as T17.} A $96 \times 4$ torus at $\lambda = 1.25$ in a cold sealed box, $k$ seeds planted as
+the cheapest move out of the torus at evenly spaced columns, twenty runs per $k$, all converting, energy exact.
+The author's prediction was one relic per seed; ours was one per tube whatever $k$. Both failed:
+
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+seeds $k$ & 1 & 2 & 4 & 8 \\
+relics per tube & 1.10 & 2.15 & 2.50 & 3.40 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The slope is $0.29 \pm 0.04$ relics per extra seed; the verdict on record is BETWEEN. More seeds make
+more scrap, but fewer than one each, and the growth looks less than proportional. Where fronts from neighboring
+seeds meet, their relics may merge or anneal; that was not measured and the saved end states hold the positions.
+
+\section{How long it lasts at a fixed temperature}
+
+\emph{Pre-registered as T19.} Sheets with exactly one relic, made as in T17 at $k = 1$, were held at fixed coupling
+$g = 1.0$, $1.25$ and $1.5$ for 100,000 sweeps, the relic's position read every 500. The options on record were
+that it moves, that it anneals at the warmer couplings and stays at the colder, or that it stays at every $g$. It
+anneals at every coupling: at $g = 1.0$ all nine followed relics were gone between 4,000 and 80,500 sweeps; at 1.25
+all ten within 500 to 13,000; at 1.5 eight annealed and two moved first, all gone within 11,000. In T10's cold boxes,
+whose bath ends near $g = 0.5$, the relic lasted the whole 30,000 sweeps. Our own prediction, that it would stay at
+$g = 1.0$, was wrong. Said plainly: in this model the relic is not permanent at a fixed temperature, and is
+permanent only where its surroundings stay very cold.
+
+\section{The race: does it freeze in when the box cools?}
+
+\emph{Pre-registered as T25; running as this draft is written.} Reality cools as it expands, so the question that
+matters for a long-lived relic is a race between healing and cooling. A sheet with one relic is cooled from
+$g = 1.25$, where every relic anneals within 13,000 sweeps, to $g = 0.25$, where nothing moves, by the same factor
+each block over $t_{\rm cool} = 300$ to $100{,}000$ sweeps, and then held cold. The pre-registered verdict is
+FREEZES IN if some cooling time keeps a majority of relics and the fastest cooling keeps the most, ALWAYS HEALS if
+no cooling time keeps a majority. The author's prediction, inferred from her stated position and awaiting her
+confirmation, is FREEZES IN; ours is FREEZES IN with a freeze-out time between 1,000 and 10,000 sweeps. This
+section will report what was measured, whichever way it comes out.
+
+\section{Discussion}
+
+Three facts about the relic are now on the record for this model. It is small and of fixed size, one column of
+unconverted torus, and it does not grow with the space. Its number depends on how the change started, growing
+with the number of seeds but by less than one per seed. And it is not permanent at a fixed temperature, only in a
+cold box.
+
+For the author's dark-matter reading, the first two are what the reading needs and the third is its condition. A
+small relic is not a problem, because matter thins out more slowly than radiation as space grows: at the
+conversion the leftover need hold only a small share of the energy to be a large share later (an estimate of ours,
+unverified, in the project's record). The many-seed route then needs few seeds, and ties the relic density to the
+seed density. The condition is that the relics survive, which in this model they do only if their surroundings
+cool faster than they heal, the question T25 asks.
+
+What this cannot show: anything about the real universe; how the model's cooling clock relates to a cosmological
+one; and whether a relic in three dimensions, or with the model's points treated as interchangeable, behaves the
+same way. Under interchangeable points the flat sheet carries $4N$ symmetries and a sheet with one relic a few, so
+annealing should be favored by a factor of order $N$; that expectation is recorded, not measured.
+
+\section*{Acknowledgments}
+
+Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
+checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
+pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+
+\begin{thebibliography}{9}
+\bibitem{paper1} E. Smith, The curled torus burps: front-driven decompactification between ordered states in a
+graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
+\bibitem{T17} C. A. Trugenberger, Combinatorial quantum gravity: geometry from random bits, JHEP 09, 045 (2017).
+\bibitem{KTB19} C. Kelly, C. A. Trugenberger and F. Biancalana, Self-assembly of geometric space from random
+graphs, Class. Quantum Grav. 36, 125012 (2019).
+\bibitem{T25} C. A. Trugenberger, Combinatorial quantum gravity and emergent 3D quantum behaviour, review (2025);
+arXiv:2512.17676.
+\bibitem{T24} C. A. Trugenberger, Dark matter and dark energy as allotropes and curvature of emergent spacetime
+(2024).
+\bibitem{Creutz83} M. Creutz, Microcanonical Monte Carlo simulation, Phys. Rev. Lett. 50, 1411 (1983).
+\end{thebibliography}
+
+\end{document}

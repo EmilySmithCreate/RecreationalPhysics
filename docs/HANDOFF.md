@@ -18,7 +18,7 @@ git history.
    when that commit was pushed; check the Actions tab for the run and the results bucket for the CSVs, then
    download, check and commit them as T23's were. A finished local job has a `.csv` and no `.partial`. Never
    commit a result a live job is still writing. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
-   `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O45 onward), the
+   `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O46 onward; O45 is the other session's exploratory Gate C reading), the
    pre-registration section, and the programme page. **The owner's predictions in T25 to T27 are inferred from
    her stated positions** (PREREGISTRATION says so in each); ask her to confirm or replace them before any
    verdict is quoted as hers. `results/explore_c_fastboth.csv` is the other session's untracked result: not ours
