@@ -45,6 +45,10 @@ Earlier predictions stay on the record as written.
   the push hits one, the other two follow, the three together make the full burp; part of what comes out is dark matter,
   and the ratio of about five to one (one part in six) may come from the triad (VISION Update 30, the author's idea).
 
+- **Targets 3 and 5 (17:11 ET):** ordinary matter and energy come from red, the direction the push hits (ordinary
+  energy is the kind that can activate the burp); dark matter and dark energy come from the other two directions, so the
+  three parts of the energy budget are set by the three directions' uncurling (VISION Update 30).
+
 ## Questions for the owner (answer by voice is fine)
 
 For each, in a sentence: how do you expect reality to work, and if the model does not show it, what is it missing?
