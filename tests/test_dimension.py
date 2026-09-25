@@ -36,3 +36,31 @@ def test_pieces_of_a_subset():
     assert pieces_of(adj, members) == [4, 1]
     assert pieces_of(adj, np.ones(n, dtype=bool)) == [n]
     assert pieces_of(adj, np.zeros(n, dtype=bool)) == []
+
+
+def test_piece_labels_agree_with_pieces_of():
+    """T37: the labels number the same pieces pieces_of sizes."""
+    from graphity.dimension import piece_labels
+    adj, _ = torus(12, 10, NO_CAP)
+    rng = np.random.default_rng(3)
+    for _ in range(20):
+        members = rng.random(adj.shape[0]) < 0.45
+        labels = piece_labels(adj, members)
+        assert (labels[~members] == -1).all() and (labels[members] >= 0).all()
+        sizes = sorted(np.bincount(labels[labels >= 0]).tolist(), reverse=True) if members.any() else []
+        assert sizes == pieces_of(adj, members)
+
+
+def test_new_seeds_counts_only_pieces_touching_nothing_counted():
+    """T37: a new piece is a seed; a piece that grew, split or merged is not; small pieces are ignored."""
+    from graphity.dimension import new_seeds
+    counted = np.zeros(10, dtype=bool)
+    labels = np.array([0, 0, 0, -1, 1, 1, 1, -1, 2, -1])          # two pieces of 3, one of 1
+    k, counted = new_seeds(labels, counted, 3)
+    assert k == 2 and counted.tolist() == [1, 1, 1, 0, 1, 1, 1, 0, 0, 0]
+    labels = np.array([0, 0, 0, 0, 0, 0, 0, -1, -1, -1])          # the two merged: no new seed
+    k, counted = new_seeds(labels, counted, 3)
+    assert k == 0
+    labels = np.array([0, -1, 1, 1, -1, -1, -1, 2, 2, 2])         # a split piece (0, 1) and a new one (2)
+    k, counted = new_seeds(labels, counted, 1)
+    assert k == 1 and counted[7:].all()

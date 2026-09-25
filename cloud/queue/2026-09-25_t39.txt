@@ -1,0 +1,17 @@
+# PREREGISTRATION T39: the cascade window (six and eight links; pieces 11 and 13).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_sealed_curled_d t39_six_lam140_n288_c2n
+run_sealed_curled_d t39_six_lam140_n288_cn
+run_sealed_curled_d t39_six_lam140_n288_cn2
+run_sealed_curled_d t39_six_lam140_n288_cn4
+run_sealed_curled_d t39_six_lam140_n288_cn8
+run_sealed_curled_d t39_six_lam140_n288_cn16
+run_sealed_curled_d t39_six_lam125_n288_cn3
+run_sealed_curled_d t39_six_lam125_n288_cn6
+run_sealed_curled_d t39_six_lam125_n288_cn16
+run_sealed_curled_d t39_eight_lam125_n1024_cn4
+run_sealed_curled_d t39_eight_lam125_n1024_cn8
+run_sealed_curled_d t39_eight_lam125_n1024_cn16
+run_sealed_curled_d t39_eight_lam150_n1024_cn2
+run_sealed_curled_d t39_eight_lam150_n1024_cn3
+run_sealed_curled_d t39_eight_lam150_n1024_cn6

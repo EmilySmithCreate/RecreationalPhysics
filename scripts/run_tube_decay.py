@@ -30,7 +30,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from graphity import __version__                                           # noqa: E402
 from graphity.cqg import (ENERGY_PER_SQUARE, ENERGY_PER_SURPLUS, NO_CAP,     # noqa: E402
                           run_chain, surplus, torus, total_squares)
-from graphity.dimension import local_dimension, pieces_of                  # noqa: E402
+from graphity.dimension import local_dimension, new_seeds, piece_labels, pieces_of  # noqa: E402
 from graphity.results import ResultWriter                                  # noqa: E402
 
 PHI_TUBE, PHI_SHEET = 1.25, 1.0
@@ -72,6 +72,14 @@ def main(path, out_dir="results"):
                       + ENERGY_PER_SURPLUS * lam * surplus(adj)) / n
                 phis, sweeps_done, first = [], 0, True
                 f_200 = ""
+                # T37 (2026-09-25): count separate seeds. Every `count_patches_every` sweeps the sheet points
+                # (d = 2) are split into connected pieces; a piece of at least `patch_min` points touching no point
+                # of a piece counted before is a new seed. Reading only: no random numbers are drawn.
+                save_waiting_at = set(int(v) for v in cfg.get("save_waiting_at", []))
+                patch_every = int(cfg.get("count_patches_every", 0))
+                patch_min = int(cfg.get("patch_min", 8))
+                counted = np.zeros(n, dtype=bool)
+                seeds, seed_sweeps, patch_series, converted_series = 0, [], [], []
                 hit = {}
                 waited = None
                 thresh = None
@@ -82,6 +90,16 @@ def main(path, out_dir="results"):
                     sweeps_done += block
                     phi = float(s[-1]) / n
                     phis.append(phi)
+                    if patch_every and sweeps_done % patch_every == 0:
+                        sheet = local_dimension(adj) == 2
+                        converted_series.append(int(sheet.sum()))
+                        labels = piece_labels(adj, sheet)
+                        k_new, counted = new_seeds(labels, counted, patch_min)
+                        if k_new:
+                            seeds += k_new
+                            seed_sweeps.append("%d:%d" % (sweeps_done, k_new))
+                        sizes = np.bincount(labels[labels >= 0]) if labels.max() >= 0 else np.zeros(0, dtype=np.int64)
+                        patch_series.append(int((sizes >= patch_min).sum()))
                     if sweeps_done == 200:
                         # T8 (2026-09-23): how far the tube had converted when its resting stretch
                         # ended, so that "still a tube at sweep 200" can be read. Reading only.
@@ -93,6 +111,15 @@ def main(path, out_dir="results"):
                         thresh = PHI_TUBE - 3.0 * max(rest.std(), 1e-6) - 1e-9
                     if waited is None and phi < thresh:
                         waited = sweeps_done
+                    # T38 (2026-09-25): a tube still waiting at a named sweep has its graph saved, so a long wait can
+                    # be read from its wiring. Reading only: no random numbers are drawn.
+                    if waited is None and sweeps_done in save_waiting_at:
+                        wait_dir = Path(out_dir) / (cfg["name"] + "_waiting")
+                        wait_dir.mkdir(parents=True, exist_ok=True)
+                        target = wait_dir / ("N%d_rep%d_sweep%d.npz" % (n, rep, sweeps_done))
+                        if target.exists():
+                            raise FileExistsError("results are append-only; %s exists" % target)
+                        np.savez(target, adj=adj, part=part, lam=lam, g=g, h0=h0 * n)
                     f = (PHI_TUBE - phi) / (PHI_TUBE - PHI_SHEET)
                     for m in MARKS:
                         if m not in hit and f >= m:
@@ -137,6 +164,12 @@ def main(path, out_dir="results"):
                            reached=max([0.0] + [m for m in hit]))
                 if cfg.get("record_f_200"):
                     row["f_200"] = f_200                   # T8; absent from T7's files, which predate it
+                if patch_every:                            # T37; absent from earlier files
+                    row["seeds"] = seeds
+                    row["seed_sweeps"] = " ".join(seed_sweeps)
+                    row["patches_max"] = max(patch_series) if patch_series else 0
+                    row["patch_series"] = " ".join(str(v) for v in patch_series)
+                    row["converted_series"] = " ".join(str(v) for v in converted_series)
                 for m in MARKS:
                     tag = "%d" % int(100 * m)
                     if m in hit:

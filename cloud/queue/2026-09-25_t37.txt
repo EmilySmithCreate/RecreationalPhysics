@@ -1,0 +1,36 @@
+# PREREGISTRATION T37: many natural seeds in long tubes (paper 2; piece 5).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_tube_decay t37_lam125_g150_L64
+run_tube_decay t37_lam125_g150_L128
+run_tube_decay t37_lam125_g150_L256_a
+run_tube_decay t37_lam125_g150_L256_b
+run_tube_decay t37_lam125_g150_L512_a
+run_tube_decay t37_lam125_g150_L512_b
+run_tube_decay t37_lam125_g150_L1024_a
+run_tube_decay t37_lam125_g150_L1024_b
+run_tube_decay t37_lam125_g150_L1024_c
+run_tube_decay t37_lam125_g150_L1024_d
+run_tube_decay t37_lam125_g150_L1024_e
+run_tube_decay t37_lam125_g150_L1024_f
+run_tube_decay t37_lam125_g150_L1024_g
+run_tube_decay t37_lam125_g150_L1024_h
+run_tube_decay t37_lam125_g175_L64
+run_tube_decay t37_lam125_g175_L128
+run_tube_decay t37_lam125_g175_L256_a
+run_tube_decay t37_lam125_g175_L256_b
+run_tube_decay t37_lam125_g175_L512_a
+run_tube_decay t37_lam125_g175_L512_b
+run_tube_decay t37_lam125_g175_L1024_a
+run_tube_decay t37_lam125_g175_L1024_b
+run_tube_decay t37_lam125_g175_L1024_c
+run_tube_decay t37_lam125_g175_L1024_d
+run_tube_decay t37_lam125_g175_L1024_e
+run_tube_decay t37_lam125_g175_L1024_f
+run_tube_decay t37_lam125_g175_L1024_g
+run_tube_decay t37_lam125_g175_L1024_h
+run_tube_decay t37_lam125_g125_L1024_a
+run_tube_decay t37_lam125_g125_L1024_b
+run_tube_decay t37_lam125_g125_L1024_c
+run_tube_decay t37_lam125_g125_L1024_d
+run_tube_decay t37_lam125_g125_L1024_e
+run_tube_decay t37_lam125_g125_L1024_f

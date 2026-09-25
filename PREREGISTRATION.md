@@ -1832,6 +1832,13 @@ bath 0.4 to 0.5 per store), with about 40 % of points fully open in many small f
 points), never one flat space; 3 replicas did not leave. **The owner's prediction (ALL AT ONCE) fails; ours (FIRST
 ONLY) holds**, with the gas going further than we expected. Details in ASSUMPTIONS O54.
 
+**Correction, 25 September, midday (the assistant's):** the reading above overstates the tori. Read from the final
+local-dimension census, the first direction opened completely in 28 of the 84 torus replicas at λ = 1.25; 32 stalled
+early (36 to 53 % of points still two-curled), 21 went most of the way (15 to 24 % still two-curled), 3 went past the
+rung at the hottest baths. No torus cell has a MIDDLE majority; the FIRST ONLY verdict is carried, by the letter, by the
+gas cell, which went two rungs down without resting between them. The second direction of a torus never opened in a
+cold bath. ASSUMPTIONS O54, correction.
+
 ## T32. Six links: is the activation fixed with size? (piece 11; written 2026-09-25, before any run)
 
 ### Why
@@ -2061,3 +2068,180 @@ square count is not; expected to shorten any persistence, not checked.
 Anything about the infinite hyperbolic graph of [T25] Fig. 9; a lifetime at sizes that are not equilibrated; whether a
 persistent region is an allotrope in [T24]'s sense (a different discrete arrangement) or a slow fluctuation of the same
 one, which the region's wiring, saved, can be read for afterwards.
+
+## T37. Many natural seeds in a long tube: does the scrap grow with the space once the change starts in many places? (paper 2; piece 5; written 2026-09-25, 12:40 ET, before any run)
+
+### Why
+
+Paper 2's claim is the owner's (VISION Update 16): the scrap of the change is abundant through many seeds. On the record:
+one leftover per tube however large, up to 288 points (T10, where every cold box had one sheet patch), and more planted
+seeds give more leftovers, 0.29 per extra seed (T17). What has never been run is a tube long enough that seeds form **by
+themselves** in several places. Two facts, exact or measured, say where that happens: the chance of a seed per sweep does
+not grow with the tube (a sweep is 2N attempts and the good moves go as N; Update 9), while a front's speed per sweep falls
+with N (T12, roughly N^−0.7). So in a long enough tube a second seed forms before the first front has crossed. That is
+the setting of the Kolmogorov–Johnson–Mehl–Avrami (KJMA) picture of nucleation and growth, the standard account of how a
+first-order change fills a system, which gives numbers with nothing fitted: in one dimension, with nucleation rate I per
+unit length and front speed v, the converted fraction is X(t) = 1 − exp(−I v t²) (the Avrami exponent is 2), and the
+number of seeds is k = I L ∫ (1 − X) dt = (I L / 2) √(π / (I v)).
+
+**Disclosed:** two timing pilots (one replica each at 4 × 256 and 4 × 1024, g = 1.5, λ = 1.25) were run and read before
+the definitions and predictions below were final. At 4 × 256: 8 seeds, the conversion ending with 6 curled columns and 4
+two-point defects, 136 units above flat. At 4 × 1024: 37 seeds, and the end state was not a flat sheet with scraps: the
+square count of a sheet (φ = 1.005) but 10,138 units above flat (2.5 per point, more than the tube it started from), a
+quarter of the edges carrying 0 or 3 squares, defects spread along almost the whole tube. The leftover measure was changed
+after that reading, from the count of curled columns to the energy left in the final graph, and an end-state label added.
+Both pilots stay out of the results (they are in the scratch directory, not `results/`).
+
+### What will be run
+
+`scripts/run_tube_decay.py` with the seed counter added today (`count_patches_every` 100, `patch_min` 8: every 100 sweeps
+the points at d = 2 are split into connected pieces, and a piece of at least 8 points, two columns, that touches no point
+of a piece counted before is a new seed; the converted count is recorded at the same time; reading only, tested to leave
+the chain unchanged). Tubes 4 × L at λ = 1.25 from the exact tube, fixed coupling, stop at 97 % converted, settle 600 to
+2,400 sweeps, final graph saved. g = 1.5 and 1.75: L = 64, 128, 256 (40 replicas each), 512 (20), 1024 (24); g = 1.25:
+L = 1024 (12). Seeds 20263825, 20263850, 20263875 (one per g); jobs split by replica ids. On Batch
+(`cloud/queue/2026-09-25_t37.txt`, 34 jobs).
+
+### Definitions, fixed now (`scripts/analyse_t37.py`, tested in `tests/test_t37.py` before any run)
+
+Per replica: k, the seed count; t1, the first seed's sweep; X(t), the converted count over its final value; the
+leftovers read from the saved final graph as connected pieces of points not at d = 2, a **column** being a piece of
+exactly four points all at d = 1 (paper 2's relic), anything else **other**. Per cell (g, L): mean k and mean columns
+with standard errors; the Avrami exponent n, the median over replicas with k ≥ 4 of the slope of ln(−ln(1 − X)) against
+ln t over 0.1 ≤ X ≤ 0.9; the KJMA prediction k_pred = (I L / 2) √(π / K), with I = 1 / (L · mean t1) and K the median
+Avrami coefficient with n fixed at 2, both measured in the same cell, nothing fitted to k.
+
+- **P1 (scaling):** the exponent α of mean k against L over L = 256, 512, 1024 lies in [0.7, 1.1], at each g.
+- **P2 (Avrami):** the median n lies in [1.6, 2.4], at each g.
+- **P3 (KJMA, nothing fitted):** k_pred / k within a factor 1.5 at L = 512 and 1024, at each g.
+- **The end state**, per replica, from the saved final graph: the energy left above the flat torus, exact
+  (16(N − S) + 4λX), and CLEAN if at least 90 % of points are at d = 2, DEFECTED otherwise.
+- **The owner's question, scored on the energy left (the scrap, in energy, per tube):** MANY SEEDS, MANY SCRAPS if its
+  mean at the largest L is at least 3 times its mean at L = 64, at both g = 1.5 and 1.75; ONE SCRAP HOWEVER LARGE if under
+  1.5 times; BETWEEN otherwise.
+- Reported, not scored: the share of DEFECTED end states per cell; curled columns and other defect pieces, and columns
+  per seed against T17's 0.29; the energy left per point against the lump 4(λ − 1).
+
+### Predictions
+
+**The owner's, inferred by the assistant from VISION Update 16 and her T10 and T17 predictions (to be confirmed): MANY
+SEEDS, MANY SCRAPS.**
+
+**Ours, unverified, written after the two pilots:** P1, P2 and P3 hold (KJMA in one dimension); MANY SEEDS, MANY SCRAPS
+at every g; DEFECTED end states become the majority somewhere between L = 256 and 1024 at g = 1.5, fewer at g = 1.25
+(fewer seeds), more at g = 1.75. *Ours, unverified, the reading we will test:* patches that start independently do not
+fit where they meet, as regions of a new phase that choose independently leave defects between them (Kibble's argument,
+general knowledge, to verify); so a change that starts in one place makes a clean space with one scrap, and a change that
+starts in many makes a defected one.
+
+### Named or interchangeable points
+
+Named, as T7 to T24. Interchangeable points would slow nucleation by a large factor (the tube is more symmetric than one
+move out) and leave the front and the release as they are; so seeds would be fewer at a given L, and the crossover to many
+seeds would move to longer tubes. Not run.
+
+### What this cannot show
+
+That the scrap is dark matter; anything at λ ≠ 1.25 or in a sealed box, where the bath heats as the tube converts (T9);
+whether the columns last (T19 says they anneal at fixed coupling; T25 that they freeze in when cooled).
+
+---
+
+## T38. The rare long wait: one population with flukes, or a second, slower one? (paper 1; piece 2; written 2026-09-25, 12:40 ET, before any run)
+
+### Why
+
+T24 (O52) left the λ map inconclusive by the letter because of single extreme waits at small N: 20,070 sweeps (24 τ) at
+λ = 1.25 and 31,955 (76 τ) at 1.30, both at N = 64. One exponential puts a wait beyond 24 τ at about e^−24, 4 × 10^−11 per
+decay, so these are not flukes of one population unless something else is going on. The owner's bar (VISION Update 26)
+allows stragglers; paper 1 has to say what they are.
+
+### What will be run
+
+T24's protocol exactly (`scripts/run_tube_decay.py`, g = 1.5, block 5, stop at 98 %, settle 600 to 100,000, final graph
+saved, `record_f_200`), with one addition, reading only and tested to leave the chain unchanged: a tube still waiting at
+5,000, 10,000 or 20,000 sweeps has its graph saved (`save_waiting_at`). Cells: λ = 1.25 and 1.30 at N = 64 (16 × 4),
+4,000 decays each; λ = 1.25 and 1.30 at N = 192 (48 × 4), 1,000 each. Seeds 20263925 and 20263930 (one per λ, shared by
+both sizes, the per-decay seed also carrying the size). 48 Batch jobs (`cloud/queue/2026-09-25_t38.txt`).
+
+### Definitions, fixed now (`scripts/analyse_t38.py`, tested in `tests/test_t38.py` before any run)
+
+Per cell, with w′ = waiting − 200: τ̂ = median(w′) / ln 2; k10 = the number of waits above 10 τ̂ (one exponential expects
+n e^−10: 0.18 in 4,000, 0.05 in 1,000); the two-population maximum-likelihood fit p Exp(τ₁) + (1 − p) Exp(τ₂) with
+2 ln(likelihood ratio) against one exponential, reported. Cell: TAIL if k10 ≥ 3, NO TAIL if k10 ≤ 1, UNCLEAR otherwise.
+**Verdict: TWO POPULATIONS if at least two cells read TAIL; ONE POPULATION if all four read NO TAIL; UNCLEAR otherwise.**
+Reported, not scored: every saved waiting graph read exactly (energy above the start, local-dimension histogram, whether
+the wiring is still the perfect tube, symmetry count), which says what a long waiter is.
+
+### Predictions
+
+**The owner's, inferred from her reading of T24 (VISION Update 26: rare stragglers are real and allowed): TWO
+POPULATIONS.**
+
+**Ours, unverified: TWO POPULATIONS, the tail at N = 64 and weaker or absent at N = 192**, with the long waiters sitting on
+a variant of the tube whose cheapest exit costs more than 12: at 16 × 4 the tube's own length allows states a longer tube
+does not (paper 1 found rarer resting states on the way down, O13); if the saved waiting graphs are the perfect tube, this
+reading is wrong and the long waits are in the dynamics (fall-backs), which T22 measured at κ ≈ 0.6.
+
+### Named or interchangeable points
+
+Named, as T24.
+
+### What this cannot show
+
+Anything outside λ = 1.25 and 1.30 or N = 64 and 192; whether the tail matters for the window's sharpness at other sizes.
+
+---
+
+## T39. The cascade window: when does the first release pay the second wall? (six and eight links; pieces 11 and 13; written 2026-09-25, 12:40 ET, before any run)
+
+### Why
+
+The owner asks how the snap relates to how the directions are tied (VISION Update 26), and her rule is that one activation
+opens them all (Updates 22, 25). T30 (with its correction, O54) found that in a six-link torus with two directions curled
+the second direction never opened in a cold bath, and that at the smallest baths heat drove a few replicas toward a
+defective flat state. The walls are exact (O49, O50, rechecked today on the tori used): out of two curled 96 − 64λ (six
+links; at λ = 1.40 a cheaper exit, 4.8, appears), out of one curled 96 − 48λ, out of flat space 64 at every λ; with eight
+links 160 − 96λ, 160 − 64λ, and 128. The question is whether there is a **window of room**, a bath small enough that the
+first release heats it enough to pay the second wall and large enough that flat space does not melt, and how that window
+depends on λ and the number of directions. That is the model's version of "tied through the bath".
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py`, one store holding the spark (the exact wall), the rest empty, the final graph saved.
+- Six links, 4 × 4 × 18 (N = 288): λ = 1.40, spark 5.0 (the cheapest exit, 4.8), C = 2N, N, N/2, N/4, N/8, N/16, 12
+  replicas, 100,000 sweeps; λ = 1.25, spark 16.0, C = N/3, N/6, N/16 (bracketing T30's N/4 and N/8), 12 replicas, 300,000
+  sweeps.
+- Eight links, 4 × 4 × 8 × 8 (N = 1,024): λ = 1.25, spark 40.0, C = N/4, N/8, N/16; λ = 1.50, spark 16.0, C = N/2, N/3,
+  N/6; 6 replicas, 50,000 sweeps.
+15 Batch jobs (`cloud/queue/2026-09-25_t39.txt`).
+
+### Definitions, fixed now (`scripts/analyse_t39.py`, tested in `tests/test_t39.py` before any run)
+
+T30's definitions written for any D (flat points at d = D, the one-curled rung at D − 1, the start at D − 2, melted above
+D; the runner's own `melted` column assumes six links and is not used): per replica MELTED, FLAT, MIDDLE, STUCK or OTHER;
+per cell the majority or MIXED; per row (D, λ) **WINDOW** if some cell has a FLAT majority, **NO WINDOW** otherwise; the
+mechanism over flat-reaching replicas, CASCADE (no 5,000-sweep rest on the middle rung) or STEPWISE. The census reading of
+T30's correction is reported beside (FIRST OPEN, PARTWAY, STALLED, PAST).
+
+### Predictions
+
+**The owner's, inferred from VISION Updates 22 and 25 (to be confirmed): WINDOW in every row, with CASCADE** (one
+activation opens every curled direction when there is room for the burp).
+
+**Ours, unverified, a rule stated before the runs:** a window needs the second wall to be well below flat space's own
+wall, since the bath temperature that pays one comes close to paying the other. The ratio of flat space's wall to the
+second wall is 64 / (96 − 48λ) with six links, 1.78 at λ = 1.25 and 2.22 at 1.40, and 128 / (160 − 64λ) with eight, 1.60
+at 1.25 and 2.00 at 1.50. **We predict WINDOW where the ratio is at least 2 (six links at 1.40, eight links at 1.50) and NO
+WINDOW where it is below (six and eight links at 1.25)**, the window at six links and λ = 1.40 at C = N/2 or N/4, and at
+eight links and λ = 1.50 at C = N/3; where there is a window, CASCADE, because a hot bath pays the second wall faster than
+the first rung's 5,000-sweep rest.
+
+### Named or interchangeable points
+
+Named, as T30.
+
+### What this cannot show
+
+Anything at λ = 1, the published model (six links: VISION Update 24's caveat; eight links: no published curve); whether a
+physical universe has a bath of the right size; the gas's pattern, which T30 and T33 test.
