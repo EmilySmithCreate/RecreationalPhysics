@@ -2411,3 +2411,61 @@ interchangeable points and none in the control would be a signal worth a larger 
 
 Anything at λ = 1 (CQG) or with a physical clock; the packed protocol (the per-vertex store is not implemented for
 interchangeable points); sizes where the gas of cubes does not fit (N must be a multiple of 64).
+
+## T43. How long does a planted allotrope last at λ = 1? (piece 12; the model author's own question; written 2026-09-25, 14:24 ET, before any run)
+
+### Why
+
+The model's author proposes that dark matter is allotropes: regions stuck in a different discrete arrangement, held by
+"the barrier in between", possibly "extremely long-lived" ([T25] Sec. VI.3; [T24]), and his open question is how long
+they last. T36 found no lasting low-square regions on a torus (O59), but a torus cannot hold his background at all (O67).
+O67 built the smallest allotrope as a finite graph, faithful point for point to his Figs. 7 and 9, and found that at
+λ = 1 no energy barrier holds it. So if it lasts, entropy holds it, and only a run at finite coupling can say. This is
+that run, as designed in `docs/design/planted_allotrope.md`, section 6, which this section adopts.
+
+**Disclosed:** a timing pilot (the fold, g = 3.433, one replica, 2,000 sweeps, in the scratch directory, not `results/`)
+was read by the agent that built the runner, and the fold's low points were gone by sweep 20 and the background's order by
+sweep 40. The predictions below were written knowing that.
+
+### What will be run
+
+`scripts/run_planted_allotrope.py`, `graphity.cqg.run_chain` at λ = 1, no cap, Metropolis, the random stream carried on,
+named points (the published setting), each object started exactly as built by `scripts/build_planted_allotrope.py` with no
+warm-up: the **fold** (N = 234, 18 planted points, scored), the handle (228), the Fig. 7 background (240, control), the
+flat handle (188) and the flat 14 × 14 torus (196, control). Couplings g = 1.0, 1.5, 2.0, 2.5, 3.0, 3.433, 3.697; 16
+replicas; 20,000 sweeps; snapshots every 10 sweeps to 2,000 and every 100 after. Seven Batch jobs, one per coupling
+(`configs/t43_allotrope_lifetime_g<1000 g>.json`, `cloud/queue/2026-09-25_t43.txt`); seed 20264343, the per-replica seed
+carrying the object, the coupling and the replica, so the seven jobs are one run.
+
+### Definitions, fixed now (`scripts/analyse_t43.py`, tested in `tests/test_t43.py` before any run)
+
+As section 6 of the design note: R the planted points (labels fixed at the start), far points those at least 3 steps from
+R in the starting graph; f_R and f_B the shares of R and of the far points touching at most one square fewer than the
+background; q_R and q_B the shares with the planted and the background link patterns. The region is **alive** while
+f_R − f_B ≥ 1/2; its lifetime τ_R is the first snapshot after which that stays below 1/2 for two snapshots in a row,
+censored at 20,000; τ_B the same on q_B < 1/2. Per cell (object, g) the medians: **LASTS** if median τ_R ≥ 1,000 sweeps
+(ten times the memory T36 measured, O59), **DISSOLVES** otherwise; tagged **FIRST** if median τ_R < median τ_B / 2, else
+**WITH ITS BACKGROUND**. **Verdict**, on the fold, at any coupling (the owner's bar, VISION Update 26): **ALLOTROPE LASTS**
+if the fold LASTS at some g; **DISSOLVES** if at none. Reported beside: τ_R against g (the lifetime curve he asked about),
+the handle and flat objects, the persistence excess at lags 50, 200 and 2,000, and the energy against time.
+
+### Predictions
+
+**The owner's, inferred by the assistant from T36 (her inferred prediction there, ALLOTROPES) and VISION Update 26, to be
+confirmed or replaced by her: ALLOTROPE LASTS** at some coupling.
+
+**Ours, unverified, written after the pilot: DISSOLVES at every coupling.** At g ≥ 3.4 the whole tiling loses its order
+within tens of sweeps (the pilot), and the region goes with its background; at g ≤ 2.5 the region's way out is one
+zero-cost switch and then a downhill one (O67), each proposed about 4 × 10⁻³ times a sweep, so τ_R of order 10² to 10³
+sweeps, close enough to the bar that the cold cells are the less certain half; the region should go FIRST where the
+background holds, because it carries the extra energy.
+
+### Named or interchangeable points
+
+Named, the published setting. With interchangeable points the perfect background (240 symmetries) would be stickier than
+the fold (6), shortening the region's life relative to its background; not run.
+
+### What this cannot show
+
+Anything about the infinite hyperbolic plane of his figure; whether a lone smallest allotrope behaves as three fused ones;
+whether the cross-cap or handle under the region changes its life; other sizes (720-point versions are built for that).
