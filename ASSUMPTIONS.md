@@ -1648,6 +1648,14 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   no resting place until flat.** Whether a run then cascades to flat space rather than to damage is the dynamical test,
   not yet run. Eight links are being computed. What the follow form does not do: select three (with four directions it
   drives all four open); that is the second constant of Update 30.
+  **Addendum, 17:11 ET: eight links, exact** (`scripts/exact_walls_tie_follow_d.py` on the gas of four 8-cubes,
+  4 × 4 × 4 × 12, 4 × 4 × 8 × 8 and 4 × 8 × 8 × 8; κ = 0 reproduces O50's walls). The same shape as six links. At
+  λ = 1.25 the fully curled gas's first move gains +60κ from the tie, so X grows more stuck with κ; the three-, two- and
+  one-curled tori lose their walls at κ ≈ 0.6, 1.4 and 3.3 (walls 20, 40, 80 at κ = 0; −14 at κ = 1, −16 at κ = 2,
+  −16 at κ = 4 respectively), so above κ ≈ 3.3 no partly open state holds; at λ = 1.10 the one-curled torus loses its
+  wall between κ = 2 and 4. Flat four-direction space was not in this run; since the tie counts nothing at a flat point
+  and κ at each point a flat-space move leaves with one direction curled, its wall (128) cannot fall with κ, and this is
+  to be confirmed by the same script.
 
 - **O69 T34: concentrated energy does not fold six-link flat space; it excites it (MELTS).** (2026-09-25, 17:08 ET;
   PREREGISTRATION T34, reading; `results/t34_*_n216.csv`, `results/t34_*_n512.csv`.) Flat 6 × 6 × 6 and 8 × 8 × 8 at
