@@ -72,7 +72,12 @@ number is carried into a claim about gravity.
 - **His note of 24 September** (paraphrased locally): he will endorse paper 1 for gr-qc, on the naming condition
   above; he asks whether our moves are single switches and suspects low-coupling equilibration needs global
   moves; allotropes decay, and the question is how long they take ([T25] Fig. 9); his focus is the order of the
-  transition. Reply drafted locally (`docs/outreach/reply_draft_2026-09-24.md`), not sent.
+  transition. **Emily's reply was sent on 24 September** (local copy `docs/outreach/reply_sent_2026-09-24.md`).
+  In it she says the moves are single switches, with replica exchange the only non-local ingredient; that the
+  title and abstract carry his naming condition; and she asks for the allotrope's adjacency list (from him or
+  Eryk Kopczyński; RogueViz may produce one), to predict its lifetime at λ = 1. Allotropes wait until after his
+  work on the order of the transition. **Not yet asked:** Gate C's question (O43: [T22] Fig. 3's protocol,
+  moves and weight). Keep it for his reply, one question at a time.
 - **Paper 1** (`docs/papers/curled_torus/`): retitled "…in a graph model of emergent geometry"; abstract and
   text say only λ = 1 is CQG; content from his private emails removed ("hybrid", the N = 4p² advice). The PDF
   was rebuilt with Tectonic (not installed system-wide; fetched into a session scratchpad). **Plan:** send the
