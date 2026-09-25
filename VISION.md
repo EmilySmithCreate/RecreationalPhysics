@@ -512,6 +512,16 @@ there is a factor, or a couple of constants, related to the interconnectedness o
   smallest, opening first; in the present energy the first direction to open is the one with the largest cost, so either
   the triad's own terms reverse that ordering or the push reaches red by a route other than cheapness. Choosing three costs
   to match three numbers would be a fit; the claim becomes a prediction only if the model's requirements pin the costs.
+- **The author's idea, 17:53 ET: one third and two thirds, and doubling.** Her words: there is something significant
+  about the one third and the two thirds, in terms of the scale of subsequent energy releases doubling. *Ours, unverified:*
+  today's budget does split near one third matter (ordinary and dark together, about 31.5 %) and two thirds dark energy
+  (about 68.5 %; Planck 2018, general knowledge, to verify), so dark energy is about twice all matter. Three cautions: that
+  ratio holds only now (matter thins as space grows, dark energy does not; earlier, matter dominated), which is the known
+  "why now" coincidence puzzle, and her observer-timing argument of Update 26 is the known kind of answer to it; a plain
+  doubling across the three directions (1 : 2 : 4) gives 14 : 29 : 57 %, not 5 : 27 : 68, so if doubling is the pattern it
+  is between matter and dark energy, with ordinary against dark matter a separate factor of about 5.4; and in the model the
+  doubling that exists is in the walls, not the releases (eight links at λ = 1.25: 20, 40, 80 from rung to rung; O50),
+  while each direction releases the same 4(λ − 1) per point.
 
 ## The target ("the spot")
 
