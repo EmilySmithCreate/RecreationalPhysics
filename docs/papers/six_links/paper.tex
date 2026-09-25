@@ -7,29 +7,32 @@
 \begin{document}
 
 \title{Curled tori with six and eight links: an additive ladder of directions, walls that rise at every rung, a
-push fixed with size, and directions that open one at a time}
+first move whose price is fixed with size, and a second direction that does not follow the first}
 
 \author{Emily Smith}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 25 September 2026; the eight-link pattern test is running}
+\date{DRAFT, 25 September 2026}
 
 \begin{abstract}
 We extend the curled-torus study of a companion paper \cite{paper1} from four links per vertex to six and eight, in
 the family of graph energies obtained from combinatorial quantum gravity (CQG) by raising the coefficient
 $\lambda$ of its local term above 1 (only $\lambda = 1$ is CQG; everything here is at $\lambda > 1$, next to CQG and
 not in it). Exact: the ladder of curled directions is additive at every number of links, $4(\lambda - 1)$ per vertex
-per curled direction; the cheapest single move out of each rung, listed by brute force, rises in cost from rung to
-rung (with six links 16, 36; with eight, 20, 40, 80, at $\lambda = 1.25$), so nothing in the energy ties the
-directions together; and the cheapest move out of flat space costs 32, 64 and 128 with four, six and eight links,
-the same at every $\lambda$. Measured, pre-registered, sealed and energy-conserving: the push that starts the change
-from a six-link torus with two directions curled is exactly 16 at every size from 192 to 512 vertices, nothing
-below it ever starting the change and everything at or above it doing so; given that push, the first curled direction
-opens completely in a third of the runs and partly in most of the rest, and the second never opens in a cold bath;
-and a gas of fully curled 6-cubes at $\lambda = 1.10$ joins and opens two of its three directions in 21 of 24
-replicas, without resting between them, but never into one space. The author's rule that the space directions curl
-and open together predicted a cascade; in a torus they do not open together. The published six-link curve has not been reproduced, and every result here carries that caveat.
+per curled direction; the cheapest single move out of each rung, listed exhaustively (with eight links, over nearby
+partners, a search checked against the full one at six), rises in cost from rung to rung (with six links 16, 36;
+with eight, 20, 40, 80, at $\lambda = 1.25$), so nothing in the energy ties the directions together; and the cheapest
+move out of flat space costs 32, 64 and 128 with four, six and eight links, the same at every $\lambda$. Measured,
+pre-registered, sealed and energy-conserving: the price of the first move out of a six-link torus with two directions
+curled is exactly 16 at every size from 192 to 512 vertices, no torus leaving its start below it and every one at or
+above it; given that push, the first curled direction opens completely in 28 of 84 runs, most of the way in 21 and
+stalls early in 32, and the second never opens in a cold bath, so the tori's verdict, read as registered, is NEVER
+OPENS; a gas of fully curled 6-cubes at $\lambda = 1.10$, reported separately, joins and opens two of its three
+directions in 21 of 24 replicas, without resting between them, but never into one space; and with eight links a push
+equal to the first move's price buys that one move and nothing more. The author's rule that the space directions curl
+and open together predicted a cascade; in a torus they do not open together. The published six-link curve has not
+been reproduced, there is no published eight-link curve, and every result here carries that caveat.
 \end{abstract}
 
 \maketitle
@@ -41,7 +44,7 @@ stand-in for a curled arrangement, and found a metastable state that opens into 
 front. The author's framework holds that the real curled arrangement has three, or four, directions curled together,
 that they open together, and that one activation releases the whole burp \cite{repo}. That rule cannot be posed with
 four links, where a fully curled state (a gas of 4-cubes) has no wall at any $\lambda > 1$ and falls apart at once
-\cite{repo}. With six and eight links it can, and this paper poses it: exactly, by listing every single move out of
+\cite{repo}. With six and eight links it can, and this paper poses it: exactly, by listing the single moves out of
 every rung of the ladder; and by sealed runs, each pre-registered with the author's prediction.
 
 Two caveats govern everything below. The six-link kernel is the four-link code with the number of links read from
@@ -49,18 +52,20 @@ the array; at four links it makes the companion paper's chain draw for draw, its
 brute force against an independent implementation, and the ladder's energies are exact. But the published six-link
 curve \cite{T22} has not been reproduced by it, under any reading of that figure's axis we have tested
 (Sec.~\ref{sec:gate}); the author decided to proceed while that stays open, and no statement here is a statement about
-the published model. And the model has no time: a direction of a torus is a direction, and which one would be time
+the published model. With eight links there is no published curve at all, and the kernel is validated at four and six
+links only. And the model has no time: a direction of a torus is a direction, and which one would be time
 the model cannot say.
 
 \section{Exact results}
 
 \subsection{The ladder}
 
-With $2D$ links per vertex, $S$ squares and $X = \sum_e (S_e - (2D - 2))_+$ surplus squares,
+With $D$ directions, so $2D$ links per vertex, $S$ squares and $X = \sum_e (S_e - (2D - 2))_+$ surplus squares,
 \begin{equation}
   H = 16\Big(\tfrac{D(D-1)}{2} N - S\Big) + 4\lambda X ,
 \end{equation}
-derived from the published definitions exactly as the four-link energy was \cite{repo}. The flat $D$-torus (every
+derived by us from the published definitions as the four-link energy was, as we read them \cite{repo}, and not yet
+validated against a published curve. The flat $D$-torus (every
 side at least 6) has $H = 0$. A side curled to length 4 puts one extra square on every edge along it, so each curled
 direction costs $4(\lambda - 1)$ per vertex, additively: with six links the rungs are $0$, $4(\lambda - 1)$,
 $8(\lambda - 1)$ and $12(\lambda - 1)$ (the 6-cube); with eight links there is a fourth rung at $16(\lambda - 1)$
@@ -69,17 +74,22 @@ directions: $D$ on the flat torus, one less per curled direction, above $D$ wher
 
 \subsection{The walls}
 
-Every switch the chain can propose out of each curled torus was listed and priced at $-16\,\Delta S + 4\lambda\,\Delta X$;
-by translation symmetry one vertex serves as the first of the pair, and the cheapest moves are always among nearby
-partners, which was checked against the full search on the six-link tori \cite{repo}. Table~\ref{tab:walls} gives the
+Every switch the chain can propose out of each curled six-link torus was listed and priced at
+$-16\,\Delta S + 4\lambda\,\Delta X$; by translation symmetry one vertex serves as the first of the pair. With eight
+links, and for flat six-link space, only switches with nearby partners were listed, a shortcut checked against the
+full search on one six-link torus ($4 \times 4 \times 18$) \cite{repo}. Table~\ref{tab:walls} gives the
 cheapest kind for every rung at the sizes used. Three things follow. The walls rise from rung to rung: with six
 links 16 then 36, with eight links 20, 40, 80 at $\lambda = 1.25$ (each lower wall is less by $16\lambda$ or
 $32\lambda$, so the factor of two at eight links holds at this $\lambda$ only). So the energy ties nothing together; each direction has its own wall,
-and the second is the higher. The window of $\lambda$ in which a rung is stuck for now widens as more directions
-are open (with eight links, 1.25 for the gas, 1.43, 1.67, 2.5 up the ladder). And the wall of flat space itself, the
-cheapest move out of the perfect lattice, is 32, 64 and 128 with four, six and eight links, independent of $\lambda$:
-with eight links it sits above every rung's wall, so a bath hot enough to pay the later rungs need not melt the flat
-state, where with four links the sheet's wall (32) is only a little above the tube's (12). One correction to the
+and the second is the higher. The window of $\lambda$ in which a rung is stuck for now (its cheapest single move out
+costs energy, a property of the energy alone, unlike the chain-dependent ``stuck'' of the four-link map
+\cite{paper1}) widens as more directions are open (with eight links, 1.25 for the gas, 1.43, 1.67, 2.5 up the
+ladder). And the wall of flat space itself, the cheapest move out of the perfect lattice, is 32, 64 and 128 with four,
+six and eight links, independent of $\lambda$; with eight links it sits above every rung's wall, as it does with four
+(32 against the tube's 12). Whether a bath hot enough to pay the later rungs leaves the flat state intact is not
+settled by these walls: melting is a matter of free energy, not of the cheapest move, flat three-dimensional space,
+whose wall is 64, is melted by $g = 10$ in an exploratory scan \cite{repo}, and the ratio of flat space's wall to the
+last rung's is smaller with eight links (128 against 80) than with four. One correction to the
 project's earlier record: the six-link two-curled torus with a short open side of 6 admits a move at $96 - 80\lambda$
 that a long open side does not, so its window is $1 < \lambda < 1.2$ at that size and $1 < \lambda < 1.5$ at the sizes
 run here \cite{repo}.
@@ -116,29 +126,31 @@ pay, $H$ plus the stores conserved to the last unit. The starting torus is $4 \t
 curled, one open, $8(\lambda - 1)$ per vertex above the flat 3-torus of the same $N$ ($6 \times 6 \times 8$ at
 $N = 288$, $8 \times 8 \times 8$ at 512).
 
-\subsection{The push is fixed with size}
+\subsection{The price of the first move is fixed with size}
 
 \emph{Pre-registered as T32, the author predicting a fixed wall.} With a single store holding the spark, at
 $N = 192$, 288, 384 and 512 ($L = 12$ to 32), sparks of 12, 14, 15, 16, 17, 18 and 20, ten replicas each, 20,000
-sweeps: no replica left the start at 12, 14 or 15, and every replica left at 16 and above, at every size. The
-threshold is exactly the wall of Table~\ref{tab:walls}, and it does not grow with the system, as the four-link push
-of 12 did not \cite{paper1}.
+sweeps: no replica left the start at 12, 14 or 15, and every replica left at 16 and above, at every size. A replica
+counts as leaving when its squares change at all, so the threshold is the price of the first move, exactly the wall
+of Table~\ref{tab:walls}, and it does not grow with the system. With four links the same price, 12, also sufficed to
+convert the torus \cite{paper1}; with six links it does not always suffice (below), and with eight it did not
+(Sec.~\ref{sec:eight}).
 
-\subsection{Given the push, one direction opens}
+\subsection{Given the push, the second direction stays curled in a cold bath}
 
 \emph{Pre-registered as T30, the author predicting that both curled directions open together (ALL AT ONCE); ours,
 that the first opens and the second waits (FIRST ONLY).} At $\lambda = 1.25$, spark 16, twelve replicas per cell,
 100,000 sweeps, seven cells ($C = 2N$, $N$, $N/2$, $N/4$ and $N/8$ at $N = 288$; $C = 2N$ and $N/4$ at 512), 84
 replicas: the first curled direction opens completely, no vertex left at $d = 1$, in 28 of them; in 21 it goes most
 of the way, 15 to 24\% of vertices still at $d = 1$; in 32 it stalls early, 36 to 53\% still at $d = 1$ and the
-energy 1.86 to 1.95 per vertex against 2.0 at the start; the bath ends near 0.4 to 0.5 per store. The second
-direction never opens in a cold bath, its wall of 36 being unpayable there. (An earlier draft said every run at
-these baths reached the one-curled rung; the final states say a third did.) With $C = N/8$ the bath heats to 1 to 5 per
-store and two of twelve replicas descend both rungs to a defective near-flat state (88 to 90\% of vertices at
-$d = 3$, 3\% of squares lost), just under the pre-registered cleanliness bar; the rest end as mixtures. At
-$\lambda = 1.10$ a spark of 26 (the wall is 25.6) buys one move, which neither heals nor grows in 100,000 sweeps.
-No cell has a flat majority and no torus cell has a majority on the one-curled rung; the verdict, FIRST ONLY, is
-carried by the letter by the gas cell below.
+energy 1.86 to 1.95 per vertex against 2.0 at the start and 1.0 on the rung, so 5 to 14\% of the first rung's
+release; the bath ends near 0.4 to 0.5 per store. The second direction never opens in a cold bath, its wall of 36
+being unpayable there. With $C = N/8$ the bath heats to 1 to 5 per store and two of twelve replicas descend both rungs
+to a defective near-flat state (88 to 90\% of vertices at $d = 3$, 3\% of squares lost), just under the
+pre-registered cleanliness bar; the rest end as mixtures. At $\lambda = 1.10$ a spark of 26 (the wall is 25.6) buys
+one move, which neither heals nor grows in 100,000 sweeps. No torus cell has a flat majority or a majority on the
+one-curled rung, so, read as registered, the verdict for the tori is NEVER OPENS: the author's prediction failed, and
+so did ours. The gas below is read by the same rules and its verdict is reported separately.
 
 \subsection{The gas of 6-cubes}
 
@@ -148,11 +160,13 @@ each. In 21 of 24 replicas the cubes joined and opened two of their three direct
 to 0.24 to 0.41 per vertex, with about 40\% of vertices fully open in many small flat patches (the largest 36 to 64
 vertices) and never one flat space; three replicas did not leave. Traced block by block, none rested at the
 one-opened level for the pre-registered 5,000 sweeps (the longest stay was 3,800), though the whole descent took
-10,000 to 46,000 sweeps. This is further than the two-curled torus went,
-because the gas's walls are lower (8, then the moves that join two cubes) than the torus's second wall (43 at
-$\lambda = 1.10$).
+10,000 to 46,000 sweeps. By the letter its verdict, T30-gas, is FIRST ONLY, which for the gas means two of three
+directions open. This is further than the two-curled torus went at either $\lambda$: at 1.10 its first move led
+nowhere, and at 1.25 its second wall (36) was not paid. Why the gas went further is not settled: its first wall is
+lower (8), and the moves that join two cubes have not been priced.
 
 \section{Eight links: the pattern test}
+\label{sec:eight}
 
 \emph{Pre-registered as T33.} With eight links the author's two variants can be told
 apart: four directions tied (all open together), or a singleton beside three tied ones (one opens alone, then three
@@ -166,11 +180,13 @@ Every replica stalled. From both starts and at every bath size, the spark bought
 by that move's cost (from 3.000 to 3.009 per vertex from the torus, from 1.600 to 1.608 from the gas), the bath was
 left at zero, and nothing changed again in 50{,}000 sweeps, so no move out of the state one move away is downhill.
 The verdict by the letter is NO CASCADE from both starts, and neither the author's tied pattern nor our one at a time
-was tested, because nothing opened. What the run does establish is a difference between the number of directions: with
-four links the push equal to the cheapest first move (12) is exactly the push that starts the change, and with six
-links at $\lambda = 1.25$ it starts the first direction in a third of the runs, but with eight links the change needs
-more than its first move; its activation is the height of a pass several moves high. A scan of the push from 20 to
-160 (T40, pre-registered) is the test that finds it and then reads the pattern.
+was tested, because nothing opened. What the run shows is about the push: with four links the push equal to the
+cheapest first move (12) is exactly the push that starts the change, and with six links at $\lambda = 1.25$ it opens
+the first direction fully in a third of the runs, but with eight links it bought one move and nothing more, so the
+change needs more than its first move. The contrast is not only in the number of directions: with six links at
+$\lambda = 1.10$ the torus also stalled after one move. How high the pass is has not been measured; the cost of the
+second move from the stalled states is being computed. A scan of the push from 20 to 160 (T40, pre-registered) is the
+test that finds it and then reads the pattern.
 
 \section{The reproduction gate}
 \label{sec:gate}
@@ -181,28 +197,32 @@ Our kernel does not reproduce it. Under the plain reading of the axis ($\hbar g$
 to (3) support), our curve at $N = 500$ is fully ordered at every coupling in the published range with long
 equilibration, and drops abruptly with hysteresis at a larger coupling; under a division by $N^{1/3}$ it melts too
 early; a literal reading of the paper's Eq.~(3) in which the weight goes as $1/g^2$, which halves the curve's extent
-on the log axis, was pre-registered and failed, and the same code's two-dimensional figure is not compressed. A
-plain factor of two in the coupling matches the ordered side and the top of the transition (the crossings of 9 and
-6 squares per vertex within 0.02 and 0.03 of the published values); what remains different is the hot tail, which the
-published curve reaches a factor of 2.8 sooner in coupling, and the plateau (10.07 against our 11.4). Two readings are
-open. The published graphs may carry triangles and pentagons, as the paper says its ground states can; against that,
-the published hot end (1.09 squares per vertex) sits at our bipartite value (1.15), where such graphs would sit near
-half of it. Or the published runs were short and out of equilibrium: a fast heating leg from a slowly cooled state
-reproduces the published plateau and steepness in our code. The paper states no protocol, and the second reading is
-the better supported. Until it is settled, everything above is a statement about our family and its kernel, validated on its
+on the log axis, was pre-registered and failed, and the same code's two-dimensional figure is not compressed. Noticed
+after that run and not scored: a plain factor of two in the coupling brings the ordered side and the top of the
+transition close (on the two cooling legs the crossings of 9 and 6 squares per vertex fall within 0.01 to 0.07 and
+0.03 to 0.04 of the published values, inside the 0.10 by which the pre-registered reading was scored); what remains
+different is the hot tail, which the published curve reaches a factor of 2.8 sooner in coupling, and the plateau
+(10.07 against our 11.4). Two readings are open. The published graphs may carry triangles and pentagons, as the paper
+says its ground states can; against that, the published hot end (1.09 squares per vertex) sits at our bipartite value
+(1.15), where such graphs would sit near half of it. Or the published runs were short and out of equilibrium: in an
+exploratory run, a fast heating leg from a slowly cooled state comes near the published plateau and steepness in our
+code (a width of 0.76 against 0.645, suggestive and not a match), though it then needs a coupling factor of about 5
+to 6, not 2, to line up, so the two observations are not yet one account. The paper states no protocol; we think the
+second reading the better supported, and it is unverified. Until it is settled, everything above is a statement about our family and its kernel, validated on its
 own terms, and not about the published model.
 
 \section{Discussion}
 
 Three exact facts and two measured ones. The ladder is additive at every number of links; the walls rise from rung
-to rung; flat space's own wall grows with the number of links faster than any rung's. The push that starts a change
-is fixed with size in three dimensions as in two. And given that push, a torus's directions do not open together: the
-first opens fully in a third of the runs and partly in most of the rest, and the second sits behind a wall the first
-release does not pay in a cold bath; the gas of cubes, where no direction is singled out, opens two of three without a
-rest between them. The author's rule that the
+to rung; flat space's own wall is 32, 64 and 128, the same at every $\lambda$. The price of the first move out is
+fixed with size in three dimensions as in two. And given that push, a torus's directions do not open together: the
+first opens fully in a third of the runs and stalls early in more than a third, and the second sits behind a wall the
+first release does not pay in a cold bath; the gas of cubes, where no direction is singled out, opens two of three
+without a rest between them. The author's rule that the
 directions curl and open together therefore describes an ingredient this energy does not contain, which the map now
-says plainly; the eight-link test will say whether a singleton-then-three pattern, which she found natural on seeing
-the six-link result, appears from the fully curled start. What would carry the question further is a term that
+says plainly. The eight-link test stalled after one move from both starts and tested no pattern; whether a
+singleton-then-three pattern, which she found natural on seeing the six-link result, appears from the fully curled
+start is the question of the push scan (T40). What would carry the question further is a term that
 couples the directions, which would be a new knob and needs its own decision before any run.
 
 \begin{acknowledgments}
@@ -218,7 +238,8 @@ graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_toru
 \bibitem{T22} C. A. Trugenberger, Emergent time, cosmological constant and boundary dimension at infinity in
 combinatorial quantum gravity, JHEP 04, 019 (2022); arXiv:2112.03778.
 \bibitem{repo} \url{https://github.com/EmilySmithCreate/RecreationalPhysics}: VISION Updates 22 to 26;
-PREREGISTRATION T30, T32, T33, Gate C$'$; ASSUMPTIONS Q21, O41, O43, O46, O49, O50, O53, O54.
+PREREGISTRATION T30, T32, T33, T40, Gate C$'$; ASSUMPTIONS Q21, O41, O43, O45, O46, O49, O50, O51, O53, O54, O55, O62,
+O64.
 \end{thebibliography}
 
 \end{document}

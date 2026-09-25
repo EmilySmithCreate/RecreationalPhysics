@@ -22,11 +22,12 @@ result here is at $\lambda > 1$, next to CQG and not in it), a $4 \times L$ toru
 metastable and opens into the flat torus by a single front, releasing exactly $\varepsilon = 4(\lambda - 1)$ per
 vertex. Here we study what the change leaves behind. Sealed, with a bath cold enough to hold the release, the
 conversion ends as a flat sheet with about one relic defect, at every size from 64 to 288 vertices: the relic does
-not grow with the space. Read from its wiring it is one column of the torus left curled, costing $24\lambda - 16$
-above the flat torus (14 at $\lambda = 1.25$), with rarer variants of 8 to 45 units. Its position is neither the
-seed nor the place where fronts meet. Planting $k = 1, 2, 4, 8$ seeds leaves $1.10, 2.15, 2.50, 3.40$ relics on
-average: more seeds make more scrap, but fewer than one each. Held at any fixed coupling from 1.0 to 1.5 the relic
-anneals away within $500$ to $80{,}500$ sweeps; cooled from that coupling toward one at which nothing moves, it
+not grow with the space. Read from its wiring it is a closed loop of four vertices at local dimension 1, costing
+$24\lambda - 16$ above the flat torus in the cold boxes (14 at $\lambda = 1.25$), with lighter forms of 4 and 9 units
+and rarer resting states of 8 to 45 units. Its position is neither at the seed nor opposite it: it is
+indistinguishable from uniform. Planting $k = 1, 2, 4, 8$ seeds leaves $1.10, 2.15, 2.50, 3.40$ relics on
+average: more seeds make more scrap, but fewer than one each. Held at a fixed coupling of 1.0, 1.25 or 1.5 the relic
+anneals away within $500$ to $80{,}500$ sweeps; cooled from 1.25 toward a coupling at which nothing moves, it
 freezes in: every relic survives a fast cooling, about four in five survive a cooling of ten to thirty thousand sweeps,
 and a third survive the slowest tried. Every verdict quoted was pre-registered before its run.
 \end{abstract}
@@ -49,8 +50,8 @@ family for CQG itself: allotropes, regions of the network stuck in a different d
 survives where graphite is stable. The relic studied here is not an allotrope in that sense: it is a single object
 of fixed size, made by the burp, at $\lambda > 1$. The two are cousins, and we say so where it matters.
 
-Every kinetic statement below concerns one Markov chain, the local edge switch with Metropolis acceptance used to
-sample the model \cite{KTB19}, and the sealed version of it built from Creutz demons \cite{Creutz83}. Energies,
+Every kinetic statement below concerns one Markov chain, the local edge switch used to sample the model
+\cite{KTB19}, with Metropolis acceptance, and the sealed version of it built from Creutz demons \cite{Creutz83}. Energies,
 the relic's cost and the exact classification of end states do not depend on the chain; waiting times, annealing
 times and the count of relics per seed do.
 
@@ -69,49 +70,62 @@ edge, sits at $H = 0$ and is the ground state for $\lambda \ge 1$; each curled d
 vertex above it.
 
 The local dimension $d(v)$ of a vertex is the number of its six edge pairs that close no square: 2 on the flat sheet,
-1 on the curled torus, 0 in a 4-cube. A relic is a connected set of vertices with $d < 2$ in an otherwise flat sheet,
-and its energy above the flat torus is read exactly from Eq.~\eqref{eq:H} on the saved wiring.
+1 on the curled torus, 0 in a 4-cube. A relic is counted as a connected piece of vertices at $d = 1$ in an otherwise
+flat sheet, and its energy above the flat torus is read exactly from Eq.~\eqref{eq:H} on the saved wiring. A defect
+that leaves every vertex at $d = 2$ is not seen by this count; one such state, holding 20 units, is among the rare
+states of Sec.~IV.
 
 Sealed runs keep a bath of $C$ stores beside the graph. A proposed switch picks one store at random, is refused if
 that store cannot pay for it, and otherwise pays or is paid; $H + \sum \text{stores}$ is conserved to the last unit
 in every run reported here. The stores' mean energy reads the temperature the system reaches by itself; $C$ sets
-how far that temperature rises per unit released, and the companion paper showed the change completes only when $C$
-exceeds about $N/3.5$ at $\lambda = 1.25$. All runs below use $C = 2N$ empty stores, cold enough that the release
-is held and the sheet does not melt.
+how far that temperature rises per unit released, and the companion paper showed that at $\lambda = 1.25$ the change
+ends as a clean sheet in most runs only when $C \ge N/2$ (the prediction, about $N/3.5$, lies between the grid points
+$N/4$ and $N/2$). All runs below use $C = 2N$ stores, cold enough that the release is held and the sheet does not
+melt: in T10 and T11 one store starts with a 12-unit spark and the rest are empty; in T17, T19 and T25 every store
+starts empty and the change is started by planted seeds.
 
 \section{One relic, however large the space}
 
 \emph{Pre-registered as T10.} Twenty sealed conversions at each of $N = 64, 96, 192, 288$ ($4 \times L$ tori,
 $\lambda = 1.25$, $C = 2N$, a 12-unit spark to start the change, 30,000 sweeps). The prediction on record was that
-the number of leftover vertices grows with the space; the verdict was ONE RING, HOWEVER LARGE: at every size the
-product is a flat sheet with about one relic of about four vertices, and the share of boxes holding exactly one
-relic does not fall with $N$. (The pre-registered label keeps the word ``ring''; the object is not a ring around
-the tube but a column lying along it, as the next section shows.)
+the mean number of relics rises with $N$; the verdict was ONE RING, HOWEVER LARGE: at every size the product is a
+flat sheet with about one relic of four vertices, the mean count $0.85$ to $1.05$, within the replica scatter of 1,
+with a slope of $0.0003 \pm 0.0003$ per vertex. A second check, that every relic holds the expected 14 units, failed
+in 9 of the 80 boxes, which held instead a different leftover: a twist two points wide, costing 20 units. (The
+pre-registered label keeps the word ``ring''; in these cold boxes the four points lie along the torus, spanning one
+to four of its original columns, mostly two or three, not round its short direction.)
 
 \section{What the relic is, read from its wiring}
 
-Read from the saved final graphs of the companion paper's decays and of T10's boxes, the common relic is one
-column of the torus left curled: four vertices at $d = 1$, one square still closing round the short direction,
-costing exactly $24\lambda - 16$ above the flat torus ($14$ at $\lambda = 1.25$). Rarer resting states, 8 to 45
-units, are combinations of small defects in the sheet: a two-point twist (20 units), a 3-cube, an open line of
-three, single edges and single points; eleven of twelve unusual states read this way matched their recorded
-release exactly, and the twelfth was set aside as a decay that changed state inside its last measuring window.
-These states are fixed in size: more of the same scrap, never a larger one.
+Read from the saved final graphs of two of the companion paper's decays, the four-point relic is a closed loop of
+four vertices at $d = 1$, each of its edges lying in three squares; in one of the two it is an original column of the
+torus that stayed curled while the columns around it opened. At $\lambda = 1.25$ it comes in three forms, holding 4,
+9 or 14 units according to how many of the edges around it carry a third square ($S = N + 1$ and $X = 4$, 5 or 6).
+The form left in the cold boxes of T10 and T11 is the 14-unit one, costing $24\lambda - 16$ above the flat torus;
+there it was identified from its energy and the positions of its points, not read from its wiring. Rarer resting
+states, 8 to 45 units, are combinations of small defects in the sheet: a two-point twist (20 units), a 3-cube, an
+open line of three, single edges and single points; eleven of twelve unusual states read this way matched their
+recorded release exactly, and the twelfth was set aside as a decay that changed state inside its last measuring
+window. In the states read these are small, 8 to 45 units at every tube length; whether the list of kinds is
+complete is not known.
 
-The relic's share of the release is exact: $(24\lambda - 16)/[4(\lambda - 1)N]$, which is 22\% at $\lambda = 1.25$
+The share of the release kept by the 14-unit relic is exact: $(24\lambda - 16)/[4(\lambda - 1)N]$, which is 22\% at $\lambda = 1.25$
 and $N = 64$, 72\% at $\lambda = 1.05$, and falls as $1/N$. Near $\lambda = 1$ the scrap keeps a large share of
 the lump; in a large space it is negligible.
 
 \section{Where it sits}
 
-\emph{Pre-registered as T11.} Two readings were possible: the relic marks the seed, or it marks the seam where
-fronts meet. Its position in the saved boxes is uniform along the torus: neither. The verdict on record is NEITHER.
+\emph{Pre-registered as T11}, in cold boxes as T10 at $N = 64$ and 96. Two readings were possible: the relic marks
+the seed, or it marks the seam opposite the seed, where a front spreading both ways from one start would meet itself.
+In the 36 and 28 boxes holding one relic its position is indistinguishable from uniform along the torus: neither.
+Where fronts actually met was not measured. The verdict on record is NEITHER.
 
 \section{How many: one per tube, or one per seed?}
 
-\emph{Pre-registered as T17.} A $96 \times 4$ torus at $\lambda = 1.25$ in a cold sealed box, $k$ seeds planted as
-the cheapest move out of the torus at evenly spaced columns, twenty runs per $k$, all converting, energy exact.
-The author's prediction was one relic per seed; ours was one per tube whatever $k$. Both failed:
+\emph{Pre-registered as T17.} A $96 \times 4$ torus ($N = 384$) at $\lambda = 1.25$ in a cold sealed box, $k$ seeds
+planted as the cheapest move out of the torus at evenly spaced columns, twenty runs per $k$, all converting, energy
+exact. The author's hypothesis corresponds to one relic per seed, though she did not pick among the pre-registered
+options; ours was between, leaning toward one per tube whatever $k$. Neither one per seed nor one per tube held:
 
 \begin{center}
 \begin{tabular}{@{}lcccc@{}}
@@ -122,31 +136,38 @@ relics per tube & 1.10 & 2.15 & 2.50 & 3.40 \\
 \end{tabular}
 \end{center}
 
-\noindent The slope is $0.29 \pm 0.04$ relics per extra seed; the verdict on record is BETWEEN. More seeds make
-more scrap, but fewer than one each, and the growth looks less than proportional. Where fronts from neighboring
+\noindent The slope is $0.29 \pm 0.04$ relics per extra seed; the verdict on record is BETWEEN, though the slope is
+only about one standard error above the boundary with one per tube (0.25), and a straight line describes poorly means
+that rise by 1.05, then 0.35, then 0.90. More seeds make more scrap, but fewer than one each, and the growth looks
+less than proportional. The counts are also more regular than independent events would give: their variance over
+their mean is 0.09 to 0.50, against about 1. Where fronts from neighboring
 seeds meet, their relics may merge or anneal; that was not measured and the saved end states hold the positions.
 
 \section{How long it lasts at a fixed temperature}
 
-\emph{Pre-registered as T19.} Sheets with exactly one relic, made as in T17 at $k = 1$, were held at fixed coupling
+\emph{Pre-registered as T19.} Sheets with exactly one relic, made as in T17 at $k = 1$ but from a $24 \times 4$ torus
+($N = 96$), were held at fixed coupling
 $g = 1.0$, $1.25$ and $1.5$ for 100,000 sweeps, the relic's position read every 500. The options on record were
 that it moves, that it anneals at the warmer couplings and stays at the colder, or that it stays at every $g$. It
 anneals at every coupling: at $g = 1.0$ all nine followed relics were gone between 4,000 and 80,500 sweeps; at 1.25
 all ten within 500 to 13,000; at 1.5 eight annealed and two moved first, all gone within 11,000. In T10's cold boxes,
 whose bath ends near $g = 0.5$, the relic lasted the whole 30,000 sweeps. Our own prediction, that it would stay at
-$g = 1.0$, was wrong. Said plainly: in this model the relic is not permanent at a fixed temperature, and is
-permanent only where its surroundings stay very cold.
+$g = 1.0$, was wrong. Said plainly: in this model the relic did not last at any of the three fixed couplings tried,
+and it lasted where its surroundings stayed very cold.
 
 \section{The race: it freezes in when the box cools}
 
 \emph{Pre-registered as T25.} Reality cools as it expands, so the question that matters for a long-lived relic is a
-race between healing and cooling. A sheet with one relic, made as in Sec.~VI, was cooled from $g = 1.25$, where every
+race between healing and cooling. A sheet with one relic, made as in Sec.~VII ($N = 96$), was cooled from
+$g = 1.25$, where every
 relic anneals within 13,000 sweeps at fixed coupling, to $g = 0.25$, where nothing moves, by the same factor each block
 of 500 sweeps over $t_{\rm cool} = 300$ to $100{,}000$ sweeps, and then held cold for 20,000 sweeps; twenty replicas per
 cooling time, of which 17 to 20 ended the making step with exactly one relic and were followed. The pre-registered
 verdict was FREEZES IN if some cooling time keeps a majority of relics and the fastest cooling keeps the most, ALWAYS
-HEALS if no cooling time keeps a majority. The author's prediction was FREEZES IN; ours was FREEZES IN with a
-freeze-out time between 1,000 and 10,000 sweeps.
+HEALS if no cooling time keeps a majority. The prediction recorded for the author was FREEZES IN, with no
+freeze-out time; it was inferred by the assistant from her stated positions, and she confirmed it as her own only
+after the reading below had been recorded. Ours was FREEZES IN with a freeze-out time between 1,000 and 10,000
+sweeps.
 
 \begin{center}
 \small
@@ -159,22 +180,24 @@ relics surviving & 20/20 & 17/17 & 19/19 & 15/19 & 14/18 & 7/19 \\
 \end{center}
 
 \noindent The verdict is FREEZES IN, with the freeze-out time, the longest cooling that keeps a majority, at 30,000
-sweeps. Even a cooling that takes thirty times the annealing time at the starting coupling keeps most relics, because
-the coupling leaves the range where healing is fast early in the schedule; the relics that healed did so within the
-first few thousand sweeps of cooling, at the warm end. Our prediction of the freeze-out time was too short by a factor
-of three to thirty; the author's held. A relic that is not permanent at any fixed temperature is therefore kept by
-cooling in this model, which is the condition her dark-matter reading needs. What the model cannot say is how its
-sweep relates to a cosmological clock.
+sweeps. Even a cooling of 30,000 sweeps, more than twice the longest annealing time seen at the starting coupling in
+T19, keeps most relics, because the coupling leaves the range where healing is fast early in the schedule: the relics
+that healed were last seen within the first 15,000 sweeps of cooling, while the coupling was still above about 1. Our
+prediction of the freeze-out time was too short by a factor of three to thirty; the verdict is the one recorded for
+the author, whose prediction named no freeze-out time. A relic that anneals at every fixed coupling tried is
+therefore kept by cooling in this model, which bears on the condition her dark-matter reading needs, that relics
+last. What the model cannot say is how its sweep relates to a cosmological clock.
 
 \section{Discussion}
 
-Four facts about the relic are now on the record for this model. It is small and of fixed size, one column of
-unconverted torus, and it does not grow with the space. Its number depends on how the change started, growing
-with the number of seeds but by less than one per seed. It is not permanent at a fixed temperature. And it freezes
-in when its surroundings cool, even slowly.
+Four facts about the relic are now on the record for this model. It is small and of fixed size, a closed loop of
+four points left curled, and it does not grow with the space. Its number depends on how the change started, growing
+with the number of seeds but by less than one per seed. It anneals away at each fixed coupling tried, from 1.0 to
+1.5. And it freezes in when its surroundings cool, even slowly.
 
-For the author's dark-matter reading, the first two are what the reading needs and the last two are its condition, met. A
-small relic is not a problem, because matter thins out more slowly than radiation as space grows: at the
+For the author's dark-matter reading, the first two are what the reading needs, and the last two bear on its
+condition that relics last: in this model they last when their surroundings cool, on a clock the model cannot relate
+to cosmic time. A small relic is not a problem, because matter thins out more slowly than radiation as space grows: at the
 conversion the leftover need hold only a small share of the energy to be a large share later (an estimate of ours,
 unverified, in the project's record). The many-seed route then needs few seeds, and ties the relic density to the
 seed density. The condition is that the relics survive, which in this model they do when their surroundings cool,
@@ -182,7 +205,8 @@ and the cooling need not be fast.
 
 What this cannot show: anything about the real universe; how the model's cooling clock relates to a cosmological
 one; and whether a relic in three dimensions, or with the model's points treated as interchangeable, behaves the
-same way. Under interchangeable points the flat sheet carries $4N$ symmetries and a sheet with one relic a few, so
+same way. Under interchangeable points the flat sheet carries $2N$ symmetries ($4N$ when it is square) and a sheet
+with one relic a few, so
 annealing should be favored by a factor of order $N$; that expectation is recorded, not measured.
 
 \begin{acknowledgments}
