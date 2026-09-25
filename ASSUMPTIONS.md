@@ -1512,6 +1512,15 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   kinds of placement in 8 × 8 × 8 to the axis's farthest one and used a pseudo-inverse; the second version (a direct
   solve, each kind referred to its own farthest; the pseudo-inverse failed at 16³) wrote `exact_tree_count_pull_3d.csv`.
   The raw columns (`log_trees`, `cross`) of both are comparable; `cross` differs between versions by a constant.
+  **Addendum, 15:25 ET: the field would barely move the ladder** (`scripts/exact_tree_count_ladder.py`,
+  `configs/exact_tree_count_ladder.json` with its expectation written first). ln det′L per point, at equal N: four
+  links, flat 8 × 8 1.2146, one curled 16 × 4 1.1858, a gas of four 4-cubes 1.2711; six links, flat 8 × 8 × 8 1.6786,
+  one curled 4 × 8 × 16 1.6734, two curled 4 × 4 × 32 1.6629, a gas of eight 6-cubes 1.6919. So the field's term
+  (g/2) ln det′L favors a curled torus over flat space by 0.0144 g per point in two directions and 0.0026 g per point
+  per direction in three: the same as lowering λ by about 0.004 g, a few thousandths at the couplings used, too small
+  to move the window at λ = 1.25 and a real fraction of the curling cost only near λ = 1.02. It disfavors a gas of
+  cubes (whose separate pieces also bring zero modes that a massless field leaves undefined; a small mass fixes them).
+  Adopting option A would not spoil the burp.
 
 - **O62 T33: in four directions, a push equal to the cheapest first move stalls (NO CASCADE, every replica STALLS).**
   (2026-09-25; PREREGISTRATION T33, reading; `results/t33_*.csv`, six cells of six replicas, 8 links, N = 2,304.) From the
@@ -1525,6 +1534,14 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   this was read and give a spark equal to the wall (40 at λ = 1.25, 16 at 1.50) with an empty bath; they are expected to
   stall for the same reason, and are left to run as registered. A pre-registered follow-up with larger pushes is the next
   test for piece 13. *Every eight-link result carries VISION Update 24's caveat.*
+
+- **O63 T17's leftover counts are more regular than chance.** (2026-09-25; arithmetic on `results/t17_seeds_k*.csv`, the
+  converted tubes, no new run; suggested by the literature review on relics, O60 (c).) Variance over mean of the number of
+  leftovers per tube: 0.09, 0.50, 0.36, 0.35 at k = 1, 2, 4, 8 planted seeds (counts 1.10, 2.15, 2.50, 3.40). Independent
+  events would give about 1, and a leftover left independently with probability p at each of the k places where fronts
+  meet would give 1 − p: 0.38 at k = 4, where it fits, and 0.57 at k = 8, where the counts are more regular than that.
+  *Ours, unverified:* at high seed density the leftovers are not independent: nearby scraps merge or anneal together,
+  which fits the growth of leftovers per seed falling as seeds are added. T37 measures the same thing with natural seeds.
 
 ## Provenance
 
