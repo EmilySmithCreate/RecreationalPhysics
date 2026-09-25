@@ -1,0 +1,14 @@
+# PREREGISTRATION T41: room for the burp in three directions (piece 4).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_sealed_curled_d t41_lam125_n384_c4n
+run_sealed_curled_d t41_lam125_n384_c2n
+run_sealed_curled_d t41_lam125_n384_cn
+run_sealed_curled_d t41_lam125_n384_cn2
+run_sealed_curled_d t41_lam125_n384_cn4
+run_sealed_curled_d t41_lam125_n384_cn8
+run_sealed_curled_d t41_lam140_n384_c4n
+run_sealed_curled_d t41_lam140_n384_c2n
+run_sealed_curled_d t41_lam140_n384_cn
+run_sealed_curled_d t41_lam140_n384_cn2
+run_sealed_curled_d t41_lam140_n384_cn4
+run_sealed_curled_d t41_lam140_n384_cn8

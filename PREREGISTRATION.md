@@ -2306,3 +2306,45 @@ Named, as T33.
 ### What this cannot show
 
 Which direction is time; anything at λ = 1; the pattern with a physical clock.
+
+## T41. Three directions: does the new space need room for the burp? (piece 4; written 2026-09-25, 13:15 ET, before any run)
+
+### Why
+
+Piece 4 is measured in two directions: sealed, a curled torus opens completely only if its surroundings can hold the
+burp; with too little room the energy melts the new space (T9, BONFIRE WITH A THRESHOLD), and the room needed grows faster
+than the lump with λ (T18, PROPORTIONAL). The (D, λ) map (series plan) has no measurement for the simplest three-direction
+case, one curled direction opening (4 × L × L′), marked "not run". This is that cell, with the room scanned.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py`, six links, 4 × 8 × 12 (N = 384, one direction curled), one store holding the spark
+(the exact wall, rechecked today with `scripts/exact_walls_d.py --near=4`: 36 at λ = 1.25, 28.8 at 1.40; sparks 36.0 and
+29.0), C = 4N, 2N, N, N/2, N/4, N/8, twelve replicas, 100,000 sweeps, read every 200, final graphs saved. 12 Batch jobs
+(`cloud/queue/2026-09-25_t41.txt`), seeds 20264100 to 20264111.
+
+### Definitions, fixed now (`scripts/analyse_t41.py`, tested in `tests/test_t41.py` before any run)
+
+T39's per-replica rules with D = 3 (`analyse_t39.read_replica`): FLAT (the flat state reached, 90 % of points at d = 3 at
+the end), STAYS (still on the one-curled rung), MELTED (a quarter of points above d = 3), OTHER. Per cell the majority or
+MIXED. **C\*** per λ: the smallest C with a FLAT majority. **Verdict per λ:** ROOM NEEDED if C\* exists and some smaller C
+has no FLAT majority; ALWAYS OPENS if every C has one; NEVER OPENS if none has. Reported: C\* / N against two dimensions
+(T18: 0.375 at λ = 1.25), the release per point against 4(λ − 1), whether the flat region is one piece (a front).
+
+### Predictions
+
+**The owner's (piece 4, T9 and T18; inferred for three directions): ROOM NEEDED at both λ**, the burp must have somewhere
+to go.
+
+**Ours, unverified:** ROOM NEEDED at λ = 1.40 with C\* between N/2 and 2N; at λ = 1.25, NEVER OPENS or ROOM NEEDED, since
+in T30 the first direction of a two-curled torus opened fully in only a third of the runs at this λ, and the same first
+move may stall here; if it opens, the flat state's wall (64) sits far above the bath's temperature at every C but N/8, so
+melting needs C ≤ N/8.
+
+### Named or interchangeable points
+
+Named, as T30.
+
+### What this cannot show
+
+Anything at λ = 1; whether the room a real universe had was enough.
