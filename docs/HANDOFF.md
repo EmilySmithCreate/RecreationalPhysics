@@ -1,4 +1,4 @@
-# Start here: handoff for the next assistant (state as of 2026-09-24, afternoon)
+# Start here: handoff for the next assistant (state as of 2026-09-24, night)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". Work is on branch `feat/cloud-runs-and-3d` (shared by two sessions in one
@@ -10,9 +10,19 @@ git history.
 
 1. **Two sessions may be working this repository at once.** Run `git status` and `git log -5` before assuming
    the tree is as described, and re-read a file if the tool says it changed on disk.
-2. **Running (24 September, evening):** Gate C's long protocol P2 (`results/gatec_t22_fig3_p2.csv.partial`,
-   local). A finished local job has a `.csv` and no `.partial`. Never commit a result a live job is still writing.
-   T23 is done and read (O44).
+2. **Running (24 September, night).** On the laptop: Gate C's long protocol P2 (`gatec_t22_fig3_p2`) and the
+   exploratory fast-heating leg `explore_c_heat500` from the other session; and, launched tonight after their
+   pre-registrations were committed, **T25** (`t25_race_tc*`, six jobs), **T26** (`t26_*`, eight jobs) and **T27**
+   (`t27_leak_n144_*`, five jobs). On AWS Batch: **T24** (`t24_lam*_n*`, 28 jobs), submitted by the new
+   push-triggered workflow `.github/workflows/run_queue.yml` from the manifest `cloud/queue/2026-09-24_t24.txt`
+   when that commit was pushed; check the Actions tab for the run and the results bucket for the CSVs, then
+   download, check and commit them as T23's were. A finished local job has a `.csv` and no `.partial`. Never
+   commit a result a live job is still writing. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
+   `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O45 onward), the
+   pre-registration section, and the programme page. **The owner's predictions in T25 to T27 are inferred from
+   her stated positions** (PREREGISTRATION says so in each); ask her to confirm or replace them before any
+   verdict is quoted as hers. `results/explore_c_fastboth.csv` is the other session's untracked result: not ours
+   to commit. T23 is done and read (O44). American spelling in everything written from tonight on (her request).
    **Gate C has FAILED (ASSUMPTIONS O43):** the six-link code does not reproduce [T22] Fig. 3 at the unscaled
    couplings or at couplings × N^(1/3), and the shapes differ. By rule 2 the six-link (D = 3) track is stopped:
    no D = 3 result, including O41's window, is quoted or interpreted until it is resolved. **Exploratory (O45):** a
@@ -108,6 +118,9 @@ number is carried into a claim about gravity.
 
 ## 4. Waiting on Emily
 
+0. **Confirm or replace the inferred predictions** in PREREGISTRATION T25, T26 and T27 (FREEZES IN; RE-CURLS;
+   FOLDS BEFORE IT FLATTENS), written from her positions of 24 September. And decide whether to send any of the
+   per-paper letters proposed in `docs/papers/series_plan.md` ("Who to ask"), none of which is drafted or sent.
 1. Whether to send the reply to Carlo (and the PDF), and when to submit to arXiv.
 2. The allotrope of [T25] Fig. 9: the reply asks for its adjacency list. **Do not build it from the drawing:**
    every coloured face looks four-sided, which does not fit the caption. Exact and ready once the graph exists:
@@ -118,9 +131,12 @@ number is carried into a claim about gravity.
 
 ## 5. Natural next lines (pre-register before running)
 
+0. **Read tonight's four tests** when they land (section 0, item 2), then bring the programme page (both files and
+   the artifact), `series_plan.md`, and the paper drafts `docs/papers/relic/` and `docs/papers/fertile_window/`
+   into line with the verdicts. Paper 4 (the black-hole piece) is not drafted; T26 and T27 are its first results.
 1. Gate C: failed (O43). Report P2 when it lands, and put the narrow question to the model's author before any
    more six-link work.
-2. T23: read (O44). Piece 2 is still not green by the letter; a repair of the energy gate needs a new pre-registration, if Emily wants one.
+2. T23: read (O44). Piece 2 is being settled by T24 (running), whose gate 3′ was fixed before the run.
 3. The allotrope, once the graph arrives: stuck or not at λ = 1, its barrier, its lifetime against size.
 4. If not yet done: a cloud result checked bit for bit against the same config run on the laptop.
 5. The scrap race (does it freeze in as the box cools?), and the local-spark protocol (TASKS T14).
@@ -169,5 +185,5 @@ number is carried into a claim about gravity.
 `ASSUMPTIONS.md` (Q1–Q21, O1–O41) · `REFERENCES.bib` · `docs/papers/` (paper 1, `series_plan.md`,
 `programme_draft.md`, `glossary.md`) · `docs/design/` · `docs/parked/` · `docs/public/` · `docs/figures/` ·
 `scripts/analyse_*.py` with tests in `tests/` · `terraform/`, `Dockerfile`, `.github/workflows/` ·
-`src/graphity/` (`cqg.py`, `cqg_d.py` for any D, `sealed.py`, `tempering.py`, `symmetry.py`,
-`interchangeable.py`, `connectivity.py`, `small_graphs.py`).
+`src/graphity/` (`cqg.py`, `cqg_d.py` for any D, `sealed.py` (now with per-vertex stores and stream carry-on), `spark.py` (the local spark, Q22), `tempering.py`, `symmetry.py`,
+`interchangeable.py`, `connectivity.py`, `small_graphs.py`) · `cloud/queue/` (push-triggered Batch manifests).

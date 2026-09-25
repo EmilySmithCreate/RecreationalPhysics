@@ -202,3 +202,49 @@ g = 1.5, since T10's leftovers stayed in place over 30,000 sweeps in a cold box;
 As `docs/design/quantum_loop_design.md` rung 1: at N = 16 and 18, the interchangeable-ensemble probability of
 each class (exact, from the counts) against the chain's long-run time-fraction with the renaming correction
 applied per recorded configuration. Prediction (validation, not physics): agreement within sampling error.
+
+---
+
+## Night of 24 September 2026: what was launched, and who to ask, per paper
+
+Written at the owner's request to move the programme's pieces to measured status, with the predictions inferred
+from her stated positions (marked so in `PREREGISTRATION.md` until she confirms them). American spelling from
+here on, at her request.
+
+### Launched tonight (all pre-registered first)
+
+| Test | Paper | Piece | What it settles | Where it runs |
+|---|---|---|---|---|
+| T24 | 1 (and the programme's piece 2) | 2 | The λ map with the energy check read from each decay's saved wiring, so a thermal excitation cannot fail a cell | AWS Batch, 28 jobs, via the new push-triggered queue |
+| T25 | 2 | 6 | The scrap race: does the leftover freeze in when the box cools faster than it heals | laptop, 6 jobs |
+| T26 | 4 | 8 | The local spark: energy in one vertex's store, or disorder in one patch, in a cold sealed sheet; named and interchangeable points | laptop, 8 jobs |
+| T27 | 4 | 8 | T21's melt with its energy draining at four leak rates: does it fold before it flattens | laptop, 5 jobs |
+
+### Who to ask, with what data (public names, public questions; the private correspondence stays in `docs/outreach/`)
+
+The owner's rules apply (memory, 23 September): one narrow question the recipient can answer, a bias toward
+UVA so a coffee is possible, the AI disclosure sentence, and a check of the recipient's 2024 to 2026 papers
+before the letter is drafted. Nothing below has been sent; each is a candidate with the question and the data
+that would go with it.
+
+| Paper | Candidate | The question, in one line | The data to attach |
+|---|---|---|---|
+| 1, curled torus | Marija Vucelja (UVA Physics; physics of sampling, Metropolis dynamics on graphs) | For a single-move barrier under a local switch chain, is a transmission coefficient near 0.6 that does not change with the barrier height what she would expect, and is there a standard way to estimate it from the move set? | T22's table (O39): first exit on time in all six cells, κ = 0.56 to 0.68 from λ = 1.05 to 1.25 |
+| 2, the relic | Carlo Trugenberger (the model's author; he named the lifetime of allotropes as his question) | How long does a stuck region last at λ = 1, and does a cooling schedule freeze it in? He asked the first half; T19 and T25 answer it for the relic at λ > 1 | T19's annealing times (O35) and T25's freeze-out time, once read; the allotrope's adjacency list is already requested (his reply pending) |
+| 3, the fertile window | Diana Vaman (UVA Physics; composite and emergent gravity) | The λ deformation is the published curvature plus a penalty on a third square per edge: is there a continuum counterpart to adding such a local term to a discrete Einstein–Hilbert action, and what would it do at large scale? | The exact edge-by-edge form H = 4 Σ_e [(2 − S_e) + λ (S_e − 2)₊], the dimension ladder (O41), and T18's room-against-λ (O34) |
+| 4, the black-hole piece | Kent Yagi (UVA Physics; with Brustein and Medved treated the black-hole interior as a different state of matter) | If a collapsed region were an ordered re-curled arrangement rather than a random one, which observable in ringdown or tidal response would notice the difference? | T26 and T27's verdict (fold, melt, or heal), once read; O20 and T21 as the spread-energy baseline |
+| 5, curve-first gravity | Diana Vaman, or Adam Solomon (UVA; modified gravity, Love numbers) | Held until the three-dimensional model passes its reproduction gate; no 2D number is carried into a claim about gravity (the owner's decision) | O22 (no energetic force at a distance, exact) and O32 (no counting pull at fixed wiring) as the negative baseline |
+| 6, quantum from counting | Samson Abramsky (UCL) or Rui Soares Barbosa (INL) for the argument; Trey Boone (UVA Philosophy) for its form | Is the argument of rung 3a sound as stated: that a renaming of a fixed arrangement fixes or swaps each loop's pairs at once and so is a noncontextual instruction set? | PREREGISTRATION T15 rung 3a and O29; the exact renaming counts of Q15 and O28 |
+| companion, six links (piece 11) | Carlo Trugenberger | [T22] Fig. 3's protocol, its Boltzmann weight and whether its graphs are bipartite (held for his next reply; one question at a time) | O43: our curve under both readings of the axis, and the shapes |
+| piece 12, the allotrope | Eryk Kopczyński (drew [T25] Fig. 9; RogueViz) | The adjacency list of the drawn allotrope | The exact statement that if no edge carries three squares the local term vanishes and its stability does not depend on λ |
+
+### Status of each paper after tonight's launches
+
+- **Paper 1:** drafted; T24 will replace T23 in section V if it reads clean, and the memoryless claim then rests on
+  a run whose gates were all fixed before it ran.
+- **Paper 2:** T10, T11, T17, T19 on the record; T25 running. Drafted tonight (`docs/papers/relic/paper.tex`) with
+  T25's section left as the pre-registered question.
+- **Paper 3:** T8, T18, T22, T23 on the record; O41 exact. Drafted tonight (`docs/papers/fertile_window/paper.tex`).
+- **Paper 4:** O20, T21 on the record; T26 and T27 running. Not drafted: its first result is tonight's.
+- **Paper 5:** waits on the six-link gate. **Paper 6:** waits on the owner's decision about a rule for canceling
+  versions. **Paper 7:** the programme page, kept current.

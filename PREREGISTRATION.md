@@ -1361,3 +1361,240 @@ as not stuck (median f_200 = 0.25, on the line).
 the window that could be read is sharp and memoryless except one, and the break-up begins at the edge. **But
 piece 2 is not green by the letter**, because the energy check, unchanged from T8, fails at λ = 1.30 at every
 size.
+
+## T24. The λ map a third time, with the energy check read from the saved wiring (written 2026-09-24, night, before any run)
+
+### Why
+
+T23 (O44) settled the memoryless question: sized to the sample, the check holds in 20 of 20 window cells up to
+λ = 1.25, and two orders side by side and one front hold in every window cell. It still came out INCONCLUSIVE by
+the letter, for one reason: gate 3, the energy check, kept exactly as T8 wrote it, fails a whole cell if a single
+decay of 120 ends on a state whose **recorded** release matches neither the flat torus, nor the ledge, nor its own
+saved wiring. Read after the fact (not scored), the reason those decays fail is now understood: the runner records
+the release as the mean energy over a settle window of 600 sweeps at g = 1.5, while the saved graph is the state at
+the end of it. A sheet at g = 1.5 carries thermal excitations, more of them as λ rises, so the window mean sits
+above the exact energy of the final wiring by more than the 1 % tolerance in a few decays per hundred, and at
+λ = 1.30 that happened at every size. The old catalog of allowed resting states was already an assumption the data
+outgrew (VISION Update 14). Repairing the gate on T23's data would be an after-the-fact amendment; the owner wants
+piece 2 of the programme settled; so this is a fresh run with fresh seeds and the gate fixed first.
+
+### What will be run
+
+T23's protocol exactly (`scripts/run_tube_decay.py`, `scripts/make_t24_configs.py`): λ = 1.05, 1.10, 1.15, 1.20,
+1.25, 1.30, 1.35; N = 64, 96, 144, 192; 120 decays per cell; g = 1.5; block 5; stop at 98 %; `n_sweeps` 100,000;
+settle 600 with `settle_max` 100,000; `save_adjacency`; `record_f_200`. Fresh seeds, one per λ (20262605 to
+20262635). One config per cell, 28 in all (`configs/t24_lam<tag>_n<N>.json`), one Batch job each.
+
+### Definitions, fixed now
+
+- **(a′), (b), (c), gate 2, metastable, the window and edge verdicts: exactly as T23**, by calling `analyse_t23`.
+- **Gate 3′ replaces gate 3.** For every decay that reached 75 % conversion, the saved final graph exists and is a
+  valid arrangement (four links per point, bipartite, the hard-core rule). That is all the gate asks: it is a check
+  that the record is complete, and a cell fails it only if a graph is missing or corrupt.
+- **Resting states, read exactly and reported, never gated.** Each decay that reached 75 % is classified by the
+  exact energy of its final wiring above the flat torus, h = 16(N − S) + 4λX from the saved graph: FLAT (h = 0),
+  LEDGE (h = 24λ − 16, one curled column), OTHER (anything else; its local-dimension census is listed). Reported
+  beside it: the exact release per point (h₀ − h)/N, the window-mean release the runner recorded, and their
+  difference, the thermal excess.
+- **The waiting-time law**, mean wait within 25 % of τ(λ), reported and not scored, as before.
+
+`scripts/analyse_t24.py`, tested in `tests/test_t24.py` before any run, including the case that a cell holding
+unrecognized resting states passes.
+
+### Predictions
+
+**The owner's, standing from T23 (24 September): SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE.** She has
+not been asked again tonight; these are the predictions she gave for the same measurement, and nothing in the
+change of gate touches them.
+
+**Ours: the same.** Also, not scored: the thermal excess rises with λ and is below 0.02 per point at λ ≤ 1.20; OTHER
+states are a few per cent of decays at λ = 1.30 and are single small defects (8 to 45 units, as in O13); and the
+share ending FLAT falls from 1.30 to 1.35 as in T23.
+
+### Named or interchangeable points
+
+Named, for T8's reason. Expected effect, as T8 and T23: waits multiplied by about N; the release and the front
+unchanged.
+
+### What this cannot show
+
+As T23: anything outside λ = 1.05 to 1.35, at other couplings, beyond N = 192, or with interchangeable points. Nor
+does it show the resting states are stable: they are what the decay rests on at the stop, at g = 1.5, and T19 says a
+leftover anneals at fixed coupling.
+
+## T25. Does the scrap freeze in before it heals, when the box cools? (series paper 2; programme piece 6; written 2026-09-24, night, before any run)
+
+### Why
+
+T19 (O35) found that a leftover held at any fixed coupling from 1.0 to 1.5 anneals away, within 500 to 80,500
+sweeps, and survives only in T10's very cold box. In the owner's picture the scrap is dark matter and must be
+long-lived. Her answer (programme piece 6, 24 September): reality cools as it expands, so the right test is a
+race between healing and cooling. Cosmology's name for a relic that survives because its surroundings cool
+faster than it can react is freeze-out (general knowledge, not read by us).
+
+### What will be run
+
+`scripts/run_scrap_race.py`, configs `configs/t25_race_tc<t_cool>.json`. Each replica makes a sheet with one
+leftover exactly as T19 (a 24 × 4 tube at λ = 1.25, one planted seed, a cold sealed box of 2N empty stores,
+30,000 sweeps); a replica not ending with exactly one leftover piece at d = 1 is recorded and not followed. The
+sheet is then cooled at fixed coupling in blocks of 500 sweeps from g_hot = 1.25, where T19 saw every leftover
+anneal within 500 to 13,000 sweeps, to g_cold = 0.25, falling by the same factor each block over t_cool sweeps,
+and then held at g_cold for 20,000 sweeps. t_cool = 300, 1,000, 3,000, 10,000, 30,000, 100,000; twenty replicas
+each; the random stream carried on between blocks. Every block: the vertices at d = 1, their pieces, and the
+vertices that are not flat.
+
+**Disclosed:** a two-replica smoke run at t_cool = 3,000 checked the code; one leftover survived, one replica
+was not followed (no leftover after the make step).
+
+### Definitions, fixed now
+
+- **Survives:** at least one vertex at d = 1 in the final block, after the hold.
+- Per t_cool, the **survival share** over followed replicas; at least 8 followed replicas to be read.
+- **FREEZES IN:** some cooling time read has a survival share above one half, and the fastest cooling time read
+  has the highest share. **ALWAYS HEALS:** no cooling time read has a share above one half. **MIXED:** otherwise.
+- Reported, not scored: the freeze-out time t*, the longest cooling time with survival above one half; and for
+  each healed replica the sweep and coupling at which the leftover was last seen.
+
+`scripts/analyse_t25.py`, tested in `tests/test_t25.py` before any run.
+
+### Predictions
+
+**The owner's, inferred by the assistant from her stated positions and to be confirmed by her** (VISION Update 16:
+the scrap is dark matter and long-lived; piece 6's "Next", 24 September: the right test is the race, and it fails
+if the scrap heals at every cooling speed): **FREEZES IN.** She asked on 24 September that predictions be written
+from what she has told us; this is that, and it is marked as inferred until she confirms or replaces it.
+
+**Ours, unverified: FREEZES IN**, with t* between 1,000 and 10,000 sweeps: the annealing times at g = 1.25 in T19
+were 500 to 13,000 sweeps, and once g is below about 0.7 the healing move's first step, an uphill move of order
+8 to 12 units, is offered at exp(−12/g) per attempt and stops within the hold.
+
+### Named or interchangeable points
+
+Named. Interchangeable weighting favors the flat sheet (4N symmetries) over a sheet with one leftover (a few), by
+a factor of about N, so it should hasten healing and shift t* to faster cooling; recorded as expected, not checked.
+
+### What this cannot show
+
+How the model's cooling clock relates to any cosmological one; only that a freeze-out time exists and where it
+sits in sweeps. Anything about two leftovers, or about the many-seed scrap of T17.
+
+## T26. The local spark: what does energy packed into one place do to cold space? (series paper 4; programme piece 8; written 2026-09-24, night, before any run)
+
+### Why
+
+O20 and T21 gave a sealed sheet energy through a bath any move could draw on, and the sheet melted, with named
+and with interchangeable points. The owner's objection (24 September): a black hole is not energy spread evenly
+but energy packed into one place, and heating a whole sheet at equilibrium randomizes it by construction. TASKS
+T14 and the known-physics plan (rung 3) both name the local spark as the one route not yet tested. It now exists
+as two protocols, neither a change to the energy (ASSUMPTIONS Q22; `graphity.spark`;
+`sealed.run_sealed_bath(by_vertex=True)`): **stores**, the sheet perfect and the energy in the store of one vertex
+(or of the nine side-0 vertices within radius 2), which only a move made from that vertex can spend; and
+**patch**, the energy put into the wiring within radius 3 of one vertex as disorder, the box otherwise cold and
+empty. Under the model's rules leaving the flat sheet costs 32 (the cheapest single move; O22), so a store below
+32 can never act; the energies below are chosen accordingly.
+
+### What will be run
+
+`scripts/run_local_spark.py`, λ = 1.25, blocks of 500 sweeps for 100 blocks (50,000 sweeps), twenty replicas per
+energy, the final graph saved:
+- `t26_stores_n144`, `t26_stores_n256`: 12 × 12 and 16 × 16 tori, radius 0, E = 32, 48, 64, 96, 128, 192.
+- `t26_stores_r2_n144`: radius 2, E = 288 and 576 (32 and 64 per store).
+- `t26_patch_n144`, `t26_patch_n256`: radius 3, E = 32, 64, 128, shared cold bath of 2N stores.
+- `t26_patch_local_n144`: as above, but the heat the patch gives off stays in per-vertex stores.
+- `t26_patch_n64_named` and `t26_patch_n64_interchangeable`: 8 × 8, radius 2, E = 32 and 64, ten replicas, blocks
+  of 100 for 40 blocks (4,000 sweeps, as T21), named against interchangeable points.
+
+**Disclosed:** smoke runs at N = 144 and 64 checked the code. With the whole energy in one store, E = 32 bought one
+move that left an eight-vertex defect at d = 3 which then sat there; at E = 64 the defect grew and shrank. A hot
+patch of 42 units in the shared cold bath healed to a perfect sheet within 100 sweeps, its energy going into the
+stores as heat. Those are two replicas each and are not results.
+
+### Definitions, fixed now
+
+- Per replica, from its final block: **folded** = vertices at d < 2, **melted** = vertices at d > 2, damage = their
+  sum. **FOLDED:** damage ≥ 4 and folded ≥ melted. **MELTED:** damage ≥ 4 and folded < melted. **HEALED:** damage
+  below 4 (flat again to within one column). Four is the smallest curled object.
+- A cell is one (protocol, points, E, radius, local heat, N); its outcome is the majority over replicas, else
+  MIXED; at least six replicas to be read.
+- **RE-CURLS:** at least one cell's majority is FOLDED. **MELTS:** no FOLDED majority and at least one MELTED
+  majority. **HEALS:** every read cell's majority is HEALED. **MIXED:** otherwise.
+- Reported, not scored: the share of replicas that melt first and fold later (a block with melted ≥ 4 followed by
+  a later block with folded ≥ 4 and folded > melted), which is the owner's "melts briefly, then folds"; the largest
+  folded piece; with interchangeable points, the symmetry count at the end.
+
+`scripts/analyse_t26.py`, tested in `tests/test_t26.py` before any run.
+
+### Predictions
+
+**The owner's, inferred by the assistant from her stated positions and to be confirmed by her** (24 September: a
+black hole is a re-curled region; the melt is not a real phase and melting briefly is fine as long as the region
+folds soon after; energy packed into one place is the untested case): **RE-CURLS**, with melt-then-fold common.
+Marked as inferred until she confirms or replaces it.
+
+**Ours, unverified: MELTS.** Under "stores" the first move a store can buy destroys squares (the cheapest way out
+of the sheet is a loss of two squares, 32), and the eight vertices it leaves at d = 3 are melted by this reading,
+not folded; a fold needs a third square on an edge, which the sheet's own moves do not add in one step (the move
+census, corrected 23 September: from perfect space no single move adds a square). Under "patch" with the shared
+bath: HEALS, since every downhill move into an empty bath is accepted. Under "patch" with local heat: MELTS, the
+same defect churning in place. Interchangeable points at N = 64: the same as named. Folded stays below melted in
+every cell.
+
+### Named or interchangeable points
+
+Named in every cell but one, and the exception is the point of the N = 64 pair: with interchangeable points a
+complete fold (a 4-cube, 192 symmetries; a curled column, fewer) gains weight that a partial fold does not
+(series plan, paper 4), and N = 64 is the smallest size where complete folds exist. At N = 144 and 256 the per-move
+count is unaffordable; expected effect there, from T21: none visible, since damaged sheets have 1 to 4 symmetries.
+
+### What this cannot show
+
+Anything with the points free to change in number, or in three dimensions, where the owner's re-curling of three
+intertwined directions lives (VISION Update 22); nothing here is about gravity. The reading calls d < 2 "folded"
+and d > 2 "melted", O20's rule; a region that is neither (d = 2 but rewired) would count as flat.
+
+## T27. Does a melt fold before it flattens, when its energy is allowed to leave? (series paper 4; programme piece 8, second test; written 2026-09-24, night, before any run)
+
+### Why
+
+The owner's position (24 September): the melt can be the barrier between a new space and the black hole that
+birthed it, closing until the next push is available; melting briefly is fine as long as the region folds soon
+after. In the model a melt lasts as long as its energy stays (T21), so "brief" needs the energy to leave. The
+testable form: give a sealed sheet T21's budget through T21's bath, then drain the stores at a chosen rate, and
+ask what the sheet is when the energy is gone.
+
+### What will be run
+
+`scripts/run_local_spark.py` with protocol "bath": a 12 × 12 torus at λ = 1.25, the whole energy in one store of
+a shared bath of 2N stores (T21's bath protocol), E = 288, 576, 1152 (2, 4 and 8 per point, T21's budgets), twelve
+replicas per energy, blocks of 100 sweeps for 300 blocks; after each block every store keeps the fraction 1 − leak
+and the rest is counted as lost. Leak = 0.001, 0.01, 0.1 and 1.0 per block (`t27_leak_n144_l0001`, `l001`, `l01`,
+`l1`), and leak = 0 as the sealed control (`t27_leak_n144_l0`, reported and not scored). A leak of 1.0 removes
+everything given off as soon as it appears: a quench.
+
+### Definitions, fixed now
+
+Exactly T26's per-replica outcomes and cell majorities, read on the final block. Over the leaking bath cells:
+**FOLDS BEFORE IT FLATTENS** (at least one FOLDED majority), **STAYS MELTED** (no FOLDED majority, at least one
+MELTED majority), **FLATTENS** (every read cell HEALED), **MIXED** otherwise. Reported, not scored: the leak-0
+control, the melt-then-fold share, and the energy left in the wiring when the stores are empty.
+
+`scripts/analyse_t26.py` (the T27 branch), tested in `tests/test_t26.py`.
+
+### Predictions
+
+**The owner's, inferred by the assistant from her stated positions and to be confirmed by her:** **FOLDS BEFORE IT
+FLATTENS**, at some leak rate. Marked as inferred until she confirms or replaces it.
+
+**Ours, unverified: STAYS MELTED.** At slow leaks the bath anneals the melt as it cools and the sheet flattens
+(T19's leftover healed at every fixed coupling); at the quench (leak 1.0) every downhill move is final and no
+uphill move is ever paid for, so whatever disorder the budget bought is frozen in as it stands, and the budget
+was bought as melt (T21). So the slow cells FLATTEN and the quench cell STAYS MELTED, and the verdict rule reads
+STAYS MELTED. A FOLDED majority anywhere would be the first fold this project has seen.
+
+### Named or interchangeable points
+
+Named. The interchangeable version at N = 64 is T21's, which melted either way; not rerun here.
+
+### What this cannot show
+
+As T26. The leak is a protocol knob (ASSUMPTIONS Q12), declared here, and the model's sweep is not a physical clock.

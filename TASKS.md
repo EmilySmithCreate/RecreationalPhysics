@@ -4,7 +4,7 @@ Each task has an acceptance test. Do them in order; do not start a task whose pr
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).
 
-**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads. PREREGISTRATION **T12** (does the coarse law govern) and **T13** (the λ = 1 transition at N = 4p², after the author's reply) have no entries here either; T13 is the Gate B follow-up named under that gate. **Added 2026-09-24:** PREREGISTRATION **T16** (the correlation length of [KTB19] Fig. 9a, at the model author's request); **T8** is now written and running (the λ map along the tube, for paper 1's section V); **T17** = this page's T14 (leftover per seed); **T18** (room the new space needs, against λ); **T19** (does a leftover move, stay or anneal); **T21** (the black-hole piece: does a sealed sheet fold with interchangeable points); **T15 rung 1** (time-fractions against counts); **T22** (near λ = 1, do exits from the curled torus fall back? read 24 September: FALL-BACKS by the letter, first exit on time, κ = 0.56 to 0.68 at every λ). The series these serve is `docs/papers/series_plan.md`.
+**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads. PREREGISTRATION **T12** (does the coarse law govern) and **T13** (the λ = 1 transition at N = 4p², after the author's reply) have no entries here either; T13 is the Gate B follow-up named under that gate. **Added 2026-09-24:** PREREGISTRATION **T16** (the correlation length of [KTB19] Fig. 9a, at the model author's request); **T8** is now written and running (the λ map along the tube, for paper 1's section V); **T17** = this page's T14 (leftover per seed); **T18** (room the new space needs, against λ); **T19** (does a leftover move, stay or anneal); **T21** (the black-hole piece: does a sealed sheet fold with interchangeable points); **T15 rung 1** (time-fractions against counts); **T22** (near λ = 1, do exits from the curled torus fall back? read 24 September: FALL-BACKS by the letter, first exit on time, κ = 0.56 to 0.68 at every λ). **Added 2026-09-24, night:** PREREGISTRATION **T24** (the λ map a third time, with the energy check read from the saved wiring; piece 2), **T25** (does the scrap freeze in before it heals; piece 6), **T26** (the local spark, sealed; piece 8; = this page's T14 local-spark protocol, now built) and **T27** (does a melt fold before it flattens when its energy leaks; piece 8). The series these serve is `docs/papers/series_plan.md`.
 
 ## T1. Rectangular torus  ☑ (2026-09-19)
 
@@ -329,6 +329,27 @@ the prediction fails.** Six states of seven DISSOLVED (no mode above 0.25 of its
 threshold. The loop of four is not a resonator in this model; where anything resonates it is the cap, loop plus collar,
 in two states of seven, at other frequencies. The wave rule stays undecided; whether to redefine the object as the cap
 is the author's call and would be a new pre-registration.
+
+## T24 to T27. Four pre-registered runs launched on the night of 2026-09-24  ◑
+
+Written and committed before any run, at the owner's request to move the programme's pieces to measured status
+(`PREREGISTRATION.md` T24 to T27). Her predictions in T25 to T27 are **inferred by the assistant from her stated
+positions** and marked so until she confirms or replaces them; T24 keeps her T23 predictions.
+
+- **T24, piece 2.** T23's protocol with fresh seeds and gate 3′: the energy check reads each decay's saved final
+  wiring exactly and reports the resting states instead of failing a cell on an unrecognized one. Twenty-eight
+  Batch jobs, submitted by the new push-triggered workflow (`.github/workflows/run_queue.yml`, manifest
+  `cloud/queue/2026-09-24_t24.txt`). Read with `scripts/analyse_t24.py`.
+- **T25, piece 6.** The scrap race: T19's sheet with one leftover, cooled from g = 1.25 to 0.25 over 300 to 100,000
+  sweeps and held cold. `scripts/run_scrap_race.py`, six configs, run on the laptop. Read with `scripts/analyse_t25.py`.
+- **T26, piece 8.** The local spark (this page's T14 protocol, now built as ASSUMPTIONS Q22): energy in one vertex's
+  store, or disorder in one patch, in a cold sealed sheet at N = 64 to 256, named and interchangeable points.
+  `scripts/run_local_spark.py`, eight configs, run on the laptop. Read with `scripts/analyse_t26.py`.
+- **T27, piece 8.** T21's melt with its energy draining at four leak rates, and a sealed control.
+  `scripts/run_local_spark.py`, five configs, run on the laptop. Read with `scripts/analyse_t26.py`.
+
+Accept: each read under its pre-registered rules, the verdict recorded in ASSUMPTIONS and the programme, and
+the inferred predictions confirmed or replaced by the owner before any verdict is quoted as hers.
 
 ## Six links per point (D = 3)  ☐
 
