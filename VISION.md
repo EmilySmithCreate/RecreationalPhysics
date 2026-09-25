@@ -459,6 +459,17 @@ there is a factor, or a couple of constants, related to the interconnectedness o
 - **First tests, exact, before any run:** the walls and windows of the six- and eight-link ladders with the term, as
   functions of κ: does a κ exist at which the second wall falls below the first (a cascade) while flat space's own wall
   stays above the rungs? Then T30's and T33's protocols rerun with that κ, pre-registered with her claim about reality.
+- **The author's idea, the same afternoon (15:40 ET): the three directions as a triad, and the dark-to-ordinary ratio.**
+  Her words, put in order: there is about five times as much dark matter as ordinary matter; two times three is six, so
+  ordinary matter would be one part in six. Some aspect of the uncurling and the interconnectedness of the three
+  directions may set it: each direction is a little different, so they form a triad, like red, green and blue, that goes
+  together. The activation can come in and hit one of them, red; when red uncurls, the other two follow, and all three
+  uncurling makes the full burp. Some of what comes out is dark matter, which interacts differently with our kind of
+  energy and our kind of matter. *Ours, unverified:* this is the tie of this update with distinguishable directions (a
+  second kind of constant: the directions not all alike), and it makes a quantitative claim, that the burp's energy splits
+  between an ordinary part and a dark part in a ratio set by the triad. The measured ratio is about 5.4 (Planck 2018,
+  general knowledge, to verify), so exactly 5 (one part in six) is close but not it; a model should give the split from
+  its dynamics, not from a count chosen to reach six, and the test is to measure the split in the tied model.
 
 ## The target ("the spot")
 

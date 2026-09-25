@@ -36,6 +36,15 @@ Earlier predictions stay on the record as written.
    concentrated energy re-curling space (her mechanism). Now: every test melts (O20, T21, T26, T27, T34), and a melt is
    only thermal excitation (O66). Next: T42 (counting near λ = 1.02, running); if gravity is adopted, clumps of relics.
 
+## The owner's answers so far
+
+- **Target 1 (25 September, 15:33 ET):** the large directions go together; there should be a term, one or two constants,
+  for the interconnectedness of some number of the degrees of freedom; not all relationships are the same (VISION
+  Update 30, where the first form of the term is fixed).
+- **Targets 1 and 3 together (15:40 ET):** the three directions as a triad (red, green, blue), each a little different;
+  the push hits one, the other two follow, the three together make the full burp; part of what comes out is dark matter,
+  and the ratio of about five to one (one part in six) may come from the triad (VISION Update 30, the author's idea).
+
 ## Questions for the owner (answer by voice is fine)
 
 For each, in a sentence: how do you expect reality to work, and if the model does not show it, what is it missing?
