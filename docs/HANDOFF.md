@@ -17,10 +17,9 @@ git history.
    was fixed, commit 590f6ff): **T34** (two 512-point jobs left), **T37** (34 jobs, many natural seeds in long tubes,
    paper 2; `scripts/analyse_t37.py`), **T38** (48 jobs, the rare long wait, paper 1; `analyse_t38.py`), **T39** (15 jobs,
    the cascade window, six and eight links; `analyse_t39.py`; its eight-link cells are expected to stall, see O62), **T40**
-   (11 jobs, the push that starts the change in four directions; `analyse_t40.py`). The compute environment runs 16 jobs at
-   once (terraform `max_vcpus = 16`); the account's Fargate quota is 30, and raising the ceiling is an infrastructure change
-   the owner applies herself (the deploy workflow; the assistant's attempt to change it directly was refused by the
-   harness, rightly). **Downloading:** the project account's keys are in the git-ignored `.env`; the 25 September session's
+   (11 jobs, the push that starts the change in four directions; `analyse_t40.py`). The compute environment runs 30 jobs at
+   once since 25 September, 14:40 ET (raised with the owner's permission, matching terraform's `max_vcpus = 30`); 30 is the
+   account's Fargate quota, and going higher needs a quota request to AWS. **Downloading:** the project account's keys are in the git-ignored `.env`; the 25 September session's
    scratchpad scripts `download_results.ps1` and `check_and_copy.py` load them into their own process, sync the bucket and
    compare each set's recorded config with the committed one before copying into `results/`; `aws_jobs.ps1` counts jobs
    by status, read only. Never print or commit the keys. **Read each finished test with its analyzer** and record it in
