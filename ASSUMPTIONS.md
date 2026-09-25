@@ -1380,8 +1380,17 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   patch states: 2 of 20 forbidden (A = 4 with 2 odd; A = 2 with 1 odd). T26 N = 144 store states: 8 of 120 forbidden.
   *Ours, unverified:* the forbidden arrangements have a twofold symmetry that is a single-transposition-like renaming,
   which is what a pair of points with matching surroundings gives; the hard-core rule already forbids full twins, and
-  the exchange sign forbids the next thing to them. Not yet asked: the rule inside the chain at N = 16 and 18 against
-  exact averages; the anyonic form.
+  the exchange sign forbids the next thing to them.
+  **Addendum, the same afternoon: the exact averages at N = 16 and 18** (`scripts/exact_exchange_averages.py`, every class
+  of the complete enumeration of T4; tested in `tests/test_exchange_sign.py`). At N = 16, 1 of 5 classes is forbidden
+  (S = 22, X = 24, 16 renamings of which 8 odd). At N = 18, 4 of 26, and one of them is a ground-state arrangement: of
+  the three classes with S = 18 and X = 0 (the flat energy, no curling), the rule keeps the ones with 72 and 18
+  renamings and forbids the one with 12 (6 odd). The averages move by a few hundredths against the interchangeable
+  ones: at λ = 1, g = 1, φ 1.0781 → 1.0975 and the folded share 0.40 → 0.50; at λ = 1.25, g = 5, φ 1.0133 → 1.0174
+  and the folded share 0.145 → 0.137; nothing changes character. So the fermionic form is a mild selection rule at
+  these sizes: it prunes arrangements with a twofold symmetry of odd parity, including one of three flat ones, and does
+  not move the thermodynamics. Not yet asked: the anyonic form (a phase per swap), which is where cancellation, not
+  only pruning, would enter.
 
 ## Provenance
 
