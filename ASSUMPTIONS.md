@@ -1682,6 +1682,12 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   unverified:* one reading consistent with the owner's picture is a reservoir that supplies each direction its own push
   (her "remainder returned to the black hole, ready to start another burp"); another is a different, non-local form of
   the tie. Neither is tested.
+  **Addendum, 17:59 ET: the same budget-fitted shape across λ** (f scaled with a = 4(λ − 1)). The pushes, X's wall then
+  the one-open and two-open states' walls: λ = 1.10: 12.1, 25.2, 36.5; λ = 1.25: 6.2, 14.9, 19.4; λ = 1.40: 0.32, 4.2,
+  2.2 (X barely stuck, every push small, the last smaller than the second); λ = 1.50: all negative (nothing stuck).
+  So with this simplest tie the first push is never the largest; the owner's picture (red's push the largest, then less
+  and less, each of its own type of energy; VISION Update 30) is not what it gives. Typed energy is the ingredient her
+  picture adds, and is undecided.
 
 ## Provenance
 

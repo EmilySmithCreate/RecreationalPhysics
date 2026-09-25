@@ -522,6 +522,14 @@ there is a factor, or a couple of constants, related to the interconnectedness o
   is between matter and dark energy, with ordinary against dark matter a separate factor of about 5.4; and in the model the
   doubling that exists is in the walls, not the releases (eight links at λ = 1.25: 20, 40, 80 from rung to rung; O50),
   while each direction releases the same 4(λ − 1) per point.
+- **The author's answer, 17:59 ET: typed energy.** Her words, put in order: the black hole could generate each of the
+  types of energy; the first direction goes, and the other two need less and less, but each of the same type of energy
+  it is made of. *Ours, unverified:* in the model this is a new ingredient, energy that carries a type: a store that can
+  pay only the moves that open its own direction, so ordinary energy opens red, dark-matter-type energy opens the second
+  direction, dark-energy-type the third, and what one direction releases cannot pay another's wall. Nothing in the model
+  has typed energy today (every store pays every move), so adopting it is a decision under S1, to be written before any
+  run. The exact scan below (O70, addendum) says what the simplest tie gives for the pushes; typed stores are the
+  ingredient that would let each push be supplied separately.
 
 ## The target ("the spot")
 
