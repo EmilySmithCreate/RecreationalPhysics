@@ -166,13 +166,13 @@ window of the partly curled states. And flat space's own wall, the cheapest move
 64 and 128 with two, three and four directions, the same at every $\lambda$, so a bath hot enough to pay the later
 rungs of a four-direction change need not melt the flat state, where in two dimensions it does.
 
-\begin{table}[b]
+\begin{table*}[t]
 \caption{The cheapest single move out of each curled state, exact, with its $\lambda$ window (wall $> 0$) and its
 cost at $\lambda = 1.25$; and what the sealed runs found. Six-link tori are $4 \times 4 \times L$ with $L \ge 18$
 and $4 \times L \times L'$; eight-link tori at $N = 2304$.}
 \label{tab:dmap}
 \begin{ruledtabular}
-\begin{tabular}{llccl}
+\begin{tabular}{llccp{8.2cm}}
 links & curled & window & wall at 1.25 & sealed, given the wall \\
 \hline
 4 & one (the tube) & $1 < \lambda < 2$ & 12 & opens as one front; fixed wall 48 to 192 vertices \\
@@ -181,12 +181,12 @@ links & curled & window & wall at 1.25 & sealed, given the wall \\
 6 & two & $1 < \lambda < 1.5$ & 16 & first direction fully open in 28 of 84, partly in most others; second never; fixed wall 192 to 512 \\
 6 & all three (gas of 6-cubes) & $1 < \lambda < 1.2$ & downhill & at 1.10: joins and opens two of three in 21 of 24, no rest between \\
 8 & one & $1 < \lambda < 2.5$ & 80 & not run \\
-8 & two & $1 < \lambda < 1.67$ & 40 & not run \\
-8 & three & $1 < \lambda < 1.43$ & 20 & running \\
-8 & all four (gas of 8-cubes) & $1 < \lambda < 1.25$ & downhill & running at 1.10 \\
+8 & two & $1 < \lambda < 1.67$ & 40 & running (T39) \\
+8 & three & $1 < \lambda < 1.43$ & 20 & one move, then a stall at every bath: the push equal to the first move is not enough (T33) \\
+8 & all four (gas of 8-cubes) & $1 < \lambda < 1.25$ & downhill & at 1.10: one move, then a stall (T33) \\
 \end{tabular}
 \end{ruledtabular}
-\end{table}
+\end{table*}
 
 Two of the six-link entries are measured, each pre-registered with the author's prediction. The push that starts the
 change from the two-curled torus is exactly 16 at every size from 192 to 512 vertices, nothing below it ever starting
@@ -232,11 +232,11 @@ What this cannot show: anything at exactly $\lambda = 1$, where nothing is relea
 than $g = 1.5$; anything with the points treated as interchangeable, where the wait is expected to grow by a
 factor of order $N$ while the release and the front are unchanged; and anything about the real universe.
 
-\section*{Acknowledgments}
-
+\begin{acknowledgments}
 Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
 checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
 pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+\end{acknowledgments}
 
 \begin{thebibliography}{9}
 \bibitem{paper1} E. Smith, The curled torus burps: front-driven decompactification between ordered states in a

@@ -154,13 +154,23 @@ $\lambda = 1.10$).
 
 \section{Eight links: the pattern test}
 
-\emph{Pre-registered as T33; running as this draft is written.} With eight links the author's two variants can be told
+\emph{Pre-registered as T33.} With eight links the author's two variants can be told
 apart: four directions tied (all open together), or a singleton beside three tied ones (one opens alone, then three
 together); ours, one at a time. At $N = 2304$ every rung exists. Two starts, sealed, given exactly their wall: a
 $4 \times 4 \times 4 \times 36$ torus at $\lambda = 1.25$ (spark 20) with $C = 2N$, $N/2$, $N/4$ and $N/8$, and a gas
 of nine 8-cubes at $\lambda = 1.10$ (spark 20, the wall being 19.2) with $C = 2N$ and $N/4$; six replicas each,
 50,000 sweeps. The pattern is read from the sequence of majority rungs (the $d$ held by more than half the vertices)
-and the rests on them. This section will report what was measured.
+and the rests on them.
+
+Every replica stalled. From both starts and at every bath size, the spark bought exactly one move: the energy rose
+by that move's cost (from 3.000 to 3.009 per vertex from the torus, from 1.600 to 1.608 from the gas), the bath was
+left at zero, and nothing changed again in 50{,}000 sweeps, so no move out of the state one move away is downhill.
+The verdict by the letter is NO CASCADE from both starts, and neither the author's tied pattern nor our one at a time
+was tested, because nothing opened. What the run does establish is a difference between the number of directions: with
+four links the push equal to the cheapest first move (12) is exactly the push that starts the change, and with six
+links at $\lambda = 1.25$ it starts the first direction in a third of the runs, but with eight links the change needs
+more than its first move; its activation is the height of a pass several moves high. A scan of the push from 20 to
+160 (T40, pre-registered) is the test that finds it and then reads the pattern.
 
 \section{The reproduction gate}
 \label{sec:gate}
@@ -195,11 +205,11 @@ says plainly; the eight-link test will say whether a singleton-then-three patter
 the six-link result, appears from the fully curled start. What would carry the question further is a term that
 couples the directions, which would be a new knob and needs its own decision before any run.
 
-\section*{Acknowledgments}
-
+\begin{acknowledgments}
 Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
 checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
 pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+\end{acknowledgments}
 
 \begin{thebibliography}{9}
 \bibitem{paper1} E. Smith, The curled torus burps: front-driven decompactification between ordered states in a
@@ -208,7 +218,7 @@ graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_toru
 \bibitem{T22} C. A. Trugenberger, Emergent time, cosmological constant and boundary dimension at infinity in
 combinatorial quantum gravity, JHEP 04, 019 (2022); arXiv:2112.03778.
 \bibitem{repo} \url{https://github.com/EmilySmithCreate/RecreationalPhysics}: VISION Updates 22 to 26;
-PREREGISTRATION T30, T32, T33, Gate C′; ASSUMPTIONS Q21, O41, O43, O46, O49, O50, O53, O54.
+PREREGISTRATION T30, T32, T33, Gate C$'$; ASSUMPTIONS Q21, O41, O43, O46, O49, O50, O53, O54.
 \end{thebibliography}
 
 \end{document}
