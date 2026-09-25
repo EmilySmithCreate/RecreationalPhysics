@@ -393,7 +393,7 @@ means pre-registered and on the Batch queue.
 25 September about 140 jobs were queued (T37 to T42), roughly 150 CPU-hours, about $7. To use the budget the owner named
 (at least $20 a day), the ceiling must rise: `terraform/batch.tf` `max_vcpus` from 16 to 30 and the deploy workflow run
 (`deploy_manual`, "deploy"); that is hers to apply. Above 30 needs a quota request to AWS.
-*Done 25 September, 14:40 ET, with the owner's permission:* the live ceiling was raised to 30 through the AWS CLI, matching
+*Done 25 September, about 14:50 ET, with the owner's permission:* the live ceiling was raised to 30 through the AWS CLI, matching
 the committed terraform (so a later deploy changes nothing).
 
 **Decisions waiting on her, in order of what they unblock:** (1) the gravity rule (option A of the gravity brief:
