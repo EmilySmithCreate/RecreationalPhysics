@@ -1607,6 +1607,28 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   behind, which together with O58 (none among one- and two-switch constructions) makes the six-link relic, if it exists,
   something that only a curled region's opening can leave (T30, T39 and T41 end states are the next place to look).
 
+- **O67 Exact, at λ = 1 (CQG): the smallest allotrope, built as a finite graph, is held by no energy barrier.**
+  (2026-09-25; an assistant agent read [T25] Sec. VI.3 and Figs. 7 and 9 and [T24] Sec. V from the arXiv text and built
+  the objects; `scripts/build_planted_allotrope.py`, tested in `tests/test_planted_allotrope.py`; design note
+  `docs/design/planted_allotrope.md`, checked here. Status of the two readings it rests on: *Ours*.) (a) **What the
+  allotrope is**, from the figure: a background in which every point touches three squares and one hexagon (Fig. 7), and
+  a region, one hexagon, whose six corners touch two squares (Fig. 9, "only the smallest example"). A torus has only
+  square faces, so the background cannot sit on one (every point of a flat torus touches four squares); T36's torus
+  could not have held it. (b) **Built:** a finite Fig. 7 background of 240 points, every point touching exactly three
+  squares (H = 960, X = 0), from two permutations with the tiling's rules; the allotrope planted by cutting one hexagon
+  and joining opposite corners (the "fold": 18 points with Fig. 9's pattern, three smallest allotropes fused, N = 234,
+  H = 1008, 72 above the three-square line, each planted point costing exactly 4); a "handle" version (36 low points,
+  +144); and the same surgery on T36's 14 × 14 torus (24 points of the three-square type inside four-square space). A
+  lone smallest allotrope is allowed by counting only when N leaves 18 on division by 24; none was found. (c) **Walls,
+  exact, at λ = 1:** no switch out of the fold is downhill, but one zero-cost switch opens a downhill one (−16), and at
+  zero temperature its 18 low points are gone after 8 switches; the handle has downhill switches outright (−12); the
+  background is held the same thin way (zero-cost switches that open −16 ones). The same at 720 points. **So at λ = 1
+  energy alone does not hold his allotrope; if it lasts, entropy holds it**, which matches his words, a barrier in free
+  energy, and only a run at finite coupling can measure it. (d) **One point for the model's author:** the text of [T25]
+  Sec. VI.3 says the domain has a *higher* number of squares per vertex, while the Fig. 9 caption and [T24] Sec. V say
+  fewer (0 < s_i < s̄); the figure shows fewer. A lifetime test at finite coupling is designed in the note (not yet
+  pre-registered).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
