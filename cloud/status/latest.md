@@ -1,4 +1,4 @@
-# Batch queue and results bucket, as of 2026-09-25 12:09 UTC (commit 84fb102)
+# Batch queue and results bucket, as of 2026-09-25 14:44 UTC (commit d1bcaf0)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
@@ -8,8 +8,10 @@ until a person downloads, checks and commits them.
 - t33_gas_lam110_cn4-acaa0b2  created 09-25 03:13  started 09-25 03:55  stopped 
 - t33_three_lam125_c2n-acaa0b2  created 09-25 03:13  started 09-25 04:03  stopped 
 - t33_three_lam125_cn2-acaa0b2  created 09-25 03:13  started 09-25 04:20  stopped 
-- t33_three_lam125_cn4-acaa0b2  created 09-25 03:13  started 09-25 04:31  stopped 
-- t33_three_lam125_cn8-acaa0b2  created 09-25 03:13  started 09-25 04:33  stopped 
+- t34_packed_n216-61bbb5f  created 09-25 14:02  started 09-25 14:02  stopped 
+- t34_packed_n512-61bbb5f  created 09-25 14:02  started 09-25 14:03  stopped 
+- t34_spread_n216-61bbb5f  created 09-25 14:02  started 09-25 14:03  stopped 
+- t34_spread_n512-61bbb5f  created 09-25 14:02  started 09-25 14:03  stopped 
 
 ## RUNNABLE
 - none
@@ -98,6 +100,8 @@ until a person downloads, checks and commits them.
 - t32_wall_n288-0f6bb81  created 09-25 02:40  started 09-25 03:11  stopped 09-25 05:20
 - t32_wall_n384-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 05:37
 - t32_wall_n512-0f6bb81  created 09-25 02:40  started 09-25 03:37  stopped 09-25 07:13
+- t33_three_lam125_cn4-acaa0b2  created 09-25 03:13  started 09-25 04:31  stopped 09-25 13:19
+- t33_three_lam125_cn8-acaa0b2  created 09-25 03:13  started 09-25 04:33  stopped 09-25 13:34
 
 ## FAILED
 - none
@@ -177,5 +181,7 @@ until a person downloads, checks and commits them.
 - t32_wall_n288/t32_wall_n288.csv  (2026-09-25 05:20:17, 268376 bytes)
 - t32_wall_n384/t32_wall_n384.csv  (2026-09-25 05:36:58, 265960 bytes)
 - t32_wall_n512/t32_wall_n512.csv  (2026-09-25 07:13:20, 255620 bytes)
+- t33_three_lam125_cn4/t33_three_lam125_cn4.csv  (2026-09-25 13:19:08, 126892 bytes)
+- t33_three_lam125_cn8/t33_three_lam125_cn8.csv  (2026-09-25 13:34:06, 127374 bytes)
 
 ## scratch from runs that died (partial/)
