@@ -1234,6 +1234,32 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   3D check of the reading and a 2D width test at N = 2000, with the outcome pairs and what each means fixed
   before the runs. *Ours, unverified; nothing here is a reading of the gate.*
 
+- **O47 T25: the scrap freezes in when the box cools faster than it heals (FREEZES IN, t\* = 30,000 sweeps).** (2026-09-24,
+  night; PREREGISTRATION T25; `results/t25_race_tc*.csv`; `scripts/analyse_t25.py`.) A sheet with one leftover, made as
+  T19, cooled from g = 1.25 to 0.25 by equal factors per block over t_cool sweeps and held 20,000 at 0.25. Survival: 20 of
+  20, 17 of 17, 19 of 19 at t_cool = 300, 1,000, 3,000; 15 of 19 and 14 of 18 at 10,000 and 30,000; 7 of 19 at 100,000.
+  The fastest cooling keeps the most, and the longest cooling time with a majority surviving is 30,000 sweeps. **For the
+  owner's dark-matter picture:** the relic that anneals at any fixed temperature (O35) is kept by cooling, and even a slow
+  cooling keeps most of them, because the coupling leaves the range where healing is fast early in the schedule. The
+  prediction inferred for her (FREEZES IN) holds; ours put t\* between 1,000 and 10,000 and was too short.
+- **O48 T27: a melt whose energy leaks away never folds and never flattens at any leak rate (STAYS MELTED).** (2026-09-24,
+  night; PREREGISTRATION T27; `results/t27_leak_n144_*.csv`; `scripts/analyse_t26.py`.) T21's bath (the whole energy in one
+  store of 2N) at 2, 4 and 8 per point, drained by 0.001, 0.01, 0.1 and 1.0 per block of 100 sweeps, twelve replicas each,
+  and the sealed control: every one of the fifteen cells has a MELTED majority (57 of the 60 leaking replicas melted; the
+  largest folded piece anywhere 16 vertices). The quench (leak 1.0) freezes the disorder as it stands; the slow leaks do
+  not anneal it within 30,000 sweeps either. Ours (STAYS MELTED) held; the prediction inferred for the owner (FOLDS BEFORE
+  IT FLATTENS) fails. T26, the sealed local spark, has 21 of 22 cells read as this is written, every one MELTED, and is
+  read as a verdict when the last cell (256 points, per-vertex stores) lands.
+- **O49 The two-curled six-link torus with a long open side is stuck for now up to λ = 1.5, not 1.2: O41's window was the
+  short torus's.** (2026-09-25; brute force over every switch out of 4 × 4 × 18 and 4 × 4 × 32, every side-0 vertex being
+  equivalent; the pre-registration of T30.) The cheapest move out loses 6 squares and 16 surplus squares and costs
+  96 − 64λ (16 at λ = 1.25, 25.6 at 1.10), offered 3,456 ways at N = 288, about 5.3 times a sweep; the next costs
+  128 − 88λ (18 at 1.25). O41's move at 96 − 80λ (−6, −20) exists in the 4 × 4 × 6 torus and in the 6-cube, where a side of
+  6 or 4 closes it, and not when the open side is 18 or 32. So the two-curled state's window is 1 < λ < 1.5 on the tori T30
+  uses, the one-curled rung's wall is 96 − 48λ (36 at 1.25; re-checked on 4 × 6 × 6), and a gas of 6-cubes is stuck only
+  below 1.2 (wall 8 at λ = 1.10). O41's ladder energies are unchanged. **Read before quoting O41:** its windows are for the
+  tori it listed; walls depend on the open side's length when that side is short.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

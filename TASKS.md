@@ -367,6 +367,14 @@ the inferred predictions confirmed or replaced by the owner before any verdict i
 
 Accept: Gate C passed, and step 2's numbers checked against the kernel on the built states.
 
+**Decision, 2026-09-24, night (VISION Update 24):** the owner set rule 2 aside for this track; the six-link work proceeds
+while the reproduction (Gate C′) runs in parallel, and every six-link result carries the open-gate caveat. **Built and
+launched 2026-09-25:** `src/graphity/sealed_d.py` (the bath of stores at any D, draw for draw with `sealed.py` at four
+links), `dimension.local_dimension_d` (3, 2, 1, 0 on the ladder), `scripts/run_sealed_curled_d.py`, `scripts/analyse_t30.py`;
+PREREGISTRATION **T30** (does one push open both curled directions; the room; a gas of 6-cubes as the literal rule) and
+**T32** (is the activation fixed with size), 14 Batch jobs, with the owner's predictions. Exact before the runs (O49): the
+wall out of 4 × 4 × 18 and 4 × 4 × 32 is 96 − 64λ, so the two-curled state is stuck to λ = 1.5, not O41's 1.2.
+
 **Status, 2026-09-24.** Step 1 done by an assistant agent reading the arXiv text (ASSUMPTIONS Q21; the owner has not
 read those passages): 6 links, the same hard-core rule, flat from 4 squares per edge, at most 5, and energy
 H = 16(3N − S) + 4λX (ours, derived as Q1). Gate C's target is [T22] Fig. 3 (N = 500, full curvature), not

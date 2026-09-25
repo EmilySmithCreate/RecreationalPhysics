@@ -47,6 +47,47 @@ def local_dimension(adj):
     return d
 
 
+@njit(cache=True)
+def _share_d(adj, a, b, v):
+    """_share_a_neighbour_other_than at any number of links (the slots are read from the array)."""
+    deg = adj.shape[1]
+    for i in range(deg):
+        c = adj[a, i]
+        if c < 0 or c == v:
+            continue
+        for j in range(deg):
+            if adj[b, j] == c:
+                return True
+    return False
+
+
+@njit(cache=True)
+def local_dimension_d(adj):
+    """d[v] at any number of links: the edge pairs at v that close no square, counted over all pairs.
+
+    With four links this is local_dimension (tested). With six, on the cubic lattice, the twelve mixed-axis
+    pairs each close a square and the three opposite pairs (+x, -x) close one only along a direction curled
+    to length 4, so d is 3 on the flat 3-torus, 2 with one direction curled, 1 with two, 0 in the 6-cube
+    (VISION Update 22; ASSUMPTIONS O41). A slot holding -1 (an edge removed mid-move) is skipped.
+    """
+    n, deg = adj.shape
+    d = np.zeros(n, dtype=np.int64)
+    for v in range(n):
+        open_pairs = 0
+        for i in range(deg):
+            a = adj[v, i]
+            if a < 0:
+                continue
+            for j in range(i + 1, deg):
+                b = adj[v, j]
+                if b < 0:
+                    continue
+                if not _share_d(adj, a, b, v):
+                    open_pairs += 1
+        d[v] = open_pairs
+    return d
+
+
 def pieces_of(adj, members):
     """Connected pieces of the subgraph induced on `members` (a boolean mask over vertices).
 
@@ -65,7 +106,7 @@ def pieces_of(adj, members):
         while stack:
             v = stack.pop()
             count += 1
-            for k in range(4):
+            for k in range(adj.shape[1]):              # any number of links (six-link work, 2026-09-25)
                 w = adj[v, k]
                 if w >= 0 and members[w] and not seen[w]:
                     seen[w] = True

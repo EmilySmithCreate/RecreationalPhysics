@@ -1,4 +1,4 @@
-# Start here: handoff for the next assistant (state as of 2026-09-24, night)
+# Start here: handoff for the next assistant (state as of 2026-09-25, early morning)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". Work is on branch `feat/cloud-runs-and-3d` (shared by two sessions in one
@@ -10,16 +10,15 @@ git history.
 
 1. **Two sessions may be working this repository at once.** Run `git status` and `git log -5` before assuming
    the tree is as described, and re-read a file if the tool says it changed on disk.
-2. **Running (24 September, night).** On the laptop: Gate C's long protocol P2 (`gatec_t22_fig3_p2`) and the
-   exploratory fast-heating leg `explore_c_heat500` from the other session; and, launched tonight after their
-   pre-registrations were committed, **T25** (`t25_race_tc*`, six jobs), **T26** (`t26_*`, eight jobs) and **T27**
-   (`t27_leak_n144_*`, five jobs). On AWS Batch: **T24** (`t24_lam*_n*`, 28 jobs), submitted by the new
-   push-triggered workflow `.github/workflows/run_queue.yml` from the manifest `cloud/queue/2026-09-24_t24.txt`
-   when that commit was pushed; check the Actions tab for the run and the results bucket for the CSVs, then
-   download, check and commit them as T23's were. A finished local job has a `.csv` and no `.partial`. Never
-   commit a result a live job is still writing. Also on Batch, from a second push the same night: **Gate C′**
-   (`gatec2_3d_n500_a/b`, `gatec2_2d_n2000_a/b`; PREREGISTRATION Gate C′; O46), read with `scripts/analyse_gatec2.py`;
-   the reading and the criteria are fixed there. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
+2. **Running (25 September, early morning).** On the laptop: Gate C's long protocol P2 (`gatec_t22_fig3_p2`), the
+   last T26 cell (`t26_stores_n256`; T26's verdict waits on it: 21 of 22 cells read MELTED, O48), and the exploratory
+   3D window scans for the gravity test (`explore_3d_window_lam125`, `_lam110`; not pre-registered). On AWS Batch,
+   each set submitted by the push-triggered workflow `.github/workflows/run_queue.yml` from a manifest under
+   `cloud/queue/`: **T24** (28 jobs, `2026-09-24_t24.txt`), **Gate C′** (4 jobs, `2026-09-24_gatec2.txt`; O46;
+   `scripts/analyse_gatec2.py`), and **T30 and T32** (14 jobs, `2026-09-25_t30_t32.txt`; the six-link tests of piece 11,
+   read with `scripts/analyse_t30.py`). Results land in the bucket; download, check and commit them as T23's were.
+   **Read and recorded tonight:** T25 FREEZES IN (O47), T27 STAYS MELTED (O48). A finished local job has a `.csv` and
+   no `.partial`. Never commit a result a live job is still writing. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
    `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O46 onward; O45 is the other session's exploratory Gate C reading), the
    pre-registration section, and the programme page. **The owner's predictions in T25 to T27 are inferred from
    her stated positions** (PREREGISTRATION says so in each); ask her to confirm or replace them before any
@@ -120,9 +119,11 @@ number is carried into a claim about gravity.
 
 ## 4. Waiting on Emily
 
-0. **Confirm or replace the inferred predictions** in PREREGISTRATION T25, T26 and T27 (FREEZES IN; RE-CURLS;
-   FOLDS BEFORE IT FLATTENS), written from her positions of 24 September. And decide whether to send any of the
-   per-paper letters proposed in `docs/papers/series_plan.md` ("Who to ask"), none of which is drafted or sent.
+0. **T26's prediction is hers (confirmed 24 September, night).** T25's (FREEZES IN, which held) and T27's (FOLDS
+   BEFORE IT FLATTENS, which failed) stay marked inferred; she may confirm or disown them. Her decision of the same
+   night is on the record as VISION Update 24: proceed with the six-link work now, reproduction later. Decide whether to
+   send any of the per-paper letters proposed in `docs/papers/series_plan.md` ("Who to ask"), none drafted or sent.
+   **T28, the gravity test, needs her prediction before it runs** (series plan, "The gravity path").
 1. Whether to send the reply to Carlo (and the PDF), and when to submit to arXiv.
 2. The allotrope of [T25] Fig. 9: the reply asks for its adjacency list. **Do not build it from the drawing:**
    every coloured face looks four-sided, which does not fit the caption. Exact and ready once the graph exists:
@@ -154,6 +155,8 @@ number is carried into a claim about gravity.
 ## 6. Corrections that must not be undone
 
 - **Only λ = 1 is CQG** (section 1). Titles, abstracts, captions and page footers are checked for this.
+- **Every six-link result carries the caveat that the reproduction gate is open** (VISION Update 24), and O41's windows
+  are for the tori it listed: the two-curled state with a long open side is stuck to λ = 1.5 (O49), not 1.2.
 - **Matter is the structured leftover or the released energy, not the melt** (Emily, VISION Update 19). What
   [T25] calls matter is his.
 - The four-point remnant is one column of the tube left curled; it comes at 4, 9 or 14 units.

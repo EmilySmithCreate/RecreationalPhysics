@@ -1478,6 +1478,13 @@ a factor of about N, so it should hasten healing and shift t* to faster cooling;
 How the model's cooling clock relates to any cosmological one; only that a freeze-out time exists and where it
 sits in sweeps. Anything about two leftovers, or about the many-seed scrap of T17.
 
+#### Reading, 24 September 2026, night: FREEZES IN, t* = 30,000 sweeps
+
+`python scripts/analyse_t25.py` (tests `tests/test_t25.py`). Followed replicas 20, 17, 19, 19, 18, 19 at t_cool = 300 to
+100,000; survival shares 1.00, 1.00, 1.00, 0.79, 0.78, 0.37. The fastest cooling has the highest share and the longest
+cooling time with a majority surviving is 30,000 sweeps. **Verdict FREEZES IN.** The prediction inferred for the owner
+holds; ours placed t* between 1,000 and 10,000 and was too short. Details in ASSUMPTIONS O47.
+
 ## T26. The local spark: what does energy packed into one place do to cold space? (series paper 4; programme piece 8; written 2026-09-24, night, before any run)
 
 ### Why
@@ -1526,10 +1533,11 @@ stores as heat. Those are two replicas each and are not results.
 
 ### Predictions
 
-**The owner's, inferred by the assistant from her stated positions and to be confirmed by her** (24 September: a
-black hole is a re-curled region; the melt is not a real phase and melting briefly is fine as long as the region
-folds soon after; energy packed into one place is the untested case): **RE-CURLS**, with melt-then-fold common.
-Marked as inferred until she confirms or replaces it.
+**The owner's** (inferred by the assistant from her stated positions of 24 September, that a black hole is a
+re-curled region, that the melt is not a real phase and melting briefly is fine as long as the region folds soon
+after, and that energy packed into one place is the untested case; **confirmed by her as her own prediction on
+24 September, night, while the runs were in progress and before any cell was read as a verdict**): **RE-CURLS**,
+with melt-then-fold common.
 
 **Ours, unverified: MELTS.** Under "stores" the first move a store can buy destroys squares (the cheapest way out
 of the sheet is a loss of two squares, 32), and the eight vertices it leaves at d = 3 are melted by this reading,
@@ -1598,6 +1606,13 @@ Named. The interchangeable version at N = 64 is T21's, which melted either way; 
 ### What this cannot show
 
 As T26. The leak is a protocol knob (ASSUMPTIONS Q12), declared here, and the model's sweep is not a physical clock.
+
+#### Reading, 24 September 2026, night: STAYS MELTED
+
+`python scripts/analyse_t26.py` (tests `tests/test_t26.py`). Fifteen cells (three energies, four leaks and the sealed
+control), twelve replicas each: every cell has a MELTED majority, 57 of 60 leaking replicas melted, no FOLDED majority
+anywhere, no melt-then-fold. **Verdict STAYS MELTED.** Ours held; the prediction inferred for the owner (FOLDS BEFORE IT
+FLATTENS) fails. Details in ASSUMPTIONS O48.
 
 ## Gate Câ€². Which reading of [T22] Fig. 3's axis is ours, and does the same reading hold for its 2D figure? (six-link track; written 2026-09-24, night, before the runs)
 
@@ -1680,3 +1695,111 @@ Named, as the published runs.
 The published protocol, which the paper does not state; whether its graphs are bipartite, which only a
 six-link kernel with triangles and pentagons can test; anything at Î» â‰  1.
 
+
+## T30. Six links: does one push open both curled directions, and how much room does that need? (piece 11; written 2026-09-25, before any run)
+
+### Why
+
+The owner's rule (VISION Updates 22 and 23): the three space directions are intertwined; they curl together and
+open together, so one activation releases the whole burp. On 24 September she decided to proceed with the
+six-link work while the reproduction of the published 3D curve (Gate C, C′) is pursued in parallel (VISION
+Update 24). The 3D ladder is exact and additive (O41): each curled direction costs 4(λ − 1) per vertex. The
+tori that can be tested at sizes with a flat 3-torus of the same N are the two-curled ones, 4 × 4 × 18 (N = 288,
+flat 6 × 6 × 8) and 4 × 4 × 32 (N = 512, flat 8 × 8 × 8), and, for the literal form of her rule, a gas of eight
+6-cubes (N = 512, all three directions curled, no direction singled out).
+
+**Exact, computed before the runs, on the tori actually used** (brute force over every switch; recorded in O49,
+which corrects O41's window for the two-curled state): the cheapest way out of 4 × 4 × 18 and 4 × 4 × 32 loses 6
+squares and 16 surplus squares and costs 96 − 64λ (16 at λ = 1.25, 25.6 at 1.10), offered about 5.3 times a
+sweep, so the two-curled state is stuck for now for 1 < λ < 1.5, not 1.2 (O41's 96 − 80λ move exists only when
+the open side is 6, and in the 6-cube). The one-curled rung (4 × L × L′) leaves by a move costing 96 − 48λ (36 at
+1.25, 43.2 at 1.10; O41, re-checked on 4 × 6 × 6). The 6-cube and a gas of them leave by 96 − 80λ (8 at 1.10;
+downhill at 1.25), so the gas is tested at λ = 1.10 only.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` (graphity.sealed_d, the bath of stores at six links, draw for draw with the
+2D kernel at four links; graphity.dimension.local_dimension_d, which reads d = 3 flat, 2 one curled, 1 two
+curled, 0 all curled). One store holds the spark, the rest are empty; 100,000 sweeps, read every 200; twelve
+replicas per cell; the final graph saved.
+- `t30_lam125_n288_c{2n,n,n2,n4,n8}`: 4 × 4 × 18, λ = 1.25, spark 16.0 (the exact wall), C = 2N, N, N/2, N/4, N/8.
+- `t30_lam125_n512_c{2n,n4}`: 4 × 4 × 32, λ = 1.25, spark 16.0, C = 2N and N/4.
+- `t30_lam110_n288_c{2n,n4}`: 4 × 4 × 18, λ = 1.10, spark 26.0 (the wall is 25.6), C = 2N and N/4.
+- `t30_gas_lam110_n512`: eight 6-cubes, λ = 1.10, sparks 8.0 and 10.0 (the wall is 8), C = 2N.
+All on Batch through the queue (`cloud/queue/2026-09-25_t30_t32.txt`).
+
+### Definitions, fixed now (`scripts/analyse_t30.py`, tested in `tests/test_t30.py` before any run)
+
+- Per replica: the **middle rung** is reached at the first block with H/N ≤ 4(λ − 1)(1 + 0.10) and at least half
+  the vertices at d ≥ 2; the **flat state** at the first block with H/N ≤ 0.10 · 4(λ − 1) and at least 90 % of
+  vertices at d = 3. A replica **rests** on the middle rung if H/N stays within ±10 % of 4(λ − 1) for at least
+  5,000 consecutive sweeps. Outcome from the final block: FLAT, MIDDLE (middle rung reached, not flat), STUCK
+  (majority still at d = 1 and under a quarter melted), MELTED (a quarter or more of vertices at d > 3), OTHER.
+- Per cell (λ, N, C): the majority outcome, else MIXED. **C\***, per (λ, N): the smallest C with a FLAT majority.
+- **Mechanism**, over every replica anywhere that reached the flat state: CASCADE if it did not rest on the
+  middle rung on the way, STEPWISE if it did.
+- **Verdicts.** ALL AT ONCE: some cell has a FLAT majority and at least half the flat-reaching replicas cascaded.
+  ONE AT A TIME: some cell has a FLAT majority and fewer than half cascaded. FIRST ONLY: no FLAT majority
+  anywhere, some MIDDLE majority. NEVER OPENS: neither.
+- The gas is read by the same rules (its middle rung is at 8(λ − 1), two of three directions still curled, which
+  the definitions above take as "H/N ≤ 4(λ − 1)(1.1)" only when it has gone two rungs; so for the gas the report
+  states the rungs reached in words as well), and its verdict is reported separately as T30-gas.
+- Reported, not scored: the energy released per vertex against 4(λ − 1) and 8(λ − 1); whether the flat region is
+  one piece (a front) at the end; the bath temperature after each rung.
+
+### Predictions
+
+**The owner's:** ALL AT ONCE for the two-curled tori and for the gas, and a C\* that exists at both sizes (her
+rule: one activation opens every curled direction; and, from piece 4, the burp must always have somewhere to go).
+
+**Ours, unverified:** FIRST ONLY. The spark pays the first wall and the first direction opens as a front,
+releasing 4(λ − 1) per vertex (288 units at N = 288, λ = 1.25) into the bath; the second wall is 36, and a bath
+of 2N stores then sits near 0.5 per store, so exp(−36/0.5) is never paid, while a bath small enough to be hot
+enough (about N/8, near 4 per store) melts the sheet as T9 and T18 found in 2D. So the middle rung is reached
+at large C and the sheet melts at small C, with no C giving a flat majority: FIRST ONLY, with C\* undefined.
+For the gas at λ = 1.10: NEVER OPENS or FIRST ONLY, since a 6-cube that has opened one direction is a
+4 × 4 × 4 arrangement with nowhere flatter to go inside 64 points and must join its neighbors, and we have
+not priced the joining moves.
+
+### Named or interchangeable points
+
+Named. With interchangeable points the 4 × 4 × L torus carries many symmetries (its two curled directions each
+of length 4 and the open one of L, times the point-swaps) and the state one move out far fewer, so the first
+step would be rarer by a large factor; the release and the front are expected unchanged. Not run.
+
+### What this cannot show
+
+Anything about the published model at λ = 1 (Gate C′ is open; VISION Update 24 states the caveat every
+six-link result carries); anything about how the released energy would move in a system with a physical clock;
+gravity, which is T28.
+
+## T32. Six links: is the activation fixed with size? (piece 11; written 2026-09-25, before any run)
+
+### Why
+
+In 2D the spark that starts the change is exactly the cheapest move, 12 units at λ = 1.25, at every size from
+48 to 192 (VISION Update 9; S2′ (iv)). VISION Update 22 names the same measurement in three dimensions as one to
+pre-register with the owner's prediction.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with a single store (C = 1) holding the spark: 4 × 4 × L at λ = 1.25 for
+L = 12, 18, 24, 32 (N = 192 to 512), sparks E = 12, 14, 15, 16, 17, 18, 20, ten replicas each, 20,000 sweeps
+(`t32_wall_n{192,288,384,512}`; Batch through the queue).
+
+### Definitions, fixed now
+
+Per (N, E): the share of replicas that ever **left** the start (S or X changed at any sweep). **E\*** at each N is
+the smallest spark at which every replica left. **FIXED WALL** if E\* is the same at every N; **GROWS** if it
+rises with N; **FALLS** if it falls; **NOT READ** if some N has no spark at which every replica left. **SHARP**
+is reported beside it: at every N, nothing below E\* ever left.
+
+### Predictions
+
+**The owner's:** FIXED WALL (the activation does not grow with size, as in 2D). **Ours:** FIXED WALL at E\* = 16,
+SHARP: the exact wall on these tori is 96 − 64λ = 16 at every L (O49), and every move below it is refused with a
+single store.
+
+### What this cannot show
+
+The wait at fixed coupling (no coupling here); anything at other λ.

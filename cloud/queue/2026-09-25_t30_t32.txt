@@ -1,0 +1,16 @@
+# PREREGISTRATION T30 (does one push open both curled directions; the room) and T32 (is the activation fixed with size), six links.
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_sealed_curled_d t30_gas_lam110_n512
+run_sealed_curled_d t30_lam110_n288_c2n
+run_sealed_curled_d t30_lam110_n288_cn4
+run_sealed_curled_d t30_lam125_n288_c2n
+run_sealed_curled_d t30_lam125_n288_cn
+run_sealed_curled_d t30_lam125_n288_cn2
+run_sealed_curled_d t30_lam125_n288_cn4
+run_sealed_curled_d t30_lam125_n288_cn8
+run_sealed_curled_d t30_lam125_n512_c2n
+run_sealed_curled_d t30_lam125_n512_cn4
+run_sealed_curled_d t32_wall_n192
+run_sealed_curled_d t32_wall_n288
+run_sealed_curled_d t32_wall_n384
+run_sealed_curled_d t32_wall_n512

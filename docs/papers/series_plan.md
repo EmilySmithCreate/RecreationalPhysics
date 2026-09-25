@@ -282,3 +282,12 @@ pre-registered or run, and the dynamic rungs wait on the six-link gate (Gate Câ€
 
 What blocks step 3 today: the six-link kernel's reproduction gate (rule 2), and a coupling window for a 3D sheet
 that rearranges without melting, which nobody has measured. What does not block steps 1 and 2: nothing.
+
+### 25 September, early morning: verdicts and the 3D launch
+
+- **Paper 2:** T25 read, FREEZES IN, t* = 30,000 sweeps (O47). The paper's section 7 can now be written from the record.
+- **Paper 4:** T27 read, STAYS MELTED (O48); T26 at 21 of 22 cells, all MELTED, the owner's confirmed prediction heading
+  for a fail. The next version of the black-hole question is three-dimensional (the fold she means is of three
+  intertwined directions), after T30 shows what a curled region looks like at six links.
+- **Piece 11 / the companion paper:** the owner's decision to proceed (VISION Update 24); T30 and T32 on Batch with her
+  predictions; the exploratory window scan for T28 on the laptop. The gravity test's exact rungs need no gate.

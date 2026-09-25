@@ -281,6 +281,27 @@ Update 23 (2026-09-24, evening): **the rule, described: curvature plus a curling
 - **Why its value (the author's).** It is simply whatever value reality has. The loop we find ourselves in is selected: of the values that give a strange loop, ours is the one that delivers the biggest loop with the longest cold period for matter, even if other values are mathematically possible. *Ours:* this is the claim series paper 3 (the fertile window) is built to map. The model already shows the trade-off it would select within: a bigger λ gives a bigger lump but a less stable X and a harder birth (T18, PROPORTIONAL).
 - **What changes on the pages.** The rule is described as "curvature plus a curling cost, a constant of our loop", never only as "not curvature". The naming condition of Update 22 stands: at λ ≠ 1 this is not Trugenberger's model.
 
+Update 24 (2026-09-24, night; recorded 2026-09-25): **DECISION (the author's): proceed with the six-link (three-dimensional)
+work now and return to the reproduction of the published 3D curve later.** Why this page changes: rule 2 (reproduce before
+extending) would hold the six-link track until [T22] Fig. 3 is matched, and Gate C has failed (ASSUMPTIONS O43). The author
+set the rule aside for this track, on these grounds and with this caveat.
+
+- **Grounds.** The six-link kernel is validated on its own terms: at four links it makes the 2D chain draw for draw, its
+  energy and moves are checked by brute force against networkx, and the 3D ladder is exact and additive (O41, O49). What
+  the open gate leaves unknown is whether the published 3D figure is this model at all, not whether the kernel is
+  right. And the hypothesis's own runs are at λ > 1, in our family around his model, where nothing is claimed about
+  combinatorial quantum gravity (Update 22's naming condition).
+- **What is still owed.** Gate C′ (PREREGISTRATION; O46) runs in parallel: the surviving guess is that the published
+  weight goes as 1/g², and a 2D width test says whether the same code's 2D figure is compressed too. If every reading
+  fails, the question goes to the model's author. **Every six-link result carries the caveat that the reproduction gate is
+  open** until it is passed, in the pre-registration, the tracker and any paper.
+- **The author's confirmation, the same night:** the prediction inferred for T26 (a local spark re-curls the space, perhaps
+  after melting briefly) is hers. T25's and T27's inferred predictions stay marked inferred.
+- **What runs first** (PREREGISTRATION T30, T32; both with her predictions): whether one push opens both curled directions of
+  a 4 × 4 × L torus and how much room that needs, a gas of 6-cubes as the literal form of "the three directions curl
+  together", and whether the activation is fixed with size. The gravity test (T28, series paper 5) is designed and waits
+  on a coupling window for a rearranging 3D sheet, being scanned exploratorily.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
