@@ -13,7 +13,7 @@ the coefficient of the curling cost}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 24 September 2026 (night); the window verdict awaits a running test}
+\date{DRAFT, 25 September 2026}
 
 \begin{abstract}
 In the family of graph energies obtained from combinatorial quantum gravity (CQG) by multiplying its local term
@@ -28,10 +28,11 @@ two orders side by side, the waits are memoryless, the first exit arrives on tim
 falls back before the front takes hold, at every $\lambda$; the release is exactly $4(\lambda - 1)$; and the
 break-up of the single front begins at the edge of the window. Sealed, the reservoir a conversion needs grows
 faster than the release, $12$, $36$ and $72$ stores at $\lambda = 1.10$, $1.25$, $1.40$ for 96 vertices, and
-the share of decays leaving a relic rises with $\lambda$ while near $\lambda = 1$ none do. In three dimensions,
-where the author's rule that all directions curl together can be posed, the fully curled state is metastable
-only for $1 < \lambda < 1.2$ (exact, with a derived energy that has not yet passed its reproduction gate). A
-larger $\lambda$ gives a larger release, a harder birth and a shorter-lived curled state.
+the share of decays leaving a relic rises with $\lambda$ while near $\lambda = 1$ none do. With six and eight
+links the same ladder holds, the walls double from rung to rung, and the push that starts the change from a
+two-curled six-link torus is exactly 16 at every size; given it, one direction opens and the second waits. A
+larger $\lambda$ gives a larger release, a harder birth and a shorter-lived curled state, and nothing in the
+energy ties the directions together.
 \end{abstract}
 
 \maketitle
@@ -98,10 +99,11 @@ The author's rule for the real thing is that the three space directions are inte
 together. In two dimensions that rule cannot be posed: a gas of fully curled 4-cubes has no wall at any
 $\lambda > 1$ (a move inside a knot costs $32 - 32\lambda$, downhill for every $\lambda > 1$), so it falls apart
 everywhere at once with no wait. In three dimensions, listing every single move out of each curled torus with the
-derived energy: one curled direction is metastable for $1 < \lambda < 2$, two for $1 < \lambda < 1.2$, and all
-three (the 6-cube) for $1 < \lambda < 1.2$, with a wall of $96 - 80\lambda$ offered $6.67$ times a sweep. So the
-fully curled state can be stuck for now in three dimensions, but only in a narrow window that does not contain
-the two-dimensional value of about $1.25$.
+derived energy: one curled direction is metastable for $1 < \lambda < 2$ (wall $96 - 48\lambda$); two curled
+directions for $1 < \lambda < 1.5$ when the open side is long (wall $96 - 64\lambda$; a short open side of 6 admits a
+cheaper move, $96 - 80\lambda$, and closes the window at 1.2); and all three (the 6-cube, alone or as a gas) for
+$1 < \lambda < 1.2$, with a wall of $96 - 80\lambda$. So the fully curled state can be stuck for now in three
+dimensions, but only in a narrow window that does not contain the two-dimensional value of about $1.25$.
 
 \section{The window, measured}
 
@@ -111,8 +113,8 @@ The curled $4 \times L$ torus at $g = 1.5$, $N = 64, 96, 144, 192$, followed in 
 converted or 100,000 sweeps; the local-dimension census and the pieces of converted vertices read at 25, 50 and
 75\% conversion; the release settled over windows of 600 sweeps; the final graph saved. Three pre-registered
 passes: T8 with 30 decays per cell at $\lambda = 1.05$ to $1.45$; T23 with 120 decays per cell at 1.05 to 1.35,
-fresh seeds and the memoryless check sized to the sample; and T24, running as this draft is written, with fresh
-seeds again and the energy check read exactly from each decay's saved wiring.
+fresh seeds and the memoryless check sized to the sample; and T24, with fresh seeds again and the energy check
+read exactly from each decay's saved wiring.
 
 \subsection{Metastability and its edge}
 
@@ -130,8 +132,12 @@ exponential sample of the same size in 20 of 20 window cells from 1.05 to 1.25 a
 The release is exactly $4(\lambda - 1)$ wherever the flat torus is reached. T8 and T23 each came out INCONCLUSIVE
 by the letter of their own rules, for stated reasons: T8's memoryless band was too tight for thirty decays, and
 T23's energy check, which compared a window average with the exact energy of the final state, tripped on the
-sheet's own thermal excitations at $\lambda = 1.30$ in a few decays per hundred. T24 fixes the second before its
-run, as T23 fixed the first; its verdict will be reported here whichever way it falls.
+sheet's own thermal excitations at $\lambda = 1.30$ in a few decays per hundred. T24 fixed the second before its
+run, as T23 fixed the first. Its energy check, read from each decay's saved final graph, passed in all 28 cells; two
+orders and one front held in every cell; the memoryless check held in 24 of 28 and failed in four on one or two waits
+of 24 to 76 times the mean, at $N = 64$ ($\lambda = 1.25$ and 1.30) and 192 (1.30) and 144 (1.35). By the letter
+the window was inconclusive a third time, on a third criterion. The rare very long wait is now on the record at three
+couplings, always at the smaller sizes; the saved graphs of those decays are where to look next.
 
 \subsection{The first exit is on time, and one exit in three falls back}
 
@@ -147,6 +153,51 @@ Pooled over sizes from $\lambda = 1.30$ to $1.35$ (T23): the share of decays end
 $0.71$ to $0.47$, and the share whose converted region is in more than one piece at 25\% conversion rises from
 $0.44$ to $0.69$, each by more than two standard errors. The author predicted this before the run. The single
 front gives way to several seeds as the wall comes down.
+
+\section{The same map across the number of directions}
+
+The window has a second axis, the number of directions, which the author's rule that the space directions curl and
+open together makes the relevant one. With the six- and eight-link versions of the same energy the ladder stays
+additive, $4(\lambda - 1)$ per vertex per curled direction, and every rung's cheapest exit can be priced exactly by
+listing every switch (Table~\ref{tab:dmap}). Three things are exact. The walls double from rung to rung at every
+number of directions, so nothing in the energy ties the directions together. More directions widen the $\lambda$
+window of the partly curled states. And flat space's own wall, the cheapest move out of the perfect lattice, is 32,
+64 and 128 with two, three and four directions, the same at every $\lambda$, so a bath hot enough to pay the later
+rungs of a four-direction change need not melt the flat state, where in two dimensions it does.
+
+\begin{table}[b]
+\caption{The cheapest single move out of each curled state, exact, with its $\lambda$ window (wall $> 0$) and its
+cost at $\lambda = 1.25$; and what the sealed runs found. Six-link tori are $4 \times 4 \times L$ with $L \ge 18$
+and $4 \times L \times L'$; eight-link tori at $N = 2304$.}
+\label{tab:dmap}
+\begin{ruledtabular}
+\begin{tabular}{llccl}
+links & curled & window & wall at 1.25 & sealed, given the wall \\
+\hline
+4 & one (the tube) & $1 < \lambda < 2$ & 12 & opens as one front; fixed wall 48 to 192 vertices \\
+4 & both (gas of 4-cubes) & none & downhill & falls apart at once \\
+6 & one & $1 < \lambda < 2$ & 36 & not run \\
+6 & two & $1 < \lambda < 1.5$ & 16 & first direction opens as a front, second never; fixed wall 192 to 512 \\
+6 & all three (gas of 6-cubes) & $1 < \lambda < 1.2$ & downhill & at 1.10: joins and opens two of three in 21 of 24 \\
+8 & one & $1 < \lambda < 2.5$ & 80 & not run \\
+8 & two & $1 < \lambda < 1.67$ & 40 & not run \\
+8 & three & $1 < \lambda < 1.43$ & 20 & running \\
+8 & all four (gas of 8-cubes) & $1 < \lambda < 1.25$ & downhill & running at 1.10 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Two of the six-link entries are measured, each pre-registered with the author's prediction. The push that starts the
+change from the two-curled torus is exactly 16 at every size from 192 to 512 vertices, nothing below it ever starting
+the change and everything at or above it doing so: the activation is fixed with size in three dimensions as in two.
+And given that push in a sealed box, the torus opens its first curled direction as a front and stops there at every
+bath size from a quarter of $N$ to twice $N$; the second direction's wall of 36 is never paid by the first release in a
+cold bath, and only at the smallest bath, an eighth of $N$, does the heat carry two of twelve replicas down to a
+defective near-flat state. The author had predicted that both directions open together; they open one at a time. The
+literal form of her rule, a gas of fully curled 6-cubes, went further than we expected at $\lambda = 1.10$: the cubes
+joined and opened two of their three directions in 21 of 24 replicas, into many small flat patches, never one space.
+Every six-link statement carries a caveat: the published six-link curve has not been reproduced (Sec.~II.D), and the
+kernel is trusted on its own validation.
 
 \section{The room the new space needs}
 

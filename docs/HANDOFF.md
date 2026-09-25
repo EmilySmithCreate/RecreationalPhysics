@@ -144,9 +144,10 @@ number is carried into a claim about gravity.
 
 ## 5. Natural next lines (pre-register before running)
 
-0. **Read tonight's four tests** when they land (section 0, item 2), then bring the programme page (both files and
-   the artifact), `series_plan.md`, and the paper drafts `docs/papers/relic/` and `docs/papers/fertile_window/`
-   into line with the verdicts. Paper 4 (the black-hole piece) is not drafted; T26 and T27 are its first results.
+0. **Papers:** five drafts exist (`curled_torus`, `relic`, `fertile_window`, `black_hole`, `six_links`), all in line
+   with the record as of 25 September morning, none with a PDF, none read by the owner. The six-link one has an empty
+   eight-link section waiting for T33. The programme page now carries a dated change log and a per-piece date; keep both
+   current whenever a result comes in (the owner asked for this on 25 September).
 1. Gate C: failed (O43). Gate C′ (O46) is running: if reading (iv) holds in 3D and the 2D width says two powers, the
    gate is passed under that reading and the six-link track reopens; if the 2D width says one power, the next build is
    a six-link kernel that allows triangles and pentagons (the paper's own ground states have them); if A fails, the

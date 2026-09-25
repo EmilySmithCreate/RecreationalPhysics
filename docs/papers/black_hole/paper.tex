@@ -1,0 +1,167 @@
+\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Does concentrated energy re-curl space? Three sealed tests in a graph model of emergent geometry, and a melt
+every time}
+
+\author{Emily Smith}
+\email{emilysmithcreate@gmail.com}
+\affiliation{Independent researcher, Charlottesville, Virginia, USA}
+
+\date{DRAFT, 25 September 2026}
+
+\begin{abstract}
+In the family of graph energies obtained from combinatorial quantum gravity (CQG) by raising the coefficient
+$\lambda$ of its local term above 1 (only $\lambda = 1$ is CQG; everything here is at $\lambda = 1.25$, next to CQG
+and not in it), the flat torus is the exact ground state and a curled direction costs $4(\lambda - 1)$ per vertex.
+The author's hypothesis holds that a black hole is a region of space re-curled toward the arrangement it came from,
+and that concentrated energy is what pays for the re-curling. We ask the model, sealed and energy-conserving, what
+energy does to flat space, three ways: spread through a bath any move may draw on, packed into one place as heat only
+one vertex may spend or as disorder wired into one patch, and spread then drained at four rates from a slow leak to
+a quench. Read by one rule fixed before the runs, vertices whose local dimension falls below 2 are folded and those
+whose dimension rises above 2 are melted. In every one of the 22 cells of the local test, the 15 of the leaking test,
+and the earlier spread test, at 36 to 256 vertices, with named points and with the points treated as
+interchangeable, the majority outcome is a melt; no cell folds; the largest folded piece anywhere is eleven vertices;
+and a melt neither folds nor flattens as its energy drains. Two dimensions do not re-curl under this energy. Every
+verdict quoted was pre-registered before its run.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The companion papers \cite{paper1,paper2} study a curled torus opening into flat space and what it leaves behind. This
+one asks the reverse: can flat space be curled back up? The author's framework needs it to be possible, because in
+her picture a black hole is a region re-curled toward the curled arrangement, and the energy concentrated in it is
+what pays the curling cost \cite{repo}. The published programme reads a black hole the other way, as a bubble that has
+reverted to the random phase \cite{T25}. The two readings differ in what concentrated energy produces, a fold or a
+melt, and that is measurable.
+
+Two facts fix the terms. Above $\lambda = 1$ the flat torus is the exact ground state, nothing lies below it, and
+leaving it costs at least 32 by any single move (Sec.~II). And the two kinds of damage have different prices per
+square: at $\lambda = 1.25$ a third square added to an edge costs 1, a square destroyed costs 16, so curling is the
+cheaper damage by a factor of sixteen per square. A budget that cannot afford to melt can still afford to curl. The
+question is which the dynamics buys.
+
+\section{Model, the sealed box, and the reading}
+
+The state is a four-regular bipartite graph on $N$ vertices under the hard-core rule of CQG. With $S$ squares and
+$X = \sum_e (S_e - 2)_+$ surplus squares,
+\begin{equation}
+  H = 16(N - S) + 4\lambda X ,
+\end{equation}
+so a square destroyed costs 16 and a surplus square costs $4\lambda$. The local dimension $d(v)$ is the number of the
+six edge pairs at $v$ that close no square: 2 on the flat sheet, 1 on a curled direction, 0 in a 4-cube, above 2 where
+squares are missing. A vertex is \emph{folded} if $d < 2$ and \emph{melted} if $d > 2$; a replica's outcome, read from
+its final block, is FOLDED if at least four vertices are damaged and folded ones are at least as many as melted,
+MELTED if at least four are damaged and melted ones outnumber folded, HEALED if fewer than four are damaged. Four is
+the smallest curled object, one column. A cell's outcome is the majority over replicas.
+
+Sealed dynamics keep stores of energy beside the graph \cite{Creutz83}: a proposed switch draws on one store, is
+refused if the store cannot pay, and pays into it when it lowers the energy; $H$ plus the stores is conserved to the
+last unit in every run reported here. Three protocols differ only in which store a move may use and where the energy
+starts. \emph{Spread}: a shared bath of $2N$ stores, the budget in one of them, any move anywhere may draw on it
+(the earlier test, T21, and its single-demon predecessor). \emph{Packed}: either the sheet perfect and the budget in
+the store of one vertex under a per-vertex bath, in which a move pays only from the store of the first vertex it
+involves; or the budget wired into the graph as disorder within a radius of one vertex, the bath empty. \emph{Drained}:
+the spread protocol with every store scaled by $1 - \ell$ after each block of 100 sweeps, at $\ell = 0.001$, 0.01,
+0.1 and 1.0, the last a quench. Under the per-vertex bath a store below 32 can never act, because leaving the flat
+sheet costs at least that, so the packed budgets are 32 to 192 units in one store, or 288 and 576 spread over nine.
+
+With the points treated as interchangeable, every arrangement is weighted by its number of symmetries (the
+relabelings that keep every edge), which favors a complete fold, a 4-cube with 192 symmetries, over any partial
+state. The packed test was run that way at 64 vertices, the smallest size at which a complete fold exists, with the
+fast automorphism count of Ref.~\cite{repo}.
+
+\section{Spread through a bath: it melts}
+
+\emph{T21, pre-registered.} At $N = 36$ and 64, budgets of 2, 4, 8 and 16 per vertex through the bath and 0.5 to 4
+per vertex through a single demon, six replicas each, named and interchangeable points side by side. Every cell at
+64 vertices has a melted majority under both weightings; at 36 vertices under the bath the interchangeable points
+lean toward folding in one cell and reverse in the next, which the pre-registered rule reads as fragile. The verdict
+was MELTS EITHER WAY at $N = 64$. This was the result that prompted the author's objection: a black hole is not
+energy spread evenly but energy packed into one place, and heating a whole sheet at equilibrium randomizes it by
+construction.
+
+\section{Packed into one place: it melts}
+
+\emph{T26, pre-registered, with the author's prediction that it re-curls.} Twenty-two cells, twenty replicas each at
+144 and 256 vertices and ten at 64, 50,000 sweeps (4,000 at 64), the final graph saved. In the per-vertex protocol the
+first move a store can buy is the cheapest exit from the sheet, a loss of two squares, which leaves eight vertices at
+$d = 3$: melted, by the reading. What follows is a local heat cycle, the defect healing back into the store and being
+bought again, and it never turns into a fold. Table~\ref{tab:t26} gives the census. No cell has a folded majority;
+the largest folded piece in any final state is eleven vertices, at a budget of 96 in one store; the share of replicas
+that melt first and fold later is at most one in twenty. A hot patch in a cold shared bath mostly stays melted at 144
+and 256 vertices, healing in 5 to 20\% of replicas; at 64 vertices the named patch melts in 7 of 10 and the
+interchangeable one heals in 10 of 10 at 32 units and melts in 7 of 10 at 64. The verdict is MELTS. The author's
+prediction, confirmed as hers before any cell was read, failed.
+
+\begin{table}[b]
+\caption{The packed test (T26): outcomes over replicas, from the final block. Stores: the budget in one vertex's store
+(radius 0) or nine (radius 2). Patch: disorder wired within radius 3 (2 at $N = 64$), cold shared bath; ``local heat''
+keeps the heat the patch gives off in per-vertex stores.}
+\label{tab:t26}
+\begin{ruledtabular}
+\begin{tabular}{llrrrr}
+protocol & $N$ & budgets & melted & folded & healed \\
+\hline
+stores, radius 0 & 144 & 32 to 192 & 115 & 4 & 1 \\
+stores, radius 0 & 256 & 32 to 192 & 119 & 0 & 1 \\
+stores, radius 2 & 144 & 288, 576 & 40 & 0 & 0 \\
+patch, shared bath & 144 & 32, 64, 128 & 48 & 3 & 9 \\
+patch, shared bath & 256 & 32, 64, 128 & 57 & 0 & 3 \\
+patch, local heat & 144 & 32, 64, 128 & 60 & 0 & 0 \\
+patch, named & 64 & 32, 64 & 14 & 4 & 2 \\
+patch, interchangeable & 64 & 32, 64 & 7 & 0 & 13 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Drained: it stays melted}
+
+\emph{T27, pre-registered, with the author's prediction that the melt folds before it flattens.} The spread protocol
+at 144 vertices, budgets of 2, 4 and 8 per vertex, drained at four rates and a sealed control, twelve replicas each,
+30,000 sweeps. All fifteen cells have a melted majority: 57 of the 60 draining replicas melted, the largest folded
+piece anywhere 16 vertices. The quench freezes the disorder as it stands; the slow drains do not anneal it within the
+run. The verdict is STAYS MELTED; ours held, the author's failed.
+
+\section{Discussion}
+
+Three protocols, two weightings of the points, sizes from 36 to 256 vertices: under this energy and this dynamics,
+energy given to flat two-dimensional space melts it and does not curl it, however it is delivered and however it is
+taken away. Curling is the cheaper damage per square, and the dynamics does not buy it, because the moves that lower
+squares are the ones the chain offers first from a flat sheet, and no single move adds a third square to an edge of
+the perfect sheet (Sec.~II of Ref.~\cite{paper1}). A fold would have to be reached through melt, and the melt does
+not go on to fold.
+
+What this does and does not show. It does not show that the author's black hole is impossible: her rule is that the
+three space directions curl together, so the fold she means is three-dimensional, and this paper is two-dimensional.
+It shows that the two-dimensional version of the question, asked three ways, has one answer, and that a re-curling
+mechanism, if it exists in this family, needs either three directions or an ingredient this energy lacks. The
+six-link version of the packed test is the next thing to run, once the six-link runs have shown what a curled
+region looks like there \cite{repo}. And it carries the model's standing caveat: the melt here is what Ref.~\cite{T25}
+calls matter, and the author does not; what the melt is called does not change what it does.
+
+\section*{Acknowledgments}
+
+Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
+checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
+pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+
+\begin{thebibliography}{9}
+\bibitem{paper1} E. Smith, The curled torus burps: front-driven decompactification between ordered states in a
+graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
+\bibitem{paper2} E. Smith, What the burp leaves behind, draft (2026), \texttt{docs/papers/relic/}.
+\bibitem{T25} C. A. Trugenberger, Combinatorial quantum gravity and emergent 3D quantum behaviour, review (2025);
+arXiv:2512.17676.
+\bibitem{Creutz83} M. Creutz, Microcanonical Monte Carlo simulation, Phys. Rev. Lett. 50, 1411 (1983).
+\bibitem{repo} \url{https://github.com/EmilySmithCreate/RecreationalPhysics}: PREREGISTRATION T21, T26, T27;
+ASSUMPTIONS O20, O22, O36, O48, Q20, Q22.
+\end{thebibliography}
+
+\end{document}

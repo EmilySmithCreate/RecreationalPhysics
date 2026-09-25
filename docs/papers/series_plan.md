@@ -338,3 +338,17 @@ directions together, and the release of one rung in a cold bath does not pay the
 window in λ for the partly curled states and raise the flat state's own wall, so a four-direction change can be driven
 hot without melting where a two-direction one cannot. The "interconnection" the owner asks about is therefore not in this
 energy; if it exists in reality it is an ingredient this family lacks, which is a thing the map can say plainly.
+
+### 25 September, morning: paper progress
+
+- **Paper 1:** a paragraph on the two 120-decay repeats (T23, T24) added to Sec. V, with the three different criteria
+  and the rare long wait stated.
+- **Paper 2:** Sec. 7 written from T25 (FREEZES IN, the survival table); abstract and discussion updated. Complete as a
+  draft.
+- **Paper 3:** T24 written in; a new section, "The same map across the number of directions", with the exact-wall table
+  and the six-link measurements; the 3D window sentence corrected to O49.
+- **Paper 4, drafted:** `docs/papers/black_hole/paper.tex`, "Does concentrated energy re-curl space? Three sealed tests
+  ... and a melt every time" (O20/T21, T26, T27).
+- **The six-link companion, drafted:** `docs/papers/six_links/paper.tex` (O41, O49, O50, T32, T30, the gas; the
+  reproduction gate as its own section; the eight-link section left for T33).
+- None has a PDF (Tectonic is not installed system-wide); all are American-spelled; none has been read by the owner.
