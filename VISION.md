@@ -531,6 +531,23 @@ there is a factor, or a couple of constants, related to the interconnectedness o
   run. The exact scan below (O70, addendum) says what the simplest tie gives for the pushes; typed stores are the
   ingredient that would let each push be supplied separately.
 
+Update 31 (2026-09-25, 18:01 ET): **DECISION (the author's): typed energy.** Her words: "The black hole gives each the push
+in the currency of energy that that particular curl can release." Put in order with her answers of the same hour (Update
+30): the black hole generates each type of energy; each curled direction is pushed open by energy of its own type, the
+type its opening releases; ordinary energy opens red, the direction whose release is ordinary matter and energy; the other
+two directions are opened by their own types, and need less and less. Why this page changes: the exact scans of O70 show
+that a tie alone cannot give both today's budget and a cascade in which the first push is the largest; her picture
+supplies the missing ingredient, energy that carries a type.
+
+- **What is decided:** energy in the model gets a type, one per curled direction; a store of one type pays only the moves
+  that open or close its own direction; the release of a direction's opening goes to its own type. Under S1 this is a new
+  knob and a new kind of state; its exact definition (in particular, how a move is assigned to a direction once the wiring
+  has rearranged) is fixed in a design brief before any run, and every setting run is published.
+- **What it is for:** reality targets 1, 3 and 5 (`docs/design/reality_targets.md`): the three directions as a triad, the
+  budget ordinary : dark matter : dark energy, and the cycle in which the black hole keeps the remainder for more burps.
+- *Ours, unverified:* typed energy is the model's version of conserved charges that do not mix, which physics has (baryon
+  number, lepton number); in her picture the type is the direction a unit of energy belongs to.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
