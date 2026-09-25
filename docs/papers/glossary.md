@@ -41,7 +41,7 @@ knowledge unless a source is named, and a source not yet read is marked so.
 
 ## Personality
 
-- Paper 1, Fig. 1 caption: "Spherical cows being unavailable, every space in this paper is a torus; still, like any cow, it burps." (Cows really do release their methane mostly by burping, and a flat square grid really cannot close into a sphere: with four squares at every corner, Euler's formula forces a torus.)
+- Paper 1, Fig. 1 caption: "Spherical cows being unavailable, every space in this paper is a torus; still, like cows, they burp." (the owner's wording, 25 September) (Cows really do release their methane mostly by burping, and a flat square grid really cannot close into a sphere: with four squares at every corner, Euler's formula forces a torus.)
 - Quantum pieces, as an epigraph with no footnote: "But there is only one you, and only one system
   identical quantum mechanically to your cat Emily." (L. Smolin, *A real ensemble interpretation of quantum
   mechanics*, 2011; checked against the text.)

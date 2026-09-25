@@ -302,6 +302,26 @@ set the rule aside for this track, on these grounds and with this caveat.
   together", and whether the activation is fixed with size. The gravity test (T28, series paper 5) is designed and waits
   on a coupling window for a rearranging 3D sheet, being scanned exploratorily.
 
+Update 25 (2026-09-25, early morning): **DECISION (the author's): X may have four curled directions, time among them,
+and the eight-link (D = 4) model is to be simulated too.** Her words, put in order. The change could be four-dimensional
+if time is also uncurled by it. Two ways that could go: time as a **singleton** direction beside the three space
+directions that are tied together (Update 22), so that one direction opens on its own and three open together; or
+**all four tied together**, which the relativity of time suggests, since something moving fast through space has its
+time run more slowly, so time and space are not separate things. She asked for simulations of both.
+
+- **What the model can and cannot say** (*ours*). The graph has no time: a fourth direction of a torus is another
+  direction like the others, and nothing in the energy distinguishes it. What the model can test is the **pattern** in
+  which curled directions open: all four together; one alone and then three together; or one at a time. Those three
+  patterns are distinct, they are what her two variants and our expectation predict, and a sealed run reads them from the
+  local-dimension census (d = the number of open directions at a point, 0 to 4). Which of the four is "time" the model
+  cannot say, and the pages must not.
+- **Sizes.** A decompactification needs a flat 4-torus at the same N as the curled one; the smallest that works is
+  N = 2304 (4 × 4 × 4 × 36 opening toward 6 × 6 × 8 × 8, and a gas of nine 8-cubes as the fully curled X). At eight links
+  that is about a tenth of a second a sweep, so these runs are the heaviest in the project and go to the rented machines.
+- **Rule 2 and the caveat of Update 24 apply**: there is no published eight-link curve to reproduce, the kernel is the same
+  code at eight links (validated at four and six), and every eight-link result says so.
+- **The naming condition stands**: at λ ≠ 1 this is our family around the model, never combinatorial quantum gravity.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

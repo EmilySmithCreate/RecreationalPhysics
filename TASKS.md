@@ -351,6 +351,14 @@ positions** and marked so until she confirms or replaces them; T24 keeps her T23
 Accept: each read under its pre-registered rules, the verdict recorded in ASSUMPTIONS and the programme, and
 the inferred predictions confirmed or replaced by the owner before any verdict is quoted as hers.
 
+## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
+
+**Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a
+singleton beside the tied three or all four tied). Exact first (O50): the 2,304-point ladder and its walls (20, 40, 80 as three,
+two and one directions stay curled; flat space 128; the gas of 8-cubes 160 − 128λ, stuck only below λ = 1.25). Then
+PREREGISTRATION **T33**, with her prediction (a tied pattern) and ours (one at a time): six Batch jobs. Read with
+`scripts/analyse_t33.py`. Accept: the pattern verdict for each start on the record, with the caveat of Update 24.
+
 ## Six links per point (D = 3)  ☐
 
 **Added 2026-09-24** (VISION Update 22, the author's decision). In order, each step gated on the last:

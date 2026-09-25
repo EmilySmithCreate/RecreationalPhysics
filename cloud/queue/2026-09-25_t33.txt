@@ -1,0 +1,8 @@
+# PREREGISTRATION T33: eight links, in what pattern do four curled directions open (piece 13).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_sealed_curled_d t33_gas_lam110_c2n
+run_sealed_curled_d t33_gas_lam110_cn4
+run_sealed_curled_d t33_three_lam125_c2n
+run_sealed_curled_d t33_three_lam125_cn2
+run_sealed_curled_d t33_three_lam125_cn4
+run_sealed_curled_d t33_three_lam125_cn8

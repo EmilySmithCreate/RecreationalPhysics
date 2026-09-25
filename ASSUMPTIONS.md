@@ -1241,15 +1241,20 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   The fastest cooling keeps the most, and the longest cooling time with a majority surviving is 30,000 sweeps. **For the
   owner's dark-matter picture:** the relic that anneals at any fixed temperature (O35) is kept by cooling, and even a slow
   cooling keeps most of them, because the coupling leaves the range where healing is fast early in the schedule. The
-  prediction inferred for her (FREEZES IN) holds; ours put t\* between 1,000 and 10,000 and was too short.
+  prediction inferred for her (FREEZES IN) holds, and she confirmed it as hers on 25 September, after this reading was
+  recorded; ours put t\* between 1,000 and 10,000 and was too short.
 - **O48 T27: a melt whose energy leaks away never folds and never flattens at any leak rate (STAYS MELTED).** (2026-09-24,
   night; PREREGISTRATION T27; `results/t27_leak_n144_*.csv`; `scripts/analyse_t26.py`.) T21's bath (the whole energy in one
   store of 2N) at 2, 4 and 8 per point, drained by 0.001, 0.01, 0.1 and 1.0 per block of 100 sweeps, twelve replicas each,
   and the sealed control: every one of the fifteen cells has a MELTED majority (57 of the 60 leaking replicas melted; the
   largest folded piece anywhere 16 vertices). The quench (leak 1.0) freezes the disorder as it stands; the slow leaks do
   not anneal it within 30,000 sweeps either. Ours (STAYS MELTED) held; the prediction inferred for the owner (FOLDS BEFORE
-  IT FLATTENS) fails. T26, the sealed local spark, has 21 of 22 cells read as this is written, every one MELTED, and is
-  read as a verdict when the last cell (256 points, per-vertex stores) lands.
+  IT FLATTENS) fails. **T26, the sealed local spark, read 25 September when its last cell landed: MELTS** (22 of 22 cells
+  with a MELTED majority; no cell folds; the largest folded piece anywhere 11 points; PREREGISTRATION T26 reading).
+  The owner's confirmed prediction (RE-CURLS) fails. In two dimensions the model has now been asked three ways whether
+  concentrated energy re-curls space (O20/T21 spread evenly, T26 in one place, T27 leaking) and has answered melt each
+  time. *Ours, unverified:* the fold the owner means is of three intertwined directions, so the next form of the question
+  is six-link, after T30 shows what a curled region looks like there.
 - **O49 The two-curled six-link torus with a long open side is stuck for now up to λ = 1.5, not 1.2: O41's window was the
   short torus's.** (2026-09-25; brute force over every switch out of 4 × 4 × 18 and 4 × 4 × 32, every side-0 vertex being
   equivalent; the pre-registration of T30.) The cheapest move out loses 6 squares and 16 surplus squares and costs
@@ -1259,6 +1264,30 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   uses, the one-curled rung's wall is 96 − 48λ (36 at 1.25; re-checked on 4 × 6 × 6), and a gas of 6-cubes is stuck only
   below 1.2 (wall 8 at λ = 1.10). O41's ladder energies are unchanged. **Read before quoting O41:** its windows are for the
   tori it listed; walls depend on the open side's length when that side is short.
+
+- **O50 The eight-link (D = 4) ladder and its walls, exact.** (2026-09-25; `scripts/exact_walls_d.py --near=4`, the
+  nearby-partner search checked against the full search on the 4 × 4 × 18 torus; tests in `tests/test_exact_walls_d.py`;
+  the pre-registration of T33.) At N = 2304 every rung exists: 4 × 4 × 4 × 36 (three curled), 4 × 4 × 12 × 12 (two),
+  4 × 6 × 8 × 12 (one), 6 × 6 × 8 × 8 (flat), and a gas of nine 8-cubes (all four curled). The ladder is additive,
+  4(λ − 1) per vertex per curled direction. Cheapest single moves out, at λ = 1.25: three curled **20** (a move losing
+  10 squares and 28 surplus squares, 160 − 112λ); two curled **40** (160 − 96λ); one curled **80** (160 − 64λ); flat
+  space **128** (losing 8 squares and no surplus, the same at every λ); the 8-cube, alone or in a gas, 160 − 128λ, which
+  is **0 at λ = 1.25 and 19.2 at 1.10**, so the fully curled four-direction state is stuck for now only for 1 < λ < 1.25.
+  Two things worth saying plainly. The walls double from rung to rung, so nothing in the energy ties the directions
+  together: a tied pattern in T33 would be a surprise with no term to explain it. And the flat state's wall (128) sits
+  far above every rung's wall, unlike two dimensions (32 against the tube's 12), so a bath hot enough to pay the later
+  rungs need not melt the flat state; the room a four-direction change needs is a different question from T18's.
+  *Ours, exact; the eight-link kernel is the same code as at four and six links and carries VISION Update 24's caveat.*
+- **O51 The first exploratory 3D window scan was contaminated, and is kept as the record of that.** (2026-09-25;
+  `results/explore_3d_window_lam125.csv`, `_lam110.csv`.) With `n_melt` 0 the sweep runner still took one sweep at infinite
+  temperature before the first coupling, which removed a fifth of the flat 6 × 6 × 6 torus's squares before anything was
+  measured; the runner now skips that sweep when no melt is asked for (old configs never set 0 and are unchanged). The
+  corrected scans, `explore_3d_window2_*`, read the same morning: **the flat 6 × 6 × 6 torus accepts no move at all from
+  g = 0.5 to 6 at λ = 1.25 and at 1.10** (12.000 squares per vertex and zero acceptance at every coupling, both legs).
+  Exact, the same morning (`exact_walls_d.py --near=4 1.25 6,6,6`): the cheapest way out of flat three-dimensional
+  space costs **64** at every λ (losing four squares and no surplus), against 32 in two dimensions and 128 in four
+  (O50). So the coupling window in which a 3D sheet rearranges without melting, which the gravity test T28 needs,
+  lies above g = 6 if it exists at all; a third exploratory scan at g = 6 to 20 (`explore_3d_window3_*`) is the next look.
 
 ## Provenance
 

@@ -291,3 +291,12 @@ that rearranges without melting, which nobody has measured. What does not block 
   intertwined directions), after T30 shows what a curled region looks like at six links.
 - **Piece 11 / the companion paper:** the owner's decision to proceed (VISION Update 24); T30 and T32 on Batch with her
   predictions; the exploratory window scan for T28 on the laptop. The gravity test's exact rungs need no gate.
+
+### 25 September, morning: the four-direction test, and T26's verdict
+
+- **T26 read: MELTS** (22 of 22 cells). The owner's confirmed prediction failed. Piece 8's next form is six-link.
+- **Piece 13 (VISION Update 25):** time as a fourth curled direction. T33 on Batch with her prediction (a tied pattern:
+  three together from the three-curled start; four together or a singleton then three from the gas) and ours (one at a
+  time). Exact before the runs (O50): the walls double from rung to rung and the flat state's wall is 128, so a hot bath
+  can drive a cascade in four dimensions without melting the flat state. A companion paper for the four-direction result
+  would follow the three-direction one; neither is drafted.

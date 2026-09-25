@@ -1459,10 +1459,9 @@ was not followed (no leftover after the make step).
 
 ### Predictions
 
-**The owner's, inferred by the assistant from her stated positions and to be confirmed by her** (VISION Update 16:
-the scrap is dark matter and long-lived; piece 6's "Next", 24 September: the right test is the race, and it fails
-if the scrap heals at every cooling speed): **FREEZES IN.** She asked on 24 September that predictions be written
-from what she has told us; this is that, and it is marked as inferred until she confirms or replaces it.
+**The owner's** (inferred by the assistant from her stated positions, VISION Update 16 and piece 6's "Next" of
+24 September; **confirmed by her as her own prediction on 25 September, after the reading below had been recorded**,
+which is stated so that the order is on the record): **FREEZES IN.**
 
 **Ours, unverified: FREEZES IN**, with t* between 1,000 and 10,000 sweeps: the annealing times at g = 1.25 in T19
 were 500 to 13,000 sweeps, and once g is below about 0.7 the healing move's first step, an uphill move of order
@@ -1559,6 +1558,17 @@ count is unaffordable; expected effect there, from T21: none visible, since dama
 Anything with the points free to change in number, or in three dimensions, where the owner's re-curling of three
 intertwined directions lives (VISION Update 22); nothing here is about gravity. The reading calls d < 2 "folded"
 and d > 2 "melted", O20's rule; a region that is neither (d = 2 but rewired) would count as flat.
+
+#### Reading, 25 September 2026, early morning: MELTS
+
+`python scripts/analyse_t26.py` (tests `tests/test_t26.py`). Twenty-two cells: every one has a MELTED majority. Stores
+with the whole energy in one vertex (N = 144 and 256, E = 32 to 192): 19 or 20 of 20 melted in each cell; spread over
+nine stores: 20 of 20; a hot patch in a cold shared bath (N = 144 and 256): 15 to 20 of 20 melted, the rest healed, at
+most one folded; a hot patch with local heat: 20 of 20; at N = 64, the named patch melted in 7 of 10 at both energies
+(3 folded at E = 32) and the interchangeable one healed 10 of 10 at E = 32 and melted 7 of 10 at E = 64. No cell folds;
+the largest folded piece anywhere is 11 points; melt-then-fold occurs in at most 1 replica in 20. **Verdict MELTS.** The
+owner's prediction, confirmed as hers before the reading (RE-CURLS), fails; ours (MELTS) held, with the patch-in-a-cold-
+bath cells melting rather than healing as we expected at 144 and 256 points. Details in ASSUMPTIONS O48.
 
 ## T27. Does a melt fold before it flattens, when its energy is allowed to leave? (series paper 4; programme piece 8, second test; written 2026-09-24, night, before any run)
 
@@ -1803,3 +1813,74 @@ single store.
 ### What this cannot show
 
 The wait at fixed coupling (no coupling here); anything at other λ.
+
+## T33. Eight links: in what pattern do four curled directions open? (piece 13; VISION Update 25; written 2026-09-25, before any run)
+
+### Why
+
+The owner's idea (VISION Update 25): the change could be four-dimensional, with time uncurled too, either as a
+singleton beside the three tied space directions (one opens alone, then three together) or with all four tied
+(all open together), which the relativity of time suggests. The model has no time and cannot say which direction
+is which; what it can test is the **pattern** in which curled directions open, and the two variants and our
+expectation predict three distinct patterns. The eight-link model is the same code as at four and six links
+(graphity.cqg_d, graphity.sealed_d; VISION Update 24's caveat applies: there is no published eight-link curve, and
+the kernel is validated at four and six links only).
+
+**Exact, computed before the runs, on the tori actually used** (`scripts/exact_walls_d.py --near=4`, checked against
+the full search at six links; recorded as O50). The ladder is additive, 4(λ − 1) per vertex per curled direction,
+and at N = 2304 every rung exists: 4 × 4 × 4 × 36 (three curled) → 4 × 4 × 12 × 12 (two) → 4 × 6 × 8 × 12 (one) →
+6 × 6 × 8 × 8 (flat); the fully curled X is a gas of nine 8-cubes. Cheapest walls at λ = 1.25: three curled 20
+(160 − 112λ), two curled 40 (160 − 96λ), one curled 80 (160 − 64λ), leaving flat space 128 (a move losing eight
+squares and no surplus, at every λ); the 8-cube and a gas of them, 160 − 128λ, which is 0 at λ = 1.25 and 19.2 at
+λ = 1.10, so the gas is stuck for now only below λ = 1.25. Unlike two dimensions, the flat state's wall (128) is far
+above every rung's wall, so a bath hot enough to pay the later rungs need not melt the flat state.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` at eight links, sealed, one store holding the spark, 50,000 sweeps read every 250,
+six replicas per cell, the final graph saved; all on Batch through the queue (`cloud/queue/2026-09-25_t33.txt`):
+- `t33_three_lam125_c{2n,n2,n4,n8}`: 4 × 4 × 4 × 36 at λ = 1.25, spark 20.0 (the exact wall), C = 2N, N/2, N/4, N/8.
+- `t33_gas_lam110_c{2n,n4}`: a gas of nine 8-cubes at λ = 1.10, spark 20.0 (the wall is 19.2), C = 2N and N/4.
+
+### Definitions, fixed now (`scripts/analyse_t33.py`, tested in `tests/test_t33.py` before any run)
+
+- d(v), read by `local_dimension_d`, is the number of open directions at a point, 0 to 4. Per replica and block, the
+  **majority rung** is the d held by more than half the points. A rung is **rested on** if it stays the majority for
+  at least 5,000 consecutive sweeps. MELTED: at least a quarter of the points at d > 4 in the final block.
+- Patterns, from the rests among the rungs strictly between the start rung and the flat rung 4. From the gas (start
+  rung 0): **FOUR TOGETHER** (rung 4 reached with no rest on 1, 2 or 3); **SINGLETON PLUS THREE** (a rest on 1, then
+  rung 4 with no rest on 2 or 3); **ONE AT A TIME** (a rest on every intermediate rung on the way to 4, or on the way
+  as far as it got); **STALLS** (rung 4 not reached and no such pattern, including never leaving); **OTHER**. From the
+  three-curled torus (start rung 1): **THREE TOGETHER** (rung 4 with no rest on 2 or 3); ONE AT A TIME; STALLS; OTHER.
+- Per cell (start, λ, N, C): the majority pattern, else MIXED. **Verdict per start**: the first of FOUR TOGETHER,
+  SINGLETON PLUS THREE, ONE AT A TIME (gas) or THREE TOGETHER, ONE AT A TIME (three-curled) that is some cell's
+  majority; **NO CASCADE** if none is.
+- Reported, not scored: the release per rung against 4(λ − 1); the bath temperature after each rung; the sweep at
+  which each rung was first reached; whether the flat region is one piece.
+
+### Predictions
+
+**The owner's:** a tied pattern. From the three-curled start, THREE TOGETHER; from the gas, FOUR TOGETHER if all four
+are tied, SINGLETON PLUS THREE if time is a singleton; her reasoning from the relativity of time leans to all four
+tied. Recorded in her words in VISION Update 25.
+
+**Ours, unverified: ONE AT A TIME where the bath is hot enough, and a stall where it is not**, from the exact walls.
+From the three-curled start at λ = 1.25 each rung releases 2,304 units; with C = 2N or N/2 the bath after the first
+rung sits near 0.5 or 2 per store and the next wall (40) is never paid, so the replica rests on rung 2: STALLS (as far
+as it got, a rest on one rung) or ONE AT A TIME by the letter if only that rung counts. With C = N/4 the bath after
+each rung sits near 4, 8 and 12 per store, each next wall (40, 80) is paid after a wait of order thousands of sweeps,
+and the flat state, whose wall is 128, holds until near the end: ONE AT A TIME, with the flat state possibly melting
+late. With C = N/8 the walls fall within tens of sweeps of each rung and the flat state melts at the end. For the
+gas at λ = 1.10: the first wall (19.2) is paid by the spark, one cube opens one direction and the rest need joining
+moves we have not priced: STALLS or ONE AT A TIME. We do not expect a tied pattern anywhere, because the walls
+rise by a factor of two per rung and nothing in the energy links the directions.
+
+### Named or interchangeable points
+
+Named. Not run interchangeably (the per-move count is unaffordable at N = 2304).
+
+### What this cannot show
+
+Which direction is time (nothing in the model distinguishes one); anything about the published model; the pattern
+with a physical clock rather than sweeps. A tied pattern, if it appeared, would be a surprise this energy has no
+term for, and would need an explanation before it was called support.

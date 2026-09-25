@@ -14,6 +14,7 @@ Config keys:
                   end (its first entry is not repeated).
     "n_melt", "n_equil", "n_meas", "replicas", "seed": as run_cqg_sweep.py; every (replica, step) gets its own
                   statistically independent seed.
+                  With "n_melt": 0 the start state is used exactly as built (no sweep at infinite temperature).
     "heat_equil", "heat_meas"  optional sweep counts for the heating leg only (default: n_equil, n_meas), for a slow
                   cool followed by a fast heat. Configs without them run exactly as before.
 
@@ -65,7 +66,11 @@ def main(path, out_dir="results"):
                 return int(np.random.SeedSequence([cfg["seed"], n, deg, rep, step]).generate_state(1)[0])
             adj = adj0.copy()
             side_u = np.flatnonzero(part == 0)
-            run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0), lam, glauber)       # hot start
+            if cfg["n_melt"] > 0:                                                        # hot start; with n_melt 0 the
+                run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0), lam, glauber)   # start state is used as it is
+                                                                                          # (2026-09-25; before this, one
+                                                                                          # infinite-temperature sweep
+                                                                                          # still ran: explore_3d_window_*)
             gs = [float(g) for g in cfg["couplings"]]
             k = 0
             sweeps = {"cool": (cfg["n_equil"], cfg["n_meas"]),

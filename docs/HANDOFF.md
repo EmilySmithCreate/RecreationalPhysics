@@ -10,14 +10,15 @@ git history.
 
 1. **Two sessions may be working this repository at once.** Run `git status` and `git log -5` before assuming
    the tree is as described, and re-read a file if the tool says it changed on disk.
-2. **Running (25 September, early morning).** On the laptop: Gate C's long protocol P2 (`gatec_t22_fig3_p2`), the
-   last T26 cell (`t26_stores_n256`; T26's verdict waits on it: 21 of 22 cells read MELTED, O48), and the exploratory
+2. **Running (25 September, early morning).** On the laptop: Gate C's long protocol P2 (`gatec_t22_fig3_p2`), and the exploratory
    3D window scans for the gravity test (`explore_3d_window_lam125`, `_lam110`; not pre-registered). On AWS Batch,
    each set submitted by the push-triggered workflow `.github/workflows/run_queue.yml` from a manifest under
    `cloud/queue/`: **T24** (28 jobs, `2026-09-24_t24.txt`), **Gate C′** (4 jobs, `2026-09-24_gatec2.txt`; O46;
    `scripts/analyse_gatec2.py`), and **T30 and T32** (14 jobs, `2026-09-25_t30_t32.txt`; the six-link tests of piece 11,
-   read with `scripts/analyse_t30.py`). Results land in the bucket; download, check and commit them as T23's were.
-   **Read and recorded tonight:** T25 FREEZES IN (O47), T27 STAYS MELTED (O48). A finished local job has a `.csv` and
+   read with `scripts/analyse_t30.py`), and **T33** (6 jobs, `2026-09-25_t33.txt`; the eight-link pattern test of piece 13,
+   read with `scripts/analyse_t33.py`; about eight hours a job). Results land in the bucket; download, check and commit
+   them as T23's were.
+   **Read and recorded tonight:** T25 FREEZES IN (O47), T27 STAYS MELTED and T26 MELTS (O48). A finished local job has a `.csv` and
    no `.partial`. Never commit a result a live job is still writing. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
    `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O46 onward; O45 is the other session's exploratory Gate C reading), the
    pre-registration section, and the programme page. **The owner's predictions in T25 to T27 are inferred from
@@ -155,6 +156,8 @@ number is carried into a claim about gravity.
 ## 6. Corrections that must not be undone
 
 - **Only λ = 1 is CQG** (section 1). Titles, abstracts, captions and page footers are checked for this.
+- **The model has no time.** Piece 13 (VISION Update 25) tests the pattern in which four curled directions open; which
+  direction is time it cannot say, and no page says so.
 - **Every six-link result carries the caveat that the reproduction gate is open** (VISION Update 24), and O41's windows
   are for the tori it listed: the two-curled state with a long open side is stuck to λ = 1.5 (O49), not 1.2.
 - **Matter is the structured leftover or the released energy, not the melt** (Emily, VISION Update 19). What
