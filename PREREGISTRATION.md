@@ -1997,3 +1997,67 @@ Named. The counting drive is exact (O55) and absent here by construction; its ru
 
 Which direction is time; anything about gravity as a force; anything at λ = 1, where nothing is released or paid. It
 carries VISION Update 24's caveat: the published six-link curve is not reproduced.
+
+## T36. Allotropes in the published model: do regions of points touching two squares persist in a background of three? (piece 12; written 2026-09-25, evening, before any run)
+
+### Why
+
+Piece 12 asks the author's order → order question inside the model's author's own setting, λ = 1: are there
+allotropes, regions stuck in a different discrete arrangement ([T24]; [T25] Fig. 9)? The drawn example lives on an
+infinite hyperbolic graph and has no finite adjacency list. The model's author suggested a numerical route (private
+communication, 25 September 2026): equilibrate a finite graph at a coupling where points touch about three squares on
+average, and look for points or groups of points that touch only two. This is that search, at λ = 1 with no cap, which
+is his model (VISION Update 22's naming condition: this one *is* CQG).
+
+**Where it can be done at equilibrium** (read from T13 before this was written): a point of the flat torus touches four
+squares, so "about three" means S/N ≈ 0.75. At N = 196 that is g ≈ 3.4 to 3.7, where replica exchange started random
+and started as the lattice torus agree to 0.001 (5 to 15 round trips per replica). At N = 484 and 676 it falls in the
+window where the two starts disagree, so equilibrium there is not certified; N = 484 is run and reported, not scored.
+
+### What will be run
+
+`scripts/run_allotrope_search.py`: the lattice torus or a melt of it (200 sweeps at infinite temperature), `n_equil`
+= 20,000 sweeps at coupling g, then 400 blocks of 50 sweeps (20,000 more), recording after each block every point's
+square count c(v) and the set of points with c(v) ≤ 2; the graph saved every 100 blocks. Eight replicas per start, both
+starts. `t36_allotropes_n196`: 14 × 14, g = 3.433 and 3.697 (4S/N 3.11 and 2.96 at equilibrium). `t36_allotropes_n484`:
+22 × 22, g = 2.880 (4S/N 3.06 from the random start; not certified) and 3.302 (2.70, certified), reported beside.
+Named points (the published setting). On the laptop.
+
+**Disclosed:** the two runs were launched a minute before this section was committed, against the project's order
+(commit, then run). The text above was written, and the analyzer and its tests passed, before the launch; nothing from
+the runs had been read when it was committed. A timing pilot (one replica, 6,000 sweeps at g = 3.5, N = 196) checked
+the code: mean square count 3.1, a quarter of the points at two or fewer.
+
+### Definitions, fixed now (`scripts/analyse_t36.py`, tested in `tests/test_t36.py` before any run)
+
+- L_t: the points with c(v) ≤ 2 at snapshot t; ρ = mean |L_t| / N. **Persistence excess** at a lag of 2,000 sweeps:
+  E = mean over t of |L_t ∩ L_{t+lag}| / |L_t|, minus ρ (what chance would give if the set were redrawn). Per replica
+  one E; over the 16 replicas of a cell (N, g) its mean and standard error. **PERSISTENT** if the mean exceeds two
+  standard errors.
+- **Persistent set** of a replica: the points in L_t at every snapshot of its last 2,000 sweeps. A **region** is a
+  connected piece of it, read in the saved final graph, with at least 4 points.
+- Per cell: **ALLOTROPES** if PERSISTENT and a majority of replicas hold a region; **SCATTERED** if PERSISTENT without;
+  **TRANSIENT** if not PERSISTENT.
+- **Verdict**, read at N = 196: ALLOTROPES if either coupling reads so; TRANSIENT if both do; SCATTERED otherwise.
+  Reported beside: N = 484, the excess at other lags (its decay gives a lifetime), and the sizes of the regions.
+
+### Predictions
+
+**The owner's, inferred by the assistant from her stated position and to be confirmed by her** (piece 12: allotropes
+are the order → order question asked inside the published model, and her picture fails "if the region dissolves with
+no wait"): **ALLOTROPES**.
+
+**Ours, unverified: TRANSIENT at N = 196.** The equilibrium here is well mixed, a point's square count changes whenever
+a switch touches one of its edges, and the allotrope is proposed for an infinite hyperbolic graph, which a 14 × 14 torus
+does not resemble; if persistence appears anywhere we expect it at N = 484, where the sampler itself is slow.
+
+### Named or interchangeable points
+
+Named, the published setting. Interchangeable weighting would favor symmetric arrangements, which a region of lower
+square count is not; expected to shorten any persistence, not checked.
+
+### What this cannot show
+
+Anything about the infinite hyperbolic graph of [T25] Fig. 9; a lifetime at sizes that are not equilibrated; whether a
+persistent region is an allotrope in [T24]'s sense (a different discrete arrangement) or a slow fluctuation of the same
+one, which the region's wiring, saved, can be read for afterwards.
