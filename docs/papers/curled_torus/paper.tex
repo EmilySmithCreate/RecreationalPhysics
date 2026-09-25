@@ -13,7 +13,7 @@ emergent geometry}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{Corrected version, 25 September 2026}
+\date{25 September 2026}
 
 \begin{abstract}
 In combinatorial quantum gravity (CQG) the energy of a four-regular bipartite graph is built from its total
@@ -51,8 +51,8 @@ a discrete Ricci curvature. The question studied so far is whether geometry form
 sharply or smoothly: a first-order transition with hysteresis when only the global term is kept
 \cite{GV21}, a continuous one with the full action \cite{KTB19,T25}. A different kind of
 change has not, as far as we have found, been studied in this model: one \emph{ordered} arrangement
-turning into another. Such changes matter for the proposal that dark matter consists of long-lived
-regions of the graph stuck in a different discrete arrangement \cite{T24}. We study the simplest such
+turning into another. Such changes arise wherever a region of the graph is stuck in one discrete arrangement
+while another is favored, as with the allotropes of CQG \cite{T24}. We study the simplest such
 change we have found, a torus with one direction curled, opening into the flat torus. It exists as a
 metastable state only when the local term is weighted by a coefficient $\lambda > 1$, where the energy is no
 longer the total curvature; this is therefore a study next to CQG, not in it, and the curled torus is not an
@@ -408,12 +408,11 @@ pre-registered sense above); anything at sizes beyond 288; why the cold box leav
 \emph{Outlook (motivation, not a result).} This work is motivated by the hypothesis that space emerged from a
 specific ordered precursor through a sharp change of this kind, a lattice cousin of false-vacuum decay
 \cite{C77}, releasing a definite energy and leaving relics behind. Nothing here tests that hypothesis beyond
-showing that a graph energy one coefficient away from a model of emergent geometry contains such a change. We note only that the relic found here, of
-fixed size and about one per change at every size we reached, is the kind of object a dark-matter relic of such a
-change would have to be, though it anneals away at every fixed coupling we tried, survives when the box cools
-faster than it heals, and grows in number with the number of seeds that start the change \cite{repo}; and that the
-change
-needs a push of fixed size while what it releases grows with the system.
+showing that a graph energy one coefficient away from a model of emergent geometry contains such a change. We note
+two things only. The relic found here is of fixed size and about one per change at every size we reached; it
+anneals away at every fixed coupling we tried, survives when the box cools faster than it heals, and grows in
+number with the number of seeds that start the change \cite{repo}. And the change needs a push of fixed size while
+what it releases grows with the system.
 
 \section*{Methods and data}
 
@@ -423,9 +422,9 @@ square density of Ref.~\cite{KTB19} (Fig.~8a) at $N = 160$ to rms 0.005; it does
 curve of Ref.~\cite{T25} (Fig.~3) at the same size, from which it differs by up to 0.41 between $g = 2$ and 6.3, a
 disagreement between the two published figures that is still open. Every kinetic quantity quoted is
 for this chain (Introduction). Seeds are fixed in configuration
-files; every result file carries its configuration and software versions. Predictions and analysis rules
-were committed before the runs they concern, with every amendment recorded. Code, data, configurations and
-pre-registrations: \cite{repo}.
+files; every result file carries its configuration and software versions. The predictions and analysis rules
+behind every verdict quoted were committed before the runs they concern, with every amendment recorded; the two
+exploratory tests are labeled where they appear. Code, data, configurations and pre-registrations: \cite{repo}.
 
 \emph{Checks added after the runs} (not pre-registered; suggested by an AI-generated review, see Acknowledgments; committed data, no new
 simulation \cite{repo}). To test whether waits are exponential, each time is divided by the mean of its
@@ -450,30 +449,6 @@ runs, is open.
 The exit counts behind Eq.~(\ref{eq:tau}), the twisted arrangements at the torus's energy and their symmetry
 counts are enumerated exactly, with no simulation \cite{repo}.
 
-\section*{Changes from the first version}
-
-A referee-style reading of the first version, generated with Claude (Anthropic) and checked point by point
-against the record and the committed data \cite{repo}, found the following, all corrected here; no result was
-removed and no verdict changed. The first version said every verdict quoted was pre-registered; two results it
-quoted, the Arrhenius test of the waiting time and the 12-unit seed threshold, were exploratory, and are now
-labeled so. The two-state verdict at $\lambda = 1.25$ was reached after four amendments to its energy gate, three
-written after the data they judged; this is now stated in the abstract and Sec.~III. ``Memoryless'' is now ``close
-to memoryless'', with the failing checks named, and the abstract's summary of the $\lambda$ map now says that all
-three runs were inconclusive by the letter and that the single front begins to break up at $\lambda = 1.35$.
-Corrected counts and descriptions: the memoryless check of the map failed in nine of 24 stuck cells, not five of
-28; the second repeat's gate asked only for a complete, valid record of final graphs, and of its four memoryless
-failures two are single very long waits at $N = 64$ and two are wide spreads; beyond the edge the change starts in
-several places in a stated share of decays, rather than ``everywhere at once''; Eq.~(\ref{eq:tau}) crosses 200
-sweeps at $\lambda = 1.345$, not 1.33; Table~\ref{tab:lambda} gains its $\lambda = 1.25$ row. The commonest
-resting state after the burp is a combination of small defects, not the four-point relic, and the relic is a
-closed loop of four whose points lie along the torus, rather than always one curled column. For $\lambda > 1$ the
-ground state is a family, the flat torus and its twisted relatives, not unique, and the twisted family was checked
-along a walk, not exhaustively. The Metropolis acceptance and the ordered-pair proposal are our choices, not the published
-sampler's. Added caveats: the coarse front law (T12) was not established; at $\lambda = 1.5$ the torus is not
-metastable; the chain does not reproduce Ref.~\cite{T25} Fig.~3; the random-phase verdict at $\lambda = 1.25$ is
-inconclusive; the interchangeable-vertex estimate is transition-state reasoning; the relic anneals at fixed
-coupling and its number grows with the number of seeds; and ``stuck'' is the pre-registered definition.
-
 \begin{acknowledgments}
 Code, analysis and text were drafted with Claude (Anthropic), directed and checked by the author; every
 kernel is tested against an independent computation before use. A review of an earlier draft generated with
@@ -484,7 +459,7 @@ C.~A.~Trugenberger for correspondence.
 \begin{thebibliography}{99}
 \bibitem{T17} C.~A. Trugenberger, J. High Energy Phys. \textbf{09} (2017) 045, arXiv:1610.05934.
 \bibitem{KTB19} C.~Kelly, C.~A. Trugenberger, and F.~Biancalana, Class. Quantum Grav. \textbf{36}, 125012 (2019), arXiv:1901.09870.
-\bibitem{T25} C.~A. Trugenberger, \emph{Networks as the fundamental constituents of the universe}, arXiv:2512.17676.
+\bibitem{T25} C.~A. Trugenberger, \emph{Networks as the fundamental constituents of the universe}, J. Phys. Complex. \textbf{6}, 042001 (2025), arXiv:2512.17676.
 \bibitem{GV21} A.~Gorsky and O.~Valba, Phys. Rev. D \textbf{103}, 106013 (2021), arXiv:2101.04072.
 \bibitem{T24} C.~A. Trugenberger, \emph{Dark matter and dark energy in combinatorial quantum gravity}, arXiv:2409.09385.
 \bibitem{Creutz83} M.~Creutz, Phys. Rev. Lett. \textbf{50}, 1411 (1983).

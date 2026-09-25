@@ -1,6 +1,39 @@
-# Paper 1: changes proposed for a possible v2 (not applied)
+# Paper 1: corrections made before posting
 
-Paper 1 (`paper.tex` here) has been submitted to arXiv and is **not edited**. This file lists the changes a
+**Status (25 September 2026, evening).** All 23 changes below were applied with the owner's approval (commits
+383c8326 and 714eafa5). The arXiv submission was withdrawn before announcement and is resubmitted in the corrected
+version, so the paper carries no "Changes from the first version" section. The git history of `paper.tex` holds the
+exact text before and after. Where the applied text differs from a proposal below, it differs as follows, each
+checked against the record:
+
+- 2 and 5: the memoryless failures are named as "a band too tight for the sample, rare very long waits, or a wide
+  spread of waits", since two of T24's four failures are on the spread of the waits, not on a long tail (O65 (1)).
+- 6b: the relic's geometry is a new sentence ("its points spanning one to four of the torus's original columns and
+  lying along the torus, or occasionally a two-vertex twist"), content as O16.
+- 12: Table II's flat share at λ = 1.25 is 88 % (105 of 120, rounded as the table's other rows are), not 87 %.
+- 13a: T12 is described as "at g = 1.5 and 2.0, under Metropolis and Glauber acceptance" (17 of its 21 multi-patch
+  decays are at g = 2.0).
+- 13d: the random-phase verdict also names amendment 5 (a), whose replacement cumulant reads the edge of the scan.
+- 13f: the Outlook also names T25 (the relic survives when the box cools faster than it heals; O47).
+- Beyond the list: the abstract's "local edge-switch Metropolis dynamics" became "local edge-switch dynamics ...,
+  with Metropolis acceptance" (Q4: the switches are [KTB19]'s, Metropolis is ours).
+- Final edits before resubmission: the date line reads "25 September 2026"; the Outlook no longer calls the relic
+  "the kind of object a dark-matter relic of such a change would have to be", and the introduction no longer
+  motivates ordered-to-ordered changes by the proposal that dark matter is allotropes (it now says only that such
+  changes arise wherever a region is stuck in one discrete arrangement while another is favored, as with CQG's
+  allotropes), because the owner's hypothesis identifies dark matter with neither the relic nor the allotrope (VISION
+  Update 30, 17:50 ET; the owner, 25 September evening: allotropes as dark matter are not part of the program); and
+  Methods now says that the predictions behind
+  every verdict quoted were committed before their runs and that the two exploratory tests are labeled where they
+  appear (the spark-threshold configuration was committed together with its results, so "committed before" is not
+  shown for the exploratory tests).
+
+The text below is the proposal as written before any change was applied. Line numbers are those of the submitted
+draft.
+
+---
+
+*As first written:* Paper 1 (`paper.tex` here) has been submitted to arXiv and is **not edited**. This file lists the changes a
 referee reading of 25 September 2026 proposed, **only those checked against the record and the committed data and
 found to hold**, with the exact line, the current text, a proposed replacement, and the record entry that supports
 it. Most serious first. Whether to replace the arXiv version is the owner's decision.
