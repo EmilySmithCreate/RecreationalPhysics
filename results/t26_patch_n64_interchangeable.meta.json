@@ -1,0 +1,31 @@
+{
+  "config": {
+    "section": "T26",
+    "lambda": 1.25,
+    "leak": 0.0,
+    "save_adjacency": true,
+    "_purpose": "PREREGISTRATION.md T26 (written 2026-09-24, before any run): energy packed into one place in a cold flat sheet, sealed. Protocol patch at N = 64 with interchangeable points (graphity.interchangeable, ASSUMPTIONS Q20). Not exploratory.",
+    "name": "t26_patch_n64_interchangeable",
+    "side": [
+      8,
+      8
+    ],
+    "protocol": "patch",
+    "points": "interchangeable",
+    "radius": 2,
+    "energies": [
+      32,
+      64
+    ],
+    "replicas": 10,
+    "block": 100,
+    "n_blocks": 40,
+    "seed": 20262608
+  },
+  "config_path": "configs/t26_patch_n64_interchangeable.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T26, written 2026-09-24"
+}

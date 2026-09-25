@@ -1213,6 +1213,27 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     him narrows: was Fig. 3 a heating run from an ordered start, how many sweeps per coupling, and how is ħg defined
     in its weight.
 
+- **O46 Exploratory, at the owner's asking: guesses about the failed Gate C, tested on the record.** (2026-09-24,
+  night; `scripts/explore_gate_c_readings.py`; the paper's text and figures fetched from arXiv and searched.)
+  Three guesses died on the sources. **(a) The axis is not base 10:** the marker spacing on [T22] Fig. 3 shrinks
+  tenfold from left to right, which is what couplings 0.40 to 4.00 in steps of 0.05 give on a natural-log axis
+  and not what any grid gives on a base-10 one; the digitization stands. **(b) There is no normalization factor
+  to be had:** [T22] Eqs. (1), (2) with T = P = 0 give a weight exp(−4 Σ_e (2D − 2 − S_e)₊ / ħg), exactly our H
+  at λ = 1 in both dimensions, so ħg is our g and reading (ii), g/N^(1/3), was wrong in the paper's own terms
+  (its Eq. (7) defines ħg with the N^(1−2/D) factor inside). **(c) The paper states no protocol:** the words
+  sweep, Monte Carlo, Metropolis, anneal, heating and cooling do not occur in it. One guess survived and is
+  pre-registered as Gate C′: **(d) Eq. (3) writes the weight as exp(−S_EH/ħg) with S_EH of Eq. (1) already
+  carrying 1/g**, so read literally the weight goes as 1/g², which halves the curve's extent on the log axis.
+  Ranked on our existing slow runs with nothing free, that reading puts the crossing of 9 squares per vertex at
+  0.64 (cooling) and 0.85 (heating) against the published 0.666, the heating width at 0.67 against 0.645, and
+  the cooling width at 0.88; a free fit x = a ln g + b on the slow cooling leg chooses a = 0.45, next to the ½
+  the reading predicts. What it leaves: our 2-crossing sits 0.2 to the right and our plateau at 11.5 against
+  10.07, both in the direction expected if the published graphs allow triangles and pentagons, as the text says
+  its ground states do ("possible residual triangle and pentagon defects"). Against it: [T25] Fig. 3, the same
+  author's 2D figure of 2025, matched us under one power of g on its hot side (Gate B). So Gate C′ runs both a
+  3D check of the reading and a 2D width test at N = 2000, with the outcome pairs and what each means fixed
+  before the runs. *Ours, unverified; nothing here is a reading of the gate.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

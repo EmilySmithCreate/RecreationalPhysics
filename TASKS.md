@@ -391,6 +391,17 @@ track stops: no D = 3 result is interpreted until this is resolved. Next: ask th
 protocol, its Boltzmann weight and whether its graphs are bipartite. A second D = 3 target exists, [KTB19] Fig. 8b,
 but it used the cap he disputes.
 
+**Gate C′, 2026-09-24, night (PREREGISTRATION Gate C′; ASSUMPTIONS O46), at the owner's request to attack the gate
+without the author.** Guesses tested on the sources: the axis base, a normalization factor and the protocol are
+settled (no help there); the surviving guess is that the published weight goes as 1/g² (Eq. (3) read literally),
+which fits the 3D figure's position and shape with nothing free. Two runs on Batch via the queue
+(`cloud/queue/2026-09-24_gatec2.txt`): run A, the 3D curve over the squares of the published grid (`gatec2_3d_n500_a/b`),
+scored under that reading; run B, the 2D width at N = 2000 (`gatec2_2d_n2000_a/b`) against [T22] Fig. 2, which says
+whether the same code's 2D figure is compressed too. Read with `scripts/analyse_gatec2.py`. The outcome pairs and what
+each means are fixed in the pre-registration; our own expectation is that A holds and B says one power, which would
+leave a model difference in 3D (non-bipartite graphs with the triangle and pentagon terms, needing a six-link general
+kernel that does not exist yet).
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

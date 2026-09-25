@@ -248,3 +248,37 @@ that would go with it.
 - **Paper 4:** O20, T21 on the record; T26 and T27 running. Not drafted: its first result is tonight's.
 - **Paper 5:** waits on the six-link gate. **Paper 6:** waits on the owner's decision about a rule for canceling
   versions. **Paper 7:** the programme page, kept current.
+
+---
+
+## The gravity path (paper 5), sketched 24 September 2026, night, at the owner's asking
+
+The owner's test, in her terms: **does curved space move matter?** Everything below is design; nothing is
+pre-registered or run, and the dynamic rungs wait on the six-link gate (Gate C′). The exact rungs need no gate.
+
+1. **Exact, no run: the energetic interaction of two relics in a flat 3D torus.** The 2D result (O22) is that H is
+   a sum of per-edge terms, so two defects sharing no square are exactly additive, with a term of 16 only where
+   they touch. The same arithmetic on a 6 × 6 × 6 torus with two curled columns at every separation. Expected:
+   the same (no force at a distance). A pull here would be a surprise and would change everything below.
+2. **Exact, no run: the counting pull at fixed wiring.** O32's measurement in 3D: the symmetry count of the torus
+   with two identical relics at every separation, with the fast counter (Q20). Expected, as in 2D: a count that
+   is large only at special placements, so no smooth attraction. Both rungs are a day's work and settle whether
+   anything gravity-like can come from the arrangement alone.
+3. **T28, the dynamic pull (the real test; pre-register with her prediction first).** Two relics in a 3D torus
+   (6 × 6 × 6 or 8 × 8 × 8) at λ in the 3D window (1 < λ < 1.2, O41) or at 1.25 for one curled direction, held at a
+   coupling where the sheet rearranges but does not melt (the first job is to find that window, as the programme
+   says), with interchangeable points (her theory's weighting; per-move counting is affordable to about N = 216
+   with igraph at a millisecond a count). Observable: the distribution of the separation over a long run, which
+   gives the potential of mean force F(r) = −g ln P(r) up to a constant. Predictions on offer: (a) F falls with
+   r decreasing (a pull), and by the same amount for two relics of equal energy but different wiring (the
+   equivalence principle); (b) F is flat (no pull); (c) F rises (a push). What would earn the name gravity, from
+   the programme: attractive, growing with the energy present, the same for every kind of relic, and weakening
+   with distance roughly as 1/r² in 3D. A named-points control runs beside it, so that any pull can be
+   attributed to counting or to the energy.
+4. **The curling half, her way round: does the space around a relic curve using the relic's energy?** Read on
+   the same runs: the local-dimension census and the square deficit as a function of distance from a relic,
+   against the flat torus. If the deficit reaches beyond the relic's own vertices and scales with its energy,
+   that is curvature sourced by matter, in the model's terms.
+
+What blocks step 3 today: the six-link kernel's reproduction gate (rule 2), and a coupling window for a 3D sheet
+that rearranges without melting, which nobody has measured. What does not block steps 1 and 2: nothing.

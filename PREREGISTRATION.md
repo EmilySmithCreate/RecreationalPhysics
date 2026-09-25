@@ -1598,3 +1598,85 @@ Named. The interchangeable version at N = 64 is T21's, which melted either way; 
 ### What this cannot show
 
 As T26. The leak is a protocol knob (ASSUMPTIONS Q12), declared here, and the model's sweep is not a physical clock.
+
+## Gate Câ€². Which reading of [T22] Fig. 3's axis is ours, and does the same reading hold for its 2D figure? (six-link track; written 2026-09-24, night, before the runs)
+
+### Why
+
+Gate C failed (O43): under the two readings of the published axis tried, Ä§g = g and Ä§g = g/N^(1/3), our six-link
+curve has the wrong position and the wrong shape. The owner asked that the gate be attacked without the model's
+author, by guesses and tests. Tonight's reading of the paper's text (`scripts/explore_gate_c_readings.py`,
+exploratory, O46) settled three things and raised one. Settled: the axis is a natural log of couplings 0.40 to
+4.00 (the marker spacing shrinks tenfold across the axis, which only that grid gives); the paper states no
+protocol at all; and its Eqs. (1) and (2), read with one factor of g in the weight, give exactly our energy at
+Î» = 1, so no normalization factor is available. Raised: Eq. (3) writes the weight as exp(âˆ’S_EH/Ä§g) with S_EH of
+Eq. (1) already carrying 1/g, so read literally the weight goes as 1/gÂ², which compresses the whole curve by
+half on the log axis. On our existing slow runs that reading, with nothing free, puts the crossing of 9
+squares per vertex at 0.64 against the published 0.666 and the heating leg's width at 0.67 against 0.645, and
+a free two-parameter fit lands at a slope of 0.45 without being told; the readings with one power of g
+cannot fix the width at any factor. Against it: the same author's 2D figure of 2025 matched us under one
+power of g on its hot side (Gate B). So the question has two halves, and each gets a run.
+
+### What will be run
+
+- **Run A, `gatec2_3d_n500_a` and `_b`** (`scripts/run_cqg_d_sweep.py`; two replicas, one Batch job each):
+  D = 3, N = 500, Î» = 1, no cap, Metropolis, from a start with no squares (circulant 250, the Gate C start),
+  cooling then heating, 2,000 + 2,000 sweeps per coupling (Gate C's protocol P1). Couplings: the squares of the
+  published grid, g = (0.40 + 0.05k)Â² for k = 0 to 72 (0.16 to 16), plus g = 20.25, 25, 30.25, 36, 42.25, 49,
+  56.25, 64, so that reading (iv) below compares point to point and every reading is covered.
+- **Run B, `gatec2_2d_n2000_a` and `_b`**: the same runner at D = 2 (which is `cqg` draw for draw), N = 2000
+  (circulant 1000 with offsets 0, 1, 4, 10: four links, no squares), Î» = 1, both legs, 2,000 + 2,000 sweeps per
+  coupling, at g = e^(k/4) for k = 16 down to âˆ’8 (54.6 to 0.135), the range [T22] Fig. 2 spans under either
+  reading.
+
+### Definitions, fixed now
+
+**Readings** map our coupling to the published axis, x = a ln g + b: (i) a = 1, b = 0; (iii) a = 1, b = âˆ’ln 2;
+(iv) a = Â½, b = 0; (v) a = 1, b = âˆ’ln 5.5. Reading (ii), g/N^(1/3), is dropped: the paper defines Ä§g with the
+N^(1âˆ’2/D) factor already inside it (its Eq. (7)).
+
+**Run A, scored under reading (iv) only**, on each leg separately: (A1) the crossing of 9 squares per vertex
+within 0.10 of the published 0.666 in ln Ä§g; (A2) the crossing of 6 within 0.10 of 0.996; (A3) the width
+between those two crossings within 30 % of the published 0.330. **READING (iv) HOLDS** if A1 to A3 pass on at
+least one leg. **FAILS** otherwise. Reported, not scored: the crossing of 2 (published 1.311), the cold
+plateau (published 10.07), and A1 to A3 under readings (i), (iii) and (v).
+
+**Run B, scored on the width alone.** W = the ln g at which 4S/N falls through 0.17 minus the ln g at which it
+falls through 3.1, on each leg. [T22] Fig. 2 has 3.1 at ln Ä§g = âˆ’1 and 0.17 at +1, so its width is 2.0 with
+points one unit apart. **ONE POWER** if W < 3 on both legs (the published width is ours: one factor of g in the
+weight); **TWO POWERS** if W > 3 on both legs (the published axis is half ours: the 1/gÂ² reading); **MIXED**
+otherwise. Reported: the four published values 3.5, 3.1, 1.17, 0.17 at ln Ä§g = âˆ’2, âˆ’1, 0, 1 against ours at
+ln g = x and at 2x.
+
+`scripts/analyse_gatec2.py` will be written to these rules before either run is read, tested on rows with
+known answers.
+
+### What the pairs of outcomes mean, fixed now
+
+- A HOLDS and B TWO POWERS: the published weight is 1/gÂ² in both dimensions; Gate C is passed under reading
+  (iv), with the hot tail and the plateau differences attributed provisionally to the published graphs allowing
+  triangles and pentagons (a six-link general kernel would test that).
+- A HOLDS and B ONE POWER: the compression is not in the weight; the 3D curve is a narrower transition than
+  ours, a model difference (non-bipartite graphs with the triangle and pentagon terms are the named candidate),
+  and the six-link track stays stopped until that kernel exists.
+- A FAILS: every reading of the axis is exhausted; the difference is in the model or in an unstated protocol,
+  and the question goes to the model's author as before.
+
+### Predictions
+
+**The owner's:** she asked for guesses and tests and gave no pick. **Ours, unverified:** Run A, READING (iv)
+HOLDS on the cooling leg (the exploratory ranking gives 0.64 for the 9-crossing; the 6-crossing and the width
+are not yet computed, so this is a prediction and not a reading). Run B: ONE POWER, from our 2D curves at
+N â‰¤ 676, whose width between the same two levels is about 2.7 in ln g and should narrow with N. We therefore
+expect the second pair of outcomes, and say so before the runs: the 1/gÂ² reading fits the 3D figure's shape
+and position but is likely not what the code does, which would leave a model difference in three dimensions.
+
+### Named or interchangeable points
+
+Named, as the published runs.
+
+### What this cannot show
+
+The published protocol, which the paper does not state; whether its graphs are bipartite, which only a
+six-link kernel with triangles and pentagons can test; anything at Î» â‰  1.
+

@@ -17,7 +17,9 @@ git history.
    push-triggered workflow `.github/workflows/run_queue.yml` from the manifest `cloud/queue/2026-09-24_t24.txt`
    when that commit was pushed; check the Actions tab for the run and the results bucket for the CSVs, then
    download, check and commit them as T23's were. A finished local job has a `.csv` and no `.partial`. Never
-   commit a result a live job is still writing. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
+   commit a result a live job is still writing. Also on Batch, from a second push the same night: **Gate C′**
+   (`gatec2_3d_n500_a/b`, `gatec2_2d_n2000_a/b`; PREREGISTRATION Gate C′; O46), read with `scripts/analyse_gatec2.py`;
+   the reading and the criteria are fixed there. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
    `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O46 onward; O45 is the other session's exploratory Gate C reading), the
    pre-registration section, and the programme page. **The owner's predictions in T25 to T27 are inferred from
    her stated positions** (PREREGISTRATION says so in each); ask her to confirm or replace them before any
@@ -134,8 +136,12 @@ number is carried into a claim about gravity.
 0. **Read tonight's four tests** when they land (section 0, item 2), then bring the programme page (both files and
    the artifact), `series_plan.md`, and the paper drafts `docs/papers/relic/` and `docs/papers/fertile_window/`
    into line with the verdicts. Paper 4 (the black-hole piece) is not drafted; T26 and T27 are its first results.
-1. Gate C: failed (O43). Report P2 when it lands, and put the narrow question to the model's author before any
-   more six-link work.
+1. Gate C: failed (O43). Gate C′ (O46) is running: if reading (iv) holds in 3D and the 2D width says two powers, the
+   gate is passed under that reading and the six-link track reopens; if the 2D width says one power, the next build is
+   a six-link kernel that allows triangles and pentagons (the paper's own ground states have them); if A fails, the
+   question goes to the model's author. Report P2 when it lands. **The gravity test (piece 7) is designed as T28 in
+   `docs/papers/series_plan.md` and waits on this gate; its exact rungs (energetic and counting pull of two 3D relics
+   at fixed wiring) need no gate and can be computed now.**
 2. T23: read (O44). Piece 2 is being settled by T24 (running), whose gate 3′ was fixed before the run.
 3. The allotrope, once the graph arrives: stuck or not at λ = 1, its barrier, its lifetime against size.
 4. If not yet done: a cloud result checked bit for bit against the same config run on the laptop.
