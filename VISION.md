@@ -436,6 +436,30 @@ renamings of an arrangement. Nothing else in the energy or the moves changes.
 - **Gravity, step 1**: the search over one- and two-switch constructions for a curled dip in flat six-link space
   (`scripts/exact_relic_search_d.py`), recorded as O58 when it finishes.
 
+Update 30 (2026-09-25, 15:33 ET): **DECISION (the author's): the model gets a term for the interconnectedness of the
+large directions.** Why this page changes: the six- and eight-link results say the energy treats every direction as
+independent (each curled direction costs the same, each has its own wall, and nothing selects three; ASSUMPTIONS O49,
+O50, O54, O62, O64), and a reality target of the owner's (`docs/design/reality_targets.md`, target 1) is three large space
+directions and time. Her words, put in order: "there is some relationship with our three or four macro dimensions, that
+they have to go together, so there should definitely be a term related to it. Not all terms are interchangeable; not all
+relationships are the same. We know this about reality; we know it about our dimensional experience. I definitely think
+there is a factor, or a couple of constants, related to the interconnectedness of some number of our degrees of freedom."
+
+- **What is decided:** a new ingredient in the energy, with one or two constants, that makes the directions at a point
+  share a fate, so that a partly opened state costs more than either all curled or all open. Under S1 this is a new knob:
+  its form is fixed below before any run, every value run is published, and the model with it is our family, never CQG.
+- **The first form, ours, fixed now:** H_tie = κ Σ_v d(v)(D − d(v)), with d(v) the number of open directions at point v
+  (`graphity.dimension.local_dimension_d`) and D the number of directions. It is zero for a point fully curled or fully
+  open and largest for a point half open; κ ≥ 0 is its one constant (the tie's strength). *Ours, unverified:* this makes
+  directions prefer to open together but does not by itself select three; a second constant, the size k of the tied group
+  (so that, with four directions, three open and one curled could be favored), is the natural second step and will be
+  written down before it is used. The alternative the assistant described, a "wrapped" tie in which loops wound round the
+  curled directions hold them shut until they meet and cancel (the published idea that picks three), is kept as the
+  candidate for explaining "three" from the loops themselves.
+- **First tests, exact, before any run:** the walls and windows of the six- and eight-link ladders with the term, as
+  functions of κ: does a κ exist at which the second wall falls below the first (a cascade) while flat space's own wall
+  stays above the rungs? Then T30's and T33's protocols rerun with that κ, pre-registered with her claim about reality.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
