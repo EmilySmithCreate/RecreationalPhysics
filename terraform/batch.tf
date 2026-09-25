@@ -21,7 +21,9 @@ resource "aws_batch_compute_environment" "main" {
 
   compute_resources {
     type               = local.use_spot ? "FARGATE_SPOT" : "FARGATE"
-    max_vcpus          = 16
+    # 30 is the account's Fargate on-demand quota (checked 2026-09-25); raised from 16 at the owner's direction to run
+    # more of the queue at once. Takes effect when the deploy workflow applies it.
+    max_vcpus          = 30
     subnets            = data.aws_subnets.default.ids
     security_group_ids = [aws_security_group.job.id]
   }
