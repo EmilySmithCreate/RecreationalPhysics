@@ -28,6 +28,10 @@ makes them distinguishable.
 Newest first. Each entry says which results came in and which pieces they touched; every piece's row carries the
 date of its last change in its status cell.
 
+- **25 Sep 2026, 13:16 ET.** Launched: T40 (the push in four directions, piece 13), T41 (room for the burp in three
+  directions, piece 4), T42 (the fold with interchangeable points at λ = 1.02 and a named control, piece 8; a new
+  chain built and checked). Paper 5 (gravity) drafted. The two-week plan in the series plan. On the laptop: the
+  six-link relic sought by letting damaged tori settle (piece 7).
 - **25 Sep 2026, 12:50 ET.** (Times are US Eastern; the morning's entries were first labeled with the wrong time of day.)
   Read: T36 TRANSIENT, no lasting allotropes on a torus (piece 12); no stable six-link relic among one- and two-move
   objects (piece 7); T33, the push that is enough in three directions stalls in four (piece 13); T34 at 216 points melts
