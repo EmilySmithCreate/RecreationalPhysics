@@ -14,6 +14,8 @@ Config keys:
                   end (its first entry is not repeated).
     "n_melt", "n_equil", "n_meas", "replicas", "seed": as run_cqg_sweep.py; every (replica, step) gets its own
                   statistically independent seed.
+    "heat_equil", "heat_meas"  optional sweep counts for the heating leg only (default: n_equil, n_meas), for a slow
+                  cool followed by a fast heat. Configs without them run exactly as before.
 
 Columns: squares_per_vertex = 4S/N (the published axis; 12 on the cubic lattice at D = 3), phi = S / (D(D-1)/2 N)
 (1 on the flat D-torus), their error from a block bootstrap, tau_int in sweeps (ASSUMPTION Q6), acceptance, and
@@ -66,10 +68,13 @@ def main(path, out_dir="results"):
             run_chain(adj, side_u, 0.0, cfg["n_melt"], 1, seed_of(0), lam, glauber)       # hot start
             gs = [float(g) for g in cfg["couplings"]]
             k = 0
+            sweeps = {"cool": (cfg["n_equil"], cfg["n_meas"]),
+                      "heat": (cfg.get("heat_equil", cfg["n_equil"]), cfg.get("heat_meas", cfg["n_meas"]))}
             for leg, values in [("cool", gs), ("heat", gs[::-1][1:])]:
+                n_equil, n_meas = sweeps[leg]
                 for g in values:
                     k += 1
-                    s, x, acc = run_chain(adj, side_u, 1.0 / g, cfg["n_equil"], cfg["n_meas"], seed_of(k), lam, glauber)
+                    s, x, acc = run_chain(adj, side_u, 1.0 / g, n_equil, n_meas, seed_of(k), lam, glauber)
                     spv = 4.0 * s / n
                     _, spv_err, _, _ = block_bootstrap_mean_var(spv, seed=seed_of(k))
                     row = dict(N=n, D=dim, replica=rep, leg=leg, g=g, ln_g=float(np.log(g)),
