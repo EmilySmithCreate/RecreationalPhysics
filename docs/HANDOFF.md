@@ -102,6 +102,10 @@ number is carried into a claim about gravity.
   Eryk Kopczyński; RogueViz may produce one), to predict its lifetime at λ = 1. Allotropes wait until after his
   work on the order of the transition. **Not yet asked:** Gate C's question (O43: [T22] Fig. 3's protocol,
   moves and weight). Keep it for his reply, one question at a time.
+- **His reply of 25 September, evening** (paraphrase and a draft answer in `docs/outreach/reply_draft_2026-09-25_carlo.md`,
+  local only): the allotrope has no finite adjacency list, so piece 12 is now T36, a numerical search he suggested; and he
+  asked for a figure, drawn as `docs/figures/t13_n676_replica_exchange.{png,pdf}` by `scripts/plot_t13_n676_tempering.py`.
+  The draft answer carries Gate C's one question (O53). Emily sends; nothing is sent from here.
 - **S5, 25 September (the owner's report):** paper 1 has been submitted to arXiv, the model's author having endorsed it;
   it should appear within days, and she expects him to read it and respond within a couple of weeks. Do not prompt him.
   The pages say the door is open and the record is not yet read by a physicist.

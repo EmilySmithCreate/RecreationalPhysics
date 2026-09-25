@@ -28,6 +28,9 @@ makes them distinguishable.
 Newest first. Each entry says which results came in and which pieces they touched; every piece's row carries the
 date of its last change in its status cell.
 
+- **25 Sep 2026, evening.** The model's author replied: the drawn allotrope lives on an infinite hyperbolic graph; he
+  suggested a numerical search, pre-registered and running as T36 (piece 12). A figure drawn for him. The exchange
+  sign's exact averages recorded (piece 9). Two of six four-direction cells in; the verdict waits.
 - **25 Sep 2026, late afternoon.** The author's "proceed": the exchange phase on loops is the first rule of the new
   model to be tested; the search for a stable six-link relic goes ahead. First exact result of the rule (piece 9): a
   selection rule sparing every basic arrangement and the burp's products, forbidding a few per cent of damaged sheets.
