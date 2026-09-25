@@ -2348,3 +2348,48 @@ Named, as T30.
 ### What this cannot show
 
 Anything at λ = 1; whether the room a real universe had was enough.
+
+## T42. Does concentrated energy fold six-link space when the points are interchangeable, near λ = 1.02? (piece 8; written 2026-09-25, about 13:08 ET, before any run)
+
+### Why
+
+The owner's black-hole mechanism (VISION Update 27) has two halves: the walls (each fold makes the next easier) and the
+counting (the symmetric, fully curled state weighs more when the points are interchangeable). T34 tested the first half
+with named points at λ = 1.25, and at 216 points every cell melted (its 512-point cells are still running). O55 showed the
+second half exactly: with interchangeable points the fully curled state of 512 points, a gas of eight 6-cubes, carries
+3.2 × 10³⁹ symmetries against flat space's 12,288, a counting drive that balances the curling cost at λ ≈ 1.02 and at no
+larger λ. So λ = 1.02 is the one place in this family where her counting half could pay, and T34's own text names this run
+as the follow-up. The chain that can run it was built and validated today (`graphity.interchangeable_d`,
+`tests/test_interchangeable_d.py`: it reproduces the exact interchangeable averages at N = 18, which differ from the named
+ones there, and conserves energy exactly when sealed).
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with `"interchangeable": true`, flat 8 × 8 × 8 (N = 512), λ = 1.02, T34's spread
+protocol (the whole energy E in one store of a shared bath of 2N), E = 64, 128, 256, 512, 1024, 2048 (curling all three
+directions costs 12(λ − 1)N = 123; flat space's cheapest exit costs 64), eight replicas, 50,000 sweeps read every 250,
+final graphs saved. **A control** with the same chain and settings and the symmetry factor off (`"weighted": false`, named
+points), so that any difference is the counting's. 12 Batch jobs (`cloud/queue/2026-09-25_t42.txt`), seeds 20264264 to
+20271248. The runner image gains igraph 1.0.0 for the count (Dockerfile; nothing that ran before imports it).
+
+### Definitions, fixed now (`scripts/analyse_t42.py`, tested in `tests/test_t42.py` before any run)
+
+T34's rules unchanged (`analyse_t34.cells` and `verdict`): per replica FOLDED, MELTED or HEALED from the final census;
+per cell the majority; RE-CURLS if some cell has a FOLDED majority, MELTS if none does and some has a MELTED majority,
+HEALS if every cell healed, MIXED otherwise; ONE DIRECTION and CASCADE replicas reported. Applied separately to the
+interchangeable runs (the verdict for her question) and the named control.
+
+### Predictions
+
+**The owner's (VISION Update 27; inferred for this design): RE-CURLS with interchangeable points**, the counting paying for
+the fold where the energy allows it, and the control MELTS.
+
+**Ours, unverified: MELTS in both, with no difference the rules can see.** O55's counting drive exists only at full
+curling; every partial fold, the path to it, has fewer symmetries than flat space, so the counting pushes against the
+path, not along it, and the energy goes into melting first as in T34 and two dimensions. A single FOLDED replica with
+interchangeable points and none in the control would be a signal worth a larger run.
+
+### What this cannot show
+
+Anything at λ = 1 (CQG) or with a physical clock; the packed protocol (the per-vertex store is not implemented for
+interchangeable points); sizes where the gas of cubes does not fit (N must be a multiple of 64).

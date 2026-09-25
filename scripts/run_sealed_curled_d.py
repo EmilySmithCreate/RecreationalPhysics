@@ -31,6 +31,7 @@ from graphity import __version__                                          # noqa
 from graphity.cqg_d import surplus, torus, total_squares                  # noqa: E402
 from graphity.dimension import local_dimension_d, pieces_of               # noqa: E402
 from graphity.results import ResultWriter                                 # noqa: E402
+from graphity import interchangeable_d                                  # noqa: E402
 from graphity.sealed_d import energy_d, run_sealed_bath_d                 # noqa: E402
 
 D_BINS = 8       # d = 0 .. 6 and "7 or more"
@@ -69,6 +70,12 @@ def main(path, out_dir="results"):
     n = adj0.shape[0]
     every, n_sweeps = int(cfg.get("record_every", 100)), int(cfg["n_sweeps"])
     local_heat = bool(cfg.get("local_heat", False))
+    # T42 (2026-09-25): interchangeable points through graphity.interchangeable_d (the bath only); "weighted": false
+    # runs the same chain with named points, as a control. Absent, the runner is what it was.
+    interchangeable = bool(cfg.get("interchangeable", False))
+    weighted = bool(cfg.get("weighted", True))
+    if interchangeable and local_heat:
+        raise ValueError("interchangeable points are run with the shared bath only")
     baths = [n] if local_heat else [int(round(eval(str(c), {"N": n}))) for c in cfg["capacities"]]
     meta = dict(config=cfg, config_path=str(path), package=__version__, python=platform.python_version(),
                 numpy=np.__version__, numba=numba.__version__,
@@ -89,13 +96,21 @@ def main(path, out_dir="results"):
                     left = False
                     left_at = ""
                     base = dict(N=n, dims=label, C=c_bath, spark=float(spark), replica=rep, lam=lam, local_heat=local_heat)
+                    if interchangeable:                                   # T42; absent from earlier files
+                        base.update(interchangeable=True, weighted=weighted)
                     c0 = census(adj, lam)
                     out.write(dict(**base, sweep=0, **c0, bath_T=float(stores.mean()), total=float(stores.sum()),
                                    drift=0.0, left=False, final=False))
                     blocks = n_sweeps // every
+                    rng = np.random.default_rng(seed) if interchangeable else None
                     for b in range(1, blocks + 1):
-                        s, x, mean, tot, _ = run_sealed_bath_d(adj, side_u, stores, every, seed if b == 1 else -1, lam,
-                                                               by_vertex=local_heat)
+                        if interchangeable:
+                            s, x, _, tot = interchangeable_d.run(adj, part, every, seed, lam, demons=stores,
+                                                                 weighted=weighted, rng=rng)
+                            mean = tot / len(stores)
+                        else:
+                            s, x, mean, tot, _ = run_sealed_bath_d(adj, side_u, stores, every, seed if b == 1 else -1, lam,
+                                                                   by_vertex=local_heat)
                         if not left and ((s != s_start).any() or (x != x_start).any()):
                             left = True
                             left_at = b * every
