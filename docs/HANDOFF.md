@@ -148,6 +148,11 @@ number is carried into a claim about gravity.
 
 ## 5. Natural next lines (pre-register before running)
 
+0. **Decided, 25 September late afternoon (VISION Update 29, her "Proceed"):** the exchange phase on loops is the first
+   rule of the new model; its fermionic form is a selection rule (O57, `scripts/exact_exchange_sign.py`). Next for it: the
+   rule inside the interchangeable chain against the exact averages at N = 16 and 18 (`scripts/exact_small_averages.py`
+   is the reference), then the anyonic form. Gravity step 1, the six-link relic search (`scripts/exact_relic_search_d.py`),
+   is recorded as O58 when read.
 0. **The owner's direction, 25 September afternoon (VISION Update 28):** other models with loop and exchange rules
    (`docs/design/loop_exchange_brief.md`, candidate rules for her to choose under S1; nothing built); gravity as the
    target, at least directionally, at one λ (`docs/design/gravity_brief.md`: definitions, observable, targets, protocol,

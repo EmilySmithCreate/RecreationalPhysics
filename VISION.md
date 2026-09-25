@@ -411,6 +411,28 @@ runs are for.** Her words, put in order.
   six-link space behaves as the four-link did, no pull at a distance from energy or counting; and the stable relic the
   pull would act on has not been shown to exist in six links, which is the first thing the brief asks for.
 
+Update 29 (2026-09-25, late afternoon): **DECISION (the author's, "Proceed"): the exchange phase on loops is the first
+rule of the new model to be tested, and the search for a stable six-link relic (gravity, step 1) goes ahead.** Both were
+the recommendation of `docs/design/loop_exchange_brief.md` and `docs/design/gravity_brief.md`; her one word adopts them.
+Under S1 this is the dated decision for the first ingredient beyond the published family: an exchange sign on the
+renamings of an arrangement. Nothing else in the energy or the moves changes.
+
+- **The rule, in its first (fermionic) form** (*ours; the author's words are "loop and exchange rules"*). An arrangement's
+  weight is the signed sum over its renamings, Σ sgn(σ) over the side-preserving automorphisms σ, in place of their
+  count. The sign is a homomorphism, so the sum is |Aut| when every renaming is an even permutation and exactly zero when
+  any is odd. It is therefore a selection rule: **an arrangement with an odd renaming has zero weight**, the way two
+  fermions cannot share a state.
+- **First exact test, on saved arrangements** (`scripts/exact_exchange_sign.py`; ASSUMPTIONS O57). Every basic arrangement
+  is allowed: the flat tori (8 × 8, 16 × 10), the curled 16 × 4 torus and the 4-cube have only even renamings. Among the
+  burp's saved end states (T7 decays at 64 to 192 points, 7 read) none is forbidden. Among the 64-point spark states of
+  T26, 2 of 20 are forbidden; among the 144-point ones, 8 of 120. The forbidden ones carry a renaming of order two that
+  is an odd permutation. So the rule does not touch space, the curled state, the knot or the burp's product, and it
+  removes a few per cent of damaged arrangements. What it has not yet been asked: whether it changes any verdict when
+  it replaces the count in the interchangeable chain (the exact averages at N = 16 and 18 are the place to check, as
+  they were for the count), and whether the anyonic form (a phase per swap, in two dimensions) does more.
+- **Gravity, step 1**: the search over one- and two-switch constructions for a curled dip in flat six-link space
+  (`scripts/exact_relic_search_d.py`), recorded as O58 when it finishes.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

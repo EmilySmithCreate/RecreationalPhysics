@@ -28,6 +28,9 @@ makes them distinguishable.
 Newest first. Each entry says which results came in and which pieces they touched; every piece's row carries the
 date of its last change in its status cell.
 
+- **25 Sep 2026, late afternoon.** The author's "proceed": the exchange phase on loops is the first rule of the new
+  model to be tested; the search for a stable six-link relic goes ahead. First exact result of the rule (piece 9): a
+  selection rule sparing every basic arrangement and the burp's products, forbidding a few per cent of damaged sheets.
 - **25 Sep 2026, afternoon.** Paper 1 submitted to arXiv with the model's author's endorsement (S5: the door is open).
   The author's direction: other models with loop and exchange rules; gravity as the target, at least directionally, at
   one λ; the four-, six- and eight-link runs as groundwork. Exact for piece 7: in six links at fixed wiring no pull at a

@@ -1372,6 +1372,17 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   14 and is a dip, and its six-link analog, if there is one, needs more than one switch. T34's saved end states are the
   first place to look; a search over two- and three-switch constructions is the exact alternative. *Ours, exact.*
 
+- **O57 The exchange-phase rule, fermionic form, exact on saved arrangements: a selection rule that spares every basic
+  arrangement and the burp's products and forbids a few per cent of damaged sheets.** (2026-09-25; VISION Update 29;
+  `scripts/exact_exchange_sign.py`, igraph VF2 listing every side-preserving automorphism, parity by cycle decomposition.)
+  Signed sum Σ sgn(σ) over the automorphism group: |Aut| if all even, 0 if any odd. Flat 8 × 8 (A = 256), flat 16 × 10
+  (320), curled 16 × 4 (128), the 4-cube (192): all even, allowed. T7d decay end states, 7 read: allowed. T26 N = 64 named
+  patch states: 2 of 20 forbidden (A = 4 with 2 odd; A = 2 with 1 odd). T26 N = 144 store states: 8 of 120 forbidden.
+  *Ours, unverified:* the forbidden arrangements have a twofold symmetry that is a single-transposition-like renaming,
+  which is what a pair of points with matching surroundings gives; the hard-core rule already forbids full twins, and
+  the exchange sign forbids the next thing to them. Not yet asked: the rule inside the chain at N = 16 and 18 against
+  exact averages; the anyonic form.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
