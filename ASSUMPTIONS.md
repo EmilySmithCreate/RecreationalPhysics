@@ -1648,7 +1648,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   no resting place until flat.** Whether a run then cascades to flat space rather than to damage is the dynamical test,
   not yet run. Eight links are being computed. What the follow form does not do: select three (with four directions it
   drives all four open); that is the second constant of Update 30.
-  **Addendum, 17:11 ET: eight links, exact** (`scripts/exact_walls_tie_follow_d.py` on the gas of four 8-cubes,
+  **Addendum, 17:08 ET: eight links, exact** (`scripts/exact_walls_tie_follow_d.py` on the gas of four 8-cubes,
   4 × 4 × 4 × 12, 4 × 4 × 8 × 8 and 4 × 8 × 8 × 8; κ = 0 reproduces O50's walls). The same shape as six links. At
   λ = 1.25 the fully curled gas's first move gains +60κ from the tie, so X grows more stuck with κ; the three-, two- and
   one-curled tori lose their walls at κ ≈ 0.6, 1.4 and 3.3 (walls 20, 40, 80 at κ = 0; −14 at κ = 1, −16 at κ = 2,
