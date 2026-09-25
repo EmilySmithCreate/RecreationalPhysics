@@ -1654,8 +1654,9 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   one-curled tori lose their walls at κ ≈ 0.6, 1.4 and 3.3 (walls 20, 40, 80 at κ = 0; −14 at κ = 1, −16 at κ = 2,
   −16 at κ = 4 respectively), so above κ ≈ 3.3 no partly open state holds; at λ = 1.10 the one-curled torus loses its
   wall between κ = 2 and 4. Flat four-direction space was not in this run; since the tie counts nothing at a flat point
-  and κ at each point a flat-space move leaves with one direction curled, its wall (128) cannot fall with κ, and this is
-  to be confirmed by the same script.
+  and κ at each point a flat-space move leaves with one direction curled, its wall (128) cannot fall with κ; confirmed
+  the same afternoon on flat 6 × 6 × 6 × 6 at λ = 1.10 and 1.25: 128 at κ = 0, 1, 2, 4 and 8, the cheapest move
+  touching no tie at all. So with eight links too the follow form leaves flat space exactly as stable as before.
 
 - **O69 T34: concentrated energy does not fold six-link flat space; it excites it (MELTS).** (2026-09-25, 17:08 ET;
   PREREGISTRATION T34, reading; `results/t34_*_n216.csv`, `results/t34_*_n512.csv`.) Flat 6 × 6 × 6 and 8 × 8 × 8 at
