@@ -489,6 +489,15 @@ there is a factor, or a couple of constants, related to the interconnectedness o
   unequal; if each direction carries its own curling cost, three costs chosen to match three numbers would be a fit, not
   a prediction. It becomes a prediction if the model's own requirements (X stuck, the cascade running, a clean birth)
   force the three costs into a narrow range that turns out to contain the measured ratios.
+- **The author's answer, 17:17 ET: 5 % may be all three directions can take at once.** Her words, put in order: 5 %
+  could be all our three dimensions can handle at a time, so even though red could give more, it can only emit that 5 %;
+  that leaves the black hole with plenty for many more burps of the red kind. *Ours, unverified:* this is piece 4 (room
+  for the burp) seen from the other side. The model already measures a capacity: sealed, a new space completes cleanly
+  only if its surroundings can hold the energy released, and melts otherwise (T9, T18). Her claim turns that into a number
+  the model can compute: the largest share of a burp that flat three-direction space can take in without melting, set
+  against the burp's own release per point. If that share came out near 5 % without being tuned, it would be the first
+  measured number in the programme to land on an observed one. It also changes the ordering problem raised with the
+  triad: red need not release the least; the new space may only be able to accept a small part of what red offers.
 
 ## The target ("the spot")
 

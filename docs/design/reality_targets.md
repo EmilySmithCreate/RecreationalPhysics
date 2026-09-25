@@ -49,6 +49,10 @@ Earlier predictions stay on the record as written.
   energy is the kind that can activate the burp); dark matter and dark energy come from the other two directions, so the
   three parts of the energy budget are set by the three directions' uncurling (VISION Update 30).
 
+- **Target 3, the 5 % (17:17 ET):** the ordinary share may be all three directions can take at a time; the black hole keeps
+  the rest for more burps of the red kind. Model counterpart: the largest share of a burp flat three-direction space can
+  absorb without melting (piece 4, T9, T18), to be computed against the burp's release (VISION Update 30).
+
 ## Questions for the owner (answer by voice is fine)
 
 For each, in a sentence: how do you expect reality to work, and if the model does not show it, what is it missing?
