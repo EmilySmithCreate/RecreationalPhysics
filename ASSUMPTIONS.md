@@ -1320,7 +1320,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   a rewired torus that is stickier than the perfect one, or a second metastable arrangement one move away, would give a
   wait of this shape; the saved graphs of the two outliers are the place to look. Not a rule to repair after the fact.
 - **O53 Gate C′: the 1/g² reading fails, and the same code's 2D figure is not compressed; a plain factor of 2 matches
-  the ordered side and the transition's upper half, and the hot tail and plateau point at non-bipartite graphs.**
+  a factor of 2 matches the ordered side and the transition's upper half, and the hot tail and plateau point at non-bipartite graphs
+  (softened the same evening; see the addendum).**
   (2026-09-25; PREREGISTRATION Gate C′; four Batch jobs.) Run A under reading (iv): FAILS (9-crossing 0.69 to 0.72,
   6-crossing 0.83, width 0.11 to 0.15 against 0.666, 0.996, 0.330). Run B: ONE POWER (W = 1.53 to 1.61 against 2.0).
   Our 3D transition at N = 500 is abrupt with hysteresis: cooling 9 → 6 within 0.29 of ln g, heating within 0.04.
@@ -1331,6 +1332,12 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   once where Eq. (1) sums the Ricci scalar over vertices, which counts each edge twice. **Gate C stays failed; the
   six-link track proceeds under VISION Update 24's caveat;** the next test of the model-difference reading is a
   six-link kernel that allows triangles and pentagons, and the question of the factor goes to the model's author.
+  **Addendum, 25 September, evening: the triangles-and-pentagons reading was given too much weight.** The published hot
+  end, 1.09 squares per vertex, sits at our bipartite floor (1.147 at N = 500), where graphs carrying triangles and
+  pentagons would sit near half that (O43 (c)); and the published plateau, 10.1, is reproduced by a fast heating leg from
+  a slowly cooled state (O45). So the better-supported reading is a coupling factor plus a short, non-equilibrium
+  protocol, both testable with the bipartite kernel we have. A six-link kernel allowing triangles and pentagons is needed
+  only if the model's author says his graphs were not bipartite. *Ours, unverified.*
 - **O54 Six links: the activation is fixed with size (T32, FIXED WALL, sharp at 16); one push opens one curled
   direction, not both (T30, FIRST ONLY); a gas of 6-cubes descends two rungs.** (2026-09-25; PREREGISTRATION T30, T32;
   14 Batch jobs.) T32: E\* = 16 at N = 192 to 512, nothing below leaves, everything at or above does, exactly O49's wall.

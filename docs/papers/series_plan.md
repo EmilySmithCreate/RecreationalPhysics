@@ -311,6 +311,8 @@ that rearranges without melting, which nobody has measured. What does not block 
   now be drafted from T30, T32, O41, O49 and O50, with the open gate stated.
 - **Who to ask, updated:** the model's author, one question: whether his 3D action sums over edges once (a factor of 2
   against ours) and whether his 3D graphs carry triangles and pentagons; the data to attach is O53's table.
+  *Revised 25 September, evening:* held for when the six-link paper is ready for him to read (it would be the first he hears
+  of our 3D work); the triangles-and-pentagons half is the weaker reading (O53 addendum).
 
 ---
 
