@@ -1311,6 +1311,39 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   separation, O32's measurement in 3D) and a sealed variant in which relics move only when energy is delivered to
   them, which would be a new protocol to declare. *Ours; exploratory; the six-link gate is open.*
 
+- **O52 T24, the λ map a third time: the repaired energy check passes everywhere; the window is INCONCLUSIVE by the
+  letter for a third distinct reason; the edge BREAK-UP BEGINS AT THE EDGE.** (2026-09-25; PREREGISTRATION T24; 28
+  Batch jobs.) Gate 3′ passes in 28 of 28 cells; (b) and (c) hold in every window cell; (a′) holds in 24 of 28 and
+  fails where one or two waits of 24 to 76 τ sit in 120 (N = 64 at λ = 1.25 and 1.30; N = 192 at 1.30; N = 144 at
+  1.35), which makes λ = 1.25 and 1.30 unread under the all-sizes rule. The rare very long wait is now on the record at
+  λ = 1.05 (T8, O42), 1.25 and 1.30, always at the smaller sizes. *Ours, unverified:* a first exit that falls back into
+  a rewired torus that is stickier than the perfect one, or a second metastable arrangement one move away, would give a
+  wait of this shape; the saved graphs of the two outliers are the place to look. Not a rule to repair after the fact.
+- **O53 Gate C′: the 1/g² reading fails, and the same code's 2D figure is not compressed; a plain factor of 2 matches
+  the ordered side and the transition's upper half, and the hot tail and plateau point at non-bipartite graphs.**
+  (2026-09-25; PREREGISTRATION Gate C′; four Batch jobs.) Run A under reading (iv): FAILS (9-crossing 0.69 to 0.72,
+  6-crossing 0.83, width 0.11 to 0.15 against 0.666, 0.996, 0.330). Run B: ONE POWER (W = 1.53 to 1.61 against 2.0).
+  Our 3D transition at N = 500 is abrupt with hysteresis: cooling 9 → 6 within 0.29 of ln g, heating within 0.04.
+  Reported, not scored: under x = ln g − ln 2 the cooling legs give 0.677/0.737, 0.970/0.961, widths 0.29/0.22, all
+  inside the tolerances (iv) was scored by; the published hot tail falls to 2 squares per vertex a factor 2.8 sooner
+  in coupling than ours and its plateau is 10.07 against our 11.4, both what graphs with residual triangles and
+  pentagons would give. Where a factor of exactly 2 could come from (*ours, unverified*): an action summed over edges
+  once where Eq. (1) sums the Ricci scalar over vertices, which counts each edge twice. **Gate C stays failed; the
+  six-link track proceeds under VISION Update 24's caveat;** the next test of the model-difference reading is a
+  six-link kernel that allows triangles and pentagons, and the question of the factor goes to the model's author.
+- **O54 Six links: the activation is fixed with size (T32, FIXED WALL, sharp at 16); one push opens one curled
+  direction, not both (T30, FIRST ONLY); a gas of 6-cubes descends two rungs.** (2026-09-25; PREREGISTRATION T30, T32;
+  14 Batch jobs.) T32: E\* = 16 at N = 192 to 512, nothing below leaves, everything at or above does, exactly O49's wall.
+  T30 at λ = 1.25: the first direction opens as a front to the one-curled rung at every bath from N/4 to 2N, the second
+  never; at N/8 the heat drives 2 of 12 replicas to a defective near-flat state; at λ = 1.10 the spark's one move sits
+  without growing (STUCK). The gas of eight 6-cubes at λ = 1.10 with a spark of 8 joins and opens two of three
+  directions in 21 of 24 replicas, 40 % of points fully open in small patches, never one space. **For the owner's rule
+  that the directions curl and open together:** in the six-link model they open one at a time, each behind its own
+  wall (16, then 36), and the release of the first rung in a cold bath does not pay the second; her prediction failed,
+  ours held. The gas result is the one to look at again: two rungs in one run from the fully curled state, which the
+  walls (8, then the joining moves) allowed at λ = 1.10 where the 4 × 4 × 18 torus's second wall (43) did not.
+  *Every six-link result carries VISION Update 24's caveat.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

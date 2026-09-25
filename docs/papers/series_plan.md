@@ -300,3 +300,14 @@ that rearranges without melting, which nobody has measured. What does not block 
   time). Exact before the runs (O50): the walls double from rung to rung and the flat state's wall is 128, so a hot bath
   can drive a cascade in four dimensions without melting the flat state. A companion paper for the four-direction result
   would follow the three-direction one; neither is drafted.
+
+### 25 September, morning: the overnight Batch results, read
+
+- **Paper 1 / piece 2:** T24 INCONCLUSIVE by the letter for a third distinct reason; gate 3′ passed in all 28 cells; the
+  rare long wait (24 to 76 τ) at small N is the thing to study next (O52). The edge break-up held a third time.
+- **The six-link companion:** T32 FIXED WALL (16 at every size, sharp); T30 FIRST ONLY (the directions open one at a
+  time; the gas of 6-cubes descends two rungs) (O54). The reproduction gate: Gate C′ run A FAILS, run B ONE POWER; a
+  factor of two matches the ordered side and the hot tail points at non-bipartite graphs (O53). The companion paper can
+  now be drafted from T30, T32, O41, O49 and O50, with the open gate stated.
+- **Who to ask, updated:** the model's author, one question: whether his 3D action sums over edges once (a factor of 2
+  against ours) and whether his 3D graphs carry triangles and pentagons; the data to attach is O53's table.

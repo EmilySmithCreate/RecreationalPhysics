@@ -21,7 +21,12 @@ git history.
    them as T23's were. **To see the Batch jobs' state from a laptop without the project account's credentials:** push a
    change to `cloud/status/request.txt` (any text); the `queue_status` workflow then writes `cloud/status/latest.md`
    (job states and the bucket's finished results) and commits it, readable from the repository.
-   **Read and recorded tonight:** T25 FREEZES IN (O47), T27 STAYS MELTED and T26 MELTS (O48). A finished local job has a `.csv` and
+   **Read and recorded (24 to 25 September):** T25 FREEZES IN (O47), T27 STAYS MELTED and T26 MELTS (O48), T24 INCONCLUSIVE
+   by the letter with the edge BREAK-UP (O52), Gate C′ run A FAILS and run B ONE POWER (O53), T32 FIXED WALL and T30
+   FIRST ONLY (O54). **Downloading from the bucket:** the keys in the repository's git-ignored `.env` are the project
+   account's (the owner said so on 25 September); `scratchpad/download_results.ps1` of that session loaded them into its
+   own process, synced the bucket, and `check_and_copy.py` compared each set's recorded config with the committed one
+   before copying it into `results/`. Never print or commit them. **Still running on Batch: T33** (six jobs). A finished local job has a `.csv` and
    no `.partial`. Never commit a result a live job is still writing. **Read each finished test with its analyzer** (`scripts/analyse_t24.py`,
    `analyse_t25.py`, `analyse_t26.py`) and record the verdict in ASSUMPTIONS (next numbers O46 onward; O45 is the other session's exploratory Gate C reading), the
    pre-registration section, and the programme page. **The owner's predictions in T25 to T27 are inferred from

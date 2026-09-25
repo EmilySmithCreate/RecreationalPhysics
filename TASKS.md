@@ -351,6 +351,11 @@ positions** and marked so until she confirms or replaces them; T24 keeps her T23
 Accept: each read under its pre-registered rules, the verdict recorded in ASSUMPTIONS and the programme, and
 the inferred predictions confirmed or replaced by the owner before any verdict is quoted as hers.
 
+**All four read, 25 September (O47, O48, O52):** T25 FREEZES IN (hers, confirmed after the reading), T26 MELTS (her confirmed
+prediction fails), T27 STAYS MELTED (ours), T24 INCONCLUSIVE by the letter for a third reason (one extreme wait in 120 at four
+cells) with the edge BREAK-UP a third time. Gate C′ (O53): run A FAILS, run B ONE POWER. T30 FIRST ONLY and T32 FIXED
+WALL (O54).
+
 ## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
 
 **Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a

@@ -1422,6 +1422,24 @@ As T23: anything outside λ = 1.05 to 1.35, at other couplings, beyond N = 192, 
 does it show the resting states are stable: they are what the decay rests on at the stop, at g = 1.5, and T19 says a
 leftover anneals at fixed coupling.
 
+#### Reading, 25 September 2026, morning: the window INCONCLUSIVE by the letter, for a third distinct reason; the edge BREAK-UP BEGINS AT THE EDGE
+
+`python scripts/analyse_t24.py` (tests `tests/test_t24.py`), 28 cells of 120 decays from AWS Batch. **Gate 3′ passes in
+all 28 cells**: every decay that reached 75 % has a valid saved graph, and the exact reading of the final wiring is
+what the old gate could not do (at λ = 1.30 the release read exactly is 1.130 to 1.139 per point against 1.2, with 23
+to 42 decays of 120 resting on states other than the flat torus or the ledge, all combinations of small defects). Two
+orders side by side, (b), and one front, (c), hold in every window cell (d ∈ {1, 2} at half conversion 0.977 to
+1.000; largest piece 0.84 to 1.00). **The memoryless check (a′) holds in 24 of 28 cells** and fails in four: λ = 1.25,
+N = 64 (CV 1.93); λ = 1.30, N = 64 (4.69) and N = 192 (1.53); λ = 1.35, N = 144 (1.41). Each failure is one or two
+extreme waits: 20,070 sweeps (24 τ) at 1.25 and 31,955 (76 τ) at 1.30, both at N = 64, with the medians where an
+exponential puts them. Because the per-λ status needs every gated size sharp, λ = 1.25 and 1.30 are "unread" and
+**the window is INCONCLUSIVE**. **The edge: BREAK-UP BEGINS AT THE EDGE** (ending flat 0.74 → 0.49; several pieces
+at 25 % 0.43 → 0.68), the owner's prediction for the third time. The waiting-time law, not scored: within 25 % of τ
+in 17 of 24 window cells, running 20 to 50 % long at λ ≥ 1.25 with the 200-sweep watch. **Said plainly:** three runs,
+three different criteria tripped (the band, the energy catalog, one extreme wait in 120), and the physics has read
+the same each time; the rare very long wait at small N is now seen at three settings and is a thing to study, not to
+legislate away. A repair, if the owner wants one, is a new pre-registration. Details in ASSUMPTIONS O52.
+
 ## T25. Does the scrap freeze in before it heals, when the box cools? (series paper 2; programme piece 6; written 2026-09-24, night, before any run)
 
 ### Why
@@ -1624,18 +1642,18 @@ control), twelve replicas each: every cell has a MELTED majority, 57 of 60 leaki
 anywhere, no melt-then-fold. **Verdict STAYS MELTED.** Ours held; the prediction inferred for the owner (FOLDS BEFORE IT
 FLATTENS) fails. Details in ASSUMPTIONS O48.
 
-## Gate Câ€². Which reading of [T22] Fig. 3's axis is ours, and does the same reading hold for its 2D figure? (six-link track; written 2026-09-24, night, before the runs)
+## Gate C′. Which reading of [T22] Fig. 3's axis is ours, and does the same reading hold for its 2D figure? (six-link track; written 2026-09-24, night, before the runs)
 
 ### Why
 
-Gate C failed (O43): under the two readings of the published axis tried, Ä§g = g and Ä§g = g/N^(1/3), our six-link
+Gate C failed (O43): under the two readings of the published axis tried, ħg = g and ħg = g/N^(1/3), our six-link
 curve has the wrong position and the wrong shape. The owner asked that the gate be attacked without the model's
 author, by guesses and tests. Tonight's reading of the paper's text (`scripts/explore_gate_c_readings.py`,
 exploratory, O46) settled three things and raised one. Settled: the axis is a natural log of couplings 0.40 to
 4.00 (the marker spacing shrinks tenfold across the axis, which only that grid gives); the paper states no
 protocol at all; and its Eqs. (1) and (2), read with one factor of g in the weight, give exactly our energy at
-Î» = 1, so no normalization factor is available. Raised: Eq. (3) writes the weight as exp(âˆ’S_EH/Ä§g) with S_EH of
-Eq. (1) already carrying 1/g, so read literally the weight goes as 1/gÂ², which compresses the whole curve by
+λ = 1, so no normalization factor is available. Raised: Eq. (3) writes the weight as exp(−S_EH/ħg) with S_EH of
+Eq. (1) already carrying 1/g, so read literally the weight goes as 1/g², which compresses the whole curve by
 half on the log axis. On our existing slow runs that reading, with nothing free, puts the crossing of 9
 squares per vertex at 0.64 against the published 0.666 and the heating leg's width at 0.67 against 0.645, and
 a free two-parameter fit lands at a slope of 0.45 without being told; the readings with one power of g
@@ -1645,32 +1663,32 @@ power of g on its hot side (Gate B). So the question has two halves, and each ge
 ### What will be run
 
 - **Run A, `gatec2_3d_n500_a` and `_b`** (`scripts/run_cqg_d_sweep.py`; two replicas, one Batch job each):
-  D = 3, N = 500, Î» = 1, no cap, Metropolis, from a start with no squares (circulant 250, the Gate C start),
+  D = 3, N = 500, λ = 1, no cap, Metropolis, from a start with no squares (circulant 250, the Gate C start),
   cooling then heating, 2,000 + 2,000 sweeps per coupling (Gate C's protocol P1). Couplings: the squares of the
-  published grid, g = (0.40 + 0.05k)Â² for k = 0 to 72 (0.16 to 16), plus g = 20.25, 25, 30.25, 36, 42.25, 49,
+  published grid, g = (0.40 + 0.05k)² for k = 0 to 72 (0.16 to 16), plus g = 20.25, 25, 30.25, 36, 42.25, 49,
   56.25, 64, so that reading (iv) below compares point to point and every reading is covered.
 - **Run B, `gatec2_2d_n2000_a` and `_b`**: the same runner at D = 2 (which is `cqg` draw for draw), N = 2000
-  (circulant 1000 with offsets 0, 1, 4, 10: four links, no squares), Î» = 1, both legs, 2,000 + 2,000 sweeps per
-  coupling, at g = e^(k/4) for k = 16 down to âˆ’8 (54.6 to 0.135), the range [T22] Fig. 2 spans under either
+  (circulant 1000 with offsets 0, 1, 4, 10: four links, no squares), λ = 1, both legs, 2,000 + 2,000 sweeps per
+  coupling, at g = e^(k/4) for k = 16 down to −8 (54.6 to 0.135), the range [T22] Fig. 2 spans under either
   reading.
 
 ### Definitions, fixed now
 
-**Readings** map our coupling to the published axis, x = a ln g + b: (i) a = 1, b = 0; (iii) a = 1, b = âˆ’ln 2;
-(iv) a = Â½, b = 0; (v) a = 1, b = âˆ’ln 5.5. Reading (ii), g/N^(1/3), is dropped: the paper defines Ä§g with the
-N^(1âˆ’2/D) factor already inside it (its Eq. (7)).
+**Readings** map our coupling to the published axis, x = a ln g + b: (i) a = 1, b = 0; (iii) a = 1, b = −ln 2;
+(iv) a = ½, b = 0; (v) a = 1, b = −ln 5.5. Reading (ii), g/N^(1/3), is dropped: the paper defines ħg with the
+N^(1−2/D) factor already inside it (its Eq. (7)).
 
 **Run A, scored under reading (iv) only**, on each leg separately: (A1) the crossing of 9 squares per vertex
-within 0.10 of the published 0.666 in ln Ä§g; (A2) the crossing of 6 within 0.10 of 0.996; (A3) the width
+within 0.10 of the published 0.666 in ln ħg; (A2) the crossing of 6 within 0.10 of 0.996; (A3) the width
 between those two crossings within 30 % of the published 0.330. **READING (iv) HOLDS** if A1 to A3 pass on at
 least one leg. **FAILS** otherwise. Reported, not scored: the crossing of 2 (published 1.311), the cold
 plateau (published 10.07), and A1 to A3 under readings (i), (iii) and (v).
 
 **Run B, scored on the width alone.** W = the ln g at which 4S/N falls through 0.17 minus the ln g at which it
-falls through 3.1, on each leg. [T22] Fig. 2 has 3.1 at ln Ä§g = âˆ’1 and 0.17 at +1, so its width is 2.0 with
+falls through 3.1, on each leg. [T22] Fig. 2 has 3.1 at ln ħg = −1 and 0.17 at +1, so its width is 2.0 with
 points one unit apart. **ONE POWER** if W < 3 on both legs (the published width is ours: one factor of g in the
-weight); **TWO POWERS** if W > 3 on both legs (the published axis is half ours: the 1/gÂ² reading); **MIXED**
-otherwise. Reported: the four published values 3.5, 3.1, 1.17, 0.17 at ln Ä§g = âˆ’2, âˆ’1, 0, 1 against ours at
+weight); **TWO POWERS** if W > 3 on both legs (the published axis is half ours: the 1/g² reading); **MIXED**
+otherwise. Reported: the four published values 3.5, 3.1, 1.17, 0.17 at ln ħg = −2, −1, 0, 1 against ours at
 ln g = x and at 2x.
 
 `scripts/analyse_gatec2.py` will be written to these rules before either run is read, tested on rows with
@@ -1678,7 +1696,7 @@ known answers.
 
 ### What the pairs of outcomes mean, fixed now
 
-- A HOLDS and B TWO POWERS: the published weight is 1/gÂ² in both dimensions; Gate C is passed under reading
+- A HOLDS and B TWO POWERS: the published weight is 1/g² in both dimensions; Gate C is passed under reading
   (iv), with the hot tail and the plateau differences attributed provisionally to the published graphs allowing
   triangles and pentagons (a six-link general kernel would test that).
 - A HOLDS and B ONE POWER: the compression is not in the weight; the 3D curve is a narrower transition than
@@ -1692,8 +1710,8 @@ known answers.
 **The owner's:** she asked for guesses and tests and gave no pick. **Ours, unverified:** Run A, READING (iv)
 HOLDS on the cooling leg (the exploratory ranking gives 0.64 for the 9-crossing; the 6-crossing and the width
 are not yet computed, so this is a prediction and not a reading). Run B: ONE POWER, from our 2D curves at
-N â‰¤ 676, whose width between the same two levels is about 2.7 in ln g and should narrow with N. We therefore
-expect the second pair of outcomes, and say so before the runs: the 1/gÂ² reading fits the 3D figure's shape
+N ≤ 676, whose width between the same two levels is about 2.7 in ln g and should narrow with N. We therefore
+expect the second pair of outcomes, and say so before the runs: the 1/g² reading fits the 3D figure's shape
 and position but is likely not what the code does, which would leave a model difference in three dimensions.
 
 ### Named or interchangeable points
@@ -1703,7 +1721,22 @@ Named, as the published runs.
 ### What this cannot show
 
 The published protocol, which the paper does not state; whether its graphs are bipartite, which only a
-six-link kernel with triangles and pentagons can test; anything at Î» â‰  1.
+six-link kernel with triangles and pentagons can test; anything at λ ≠ 1.
+
+#### Reading, 25 September 2026, morning: run A FAILS; run B ONE POWER
+
+`python scripts/analyse_gatec2.py` (tests `tests/test_gatec2.py`). **Run A, reading (iv): FAILS** in all four legs: the
+9-crossing lands at 0.685 and 0.715 on the cooling legs (A1 passes) but the 6-crossing at 0.83 (A2 fails) and the
+width at 0.11 to 0.15 against 0.33 (A3 fails); the heating legs jump from 9 to 6 within 0.02 of ln ħg. **Run B: ONE
+POWER**, W = 1.53 to 1.61 in ln g on every leg against the published 2.0, so the same code's 2D figure is not
+compressed. This is the third outcome pair: the 1/g² reading is dead, every reading of the axis is exhausted under
+the pre-registered criteria, and the question goes to the model's author. **Reported, not scored:** under reading
+(iii), a plain factor of 2 in the coupling, the cooling legs put the 9-crossing at 0.677 and 0.737, the 6-crossing at
+0.970 and 0.961, and the width at 0.29 and 0.22, all inside the tolerances that (iv) was scored by; what differs from
+the published curve under (iii) is the hot tail (our 2-crossing at 2.35 against 1.31, a factor of 2.8 in coupling) and
+the plateau (11.4 against 10.07). Both are in the direction of graphs that allow triangles and pentagons, which the
+paper says its ground states carry. That is an observation made after the run and is not a verdict; a six-link kernel
+with triangles and pentagons is what would test it. Details in ASSUMPTIONS O53.
 
 
 ## T30. Six links: does one push open both curled directions, and how much room does that need? (piece 11; written 2026-09-25, before any run)
@@ -1783,6 +1816,22 @@ Anything about the published model at λ = 1 (Gate C′ is open; VISION Update 2
 six-link result carries); anything about how the released energy would move in a system with a physical clock;
 gravity, which is T28.
 
+#### Reading, 25 September 2026, morning: FIRST ONLY; the gas descends two rungs
+
+`python scripts/analyse_t30.py` (tests `tests/test_t30.py`), ten cells from AWS Batch. **No cell has a FLAT majority:
+verdict FIRST ONLY.** At λ = 1.25 with C = 2N, N, N/2 and N/4 (N = 288) and C = 2N (N = 512), the spark of 16 buys
+the first exit and the first curled direction opens as a front to the one-curled rung (at the end 95 % of points at
+d = 2, the energy 1.00 to 1.25 per point against the rung's 1.0, the bath near 0.4 to 0.5 per store), and the second
+direction never opens; the rules call most of these OTHER rather than MIDDLE only because thermal defects keep the
+energy above the 10 % tolerance. At C = N/8 the bath heats to 1 to 5 per store and 2 of 12 replicas descend both
+rungs to a defective near-flat state (88 to 90 % of points at d = 3, 3 % of squares lost), just under the 90 %
+cleanliness bar; the rest are mixtures. At λ = 1.10 (N = 288) the spark of 26 buys one move and nothing follows:
+STUCK, the excitation neither heals nor grows in 100,000 sweeps. **The gas of eight 6-cubes at λ = 1.10 (T30-gas):**
+in 21 of 24 replicas the cubes join and open two of their three directions (energy 1.2 → 0.24 to 0.41 per point, the
+bath 0.4 to 0.5 per store), with about 40 % of points fully open in many small flat patches (largest 36 to 64
+points), never one flat space; 3 replicas did not leave. **The owner's prediction (ALL AT ONCE) fails; ours (FIRST
+ONLY) holds**, with the gas going further than we expected. Details in ASSUMPTIONS O54.
+
 ## T32. Six links: is the activation fixed with size? (piece 11; written 2026-09-25, before any run)
 
 ### Why
@@ -1813,6 +1862,12 @@ single store.
 ### What this cannot show
 
 The wait at fixed coupling (no coupling here); anything at other λ.
+
+#### Reading, 25 September 2026, morning: FIXED WALL, sharp
+
+`python scripts/analyse_t30.py`. At N = 192, 288, 384 and 512 (4 × 4 × L, λ = 1.25, a single store), no replica left
+the start with a spark of 12, 14 or 15, and every replica left with 16, 17, 18 or 20: E\* = 16 at every size, exactly
+the wall of O49, and sharp. **Verdict FIXED WALL.** The owner's prediction and ours hold. Details in ASSUMPTIONS O54.
 
 ## T33. Eight links: in what pattern do four curled directions open? (piece 13; VISION Update 25; written 2026-09-25, before any run)
 
