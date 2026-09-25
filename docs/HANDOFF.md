@@ -1,4 +1,4 @@
-# Start here: handoff for the next assistant (state as of 2026-09-25, 15:15 ET)
+# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". Work is on branch `feat/cloud-runs-and-3d` (shared by two sessions in one
@@ -12,7 +12,7 @@ git history.
    the tree is as described, and re-read a file if the tool says it changed on disk.
 2. **The owner's direction of 25 September (memory `pace-and-scale`):** run the programme at full speed and scale while
    she is on vacation, many pre-registered tests at once, the cloud used generously, literature read in parallel, still by
-   the book. **Running on AWS Batch (25 September, 15:15 ET)**, all submitted by `.github/workflows/run_queue.yml` from
+   the book. **Running on AWS Batch (25 September, 13:00 ET)**, all submitted by `.github/workflows/run_queue.yml` from
    manifests in `cloud/queue/` (the workflow now reads several queue files per push; it failed on the first such push and
    was fixed, commit 590f6ff): **T34** (two 512-point jobs left), **T37** (34 jobs, many natural seeds in long tubes,
    paper 2; `scripts/analyse_t37.py`), **T38** (48 jobs, the rare long wait, paper 1; `analyse_t38.py`), **T39** (15 jobs,

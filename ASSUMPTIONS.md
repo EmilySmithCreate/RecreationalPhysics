@@ -1512,7 +1512,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   kinds of placement in 8 × 8 × 8 to the axis's farthest one and used a pseudo-inverse; the second version (a direct
   solve, each kind referred to its own farthest; the pseudo-inverse failed at 16³) wrote `exact_tree_count_pull_3d.csv`.
   The raw columns (`log_trees`, `cross`) of both are comparable; `cross` differs between versions by a constant.
-  **Addendum, 15:25 ET: the field would barely move the ladder** (`scripts/exact_tree_count_ladder.py`,
+  **Addendum, 12:57 ET: the field would barely move the ladder** (`scripts/exact_tree_count_ladder.py`,
   `configs/exact_tree_count_ladder.json` with its expectation written first). ln det′L per point, at equal N: four
   links, flat 8 × 8 1.2146, one curled 16 × 4 1.1858, a gas of four 4-cubes 1.2711; six links, flat 8 × 8 × 8 1.6786,
   one curled 4 × 8 × 16 1.6734, two curled 4 × 4 × 32 1.6629, a gas of eight 6-cubes 1.6919. So the field's term
@@ -1521,6 +1521,11 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   to move the window at λ = 1.25 and a real fraction of the curling cost only near λ = 1.02. It disfavors a gas of
   cubes (whose separate pieces also bring zero modes that a massless field leaves undefined; a small mass fixes them).
   Adopting option A would not spoil the burp.
+  *A correction of record:* the purpose fields of `configs/exact_tree_count_pull.json`, `_3d.json` and
+  `exact_tree_count_ladder.json` (and so their results' `.meta.json`) give the times they were written as 13:30, 13:40 and
+  15:20 ET. Those were the assistant's guesses and are wrong: they were written at about 12:33, 12:38 and 12:56 ET (commits
+  e91c883 at 12:46 and 0d70964 at 12:57). The order they state, each written before its calculation, is right. The
+  files are on the record and are not changed.
 
 - **O62 T33: in four directions, a push equal to the cheapest first move stalls (NO CASCADE, every replica STALLS).**
   (2026-09-25; PREREGISTRATION T33, reading; `results/t33_*.csv`, six cells of six replicas, 8 links, N = 2,304.) From the

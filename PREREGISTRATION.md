@@ -1947,7 +1947,7 @@ Which direction is time (nothing in the model distinguishes one); anything about
 with a physical clock rather than sweeps. A tied pattern, if it appeared, would be a surprise this energy has no
 term for, and would need an explanation before it was called support.
 
-#### Reading, 25 September 2026, 14:30 ET: NO CASCADE from both starts, because every replica stalled after one move
+#### Reading, 25 September 2026, 12:50 ET: NO CASCADE from both starts, because every replica stalled after one move
 
 `python scripts/analyse_t33.py`, six cells of six replicas from AWS Batch. **Every replica reads STALLS, so both
 verdicts are NO CASCADE by the letter.** From the three-curled torus at λ = 1.25 (C = 2N, N/2, N/4, N/8) and from the gas
@@ -2083,7 +2083,7 @@ Anything about the infinite hyperbolic graph of [T25] Fig. 9; a lifetime at size
 persistent region is an allotrope in [T24]'s sense (a different discrete arrangement) or a slow fluctuation of the same
 one, which the region's wiring, saved, can be read for afterwards.
 
-## T37. Many natural seeds in a long tube: does the scrap grow with the space once the change starts in many places? (paper 2; piece 5; written 2026-09-25, 12:40 ET, before any run)
+## T37. Many natural seeds in a long tube: does the scrap grow with the space once the change starts in many places? (paper 2; piece 5; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
 
 ### Why
 
@@ -2161,7 +2161,7 @@ whether the columns last (T19 says they anneal at fixed coupling; T25 that they 
 
 ---
 
-## T38. The rare long wait: one population with flukes, or a second, slower one? (paper 1; piece 2; written 2026-09-25, 12:40 ET, before any run)
+## T38. The rare long wait: one population with flukes, or a second, slower one? (paper 1; piece 2; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
 
 ### Why
 
@@ -2207,7 +2207,7 @@ Anything outside λ = 1.25 and 1.30 or N = 64 and 192; whether the tail matters 
 
 ---
 
-## T39. The cascade window: when does the first release pay the second wall? (six and eight links; pieces 11 and 13; written 2026-09-25, 12:40 ET, before any run)
+## T39. The cascade window: when does the first release pay the second wall? (six and eight links; pieces 11 and 13; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
 
 ### Why
 
@@ -2260,7 +2260,7 @@ Named, as T30.
 Anything at λ = 1, the published model (six links: VISION Update 24's caveat; eight links: no published curve); whether a
 physical universe has a bath of the right size; the gas's pattern, which T30 and T33 test.
 
-## T40. Four directions: how big a push starts the change, and in what pattern does it then go? (piece 13; written 2026-09-25, 15:00 ET, before any run)
+## T40. Four directions: how big a push starts the change, and in what pattern does it then go? (piece 13; written 2026-09-25, about 12:50 ET, before any run; committed 12:54 ET (the time first written here was a guess and wrong; corrected from the commit times))
 
 ### Why
 

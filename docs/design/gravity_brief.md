@@ -79,7 +79,7 @@ depends on the relic's wiring at equal energy. Cannot show: any number with unit
 strength of gravity; whether the author's account or Einstein's is the cause, since the model has only one candidate
 cause to test.
 
-## 6. What the reading and the exact calculation change (25 September 2026, 13:45 ET), and the decision they ask for
+## 6. What the reading and the exact calculation change (25 September 2026, 12:40 ET), and the decision they ask for
 
 Four literature reviews were run the same day (ASSUMPTIONS O60; notes in `docs/reading/notes/`), and one exact
 calculation (O61). Together they change this brief's plan. *Ours, unverified by a physicist.*
