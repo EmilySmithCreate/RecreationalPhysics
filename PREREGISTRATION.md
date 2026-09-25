@@ -2037,6 +2037,16 @@ Named. The counting drive is exact (O55) and absent here by construction; its ru
 Which direction is time; anything about gravity as a force; anything at λ = 1, where nothing is released or paid. It
 carries VISION Update 24's caveat: the published six-link curve is not reproduced.
 
+#### Reading, 25 September 2026, 17:08 ET: MELTS
+
+`python scripts/analyse_t34.py`, all 20 cells (packed and spread, N = 216 and 512, five energies each, eight replicas):
+**every cell has a MELTED majority, no cell folds, and no replica anywhere folded a single point** (largest folded piece 0;
+no ONE DIRECTION, no CASCADE, no melt-then-fold). **Verdict MELTS.** The owner's prediction (RE-CURLS, one direction then
+the rest) fails; ours (MELTS) held. *Read with O66:* at N = 216 every one of these end states, quenched at zero
+temperature, came back to perfectly flat space, so a "melt" here is thermal excitation of flat space that the cold
+removes, not trapped disorder; the verdict stands by its rule and says less than the word. The counting half of her
+mechanism, which named points cannot see, is T42 (interchangeable points near λ = 1.02), running. ASSUMPTIONS O69.
+
 ## T36. Allotropes in the published model: do regions of points touching two squares persist in a background of three? (piece 12; written 2026-09-25, evening, before any run)
 
 ### Why

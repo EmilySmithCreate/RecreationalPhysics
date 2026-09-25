@@ -1649,6 +1649,15 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   not yet run. Eight links are being computed. What the follow form does not do: select three (with four directions it
   drives all four open); that is the second constant of Update 30.
 
+- **O69 T34: concentrated energy does not fold six-link flat space; it excites it (MELTS).** (2026-09-25, 17:08 ET;
+  PREREGISTRATION T34, reading; `results/t34_*_n216.csv`, `results/t34_*_n512.csv`.) Flat 6 × 6 × 6 and 8 × 8 × 8 at
+  λ = 1.25 given 64 to 1,060 units, packed into one vertex's store or spread through a bath of 2N: all 20 cells MELTED by
+  majority, nothing folded anywhere. With O66 (every N = 216 end state quenches to perfect flat space), the plain reading:
+  with named points, concentrated energy excites six-link flat space and the excitation heals when cooled; it never
+  starts a fold. This is the fifth test of the owner's black-hole mechanism to find no fold (O20, T21, T26, T27 in two
+  directions; T34 in three), all with named points or small sizes; the counting half is T42. *Every six-link result
+  carries VISION Update 24's caveat.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
