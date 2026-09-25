@@ -1667,6 +1667,22 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   directions; T34 in three), all with named points or small sizes; the counting half is T42. *Every six-link result
   carries VISION Update 24's caveat.*
 
+- **O70 Exact, exploratory: a direction tie shaped to give today's energy budget keeps X stuck and flat space stable, but
+  stops the cascade after the first direction.** (2026-09-25, 17:57 ET; `scripts/exact_walls_tie_shape_d.py`; six links,
+  λ = 1.25, where each direction's curling costs a = 4(λ − 1) = 1 per point.) With a tie of any shape, f(d) per point with
+  d open directions, the three openings release a − f(1), a + f(1) − f(2) and a + f(2) per point, the total 3a unchanged.
+  Asking them to stand as today's ordinary : dark matter : dark energy, 5 : 27 : 68 (the owner's triad, VISION Update 30),
+  fixes f(1) = 0.85 and f(2) = 1.04: **a fit of two constants to two ratios, not a prediction**, and it uses today's
+  dark-energy share, which changes with time. Exact walls with that shape: the fully curled gas 6.2 (X stuck, where without
+  the tie it has a downhill move), the state with one direction open 14.9, with two open 19.4, flat space 64. **So the fit
+  keeps X stuck and flat space stable, but the partly open states stay stuck too: after the first (red) direction opens,
+  the second and third each need their own push.** The reason is the shape itself: a large last release needs the strain
+  to be greatest just before the last opening (f(2) > f(1)), while the others following on their own needs the strain to
+  fall as directions open (f(1) > f(2), the follow form, O68). In this energy the two wishes pull against each other. *Ours,
+  unverified:* one reading consistent with the owner's picture is a reservoir that supplies each direction its own push
+  (her "remainder returned to the black hole, ready to start another burp"); another is a different, non-local form of
+  the tie. Neither is tested.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
