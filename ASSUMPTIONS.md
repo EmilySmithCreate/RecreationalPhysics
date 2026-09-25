@@ -1350,6 +1350,22 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   ours held. The gas result is the one to look at again: two rungs in one run from the fully curled state, which the
   walls (8, then the joining moves) allowed at λ = 1.10 where the 4 × 4 × 18 torus's second wall (43) did not.
   *Every six-link result carries VISION Update 24's caveat.*
+  **Correction, 25 September, midday (the assistant's error, found on re-reading the saved final states).** The reading
+  above says the first direction "opens as a front to the one-curled rung at every bath from N/4 to 2N". The final
+  local-dimension census of the 84 torus replicas at λ = 1.25 says otherwise: the first direction opened completely (no
+  point left two-curled) in 28; in 32 the opening stalled early, 36 to 53 % of points still two-curled and the energy 1.86
+  to 1.95 per point against 2.0 at the start (the spark's excitation grew a little and stopped); in 21 it went most of the
+  way, 15 to 24 % still two-curled; in 3, at the hottest baths, it went past the rung toward a defective flat state. So
+  the analyzer's OTHER in the torus cells was mostly unfinished openings, not a finished rung carrying thermal defects,
+  and no torus cell has a MIDDLE majority. **FIRST ONLY stands by the letter, but the MIDDLE majority it rests on is the
+  gas cell's**, where the cubes went two rungs down, not one. Traced block by block, all 21 gas replicas that reached
+  the two-opened level passed the one-opened level without resting on it for the pre-registered 5,000 sweeps (longest
+  stay within 10 % of it: 400 to 3,800 sweeps), though the whole descent took 10,000 to 46,000 sweeps: gradual, neither a
+  cascade nor a staircase. Stated correctly: in a torus, the second direction never opened in a cold bath (its wall of 36
+  is never paid) and the first opened fully in a third of replicas; in the gas, where no direction is singled out, two of
+  three directions opened without a rest between them, which is closer to the owner's "together" than the summary said,
+  and still never one flat space. Corrected in PREREGISTRATION T30, the six-link paper, paper 3's table, the programme
+  page, its markdown and the series plan.
 
 - **O55 The fold run backwards, exact: each successive fold halves its nucleation excess, and the counting drive toward
   curling appears only at full curling, beating the curling cost only below λ ≈ 1.02.** (2026-09-25; VISION Update 27;
@@ -1398,6 +1414,35 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   these sizes: it prunes arrangements with a twofold symmetry of odd parity, including one of three flat ones, and does
   not move the thermodynamics. Not yet asked: the anyonic form (a phase per swap), which is where cancellation, not
   only pruning, would enter.
+
+- **O58 Gravity, step 1: no six-link relic among one- and two-switch constructions; the search's two "dips" were an
+  artifact of its partial move list.** (2026-09-25; `scripts/exact_relic_search_d.py`, `scripts/exact_relic_confirm_d.py`;
+  flat 6 × 6 × 6 at λ = 1.02; exact.) Every valid one- and two-switch construction whose switches lie within distance 3 of
+  one point, 9,049 distinct curled arrangements (X > 0), ranked by energy; the 30 lowest tested for being a dip. The
+  search listed only switches whose first side-0 point the construction had changed, and flagged two: E = 80.32 (four
+  squares lost, four surplus gained, 8 symmetries) and E = 128.32 (seven lost, four gained). Rebuilt and tested against
+  every switch near any changed point, **neither is a dip**: the first undoes itself downhill by its whole energy (the
+  reverse switch touches it only through side-1 points, which the search had not listed), and all six arrangements of
+  the second have a move downhill by 48 or 64. **So the stable curled object that the gravity test needs has not been
+  found in six links**; the four-link relic (one column curled, 24λ − 16, a dip) has no one- or two-switch analog here.
+  What remains: three-switch constructions, and reading defects left behind by the six-link runs themselves (T30, T32,
+  T34 end states), quenched to their nearest dip, which is how the four-link relic was found (O13, O16). *Ours, exact
+  within the stated search.* A process note: a search that tests dips on a partial move list must be confirmed on the
+  full list before anything is said; the first report of this search to the owner said "two dips" before confirmation.
+
+- **O59 T36: no persistent allotropes at λ = 1 on a torus (TRANSIENT).** (2026-09-25; PREREGISTRATION T36;
+  `results/t36_allotropes_n{196,484}.csv`; `scripts/analyse_t36.py`.) The model author's suggested search, run at his
+  model (λ = 1, no cap), 16 replicas per cell from a melt and from the lattice. At N = 196 (equilibrium certified) the
+  points touching two or fewer squares are 20 % and 28 % of the graph at g = 3.433 and 3.697, and whether a point is in
+  that set is remembered for about 100 sweeps: the excess over chance is +0.048 and +0.018 at a lag of 50 sweeps, +0.009
+  ± 0.007 and −0.002 ± 0.001 at the scoring lag of 2,000. No replica holds a connected region of four or more points that
+  stays low for the last 2,000 sweeps. **TRANSIENT at both couplings, so TRANSIENT by the letter**; the owner's inferred
+  prediction (ALLOTROPES) fails and ours holds. N = 484, reported and not scored: the same (excess +0.005 ± 0.004 at
+  g = 3.302, lifetime again about 100 sweeps; at g = 2.880 the low set is sometimes empty). *Ours, unverified:* on a
+  finite torus in equilibrium the low-square points are thermal fluctuations with a lifetime of order 10² sweeps, not
+  stuck regions; the allotrope of [T25] Fig. 9 lives on an infinite hyperbolic graph, and a torus does not test it.
+  What would: a region planted in the lattice with two squares per point and a boundary to the three-square background,
+  followed at fixed coupling (the allotrope's own lifetime, the model author's question), which is the natural next run.
 
 ## Provenance
 

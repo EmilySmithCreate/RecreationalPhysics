@@ -306,7 +306,8 @@ that rearranges without melting, which nobody has measured. What does not block 
 - **Paper 1 / piece 2:** T24 INCONCLUSIVE by the letter for a third distinct reason; gate 3′ passed in all 28 cells; the
   rare long wait (24 to 76 τ) at small N is the thing to study next (O52). The edge break-up held a third time.
 - **The six-link companion:** T32 FIXED WALL (16 at every size, sharp); T30 FIRST ONLY (the directions open one at a
-  time; the gas of 6-cubes descends two rungs) (O54). The reproduction gate: Gate C′ run A FAILS, run B ONE POWER; a
+  time; the gas of 6-cubes descends two rungs) (O54). *Corrected 25 September, midday:* the first direction opened
+  fully in 28 of 84 torus replicas, partly in most others; the verdict is carried by the gas cell (O54, correction). The reproduction gate: Gate C′ run A FAILS, run B ONE POWER; a
   factor of two matches the ordered side and the hot tail points at non-bipartite graphs (O53). The companion paper can
   now be drafted from T30, T32, O41, O49 and O50, with the open gate stated.
 - **Who to ask, updated:** the model's author, one question: whether his 3D action sums over edges once (a factor of 2
@@ -327,8 +328,8 @@ measured entries and exact for the walls. Every curled direction costs 4(λ − 
 | 2 (4) | one curled (the tube) | 1 < λ < 2 (wall 32 − 16λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | one front, memoryless, the exact release; one relic | paper 1; T7 to T24 |
 | 2 (4) | both curled (a gas of 4-cubes) | never above λ = 1 | downhill | | falls apart at once | O40 |
 | 3 (6) | one curled (4 × L × L′) | 1 < λ < 2 (96 − 48λ) | 36 | | not run | O41 |
-| 3 (6) | two curled (4 × 4 × L, L ≥ 18) | 1 < λ < 1.5 (96 − 64λ) | 16 | yes, 192 to 512 points (T32) | first direction only, as a front; the second's wall (36) unpaid; near-flat only at a hot bath (T30) | O49, O54 |
-| 3 (6) | all three (a gas of 6-cubes) | 1 < λ < 1.2 (96 − 80λ) | downhill | | at λ = 1.10: joins and opens two of three directions in 21 of 24, never one space (T30-gas) | O41, O54 |
+| 3 (6) | two curled (4 × 4 × L, L ≥ 18) | 1 < λ < 1.5 (96 − 64λ) | 16 | yes, 192 to 512 points (T32) | first direction fully open in 28 of 84, partly in most others (corrected); the second's wall (36) unpaid; near-flat only at a hot bath (T30) | O49, O54 |
+| 3 (6) | all three (a gas of 6-cubes) | 1 < λ < 1.2 (96 − 80λ) | downhill | | at λ = 1.10: joins and opens two of three directions in 21 of 24, no rest between, never one space (T30-gas) | O41, O54 |
 | 4 (8) | one curled | 1 < λ < 2.5 (160 − 64λ) | 80 | | not run | O50 |
 | 4 (8) | two curled | 1 < λ < 1.67 (160 − 96λ) | 40 | | not run | O50 |
 | 4 (8) | three curled (4 × 4 × 4 × 36) | 1 < λ < 1.43 (160 − 112λ) | 20 | | T33 running | O50 |

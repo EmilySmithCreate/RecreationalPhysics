@@ -322,7 +322,8 @@ time run more slowly, so time and space are not separate things. She asked for s
   code at eight links (validated at four and six), and every eight-link result says so.
 - **The naming condition stands**: at λ ≠ 1 this is our family around the model, never combinatorial quantum gravity.
 - **The author's reaction to the six-link result, 25 September, morning** (T30, FIRST ONLY: given its push, the two-curled
-  torus opens one direction and stops; ASSUMPTIONS O54): "first only actually makes a lot of sense to me." Recorded as her
+  torus opens one direction and stops; ASSUMPTIONS O54; *corrected the same day: it opened that direction fully in a
+  third of the runs, and the verdict rests on the gas cell, O54 correction*): "first only actually makes a lot of sense to me." Recorded as her
   reaction, not as a changed prediction: T33's pre-registered prediction stands as written above. *Ours:* it fits the
   singleton half of this update, one direction opening on its own, which T33 scores as SINGLETON PLUS THREE from the
   gas; whether the three that remain open together is what T33 measures.
