@@ -2307,7 +2307,7 @@ Named, as T33.
 
 Which direction is time; anything at λ = 1; the pattern with a physical clock.
 
-## T41. Three directions: does the new space need room for the burp? (piece 4; written 2026-09-25, 13:15 ET, before any run)
+## T41. Three directions: does the new space need room for the burp? (piece 4; written 2026-09-25, about 13:00 ET, before any run; committed 13:04 ET; the time first written here, 13:15, was a guess and wrong)
 
 ### Why
 
