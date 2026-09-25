@@ -1,0 +1,177 @@
+\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Why a curvature-counting graph energy gives no pull at a distance, and what a pull would need}
+
+\author{Emily Smith}
+\email{emilysmithcreate@gmail.com}
+\affiliation{Independent researcher, Charlottesville, Virginia, USA}
+
+\date{DRAFT, 25 September 2026}
+
+\begin{abstract}
+The author's hypothesis holds that gravity is the wish of curved space to refold: that small curled leftovers of the
+change that made space pull on each other through the arrangement around them. We ask whether the family of graph
+energies obtained from combinatorial quantum gravity (CQG) by raising the coefficient $\lambda$ of its local term above
+1 can produce such a pull. Exact results say it cannot. The energy is a sum over links, so two defects that share no
+square are exactly additive; counting symmetries at fixed wiring prefers symmetric placements, not near ones; and flat
+space is gapped in the extreme: every single move out of it costs 32, 64 or 128 units with four, six or eight links per
+point, at every $\lambda$. A medium with a gap carries a force only over a fixed, short range. We then state what the
+published work says a pull needs (a mode with no gap, each relic a source for it in proportion to its energy, and a mode
+of the kind that makes like sources attract), and compute exactly what the simplest such mode a graph carries, a field
+on its points, would add: its fluctuations give a Casimir-type attraction falling as $r^{-4}$ in two directions and
+$r^{-6}$ in three, a thousandth of the coupling at contact; with relics as its sources the pull falls as $1/r$ in three
+directions, Newton's shape, carried by the emergent wiring, and the field barely changes which arrangement is favored.
+That rule would put the pull in, not derive it; whether to adopt it is the next decision.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The companion papers \cite{paper1,paper2} study a curled torus that opens into flat space, the energy it releases and the
+small curled leftover it leaves behind, the relic. The author's framework reads gravity as the refolding drive of curved
+space: relics, being curled, should draw one another together through the arrangement between them. That makes a
+definite question of the model: do two relics in flat space pull on each other, and if so, how does the pull fall with
+distance? We answer it for the model as it stands, say why the answer is what it is, and say what would change it.
+
+The energy is that of CQG \cite{T25} with the coefficient of its local term raised: $H = 16(D(D-1)N/2 - S) + 4\lambda X$
+on $2D$-regular bipartite graphs, $S$ the number of 4-cycles (squares) and $X$ the surplus squares on over-full links.
+Only $\lambda = 1$ is CQG; everything run here is at $\lambda > 1$, next to it. The exact statements hold at every
+$\lambda$, including 1.
+
+\section{Three exact facts}
+
+\emph{Additivity.} $H$ is a sum of terms on links, each depending on the squares through that link. Two defects that
+share no square therefore cost exactly the sum of their separate costs, at every separation; an attraction appears only
+at contact (16 with four links, 64 with six), where they share squares. We checked this by construction for the curled
+column relic with four links and the curled line of four with six, at every separation on $12 \times 12$ and
+$8 \times 8 \times 8$ tori.
+
+\emph{No counting pull at fixed wiring.} With the points treated as interchangeable, as the author's framework treats
+them, each placement of two identical defects is weighted by its number of symmetries. That number is one or two at
+ordinary separations and larger only at exactly opposite or aligned placements: a preference for symmetry, which
+favors the farthest placement, not a pull.
+
+\emph{A gapped vacuum.} Flat space is the exact ground state for $\lambda \ge 1$, and the cheapest single move out of it,
+listed by brute force over every switch, costs 32, 64 and 128 with four, six and eight links, the same at every
+$\lambda$. At the couplings where curled arrangements are stuck for now and relics last ($g \lesssim 2$), a cold flat
+region accepts essentially no move at all. The relic itself is a dip with four links (it costs $24\lambda - 16$ and every
+single move out of it costs energy); with six links, a search over every curled arrangement one or two switches from a
+point of flat space found none that is a dip, so the object a pull would act on is not yet known to exist there.
+
+\section{Why the facts are one fact}
+
+A force between two objects in a medium is carried by the medium's fluctuations, and its range is the range of their
+correlations \cite{KG99}. A gapped system has correlations that decay exponentially \cite{HK06}; a massive mediator gives
+Yukawa's $e^{-mr}/r$ \cite{Tong}. The model's author writes that both phases of the model are governed by a finite
+correlation length, which diverges only at the critical point \cite{T25}. A vacuum whose every excitation costs 32 or
+more is the extreme case: at fixed wiring there is nothing to carry a force (the first two facts), and with the wiring
+free there is almost nothing that moves. So the absence of a pull is not a failure to look hard enough; it is what this
+energy must give in its geometric phase.
+
+We had also measured that the curvature correlation falls to zero within two steps at every coupling up to 676 points.
+That is consistent with a gap but does not show one: in Einstein's theory, which has a massless graviton, the curvature
+correlator is a contact term at tree level, and it is the volume correlator that carries the massless mode \cite{LR25}.
+The gap is shown by the walls.
+
+\section{What a pull needs}
+
+The published work names three things, all needed together. (i) A mode with no gap, so that the medium's correlations
+fall as a power, not an exponential. The robust classical route is a hard local constraint with many ground states, as
+in dimer models on bipartite lattices, where counting alone gives defects an inverse-square force \cite{HKMS03,Henley};
+the quantum route is a gauge structure \cite{GW09}. (ii) Each relic a source for that mode in proportion to its energy,
+a charge whose flux through every surrounding surface is the same; without it a gapless medium gives only the fast
+Casimir laws that stiff inclusions feel in a membrane \cite{GBP93,KG99}. (iii) A mode of the kind that makes like sources
+attract: a scalar, as in Nordstr\"om's theory \cite{Giulini}, or the tensor of Einstein's; the vector modes that hard
+constraints produce make like defects repel \cite{Henley}, as electric charges do. In three large directions the three
+together give Newton's $1/r$. The one discrete random-geometry model known to show a Newtonian pull, four-dimensional
+dynamical triangulations, did so with test particles moving on a geometry tuned near a transition \cite{dBS97,DLSU21}.
+
+\section{The simplest candidate, computed}
+
+A graph carries one mode with no gap for free: a field $\phi$ on its points with energy $\frac{\kappa}{2}\sum_{\rm
+links}(\phi_u - \phi_v)^2$, whose propagator is the graph's own Green's function and so follows the emergent geometry.
+Integrated out exactly, it adds to the free energy of a wiring $\frac{g}{2}\ln\det{}'L$ (with $L$ the graph Laplacian;
+$\det{}'L$ is $N$ times the number of spanning trees), and, if relics are sources $q$ for it, a cross term
+$-q_1^{\mathsf T}L^{+}q_2$ between two relics. We evaluated both on fixed wirings holding two identical defects at every
+even separation (Table~\ref{tab:pull}). The fluctuation term is lower when the defects are close, so it pulls them
+together, but weakly and briefly, falling roughly as $r^{-4}$ in two directions and $r^{-6}$ in three and worth about a
+thousandth of $g$ at contact: it passes the test of sign and fails that of shape. The source term grows as the relics
+approach, as the lattice Green's function does, like $1/r$ in three directions, less the images of the periodic torus,
+and like $-\ln r$ in two. Across the rungs of the ladder the field's own term favors a curled torus over flat space by
+0.0144$g$ per point with four links and 0.0026$g$ per point per curled direction with six: the same as lowering
+$\lambda$ by about $0.004g$, too little to move the window in which the change happens.
+
+\begin{table}[t]
+\caption{Two identical defects (the curled line of four) at separation $r$ along an axis, on fixed wirings: the change in
+$\ln$(spanning trees) and in the source cross term $q_1^{\mathsf T}L^{+}q_2$ (unit charge on each defect point), each
+relative to the farthest placement. Exact.}
+\label{tab:pull}
+\begin{ruledtabular}
+\begin{tabular}{lcccc}
+torus & $r$ & $\Delta\ln\tau$ & $\Delta\, q_1^{\mathsf T}L^{+}q_2$ \\
+\hline
+$24 \times 24$ & 2 & $-0.0478$ & 3.54 \\
+ & 4 & $-0.0068$ & 1.83 \\
+ & 6 & $-0.0014$ & 0.91 \\
+ & 8 & $-0.00034$ & 0.38 \\
+$16 \times 16 \times 16$ & 2 & $-0.0032$ & 0.369 \\
+ & 4 & $-0.00017$ & 0.105 \\
+ & 6 & $-0.000014$ & 0.022 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Discussion}
+
+What this paper shows is narrow and, we think, firm: in this family of energies, whatever $\lambda$ is, there is no pull
+at a distance between relics, and the reason is the gap of flat space, not the size of our runs. It does not show that
+the author's account of gravity is wrong; it shows that this energy does not contain the ingredient any account of a
+long-range pull needs. The simplest ingredient that would, a massless field on the points with relics as its sources,
+gives Newton's shape, but it puts the pull in by hand; what would be new is that the field travels through the emergent
+wiring rather than a fixed lattice, and can act back on it. Three tests follow if it is adopted, each to be
+pre-registered with the author's prediction: whether two relics drift together in a sealed run; the shape of the pull in
+three directions and its scaling with the relics' energies; and whether many relics clump under it and a dense clump
+re-curls space, which is the author's mechanism for black holes \cite{paper4}. Whether the field could itself arise from
+the loops of the graph, rather than be added, is the harder question behind all three.
+
+\begin{acknowledgments}
+Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and checked
+the work; the literature summarized in Secs.~IV and V was read by AI agents from fetched copies and is to be checked
+against the papers; no physicist has reviewed this. Every configuration, seed, result and pre-registration is in the
+repository: \url{https://github.com/EmilySmithCreate/RecreationalPhysics} (ASSUMPTIONS O22, O32, O56, O58, O60, O61;
+\texttt{scripts/exact\_tree\_count\_pull.py}, \texttt{scripts/exact\_tree\_count\_ladder.py}).
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+\bibitem{paper1} E. Smith, ``Metastable curled tori and their front-driven decay in a graph model next to combinatorial
+quantum gravity'' (submitted to arXiv, 2026).
+\bibitem{paper2} E. Smith, ``The relic: size, number and freeze-out of the leftover of a sharp change,'' draft (2026).
+\bibitem{paper4} E. Smith, ``Does concentrated energy re-curl space?,'' draft (2026).
+\bibitem{T25} C. A. Trugenberger, ``Networks as the fundamental constituents of the universe,'' arXiv:2512.17676.
+\bibitem{KG99} M. Kardar and R. Golestanian, ``The `friction' of vacuum, and other fluctuation-induced forces,'' Rev. Mod.
+Phys. \textbf{71}, 1233 (1999), arXiv:cond-mat/9711071.
+\bibitem{HK06} M. B. Hastings and T. Koma, ``Spectral gap and exponential decay of correlations,'' arXiv:math-ph/0507008.
+\bibitem{Tong} D. Tong, \emph{Quantum Field Theory}, lecture notes, University of Cambridge, Ch. 3.
+\bibitem{LR25} J. Laiho and K. Ratliff, ``Euclidean correlation functions in quantum gravity,'' arXiv:2510.11888.
+\bibitem{HKMS03} D. A. Huse, W. Krauth, R. Moessner and S. L. Sondhi, ``Coulomb and liquid dimer models in three
+dimensions,'' arXiv:cond-mat/0305318.
+\bibitem{Henley} C. L. Henley, ``The `Coulomb phase' in frustrated systems,'' arXiv:0912.4531.
+\bibitem{GW09} Z.-C. Gu and X.-G. Wen, ``Emergence of helicity $\pm 2$ modes (gravitons) from qubit models,''
+arXiv:0907.1203.
+\bibitem{GBP93} M. Goulian, R. Bruinsma and P. Pincus, ``Long-range forces in heterogeneous fluid membranes,'' Europhys.
+Lett. \textbf{22}, 145 (1993).
+\bibitem{Giulini} D. Giulini, ``What is (not) wrong with scalar gravity?,'' arXiv:gr-qc/0611100.
+\bibitem{dBS97} B. V. de Bakker and J. Smit, ``Gravitational binding in 4D dynamical triangulation,''
+arXiv:hep-lat/9604023.
+\bibitem{DLSU21} M. Dai, J. Laiho, M. Schiffer and J. Unmuth-Yockey, ``Newtonian binding from lattice quantum gravity,''
+arXiv:2102.04492.
+\end{thebibliography}
+
+\end{document}
