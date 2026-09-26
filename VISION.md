@@ -891,6 +891,15 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   hides it. That is a strong condition the hypothesis now carries, stated plainly. The model has no time and cannot test
   it; it can test whether a front's pace is fixed (T47) and, later, whether it slows near a defect.
 
+- **Her question, 15:30 ET: is relativity an observation made in the curled time behind us?** *Ours; general knowledge,
+  to verify:* half of it, yes. Everything seen at a distance is seen as it was: light takes time to arrive, so every
+  observation of a distant event is a record from behind the band, and which distant event is "now" is never observed,
+  only inferred (in the literature, the conventionality of distant simultaneity: Einstein's clock-synchronising rule,
+  Reichenbach). So relativity's disagreement about "now" can live in how the frozen record is read, while a single band
+  moves underneath, unobservable at a distance; that is the Lorentz-ether resolution in her words. The other half does
+  not: time dilation is also local and present, as when twins reunite in one room with different ages, so the band's own
+  pace must vary with local matter and motion, as recorded above.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
