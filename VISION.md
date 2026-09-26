@@ -777,6 +777,15 @@ infinity, per her strange-loop measure, across the arrangements found. Details: 
   observers or stellar ages. A proxy for her to accept or change before anything is computed: burps per unit of pushing
   energy, times the ordinary share per burp.
 
+- **Her question, 11:04 ET: is "the curling cost is zero where space is smooth" the same as a drive to curve that is there
+  but has no mass to pay it?** *Ours:* close, with one correction. The term that vanishes in smooth space is the
+  **cost** of being curled (4(λ − 1) per tight curl), which pushes against curling; it is zero there only because nothing
+  is curled. The **drive** to curve is a different piece: in the model it is the counting of look-alike arrangements with
+  interchangeable points (O55, O72), and it is present everywhere, smooth space included. The published curvature term
+  alone is neutral between curled and open at λ = 1 (the tie of Update 5). So in smooth empty space: the drive is there,
+  the cost is not being charged, and nothing curls because the walls and the curling cost need energy paid locally; mass
+  is what pays. That is her picture, with the cost and the drive kept apart.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

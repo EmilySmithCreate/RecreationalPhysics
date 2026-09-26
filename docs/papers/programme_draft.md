@@ -83,6 +83,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026, afternoon: Brought into line with paper 1.
 
 **Piece 3.**
+- 26 Sep 2026, 11:04 ET: The cost of curling vanishes in smooth space because nothing is curled; the drive to curve (counting) is present everywhere; mass pays for curling locally.
 - 26 Sep 2026, 04:10 ET: Exact (O71): in this rule an activation wall is returned on the far side, not spent, and every direction costs the same to curl, so the three releases are equal at every λ. No λ gives the author's ledger of 26 September; only strain held in partly open states (the tie of piece 6) can make the shares unequal.
 - 24 Sep 2026: The rule described in the author's words: curvature plus a curling cost, a constant of our loop (VISION Update 23).
 
