@@ -2752,3 +2752,10 @@ with the shared bath (hers FIXED SPEED, ours ACCELERATING) and part B with time 
 HEALS). Those are the results that can count for or against her picture. What would go beyond ordinary fronts, and
 is not tested here: one speed shared by every kind of disturbance (a universal limit), and a front that slows where
 matter sits (a counterpart of time running slower near mass).
+
+### The owner's prediction for part A, 2026-09-26, 15:50 ET, before any T47 result was read
+
+Her words: "Front moving may accelerate. It matches our experience of time." Recorded as **hers for the shared bath:
+ACCELERATING**, replacing the inferred FIXED SPEED. For the local stores she gave no separate prediction; the inferred
+FIXED SPEED stays marked inferred. Consequence, stated before reading: in part A her prediction and ours now coincide
+in both baths, so part A cannot tell her picture from ours; only part B can.

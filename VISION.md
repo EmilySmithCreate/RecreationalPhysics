@@ -900,6 +900,16 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   not: time dilation is also local and present, as when twins reunite in one room with different ages, so the band's own
   pace must vary with local matter and motion, as recorded above.
 
+- **Her ideas, 15:50 ET.** (a) A moving object curls space ahead of it and uncurls it behind; time differences may be
+  what handles that high rate of change of curvature. *Ours, unverified:* this ties time dilation to how fast the
+  arrangement around a moving thing has to change, which is a concrete, local mechanism for the band's pace to vary, and
+  it is the question "does the front slow where matter sits or moves?" in her words; no test is designed yet. (b) The
+  front may accelerate: early on, so much happens in tiny fractions of a second. *Ours; general knowledge, to verify:*
+  standard cosmology keeps the rate of time fixed and puts the early speed in the physics (everything was hot and dense,
+  so processes were fast); a rate of time, or a speed of light, that changes over cosmic history is a published minority
+  alternative to inflation ("varying speed of light", Moffat; Albrecht and Magueijo), heavily constrained by
+  observation. How time feels to a brain is not evidence either way. Recorded as her prediction for T47 part A.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
