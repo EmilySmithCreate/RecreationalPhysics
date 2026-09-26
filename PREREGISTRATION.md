@@ -2740,3 +2740,15 @@ boundary; a re-curled region would have to be very large before it grew by itsel
 That the fourth direction is time, or that any speed here is the speed of light; the model has no time and its clock is
 the count of moves. Part B asks only whether the "keeps" reading makes flat space re-curl from a local push at this size
 and λ; a larger or more concentrated push is not tested. Every eight-link result carries VISION Update 24's caveat.
+
+### Note, 2026-09-26, 15:20 ET, before any T47 result was read: which parts can tell the two predictions apart
+
+Written at the owner's request to stop and think before reading. In part A with local stores the owner's inferred
+prediction and ours are the same (FIXED SPEED), so a match there supports neither picture over the other; and a front
+invading a less stable state at a fixed speed is the ordinary behaviour of fronts in a uniform medium (flames, and the
+standard theory of fronts moving into an unstable or metastable state; general knowledge, to verify), so FIXED SPEED is
+the expected result for a well-behaved model, not evidence for time. The cells where the predictions differ are part A
+with the shared bath (hers FIXED SPEED, ours ACCELERATING) and part B with time keeping energy (hers FRONT, ours
+HEALS). Those are the results that can count for or against her picture. What would go beyond ordinary fronts, and
+is not tested here: one speed shared by every kind of disturbance (a universal limit), and a front that slows where
+matter sits (a counterpart of time running slower near mass).

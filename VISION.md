@@ -876,6 +876,21 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   direction re-curled behind, which O75's "keeps" reading allows; T46 at ρ = −0.2 is its first look, and a long
   geometry in which a moving open band could be seen is not designed.
 
+- **Her questions, 15:15 ET: is the past frozen time, and does relativity break the band?** She proposed that
+  relativity applies in the macro, not the micro, and perhaps in the frozen history rather than in the now. *Ours;
+  general knowledge, to verify:* (1) "Frozen" fits: behind the band the arrangement sits in a dip, and nothing moves
+  there without energy. (2) "Macro, not micro" is the standard route and the one this page already takes: an absolute
+  ordering at the deepest level, with relativity emerging at large scale; Lorentz's ether theory, which predicts
+  everything special relativity does while keeping a hidden preferred frame, and several quantum-gravity programmes with
+  a preferred slicing, are its relatives. (3) "In the frozen history, not now" does not survive: time dilation is
+  measured in the present (clocks on aircraft and satellites run at different rates as they run). The band can carry it
+  anyway if its local pace depends on local conditions, slower where matter sits or moves, as a flame is slower in damp
+  fuel. (4) The real threat is the one Michelson and Morley's experiment posed to the ether: a band moving through a
+  medium defines a rest frame, and every test so far finds no detectable rest frame, to very high precision. So the
+  band's frame must be undetectable from inside: rods and clocks inside it must shrink and slow in exactly the way that
+  hides it. That is a strong condition the hypothesis now carries, stated plainly. The model has no time and cannot test
+  it; it can test whether a front's pace is fixed (T47) and, later, whether it slows near a defect.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
