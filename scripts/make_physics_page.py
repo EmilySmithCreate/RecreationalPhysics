@@ -1,4 +1,7 @@
-"""Build the standalone web page for sidenerdapps.com/physics from the whole-account write-up. Usage:
+"""Build a standalone web page from the whole-account write-up. NOT PUBLISHED: /physics now serves the
+plain-language page (scripts/make_site_page.py, the owner's decision of 24 September), and this page's URL
+is undecided. It also needs revising before it is shown (matter as the melt, the waiting-time figure, the
+curvature claim for the curled torus, Part V). Usage:
 
     python scripts/make_physics_page.py
 
@@ -15,10 +18,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "docs" / "public" / "the-loop-and-the-floor_v1.html"
-OUT = ROOT / "docs" / "public" / "site" / "physics" / "index.html"
+OUT = ROOT / "docs" / "public" / "site" / "account" / "index.html"
 
 REPO = "https://github.com/EmilySmithCreate/RecreationalPhysics"
-URL = "https://sidenerdapps.com/physics/"
+URL = "https://sidenerdapps.com/physics/account/"  # placeholder; not published
 TITLE = "Did Space Snap Open?"
 DESC = ("The whole account, told without hedges: space opened out of something curled by a push small "
         "enough to count, gravity as a slope in the number of ways, black holes folding space back into "

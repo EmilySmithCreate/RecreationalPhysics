@@ -1,0 +1,6 @@
+# PREREGISTRATION Gate C': which reading of [T22] Fig. 3's axis is ours (run A, 3D), and does it hold for its 2D figure (run B).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_cqg_d_sweep gatec2_3d_n500_a
+run_cqg_d_sweep gatec2_3d_n500_b
+run_cqg_d_sweep gatec2_2d_n2000_a
+run_cqg_d_sweep gatec2_2d_n2000_b

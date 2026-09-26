@@ -133,7 +133,7 @@ def run_sealed(adj, side_u, demon, n_sweeps, seed, lam=1.0, cap=CAP, leak=0.0, c
 
 
 @njit(cache=True)
-def run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam=1.0, cap=CAP, conn=None):
+def run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam=1.0, cap=CAP, conn=None, by_vertex=False):
     """PREREGISTRATION T9: sealed, with a bath of C demons instead of one. Modifies adj in place.
 
     demons : float array of length C, the energy each demon starts with. Each attempted move
@@ -142,9 +142,20 @@ def run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam=1.0, cap=CAP, conn=
              energy reads the temperature, and C sets how far that temperature rises per unit
              of energy released -- which is the knob the experiment scans. With C = 1 no random
              choice is made and the run is bit-for-bit run_sealed with leak = 0 (tested).
+    by_vertex : PREREGISTRATION T26 (the local spark; ASSUMPTIONS Q22). When True, `demons` has one
+             store per vertex (length N) and a move pays from, or is paid into, the store of u1, the
+             first vertex of the proposed switch, instead of a store chosen at random. Energy then
+             stays where a move released it, and can only be spent by a move made from that vertex:
+             a store is a local heat capacity, not a shared bath. Stores of side-1 vertices are never
+             chosen (u1 is always in side 0) and stay as given. With by_vertex False nothing here
+             changes, draw for draw (tested against a pinned run).
+    seed   : seed >= 0 seeds the stream; seed < 0 carries on the previous call's stream, as
+             cqg.run_chain does (ASSUMPTIONS Q14), so a run may be paused between blocks to read the
+             graph or to drain the stores (a leak) without re-seeding.
     Returns (S after each sweep, X, mean demon energy, sum of demon energy, acceptance rate).
     """
-    np.random.seed(seed)
+    if seed >= 0:
+        np.random.seed(seed)
     n = adj.shape[0]
     nu = side_u.shape[0]
     track_x = cap > CAP
@@ -196,7 +207,10 @@ def run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam=1.0, cap=CAP, conn=
                 d_x = after - before
             if ok:
                 d_h = -ENERGY_PER_SQUARE * d_s + ENERGY_PER_SURPLUS * lam * d_x
-                k = 0 if c == 1 else np.random.randint(0, c)
+                if by_vertex:
+                    k = u1
+                else:
+                    k = 0 if c == 1 else np.random.randint(0, c)
                 if d_h > demons[k]:                  # this demon cannot pay for it
                     ok = False
                 else:

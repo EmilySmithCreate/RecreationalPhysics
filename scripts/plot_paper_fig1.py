@@ -9,6 +9,11 @@ Reads committed files only.
       1/(3 exp(-12/g) + 2 exp(-14/g)) (PREREGISTRATION T8, exact move counts).
   (b) the share of vertices at each local dimension d when half the torus has converted
       (results/t7b_lam125_n*.csv, columns d0_50 .. d3_50, every decay that reached 50 %).
+  (c) added 2026-09-24 at the request of a review generated with ChatGPT, NOT pre-registered (ASSUMPTIONS O42): the share of tori still
+      waiting against time in units of each condition's mean, pooled, on a log scale, with the exponential
+      exp(-x) that a memoryless wait gives. Two sets, from scripts/analyse_paper_stats.survival_sets: every
+      first exit (the Arrhenius runs and T22), and T8's waits beyond the 200-sweep watch for tori that had
+      not begun converting at sweep 200.
 """
 import csv
 import math
@@ -20,6 +25,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+sys.path.insert(0, "scripts")
+from analyse_paper_stats import survival_sets        # noqa: E402
+
 out = sys.argv[1]
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#e6e5e1"
 BLUE, ORANGE, AQUA, YELLOW = "#2a78d6", "#eb6834", "#1baf7a", "#eda100"
@@ -30,8 +38,8 @@ for r in csv.DictReader(open("results/cqg_tube_arrhenius_lam125.csv", newline=""
         waits[(int(r["N"]), float(r["g"]))].append(float(r["wait"]))
 
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.5})
-fig, (ax, bx) = plt.subplots(1, 2, figsize=(7.0, 2.6))
-for a in (ax, bx):
+fig, (ax, bx, cx) = plt.subplots(1, 3, figsize=(7.0, 2.6))
+for a in (ax, bx, cx):
     a.grid(True, color=GRID, lw=0.8)
     a.tick_params(colors=INK2, length=0)
     for side in ("top", "right"):
@@ -60,13 +68,30 @@ for i, (n, color) in enumerate(((64, BLUE), (96, ORANGE), (144, AQUA), (192, YEL
         shares += np.array([int(r["d%d_50" % k]) for k in range(4)]) / n
         count += 1
     shares /= count
-    bx.bar(np.arange(4) + (i - 1.5) * width, shares, width=width * 0.9, color=color, label="N = %d (%d decays)" % (n, count))
+    assert count == 30, count                      # the caption says thirty decays per size
+    bx.bar(np.arange(4) + (i - 1.5) * width, shares, width=width * 0.9, color=color, label="N = %d" % n)
 bx.set_xticks(range(4))
-bx.set_xticklabels(["d = 0", "d = 1\n(torus)", "d = 2\n(sheet)", "d = 3"])
+bx.set_xticklabels(["0", "1\ncurled", "2\nflat", "3"])
+bx.set_xlabel("local dimension d", labelpad=1)
 bx.set_ylabel("share of vertices")
 bx.set_ylim(0, 0.95)
 bx.set_title("(b) at half conversion", fontsize=9, loc="left")
-bx.legend(frameon=False, fontsize=7, loc="upper center", ncol=2)
+bx.legend(frameon=False, fontsize=6.5, loc="upper right", ncol=2, handlelength=1.0, columnspacing=0.8)
+
+first, beyond = survival_sets()
+for x, color, label in ((first, BLUE, "first exits (%d)" % len(first)),
+                        (beyond, ORANGE, "decay waits (%d)" % len(beyond))):
+    x = np.sort(x)
+    cx.step(x, 1.0 - np.arange(len(x)) / len(x), where="post", color=color, lw=1.1, label=label)
+grid = np.linspace(0, 9, 100)
+cx.plot(grid, np.exp(-grid), color=INK, lw=1.0, ls="--", label="exp(−x)")
+cx.set_yscale("log")
+cx.set_xlim(0, 9)                    # the largest rescaled time is 8.6 (T22, lambda = 1.05)
+cx.set_ylim(1e-3, 1.05)
+cx.set_xlabel("time / mean of its condition", labelpad=1)
+cx.set_ylabel("share still waiting")
+cx.set_title("(c) memoryless", fontsize=9, loc="left")
+cx.legend(frameon=False, fontsize=6.5, loc="upper right", handlelength=1.4)
 fig.tight_layout()
 fig.savefig(out)
 print("wrote", out)

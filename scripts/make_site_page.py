@@ -3,7 +3,7 @@
     python scripts/make_site_page.py
 
 Input: `docs/public/did-space-snap-open_v1.html`, the plain-language write-up exactly as published.
-Output: `docs/public/site/index.html`, a complete HTML document with its own head, sharing-preview
+Output: `docs/public/site/physics/index.html` (served at sidenerdapps.com/physics/), a complete HTML document with its own head, sharing-preview
 tags, public links in place of the private companion ones, and a no-JavaScript note inside each
 chart. Every picture on the page is inline SVG, so nothing is fetched except two Google fonts, and
 the page renders with fallback faces without them. Change `URL` below if the published path differs.
@@ -13,14 +13,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "docs" / "public" / "did-space-snap-open_v1.html"
-OUT = ROOT / "docs" / "public" / "site" / "index.html"
+OUT = ROOT / "docs" / "public" / "site" / "physics" / "index.html"
 
 REPO = "https://github.com/EmilySmithCreate/RecreationalPhysics"
-URL = "https://sidenerdapps.com/did-space-snap-open.html"
+URL = "https://sidenerdapps.com/physics/"
 TITLE = "Did Space Snap Open?"
 DESC = ("A hobbyist's test of an idea about where space came from: a curled-up arrangement opening "
-        "out sharply and releasing the energy that became everything in it, run in a published "
-        "computer model, with the predictions written down first.")
+        "out sharply and releasing the energy that became everything in it, tested in a close cousin "
+        "of a published computer model, with the predictions written down first.")
 
 ICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
         "%3Ctext y='26' font-size='26'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E")

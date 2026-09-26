@@ -22,6 +22,8 @@ knowledge unless a source is named, and a source not yet read is marked so.
 | versions | relabellings (automorphisms) | | The discrete cousin of diffeomorphism invariance (ours, unverified). |
 | the strange loop | strange loop, after Hofstadter (*Gödel, Escher, Bach*, 1979; *I Am a Strange Loop*, 2007) | | His term: through the levels of a hierarchy and back to the start. Used with credit, never as ours. |
 | curved space moves matter | (the author's framing, 24 September) | | Say it this way round in our pages. Einstein has both directions ("matter tells spacetime how to curve; spacetime tells matter how to move"); what is really opposite here is the cause of the curve: space's own drive to curve, with matter supplying the energy it takes. |
+| curve-first gravity | (the author's coined term, 24 September; no standard term) | | Her account of gravity: space has its own drive to curve, and matter supplies the energy that starts the curve rather than causing it. Named against general relativity, where mass-energy is the source of the curve. Web search, 24 September: no use of "curve-first gravity" or "curvature-first gravity" found. Nearby names that mean something else: "curvature-scaling gravity" (arXiv:1302.6506, a fourth-order theory) and "curvature-matter coupling" (modified-gravity models, e.g. arXiv:2203.03295); neither read by us. A name for a proposed mechanism, not a result: no test of it has run yet (T13 rung 3, the 3D model). |
+| the curling cost | the local term's excess over curvature, 4(λ − 1) per surplus square | 4(λ − 1)X | The author's rule is the published curvature plus this one term (VISION Update 23): every link closing a third small loop, i.e. curled tight, costs 4(λ − 1) extra. Zero at λ = 1; zero wherever space is smooth. A constant of our loop, in her account. |
 | the melt | the random phase | | [T25] calls it matter; the owner does not (VISION Update 19). |
 
 ## Not used, and why
@@ -39,7 +41,7 @@ knowledge unless a source is named, and a source not yet read is marked so.
 
 ## Personality
 
-- Paper 1, Fig. 1 caption: "Spherical cows being unavailable, every space in this paper is a torus; still, like any cow, it burps." (Cows really do release their methane mostly by burping, and a flat square grid really cannot close into a sphere: with four squares at every corner, Euler's formula forces a torus.)
+- Paper 1, Fig. 1 caption: "Spherical cows being unavailable, every space in this paper is a torus; still, like cows, they burp." (the owner's wording, 25 September) (Cows really do release their methane mostly by burping, and a flat square grid really cannot close into a sphere: with four squares at every corner, Euler's formula forces a torus.)
 - Quantum pieces, as an epigraph with no footnote: "But there is only one you, and only one system
   identical quantum mechanically to your cat Emily." (L. Smolin, *A real ensemble interpretation of quantum
   mechanics*, 2011; checked against the text.)

@@ -1023,6 +1023,9 @@ Named, for the reason in T8. The expected effect of interchangeable points on th
 
 Anything about the amount of dark matter in the universe. How seeds arise without being planted. Anything at another λ or size.
 
+
+**Note, 25 September, 14:05 ET (ASSUMPTIONS O65 (6)):** our registered prediction was (c) leaning (b); the verdict (c) means ours held and only its lean was wrong, not that ours "also fails".
+
 ## T18. How much room does the new space need, as λ changes? (written 2026-09-23, night, before the runs)
 
 ### Why
@@ -1320,3 +1323,1159 @@ still to verify).
 Anything at other couplings, at sizes beyond 192, with interchangeable points, or outside λ = 1.05 to 1.35. It
 is still the 2D model: one curled direction and one open, the partial state the owner's rule for three
 dimensions forbids (O40, VISION Update 22).
+
+#### Reading, 24 September 2026, evening: the window INCONCLUSIVE by the letter; the edge BREAK-UP BEGINS AT THE EDGE
+
+`python scripts/analyse_t23.py` (tests `tests/test_t23.py`), on all 28 cells (`results/t23_lam*_n*.csv`, 120 decays
+each, run on AWS Batch). **Window: INCONCLUSIVE (1.30 unread). Edge: BREAK-UP BEGINS AT THE EDGE.**
+
+**Why the window is inconclusive, said plainly.** Gate 3, the energy check, was kept exactly as T8 wrote it. It
+fails a whole cell if even one decay that reached 75 % ends on a state whose release matches none of the allowed
+ones. With four times the decays, such decays turn up more often:
+
+| λ | N = 64 | 96 | 144 | 192 |
+|---|---|---|---|---|
+| 1.10 | 0 | 1 of 120 | 0 | 0 |
+| 1.20 | 2 of 120 | 0 | 0 | 0 |
+| 1.25 | 0 | 1 | 1 | 2 |
+| 1.30 | 5 | 3 | 3 | 3 |
+| 1.35 | 2 | 7 | 17 | 18 |
+
+At λ = 1.30 all four sizes fail the gate, so no size can be read there, and the window verdict needs every λ.
+Every other λ in the window has at least one size that passes, and is "sharp". This is the same kind of problem as
+(a) in T8: an all-or-nothing rule sized for thirty decays, applied to 120. **It is not repaired after the fact.**
+A repair belongs to a new pre-registration, if the owner wants one.
+
+**What the new memoryless check shows.** (a′) holds in every metastable cell from λ = 1.05 to 1.25 (20 of 20),
+and at 1.30 in three of four sizes. It fails at N = 64, where the CV of the time after the rest is 2.63 against a
+band of 0.754 to 1.381. At 1.35 it holds at N = 144 and fails narrowly at 192 (1.367, with (c) also failing
+there). **Two orders side by side, (b), and one front, (c), hold in every window cell** (d ∈ {1, 2} at half
+conversion: 0.978 to 1.000; largest piece 0.81 to 1.00).
+
+**The edge, as the owner predicted.** Pooled over sizes, from λ = 1.30 to 1.35: the share of decays ending at the
+flat torus falls from 0.71 to 0.47 (E1), and the share whose converted region is in more than one piece at 25 %
+conversion rises from 0.44 to 0.69 (E2). Both hold by more than two standard errors. At 1.35, N = 64 and 96 count
+as not stuck (median f_200 = 0.25, on the line).
+
+**Not scored, reported:** the mean wait against τ runs from −2 % to +14 % at λ = 1.05, and about +17 % to +25 % at
+1.25. Near the edge the 200-sweep watch inflates it, as in T8.
+
+**Said plainly for the programme:** both of the owner's predictions were right about the physics. Every cell in
+the window that could be read is sharp and memoryless except one, and the break-up begins at the edge. **But
+piece 2 is not green by the letter**, because the energy check, unchanged from T8, fails at λ = 1.30 at every
+size.
+
+
+**Note, 25 September, 14:05 ET (ASSUMPTIONS O65 (2)):** at λ = 1.35, N = 192 the memoryless check passes (CV 1.367 inside [0.758, 1.379]); only the single front fails there.
+
+## T24. The λ map a third time, with the energy check read from the saved wiring (written 2026-09-24, night, before any run)
+
+### Why
+
+T23 (O44) settled the memoryless question: sized to the sample, the check holds in 20 of 20 window cells up to
+λ = 1.25, and two orders side by side and one front hold in every window cell. It still came out INCONCLUSIVE by
+the letter, for one reason: gate 3, the energy check, kept exactly as T8 wrote it, fails a whole cell if a single
+decay of 120 ends on a state whose **recorded** release matches neither the flat torus, nor the ledge, nor its own
+saved wiring. Read after the fact (not scored), the reason those decays fail is now understood: the runner records
+the release as the mean energy over a settle window of 600 sweeps at g = 1.5, while the saved graph is the state at
+the end of it. A sheet at g = 1.5 carries thermal excitations, more of them as λ rises, so the window mean sits
+above the exact energy of the final wiring by more than the 1 % tolerance in a few decays per hundred, and at
+λ = 1.30 that happened at every size. The old catalog of allowed resting states was already an assumption the data
+outgrew (VISION Update 14). Repairing the gate on T23's data would be an after-the-fact amendment; the owner wants
+piece 2 of the programme settled; so this is a fresh run with fresh seeds and the gate fixed first.
+
+### What will be run
+
+T23's protocol exactly (`scripts/run_tube_decay.py`, `scripts/make_t24_configs.py`): λ = 1.05, 1.10, 1.15, 1.20,
+1.25, 1.30, 1.35; N = 64, 96, 144, 192; 120 decays per cell; g = 1.5; block 5; stop at 98 %; `n_sweeps` 100,000;
+settle 600 with `settle_max` 100,000; `save_adjacency`; `record_f_200`. Fresh seeds, one per λ (20262605 to
+20262635). One config per cell, 28 in all (`configs/t24_lam<tag>_n<N>.json`), one Batch job each.
+
+### Definitions, fixed now
+
+- **(a′), (b), (c), gate 2, metastable, the window and edge verdicts: exactly as T23**, by calling `analyse_t23`.
+- **Gate 3′ replaces gate 3.** For every decay that reached 75 % conversion, the saved final graph exists and is a
+  valid arrangement (four links per point, bipartite, the hard-core rule). That is all the gate asks: it is a check
+  that the record is complete, and a cell fails it only if a graph is missing or corrupt.
+- **Resting states, read exactly and reported, never gated.** Each decay that reached 75 % is classified by the
+  exact energy of its final wiring above the flat torus, h = 16(N − S) + 4λX from the saved graph: FLAT (h = 0),
+  LEDGE (h = 24λ − 16, one curled column), OTHER (anything else; its local-dimension census is listed). Reported
+  beside it: the exact release per point (h₀ − h)/N, the window-mean release the runner recorded, and their
+  difference, the thermal excess.
+- **The waiting-time law**, mean wait within 25 % of τ(λ), reported and not scored, as before.
+
+`scripts/analyse_t24.py`, tested in `tests/test_t24.py` before any run, including the case that a cell holding
+unrecognized resting states passes.
+
+### Predictions
+
+**The owner's, standing from T23 (24 September): SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE.** She has
+not been asked again tonight; these are the predictions she gave for the same measurement, and nothing in the
+change of gate touches them.
+
+**Ours: the same.** Also, not scored: the thermal excess rises with λ and is below 0.02 per point at λ ≤ 1.20; OTHER
+states are a few per cent of decays at λ = 1.30 and are single small defects (8 to 45 units, as in O13); and the
+share ending FLAT falls from 1.30 to 1.35 as in T23.
+
+### Named or interchangeable points
+
+Named, for T8's reason. Expected effect, as T8 and T23: waits multiplied by about N; the release and the front
+unchanged.
+
+### What this cannot show
+
+As T23: anything outside λ = 1.05 to 1.35, at other couplings, beyond N = 192, or with interchangeable points. Nor
+does it show the resting states are stable: they are what the decay rests on at the stop, at g = 1.5, and T19 says a
+leftover anneals at fixed coupling.
+
+#### Reading, 25 September 2026, morning: the window INCONCLUSIVE by the letter, for a third distinct reason; the edge BREAK-UP BEGINS AT THE EDGE
+
+`python scripts/analyse_t24.py` (tests `tests/test_t24.py`), 28 cells of 120 decays from AWS Batch. **Gate 3′ passes in
+all 28 cells**: every decay that reached 75 % has a valid saved graph, and the exact reading of the final wiring is
+what the old gate could not do (at λ = 1.30 the release read exactly is 1.130 to 1.139 per point against 1.2, with 23
+to 42 decays of 120 resting on states other than the flat torus or the ledge, all combinations of small defects). Two
+orders side by side, (b), and one front, (c), hold in every window cell (d ∈ {1, 2} at half conversion 0.977 to
+1.000; largest piece 0.84 to 1.00). **The memoryless check (a′) holds in 24 of 28 cells** and fails in four: λ = 1.25,
+N = 64 (CV 1.93); λ = 1.30, N = 64 (4.69) and N = 192 (1.53); λ = 1.35, N = 144 (1.41). Each failure is one or two
+extreme waits: 20,070 sweeps (24 τ) at 1.25 and 31,955 (76 τ) at 1.30, both at N = 64, with the medians where an
+exponential puts them. Because the per-λ status needs every gated size sharp, λ = 1.25 and 1.30 are "unread" and
+**the window is INCONCLUSIVE**. **The edge: BREAK-UP BEGINS AT THE EDGE** (ending flat 0.74 → 0.49; several pieces
+at 25 % 0.43 → 0.68), the owner's prediction for the third time. The waiting-time law, not scored: within 25 % of τ
+in 17 of 24 window cells, running 20 to 50 % long at λ ≥ 1.25 with the 200-sweep watch. **Said plainly:** three runs,
+three different criteria tripped (the band, the energy catalog, one extreme wait in 120), and the physics has read
+the same each time; the rare very long wait at small N is now seen at three settings and is a thing to study, not to
+legislate away. A repair, if the owner wants one, is a new pre-registration. Details in ASSUMPTIONS O52.
+
+
+**Note, 25 September, 14:05 ET (ASSUMPTIONS O65 (1)):** only the two N = 64 failures are extreme waits; the N = 192 (λ = 1.30) and N = 144 (λ = 1.35) failures are on the spread of the waits.
+
+## T25. Does the scrap freeze in before it heals, when the box cools? (series paper 2; programme piece 6; written 2026-09-24, night, before any run)
+
+### Why
+
+T19 (O35) found that a leftover held at any fixed coupling from 1.0 to 1.5 anneals away, within 500 to 80,500
+sweeps, and survives only in T10's very cold box. In the owner's picture the scrap is dark matter and must be
+long-lived. Her answer (programme piece 6, 24 September): reality cools as it expands, so the right test is a
+race between healing and cooling. Cosmology's name for a relic that survives because its surroundings cool
+faster than it can react is freeze-out (general knowledge, not read by us).
+
+### What will be run
+
+`scripts/run_scrap_race.py`, configs `configs/t25_race_tc<t_cool>.json`. Each replica makes a sheet with one
+leftover exactly as T19 (a 24 × 4 tube at λ = 1.25, one planted seed, a cold sealed box of 2N empty stores,
+30,000 sweeps); a replica not ending with exactly one leftover piece at d = 1 is recorded and not followed. The
+sheet is then cooled at fixed coupling in blocks of 500 sweeps from g_hot = 1.25, where T19 saw every leftover
+anneal within 500 to 13,000 sweeps, to g_cold = 0.25, falling by the same factor each block over t_cool sweeps,
+and then held at g_cold for 20,000 sweeps. t_cool = 300, 1,000, 3,000, 10,000, 30,000, 100,000; twenty replicas
+each; the random stream carried on between blocks. Every block: the vertices at d = 1, their pieces, and the
+vertices that are not flat.
+
+**Disclosed:** a two-replica smoke run at t_cool = 3,000 checked the code; one leftover survived, one replica
+was not followed (no leftover after the make step).
+
+### Definitions, fixed now
+
+- **Survives:** at least one vertex at d = 1 in the final block, after the hold.
+- Per t_cool, the **survival share** over followed replicas; at least 8 followed replicas to be read.
+- **FREEZES IN:** some cooling time read has a survival share above one half, and the fastest cooling time read
+  has the highest share. **ALWAYS HEALS:** no cooling time read has a share above one half. **MIXED:** otherwise.
+- Reported, not scored: the freeze-out time t*, the longest cooling time with survival above one half; and for
+  each healed replica the sweep and coupling at which the leftover was last seen.
+
+`scripts/analyse_t25.py`, tested in `tests/test_t25.py` before any run.
+
+### Predictions
+
+**The owner's** (inferred by the assistant from her stated positions, VISION Update 16 and piece 6's "Next" of
+24 September; **confirmed by her as her own prediction on 25 September, after the reading below had been recorded**,
+which is stated so that the order is on the record): **FREEZES IN.**
+
+**Ours, unverified: FREEZES IN**, with t* between 1,000 and 10,000 sweeps: the annealing times at g = 1.25 in T19
+were 500 to 13,000 sweeps, and once g is below about 0.7 the healing move's first step, an uphill move of order
+8 to 12 units, is offered at exp(−12/g) per attempt and stops within the hold.
+
+### Named or interchangeable points
+
+Named. Interchangeable weighting favors the flat sheet (4N symmetries) over a sheet with one leftover (a few), by
+a factor of about N, so it should hasten healing and shift t* to faster cooling; recorded as expected, not checked.
+
+### What this cannot show
+
+How the model's cooling clock relates to any cosmological one; only that a freeze-out time exists and where it
+sits in sweeps. Anything about two leftovers, or about the many-seed scrap of T17.
+
+#### Reading, 24 September 2026, night: FREEZES IN, t* = 30,000 sweeps
+
+`python scripts/analyse_t25.py` (tests `tests/test_t25.py`). Followed replicas 20, 17, 19, 19, 18, 19 at t_cool = 300 to
+100,000; survival shares 1.00, 1.00, 1.00, 0.79, 0.78, 0.37. The fastest cooling has the highest share and the longest
+cooling time with a majority surviving is 30,000 sweeps. **Verdict FREEZES IN.** The prediction inferred for the owner
+holds; ours placed t* between 1,000 and 10,000 and was too short. Details in ASSUMPTIONS O47.
+
+## T26. The local spark: what does energy packed into one place do to cold space? (series paper 4; programme piece 8; written 2026-09-24, night, before any run)
+
+### Why
+
+O20 and T21 gave a sealed sheet energy through a bath any move could draw on, and the sheet melted, with named
+and with interchangeable points. The owner's objection (24 September): a black hole is not energy spread evenly
+but energy packed into one place, and heating a whole sheet at equilibrium randomizes it by construction. TASKS
+T14 and the known-physics plan (rung 3) both name the local spark as the one route not yet tested. It now exists
+as two protocols, neither a change to the energy (ASSUMPTIONS Q22; `graphity.spark`;
+`sealed.run_sealed_bath(by_vertex=True)`): **stores**, the sheet perfect and the energy in the store of one vertex
+(or of the nine side-0 vertices within radius 2), which only a move made from that vertex can spend; and
+**patch**, the energy put into the wiring within radius 3 of one vertex as disorder, the box otherwise cold and
+empty. Under the model's rules leaving the flat sheet costs 32 (the cheapest single move; O22), so a store below
+32 can never act; the energies below are chosen accordingly.
+
+### What will be run
+
+`scripts/run_local_spark.py`, λ = 1.25, blocks of 500 sweeps for 100 blocks (50,000 sweeps), twenty replicas per
+energy, the final graph saved:
+- `t26_stores_n144`, `t26_stores_n256`: 12 × 12 and 16 × 16 tori, radius 0, E = 32, 48, 64, 96, 128, 192.
+- `t26_stores_r2_n144`: radius 2, E = 288 and 576 (32 and 64 per store).
+- `t26_patch_n144`, `t26_patch_n256`: radius 3, E = 32, 64, 128, shared cold bath of 2N stores.
+- `t26_patch_local_n144`: as above, but the heat the patch gives off stays in per-vertex stores.
+- `t26_patch_n64_named` and `t26_patch_n64_interchangeable`: 8 × 8, radius 2, E = 32 and 64, ten replicas, blocks
+  of 100 for 40 blocks (4,000 sweeps, as T21), named against interchangeable points.
+
+**Disclosed:** smoke runs at N = 144 and 64 checked the code. With the whole energy in one store, E = 32 bought one
+move that left an eight-vertex defect at d = 3 which then sat there; at E = 64 the defect grew and shrank. A hot
+patch of 42 units in the shared cold bath healed to a perfect sheet within 100 sweeps, its energy going into the
+stores as heat. Those are two replicas each and are not results.
+
+### Definitions, fixed now
+
+- Per replica, from its final block: **folded** = vertices at d < 2, **melted** = vertices at d > 2, damage = their
+  sum. **FOLDED:** damage ≥ 4 and folded ≥ melted. **MELTED:** damage ≥ 4 and folded < melted. **HEALED:** damage
+  below 4 (flat again to within one column). Four is the smallest curled object.
+- A cell is one (protocol, points, E, radius, local heat, N); its outcome is the majority over replicas, else
+  MIXED; at least six replicas to be read.
+- **RE-CURLS:** at least one cell's majority is FOLDED. **MELTS:** no FOLDED majority and at least one MELTED
+  majority. **HEALS:** every read cell's majority is HEALED. **MIXED:** otherwise.
+- Reported, not scored: the share of replicas that melt first and fold later (a block with melted ≥ 4 followed by
+  a later block with folded ≥ 4 and folded > melted), which is the owner's "melts briefly, then folds"; the largest
+  folded piece; with interchangeable points, the symmetry count at the end.
+
+`scripts/analyse_t26.py`, tested in `tests/test_t26.py` before any run.
+
+### Predictions
+
+**The owner's** (inferred by the assistant from her stated positions of 24 September, that a black hole is a
+re-curled region, that the melt is not a real phase and melting briefly is fine as long as the region folds soon
+after, and that energy packed into one place is the untested case; **confirmed by her as her own prediction on
+24 September, night, while the runs were in progress and before any cell was read as a verdict**): **RE-CURLS**,
+with melt-then-fold common.
+
+**Ours, unverified: MELTS.** Under "stores" the first move a store can buy destroys squares (the cheapest way out
+of the sheet is a loss of two squares, 32), and the eight vertices it leaves at d = 3 are melted by this reading,
+not folded; a fold needs a third square on an edge, which the sheet's own moves do not add in one step (the move
+census, corrected 23 September: from perfect space no single move adds a square). Under "patch" with the shared
+bath: HEALS, since every downhill move into an empty bath is accepted. Under "patch" with local heat: MELTS, the
+same defect churning in place. Interchangeable points at N = 64: the same as named. Folded stays below melted in
+every cell.
+
+### Named or interchangeable points
+
+Named in every cell but one, and the exception is the point of the N = 64 pair: with interchangeable points a
+complete fold (a 4-cube, 192 symmetries; a curled column, fewer) gains weight that a partial fold does not
+(series plan, paper 4), and N = 64 is the smallest size where complete folds exist. At N = 144 and 256 the per-move
+count is unaffordable; expected effect there, from T21: none visible, since damaged sheets have 1 to 4 symmetries.
+
+### What this cannot show
+
+Anything with the points free to change in number, or in three dimensions, where the owner's re-curling of three
+intertwined directions lives (VISION Update 22); nothing here is about gravity. The reading calls d < 2 "folded"
+and d > 2 "melted", O20's rule; a region that is neither (d = 2 but rewired) would count as flat.
+
+#### Reading, 25 September 2026, early morning: MELTS
+
+`python scripts/analyse_t26.py` (tests `tests/test_t26.py`). Twenty-two cells: every one has a MELTED majority. Stores
+with the whole energy in one vertex (N = 144 and 256, E = 32 to 192): 19 or 20 of 20 melted in each cell; spread over
+nine stores: 20 of 20; a hot patch in a cold shared bath (N = 144 and 256): 15 to 20 of 20 melted, the rest healed, at
+most one folded; a hot patch with local heat: 20 of 20; at N = 64, the named patch melted in 7 of 10 at both energies
+(3 folded at E = 32) and the interchangeable one healed 10 of 10 at E = 32 and melted 7 of 10 at E = 64. No cell folds;
+the largest folded piece anywhere is 11 points; melt-then-fold occurs in at most 1 replica in 20. **Verdict MELTS.** The
+owner's prediction, confirmed as hers before the reading (RE-CURLS), fails; ours (MELTS) held, with the patch-in-a-cold-
+bath cells melting rather than healing as we expected at 144 and 256 points. Details in ASSUMPTIONS O48.
+
+**Correction, 25 September, 13:33 ET (ASSUMPTIONS O64 (2)):** the data hold 27 cells, not 22, and not every one has a MELTED
+majority: the interchangeable patch at N = 64, E = 32 healed 10 of 10, as the paragraph above itself says. 26 cells
+melted, one healed, none folded. The verdict, MELTS, is unchanged.
+
+## T27. Does a melt fold before it flattens, when its energy is allowed to leave? (series paper 4; programme piece 8, second test; written 2026-09-24, night, before any run)
+
+### Why
+
+The owner's position (24 September): the melt can be the barrier between a new space and the black hole that
+birthed it, closing until the next push is available; melting briefly is fine as long as the region folds soon
+after. In the model a melt lasts as long as its energy stays (T21), so "brief" needs the energy to leave. The
+testable form: give a sealed sheet T21's budget through T21's bath, then drain the stores at a chosen rate, and
+ask what the sheet is when the energy is gone.
+
+### What will be run
+
+`scripts/run_local_spark.py` with protocol "bath": a 12 × 12 torus at λ = 1.25, the whole energy in one store of
+a shared bath of 2N stores (T21's bath protocol), E = 288, 576, 1152 (2, 4 and 8 per point, T21's budgets), twelve
+replicas per energy, blocks of 100 sweeps for 300 blocks; after each block every store keeps the fraction 1 − leak
+and the rest is counted as lost. Leak = 0.001, 0.01, 0.1 and 1.0 per block (`t27_leak_n144_l0001`, `l001`, `l01`,
+`l1`), and leak = 0 as the sealed control (`t27_leak_n144_l0`, reported and not scored). A leak of 1.0 removes
+everything given off as soon as it appears: a quench.
+
+### Definitions, fixed now
+
+Exactly T26's per-replica outcomes and cell majorities, read on the final block. Over the leaking bath cells:
+**FOLDS BEFORE IT FLATTENS** (at least one FOLDED majority), **STAYS MELTED** (no FOLDED majority, at least one
+MELTED majority), **FLATTENS** (every read cell HEALED), **MIXED** otherwise. Reported, not scored: the leak-0
+control, the melt-then-fold share, and the energy left in the wiring when the stores are empty.
+
+`scripts/analyse_t26.py` (the T27 branch), tested in `tests/test_t26.py`.
+
+### Predictions
+
+**The owner's, inferred by the assistant from her stated positions and to be confirmed by her:** **FOLDS BEFORE IT
+FLATTENS**, at some leak rate. Marked as inferred until she confirms or replaces it.
+
+**Ours, unverified: STAYS MELTED.** At slow leaks the bath anneals the melt as it cools and the sheet flattens
+(T19's leftover healed at every fixed coupling); at the quench (leak 1.0) every downhill move is final and no
+uphill move is ever paid for, so whatever disorder the budget bought is frozen in as it stands, and the budget
+was bought as melt (T21). So the slow cells FLATTEN and the quench cell STAYS MELTED, and the verdict rule reads
+STAYS MELTED. A FOLDED majority anywhere would be the first fold this project has seen.
+
+### Named or interchangeable points
+
+Named. The interchangeable version at N = 64 is T21's, which melted either way; not rerun here.
+
+### What this cannot show
+
+As T26. The leak is a protocol knob (ASSUMPTIONS Q12), declared here, and the model's sweep is not a physical clock.
+
+#### Reading, 24 September 2026, night: STAYS MELTED
+
+`python scripts/analyse_t26.py` (tests `tests/test_t26.py`). Fifteen cells (three energies, four leaks and the sealed
+control), twelve replicas each: every cell has a MELTED majority, 57 of 60 leaking replicas melted, no FOLDED majority
+anywhere, no melt-then-fold. **Verdict STAYS MELTED.** Ours held; the prediction inferred for the owner (FOLDS BEFORE IT
+FLATTENS) fails. Details in ASSUMPTIONS O48.
+
+**Correction, 25 September, 13:33 ET (ASSUMPTIONS O64 (3)):** 134 of the 144 draining replicas melted (10 folded); "57 of
+60" above was the E = 288 row with the sealed control. The verdict is unchanged.
+
+## Gate C′. Which reading of [T22] Fig. 3's axis is ours, and does the same reading hold for its 2D figure? (six-link track; written 2026-09-24, night, before the runs)
+
+### Why
+
+Gate C failed (O43): under the two readings of the published axis tried, ħg = g and ħg = g/N^(1/3), our six-link
+curve has the wrong position and the wrong shape. The owner asked that the gate be attacked without the model's
+author, by guesses and tests. Tonight's reading of the paper's text (`scripts/explore_gate_c_readings.py`,
+exploratory, O46) settled three things and raised one. Settled: the axis is a natural log of couplings 0.40 to
+4.00 (the marker spacing shrinks tenfold across the axis, which only that grid gives); the paper states no
+protocol at all; and its Eqs. (1) and (2), read with one factor of g in the weight, give exactly our energy at
+λ = 1, so no normalization factor is available. Raised: Eq. (3) writes the weight as exp(−S_EH/ħg) with S_EH of
+Eq. (1) already carrying 1/g, so read literally the weight goes as 1/g², which compresses the whole curve by
+half on the log axis. On our existing slow runs that reading, with nothing free, puts the crossing of 9
+squares per vertex at 0.64 against the published 0.666 and the heating leg's width at 0.67 against 0.645, and
+a free two-parameter fit lands at a slope of 0.45 without being told; the readings with one power of g
+cannot fix the width at any factor. Against it: the same author's 2D figure of 2025 matched us under one
+power of g on its hot side (Gate B). So the question has two halves, and each gets a run.
+
+### What will be run
+
+- **Run A, `gatec2_3d_n500_a` and `_b`** (`scripts/run_cqg_d_sweep.py`; two replicas, one Batch job each):
+  D = 3, N = 500, λ = 1, no cap, Metropolis, from a start with no squares (circulant 250, the Gate C start),
+  cooling then heating, 2,000 + 2,000 sweeps per coupling (Gate C's protocol P1). Couplings: the squares of the
+  published grid, g = (0.40 + 0.05k)² for k = 0 to 72 (0.16 to 16), plus g = 20.25, 25, 30.25, 36, 42.25, 49,
+  56.25, 64, so that reading (iv) below compares point to point and every reading is covered.
+- **Run B, `gatec2_2d_n2000_a` and `_b`**: the same runner at D = 2 (which is `cqg` draw for draw), N = 2000
+  (circulant 1000 with offsets 0, 1, 4, 10: four links, no squares), λ = 1, both legs, 2,000 + 2,000 sweeps per
+  coupling, at g = e^(k/4) for k = 16 down to −8 (54.6 to 0.135), the range [T22] Fig. 2 spans under either
+  reading.
+
+### Definitions, fixed now
+
+**Readings** map our coupling to the published axis, x = a ln g + b: (i) a = 1, b = 0; (iii) a = 1, b = −ln 2;
+(iv) a = ½, b = 0; (v) a = 1, b = −ln 5.5. Reading (ii), g/N^(1/3), is dropped: the paper defines ħg with the
+N^(1−2/D) factor already inside it (its Eq. (7)).
+
+**Run A, scored under reading (iv) only**, on each leg separately: (A1) the crossing of 9 squares per vertex
+within 0.10 of the published 0.666 in ln ħg; (A2) the crossing of 6 within 0.10 of 0.996; (A3) the width
+between those two crossings within 30 % of the published 0.330. **READING (iv) HOLDS** if A1 to A3 pass on at
+least one leg. **FAILS** otherwise. Reported, not scored: the crossing of 2 (published 1.311), the cold
+plateau (published 10.07), and A1 to A3 under readings (i), (iii) and (v).
+
+**Run B, scored on the width alone.** W = the ln g at which 4S/N falls through 0.17 minus the ln g at which it
+falls through 3.1, on each leg. [T22] Fig. 2 has 3.1 at ln ħg = −1 and 0.17 at +1, so its width is 2.0 with
+points one unit apart. **ONE POWER** if W < 3 on both legs (the published width is ours: one factor of g in the
+weight); **TWO POWERS** if W > 3 on both legs (the published axis is half ours: the 1/g² reading); **MIXED**
+otherwise. Reported: the four published values 3.5, 3.1, 1.17, 0.17 at ln ħg = −2, −1, 0, 1 against ours at
+ln g = x and at 2x.
+
+`scripts/analyse_gatec2.py` will be written to these rules before either run is read, tested on rows with
+known answers.
+
+### What the pairs of outcomes mean, fixed now
+
+- A HOLDS and B TWO POWERS: the published weight is 1/g² in both dimensions; Gate C is passed under reading
+  (iv), with the hot tail and the plateau differences attributed provisionally to the published graphs allowing
+  triangles and pentagons (a six-link general kernel would test that).
+- A HOLDS and B ONE POWER: the compression is not in the weight; the 3D curve is a narrower transition than
+  ours, a model difference (non-bipartite graphs with the triangle and pentagon terms are the named candidate),
+  and the six-link track stays stopped until that kernel exists.
+- A FAILS: every reading of the axis is exhausted; the difference is in the model or in an unstated protocol,
+  and the question goes to the model's author as before.
+
+### Predictions
+
+**The owner's:** she asked for guesses and tests and gave no pick. **Ours, unverified:** Run A, READING (iv)
+HOLDS on the cooling leg (the exploratory ranking gives 0.64 for the 9-crossing; the 6-crossing and the width
+are not yet computed, so this is a prediction and not a reading). Run B: ONE POWER, from our 2D curves at
+N ≤ 676, whose width between the same two levels is about 2.7 in ln g and should narrow with N. We therefore
+expect the second pair of outcomes, and say so before the runs: the 1/g² reading fits the 3D figure's shape
+and position but is likely not what the code does, which would leave a model difference in three dimensions.
+
+### Named or interchangeable points
+
+Named, as the published runs.
+
+### What this cannot show
+
+The published protocol, which the paper does not state; whether its graphs are bipartite, which only a
+six-link kernel with triangles and pentagons can test; anything at λ ≠ 1.
+
+#### Reading, 25 September 2026, morning: run A FAILS; run B ONE POWER
+
+`python scripts/analyse_gatec2.py` (tests `tests/test_gatec2.py`). **Run A, reading (iv): FAILS** in all four legs: the
+9-crossing lands at 0.685 and 0.715 on the cooling legs (A1 passes) but the 6-crossing at 0.83 (A2 fails) and the
+width at 0.11 to 0.15 against 0.33 (A3 fails); the heating legs jump from 9 to 6 within 0.02 of ln ħg. **Run B: ONE
+POWER**, W = 1.53 to 1.61 in ln g on every leg against the published 2.0, so the same code's 2D figure is not
+compressed. This is the third outcome pair: the 1/g² reading is dead, every reading of the axis is exhausted under
+the pre-registered criteria, and the question goes to the model's author. **Reported, not scored:** under reading
+(iii), a plain factor of 2 in the coupling, the cooling legs put the 9-crossing at 0.677 and 0.737, the 6-crossing at
+0.970 and 0.961, and the width at 0.29 and 0.22, all inside the tolerances that (iv) was scored by; what differs from
+the published curve under (iii) is the hot tail (our 2-crossing at 2.35 against 1.31, a factor of 2.8 in coupling) and
+the plateau (11.4 against 10.07). Both are in the direction of graphs that allow triangles and pentagons, which the
+paper says its ground states carry. That is an observation made after the run and is not a verdict; a six-link kernel
+with triangles and pentagons is what would test it. Details in ASSUMPTIONS O53.
+
+
+## T30. Six links: does one push open both curled directions, and how much room does that need? (piece 11; written 2026-09-25, before any run)
+
+### Why
+
+The owner's rule (VISION Updates 22 and 23): the three space directions are intertwined; they curl together and
+open together, so one activation releases the whole burp. On 24 September she decided to proceed with the
+six-link work while the reproduction of the published 3D curve (Gate C, C′) is pursued in parallel (VISION
+Update 24). The 3D ladder is exact and additive (O41): each curled direction costs 4(λ − 1) per vertex. The
+tori that can be tested at sizes with a flat 3-torus of the same N are the two-curled ones, 4 × 4 × 18 (N = 288,
+flat 6 × 6 × 8) and 4 × 4 × 32 (N = 512, flat 8 × 8 × 8), and, for the literal form of her rule, a gas of eight
+6-cubes (N = 512, all three directions curled, no direction singled out).
+
+**Exact, computed before the runs, on the tori actually used** (brute force over every switch; recorded in O49,
+which corrects O41's window for the two-curled state): the cheapest way out of 4 × 4 × 18 and 4 × 4 × 32 loses 6
+squares and 16 surplus squares and costs 96 − 64λ (16 at λ = 1.25, 25.6 at 1.10), offered about 5.3 times a
+sweep, so the two-curled state is stuck for now for 1 < λ < 1.5, not 1.2 (O41's 96 − 80λ move exists only when
+the open side is 6, and in the 6-cube). The one-curled rung (4 × L × L′) leaves by a move costing 96 − 48λ (36 at
+1.25, 43.2 at 1.10; O41, re-checked on 4 × 6 × 6). The 6-cube and a gas of them leave by 96 − 80λ (8 at 1.10;
+downhill at 1.25), so the gas is tested at λ = 1.10 only.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` (graphity.sealed_d, the bath of stores at six links, draw for draw with the
+2D kernel at four links; graphity.dimension.local_dimension_d, which reads d = 3 flat, 2 one curled, 1 two
+curled, 0 all curled). One store holds the spark, the rest are empty; 100,000 sweeps, read every 200; twelve
+replicas per cell; the final graph saved.
+- `t30_lam125_n288_c{2n,n,n2,n4,n8}`: 4 × 4 × 18, λ = 1.25, spark 16.0 (the exact wall), C = 2N, N, N/2, N/4, N/8.
+- `t30_lam125_n512_c{2n,n4}`: 4 × 4 × 32, λ = 1.25, spark 16.0, C = 2N and N/4.
+- `t30_lam110_n288_c{2n,n4}`: 4 × 4 × 18, λ = 1.10, spark 26.0 (the wall is 25.6), C = 2N and N/4.
+- `t30_gas_lam110_n512`: eight 6-cubes, λ = 1.10, sparks 8.0 and 10.0 (the wall is 8), C = 2N.
+All on Batch through the queue (`cloud/queue/2026-09-25_t30_t32.txt`).
+
+### Definitions, fixed now (`scripts/analyse_t30.py`, tested in `tests/test_t30.py` before any run)
+
+- Per replica: the **middle rung** is reached at the first block with H/N ≤ 4(λ − 1)(1 + 0.10) and at least half
+  the vertices at d ≥ 2; the **flat state** at the first block with H/N ≤ 0.10 · 4(λ − 1) and at least 90 % of
+  vertices at d = 3. A replica **rests** on the middle rung if H/N stays within ±10 % of 4(λ − 1) for at least
+  5,000 consecutive sweeps. Outcome from the final block: FLAT, MIDDLE (middle rung reached, not flat), STUCK
+  (majority still at d = 1 and under a quarter melted), MELTED (a quarter or more of vertices at d > 3), OTHER.
+- Per cell (λ, N, C): the majority outcome, else MIXED. **C\***, per (λ, N): the smallest C with a FLAT majority.
+- **Mechanism**, over every replica anywhere that reached the flat state: CASCADE if it did not rest on the
+  middle rung on the way, STEPWISE if it did.
+- **Verdicts.** ALL AT ONCE: some cell has a FLAT majority and at least half the flat-reaching replicas cascaded.
+  ONE AT A TIME: some cell has a FLAT majority and fewer than half cascaded. FIRST ONLY: no FLAT majority
+  anywhere, some MIDDLE majority. NEVER OPENS: neither.
+- The gas is read by the same rules (its middle rung is at 8(λ − 1), two of three directions still curled, which
+  the definitions above take as "H/N ≤ 4(λ − 1)(1.1)" only when it has gone two rungs; so for the gas the report
+  states the rungs reached in words as well), and its verdict is reported separately as T30-gas.
+- Reported, not scored: the energy released per vertex against 4(λ − 1) and 8(λ − 1); whether the flat region is
+  one piece (a front) at the end; the bath temperature after each rung.
+
+### Predictions
+
+**The owner's:** ALL AT ONCE for the two-curled tori and for the gas, and a C\* that exists at both sizes (her
+rule: one activation opens every curled direction; and, from piece 4, the burp must always have somewhere to go).
+
+**Ours, unverified:** FIRST ONLY. The spark pays the first wall and the first direction opens as a front,
+releasing 4(λ − 1) per vertex (288 units at N = 288, λ = 1.25) into the bath; the second wall is 36, and a bath
+of 2N stores then sits near 0.5 per store, so exp(−36/0.5) is never paid, while a bath small enough to be hot
+enough (about N/8, near 4 per store) melts the sheet as T9 and T18 found in 2D. So the middle rung is reached
+at large C and the sheet melts at small C, with no C giving a flat majority: FIRST ONLY, with C\* undefined.
+For the gas at λ = 1.10: NEVER OPENS or FIRST ONLY, since a 6-cube that has opened one direction is a
+4 × 4 × 4 arrangement with nowhere flatter to go inside 64 points and must join its neighbors, and we have
+not priced the joining moves.
+
+### Named or interchangeable points
+
+Named. With interchangeable points the 4 × 4 × L torus carries many symmetries (its two curled directions each
+of length 4 and the open one of L, times the point-swaps) and the state one move out far fewer, so the first
+step would be rarer by a large factor; the release and the front are expected unchanged. Not run.
+
+### What this cannot show
+
+Anything about the published model at λ = 1 (Gate C′ is open; VISION Update 24 states the caveat every
+six-link result carries); anything about how the released energy would move in a system with a physical clock;
+gravity, which is T28.
+
+#### Reading, 25 September 2026, morning: FIRST ONLY; the gas descends two rungs
+
+`python scripts/analyse_t30.py` (tests `tests/test_t30.py`), ten cells from AWS Batch. **No cell has a FLAT majority:
+verdict FIRST ONLY.** At λ = 1.25 with C = 2N, N, N/2 and N/4 (N = 288) and C = 2N (N = 512), the spark of 16 buys
+the first exit and the first curled direction opens as a front to the one-curled rung (at the end 95 % of points at
+d = 2, the energy 1.00 to 1.25 per point against the rung's 1.0, the bath near 0.4 to 0.5 per store), and the second
+direction never opens; the rules call most of these OTHER rather than MIDDLE only because thermal defects keep the
+energy above the 10 % tolerance. At C = N/8 the bath heats to 1 to 5 per store and 2 of 12 replicas descend both
+rungs to a defective near-flat state (88 to 90 % of points at d = 3, 3 % of squares lost), just under the 90 %
+cleanliness bar; the rest are mixtures. At λ = 1.10 (N = 288) the spark of 26 buys one move and nothing follows:
+STUCK, the excitation neither heals nor grows in 100,000 sweeps. **The gas of eight 6-cubes at λ = 1.10 (T30-gas):**
+in 21 of 24 replicas the cubes join and open two of their three directions (energy 1.2 → 0.24 to 0.41 per point, the
+bath 0.4 to 0.5 per store), with about 40 % of points fully open in many small flat patches (largest 36 to 64
+points), never one flat space; 3 replicas did not leave. **The owner's prediction (ALL AT ONCE) fails; ours (FIRST
+ONLY) holds**, with the gas going further than we expected. Details in ASSUMPTIONS O54.
+
+**Correction, 25 September, midday (the assistant's):** the reading above overstates the tori. Read from the final
+local-dimension census, the first direction opened completely in 28 of the 84 torus replicas at λ = 1.25; 32 stalled
+early (36 to 53 % of points still two-curled), 21 went most of the way (15 to 24 % still two-curled), 3 went past the
+rung at the hottest baths. No torus cell has a MIDDLE majority; the FIRST ONLY verdict is carried, by the letter, by the
+gas cell, which went two rungs down without resting between them. **Corrected again, 13:33 ET (ASSUMPTIONS O64 (1)):**
+this section reports the gas separately as T30-gas, and the analyzer had pooled it. Read as registered, **T30 (tori):
+NEVER OPENS**; T30-gas: FIRST ONLY by the letter (two of three directions open). Both predictions fail for the tori. The second direction of a torus never opened in a
+cold bath. ASSUMPTIONS O54, correction.
+
+## T32. Six links: is the activation fixed with size? (piece 11; written 2026-09-25, before any run)
+
+### Why
+
+In 2D the spark that starts the change is exactly the cheapest move, 12 units at λ = 1.25, at every size from
+48 to 192 (VISION Update 9; S2′ (iv)). VISION Update 22 names the same measurement in three dimensions as one to
+pre-register with the owner's prediction.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with a single store (C = 1) holding the spark: 4 × 4 × L at λ = 1.25 for
+L = 12, 18, 24, 32 (N = 192 to 512), sparks E = 12, 14, 15, 16, 17, 18, 20, ten replicas each, 20,000 sweeps
+(`t32_wall_n{192,288,384,512}`; Batch through the queue).
+
+### Definitions, fixed now
+
+Per (N, E): the share of replicas that ever **left** the start (S or X changed at any sweep). **E\*** at each N is
+the smallest spark at which every replica left. **FIXED WALL** if E\* is the same at every N; **GROWS** if it
+rises with N; **FALLS** if it falls; **NOT READ** if some N has no spark at which every replica left. **SHARP**
+is reported beside it: at every N, nothing below E\* ever left.
+
+### Predictions
+
+**The owner's:** FIXED WALL (the activation does not grow with size, as in 2D). **Ours:** FIXED WALL at E\* = 16,
+SHARP: the exact wall on these tori is 96 − 64λ = 16 at every L (O49), and every move below it is refused with a
+single store.
+
+### What this cannot show
+
+The wait at fixed coupling (no coupling here); anything at other λ.
+
+#### Reading, 25 September 2026, morning: FIXED WALL, sharp
+
+`python scripts/analyse_t30.py`. At N = 192, 288, 384 and 512 (4 × 4 × L, λ = 1.25, a single store), no replica left
+the start with a spark of 12, 14 or 15, and every replica left with 16, 17, 18 or 20: E\* = 16 at every size, exactly
+the wall of O49, and sharp. **Verdict FIXED WALL.** The owner's prediction and ours hold. Details in ASSUMPTIONS O54.
+
+## T33. Eight links: in what pattern do four curled directions open? (piece 13; VISION Update 25; written 2026-09-25, before any run)
+
+### Why
+
+The owner's idea (VISION Update 25): the change could be four-dimensional, with time uncurled too, either as a
+singleton beside the three tied space directions (one opens alone, then three together) or with all four tied
+(all open together), which the relativity of time suggests. The model has no time and cannot say which direction
+is which; what it can test is the **pattern** in which curled directions open, and the two variants and our
+expectation predict three distinct patterns. The eight-link model is the same code as at four and six links
+(graphity.cqg_d, graphity.sealed_d; VISION Update 24's caveat applies: there is no published eight-link curve, and
+the kernel is validated at four and six links only).
+
+**Exact, computed before the runs, on the tori actually used** (`scripts/exact_walls_d.py --near=4`, checked against
+the full search at six links; recorded as O50). The ladder is additive, 4(λ − 1) per vertex per curled direction,
+and at N = 2304 every rung exists: 4 × 4 × 4 × 36 (three curled) → 4 × 4 × 12 × 12 (two) → 4 × 6 × 8 × 12 (one) →
+6 × 6 × 8 × 8 (flat); the fully curled X is a gas of nine 8-cubes. Cheapest walls at λ = 1.25: three curled 20
+(160 − 112λ), two curled 40 (160 − 96λ), one curled 80 (160 − 64λ), leaving flat space 128 (a move losing eight
+squares and no surplus, at every λ); the 8-cube and a gas of them, 160 − 128λ, which is 0 at λ = 1.25 and 19.2 at
+λ = 1.10, so the gas is stuck for now only below λ = 1.25. Unlike two dimensions, the flat state's wall (128) is far
+above every rung's wall, so a bath hot enough to pay the later rungs need not melt the flat state.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` at eight links, sealed, one store holding the spark, 50,000 sweeps read every 250,
+six replicas per cell, the final graph saved; all on Batch through the queue (`cloud/queue/2026-09-25_t33.txt`):
+- `t33_three_lam125_c{2n,n2,n4,n8}`: 4 × 4 × 4 × 36 at λ = 1.25, spark 20.0 (the exact wall), C = 2N, N/2, N/4, N/8.
+- `t33_gas_lam110_c{2n,n4}`: a gas of nine 8-cubes at λ = 1.10, spark 20.0 (the wall is 19.2), C = 2N and N/4.
+
+### Definitions, fixed now (`scripts/analyse_t33.py`, tested in `tests/test_t33.py` before any run)
+
+- d(v), read by `local_dimension_d`, is the number of open directions at a point, 0 to 4. Per replica and block, the
+  **majority rung** is the d held by more than half the points. A rung is **rested on** if it stays the majority for
+  at least 5,000 consecutive sweeps. MELTED: at least a quarter of the points at d > 4 in the final block.
+- Patterns, from the rests among the rungs strictly between the start rung and the flat rung 4. From the gas (start
+  rung 0): **FOUR TOGETHER** (rung 4 reached with no rest on 1, 2 or 3); **SINGLETON PLUS THREE** (a rest on 1, then
+  rung 4 with no rest on 2 or 3); **ONE AT A TIME** (a rest on every intermediate rung on the way to 4, or on the way
+  as far as it got); **STALLS** (rung 4 not reached and no such pattern, including never leaving); **OTHER**. From the
+  three-curled torus (start rung 1): **THREE TOGETHER** (rung 4 with no rest on 2 or 3); ONE AT A TIME; STALLS; OTHER.
+- Per cell (start, λ, N, C): the majority pattern, else MIXED. **Verdict per start**: the first of FOUR TOGETHER,
+  SINGLETON PLUS THREE, ONE AT A TIME (gas) or THREE TOGETHER, ONE AT A TIME (three-curled) that is some cell's
+  majority; **NO CASCADE** if none is.
+- Reported, not scored: the release per rung against 4(λ − 1); the bath temperature after each rung; the sweep at
+  which each rung was first reached; whether the flat region is one piece.
+
+### Predictions
+
+**The owner's:** a tied pattern. From the three-curled start, THREE TOGETHER; from the gas, FOUR TOGETHER if all four
+are tied, SINGLETON PLUS THREE if time is a singleton; her reasoning from the relativity of time leans to all four
+tied. Recorded in her words in VISION Update 25.
+
+**Ours, unverified: ONE AT A TIME where the bath is hot enough, and a stall where it is not**, from the exact walls.
+From the three-curled start at λ = 1.25 each rung releases 2,304 units; with C = 2N or N/2 the bath after the first
+rung sits near 0.5 or 2 per store and the next wall (40) is never paid, so the replica rests on rung 2: STALLS (as far
+as it got, a rest on one rung) or ONE AT A TIME by the letter if only that rung counts. With C = N/4 the bath after
+each rung sits near 4, 8 and 12 per store, each next wall (40, 80) is paid after a wait of order thousands of sweeps,
+and the flat state, whose wall is 128, holds until near the end: ONE AT A TIME, with the flat state possibly melting
+late. With C = N/8 the walls fall within tens of sweeps of each rung and the flat state melts at the end. For the
+gas at λ = 1.10: the first wall (19.2) is paid by the spark, one cube opens one direction and the rest need joining
+moves we have not priced: STALLS or ONE AT A TIME. We do not expect a tied pattern anywhere, because the walls
+rise by a factor of two per rung and nothing in the energy links the directions.
+
+### Named or interchangeable points
+
+Named. Not run interchangeably (the per-move count is unaffordable at N = 2304).
+
+### What this cannot show
+
+Which direction is time (nothing in the model distinguishes one); anything about the published model; the pattern
+with a physical clock rather than sweeps. A tied pattern, if it appeared, would be a surprise this energy has no
+term for, and would need an explanation before it was called support.
+
+#### Reading, 25 September 2026, 12:50 ET: NO CASCADE from both starts, because every replica stalled after one move
+
+`python scripts/analyse_t33.py`, six cells of six replicas from AWS Batch. **Every replica reads STALLS, so both
+verdicts are NO CASCADE by the letter.** From the three-curled torus at λ = 1.25 (C = 2N, N/2, N/4, N/8) and from the gas
+of nine 8-cubes at λ = 1.10 (C = 2N, N/4), the spark bought one move, the energy rose by that move's cost (3.000 → 3.009
+and 1.600 → 1.608 per point), the bath was left at zero, and nothing changed again in 50,000 sweeps: from the state one
+move out, no move is downhill. **Neither prediction was tested in the sense intended:** no pattern appeared, tied or one at
+a time, because nothing opened. The design gave each start exactly the cost of its cheapest first move, which in three
+directions at λ = 1.25 was enough for the first direction to open in a third of the runs (T30, corrected); in four it is
+not, and the true activation is the height of the pass over several moves. What the verdict says, then, is about the push,
+not about how the directions are tied. The owner's prediction (a tied pattern) is not supported; ours (one at a time where
+the bath is hot enough, a stall where it is not) is supported only in its second half, and for a reason we did not
+anticipate (the bath was empty, not cool). ASSUMPTIONS O62.
+
+## T34. Six links: does concentrated energy fold flat space, one direction and then the rest? (piece 8; VISION Update 27; written 2026-09-25, midday, before any run)
+
+### Why
+
+In two dimensions the model was asked three ways whether concentrated energy re-curls space, and it melted every time
+(O20, T21, T26, T27). The owner's fold is three-dimensional, and her mechanism (VISION Update 27) is specific: the
+collapse begins on one direction, and once one direction has curled the next folds are easier, so the grouped
+directions collapse together. Two things are exact before any run (O55): each successive fold's nucleation excess
+halves (36, 16, none, at six links and λ = 1.25), which is the "easier" of her mechanism; and with named points nothing
+favors curling beyond that, while with interchangeable points the counting drive appears only at full curling and pays
+only below λ ≈ 1.02. This run is with named points at λ = 1.25, so it tests the walls' half of her mechanism, not the
+counting's.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` on the flat six-link torus (nothing curled), sealed, energy given at the start and
+conserved, 50,000 sweeps read every 250, eight replicas per cell, the final graph saved; on Batch through the queue
+(`cloud/queue/2026-09-25_t34.txt`):
+- **Spread:** a shared bath of 2N stores with the whole energy in one of them (T21's protocol), N = 216 (6 × 6 × 6)
+  and 512 (8 × 8 × 8). `t34_spread_n216`, `t34_spread_n512`.
+- **Packed:** the whole energy in the store of one vertex under the per-vertex bath (`local_heat`, Q22 at six links),
+  the same sizes. `t34_packed_n216`, `t34_packed_n512`.
+- Energies E = 64 (the cheapest exit from flat 3D space), 128, 256, and one and two directions' worth plus a wall:
+  at N = 216, 260 and 500; at N = 512, 560 and 1060 (a direction costs 4(λ − 1)N = 216 and 512; the first fold's
+  excess is 36, the second's 16).
+
+### Definitions, fixed now (`scripts/analyse_t34.py`, tested in `tests/test_t34.py` before any run)
+
+- Per replica, from the final block: **folded** = vertices at d < 3, **melted** = vertices at d > 3, damage = their sum.
+  FOLDED: damage ≥ 4 and folded ≥ melted. MELTED: damage ≥ 4 and folded < melted. HEALED: damage < 4. Four is the
+  smallest curled object (one column of a curled direction).
+- Per cell (protocol, N, E): the majority outcome, else MIXED; at least six replicas.
+- **RE-CURLS:** some cell has a FOLDED majority. **MELTS:** none has, and some cell has a MELTED majority. **HEALS:**
+  every read cell HEALED. **MIXED:** otherwise.
+- Reported, not scored: **ONE DIRECTION** replicas, in which the folded count reaches at least N/3 at some block (a
+  whole direction's worth of points curled), and **CASCADE** replicas, in which it reaches 2N/3; the largest folded
+  piece at the end; the share that melt first and fold later; the bath temperature.
+
+### Predictions
+
+**The owner's** (her words of 25 September, midday, put in order): **RE-CURLS**, beginning on one direction and then, once
+one has curled, the rest collapsing together: ONE DIRECTION reached, then CASCADE.
+
+**Ours, unverified: MELTS.** The cheapest move out of flat 3D space loses four squares (O51) and no single move from
+the perfect lattice adds a surplus square, so the energy is spent on melting first, as in two dimensions; the folding
+walls' halving (O55) helps only once a direction has curled, and nothing with named points at λ = 1.25 starts that.
+We expect no ONE DIRECTION replica. If one appears, the walls' half of her mechanism has something to work with and
+the counting half becomes the next run (interchangeable points near λ = 1.02).
+
+### Named or interchangeable points
+
+Named. The counting drive is exact (O55) and absent here by construction; its run is the designed follow-up.
+
+### What this cannot show
+
+Which direction is time; anything about gravity as a force; anything at λ = 1, where nothing is released or paid. It
+carries VISION Update 24's caveat: the published six-link curve is not reproduced.
+
+#### Reading, 25 September 2026, 17:08 ET: MELTS
+
+`python scripts/analyse_t34.py`, all 20 cells (packed and spread, N = 216 and 512, five energies each, eight replicas):
+**every cell has a MELTED majority, no cell folds, and no replica anywhere folded a single point** (largest folded piece 0;
+no ONE DIRECTION, no CASCADE, no melt-then-fold). **Verdict MELTS.** The owner's prediction (RE-CURLS, one direction then
+the rest) fails; ours (MELTS) held. *Read with O66:* at N = 216 every one of these end states, quenched at zero
+temperature, came back to perfectly flat space, so a "melt" here is thermal excitation of flat space that the cold
+removes, not trapped disorder; the verdict stands by its rule and says less than the word. The counting half of her
+mechanism, which named points cannot see, is T42 (interchangeable points near λ = 1.02), running. ASSUMPTIONS O69.
+
+## T36. Allotropes in the published model: do regions of points touching two squares persist in a background of three? (piece 12; written 2026-09-25, evening, before any run)
+
+### Why
+
+Piece 12 asks the author's order → order question inside the model's author's own setting, λ = 1: are there
+allotropes, regions stuck in a different discrete arrangement ([T24]; [T25] Fig. 9)? The drawn example lives on an
+infinite hyperbolic graph and has no finite adjacency list. The model's author suggested a numerical route (private
+communication, 25 September 2026): equilibrate a finite graph at a coupling where points touch about three squares on
+average, and look for points or groups of points that touch only two. This is that search, at λ = 1 with no cap, which
+is his model (VISION Update 22's naming condition: this one *is* CQG).
+
+**Where it can be done at equilibrium** (read from T13 before this was written): a point of the flat torus touches four
+squares, so "about three" means S/N ≈ 0.75. At N = 196 that is g ≈ 3.4 to 3.7, where replica exchange started random
+and started as the lattice torus agree to 0.001 (5 to 15 round trips per replica). At N = 484 and 676 it falls in the
+window where the two starts disagree, so equilibrium there is not certified; N = 484 is run and reported, not scored.
+
+### What will be run
+
+`scripts/run_allotrope_search.py`: the lattice torus or a melt of it (200 sweeps at infinite temperature), `n_equil`
+= 20,000 sweeps at coupling g, then 400 blocks of 50 sweeps (20,000 more), recording after each block every point's
+square count c(v) and the set of points with c(v) ≤ 2; the graph saved every 100 blocks. Eight replicas per start, both
+starts. `t36_allotropes_n196`: 14 × 14, g = 3.433 and 3.697 (4S/N 3.11 and 2.96 at equilibrium). `t36_allotropes_n484`:
+22 × 22, g = 2.880 (4S/N 3.06 from the random start; not certified) and 3.302 (2.70, certified), reported beside.
+Named points (the published setting). On the laptop.
+
+**Disclosed:** the two runs were launched a minute before this section was committed, against the project's order
+(commit, then run). The text above was written, and the analyzer and its tests passed, before the launch; nothing from
+the runs had been read when it was committed. A timing pilot (one replica, 6,000 sweeps at g = 3.5, N = 196) checked
+the code: mean square count 3.1, a quarter of the points at two or fewer.
+
+### Definitions, fixed now (`scripts/analyse_t36.py`, tested in `tests/test_t36.py` before any run)
+
+- L_t: the points with c(v) ≤ 2 at snapshot t; ρ = mean |L_t| / N. **Persistence excess** at a lag of 2,000 sweeps:
+  E = mean over t of |L_t ∩ L_{t+lag}| / |L_t|, minus ρ (what chance would give if the set were redrawn). Per replica
+  one E; over the 16 replicas of a cell (N, g) its mean and standard error. **PERSISTENT** if the mean exceeds two
+  standard errors.
+- **Persistent set** of a replica: the points in L_t at every snapshot of its last 2,000 sweeps. A **region** is a
+  connected piece of it, read in the saved final graph, with at least 4 points.
+- Per cell: **ALLOTROPES** if PERSISTENT and a majority of replicas hold a region; **SCATTERED** if PERSISTENT without;
+  **TRANSIENT** if not PERSISTENT.
+- **Verdict**, read at N = 196: ALLOTROPES if either coupling reads so; TRANSIENT if both do; SCATTERED otherwise.
+  Reported beside: N = 484, the excess at other lags (its decay gives a lifetime), and the sizes of the regions.
+
+### Predictions
+
+**The owner's, inferred by the assistant from her stated position and to be confirmed by her** (piece 12: allotropes
+are the order → order question asked inside the published model, and her picture fails "if the region dissolves with
+no wait"): **ALLOTROPES**.
+
+**Ours, unverified: TRANSIENT at N = 196.** The equilibrium here is well mixed, a point's square count changes whenever
+a switch touches one of its edges, and the allotrope is proposed for an infinite hyperbolic graph, which a 14 × 14 torus
+does not resemble; if persistence appears anywhere we expect it at N = 484, where the sampler itself is slow.
+
+### Named or interchangeable points
+
+Named, the published setting. Interchangeable weighting would favor symmetric arrangements, which a region of lower
+square count is not; expected to shorten any persistence, not checked.
+
+### What this cannot show
+
+Anything about the infinite hyperbolic graph of [T25] Fig. 9; a lifetime at sizes that are not equilibrated; whether a
+persistent region is an allotrope in [T24]'s sense (a different discrete arrangement) or a slow fluctuation of the same
+one, which the region's wiring, saved, can be read for afterwards.
+
+## T37. Many natural seeds in a long tube: does the scrap grow with the space once the change starts in many places? (paper 2; piece 5; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
+
+### Why
+
+Paper 2's claim is the owner's (VISION Update 16): the scrap of the change is abundant through many seeds. On the record:
+one leftover per tube however large, up to 288 points (T10, where every cold box had one sheet patch), and more planted
+seeds give more leftovers, 0.29 per extra seed (T17). What has never been run is a tube long enough that seeds form **by
+themselves** in several places. Two facts, exact or measured, say where that happens: the chance of a seed per sweep does
+not grow with the tube (a sweep is 2N attempts and the good moves go as N; Update 9), while a front's speed per sweep falls
+with N (T12, roughly N^−0.7). So in a long enough tube a second seed forms before the first front has crossed. That is
+the setting of the Kolmogorov–Johnson–Mehl–Avrami (KJMA) picture of nucleation and growth, the standard account of how a
+first-order change fills a system, which gives numbers with nothing fitted: in one dimension, with nucleation rate I per
+unit length and front speed v, the converted fraction is X(t) = 1 − exp(−I v t²) (the Avrami exponent is 2), and the
+number of seeds is k = I L ∫ (1 − X) dt = (I L / 2) √(π / (I v)).
+
+**Disclosed:** two timing pilots (one replica each at 4 × 256 and 4 × 1024, g = 1.5, λ = 1.25) were run and read before
+the definitions and predictions below were final. At 4 × 256: 8 seeds, the conversion ending with 6 curled columns and 4
+two-point defects, 136 units above flat. At 4 × 1024: 37 seeds, and the end state was not a flat sheet with scraps: the
+square count of a sheet (φ = 1.005) but 10,138 units above flat (2.5 per point, more than the tube it started from), a
+quarter of the edges carrying 0 or 3 squares, defects spread along almost the whole tube. The leftover measure was changed
+after that reading, from the count of curled columns to the energy left in the final graph, and an end-state label added.
+Both pilots stay out of the results (they are in the scratch directory, not `results/`).
+
+### What will be run
+
+`scripts/run_tube_decay.py` with the seed counter added today (`count_patches_every` 100, `patch_min` 8: every 100 sweeps
+the points at d = 2 are split into connected pieces, and a piece of at least 8 points, two columns, that touches no point
+of a piece counted before is a new seed; the converted count is recorded at the same time; reading only, tested to leave
+the chain unchanged). Tubes 4 × L at λ = 1.25 from the exact tube, fixed coupling, stop at 97 % converted, settle 600 to
+2,400 sweeps, final graph saved. g = 1.5 and 1.75: L = 64, 128, 256 (40 replicas each), 512 (20), 1024 (24); g = 1.25:
+L = 1024 (12). Seeds 20263825, 20263850, 20263875 (one per g); jobs split by replica ids. On Batch
+(`cloud/queue/2026-09-25_t37.txt`, 34 jobs).
+
+### Definitions, fixed now (`scripts/analyse_t37.py`, tested in `tests/test_t37.py` before any run)
+
+Per replica: k, the seed count; t1, the first seed's sweep; X(t), the converted count over its final value; the
+leftovers read from the saved final graph as connected pieces of points not at d = 2, a **column** being a piece of
+exactly four points all at d = 1 (paper 2's relic), anything else **other**. Per cell (g, L): mean k and mean columns
+with standard errors; the Avrami exponent n, the median over replicas with k ≥ 4 of the slope of ln(−ln(1 − X)) against
+ln t over 0.1 ≤ X ≤ 0.9; the KJMA prediction k_pred = (I L / 2) √(π / K), with I = 1 / (L · mean t1) and K the median
+Avrami coefficient with n fixed at 2, both measured in the same cell, nothing fitted to k.
+
+- **P1 (scaling):** the exponent α of mean k against L over L = 256, 512, 1024 lies in [0.7, 1.1], at each g.
+- **P2 (Avrami):** the median n lies in [1.6, 2.4], at each g.
+- **P3 (KJMA, nothing fitted):** k_pred / k within a factor 1.5 at L = 512 and 1024, at each g.
+- **The end state**, per replica, from the saved final graph: the energy left above the flat torus, exact
+  (16(N − S) + 4λX), and CLEAN if at least 90 % of points are at d = 2, DEFECTED otherwise.
+- **The owner's question, scored on the energy left (the scrap, in energy, per tube):** MANY SEEDS, MANY SCRAPS if its
+  mean at the largest L is at least 3 times its mean at L = 64, at both g = 1.5 and 1.75; ONE SCRAP HOWEVER LARGE if under
+  1.5 times; BETWEEN otherwise.
+- Reported, not scored: the share of DEFECTED end states per cell; curled columns and other defect pieces, and columns
+  per seed against T17's 0.29; the energy left per point against the lump 4(λ − 1).
+
+### Predictions
+
+**The owner's, inferred by the assistant from VISION Update 16 and her T10 and T17 predictions (to be confirmed): MANY
+SEEDS, MANY SCRAPS.**
+
+**Ours, unverified, written after the two pilots:** P1, P2 and P3 hold (KJMA in one dimension); MANY SEEDS, MANY SCRAPS
+at every g; DEFECTED end states become the majority somewhere between L = 256 and 1024 at g = 1.5, fewer at g = 1.25
+(fewer seeds), more at g = 1.75. *Ours, unverified, the reading we will test:* patches that start independently do not
+fit where they meet, as regions of a new phase that choose independently leave defects between them (Kibble's argument,
+general knowledge, to verify); so a change that starts in one place makes a clean space with one scrap, and a change that
+starts in many makes a defected one.
+
+### Named or interchangeable points
+
+Named, as T7 to T24. Interchangeable points would slow nucleation by a large factor (the tube is more symmetric than one
+move out) and leave the front and the release as they are; so seeds would be fewer at a given L, and the crossover to many
+seeds would move to longer tubes. Not run.
+
+### What this cannot show
+
+That the scrap is dark matter; anything at λ ≠ 1.25 or in a sealed box, where the bath heats as the tube converts (T9);
+whether the columns last (T19 says they anneal at fixed coupling; T25 that they freeze in when cooled).
+
+---
+
+## T38. The rare long wait: one population with flukes, or a second, slower one? (paper 1; piece 2; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
+
+### Why
+
+T24 (O52) left the λ map inconclusive by the letter because of single extreme waits at small N: 20,070 sweeps (24 τ) at
+λ = 1.25 and 31,955 (76 τ) at 1.30, both at N = 64. One exponential puts a wait beyond 24 τ at about e^−24, 4 × 10^−11 per
+decay, so these are not flukes of one population unless something else is going on. The owner's bar (VISION Update 26)
+allows stragglers; paper 1 has to say what they are.
+
+### What will be run
+
+T24's protocol exactly (`scripts/run_tube_decay.py`, g = 1.5, block 5, stop at 98 %, settle 600 to 100,000, final graph
+saved, `record_f_200`), with one addition, reading only and tested to leave the chain unchanged: a tube still waiting at
+5,000, 10,000 or 20,000 sweeps has its graph saved (`save_waiting_at`). Cells: λ = 1.25 and 1.30 at N = 64 (16 × 4),
+4,000 decays each; λ = 1.25 and 1.30 at N = 192 (48 × 4), 1,000 each. Seeds 20263925 and 20263930 (one per λ, shared by
+both sizes, the per-decay seed also carrying the size). 48 Batch jobs (`cloud/queue/2026-09-25_t38.txt`).
+
+### Definitions, fixed now (`scripts/analyse_t38.py`, tested in `tests/test_t38.py` before any run)
+
+Per cell, with w′ = waiting − 200: τ̂ = median(w′) / ln 2; k10 = the number of waits above 10 τ̂ (one exponential expects
+n e^−10: 0.18 in 4,000, 0.05 in 1,000); the two-population maximum-likelihood fit p Exp(τ₁) + (1 − p) Exp(τ₂) with
+2 ln(likelihood ratio) against one exponential, reported. Cell: TAIL if k10 ≥ 3, NO TAIL if k10 ≤ 1, UNCLEAR otherwise.
+**Verdict: TWO POPULATIONS if at least two cells read TAIL; ONE POPULATION if all four read NO TAIL; UNCLEAR otherwise.**
+Reported, not scored: every saved waiting graph read exactly (energy above the start, local-dimension histogram, whether
+the wiring is still the perfect tube, symmetry count), which says what a long waiter is.
+
+### Predictions
+
+**The owner's, inferred from her reading of T24 (VISION Update 26: rare stragglers are real and allowed): TWO
+POPULATIONS.**
+
+**Ours, unverified: TWO POPULATIONS, the tail at N = 64 and weaker or absent at N = 192**, with the long waiters sitting on
+a variant of the tube whose cheapest exit costs more than 12: at 16 × 4 the tube's own length allows states a longer tube
+does not (paper 1 found rarer resting states on the way down, O13); if the saved waiting graphs are the perfect tube, this
+reading is wrong and the long waits are in the dynamics (fall-backs), which T22 measured at κ ≈ 0.6.
+
+### Named or interchangeable points
+
+Named, as T24.
+
+### What this cannot show
+
+Anything outside λ = 1.25 and 1.30 or N = 64 and 192; whether the tail matters for the window's sharpness at other sizes.
+
+---
+
+## T39. The cascade window: when does the first release pay the second wall? (six and eight links; pieces 11 and 13; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
+
+### Why
+
+The owner asks how the snap relates to how the directions are tied (VISION Update 26), and her rule is that one activation
+opens them all (Updates 22, 25). T30 (with its correction, O54) found that in a six-link torus with two directions curled
+the second direction never opened in a cold bath, and that at the smallest baths heat drove a few replicas toward a
+defective flat state. The walls are exact (O49, O50, rechecked today on the tori used): out of two curled 96 − 64λ (six
+links; at λ = 1.40 a cheaper exit, 4.8, appears), out of one curled 96 − 48λ, out of flat space 64 at every λ; with eight
+links 160 − 96λ, 160 − 64λ, and 128. The question is whether there is a **window of room**, a bath small enough that the
+first release heats it enough to pay the second wall and large enough that flat space does not melt, and how that window
+depends on λ and the number of directions. That is the model's version of "tied through the bath".
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py`, one store holding the spark (the exact wall), the rest empty, the final graph saved.
+- Six links, 4 × 4 × 18 (N = 288): λ = 1.40, spark 5.0 (the cheapest exit, 4.8), C = 2N, N, N/2, N/4, N/8, N/16, 12
+  replicas, 100,000 sweeps; λ = 1.25, spark 16.0, C = N/3, N/6, N/16 (bracketing T30's N/4 and N/8), 12 replicas, 300,000
+  sweeps.
+- Eight links, 4 × 4 × 8 × 8 (N = 1,024): λ = 1.25, spark 40.0, C = N/4, N/8, N/16; λ = 1.50, spark 16.0, C = N/2, N/3,
+  N/6; 6 replicas, 50,000 sweeps.
+15 Batch jobs (`cloud/queue/2026-09-25_t39.txt`).
+
+### Definitions, fixed now (`scripts/analyse_t39.py`, tested in `tests/test_t39.py` before any run)
+
+T30's definitions written for any D (flat points at d = D, the one-curled rung at D − 1, the start at D − 2, melted above
+D; the runner's own `melted` column assumes six links and is not used): per replica MELTED, FLAT, MIDDLE, STUCK or OTHER;
+per cell the majority or MIXED; per row (D, λ) **WINDOW** if some cell has a FLAT majority, **NO WINDOW** otherwise; the
+mechanism over flat-reaching replicas, CASCADE (no 5,000-sweep rest on the middle rung) or STEPWISE. The census reading of
+T30's correction is reported beside (FIRST OPEN, PARTWAY, STALLED, PAST).
+
+### Predictions
+
+**The owner's, inferred from VISION Updates 22 and 25 (to be confirmed): WINDOW in every row, with CASCADE** (one
+activation opens every curled direction when there is room for the burp).
+
+**Ours, unverified, a rule stated before the runs:** a window needs the second wall to be well below flat space's own
+wall, since the bath temperature that pays one comes close to paying the other. The ratio of flat space's wall to the
+second wall is 64 / (96 − 48λ) with six links, 1.78 at λ = 1.25 and 2.22 at 1.40, and 128 / (160 − 64λ) with eight, 1.60
+at 1.25 and 2.00 at 1.50. **We predict WINDOW where the ratio is at least 2 (six links at 1.40, eight links at 1.50) and NO
+WINDOW where it is below (six and eight links at 1.25)**, the window at six links and λ = 1.40 at C = N/2 or N/4, and at
+eight links and λ = 1.50 at C = N/3; where there is a window, CASCADE, because a hot bath pays the second wall faster than
+the first rung's 5,000-sweep rest.
+
+### Named or interchangeable points
+
+Named, as T30.
+
+### What this cannot show
+
+Anything at λ = 1, the published model (six links: VISION Update 24's caveat; eight links: no published curve); whether a
+physical universe has a bath of the right size; the gas's pattern, which T30 and T33 test.
+
+## T40. Four directions: how big a push starts the change, and in what pattern does it then go? (piece 13; written 2026-09-25, about 12:50 ET, before any run; committed 12:54 ET (the time first written here was a guess and wrong; corrected from the commit times))
+
+### Why
+
+T33 (reading; O62) gave each four-direction start exactly the cost of its cheapest first move, and every replica stalled
+after that one move, with an empty bath and no downhill move from there. So the owner's question, in what pattern four
+curled directions open (VISION Update 25: all four tied, or a singleton beside three tied), was not tested. This test
+finds the push that does start the change, by scanning its size, and reads the pattern at and above it.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py`, eight links, one store holding the spark and C = N/2 stores in all, 50,000 sweeps, read
+every 250, six replicas per spark, final graphs saved. Exact walls rechecked today on these starts
+(`scripts/exact_walls_d.py --near=4`): 20 out of the 4 × 4 × 4 × 12 torus at λ = 1.25 (next kinds 22, 33, 40), and
+19.2 out of the gas of four 8-cubes at λ = 1.10 (next 30.4).
+- Three curled, one open: 4 × 4 × 4 × 12 (N = 768), λ = 1.25, sparks 20, 30, 40, 60, 80, 120, 160.
+- The gas, all four curled: four 8-cubes (N = 1,024), λ = 1.10, sparks 20, 40, 80, 160.
+11 Batch jobs (`cloud/queue/2026-09-25_t40.txt`), seeds 20264020 to 20264660.
+
+### Definitions, fixed now (`scripts/analyse_t40.py`, tested in `tests/test_t40.py` before any run)
+
+T33's rules, with one repair: melted is read from the histogram as points with more than four open directions (the
+runner's own `melted` column counts flat points at eight links). Per replica: LEAVES if some block's majority rung is above
+the start's; the pattern (FOUR TOGETHER, SINGLETON PLUS THREE, THREE TOGETHER, ONE AT A TIME, STALLS, MELTED, OTHER). Per
+spark: the share that leaves and the majority pattern. **E\*** per start: the smallest spark at which a majority leaves.
+**Verdict per start:** the majority pattern if one pattern holds the majority at every spark from E\* up; MIXED otherwise;
+NEVER STARTS if no spark reaches E\*.
+
+### Predictions
+
+**The owner's (VISION Update 25; inferred for this design): once the push is enough, a tied pattern**, THREE TOGETHER
+from the three-curled torus and FOUR TOGETHER or SINGLETON PLUS THREE from the gas.
+
+**Ours, unverified:** E\* between 40 and 80 from the three-curled torus (the pass is several moves high, and the next kinds
+of first move cost 22 to 40), and the pattern ONE AT A TIME or STALLS at the second rung (each rung's wall is higher than
+the last: 40, then 80), MELTED at the largest sparks only if the bath heats past about 128 / 18 ≈ 7 per store, which C =
+N/2 does not reach; from the gas, E\* at 40 or 80 and the cubes joining without reaching flat space in 50,000 sweeps
+(STALLS or ONE AT A TIME).
+
+### Named or interchangeable points
+
+Named, as T33.
+
+### What this cannot show
+
+Which direction is time; anything at λ = 1; the pattern with a physical clock.
+
+## T41. Three directions: does the new space need room for the burp? (piece 4; written 2026-09-25, about 13:00 ET, before any run; committed 13:04 ET; the time first written here, 13:15, was a guess and wrong)
+
+### Why
+
+Piece 4 is measured in two directions: sealed, a curled torus opens completely only if its surroundings can hold the
+burp; with too little room the energy melts the new space (T9, BONFIRE WITH A THRESHOLD), and the room needed grows faster
+than the lump with λ (T18, PROPORTIONAL). The (D, λ) map (series plan) has no measurement for the simplest three-direction
+case, one curled direction opening (4 × L × L′), marked "not run". This is that cell, with the room scanned.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py`, six links, 4 × 8 × 12 (N = 384, one direction curled), one store holding the spark
+(the exact wall, rechecked today with `scripts/exact_walls_d.py --near=4`: 36 at λ = 1.25, 28.8 at 1.40; sparks 36.0 and
+29.0), C = 4N, 2N, N, N/2, N/4, N/8, twelve replicas, 100,000 sweeps, read every 200, final graphs saved. 12 Batch jobs
+(`cloud/queue/2026-09-25_t41.txt`), seeds 20264100 to 20264111.
+
+### Definitions, fixed now (`scripts/analyse_t41.py`, tested in `tests/test_t41.py` before any run)
+
+T39's per-replica rules with D = 3 (`analyse_t39.read_replica`): FLAT (the flat state reached, 90 % of points at d = 3 at
+the end), STAYS (still on the one-curled rung), MELTED (a quarter of points above d = 3), OTHER. Per cell the majority or
+MIXED. **C\*** per λ: the smallest C with a FLAT majority. **Verdict per λ:** ROOM NEEDED if C\* exists and some smaller C
+has no FLAT majority; ALWAYS OPENS if every C has one; NEVER OPENS if none has. Reported: C\* / N against two dimensions
+(T18: 0.375 at λ = 1.25), the release per point against 4(λ − 1), whether the flat region is one piece (a front).
+
+### Predictions
+
+**The owner's (piece 4, T9 and T18; inferred for three directions): ROOM NEEDED at both λ**, the burp must have somewhere
+to go.
+
+**Ours, unverified:** ROOM NEEDED at λ = 1.40 with C\* between N/2 and 2N; at λ = 1.25, NEVER OPENS or ROOM NEEDED, since
+in T30 the first direction of a two-curled torus opened fully in only a third of the runs at this λ, and the same first
+move may stall here; if it opens, the flat state's wall (64) sits far above the bath's temperature at every C but N/8, so
+melting needs C ≤ N/8.
+
+### Named or interchangeable points
+
+Named, as T30.
+
+### What this cannot show
+
+Anything at λ = 1; whether the room a real universe had was enough.
+
+## T42. Does concentrated energy fold six-link space when the points are interchangeable, near λ = 1.02? (piece 8; written 2026-09-25, about 13:08 ET, before any run)
+
+### Why
+
+The owner's black-hole mechanism (VISION Update 27) has two halves: the walls (each fold makes the next easier) and the
+counting (the symmetric, fully curled state weighs more when the points are interchangeable). T34 tested the first half
+with named points at λ = 1.25, and at 216 points every cell melted (its 512-point cells are still running). O55 showed the
+second half exactly: with interchangeable points the fully curled state of 512 points, a gas of eight 6-cubes, carries
+3.2 × 10³⁹ symmetries against flat space's 12,288, a counting drive that balances the curling cost at λ ≈ 1.02 and at no
+larger λ. So λ = 1.02 is the one place in this family where her counting half could pay, and T34's own text names this run
+as the follow-up. The chain that can run it was built and validated today (`graphity.interchangeable_d`,
+`tests/test_interchangeable_d.py`: it reproduces the exact interchangeable averages at N = 18, which differ from the named
+ones there, and conserves energy exactly when sealed).
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with `"interchangeable": true`, flat 8 × 8 × 8 (N = 512), λ = 1.02, T34's spread
+protocol (the whole energy E in one store of a shared bath of 2N), E = 64, 128, 256, 512, 1024, 2048 (curling all three
+directions costs 12(λ − 1)N = 123; flat space's cheapest exit costs 64), eight replicas, 50,000 sweeps read every 250,
+final graphs saved. **A control** with the same chain and settings and the symmetry factor off (`"weighted": false`, named
+points), so that any difference is the counting's. 12 Batch jobs (`cloud/queue/2026-09-25_t42.txt`), seeds 20264264 to
+20271248. The runner image gains igraph 1.0.0 for the count (Dockerfile; nothing that ran before imports it).
+
+### Definitions, fixed now (`scripts/analyse_t42.py`, tested in `tests/test_t42.py` before any run)
+
+T34's rules unchanged (`analyse_t34.cells` and `verdict`): per replica FOLDED, MELTED or HEALED from the final census;
+per cell the majority; RE-CURLS if some cell has a FOLDED majority, MELTS if none does and some has a MELTED majority,
+HEALS if every cell healed, MIXED otherwise; ONE DIRECTION and CASCADE replicas reported. Applied separately to the
+interchangeable runs (the verdict for her question) and the named control.
+
+### Predictions
+
+**The owner's (VISION Update 27; inferred for this design): RE-CURLS with interchangeable points**, the counting paying for
+the fold where the energy allows it, and the control MELTS.
+
+**Ours, unverified: MELTS in both, with no difference the rules can see.** O55's counting drive exists only at full
+curling; every partial fold, the path to it, has fewer symmetries than flat space, so the counting pushes against the
+path, not along it, and the energy goes into melting first as in T34 and two dimensions. A single FOLDED replica with
+interchangeable points and none in the control would be a signal worth a larger run.
+
+### What this cannot show
+
+Anything at λ = 1 (CQG) or with a physical clock; the packed protocol (the per-vertex store is not implemented for
+interchangeable points); sizes where the gas of cubes does not fit (N must be a multiple of 64).
+
+## T43. How long does a planted allotrope last at λ = 1? (piece 12; the model author's own question; written 2026-09-25, 14:24 ET, before any run)
+
+### Why
+
+The model's author proposes that dark matter is allotropes: regions stuck in a different discrete arrangement, held by
+"the barrier in between", possibly "extremely long-lived" ([T25] Sec. VI.3; [T24]), and his open question is how long
+they last. T36 found no lasting low-square regions on a torus (O59), but a torus cannot hold his background at all (O67).
+O67 built the smallest allotrope as a finite graph, faithful point for point to his Figs. 7 and 9, and found that at
+λ = 1 no energy barrier holds it. So if it lasts, entropy holds it, and only a run at finite coupling can say. This is
+that run, as designed in `docs/design/planted_allotrope.md`, section 6, which this section adopts.
+
+**Disclosed:** a timing pilot (the fold, g = 3.433, one replica, 2,000 sweeps, in the scratch directory, not `results/`)
+was read by the agent that built the runner, and the fold's low points were gone by sweep 20 and the background's order by
+sweep 40. The predictions below were written knowing that.
+
+### What will be run
+
+`scripts/run_planted_allotrope.py`, `graphity.cqg.run_chain` at λ = 1, no cap, Metropolis, the random stream carried on,
+named points (the published setting), each object started exactly as built by `scripts/build_planted_allotrope.py` with no
+warm-up: the **fold** (N = 234, 18 planted points, scored), the handle (228), the Fig. 7 background (240, control), the
+flat handle (188) and the flat 14 × 14 torus (196, control). Couplings g = 1.0, 1.5, 2.0, 2.5, 3.0, 3.433, 3.697; 16
+replicas; 20,000 sweeps; snapshots every 10 sweeps to 2,000 and every 100 after. Seven Batch jobs, one per coupling
+(`configs/t43_allotrope_lifetime_g<1000 g>.json`, `cloud/queue/2026-09-25_t43.txt`); seed 20264343, the per-replica seed
+carrying the object, the coupling and the replica, so the seven jobs are one run.
+
+### Definitions, fixed now (`scripts/analyse_t43.py`, tested in `tests/test_t43.py` before any run)
+
+As section 6 of the design note: R the planted points (labels fixed at the start), far points those at least 3 steps from
+R in the starting graph; f_R and f_B the shares of R and of the far points touching at most one square fewer than the
+background; q_R and q_B the shares with the planted and the background link patterns. The region is **alive** while
+f_R − f_B ≥ 1/2; its lifetime τ_R is the first snapshot after which that stays below 1/2 for two snapshots in a row,
+censored at 20,000; τ_B the same on q_B < 1/2. Per cell (object, g) the medians: **LASTS** if median τ_R ≥ 1,000 sweeps
+(ten times the memory T36 measured, O59), **DISSOLVES** otherwise; tagged **FIRST** if median τ_R < median τ_B / 2, else
+**WITH ITS BACKGROUND**. **Verdict**, on the fold, at any coupling (the owner's bar, VISION Update 26): **ALLOTROPE LASTS**
+if the fold LASTS at some g; **DISSOLVES** if at none. Reported beside: τ_R against g (the lifetime curve he asked about),
+the handle and flat objects, the persistence excess at lags 50, 200 and 2,000, and the energy against time.
+
+### Predictions
+
+**The owner's, inferred by the assistant from T36 (her inferred prediction there, ALLOTROPES) and VISION Update 26, to be
+confirmed or replaced by her: ALLOTROPE LASTS** at some coupling.
+
+**Ours, unverified, written after the pilot: DISSOLVES at every coupling.** At g ≥ 3.4 the whole tiling loses its order
+within tens of sweeps (the pilot), and the region goes with its background; at g ≤ 2.5 the region's way out is one
+zero-cost switch and then a downhill one (O67), each proposed about 4 × 10⁻³ times a sweep, so τ_R of order 10² to 10³
+sweeps, close enough to the bar that the cold cells are the less certain half; the region should go FIRST where the
+background holds, because it carries the extra energy.
+
+### Named or interchangeable points
+
+Named, the published setting. With interchangeable points the perfect background (240 symmetries) would be stickier than
+the fold (6), shortening the region's life relative to its background; not run.
+
+### What this cannot show
+
+Anything about the infinite hyperbolic plane of his figure; whether a lone smallest allotrope behaves as three fused ones;
+whether the cross-cap or handle under the region changes its life; other sizes (720-point versions are built for that).

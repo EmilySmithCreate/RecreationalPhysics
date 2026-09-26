@@ -13,7 +13,8 @@ not hold. *Designed*: pre-registered or drafted, not yet run. *Idea*: the owner'
 
 ## Paper 1. Metastable curled tori and their front-driven decay (drafted)
 
-**Claim.** In combinatorial quantum gravity with the local term's coefficient λ above 1, a torus with one
+**Claim.** In the graph energy of combinatorial quantum gravity with its local term's coefficient raised
+above 1 (not CQG itself, which is λ = 1 only; the author's condition of 24 September), a torus with one
 direction curled is metastable and opens into flat space sharply: a memoryless start, one front, two orders
 side by side, an exact release, a local push of fixed size, one leftover of fixed size.
 
@@ -201,3 +202,200 @@ g = 1.5, since T10's leftovers stayed in place over 30,000 sweeps in a cold box;
 As `docs/design/quantum_loop_design.md` rung 1: at N = 16 and 18, the interchangeable-ensemble probability of
 each class (exact, from the counts) against the chain's long-run time-fraction with the renaming correction
 applied per recorded configuration. Prediction (validation, not physics): agreement within sampling error.
+
+---
+
+## Night of 24 September 2026: what was launched, and who to ask, per paper
+
+Written at the owner's request to move the programme's pieces to measured status, with the predictions inferred
+from her stated positions (marked so in `PREREGISTRATION.md` until she confirms them). American spelling from
+here on, at her request.
+
+### Launched tonight (all pre-registered first)
+
+| Test | Paper | Piece | What it settles | Where it runs |
+|---|---|---|---|---|
+| T24 | 1 (and the programme's piece 2) | 2 | The λ map with the energy check read from each decay's saved wiring, so a thermal excitation cannot fail a cell | AWS Batch, 28 jobs, via the new push-triggered queue |
+| T25 | 2 | 6 | The scrap race: does the leftover freeze in when the box cools faster than it heals | laptop, 6 jobs |
+| T26 | 4 | 8 | The local spark: energy in one vertex's store, or disorder in one patch, in a cold sealed sheet; named and interchangeable points | laptop, 8 jobs |
+| T27 | 4 | 8 | T21's melt with its energy draining at four leak rates: does it fold before it flattens | laptop, 5 jobs |
+
+### Who to ask, with what data (public names, public questions; the private correspondence stays in `docs/outreach/`)
+
+The owner's rules apply (memory, 23 September): one narrow question the recipient can answer, a bias toward
+UVA so a coffee is possible, the AI disclosure sentence, and a check of the recipient's 2024 to 2026 papers
+before the letter is drafted. Nothing below has been sent; each is a candidate with the question and the data
+that would go with it.
+
+| Paper | Candidate | The question, in one line | The data to attach |
+|---|---|---|---|
+| 1, curled torus | Marija Vucelja (UVA Physics; physics of sampling, Metropolis dynamics on graphs) | For a single-move barrier under a local switch chain, is a transmission coefficient near 0.6 that does not change with the barrier height what she would expect, and is there a standard way to estimate it from the move set? | T22's table (O39): first exit on time in all six cells, κ = 0.56 to 0.68 from λ = 1.05 to 1.25 |
+| 2, the relic | Carlo Trugenberger (the model's author; he named the lifetime of allotropes as his question) | How long does a stuck region last at λ = 1, and does a cooling schedule freeze it in? He asked the first half; T19 and T25 answer it for the relic at λ > 1 | T19's annealing times (O35) and T25's freeze-out time, once read; the allotrope's adjacency list is already requested (his reply pending) |
+| 3, the fertile window | Diana Vaman (UVA Physics; composite and emergent gravity) | The λ deformation is the published curvature plus a penalty on a third square per edge: is there a continuum counterpart to adding such a local term to a discrete Einstein–Hilbert action, and what would it do at large scale? | The exact edge-by-edge form H = 4 Σ_e [(2 − S_e) + λ (S_e − 2)₊], the dimension ladder (O41), and T18's room-against-λ (O34) |
+| 4, the black-hole piece | Kent Yagi (UVA Physics; with Brustein and Medved treated the black-hole interior as a different state of matter) | If a collapsed region were an ordered re-curled arrangement rather than a random one, which observable in ringdown or tidal response would notice the difference? | T26 and T27's verdict (fold, melt, or heal), once read; O20 and T21 as the spread-energy baseline |
+| 5, curve-first gravity | Diana Vaman, or Adam Solomon (UVA; modified gravity, Love numbers) | Held until the three-dimensional model passes its reproduction gate; no 2D number is carried into a claim about gravity (the owner's decision) | O22 (no energetic force at a distance, exact) and O32 (no counting pull at fixed wiring) as the negative baseline |
+| 6, quantum from counting | Samson Abramsky (UCL) or Rui Soares Barbosa (INL) for the argument; Trey Boone (UVA Philosophy) for its form | Is the argument of rung 3a sound as stated: that a renaming of a fixed arrangement fixes or swaps each loop's pairs at once and so is a noncontextual instruction set? | PREREGISTRATION T15 rung 3a and O29; the exact renaming counts of Q15 and O28 |
+| companion, six links (piece 11) | Carlo Trugenberger | [T22] Fig. 3's protocol, its Boltzmann weight and whether its graphs are bipartite (held for his next reply; one question at a time) | O43: our curve under both readings of the axis, and the shapes |
+| piece 12, the allotrope | Eryk Kopczyński (drew [T25] Fig. 9; RogueViz) | The adjacency list of the drawn allotrope | The exact statement that if no edge carries three squares the local term vanishes and its stability does not depend on λ |
+
+### Status of each paper after tonight's launches
+
+- **Paper 1:** drafted; T24 will replace T23 in section V if it reads clean, and the memoryless claim then rests on
+  a run whose gates were all fixed before it ran.
+- **Paper 2:** T10, T11, T17, T19 on the record; T25 running. Drafted tonight (`docs/papers/relic/paper.tex`) with
+  T25's section left as the pre-registered question.
+- **Paper 3:** T8, T18, T22, T23 on the record; O41 exact. Drafted tonight (`docs/papers/fertile_window/paper.tex`).
+- **Paper 4:** O20, T21 on the record; T26 and T27 running. Not drafted: its first result is tonight's.
+- **Paper 5:** waits on the six-link gate. **Paper 6:** waits on the owner's decision about a rule for canceling
+  versions. **Paper 7:** the programme page, kept current.
+
+---
+
+## The gravity path (paper 5), sketched 24 September 2026, night, at the owner's asking
+
+The owner's test, in her terms: **does curved space move matter?** Everything below is design; nothing is
+pre-registered or run, and the dynamic rungs wait on the six-link gate (Gate C′). The exact rungs need no gate.
+
+1. **Exact, no run: the energetic interaction of two relics in a flat 3D torus.** The 2D result (O22) is that H is
+   a sum of per-edge terms, so two defects sharing no square are exactly additive, with a term of 16 only where
+   they touch. The same arithmetic on a 6 × 6 × 6 torus with two curled columns at every separation. Expected:
+   the same (no force at a distance). A pull here would be a surprise and would change everything below.
+2. **Exact, no run: the counting pull at fixed wiring.** O32's measurement in 3D: the symmetry count of the torus
+   with two identical relics at every separation, with the fast counter (Q20). Expected, as in 2D: a count that
+   is large only at special placements, so no smooth attraction. Both rungs are a day's work and settle whether
+   anything gravity-like can come from the arrangement alone.
+3. **T28, the dynamic pull (the real test; pre-register with her prediction first).** Two relics in a 3D torus
+   (6 × 6 × 6 or 8 × 8 × 8) at λ in the 3D window (1 < λ < 1.2, O41) or at 1.25 for one curled direction, held at a
+   coupling where the sheet rearranges but does not melt (the first job is to find that window, as the programme
+   says), with interchangeable points (her theory's weighting; per-move counting is affordable to about N = 216
+   with igraph at a millisecond a count). Observable: the distribution of the separation over a long run, which
+   gives the potential of mean force F(r) = −g ln P(r) up to a constant. Predictions on offer: (a) F falls with
+   r decreasing (a pull), and by the same amount for two relics of equal energy but different wiring (the
+   equivalence principle); (b) F is flat (no pull); (c) F rises (a push). What would earn the name gravity, from
+   the programme: attractive, growing with the energy present, the same for every kind of relic, and weakening
+   with distance roughly as 1/r² in 3D. A named-points control runs beside it, so that any pull can be
+   attributed to counting or to the energy.
+4. **The curling half, her way round: does the space around a relic curve using the relic's energy?** Read on
+   the same runs: the local-dimension census and the square deficit as a function of distance from a relic,
+   against the flat torus. If the deficit reaches beyond the relic's own vertices and scales with its energy,
+   that is curvature sourced by matter, in the model's terms.
+
+What blocks step 3 today: the six-link kernel's reproduction gate (rule 2), and a coupling window for a 3D sheet
+that rearranges without melting, which nobody has measured. What does not block steps 1 and 2: nothing.
+
+### 25 September, early morning: verdicts and the 3D launch
+
+- **Paper 2:** T25 read, FREEZES IN, t* = 30,000 sweeps (O47). The paper's section 7 can now be written from the record.
+- **Paper 4:** T27 read, STAYS MELTED (O48); T26 at 21 of 22 cells, all MELTED [corrected: 27 cells, 26 melted, one healed; O64], the owner's confirmed prediction heading
+  for a fail. The next version of the black-hole question is three-dimensional (the fold she means is of three
+  intertwined directions), after T30 shows what a curled region looks like at six links.
+- **Piece 11 / the companion paper:** the owner's decision to proceed (VISION Update 24); T30 and T32 on Batch with her
+  predictions; the exploratory window scan for T28 on the laptop. The gravity test's exact rungs need no gate.
+
+### 25 September, morning: the four-direction test, and T26's verdict
+
+- **T26 read: MELTS** (22 of 22 cells; corrected, O64: 27 cells, 26 melted, one healed). The owner's confirmed prediction failed. Piece 8's next form is six-link.
+- **Piece 13 (VISION Update 25):** time as a fourth curled direction. T33 on Batch with her prediction (a tied pattern:
+  three together from the three-curled start; four together or a singleton then three from the gas) and ours (one at a
+  time). Exact before the runs (O50): the walls rise from rung to rung (doubling exactly at λ = 1.25 only) and the flat state's wall is 128, so a hot bath
+  can drive a cascade in four dimensions without melting the flat state. A companion paper for the four-direction result
+  would follow the three-direction one; neither is drafted.
+
+### 25 September, morning: the overnight Batch results, read
+
+- **Paper 1 / piece 2:** T24 INCONCLUSIVE by the letter for a third distinct reason; gate 3′ passed in all 28 cells; the
+  rare long wait (24 to 76 τ) at small N is the thing to study next (O52). The edge break-up held a third time.
+- **The six-link companion:** T32 FIXED WALL (16 at every size, sharp); T30 FIRST ONLY (the directions open one at a
+  time; the gas of 6-cubes descends two rungs) (O54). *Corrected 25 September, midday:* the first direction opened
+  fully in 28 of 84 torus replicas, partly in most others; the verdict is carried by the gas cell (O54, correction). *Corrected again (O64):* the gas is reported separately as
+  registered, so the tori's verdict is NEVER OPENS. The reproduction gate: Gate C′ run A FAILS, run B ONE POWER; a
+  factor of two matches the ordered side and the hot tail points at non-bipartite graphs (O53). The companion paper can
+  now be drafted from T30, T32, O41, O49 and O50, with the open gate stated.
+- **Who to ask, updated:** the model's author, one question: whether his 3D action sums over edges once (a factor of 2
+  against ours) and whether his 3D graphs carry triangles and pentagons; the data to attach is O53's table.
+  *Revised 25 September, evening:* held for when the six-link paper is ready for him to read (it would be the first he hears
+  of our 3D work); the triangles-and-pentagons half is the weaker reading (O53 addendum).
+
+---
+
+## The (D, λ) map: what parameters lead to a burp, exact and measured so far (25 September 2026)
+
+The owner's program (VISION Update 26): which number of directions goes with which λ, how interconnected the directions
+are, and how the snap relates to the degree-of-freedom relationships. What is on the record, all at g = 1.5 for the
+measured entries and exact for the walls. Every curled direction costs 4(λ − 1) per point, at every D (O41, O50).
+
+| D (links) | Curled state | Stuck for now (exact wall > 0) | Wall at λ = 1.25 | Fixed with size? | Opening pattern | Source |
+|---|---|---|---|---|---|---|
+| 2 (4) | one curled (the tube) | 1 < λ < 2 (wall 32 − 16λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | one front, memoryless, the exact release; one relic | paper 1; T7 to T24 |
+| 2 (4) | both curled (a gas of 4-cubes) | never above λ = 1 | downhill | | falls apart at once | O40 |
+| 3 (6) | one curled (4 × L × L′) | 1 < λ < 2 (96 − 48λ) | 36 | | not run | O41 |
+| 3 (6) | two curled (4 × 4 × L, L ≥ 18) | 1 < λ < 1.5 (96 − 64λ) | 16 | yes, 192 to 512 points (T32) | first direction fully open in 28 of 84, partly in most others (corrected); the second's wall (36) unpaid; near-flat only at a hot bath (T30) | O49, O54 |
+| 3 (6) | all three (a gas of 6-cubes) | 1 < λ < 1.2 (96 − 80λ) | downhill | | at λ = 1.10: joins and opens two of three directions in 21 of 24, no rest between, never one space (T30-gas) | O41, O54 |
+| 4 (8) | one curled | 1 < λ < 2.5 (160 − 64λ) | 80 | | not run | O50 |
+| 4 (8) | two curled | 1 < λ < 1.67 (160 − 96λ) | 40 | | not run | O50 |
+| 4 (8) | three curled (4 × 4 × 4 × 36) | 1 < λ < 1.43 (160 − 112λ) | 20 | | T33 running | O50 |
+| 4 (8) | all four (a gas of 8-cubes) | 1 < λ < 1.25 (160 − 128λ) | downhill | | T33 running at λ = 1.10 | O50 |
+| flat space's own wall | 2D: 32; 3D: 64; 4D: 128 (the same at every λ) | | | | a cold sheet accepts no move in any D | O22, O51, O50 |
+
+What the map says so far (*ours*): the walls rise from rung to rung at every D (they double exactly only with eight links at
+λ = 1.25; O55, correction), so nothing in the energy ties the
+directions together, and the release of one rung in a cold bath does not pay the next; more directions widen the
+window in λ for the partly curled states and raise the flat state's own wall, so a four-direction change can be driven
+hot without melting where a two-direction one cannot. The "interconnection" the owner asks about is therefore not in this
+energy; if it exists in reality it is an ingredient this family lacks, which is a thing the map can say plainly.
+
+### 25 September, morning: paper progress
+
+- **Paper 1:** a paragraph on the two 120-decay repeats (T23, T24) added to Sec. V, with the three different criteria
+  and the rare long wait stated.
+- **Paper 2:** Sec. 7 written from T25 (FREEZES IN, the survival table); abstract and discussion updated. Complete as a
+  draft.
+- **Paper 3:** T24 written in; a new section, "The same map across the number of directions", with the exact-wall table
+  and the six-link measurements; the 3D window sentence corrected to O49.
+- **Paper 4, drafted:** `docs/papers/black_hole/paper.tex`, "Does concentrated energy re-curl space? Three sealed tests
+  ... and a melt every time" (O20/T21, T26, T27).
+- **The six-link companion, drafted:** `docs/papers/six_links/paper.tex` (O41, O49, O50, T32, T30, the gas; the
+  reproduction gate as its own section; the eight-link section left for T33).
+- None has a PDF (Tectonic is not installed system-wide); all are American-spelled; none has been read by the owner.
+
+### 25 September, afternoon: S5 moves; the owner's direction
+
+- **Paper 1 submitted to arXiv with the model's author's endorsement** (the owner's report). His reading is awaited, not
+  prompted.
+- **The owner's direction** (VISION Update 28): other models with loop and exchange rules (`docs/design/loop_exchange_brief.md`);
+  gravity as the target, at least directionally, at one λ (`docs/design/gravity_brief.md`); the (D, λ) map is groundwork for
+  the new model.
+- **Exact today (O56):** the one-switch curled column in six-link flat space is not a relic (120 units, not a dip); at fixed
+  wiring there is no pull at a distance from energy or counting, as in two dimensions. The stable six-link relic is the
+  first thing the gravity test needs, and it is not yet shown to exist.
+
+---
+
+## The two-week plan (written 25 September 2026, 13:12 ET, at the owner's direction)
+
+The owner's direction of 25 September: run every claim at once, iterate each several times, use the rented machines
+generously, read widely in parallel, write the papers here; do it by the book, because that is what persuades; the goal is
+a body of work she can hand to physicists within about two weeks. What that means for each paper, as of today. "In flight"
+means pre-registered and on the Batch queue.
+
+| Paper (pieces) | Where it stands | In flight | Next iteration | What finishes it |
+|---|---|---|---|---|
+| 1, the burp (1, 2) | Submitted to arXiv; the window inconclusive by the letter three times, for stated reasons | T38 (the rare long wait: what the stragglers are) | A fourth λ map written with the owner's bar (a majority sharp at some size, stragglers reported), if she wants one | Her read of T38; a v2 with the stragglers explained |
+| 2, the relic (5, 6) | Drafted; T10, T11, T17, T19, T25 on the record | T37 (many natural seeds; nucleation-and-growth with nothing fitted) | If long tubes end defected: does a defected space heal or last (a planted defected state followed in time) | T37 read and written in; the question of the defected end state answered |
+| 3, the fertile window (4, 11, 13) | Drafted; the (D, λ) map table | T39 (the cascade window), T40 (the push in four directions), T41 (room for the burp in three) | The window's edges in λ with the owner's parameter questions (how many directions, what λ); a clean domain's size per seed against λ (from T37) | T39 to T41 read and written in; the map complete for two and three directions |
+| 4, black holes (8) | Drafted; three melts in two dimensions; T34 melts at its first size | T34 (512 points), T42 (interchangeable points at λ = 1.02, the counting half) | If T42 folds: the packed protocol with interchangeable points, larger sizes | T34 and T42 read; the paper states which half of her mechanism this family can host |
+| 5, gravity (7) | Drafted today: no pull at a distance in this family, and why (a gapped flat space); what a pull needs | Nothing: the next step needs her decision (gravity brief, section 6) | With option A adopted: two relics drifting together in two directions, then the 1/r shape in three, then clumping and re-curling | Her decision, then those three runs |
+| six links (11, 13) | Drafted; the eight-link section written from T33 | T39, T40, T41 | T40's pattern at and above the true push | T39 to T41 read; the reproduction gate still open (a question for the model's author, held for this paper) |
+| allotropes (12) | T36 read: none lasting on a torus | A construction being designed (a planted allotrope) | The planted allotrope's lifetime at λ = 1, the model author's own question | Its reading, sent with the six-link paper |
+| quantum (9) | Weakest leg; the phase-per-swap form does not exist as stated | Nothing | Needs her decisions: the sign convention; whether to adopt a rule over histories | Her decisions |
+
+**Compute.** The Batch environment runs 16 one-CPU jobs at once (about $0.78 an hour when full); the account allows 30. On
+25 September about 140 jobs were queued (T37 to T42), roughly 150 CPU-hours, about $7. To use the budget the owner named
+(at least $20 a day), the ceiling must rise: `terraform/batch.tf` `max_vcpus` from 16 to 30 and the deploy workflow run
+(`deploy_manual`, "deploy"); that is hers to apply. Above 30 needs a quota request to AWS.
+*Done 25 September, about 14:50 ET, with the owner's permission:* the live ceiling was raised to 30 through the AWS CLI, matching
+the committed terraform (so a later deploy changes nothing).
+
+**Decisions waiting on her, in order of what they unblock:** (1) the gravity rule (option A of the gravity brief:
+a massless field on the points with relics as its sources); (2) the exchange sign's convention (points or pairs);
+(3) confirming or replacing the predictions inferred for her in T36 to T42; (4) whether to write a fourth λ map with her bar.

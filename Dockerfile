@@ -11,6 +11,11 @@ RUN pip install --no-cache-dir \
       networkx==3.2.1 \
       awscli==1.34.0
 
+# igraph counts symmetries for the interchangeable-points chain (graphity.symmetry; T42, 2026-09-25). Added, not a
+# change of version: nothing that ran before imports it, and 1.0.0 is the laptop's version, on which the chain's tests
+# (tests/test_interchangeable_d.py, against the exact averages at N = 18) passed.
+RUN pip install --no-cache-dir igraph==1.0.0
+
 WORKDIR /app
 
 COPY pyproject.toml ./

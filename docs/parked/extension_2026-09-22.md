@@ -362,3 +362,32 @@ not have to sit where the curve is; it is what starts the curve, and curving tak
 *Ours, unverified:* on the same logic, empty space can curve when its own stored excess pays for it. That is
 the dark energy of the kept idea above (space only stable for now), which is separate from the scrap: the scrap
 is a lump that clumps, which makes it dark matter; dark energy is spread evenly and does not clump.
+
+## The author's positions, 25 September 2026, morning (on reading the overnight results)
+
+**Hers, in her words put in order.** (1) This arrangement of reality does not require the same thing to happen at every
+size in every instance; it has to happen at one size and lead to the trillion new strange loops. (2) The work is to find
+what parameters lead to our reality: how many dimensions match what level of λ, how interconnected the group of three or
+four dimensions ideally is, and how the snap works in relation to the degree-of-freedom relationships. (3) We are most
+likely to observe, and be part of, the strange loop whose arrangement has one of the largest possible infinities, one of
+the largest amounts of time, matter and energy in a stable phase; our stable phase never really ends, because space
+expands and time continues, so it is a very populous spacetime, ending only when the last star is eaten by the last
+black hole; the chance of our being at that late point is a smaller infinity, because fewer observers could have evolved
+to the point of observation by then. And, on T30 (one direction opens, not both): "first only actually makes a lot of
+sense to me."
+
+**What they touch** (*ours*): VISION Update 26 records the bar, the map and the measure with their published relatives;
+the (D, λ) map is in `docs/papers/series_plan.md`.
+
+## The author's mechanism for the black hole, 25 September 2026, midday
+
+**Hers, in her words put in order.** The area to understand now: the relationship between the activation energy, the
+three space directions and time. Inside a black hole gravity has won and reality is in a symmetric state; the mass
+supplies the energy to be space and the energy to collapse it; the collapse probably begins on one direction (as the
+six-link result suggests for opening); stratification may be the compacting of one or two directions; speed may collapse
+time too, and which comes first is open. If the energy hits one direction and it must curl, then once curled we are
+closer to the symmetric state, which catalyzes the gravitational drive, and the grouped directions collapse together, a
+fold accelerated by the change itself, because of how space is shaped.
+
+**What it touches** (*ours*): VISION Update 27; ASSUMPTIONS O55 (the folding walls halve at every rung; the counting
+drive exists only at full curling and beats the curling cost only below λ ≈ 1.02); PREREGISTRATION T34.

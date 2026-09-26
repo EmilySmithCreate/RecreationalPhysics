@@ -1,0 +1,14 @@
+# PREREGISTRATION T42: the fold with interchangeable points near lambda = 1.02 (piece 8).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_sealed_curled_d t42_interchangeable_lam102_n512_e64
+run_sealed_curled_d t42_interchangeable_lam102_n512_e128
+run_sealed_curled_d t42_interchangeable_lam102_n512_e256
+run_sealed_curled_d t42_interchangeable_lam102_n512_e512
+run_sealed_curled_d t42_interchangeable_lam102_n512_e1024
+run_sealed_curled_d t42_interchangeable_lam102_n512_e2048
+run_sealed_curled_d t42_named_lam102_n512_e64
+run_sealed_curled_d t42_named_lam102_n512_e128
+run_sealed_curled_d t42_named_lam102_n512_e256
+run_sealed_curled_d t42_named_lam102_n512_e512
+run_sealed_curled_d t42_named_lam102_n512_e1024
+run_sealed_curled_d t42_named_lam102_n512_e2048

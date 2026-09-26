@@ -70,6 +70,7 @@ Full statements and derivations are in the docstring of `src/graphity/cqg.py`.
 | Q19 | **The correlation length of [KTB19] Fig. 9, read as written, with three choices the paper leaves open.** `src/graphity/correlation.py`. Per edge phi_sq = S_e / (d - 2); per vertex f(u) the average of phi_sq over its d edges; C(r) the average of (f(u) - phi)(f(v) - phi) over pairs at graph distance r, divided by the variance of the *edge* field; xi = -< r / log C(r) >, divided by the diameter. **Choices (ours):** (1) the outer average is over the distances r = 1 .. diameter with 0 < C(r) < 1, each counted once; other distances are skipped and counted; (2) a graph with no edge fluctuation (a perfect lattice) is skipped and counted; (3) pairs in different pieces are ignored. Both averages are over one graph, then over snapshots. | [KTB19] Sec. 4, the two displayed equations after Fig. 8 and the text of Fig. 9 (arXiv HTML searched directly, 2026-09-23). Whether Fig. 9's axis is natural log like Fig. 8a: to verify. | **Calibrated against a brute-force networkx computation** (`tests/test_correlation.py`); the choices are **Ours**. Caution from the group's own first author (Kelly's thesis, REFERENCES [Kelly22] note): interactions here are not short range and random graphs have diameters growing only as log N, so "correlation lengths are not well defined" is a real possibility. At our sizes the diameter runs from about 5 (N = 36, random phase) to 26 (N = 676, lattice), so xi / diameter is read from a handful of distances. |
 | Q20 | **The fast symmetry count, and a chain with interchangeable points.** `src/graphity/symmetry.py` counts side-preserving automorphisms with igraph's `count_automorphisms` (bliss; from general knowledge, not read by us) in about a millisecond at N = 64 to 676, against 1 to 45 s for Q15's counter; the two agree exactly on perfect tori (4x4 = 192, 16x4 = 128, 12x12 = 576, 16x10 = 320) and on melted graphs (`tests/test_symmetry.py`). `src/graphity/interchangeable.py` uses it inside a chain: the kernel's own move, accepted with min(1, exp(-dH/g) A(G')/A(G)) as in Betre and Lewis Eq. (72) [DQM25], or, sealed, with the demon paying dH and the factor A(G')/A(G) alone. | The acceptance factor: [DQM25] Eq. (72), read in full by the owner. The rest: ours. | **Calibrated** against the exact interchangeable averages at N = 18 (`tests/test_interchangeable.py`): <S> = 19.59 +- 0.08 against 19.53 exact at lambda = 1, g = 10 (named: 20.01); 21.26 +- 0.05 against 21.29 at lambda = 0, g = 10 (named: 20.96); 18.99 +- 0.31 against 19.53 at the colder g = 4 (slower mixing). Energy conserved exactly in the sealed version. Cost: every valid proposal is counted, so it is meant for N up to about 64. **Consequence:** the per-move correction Q15 called unaffordable is affordable at small N; the sealed-sheet refold test (series paper 4) and quantum rung 1 (T15) can now be run with interchangeable points. |
 | Q21 | **The six-link (D = 3) model, as the papers define it.** Read on 2026-09-24 by an assistant agent from the arXiv HTML of [KTB19] v2, [T25] v2, [T17] v3 and [T22] v2, searching the text; the owner has not read these passages. **Sourced:** graphs are 2D-regular and bipartite, so 6 links at D = 3 ([KTB19] Secs. 3.1.2, 3.3 and 4). The hard-core rule does not change with D ([KTB19] Sec. 2.2: an edge qualifies iff any two short cycles on it share no other edges; [T22] Sec. II: it must be imposed for any D). The curvature per edge is −2(1 − 1/D)[1 − S_e/(2D − 2)]₊, flat from 2D − 2 = 4 squares ([KTB19], curvature equation). An edge carries at most 2D − 1 = 5 squares ([KTB19] Sec. 3.3.1; [T25]); [T17] disagrees for its diluted graphs. The ground state is the cubic torus with S = 3N ([T25]; [T22] Sec. III). **Ours, derived from [T25] Eqs. (8), (21) and (22) exactly as Q1:** H = 16(3N − S) + 4λX with X = Σ_e (S_e − 4)₊. The coefficient question is Q1's again: only 4 makes the papers' stated "cancel exactly" true. **Ours, unverified:** on bipartite graphs the rule is "no two points share more than two neighbours", the kernel's `MAX_CODEGREE = 2`; to be checked by brute force when the kernel is built. The 6-cube (64 points, 5 squares on every edge) fits [KTB19]'s baby-universe definition; no D = 3 baby universe is named in the papers. **To verify:** the coupling's N-scaling at D = 3 ([KTB19] Sec. 3.1.1 prints β̃ = ħg|V|^(2/D − 1), which conflicts with its own Fig. 8 axis; [T22] has ħg_cr ∝ N^(1 − 2/D)); the axes say only "log", and the natural log is inferred from the spacing of the points. **Reproduction targets (Gate C):** [T22] Fig. 3 (D = 3, N = 500, full curvature, no cap mentioned; y is squares per vertex, 12 at most) is the one that matches the model the author runs. [KTB19] Fig. 8b (N = 180 to 280) used the capped action that the author disputes (VISION Update 18). |
+| Q22 | **The local spark is a protocol, not a change to the energy: per-vertex stores, and a hot patch.** (2026-09-24; PREREGISTRATION T26 and T27; `graphity.spark`; `sealed.run_sealed_bath(by_vertex=True)`.) Two ways to put energy in one place. (i) **Per-vertex stores**: the bath of Q12 with one store per vertex, and a move pays from, or is paid into, the store of u1, the first vertex of the proposed switch, instead of a store drawn at random. Energy then stays where a move released it and can be spent only by a move made from that vertex; stores of side-1 vertices are never chosen and stay as given. H + stores is conserved exactly (tested), the shared-bath path is bit for bit what it was (pinned), and `seed < 0` now carries the stream on between blocks, as `run_chain` does (Q14). (ii) **A hot patch**: uphill switches whose four vertices all lie within a radius of a center are applied at random until the wiring near the center holds the budget, in exact units; the run then starts in a cold, empty bath. A **leak** drains every store by a fraction after each block (Q12's leak, applied to a bath). None of these touches the energy H, the moves, or the state space; they decide only where energy may sit and who may spend it, and are declared in the config before a run as S1 requires. One consequence worth knowing before reading a result: leaving the flat sheet costs 32 (O22), so a store holding less than 32 can never act, and energy spread thinly over per-vertex stores does nothing at all; the T26 energies are chosen with that in mind. | Ours. Creutz's demon [Creutz83] generalized to a store per vertex; the switch is the kernel's. | Ours, tested (`tests/test_sealed_local.py`, `tests/test_spark.py`, `tests/test_spark_runners.py`). |
 
 ### First look (2026-09-19, `configs/cqg_first_look.json`; one replica, short runs, NOT publication quality)
 
@@ -1105,11 +1106,588 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
       λ → 1, 8 at 1.1, 0 at 1.2), offered 6.67 times per sweep; the next is 160 − 128λ.
     - Above λ = 1.2 the 6-cube falls apart with no wait, as the 2D knots do at every λ > 1 (O40).
   - **So the author's "all three curl together" X can be stuck for now in 3D, which it cannot be in 2D, but only
-    for λ between 1 and 1.2.** Her 2D value of about 1.25 does not carry over.
+    for λ between 1 and 1.2.** Her 2D value of about 1.25 does not carry over. **That window is off-CQG:** by the
+    model's author's condition only λ = 1 is combinatorial quantum gravity, so none of this is written up as CQG.
   - *Ours, unverified, energy accounting only:* at λ = 1.1 each rung releases 0.4 per point, while the walls down
     the ladder are 8 (three curled), 8 (two curled) and 43 (one curled). The release of one rung could pay the next
     wall in a large enough system (N ≳ 110 for the last), which is the energetic room for her cascade. Whether the
     released energy stays where the next wall is, is a question about the dynamics.
+- **O43 Gate C fails: the six-link code does not reproduce [T22] Fig. 3, under either reading of its axis.**
+  *(Numbered O42 when first written; renumbered the same evening because O42 was already taken by the review of
+  paper 1.)*
+  (2026-09-24; `scripts/compare_gate_c.py`; results `gatec_t22_fig3_p1a`, `p1b`, `p1s_a`, `p1s_b`; the criterion was
+  accepted by the owner before any comparison.) All four runs use N = 500, λ = 1, no cap, cooling from a start with
+  no squares and heating back, with 2,000 + 2,000 sweeps per coupling.
+  - **(i) Axis read as our coupling** (g = 0.40 to 4.00): ours is nearly perfectly ordered and nearly frozen at every
+    coupling. At g = 4 we have 8.3 (cooling) and 11.2 (heating) squares per vertex against the published 1.1, and
+    11.5 to 11.6 at every g ≤ 3, where the published curve is 5.2 to 10.1. The legs agree at only 2 and 4 of 72
+    couplings.
+  - **(ii) Axis read as our coupling divided by N^(1/3) = 7.937**, the rescaling [T22] Sec. II states: the legs agree
+    at 67 of 72 couplings, but ours melts too early. It crosses 6 squares per vertex at published-axis ln g = −0.41
+    and −0.42 (our g ≈ 5.2), against the published 0.996 (2.7). The largest difference where the legs agree is 6.9
+    squares per vertex.
+  - **The shapes differ, so no single rescaling fixes it.** The published curve falls from about 10 to 1.09 within a
+    factor of about 2.7 in coupling, and 1.09 is already our infinite-temperature floor (measured: 1.147 ± 0.012 at
+    N = 500). Ours takes a factor well above 8 to fall from 10 to 1.7. The digitisation was checked by overlay.
+  - *Ours, unverified; possible causes, none tested:* (a) the published protocol (sweeps per coupling, start state),
+    which is not stated; a short anneal lags on cooling and can make a crossover look steeper; (b) the axis or the
+    energy normalisation at D = 3; our energy is derived (Q21), not quoted; (c) whether [T22]'s graphs are
+    bipartite (its hot end at 1.09 fits our bipartite floor, not a non-bipartite one near half that).
+  - **By rule 2 the six-link track stops here:** no D = 3 result is interpreted until this is resolved. *(Set aside
+    the same night by the owner's decision, VISION Update 24: proceed with the six-link work now, reproduction later.)* The long
+    protocol P2 (unscaled, 10,000 + 5,000 sweeps) finished the same evening and fails the same way as P1:
+    nearly perfect order (11.5 to 11.7 squares per vertex) and frozen at every coupling up to 4, with its legs
+    agreeing at 1 of 72 couplings. The 2D work is unaffected: at four links `cqg_d`
+    is `cqg` draw for draw. The question for the model's author is narrow: [T22] Fig. 3's protocol, what "ħg" is in
+    its Boltzmann weight, and whether its graphs are bipartite.
+- **O42 Paper 1 after a review generated with ChatGPT: Eq. (2) made explicit, the waits tested as a whole distribution, and one
+  unexplained tail.** (2026-09-24; NOT PRE-REGISTERED, committed data, no new simulation;
+  `scripts/exact_torus_level.py` (exact) and `scripts/analyse_paper_stats.py`, tested in `tests/test_paper_stats.py`.)
+  The review (ChatGPT, OpenAI, obtained by the owner) asked for the dynamics to be named whenever kinetics are discussed, for the counting behind Eq. (2) to be
+  unambiguous, and for "memoryless" and "uniform" to rest on named tests. What checking that turned up:
+  - **Eq. (2)'s factor of two, confirmed.** The chain draws an ordered pair of edges, (2N)² = 4N² proposals, and
+    each switch arises from two of them. From the perfect 4 × L torus there are exactly 3N distinct A switches (6N
+    ordered proposals, 3 per sweep) and 2N B switches (2 per sweep), at N = 32, 48, 64. Q13 already said 6N; the
+    paper's "3N moves" read as proposals and invited 2N · 3N/4N² = 1.5.
+  - **The torus's energy is a family, not one state.** N/2 switches change neither S nor X. Each joins two
+    neighbouring columns at opposite points, a reflection of the square: the torus is twisted globally and is no
+    longer isomorphic to the perfect one (0 of 32 neutral products are, at N = 64), but every neighbourhood is
+    unchanged. The chain wanders this family while it waits (0.5 neutral offers per sweep against 3e^(−12/g) exits).
+    Every arrangement met along a 60-step walk has exactly the perfect torus's 3N A, 2N B and N/2 neutral switches,
+    so Eq. (2) holds across the family. The walk met 3 isomorphism classes, with 2N or N side-preserving symmetries;
+    every arrangement one move A away has 2.
+  - **What Eq. (2) leaves out, counted.** Every other exit costs at least 10 more than the cheaper of A and B for
+    1.05 ≤ λ ≤ 1.45. But switches of two distant edges (ΔS = −4, ΔX = −8, cost 64 − 32λ) number 23N, 39N, 63N, 87N
+    distinct at N = 64, 96, 144, 192, so they are offered in proportion to N per sweep. They add at most 1.7 % to
+    the exit rate at g = 1.5 (λ = 1.35, N = 192), and 16 % at g = 2.5, N = 144, the hottest Arrhenius point, whose
+    measured 29 ± 6 sits between Eq. (2)'s 31.2 and the full count's 26.9. **This bears on "The wall measured
+    against temperature" (section D):** its weighted ratio 0.88 ± 0.06, "worth watching", is against move A alone;
+    move B and then these extra exits both push it the way it went, so no route cheaper than A is needed to explain
+    it. Not refitted.
+  - **The N-independence of the waiting time is a property of the proposal**, not of the barrier: the chain draws
+    its edges from the whole graph, so a region is offered a way out ~1/N as often. A dynamics that updated each
+    region at its own rate would give a wait falling as 1/N. This is Q13's cancellation read the other way, and the
+    paper now says so.
+  - **Waits against an exponential (bootstrap KS on each time over its condition's mean, 10,000 sets).** First
+    exits, 18 conditions, 432 times: D = 0.035, p = 0.53 (2 of 18 singly below 0.05, both T22 at λ = 1.05). T22
+    against Eq. (2)'s own mean, nothing estimated: 240 times, p = 0.85. Pre-registered decay waits beyond the first
+    check (W − 205, W > 205): all of T7 and T8, 865 times, p = 0.03, with an excess of short residuals (7.1 % below
+    0.05 of the mean against 4.9 %). **Cause, identified:** a torus that began converting during the 200-sweep watch
+    widens the resting spread that sets the threshold and is detected late; T8 records f_200, and 56 such waits
+    pile up near zero. T8 without them, 24 cells, 589 times: p = 0.55. T7 predates f_200 and alone gives
+    p < 10⁻³ from sweep 205, fading to 0.012, 0.094 and 0.66 from 255, 305 and 405 (the whole scan is reported,
+    not the passing end of it).
+  - **Unexplained: a long tail at λ = 1.05.** 3 of 200 waits there exceed 75,000 sweeps (80,985 and 80,174 among
+    T22's 80 first exits; 78,205 among T8's 120 decays, in the N = 96 cell, whose mean it lifts from 9,629 to
+    11,915); exponentials with the measured means give 0.19, three or more with probability 10⁻³. Against Eq. (2)'s
+    mean with nothing estimated, both T22 cells still pass the plain KS test (p = 0.63, 0.27), and without their
+    outlier they sit on it (8,358 and 7,485 against 8,330). The exit counts are the same everywhere the walk went
+    in the torus's family, so a stickier member of it is not the explanation as far as we have looked. Chance, or
+    something not identified that slows some runs; open. It accounts for part, not all,
+    of the map's excess at λ = 1.05 (the other cells stay 3 to 27 % above without their largest wait).
+  - **Relic position, named test.** Rotating each T11 relic through every column with the start held fixed: mean
+    distance 4.17 against 4.00 (N = 64, 36 runs, p = 0.67) and 6.38 against 6.00 (N = 96, 28 runs, p = 0.59).
+  - **Paper 1 also corrected on the way:** Table 1's N = 192 rerun (1428 / 1.19 / 0.995 / 0.92) had been left as
+    "—" from O13's in-progress table; and the paper quoted only the N = 144 barrier fit (12.1 ± 0.9), omitting
+    N = 64's 14.4 ± 1.0. Both are now in.
+- **O44 T23, the λ map again at 120 decays per cell: the window INCONCLUSIVE by the letter; the edge BREAK-UP
+  BEGINS AT THE EDGE.** (2026-09-24; PREREGISTRATION T23; 28 AWS Batch jobs.) The memoryless check, now sized to
+  the sample, holds in every metastable cell from λ = 1.05 to 1.25 (20 of 20) and at 1.30 in 3 of 4 sizes (it
+  fails at N = 64, CV 2.63). Two orders side by side and one front hold in every window cell. But the energy check
+  (gate 3), kept as T8 wrote it, fails a cell if any single decay of 120 ends on an unrecognised state, and at
+  λ = 1.30 that happens at every size (3 to 5 decays each). So λ = 1.30 is unread and the window is INCONCLUSIVE,
+  a sizing problem of the same kind as T8's, not repaired after the fact. The owner's edge prediction holds: from
+  1.30 to 1.35 the share ending flat falls from 0.71 to 0.47, and the share with several converted pieces at 25 %
+  rises from 0.44 to 0.69, each by more than two standard errors.
+- **O45 Exploratory, after Gate C failed: a fast heating leg reproduces [T22] Fig. 3's shape.** (2026-09-24;
+  `scripts/explore_gate_c_protocols.py`; `results/explore_c_*`; the question, the measure and our expectation were
+  committed before the runs.) The measure is the width in ln g between 9 and 2 squares per vertex: 0.645 for the
+  published curve, and 1.69 (cooling) and 1.46 (heating) for our slow equilibrium-like runs.
+  - **Fast cooling widens the curve** (3.76 at 100 sweeps per coupling).
+  - **Fast heating from a slowly cooled state narrows it, steadily with speed:** 1.35, 1.06 and 0.76 at 500, 100 and
+    20 sweeps per coupling. It also reproduces the plateau (highest 10.2 to 10.6, published 10.1).
+  - To line up, the published axis would be our coupling divided by about 5 to 6: 4.9 at the 9 crossing for the
+    fastest heating, and 5.6 at the 2 crossing, where our curve is at equilibrium. That is neither 1, 2 nor
+    N^(1/3) = 7.94, and it is unexplained.
+  - *Ours, unverified:* this supports the reading that [T22] Fig. 3 is a heating curve that lags equilibrium, which
+    fits the model's author's own suspicion that single switches do not equilibrate at low coupling. But two free
+    choices, the heating speed and the axis factor, are fitting two numbers, the width and the position, so it is
+    suggestive and not a match. **Gate C stays failed (O43)**, and the six-link track stays stopped. The question for
+    him narrows: was Fig. 3 a heating run from an ordered start, how many sweeps per coupling, and how is ħg defined
+    in its weight.
+
+- **O46 Exploratory, at the owner's asking: guesses about the failed Gate C, tested on the record.** (2026-09-24,
+  night; `scripts/explore_gate_c_readings.py`; the paper's text and figures fetched from arXiv and searched.)
+  Three guesses died on the sources. **(a) The axis is not base 10:** the marker spacing on [T22] Fig. 3 shrinks
+  tenfold from left to right, which is what couplings 0.40 to 4.00 in steps of 0.05 give on a natural-log axis
+  and not what any grid gives on a base-10 one; the digitization stands. **(b) There is no normalization factor
+  to be had:** [T22] Eqs. (1), (2) with T = P = 0 give a weight exp(−4 Σ_e (2D − 2 − S_e)₊ / ħg), exactly our H
+  at λ = 1 in both dimensions, so ħg is our g and reading (ii), g/N^(1/3), was wrong in the paper's own terms
+  (its Eq. (7) defines ħg with the N^(1−2/D) factor inside). **(c) The paper states no protocol:** the words
+  sweep, Monte Carlo, Metropolis, anneal, heating and cooling do not occur in it. One guess survived and is
+  pre-registered as Gate C′: **(d) Eq. (3) writes the weight as exp(−S_EH/ħg) with S_EH of Eq. (1) already
+  carrying 1/g**, so read literally the weight goes as 1/g², which halves the curve's extent on the log axis.
+  Ranked on our existing slow runs with nothing free, that reading puts the crossing of 9 squares per vertex at
+  0.64 (cooling) and 0.85 (heating) against the published 0.666, the heating width at 0.67 against 0.645, and
+  the cooling width at 0.88; a free fit x = a ln g + b on the slow cooling leg chooses a = 0.45, next to the ½
+  the reading predicts. What it leaves: our 2-crossing sits 0.2 to the right and our plateau at 11.5 against
+  10.07, both in the direction expected if the published graphs allow triangles and pentagons, as the text says
+  its ground states do ("possible residual triangle and pentagon defects"). Against it: [T25] Fig. 3, the same
+  author's 2D figure of 2025, matched us under one power of g on its hot side (Gate B). So Gate C′ runs both a
+  3D check of the reading and a 2D width test at N = 2000, with the outcome pairs and what each means fixed
+  before the runs. *Ours, unverified; nothing here is a reading of the gate.*
+  **Addendum, 25 September, morning: Gate C's long protocol P2 undercuts the 1/g² reading.** With 10,000 + 5,000 sweeps
+  per coupling (`results/gatec_t22_fig3_p2.csv`, N = 500, λ = 1, from a melt, cooling then heating), both legs sit at
+  11.7 squares per vertex at every coupling from 4.0 down to 0.4, with zero acceptance: fully ordered, no hysteresis,
+  no drop anywhere in the published range. The fast runs the ranking used (500 sweeps per coupling on cooling) showed a
+  9-crossing at g ≈ 3.6 because they lagged on cooling from the melt; P1 (2,000 + 2,000) showed 8.3 against 11.2 at g = 4
+  for the same reason. So the equilibrium transition of our 3D model at N = 500 lies above g = 4, the 1/g² reading's
+  9-crossing (g ≈ 3.8) is not where the equilibrium curve crosses, and the free fit's slope of 0.45 was fitted to a
+  lagging curve. What survives: a factor of about 5 (reading (v); O45) or the N^(1/3) scaling (reading (ii), 7.9) put
+  the position in the right region, and the shape difference is then the published run's protocol, which the paper
+  does not state, or a model difference. Gate C′'s run A (2,000 + 2,000 sweeps) will lag as P1 did, and its verdict
+  under reading (iv) is expected to be FAILS; it is read as pre-registered and reported either way. *Ours, unverified.*
+
+- **O47 T25: the scrap freezes in when the box cools faster than it heals (FREEZES IN, t\* = 30,000 sweeps).** (2026-09-24,
+  night; PREREGISTRATION T25; `results/t25_race_tc*.csv`; `scripts/analyse_t25.py`.) A sheet with one leftover, made as
+  T19, cooled from g = 1.25 to 0.25 by equal factors per block over t_cool sweeps and held 20,000 at 0.25. Survival: 20 of
+  20, 17 of 17, 19 of 19 at t_cool = 300, 1,000, 3,000; 15 of 19 and 14 of 18 at 10,000 and 30,000; 7 of 19 at 100,000.
+  The fastest cooling keeps the most, and the longest cooling time with a majority surviving is 30,000 sweeps. **For the
+  owner's dark-matter picture:** the relic that anneals at any fixed temperature (O35) is kept by cooling, and even a slow
+  cooling keeps most of them, because the coupling leaves the range where healing is fast early in the schedule. The
+  prediction inferred for her (FREEZES IN) holds, and she confirmed it as hers on 25 September, after this reading was
+  recorded; ours put t\* between 1,000 and 10,000 and was too short.
+- **O48 T27: a melt whose energy leaks away never folds and never flattens at any leak rate (STAYS MELTED).** (2026-09-24,
+  night; PREREGISTRATION T27; `results/t27_leak_n144_*.csv`; `scripts/analyse_t26.py`.) T21's bath (the whole energy in one
+  store of 2N) at 2, 4 and 8 per point, drained by 0.001, 0.01, 0.1 and 1.0 per block of 100 sweeps, twelve replicas each,
+  and the sealed control: every one of the fifteen cells has a MELTED majority (57 of the 60 leaking replicas melted; the
+  largest folded piece anywhere 16 vertices) [*corrected, O64 (3): 134 of the 144 draining replicas melted; 57 of 60 was
+  one energy's row with the control*]. The quench (leak 1.0) freezes the disorder as it stands; the slow leaks do
+  not anneal it within 30,000 sweeps either. Ours (STAYS MELTED) held; the prediction inferred for the owner (FOLDS BEFORE
+  IT FLATTENS) fails. **T26, the sealed local spark, read 25 September when its last cell landed: MELTS** (22 of 22 cells
+  with a MELTED majority [*corrected, O64 (2): 27 cells, 26 melted, one healed 10 of 10*]; no cell folds; the largest folded piece anywhere 11 points; PREREGISTRATION T26 reading).
+  The owner's confirmed prediction (RE-CURLS) fails. In two dimensions the model has now been asked three ways whether
+  concentrated energy re-curls space (O20/T21 spread evenly, T26 in one place, T27 leaking) and has answered melt each
+  time. *Ours, unverified:* the fold the owner means is of three intertwined directions, so the next form of the question
+  is six-link, after T30 shows what a curled region looks like there.
+- **O49 The two-curled six-link torus with a long open side is stuck for now up to λ = 1.5, not 1.2: O41's window was the
+  short torus's.** (2026-09-25; brute force over every switch out of 4 × 4 × 18 and 4 × 4 × 32, every side-0 vertex being
+  equivalent; the pre-registration of T30.) The cheapest move out loses 6 squares and 16 surplus squares and costs
+  96 − 64λ (16 at λ = 1.25, 25.6 at 1.10), offered 3,456 ways at N = 288, about 5.3 times a sweep; the next costs
+  128 − 88λ (18 at 1.25). O41's move at 96 − 80λ (−6, −20) exists in the 4 × 4 × 6 torus and in the 6-cube, where a side of
+  6 or 4 closes it, and not when the open side is 18 or 32. So the two-curled state's window is 1 < λ < 1.5 on the tori T30
+  uses, the one-curled rung's wall is 96 − 48λ (36 at 1.25; re-checked on 4 × 6 × 6), and a gas of 6-cubes is stuck only
+  below 1.2 (wall 8 at λ = 1.10). O41's ladder energies are unchanged. **Read before quoting O41:** its windows are for the
+  tori it listed; walls depend on the open side's length when that side is short.
+
+- **O50 The eight-link (D = 4) ladder and its walls, exact.** (2026-09-25; `scripts/exact_walls_d.py --near=4`, the
+  nearby-partner search checked against the full search on the 4 × 4 × 18 torus; tests in `tests/test_exact_walls_d.py`;
+  the pre-registration of T33.) At N = 2304 every rung exists: 4 × 4 × 4 × 36 (three curled), 4 × 4 × 12 × 12 (two),
+  4 × 6 × 8 × 12 (one), 6 × 6 × 8 × 8 (flat), and a gas of nine 8-cubes (all four curled). The ladder is additive,
+  4(λ − 1) per vertex per curled direction. Cheapest single moves out, at λ = 1.25: three curled **20** (a move losing
+  10 squares and 28 surplus squares, 160 − 112λ); two curled **40** (160 − 96λ); one curled **80** (160 − 64λ); flat
+  space **128** (losing 8 squares and no surplus, the same at every λ); the 8-cube, alone or in a gas, 160 − 128λ, which
+  is **0 at λ = 1.25 and 19.2 at 1.10**, so the fully curled four-direction state is stuck for now only for 1 < λ < 1.25.
+  Two things worth saying plainly. The walls rise from rung to rung (they double exactly only here, at eight links and
+  λ = 1.25; corrected 25 September, see O55's addendum), so nothing in the energy ties the directions
+  together: a tied pattern in T33 would be a surprise with no term to explain it. And the flat state's wall (128) sits
+  far above every rung's wall, unlike two dimensions (32 against the tube's 12), so a bath hot enough to pay the later
+  rungs need not melt the flat state; the room a four-direction change needs is a different question from T18's.
+  *Ours, exact; the eight-link kernel is the same code as at four and six links and carries VISION Update 24's caveat.*
+- **O51 The first exploratory 3D window scan was contaminated, and is kept as the record of that.** (2026-09-25;
+  `results/explore_3d_window_lam125.csv`, `_lam110.csv`.) With `n_melt` 0 the sweep runner still took one sweep at infinite
+  temperature before the first coupling, which removed a fifth of the flat 6 × 6 × 6 torus's squares before anything was
+  measured; the runner now skips that sweep when no melt is asked for (old configs never set 0 and are unchanged). The
+  corrected scans, `explore_3d_window2_*`, read the same morning: **the flat 6 × 6 × 6 torus accepts no move at all from
+  g = 0.5 to 6 at λ = 1.25 and at 1.10** (12.000 squares per vertex and zero acceptance at every coupling, both legs).
+  Exact, the same morning (`exact_walls_d.py --near=4 1.25 6,6,6`): the cheapest way out of flat three-dimensional
+  space costs **64** at every λ (losing four squares and no surplus), against 32 in two dimensions and 128 in four
+  (O50). So the coupling window in which a 3D sheet rearranges without melting, which the gravity test T28 needs,
+  lies above g = 6 if it exists at all. **The third scan (`explore_3d_window3_*`, g = 6 to 20, read the same morning):
+  it does not exist.** At λ = 1.25 and at 1.10 the flat 6 × 6 × 6 torus holds 12.000 squares per vertex at g = 6 and 11.96
+  at g = 8 (a handful of moves), and at g = 10 it is melted, 5.1 squares per vertex, falling to 3.7 at 20; brought back
+  down it does not re-order (7.1 at g = 6). Between frozen and melted there is nothing: no coupling at which a 3D
+  sheet rearranges and stays a sheet. **For the gravity test (T28):** the dynamic measurement, two relics free to move in
+  a warm sheet, cannot be made at equilibrium in three dimensions any more than in two ("a cold sheet accepts no
+  moves at all"). What remains is the exact counting rung (the symmetry count of the torus with two relics at every
+  separation, O32's measurement in 3D) and a sealed variant in which relics move only when energy is delivered to
+  them, which would be a new protocol to declare. *Ours; exploratory; the six-link gate is open.*
+
+- **O52 T24, the λ map a third time: the repaired energy check passes everywhere; the window is INCONCLUSIVE by the
+  letter for a third distinct reason; the edge BREAK-UP BEGINS AT THE EDGE.** (2026-09-25; PREREGISTRATION T24; 28
+  Batch jobs.) Gate 3′ passes in 28 of 28 cells; (b) and (c) hold in every window cell; (a′) holds in 24 of 28 and
+  fails where one or two waits of 24 to 76 τ sit in 120 (N = 64 at λ = 1.25 and 1.30; N = 192 at 1.30; N = 144 at
+  1.35), which makes λ = 1.25 and 1.30 unread under the all-sizes rule. The rare very long wait is now on the record at
+  λ = 1.05 (T8, O42), 1.25 and 1.30, always at the smaller sizes. *Ours, unverified:* a first exit that falls back into
+  a rewired torus that is stickier than the perfect one, or a second metastable arrangement one move away, would give a
+  wait of this shape; the saved graphs of the two outliers are the place to look. Not a rule to repair after the fact.
+- **O53 Gate C′: the 1/g² reading fails, and the same code's 2D figure is not compressed; a plain factor of 2 matches
+  a factor of 2 matches the ordered side and the transition's upper half, and the hot tail and plateau point at non-bipartite graphs
+  (softened the same evening; see the addendum).**
+  (2026-09-25; PREREGISTRATION Gate C′; four Batch jobs.) Run A under reading (iv): FAILS (9-crossing 0.69 to 0.72,
+  6-crossing 0.83, width 0.11 to 0.15 against 0.666, 0.996, 0.330). Run B: ONE POWER (W = 1.53 to 1.61 against 2.0).
+  Our 3D transition at N = 500 is abrupt with hysteresis: cooling 9 → 6 within 0.29 of ln g, heating within 0.04.
+  Reported, not scored: under x = ln g − ln 2 the cooling legs give 0.677/0.737, 0.970/0.961, widths 0.29/0.22, all
+  inside the tolerances (iv) was scored by; the published hot tail falls to 2 squares per vertex a factor 2.8 sooner
+  in coupling than ours and its plateau is 10.07 against our 11.4, both what graphs with residual triangles and
+  pentagons would give. Where a factor of exactly 2 could come from (*ours, unverified*): an action summed over edges
+  once where Eq. (1) sums the Ricci scalar over vertices, which counts each edge twice. **Gate C stays failed; the
+  six-link track proceeds under VISION Update 24's caveat;** the next test of the model-difference reading is a
+  six-link kernel that allows triangles and pentagons, and the question of the factor goes to the model's author.
+  **Addendum, 25 September, evening: the triangles-and-pentagons reading was given too much weight.** The published hot
+  end, 1.09 squares per vertex, sits at our bipartite floor (1.147 at N = 500), where graphs carrying triangles and
+  pentagons would sit near half that (O43 (c)); and the published plateau, 10.1, is reproduced by a fast heating leg from
+  a slowly cooled state (O45). So the better-supported reading is a coupling factor plus a short, non-equilibrium
+  protocol, both testable with the bipartite kernel we have. A six-link kernel allowing triangles and pentagons is needed
+  only if the model's author says his graphs were not bipartite. *Ours, unverified.*
+- **O54 Six links: the activation is fixed with size (T32, FIXED WALL, sharp at 16); one push opens one curled
+  direction, not both (T30, FIRST ONLY); a gas of 6-cubes descends two rungs.** (2026-09-25; PREREGISTRATION T30, T32;
+  14 Batch jobs.) T32: E\* = 16 at N = 192 to 512, nothing below leaves, everything at or above does, exactly O49's wall.
+  T30 at λ = 1.25: the first direction opens as a front to the one-curled rung at every bath from N/4 to 2N, the second
+  never; at N/8 the heat drives 2 of 12 replicas to a defective near-flat state; at λ = 1.10 the spark's one move sits
+  without growing (STUCK). The gas of eight 6-cubes at λ = 1.10 with a spark of 8 joins and opens two of three
+  directions in 21 of 24 replicas, 40 % of points fully open in small patches, never one space. **For the owner's rule
+  that the directions curl and open together:** in the six-link model they open one at a time, each behind its own
+  wall (16, then 36), and the release of the first rung in a cold bath does not pay the second; her prediction failed,
+  ours held. The gas result is the one to look at again: two rungs in one run from the fully curled state, which the
+  walls (8, then the joining moves) allowed at λ = 1.10 where the 4 × 4 × 18 torus's second wall (43) did not.
+  *Every six-link result carries VISION Update 24's caveat.*
+  **Correction, 25 September, midday (the assistant's error, found on re-reading the saved final states).** The reading
+  above says the first direction "opens as a front to the one-curled rung at every bath from N/4 to 2N". The final
+  local-dimension census of the 84 torus replicas at λ = 1.25 says otherwise: the first direction opened completely (no
+  point left two-curled) in 28; in 32 the opening stalled early, 36 to 53 % of points still two-curled and the energy 1.86
+  to 1.95 per point against 2.0 at the start (the spark's excitation grew a little and stopped); in 21 it went most of the
+  way, 15 to 24 % still two-curled; in 3, at the hottest baths, it went past the rung toward a defective flat state. So
+  the analyzer's OTHER in the torus cells was mostly unfinished openings, not a finished rung carrying thermal defects,
+  and no torus cell has a MIDDLE majority. **FIRST ONLY stands by the letter, but the MIDDLE majority it rests on is the
+  gas cell's** [*corrected again, O64 (1): the gas is reported separately, so the torus verdict is NEVER OPENS*], where the cubes went two rungs down, not one. Traced block by block, all 21 gas replicas that reached
+  the two-opened level passed the one-opened level without resting on it for the pre-registered 5,000 sweeps (longest
+  stay within 10 % of it: 400 to 3,800 sweeps), though the whole descent took 10,000 to 46,000 sweeps: gradual, neither a
+  cascade nor a staircase. Stated correctly: in a torus, the second direction never opened in a cold bath (its wall of 36
+  is never paid) and the first opened fully in a third of replicas; in the gas, where no direction is singled out, two of
+  three directions opened without a rest between them, which is closer to the owner's "together" than the summary said,
+  and still never one flat space. Corrected in PREREGISTRATION T30, the six-link paper, paper 3's table, the programme
+  page, its markdown and the series plan.
+
+- **O55 The fold run backwards, exact: each successive fold halves its nucleation excess, and the counting drive toward
+  curling appears only at full curling, beating the curling cost only below λ ≈ 1.02.** (2026-09-25; VISION Update 27;
+  `scripts/exact_walls_d.py` for the walls, `graphity.symmetry` for the counts.) **Walls.** The barrier between two rungs
+  is the same from either side, so the excess cost of nucleating a fold, beyond the fold's own energy 4(λ − 1) per point,
+  is the wall out of the more-curled rung: six links 36, 16, then downhill (at λ = 1.25); eight links 80, 40, 20, 0
+  (O49, O50). **Counts, N = 512, side-preserving automorphisms:** 8 × 8 × 8, 12,288; 4 × 8 × 16, 2,048; 4 × 4 × 32,
+  12,288; eight separate 6-cubes, 3.20 × 10³⁹ (ln A = 90.96, of which ln 8! = 10.6 is the permutation of the cubes). So
+  the partial folds carry no more symmetry than flat space, and the fully curled state carries 10³⁵ times more. With
+  interchangeable points the free energy is E − g ln A: flat −14.1, the gas 6144(λ − 1) − 136.4 at g = 1.5, which cross
+  at λ = 1.020 (1.013 at g = 1.0). **For the owner's curve-first gravity (piece 7):** the drive to curve from counting
+  exists, is exact, and is 0.24 units per point at this size against a curling cost of 12(λ − 1) per point; it wins only
+  when the curling cost is within about 2 % of the tie at λ = 1. Whether the ratio holds at larger N: ln A per cube is
+  constant and the energy per cube is constant, so the crossover λ does not move with N in the gas; for connected
+  arrangements it is not computed. *Ours, exact; unreviewed.*
+
+  **Correction, 25 September, midday (the assistant's; found by checking the formulas while reading the published
+  work on decompactification):** "halves" and "doubles" hold only at λ = 1.25, and exactly only with eight links. From
+  O49 and O50's own formulas the walls out of successive rungs are, with six links, 96 − 80λ, 96 − 64λ, 96 − 48λ (at
+  λ = 1.25: downhill, 16, 36; at 1.10: 8, 25.6, 43.2) and, with eight, 160 − 128λ, 160 − 112λ, 160 − 96λ, 160 − 64λ (at
+  1.25: 0, 20, 40, 80; at 1.10: 19.2, 36.8, 54.4, 89.6). What holds at every λ > 1: each wall is lower than the one
+  before it by 16λ or 32λ, so each fold makes the next easier, and nothing in the energy ties the directions together.
+  What does not: a factor of two. Corrected in O50, VISION Update 27 (a pointer), the six-link paper, paper 3, the
+  series plan, the loop-and-exchange brief and the programme page.
+
+- **O56 Six links, exact: the one-switch curled column is not a relic, and two of them pull on each other neither by
+  energy nor by counting except at contact and at symmetric placements.** (2026-09-25; `scripts/exact_relic_d.py`; flat
+  8 × 8 × 8 at λ = 1.02.) The switch that closes a line of four points into a 4-cycle along one axis costs 120.5 above
+  flat space, not the 24λ − 16 of the four-link relic, because it loses squares rather than adding surplus ones; it is not
+  a dip (one move out is downhill by 0.32); it carries 16 symmetries against flat space's 12,288. Two such objects: energy
+  exactly additive at every separation except contact along y or z (an attraction of 64, the shared squares) and the
+  degenerate placement four steps along x (the two switches coincide); symmetry count 8 at generic separations, 16 at
+  exactly opposite, 32 along the column's own axis, 4 on a diagonal. So at fixed wiring, three dimensions repeat O22 and
+  O32: no force at a distance from the energy, and from counting only a preference for symmetric placements. **The stable
+  six-link relic, a curled object that is a dip inside flat space, has not been shown to exist**; the four-link one costs
+  14 and is a dip, and its six-link analog, if there is one, needs more than one switch. T34's saved end states are the
+  first place to look; a search over two- and three-switch constructions is the exact alternative. *Ours, exact.*
+
+- **O57 The exchange-phase rule, fermionic form, exact on saved arrangements: a selection rule that spares every basic
+  arrangement and the burp's products and forbids a few per cent of damaged sheets.** (2026-09-25; VISION Update 29;
+  `scripts/exact_exchange_sign.py`, igraph VF2 listing every side-preserving automorphism, parity by cycle decomposition.)
+  Signed sum Σ sgn(σ) over the automorphism group: |Aut| if all even, 0 if any odd. Flat 8 × 8 (A = 256), flat 16 × 10
+  (320), curled 16 × 4 (128), the 4-cube (192): all even, allowed. T7d decay end states, 7 read: allowed. T26 N = 64 named
+  patch states: 2 of 20 forbidden (A = 4 with 2 odd; A = 2 with 1 odd). T26 N = 144 store states: 8 of 120 forbidden.
+  *Ours, unverified:* the forbidden arrangements have a twofold symmetry that is a single-transposition-like renaming,
+  which is what a pair of points with matching surroundings gives; the hard-core rule already forbids full twins, and
+  the exchange sign forbids the next thing to them.
+  **Addendum, the same afternoon: the exact averages at N = 16 and 18** (`scripts/exact_exchange_averages.py`, every class
+  of the complete enumeration of T4; tested in `tests/test_exchange_sign.py`). At N = 16, 1 of 5 classes is forbidden
+  (S = 22, X = 24, 16 renamings of which 8 odd). At N = 18, 4 of 26, and one of them is a ground-state arrangement: of
+  the three classes with S = 18 and X = 0 (the flat energy, no curling), the rule keeps the ones with 72 and 18
+  renamings and forbids the one with 12 (6 odd). The averages move by a few hundredths against the interchangeable
+  ones: at λ = 1, g = 1, φ 1.0781 → 1.0975 and the folded share 0.40 → 0.50; at λ = 1.25, g = 5, φ 1.0133 → 1.0174
+  and the folded share 0.145 → 0.137; nothing changes character. So the fermionic form is a mild selection rule at
+  these sizes: it prunes arrangements with a twofold symmetry of odd parity, including one of three flat ones, and does
+  not move the thermodynamics. Not yet asked: the anyonic form (a phase per swap), which is where cancellation, not
+  only pruning, would enter.
+  **Addendum, 25 September (O60 (b)):** the anyonic form does not exist as stated (renamings have only the trivial and
+  the sign representation), and what the sign forbids depends on a convention (points or pairs) that is the owner's to
+  choose under S1.
+
+- **O58 Gravity, step 1: no six-link relic among one- and two-switch constructions; the search's two "dips" were an
+  artifact of its partial move list.** (2026-09-25; `scripts/exact_relic_search_d.py`, `scripts/exact_relic_confirm_d.py`;
+  flat 6 × 6 × 6 at λ = 1.02; exact.) Every valid one- and two-switch construction whose switches lie within distance 3 of
+  one point, 9,049 distinct curled arrangements (X > 0), ranked by energy; the 30 lowest tested for being a dip. The
+  search listed only switches whose first side-0 point the construction had changed, and flagged two: E = 80.32 (four
+  squares lost, four surplus gained, 8 symmetries) and E = 128.32 (seven lost, four gained). Rebuilt and tested against
+  every switch near any changed point, **neither is a dip**: the first undoes itself downhill by its whole energy (the
+  reverse switch touches it only through side-1 points, which the search had not listed), and all six arrangements of
+  the second have a move downhill by 48 or 64. **So the stable curled object that the gravity test needs has not been
+  found in six links**; the four-link relic (one column curled, 24λ − 16, a dip) has no one- or two-switch analog here.
+  What remains: three-switch constructions, and reading defects left behind by the six-link runs themselves (T30, T32,
+  T34 end states), quenched to their nearest dip, which is how the four-link relic was found (O13, O16). *Ours, exact
+  within the stated search.* A process note: a search that tests dips on a partial move list must be confirmed on the
+  full list before anything is said; the first report of this search to the owner said "two dips" before confirmation.
+
+- **O59 T36: no persistent allotropes at λ = 1 on a torus (TRANSIENT).** (2026-09-25; PREREGISTRATION T36;
+  `results/t36_allotropes_n{196,484}.csv`; `scripts/analyse_t36.py`.) The model author's suggested search, run at his
+  model (λ = 1, no cap), 16 replicas per cell from a melt and from the lattice. At N = 196 (equilibrium certified) the
+  points touching two or fewer squares are 20 % and 28 % of the graph at g = 3.433 and 3.697, and whether a point is in
+  that set is remembered for about 100 sweeps: the excess over chance is +0.048 and +0.018 at a lag of 50 sweeps, +0.009
+  ± 0.007 and −0.002 ± 0.001 at the scoring lag of 2,000. No replica holds a connected region of four or more points that
+  stays low for the last 2,000 sweeps. **TRANSIENT at both couplings, so TRANSIENT by the letter**; the owner's inferred
+  prediction (ALLOTROPES) fails and ours holds. N = 484, reported and not scored: the same (excess +0.005 ± 0.004 at
+  g = 3.302, lifetime again about 100 sweeps; at g = 2.880 the low set is sometimes empty). *Ours, unverified:* on a
+  finite torus in equilibrium the low-square points are thermal fluctuations with a lifetime of order 10² sweeps, not
+  stuck regions; the allotrope of [T25] Fig. 9 lives on an infinite hyperbolic graph, and a torus does not test it.
+  What would: a region planted in the lattice with two squares per point and a boundary to the three-square background,
+  followed at fixed coupling (the allotrope's own lifetime, the model author's question), which is the natural next run.
+
+- **O60 Reading, 25 September (four literature reviews by assistant agents; notes in `docs/reading/notes/`, every paper
+  fetched and searched, quotes to be checked against the papers before any is published): what the published work says
+  about the programme's open questions.** *The agents' reading and our inferences, unverified by a physicist.*
+  (a) **Gravity.** A medium with an energy gap passes on only forces that die off exponentially (Kardar and Golestanian;
+  Hastings and Koma, Thm. 2.8; a massive mediator gives Yukawa's e^(−mr)/r). The model's flat space is gapped in the
+  extreme: every move out of it costs 32, 64 or 128 (O22, O51, O50). So no pull at a distance can come from this energy
+  at any λ in the geometric phase; the model's author writes that both phases have a finite correlation length
+  ([T25] v2, around Eq. 23). A 1/r pull needs three things together: a gapless mode, a relic that is a source for it in
+  proportion to its energy (a Gauss-law charge), and a mode of the kind that makes like sources attract (a scalar, as in
+  Nordström's theory, or the tensor of Einstein's; the vector modes that hard local constraints produce make like
+  defects repel). **Correction to our reading of O31:** short curvature correlations do not show a gap (in Einstein
+  gravity the curvature correlator is a contact term at tree level; Laiho and Ratliff 2025, Eqs. 218, 223); the frozen
+  flat space does. The one discrete random-geometry model that has shown a Newtonian pull is four-dimensional dynamical
+  triangulations, with test particles (de Bakker and Smit 1997; Dai et al. 2021).
+  (b) **Exchange rules.** The "anyonic form" named after O57 does not exist as stated: renamings form the symmetric group,
+  whose only one-dimensional representations are the trivial one and the sign, so any phase summed over one
+  arrangement's renamings gives the count or zero (Betre and Lewis, Sec. 3). Anyons need paths of exchanges (braids),
+  which is a rule over histories (VISION Update 20); and our graphs, bipartite with four or more links, are not planar,
+  where Harrison, Keating, Robbins and Sawicki (2014, Thm. 4) allow only bosons or fermions on the well-connected parts.
+  **O57's forbidding depends on a convention:** with the sign taken on pairs rather than points (Betre and Lewis),
+  nothing is forbidden; which sign representation is meant is a choice for the owner under S1. And an exchange sign is a
+  flat connection and carries no force (Maciążek and Sawicki 2019, Sec. 1).
+  (c) **The leftover.** Kibble–Zurek scaling is built for continuous transitions; for a first-order change the count of
+  domains, and so of places where fronts meet, is set by nucleation and growth (KJMA): in one dimension
+  ½√(πI/v) seeds per unit length (Jun and coworkers, Eq. 1). T37 is built on this. The leftover's nearest published
+  relative is a trapped pocket of the old phase (Fermi-ball dark matter), not a topological defect.
+  (d) **Directions opening.** Nothing read says curled directions must open together unless something ties them; string
+  gas cosmology caps the number of large directions at three and does not make them open at once; a published
+  successive-push study (Greene, Kabat and Marnerides 2013) is the closest analog of T30. **Correction:** the walls
+  "double" only at λ = 1.25 with eight links (O55, correction).
+  (e) **Black holes.** The owner's ordered interior sits with gravastars and condensate pictures, not with fuzzballs;
+  what would tell them apart is where the entropy lives, a threshold for forming, and tidal response.
+
+- **O61 Exact, exploratory: a massless field on the graph's points would give a pull, a fast Casimir one from its
+  fluctuations and a Newton-shaped one if relics are its sources.** (2026-09-25; `scripts/exact_tree_count_pull.py`;
+  `configs/exact_tree_count_pull.json` and `_3d.json`, each with its expectation written before the calculation;
+  `results/exact_tree_count_pull*.csv`.) Neither term is in the model; this says what each candidate would add. A field
+  on the points with energy Σ over links of the squared difference, integrated out exactly, leaves (g/2) ln det′L in the
+  free energy of a wiring (Kirchhoff: det′L = N × the number of spanning trees τ), and, if a relic is a source q, a
+  cross term −q₁ᵀL⁺q₂ between two relics. For two copies of O56's curled line of four at every even separation:
+  **ln τ is lower when they are close**, by 0.048, 0.0068, 0.0014, 0.00034 at r = 2, 4, 6, 8 in a 24 × 24 sheet and by
+  0.0032, 0.00017, 0.000014 at r = 2, 4, 6 in a 16 × 16 × 16 torus: an attraction under the field reading (a repulsion
+  if spanning trees are counted as hidden structure), falling roughly as r⁻⁴ and r⁻⁶, and worth about 10⁻³ g at contact,
+  far too weak and too short to be gravity (the literature's "passes sign, fails shape"). **The source term grows as the
+  relics approach**: q₁ᵀL⁺q₂ minus its farthest value is 0.369, 0.105, 0.022 at r = 2, 4, 6 along an axis and 0.243,
+  0.062, 0.012 on the diagonal at 16³, consistent with the 1/r of the lattice Green's function reduced by the torus's
+  images; in two directions it grows like −ln r. So the minimal rule that gives a Newton-shaped, like-attracting pull is
+  a massless scalar on the points with relics as its sources in proportion to their energy; the pull then travels
+  through the emergent wiring, which is what would be new. That the pull is put in by the rule, not derived, must be
+  said wherever this is used. Whether to adopt it is the owner's decision under S1 (`docs/design/gravity_brief.md`,
+  section 6).
+  *A note on the two files:* `exact_tree_count_pull.csv` was written by the script's first version, which referred both
+  kinds of placement in 8 × 8 × 8 to the axis's farthest one and used a pseudo-inverse; the second version (a direct
+  solve, each kind referred to its own farthest; the pseudo-inverse failed at 16³) wrote `exact_tree_count_pull_3d.csv`.
+  The raw columns (`log_trees`, `cross`) of both are comparable; `cross` differs between versions by a constant.
+  **Addendum, 12:57 ET: the field would barely move the ladder** (`scripts/exact_tree_count_ladder.py`,
+  `configs/exact_tree_count_ladder.json` with its expectation written first). ln det′L per point, at equal N: four
+  links, flat 8 × 8 1.2146, one curled 16 × 4 1.1858, a gas of four 4-cubes 1.2711; six links, flat 8 × 8 × 8 1.6786,
+  one curled 4 × 8 × 16 1.6734, two curled 4 × 4 × 32 1.6629, a gas of eight 6-cubes 1.6919. So the field's term
+  (g/2) ln det′L favors a curled torus over flat space by 0.0144 g per point in two directions and 0.0026 g per point
+  per direction in three: the same as lowering λ by about 0.004 g, a few thousandths at the couplings used, too small
+  to move the window at λ = 1.25 and a real fraction of the curling cost only near λ = 1.02. It disfavors a gas of
+  cubes (whose separate pieces also bring zero modes that a massless field leaves undefined; a small mass fixes them).
+  Adopting option A would not spoil the burp.
+  *A correction of record:* the purpose fields of `configs/exact_tree_count_pull.json`, `_3d.json` and
+  `exact_tree_count_ladder.json` (and so their results' `.meta.json`) give the times they were written as 13:30, 13:40 and
+  15:20 ET. Those were the assistant's guesses and are wrong: they were written at about 12:33, 12:38 and 12:56 ET (commits
+  e91c883 at 12:46 and 0d70964 at 12:57). The order they state, each written before its calculation, is right. The
+  files are on the record and are not changed.
+
+- **O62 T33: in four directions, a push equal to the cheapest first move stalls (NO CASCADE, every replica STALLS).**
+  (2026-09-25; PREREGISTRATION T33, reading; `results/t33_*.csv`, six cells of six replicas, 8 links, N = 2,304.) From the
+  4 × 4 × 4 × 36 torus at λ = 1.25 and from the gas of nine 8-cubes at λ = 1.10, at every bath size, the spark (20, the
+  exact cheapest exit) bought one move and nothing followed for 50,000 sweeps: the energy rose by the move's cost, the bath
+  sat at zero, and no downhill move existed from there. So no pattern was observed, and the owner's tied pattern and our
+  one-at-a-time were not tested in the sense intended. **What it does show:** in four directions the activation of the
+  change is not the cheapest single move (as it was in two, where 12 was exactly the push that worked, and in three at
+  λ = 1.25, where 16 started the first direction in a third of the runs) but the height of a pass over several moves. The
+  exact cost of the second move from the stalled states is being computed. T39's eight-link cells were written before
+  this was read and give a spark equal to the wall (40 at λ = 1.25, 16 at 1.50) with an empty bath; they are expected to
+  stall for the same reason, and are left to run as registered. A pre-registered follow-up with larger pushes is the next
+  test for piece 13. *Every eight-link result carries VISION Update 24's caveat.*
+
+- **O63 T17's leftover counts are more regular than chance.** (2026-09-25; arithmetic on `results/t17_seeds_k*.csv`, the
+  converted tubes, no new run; suggested by the literature review on relics, O60 (c).) Variance over mean of the number of
+  leftovers per tube: 0.09, 0.50, 0.36, 0.35 at k = 1, 2, 4, 8 planted seeds (counts 1.10, 2.15, 2.50, 3.40). Independent
+  events would give about 1, and a leftover left independently with probability p at each of the k places where fronts
+  meet would give 1 − p: 0.38 at k = 4, where it fits, and 0.57 at k = 8, where the counts are more regular than that.
+  *Ours, unverified:* at high seed density the leftovers are not independent: nearby scraps merge or anneal together,
+  which fits the growth of leftovers per seed falling as seeds are added. T37 measures the same thing with natural seeds.
+
+- **O64 Three errors in the record, found by a referee reading of the drafts and checked against the committed data.**
+  (2026-09-25, 13:33 ET; an assistant agent read the six drafts against this file and PREREGISTRATION as a skeptical
+  referee; each claim below was rerun from `results/` before being written here.) All three are ours.
+  (1) **T30's verdict for the tori is NEVER OPENS, not FIRST ONLY.** The pre-registration reads the gas "by the same rules"
+  and reports its verdict "separately as T30-gas", but `scripts/analyse_t30.py` pooled the gas with the tori, so the gas
+  cell's MIDDLE majority decided the torus verdict. Read as registered (the script now does): no torus cell has a FLAT or a
+  MIDDLE majority, so **T30 (tori): NEVER OPENS**; **T30-gas: FIRST ONLY** by the letter, which for the gas means it reached
+  the level with one direction still curled, two of three open. The owner's prediction (ALL AT ONCE) fails either way;
+  ours (FIRST ONLY) also fails for the tori by the letter: the first direction opened fully in only 28 of 84 replicas (O54,
+  correction), a majority in no cell. What stands: the second direction never opened in a cold bath. This morning's
+  correction to O54 said FIRST ONLY stood "by the letter, carried by the gas cell"; that was wrong, because the gas is not
+  part of the torus verdict.
+  (2) **T26 has 27 cells, not 22, and one healed.** By the analyzer's own cell key the committed data hold 27 cells (500
+  replicas); 26 have a MELTED majority and one, N = 64 with interchangeable points at E = 32, healed 10 of 10. The verdict
+  (MELTS: some cell melted, none folded) is unchanged; "22 of 22 cells melted" in O48, the T26 reading, paper 4 and the
+  series plan was wrong.
+  (3) **T27: 134 of the 144 draining replicas melted** (10 folded). "57 of the 60 leaking replicas" in O48 and the T27
+  reading was the E = 288 row across all five settings, the sealed control included. The verdict (STAYS MELTED) is
+  unchanged.
+  The same reading lists many smaller issues in the six drafts (overstatements, numbers, missing caveats); the most serious
+  for the submitted paper 1 are that two results it quotes, the Arrhenius waiting-time test and the 12-unit spark
+  threshold, were exploratory while its abstract says every verdict quoted was pre-registered, and that its two-state
+  verdict came after four amendments of one gate, three written after the data. Those are for the owner (a replacement of
+  the arXiv version is hers to decide); the other drafts are being corrected.
+
+- **O65 Six more imprecisions in our record, found while the drafts were corrected and checked here.** (2026-09-25,
+  14:05 ET; the agent that applied the referee's fixes listed them without editing the record; items 2 and 6 were rerun or
+  reread here, the others follow from numbers already in this file.) All are ours.
+  (1) **T24, O52:** "each failure is one or two extreme waits of 24 to 76 τ" holds for the two N = 64 cells only; the
+  failures at N = 192, λ = 1.30 and N = 144, λ = 1.35 are on the spread of the waits (CV 1.53 and 1.41), with no wait
+  beyond about six times the mean.
+  (2) **T23 reading:** at λ = 1.35, N = 192 the memoryless check does not "fail narrowly": its CV, 1.367, is inside the
+  band [0.758, 1.379], so it passes; what fails there is the single front (largest piece 0.67 against 0.70).
+  (3) **O61:** "about 10⁻³ g at contact" is the three-direction value; in two directions the fluctuation term is 0.024 g at
+  contact. "0.0026 g per point per direction" is the one-curled value (two curled: 0.0039 g per direction); and "the same
+  as lowering λ by about 0.004 g" holds with four links only (with six, about 0.0007 g to 0.001 g).
+  (4) **O34 and the T18 reading:** "the room grows faster than the lump" is not resolved by the grid of bath sizes used
+  (steps of 4/3 to 2); what the data show is a room that grows with λ at least as fast as the lump.
+  (5) **O50:** the inference that four directions can be "driven hot without melting the flat state, unlike two
+  dimensions (32 against the tube's 12)" runs the wrong way: the ratio of flat space's wall to the rung walls is 32/12 =
+  2.7 in two directions and 128/80 = 1.6 for the last rung in four, so four directions leave less room between paying a
+  rung and melting, not more. T39's pre-registered rule (a window only where the ratio is at least 2) already uses the
+  right direction.
+  (6) **T17 reading:** "ours, leaning ONE PER TUBE, also fails" is wrong: our registered prediction was (c), BETWEEN,
+  leaning (b); the verdict is (c), so ours held and only its lean was wrong.
+
+- **O66 Six-link flat space heals every heat damage it was given: no relic appears when damaged tori are quenched.**
+  (2026-09-25; `configs/quench_relics_d.json`, the question and expectation written before the run; exploratory;
+  `scripts/quench_relics_d.py`; `results/quench_relics_d.csv`.) All 80 final graphs of T34 at N = 216 (flat 6 × 6 × 6 at
+  λ = 1.25 given 64 to 500 units, packed or spread; 0 to 202 units above flat at the end), quenched for 5,000 sweeps at
+  zero temperature (only moves that do not raise the energy), came to rest on perfectly flat space: 80 of 80 at exactly
+  zero energy, no defect piece left, so no dip to test. **Two readings follow.** For T34: its "melted" end states were
+  thermal excitations of flat space that the cold removes completely, not a trapped disorder; the verdict (MELTS, by its
+  registered rule on the final census) stands, but it says less than the word suggests, as the referee reading also
+  noted for the two-dimensional tests. For gravity step 1: heat damage in six-link flat space leaves no small stable object
+  behind, which together with O58 (none among one- and two-switch constructions) makes the six-link relic, if it exists,
+  something that only a curled region's opening can leave (T30, T39 and T41 end states are the next place to look).
+
+- **O67 Exact, at λ = 1 (CQG): the smallest allotrope, built as a finite graph, is held by no energy barrier.**
+  (2026-09-25; an assistant agent read [T25] Sec. VI.3 and Figs. 7 and 9 and [T24] Sec. V from the arXiv text and built
+  the objects; `scripts/build_planted_allotrope.py`, tested in `tests/test_planted_allotrope.py`; design note
+  `docs/design/planted_allotrope.md`, checked here. Status of the two readings it rests on: *Ours*.) (a) **What the
+  allotrope is**, from the figure: a background in which every point touches three squares and one hexagon (Fig. 7), and
+  a region, one hexagon, whose six corners touch two squares (Fig. 9, "only the smallest example"). A torus has only
+  square faces, so the background cannot sit on one (every point of a flat torus touches four squares); T36's torus
+  could not have held it. (b) **Built:** a finite Fig. 7 background of 240 points, every point touching exactly three
+  squares (H = 960, X = 0), from two permutations with the tiling's rules; the allotrope planted by cutting one hexagon
+  and joining opposite corners (the "fold": 18 points with Fig. 9's pattern, three smallest allotropes fused, N = 234,
+  H = 1008, 72 above the three-square line, each planted point costing exactly 4); a "handle" version (36 low points,
+  +144); and the same surgery on T36's 14 × 14 torus (24 points of the three-square type inside four-square space). A
+  lone smallest allotrope is allowed by counting only when N leaves 18 on division by 24; none was found. (c) **Walls,
+  exact, at λ = 1:** no switch out of the fold is downhill, but one zero-cost switch opens a downhill one (−16), and at
+  zero temperature its 18 low points are gone after 8 switches; the handle has downhill switches outright (−12); the
+  background is held the same thin way (zero-cost switches that open −16 ones). The same at 720 points. **So at λ = 1
+  energy alone does not hold his allotrope; if it lasts, entropy holds it**, which matches his words, a barrier in free
+  energy, and only a run at finite coupling can measure it. (d) **One point for the model's author:** the text of [T25]
+  Sec. VI.3 says the domain has a *higher* number of squares per vertex, while the Fig. 9 caption and [T24] Sec. V say
+  fewer (0 < s_i < s̄); the figure shows fewer. A lifetime test at finite coupling is designed in the note (not yet
+  pre-registered).
+
+- **O68 Exact, the direction tie of VISION Update 30: the first form was wrong; a "follow" form gives the owner's triad in
+  six links.** (2026-09-25, 15:59 ET; `scripts/exact_walls_tie_d.py` and `scripts/exact_walls_tie_follow_d.py`, brute force
+  over every switch, tested; `docs/design/direction_tie_first_look.md`; exploratory: the knob of Update 30, no run.) (a)
+  **The form fixed in Update 30, κ d(D − d), rewards damage** (the assistant's error): at a broken point the count of open
+  pairs d exceeds D (up to 10 here), so d(D − d) is negative and the term lowers the energy of broken points; flat space
+  itself then breaks at κ = 8/11 with six links and 8/15 with eight. Even with broken points counted as zero, a symmetric
+  penalty on partly open points makes the middle of the ladder the hardest step (from d = 1 to 2 is uphill), so no cascade
+  can run from the curled side; with eight links the three-curled rung gets more stuck as κ grows. "Three open, one
+  curled" is never favored by a symmetric tie. (b) **The owner's triad picture is asymmetric**: the push opens one
+  direction, and once one is open the others are driven to follow. The simplest form with that shape, written before its
+  calculation: f(d) = κ(D − d) for 1 ≤ d ≤ D, f(0) = 0, and 0 for a broken point. **Six links, exact:** the fully curled
+  gas's wall rises as −4 + 24κ at λ = 1.25 (8 + 24κ at 1.10), so X is stuck and harder to start; the two-curled torus's
+  wall falls to zero near κ = 0.75 at λ = 1.25 (1.3 at 1.10) and the one-curled torus's at κ = 2.25 (2.7), after which both
+  partly open states have a downhill move and cannot hold; flat space's wall stays 64 at every κ (the tie never touches a
+  flat point); and the burp's total release is unchanged, since the tie is zero at both ends. **So for κ ≳ 2.3 at
+  λ = 1.25 (≳ 2.7 at 1.10) the energy has the triad's shape: X stuck, a push of about 50 to open the first direction, and
+  no resting place until flat.** Whether a run then cascades to flat space rather than to damage is the dynamical test,
+  not yet run. Eight links are being computed. What the follow form does not do: select three (with four directions it
+  drives all four open); that is the second constant of Update 30.
+  **Addendum, 17:08 ET: eight links, exact** (`scripts/exact_walls_tie_follow_d.py` on the gas of four 8-cubes,
+  4 × 4 × 4 × 12, 4 × 4 × 8 × 8 and 4 × 8 × 8 × 8; κ = 0 reproduces O50's walls). The same shape as six links. At
+  λ = 1.25 the fully curled gas's first move gains +60κ from the tie, so X grows more stuck with κ; the three-, two- and
+  one-curled tori lose their walls at κ ≈ 0.6, 1.4 and 3.3 (walls 20, 40, 80 at κ = 0; −14 at κ = 1, −16 at κ = 2,
+  −16 at κ = 4 respectively), so above κ ≈ 3.3 no partly open state holds; at λ = 1.10 the one-curled torus loses its
+  wall between κ = 2 and 4. Flat four-direction space was not in this run; since the tie counts nothing at a flat point
+  and κ at each point a flat-space move leaves with one direction curled, its wall (128) cannot fall with κ; confirmed
+  the same afternoon on flat 6 × 6 × 6 × 6 at λ = 1.10 and 1.25: 128 at κ = 0, 1, 2, 4 and 8, the cheapest move
+  touching no tie at all. So with eight links too the follow form leaves flat space exactly as stable as before.
+
+- **O69 T34: concentrated energy does not fold six-link flat space; it excites it (MELTS).** (2026-09-25, 17:08 ET;
+  PREREGISTRATION T34, reading; `results/t34_*_n216.csv`, `results/t34_*_n512.csv`.) Flat 6 × 6 × 6 and 8 × 8 × 8 at
+  λ = 1.25 given 64 to 1,060 units, packed into one vertex's store or spread through a bath of 2N: all 20 cells MELTED by
+  majority, nothing folded anywhere. With O66 (every N = 216 end state quenches to perfect flat space), the plain reading:
+  with named points, concentrated energy excites six-link flat space and the excitation heals when cooled; it never
+  starts a fold. This is the fifth test of the owner's black-hole mechanism to find no fold (O20, T21, T26, T27 in two
+  directions; T34 in three), all with named points or small sizes; the counting half is T42. *Every six-link result
+  carries VISION Update 24's caveat.*
+
+- **O70 Exact, exploratory: a direction tie shaped to give today's energy budget keeps X stuck and flat space stable, but
+  stops the cascade after the first direction.** (2026-09-25, 17:57 ET; `scripts/exact_walls_tie_shape_d.py`; six links,
+  λ = 1.25, where each direction's curling costs a = 4(λ − 1) = 1 per point.) With a tie of any shape, f(d) per point with
+  d open directions, the three openings release a − f(1), a + f(1) − f(2) and a + f(2) per point, the total 3a unchanged.
+  Asking them to stand as today's ordinary : dark matter : dark energy, 5 : 27 : 68 (the owner's triad, VISION Update 30),
+  fixes f(1) = 0.85 and f(2) = 1.04: **a fit of two constants to two ratios, not a prediction**, and it uses today's
+  dark-energy share, which changes with time. Exact walls with that shape: the fully curled gas 6.2 (X stuck, where without
+  the tie it has a downhill move), the state with one direction open 14.9, with two open 19.4, flat space 64. **So the fit
+  keeps X stuck and flat space stable, but the partly open states stay stuck too: after the first (red) direction opens,
+  the second and third each need their own push.** The reason is the shape itself: a large last release needs the strain
+  to be greatest just before the last opening (f(2) > f(1)), while the others following on their own needs the strain to
+  fall as directions open (f(1) > f(2), the follow form, O68). In this energy the two wishes pull against each other. *Ours,
+  unverified:* one reading consistent with the owner's picture is a reservoir that supplies each direction its own push
+  (her "remainder returned to the black hole, ready to start another burp"); another is a different, non-local form of
+  the tie. Neither is tested.
+  **Addendum, 17:59 ET: the same budget-fitted shape across λ** (f scaled with a = 4(λ − 1)). The pushes, X's wall then
+  the one-open and two-open states' walls: λ = 1.10: 12.1, 25.2, 36.5; λ = 1.25: 6.2, 14.9, 19.4; λ = 1.40: 0.32, 4.2,
+  2.2 (X barely stuck, every push small, the last smaller than the second); λ = 1.50: all negative (nothing stuck).
+  So with this simplest tie the first push is never the largest; the owner's picture (red's push the largest, then less
+  and less, each of its own type of energy; VISION Update 30) is not what it gives. Typed energy is the ingredient her
+  picture adds, and is undecided.
 
 ## Provenance
 

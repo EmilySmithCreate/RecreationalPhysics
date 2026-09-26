@@ -1,0 +1,6 @@
+# PREREGISTRATION T34: does concentrated energy fold flat six-link space (piece 8).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_sealed_curled_d t34_packed_n216
+run_sealed_curled_d t34_packed_n512
+run_sealed_curled_d t34_spread_n216
+run_sealed_curled_d t34_spread_n512

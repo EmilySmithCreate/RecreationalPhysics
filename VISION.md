@@ -268,6 +268,319 @@ Update 22 (2026-09-24): **DECISION (the author's): build the three-dimensional v
 - **Reproduce before extending (rule 2).** Gate C: match the published D = 3 curve of [KTB19] before any D = 3 result is interpreted. The energy's form at D = 3, the saturation point of the local term and the hard-core rule are to be read from the text, not assumed (to verify). Exhaustive listing, which validated the 2D kernel, will not reach the smallest valid D = 3 graphs, so the published gate carries more weight here.
 - **What follows.** Exact results first, with no run: the energies of the 3D ladder (none, one, two or three directions curled) and the cheapest way out of each, which gives the 3D form of Eq. (2) and says whether the energy released by opening one direction can pay the wall of the next. Then paper 1's measurements in three directions, each pre-registered with the author's prediction: whether a fully curled state opens all at once, how the energy splits between the first direction and the other two, and whether the activation energy stays fixed with size. Then curved space moving matter.
 - **Paper 1 stands as written.** The 3D work is a companion paper with new results, not a new version of the 2D one.
+- **Naming (added the same day, the model's author's condition for endorsing paper 1).** Only λ = 1 is CQG. Gate C, at λ = 1,
+  is CQG. The window 1 < λ < 1.2 where the fully curled 6-cube is stuck for now (ASSUMPTIONS O41) is off-CQG: our
+  family around his model, and never written up as combinatorial quantum gravity.
+
+Update 23 (2026-09-24, evening): **the rule, described: curvature plus a curling cost** (the author's answers, put in order). Why this page changes: the naming condition of Update 22 left the hypothesis's rule described only by what it is not ("not exactly curvature"). The author answered four questions about it, and her answers fix what λ > 1 means in this hypothesis.
+
+- **The rule, exactly** (*ours; arithmetic*). H = [16(N − S) + 4X] + 4(λ − 1)X. The bracket is the model's published energy, the total curvature, unchanged. The second term charges 4(λ − 1) for every link that closes a third small loop, which is what a link does where the arrangement is curled tight. So the hypothesis keeps curvature whole and adds one ingredient: **a curling cost**. At λ = 1 curling is free and nothing is released; above 1 the cost is what the burp releases.
+- **Where it comes from (the author's).** It is a fact of the arrangement of X: a line in F, the one quantity that runs through both phases (claim 3), and energy is what pays it. It could well come from the three directions being intertwined (Update 22), which a level down is simply part of X.
+- **Is it a constant (the author's).** Yes, in the strange loop we exist in and can observe. Other independent loops may exist with other values, unobservable from ours; within one loop there is no discernible difference between its turns. A different λ would make a lot of things different. Once our loop's rules are worked out in 3D, other possible loops can be explored; the author expects them to hold a smaller share per turn than ours. **Her measure: count per turn.** Every loop turns forever, so all have the same kind of infinity (countably many turns); what differs is what one turn produces, and a loop whose turn makes a trillion times more cold, matter-rich, observer-friendly time is a trillion times bigger by that measure. The turn is the natural unit for a loop, which a smoothly expanding universe lacks. *Ours, unverified (general knowledge, not read by us):* per-turn counting is a well-defined choice but still a choice; counting per unit time or per volume can rank loops differently, and in eternal inflation such choices famously disagree (the measure problem). The hypothesis has to defend per turn as the right count, and a loop's turn is the strongest case for it that we know of.
+- **Does it exist in spacetime (the author's).** Yes: it is what a black hole has to pay to re-curl space. There is not enough energy in that balance to uncurl further degrees of freedom into new dimensions; given the energy, a black hole uses it to re-curl space, not to open something else. *Ours, unverified, and the most promising consequence:* where space is smooth nothing is curled tight, so X = 0 and the curling cost vanishes term by term. There the rule is curvature alone, which is how claim 2 could recover Einstein's gravity while the extra term acts only on tight curls: the scraps, and black holes, where general relativity is expected to fail anyway.
+- **Why its value (the author's).** It is simply whatever value reality has. The loop we find ourselves in is selected: of the values that give a strange loop, ours is the one that delivers the biggest loop with the longest cold period for matter, even if other values are mathematically possible. *Ours:* this is the claim series paper 3 (the fertile window) is built to map. The model already shows the trade-off it would select within: a bigger λ gives a bigger lump but a less stable X and a harder birth (T18, PROPORTIONAL).
+- **What changes on the pages.** The rule is described as "curvature plus a curling cost, a constant of our loop", never only as "not curvature". The naming condition of Update 22 stands: at λ ≠ 1 this is not Trugenberger's model.
+
+Update 24 (2026-09-24, night; recorded 2026-09-25): **DECISION (the author's): proceed with the six-link (three-dimensional)
+work now and return to the reproduction of the published 3D curve later.** Why this page changes: rule 2 (reproduce before
+extending) would hold the six-link track until [T22] Fig. 3 is matched, and Gate C has failed (ASSUMPTIONS O43). The author
+set the rule aside for this track, on these grounds and with this caveat.
+
+- **Grounds.** The six-link kernel is validated on its own terms: at four links it makes the 2D chain draw for draw, its
+  energy and moves are checked by brute force against networkx, and the 3D ladder is exact and additive (O41, O49). What
+  the open gate leaves unknown is whether the published 3D figure is this model at all, not whether the kernel is
+  right. And the hypothesis's own runs are at λ > 1, in our family around his model, where nothing is claimed about
+  combinatorial quantum gravity (Update 22's naming condition).
+- **What is still owed.** Gate C′ (PREREGISTRATION; O46) runs in parallel: the surviving guess is that the published
+  weight goes as 1/g², and a 2D width test says whether the same code's 2D figure is compressed too. If every reading
+  fails, the question goes to the model's author. **Every six-link result carries the caveat that the reproduction gate is
+  open** until it is passed, in the pre-registration, the tracker and any paper.
+- **The author's confirmation, the same night:** the prediction inferred for T26 (a local spark re-curls the space, perhaps
+  after melting briefly) is hers. T25's and T27's inferred predictions stay marked inferred.
+- **What runs first** (PREREGISTRATION T30, T32; both with her predictions): whether one push opens both curled directions of
+  a 4 × 4 × L torus and how much room that needs, a gas of 6-cubes as the literal form of "the three directions curl
+  together", and whether the activation is fixed with size. The gravity test (T28, series paper 5) is designed and waits
+  on a coupling window for a rearranging 3D sheet, being scanned exploratorily.
+
+Update 25 (2026-09-25, early morning): **DECISION (the author's): X may have four curled directions, time among them,
+and the eight-link (D = 4) model is to be simulated too.** Her words, put in order. The change could be four-dimensional
+if time is also uncurled by it. Two ways that could go: time as a **singleton** direction beside the three space
+directions that are tied together (Update 22), so that one direction opens on its own and three open together; or
+**all four tied together**, which the relativity of time suggests, since something moving fast through space has its
+time run more slowly, so time and space are not separate things. She asked for simulations of both.
+
+- **What the model can and cannot say** (*ours*). The graph has no time: a fourth direction of a torus is another
+  direction like the others, and nothing in the energy distinguishes it. What the model can test is the **pattern** in
+  which curled directions open: all four together; one alone and then three together; or one at a time. Those three
+  patterns are distinct, they are what her two variants and our expectation predict, and a sealed run reads them from the
+  local-dimension census (d = the number of open directions at a point, 0 to 4). Which of the four is "time" the model
+  cannot say, and the pages must not.
+- **Sizes.** A decompactification needs a flat 4-torus at the same N as the curled one; the smallest that works is
+  N = 2304 (4 × 4 × 4 × 36 opening toward 6 × 6 × 8 × 8, and a gas of nine 8-cubes as the fully curled X). At eight links
+  that is about a tenth of a second a sweep, so these runs are the heaviest in the project and go to the rented machines.
+- **Rule 2 and the caveat of Update 24 apply**: there is no published eight-link curve to reproduce, the kernel is the same
+  code at eight links (validated at four and six), and every eight-link result says so.
+- **The naming condition stands**: at λ ≠ 1 this is our family around the model, never combinatorial quantum gravity.
+- **The author's reaction to the six-link result, 25 September, morning** (T30, FIRST ONLY: given its push, the two-curled
+  torus opens one direction and stops; ASSUMPTIONS O54; *corrected the same day: it opened that direction fully in a
+  third of the runs, and read as registered the tori's verdict is NEVER OPENS, O64*): "first only actually makes a lot of sense to me." Recorded as her
+  reaction, not as a changed prediction: T33's pre-registered prediction stands as written above. *Ours:* it fits the
+  singleton half of this update, one direction opening on its own, which T33 scores as SINGLETON PLUS THREE from the
+  gas; whether the three that remain open together is what T33 measures.
+
+Update 26 (2026-09-25, morning): **the author's bar, the parameter map, and the strange-loop measure.** Her words, put in
+order, on reading T24 (the window inconclusive by the letter for a third time, on a rare very long wait in four cells).
+
+- **Her bar.** "I don't think this arrangement of reality requires the same thing to happen at every size in every
+  instance. It has to happen at one size and lead to this trillion new strange loops." *Ours:* the rule "sharp at every
+  λ, at every size, in every cell" (T8, T23, T24) and S2′'s "at every size tried" were written by the assistant as the bar
+  for a mechanism claim, and she accepted them; her theory's own claim is existence and fertility: at some size, the change
+  goes and produces a stable phase, and a memoryless population with rare stragglers satisfies it. The verdicts on the
+  record stand as scored; a fourth run, if she wants one, would be pre-registered with a bar written her way (for example:
+  at each λ, a majority of instances at at least one size go sharply to the flat state, with stragglers reported and not
+  counted against). **Proposed, not enacted.** The sharpness map itself (which λ, which N, how sharp) stays the measurement.
+- **The parameter map.** "We will work towards figuring out what sort of parameters lead to our reality: how many
+  dimensions match what level of λ, how interconnected the group of three or four dimensions is ideally, how the snap
+  works in relation to the degree-of-freedom relationships." *Ours:* this is the fertile-window question (series paper 3)
+  extended over the number of directions; the entries that exist exactly are tabulated in `docs/papers/series_plan.md`
+  ("The (D, λ) map"), and the interconnection is what T30 (in three directions; corrected to NEVER OPENS for the tori, O64) and T33 (the pattern in four)
+  measure.
+- **The strange-loop measure.** "We are most likely to observe, and be part of, a strange loop with a particular
+  arrangement that has one of the largest possible infinities: one of the largest possible amounts of time, matter and
+  energy in a stable phase. Our stable phase really never ends, because space expands and time continues, so it is a
+  really populous spacetime; it would not end until the last star is eaten by the last black hole. And the chance of our
+  being at that point in time is a smaller version of infinity, because there are fewer options where an observer could
+  have evolved to the point of observation." She asked that this be held in working memory, not only on the page.
+  *Ours; general knowledge, none of it read by us, all to verify before it is cited:* the first half is a
+  self-sampling argument (an observer is most likely in the arrangement with the most observer-moments; Carter, Bostrom),
+  the second is the argument for why an observer finds itself in the stellar era rather than at the end (Dicke, 1961), and
+  the comparison of infinities is the measure problem of eternal inflation in her terms, where her unit is the turn of the
+  loop (Update 23). The model has no observers and cannot count them; its counterpart is the (D, λ) map of how much
+  stable phase, matter and room each setting yields per turn.
+
+Update 27 (2026-09-25, midday): **the black hole run backwards: the author's folding mechanism, and what is exact about
+it.** Her words, put in order. The area to understand now is the relationship between the activation energy, the three
+space directions and time. Inside a black hole gravity has won and reality is in a symmetric state. The mass is so great
+that it supplies not only the energy needed to be space but the energy to collapse it, and the collapse probably begins
+on one direction, given the six-link result that the directions open one at a time. Stratification may be the compacting
+of one direction, or two; how fast the thing is moving may collapse time as well; which comes first inside a black hole
+is open. So there could be a role for one direction at a time: if the energy is applied to one direction and it is
+enough that the direction must curl, then once it has curled we are closer to the symmetric state, which catalyzes the
+gravitational drive, so that the three or four grouped directions collapse together, a fold accelerated by the change
+itself, even if the activation only hit one direction, because of how space is shaped.
+
+- **What is exact about the first half** (*ours; ASSUMPTIONS O55*). The nucleation cost of each successive fold, beyond
+  the energy the fold itself costs, is the wall out of the more-curled state (the barrier is the same from either side):
+  with six links 36, 16 and none for the first, second and third fold at λ = 1.25; with eight links 80, 40, 20 and 0. Each
+  fold halves the excess of the one before (*corrected the same day: exactly so only with eight links at λ = 1.25; at
+  every λ > 1 each fold lowers the next one's excess, by less than half with six links; O55, correction*). That is her
+  catalysis, in the walls. The energy each fold costs, 4(λ − 1)
+  per point per direction, is what the walls do not pay and her picture says the mass does.
+- **What is exact about the second half.** With interchangeable points the symmetric state weighs more, and at 512
+  points the weights are: flat 8 × 8 × 8, 1.2 × 10⁴ symmetries; one curled, 2.0 × 10³; two curled, 1.2 × 10⁴; the fully
+  curled gas of eight 6-cubes, 3.2 × 10³⁹. So the counting gives no gradual drive through the partial folds, and a large
+  one only at full curling: g ln A rises by 122 units at g = 1.5 from flat to fully curled, against a curling cost of
+  12(λ − 1) × 512. The two balance at λ ≈ 1.02; below it the fully curled state has the lower free energy and space
+  folds on its own, above it space holds. In her terms: **the walls say one direction at a time, the counting says all
+  together, and λ decides which wins.** The partial rungs are never favored by counting.
+- **What runs next** (PREREGISTRATION T34, with her prediction from this update): flat six-link space given concentrated
+  energy, packed into one place and spread through a bath, at λ = 1.25: does it fold one direction and then the rest,
+  or melt as in two dimensions? Named points, so the counting drive above is not in the run; an interchangeable run
+  near λ = 1.02 is the designed follow-up, where the counting could pay.
+- **Time.** The model cannot say which direction is time, so "does it collapse time first" is not a question it can be
+  asked; the pattern in which directions fold is.
+
+Update 28 (2026-09-25, afternoon): **S5 moves; three decisions of the author's; and what the four-, six- and eight-link
+runs are for.** Her words, put in order.
+
+- **S5.** Paper 1 has been submitted to arXiv and should appear within days. The model's author endorsed it. Her
+  expectation is that he will read it when he can, within a couple of weeks, and respond. Until then the pages say: the
+  door is open, the paper is submitted with his endorsement, and no physicist has yet read the record. Nothing is sent to
+  prompt him.
+- **DECISION: other models.** "We cannot just keep using Trugenberger's models. We need to start using other models, get
+  more deeply into loop and exchange rules." Her framing of the work so far: "these experiments are helping us understand
+  the mechanics of folding and unfolding, so that we build that model in a way that is likely to be successful, based on
+  what we know about the relationships between four, six and eight links at various λ." *Ours:* the (D, λ) map
+  (Update 26; `docs/papers/series_plan.md`) is therefore the specification the new model has to meet or beat; a design
+  brief for loop and exchange rules is `docs/design/loop_exchange_brief.md`, with candidate rules for her to choose
+  among under S1. Nothing is built until she chooses.
+- **DECISION: gravity is the target, and one λ is enough.** "I really think we can get our model to output the measures
+  of gravity, at least directionally; and if we get a little closer, we can invest more money and compute. It does not
+  have to work every way; it has to show at one measure of λ." And the prerequisite she names: "we have to define how
+  many dimensions and degrees of freedom we are working with, so that we can do those other calculations and return
+  values that are close to the measured results." *Ours:* the definitions, the observable (the average pull between two
+  relics against their separation: its sign, then its shape, then its universality), the targets it is compared with, the
+  protocol and the compute estimate are `docs/design/gravity_brief.md`. What is exact today (O56): at fixed wiring the
+  six-link space behaves as the four-link did, no pull at a distance from energy or counting; and the stable relic the
+  pull would act on has not been shown to exist in six links, which is the first thing the brief asks for.
+
+Update 29 (2026-09-25, late afternoon): **DECISION (the author's, "Proceed"): the exchange phase on loops is the first
+rule of the new model to be tested, and the search for a stable six-link relic (gravity, step 1) goes ahead.** Both were
+the recommendation of `docs/design/loop_exchange_brief.md` and `docs/design/gravity_brief.md`; her one word adopts them.
+Under S1 this is the dated decision for the first ingredient beyond the published family: an exchange sign on the
+renamings of an arrangement. Nothing else in the energy or the moves changes.
+
+- **The rule, in its first (fermionic) form** (*ours; the author's words are "loop and exchange rules"*). An arrangement's
+  weight is the signed sum over its renamings, Σ sgn(σ) over the side-preserving automorphisms σ, in place of their
+  count. The sign is a homomorphism, so the sum is |Aut| when every renaming is an even permutation and exactly zero when
+  any is odd. It is therefore a selection rule: **an arrangement with an odd renaming has zero weight**, the way two
+  fermions cannot share a state.
+- **First exact test, on saved arrangements** (`scripts/exact_exchange_sign.py`; ASSUMPTIONS O57). Every basic arrangement
+  is allowed: the flat tori (8 × 8, 16 × 10), the curled 16 × 4 torus and the 4-cube have only even renamings. Among the
+  burp's saved end states (T7 decays at 64 to 192 points, 7 read) none is forbidden. Among the 64-point spark states of
+  T26, 2 of 20 are forbidden; among the 144-point ones, 8 of 120. The forbidden ones carry a renaming of order two that
+  is an odd permutation. So the rule does not touch space, the curled state, the knot or the burp's product, and it
+  removes a few per cent of damaged arrangements. What it has not yet been asked: whether it changes any verdict when
+  it replaces the count in the interchangeable chain (the exact averages at N = 16 and 18 are the place to check, as
+  they were for the count), and whether the anyonic form (a phase per swap, in two dimensions) does more.
+- **Gravity, step 1**: the search over one- and two-switch constructions for a curled dip in flat six-link space
+  (`scripts/exact_relic_search_d.py`), recorded as O58 when it finishes.
+
+Update 30 (2026-09-25, 15:33 ET): **DECISION (the author's): the model gets a term for the interconnectedness of the
+large directions.** Why this page changes: the six- and eight-link results say the energy treats every direction as
+independent (each curled direction costs the same, each has its own wall, and nothing selects three; ASSUMPTIONS O49,
+O50, O54, O62, O64), and a reality target of the owner's (`docs/design/reality_targets.md`, target 1) is three large space
+directions and time. Her words, put in order: "there is some relationship with our three or four macro dimensions, that
+they have to go together, so there should definitely be a term related to it. Not all terms are interchangeable; not all
+relationships are the same. We know this about reality; we know it about our dimensional experience. I definitely think
+there is a factor, or a couple of constants, related to the interconnectedness of some number of our degrees of freedom."
+
+- **What is decided:** a new ingredient in the energy, with one or two constants, that makes the directions at a point
+  share a fate, so that a partly opened state costs more than either all curled or all open. Under S1 this is a new knob:
+  its form is fixed below before any run, every value run is published, and the model with it is our family, never CQG.
+- **The first form, ours, fixed now:** H_tie = κ Σ_v d(v)(D − d(v)), with d(v) the number of open directions at point v
+  (`graphity.dimension.local_dimension_d`) and D the number of directions. It is zero for a point fully curled or fully
+  open and largest for a point half open; κ ≥ 0 is its one constant (the tie's strength). *Ours, unverified:* this makes
+  directions prefer to open together but does not by itself select three; a second constant, the size k of the tied group
+  (so that, with four directions, three open and one curled could be favored), is the natural second step and will be
+  written down before it is used. The alternative the assistant described, a "wrapped" tie in which loops wound round the
+  curled directions hold them shut until they meet and cancel (the published idea that picks three), is kept as the
+  candidate for explaining "three" from the loops themselves.
+- **First tests, exact, before any run:** the walls and windows of the six- and eight-link ladders with the term, as
+  functions of κ: does a κ exist at which the second wall falls below the first (a cascade) while flat space's own wall
+  stays above the rungs? Then T30's and T33's protocols rerun with that κ, pre-registered with her claim about reality.
+- **Amendment, 15:59 ET, before any run: the first form above is withdrawn** (the assistant's error, found by the exact
+  test the update names; ASSUMPTIONS O68): κ d(D − d) rewards broken points, and a symmetric penalty cannot give a
+  cascade. **The working form is the "follow" form**, f(d) = κ(D − d) for a point with 1 ≤ d ≤ D open directions, 0 for a
+  fully curled or a broken point: once one direction at a point has opened, each still curled costs κ. It is the shape of
+  the author's triad below (the push opens one; the others are driven to follow), and it was written before its exact
+  test. Its constant κ is the tie's strength; the second constant, the size of the tied group, is still to be written.
+- **The author's idea, the same afternoon (15:40 ET): the three directions as a triad, and the dark-to-ordinary ratio.**
+  Her words, put in order: there is about five times as much dark matter as ordinary matter; two times three is six, so
+  ordinary matter would be one part in six. Some aspect of the uncurling and the interconnectedness of the three
+  directions may set it: each direction is a little different, so they form a triad, like red, green and blue, that goes
+  together. The activation can come in and hit one of them, red; when red uncurls, the other two follow, and all three
+  uncurling makes the full burp. Some of what comes out is dark matter, which interacts differently with our kind of
+  energy and our kind of matter. *Ours, unverified:* this is the tie of this update with distinguishable directions (a
+  second kind of constant: the directions not all alike), and it makes a quantitative claim, that the burp's energy splits
+  between an ordinary part and a dark part in a ratio set by the triad. The measured ratio is about 5.4 (Planck 2018,
+  general knowledge, to verify), so exactly 5 (one part in six) is close but not it; a model should give the split from
+  its dynamics, not from a count chosen to reach six, and the test is to measure the split in the tied model.
+- **The author's answer, 17:11 ET: one direction for each part of the energy budget.** Her words, put in order: ordinary
+  matter and energy come from the red direction, the one the push hits, which makes sense because ordinary energy is the
+  kind that can be the activation energy for the burp. Dark energy takes the largest share, about two thirds, and dark
+  matter is about five times ordinary matter, because each of the three types comes from one of the three directions,
+  which are like the three colors of quarks; that explains the relationship between the amounts of each type: each is
+  generated by the uncurling of its own direction. *Ours, unverified:* the measured budget today is about 5 % ordinary
+  matter, 27 % dark matter and 68 % dark energy (Planck 2018, general knowledge, to verify). Two cautions go with the
+  claim. First, the dark-energy share changes with time (matter thins as space grows and dark energy does not), so only
+  the matter ratio, about 5.4, is fixed from birth; dark energy's share would have to come from a direction whose energy
+  stays in space itself rather than in objects. Second, equal directions give equal thirds, so the triad must be
+  unequal; if each direction carries its own curling cost, three costs chosen to match three numbers would be a fit, not
+  a prediction. It becomes a prediction if the model's own requirements (X stuck, the cascade running, a clean birth)
+  force the three costs into a narrow range that turns out to contain the measured ratios.
+- **The author's answer, 17:17 ET: 5 % may be all three directions can take at once.** Her words, put in order: 5 %
+  could be all our three dimensions can handle at a time, so even though red could give more, it can only emit that 5 %;
+  that leaves the black hole with plenty for many more burps of the red kind. *Ours, unverified:* this is piece 4 (room
+  for the burp) seen from the other side. The model already measures a capacity: sealed, a new space completes cleanly
+  only if its surroundings can hold the energy released, and melts otherwise (T9, T18). Her claim turns that into a number
+  the model can compute: the largest share of a burp that flat three-direction space can take in without melting, set
+  against the burp's own release per point. If that share came out near 5 % without being tuned, it would be the first
+  measured number in the programme to land on an observed one. It also changes the ordering problem raised with the
+  triad: red need not release the least; the new space may only be able to accept a small part of what red offers.
+- **The author's clarification, 17:50 ET, which corrects the assistant's reading of her previous answer and revises Update
+  16.** Her words, put in order: it is not 5 % of the burp; the amount the burp's red direction can deliver is 5 % of the
+  measured energy in the universe. Dark matter and dark energy are the energy released by the other two space directions
+  after our red one. What remains is returned to the black hole, where it can start another burp or wait. And that stops
+  dark matter from being the allotrope: the allotrope has to be something else. **What this changes:** (a) the reading
+  recorded at 17:17 ET (a new space that can absorb only 5 % of a burp) is the assistant's and is withdrawn; her claim is
+  that the three directions' releases stand in the proportions of today's budget, ordinary : dark matter : dark energy
+  about 5 : 27 : 68. (b) **Update 16's identification of dark matter with the leftover of the change is replaced**: dark
+  matter is a direction's release, not a scrap, and not [T24]'s allotrope; what the scraps (paper 2) and the allotropes
+  (piece 12) are becomes open again. *Ours, unverified:* in the model a direction's release is set by its curling cost,
+  4(λ − 1) per point, so the claim needs three unequal curling costs in the ratio of about 1 : 5.4 : 14, with red, the
+  smallest, opening first; in the present energy the first direction to open is the one with the largest cost, so either
+  the triad's own terms reverse that ordering or the push reaches red by a route other than cheapness. Choosing three costs
+  to match three numbers would be a fit; the claim becomes a prediction only if the model's requirements pin the costs.
+- **The author's idea, 17:53 ET: one third and two thirds, and doubling.** Her words: there is something significant
+  about the one third and the two thirds, in terms of the scale of subsequent energy releases doubling. *Ours, unverified:*
+  today's budget does split near one third matter (ordinary and dark together, about 31.5 %) and two thirds dark energy
+  (about 68.5 %; Planck 2018, general knowledge, to verify), so dark energy is about twice all matter. Three cautions: that
+  ratio holds only now (matter thins as space grows, dark energy does not; earlier, matter dominated), which is the known
+  "why now" coincidence puzzle, and her observer-timing argument of Update 26 is the known kind of answer to it; a plain
+  doubling across the three directions (1 : 2 : 4) gives 14 : 29 : 57 %, not 5 : 27 : 68, so if doubling is the pattern it
+  is between matter and dark energy, with ordinary against dark matter a separate factor of about 5.4; and in the model the
+  doubling that exists is in the walls, not the releases (eight links at λ = 1.25: 20, 40, 80 from rung to rung; O50),
+  while each direction releases the same 4(λ − 1) per point.
+- **The author's answer, 17:59 ET: typed energy.** Her words, put in order: the black hole could generate each of the
+  types of energy; the first direction goes, and the other two need less and less, but each of the same type of energy
+  it is made of. *Ours, unverified:* in the model this is a new ingredient, energy that carries a type: a store that can
+  pay only the moves that open its own direction, so ordinary energy opens red, dark-matter-type energy opens the second
+  direction, dark-energy-type the third, and what one direction releases cannot pay another's wall. Nothing in the model
+  has typed energy today (every store pays every move), so adopting it is a decision under S1, to be written before any
+  run. The exact scan below (O70, addendum) says what the simplest tie gives for the pushes; typed stores are the
+  ingredient that would let each push be supplied separately.
+
+Update 31 (2026-09-25, 18:01 ET): **DECISION (the author's): typed energy.** Her words: "The black hole gives each the push
+in the currency of energy that that particular curl can release." Put in order with her answers of the same hour (Update
+30): the black hole generates each type of energy; each curled direction is pushed open by energy of its own type, the
+type its opening releases; ordinary energy opens red, the direction whose release is ordinary matter and energy; the other
+two directions are opened by their own types, and need less and less. Why this page changes: the exact scans of O70 show
+that a tie alone cannot give both today's budget and a cascade in which the first push is the largest; her picture
+supplies the missing ingredient, energy that carries a type. *Its typed stores are withdrawn by the author in Update 32: the order of
+opening, not a type of energy, sets the kind of release.*
+
+- **What is decided:** energy in the model gets a type, one per curled direction; a store of one type pays only the moves
+  that open or close its own direction; the release of a direction's opening goes to its own type. Under S1 this is a new
+  knob and a new kind of state; its exact definition (in particular, how a move is assigned to a direction once the wiring
+  has rearranged) is fixed in a design brief before any run, and every setting run is published.
+- **What it is for:** reality targets 1, 3 and 5 (`docs/design/reality_targets.md`): the three directions as a triad, the
+  budget ordinary : dark matter : dark energy, and the cycle in which the black hole keeps the remainder for more burps.
+- *Ours, unverified:* typed energy is the model's version of conserved charges that do not mix, which physics has (baryon
+  number, lepton number); in her picture the type is the direction a unit of energy belongs to.
+
+Update 32 (2026-09-25, 18:46 ET): **The author's revision of Update 31: one kind of energy, and the order of opening
+defines the kind of release.** Her words, put in order: once it is space, the three directions are interchangeable, as
+they were before, in X; so it is random which of the three becomes red. There are not really three types of energy: all
+three directions need the same kind of energy to unfold. The three directions are defined by the order in which they
+unfold, and the order defines the type of matter or energy: the first opening releases ordinary matter and energy, the
+second dark matter, the third dark energy. Why this page changes: Update 31 gave energy a type per direction; the
+assistant then pointed out that in the model the directions cannot be told apart in X, and are interchangeable again in
+open space, and asked whether the color rides on the energy. Her answer: it rides on the order.
+
+- **Withdrawn:** Update 31's typed stores (a store of one type paying only for its own direction). What stands from
+  Update 31 is its aim: the black hole supplies each opening's push, the later pushes are smaller, and the targets are
+  1, 3 and 5 of `docs/design/reality_targets.md`.
+- **Decided:** one kind of energy pays every push; which direction opens first is chance; what an opening releases is
+  set by its place in the order (first, second, third). This adds no new state to the model: an opening's place in the
+  order is the rung it starts from (how many directions are already open), which the model already reads
+  (`graphity.dimension.local_dimension_d`).
+- *Ours, exact (group theory; to be checked in code in the design brief):* the fully curled six-link state, a
+  4 × 4 × 4 torus, is the 6-cube, whose 23,040 renamings mix all six of its axes, so X does not single out three
+  directions at all. In a state with one direction open, the curled part is a 4-cube, so the two still curled are not
+  separate either. A flat cubic torus has the renamings that permute its three directions. So the directions differ only
+  in the order in which they open.
+- *Ours, unverified:* in standard language this is spontaneous symmetry breaking (general knowledge, to verify): the
+  rules treat the three directions alike, and the history picks an order. A direction tie that depends only on how many
+  directions are open at a point (Update 30's follow form; O68, O70) already makes each opening's release depend on its
+  place in the order, never on which direction it is; the curling cost alone gives three equal releases. With
+  interchangeable points the first opening loses almost all of X's renamings (O55) and the later ones almost none, so
+  the first push would pay a cost the later ones do not: one way her "red takes the most" could come out of the model.
+- *Ours:* the quark colors are a good image for three that belong together, but not for the symmetry itself: quark
+  color is never broken (red, green and blue stay interchangeable, and everything observed is color-neutral), while the
+  triad's three releases are observably different, which makes it a symmetry that breaks, closer to the Higgs story
+  (general knowledge, to verify).
+- The design brief is `docs/design/release_order_brief.md` (in progress), in place of the typed-energy brief.
 
 ## The target ("the spot")
 

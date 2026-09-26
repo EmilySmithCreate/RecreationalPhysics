@@ -4,7 +4,7 @@ Each task has an acceptance test. Do them in order; do not start a task whose pr
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).
 
-**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads. PREREGISTRATION **T12** (does the coarse law govern) and **T13** (the λ = 1 transition at N = 4p², after the author's reply) have no entries here either; T13 is the Gate B follow-up named under that gate. **Added 2026-09-24:** PREREGISTRATION **T16** (the correlation length of [KTB19] Fig. 9a, at the model author's request); **T8** is now written and running (the λ map along the tube, for paper 1's section V); **T17** = this page's T14 (leftover per seed); **T18** (room the new space needs, against λ); **T19** (does a leftover move, stay or anneal); **T21** (the black-hole piece: does a sealed sheet fold with interchangeable points); **T15 rung 1** (time-fractions against counts); **T22** (near λ = 1, do exits from the curled torus fall back? read 24 September: FALL-BACKS by the letter, first exit on time, κ = 0.56 to 0.68 at every λ). The series these serve is `docs/papers/series_plan.md`.
+**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads. PREREGISTRATION **T12** (does the coarse law govern) and **T13** (the λ = 1 transition at N = 4p², after the author's reply) have no entries here either; T13 is the Gate B follow-up named under that gate. **Added 2026-09-24:** PREREGISTRATION **T16** (the correlation length of [KTB19] Fig. 9a, at the model author's request); **T8** is now written and running (the λ map along the tube, for paper 1's section V); **T17** = this page's T14 (leftover per seed); **T18** (room the new space needs, against λ); **T19** (does a leftover move, stay or anneal); **T21** (the black-hole piece: does a sealed sheet fold with interchangeable points); **T15 rung 1** (time-fractions against counts); **T22** (near λ = 1, do exits from the curled torus fall back? read 24 September: FALL-BACKS by the letter, first exit on time, κ = 0.56 to 0.68 at every λ). **Added 2026-09-24, night:** PREREGISTRATION **T24** (the λ map a third time, with the energy check read from the saved wiring; piece 2), **T25** (does the scrap freeze in before it heals; piece 6), **T26** (the local spark, sealed; piece 8; = this page's T14 local-spark protocol, now built) and **T27** (does a melt fold before it flattens when its energy leaks; piece 8). The series these serve is `docs/papers/series_plan.md`.
 
 ## T1. Rectangular torus  ☑ (2026-09-19)
 
@@ -330,6 +330,47 @@ threshold. The loop of four is not a resonator in this model; where anything res
 in two states of seven, at other frequencies. The wave rule stays undecided; whether to redefine the object as the cap
 is the author's call and would be a new pre-registration.
 
+## T24 to T27. Four pre-registered runs launched on the night of 2026-09-24  ◑
+
+Written and committed before any run, at the owner's request to move the programme's pieces to measured status
+(`PREREGISTRATION.md` T24 to T27). Her predictions in T25 to T27 are **inferred by the assistant from her stated
+positions** and marked so until she confirms or replaces them; T24 keeps her T23 predictions.
+
+- **T24, piece 2.** T23's protocol with fresh seeds and gate 3′: the energy check reads each decay's saved final
+  wiring exactly and reports the resting states instead of failing a cell on an unrecognized one. Twenty-eight
+  Batch jobs, submitted by the new push-triggered workflow (`.github/workflows/run_queue.yml`, manifest
+  `cloud/queue/2026-09-24_t24.txt`). Read with `scripts/analyse_t24.py`.
+- **T25, piece 6.** The scrap race: T19's sheet with one leftover, cooled from g = 1.25 to 0.25 over 300 to 100,000
+  sweeps and held cold. `scripts/run_scrap_race.py`, six configs, run on the laptop. Read with `scripts/analyse_t25.py`.
+- **T26, piece 8.** The local spark (this page's T14 protocol, now built as ASSUMPTIONS Q22): energy in one vertex's
+  store, or disorder in one patch, in a cold sealed sheet at N = 64 to 256, named and interchangeable points.
+  `scripts/run_local_spark.py`, eight configs, run on the laptop. Read with `scripts/analyse_t26.py`.
+- **T27, piece 8.** T21's melt with its energy draining at four leak rates, and a sealed control.
+  `scripts/run_local_spark.py`, five configs, run on the laptop. Read with `scripts/analyse_t26.py`.
+
+Accept: each read under its pre-registered rules, the verdict recorded in ASSUMPTIONS and the programme, and
+the inferred predictions confirmed or replaced by the owner before any verdict is quoted as hers.
+
+**All four read, 25 September (O47, O48, O52):** T25 FREEZES IN (hers, confirmed after the reading), T26 MELTS (her confirmed
+prediction fails), T27 STAYS MELTED (ours), T24 INCONCLUSIVE by the letter for a third reason (one extreme wait in 120 at four
+cells) with the edge BREAK-UP a third time. Gate C′ (O53): run A FAILS, run B ONE POWER. T30 NEVER OPENS for the tori (O64; first read as FIRST ONLY) and T32 FIXED
+WALL (O54).
+
+## The fold run backwards (piece 8 in six links)  ◑
+
+**Added 2026-09-25, midday** (VISION Update 27, the owner's mechanism). Exact first (O55): each successive fold's nucleation
+excess falls (halving exactly only with eight links at λ = 1.25); the counting drive to curl appears only at full curling and beats the curling cost only below λ ≈ 1.02.
+PREREGISTRATION **T34** with her prediction (re-curls, one direction then the rest) and ours (melts): four Batch jobs, read with
+`scripts/analyse_t34.py`. Designed, not run: the same with interchangeable points near λ = 1.02, where the counting could pay.
+
+## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
+
+**Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a
+singleton beside the tied three or all four tied). Exact first (O50): the 2,304-point ladder and its walls (20, 40, 80 as three,
+two and one directions stay curled; flat space 128; the gas of 8-cubes 160 − 128λ, stuck only below λ = 1.25). Then
+PREREGISTRATION **T33**, with her prediction (a tied pattern) and ours (one at a time): six Batch jobs. Read with
+`scripts/analyse_t33.py`. Accept: the pattern verdict for each start on the record, with the caveat of Update 24.
+
 ## Six links per point (D = 3)  ☐
 
 **Added 2026-09-24** (VISION Update 22, the author's decision). In order, each step gated on the last:
@@ -346,11 +387,48 @@ is the author's call and would be a new pre-registration.
 
 Accept: Gate C passed, and step 2's numbers checked against the kernel on the built states.
 
+**Decision, 2026-09-24, night (VISION Update 24):** the owner set rule 2 aside for this track; the six-link work proceeds
+while the reproduction (Gate C′) runs in parallel, and every six-link result carries the open-gate caveat. **Built and
+launched 2026-09-25:** `src/graphity/sealed_d.py` (the bath of stores at any D, draw for draw with `sealed.py` at four
+links), `dimension.local_dimension_d` (3, 2, 1, 0 on the ladder), `scripts/run_sealed_curled_d.py`, `scripts/analyse_t30.py`;
+PREREGISTRATION **T30** (does one push open both curled directions; the room; a gas of 6-cubes as the literal rule) and
+**T32** (is the activation fixed with size), 14 Batch jobs, with the owner's predictions. Exact before the runs (O49): the
+wall out of 4 × 4 × 18 and 4 × 4 × 32 is 96 − 64λ, so the two-curled state is stuck to λ = 1.5, not O41's 1.2.
+
 **Status, 2026-09-24.** Step 1 done by an assistant agent reading the arXiv text (ASSUMPTIONS Q21; the owner has not
 read those passages): 6 links, the same hard-core rule, flat from 4 squares per edge, at most 5, and energy
 H = 16(3N − S) + 4λX (ours, derived as Q1). Gate C's target is [T22] Fig. 3 (N = 500, full curvature), not
 [KTB19] Fig. 8b (capped). Step 2 done (O41, exact): the ladder is additive; the fully curled 6-cube is stuck for now
 only for 1 < λ < 1.2, and one curled direction for 1 < λ < 2. Next: step 3, the kernel.
+
+**Step 3 done, 2026-09-24:** `src/graphity/cqg_d.py`; at four links it makes `cqg.run_chain`'s chain draw for draw.
+**Gate C, set up before any comparison.** Target `docs/published/T22_fig3_digitised.csv` (71 points; natural log;
+squares per vertex 4S/N). Runs: `configs/gatec_t22_fig3_{p1a,p1b,p2}.json` with `scripts/run_cqg_d_sweep.py`,
+N = 500 from a start with no squares, λ = 1, no cap, cooling over the published couplings and heating back. The
+published protocol is not stated, so two are run: P1 (2,000 + 2,000 sweeps per coupling, two replicas) and P2
+(10,000 + 5,000). **Acceptance, accepted by the owner on 2026-09-24, before any comparison:** where our two legs agree (within 0.1 squares per
+vertex, with tau_int well below n_meas / 20), the largest difference from the digitised points, interpolated in
+ln g, is below 0.3 squares per vertex (0.025 in φ); and the coupling where the curve crosses 6 squares per vertex
+agrees within 0.05 in ln g. The cold plateau is reported, not scored, unless both legs agree there. If our curve is
+offset by ln N^(1/3) = 2.07 in ln g, that settles Q21's open question on how the coupling scales with N, and it is
+reported as that.
+
+**Gate C FAILED, 2026-09-24 (ASSUMPTIONS O43).** Not reproduced under either reading of the axis, the unscaled
+couplings or couplings × N^(1/3), and the shapes differ, so no single rescaling fixes it. By rule 2 the six-link
+track stops: no D = 3 result is interpreted until this is resolved. Next: ask the model's author for [T22] Fig. 3's
+protocol, its Boltzmann weight and whether its graphs are bipartite. A second D = 3 target exists, [KTB19] Fig. 8b,
+but it used the cap he disputes.
+
+**Gate C′, 2026-09-24, night (PREREGISTRATION Gate C′; ASSUMPTIONS O46), at the owner's request to attack the gate
+without the author.** Guesses tested on the sources: the axis base, a normalization factor and the protocol are
+settled (no help there); the surviving guess is that the published weight goes as 1/g² (Eq. (3) read literally),
+which fits the 3D figure's position and shape with nothing free. Two runs on Batch via the queue
+(`cloud/queue/2026-09-24_gatec2.txt`): run A, the 3D curve over the squares of the published grid (`gatec2_3d_n500_a/b`),
+scored under that reading; run B, the 2D width at N = 2000 (`gatec2_2d_n2000_a/b`) against [T22] Fig. 2, which says
+whether the same code's 2D figure is compressed too. Read with `scripts/analyse_gatec2.py`. The outcome pairs and what
+each means are fixed in the pre-registration; our own expectation is that A holds and B says one power, which would
+leave a model difference in 3D (non-bipartite graphs with the triangle and pentagon terms, needing a six-link general
+kernel that does not exist yet).
 
 ## Later
 

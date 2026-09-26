@@ -1,0 +1,31 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T33 (written 2026-09-25, before any run): eight links, in what pattern do curled directions open? 4 x 4 x 4 x 36 (three curled, one open) at lambda 1.25, spark 20.0 (the exact wall), C = N/4. Not exploratory. Every eight-link result carries VISION Update 24's caveat: no published eight-link curve exists and the kernel is validated at four and six links.",
+    "name": "t33_three_lam125_cn4",
+    "section": "T33",
+    "dims": [
+      4,
+      4,
+      4,
+      36
+    ],
+    "lambda": 1.25,
+    "capacities": [
+      "N/4"
+    ],
+    "sparks": [
+      20.0
+    ],
+    "replicas": 6,
+    "n_sweeps": 50000,
+    "record_every": 250,
+    "seed": 20263303,
+    "save_adjacency": true
+  },
+  "config_path": "configs/t33_three_lam125_cn4.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T33, written 2026-09-25"
+}

@@ -71,6 +71,10 @@ Once, by hand, in the account (the console or CloudShell), in this order.
 2. **Create the `ci_cd` role** with this custom trust policy (put in the account id), and
    AdministratorAccess as its permissions. Only workflows run from a branch of this repository can
    assume it: forks have a different repository name, and pull requests have a different subject.
+   **The subject carries numeric ids.** GitHub sends `repo:<owner>@<owner id>/<repo>@<repo id>:ref:...`, not
+   `repo:<owner>/<repo>:ref:...` (seen in CloudTrail on 2026-09-24, where the plain form was refused). The ids
+   are public: `https://api.github.com/repos/<owner>/<repo>` gives `owner.id` and `id`. They also make the trust
+   stricter, since a deleted and re-created repository with the same name gets new ids.
 
    ```json
    {
@@ -83,7 +87,7 @@ Once, by hand, in the account (the console or CloudShell), in this order.
          "Action": "sts:AssumeRoleWithWebIdentity",
          "Condition": {
            "StringEquals": { "token.actions.githubusercontent.com:aud": "sts.amazonaws.com" },
-           "StringLike": { "token.actions.githubusercontent.com:sub": "repo:EmilySmithCreate/RecreationalPhysics:ref:refs/heads/*" }
+           "StringLike": { "token.actions.githubusercontent.com:sub": "repo:EmilySmithCreate@116654827/RecreationalPhysics@1377530219:ref:refs/heads/*" }
          }
        }
      ]

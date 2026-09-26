@@ -1,0 +1,71 @@
+# Write the state of the Batch queue and the results bucket into the repository, so that a session on a laptop
+# without the project account's credentials can see what is running and what has finished.
+#
+# Trigger: push a change to cloud/status/request.txt (any text; a timestamp is fine), or dispatch by hand. The
+# workflow lists the jobs in every state, lists the finished results in the bucket, writes cloud/status/latest.md
+# and commits it back to the same branch. It reads only: it moves no result, and results still become results
+# only when a person downloads, checks and commits them (rule 5).
+name: queue_status
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["**"]
+    paths:
+      - "cloud/status/request.txt"
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWS_REGION: us-east-1
+      ACCOUNT: ${{ vars.AWS_ACCOUNT_ID }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/ci_cd
+          aws-region: us-east-1
+          role-duration-seconds: 900
+
+      - name: list the queue and the bucket
+        run: |
+          OUT=cloud/status/latest.md
+          mkdir -p cloud/status
+          {
+            echo "# Batch queue and results bucket, as of $(date -u +'%Y-%m-%d %H:%M UTC') (commit ${GITHUB_SHA::7})"
+            echo
+            echo "Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix"
+            echo "until a person downloads, checks and commits them."
+            echo
+            for S in RUNNING RUNNABLE STARTING SUBMITTED PENDING SUCCEEDED FAILED; do
+              echo "## $S"
+              aws batch list-jobs --job-queue recphys --job-status $S --max-items 200 \
+                --query "jobSummaryList[].[jobName, createdAt, startedAt, stoppedAt]" --output text \
+                | awk 'BEGIN{n=0} {n++; c=($2=="None"?"":strftime("%m-%d %H:%M", $2/1000)); s=($3=="None"?"":strftime("%m-%d %H:%M", $3/1000)); e=($4=="None"?"":strftime("%m-%d %H:%M", $4/1000)); printf "- %s  created %s  started %s  stopped %s\n", $1, c, s, e} END{if(n==0) print "- none"}'
+              echo
+            done
+            echo "## finished results in the bucket (config.csv present)"
+            aws s3 ls "s3://recphys-results-$ACCOUNT/" --recursive | awk '$4 ~ /\.csv$/ && $4 !~ /^partial\// {print "- " $4 "  (" $1 " " $2 ", " $3 " bytes)"}' || echo "- none"
+            echo
+            echo "## scratch from runs that died (partial/)"
+            aws s3 ls "s3://recphys-results-$ACCOUNT/partial/" --recursive | awk '{print "- " $4}' || echo "- none"
+          } > "$OUT"
+          cat "$OUT"
+
+      - name: commit the status file
+        run: |
+          git config user.name "queue_status workflow"
+          git config user.email "actions@users.noreply.github.com"
+          git add cloud/status/latest.md
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -m "queue status as of $(date -u +'%Y-%m-%d %H:%M UTC') (read only; written by the queue_status workflow) [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

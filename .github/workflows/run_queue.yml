@@ -1,0 +1,93 @@
+# Submit every job listed in a queue file to AWS Batch when that file is pushed.
+#
+# A queue file lives under cloud/queue/ and holds one job per line: "<runner> <config>", both without
+# their extension; blank lines and lines starting with # are ignored. Pushing a commit that adds or
+# changes a queue file builds the image once from that commit and submits each line as one Batch job.
+# It does not wait for the jobs and commits nothing: results land in the results bucket, and a person
+# downloads, checks and commits them (rule 5). The queue file is the record of what was submitted and
+# from which commit, and the pre-registration it serves is in the same push.
+#
+# Why push-triggered: run_simulation.yml takes one config per dispatch, which meant 28 dispatches for
+# T23. A queue file is one push for a whole pre-registered set, and the commit that carries it is the
+# same one that carries the configs and the pre-registration, so nothing can be submitted that is not
+# on the record.
+name: run_queue
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "cloud/queue/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      AWS_REGION: us-east-1
+      ACCOUNT: ${{ vars.AWS_ACCOUNT_ID }}
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: which queue files this push added or changed
+        id: files
+        run: |
+          if git rev-parse --verify --quiet "${{ github.event.before }}" >/dev/null && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            CHANGED=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- cloud/queue | grep -E '\.txt$' || true)
+          else
+            CHANGED=$(git show --name-only --pretty="" "${{ github.sha }}" -- cloud/queue | grep -E '\.txt$' || true)
+          fi
+          CHANGED=$(for f in $CHANGED; do [ -f "$f" ] && echo "$f"; done)
+          echo "changed<<EOF" >> "$GITHUB_OUTPUT"; echo "$CHANGED" >> "$GITHUB_OUTPUT"; echo "EOF" >> "$GITHUB_OUTPUT"
+          echo "queue files: $CHANGED"
+          test -n "$CHANGED"
+
+      # The list of changed queue files is newline-separated. Pasting it bare after `cat` split the command at the first
+      # newline, so a push carrying two queue files failed here (2026-09-25, T37 to T39); it is read through xargs.
+      - name: every runner and config named must exist, before anything is billed
+        run: |
+          test -n "$ACCOUNT"
+          echo "${{ steps.files.outputs.changed }}" | xargs cat | grep -v '^\s*#' | grep -v '^\s*$' | while read -r RUNNER CONFIG; do
+            test -f "scripts/${RUNNER}.py" || { echo "no such runner: $RUNNER"; exit 1; }
+            test -f "configs/${CONFIG}.json" || { echo "no such config: $CONFIG"; exit 1; }
+          done
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/ci_cd
+          aws-region: us-east-1
+          role-duration-seconds: 3600
+
+      - uses: aws-actions/amazon-ecr-login@v2
+        id: ecr
+
+      - name: build and push the image from this commit
+        env:
+          REGISTRY: ${{ steps.ecr.outputs.registry }}
+        run: |
+          IMAGE="$REGISTRY/recphys"
+          docker build -t "$IMAGE:latest" -t "$IMAGE:${GITHUB_SHA::12}" .
+          docker push "$IMAGE:latest"
+          docker push "$IMAGE:${GITHUB_SHA::12}"
+
+      - name: submit one job per line
+        run: |
+          echo "### submitted from \`${GITHUB_SHA::7}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "${{ steps.files.outputs.changed }}" | xargs cat | grep -v '^\s*#' | grep -v '^\s*$' | while read -r RUNNER CONFIG; do
+            ID=$(aws batch submit-job \
+              --job-name "${CONFIG}-${GITHUB_SHA::7}" \
+              --job-queue recphys \
+              --job-definition recphys-run-config \
+              --parameters runner=${RUNNER},config=${CONFIG} \
+              --query jobId --output text)
+            echo "submitted $CONFIG as $ID"
+            echo "- \`$RUNNER\` on \`$CONFIG\`: job \`$ID\`" >> "$GITHUB_STEP_SUMMARY"
+          done
+          echo "results will appear under \`s3://recphys-results-$ACCOUNT/<config>/\`" >> "$GITHUB_STEP_SUMMARY"

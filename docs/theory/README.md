@@ -18,7 +18,7 @@ pre-registration, a first look. *Argument*: reasoning only, ours and unreviewed.
 | The model (dots, links, squares, the penalty λ, the hard-core rule) | `ASSUMPTIONS.md` Q1–Q3; `src/graphity/cqg.py` | exact |
 | Ergodicity and exact averages at N ≤ 18; the sampler checked against them | Q9, Q11, Q14; `results/ergodicity_small.csv`; `scripts/exact_small_averages.py` | exact |
 | Reproduction of the published 2019 curve (rms 0.005) and of the λ = 0 shattering | VISION Updates 3, 4, 6; Gate A (TASKS); ASSUMPTIONS section D | measured |
-| The disagreement with the 2025 figure, and the author's reply | Gate B (TASKS); O19, O26; `docs/outreach/` | open; T13 running |
+| The disagreement with the 2025 figure, and the author's reply | Gate B (TASKS); O19, O26 | open; T13 running |
 | The order of the disorder → order transition (the published question) | PREREGISTRATION T6; O11, O12, O17 | measured: FIRST ORDER at λ = 0; INCONCLUSIVE, bound stated, at λ ≥ 1 |
 | The author's "hybrid" jump at N = 1024: equilibrium or metastable ascent | PREREGISTRATION T13; `configs/t13_*.json` | running (2026-09-22 night) |
 
@@ -84,7 +84,7 @@ pre-registration, a first look. *Argument*: reasoning only, ours and unreviewed.
 | The account told whole, no hedges (the paper's narrative spine) | `docs/public/the-loop-and-the-floor_v1.html` |
 | The honest short page, every claim tagged with whose it is | `docs/public/did-space-snap-open_v1.html`; `docs/public/site/` |
 | The draft post | `docs/public/medium_post.md` |
-| Correspondence with the model's author | `docs/outreach/` |
+| Correspondence with the model's author | private; not in this repository |
 
 ## How the paper would be assembled
 

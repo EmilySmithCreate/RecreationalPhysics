@@ -1,0 +1,281 @@
+\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{The fertile window: how the barrier, the release, the room and the relic of a decompactification depend on
+the coefficient of the local term}
+
+\author{Emily Smith}
+\email{emilysmithcreate@gmail.com}
+\affiliation{Independent researcher, Charlottesville, Virginia, USA}
+
+\date{DRAFT, 25 September 2026}
+
+\begin{abstract}
+In the family of graph energies obtained from combinatorial quantum gravity (CQG) by multiplying its local term
+by a coefficient $\lambda$ (only $\lambda = 1$ is CQG; everything here is at $\lambda > 1$, next to CQG and not in
+it), a torus with one direction curled is metastable above the flat torus and opens into it by a single front.
+We map the ingredients of that change along $\lambda$. Exact: the gap is $4(\lambda - 1)$ per vertex for each
+curled direction, in two and in three dimensions; the cheapest single move out of the curled torus costs
+$32 - 16\lambda$ below $\lambda = 4/3$ ($64 - 40\lambda$ above) and is offered three times a sweep at every size,
+so the mean waiting time follows an Arrhenius law with nothing fitted. Measured, in three pre-registered passes
+over the map, each INCONCLUSIVE by the letter of its own rules: the curled torus is metastable at $g = 1.5$ from
+$\lambda = 1.05$ to $1.35$ and not at $1.40$; in every cell up to $\lambda = 1.30$ the change is a single front
+with the two orders side by side, and the release is exactly $4(\lambda - 1)$ wherever the flat torus is reached;
+the waits pass a memoryless check in most cells but not in all; and the break-up of the single front begins at the
+edge of the window. At $\lambda = 1.05$, $1.10$ and $1.25$ the first exit arrives on time and about one exit in
+three falls back before the front takes hold. At fixed coupling the share of decays leaving a relic rises with
+$\lambda$, and near $\lambda = 1$ almost none do. Sealed, the reservoir a conversion needs grows at least in
+proportion to the release, $12$, $36$ and $72$ stores at $\lambda = 1.10$, $1.25$, $1.40$ for 96 vertices. With
+six and eight links the same ladder holds and the walls rise from rung to rung; with six, the price of the first
+move out of a two-curled torus is exactly 16 at every size, and given it the first direction opens fully in a third
+of the runs and stalls early in more than a third, while the second never opens in a cold bath. The six-link results
+carry an open reproduction gate, and there is no published eight-link curve to check against. A larger $\lambda$
+gives a larger release, a harder birth and a shorter-lived curled state, and nothing in the energy ties the
+directions together.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The companion paper \cite{paper1} studied one setting, $\lambda = 1.25$, and found that a $4 \times L$ torus with
+one direction curled is metastable, opens into the flat torus by nucleation and a single front, and releases
+exactly $4(\lambda - 1)$ per vertex. A single setting could be a lucky point. This paper asks how each ingredient
+of the change, the barrier, the release, the room the product needs, and the relic left behind, depends on
+$\lambda$, from just above the CQG value to the point where the curled torus stops being metastable.
+
+Why a coefficient at all. At $\lambda = 1$ the local term of CQG \cite{T17,KTB19,T25} exactly cancels the reward
+for a third square on an edge, so the flat torus, the curled torus and the 4-cube are degenerate: no ordered
+arrangement can turn into another with any release. Above 1 the flat torus is the ground state (together with any
+twisted relative that also has two squares on every edge) and each curled direction costs a known energy. In the author's framework the extra term is a curling cost, a constant of
+the arrangement, and its value is whatever reality has; in a picture in which many such systems exist, the value
+we observe would be the one that makes the most productive change. That framework is the author's and is not a
+claim of this paper. What this paper measures is the map: at which $\lambda$ the curled state is stuck for now,
+how sharply it changes, how much it releases, how much room the release needs, and what it leaves. Every verdict
+quoted was pre-registered before its run.
+
+\section{Exact results}
+
+\subsection{The energy, edge by edge}
+\label{sec:energy}
+
+With $S$ the number of squares and $X = \sum_e (S_e - 2)_+$ the surplus squares on edges carrying more than two,
+\begin{equation}
+  H = 16(N - S) + 4\lambda X = 4 \sum_e \big[(2 - S_e) + \lambda\,(S_e - 2)_+\big].
+  \label{eq:H}
+\end{equation}
+The flat torus (two squares on every edge) has $H = 0$; a direction curled to a single square puts three squares
+on the edges along it, and the ladder is additive: one curled direction costs $4(\lambda - 1)$ per vertex, two
+$8(\lambda - 1)$. In three dimensions, with six links per vertex, the same holds with a third rung, so the
+fully curled 6-cube sits $12(\lambda - 1)$ per vertex above flat space and each curled direction holds a third
+of the release. (The three-dimensional energy is derived by us from the papers' definitions, not quoted, and its
+reproduction gate against the published curve has not yet passed; every three-dimensional statement in this
+section is exact arithmetic on that derived energy, and the measured ones of Sec.~\ref{sec:directions} carry the
+same caveat.)
+
+\subsection{The cheapest ways out}
+
+Every switch the chain can propose out of the curled torus was listed and priced. Two families are cheapest:
+move A, losing two squares and four surplus squares, at $32 - 16\lambda$, with $3N$ distinct switches; and move B,
+at $64 - 40\lambda$, with $2N$. A proposal is an ordered pair of edges, so each switch can be drawn in two ways, and A
+has $6N$ of the $4N^2$ equally likely proposals, B $4N$. A sweep is $2N$ attempts, so A is offered three times a
+sweep and B twice, at every size, and the mean waiting time before the first exit at
+coupling $g$ is predicted with nothing fitted:
+\begin{equation}
+  \tau(\lambda) = \Big[\,3\,e^{-(32 - 16\lambda)/g} + 2\,e^{-(64 - 40\lambda)/g}\Big]^{-1}.
+  \label{eq:tau}
+\end{equation}
+At $g = 1.5$: $\tau = 8330$, $4844$, $2788$, $1570$, $845$, $419$, $183$, $68$ sweeps at
+$\lambda = 1.05, 1.10, \dots, 1.40$. Move A is the cheapest way out below $\lambda = 4/3$; above it B takes over.
+
+\subsection{The relic's share, exact}
+
+The relic left in cold sealed boxes is a closed loop of four vertices at local dimension 1, costing $24\lambda - 16$
+above the flat torus \cite{paper2}. As a share of the release $4(\lambda - 1)N$ it is
+$(24\lambda - 16)/[4(\lambda - 1)N]$: 22\% at $\lambda = 1.25$ and 72\% at $\lambda = 1.05$ for $N = 64$, falling as
+$1/N$. Below $\lambda = 1 + 8/(4N - 24)$ such a relic would cost more than the whole release, so the torus could not
+end on it downhill.
+
+\subsection{Three dimensions: where the fully curled state is stuck}
+
+The author's rule for the real thing is that the three space directions are intertwined, curl together and open
+together. In two dimensions that rule cannot be posed: a gas of fully curled 4-cubes has no wall at any
+$\lambda > 1$ (a move inside a knot costs $32 - 32\lambda$, downhill for every $\lambda > 1$), so it falls apart
+everywhere at once with no wait. In three dimensions, listing every single move out of each curled torus with the
+derived energy: one curled direction is stuck for now, every single move out of it costing energy, for
+$1 < \lambda < 2$ (wall $96 - 48\lambda$); two curled
+directions for $1 < \lambda < 1.5$ when the open side is long (wall $96 - 64\lambda$; a short open side of 6 admits a
+cheaper move, $96 - 80\lambda$, and closes the window at 1.2); and all three (the 6-cube, alone or as a gas) for
+$1 < \lambda < 1.2$, with a wall of $96 - 80\lambda$. So the fully curled state can be stuck for now in three
+dimensions, but only in a narrow window that does not contain the two-dimensional value of about $1.25$.
+
+\section{The window, measured}
+
+\subsection{Protocol}
+
+The curled $4 \times L$ torus at $g = 1.5$, $N = 64, 96, 144, 192$, followed in blocks of five sweeps until 98\%
+converted or 100,000 sweeps; the local-dimension census and the pieces of converted vertices read at 25, 50 and
+75\% conversion; the release settled over windows of 600 sweeps; the final graph saved. Three pre-registered
+passes: T8 with 30 decays per cell at $\lambda = 1.05$ to $1.45$; T23 with 120 decays per cell at 1.05 to 1.35,
+fresh seeds and the memoryless check sized to the sample; and T24, with fresh seeds again and the energy read
+exactly from each decay's saved wiring and reported rather than gated.
+
+\subsection{Metastability and its edge}
+
+The torus is metastable (more than half the decays still a torus when the 200-sweep resting stretch ends, a
+property of the chain at this coupling, unlike the energetic ``stuck for now'' of Sec.~II.D) at every size from
+$\lambda = 1.05$ to $1.35$ in T8, and not at $1.40$ or $1.45$; the edge lies between 1.35 and 1.40 at $g = 1.5$.
+(In T23, $\lambda = 1.35$ sat on the line at $N = 64$ and 96.) That is where the predicted wait, Eq.~\eqref{eq:tau}, falls through the length of the resting stretch,
+not where the barrier vanishes: the barriers at the edge are still 8 to 10 units.
+
+\subsection{Sharpness across the window}
+
+In every metastable cell of T8 the two orders sit side by side (95 to 100\% of vertices at $d \in \{1, 2\}$ at half
+conversion) and the converted region is one piece (76 to 100\% of it). In the two repeats this holds in every cell
+up to $\lambda = 1.30$ (the largest piece 81 to 100\% in T23, 84 to 100\% in T24); at 1.35 and $N = 192$ it holds
+only 67 and 69\%, below the pre-registered 70\%. The waits after the resting stretch mostly pass the memoryless
+check: in T23 the coefficient of variation lies inside the central 99.9\% band of an exponential sample of the same
+size in 20 of 20 window cells from 1.05 to 1.25 and in three of four sizes at 1.30. The release is exactly
+$4(\lambda - 1)$ wherever the flat torus is reached. T8 and T23 each came out INCONCLUSIVE by the letter of their own
+rules, for stated reasons. T8's memoryless band was too tight for thirty decays (it failed in 9 of its 24 metastable
+cells), and its energy check failed at $\lambda = 1.35$ at every size. T23's energy check failed at $\lambda = 1.30$
+at every size, on a few decays per hundred; read after the fact and not scored, the check compared a window average
+with the exact energy of the final state, and the sheet at $g = 1.5$ carries thermal excitations. T24 replaced that
+check before its run, as T23 had replaced the band: its gate asked only that each decay's saved final graph exist and
+be valid, which held in all 28 cells, and the energy was read exactly from those graphs and reported, not gated. Two
+orders and one front held in every window cell; the memoryless check held in 24 of 28 and failed in four: at
+$N = 64$ ($\lambda = 1.25$ and 1.30), each on a single extreme wait, 24 and 76 times the predicted mean $\tau$, and at
+$N = 192$ (1.30) and 144 (1.35), with coefficients of variation of 1.53 and 1.41 against a band ending at 1.38. By
+the letter the window was inconclusive a third time, on a third criterion. The rare very long wait is now on the record at three
+couplings, always at the smaller sizes; the saved graphs of those decays are where to look next.
+
+\subsection{The first exit is on time, and one exit in three falls back}
+
+Counted move by move, with every accepted move seen (T22, forty decays per cell at $N = 64$ and $96$): the mean time
+to the first exit agrees with Eq.~\eqref{eq:tau} within one standard error in all six cells at $\lambda = 1.05$,
+$1.10$ and $1.25$, and the number of exits per decay is $1.5$ to $1.8$, so the transmission coefficient
+$\kappa = 1/E$ is $0.56$ to $0.68$ with no trend in $\lambda$. Recrossing is a general feature of the chain, not a
+near-$\lambda = 1$ effect.
+
+\subsection{The edge of the window: break-up begins there}
+
+Pooled over sizes from $\lambda = 1.30$ to $1.35$ (T23): the share of decays ending at the flat torus falls from
+$0.71$ to $0.47$, and the share whose converted region is in more than one piece at 25\% conversion rises from
+$0.44$ to $0.69$, each by more than two standard errors. The author predicted this before the run, after seeing
+T8's shares ending flat (79\% at 1.30, 46\% at 1.35), as the pre-registration records. The single
+front gives way to several seeds as the wall comes down.
+
+\section{The same map across the number of directions}
+\label{sec:directions}
+
+The window has a second axis, the number of directions, which the author's rule that the space directions curl and
+open together makes the relevant one. With the six- and eight-link versions of the same energy the ladder stays
+additive, $4(\lambda - 1)$ per vertex per curled direction, and every rung's cheapest exit can be priced exactly by
+listing switches (every switch with six links; with eight, the nearby partners, a search checked against the full
+one at six) (Table~\ref{tab:dmap}). Three things are exact. The walls rise from rung to rung at every
+number of directions (doubling exactly only with eight links at $\lambda = 1.25$), so nothing in the energy ties the
+directions together. The $\lambda$ window of a rung widens as more of its directions are open (with eight links,
+1.25 for the gas of 8-cubes, then 1.43, 1.67 and 2.5). And flat space's own wall, the cheapest move out of the
+perfect lattice, is 32, 64 and 128 with two, three and four directions, the same at every $\lambda$. Whether a bath
+hot enough to pay the later rungs leaves the flat state intact is not settled by these walls: melting is a question
+of free energy, not of the cheapest move, and flat three-dimensional space, whose wall is 64, is melted by $g = 10$
+in an exploratory scan.
+
+\begin{table*}[t]
+\caption{The cheapest single move out of each curled state, exact, with its $\lambda$ window (wall $> 0$) and its
+cost at $\lambda = 1.25$; and what the sealed runs found. Six-link tori are $4 \times 4 \times L$ with $L \ge 18$
+and $4 \times L \times L'$; eight-link tori at $N = 2304$.}
+\label{tab:dmap}
+\begin{ruledtabular}
+\begin{tabular}{llccp{8.2cm}}
+links & curled & window & wall at 1.25 & sealed, given the wall \\
+\hline
+4 & one (the tube) & $1 < \lambda < 2$ & 12 & opens as one front; spark threshold fixed, 48 to 192 vertices (exploratory) \\
+4 & both (gas of 4-cubes) & none & downhill & falls apart at once (exact move listing, not a sealed run) \\
+6 & one & $1 < \lambda < 2$ & 36 & not run \\
+6 & two & $1 < \lambda < 1.5$ & 16 & first direction fully open in 28 of 84, most of the way in 21, stalled early in 32; second never in a cold bath (2 of 12 past it in the hottest); first move's price fixed, 192 to 512 \\
+6 & all three (gas of 6-cubes) & $1 < \lambda < 1.2$ & downhill & at 1.10: joins and opens two of three in 21 of 24, no rest between \\
+8 & one & $1 < \lambda < 2.5$ & 80 & not run \\
+8 & two & $1 < \lambda < 1.67$ & 40 & running (T39) \\
+8 & three & $1 < \lambda < 1.43$ & 20 & one move, then a stall at every bath: the push equal to the first move is not enough (T33) \\
+8 & all four (gas of 8-cubes) & $1 < \lambda < 1.25$ & 0 & at 1.10: one move, then a stall (T33) \\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+Two of the six-link entries are measured, each pre-registered with the author's prediction. With a single store
+holding the spark, no two-curled torus left its start below 16 and every one did at 16 or more, at every size from
+192 to 512 vertices: the price of the first move is fixed with size in three dimensions as in two. A replica counts
+as leaving when its squares change at all, so this measures the price of the first move, not the push the whole
+change needs; in two dimensions the two were the same, 12 units. Given that push in a sealed box at $\lambda = 1.25$, the first curled direction
+opened completely in 28 of 84 torus replicas, went most of the way in 21 and stalled early in 32; the second
+direction's wall of 36 is never paid by the first release in a cold bath, and only at the smallest bath, an eighth
+of $N$, does the heat carry two of twelve replicas down to a defective near-flat state. At $\lambda = 1.10$ the
+spark bought one move and nothing followed. Read as registered, no torus cell has a majority reaching the one-curled
+rung or flat space, so the tori's verdict is NEVER OPENS: the author's prediction, that both directions open
+together, failed, and so did ours, that the first opens and the second waits, although no torus's second direction
+opened in a cold bath. The literal form of her rule, a gas of fully curled 6-cubes, reported separately, went further
+than we expected at $\lambda = 1.10$: the cubes joined and opened two of their three directions in 21 of 24 replicas,
+without resting between them, into many small flat patches, never one space (FIRST ONLY by the letter, which for
+the gas means two of three directions open). Every six-link statement carries a caveat: the published six-link curve
+has not been reproduced (Sec.~\ref{sec:energy}), and the kernel is trusted on its own validation; the eight-link
+kernel is the same code, with no published curve to check it against.
+
+\section{The room the new space needs}
+
+\emph{Pre-registered as T18.} One seed in a sealed $24 \times 4$ torus, ten bath sizes, twenty runs each, at
+$\lambda = 1.10$, $1.25$, $1.40$. The smallest bath giving a majority of clean sheets is $12$, $36$ and $72$ stores.
+The release grows as $4(\lambda - 1)$; the room needed grows at least as fast. Read on the grid,
+$C^*/[4(\lambda - 1)N] = 0.31$, $0.375$, $0.47$, but the grid's steps (the true $C^*$ lies in $(6, 12]$, $(24, 36]$
+and $(48, 72]$) cannot tell faster than proportional from proportional. The verdict on record is PROPORTIONAL
+($R = C^*(1.40)/C^*(1.10) = 6$, against a boundary at 2.5), at 96 vertices only. A larger $\lambda$ gives a larger
+release and a harder birth.
+
+\section{The relic along the window}
+
+At fixed coupling the share of decays leaving a relic rises with $\lambda$ (T8, T23, T24), and near $\lambda = 1$
+almost none do: none of T8's 120 decays at $\lambda = 1.05$, and 4 and 5 of about 480 in each of the two repeats.
+Sealed, the relic has been read only at $\lambda = 1.25$, where it is a four-point loop of fixed size; its share of
+the release at other $\lambda$ is given exactly above. The companion paper on the relic \cite{paper2} measures its number, its position and its lifetime.
+
+\section{Discussion}
+
+The map has one shape. As $\lambda$ rises the release grows linearly, the wall falls linearly, the wait falls
+exponentially, the room the product needs grows at least as fast as the release, and the scrap grows. As $\lambda$
+falls toward 1 everything the change produces shrinks to nothing and the curled state lasts longer. At $g = 1.5$
+there is no setting at which the release is large and the curled state is long-lived and the product needs little
+room: the ingredients trade against one another across the whole window.
+
+In the author's framework this trade-off is what a selection among loops would select within; the model can map
+the ingredients, not count offspring, and this paper claims only the map. In three dimensions the fully curled
+state's window is narrower and does not contain the two-dimensional value. Whether the released energy of one
+direction can pay the wall of the next was measured (Sec.~\ref{sec:directions}), with a kernel that has not passed its
+reproduction gate: in a cold bath it did not.
+
+What this cannot show: anything at exactly $\lambda = 1$, where nothing is released; anything at couplings other
+than $g = 1.5$; anything with the points treated as interchangeable, where the wait is expected to grow by a
+factor of order $N$ while the release and the front are unchanged; and anything about the real universe.
+
+\begin{acknowledgments}
+Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
+checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
+pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+\end{acknowledgments}
+
+\begin{thebibliography}{9}
+\bibitem{paper1} E. Smith, The curled torus burps: front-driven decompactification between ordered states in a
+graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
+\bibitem{paper2} E. Smith, What the burp leaves behind, draft (2026), \texttt{docs/papers/relic/}.
+\bibitem{T17} C. A. Trugenberger, Combinatorial quantum gravity: geometry from random bits, JHEP 09, 045 (2017).
+\bibitem{KTB19} C. Kelly, C. A. Trugenberger and F. Biancalana, Self-assembly of geometric space from random
+graphs, Class. Quantum Grav. 36, 125012 (2019).
+\bibitem{T25} C. A. Trugenberger, Networks as the fundamental constituents of the universe, J. Phys. Complex. 6,
+042001 (2025); arXiv:2512.17676.
+\end{thebibliography}
+
+\end{document}

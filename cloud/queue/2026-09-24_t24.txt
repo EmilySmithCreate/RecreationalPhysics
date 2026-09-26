@@ -1,0 +1,31 @@
+# PREREGISTRATION T24: the lambda map a third time, with the energy check read from the saved wiring.
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+# One line per Batch job: <runner> <config>.
+run_tube_decay t24_lam105_n144
+run_tube_decay t24_lam105_n192
+run_tube_decay t24_lam105_n64
+run_tube_decay t24_lam105_n96
+run_tube_decay t24_lam110_n144
+run_tube_decay t24_lam110_n192
+run_tube_decay t24_lam110_n64
+run_tube_decay t24_lam110_n96
+run_tube_decay t24_lam115_n144
+run_tube_decay t24_lam115_n192
+run_tube_decay t24_lam115_n64
+run_tube_decay t24_lam115_n96
+run_tube_decay t24_lam120_n144
+run_tube_decay t24_lam120_n192
+run_tube_decay t24_lam120_n64
+run_tube_decay t24_lam120_n96
+run_tube_decay t24_lam125_n144
+run_tube_decay t24_lam125_n192
+run_tube_decay t24_lam125_n64
+run_tube_decay t24_lam125_n96
+run_tube_decay t24_lam130_n144
+run_tube_decay t24_lam130_n192
+run_tube_decay t24_lam130_n64
+run_tube_decay t24_lam130_n96
+run_tube_decay t24_lam135_n144
+run_tube_decay t24_lam135_n192
+run_tube_decay t24_lam135_n64
+run_tube_decay t24_lam135_n96

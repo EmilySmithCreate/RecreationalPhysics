@@ -1,0 +1,9 @@
+# PREREGISTRATION T43: how long does a planted allotrope last at lambda = 1 (piece 12).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_planted_allotrope t43_allotrope_lifetime_g1000
+run_planted_allotrope t43_allotrope_lifetime_g1500
+run_planted_allotrope t43_allotrope_lifetime_g2000
+run_planted_allotrope t43_allotrope_lifetime_g2500
+run_planted_allotrope t43_allotrope_lifetime_g3000
+run_planted_allotrope t43_allotrope_lifetime_g3433
+run_planted_allotrope t43_allotrope_lifetime_g3697

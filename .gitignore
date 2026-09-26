@@ -19,6 +19,10 @@ terraform/.terraform/
 # What we take from them lives in REFERENCES.bib notes and ASSUMPTIONS.md, in our own words.
 docs/reading/*.pdf
 
+# Correspondence with physicists: private emails, letters and drafts. Kept locally, never committed
+# (removed from the public tree on 2026-09-24; earlier commits still hold copies in git history).
+docs/outreach/
+
 # Local secrets (AWS keys etc.). Never commit: this repository is public.
 .env
 .env.*
