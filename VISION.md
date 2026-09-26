@@ -692,6 +692,17 @@ ASSUMPTIONS O71, O72.
     "problem of time" in quantum gravity, where the fundamental equation has no time in it. The model has no time; its
     only clock is the count of moves, and its one counterpart is whether the change's front has a fixed top speed, which
     is on the known-physics ladder (TASKS T13, rung 2) and has not been run.
+- **Her answers, 04:23 ET, the same morning.** (a) "Repulsion" was a slip: dark matter stays in clouds because it cannot
+  radiate and cool, and she agrees. (b) The speed of light: one c for all three kinds, agreed. (c) Why dark matter has no
+  electric charge: it may carry a different kind of charge of its own, one that does not act on ours (the red, ordinary
+  kind). *Ours; general knowledge, not read by us, to verify:* this is a published family of ideas, a "hidden sector" or
+  "dark photon" with its own charge and its own light (Holdom, 1986), and mirror matter, a full copy of our forces that
+  meets ours only through gravity (Lee and Yang, 1956; Foot). Observations limit it: if the dark charge had its own light
+  and were strong, dark matter could radiate, cool and form disks, and the observed halos and colliding clusters bound
+  how strongly dark matter can push on itself. (d) She asked whether the curled cube's own micro directions can cost 44
+  and release 66, then less, then nothing. *Ours, exact (O71 addendum):* 66 per direction per 6-cube fixes λ = 1.258;
+  without a tie the walls there rise (none, 15.5, 35.6); with the follow tie at κ = 2.03 they read 44, none, 3; no tie that
+  counts only open directions per point gives 44, 12, 0, the nearest missing by 19.
 - **What starts.** T44 (pre-registered with her inferred prediction and ours): under the follow tie, does one push open
   all three curled directions of X into one flat space?
 

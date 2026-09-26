@@ -1723,6 +1723,16 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     a − 2κ, a + κ, a + κ (a = 4(λ − 1)), so the first opening absorbs energy once κ > a/2 and the later two release more:
     the qualitative shape of her ledger (the first costs, the later ones deliver), with the second and third equal.
   - Whether one push then opens all three is dynamical: PREREGISTRATION T44, launched. *Ours; exact where stated.*
+  **Addendum, 04:23 ET: the ledger inside one 6-cube** (`scripts/exact_ledger_per_cube.py`; the owner asked whether the
+  micro directions of one fully curled cube can cost 44 and release 66, then less, then nothing). A 6-cube has 64 points,
+  so a release of 66 per direction fixes λ = 1 + 66/256 = 1.258, close to her 1.25. At that λ, without a tie, the walls
+  are none (−4.6: the curled cube is not stuck), 15.5, 35.6: they rise, the reverse of her order. With the follow tie at
+  κ = 2.03 the first wall is 44.1, the second none (−31.4), the third 3.1; at κ = 2.25, 49.4, none, none. But the tie
+  also moves the releases: per cube −194 (the first opening absorbs), then 196 and 196, the total still 198. Over every
+  tie with two constants f(1), f(2) (a grid from −2 to 8), the closest the walls come to 44, 12, 0 is 30.2, 1.5, −7.6, a
+  miss of 19. **So no tie that depends only on how many directions are open at a point gives her 44, then 12, then
+  free**; the middle wall always falls faster than the last. A tie of that kind can give "large, then free, then nearly
+  free" (κ ≈ 2 to 2.25), which T44 is running.
 
 - **O72 The counting drive to curl is set by the points, not by the three large directions, and it grows with the
   number of curled cells; O55's "the crossing does not move with N" was wrong.** (2026-09-26, about 04:00 ET; VISION

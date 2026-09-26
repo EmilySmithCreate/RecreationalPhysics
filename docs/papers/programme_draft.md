@@ -142,6 +142,7 @@ author's claim, and the model is how she tests its pieces.
 
 
 **Piece 14.**
+- 26 Sep 2026, 04:23 ET: Exact, one 6-cube's worth (O71 addendum): 66 per direction per cube fixes λ = 1.258; without the tie the walls rise (none, 15.5, 35.6); with the tie at κ = 2.03 they read 44, none, 3; no tie counting only open directions per point gives 44, 12, 0 (nearest misses by 19). The author's idea: dark matter may carry its own kind of charge; relatives: dark photons, mirror matter.
 - 26 Sep 2026, 04:10 ET: Piece created. The author's ledger recorded (VISION Update 33) and checked (O71). T44 launched.
 - 25 Sep 2026, 18:46 ET: The author's revision: one kind of energy opens all three directions; the order of opening sets what each releases (VISION Update 32).
 - 25 Sep 2026, 17:57 ET: Exact (O70): a tie shaped to give today's budget keeps X stuck but leaves the partly open states stuck too; its first push is never the largest.
