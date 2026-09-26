@@ -2674,3 +2674,14 @@ way. If ordinary matter's opening does go, time's wall of 106 to 111 stops it.
 Which direction is time: the model has no time, so "the fourth opening" is only the last in the order. Anything about
 whether dark energy's energy can later make black holes (it cannot in standard cosmology; VISION Update 36). Every
 eight-link result carries VISION Update 24's caveat.
+
+### Confirmation, 2026-09-26, 14:00 ET, before any result of T45 or T46 was downloaded or read
+
+The owner confirmed the inferred prediction in her own words: "All directions end up open from that one push, because
+each release goes on to start the next opening." It now stands as **hers** for T45 setting C and for both T46 settings:
+ONE PUSH OPENS ALL. Written at the same time, before any result, so that no reading can be chosen afterwards: the
+sealed runs turn every release into heat spread through a shared bath, and nothing in them gathers energy into one
+place the way moving, colliding or falling matter would. If the verdict is NOT ALL, it is recorded as her prediction
+failing in this model, and the one ingredient her mechanism would then need, concentration of released energy (her
+"mass is a directional catalyst"), is named as untested, not as an excuse. If it is ONE PUSH OPENS ALL, heat alone was
+enough.

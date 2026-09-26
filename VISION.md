@@ -829,6 +829,17 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   predictions for T45 setting C and T46 stay marked inferred until she confirms or replaces them. Why time's wall is the
   largest is in O75, addendum.
 
+- **Her answers, 14:00 ET.** (a) Her prediction for T45 setting C and T46 is confirmed as hers: one push opens all,
+  each release starting the next opening (PREREGISTRATION T46, confirmation, written before any result). (b) She asked
+  whether relativity, that is movement, could pay time's start cost. *Ours; general knowledge, to verify:* movement does
+  not add energy of its own; the energy of motion is the energy the moving thing already carries. What motion does is
+  bring energy together: two things colliding deliver their energy of motion into one small place at one moment, which
+  is how accelerators reach energies nothing at rest has. So "movement pays time's start cost" reads, in the model, as
+  a concentrated push delivered locally: the local spark protocol (ASSUMPTIONS Q22, used in T26), applied to a
+  three-open state resting behind time's wall. Proposed as a follow-up to T46, not written or run: if T46 rests with
+  time still curled, give that resting state one local push of at least the wall and see whether time's opening starts
+  and spreads.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
