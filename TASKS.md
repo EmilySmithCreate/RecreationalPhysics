@@ -387,12 +387,12 @@ replaced.
 tube). Part A on the laptop (`scripts/run_front_speed.py`, six configs), part B two Batch jobs. Read with
 `scripts/analyse_t47.py`. Accept: the verdicts on the record, the owner's inferred predictions confirmed or replaced.
 
-## Reading before any prediction on the rate of time  ☐
+## Reading before any prediction on the rate of time  ☑ (2026-09-26, three of five)
 
 **Added 2026-09-26** (the owner's instruction). Varying-speed-of-light cosmology (Moffat; Albrecht and Magueijo; the
 Magueijo review) and Ellis's evolving block universe, read in full before any new prediction about time's rate or an
-accelerating present. Search summaries only so far (`docs/reading/notes/2026-09-26_time_rate.md`); arXiv is blocked by
-this session's network. T47 part A's prediction was recorded before this instruction and stands as recorded.
+accelerating present. Read in full by assistant agents from PDFs the owner supplied: [Mag03], [Ell14], [ER10]
+(`docs/reading/notes/2026-09-26_time_rate.md`); Albrecht and Magueijo (1999) and Moffat (1993) not read. T47 part A's prediction was recorded before this instruction and stands as recorded.
 
 ## A charge per opening direction  ☐
 
