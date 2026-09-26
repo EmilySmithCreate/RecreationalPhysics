@@ -1392,6 +1392,9 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   before it by 16λ or 32λ, so each fold makes the next easier, and nothing in the energy ties the directions together.
   What does not: a factor of two. Corrected in O50, VISION Update 27 (a pointer), the six-link paper, paper 3, the
   series plan, the loop-and-exchange brief and the programme page.
+  **Second correction, 26 September (O72):** the sentence above that the crossover λ does not move with N in the gas
+  leaves out ln k!, the exchange of identical cubes, which is in this entry's own count; the crossing rises slowly with
+  the number of cubes (1.031 at 10³ cubes, 1.045 at 10⁶, g = 1.5).
 
 - **O56 Six links, exact: the one-switch curled column is not a relic, and two of them pull on each other neither by
   energy nor by counting except at contact and at symmetric placements.** (2026-09-25; `scripts/exact_relic_d.py`; flat
@@ -1688,6 +1691,58 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   So with this simplest tie the first push is never the largest; the owner's picture (red's push the largest, then less
   and less, each of its own type of energy; VISION Update 30) is not what it gives. Typed energy is the ingredient her
   picture adds, and is undecided.
+
+- **O71 The owner's ledger of 26 September against the model, exact: an activation is a hill, not a toll; the walls are
+  fixed while the release grows with the region; and the follow tie never gives "large, smaller, none".** (2026-09-26,
+  about 04:00 ET; VISION Update 33; `scripts/exact_walls_tie_follow_d.py` over λ = 1.05 to 1.40 and κ = 0 to 3 on the
+  gas of eight 6-cubes, 4 × 4 × 18 and 4 × 12 × 12; arithmetic.)
+  - **Her numbers, checked.** Three equal releases of 66 make 198; her outputs 10 + 54 + 132 make 196 (5.1, 27.6 and
+    67.3 %). Her "7 %" is read as 27 %, which her 54 of about 200 implies. One reading that balances exactly: the second
+    wall's 12 is paid twice (by red as the push, by green as its own opening) and every unit paid to a wall ends in the
+    third share: 66 − 44 − 12 = 10, 66 − 12 = 54, 66 + 44 + 12 + 12 = 134, total 198 (5.1, 27.3, 67.7 %). The measured
+    budget is about 5 : 27 : 68 with dark matter about 5.4 times ordinary matter (Planck 2018, general knowledge, to
+    verify); her 54 : 10 is 5.4 exactly, because 44 and 12 were chosen to reach it: two numbers fitted to two ratios, as
+    in O70, not a prediction.
+  - **In the model a wall is returned, not spent.** The barrier between two rungs is the same from either side (O55), so
+    the energy paid to climb it comes back on the way down, and an opening's net release is the difference between its
+    rungs whatever the wall. With every direction costing the same 4(λ − 1) per point (O41), the three releases are equal
+    at every λ, so **no λ gives her proportions**; what can make them unequal is strain stored in the partly open states,
+    which is the tie (O70 fitted it: f(1) = 0.85a, f(2) = 1.04a). Her ledger needs the energy paid to a wall to leave that
+    opening's share and land in another's: a transfer this energy does not make, and a new ingredient if adopted.
+  - **The number of points matters.** Walls are local and fixed with size (T32: 16 at every size, O54); a direction's
+    release is 4(λ − 1) per point, so it grows with the region that opens. The share of a burp spent on walls is about
+    W / (4(λ − 1) N): her 44 of 66 describes a region of 66 / (4(λ − 1)) points, 66 at λ = 1.25, about one 6-cube (64).
+    For a region of a million points the same wall is 0.004 % of the release, and the shares go to whatever the rungs set
+    (thirds without a tie).
+  - **The follow tie's walls (six links, λ = 1.25; X's wall, then the two-curled and one-curled rungs'):** κ = 0: −4, 16,
+    36; κ = 0.5: 8, 6, 28; κ = 1: 20, −6, 20; κ = 2: 44, −30, 4; κ = 2.25: 50, −36, 0; κ = 2.5: 56, −42, −4. X's wall
+    rises as −4 + 24κ; the middle rung loses its wall first (κ ≈ 0.75) and the last rung last (κ ≈ 2.25), at every λ from
+    1.05 to 1.40. So the order "large, smaller, none" never occurs: when the last wall reaches zero the middle one is long
+    gone. The nearest is κ = 2 at λ = 1.25, walls 44, none, 4. That 44 equals hers and a 6-cube releases 64 per direction
+    without the tie: a numerical near-miss, and nothing is read into it. With the follow tie the per-point releases are
+    a − 2κ, a + κ, a + κ (a = 4(λ − 1)), so the first opening absorbs energy once κ > a/2 and the later two release more:
+    the qualitative shape of her ledger (the first costs, the later ones deliver), with the second and third equal.
+  - Whether one push then opens all three is dynamical: PREREGISTRATION T44, launched. *Ours; exact where stated.*
+
+- **O72 The counting drive to curl is set by the points, not by the three large directions, and it grows with the
+  number of curled cells; O55's "the crossing does not move with N" was wrong.** (2026-09-26, about 04:00 ET; VISION
+  Update 33, the owner's question; `scripts/exact_counting_drive.py`, tested in `tests/test_exact_counting_drive.py`
+  against O55.) With interchangeable points the free energy is H − g ln A (O55).
+  - **The three large directions contribute nothing to the drive.** Their permutations are a factor D! (6 for three) in
+    flat space and in the curled gas alike, so they cancel. The owner's guess is right: the gain comes from the micro
+    degrees of freedom, the points.
+  - **Per point, from one fully curled cell:** ln A / 2^(2D) = 0.329 (four links, the 4-cube), 0.157 (six, the 6-cube),
+    0.060 (eight, the 8-cube). The more directions a cell curls, the more points it holds and the less each gains.
+  - **The exchange of identical cells adds ln k!,** which grows faster than the number of cells, so the λ below which the
+    fully curled gas beats flat space rises with the logarithm of the size. Six links, g = 1.5: 1.020 at 8 cells (O55),
+    1.031 at 10³, 1.045 at 10⁶, 1.072 at 10¹², 1.126 at 10²⁴, 1.288 at 10⁶⁰; counting beats the curling cost at
+    λ = 1.10 from about 10¹⁸ cells and at λ = 1.25 from about 10⁵² (about 10⁵³·⁵ points). Four links reach λ = 1.25 at
+    10⁷ cells, eight links only at 10²⁹⁰. **Correction to O55:** its sentence that the crossing λ does not move with N in
+    the gas left out ln k!, which is in its own count; the crossing moves, slowly.
+  - *Ours, unverified:* this is the Gibbs factor of identical pieces, the same one that makes interchangeable-point
+    ensembles favor breaking up at large sizes (VISION Update 12's stated expectation). For the owner's balance (a drive
+    to curve that exists but is not too big), the model's version is a drive set by how many points a curled cell holds
+    and by how many cells there are; it compares single arrangements and ignores each one's thermal excitations.
 
 ## Provenance
 

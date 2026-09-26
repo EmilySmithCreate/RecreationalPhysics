@@ -2479,3 +2479,66 @@ the fold (6), shortening the region's life relative to its background; not run.
 
 Anything about the infinite hyperbolic plane of his figure; whether a lone smallest allotrope behaves as three fused ones;
 whether the cross-cap or handle under the region changes its life; other sizes (720-point versions are built for that).
+
+## T44. Under the direction tie, does one push open all three curled directions of X? (pieces 11 and 14; VISION Updates 30 and 33; written 2026-09-26, about 04:00 ET, before any run)
+
+### Why
+
+The owner's ledger of 26 September (VISION Update 33) has the first opening's push the largest (her 44), the second
+smaller (12), the third free, and the change running "until there is no energy left to activate another". Without a tie,
+the six-link walls rise from rung to rung instead (O49, O55: 8, 25.6, 43.2 at λ = 1.10), T30's torus opened one direction
+and stopped, and its gas of 6-cubes went two rungs down in patches and never became one space (O54, O64). The owner
+decided a tie between the directions (Update 30); its working form, the follow form f(d) = κ(D − d) for 1 ≤ d ≤ D, was
+fixed before its exact test (O68). Exact at λ = 1.25 (`scripts/exact_walls_tie_follow_d.py`; ASSUMPTIONS O71): the gas's
+wall is −4 + 24κ (20 at κ = 1, 44 at κ = 2, 56 at κ = 2.5); the two-curled rung's wall is gone above κ = 0.75 and the
+one-curled rung's above κ = 2.25 (4 at κ = 2). So at κ = 2.5 no partly open rung has a wall at all, and at κ = 2 the
+walls read 44, none, 4, the nearest the model comes to her 44, 12, 0. Single moves cannot say whether a run then goes all
+the way to one flat space; this run can. The kernel was built and checked today (`graphity.sealed_tie_d`,
+`tests/test_sealed_tie_d.py`: draw for draw `sealed_d` at κ = 0, the incremental tie exact against full recomputation
+and networkx on a damaged run, H + κT + stores conserved).
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with `"kappa"`, six links, a gas of eight separate 6-cubes (N = 512, every point at
+d = 0), λ = 1.25, κ = 1, 2, 2.5, a spark equal to the exact wall out of the gas under the tie (20, 44, 56) in one store
+of a shared bath of C = N/2 or 2N, the rest empty; eight replicas, 60,000 sweeps read every 200, final graphs saved. Six
+Batch jobs (`configs/t44_gas_lam125_k<κ>_<C>.json`, `cloud/queue/2026-09-26_t44.txt`), seeds 20264410, 20264420,
+20264425, the per-replica seed carrying N, C, the spark and the replica. No κ = 0 cell: at λ = 1.25 the gas has a downhill
+move without the tie (O41); T30's gas at λ = 1.10 is the untied reference. No pilot was run; a 40-sweep smoke test in
+`tests/test_t44.py` checked only that the runner writes the tie and conserves energy.
+
+### Definitions, fixed now (`scripts/analyse_t44.py`, tested in `tests/test_t44.py` before any run)
+
+a = 4(λ − 1) = 1 per point per direction. Per replica: the flat state is reached at the first block with H/N ≤ 0.10 a
+and at least 90 % of points at d = 3. From the last block: **MELTED** (a quarter or more of points above d = 3), **FLAT**
+(the flat state reached and 90 % at d = 3 at the end), **STUCK** (more than half still at d = 0), **PARTLY OPEN**
+otherwise. For FLAT replicas the pattern: **STEPWISE** if at some block more than half the points sat at d = 1 or more
+than half at d = 2, **TOGETHER** otherwise. Per cell (κ, C): the majority outcome, else MIXED. Per κ: **ONE PUSH OPENS
+ALL** if some cell has a FLAT majority, **NOT ALL** otherwise.
+
+Reported, not scored (the owner's ledger): for each replica the energy per point the bath had gained by the first block
+at which half the points had at least one, at least two, and all three directions open, and the end census.
+
+### Predictions
+
+**The owner's, inferred by the assistant from VISION Update 33 ("it will burp until there is no energy left to activate
+another"; the later pushes smaller) and Updates 22 and 25, to be confirmed or replaced by her: ONE PUSH OPENS ALL** at
+κ = 2 and 2.5 at least. Pattern not predicted.
+
+**Ours, unverified: NOT ALL at every κ.** Three reasons, stated before the runs. (1) Under the follow tie a point with one
+direction open sits 2κ − a above a fully curled one (1 at κ = 1, 3 at κ = 2), so a region that opens one direction at a
+time must borrow from the bath before later openings repay it. (2) The follow form counts a broken point as zero (O68), so
+spending released energy on damage escapes the tie as well as opening does, and more cheaply. (3) The gas is eight
+separate cubes, which must join to become one space, and T30's untied gas never did. Expected: STUCK or PARTLY OPEN at
+κ = 1; PARTLY OPEN or MELTED at κ = 2 and 2.5. A FLAT majority in any cell would be the first time the model makes one
+space out of the fully curled X, and would be her rule holding in the model with the tie.
+
+### Named or interchangeable points
+
+Named, as T30.
+
+### What this cannot show
+
+Anything at λ = 1 (CQG) or without the tie; whether the tie's form is the right one (it is one of a family, O68, O70); the
+owner's energy budget, which the follow form's releases (a − 2κ, a + κ, a + κ per point) do not match and which O70
+fitted with a different shape; the pattern with a torus start, where one direction is singled out.

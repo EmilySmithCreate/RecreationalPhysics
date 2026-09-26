@@ -1,0 +1,7 @@
+# T44 (PREREGISTRATION T44, written 2026-09-26 before any run): the fully curled gas under the follow tie.
+run_sealed_curled_d t44_gas_lam125_k100_cn2
+run_sealed_curled_d t44_gas_lam125_k100_c2n
+run_sealed_curled_d t44_gas_lam125_k200_cn2
+run_sealed_curled_d t44_gas_lam125_k200_c2n
+run_sealed_curled_d t44_gas_lam125_k250_cn2
+run_sealed_curled_d t44_gas_lam125_k250_c2n
