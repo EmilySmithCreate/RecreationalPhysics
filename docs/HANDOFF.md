@@ -49,6 +49,12 @@ git history.
   kernel `graphity.sealed_tie_d` (tests in `tests/test_sealed_tie_d.py`); the runner takes `"kappa"`; read with
   `scripts/analyse_t44.py`.
 - **Unread in the bucket, all finished:** the rest of T37 and T38, and T39 to T43. Download and read them next.
+- **05:08 ET: the programme regrouped into four groups, twelve pieces** (VISION Update 34; the mapping from old numbers is in
+  `docs/papers/series_plan.md`'s last section). Old piece numbers in earlier records (VISION, ASSUMPTIONS, PREREGISTRATION)
+  are left as written; the page and the draft carry "was piece N". Allotropes parked (`docs/parked/allotropes.md`; a local
+  copy in the gitignored outreach folder). Decided: a charge per opening direction, form not chosen
+  (`docs/design/direction_charge_brief.md`). O73 recorded. The dark-charge reading is owed: arXiv was blocked by this
+  session's network.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".

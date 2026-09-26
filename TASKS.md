@@ -370,6 +370,12 @@ sealed six-link chain (`graphity.sealed_tie_d`), six Batch jobs on a gas of eigh
 Read with `scripts/analyse_t44.py`. Accept: the verdict per κ on the record, with the owner's inferred prediction
 confirmed or replaced.
 
+## A charge per opening direction  ☐
+
+**Added 2026-09-26** (VISION Update 34, the owner's decision). Brief: `docs/design/direction_charge_brief.md`, three forms
+for her choice. Nothing is built until she chooses a form and how a point's kind is defined. Reading owed first
+(`docs/reading/notes/2026-09-26_dark_charge.md` has search summaries only).
+
 ## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
 
 **Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a

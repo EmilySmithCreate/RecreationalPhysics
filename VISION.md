@@ -713,6 +713,41 @@ ASSUMPTIONS O71, O72.
 - **What starts.** T44 (pre-registered with her inferred prediction and ours): under the follow tie, does one push open
   all three curled directions of X into one flat space?
 
+Update 34 (2026-09-26, 05:08 ET): **two decisions of the author's (a charge per opening direction; the programme regrouped,
+allotropes out of it), and her hypotheses about the third opening.** Her words, put in order. Details: ASSUMPTIONS O73;
+`docs/design/direction_charge_brief.md`.
+
+- **DECISION (the author's): the model gets a charge per opening direction.** Each kind of matter carries its own kind
+  of charge, which acts only on its own kind: red on red, blue on blue, green on green. This is her answer to why dark
+  matter has no electric charge: it has one, of a different kind. Under S1 this is a new ingredient; its form is fixed in
+  the design brief before anything is built or run, every setting run is published, and the model with it is our family,
+  never CQG. Published relatives (general knowledge and search summaries; the reading was blocked by this session's network and is still owed, `docs/reading/notes/2026-09-26_dark_charge.md`): hidden-sector charges and dark photons, mirror matter,
+  and Kaluza–Klein charge from motion round a curled direction. The brief records what observations already limit.
+- **DECISION (the author's): the programme is regrouped.** Four groups: the burp, the scrap, what it must give back, the
+  cycle. Pieces 11 and 13 (how three and four curled directions open) merge, as do 5 and 6 (the scrap); time and the
+  speed limit becomes a piece of its own; the charge idea stays in the piece on the three shares, with the triad's
+  comparisons and contrasts. **The allotropes (old piece 12) leave the programme**: they no longer carry part of her
+  claim (Update 30). They are parked in `docs/parked/allotropes.md` for the correspondence with the model's author, since
+  they are his question and T43 answers it; they come back if the programme needs them. The paper outlines follow the
+  groups (`docs/papers/series_plan.md`).
+- **Her hypotheses about the third opening.** Could the costs run 44, then none, then 12? And could the third opening
+  cost something because it has to open time: the released energy lets matter move, movement makes time, so the third
+  pays for time as well as for its own opening? She proposes testing a few relationships between the large and the hidden
+  degrees of freedom. *Ours, exact (O73):* 44, none, 12 exists under the follow tie (λ = 1.171, κ = 1.735); 44, 12, 0 does
+  not, on long or short tori. With interchangeable points the counting charges the first opening about 15 per cube and
+  the later two almost nothing, her order of pushes in the free energy. *Ours, unverified:* "the third pays for time" is a
+  new ingredient (the model has no time); the nearest thing it can hold is an extra cost on the last opening, which would
+  be a knob of its own under S1 and is not decided.
+- **Her question: is today's budget the budget at the beginning?** *Ours, arithmetic on Planck 2018's central values as given by a search summary, to verify:*
+  no. Ordinary and dark matter thin out together as space grows, so their ratio, about 5.4, is the same as at the start;
+  dark energy does not thin, so its share was tiny early (far below one part in a million when the first atoms formed) and
+  is large only now. So the ledger's 68 % for dark energy is today's share, not a share of the burp. From Planck 2018's central values (`docs/reading/notes/2026-09-26_dark_charge.md`, search summaries, to verify): today 4.9 % ordinary, 26.4 % dark matter, 68.6 % dark energy; when the first atoms formed, 11.9 %, 63.8 %, and dark energy about one part in a billion, with radiation the rest. Dark energy overtook matter only about four billion years ago (general knowledge, to verify). The dark-to-ordinary ratio, 5.36, is the one that dates from the start. *Ours:* her picture survives this only if the third opening's release is a fixed energy per volume, held by space, whose share grows as the rest thins; that fits "the energy of a direction held by space", but it does not say why its share is about two thirds now.
+- **Her question: what is κ?** The strength of the direction tie: the extra cost, per point, of each direction still
+  curled once at least one direction at that point has opened. At κ = 2.03 the tie's λ is 1.258, the λ at which one
+  6-cube's untied opening releases 66 per direction.
+- **What is awaited:** T44 (three directions with the tie, running). The four-direction results in hand are untied (T33
+  read; T40 finished and unread); a four-direction run with the tie is not launched.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

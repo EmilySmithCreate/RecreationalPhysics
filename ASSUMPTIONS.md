@@ -1754,6 +1754,24 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     to curve that exists but is not too big), the model's version is a drive set by how many points a curled cell holds
     and by how many cells there are; it compares single arrangements and ignores each one's thermal excitations.
 
+- **O73 The owner's follow-up on the ledger, exact: 44, none, 12 exists under the follow tie; 44, 12, 0 does not, on short
+  tori either; and the counting cost of opening falls exactly in her order.** (2026-09-26, 05:08 ET; VISION Update 34;
+  `scripts/exact_ledger_per_cube.py`, its second half.)
+  - **44, then none, then 12** (her alternative order): under the follow tie at λ = 1.171 and κ = 1.735 the walls out of the
+    fully curled gas, the two-curled rung and the one-curled rung are exactly 44.0, none (−16.7) and 12.0. At that λ a
+    6-cube's untied release per direction is 43.8, not 66, and the tie moves the releases to −178, 155, 155 per cube.
+  - **44, 12, 0 on other arrangements:** tori with a short open side (4 × 4 × 6, 4 × 6 × 6), where a different move is the
+    cheapest (O49), do no better: the nearest two-constant tie misses by 30, against 19 on the long tori. So among the
+    arrangements and ties tried, no 3D ladder gives her first order of costs.
+  - **The counting, which energy-only walls leave out** (arithmetic on O55's exact renaming counts, 512 points, g = 1.5):
+    with interchangeable points, the first opening costs g ln(A_gas / A_one open) = 122 in all, 15.3 per cube; the second
+    2.7 in all; the third returns 2.7. So counting charges the first opening heavily and the later ones almost nothing:
+    her order of pushes, in the free energy rather than the energy. Per cube the first cost grows with the number of
+    cubes (ln k!); it reaches 44 per cube at about 6 × 10⁸ cubes. *Ours; a comparison of single arrangements, as O72.*
+  - **What this analysis does not include** (ours): any degree of freedom beyond the points and links. The tie is a
+    coarse stand-in for the owner's hidden degrees of freedom; if they store strain or carry charge (VISION Update 34),
+    the walls and releases above change, and nothing here says how.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
