@@ -13,10 +13,7 @@ own bar, S5, is not met; paper 1 was submitted to arXiv on 25 September 2026 wit
 Our spacetime is one settled arrangement of something deeper, X: a specific, relatively stable arrangement
 with its own dimensions, curled where ours are open. X was stable for now, not for ever. A push started the
 change in one small part of X; it spread as a front, X opened into space, and the change came out as a burp: a fixed
-release of energy. X's three curled directions are alike and open in turn, like a triad (red, green and
-blue); which goes first is chance, and the order sets what each releases: the first, red, releases ordinary
-matter and radiation, the Big Bang's energy; the second releases dark matter; the third, dark energy. The same
-kind of energy opens all three. What the burp does not deliver returns to the
+release of energy. X's three curled directions are alike, so which one opens first is chance. The first push can come from any kind of energy, most likely the kind there is most of. The first direction to open, red, releases ordinary matter and radiation, the Big Bang's energy, and spends part of it pushing the second direction, blue, open; blue's release is dark matter. The third, green, then opens with no push at all, and its release is dark energy. What the burp does not deliver returns to the
 black hole, ready to start another burp. What did not convert remained as a scrap. Energy was conserved across
 the change. The rules of the two phases are their constants and do
 not change from one generation to the next. Inside the space that forms, black holes are regions that re-curl
@@ -142,6 +139,7 @@ author's claim, and the model is how she tests its pieces.
 
 
 **Piece 14.**
+- 26 Sep 2026, 04:28 ET: The author's clarification: the first push can be any kind of energy, most likely green (the most abundant); which direction becomes red is chance; red's release pays blue's push; green opens with no push. Red, ordinary; blue, dark matter; green, dark energy.
 - 26 Sep 2026, 04:23 ET: Exact, one 6-cube's worth (O71 addendum): 66 per direction per cube fixes λ = 1.258; without the tie the walls rise (none, 15.5, 35.6); with the tie at κ = 2.03 they read 44, none, 3; no tie counting only open directions per point gives 44, 12, 0 (nearest misses by 19). The author's idea: dark matter may carry its own kind of charge; relatives: dark photons, mirror matter.
 - 26 Sep 2026, 04:10 ET: Piece created. The author's ledger recorded (VISION Update 33) and checked (O71). T44 launched.
 - 25 Sep 2026, 18:46 ET: The author's revision: one kind of energy opens all three directions; the order of opening sets what each releases (VISION Update 32).

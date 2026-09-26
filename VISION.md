@@ -703,6 +703,13 @@ ASSUMPTIONS O71, O72.
   and release 66, then less, then nothing. *Ours, exact (O71 addendum):* 66 per direction per 6-cube fixes λ = 1.258;
   without a tie the walls there rise (none, 15.5, 35.6); with the follow tie at κ = 2.03 they read 44, none, 3; no tie that
   counts only open directions per point gives 44, 12, 0, the nearest missing by 19.
+- **Her clarification, 04:28 ET, revising Update 32's "one kind of energy pays every push".** The first push can be any
+  kind of energy, most likely green, since there is most of it; it does not matter which. In the curled state the three
+  directions are not different, so which becomes red is chance. Red's release is spent opening blue, and green then opens
+  with no energy once the other two are open. The colors now name the order: red first (ordinary matter and energy), blue
+  second (dark matter), green third (dark energy, the most abundant). *Ours:* the model has one kind of energy, so "any
+  kind pays the first push" is what it already does. With the follow tie at κ of about 2.25 or more the last opening is
+  free, as she says; what the tie does not give is a second wall for red's release to pay (O71 addendum).
 - **What starts.** T44 (pre-registered with her inferred prediction and ours): under the follow tie, does one push open
   all three curled directions of X into one flat space?
 
