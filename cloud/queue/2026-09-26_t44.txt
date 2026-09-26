@@ -1,4 +1,5 @@
 # T44 (PREREGISTRATION T44, written 2026-09-26 before any run): the fully curled gas under the follow tie.
+# Submitted by the run_queue workflow from the commit that carries this line (the branch's first push checked only its newest commit, which did not touch this file).
 run_sealed_curled_d t44_gas_lam125_k100_cn2
 run_sealed_curled_d t44_gas_lam125_k100_c2n
 run_sealed_curled_d t44_gas_lam125_k200_cn2
