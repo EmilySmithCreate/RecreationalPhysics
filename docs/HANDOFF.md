@@ -58,6 +58,10 @@ git history.
 - **11:00 ET: VISION Update 35, O74, T45 launched** (the owner's budget fit: dark energy first fits best; locked predictions in
   PREREGISTRATION T45; eight Batch jobs; read with `scripts/analyse_t45.py`). New kernel: `run_sealed_bath_table_d` (a tie of any
   shape). Next ASSUMPTIONS number: **O75**.
+- **11:40 ET: VISION Update 36, O75, T46 launched** (the owner's order as a mechanism: dark energy, dark matter free, ordinary,
+  time; T45 setting C in three directions, her prediction for it added after launch and before any result; four eight-link
+  Batch jobs, `cloud/queue/2026-09-26_t46.txt`, read with `scripts/analyse_t46.py`; `analyse_t44.read_replica` takes `dim`).
+  Next ASSUMPTIONS number: **O76**.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".

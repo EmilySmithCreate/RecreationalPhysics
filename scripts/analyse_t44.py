@@ -43,7 +43,9 @@ def hist(b):
     return [int(b["d%d" % k]) for k in range(8)]
 
 
-def read_replica(blocks, lam, n):
+def read_replica(blocks, lam, n, dim=DIM):
+    """dim: the number of directions (3 for T44 and T45; 4 for T46, added 2026-09-26 with the default unchanged)."""
+    DIM = dim  # noqa: N806
     a = 4.0 * (lam - 1.0)
     t_flat = None
     middle = False
@@ -53,9 +55,9 @@ def read_replica(blocks, lam, n):
         h, d = float(b["h_per_vertex"]), hist(b)
         if t_flat is None and h <= a * TOL and d[DIM] >= CLEAN * n:
             t_flat = int(b["sweep"])
-        if d[1] > n / 2 or d[2] > n / 2:
+        if any(d[j] > n / 2 for j in range(1, DIM)):
             middle = True
-        for k in (1, 2, 3):
+        for k in range(1, DIM + 1):
             if k not in stages and sum(d[k:DIM + 1]) >= n / 2:
                 stages[k] = (float(b["total"]) - e_bath0) / n
     d = hist(blocks[-1])

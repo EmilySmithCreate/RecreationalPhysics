@@ -786,6 +786,36 @@ infinity, per her strange-loop measure, across the arrangements found. Details: 
   the cost is not being charged, and nothing curls because the walls and the curling cost need energy paid locally; mass
   is what pays. That is her picture, with the cost and the drive kept apart.
 
+Update 36 (2026-09-26, 11:20 ET): **the author's order, stated as a mechanism: dark energy first and nets almost
+nothing, dark matter free and pays for ordinary matter, ordinary matter pays to open time.** Her words, put in order.
+Maybe there was no time term for the first snap, so its energy does not change with time or the size of space; it runs
+through the whole of space for ever. That would ensure there is still mass for more black holes afterwards, while the
+other releases dissipate. If so, dark energy nets almost zero, and it is the energy of the free second break, dark matter,
+that pays for the third, which opens the third direction. Maybe ordinary matter pays to break open time, which is why it
+started lower. It can build complex molecules because it has the triad of quarks, and we interact with it because it
+matches the three directions and time we experience; the others do not interact in three directions, though they still
+have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75; PREREGISTRATION T45 addendum and T46.
+
+- **In three directions this is T45's setting C**, locked half an hour before her message: dark energy → dark matter →
+  ordinary, λ = 1.30, walls 6.4, none, 43.7, releases per point 0, 3.034, 0.566. Her prediction for it, one push opens all,
+  is recorded after launch and before any result was read, and says so.
+- **In four directions, exact (O75):** the same pattern. At λ = 1.30 the walls are 17.6 (the push that opens dark
+  energy's direction), none (dark matter), about 50 (ordinary matter) and about 106 to 111 (time). X is stuck for
+  λ < 1.67 and dark matter opens free for λ > 1.15. The last two openings are the hardest, and her picture has them paid by
+  the releases before them. T46 (four cloud jobs, pre-registered with her prediction and ours) runs it.
+- **"Ordinary matter pays to open time", with correct arithmetic** (*ours*). Paying a wall is a loan: the energy comes
+  back on the far side. For ordinary matter to end lower, time's opening has to keep energy for good, and then the state
+  with time still curled lies below flat four-direction space: four open directions become only held in place, not the
+  lowest state. Either reading can be run (T46 runs both); which she means is hers.
+- **Dark energy with no time term** (*ours; general knowledge, to verify*) is a cosmological constant: the same density
+  everywhere, always. That fits "nets almost zero at birth", and it is the fit's best order since O74. But such energy
+  does not clump or fall; it pushes things apart faster, so it cannot be the mass later black holes are made of. That
+  mass is ordinary and dark matter.
+- **Dark matter as "not quite 3D mass"** (*ours; general knowledge, to verify*): every measurement of it (rotation of
+  galaxies, lensing maps, colliding clusters, the cosmic microwave background) finds it gravitating exactly as
+  three-dimensional mass. What can differ is how it interacts, which is the charge-per-kind decision of Update 34, not how
+  it gravitates. The quark triad fits protons and neutrons; electrons are ordinary matter with no quarks.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

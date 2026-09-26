@@ -125,3 +125,21 @@ def test_table_kernel_is_the_follow_kernel_draw_for_draw_and_exact_for_any_shape
         assert abs(t[-1] - table_total(adj, ftab)) < 1e-9
         assert abs(energy_table_d(adj, lam, ftab) + stores.sum() - e0) < 1e-8
     assert cqg_d.is_valid(adj)
+
+
+def test_table_kernel_at_eight_links_is_exact_and_conserves():
+    """T46 runs the table tie with eight links (four directions); checked here on a hot, damaged 4 x 4 x 4 x 6 torus."""
+    lam = 1.30
+    a = 4.0 * (lam - 1.0)
+    ftab = np.array([0.0, 1.0, -1.3711, -1.2, 0.0]) * a
+    adj, part = cqg_d.torus([4, 4, 4, 6])
+    side_u = np.flatnonzero(part == 0)
+    stores = np.full(2 * adj.shape[0], 4.0)
+    e0 = energy_table_d(adj, lam, ftab) + stores.sum()
+    changed = False
+    for block in range(3):
+        _, _, t, _, _, _ = run_sealed_bath_table_d(adj, side_u, stores, 10, 31 if block == 0 else -1, lam, ftab)
+        assert abs(t[-1] - table_total(adj, ftab)) < 1e-9
+        assert abs(energy_table_d(adj, lam, ftab) + stores.sum() - e0) < 1e-8
+        changed = changed or len(set(local_dimension_d(adj).tolist())) > 1
+    assert changed and cqg_d.is_valid(adj) and (stores >= -1e-12).all()

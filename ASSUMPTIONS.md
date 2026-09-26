@@ -1797,6 +1797,38 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     time); with three tie constants and no fourth number the fit is not fixed, and is left for her decision.
   - *Ours; exact where stated; the assignment of kinds to openings is the owner's hypothesis, not the model's.*
 
+- **O75 The owner's order of 26 September, 11:20 ET, priced exactly: dark energy, then dark matter free, then ordinary
+  matter, then time; the first push is small, and two large walls follow.** (2026-09-26, 11:40 ET; VISION Update 36;
+  `scripts/exact_budget_fit_4d.py`, tests in `tests/test_exact_budget_fit_4d.py`; PREREGISTRATION T45 addendum and T46.)
+  - **In three directions her order is T45's setting C**, locked at 11:00 ET before her message: dark energy → dark matter
+    → ordinary, λ = 1.30, walls 6.4, none, 43.7, releases per point 0, 3.034, 0.566. Her prediction for it (one push opens
+    all) is recorded after launch and before any result.
+  - **In four directions** (eight links, the 2,304-point ladder of O50, every switch priced from whole-graph
+    recomputation): with f1 = a, f2 = −1.371a fixed by the measured inputs and time's release ρa free, f3 = (ρ − 1)a. X is
+    stuck for λ < 1.666 and the dark-matter opening is free for λ > 1.148, at every ρ tried (−0.4 to 0.2), since neither
+    wall involves f3. At λ = 1.30: walls 17.6 (dark energy's push), none (dark matter), 50.7 (ordinary), 105.6 (time) at
+    ρ = 0; 45.9 and 111.4 at ρ = −0.2; flat space's own wall 128. So in four directions, as in three, the order gives a
+    small first push and a free second opening, and then **the last two openings are the hardest** (her picture has them
+    paid by the releases before them; T46 tests whether they are).
+  - **"Ordinary matter pays to open time", exactly.** A wall paid is returned on the far side (O71), so paying a wall
+    cannot leave ordinary matter lower. What can is time's opening taking energy for good (ρ < 0). The four releases
+    always add to 4a, so then the state with time still curled lies ρa per point **below** flat four-direction space:
+    flat space is no longer the lowest state and is held only by its wall (128, the cheapest move out of it). At ρ = 0 the two
+    tie. Either time's opening lends and returns (ρ = 0: ordinary is not lowered), or four open directions are only
+    metastable against time curling back (ρ < 0). *Ours; arithmetic; which one she means is hers.*
+  - **What the arithmetic gives for the shares, both readings:** dark energy 0, dark matter 3.371a, ordinary net 0.629a
+    per point (net of time), ratio 5.36 by construction; at λ = 1.30, 4.045 and 0.755 per point.
+  - *Ours, general knowledge, to verify:* energy with "no time term, through the full space forever" is what standard
+    cosmology calls a cosmological constant: the same density everywhere and at all times. It fits "nets almost zero at
+    birth". It does not clump, fall or collapse, and its effect is to push matter apart faster, so it cannot be the mass
+    that later black holes are made of; that mass is ordinary and dark matter. Dark matter, as measured (galaxy rotation,
+    lensing maps, colliding clusters, the pattern of the cosmic microwave background), gravitates exactly as
+    three-dimensional mass does, to the precision of those measurements; a "not quite 3D mass" would have to differ in how
+    it interacts, not in how it gravitates. Protons and neutrons are three quarks each, which fits her triad image, but
+    electrons are ordinary matter with no quarks, and a quark's three colors are not the three space directions (VISION
+    Update 32).
+  - *Ours; exact where stated; the assignment of kinds to openings is the owner's hypothesis, not the model's.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

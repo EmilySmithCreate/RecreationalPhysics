@@ -2606,3 +2606,71 @@ Which kind of matter a direction's release becomes (the model has one kind of en
 assignment); anything in four directions (time's share is not fixed; VISION Update 35); what a physical burp's
 temperature is, which the dark-energy share at birth depends on; anything at λ = 1 or with interchangeable points (which
 would add the counting cost, largest for the first opening; O73). Every six-link result carries VISION Update 24's caveat.
+
+
+### Addendum, 2026-09-26, 11:25 ET: the owner's prediction for setting C, recorded after launch and before any result was read
+
+The owner's message of 11:20 ET (VISION Update 36) states the mechanism of setting C in her own words: dark energy opens
+first and nets almost nothing; dark matter's opening is free, and its release pays the third opening, ordinary matter.
+**Her prediction for C, inferred by the assistant from that message: ONE PUSH OPENS ALL** (the first wall alone is enough;
+dark matter's release, 3.034 per point, pays ordinary matter's wall of 43.7). Disclosed: this was written after the eight
+T45 jobs were launched and before any of their output was downloaded or read. Our prediction for C is unchanged (NOT ALL
+with the first wall alone). *Ours:* what decides it is not the total (dark matter's release is about 35 times the third
+wall over the whole gas) but whether a bath that has shared the release among its stores can gather 43.7 in one place
+within the run; a wall paid is returned on the far side, so "pays" here means lends.
+
+
+## T46. The owner's order in four directions: dark energy, dark matter, ordinary matter, time (piece 5 and piece 6; VISION Update 36; written 2026-09-26, 11:40 ET, before any run)
+
+### Why, and the fit that fixes the numbers before any run
+
+The owner's message of 11:20 ET: dark energy opens first and nets almost nothing (no time term; its energy stays through
+all of space); dark matter's opening is free and its release pays the third; ordinary matter pays to open time, which is
+why it started lower. With eight links (four curled directions) and a tie of three constants the releases per point, in
+the order of opening, are r1 = a − f1, r2 = a + f1 − f2, r3 = a + f2 − f3, r4 = a + f3, adding to 4a. Reading "ordinary
+pays for time" as: what is seen as ordinary matter is r3 + r4, the measured inputs of O74 fix f1 = a, f2 = −1.371a and
+leave f3 = (ρ − 1)a, with ρa time's own release (ρ < 0: time's opening takes energy). Priced exactly
+(`scripts/exact_budget_fit_4d.py`; ASSUMPTIONS O75) on the 2,304-point ladder: X stuck for λ < 1.666, the dark-matter
+opening free for λ > 1.148, and two large walls after it. Locked:
+
+| Setting | ρ | λ | Walls: DE, DM, ordinary, time (flat 128) | Releases per point: DE, DM, ordinary, time |
+|---|---|---|---|---|
+| **ρ0** | 0 | 1.30 | 17.6, none, 50.7, 105.6 | 0, 4.045, 0.755, 0 |
+| **ρ−0.2** | −0.2 | 1.30 | 17.6, none, 45.9, 111.4 | 0, 4.045, 0.995, −0.24 |
+
+In ρ−0.2 the state with time still curled lies 0.24 per point below flat four-direction space.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with `"ftable_per_a"` at eight links (the table kernel checked at eight links today,
+`tests/test_sealed_tie_d.py`). A gas of nine 8-cubes (N = 2,304), λ = 1.30, bath C = 2N, sparks in one store: the first
+wall alone (17.61) and the sum of the positive walls (173.9 and 174.86); three replicas, 25,000 sweeps read every 250,
+final graphs saved. Four Batch jobs (`configs/t46_*.json`, `cloud/queue/2026-09-26_t46.txt`), seeds 20264601 to 20264604.
+No pilot was run (a 40-sweep smoke test on two cubes checked the plumbing only).
+
+### Definitions, fixed now (`scripts/analyse_t46.py`, tested in `tests/test_t46.py` before any run)
+
+T45's rules with four directions (`analyse_t44.read_replica` with dim = 4): FLAT means at least 90 % of points at d = 4
+and the untied energy within 0.1a of zero; MELTED a quarter or more of points above d = 4; STUCK more than half at d = 0;
+PARTLY OPEN otherwise. Per setting: ONE PUSH OPENS ALL, PUSHED THROUGH or NOT ALL as in T45. Reported, not scored: the
+rung each replica rests on and the bath gain per point at each stage. The runner's `melted` and `pieces_flat` columns are
+defined for six links and are not used.
+
+### Predictions, locked
+
+**The fit (exact, ours):** the table.
+
+**The owner's (inferred from her message of 11:20 ET, to be confirmed or replaced by her):** ONE PUSH OPENS ALL in both
+settings: the first push opens dark energy's direction, dark matter's opens free, its release opens ordinary matter's, and
+ordinary matter's opens time.
+
+**Ours, from the walls:** NOT ALL in both settings with either spark: the change rests with two directions open, behind
+ordinary matter's wall of 46 to 51, because the dark-matter release is shared among 4,608 stores and a bath that warm
+does not gather 46 in one place within 25,000 sweeps; the larger spark is spent on the first moves and shared the same
+way. If ordinary matter's opening does go, time's wall of 106 to 111 stops it.
+
+### What this cannot show
+
+Which direction is time: the model has no time, so "the fourth opening" is only the last in the order. Anything about
+whether dark energy's energy can later make black holes (it cannot in standard cosmology; VISION Update 36). Every
+eight-link result carries VISION Update 24's caveat.
