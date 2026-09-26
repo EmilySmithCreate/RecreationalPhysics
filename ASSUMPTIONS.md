@@ -1828,6 +1828,15 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     electrons are ordinary matter with no quarks, and a quark's three colors are not the three space directions (VISION
     Update 32).
   - *Ours; exact where stated; the assignment of kinds to openings is the owner's hypothesis, not the model's.*
+  - **Addendum, 12:30 ET: what the time wall is made of** (exact, same enumeration). The cheapest move out of the
+    three-open state turns 24 points at d = 3 into 20 at d = 4 and 4 damaged ones: it is the **seed** of time's opening,
+    a local patch, not the whole direction; once seeded, the front spreads as in the two-link tube. Untied it costs 76.8
+    at λ = 1.30; the fitted tie adds 28.8, because f3 = −a rewards every point sitting at d = 3 by a = 1.2 and the seed
+    moves 24 of them. Likewise ordinary matter's seed, 35.2 untied, gains 15.5 from f2. So the tie that gives ordinary
+    matter its share makes the three-open state a comfortable place to rest, and that is why time's wall is the largest.
+    The bath has no earmarks: every release goes into one shared store of heat, and any of it can pay any wall. What
+    decides whether it does is concentration, not total: dark matter's release is about 9,300 units over 2,304 points,
+    roughly 2 per store (*ours, rough*), and a seed of 106 needs about fifty times that in one place at one moment.
 
 ## Provenance
 

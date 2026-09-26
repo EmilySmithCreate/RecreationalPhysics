@@ -816,6 +816,19 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   three-dimensional mass. What can differ is how it interacts, which is the charge-per-kind decision of Update 34, not how
   it gravitates. The quark triad fits protons and neutrons; electrons are ordinary matter with no quarks.
 
+- **Her answers, 12:20 ET, the same day.** (a) Mass is a directional catalyst; it is fine if black-hole mass is ordinary
+  matter, whatever is normal, since it is not a substantial share. (b) Dark energy may still give space its curvature:
+  that is how we know it is there. *Ours; general knowledge, to verify:* yes, at the largest scale: it is seen through
+  the expansion speeding up (supernova distances, the cosmic microwave background, the spacing of galaxy clusters),
+  which is curvature of spacetime as a whole, uniform, not local wells that pull. (c) Electrons are a different kind of
+  hold of matter and energy. *Ours:* standard physics agrees they are a different family (leptons, not quarks), both
+  counted as ordinary matter. (d) "Ordinary pays for time" was an idea offered, not a settled claim; she asked for her
+  ideas to be organized and compared. *Ours:* in standard physics time passing does not use up energy (energy is
+  conserved precisely because the laws do not change with time; Noether, general knowledge, to verify); the nearest
+  thing to energy spent on the growth of space is light losing energy as it stretches with the expansion. Her
+  predictions for T45 setting C and T46 stay marked inferred until she confirms or replaces them. Why time's wall is the
+  largest is in O75, addendum.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
