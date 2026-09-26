@@ -840,6 +840,20 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   time still curled, give that resting state one local push of at least the wall and see whether time's opening starts
   and spreads.
 
+- **Her idea, 14:20 ET: time curls behind the present moment.** Put in order with the ledge-and-valley picture she was
+  answering: if the state with time curled is the lower one, the passage of time may be that fall itself. The past is
+  time curled back up, the valley floor; the present is the front where it curls; open time lies ahead. *Ours,
+  unverified:* this turns the false-vacuum consequence of O75 from a danger into a mechanism: a front that never stops
+  moving, and whose position is "now". Relatives (general knowledge, not read by us, to verify): the growing or
+  "evolving block" universe (Broad, 1923; Ellis), in which the past is fixed, the future open and the present the
+  moving edge between them. Three things it must face: (1) relativity has no single "now" for everyone (simultaneity is
+  relative), so one universal front needs the absolute ordering this page already assumes at the base level (the
+  comparison table's time row), with relativity's time emerging at large scale; (2) a front converting open to curled
+  releases energy at every moment, which must go somewhere; (3) the model has no time, only a fourth direction, so what
+  it can test is the shape: whether a re-curling front, once started, moves at a fixed speed (TASKS T13 rung 2, the
+  speed-limit run, not yet run). Not decided; the choice of O75 (time borrows or keeps energy) is still hers, and this idea
+  needs the "keeps" reading.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
