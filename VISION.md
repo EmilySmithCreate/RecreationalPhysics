@@ -748,6 +748,35 @@ allotropes out of it), and her hypotheses about the third opening.** Her words, 
 - **What is awaited:** T44 (three directions with the tie, running). The four-direction results in hand are untied (T33
   read; T40 finished and unread); a four-direction run with the tie is not launched.
 
+Update 35 (2026-09-26, 11:00 ET): **the author's request: find the λ, the tie and the costs and releases that best
+match the universe at the beginning and now, lock them in, and ask whether dark energy could open first.** Her words,
+put in order: use her theory, do the mathematics correctly, give the predictions, lock them, then identify possible
+values; consider four directions, relativity's time, and different tying constants; afterwards compute the size of the
+infinity, per her strange-loop measure, across the arrangements found. Details: ASSUMPTIONS O74; PREREGISTRATION T45.
+
+- **What is measured, and what that fixes** (*ours; Planck 2018 central values from a search summary, to verify*). One
+  number is fixed from the start: dark matter : ordinary = 5.36. Dark energy's share is large only now; at any early
+  burp it is essentially zero. So her theory, done with correct arithmetic, needs the three openings to release
+  ordinary : dark matter : dark energy ≈ 0.157 : 0.843 : 0 of the burp.
+- **The fit** (*ours, exact, O74*). A tie of two constants fixes both from those two numbers, for each order. No order
+  gives everything she asks for. **The best fit is dark energy first**: dark energy → ordinary → dark matter, tie
+  f = (a, 1.528a), λ between 1.34 and 1.50, first push 5.1 to 0.6, second 13.4 to 4.7, third free; at λ = 1.40 the
+  releases per point are 0, 0.755 and 4.045. Her order (ordinary → dark matter → dark energy) fits at λ ≈ 1.25 but leaves
+  the dark-energy opening stuck behind a wall of 52. **Locked in PREREGISTRATION T45 before any run**, with the runs that
+  test them launched.
+- **Could dark energy be the first snap?** *Ours:* in this family, yes, and it is the most consistent order: the opening
+  that releases nothing at the burp is the one that has to be pushed, and the last one opens free. In words close to
+  hers: green is pushed open first by the black hole's energy and gives back nothing yet, since its energy is held by
+  space and grows only as space does; red (ordinary) needs a smaller push; blue (dark matter) then opens by itself and
+  delivers the most.
+- **Four directions and time.** A fourth opening adds a share that nothing measured fixes (time's), so the fit is not
+  determined without her deciding what time's opening releases; her hypothesis that "the third pays for time" is one
+  answer. Recorded as her decision to make, not assumed.
+- **The size of the infinity, next.** Her measure counts what one turn of the loop produces. The model can supply, per
+  arrangement, the ordinary share of each burp, the pushes it needs and whether it finishes by itself; it cannot count
+  observers or stellar ages. A proxy for her to accept or change before anything is computed: burps per unit of pushing
+  energy, times the ordinary share per burp.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

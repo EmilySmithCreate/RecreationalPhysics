@@ -1772,6 +1772,31 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     coarse stand-in for the owner's hidden degrees of freedom; if they store strain or carry charge (VISION Update 34),
     the walls and releases above change, and nothing here says how.
 
+- **O74 The owner's triad fitted to what is measured, exact: dark energy first fits best; no order gives everything she
+  asks for.** (2026-09-26, 11:00 ET; VISION Update 35; `scripts/exact_budget_fit.py`; PREREGISTRATION T45.)
+  - **The measured inputs** (Planck 2018 central values from a search summary, to verify): dark matter : ordinary = 5.36,
+    fixed since both were made; dark energy 68.6 % today but about 10⁻⁹ of the total at the first atoms and less at any
+    earlier birth, because its density stays constant. So at the burp the dark-energy opening releases essentially
+    nothing: the three shares are ordinary 0.157, dark matter 0.843, dark energy ≈ 0. *Ours:* this reading treats dark
+    energy as a fixed energy per volume held by space, which is the owner's "energy of a direction held by space"; it
+    makes the model's release for that opening zero, not large.
+  - **The fit.** With a two-constant tie the releases per point are a − f(1), a + f(1) − f(2), a + f(2) by order of
+    opening, so each of the six orders fixes f(1), f(2) as multiples of a. Priced exactly on the gas of 6-cubes, the
+    two- and one-curled tori and flat space for λ = 1.01 to 1.60: **no order satisfies X stuck, flat stable and every
+    later wall ≤ 0 at once.** Closest per pattern: (A) dark energy → ordinary → dark matter, f = (a, 1.528a), stuck for
+    1.01 < λ < 1.50 and finishing without rest for λ ≥ 1.34, walls at λ = 1.40 of 3.2, 10.1 and none; (B) the owner's
+    order, ordinary → dark matter → dark energy, f = (0.528a, −a), X stuck only below λ ≈ 1.29, walls at 1.25 of 2.3,
+    none, 52.0 (the dark-energy opening is stuck); (C) dark energy → dark matter → ordinary, walls at 1.30 of 6.4, none,
+    43.7. The dark-matter-first orders are stuck only below λ ≈ 1.10 and rest behind walls of 30 to 49.
+  - **So the most likely order, in this family, is dark energy first**, releasing nothing, then ordinary matter, then
+    dark matter, the largest release, opening free. Her order puts the free opening last as she wants, but the one it
+    has to be is the dark-energy one, which the fit makes the stuck one. In no order is the first push the largest by
+    energy alone; with interchangeable points the counting adds most to the first push (O73), which could restore that.
+  - **The follow form** (one constant) cannot fit: its second and third releases are equal, so dark energy would equal
+    dark matter at birth. **Four directions** (eight links) add a fourth opening whose share is not measured (the owner's
+    time); with three tie constants and no fourth number the fit is not fixed, and is left for her decision.
+  - *Ours; exact where stated; the assignment of kinds to openings is the owner's hypothesis, not the model's.*
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

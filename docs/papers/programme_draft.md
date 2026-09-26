@@ -91,6 +91,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026: Read: T18, the room needed grows faster than the burp as λ rises (PROPORTIONAL).
 
 **Piece 5.**
+- 26 Sep 2026, 11:00 ET: T45 launched (the budget-fitted tie). Four directions wait on what time's opening releases.
 - 26 Sep 2026, 04:10 ET: Launched: T44. Under the direction tie the author decided on 25 September, does one push open all three curled directions of a gas of 6-cubes into one flat space? Exact first (O71): the tie's walls never fall in the order large, smaller, none; the nearest is 44, none, 4 at λ = 1.25. Her inferred prediction: yes. Ours: not all.
 - 25 Sep 2026, 13:33 ET: Corrected: read as registered, with the gas reported separately, the tori's verdict is NEVER OPENS.
 - 25 Sep 2026, 13:16 ET: Launched: T40, the push scanned from 20 to 160. Finished on the cloud; not yet read.
@@ -101,6 +102,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 25 Sep 2026, early morning: The author's decision: proceed with six links while the reproduction stays open.
 
 **Piece 6.**
+- 26 Sep 2026, 11:00 ET: The budget fit (O74): dark energy first fits best (then ordinary, then dark matter, free); her order leaves dark energy stuck behind 52; no order gives everything. Locked and launched as T45.
 - 26 Sep 2026, 05:08 ET: Decided by the author: a charge per kind; design brief written. Exact (O73): 44, none, 12 under the tie; 44, 12, 0 not reachable; counting charges the first opening most.
 - 26 Sep 2026, 04:28 ET: The author's clarification: the first push can be any kind of energy, most likely green (the most abundant); which direction becomes red is chance; red's release pays blue's push; green opens with no push. Red, ordinary; blue, dark matter; green, dark energy.
 - 26 Sep 2026, 04:23 ET: Exact, one 6-cube's worth (O71 addendum): 66 per direction per cube fixes λ = 1.258; without the tie the walls rise (none, 15.5, 35.6); with the tie at κ = 2.03 they read 44, none, 3; no tie counting only open directions per point gives 44, 12, 0 (nearest misses by 19). The author's idea: dark matter may carry its own kind of charge; relatives: dark photons, mirror matter.

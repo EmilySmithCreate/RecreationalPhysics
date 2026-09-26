@@ -370,6 +370,11 @@ sealed six-link chain (`graphity.sealed_tie_d`), six Batch jobs on a gas of eigh
 Read with `scripts/analyse_t44.py`. Accept: the verdict per κ on the record, with the owner's inferred prediction
 confirmed or replaced.
 
+## T45. The budget-fitted triad, run  ◑
+
+**Added 2026-09-26** (VISION Update 35; PREREGISTRATION T45; ASSUMPTIONS O74). Eight Batch jobs; read with
+`scripts/analyse_t45.py`. Accept: the verdict per setting on the record, the stage releases set beside the locked fit.
+
 ## A charge per opening direction  ☐
 
 **Added 2026-09-26** (VISION Update 34, the owner's decision). Brief: `docs/design/direction_charge_brief.md`, three forms

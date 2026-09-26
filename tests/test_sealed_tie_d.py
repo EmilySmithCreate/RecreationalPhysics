@@ -12,7 +12,8 @@ import numpy as np
 from graphity import cqg_d
 from graphity.dimension import local_dimension_d
 from graphity.sealed_d import energy_d, run_sealed_bath_d
-from graphity.sealed_tie_d import energy_tie_d, follow, run_sealed_bath_tie_d, tie_total
+from graphity.sealed_tie_d import (energy_table_d, energy_tie_d, follow, run_sealed_bath_table_d, run_sealed_bath_tie_d,
+                                  table_total, tie_total)
 
 
 def _gas(dims, copies):
@@ -101,3 +102,26 @@ def test_gas_with_the_tie_conserves_per_vertex_and_same_seed_repeats():
 def test_energy_tie_d_is_energy_d_plus_kappa_t():
     adj, _ = cqg_d.torus([4, 4, 6])
     assert abs(energy_tie_d(adj, 1.25, 2.0) - (energy_d(adj, 1.25) + 2.0 * 2 * adj.shape[0])) < 1e-9
+
+
+def test_table_kernel_is_the_follow_kernel_draw_for_draw_and_exact_for_any_shape():
+    lam, kappa = 1.25, 2.0
+    adj0, part = cqg_d.torus([4, 4, 6])
+    side_u = np.flatnonzero(part == 0)
+    a1, a2 = adj0.copy(), adj0.copy()
+    d1 = np.full(2 * adj0.shape[0], 2.0); d2 = d1.copy()
+    s1, x1, t1, _, _, acc1 = run_sealed_bath_tie_d(a1, side_u, d1, 60, 13, lam, kappa)
+    ftab = kappa * np.array([0.0, 2.0, 1.0, 0.0])
+    s2, x2, t2, _, _, acc2 = run_sealed_bath_table_d(a2, side_u, d2, 60, 13, lam, ftab)
+    assert (s1 == s2).all() and (x1 == x2).all() and (a1 == a2).all() and acc1 == acc2
+    assert np.allclose(kappa * t1, t2)
+    # any shape, including negative entries: incremental total exact, energy conserved
+    ftab = np.array([0.0, 1.6, -0.84, 0.0])
+    adj, part = cqg_d.torus([4, 4, 6])
+    stores = np.full(2 * adj.shape[0], 3.0)
+    e0 = energy_table_d(adj, lam, ftab) + stores.sum()
+    for block in range(4):
+        _, _, t, _, _, _ = run_sealed_bath_table_d(adj, side_u, stores, 20, 21 if block == 0 else -1, lam, ftab)
+        assert abs(t[-1] - table_total(adj, ftab)) < 1e-9
+        assert abs(energy_table_d(adj, lam, ftab) + stores.sum() - e0) < 1e-8
+    assert cqg_d.is_valid(adj)

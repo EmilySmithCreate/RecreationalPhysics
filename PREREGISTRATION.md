@@ -2542,3 +2542,67 @@ Named, as T30.
 Anything at λ = 1 (CQG) or without the tie; whether the tie's form is the right one (it is one of a family, O68, O70); the
 owner's energy budget, which the follow form's releases (a − 2κ, a + κ, a + κ per point) do not match and which O70
 fitted with a different shape; the pattern with a torus start, where one direction is singled out.
+
+## T45. The budget-fitted triad, run: which order of openings, and at what λ and tie, matches what is measured? (piece 6; VISION Update 35; written 2026-09-26, 11:00 ET, before any run)
+
+### Why, and the fit that fixes the numbers before any run
+
+The owner asked for the λ, the tie and the costs and releases that best match what is known of the universe at the
+beginning and now, and whether dark energy could be the first opening (VISION Update 35). What is measured and fixed
+since the start is one ratio, dark matter : ordinary matter = 5.36; dark energy's density does not thin as space grows,
+so its share at any early birth is essentially zero (about one part in a billion at the first atoms, less earlier;
+Planck 2018 central values, search summary, to verify; ASSUMPTIONS O74). So at the burp the three openings must
+release ordinary : dark matter : dark energy ≈ 0.157 : 0.843 : 0 of the total. With a tie of two constants f(1), f(2)
+(the energy per point with one or two directions open), the releases per point are a − f(1), a + f(1) − f(2), a + f(2)
+in the order of opening (a = 4(λ − 1)), so each of the six orders fixes both constants as multiples of a
+(`scripts/exact_budget_fit.py`). Priced exactly, no order and no λ gives the owner's full wish (X stuck, flat space
+stable, and every later wall at or below zero). Three settings come closest, one per pattern, and are locked here:
+
+| Setting | Order of openings | Tie f(1), f(2) | λ | Walls: first, second, third (flat 64) | Releases per point: first, second, third |
+|---|---|---|---|---|---|
+| **A** (best fit) | dark energy → ordinary → dark matter | a, 1.528 a | 1.40 | 3.2, 10.1, none | 0, 0.755, 4.045 |
+| A′ | the same | the same | 1.46 | 1.3, 6.9, none | 0, 0.869, 4.652 |
+| **B** (the owner's order) | ordinary → dark matter → dark energy | 0.528 a, −a | 1.25 | 2.3, none, 52.0 | 0.472, 2.528, 0 |
+| C | dark energy → dark matter → ordinary | a, −0.528 a | 1.30 | 6.4, none, 43.7 | 0, 3.034, 0.566 |
+
+A is the only pattern in which the change, once through its first two walls, finishes with no rest (the third wall is
+gone); B and C leave the last opening behind a wall of 44 to 52, larger than the first push.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with `"ftable_per_a"` (the tie of any shape, `graphity.sealed_tie_d.run_sealed_bath_table_d`,
+checked today: draw for draw the follow kernel at its shape, exact incremental total and conservation for any shape, including
+negative entries). Six links, the gas of eight 6-cubes (N = 512), the four settings above; in each, two sparks in one store
+of a shared bath: the first wall alone (+0.01) and the sum of the positive walls (+0.01); baths C = N/2 and 2N; six
+replicas; 60,000 sweeps read every 200; final graphs saved. Eight Batch jobs (`configs/t45_*.json`,
+`cloud/queue/2026-09-26_t45.txt`), seeds 20264525 to 20264646 with the per-replica seed carrying N, C, the spark and the
+replica. No pilot was run.
+
+### Definitions, fixed now (`scripts/analyse_t45.py`, tested in `tests/test_t45.py` before any run)
+
+T44's per-replica outcome (MELTED, FLAT, STUCK, PARTLY OPEN), pattern and stage gains, unchanged. Per cell the majority,
+else MIXED. Per setting: **ONE PUSH OPENS ALL** if a cell with the smaller spark has a FLAT majority; **PUSHED THROUGH**
+if only cells with the larger spark do; **NOT ALL** otherwise. Reported, not scored: the bath's gain per point at each
+stage against the releases in the table.
+
+### Predictions, locked
+
+**The fit (exact, ours):** the numbers in the table. These are what "the owner's theory, done with correct arithmetic" gives
+in this model family: λ between 1.34 and 1.50 for A, with the first push 5.1 to 0.6, the second 13.4 to 4.7, the third
+free; dark energy first, releasing nothing at the burp; ordinary matter second; dark matter third, the largest release.
+
+**The owner's (inferred from VISION Updates 33 and 34, to be confirmed or replaced by her):** her order (B) opens all
+with one push. For A and C she has not stated a prediction.
+
+**Ours, from the walls:** A: NOT ALL with the first wall alone (the first opening releases nothing, so nothing pays the
+second wall of 10; the bath is empty), PUSHED THROUGH with the sum, the third opening free. B and C: NOT ALL with the
+first wall alone (the change rests with one direction still curled, behind 44 to 52), PUSHED THROUGH or MELTED with the
+sum. So we predict no setting in which one push opens all three; A is the one that finishes by itself once pushed past
+its second wall.
+
+### What this cannot show
+
+Which kind of matter a direction's release becomes (the model has one kind of energy; the labels are the fit's
+assignment); anything in four directions (time's share is not fixed; VISION Update 35); what a physical burp's
+temperature is, which the dark-energy share at birth depends on; anything at λ = 1 or with interchangeable points (which
+would add the counting cost, largest for the first opening; O73). Every six-link result carries VISION Update 24's caveat.
