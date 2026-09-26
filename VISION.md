@@ -861,6 +861,21 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   opening front move at a fixed speed?) and whether flat four-direction space under this reading re-curls from one
   local push, with her inferred predictions and ours.
 
+- **Her refinement, 15:00 ET: only the present is open.** Her words, put in order: the energy uncurls time, but not so
+  that it stays uncurled, because time has a lower floor; it curls behind us, and the present moment is the only part
+  that exists as macro, uncurled. The speed of time is the speed of the front of the uncurling: it uncurls, then
+  re-curls. *Ours, unverified:* this is a travelling band, not a single front: an uncurling edge ahead and a re-curling
+  edge behind, moving together, with open time only between them. Its published shape is the flame of "What X is" (fuel
+  ahead, burning band, ash behind) and the nerve impulse (resting ahead, excited band, recovering behind), and both move at
+  a **fixed speed set by the medium**, which is her speed limit (general knowledge, to verify). Its philosophical relative
+  is presentism, only the present exists, the view most in tension with relativity's relative "now" (general knowledge,
+  to verify). One condition is exact arithmetic: a band that keeps moving by itself needs the state ahead to lie higher
+  than the state behind, the difference paying for the motion, as fuel lies above ash. So the curled time ahead
+  (unopened, X-like) and the curled time behind (the floor) must be different arrangements, the one behind lower. If they
+  were the same, the band would have nothing to run on. The model's version: X ahead, fully open in the band, and one
+  direction re-curled behind, which O75's "keeps" reading allows; T46 at ρ = −0.2 is its first look, and a long
+  geometry in which a moving open band could be seen is not designed.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
