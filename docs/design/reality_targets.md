@@ -31,7 +31,9 @@ Earlier predictions stay on the record as written.
    10⁵). Needs: a birth from one seed or a few, not many (T37's pilots: many seeds leave a defected space). Now: T37.
    Next: the size of a clean region per seed, against λ, which would say how large a smooth universe one seed can make.
 5. **Dark energy: a small positive vacuum energy, about 70 % of the total today.** Needs: whatever the burp leaves in the
-   curvature of flat space. Now: not touched. Next: to be designed.
+   curvature of flat space; in the owner's picture (Updates 30, 32, 33), the third opening's release, held by space
+   itself. Now: O70 fits a tie to the budget (two constants, two ratios) and O71 shows walls cannot set the shares. Next:
+   T44 reads the release by order of opening under the follow tie (reported, not scored).
 6. **Black holes** (observed: compact objects whose outsides match general relativity; the inside unobserved). Needs:
    concentrated energy re-curling space (her mechanism). Now: every test melts (O20, T21, T26, T27, T34), and a melt is
    only thermal excitation (O66). Next: T42 (counting near λ = 1.02, running); if gravity is adopted, clumps of relics.
@@ -57,6 +59,22 @@ Earlier predictions stay on the record as written.
   dark matter and dark energy are the releases of the other two directions; what remains returns to the black hole, to
   start another burp or wait. Dark matter is therefore not the scrap and not the allotrope (Update 16 revised). The 17:17
   reading (an absorption limit of 5 % of a burp) was the assistant's and is withdrawn (VISION Update 30).
+
+- **Targets 1, 3 and 5, a ledger (26 September, early morning; VISION Update 33):** each direction releases the same, about
+  66 units; the first opening's push costs 44 and nets 22, of which 12 pays the second push, leaving 10 (ordinary); the
+  second costs 12 and nets 54 (dark matter); the third costs nothing and delivers 132 (dark energy). *Model counterpart
+  (O71, exact):* the numbers balance exactly only if every unit paid to a wall ends in the third share (10, 54, 134); in
+  the model a wall is returned, not spent, so equal curling costs give equal shares at every λ (no λ gives her
+  proportions), and walls are fixed with size while releases grow with the region, so her 44 of 66 describes a patch of
+  about one 6-cube. Only strain held in the partly open states (the tie) makes the shares unequal (O70). **Is the number
+  of points relevant: yes**, through the walls' share and, with interchangeable points, through the counting (O72).
+- **Target 2 (same message):** gravity acts on all three kinds because each is tied to an opened direction; its weakness
+  and its balance (a drive to curve that exists but is not too big) are set by the count of hidden degrees of freedom.
+  *Model counterpart (O72, exact):* the three large directions contribute nothing to the counting drive; the points do,
+  and the drive grows slowly with the number of curled cells.
+- **Target 1, the order of pushes (same message):** the first push is the largest, the later ones smaller, the last free;
+  the change runs until no energy is left to start another. Being tested as T44 (under the follow tie; the walls it gives
+  are 44, none, 4 at λ = 1.25, κ = 2, never "large, smaller, none").
 
 ## Questions for the owner (answer by voice is fine)
 

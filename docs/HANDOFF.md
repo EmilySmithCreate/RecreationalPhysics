@@ -1,4 +1,4 @@
-# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET)
+# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET; addendum 2026-09-26, 04:10 ET)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". Work is on branch `feat/cloud-runs-and-3d` (shared by two sessions in one
@@ -37,6 +37,21 @@ git history.
 3. **Read section 3 before writing anything public or anything to a physicist.**
 4. Interpreter with numba: `C:\Users\emily\AppData\Local\Microsoft\WindowsApps\python.exe`. Run
    `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`.
+
+## Addendum, 26 September, early morning (branch `claude/vision-programme-updates-9sje7s`)
+
+- **VISION Update 33**: five positions of the owner's (a ledger for the three releases, 44 / 12 / 0; gravity and the count
+  of hidden degrees of freedom; vantage points; how a strange loop is sized; time as an outcome of open space), each
+  with what the model says. **O71** (her ledger against the model: walls are returned, not spent; no λ gives her shares;
+  the follow tie's walls never fall in her order) and **O72** (the counting drive comes from the points, not the three
+  directions, and grows with the number of curled cells; corrects O55). Next ASSUMPTIONS number: **O73**.
+- **T44 launched** (six Batch jobs, `cloud/queue/2026-09-26_t44.txt`): the gas of 6-cubes under the follow tie. New
+  kernel `graphity.sealed_tie_d` (tests in `tests/test_sealed_tie_d.py`); the runner takes `"kappa"`; read with
+  `scripts/analyse_t44.py`.
+- **Unread in the bucket, all finished:** the rest of T37 and T38, and T39 to T43. Download and read them next.
+- **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
+  row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
+  top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".
 
 ## 1. What this project is
 

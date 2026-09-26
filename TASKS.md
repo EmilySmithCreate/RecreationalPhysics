@@ -363,6 +363,13 @@ excess falls (halving exactly only with eight links at λ = 1.25); the counting 
 PREREGISTRATION **T34** with her prediction (re-curls, one direction then the rest) and ours (melts): four Batch jobs, read with
 `scripts/analyse_t34.py`. Designed, not run: the same with interchangeable points near λ = 1.02, where the counting could pay.
 
+## T44. The direction tie, run: does one push open all three curled directions?  ◑
+
+**Added 2026-09-26** (VISION Updates 30 and 33; PREREGISTRATION T44; ASSUMPTIONS O71). The follow tie built into the
+sealed six-link chain (`graphity.sealed_tie_d`), six Batch jobs on a gas of eight 6-cubes at λ = 1.25, κ = 1, 2, 2.5.
+Read with `scripts/analyse_t44.py`. Accept: the verdict per κ on the record, with the owner's inferred prediction
+confirmed or replaced.
+
 ## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
 
 **Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a

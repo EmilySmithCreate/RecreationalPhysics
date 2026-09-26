@@ -1,6 +1,6 @@
 # A phase-changing reality: the programme, and where each piece stands
 
-*Draft for the owner's review, 25 September 2026 (the 3D tests are read; the four-direction test is running). Not for publication until she has read it. Every claim says
+*Draft for the owner's review, updated 26 September 2026, 04:10 ET. Each piece's dated log, newest first, follows the table. Not for publication until she has read it. Every claim says
 whose it is: **the author's** (Emily Smith's hypothesis), **measured** (a pre-registered test in the public
 repository, with its verdict), **exact** (arithmetic or complete enumeration), or **ours** (the analysis
 drafted with Claude, unreviewed by a physicist). Nothing here has yet been read by a physicist (the author's
@@ -26,59 +26,6 @@ is the set of undetectably different versions of an arrangement, all standing at
 makes them distinguishable.
 
 ---
-
-## What changed, and when
-
-Newest first. Each entry says which results came in and which pieces they touched; every piece's row carries the
-date of its last change in its status cell.
-
-- **25 Sep 2026, 17:08 ET.** T34 read: MELTS at 216 and 512 points; nothing folds, and the melts are excitations that
-  heal when cooled (O69, O66; piece 8). T42, the counting half, running.
-- **25 Sep 2026, 14:32 ET.** The model author's smallest allotrope built as a finite graph (O67): at λ = 1 no energy
-  barrier holds it; its lifetime at finite temperature launched (T43, piece 12); his text and caption disagree on more
-  or fewer squares. Damaged six-link flat space heals completely when cooled: no relic (O66; pieces 7, 8). The five
-  unsubmitted drafts corrected after a referee reading; paper 1's checked corrections listed for the author.
-- **25 Sep 2026, 13:33 ET.** A referee reading of the drafts found three errors in our record: T30's tori read NEVER
-  OPENS once the gas is reported separately as registered (piece 11); T26 has 27 cells, one healed (piece 8); T27's melt
-  count was one row (134 of 144 melted). No verdict on the author's predictions changes (O64).
-- **25 Sep 2026, 13:16 ET.** Launched: T40 (the push in four directions, piece 13), T41 (room for the burp in three
-  directions, piece 4), T42 (the fold with interchangeable points at λ = 1.02 and a named control, piece 8; a new
-  chain built and checked). Paper 5 (gravity) drafted. The two-week plan in the series plan. On the laptop: the
-  six-link relic sought by letting damaged tori settle (piece 7).
-- **25 Sep 2026, 12:50 ET.** (Times are US Eastern; the morning's entries were first labeled with the wrong time of day.)
-  Read: T36 TRANSIENT, no lasting allotropes on a torus (piece 12); no stable six-link relic among one- and two-move
-  objects (piece 7); T33, the push that is enough in three directions stalls in four (piece 13); T34 at 216 points melts
-  (piece 8, first size). Corrected (ours): T30's first direction opened fully in a third of runs (piece 11); the walls
-  halve exactly only at one setting (pieces 8, 11). Four literature reviews: flat space here has an energy gap, so no pull
-  at a distance, and what a model needs to have one (piece 7, decision for the author); the phase-per-swap exchange rule
-  does not exist as stated (piece 9). Launched: T37 (piece 5), T38 (piece 2), T39 (pieces 11, 13), 97 cloud jobs.
-- **25 Sep 2026, 10:50 ET.** The model's author replied: the drawn allotrope lives on an infinite hyperbolic graph; he
-  suggested a numerical search, pre-registered and running as T36 (piece 12). A figure drawn for him. The exchange
-  sign's exact averages recorded (piece 9). Two of six four-direction cells in; the verdict waits.
-- **25 Sep 2026, 10:45 ET.** The author's "proceed": the exchange phase on loops is the first rule of the new
-  model to be tested; the search for a stable six-link relic goes ahead. First exact result of the rule (piece 9): a
-  selection rule sparing every basic arrangement and the burp's products, forbidding a few per cent of damaged sheets.
-- **25 Sep 2026, 10:25 ET.** Paper 1 submitted to arXiv with the model's author's endorsement (S5: the door is open).
-  The author's direction: other models with loop and exchange rules; gravity as the target, at least directionally, at
-  one λ; the four-, six- and eight-link runs as groundwork. Exact for piece 7: in six links at fixed wiring no pull at a
-  distance from energy or counting, as in four; the stable six-link relic not yet shown to exist. Two design briefs.
-- **25 Sep 2026, 10:00 ET.** The author's black-hole mechanism recorded (piece 8); two exact results follow it: the
-  nucleation excess of each successive fold halves (piece 8), and the counting drive to curve exists, is worth a quarter
-  of a unit per point at 512 points, appears only at full curling and beats the curling cost only within 2% of λ = 1
-  (piece 7). T34, the six-link folding test, launched with her prediction. Five paper drafts brought into line.
-- **25 Sep 2026, 08:00 ET.** Overnight Batch results read: T24 leaves piece 2 inconclusive by the letter for a third
-  reason (a single extreme wait in four cells), the edge break-up a third time; Gate C′ fails and the same code's 2D
-  figure is not compressed (piece 11); T32 fixed wall and T30 one at a time make piece 11 measured, one prediction held,
-  one failed; T26's last cell lands, MELTS (piece 8). The author's bar under piece 2, her strange-loop measure under
-  piece 10, and her four-direction idea as piece 13 with T33 running.
-- **25 Sep 2026, early morning.** T25 FREEZES IN (piece 6 measured); T27 STAYS MELTED (piece 8); the author's decision
-  to proceed in six links while the reproduction stays open (piece 11), first tests launched with her predictions;
-  Gate C's long protocol and the 3D window scans read.
-- **24 Sep 2026, night.** T24, T25, T26, T27 launched after their pre-registrations; the local-spark protocol built;
-  the six-link gate fails; an exploratory reading of the published figure recorded. American spelling from here on.
-- **24 Sep 2026, afternoon.** Paper 1 revised after a review; pieces 1, 2, 5 aligned; the naming condition applied;
-  the author's positions on gravity, the melt and versions recorded (pieces 7, 8, 9).
-- **24 Sep 2026.** Draft created, twelve pieces.
 
 ## Where each piece stands
 
@@ -107,6 +54,99 @@ author's claim, and the model is how she tests its pieces.
 | **11. The three space directions curl together** (three dimensions, six links per point) | **Measured: the push is fixed with size; in a torus the directions do not open together** (O49; O53; O54; T30; T32) (updated 25 Sep 2026) | The author's rule: the three directions are intertwined, curl together and open together, so one activation releases the whole burp. In 2D that rule cannot be tested (a gas of fully curled pieces is not stuck at any λ > 1, O40). In 3D (exact, O41): the fully curled state, the 6-cube, is stuck for now only for 1 < λ < 1.2, and each curled direction holds a third of the burp. Like the 2D torus, this window lies off λ = 1, so results there are about a neighbour of the published model. | First, reproduce the published 3D curve ([T22] Fig. 3, N = 500, λ = 1) before any 3D result is read. The first attempt did not reproduce it: under either reading of the published axis our curve has a different shape, so no single rescaling fixes it, and by rule 2 the six-link track is stopped until that is resolved; the likely causes are the published protocol, which the paper does not state, and the energy's form in three dimensions, which we derived rather than quoted. An exploratory look the same evening (O45) found that a fast heating leg from a slowly cooled state reproduces the published curve's steepness and plateau, which supports reading it as a heating curve that lags equilibrium, though with two free choices it is suggestive and not a match. The question goes to the model's author. The author's decision (24 September, night): proceed with the 3D work now and return to the reproduction later, since the six-link code is validated on its own terms (draw for draw with the 2D code at four links, brute force, the exact ladder), while the surviving guess about the published axis (a weight going as 1/g²) is tested in parallel (Gate C′); every 3D result carries that caveat. Measured (T30, T32): the push is exactly 16 at every size from 192 to 512 points, sharp (her prediction and ours). But in a torus the directions do not open together: given that push, the two-curled torus opens its first direction completely in about a third of runs and partly in most of the rest (corrected 25 September), and the second direction's wall of 36 is never paid in a cold bath. Her prediction that both open together failed; ours held. The gas of fully curled 6-cubes joined and opened two of its three directions in 21 of 24 replicas, without resting in between, never into one space. Gate C′: the 1/g² guess failed and the same code's 2D figure is not compressed; a plain factor of two matches the ordered side of the published curve; the better-supported reading of the rest is short, non-equilibrium runs (a fast heating leg reproduces the published plateau), with graphs allowing triangles and pentagons the other reading. |
 | **12. Stuck arrangements inside the published model itself** (allotropes) | **Measured: no lasting allotropes on a torus (T36, TRANSIENT)** (O59) (updated 25 Sep 2026, 12:50 ET) | The model's author describes allotropes: regions stuck in a different discrete arrangement, like diamond in graphite ([T24]; [T25] Fig. 9, the smallest example, drawn by Eryk Kopczyński). He reads them as dark matter; the author's hypothesis does not (in hers, dark matter is what a second curled direction releases; VISION Update 30). Here they are simply her order → order question asked inside his model, at λ = 1. Exact (ours): if no edge carries three squares, the local term vanishes and the question does not depend on λ at all. | Build the allotrope of [T25] Fig. 9 from its actual wiring (requested; not guessed from the drawing), then ask whether it is stuck, how high its barrier is, and how its lifetime grows with its size. Ours, unverified: the curved background is favoured only at finite temperature, so whether it is stuck is partly a question of entropy. It fails, for the author's picture, if the region dissolves with no wait. |
 | **13. Time as a fourth curled direction: a singleton beside the tied three, or all four tied** | **Measured: the push that is enough in three directions stalls in four (T33, NO CASCADE by the letter)** (VISION Update 25; T33) (updated 25 Sep 2026, 12:50 ET) | The author's idea: the change could be four-dimensional, with time uncurled by it too, either as a singleton direction beside the three tied space directions (one opens alone, three together) or with all four tied, which the relativity of time suggests. Ours: the model has no time, so a fourth direction is a direction like the others; what it can test is the pattern in which curled directions open (all four together; one then three; one at a time), which are distinct and are what her two variants and our expectation predict. Which direction is time, the model cannot say. | Running (T33): the eight-link model at 2,304 points, two sealed starts given exactly their wall as a push (a gas of fully curled 8-cubes; a torus with three curled directions and one open), the pattern read from how many directions are open at each point. Her prediction: a tied pattern. Ours: one at a time. It fails, for her picture, if the directions open one at a time. |
+
+| **14. The burp's three shares, by order of opening** (ordinary matter, dark matter, dark energy) | **Exact: walls cannot set the shares; the tie run (T44) launched** (O70, O71; VISION Updates 30, 32, 33) (updated 26 Sep 2026, 04:10 ET) | The author's ledger: each direction releases about 66; the first opening costs 44 and nets 22, of which 12 pays the second push, leaving 10 (ordinary); the second costs 12 and nets 54 (dark matter); the third costs nothing, 132 (dark energy). Ours, exact: her numbers balance exactly if every unit paid to a wall ends in the third share (10, 54, 134); 54 : 10 = 5.4 by construction. In the model a wall is returned, not spent, and every direction costs the same to curl, so no λ gives these shares; walls are fixed with size while releases grow with the region, so 44 of 66 describes a patch of about one 6-cube. Only strain in partly open states (the tie) can make the shares unequal, and the simplest tie's walls never fall in her order (nearest: 44, none, 4). | T44: under the tie, does one push open all three directions of a gas of 6-cubes into one flat space? Hers (inferred): yes. Ours: not all. It fails, for her ledger, if no allowed tie makes the first push the largest, or if the shares can only be fitted. |
+
+## Each piece's log (newest first)
+
+**Piece 1.**
+- 24 Sep 2026, afternoon: Brought into line with paper 1 after a reader's review; the model's author's naming condition applied (only λ = 1 is his model).
+- 24 Sep 2026: Piece created.
+
+
+**Piece 2.**
+- 25 Sep 2026, 12:50 ET: Launched: T38, the rare very long waits, 4,000 decays per setting at 64 points. Finished on the cloud; not yet read.
+- 25 Sep 2026, 08:00 ET: Read: T24 passes the repaired energy check in all 28 cells and is still inconclusive by the letter, for a third reason (one extreme wait in four cells). The edge break-up appeared a third time. The author's bar recorded: it has to happen at one size, not every size in every instance.
+- 24 Sep 2026, night: Launched: T24, the λ map a third time.
+- 24 Sep 2026, afternoon: Brought into line with paper 1.
+
+
+**Piece 3.**
+- 26 Sep 2026, 04:10 ET: Exact (O71): in this rule an activation wall is returned on the far side, not spent, and every direction costs the same to curl, so the three releases are equal at every λ. No λ gives the author's ledger of 26 September; only strain held in partly open states (the tie of piece 14) can make the shares unequal.
+- 24 Sep 2026: The rule described in the author's words: curvature plus a curling cost, a constant of our loop (VISION Update 23).
+
+
+**Piece 4.**
+- 25 Sep 2026, 13:16 ET: Launched: T41, the same question in three directions. Finished on the cloud; not yet read.
+- 24 Sep 2026: Read: T18, the room needed grows faster than the burp as λ rises (PROPORTIONAL).
+
+
+**Piece 5.**
+- 25 Sep 2026, 12:50 ET: Launched: T37, long tubes where the change starts in many places. Partly downloaded; not yet read.
+- 24 Sep 2026, afternoon: Brought into line with paper 1; T17 read: more seeds, more scrap, fewer than one each (BETWEEN).
+
+
+**Piece 6.**
+- 25 Sep 2026, early morning: Read: T25, the scrap freezes in when the box cools faster than it heals (FREEZES IN). The author's inferred prediction held; ours put freeze-out too early.
+- 24 Sep 2026, night: Launched: T25, the race between healing and cooling.
+
+
+**Piece 7.**
+- 26 Sep 2026, 04:10 ET: The author's additions recorded (VISION Update 33): gravity's weakness, its acting on all three kinds of matter and energy, and a drive to curve that must exist but not be too big, balanced by the count of hidden degrees of freedom. Exact (O72): the three large directions add nothing to the counting drive, since their permutations appear on both sides; the points supply it, and it grows slowly with the number of curled cells. O55's claim that it does not grow with size is corrected.
+- 25 Sep 2026, 14:32 ET: Read: all 80 damaged six-link flat tori, cooled, came back perfectly flat. Heat damage leaves no relic.
+- 25 Sep 2026, 12:50 ET: Why no test found a pull: flat space here has an energy gap, which allows only short-range forces. No stable six-link relic among one- and two-move objects. A field on the points is proposed for the author's decision.
+- 25 Sep 2026, 10:25 ET: Exact: in six links at fixed wiring there is no pull at a distance, as in four. Gravity design brief written.
+- 25 Sep 2026, 10:00 ET: Exact: the counting drive to curve exists, about a quarter of a unit per point at 512 points, and only at full curling.
+
+
+**Piece 8.**
+- 25 Sep 2026, 17:08 ET: Read: T34 melts at 216 and 512 points; nothing folds, and the melts heal when cooled. T42, the counting half, finished on the cloud; not yet read.
+- 25 Sep 2026, 13:33 ET: Corrected: T26 has 27 cells, one of which healed; T27's melt count was one row (134 of 144).
+- 25 Sep 2026, 13:16 ET: Launched: T42, the fold with interchangeable points at λ = 1.02, with a named control.
+- 25 Sep 2026, 10:00 ET: The author's black-hole mechanism recorded; exact: each successive fold's extra cost falls. T34 launched.
+- 25 Sep 2026, 08:00 ET: Read: T26 MELTS.
+- 25 Sep 2026, early morning: Read: T27 STAYS MELTED.
+
+
+**Piece 9.**
+- 26 Sep 2026, 04:10 ET: The author's vantage-point position recorded (VISION Update 33): from the large scale, versions without an interaction between them are one reality; close up, the interchangeable directions become something like quark spin or color. Ours: the nearest published relatives are the many-worlds reading and Kaluza–Klein; spin's x, y and z components are not three kinds of thing, and quark color is not a direction of space.
+- 25 Sep 2026, 12:50 ET: Read: a phase per swap does not exist in the form we had named; renamings allow only the count or the sign.
+- 25 Sep 2026, 10:50 ET: The exchange sign's exact averages at 16 and 18 points recorded.
+- 25 Sep 2026, 10:45 ET: Decided: the exchange phase is the first rule of the new model. First exact result: a mild selection rule.
+
+
+**Piece 10.**
+- 26 Sep 2026, 04:10 ET: The author's sizing of a loop recorded (VISION Update 33): burps per turn set by the total energy, observers per solar system times solar systems, and too many black holes too early as a cost. Ours: in the model a burp's activation is returned rather than used up, so what limits burps there is the room each needs; the nearest published relative is Smolin's cosmological natural selection, which selects for black holes rather than observers.
+- 25 Sep 2026, 08:00 ET: The author's strange-loop measure recorded.
+
+
+**Piece 11.**
+- 26 Sep 2026, 04:10 ET: Launched: T44. Under the direction tie the author decided on 25 September, does one push open all three curled directions of a gas of 6-cubes into one flat space? Exact first (O71): the tie's walls never fall in the order large, smaller, none; the nearest is 44, none, 4 at λ = 1.25. Her inferred prediction: yes. Ours: not all.
+- 25 Sep 2026, 13:33 ET: Corrected: read as registered, with the gas reported separately, the tori's verdict is NEVER OPENS.
+- 25 Sep 2026, 12:50 ET: Corrected: the first direction opened fully in a third of runs. Launched: T39, the room in which one release pays the next wall (finished; one file read so far).
+- 25 Sep 2026, 08:00 ET: Read: T32, the push is fixed with size at 16; T30, one direction at a time. Gate C′ fails.
+- 25 Sep 2026, early morning: The author's decision: proceed with six links while the reproduction stays open.
+
+
+**Piece 12.**
+- 25 Sep 2026, 14:32 ET: Built: the smallest allotrope as a finite graph; at λ = 1 no energy barrier holds it. Launched: T43, its lifetime at seven temperatures. Finished on the cloud; not yet read.
+- 25 Sep 2026, 12:50 ET: Read: T36, no lasting allotropes on a torus (TRANSIENT).
+- 25 Sep 2026, 10:50 ET: The model's author replied; T36, the search he suggested, launched.
+
+
+**Piece 13.**
+- 26 Sep 2026, 04:10 ET: The author's idea recorded (VISION Update 33): time as we experience it is an outcome of open space; movement through space requires time, and c is the limit of that relationship. The model has no time; its one counterpart, a top speed for the front, is not run.
+- 25 Sep 2026, 13:16 ET: Launched: T40, the push scanned from 20 to 160. Finished on the cloud; not yet read.
+- 25 Sep 2026, 12:50 ET: Read: T33, the push equal to the cheapest first move buys one move and stalls (NO CASCADE).
+- 25 Sep 2026, 08:00 ET: Piece created from the author's four-direction idea; T33 launched.
+
+
+**Piece 14.**
+- 26 Sep 2026, 04:10 ET: Piece created. The author's ledger recorded (VISION Update 33) and checked (O71). T44 launched.
+- 25 Sep 2026, 18:46 ET: The author's revision: one kind of energy opens all three directions; the order of opening sets what each releases (VISION Update 32).
+- 25 Sep 2026, 17:57 ET: Exact (O70): a tie shaped to give today's budget keeps X stuck but leaves the partly open states stuck too; its first push is never the largest.
+- 25 Sep 2026, 15:40 to 17:53 ET: The author's triad and budget: red, the direction the push hits, releases ordinary matter; the other two release dark matter and dark energy (VISION Update 30).
+
 
 ---
 

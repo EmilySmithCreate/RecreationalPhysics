@@ -582,6 +582,119 @@ open space, and asked whether the color rides on the energy. Her answer: it ride
   (general knowledge, to verify).
 - The design brief is `docs/design/release_order_brief.md` (in progress), in place of the typed-energy brief.
 
+Update 33 (2026-09-26, early morning ET): **five positions of the author's: a ledger for the three releases, gravity and
+the count of hidden degrees of freedom, vantage points, how a strange loop is sized, and time as an outcome of open
+space.** Her words, put in order.
+Nothing here is a new knob; the one run it starts (PREREGISTRATION T44) uses the tie decided in Update 30. Details:
+ASSUMPTIONS O71, O72.
+
+- **1. The ledger (the author's).** Today's shares are about 5 % ordinary matter and energy, 27 % dark matter and 68 %
+  dark energy. If each opening direction releases the same amount, call it 66 units, about 200 in all: the first opening
+  costs 44 to activate (two thirds of its 66) and delivers a net 22 into the new space; the second costs 12 and
+  delivers 54, dark matter; the third costs nothing and delivers its whole release, dark energy, 132. Ordinary matter
+  and energy is what is left of red's share after it pays the second push: 10. The net energy sets how a string
+  vibrates. The three kinds may be spins along x, y and z, alike in wavelength and so able to interact; or they differ in
+  wavelength, and then ordinary matter cannot interact with dark matter (the 54-unit wavelength) or dark energy (the
+  132-unit one): the strings pass through each other and meet only through gravity, since the drive to curve is in all
+  three and most of the energy for that work is dark energy. Rarely, with enough speed or enough strings, they hit in
+  just the right way, which is how such particles could be found in accelerators and underground laboratories; how many
+  are found depends on the vibrations' relationship and the strings' concentration. Red is special because it ripped the
+  opening. The other two cannot evolve an observer: if they could, we would more likely be one of them, since there is
+  more of that kind. Dark energy never compacted into matter, never felt nuclear forces in stars, never broke into
+  planets. Dark matter is more like matter, perhaps because kicking off the third direction converted it, but it still
+  cannot build complex molecules; perhaps its particles carry too much energy, so their spins repel too strongly for large
+  particles to form: no dark-matter suns or planets, more like clouds. Dark energy is the pure energy of a whole
+  direction's uncurling. Inside a black hole each set of strings compacts into one space, which they can share because
+  they use different frequencies of it. Her questions: what must λ be for these proportions, and does the number of
+  points or degrees of freedom change it? Can the 66 and the 54 pack several strings into a unit, or one of each? Is c
+  the same for all three kinds, so that the energy reaching the activation boundary is (m_red + m_green + m_blue) c², or
+  does each kind carry its own factor?
+  - *Ours, exact (O71):* her numbers make 196, not 198; they balance exactly if every unit paid to a wall ends in the
+    third share (10, 54, 134). Her 54 : 10 = 5.4 is the measured dark-to-ordinary ratio because 44 and 12 were chosen to
+    reach it, so it is a fit of two numbers to two ratios, as O70's tie was. In the model an activation is a hill and not
+    a toll: the energy paid to climb a wall comes back on the far side, so walls cannot make the shares unequal; only
+    strain held in the partly open states can (the tie). **No λ gives these proportions** when every direction costs the
+    same to curl: the releases are equal at every λ. **The number of points does matter:** walls are fixed with size and
+    releases grow with the region, so her 44 of 66 describes a patch of about 66/(4(λ − 1)) points, one 6-cube at
+    λ = 1.25; over a large region the walls' share goes to nothing. With the follow tie of Update 30 the walls never fall
+    in her order (large, smaller, none): the middle one vanishes first and the last one last, the nearest being 44, none,
+    4 at λ = 1.25 and κ = 2. Whether one push then opens all three is being run (T44).
+  - *Ours; general knowledge, not read by us, to verify:* waves of different frequencies pass through one another in any
+    case (two colors of light do); what keeps dark matter dark in the standard account is that it carries no electric
+    charge, so it has no coupling to light, not its frequency. In her picture the equivalent would be a coupling tied to
+    each direction. The published ancestor is Kaluza–Klein: motion round a curled direction shows up in the large ones as
+    a charge. Dark matter is seen as diffuse halos, as she says, and the standard reason is that it cannot radiate energy
+    away, so it cannot cool and collapse into disks, stars and planets: cooling, not repulsion. Dark energy's density
+    stays the same as space grows, which fits "the energy of a direction", held by space itself (Update 30). And c is one
+    number for everything that moves through the same spacetime: gravitational waves from a neutron-star merger in 2017
+    arrived with its light after 130 million years, so gravity and light share c to about one part in 10¹⁵. So the first
+    form, E = (m_red + m_green + m_blue) c², is the one consistent with that; a wave's frequency enters through E = hf
+    (Planck's constant), not through c. The model has no strings; its nearest object, a small loop's vibration, did not
+    survive as a resonator inside a sheet (T15 rung 0b).
+- **2. Gravity, curve-first (the author's).** Its weakness makes sense, and so does its acting on all three kinds of
+  matter and energy, each tied to an opened direction. How many micro degrees of freedom there are should set how much
+  symmetry is gained by compacting the space directions; the three large directions are interchangeable, so if they were
+  the only ones, compacting would gain no symmetry. There is a drive to curve against a drive to stay open; without it,
+  why would mass spend its energy on that work? The drive must exist and must not be too big, to make the cold, stable
+  phase and observers' evolution as large as possible: bigger, and things move too fast to evolve and the last black
+  hole eats sooner. So the count of the other degrees of freedom brings this into balance with the biggest strange loop.
+  The quantity of mass and its distance decide how much energy is available for the work of curving.
+  - *Ours, exact (O72):* she is right about the three directions: their permutations appear on both sides and cancel;
+    the gain comes from the points. Per point, one fully curled cell gains 0.33 (four links), 0.16 (six) or 0.06 (eight)
+    in ln A, and the exchange of identical cells adds more, growing with their number, so the drive to curl grows slowly
+    with the size of the space: with six links at g = 1.5 it beats the curling cost at λ = 1.10 from about 10¹⁸ cells and
+    at λ = 1.25 from about 10⁵². In the model the balance she describes is set by how many points a curled cell holds and
+    how many cells there are. *General knowledge, to verify:* gravity between two protons is about 10³⁶ times weaker
+    than their electric repulsion; whether curve-first gravity gives that number is open.
+- **3. Vantage points (the author's).** Different vantage points make different degrees of freedom meaningful. From the
+  large scale we observe waves, and relativity holds because space and time are not meaningfully different there: the
+  space directions are interchangeable, speed matters and its direction does not. An observer at that level cannot tell
+  which version of reality they are in; with no interaction to tell them apart, the versions since the uncurling are the
+  same reality, not copies. An interaction, a measurement, defines some feature at the next moment, and the realities
+  with different outcomes are then different; all still exist, and they cannot interact, because an inescapable black
+  hole, which would destroy any observer, lies between them. Close up, the different but interchangeable directions
+  become something like different but interchangeable quarks: spin, most likely rotation about the x, y and z axes, or
+  color, is the counterpart of length, width and height. From there no relativistic relationship can be calculated or
+  measured, while quark spin can be.
+  - *Ours; general knowledge, to verify:* the branching she describes is the many-worlds reading of quantum mechanics
+    (Everett, 1957), where the branches stop interacting through decoherence rather than across a black hole; the black
+    hole is her addition. Spin is angular momentum, and its x, y and z components are not three kinds of thing: measuring
+    one disturbs the others. Quark color is an internal label, not a direction of space (Update 32's caution). The
+    nearest published form of "a curled direction seen close up becomes a charge" is again Kaluza–Klein. The model has
+    no time and no vantage points; this stays with piece 9.
+- **4. How a strange loop is sized (the author's).** The number of burps per turn is a function of the total energy,
+  which sets how many black holes there are and how large. To make the loop as big as possible the burps per turn should
+  approach infinity; since a burp comes for every 44 units of first activation, the number of black holes hardly matters:
+  it burps until no energy is left to activate another. A second function is the probability of an observer per solar
+  system times the number of solar systems, which depends on the space's length, width, height and time while energy is
+  available, and on how much red matter and energy there is, since only red has formed molecules complex enough to evolve
+  an observer. Too much energy means too many black holes too early and a shorter age of solar systems. So the loop's
+  size and its count of observers are maximized by balancing these. The loop needs no beginning or end, and its turns
+  need not differ; all of them are equally real. Lines, vectors, two-dimensional burps, and loops of other sizes are
+  equally real too, all present at once in cyclical time; we observe this one because the chance of being in a huge,
+  hospitable loop is far higher than of being in any non-looping structure, a regular loop or a smaller strange loop.
+  - *Ours; general knowledge, not read by us, to verify:* the nearest published relative is Smolin's cosmological natural
+    selection, where black holes spawn universes and the constants that make the most black holes are selected. Hers
+    selects differently, for observers over a loop's turn, and says that too many black holes too early costs observers.
+    In the model a burp's activation is returned rather than used up (O71), so what limits burps there is the room each
+    needs (pieces 4 and 5), not activation spent. The model counts no observers; its counterpart remains the (D, λ) map.
+- **5. Time as an outcome of open space (the author's, added later the same morning).** Time as we experience it is an
+  outcome of the space directions being uncurled: large space directions let matter and energy be in different places,
+  which makes location an essential degree of freedom from the large-scale vantage point. Space allows movement, and
+  movement through space requires time. The speed of light is the constant limit of that relationship. Looking down at
+  the micro level, the space directions are not meaningfully different, so the time calculation and general relativity
+  do not apply there.
+  - *Ours; general knowledge, not read by us, to verify:* this fits the project's earlier correction (the comparison
+    table, 21 September): the bare ordering is assumed on both sides, and what emerges is the time of relativity, the one
+    that mixes with space. A standard way of stating special relativity says the same thing in her direction: everything
+    moves through spacetime at c, so motion through space is paid for in slower passage of one's own time, and light,
+    all motion and no clock, is the limit. Relatives in print: relational accounts of time as change (Barbour), and the
+    "problem of time" in quantum gravity, where the fundamental equation has no time in it. The model has no time; its
+    only clock is the count of moves, and its one counterpart is whether the change's front has a fixed top speed, which
+    is on the known-physics ladder (TASKS T13, rung 2) and has not been run.
+- **What starts.** T44 (pre-registered with her inferred prediction and ours): under the follow tie, does one push open
+  all three curled directions of X into one flat space?
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
