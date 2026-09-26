@@ -854,6 +854,13 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   speed-limit run, not yet run). Not decided; the choice of O75 (time borrows or keeps energy) is still hers, and this idea
   needs the "keeps" reading.
 
+- **DECISION (the author's, 14:30 ET, "Yes proceed"): time curls behind the present, and time's opening keeps energy.**
+  Adopted as her hypothesis: the present is a moving front, the past is time curled back up, and so in O75's fit time's
+  own release is negative (ρ < 0), which makes flat four-direction space a long-lived ledge rather than the lowest state.
+  Its size, ρ, is not fixed by anything measured. What runs: PREREGISTRATION T47, the speed limit (does the tube's
+  opening front move at a fixed speed?) and whether flat four-direction space under this reading re-curls from one
+  local push, with her inferred predictions and ours.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

@@ -134,6 +134,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 25 Sep 2026, 10:45 ET: Decided: the exchange phase is the first rule of the new model. First exact result: a mild selection rule.
 
 **Piece 10.**
+- 26 Sep 2026, 14:40 ET: Decided by the author: time curls behind the present, so time's opening keeps energy. T47 launched: the speed limit, and whether flat four-direction space re-curls from one local push.
 - 26 Sep 2026, 11:40 ET: The author's idea: ordinary matter pays to open time. Run as the fourth opening in T46; the model cannot say which direction is time.
 - 26 Sep 2026, 05:08 ET: Piece created from the author's idea of 26 Sep, 04:10 ET (VISION Update 33).
 

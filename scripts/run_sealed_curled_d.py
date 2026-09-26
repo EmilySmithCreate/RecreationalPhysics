@@ -21,7 +21,8 @@ and C is recorded as N.
 graphity.sealed_tie_d; the rows then carry `kappa`, the tie total `tie_T` and the energy with the tie
 `h_tie_per_vertex`, and the conservation check includes the tie. Absent, the runner is what it was.
 "ftable_per_a" (T45, 2026-09-26): a tie of any shape, ftab[d] = entry d times a = 4(lambda - 1), run through
-graphity.sealed_tie_d.run_sealed_bath_table_d; "tie_label" names it in the rows. Exclusive with "kappa".
+graphity.sealed_tie_d.run_sealed_bath_table_d; "tie_label" names it in the rows. Exclusive with "kappa". With
+"local_heat" (T47 part B, 2026-09-26) the table tie runs under the per-vertex bath too.
 """
 import json
 import platform
@@ -100,8 +101,8 @@ def main(path, out_dir="results"):
     ftab = np.array([float(v) for v in cfg.get("ftable_per_a", [])]) * 4.0 * (lam - 1.0)
     if tabled and tied:
         raise ValueError("kappa and ftable_per_a are exclusive")
-    if tabled and (interchangeable or local_heat):
-        raise ValueError("the table tie is run with named points and a shared bath only")
+    if tabled and interchangeable:
+        raise ValueError("the table tie is run with named points only")
     if tied and interchangeable:
         raise ValueError("the direction tie is run with named points only")
     if interchangeable and local_heat:
@@ -141,7 +142,8 @@ def main(path, out_dir="results"):
                     for b in range(1, blocks + 1):
                         if tabled:
                             s, x, _, mean, tot, _ = run_sealed_bath_table_d(adj, side_u, stores, every,
-                                                                            seed if b == 1 else -1, lam, ftab)
+                                                                            seed if b == 1 else -1, lam, ftab,
+                                                                            by_vertex=local_heat)
                         elif tied:
                             s, x, _, mean, tot, _ = run_sealed_bath_tie_d(adj, side_u, stores, every, seed if b == 1 else -1,
                                                                           lam, kappa, by_vertex=local_heat)

@@ -381,6 +381,12 @@ confirmed or replaced.
 `scripts/analyse_t46.py`. Accept: the verdict per setting on the record, the owner's inferred prediction confirmed or
 replaced.
 
+## T47. The speed limit, and does flat four-direction space re-curl?  ◑
+
+**Added 2026-09-26** (VISION Update 36, the owner's decision of 14:30 ET; PREREGISTRATION T47; = T13 rung 2 for the
+tube). Part A on the laptop (`scripts/run_front_speed.py`, six configs), part B two Batch jobs. Read with
+`scripts/analyse_t47.py`. Accept: the verdicts on the record, the owner's inferred predictions confirmed or replaced.
+
 ## A charge per opening direction  ☐
 
 **Added 2026-09-26** (VISION Update 34, the owner's decision). Brief: `docs/design/direction_charge_brief.md`, three forms

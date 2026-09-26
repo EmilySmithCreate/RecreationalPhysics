@@ -62,6 +62,9 @@ git history.
   time; T45 setting C in three directions, her prediction for it added after launch and before any result; four eight-link
   Batch jobs, `cloud/queue/2026-09-26_t46.txt`, read with `scripts/analyse_t46.py`; `analyse_t44.read_replica` takes `dim`).
   Next ASSUMPTIONS number: **O76**.
+- **14:40 ET: T47 pre-registered** (the owner adopted time curling behind the present, time keeping energy): part A
+  on the laptop (`results/t47_front_*`), part B two Batch jobs (`cloud/queue/2026-09-26_t47.txt`); read with
+  `scripts/analyse_t47.py`.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".

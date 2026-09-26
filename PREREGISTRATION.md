@@ -2685,3 +2685,58 @@ place the way moving, colliding or falling matter would. If the verdict is NOT A
 failing in this model, and the one ingredient her mechanism would then need, concentration of released energy (her
 "mass is a directional catalyst"), is named as untested, not as an excuse. If it is ONE PUSH OPENS ALL, heat alone was
 enough.
+
+## T47. Is there a speed limit? The tube's opening front, and whether flat four-direction space re-curls (piece 10; TASKS T13 rung 2; VISION Update 36, the owner's decision of 14:30 ET; written 2026-09-26, 14:40 ET, before any run)
+
+### Why
+
+The owner adopted two things together: time curls behind the present (the present is a moving front, the past the
+curled floor), and therefore time's opening keeps energy (ASSUMPTIONS O75: the state with one direction curled lies
+below flat four-direction space). Earlier she proposed that the speed of light is the constant limit of the relation
+between open space and movement (VISION Update 33, point 5). The model has no time; what it can test is the shape:
+whether a front between two arrangements, once started, moves at a fixed speed, and whether flat four-direction space
+under the "keeps" reading re-curls from one local push.
+
+### What will be run
+
+**Part A, the speed limit** (`scripts/run_front_speed.py`, four links, no new ingredient). A 4 × L tube, L = 96, 192,
+384, λ = 1.25, one seed (move A at column 0, `run_seeded_tube.plant_seeds`, unchanged) and then sealed, in two baths:
+the shared bath of 2N empty stores (T17's box) and one empty store per vertex (released energy stays where it is
+released). Eight replicas per cell; 60,000, 120,000 and 240,000 sweeps; the converted fraction read every 20 sweeps.
+Configs `configs/t47_front_*.json`, run on the laptop.
+
+**Part B, re-curling** (`scripts/run_sealed_curled_d.py`, eight links, the table tie now allowed with the per-vertex
+bath; tested). Flat 6 × 6 × 8 × 8 (N = 2,304) at λ = 1.30 under O75's fit with time's release ρa: ρ = −0.2 (time
+keeps; one-curled lies 0.24 per point below flat) and ρ = +0.2 (control; flat is the lowest). One push of 128.01 in one
+vertex's store (flat space's cheapest move out costs 128 in both); three replicas, 20,000 sweeps read every 250,
+final graphs saved. Two Batch jobs (`cloud/queue/2026-09-26_t47.txt`). No pilot of either part; smoke tests of a few
+dozen sweeps checked the plumbing only.
+
+### Definitions, fixed now (`scripts/analyse_t47.py`, tested in `tests/test_t47.py` before any run)
+
+Part A: per replica t(p) = the first recorded sweep with converted fraction ≥ p; pace ratio
+R = [t(0.5) − t(0.3)] / [t(0.3) − t(0.1)] (1 for a fixed speed, 2 for spreading like diffusion from the seed, below 1 for
+speeding up); per-front speed v = 0.2 L / [t(0.5) − t(0.1)] columns per sweep. Per bath: NO FRONT if at any L fewer
+than half the replicas reach 0.5; FIXED SPEED if the median R is in [0.7, 1.4] at every L and the median v at each L is
+within 25 % of their mean; DIFFUSIVE if the median R ≥ 1.6 at every L; ACCELERATING if the median R < 0.7 at every L;
+MIXED otherwise.
+
+Part B: per replica, from the last block: MELTED (a quarter or more of points above d = 4), FRONT (a quarter or more at
+d = 3), HEALS (fewer than 2 % anywhere but d = 4), STALLED otherwise; per setting the majority, else MIXED.
+
+### Predictions, locked
+
+**The owner's (inferred by the assistant from her positions of Updates 33 and 36; to be confirmed or replaced before any
+result is read):** Part A, FIXED SPEED in both baths (a speed limit is a property of the arrangement). Part B: FRONT with
+time keeping energy (the present sweeps and time curls behind it), HEALS in the control.
+
+**Ours:** Part A, FIXED SPEED with local stores (the front meets the same conditions at every step) and ACCELERATING in
+the shared bath (the bath warms as the release accumulates, so later steps are paid more easily). Part B, HEALS in both:
+the push is spent in one move, and the gain of 0.24 per point is far too small for a patch that size to pay its own
+boundary; a re-curled region would have to be very large before it grew by itself.
+
+### What this cannot show
+
+That the fourth direction is time, or that any speed here is the speed of light; the model has no time and its clock is
+the count of moves. Part B asks only whether the "keeps" reading makes flat space re-curl from a local push at this size
+and λ; a larger or more concentrated push is not tested. Every eight-link result carries VISION Update 24's caveat.
