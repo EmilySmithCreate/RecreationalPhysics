@@ -2768,3 +2768,12 @@ statement of 15:50 ET and the inferred ones: **part A, local stores: FIXED SPEED
 (the front's own rule is unchanged, its surroundings warm); **part B, time keeps energy: FRONT; part B, control:
 HEALS.** Consequence, stated before reading: in part A hers and ours coincide in both baths; part B is the cell that
 can separate them.
+
+### Reading of part A, 2026-09-26, 20:30 ET (ASSUMPTIONS O76)
+
+**MIXED by the letter in both baths.** The pace ratio is steady at every size in both (medians 0.85 to 1.28); the speed
+per sweep falls as 1/L, which fails the size test. The cause is the definition's clock: the kernel offers any one local
+pair about 2/N times a sweep, so local rates per sweep fall as 1/N (known since VISION Update 9; the assistant's
+omission). Proposed, not enacted: count time so that each local pair is offered equally often (speed × L); then both
+baths agree across sizes within 8 % and read FIXED SPEED. The shared-bath prediction (ACCELERATING, hers and ours) fails
+under either clock. Part B is on the cloud and unread.

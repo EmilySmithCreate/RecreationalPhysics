@@ -1838,6 +1838,30 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     decides whether it does is concentration, not total: dark matter's release is about 9,300 units over 2,304 points,
     roughly 2 per store (*ours, rough*), and a seed of 106 needs about fifty times that in one place at one moment.
 
+- **O76 T47 part A, the speed limit: MIXED by the letter in both baths; the front's pace is steady, and its speed per
+  sweep falls as 1/L for a reason in the clock, not the front.** (2026-09-26, 20:30 ET; PREREGISTRATION T47;
+  `results/t47_front_*`, read with `scripts/analyse_t47.py`.) Energy conserved to the last digit in every run; every
+  replica at every size converted fully (f ≈ 0.99 at the end).
+  - **The pace ratio R** (1 for a steady front, 2 for diffusion, below 1 for speeding up), medians: shared bath 1.22,
+    0.96, 0.85 at L = 96, 192, 384; local stores 1.10, 1.28, 0.88. **Inside the steady band [0.7, 1.4] at every size in
+    both baths.** No run shows diffusion or clear speeding up.
+  - **The speed per sweep halves as L doubles**: shared 0.0078, 0.0041, 0.0021 columns per sweep; local 0.0054, 0.0028,
+    0.0013. So the pre-registered size test (each within 25 % of the mean) fails, and the verdict is **MIXED** in both.
+  - **Why, and it is the assistant's error in the definition, not a property of the front.** The kernel proposes a switch
+    by picking u1 and then u2 uniformly from the whole side (`sealed.py`, line 177), and a sweep is 2N attempts, so any
+    one local pair is offered about 2/N times per sweep: every local process runs at a rate per sweep that falls as 1/N.
+    This was known (VISION Update 9: the tube's exit is offered 3 times a sweep at every size) and should have fixed the
+    clock. Measured in a clock that offers each local pair equally often at every size (speed × L), the speeds agree:
+    shared 0.746, 0.792, 0.809; local 0.516, 0.538, 0.491, within 8 % of their means.
+  - **Proposed reading, not enacted (the owner decides; it changes the clock after the data):** with that clock both
+    baths read **FIXED SPEED**. The size-independent speed is then about 0.78 columns per unit in the shared bath and
+    0.51 with local stores: the warm shared bath carries the front faster but not faster and faster.
+  - **Predictions.** Local stores: hers and ours FIXED SPEED; MIXED by the letter, FIXED SPEED under the proposed clock.
+    Shared bath: hers and ours ACCELERATING; **fails either way**: the medians sit at 0.85 to 1.22 and no size falls
+    below 0.7. The warming of the whole box (to about 0.49 per store) does not speed the front up as it goes.
+  - *Ours; not claimed:* that this speed has anything to do with light or with time; a steady front in a uniform medium
+    is what front theory expects (PREREGISTRATION T47, note of 15:20 ET).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
