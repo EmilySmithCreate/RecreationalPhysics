@@ -2759,3 +2759,12 @@ Her words: "Front moving may accelerate. It matches our experience of time." Rec
 ACCELERATING**, replacing the inferred FIXED SPEED. For the local stores she gave no separate prediction; the inferred
 FIXED SPEED stays marked inferred. Consequence, stated before reading: in part A her prediction and ours now coincide
 in both baths, so part A cannot tell her picture from ours; only part B can.
+
+### The owner's predictions, confirmed, 2026-09-26, 20:00 ET, before any T47 result was read
+
+After the reading of [Mag03], [Ell14] and [ER10] (`docs/reading/notes/2026-09-26_time_rate.md`) the owner adopted one
+rule, that the pace of the present is set by local conditions, and confirmed its predictions as hers, replacing her
+statement of 15:50 ET and the inferred ones: **part A, local stores: FIXED SPEED; part A, shared bath: ACCELERATING**
+(the front's own rule is unchanged, its surroundings warm); **part B, time keeps energy: FRONT; part B, control:
+HEALS.** Consequence, stated before reading: in part A hers and ours coincide in both baths; part B is the cell that
+can separate them.

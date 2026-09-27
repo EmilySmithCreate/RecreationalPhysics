@@ -910,6 +910,18 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   alternative to inflation ("varying speed of light", Moffat; Albrecht and Magueijo), heavily constrained by
   observation. How time feels to a brain is not evidence either way. Recorded as her prediction for T47 part A.
 
+- **Her decisions, 20:00 ET, after the reading** (`docs/reading/notes/2026-09-26_time_rate.md`; [Mag03], [Ell14],
+  [ER10] read in full by assistant agents from PDFs she supplied). (a) Adopted: **the pace of the present is set by local
+  conditions**: fixed where conditions are steady ([Ell14]'s "one second per second" locally), slower where matter sits
+  or accelerates (time dilation; the equivalence principle), and a speed limit because the medium sets how fast a front
+  can move. Its T47 predictions are recorded as hers. (b) **Withdrawn: "time itself sped up since the beginning"**, in her
+  words because it does not match what was learned: [Ell14] keeps the local rate fixed, and the one published way to vary
+  it, a varying speed of light [Mag03], runs the other way (light faster early). (c) Her picture's closest published
+  relative is [Ell14]'s evolving block universe, which takes the same step (a real present, a preferred frame set by
+  matter, relativity's simultaneity "a purely psychological construct") and leaves the same problem open (whether that
+  frame can be detected). What hers adds is a mechanism at the front. A prediction the rule makes and nothing yet tests:
+  a front slows where it crosses a region holding matter.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
