@@ -1,0 +1,13 @@
+# Push a change to this file to have the fetch_results workflow copy finished runs into cloud/inbox/.
+# One config name or shell pattern per line; runs already in results/ or cloud/inbox/ are skipped.
+# 2026-09-27: everything finished and unread (docs/HANDOFF.md, hand-over of 27 Sep, 04:45 ET).
+t38_*
+t39_*
+t40_*
+t41_*
+t42_*
+t43_*
+t44_*
+t45_*
+t46_*
+t47_recurl_*

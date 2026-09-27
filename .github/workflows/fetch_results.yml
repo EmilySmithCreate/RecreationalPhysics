@@ -1,0 +1,91 @@
+# Copy finished runs from the results bucket into cloud/inbox/ on this branch, so that a session on a laptop
+# without the project account's credentials can check them and commit them as results.
+#
+# Trigger: push a change to cloud/fetch/request.txt, one config name or shell pattern per line (t45_* is fine;
+# blank lines and lines starting with # are ignored), or dispatch by hand. For each finished run in the bucket whose
+# name matches, and which is not already in results/ or cloud/inbox/, the workflow copies everything under the
+# bucket's <config>/ prefix (the CSV, the .meta.json, any _adj/ or _hist/ folder) to cloud/inbox/<config>/ and
+# commits that folder. Scratch under partial/ is never fetched.
+#
+# It never writes to results/. A fetched file becomes a result only when a session has checked it against its
+# committed config and moved it into results/ in a commit of its own (scripts/accept_inbox.py), which is what keeps
+# rule 5 true: results are append-only, each has a config behind it, and the check is on the record.
+name: fetch_results
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["**"]
+    paths:
+      - "cloud/fetch/request.txt"
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_REGION: us-east-1
+      ACCOUNT: ${{ vars.AWS_ACCOUNT_ID }}
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/ci_cd
+          aws-region: us-east-1
+          role-duration-seconds: 1800
+
+      - name: copy the requested runs into cloud/inbox/
+        run: |
+          set -eu
+          BUCKET="s3://recphys-results-$ACCOUNT"
+          aws s3 ls "$BUCKET/" | awk '$1 == "PRE" {sub("/$", "", $2); print $2}' | grep -v '^partial$' > /tmp/runs.txt || true
+          sed 's/#.*//; s/[[:space:]]*$//; s/^[[:space:]]*//' cloud/fetch/request.txt | grep -v '^$' > /tmp/wanted.txt || true
+          : > /tmp/fetch.txt
+          while read -r run; do
+            [ -e "results/$run.csv" ] && continue
+            [ -e "cloud/inbox/$run" ] && continue
+            while read -r pat; do
+              case "$run" in $pat) echo "$run" >> /tmp/fetch.txt; break ;; esac
+            done < /tmp/wanted.txt
+          done < /tmp/runs.txt
+          echo "to fetch: $(wc -l < /tmp/fetch.txt) runs"
+          while read -r run; do
+            aws s3 cp --recursive --only-show-errors "$BUCKET/$run/" "cloud/inbox/$run/" < /dev/null
+            if [ ! -f "cloud/inbox/$run/$run.csv" ] || [ ! -f "cloud/inbox/$run/$run.meta.json" ]; then
+              echo "INCOMPLETE $run: no CSV or no .meta.json in the bucket" | tee -a /tmp/problems.txt
+            fi
+          done < /tmp/fetch.txt
+          # GitHub refuses files over 100 MB; stop rather than push half a run.
+          if find cloud/inbox -type f -size +95M 2>/dev/null | grep -q .; then
+            find cloud/inbox -type f -size +95M
+            echo "a fetched file is over 95 MB; fetch it by hand" >&2
+            exit 1
+          fi
+          {
+            echo "# Fetched from the results bucket, $(date -u +'%Y-%m-%d %H:%M UTC') (commit ${GITHUB_SHA::7})"
+            echo
+            echo "Unchecked. Not results until scripts/accept_inbox.py has checked each run against its config and a"
+            echo "session has committed the move into results/."
+            echo
+            while read -r run; do
+              echo "- $run  ($(find "cloud/inbox/$run" -type f | wc -l) files, $(du -sh "cloud/inbox/$run" | cut -f1))"
+            done < /tmp/fetch.txt
+            [ -s /tmp/problems.txt ] && { echo; echo "## Problems"; sed 's/^/- /' /tmp/problems.txt; } || true
+          } > cloud/inbox/FETCHED.md
+          cat cloud/inbox/FETCHED.md
+
+      - name: commit the inbox
+        run: |
+          git config user.name "fetch_results workflow"
+          git config user.email "actions@users.noreply.github.com"
+          git add cloud/inbox
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "fetched from the results bucket into cloud/inbox/ (unchecked; not results until accepted) [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
