@@ -2970,3 +2970,58 @@ Whether pieces join into one space. T45 says they did not, and that is the gas's
 opened piece is beyond its local census: a region of 64 or 256 points with every direction open at every point has no
 wrap-around loop of four, but the whole of it is the size of one cube. Every six- and eight-link result carries VISION
 Update 24's caveat.
+
+## T50. Does the tube's opening front slow where energy sits? (piece 10; the owner's question of 26 September; written 2026-09-27, 13:20 ET, before any run)
+
+### Why
+
+The owner asked on 26 September whether an opening front slows where matter sits, the model's counterpart of time running
+slower near mass (the note of that day under T47 names it as untested), and her rule of the same evening is that the pace
+of the present is set by local conditions (T47, predictions confirmed). T47 part A found that the tube's front, with the
+released energy kept where it is released, moves at a steady pace. This asks whether it keeps that pace through a region
+holding extra energy. In the model, energy is the only form of matter that can be put in front of a front without
+building a new object; a scrap, the structural form, lives in the opened sheet, not in the tube ahead of it.
+
+### What will be run
+
+`scripts/run_front_matter.py`, T47 part A's local setting unchanged: a 4 × 192 tube, λ = 1.25, one seed (move A at column
+0), one store per point. Before the run, every point of a band of 16 columns on the right of the seed, centred 48 columns
+away (columns 40 to 55), gets e units in its store: e = 0 (the control), 1, 3, 6 and 10. All are below 12, the cheapest
+move that starts an opening, and the tube has no other move below 12 except ones that change nothing (0), so the band
+cannot open by itself (`scripts/exact_walls_d.py`, 4 × 48 at λ = 1.25, the same morning). The left front crosses the same
+distances through bare tube, so each replica is its own control. 24 replicas, 40,000 sweeps (at this length T47's fronts
+had opened 60 % of the tube by about 20,000), read every 20. Five Batch jobs (`cloud/queue/2026-09-27_t50.txt`), seeds
+20265001 to 20265005. A smoke test of 400 sweeps on a 64-column tube checked the plumbing (energy conserved exactly); its
+end lines were seen (the fronts had moved a few columns).
+
+### Definitions, fixed now (`scripts/analyse_t50.py`, tested in `tests/test_t50.py` before any run)
+
+A column is open when at least 3 of its 4 points are at local dimension 2 (the sheet's; the tube's is 1). Per replica,
+t_R(k) and t_L(k) are the first readings at which at least k columns have opened on the right and on the left of the seed.
+The band spans distances 40 to 56 on the right. T_band = t_R(56) − t_R(40); T_mirror = t_L(56) − t_L(40); R = T_band /
+T_mirror. A replica is valid if both fronts reached 56. Per energy e > 0, with Q = median R(e) / median R(0): **SLOWS** if
+Q ≥ 1.25, **SPEEDS** if Q ≤ 0.8, **NO EFFECT** otherwise, **NO FRONT** if fewer than half the replicas of that energy or of
+the control are valid. Reported beside, not scored: the median crossing times, and the band's energy left when the right
+front leaves it.
+
+### Named or interchangeable points: which, why, and the expected effect
+
+Named, as T47. Interchangeable points run only with a shared bath, and this run needs one store per point. Expected
+effect of switching: the tube's 384 renamings make the start stickier (a first move leaves 192 or fewer), but once the
+front runs every point it passes is in a state of low symmetry on both sides, so its pace should change little. Not
+computed further.
+
+### Predictions
+
+**The owner's (inferred by the assistant from her question of 26 September and her rule that the present's pace is set
+by local conditions; to be confirmed or replaced before any result is read):** SLOWS at every e > 0, more with more
+energy.
+
+**Ours:** SPEEDS, more with more energy. The front's moves are paid from the stores of the points that make them, and
+the band's energy pays moves that would otherwise wait for the front's own release to reach that point. Where e is small
+(1), NO EFFECT is possible.
+
+### What this cannot show
+
+That the front is time, or that its slowing or speeding is time dilation: the model has no time, and its clock is the
+count of moves. Matter as structure (a scrap in the medium) is not tested. One length and one λ only.

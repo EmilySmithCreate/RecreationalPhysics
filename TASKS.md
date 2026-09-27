@@ -407,7 +407,9 @@ O85 (a fully curled X in this family is a gas of cubes; from a gas no opening ma
 PREREGISTRATION **T48**, the connected curled tori of three and four directions with the released energy kept where it is
 released, with the two-dimensional tube as control (16 Batch jobs), and **T49**, one hypercube with named and
 interchangeable points: does it open all its directions, and in what order? (12 Batch jobs). Manifest
-`cloud/queue/2026-09-27_t48_t49.txt`; read with `scripts/analyse_t48.py` and `scripts/analyse_t49.py`. Accept: each read
+`cloud/queue/2026-09-27_t48_t49.txt`; read with `scripts/analyse_t48.py` and `scripts/analyse_t49.py`. And **T50**, the
+owner's question of 26 September: does the tube's opening front slow where energy sits? (5 Batch jobs,
+`cloud/queue/2026-09-27_t50.txt`, `scripts/run_front_matter.py`, read with `scripts/analyse_t50.py`.) Accept: each read
 by its rules, the inferred predictions confirmed or replaced by the owner before any verdict is quoted as hers.
 
 ## Eight links per point (D = 4): the pattern in which four curled directions open  ◑

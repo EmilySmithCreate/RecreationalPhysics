@@ -83,7 +83,8 @@ git history.
   separately and seams, not scorched space; exactly (Mulder's theorem), a fully curled X is a gas of pieces of at most
   4^D points. **T48 and T49 launched** (28 Batch jobs, `cloud/queue/2026-09-27_t48_t49.txt`): fetch with
   `cloud/fetch/request.txt` (`t48_*`, `t49_*`), check with `scripts/accept_inbox.py`, read with `analyse_t48.py` and
-  `analyse_t49.py`. Next ASSUMPTIONS number: **O86**.
+  `analyse_t49.py`. **T50 launched** 13:25 ET (5 jobs, `cloud/queue/2026-09-27_t50.txt`, `scripts/run_front_matter.py`,
+  read with `analyse_t50.py`). Next ASSUMPTIONS number: **O86**.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".

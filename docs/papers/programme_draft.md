@@ -41,7 +41,7 @@ a fully curled X larger than one cube is always a gas of separate cubes in this 
 space did not curl back behind a push. **Next:** T48 (a connected curled space with the released energy kept at the front) and T49
 (one cube alone: all its directions, and in what order), both running.
 
-**Next experiments, in order** (ours; each pre-registered with the author's prediction): (1) T48 and T49, running; (2) the smallest patch that grows,
+**Next experiments, in order** (ours; each pre-registered with the author's prediction): (1) T48, T49 and T50 (does a front slow where energy sits), running; (2) the smallest patch that grows,
 exactly, in three and four directions; (3) does a front slow where matter
 sits; (4) the many-seed mosaic in three directions; (5) gravity by counting.
 

@@ -1,0 +1,7 @@
+# T50 (PREREGISTRATION T50, written 2026-09-27 before any run): does the tube's opening front slow where energy sits?
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_front_matter t50_front_matter_e0
+run_front_matter t50_front_matter_e1
+run_front_matter t50_front_matter_e3
+run_front_matter t50_front_matter_e6
+run_front_matter t50_front_matter_e10
