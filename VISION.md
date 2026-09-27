@@ -979,6 +979,42 @@ from the saved wiring after the author asked what "melted" means, that was wrong
   connected torus, with released energy kept where it is released, the setting in which the two-dimensional tube opened as
   a front) and T49 (one cube: does it open all its directions, and in what order?) are pre-registered and running.
 
+Update 39 (2026-09-27, 15:50 ET): **the author's answers on what X may be.** Why this page changes: Update 38 asked
+whether X is one connected thing with a direction already open or a foam of tiny fully curled pieces, and the runs of
+T48 and T49 depend on it. Her words, put in order.
+
+- **X may start with one direction already open**, "if that makes things work." So the connected tori of T48 (in three
+  directions, one or two curled beside one open; in four, three curled beside one open) are within her picture, not a
+  compromise of it. The model still cannot say which direction is time.
+- **Points may be interchangeable before, after, or both.** *Ours:* this opens a knob not yet defined: the counting of
+  renamings applied in X only, in space only, or throughout. Its exact form is fixed in writing before any run (S1);
+  the runs so far use one treatment throughout.
+- **The three space directions and the fourth may be tied evenly or unevenly.** *Ours:* the tie of Update 30 in any
+  shape (O70) already allows this in four directions; T46 ran one uneven form.
+- **The foam: "could be?"** She had not considered it and holds it open. Recorded as a candidate for X, not adopted:
+  X as many tiny fully curled pieces that open separately and must then join. *Ours:* in this model the pieces opened
+  but never joined (O85); whether any rule lets them join is the test that would make the foam a live candidate, and it
+  is designed after T49 reads.
+- **Her predictions**, recorded before any result was read: T48, the first direction opens and the last stays curled
+  (she now leans this way); T50, the front speeds up where energy sits; T49, ours ("seems reasonable"). All three now
+  coincide with ours, so those runs test a shared expectation.
+- **Other micro degrees of freedom** (her words, 16:00 ET, put in order): there are other degrees of freedom at the micro
+  level, in triads, individually, or in combinations of K relationships, and they also shape X's barriers. And the piece
+  that stays shut may be the separate floor on which some degrees of freedom (time, space, others) still exist at the
+  micro level. *Ours, unverified:* in this model the only degrees of freedom are the links, and a barrier is a count of
+  squares and surplus squares; anything more (a variable on each triad, on each point, or on groups of K links) is a new
+  ingredient, which is the "other models" decision of Update 28 and needs its form written before any run (S1). A rung
+  with no way downhill is exactly a separate floor in her sense: a curled direction or piece that stays small while
+  others open, the model's version of hidden small dimensions (Kaluza–Klein; general knowledge, to verify).
+- **More directions** (her question, 16:00 ET): do the transitions with five, six or more directions follow the pattern
+  of two, three and four, and could that change the burp's transactions? Her plan: learn the pattern from 2, 3 and 4;
+  if no arrangement then agrees with the observed universe, design an experiment around additional scales. *Ours:* the
+  ladder's walls at five directions are exact and cheap, and are being computed (`scripts/exact_ladder_d.py`).
+- **Her aim, in her words:** understanding reality is "the thing that matters most in the world" to her; "with my
+  creativity and intuition and your research and communication and experiment design capabilities, I think we can make
+  meaningful progress." Recorded because it is why the bar in "What success means" matters: progress here means claims
+  that can fail, tested so that a physicist can check them.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

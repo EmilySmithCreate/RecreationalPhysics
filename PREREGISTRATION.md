@@ -2916,6 +2916,14 @@ Anything about a fully curled X, which in this family is a gas (O85; T49 asks wh
 torus would open from several seeds into a mosaic: these sizes leave room for one front. Anything with interchangeable
 points. Every six- and eight-link result carries VISION Update 24's caveat (the reproduction gate is open).
 
+### The owner's prediction, 2026-09-27, 15:45 ET, after launch and before any T48 result was read
+
+Her words, on reading ours: "The first direction opens; the last stays curled: now I'm leaning more toward this."
+Recorded as **hers for the tori with two or more curled directions (4 × 4 × 18, 4 × 4 × 4 × 12): ADVANCES ONLY**, replacing
+the inferred ONE SPACE. For the control and the one-curled torus (4 × 8 × 12) she gave no separate statement, and the
+inferred ONE SPACE stays marked inferred there. Consequence, stated before reading: on the two- and three-curled tori hers
+and ours now coincide, so those cells cannot tell her picture from ours; what they can test is the shared expectation.
+
 ## T49. One fully curled piece: does a single hypercube open all its directions, and in what order? (pieces 5 and 6; written 2026-09-27, 12:45 ET, before any run)
 
 ### Why
@@ -2971,6 +2979,12 @@ opened piece is beyond its local census: a region of 64 or 256 points with every
 wrap-around loop of four, but the whole of it is the size of one cube. Every six- and eight-link result carries VISION
 Update 24's caveat.
 
+### The owner's prediction, 2026-09-27, 16:00 ET, after launch and before any T49 result was read
+
+Her words, on reading ours ("opens fully only where it has a way downhill; interchangeable points hold it shut much
+longer"): "seems reasonable." Recorded as **hers: ours, as written above**, replacing the inferred ALL OPEN, IN ORDER.
+Consequence, stated before reading: hers and ours coincide, so T49 tests the shared expectation and cannot separate them.
+
 ## T50. Does the tube's opening front slow where energy sits? (piece 10; the owner's question of 26 September; written 2026-09-27, 13:20 ET, before any run)
 
 ### Why
@@ -3025,3 +3039,12 @@ the band's energy pays moves that would otherwise wait for the front's own relea
 
 That the front is time, or that its slowing or speeding is time dilation: the model has no time, and its clock is the
 count of moves. Matter as structure (a scrap in the medium) is not tested. One length and one λ only.
+
+### The owner's prediction, 2026-09-27, 15:45 ET, after launch and before any T50 result was read
+
+Her words: "front speeds up." Recorded as **hers: SPEEDS**, replacing the inferred SLOWS. Consequence, stated before
+reading: hers and ours now coincide, so T50 cannot tell her picture from ours. A question put to her the same afternoon
+and not yet answered: in her picture of 26 September, where the front is the present, does a front that speeds where
+energy sits correspond to clocks running slower near mass, as measured, or to the opposite? *Ours:* read plainly it is
+the opposite; the mapping from the front's pace to a clock's rate is hers to define, and the verdict is scored by the
+rule above whatever the mapping.
