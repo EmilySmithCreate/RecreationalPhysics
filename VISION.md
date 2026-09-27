@@ -940,17 +940,21 @@ two dimensions in this model family. Said plainly, as the rules require: it does
 - **What held.** The exact walls said where her first order (B) would rest, with the dark-energy direction still curled,
   and it rested there. The first openings of every order ran. The best budget order (A, dark energy first) opened most of
   the gas fully, with the damage beside it. T38: the tube's waiting times are two populations, as she predicted.
-- **The one new lever.** With interchangeable points, concentrated energy heals flat space instead of melting it (T42):
+- **The one new lever.** ~~With interchangeable points, concentrated energy heals flat space instead of melting it (T42):
   the first verdict in this project that the treatment of points changes, and it bears directly on the damage that stops
-  the openings.
+  the openings.~~ *Corrected the same day, 12:10 ET, after the owner asked what "melted" means (ASSUMPTIONS O82,
+  correction):* the named-point runs did not melt. Both kinds of point healed; with named points one small scar, a
+  swapped pair of links, kept flickering on and off, and with interchangeable points it almost never formed. Nothing
+  curled in either. A real effect of the counting and a small one; whether it touches the far larger damage of the
+  openings is untested, and what that damage is has not yet been read from the wiring.
 - **Time.** Flat four-direction space under "time keeps energy" does not re-curl from a push of 128; a scar of about 20
   points holds the push. The moving band of Update 36 is not seen at this size, and the speed test (T47 part A) showed the
   steady fronts any uniform medium gives.
 - **What this does to the thesis.** Claim 4's shape stands where it was shown, in two dimensions: a specific arrangement
   opening sharply from a seed with an exact release. Beyond two dimensions, in this family at these settings, the
   mechanism lacks a way to open without damaging what opens. Candidates, each to be decided under S1 before any run:
-  interchangeable points in the opening runs (T42's lever; the knob is already decided, Update 12); pricing the true
-  barrier exactly before choosing pushes; a different model (Update 28). None of this is about the real universe; each
+  interchangeable points in the opening runs (T42's lever, smaller than first written; the knob is already decided,
+  Update 12); pricing the true barrier exactly before choosing pushes; a different model (Update 28). None of this is about the real universe; each
   result says what this family can and cannot do.
 
 ## The target ("the spot")

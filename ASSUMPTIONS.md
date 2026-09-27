@@ -1669,6 +1669,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   starts a fold. This is the fifth test of the owner's black-hole mechanism to find no fold (O20, T21, T26, T27 in two
   directions; T34 in three), all with named points or small sizes; the counting half is T42. *Every six-link result
   carries VISION Update 24's caveat.*
+  - *Addendum, 2026-09-27 (O82, correction):* the MELTED replicas here end with one to a few small scars, most of them a
+    single swapped pair of links, flickering on and off; nothing curled. "Excites it" is the right word; "melts" is not.
 
 - **O70 Exact, exploratory: a direction tie shaped to give today's energy budget keeps X stuck and flat space stable, but
   stops the cascade after the first direction.** (2026-09-25, 17:57 ET; `scripts/exact_walls_tie_shape_d.py`; six links,
@@ -1968,6 +1970,29 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   flat space, which has many, over a melt, which has one (O55), so here the counting works for space's stability and
   against damage, not for the fold. What it suggests, untested: the damage that stops the openings of O79 might be
   suppressed with interchangeable points.
+  - **Correction, 2026-09-27, 12:10 ET: the named control did not melt** (the owner asked what "melted" means and how we
+    know it melted rather than curled; `scripts/read_t42_scars.py`, reading the census over time and the saved wiring;
+    no verdict changes). MELTED is T34's rule: at least 4 points with more open directions than flat space allows (d > 3),
+    and more of those than curled points (d < 3). The prose above read it as the space melting. It did not. At the last
+    reading the named replicas hold 12 to 42 such points of 512: one to a few small scars, most of them 12 points holding
+    64 units, one swapped pair of links, the cheapest move out of flat space (in every saved scar at the smallest push, the
+    one switch back returns the energy to exactly 0). At the smaller pushes the scar switches on and off about 40 times a
+    run and is present about three quarters of the time, so the last reading is a snapshot of a flicker (ours: healing puts the 64 units into one store, which can then pay
+    for the next scar). At the largest push up to about half the
+    points are disordered early on, in both treatments, and heal back in both. **Nothing curled in any run: at most 2 of
+    512 points ever had fewer open directions than flat space.** Curling and damage are told apart by the count itself:
+    a curled direction makes the straight-through pair of links close a square (d falls below 3), a swapped link
+    breaks squares (d rises above 3). **The corrected reading: both treatments heal; with named points a small scar keeps
+    flickering, with interchangeable points it almost never forms.** *Ours, unverified:* with named points a scar in each
+    of its many possible places is a different arrangement; with interchangeable points they are one, since flat
+    space looks the same from every place, so the scar has far fewer ways to exist. The verdicts by the letter
+    (interchangeable HEALS, named MELTS) stand as scored; the prose "named points melt it" is withdrawn, and so is the
+    reading that this is a lever against the damage of the openings: it removes a flickering scar, and whether it
+    changes the far larger damage of O79 is untested. **O79's "damaged" shares (a quarter to over a third of points)
+    are counts of the same kind, not yet read from the wiring;** whether they are disorder or seams where opened and
+    curled regions meet is not known until the saved graphs are read. T34 (O69) is the same case: its MELTED replicas
+    end with a few scars (12 to 46 points of 216 or 512), and its largest excitation, about 150 of 512 points at
+    the largest push, healed back to those scars.
 
 - **O83 T43, read: a planted allotrope at λ = 1 DISSOLVES at every coupling.** (2026-09-27, 09:35 ET; PREREGISTRATION T43;
   `analyse_t43.py`.) Every planted region, in every construction and at every coupling from 1.0 to 3.697, dissolved,

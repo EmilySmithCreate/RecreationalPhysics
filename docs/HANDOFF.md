@@ -77,7 +77,8 @@ git history.
   project account: the new `fetch_results` workflow copies runs named in `cloud/fetch/request.txt` into `cloud/inbox/`,
   and `scripts/accept_inbox.py --move` checks each against its config and moves it into `results/`). O79 to O84 and
   VISION Update 37: nothing opened all directions in three or four dimensions; T47 part B HEALS; T42 interchangeable
-  HEALS against named MELTS; T43 DISSOLVES; T38 TWO POPULATIONS. Next ASSUMPTIONS number: **O85**.
+  HEALS against named MELTS (*corrected 12:10 ET, O82: the named MELTED replicas are one to a few flickering scars, not a
+  melt; T34 the same; nothing curled*); T43 DISSOLVES; T38 TWO POPULATIONS. Next ASSUMPTIONS number: **O85**.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".

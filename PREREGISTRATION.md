@@ -2047,6 +2047,11 @@ temperature, came back to perfectly flat space, so a "melt" here is thermal exci
 removes, not trapped disorder; the verdict stands by its rule and says less than the word. The counting half of her
 mechanism, which named points cannot see, is T42 (interchangeable points near λ = 1.02), running. ASSUMPTIONS O69.
 
+### Note, 2026-09-27, 12:10 ET (ASSUMPTIONS O69 addendum, O82 correction)
+
+The MELTED replicas end with one to a few small scars flickering on and off, not a melted space; nothing curled.
+The verdict stands as scored by its rule.
+
 ## T36. Allotropes in the published model: do regions of points touching two squares persist in a background of three? (piece 12; written 2026-09-25, evening, before any run)
 
 ### Why
@@ -2458,6 +2463,13 @@ interchangeable points); sizes where the gas of cubes does not fit (N must be a 
 
 Interchangeable: **HEALS** (47 of 48 healed). Named control: **MELTS**. The owner's inferred RE-CURLS fails, her control
 holds; our MELTS in both fails for the interchangeable half.
+
+### Correction to the reading, 2026-09-27, 12:10 ET (ASSUMPTIONS O82, correction)
+
+The verdicts stand as scored. What the named control's MELTED replicas are, read from the census over time and
+the saved wiring: one to a few small scars (most are one swapped pair of links, the cheapest move out of flat
+space), flickering on and off; nothing curled in any run. Both treatments heal; with interchangeable points the
+scar almost never forms. The prose "named points melt it" is withdrawn.
 
 ## T43. How long does a planted allotrope last at λ = 1? (piece 12; the model author's own question; written 2026-09-25, 14:24 ET, before any run)
 
