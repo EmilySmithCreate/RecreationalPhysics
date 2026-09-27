@@ -1,0 +1,30 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T41 (written 2026-09-25, before any run): does the new space need room for the burp in three directions? 4 x 8 x 12 (one curled), lambda 1.40, spark 29.0 (the exact wall is 28.8), C = N. Not exploratory. Every six-link result carries VISION Update 24's caveat: the reproduction gate is open.",
+    "name": "t41_lam140_n384_cn",
+    "section": "T41",
+    "dims": [
+      4,
+      8,
+      12
+    ],
+    "lambda": 1.4,
+    "capacities": [
+      "N"
+    ],
+    "sparks": [
+      29.0
+    ],
+    "replicas": 12,
+    "n_sweeps": 100000,
+    "record_every": 200,
+    "seed": 20264108,
+    "save_adjacency": true
+  },
+  "config_path": "configs/t41_lam140_n384_cn.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T41, written 2026-09-25"
+}
