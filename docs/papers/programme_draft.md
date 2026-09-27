@@ -24,6 +24,28 @@ makes them distinguishable.
 
 ---
 
+## Where the programme is, 27 September
+
+**What the model has shown.** A curled arrangement standing in for X opens sharply into flat space, from a seed, as a front,
+releasing an exact lump; the push is fixed at every size tried; sealed, the change completes when the surroundings have
+room and melts them when not (measured; paper 1, submitted). One seed leaves one small scrap; many seeds, which a long
+space makes by itself, leave many scraps and, at the longest lengths, a mosaic of mismatched patches (T37). With three
+and four curled directions the directions open one at a time and one push does not carry the rest. The front of an
+opening moves at a steady pace (T47). **What has not worked:** no pull at a distance between scraps at fixed wiring
+(exact); counting versions cannot reproduce quantum correlations (argued); a local push melts flat space rather than
+re-curling it; the published three-dimensional curve is not reproduced (Gate C).
+
+**Finished on the cloud, not yet read:** T44, T45, T46, T47 part B, T39 to T43.
+
+**Next experiments, in order** (ours; each pre-registered with the author's prediction): (1) read what is finished;
+(2) does a front slow where matter sits (the counterpart of time dilation); (3) one speed limit for every kind of
+disturbance; (4) the many-seed mosaic in three directions (paper 2); (5) gravity by counting, with interchangeable points.
+
+**Papers:** paper 1 submitted; paper 2 (the scrap) has its data (T10, T17, T19, T25, T37; T38's last files to come); the
+three-direction companion waits on T44 to T46 and the reproduction gate.
+
+---
+
 ## Where each piece stands
 
 The tests use one published model of emergent geometry (Trugenberger's combinatorial quantum gravity) as a
@@ -77,6 +99,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026: Piece created.
 
 **Piece 2.**
+- 27 Sep 2026, 04:40 ET: Read provisionally: T38 UNCLEAR (one cell of four with a tail); a fast group of openings in every cell; 6 files still to download.
 - 25 Sep 2026, 12:50 ET: Launched: T38, the rare very long waits, 4,000 decays per setting at 64 points. Finished on the cloud; not yet read.
 - 25 Sep 2026, 08:00 ET: Read: T24 passes the repaired energy check in all 28 cells and is still inconclusive by the letter, for a third reason (one extreme wait in four cells). The edge break-up appeared a third time. The author's bar recorded: it has to happen at one size, not every size in every instance.
 - 24 Sep 2026, night: Launched: T24, the λ map a third time.
@@ -115,6 +138,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 25 Sep 2026, 15:40 to 17:53 ET: The author's triad and budget: red, the direction the push hits, releases ordinary matter; the other two release dark matter and dark energy (VISION Update 30).
 
 **Piece 7.**
+- 27 Sep 2026, 04:40 ET: Read: T37. Seeds grow with length, nucleation law holds; MANY SEEDS, MANY SCRAPS; long tubes end as a mismatched mosaic.
 - 25 Sep 2026, 12:50 ET: Launched: T37, long tubes where the change starts in many places. Partly downloaded; not yet read.
 - 25 Sep 2026, early morning: Read: T25, the scrap freezes in when the box cools faster than it heals (FREEZES IN). The author's inferred prediction held; ours put freeze-out too early.
 - 24 Sep 2026, afternoon: Brought into line with paper 1; T17 read: more seeds, more scrap, fewer than one each (BETWEEN).

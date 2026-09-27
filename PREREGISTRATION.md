@@ -2189,6 +2189,13 @@ whether the columns last (T19 says they anneal at fixed coupling; T25 that they 
 
 ---
 
+
+### Reading, 2026-09-27 (ASSUMPTIONS O77)
+
+P1 and P2 hold; P3 fails at g = 1.5 and 1.75 (0.41 and 0.16 of the observed seeds at L = 1024); **MANY SEEDS, MANY
+SCRAPS** at both, as predicted by the owner (inferred) and by us. Long tubes end as a defected mosaic, as our Kibble reading
+expected.
+
 ## T38. The rare long wait: one population with flukes, or a second, slower one? (paper 1; piece 2; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
 
 ### Why
@@ -2234,6 +2241,12 @@ Named, as T24.
 Anything outside λ = 1.25 and 1.30 or N = 64 and 192; whether the tail matters for the window's sharpness at other sizes.
 
 ---
+
+
+### Reading, 2026-09-27, provisional (ASSUMPTIONS O78)
+
+Six of 48 files not yet downloaded. On what is here: one cell TAIL (λ = 1.30, N = 64), so **UNCLEAR**; to be re-read
+when the data are complete. A fast population (12 to 21 % of decays, mean 10 to 14 sweeps) is seen in every cell.
 
 ## T39. The cascade window: when does the first release pay the second wall? (six and eight links; pieces 11 and 13; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
 

@@ -1862,6 +1862,39 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   - *Ours; not claimed:* that this speed has anything to do with light or with time; a steady front in a uniform medium
     is what front theory expects (PREREGISTRATION T47, note of 15:20 ET).
 
+- **O77 T37, many natural seeds in long tubes, read: MANY SEEDS, MANY SCRAPS at g = 1.5 and 1.75; seeds grow with the
+  tube and the conversion follows the one-dimensional nucleation law; long tubes end as a defected mosaic, not a sheet
+  with a few scraps.** (2026-09-27, 04:30 ET; PREREGISTRATION T37; `results/t37_*`, read with `scripts/analyse_t37.py`;
+  the data were downloaded and committed on 26 September and had not been read.)
+  - **P1, seeds grow with length:** exponent 0.92 at g = 1.5 and 0.78 at 1.75, inside [0.7, 1.1]; at g = 1.25 only
+    L = 1024 was run, so not scored. **P2, Avrami exponent near 2** (independent seeds with fronts in one dimension):
+    2.08, 2.14, 2.03. **P3, the seed count predicted with nothing fitted:** 0.96 of the observed at g = 1.25, L = 1024; at
+    g = 1.5 and 1.75 it falls to 0.41 and 0.16 of the observed at L = 1024. **Fails** at the warmer couplings: far more
+    seeds form than the single-seed rate predicts.
+  - **The owner's question (inferred prediction MANY SEEDS, MANY SCRAPS; ours the same): holds.** Energy left above flat
+    per tube rises from 22 (L = 64) to 11,412 (L = 1024) at g = 1.5, and from 58 to 14,365 at g = 1.75.
+  - **What the scrap becomes (reported, not scored).** Up to L = 128 at g = 1.5 the end is a sheet with a few pieces,
+    about half of them curled four-point columns (paper 2's relic). From L = 256 the end states turn DEFECTED (fewer than
+    90 % of points at d = 2): 7 of 40 at L = 256, 19 of 20 at 512, 24 of 24 at 1024; at g = 1.75 already 28 of 40 at
+    L = 128. The energy left per point, 2.8 at g = 1.5 and 3.5 at g = 1.75 for L = 1024, exceeds the 1 per point the tube
+    held to begin with, and the curled columns fall to about one per tube. *Ours, unverified:* patches that start
+    independently do not fit where they meet and freeze the mismatch in (Kibble's argument, as pre-registered); at
+    fixed g the energy left also includes thermal disorder, which does not grow with L, so the growth is the mosaic.
+  - **For the thesis** (*ours*): the scrap is abundant when the change starts in many places, and it is not a sprinkle
+    of identical relics but a network of mismatched boundaries. That serves paper 2 and bears on how a burp would look
+    if it started in many places at once.
+
+- **O78 T38, the rare long waits, read on incomplete data: UNCLEAR, provisionally.** (2026-09-27, 04:35 ET;
+  PREREGISTRATION T38; `scripts/analyse_t38.py`.) Six of the 48 files are not yet in the repository (λ = 1.30, N = 192:
+  2 of 8 present, 250 of 1,000 waits), so this reading is provisional and is repeated when they arrive.
+  - Cells: λ = 1.25, N = 64: k10 = 2, UNCLEAR; N = 192: 1, NO TAIL; λ = 1.30, N = 64: 14 (one exponential expects 0.18),
+    **TAIL**; N = 192: 1 on a quarter of the data, NO TAIL. One cell TAIL, so the verdict is UNCLEAR, not TWO POPULATIONS
+    (hers inferred, and ours).
+  - **Seen in every cell, not scored:** the two-population fit is overwhelmingly preferred (2 ln LR 86 to 1,412), but
+    the second population is a **fast** one, 12 to 21 % of decays with a mean wait of 10 to 14 sweeps, beside the main
+    population at 414 to 914. So the clearest departure from one clock is quick exits, not a slow tail. *Ours:* a tube
+    that gets over the wall in its first sweeps; what those are is not yet read from the saved graphs.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
