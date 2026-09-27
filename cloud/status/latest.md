@@ -1,4 +1,4 @@
-# Batch queue and results bucket, as of 2026-09-26 06:41 UTC (commit 3d50c19)
+# Batch queue and results bucket, as of 2026-09-27 07:58 UTC (commit 8d55d53)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
@@ -222,11 +222,187 @@ until a person downloads, checks and commits them.
 - None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
 
 ## FAILED
-- none
+- gatec2_3d_n500_a-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- gatec2_3d_n500_b-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- gatec2_2d_n2000_a-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- t24_lam105_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- t24_lam110_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- t24_lam115_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- t24_lam120_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- t24_lam125_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
+- t24_lam130_n144-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
+- t24_lam130_n192-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
+- t24_lam130_n96-3d50c19  created 09-26 06:42  started 09-26 06:54  stopped 09-26 07:28
+- t24_lam135_n144-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
+- t24_lam135_n192-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
+- t24_lam135_n96-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
+- t30_gas_lam110_n512-3d50c19  created 09-26 06:42  started 09-26 06:58  stopped 09-26 07:28
+- t30_lam110_n288_c2n-3d50c19  created 09-26 06:42  started   stopped 
+- t30_lam110_n288_cn4-3d50c19  created 09-26 06:42  started   stopped 
+- t30_lam125_n288_c2n-3d50c19  created 09-26 06:42  started   stopped 
+- t30_lam125_n288_cn-3d50c19  created 09-26 06:42  started   stopped 
+- t30_lam125_n288_cn2-3d50c19  created 09-26 06:42  started   stopped 
+- t30_lam125_n288_cn4-3d50c19  created 09-26 06:42  started   stopped 09-26 06:58
+- t30_lam125_n288_cn8-3d50c19  created 09-26 06:42  started   stopped 
+- t30_lam125_n512_c2n-3d50c19  created 09-26 06:42  started   stopped 
+- t30_lam125_n512_cn4-3d50c19  created 09-26 06:42  started   stopped 
+- t32_wall_n192-3d50c19  created 09-26 06:42  started   stopped 
+- t32_wall_n288-3d50c19  created 09-26 06:42  started   stopped 
+- t32_wall_n384-3d50c19  created 09-26 06:42  started   stopped 
+- t32_wall_n512-3d50c19  created 09-26 06:42  started   stopped 09-26 06:59
+- t33_gas_lam110_c2n-3d50c19  created 09-26 06:42  started   stopped 
+- t33_gas_lam110_cn4-3d50c19  created 09-26 06:42  started   stopped 
+- t33_three_lam125_c2n-3d50c19  created 09-26 06:42  started   stopped 
+- t33_three_lam125_cn2-3d50c19  created 09-26 06:42  started   stopped 
+- t33_three_lam125_cn4-3d50c19  created 09-26 06:42  started   stopped 
+- t33_three_lam125_cn8-3d50c19  created 09-26 06:42  started   stopped 09-26 07:00
+- t34_packed_n216-3d50c19  created 09-26 06:42  started   stopped 
+- t34_packed_n512-3d50c19  created 09-26 06:42  started   stopped 
+- t34_spread_n216-3d50c19  created 09-26 06:42  started   stopped 
+- t34_spread_n512-3d50c19  created 09-26 06:42  started   stopped 
+- t37_lam125_g150_L64-3d50c19  created 09-26 06:42  started   stopped 
+- t37_lam125_g150_L128-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L256_a-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L256_b-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L512_a-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L512_b-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L1024_a-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L1024_b-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L1024_c-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L1024_d-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L1024_e-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L1024_f-3d50c19  created 09-26 06:43  started   stopped 09-26 07:01
+- t37_lam125_g150_L1024_g-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g150_L1024_h-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L64-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L128-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L256_a-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L256_b-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L512_a-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L512_b-3d50c19  created 09-26 06:43  started   stopped 09-26 07:01
+- t37_lam125_g175_L1024_a-3d50c19  created 09-26 06:43  started 09-26 07:02  stopped 09-26 07:03
+- t37_lam125_g175_L1024_b-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L1024_c-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L1024_d-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L1024_e-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L1024_f-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g175_L1024_g-3d50c19  created 09-26 06:43  started   stopped 09-26 07:02
+- t37_lam125_g175_L1024_h-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g125_L1024_a-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g125_L1024_b-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g125_L1024_c-3d50c19  created 09-26 06:43  started   stopped 09-26 07:02
+- t37_lam125_g125_L1024_d-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g125_L1024_e-3d50c19  created 09-26 06:43  started   stopped 
+- t37_lam125_g125_L1024_f-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n64_00-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n64_01-3d50c19  created 09-26 06:43  started 09-26 07:03  stopped 09-26 07:28
+- t38_lam125_n64_02-3d50c19  created 09-26 06:43  started 09-26 07:03  stopped 09-26 07:28
+- t38_lam125_n64_03-3d50c19  created 09-26 06:43  started 09-26 07:03  stopped 09-26 07:28
+- t38_lam125_n64_04-3d50c19  created 09-26 06:43  started 09-26 07:08  stopped 09-26 07:28
+- t38_lam125_n64_05-3d50c19  created 09-26 06:43  started 09-26 07:12  stopped 09-26 07:28
+- t38_lam125_n64_06-3d50c19  created 09-26 06:43  started 09-26 07:13  stopped 09-26 07:28
+- t38_lam125_n64_07-3d50c19  created 09-26 06:43  started 09-26 07:14  stopped 09-26 07:28
+- t38_lam125_n64_08-3d50c19  created 09-26 06:43  started 09-26 07:12  stopped 09-26 07:28
+- t38_lam125_n64_09-3d50c19  created 09-26 06:43  started 09-26 07:18  stopped 09-26 07:28
+- t38_lam125_n64_10-3d50c19  created 09-26 06:43  started 09-26 07:19  stopped 09-26 07:28
+- t38_lam125_n64_11-3d50c19  created 09-26 06:43  started 09-26 07:19  stopped 09-26 07:28
+- t38_lam125_n64_12-3d50c19  created 09-26 06:43  started 09-26 07:20  stopped 09-26 07:28
+- t38_lam125_n64_13-3d50c19  created 09-26 06:43  started 09-26 07:21  stopped 09-26 07:28
+- t38_lam125_n64_14-3d50c19  created 09-26 06:43  started 09-26 07:25  stopped 09-26 07:28
+- t38_lam125_n64_15-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_00-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_01-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_02-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_03-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_04-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_05-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_06-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_07-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_08-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_09-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_10-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_11-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_12-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_13-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_14-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam130_n64_15-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_00-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_01-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_02-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_03-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_04-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_05-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_06-3d50c19  created 09-26 06:43  started   stopped 
+- t38_lam125_n192_07-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_00-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_01-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_02-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_03-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_04-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_05-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_06-3d50c19  created 09-26 06:44  started   stopped 
+- t38_lam130_n192_07-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam140_n288_c2n-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam140_n288_cn-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam140_n288_cn2-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam140_n288_cn4-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam140_n288_cn8-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam140_n288_cn16-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam125_n288_cn3-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam125_n288_cn6-3d50c19  created 09-26 06:44  started   stopped 
+- t39_six_lam125_n288_cn16-3d50c19  created 09-26 06:44  started   stopped 
+- t39_eight_lam125_n1024_cn4-3d50c19  created 09-26 06:44  started   stopped 
+- t39_eight_lam125_n1024_cn8-3d50c19  created 09-26 06:44  started   stopped 
+- t39_eight_lam125_n1024_cn16-3d50c19  created 09-26 06:44  started   stopped 
+- t39_eight_lam150_n1024_cn2-3d50c19  created 09-26 06:44  started   stopped 
+- t39_eight_lam150_n1024_cn3-3d50c19  created 09-26 06:44  started   stopped 
+- t39_eight_lam150_n1024_cn6-3d50c19  created 09-26 06:44  started   stopped 
+- t40_three_lam125_n768_e20-3d50c19  created 09-26 06:44  started   stopped 09-26 07:26
+- t40_three_lam125_n768_e30-3d50c19  created 09-26 06:44  started   stopped 
+- t40_three_lam125_n768_e40-3d50c19  created 09-26 06:44  started   stopped 
+- t40_three_lam125_n768_e60-3d50c19  created 09-26 06:44  started   stopped 
+- t40_three_lam125_n768_e80-3d50c19  created 09-26 06:44  started   stopped 
+- t40_three_lam125_n768_e120-3d50c19  created 09-26 06:44  started   stopped 
+- t40_three_lam125_n768_e160-3d50c19  created 09-26 06:44  started   stopped 
+- t40_gas_lam110_n1024_e20-3d50c19  created 09-26 06:44  started   stopped 
+- t40_gas_lam110_n1024_e40-3d50c19  created 09-26 06:44  started   stopped 
+- t40_gas_lam110_n1024_e80-3d50c19  created 09-26 06:44  started   stopped 
+- t40_gas_lam110_n1024_e160-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam125_n384_c4n-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam125_n384_c2n-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam125_n384_cn-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam125_n384_cn2-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam125_n384_cn4-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam125_n384_cn8-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam140_n384_c4n-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam140_n384_c2n-3d50c19  created 09-26 06:44  started   stopped 09-26 07:26
+- t41_lam140_n384_cn-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam140_n384_cn2-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam140_n384_cn4-3d50c19  created 09-26 06:44  started   stopped 
+- t41_lam140_n384_cn8-3d50c19  created 09-26 06:44  started   stopped 
+- t42_interchangeable_lam102_n512_e64-3d50c19  created 09-26 06:44  started   stopped 
+- t42_interchangeable_lam102_n512_e128-3d50c19  created 09-26 06:44  started   stopped 
+- t42_interchangeable_lam102_n512_e256-3d50c19  created 09-26 06:44  started   stopped 
+- t42_interchangeable_lam102_n512_e512-3d50c19  created 09-26 06:44  started   stopped 
+- t42_interchangeable_lam102_n512_e1024-3d50c19  created 09-26 06:44  started   stopped 
+- t42_interchangeable_lam102_n512_e2048-3d50c19  created 09-26 06:44  started   stopped 
+- t42_named_lam102_n512_e64-3d50c19  created 09-26 06:44  started   stopped 
+- t42_named_lam102_n512_e128-3d50c19  created 09-26 06:44  started   stopped 
+- t42_named_lam102_n512_e256-3d50c19  created 09-26 06:44  started   stopped 
+- t42_named_lam102_n512_e512-3d50c19  created 09-26 06:44  started   stopped 
+- t42_named_lam102_n512_e1024-3d50c19  created 09-26 06:44  started   stopped 09-26 07:26
+- t42_named_lam102_n512_e2048-3d50c19  created 09-26 06:44  started   stopped 
+- t43_allotrope_lifetime_g1000-3d50c19  created 09-26 06:44  started   stopped 
+- t43_allotrope_lifetime_g1500-3d50c19  created 09-26 06:44  started   stopped 
+- t43_allotrope_lifetime_g2000-3d50c19  created 09-26 06:44  started   stopped 
+- t43_allotrope_lifetime_g2500-3d50c19  created 09-26 06:44  started   stopped 
+- t43_allotrope_lifetime_g3000-3d50c19  created 09-26 06:44  started   stopped 
+- t43_allotrope_lifetime_g3433-3d50c19  created 09-26 06:44  started   stopped 
+- t43_allotrope_lifetime_g3697-3d50c19  created 09-26 06:44  started   stopped 
 
 ## finished results in the bucket (config.csv present)
 - gatec2_2d_n2000_a/gatec2_2d_n2000_a.csv  (2026-09-25 02:27:30, 6803 bytes)
-- gatec2_2d_n2000_b/gatec2_2d_n2000_b.csv  (2026-09-25 02:17:11, 6837 bytes)
+- gatec2_2d_n2000_b/gatec2_2d_n2000_b.csv  (2026-09-26 07:19:17, 6837 bytes)
 - gatec2_3d_n500_a/gatec2_3d_n500_a.csv  (2026-09-25 03:09:59, 20590 bytes)
 - gatec2_3d_n500_b/gatec2_3d_n500_b.csv  (2026-09-25 03:07:12, 20326 bytes)
 - t23_lam105_n144/t23_lam105_n144.csv  (2026-09-24 18:50:46, 27063 bytes)
@@ -257,33 +433,33 @@ until a person downloads, checks and commits them.
 - t23_lam135_n192/t23_lam135_n192.csv  (2026-09-24 22:08:47, 30673 bytes)
 - t23_lam135_n64/t23_lam135_n64.csv  (2026-09-24 17:52:48, 26933 bytes)
 - t23_lam135_n96/t23_lam135_n96.csv  (2026-09-24 19:28:55, 27895 bytes)
-- t24_lam105_n144/t24_lam105_n144.csv  (2026-09-25 01:44:39, 27133 bytes)
+- t24_lam105_n144/t24_lam105_n144.csv  (2026-09-26 07:18:08, 27133 bytes)
 - t24_lam105_n192/t24_lam105_n192.csv  (2026-09-25 02:14:07, 27159 bytes)
-- t24_lam105_n64/t24_lam105_n64.csv  (2026-09-25 01:10:18, 26381 bytes)
-- t24_lam105_n96/t24_lam105_n96.csv  (2026-09-25 01:23:58, 26358 bytes)
-- t24_lam110_n144/t24_lam110_n144.csv  (2026-09-25 01:34:46, 26903 bytes)
+- t24_lam105_n64/t24_lam105_n64.csv  (2026-09-26 07:01:05, 26381 bytes)
+- t24_lam105_n96/t24_lam105_n96.csv  (2026-09-26 07:11:26, 26358 bytes)
+- t24_lam110_n144/t24_lam110_n144.csv  (2026-09-26 07:20:35, 26903 bytes)
 - t24_lam110_n192/t24_lam110_n192.csv  (2026-09-25 01:59:25, 26898 bytes)
-- t24_lam110_n64/t24_lam110_n64.csv  (2026-09-25 01:04:49, 26133 bytes)
-- t24_lam110_n96/t24_lam110_n96.csv  (2026-09-25 01:18:06, 26268 bytes)
-- t24_lam115_n144/t24_lam115_n144.csv  (2026-09-25 01:19:06, 26470 bytes)
+- t24_lam110_n64/t24_lam110_n64.csv  (2026-09-26 06:57:05, 26133 bytes)
+- t24_lam110_n96/t24_lam110_n96.csv  (2026-09-26 07:13:38, 26268 bytes)
+- t24_lam115_n144/t24_lam115_n144.csv  (2026-09-26 07:17:05, 26470 bytes)
 - t24_lam115_n192/t24_lam115_n192.csv  (2026-09-25 01:45:43, 26824 bytes)
-- t24_lam115_n64/t24_lam115_n64.csv  (2026-09-25 01:01:49, 25750 bytes)
-- t24_lam115_n96/t24_lam115_n96.csv  (2026-09-25 01:10:55, 26025 bytes)
-- t24_lam120_n144/t24_lam120_n144.csv  (2026-09-25 01:25:25, 26679 bytes)
+- t24_lam115_n64/t24_lam115_n64.csv  (2026-09-26 06:53:08, 25750 bytes)
+- t24_lam115_n96/t24_lam115_n96.csv  (2026-09-26 07:03:00, 26025 bytes)
+- t24_lam120_n144/t24_lam120_n144.csv  (2026-09-26 07:24:20, 26679 bytes)
 - t24_lam120_n192/t24_lam120_n192.csv  (2026-09-25 01:47:34, 27101 bytes)
-- t24_lam120_n64/t24_lam120_n64.csv  (2026-09-25 01:10:12, 25514 bytes)
-- t24_lam120_n96/t24_lam120_n96.csv  (2026-09-25 01:21:32, 25993 bytes)
-- t24_lam125_n144/t24_lam125_n144.csv  (2026-09-25 01:43:41, 23724 bytes)
+- t24_lam120_n64/t24_lam120_n64.csv  (2026-09-26 06:50:49, 25514 bytes)
+- t24_lam120_n96/t24_lam120_n96.csv  (2026-09-26 07:07:56, 25993 bytes)
+- t24_lam125_n144/t24_lam125_n144.csv  (2026-09-26 07:25:42, 23724 bytes)
 - t24_lam125_n192/t24_lam125_n192.csv  (2026-09-25 02:30:14, 24289 bytes)
-- t24_lam125_n64/t24_lam125_n64.csv  (2026-09-25 01:24:48, 21593 bytes)
-- t24_lam125_n96/t24_lam125_n96.csv  (2026-09-25 01:45:03, 22603 bytes)
+- t24_lam125_n64/t24_lam125_n64.csv  (2026-09-26 06:58:05, 21593 bytes)
+- t24_lam125_n96/t24_lam125_n96.csv  (2026-09-26 07:18:21, 22603 bytes)
 - t24_lam130_n144/t24_lam130_n144.csv  (2026-09-25 02:02:54, 28034 bytes)
 - t24_lam130_n192/t24_lam130_n192.csv  (2026-09-25 03:39:16, 28715 bytes)
-- t24_lam130_n64/t24_lam130_n64.csv  (2026-09-25 01:41:00, 25777 bytes)
+- t24_lam130_n64/t24_lam130_n64.csv  (2026-09-26 07:11:32, 25777 bytes)
 - t24_lam130_n96/t24_lam130_n96.csv  (2026-09-25 01:42:40, 26524 bytes)
 - t24_lam135_n144/t24_lam135_n144.csv  (2026-09-25 03:36:14, 30145 bytes)
 - t24_lam135_n192/t24_lam135_n192.csv  (2026-09-25 05:16:13, 30749 bytes)
-- t24_lam135_n64/t24_lam135_n64.csv  (2026-09-25 01:58:42, 26682 bytes)
+- t24_lam135_n64/t24_lam135_n64.csv  (2026-09-26 07:12:58, 26682 bytes)
 - t24_lam135_n96/t24_lam135_n96.csv  (2026-09-25 02:43:01, 28412 bytes)
 - t30_gas_lam110_n512/t30_gas_lam110_n512.csv  (2026-09-25 11:32:50, 1816604 bytes)
 - t30_lam110_n288_c2n/t30_lam110_n288_c2n.csv  (2026-09-25 04:37:35, 857810 bytes)
@@ -448,5 +624,25 @@ until a person downloads, checks and commits them.
 - t43_allotrope_lifetime_g3000/t43_allotrope_lifetime_g3000.csv  (2026-09-26 01:04:59, 3101173 bytes)
 - t43_allotrope_lifetime_g3433/t43_allotrope_lifetime_g3433.csv  (2026-09-26 01:06:02, 3450142 bytes)
 - t43_allotrope_lifetime_g3697/t43_allotrope_lifetime_g3697.csv  (2026-09-26 00:52:54, 3639441 bytes)
+- t44_gas_lam125_k100_c2n/t44_gas_lam125_k100_c2n.csv  (2026-09-26 11:01:10, 284557 bytes)
+- t44_gas_lam125_k100_cn2/t44_gas_lam125_k100_cn2.csv  (2026-09-26 11:32:58, 283253 bytes)
+- t44_gas_lam125_k200_c2n/t44_gas_lam125_k200_c2n.csv  (2026-09-26 11:35:23, 284379 bytes)
+- t44_gas_lam125_k200_cn2/t44_gas_lam125_k200_cn2.csv  (2026-09-26 11:31:07, 283181 bytes)
+- t44_gas_lam125_k250_c2n/t44_gas_lam125_k250_c2n.csv  (2026-09-26 11:12:54, 282140 bytes)
+- t44_gas_lam125_k250_cn2/t44_gas_lam125_k250_cn2.csv  (2026-09-26 11:41:03, 280813 bytes)
+- t45_a_lam140_c2n/t45_a_lam140_c2n.csv  (2026-09-26 22:13:04, 821681 bytes)
+- t45_a_lam140_cn2/t45_a_lam140_cn2.csv  (2026-09-26 20:26:49, 816069 bytes)
+- t45_a_lam146_c2n/t45_a_lam146_c2n.csv  (2026-09-26 20:59:14, 794795 bytes)
+- t45_a_lam146_cn2/t45_a_lam146_cn2.csv  (2026-09-26 20:09:58, 766320 bytes)
+- t45_b_lam125_c2n/t45_b_lam125_c2n.csv  (2026-09-26 19:52:03, 802970 bytes)
+- t45_b_lam125_cn2/t45_b_lam125_cn2.csv  (2026-09-26 20:44:13, 785201 bytes)
+- t45_c_lam130_c2n/t45_c_lam130_c2n.csv  (2026-09-26 19:48:14, 841492 bytes)
+- t45_c_lam130_cn2/t45_c_lam130_cn2.csv  (2026-09-26 19:48:49, 833606 bytes)
+- t46_rho0_lam130_s1/t46_rho0_lam130_s1.csv  (2026-09-26 23:54:53, 78536 bytes)
+- t46_rho0_lam130_s2/t46_rho0_lam130_s2.csv  (2026-09-27 00:18:33, 81728 bytes)
+- t46_rhom02_lam130_s1/t46_rhom02_lam130_s1.csv  (2026-09-26 21:28:00, 79496 bytes)
+- t46_rhom02_lam130_s2/t46_rhom02_lam130_s2.csv  (2026-09-26 23:40:51, 83223 bytes)
+- t47_recurl_keeps_lam130/t47_recurl_keeps_lam130.csv  (2026-09-26 23:02:33, 55691 bytes)
+- t47_recurl_returns_lam130/t47_recurl_returns_lam130.csv  (2026-09-26 23:55:23, 56034 bytes)
 
 ## scratch from runs that died (partial/)
