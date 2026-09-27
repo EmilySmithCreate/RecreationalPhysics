@@ -23,6 +23,9 @@ graphity.sealed_tie_d; the rows then carry `kappa`, the tie total `tie_T` and th
 "ftable_per_a" (T45, 2026-09-26): a tie of any shape, ftab[d] = entry d times a = 4(lambda - 1), run through
 graphity.sealed_tie_d.run_sealed_bath_table_d; "tie_label" names it in the rows. Exclusive with "kappa". With
 "local_heat" (T47 part B, 2026-09-26) the table tie runs under the per-vertex bath too.
+Every row also carries (T48, 2026-09-27) `damaged_d`, the points with more open directions than the run has (d > D),
+and `largest_open_d`, the largest connected piece at d = D; `melted` and `largest_flat` keep their six-link
+meaning (d > 3, d = 3) so that earlier files read as they did.
 """
 import json
 import platform
@@ -47,11 +50,16 @@ D_BINS = 8       # d = 0 .. 6 and "7 or more"
 
 def census(adj, lam, kappa=None):
     d = local_dimension_d(adj)
+    dim = adj.shape[1] // 2
     hist = np.bincount(np.minimum(d, D_BINS - 1), minlength=D_BINS)[:D_BINS]
     flat = pieces_of(adj, d == 3)
+    # T48 (2026-09-27): `melted` and `largest_flat` read d > 3 and d = 3, which is flat only at six links. The two columns
+    # below read the run's own number of directions D = links / 2: points above D, and the largest piece at d = D.
+    open_d = flat if dim == 3 else pieces_of(adj, d == dim)
     out = dict(h_per_vertex=float(energy_d(adj, lam)) / adj.shape[0],
                **{"d%d" % i: int(hist[i]) for i in range(D_BINS)},
-               melted=int((d > 3).sum()), pieces_flat=len(flat), largest_flat=(flat[0] if flat else 0))
+               melted=int((d > 3).sum()), pieces_flat=len(flat), largest_flat=(flat[0] if flat else 0),
+               damaged_d=int((d > dim).sum()), largest_open_d=(open_d[0] if open_d else 0))
     if kappa is not None:                                                 # T44
         t = int(tie_total(adj))
         out.update(tie_T=t, h_tie_per_vertex=float(energy_tie_d(adj, lam, kappa)) / adj.shape[0])

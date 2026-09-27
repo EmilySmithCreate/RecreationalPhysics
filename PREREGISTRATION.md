@@ -2850,3 +2850,123 @@ under either clock. Part B is on the cloud and unread.
 
 **HEALS** in both settings: no re-curling from a push of 128 when time keeps energy. The owner's confirmed prediction
 (a curling front) fails; ours holds.
+
+## T48. Does a connected curled space open into one space when the energy it releases stays where it is released? (pieces 4, 5 and 13; written 2026-09-27, 12:45 ET, before any run)
+
+### Why
+
+Read from the saved wiring the same morning (ASSUMPTIONS O85): no run from a gas of cubes (T44, T45, T46) made an open
+region larger than one cube, and, exactly, an arrangement with every direction curled at every point is in this family
+always a gas of separate pieces of at most 4^D points. So the connected stand-ins for X are the tori with at least one
+direction open: 4 × 8 × 12 and 4 × 4 × 18 at six links (one and two directions curled) and 4 × 4 × 4 × 12 at eight
+links (three curled). Every three- and four-direction opening from them so far used a shared bath (T30, T39, T40, T41),
+where released energy spreads over many stores. The one setting in which an opening has spread as a front is the
+two-dimensional tube with one store per point (T47 part A), where released energy stays at the front and can pay its next
+step. No three- or four-direction run has used it. This is that run, with the tube as its control.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` with `"local_heat": true`: one store per point, the push in the store of the first
+side-0 point (only moves made from it can spend it), released energy kept by the point that releases it. Named points, no
+tie. Four tori: 4 × 48 (four links, N = 192, the control), 4 × 8 × 12 (six links, N = 384, one curled), 4 × 4 × 18 (six
+links, N = 288, two curled), 4 × 4 × 4 × 12 (eight links, N = 768, three curled). λ = 1.25 and 1.40. Two pushes each: the
+exact wall out of the torus plus 0.01, and four times the wall plus 0.01. The walls, by brute force the same morning
+(`scripts/exact_walls_d.py`): at λ = 1.25, 12, 36, 16 and 20; at λ = 1.40, 8.0, 28.8, 4.8 and 1.6 (at 1.40 the cheapest
+kind of move changes on three of the four tori: 64 − 40λ, 128 − 88λ and 192 − 136λ). Replicas 8 (6 at eight links);
+100,000 sweeps at four links, 200,000 at six, 50,000 at eight, read every 500, 1,000 and 250; final graphs saved. 16 Batch
+jobs (`cloud/queue/2026-09-27_t48_t49.txt`), seeds 20264801 to 20264816. The runner now also writes `damaged_d` and
+`largest_open_d`, read at the run's own number of links (`tests/test_census_any_d.py`); its older columns keep their
+six-link meaning. A smoke test of 40 sweeps, two replicas, checked the plumbing only; its printed end lines were seen (the
+tori had barely moved).
+
+### Definitions, fixed now (`scripts/analyse_t48.py`, tested in `tests/test_t48_t49.py` before any run)
+
+Per replica, from its last reading: **DAMAGED** if at least a quarter of the points have more open directions than D;
+else **OPENS** if at least half the points are at d = D and the largest connected piece at d = D holds at least half of
+all points; else **ADVANCES** if the rung holding the most points (d from 0 to D) is above the starting rung; else
+**STAYS**. Per cell (torus, λ, push) the majority, else MIXED. Per setting (torus, λ): **ONE SPACE** if the cell with the
+push equal to the wall has an OPENS majority; **ONE SPACE WITH A BIGGER PUSH** if only the larger push's cell does;
+**ADVANCES ONLY** if no cell opens and some cell has an ADVANCES majority; **DAMAGED** if the best cell is DAMAGED;
+**STAYS** otherwise. Reported beside, not scored: the first reading at which the largest open piece holds a tenth and a
+half of the points (the front's arrival), and the rung each replica rests on.
+
+### Named or interchangeable points: which, why, and the expected effect
+
+Named. Interchangeable points run only with a shared bath (`graphity.interchangeable_d`), and this run is about the
+per-point bath. Expected effect of switching, exact for the first move: the starting tori carry 384, 1,536, 6,912 and
+552,960 renamings that keep the two sides; after the cheapest move out, 4 × 8 × 12 keeps 2 and 4 × 4 × 18 keeps 4
+(counted 27 Sep), so with interchangeable points that first move would be taken about 770 and 1,700 times less often.
+The start would be much stickier; what happens after the first moves is not predicted.
+
+### Predictions
+
+**The owner's (inferred by the assistant from VISION Updates 22, 30 and 32, where the directions are tied and the push
+opens the first while the others follow on its release, and from her reading of the two-dimensional front; to be
+confirmed or replaced before any result is read):** ONE SPACE in every setting.
+
+**Ours:** the control ONE SPACE at both λ (T47 part A). Six links, two curled (4 × 4 × 18): ADVANCES ONLY. The first
+curled direction opens as a front and the last stays curled, as T30 found with a shared bath: one opening releases
+4(λ − 1) = 1 or 1.6 per point, and the one-curled rung's wall is 36 or 28.8. Six links, one curled (4 × 8 × 12): STAYS,
+or ADVANCES with the larger push only; its own wall is that same 36 or 28.8, and T41 never opened it. Eight links
+(4 × 4 × 4 × 12): ADVANCES ONLY, because the walls rise from rung to rung (20, 40 and 80 at λ = 1.25; O50).
+
+### What this cannot show
+
+Anything about a fully curled X, which in this family is a gas (O85; T49 asks what one piece of it does). Whether a longer
+torus would open from several seeds into a mosaic: these sizes leave room for one front. Anything with interchangeable
+points. Every six- and eight-link result carries VISION Update 24's caveat (the reproduction gate is open).
+
+## T49. One fully curled piece: does a single hypercube open all its directions, and in what order? (pieces 5 and 6; written 2026-09-27, 12:45 ET, before any run)
+
+### Why
+
+By O85 the owner's fully curled X is, in this family, a gas of pieces of at most 4^D points, and the only piece with
+4^D points is the hypercube. So the triad's claim, that one push opens the first direction and the others follow in an
+order that sets what each releases (VISION Updates 30 and 32), can be asked of one piece exactly as it stands. T45 already
+shows single cubes opening completely inside a gas at λ = 1.40 (O85), but it saved only the final wiring, not the order.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` from a gas of one piece: the 6-cube (six links, 64 points) at λ = 1.10, 1.15 and 1.25,
+and the 8-cube (eight links, 256 points) at λ = 1.10, 1.15 and 1.30. Where the piece is stuck, one push equal to its wall
+plus 0.01 in one store of a shared bath of 2N (walls 96 − 80λ for the 6-cube, 8 and 4; 160 − 128λ for the 8-cube, 19.2
+and 12.8; O41, O50); where it has a way downhill (the 6-cube at 1.25, whose cheapest move releases 4; the 8-cube at 1.30,
+6.4), no push. Named points, and interchangeable points (`"interchangeable": true`) with the same settings. 32 replicas,
+20,000 sweeps, read every 10; final graphs saved. 12 Batch jobs (the same queue file), seeds 20264901 to 20264912. A smoke
+test of 40 sweeps, two replicas, checked the plumbing only. Its printed end lines were seen: the interchangeable 6-cube at
+λ = 1.25 had left its start within 20 sweeps in both replicas, and the named 8-cube at 1.10 had made its first moves.
+The predictions below were written knowing that.
+
+### Definitions, fixed now (`scripts/analyse_t49.py`, tested in `tests/test_t48_t49.py` before any run)
+
+Per replica, the end, from its last reading: **DAMAGED** if at least a quarter of the points are above D; else **ALL OPEN**
+if at least 90 % are at d = D; else **STUCK** if at least half are still at d = 0; else **PART OPEN**. The path, for ALL
+OPEN and PART OPEN replicas, from every reading: for each rung k from 1 to D − 1, the first reading at which at least half
+the points sit at d = k. **IN ORDER** if every such rung held that majority at some reading and the first times increase
+with k; **TOGETHER** if no rung from 1 to D − 1 ever held a majority; **PARTLY IN ORDER** otherwise. Per cell (points, λ,
+treatment of points, push) the majority end and, among the replicas that moved, the majority path, else MIXED.
+
+### Named or interchangeable points: which, why, and the expected effect
+
+Both; the treatment of points is the second knob of this run. Expected effect, exact for the first move out of the
+6-cube: 23,040 renamings before, 24 after the cheapest move (counted 27 Sep), so with interchangeable points that move is
+taken about 960 times less often. The 8-cube carries 5,160,960; its first move's count was not computed. Where the named
+6-cube is stuck, its push is spent in about 20 sweeps (the cheapest move is offered 6.7 times a sweep, O41, and one store in
+128 holds the push); with interchangeable points that becomes of the order of 20,000 sweeps, the length of the run.
+
+### Predictions
+
+**The owner's (inferred by the assistant from VISION Updates 30 and 32; to be confirmed or replaced before any result is
+read):** ALL OPEN, IN ORDER, with named and interchangeable points alike.
+
+**Ours:** named points: ALL OPEN where the piece has a way downhill (it falls apart with no wait, O41, and single cubes
+opened completely inside T45's gas); PART OPEN where it is stuck, because the push pays the first move and the next rungs'
+walls are higher (O50, O55). The path is not predicted. Interchangeable points: mostly STUCK where the piece is stuck;
+where it has a way downhill, ALL OPEN.
+
+### What this cannot show
+
+Whether pieces join into one space. T45 says they did not, and that is the gas's question, not one piece's. What the
+opened piece is beyond its local census: a region of 64 or 256 points with every direction open at every point has no
+wrap-around loop of four, but the whole of it is the size of one cube. Every six- and eight-link result carries VISION
+Update 24's caveat.

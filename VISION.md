@@ -935,11 +935,15 @@ two dimensions in this model family. Said plainly, as the rules require: it does
   our estimate of the push that starts four directions (40 to 80) was too low by more than we tried (160).
 - **Two patterns, the same in every run** (*ours, unverified*). A push the size of the cheapest single move buys one small
   patch and stops: in two dimensions that move was the whole barrier; in three and four it is not, and the real barrier,
-  the smallest patch that grows by itself, has not been priced. And where the openings release energy, the release
-  damages a quarter or more of the new space: each point releases three curling costs, where the tube released one.
+  the smallest patch that grows by itself, has not been priced. ~~And where the openings release energy, the release
+  damages a quarter or more of the new space: each point releases three curling costs, where the tube released one.~~
+  *Corrected the same day (Update 38; ASSUMPTIONS O85): read from the wiring, the "damage" is the joints between cubes that
+  opened separately and the seams between opened and curled parts; from a gas no opening made a space larger than one
+  cube.*
 - **What held.** The exact walls said where her first order (B) would rest, with the dark-energy direction still curled,
   and it rested there. The first openings of every order ran. The best budget order (A, dark energy first) opened most of
-  the gas fully, with the damage beside it. T38: the tube's waiting times are two populations, as she predicted.
+  the gas fully, with the damage beside it *(corrected, Update 38: most points became locally flat, cube by cube; no
+  open region grew beyond one cube)*. T38: the tube's waiting times are two populations, as she predicted.
 - **The one new lever.** ~~With interchangeable points, concentrated energy heals flat space instead of melting it (T42):
   the first verdict in this project that the treatment of points changes, and it bears directly on the damage that stops
   the openings.~~ *Corrected the same day, 12:10 ET, after the owner asked what "melted" means (ASSUMPTIONS O82,
@@ -956,6 +960,24 @@ two dimensions in this model family. Said plainly, as the rules require: it does
   interchangeable points in the opening runs (T42's lever, smaller than first written; the knob is already decided,
   Update 12); pricing the true barrier exactly before choosing pushes; a different model (Update 28). None of this is about the real universe; each
   result says what this family can and cannot do.
+
+Update 38 (2026-09-27, 12:45 ET): **what a fully curled X is in this model, exactly, and the question it puts to the
+author.** Why this page changes: Update 37 said the openings' release damaged a quarter or more of the new space. Read
+from the saved wiring after the author asked what "melted" means, that was wrong in kind, and the reason is structural
+(ASSUMPTIONS O85).
+
+- **Exact** (*ours, applying a published theorem on graphs [Mul79], to verify by reading its proof*): an arrangement
+  with every direction curled at every point can be one connected piece only up to 4^D points (64 with six links, 256 with
+  eight), and at that size it is the hypercube. So in this family a fully curled X larger than one cube is a gas of
+  separate pieces.
+- **Read:** from a gas, no opening made a space larger than one cube. Each cube opened, or partly opened, on its own, and
+  the "damage" was the joints between cubes and the seams between opened and curled parts. From a connected torus, one
+  region opened with a seam beside it. Update 37's "damages a quarter or more" is corrected there.
+- **The question for the author.** Is X one connected thing with at least one direction already open (which the model
+  cannot name; in four directions, three curled beside one open), or a foam of many tiny fully curled pieces that open
+  separately and must then join? The model allows both; only the first has been seen to open into one region. T48 (a
+  connected torus, with released energy kept where it is released, the setting in which the two-dimensional tube opened as
+  a front) and T49 (one cube: does it open all its directions, and in what order?) are pre-registered and running.
 
 ## The target ("the spot")
 

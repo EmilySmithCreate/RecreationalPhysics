@@ -35,12 +35,14 @@ never (new; corrected 12:10 ET from "named points melt it").
 
 **What did not hold this round (first version didn't hold · in progress).** In three and four directions one push never
 opened the whole of X: not with the tie, not with the budget-fitted ties, not untied. A push the size of the first move
-opens one patch and stops; bigger pushes open much of the gas and damage a quarter or more of it. Flat four-direction
-space did not curl back behind a push. **Next:** the real barrier found exactly; what the damage is, read from the saved wiring;
-then, if it is disorder, the opening rerun with interchangeable points.
+opens one patch and stops; bigger pushes open the cubes of the gas one by one, each into a flat piece no bigger than
+the cube, and the pieces never join (read from the wiring, O85; first written as damage to a quarter of the gas). Exact:
+a fully curled X larger than one cube is always a gas of separate cubes in this model. Flat four-direction
+space did not curl back behind a push. **Next:** T48 (a connected curled space with the released energy kept at the front) and T49
+(one cube alone: all its directions, and in what order), both running.
 
-**Next experiments, in order** (ours; each pre-registered with the author's prediction): (1) the smallest patch that grows,
-exactly, in three and four directions; (2) what the damage is, then the opening with interchangeable points; (3) does a front slow where matter
+**Next experiments, in order** (ours; each pre-registered with the author's prediction): (1) T48 and T49, running; (2) the smallest patch that grows,
+exactly, in three and four directions; (3) does a front slow where matter
 sits; (4) the many-seed mosaic in three directions; (5) gravity by counting.
 
 **Papers:** paper 1 submitted; paper 2 (the scrap) has all its data; the three-direction companion has its first, hard

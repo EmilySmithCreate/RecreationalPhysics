@@ -78,7 +78,12 @@ git history.
   and `scripts/accept_inbox.py --move` checks each against its config and moves it into `results/`). O79 to O84 and
   VISION Update 37: nothing opened all directions in three or four dimensions; T47 part B HEALS; T42 interchangeable
   HEALS against named MELTS (*corrected 12:10 ET, O82: the named MELTED replicas are one to a few flickering scars, not a
-  melt; T34 the same; nothing curled*); T43 DISSOLVES; T38 TWO POPULATIONS. Next ASSUMPTIONS number: **O85**.
+  melt; T34 the same; nothing curled*); T43 DISSOLVES; T38 TWO POPULATIONS.
+- **27 Sep, 12:50 ET: O85** (read from the wiring): the openings' "damage" is joints between cubes that opened
+  separately and seams, not scorched space; exactly (Mulder's theorem), a fully curled X is a gas of pieces of at most
+  4^D points. **T48 and T49 launched** (28 Batch jobs, `cloud/queue/2026-09-27_t48_t49.txt`): fetch with
+  `cloud/fetch/request.txt` (`t48_*`, `t49_*`), check with `scripts/accept_inbox.py`, read with `analyse_t48.py` and
+  `analyse_t49.py`. Next ASSUMPTIONS number: **O86**.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".

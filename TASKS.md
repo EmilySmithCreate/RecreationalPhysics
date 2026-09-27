@@ -400,6 +400,16 @@ accelerating present. Read in full by assistant agents from PDFs the owner suppl
 for her choice. Nothing is built until she chooses a form and how a point's kind is defined. Reading owed first
 (`docs/reading/notes/2026-09-26_dark_charge.md` has search summaries only).
 
+## T48 and T49: one space from a connected X, and one fully curled piece  ◑
+
+**Added 2026-09-27** (the owner: "proceed running more experiments that get us a confident description of reality"). After
+O85 (a fully curled X in this family is a gas of cubes; from a gas no opening made a space larger than one cube):
+PREREGISTRATION **T48**, the connected curled tori of three and four directions with the released energy kept where it is
+released, with the two-dimensional tube as control (16 Batch jobs), and **T49**, one hypercube with named and
+interchangeable points: does it open all its directions, and in what order? (12 Batch jobs). Manifest
+`cloud/queue/2026-09-27_t48_t49.txt`; read with `scripts/analyse_t48.py` and `scripts/analyse_t49.py`. Accept: each read
+by its rules, the inferred predictions confirmed or replaced by the owner before any verdict is quoted as hers.
+
 ## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
 
 **Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a

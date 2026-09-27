@@ -2007,6 +2007,40 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   waiter is (the saved waiting graphs) is not yet read. Beside it, in every cell, the fast group of O78: 12 to 23 % of
   tubes open within about ten sweeps.
 
+- **O85 What the openings' "damage" is, read from the saved wiring: joints between separately opened pieces and seams
+  where opened meets curled, not scorched space; and, exactly, a fully curled arrangement in this family is always a gas of
+  separate pieces of at most 4^D points.** (2026-09-27, 12:45 ET; `scripts/read_opening_damage.py`, reading results/ only,
+  after the owner's question about "melted" (O82, correction); no verdict changes.)
+  - **Exact** (*ours, applying a published theorem; [Mul79], its statement checked in the abstract and later citations,
+    the proof not read by us*). A point with every direction curled (d = 0) has every two of its links on a square, so any
+    two points with a common neighbour have a second one; the hard-core rule allows no third. So an arrangement curled
+    everywhere is a (0,2)-graph: any two points have two common neighbours or none. A connected (0,2)-graph of degree k
+    has at most 2^k points, and exactly 2^k only if it is the hypercube. With 2D links per point that is 4^D: 16 at four
+    links, 64 at six, 256 at eight. **So a fully curled X larger than one hypercube is necessarily a gas of separate
+    pieces.** The gas of cubes that T33, T40 and T44 to T46 started from is not a choice of ours; it is the only fully
+    curled arrangement there is at those sizes. (The 14-point piece of Q8 is another (0,2)-graph, below the bound.)
+  - **Read, gas starts** (156 final graphs: T44 48, T45 96, T46 12). No open region (points at d = D, connected) ever
+    exceeded one starting piece: at most 64 points of 512 in three directions, at most 4 of 2,304 in four. One open region
+    in 156 graphs contained points of two pieces. In T45's order A at λ = 1.40, 10 cubes in 24 graphs opened completely
+    on their own, every point at d = 3, and several detached as separate 64-point pieces. The damaged points (d > D) are
+    the joints: in T45 A, 50 to 81 % of them are the ends of links running between two starting pieces. In T45 B and C,
+    T46 and the connected T39, 33 to 69 % touch both an open and a curled point and most of the rest touch a curled one:
+    seams where an opened part meets a still curled part. In every setting at most 5 % of the damaged points have only
+    damaged neighbours. There are no scorched blobs.
+  - **A point's census is local.** d = D says a point's own neighbourhood is flat. A lone cube can be flat at every point
+    and still be 64 points in all, so the share at d = D cannot tell one large space from many small ones; the largest
+    open region can. From T48 on the runner writes it at every reading (`largest_open_d`).
+  - **What this corrects in O79** (the verdicts stand, and NOT ALL is only strengthened): "much of the gas opens" and
+    "the release damages a quarter or more of it", and in the pages "A opened most of X fully" and "scorched a third of
+    the new space". From a gas, each piece opened (or partly opened) inside itself and the pieces met at joints; no
+    setting made one space. The account that each point releases three curling costs, too much for its surroundings, is
+    withdrawn as the explanation of the damage.
+  - **Connected starts differ.** From 4 × 4 × 18, which is one piece (T39, λ = 1.25, C = N/16), the largest open region
+    reached 186 to 250 of 288 points in 9 of 12 replicas: one region, with seams beside it.
+  - *Ours, unverified:* in this family, "X opens into one space" needs either an X that is one connected piece with at
+    least one direction already open (the tori of T48), or a foam of tiny fully curled pieces that open separately and
+    then join, which no run has shown. Which is the owner's picture is her call. T48 and T49 are pre-registered for the two.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
