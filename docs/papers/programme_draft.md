@@ -26,23 +26,24 @@ makes them distinguishable.
 
 ## Where the programme is, 27 September
 
-**What the model has shown.** A curled arrangement standing in for X opens sharply into flat space, from a seed, as a front,
-releasing an exact lump; the push is fixed at every size tried; sealed, the change completes when the surroundings have
-room and melts them when not (measured; paper 1, submitted). One seed leaves one small scrap; many seeds, which a long
-space makes by itself, leave many scraps and, at the longest lengths, a mosaic of mismatched patches (T37). With three
-and four curled directions the directions open one at a time and one push does not carry the rest. The front of an
-opening moves at a steady pace (T47). **What has not worked:** no pull at a distance between scraps at fixed wiring
-(exact); counting versions cannot reproduce quantum correlations (argued); a local push melts flat space rather than
-re-curling it; the published three-dimensional curve is not reproduced (Gate C).
+**What the model has shown.** A curled arrangement standing in for X opens sharply into flat space, from a seed, as a
+front, releasing an exact lump; the push is fixed at every size tried; sealed, the change completes when the surroundings
+have room (measured; paper 1, submitted). One seed leaves one small scrap; many seeds leave many and, at the longest
+lengths, a mismatched mosaic. The front of an opening moves at a steady pace. With interchangeable points concentrated
+energy heals flat space where named points melt it (new).
 
-**Finished on the cloud, not yet read:** T44, T45, T46, T47 part B, T39 to T43.
+**What did not hold this round (first version didn't hold · in progress).** In three and four directions one push never
+opened the whole of X: not with the tie, not with the budget-fitted ties, not untied. A push the size of the first move
+opens one patch and stops; bigger pushes open much of the gas and damage a quarter or more of it. Flat four-direction
+space did not curl back behind a push. **Next:** the real barrier found exactly; the opening rerun with interchangeable
+points.
 
-**Next experiments, in order** (ours; each pre-registered with the author's prediction): (1) read what is finished;
-(2) does a front slow where matter sits (the counterpart of time dilation); (3) one speed limit for every kind of
-disturbance; (4) the many-seed mosaic in three directions (paper 2); (5) gravity by counting, with interchangeable points.
+**Next experiments, in order** (ours; each pre-registered with the author's prediction): (1) the smallest patch that grows,
+exactly, in three and four directions; (2) the opening with interchangeable points; (3) does a front slow where matter
+sits; (4) the many-seed mosaic in three directions; (5) gravity by counting.
 
-**Papers:** paper 1 submitted; paper 2 (the scrap) has its data (T10, T17, T19, T25, T37; T38's last files to come); the
-three-direction companion waits on T44 to T46 and the reproduction gate.
+**Papers:** paper 1 submitted; paper 2 (the scrap) has all its data; the three-direction companion has its first, hard
+answer: the two-dimensional mechanism does not carry over as it stands.
 
 ---
 
@@ -99,6 +100,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026: Piece created.
 
 **Piece 2.**
+- 27 Sep 2026, 09:45 ET: Read, complete: T38, TWO POPULATIONS, as the author predicted; a fast group of about one in six in every cell.
 - 27 Sep 2026, 04:40 ET: Read provisionally: T38 UNCLEAR (one cell of four with a tail); a fast group of openings in every cell; 6 files still to download.
 - 25 Sep 2026, 12:50 ET: Launched: T38, the rare very long waits, 4,000 decays per setting at 64 points. Finished on the cloud; not yet read.
 - 25 Sep 2026, 08:00 ET: Read: T24 passes the repaired energy check in all 28 cells and is still inconclusive by the letter, for a third reason (one extreme wait in four cells). The edge break-up appeared a third time. The author's bar recorded: it has to happen at one size, not every size in every instance.
@@ -111,10 +113,12 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026: The rule described in the author's words: curvature plus a curling cost, a constant of our loop (VISION Update 23).
 
 **Piece 4.**
+- 27 Sep 2026, 09:45 ET: Read: T41, NEVER OPENS at both λ; the question of room was never reached.
 - 25 Sep 2026, 13:16 ET: Launched: T41, the same question in three directions. Finished on the cloud; not yet read.
 - 24 Sep 2026: Read: T18, the room needed grows faster than the burp as λ rises (PROPORTIONAL).
 
 **Piece 5.**
+- 27 Sep 2026, 09:45 ET: Read: T39 NO WINDOW, T40 NEVER STARTS, T44 NOT ALL (all stuck), T46 NOT ALL. In three and four directions no push opened the whole of X.
 - 26 Sep 2026, 11:40 ET: Exact in four directions (O75), time last: walls 17.6, none, about 50, about 106 to 111 at λ = 1.30. Paying a wall is a loan; for ordinary matter to end lower, time's opening must keep energy, and then flat four-direction space is not the lowest state. T46 launched with her prediction and ours.
 - 26 Sep 2026, 11:00 ET: T45 launched (the budget-fitted tie). Four directions wait on what time's opening releases.
 - 26 Sep 2026, 04:10 ET: Launched: T44. Under the direction tie the author decided on 25 September, does one push open all three curled directions of a gas of 6-cubes into one flat space? Exact first (O71): the tie's walls never fall in the order large, smaller, none; the nearest is 44, none, 4 at λ = 1.25. Her inferred prediction: yes. Ours: not all.
@@ -127,6 +131,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 25 Sep 2026, early morning: The author's decision: proceed with six links while the reproduction stays open.
 
 **Piece 6.**
+- 27 Sep 2026, 09:45 ET: Read: T45 NOT ALL in every setting; B rests where the walls said, A opens most of X and damages a third; the author's predictions did not hold.
 - 26 Sep 2026, 11:40 ET: The author's order as a mechanism (VISION Update 36): dark energy first, nets almost nothing; dark matter free, pays for ordinary; ordinary pays for time. T45's setting C; her prediction (one push opens all) recorded after launch, before any result. Cosmological-constant and 3D-mass cautions recorded.
 - 26 Sep 2026, 11:00 ET: The budget fit (O74): dark energy first fits best (then ordinary, then dark matter, free); her order leaves dark energy stuck behind 52; no order gives everything. Locked and launched as T45.
 - 26 Sep 2026, 05:08 ET: Decided by the author: a charge per kind; design brief written. Exact (O73): 44, none, 12 under the tie; 44, 12, 0 not reachable; counting charges the first opening most.
@@ -158,12 +163,14 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 25 Sep 2026, 10:45 ET: Decided: the exchange phase is the first rule of the new model. First exact result: a mild selection rule.
 
 **Piece 10.**
+- 27 Sep 2026, 09:45 ET: Read: T47 part B HEALS in both readings of time; no curling front at this size.
 - 26 Sep 2026, 20:30 ET: Read: T47 part A. Steady pace at every size in both baths; MIXED by the letter (speed per sweep falls as 1/L, the clock's fault; FIXED SPEED under a proposed fair clock). The shared-bath prediction (speeds up) failed.
 - 26 Sep 2026, 14:40 ET: Decided by the author: time curls behind the present, so time's opening keeps energy. T47 launched: the speed limit, and whether flat four-direction space re-curls from one local push.
 - 26 Sep 2026, 11:40 ET: The author's idea: ordinary matter pays to open time. Run as the fourth opening in T46; the model cannot say which direction is time.
 - 26 Sep 2026, 05:08 ET: Piece created from the author's idea of 26 Sep, 04:10 ET (VISION Update 33).
 
 **Piece 11.**
+- 27 Sep 2026, 09:45 ET: Read: T42, interchangeable HEALS, named MELTS; the first verdict changed by the treatment of points.
 - 25 Sep 2026, 17:08 ET: Read: T34 melts at 216 and 512 points; nothing folds, and the melts heal when cooled. T42, the counting half, finished on the cloud; not yet read.
 - 25 Sep 2026, 13:33 ET: Corrected: T26 has 27 cells, one of which healed; T27's melt count was one row (134 of 144).
 - 25 Sep 2026, 13:16 ET: Launched: T42, the fold with interchangeable points at λ = 1.02, with a named control.

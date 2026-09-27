@@ -375,13 +375,13 @@ confirmed or replaced.
 **Added 2026-09-26** (VISION Update 35; PREREGISTRATION T45; ASSUMPTIONS O74). Eight Batch jobs; read with
 `scripts/analyse_t45.py`. Accept: the verdict per setting on the record, the stage releases set beside the locked fit.
 
-## T46. The owner's order in four directions, run  ◑
+## T46. The owner's order in four directions, run  ☑ (read 2026-09-27: NOT ALL, O79)
 
 **Added 2026-09-26** (VISION Update 36; PREREGISTRATION T46; ASSUMPTIONS O75). Four Batch jobs at eight links; read with
 `scripts/analyse_t46.py`. Accept: the verdict per setting on the record, the owner's inferred prediction confirmed or
 replaced.
 
-## T47. The speed limit, and does flat four-direction space re-curl?  ◑
+## T47. The speed limit, and does flat four-direction space re-curl?  ☑ (read 2026-09-27: part A MIXED, O76; part B HEALS, O80)
 
 **Added 2026-09-26** (VISION Update 36, the owner's decision of 14:30 ET; PREREGISTRATION T47; = T13 rung 2 for the
 tube). Part A on the laptop (`scripts/run_front_speed.py`, six configs), part B two Batch jobs. Read with

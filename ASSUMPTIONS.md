@@ -1895,6 +1895,93 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     population at 414 to 914. So the clearest departure from one clock is quick exits, not a slow tail. *Ours:* a tube
     that gets over the wall in its first sweeps; what those are is not yet read from the saved graphs.
 
+- **O79 T44, T45 and T46, read: one push never opened every curled direction, with the tie in three directions or the
+  fitted tie in four; a push the size of the first wall buys one small patch and stops, and larger ones open much of
+  the gas and damage a quarter or more of it.** (2026-09-27, 09:30 ET; PREREGISTRATION T44, T45, T46; the data fetched
+  and checked the same morning, `scripts/accept_inbox.py`; read with `scripts/analyse_t44.py`, `analyse_t45.py`,
+  `analyse_t46.py`.) Energy conserved to rounding in every run.
+  - **T44** (the follow tie, six links, the gas of eight 6-cubes, λ = 1.25, κ = 1, 2, 2.5, a push equal to the first wall,
+    20, 44 and 56, baths N/2 and 2N, eight replicas each): **STUCK in all 48; NOT ALL at every κ.** At the end 97 % of
+    points were still fully curled; the push made one patch of about 16 points and nothing followed. The owner's inferred
+    prediction (one push opens all) fails; ours (NOT ALL) holds, and our expected PARTLY OPEN or MELTED at κ = 2 and 2.5
+    does not: it did not get that far.
+  - **T45** (the budget fits, six links, the same gas): **NOT ALL in all four settings.** Where each rests, means over
+    replicas: **A** (dark energy → ordinary → dark matter, λ = 1.40 and 1.46): 54 to 58 % of points fully open and 36 to
+    44 % damaged (more open directions than a point can have in flat space), so MELTED by the letter; one cell with the
+    larger push kept two or three of six replicas stuck. **B** (ordinary → dark matter → dark energy, λ = 1.25): half the
+    points with two directions open and the last curled, 16 to 20 % fully open, 22 to 24 % damaged: PARTLY OPEN, the
+    resting place the exact walls gave (the dark-energy opening behind a wall of 52). **C** (dark energy → dark matter →
+    ordinary, λ = 1.30): 37 % two open, 29 to 32 % fully open, 27 to 28 % damaged: MELTED or PARTLY OPEN by cell. Hers:
+    B, one push opens all (inferred), fails; C, one push opens all (hers, recorded after launch and before any result),
+    fails. Ours: no setting opens all with one push, holds; A pushed through with the larger push, fails (it melted); B
+    and C pushed through or melted with the larger push: B fails (PARTLY OPEN), C holds (MELTED).
+  - **T46** (eight links, four directions, her order with time last, ρ = 0 and −0.2, λ = 1.30, N = 2,304): with the first
+    wall alone (17.61), **STUCK** in all six, 99 % of points still fully curled; with the sum of the walls (174),
+    **MELTED** in all six: 37 to 38 % two open, 23 to 24 % three open, 2.5 to 2.7 % all four, 26 % damaged. **NOT ALL in
+    both settings**, with no difference between the two readings of time. Hers (one push opens all, confirmed) fails; ours
+    (NOT ALL, resting with two directions open) holds for the larger push; with the first wall alone it did not open even
+    the first direction.
+  - **Together** (*ours, unverified*). (1) A push equal to the cheapest single move buys one small patch and stops, with
+    the tie (T44) and in four directions (T46), as it did untied (T33, and T40 in O81): in three and four directions the
+    cheapest single move is not the barrier to an opening that spreads; the true barrier is a patch several moves big, and
+    it has not been priced. (2) Where the openings release energy, much of the gas opens, and the release damages a
+    quarter or more of it: in three directions each point releases three curling costs, 3a (3.6 to 5.5 per point here),
+    where the two-dimensional tube released a (T9's lesson, a burp completes only if its surroundings can take the
+    release, with three times as much to take). (3) The exact walls predicted where B rests; they do not price damage,
+    because they count moves out of perfect rungs, not out of a warm, partly damaged state.
+
+- **O80 T47 part B, read: flat four-direction space does not re-curl from one push of 128, under either reading of
+  time; HEALS in both.** (2026-09-27, 09:30 ET; PREREGISTRATION T47; `scripts/analyse_t47.py`.) Three replicas each. At
+  most 0.9 % of points ever left d = 4, and the run ends with a small damaged patch of about 20 points holding the push
+  (0.056 per point over 2,304), neither spreading nor curling. The owner's confirmed prediction for "time keeps energy"
+  (a curling front forms) fails; her control prediction (HEALS) holds; ours (HEALS in both) holds. *Ours:* the "keeps"
+  reading puts the one-curled state 0.24 per point below flat, so a patch of 20 points gains about 5, far less than its
+  boundary costs; a re-curled region would have to be very large before it grew by itself, as pre-registered.
+
+- **O81 T39, T40 and T41, read (untied): in three and four directions no push and no bath size tried opened a curled
+  state into flat space.** (2026-09-27, 09:35 ET; PREREGISTRATION T39, T40, T41; `analyse_t39.py`, `analyse_t40.py`,
+  `analyse_t41.py`.) Energy conserved to rounding.
+  - **T39, the cascade window: NO WINDOW in all four rows.** Six links, λ = 1.25 (two-curled torus, 288 points): most
+    replicas end OTHER, partly converted, with no flat majority at any bath; λ = 1.40: MELTED at the smaller baths, OTHER
+    or MIXED at the larger. Eight links, λ = 1.25 and 1.50 (1,024 points): STUCK everywhere. Hers (inferred: a window
+    with a cascade in every row) fails; ours (no window at λ = 1.25 in both) holds, (a window at six links 1.40 and eight
+    links 1.50) fails.
+  - **T40, how big a push starts four directions: NEVER STARTS** from the three-curled torus (768 points, λ = 1.25, pushes
+    20 to 160) or the gas of 8-cubes (1,024 points, λ = 1.10, pushes 20 to 160): in no replica did most points leave the
+    starting rung. Hers (a tied pattern once the push is enough) is not reached; ours (the change starts at a push of 40 to
+    80) fails.
+  - **T41, room for the burp in three directions: NEVER OPENS** at λ = 1.25 and 1.40, baths N/8 to 4N, a push equal to the
+    exact wall (36): the last curled direction of the 4 × 8 × 12 torus stayed curled in all 144 replicas over 100,000
+    sweeps. Hers (ROOM NEEDED) fails; ours: ROOM NEEDED at λ = 1.40 fails, NEVER OPENS or ROOM NEEDED at 1.25 holds.
+  - *Ours:* with O79 this settles, in this model family and at these settings, that the two-dimensional mechanism does not
+    carry over as it stands. The tube opened from a push the size of its cheapest move (12, at every size); in three and
+    four directions a push that size, or eight times it, does not start an opening that spreads, and when energy does flow
+    the space is damaged. Every six-link and eight-link result carries VISION Update 24's caveat (the reproduction gate is
+    open).
+
+- **O82 T42, read: with interchangeable points concentrated energy heals flat six-link space; with named points it
+  melts. Nothing folds in either.** (2026-09-27, 09:35 ET; PREREGISTRATION T42; `analyse_t42.py`.) λ = 1.02, 512 points,
+  pushes 64 to 2,048, eight replicas each. Interchangeable: HEALED in 47 of 48 (one melted at the largest push); named
+  control: MELTED majority in five of six cells. The owner's inferred prediction (RE-CURLS with interchangeable points,
+  the control MELTS) fails for the first half and holds for the second; ours (MELTS in both) fails for the first half.
+  *Ours, unverified:* the first verdict in this project that the treatment of points changes: counting renamings favors
+  flat space, which has many, over a melt, which has one (O55), so here the counting works for space's stability and
+  against damage, not for the fold. What it suggests, untested: the damage that stops the openings of O79 might be
+  suppressed with interchangeable points.
+
+- **O83 T43, read: a planted allotrope at λ = 1 DISSOLVES at every coupling.** (2026-09-27, 09:35 ET; PREREGISTRATION T43;
+  `analyse_t43.py`.) Every planted region, in every construction and at every coupling from 1.0 to 3.697, dissolved,
+  before its background, within 10 to 155 sweeps (16 replicas each); the flat-torus controls held where expected. Ours
+  (DISSOLVES) holds; the owner's inferred prediction (ALLOTROPE LASTS) fails. Allotropes are parked
+  (`docs/parked/allotropes.md`), and this is recorded there.
+
+- **O84 T38 complete: TWO POPULATIONS (supersedes O78's provisional UNCLEAR).** (2026-09-27, 09:35 ET; PREREGISTRATION
+  T38; `analyse_t38.py`.) With the last six files, λ = 1.30 reads TAIL at both sizes (14 and 5 waits above ten means,
+  where one exponential expects 0.18 and 0.05); λ = 1.25 reads UNCLEAR at 64 points and NO TAIL at 192. Two TAIL cells:
+  **TWO POPULATIONS**, the owner's inferred prediction and ours; our "weaker at 192" holds (5 against 14). What a long
+  waiter is (the saved waiting graphs) is not yet read. Beside it, in every cell, the fast group of O78: 12 to 23 % of
+  tubes open within about ten sweeps.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

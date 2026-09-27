@@ -922,6 +922,37 @@ have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75
   frame can be detected). What hers adds is a mechanism at the front. A prediction the rule makes and nothing yet tests:
   a front slows where it crosses a region holding matter.
 
+Update 37 (2026-09-27, 09:45 ET): **the finished cloud runs, read: in three and four directions no push opened a fully
+curled X into one flat space; the owner's time front did not form; with interchangeable points concentrated energy heals
+space where named points melt it.** Why this page changes: ten pre-registered tests carrying predictions of hers were
+read the same morning (ASSUMPTIONS O79 to O84), and between them they decide how the mechanism of claim 4 fares beyond
+two dimensions in this model family. Said plainly, as the rules require: it does not carry over as it stands.
+
+- **What did not hold, hers and ours.** One push never opened every curled direction: not with the direction tie (T44),
+  not with the budget-fitted ties in three directions (T45) or four (T46), not untied (T39, T40, T41). Her predictions for
+  these (one push opens all; a window with a cascade; room needed; a curling front behind the present) fail. Ours were
+  right that nothing opens all and wrong in the particulars: the windows we expected at the larger λ did not appear, and
+  our estimate of the push that starts four directions (40 to 80) was too low by more than we tried (160).
+- **Two patterns, the same in every run** (*ours, unverified*). A push the size of the cheapest single move buys one small
+  patch and stops: in two dimensions that move was the whole barrier; in three and four it is not, and the real barrier,
+  the smallest patch that grows by itself, has not been priced. And where the openings release energy, the release
+  damages a quarter or more of the new space: each point releases three curling costs, where the tube released one.
+- **What held.** The exact walls said where her first order (B) would rest, with the dark-energy direction still curled,
+  and it rested there. The first openings of every order ran. The best budget order (A, dark energy first) opened most of
+  the gas fully, with the damage beside it. T38: the tube's waiting times are two populations, as she predicted.
+- **The one new lever.** With interchangeable points, concentrated energy heals flat space instead of melting it (T42):
+  the first verdict in this project that the treatment of points changes, and it bears directly on the damage that stops
+  the openings.
+- **Time.** Flat four-direction space under "time keeps energy" does not re-curl from a push of 128; a scar of about 20
+  points holds the push. The moving band of Update 36 is not seen at this size, and the speed test (T47 part A) showed the
+  steady fronts any uniform medium gives.
+- **What this does to the thesis.** Claim 4's shape stands where it was shown, in two dimensions: a specific arrangement
+  opening sharply from a seed with an exact release. Beyond two dimensions, in this family at these settings, the
+  mechanism lacks a way to open without damaging what opens. Candidates, each to be decided under S1 before any run:
+  interchangeable points in the opening runs (T42's lever; the knob is already decided, Update 12); pricing the true
+  barrier exactly before choosing pushes; a different model (Update 28). None of this is about the real universe; each
+  result says what this family can and cannot do.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

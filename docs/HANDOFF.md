@@ -73,6 +73,11 @@ git history.
   the owner's call), T37 (O77), T38 provisional (O78). Owner decisions pending: the fair clock; confirming T37's inferred
   prediction; the next build (front slowing near matter is proposed first); charge form; gravity field. Next ASSUMPTIONS
   number: **O79**.
+- **27 Sep, 09:45 ET: everything finished is fetched, checked and read** (from the laptop, which cannot reach the
+  project account: the new `fetch_results` workflow copies runs named in `cloud/fetch/request.txt` into `cloud/inbox/`,
+  and `scripts/accept_inbox.py --move` checks each against its config and moves it into `results/`). O79 to O84 and
+  VISION Update 37: nothing opened all directions in three or four dimensions; T47 part B HEALS; T42 interchangeable
+  HEALS against named MELTS; T43 DISSOLVES; T38 TWO POPULATIONS. Next ASSUMPTIONS number: **O85**.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".

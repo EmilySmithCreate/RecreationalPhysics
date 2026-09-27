@@ -2248,6 +2248,11 @@ Anything outside λ = 1.25 and 1.30 or N = 64 and 192; whether the tail matters 
 Six of 48 files not yet downloaded. On what is here: one cell TAIL (λ = 1.30, N = 64), so **UNCLEAR**; to be re-read
 when the data are complete. A fast population (12 to 21 % of decays, mean 10 to 14 sweeps) is seen in every cell.
 
+### Reading, 2026-09-27, final (ASSUMPTIONS O84)
+
+All 48 files in. λ = 1.30 TAIL at both sizes; **TWO POPULATIONS**, as predicted by the owner (inferred) and by us.
+Supersedes the provisional reading above.
+
 ## T39. The cascade window: when does the first release pay the second wall? (six and eight links; pieces 11 and 13; written 2026-09-25, about 12:10 ET, before any run; committed 12:21 ET (the time first written here was a guess and wrong; corrected from the commit times))
 
 ### Why
@@ -2301,6 +2306,11 @@ Named, as T30.
 Anything at λ = 1, the published model (six links: VISION Update 24's caveat; eight links: no published curve); whether a
 physical universe has a bath of the right size; the gas's pattern, which T30 and T33 test.
 
+### Reading, 2026-09-27 (ASSUMPTIONS O81)
+
+**NO WINDOW** in all four rows. The owner's inferred prediction fails; ours holds at λ = 1.25 and fails at six links
+1.40 and eight links 1.50.
+
 ## T40. Four directions: how big a push starts the change, and in what pattern does it then go? (piece 13; written 2026-09-25, about 12:50 ET, before any run; committed 12:54 ET (the time first written here was a guess and wrong; corrected from the commit times))
 
 ### Why
@@ -2348,6 +2358,11 @@ Named, as T33.
 
 Which direction is time; anything at λ = 1; the pattern with a physical clock.
 
+### Reading, 2026-09-27 (ASSUMPTIONS O81)
+
+**NEVER STARTS** from both starts, pushes 20 to 160. Ours (E* between 40 and 80) fails; the owner's tied pattern is
+not reached.
+
 ## T41. Three directions: does the new space need room for the burp? (piece 4; written 2026-09-25, about 13:00 ET, before any run; committed 13:04 ET; the time first written here, 13:15, was a guess and wrong)
 
 ### Why
@@ -2389,6 +2404,10 @@ Named, as T30.
 ### What this cannot show
 
 Anything at λ = 1; whether the room a real universe had was enough.
+
+### Reading, 2026-09-27 (ASSUMPTIONS O81)
+
+**NEVER OPENS** at λ = 1.25 and 1.40. The owner's inferred ROOM NEEDED fails; ours holds at 1.25 and fails at 1.40.
 
 ## T42. Does concentrated energy fold six-link space when the points are interchangeable, near λ = 1.02? (piece 8; written 2026-09-25, about 13:08 ET, before any run)
 
@@ -2434,6 +2453,11 @@ interchangeable points and none in the control would be a signal worth a larger 
 
 Anything at λ = 1 (CQG) or with a physical clock; the packed protocol (the per-vertex store is not implemented for
 interchangeable points); sizes where the gas of cubes does not fit (N must be a multiple of 64).
+
+### Reading, 2026-09-27 (ASSUMPTIONS O82)
+
+Interchangeable: **HEALS** (47 of 48 healed). Named control: **MELTS**. The owner's inferred RE-CURLS fails, her control
+holds; our MELTS in both fails for the interchangeable half.
 
 ## T43. How long does a planted allotrope last at λ = 1? (piece 12; the model author's own question; written 2026-09-25, 14:24 ET, before any run)
 
@@ -2492,6 +2516,10 @@ the fold (6), shortening the region's life relative to its background; not run.
 
 Anything about the infinite hyperbolic plane of his figure; whether a lone smallest allotrope behaves as three fused ones;
 whether the cross-cap or handle under the region changes its life; other sizes (720-point versions are built for that).
+
+### Reading, 2026-09-27 (ASSUMPTIONS O83)
+
+**DISSOLVES** at every coupling, as we predicted; the owner's inferred ALLOTROPE LASTS fails.
 
 ## T44. Under the direction tie, does one push open all three curled directions of X? (pieces 11 and 14; VISION Updates 30 and 33; written 2026-09-26, about 04:00 ET, before any run)
 
@@ -2555,6 +2583,11 @@ Named, as T30.
 Anything at λ = 1 (CQG) or without the tie; whether the tie's form is the right one (it is one of a family, O68, O70); the
 owner's energy budget, which the follow form's releases (a − 2κ, a + κ, a + κ per point) do not match and which O70
 fitted with a different shape; the pattern with a torus start, where one direction is singled out.
+
+### Reading, 2026-09-27 (ASSUMPTIONS O79)
+
+**NOT ALL** at every κ; every cell STUCK (97 % of points still curled). The owner's inferred prediction fails; ours holds,
+with the gas stopping earlier than we expected.
 
 ## T45. The budget-fitted triad, run: which order of openings, and at what λ and tie, matches what is measured? (piece 6; VISION Update 35; written 2026-09-26, 11:00 ET, before any run)
 
@@ -2632,6 +2665,11 @@ with the first wall alone). *Ours:* what decides it is not the total (dark matte
 wall over the whole gas) but whether a bath that has shared the release among its stores can gather 43.7 in one place
 within the run; a wall paid is returned on the far side, so "pays" here means lends.
 
+### Reading, 2026-09-27 (ASSUMPTIONS O79)
+
+**NOT ALL** in all four settings. A: mostly open and a third or more damaged (MELTED); B: rests with the last direction
+curled (PARTLY OPEN), where the exact walls put it; C: MELTED or PARTLY OPEN. The owner's predictions for B (inferred)
+and C (hers) fail; ours (no setting opens all with one push) holds, our A-pushed-through fails.
 
 ## T46. The owner's order in four directions: dark energy, dark matter, ordinary matter, time (piece 5 and piece 6; VISION Update 36; written 2026-09-26, 11:40 ET, before any run)
 
@@ -2698,6 +2736,11 @@ place the way moving, colliding or falling matter would. If the verdict is NOT A
 failing in this model, and the one ingredient her mechanism would then need, concentration of released energy (her
 "mass is a directional catalyst"), is named as untested, not as an excuse. If it is ONE PUSH OPENS ALL, heat alone was
 enough.
+
+### Reading, 2026-09-27 (ASSUMPTIONS O79)
+
+**NOT ALL** in both settings: STUCK with the first wall alone, MELTED with the sum (resting mostly two directions open).
+The owner's confirmed prediction fails; ours holds.
 
 ## T47. Is there a speed limit? The tube's opening front, and whether flat four-direction space re-curls (piece 10; TASKS T13 rung 2; VISION Update 36, the owner's decision of 14:30 ET; written 2026-09-26, 14:40 ET, before any run)
 
@@ -2790,3 +2833,8 @@ pair about 2/N times a sweep, so local rates per sweep fall as 1/N (known since 
 omission). Proposed, not enacted: count time so that each local pair is offered equally often (speed × L); then both
 baths agree across sizes within 8 % and read FIXED SPEED. The shared-bath prediction (ACCELERATING, hers and ours) fails
 under either clock. Part B is on the cloud and unread.
+
+### Reading of part B, 2026-09-27 (ASSUMPTIONS O80)
+
+**HEALS** in both settings: no re-curling from a push of 128 when time keeps energy. The owner's confirmed prediction
+(a curling front) fails; ours holds.
