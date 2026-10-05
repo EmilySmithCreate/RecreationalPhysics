@@ -3331,3 +3331,39 @@ which is not local, behaves differently is a separate question and is not asked 
 Anything at a temperature above zero (the wirings at other energies are reported for that, not scored). Anything in
 three directions, where a pull would have to be tested ([Ver11]: no finite constant in two). That the model has no
 gravity: only that this count, at these windows, does or does not follow the cut. Windows beyond 20 points.
+
+### Amendment 1, 2026-10-05, 11:07 ET by the clock, before any count is taken on a saved state
+
+**Why.** The module was finished and tested on built graphs only (`src/graphity/hidden.py`, `tests/test_hidden.py`; no
+saved state was read by it). Three things it showed make the section above unreadable as written.
+
+1. **The count as defined includes pure renamings.** A point of the window with no link out of it can swap names with
+   another such point on its side, giving a different labeled wiring of the very same graph. The flat window of
+   radius 1 (12 points) therefore counts 4, not 1: the square's two points on each side swapped or not. A window with
+   k0 and k1 such points always has a count divisible by k0! k1!. So "every flat control gives 1" (C1) would fail for a
+   reason with no content, and the counts would mostly measure how many sealed points a window has.
+2. **Wirings at other energies cannot be listed beyond about a dozen points**: there are too many.
+3. **The flat window of radius 2 (24 points) takes over ten minutes**, when it finishes at all.
+
+**Seen on built graphs while testing, and disclosed because it bears on the predictions:** counted up to those
+renamings, flat blocks of up to 20 points hide 1 arrangement; a window of 2, 3 or 4 whole columns of the plain curled
+tube hides 4, the same at each width, with 8 links cut each time. The flat window of radius 2 counts 518,400, which is
+6! × 6! and so consistent with 1 up to renaming.
+
+**What changes, all of it before any count on a saved state:**
+
+- **The scored quantity is the number of shapes:** the same-energy valid wirings counted up to renaming of the window's
+  points that have no link out of it, each kept on its side (`shapes` in `graphity.hidden`). The raw count is reported
+  beside it. Wherever "count" appears in C1, in "the relic, at r = 1" and in "the scaling" above, read "shapes".
+- **Radius 1** is counted in full (shapes, raw count, and the wirings at every other energy). **Radius 2** is counted
+  at the original's energy only, one wiring per class of renamings, which is exact for the shapes and the raw count and
+  gives nothing at other energies.
+- **Fewer windows at radius 2, to bound the run:** the relic of lowest vertex number in each end state (12, was 24) and
+  the first flat square in each (12, was 36). The 20-minute limit and the rule that follows from it stand.
+
+**Predictions.** The chat sessions' and ours stand as registered, with "shapes" for "count": flat windows hide 1; a
+relic window hides more than 1, and more at radius 2 than at radius 1 (FOLLOWS THE REGION). *Said before the run:* what
+was seen on the curled tube leans the other way. A stretch of curled tube hides the same 4 at every length, the ways
+its ring of four can be turned or flipped where it joins the rest, which is a count that stays with the cut. A relic
+is one curled ring, so STAYS WITH THE CUT, with 4 or fewer shapes at both radii, would not surprise us now. The
+registered prediction is the one that is scored.

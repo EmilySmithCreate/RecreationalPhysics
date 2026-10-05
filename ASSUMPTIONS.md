@@ -2045,7 +2045,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   `docs/HANDOFF_2026-10-05_chat.md` section 2, computed in chat against a copy of the 26 September `main`; every number
   below was re-run here with the script named. EXPLORATORY: exact arithmetic on built tori, not a pre-registered test.
   The clock times first written in O86 to O94 were guesses and ran up to an hour ahead of the clock; they were corrected
-  from the commit times the same morning.)
+  from the commit times the same morning. The same error was made again in O89's addendum and O96 to O101, by up to
+  an hour, and corrected the same way at 11:07 ET.)
   - **(a) Flat space carries no residue** (exact; the ladder of O41 and O49). Flat space sits at 0 per point at every λ and
     each curled rung sits exactly a = 4(λ − 1) per point above the next. So in this energy dark energy cannot be something
     left over in flat space itself; it would have to come from an opening or from what an opening leaves behind. Below
@@ -2188,7 +2189,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     nothing to gain: her prediction for T48 ("the first opens, the last stays curled") as a ground state. At λ = 1.02
     the same state is stuck behind 28. Neither shape has been run, and under either the first step from a fully curled
     gas nets nothing, so it has no front to drive it.
-  - **Addendum, 5 October, 10:25 ET: the inputs are published, and were checked at the source after the owner asked.**
+  - **Addendum, 5 October, committed 09:55 ET: the inputs are published, and were checked at the source after the owner asked.**
     [Planck18] Table 2 (TT,TE,EE+lowE+lensing; the numbers searched in the text): matter and radiation were equal at
     z = 3402 ± 26; cold dark matter Ω_c h² = 0.1200 ± 0.0012 and ordinary matter Ω_b h² = 0.02237 ± 0.00015, a ratio of
     5.36, so dark matter is 0.843 of the matter. With today's temperature of 2.7255 K (general knowledge) equality was at
@@ -2357,7 +2358,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     freezes or heals them, which T51's saved final graphs will hold).
 
 - **O96 The model author's papers read again from the source: Gate C's factor of two is in his equation, and his D = 3
-  figure does not say its size or that its graphs were two-sided.** (2026-10-05, 09:50 ET; read by an assistant agent
+  figure does not say its size or that its graphs were two-sided.** (2026-10-05, committed 09:47 ET; read by an assistant agent
   from the arXiv HTML of [T22], [T23], [T24], [T25] and parts of [KTB19], searching the text; the owner has not read these
   passages; figure images were not available. Notes: `docs/reading/notes/2026-10-05_trugenberger_programme.md`.)
   - **The factor of two.** [T22] Eq. (1) sums over each vertex and its neighbours, so every edge is counted twice. Our
@@ -2376,7 +2377,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     simulation in any paper; T36 and T43 are, as far as we have found, the only numerical data on them.
 
 - **O97 Bianconi's gravity from entropy, read: a different count from the one T52 takes, and the nearest published
-  relative of a quantity on the points.** (2026-10-05, 10:40 ET; read by an assistant agent from the arXiv HTML of
+  relative of a quantity on the points.** (2026-10-05, committed 09:55 ET; read by an assistant agent from the arXiv HTML of
   [Bia25], [Bia26], [Bia24] and related papers, with the read status of each in
   `docs/reading/notes/2026-10-05_bianconi_gravity_from_entropy.md`; the owner has not read these passages.)
   - **What it is.** A continuum theory in which the action is a relative entropy between two metrics. In its author's
@@ -2395,7 +2396,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
 - **O98 Group field theory condensates and dynamical triangulations, read: neither has an order-to-order change with
   a change of dimension and a release; triangulations hold a caution for T6 and the nearest published support for
-  T7.** (2026-10-05, 11:00 ET; read by an assistant agent from the arXiv HTML of [MOPT23], [Ori21], [AGGN22], [AL26]
+  T7.** (2026-10-05, committed 10:09 ET; read by an assistant agent from the arXiv HTML of [MOPT23], [Ori21], [AGGN22], [AL26]
   and others, with the read status of each in `docs/reading/notes/2026-10-05_gft_and_triangulations.md`; the owner has
   not read these passages.)
   - **Group field theory.** One non-geometric and one geometric phase; the transition is treated as continuous by the
@@ -2417,7 +2418,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     dimensions and an energy release.
 
 - **O99 Disordered locality, quantum graphity and vanishing dimensions, read: the nearest relatives of the far links
-  and of directions opening in order; neither has the order-to-order change.** (2026-10-05, 11:25 ET; read by an
+  and of directions opening in order; neither has the order-to-order change.** (2026-10-05, committed 10:33 ET; read by an
   assistant agent from ar5iv and arXiv HTML of [MS07], [PWS09], [QSMG12], [WG15], [CM11], [H13], [St14] and others, with
   the read status of each in `docs/reading/notes/2026-10-05_locality_graphity_dimensions.md`; the owner has not read
   these passages.)
@@ -2441,7 +2442,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     5 October; the statement is "we have not found", across the four sets of papers named in the notes.
 
 - **O100 The owner's "spaghetti" X (two directions curled, one open): what is exact, what has been measured, and a
-  first look at whether seeds join.** (2026-10-05, 11:50 ET; VISION Update 42. The exact numbers are from earlier
+  first look at whether seeds join.** (2026-10-05, committed 10:49 ET; VISION Update 42. The exact numbers are from earlier
   entries; the first look is new, read-only and EXPLORATORY. Six-link results carry VISION Update 24's caveat.)
   - **The state.** A 4 × 4 × L torus with six links: two directions curled, one open, one connected piece. It lies
     8(λ − 1) per point above flat space, two curling costs. Its cheapest way out costs 96 − 64λ while that is the
@@ -2472,6 +2473,28 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     times the latter". [MRM12] reviews making the excess of matter at the electroweak phase transition. *Ours:* this is
     the published form of the owner's guess that 5.36 is what is left after a cancellation; and a first-order change
     with a front is the kind of event such an excess is made at. The toy has nothing that comes in opposite kinds.
+
+- **O101 Counting per turn has a standard form, the long-run average, and one of its three conditions is not yet met
+  by the owner's picture.** (2026-10-05, 11:07 ET by the clock; the owner asked what research exists on loops and on comparing the
+  sizes of infinities; read by an assistant agent, with read status per source in
+  `docs/reading/notes/2026-10-05_loops_and_comparing_infinities.md`; several quotes came through a page reader and are
+  to be checked before citing. *Ours, unverified; all of the mapping is inference.*)
+  - **The form.** In economics, streams whose totals are infinite are compared by running totals, by discounting, or by
+    the long-run average per period (the limit of means). Counting per turn (VISION Update 23) is the last, with the
+    turn as the period; in probability it is the renewal-reward theorem.
+  - **The conditions.** Turns alike (her rule that the rules do not change from turn to turn supplies it). A finite
+    yield per turn: **Update 26 says our stable phase "really never ends", which would make one turn's count infinite
+    and bring the problem back inside the turn; it needs a stated end**, such as the last star, or the entropy
+    produced, which is what the one published maximizing principle counts ([BHKP07]). And a common unit between loops:
+    the theorem gives yield per unit time, so counting per turn drops how long a turn lasts, a choice Update 23 flagged.
+  - **A trap.** If one turn makes many black holes, each beginning a turn, the process branches, and the rate of
+    multiplying, not the yield of a turn, decides what dominates: Smolin's fitness ([Smolin06]).
+  - **Relatives in print.** Economics proves that no criterion ranks all infinite streams impartially ([Askell18]),
+    which does not bite on a restricted class such as loops with alike turns. In cosmology the measures depend on how
+    the infinity is cut off ([Freivogel11]); two papers find that leading measures prefer regions that cycle
+    ([Lehners12]).
+  - **Not found in what was read:** a measure per turn of a loop from black hole to new spacetime; the renewal theorem
+    used as a cosmological measure; a formal use of the strange loop in cosmology.
 
 ## Provenance
 

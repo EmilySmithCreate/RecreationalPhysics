@@ -1118,7 +1118,7 @@ questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREG
 - **The scrap-share reading stays out of paper 2** (5 October, on the assistant's advice; she expects the paper to
   change a good deal before it is shared).
 
-Update 42 (2026-10-05, midday): **ideas of the author's on what X is inside a black hole, what dark energy is, and how
+Update 42 (2026-10-05, committed 10:49 ET): **ideas of the author's on what X is inside a black hole, what dark energy is, and how
 the papers should be built.** Her words, put in order; she called them spitballing, and they are recorded as ideas to
 test, not decisions, except where marked. Why this page changes: three of them say what the next exact tables and runs
 should be about. Details: ASSUMPTIONS O100; `docs/papers/series_plan.md`, last section.
