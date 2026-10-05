@@ -1,0 +1,34 @@
+# T53 (PREREGISTRATION, written 2026-10-05 before any run): the exact 4 x 4 x L six-link torus (two directions curled,
+# one open) in a bath at a fixed coupling, no push: L = 18, 36, 72; lambda = 1.25, 1.40; g = 1.5 to 3.5. Thirty jobs,
+# one per cell, 8 replicas each; seeds 20265301 to 20265330 in this order (L, then lambda, then g).
+# Submitted by the run_queue workflow from the commit that carries this file, the configs and the pre-registration.
+run_curled_bath_d t53_l18_lam125_g15
+run_curled_bath_d t53_l18_lam125_g20
+run_curled_bath_d t53_l18_lam125_g25
+run_curled_bath_d t53_l18_lam125_g30
+run_curled_bath_d t53_l18_lam125_g35
+run_curled_bath_d t53_l18_lam140_g15
+run_curled_bath_d t53_l18_lam140_g20
+run_curled_bath_d t53_l18_lam140_g25
+run_curled_bath_d t53_l18_lam140_g30
+run_curled_bath_d t53_l18_lam140_g35
+run_curled_bath_d t53_l36_lam125_g15
+run_curled_bath_d t53_l36_lam125_g20
+run_curled_bath_d t53_l36_lam125_g25
+run_curled_bath_d t53_l36_lam125_g30
+run_curled_bath_d t53_l36_lam125_g35
+run_curled_bath_d t53_l36_lam140_g15
+run_curled_bath_d t53_l36_lam140_g20
+run_curled_bath_d t53_l36_lam140_g25
+run_curled_bath_d t53_l36_lam140_g30
+run_curled_bath_d t53_l36_lam140_g35
+run_curled_bath_d t53_l72_lam125_g15
+run_curled_bath_d t53_l72_lam125_g20
+run_curled_bath_d t53_l72_lam125_g25
+run_curled_bath_d t53_l72_lam125_g30
+run_curled_bath_d t53_l72_lam125_g35
+run_curled_bath_d t53_l72_lam140_g15
+run_curled_bath_d t53_l72_lam140_g20
+run_curled_bath_d t53_l72_lam140_g25
+run_curled_bath_d t53_l72_lam140_g30
+run_curled_bath_d t53_l72_lam140_g35
