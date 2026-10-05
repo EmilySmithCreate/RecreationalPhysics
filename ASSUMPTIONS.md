@@ -2393,6 +2393,29 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   - **A caution.** Two 2026 abstracts by another author report instabilities of the theory (not read beyond the
     abstracts).
 
+- **O98 Group field theory condensates and dynamical triangulations, read: neither has an order-to-order change with
+  a change of dimension and a release; triangulations hold a caution for T6 and the nearest published support for
+  T7.** (2026-10-05, 11:00 ET; read by an assistant agent from the arXiv HTML of [MOPT23], [Ori21], [AGGN22], [AL26]
+  and others, with the read status of each in `docs/reading/notes/2026-10-05_gft_and_triangulations.md`; the owner has
+  not read these passages.)
+  - **Group field theory.** One non-geometric and one geometric phase; the transition is treated as continuous by the
+    method chosen (mean field, which assumes a diverging correlation length), with no simulation; the Big Bang is a
+    bounce inside the geometric phase, with the transition itself replacing it only as a conditional alternative;
+    nothing is released; and its author writes that no notion of time applies across the phases. So it differs from the
+    hypothesis on each of its three testable points, and a reader from it will ask what clock the tube opens against.
+  - **Triangulations.** Several transitions are first order, with barriers and hysteresis, each established only at
+    sizes of tens of thousands of building blocks and up, and two were first read as higher order. [AGGN22] conjectures
+    that changes requiring a rearrangement of the whole configuration (a change of topology) are first order: the
+    tube opening into a sheet is that kind of change, though theirs is a statement about equilibrium ensembles and not
+    about a process in time, and their authors regard the non-extended phases as lattice artefacts.
+  - **The caution for T6.** Three first-order transitions there showed one hump at small sizes and one higher-order
+    transition showed a misleading two. T6's INCONCLUSIVE at a hundred points was the right verdict, and the
+    discriminators those groups rely on are the shift of the transition point with size and the trend of the Binder
+    cumulant. In causal triangulations the order of one transition differs between a sphere and a torus; every run
+    here is on a torus.
+  - **Not found in what was read:** a change between two ordered geometric phases with different numbers of large
+    dimensions and an energy release.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
