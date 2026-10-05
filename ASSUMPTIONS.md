@@ -2416,6 +2416,30 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   - **Not found in what was read:** a change between two ordered geometric phases with different numbers of large
     dimensions and an energy release.
 
+- **O99 Disordered locality, quantum graphity and vanishing dimensions, read: the nearest relatives of the far links
+  and of directions opening in order; neither has the order-to-order change.** (2026-10-05, 11:25 ET; read by an
+  assistant agent from ar5iv and arXiv HTML of [MS07], [PWS09], [QSMG12], [WG15], [CM11], [H13], [St14] and others, with
+  the read status of each in `docs/reading/notes/2026-10-05_locality_graphity_dimensions.md`; the owner has not read
+  these passages.)
+  - **The far links of O95 have a published cousin.** In [QSMG12], domains of quantum graphity that nucleate
+    independently need not merge, and where they meet a boundary defect is frozen in by the quench. Same cause as O95
+    (several seeds, then cooling); a different object (a boundary line, not a link reaching far), and no count, no
+    lengths, no scaling with volume. Those were not found in what was read.
+  - **They are not dark energy, by the source's own derivation.** [PWS09] needs the number of links to grow with the
+    comoving volume and their ends to be uncorrelated across it; links frozen once at an opening are fixed in number
+    and short. O95 said so; the full text confirms it. [H13] adds a bound: non-local defects no denser than one per
+    femtometer.
+  - **Directions opening in order.** [St14] has dimensions opening one after another as the universe cools, and ties an
+    opening to the cosmological constant. It differs from the owner's picture in which opening that is (the latest
+    there, the first in hers) and in mechanism (geometric there, a release in hers), and its change is called a
+    crossover: whether it is sharp has not been calculated in what was read.
+  - **Quantum graphity itself:** mean field puts its transition at zero temperature ([CM11]); with the original energy
+    isolated pieces beat a lattice at 24 and 36 points, with a leftover piece ([WG15]), which is this project's λ = 0
+    shattering and ribbon at small size. No simulation paper after 2018 was found.
+  - **Not found in what was read:** a change between two ordered arrangements with an activation energy that does not
+    grow with size and an exact release per point. With O97 and O98 this completes the reading the owner asked for on
+    5 October; the statement is "we have not found", across the four sets of papers named in the notes.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
