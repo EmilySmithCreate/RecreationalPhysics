@@ -2341,6 +2341,25 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     relative to the places two fronts met, which needs the opening's history or the patch map; whether cooling
     freezes or heals them, which T51's saved final graphs will hold).
 
+- **O96 The model author's papers read again from the source: Gate C's factor of two is in his equation, and his D = 3
+  figure does not say its size or that its graphs were two-sided.** (2026-10-05, 09:50 ET; read by an assistant agent
+  from the arXiv HTML of [T22], [T23], [T24], [T25] and parts of [KTB19], searching the text; the owner has not read these
+  passages; figure images were not available. Notes: `docs/reading/notes/2026-10-05_trugenberger_programme.md`.)
+  - **The factor of two.** [T22] Eq. (1) sums over each vertex and its neighbours, so every edge is counted twice. Our
+    six-link energy counts each edge once (Q21), and Gate C′ found that our curve matches the ordered side of the
+    published one when our coupling is halved (O53). So that factor is accounted for, by the published equation.
+  - **What still differs, and the reading it now favours.** [T22] never says "bipartite"; it speaks of "2D-regular graphs
+    with independent short cycles" and of "possible residual triangle and pentagon defects". Our kernel is two-sided by
+    construction. O53 left two readings of the remaining difference (a lower hot tail and a higher plateau in ours):
+    short runs out of equilibrium, or graphs that allow triangles and pentagons. The text now supports the second as a
+    live possibility; O53's objection to it (the published hot end sits where two-sided graphs sit) stands, so it is not
+    settled. Fig. 3's caption does not give N.
+  - **So the question for him narrows to two facts:** the size of that figure's graphs, and whether they were restricted
+    to two-sided ones. The draft letter is changed accordingly (local, unsent).
+  - **Also read:** in print the transition is "continuous" throughout, with "the absence of hysteresis" at N = 160 named
+    as the evidence in two dimensions and nothing said about its order in three. His dark-matter domains have no
+    simulation in any paper; T36 and T43 are, as far as we have found, the only numerical data on them.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
