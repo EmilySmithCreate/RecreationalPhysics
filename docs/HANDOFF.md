@@ -118,7 +118,12 @@ git history.
   before 5 October.
 - **Pre-registered on 5 October:** T51, the frozen scrap against cooling time in tubes that seed themselves, on the
   fair clock (`scripts/run_scrap_freeze.py`, `scripts/analyse_t51.py`, queue file `cloud/queue/2026-10-05_t51.txt`,
-  41 Batch jobs, the longest about 11 hours). Its status is in the lines below this list.
+  91 Batch jobs, the longest about 8 hours on Batch). **Two amendments were made before any run**, both forced by
+  one cost check of the runner: the opening ends when 90 % of points are flat and no stretch of tube three or more
+  columns long is left, and the scored ratios compare two coolings of the same opened sheet, with no baseline count.
+  **Launched 5 October** by pushing the queue file. To read it: add `t51_*` to `cloud/fetch/request.txt`, push, pull,
+  `python scripts/accept_inbox.py --move`, commit the data, then `python scripts/analyse_t51.py`. **The owner's
+  prediction is owed before any T51 result is read.**
 - **Waiting on the owner** (each is a question, in TASKS.md's section of 5 October): her prediction for T51 before it
   is read; which tie the reservoir test carries (none, "all at the last", "all at the second"; O89, O94); what a plane
   opening is in the model; whether dark matter is the leftover (Update 16) or a direction's release (Update 30), both
