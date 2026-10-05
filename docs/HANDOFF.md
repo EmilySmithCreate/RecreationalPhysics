@@ -1,9 +1,10 @@
-# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET; addendum 2026-09-26, 04:10 ET)
+# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET; addenda to 2026-10-05)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
-newer than `CLAUDE.md`'s "Known state". Work is on branch `feat/cloud-runs-and-3d` (shared by two sessions in one
-working tree: add files by name, never `git add -A`, and never switch branches under another session); `main`
-is behind and Emily merges. This page was rewritten as one current page on 24 September; earlier dated versions are in
+newer than `CLAUDE.md`'s "Known state". **Work is on branch `claude/vision-programme-updates-9sje7s` since 26 September** (`feat/cloud-runs-and-3d` stopped
+on 25 September and is an ancestor of it; read the addendum of 5 October below first). Sessions may share one working
+tree: add files by name, never `git add -A`, and never switch branches under another session; `main` is behind and
+Emily merges. This page was rewritten as one current page on 24 September; earlier dated versions are in
 git history.
 
 ## 0. The first ten minutes
@@ -91,6 +92,49 @@ git history.
 - **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".
+
+## Addendum, 5 October 2026 (read this first)
+
+- **Fetch before anything else.** On 5 October the laptop's working copy was still on the 25 September commit of
+  `feat/cloud-runs-and-3d`, 40 commits behind this branch, with three files uncommitted. Run `git fetch` and
+  `git branch -a -vv`; the record lives on `claude/vision-programme-updates-9sje7s`. The queue guard of 26 September is
+  merged into it (run_queue never runs on main and skips a config whose result is in the bucket), so merging this branch
+  to main cannot resubmit finished jobs. `gh` is not installed: Emily opens the pull request from
+  `https://github.com/EmilySmithCreate/RecreationalPhysics/compare/main...claude/vision-programme-updates-9sje7s`.
+- **The chat sessions of 4 and 5 October** worked from a copy of the 26 September `main` and pushed nothing. Their
+  hand-over is `docs/HANDOFF_2026-10-05_chat.md`; it is now recorded, with corrections, in VISION Updates 40 and 41 and
+  ASSUMPTIONS O86 to O94. **Read the corrections before quoting that file:** the long warm T37 tubes melted and are not
+  a mosaic (O88); "the scrap is not the dark matter by a factor of ten" is withdrawn (O88, O89); the hidden count is
+  taken over the model's own wirings, `graphity.hidden`, not the script as received (O87); the tie it calls
+  "Update 30's" is the withdrawn form (O86).
+- **The owner's decisions of 4 and 5 October** (VISION Update 41): the first opening is dark energy's; the
+  cosmological-constant problem is carried openly; the target is the shares at spacetime's **birth**; the fair clock
+  for new kinetic runs (one fair sweep = N/96 chain sweeps, O90); the scrap-share reading stays out of paper 2; the
+  gravity decision of 25 September stands (Update 40). **The shares at birth include the light** (O89, ours,
+  unverified, for a physicist): do not fit a tie to 5.36 as a ratio of releases.
+- **Read on 5 October:** T48 (O91), T49 (O92), T50 (O93), fetched through `cloud/fetch/request.txt` and accepted with
+  `scripts/accept_inbox.py` (on Windows a move can fail on a file lock after the copy; compare the copies, remove the
+  inbox one, move the rest). T37's cold cell is complete at 12 replicas. Nothing is left unread in the bucket from
+  before 5 October.
+- **Pre-registered on 5 October:** T51, the frozen scrap against cooling time in tubes that seed themselves, on the
+  fair clock (`scripts/run_scrap_freeze.py`, `scripts/analyse_t51.py`, queue file `cloud/queue/2026-10-05_t51.txt`,
+  41 Batch jobs, the longest about 11 hours). Its status is in the lines below this list.
+- **Waiting on the owner** (each is a question, in TASKS.md's section of 5 October): her prediction for T51 before it
+  is read; which tie the reservoir test carries (none, "all at the last", "all at the second"; O89, O94); what a plane
+  opening is in the model; whether dark matter is the leftover (Update 16) or a direction's release (Update 30), both
+  open again under the birth shares; how her front maps onto a clock (T50 SPEEDS). **And one question for a physicist,
+  which decides more than any run:** at the start of the hot era, what share of the energy was dark matter?
+- **Paper 1:** on hold at arXiv pending a reader or a journal. The reader request to the model's author is drafted in
+  `docs/outreach/reader_request_draft_2026-10-05.md` (local only) and waits until after his talk; Gate C's question
+  rides with it. Nothing is sent from a session. **Paper 2:** the draft has a section on tubes that seed themselves and
+  the plain-language page (`docs/public/paper2-the-scrap.html`) is corrected; the published artifact of that page still
+  shows the version from chat until Emily asks for it to be republished.
+- **The programme page** is the Claude artifact "A Phase-Changing Reality", a state-of-the-programme page with no
+  revision status (her request of 4 October). `docs/public/programme.html` in the repository is older than the
+  artifact. Neither was touched on 5 October: T48 to T50, the T37 correction and the birth shares are not on them yet.
+- **Also pre-registered on 5 October:** T52, the hidden count round a relic, exact (`graphity.hidden`,
+  `scripts/exact_hidden_relics.py`).
+- Next numbers: ASSUMPTIONS **O95**, VISION **Update 42**, PREREGISTRATION **T53**.
 
 ## 1. What this project is
 

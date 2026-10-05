@@ -2041,9 +2041,11 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     least one direction already open (the tori of T48), or a foam of tiny fully curled pieces that open separately and
     then join, which no run has shown. Which is the owner's picture is her call. T48 and T49 are pre-registered for the two.
 
-- **O86 The exact results of the chat sessions of 4 and 5 October, recorded, re-run and corrected.** (2026-10-05, 05:30 ET;
+- **O86 The exact results of the chat sessions of 4 and 5 October, recorded, re-run and corrected.** (2026-10-05, re-run between 00:50 and 04:45 ET, committed 04:57 ET;
   `docs/HANDOFF_2026-10-05_chat.md` section 2, computed in chat against a copy of the 26 September `main`; every number
-  below was re-run here with the script named. EXPLORATORY: exact arithmetic on built tori, not a pre-registered test.)
+  below was re-run here with the script named. EXPLORATORY: exact arithmetic on built tori, not a pre-registered test.
+  The clock times first written in O86 to O94 were guesses and ran up to an hour ahead of the clock; they were corrected
+  from the commit times the same morning.)
   - **(a) Flat space carries no residue** (exact; the ladder of O41 and O49). Flat space sits at 0 per point at every λ and
     each curled rung sits exactly a = 4(λ − 1) per point above the next. So in this energy dark energy cannot be something
     left over in flat space itself; it would have to come from an opening or from what an opening leaves behind. Below
@@ -2087,7 +2089,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     the window is tied to the volume, and one that does not is bounded by the cut.
 
 - **O88 T37 read again from the saved wiring: the long warm tubes melted; where the sheet stays clean, relics grow in
-  proportion to length; and the "scrap share" is a snapshot, not a prediction.** (2026-10-05, 03:30 to 05:20 ET; every
+  proportion to length; and the "scrap share" is a snapshot, not a prediction.** (2026-10-05, read between 00:35 and 04:50 ET, committed 04:57 ET; every
   saved T37 end state, 340 graphs, read exactly: energy 16(N − S) + 4λX, the local dimension of every point, the square
   count; plus the run lengths in the CSVs. POST HOC: this is a second reading of a pre-registered run, after its
   verdict; T37's verdict stands as scored and what changes is O77's account of it. The four cold replicas missing from
@@ -2145,7 +2147,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     is 62 % flat and 1.6 per point, and one tube of twenty ended clean.
 
 - **O89 The shares at birth, with the light counted; and the two shapes of tie that would match them.** (2026-10-05,
-  05:40 ET; the owner's decision of the same day that the target is the shares at spacetime's birth, VISION Update 41.
+  committed 04:57 ET; the owner's decision of the same day that the target is the shares at spacetime's birth, VISION Update 41.
   *Ours, unverified:* settled cosmology applied by us from general knowledge, none of it read for this entry; to be put
   to a physicist. The walls are exact and EXPLORATORY.)
   - **The arithmetic.** Matter and light were equal in energy when the universe was about 3,400 times smaller than now
@@ -2214,7 +2216,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 
 - **O91 T48, read: with released energy kept where it is released, the two-curled torus opens its next direction and
   stops at λ = 1.25, and at λ = 1.40 it opened fully into one space in 5 replicas of 16, with damage in most of the
-  others; the one-curled torus never moved; the eight-link torus stays or advances one rung.** (2026-10-05, 05:10 ET;
+  others; the one-curled torus never moved; the eight-link torus stays or advances one rung.** (2026-10-05, read about 04:50 ET, committed 04:57 ET;
   PREREGISTRATION T48; runs finished 27 September, fetched and checked against their configs on 5 October,
   `scripts/accept_inbox.py`; read with `scripts/analyse_t48.py`. Energy conserved to 10⁻¹² in every run. Six- and
   eight-link results carry VISION Update 24's caveat.)
@@ -2241,7 +2243,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     another way.
 
 - **O92 T49, read: one fully curled cube opens part of the way; fully in a minority, more often with interchangeable
-  points where it has a way downhill; the 8-cube never opens fully.** (2026-10-05, 05:15 ET; PREREGISTRATION T49; fetched
+  points where it has a way downhill; the 8-cube never opens fully.** (2026-10-05, read about 04:52 ET, committed 04:57 ET; PREREGISTRATION T49; fetched
   and checked the same morning; read with `scripts/analyse_t49.py`; 32 replicas a cell. Update 24's caveat applies.)
   - **6-cube (64 points).** λ = 1.10, stuck, push 8: named PART OPEN (31; 1 all open), the path IN ORDER in 17 and partly
     in order in 15; interchangeable STUCK (20; 11 part open, 1 all open). λ = 1.15, push 4: named PART OPEN (27; 5 all
@@ -2259,7 +2261,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     state, and here by a margin that is not small.
 
 - **O93 T50, read: the tube's front speeds up where energy sits, at 6 and 10 units per point; no effect at 1 and 3.**
-  (2026-10-05, 05:15 ET; PREREGISTRATION T50; fetched and checked the same morning; `scripts/analyse_t50.py`; 24 replicas
+  (2026-10-05, read about 04:50 ET, committed 04:57 ET; PREREGISTRATION T50; fetched and checked the same morning; `scripts/analyse_t50.py`; 24 replicas
   an energy, all valid; energy conserved exactly.)
   - Q, the band's crossing time over the mirror stretch's, relative to the control: 1.13 (e = 1), 0.97 (3), 0.80 (6),
     0.71 (10). **NO EFFECT, NO EFFECT, SPEEDS, SPEEDS** (the e = 6 cell at 0.798 against a line of 0.8). Median crossing
@@ -2272,7 +2274,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     onto a clock, is still open.
 
 - **O94 The reservoir option for the cascade, on paper: at λ = 1.02 a bath cannot drive it; near λ = 1.25 a window
-  exists at the level of single moves and has not been run with a tie.** (2026-10-05, 06:00 ET; the chat hand-over's
+  exists at the level of single moves and has not been run with a tie.** (2026-10-05, committed 04:57 ET; the chat hand-over's
   section 3 offered two ingredients for a cascade, a reservoir that supplies each push or energy that carries a kind, and
   asked for an exact estimate before any run. *Ours, unverified:* the inputs are exact or measured, the reasoning is an
   estimate.)

@@ -3093,7 +3093,7 @@ at e = 1, 3, 6, 10: **NO EFFECT, NO EFFECT, SPEEDS, SPEEDS**. Hers (SPEEDS) hold
 
 ---
 
-## T51. How much scrap freezes in, and how does that depend on how slowly the new space cools? Many natural seeds, the fair clock (paper 2; piece 5; written 2026-10-05, about 05:00 ET, before any run)
+## T51. How much scrap freezes in, and how does that depend on how slowly the new space cools? Many natural seeds, the fair clock (paper 2; piece 5; written 2026-10-05, between 04:41 and 04:45 ET, before any run; committed and pushed 04:57 ET (the time first written here, "about 05:00", was a guess and wrong; corrected from the commit time))
 
 ### Why
 
@@ -3186,3 +3186,82 @@ Not run.
 That the scrap is dark matter, or that it is not. How a fair sweep maps onto physical time, without which no cooling
 time here can be set beside a temperature of birth. Anything at λ ≠ 1.25, in three directions, or sealed. Whether a
 scrap is cold, clumps, or passes through ordinary matter. The fall beyond 300,000 fair sweeps is an extrapolation.
+
+---
+
+## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
+
+### Why
+
+Gravity as Jacobson and Verlinde derive it rests on a count of what is hidden behind a surface, and that count grows
+with the surface's **area** ([Jac95], [Ver11], read in chat on 4 and 5 October; notes in `docs/reading/notes/`).
+[Ver11] says outright that information stored at the points of a lattice with nothing duplicated gives no such count
+and no gravity. This model's degrees of freedom are its links, stored once. So the question that decides whether the
+entropic route to a pull is open in this model at all is: **behind a cut, how many arrangements of the inside look the
+same from outside, and does that number follow the cut or the region?**
+
+The definition is the chat sessions' (O87): for a region R, remove every link with both ends in R and count the ways
+of putting links back inside R so that every point regains its links, every link with an end outside R is untouched,
+the graph is a valid state of the model (two-sided, hard-core rule), and the whole graph's energy is what it was. The
+original wiring is always one of them.
+
+**Disclosed.** In chat, with a script that did not restrict the wirings to the model's own, the count was taken on
+flat blocks of an 8 × 8 torus (1 each; reproduced here with that script, O87) and on one two-column window round one
+relic of a saved T37 end state (1). Read here before this was written, and not a count: the sizes of the windows
+below. Round each of the 87 four-point relics in the twelve saved end states of T37's cold cell, the points within
+graph distance 1, 2 and 3 number 12, 20 and 28 to 30, with 8 to 14 links cut at distances 1 and 2 (median 12).
+Round a square in a flat 16 × 16 torus they number 12, 24 and 40, with 16, 24 and 32 links cut. So round a relic the
+region grows while its cut hardly does, which is what lets one run tell the two scalings apart. No count has been
+taken with `graphity.hidden` on any saved state.
+
+### What will be run
+
+`scripts/exact_hidden_relics.py` on `configs/t52_hidden_relics.json` (both written after this section; `graphity.hidden`
+and its tests first), at λ = 1.25. Exact enumeration; no random numbers.
+
+- **Relic windows.** For every four-point relic (T37's column: a connected piece of four points all at d = 1) in the
+  twelve saved end states `results/t37_lam125_g125_L1024_*_adj/`: the ball of graph distance r = 1 round its four
+  points. For the two relics of lowest vertex number in each end state, 24 in all: the ball of r = 2 as well.
+- **Flat controls.** In each end state, the first three squares (in order of their lowest vertex number) all of whose
+  points lie at graph distance at least 6 from every point not at d = 2: the balls of r = 1 and r = 2 round the
+  square's four points.
+- **A limit, fixed now:** a window whose enumeration has not finished after 20 minutes on the laptop is abandoned and
+  reported as NOT COUNTED. If more than half the r = 2 windows of either kind are not counted, everything that needs
+  r = 2 is NOT READ.
+
+### Definitions, fixed now
+
+Per window: the points inside, the links cut, the **hidden count** (valid wirings at the same energy), the number of
+valid wirings at any energy, and how many sit at each energy above or below the original.
+
+- **C1 (flat space hides nothing):** every flat control counted gives 1.
+- **The relic, at r = 1:** SOMETHING HIDDEN if more than half the relic windows give a count above 1; NOTHING HIDDEN if
+  at least 90 % give exactly 1; MIXED otherwise.
+- **The scaling, on the 24 relics counted at both radii** (the region grows from 12 to 20 points while its cut stays
+  near 12): **FOLLOWS THE REGION** if the count at r = 2 exceeds the count at r = 1 for more than half of them;
+  **STAYS WITH THE CUT** if the two counts are equal and above 1 for more than half; **NOTHING HIDDEN** if both are 1
+  for at least 90 %; MIXED otherwise.
+- Reported, not scored: the counts against the links cut across all windows; the wirings at other energies (what a
+  warm bath would see), for relic and flat windows alike.
+
+### Predictions
+
+**The chat sessions' (5 October, recorded in the hand-over before any relic window wider than two columns was counted;
+whether it is the owner's own is for her to say):** flat regions give 1; a region holding a relic gives the number of
+places and forms the relic can take inside it, so it grows with the region.
+
+**Ours:** C1 holds. SOMETHING HIDDEN at r = 1 and FOLLOWS THE REGION: the count is the handful of positions a relic can
+take inside its window, more of them in the larger window. If so, what a cut hides in this model is where the leftover
+sits: a count tied to the region, of the kind [Ver11] says gives no gravity.
+
+### Named or interchangeable points
+
+Named: wirings that differ only by renaming points inside the region are counted separately, as the definition says.
+With interchangeable points such wirings would be one, and the count could only fall; whether a count of renamings,
+which is not local, behaves differently is a separate question and is not asked here.
+
+### What this cannot show
+
+Anything at a temperature above zero (the wirings at other energies are reported for that, not scored). Anything in
+three directions, where a pull would have to be tested ([Ver11]: no finite constant in two). That the model has no
+gravity: only that this count, at these windows, does or does not follow the cut. Windows beyond 20 points.
