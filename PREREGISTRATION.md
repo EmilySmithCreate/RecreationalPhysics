@@ -3215,6 +3215,44 @@ four blocks, the first already at g = 0.84, so the two fastest coolings are clos
 graph: every point at d = 2, 20 units above the flat torus). The counts of columns and other pieces miss such a state;
 the energy left and the frozen share do not.
 
+### Amendment 2, 2026-10-05, 05:27 ET, before any run of this protocol
+
+**Why.** Amendment 1's rule was given the same cost check (the same tube, the same stream, nothing kept) and was not
+reached: the long stretches of tube closed about 1,700 sweeps after the 90 % mark, and then one piece of eight points
+at d = 1 rested unchanged for the remaining 15,000 sweeps. A resting piece of eight is already on the record among the
+rare leftovers (the 3-cube of O28; this one's wiring was not read). So "no piece above four" waits for a leftover to
+heal, not for tube to finish converting; a tube that makes such a piece would either never count as opened or would
+open late, with its other scraps aged at a coupling where they heal. The same check showed something more basic:
+columns went on being born from the smaller pieces for about 10,000 sweeps after the 90 % mark (1, then 4, then 2,
+then 4, as pieces relaxed into columns and columns healed). **At a steady warm coupling there is no moment at which the
+leftovers have finished forming and not yet begun to heal**, so no stop rule gives a clean count to survive from.
+
+**What changes, all of it before any run:**
+
+1. **The opening ends** at the first reading at which at least 90 % of points are at d = 2 and no connected piece of
+   points at d = 1 holds more than **eight** points: no stretch of tube three or more columns long is left. A resting
+   piece of eight is allowed and is read as an "other", as T37 reads it.
+2. **What is scored no longer depends on the count at the end of the opening.** Every cooling time starts from the same
+   opened sheet, so a ratio of what two coolings leave needs no baseline. With C(t) the columns at the end of the hold,
+   summed over the replicas two cells share:
+   - **The verdict is unchanged in substance**: R(t) = S(10 t) / S(t) on shared replicas already equals C(10 t) / C(t),
+     the baseline cancelling. The rule (GENTLE, CLIFF, FROZEN, MIXED) and its lines stand as written.
+   - **P1 (the fair clock) is restated without a baseline**: C(30,000) / C(10,000) lies within 0.20 of 0.99, and
+     C(100,000) / C(10,000) within 0.20 of 0.47. These are T25's own ratios at 96 points, (14/18) / (15/19) and
+     (7/19) / (15/19). The form first written, each S within 0.20 of T25's survival, is withdrawn before any run,
+     because births after the baseline count would push S up for a reason that has nothing to do with the clock.
+   - **P2 is unchanged** (it never used a baseline).
+3. S and S_E as first defined are still reported, marked as able to exceed 1.
+
+**What does not change:** everything else in the section and in Amendment 1 (the replicas, the cooling schedule, the
+fair clock, the hold, the seeds). **Our predictions** stand, with P1 in its new form: both ratios within their windows.
+
+**What this costs, said plainly.** The quench and the two fastest coolings now start from a sheet whose smaller pieces
+are still relaxing, so their frozen shares describe a sheet caught early, and are reported as that. The cells the
+verdict uses, 10,000 fair sweeps and slower, all spend at least 1,400 fair sweeps above a coupling of 1 before they
+cool further, which is longer than the relaxation seen in the check; they see the same early history and differ in how
+long the scraps then have to heal.
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
