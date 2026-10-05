@@ -3187,6 +3187,34 @@ That the scrap is dark matter, or that it is not. How a fair sweep maps onto phy
 time here can be set beside a temperature of birth. Anything at λ ≠ 1.25, in three directions, or sealed. Whether a
 scrap is cold, clumps, or passes through ordinary matter. The fall beyond 300,000 fair sweeps is an extrapolation.
 
+### Amendment 1, 2026-10-05, 05:10 ET, before any run of this protocol
+
+**Why.** The runner was written to the section above and given one cost check before launch: one tube of 256 columns
+at g = 1.25, with a seed that belongs to no config, nothing kept. It reached 90 % flat after 33,100 sweeps, and at that
+reading 80 of its 100 non-flat points were two stretches of tube not yet converted, 13 and 7 columns long, beside one
+column and five small pieces. Both stretches closed inside the first cooling block. So the stop rule as written ends
+the opening while tube is still converting. Three things would follow: columns would be born after "the columns at the
+end of the opening" had been counted, so S would not be a survival and could exceed 1; the energy and the "other"
+pieces at that reading would be mostly unconverted tube; and the quench would freeze tube, not scrap. The same check
+showed the counts are thin, about one or two columns a tube at this length.
+
+**What changes, all of it before any run:**
+
+1. **The opening ends** at the first reading at which at least 90 % of points are at d = 2 **and no connected piece of
+   points at d = 1 holds more than four points**: no stretch of tube two or more columns long is left, and a single
+   curled column is the relic itself. The reading interval and the cap are unchanged.
+2. **Replicas at L = 256:** 80 at t_cool = 0 to 100,000 (was 40), and the first 40 of them at 300,000 (was 20), so that
+   R(30,000) is taken over 40 shared replicas. L = 128 and L = 512 stay at 40. The 300,000 jobs carry one replica each,
+   to stay well inside a Batch job's 24 hours.
+
+**What does not change:** the cooling schedule, the fair clock, the hold, the blocks, the seeds, every definition, P1,
+P2, the verdict rule and our predictions. Stated with them, from the same check: at t_cool = 1,000 the schedule has
+four blocks, the first already at g = 0.84, so the two fastest coolings are close to a quench by construction.
+
+**Seen in the same check and not acted on:** a sheet can be flat at every point and still hold energy (one small test
+graph: every point at d = 2, 20 units above the flat torus). The counts of columns and other pieces miss such a state;
+the energy left and the frozen share do not.
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
