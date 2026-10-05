@@ -1166,6 +1166,31 @@ should be about. Details: ASSUMPTIONS O100; `docs/papers/series_plan.md`, last s
   open question of one researcher's most recent work, as paper 1 does for Kelly, Trugenberger and Biancalana. The list
   is in `docs/papers/series_plan.md`.
 
+Update 43 (2026-10-05, 11:40 ET by the clock): **the author's position on the measure: both the yield of a turn and
+the multiplying count, and the reward is observers who evolved.** Why this page changes: the reading of O101 named a
+trap in counting per turn (if one turn makes many black holes, the rate of multiplying decides what dominates) and a
+gap (the yield of a turn has to be finite), and her answer says what is being counted. Her words, put in order.
+
+- **Maximize both.** A reality with far more black holes may hold them too close together, cutting short the time in
+  which molecules rearrange into life that grows in complexity, or the number of stars with planets at a temperature
+  where complex molecules are stable. Those are real requirements of our reality, and they compete with simply making
+  the most black holes, even if that is on paper the larger infinity. So the multiplying does not win by itself.
+- **The reward is an observer**, and things that go with observers evolving serve as well: a long cold period, complex
+  molecules, stars with planets at the right temperature.
+- **Brains that assemble by chance in space are not real observers: they cannot evolve.** A reality has stable rules of
+  order; it is not random arrangements of matter at every level of complexity. Or at least that is so for observers
+  who loop as we do, which is the reality we are in.
+- *Ours.* (1) This answers the trap in her terms: what is counted is observers who evolved, per turn, times how the
+  turns multiply, and a setting that makes many black holes and no one to observe scores nothing. Written out, a loop's
+  score is its observers per turn multiplied by a factor that grows with each generation, so over many generations
+  the multiplying still dominates unless it is bounded or the two are tied together, as she argues they are: more
+  black holes, sooner, means less cold time. That trade is the thing to make exact. (2) Counting something that goes
+  with observers, not observers themselves, is what the one published maximizing principle does: it counts the entropy
+  produced, which is dominated by starlight warming dust ([BHKP07], abstract only). (3) Requiring that observers have
+  evolved is one of the published answers to the chance-brain problem ([Freivogel11] reviews it). (4) The gap of O101
+  remains: a turn's yield has to be finite, and her list (a long cold period, stars with planets) is finite in any one
+  turn once it is counted up to the last star.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
