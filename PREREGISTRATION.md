@@ -3367,3 +3367,75 @@ was seen on the curled tube leans the other way. A stretch of curled tube hides 
 its ring of four can be turned or flipped where it joins the rest, which is a count that stays with the cut. A relic
 is one curled ring, so STAYS WITH THE CUT, with 4 or fewer shapes at both radii, would not surprise us now. The
 registered prediction is the one that is scored.
+
+---
+
+## T53. The "spaghetti" X in a warm bath: does a space with two directions curled and one open open by itself, from one place or several? (piece 5; VISION Update 42; ASSUMPTIONS O94, O100; written 2026-10-05, 11:52 ET by the clock, before any run)
+
+### Why
+
+The owner's idea of 5 October (VISION Update 42): inside a black hole X may be two directions curled and one open,
+long in its open direction; such a state would be unstable and burp at once, from several seeds. The toy has this state
+(a 4 × 4 × L torus with six links), and every run of it so far gave it one push in a sealed box: it opened one of its
+two curled directions and stopped, or, near the curling cost at which it can no longer hold, opened both in 5 runs of
+16 (T30, T48; O100). What has never been run is this state in a bath at a steady temperature, which supplies each push
+in turn, the way the two-dimensional tube was first seen to open (T7) and to seed itself (T37). O94 argued on paper
+that a window of bath temperatures should exist near λ = 1.25 at the level of single moves, and that it had not been
+run. This is that run, untied: no new knob.
+
+**Disclosed.** Exact, known before writing: the cheapest way out of the start costs 16 at λ = 1.25 and 4.8 at 1.40; out
+of the state with one direction still curled, 36 and 28.8; out of flat space, 64. Measured before writing: flat six-link
+space at 500 points and λ = 1 holds up to a coupling of about 4 on heating and is lost by 5.8 (Gate C′), and larger
+spaces melt at lower couplings (O88). Nothing of this protocol has been run.
+
+### What will be run
+
+`scripts/run_curled_bath_d.py` (new; tests in `tests/test_t53.py` before any run): the exact 4 × 4 × L torus, six
+links, named points, no tie, the thermal chain `cqg_d.run_chain` (Metropolis) at a fixed coupling g. L = 18, 36, 72
+(N = 288, 576, 1,152); λ = 1.25 and 1.40; g = 1.5, 2.0, 2.5, 3.0, 3.5; 8 replicas a cell; 200,000 sweeps, read every
+1,000; final graphs saved. Thirty Batch jobs, one per cell; seeds 20265301 to 20265330. Every six-link result carries
+VISION Update 24's caveat: the reproduction gate is open.
+
+### Definitions, fixed now (`scripts/analyse_t53.py`, tested before any run)
+
+Read at every reading with the census T48 uses (`run_sealed_curled_d.census_any`): the number of points at each count
+of open directions d, the damaged points (more open directions than three), and the largest connected piece of points
+at d = 3. Per replica, **from its last reading, by T48's rule**: DAMAGED if at least a quarter of the points are
+damaged; else OPENS if at least half the points are at d = 3 and the largest connected piece at d = 3 holds at least
+half of all points; else ADVANCES if the rung holding the most points is above the starting rung (d = 1); else STAYS.
+Per cell (L, λ, g): the majority, else MIXED.
+
+- **The window, per (L, λ):** **OPENS IN A WINDOW** if at least one g has an OPENS majority; else **ADVANCES ONLY** if
+  some g has an ADVANCES majority and no g has an OPENS majority; else **DAMAGED** if every g at which anything moved
+  has a DAMAGED majority; else **STAYS**.
+- **One place or several**, for replicas that OPEN or ADVANCE: the number of separate connected pieces of at least 16
+  points at d ≥ 2 at the first reading at which a tenth of the points are at d ≥ 2. SEVERAL if the median over such
+  replicas is 2 or more at L = 72 and larger there than at L = 18; ONE otherwise.
+- Reported, not scored: the sweep at which half the points first sit at d ≥ 2 and at d = 3 (the two openings' times);
+  whether an opening pauses on the one-curled rung; the final number of connected pieces of the whole graph (does the
+  opening split the space, O100); the energy at the end.
+
+### Predictions
+
+**The owner's (inferred by the assistant from VISION Update 42: this state is unstable, burps at once, and allows
+several seeds; to be confirmed or replaced by her before any result is read):** OPENS IN A WINDOW at both λ and every
+length, sooner at 1.40; SEVERAL.
+
+**Ours:** λ = 1.25: ADVANCES ONLY at every length. The first curled direction opens within the run at every g (its wall
+is 16); the second sits behind 36, which a bath that leaves flat space intact crosses too rarely, so the warmer baths
+give DAMAGED cells and not OPENS. λ = 1.40: OPENS IN A WINDOW at L = 18, around g = 2.5 to 3.0 (the second wall is
+28.8), with damage beside it; at L = 72 the window narrows or closes, because the larger space melts at a lower
+coupling. One place or several: ONE at these lengths.
+
+### Named or interchangeable points
+
+Named. With interchangeable points the start, which is highly symmetric, would be favored and its first move taken
+far less often (T48's count: the cheapest move out leaves 4 of 6,912 renamings), so every wait would be longer; what
+happens after the first moves is not predicted. Not run.
+
+### What this cannot show
+
+That X is this state, or that a black hole makes it: nothing in the toy folds space (piece 11). Anything with a tie
+between the directions, which waits for the owner's choice (O89). Whether a window found at these sizes survives at
+larger ones. Time: the toy's clock is its count of moves, and this run uses the chain's own sweeps at each size, so
+times are compared between couplings, not between sizes.
