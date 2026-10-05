@@ -17,6 +17,15 @@ list of E), replicas, n_sweeps, record_every, seed, save_adjacency, and "local_h
 the store of the first side-0 vertex under the per-vertex bath (sealed_d.run_sealed_bath_d with by_vertex), so only a
 move made from that vertex can spend it and released energy stays where it is released; capacities are then ignored
 and C is recorded as N.
+"kappa" (T44, 2026-09-26): the follow form of the direction tie (VISION Update 30; ASSUMPTIONS O68), run through
+graphity.sealed_tie_d; the rows then carry `kappa`, the tie total `tie_T` and the energy with the tie
+`h_tie_per_vertex`, and the conservation check includes the tie. Absent, the runner is what it was.
+"ftable_per_a" (T45, 2026-09-26): a tie of any shape, ftab[d] = entry d times a = 4(lambda - 1), run through
+graphity.sealed_tie_d.run_sealed_bath_table_d; "tie_label" names it in the rows. Exclusive with "kappa". With
+"local_heat" (T47 part B, 2026-09-26) the table tie runs under the per-vertex bath too.
+Every row also carries (T48, 2026-09-27) `damaged_d`, the points with more open directions than the run has (d > D),
+and `largest_open_d`, the largest connected piece at d = D; `melted` and `largest_flat` keep their six-link
+meaning (d > 3, d = 3) so that earlier files read as they did.
 """
 import json
 import platform
@@ -33,17 +42,37 @@ from graphity.dimension import local_dimension_d, pieces_of               # noqa
 from graphity.results import ResultWriter                                 # noqa: E402
 from graphity import interchangeable_d                                  # noqa: E402
 from graphity.sealed_d import energy_d, run_sealed_bath_d                 # noqa: E402
+from graphity.sealed_tie_d import (energy_table_d, energy_tie_d, run_sealed_bath_table_d,       # noqa: E402
+                                  run_sealed_bath_tie_d, table_total, tie_total)
 
 D_BINS = 8       # d = 0 .. 6 and "7 or more"
 
 
-def census(adj, lam):
+def census(adj, lam, kappa=None):
     d = local_dimension_d(adj)
+    dim = adj.shape[1] // 2
     hist = np.bincount(np.minimum(d, D_BINS - 1), minlength=D_BINS)[:D_BINS]
     flat = pieces_of(adj, d == 3)
-    return dict(h_per_vertex=float(energy_d(adj, lam)) / adj.shape[0],
-                **{"d%d" % i: int(hist[i]) for i in range(D_BINS)},
-                melted=int((d > 3).sum()), pieces_flat=len(flat), largest_flat=(flat[0] if flat else 0))
+    # T48 (2026-09-27): `melted` and `largest_flat` read d > 3 and d = 3, which is flat only at six links. The two columns
+    # below read the run's own number of directions D = links / 2: points above D, and the largest piece at d = D.
+    open_d = flat if dim == 3 else pieces_of(adj, d == dim)
+    out = dict(h_per_vertex=float(energy_d(adj, lam)) / adj.shape[0],
+               **{"d%d" % i: int(hist[i]) for i in range(D_BINS)},
+               melted=int((d > 3).sum()), pieces_flat=len(flat), largest_flat=(flat[0] if flat else 0),
+               damaged_d=int((d > dim).sum()), largest_open_d=(open_d[0] if open_d else 0))
+    if kappa is not None:                                                 # T44
+        t = int(tie_total(adj))
+        out.update(tie_T=t, h_tie_per_vertex=float(energy_tie_d(adj, lam, kappa)) / adj.shape[0])
+    return out
+
+
+def census_any(adj, lam, kappa=None, ftab=None):
+    """census, with the table tie's total and energy when ftab is given (T45)."""
+    if ftab is None:
+        return census(adj, lam, kappa)
+    out = census(adj, lam)
+    out.update(tie_T=float(table_total(adj, ftab)), h_tie_per_vertex=float(energy_table_d(adj, lam, ftab)) / adj.shape[0])
+    return out
 
 
 def gas(dims, copies):
@@ -74,6 +103,16 @@ def main(path, out_dir="results"):
     # runs the same chain with named points, as a control. Absent, the runner is what it was.
     interchangeable = bool(cfg.get("interchangeable", False))
     weighted = bool(cfg.get("weighted", True))
+    tied = "kappa" in cfg
+    kappa = float(cfg.get("kappa", 0.0))
+    tabled = "ftable_per_a" in cfg                                        # T45
+    ftab = np.array([float(v) for v in cfg.get("ftable_per_a", [])]) * 4.0 * (lam - 1.0)
+    if tabled and tied:
+        raise ValueError("kappa and ftable_per_a are exclusive")
+    if tabled and interchangeable:
+        raise ValueError("the table tie is run with named points only")
+    if tied and interchangeable:
+        raise ValueError("the direction tie is run with named points only")
     if interchangeable and local_heat:
         raise ValueError("interchangeable points are run with the shared bath only")
     baths = [n] if local_heat else [int(round(eval(str(c), {"N": n}))) for c in cfg["capacities"]]
@@ -89,7 +128,8 @@ def main(path, out_dir="results"):
                     side_u = np.flatnonzero(part == 0)
                     stores = np.zeros(c_bath)
                     stores[int(side_u[0]) if local_heat else 0] = float(spark)
-                    h0 = energy_d(adj, lam)
+                    h0 = (energy_tie_d(adj, lam, kappa) if tied else energy_table_d(adj, lam, ftab) if tabled
+                          else energy_d(adj, lam))
                     e0 = h0 + stores.sum()
                     s_start, x_start = int(total_squares(adj)), int(surplus(adj))
                     seed = int(np.random.SeedSequence([int(cfg["seed"]), n, c_bath, int(round(float(spark) * 100)), rep]).generate_state(1)[0])
@@ -98,13 +138,24 @@ def main(path, out_dir="results"):
                     base = dict(N=n, dims=label, C=c_bath, spark=float(spark), replica=rep, lam=lam, local_heat=local_heat)
                     if interchangeable:                                   # T42; absent from earlier files
                         base.update(interchangeable=True, weighted=weighted)
-                    c0 = census(adj, lam)
+                    if tied:                                              # T44; absent from earlier files
+                        base.update(kappa=kappa)
+                    if tabled:                                            # T45; absent from earlier files
+                        base.update(tie_label=str(cfg.get("tie_label", "table")), ftable=" ".join("%.4f" % v for v in ftab))
+                    c0 = census_any(adj, lam, kappa if tied else None, ftab if tabled else None)
                     out.write(dict(**base, sweep=0, **c0, bath_T=float(stores.mean()), total=float(stores.sum()),
                                    drift=0.0, left=False, final=False))
                     blocks = n_sweeps // every
                     rng = np.random.default_rng(seed) if interchangeable else None
                     for b in range(1, blocks + 1):
-                        if interchangeable:
+                        if tabled:
+                            s, x, _, mean, tot, _ = run_sealed_bath_table_d(adj, side_u, stores, every,
+                                                                            seed if b == 1 else -1, lam, ftab,
+                                                                            by_vertex=local_heat)
+                        elif tied:
+                            s, x, _, mean, tot, _ = run_sealed_bath_tie_d(adj, side_u, stores, every, seed if b == 1 else -1,
+                                                                          lam, kappa, by_vertex=local_heat)
+                        elif interchangeable:
                             s, x, _, tot = interchangeable_d.run(adj, part, every, seed, lam, demons=stores,
                                                                  weighted=weighted, rng=rng)
                             mean = tot / len(stores)
@@ -114,8 +165,8 @@ def main(path, out_dir="results"):
                         if not left and ((s != s_start).any() or (x != x_start).any()):
                             left = True
                             left_at = b * every
-                        c = census(adj, lam)
-                        drift = abs(c["h_per_vertex"] * n + tot[-1] - e0)
+                        c = census_any(adj, lam, kappa if tied else None, ftab if tabled else None)
+                        drift = abs((c["h_tie_per_vertex"] if (tied or tabled) else c["h_per_vertex"]) * n + tot[-1] - e0)
                         out.write(dict(**base, sweep=b * every, **c, bath_T=float(mean[-1]), total=float(tot[-1]),
                                        drift=float(drift), left=left, final=(b == blocks)))
                     if cfg.get("save_adjacency"):

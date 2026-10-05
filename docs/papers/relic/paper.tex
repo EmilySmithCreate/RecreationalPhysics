@@ -13,7 +13,7 @@ number, its position, and how long it lasts}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 25 September 2026}
+\date{DRAFT, 5 October 2026}
 
 \begin{abstract}
 In a companion paper we showed that, in the family of graph energies obtained from combinatorial quantum
@@ -26,7 +26,9 @@ not grow with the space. Read from its wiring it is a closed loop of four vertic
 $24\lambda - 16$ above the flat torus in the cold boxes (14 at $\lambda = 1.25$), with lighter forms of 4 and 9 units
 and rarer resting states of 8 to 45 units. Its position is neither at the seed nor opposite it: it is
 indistinguishable from uniform. Planting $k = 1, 2, 4, 8$ seeds leaves $1.10, 2.15, 2.50, 3.40$ relics on
-average: more seeds make more scrap, but fewer than one each. Held at a fixed coupling of 1.0, 1.25 or 1.5 the relic
+average: more seeds make more scrap, but fewer than one each. A tube long enough to seed itself leaves relics in
+proportion to its length, about one for every three seeds, where the product is a clean sheet; at warmer couplings
+the longest tubes melt instead. Held at a fixed coupling of 1.0, 1.25 or 1.5 the relic
 anneals away within $500$ to $80{,}500$ sweeps; cooled from 1.25 toward a coupling at which nothing moves, it
 freezes in: every relic survives a fast cooling, about four in five survive a cooling of ten to thirty thousand sweeps,
 and a third survive the slowest tried. Every verdict quoted was pre-registered before its run.
@@ -142,6 +144,59 @@ less than proportional. The counts are also more regular than independent events
 their mean is 0.09 to 0.50, against about 1. Where fronts from neighboring
 seeds meet, their relics may merge or anneal; that was not measured and the saved end states hold the positions.
 
+\section{A tube that seeds itself}
+
+\emph{Pre-registered as T37.} The chance of a seed per sweep does not grow with the tube, while a front's speed per
+sweep falls with its size, so a long enough tube seeds itself in several places before any one front has crossed it.
+Tubes $4 \times L$ at $\lambda = 1.25$ were started from the exact tube at fixed coupling: $g = 1.25$ at $L = 1024$
+(12 replicas), and $g = 1.5$ and $1.75$ at $L = 64$ to $1024$ (20 to 40 replicas a cell). A run stopped when the
+square count had fallen 97\% of the way from the tube's to the sheet's, and was then settled for 600 to 2,400 sweeps.
+A new seed was counted when a flat patch of at least eight vertices appeared touching no patch counted before. The
+predictions on record were ours, with the same verdict inferred for the author: that seeds grow with length, that the
+converted fraction follows the one-dimensional law of nucleation and growth \cite{KJMA} (Avrami exponent 2), and that
+the energy left per tube at the largest $L$ is at least three times that at $L = 64$.
+
+All three held by the registered rules. The seed count grows with $L$ (exponent $0.92$ at $g = 1.5$, $0.78$ at $1.75$);
+the Avrami exponent is $2.02$, $2.14$ and $2.03$ at the three couplings; and the energy left per tube grows far more
+than threefold, for the verdict MANY SEEDS, MANY SCRAPS. A fourth prediction, the seed count computed from the measured
+nucleation rate and front speed with nothing fitted, holds at $g = 1.25$ ($0.71$ of the observed) and fails at the
+warmer couplings ($0.41$ and $0.16$ at $L = 1024$): more seeds form there than the single-seed rate predicts.
+
+The saved final graphs were read after that verdict, and they divide the cells in two.
+
+\begin{center}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{3}{c}{$g = 1.5$} & $g = 1.25$ \
+$L$ & 64 & 128 & 256 & 1024 \
+\midrule
+seeds per tube & 1.9 & 4.5 & 9.2 & 20.6 \
+four-point relics per tube & 1.12 & 1.98 & 3.55 & 7.25 \
+other leftover pieces & 0.60 & 2.70 & 7.20 & 15.0 \
+vertices at $d = 2$ & 0.97 & 0.97 & 0.94 & 0.95 \
+energy left per vertex (median) & 0.06 & 0.10 & 0.14 & 0.08 \
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent \emph{Where the product is a clean sheet, the relics grow in proportion to the length}: about one per 57 to
+72 columns at $g = 1.5$, and at $g = 1.25$ about one for every three seeds ($0.35$; Sec.~VI found $0.29$ per extra
+planted seed), in eleven tubes of twelve. So the single relic of Sec.~III is what one seed leaves; a space long enough
+to seed itself leaves relics in proportion to its size. The energy these sheets still hold above the flat torus,
+$0.05$ to $0.21$ per vertex against a release of 1, is a reading at the moment the run stopped, at couplings where
+Sec.~VIII shows every relic annealing in time; it is not a frozen amount.
+
+\emph{The longest tubes at the warmer couplings melted.} At $L = 1024$, 55\% ($g = 1.5$) and 74\% ($g = 1.75$) of the
+vertices ended at $d > 2$, the squares per vertex had fallen to $0.90$ and $0.83$, and the tubes had absorbed $1.75$
+and $2.49$ per vertex from the bath where an opening releases 1. The stopping rule watches the square count, which
+melting lowers as an opening does, and the registered score counts the energy left; in these cells it counted melt.
+A sheet of 96 vertices holds at $g = 1.5$ (Sec.~VIII) and a tube of 4,096 does not: the coupling at which the sheet
+gives way to the random phase falls as the system grows (in the parent model the published curves for $N = 100$ to
+200 do not collapse either; Ref.~\cite{KTB19}, Fig.~8a, our reading). The run lengths
+compound this: the chain offers any one local pair of links about $2/N$ times a sweep, so in sweeps a long tube was
+given less local time than a short one before it was read.
+
 \section{How long it lasts at a fixed temperature}
 
 \emph{Pre-registered as T19.} Sheets with exactly one relic, made as in T17 at $k = 1$ but from a $24 \times 4$ torus
@@ -157,7 +212,7 @@ and it lasted where its surroundings stayed very cold.
 \section{The race: it freezes in when the box cools}
 
 \emph{Pre-registered as T25.} Reality cools as it expands, so the question that matters for a long-lived relic is a
-race between healing and cooling. A sheet with one relic, made as in Sec.~VII ($N = 96$), was cooled from
+race between healing and cooling. A sheet with one relic, made as in Sec.~VIII ($N = 96$), was cooled from
 $g = 1.25$, where every
 relic anneals within 13,000 sweeps at fixed coupling, to $g = 0.25$, where nothing moves, by the same factor each block
 of 500 sweeps over $t_{\rm cool} = 300$ to $100{,}000$ sweeps, and then held cold for 20,000 sweeps; twenty replicas per
@@ -190,8 +245,9 @@ cannot say is how its sweep relates to a cosmological clock.
 \section{Discussion}
 
 Four facts about the relic are now on the record for this model. It is small and of fixed size, a closed loop of
-four points left curled, and it does not grow with the space. Its number depends on how the change started, growing
-with the number of seeds but by less than one per seed. It anneals away at each fixed coupling tried, from 1.0 to
+four points left curled, and one seed leaves one of it whatever the size of the space. Its number depends on how the
+change started, growing with the number of seeds by less than one per seed, and in proportion to the length of a
+tube that seeds itself. It anneals away at each fixed coupling tried, from 1.0 to
 1.5. And it freezes in when its surroundings cool, even slowly.
 
 For the author's hypothesis, which needs the change to leave a remainder, the first two say what that remainder is
@@ -222,6 +278,8 @@ graphs, Class. Quantum Grav. 36, 125012 (2019).
 \bibitem{T24} C. A. Trugenberger, Dark matter and dark energy in combinatorial quantum gravity, arXiv:2409.09385
 (2024).
 \bibitem{Creutz83} M. Creutz, Microcanonical Monte Carlo simulation, Phys. Rev. Lett. 50, 1411 (1983).
+\bibitem{KJMA} A. N. Kolmogorov, Izv. Akad. Nauk SSSR, Ser. Mat. 1, 355 (1937); W. A. Johnson and R. F. Mehl, Trans.
+AIME 135, 416 (1939); M. Avrami, J. Chem. Phys. 7, 1103 (1939). (Not read by us; details to verify.)
 \end{thebibliography}
 
 \end{document}

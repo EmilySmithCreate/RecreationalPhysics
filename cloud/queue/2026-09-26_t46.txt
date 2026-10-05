@@ -1,0 +1,5 @@
+# T46 (PREREGISTRATION T46, written 2026-09-26 before any run): the owner's order in four directions.
+run_sealed_curled_d t46_rho0_lam130_s1
+run_sealed_curled_d t46_rho0_lam130_s2
+run_sealed_curled_d t46_rhom02_lam130_s1
+run_sealed_curled_d t46_rhom02_lam130_s2

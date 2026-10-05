@@ -399,3 +399,37 @@ the committed terraform (so a later deploy changes nothing).
 **Decisions waiting on her, in order of what they unblock:** (1) the gravity rule (option A of the gravity brief:
 a massless field on the points with relics as its sources); (2) the exchange sign's convention (points or pairs);
 (3) confirming or replacing the predictions inferred for her in T36 to T42; (4) whether to write a fourth λ map with her bar.
+
+## 26 September, early morning: the owner's ledger, and the tie run (VISION Update 33)
+
+- **The (D, λ) map gains a column it did not have: how the releases split by order of opening.** Exact (O71): with every
+  direction costing 4(λ − 1) per point, the three releases are equal at every λ and D, and walls, being returned, cannot
+  change that; only strain in the partly open states can (the tie). Walls are fixed with size and releases grow with the
+  region, so any ledger in which walls take a fixed share (the owner's 44 of 66) describes a patch of fixed size, about
+  one 6-cube at λ = 1.25. The follow tie's walls at six links, λ = 1.25 (X, two-curled, one-curled): κ = 0: −4, 16, 36;
+  κ = 1: 20, −6, 20; κ = 2: 44, −30, 4; κ = 2.5: 56, −42, −4. The middle rung loses its wall first at every λ from 1.05 to
+  1.40, so "large, smaller, none" never occurs.
+- **The counting drive against size** (O72): per point 0.33, 0.16, 0.06 in ln A for four, six and eight links, plus the
+  exchange of identical cells, which grows with their number; with six links at g = 1.5 the gas beats flat space below
+  λ = 1.031 at 10³ cells and 1.126 at 10²⁴. O55's "does not move with N" corrected.
+- **Launched: T44** (paper 3 and the six-link paper; pieces 11 and 14): the gas of eight 6-cubes under the follow tie at
+  λ = 1.25, κ = 1, 2, 2.5, pushed with its exact wall, baths N/2 and 2N, eight replicas, six Batch jobs. Does one push
+  open all three directions into one flat space? Her inferred prediction: yes, at κ = 2 and 2.5. Ours: not all, at any κ.
+- **Still unread in the bucket** as of this morning (all jobs finished, per `cloud/status/latest.md`): the rest of T37
+  and T38, and T39 to T43. Reading them needs the download step of the handoff.
+
+## 26 September, 05:08 ET: the programme regrouped, and the papers aligned to the groups (VISION Update 34)
+
+The owner regrouped the programme into four groups and took the allotropes out of it. New piece numbers (old in
+brackets); the papers each group feeds:
+
+| Group | Pieces | Papers |
+|---|---|---|
+| **The burp: how X opens** | 1 opens sharply (1); 2 not a fluke (2); 3 the rule (3); 4 room for the burp (4); 5 how the curled directions open, three and four (11 and 13); 6 the burp's three shares, with the charge per kind (14) | Paper 1 (pieces 1, 2; submitted); paper 3, the fertile window (3, 4, 6); the six-link paper, retitled as the paper on how curled directions open (5), with T44 its tied chapter |
+| **The scrap** | 7 the scrap: size, number, freeze-in (5 and 6) | Paper 2, the relic; its question "what is the scrap" is open again now that dark matter is a direction's release |
+| **What it must give back** | 8 curve-first gravity (7); 9 quantum from counting (9); 10 time and the speed limit (new) | Paper 5, gravity (8); paper 6, quantum (9); a new outline, time and the speed limit (10): the front's top speed against c, then the owner's "third pays for time", with nothing run |
+| **The cycle** | 11 black holes as re-curled regions (8); 12 the strange loop (10) | Paper 4, black holes (11); paper 7, the framework, with the loop's sizing (12) |
+
+**Parked:** the allotropes paper (old piece 12, `docs/parked/allotropes.md`), kept for the correspondence with the model's
+author; T43 (finished on the cloud, unread) answers his question and goes with it. **Owed:** the reading on dark charges
+(`docs/reading/notes/2026-09-26_dark_charge.md` holds search summaries only; this session's network blocked arXiv).

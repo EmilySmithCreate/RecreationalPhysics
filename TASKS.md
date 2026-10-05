@@ -4,7 +4,7 @@ Each task has an acceptance test. Do them in order; do not start a task whose pr
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).
 
-**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads. PREREGISTRATION **T12** (does the coarse law govern) and **T13** (the λ = 1 transition at N = 4p², after the author's reply) have no entries here either; T13 is the Gate B follow-up named under that gate. **Added 2026-09-24:** PREREGISTRATION **T16** (the correlation length of [KTB19] Fig. 9a, at the model author's request); **T8** is now written and running (the λ map along the tube, for paper 1's section V); **T17** = this page's T14 (leftover per seed); **T18** (room the new space needs, against λ); **T19** (does a leftover move, stay or anneal); **T21** (the black-hole piece: does a sealed sheet fold with interchangeable points); **T15 rung 1** (time-fractions against counts); **T22** (near λ = 1, do exits from the curled torus fall back? read 24 September: FALL-BACKS by the letter, first exit on time, κ = 0.56 to 0.68 at every λ). **Added 2026-09-24, night:** PREREGISTRATION **T24** (the λ map a third time, with the energy check read from the saved wiring; piece 2), **T25** (does the scrap freeze in before it heals; piece 6), **T26** (the local spark, sealed; piece 8; = this page's T14 local-spark protocol, now built) and **T27** (does a melt fold before it flattens when its energy leaks; piece 8). The series these serve is `docs/papers/series_plan.md`.
+**Numbering, 2026-09-22.** `PREREGISTRATION.md` numbers its sections by the order they were written and its T7, T8 and T9 are not this page's T7, T8 and T9. The map: PREREGISTRATION **T6** = this page's T6 (order of the disorder-to-order transition, redirected to tempering); PREREGISTRATION **T7** (tube → sheet, the order-to-order change) has no entry here and is the first result on the design track, plan step 5; PREREGISTRATION **T8** (the λ map) = this page's T7 + T8; PREREGISTRATION **T9** (the sealed tube) is the sealed half of this page's T8 and is the order-to-order version of T11. This page's T9 (the drift) is untouched by any of them. PREREGISTRATION **T10** (does the leftover grow with the space) and **T11** (is the leftover ring a seam) have no entries here; both are step-4 items on the design track. Pre-registration numbers are frozen with their results; this page's are not renumbered either, so that the history reads. PREREGISTRATION **T12** (does the coarse law govern) and **T13** (the λ = 1 transition at N = 4p², after the author's reply) have no entries here either; T13 is the Gate B follow-up named under that gate. **Added 2026-09-24:** PREREGISTRATION **T16** (the correlation length of [KTB19] Fig. 9a, at the model author's request); **T8** is now written and running (the λ map along the tube, for paper 1's section V); **T17** = this page's T14 (leftover per seed); **T18** (room the new space needs, against λ); **T19** (does a leftover move, stay or anneal); **T21** (the black-hole piece: does a sealed sheet fold with interchangeable points); **T15 rung 1** (time-fractions against counts); **T22** (near λ = 1, do exits from the curled torus fall back? read 24 September: FALL-BACKS by the letter, first exit on time, κ = 0.56 to 0.68 at every λ). **Added 2026-09-24, night:** PREREGISTRATION **T24** (the λ map a third time, with the energy check read from the saved wiring; piece 2), **T25** (does the scrap freeze in before it heals; piece 6), **T26** (the local spark, sealed; piece 8; = this page's T14 local-spark protocol, now built) and **T27** (does a melt fold before it flattens when its energy leaks; piece 8). The series these serve is `docs/papers/series_plan.md`. **Added 2026-10-05:** PREREGISTRATION **T51** (how much scrap freezes in, against cooling time, in tubes that seed themselves; the fair clock; paper 2).
 
 ## T1. Rectangular torus  ☑ (2026-09-19)
 
@@ -363,6 +363,61 @@ excess falls (halving exactly only with eight links at λ = 1.25); the counting 
 PREREGISTRATION **T34** with her prediction (re-curls, one direction then the rest) and ours (melts): four Batch jobs, read with
 `scripts/analyse_t34.py`. Designed, not run: the same with interchangeable points near λ = 1.02, where the counting could pay.
 
+## T44. The direction tie, run: does one push open all three curled directions?  ◑
+
+**Added 2026-09-26** (VISION Updates 30 and 33; PREREGISTRATION T44; ASSUMPTIONS O71). The follow tie built into the
+sealed six-link chain (`graphity.sealed_tie_d`), six Batch jobs on a gas of eight 6-cubes at λ = 1.25, κ = 1, 2, 2.5.
+Read with `scripts/analyse_t44.py`. Accept: the verdict per κ on the record, with the owner's inferred prediction
+confirmed or replaced.
+
+## T45. The budget-fitted triad, run  ◑
+
+**Added 2026-09-26** (VISION Update 35; PREREGISTRATION T45; ASSUMPTIONS O74). Eight Batch jobs; read with
+`scripts/analyse_t45.py`. Accept: the verdict per setting on the record, the stage releases set beside the locked fit.
+
+## T46. The owner's order in four directions, run  ☑ (read 2026-09-27: NOT ALL, O79)
+
+**Added 2026-09-26** (VISION Update 36; PREREGISTRATION T46; ASSUMPTIONS O75). Four Batch jobs at eight links; read with
+`scripts/analyse_t46.py`. Accept: the verdict per setting on the record, the owner's inferred prediction confirmed or
+replaced.
+
+## T47. The speed limit, and does flat four-direction space re-curl?  ☑ (read 2026-09-27: part A MIXED, O76; part B HEALS, O80)
+
+**Added 2026-09-26** (VISION Update 36, the owner's decision of 14:30 ET; PREREGISTRATION T47; = T13 rung 2 for the
+tube). Part A on the laptop (`scripts/run_front_speed.py`, six configs), part B two Batch jobs. Read with
+`scripts/analyse_t47.py`. Accept: the verdicts on the record, the owner's inferred predictions confirmed or replaced.
+
+## Reading before any prediction on the rate of time  ☑ (2026-09-26, three of five)
+
+**Added 2026-09-26** (the owner's instruction). Varying-speed-of-light cosmology (Moffat; Albrecht and Magueijo; the
+Magueijo review) and Ellis's evolving block universe, read in full before any new prediction about time's rate or an
+accelerating present. Read in full by assistant agents from PDFs the owner supplied: [Mag03], [Ell14], [ER10]
+(`docs/reading/notes/2026-09-26_time_rate.md`); Albrecht and Magueijo (1999) and Moffat (1993) not read. T47 part A's prediction was recorded before this instruction and stands as recorded.
+
+## A charge per opening direction  ☐
+
+**Added 2026-09-26** (VISION Update 34, the owner's decision). Brief: `docs/design/direction_charge_brief.md`, three forms
+for her choice. Nothing is built until she chooses a form and how a point's kind is defined. Reading owed first
+(`docs/reading/notes/2026-09-26_dark_charge.md` has search summaries only).
+
+## T48 and T49: one space from a connected X, and one fully curled piece  ☑ (read 2026-10-05: O91, O92; T50: O93)
+
+**Added 2026-09-27** (the owner: "proceed running more experiments that get us a confident description of reality"). After
+O85 (a fully curled X in this family is a gas of cubes; from a gas no opening made a space larger than one cube):
+PREREGISTRATION **T48**, the connected curled tori of three and four directions with the released energy kept where it is
+released, with the two-dimensional tube as control (16 Batch jobs), and **T49**, one hypercube with named and
+interchangeable points: does it open all its directions, and in what order? (12 Batch jobs). Manifest
+`cloud/queue/2026-09-27_t48_t49.txt`; read with `scripts/analyse_t48.py` and `scripts/analyse_t49.py`. And **T50**, the
+owner's question of 26 September: does the tube's opening front slow where energy sits? (5 Batch jobs,
+`cloud/queue/2026-09-27_t50.txt`, `scripts/run_front_matter.py`, read with `scripts/analyse_t50.py`.) Accept: each read
+by its rules, the inferred predictions confirmed or replaced by the owner before any verdict is quoted as hers.
+
+**Read 2026-10-05** (fetched and accepted the same morning). T48: the control ONE SPACE at λ = 1.25 and ADVANCES ONLY at
+1.40; the two-curled torus ADVANCES ONLY at 1.25 and DAMAGED at 1.40 by the letter, with a full opening into one
+space in 5 replicas of 16; the one-curled torus STAYS; eight links STAYS at 1.25 and ADVANCES ONLY at 1.40 (O91).
+T49: one cube opens part of the way, fully in a minority, more often with interchangeable points where it has a
+way downhill; the 8-cube never fully (O92). T50: SPEEDS at 6 and 10 units per point, NO EFFECT at 1 and 3 (O93).
+
 ## Eight links per point (D = 4): the pattern in which four curled directions open  ◑
 
 **Added 2026-09-25** (VISION Update 25, the owner's decision: X may have four curled directions, time among them, either a
@@ -429,6 +484,36 @@ whether the same code's 2D figure is compressed too. Read with `scripts/analyse_
 each means are fixed in the pre-registration; our own expectation is that A holds and B says one power, which would
 leave a model difference in 3D (non-bipartite graphs with the triangle and pentagon terms, needing a six-link general
 kernel that does not exist yet).
+
+## The hand-over of 4 to 5 October, recorded; and what follows from it  ◑
+
+**Added 2026-10-05** (`docs/HANDOFF_2026-10-05_chat.md`; VISION Updates 40 and 41; ASSUMPTIONS O86 to O94). Done on
+5 October: the working copy brought onto the current branch with the queue guard merged; the chat sessions' decisions,
+exact results and readings recorded, with three corrections found on review (the long warm T37 tubes melted, O88; the
+"scrap is not the dark matter" test is withdrawn, O88 and O89; the hidden count's wirings are restricted to the
+model's own, O87); T48 to T50 fetched and read; paper 2's draft and plain-language page corrected and given T37.
+
+In order, each pre-registered before it runs:
+
+1. **PREREGISTRATION T51**, the frozen scrap against cooling time in tubes that seed themselves, on the fair clock
+   (`scripts/run_scrap_freeze.py`, `scripts/analyse_t51.py`, `cloud/queue/2026-10-05_t51.txt`). The owner's prediction
+   is owed before any result is read.
+2. **The hidden count at wider windows** (`graphity.hidden`): windows of three to five columns round a relic of a saved
+   T37 end state, with flat windows as controls; count against the links cut and against the points inside. To be
+   pre-registered with the chat's prediction (flat gives 1; a relic gives the number of places and forms it can take).
+3. **The reservoir test** (O94): a bath at fixed coupling on the 4 × 4 × 18 torus at λ of 1.25 to 1.40. Waits for the
+   owner's choice of tie, now that the 5.36 fit's aim is withdrawn (O89): none, "all at the last", or "all at the
+   second".
+4. **The ladder by planes** (her decision of 4 October). Waits for her answer on what a plane opening is in the model
+   (VISION Update 41: bookkeeping, or a rule that one direction cannot open alone).
+5. **The warm-bath pull as force = temperature × change of entropy with distance**, designed on the hidden count of
+   item 2. Three directions only.
+6. **A physicist's answer on the shares at birth** (O89): one question, suited to a UVA coffee.
+7. **Paper 1:** the reader request to the model's author is drafted locally and waits until after his talk (her
+   decision). **Paper 2:** T51's result, then a rewrite; she expects it to change before it is shared.
+
+Held: the causal order read from the opening front (as defined it puts the cone in by hand); energy that carries a
+kind (O94); any fit of a tie to 5.36 (O89).
 
 ## Later
 

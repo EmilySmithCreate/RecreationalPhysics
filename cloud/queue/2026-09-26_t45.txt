@@ -1,0 +1,9 @@
+# T45 (PREREGISTRATION T45, written 2026-09-26 before any run): the budget-fitted triad, run.
+run_sealed_curled_d t45_a_lam140_cn2
+run_sealed_curled_d t45_a_lam140_c2n
+run_sealed_curled_d t45_a_lam146_cn2
+run_sealed_curled_d t45_a_lam146_c2n
+run_sealed_curled_d t45_b_lam125_cn2
+run_sealed_curled_d t45_b_lam125_c2n
+run_sealed_curled_d t45_c_lam130_cn2
+run_sealed_curled_d t45_c_lam130_c2n

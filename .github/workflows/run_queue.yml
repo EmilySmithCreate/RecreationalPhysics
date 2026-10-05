@@ -11,11 +11,19 @@
 # T23. A queue file is one push for a whole pre-registered set, and the commit that carries it is the
 # same one that carries the configs and the pre-registration, so nothing can be submitted that is not
 # on the record.
+#
+# Two guards against submitting the same config twice, added 2026-09-26 after the merge of PR #38 into
+# main resubmitted all twelve queue files (195 configs, commit 3d50c19), every one already finished:
+#   1. It never runs on main. Queue files are pushed on a working branch; merging that branch carries
+#      queue files main has not seen, which the old trigger read as new submissions.
+#   2. A config is skipped if its result is already in the bucket or a job for it is still unfinished.
+#      To run a config again on purpose, make a new config (rule 5: results are append-only).
+# Jobs submitted by mistake are cancelled with cancel_jobs.yml.
 name: run_queue
 
 on:
   push:
-    branches: ["**"]
+    branches-ignore: ["main"]
     paths:
       - "cloud/queue/**"
 
@@ -80,13 +88,27 @@ jobs:
       - name: submit one job per line
         run: |
           echo "### submitted from \`${GITHUB_SHA::7}\`" >> "$GITHUB_STEP_SUMMARY"
+          # Every job not yet finished, listed once; a config with one of these is not submitted again.
+          for S in SUBMITTED PENDING RUNNABLE STARTING RUNNING; do
+            aws batch list-jobs --job-queue recphys --job-status $S --query "jobSummaryList[].jobName" --output text
+          done | tr '\t' '\n' > active_jobs.txt
           echo "${{ steps.files.outputs.changed }}" | xargs cat | grep -v '^\s*#' | grep -v '^\s*$' | while read -r RUNNER CONFIG; do
+            if aws s3 ls "s3://recphys-results-$ACCOUNT/${CONFIG}/${CONFIG}.csv" < /dev/null > /dev/null 2>&1; then
+              echo "skipped $CONFIG: its result is already in the bucket"
+              echo "- skipped \`$CONFIG\`: result already in the bucket" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
+            if grep -Eq "^${CONFIG}-[0-9a-f]{7}$" active_jobs.txt; then
+              echo "skipped $CONFIG: a job for it is still unfinished"
+              echo "- skipped \`$CONFIG\`: a job for it is still unfinished" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
             ID=$(aws batch submit-job \
               --job-name "${CONFIG}-${GITHUB_SHA::7}" \
               --job-queue recphys \
               --job-definition recphys-run-config \
               --parameters runner=${RUNNER},config=${CONFIG} \
-              --query jobId --output text)
+              --query jobId --output text < /dev/null)
             echo "submitted $CONFIG as $ID"
             echo "- \`$RUNNER\` on \`$CONFIG\`: job \`$ID\`" >> "$GITHUB_STEP_SUMMARY"
           done

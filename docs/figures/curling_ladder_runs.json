@@ -1,0 +1,449 @@
+[
+ {
+  "t": "T7",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25
+  ],
+  "g": "1.5",
+  "ask": "Does the tube open sharply into flat space?",
+  "out": "Sharp two-state change",
+  "kind": "opened",
+  "src": "O13, VISION Update 15"
+ },
+ {
+  "t": "T7",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.5
+  ],
+  "g": "1.5",
+  "ask": "Does the tube last at the larger λ?",
+  "out": "Does not last: it falls at once",
+  "kind": "opened",
+  "src": "O13"
+ },
+ {
+  "t": "T23, T24",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.05,
+   1.1,
+   1.15,
+   1.2,
+   1.25,
+   1.3,
+   1.35
+  ],
+  "g": "1.5",
+  "ask": "Is the change sharp at every λ and size?",
+  "out": "Inconclusive by the letter: rare very long waits",
+  "kind": "mixed",
+  "src": "O47, O52"
+ },
+ {
+  "t": "T9",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Sealed, does the lump have to go somewhere?",
+  "out": "Bonfire with a threshold: completes when the bath can hold the lump",
+  "kind": "opened",
+  "src": "O14"
+ },
+ {
+  "t": "T10",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Does the leftover grow with the space?",
+  "out": "One small scrap, however large",
+  "kind": "other",
+  "src": "O15, O16"
+ },
+ {
+  "t": "T18",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.1,
+   1.25,
+   1.4
+  ],
+  "g": "sealed",
+  "ask": "How much room does the new space need?",
+  "out": "Room grows faster than the lump",
+  "kind": "other",
+  "src": "T18 reading"
+ },
+ {
+  "t": "T22",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.05,
+   1.1,
+   1.25
+  ],
+  "g": "1.5",
+  "ask": "Do exits fall back near λ = 1?",
+  "out": "First exit on time; about a third fall back",
+  "kind": "mixed",
+  "src": "O39"
+ },
+ {
+  "t": "T37",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25
+  ],
+  "g": "1.25 to 1.75",
+  "ask": "Do long tubes make many seeds?",
+  "out": "Many seeds, many scraps; a mosaic at the longest",
+  "kind": "opened",
+  "src": "O77"
+ },
+ {
+  "t": "T38",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25,
+   1.3
+  ],
+  "g": "1.5",
+  "ask": "Are the rare long waits a separate group?",
+  "out": "Two populations",
+  "kind": "other",
+  "src": "O84"
+ },
+ {
+  "t": "T47",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Does the opening front move at a fixed speed?",
+  "out": "Steady front (fixed speed on a size-fair clock)",
+  "kind": "opened",
+  "src": "O76"
+ },
+ {
+  "t": "T26",
+  "D": 2,
+  "c": 0,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Does a local spark re-curl flat space?",
+  "out": "Melts by its rule; not yet re-read from the wiring",
+  "kind": "nofold",
+  "src": "O47"
+ },
+ {
+  "t": "T48",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25,
+   1.4
+  ],
+  "g": "sealed",
+  "ask": "Control: the tube with energy kept at the front",
+  "out": "Running",
+  "kind": "running",
+  "src": "T48"
+ },
+ {
+  "t": "T50",
+  "D": 2,
+  "c": 1,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Does a front slow where energy sits?",
+  "out": "Running",
+  "kind": "running",
+  "src": "T50"
+ },
+ {
+  "t": "T30",
+  "D": 3,
+  "c": 2,
+  "lams": [
+   1.1,
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Does one push open both curled directions?",
+  "out": "Never opens (tori)",
+  "kind": "stuck",
+  "src": "O54, O64"
+ },
+ {
+  "t": "T32",
+  "D": 3,
+  "c": 2,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Is the push fixed with size?",
+  "out": "Fixed wall",
+  "kind": "other",
+  "src": "O54"
+ },
+ {
+  "t": "T39",
+  "D": 3,
+  "c": 2,
+  "lams": [
+   1.25,
+   1.4
+  ],
+  "g": "sealed",
+  "ask": "Does the first release pay the second wall?",
+  "out": "No window; one region opens with a seam, or part of one",
+  "kind": "mixed",
+  "src": "O81, O85"
+ },
+ {
+  "t": "T41",
+  "D": 3,
+  "c": 1,
+  "lams": [
+   1.25,
+   1.4
+  ],
+  "g": "sealed",
+  "ask": "Does the last curled direction need room?",
+  "out": "Never opens",
+  "kind": "stuck",
+  "src": "O81"
+ },
+ {
+  "t": "T44",
+  "D": 3,
+  "c": 3,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "tie": true,
+  "ask": "With the tie, does one push open all three?",
+  "out": "Stuck: one small patch",
+  "kind": "stuck",
+  "src": "O79"
+ },
+ {
+  "t": "T45",
+  "D": 3,
+  "c": 3,
+  "lams": [
+   1.25,
+   1.3,
+   1.4,
+   1.46
+  ],
+  "g": "sealed",
+  "tie": true,
+  "ask": "Budget-fitted ties: which order opens?",
+  "out": "Not all; cubes open separately and never join",
+  "kind": "mixed",
+  "src": "O79, O85"
+ },
+ {
+  "t": "T34",
+  "D": 3,
+  "c": 0,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "Does packed energy fold flat space?",
+  "out": "Excites it; a few scars; heals when cooled",
+  "kind": "nofold",
+  "src": "O69, O82"
+ },
+ {
+  "t": "T42",
+  "D": 3,
+  "c": 0,
+  "lams": [
+   1.02
+  ],
+  "g": "sealed",
+  "ask": "With interchangeable points, does it fold?",
+  "out": "Heals; named points keep a flickering scar",
+  "kind": "nofold",
+  "src": "O82"
+ },
+ {
+  "t": "T48",
+  "D": 3,
+  "c": 1,
+  "lams": [
+   1.25,
+   1.4
+  ],
+  "g": "sealed",
+  "ask": "One curled, energy kept at the front: one space?",
+  "out": "Running",
+  "kind": "running",
+  "src": "T48"
+ },
+ {
+  "t": "T48",
+  "D": 3,
+  "c": 2,
+  "lams": [
+   1.25,
+   1.4
+  ],
+  "g": "sealed",
+  "ask": "Two curled, energy kept at the front: one space?",
+  "out": "Running",
+  "kind": "running",
+  "src": "T48"
+ },
+ {
+  "t": "T49",
+  "D": 3,
+  "c": 3,
+  "lams": [
+   1.1,
+   1.15,
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "One cube alone: all directions, and in what order?",
+  "out": "Running",
+  "kind": "running",
+  "src": "T49"
+ },
+ {
+  "t": "T33",
+  "D": 4,
+  "c": 3,
+  "lams": [
+   1.1,
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "In what pattern do four directions open?",
+  "out": "No cascade; every replica stalls",
+  "kind": "stuck",
+  "src": "O62"
+ },
+ {
+  "t": "T39",
+  "D": 4,
+  "c": 2,
+  "lams": [
+   1.25,
+   1.5
+  ],
+  "g": "sealed",
+  "ask": "Does the first release pay the second wall?",
+  "out": "Stuck",
+  "kind": "stuck",
+  "src": "O81"
+ },
+ {
+  "t": "T40",
+  "D": 4,
+  "c": 3,
+  "lams": [
+   1.25
+  ],
+  "g": "sealed",
+  "ask": "How big a push starts four directions?",
+  "out": "Never starts, pushes up to 8 × the wall",
+  "kind": "stuck",
+  "src": "O81"
+ },
+ {
+  "t": "T40",
+  "D": 4,
+  "c": 4,
+  "lams": [
+   1.1
+  ],
+  "g": "sealed",
+  "ask": "How big a push starts the gas of 8-cubes?",
+  "out": "Never starts",
+  "kind": "stuck",
+  "src": "O81"
+ },
+ {
+  "t": "T46",
+  "D": 4,
+  "c": 4,
+  "lams": [
+   1.3
+  ],
+  "g": "sealed",
+  "tie": true,
+  "ask": "Her order with time last: does one push open all?",
+  "out": "Not all: stuck, or partly open",
+  "kind": "stuck",
+  "src": "O79"
+ },
+ {
+  "t": "T47",
+  "D": 4,
+  "c": 0,
+  "lams": [
+   1.3
+  ],
+  "g": "sealed",
+  "tie": true,
+  "ask": "Does flat space curl back behind a push?",
+  "out": "Heals",
+  "kind": "nofold",
+  "src": "O80"
+ },
+ {
+  "t": "T48",
+  "D": 4,
+  "c": 3,
+  "lams": [
+   1.25,
+   1.4
+  ],
+  "g": "sealed",
+  "ask": "Three curled, energy kept at the front: one space?",
+  "out": "Running",
+  "kind": "running",
+  "src": "T48"
+ },
+ {
+  "t": "T49",
+  "D": 4,
+  "c": 4,
+  "lams": [
+   1.1,
+   1.15,
+   1.3
+  ],
+  "g": "sealed",
+  "ask": "One 8-cube alone: all directions, and in what order?",
+  "out": "Running",
+  "kind": "running",
+  "src": "T49"
+ }
+]

@@ -1,0 +1,4 @@
+# The merge of PR #38 into main (commit 3d50c19) resubmitted all twelve queue files, 195 configs, every one of
+# which already had a finished result in the bucket (cloud/status/latest.md of 2026-09-26 06:41 UTC; the run_queue
+# log of that run lists each job). Pushing this file terminates every one of those jobs not yet finished.
+3d50c19

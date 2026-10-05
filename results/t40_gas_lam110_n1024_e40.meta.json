@@ -1,0 +1,34 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T40 (written 2026-09-25, before any run): the push that starts the change in four directions; a gas of four 8-cubes (all four curled), lambda 1.10, spark 40 (the cheapest first move is 19.2), C = N/2. Not exploratory. Every eight-link result carries VISION Update 24's caveat: no published eight-link curve exists and the kernel is validated at four and six links.",
+    "name": "t40_gas_lam110_n1024_e40",
+    "section": "T40",
+    "gas": {
+      "dims": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "copies": 4
+    },
+    "lambda": 1.1,
+    "capacities": [
+      "N/2"
+    ],
+    "sparks": [
+      40.0
+    ],
+    "replicas": 6,
+    "n_sweeps": 50000,
+    "record_every": 250,
+    "seed": 20264540,
+    "save_adjacency": true
+  },
+  "config_path": "configs/t40_gas_lam110_n1024_e40.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T40, written 2026-09-25"
+}

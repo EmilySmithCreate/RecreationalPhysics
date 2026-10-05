@@ -175,3 +175,23 @@ reachable at larger sizes with the flat-histogram machinery that exists.
 highest-count state and therefore a description of a black hole rather than a refutation of one,
 that building out of a melt is possible and downhill so the route is open, and that what a squeezed
 melt rebuilds into is untested because this model cannot squeeze.
+
+## Added 2026-09-26: how a loop is sized (the author's two functions; VISION Update 33)
+
+The author's words, put in order. The burps per turn are a function of the total energy, which sets how many black holes
+there are and how large; since a burp comes for every first activation, the change "burps until there is no energy left
+to activate another", and the number of black holes hardly matters. The second function is the probability of an
+observer per solar system times the number of solar systems, set by the space's length, width, height and time while
+energy is available, and by how much red (ordinary) matter there is, since only red builds molecules complex enough to
+evolve an observer. Too much energy means too many black holes too early and a shorter age of solar systems. The loop's
+size and its count of observers are maximized by balancing these, and every structure (lines, two-dimensional burps,
+regular loops, smaller strange loops) is equally real; we observe this one because being in a huge, hospitable loop is far
+more likely.
+
+What the model can say (ours). A burp's activation is a wall, and a wall's energy is returned on the far side (O71), so
+what limits the number of burps in the model is not activation used up but the room each burp needs (T9, T18) and the
+scrap it leaves (T10, T17). The counting drive that would pull space back towards curling grows slowly with the number
+of curled cells (O72), which is the model's version of a drive that must exist and not be too big. Neither the model nor
+this note counts observers; the nearest published relative, Smolin's cosmological natural selection (general knowledge,
+not read by us), selects for black holes, where hers selects for observers per turn and treats early black holes as a
+cost.

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Scrap — what the burp leaves behind</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --paper:#f6f7f5;--ink:#1c1e22;--muted:#5d636b;--rule:#d6d9d6;--accent:#1e5b6e;--accent2:#b5542a;
+  --note:#e7eeee;--card:#ffffff;--good:#2f7d4f;--bad:#a63d2f;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --paper:#141619;--ink:#e4e5e6;--muted:#9aa1a8;--rule:#2c3035;--accent:#86bccb;--accent2:#e0905f;--note:#1b2327;--card:#1a1d21;--good:#6fc08f;--bad:#e2816f}}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#141619;--ink:#e4e5e6;--muted:#9aa1a8;--rule:#2c3035;--accent:#86bccb;--accent2:#e0905f;--note:#1b2327;--card:#1a1d21;--good:#6fc08f;--bad:#e2816f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.6;padding:24px 18px 64px}
+main{max-width:44rem;margin:0 auto}
+.kicker{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+h1{font-size:1.9rem;line-height:1.2;font-weight:600;margin:0 0 10px;text-wrap:balance}
+.sub{font-size:1.1rem;color:var(--muted);margin:0 0 22px;font-style:italic}
+.status{font-family:var(--sans);font-size:13px;line-height:1.5;background:var(--note);border-radius:8px;padding:12px 14px;margin:0 0 30px}
+h2{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:40px 0 10px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:18px 18px 14px;margin:14px 0}
+.card h3{font-family:var(--sans);font-size:1.05rem;font-weight:600;margin:0 0 6px}
+.card p{margin:0 0 10px}
+.big{font-family:var(--sans);font-size:2.4rem;font-weight:600;line-height:1;color:var(--accent);margin:4px 0 6px}
+.fig{overflow-x:auto;margin:10px 0 4px}
+.fig svg{width:100%;height:auto;max-width:100%;display:block}
+.cap{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:4px 0 0}
+.run{font-family:var(--sans);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.verdict{display:inline-block;font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid var(--rule);margin-left:6px}
+.v-good{color:var(--good);border-color:var(--good)}
+.v-mid{color:var(--accent2);border-color:var(--accent2)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.step{background:var(--note);border-radius:10px;padding:12px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.step b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.wrong{border-left:3px solid var(--accent2);padding-left:14px;margin:12px 0}
+.open{border-left:3px solid var(--rule);padding-left:14px;margin:12px 0;color:var(--muted)}
+ul{padding-left:20px}
+footer{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:44px;border-top:1px solid var(--rule);padding-top:14px}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">Paper 2 · plain-language visual version</div>
+<h1>The Scrap: what the burp leaves behind</h1>
+<p class="sub">When a curled space snaps open, a little of it does not convert. This is what that leftover is, how big it is, how many there are, where it sits, how long it lasts, and what happens when a space seeds itself in many places.</p>
+
+<div class="status"><strong>Source:</strong> the paper draft "What the burp leaves behind" (docs/papers/relic/paper.tex, 25 September 2026) and the saved results in the public repository (T10, T11, T17, T19, T25), plus T37's saved end states, read exactly from their wiring. Every verdict quoted was pre-registered before its run; the reading of T37's wiring in finding 4 came after its verdict and is marked.</div>
+
+<h2>The question</h2>
+<p>Paper 1 showed that a curled torus opens sharply into flat space: it waits, starts at one place, sweeps across as a front, and releases a fixed lump of energy per point, the burp. This paper asks what the front leaves behind. In the author's picture that leftover is the <em>scrap</em>: energy that did not convert, frozen into the new space. Three things decide whether a scrap can matter for a universe: how big it is, whether more of it appears when the change starts in many places at once, and whether it lasts.</p>
+
+<div class="steps">
+  <div class="step"><b>1 · Size</b>Does one opening leave a scrap, and does it grow with the space?</div>
+  <div class="step"><b>2 · Number</b>Do more seeds leave more scrap, one each, or not?</div>
+  <div class="step"><b>3 · Lasting</b>Does the scrap heal away, or freeze in as the space cools?</div>
+</div>
+
+<h2>Finding 1 · One opening leaves one small scrap, whatever the size</h2>
+<div class="card">
+  <div class="run">T10 · twenty sealed conversions at each of N = 64, 96, 192, 288 <span class="verdict v-good">verdict: one ring, however large</span></div>
+  <div class="big">0.85 – 1.05</div>
+  <h3>relics per tube at every size, slope 0.0003 ± 0.0003 per vertex</h3>
+  <div class="fig">
+    <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Relics per tube stay near one as the tube grows">
+      <line x1="60" y1="170" x2="610" y2="170" stroke="var(--rule)"/>
+      <line x1="60" y1="30" x2="60" y2="170" stroke="var(--rule)"/>
+      <text x="335" y="205" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="13" fill="var(--muted)">size of the space (points) →</text>
+      <text x="22" y="100" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="13" fill="var(--muted)" transform="rotate(-90 22 100)">relics</text>
+      <line x1="60" y1="100" x2="610" y2="100" stroke="var(--accent)" stroke-dasharray="4 4"/>
+      <text x="606" y="94" text-anchor="end" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--accent)">one relic</text>
+      <g fill="var(--accent)">
+        <circle cx="140" cy="104" r="7"/><circle cx="260" cy="99" r="7"/><circle cx="380" cy="102" r="7"/><circle cx="500" cy="97" r="7"/>
+      </g>
+      <g font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)" text-anchor="middle">
+        <text x="140" y="190">64</text><text x="260" y="190">96</text><text x="380" y="190">192</text><text x="500" y="190">288</text>
+      </g>
+      <text x="335" y="55" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="13" fill="var(--muted)">a scrap that grew with the space would climb; it stays within the scatter of 1</text>
+    </svg>
+  </div>
+  <p class="cap">Mean relics per tube against tube size (4 × L tori, λ = 1.25, cold sealed box, 12-unit spark, 30,000 sweeps). The prediction on record, that the count rises with size, failed. In 9 of the 80 boxes the leftover was a different object, a two-point twist of 20 units.</p>
+  <p><strong>What it is, read from the wiring.</strong> A closed loop of four points left curled while the columns around them opened, each at local dimension 1, each edge in three squares. It comes in three forms, holding 4, 9 or 14 units at λ = 1.25 according to how many surrounding edges carry a third square; the cold boxes leave the 14-unit form, costing 24λ − 16 above the flat torus. Rarer resting states of 8 to 45 units are combinations of small defects (a two-point twist, a 3-cube, an open line of three); eleven of twelve read this way matched their recorded release exactly.</p>
+  <p><strong>Where it sits (T11).</strong> Neither at the seed nor opposite it: its position along the torus is indistinguishable from uniform. Verdict on record: neither.</p>
+  <p>The share of the release a single relic keeps is exact: (24λ − 16) / [4(λ − 1)N], which is 22% at λ = 1.25 and N = 64, 72% at λ = 1.05, and falls as 1/N. From one seed, the scrap is negligible in a large space.</p>
+</div>
+
+<h2>Finding 2 · More seeds, more scrap, but fewer than one each</h2>
+<div class="card">
+  <div class="run">T17 · 96 × 4 torus, 1, 2, 4, 8 planted seeds, twenty runs each <span class="verdict v-mid">pre-registered verdict: between</span></div>
+  <div class="fig">
+    <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Relics versus seeds: 1.10, 2.15, 2.50, 3.40, between one-per-seed and one-per-tube">
+      <line x1="60" y1="250" x2="610" y2="250" stroke="var(--rule)"/>
+      <line x1="60" y1="30" x2="60" y2="250" stroke="var(--rule)"/>
+      <!-- y scale: 0..8 relics over 220px: y = 250 - v*27.5 -->
+      <g font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)">
+        <text x="52" y="254" text-anchor="end">0</text>
+        <text x="52" y="199" text-anchor="end">2</text>
+        <text x="52" y="144" text-anchor="end">4</text>
+        <text x="52" y="89" text-anchor="end">6</text>
+        <text x="52" y="34" text-anchor="end">8</text>
+        <text x="130" y="272" text-anchor="middle">1 seed</text>
+        <text x="270" y="272" text-anchor="middle">2</text>
+        <text x="410" y="272" text-anchor="middle">4</text>
+        <text x="550" y="272" text-anchor="middle">8 seeds</text>
+      </g>
+      <!-- author's guess: one per seed -->
+      <polyline points="130,222.5 270,195 410,140 550,30" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="470" y="56" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--accent2)">author's guess: one per seed</text>
+      <!-- our guess: one per tube -->
+      <line x1="130" y1="222.5" x2="550" y2="222.5" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="470" y="240" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)">our guess: one per tube</text>
+      <!-- data -->
+      <polyline points="130,219.75 270,190.9 410,181.25 550,156.5" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+      <g fill="var(--accent)">
+        <circle cx="130" cy="219.75" r="6"/><circle cx="270" cy="190.9" r="6"/><circle cx="410" cy="181.25" r="6"/><circle cx="550" cy="156.5" r="6"/>
+      </g>
+      <g font-family="IBM Plex Sans,sans-serif" font-size="12.5" font-weight="600" fill="var(--accent)">
+        <text x="130" y="206" text-anchor="middle">1.10</text><text x="270" y="177" text-anchor="middle">2.15</text><text x="410" y="167" text-anchor="middle">2.50</text><text x="550" y="143" text-anchor="middle">3.40</text>
+      </g>
+    </svg>
+  </div>
+  <p class="cap">Relics left per tube against planted seeds. Slope 0.29 ± 0.04 relics per extra seed, only about one standard error above the one-per-tube boundary (0.25), and the rise is uneven: 1.05, then 0.35, then 0.90. The counts are more regular than independent events would give (variance over mean 0.09 to 0.50).</p>
+  <p>More seeds make more scrap, but fewer than one each. Where fronts from neighbouring seeds meet, their relics may merge or anneal; that was not measured, and the saved end states hold the positions. Whether a long space that seeds itself settles to a fixed amount of scrap per length is what T37 was built for (finding 4).</p>
+</div>
+
+<h2>Finding 3 · Left warm, every scrap heals; cooled, it freezes in</h2>
+<div class="card">
+  <div class="run">T19 · T25 <span class="verdict v-good">pre-registered verdict: freezes in</span></div>
+  <p><strong>At a fixed coupling it anneals (T19).</strong> Sheets with exactly one relic (N = 96) held at coupling g = 1.0, 1.25 and 1.5 for 100,000 sweeps: at 1.0 all nine relics were gone between 4,000 and 80,500 sweeps; at 1.25 all ten within 500 to 13,000; at 1.5 eight annealed and two moved first, all gone within 11,000. In T10's cold boxes, whose bath ends near g = 0.5, the relic lasted the whole 30,000 sweeps. Our own prediction, that it would stay at g = 1.0, was wrong. So the question that matters is a race: does the space cool before its scrap heals?</p>
+  <div class="fig">
+    <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fraction of scraps surviving versus cooling time: all for fast cooling, about four in five for 10 to 30 thousand sweeps, about a third for the slowest">
+      <line x1="60" y1="230" x2="610" y2="230" stroke="var(--rule)"/>
+      <line x1="60" y1="30" x2="60" y2="230" stroke="var(--rule)"/>
+      <g font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)">
+        <text x="52" y="234" text-anchor="end">0</text>
+        <text x="52" y="134" text-anchor="end">½</text>
+        <text x="52" y="36" text-anchor="end">all</text>
+        <text x="335" y="266" text-anchor="middle">how slowly the space is cooled →</text>
+        <text x="150" y="250" text-anchor="middle">300 · 1,000 · 3,000</text>
+        <text x="350" y="250" text-anchor="middle">10,000 · 30,000</text>
+        <text x="550" y="250" text-anchor="middle">100,000</text>
+      </g>
+      <g fill="var(--accent)" opacity=".85">
+        <rect x="110" y="30" width="80" height="200" rx="6"/>
+        <rect x="310" y="72" width="80" height="158" rx="6"/>
+        <rect x="510" y="156" width="80" height="74" rx="6"/>
+      </g>
+      <g font-family="IBM Plex Sans,sans-serif" font-size="13" font-weight="600" fill="var(--ink)">
+        <text x="150" y="22" text-anchor="middle">20/20 · 17/17 · 19/19</text>
+        <text x="350" y="64" text-anchor="middle">15/19 · 14/18</text>
+        <text x="550" y="148" text-anchor="middle">7/19</text>
+      </g>
+    </svg>
+  </div>
+  <p class="cap">Relics surviving a cooling from g = 1.25, where every relic anneals within 13,000 sweeps, to g = 0.25, where nothing moves, over cooling times from 300 to 100,000 sweeps, then held cold for 20,000 (N = 96, twenty replicas per time). The freeze-out time, the longest cooling that keeps a majority, is 30,000 sweeps.</p>
+  <p>The relics that healed were last seen within the first 15,000 sweeps of cooling, while the coupling was still above about 1: cooling leaves the range where healing is fast early in the schedule. Our prediction of the freeze-out time (1,000 to 10,000 sweeps) was short by a factor of three to thirty; the verdict recorded for the author, freezes in with no freeze-out time named, held. Cosmology calls this freeze-out.</p>
+</div>
+
+<h2>Finding 4 · A space that seeds itself: scraps in proportion to its length</h2>
+<div class="card">
+  <div class="run">T37 · 4 × 64 to 4 × 1024 · natural seeding at baths g = 1.25, 1.5, 1.75 <span class="verdict v-good">pre-registered verdict: many seeds, many scraps</span></div>
+  <p>A long tube does not wait for one seed. It seeds itself in several places, about 21 seeds per 1,024 columns at the coldest bath, and fills in the way the textbook law of nucleation and growth says it should (Avrami exponent about 2 in every cell, nothing fitted).</p>
+  <div class="fig">
+    <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Relics per tube against tube length: 1.1, 2.0 and 3.6 at 64, 128 and 256 columns, close to proportional">
+      <line x1="60" y1="230" x2="610" y2="230" stroke="var(--rule)"/>
+      <line x1="60" y1="30" x2="60" y2="230" stroke="var(--rule)"/>
+      <!-- y scale: 0..5 relics over 200px: y = 230 - v*40 -->
+      <g font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)">
+        <text x="52" y="234" text-anchor="end">0</text>
+        <text x="52" y="154" text-anchor="end">2</text>
+        <text x="52" y="74" text-anchor="end">4</text>
+        <text x="150" y="252" text-anchor="middle">64 columns</text>
+        <text x="335" y="252" text-anchor="middle">128</text>
+        <text x="520" y="252" text-anchor="middle">256</text>
+        <text x="335" y="272" text-anchor="middle">length of the tube (each step doubles it) →</text>
+      </g>
+      <!-- in proportion to length, through the first point -->
+      <polyline points="150,185.2 335,140.4 520,50.8" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="512" y="42" text-anchor="end" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--accent2)">doubling with the length</text>
+      <!-- one however large -->
+      <line x1="150" y1="185.2" x2="520" y2="185.2" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="520" y="203" text-anchor="end" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)">one relic however long (T10, one seed)</text>
+      <!-- data -->
+      <polyline points="150,185.2 335,150.8 520,88" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+      <g fill="var(--accent)">
+        <circle cx="150" cy="185.2" r="6"/><circle cx="335" cy="150.8" r="6"/><circle cx="520" cy="88" r="6"/>
+      </g>
+      <g font-family="IBM Plex Sans,sans-serif" font-size="12.5" font-weight="600" fill="var(--accent)">
+        <text x="150" y="172" text-anchor="middle">1.12</text><text x="335" y="137" text-anchor="middle">1.98</text><text x="520" y="75" text-anchor="middle">3.55</text>
+      </g>
+    </svg>
+  </div>
+  <p class="cap">Four-point relics left per tube against tube length at bath g = 1.5 (λ = 1.25, forty tubes at each length), read from the saved final wiring. About one relic per 57 to 72 columns, beside 0.6, 2.7 and 7.2 smaller leftovers per tube.</p>
+  <p><strong>Where the new sheet ends clean, the relics grow with the length.</strong> At the coldest bath (g = 1.25, twelve tubes of 1,024 columns) eleven of twelve end as clean sheets holding about 7 four-point relics and 15 smaller leftovers each, roughly one relic for every three seeds, the rate T17 found with planted seeds. The energy still held above flat space in those eleven is 0.05 to 0.21 units per point, where the tube released 1. So one relic however large (finding 1) is what one seed leaves; a space long enough to seed itself leaves relics in proportion to its size.</p>
+  <p><strong>The long warm tubes melted.</strong> At the two warmer baths the tubes of 1,024 columns did not end as sheets at all. Read from the wiring, 55% and 74% of their points had opened <em>past</em> flat, their count of squares had fallen below a sheet's, and they had taken energy in from the bath, 2.8 and 3.5 units per point left where an opening gives 1 up. That is the start of melting into the random phase, not scrap. A sheet of 96 points keeps its shape and heals at g = 1.5 (finding 3); a tube of 4,096 melts there, so a larger space melts at a lower temperature. The registered rule scored these tubes by the energy left, so its verdict counts melt as scrap there; this reading of the wiring came after the verdict.</p>
+</div>
+
+<h2>What it means</h2>
+<div class="card">
+  <p><strong>The scrap is real, small, and frozen.</strong> One opening leaves one four-point loop of unconverted energy, 14 units at λ = 1.25, anywhere along the tube; a space that seeds itself leaves them in proportion to its length, about one for every three seeds; held warm it heals, and as the space cools it freezes in. In the published model at λ = 1 none of this happens, so the scrap is a consequence of the curling cost, the one term this programme adds.</p>
+  <p><strong>What kind of thing it is.</strong> A frozen scrap is a fixed count of objects. As space grows, a fixed count thins out the way matter does, and not the way dark energy does, which stays the same in every volume (the rule is from Prescod-Weinstein and Smolin's 2009 paper on disordered locality).</p>
+  <p><strong>What is not known yet: how much stays.</strong> At a steady warm temperature every scrap heals in time, so the amount found in finding 4 depends on when the run was stopped. Cooled, some scraps freeze in, more of them the faster the cooling. The number that matters is how the frozen amount falls as the cooling gets slower, in a space that seeded itself. That measurement is registered as T51 and has not been made.</p>
+</div>
+
+<h2>How it could be wrong</h2>
+<div class="wrong"><p>A scrap that grew with the space, or more seeds leaving no more scrap: neither happened. A scrap that healed at every cooling speed: it did not; even the slowest cooling kept a third. The predictions that failed are also on the record: that the count would rise with size (T10), that the relic would stay at g = 1.0 (T19), and the freeze-out time (T25).</p></div>
+
+<h2>What the model cannot say</h2>
+<div class="open"><p>Anything about the real universe; how its cooling clock, the count of moves, relates to a cosmological one; and whether a relic in three dimensions, or with the model's points treated as interchangeable, behaves the same way. Under interchangeable points the flat sheet carries 2N symmetries and a sheet with one relic a few, so annealing should be favoured by a factor of order N: expected, not measured. Every kinetic statement concerns one Markov chain (the local edge switch with Metropolis acceptance, sealed with Creutz demons); energies and the exact classification of end states do not depend on the chain, waiting and annealing times and the count of relics per seed do.</p></div>
+
+<footer>Emily Smith · analysis drafted with Claude (Anthropic). Model: Trugenberger's 2D combinatorial quantum gravity with a curling cost λ (the author's term). All verdicts were pre-registered before the runs. Repository: github.com/EmilySmithCreate/RecreationalPhysics (every configuration, seed, result and pre-registration). No physicist has reviewed this work.</footer>
+</main>
+</body>
+</html>

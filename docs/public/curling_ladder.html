@@ -1,0 +1,388 @@
+<title>The Curling Ladder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground: #F2F4F7;
+  --surface: #FFFFFF;
+  --ink: #17202B;
+  --ink-2: #4A5566;
+  --ink-3: #6E7A8C;
+  --rule: #D6DCE4;
+  --grid: #E6EAF0;
+  --accent: #2E49A6;
+  --opened: #007C59;
+  --stuck: #A84811;
+  --mixed: #8C8630;
+  --nofold: #62488C;
+  --other: #6E7A8C;
+  --r0: #6E7A8C;
+  --r1: #1380C7;
+  --r2: #007C59;
+  --r3: #B8860B;
+  --r4: #A84811;
+  --r5: #8E3B8E;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #11151B; --surface: #181E27; --ink: #E5E9EF; --ink-2: #A6B0BF; --ink-3: #7F8A9B;
+    --rule: #2A3340; --grid: #222A35; --accent: #93A9FF;
+    --opened: #2FA37D; --stuck: #D97A3A; --mixed: #BDB44A; --nofold: #9C7AD6; --other: #7F8A9B;
+    --r0: #8A95A6; --r1: #58A6E0; --r2: #2FA37D; --r3: #D9A93A; --r4: #D97A3A; --r5: #C07AC0;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #11151B; --surface: #181E27; --ink: #E5E9EF; --ink-2: #A6B0BF; --ink-3: #7F8A9B;
+  --rule: #2A3340; --grid: #222A35; --accent: #93A9FF;
+  --opened: #2FA37D; --stuck: #D97A3A; --mixed: #BDB44A; --nofold: #9C7AD6; --other: #7F8A9B;
+  --r0: #8A95A6; --r1: #58A6E0; --r2: #2FA37D; --r3: #D9A93A; --r4: #D97A3A; --r5: #C07AC0;
+}
+body {
+  background: var(--ground); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.55;
+  padding-inline: 16px; padding-block: 0 64px;
+}
+.wrap { max-width: 920px; margin: 0 auto; }
+header { padding-block: 36px 12px; display: grid; gap: 12px; }
+.eyebrow { font-family: var(--sans); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0; }
+h1 { font-size: clamp(32px, 5.5vw, 46px); line-height: 1.05; font-weight: 500; margin: 0; text-wrap: balance; }
+.dek { font-size: 19px; color: var(--ink-2); margin: 0; max-width: 62ch; }
+h2 { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 6px; }
+.sub { font-size: 15.5px; color: var(--ink-2); margin: 0 0 14px; max-width: 70ch; }
+section { padding-block: 26px; border-top: 1px solid var(--rule); }
+.primer { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 6px; }
+.primer div { font-size: 15px; color: var(--ink-2); }
+.primer b { display: block; font-family: var(--sans); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
+.controls {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--ground);
+  border-block: 1px solid var(--rule); padding-block: 12px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center;
+  font-family: var(--sans); font-size: 14px;
+}
+.ctl { display: flex; align-items: center; gap: 10px; }
+.ctl label, .ctl .lbl { color: var(--ink-2); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: inherit; border: 0; background: var(--surface); color: var(--ink); padding: 6px 12px; cursor: pointer; border-right: 1px solid var(--rule); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+input[type="range"] { accent-color: var(--accent); width: 150px; }
+output { font-family: var(--mono); font-variant-numeric: tabular-nums; min-width: 3.5em; color: var(--ink); }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chart { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; }
+.chart svg { display: block; width: 100%; min-width: 560px; height: auto; font-family: var(--sans); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--sans); font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.line-sw { width: 18px; height: 3px; display: inline-block; border-radius: 2px; }
+table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 14px; }
+th { text-align: left; font-weight: 600; color: var(--ink-2); font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 1px solid var(--rule); padding: 8px 10px 6px 0; }
+td { border-bottom: 1px solid var(--grid); padding: 8px 10px 8px 0; vertical-align: top; color: var(--ink); }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tablewrap { overflow-x: auto; }
+.chip { display: inline-block; font-size: 12.5px; padding: 2px 8px; border-radius: 10px; border: 1px solid currentColor; white-space: nowrap; }
+.k-opened { color: var(--opened); } .k-stuck { color: var(--stuck); } .k-mixed { color: var(--mixed); }
+.k-nofold { color: var(--nofold); } .k-other { color: var(--other); } .k-running { color: var(--ink-3); border-style: dashed; }
+.bars { display: grid; gap: 8px; font-family: var(--sans); font-size: 14px; }
+.bar-row { display: grid; grid-template-columns: 150px 1fr 150px; gap: 10px; align-items: center; }
+.bar-track { background: var(--grid); border-radius: 3px; height: 14px; position: relative; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; }
+.bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--ink-2); font-size: 13px; }
+.note { font-size: 14.5px; color: var(--ink-2); margin: 12px 0 0; max-width: 72ch; }
+.ours { font-family: var(--sans); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--nofold); margin-right: 4px; }
+.pending { font-family: var(--sans); font-size: 14px; color: var(--stuck); }
+@media (max-width: 560px) {
+  .bar-row { grid-template-columns: 110px 1fr; }
+  .bar-val { grid-column: 2; }
+  input[type="range"] { width: 120px; }
+}
+@media (prefers-reduced-motion: no-preference) { .bar-fill { transition: width .25s ease; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">RecreationalPhysics · exact energies and every run so far</p>
+    <h1>The Curling Ladder</h1>
+    <p class="dek">What it costs to open each curled direction, what each opening gives back, and where our experiments have been, for two to five directions.</p>
+    <div class="primer">
+      <div><b>A rung</b>Each point has D directions. A direction curled into a loop of four points is closed; X is the top rung, every direction curled, and flat space is the bottom.</div>
+      <div><b>The release</b>Stepping down one rung gives back a = 4(λ − 1) units per point, the same at every rung. This is exact in the model.</div>
+      <div><b>The wall</b>The wall is the cheapest single rewiring out of a rung, in the model's energy units. A push that size starts the change. Below zero means the rung falls by itself.</div>
+      <div><b>The coupling g</b>g acts as a temperature in runs held at fixed g. The waiting chart uses it; sealed runs have no g, only a push and a bath.</div>
+    </div>
+  </header>
+
+  <div class="controls" role="group" aria-label="Settings">
+    <div class="ctl"><span class="lbl">Directions D</span><span class="seg" id="dseg"></span></div>
+    <div class="ctl"><label for="lam">λ</label><input id="lam" type="range" min="1" max="1.6" step="0.01" value="1.25"><output id="lamv">1.25</output></div>
+    <div class="ctl"><label for="g">coupling g</label><input id="g" type="range" min="0.5" max="4" step="0.05" value="1.5"><output id="gv">1.50</output></div>
+    <div class="ctl" id="rhoctl"><label for="rho">time's share ρ</label><input id="rho" type="range" min="-0.4" max="0.6" step="0.05" value="0"><output id="rhov">0.00</output></div>
+  </div>
+
+  <section>
+    <h2 id="ladder-h">The ladder</h2>
+    <p class="sub">Each step down gives back the same amount per point. The label on each step is the wall you must pay to take it.</p>
+    <div class="chart"><svg id="ladder" viewBox="0 0 860 300" role="img" aria-labelledby="ladder-h"></svg></div>
+  </section>
+
+  <section>
+    <h2 id="walls-h">Walls against λ</h2>
+    <p class="sub">One line per rung: the cheapest single move out of it at each λ. Dots are experiments, placed at their λ on the rung they started from. Hover a dot for what it asked and what happened.</p>
+    <div class="chart"><svg id="walls" viewBox="0 0 860 420" role="img" aria-labelledby="walls-h"></svg></div>
+    <div class="legend" id="walls-legend"></div>
+    <p class="note" id="walls-note"></p>
+  </section>
+
+  <section>
+    <h2 id="pattern-h">The pattern across directions</h2>
+    <p class="sub">The same walls at the chosen λ, set side by side for two, three, four and five directions. A line joins rungs with the same number of curled directions.</p>
+    <div class="chart"><svg id="pattern" viewBox="0 0 860 380" role="img" aria-labelledby="pattern-h"></svg></div>
+    <div class="legend" id="pattern-legend"></div>
+    <p class="note" id="pattern-note"></p>
+  </section>
+
+  <section>
+    <h2 id="wait-h">Waiting at coupling g</h2>
+    <p class="sub">The number of sweeps a rung waits before heat alone carries it over its wall, counted from every kind of move and how often each is offered. This is the count that matched the two-dimensional tube to within 2 %.</p>
+    <div class="bars" id="wait"></div>
+    <p class="note"><span class="ours">Ours</span>In three and four directions a first move out is not yet an opening that spreads: a push of that size opened one patch and stopped (O79). So these are waits for the first move only, not for the whole change.</p>
+  </section>
+
+  <section>
+    <h2 id="rel-h">What each opening gives back</h2>
+    <p class="sub" id="rel-sub"></p>
+    <div class="bars" id="rel"></div>
+    <p class="note" id="rel-note"></p>
+  </section>
+
+  <section>
+    <h2 id="runs-h">What has run</h2>
+    <p class="sub" id="runs-sub"></p>
+    <div class="tablewrap"><table id="runs"><thead><tr><th>Test</th><th>λ</th><th>Starts at</th><th>Asked</th><th>Outcome</th><th>Record</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Where the numbers come from</h2>
+    <p class="note">The walls are exact. Every single rewiring out of each rung was listed by brute force (<code>scripts/exact_ladder_d.py</code>, 27 Sep; ASSUMPTIONS O41, O49, O50). A move's cost is −16 ΔS + 4λ ΔX, so each kind of move becomes one straight line in λ. The rung energies were computed on the built tori. A fully curled piece larger than one cube cannot be connected (O85), so the top rung is one cube: 16, 64, 256 or 1,024 points. Named points throughout; interchangeable points make the curled rungs stickier, by a factor of about 960 for the first move out of the six-link cube. Every three-, four- and five-direction number carries VISION Update 24's caveat: the reproduction gate is open.</p>
+    <p class="note" id="d5-note"></p>
+  </section>
+</div>
+
+<script>
+const DATA = {"kinds":[{"D":2,"curled":0,"sides":[8,8],"N":64,"kinds":[{"dS":-2,"dX":0,"ways":24},{"dS":-2,"dX":2,"ways":24},{"dS":-3,"dX":1,"ways":16},{"dS":-3,"dX":2,"ways":32},{"dS":-2,"dX":6,"ways":4},{"dS":-4,"dX":0,"ways":64}],"e1":0.0,"e0":0.0},{"D":2,"curled":1,"sides":[4,48],"N":192,"kinds":[{"dS":-2,"dX":-4,"ways":12},{"dS":-4,"dX":-10,"ways":8},{"dS":-3,"dX":-5,"ways":4},{"dS":-4,"dX":-8,"ways":28},{"dS":-5,"dX":-11,"ways":8},{"dS":-5,"dX":-10,"ways":16},{"dS":-6,"dX":-12,"ways":12}],"e1":4.0,"e0":-4.0},{"D":2,"curled":2,"sides":[4,4],"N":16,"kinds":[{"dS":-2,"dX":-8,"ways":12}],"e1":8.0,"e0":-8.0},{"D":3,"curled":0,"sides":[6,6,6],"N":216,"kinds":[{"dS":-4,"dX":0,"ways":24},{"dS":-4,"dX":4,"ways":12},{"dS":-6,"dX":0,"ways":72},{"dS":-6,"dX":2,"ways":120},{"dS":-8,"dX":0,"ways":522}],"e1":0.0,"e0":0.0},{"D":3,"curled":1,"sides":[4,8,12],"N":384,"kinds":[{"dS":-6,"dX":-12,"ways":8},{"dS":-4,"dX":-4,"ways":16},{"dS":-6,"dX":-8,"ways":32},{"dS":-4,"dX":0,"ways":4},{"dS":-8,"dX":-14,"ways":16},{"dS":-6,"dX":-6,"ways":24},{"dS":-6,"dX":-4,"ways":16},{"dS":-9,"dX":-15,"ways":16},{"dS":-8,"dX":-11,"ways":64},{"dS":-7,"dX":-7,"ways":16},{"dS":-8,"dX":-10,"ways":32},{"dS":-7,"dX":-6,"ways":32},{"dS":-6,"dX":-2,"ways":2},{"dS":-7,"dX":-5,"ways":4},{"dS":-10,"dX":-16,"ways":84},{"dS":-9,"dX":-12,"ways":240},{"dS":-8,"dX":-8,"ways":266}],"e1":4.0,"e0":-4.0},{"D":3,"curled":2,"sides":[4,4,18],"N":288,"kinds":[{"dS":-6,"dX":-16,"ways":24},{"dS":-4,"dX":-8,"ways":12},{"dS":-8,"dX":-22,"ways":16},{"dS":-6,"dX":-12,"ways":28},{"dS":-9,"dX":-23,"ways":48},{"dS":-8,"dX":-18,"ways":32},{"dS":-7,"dX":-13,"ways":4},{"dS":-10,"dX":-24,"ways":160},{"dS":-9,"dX":-20,"ways":128},{"dS":-8,"dX":-16,"ways":38}],"e1":8.0,"e0":-8.0},{"D":3,"curled":3,"sides":[4,4,4],"N":64,"kinds":[{"dS":-6,"dX":-20,"ways":60},{"dS":-10,"dX":-32,"ways":60}],"e1":12.0,"e0":-12.0},{"D":4,"curled":0,"sides":[6,6,8,8],"N":2304,"kinds":[{"dS":-8,"dX":0,"ways":96},{"dS":-8,"dX":4,"ways":12},{"dS":-10,"dX":0,"ways":144},{"dS":-10,"dX":2,"ways":240},{"dS":-11,"dX":1,"ways":240},{"dS":-11,"dX":2,"ways":96},{"dS":-10,"dX":6,"ways":4},{"dS":-12,"dX":0,"ways":4768}],"e1":0.0,"e0":0.0},{"D":4,"curled":1,"sides":[4,6,8,12],"N":2304,"kinds":[{"dS":-10,"dX":-16,"ways":26},{"dS":-8,"dX":-8,"ways":24},{"dS":-10,"dX":-12,"ways":12},{"dS":-8,"dX":-4,"ways":52},{"dS":-12,"dX":-18,"ways":24},{"dS":-11,"dX":-12,"ways":32},{"dS":-10,"dX":-8,"ways":72},{"dS":-8,"dX":0,"ways":6},{"dS":-13,"dX":-19,"ways":16},{"dS":-10,"dX":-6,"ways":88},{"dS":-12,"dX":-13,"ways":128},{"dS":-14,"dX":-20,"ways":310},{"dS":-12,"dX":-12,"ways":32},{"dS":-10,"dX":-4,"ways":24},{"dS":-11,"dX":-7,"ways":96},{"dS":-13,"dX":-14,"ways":1416},{"dS":-11,"dX":-6,"ways":64},{"dS":-10,"dX":-2,"ways":2},{"dS":-11,"dX":-5,"ways":4},{"dS":-12,"dX":-8,"ways":2262}],"e1":4.0,"e0":-4.0},{"D":4,"curled":2,"sides":[4,4,12,12],"N":2304,"kinds":[{"dS":-10,"dX":-24,"ways":16},{"dS":-10,"dX":-20,"ways":48},{"dS":-8,"dX":-12,"ways":32},{"dS":-12,"dX":-26,"ways":32},{"dS":-10,"dX":-16,"ways":36},{"dS":-8,"dX":-8,"ways":24},{"dS":-13,"dX":-27,"ways":96},{"dS":-10,"dX":-14,"ways":24},{"dS":-12,"dX":-21,"ways":128},{"dS":-14,"dX":-28,"ways":896},{"dS":-12,"dX":-20,"ways":64},{"dS":-10,"dX":-12,"ways":32},{"dS":-11,"dX":-15,"ways":16},{"dS":-13,"dX":-22,"ways":1536},{"dS":-11,"dX":-14,"ways":32},{"dS":-11,"dX":-13,"ways":8},{"dS":-12,"dX":-16,"ways":836}],"e1":8.0,"e0":-8.0},{"D":4,"curled":3,"sides":[4,4,4,12],"N":768,"kinds":[{"dS":-10,"dX":-28,"ways":60},{"dS":-12,"dX":-34,"ways":24},{"dS":-10,"dX":-24,"ways":60},{"dS":-8,"dX":-16,"ways":30},{"dS":-13,"dX":-35,"ways":120},{"dS":-14,"dX":-36,"ways":1272},{"dS":-12,"dX":-28,"ways":48},{"dS":-10,"dX":-20,"ways":24},{"dS":-13,"dX":-30,"ways":744},{"dS":-11,"dX":-21,"ways":4},{"dS":-12,"dX":-24,"ways":148}],"e1":12.0,"e0":-12.0},{"D":4,"curled":4,"sides":[4,4,4,4],"N":256,"kinds":[{"dS":-10,"dX":-32,"ways":168},{"dS":-14,"dX":-44,"ways":1120}],"e1":16.0,"e0":-16.0}],"runs":[{"t":"T7","D":2,"c":1,"lams":[1.25],"g":"1.5","ask":"Does the tube open sharply into flat space?","out":"Sharp two-state change","kind":"opened","src":"O13, VISION Update 15"},{"t":"T7","D":2,"c":1,"lams":[1.5],"g":"1.5","ask":"Does the tube last at the larger λ?","out":"Does not last: it falls at once","kind":"opened","src":"O13"},{"t":"T23, T24","D":2,"c":1,"lams":[1.05,1.1,1.15,1.2,1.25,1.3,1.35],"g":"1.5","ask":"Is the change sharp at every λ and size?","out":"Inconclusive by the letter: rare very long waits","kind":"mixed","src":"O47, O52"},{"t":"T9","D":2,"c":1,"lams":[1.25],"g":"sealed","ask":"Sealed, does the lump have to go somewhere?","out":"Bonfire with a threshold: completes when the bath can hold the lump","kind":"opened","src":"O14"},{"t":"T10","D":2,"c":1,"lams":[1.25],"g":"sealed","ask":"Does the leftover grow with the space?","out":"One small scrap, however large","kind":"other","src":"O15, O16"},{"t":"T18","D":2,"c":1,"lams":[1.1,1.25,1.4],"g":"sealed","ask":"How much room does the new space need?","out":"Room grows faster than the lump","kind":"other","src":"T18 reading"},{"t":"T22","D":2,"c":1,"lams":[1.05,1.1,1.25],"g":"1.5","ask":"Do exits fall back near λ = 1?","out":"First exit on time; about a third fall back","kind":"mixed","src":"O39"},{"t":"T37","D":2,"c":1,"lams":[1.25],"g":"1.25 to 1.75","ask":"Do long tubes make many seeds?","out":"Many seeds, many scraps; a mosaic at the longest","kind":"opened","src":"O77"},{"t":"T38","D":2,"c":1,"lams":[1.25,1.3],"g":"1.5","ask":"Are the rare long waits a separate group?","out":"Two populations","kind":"other","src":"O84"},{"t":"T47","D":2,"c":1,"lams":[1.25],"g":"sealed","ask":"Does the opening front move at a fixed speed?","out":"Steady front (fixed speed on a size-fair clock)","kind":"opened","src":"O76"},{"t":"T26","D":2,"c":0,"lams":[1.25],"g":"sealed","ask":"Does a local spark re-curl flat space?","out":"Melts by its rule; not yet re-read from the wiring","kind":"nofold","src":"O47"},{"t":"T48","D":2,"c":1,"lams":[1.25,1.4],"g":"sealed","ask":"Control: the tube with energy kept at the front","out":"Running","kind":"running","src":"T48"},{"t":"T50","D":2,"c":1,"lams":[1.25],"g":"sealed","ask":"Does a front slow where energy sits?","out":"Running","kind":"running","src":"T50"},{"t":"T30","D":3,"c":2,"lams":[1.1,1.25],"g":"sealed","ask":"Does one push open both curled directions?","out":"Never opens (tori)","kind":"stuck","src":"O54, O64"},{"t":"T32","D":3,"c":2,"lams":[1.25],"g":"sealed","ask":"Is the push fixed with size?","out":"Fixed wall","kind":"other","src":"O54"},{"t":"T39","D":3,"c":2,"lams":[1.25,1.4],"g":"sealed","ask":"Does the first release pay the second wall?","out":"No window; one region opens with a seam, or part of one","kind":"mixed","src":"O81, O85"},{"t":"T41","D":3,"c":1,"lams":[1.25,1.4],"g":"sealed","ask":"Does the last curled direction need room?","out":"Never opens","kind":"stuck","src":"O81"},{"t":"T44","D":3,"c":3,"lams":[1.25],"g":"sealed","tie":true,"ask":"With the tie, does one push open all three?","out":"Stuck: one small patch","kind":"stuck","src":"O79"},{"t":"T45","D":3,"c":3,"lams":[1.25,1.3,1.4,1.46],"g":"sealed","tie":true,"ask":"Budget-fitted ties: which order opens?","out":"Not all; cubes open separately and never join","kind":"mixed","src":"O79, O85"},{"t":"T34","D":3,"c":0,"lams":[1.25],"g":"sealed","ask":"Does packed energy fold flat space?","out":"Excites it; a few scars; heals when cooled","kind":"nofold","src":"O69, O82"},{"t":"T42","D":3,"c":0,"lams":[1.02],"g":"sealed","ask":"With interchangeable points, does it fold?","out":"Heals; named points keep a flickering scar","kind":"nofold","src":"O82"},{"t":"T48","D":3,"c":1,"lams":[1.25,1.4],"g":"sealed","ask":"One curled, energy kept at the front: one space?","out":"Running","kind":"running","src":"T48"},{"t":"T48","D":3,"c":2,"lams":[1.25,1.4],"g":"sealed","ask":"Two curled, energy kept at the front: one space?","out":"Running","kind":"running","src":"T48"},{"t":"T49","D":3,"c":3,"lams":[1.1,1.15,1.25],"g":"sealed","ask":"One cube alone: all directions, and in what order?","out":"Running","kind":"running","src":"T49"},{"t":"T33","D":4,"c":3,"lams":[1.1,1.25],"g":"sealed","ask":"In what pattern do four directions open?","out":"No cascade; every replica stalls","kind":"stuck","src":"O62"},{"t":"T39","D":4,"c":2,"lams":[1.25,1.5],"g":"sealed","ask":"Does the first release pay the second wall?","out":"Stuck","kind":"stuck","src":"O81"},{"t":"T40","D":4,"c":3,"lams":[1.25],"g":"sealed","ask":"How big a push starts four directions?","out":"Never starts, pushes up to 8 × the wall","kind":"stuck","src":"O81"},{"t":"T40","D":4,"c":4,"lams":[1.1],"g":"sealed","ask":"How big a push starts the gas of 8-cubes?","out":"Never starts","kind":"stuck","src":"O81"},{"t":"T46","D":4,"c":4,"lams":[1.3],"g":"sealed","tie":true,"ask":"Her order with time last: does one push open all?","out":"Not all: stuck, or partly open","kind":"stuck","src":"O79"},{"t":"T47","D":4,"c":0,"lams":[1.3],"g":"sealed","tie":true,"ask":"Does flat space curl back behind a push?","out":"Heals","kind":"nofold","src":"O80"},{"t":"T48","D":4,"c":3,"lams":[1.25,1.4],"g":"sealed","ask":"Three curled, energy kept at the front: one space?","out":"Running","kind":"running","src":"T48"},{"t":"T49","D":4,"c":4,"lams":[1.1,1.15,1.3],"g":"sealed","ask":"One 8-cube alone: all directions, and in what order?","out":"Running","kind":"running","src":"T49"}],"pattern_note":"<span class=\"ours\">Exact</span> At λ = 1.25, flat space's wall for 2, 3, 4 directions is 32, 64, 128: it doubles with each direction, so flat space gets stiffer as directions are added. The single cube's wall is -8, -4, 0. Every rung sits 4(λ − 1) per point above the next, at every number of directions (checked on each built torus).","d5_note":"<span class=\"pending\">The five-direction rungs are still being computed.</span>"};
+const S = { D: 3, lam: 1.25, g: 1.5, rho: 0 };
+const NS = "http://www.w3.org/2000/svg";
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const rungColor = (c) => `var(--r${Math.min(c, 5)})`;
+const kindLabel = { opened: "Opened", stuck: "Did not open", mixed: "Mixed or inconclusive", nofold: "Flat space did not fold", other: "Other question", running: "Running" };
+
+function rungs(D) { return DATA.kinds.filter(r => r.D === D).sort((a, b) => b.curled - a.curled); }
+function wallOf(r, lam) { return Math.min(...r.kinds.map(k => -16 * k.dS + 4 * lam * k.dX)); }
+function perPoint(r, lam) { return r.e0 + r.e1 * lam; }
+function rungName(D, c) {
+  if (c === 0) return "flat space";
+  if (c === D) return `one cube, ${(4 ** D).toLocaleString("en-US")} pts`;
+  return `${c} curled`;
+}
+function fmt(x, d = 1) { return (Math.abs(x) < 1e-9 ? 0 : x).toFixed(d); }
+function el(name, attrs = {}, parent) {
+  const e = document.createElementNS(NS, name);
+  let style = "";
+  for (const [k, v] of Object.entries(attrs)) {
+    if ((k === "fill" || k === "stroke") && String(v).startsWith("var(")) style += `${k}:${v};`;
+    else e.setAttribute(k, v);
+  }
+  if (style) e.setAttribute("style", style);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function text(parent, x, y, s, attrs = {}) {
+  const t = el("text", Object.assign({ x, y, fill: "var(--ink-2)", "font-size": 13 }, attrs), parent);
+  t.textContent = s;
+  return t;
+}
+function clear(svg) { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+function niceTicks(lo, hi, n = 6) {
+  const span = hi - lo, raw = span / n, mag = 10 ** Math.floor(Math.log10(raw));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || 10 * mag;
+  const out = [];
+  for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) out.push(+v.toFixed(6));
+  return out;
+}
+
+function drawLadder() {
+  const svg = document.getElementById("ladder"); clear(svg);
+  const R = rungs(S.D); if (!R.length) return pending(svg, 860, 300);
+  const a = 4 * (S.lam - 1), W = 860, H = 300, L = 70, T = 30, B = 60, Rt = 30;
+  const maxE = Math.max(...R.map(r => perPoint(r, S.lam)), 0.01);
+  const x = (i) => L + i * (W - L - Rt) / R.length, y = (e) => H - B - (e / maxE) * (H - T - B);
+  document.getElementById("ladder-h").textContent = `The ladder at λ = ${S.lam.toFixed(2)}, ${S.D} directions`;
+  el("line", { x1: L, x2: W - Rt, y1: y(0), y2: y(0), stroke: "var(--rule)" }, svg);
+  text(svg, L - 8, y(0) + 4, "0", { "text-anchor": "end" });
+  text(svg, L - 8, y(maxE) + 4, fmt(maxE, 2), { "text-anchor": "end" });
+  text(svg, 12, T - 12, "energy per point above flat space", { "font-size": 12 });
+  R.forEach((r, i) => {
+    const e = perPoint(r, S.lam), x0 = x(i) + 8, x1 = x(i + 1) - 8;
+    el("line", { x1: x0, x2: x1, y1: y(e), y2: y(e), stroke: rungColor(r.curled), "stroke-width": 5, "stroke-linecap": "round" }, svg);
+    text(svg, (x0 + x1) / 2, H - B + 22, rungName(S.D, r.curled), { "text-anchor": "middle", fill: "var(--ink)" });
+    text(svg, (x0 + x1) / 2, H - B + 40, `${fmt(e, 2)} per point`, { "text-anchor": "middle", "font-size": 12 });
+    const w = wallOf(r, S.lam);
+    const label = r.curled === 0 ? `holds: wall ${fmt(w)}` : (w <= 0 ? `no wall: falls (${fmt(w)})` : `wall ${fmt(w)}`);
+    text(svg, (x0 + x1) / 2, y(e) - 12, label, { "text-anchor": "middle", fill: w <= 0 && r.curled ? "var(--stuck)" : "var(--ink)", "font-weight": 500 });
+    if (i < R.length - 1) {
+      el("line", { x1: x1, x2: x1 + 16, y1: y(e), y2: y(perPoint(R[i + 1], S.lam)), stroke: "var(--ink-3)", "stroke-dasharray": "3 3" }, svg);
+    }
+  });
+  text(svg, W - Rt, T - 12, `each step down gives back a = ${fmt(a, 2)} per point`, { "text-anchor": "end", "font-size": 12 });
+}
+
+function drawWalls() {
+  const svg = document.getElementById("walls"); clear(svg);
+  const R = rungs(S.D); if (!R.length) return pending(svg, 860, 420);
+  const W = 860, H = 420, L = 60, T = 20, B = 44, Rt = 20, lo = 1.0, hi = 1.6;
+  const lams = Array.from({ length: 61 }, (_, i) => lo + i * 0.01);
+  let ymin = 0, ymax = 0;
+  R.forEach(r => lams.forEach(l => { const w = wallOf(r, l); ymin = Math.min(ymin, w); ymax = Math.max(ymax, w); }));
+  ymin = Math.floor((ymin - 5) / 10) * 10; ymax = Math.ceil((ymax + 5) / 10) * 10;
+  const x = (l) => L + (l - lo) / (hi - lo) * (W - L - Rt), y = (v) => T + (ymax - v) / (ymax - ymin) * (H - T - B);
+  niceTicks(ymin, ymax, 7).forEach(v => {
+    el("line", { x1: L, x2: W - Rt, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }, svg);
+    text(svg, L - 8, y(v) + 4, String(v), { "text-anchor": "end", "font-size": 12 });
+  });
+  [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6].forEach(l => text(svg, x(l), H - B + 20, l.toFixed(1), { "text-anchor": "middle", "font-size": 12 }));
+  text(svg, (W + L) / 2, H - 6, "λ", { "text-anchor": "middle", fill: "var(--ink)" });
+  text(svg, L, T - 6, "wall (energy units)", { "font-size": 12 });
+  text(svg, W - Rt - 4, y(0) - 6, "below this line a rung falls by itself", { "text-anchor": "end", "font-size": 11.5 });
+  R.forEach(r => {
+    const d = lams.map((l, i) => `${i ? "L" : "M"}${x(l).toFixed(1)},${y(wallOf(r, l)).toFixed(1)}`).join("");
+    el("path", { d, fill: "none", stroke: rungColor(r.curled), "stroke-width": 2.5 }, svg);
+  });
+  el("line", { x1: x(S.lam), x2: x(S.lam), y1: T, y2: H - B, stroke: "var(--accent)", "stroke-dasharray": "4 4" }, svg);
+  DATA.runs.filter(q => q.D === S.D).forEach(q => {
+    const r = R.find(rr => rr.curled === q.c); if (!r) return;
+    q.lams.forEach(l => {
+      const cx = x(l), cy = y(wallOf(r, l)), col = q.kind === "running" ? "var(--surface)" : `var(--${q.kind})`;
+      const g = el("g", {}, svg);
+      const shape = q.tie
+        ? el("rect", { x: cx - 6, y: cy - 6, width: 12, height: 12, transform: `rotate(45 ${cx} ${cy})`, fill: col, stroke: q.kind === "running" ? "var(--ink-2)" : "var(--surface)", "stroke-width": 1.5 }, g)
+        : el("circle", { cx, cy, r: 6.5, fill: col, stroke: q.kind === "running" ? "var(--ink-2)" : "var(--surface)", "stroke-width": 1.5 }, g);
+      const tt = el("title", {}, shape);
+      tt.textContent = `${q.t} at λ = ${l}${q.tie ? " (with a direction tie)" : ""}: ${q.ask} ${q.out}. [${q.src}]`;
+    });
+  });
+  const lg = document.getElementById("walls-legend"); lg.innerHTML = "";
+  R.forEach(r => lg.insertAdjacentHTML("beforeend", `<span><i class="line-sw" style="background:${rungColor(r.curled)}"></i>${rungName(S.D, r.curled)}</span>`));
+  ["opened", "stuck", "mixed", "nofold", "other"].forEach(k => lg.insertAdjacentHTML("beforeend", `<span><i class="sw" style="background:var(--${k})"></i>${kindLabel[k]}</span>`));
+  lg.insertAdjacentHTML("beforeend", `<span><i class="sw" style="border:1.5px solid var(--ink-2)"></i>Running</span><span>◆ with a direction tie</span>`);
+  document.getElementById("walls-note").innerHTML = `<span class="ours">Ours</span>Diamonds ran with a direction tie. The tie changes the walls, and the line shows the untied wall. In three and four directions the cheapest move is not the whole barrier; the smallest patch that grows by itself has not been priced.`;
+}
+
+function drawPattern() {
+  const svg = document.getElementById("pattern"); clear(svg);
+  const Ds = [2, 3, 4, 5], W = 860, H = 380, L = 60, T = 20, B = 44, Rt = 150;
+  const pts = [];
+  Ds.forEach(D => rungs(D).forEach(r => pts.push({ D, c: r.curled, w: wallOf(r, S.lam), full: r.curled === D })));
+  if (!pts.length) return pending(svg, W, H);
+  let ymin = Math.min(0, ...pts.map(p => p.w)), ymax = Math.max(...pts.map(p => p.w));
+  ymin = Math.floor((ymin - 10) / 20) * 20; ymax = Math.ceil((ymax + 10) / 20) * 20;
+  const x = (D) => L + (D - 2) / 3 * (W - L - Rt), y = (v) => T + (ymax - v) / (ymax - ymin) * (H - T - B);
+  niceTicks(ymin, ymax, 7).forEach(v => {
+    el("line", { x1: L, x2: W - Rt, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }, svg);
+    text(svg, L - 8, y(v) + 4, String(v), { "text-anchor": "end", "font-size": 12 });
+  });
+  Ds.forEach(D => text(svg, x(D), H - B + 20, `${D} directions`, { "text-anchor": "middle", "font-size": 12 }));
+  text(svg, L, T - 6, `wall at λ = ${S.lam.toFixed(2)}`, { "font-size": 12 });
+  const series = [{ key: "flat", name: "flat space", col: "var(--r0)", pick: p => p.c === 0 },
+                  { key: "one", name: "one curled", col: "var(--r1)", pick: p => p.c === 1 && !p.full },
+                  { key: "allbutone", name: "all but one curled", col: "var(--r3)", pick: p => p.c === p.D - 1 && p.c > 1 },
+                  { key: "cube", name: "fully curled (one cube)", col: "var(--r4)", pick: p => p.full }];
+  series.forEach(s => {
+    const ps = pts.filter(s.pick).sort((a, b) => a.D - b.D);
+    if (ps.length > 1) el("path", { d: ps.map((p, i) => `${i ? "L" : "M"}${x(p.D)},${y(p.w)}`).join(""), fill: "none", stroke: s.col, "stroke-width": 2.5 }, svg);
+    ps.forEach(p => {
+      const c = el("circle", { cx: x(p.D), cy: y(p.w), r: 5, fill: s.col }, svg);
+      el("title", {}, c).textContent = `${p.D} directions, ${s.name}: wall ${fmt(p.w)}`;
+      text(svg, x(p.D) + 8, y(p.w) - 6, fmt(p.w, 0), { "font-size": 11.5, fill: "var(--ink)" });
+    });
+    const last = ps[ps.length - 1];
+    if (last) text(svg, W - Rt + 12, y(last.w) + 4, s.name, { "font-size": 12.5, fill: s.col });
+  });
+  const lg = document.getElementById("pattern-legend"); lg.innerHTML = "";
+  series.forEach(s => lg.insertAdjacentHTML("beforeend", `<span><i class="line-sw" style="background:${s.col}"></i>${s.name}</span>`));
+  document.getElementById("pattern-note").innerHTML = DATA.pattern_note;
+}
+
+function drawWait() {
+  const box = document.getElementById("wait"); box.innerHTML = "";
+  const R = rungs(S.D); if (!R.length) { box.innerHTML = `<p class="pending">Not computed yet for ${S.D} directions.</p>`; return; }
+  document.getElementById("wait-h").textContent = `Waiting at coupling g = ${S.g.toFixed(2)}`;
+  const rows = R.map(r => {
+    const rate = r.kinds.reduce((s, k) => s + (k.ways / (S.D * S.D)) * Math.min(1, Math.exp(-(-16 * k.dS + 4 * S.lam * k.dX) / S.g)), 0);
+    return { r, logt: Math.log10(1 / rate), falls: wallOf(r, S.lam) <= 0 };
+  });
+  const top = Math.max(6, ...rows.map(q => Math.min(q.logt, 40)));
+  rows.forEach(({ r, logt, falls }) => {
+    const shown = Math.max(0, Math.min(logt, 40)), pct = (shown / top) * 100;
+    const val = falls ? "falls at once" : (logt > 40 ? "more than 10^40" : (logt < 3 ? `${Math.round(10 ** logt)} sweeps` : `about 10^${logt.toFixed(1)} sweeps`));
+    box.insertAdjacentHTML("beforeend", `<div class="bar-row"><div>${rungName(S.D, r.curled)}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${rungColor(r.curled)}"></div></div><div class="bar-val">${val}</div></div>`);
+  });
+}
+
+function drawRelease() {
+  const box = document.getElementById("rel"); box.innerHTML = "";
+  const a = 4 * (S.lam - 1), D = S.D;
+  const rows = [];
+  if (D === 4) {
+    const r = [0, 3.3711 * a, (0.6289 - S.rho) * a, S.rho * a];
+    const names = ["1st: dark energy", "2nd: dark matter", "3rd: ordinary matter", "4th: time"];
+    r.forEach((v, i) => rows.push({ name: names[i], v }));
+    document.getElementById("rel-sub").textContent = `Untied, each of the four openings gives back a = ${fmt(a, 2)} per point. Below is the tie fitted for T46 (O75), in the author's order, with time's share ρ from the slider. The four always add up to 4a = ${fmt(4 * a, 2)}.`;
+    document.getElementById("rel-note").innerHTML = `<span class="ours">Ours</span>A negative bar takes energy in, as time's opening does when ρ is below zero ("time keeps energy", T47). The walls on this page are the untied ones.`;
+  } else {
+    for (let i = 1; i <= D; i++) rows.push({ name: `opening ${i} of ${D}`, v: a });
+    document.getElementById("rel-sub").textContent = `Untied, every opening gives back the same a = 4(λ − 1) = ${fmt(a, 2)} per point, ${fmt(D * a, 2)} for the whole ladder. The triad's unequal shares need a tie between directions; with four directions a fitted tie is shown.`;
+    document.getElementById("rel-note").innerHTML = D === 3 ? `<span class="ours">Ours</span>The three-direction ties fitted to the budget (T45's orders A, B and C) are in PREREGISTRATION T45. None of them opened X into one space.` : "";
+  }
+  document.getElementById("rhoctl").hidden = D !== 4;
+  const m = Math.max(...rows.map(q => Math.abs(q.v)), 0.01);
+  rows.forEach((q, i) => {
+    const pct = Math.abs(q.v) / m * 100;
+    box.insertAdjacentHTML("beforeend", `<div class="bar-row"><div>${q.name}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${q.v < 0 ? "var(--stuck)" : rungColor(D - i)}"></div></div><div class="bar-val">${fmt(q.v, 2)} per point</div></div>`);
+  });
+}
+
+function drawRuns() {
+  const tb = document.querySelector("#runs tbody"); tb.innerHTML = "";
+  const rs = DATA.runs.filter(q => q.D === S.D);
+  document.getElementById("runs-sub").textContent = rs.length ? `${rs.length} experiments with ${S.D} directions, named points unless the row says otherwise.` : `Nothing has run with ${S.D} directions yet; this is the next scale the author asked about.`;
+  rs.forEach(q => tb.insertAdjacentHTML("beforeend",
+    `<tr><td>${q.t}</td><td class="num">${q.lams.join(", ")}</td><td>${rungName(q.D, q.c)}${q.tie ? ", with a tie" : ""}</td><td>${q.ask}</td><td><span class="chip k-${q.kind}">${q.out}</span></td><td class="num">${q.src}</td></tr>`));
+}
+
+function pending(svg, W, H) {
+  text(svg, W / 2, H / 2, `Not computed yet for ${S.D} directions`, { "text-anchor": "middle", fill: "var(--stuck)", "font-size": 15 });
+}
+
+function render() {
+  document.getElementById("lamv").textContent = S.lam.toFixed(2);
+  document.getElementById("gv").textContent = S.g.toFixed(2);
+  document.getElementById("rhov").textContent = S.rho.toFixed(2);
+  drawLadder(); drawWalls(); drawPattern(); drawWait(); drawRelease(); drawRuns();
+  document.getElementById("d5-note").innerHTML = DATA.d5_note;
+}
+
+const seg = document.getElementById("dseg");
+[2, 3, 4, 5].forEach(D => {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = D; b.id = `d${D}`; b.setAttribute("aria-pressed", String(D === S.D));
+  b.addEventListener("click", () => { S.D = D; seg.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); render(); });
+  seg.appendChild(b);
+});
+document.getElementById("lam").addEventListener("input", e => { S.lam = +e.target.value; render(); });
+document.getElementById("g").addEventListener("input", e => { S.g = +e.target.value; render(); });
+document.getElementById("rho").addEventListener("input", e => { S.rho = +e.target.value; render(); });
+render();
+</script>

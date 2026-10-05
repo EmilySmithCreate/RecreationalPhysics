@@ -1,9 +1,10 @@
-# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET)
+# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET; addenda to 2026-10-05)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
-newer than `CLAUDE.md`'s "Known state". Work is on branch `feat/cloud-runs-and-3d` (shared by two sessions in one
-working tree: add files by name, never `git add -A`, and never switch branches under another session); `main`
-is behind and Emily merges. This page was rewritten as one current page on 24 September; earlier dated versions are in
+newer than `CLAUDE.md`'s "Known state". **Work is on branch `claude/vision-programme-updates-9sje7s` since 26 September** (`feat/cloud-runs-and-3d` stopped
+on 25 September and is an ancestor of it; read the addendum of 5 October below first). Sessions may share one working
+tree: add files by name, never `git add -A`, and never switch branches under another session; `main` is behind and
+Emily merges. This page was rewritten as one current page on 24 September; earlier dated versions are in
 git history.
 
 ## 0. The first ten minutes
@@ -37,6 +38,103 @@ git history.
 3. **Read section 3 before writing anything public or anything to a physicist.**
 4. Interpreter with numba: `C:\Users\emily\AppData\Local\Microsoft\WindowsApps\python.exe`. Run
    `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`.
+
+## Addendum, 26 September, early morning (branch `claude/vision-programme-updates-9sje7s`)
+
+- **VISION Update 33**: five positions of the owner's (a ledger for the three releases, 44 / 12 / 0; gravity and the count
+  of hidden degrees of freedom; vantage points; how a strange loop is sized; time as an outcome of open space), each
+  with what the model says. **O71** (her ledger against the model: walls are returned, not spent; no λ gives her shares;
+  the follow tie's walls never fall in her order) and **O72** (the counting drive comes from the points, not the three
+  directions, and grows with the number of curled cells; corrects O55). Next ASSUMPTIONS number: **O73**.
+- **T44 launched** (six Batch jobs, `cloud/queue/2026-09-26_t44.txt`): the gas of 6-cubes under the follow tie. New
+  kernel `graphity.sealed_tie_d` (tests in `tests/test_sealed_tie_d.py`); the runner takes `"kappa"`; read with
+  `scripts/analyse_t44.py`.
+- **Unread in the bucket, all finished:** the rest of T37 and T38, and T39 to T43. Download and read them next.
+- **05:08 ET: the programme regrouped into four groups, twelve pieces** (VISION Update 34; the mapping from old numbers is in
+  `docs/papers/series_plan.md`'s last section). Old piece numbers in earlier records (VISION, ASSUMPTIONS, PREREGISTRATION)
+  are left as written; the page and the draft carry "was piece N". Allotropes parked (`docs/parked/allotropes.md`; a local
+  copy in the gitignored outreach folder). Decided: a charge per opening direction, form not chosen
+  (`docs/design/direction_charge_brief.md`). O73 recorded. The dark-charge reading is owed: arXiv was blocked by this
+  session's network.
+- **11:00 ET: VISION Update 35, O74, T45 launched** (the owner's budget fit: dark energy first fits best; locked predictions in
+  PREREGISTRATION T45; eight Batch jobs; read with `scripts/analyse_t45.py`). New kernel: `run_sealed_bath_table_d` (a tie of any
+  shape). Next ASSUMPTIONS number: **O75**.
+- **11:40 ET: VISION Update 36, O75, T46 launched** (the owner's order as a mechanism: dark energy, dark matter free, ordinary,
+  time; T45 setting C in three directions, her prediction for it added after launch and before any result; four eight-link
+  Batch jobs, `cloud/queue/2026-09-26_t46.txt`, read with `scripts/analyse_t46.py`; `analyse_t44.read_replica` takes `dim`).
+  Next ASSUMPTIONS number: **O76**.
+- **14:40 ET: T47 pre-registered** (the owner adopted time curling behind the present, time keeping energy): part A
+  on the laptop (`results/t47_front_*`), part B two Batch jobs (`cloud/queue/2026-09-26_t47.txt`); read with
+  `scripts/analyse_t47.py`.
+- **27 Sep, 04:45 ET: hand-over to a session with AWS credentials.** Download from `s3://recphys-results-<account>/`
+  (listing in `cloud/status/latest.md`), check against configs, commit, then read by the pre-registered analyzers:
+  T44 (`analyse_t44.py`), T45 (`analyse_t45.py`), T46 (`analyse_t46.py`), T47 part B (`analyse_t47.py`), T39 to T43
+  (`analyse_t39.py` ... `analyse_t43.py`), and T38's six missing files (λ = 1.30, N = 192, `_02` to `_07`), then re-read
+  T38 (O78 is provisional). Read so far this session: T47 part A (O76, MIXED by the letter; fair-clock reading proposed,
+  the owner's call), T37 (O77), T38 provisional (O78). Owner decisions pending: the fair clock; confirming T37's inferred
+  prediction; the next build (front slowing near matter is proposed first); charge form; gravity field. Next ASSUMPTIONS
+  number: **O79**.
+- **27 Sep, 09:45 ET: everything finished is fetched, checked and read** (from the laptop, which cannot reach the
+  project account: the new `fetch_results` workflow copies runs named in `cloud/fetch/request.txt` into `cloud/inbox/`,
+  and `scripts/accept_inbox.py --move` checks each against its config and moves it into `results/`). O79 to O84 and
+  VISION Update 37: nothing opened all directions in three or four dimensions; T47 part B HEALS; T42 interchangeable
+  HEALS against named MELTS (*corrected 12:10 ET, O82: the named MELTED replicas are one to a few flickering scars, not a
+  melt; T34 the same; nothing curled*); T43 DISSOLVES; T38 TWO POPULATIONS.
+- **27 Sep, 12:50 ET: O85** (read from the wiring): the openings' "damage" is joints between cubes that opened
+  separately and seams, not scorched space; exactly (Mulder's theorem), a fully curled X is a gas of pieces of at most
+  4^D points. **T48 and T49 launched** (28 Batch jobs, `cloud/queue/2026-09-27_t48_t49.txt`): fetch with
+  `cloud/fetch/request.txt` (`t48_*`, `t49_*`), check with `scripts/accept_inbox.py`, read with `analyse_t48.py` and
+  `analyse_t49.py`. **T50 launched** 13:25 ET (5 jobs, `cloud/queue/2026-09-27_t50.txt`, `scripts/run_front_matter.py`,
+  read with `analyse_t50.py`). **15:45 ET, before any result:** the owner's predictions recorded (T48 ADVANCES ONLY
+  on the two- and three-curled tori; T50 SPEEDS), and VISION Update 39 (X may start with one direction open; points
+  interchangeable before, after or both; the three and the fourth tied evenly or unevenly; the foam held open). Next
+  ASSUMPTIONS number: **O86**.
+- **The programme page has no global change log any more** (the owner's request): each piece opens with a "Latest"
+  row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
+  top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".
+
+## Addendum, 5 October 2026 (read this first)
+
+- **Fetch before anything else.** On 5 October the laptop's working copy was still on the 25 September commit of
+  `feat/cloud-runs-and-3d`, 40 commits behind this branch, with three files uncommitted. Run `git fetch` and
+  `git branch -a -vv`; the record lives on `claude/vision-programme-updates-9sje7s`. The queue guard of 26 September is
+  merged into it (run_queue never runs on main and skips a config whose result is in the bucket), so merging this branch
+  to main cannot resubmit finished jobs. `gh` is not installed: Emily opens the pull request from
+  `https://github.com/EmilySmithCreate/RecreationalPhysics/compare/main...claude/vision-programme-updates-9sje7s`.
+- **The chat sessions of 4 and 5 October** worked from a copy of the 26 September `main` and pushed nothing. Their
+  hand-over is `docs/HANDOFF_2026-10-05_chat.md`; it is now recorded, with corrections, in VISION Updates 40 and 41 and
+  ASSUMPTIONS O86 to O94. **Read the corrections before quoting that file:** the long warm T37 tubes melted and are not
+  a mosaic (O88); "the scrap is not the dark matter by a factor of ten" is withdrawn (O88, O89); the hidden count is
+  taken over the model's own wirings, `graphity.hidden`, not the script as received (O87); the tie it calls
+  "Update 30's" is the withdrawn form (O86).
+- **The owner's decisions of 4 and 5 October** (VISION Update 41): the first opening is dark energy's; the
+  cosmological-constant problem is carried openly; the target is the shares at spacetime's **birth**; the fair clock
+  for new kinetic runs (one fair sweep = N/96 chain sweeps, O90); the scrap-share reading stays out of paper 2; the
+  gravity decision of 25 September stands (Update 40). **The shares at birth include the light** (O89, ours,
+  unverified, for a physicist): do not fit a tie to 5.36 as a ratio of releases.
+- **Read on 5 October:** T48 (O91), T49 (O92), T50 (O93), fetched through `cloud/fetch/request.txt` and accepted with
+  `scripts/accept_inbox.py` (on Windows a move can fail on a file lock after the copy; compare the copies, remove the
+  inbox one, move the rest). T37's cold cell is complete at 12 replicas. Nothing is left unread in the bucket from
+  before 5 October.
+- **Pre-registered on 5 October:** T51, the frozen scrap against cooling time in tubes that seed themselves, on the
+  fair clock (`scripts/run_scrap_freeze.py`, `scripts/analyse_t51.py`, queue file `cloud/queue/2026-10-05_t51.txt`,
+  41 Batch jobs, the longest about 11 hours). Its status is in the lines below this list.
+- **Waiting on the owner** (each is a question, in TASKS.md's section of 5 October): her prediction for T51 before it
+  is read; which tie the reservoir test carries (none, "all at the last", "all at the second"; O89, O94); what a plane
+  opening is in the model; whether dark matter is the leftover (Update 16) or a direction's release (Update 30), both
+  open again under the birth shares; how her front maps onto a clock (T50 SPEEDS). **And one question for a physicist,
+  which decides more than any run:** at the start of the hot era, what share of the energy was dark matter?
+- **Paper 1:** on hold at arXiv pending a reader or a journal. The reader request to the model's author is drafted in
+  `docs/outreach/reader_request_draft_2026-10-05.md` (local only) and waits until after his talk; Gate C's question
+  rides with it. Nothing is sent from a session. **Paper 2:** the draft has a section on tubes that seed themselves and
+  the plain-language page (`docs/public/paper2-the-scrap.html`) is corrected; the published artifact of that page still
+  shows the version from chat until Emily asks for it to be republished.
+- **The programme page** is the Claude artifact "A Phase-Changing Reality", a state-of-the-programme page with no
+  revision status (her request of 4 October). `docs/public/programme.html` in the repository is older than the
+  artifact. Neither was touched on 5 October: T48 to T50, the T37 correction and the birth shares are not on them yet.
+- **Also pre-registered on 5 October:** T52, the hidden count round a relic, exact (`graphity.hidden`,
+  `scripts/exact_hidden_relics.py`).
+- Next numbers: ASSUMPTIONS **O95**, VISION **Update 42**, PREREGISTRATION **T53**.
 
 ## 1. What this project is
 

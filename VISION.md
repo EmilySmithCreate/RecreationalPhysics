@@ -582,6 +582,538 @@ open space, and asked whether the color rides on the energy. Her answer: it ride
   (general knowledge, to verify).
 - The design brief is `docs/design/release_order_brief.md` (in progress), in place of the typed-energy brief.
 
+Update 33 (2026-09-26, early morning ET): **five positions of the author's: a ledger for the three releases, gravity and
+the count of hidden degrees of freedom, vantage points, how a strange loop is sized, and time as an outcome of open
+space.** Her words, put in order.
+Nothing here is a new knob; the one run it starts (PREREGISTRATION T44) uses the tie decided in Update 30. Details:
+ASSUMPTIONS O71, O72.
+
+- **1. The ledger (the author's).** Today's shares are about 5 % ordinary matter and energy, 27 % dark matter and 68 %
+  dark energy. If each opening direction releases the same amount, call it 66 units, about 200 in all: the first opening
+  costs 44 to activate (two thirds of its 66) and delivers a net 22 into the new space; the second costs 12 and
+  delivers 54, dark matter; the third costs nothing and delivers its whole release, dark energy, 132. Ordinary matter
+  and energy is what is left of red's share after it pays the second push: 10. The net energy sets how a string
+  vibrates. The three kinds may be spins along x, y and z, alike in wavelength and so able to interact; or they differ in
+  wavelength, and then ordinary matter cannot interact with dark matter (the 54-unit wavelength) or dark energy (the
+  132-unit one): the strings pass through each other and meet only through gravity, since the drive to curve is in all
+  three and most of the energy for that work is dark energy. Rarely, with enough speed or enough strings, they hit in
+  just the right way, which is how such particles could be found in accelerators and underground laboratories; how many
+  are found depends on the vibrations' relationship and the strings' concentration. Red is special because it ripped the
+  opening. The other two cannot evolve an observer: if they could, we would more likely be one of them, since there is
+  more of that kind. Dark energy never compacted into matter, never felt nuclear forces in stars, never broke into
+  planets. Dark matter is more like matter, perhaps because kicking off the third direction converted it, but it still
+  cannot build complex molecules; perhaps its particles carry too much energy, so their spins repel too strongly for large
+  particles to form: no dark-matter suns or planets, more like clouds. Dark energy is the pure energy of a whole
+  direction's uncurling. Inside a black hole each set of strings compacts into one space, which they can share because
+  they use different frequencies of it. Her questions: what must λ be for these proportions, and does the number of
+  points or degrees of freedom change it? Can the 66 and the 54 pack several strings into a unit, or one of each? Is c
+  the same for all three kinds, so that the energy reaching the activation boundary is (m_red + m_green + m_blue) c², or
+  does each kind carry its own factor?
+  - *Ours, exact (O71):* her numbers make 196, not 198; they balance exactly if every unit paid to a wall ends in the
+    third share (10, 54, 134). Her 54 : 10 = 5.4 is the measured dark-to-ordinary ratio because 44 and 12 were chosen to
+    reach it, so it is a fit of two numbers to two ratios, as O70's tie was. In the model an activation is a hill and not
+    a toll: the energy paid to climb a wall comes back on the far side, so walls cannot make the shares unequal; only
+    strain held in the partly open states can (the tie). **No λ gives these proportions** when every direction costs the
+    same to curl: the releases are equal at every λ. **The number of points does matter:** walls are fixed with size and
+    releases grow with the region, so her 44 of 66 describes a patch of about 66/(4(λ − 1)) points, one 6-cube at
+    λ = 1.25; over a large region the walls' share goes to nothing. With the follow tie of Update 30 the walls never fall
+    in her order (large, smaller, none): the middle one vanishes first and the last one last, the nearest being 44, none,
+    4 at λ = 1.25 and κ = 2. Whether one push then opens all three is being run (T44).
+  - *Ours; general knowledge, not read by us, to verify:* waves of different frequencies pass through one another in any
+    case (two colors of light do); what keeps dark matter dark in the standard account is that it carries no electric
+    charge, so it has no coupling to light, not its frequency. In her picture the equivalent would be a coupling tied to
+    each direction. The published ancestor is Kaluza–Klein: motion round a curled direction shows up in the large ones as
+    a charge. Dark matter is seen as diffuse halos, as she says, and the standard reason is that it cannot radiate energy
+    away, so it cannot cool and collapse into disks, stars and planets: cooling, not repulsion. Dark energy's density
+    stays the same as space grows, which fits "the energy of a direction", held by space itself (Update 30). And c is one
+    number for everything that moves through the same spacetime: gravitational waves from a neutron-star merger in 2017
+    arrived with its light after 130 million years, so gravity and light share c to about one part in 10¹⁵. So the first
+    form, E = (m_red + m_green + m_blue) c², is the one consistent with that; a wave's frequency enters through E = hf
+    (Planck's constant), not through c. The model has no strings; its nearest object, a small loop's vibration, did not
+    survive as a resonator inside a sheet (T15 rung 0b).
+- **2. Gravity, curve-first (the author's).** Its weakness makes sense, and so does its acting on all three kinds of
+  matter and energy, each tied to an opened direction. How many micro degrees of freedom there are should set how much
+  symmetry is gained by compacting the space directions; the three large directions are interchangeable, so if they were
+  the only ones, compacting would gain no symmetry. There is a drive to curve against a drive to stay open; without it,
+  why would mass spend its energy on that work? The drive must exist and must not be too big, to make the cold, stable
+  phase and observers' evolution as large as possible: bigger, and things move too fast to evolve and the last black
+  hole eats sooner. So the count of the other degrees of freedom brings this into balance with the biggest strange loop.
+  The quantity of mass and its distance decide how much energy is available for the work of curving.
+  - *Ours, exact (O72):* she is right about the three directions: their permutations appear on both sides and cancel;
+    the gain comes from the points. Per point, one fully curled cell gains 0.33 (four links), 0.16 (six) or 0.06 (eight)
+    in ln A, and the exchange of identical cells adds more, growing with their number, so the drive to curl grows slowly
+    with the size of the space: with six links at g = 1.5 it beats the curling cost at λ = 1.10 from about 10¹⁸ cells and
+    at λ = 1.25 from about 10⁵². In the model the balance she describes is set by how many points a curled cell holds and
+    how many cells there are. *General knowledge, to verify:* gravity between two protons is about 10³⁶ times weaker
+    than their electric repulsion; whether curve-first gravity gives that number is open.
+- **3. Vantage points (the author's).** Different vantage points make different degrees of freedom meaningful. From the
+  large scale we observe waves, and relativity holds because space and time are not meaningfully different there: the
+  space directions are interchangeable, speed matters and its direction does not. An observer at that level cannot tell
+  which version of reality they are in; with no interaction to tell them apart, the versions since the uncurling are the
+  same reality, not copies. An interaction, a measurement, defines some feature at the next moment, and the realities
+  with different outcomes are then different; all still exist, and they cannot interact, because an inescapable black
+  hole, which would destroy any observer, lies between them. Close up, the different but interchangeable directions
+  become something like different but interchangeable quarks: spin, most likely rotation about the x, y and z axes, or
+  color, is the counterpart of length, width and height. From there no relativistic relationship can be calculated or
+  measured, while quark spin can be.
+  - *Ours; general knowledge, to verify:* the branching she describes is the many-worlds reading of quantum mechanics
+    (Everett, 1957), where the branches stop interacting through decoherence rather than across a black hole; the black
+    hole is her addition. Spin is angular momentum, and its x, y and z components are not three kinds of thing: measuring
+    one disturbs the others. Quark color is an internal label, not a direction of space (Update 32's caution). The
+    nearest published form of "a curled direction seen close up becomes a charge" is again Kaluza–Klein. The model has
+    no time and no vantage points; this stays with piece 9.
+- **4. How a strange loop is sized (the author's).** The number of burps per turn is a function of the total energy,
+  which sets how many black holes there are and how large. To make the loop as big as possible the burps per turn should
+  approach infinity; since a burp comes for every 44 units of first activation, the number of black holes hardly matters:
+  it burps until no energy is left to activate another. A second function is the probability of an observer per solar
+  system times the number of solar systems, which depends on the space's length, width, height and time while energy is
+  available, and on how much red matter and energy there is, since only red has formed molecules complex enough to evolve
+  an observer. Too much energy means too many black holes too early and a shorter age of solar systems. So the loop's
+  size and its count of observers are maximized by balancing these. The loop needs no beginning or end, and its turns
+  need not differ; all of them are equally real. Lines, vectors, two-dimensional burps, and loops of other sizes are
+  equally real too, all present at once in cyclical time; we observe this one because the chance of being in a huge,
+  hospitable loop is far higher than of being in any non-looping structure, a regular loop or a smaller strange loop.
+  - *Ours; general knowledge, not read by us, to verify:* the nearest published relative is Smolin's cosmological natural
+    selection, where black holes spawn universes and the constants that make the most black holes are selected. Hers
+    selects differently, for observers over a loop's turn, and says that too many black holes too early costs observers.
+    In the model a burp's activation is returned rather than used up (O71), so what limits burps there is the room each
+    needs (pieces 4 and 5), not activation spent. The model counts no observers; its counterpart remains the (D, λ) map.
+- **5. Time as an outcome of open space (the author's, added later the same morning).** Time as we experience it is an
+  outcome of the space directions being uncurled: large space directions let matter and energy be in different places,
+  which makes location an essential degree of freedom from the large-scale vantage point. Space allows movement, and
+  movement through space requires time. The speed of light is the constant limit of that relationship. Looking down at
+  the micro level, the space directions are not meaningfully different, so the time calculation and general relativity
+  do not apply there.
+  - *Ours; general knowledge, not read by us, to verify:* this fits the project's earlier correction (the comparison
+    table, 21 September): the bare ordering is assumed on both sides, and what emerges is the time of relativity, the one
+    that mixes with space. A standard way of stating special relativity says the same thing in her direction: everything
+    moves through spacetime at c, so motion through space is paid for in slower passage of one's own time, and light,
+    all motion and no clock, is the limit. Relatives in print: relational accounts of time as change (Barbour), and the
+    "problem of time" in quantum gravity, where the fundamental equation has no time in it. The model has no time; its
+    only clock is the count of moves, and its one counterpart is whether the change's front has a fixed top speed, which
+    is on the known-physics ladder (TASKS T13, rung 2) and has not been run.
+- **Her answers, 04:23 ET, the same morning.** (a) "Repulsion" was a slip: dark matter stays in clouds because it cannot
+  radiate and cool, and she agrees. (b) The speed of light: one c for all three kinds, agreed. (c) Why dark matter has no
+  electric charge: it may carry a different kind of charge of its own, one that does not act on ours (the red, ordinary
+  kind). *Ours; general knowledge, not read by us, to verify:* this is a published family of ideas, a "hidden sector" or
+  "dark photon" with its own charge and its own light (Holdom, 1986), and mirror matter, a full copy of our forces that
+  meets ours only through gravity (Lee and Yang, 1956; Foot). Observations limit it: if the dark charge had its own light
+  and were strong, dark matter could radiate, cool and form disks, and the observed halos and colliding clusters bound
+  how strongly dark matter can push on itself. (d) She asked whether the curled cube's own micro directions can cost 44
+  and release 66, then less, then nothing. *Ours, exact (O71 addendum):* 66 per direction per 6-cube fixes λ = 1.258;
+  without a tie the walls there rise (none, 15.5, 35.6); with the follow tie at κ = 2.03 they read 44, none, 3; no tie that
+  counts only open directions per point gives 44, 12, 0, the nearest missing by 19.
+- **Her clarification, 04:28 ET, revising Update 32's "one kind of energy pays every push".** The first push can be any
+  kind of energy, most likely green, since there is most of it; it does not matter which. In the curled state the three
+  directions are not different, so which becomes red is chance. Red's release is spent opening blue, and green then opens
+  with no energy once the other two are open. The colors now name the order: red first (ordinary matter and energy), blue
+  second (dark matter), green third (dark energy, the most abundant). *Ours:* the model has one kind of energy, so "any
+  kind pays the first push" is what it already does. With the follow tie at κ of about 2.25 or more the last opening is
+  free, as she says; what the tie does not give is a second wall for red's release to pay (O71 addendum).
+- **What starts.** T44 (pre-registered with her inferred prediction and ours): under the follow tie, does one push open
+  all three curled directions of X into one flat space?
+
+Update 34 (2026-09-26, 05:08 ET): **two decisions of the author's (a charge per opening direction; the programme regrouped,
+allotropes out of it), and her hypotheses about the third opening.** Her words, put in order. Details: ASSUMPTIONS O73;
+`docs/design/direction_charge_brief.md`.
+
+- **DECISION (the author's): the model gets a charge per opening direction.** Each kind of matter carries its own kind
+  of charge, which acts only on its own kind: red on red, blue on blue, green on green. This is her answer to why dark
+  matter has no electric charge: it has one, of a different kind. Under S1 this is a new ingredient; its form is fixed in
+  the design brief before anything is built or run, every setting run is published, and the model with it is our family,
+  never CQG. Published relatives (general knowledge and search summaries; the reading was blocked by this session's network and is still owed, `docs/reading/notes/2026-09-26_dark_charge.md`): hidden-sector charges and dark photons, mirror matter,
+  and Kaluza–Klein charge from motion round a curled direction. The brief records what observations already limit.
+- **DECISION (the author's): the programme is regrouped.** Four groups: the burp, the scrap, what it must give back, the
+  cycle. Pieces 11 and 13 (how three and four curled directions open) merge, as do 5 and 6 (the scrap); time and the
+  speed limit becomes a piece of its own; the charge idea stays in the piece on the three shares, with the triad's
+  comparisons and contrasts. **The allotropes (old piece 12) leave the programme**: they no longer carry part of her
+  claim (Update 30). They are parked in `docs/parked/allotropes.md` for the correspondence with the model's author, since
+  they are his question and T43 answers it; they come back if the programme needs them. The paper outlines follow the
+  groups (`docs/papers/series_plan.md`).
+- **Her hypotheses about the third opening.** Could the costs run 44, then none, then 12? And could the third opening
+  cost something because it has to open time: the released energy lets matter move, movement makes time, so the third
+  pays for time as well as for its own opening? She proposes testing a few relationships between the large and the hidden
+  degrees of freedom. *Ours, exact (O73):* 44, none, 12 exists under the follow tie (λ = 1.171, κ = 1.735); 44, 12, 0 does
+  not, on long or short tori. With interchangeable points the counting charges the first opening about 15 per cube and
+  the later two almost nothing, her order of pushes in the free energy. *Ours, unverified:* "the third pays for time" is a
+  new ingredient (the model has no time); the nearest thing it can hold is an extra cost on the last opening, which would
+  be a knob of its own under S1 and is not decided.
+- **Her question: is today's budget the budget at the beginning?** *Ours, arithmetic on Planck 2018's central values as given by a search summary, to verify:*
+  no. Ordinary and dark matter thin out together as space grows, so their ratio, about 5.4, is the same as at the start;
+  dark energy does not thin, so its share was tiny early (far below one part in a million when the first atoms formed) and
+  is large only now. So the ledger's 68 % for dark energy is today's share, not a share of the burp. From Planck 2018's central values (`docs/reading/notes/2026-09-26_dark_charge.md`, search summaries, to verify): today 4.9 % ordinary, 26.4 % dark matter, 68.6 % dark energy; when the first atoms formed, 11.9 %, 63.8 %, and dark energy about one part in a billion, with radiation the rest. Dark energy overtook matter only about four billion years ago (general knowledge, to verify). The dark-to-ordinary ratio, 5.36, is the one that dates from the start. *Ours:* her picture survives this only if the third opening's release is a fixed energy per volume, held by space, whose share grows as the rest thins; that fits "the energy of a direction held by space", but it does not say why its share is about two thirds now.
+- **Her question: what is κ?** The strength of the direction tie: the extra cost, per point, of each direction still
+  curled once at least one direction at that point has opened. At κ = 2.03 the tie's λ is 1.258, the λ at which one
+  6-cube's untied opening releases 66 per direction.
+- **What is awaited:** T44 (three directions with the tie, running). The four-direction results in hand are untied (T33
+  read; T40 finished and unread); a four-direction run with the tie is not launched.
+
+Update 35 (2026-09-26, 11:00 ET): **the author's request: find the λ, the tie and the costs and releases that best
+match the universe at the beginning and now, lock them in, and ask whether dark energy could open first.** Her words,
+put in order: use her theory, do the mathematics correctly, give the predictions, lock them, then identify possible
+values; consider four directions, relativity's time, and different tying constants; afterwards compute the size of the
+infinity, per her strange-loop measure, across the arrangements found. Details: ASSUMPTIONS O74; PREREGISTRATION T45.
+
+- **What is measured, and what that fixes** (*ours; Planck 2018 central values from a search summary, to verify*). One
+  number is fixed from the start: dark matter : ordinary = 5.36. Dark energy's share is large only now; at any early
+  burp it is essentially zero. So her theory, done with correct arithmetic, needs the three openings to release
+  ordinary : dark matter : dark energy ≈ 0.157 : 0.843 : 0 of the burp.
+- **The fit** (*ours, exact, O74*). A tie of two constants fixes both from those two numbers, for each order. No order
+  gives everything she asks for. **The best fit is dark energy first**: dark energy → ordinary → dark matter, tie
+  f = (a, 1.528a), λ between 1.34 and 1.50, first push 5.1 to 0.6, second 13.4 to 4.7, third free; at λ = 1.40 the
+  releases per point are 0, 0.755 and 4.045. Her order (ordinary → dark matter → dark energy) fits at λ ≈ 1.25 but leaves
+  the dark-energy opening stuck behind a wall of 52. **Locked in PREREGISTRATION T45 before any run**, with the runs that
+  test them launched.
+- **Could dark energy be the first snap?** *Ours:* in this family, yes, and it is the most consistent order: the opening
+  that releases nothing at the burp is the one that has to be pushed, and the last one opens free. In words close to
+  hers: green is pushed open first by the black hole's energy and gives back nothing yet, since its energy is held by
+  space and grows only as space does; red (ordinary) needs a smaller push; blue (dark matter) then opens by itself and
+  delivers the most.
+- **Four directions and time.** A fourth opening adds a share that nothing measured fixes (time's), so the fit is not
+  determined without her deciding what time's opening releases; her hypothesis that "the third pays for time" is one
+  answer. Recorded as her decision to make, not assumed.
+- **The size of the infinity, next.** Her measure counts what one turn of the loop produces. The model can supply, per
+  arrangement, the ordinary share of each burp, the pushes it needs and whether it finishes by itself; it cannot count
+  observers or stellar ages. A proxy for her to accept or change before anything is computed: burps per unit of pushing
+  energy, times the ordinary share per burp.
+
+- **Her question, 11:04 ET: is "the curling cost is zero where space is smooth" the same as a drive to curve that is there
+  but has no mass to pay it?** *Ours:* close, with one correction. The term that vanishes in smooth space is the
+  **cost** of being curled (4(λ − 1) per tight curl), which pushes against curling; it is zero there only because nothing
+  is curled. The **drive** to curve is a different piece: in the model it is the counting of look-alike arrangements with
+  interchangeable points (O55, O72), and it is present everywhere, smooth space included. The published curvature term
+  alone is neutral between curled and open at λ = 1 (the tie of Update 5). So in smooth empty space: the drive is there,
+  the cost is not being charged, and nothing curls because the walls and the curling cost need energy paid locally; mass
+  is what pays. That is her picture, with the cost and the drive kept apart.
+
+Update 36 (2026-09-26, 11:20 ET): **the author's order, stated as a mechanism: dark energy first and nets almost
+nothing, dark matter free and pays for ordinary matter, ordinary matter pays to open time.** Her words, put in order.
+Maybe there was no time term for the first snap, so its energy does not change with time or the size of space; it runs
+through the whole of space for ever. That would ensure there is still mass for more black holes afterwards, while the
+other releases dissipate. If so, dark energy nets almost zero, and it is the energy of the free second break, dark matter,
+that pays for the third, which opens the third direction. Maybe ordinary matter pays to break open time, which is why it
+started lower. It can build complex molecules because it has the triad of quarks, and we interact with it because it
+matches the three directions and time we experience; the others do not interact in three directions, though they still
+have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75; PREREGISTRATION T45 addendum and T46.
+
+- **In three directions this is T45's setting C**, locked half an hour before her message: dark energy → dark matter →
+  ordinary, λ = 1.30, walls 6.4, none, 43.7, releases per point 0, 3.034, 0.566. Her prediction for it, one push opens all,
+  is recorded after launch and before any result was read, and says so.
+- **In four directions, exact (O75):** the same pattern. At λ = 1.30 the walls are 17.6 (the push that opens dark
+  energy's direction), none (dark matter), about 50 (ordinary matter) and about 106 to 111 (time). X is stuck for
+  λ < 1.67 and dark matter opens free for λ > 1.15. The last two openings are the hardest, and her picture has them paid by
+  the releases before them. T46 (four cloud jobs, pre-registered with her prediction and ours) runs it.
+- **"Ordinary matter pays to open time", with correct arithmetic** (*ours*). Paying a wall is a loan: the energy comes
+  back on the far side. For ordinary matter to end lower, time's opening has to keep energy for good, and then the state
+  with time still curled lies below flat four-direction space: four open directions become only held in place, not the
+  lowest state. Either reading can be run (T46 runs both); which she means is hers.
+- **Dark energy with no time term** (*ours; general knowledge, to verify*) is a cosmological constant: the same density
+  everywhere, always. That fits "nets almost zero at birth", and it is the fit's best order since O74. But such energy
+  does not clump or fall; it pushes things apart faster, so it cannot be the mass later black holes are made of. That
+  mass is ordinary and dark matter.
+- **Dark matter as "not quite 3D mass"** (*ours; general knowledge, to verify*): every measurement of it (rotation of
+  galaxies, lensing maps, colliding clusters, the cosmic microwave background) finds it gravitating exactly as
+  three-dimensional mass. What can differ is how it interacts, which is the charge-per-kind decision of Update 34, not how
+  it gravitates. The quark triad fits protons and neutrons; electrons are ordinary matter with no quarks.
+
+- **Her answers, 12:20 ET, the same day.** (a) Mass is a directional catalyst; it is fine if black-hole mass is ordinary
+  matter, whatever is normal, since it is not a substantial share. (b) Dark energy may still give space its curvature:
+  that is how we know it is there. *Ours; general knowledge, to verify:* yes, at the largest scale: it is seen through
+  the expansion speeding up (supernova distances, the cosmic microwave background, the spacing of galaxy clusters),
+  which is curvature of spacetime as a whole, uniform, not local wells that pull. (c) Electrons are a different kind of
+  hold of matter and energy. *Ours:* standard physics agrees they are a different family (leptons, not quarks), both
+  counted as ordinary matter. (d) "Ordinary pays for time" was an idea offered, not a settled claim; she asked for her
+  ideas to be organized and compared. *Ours:* in standard physics time passing does not use up energy (energy is
+  conserved precisely because the laws do not change with time; Noether, general knowledge, to verify); the nearest
+  thing to energy spent on the growth of space is light losing energy as it stretches with the expansion. Her
+  predictions for T45 setting C and T46 stay marked inferred until she confirms or replaces them. Why time's wall is the
+  largest is in O75, addendum.
+
+- **Her answers, 14:00 ET.** (a) Her prediction for T45 setting C and T46 is confirmed as hers: one push opens all,
+  each release starting the next opening (PREREGISTRATION T46, confirmation, written before any result). (b) She asked
+  whether relativity, that is movement, could pay time's start cost. *Ours; general knowledge, to verify:* movement does
+  not add energy of its own; the energy of motion is the energy the moving thing already carries. What motion does is
+  bring energy together: two things colliding deliver their energy of motion into one small place at one moment, which
+  is how accelerators reach energies nothing at rest has. So "movement pays time's start cost" reads, in the model, as
+  a concentrated push delivered locally: the local spark protocol (ASSUMPTIONS Q22, used in T26), applied to a
+  three-open state resting behind time's wall. Proposed as a follow-up to T46, not written or run: if T46 rests with
+  time still curled, give that resting state one local push of at least the wall and see whether time's opening starts
+  and spreads.
+
+- **Her idea, 14:20 ET: time curls behind the present moment.** Put in order with the ledge-and-valley picture she was
+  answering: if the state with time curled is the lower one, the passage of time may be that fall itself. The past is
+  time curled back up, the valley floor; the present is the front where it curls; open time lies ahead. *Ours,
+  unverified:* this turns the false-vacuum consequence of O75 from a danger into a mechanism: a front that never stops
+  moving, and whose position is "now". Relatives (general knowledge, not read by us, to verify): the growing or
+  "evolving block" universe (Broad, 1923; Ellis), in which the past is fixed, the future open and the present the
+  moving edge between them. Three things it must face: (1) relativity has no single "now" for everyone (simultaneity is
+  relative), so one universal front needs the absolute ordering this page already assumes at the base level (the
+  comparison table's time row), with relativity's time emerging at large scale; (2) a front converting open to curled
+  releases energy at every moment, which must go somewhere; (3) the model has no time, only a fourth direction, so what
+  it can test is the shape: whether a re-curling front, once started, moves at a fixed speed (TASKS T13 rung 2, the
+  speed-limit run, not yet run). Not decided; the choice of O75 (time borrows or keeps energy) is still hers, and this idea
+  needs the "keeps" reading.
+
+- **DECISION (the author's, 14:30 ET, "Yes proceed"): time curls behind the present, and time's opening keeps energy.**
+  Adopted as her hypothesis: the present is a moving front, the past is time curled back up, and so in O75's fit time's
+  own release is negative (ρ < 0), which makes flat four-direction space a long-lived ledge rather than the lowest state.
+  Its size, ρ, is not fixed by anything measured. What runs: PREREGISTRATION T47, the speed limit (does the tube's
+  opening front move at a fixed speed?) and whether flat four-direction space under this reading re-curls from one
+  local push, with her inferred predictions and ours.
+
+- **Her refinement, 15:00 ET: only the present is open.** Her words, put in order: the energy uncurls time, but not so
+  that it stays uncurled, because time has a lower floor; it curls behind us, and the present moment is the only part
+  that exists as macro, uncurled. The speed of time is the speed of the front of the uncurling: it uncurls, then
+  re-curls. *Ours, unverified:* this is a travelling band, not a single front: an uncurling edge ahead and a re-curling
+  edge behind, moving together, with open time only between them. Its published shape is the flame of "What X is" (fuel
+  ahead, burning band, ash behind) and the nerve impulse (resting ahead, excited band, recovering behind), and both move at
+  a **fixed speed set by the medium**, which is her speed limit (general knowledge, to verify). Its philosophical relative
+  is presentism, only the present exists, the view most in tension with relativity's relative "now" (general knowledge,
+  to verify). One condition is exact arithmetic: a band that keeps moving by itself needs the state ahead to lie higher
+  than the state behind, the difference paying for the motion, as fuel lies above ash. So the curled time ahead
+  (unopened, X-like) and the curled time behind (the floor) must be different arrangements, the one behind lower. If they
+  were the same, the band would have nothing to run on. The model's version: X ahead, fully open in the band, and one
+  direction re-curled behind, which O75's "keeps" reading allows; T46 at ρ = −0.2 is its first look, and a long
+  geometry in which a moving open band could be seen is not designed.
+
+- **Her questions, 15:15 ET: is the past frozen time, and does relativity break the band?** She proposed that
+  relativity applies in the macro, not the micro, and perhaps in the frozen history rather than in the now. *Ours;
+  general knowledge, to verify:* (1) "Frozen" fits: behind the band the arrangement sits in a dip, and nothing moves
+  there without energy. (2) "Macro, not micro" is the standard route and the one this page already takes: an absolute
+  ordering at the deepest level, with relativity emerging at large scale; Lorentz's ether theory, which predicts
+  everything special relativity does while keeping a hidden preferred frame, and several quantum-gravity programmes with
+  a preferred slicing, are its relatives. (3) "In the frozen history, not now" does not survive: time dilation is
+  measured in the present (clocks on aircraft and satellites run at different rates as they run). The band can carry it
+  anyway if its local pace depends on local conditions, slower where matter sits or moves, as a flame is slower in damp
+  fuel. (4) The real threat is the one Michelson and Morley's experiment posed to the ether: a band moving through a
+  medium defines a rest frame, and every test so far finds no detectable rest frame, to very high precision. So the
+  band's frame must be undetectable from inside: rods and clocks inside it must shrink and slow in exactly the way that
+  hides it. That is a strong condition the hypothesis now carries, stated plainly. The model has no time and cannot test
+  it; it can test whether a front's pace is fixed (T47) and, later, whether it slows near a defect.
+
+- **Her question, 15:30 ET: is relativity an observation made in the curled time behind us?** *Ours; general knowledge,
+  to verify:* half of it, yes. Everything seen at a distance is seen as it was: light takes time to arrive, so every
+  observation of a distant event is a record from behind the band, and which distant event is "now" is never observed,
+  only inferred (in the literature, the conventionality of distant simultaneity: Einstein's clock-synchronising rule,
+  Reichenbach). So relativity's disagreement about "now" can live in how the frozen record is read, while a single band
+  moves underneath, unobservable at a distance; that is the Lorentz-ether resolution in her words. The other half does
+  not: time dilation is also local and present, as when twins reunite in one room with different ages, so the band's own
+  pace must vary with local matter and motion, as recorded above.
+
+- **Her ideas, 15:50 ET.** (a) A moving object curls space ahead of it and uncurls it behind; time differences may be
+  what handles that high rate of change of curvature. *Ours, unverified:* this ties time dilation to how fast the
+  arrangement around a moving thing has to change, which is a concrete, local mechanism for the band's pace to vary, and
+  it is the question "does the front slow where matter sits or moves?" in her words; no test is designed yet. (b) The
+  front may accelerate: early on, so much happens in tiny fractions of a second. *Ours; general knowledge, to verify:*
+  standard cosmology keeps the rate of time fixed and puts the early speed in the physics (everything was hot and dense,
+  so processes were fast); a rate of time, or a speed of light, that changes over cosmic history is a published minority
+  alternative to inflation ("varying speed of light", Moffat; Albrecht and Magueijo), heavily constrained by
+  observation. How time feels to a brain is not evidence either way. Recorded as her prediction for T47 part A.
+
+- **Her decisions, 20:00 ET, after the reading** (`docs/reading/notes/2026-09-26_time_rate.md`; [Mag03], [Ell14],
+  [ER10] read in full by assistant agents from PDFs she supplied). (a) Adopted: **the pace of the present is set by local
+  conditions**: fixed where conditions are steady ([Ell14]'s "one second per second" locally), slower where matter sits
+  or accelerates (time dilation; the equivalence principle), and a speed limit because the medium sets how fast a front
+  can move. Its T47 predictions are recorded as hers. (b) **Withdrawn: "time itself sped up since the beginning"**, in her
+  words because it does not match what was learned: [Ell14] keeps the local rate fixed, and the one published way to vary
+  it, a varying speed of light [Mag03], runs the other way (light faster early). (c) Her picture's closest published
+  relative is [Ell14]'s evolving block universe, which takes the same step (a real present, a preferred frame set by
+  matter, relativity's simultaneity "a purely psychological construct") and leaves the same problem open (whether that
+  frame can be detected). What hers adds is a mechanism at the front. A prediction the rule makes and nothing yet tests:
+  a front slows where it crosses a region holding matter.
+
+Update 37 (2026-09-27, 09:45 ET): **the finished cloud runs, read: in three and four directions no push opened a fully
+curled X into one flat space; the owner's time front did not form; with interchangeable points concentrated energy heals
+space where named points melt it.** Why this page changes: ten pre-registered tests carrying predictions of hers were
+read the same morning (ASSUMPTIONS O79 to O84), and between them they decide how the mechanism of claim 4 fares beyond
+two dimensions in this model family. Said plainly, as the rules require: it does not carry over as it stands.
+
+- **What did not hold, hers and ours.** One push never opened every curled direction: not with the direction tie (T44),
+  not with the budget-fitted ties in three directions (T45) or four (T46), not untied (T39, T40, T41). Her predictions for
+  these (one push opens all; a window with a cascade; room needed; a curling front behind the present) fail. Ours were
+  right that nothing opens all and wrong in the particulars: the windows we expected at the larger λ did not appear, and
+  our estimate of the push that starts four directions (40 to 80) was too low by more than we tried (160).
+- **Two patterns, the same in every run** (*ours, unverified*). A push the size of the cheapest single move buys one small
+  patch and stops: in two dimensions that move was the whole barrier; in three and four it is not, and the real barrier,
+  the smallest patch that grows by itself, has not been priced. ~~And where the openings release energy, the release
+  damages a quarter or more of the new space: each point releases three curling costs, where the tube released one.~~
+  *Corrected the same day (Update 38; ASSUMPTIONS O85): read from the wiring, the "damage" is the joints between cubes that
+  opened separately and the seams between opened and curled parts; from a gas no opening made a space larger than one
+  cube.*
+- **What held.** The exact walls said where her first order (B) would rest, with the dark-energy direction still curled,
+  and it rested there. The first openings of every order ran. The best budget order (A, dark energy first) opened most of
+  the gas fully, with the damage beside it *(corrected, Update 38: most points became locally flat, cube by cube; no
+  open region grew beyond one cube)*. T38: the tube's waiting times are two populations, as she predicted.
+- **The one new lever.** ~~With interchangeable points, concentrated energy heals flat space instead of melting it (T42):
+  the first verdict in this project that the treatment of points changes, and it bears directly on the damage that stops
+  the openings.~~ *Corrected the same day, 12:10 ET, after the owner asked what "melted" means (ASSUMPTIONS O82,
+  correction):* the named-point runs did not melt. Both kinds of point healed; with named points one small scar, a
+  swapped pair of links, kept flickering on and off, and with interchangeable points it almost never formed. Nothing
+  curled in either. A real effect of the counting and a small one; whether it touches the far larger damage of the
+  openings is untested, and what that damage is has not yet been read from the wiring.
+- **Time.** Flat four-direction space under "time keeps energy" does not re-curl from a push of 128; a scar of about 20
+  points holds the push. The moving band of Update 36 is not seen at this size, and the speed test (T47 part A) showed the
+  steady fronts any uniform medium gives.
+- **What this does to the thesis.** Claim 4's shape stands where it was shown, in two dimensions: a specific arrangement
+  opening sharply from a seed with an exact release. Beyond two dimensions, in this family at these settings, the
+  mechanism lacks a way to open without damaging what opens. Candidates, each to be decided under S1 before any run:
+  interchangeable points in the opening runs (T42's lever, smaller than first written; the knob is already decided,
+  Update 12); pricing the true barrier exactly before choosing pushes; a different model (Update 28). None of this is about the real universe; each
+  result says what this family can and cannot do.
+
+Update 38 (2026-09-27, 12:45 ET): **what a fully curled X is in this model, exactly, and the question it puts to the
+author.** Why this page changes: Update 37 said the openings' release damaged a quarter or more of the new space. Read
+from the saved wiring after the author asked what "melted" means, that was wrong in kind, and the reason is structural
+(ASSUMPTIONS O85).
+
+- **Exact** (*ours, applying a published theorem on graphs [Mul79], to verify by reading its proof*): an arrangement
+  with every direction curled at every point can be one connected piece only up to 4^D points (64 with six links, 256 with
+  eight), and at that size it is the hypercube. So in this family a fully curled X larger than one cube is a gas of
+  separate pieces.
+- **Read:** from a gas, no opening made a space larger than one cube. Each cube opened, or partly opened, on its own, and
+  the "damage" was the joints between cubes and the seams between opened and curled parts. From a connected torus, one
+  region opened with a seam beside it. Update 37's "damages a quarter or more" is corrected there.
+- **The question for the author.** Is X one connected thing with at least one direction already open (which the model
+  cannot name; in four directions, three curled beside one open), or a foam of many tiny fully curled pieces that open
+  separately and must then join? The model allows both; only the first has been seen to open into one region. T48 (a
+  connected torus, with released energy kept where it is released, the setting in which the two-dimensional tube opened as
+  a front) and T49 (one cube: does it open all its directions, and in what order?) are pre-registered and running.
+
+Update 39 (2026-09-27, 15:50 ET): **the author's answers on what X may be.** Why this page changes: Update 38 asked
+whether X is one connected thing with a direction already open or a foam of tiny fully curled pieces, and the runs of
+T48 and T49 depend on it. Her words, put in order.
+
+- **X may start with one direction already open**, "if that makes things work." So the connected tori of T48 (in three
+  directions, one or two curled beside one open; in four, three curled beside one open) are within her picture, not a
+  compromise of it. The model still cannot say which direction is time.
+- **Points may be interchangeable before, after, or both.** *Ours:* this opens a knob not yet defined: the counting of
+  renamings applied in X only, in space only, or throughout. Its exact form is fixed in writing before any run (S1);
+  the runs so far use one treatment throughout.
+- **The three space directions and the fourth may be tied evenly or unevenly.** *Ours:* the tie of Update 30 in any
+  shape (O70) already allows this in four directions; T46 ran one uneven form.
+- **The foam: "could be?"** She had not considered it and holds it open. Recorded as a candidate for X, not adopted:
+  X as many tiny fully curled pieces that open separately and must then join. *Ours:* in this model the pieces opened
+  but never joined (O85); whether any rule lets them join is the test that would make the foam a live candidate, and it
+  is designed after T49 reads.
+- **Her predictions**, recorded before any result was read: T48, the first direction opens and the last stays curled
+  (she now leans this way); T50, the front speeds up where energy sits; T49, ours ("seems reasonable"). All three now
+  coincide with ours, so those runs test a shared expectation.
+- **Other micro degrees of freedom** (her words, 16:00 ET, put in order): there are other degrees of freedom at the micro
+  level, in triads, individually, or in combinations of K relationships, and they also shape X's barriers. And the piece
+  that stays shut may be the separate floor on which some degrees of freedom (time, space, others) still exist at the
+  micro level. *Ours, unverified:* in this model the only degrees of freedom are the links, and a barrier is a count of
+  squares and surplus squares; anything more (a variable on each triad, on each point, or on groups of K links) is a new
+  ingredient, which is the "other models" decision of Update 28 and needs its form written before any run (S1). A rung
+  with no way downhill is exactly a separate floor in her sense: a curled direction or piece that stays small while
+  others open, the model's version of hidden small dimensions (Kaluza–Klein; general knowledge, to verify).
+- **More directions** (her question, 16:00 ET): do the transitions with five, six or more directions follow the pattern
+  of two, three and four, and could that change the burp's transactions? Her plan: learn the pattern from 2, 3 and 4;
+  if no arrangement then agrees with the observed universe, design an experiment around additional scales. *Ours:* the
+  ladder's walls at five directions are exact and cheap, and are being computed (`scripts/exact_ladder_d.py`).
+- **Her aim, in her words:** understanding reality is "the thing that matters most in the world" to her; "with my
+  creativity and intuition and your research and communication and experiment design capabilities, I think we can make
+  meaningful progress." Recorded because it is why the bar in "What success means" matters: progress here means claims
+  that can fail, tested so that a physicist can check them.
+
+Update 40 (recorded 2026-10-05; the decision is of 2026-09-25, 18:55 ET): **DECISION (the author's): gravity gets a
+quantity living on the points of space, on the condition that it matches curve-first gravity.** Her words: "If it
+matches curve first that's right." Why it is recorded here and out of order: it was written into the working copy that
+evening as "Update 33" and never committed; the record went on from the commit before it, and the number 33 was used
+the next morning for her five positions of 26 September. She confirmed on 5 October that the decision stands. The text
+below is the text of that evening, with its references brought up to date. Why this page changes: the model's flat
+space is gapped (every move out of it costs 32, 64 or 128 with four, six or eight links), so by the published result on
+gapped media it can pass on no pull at a distance at any λ (ASSUMPTIONS O60 (a)); the exact calculation of O61 shows
+that a quantity on the points that can vary smoothly would give a pull of Newton's shape if relics or energy are its
+sources. This was option A of `docs/design/gravity_brief.md`, section 6.
+
+- **What "matches curve-first" requires** (her idea as recorded on the plain-language page: space has its own drive to
+  curve, matter supplies the energy that starts the curve rather than causing it, gravity belongs to space and not to
+  X, and wherever Einstein's account has been measured hers gives the same numbers): the quantity lives on the points
+  of space, not of X; how a dip spreads is set by space's own rule (the links between points); matter and energy set
+  only where a dip starts and how deep, from their own energy, so the pull scales with energy; and the dip moves matter.
+- **Under S1** this is a new knob: its form, its coupling to the wiring and to energy, and its constants are to be fixed
+  in a design brief (`docs/design/gravity_field_brief.md`, not yet written) before any run, and every setting run is
+  published. The model with it is our family, never CQG.
+- *Ours, unverified (general knowledge, to verify):* in Einstein's gravity, slow objects fall almost entirely because
+  time runs at different rates in different places (the weak-field metric's time part carries Newton's potential);
+  the curving of space matters mainly for fast things such as light. The model has no time, so the quantity on the
+  points would stand for the missing part: how fast time runs at each point. This connects with Update 25 (time as a
+  fourth curled direction) and with the local pace rule she adopted the next day (Update 36, 20:00 ET: the pace of the
+  present is set by local conditions, slower where matter sits). One way to make it literal, a candidate only: a
+  point's value sets how often it may change, so its clock runs fast or slow, and whatever wanders collects where
+  clocks run slow.
+- **The author's question, the same minute:** is the missing pull just three dimensions against four (space against
+  spacetime)? *Ours:* yes in that sense and not in the other. A fourth space-like direction in the network does not
+  help: the eight-link model's flat space is stiffer still (its cheapest move out costs 128, against 64 with six
+  links). What the six-link model lacks is time, the fourth dimension of spacetime, which is where the everyday pull
+  lives in Einstein's account; the quantity on the points is the model's stand-in for it.
+- **How it sits with what came after** (*ours*, 5 October). Position 2 of Update 33 (gravity and the count of hidden
+  degrees of freedom) and the drive-and-cost reading of Update 35 are about *why* space would curve; this decision is
+  about *what carries* a pull across a distance in a model whose flat space cannot. They do not compete. The entropic
+  route (a pull from counting, at a temperature above zero) is the other candidate carrier, and it is tested first
+  because it needs no new knob (the hidden count and the warm-bath pull, ASSUMPTIONS O87).
+
+Update 41 (2026-10-05): **the author's decisions of 4 and 5 October: the first opening is dark energy's; the target is
+the shares at spacetime's birth, not today's; the fair clock; and what the birth shares are once the light is counted.**
+Why this page changes: two chat sessions on 4 and 5 October worked from a copy of the repository, and nothing they
+decided had been written here (`docs/HANDOFF_2026-10-05_chat.md`); and her answers of 5 October to the assistant's
+questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREGISTRATION T51.
+
+- **DECISION (4 October): the first direction to open releases dark energy.** Her reason: with the other directions
+  still curled, its release cannot disperse or interact as matter and radiation do, so it stays as the energy of space
+  itself, and part of it pays the next push. This keeps Update 36's first step and gives it a reason. **Not decided:**
+  which of the other two openings is ordinary matter and which is dark matter, and which release pays which push.
+  Accepted by her: once all three are open they are alike again.
+- **DECISION (4 October): the cosmological-constant problem is carried openly, not solved.** The first opening's net
+  release has to be nearly zero, and the ledger's whole numbers cannot say why. The pages say so plainly.
+- **DECISION (4 October): the ladder is rebuilt with a plane, two directions together, as the unit of opening**, exact
+  first on the built tori, then sealed runs; it decides whether "red" is a direction or a plane. **Open, and hers to
+  settle before it is built:** what a plane opening is in the model. *Ours:* two readings. (i) Bookkeeping only: the
+  step from fully curled to two directions open is counted as one opening; nothing new is computed. (ii) A rule: one
+  direction cannot open alone, which is a tie that charges a point for having exactly one direction open; the exact
+  walls of two such shapes are in O89.
+- **Time (4 October): her view stands.** Time exists because matter moves through three-dimensional space; X has order
+  but not time; relativity is the evidence. "Red is time" is a reading she thinks unlikely but would test; in this model
+  it can be tested only through order and cost. **No new model with relativity's time built in** for the root question.
+- **Where she expects to work: λ about 1.02, six links, with the tie** (the counting drive beats the curling cost only
+  within about 2 % of λ = 1, O55; the 6-cube is stuck for 1 < λ < 1.2, O41).
+- **Method measurements are wanted where they tie to published models:** nucleation and growth (done, T37), the hidden
+  count, the pull in a warm bath written as force = temperature × change of entropy with distance. **Held:** the causal
+  order read from the opening front. *Ours:* as defined in chat (p comes before q if p opened earlier and q lies within
+  the front's reach) it puts the light cone in by hand, so a causal-set estimator would return what was put in; it comes
+  back if an order can be defined from the dynamics alone.
+- **Paper 1.** On hold at arXiv pending a reader or a journal. Her decision of 5 October: the request to the model's
+  author to be a reader, and Gate C's question, wait until after his talk. A draft is kept locally; nothing is sent
+  from here.
+- **DECISION (5 October): the target is the shares at spacetime's birth, not today's.** Her words: "we are hoping to
+  match spacetime's birth ratios not current."
+- **What the birth shares are** (*ours, unverified: settled cosmology applied by us, general knowledge, to verify with a
+  physicist; it restores O18 and corrects Update 35*). Update 35 took the birth shares to be ordinary : dark matter :
+  dark energy = 0.157 : 0.843 : 0. That leaves out the light. Cold matter thins out more slowly than light as space
+  grows, so going back in time matter's share shrinks: at temperature T all matter together is about 0.8 eV / T of the
+  energy, dark matter about 0.67 eV / T, and the mass of ordinary matter about 0.13 eV / T. By the time the light
+  elements formed (about 1 MeV, the latest a hot beginning can be placed) dark matter was under a millionth of the energy
+  and dark energy about 10⁻³⁵ of it; earlier, less. The 5.36 is real and does date from the start, but it compares two
+  slivers: dark matter with the *mass* of ordinary matter, which is itself the billionth-part left when matter and
+  antimatter cancelled. It is not the ratio of a dark release to an ordinary release. **So the birth shares to match
+  are: the hot lump, almost everything; dark matter, a cold sliver of about 0.67 eV divided by the temperature of
+  birth; dark energy, nothing measurable.** One number is unknown, the temperature of birth.
+- **What that changes** (*ours*). (1) Fitting the tie's two constants to 5.36 (O74, T45, and the chat's
+  f = (0, a, 1.53a, 0)) aimed at a ratio the releases do not have to hit. Those runs stand as run; their target is
+  withdrawn. (2) The chat's verdict that the scrap is not the dark matter "by a factor of ten" is withdrawn (O88): at
+  birth 8 % is too much scrap, not too little, and what a leftover dark matter needs is that nearly all of it heals,
+  which is what slower cooling does (T25). So Update 16's reading, dark matter as the leftover, is open again beside
+  Update 30's, dark matter as a direction's release. Which she holds is hers; T51 measures what the first one needs.
+  (3) With dark energy first and netting nothing, the shapes that match birth are those in which **one opening carries
+  essentially the whole release**. There are two, with no constant to fit: nothing is released until the last direction
+  opens (the three go together, her position of Update 22), or the second opening releases everything and the last
+  direction is free to stay curled (her prediction for T48, and a hidden small direction). Exact walls for both are in
+  O89. Neither is adopted.
+- **DECISION (5 October): the fair clock for new kinetic runs.** Time is counted so that every local pair of links is
+  offered equally often at every size (O76's proposal; O90). Verdicts already scored stay as scored.
+- **The scrap-share reading stays out of paper 2** (5 October, on the assistant's advice; she expects the paper to
+  change a good deal before it is shared).
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
