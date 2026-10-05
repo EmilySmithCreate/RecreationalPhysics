@@ -1118,6 +1118,54 @@ questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREG
 - **The scrap-share reading stays out of paper 2** (5 October, on the assistant's advice; she expects the paper to
   change a good deal before it is shared).
 
+Update 42 (2026-10-05, midday): **ideas of the author's on what X is inside a black hole, what dark energy is, and how
+the papers should be built.** Her words, put in order; she called them spitballing, and they are recorded as ideas to
+test, not decisions, except where marked. Why this page changes: three of them say what the next exact tables and runs
+should be about. Details: ASSUMPTIONS O100; `docs/papers/series_plan.md`, last section.
+
+- **X as spaghetti.** Inside a black hole X may be two directions curled and one open, not a point: the black hole
+  only has to curl two directions before the space snaps back open. That state is unstable, like X as a singularity,
+  but being long in one direction it allows several seeds. Because the compression is not stable, especially with the
+  tie between directions, it would not need more matter and energy from the hole for each burp; it could burp at once.
+  Her questions: would X be stable in this phase, or constantly burping, or something else? *Ours, exact (O100):* in
+  the toy this state exists and has been run. Untied, it is stuck for now while the curling cost is small and cannot
+  hold at all once the cost passes a threshold (λ about 1.45): which of "stable for now" and "burps at once" it is, is
+  a matter of one number. Given a push it has so far opened one of its two curled directions and stopped (T30, T48),
+  and at the setting nearest the threshold it opened both in 5 runs of 16.
+- **She asks for a table of every state of the directions**, since many arrangements can be tested. *Ours:* the exact
+  ladder exists for two, three and four directions (`docs/public/curling_ladder.html`; `scripts/exact_ladder_d.py`) and
+  is extended with what each state has been seen to do (O100).
+- **Why the first opening nets almost nothing: perhaps because it is already open.** If X begins with one direction
+  open, that direction never had to open, and dark energy would be some kind of scrap or relic of it. *Ours:* this
+  gives the zero for free, which the ledger could not. It then leaves the small amount that is observed to be
+  explained, and by the rule taken from [PWS09] a scrap of fixed number thins out as matter does, so a dark energy made
+  of scrap needs the scrap's number to grow with the space. Not decided.
+- **Time.** "X has order but not time" holds either way: with one direction open nothing moves, so there is no time.
+- **Matter and antimatter.** She asks whether the energies released cancel somehow, leaving only the net one to 5.36
+  of the two kinds of matter. *Ours, from abstracts read on 5 October ([KLZ09], [PV13], [MRM12]):* in standard physics
+  the hot lump held almost equal amounts of matter and antimatter, which turned to light as it cooled, and ordinary
+  matter is the small excess left over. A published line of work, asymmetric dark matter, holds that dark matter is
+  the same kind of leftover excess, which would make 5.36 a ratio of two leftovers, as she guesses, and not of two
+  releases. And the standard way to make such an excess needs the universe out of balance for a moment, which a sharp
+  change with a moving front supplies: in the best-studied proposal it is made at the walls of the bubbles of a
+  first-order transition. So the burp's front is where an excess could be made. Nothing in the toy has anything that
+  comes in opposite kinds, so this is a direction, not a result.
+- **Seeds.** Would each seed be its own new spacetime, or do seeds close together join into one? Perhaps the open
+  direction makes X unstable, the other two open of themselves, and the scrap is the minuscule dark energy while the
+  releases are the two matters; or only one of the two releases nets energy and makes every kind of matter. *Ours, a
+  first look (O100):* in the toy, seeds in one connected X usually join into one space, and in a minority of long
+  tubes the opening ended as two separate spaces. "Only one opening nets energy" is one of the two shapes O89 found to
+  match the make-up at birth.
+- **A second line of work: the loop and the sizes of infinities.** We are probably circling the largest, most likely
+  observed infinity, so a theory of maximizing, as in economics, may apply to the sizes of infinities: a loop that
+  cannot be created is not a large infinity beside a strange loop that holds every configuration. She asks what
+  research exists. A reading is under way (the measure problem; maximizing principles in cosmology; criteria for
+  comparing infinite streams in economics).
+- **DECISION: many short papers, not one long one.** "I'd rather have 15 seven-page papers, brought together as the
+  full theory by a 16th, than one 90-page paper." Each short paper may take up, replicate or extend the model or the
+  open question of one researcher's most recent work, as paper 1 does for Kelly, Trugenberger and Biancalana. The list
+  is in `docs/papers/series_plan.md`.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

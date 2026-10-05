@@ -2440,6 +2440,39 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     grow with size and an exact release per point. With O97 and O98 this completes the reading the owner asked for on
     5 October; the statement is "we have not found", across the four sets of papers named in the notes.
 
+- **O100 The owner's "spaghetti" X (two directions curled, one open): what is exact, what has been measured, and a
+  first look at whether seeds join.** (2026-10-05, 11:50 ET; VISION Update 42. The exact numbers are from earlier
+  entries; the first look is new, read-only and EXPLORATORY. Six-link results carry VISION Update 24's caveat.)
+  - **The state.** A 4 × 4 × L torus with six links: two directions curled, one open, one connected piece. It lies
+    8(λ − 1) per point above flat space, two curling costs. Its cheapest way out costs 96 − 64λ while that is the
+    cheapest kind of move (16 at λ = 1.25) and 128 − 88λ beyond (4.8 at λ = 1.40; PREREGISTRATION T48), which reaches
+    zero at λ ≈ 1.45. **So untied it is stuck for now for 1 < λ < 1.45 and cannot hold above that.** Under the "all at
+    the second" tie of O89 at λ = 1.25 it has a way downhill already.
+  - **What it has been seen to do.** Given one push in a cold sealed box (T30): its first curled direction opened
+    fully in a third of runs and partly in most others; the second never. With the released energy kept at the front
+    (T48): at λ = 1.25 it opened one direction and stopped in 13 runs of 16; at λ = 1.40 it opened both, into one space,
+    in 5 of 16, with damage in 7. **Not run:** this state in a warm bath (O94), with a tie, or long enough to seed
+    itself in several places.
+  - **A table of the states, three directions, untied** (energy above flat per point; cheapest way out at λ = 1.25 and
+    1.40; what was seen). Fully curled, a gas of 6-cubes: 12(λ − 1); 96 − 80λ, so stuck only below λ = 1.2; each cube
+    opens part of the way alone and cubes do not join (O85, O92). Two curled, one open: as above. One curled, two
+    open: 4(λ − 1); 36 and 28.8; never moved in any run (T41, T48). Flat: 0; 64; heals every damage given (O66). The
+    same ladder for two and four directions is in `docs/public/curling_ladder.html`.
+  - **Do seeds join? A first look.** In T37's clean end states (two directions, tubes that seeded themselves), the
+    opened space is one connected piece in 38 of 40 tubes at 128 columns, 28 of 33 at 256 and 7 of 11 at 1,024. In the
+    rest it ended as **two separate pieces** (for example 2,600 and 1,496 points). So seeds in one connected X usually
+    grow into one space, and sometimes the opening splits it in two. Not pre-registered, not read from positions (where
+    the split falls, and whether each piece is a clean sheet, is not known); the pieces count is exact.
+  - **Matter and antimatter** (abstracts read on the arXiv pages, 5 October; the papers were not read). [KLZ09]: models
+    in which "the relic density of dark matter is determined by the baryon asymmetry of the universe", which "explains
+    the observed relation between the baryon and dark matter densities for dark matter mass in the range 5--15 GeV".
+    [PV13]: the hypothesis "that the present-day abundance of dark matter has the same origin as the abundance of
+    ordinary or visible matter: an asymmetry in the number densities of particles and antiparticles", "motivated by the
+    observed similarity in the mass densities of dark and visible matter, with the former observed to be about five
+    times the latter". [MRM12] reviews making the excess of matter at the electroweak phase transition. *Ours:* this is
+    the published form of the owner's guess that 5.36 is what is left after a cancellation; and a first-order change
+    with a front is the kind of event such an excess is made at. The toy has nothing that comes in opposite kinds.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

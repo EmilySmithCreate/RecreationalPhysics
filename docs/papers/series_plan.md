@@ -433,3 +433,37 @@ brackets); the papers each group feeds:
 **Parked:** the allotropes paper (old piece 12, `docs/parked/allotropes.md`), kept for the correspondence with the model's
 author; T43 (finished on the cloud, unread) answers his question and goes with it. **Owed:** the reading on dark charges
 (`docs/reading/notes/2026-09-26_dark_charge.md` holds search summaries only; this session's network blocked arXiv).
+
+## 5 October 2026: many short papers, each anchored on a published model (the owner's decision, VISION Update 42)
+
+The owner: "I'd rather have 15 seven-page papers, brought together as the full theory by a 16th, than one 90-page
+paper." Each short paper supports one part of the theory, can be read and checked alone, and where possible takes
+up the model or the open question of one researcher's most recent work: replicate what they published, then extend it
+with this project's code and compute. That gives each paper a natural reader. The list below replaces the seven-paper
+grouping above as the working plan; piece numbers are the twelve of VISION Update 34. "Anchor" is the published work
+the paper builds on; the readings are in `docs/reading/notes/` (5 October for most).
+
+| # | Short paper | Piece | Anchor (whose model or question) | Replicate first | Then extend | State |
+|---|---|---|---|---|---|---|
+| 1 | The curled torus burps | 1, 2 | Kelly, Trugenberger, Biancalana [KTB19]; [T25] | [KTB19] Fig. 8a (done) | a sharp change between two ordered states at λ > 1 | Written; on hold at arXiv pending a reader or a journal |
+| 2 | What the burp leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's size, number, place, lifetime; how much freezes in (T51) | Drafted; T51 running |
+| 3 | Links that reach far, left where starting points meet | 7 | Markopoulou and Smolin [MS07]; Quach and co-authors [QSMG12]; Hossenfelder [H13] | a frozen boundary between domains, in this model | their count, reach and scaling with size; whether cooling heals them; whether the opening splits X in two | First look only (O95, O100); to be pre-registered |
+| 4 | The order of the transition in three directions | 5 (Gate C) | Trugenberger [T22] | his D = 3 figure (needs its size and whether its graphs were two-sided) | cooling against heating at 500 points with replica exchange | The bounded joint project to offer the model's author |
+| 5 | How curled directions open, three and four | 5 | [T22]; Mulder's theorem [Mul79]; the topology conjecture of [AGGN22] | the exact ladder (done) | one at a time; a gas never joins; a connected X; the true barrier | Results in hand; outline |
+| 6 | The rule, the room, and which settings give a birth | 3, 4 | The local term of [T25] | none needed | the map over the curling cost and the number of directions; room; melting moving with size | Outline |
+| 7 | The make-up at birth and the three shares | 6 | Planck 2018; asymmetric dark matter [KLZ09], [PV13]; Verlinde [Ver16] | the published numbers (done, O89) | which shapes of shares match birth; run them | Needs a physicist's check and the owner's choice of shape |
+| 8 | Dimensions that open in order: a crossover or a sharp change? | 5, 6 | Stojkovic [St14] | his crossover in a layered lattice | set beside an opening with a fixed push and an exact release | Idea |
+| 9 | What a cut hides | 8 | Jacobson [Jac95]; Verlinde [Ver11] | none needed | the hidden count: does it follow the boundary or the volume (T52) | Pre-registered; needs an amendment before it runs |
+| 10 | An entropy action across wirings | 8 | Bianconi [Bia24] | her vacuum action on a regular lattice | the same action on flat, curled and leftover wirings: her "variation with respect to the topology" | Idea; one narrow question for her first |
+| 11 | A pull between leftovers | 8 | Verlinde [Ver11]; the G-field of [Bia25] | none needed | the pull in a warm bath in three directions; the design of a quantity on the points | Design |
+| 12 | Concentrated energy does not fold space | 11 | Black holes as random bubbles [T25]; Smolin [Smolin06] | none needed | five negative results and what they need (T21, T26, T27, T34, T42) | Results in hand; outline |
+| 13 | Counting versions cannot beat Bell | 9 | Smolin [Smolin11]; Hardy [Hardy01] | none needed | the rungs of T15; the exchange sign | Results in hand; outline |
+| 14 | A front's pace | 10 | Ellis [Ell14] | none needed | steady on a fair clock; faster where energy sits (T47, T50) | Results in hand; outline |
+| 15 | Allotropes dissolve | parked | Trugenberger [T24] | none needed | the first numerical data on them (T36, T43) | Results in hand; kept for the correspondence with him |
+| 16 | The loop and its measure | 12 | Hofstadter; Smolin [Smolin06]; the measure problem | none needed | counting per turn; the map of settings as its input | Reading under way |
+| 17 | A phase-changing reality | all | the sixteen above | | the assessment that brings them together | After the others |
+
+Notes. (a) Papers 5, 12, 13, 14 and 15 are mostly negative or bounding results already measured; each is short and
+can be written now. (b) Papers 3, 8 and 10 each begin with one narrow question to their anchor's author, which doubles
+as the route to a reader (the questions are at the end of the reading notes). (c) Paper 4 is the only one proposed as
+joint work. (d) Nothing here changes the rule that a paper at λ ≠ 1 is not called combinatorial quantum gravity.
