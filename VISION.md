@@ -1097,7 +1097,11 @@ questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREG
   slivers: dark matter with the *mass* of ordinary matter, which is itself the billionth-part left when matter and
   antimatter cancelled. It is not the ratio of a dark release to an ordinary release. **So the birth shares to match
   are: the hot lump, almost everything; dark matter, a cold sliver of about 0.67 eV divided by the temperature of
-  birth; dark energy, nothing measurable.** One number is unknown, the temperature of birth.
+  birth; dark energy, nothing measurable.** One number is unknown, the temperature of birth. *Added the same day, after the author asked whether this is published: it is. The inputs were checked at
+  the source ([Planck18] for when matter and light were equal and for the two matter densities; [deSalas15] for how
+  late the hot era can have begun, about 4 MeV), and the scaling between them is textbook. What is not published as
+  one number is the share at birth itself, because the temperature of birth and the nature of dark matter are both
+  unknown (O89, addendum). The application to three releases remains ours.*
 - **What that changes** (*ours*). (1) Fitting the tie's two constants to 5.36 (O74, T45, and the chat's
   f = (0, a, 1.53a, 0)) aimed at a ratio the releases do not have to hit. Those runs stand as run; their target is
   withdrawn. (2) The chat's verdict that the scrap is not the dark matter "by a factor of ten" is withdrawn (O88): at

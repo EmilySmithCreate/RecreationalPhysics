@@ -2188,6 +2188,21 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     nothing to gain: her prediction for T48 ("the first opens, the last stays curled") as a ground state. At λ = 1.02
     the same state is stuck behind 28. Neither shape has been run, and under either the first step from a fully curled
     gas nets nothing, so it has no front to drive it.
+  - **Addendum, 5 October, 10:25 ET: the inputs are published, and were checked at the source after the owner asked.**
+    [Planck18] Table 2 (TT,TE,EE+lowE+lensing; the numbers searched in the text): matter and radiation were equal at
+    z = 3402 ± 26; cold dark matter Ω_c h² = 0.1200 ± 0.0012 and ordinary matter Ω_b h² = 0.02237 ± 0.00015, a ratio of
+    5.36, so dark matter is 0.843 of the matter. With today's temperature of 2.7255 K (general knowledge) equality was at
+    0.80 eV, and before it matter's share of the energy is 0.80 eV / T: textbook scaling, no measurement of ours.
+    [deSalas15] (abstract read): the hot era cannot have begun below about 4 to 5 MeV. At 4 MeV, dark matter that was
+    already cold is under two parts in ten million of the energy. **So no cosmologist is needed for the number.**
+  - **What is not published as one number, and why.** "The share at birth" needs two things nobody knows. When the hot
+    era began: only the lower bound above is measured, and it could have been many powers of ten hotter. And what dark
+    matter is: if it began as one of the hot kinds of particle in the plasma and went cold later (the standard thermal
+    picture, general knowledge), then at birth it was not a sliver but an ordinary small share of the hot lump, and the
+    sliver is what it became; if it was cold from the start, the sliver is its share at birth. The arithmetic above
+    holds from whenever dark matter is cold. Either way the release that becomes dark matter is not 0.84 of the burp.
+  - **What a physicist's eye is still wanted for** is smaller than first written: whether this is the right way to set
+    the target for three releases, which is our application and not a published statement.
   - **What this is not.** A derivation of anything. It says which shapes are consistent with the birth shares if the
     arithmetic above is right; it leaves the temperature of birth, the sliver of dark matter and the excess of matter
     over antimatter unexplained. The first thing to do with it is to ask a physicist whether the arithmetic is right.
@@ -2359,6 +2374,24 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   - **Also read:** in print the transition is "continuous" throughout, with "the absence of hysteresis" at N = 160 named
     as the evidence in two dimensions and nothing said about its order in three. His dark-matter domains have no
     simulation in any paper; T36 and T43 are, as far as we have found, the only numerical data on them.
+
+- **O97 Bianconi's gravity from entropy, read: a different count from the one T52 takes, and the nearest published
+  relative of a quantity on the points.** (2026-10-05, 10:40 ET; read by an assistant agent from the arXiv HTML of
+  [Bia25], [Bia26], [Bia24] and related papers, with the read status of each in
+  `docs/reading/notes/2026-10-05_bianconi_gravity_from_entropy.md`; the owner has not read these passages.)
+  - **What it is.** A continuum theory in which the action is a relative entropy between two metrics. In its author's
+    words the entropy is "local and volumeric and is not derived from horizons". It is not a count of what a surface
+    hides (Jacobson, Verlinde) and not a pull that needs warmth.
+  - **What it does not contain:** a sharp change between two arrangements, an energy released, leftovers, or a
+    dimension appearing. It neither contradicts the hypothesis nor gets there first.
+  - **Where it bears on this project** (*ours*). (1) T52: a hidden count that follows the volume would close Jacobson's
+    and Verlinde's route in this model and leave hers untouched. (2) VISION Update 40: her G-field, a quantity at every
+    point that reduces to nothing in flat empty space, is the closest published form of the ingredient the owner
+    decided to add. (3) Her discrete action [Bia24] keeps the wiring fixed and names varying it as open; in vacuum it
+    depends on the wiring through the Laplacian spectra, which this project computes (O28), so comparing flat, curled
+    and leftover arrangements under it is exact and cheap. Not done.
+  - **A caution.** Two 2026 abstracts by another author report instabilities of the theory (not read beyond the
+    abstracts).
 
 ## Provenance
 
