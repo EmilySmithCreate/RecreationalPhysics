@@ -1,4 +1,4 @@
-# Batch queue and results bucket, as of 2026-09-27 07:58 UTC (commit 8d55d53)
+# Batch queue and results bucket, as of 2026-10-05 09:06 UTC (commit adc353b)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
@@ -19,386 +19,10 @@ until a person downloads, checks and commits them.
 - none
 
 ## SUCCEEDED
-- t23_lam135_n64-2039d06  created 09-24 17:26  started 09-24 17:26  stopped 09-24 17:53
-- t23_lam105_n144-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 18:51
-- t23_lam105_n192-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 20:01
-- t23_lam105_n64-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 18:16
-- t23_lam105_n96-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 18:14
-- t23_lam110_n144-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 18:46
-- t23_lam110_n192-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 18:55
-- t23_lam110_n64-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 18:09
-- t23_lam110_n96-2ab4cb3  created 09-24 17:54  started 09-24 17:54  stopped 09-24 18:15
-- t23_lam115_n144-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:33
-- t23_lam115_n192-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:55
-- t23_lam115_n64-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:07
-- t23_lam115_n96-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:17
-- t23_lam120_n144-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:28
-- t23_lam120_n192-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:47
-- t23_lam120_n64-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:01
-- t23_lam120_n96-2ab4cb3  created 09-24 17:54  started 09-24 17:55  stopped 09-24 18:18
-- t23_lam125_n144-2ab4cb3  created 09-24 17:54  started 09-24 18:01  stopped 09-24 18:47
-- t23_lam125_n192-2ab4cb3  created 09-24 17:54  started 09-24 18:07  stopped 09-24 19:02
-- t23_lam125_n64-2ab4cb3  created 09-24 17:54  started 09-24 18:09  stopped 09-24 18:29
-- t23_lam125_n96-2ab4cb3  created 09-24 17:54  started 09-24 18:14  stopped 09-24 18:48
-- t23_lam130_n144-2ab4cb3  created 09-24 17:54  started 09-24 18:15  stopped 09-24 19:42
-- t23_lam130_n192-2ab4cb3  created 09-24 17:54  started 09-24 18:17  stopped 09-24 19:47
-- t23_lam130_n64-2ab4cb3  created 09-24 17:54  started 09-24 18:18  stopped 09-24 18:44
-- t23_lam130_n96-2ab4cb3  created 09-24 17:54  started 09-24 18:19  stopped 09-24 19:03
-- t23_lam135_n144-2ab4cb3  created 09-24 17:54  started 09-24 18:29  stopped 09-24 21:10
-- t23_lam135_n192-2ab4cb3  created 09-24 17:54  started 09-24 18:29  stopped 09-24 22:09
-- t23_lam135_n96-2ab4cb3  created 09-24 17:55  started 09-24 18:33  stopped 09-24 19:29
-- t24_lam105_n144-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:45
-- t24_lam105_n192-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 02:14
-- t24_lam105_n64-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:10
-- t24_lam105_n96-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:24
-- t24_lam110_n144-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:35
-- t24_lam110_n192-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:59
-- t24_lam110_n64-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:05
-- t24_lam110_n96-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:18
-- t24_lam115_n144-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:19
-- t24_lam115_n192-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:46
-- t24_lam115_n64-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:02
-- t24_lam115_n96-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:11
-- t24_lam120_n144-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:25
-- t24_lam120_n192-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:48
-- t24_lam120_n64-3d662d8  created 09-25 00:50  started 09-25 01:02  stopped 09-25 01:10
-- t24_lam120_n96-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 01:22
-- t24_lam125_n144-3d662d8  created 09-25 00:50  started 09-25 01:05  stopped 09-25 01:44
-- t24_lam125_n192-3d662d8  created 09-25 00:50  started 09-25 00:50  stopped 09-25 02:30
-- t24_lam125_n64-3d662d8  created 09-25 00:50  started 09-25 01:11  stopped 09-25 01:25
-- t24_lam125_n96-3d662d8  created 09-25 00:50  started 09-25 01:11  stopped 09-25 01:45
-- t24_lam130_n144-3d662d8  created 09-25 00:50  started 09-25 01:11  stopped 09-25 02:03
-- t24_lam130_n192-3d662d8  created 09-25 00:50  started 09-25 01:19  stopped 09-25 03:39
-- t24_lam130_n64-3d662d8  created 09-25 00:50  started 09-25 01:20  stopped 09-25 01:41
-- t24_lam130_n96-3d662d8  created 09-25 00:50  started 09-25 01:22  stopped 09-25 01:43
-- t24_lam135_n144-3d662d8  created 09-25 00:50  started 09-25 01:25  stopped 09-25 03:36
-- t24_lam135_n192-3d662d8  created 09-25 00:50  started 09-25 01:26  stopped 09-25 05:16
-- t24_lam135_n64-3d662d8  created 09-25 00:50  started 09-25 01:26  stopped 09-25 01:59
-- t24_lam135_n96-3d662d8  created 09-25 00:50  started 09-25 01:35  stopped 09-25 02:43
-- gatec2_3d_n500_a-1031034  created 09-25 01:28  started 09-25 01:41  stopped 09-25 03:10
-- gatec2_3d_n500_b-1031034  created 09-25 01:28  started 09-25 01:43  stopped 09-25 03:07
-- gatec2_2d_n2000_a-1031034  created 09-25 01:28  started 09-25 01:44  stopped 09-25 02:27
-- gatec2_2d_n2000_b-1031034  created 09-25 01:29  started 09-25 01:45  stopped 09-25 02:17
-- t30_gas_lam110_n512-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 11:33
-- t30_lam110_n288_c2n-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 04:38
-- t30_lam110_n288_cn4-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 04:33
-- t30_lam125_n288_c2n-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 04:33
-- t30_lam125_n288_cn-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 04:30
-- t30_lam125_n288_cn2-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 04:34
-- t30_lam125_n288_cn4-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 03:54
-- t30_lam125_n288_cn8-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 04:19
-- t30_lam125_n512_c2n-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 06:40
-- t30_lam125_n512_cn4-0f6bb81  created 09-25 02:40  started 09-25 02:44  stopped 09-25 06:23
-- t32_wall_n192-0f6bb81  created 09-25 02:40  started 09-25 03:08  stopped 09-25 04:03
-- t32_wall_n288-0f6bb81  created 09-25 02:40  started 09-25 03:11  stopped 09-25 05:20
-- t32_wall_n384-0f6bb81  created 09-25 02:40  started 09-25 02:41  stopped 09-25 05:37
-- t32_wall_n512-0f6bb81  created 09-25 02:40  started 09-25 03:37  stopped 09-25 07:13
-- t33_gas_lam110_c2n-acaa0b2  created 09-25 03:13  started 09-25 03:40  stopped 09-25 15:06
-- t33_gas_lam110_cn4-acaa0b2  created 09-25 03:13  started 09-25 03:55  stopped 09-25 16:00
-- t33_three_lam125_c2n-acaa0b2  created 09-25 03:13  started 09-25 04:03  stopped 09-25 15:16
-- t33_three_lam125_cn2-acaa0b2  created 09-25 03:13  started 09-25 04:20  stopped 09-25 15:48
-- t33_three_lam125_cn4-acaa0b2  created 09-25 03:13  started 09-25 04:31  stopped 09-25 13:19
-- t33_three_lam125_cn8-acaa0b2  created 09-25 03:13  started 09-25 04:33  stopped 09-25 13:34
-- t34_packed_n216-61bbb5f  created 09-25 14:02  started 09-25 14:02  stopped 09-25 15:29
-- t34_packed_n512-61bbb5f  created 09-25 14:02  started 09-25 14:03  stopped 09-25 20:29
-- t34_spread_n216-61bbb5f  created 09-25 14:02  started 09-25 14:03  stopped 09-25 15:47
-- t34_spread_n512-61bbb5f  created 09-25 14:02  started 09-25 14:03  stopped 09-25 19:59
-- t37_lam125_g150_L64-590f6ff  created 09-25 16:25  started 09-25 16:26  stopped 09-25 16:55
-- t37_lam125_g150_L128-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 17:00
-- t37_lam125_g150_L256_a-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 17:13
-- t37_lam125_g150_L256_b-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 17:03
-- t37_lam125_g150_L512_a-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 17:31
-- t37_lam125_g150_L512_b-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 17:25
-- t37_lam125_g150_L1024_a-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:53
-- t37_lam125_g150_L1024_b-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:48
-- t37_lam125_g150_L1024_c-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:50
-- t37_lam125_g150_L1024_d-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:49
-- t37_lam125_g150_L1024_e-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:49
-- t37_lam125_g150_L1024_f-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:58
-- t37_lam125_g150_L1024_g-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:57
-- t37_lam125_g150_L1024_h-590f6ff  created 09-25 16:26  started 09-25 16:38  stopped 09-25 17:08
-- t37_lam125_g175_L64-590f6ff  created 09-25 16:26  started 09-25 16:49  stopped 09-25 16:57
-- t37_lam125_g175_L128-590f6ff  created 09-25 16:26  started 09-25 16:26  stopped 09-25 16:37
-- t37_lam125_g175_L256_a-590f6ff  created 09-25 16:26  started 09-25 16:49  stopped 09-25 17:03
-- t37_lam125_g175_L256_b-590f6ff  created 09-25 16:26  started 09-25 16:50  stopped 09-25 17:08
-- t37_lam125_g175_L512_a-590f6ff  created 09-25 16:26  started 09-25 16:51  stopped 09-25 17:04
-- t37_lam125_g175_L512_b-590f6ff  created 09-25 16:26  started 09-25 16:53  stopped 09-25 17:11
-- t37_lam125_g175_L1024_a-590f6ff  created 09-25 16:26  started 09-25 16:55  stopped 09-25 17:02
-- t37_lam125_g175_L1024_b-590f6ff  created 09-25 16:26  started 09-25 16:57  stopped 09-25 17:06
-- t37_lam125_g175_L1024_c-590f6ff  created 09-25 16:26  started 09-25 16:58  stopped 09-25 17:05
-- t37_lam125_g175_L1024_d-590f6ff  created 09-25 16:26  started 09-25 16:58  stopped 09-25 17:07
-- t37_lam125_g175_L1024_e-590f6ff  created 09-25 16:26  started 09-25 17:01  stopped 09-25 17:11
-- t37_lam125_g175_L1024_f-590f6ff  created 09-25 16:26  started 09-25 17:03  stopped 09-25 17:11
-- t37_lam125_g175_L1024_g-590f6ff  created 09-25 16:26  started 09-25 17:03  stopped 09-25 17:11
-- t37_lam125_g175_L1024_h-590f6ff  created 09-25 16:26  started 09-25 17:04  stopped 09-25 17:12
-- t37_lam125_g125_L1024_a-590f6ff  created 09-25 16:26  started 09-25 17:05  stopped 09-25 19:50
-- t37_lam125_g125_L1024_b-590f6ff  created 09-25 16:26  started 09-25 17:06  stopped 09-25 20:15
-- t37_lam125_g125_L1024_c-590f6ff  created 09-25 16:26  started 09-25 17:07  stopped 09-25 20:46
-- t37_lam125_g125_L1024_d-590f6ff  created 09-25 16:26  started 09-25 17:07  stopped 09-25 21:38
-- t37_lam125_g125_L1024_e-590f6ff  created 09-25 16:26  started 09-25 17:08  stopped 09-25 20:02
-- t37_lam125_g125_L1024_f-590f6ff  created 09-25 16:26  started 09-25 17:09  stopped 09-25 21:13
-- t38_lam125_n64_00-590f6ff  created 09-25 16:26  started 09-25 17:11  stopped 09-25 17:42
-- t38_lam125_n64_01-590f6ff  created 09-25 16:26  started 09-25 17:12  stopped 09-25 17:41
-- t38_lam125_n64_02-590f6ff  created 09-25 16:26  started 09-25 17:11  stopped 09-25 17:48
-- t38_lam125_n64_03-590f6ff  created 09-25 16:26  started 09-25 17:11  stopped 09-25 17:44
-- t38_lam125_n64_04-590f6ff  created 09-25 16:26  started 09-25 17:12  stopped 09-25 17:48
-- t38_lam125_n64_05-590f6ff  created 09-25 16:26  started 09-25 17:14  stopped 09-25 17:40
-- t38_lam125_n64_06-590f6ff  created 09-25 16:26  started 09-25 17:25  stopped 09-25 17:58
-- t38_lam125_n64_07-590f6ff  created 09-25 16:26  started 09-25 17:31  stopped 09-25 18:02
-- t38_lam125_n64_08-590f6ff  created 09-25 16:26  started 09-25 17:41  stopped 09-25 18:04
-- t38_lam125_n64_09-590f6ff  created 09-25 16:26  started 09-25 17:42  stopped 09-25 18:10
-- t38_lam125_n64_10-590f6ff  created 09-25 16:26  started 09-25 17:43  stopped 09-25 18:16
-- t38_lam125_n64_11-590f6ff  created 09-25 16:26  started 09-25 17:45  stopped 09-25 18:15
-- t38_lam125_n64_12-590f6ff  created 09-25 16:26  started 09-25 17:49  stopped 09-25 18:05
-- t38_lam125_n64_13-590f6ff  created 09-25 16:26  started 09-25 17:49  stopped 09-25 18:15
-- t38_lam125_n64_14-590f6ff  created 09-25 16:26  started 09-25 17:59  stopped 09-25 18:23
-- t38_lam125_n64_15-590f6ff  created 09-25 16:26  started 09-25 18:02  stopped 09-25 18:28
-- t38_lam130_n64_00-590f6ff  created 09-25 16:26  started 09-25 18:04  stopped 09-25 18:46
-- t38_lam130_n64_01-590f6ff  created 09-25 16:26  started 09-25 18:06  stopped 09-25 18:52
-- t38_lam130_n64_02-590f6ff  created 09-25 16:26  started 09-25 18:10  stopped 09-25 18:53
-- t38_lam130_n64_03-590f6ff  created 09-25 16:26  started 09-25 18:15  stopped 09-25 18:43
-- t38_lam130_n64_04-590f6ff  created 09-25 16:26  started 09-25 18:16  stopped 09-25 19:02
-- t38_lam130_n64_05-590f6ff  created 09-25 16:26  started 09-25 18:17  stopped 09-25 18:49
-- t38_lam130_n64_06-590f6ff  created 09-25 16:26  started 09-25 18:24  stopped 09-25 19:00
-- t38_lam130_n64_07-590f6ff  created 09-25 16:26  started 09-25 18:29  stopped 09-25 19:08
-- t38_lam130_n64_08-590f6ff  created 09-25 16:26  started 09-25 18:44  stopped 09-25 19:39
-- t38_lam130_n64_09-590f6ff  created 09-25 16:26  started 09-25 18:47  stopped 09-25 19:33
-- t38_lam130_n64_10-590f6ff  created 09-25 16:26  started 09-25 18:49  stopped 09-25 19:36
-- t38_lam130_n64_11-590f6ff  created 09-25 16:26  started 09-25 18:53  stopped 09-25 19:19
-- t38_lam130_n64_12-590f6ff  created 09-25 16:26  started 09-25 18:53  stopped 09-25 19:30
-- t38_lam130_n64_13-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 19:39
-- t38_lam130_n64_14-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 19:46
-- t38_lam130_n64_15-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 19:31
-- t38_lam125_n192_00-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 20:25
-- t38_lam125_n192_01-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 20:17
-- t38_lam125_n192_02-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 20:02
-- t38_lam125_n192_03-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 20:15
-- t38_lam125_n192_04-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 20:36
-- t38_lam125_n192_05-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 20:16
-- t38_lam125_n192_06-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 19:40
-- t38_lam125_n192_07-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 19:45
-- t38_lam130_n192_00-590f6ff  created 09-25 16:26  started 09-25 18:54  stopped 09-25 21:04
-- t38_lam130_n192_01-590f6ff  created 09-25 16:27  started 09-25 19:00  stopped 09-25 20:57
-- t38_lam130_n192_02-590f6ff  created 09-25 16:27  started 09-25 18:54  stopped 09-25 21:25
-- t38_lam130_n192_03-590f6ff  created 09-25 16:27  started 09-25 18:54  stopped 09-25 22:02
-- t38_lam130_n192_04-590f6ff  created 09-25 16:27  started 09-25 19:03  stopped 09-25 21:16
-- t38_lam130_n192_05-590f6ff  created 09-25 16:27  started 09-25 19:08  stopped 09-25 21:24
-- t38_lam130_n192_06-590f6ff  created 09-25 16:27  started 09-25 19:19  stopped 09-25 21:45
-- t38_lam130_n192_07-590f6ff  created 09-25 16:27  started 09-25 19:31  stopped 09-25 21:12
-- t39_six_lam140_n288_c2n-590f6ff  created 09-25 16:27  started 09-25 19:31  stopped 09-25 21:02
-- t39_six_lam140_n288_cn-590f6ff  created 09-25 16:27  started 09-25 19:33  stopped 09-25 21:32
-- t39_six_lam140_n288_cn2-590f6ff  created 09-25 16:27  started 09-25 19:36  stopped 09-25 21:26
-- t39_six_lam140_n288_cn4-590f6ff  created 09-25 16:27  started 09-25 19:39  stopped 09-25 21:35
-- t39_six_lam140_n288_cn8-590f6ff  created 09-25 16:27  started 09-25 19:40  stopped 09-25 21:32
-- t39_six_lam140_n288_cn16-590f6ff  created 09-25 16:27  started 09-25 19:41  stopped 09-25 21:29
-- t39_six_lam125_n288_cn3-590f6ff  created 09-25 16:27  started 09-25 19:45  stopped 09-26 01:16
-- t39_six_lam125_n288_cn6-590f6ff  created 09-25 16:27  started 09-25 19:47  stopped 09-26 02:08
-- t39_six_lam125_n288_cn16-590f6ff  created 09-25 16:27  started 09-25 19:50  stopped 09-26 02:09
-- t39_eight_lam125_n1024_cn4-590f6ff  created 09-25 16:27  started 09-25 19:59  stopped 09-26 00:23
-- t39_eight_lam125_n1024_cn8-590f6ff  created 09-25 16:27  started 09-25 20:03  stopped 09-25 23:37
-- t39_eight_lam125_n1024_cn16-590f6ff  created 09-25 16:27  started 09-25 20:03  stopped 09-25 23:38
-- t39_eight_lam150_n1024_cn2-590f6ff  created 09-25 16:27  started 09-25 20:15  stopped 09-26 00:55
-- t39_eight_lam150_n1024_cn3-590f6ff  created 09-25 16:27  started 09-25 20:16  stopped 09-26 00:31
-- t39_eight_lam150_n1024_cn6-590f6ff  created 09-25 16:27  started 09-25 20:16  stopped 09-26 00:25
-- t40_three_lam125_n768_e20-3611463  created 09-25 16:55  started 09-25 20:17  stopped 09-25 23:05
-- t40_three_lam125_n768_e30-3611463  created 09-25 16:55  started 09-25 20:25  stopped 09-25 23:35
-- t40_three_lam125_n768_e40-3611463  created 09-25 16:55  started 09-25 20:29  stopped 09-25 23:33
-- t40_three_lam125_n768_e60-3611463  created 09-25 16:55  started 09-25 20:37  stopped 09-26 00:01
-- t40_three_lam125_n768_e80-3611463  created 09-25 16:55  started 09-25 20:47  stopped 09-25 23:28
-- t40_three_lam125_n768_e120-3611463  created 09-25 16:55  started 09-25 20:58  stopped 09-25 23:38
-- t40_three_lam125_n768_e160-3611463  created 09-25 16:55  started 09-25 21:03  stopped 09-25 23:47
-- t40_gas_lam110_n1024_e20-3611463  created 09-25 16:55  started 09-25 21:05  stopped 09-26 01:44
-- t40_gas_lam110_n1024_e40-3611463  created 09-25 16:55  started 09-25 21:13  stopped 09-26 01:24
-- t40_gas_lam110_n1024_e80-3611463  created 09-25 16:55  started 09-25 21:14  stopped 09-26 02:49
-- t40_gas_lam110_n1024_e160-3611463  created 09-25 16:55  started 09-25 21:17  stopped 09-26 02:54
-- t41_lam125_n384_c4n-321d3e5  created 09-25 17:04  started 09-25 21:25  stopped 09-25 23:59
-- t41_lam125_n384_c2n-321d3e5  created 09-25 17:04  started 09-25 21:25  stopped 09-25 23:52
-- t41_lam125_n384_cn-321d3e5  created 09-25 17:04  started 09-25 21:26  stopped 09-26 00:01
-- t41_lam125_n384_cn2-321d3e5  created 09-25 17:04  started 09-25 21:30  stopped 09-25 23:33
-- t41_lam125_n384_cn4-321d3e5  created 09-25 17:04  started 09-25 21:32  stopped 09-25 23:57
-- t41_lam125_n384_cn8-321d3e5  created 09-25 17:04  started 09-25 21:33  stopped 09-25 23:56
-- t41_lam140_n384_c4n-321d3e5  created 09-25 17:04  started 09-25 21:36  stopped 09-25 23:59
-- t41_lam140_n384_c2n-321d3e5  created 09-25 17:04  started 09-25 21:39  stopped 09-25 23:42
-- None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
+- none
 
 ## FAILED
-- gatec2_3d_n500_a-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- gatec2_3d_n500_b-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- gatec2_2d_n2000_a-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- t24_lam105_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- t24_lam110_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- t24_lam115_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- t24_lam120_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- t24_lam125_n192-3d50c19  created 09-26 06:42  started 09-26 06:42  stopped 09-26 07:28
-- t24_lam130_n144-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
-- t24_lam130_n192-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
-- t24_lam130_n96-3d50c19  created 09-26 06:42  started 09-26 06:54  stopped 09-26 07:28
-- t24_lam135_n144-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
-- t24_lam135_n192-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
-- t24_lam135_n96-3d50c19  created 09-26 06:42  started 09-26 06:43  stopped 09-26 07:28
-- t30_gas_lam110_n512-3d50c19  created 09-26 06:42  started 09-26 06:58  stopped 09-26 07:28
-- t30_lam110_n288_c2n-3d50c19  created 09-26 06:42  started   stopped 
-- t30_lam110_n288_cn4-3d50c19  created 09-26 06:42  started   stopped 
-- t30_lam125_n288_c2n-3d50c19  created 09-26 06:42  started   stopped 
-- t30_lam125_n288_cn-3d50c19  created 09-26 06:42  started   stopped 
-- t30_lam125_n288_cn2-3d50c19  created 09-26 06:42  started   stopped 
-- t30_lam125_n288_cn4-3d50c19  created 09-26 06:42  started   stopped 09-26 06:58
-- t30_lam125_n288_cn8-3d50c19  created 09-26 06:42  started   stopped 
-- t30_lam125_n512_c2n-3d50c19  created 09-26 06:42  started   stopped 
-- t30_lam125_n512_cn4-3d50c19  created 09-26 06:42  started   stopped 
-- t32_wall_n192-3d50c19  created 09-26 06:42  started   stopped 
-- t32_wall_n288-3d50c19  created 09-26 06:42  started   stopped 
-- t32_wall_n384-3d50c19  created 09-26 06:42  started   stopped 
-- t32_wall_n512-3d50c19  created 09-26 06:42  started   stopped 09-26 06:59
-- t33_gas_lam110_c2n-3d50c19  created 09-26 06:42  started   stopped 
-- t33_gas_lam110_cn4-3d50c19  created 09-26 06:42  started   stopped 
-- t33_three_lam125_c2n-3d50c19  created 09-26 06:42  started   stopped 
-- t33_three_lam125_cn2-3d50c19  created 09-26 06:42  started   stopped 
-- t33_three_lam125_cn4-3d50c19  created 09-26 06:42  started   stopped 
-- t33_three_lam125_cn8-3d50c19  created 09-26 06:42  started   stopped 09-26 07:00
-- t34_packed_n216-3d50c19  created 09-26 06:42  started   stopped 
-- t34_packed_n512-3d50c19  created 09-26 06:42  started   stopped 
-- t34_spread_n216-3d50c19  created 09-26 06:42  started   stopped 
-- t34_spread_n512-3d50c19  created 09-26 06:42  started   stopped 
-- t37_lam125_g150_L64-3d50c19  created 09-26 06:42  started   stopped 
-- t37_lam125_g150_L128-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L256_a-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L256_b-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L512_a-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L512_b-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L1024_a-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L1024_b-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L1024_c-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L1024_d-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L1024_e-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L1024_f-3d50c19  created 09-26 06:43  started   stopped 09-26 07:01
-- t37_lam125_g150_L1024_g-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g150_L1024_h-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L64-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L128-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L256_a-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L256_b-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L512_a-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L512_b-3d50c19  created 09-26 06:43  started   stopped 09-26 07:01
-- t37_lam125_g175_L1024_a-3d50c19  created 09-26 06:43  started 09-26 07:02  stopped 09-26 07:03
-- t37_lam125_g175_L1024_b-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L1024_c-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L1024_d-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L1024_e-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L1024_f-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g175_L1024_g-3d50c19  created 09-26 06:43  started   stopped 09-26 07:02
-- t37_lam125_g175_L1024_h-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g125_L1024_a-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g125_L1024_b-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g125_L1024_c-3d50c19  created 09-26 06:43  started   stopped 09-26 07:02
-- t37_lam125_g125_L1024_d-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g125_L1024_e-3d50c19  created 09-26 06:43  started   stopped 
-- t37_lam125_g125_L1024_f-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n64_00-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n64_01-3d50c19  created 09-26 06:43  started 09-26 07:03  stopped 09-26 07:28
-- t38_lam125_n64_02-3d50c19  created 09-26 06:43  started 09-26 07:03  stopped 09-26 07:28
-- t38_lam125_n64_03-3d50c19  created 09-26 06:43  started 09-26 07:03  stopped 09-26 07:28
-- t38_lam125_n64_04-3d50c19  created 09-26 06:43  started 09-26 07:08  stopped 09-26 07:28
-- t38_lam125_n64_05-3d50c19  created 09-26 06:43  started 09-26 07:12  stopped 09-26 07:28
-- t38_lam125_n64_06-3d50c19  created 09-26 06:43  started 09-26 07:13  stopped 09-26 07:28
-- t38_lam125_n64_07-3d50c19  created 09-26 06:43  started 09-26 07:14  stopped 09-26 07:28
-- t38_lam125_n64_08-3d50c19  created 09-26 06:43  started 09-26 07:12  stopped 09-26 07:28
-- t38_lam125_n64_09-3d50c19  created 09-26 06:43  started 09-26 07:18  stopped 09-26 07:28
-- t38_lam125_n64_10-3d50c19  created 09-26 06:43  started 09-26 07:19  stopped 09-26 07:28
-- t38_lam125_n64_11-3d50c19  created 09-26 06:43  started 09-26 07:19  stopped 09-26 07:28
-- t38_lam125_n64_12-3d50c19  created 09-26 06:43  started 09-26 07:20  stopped 09-26 07:28
-- t38_lam125_n64_13-3d50c19  created 09-26 06:43  started 09-26 07:21  stopped 09-26 07:28
-- t38_lam125_n64_14-3d50c19  created 09-26 06:43  started 09-26 07:25  stopped 09-26 07:28
-- t38_lam125_n64_15-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_00-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_01-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_02-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_03-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_04-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_05-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_06-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_07-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_08-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_09-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_10-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_11-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_12-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_13-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_14-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam130_n64_15-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_00-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_01-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_02-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_03-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_04-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_05-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_06-3d50c19  created 09-26 06:43  started   stopped 
-- t38_lam125_n192_07-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_00-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_01-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_02-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_03-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_04-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_05-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_06-3d50c19  created 09-26 06:44  started   stopped 
-- t38_lam130_n192_07-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam140_n288_c2n-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam140_n288_cn-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam140_n288_cn2-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam140_n288_cn4-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam140_n288_cn8-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam140_n288_cn16-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam125_n288_cn3-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam125_n288_cn6-3d50c19  created 09-26 06:44  started   stopped 
-- t39_six_lam125_n288_cn16-3d50c19  created 09-26 06:44  started   stopped 
-- t39_eight_lam125_n1024_cn4-3d50c19  created 09-26 06:44  started   stopped 
-- t39_eight_lam125_n1024_cn8-3d50c19  created 09-26 06:44  started   stopped 
-- t39_eight_lam125_n1024_cn16-3d50c19  created 09-26 06:44  started   stopped 
-- t39_eight_lam150_n1024_cn2-3d50c19  created 09-26 06:44  started   stopped 
-- t39_eight_lam150_n1024_cn3-3d50c19  created 09-26 06:44  started   stopped 
-- t39_eight_lam150_n1024_cn6-3d50c19  created 09-26 06:44  started   stopped 
-- t40_three_lam125_n768_e20-3d50c19  created 09-26 06:44  started   stopped 09-26 07:26
-- t40_three_lam125_n768_e30-3d50c19  created 09-26 06:44  started   stopped 
-- t40_three_lam125_n768_e40-3d50c19  created 09-26 06:44  started   stopped 
-- t40_three_lam125_n768_e60-3d50c19  created 09-26 06:44  started   stopped 
-- t40_three_lam125_n768_e80-3d50c19  created 09-26 06:44  started   stopped 
-- t40_three_lam125_n768_e120-3d50c19  created 09-26 06:44  started   stopped 
-- t40_three_lam125_n768_e160-3d50c19  created 09-26 06:44  started   stopped 
-- t40_gas_lam110_n1024_e20-3d50c19  created 09-26 06:44  started   stopped 
-- t40_gas_lam110_n1024_e40-3d50c19  created 09-26 06:44  started   stopped 
-- t40_gas_lam110_n1024_e80-3d50c19  created 09-26 06:44  started   stopped 
-- t40_gas_lam110_n1024_e160-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam125_n384_c4n-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam125_n384_c2n-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam125_n384_cn-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam125_n384_cn2-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam125_n384_cn4-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam125_n384_cn8-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam140_n384_c4n-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam140_n384_c2n-3d50c19  created 09-26 06:44  started   stopped 09-26 07:26
-- t41_lam140_n384_cn-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam140_n384_cn2-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam140_n384_cn4-3d50c19  created 09-26 06:44  started   stopped 
-- t41_lam140_n384_cn8-3d50c19  created 09-26 06:44  started   stopped 
-- t42_interchangeable_lam102_n512_e64-3d50c19  created 09-26 06:44  started   stopped 
-- t42_interchangeable_lam102_n512_e128-3d50c19  created 09-26 06:44  started   stopped 
-- t42_interchangeable_lam102_n512_e256-3d50c19  created 09-26 06:44  started   stopped 
-- t42_interchangeable_lam102_n512_e512-3d50c19  created 09-26 06:44  started   stopped 
-- t42_interchangeable_lam102_n512_e1024-3d50c19  created 09-26 06:44  started   stopped 
-- t42_interchangeable_lam102_n512_e2048-3d50c19  created 09-26 06:44  started   stopped 
-- t42_named_lam102_n512_e64-3d50c19  created 09-26 06:44  started   stopped 
-- t42_named_lam102_n512_e128-3d50c19  created 09-26 06:44  started   stopped 
-- t42_named_lam102_n512_e256-3d50c19  created 09-26 06:44  started   stopped 
-- t42_named_lam102_n512_e512-3d50c19  created 09-26 06:44  started   stopped 
-- t42_named_lam102_n512_e1024-3d50c19  created 09-26 06:44  started   stopped 09-26 07:26
-- t42_named_lam102_n512_e2048-3d50c19  created 09-26 06:44  started   stopped 
-- t43_allotrope_lifetime_g1000-3d50c19  created 09-26 06:44  started   stopped 
-- t43_allotrope_lifetime_g1500-3d50c19  created 09-26 06:44  started   stopped 
-- t43_allotrope_lifetime_g2000-3d50c19  created 09-26 06:44  started   stopped 
-- t43_allotrope_lifetime_g2500-3d50c19  created 09-26 06:44  started   stopped 
-- t43_allotrope_lifetime_g3000-3d50c19  created 09-26 06:44  started   stopped 
-- t43_allotrope_lifetime_g3433-3d50c19  created 09-26 06:44  started   stopped 
-- t43_allotrope_lifetime_g3697-3d50c19  created 09-26 06:44  started   stopped 
+- none
 
 ## finished results in the bucket (config.csv present)
 - gatec2_2d_n2000_a/gatec2_2d_n2000_a.csv  (2026-09-25 02:27:30, 6803 bytes)
@@ -644,5 +268,38 @@ until a person downloads, checks and commits them.
 - t46_rhom02_lam130_s2/t46_rhom02_lam130_s2.csv  (2026-09-26 23:40:51, 83223 bytes)
 - t47_recurl_keeps_lam130/t47_recurl_keeps_lam130.csv  (2026-09-26 23:02:33, 55691 bytes)
 - t47_recurl_returns_lam130/t47_recurl_returns_lam130.csv  (2026-09-26 23:55:23, 56034 bytes)
+- t48_local_2d_lam125_w1/t48_local_2d_lam125_w1.csv  (2026-09-27 17:08:31, 203474 bytes)
+- t48_local_2d_lam125_w4/t48_local_2d_lam125_w4.csv  (2026-09-27 17:08:45, 200831 bytes)
+- t48_local_2d_lam140_w1/t48_local_2d_lam140_w1.csv  (2026-09-27 17:03:07, 246208 bytes)
+- t48_local_2d_lam140_w4/t48_local_2d_lam140_w4.csv  (2026-09-27 17:06:51, 247953 bytes)
+- t48_local_3d_one_lam125_w1/t48_local_3d_one_lam125_w1.csv  (2026-09-27 20:00:39, 210737 bytes)
+- t48_local_3d_one_lam125_w4/t48_local_3d_one_lam125_w4.csv  (2026-09-27 20:08:57, 213082 bytes)
+- t48_local_3d_one_lam140_w1/t48_local_3d_one_lam140_w1.csv  (2026-09-27 19:37:42, 251817 bytes)
+- t48_local_3d_one_lam140_w4/t48_local_3d_one_lam140_w4.csv  (2026-09-27 20:10:15, 248753 bytes)
+- t48_local_3d_two_lam125_w1/t48_local_3d_two_lam125_w1.csv  (2026-09-27 19:10:27, 216600 bytes)
+- t48_local_3d_two_lam125_w4/t48_local_3d_two_lam125_w4.csv  (2026-09-27 19:23:10, 218265 bytes)
+- t48_local_3d_two_lam140_w1/t48_local_3d_two_lam140_w1.csv  (2026-09-27 18:59:52, 248177 bytes)
+- t48_local_3d_two_lam140_w4/t48_local_3d_two_lam140_w4.csv  (2026-09-27 19:24:09, 255911 bytes)
+- t48_local_4d_three_lam125_w1/t48_local_4d_three_lam125_w1.csv  (2026-09-27 19:23:34, 176169 bytes)
+- t48_local_4d_three_lam125_w4/t48_local_4d_three_lam125_w4.csv  (2026-09-27 20:23:36, 173835 bytes)
+- t48_local_4d_three_lam140_w1/t48_local_4d_three_lam140_w1.csv  (2026-09-27 20:04:36, 200063 bytes)
+- t48_local_4d_three_lam140_w4/t48_local_4d_three_lam140_w4.csv  (2026-09-27 19:20:19, 195682 bytes)
+- t49_cube_eight_lam110_interchangeable/t49_cube_eight_lam110_interchangeable.csv  (2026-09-27 19:27:51, 8845196 bytes)
+- t49_cube_eight_lam110_named/t49_cube_eight_lam110_named.csv  (2026-09-27 18:16:25, 10764034 bytes)
+- t49_cube_eight_lam115_interchangeable/t49_cube_eight_lam115_interchangeable.csv  (2026-09-27 18:36:46, 8909878 bytes)
+- t49_cube_eight_lam115_named/t49_cube_eight_lam115_named.csv  (2026-09-27 18:12:29, 10889501 bytes)
+- t49_cube_eight_lam130_interchangeable/t49_cube_eight_lam130_interchangeable.csv  (2026-09-27 19:08:46, 10267205 bytes)
+- t49_cube_eight_lam130_named/t49_cube_eight_lam130_named.csv  (2026-09-27 18:00:44, 9649020 bytes)
+- t49_cube_six_lam110_interchangeable/t49_cube_six_lam110_interchangeable.csv  (2026-09-27 17:09:35, 9196173 bytes)
+- t49_cube_six_lam110_named/t49_cube_six_lam110_named.csv  (2026-09-27 16:49:44, 9978570 bytes)
+- t49_cube_six_lam115_interchangeable/t49_cube_six_lam115_interchangeable.csv  (2026-09-27 17:07:59, 8950889 bytes)
+- t49_cube_six_lam115_named/t49_cube_six_lam115_named.csv  (2026-09-27 16:50:16, 9945405 bytes)
+- t49_cube_six_lam125_interchangeable/t49_cube_six_lam125_interchangeable.csv  (2026-09-27 17:09:04, 7322326 bytes)
+- t49_cube_six_lam125_named/t49_cube_six_lam125_named.csv  (2026-09-27 16:49:08, 6810585 bytes)
+- t50_front_matter_e0/t50_front_matter_e0.csv  (2026-09-27 18:22:44, 3068179 bytes)
+- t50_front_matter_e1/t50_front_matter_e1.csv  (2026-09-27 18:35:42, 3118593 bytes)
+- t50_front_matter_e10/t50_front_matter_e10.csv  (2026-09-27 18:00:45, 3192180 bytes)
+- t50_front_matter_e3/t50_front_matter_e3.csv  (2026-09-27 18:30:16, 3136962 bytes)
+- t50_front_matter_e6/t50_front_matter_e6.csv  (2026-09-27 18:19:38, 3139331 bytes)
 
 ## scratch from runs that died (partial/)
