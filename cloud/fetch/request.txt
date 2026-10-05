@@ -11,3 +11,9 @@ t44_*
 t45_*
 t46_*
 t47_recurl_*
+# 2026-10-05: T48, T49 and T50 (launched 27 September, finished, never fetched), and the four replicas of T37's
+# cold cell that are missing from results/ (files d and f of t37_lam125_g125_L1024; present ones are skipped).
+t48_*
+t49_*
+t50_*
+t37_lam125_g125_L1024_*

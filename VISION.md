@@ -1015,6 +1015,44 @@ T48 and T49 depend on it. Her words, put in order.
   meaningful progress." Recorded because it is why the bar in "What success means" matters: progress here means claims
   that can fail, tested so that a physicist can check them.
 
+Update 40 (recorded 2026-10-05; the decision is of 2026-09-25, 18:55 ET): **DECISION (the author's): gravity gets a
+quantity living on the points of space, on the condition that it matches curve-first gravity.** Her words: "If it
+matches curve first that's right." Why it is recorded here and out of order: it was written into the working copy that
+evening as "Update 33" and never committed; the record went on from the commit before it, and the number 33 was used
+the next morning for her five positions of 26 September. She confirmed on 5 October that the decision stands. The text
+below is the text of that evening, with its references brought up to date. Why this page changes: the model's flat
+space is gapped (every move out of it costs 32, 64 or 128 with four, six or eight links), so by the published result on
+gapped media it can pass on no pull at a distance at any λ (ASSUMPTIONS O60 (a)); the exact calculation of O61 shows
+that a quantity on the points that can vary smoothly would give a pull of Newton's shape if relics or energy are its
+sources. This was option A of `docs/design/gravity_brief.md`, section 6.
+
+- **What "matches curve-first" requires** (her idea as recorded on the plain-language page: space has its own drive to
+  curve, matter supplies the energy that starts the curve rather than causing it, gravity belongs to space and not to
+  X, and wherever Einstein's account has been measured hers gives the same numbers): the quantity lives on the points
+  of space, not of X; how a dip spreads is set by space's own rule (the links between points); matter and energy set
+  only where a dip starts and how deep, from their own energy, so the pull scales with energy; and the dip moves matter.
+- **Under S1** this is a new knob: its form, its coupling to the wiring and to energy, and its constants are to be fixed
+  in a design brief (`docs/design/gravity_field_brief.md`, not yet written) before any run, and every setting run is
+  published. The model with it is our family, never CQG.
+- *Ours, unverified (general knowledge, to verify):* in Einstein's gravity, slow objects fall almost entirely because
+  time runs at different rates in different places (the weak-field metric's time part carries Newton's potential);
+  the curving of space matters mainly for fast things such as light. The model has no time, so the quantity on the
+  points would stand for the missing part: how fast time runs at each point. This connects with Update 25 (time as a
+  fourth curled direction) and with the local pace rule she adopted the next day (Update 36, 20:00 ET: the pace of the
+  present is set by local conditions, slower where matter sits). One way to make it literal, a candidate only: a
+  point's value sets how often it may change, so its clock runs fast or slow, and whatever wanders collects where
+  clocks run slow.
+- **The author's question, the same minute:** is the missing pull just three dimensions against four (space against
+  spacetime)? *Ours:* yes in that sense and not in the other. A fourth space-like direction in the network does not
+  help: the eight-link model's flat space is stiffer still (its cheapest move out costs 128, against 64 with six
+  links). What the six-link model lacks is time, the fourth dimension of spacetime, which is where the everyday pull
+  lives in Einstein's account; the quantity on the points is the model's stand-in for it.
+- **How it sits with what came after** (*ours*, 5 October). Position 2 of Update 33 (gravity and the count of hidden
+  degrees of freedom) and the drive-and-cost reading of Update 35 are about *why* space would curve; this decision is
+  about *what carries* a pull across a distance in a model whose flat space cannot. They do not compete. The entropic
+  route (a pull from counting, at a temperature above zero) is the other candidate carrier, and it is tested first
+  because it needs no new knob (the hidden count and the warm-bath pull, ASSUMPTIONS O87).
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
