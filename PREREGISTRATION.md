@@ -2192,6 +2192,22 @@ seeds would move to longer tubes. Not run.
 That the scrap is dark matter; anything at λ ≠ 1.25 or in a sealed box, where the bath heats as the tube converts (T9);
 whether the columns last (T19 says they anneal at fixed coupling; T25 that they freeze in when cooled).
 
+### Reading, 2026-09-27 (ASSUMPTIONS O77), and a second reading from the saved wiring, 2026-10-05 (ASSUMPTIONS O88)
+
+**MANY SEEDS, MANY SCRAPS** at g = 1.5 and 1.75 by the rule above (27 September); P1 and P2 hold, P3 fails at the warmer
+couplings. The cold cell was completed on 5 October (12 replicas; files d and f had not been fetched): P2 holds (Avrami
+exponent 2.02), P3 holds (0.71); its scrap count is not covered by the rule as written.
+
+**Second reading, post hoc, 5 October: the verdict stands by the letter, and what it measured in the long warm tubes was
+melting, not scrap.** Read from every saved end state: at 1,024 columns 55 % (g = 1.5) and 74 % (g = 1.75) of points have
+opened past flat, the square count is below a sheet's, and the tubes took energy from the bath. The stop rule above
+watches the square count, which melting lowers too. Where the sheet ends clean (g = 1.5 up to 256 columns; g = 1.25 at
+1,024) the curled columns grow in proportion to length, about one per 57 to 72 columns at g = 1.5, which is the answer to
+this section's question. The "defected mosaic" of O77 is withdrawn. A reading of the cold cell made in a chat session on
+5 October (energy left per point over the release, "the scrap is not the dark matter by a factor of ten") is **not a
+pre-registered verdict and is withdrawn** (O88, O89). T51 is the run that measures what it tried to.
+
+
 ---
 
 
@@ -2924,6 +2940,16 @@ the inferred ONE SPACE. For the control and the one-curled torus (4 × 8 × 12) 
 inferred ONE SPACE stays marked inferred there. Consequence, stated before reading: on the two- and three-curled tori hers
 and ours now coincide, so those cells cannot tell her picture from ours; what they can test is the shared expectation.
 
+### Reading, 2026-10-05 (ASSUMPTIONS O91)
+
+Fetched and checked against the committed configs on 5 October; energy conserved to 10⁻¹² in every run. Control, 4 × 48:
+**ONE SPACE** at λ = 1.25, **ADVANCES ONLY** at 1.40. Two curled, 4 × 4 × 18: **ADVANCES ONLY** at 1.25; **DAMAGED** at 1.40
+by the letter (cells: 5 damaged, 2 open, 1 advanced; and 3 open, 3 advanced, 2 damaged). One curled, 4 × 8 × 12: **STAYS**
+at both. Three curled, eight links: **STAYS** at 1.25, **ADVANCES ONLY** at 1.40. The owner's ADVANCES ONLY for the two-
+and three-curled tori holds in two settings of four; ours the same; the inferred ONE SPACE holds only for the control at
+1.25. Not scored: at λ = 1.40 the two-curled torus opened every direction into one connected space in 5 replicas of 16.
+
+
 ## T49. One fully curled piece: does a single hypercube open all its directions, and in what order? (pieces 5 and 6; written 2026-09-27, 12:45 ET, before any run)
 
 ### Why
@@ -2984,6 +3010,16 @@ Update 24's caveat.
 Her words, on reading ours ("opens fully only where it has a way downhill; interchangeable points hold it shut much
 longer"): "seems reasonable." Recorded as **hers: ours, as written above**, replacing the inferred ALL OPEN, IN ORDER.
 Consequence, stated before reading: hers and ours coincide, so T49 tests the shared expectation and cannot separate them.
+
+### Reading, 2026-10-05 (ASSUMPTIONS O92)
+
+Fetched and checked on 5 October. 6-cube: λ = 1.10, named **PART OPEN** (path IN ORDER), interchangeable **STUCK**;
+λ = 1.15, named **PART OPEN**, interchangeable **MIXED**; λ = 1.25, **PART OPEN** with both (all open in 4 of 32 named,
+14 of 32 interchangeable; paths MIXED). 8-cube: **STUCK** at λ = 1.10 and 1.15 with both; **PART OPEN**, path TOGETHER, at
+1.30 with both (5 of 32 damaged). The shared prediction holds where the cube is stuck (6-cube named PART OPEN;
+interchangeable mostly STUCK) except that the stuck 8-cube did not move at all, and **fails where the cube has a way
+downhill**: it does not open fully.
+
 
 ## T50. Does the tube's opening front slow where energy sits? (piece 10; the owner's question of 26 September; written 2026-09-27, 13:20 ET, before any run)
 
@@ -3048,3 +3084,105 @@ and not yet answered: in her picture of 26 September, where the front is the pre
 energy sits correspond to clocks running slower near mass, as measured, or to the opposite? *Ours:* read plainly it is
 the opposite; the mapping from the front's pace to a clock's rate is hers to define, and the verdict is scored by the
 rule above whatever the mapping.
+
+### Reading, 2026-10-05 (ASSUMPTIONS O93)
+
+Fetched and checked on 5 October; 24 valid replicas at every energy; energy conserved exactly. Q = 1.13, 0.97, 0.80, 0.71
+at e = 1, 3, 6, 10: **NO EFFECT, NO EFFECT, SPEEDS, SPEEDS**. Hers (SPEEDS) holds at 6 and 10; ours holds as written.
+
+
+---
+
+## T51. How much scrap freezes in, and how does that depend on how slowly the new space cools? Many natural seeds, the fair clock (paper 2; piece 5; written 2026-10-05, about 05:00 ET, before any run)
+
+### Why
+
+Paper 2 has two halves that have never been joined. T37 let long tubes seed themselves and counted what was left at a
+fixed coupling, where T19 says every scrap heals in time; T25 cooled a sheet holding one planted scrap and found it
+freezes in. What is missing is the number the hypothesis needs: **when a space opens from several seeds and then cools,
+what share of the release stays frozen in as scrap, and how does that share fall as the cooling gets slower?**
+
+The owner's target, stated on 5 October, is the shares at spacetime's birth, not today's (VISION Update 41). *Ours,
+unverified (ASSUMPTIONS O89):* at birth nearly all the energy is the hot lump, and a cold leftover that is to be the
+dark matter needs to be a sliver, of order 0.67 eV divided by the temperature of birth, under one part in a million.
+The 5 to 14 % that T37's clean tubes hold at their stopping time (O88) is far above that. So what matters is the
+*shape* of the fall with cooling time. If the frozen share falls gently, as a power of the cooling time, a small leftover
+is the ordinary outcome of slow cooling and its size is tied to how slowly the new space cooled. If it falls off a cliff,
+a slowly cooled space keeps essentially none. If it does not fall, every opening keeps several per cent, which is too
+much. This is what cosmology calls freeze-out and what the Kibble–Zurek argument addresses for defects (general
+knowledge, to verify; neither read by us).
+
+It is also the first test of the fair clock (VISION Update 41; ASSUMPTIONS O90) as a prediction rather than a
+re-reading: T25's survival numbers were measured at 96 points; if the fair clock is the right one, the same numbers
+should appear at 1,024 points when times are counted in fair sweeps.
+
+**Disclosed.** T37's saved end states were read on 5 October before this was written (O88): the long tubes at g = 1.5
+and 1.75 melted, the tubes at g = 1.25 and the short ones at 1.5 are clean sheets holding scraps, and relics per tube
+rise in proportion to length there. That reading chose this design: the coldest opening coupling T37 used, a stop rule
+on the share of flat points, and sizes at which the sheet stayed clean. The kernel's speed was timed on one saved state
+(300 sweeps at 4,096 points, nothing kept) to size the jobs. No run of this protocol exists.
+
+### What will be run
+
+`scripts/run_scrap_freeze.py` (new; tests in `tests/test_t51.py` before any run). Tubes 4 × L at λ = 1.25, named points,
+the thermal chain of T7 to T37 (`cqg.run_chain`, Metropolis, no cap).
+
+1. **Opening.** From the exact tube at fixed coupling g_hot = 1.25, read every 100 sweeps; stop at the first reading
+   at which at least 90 % of points are at d = 2 (the share of flat points, T37's own line between CLEAN and DEFECTED;
+   not the square count, which melting also lowers). Cap 600,000 sweeps; a replica that does not get there is recorded
+   as not opened and not followed. The random stream of the opening depends on the config's seed, N and the replica
+   only, so every cooling time starts from the **same** opened sheet (a paired design).
+2. **Cooling.** From a copy of that sheet, the coupling falls from 1.25 to g_cold = 0.25 by the same factor each block
+   (T25's schedule) over t_cool **fair sweeps**, and is then held at 0.25 for 5,000 fair sweeps. One fair sweep is
+   N / 96 sweeps of the chain (O90), so that every local pair of links is offered as often per fair sweep as it is per
+   sweep at T19's and T25's 96 points. Blocks are 250 fair sweeps. The final graph is saved.
+3. **Cells.** L = 256 (N = 1,024): t_cool = 0 (a quench), 1,000, 3,000, 10,000, 30,000, 100,000 with 40 replicas, and
+   300,000 with the first 20 of the same replicas. L = 128 and L = 512 at t_cool = 10,000, 40 replicas each, for the
+   size check. Seeds 20261005 (L = 256), 20261006 (L = 128), 20261007 (L = 512). On Batch, one queue file.
+
+### Definitions, fixed now (`scripts/analyse_t51.py`, tested before any run)
+
+Read at the end of the opening, at every block, and from the saved final graph, exactly as T37 reads them: the
+leftovers are the connected pieces of points not at d = 2; a **column** is a piece of exactly four points all at d = 1
+(paper 2's relic); anything else is **other**. The **energy left** is 16(N − S) + 4λX of the graph, exact, and the
+**frozen share** is the energy left per point at the end of the hold divided by the release per point, 4(λ − 1) = 1.
+A replica whose final graph has fewer than 90 % of points at d = 2 is MELTED OR DEFECTED: reported, and left out of
+the survival counts.
+
+- **Survival** S(t_cool) = (columns at the end of the hold, summed over followed replicas) / (columns at the end of the
+  opening, summed over the same replicas), with a standard error from resampling replicas. S_E(t_cool) is the same
+  ratio for the energy left.
+- **P1 (the fair clock).** At L = 256, S(10,000), S(30,000) and S(100,000) each lie within 0.20 of T25's 0.79, 0.78 and
+  0.37 (15/19, 14/18, 7/19 at 96 points, times in sweeps).
+- **P2 (the size check).** At t_cool = 10,000 the columns left per column of tube at the end of the hold agree between
+  L = 128, 256 and 512 within two standard errors of their differences, pair by pair.
+- **The owner's question, scored on the decade ratios** R(t) = S(10 t) / S(t) at t = 10,000 and t = 30,000 (the two
+  decades beyond the cooling time at which T25 first lost relics): **GENTLE** if both lie in [0.25, 0.85]; **CLIFF** if
+  either is below 0.25; **FROZEN** if both are above 0.85; MIXED otherwise. If S(10,000) or S(30,000) is zero the
+  verdict is CLIFF.
+- Reported, not scored: the frozen share at every t_cool; S_E beside S; what becomes of the "other" pieces; the share
+  of replicas MELTED OR DEFECTED; columns per seed at the end of the opening against T37's 0.3 and T17's 0.29 (the seed
+  count is not re-measured here; the columns per tube are).
+
+### Predictions
+
+**The owner's:** not yet given. To be recorded before any result is read; her T25 prediction was FREEZES IN with no
+freeze-out time named.
+
+**Ours, unverified:** P1 holds. P2 holds. GENTLE: the survival falls by roughly half per decade of cooling time beyond
+10,000 fair sweeps (T25's one measured decade gave 0.47), because a relic's healing time is broadly spread (T19: 500 to
+13,000 sweeps at g = 1.25, 4,000 to 80,500 at 1.0) and a geometric cooling spends a fixed share of its time in each
+band of coupling. The "other" pieces heal faster than the columns. The frozen share after the quench is near T37's 0.08
+and falls below 0.03 at 300,000.
+
+### Named or interchangeable points
+
+Named, as T7 to T37. With interchangeable points a flat sheet carries far more renamings than a sheet with a scrap in
+it, so healing would be favored by a factor of order N and the frozen share would fall faster (paper 2's own caveat).
+Not run.
+
+### What this cannot show
+
+That the scrap is dark matter, or that it is not. How a fair sweep maps onto physical time, without which no cooling
+time here can be set beside a temperature of birth. Anything at λ ≠ 1.25, in three directions, or sealed. Whether a
+scrap is cold, clumps, or passes through ordinary matter. The fall beyond 300,000 fair sweeps is an extrapolation.

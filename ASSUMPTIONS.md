@@ -2041,6 +2041,275 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     least one direction already open (the tori of T48), or a foam of tiny fully curled pieces that open separately and
     then join, which no run has shown. Which is the owner's picture is her call. T48 and T49 are pre-registered for the two.
 
+- **O86 The exact results of the chat sessions of 4 and 5 October, recorded, re-run and corrected.** (2026-10-05, 05:30 ET;
+  `docs/HANDOFF_2026-10-05_chat.md` section 2, computed in chat against a copy of the 26 September `main`; every number
+  below was re-run here with the script named. EXPLORATORY: exact arithmetic on built tori, not a pre-registered test.)
+  - **(a) Flat space carries no residue** (exact; the ladder of O41 and O49). Flat space sits at 0 per point at every λ and
+    each curled rung sits exactly a = 4(λ − 1) per point above the next. So in this energy dark energy cannot be something
+    left over in flat space itself; it would have to come from an opening or from what an opening leaves behind. Below
+    λ = 1 the curled rungs lie below flat space.
+  - **(b) The three releases under a tie of any shape** f(d), with f(0) = f(3) = 0 (O70): a − f(1), a + f(1) − f(2),
+    a + f(2), together 3a. With one constant: Update 30's first form κ d(D − d), withdrawn the same day, gives
+    a − 2κ, a, a + 2κ; the follow form κ(D − d) that replaced it gives a − 2κ, a + κ, a + κ. Under either, a first opening
+    that nets nothing fixes the ratio of the other two (1 : 2, or 1 : 1), so 5.36 cannot be reached with one constant at
+    any λ. **Correction to the hand-over:** it calls κ d(D − d) "the Update-30 form"; that is the withdrawn one. The
+    conclusion holds for both. Two constants reach any two ratios, which is a fit: first 0 and the others 1 : 5.36 needs
+    f(1) = a, f(2) = 1.53a, giving shares 0, 0.157, 0.843 at every λ.
+  - **(c) Walls under that fitted tie, brute force over every switch**
+    (`python scripts/exact_walls_tie_shape_d.py --lam=L --f=0,a,1.53a,0 4,4,4x8 4,4,18 4,12,12 6,6,8`), gas of 6-cubes /
+    one direction open / two open / flat: λ = 1.02: 15.36, 30.91, 45.08, 64.00; λ = 1.10: 12.80, 26.54, 33.41 (flat 64);
+    λ = 1.25: 8.00, 18.36, 11.52. Identical to the hand-over's table. X is stuck and flat space stable at all three, the
+    partly open states are stuck too, and no opening after the first is free. At λ = 1.02 each wall is higher than the
+    one before.
+  - **(d) Pushes cannot shape the shares.** A wall is a hill, not a toll: the climb is returned on the far side. Walls
+    are fixed per region while releases grow with its size. So beyond a few cubes the pushes' part of the books goes to
+    zero; what they decide is the order of events. Only energy held in partly open states (a tie) or a term that
+    depends on the kind can move the shares.
+  - **(e) The aim of the fit is withdrawn** (O89): 5.36 is not a ratio of releases at birth.
+
+- **O87 The hidden count: what a cut hides, counted exactly.** (2026-10-05; the chat's definition and first numbers,
+  `scripts/hidden_count.py`; the state space corrected here. Entry completed below when `src/graphity/hidden.py` and its
+  tests are in.)
+  - **Definition (the chat's).** For a region R of a graph: remove every link with both ends in R, and count the ways of
+    putting links back inside R so that every point regains its links, every link with an end outside R is untouched,
+    and the whole graph's energy is what it was. The logarithm of the count is the hidden entropy. Its relatives are the
+    counts Jacobson and Verlinde use (information hidden behind a surface), which grow with the surface's area.
+  - **The chat's numbers, reproduced here with the script as received:** flat 8 × 8 torus, blocks 2 × 2, 2 × 3 and 3 × 3:
+    count 1. The chat also reports 1 for a two-column window (8 points) round a four-point relic of a saved T37 end
+    state, and that a three-column window did not finish.
+  - **Correction, found on review.** The script as received does not restrict the wirings to the model's own: it allows
+    links inside one side and does not apply the hard-core rule (its docstring uses "hard-core" for "no double links",
+    which is not this repository's meaning, Q2). So it can count graphs the model forbids. Where the count came out 1
+    that did no harm, since the original is always counted. The restriction also makes the search small enough to reach
+    wider windows. The version to quote is `graphity.hidden`.
+  - *Ours, unverified:* in a 4 × L tube a window of whole columns has the same 8 links crossing its cut whatever its
+    width, while its points grow with the width. So the tube separates the two scalings cleanly: a count that grows with
+    the window is tied to the volume, and one that does not is bounded by the cut.
+
+- **O88 T37 read again from the saved wiring: the long warm tubes melted; where the sheet stays clean, relics grow in
+  proportion to length; and the "scrap share" is a snapshot, not a prediction.** (2026-10-05, 03:30 to 05:20 ET; every
+  saved T37 end state, 340 graphs, read exactly: energy 16(N − S) + 4λX, the local dimension of every point, the square
+  count; plus the run lengths in the CSVs. POST HOC: this is a second reading of a pre-registered run, after its
+  verdict; T37's verdict stands as scored and what changes is O77's account of it. The four cold replicas missing from
+  the repository on 27 September, files d and f, were fetched and accepted on 5 October; the cold cell is now complete
+  at 12.)
+  - **What was read**, means per cell (share of points curled, d < 2 / flat, d = 2 / opened past flat, d > 2; squares
+    per point; energy left per point, median):
+
+    | g | L | curled | flat | past flat | squares | energy left |
+    |---|---|---|---|---|---|---|
+    | 1.25 | 1024 | 0.04 | 0.95 | 0.01 | 1.006 | 0.08 |
+    | 1.50 | 64 / 128 / 256 | 0.02 / 0.02 / 0.03 | 0.97 / 0.97 / 0.94 | 0.00 / 0.01 / 0.03 | 1.005 / 1.004 / 1.002 | 0.06 / 0.10 / 0.14 |
+    | 1.50 | 512 | 0.12 | 0.62 | 0.26 | 0.965 | 1.56 |
+    | 1.50 | 1024 | 0.17 | 0.28 | 0.55 | 0.903 | 2.80 |
+    | 1.75 | 64 / 128 | 0.03 / 0.03 | 0.95 / 0.84 | 0.02 / 0.13 | 1.001 / 0.974 | 0.15 / 0.87 |
+    | 1.75 | 256 / 512 / 1024 | 0.05 / 0.08 / 0.10 | 0.58 / 0.33 / 0.16 | 0.37 / 0.59 / 0.74 | 0.915 / 0.863 / 0.830 | 2.08 / 3.03 / 3.50 |
+
+  - **The long warm tubes melted.** O77 read them as "a defected mosaic", patches that started independently and did
+    not fit where they met. The wiring says otherwise. At 1,024 columns 55 % (g = 1.5) and 74 % (g = 1.75) of the points
+    have opened *past* flat, which is the direction of the random phase; the square count has fallen below a sheet's;
+    and the tubes **took energy from the bath** (the recorded release per point is −1.75 and −2.49, where an opening
+    releases +1). A mosaic of flat patches with bad joints would have most points flat and the damage along lines.
+    Whether these end states had reached the equilibrium of their coupling or were still on the way is not known: the
+    runs stopped. Two things in the protocol hid the melting: the
+    run stops when the *square count* has fallen 97 % of the way from the tube's to the sheet's, which melting does too;
+    and the long tubes were stopped after far less local time than the short ones (in fair sweeps, O90: 2,293, 2,263,
+    1,915, 1,091 and 461 at g = 1.5 for L = 64 to 1024, with a settle of 900 down to 56). *Ours, unverified:* this is
+    the drift of the melting point with size that the project already had on its list (TASKS T9; VISION Update 11:
+    a random network's count of arrangements grows faster than its size, so a larger sheet melts at a lower coupling).
+    A sheet of 96 points heals its scrap at g = 1.5 (T19); a tube of 4,096 melts there.
+  - **So O77's "for the thesis" paragraph is withdrawn**: the energy left in the long warm tubes is melt, not scrap, and
+    "a network of mismatched boundaries" was not read from the wiring; it was inferred from a count. (The lesson is the
+    one in CLAUDE.md: read positions before naming a geometry.) The pre-registered verdict MANY SEEDS, MANY SCRAPS is
+    scored on energy left per tube and stands by the letter; what it measured at g = 1.75 and in the longest tubes at 1.5
+    was melting.
+  - **What does hold, and it is the answer to T37's question.** Where the end state is a clean sheet, the relics grow
+    with the length: at g = 1.5 the curled four-point columns per tube are 1.12, 1.98 and 3.55 at L = 64, 128 and 256,
+    about one per 57 to 72 columns, and the energy left per point rises from 0.06 to 0.14. At g = 1.25, L = 1024, twelve
+    tubes: 7.25 ± 0.79 columns and 15.0 other small pieces per tube, 20.6 ± 0.9 seeds, so 0.35 columns per seed (T17:
+    0.29 per extra seed); eleven of twelve are clean, with 0.05 to 0.21 per point left (mean 0.092, median 0.080), and one
+    is defected (0.535). In one tube T10's "one relic however large" becomes "relics in proportion to length" once the
+    tube is long enough to seed itself.
+  - **The "scrap share" of the hand-over (its section 2.2) is not a prediction of the model.** It divides the energy
+    left per point in the clean cold tubes, about 0.08, by the release per point, 1, and sets the result against the
+    0.84 that today's dark-to-ordinary ratio would ask for. Three things are wrong with that test. (1) It was framed
+    after the number existed (`analyse_t37.py` prints the energy left), and it is not in the pre-registration. (2) The
+    0.08 is a snapshot at a coupling where every relic heals in time (T19); stopped later it would be smaller, quenched
+    from a warmer bath it would be larger than 1. O18 said this of the sealed boxes on 22 September: such shares depend
+    on the protocol and cannot be read as a predicted ratio. (3) The target is wrong (O89): at birth a leftover dark
+    matter has to be a sliver, so 8 % is too much, not too little. **The verdict "the scrap is not the dark matter, by a
+    factor of ten" is withdrawn.** What can be measured is how the frozen share falls with the cooling time; that is
+    PREREGISTRATION T51.
+  - **Small corrections to the plain-language page of paper 2** as received: "13 to 30 % flat" and "2.8 to 3.5 per
+    point" are the 1,024-column cells only (means 16 and 28 %; per tube 13 to 39 %); at 512 columns and g = 1.5 the mean
+    is 62 % flat and 1.6 per point, and one tube of twenty ended clean.
+
+- **O89 The shares at birth, with the light counted; and the two shapes of tie that would match them.** (2026-10-05,
+  05:40 ET; the owner's decision of the same day that the target is the shares at spacetime's birth, VISION Update 41.
+  *Ours, unverified:* settled cosmology applied by us from general knowledge, none of it read for this entry; to be put
+  to a physicist. The walls are exact and EXPLORATORY.)
+  - **The arithmetic.** Matter and light were equal in energy when the universe was about 3,400 times smaller than now
+    (Planck 2018, general knowledge, to verify), at a temperature of 2.725 K × 3,400 ≈ 9,300 K ≈ 0.80 eV. Before that,
+    light and the other fast-moving ordinary stuff dominate, and matter's share is about 0.80 eV / T: dark matter
+    0.843 of it, 0.67 eV / T, which is O18's 0.7 eV / T; the mass of ordinary matter 0.157 of it, 0.13 eV / T. (Changes in
+    the number of kinds of fast particle move these by a factor of order 1.) Dark energy against light is about 7,500
+    today and falls as the fourth power of the temperature: 2 × 10⁻¹¹ (eV / T)⁴. At 1 MeV, when the light elements formed
+    by known physics, which is the latest a hot beginning can be placed: dark matter 7 × 10⁻⁷ of the energy, the mass of
+    ordinary matter 1.3 × 10⁻⁷, dark energy about 10⁻³⁵, and light and fast particles the rest.
+  - **What Update 35 left out.** Its shares at birth, 0.157 : 0.843 : 0, are the shares of ordinary matter's *mass*, dark
+    matter and dark energy among themselves. They are right as far as they go: the 5.36 does date from the start. But
+    the hot lump is missing from them, and the hot lump is nearly everything. The mass of ordinary matter is not the
+    ordinary release; it is the small excess of matter over antimatter that was left when the rest turned to light,
+    about one part in a billion of the particles (general knowledge, to verify), and nothing in the model speaks to it.
+  - **So, for a picture with three openings and dark energy first:** the first nets nothing, one of the other two
+    carries essentially everything (the hot lump), and the remaining one is either a sliver or nothing. With a tie
+    f = (0, f1, f2, 0) and releases a − f1, a + f1 − f2, a + f2 there are two such shapes, and neither has a constant to
+    fit: **"all at the last"**, f = (0, a, 2a, 0), releases 0, 0, 3a: nothing is released until the last direction opens,
+    which is the owner's "the three go together" (VISION Update 22); and **"all at the second"**, f = (0, a, −a, 0),
+    releases 0, 3a, 0: the second opening releases everything and a space with its last direction still curled costs
+    exactly what flat space costs.
+  - **Their walls, exact** (`scripts/exact_walls_tie_shape_d.py`; gas of 6-cubes / one open / two open / flat):
+
+    | shape | λ | gas | one open | two open | flat |
+    |---|---|---|---|---|---|
+    | all at the last, (0, a, 2a, 0) | 1.02 | 15.36 | 31.36 | 44.48 | 64 |
+    | | 1.10 | 12.80 | 28.80 | 30.40 | 64 |
+    | | 1.25 | 8.00 | 24.00 | 4.00 | 64 |
+    | all at the second, (0, a, −a, 0) | 1.02 | 15.36 | 28.48 | 48.32 | 64 |
+    | | 1.25 | 8.00 | −18.00 | 52.00 | 64 |
+
+    *Ours, reading the table:* in "all at the last" the first two openings have walls and no release to pay them, so
+    they would have to be carried by the bath; the last then goes almost free at λ = 1.25 (a wall of 4 against a
+    release of 3 per point). In "all at the second" at λ = 1.25 the one-open state has a way downhill (the negative
+    wall), so a space with one direction already open, which the owner allows (Update 39), would open its second
+    direction with no push and release everything, and the last direction would stay curled behind a wall of 52 with
+    nothing to gain: her prediction for T48 ("the first opens, the last stays curled") as a ground state. At λ = 1.02
+    the same state is stuck behind 28. Neither shape has been run, and under either the first step from a fully curled
+    gas nets nothing, so it has no front to drive it.
+  - **What this is not.** A derivation of anything. It says which shapes are consistent with the birth shares if the
+    arithmetic above is right; it leaves the temperature of birth, the sliver of dark matter and the excess of matter
+    over antimatter unexplained. The first thing to do with it is to ask a physicist whether the arithmetic is right.
+
+- **O90 The fair clock, adopted for new kinetic runs.** (2026-10-05; the owner's decision, VISION Update 41; O76's
+  proposal.)
+  - **The problem.** The chain proposes a move by picking two links at random from the whole graph, and a sweep is 2N
+    proposals. A particular local rearrangement needs two particular nearby links, so it is proposed about 2/N times a
+    sweep: in a graph twice the size, everything local (a front's next step, a relic's healing, a seed at a given
+    place) happens half as often per sweep. Nothing local should know how large the whole is. Measured in T47: the
+    front's speed per sweep halves as the tube doubles (0.0078, 0.0041, 0.0021 columns per sweep at L = 96, 192, 384)
+    and is constant, 0.75 to 0.81, once multiplied by L.
+  - **The definition.** One **fair sweep** is N / 96 sweeps of the chain: every local pair is offered as often per
+    fair sweep as it is per sweep at 96 points, the size of T19 and T25, whose numbers therefore stay as they are.
+    Durations in new kinetic runs (settling, cooling, holding) are set in fair sweeps, and analyses report both clocks.
+  - **What it touches.** Any comparison of times or rates between sizes: front speeds (T12's fall with N, T47), how
+    long a state was given to heal (T37, O88), freeze-out times. It does not touch energies, exact readings of end
+    states, anything at one size, or equilibrium averages. Waiting times for a first seed were already size-fair in
+    their own way (the tube's exit is offered 3 times a sweep at every size, VISION Update 9), so per unit length the
+    seeding rate in fair time is constant, which is what T37's seed counts found (exponent 0.92 at g = 1.5).
+  - **The cost.** A fair sweep is N²/48 proposals, so long runs at large sizes become expensive: 100,000 fair sweeps at
+    4,096 points is about 4.3 million sweeps. T51 is sized with that in mind. A chain that proposes only nearby pairs
+    would remove the cost and is not built: it would be a new kernel with its own detailed-balance argument.
+  - **Verdicts already scored stay as scored** (T47 MIXED by the letter). T51's first prediction tests the clock
+    itself: T25's survival numbers at 96 points should reappear at 1,024 points in fair sweeps.
+
+- **O91 T48, read: with released energy kept where it is released, the two-curled torus opens its next direction and
+  stops at λ = 1.25, and at λ = 1.40 it opened fully into one space in 5 replicas of 16, with damage in most of the
+  others; the one-curled torus never moved; the eight-link torus stays or advances one rung.** (2026-10-05, 05:10 ET;
+  PREREGISTRATION T48; runs finished 27 September, fetched and checked against their configs on 5 October,
+  `scripts/accept_inbox.py`; read with `scripts/analyse_t48.py`. Energy conserved to 10⁻¹² in every run. Six- and
+  eight-link results carry VISION Update 24's caveat.)
+  - **Verdicts by the pre-registered rule.** Control, 4 × 48: ONE SPACE at λ = 1.25 (15 of 16 replicas open); ADVANCES
+    ONLY at λ = 1.40 (5 of 16 open; this λ is at the edge of the tube's window, where T23 found break-up beginning).
+    4 × 4 × 18, two curled: **ADVANCES ONLY at λ = 1.25** (13 of 16 rest with one more direction open and the last
+    curled); **DAMAGED at λ = 1.40** by the letter, the cells reading 5 damaged, 2 open, 1 advanced (push equal to the
+    wall) and 3 open, 3 advanced, 2 damaged (four times the wall). 4 × 8 × 12, one curled: STAYS at both λ and both
+    pushes, 32 of 32. 4 × 4 × 4 × 12, three curled, eight links: STAYS at λ = 1.25 (12 of 12), ADVANCES ONLY at λ = 1.40
+    (12 of 12 rest one rung up).
+  - **Predictions.** Hers, for the tori with two or more curled directions, ADVANCES ONLY: holds in two of four
+    settings (4 × 4 × 18 at 1.25; eight links at 1.40) and fails in two (DAMAGED; STAYS). Ours: the same two hold and
+    the same two fail; the one-curled torus STAYS as we said; the control fails at λ = 1.40. The inferred ONE SPACE for
+    the control and the one-curled torus holds only for the control at λ = 1.25.
+  - **Not scored, and the most interesting thing in the run.** At λ = 1.40 the two-curled torus reached a connected flat
+    region holding at least half its points in 5 replicas of 16 (the front arriving at half the torus between 45,000
+    and 197,000 sweeps): every curled direction open, in one space. O85 had found large open regions from this same torus
+    once before, at λ = 1.25 with a small shared bath (T39: 186 to 250 of 288 points in 9 replicas of 12, with seams
+    beside them). Here it happens with the energy kept where it is released, at the λ where the exact wall out of the
+    one-open state is low (4.8 at λ = 1.40 against 16 at 1.25) and the release per point is larger (1.6 against 1), and
+    not at λ = 1.25. It is a minority of replicas, beside damage, at one size. *Ours, unverified:* the two together say
+    the obstacle in three directions is the wall of the second opening, which either a hot enough bath or a low enough
+    wall gets past, and not something about three directions as such; O89's "all at the second" table says the same in
+    another way.
+
+- **O92 T49, read: one fully curled cube opens part of the way; fully in a minority, more often with interchangeable
+  points where it has a way downhill; the 8-cube never opens fully.** (2026-10-05, 05:15 ET; PREREGISTRATION T49; fetched
+  and checked the same morning; read with `scripts/analyse_t49.py`; 32 replicas a cell. Update 24's caveat applies.)
+  - **6-cube (64 points).** λ = 1.10, stuck, push 8: named PART OPEN (31; 1 all open), the path IN ORDER in 17 and partly
+    in order in 15; interchangeable STUCK (20; 11 part open, 1 all open). λ = 1.15, push 4: named PART OPEN (27; 5 all
+    open); interchangeable MIXED (16 stuck, 12 part open, 4 all open). λ = 1.25, a way downhill, no push: named PART OPEN
+    (28; **4 all open**); interchangeable PART OPEN (18; **14 all open**).
+  - **8-cube (256 points).** λ = 1.10 and 1.15, stuck, pushes 19.2 and 12.8: STUCK, 32 of 32, with either kind of point.
+    λ = 1.30, a way downhill: PART OPEN (27; 5 damaged), every path TOGETHER, with either kind of point.
+  - **Predictions** (hers, given as "seems reasonable" to ours, so the two coincide). Named, PART OPEN where stuck: holds
+    for the 6-cube, fails for the 8-cube (STUCK). Named, ALL OPEN where there is a way downhill: **fails** (4 of 32, and
+    none of 32). Interchangeable, mostly STUCK where stuck: holds. Interchangeable, ALL OPEN where downhill: fails by the
+    majority rule (14 of 32).
+  - *Ours, unverified.* A way downhill out of the cube is not a way down to flat: the cube falls to a partly open
+    state and rests. Treating the points as interchangeable more than triples the full openings of the 6-cube at
+    λ = 1.25 (14 against 4): the second time, after T42, that this treatment has helped an arrangement reach the flat
+    state, and here by a margin that is not small.
+
+- **O93 T50, read: the tube's front speeds up where energy sits, at 6 and 10 units per point; no effect at 1 and 3.**
+  (2026-10-05, 05:15 ET; PREREGISTRATION T50; fetched and checked the same morning; `scripts/analyse_t50.py`; 24 replicas
+  an energy, all valid; energy conserved exactly.)
+  - Q, the band's crossing time over the mirror stretch's, relative to the control: 1.13 (e = 1), 0.97 (3), 0.80 (6),
+    0.71 (10). **NO EFFECT, NO EFFECT, SPEEDS, SPEEDS** (the e = 6 cell at 0.798 against a line of 0.8). Median crossing
+    of the 16-column band: 6,170 sweeps bare, 3,310 at 6, 2,750 at 10.
+  - **Predictions.** Hers, SPEEDS (given 27 September, after launch and before any result): holds at 6 and 10. Ours,
+    SPEEDS, more with more energy, with no effect possible where the energy is small: holds.
+  - *Ours:* the front's moves are paid from the stores of the points that make them, so stored energy ahead of the
+    front is spent on moves that would otherwise wait. Read as a clock, a front that runs faster where energy sits is
+    the opposite of clocks running slower near mass; the question put to the owner on 27 September, how her front maps
+    onto a clock, is still open.
+
+- **O94 The reservoir option for the cascade, on paper: at λ = 1.02 a bath cannot drive it; near λ = 1.25 a window
+  exists at the level of single moves and has not been run with a tie.** (2026-10-05, 06:00 ET; the chat hand-over's
+  section 3 offered two ingredients for a cascade, a reservoir that supplies each push or energy that carries a kind, and
+  asked for an exact estimate before any run. *Ours, unverified:* the inputs are exact or measured, the reasoning is an
+  estimate.)
+  - **The question.** With walls out of X, of the one-open state and of the two-open state, and flat space behind 64:
+    is there a bath temperature (the coupling g) at which each wall is crossed within a run while flat space survives?
+  - **Crossing a wall.** A move that costs W is accepted with chance e^(−W/g) each time it is offered, and the cheapest
+    moves are offered a few times a sweep (3 for the tube, VISION Update 9; 6.7 for the 6-cube, O41). For one crossing
+    in about a million sweeps W/g has to be below about 15. Under the chat's fitted tie at λ = 1.02 (walls 15.4, 30.9,
+    45.1; O86) that asks for g of about 1.0, 2.1 and 3.0.
+  - **Flat space survives those baths at 500 points.** Our own six-link runs at λ = 1 keep the ordered phase up to
+    g = 4 on heating and have lost it by 5.8 (`results/gatec2_3d_n500_a.csv`: φ = 0.946 at g = 4.0, 0.454 at 5.76). By
+    O88 that ceiling comes down as the space grows.
+  - **But at λ = 1.02 the bath dwarfs the burp.** The whole release, all three directions together, is 3a = 0.24 per
+    point. The temperature that crosses the walls is four to twelve times that. So in a bath "this release pays that
+    wall" means nothing: the bath pays every wall, and which rung the space rests on is decided by which rung has more
+    ways of being arranged at that temperature, not by 0.04 or 0.20 per point of energy. The more curled rungs have the
+    lower walls, hence more thermal play, hence the advantage while warm; on cooling, the energy's small preference for
+    flat space returns only after the walls have become uncrossable. That is X stuck for now, which the hypothesis wants
+    of X, and it is not a cascade. The reason is general: as λ falls to 1 the walls stay finite (16 out of the gas) while
+    the release goes to zero, so the smallest patch that pays its own way grows without limit. At λ = 1.02 a patch must
+    hold about 800 points (31 / 0.038) before the second opening's release has returned even its single-move wall, and
+    about 220 (45 / 0.20) for the third, before any cost of the seam around it.
+  - **Near λ = 1.25 it is different.** The walls (8, 18.4, 11.5 under the fitted tie) ask for g of about 0.5, 1.2 and
+    0.8; the releases (0, 0.47 and 2.53 per point) are comparable with such a bath; flat space is far from melting. At
+    the level of single moves a window exists around g = 1.2 to 1.5. Two cautions: in three directions the single move
+    is not the whole barrier (VISION Update 37), and a gas of cubes never joins into one space (O85), so the run has to
+    start from a connected torus. T48 is the nearest thing already run (O91).
+  - **Under any tie in which the first opening nets nothing, the first step has no drive at any λ.** A bath can carry
+    the gas over its wall, but a one-open patch gains nothing by growing.
+  - **So.** Energy that carries a kind is not needed to decide this and is not recommended: it would add a declared,
+    fitted rule that sets only the order of events (O86 (d)). The reservoir test worth running is a bath at fixed
+    coupling, as in the two-dimensional T7 and T37, on the 4 × 4 × 18 torus at λ of 1.25 to 1.40. Which tie it carries
+    is the owner's to choose, now that the aim of the 5.36 fit is withdrawn (O89); it is not pre-registered until she
+    does. **And λ = 1.02, where she expects to work, is where X is most stuck and the burp is smallest:** good for X
+    lasting and for space re-curling, bad for a burp that runs by itself. That trade is the fertile-window question of
+    VISION Update 23.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

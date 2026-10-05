@@ -1053,6 +1053,67 @@ sources. This was option A of `docs/design/gravity_brief.md`, section 6.
   route (a pull from counting, at a temperature above zero) is the other candidate carrier, and it is tested first
   because it needs no new knob (the hidden count and the warm-bath pull, ASSUMPTIONS O87).
 
+Update 41 (2026-10-05): **the author's decisions of 4 and 5 October: the first opening is dark energy's; the target is
+the shares at spacetime's birth, not today's; the fair clock; and what the birth shares are once the light is counted.**
+Why this page changes: two chat sessions on 4 and 5 October worked from a copy of the repository, and nothing they
+decided had been written here (`docs/HANDOFF_2026-10-05_chat.md`); and her answers of 5 October to the assistant's
+questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREGISTRATION T51.
+
+- **DECISION (4 October): the first direction to open releases dark energy.** Her reason: with the other directions
+  still curled, its release cannot disperse or interact as matter and radiation do, so it stays as the energy of space
+  itself, and part of it pays the next push. This keeps Update 36's first step and gives it a reason. **Not decided:**
+  which of the other two openings is ordinary matter and which is dark matter, and which release pays which push.
+  Accepted by her: once all three are open they are alike again.
+- **DECISION (4 October): the cosmological-constant problem is carried openly, not solved.** The first opening's net
+  release has to be nearly zero, and the ledger's whole numbers cannot say why. The pages say so plainly.
+- **DECISION (4 October): the ladder is rebuilt with a plane, two directions together, as the unit of opening**, exact
+  first on the built tori, then sealed runs; it decides whether "red" is a direction or a plane. **Open, and hers to
+  settle before it is built:** what a plane opening is in the model. *Ours:* two readings. (i) Bookkeeping only: the
+  step from fully curled to two directions open is counted as one opening; nothing new is computed. (ii) A rule: one
+  direction cannot open alone, which is a tie that charges a point for having exactly one direction open; the exact
+  walls of two such shapes are in O89.
+- **Time (4 October): her view stands.** Time exists because matter moves through three-dimensional space; X has order
+  but not time; relativity is the evidence. "Red is time" is a reading she thinks unlikely but would test; in this model
+  it can be tested only through order and cost. **No new model with relativity's time built in** for the root question.
+- **Where she expects to work: λ about 1.02, six links, with the tie** (the counting drive beats the curling cost only
+  within about 2 % of λ = 1, O55; the 6-cube is stuck for 1 < λ < 1.2, O41).
+- **Method measurements are wanted where they tie to published models:** nucleation and growth (done, T37), the hidden
+  count, the pull in a warm bath written as force = temperature × change of entropy with distance. **Held:** the causal
+  order read from the opening front. *Ours:* as defined in chat (p comes before q if p opened earlier and q lies within
+  the front's reach) it puts the light cone in by hand, so a causal-set estimator would return what was put in; it comes
+  back if an order can be defined from the dynamics alone.
+- **Paper 1.** On hold at arXiv pending a reader or a journal. Her decision of 5 October: the request to the model's
+  author to be a reader, and Gate C's question, wait until after his talk. A draft is kept locally; nothing is sent
+  from here.
+- **DECISION (5 October): the target is the shares at spacetime's birth, not today's.** Her words: "we are hoping to
+  match spacetime's birth ratios not current."
+- **What the birth shares are** (*ours, unverified: settled cosmology applied by us, general knowledge, to verify with a
+  physicist; it restores O18 and corrects Update 35*). Update 35 took the birth shares to be ordinary : dark matter :
+  dark energy = 0.157 : 0.843 : 0. That leaves out the light. Cold matter thins out more slowly than light as space
+  grows, so going back in time matter's share shrinks: at temperature T all matter together is about 0.8 eV / T of the
+  energy, dark matter about 0.67 eV / T, and the mass of ordinary matter about 0.13 eV / T. By the time the light
+  elements formed (about 1 MeV, the latest a hot beginning can be placed) dark matter was under a millionth of the energy
+  and dark energy about 10⁻³⁵ of it; earlier, less. The 5.36 is real and does date from the start, but it compares two
+  slivers: dark matter with the *mass* of ordinary matter, which is itself the billionth-part left when matter and
+  antimatter cancelled. It is not the ratio of a dark release to an ordinary release. **So the birth shares to match
+  are: the hot lump, almost everything; dark matter, a cold sliver of about 0.67 eV divided by the temperature of
+  birth; dark energy, nothing measurable.** One number is unknown, the temperature of birth.
+- **What that changes** (*ours*). (1) Fitting the tie's two constants to 5.36 (O74, T45, and the chat's
+  f = (0, a, 1.53a, 0)) aimed at a ratio the releases do not have to hit. Those runs stand as run; their target is
+  withdrawn. (2) The chat's verdict that the scrap is not the dark matter "by a factor of ten" is withdrawn (O88): at
+  birth 8 % is too much scrap, not too little, and what a leftover dark matter needs is that nearly all of it heals,
+  which is what slower cooling does (T25). So Update 16's reading, dark matter as the leftover, is open again beside
+  Update 30's, dark matter as a direction's release. Which she holds is hers; T51 measures what the first one needs.
+  (3) With dark energy first and netting nothing, the shapes that match birth are those in which **one opening carries
+  essentially the whole release**. There are two, with no constant to fit: nothing is released until the last direction
+  opens (the three go together, her position of Update 22), or the second opening releases everything and the last
+  direction is free to stay curled (her prediction for T48, and a hidden small direction). Exact walls for both are in
+  O89. Neither is adopted.
+- **DECISION (5 October): the fair clock for new kinetic runs.** Time is counted so that every local pair of links is
+  offered equally often at every size (O76's proposal; O90). Verdicts already scored stay as scored.
+- **The scrap-share reading stays out of paper 2** (5 October, on the assistant's advice; she expects the paper to
+  change a good deal before it is shared).
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

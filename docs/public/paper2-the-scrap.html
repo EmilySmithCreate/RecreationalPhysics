@@ -50,9 +50,9 @@ footer{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:44
 <main>
 <div class="kicker">Paper 2 · plain-language visual version</div>
 <h1>The Scrap: what the burp leaves behind</h1>
-<p class="sub">When a curled space snaps open, a little of it does not convert. This is what that leftover is, how big it is, how many there are, where it sits, how long it lasts, and what share of the released energy it keeps.</p>
+<p class="sub">When a curled space snaps open, a little of it does not convert. This is what that leftover is, how big it is, how many there are, where it sits, how long it lasts, and what happens when a space seeds itself in many places.</p>
 
-<div class="status"><strong>Source:</strong> the paper draft "What the burp leaves behind" (docs/papers/relic/paper.tex, 25 September 2026) and the saved results in the public repository (T10, T11, T17, T19, T25), plus the T37 end states read exactly on 5 October. Every verdict was pre-registered before its run.</div>
+<div class="status"><strong>Source:</strong> the paper draft "What the burp leaves behind" (docs/papers/relic/paper.tex, 25 September 2026) and the saved results in the public repository (T10, T11, T17, T19, T25), plus T37's saved end states, read exactly from their wiring. Every verdict quoted was pre-registered before its run; the reading of T37's wiring in finding 4 came after its verdict and is marked.</div>
 
 <h2>The question</h2>
 <p>Paper 1 showed that a curled torus opens sharply into flat space: it waits, starts at one place, sweeps across as a front, and releases a fixed lump of energy per point, the burp. This paper asks what the front leaves behind. In the author's picture that leftover is the <em>scrap</em>: energy that did not convert, frozen into the new space. Three things decide whether a scrap can matter for a universe: how big it is, whether more of it appears when the change starts in many places at once, and whether it lasts.</p>
@@ -163,34 +163,50 @@ footer{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:44
   <p>The relics that healed were last seen within the first 15,000 sweeps of cooling, while the coupling was still above about 1: cooling leaves the range where healing is fast early in the schedule. Our prediction of the freeze-out time (1,000 to 10,000 sweeps) was short by a factor of three to thirty; the verdict recorded for the author, freezes in with no freeze-out time named, held. Cosmology calls this freeze-out.</p>
 </div>
 
-<h2>Finding 4 · Many natural seeds: scraps, or a mosaic</h2>
+<h2>Finding 4 · A space that seeds itself: scraps in proportion to its length</h2>
 <div class="card">
-  <div class="run">T37 · 4 × 64 to 4 × 1024 · natural seeding at baths g = 1.25, 1.5, 1.75 · end states read exactly</div>
-  <p>Long tubes seed themselves: about 20 seeds per 1,024 columns at the coldest bath, 33 to 38 at the warmer ones, and the tube fills as the textbook law of nucleation and growth says (Avrami exponent about 2 in every cell, nothing fitted). What is left depends on the bath. At the coldest bath (g = 1.25, eight tubes of 4,096 points) seven of eight finish clean, leaving about 6 four-point relics and 13 smaller leftovers per tube, roughly 0.3 relics per seed, the same rate T17 found, with 0.05 to 0.12 units per point left above flat space. At the warmer baths the tubes of 512 and 1,024 columns never finish: only 13 to 30% of points end flat, the patches do not join, and 2.8 to 3.5 units per point are left in the joints between them, more than the burp itself. That is a mosaic, a defected and partly melted space, not a clean sheet with scraps.</p>
+  <div class="run">T37 · 4 × 64 to 4 × 1024 · natural seeding at baths g = 1.25, 1.5, 1.75 <span class="verdict v-good">pre-registered verdict: many seeds, many scraps</span></div>
+  <p>A long tube does not wait for one seed. It seeds itself in several places, about 21 seeds per 1,024 columns at the coldest bath, and fills in the way the textbook law of nucleation and growth says it should (Avrami exponent about 2 in every cell, nothing fitted).</p>
   <div class="fig">
-    <svg viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A long tube opening from many seeds, with patches meeting at mismatched joints">
-      <rect x="20" y="50" width="600" height="50" rx="25" fill="none" stroke="var(--rule)" stroke-width="2"/>
-      <g fill="var(--accent)" opacity=".18">
-        <rect x="30" y="55" width="110" height="40" rx="20"/><rect x="150" y="55" width="140" height="40" rx="20"/><rect x="300" y="55" width="90" height="40" rx="20"/><rect x="400" y="55" width="120" height="40" rx="20"/><rect x="530" y="55" width="80" height="40" rx="20"/>
-      </g>
-      <g stroke="var(--accent2)" stroke-width="3" stroke-linecap="round">
-        <line x1="145" y1="58" x2="145" y2="92"/><line x1="295" y1="58" x2="295" y2="92"/><line x1="395" y1="58" x2="395" y2="92"/><line x1="525" y1="58" x2="525" y2="92"/>
-      </g>
+    <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Relics per tube against tube length: 1.1, 2.0 and 3.6 at 64, 128 and 256 columns, close to proportional">
+      <line x1="60" y1="230" x2="610" y2="230" stroke="var(--rule)"/>
+      <line x1="60" y1="30" x2="60" y2="230" stroke="var(--rule)"/>
+      <!-- y scale: 0..5 relics over 200px: y = 230 - v*40 -->
       <g font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)">
-        <text x="85" y="125" text-anchor="middle">patch from one seed</text>
-        <text x="460" y="125" text-anchor="middle" fill="var(--accent2)">joint: where patches meet and do not fit</text>
-        <text x="320" y="35" text-anchor="middle">a tube opening from many seeds at once</text>
+        <text x="52" y="234" text-anchor="end">0</text>
+        <text x="52" y="154" text-anchor="end">2</text>
+        <text x="52" y="74" text-anchor="end">4</text>
+        <text x="150" y="252" text-anchor="middle">64 columns</text>
+        <text x="335" y="252" text-anchor="middle">128</text>
+        <text x="520" y="252" text-anchor="middle">256</text>
+        <text x="335" y="272" text-anchor="middle">length of the tube (each step doubles it) →</text>
+      </g>
+      <!-- in proportion to length, through the first point -->
+      <polyline points="150,185.2 335,140.4 520,50.8" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="512" y="42" text-anchor="end" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--accent2)">doubling with the length</text>
+      <!-- one however large -->
+      <line x1="150" y1="185.2" x2="520" y2="185.2" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="520" y="203" text-anchor="end" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="var(--muted)">one relic however long (T10, one seed)</text>
+      <!-- data -->
+      <polyline points="150,185.2 335,150.8 520,88" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+      <g fill="var(--accent)">
+        <circle cx="150" cy="185.2" r="6"/><circle cx="335" cy="150.8" r="6"/><circle cx="520" cy="88" r="6"/>
+      </g>
+      <g font-family="IBM Plex Sans,sans-serif" font-size="12.5" font-weight="600" fill="var(--accent)">
+        <text x="150" y="172" text-anchor="middle">1.12</text><text x="335" y="137" text-anchor="middle">1.98</text><text x="520" y="75" text-anchor="middle">3.55</text>
       </g>
     </svg>
   </div>
-  <p class="cap">Schematic of the warm-bath outcome. The author's prediction, many seeds, many scraps, held at the warm baths by the registered rule; the cold bath's count was not covered by the rule as written. The cold-bath number is the one that turns this paper into a prediction (below).</p>
+  <p class="cap">Four-point relics left per tube against tube length at bath g = 1.5 (λ = 1.25, forty tubes at each length), read from the saved final wiring. About one relic per 57 to 72 columns, beside 0.6, 2.7 and 7.2 smaller leftovers per tube.</p>
+  <p><strong>Where the new sheet ends clean, the relics grow with the length.</strong> At the coldest bath (g = 1.25, twelve tubes of 1,024 columns) eleven of twelve end as clean sheets holding about 7 four-point relics and 15 smaller leftovers each, roughly one relic for every three seeds, the rate T17 found with planted seeds. The energy still held above flat space in those eleven is 0.05 to 0.21 units per point, where the tube released 1. So one relic however large (finding 1) is what one seed leaves; a space long enough to seed itself leaves relics in proportion to its size.</p>
+  <p><strong>The long warm tubes melted.</strong> At the two warmer baths the tubes of 1,024 columns did not end as sheets at all. Read from the wiring, 55% and 74% of their points had opened <em>past</em> flat, their count of squares had fallen below a sheet's, and they had taken energy in from the bath, 2.8 and 3.5 units per point left where an opening gives 1 up. That is the start of melting into the random phase, not scrap. A sheet of 96 points keeps its shape and heals at g = 1.5 (finding 3); a tube of 4,096 melts there, so a larger space melts at a lower temperature. The registered rule scored these tubes by the energy left, so its verdict counts melt as scrap there; this reading of the wiring came after the verdict.</p>
 </div>
 
 <h2>What it means</h2>
 <div class="card">
-  <p><strong>The scrap is real, small, and frozen.</strong> One opening leaves one four-point loop of unconverted energy, 14 units at λ = 1.25, anywhere along the tube; many openings leave many, about 0.3 per seed; held warm it heals, and as the space cools it freezes in. In the published model at λ = 1 none of this happens, so the scrap is a consequence of the curling cost, the one term this programme adds.</p>
-  <p><strong>Where it sits in the picture.</strong> A frozen scrap is a fixed count of objects. As space grows, a fixed count thins out like matter, not like dark energy, which stays the same per volume. By the rule the programme took from disordered locality (Prescod-Weinstein and Smolin 2009), that puts the scrap on the dark-matter side of the ledger, not the dark-energy side.</p>
-  <p><strong>The prediction, and its answer.</strong> If the scrap were the dark matter, the model would have to leave about 84% of the released energy as scrap, since the measured dark-to-ordinary ratio is 5.36. Stated before the number was read, with λ held at paper 1's value and nothing fitted: the share is the energy left above flat space per point over the burp per point, 4(λ − 1), at the largest natural-seeding size. Read from the saved T37 end states at the coldest bath: <strong>0.05 to 0.12, about 8%, not 84%.</strong> In this model's two-dimensional version at λ = 1.25 the scrap is not the dark matter, by a factor of ten; the dark-matter kind, if the picture holds, has to be a release of its own. The share would rise toward λ = 1 only because a relic's cost, 24λ − 16, does not shrink with the burp; that is noted, not used.</p>
+  <p><strong>The scrap is real, small, and frozen.</strong> One opening leaves one four-point loop of unconverted energy, 14 units at λ = 1.25, anywhere along the tube; a space that seeds itself leaves them in proportion to its length, about one for every three seeds; held warm it heals, and as the space cools it freezes in. In the published model at λ = 1 none of this happens, so the scrap is a consequence of the curling cost, the one term this programme adds.</p>
+  <p><strong>What kind of thing it is.</strong> A frozen scrap is a fixed count of objects. As space grows, a fixed count thins out the way matter does, and not the way dark energy does, which stays the same in every volume (the rule is from Prescod-Weinstein and Smolin's 2009 paper on disordered locality).</p>
+  <p><strong>What is not known yet: how much stays.</strong> At a steady warm temperature every scrap heals in time, so the amount found in finding 4 depends on when the run was stopped. Cooled, some scraps freeze in, more of them the faster the cooling. The number that matters is how the frozen amount falls as the cooling gets slower, in a space that seeded itself. That measurement is registered as T51 and has not been made.</p>
 </div>
 
 <h2>How it could be wrong</h2>
