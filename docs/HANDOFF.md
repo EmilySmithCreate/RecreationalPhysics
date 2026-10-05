@@ -139,7 +139,7 @@ git history.
   artifact. Neither was touched on 5 October: T48 to T50, the T37 correction and the birth shares are not on them yet.
 - **Also pre-registered on 5 October:** T52, the hidden count round a relic, exact (`graphity.hidden`,
   `scripts/exact_hidden_relics.py`).
-- Next numbers: ASSUMPTIONS **O95**, VISION **Update 42**, PREREGISTRATION **T53**.
+- Next numbers (15:40 ET, 5 October): ASSUMPTIONS **O103**, VISION **Update 44**, PREREGISTRATION **T54**. Running: T51 (91 Batch jobs), T52 (the hidden count, on the laptop; no verdict until it finishes), T53 (30 Batch jobs, launched 15:35 ET; the owner's inferred prediction is to be confirmed or replaced before it is read). The programme draft `docs/papers/programme_draft.md` is current to 5 October.
 
 ## 1. What this project is
 
