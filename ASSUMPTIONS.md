@@ -2312,6 +2312,35 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     lasting and for space re-curling, bad for a burp that runs by itself. That trade is the fertile-window question of
     VISION Update 23.
 
+- **O95 EXPLORATORY: the owner's questions on [PWS09], and a first look: openings from several seeds leave a few
+  far-reaching links.** (2026-10-05, 05:50 ET; the owner read the paper's setting and asked whether its Ψ is her X and
+  whether her work touches its two assumptions; `scripts/explore_far_links.py`, reading saved T37 end states only. Not
+  pre-registered; a first look, not a finding.)
+  - **Is Ψ her X? No** (*ours*). In the passage she quoted, the graphs are the underlying things, Ψ is the state of
+    all of them at once, and "Ψ semiclassical, or a low-temperature phase" is the state that looks like space. In this
+    project's words: their graphs are the wiring; their Ψ in that phase is *space*; **X would be a different Ψ**, the
+    same graphs settled in another arrangement that does not read as our space. The paper begins where the hypothesis
+    ends: its first assumption is that space with Einstein's equations is already there. Two real differences beside
+    that: their Ψ holds many graphs at once with quantum weights, where this model holds one graph at a time; and
+    their graphs sit inside a bare background manifold, where this model's network sits inside nothing.
+  - **Their second assumption, a small amount of disordered locality, is something the saved end states can be asked
+    about**, and it is the "shortcut census" already on TASKS's list. For every link, its *way round*: the distance
+    between its two ends once the link is removed. On a flat sheet that is 3. Call a link *far* if it is 7 or more.
+    In T37's clean end states: none at g = 1.5, L = 64 (39 tubes, about two seeds each); 0.57 per tube at L = 128, in 7
+    tubes of 40; 2.27 per tube at L = 256, in 11 of 33; 3.82 per tube at g = 1.25, L = 1024, in 5 of 11. That is 4 to 9
+    per 1,000 columns, about one link in a thousand, reaching up to 11, 19 and 29 steps. No end of any far link is a
+    flat point (0 of 280): they all sit inside the pieces T37 reads as "other" leftovers.
+  - **What that is and is not.** It is the first sign in this project that an opening leaves anything non-local, and
+    it appears only where a tube was long enough to open from several seeds. It is **not read from positions**, so
+    whether a far link is a stitch across a tear between two patches, a shortcut, or part of some other leftover is
+    not known, and by the project's own lesson it is not to be named until it is read. By the rule taken from [PWS09]
+    (energy at a count that grows with the volume as space expands behaves as dark energy; a fixed count thins out as
+    matter does), links frozen in at an opening are a fixed count and so matter-like; the model's space does not
+    expand, so the paper's own condition cannot be tested in it.
+  - **If it is to be claimed:** pre-register it (count against tube length at fixed coupling; where the far links sit
+    relative to the places two fronts met, which needs the opening's history or the patch map; whether cooling
+    freezes or heals them, which T51's saved final graphs will hold).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
