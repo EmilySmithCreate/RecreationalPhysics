@@ -86,3 +86,39 @@ For each, in a sentence: how do you expect reality to work, and if the model doe
 - T42: what lets a black hole fold space back: energy, counting, or both?
 - T43: do Carlo's allotropes last, and why?
 - And the order of the targets above: which matters most to you?
+
+## Constraints added 6 October 2026 (from three AI-generated reviews, ASSUMPTIONS O103; each to verify before it is cited)
+
+*Note.* Targets 3 and 5 as written on 25 September predate the author's decisions of 4 and 5 October (VISION Update 41:
+the first opening is dark energy's; the target is the make-up of reality at its birth, where dark matter is a sliver of
+about 0.67 eV over the temperature of birth and dark energy nothing measurable, O89). They stay as written, on the
+record; the current statement is Update 41 and the constraints below.
+
+7. **A dilution law for every released component.** Before any release is called dark energy, dark matter or radiation,
+   the model has to say how its density falls as space grows: constant (vacuum-like), a⁻³ (matter-like) or a⁻⁴
+   (radiation-like). The toy has no expansion, so today this is the bar, not a result; the labels in VISION Updates 30
+   to 41 are the author's interpretation. The one candidate for a constant density in the toy is energy the final state
+   keeps: the curling cost of a direction that stays curled (O89's second shape; O103 (e)), whose size is the
+   cosmological-constant problem in its usual form, carried openly.
+8. **Dark radiation is bounded.** A dark release that never mixes with ours (which "the kind follows the opening"
+   requires) adds to the count of light species before the light elements form; Planck 2018 gives N_eff ≈ 3.0 ± 0.2
+   (general knowledge, to verify), so such a release must be cold or tiny by then.
+9. **"Matches Einstein wherever measured" includes light.** Target 2's pull is not enough: the bending of light (1919;
+   Cassini, to verify) and Mercury's perihelion shift are measured, and a single number per point (Nordström's scalar
+   gravity) gives no light bending and −1/6 of the shift ([Giulini08], the 25 September reading note, topic 4). Any
+   quantity on the points (Update 40) is scored against these, not only against 1/r².
+10. **Before anything is called a black hole**, in stages: a stable localized curled region inside open space; a
+    reproducible threshold to make or grow it; growth with the energy stored; trapping or an analogue; a sensible
+    large-scale limit. If a re-curled region ever forms, its large-scale behaviour is set beside Schwarzschild and the
+    closed-FLRW black-hole cosmologies (the lineage Pathria, Smolin, Popławski and, per the third review, Fife; only
+    [Smolin06] is read) as targets, never as evidence. Open: a black hole holds the most entropy anything its size can,
+    a quarter of its horizon area in Planck units (to verify); an ordered re-curled interior is the opposite of that,
+    and where the entropy would live has to be said before a referee asks.
+11. **Before the scrap is called dark matter** it needs stability (measured: it freezes in, T25), gravitational
+    behaviour, clustering, an effective mass or energy, and a dilution law; and its share at birth has to be about
+    0.67 eV over the temperature of birth (O89), against T37's 8 %. T51 measures the shape of the fall with cooling
+    time, not the endpoint.
+12. **A numerical match is not a result** (CLAUDE.md rule 13). Whenever a number comes out close to a measured one:
+    derive it independently if possible; propagate the input uncertainty; check whether the inputs already contain the
+    target through standard cosmological assumptions (the fit to 5.36 of O74 did, O89); test neighbouring parameter
+    values; count how many other arbitrary combinations would match as well.

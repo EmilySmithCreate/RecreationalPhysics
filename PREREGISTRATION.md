@@ -3253,6 +3253,32 @@ verdict uses, 10,000 fair sweeps and slower, all spend at least 1,400 fair sweep
 cool further, which is longer than the relaxation seen in the check; they see the same early history and differ in how
 long the scraps then have to heal.
 
+### Amendment 3, 2026-10-06, 03:56 ET by the clock, before any result has been read (no T51 file is in `results/` or `cloud/inbox/` at this writing; the runs were launched 5 October)
+
+**Why.** Three AI-generated reviews of the programme (ASSUMPTIONS O103) made two points about this test. First, the
+number the hypothesis needs is far below anything this run can reach: at birth dark matter is about 0.67 eV over the
+temperature of birth, about 7 × 10⁻⁷ of the energy at 1 MeV and smaller at any hotter birth (O89), against the 5 to
+14 % of T37's clean tubes; so the question this run can answer is the *shape* of the fall with cooling time, which the
+"Why" above already says but the scoring does not measure. Second, every warm result at a fixed coupling carries a
+size caveat that "What this cannot show" omits: a larger network melts at a lower coupling (O88; the sourced B4;
+TASKS T9).
+
+**What changes, all of it before any result is read:**
+
+1. **Reported, not scored, in addition:** C(t) and the frozen share at every t_cool fitted to a power law in t_cool over
+   the cells from 10,000 fair sweeps upward, with the exponent and its standard error from resampling replicas, and the
+   cooling time at which the fit would reach the share O89 names at 1 MeV (an extrapolation, marked as one); the size
+   distribution of the leftovers at the end of the hold (points per connected piece not at d = 2), read from the saved
+   wiring; the number of connected pieces of the whole graph at the end of the hold (does the opening split the space,
+   O100); and R(t) at every decade available, not only the two the verdict uses, so that a smooth fall can be told from
+   a step. The verdict rule, P1, P2 and every definition stand as written in Amendment 2.
+2. **"What this cannot show" gains two lines:** anything at a size much larger than 1,024 points at these couplings,
+   since a larger network melts at a lower coupling (O88) and T9's drift is not yet measured; and the endpoint of the
+   fall, which no cell here reaches.
+
+**What does not change:** the runs (launched 5 October), the seeds, the cooling schedule, the fair clock, the hold, the
+cells, the verdict rule, P1, P2 and our predictions. **The owner's prediction is still owed before any result is read.**
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
@@ -3439,3 +3465,59 @@ That X is this state, or that a black hole makes it: nothing in the toy folds sp
 between the directions, which waits for the owner's choice (O89). Whether a window found at these sizes survives at
 larger ones. Time: the toy's clock is its count of moves, and this run uses the chain's own sweeps at each size, so
 times are compared between couplings, not between sizes.
+
+
+---
+
+## T54 (DRAFT, 2026-10-06, 03:56 ET by the clock, before any computation). The true barrier in three directions: the smallest opened patch of a one-curled torus that grows, exact; then whether a warm bath crosses it (piece 5; ASSUMPTIONS O79, O94, O103 (b); VISION Update 44)
+
+### Status
+
+A draft. The question, the design in outline, the verdict words and our prediction are fixed here; the script and the
+exact definitions of "patch" and "grows" are to be written and tested before any computation, and the owner's
+prediction is owed before any run. Nothing has been computed. First in the order of TASKS (6 October).
+
+### Why
+
+Every push tried in three and four directions was the size of the cheapest single move, and every one opened one
+direction, or one cube, and stopped (T30, T33, T40, T44 to T49). The two-direction tube's push is fixed with size
+because its front is a ring of four points whose cost never grows (T9; paper 1), and the 4 × 4 × L torus has a
+cross-section of 16 points; in both the seam between the opened and the curled parts cannot grow. On a 4 × L × L torus
+with one curled direction the seam grows with the opened patch, and nucleation theory (general knowledge, to verify)
+then predicts a critical patch, below which a patch shrinks and above which it grows, and a barrier that rises without
+bound as the release per point goes to zero. T48's one-curled torus stayed shut in 32 of 32 (O91) and T41 never opened
+(O81); both were explained on the record only by the single-move wall of 36 (λ = 1.25) and 28.8 (1.40). Whether the
+three-direction barrier is a fixed single move or a growing seam decides whether "one push opens all" survives in this
+family (Update 44, rule 11's first use), and it has not been priced (O79, O94).
+
+### What will be computed (exact; no run)
+
+On the 4 × L × L six-link torus with one curled direction (L = 8, 12, 16), at λ = 1.10, 1.25, 1.40: build the wiring in
+which the curled direction is opened over a connected patch of k × k columns of the L × L sheet (k = 1, 2, 3, ...), with
+the seam wired as T48's partly opened states are wired (read from their saved end states, O91; the construction is to
+be checked for validity under the hard-core rule, and if no valid seam exists for some k that is recorded), and compute
+H exactly. Report ΔH(k) = H(patch) − H(torus); the release per opened point and the seam cost per unit length fitted
+from it; the k at which ΔH is largest (the critical patch); the barrier ΔH* = max ΔH; and ΔH* against λ. Report also
+the cheapest single move out of each patch (whether a patch of size k sits above or below the hill).
+
+### Verdict words, fixed now
+
+- **FIXED WALL** if ΔH(k) falls for every k ≥ 1 at every λ: the single move is the whole barrier, a push of 36 should
+  open all, and T48's result needs another explanation.
+- **CRITICAL PATCH** if ΔH(k) rises and then falls, with ΔH* finite at every λ: the critical k and ΔH* are the push to
+  try in a sealed run (part B, to be pre-registered separately).
+- **NO FINITE PATCH** if ΔH(k) rises for every k computed at some λ at which X is stuck: no finite push opens all
+  there, and under rule 11 the branch is abandoned in this family at that λ.
+
+### Predictions
+
+**The owner's:** owed before any run.
+
+**Ours, unverified (O103 (b)):** CRITICAL PATCH at every λ, with ΔH* rising as λ → 1 roughly as the seam cost squared
+over the release (the two-dimensional case of classical nucleation); at λ = 1.25 a barrier well above the single move
+of 36, which is why T48 stayed shut.
+
+### What this cannot show
+
+Anything about the parent model (Gate C open; Update 24's caveat). The dynamics: whether a bath crosses the barrier
+is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89).

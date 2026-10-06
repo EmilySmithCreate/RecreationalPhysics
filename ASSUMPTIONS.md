@@ -2520,6 +2520,130 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     between wirings. It is one exact table and one question for her: which of S+ and S− is meant when the wiring
     varies, and is the comparison to be made at the identity metric or at the solved one?
 
+- **O103 Three AI-generated reviews of the programme, 6 October: what each got right and wrong against the record, and
+  what changed.** (2026-10-06, 03:56 ET by the clock. The reviews were obtained by the owner and pasted into the
+  session; the first and third call the hypothesis "Omega", its name in an earlier version of the theory, read here as
+  X; the third cites a paper by Fife on black-hole cosmology with no reference given. O42 is the precedent for recording
+  an AI review. *Everything physical below is ours, unverified: reasoning by one AI checked by another, unreviewed by a
+  physicist.* No run; nothing in `results/` is touched. The owner's decisions on the reviews are VISION Update 44.)
+  - **(a) A slip, corrected.** O89 gives dark energy's share as about 10⁻³⁵ of the energy *at 1 MeV* (its formula,
+    2 × 10⁻¹¹ (eV / T)⁴). The programme draft paired that figure with 4 MeV, the latest start of the hot era by
+    [deSalas15]; by O89's own formula the share at 4 MeV is about 8 × 10⁻³⁸, call it 10⁻³⁷. Corrected in the draft. O89's
+    main text and VISION Update 41 still call 1 MeV "the latest a hot beginning can be placed", which O89's own addendum
+    moved to 4 to 5 MeV; both now say so.
+  - **(b) The fixed push read as the one-dimensional case.** The tube's front is a ring of four points whatever the
+    tube's length (PREREGISTRATION T9: "a tube's front is a ring of fixed size"), and the 4 × 4 × L torus has a
+    cross-section of 16 points; a seam that does not grow is why the barrier is one move at every size (paper 1; T32).
+    In the language of nucleation theory (general knowledge, to verify; [C77] not read by us) that is the
+    one-dimensional case, in which no critical size exists and the barrier is bounded, here by 32 − 16λ, rising only to
+    16 as λ → 1 while the release 4(λ − 1) goes to zero. Where the seam grows with the opened patch, as on a 4 × L × L
+    torus with one curled direction, the same theory predicts a critical patch and a barrier that rises without bound
+    as the release shrinks. T48's one-curled torus STAYS in 32 of 32 (O91) and T41 NEVER OPENS (O81) are consistent
+    with that, and were explained on the record only by the single-move wall of 36 and 28.8. The true barrier, "a patch
+    several moves big", is named in O79 and O94 and has not been priced. **Consequence:** paper 1's "the push does not
+    grow with size" is a statement about a geometry whose front cannot grow; it is not evidence that the
+    three-direction barrier is fixed. PREREGISTRATION T54 (a draft) prices it.
+  - **(c) "Stable for now", against size.** Paper 1 already says, beside Eq. (2), that a dynamics updating every region
+    at its own fixed rate would give a wait falling as 1/N; the fair clock (O90) is that dynamics, so on it a curled
+    region's decay rate grows in proportion to its size at fixed g. The second review's estimate: a region of 10¹⁸⁰
+    points at the Planck scale would need g below about 12 / ln(10¹⁸⁰) ≈ 0.03 to last, where the runs use g = 1.5.
+    *Ours on that:* the toy has no scale, so the Planck identification is the reviewer's and the arithmetic is rough;
+    what stands is that "stable for now" is a statement at the sizes and on the clock of the runs.
+  - **(d) The entropic route and the gap.** Update 40 lists the counting route to a pull as the one "tested first
+    because it needs no new knob" (T52, then the warm-bath pull). The reading of 25 September
+    (`docs/reading/notes/gravity_mechanisms_2026-09-25.md`, topics 1 and 3) says a fluctuation-induced or entropic
+    pull between two relics needs the surroundings to feel both at once, so its range is the range of the
+    surroundings' correlations; O60 (a) says a gapped medium's correlations die off exponentially. The two were never
+    joined. Joined: unless the warm sheet's correlation length is long, an entropic pull is short-range too, whatever
+    T52 finds about boundary against volume. So the warm sheet's correlation length (how far a disturbance at one
+    point is felt, at the couplings a pull would be measured at) is measured before any pull is, and a short one
+    closes the entropic route without running it (TASKS, 6 October). T52's pre-registered fork stands: a count that
+    FOLLOWS THE REGION is the no-gravity outcome by [Ver11].
+  - **(e) The shares: what a release would have to be, and the carrier of dark energy.** Dark energy is an energy
+    density that stays the same as space grows; anything released as particles or radiation thins out (general
+    knowledge, to verify). So "the first opening releases dark energy" (Update 41) cannot be a release in the ordinary
+    sense; in this toy the only thing that behaves like a constant density is energy the final state *keeps*: the
+    curling cost of a direction that stays curled, 4(λ − 1) per point, which is O89's second shape ("all at the
+    second", the last direction free to stay curled). That names the carrier and exposes its size: of order one
+    curling cost per point of space, against an observed density of about 10⁻¹²⁰ in Planck units (general knowledge,
+    to verify), the cosmological-constant problem in its usual form, which Update 41 carries openly. Two bars follow
+    before any release is called dark energy, dark matter or radiation: a dilution law for it (constant, a⁻³ or a⁻⁴),
+    which the toy, having no expansion, cannot yet give, so the labels in Updates 30 to 41 are the author's
+    interpretation and not results; and, for a dark release that never mixes with ours (which "the kind follows the
+    opening" requires, since a hot lump in equilibrium forgets which direction produced it), the measured count of
+    light species in the early universe, N_eff ≈ 3.0 ± 0.2 (Planck 2018, general knowledge, to verify), which limits
+    how much dark radiation there can be before the light elements form. Recorded in `docs/design/reality_targets.md`.
+  - **(f) A single number per point is scalar gravity.** Update 40's quantity on the points, if it is one number per
+    point sourced by energy, is Nordström's theory: the right Newtonian limit, no bending of light, and −1/6 of
+    Mercury's perihelion shift ([Giulini08], Secs. 1 to 3 read; the 25 September reading note, topic 4). Light bending
+    is measured (1919; Cassini, to verify). So the author's condition that the quantity "matches Einstein wherever
+    measured" cannot be met by a scalar alone; it needs space's curvature as well as time's rate, a tensor, or an
+    explicit restriction to slow matter stated as such. `docs/design/gravity_field_brief.md`, when written, opens with
+    this and with what any such quantity must declare first: what it represents, why it belongs in the model, its
+    symmetry, its dynamics, how matter couples to it, what continuum equation should emerge, and what falsifiable
+    prediction distinguishes it (the third review's list; `docs/design/gravity_brief.md`, §7).
+  - **(g) The fall-backs and the wait law.** The second review asked for the split between the time to the first exit
+    and the time from there to completion, and quoted measured waits of "0.9 to 1.4 times Eq. (2)". The split is on
+    the record: T22 (PREREGISTRATION) finds the first exit on time within one standard error in all six cells and the
+    time to a quarter converted 1.5 to 1.7 times the first exit, with κ = 0.56 to 0.68 (O39); paper 1 says it in words
+    without the number. "0.9 to 1.4" is not a recorded figure: T22's first-exit ratios are 0.89 to 1.22 and T8's waits
+    near λ = 1 run 15 to 43 % long; the review combined them. Not imported. Candidates for a revision of paper 1 are in
+    `docs/papers/curled_torus/v2_changes.md`.
+  - **(h) Not in the record.** The first review quotes "all matter and energy eventually enters a black hole, so there
+    is no motion through space and therefore no time"; the record and the published programme artifact have no such
+    sentence (nearest: VISION Update 26, "until the last star is eaten by the last black hole"). The owner says on
+    6 October that it is her best guess with current information; it is recorded as her conjecture, in the form the
+    reviews ask for, in Update 44. The remark that cosmological measures "predict Λ < 0" answers nothing on the record
+    (O101 has no such claim). The two extreme T24 waits (24 τ and 76 τ, both at N = 64; O52, O65) have never been read
+    from their saved wiring (O84); the review's guess that those runs started in a different state is a guess, and
+    reading them is in TASKS.
+  - **(i) The first red-team pass (CLAUDE.md rule 12, adopted 6 October): the four questions of rule 11 put to the
+    failures of T44 to T49.** The claim: one push opens every curled direction of X into one space (the author's,
+    VISION Update 22). (1) *Does the result falsify it as stated?* At the settings run, yes: pushes the size of the
+    cheapest move (T33, T44, T45, T46, T48, T49) and pushes up to 160 in four directions (T40) opened one direction, or
+    one cube, and stopped; the claim survives only in forms not yet run, a bath that supplies pushes in turn (T53,
+    running) or a push the size of a critical patch, if one exists. (2) *Implementation, parameters, size or
+    mechanism?* Implementation: the six- and eight-link kernel is exact on the ladder and draw for draw with the
+    four-link one (O41, O49), but Gate C is open, so the parent model is not reproduced; the ladder's walls do not
+    depend on that. Parameters: λ from 1.10 to 1.40 and tie strengths from 1 to 2.5 were run and no window appeared.
+    Size: for a gas of cubes the result is structural ([Mul79], O85) and no size fixes it; for a connected X the
+    dependence on size is exactly what has not been priced (b). Mechanism: the exact ladder says each direction has
+    its own wall and the energy ties nothing (`docs/papers/series_plan.md`, the (D, λ) map), which is a property of
+    the energy. (3) *A cheaper discriminating test:* price the barrier exactly (T54): if the barrier to opening the
+    next direction of a connected one-open X has a maximum at a finite patch, a push of that size is the test; if it
+    rises with the patch without bound at every λ at which X is stuck, no finite push opens all. (4) *What would make
+    us abandon the branch:* that second outcome, untied and under the tie at the strengths run, abandons "one push
+    opens all" in this family; what would remain is a bath (T53) or a different model (Update 28). Written in the form
+    of rule 11 in Update 44.
+  - **(j) The black-hole-cosmology lineage.** The third review places its Fife paper "in the lineage of Pathria,
+    Smolin and Popławski", black holes that contain or generate cosmological regions, and asks that any re-curling the
+    toy ever produces be compared with Schwarzschild or a closed-FLRW black-hole cosmology as a benchmark, never as
+    evidence. [Smolin06] is read; Pathria (1972), Popławski and Fife are not in the record and are not cited until read
+    (rule 1); the reading is in TASKS, with the Fife reference to be obtained from the owner. The staged targets before
+    anything is called a black hole (a stable localized curled region inside open space; a reproducible threshold;
+    growth with stored energy; trapping or an analogue; a sensible large-scale limit) are in the programme draft,
+    piece 11, and in `reality_targets.md`. Open: a black hole holds the most entropy anything its size can, a quarter
+    of its horizon area in Planck units (Bekenstein and Hawking, general knowledge, to verify); an ordered re-curled
+    interior is the opposite of that, and where the entropy would live has to be said.
+  - **(k) Pages that contradicted each other, found on the way and fixed on 6 October:** the draft's "T53 not yet
+    launched" (launched 5 October, 15:17 ET); `curling_ladder.html`'s release labels ("2nd: dark matter, 3rd: ordinary
+    matter"), against Update 41's "which is which is not decided", and its run table (T37 "a mosaic", T48 to T50
+    "running"); `the-loop-and-the-floor_v1.html`'s "the scrap is dark matter" and "a first-order change" (given a
+    banner, not rewritten); `series_plan.md`'s paper 1 entry and its (D, λ) map (T33, T41); the pointers in CLAUDE.md,
+    HANDOFF §9 and the README.
+  - **(l) Already on the record, so nothing changed:** the gap argument (O60, O61); T50's reading as the opposite of
+    time dilation (O93); "the toy has no black holes" (every public page); the fixed ring (T9); T52's fork; the quantum
+    ladder up to Tsirelson's bound (`docs/design/quantum_loop_design.md`); the four-way labelling of claims (this
+    file's legend; the draft's conventions); the hygiene list (rule 5; PREREGISTRATION), except the git commit hash,
+    which no `.meta.json` records (TASKS, 6 October). On "first order": VISION claim 4 and the README said it; the
+    draft said "sharp"; paper 1 says the thermodynamic sense is not claimed. The README and the public pages now carry
+    paper 1's clause; claim 4's wording is hers (Update 44).
+  - **What changed, in one list:** this entry; VISION Update 44; CLAUDE.md rules 10 to 13 and the Omega line;
+    PREREGISTRATION T51 amendment 3 (before any result is read) and T54 (a draft); TASKS, the section of 6 October;
+    the programme draft; `REFERENCES.bib` ([GM04], [CJR09], [BSV10], [GHR10], [BPS10]); the glossary; the README;
+    `reality_targets.md`; `gravity_brief.md` §7; `v2_changes.md`; `series_plan.md`; HANDOFF; the public pages named
+    in (k).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

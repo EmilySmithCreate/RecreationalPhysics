@@ -25,6 +25,7 @@ knowledge unless a source is named, and a source not yet read is marked so.
 | curve-first gravity | (the author's coined term, 24 September; no standard term) | | Her account of gravity: space has its own drive to curve, and matter supplies the energy that starts the curve rather than causing it. Named against general relativity, where mass-energy is the source of the curve. Web search, 24 September: no use of "curve-first gravity" or "curvature-first gravity" found. Nearby names that mean something else: "curvature-scaling gravity" (arXiv:1302.6506, a fourth-order theory) and "curvature-matter coupling" (modified-gravity models, e.g. arXiv:2203.03295); neither read by us. A name for a proposed mechanism, not a result: no test of it has run yet (T13 rung 3, the 3D model). |
 | the curling cost | the local term's excess over curvature, 4(λ − 1) per surplus square | 4(λ − 1)X | The author's rule is the published curvature plus this one term (VISION Update 23): every link closing a third small loop, i.e. curled tight, costs 4(λ − 1) extra. Zero at λ = 1; zero wherever space is smooth. A constant of our loop, in her account. |
 | the melt | the random phase | | [T25] calls it matter; the owner does not (VISION Update 19). |
+| Omega | X | | The name X had in an earlier version of the theory; outside reviews and older notes may still use it. The record writes X. Added 6 October 2026 (ASSUMPTIONS O103). |
 
 ## Not used, and why
 

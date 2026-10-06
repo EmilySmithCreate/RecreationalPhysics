@@ -130,3 +130,19 @@ and too short to be gravity; with each defect a source, the cross term falls lik
 "Gravity from counting what we cannot see" (the owner's name for piece 7) maps onto A's fluctuation part literally: it is
 a count of spanning trees, hidden structure. But that part alone is the weak, fast Casimir pull; Newton's shape needs the
 source.
+
+## 7. Added 6 October 2026: what any quantity on the points must face first (ASSUMPTIONS O103 (d), (f))
+
+Option A above is a scalar: one number per point. The 25 September reading already holds the result that scores it
+(`docs/reading/notes/gravity_mechanisms_2026-09-25.md`, topic 4, [Giulini08]): Nordström's scalar gravity has the right
+Newtonian limit, bends no light and gives −1/6 of Mercury's perihelion shift. Light bending is measured. So the author's
+condition for the quantity (VISION Update 40: the same numbers as Einstein's wherever those have been measured) cannot
+be met by option A as written; what meets it is a tensor, or a stated restriction to slow matter with the limitation
+named. `gravity_field_brief.md`, when written, opens with that, and before anything is built declares: what the
+quantity represents; why it belongs in the model; its symmetry; its dynamics; how matter couples to it; what continuum
+equation should emerge; what falsifiable prediction distinguishes it.
+
+The entropic carrier faces the gap too. A pull from counting needs the surroundings to feel both relics at once (topics
+1 and 3 of the same note), so its range is the range of the warm sheet's correlations, and O60 (a) says a gapped
+medium's die off exponentially. The warm sheet's correlation length is therefore measured before any pull is; if it is
+short, the route is closed without running the pull, whatever T52 finds about boundary against volume.

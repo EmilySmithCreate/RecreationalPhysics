@@ -1,4 +1,4 @@
-# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET; addenda to 2026-10-05)
+# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET; addenda to 2026-10-06)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". **Work is on branch `claude/vision-programme-updates-9sje7s` since 26 September** (`feat/cloud-runs-and-3d` stopped
@@ -93,7 +93,36 @@ git history.
   row, dated, newest first, and the scorecard tiles show each piece's last date. Keep it that way: add new entries at the
   top of the piece they touch, in the HTML and in `programme_draft.md`'s "Each piece's log".
 
-## Addendum, 5 October 2026 (read this first)
+## Addendum, 6 October 2026 (read this first, then the 5 October addendum)
+
+- **Three AI-generated reviews of the programme were checked against the record** (ASSUMPTIONS O103) and the owner
+  decided on them (VISION Update 44): the framing of the pages stays (no frozen "version 1"); each piece is to be
+  killed, the hypothesis adjusted; CLAUDE.md rules 10 to 13 adopted (four kinds of statement, never silently promoted;
+  decisive tests before patches, with the form "previous claim → failed because → replacement → new falsification
+  test"; a red-team pass at each milestone; outside theories as targets and a close number not a result); her
+  conjecture that a loop's turn ends when all matter has gathered into black holes and nothing moves is recorded for
+  the first time, as a conjecture. Two of the reviews call the hypothesis "Omega", its old name; it is X (glossary).
+- **Corrected on 6 October:** dark energy's share at 4 MeV is about 10⁻³⁷, not the 10⁻³⁵ that belongs to 1 MeV (O89,
+  O103 (a); the programme draft, VISION Update 41). The draft's "T53 not yet launched" (launched 5 October, 15:17 ET).
+  The curling-ladder page's release labels and run table. Paper 1's entry and the (D, λ) map in `series_plan.md`. The
+  programme draft's "What is new" now names the decompactification relatives read on 25 September ([GM04], [CJR09],
+  [BSV10], [GHR10], added to `REFERENCES.bib`). This page's §9 counts, and its line of 5 October saying the programme
+  artifact was untouched that day (it carries 5 October content).
+- **Pre-registration:** T51 amendment 3, written before any result was read (the shape of the fall as a power-law
+  exponent; the size distribution; the size caveat). T54, a draft: the true barrier in three directions, awaiting the
+  owner's prediction before any run; first in the order.
+- **Still owed by the owner:** her T51 prediction; her T54 prediction; the open items of Update 44 (claim 4's wording;
+  piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's revision; the Fife reference).
+- **Not done, in TASKS (6 October):** the two extreme T24 waits read from their wiring; T9; the warm sheet's correlation
+  length before any pull; the git commit hash in `.meta.json`; the reading of Pathria, Popławski and Fife before any
+  citation.
+- Next numbers (6 October, by the clock): ASSUMPTIONS **O104**, VISION **Update 45**, PREREGISTRATION **T55**. Running:
+  T51 (91 Batch jobs), T52 (laptop), T53 (30 Batch jobs). The programme draft is current to 6 October; the artifact
+  "A Phase-Changing Reality" was republished on 6 October (Version 57) from the corrected draft, and the Curling Ladder
+  artifact from the rebuilt page; `docs/public/programme.html` in the repository is older than the artifact and is not
+  maintained by hand (the artifact is the programme page, her request of 4 October).
+
+## Addendum, 5 October 2026
 
 - **Fetch before anything else.** On 5 October the laptop's working copy was still on the 25 September commit of
   `feat/cloud-runs-and-3d`, 40 commits behind this branch, with three files uncommitted. Run `git fetch` and
@@ -136,7 +165,7 @@ git history.
   shows the version from chat until Emily asks for it to be republished.
 - **The programme page** is the Claude artifact "A Phase-Changing Reality", a state-of-the-programme page with no
   revision status (her request of 4 October). `docs/public/programme.html` in the repository is older than the
-  artifact. Neither was touched on 5 October: T48 to T50, the T37 correction and the birth shares are not on them yet.
+  artifact. The artifact was republished on 5 October with the birth shares and the T37 correction; `programme.html` was not. *(Corrected 6 October: the line first written here said neither was touched.)*
 - **Also pre-registered on 5 October:** T52, the hidden count round a relic, exact (`graphity.hidden`,
   `scripts/exact_hidden_relics.py`).
 - Next numbers (15:19 ET, 5 October): ASSUMPTIONS **O103**, VISION **Update 44**, PREREGISTRATION **T54**. Running: T51 (91 Batch jobs), T52 (the hidden count, on the laptop; no verdict until it finishes), T53 (30 Batch jobs, launched 15:17 ET; the owner's inferred prediction is to be confirmed or replaced before it is read). The programme draft `docs/papers/programme_draft.md` is current to 5 October.
@@ -310,12 +339,13 @@ number is carried into a claim about gravity.
 - `pdftoppm` is missing, so the Read tool cannot render PDFs; PyMuPDF or pypdf extract text. arXiv HTML
   sometimes omits figures; render the PDF page instead. Downloaded papers go in `docs/reading/` (gitignored).
 - Bash heredocs eat `\n` inside Python strings; write scripts with the Write tool.
+- **Which Python (6 October):** `python` and `py` on this laptop resolve to a bare `.venv` with no NumPy and no pytest, so `pytest` there exits reporting that pytest is missing and a script that imports the kernel fails. The interpreter with the project's dependencies is the Microsoft Store one, `~/AppData/Local/Microsoft/WindowsApps/python3` (NumPy 2.0, Numba, pytest 9.1). The shell also cuts off long heredocs: a script over a few thousand characters is written to a file with the Write tool and run from there.
 - Background runs: `nohup <py> scripts/... > log 2>&1 &`; progress from `results/*.partial`.
 
 ## 9. Where things are
 
-`VISION.md` (claims; Updates 1–22) · `TASKS.md` (its numbering map matters) · `PREREGISTRATION.md` ·
-`ASSUMPTIONS.md` (Q1–Q21, O1–O41) · `REFERENCES.bib` · `docs/papers/` (paper 1, `series_plan.md`,
+`VISION.md` (claims; Updates 1–44) · `TASKS.md` (its numbering map matters) · `PREREGISTRATION.md` ·
+`ASSUMPTIONS.md` (Q1–Q23, O1–O103) · `REFERENCES.bib` · `docs/papers/` (paper 1, `series_plan.md`,
 `programme_draft.md`, `glossary.md`) · `docs/design/` · `docs/parked/` · `docs/public/` · `docs/figures/` ·
 `scripts/analyse_*.py` with tests in `tests/` · `terraform/`, `Dockerfile`, `.github/workflows/` ·
 `src/graphity/` (`cqg.py`, `cqg_d.py` for any D, `sealed.py` (now with per-vertex stores and stream carry-on), `spark.py` (the local spark, Q22), `tempering.py`, `symmetry.py`,

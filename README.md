@@ -2,7 +2,9 @@
 
 Monte Carlo experiments on a published model of emergent geometry, testing one link in a personal
 hypothesis: that our spacetime is a settled arrangement of something else, and that the change which
-produced it was **first order** — sharp, with a bounded lump of energy released.
+produced it was sharp, with a bounded lump of energy released. Her word for that change is **first order**;
+in the model it is the decay of a stable-for-now arrangement over an activation wall, and a first-order
+transition in the thermodynamic sense is not claimed for it (VISION S2′; paper 1, "Not claimed").
 
 This is a hobby project by a software engineer, not a physicist. Every run is pre-registered or
 labelled exploratory; every setting that was run is reported; no physicist has reviewed any of it.
@@ -14,7 +16,7 @@ Nothing here is a claim about the real universe. The plain-language version of t
 | [`docs/HANDOFF.md`](docs/HANDOFF.md) | the current state in one page: verdicts, corrections that must not be undone, what is running |
 | [`VISION.md`](VISION.md) | the six claims, the success conditions (S1–S5, S2′), how this differs from the published programme, and every decision with its date |
 | [`PREREGISTRATION.md`](PREREGISTRATION.md) | what each test would measure and what each outcome would mean, committed before its runs, with dated amendments |
-| [`ASSUMPTIONS.md`](ASSUMPTIONS.md) | every assumption with a source or marked "Ours"; the observation log O1–O18 with the numbers |
+| [`ASSUMPTIONS.md`](ASSUMPTIONS.md) | every assumption with a source or marked "Ours"; the observation log O1–O103 with the numbers |
 | [`TASKS.md`](TASKS.md) | what is next, with acceptance tests and the two reproduction gates |
 | [`docs/design/known_physics_plan.md`](docs/design/known_physics_plan.md) | the ladder towards claim 2: dimension, a speed limit, defect interaction |
 | [`REFERENCES.bib`](REFERENCES.bib) | sources, each marked read-in-full / abstract-only / unread |
@@ -189,4 +191,7 @@ finding before its gate has passed.
 Code and documents were drafted with Claude (Anthropic) in conversation with the author. Physics
 arguments marked "Ours" in `ASSUMPTIONS.md` have not been reviewed by a physicist. The curled-torus paper
 was also revised after a review generated with ChatGPT (OpenAI); what it prompted is recorded in
-`ASSUMPTIONS.md` (O42) and disclosed in the paper.
+`ASSUMPTIONS.md` (O42) and disclosed in the paper. On 6 October 2026 the programme's pages were revised after
+three AI-generated reviews obtained by the author (one of them from Claude reading as a referee; the source of the
+other two is not recorded); what each got right and wrong against the record, and what changed, is `ASSUMPTIONS.md`
+(O103), and the author's decisions on them are VISION Update 44.
