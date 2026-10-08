@@ -337,9 +337,9 @@ function drawRelease() {
   const rows = [];
   if (D === 4) {
     const r = [0, 3.3711 * a, (0.6289 - S.rho) * a, S.rho * a];
-    const names = ["1st: dark energy", "2nd: dark matter", "3rd: ordinary matter", "4th: time"];
+    const names = ["1st: dark energy", "2nd: ordinary matter or dark matter (not decided)", "3rd: the other of the two (not decided)", "4th: time"];
     r.forEach((v, i) => rows.push({ name: names[i], v }));
-    document.getElementById("rel-sub").textContent = `Untied, each of the four openings gives back a = ${fmt(a, 2)} per point. Below is the tie fitted for T46 (O75), in the author's order, with time's share ρ from the slider. The four always add up to 4a = ${fmt(4 * a, 2)}.`;
+    document.getElementById("rel-sub").textContent = `Untied, each of the four openings gives back a = ${fmt(a, 2)} per point. Below is the tie fitted for T46 (O75), in the order the author held on 26 September, with time's share ρ from the slider; since 4 October the first opening is dark energy's and which of the next two is ordinary matter and which dark matter is not decided (VISION Update 41). The four always add up to 4a = ${fmt(4 * a, 2)}.`;
     document.getElementById("rel-note").innerHTML = `<span class="ours">Ours</span>A negative bar takes energy in, as time's opening does when ρ is below zero ("time keeps energy", T47). The walls on this page are the untied ones.`;
   } else {
     for (let i = 1; i <= D; i++) rows.push({ name: `opening ${i} of ${D}`, v: a });

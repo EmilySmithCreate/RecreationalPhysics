@@ -347,3 +347,24 @@ None of the referee's points on paper 1 failed the check; each was verified befo
   pre-registration, which conflated the two nearby values.
 - Item 1d proposes disclosure only. It does not change the verdict: the amendments are on the record and were the
   owner's decisions.
+
+---
+
+## Candidates for a revision of paper 1, from the reviews of 6 October (ASSUMPTIONS O103)
+
+Not applied: the paper is on hold at arXiv with the model's author's endorsement, and a revision is the owner's call
+(VISION Update 44, open item (e)).
+
+1. Frame the result as the decay of a metastable state in an effectively one-dimensional geometry: the front is a ring
+   of four points whose cost never grows, so the fixed barrier is the case in which no critical size exists; say that
+   the size-independence of the push need not carry to geometries whose front can grow (O103 (b)).
+2. Give the split the referee asked for with the number already on the record: the first exit on time within one
+   standard error in all six cells of T22, and the time to a quarter converted 1.5 to 1.7 times the first exit; and say
+   in the Methods what the tabulated "mean wait" measures (the detected decay after the 200-sweep watch), so that the
+   15 to 43 % excess near λ = 1 can be read against it (O103 (g)).
+3. State the fair-clock reading of size-independence beside Eq. (2): on a clock that offers each local pair of links
+   equally often at every size, the wait falls as 1/N (O90), as the text already says a region-rate dynamics would give.
+4. Cite the four decompactification relatives in the Outlook, [GM04], [CJR09], [BSV10], [GHR10], and say what is new in
+   their terms: a discrete network in which the number of large dimensions changes dynamically, with the barrier
+   counted exactly.
+5. Read the two extreme T24 waits (24 τ and 76 τ, both at N = 64) from their saved wiring before the next version (O84).

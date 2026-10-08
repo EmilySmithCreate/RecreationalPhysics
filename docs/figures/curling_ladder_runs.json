@@ -109,9 +109,9 @@
   ],
   "g": "1.25 to 1.75",
   "ask": "Do long tubes make many seeds?",
-  "out": "Many seeds, many scraps; a mosaic at the longest",
-  "kind": "opened",
-  "src": "O77"
+  "out": "Many seeds, many scraps; the longest warm tubes melted (not a mosaic)",
+  "kind": "mixed",
+  "src": "O77, O88"
  },
  {
   "t": "T38",
@@ -163,9 +163,9 @@
   ],
   "g": "sealed",
   "ask": "Control: the tube with energy kept at the front",
-  "out": "Running",
-  "kind": "running",
-  "src": "T48"
+  "out": "One space at λ = 1.25; advances only at 1.40",
+  "kind": "opened",
+  "src": "O91"
  },
  {
   "t": "T50",
@@ -176,9 +176,9 @@
   ],
   "g": "sealed",
   "ask": "Does a front slow where energy sits?",
-  "out": "Running",
-  "kind": "running",
-  "src": "T50"
+  "out": "Speeds up at 6 and 10 units per point; no effect at 1 and 3",
+  "kind": "other",
+  "src": "O93"
  },
  {
   "t": "T30",
@@ -302,9 +302,9 @@
   ],
   "g": "sealed",
   "ask": "One curled, energy kept at the front: one space?",
-  "out": "Running",
-  "kind": "running",
-  "src": "T48"
+  "out": "Stays, 32 of 32",
+  "kind": "stuck",
+  "src": "O91"
  },
  {
   "t": "T48",
@@ -316,9 +316,9 @@
   ],
   "g": "sealed",
   "ask": "Two curled, energy kept at the front: one space?",
-  "out": "Running",
-  "kind": "running",
-  "src": "T48"
+  "out": "Advances only at 1.25; at 1.40 both open into one space in 5 of 16, damaged by the letter",
+  "kind": "mixed",
+  "src": "O91"
  },
  {
   "t": "T49",
@@ -331,9 +331,9 @@
   ],
   "g": "sealed",
   "ask": "One cube alone: all directions, and in what order?",
-  "out": "Running",
-  "kind": "running",
-  "src": "T49"
+  "out": "Part open; fully in a minority, more often with interchangeable points",
+  "kind": "mixed",
+  "src": "O92"
  },
  {
   "t": "T33",
@@ -427,9 +427,9 @@
   ],
   "g": "sealed",
   "ask": "Three curled, energy kept at the front: one space?",
-  "out": "Running",
-  "kind": "running",
-  "src": "T48"
+  "out": "Stays at 1.25; advances only at 1.40",
+  "kind": "stuck",
+  "src": "O91"
  },
  {
   "t": "T49",
@@ -442,8 +442,8 @@
   ],
   "g": "sealed",
   "ask": "One 8-cube alone: all directions, and in what order?",
-  "out": "Running",
-  "kind": "running",
-  "src": "T49"
+  "out": "Never opens fully",
+  "kind": "stuck",
+  "src": "O92"
  }
 ]

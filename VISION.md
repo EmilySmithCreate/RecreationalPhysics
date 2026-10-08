@@ -1093,11 +1093,15 @@ questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREG
   grows, so going back in time matter's share shrinks: at temperature T all matter together is about 0.8 eV / T of the
   energy, dark matter about 0.67 eV / T, and the mass of ordinary matter about 0.13 eV / T. By the time the light
   elements formed (about 1 MeV, the latest a hot beginning can be placed) dark matter was under a millionth of the energy
-  and dark energy about 10⁻³⁵ of it; earlier, less. The 5.36 is real and does date from the start, but it compares two
+  and dark energy about 10⁻³⁵ of it; earlier, less. *(Corrected 6 October, O103 (a): the latest a hot beginning can be placed is 4 to 5 MeV by O89's own addendum, and there dark energy's share is about 10⁻³⁷; the 10⁻³⁵ is the 1 MeV figure.)* The 5.36 is real and does date from the start, but it compares two
   slivers: dark matter with the *mass* of ordinary matter, which is itself the billionth-part left when matter and
   antimatter cancelled. It is not the ratio of a dark release to an ordinary release. **So the birth shares to match
   are: the hot lump, almost everything; dark matter, a cold sliver of about 0.67 eV divided by the temperature of
-  birth; dark energy, nothing measurable.** One number is unknown, the temperature of birth.
+  birth; dark energy, nothing measurable.** One number is unknown, the temperature of birth. *Added the same day, after the author asked whether this is published: it is. The inputs were checked at
+  the source ([Planck18] for when matter and light were equal and for the two matter densities; [deSalas15] for how
+  late the hot era can have begun, about 4 MeV), and the scaling between them is textbook. What is not published as
+  one number is the share at birth itself, because the temperature of birth and the nature of dark matter are both
+  unknown (O89, addendum). The application to three releases remains ours.*
 - **What that changes** (*ours*). (1) Fitting the tie's two constants to 5.36 (O74, T45, and the chat's
   f = (0, a, 1.53a, 0)) aimed at a ratio the releases do not have to hit. Those runs stand as run; their target is
   withdrawn. (2) The chat's verdict that the scrap is not the dark matter "by a factor of ten" is withdrawn (O88): at
@@ -1113,6 +1117,131 @@ questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREG
   offered equally often at every size (O76's proposal; O90). Verdicts already scored stay as scored.
 - **The scrap-share reading stays out of paper 2** (5 October, on the assistant's advice; she expects the paper to
   change a good deal before it is shared).
+
+Update 42 (2026-10-05, committed 10:49 ET): **ideas of the author's on what X is inside a black hole, what dark energy is, and how
+the papers should be built.** Her words, put in order; she called them spitballing, and they are recorded as ideas to
+test, not decisions, except where marked. Why this page changes: three of them say what the next exact tables and runs
+should be about. Details: ASSUMPTIONS O100; `docs/papers/series_plan.md`, last section.
+
+- **X as spaghetti.** Inside a black hole X may be two directions curled and one open, not a point: the black hole
+  only has to curl two directions before the space snaps back open. That state is unstable, like X as a singularity,
+  but being long in one direction it allows several seeds. Because the compression is not stable, especially with the
+  tie between directions, it would not need more matter and energy from the hole for each burp; it could burp at once.
+  Her questions: would X be stable in this phase, or constantly burping, or something else? *Ours, exact (O100):* in
+  the toy this state exists and has been run. Untied, it is stuck for now while the curling cost is small and cannot
+  hold at all once the cost passes a threshold (λ about 1.45): which of "stable for now" and "burps at once" it is, is
+  a matter of one number. Given a push it has so far opened one of its two curled directions and stopped (T30, T48),
+  and at the setting nearest the threshold it opened both in 5 runs of 16.
+- **She asks for a table of every state of the directions**, since many arrangements can be tested. *Ours:* the exact
+  ladder exists for two, three and four directions (`docs/public/curling_ladder.html`; `scripts/exact_ladder_d.py`) and
+  is extended with what each state has been seen to do (O100).
+- **Why the first opening nets almost nothing: perhaps because it is already open.** If X begins with one direction
+  open, that direction never had to open, and dark energy would be some kind of scrap or relic of it. *Ours:* this
+  gives the zero for free, which the ledger could not. It then leaves the small amount that is observed to be
+  explained, and by the rule taken from [PWS09] a scrap of fixed number thins out as matter does, so a dark energy made
+  of scrap needs the scrap's number to grow with the space. Not decided.
+- **Time.** "X has order but not time" holds either way: with one direction open nothing moves, so there is no time.
+- **Matter and antimatter.** She asks whether the energies released cancel somehow, leaving only the net one to 5.36
+  of the two kinds of matter. *Ours, from abstracts read on 5 October ([KLZ09], [PV13], [MRM12]):* in standard physics
+  the hot lump held almost equal amounts of matter and antimatter, which turned to light as it cooled, and ordinary
+  matter is the small excess left over. A published line of work, asymmetric dark matter, holds that dark matter is
+  the same kind of leftover excess, which would make 5.36 a ratio of two leftovers, as she guesses, and not of two
+  releases. And the standard way to make such an excess needs the universe out of balance for a moment, which a sharp
+  change with a moving front supplies: in the best-studied proposal it is made at the walls of the bubbles of a
+  first-order transition. So the burp's front is where an excess could be made. Nothing in the toy has anything that
+  comes in opposite kinds, so this is a direction, not a result.
+- **Seeds.** Would each seed be its own new spacetime, or do seeds close together join into one? Perhaps the open
+  direction makes X unstable, the other two open of themselves, and the scrap is the minuscule dark energy while the
+  releases are the two matters; or only one of the two releases nets energy and makes every kind of matter. *Ours, a
+  first look (O100):* in the toy, seeds in one connected X usually join into one space, and in a minority of long
+  tubes the opening ended as two separate spaces. "Only one opening nets energy" is one of the two shapes O89 found to
+  match the make-up at birth.
+- **A second line of work: the loop and the sizes of infinities.** We are probably circling the largest, most likely
+  observed infinity, so a theory of maximizing, as in economics, may apply to the sizes of infinities: a loop that
+  cannot be created is not a large infinity beside a strange loop that holds every configuration. She asks what
+  research exists. A reading is under way (the measure problem; maximizing principles in cosmology; criteria for
+  comparing infinite streams in economics).
+- **DECISION: many short papers, not one long one.** "I'd rather have 15 seven-page papers, brought together as the
+  full theory by a 16th, than one 90-page paper." Each short paper may take up, replicate or extend the model or the
+  open question of one researcher's most recent work, as paper 1 does for Kelly, Trugenberger and Biancalana. The list
+  is in `docs/papers/series_plan.md`.
+
+Update 43 (2026-10-05, 11:40 ET by the clock): **the author's position on the measure: both the yield of a turn and
+the multiplying count, and the reward is observers who evolved.** Why this page changes: the reading of O101 named a
+trap in counting per turn (if one turn makes many black holes, the rate of multiplying decides what dominates) and a
+gap (the yield of a turn has to be finite), and her answer says what is being counted. Her words, put in order.
+
+- **Maximize both.** A reality with far more black holes may hold them too close together, cutting short the time in
+  which molecules rearrange into life that grows in complexity, or the number of stars with planets at a temperature
+  where complex molecules are stable. Those are real requirements of our reality, and they compete with simply making
+  the most black holes, even if that is on paper the larger infinity. So the multiplying does not win by itself.
+- **The reward is an observer**, and things that go with observers evolving serve as well: a long cold period, complex
+  molecules, stars with planets at the right temperature.
+- **Brains that assemble by chance in space are not real observers: they cannot evolve.** A reality has stable rules of
+  order; it is not random arrangements of matter at every level of complexity. Or at least that is so for observers
+  who loop as we do, which is the reality we are in.
+- *Ours.* (1) This answers the trap in her terms: what is counted is observers who evolved, per turn, times how the
+  turns multiply, and a setting that makes many black holes and no one to observe scores nothing. Written out, a loop's
+  score is its observers per turn multiplied by a factor that grows with each generation, so over many generations
+  the multiplying still dominates unless it is bounded or the two are tied together, as she argues they are: more
+  black holes, sooner, means less cold time. That trade is the thing to make exact. (2) Counting something that goes
+  with observers, not observers themselves, is what the one published maximizing principle does: it counts the entropy
+  produced, which is dominated by starlight warming dust ([BHKP07], abstract only). (3) Requiring that observers have
+  evolved is one of the published answers to the chance-brain problem ([Freivogel11] reviews it). (4) The gap of O101
+  remains: a turn's yield has to be finite, and her list (a long cold period, stars with planets) is finite in any one
+  turn once it is counted up to the last star.
+
+Update 44 (2026-10-06, 03:56 ET by the clock): **three AI-generated reviews of the programme, checked against the
+record, and the author's decisions on them.** Why this page changes: the reviews put four decisions to the author and
+she made them; one idea of hers is recorded here for the first time; and from here a failed prediction is written in a
+fixed form. What the reviews got right and wrong is ASSUMPTIONS O103; they are AI output, and their physics is ours,
+unverified, like any other. Two of them call the hypothesis "Omega", its name in an earlier version of the theory; it
+is X.
+
+- **DECISION: the framing stays.** The reviews proposed freezing a dated "version 1" of the hypothesis with three to
+  five predictions and scoring it, so that the hypothesis could not absorb every failure. Her answer: "I do not want
+  to change this. The hypothesis I can read before I start every work session to ground me in where we are at big
+  picture." The pages keep "first version didn't hold · in progress", and the claim at the top of the programme
+  draft stays current.
+- **DECISION: each piece is to be killed; the hypothesis is adjusted.** On "optimize for making it easy to kill": "I
+  agree with this in theory, let's see how it goes. The thing is big picture, I will adjust but not kill the
+  hypothesis. Killing it is giving up on having a clear picture of how reality works, that's our real goal. But
+  definitely want to treat each tiny piece as something to kill." Written into CLAUDE.md at the head of rules 10 to 13.
+- **DECISION: four working rules adopted** (CLAUDE.md rules 10 to 13): four kinds of statement, never silently promoted
+  ("this seems good"); decisive tests before patches, the four questions answered before any new mechanism is proposed
+  ("seems reasonable"); a red-team pass at each milestone; outside theories as targets and a close number not a result
+  until checked. Rule 11's form for a failed prediction, "previous claim → failed because → replacement → new
+  falsification test", applies from this update on; its first use is below.
+- **The author's conjecture, recorded for the first time** (hers; "my best guess with current information"). Time as
+  we experience it exists because matter moves through open space (Update 41). Over a loop's turn, matter and energy
+  gather into black holes; when all of it has, nothing moves through space, and so there is no time: the turn ends.
+  In the form the reviews ask for: *time is an outcome of relational change in the open phase; a late or re-curled
+  state might cease to support the processes that function as clocks; whether a turn reaches such a state, and
+  whether re-curling inside black holes supplies the mechanism, remain to be derived.* Not an established mechanism;
+  and not the artificial cutoff of eternal-inflation measures ([Freivogel11]), which is a regulator for assigning
+  probabilities and a different thing. It supplies the "stated end" that O101 said a turn needs. The toy has no time
+  and cannot test it.
+- **Rule 11's first use, on piece 5.** Previous claim (the author's, Update 22): one activation opens all three curled
+  directions and releases the whole burp. Failed because: in this family each direction has its own wall and the
+  energy ties nothing; a push the size of the cheapest move opens one direction, or one cube, and stops (T33, T40, T44
+  to T49; O103 (i)). Replacement (hers, Updates 39 and 42): X is one connected piece with a direction already open,
+  and a bath supplies each push in turn (T53, running). New falsification test: the exact barrier to the next opening
+  of a connected one-open X (T54, a draft): if it rises with the opened patch without bound at every λ at which X is
+  stuck, untied and under the tie, no finite push opens all and that branch is abandoned in this family.
+- **Open to her, not decided.** (a) Claim 4's word "first order". The reviews are right that the tube's change is the
+  decay of a stable-for-now state, not a first-order transition in the thermodynamic sense; paper 1 says so under
+  "Not claimed", S2′ says "a decay with an activation cost", and the README and the public pages now carry the clause.
+  The claim's own text is hers; the proposed wording is "sharp, with a bounded lump released: a decay with an
+  activation cost". (b) Whether piece 10 stays attached to the toy's front measurements, which do not bear on time
+  dilation and read the opposite way (O93), or is kept as her philosophy until a model with time exists. (c) Dark
+  energy as a release (Update 41) or as energy the final state keeps, the curling cost of a direction that stays
+  curled (O103 (e)). (d) Her prediction for T51, still owed, and for T54 before it runs. (e) Whether paper 1 is revised
+  now or after a physicist has read it (candidates in `docs/papers/curled_torus/v2_changes.md`). (f) The reference for
+  the Fife paper the third review cites, so that it can be read rather than cited from a review.
+- **A correction to Update 41:** "about 1 MeV, the latest a hot beginning can be placed" is 4 to 5 MeV by O89's own
+  addendum ([deSalas15]); the dark-energy share of about 10⁻³⁵ is at 1 MeV and about 10⁻³⁷ at 4 MeV (O103 (a)).
+- **Consistency.** Her instruction of the same hour: "consistency is important to me." Every page found saying
+  something the record no longer says was brought into line or given a banner (O103 (k)).
 
 ## The target ("the spot")
 

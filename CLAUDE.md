@@ -1,6 +1,6 @@
 # Project memory for Claude Code
 
-Read this first, then **`docs/HANDOFF.md`** (the state as of 2026-09-22, the open decision, what is running, and the corrections that must not be undone — it is newer than the "Known state" section below). Then read @VISION.md (the fixed reference for what we are testing and why; Updates 13 and 14 are the current statement) and @TASKS.md (what to do next, in order). Read `ASSUMPTIONS.md` before touching any model code.
+Read this first, then **`docs/HANDOFF.md`** (the state as of 2026-10-05 with an addendum of 6 October: what is running, what the owner is owed, and the corrections that must not be undone — it is newer than the "Known state" section below). Then read @VISION.md (the fixed reference for what we are testing and why; Updates 13, 14 and 41 to 44 are the current statement) and @TASKS.md (what to do next, in order). Read `ASSUMPTIONS.md` before touching any model code.
 
 ## What this project is
 
@@ -24,6 +24,13 @@ Current test bed: Trugenberger's 2D combinatorial quantum gravity model (`src/gr
 8. **Plain language for the owner.** Explain results without jargon, define terms, lead with the answer, and push back when something does not hold up. She wants to understand the work, not just receive it.
 9. **Do not drift.** A new idea goes to the parked list in `VISION.md` unless it bears on the working question. Changes to `VISION.md` are deliberate commits that say why.
 
+Rules 10 to 13 were adopted by the owner on 2026-10-06 (VISION Update 44; ASSUMPTIONS O103) after three AI-generated reviews. Her framing for them: each piece is something to kill; the hypothesis as a whole is adjusted, not killed, because a clear picture of how reality works is the goal.
+
+10. **Four kinds of statement, never silently promoted.** Exact (arithmetic or complete enumeration); measured (a pre-registered run, with its verdict); interpretation (a proposed physical reading of a result: ours, unverified); the hypothesis's claim about reality (the owner's). Every sentence on every page says which it is, and a statement moves from one kind to another only with a dated line saying why.
+11. **Decisive tests before patches.** When a pre-registered prediction fails, record four answers before any new mechanism or knob is proposed: does the result falsify the mechanism as stated; is the failure implementation, parameters, finite size, or the mechanism itself; what exact or cheaper test tells those apart; what result would make us abandon the branch. The owner's ideas are still captured first and in her words; the four questions come before any run. Each failed prediction is written as "previous claim → failed because → replacement → new falsification test" (first use: VISION Update 44).
+12. **A red-team pass at each milestone.** Assume the hypothesis is wrong and find the cheapest calculation, known result, limit, symmetry argument or run most likely to show why; record it as an O entry (the first is O103 (i)).
+13. **Outside theories are targets, not confirmations, and a number that is close is not a result.** A published cosmology that resembles the hypothesis defines what it must reproduce, never evidence that it does. A numerical match counts only after it has been derived independently, its input uncertainty propagated, its inputs checked for containing the target, its neighbouring values tested, and the number of other arbitrary combinations that would match counted (`docs/design/reality_targets.md`, item 12).
+
 ## Commands
 
 ```bash
@@ -44,7 +51,7 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 
 ## Known state (2026-09-22)
 
-`docs/HANDOFF.md` is the one-page current state and is newer than this section; `ASSUMPTIONS.md` O1–O18 holds the numbers. What follows is what stays true.
+`docs/HANDOFF.md` is the one-page current state and is newer than this section; `ASSUMPTIONS.md` O1–O103 holds the numbers. What follows is what stays true.
 
 **The kernel and the model.** `cqg.py` covers the whole λ line: `run_chain(..., lam, cap, glauber)` with `cap=CAP` (2) or `NO_CAP`; in a config, `"cap": null`, `"lambda"`, `"acceptance"`. The capped model is a published case ([KTB19] Sec. 4, Figs. 8 and 9; ASSUMPTIONS Q3) and is the λ → ∞ end of the knob; [T25] Eq. 22 is the soft penalty. A unit test pins the capped path bit for bit to its pre-T2 output. The energy (Q1), the hard-core rule (Q2) and the published hot-phase floor (O5: 0.126 is a formula, so our 0.120 at N = 160 is not a discrepancy) were checked against the sources directly.
 
@@ -57,6 +64,8 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 **Added 2026-10-05, also not to be undone.** (1) **The long warm T37 tubes melted; they are not a "mosaic"** (O88): most of their points opened past flat and they took energy in. A fourth shape named from a count and wrong. T37's stop rule watches the square count, which melting lowers too; new runs stop on the share of flat points. (2) **The shares at birth include the light** (O89; VISION Update 41): the owner's target is spacetime's birth, where the hot lump is nearly everything, dark matter is a sliver of about 0.67 eV over the temperature, and 5.36 compares two slivers. Do not fit a tie to 5.36 as a ratio of releases, and do not quote "the scrap is not the dark matter by a factor of ten" (withdrawn). All of this is ours and unverified until a physicist has looked. (3) **The fair clock** (O90): one fair sweep is N/96 chain sweeps; durations in new kinetic runs are set in fair sweeps, because the chain offers any one local pair of links only about 2/N times a sweep. (4) **Before recording anything, `git fetch` and look at the remote branches**: on 5 October the working copy was 40 commits behind the branch the record lived on. (5) The hidden count is taken over the model's own wirings (`graphity.hidden`), not `scripts/hidden_count.py` as received from chat (O87). (6) **Run `date` before writing a clock time into the record.** Guessed times have been wrong on two days (the headers of T37 to T41 on 25 September; T51's header and O86 to O94 on 5 October, up to an hour ahead of the clock) and had to be corrected from the commit times.
 
 **Never call the model's hot phase "X"** (owner's correction, 2026-09-20; VISION Update 5). X is a specific, relatively stable arrangement; the model's hot side is a random graph, a stand-in at best. Write "the random phase". The hypothesis's own route is order → order (the tube), and the disorder → order route is the published question (VISION Update 13).
+
+**Older notes and outside reviews may say "Omega"**: it is the name X had in an earlier version of the theory. The record writes X (glossary, `docs/papers/glossary.md`).
 
 **When reading papers, search the text; do not rely on a summary.** arXiv HTML converts to searchable text with formulas intact. Two published figures here use different log bases (natural in [KTB19] Fig. 8, base 10 in [T25] Fig. 3).
 

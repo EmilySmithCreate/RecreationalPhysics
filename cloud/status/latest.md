@@ -1,13 +1,101 @@
-# Batch queue and results bucket, as of 2026-10-05 09:06 UTC (commit adc353b)
+# Batch queue and results bucket, as of 2026-10-05 15:19 UTC (commit 09a4b3d)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- none
+- t51_l256_fast_00-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_01-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_02-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_04-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_05-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_06-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_07-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_08-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_09-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_10-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_11-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_12-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_13-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_14-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
+- t51_l256_fast_15-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_fast_16-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_fast_17-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_fast_18-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_fast_19-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_00-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_01-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_02-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_03-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_04-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_05-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_06-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_07-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
+- t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 
 
 ## RUNNABLE
-- none
+- t51_l256_100k_11-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_12-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_13-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_14-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_15-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_16-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_17-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_18-aa6b835  created 10-05 09:56  started   stopped 
+- t51_l256_100k_19-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_00-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_01-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_02-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_03-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_04-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_05-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_06-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_07-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_08-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_09-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_10-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_11-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_12-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_13-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_14-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_15-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_16-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_17-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_18-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_19-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_20-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_21-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_22-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_23-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_24-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_25-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_26-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_27-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_28-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_29-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_30-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_31-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_32-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_33-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_34-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_35-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_36-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_37-aa6b835  created 10-05 09:57  started   stopped 
+- t51_l256_300k_38-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l256_300k_39-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l128_10k_00-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_00-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_01-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_02-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_03-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_04-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_05-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_06-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_07-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_08-aa6b835  created 10-05 09:58  started   stopped 
+- t51_l512_10k_09-aa6b835  created 10-05 09:58  started   stopped 
 
 ## STARTING
 - none
@@ -19,7 +107,7 @@ until a person downloads, checks and commits them.
 - none
 
 ## SUCCEEDED
-- none
+- t51_l256_fast_03-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 14:31
 
 ## FAILED
 - none

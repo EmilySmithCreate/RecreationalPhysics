@@ -515,6 +515,38 @@ In order, each pre-registered before it runs:
 Held: the causal order read from the opening front (as defined it puts the cone in by hand); energy that carries a
 kind (O94); any fit of a tie to 5.36 (O89).
 
+## The reviews of 6 October, and what follows  ☐
+
+**Added 2026-10-06** (ASSUMPTIONS O103; VISION Update 44; CLAUDE.md rules 10 to 13 adopted). Three AI-generated reviews
+of the programme were checked against the record. Two call the hypothesis "Omega", its old name; it is X. The order of
+the 5 October section changes: pricing the three-direction barrier comes first, as all three reviews ask, and item 5
+there (the warm-bath pull) gains a prerequisite. Each item below is pre-registered before it runs.
+
+1. **T54 (draft): the true barrier in three directions.** The smallest opened patch of a one-curled 4 × L × L torus
+   that grows rather than shrinks, priced exactly against λ and patch size; then whether a warm bath crosses it. The
+   owner's prediction is owed before any run; ours is in the draft. It decides whether "one push opens all" survives
+   in this family (Update 44, rule 11's first use).
+2. **Read the two extreme T24 waits** (N = 64; λ = 1.25 at 24 τ and 1.30 at 76 τ) from their saved wiring before any
+   further waiting-time run (O52, O84). The review's guess that those runs started in a different state is a guess.
+3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
+   at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
+4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be
+   measured at, before the warm-bath pull of the 5 October section's item 5. If it is short, the entropic route is
+   closed without running the pull (O103 (d)).
+5. **The git commit hash in `.meta.json`.** The runners record the config, the package version and the Python, NumPy and
+   Numba versions (`scripts/*.py`, the `meta = dict(...)` lines), not the commit. Add the hash and a dirty-tree flag to
+   new runs through one shared helper, with a test; existing results are untouched (rule 5).
+6. **Reading, before any citation:** Pathria (1972), Popławski (the universe inside a black hole), and the Fife paper
+   the third review cites (its reference to be obtained from the owner), as the benchmark lineage for piece 11; read
+   status recorded in `REFERENCES.bib` (rule 1). Benchmarks, never evidence (rule 13).
+7. **A red-team pass at each milestone** (rule 12), recorded as an O entry; the first is O103 (i).
+8. **Low priority: an independent reimplementation** of the four-link energy and one verdict (T7 at λ = 1.25) by a
+   second person or a second agent working from paper 1 alone.
+
+Owed by the owner: her T51 prediction (before any result is read); her T54 prediction (before any run); the open items of
+Update 44 (claim 4's wording; piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's
+revision; the Fife reference).
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

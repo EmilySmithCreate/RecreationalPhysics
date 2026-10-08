@@ -71,6 +71,7 @@ Full statements and derivations are in the docstring of `src/graphity/cqg.py`.
 | Q20 | **The fast symmetry count, and a chain with interchangeable points.** `src/graphity/symmetry.py` counts side-preserving automorphisms with igraph's `count_automorphisms` (bliss; from general knowledge, not read by us) in about a millisecond at N = 64 to 676, against 1 to 45 s for Q15's counter; the two agree exactly on perfect tori (4x4 = 192, 16x4 = 128, 12x12 = 576, 16x10 = 320) and on melted graphs (`tests/test_symmetry.py`). `src/graphity/interchangeable.py` uses it inside a chain: the kernel's own move, accepted with min(1, exp(-dH/g) A(G')/A(G)) as in Betre and Lewis Eq. (72) [DQM25], or, sealed, with the demon paying dH and the factor A(G')/A(G) alone. | The acceptance factor: [DQM25] Eq. (72), read in full by the owner. The rest: ours. | **Calibrated** against the exact interchangeable averages at N = 18 (`tests/test_interchangeable.py`): <S> = 19.59 +- 0.08 against 19.53 exact at lambda = 1, g = 10 (named: 20.01); 21.26 +- 0.05 against 21.29 at lambda = 0, g = 10 (named: 20.96); 18.99 +- 0.31 against 19.53 at the colder g = 4 (slower mixing). Energy conserved exactly in the sealed version. Cost: every valid proposal is counted, so it is meant for N up to about 64. **Consequence:** the per-move correction Q15 called unaffordable is affordable at small N; the sealed-sheet refold test (series paper 4) and quantum rung 1 (T15) can now be run with interchangeable points. |
 | Q21 | **The six-link (D = 3) model, as the papers define it.** Read on 2026-09-24 by an assistant agent from the arXiv HTML of [KTB19] v2, [T25] v2, [T17] v3 and [T22] v2, searching the text; the owner has not read these passages. **Sourced:** graphs are 2D-regular and bipartite, so 6 links at D = 3 ([KTB19] Secs. 3.1.2, 3.3 and 4). The hard-core rule does not change with D ([KTB19] Sec. 2.2: an edge qualifies iff any two short cycles on it share no other edges; [T22] Sec. II: it must be imposed for any D). The curvature per edge is −2(1 − 1/D)[1 − S_e/(2D − 2)]₊, flat from 2D − 2 = 4 squares ([KTB19], curvature equation). An edge carries at most 2D − 1 = 5 squares ([KTB19] Sec. 3.3.1; [T25]); [T17] disagrees for its diluted graphs. The ground state is the cubic torus with S = 3N ([T25]; [T22] Sec. III). **Ours, derived from [T25] Eqs. (8), (21) and (22) exactly as Q1:** H = 16(3N − S) + 4λX with X = Σ_e (S_e − 4)₊. The coefficient question is Q1's again: only 4 makes the papers' stated "cancel exactly" true. **Ours, unverified:** on bipartite graphs the rule is "no two points share more than two neighbours", the kernel's `MAX_CODEGREE = 2`; to be checked by brute force when the kernel is built. The 6-cube (64 points, 5 squares on every edge) fits [KTB19]'s baby-universe definition; no D = 3 baby universe is named in the papers. **To verify:** the coupling's N-scaling at D = 3 ([KTB19] Sec. 3.1.1 prints β̃ = ħg|V|^(2/D − 1), which conflicts with its own Fig. 8 axis; [T22] has ħg_cr ∝ N^(1 − 2/D)); the axes say only "log", and the natural log is inferred from the spacing of the points. **Reproduction targets (Gate C):** [T22] Fig. 3 (D = 3, N = 500, full curvature, no cap mentioned; y is squares per vertex, 12 at most) is the one that matches the model the author runs. [KTB19] Fig. 8b (N = 180 to 280) used the capped action that the author disputes (VISION Update 18). |
 | Q22 | **The local spark is a protocol, not a change to the energy: per-vertex stores, and a hot patch.** (2026-09-24; PREREGISTRATION T26 and T27; `graphity.spark`; `sealed.run_sealed_bath(by_vertex=True)`.) Two ways to put energy in one place. (i) **Per-vertex stores**: the bath of Q12 with one store per vertex, and a move pays from, or is paid into, the store of u1, the first vertex of the proposed switch, instead of a store drawn at random. Energy then stays where a move released it and can be spent only by a move made from that vertex; stores of side-1 vertices are never chosen and stay as given. H + stores is conserved exactly (tested), the shared-bath path is bit for bit what it was (pinned), and `seed < 0` now carries the stream on between blocks, as `run_chain` does (Q14). (ii) **A hot patch**: uphill switches whose four vertices all lie within a radius of a center are applied at random until the wiring near the center holds the budget, in exact units; the run then starts in a cold, empty bath. A **leak** drains every store by a fraction after each block (Q12's leak, applied to a bath). None of these touches the energy H, the moves, or the state space; they decide only where energy may sit and who may spend it, and are declared in the config before a run as S1 requires. One consequence worth knowing before reading a result: leaving the flat sheet costs 32 (O22), so a store holding less than 32 can never act, and energy spread thinly over per-vertex stores does nothing at all; the T26 energies are chosen with that in mind. | Ours. Creutz's demon [Creutz83] generalized to a store per vertex; the switch is the kernel's. | Ours, tested (`tests/test_sealed_local.py`, `tests/test_spark.py`, `tests/test_spark_runners.py`). |
+| Q23 | **Bianconi's discrete entropy action, as this project reads it.** Read on 2026-10-05 from the arXiv text of [Bia24] (its Secs. 2.5 and 3.1 to 3.3, read by the assistant from the text an agent had saved; the owner has not read them). On a complex of points, links and polygons with N cells in all, an unknown metric 𝒢 is coupled to an induced metric G by S± = σ Tr ln 𝒢 + Tr 𝒢 (ln 𝒢 ∓ ln G) − Tr 𝒢 (her Eqs. 41, 42). With no matter and no gauge field, G = I + c0 L (her Eq. 52), L being the Gauss-Bonnet Laplacian whose blocks are the Hodge Laplacians of points, links and polygons (her Eq. 40). In the vacuum, which she defines as G = I with c0 = 0, the metric obeys −𝒢 ln 𝒢 = σ I (her Eq. 65). The paper keeps the wiring fixed, "leaving the discussion about the possible implied dynamics of the network topology to future works". **Our choices, not hers:** every 4-cycle of the graph is taken as a polygon (the model's squares; on the curled tube that includes the rings round it); the action is evaluated at the identity metric and not at a metric solved for each wiring; links are pointed from side 0 to side 1. Whether the action is to be made large or small between wirings the paper does not say. | [Bia24] Eqs. (40) to (42), (52), (65) for the formulas. The faces, the identity metric and the comparison between wirings are ours. | Sourced for the formulas; Ours for the rest; used only in the exploratory O102 (`scripts/explore_bianconi_action.py`, `tests/test_bianconi_action.py`). |
 
 ### First look (2026-09-19, `configs/cqg_first_look.json`; one replica, short runs, NOT publication quality)
 
@@ -2045,7 +2046,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   `docs/HANDOFF_2026-10-05_chat.md` section 2, computed in chat against a copy of the 26 September `main`; every number
   below was re-run here with the script named. EXPLORATORY: exact arithmetic on built tori, not a pre-registered test.
   The clock times first written in O86 to O94 were guesses and ran up to an hour ahead of the clock; they were corrected
-  from the commit times the same morning.)
+  from the commit times the same morning. The same error was made again in O89's addendum and O96 to O101, by up to
+  an hour, and corrected the same way at 11:07 ET.)
   - **(a) Flat space carries no residue** (exact; the ladder of O41 and O49). Flat space sits at 0 per point at every λ and
     each curled rung sits exactly a = 4(λ − 1) per point above the next. So in this energy dark energy cannot be something
     left over in flat space itself; it would have to come from an opening or from what an opening leaves behind. Below
@@ -2188,6 +2190,21 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     nothing to gain: her prediction for T48 ("the first opens, the last stays curled") as a ground state. At λ = 1.02
     the same state is stuck behind 28. Neither shape has been run, and under either the first step from a fully curled
     gas nets nothing, so it has no front to drive it.
+  - **Addendum, 5 October, committed 09:55 ET: the inputs are published, and were checked at the source after the owner asked.**
+    [Planck18] Table 2 (TT,TE,EE+lowE+lensing; the numbers searched in the text): matter and radiation were equal at
+    z = 3402 ± 26; cold dark matter Ω_c h² = 0.1200 ± 0.0012 and ordinary matter Ω_b h² = 0.02237 ± 0.00015, a ratio of
+    5.36, so dark matter is 0.843 of the matter. With today's temperature of 2.7255 K (general knowledge) equality was at
+    0.80 eV, and before it matter's share of the energy is 0.80 eV / T: textbook scaling, no measurement of ours.
+    [deSalas15] (abstract read): the hot era cannot have begun below about 4 to 5 MeV. At 4 MeV, dark matter that was
+    already cold is under two parts in ten million of the energy. **So no cosmologist is needed for the number.**
+  - **What is not published as one number, and why.** "The share at birth" needs two things nobody knows. When the hot
+    era began: only the lower bound above is measured, and it could have been many powers of ten hotter. And what dark
+    matter is: if it began as one of the hot kinds of particle in the plasma and went cold later (the standard thermal
+    picture, general knowledge), then at birth it was not a sliver but an ordinary small share of the hot lump, and the
+    sliver is what it became; if it was cold from the start, the sliver is its share at birth. The arithmetic above
+    holds from whenever dark matter is cold. Either way the release that becomes dark matter is not 0.84 of the burp.
+  - **What a physicist's eye is still wanted for** is smaller than first written: whether this is the right way to set
+    the target for three releases, which is our application and not a published statement.
   - **What this is not.** A derivation of anything. It says which shapes are consistent with the birth shares if the
     arithmetic above is right; it leaves the temperature of birth, the sliver of dark matter and the excess of matter
     over antimatter unexplained. The first thing to do with it is to ask a physicist whether the arithmetic is right.
@@ -2311,6 +2328,321 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     does. **And λ = 1.02, where she expects to work, is where X is most stuck and the burp is smallest:** good for X
     lasting and for space re-curling, bad for a burp that runs by itself. That trade is the fertile-window question of
     VISION Update 23.
+
+- **O95 EXPLORATORY: the owner's questions on [PWS09], and a first look: openings from several seeds leave a few
+  far-reaching links.** (2026-10-05, 05:50 ET; the owner read the paper's setting and asked whether its Ψ is her X and
+  whether her work touches its two assumptions; `scripts/explore_far_links.py`, reading saved T37 end states only. Not
+  pre-registered; a first look, not a finding.)
+  - **Is Ψ her X? No** (*ours*). In the passage she quoted, the graphs are the underlying things, Ψ is the state of
+    all of them at once, and "Ψ semiclassical, or a low-temperature phase" is the state that looks like space. In this
+    project's words: their graphs are the wiring; their Ψ in that phase is *space*; **X would be a different Ψ**, the
+    same graphs settled in another arrangement that does not read as our space. The paper begins where the hypothesis
+    ends: its first assumption is that space with Einstein's equations is already there. Two real differences beside
+    that: their Ψ holds many graphs at once with quantum weights, where this model holds one graph at a time; and
+    their graphs sit inside a bare background manifold, where this model's network sits inside nothing.
+  - **Their second assumption, a small amount of disordered locality, is something the saved end states can be asked
+    about**, and it is the "shortcut census" already on TASKS's list. For every link, its *way round*: the distance
+    between its two ends once the link is removed. On a flat sheet that is 3. Call a link *far* if it is 7 or more.
+    In T37's clean end states: none at g = 1.5, L = 64 (39 tubes, about two seeds each); 0.57 per tube at L = 128, in 7
+    tubes of 40; 2.27 per tube at L = 256, in 11 of 33; 3.82 per tube at g = 1.25, L = 1024, in 5 of 11. That is 4 to 9
+    per 1,000 columns, about one link in a thousand, reaching up to 11, 19 and 29 steps. No end of any far link is a
+    flat point (0 of 280): they all sit inside the pieces T37 reads as "other" leftovers.
+  - **What that is and is not.** It is the first sign in this project that an opening leaves anything non-local, and
+    it appears only where a tube was long enough to open from several seeds. It is **not read from positions**, so
+    whether a far link is a stitch across a tear between two patches, a shortcut, or part of some other leftover is
+    not known, and by the project's own lesson it is not to be named until it is read. By the rule taken from [PWS09]
+    (energy at a count that grows with the volume as space expands behaves as dark energy; a fixed count thins out as
+    matter does), links frozen in at an opening are a fixed count and so matter-like; the model's space does not
+    expand, so the paper's own condition cannot be tested in it.
+  - **If it is to be claimed:** pre-register it (count against tube length at fixed coupling; where the far links sit
+    relative to the places two fronts met, which needs the opening's history or the patch map; whether cooling
+    freezes or heals them, which T51's saved final graphs will hold).
+
+- **O96 The model author's papers read again from the source: Gate C's factor of two is in his equation, and his D = 3
+  figure does not say its size or that its graphs were two-sided.** (2026-10-05, committed 09:47 ET; read by an assistant agent
+  from the arXiv HTML of [T22], [T23], [T24], [T25] and parts of [KTB19], searching the text; the owner has not read these
+  passages; figure images were not available. Notes: `docs/reading/notes/2026-10-05_trugenberger_programme.md`.)
+  - **The factor of two.** [T22] Eq. (1) sums over each vertex and its neighbours, so every edge is counted twice. Our
+    six-link energy counts each edge once (Q21), and Gate C′ found that our curve matches the ordered side of the
+    published one when our coupling is halved (O53). So that factor is accounted for, by the published equation.
+  - **What still differs, and the reading it now favours.** [T22] never says "bipartite"; it speaks of "2D-regular graphs
+    with independent short cycles" and of "possible residual triangle and pentagon defects". Our kernel is two-sided by
+    construction. O53 left two readings of the remaining difference (a lower hot tail and a higher plateau in ours):
+    short runs out of equilibrium, or graphs that allow triangles and pentagons. The text now supports the second as a
+    live possibility; O53's objection to it (the published hot end sits where two-sided graphs sit) stands, so it is not
+    settled. Fig. 3's caption does not give N.
+  - **So the question for him narrows to two facts:** the size of that figure's graphs, and whether they were restricted
+    to two-sided ones. The draft letter is changed accordingly (local, unsent).
+  - **Also read:** in print the transition is "continuous" throughout, with "the absence of hysteresis" at N = 160 named
+    as the evidence in two dimensions and nothing said about its order in three. His dark-matter domains have no
+    simulation in any paper; T36 and T43 are, as far as we have found, the only numerical data on them.
+
+- **O97 Bianconi's gravity from entropy, read: a different count from the one T52 takes, and the nearest published
+  relative of a quantity on the points.** (2026-10-05, committed 09:55 ET; read by an assistant agent from the arXiv HTML of
+  [Bia25], [Bia26], [Bia24] and related papers, with the read status of each in
+  `docs/reading/notes/2026-10-05_bianconi_gravity_from_entropy.md`; the owner has not read these passages.)
+  - **What it is.** A continuum theory in which the action is a relative entropy between two metrics. In its author's
+    words the entropy is "local and volumeric and is not derived from horizons". It is not a count of what a surface
+    hides (Jacobson, Verlinde) and not a pull that needs warmth.
+  - **What it does not contain:** a sharp change between two arrangements, an energy released, leftovers, or a
+    dimension appearing. It neither contradicts the hypothesis nor gets there first.
+  - **Where it bears on this project** (*ours*). (1) T52: a hidden count that follows the volume would close Jacobson's
+    and Verlinde's route in this model and leave hers untouched. (2) VISION Update 40: her G-field, a quantity at every
+    point that reduces to nothing in flat empty space, is the closest published form of the ingredient the owner
+    decided to add. (3) Her discrete action [Bia24] keeps the wiring fixed and names varying it as open; in vacuum it
+    depends on the wiring through the Laplacian spectra, which this project computes (O28), so comparing flat, curled
+    and leftover arrangements under it is exact and cheap. Not done.
+  - **A caution.** Two 2026 abstracts by another author report instabilities of the theory (not read beyond the
+    abstracts).
+
+- **O98 Group field theory condensates and dynamical triangulations, read: neither has an order-to-order change with
+  a change of dimension and a release; triangulations hold a caution for T6 and the nearest published support for
+  T7.** (2026-10-05, committed 10:09 ET; read by an assistant agent from the arXiv HTML of [MOPT23], [Ori21], [AGGN22], [AL26]
+  and others, with the read status of each in `docs/reading/notes/2026-10-05_gft_and_triangulations.md`; the owner has
+  not read these passages.)
+  - **Group field theory.** One non-geometric and one geometric phase; the transition is treated as continuous by the
+    method chosen (mean field, which assumes a diverging correlation length), with no simulation; the Big Bang is a
+    bounce inside the geometric phase, with the transition itself replacing it only as a conditional alternative;
+    nothing is released; and its author writes that no notion of time applies across the phases. So it differs from the
+    hypothesis on each of its three testable points, and a reader from it will ask what clock the tube opens against.
+  - **Triangulations.** Several transitions are first order, with barriers and hysteresis, each established only at
+    sizes of tens of thousands of building blocks and up, and two were first read as higher order. [AGGN22] conjectures
+    that changes requiring a rearrangement of the whole configuration (a change of topology) are first order: the
+    tube opening into a sheet is that kind of change, though theirs is a statement about equilibrium ensembles and not
+    about a process in time, and their authors regard the non-extended phases as lattice artefacts.
+  - **The caution for T6.** Three first-order transitions there showed one hump at small sizes and one higher-order
+    transition showed a misleading two. T6's INCONCLUSIVE at a hundred points was the right verdict, and the
+    discriminators those groups rely on are the shift of the transition point with size and the trend of the Binder
+    cumulant. In causal triangulations the order of one transition differs between a sphere and a torus; every run
+    here is on a torus.
+  - **Not found in what was read:** a change between two ordered geometric phases with different numbers of large
+    dimensions and an energy release.
+
+- **O99 Disordered locality, quantum graphity and vanishing dimensions, read: the nearest relatives of the far links
+  and of directions opening in order; neither has the order-to-order change.** (2026-10-05, committed 10:33 ET; read by an
+  assistant agent from ar5iv and arXiv HTML of [MS07], [PWS09], [QSMG12], [WG15], [CM11], [H13], [St14] and others, with
+  the read status of each in `docs/reading/notes/2026-10-05_locality_graphity_dimensions.md`; the owner has not read
+  these passages.)
+  - **The far links of O95 have a published cousin.** In [QSMG12], domains of quantum graphity that nucleate
+    independently need not merge, and where they meet a boundary defect is frozen in by the quench. Same cause as O95
+    (several seeds, then cooling); a different object (a boundary line, not a link reaching far), and no count, no
+    lengths, no scaling with volume. Those were not found in what was read.
+  - **They are not dark energy, by the source's own derivation.** [PWS09] needs the number of links to grow with the
+    comoving volume and their ends to be uncorrelated across it; links frozen once at an opening are fixed in number
+    and short. O95 said so; the full text confirms it. [H13] adds a bound: non-local defects no denser than one per
+    femtometer.
+  - **Directions opening in order.** [St14] has dimensions opening one after another as the universe cools, and ties an
+    opening to the cosmological constant. It differs from the owner's picture in which opening that is (the latest
+    there, the first in hers) and in mechanism (geometric there, a release in hers), and its change is called a
+    crossover: whether it is sharp has not been calculated in what was read.
+  - **Quantum graphity itself:** mean field puts its transition at zero temperature ([CM11]); with the original energy
+    isolated pieces beat a lattice at 24 and 36 points, with a leftover piece ([WG15]), which is this project's λ = 0
+    shattering and ribbon at small size. No simulation paper after 2018 was found.
+  - **Not found in what was read:** a change between two ordered arrangements with an activation energy that does not
+    grow with size and an exact release per point. With O97 and O98 this completes the reading the owner asked for on
+    5 October; the statement is "we have not found", across the four sets of papers named in the notes.
+
+- **O100 The owner's "spaghetti" X (two directions curled, one open): what is exact, what has been measured, and a
+  first look at whether seeds join.** (2026-10-05, committed 10:49 ET; VISION Update 42. The exact numbers are from earlier
+  entries; the first look is new, read-only and EXPLORATORY. Six-link results carry VISION Update 24's caveat.)
+  - **The state.** A 4 × 4 × L torus with six links: two directions curled, one open, one connected piece. It lies
+    8(λ − 1) per point above flat space, two curling costs. Its cheapest way out costs 96 − 64λ while that is the
+    cheapest kind of move (16 at λ = 1.25) and 128 − 88λ beyond (4.8 at λ = 1.40; PREREGISTRATION T48), which reaches
+    zero at λ ≈ 1.45. **So untied it is stuck for now for 1 < λ < 1.45 and cannot hold above that.** Under the "all at
+    the second" tie of O89 at λ = 1.25 it has a way downhill already.
+  - **What it has been seen to do.** Given one push in a cold sealed box (T30): its first curled direction opened
+    fully in a third of runs and partly in most others; the second never. With the released energy kept at the front
+    (T48): at λ = 1.25 it opened one direction and stopped in 13 runs of 16; at λ = 1.40 it opened both, into one space,
+    in 5 of 16, with damage in 7. **Not run:** this state in a warm bath (O94), with a tie, or long enough to seed
+    itself in several places.
+  - **A table of the states, three directions, untied** (energy above flat per point; cheapest way out at λ = 1.25 and
+    1.40; what was seen). Fully curled, a gas of 6-cubes: 12(λ − 1); 96 − 80λ, so stuck only below λ = 1.2; each cube
+    opens part of the way alone and cubes do not join (O85, O92). Two curled, one open: as above. One curled, two
+    open: 4(λ − 1); 36 and 28.8; never moved in any run (T41, T48). Flat: 0; 64; heals every damage given (O66). The
+    same ladder for two and four directions is in `docs/public/curling_ladder.html`.
+  - **Do seeds join? A first look.** In T37's clean end states (two directions, tubes that seeded themselves), the
+    opened space is one connected piece in 38 of 40 tubes at 128 columns, 28 of 33 at 256 and 7 of 11 at 1,024. In the
+    rest it ended as **two separate pieces** (for example 2,600 and 1,496 points). So seeds in one connected X usually
+    grow into one space, and sometimes the opening splits it in two. Not pre-registered, not read from positions (where
+    the split falls, and whether each piece is a clean sheet, is not known); the pieces count is exact.
+  - **Matter and antimatter** (abstracts read on the arXiv pages, 5 October; the papers were not read). [KLZ09]: models
+    in which "the relic density of dark matter is determined by the baryon asymmetry of the universe", which "explains
+    the observed relation between the baryon and dark matter densities for dark matter mass in the range 5--15 GeV".
+    [PV13]: the hypothesis "that the present-day abundance of dark matter has the same origin as the abundance of
+    ordinary or visible matter: an asymmetry in the number densities of particles and antiparticles", "motivated by the
+    observed similarity in the mass densities of dark and visible matter, with the former observed to be about five
+    times the latter". [MRM12] reviews making the excess of matter at the electroweak phase transition. *Ours:* this is
+    the published form of the owner's guess that 5.36 is what is left after a cancellation; and a first-order change
+    with a front is the kind of event such an excess is made at. The toy has nothing that comes in opposite kinds.
+
+- **O101 Counting per turn has a standard form, the long-run average, and one of its three conditions is not yet met
+  by the owner's picture.** (2026-10-05, 11:07 ET by the clock; the owner asked what research exists on loops and on comparing the
+  sizes of infinities; read by an assistant agent, with read status per source in
+  `docs/reading/notes/2026-10-05_loops_and_comparing_infinities.md`; several quotes came through a page reader and are
+  to be checked before citing. *Ours, unverified; all of the mapping is inference.*)
+  - **The form.** In economics, streams whose totals are infinite are compared by running totals, by discounting, or by
+    the long-run average per period (the limit of means). Counting per turn (VISION Update 23) is the last, with the
+    turn as the period; in probability it is the renewal-reward theorem.
+  - **The conditions.** Turns alike (her rule that the rules do not change from turn to turn supplies it). A finite
+    yield per turn: **Update 26 says our stable phase "really never ends", which would make one turn's count infinite
+    and bring the problem back inside the turn; it needs a stated end**, such as the last star, or the entropy
+    produced, which is what the one published maximizing principle counts ([BHKP07]). And a common unit between loops:
+    the theorem gives yield per unit time, so counting per turn drops how long a turn lasts, a choice Update 23 flagged.
+  - **A trap.** If one turn makes many black holes, each beginning a turn, the process branches, and the rate of
+    multiplying, not the yield of a turn, decides what dominates: Smolin's fitness ([Smolin06]).
+  - **Relatives in print.** Economics proves that no criterion ranks all infinite streams impartially ([Askell18]),
+    which does not bite on a restricted class such as loops with alike turns. In cosmology the measures depend on how
+    the infinity is cut off ([Freivogel11]); two papers find that leading measures prefer regions that cycle
+    ([Lehners12]).
+  - **Not found in what was read:** a measure per turn of a loop from black hole to new spacetime; the renewal theorem
+    used as a cosmological measure; a formal use of the strange loop in cosmology.
+
+- **O102 EXPLORATORY: Bianconi's action on flat, curled and leftover wirings. Her two forms order them in opposite
+  ways, and one of them has this project's ladder.** (2026-10-05, 11:40 ET by the clock; the owner asked for this work
+  to begin; `scripts/explore_bianconi_action.py`, exact linear algebra on built tori and on four saved T37 end states;
+  Q23 for how [Bia24] was read. Not pre-registered; a first look.)
+  - **Her vacuum counts squares.** With no matter and c0 = 0 her metric is the same number on every cell, so her
+    action is a constant times the number of cells, points plus links plus squares. Between wirings with the same
+    points and links that is the number of squares: the global term of this project's energy, the λ = 0 end of the
+    knob.
+  - **With her topological term** (G = I + c0 L, the identity metric), per point, Tr ln(I + c0 L) at c0 = 0.1, 1, 10:
+    flat torus 1.304, 6.032, 14.09 (the same at 64, 160 and 256 points); curled tube 1.449, 6.502, 14.73; 4-cube 1.595,
+    6.981, 15.46. Each curled direction adds nearly the same amount (0.145 and 0.291 at c0 = 0.1; 0.470 and 0.949 at
+    c0 = 1), as each adds 4(λ − 1) in this project's energy. An opened sheet reads as flat; a sheet with one 14-unit
+    relic reads 0.0070 per point higher at c0 = 1 with 0.0039 more cells per point.
+  - **So her two actions differ in sign between wirings.** At the identity metric S+ = −Tr ln(I + c0 L) − cells and
+    S− = +Tr ln(I + c0 L) − cells. At c0 = 1, per point: S− is 2.03 flat, 2.25 curled tube, 2.48 for the 4-cube, and a
+    relic adds 0.8 in all; S+ is −10.03, −10.75, −11.48, and a relic subtracts 2.8. **Under S− flat space is the lowest
+    of these, each curled direction costs about the same amount, and a relic costs a little: the shape of this
+    project's ladder at λ > 1. Under S+ the order is reversed, as at λ < 1.**
+  - **What this is not.** A statement that her action selects flat space: the metric was not solved for each wiring
+    (her Eq. 57), the choice of faces is ours, and the paper does not say which way the action is to be compared
+    between wirings. It is one exact table and one question for her: which of S+ and S− is meant when the wiring
+    varies, and is the comparison to be made at the identity metric or at the solved one?
+
+- **O103 Three AI-generated reviews of the programme, 6 October: what each got right and wrong against the record, and
+  what changed.** (2026-10-06, 03:56 ET by the clock. The reviews were obtained by the owner and pasted into the
+  session; the first and third call the hypothesis "Omega", its name in an earlier version of the theory, read here as
+  X; the third cites a paper by Fife on black-hole cosmology with no reference given. O42 is the precedent for recording
+  an AI review. *Everything physical below is ours, unverified: reasoning by one AI checked by another, unreviewed by a
+  physicist.* No run; nothing in `results/` is touched. The owner's decisions on the reviews are VISION Update 44.)
+  - **(a) A slip, corrected.** O89 gives dark energy's share as about 10⁻³⁵ of the energy *at 1 MeV* (its formula,
+    2 × 10⁻¹¹ (eV / T)⁴). The programme draft paired that figure with 4 MeV, the latest start of the hot era by
+    [deSalas15]; by O89's own formula the share at 4 MeV is about 8 × 10⁻³⁸, call it 10⁻³⁷. Corrected in the draft. O89's
+    main text and VISION Update 41 still call 1 MeV "the latest a hot beginning can be placed", which O89's own addendum
+    moved to 4 to 5 MeV; both now say so.
+  - **(b) The fixed push read as the one-dimensional case.** The tube's front is a ring of four points whatever the
+    tube's length (PREREGISTRATION T9: "a tube's front is a ring of fixed size"), and the 4 × 4 × L torus has a
+    cross-section of 16 points; a seam that does not grow is why the barrier is one move at every size (paper 1; T32).
+    In the language of nucleation theory (general knowledge, to verify; [C77] not read by us) that is the
+    one-dimensional case, in which no critical size exists and the barrier is bounded, here by 32 − 16λ, rising only to
+    16 as λ → 1 while the release 4(λ − 1) goes to zero. Where the seam grows with the opened patch, as on a 4 × L × L
+    torus with one curled direction, the same theory predicts a critical patch and a barrier that rises without bound
+    as the release shrinks. T48's one-curled torus STAYS in 32 of 32 (O91) and T41 NEVER OPENS (O81) are consistent
+    with that, and were explained on the record only by the single-move wall of 36 and 28.8. The true barrier, "a patch
+    several moves big", is named in O79 and O94 and has not been priced. **Consequence:** paper 1's "the push does not
+    grow with size" is a statement about a geometry whose front cannot grow; it is not evidence that the
+    three-direction barrier is fixed. PREREGISTRATION T54 (a draft) prices it.
+  - **(c) "Stable for now", against size.** Paper 1 already says, beside Eq. (2), that a dynamics updating every region
+    at its own fixed rate would give a wait falling as 1/N; the fair clock (O90) is that dynamics, so on it a curled
+    region's decay rate grows in proportion to its size at fixed g. The second review's estimate: a region of 10¹⁸⁰
+    points at the Planck scale would need g below about 12 / ln(10¹⁸⁰) ≈ 0.03 to last, where the runs use g = 1.5.
+    *Ours on that:* the toy has no scale, so the Planck identification is the reviewer's and the arithmetic is rough;
+    what stands is that "stable for now" is a statement at the sizes and on the clock of the runs.
+  - **(d) The entropic route and the gap.** Update 40 lists the counting route to a pull as the one "tested first
+    because it needs no new knob" (T52, then the warm-bath pull). The reading of 25 September
+    (`docs/reading/notes/gravity_mechanisms_2026-09-25.md`, topics 1 and 3) says a fluctuation-induced or entropic
+    pull between two relics needs the surroundings to feel both at once, so its range is the range of the
+    surroundings' correlations; O60 (a) says a gapped medium's correlations die off exponentially. The two were never
+    joined. Joined: unless the warm sheet's correlation length is long, an entropic pull is short-range too, whatever
+    T52 finds about boundary against volume. So the warm sheet's correlation length (how far a disturbance at one
+    point is felt, at the couplings a pull would be measured at) is measured before any pull is, and a short one
+    closes the entropic route without running it (TASKS, 6 October). T52's pre-registered fork stands: a count that
+    FOLLOWS THE REGION is the no-gravity outcome by [Ver11].
+  - **(e) The shares: what a release would have to be, and the carrier of dark energy.** Dark energy is an energy
+    density that stays the same as space grows; anything released as particles or radiation thins out (general
+    knowledge, to verify). So "the first opening releases dark energy" (Update 41) cannot be a release in the ordinary
+    sense; in this toy the only thing that behaves like a constant density is energy the final state *keeps*: the
+    curling cost of a direction that stays curled, 4(λ − 1) per point, which is O89's second shape ("all at the
+    second", the last direction free to stay curled). That names the carrier and exposes its size: of order one
+    curling cost per point of space, against an observed density of about 10⁻¹²⁰ in Planck units (general knowledge,
+    to verify), the cosmological-constant problem in its usual form, which Update 41 carries openly. Two bars follow
+    before any release is called dark energy, dark matter or radiation: a dilution law for it (constant, a⁻³ or a⁻⁴),
+    which the toy, having no expansion, cannot yet give, so the labels in Updates 30 to 41 are the author's
+    interpretation and not results; and, for a dark release that never mixes with ours (which "the kind follows the
+    opening" requires, since a hot lump in equilibrium forgets which direction produced it), the measured count of
+    light species in the early universe, N_eff ≈ 3.0 ± 0.2 (Planck 2018, general knowledge, to verify), which limits
+    how much dark radiation there can be before the light elements form. Recorded in `docs/design/reality_targets.md`.
+  - **(f) A single number per point is scalar gravity.** Update 40's quantity on the points, if it is one number per
+    point sourced by energy, is Nordström's theory: the right Newtonian limit, no bending of light, and −1/6 of
+    Mercury's perihelion shift ([Giulini08], Secs. 1 to 3 read; the 25 September reading note, topic 4). Light bending
+    is measured (1919; Cassini, to verify). So the author's condition that the quantity "matches Einstein wherever
+    measured" cannot be met by a scalar alone; it needs space's curvature as well as time's rate, a tensor, or an
+    explicit restriction to slow matter stated as such. `docs/design/gravity_field_brief.md`, when written, opens with
+    this and with what any such quantity must declare first: what it represents, why it belongs in the model, its
+    symmetry, its dynamics, how matter couples to it, what continuum equation should emerge, and what falsifiable
+    prediction distinguishes it (the third review's list; `docs/design/gravity_brief.md`, §7).
+  - **(g) The fall-backs and the wait law.** The second review asked for the split between the time to the first exit
+    and the time from there to completion, and quoted measured waits of "0.9 to 1.4 times Eq. (2)". The split is on
+    the record: T22 (PREREGISTRATION) finds the first exit on time within one standard error in all six cells and the
+    time to a quarter converted 1.5 to 1.7 times the first exit, with κ = 0.56 to 0.68 (O39); paper 1 says it in words
+    without the number. "0.9 to 1.4" is not a recorded figure: T22's first-exit ratios are 0.89 to 1.22 and T8's waits
+    near λ = 1 run 15 to 43 % long; the review combined them. Not imported. Candidates for a revision of paper 1 are in
+    `docs/papers/curled_torus/v2_changes.md`.
+  - **(h) Not in the record.** The first review quotes "all matter and energy eventually enters a black hole, so there
+    is no motion through space and therefore no time"; the record and the published programme artifact have no such
+    sentence (nearest: VISION Update 26, "until the last star is eaten by the last black hole"). The owner says on
+    6 October that it is her best guess with current information; it is recorded as her conjecture, in the form the
+    reviews ask for, in Update 44. The remark that cosmological measures "predict Λ < 0" answers nothing on the record
+    (O101 has no such claim). The two extreme T24 waits (24 τ and 76 τ, both at N = 64; O52, O65) have never been read
+    from their saved wiring (O84); the review's guess that those runs started in a different state is a guess, and
+    reading them is in TASKS.
+  - **(i) The first red-team pass (CLAUDE.md rule 12, adopted 6 October): the four questions of rule 11 put to the
+    failures of T44 to T49.** The claim: one push opens every curled direction of X into one space (the author's,
+    VISION Update 22). (1) *Does the result falsify it as stated?* At the settings run, yes: pushes the size of the
+    cheapest move (T33, T44, T45, T46, T48, T49) and pushes up to 160 in four directions (T40) opened one direction, or
+    one cube, and stopped; the claim survives only in forms not yet run, a bath that supplies pushes in turn (T53,
+    running) or a push the size of a critical patch, if one exists. (2) *Implementation, parameters, size or
+    mechanism?* Implementation: the six- and eight-link kernel is exact on the ladder and draw for draw with the
+    four-link one (O41, O49), but Gate C is open, so the parent model is not reproduced; the ladder's walls do not
+    depend on that. Parameters: λ from 1.10 to 1.40 and tie strengths from 1 to 2.5 were run and no window appeared.
+    Size: for a gas of cubes the result is structural ([Mul79], O85) and no size fixes it; for a connected X the
+    dependence on size is exactly what has not been priced (b). Mechanism: the exact ladder says each direction has
+    its own wall and the energy ties nothing (`docs/papers/series_plan.md`, the (D, λ) map), which is a property of
+    the energy. (3) *A cheaper discriminating test:* price the barrier exactly (T54): if the barrier to opening the
+    next direction of a connected one-open X has a maximum at a finite patch, a push of that size is the test; if it
+    rises with the patch without bound at every λ at which X is stuck, no finite push opens all. (4) *What would make
+    us abandon the branch:* that second outcome, untied and under the tie at the strengths run, abandons "one push
+    opens all" in this family; what would remain is a bath (T53) or a different model (Update 28). Written in the form
+    of rule 11 in Update 44.
+  - **(j) The black-hole-cosmology lineage.** The third review places its Fife paper "in the lineage of Pathria,
+    Smolin and Popławski", black holes that contain or generate cosmological regions, and asks that any re-curling the
+    toy ever produces be compared with Schwarzschild or a closed-FLRW black-hole cosmology as a benchmark, never as
+    evidence. [Smolin06] is read; Pathria (1972), Popławski and Fife are not in the record and are not cited until read
+    (rule 1); the reading is in TASKS, with the Fife reference to be obtained from the owner. The staged targets before
+    anything is called a black hole (a stable localized curled region inside open space; a reproducible threshold;
+    growth with stored energy; trapping or an analogue; a sensible large-scale limit) are in the programme draft,
+    piece 11, and in `reality_targets.md`. Open: a black hole holds the most entropy anything its size can, a quarter
+    of its horizon area in Planck units (Bekenstein and Hawking, general knowledge, to verify); an ordered re-curled
+    interior is the opposite of that, and where the entropy would live has to be said.
+  - **(k) Pages that contradicted each other, found on the way and fixed on 6 October:** the draft's "T53 not yet
+    launched" (launched 5 October, 15:17 ET); `curling_ladder.html`'s release labels ("2nd: dark matter, 3rd: ordinary
+    matter"), against Update 41's "which is which is not decided", and its run table (T37 "a mosaic", T48 to T50
+    "running"); `the-loop-and-the-floor_v1.html`'s "the scrap is dark matter" and "a first-order change" (given a
+    banner, not rewritten); `series_plan.md`'s paper 1 entry and its (D, λ) map (T33, T41); the pointers in CLAUDE.md,
+    HANDOFF §9 and the README.
+  - **(l) Already on the record, so nothing changed:** the gap argument (O60, O61); T50's reading as the opposite of
+    time dilation (O93); "the toy has no black holes" (every public page); the fixed ring (T9); T52's fork; the quantum
+    ladder up to Tsirelson's bound (`docs/design/quantum_loop_design.md`); the four-way labelling of claims (this
+    file's legend; the draft's conventions); the hygiene list (rule 5; PREREGISTRATION), except the git commit hash,
+    which no `.meta.json` records (TASKS, 6 October). On "first order": VISION claim 4 and the README said it; the
+    draft said "sharp"; paper 1 says the thermodynamic sense is not claimed. The README and the public pages now carry
+    paper 1's clause; claim 4's wording is hers (Update 44).
+  - **What changed, in one list:** this entry; VISION Update 44; CLAUDE.md rules 10 to 13 and the Omega line;
+    PREREGISTRATION T51 amendment 3 (before any result is read) and T54 (a draft); TASKS, the section of 6 October;
+    the programme draft; `REFERENCES.bib` ([GM04], [CJR09], [BSV10], [GHR10], [BPS10]); the glossary; the README;
+    `reality_targets.md`; `gravity_brief.md` §7; `v2_changes.md`; `series_plan.md`; HANDOFF; the public pages named
+    in (k).
 
 ## Provenance
 

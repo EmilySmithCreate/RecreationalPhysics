@@ -3187,6 +3187,98 @@ That the scrap is dark matter, or that it is not. How a fair sweep maps onto phy
 time here can be set beside a temperature of birth. Anything at λ ≠ 1.25, in three directions, or sealed. Whether a
 scrap is cold, clumps, or passes through ordinary matter. The fall beyond 300,000 fair sweeps is an extrapolation.
 
+### Amendment 1, 2026-10-05, 05:10 ET, before any run of this protocol
+
+**Why.** The runner was written to the section above and given one cost check before launch: one tube of 256 columns
+at g = 1.25, with a seed that belongs to no config, nothing kept. It reached 90 % flat after 33,100 sweeps, and at that
+reading 80 of its 100 non-flat points were two stretches of tube not yet converted, 13 and 7 columns long, beside one
+column and five small pieces. Both stretches closed inside the first cooling block. So the stop rule as written ends
+the opening while tube is still converting. Three things would follow: columns would be born after "the columns at the
+end of the opening" had been counted, so S would not be a survival and could exceed 1; the energy and the "other"
+pieces at that reading would be mostly unconverted tube; and the quench would freeze tube, not scrap. The same check
+showed the counts are thin, about one or two columns a tube at this length.
+
+**What changes, all of it before any run:**
+
+1. **The opening ends** at the first reading at which at least 90 % of points are at d = 2 **and no connected piece of
+   points at d = 1 holds more than four points**: no stretch of tube two or more columns long is left, and a single
+   curled column is the relic itself. The reading interval and the cap are unchanged.
+2. **Replicas at L = 256:** 80 at t_cool = 0 to 100,000 (was 40), and the first 40 of them at 300,000 (was 20), so that
+   R(30,000) is taken over 40 shared replicas. L = 128 and L = 512 stay at 40. The 300,000 jobs carry one replica each,
+   to stay well inside a Batch job's 24 hours.
+
+**What does not change:** the cooling schedule, the fair clock, the hold, the blocks, the seeds, every definition, P1,
+P2, the verdict rule and our predictions. Stated with them, from the same check: at t_cool = 1,000 the schedule has
+four blocks, the first already at g = 0.84, so the two fastest coolings are close to a quench by construction.
+
+**Seen in the same check and not acted on:** a sheet can be flat at every point and still hold energy (one small test
+graph: every point at d = 2, 20 units above the flat torus). The counts of columns and other pieces miss such a state;
+the energy left and the frozen share do not.
+
+### Amendment 2, 2026-10-05, 05:27 ET, before any run of this protocol
+
+**Why.** Amendment 1's rule was given the same cost check (the same tube, the same stream, nothing kept) and was not
+reached: the long stretches of tube closed about 1,700 sweeps after the 90 % mark, and then one piece of eight points
+at d = 1 rested unchanged for the remaining 15,000 sweeps. A resting piece of eight is already on the record among the
+rare leftovers (the 3-cube of O28; this one's wiring was not read). So "no piece above four" waits for a leftover to
+heal, not for tube to finish converting; a tube that makes such a piece would either never count as opened or would
+open late, with its other scraps aged at a coupling where they heal. The same check showed something more basic:
+columns went on being born from the smaller pieces for about 10,000 sweeps after the 90 % mark (1, then 4, then 2,
+then 4, as pieces relaxed into columns and columns healed). **At a steady warm coupling there is no moment at which the
+leftovers have finished forming and not yet begun to heal**, so no stop rule gives a clean count to survive from.
+
+**What changes, all of it before any run:**
+
+1. **The opening ends** at the first reading at which at least 90 % of points are at d = 2 and no connected piece of
+   points at d = 1 holds more than **eight** points: no stretch of tube three or more columns long is left. A resting
+   piece of eight is allowed and is read as an "other", as T37 reads it.
+2. **What is scored no longer depends on the count at the end of the opening.** Every cooling time starts from the same
+   opened sheet, so a ratio of what two coolings leave needs no baseline. With C(t) the columns at the end of the hold,
+   summed over the replicas two cells share:
+   - **The verdict is unchanged in substance**: R(t) = S(10 t) / S(t) on shared replicas already equals C(10 t) / C(t),
+     the baseline cancelling. The rule (GENTLE, CLIFF, FROZEN, MIXED) and its lines stand as written.
+   - **P1 (the fair clock) is restated without a baseline**: C(30,000) / C(10,000) lies within 0.20 of 0.99, and
+     C(100,000) / C(10,000) within 0.20 of 0.47. These are T25's own ratios at 96 points, (14/18) / (15/19) and
+     (7/19) / (15/19). The form first written, each S within 0.20 of T25's survival, is withdrawn before any run,
+     because births after the baseline count would push S up for a reason that has nothing to do with the clock.
+   - **P2 is unchanged** (it never used a baseline).
+3. S and S_E as first defined are still reported, marked as able to exceed 1.
+
+**What does not change:** everything else in the section and in Amendment 1 (the replicas, the cooling schedule, the
+fair clock, the hold, the seeds). **Our predictions** stand, with P1 in its new form: both ratios within their windows.
+
+**What this costs, said plainly.** The quench and the two fastest coolings now start from a sheet whose smaller pieces
+are still relaxing, so their frozen shares describe a sheet caught early, and are reported as that. The cells the
+verdict uses, 10,000 fair sweeps and slower, all spend at least 1,400 fair sweeps above a coupling of 1 before they
+cool further, which is longer than the relaxation seen in the check; they see the same early history and differ in how
+long the scraps then have to heal.
+
+### Amendment 3, 2026-10-06, 03:56 ET by the clock, before any result has been read (no T51 file is in `results/` or `cloud/inbox/` at this writing; the runs were launched 5 October)
+
+**Why.** Three AI-generated reviews of the programme (ASSUMPTIONS O103) made two points about this test. First, the
+number the hypothesis needs is far below anything this run can reach: at birth dark matter is about 0.67 eV over the
+temperature of birth, about 7 × 10⁻⁷ of the energy at 1 MeV and smaller at any hotter birth (O89), against the 5 to
+14 % of T37's clean tubes; so the question this run can answer is the *shape* of the fall with cooling time, which the
+"Why" above already says but the scoring does not measure. Second, every warm result at a fixed coupling carries a
+size caveat that "What this cannot show" omits: a larger network melts at a lower coupling (O88; the sourced B4;
+TASKS T9).
+
+**What changes, all of it before any result is read:**
+
+1. **Reported, not scored, in addition:** C(t) and the frozen share at every t_cool fitted to a power law in t_cool over
+   the cells from 10,000 fair sweeps upward, with the exponent and its standard error from resampling replicas, and the
+   cooling time at which the fit would reach the share O89 names at 1 MeV (an extrapolation, marked as one); the size
+   distribution of the leftovers at the end of the hold (points per connected piece not at d = 2), read from the saved
+   wiring; the number of connected pieces of the whole graph at the end of the hold (does the opening split the space,
+   O100); and R(t) at every decade available, not only the two the verdict uses, so that a smooth fall can be told from
+   a step. The verdict rule, P1, P2 and every definition stand as written in Amendment 2.
+2. **"What this cannot show" gains two lines:** anything at a size much larger than 1,024 points at these couplings,
+   since a larger network melts at a lower coupling (O88) and T9's drift is not yet measured; and the endpoint of the
+   fall, which no cell here reaches.
+
+**What does not change:** the runs (launched 5 October), the seeds, the cooling schedule, the fair clock, the hold, the
+cells, the verdict rule, P1, P2 and our predictions. **The owner's prediction is still owed before any result is read.**
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
@@ -3265,3 +3357,167 @@ which is not local, behaves differently is a separate question and is not asked 
 Anything at a temperature above zero (the wirings at other energies are reported for that, not scored). Anything in
 three directions, where a pull would have to be tested ([Ver11]: no finite constant in two). That the model has no
 gravity: only that this count, at these windows, does or does not follow the cut. Windows beyond 20 points.
+
+### Amendment 1, 2026-10-05, 11:07 ET by the clock, before any count is taken on a saved state
+
+**Why.** The module was finished and tested on built graphs only (`src/graphity/hidden.py`, `tests/test_hidden.py`; no
+saved state was read by it). Three things it showed make the section above unreadable as written.
+
+1. **The count as defined includes pure renamings.** A point of the window with no link out of it can swap names with
+   another such point on its side, giving a different labeled wiring of the very same graph. The flat window of
+   radius 1 (12 points) therefore counts 4, not 1: the square's two points on each side swapped or not. A window with
+   k0 and k1 such points always has a count divisible by k0! k1!. So "every flat control gives 1" (C1) would fail for a
+   reason with no content, and the counts would mostly measure how many sealed points a window has.
+2. **Wirings at other energies cannot be listed beyond about a dozen points**: there are too many.
+3. **The flat window of radius 2 (24 points) takes over ten minutes**, when it finishes at all.
+
+**Seen on built graphs while testing, and disclosed because it bears on the predictions:** counted up to those
+renamings, flat blocks of up to 20 points hide 1 arrangement; a window of 2, 3 or 4 whole columns of the plain curled
+tube hides 4, the same at each width, with 8 links cut each time. The flat window of radius 2 counts 518,400, which is
+6! × 6! and so consistent with 1 up to renaming.
+
+**What changes, all of it before any count on a saved state:**
+
+- **The scored quantity is the number of shapes:** the same-energy valid wirings counted up to renaming of the window's
+  points that have no link out of it, each kept on its side (`shapes` in `graphity.hidden`). The raw count is reported
+  beside it. Wherever "count" appears in C1, in "the relic, at r = 1" and in "the scaling" above, read "shapes".
+- **Radius 1** is counted in full (shapes, raw count, and the wirings at every other energy). **Radius 2** is counted
+  at the original's energy only, one wiring per class of renamings, which is exact for the shapes and the raw count and
+  gives nothing at other energies.
+- **Fewer windows at radius 2, to bound the run:** the relic of lowest vertex number in each end state (12, was 24) and
+  the first flat square in each (12, was 36). The 20-minute limit and the rule that follows from it stand.
+
+**Predictions.** The chat sessions' and ours stand as registered, with "shapes" for "count": flat windows hide 1; a
+relic window hides more than 1, and more at radius 2 than at radius 1 (FOLLOWS THE REGION). *Said before the run:* what
+was seen on the curled tube leans the other way. A stretch of curled tube hides the same 4 at every length, the ways
+its ring of four can be turned or flipped where it joins the rest, which is a count that stays with the cut. A relic
+is one curled ring, so STAYS WITH THE CUT, with 4 or fewer shapes at both radii, would not surprise us now. The
+registered prediction is the one that is scored.
+
+---
+
+## T53. The "spaghetti" X in a warm bath: does a space with two directions curled and one open open by itself, from one place or several? (piece 5; VISION Update 42; ASSUMPTIONS O94, O100; written 2026-10-05, 11:52 ET by the clock, before any run)
+
+### Why
+
+The owner's idea of 5 October (VISION Update 42): inside a black hole X may be two directions curled and one open,
+long in its open direction; such a state would be unstable and burp at once, from several seeds. The toy has this state
+(a 4 × 4 × L torus with six links), and every run of it so far gave it one push in a sealed box: it opened one of its
+two curled directions and stopped, or, near the curling cost at which it can no longer hold, opened both in 5 runs of
+16 (T30, T48; O100). What has never been run is this state in a bath at a steady temperature, which supplies each push
+in turn, the way the two-dimensional tube was first seen to open (T7) and to seed itself (T37). O94 argued on paper
+that a window of bath temperatures should exist near λ = 1.25 at the level of single moves, and that it had not been
+run. This is that run, untied: no new knob.
+
+**Disclosed.** Exact, known before writing: the cheapest way out of the start costs 16 at λ = 1.25 and 4.8 at 1.40; out
+of the state with one direction still curled, 36 and 28.8; out of flat space, 64. Measured before writing: flat six-link
+space at 500 points and λ = 1 holds up to a coupling of about 4 on heating and is lost by 5.8 (Gate C′), and larger
+spaces melt at lower couplings (O88). Nothing of this protocol has been run.
+
+### What will be run
+
+`scripts/run_curled_bath_d.py` (new; tests in `tests/test_t53.py` before any run): the exact 4 × 4 × L torus, six
+links, named points, no tie, the thermal chain `cqg_d.run_chain` (Metropolis) at a fixed coupling g. L = 18, 36, 72
+(N = 288, 576, 1,152); λ = 1.25 and 1.40; g = 1.5, 2.0, 2.5, 3.0, 3.5; 8 replicas a cell; 200,000 sweeps, read every
+1,000; final graphs saved. Thirty Batch jobs, one per cell; seeds 20265301 to 20265330. Every six-link result carries
+VISION Update 24's caveat: the reproduction gate is open.
+
+### Definitions, fixed now (`scripts/analyse_t53.py`, tested before any run)
+
+Read at every reading with the census T48 uses (`run_sealed_curled_d.census_any`): the number of points at each count
+of open directions d, the damaged points (more open directions than three), and the largest connected piece of points
+at d = 3. Per replica, **from its last reading, by T48's rule**: DAMAGED if at least a quarter of the points are
+damaged; else OPENS if at least half the points are at d = 3 and the largest connected piece at d = 3 holds at least
+half of all points; else ADVANCES if the rung holding the most points is above the starting rung (d = 1); else STAYS.
+Per cell (L, λ, g): the majority, else MIXED.
+
+- **The window, per (L, λ):** **OPENS IN A WINDOW** if at least one g has an OPENS majority; else **ADVANCES ONLY** if
+  some g has an ADVANCES majority and no g has an OPENS majority; else **DAMAGED** if every g at which anything moved
+  has a DAMAGED majority; else **STAYS**.
+- **One place or several**, for replicas that OPEN or ADVANCE: the number of separate connected pieces of at least 16
+  points at d ≥ 2 at the first reading at which a tenth of the points are at d ≥ 2. SEVERAL if the median over such
+  replicas is 2 or more at L = 72 and larger there than at L = 18; ONE otherwise.
+- Reported, not scored: the sweep at which half the points first sit at d ≥ 2 and at d = 3 (the two openings' times);
+  whether an opening pauses on the one-curled rung; the final number of connected pieces of the whole graph (does the
+  opening split the space, O100); the energy at the end.
+
+### Predictions
+
+**The owner's (inferred by the assistant from VISION Update 42: this state is unstable, burps at once, and allows
+several seeds; to be confirmed or replaced by her before any result is read):** OPENS IN A WINDOW at both λ and every
+length, sooner at 1.40; SEVERAL.
+
+**Ours:** λ = 1.25: ADVANCES ONLY at every length. The first curled direction opens within the run at every g (its wall
+is 16); the second sits behind 36, which a bath that leaves flat space intact crosses too rarely, so the warmer baths
+give DAMAGED cells and not OPENS. λ = 1.40: OPENS IN A WINDOW at L = 18, around g = 2.5 to 3.0 (the second wall is
+28.8), with damage beside it; at L = 72 the window narrows or closes, because the larger space melts at a lower
+coupling. One place or several: ONE at these lengths.
+
+### Named or interchangeable points
+
+Named. With interchangeable points the start, which is highly symmetric, would be favored and its first move taken
+far less often (T48's count: the cheapest move out leaves 4 of 6,912 renamings), so every wait would be longer; what
+happens after the first moves is not predicted. Not run.
+
+### What this cannot show
+
+That X is this state, or that a black hole makes it: nothing in the toy folds space (piece 11). Anything with a tie
+between the directions, which waits for the owner's choice (O89). Whether a window found at these sizes survives at
+larger ones. Time: the toy's clock is its count of moves, and this run uses the chain's own sweeps at each size, so
+times are compared between couplings, not between sizes.
+
+
+---
+
+## T54 (DRAFT, 2026-10-06, 03:56 ET by the clock, before any computation). The true barrier in three directions: the smallest opened patch of a one-curled torus that grows, exact; then whether a warm bath crosses it (piece 5; ASSUMPTIONS O79, O94, O103 (b); VISION Update 44)
+
+### Status
+
+A draft. The question, the design in outline, the verdict words and our prediction are fixed here; the script and the
+exact definitions of "patch" and "grows" are to be written and tested before any computation, and the owner's
+prediction is owed before any run. Nothing has been computed. First in the order of TASKS (6 October).
+
+### Why
+
+Every push tried in three and four directions was the size of the cheapest single move, and every one opened one
+direction, or one cube, and stopped (T30, T33, T40, T44 to T49). The two-direction tube's push is fixed with size
+because its front is a ring of four points whose cost never grows (T9; paper 1), and the 4 × 4 × L torus has a
+cross-section of 16 points; in both the seam between the opened and the curled parts cannot grow. On a 4 × L × L torus
+with one curled direction the seam grows with the opened patch, and nucleation theory (general knowledge, to verify)
+then predicts a critical patch, below which a patch shrinks and above which it grows, and a barrier that rises without
+bound as the release per point goes to zero. T48's one-curled torus stayed shut in 32 of 32 (O91) and T41 never opened
+(O81); both were explained on the record only by the single-move wall of 36 (λ = 1.25) and 28.8 (1.40). Whether the
+three-direction barrier is a fixed single move or a growing seam decides whether "one push opens all" survives in this
+family (Update 44, rule 11's first use), and it has not been priced (O79, O94).
+
+### What will be computed (exact; no run)
+
+On the 4 × L × L six-link torus with one curled direction (L = 8, 12, 16), at λ = 1.10, 1.25, 1.40: build the wiring in
+which the curled direction is opened over a connected patch of k × k columns of the L × L sheet (k = 1, 2, 3, ...), with
+the seam wired as T48's partly opened states are wired (read from their saved end states, O91; the construction is to
+be checked for validity under the hard-core rule, and if no valid seam exists for some k that is recorded), and compute
+H exactly. Report ΔH(k) = H(patch) − H(torus); the release per opened point and the seam cost per unit length fitted
+from it; the k at which ΔH is largest (the critical patch); the barrier ΔH* = max ΔH; and ΔH* against λ. Report also
+the cheapest single move out of each patch (whether a patch of size k sits above or below the hill).
+
+### Verdict words, fixed now
+
+- **FIXED WALL** if ΔH(k) falls for every k ≥ 1 at every λ: the single move is the whole barrier, a push of 36 should
+  open all, and T48's result needs another explanation.
+- **CRITICAL PATCH** if ΔH(k) rises and then falls, with ΔH* finite at every λ: the critical k and ΔH* are the push to
+  try in a sealed run (part B, to be pre-registered separately).
+- **NO FINITE PATCH** if ΔH(k) rises for every k computed at some λ at which X is stuck: no finite push opens all
+  there, and under rule 11 the branch is abandoned in this family at that λ.
+
+### Predictions
+
+**The owner's:** owed before any run.
+
+**Ours, unverified (O103 (b)):** CRITICAL PATCH at every λ, with ΔH* rising as λ → 1 roughly as the seam cost squared
+over the release (the two-dimensional case of classical nucleation); at λ = 1.25 a barrier well above the single move
+of 36, which is why T48 stayed shut.
+
+### What this cannot show
+
+Anything about the parent model (Gate C open; Update 24's caveat). The dynamics: whether a bath crosses the barrier
+is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89).
