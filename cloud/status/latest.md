@@ -1,101 +1,13 @@
-# Batch queue and results bucket, as of 2026-10-05 15:19 UTC (commit 09a4b3d)
+# Batch queue and results bucket, as of 2026-10-08 21:29 UTC (commit faed377)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- t51_l256_fast_00-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_01-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_02-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_04-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_05-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_06-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_07-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_08-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_09-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_10-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_11-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_12-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_13-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_14-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 
-- t51_l256_fast_15-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_fast_16-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_fast_17-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_fast_18-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_fast_19-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_00-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_01-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_02-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_03-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_04-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_05-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_06-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_07-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 
-- t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 
+- none
 
 ## RUNNABLE
-- t51_l256_100k_11-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_12-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_13-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_14-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_15-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_16-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_17-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_18-aa6b835  created 10-05 09:56  started   stopped 
-- t51_l256_100k_19-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_00-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_01-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_02-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_03-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_04-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_05-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_06-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_07-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_08-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_09-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_10-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_11-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_12-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_13-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_14-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_15-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_16-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_17-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_18-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_19-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_20-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_21-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_22-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_23-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_24-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_25-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_26-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_27-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_28-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_29-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_30-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_31-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_32-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_33-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_34-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_35-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_36-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_37-aa6b835  created 10-05 09:57  started   stopped 
-- t51_l256_300k_38-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l256_300k_39-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l128_10k_00-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_00-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_01-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_02-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_03-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_04-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_05-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_06-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_07-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_08-aa6b835  created 10-05 09:58  started   stopped 
-- t51_l512_10k_09-aa6b835  created 10-05 09:58  started   stopped 
+- none
 
 ## STARTING
 - none
@@ -107,10 +19,129 @@ until a person downloads, checks and commits them.
 - none
 
 ## SUCCEEDED
+- t51_l256_fast_00-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:54
+- t51_l256_fast_01-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:37
+- t51_l256_fast_02-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:49
 - t51_l256_fast_03-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 14:31
+- t51_l256_fast_04-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:36
+- t51_l256_fast_05-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:30
+- t51_l256_fast_06-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:00
+- t51_l256_fast_07-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:36
+- t51_l256_fast_08-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:53
+- t51_l256_fast_09-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:33
+- t51_l256_fast_10-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:47
+- t51_l256_fast_11-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:04
+- t51_l256_fast_12-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 15:44
+- t51_l256_fast_13-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:21
+- t51_l256_fast_14-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:01
+- t51_l256_fast_15-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:09
+- t51_l256_fast_16-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:45
+- t51_l256_fast_17-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:13
+- t51_l256_fast_18-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:17
+- t51_l256_fast_19-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:30
+- t51_l256_100k_00-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:08
+- t51_l256_100k_01-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
+- t51_l256_100k_02-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
+- t51_l256_100k_03-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:56
+- t51_l256_100k_04-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:55
+- t51_l256_100k_05-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:52
+- t51_l256_100k_06-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:24
+- t51_l256_100k_07-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:29
+- t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:30
+- t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:42
+- t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 10-05 21:16
+- t51_l256_100k_11-aa6b835  created 10-05 09:56  started 10-05 15:44  stopped 10-06 00:13
+- t51_l256_100k_12-aa6b835  created 10-05 09:56  started 10-05 16:01  stopped 10-06 00:37
+- t51_l256_100k_13-aa6b835  created 10-05 09:56  started 10-05 16:22  stopped 10-06 02:24
+- t51_l256_100k_14-aa6b835  created 10-05 09:56  started 10-05 16:30  stopped 10-06 03:42
+- t51_l256_100k_15-aa6b835  created 10-05 09:56  started 10-05 16:30  stopped 10-06 02:59
+- t51_l256_100k_16-aa6b835  created 10-05 09:56  started 10-05 16:30  stopped 10-06 03:14
+- t51_l256_100k_17-aa6b835  created 10-05 09:56  started 10-05 16:36  stopped 10-06 03:44
+- t51_l256_100k_18-aa6b835  created 10-05 09:56  started 10-05 16:38  stopped 10-06 02:33
+- t51_l256_100k_19-aa6b835  created 10-05 09:57  started 10-05 16:46  stopped 10-06 02:52
+- t51_l256_300k_00-aa6b835  created 10-05 09:57  started 10-05 16:47  stopped 10-06 00:14
+- t51_l256_300k_01-aa6b835  created 10-05 09:57  started 10-05 16:50  stopped 10-06 00:38
+- t51_l256_300k_02-aa6b835  created 10-05 09:57  started 10-05 16:54  stopped 10-06 00:11
+- t51_l256_300k_03-aa6b835  created 10-05 09:57  started 10-05 16:55  stopped 10-05 23:02
+- t51_l256_300k_04-aa6b835  created 10-05 09:57  started 10-05 17:01  stopped 10-06 00:27
+- t51_l256_300k_05-aa6b835  created 10-05 09:57  started 10-05 17:05  stopped 10-06 00:23
+- t51_l256_300k_06-aa6b835  created 10-05 09:57  started 10-05 17:10  stopped 10-06 00:17
+- t51_l256_300k_07-aa6b835  created 10-05 09:57  started 10-05 17:13  stopped 10-06 00:37
+- t51_l256_300k_08-aa6b835  created 10-05 09:57  started 10-05 17:18  stopped 10-06 01:09
+- t51_l256_300k_09-aa6b835  created 10-05 09:57  started 10-05 17:34  stopped 10-06 00:51
+- t51_l256_300k_10-aa6b835  created 10-05 09:57  started 10-05 17:37  stopped 10-06 00:36
+- t51_l256_300k_11-aa6b835  created 10-05 09:57  started 10-05 19:25  stopped 10-06 02:26
+- t51_l256_300k_12-aa6b835  created 10-05 09:57  started 10-05 19:52  stopped 10-06 03:04
+- t51_l256_300k_13-aa6b835  created 10-05 09:57  started 10-05 19:56  stopped 10-06 04:00
+- t51_l256_300k_14-aa6b835  created 10-05 09:57  started 10-05 19:56  stopped 10-06 03:04
+- t51_l256_300k_15-aa6b835  created 10-05 09:57  started 10-05 20:13  stopped 10-06 03:17
+- t51_l256_300k_16-aa6b835  created 10-05 09:57  started 10-05 20:14  stopped 10-06 02:16
+- t51_l256_300k_17-aa6b835  created 10-05 09:57  started 10-05 20:43  stopped 10-06 04:21
+- t51_l256_300k_18-aa6b835  created 10-05 09:57  started 10-05 21:09  stopped 10-06 04:08
+- t51_l256_300k_19-aa6b835  created 10-05 09:57  started 10-05 21:17  stopped 10-06 04:46
+- t51_l256_300k_20-aa6b835  created 10-05 09:57  started 10-05 21:31  stopped 10-06 05:10
+- t51_l256_300k_21-aa6b835  created 10-05 09:57  started 10-05 23:02  stopped 10-06 06:25
+- t51_l256_300k_22-aa6b835  created 10-05 09:57  started 10-06 00:11  stopped 10-06 07:36
+- t51_l256_300k_23-aa6b835  created 10-05 09:57  started 10-06 00:14  stopped 10-06 07:14
+- t51_l256_300k_24-aa6b835  created 10-05 09:57  started 10-06 00:14  stopped 10-06 06:14
+- t51_l256_300k_25-aa6b835  created 10-05 09:57  started 10-06 00:18  stopped 10-06 07:30
+- t51_l256_300k_26-aa6b835  created 10-05 09:57  started 10-06 00:24  stopped 10-06 07:40
+- t51_l256_300k_27-aa6b835  created 10-05 09:57  started 10-06 00:27  stopped 10-06 07:27
+- t51_l256_300k_28-aa6b835  created 10-05 09:57  started 10-06 00:37  stopped 10-06 07:41
+- t51_l256_300k_29-aa6b835  created 10-05 09:57  started 10-06 00:38  stopped 10-06 07:44
+- t51_l256_300k_30-aa6b835  created 10-05 09:57  started 10-06 00:38  stopped 10-06 08:05
+- t51_l256_300k_31-aa6b835  created 10-05 09:57  started 10-06 00:39  stopped 10-06 08:11
+- t51_l256_300k_32-aa6b835  created 10-05 09:57  started 10-06 00:51  stopped 10-06 07:54
+- t51_l256_300k_33-aa6b835  created 10-05 09:57  started 10-06 01:10  stopped 10-06 08:09
+- t51_l256_300k_34-aa6b835  created 10-05 09:57  started 10-06 02:16  stopped 10-06 09:35
+- t51_l256_300k_35-aa6b835  created 10-05 09:57  started 10-06 02:24  stopped 10-06 09:38
+- t51_l256_300k_36-aa6b835  created 10-05 09:57  started 10-06 02:26  stopped 10-06 10:30
+- t51_l256_300k_37-aa6b835  created 10-05 09:57  started 10-06 02:33  stopped 10-06 09:51
+- t51_l256_300k_38-aa6b835  created 10-05 09:58  started 10-06 02:53  stopped 10-06 07:30
+- t51_l256_300k_39-aa6b835  created 10-05 09:58  started 10-06 03:00  stopped 10-06 09:05
+- t51_l128_10k_00-aa6b835  created 10-05 09:58  started 10-06 03:04  stopped 10-06 07:04
+- t51_l512_10k_00-aa6b835  created 10-05 09:58  started 10-06 03:04  stopped 10-06 09:53
+- t51_l512_10k_01-aa6b835  created 10-05 09:58  started 10-06 03:14  stopped 10-06 09:55
+- t51_l512_10k_02-aa6b835  created 10-05 09:58  started 10-06 03:17  stopped 10-06 10:37
+- t51_l512_10k_03-aa6b835  created 10-05 09:58  started 10-06 03:42  stopped 10-06 10:59
+- t51_l512_10k_04-aa6b835  created 10-05 09:58  started 10-06 03:44  stopped 10-06 11:36
+- t51_l512_10k_05-aa6b835  created 10-05 09:58  started 10-06 04:01  stopped 10-06 11:13
+- t51_l512_10k_06-aa6b835  created 10-05 09:58  started 10-06 04:08  stopped 10-06 11:28
+- t51_l512_10k_07-aa6b835  created 10-05 09:58  started 10-06 04:22  stopped 10-06 11:35
+- t51_l512_10k_08-aa6b835  created 10-05 09:58  started 10-06 04:46  stopped 10-06 11:52
+- t51_l512_10k_09-aa6b835  created 10-05 09:58  started 10-06 05:10  stopped 10-06 09:21
+- t53_l18_lam125_g15-4eb5afa  created 10-05 19:19  started 10-06 06:15  stopped 10-06 08:20
+- t53_l18_lam125_g20-4eb5afa  created 10-05 19:19  started 10-06 06:26  stopped 10-06 08:30
+- t53_l18_lam125_g25-4eb5afa  created 10-05 19:19  started 10-06 07:05  stopped 10-06 09:47
+- t53_l18_lam125_g30-4eb5afa  created 10-05 19:19  started 10-06 07:15  stopped 10-06 10:00
+- t53_l18_lam125_g35-4eb5afa  created 10-05 19:19  started 10-06 07:28  stopped 10-06 10:30
+- t53_l18_lam140_g15-4eb5afa  created 10-05 19:19  started 10-06 07:30  stopped 10-06 09:10
+- t53_l18_lam140_g20-4eb5afa  created 10-05 19:20  started 10-06 07:31  stopped 10-06 10:03
+- t53_l18_lam140_g25-4eb5afa  created 10-05 19:20  started 10-06 07:37  stopped 10-06 10:09
+- t53_l18_lam140_g30-4eb5afa  created 10-05 19:20  started 10-06 07:41  stopped 10-06 10:31
+- t53_l18_lam140_g35-4eb5afa  created 10-05 19:20  started 10-06 07:41  stopped 10-06 10:48
+- t53_l36_lam125_g15-4eb5afa  created 10-05 19:20  started 10-06 07:44  stopped 10-06 12:27
+- t53_l36_lam125_g20-4eb5afa  created 10-05 19:20  started 10-06 07:55  stopped 10-06 13:33
+- t53_l36_lam125_g25-4eb5afa  created 10-05 19:20  started 10-06 08:05  stopped 10-06 13:45
+- t53_l36_lam125_g30-4eb5afa  created 10-05 19:20  started 10-06 08:10  stopped 10-06 14:59
+- t53_l36_lam125_g35-4eb5afa  created 10-05 19:20  started 10-06 08:11  stopped 10-06 14:35
+- t53_l36_lam140_g15-4eb5afa  created 10-05 19:20  started 10-06 08:20  stopped 10-06 13:50
+- t53_l36_lam140_g20-4eb5afa  created 10-05 19:20  started 10-06 08:31  stopped 10-06 14:09
+- t53_l36_lam140_g25-4eb5afa  created 10-05 19:20  started 10-06 09:05  stopped 10-06 14:49
+- t53_l36_lam140_g30-4eb5afa  created 10-05 19:20  started 10-06 09:11  stopped 10-06 13:32
+- t53_l36_lam140_g35-4eb5afa  created 10-05 19:20  started 10-06 09:22  stopped 10-06 15:11
+- t53_l72_lam125_g15-4eb5afa  created 10-05 19:20  started 10-06 09:35  stopped 10-06 19:26
+- t53_l72_lam125_g20-4eb5afa  created 10-05 19:20  started 10-06 09:39  stopped 10-06 22:32
+- t53_l72_lam125_g25-4eb5afa  created 10-05 19:20  started 10-06 09:47  stopped 10-06 21:51
+- t53_l72_lam125_g35-4eb5afa  created 10-05 19:20  started 10-06 09:53  stopped 10-06 22:43
+- t53_l72_lam140_g15-4eb5afa  created 10-05 19:20  started 10-06 09:54  stopped 10-06 21:20
+- t53_l72_lam140_g20-4eb5afa  created 10-05 19:20  started 10-06 09:56  stopped 10-06 18:02
+- t53_l72_lam140_g25-4eb5afa  created 10-05 19:20  started 10-06 10:01  stopped 10-06 23:37
+- t53_l72_lam140_g30-4eb5afa  created 10-05 19:20  started 10-06 10:04  stopped 10-06 22:58
+- t53_l72_lam140_g35-4eb5afa  created 10-05 19:20  started 10-06 10:09  stopped 10-06 23:41
 
 ## FAILED
-- none
+- t53_l72_lam125_g30-4eb5afa  created 10-05 19:20  started   stopped 10-06 09:52
 
 ## finished results in the bucket (config.csv present)
 - gatec2_2d_n2000_a/gatec2_2d_n2000_a.csv  (2026-09-25 02:27:30, 6803 bytes)
@@ -389,5 +420,125 @@ until a person downloads, checks and commits them.
 - t50_front_matter_e10/t50_front_matter_e10.csv  (2026-09-27 18:00:45, 3192180 bytes)
 - t50_front_matter_e3/t50_front_matter_e3.csv  (2026-09-27 18:30:16, 3136962 bytes)
 - t50_front_matter_e6/t50_front_matter_e6.csv  (2026-09-27 18:19:38, 3139331 bytes)
+- t51_l128_10k_00/t51_l128_10k_00.csv  (2026-10-06 07:04:15, 235143 bytes)
+- t51_l256_100k_00/t51_l256_100k_00.csv  (2026-10-05 21:08:23, 174921 bytes)
+- t51_l256_100k_01/t51_l256_100k_01.csv  (2026-10-05 20:13:30, 177845 bytes)
+- t51_l256_100k_02/t51_l256_100k_02.csv  (2026-10-05 20:12:33, 173498 bytes)
+- t51_l256_100k_03/t51_l256_100k_03.csv  (2026-10-05 19:56:00, 179727 bytes)
+- t51_l256_100k_04/t51_l256_100k_04.csv  (2026-10-05 19:55:06, 181228 bytes)
+- t51_l256_100k_05/t51_l256_100k_05.csv  (2026-10-05 19:51:57, 179341 bytes)
+- t51_l256_100k_06/t51_l256_100k_06.csv  (2026-10-05 19:24:26, 182663 bytes)
+- t51_l256_100k_07/t51_l256_100k_07.csv  (2026-10-05 16:29:30, 177642 bytes)
+- t51_l256_100k_08/t51_l256_100k_08.csv  (2026-10-05 21:30:01, 176988 bytes)
+- t51_l256_100k_09/t51_l256_100k_09.csv  (2026-10-05 20:42:33, 176842 bytes)
+- t51_l256_100k_10/t51_l256_100k_10.csv  (2026-10-05 21:16:05, 175196 bytes)
+- t51_l256_100k_11/t51_l256_100k_11.csv  (2026-10-06 00:13:20, 182743 bytes)
+- t51_l256_100k_12/t51_l256_100k_12.csv  (2026-10-06 00:36:57, 180332 bytes)
+- t51_l256_100k_13/t51_l256_100k_13.csv  (2026-10-06 02:23:43, 182745 bytes)
+- t51_l256_100k_14/t51_l256_100k_14.csv  (2026-10-06 03:41:58, 177152 bytes)
+- t51_l256_100k_15/t51_l256_100k_15.csv  (2026-10-06 02:59:27, 182751 bytes)
+- t51_l256_100k_16/t51_l256_100k_16.csv  (2026-10-06 03:13:55, 182490 bytes)
+- t51_l256_100k_17/t51_l256_100k_17.csv  (2026-10-06 03:43:50, 177993 bytes)
+- t51_l256_100k_18/t51_l256_100k_18.csv  (2026-10-06 02:32:51, 180032 bytes)
+- t51_l256_100k_19/t51_l256_100k_19.csv  (2026-10-06 02:51:57, 177814 bytes)
+- t51_l256_300k_00/t51_l256_300k_00.csv  (2026-10-06 00:13:33, 125294 bytes)
+- t51_l256_300k_01/t51_l256_300k_01.csv  (2026-10-06 00:38:30, 133441 bytes)
+- t51_l256_300k_02/t51_l256_300k_02.csv  (2026-10-06 00:10:53, 125334 bytes)
+- t51_l256_300k_03/t51_l256_300k_03.csv  (2026-10-05 23:01:51, 125204 bytes)
+- t51_l256_300k_04/t51_l256_300k_04.csv  (2026-10-06 00:26:42, 133426 bytes)
+- t51_l256_300k_05/t51_l256_300k_05.csv  (2026-10-06 00:23:10, 125085 bytes)
+- t51_l256_300k_06/t51_l256_300k_06.csv  (2026-10-06 00:17:15, 125144 bytes)
+- t51_l256_300k_07/t51_l256_300k_07.csv  (2026-10-06 00:37:13, 126236 bytes)
+- t51_l256_300k_08/t51_l256_300k_08.csv  (2026-10-06 01:09:13, 125031 bytes)
+- t51_l256_300k_09/t51_l256_300k_09.csv  (2026-10-06 00:50:35, 125059 bytes)
+- t51_l256_300k_10/t51_l256_300k_10.csv  (2026-10-06 00:36:19, 135010 bytes)
+- t51_l256_300k_11/t51_l256_300k_11.csv  (2026-10-06 02:25:48, 126169 bytes)
+- t51_l256_300k_12/t51_l256_300k_12.csv  (2026-10-06 03:03:37, 134710 bytes)
+- t51_l256_300k_13/t51_l256_300k_13.csv  (2026-10-06 04:00:17, 126633 bytes)
+- t51_l256_300k_14/t51_l256_300k_14.csv  (2026-10-06 03:03:50, 135888 bytes)
+- t51_l256_300k_15/t51_l256_300k_15.csv  (2026-10-06 03:16:43, 134778 bytes)
+- t51_l256_300k_16/t51_l256_300k_16.csv  (2026-10-06 02:15:46, 126105 bytes)
+- t51_l256_300k_17/t51_l256_300k_17.csv  (2026-10-06 04:21:30, 135871 bytes)
+- t51_l256_300k_18/t51_l256_300k_18.csv  (2026-10-06 04:07:43, 126598 bytes)
+- t51_l256_300k_19/t51_l256_300k_19.csv  (2026-10-06 04:45:47, 134811 bytes)
+- t51_l256_300k_20/t51_l256_300k_20.csv  (2026-10-06 05:09:34, 134685 bytes)
+- t51_l256_300k_21/t51_l256_300k_21.csv  (2026-10-06 06:25:20, 126899 bytes)
+- t51_l256_300k_22/t51_l256_300k_22.csv  (2026-10-06 07:36:22, 135856 bytes)
+- t51_l256_300k_23/t51_l256_300k_23.csv  (2026-10-06 07:14:16, 126941 bytes)
+- t51_l256_300k_24/t51_l256_300k_24.csv  (2026-10-06 06:14:30, 126260 bytes)
+- t51_l256_300k_25/t51_l256_300k_25.csv  (2026-10-06 07:30:23, 135856 bytes)
+- t51_l256_300k_26/t51_l256_300k_26.csv  (2026-10-06 07:40:21, 126341 bytes)
+- t51_l256_300k_27/t51_l256_300k_27.csv  (2026-10-06 07:27:09, 134663 bytes)
+- t51_l256_300k_28/t51_l256_300k_28.csv  (2026-10-06 07:40:55, 137089 bytes)
+- t51_l256_300k_29/t51_l256_300k_29.csv  (2026-10-06 07:43:55, 126400 bytes)
+- t51_l256_300k_30/t51_l256_300k_30.csv  (2026-10-06 08:04:39, 126129 bytes)
+- t51_l256_300k_31/t51_l256_300k_31.csv  (2026-10-06 08:10:50, 126551 bytes)
+- t51_l256_300k_32/t51_l256_300k_32.csv  (2026-10-06 07:54:27, 126689 bytes)
+- t51_l256_300k_33/t51_l256_300k_33.csv  (2026-10-06 08:09:25, 126440 bytes)
+- t51_l256_300k_34/t51_l256_300k_34.csv  (2026-10-06 09:34:37, 126292 bytes)
+- t51_l256_300k_35/t51_l256_300k_35.csv  (2026-10-06 09:38:23, 126813 bytes)
+- t51_l256_300k_36/t51_l256_300k_36.csv  (2026-10-06 10:29:38, 135846 bytes)
+- t51_l256_300k_37/t51_l256_300k_37.csv  (2026-10-06 09:50:39, 126105 bytes)
+- t51_l256_300k_38/t51_l256_300k_38.csv  (2026-10-06 07:29:43, 126105 bytes)
+- t51_l256_300k_39/t51_l256_300k_39.csv  (2026-10-06 09:04:34, 126864 bytes)
+- t51_l256_fast_00/t51_l256_fast_00.csv  (2026-10-05 16:54:13, 109301 bytes)
+- t51_l256_fast_01/t51_l256_fast_01.csv  (2026-10-05 16:37:21, 108176 bytes)
+- t51_l256_fast_02/t51_l256_fast_02.csv  (2026-10-05 16:48:52, 109714 bytes)
+- t51_l256_fast_03/t51_l256_fast_03.csv  (2026-10-05 14:30:48, 110785 bytes)
+- t51_l256_fast_04/t51_l256_fast_04.csv  (2026-10-05 17:36:23, 109562 bytes)
+- t51_l256_fast_05/t51_l256_fast_05.csv  (2026-10-05 16:29:36, 111060 bytes)
+- t51_l256_fast_06/t51_l256_fast_06.csv  (2026-10-05 17:00:20, 110469 bytes)
+- t51_l256_fast_07/t51_l256_fast_07.csv  (2026-10-05 16:36:04, 111197 bytes)
+- t51_l256_fast_08/t51_l256_fast_08.csv  (2026-10-05 16:53:10, 110895 bytes)
+- t51_l256_fast_09/t51_l256_fast_09.csv  (2026-10-05 17:33:06, 109131 bytes)
+- t51_l256_fast_10/t51_l256_fast_10.csv  (2026-10-05 16:46:39, 110629 bytes)
+- t51_l256_fast_11/t51_l256_fast_11.csv  (2026-10-05 17:04:06, 110815 bytes)
+- t51_l256_fast_12/t51_l256_fast_12.csv  (2026-10-05 15:43:32, 108106 bytes)
+- t51_l256_fast_13/t51_l256_fast_13.csv  (2026-10-05 16:21:19, 110709 bytes)
+- t51_l256_fast_14/t51_l256_fast_14.csv  (2026-10-05 16:00:31, 109598 bytes)
+- t51_l256_fast_15/t51_l256_fast_15.csv  (2026-10-05 17:09:03, 110545 bytes)
+- t51_l256_fast_16/t51_l256_fast_16.csv  (2026-10-05 16:45:30, 109782 bytes)
+- t51_l256_fast_17/t51_l256_fast_17.csv  (2026-10-05 17:12:58, 111056 bytes)
+- t51_l256_fast_18/t51_l256_fast_18.csv  (2026-10-05 17:17:24, 108347 bytes)
+- t51_l256_fast_19/t51_l256_fast_19.csv  (2026-10-05 16:29:41, 110435 bytes)
+- t51_l512_10k_00/t51_l512_10k_00.csv  (2026-10-06 09:53:25, 24698 bytes)
+- t51_l512_10k_01/t51_l512_10k_01.csv  (2026-10-06 09:55:27, 25043 bytes)
+- t51_l512_10k_02/t51_l512_10k_02.csv  (2026-10-06 10:37:27, 25119 bytes)
+- t51_l512_10k_03/t51_l512_10k_03.csv  (2026-10-06 10:59:17, 25068 bytes)
+- t51_l512_10k_04/t51_l512_10k_04.csv  (2026-10-06 11:36:25, 25067 bytes)
+- t51_l512_10k_05/t51_l512_10k_05.csv  (2026-10-06 11:13:15, 25426 bytes)
+- t51_l512_10k_06/t51_l512_10k_06.csv  (2026-10-06 11:28:06, 25186 bytes)
+- t51_l512_10k_07/t51_l512_10k_07.csv  (2026-10-06 11:35:25, 25297 bytes)
+- t51_l512_10k_08/t51_l512_10k_08.csv  (2026-10-06 11:52:15, 25021 bytes)
+- t51_l512_10k_09/t51_l512_10k_09.csv  (2026-10-06 09:21:21, 25128 bytes)
+- t53_l18_lam125_g15/t53_l18_lam125_g15.csv  (2026-10-06 08:19:38, 165796 bytes)
+- t53_l18_lam125_g20/t53_l18_lam125_g20.csv  (2026-10-06 08:30:09, 171171 bytes)
+- t53_l18_lam125_g25/t53_l18_lam125_g25.csv  (2026-10-06 09:46:55, 178496 bytes)
+- t53_l18_lam125_g30/t53_l18_lam125_g30.csv  (2026-10-06 10:00:25, 191540 bytes)
+- t53_l18_lam125_g35/t53_l18_lam125_g35.csv  (2026-10-06 10:29:37, 198063 bytes)
+- t53_l18_lam140_g15/t53_l18_lam140_g15.csv  (2026-10-06 09:10:17, 206076 bytes)
+- t53_l18_lam140_g20/t53_l18_lam140_g20.csv  (2026-10-06 10:03:10, 207401 bytes)
+- t53_l18_lam140_g25/t53_l18_lam140_g25.csv  (2026-10-06 10:08:45, 204997 bytes)
+- t53_l18_lam140_g30/t53_l18_lam140_g30.csv  (2026-10-06 10:30:39, 205636 bytes)
+- t53_l18_lam140_g35/t53_l18_lam140_g35.csv  (2026-10-06 10:48:17, 205228 bytes)
+- t53_l36_lam125_g15/t53_l36_lam125_g15.csv  (2026-10-06 12:27:15, 168775 bytes)
+- t53_l36_lam125_g20/t53_l36_lam125_g20.csv  (2026-10-06 13:33:10, 189995 bytes)
+- t53_l36_lam125_g25/t53_l36_lam125_g25.csv  (2026-10-06 13:45:10, 201203 bytes)
+- t53_l36_lam125_g30/t53_l36_lam125_g30.csv  (2026-10-06 14:58:32, 204234 bytes)
+- t53_l36_lam125_g35/t53_l36_lam125_g35.csv  (2026-10-06 14:34:53, 205163 bytes)
+- t53_l36_lam140_g15/t53_l36_lam140_g15.csv  (2026-10-06 13:49:48, 214794 bytes)
+- t53_l36_lam140_g20/t53_l36_lam140_g20.csv  (2026-10-06 14:08:38, 219477 bytes)
+- t53_l36_lam140_g25/t53_l36_lam140_g25.csv  (2026-10-06 14:49:06, 217996 bytes)
+- t53_l36_lam140_g30/t53_l36_lam140_g30.csv  (2026-10-06 13:32:28, 215432 bytes)
+- t53_l36_lam140_g35/t53_l36_lam140_g35.csv  (2026-10-06 15:10:35, 205811 bytes)
+- t53_l72_lam125_g15/t53_l72_lam125_g15.csv  (2026-10-06 19:25:40, 184538 bytes)
+- t53_l72_lam125_g20/t53_l72_lam125_g20.csv  (2026-10-06 22:31:55, 209195 bytes)
+- t53_l72_lam125_g25/t53_l72_lam125_g25.csv  (2026-10-06 21:51:10, 211171 bytes)
+- t53_l72_lam125_g35/t53_l72_lam125_g35.csv  (2026-10-06 22:42:36, 209052 bytes)
+- t53_l72_lam140_g15/t53_l72_lam140_g15.csv  (2026-10-06 21:19:58, 226033 bytes)
+- t53_l72_lam140_g20/t53_l72_lam140_g20.csv  (2026-10-06 18:01:37, 227157 bytes)
+- t53_l72_lam140_g25/t53_l72_lam140_g25.csv  (2026-10-06 23:36:54, 225799 bytes)
+- t53_l72_lam140_g30/t53_l72_lam140_g30.csv  (2026-10-06 22:58:26, 215835 bytes)
+- t53_l72_lam140_g35/t53_l72_lam140_g35.csv  (2026-10-06 23:40:49, 209976 bytes)
 
 ## scratch from runs that died (partial/)
