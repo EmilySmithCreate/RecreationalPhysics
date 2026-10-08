@@ -551,7 +551,7 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    different model, given the repository and paper 1's question, recorded as an O entry. Accept: (a) has a verdict;
    (b) names its held-out size and number before any run; (c) is recorded with what it found and what it got wrong.
 
-Owed by the owner: her T51 prediction (before any result is read); her T54 prediction (before any run); the open items of
+Owed by the owner: ~~her T51 prediction~~ (given 2026-10-08: GENTLE, PREREGISTRATION T51); her T54 prediction (before any run); the open items of
 Update 44 (claim 4's wording; piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's
 revision; the Fife reference).
 

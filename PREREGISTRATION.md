@@ -3285,6 +3285,22 @@ TASKS T9).
 **What does not change:** the runs (launched 5 October), the seeds, the cooling schedule, the fair clock, the hold, the
 cells, the verdict rule, P1, P2 and our predictions. **The owner's prediction is still owed before any result is read.**
 
+### The owner's prediction, recorded 2026-10-08, 10:56 ET by the clock, before any result has been read (no T51 file is in `results/` or `cloud/inbox/` of this working copy at this writing)
+
+**The owner's: GENTLE.** Her words: "Gentle yes". Given after a plain-language explanation of the three verdicts, and
+with a question of hers recorded beside it: "aren't gentle and cliff just describing diff temps?"
+
+*Ours, the answer given to her question, unverified:* both verdicts cover the same temperatures, 1.25 down to 0.25; what
+differs is how the healing times of the scraps are spread. If every scrap needed about the same time to heal at a given
+temperature (one wall height), all of them would heal together once the cooling became slower than that time, and the
+survival would drop off a cliff. If the healing times are spread over a wide range (T19: 500 to 13,000 sweeps at
+g = 1.25), each slower cooling catches another slice of them, and the fall is gentle. Her intuition is right in one way:
+a cliff corresponds to one sharp temperature at which the scraps stop healing, and a gentle fall to a smeared one. And
+the verdict reads only the decades from 10,000 to 300,000 fair sweeps, so a GENTLE verdict there does not rule out a
+cliff further out (Amendment 3, "the endpoint of the fall").
+
+Nothing else in T51 changes.
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
