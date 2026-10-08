@@ -3488,6 +3488,12 @@ between the directions, which waits for the owner's choice (O89). Whether a wind
 larger ones. Time: the toy's clock is its count of moves, and this run uses the chain's own sweeps at each size, so
 times are compared between couplings, not between sizes.
 
+### The owner's prediction, confirmed 2026-10-08, 11:17 ET by the clock, before any result has been read (no T53 file is in `results/` or `cloud/inbox/` of this working copy at this writing; the runs were launched 5 October)
+
+**The owner's: confirmed as written above.** Her words: "Mine is good, proceed." Given after a plain-language
+explanation of the verdicts. The inferred prediction is now hers: OPENS IN A WINDOW at both λ and every length, sooner at
+1.40; SEVERAL. Nothing else in T53 changes.
+
 
 ---
 
@@ -3533,7 +3539,11 @@ the cheapest single move out of each patch (whether a patch of size k sits above
 
 ### Predictions
 
-**The owner's:** owed before any run.
+**The owner's (given 2026-10-08, 11:17 ET by the clock, before any computation):** CRITICAL PATCH. Her words: "I'm
+thinking critical patch." She named the verdict only; at which λ, and how large the patch or barrier, she did not say,
+so the prediction is read as CRITICAL PATCH at every λ computed. It coincides with ours, so this section tests a shared
+expectation. Still owed before this draft becomes a pre-registration: its held-out size under CLAUDE.md rule 14 (TASKS,
+the reviews of 6 October, item 9 (b)).
 
 **Ours, unverified (O103 (b)):** CRITICAL PATCH at every λ, with ΔH* rising as λ → 1 roughly as the seam cost squared
 over the release (the two-dimensional case of classical nucleation); at λ = 1.25 a barrier well above the single move
