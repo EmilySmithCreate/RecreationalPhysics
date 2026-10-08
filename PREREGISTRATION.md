@@ -2,6 +2,12 @@
 
 Rule 4 of `CLAUDE.md`: predictions and analysis choices are committed here **before** the runs that test them. The git commit containing a section is its timestamp. Nothing below may be edited after its runs have started; corrections are added as dated amendments underneath, with the original left standing.
 
+**Standing requirements for every section written from 2026-10-08** (CLAUDE.md rules 14 and 15; VISION Update 45). Sections written before that date are not changed.
+
+1. **Held-out size.** If the section claims anything about how a result behaves as N grows, it names the largest size as held out, says what is fitted on the smaller sizes, and writes a number with a range for the held-out size here, before that size runs. The size verdict is scored at the held-out size only.
+2. **Prior work.** If the section, or the write-up it serves, will say "we have not found", it names the note in `docs/reading/notes/` that records the search.
+3. **Review.** If its verdict is a milestone, it names the fresh read-only review (CLAUDE.md rule 12) that will check it after the reading, and that review's report becomes an O entry.
+
 ---
 
 ## T6. The order of the geometry-forming transition
