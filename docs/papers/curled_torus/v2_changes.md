@@ -368,3 +368,10 @@ Not applied: the paper is on hold at arXiv with the model's author's endorsement
    their terms: a discrete network in which the number of large dimensions changes dynamically, with the barrier
    counted exactly.
 5. Read the two extreme T24 waits (24 τ and 76 τ, both at N = 64) from their saved wiring before the next version (O84).
+6. Cite [Kelly22] in the introduction (applied on branch `claude/paper1-cite-kelly22`, 8 October 2026, at the owner's
+   request, for her review). It is the one source that reports, for four links per vertex as here, signs of a
+   first-order transition (small persistent hysteresis at N = 50 to 500, Sec. 4.5.2) together with a nearly geometric
+   phase, and a continuous transition for three. Its author's own hedge is kept: he declines to call the evidence
+   definitive. The paper's existing sentence on the random-to-ordered question is unchanged; the new sentence adds that
+   the answer may depend on the number of links. Status of the statement (rule 10): published, from the thesis as read
+   on 21 September (`REFERENCES.bib`, Kelly22 note); nothing of ours is claimed by it.
