@@ -3549,7 +3549,40 @@ the reviews of 6 October, item 9 (b)).
 over the release (the two-dimensional case of classical nucleation); at λ = 1.25 a barrier well above the single move
 of 36, which is why T48 stayed shut.
 
+### Held-out size (CLAUDE.md rule 14; added 2026-10-08, 11:24 ET by the clock, before any computation)
+
+The verdict words are size claims: FIXED WALL and CRITICAL PATCH say what ΔH(k) does as the patch grows, and NO FINITE
+PATCH says it rises "for every k computed", which a small sheet can fake by running out of room. So:
+
+1. **Held out: L = 16.** L = 8 and L = 12 are computed first, at all three λ, and nothing at L = 16 is computed until
+   step 3 is committed.
+2. **The fit, fixed now.** At each λ, from L = 8 and 12 only, fit ΔH(k) = a·k − b·k² + c over the patches that do not
+   touch their own wrap-around images (k ≤ L/2 − 1), by least squares on the exact values, the same model on both
+   sizes. a is the seam cost per unit of patch edge, b the release per unit of patch area, c a constant for the patch's
+   corners. *Ours, unverified:* this is the two-dimensional form of classical nucleation (general knowledge, to verify);
+   the critical patch is k* = a/(2b) and the barrier ΔH* = c + a²/(4b). If b ≤ 0 at some λ the fit predicts NO FINITE
+   PATCH there.
+3. **The prediction, written before L = 16 runs.** A dated amendment under this section records, at each λ: the
+   predicted verdict at L = 16; k* and ΔH* from the fit to L = 8 and 12 together; and a range for each, set as the
+   larger of ±10 % and the spread between the values fitted to L = 8 alone and to L = 12 alone. Then L = 16 is computed.
+4. **Scoring.** The verdict at each λ is read at L = 16 alone. The held-out prediction HOLDS at a λ if L = 16's exact
+   critical patch and barrier both fall inside their ranges; otherwise it MISSES, and the fit is reported beside the
+   exact values.
+5. **If the patch does not fit.** If the predicted k* at some λ is larger than L = 16 can hold without the patch
+   touching its own image (k* > 7), the verdict there is **UNREADABLE AT L = 16**: L = 24 becomes the held-out size at
+   that λ, by the same steps, and nothing at L = 16 is scored for that λ. NO FINITE PATCH is never given at a λ where
+   this happens.
+
+**Also owed under the standing requirements of 8 October:** T54 decides whether a branch is abandoned (Update 44), so
+it is a milestone: after the reading, a fresh read-only review (CLAUDE.md rule 12) checks the construction of the seam
+and the fit, and its report becomes an O entry. T54 makes no "we have not found" claim, so no prior-work note is
+required.
+
+**Still to do before this draft becomes a pre-registration:** the script and the exact definitions of "patch" and
+"grows", written and tested, as the Status above says.
+
 ### What this cannot show
 
 Anything about the parent model (Gate C open; Update 24's caveat). The dynamics: whether a bath crosses the barrier
-is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89).
+is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89). The critical patch on a
+sheet much larger than the held-out size, beyond what the fit's form assumes.

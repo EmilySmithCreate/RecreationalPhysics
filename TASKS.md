@@ -547,7 +547,7 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    `docs/reading/notes/prior_work_template.md`, before any revision of paper 1 is posted; the decompactification
    relatives of `v2_changes.md` item 4 are its first near misses. (b) T54, still a draft, gains a held-out size under
    rule 14 before it is committed as a pre-registration: its claim that the barrier "rises with the opened patch without
-   bound" is a size claim. (c) The first red-team pass under the new rule 12: a fresh read-only session, ideally a
+   bound" is a size claim. *Done 2026-10-08: held out L = 16, fitted on L = 8 and 12, prediction written before L = 16 is computed (PREREGISTRATION T54, "Held-out size").* (c) The first red-team pass under the new rule 12: a fresh read-only session, ideally a
    different model, given the repository and paper 1's question, recorded as an O entry. Accept: (a) has a verdict;
    (b) names its held-out size and number before any run; (c) is recorded with what it found and what it got wrong.
 
