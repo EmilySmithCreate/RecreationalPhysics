@@ -127,7 +127,49 @@ def verdict(dhs):
     return "CRITICAL PATCH" if not any(rises[first_fall:]) else "RISES AGAIN"
 
 
+def held_out_fit(rows, lengths=(8, 12)):
+    """The held-out prediction by the pre-registration's rule, from the stage-1 rows (dicts with L, k, lam, tie, dH,
+    in_fit). Per (lam, tie): the fit to both stage-1 sizes together over their in_fit points, and a range for k* and
+    dH* set as the larger of +-10 % and the spread between the fits to each size alone. Returns
+    {(lam, tie): dict(a, b, c, k_star, dh_star, k_range, dh_range, verdict, alone)}; a verdict NO FINITE PATCH where
+    the joint fit has b <= 0."""
+    out = {}
+    keys = sorted({(float(r["lam"]), r["tie"]) for r in rows})
+    for lam, tie in keys:
+        pts = {length: [(int(r["k"]), float(r["dH"])) for r in rows
+                        if float(r["lam"]) == lam and r["tie"] == tie and int(r["L"]) == length
+                        and str(r["in_fit"]) == "True"] for length in lengths}
+        joint = [p for length in lengths for p in pts[length]]
+        a, b, c = fit([k for k, _ in joint], [dh for _, dh in joint])
+        k_star, dh_star = critical(a, b, c)
+        alone = {}
+        for length in lengths:
+            aa, bb, cc = fit([k for k, _ in pts[length]], [dh for _, dh in pts[length]])
+            alone[length] = critical(aa, bb, cc)
+        finite = [v for v in alone.values() if all(np.isfinite(v))]
+
+        def span(j, centre):
+            if not np.isfinite(centre):
+                return (float("inf"), float("inf"))
+            spread = (max(v[j] for v in finite) - min(v[j] for v in finite)) / 2.0 if len(finite) > 1 else 0.0
+            half = max(0.1 * abs(centre), spread)
+            return (centre - half, centre + half)
+        out[(lam, tie)] = dict(a=a, b=b, c=c, k_star=k_star, dh_star=dh_star, k_range=span(0, k_star),
+                               dh_range=span(1, dh_star), alone=alone,
+                               verdict="NO FINITE PATCH" if not b > 0 else "CRITICAL PATCH")
+    return out
+
+
 def main(path, out_dir="results"):
+    if path.endswith(".csv"):                       # the held-out prediction from a finished stage-1 CSV
+        import csv
+        rows = list(csv.DictReader(open(path, newline="", encoding="utf-8")))
+        for (lam, tie), f in held_out_fit(rows).items():
+            print("lambda=%.2f %-15s joint fit a=%.3f b=%.4f c=%.3f -> k*=%.2f in [%.2f, %.2f], dH*=%.1f in [%.1f, %.1f]"
+                  " | alone: %s | fit says %s"
+                  % (lam, tie, f["a"], f["b"], f["c"], f["k_star"], *f["k_range"], f["dh_star"], *f["dh_range"],
+                     {L: ("%.2f, %.1f" % v) for L, v in f["alone"].items()}, f["verdict"]))
+        return 0
     cfg = json.loads(Path(path).read_text())
     lengths, lams, ties = [int(x) for x in cfg["lengths"]], [float(x) for x in cfg["lambdas"]], list(cfg["ties"])
     meta = dict(config=cfg, config_path=str(path), package=__version__, python=platform.python_version(),

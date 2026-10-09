@@ -82,3 +82,15 @@ def test_the_stage_one_config_is_the_preregistered_one():
     cfg = json.loads((ROOT / "configs" / "t54_patch_stage1.json").read_text())
     assert cfg["lengths"] == [8, 12] and cfg["ties"] == ["none", "all_at_the_last"]
     assert 1.25 in cfg["lambdas"] and 1.10 in cfg["lambdas"] and 1.40 in cfg["lambdas"]
+
+
+def test_held_out_fit_on_exact_quadratic_data_and_its_ranges():
+    rows = []
+    for L in (8, 12):
+        for k in range(1, L // 2):
+            rows.append(dict(L=L, k=k, lam=1.25, tie="none", dH=60 * k - 4 * k * k, in_fit=True))
+    f = t54.held_out_fit(rows)[(1.25, "none")]
+    assert abs(f["k_star"] - 7.5) < 1e-9 and abs(f["dh_star"] - 225) < 1e-9 and f["verdict"] == "CRITICAL PATCH"
+    assert abs(f["k_range"][0] - 6.75) < 1e-9 and abs(f["k_range"][1] - 8.25) < 1e-9      # +-10 % when the sizes agree
+    rows = [dict(L=L, k=k, lam=1.1, tie="none", dH=10 * k + 0.5 * k * k, in_fit=True) for L in (8, 12) for k in range(1, L // 2)]
+    assert t54.held_out_fit(rows)[(1.1, "none")]["verdict"] == "NO FINITE PATCH"

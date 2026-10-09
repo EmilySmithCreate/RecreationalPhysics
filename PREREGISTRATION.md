@@ -3663,6 +3663,16 @@ at λ = 1.15 to 1.20 (O106), so the tied case is also computed at those two λ, 
 reported beside; the untied case is computed at them too, for the comparison. Config: `configs/t54_patch_stage1.json`
 (L = 8, 12); the held-out size gets its own config after the amendment that names its prediction.
 
+### Amendment 3, 2026-10-09, 06:55 ET by the clock: a process slip, disclosed
+
+Amendment 1 said the tied case would be computed only after the owner confirmed or replaced her inferred prediction
+(CRITICAL PATCH). The stage-1 script computes the untied and tied cases in one pass, and it was started at 06:52 ET
+with both, before she had been asked; the assistant then saw the tied ΔH(k) for L = 8 in the log while it ran. So for
+stage 1 her tied prediction stands as **inferred, not confirmed before the computation**, and a confirmation given now
+is after the fact for L = 8 and 12. What is still clean: the held-out size L = 16 has not been computed in either case,
+and her prediction for it, in both cases, can be given before it is. The untied stage-1 computation was allowed by
+Amendment 1 and is unaffected.
+
 
 ---
 
