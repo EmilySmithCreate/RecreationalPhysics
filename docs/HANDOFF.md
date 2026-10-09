@@ -45,7 +45,9 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    column heals and the others do not; exploratory unless pre-registered); T53's cell accepted when it lands; then the
    5 and 6 October items (T9; the two extreme T24 waits; the warm sheet's correlation length; the commit hash in
    `.meta.json`; the reading before any citation; the prior-work note for paper 1; the first fresh red-team review
-   under rule 12). The programme artifact is owed a republish from the 9 October draft.
+   under rule 12, which another session began on 9 October for paper 1: `docs/papers/curled_torus/
+   author_feedback_2026-10-09.md`, untracked, to be checked against the record as O103 did). The programme artifact
+   "A Phase-Changing Reality" was republished from the 9 October draft (Version 58, 9 October, shortly after 07:00 ET).
 6. **The rules that changed most recently:** CLAUDE.md rules 10 to 15 (6 and 8 October): four kinds of statement; the
    four questions before any patch, in the form "previous claim → failed because → replacement → new falsification
    test"; a fresh read-only red-team reviewer at each milestone; outside theories as targets; a held-out size for every
