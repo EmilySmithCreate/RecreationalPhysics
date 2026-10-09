@@ -17,16 +17,17 @@ graph's energy hands the difference to the demon, which can then spend it on lat
 moves. Nothing else changes: the same moves, the same configuration space, the same
 validity rules as cqg.run_chain.
 
-WHAT IS EXACT. H + demon + (whatever has leaked) never changes, to the last bit: the
+WHAT IS EXACT. H + demon + (whatever has leaked) is conserved algebraically; floating-point
+arithmetic can introduce rounding error, which is checked in tests. The
 run conserves energy by construction, which is the bookkeeping VISION claim 6 asks
 for. With leak = 0 nothing escapes, so H + demon is fixed. Both are tested.
 
 WHY A DEMON IS ENOUGH. At fixed total energy the graph alone is not a Markov chain:
 without somewhere to put the energy, only moves with dH = 0 could ever be accepted.
 The demon is the smallest thing that fixes this, and it is not a fudge: the standard
-result is that the demon's own energy settles into the distribution exp(-demon/g),
-where g is the temperature the graph has reached by itself, so the run MEASURES the
-temperature instead of being told it (`demon_temperature` below).
+canonical approximation, if the extended system equilibrates and the graph acts as a
+sufficiently large bath, is that demon levels have weights exp(-demon/g). This is an
+assumption to check, not a consequence of conservation (`demon_temperature` below).
 
 ASSUMPTION Q12 (ours: the leak). After each sweep the demon keeps a fraction
 (1 - leak) of its energy and the rest is counted as gone. leak = 0 is sealed;
@@ -235,13 +236,17 @@ def run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam=1.0, cap=CAP, conn=
 
 
 def demon_temperature(demon_series, step=None):
-    """The coupling g the system has reached, read off the demon's own energy.
+    """Infer g from mean demon energy under a canonical discrete-level approximation.
 
     The demon settles into P(demon) proportional to exp(-demon / g) over the values it
-    can take, which are multiples of `step` (4 lam and 16 make every change of H a
-    multiple of 4 when lam is a quarter-integer). For that distribution the mean is
-    step / (exp(step / g) - 1), which this inverts. Returns NaN if the demon never
-    moved, and it is only meaningful once the run has settled.
+    can take, assumed here to be 0, step, 2*step, ... . At lam=1.25 the coefficients
+    in dH=-16*dS+5*dX are integral; valid costs 12 and 25 rule out a common step
+    coarser than 1. A quarter-integer lambda does NOT imply a step of 4.
+    For a geometric distribution the mean is step/(exp(step/g)-1), which this
+    inverts. Supply a separately justified step: the legacy fallback infers the
+    smallest observed gap, which need not be the actual accessible spacing.
+    Returns NaN for nonpositive mean/step (including constant data with step=None).
+    Conservation or a stationary mean alone does not establish this distribution.
     """
     mean = float(np.mean(demon_series))
     if step is None:

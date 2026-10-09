@@ -1,0 +1,6 @@
+NEUTRAL CLOSURE 48 classes 3 symmetries [48, 96, 96] minimum 12 distinct full censuses 1 full exit rate range (np.float64(0.0011853062705463443), np.float64(0.0011853062705463443))
+NEUTRAL CLOSURE 64 classes 3 symmetries [64, 128, 128] minimum 12 distinct full censuses 1 full exit rate range (np.float64(0.001186239832412821), np.float64(0.001186239832412821))
+NEUTRAL CLOSURE 96 classes 3 symmetries [96, 192, 192] minimum 12 distinct full censuses 1 full exit rate range (np.float64(0.001188106956145774), np.float64(0.0011881069561457743))
+NEUTRAL CLOSURE 144 classes 3 symmetries [144, 288, 288] minimum 12 distinct full censuses 1 full exit rate range (np.float64(0.001190907641745204), np.float64(0.001190907641745204))
+NEUTRAL CLOSURE 192 classes 3 symmetries [192, 384, 384] minimum 12 distinct full censuses 1 full exit rate range (np.float64(0.001193708327344634), np.float64(0.001193708327344634))
+NEUTRAL CLOSURE 288 classes 3 symmetries [288, 576, 576] minimum 12 distinct full censuses 1 full exit rate range (np.float64(0.0011993096985434938), np.float64(0.0011993096985434938))

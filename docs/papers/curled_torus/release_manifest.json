@@ -1,0 +1,48 @@
+{
+  "base_source_and_data_commit": "40b1ae68844a72bd73ffdc74d5c385844ab16f17",
+  "release_date": "2026-10-09",
+  "status": "Reader manuscript and accompanying computational materials",
+  "analysis_environment": {
+    "python": "3.12.10",
+    "packages": {
+      "numpy": "2.0.0",
+      "scipy": "1.15.2",
+      "numba": "0.67.0",
+      "igraph": "1.0.0",
+      "networkx": "3.6.1",
+      "matplotlib": "3.9.1"
+    }
+  },
+  "provenance_limit": "Original execution commits are not consistently recorded in run metadata",
+  "sha256": {
+    "ASSUMPTIONS.md": "2d292467df330f34d1b6ef3ddb40eda5785ad3a5ed823c733ef699fb87d8f424",
+    "docs/papers/curled_torus/arxiv_abstract.txt": "1b428bfadac5dda1cac31491a07549de000dc083de755386a2c0db2cbf7af778",
+    "docs/papers/curled_torus/build_2026-10-09.log": "a39ffc930a7c6dffa29030837d651f1e75ead24816bf98f6fbfa9e6b11a22e9e",
+    "docs/papers/curled_torus/fig1.pdf": "75521d503d3ecad3638ea595a05a3b6f160b07e64f706e36084ff4dd3d6e638a",
+    "docs/papers/curled_torus/fig_lambda.pdf": "73f61825083ab6103f5026e7cfaec7b750f7634bf2e17d3b1b02463ec9e37e3e",
+    "docs/papers/curled_torus/fig_tori.pdf": "a9c870455a75809d855a7d03ca5e5d6863e7f5f2dac10e42a2e11470dbf5bcc8",
+    "docs/papers/curled_torus/neutral_closure_2026-10-09.log": "ba805495f77c69ac0678e18c98ab97c6a110c53b0c8a3540a7eeecd51cd7fd2d",
+    "docs/papers/curled_torus/paper.pdf": "0a8e835fcebe0c12a48db10989effe0a457016a486e432d3b7b1c995081dbfb8",
+    "docs/papers/curled_torus/paper.tex": "c1bc502d6b09318ffe649e34351e0e86f3ec1697567fdd69fd5455091ae9ac65",
+    "docs/papers/curled_torus/paper_stats_2026-10-09.log": "eb28a1822926f1428254ce00a41034855a2248599c77e3889b89486a36162ab2",
+    "docs/papers/curled_torus/pytest_2026-10-09.log": "26449c4105a54f28404b716da927ae6ff9328139d5280b215622ab4bea9411bb",
+    "docs/papers/curled_torus/README.md": "badd4e59a23f3f779ea9bb8c3afcfadab26c19c0e0afe7078f5ecdcc6f68c264",
+    "docs/papers/curled_torus/reviewer_checks_2026-10-09.log": "3bb62b1acc4865bb66e41a36f7e89f453913d8b4436b95f6ce19c814975d5d6a",
+    "docs/papers/curled_torus/reviewer_checks_2026-10-09.py": "c56838f5dac11462fa9507462646a2dc7ab18e3d371d9229e61c6458dc98df35",
+    "docs/papers/curled_torus/revision_analysis_2026-10-09.log": "1866538f6da47d510897de6cbd97ab3d5eafaf8a6bba1bf1e7a6d582837d9aa3",
+    "docs/papers/curled_torus/supplement.md": "c3fd5b982e63feb3fc5da22fdcc3c156fd9cc7ea528d7a7ff878806c056ffa15",
+    "docs/papers/curled_torus/t38_audit_2026-10-09.log": "37e6fad50bcad6f0e698292612ebe5b90b6d396e37d61e8531b06a2917d45cee",
+    "docs/reading/notes/2026-10-09_prior_work_curled_torus.md": "fbab38950385052aadb73c37f7c109667000ff576abb721ee69d60d7a82761b4",
+    "scripts/analyse_curled_revision.py": "7ed4a351728e61366d919d68a226f4caef9e14af0787a684359b057d7a963302",
+    "scripts/analyse_paper_stats.py": "fdf5014393dd0a63a9cb5a786dcf74456236c6ca327c5814040b9cdfa0f711f7",
+    "scripts/analyse_t38.py": "26138876fa3619102cedcb21b997790827df81da6958342c5108fdd870a7fba1",
+    "scripts/build_curled_paper.py": "5ca92283ba8cfa0b7b82cfdfbf930352e49fa44d3f990c31530d08cb465876e8",
+    "scripts/exact_torus_level.py": "22efff627c459102b0fdc00d469e196b77831f38ff090f8ae5d0349ba2004523",
+    "scripts/plot_paper_fig1.py": "aea52a5d7a6221ed7f424233ecbb05bf710876606bf677f3b2a776e6c6cd6c7f",
+    "scripts/plot_paper_fig_lambda.py": "cd23ed60f7fc3f790458db56f7ba0338e979f9c093096905d18e2fd39bc231d0",
+    "scripts/plot_paper_fig_tori.py": "af055b9ee6c21a7f1a2bb71f3d163c0158fb37655b9558c77263b01b95918b40",
+    "scripts/run_sealed_tube.py": "84bea090cf2c835f62286eba70d82c8390cd1e0d1de68d872c6e882d961bf99a",
+    "src/graphity/sealed.py": "bc8ecc89227b0f2a4417a0a324245e516fcefafcb78f220b605420f505a40052",
+    "tests/test_curled_revision.py": "3bca3f9c156a0a49d49ed5aa97be6f15f7efa42486fa24654bdbe6613de792ae"
+  }
+}

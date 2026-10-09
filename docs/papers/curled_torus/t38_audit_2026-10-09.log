@@ -1,0 +1,5 @@
+lambda=1.25 N=64   waits 3942 | tau_hat 750 | k10 2 (one exponential expects 0.18) -> UNCLEAR | mixture: short share 0.1162 tau 10, long tau 914, 2lnLR 939.9 | longest 15165 (20.2 tau)
+lambda=1.25 N=192  waits 1000 | tau_hat 671 | k10 1 (one exponential expects 0.05) -> NO TAIL | mixture: short share 0.1228 tau 14, long tau 844, 2lnLR 207.0 | longest 7360 (11.0 tau)
+lambda=1.30 N=64   waits 3868 | tau_hat 267 | k10 14 (one exponential expects 0.18) -> TAIL | mixture: short share 0.2031 tau 10, long tau 436, 2lnLR 1411.7 | longest 6995 (26.2 tau)
+lambda=1.30 N=192  waits 1000 | tau_hat 238 | k10 5 (one exponential expects 0.05) -> TAIL | mixture: short share 0.2250 tau 11, long tau 418, 2lnLR 402.4 | longest 2885 (12.1 tau)
+VERDICT T38: TWO POPULATIONS

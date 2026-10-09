@@ -2841,6 +2841,42 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     of one and three", which are the fragments of larger clusters (the table of compositions is in the scratch log of
     this session, not in `results/`; it can be rerun from the CSV).
 
+- **O108 Paper 1 revision after the 9 October 2026 review.** **Ours, unverified by an independent physicist.**
+  Scope: `docs/papers/curled_torus/feedback_resolution_2026-10-09.md` maps the feedback to changes and evidence;
+  `scripts/analyse_curled_revision.py` is a retrospective, read-only analysis, not a new registered run.
+  - **Exact finite-size computation:** exhaustive side-preserving neutral-class closure at lambda=1.25
+    yields three reachable classes and the same full switch census at N=48,64,96,144,192,288. Minimum
+    nonneutral cost is 12; all energy-neutral moves preserve (S,X). This replaces the sampled-walk
+    lower-bound argument at those sizes only. The exact N=18 strict-minimum intervals and T8 endpoint
+    topology checks in the supplied reviewer script reproduce; all 120 lambda=1.05 endpoints are tori.
+  - **Thermometer correction to Q12 and historical T9/T10 interpretations:** mean integer-store energy
+    is not g. Conditional on a canonical distribution on levels 0,delta,2delta,..., u=delta/expm1(delta/g).
+    At lambda=1.25 the known increments 12 and 25 have gcd 1; this does not prove the full reachable
+    spectrum or mixing. C*≈[epsilon N+s−U_graph(g_m)]/u(g_m); no coexistence conclusion follows.
+    Raw `bath_T`, the historical analyses and verdicts are retained. T10's discrete proxies reach 1.0128,
+    so “every bath below g=1” is withdrawn even under that conditional calibration.
+  - **Correction to Q20 / the old symmetry wording:** a=min(1,A(G')/A(G) exp(−Delta H/g)), with the ratio
+    inside the clipping operation. Rate suppression cN corresponds to g log(cN), not a barrier O(N).
+    Uniform unlabelled-class weights are an alternative measure, not a deduction from quantum identity.
+  - **Measured versus inferred:** d counts missing squares, f=mean(d)−1, and neither certifies geometry.
+    The dominant component does not prove a unique front. Full release is epsilon N−H_f. The seed scan's
+    `left` flag means escape, not completed conversion. The 200-sweep boundary is operational persistence.
+  - **Tail audit:** O84's completed T38 TWO POPULATIONS was absent from the old paper and is now included.
+    All 190 missing T38 detector crossings nevertheless reach f≥0.75; these are not ordinary censored
+    survivors. Waiting snapshots are absent from the frozen results inventory, so the physical mechanism
+    cannot be identified. Previous common-clock claim → detector and tail failures → distinct first-exit
+    and detected-conversion claims → prespecified attempt-resolved history test. No mechanism patch proposed.
+  - **Additional scope checks:** N=32 has three neutral classes but distinct full censuses, so the
+    production-size hazard statement is not extrapolated to that smaller control. The Arrhenius runner
+    reuses each replica's seed across couplings, whereas its pooled bootstrap draws cells independently;
+    the combined 432-wait p-value is therefore nominal. T22 includes lambda in its seed derivation.
+  - **Presentation:** the reader manuscript is a first release, with no draft-revision narrative or
+    unpublished self-citations; the computational supplement is `docs/papers/curled_torus/supplement.md`.
+  - **Status:** all original failures and verdicts remain. Revised wording separates retrospective energy
+    amendments, registered component tests and fresh repeats. Replica uncertainty and build/check outputs
+    accompany the paper. The starting snapshot is 40b1ae68844a72bd73ffdc74d5c385844ab16f17; the release
+    manifest hashes the new artifacts. No production trajectories or `results/` files were changed.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
