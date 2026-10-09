@@ -3673,6 +3673,12 @@ is after the fact for L = 8 and 12. What is still clean: the held-out size L = 1
 and her prediction for it, in both cases, can be given before it is. The untied stage-1 computation was allowed by
 Amendment 1 and is unaffected.
 
+**The owner's prediction for the held-out size, given 2026-10-09, recorded 06:58 ET by the clock, before L = 16 is
+computed in either case and before the L = 12 pass had finished:** "critical patch, I'm thinking small but not sure".
+Read as CRITICAL PATCH at L = 16, untied and tied, with a small critical patch (a few columns) as her lean. The exact
+numbers for the held-out size are written by the pre-registered rule from the stage-1 fit, not by her; her word is
+scored against the verdict at L = 16.
+
 
 ---
 

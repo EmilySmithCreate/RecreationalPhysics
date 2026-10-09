@@ -1363,6 +1363,24 @@ Update 19, exact. Whether its number per volume can be made as small as the birt
 way two columns join when they open is fixed by the tube itself, so neighbouring patches cannot disagree; a seam would
 need an opening with a choice to make, which this one lacks.
 
+Update 49 (2026-10-09, from 06:58 ET by the clock): **T56 launched on the author's prediction; T54's first exact
+numbers under her tie; her prediction for T54's held-out size.** Why this page changes: the two tests that decide
+piece 5 under the tie she chose this morning are now running or computing, with her predictions on the record, and
+the first exact numbers say something plain.
+
+- **T56** (the slab and the rod in a warm bath under "all at the last", with untied controls): 68 cloud jobs
+  launched at 06:43 ET on her prediction, "opens into one flat space". The held-out sizes run after the smaller ones
+  are read and a number is written for them (rule 14).
+- **T54, exact, at the smallest size (L = 8), not the verdict** (the verdict is read at the held-out size L = 16
+  after L = 12 fixes the prediction). The barrier against the patch's size is a pure quadratic in k with nothing left
+  over. Untied, the critical patch is about 7.5 columns at λ = 1.25 and 19.5 at 1.10, with barriers of 225 and 608:
+  unreachable from warmth, which is what T48 and T53 saw. Under her tie it is about 2 columns at λ = 1.20 (barrier
+  45), 1.5 at 1.25 (27), 3.3 at 1.15 (77) and 5.5 at 1.10 (145). *Ours, exact:* the tie turns a climb no bath can make
+  into a small one; whether a bath then makes it while sparing flat space is T56's question. One disclosure, recorded
+  in T54's Amendment 3: the tied stage-1 numbers were computed before she had confirmed her tied prediction.
+- **Her prediction for T54's held-out size:** "critical patch, I'm thinking small but not sure." Recorded before
+  L = 16 is computed.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

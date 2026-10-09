@@ -1,6 +1,6 @@
 # A phase-changing reality: the programme, and where each piece stands
 
-*Draft for the owner's review, updated 6 October 2026, about 04:00 ET by the clock (the previous versions were of 5 October and 27 September). Four groups; each piece's dated log, newest first, follows the tables. Not for publication until she has read it. Every claim says whose it is: **the author's** (Emily Smith's hypothesis), **measured** (a pre-registered test in the public repository, with its verdict), **exact** (arithmetic or complete enumeration), or **ours** (the analysis drafted with Claude, unreviewed by a physicist). "Ours" includes any proposed physical reading of a result; such a reading is an interpretation and never a result, and no statement moves from one of these four kinds to another without a dated line saying why (CLAUDE.md rule 10, adopted 6 October). Nothing here has yet been read by a physicist (the author's own bar, S5, is not met). Paper 1 is on hold at arXiv pending a reader or a journal; a request to the model's author to read it waits until after his talk on 9 October, at the author's decision. All six- and eight-link (three- and four-direction) results carry the caveat of VISION Update 24: the reproduction gate for the published three-direction curve is still open (piece 5).*
+*Draft for the owner's review, updated 9 October 2026, from 06:58 ET by the clock (the previous versions were of 6 and 5 October and 27 September). Four groups; each piece's dated log, newest first, follows the tables. Not for publication until she has read it. Every claim says whose it is: **the author's** (Emily Smith's hypothesis), **measured** (a pre-registered test in the public repository, with its verdict), **exact** (arithmetic or complete enumeration), or **ours** (the analysis drafted with Claude, unreviewed by a physicist). "Ours" includes any proposed physical reading of a result; such a reading is an interpretation and never a result, and no statement moves from one of these four kinds to another without a dated line saying why (CLAUDE.md rule 10, adopted 6 October). Nothing here has yet been read by a physicist (the author's own bar, S5, is not met). Paper 1 is on hold at arXiv pending a reader or a journal; a request to the model's author to read it waits until after his talk on 9 October, at the author's decision. All six- and eight-link (three- and four-direction) results carry the caveat of VISION Update 24: the reproduction gate for the published three-direction curve is still open (piece 5).*
 
 ---
 
@@ -22,13 +22,31 @@ folds nor melts flat space: it heals. In three directions a connected X with one
 released energy at the front, opens its next direction and stops; where the next wall is low it opened all the way into
 one space in 5 runs of 16, with damage in most of the others (T48, O91). One fully curled cube opens part of the way,
 and fully only in a minority of runs; treating its points as interchangeable holds a stuck cube shut and helps a cube
-that is already rolling to open fully (T49, O92).
+that is already rolling to open fully (T49, O92). **Read on 9 October:** when a long tube opens from many seeds and the
+new space is then cooled, the curled columns heal off a cliff as the cooling slows, but two other knots of fixed energy,
+an eight-point knot of two kinds of point and a double column, stay at the same number per sheet however slow the
+cooling; they are neither scars that one move would undo nor seams between patches (T51 CLIFF, T55 KNOT; O104, O107).
+The author's spaghetti X in a warm bath opens its first curled direction at every temperature, from several places, and
+rests with its last direction curled; the second opens only in a minority of runs, in baths that then damage the space
+(T53 ADVANCES ONLY, SEVERAL; O105).
 
 **What did not hold this round (first version did not hold, in progress).** In three and four directions one push has
 never opened the whole of X into one space: not with the tie, not with the budget-fitted ties, not untied, not from a
 gas and not, at the lower curling cost, from a connected torus. The directions open one at a time, each behind its own
 wall. Exact: a fully curled X larger than one cube is always a gas of separate cubes in this model, and the cubes never
-join. Flat four-direction space did not curl back behind a push.
+join. Flat four-direction space did not curl back behind a push. A warm bath without a tie does not finish the job
+either (T53, 9 October): the bath that crosses the last wall takes flat space apart. Three of the author's predictions
+failed in part on 9 October (a gentle fall of the scrap; the spaghetti X burping into space; the stubborn pieces as
+seams); the rule-11 answers are on the record and her replacement for piece 5 is her tie.
+
+**The author's decisions of 9 October (VISION Update 47).** The tie is "all at the last": a point with one or two
+directions open is charged what its curled directions would release, so nothing is released until a point's last
+direction opens, and then everything; it has no constant to fit. The untied runs are a stepping stone. Her shape for X
+is the slab, two directions open and one curled, which is the state the model lands on from both ends. Exact under
+that tie (O106): the slab's wall falls from 30 to 4 between λ = 1.10 and 1.25 while flat space's stays at 64; and the
+true barrier beyond the single move, at the smallest size computed so far (T54, L = 8, exact, not yet the verdict), is
+a patch of about 2 columns and 45 units at λ = 1.20 under the tie, against 7.5 columns and 225 units untied. The warm
+bath under the tie is running (T56, 68 cloud jobs, her prediction "opens into one flat space").
 
 **Corrections made on 5 October, not to be undone.** (1) The long warm tubes of T37 *melted*; they are not a "mosaic".
 Read from their wiring, most of their points opened past flat and the tubes took energy in. A fourth shape named from
@@ -343,7 +361,10 @@ propose, which the author may adopt: in a modified emergent-geometry toy, a stab
 local nucleation, a propagating geometric change and a calculable release are shown in two directions, and the
 freeze-out of defects is under test; opening in more directions, gravity, quantum amplitudes, re-curling, the names of
 the releases and the cycle are unresolved. The author's claim stands as hers above: each piece is what the tests can
-kill, and the hypothesis is adjusted, not killed (her decision of 6 October, VISION Update 44).
+kill, and the hypothesis is adjusted, not killed (her decision of 6 October, VISION Update 44). On 9 October three
+tests carrying her predictions were read (the scrap against cooling, the spaghetti X in a bath, the stubborn pieces),
+each failed her prediction in part, and she replaced the mechanism of piece 5 with her tie, "all at the last", now
+under test (VISION Updates 46 to 49).
 
 ## Where everything is
 
