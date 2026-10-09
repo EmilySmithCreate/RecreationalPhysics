@@ -1,5 +1,6 @@
 """T52's window builder (scripts/exact_hidden_relics.py): which points a window holds, which relics and which flat
 squares it is built round. The count itself is `graphity.hidden`, tested in tests/test_hidden.py."""
+import csv
 import json
 import sys
 from pathlib import Path
@@ -92,3 +93,36 @@ def test_relics_are_the_columns_t37_reads_and_sit_in_narrow_windows():
         assert [len(t52.ball(adj, relic, r)) for r in (1, 2)] == [12, 20]
     for square in t52.flat_squares(adj, 3, 6):
         assert dist[list(square)].min() >= 6
+
+
+def test_a_resumed_run_reuses_the_dead_runs_rows_and_recounts_the_rest(tmp_path):
+    """--resume (9 October): the rows a dead run left in its .partial are written again unchanged, the other windows
+    are counted, the result is the same file a fresh run gives apart from `seconds`, and the meta records the reuse."""
+    adj, part = torus(8, 8)
+    np.savez(tmp_path / "flat.npz", adj=adj, part=part)
+    cfg = dict(name="t52_resume_test", **{"lambda": 1.25}, states=str(tmp_path / "*.npz"), radii_all=[1],
+               radii_first=[], first_per_state=0, flat_squares_per_state=3, flat_distance=6, time_limit_s=120,
+               flat_first_per_state=0)
+    cfg_path = tmp_path / "cfg.json"
+    cfg_path.write_text(json.dumps(cfg))
+    fresh = tmp_path / "fresh"
+    t52.main(str(cfg_path), str(fresh))
+    rows_fresh = list(csv.DictReader(open(fresh / "t52_resume_test.csv", newline="")))
+    assert len(rows_fresh) == 3 and all(r["counted"] == "True" for r in rows_fresh)
+
+    dead = tmp_path / "dead"
+    dead.mkdir()
+    with open(fresh / "t52_resume_test.csv", newline="") as fh, \
+            open(dead / "t52_resume_test.csv.partial", "w", newline="") as out:
+        for i, line in enumerate(fh):
+            if i < 3:                                   # the header and the first two rows: the run died after them
+                out.write(line)
+    t52.main(str(cfg_path), str(dead), resume=True)
+    rows_dead = list(csv.DictReader(open(dead / "t52_resume_test.csv", newline="")))
+    strip = lambda r: {k: v for k, v in r.items() if k != "seconds"}          # noqa: E731
+    assert [strip(r) for r in rows_dead] == [strip(r) for r in rows_fresh]
+    assert [r["seconds"] for r in rows_dead[:2]] == [r["seconds"] for r in rows_fresh[:2]]
+    meta = json.loads((dead / "t52_resume_test.meta.json").read_text())
+    assert meta["resumed"]["rows_reused"] == 2
+    assert (dead / "t52_resume_test.csv.partial.resumed").is_file()
+    assert not (dead / "t52_resume_test.csv.partial").exists()

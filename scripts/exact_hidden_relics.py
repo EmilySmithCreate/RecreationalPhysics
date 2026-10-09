@@ -1,6 +1,10 @@
 """T52: what does a cut hide? The hidden count round the relics of saved end states, exact. Usage:
 
-    python scripts/exact_hidden_relics.py configs/t52_hidden_relics.json [out_dir]
+    python scripts/exact_hidden_relics.py configs/t52_hidden_relics.json [out_dir] [--resume]
+
+`--resume` reuses the rows of a `.partial` left by a run that died (every window is an independent exact count),
+keeps that file beside the new one as `.partial.resumed` until the run completes, and records the reuse in the
+`.meta.json`; added 2026-10-09 after the laptop run of 5 October died at 66 rows.
 
 Implements PREREGISTRATION.md section T52 with its Amendment 1 (both written 2026-10-05, before any count was taken
 on a saved state with `graphity.hidden`). For every saved end state named by the config's `states` pattern:
@@ -25,6 +29,7 @@ process of its own (`--one`, below) and abandoned after `time_limit_s` seconds: 
 
     python scripts/exact_hidden_relics.py --one STATE.npz RADIUS V1,V2,V3,V4 LAMBDA     (one window; prints JSON)
 """
+import csv
 import json
 import platform
 import subprocess
@@ -140,7 +145,19 @@ def windows(adj, cfg):
     return out
 
 
-def main(path, out_dir="results"):
+def finished_rows(partial_path):
+    """{(state, kind, anchors, radius): row} from the .partial a run that died left behind, so that a restart can
+    reuse every window it had finished. Each window is an independent exact count, so a reused row is the row the
+    restart would have written, apart from `seconds`. Empty if there is no such file."""
+    partial_path = Path(partial_path)
+    if not partial_path.is_file():
+        return {}
+    with open(partial_path, newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh))
+    return {(r["state"], r["kind"], r["anchors"], int(r["radius"])): r for r in rows}
+
+
+def main(path, out_dir="results", resume=False):
     cfg = json.loads(Path(path).read_text())
     lam, limit = float(cfg["lambda"]), float(cfg["time_limit_s"])
     states = sorted(glob(cfg["states"]))
@@ -149,10 +166,23 @@ def main(path, out_dir="results"):
     meta = dict(config=cfg, config_path=str(path), package=__version__, python=platform.python_version(),
                 numpy=np.__version__, numba=numba.__version__, states=[Path(s).as_posix() for s in states],
                 preregistration="PREREGISTRATION.md section T52, written 2026-10-05")
+    # --resume (added 2026-10-09, after the laptop run of 5 October died at 66 rows): the windows already in the dead
+    # run's .partial are written again as they were and not recounted; the .partial it came from is kept beside the
+    # new one until this run completes. The order of windows, the counts and the time limit are unchanged.
+    partial = Path(out_dir) / (cfg["name"] + ".csv.partial")
+    done = finished_rows(partial) if resume else {}
+    if done:
+        partial.replace(partial.with_name(partial.name + ".resumed"))
+        meta["resumed"] = dict(rows_reused=len(done), from_partial=partial.as_posix(), date="2026-10-09")
     with ResultWriter(cfg["name"], meta, out_dir) as out:
         for state in states:
             adj = np.load(state)["adj"]
             for kind, anchors, radius in windows(adj, cfg):
+                key = (Path(state).as_posix(), kind, " ".join(str(v) for v in anchors), radius)
+                if key in done:
+                    out.write(done[key])
+                    print("%s %s r=%d %s: reused from the earlier run" % (key[0], kind, radius, key[2]), flush=True)
+                    continue
                 started = time.time()
                 full = radius in [int(x) for x in cfg["radii_all"]]
                 r = count_with_limit(state, radius, anchors, lam, limit, full)
@@ -175,4 +205,5 @@ if __name__ == "__main__":
         print(json.dumps(count_one(sys.argv[2], int(sys.argv[3]), [int(v) for v in sys.argv[4].split(",")],
                                    float(sys.argv[5]), len(sys.argv) < 7 or sys.argv[6] == "full")))
     else:
-        main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "results")
+        args = [a for a in sys.argv[1:] if a != "--resume"]
+        main(args[0], args[1] if len(args) > 1 else "results", resume="--resume" in sys.argv)
