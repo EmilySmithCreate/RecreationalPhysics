@@ -3719,3 +3719,125 @@ T51's verdict or its predictions as scored.
 
 No size claim is made (the sizes are reported, the verdict is read at one length), so no held-out size. No "we have not
 found" is claimed. Not a milestone: no review is required, though the reading is cheap enough to repeat by hand.
+
+### Reading, 2026-10-09, computed 06:28 ET, recorded from 06:32 ET by the clock (ASSUMPTIONS O107)
+
+`scripts/analyse_t55.py configs/t55_pieces.json` on the 600 saved T51 graphs: 2,121 pieces, `results/t55_pieces.csv`.
+**KNOT at both sizes at L = 256**: 652 of 652 pieces of two and 103 of 103 pieces of eight are A DIP (cheapest single
+move 11 in nearly all) with no FAR link; 4 pieces of 2,121 carry a far link, none of them of size eight. **The owner's
+SEAM fails at both sizes; ours ("neither is SCAR"; eights SEAM; twos KNOT or SEAM) holds in two parts and fails in one.**
+Read from the wiring: the pieces of two are the quarters of an eight-point knot of two kinds of point (two pairs at d = 1,
+two at d = 3; 20 units at its points), in kind the twist of O15; the pieces of eight are double columns of the tube
+(8 units). Neither falls with the cooling time. The rule-11 answers are in O107.
+
+
+---
+
+## T56. The reservoir test under the owner's tie: does the slab (one curled, two open) open into one flat space in a warm bath, and at which curling cost? (piece 5; VISION Update 47; ASSUMPTIONS O94, O105, O106; written 2026-10-09, 06:25 ET by the clock, before any run)
+
+### Why
+
+T53 (O105) showed that without a tie a warm bath opens the rod's first curled direction and never its second before
+the space is damaged: the one-curled slab is where the model rests from both ends (T48, T53). The owner's answer of
+this morning (Update 47) is her tie, "all at the last": nothing is released until a point's last direction opens, and
+then everything; and her shape for X is that slab. Under this tie the slab's single-move wall is 30.4, 21.6, 12.8 and
+4.0 at λ = 1.10, 1.15, 1.20 and 1.25, against flat space's 64, with a release of 3a = 1.2 to 3.0 per point (O106).
+At λ = 1.15 to 1.20 the ratio of the slab's wall to flat space's is 0.34 to 0.20, better than the two-dimensional
+tube's 0.375 at which it opened cleanly in a bath at g = 1.5 (T7). So at the level of single moves a window should
+exist in which a bath opens the slab and spares the space. This is O94's reservoir test, with the tie chosen. Untied
+runs are, in her words, a stepping stone; four untied cells are kept as the control.
+
+**Disclosed.** Exact, known before writing: the walls of O106 and the rungs' heights (3a per point); that under any
+table a damaged point (d > 3) costs 0, so a point of the slab is relieved of its 2a by breaking as well as by opening
+(O106, caution). Measured before writing: T53's cells (O105), including that at λ = 1.25 untied no replica opened its
+second direction at any g, and that g = 3.5 damaged every cell. The runner and the thermal tied chain were written and
+tested today (`src/graphity/sealed_tie_d.run_chain_table_d`: with the table zero it is `cqg_d.run_chain` draw for draw;
+the incremental tie agrees with full recomputation and with networkx; `scripts/run_curled_bath_tie_d.py` with
+`"tie": "none"` is T53's runner draw for draw). No run of this protocol exists.
+
+### What will be run
+
+`scripts/run_curled_bath_tie_d.py` (tests in `tests/test_t56.py`): the exact torus, six links, named points, the
+thermal chain `run_chain_table_d` (Metropolis in H + T_f) at a fixed coupling g, no push, no box. Two geometries: the
+**slab** 4 × L × L (one curled; the owner's X) and the **rod** 4 × 4 × L (two curled; her spaghetti). The tie
+`"all_at_the_last"`, f = (0, a, 2a, 0), a = 4(λ − 1). λ ∈ {1.10, 1.15, 1.20, 1.25}; g ∈ {1.5, 2.0, 2.5, 3.0}; 8 replicas a
+cell; 200,000 sweeps, read every 1,000; final graphs saved. Seeds from 20265601 in the order `scripts/make_t56_configs.py`
+writes them. Time is the chain's own sweeps, as in T53 (the fair clock's standing for new runs is an open question for the
+owner after T51's P1, O104); fair sweeps (N / 96) are reported beside.
+
+- **Stage 1 (68 cells, launched after the owner's prediction is recorded):** the slab at L = 8 and 12 (N = 256, 576),
+  the rod at L = 18 and 36 (N = 288, 576), every (λ, g), tied: 64 cells; and four untied controls, the slab at λ = 1.20,
+  g = 2.0 and 2.5, both sizes.
+- **Stage 2, the held-out sizes (CLAUDE.md rule 14; 32 cells):** the slab at L = 16 (N = 1,024) and the rod at L = 72
+  (N = 1,152), every (λ, g), tied. Nothing at these sizes runs until stage 1 has been read and the prediction below for
+  them is committed as a dated amendment.
+
+### Definitions, fixed now (`scripts/analyse_t56.py`, written and tested before any run)
+
+Per replica, from its last reading, **T48's rule as T53 used it** (`analyse_t48.read_replica`): DAMAGED if at least a
+quarter of the points are damaged (more open directions than three); else OPENS if at least half the points are at
+d = 3 and the largest connected piece at d = 3 holds at least half of all points; else ADVANCES if the rung holding the
+most points is above the starting rung (the slab starts at d = 2, the rod at d = 1); else STAYS. Per cell the majority,
+else MIXED.
+
+- **The window, per (geometry, L, λ):** as T53. **OPENS IN A WINDOW** if some g has an OPENS majority; else **ADVANCES
+  ONLY** if some g has an ADVANCES majority and none has OPENS; else **DAMAGED** if every g at which anything moved has a
+  DAMAGED majority; else **STAYS**.
+- **One space:** for a cell with an OPENS majority, **ONE SPACE** if, in a majority of its OPENS replicas, the whole
+  graph is one connected piece and the largest piece at d = 3 holds at least nine tenths of the points; else **OPEN WITH
+  SEAMS**. Reported per cell.
+- **The control:** at the slab, λ = 1.20, each untied cell's majority set beside the tied cell with the same (L, g).
+  **THE TIE MADE THE DIFFERENCE** if the tied cell has an OPENS majority and the untied cell does not, in at least three
+  of the four pairs; **NO DIFFERENCE** if the two majorities agree in at least three of four; else **MIXED**.
+- **One place or several.** For the rod, T53's rule as written (`open_regions` at d ≥ 2 at the first reading at which a
+  tenth of the points are at d ≥ 2). For the slab, which starts at d = 2, the same rule one rung up: `open_regions3`, the
+  separate connected pieces of at least 16 points at d = 3, at the first reading at which a tenth of the points are at
+  d = 3. For each geometry, SEVERAL if the median over replicas that OPEN or ADVANCE is 2 or more at the larger
+  stage-1 length and larger there than at the smaller; else ONE.
+- Reported, not scored: the sweep at which half the points first sit at d = 3; the energy H + T_f per point at the
+  end against the flat value 0; the pieces of the whole graph; the share of damaged points over time; and, for every
+  OPENS cell, whether the final space is flat (every point at d = 3) or holds relics, counted from the saved wiring.
+
+### The held-out size (CLAUDE.md rule 14)
+
+The claim at stake is a size claim: whether the window survives as the space grows (T53's untied window closed at the
+longest rod; O88's larger spaces melt sooner). So: from stage 1, at each (geometry, λ), the set of g with an OPENS
+majority at each of the two sizes is read; the prediction for the held-out size, written as a dated amendment before
+stage 2 runs, names for every (geometry, λ) the set of g expected to have an OPENS majority at L = 16 (slab) and L = 72
+(rod), by this rule fixed now: the g's with an OPENS majority at both stage-1 sizes, less any g whose mean damaged share
+at the end at the larger stage-1 size exceeded one eighth (the damage edge moves down with size, O88). **The held-out
+prediction HOLDS at a (geometry, λ) if the predicted set and the measured set at the held-out size differ by at most one
+g; else MISSES.** The window verdict at the held-out size is reported with it. If stage 1 has no OPENS majority anywhere
+for a geometry, the prediction for it is "none", and it HOLDS if the held-out size has none.
+
+### Predictions
+
+**The owner's:** owed before stage 1 is launched; to be recorded here in her words.
+
+**Ours, unverified (from O106 and O105):** the slab **OPENS IN A WINDOW at λ = 1.15 and 1.20**, around g = 2.0 to 2.5
+at both stage-1 sizes, **ONE SPACE**, with DAMAGED at g = 3.0; at λ = 1.25 OPENS at every g (wall 4: not stuck, so not
+X); at λ = 1.10 ADVANCES ONLY or DAMAGED (wall 30, crossed only near the damage edge). The rod: its first opening (wall
+24 to 29) needs g ≥ 2.5; then ADVANCES ONLY at λ = 1.10 and 1.15 and OPENS IN A WINDOW at 1.20 and 1.25 at g = 2.5 to
+3.0 with damage beside it. The control: THE TIE MADE THE DIFFERENCE. One place or several: SEVERAL for both (the bath
+seeds everywhere). For the held-out sizes we expect the slab's window to survive at L = 16 at λ = 1.15 and 1.20 and the
+rod's to close at L = 72 (as T53's did); the number is written after stage 1 by the rule above, not now.
+
+### Named or interchangeable points
+
+Named. Interchangeable points would weigh the symmetric slab more and slow its first move; not run.
+
+### What this cannot show
+
+Anything about the parent model (Gate C open). That reality has this tie: the tie is a rule put in (Update 47), and
+what this run can show is whether, with it, a stuck X opens into one space from warmth alone while flat space survives,
+which untied it did not. Anything at λ ≤ 1 or above 1.25. The true barrier beyond the single move (T54, tied case).
+Whether a window found here survives at sizes beyond the held-out one. Any share of the release: under this tie all of
+it comes at the last opening, so the three-share question (piece 6) is not touched. The known asymmetry that a damaged
+point costs 0 under the table, which makes breaking a slab point as relieving as opening it by 2a (1.2 to 2 units
+against the 64 of the move): if damage comes sooner than untied at the same g, that is why, and it is reported.
+
+### Standing requirements of 8 October
+
+Held-out size: above. No "we have not found" is claimed. A milestone: if the slab OPENS IN A WINDOW into ONE SPACE and
+the control says THE TIE MADE THE DIFFERENCE, a fresh read-only review (CLAUDE.md rule 12) checks the chain, the tie's
+implementation and the reading, and its report becomes an O entry.

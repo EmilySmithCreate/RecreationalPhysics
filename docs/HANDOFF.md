@@ -14,7 +14,8 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    Start a fresh branch from `origin/main`; never commit on `main`. `gh` is not installed; Emily opens the pull request
    from `https://github.com/EmilySmithCreate/RecreationalPhysics/compare/main...<branch>`.
 2. **Run `date` before writing any clock time** (CLAUDE.md, "Added 2026-10-05", item 6). Guessed times have been wrong
-   three times. Next record numbers: ASSUMPTIONS **O106**, VISION **Update 47**, PREREGISTRATION **T55**.
+   three times. Next record numbers (as of 9 October, 06:35 ET): ASSUMPTIONS **O108**, VISION **Update 49**,
+   PREREGISTRATION **T57**.
 3. **What is running, and how results come in.** Batch jobs are submitted by pushing a manifest in `cloud/queue/` on
    any branch but `main` (`.github/workflows/run_queue.yml`, which skips any config whose result is already in the
    bucket); the queue's state is written to `cloud/status/latest.md` by a workflow. Results come down by adding patterns
@@ -22,21 +23,28 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    branch within minutes; then `git pull --rebase`, `python scripts/accept_inbox.py --move` (checks each run against
    its committed config and moves it into `results/`), commit the data by name, and read with the test's analyzer.
    **Running on 9 October:** one resubmitted T53 cell (`t53_l72_lam125_g30`, `cloud/queue/2026-10-09_t53_resubmit.txt`;
-   about thirteen hours). **Dead on the laptop:** T52 (the hidden count, `scripts/exact_hidden_relics.py`): its run
-   stopped on 5 October at 66 rows in `results/t52_hidden_relics.csv.partial`; the runner has no resume; restart it
-   (TASKS, 9 October). Nothing else is running.
-4. **Read on 9 October** (ASSUMPTIONS O104, O105; VISION Update 46; PREREGISTRATION T51 and T53 "Reading"; TASKS, the
-   9 October section): **T51 CLIFF** (the columns heal off a cliff as the cooling slows; pieces of two and eight points do
-   not heal at all; P1, the fair clock, fails at one point of two; P2 holds) and **T53 ADVANCES ONLY** at every (L, λ),
-   **SEVERAL** (the spaghetti X opens one direction in a bath and not the second). Both of the owner's predictions
-   failed in part. Rule 11's four answers are in the O entries; **the replacement for piece 5 is hers to propose and is
-   the one thing being asked of her** (the fair-clock question rides behind it).
-5. **Next, in order** (TASKS, 9 October): the pieces of two and eight read from the saved T51 wiring, pre-registered
-   with her prediction (exact, cheap, decides what paper 2's scrap is); T54's script and its exact definitions of
-   "patch" and "grows", then L = 8 and 12, the L = 16 prediction as a dated amendment, then L = 16 (her prediction
-   CRITICAL PATCH and the held-out size are recorded); T52 restarted; T53's cell accepted when it lands; then the 5 and
-   6 October items (T9; the two extreme T24 waits; the warm sheet's correlation length; the commit hash in `.meta.json`;
-   the reading before any citation; the prior-work note for paper 1; the first fresh red-team review under rule 12).
+   about thirteen hours); and T52 (the hidden count) on the laptop, restarted at 05:12 ET with the runner's new
+   `--resume` (its 5 October run had died at 66 rows), log in the session scratchpad; it has days to go, no verdict
+   until it finishes. **Written, tested and waiting for the owner's prediction before launch: T56** (the slab and the
+   rod in a warm bath under her tie "all at the last"; 68 stage-1 configs `configs/t56_*.json` exist; the queue
+   manifest is written and pushed only after her prediction is in PREREGISTRATION T56; then the 32 held-out cells
+   after stage 1 is read and the held-out prediction committed).
+4. **Read on 9 October** (ASSUMPTIONS O104, O105, O107; VISION Updates 46 to 48; the "Reading" subsections of T51,
+   T53 and T55; TASKS, the 9 October section): **T51 CLIFF** (the columns heal off a cliff as the cooling slows; P1,
+   the fair clock, fails at one point of two; P2 holds); **T53 ADVANCES ONLY** at every (L, λ), **SEVERAL** (the
+   spaghetti X opens one direction in a bath and not the second); **T55 KNOT** at both sizes (the pieces no cooling
+   removes are an eight-point knot of two kinds of point, in kind O15's twist, and double columns; not scars, not
+   seams). The owner's predictions failed in part on all three; rule 11's four answers are in the O entries. **Her
+   decisions of the same morning (Update 47):** the tie is "all at the last"; untied runs are a stepping stone; her
+   shape for X is the slab (two open, one curled). Exact under that tie: O106 (the slab's wall 30 to 4 for λ = 1.10
+   to 1.25 against flat space's 64).
+5. **Next, in order** (TASKS, 9 October): T56 launched on her prediction, then read, then its held-out stage; T54's
+   script and its exact definitions of "patch" and "grows", untied and under the tie (Amendment 1), then L = 8 and
+   12, the L = 16 prediction as a dated amendment, then L = 16; the enumeration of the paths out of each knot (why the
+   column heals and the others do not; exploratory unless pre-registered); T53's cell accepted when it lands; then the
+   5 and 6 October items (T9; the two extreme T24 waits; the warm sheet's correlation length; the commit hash in
+   `.meta.json`; the reading before any citation; the prior-work note for paper 1; the first fresh red-team review
+   under rule 12). The programme artifact is owed a republish from the 9 October draft.
 6. **The rules that changed most recently:** CLAUDE.md rules 10 to 15 (6 and 8 October): four kinds of statement; the
    four questions before any patch, in the form "previous claim → failed because → replacement → new falsification
    test"; a fresh read-only red-team reviewer at each milestone; outside theories as targets; a held-out size for every

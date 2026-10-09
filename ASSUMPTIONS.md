@@ -2764,6 +2764,83 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     X is stuck; or a window that fails to open at any size with the tie she chooses. **The replacement is hers to
     propose** (rule 11: her ideas first, in her words); none is written here.
 
+- **O106 EXACT: the single-move walls under the owner's tie, "all at the last", across λ: the slab's wall falls from
+  39 to 4 between λ = 1.05 and 1.25 while flat space's stays at 64, so at λ = 1.15 to 1.20 the slab is stuck behind
+  13 to 22 with a release of 1.8 to 2.4 per point.** (2026-10-09, 06:30 ET by the clock; `scripts/exact_walls_tie_shape_d.py`
+  with f = (0, a, 2a, 0), a = 4(λ − 1), the tie the owner chose this morning, VISION Update 47; six links; the walls
+  are the cheapest single switch out of each exact torus, priced as O70 and O89 price them. Exact, no run.)
+
+  | λ | a | gas of 6-cubes | rod 4 × 4 × 18 (one open) | slab 4 × L × L (two open; L = 8, 12 alike) | flat 6 × 6 × 8 |
+  |---|---|---|---|---|---|
+  | 1.05 | 0.2 | 14.4 | 30.4 | 39.2 | 64 |
+  | 1.10 | 0.4 | 12.8 | 28.8 | 30.4 | 64 |
+  | 1.15 | 0.6 | 11.2 | 27.2 | 21.6 | 64 |
+  | 1.20 | 0.8 | 9.6 | 25.6 | 12.8 | 64 |
+  | 1.25 | 1.0 | 8.0 | 24.0 | 4.0 | 64 |
+
+  Every rung sits 3a per point above flat (0.6 to 3.0), the whole release, since under this tie nothing is released
+  until a point's last direction opens. The slab's cheapest move is of the kind dS = −6, dX = −12 at every λ (the same
+  kind as untied, whose cost is 96 − 48λ; the tie's part of the cost is what the table adds, read from the script's
+  output rather than derived here); the rod's is dS = −6, dX = −16, the gas's dS = −6, dX = −20.
+  - *Ours, reading the table.* The ratio that decided T53 (O105) was the wall out of the stuck state against flat
+    space's 64: 36 / 64 = 0.56 untied at λ = 1.25, where a bath warm enough to cross the first also crossed the second.
+    Under this tie the slab's ratio is 0.34 at λ = 1.15 and 0.20 at 1.20, better than the two-dimensional tube's
+    12 / 32 = 0.375 at which the tube opened cleanly in a bath at g = 1.5 (T7). So at the level of single moves the
+    slab at λ = 1.15 to 1.20 is where a bath should open it while sparing flat space; at 1.25 (wall 4) it is not stuck
+    in any bath, and at 1.05 to 1.10 (walls 30 to 39) the bath that crosses it is near the damage edge again. That is
+    T56's window to scan. Two cautions, as before: the single move is not the whole barrier in three directions (T54),
+    and under any table a damaged point (d > 3) costs 0, so a point on the slab (d = 2, charged 2a) is relieved of 2a
+    by breaking as well as by opening, 1.2 to 2 units at these λ against the 64 of the move itself (sealed_tie_d, as
+    T45 and T46 ran it; flagged in T56).
+
+- **O107 T55, read: the pieces T51 leaves that no cooling removes are KNOTS, stuck arrangements of their own, not
+  scars and not seams: every one of the 652 pieces of two and 103 pieces of eight at L = 256 is a dip (every single
+  move out costs, the cheapest 11 in nearly all) and none carries a far link. Read from the wiring, the pieces of two
+  are the quarters of an eight-point object of two kinds of point (two pairs at d = 1 and two at d = 3, 20 units at its
+  own points, 30 within one step) and the pieces of eight are tube segments two columns long (8 units).** (2026-10-09,
+  computed 06:28 ET, recorded from 06:32 ET by the clock; PREREGISTRATION T55, written this morning before any
+  computation, the owner's prediction SEAM recorded first; `scripts/analyse_t55.py` on the 600 saved T51 graphs,
+  `results/t55_pieces.csv`, 2,121 pieces; exact, nothing random; tests in `tests/test_t55.py`. The cluster reading
+  below is exploratory, from a scratch script over the same saved graphs, and writes nothing.)
+  - **Verdict, L = 256: KNOT for the pieces of two (652 of 652) and KNOT for the pieces of eight (103 of 103).**
+    SCAR needs a single switch that heals and lowers the energy: none exists for any piece of any size in any sheet
+    (every piece is A DIP; a few pieces of one and three have a move that costs exactly 0). SEAM needs a link whose
+    way round is 7 or more: 4 pieces of 2,121 carry one (one piece of two at L = 128, two at 512, one of six at 256),
+    none of them a piece of eight. **The owner's SEAM fails at both sizes. Ours: "neither is SCAR" holds; "the eights
+    are SEAM" fails; "the twos KNOT or SEAM" holds.** The other sizes read the same (KNOT at every size and length).
+  - **What the pieces of two are.** Two kinds, in almost equal numbers: an edge joining two points at d = 1 whose links
+    carry 2, 2, 3, 3 squares (1 unit each, 2 per piece; 342 at L = 256), and an edge joining two points at d = 3 whose
+    links carry 2, 1, 1, 2 (4 units each, 8 per piece; 310). Every piece of two sits exactly two steps from other
+    pieces, and grouping pieces within two steps of each other gives, 135 times, the same cluster: two of the first
+    kind and two of the second, eight points, 20 units at its own points and 30 within one step of them, its cheapest
+    single exit 11. In kind (pairs of points at d = 1 beside pairs at d = 3, 20 units) this is the object O15 found in
+    9 of 80 cold boxes and called a twist two points wide; whether it is the same arrangement or a larger relative of
+    it is not settled here (O15 counted four points). It is not named beyond that: a knot of two kinds of point.
+  - **What the pieces of eight are.** All 103 are eight points at d = 1 with 12 links among them, each point holding
+    three inside the piece and one out, 8 units at their points and nothing more within one step: the wiring of a
+    4 × 2 segment of the tube, a double column, left curled. The single column (1,142 clusters) reads as O16 read it:
+    4 units at its points, 14 within one step in 1,070 of them and 4 in 72.
+  - **Against the cooling** (O104's counts per 80 sheets): the columns fall from 179 to 7 (per 40) while the knots of
+    two kinds (about 0.3 per sheet) and the double columns (about 0.2 per sheet) stay. *Ours, unverified:* the
+    column's exit (12) and these knots' exits (11) cost the same, so a wall is not what separates them; what differs
+    is what lies past the wall, and the column has a downhill path to flat that the others do not within one or two
+    moves. That is a guess until the paths are enumerated.
+  - **Rule 11's four answers, for the owner's failed SEAM.** (1) *Falsified as stated?* Yes: the leftover of a space
+    opened from several seeds is not the stitching between patches; no seam exists in 2,121 pieces. (2) *Which?* Not
+    implementation (exact; tests; the far-link reading is O99's own). The reading's unit was wrong in one way: a
+    connected piece of non-flat points cuts the eight-point knot into four pieces of two, which O104 counted as
+    separate; the verdict is unchanged by that. The mechanism: patches that open from different seeds join without
+    mismatch here. *Ours, unverified:* on the tube the way two columns join when they open is fixed by the tube itself
+    (column x joins its partner across the fold), so neighbouring patches have no freedom to disagree; a seam needs
+    a choice the opening can make differently in two places, and this opening has none. (3) *Cheaper test:* none
+    needed; the far-link count answers it. (4) *What would make us abandon "the leftover is dark matter":* the
+    pre-registered line stands (a frozen share that does not fall toward nothing). What is left of the branch is now
+    exact: the leftover is knots of fixed energy (14, 20 to 30, 8 units) whose number is set at the opening, not by the
+    cooling; it is abandoned if that number cannot be made small, which is T17's and T37's seed question, not T51's.
+  - **Not claimed.** That the knots never heal: the range run ends at 300,000 fair sweeps. Anything about the "pieces
+    of one and three", which are the fragments of larger clusters (the table of compositions is in the scratch log of
+    this session, not in `results/`; it can be rerun from the CSV).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

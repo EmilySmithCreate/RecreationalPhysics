@@ -565,7 +565,10 @@ four answers are in the O entries and the replacement for piece 5 is hers. In or
 
 1. **Read the pieces of two and eight points from their wiring** (exact, no run): what they are, whether a local move
    can remove them, and whether they sit where patches from different seeds met. Pre-register the reading with her
-   prediction first; the candidates are in O104. It decides what paper 2's scrap is.
+   prediction first; the candidates are in O104. It decides what paper 2's scrap is. *Done 2026-10-09 (T55; O107):
+   KNOT at both sizes; her SEAM failed. The pieces of two are the quarters of an eight-point knot of two kinds of point
+   (20 units, in kind O15's twist); the pieces of eight are double columns. Paper 2's scrap is three knots of fixed
+   energy: the column (14), the knot of two kinds (20 to 30), the double column (8).*
 2. **T54**: the script with the exact definitions of "patch" and "grows", tested; commit the draft as a
    pre-registration; compute L = 8 and 12; write the L = 16 prediction as a dated amendment; then L = 16.
 3. **Restart T52** on the laptop (its run died on 5 October at 66 rows; the runner has no resume, so the scratch

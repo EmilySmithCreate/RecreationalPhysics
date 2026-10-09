@@ -1349,6 +1349,20 @@ changes which stand-in is X and what piece 6 asks.
   "all at the last", λ scanned, with a held-out size (T56, the reservoir test of O94); T54 computed under the tie as
   well as untied. T55 (the pieces of two and eight) is computed on her prediction, SEAM.
 
+Update 48 (2026-10-09, from 06:32 ET by the clock): **T55 read: the pieces that no cooling removes are knots, not
+seams; the author's SEAM fails.** Why this page changes: Update 46 held two readings of the leftover open (a scar that
+rates would remove, or a seam set by the seeds) and the exact reading (O107) is neither. Every piece of two and of
+eight in 600 sheets is a dip, a stuck arrangement of its own with every single move out costing 11, and none carries a
+link that joins distant places. Read from the wiring they are two known objects: the pieces of two are the quarters
+of an eight-point knot of two kinds of point (20 units; in kind O15's twist), and the pieces of eight are double
+columns of the tube (8 units). **What this does to claim 5 (ours):** the leftover of an opening from several seeds is
+a sprinkle of knots of fixed energy whose number is set at the opening, not by the cooling, and the slowest cooling
+run leaves about one knot of each kind in three to five sheets of 1,024 points. That is the structured leftover of
+Update 19, exact. Whether its number per volume can be made as small as the birth share needs is the seed question
+(T17, T37), not a cooling question, and it is not answered. *Ours, unverified:* no seam forms because on the tube the
+way two columns join when they open is fixed by the tube itself, so neighbouring patches cannot disagree; a seam would
+need an opening with a choice to make, which this one lacks.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

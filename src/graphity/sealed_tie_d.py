@@ -306,6 +306,98 @@ def run_sealed_bath_table_d(adj, side_u, demons, n_sweeps, seed, lam, ftab, by_v
     return out_s, out_x, out_t, out_mean, out_sum, accepted / max(attempted, 1)
 
 
+@njit(cache=True)
+def run_chain_table_d(adj, side_u, inv_g, n_sweeps, seed, lam, ftab):
+    """The thermal chain (Metropolis at coupling g = 1 / inv_g) with a tie of any shape: cqg_d.run_chain with
+    dH = -16 dS + 4 lam dX + dT_f and nothing else changed. Added 2026-10-09 for PREREGISTRATION T56 (the reservoir
+    test under the owner's tie, VISION Update 47). The same draws in the same order as run_chain, and the acceptance
+    draw taken in the same cases (dH > 0), so with ftab all zero it is run_chain draw for draw (tested); the affected
+    set and the incremental dT_f are run_sealed_bath_table_d's (tested against full recomputation). Modifies adj in
+    place; seed < 0 carries on the stream. Returns (S after each sweep, X after each, T_f after each, acceptance).
+
+    DETAILED BALANCE: the proposal is symmetric (as run_chain) and the acceptance is Metropolis in the total energy
+    H + T_f, so the chain samples exp(-(H + T_f) / g).
+    """
+    if seed >= 0:
+        np.random.seed(seed)
+    n, deg = adj.shape
+    nu = side_u.shape[0]
+    edges = np.empty((4 * (1 + 3 * (deg - 1)) + 8, 2), dtype=np.int64)
+    verts = np.empty(2 * edges.shape[0] + 4, dtype=np.int64)
+    mark = np.zeros(n, dtype=np.int64)
+    stamp = 0
+    s = total_squares(adj)
+    x = surplus(adj)
+    t = table_total(adj, ftab)
+    out_s = np.zeros(n_sweeps, dtype=np.int64)
+    out_x = np.zeros(n_sweeps, dtype=np.int64)
+    out_t = np.zeros(n_sweeps, dtype=np.float64)
+    attempted = 0
+    accepted = 0
+    for sweep in range(n_sweeps):
+        for _ in range(2 * n):
+            attempted += 1
+            u1 = side_u[np.random.randint(0, nu)]
+            v1 = adj[u1, np.random.randint(0, deg)]
+            u2 = side_u[np.random.randint(0, nu)]
+            v2 = adj[u2, np.random.randint(0, deg)]
+            if u1 == u2 or v1 == v2 or has_edge(adj, u1, v2) or has_edge(adj, u2, v1):
+                continue
+            n_edges = 0
+            n_edges = _note_square_edges(adj, u1, v1, edges, n_edges)
+            n_edges = _note_square_edges(adj, u2, v2, edges, n_edges)
+            lost = squares_on_edge(adj, u1, v1)
+            _replace(adj, u1, v1, -1)
+            _replace(adj, v1, u1, -1)
+            lost += squares_on_edge(adj, u2, v2)
+            _replace(adj, u2, v2, -1)
+            _replace(adj, v2, u2, -1)
+            _replace(adj, u1, -1, v2)
+            _replace(adj, v2, -1, u1)
+            gained = squares_on_edge(adj, u1, v2)
+            _replace(adj, u2, -1, v1)
+            _replace(adj, v1, -1, u2)
+            gained += squares_on_edge(adj, u2, v1)
+            d_s = gained - lost
+            d_x = 0
+            d_t = 0.0
+            ok = _new_edge_ok(adj, u1, v2) and _new_edge_ok(adj, u2, v1)
+            if ok:
+                n_edges = _note_square_edges(adj, u1, v2, edges, n_edges)
+                n_edges = _note_square_edges(adj, u2, v1, edges, n_edges)
+                stamp += 1
+                n_verts = 0
+                n_verts = _add_vert(verts, n_verts, mark, stamp, u1)
+                n_verts = _add_vert(verts, n_verts, mark, stamp, v1)
+                n_verts = _add_vert(verts, n_verts, mark, stamp, u2)
+                n_verts = _add_vert(verts, n_verts, mark, stamp, v2)
+                for i in range(n_edges):
+                    n_verts = _add_vert(verts, n_verts, mark, stamp, edges[i, 0])
+                    n_verts = _add_vert(verts, n_verts, mark, stamp, edges[i, 1])
+                after = _surplus_on(adj, edges, n_edges)
+                t_after = _table_on(adj, ftab, verts, n_verts)
+                _switch(adj, u1, v2, u2, v1)
+                before = _surplus_on(adj, edges, n_edges)
+                t_before = _table_on(adj, ftab, verts, n_verts)
+                _switch(adj, u1, v1, u2, v2)
+                d_x = after - before
+                d_t = t_after - t_before
+                d_h = -ENERGY_PER_SQUARE * d_s + ENERGY_PER_SURPLUS * lam * d_x + d_t
+                if d_h > 0.0 and np.random.random() >= np.exp(-inv_g * d_h):
+                    ok = False
+            if ok:
+                s += d_s
+                x += d_x
+                t += d_t
+                accepted += 1
+            else:
+                _switch(adj, u1, v2, u2, v1)
+        out_s[sweep] = s
+        out_x[sweep] = x
+        out_t[sweep] = t
+    return out_s, out_x, out_t, accepted / max(attempted, 1)
+
+
 def energy_table_d(adj, lam, ftab):
     """H + T_f at the dimension of adj."""
     n, deg = adj.shape
