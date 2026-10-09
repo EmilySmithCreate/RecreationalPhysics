@@ -3812,7 +3812,10 @@ for a geometry, the prediction for it is "none", and it HOLDS if the held-out si
 
 ### Predictions
 
-**The owner's:** owed before stage 1 is launched; to be recorded here in her words.
+**The owner's (given 2026-10-09, recorded 06:43 ET by the clock, before any run): the slab OPENS IN A WINDOW into
+ONE SPACE.** Her words: "what the slab does in the bath = opens into one flat space". She named the verdict only; at
+which λ she did not say, so it is read as OPENS IN A WINDOW with ONE SPACE at every λ run, at both stage-1 sizes. For
+the rod, the control and one-or-several she gave no prediction; ours below stand alone there.
 
 **Ours, unverified (from O106 and O105):** the slab **OPENS IN A WINDOW at λ = 1.15 and 1.20**, around g = 2.0 to 2.5
 at both stage-1 sizes, **ONE SPACE**, with DAMAGED at g = 3.0; at λ = 1.25 OPENS at every g (wall 4: not stuck, so not
