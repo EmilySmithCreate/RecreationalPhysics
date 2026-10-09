@@ -4,7 +4,7 @@
 
 Implements PREREGISTRATION.md section T9. One demon starts with the spark (12 units), the rest
 empty. Every run goes the full length; recorded every `record_every` sweeps are phi, X, the
-bath temperature (mean demon energy) and the conservation check, and at the end the local-
+mean demon energy (legacy CSV name bath_T, not a calibrated temperature) and the conservation check, and at the end the local-
 dimension histogram and the pieces of the vertices at each d. Nothing is stopped early: what
 the product is after the lump has had nowhere to go is the whole question.
 """
@@ -63,7 +63,7 @@ def main(path, out_dir="results"):
                                    **{"d%d" % i: int(hist[i]) for i in range(D_BINS)},
                                    pieces_d1=len(p1), largest_d1=(p1[0] if p1 else 0),
                                    pieces_d2=len(p2), largest_d2=(p2[0] if p2 else 0)))
-                print("N=%-4d C=%-4d rep=%-2d  f_final=%.2f  bath T %.2f  d-hist %s  d1 pieces %d  drift %.1e"
+                print("N=%-4d C=%-4d rep=%-2d  f_final=%.2f  mean store energy %.2f  d-hist %s  d1 pieces %d  drift %.1e"
                       % (n, c, rep, f_final, mean[-1], hist.tolist(), len(p1), drift), flush=True)
 
 

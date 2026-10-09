@@ -1,11 +1,27 @@
 # Start here: handoff for the next assistant (state as of 2026-10-09, 05:10 ET by the clock; dated addenda below)
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". **Section 0 is the current state; the dated addenda under it are history,
 newest first, kept because the record refers to them.** Sessions may share one working tree: add files by name, never
 `git add -A`, and never switch branches under another session. `main` is current as of 8 October (PR #42) and Emily
 merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t53-2026-10-09`). The branch
 `claude/vision-programme-updates-9sje7s`, which carried the record from 26 September to 8 October, is merged and deleted.
+
+## Paper materials for readers
+
+The current manuscript is `papers/curled_torus/paper.pdf`, with `supplement.md` and
+`release_manifest.json` alongside it. It is an unpublished first-release manuscript; do not
+describe it as published or scientifically endorsed. The 9 October corrections and dependent
+document review are on `review/curled-torus-feedback-2026-10-09`. Historical submission and
+endorsement logistics below are not evidence of scientific review. T38 is already read (O84);
+its missing detector crossings must not be treated as unconverted survivors. Outstanding
+work is the mechanism, not another claim of universal exponential conversion waits.
 
 ## 0. The first ten minutes (as of 9 October 2026)
 
@@ -14,7 +30,7 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    Start a fresh branch from `origin/main`; never commit on `main`. `gh` is not installed; Emily opens the pull request
    from `https://github.com/EmilySmithCreate/RecreationalPhysics/compare/main...<branch>`.
 2. **Run `date` before writing any clock time** (CLAUDE.md, "Added 2026-10-05", item 6). Guessed times have been wrong
-   three times. Next record numbers (as of 9 October, 06:35 ET): ASSUMPTIONS **O108**, VISION **Update 49**,
+   three times. Next record numbers (as of 9 October, 06:35 ET): ASSUMPTIONS **O109**, VISION **Update 49**,
    PREREGISTRATION **T57**.
 3. **What is running, and how results come in.** Batch jobs are submitted by pushing a manifest in `cloud/queue/` on
    any branch but `main` (`.github/workflows/run_queue.yml`, which skips any config whose result is already in the

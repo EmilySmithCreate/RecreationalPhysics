@@ -15,17 +15,16 @@ not hold. *Designed*: pre-registered or drafted, not yet run. *Idea*: the owner'
 
 **Claim.** In the graph energy of combinatorial quantum gravity with its local term's coefficient raised
 above 1 (not CQG itself, which is λ = 1 only; the author's condition of 24 September), a torus with one
-direction curled is metastable and opens into flat space sharply: a memoryless start, one front, two orders
-side by side, an exact release, a local push of fixed size, one leftover of fixed size.
+direction curled shows activated escape and rapid conversion in counting observables. The initial gap is exact;
+the release subtracts the final energy. A dominant connected component does not prove a unique front,
+and the global seed scan measures escape. About one relic remains in the tested cold sealed boxes.
 
 **Status.** Established at λ = 1.25 (T7, T9, T10, T11); exact results for all λ; the λ map (T8, O38) run and
 written into section V: sharp wherever the torus is stuck (1.05 to 1.35), edge between 1.35 and 1.40, verdict
 inconclusive by the letter for a stated reason (the memoryless-wait criterion was too tight).
 
-**Status, 6 October.** Written and submitted; endorsed by the model's author; on hold at arXiv pending a reader or a
-journal (HANDOFF). Candidates for a revision from the reviews of 6 October are in `curled_torus/v2_changes.md`;
-applying them is the owner's call (VISION Update 44). *(The line first written here, "Missing: only the owner's
-review, then the endorsement request", is superseded.)*
+**Current status, 9 October.** Unpublished reader manuscript, with supplement and reproducibility manifest.
+Submission or endorsement logistics do not imply scientific review. See [measurement scope](measurement_scope.md).
 
 **Draft.** `docs/papers/curled_torus/paper.tex`, `paper.pdf`; review page
 https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR.
@@ -328,7 +327,7 @@ measured entries and exact for the walls. Every curled direction costs 4(λ − 
 
 | D (links) | Curled state | Stuck for now (exact wall > 0) | Wall at λ = 1.25 | Fixed with size? | Opening pattern | Source |
 |---|---|---|---|---|---|---|
-| 2 (4) | one curled (the tube) | 1 < λ < 2 (wall 32 − 16λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | one front, memoryless, the exact release; one relic | paper 1; T7 to T24 |
+| 2 (4) | one curled (the tube) | 1 < λ < 1.6 (minimum of 32−16λ and 64−40λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | dominant component, clock-dependent waits, release εN−H_final; about one relic in cold boxes | paper 1; T7 to T24 |
 | 2 (4) | both curled (a gas of 4-cubes) | never above λ = 1 | downhill | | falls apart at once | O40 |
 | 3 (6) | one curled (4 × L × L′) | 1 < λ < 2 (96 − 48λ) | 36 | | never opened: T41 NEVER OPENS at both λ (O81); T48 STAYS, 32 of 32 (O91); the true barrier for a growing patch is not priced (T54, draft; O103 (b)) | O41, O81, O91 |
 | 3 (6) | two curled (4 × 4 × L, L ≥ 18) | 1 < λ < 1.5 (96 − 64λ) | 16 | yes, 192 to 512 points (T32) | first direction fully open in 28 of 84, partly in most others (corrected); the second's wall (36) unpaid; near-flat only at a hot bath (T30) | O49, O54 |

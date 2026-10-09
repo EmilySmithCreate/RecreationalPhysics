@@ -1,5 +1,11 @@
 # Tasks, in order
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Each task has an acceptance test. Do them in order; do not start a task whose predecessor's gate has not passed. When a task is done, tick it here in the same commit.
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).

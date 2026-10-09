@@ -9,6 +9,10 @@ Reads every results/t10_n*.csv and applies PREREGISTRATION.md section T10 as wri
       replicas whose d = 1 pieces are all rings of four;
   (c) nothing leaves: the conversion fraction changes by less than one ring's worth (14/N) over the
       last 3,000 sweeps in every replica, and the bath ends below g = 1 at every N.
+The historical implementation of (c) compares mean store energy, bath_T, with 1;
+it does NOT measure g<1. This legacy scoring is retained to reproduce the verdict.
+Even the conditional delta=1 canonical proxies range above 1 in the saved data.
+"Rings" below are connected d=1 pieces; their geometry requires a wiring check.
 Gate 3: every replica converts (f_final >= 0.9); a size at which any replica fails is reported and
 excluded, and the verdict is over the sizes that converted.
 """
@@ -66,7 +70,7 @@ def verdict(finals, traces):
         else:
             kept.append(n)
 
-    lines.append("%-5s %-5s %-12s %-8s %-12s %-14s %-9s %-8s" % ("N", "reps", "rings mean", "sd", "max piece", "additive", "bath T", "f drift"))
+    lines.append("%-5s %-5s %-12s %-8s %-12s %-14s %-9s %-8s" % ("N", "reps", "rings mean", "sd", "max piece", "additive", "mean E", "f drift"))
     means, ses, sds, add_ok, c_ok = [], [], [], True, True
     for n in kept:
         rows = by_n[n]
@@ -104,7 +108,7 @@ def verdict(finals, traces):
         lines.append("\n  (a) needs at least two sizes that passed gate 3")
         one_ring = False
     lines.append("  (b) additive, 14 units per ring on replicas with separate rings: %s" % ("holds" if add_ok else "FAILS"))
-    lines.append("  (c) nothing leaves in the last %d sweeps and the bath ends below g = 1: %s" % (LAST_SWEEPS, "holds" if c_ok else "FAILS"))
+    lines.append("  (c) nothing leaves in the last %d sweeps and mean store energy < 1 (legacy proxy, NOT g < 1): %s" % (LAST_SWEEPS, "holds" if c_ok else "FAILS"))
 
     if a and c_ok:
         v = "THE LEFTOVER GROWS WITH THE SPACE"

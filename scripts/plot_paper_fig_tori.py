@@ -5,8 +5,8 @@
 Drawn, not simulated. (a) the flat lattice torus, every vertex at local dimension d = 2; (b) the 4 x L
 torus, whose short direction is a single square, drawn as a square tube, every vertex at d = 1; (c) a
 schematic of the change under way: the curled order on one side of a front, the flat order on the
-other. Panel (c) is a cartoon of what T7 measured (two orders, one front, almost nothing between); it
-is not a snapshot, and its shape is not read from any run.
+other. Panel (c) illustrates a possible interface, not a demonstrated unique front;
+it is not a snapshot, and its shape is not read from any run.
 """
 import sys
 
@@ -105,7 +105,7 @@ for p in ring_at(3.0):                               # the front: last ring join
     ax.plot([p[0], x0], [p[1], -1.2 + 0.85 * round((p[1] + 1.2) / 0.85)], color=EDGE, lw=1, ls="--", zorder=1)
 ax.plot([3.9, 3.9], [-1.9, 2.35], color=INK2, lw=0.8, ls=(0, (3, 3)))
 ax.annotate("", xy=(2.7, 2.6), xytext=(3.9, 2.6), arrowprops=dict(arrowstyle="->", color=INK2, lw=0.8))
-ax.text(4.0, 2.6, "front, moving into the curled part", ha="left", va="center", fontsize=7.5, color=INK2)
+ax.text(4.0, 2.6, "possible advancing boundary", ha="left", va="center", fontsize=7.5, color=INK2)
 ax.text(1.6, -1.55, "curled (d = 1)", ha="center", fontsize=7.5, color=TUBE)
 ax.text(6.0, -1.75, "flat (d = 2)", ha="center", fontsize=7.5, color=SHEET)
 ax.set_xlim(-0.6, 7.9)

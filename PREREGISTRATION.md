@@ -1,5 +1,11 @@
 # Pre-registration
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Rule 4 of `CLAUDE.md`: predictions and analysis choices are committed here **before** the runs that test them. The git commit containing a section is its timestamp. Nothing below may be edited after its runs have started; corrections are added as dated amendments underneath, with the original left standing.
 
 **Standing requirements for every section written from 2026-10-08** (CLAUDE.md rules 14 and 15; VISION Update 45). Sections written before that date are not changed.

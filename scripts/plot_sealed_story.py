@@ -7,7 +7,7 @@ First argument: the repository root. Reads results/cqg_spark_threshold_lam125.cs
 and results/cqg_tube_waiting_lam125.csv. All at lambda = 1.25, starting from a
 perfect tube, which lies exactly 1 per vertex above the flat sheet.
 
-Panel 1: how big a spark a SEALED tube needs before it will convert at all.
+Panel 1: how big a spark a SEALED tube needs before its (S,X) counts can leave their initial values.
 Panel 2: how long an OPEN tube waits before converting, against the prediction we
          wrote down beforehand and which the runs do not support.
 Panel 3: where a sealed tube ends up, against how much energy was put in.
@@ -57,14 +57,14 @@ ax.text(12.3, 55, "12", color=ORANGE, fontsize=15, fontweight="bold", va="center
 ax.set_xlim(3, 17)
 ax.set_ylim(-8, 112)
 ax.set_yticks([0, 50, 100])
-ax.set_yticklabels(["never", "half", "always"])
+ax.set_yticklabels(["0%", "50%", "100%"])
 ax.set_xlabel("energy given to the sealed system at the start", color=INK2)
 ax.set_title("1  How big a spark does it need?", loc="left", fontsize=12.5, fontweight="bold", color=INK, pad=22)
 ax.text(0, 1.02, "Sealed: nothing can get in or out.", transform=ax.transAxes, fontsize=10.5, color=INK2, va="bottom")
-ax.text(3.35, 90, "Below 12 it never converts;\nat 12 it always does.\n\n"
+ax.text(3.35, 90, "Below 12: 0/8 escapes;\nat 12 and above: 8/8.\n\n"
         "All five sizes gave exactly this,\nfrom 48 to 192 points, 320 runs.\nThe five curves lie on top of one\n"
         "another, so one is drawn.\n\n"
-        "The wall is LOCAL: a bigger system\nneeds no bigger spark, yet gives off\nfar more energy when it converts.",
+        "12,000 sweeps; global seed energy.\nEscape does not certify conversion\nor localized energy delivery.",
         fontsize=10.5, color=INK, va="top")
 
 # ---- 2. how long an open tube waits ---------------------------------------------------------
@@ -93,7 +93,7 @@ ax.set_xlim(48, 215)
 ax.set_ylim(0, 2150)
 ax.set_xticks(xs)
 ax.set_xlabel("size of the system (points)", color=INK2)
-ax.set_ylabel("steps of waiting before it converts", color=INK2)
+ax.set_ylabel("sweeps to first recorded change in (S,X)", color=INK2)
 ax.set_title("2  A prediction of ours, not supported", loc="left", fontsize=12.5, fontweight="bold", color=INK, pad=22)
 ax.text(0, 1.02, "Open: the energy given off is carried away.", transform=ax.transAxes, fontsize=10.5, color=INK2,
         va="bottom")
@@ -129,13 +129,14 @@ ax.set_xlim(3, 17)
 ax.set_ylim(-0.3, 2.75)
 ax.set_xlabel("energy given to the sealed system at the start", color=INK2)
 ax.set_ylabel("energy per point left in the network at the end", color=INK2)
-ax.set_title("3  But sealed, it never gets to rest", loc="left", fontsize=12.5, fontweight="bold", color=INK, pad=22)
+ax.set_title("3  Graph energy at the recording limit", loc="left", fontsize=12.5, fontweight="bold", color=INK, pad=22)
 ax.text(0, 1.02, "64 points, eight runs at each spark.", transform=ax.transAxes, fontsize=10.5, color=INK2, va="bottom")
-ax.annotate("under 12 it stays\nexactly the tube", xy=(8, TUBE), xytext=(3.4, 0.45), color=INK, fontsize=10.5,
+ax.annotate("under 12: unchanged\n(S,X), neutral moves allowed", xy=(8, TUBE), xytext=(3.4, 0.45), color=INK, fontsize=10.5,
             arrowprops=dict(arrowstyle="-", color=INK2, lw=1))
-ax.text(3.35, 2.72, "Over 12 it converts, but the energy it gives off has nowhere to\n"
-        "go, so it warms what it has just made. Sealed, the end state is\nfixed by what went in, and it can never "
-        "reach the flat sheet.\nThat is your slush: what converted is warmer than it began.",
+ax.text(3.35, 2.72, "At 12 and above: 8/8 escape the initial counts.\n"
+        "Graph plus store energy is conserved.\n"
+        "Final energy alone does not certify geometry,\n"
+        "equilibration or a unique final state.",
         color=INK, fontsize=10.5, va="top", ha="left")
 
 fig.suptitle("Three things the sealed runs say about a curled-up dimension opening out",

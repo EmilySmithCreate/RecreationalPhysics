@@ -8,7 +8,9 @@ Update 22; ASSUMPTIONS O41). The torus C_4 x C_4 x C_L has two directions curled
 vertex above the flat 3-torus; the run puts a spark of E units in one store of a bath of C stores, all else empty,
 and follows it for `n_sweeps` sweeps in blocks of `record_every`. Recorded every block: S, X, H per vertex, the
 census of the local dimension read at six links (d = 3 flat, 2 one curled, 1 two curled, 0 all curled, above 3
-melted), the bath temperature and the conservation check; at the end, the pieces of the flat region and whether
+melted), the mean store energy (legacy bath_T, not a calibrated temperature) and the conservation check.
+These dimension labels are reference square-count signatures, not geometric certificates.
+At the end it records the pieces of the selected region and whether
 the arrangement ever left its start (T32's question). The final graph is saved when `save_adjacency` is set.
 
 Config keys: name, section, dims (e.g. [4, 4, 18]) or gas ({"dims": [4, 4, 4], "copies": 8}: that many separate

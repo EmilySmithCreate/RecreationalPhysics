@@ -1,0 +1,26 @@
+Post-hoc checks for paper 1 (NOT pre-registered; ASSUMPTIONS O42).
+
+1. Waiting times against an exponential, pooled after rescaling by each condition's mean.
+  (i) first exits: 18 conditions, 432 times, D = 0.035, bootstrap p = 0.53; p < 0.05 in 2 of 18 conditions
+  (i) T22 against Eq. (2)'s mean, nothing estimated: 240 times, D = 0.039, p = 0.85
+        N = 64, lambda = 1.05: mean 10174 against 8330, p = 0.63
+        N = 64, lambda = 1.10: mean 5134 against 4844, p = 0.58
+        N = 64, lambda = 1.25: mean 824 against 845, p = 0.62
+        N = 96, lambda = 1.05: mean 9302 against 8330, p = 0.27
+        N = 96, lambda = 1.10: mean 4326 against 4844, p = 0.65
+        N = 96, lambda = 1.25: mean 905 against 845, p = 0.16
+  (ii) T7 and T8, every wait beyond 205    32 conditions, 865 times: D = 0.044, p = 0.03
+  (ii) T7 alone                             8 conditions, 220 times: D = 0.129, p = 0.00
+  (ii) T8, tori not begun at sweep 200     24 conditions, 589 times: D = 0.030, p = 0.55
+      T7 with the clock started later (memoryless: any start will do):
+        from sweep 205: 220 times, D = 0.129, p = 0.000
+        from sweep 255: 190 times, D = 0.095, p = 0.012
+        from sweep 305: 171 times, D = 0.080, p = 0.094
+        from sweep 405: 143 times, D = 0.054, p = 0.655
+      left out: 90 waits recorded at 205 (the torus went during the watch); in T8, 56 waits beyond 205 from tori already begun at sweep 200
+      where every wait beyond 205 departs: share below 0.05 of the mean 0.071 (exponential 0.049)
+  (iii) lambda = 1.05: 3 of 200 waits beyond 75000 sweeps ([78205, 80174, 80985]); an exponential with each cell's mean gives 0.192, and 3 or more with probability 1.0e-03
+
+2. Relic position against where the change started (T11, single-leftover replicas).
+  N =  64: 36 replicas, mean distance 4.17 columns, rotation null 4.00, two-sided p = 0.67
+  N =  96: 28 replicas, mean distance 6.38 columns, rotation null 6.00, two-sided p = 0.59

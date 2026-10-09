@@ -1,5 +1,11 @@
 # Vision and plan
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 This page is the fixed reference. Changes to it are deliberate commits that say why.
 Source keys refer to `REFERENCES.bib`; assumption numbers refer to `ASSUMPTIONS.md`.
 

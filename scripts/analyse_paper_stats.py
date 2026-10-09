@@ -3,7 +3,9 @@
     python scripts/analyse_paper_stats.py
 
 NOT PRE-REGISTERED. Asked for in a review of paper 1 generated with ChatGPT (OpenAI; 2026-09-24), run on data already
-committed, with no new simulation; ASSUMPTIONS O42. Prints and writes nothing.
+committed, with no new simulation; ASSUMPTIONS O42. Prints results; does not write files.
+The pooled first-exit bootstrap treats cells independently, but the exploratory
+Arrhenius data reuse seeds across couplings. Its p-value is nominal (O108).
 
 1. Are the waiting times exponential? The pre-registered test of "memoryless" was the coefficient
    of variation (PREREGISTRATION T7, T8), a coarse test. Here the whole distribution is compared with
@@ -20,8 +22,10 @@ committed, with no new simulation; ASSUMPTIONS O42. Prints and writes nothing.
    (ii) the pre-registered waiting times of T7 (results/t7_ and t7b_lam125_n*.csv) and of T8
         (results/t8_lam*.csv, stuck cells only, as the paper defines stuck). These are read in blocks of
         five sweeps and only after a 200-sweep watch, so the first possible value is 205. If the wait is
-        memoryless, the time beyond 205, given that the torus was still there at 205, is exponential
-        with the same mean; the test uses W - 205 for every W > 205. A torus that had already begun
+        a true exponential event clock, its residual time conditional on survival to 205 is exponential
+        with the same mean. The recorded W is a threshold detector, however, not that event clock;
+        subtracting 205 is a diagnostic approximation, not a correction for its full selection rule.
+        The test uses W - 205 for every W > 205. A torus that had already begun
         converting by sweep 200 is detected late by construction (its resting spread widens the
         threshold) and piles up just after 205; T8 records how far it had gone at sweep 200 (f_200), so
         T8 is also tested with f_200 = 0 only. T7 predates that column.
@@ -208,7 +212,7 @@ def main():
     for origin in (WATCH, WATCH + 50, WATCH + 100, WATCH + 200):
         g = [[float(r["waiting"]) - origin for r in decays[k] if r["waiting"] and float(r["waiting"]) > origin] for k in t7]
         scan.append("from sweep %d: %d times, D = %.3f, p = %.3f" % ((origin,) + (sum(map(len, g)),) + bootstrap_p(g, "block")))
-    print("      T7 with the clock started later (memoryless: any start will do):\n        " + "\n        ".join(scan))
+    print("      T7 with the clock started later (clock-shift sensitivity; detector selection remains):\n        " + "\n        ".join(scan))
     late = sum(1 for k, v in decays.items() if k[0] == "t8" for r in v
                if r["waiting"] and float(r["waiting"]) > WATCH and float(r["f_200"]) > 0)
     at205 = sum(1 for v in decays.values() for r in v if r["waiting"] and float(r["waiting"]) <= WATCH)
