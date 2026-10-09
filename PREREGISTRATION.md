@@ -3613,3 +3613,93 @@ required.
 Anything about the parent model (Gate C open; Update 24's caveat). The dynamics: whether a bath crosses the barrier
 is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89). The critical patch on a
 sheet much larger than the held-out size, beyond what the fit's form assumes.
+
+
+---
+
+## T55 (DRAFT, 2026-10-09, 05:12 ET by the clock, before any computation). What are the pieces T51 leaves that no cooling removes? The pieces of two and eight points read from their wiring, exact (paper 2; piece 7; ASSUMPTIONS O104; VISION Update 46)
+
+### Status
+
+A draft. The question, the readings, the verdict words and our prediction are fixed here; the script is to be written and
+tested before any computation, and **the owner's prediction is owed before anything is computed**. Nothing has been
+computed on the saved T51 graphs beyond what O104 reports (sizes, counts, and the pieces of the whole graph).
+
+### Why
+
+T51 (O104) found that as the cooling slows the curled four-point columns heal off a cliff, while connected pieces of
+two points and of eight points not at d = 2 stay at the same number per sheet at every cooling time from a quench to
+300,000 fair sweeps. They hold nearly all the energy left at the slowest cooling. What they are has not been read from
+their positions, and the rule (O88) is to read before naming. Two candidates are on the record: the swapped pair of
+links that flickers on and off when flat space heals (O82: one switch back returns the energy to exactly 0), and the far
+links of O99 and O102, links whose two ends would otherwise be at least seven steps apart, which sat only inside "other"
+pieces and may be stitches between patches that opened from different seeds. The two have opposite consequences for the
+owner's reading of the scrap as dark matter (Update 16, open again under Update 41): a scar that one move removes is a
+matter of rates and would go in a longer run; a seam between patches cannot be removed by any local move, its number is
+set by the seeds and not by the cooling, and it would be the first topological leftover in this project.
+
+**Disclosed.** Read before this was written: O104's size table (per 80 sheets at L = 256, pieces of two number about
+100 and pieces of eight about 16 at every cooling time); that no replica melted; that the whole graph is one piece in
+78 to 80 of 80 sheets at L = 256 and 33 of 40 at L = 512. No piece has been looked at individually.
+
+### What will be computed (exact; no run; no random number)
+
+On every saved final graph of T51 (`results/t51_*_adj/*.npz`, 600 graphs), for every connected piece of points not at
+d = 2 (`graphity.dimension.piece_labels` on `local_dimension != 2`, as O104 and T37 read them), grouped by size:
+
+1. **The census of the piece:** its size; the local dimension d of each of its points; the squares on each link at its
+   points; the energy above flat held at its points, 16 (1 − squares at the point / 4) + λ (surplus at the point)
+   summed over its points (ours: the per-point split of H = 16(N − S) + 4λX, which sums to H over the graph).
+2. **One move from flat?** Every single switch whose four points include at least one point of the piece is tried
+   (the kernel's move: two points of side 0 each swap one partner; validity by the hard-core rule). The piece is
+   **ONE MOVE FROM FLAT** if some switch lowers the energy and leaves every point of the piece at d = 2 with no new
+   point off d = 2; it is **LOWERABLE** if some switch lowers the energy without that; otherwise **A DIP** (every
+   single move out costs). The cheapest move's cost is reported either way.
+3. **Far links:** for every link at a point of the piece, its way round (the distance between its ends once the link
+   is removed; 3 on a flat sheet; `explore_far_links.way_round`), and whether the piece carries a link with way round
+   7 or more (**FAR**).
+4. **Where it sits:** the graph distance from the piece to the nearest other piece not at d = 2, and to the nearest
+   column, so that clustering can be seen.
+
+### Verdict words, fixed now
+
+Read separately for the pieces of two and the pieces of eight, over all their instances at L = 256 (the verdict's
+length; the other lengths reported beside), as the majority class:
+
+- **SCAR** if a majority are ONE MOVE FROM FLAT (then they are O82's flicker, kinetic, and why they survived
+  300,000 fair sweeps at g = 0.25 is a question about rates, to be answered by counting how often the healing move is
+  offered);
+- **SEAM** if a majority carry a FAR link (a stitch between patches; the seeds set their number);
+- **KNOT** if a majority are A DIP without a FAR link (a small stuck arrangement of its own, like the column, but one
+  that this cooling does not remove);
+- **MIXED** if no class has a majority. SEAM is read before KNOT when both apply.
+
+Reported, not scored: the same for pieces of one, three, four (columns and the rest), five, six and ten; the far-link
+count per sheet against the length; the distance distribution of item 4; and, for every SCAR, the cost of its healing
+move and the number of distinct such moves (the attempt frequency, as paper 1 counts it).
+
+### Predictions
+
+**The owner's:** owed before any computation.
+
+**Ours, unverified:** neither size is SCAR. A move that lowers the energy is always accepted, and at L = 256 each sheet
+was offered about 3 × 10⁶ chain sweeps at g ≤ 0.5 in the slowest cooling; a scar one move from flat would have gone. The
+pieces of eight: **SEAM** (eight points is two columns' worth, the size a mismatch between two opened patches would
+leave). The pieces of two: **KNOT or SEAM**, with no confident call between them; if SEAM, their number per sheet
+should track the number of seeds, which grows with the length (T37), and O104's counts per 1,000 columns (4.3, 5.0,
+3.8 at L = 128, 256, 512) do not yet say.
+
+### Named or interchangeable points
+
+Named, as T51. Exact readings of a saved wiring do not depend on the treatment of points.
+
+### What this cannot show
+
+That a seam is dark matter, or anything about the real universe. Whether a SEAM could be removed by a move larger than
+a single switch (not enumerated). Anything about pieces that healed before the end of the hold. Nothing here changes
+T51's verdict or its predictions as scored.
+
+### Standing requirements of 8 October
+
+No size claim is made (the sizes are reported, the verdict is read at one length), so no held-out size. No "we have not
+found" is claimed. Not a milestone: no review is required, though the reading is cheap enough to repeat by hand.

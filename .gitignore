@@ -26,3 +26,4 @@ docs/outreach/
 # Local secrets (AWS keys etc.). Never commit: this repository is public.
 .env
 .env.*
+*.partial.resumed
