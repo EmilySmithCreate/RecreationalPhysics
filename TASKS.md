@@ -497,7 +497,8 @@ In order, each pre-registered before it runs:
 
 1. **PREREGISTRATION T51**, the frozen scrap against cooling time in tubes that seed themselves, on the fair clock
    (`scripts/run_scrap_freeze.py`, `scripts/analyse_t51.py`, `cloud/queue/2026-10-05_t51.txt`). The owner's prediction
-   is owed before any result is read.
+   is owed before any result is read. *Done 2026-10-09: her prediction GENTLE (8 October); read CLIFF, P1 fails at one
+   point, P2 holds (O104; the 9 October section below).*
 2. **The hidden count at wider windows** (`graphity.hidden`): windows of three to five columns round a relic of a saved
    T37 end state, with flat windows as controls; count against the links cut and against the points inside. To be
    pre-registered with the chat's prediction (flat gives 1; a relic gives the number of places and forms it can take).
@@ -554,6 +555,26 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
 Owed by the owner: ~~her T51 prediction~~ (given 2026-10-08: GENTLE, PREREGISTRATION T51); ~~her T54 prediction~~ (given 2026-10-08: CRITICAL PATCH, PREREGISTRATION T54); her T53 prediction confirmed the same day; the open items of
 Update 44 (claim 4's wording; piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's
 revision; the Fife reference).
+
+## 9 October: T51 and T53 read; what follows  ◑
+
+**Added 2026-10-09** (ASSUMPTIONS O104, O105; VISION Update 46). The 5 October section's item 1 (T51) is done: CLIFF,
+P1 fails at one point, P2 holds; T53 is read: ADVANCES ONLY at every (L, λ), SEVERAL, with one cell (L = 72, λ = 1.25,
+g = 3.0) resubmitted after it failed on Batch before starting. Both of the owner's predictions failed in part; rule 11's
+four answers are in the O entries and the replacement for piece 5 is hers. In order:
+
+1. **Read the pieces of two and eight points from their wiring** (exact, no run): what they are, whether a local move
+   can remove them, and whether they sit where patches from different seeds met. Pre-register the reading with her
+   prediction first; the candidates are in O104. It decides what paper 2's scrap is.
+2. **T54**: the script with the exact definitions of "patch" and "grows", tested; commit the draft as a
+   pre-registration; compute L = 8 and 12; write the L = 16 prediction as a dated amendment; then L = 16.
+3. **Restart T52** on the laptop (its run died on 5 October at 66 rows; the runner has no resume, so the scratch
+   `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first).
+4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then.
+5. The rest of the 5 and 6 October sections as they stand.
+
+Owed by the owner: her replacement for piece 5's mechanism, or her decision to let T54 decide; whether the fair clock
+stays for new kinetic runs after P1's miss; the open items of Update 44.
 
 ## Later
 

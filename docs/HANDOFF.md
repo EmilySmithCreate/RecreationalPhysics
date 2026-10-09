@@ -1,13 +1,68 @@
-# Start here: handoff for the next assistant (state as of 2026-09-25, 13:00 ET; addenda to 2026-10-06)
+# Start here: handoff for the next assistant (state as of 2026-10-09, 05:10 ET by the clock; dated addenda below)
 
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
-newer than `CLAUDE.md`'s "Known state". **Work is on branch `claude/vision-programme-updates-9sje7s` since 26 September** (`feat/cloud-runs-and-3d` stopped
-on 25 September and is an ancestor of it; read the addendum of 5 October below first). Sessions may share one working
-tree: add files by name, never `git add -A`, and never switch branches under another session; `main` is behind and
-Emily merges. This page was rewritten as one current page on 24 September; earlier dated versions are in
-git history.
+newer than `CLAUDE.md`'s "Known state". **Section 0 is the current state; the dated addenda under it are history,
+newest first, kept because the record refers to them.** Sessions may share one working tree: add files by name, never
+`git add -A`, and never switch branches under another session. `main` is current as of 8 October (PR #42) and Emily
+merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t53-2026-10-09`). The branch
+`claude/vision-programme-updates-9sje7s`, which carried the record from 26 September to 8 October, is merged and deleted.
 
-## 0. The first ten minutes
+## 0. The first ten minutes (as of 9 October 2026)
+
+1. **Fetch first.** `git fetch --all --prune`, then `git log --oneline -8 origin/main` and `git branch -a`. On 5 October
+   the working copy was 40 commits behind the record; on 9 October its branch had been merged and deleted on GitHub.
+   Start a fresh branch from `origin/main`; never commit on `main`. `gh` is not installed; Emily opens the pull request
+   from `https://github.com/EmilySmithCreate/RecreationalPhysics/compare/main...<branch>`.
+2. **Run `date` before writing any clock time** (CLAUDE.md, "Added 2026-10-05", item 6). Guessed times have been wrong
+   three times. Next record numbers: ASSUMPTIONS **O106**, VISION **Update 47**, PREREGISTRATION **T55**.
+3. **What is running, and how results come in.** Batch jobs are submitted by pushing a manifest in `cloud/queue/` on
+   any branch but `main` (`.github/workflows/run_queue.yml`, which skips any config whose result is already in the
+   bucket); the queue's state is written to `cloud/status/latest.md` by a workflow. Results come down by adding patterns
+   to `cloud/fetch/request.txt` and pushing: the `fetch_results` workflow commits them into `cloud/inbox/` on the same
+   branch within minutes; then `git pull --rebase`, `python scripts/accept_inbox.py --move` (checks each run against
+   its committed config and moves it into `results/`), commit the data by name, and read with the test's analyzer.
+   **Running on 9 October:** one resubmitted T53 cell (`t53_l72_lam125_g30`, `cloud/queue/2026-10-09_t53_resubmit.txt`;
+   about thirteen hours). **Dead on the laptop:** T52 (the hidden count, `scripts/exact_hidden_relics.py`): its run
+   stopped on 5 October at 66 rows in `results/t52_hidden_relics.csv.partial`; the runner has no resume; restart it
+   (TASKS, 9 October). Nothing else is running.
+4. **Read on 9 October** (ASSUMPTIONS O104, O105; VISION Update 46; PREREGISTRATION T51 and T53 "Reading"; TASKS, the
+   9 October section): **T51 CLIFF** (the columns heal off a cliff as the cooling slows; pieces of two and eight points do
+   not heal at all; P1, the fair clock, fails at one point of two; P2 holds) and **T53 ADVANCES ONLY** at every (L, λ),
+   **SEVERAL** (the spaghetti X opens one direction in a bath and not the second). Both of the owner's predictions
+   failed in part. Rule 11's four answers are in the O entries; **the replacement for piece 5 is hers to propose and is
+   the one thing being asked of her** (the fair-clock question rides behind it).
+5. **Next, in order** (TASKS, 9 October): the pieces of two and eight read from the saved T51 wiring, pre-registered
+   with her prediction (exact, cheap, decides what paper 2's scrap is); T54's script and its exact definitions of
+   "patch" and "grows", then L = 8 and 12, the L = 16 prediction as a dated amendment, then L = 16 (her prediction
+   CRITICAL PATCH and the held-out size are recorded); T52 restarted; T53's cell accepted when it lands; then the 5 and
+   6 October items (T9; the two extreme T24 waits; the warm sheet's correlation length; the commit hash in `.meta.json`;
+   the reading before any citation; the prior-work note for paper 1; the first fresh red-team review under rule 12).
+6. **The rules that changed most recently:** CLAUDE.md rules 10 to 15 (6 and 8 October): four kinds of statement; the
+   four questions before any patch, in the form "previous claim → failed because → replacement → new falsification
+   test"; a fresh read-only red-team reviewer at each milestone; outside theories as targets; a held-out size for every
+   size claim; a written prior-work search behind every "we have not found". PREREGISTRATION's standing requirements of
+   8 October apply to every new section.
+7. **Read section 3 before writing anything public or anything to a physicist.** The programme page is the Claude
+   artifact "A Phase-Changing Reality" (the owner's request of 4 October); its text source is
+   `docs/papers/programme_draft.md`, current to 9 October; the artifact was last republished on 6 October and is owed a
+   republish from the 9 October draft. `docs/public/programme.html` is older and not maintained by hand.
+8. **Environment.** The interpreter with the project's dependencies is the Microsoft Store one,
+   `~/AppData/Local/Microsoft/WindowsApps/python3` (NumPy 2.0, Numba, pytest); bare `python` and `.venv` lack NumPy.
+   Run `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`. Long scripts go in a file with
+   the Write tool (the shell cuts long heredocs). Background runs: `nohup <py> scripts/... > log 2>&1 &`.
+
+## Addendum, 9 October 2026
+
+- The branch `claude/vision-programme-updates-9sje7s` was merged to `main` on 8 October (PRs #40 to #42) with VISION
+  Update 45 (three working methods adopted: a fresh read-only reviewer, a held-out size, a written prior-work search),
+  the owner's predictions for T51 (GENTLE), T53 (confirmed) and T54 (CRITICAL PATCH), T54's held-out size (L = 16),
+  and paper 1's citation of Kelly's thesis. This page had not been brought up to date since 6 October; section 0 above
+  is the rewrite of 9 October, and the section it replaces is kept below as "the first ten minutes as of 25 September".
+- T51 and T53 fetched, accepted (120 of 120 pass) and read; `scripts/analyse_t51_amendment3.py` written and tested for
+  Amendment 3's reported-not-scored items; T53's failed cell resubmitted; the record updated (O104, O105; Update 46;
+  the two readings; TASKS; the programme draft). Details in section 0, item 4.
+
+## 0 (superseded). The first ten minutes, as of 25 September 2026
 
 1. **Two sessions may be working this repository at once.** Run `git status` and `git log -5` before assuming
    the tree is as described, and re-read a file if the tool says it changed on disk.
@@ -206,6 +261,12 @@ number is carried into a claim about gravity.
 | T21, sealed sheet with interchangeable points | MELTS EITHER WAY at N = 64 |
 | T22, recrossings near λ = 1 | FALL-BACKS: first exit on time; κ = 0.56 to 0.68 |
 | O40, O41 (exact) | 2D: a gas of knots is never stuck for λ > 1. 3D: the 6-cube is stuck only for 1 < λ < 1.2 |
+| T23, T24, T25, T26, T27 | window INCONCLUSIVE by the letter (edge BREAK-UP); INCONCLUSIVE a third time; FREEZES IN; MELTS; STAYS MELTED |
+| T30, T32, T33, T34 | NEVER OPENS (tori; first read FIRST ONLY); FIXED WALL; NO CASCADE; MELTS at 216 (scars, not a melt, O82) |
+| T37, T38, T42, T43 | KJMA exponent; the long warm tubes melted (O88); TWO POPULATIONS; HEALS either way (O82); DISSOLVES |
+| T44, T45, T46, T47, T48, T49, T50 | no cascade; no setting opens all; NOT ALL; A MIXED, B HEALS; ONE SPACE / ADVANCES ONLY / DAMAGED / STAYS by torus (O91); part way, fully in a minority (O92); SPEEDS at 6 and 10 (O93) |
+| T51 (9 Oct) | CLIFF; P1 fails at one point of two; P2 holds (O104) |
+| T53 (9 Oct) | ADVANCES ONLY at every (L, λ); SEVERAL; one cell resubmitted (O105) |
 
 ## 3. The model's author, and what is public
 
@@ -344,8 +405,8 @@ number is carried into a claim about gravity.
 
 ## 9. Where things are
 
-`VISION.md` (claims; Updates 1–44) · `TASKS.md` (its numbering map matters) · `PREREGISTRATION.md` ·
-`ASSUMPTIONS.md` (Q1–Q23, O1–O103) · `REFERENCES.bib` · `docs/papers/` (paper 1, `series_plan.md`,
+`VISION.md` (claims; Updates 1–46) · `TASKS.md` (its numbering map matters) · `PREREGISTRATION.md` ·
+`ASSUMPTIONS.md` (Q1–Q23, O1–O105) · `REFERENCES.bib` · `docs/papers/` (paper 1, `series_plan.md`,
 `programme_draft.md`, `glossary.md`) · `docs/design/` · `docs/parked/` · `docs/public/` · `docs/figures/` ·
 `scripts/analyse_*.py` with tests in `tests/` · `terraform/`, `Dockerfile`, `.github/workflows/` ·
 `src/graphity/` (`cqg.py`, `cqg_d.py` for any D, `sealed.py` (now with per-vertex stores and stream carry-on), `spark.py` (the local spark, Q22), `tempering.py`, `symmetry.py`,

@@ -3301,6 +3301,20 @@ cliff further out (Amendment 3, "the endpoint of the fall").
 
 Nothing else in T51 changes.
 
+### Reading, 2026-10-09, from 04:55 ET by the clock (ASSUMPTIONS O104)
+
+The 91 runs finished 6 October, fetched 9 October, checked against their committed configs (`scripts/accept_inbox.py`)
+and read with `scripts/analyse_t51.py`; the 600 saved final graphs re-read from their wiring agree with their rows. Every
+tube opened; no replica was MELTED OR DEFECTED. **Verdict: CLIFF.** R(10,000) = 0.347 ± 0.040 and R(30,000) = 0.079 ±
+0.035, the second below 0.25. **The owner's GENTLE fails; ours (GENTLE) fails.** P1 (the fair clock) **FAILS** at one of
+its two points: C(30,000)/C(10,000) = 0.78 ± 0.05 against T25's 0.99; C(100,000)/C(10,000) = 0.35 ± 0.04 against 0.47
+holds. P2 (the size check) **HOLDS**: 0.0107, 0.0083, 0.0093 columns left per column of tube at L = 128, 256, 512, pair
+by pair within two standard errors. Amendment 3's items (`scripts/analyse_t51_amendment3.py`, written and tested
+today): columns per sheet fall as t^(−0.82 ± 0.13), the frozen share as t^(−0.34 ± 0.06), from 0.040 at 10,000 to
+0.013 at 300,000 fair sweeps; the extrapolated time to O89's share at 1 MeV is 1.4 × 10¹⁸ fair sweeps; from the wiring,
+the pieces of two and eight points do not fall with the cooling time while the columns do; at L = 512, 7 of 40 sheets
+end as two spaces. The rule-11 answers are in O104; the replacement is the owner's.
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
@@ -3493,6 +3507,19 @@ times are compared between couplings, not between sizes.
 **The owner's: confirmed as written above.** Her words: "Mine is good, proceed." Given after a plain-language
 explanation of the verdicts. The inferred prediction is now hers: OPENS IN A WINDOW at both λ and every length, sooner at
 1.40; SEVERAL. Nothing else in T53 changes.
+
+### Reading, 2026-10-09, from 04:55 ET by the clock (ASSUMPTIONS O105)
+
+29 of 30 runs finished 6 October, fetched 9 October, checked against their committed configs and read with
+`scripts/analyse_t53.py`; the cell L = 72, λ = 1.25, g = 3.0 failed on Batch before it started and was resubmitted today
+(`cloud/queue/2026-10-09_t53_resubmit.txt`). **The window: ADVANCES ONLY at every (L, λ)**, the (72, 1.25) verdict
+provisional until that cell lands. No cell has an OPENS majority; no replica at λ = 1.25 opened its second direction at
+any length or bath; none at L = 72 did at either λ. At λ = 1.40 the second direction opened in a minority at L = 18
+(2, 1, 4 of 8 at g = 2.0, 2.5, 3.0) and L = 36 (1 of 8 at 2.5 and 3.0), in baths that then damaged the space. **One place
+or several: SEVERAL** (median 2 at L = 72, 1 at L = 18). **The owner's OPENS IN A WINDOW fails everywhere; her SEVERAL
+holds.** Ours: ADVANCES ONLY at λ = 1.25 holds; the window at λ = 1.40, L = 18 fails by the letter (MIXED, never a
+majority); "narrows or closes at L = 72" holds; ONE fails. The rule-11 answers are in O105; the replacement is the
+owner's.
 
 
 ---

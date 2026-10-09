@@ -1225,7 +1225,8 @@ is X.
   directions and releases the whole burp. Failed because: in this family each direction has its own wall and the
   energy ties nothing; a push the size of the cheapest move opens one direction, or one cube, and stops (T33, T40, T44
   to T49; O103 (i)). Replacement (hers, Updates 39 and 42): X is one connected piece with a direction already open,
-  and a bath supplies each push in turn (T53, running). New falsification test: the exact barrier to the next opening
+  and a bath supplies each push in turn (T53, running; *read 2026-10-09: ADVANCES ONLY at every length and both λ, the
+  second direction opening only in a minority before the space is damaged; Update 46*). New falsification test: the exact barrier to the next opening
   of a connected one-open X (T54, a draft): if it rises with the opened patch without bound at every λ at which X is
   stuck, untied and under the tie, no finite push opens all and that branch is abandoned in this family.
 - **Open to her, not decided.** (a) Claim 4's word "first order". The reviews are right that the tube's change is the
@@ -1267,6 +1268,48 @@ cost. It comes back if an exact claim is ever too large to enumerate.
 *Ours, exact:* paper 1 already contains one sentence that rule 15 now covers ("A different kind of change has not, as
 far as we have found, been studied in this model"); its search note is owed before any revision of paper 1 is posted
 (TASKS, the reviews of 6 October, item 9).
+
+Update 46 (2026-10-09, from 05:01 ET by the clock): **T51 and T53 read: the scrap's columns heal off a cliff as the
+cooling slows while smaller pieces do not; the author's "spaghetti" X opens one direction in a bath and not the
+second; rule 11's second use on piece 5, with the replacement hers to propose.** Why this page changes: two
+pre-registered tests carrying her predictions were read this morning (ASSUMPTIONS O104, O105), one bears on claim 5
+and Update 41's reading of the leftover, the other on Update 44's replacement for piece 5. Both failed her
+prediction in part; both are recorded as the rules require, before anything new is proposed.
+
+- **T51 (paper 2; the scrap against cooling time, on the fair clock): CLIFF.** Her GENTLE fails, and so does ours.
+  In 1,024-point sheets that opened from several seeds, the curled four-point columns, the relic of paper 2, fall
+  from 2.1 per sheet to 0.1 as the cooling slows from 10,000 to 300,000 fair sweeps, two thirds lost in the first
+  decade and twelve in thirteen in the second. **But the energy left falls far more slowly** (as the cooling time to
+  the power −0.34, from 4 % of the release to 1.3 %), because pieces of two and eight points, about one and a quarter
+  and one fifth per sheet, are **unchanged by the cooling time** over the whole range. They have not been read from
+  their positions and are not named (O104 lists the candidates: the flickering swapped pair of O82, or the far
+  links of O99 that may be seams between patches that opened from different seeds). *What this does to Update 41
+  (ours):* "what a leftover dark matter needs is that nearly all of it heals, which is what slower cooling does" is
+  true of the columns and, as far as these runs reach, false of the smaller pieces; the extrapolated time for the
+  energy left to reach the birth share is 10¹⁸ fair sweeps, which is to say never in this toy. If the pieces are seams,
+  their number is set by the seeds and not by the cooling, and the leftover-as-dark-matter reading would rest on them
+  and on nothing the cooling can change. **The fair clock's first test as a prediction (P1) failed at one of its two
+  points**: on that clock the large sheet loses its columns sooner than the 96-point sheet did. The size check (P2)
+  held from 512 to 2,048 points.
+- **T53 (piece 5; her spaghetti X in a warm bath, untied): ADVANCES ONLY at every length and both λ; SEVERAL.** Her
+  OPENS IN A WINDOW fails everywhere; her SEVERAL holds. The first curled direction opens at every bath, even the
+  coldest, from several places in the long torus, and the space then rests on the one-curled rung. The second direction
+  opened only in a minority of replicas, at the two shorter lengths and only at λ = 1.40, in baths warm enough to
+  damage the space afterwards; at λ = 1.25 never, at L = 72 never. *Ours, unverified:* the bath that crosses the
+  second wall is the bath that takes flat space apart, so in this family a steady bath cannot do what Update 44's
+  replacement asked of it, unless the true barrier is lower than the single move suggests, which is what T54 prices.
+- **Rule 11, second use on piece 5.** Previous claim (hers, Updates 39, 42; the replacement of Update 44): X is one
+  connected piece with a direction already open, unstable enough to burp at once from several seeds, each push
+  supplied in turn by a bath. Failed because: the bath opens the first direction and not the second before it damages
+  the space, at every length and both curling costs run (O105). Replacement: **hers to propose; none is written here.**
+  New falsification test: T54 as drafted, with her prediction (CRITICAL PATCH) and its held-out size already
+  recorded; and, if she chooses a tie, the reservoir test with it (O89, O94).
+- **Also recorded.** The P1 failure is a result about the fair clock, not about the hypothesis: the clock was
+  adopted as the fair way to compare sizes (Update 41), and its one prediction so far missed by 0.2 at one point and
+  held at the other. Whether to keep it for new kinetic runs is hers; nothing already scored changes either way.
+- **What is asked of the author, in order.** (1) Her replacement for piece 5's mechanism, or her decision to let T54
+  decide it. (2) Whether the pieces of two and eight are to be read from their wiring before paper 2 is rewritten
+  (ours: yes; it is exact and cheap, and it decides what the scrap is).
 
 ## The target ("the spot")
 
