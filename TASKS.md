@@ -587,7 +587,13 @@ is the slab). Item 1 above proceeds on her prediction (SEAM). New, ahead of item
   Batch jobs (`cloud/queue/2026-10-09_t56_stage1.txt`). To read: `t56_*` in `cloud/fetch/request.txt`, accept, then
   `python scripts/analyse_t56.py`; then write the held-out prediction as a dated amendment and run
   `python scripts/make_t56_configs.py --held-out` for stage 2.*
-- **T54 under the tie** as well as untied (Amendment 1).
+- **T54 under the tie** as well as untied (Amendment 1). *Stage 1 (L = 8, 12) computing on the laptop from 06:52 ET
+  (Amendment 2 fixed the patch; Amendment 3 disclosed that the tied case ran before her confirmation); her held-out
+  prediction (CRITICAL PATCH, small) recorded 06:58 ET; then the L = 16 prediction as a dated amendment, then L = 16.*
+- **T57, her fold mechanism under the tie** (VISION Update 51; PREREGISTRATION T57): T34's protocol (flat six-link
+  space, sealed, concentrated energy) tied and untied, λ = 1.10 and 1.25, energies up to twice one direction's worth;
+  her prediction RE-CURLS, ours MELTS or HEALS; 16 Batch jobs launched 2026-10-09 (`cloud/queue/2026-10-09_t57.txt`).
+  To read: `t57_*` in `cloud/fetch/request.txt`, accept, `python scripts/analyse_t57.py`.
 
 Owed by the owner: her prediction for T56 once its design is written; her tied T54 prediction (inferred CRITICAL
 PATCH); whether the fair clock stays for new kinetic runs after P1's miss; the open items of Update 44. Her replacement

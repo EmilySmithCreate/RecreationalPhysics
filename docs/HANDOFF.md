@@ -30,6 +30,11 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    the last", with four untied controls), the longest about seven hours. To read: `t56_*` in `cloud/fetch/request.txt`,
    accept, `python scripts/analyse_t56.py`; then write the held-out prediction as a dated amendment under T56 and run
    `python scripts/make_t56_configs.py --held-out` for the 32 stage-2 cells (L = 16 and 72), which run only after that.
+   **T57, launched about 07:27 ET** on her prediction (RE-CURLS; VISION Update 51): 16 Batch jobs, T34's protocol
+   under her tie with untied controls (`cloud/queue/2026-10-09_t57.txt`); read with `scripts/analyse_t57.py` after
+   `t57_*` is fetched and accepted. **T54 stage 1** (L = 8, 12, exact) is computing on the laptop (log in the session
+   scratchpad; it writes `results/t54_patch_stage1.csv` when done); then the held-out amendment, then L = 16 by a
+   config of its own.
 4. **Read on 9 October** (ASSUMPTIONS O104, O105, O107; VISION Updates 46 to 48; the "Reading" subsections of T51,
    T53 and T55; TASKS, the 9 October section): **T51 CLIFF** (the columns heal off a cliff as the cooling slows; P1,
    the fair clock, fails at one point of two; P2 holds); **T53 ADVANCES ONLY** at every (L, λ), **SEVERAL** (the
