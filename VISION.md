@@ -1381,6 +1381,31 @@ the first exact numbers say something plain.
 - **Her prediction for T54's held-out size:** "critical patch, I'm thinking small but not sure." Recorded before
   L = 16 is computed.
 
+Update 50 (2026-10-09, 07:06 ET by the clock): **DECISION (the author's): the story in which the order of three
+openings sets the three releases is set aside; the claim at the head of the programme page is revised to the
+current best guess between the vision and the measurements.** Her words, on reading the claim's sentence "X's three
+curled directions are alike, so which opens first is chance, and the order sets what each release becomes. The first
+becomes dark energy ... The other two become ordinary matter and radiation ... and dark matter": "seems like this needs
+updating. please update according to current best guesses between vision and measurements. It doesn't seem this idea
+held at all."
+
+- **What is set aside:** the order defining the kind of release (Update 32); the ledger of three releases (Update 33,
+  position 1); the order with dark matter free and ordinary matter paying for time (Update 36); "the first direction to
+  open releases dark energy" and "which of the other two is ordinary matter and which dark matter" (Update 41). *Why,
+  from the measurements (ours):* with equal curling costs every direction releases the same (O71); no tie or push
+  opened the three in a cascade (T44 to T49, O103 (i)); the tie she chose on 9 October releases everything at the last
+  opening (O89, Update 47); and with her slab as X only one opening remains at the birth, so there is no order to set
+  anything (Update 47).
+- **What stands:** dark energy as the energy of space itself (Update 41), with its source open (Update 42's "perhaps
+  because it is already open" is a candidate, not a claim); the scrap as knots of fixed energy whose number is set at
+  the opening (O107); dark matter open between the scrap (Update 16) and something else; the tie and the slab (Update
+  47); the push, the front, the burp, the return to the black hole, the conserved energy, the cycle and the quantum
+  sentence, with the rung-3a result added to the last (counting alone is not enough).
+- **The revised claim**, as now on the programme page and in `docs/papers/programme_draft.md`, is the assistant's
+  assembly of her positions in her phrases, replacing only the sentences set aside; it is hers once she confirms or
+  edits it, and the page says so under it. The numbered claims 1 to 6 at the head of this file are untouched: the
+  three-share story was never in them.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
