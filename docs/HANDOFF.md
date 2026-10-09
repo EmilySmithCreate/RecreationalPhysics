@@ -25,10 +25,11 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    **Running on 9 October:** one resubmitted T53 cell (`t53_l72_lam125_g30`, `cloud/queue/2026-10-09_t53_resubmit.txt`;
    about thirteen hours); and T52 (the hidden count) on the laptop, restarted at 05:12 ET with the runner's new
    `--resume` (its 5 October run had died at 66 rows), log in the session scratchpad; it has days to go, no verdict
-   until it finishes. **Written, tested and waiting for the owner's prediction before launch: T56** (the slab and the
-   rod in a warm bath under her tie "all at the last"; 68 stage-1 configs `configs/t56_*.json` exist; the queue
-   manifest is written and pushed only after her prediction is in PREREGISTRATION T56; then the 32 held-out cells
-   after stage 1 is read and the held-out prediction committed).
+   until it finishes. **T56 stage 1, launched 06:43 ET** on the owner's prediction ("opens into one flat space"):
+   68 Batch jobs (`cloud/queue/2026-10-09_t56_stage1.txt`; the slab and the rod in a warm bath under her tie "all at
+   the last", with four untied controls), the longest about seven hours. To read: `t56_*` in `cloud/fetch/request.txt`,
+   accept, `python scripts/analyse_t56.py`; then write the held-out prediction as a dated amendment under T56 and run
+   `python scripts/make_t56_configs.py --held-out` for the 32 stage-2 cells (L = 16 and 72), which run only after that.
 4. **Read on 9 October** (ASSUMPTIONS O104, O105, O107; VISION Updates 46 to 48; the "Reading" subsections of T51,
    T53 and T55; TASKS, the 9 October section): **T51 CLIFF** (the columns heal off a cliff as the cooling slows; P1,
    the fair clock, fails at one point of two; P2 holds); **T53 ADVANCES ONLY** at every (L, λ), **SEVERAL** (the

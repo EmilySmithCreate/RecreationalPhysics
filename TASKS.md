@@ -582,7 +582,11 @@ is the slab). Item 1 above proceeds on her prediction (SEAM). New, ahead of item
 - **T56, the reservoir test with the tie**: the connected slab (4 × L × L, one curled) and the rod (4 × 4 × L) in a
   steady bath under "all at the last", λ scanned, g from cold to the damage edge, with a held-out size; needs a thermal
   chain with a tie table (`sealed_tie_d` has the sealed one; the bath one is to be built with rule-6 tests) and the
-  exact walls of the tie at each λ first. Pre-registered with her prediction before any run.
+  exact walls of the tie at each λ first. Pre-registered with her prediction before any run. *Built, pre-registered
+  (O106 for the walls) and launched 2026-10-09, 06:43 ET: her prediction "opens into one flat space"; stage 1, 68
+  Batch jobs (`cloud/queue/2026-10-09_t56_stage1.txt`). To read: `t56_*` in `cloud/fetch/request.txt`, accept, then
+  `python scripts/analyse_t56.py`; then write the held-out prediction as a dated amendment and run
+  `python scripts/make_t56_configs.py --held-out` for stage 2.*
 - **T54 under the tie** as well as untied (Amendment 1).
 
 Owed by the owner: her prediction for T56 once its design is written; her tied T54 prediction (inferred CRITICAL
