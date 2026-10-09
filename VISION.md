@@ -1243,6 +1243,31 @@ is X.
 - **Consistency.** Her instruction of the same hour: "consistency is important to me." Every page found saying
   something the record no longer says was brought into line or given a banner (O103 (k)).
 
+Update 45 (2026-10-08, 05:51 ET by the clock): **DECISION (the author's, "Yes proceed"): three working methods
+adopted from an outside project.** Why this page changes: the author read a public account of an AI-assisted search
+for a planet in telescope data, in which the agents did the labour, the person chose the questions and the pass/fail
+rules, fresh read-only sessions and a second model reviewed the work, a whole year of data was held back and predicted
+from the other two, and 36 catalogs were searched before the signal was called unreported. She asked which of its
+methods this programme lacks. Most it already has (pre-registration, rules 10 to 13, corrections kept visible, the
+discreteness check on two-hump histograms). Three it did not, and she adopted them:
+
+- **The red-team pass is done by a fresh, read-only reviewer** (CLAUDE.md rule 12, second half): no history from the
+  work, read-only access, a different model where one is available, given the repository and the question but never the
+  conclusions.
+- **A held-out size for every size claim** (rule 14): fit on the smaller sizes, write a number with a range for the
+  largest, score the size verdict there only. This is the programme's version of the held-back year. It is weaker than
+  the original, and said so: there the hidden year was real data the analysis could not touch; here the held-out size
+  is another run of the same model.
+- **A written search behind every "we have not found"** (rule 15), on a template in `docs/reading/notes/`.
+
+Not adopted, with the reason: proofs checked by a proof assistant (Lean), as in recent published AI mathematics. The
+exact results here are already checked by brute force in the tests, which covers most of the same risk at far lower
+cost. It comes back if an exact claim is ever too large to enumerate.
+
+*Ours, exact:* paper 1 already contains one sentence that rule 15 now covers ("A different kind of change has not, as
+far as we have found, been studied in this model"); its search note is owed before any revision of paper 1 is posted
+(TASKS, the reviews of 6 October, item 9).
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
