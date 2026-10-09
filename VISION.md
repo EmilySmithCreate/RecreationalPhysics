@@ -1404,7 +1404,8 @@ held at all."
 - **The revised claim**, as now on the programme page and in `docs/papers/programme_draft.md`, is the assistant's
   assembly of her positions in her phrases, replacing only the sentences set aside; it is hers once she confirms or
   edits it, and the page says so under it. The numbered claims 1 to 6 at the head of this file are untouched: the
-  three-share story was never in them.
+  three-share story was never in them. **Confirmed by the author, 2026-10-09, 07:33 ET by the clock ("confirmed").
+  The revised claim is hers.**
 
 Update 51 (2026-10-09, 07:22 ET by the clock): **the author's mechanism for a black hole's fold, in her words, and
 the test it gets.** Why this page changes: asked whether the five failed fold tests say a black hole cannot curl one

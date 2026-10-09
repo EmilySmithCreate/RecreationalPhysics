@@ -53,7 +53,7 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    under rule 12, which another session began on 9 October for paper 1: `docs/papers/curled_torus/
    author_feedback_2026-10-09.md`, untracked, to be checked against the record as O103 did). The programme artifact
    "A Phase-Changing Reality" was republished from the 9 October draft (Versions 58 to 60, 9 October, shortly after
-   07:00 ET; Version 59 carries the revised claim of Update 50, which the owner has still to confirm or edit).
+   07:00 ET; Version 59 carries the revised claim of Update 50, confirmed by the owner at 07:33 ET; Version 62 says so).
 6. **The rules that changed most recently:** CLAUDE.md rules 10 to 15 (6 and 8 October): four kinds of statement; the
    four questions before any patch, in the form "previous claim → failed because → replacement → new falsification
    test"; a fresh read-only red-team reviewer at each milestone; outside theories as targets; a held-out size for every
