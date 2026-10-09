@@ -3896,3 +3896,77 @@ against the 64 of the move): if damage comes sooner than untied at the same g, t
 Held-out size: above. No "we have not found" is claimed. A milestone: if the slab OPENS IN A WINDOW into ONE SPACE and
 the control says THE TIE MADE THE DIFFERENCE, a fresh read-only review (CLAUDE.md rule 12) checks the chain, the tie's
 implementation and the reading, and its report becomes an O entry.
+
+
+---
+
+## T57. Does too much concentrated energy curl flat six-link space under the owner's tie? T34's protocol, tied, with controls (piece 11; VISION Updates 47 and 51; ASSUMPTIONS O69, O82, O106; written 2026-10-09, 07:22 ET by the clock, before any run)
+
+### Why
+
+Five tests of the owner's fold (O20, T21, T26, T27 in two directions; T34 and T42 in three) found nothing curled: flat
+space given a lump of energy as random kicks shakes and heals, with a scar or two that flickers. None of them had a
+tie, and none had anything that gathers energy in one place. On 9 October she gave the mechanism in her words (Update
+51): a high amount of energy concentrated in space, then more, until "there is just too much and it has to go somewhere
+and the only mechanism it can go to is curling macrodimensional space itself." Under her tie "all at the last" the
+exact ladder is flat: every rung sits 3a per point above flat space (O106), so curling one direction costs 3a per point
+and the first fold pays the whole price. This run asks her question in her setting: energy concentrated in flat space,
+tied, at energies up to what curling a whole direction would cost and beyond.
+
+**Disclosed.** Exact, known before writing: O106's ladder under the tie; that a damaged point (d > 3) costs no tie under
+the table as implemented, so the tie charges curling and not breaking (T56's caution). Measured before writing: T34
+(every cell MELTED by its rule, no point folded; the "melt" is scars that flicker, O82) and T42 (interchangeable points
+heal). Nothing of this protocol has been run with a tie.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` as T34 ran it (`ftable_per_a` as T45 and T47 part B used it), configs from
+`scripts/make_t57_configs.py` (tests in `tests/test_t57.py`): the flat six-link torus, sealed, the energy given at the
+start and conserved, 50,000 sweeps read every 250, eight replicas per energy, the final graph saved.
+
+- **Tie:** "all at the last", f = (0, a, 2a, 0), a = 4(λ − 1); and the untied control.
+- **λ:** 1.10 and 1.25.
+- **Protocol:** packed (the whole energy in one point's store under the per-vertex bath) and spread (a shared bath of
+  2N stores with the whole energy in one of them), as T34.
+- **Sizes:** N = 216 (6 × 6 × 6) and 512 (8 × 8 × 8).
+- **Energies:** at N = 512, 256, 560, 1060 (T34's three largest), 1600 (about 3aN at λ = 1.25: one direction of the
+  whole space under the tie) and 3200 (twice that); at N = 216, 128, 260, 500, 680 and 1360.
+
+Sixteen Batch jobs (`cloud/queue/2026-10-09_t57.txt`), seeds 20265701 to 20265716.
+
+### Definitions, fixed now (`scripts/analyse_t57.py`, T34's rules imported, tested before any run)
+
+Per replica, from the final block (T34): **folded** = points at d < 3, **melted** = points at d > 3; FOLDED if their sum
+is at least 4 and folded ≥ melted; MELTED if at least 4 and folded < melted; HEALED if under 4. Per cell (tie, λ,
+protocol, N, E): the majority of at least six replicas, else MIXED. **Per group (tie, λ):** RE-CURLS if some cell has a
+FOLDED majority; MELTS if none has and some cell has a MELTED majority; HEALS if every cell is HEALED; else MIXED. The
+tied groups are the test; the untied groups are the control, read the same way. Reported, not scored, as T34: ONE
+DIRECTION replicas (folded reaches N/3 at some block) and CASCADE (2N/3); the largest folded piece; melt-then-fold;
+and the energy with the tie per point at the end.
+
+No size claim is made (both sizes are reported; the verdict is per group over both), so no held-out size. No "we have
+not found" is claimed. Not a milestone unless RE-CURLS appears; then a fresh read-only review checks it (rule 12).
+
+### Predictions
+
+**The owner's (her words of 9 October, received shortly before 07:22 ET by the clock, recorded before any run):** "i think this is what is happening, or
+close to it. we can get a high amount of energy concentrated in space and then another big growth of energy / there is
+just too much and it has to go somewhere and the only mechanism it can go to is curling macrodimensional space itself."
+Read as: **RE-CURLS** in the tied groups at the largest energies, with ONE DIRECTION reached; "or close to it" noted.
+
+**Ours, unverified:** **MELTS at λ = 1.25 and MELTS or HEALS at 1.10, tied and untied alike**, with no FOLDED replica and
+no ONE DIRECTION. Random kicks from a store do not find the coordinated re-threading that curls a direction (T54's
+patch needs k² switches in step), the cheapest move out of flat space is a loss of squares (damage) in every case, and
+under the tie a damaged point costs nothing where a curled one costs 2a, so the tie makes breaking cheaper than
+curling; more energy means more scars, not a fold. If a FOLDED majority appears anywhere, we are wrong about what
+concentrated energy can do in this family, and the counting half (interchangeable points) and a carrier for a pull
+become the next things to add to it.
+
+### Named or interchangeable points
+
+Named (the table tie runs with named points only). T42's interchangeable result stands beside it.
+
+### What this cannot show
+
+That a black hole does this: the toy has no pull, so nothing in it gathers energy; the energy is placed by hand. Anything
+about gravity. Which direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.

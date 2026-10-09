@@ -1406,6 +1406,27 @@ held at all."
   edits it, and the page says so under it. The numbered claims 1 to 6 at the head of this file are untouched: the
   three-share story was never in them.
 
+Update 51 (2026-10-09, 07:22 ET by the clock): **the author's mechanism for a black hole's fold, in her words, and
+the test it gets.** Why this page changes: asked whether the five failed fold tests say a black hole cannot curl one
+direction of a tied three-dimensional space, the record's answer was no (none of the five had a tie, and none had
+anything that gathers energy in one place), and she gave her mechanism for the test that would ask it. Her words: "i
+think this is what is happening, or close to it. we can get a high amount of energy concentrated in space and then
+another big growth of energy / there is just too much and it has to go somewhere and the only mechanism it can go to is
+curling macrodimensional space itself."
+
+- **Her claim, as a prediction for the toy:** concentrated energy, once there is too much of it for the space to hold
+  any other way, curls a macro direction of the space itself: RE-CURLS at the largest energies.
+- **What is exact under her tie** (O106): every rung of the ladder sits 3a per point above flat space, so under "all at
+  the last" curling one direction costs the same as curling all three, 3a per point; the first fold pays the whole
+  price and the later folds are free. And under the table as implemented a damaged point (more open directions than
+  three) costs no tie, so the tie charges curling and not breaking.
+- **The test:** T57, T34's protocol (flat six-link space, sealed, the energy given at the start and conserved, packed
+  into one point or spread through a bath) under the tie and untied, at λ = 1.10 and 1.25, at energies up to twice
+  what curling one direction of the whole space would cost under the tie, two sizes. Her prediction is recorded in
+  PREREGISTRATION T57 before any run; ours is MELTS or HEALS at every energy, tied and untied, with no direction
+  curled, because random kicks do not find the coordinated re-threading a fold needs and the tie makes breaking
+  cheaper than curling.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
