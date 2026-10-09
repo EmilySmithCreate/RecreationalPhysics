@@ -1225,7 +1225,8 @@ is X.
   directions and releases the whole burp. Failed because: in this family each direction has its own wall and the
   energy ties nothing; a push the size of the cheapest move opens one direction, or one cube, and stops (T33, T40, T44
   to T49; O103 (i)). Replacement (hers, Updates 39 and 42): X is one connected piece with a direction already open,
-  and a bath supplies each push in turn (T53, running). New falsification test: the exact barrier to the next opening
+  and a bath supplies each push in turn (T53, running; *read 2026-10-09: ADVANCES ONLY at every length and both λ, the
+  second direction opening only in a minority before the space is damaged; Update 46*). New falsification test: the exact barrier to the next opening
   of a connected one-open X (T54, a draft): if it rises with the opened patch without bound at every λ at which X is
   stuck, untied and under the tie, no finite push opens all and that branch is abandoned in this family.
 - **Open to her, not decided.** (a) Claim 4's word "first order". The reviews are right that the tube's change is the
@@ -1267,6 +1268,165 @@ cost. It comes back if an exact claim is ever too large to enumerate.
 *Ours, exact:* paper 1 already contains one sentence that rule 15 now covers ("A different kind of change has not, as
 far as we have found, been studied in this model"); its search note is owed before any revision of paper 1 is posted
 (TASKS, the reviews of 6 October, item 9).
+
+Update 46 (2026-10-09, from 05:01 ET by the clock): **T51 and T53 read: the scrap's columns heal off a cliff as the
+cooling slows while smaller pieces do not; the author's "spaghetti" X opens one direction in a bath and not the
+second; rule 11's second use on piece 5, with the replacement hers to propose.** Why this page changes: two
+pre-registered tests carrying her predictions were read this morning (ASSUMPTIONS O104, O105), one bears on claim 5
+and Update 41's reading of the leftover, the other on Update 44's replacement for piece 5. Both failed her
+prediction in part; both are recorded as the rules require, before anything new is proposed.
+
+- **T51 (paper 2; the scrap against cooling time, on the fair clock): CLIFF.** Her GENTLE fails, and so does ours.
+  In 1,024-point sheets that opened from several seeds, the curled four-point columns, the relic of paper 2, fall
+  from 2.1 per sheet to 0.1 as the cooling slows from 10,000 to 300,000 fair sweeps, two thirds lost in the first
+  decade and twelve in thirteen in the second. **But the energy left falls far more slowly** (as the cooling time to
+  the power −0.34, from 4 % of the release to 1.3 %), because pieces of two and eight points, about one and a quarter
+  and one fifth per sheet, are **unchanged by the cooling time** over the whole range. They have not been read from
+  their positions and are not named (O104 lists the candidates: the flickering swapped pair of O82, or the far
+  links of O99 that may be seams between patches that opened from different seeds). *What this does to Update 41
+  (ours):* "what a leftover dark matter needs is that nearly all of it heals, which is what slower cooling does" is
+  true of the columns and, as far as these runs reach, false of the smaller pieces; the extrapolated time for the
+  energy left to reach the birth share is 10¹⁸ fair sweeps, which is to say never in this toy. If the pieces are seams,
+  their number is set by the seeds and not by the cooling, and the leftover-as-dark-matter reading would rest on them
+  and on nothing the cooling can change. **The fair clock's first test as a prediction (P1) failed at one of its two
+  points**: on that clock the large sheet loses its columns sooner than the 96-point sheet did. The size check (P2)
+  held from 512 to 2,048 points.
+- **T53 (piece 5; her spaghetti X in a warm bath, untied): ADVANCES ONLY at every length and both λ; SEVERAL.** Her
+  OPENS IN A WINDOW fails everywhere; her SEVERAL holds. The first curled direction opens at every bath, even the
+  coldest, from several places in the long torus, and the space then rests on the one-curled rung. The second direction
+  opened only in a minority of replicas, at the two shorter lengths and only at λ = 1.40, in baths warm enough to
+  damage the space afterwards; at λ = 1.25 never, at L = 72 never. *Ours, unverified:* the bath that crosses the
+  second wall is the bath that takes flat space apart, so in this family a steady bath cannot do what Update 44's
+  replacement asked of it, unless the true barrier is lower than the single move suggests, which is what T54 prices.
+- **Rule 11, second use on piece 5.** Previous claim (hers, Updates 39, 42; the replacement of Update 44): X is one
+  connected piece with a direction already open, unstable enough to burp at once from several seeds, each push
+  supplied in turn by a bath. Failed because: the bath opens the first direction and not the second before it damages
+  the space, at every length and both curling costs run (O105). Replacement: **hers to propose; none is written here.**
+  New falsification test: T54 as drafted, with her prediction (CRITICAL PATCH) and its held-out size already
+  recorded; and, if she chooses a tie, the reservoir test with it (O89, O94).
+- **Also recorded.** The P1 failure is a result about the fair clock, not about the hypothesis: the clock was
+  adopted as the fair way to compare sizes (Update 41), and its one prediction so far missed by 0.2 at one point and
+  held at the other. Whether to keep it for new kinetic runs is hers; nothing already scored changes either way.
+- **What is asked of the author, in order.** (1) Her replacement for piece 5's mechanism, or her decision to let T54
+  decide it. (2) Whether the pieces of two and eight are to be read from their wiring before paper 2 is rewritten
+  (ours: yes; it is exact and cheap, and it decides what the scrap is).
+
+Update 47 (2026-10-09, 06:15 ET by the clock): **DECISION (the author's): the tie is "all at the last"; the untied
+runs are a stepping stone; and the stand-in that matches her shape is the slab, two directions open and one curled.**
+Her words, from the conversation of this morning, put in order. Why this page changes: the reservoir test (O94) has
+waited since 5 October on her choice of tie, T54's tied case waited on the same choice, and her shape statement
+changes which stand-in is X and what piece 6 asks.
+
+- **The tie: "All at the last, I think."** Under S1 the form is fixed before any run: f = (0, a, 2a, 0) per point with
+  a = 4(λ − 1), the shape O89 wrote down on 5 October: a point with one or two directions open costs as much extra as
+  the curled directions it still holds would release, so nothing is released until a point's last direction opens,
+  and then the whole 3a. No constant to fit. Her "the three go together" of Update 22, in an energy. The model with
+  it is our family, never CQG.
+- **Untied is a stepping stone.** "I really only care about tied. Untied doesn't make sense to me anyway, it is just a
+  stepping stone." *Ours:* the untied verdicts stand as scored (T30 to T53); from here the hypothesis's runs in three
+  and four directions carry the tie, and an untied cell is a control.
+- **Her shape.** "3D, one curled, two open: a slab rolled in one direction. This is actually what aligned to my shape
+  intuition, just was not changing from original tube in my description." Recorded as her statement, not a decision:
+  the stand-in for X that matches her picture is the slab, 4 × L × L, two directions open and one curled, which is
+  the state the model lands on from both ends (T48, T53). *Ours, exact (O89):* under "all at the last" the slab's
+  single-move wall is 44.5, 30.4 and 4.0 at λ = 1.02, 1.10 and 1.25, with a release of 3a = 0.24, 1.2 and 3 per
+  point; under "all at the second" the slab would be the end state (its last direction never opens), so her shape
+  and her tie together say the slab is X and not spacetime. *Ours, unverified:* with the slab as X only one opening
+  remains at the birth, so piece 6's three shares would not come from the order of openings; what they come from is
+  open again.
+- **Her story, scored** (her words of this morning, put in order, each step set against the record): warmth makes
+  seeds (measured, T37, T53); the last curled direction opens and releases the lump, so all three are open (2D yes;
+  3D not from warmth untied, T53; tied, untested on a slab); the new space contains the net energy (the sealed
+  picture; 2D only); the other kinds of matter and energy are the leftover (T55); the energy makes black holes within,
+  re-curled regions, in a stable space (five tries, nothing folds; waits on a carrier for a pull, piece 8).
+- **On a put-in rule.** "Once it is in we can still find predictions to do that make the case persuasive, assuming
+  this does seem to make the math come together." *Ours:* agreed, and the bar is rule 13's: the tie's constants
+  pinned by one requirement, then predictions it was not fitted to, at a held-out size (rule 14).
+- **Gravity's carrier.** Her question of this morning, whether a carrier for a pull can be added to the toy and
+  tested in isolation: yes, it is the decision of Update 40 (a quantity on the points), its brief is not written, and
+  it changes nothing exact. Next on piece 8 after the tie.
+- **What runs next, pre-registered with her prediction:** the connected slab and the rod in a steady bath under
+  "all at the last", λ scanned, with a held-out size (T56, the reservoir test of O94); T54 computed under the tie as
+  well as untied. T55 (the pieces of two and eight) is computed on her prediction, SEAM.
+
+Update 48 (2026-10-09, from 06:32 ET by the clock): **T55 read: the pieces that no cooling removes are knots, not
+seams; the author's SEAM fails.** Why this page changes: Update 46 held two readings of the leftover open (a scar that
+rates would remove, or a seam set by the seeds) and the exact reading (O107) is neither. Every piece of two and of
+eight in 600 sheets is a dip, a stuck arrangement of its own with every single move out costing 11, and none carries a
+link that joins distant places. Read from the wiring they are two known objects: the pieces of two are the quarters
+of an eight-point knot of two kinds of point (20 units; in kind O15's twist), and the pieces of eight are double
+columns of the tube (8 units). **What this does to claim 5 (ours):** the leftover of an opening from several seeds is
+a sprinkle of knots of fixed energy whose number is set at the opening, not by the cooling, and the slowest cooling
+run leaves about one knot of each kind in three to five sheets of 1,024 points. That is the structured leftover of
+Update 19, exact. Whether its number per volume can be made as small as the birth share needs is the seed question
+(T17, T37), not a cooling question, and it is not answered. *Ours, unverified:* no seam forms because on the tube the
+way two columns join when they open is fixed by the tube itself, so neighbouring patches cannot disagree; a seam would
+need an opening with a choice to make, which this one lacks.
+
+Update 49 (2026-10-09, from 06:58 ET by the clock): **T56 launched on the author's prediction; T54's first exact
+numbers under her tie; her prediction for T54's held-out size.** Why this page changes: the two tests that decide
+piece 5 under the tie she chose this morning are now running or computing, with her predictions on the record, and
+the first exact numbers say something plain.
+
+- **T56** (the slab and the rod in a warm bath under "all at the last", with untied controls): 68 cloud jobs
+  launched at 06:43 ET on her prediction, "opens into one flat space". The held-out sizes run after the smaller ones
+  are read and a number is written for them (rule 14).
+- **T54, exact, at the smallest size (L = 8), not the verdict** (the verdict is read at the held-out size L = 16
+  after L = 12 fixes the prediction). The barrier against the patch's size is a pure quadratic in k with nothing left
+  over. Untied, the critical patch is about 7.5 columns at λ = 1.25 and 19.5 at 1.10, with barriers of 225 and 608:
+  unreachable from warmth, which is what T48 and T53 saw. Under her tie it is about 2 columns at λ = 1.20 (barrier
+  45), 1.5 at 1.25 (27), 3.3 at 1.15 (77) and 5.5 at 1.10 (145). *Ours, exact:* the tie turns a climb no bath can make
+  into a small one; whether a bath then makes it while sparing flat space is T56's question. One disclosure, recorded
+  in T54's Amendment 3: the tied stage-1 numbers were computed before she had confirmed her tied prediction.
+- **Her prediction for T54's held-out size:** "critical patch, I'm thinking small but not sure." Recorded before
+  L = 16 is computed.
+
+Update 50 (2026-10-09, 07:06 ET by the clock): **DECISION (the author's): the story in which the order of three
+openings sets the three releases is set aside; the claim at the head of the programme page is revised to the
+current best guess between the vision and the measurements.** Her words, on reading the claim's sentence "X's three
+curled directions are alike, so which opens first is chance, and the order sets what each release becomes. The first
+becomes dark energy ... The other two become ordinary matter and radiation ... and dark matter": "seems like this needs
+updating. please update according to current best guesses between vision and measurements. It doesn't seem this idea
+held at all."
+
+- **What is set aside:** the order defining the kind of release (Update 32); the ledger of three releases (Update 33,
+  position 1); the order with dark matter free and ordinary matter paying for time (Update 36); "the first direction to
+  open releases dark energy" and "which of the other two is ordinary matter and which dark matter" (Update 41). *Why,
+  from the measurements (ours):* with equal curling costs every direction releases the same (O71); no tie or push
+  opened the three in a cascade (T44 to T49, O103 (i)); the tie she chose on 9 October releases everything at the last
+  opening (O89, Update 47); and with her slab as X only one opening remains at the birth, so there is no order to set
+  anything (Update 47).
+- **What stands:** dark energy as the energy of space itself (Update 41), with its source open (Update 42's "perhaps
+  because it is already open" is a candidate, not a claim); the scrap as knots of fixed energy whose number is set at
+  the opening (O107); dark matter open between the scrap (Update 16) and something else; the tie and the slab (Update
+  47); the push, the front, the burp, the return to the black hole, the conserved energy, the cycle and the quantum
+  sentence, with the rung-3a result added to the last (counting alone is not enough).
+- **The revised claim**, as now on the programme page and in `docs/papers/programme_draft.md`, is the assistant's
+  assembly of her positions in her phrases, replacing only the sentences set aside; it is hers once she confirms or
+  edits it, and the page says so under it. The numbered claims 1 to 6 at the head of this file are untouched: the
+  three-share story was never in them. **Confirmed by the author, 2026-10-09, 07:33 ET by the clock ("confirmed").
+  The revised claim is hers.**
+
+Update 51 (2026-10-09, 07:22 ET by the clock): **the author's mechanism for a black hole's fold, in her words, and
+the test it gets.** Why this page changes: asked whether the five failed fold tests say a black hole cannot curl one
+direction of a tied three-dimensional space, the record's answer was no (none of the five had a tie, and none had
+anything that gathers energy in one place), and she gave her mechanism for the test that would ask it. Her words: "i
+think this is what is happening, or close to it. we can get a high amount of energy concentrated in space and then
+another big growth of energy / there is just too much and it has to go somewhere and the only mechanism it can go to is
+curling macrodimensional space itself."
+
+- **Her claim, as a prediction for the toy:** concentrated energy, once there is too much of it for the space to hold
+  any other way, curls a macro direction of the space itself: RE-CURLS at the largest energies.
+- **What is exact under her tie** (O106): every rung of the ladder sits 3a per point above flat space, so under "all at
+  the last" curling one direction costs the same as curling all three, 3a per point; the first fold pays the whole
+  price and the later folds are free. And under the table as implemented a damaged point (more open directions than
+  three) costs no tie, so the tie charges curling and not breaking.
+- **The test:** T57, T34's protocol (flat six-link space, sealed, the energy given at the start and conserved, packed
+  into one point or spread through a bath) under the tie and untied, at λ = 1.10 and 1.25, at energies up to twice
+  what curling one direction of the whole space would cost under the tie, two sizes. Her prediction is recorded in
+  PREREGISTRATION T57 before any run; ours is MELTS or HEALS at every energy, tied and untied, with no direction
+  curled, because random kicks do not find the coordinated re-threading a fold needs and the tie makes breaking
+  cheaper than curling.
 
 ## The target ("the spot")
 

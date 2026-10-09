@@ -3301,6 +3301,20 @@ cliff further out (Amendment 3, "the endpoint of the fall").
 
 Nothing else in T51 changes.
 
+### Reading, 2026-10-09, from 04:55 ET by the clock (ASSUMPTIONS O104)
+
+The 91 runs finished 6 October, fetched 9 October, checked against their committed configs (`scripts/accept_inbox.py`)
+and read with `scripts/analyse_t51.py`; the 600 saved final graphs re-read from their wiring agree with their rows. Every
+tube opened; no replica was MELTED OR DEFECTED. **Verdict: CLIFF.** R(10,000) = 0.347 ± 0.040 and R(30,000) = 0.079 ±
+0.035, the second below 0.25. **The owner's GENTLE fails; ours (GENTLE) fails.** P1 (the fair clock) **FAILS** at one of
+its two points: C(30,000)/C(10,000) = 0.78 ± 0.05 against T25's 0.99; C(100,000)/C(10,000) = 0.35 ± 0.04 against 0.47
+holds. P2 (the size check) **HOLDS**: 0.0107, 0.0083, 0.0093 columns left per column of tube at L = 128, 256, 512, pair
+by pair within two standard errors. Amendment 3's items (`scripts/analyse_t51_amendment3.py`, written and tested
+today): columns per sheet fall as t^(−0.82 ± 0.13), the frozen share as t^(−0.34 ± 0.06), from 0.040 at 10,000 to
+0.013 at 300,000 fair sweeps; the extrapolated time to O89's share at 1 MeV is 1.4 × 10¹⁸ fair sweeps; from the wiring,
+the pieces of two and eight points do not fall with the cooling time while the columns do; at L = 512, 7 of 40 sheets
+end as two spaces. The rule-11 answers are in O104; the replacement is the owner's.
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
@@ -3494,6 +3508,19 @@ times are compared between couplings, not between sizes.
 explanation of the verdicts. The inferred prediction is now hers: OPENS IN A WINDOW at both λ and every length, sooner at
 1.40; SEVERAL. Nothing else in T53 changes.
 
+### Reading, 2026-10-09, from 04:55 ET by the clock (ASSUMPTIONS O105)
+
+29 of 30 runs finished 6 October, fetched 9 October, checked against their committed configs and read with
+`scripts/analyse_t53.py`; the cell L = 72, λ = 1.25, g = 3.0 failed on Batch before it started and was resubmitted today
+(`cloud/queue/2026-10-09_t53_resubmit.txt`). **The window: ADVANCES ONLY at every (L, λ)**, the (72, 1.25) verdict
+provisional until that cell lands. No cell has an OPENS majority; no replica at λ = 1.25 opened its second direction at
+any length or bath; none at L = 72 did at either λ. At λ = 1.40 the second direction opened in a minority at L = 18
+(2, 1, 4 of 8 at g = 2.0, 2.5, 3.0) and L = 36 (1 of 8 at 2.5 and 3.0), in baths that then damaged the space. **One place
+or several: SEVERAL** (median 2 at L = 72, 1 at L = 18). **The owner's OPENS IN A WINDOW fails everywhere; her SEVERAL
+holds.** Ours: ADVANCES ONLY at λ = 1.25 holds; the window at λ = 1.40, L = 18 fails by the letter (MIXED, never a
+majority); "narrows or closes at L = 72" holds; ONE fails. The rule-11 answers are in O105; the replacement is the
+owner's.
+
 
 ---
 
@@ -3586,3 +3613,360 @@ required.
 Anything about the parent model (Gate C open; Update 24's caveat). The dynamics: whether a bath crosses the barrier
 is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89). The critical patch on a
 sheet much larger than the held-out size, beyond what the fit's form assumes.
+
+### Amendment 1, 2026-10-09, 06:15 ET by the clock, before any computation: the tied case
+
+The owner chose the tie on 9 October (VISION Update 47): "all at the last", f = (0, a, 2a, 0) per point with
+a = 4(λ − 1), and said the untied runs are a stepping stone. So T54 is computed twice at every λ and size, untied (as
+written, the control) and under that tie, with the same patches, the same fit and the same held-out procedure for
+each; the tied case is the one her picture needs. Under the tie a point inside the opened patch (three directions
+open) costs 0 and releases 3a instead of a, and a point on the seam, with one or two directions open, is charged a or
+2a, so the fit's a and b change and the exact walls of O89 say where the slab's single move stands (44.5, 30.4, 4.0 at
+λ = 1.02, 1.10, 1.25). **The owner's prediction for the tied case is inferred as CRITICAL PATCH, as for the untied
+case, until she confirms or replaces it before the tied computation.** Ours for the tied case: CRITICAL PATCH at
+λ = 1.10 and 1.25 with a smaller patch and a lower barrier than untied, and at λ = 1.25 possibly FIXED WALL (the
+single move of 4 may be the whole barrier when the release per point is 3). The untied computation may proceed first.
+
+### Amendment 2, 2026-10-09, 06:50 ET by the clock, before any computation at a pre-registered size: the exact definitions of "patch" and "grows", the script, and two disclosures
+
+**The patch** (`scripts/exact_t54_patch.py`, tests in `tests/test_t54.py`; written and tested on L = 6 and 8 only, sizes
+outside the pre-registration). The slab is `cqg_d.torus([4, L, L])`, axis 0 the curled direction, a ring of four at
+each column (x, y). **Read from T48's saved end states on 9 October (O91's runs; exploratory, prints only):** every link
+the opening created joins a point to the point two steps round the ring in the neighbouring column, and every link it
+removed was a ring link; the rings become helices. One switch does that for a pair of rings in neighbouring columns
+(x, y) and (x + 1, y): remove (3, x, y)-(2, x, y) and (0, x+1, y)-(1, x+1, y); add (0, x+1, y)-(2, x, y) and
+(3, x, y)-(1, x+1, y). **A patch of size k is that switch applied to every pair (x, x + 1) for k values of x and every
+one of k rows:** k² switches over k + 1 columns and k rows; the rings inside are cut twice and open (d = 3), the rings
+at the two ends of each row are cut once (the seam). Applied to every pair of every row it gives flat space exactly
+(H = 0, every point at d = 3; tested at L = 6 and 8). ΔH(k) = E(patch) − E(slab), E = H untied and H + T_f tied.
+**"Grows"** is read two ways, both reported: from ΔH(k) itself (the verdict words as written, over the k computed, with
+a fourth word, RISES AGAIN, reported and not scored, for a ΔH that falls and then rises within the k computed, which a
+patch wrapping round the torus can produce); and from the cheapest single switch out of each patch state (every switch
+whose first point lies within 3 links of a point the patch changed, priced exactly by `exact_walls_tie_d.kinds`), so
+that a route cheaper than the construction's own next step shows as a move costing less than ΔH(k + 1) − ΔH(k).
+
+**Disclosure 1.** The chain's cheapest single exit from the slab is not the helix switch. Enumerated on 4 × 8 × 8
+today: the kind (ΔS = −6, ΔX = −12; 36 at λ = 1.25 untied, O106's wall) is a swap of the same ring link between two
+rings in *diagonally* neighbouring columns, (x, y) and (x + 1, y + 1); the helix switch between orthogonal neighbours is
+of kind (−6, −8), 56 at λ = 1.25. So the construction's first step costs more than the chain's first move, and the
+construction is an upper bound on the barrier along the wiring T48's openings end in; the cheapest-move column is what
+says whether a cheaper seam exists at each k. Which seam the chain itself uses is not known and is not claimed.
+
+**Disclosure 2.** On L = 8 at λ = 1.25 untied (outside the pre-registered fit, which needs L = 8 *and* 12 together),
+ΔH(k) read 56, 104, 144, 176 for k = 1 to 4 while the construction was being checked. These four numbers were seen
+before this amendment was written and are recorded here so that they cannot later be presented as a prediction. The
+stage-1 fit, the held-out prediction and the verdicts are computed after this amendment is committed, by the script,
+and nothing else has been computed at any pre-registered size.
+
+**The tied λ.** Amendment 1 computes the tied case at the draft's λ (1.10, 1.25, 1.40). T56's window under the tie lies
+at λ = 1.15 to 1.20 (O106), so the tied case is also computed at those two λ, with the same fit and held-out procedure,
+reported beside; the untied case is computed at them too, for the comparison. Config: `configs/t54_patch_stage1.json`
+(L = 8, 12); the held-out size gets its own config after the amendment that names its prediction.
+
+### Amendment 3, 2026-10-09, 06:55 ET by the clock: a process slip, disclosed
+
+Amendment 1 said the tied case would be computed only after the owner confirmed or replaced her inferred prediction
+(CRITICAL PATCH). The stage-1 script computes the untied and tied cases in one pass, and it was started at 06:52 ET
+with both, before she had been asked; the assistant then saw the tied ΔH(k) for L = 8 in the log while it ran. So for
+stage 1 her tied prediction stands as **inferred, not confirmed before the computation**, and a confirmation given now
+is after the fact for L = 8 and 12. What is still clean: the held-out size L = 16 has not been computed in either case,
+and her prediction for it, in both cases, can be given before it is. The untied stage-1 computation was allowed by
+Amendment 1 and is unaffected.
+
+**The owner's prediction for the held-out size, given 2026-10-09, recorded 06:58 ET by the clock, before L = 16 is
+computed in either case and before the L = 12 pass had finished:** "critical patch, I'm thinking small but not sure".
+Read as CRITICAL PATCH at L = 16, untied and tied, with a small critical patch (a few columns) as her lean. The exact
+numbers for the held-out size are written by the pre-registered rule from the stage-1 fit, not by her; her word is
+scored against the verdict at L = 16.
+
+
+---
+
+## T55 (DRAFT, 2026-10-09, 05:12 ET by the clock, before any computation). What are the pieces T51 leaves that no cooling removes? The pieces of two and eight points read from their wiring, exact (paper 2; piece 7; ASSUMPTIONS O104; VISION Update 46)
+
+### Status
+
+A draft. The question, the readings, the verdict words and our prediction are fixed here; the script is to be written and
+tested before any computation, and **the owner's prediction is owed before anything is computed**. Nothing has been
+computed on the saved T51 graphs beyond what O104 reports (sizes, counts, and the pieces of the whole graph).
+
+### Why
+
+T51 (O104) found that as the cooling slows the curled four-point columns heal off a cliff, while connected pieces of
+two points and of eight points not at d = 2 stay at the same number per sheet at every cooling time from a quench to
+300,000 fair sweeps. They hold nearly all the energy left at the slowest cooling. What they are has not been read from
+their positions, and the rule (O88) is to read before naming. Two candidates are on the record: the swapped pair of
+links that flickers on and off when flat space heals (O82: one switch back returns the energy to exactly 0), and the far
+links of O99 and O102, links whose two ends would otherwise be at least seven steps apart, which sat only inside "other"
+pieces and may be stitches between patches that opened from different seeds. The two have opposite consequences for the
+owner's reading of the scrap as dark matter (Update 16, open again under Update 41): a scar that one move removes is a
+matter of rates and would go in a longer run; a seam between patches cannot be removed by any local move, its number is
+set by the seeds and not by the cooling, and it would be the first topological leftover in this project.
+
+**Disclosed.** Read before this was written: O104's size table (per 80 sheets at L = 256, pieces of two number about
+100 and pieces of eight about 16 at every cooling time); that no replica melted; that the whole graph is one piece in
+78 to 80 of 80 sheets at L = 256 and 33 of 40 at L = 512. No piece has been looked at individually.
+
+### What will be computed (exact; no run; no random number)
+
+On every saved final graph of T51 (`results/t51_*_adj/*.npz`, 600 graphs), for every connected piece of points not at
+d = 2 (`graphity.dimension.piece_labels` on `local_dimension != 2`, as O104 and T37 read them), grouped by size:
+
+1. **The census of the piece:** its size; the local dimension d of each of its points; the squares on each link at its
+   points; the energy above flat held at its points, 16 (1 − squares at the point / 4) + λ (surplus at the point)
+   summed over its points (ours: the per-point split of H = 16(N − S) + 4λX, which sums to H over the graph).
+2. **One move from flat?** Every single switch whose four points include at least one point of the piece is tried
+   (the kernel's move: two points of side 0 each swap one partner; validity by the hard-core rule). The piece is
+   **ONE MOVE FROM FLAT** if some switch lowers the energy and leaves every point of the piece at d = 2 with no new
+   point off d = 2; it is **LOWERABLE** if some switch lowers the energy without that; otherwise **A DIP** (every
+   single move out costs). The cheapest move's cost is reported either way.
+3. **Far links:** for every link at a point of the piece, its way round (the distance between its ends once the link
+   is removed; 3 on a flat sheet; `explore_far_links.way_round`), and whether the piece carries a link with way round
+   7 or more (**FAR**).
+4. **Where it sits:** the graph distance from the piece to the nearest other piece not at d = 2, and to the nearest
+   column, so that clustering can be seen.
+
+### Verdict words, fixed now
+
+Read separately for the pieces of two and the pieces of eight, over all their instances at L = 256 (the verdict's
+length; the other lengths reported beside), as the majority class:
+
+- **SCAR** if a majority are ONE MOVE FROM FLAT (then they are O82's flicker, kinetic, and why they survived
+  300,000 fair sweeps at g = 0.25 is a question about rates, to be answered by counting how often the healing move is
+  offered);
+- **SEAM** if a majority carry a FAR link (a stitch between patches; the seeds set their number);
+- **KNOT** if a majority are A DIP without a FAR link (a small stuck arrangement of its own, like the column, but one
+  that this cooling does not remove);
+- **MIXED** if no class has a majority. SEAM is read before KNOT when both apply.
+
+Reported, not scored: the same for pieces of one, three, four (columns and the rest), five, six and ten; the far-link
+count per sheet against the length; the distance distribution of item 4; and, for every SCAR, the cost of its healing
+move and the number of distinct such moves (the attempt frequency, as paper 1 counts it).
+
+### Predictions
+
+**The owner's (given 2026-10-09, between 05:30 and 06:15 ET by the clock, before any computation): SEAM.** Her words,
+on the pieces that no cooling removes: "this would lean toward complete separation / ie a seam." Read as SEAM for both
+the pieces of two and the pieces of eight (the assistant's reading of "the pieces"; she can narrow it to one size before
+the result is read).
+
+**Ours, unverified:** neither size is SCAR. A move that lowers the energy is always accepted, and at L = 256 each sheet
+was offered about 3 × 10⁶ chain sweeps at g ≤ 0.5 in the slowest cooling; a scar one move from flat would have gone. The
+pieces of eight: **SEAM** (eight points is two columns' worth, the size a mismatch between two opened patches would
+leave). The pieces of two: **KNOT or SEAM**, with no confident call between them; if SEAM, their number per sheet
+should track the number of seeds, which grows with the length (T37), and O104's counts per 1,000 columns (4.3, 5.0,
+3.8 at L = 128, 256, 512) do not yet say.
+
+### Named or interchangeable points
+
+Named, as T51. Exact readings of a saved wiring do not depend on the treatment of points.
+
+### What this cannot show
+
+That a seam is dark matter, or anything about the real universe. Whether a SEAM could be removed by a move larger than
+a single switch (not enumerated). Anything about pieces that healed before the end of the hold. Nothing here changes
+T51's verdict or its predictions as scored.
+
+### Standing requirements of 8 October
+
+No size claim is made (the sizes are reported, the verdict is read at one length), so no held-out size. No "we have not
+found" is claimed. Not a milestone: no review is required, though the reading is cheap enough to repeat by hand.
+
+### Reading, 2026-10-09, computed 06:28 ET, recorded from 06:32 ET by the clock (ASSUMPTIONS O107)
+
+`scripts/analyse_t55.py configs/t55_pieces.json` on the 600 saved T51 graphs: 2,121 pieces, `results/t55_pieces.csv`.
+**KNOT at both sizes at L = 256**: 652 of 652 pieces of two and 103 of 103 pieces of eight are A DIP (cheapest single
+move 11 in nearly all) with no FAR link; 4 pieces of 2,121 carry a far link, none of them of size eight. **The owner's
+SEAM fails at both sizes; ours ("neither is SCAR"; eights SEAM; twos KNOT or SEAM) holds in two parts and fails in one.**
+Read from the wiring: the pieces of two are the quarters of an eight-point knot of two kinds of point (two pairs at d = 1,
+two at d = 3; 20 units at its points), in kind the twist of O15; the pieces of eight are double columns of the tube
+(8 units). Neither falls with the cooling time. The rule-11 answers are in O107.
+
+
+---
+
+## T56. The reservoir test under the owner's tie: does the slab (one curled, two open) open into one flat space in a warm bath, and at which curling cost? (piece 5; VISION Update 47; ASSUMPTIONS O94, O105, O106; written 2026-10-09, 06:25 ET by the clock, before any run)
+
+### Why
+
+T53 (O105) showed that without a tie a warm bath opens the rod's first curled direction and never its second before
+the space is damaged: the one-curled slab is where the model rests from both ends (T48, T53). The owner's answer of
+this morning (Update 47) is her tie, "all at the last": nothing is released until a point's last direction opens, and
+then everything; and her shape for X is that slab. Under this tie the slab's single-move wall is 30.4, 21.6, 12.8 and
+4.0 at λ = 1.10, 1.15, 1.20 and 1.25, against flat space's 64, with a release of 3a = 1.2 to 3.0 per point (O106).
+At λ = 1.15 to 1.20 the ratio of the slab's wall to flat space's is 0.34 to 0.20, better than the two-dimensional
+tube's 0.375 at which it opened cleanly in a bath at g = 1.5 (T7). So at the level of single moves a window should
+exist in which a bath opens the slab and spares the space. This is O94's reservoir test, with the tie chosen. Untied
+runs are, in her words, a stepping stone; four untied cells are kept as the control.
+
+**Disclosed.** Exact, known before writing: the walls of O106 and the rungs' heights (3a per point); that under any
+table a damaged point (d > 3) costs 0, so a point of the slab is relieved of its 2a by breaking as well as by opening
+(O106, caution). Measured before writing: T53's cells (O105), including that at λ = 1.25 untied no replica opened its
+second direction at any g, and that g = 3.5 damaged every cell. The runner and the thermal tied chain were written and
+tested today (`src/graphity/sealed_tie_d.run_chain_table_d`: with the table zero it is `cqg_d.run_chain` draw for draw;
+the incremental tie agrees with full recomputation and with networkx; `scripts/run_curled_bath_tie_d.py` with
+`"tie": "none"` is T53's runner draw for draw). No run of this protocol exists.
+
+### What will be run
+
+`scripts/run_curled_bath_tie_d.py` (tests in `tests/test_t56.py`): the exact torus, six links, named points, the
+thermal chain `run_chain_table_d` (Metropolis in H + T_f) at a fixed coupling g, no push, no box. Two geometries: the
+**slab** 4 × L × L (one curled; the owner's X) and the **rod** 4 × 4 × L (two curled; her spaghetti). The tie
+`"all_at_the_last"`, f = (0, a, 2a, 0), a = 4(λ − 1). λ ∈ {1.10, 1.15, 1.20, 1.25}; g ∈ {1.5, 2.0, 2.5, 3.0}; 8 replicas a
+cell; 200,000 sweeps, read every 1,000; final graphs saved. Seeds from 20265601 in the order `scripts/make_t56_configs.py`
+writes them. Time is the chain's own sweeps, as in T53 (the fair clock's standing for new runs is an open question for the
+owner after T51's P1, O104); fair sweeps (N / 96) are reported beside.
+
+- **Stage 1 (68 cells, launched after the owner's prediction is recorded):** the slab at L = 8 and 12 (N = 256, 576),
+  the rod at L = 18 and 36 (N = 288, 576), every (λ, g), tied: 64 cells; and four untied controls, the slab at λ = 1.20,
+  g = 2.0 and 2.5, both sizes.
+- **Stage 2, the held-out sizes (CLAUDE.md rule 14; 32 cells):** the slab at L = 16 (N = 1,024) and the rod at L = 72
+  (N = 1,152), every (λ, g), tied. Nothing at these sizes runs until stage 1 has been read and the prediction below for
+  them is committed as a dated amendment.
+
+### Definitions, fixed now (`scripts/analyse_t56.py`, written and tested before any run)
+
+Per replica, from its last reading, **T48's rule as T53 used it** (`analyse_t48.read_replica`): DAMAGED if at least a
+quarter of the points are damaged (more open directions than three); else OPENS if at least half the points are at
+d = 3 and the largest connected piece at d = 3 holds at least half of all points; else ADVANCES if the rung holding the
+most points is above the starting rung (the slab starts at d = 2, the rod at d = 1); else STAYS. Per cell the majority,
+else MIXED.
+
+- **The window, per (geometry, L, λ):** as T53. **OPENS IN A WINDOW** if some g has an OPENS majority; else **ADVANCES
+  ONLY** if some g has an ADVANCES majority and none has OPENS; else **DAMAGED** if every g at which anything moved has a
+  DAMAGED majority; else **STAYS**.
+- **One space:** for a cell with an OPENS majority, **ONE SPACE** if, in a majority of its OPENS replicas, the whole
+  graph is one connected piece and the largest piece at d = 3 holds at least nine tenths of the points; else **OPEN WITH
+  SEAMS**. Reported per cell.
+- **The control:** at the slab, λ = 1.20, each untied cell's majority set beside the tied cell with the same (L, g).
+  **THE TIE MADE THE DIFFERENCE** if the tied cell has an OPENS majority and the untied cell does not, in at least three
+  of the four pairs; **NO DIFFERENCE** if the two majorities agree in at least three of four; else **MIXED**.
+- **One place or several.** For the rod, T53's rule as written (`open_regions` at d ≥ 2 at the first reading at which a
+  tenth of the points are at d ≥ 2). For the slab, which starts at d = 2, the same rule one rung up: `open_regions3`, the
+  separate connected pieces of at least 16 points at d = 3, at the first reading at which a tenth of the points are at
+  d = 3. For each geometry, SEVERAL if the median over replicas that OPEN or ADVANCE is 2 or more at the larger
+  stage-1 length and larger there than at the smaller; else ONE.
+- Reported, not scored: the sweep at which half the points first sit at d = 3; the energy H + T_f per point at the
+  end against the flat value 0; the pieces of the whole graph; the share of damaged points over time; and, for every
+  OPENS cell, whether the final space is flat (every point at d = 3) or holds relics, counted from the saved wiring.
+
+### The held-out size (CLAUDE.md rule 14)
+
+The claim at stake is a size claim: whether the window survives as the space grows (T53's untied window closed at the
+longest rod; O88's larger spaces melt sooner). So: from stage 1, at each (geometry, λ), the set of g with an OPENS
+majority at each of the two sizes is read; the prediction for the held-out size, written as a dated amendment before
+stage 2 runs, names for every (geometry, λ) the set of g expected to have an OPENS majority at L = 16 (slab) and L = 72
+(rod), by this rule fixed now: the g's with an OPENS majority at both stage-1 sizes, less any g whose mean damaged share
+at the end at the larger stage-1 size exceeded one eighth (the damage edge moves down with size, O88). **The held-out
+prediction HOLDS at a (geometry, λ) if the predicted set and the measured set at the held-out size differ by at most one
+g; else MISSES.** The window verdict at the held-out size is reported with it. If stage 1 has no OPENS majority anywhere
+for a geometry, the prediction for it is "none", and it HOLDS if the held-out size has none.
+
+### Predictions
+
+**The owner's (given 2026-10-09, recorded 06:43 ET by the clock, before any run): the slab OPENS IN A WINDOW into
+ONE SPACE.** Her words: "what the slab does in the bath = opens into one flat space". She named the verdict only; at
+which λ she did not say, so it is read as OPENS IN A WINDOW with ONE SPACE at every λ run, at both stage-1 sizes. For
+the rod, the control and one-or-several she gave no prediction; ours below stand alone there.
+
+**Ours, unverified (from O106 and O105):** the slab **OPENS IN A WINDOW at λ = 1.15 and 1.20**, around g = 2.0 to 2.5
+at both stage-1 sizes, **ONE SPACE**, with DAMAGED at g = 3.0; at λ = 1.25 OPENS at every g (wall 4: not stuck, so not
+X); at λ = 1.10 ADVANCES ONLY or DAMAGED (wall 30, crossed only near the damage edge). The rod: its first opening (wall
+24 to 29) needs g ≥ 2.5; then ADVANCES ONLY at λ = 1.10 and 1.15 and OPENS IN A WINDOW at 1.20 and 1.25 at g = 2.5 to
+3.0 with damage beside it. The control: THE TIE MADE THE DIFFERENCE. One place or several: SEVERAL for both (the bath
+seeds everywhere). For the held-out sizes we expect the slab's window to survive at L = 16 at λ = 1.15 and 1.20 and the
+rod's to close at L = 72 (as T53's did); the number is written after stage 1 by the rule above, not now.
+
+### Named or interchangeable points
+
+Named. Interchangeable points would weigh the symmetric slab more and slow its first move; not run.
+
+### What this cannot show
+
+Anything about the parent model (Gate C open). That reality has this tie: the tie is a rule put in (Update 47), and
+what this run can show is whether, with it, a stuck X opens into one space from warmth alone while flat space survives,
+which untied it did not. Anything at λ ≤ 1 or above 1.25. The true barrier beyond the single move (T54, tied case).
+Whether a window found here survives at sizes beyond the held-out one. Any share of the release: under this tie all of
+it comes at the last opening, so the three-share question (piece 6) is not touched. The known asymmetry that a damaged
+point costs 0 under the table, which makes breaking a slab point as relieving as opening it by 2a (1.2 to 2 units
+against the 64 of the move): if damage comes sooner than untied at the same g, that is why, and it is reported.
+
+### Standing requirements of 8 October
+
+Held-out size: above. No "we have not found" is claimed. A milestone: if the slab OPENS IN A WINDOW into ONE SPACE and
+the control says THE TIE MADE THE DIFFERENCE, a fresh read-only review (CLAUDE.md rule 12) checks the chain, the tie's
+implementation and the reading, and its report becomes an O entry.
+
+
+---
+
+## T57. Does too much concentrated energy curl flat six-link space under the owner's tie? T34's protocol, tied, with controls (piece 11; VISION Updates 47 and 51; ASSUMPTIONS O69, O82, O106; written 2026-10-09, 07:22 ET by the clock, before any run)
+
+### Why
+
+Five tests of the owner's fold (O20, T21, T26, T27 in two directions; T34 and T42 in three) found nothing curled: flat
+space given a lump of energy as random kicks shakes and heals, with a scar or two that flickers. None of them had a
+tie, and none had anything that gathers energy in one place. On 9 October she gave the mechanism in her words (Update
+51): a high amount of energy concentrated in space, then more, until "there is just too much and it has to go somewhere
+and the only mechanism it can go to is curling macrodimensional space itself." Under her tie "all at the last" the
+exact ladder is flat: every rung sits 3a per point above flat space (O106), so curling one direction costs 3a per point
+and the first fold pays the whole price. This run asks her question in her setting: energy concentrated in flat space,
+tied, at energies up to what curling a whole direction would cost and beyond.
+
+**Disclosed.** Exact, known before writing: O106's ladder under the tie; that a damaged point (d > 3) costs no tie under
+the table as implemented, so the tie charges curling and not breaking (T56's caution). Measured before writing: T34
+(every cell MELTED by its rule, no point folded; the "melt" is scars that flicker, O82) and T42 (interchangeable points
+heal). Nothing of this protocol has been run with a tie.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` as T34 ran it (`ftable_per_a` as T45 and T47 part B used it), configs from
+`scripts/make_t57_configs.py` (tests in `tests/test_t57.py`): the flat six-link torus, sealed, the energy given at the
+start and conserved, 50,000 sweeps read every 250, eight replicas per energy, the final graph saved.
+
+- **Tie:** "all at the last", f = (0, a, 2a, 0), a = 4(λ − 1); and the untied control.
+- **λ:** 1.10 and 1.25.
+- **Protocol:** packed (the whole energy in one point's store under the per-vertex bath) and spread (a shared bath of
+  2N stores with the whole energy in one of them), as T34.
+- **Sizes:** N = 216 (6 × 6 × 6) and 512 (8 × 8 × 8).
+- **Energies:** at N = 512, 256, 560, 1060 (T34's three largest), 1600 (about 3aN at λ = 1.25: one direction of the
+  whole space under the tie) and 3200 (twice that); at N = 216, 128, 260, 500, 680 and 1360.
+
+Sixteen Batch jobs (`cloud/queue/2026-10-09_t57.txt`), seeds 20265701 to 20265716.
+
+### Definitions, fixed now (`scripts/analyse_t57.py`, T34's rules imported, tested before any run)
+
+Per replica, from the final block (T34): **folded** = points at d < 3, **melted** = points at d > 3; FOLDED if their sum
+is at least 4 and folded ≥ melted; MELTED if at least 4 and folded < melted; HEALED if under 4. Per cell (tie, λ,
+protocol, N, E): the majority of at least six replicas, else MIXED. **Per group (tie, λ):** RE-CURLS if some cell has a
+FOLDED majority; MELTS if none has and some cell has a MELTED majority; HEALS if every cell is HEALED; else MIXED. The
+tied groups are the test; the untied groups are the control, read the same way. Reported, not scored, as T34: ONE
+DIRECTION replicas (folded reaches N/3 at some block) and CASCADE (2N/3); the largest folded piece; melt-then-fold;
+and the energy with the tie per point at the end.
+
+No size claim is made (both sizes are reported; the verdict is per group over both), so no held-out size. No "we have
+not found" is claimed. Not a milestone unless RE-CURLS appears; then a fresh read-only review checks it (rule 12).
+
+### Predictions
+
+**The owner's (her words of 9 October, received shortly before 07:22 ET by the clock, recorded before any run):** "i think this is what is happening, or
+close to it. we can get a high amount of energy concentrated in space and then another big growth of energy / there is
+just too much and it has to go somewhere and the only mechanism it can go to is curling macrodimensional space itself."
+Read as: **RE-CURLS** in the tied groups at the largest energies, with ONE DIRECTION reached; "or close to it" noted.
+
+**Ours, unverified:** **MELTS at λ = 1.25 and MELTS or HEALS at 1.10, tied and untied alike**, with no FOLDED replica and
+no ONE DIRECTION. Random kicks from a store do not find the coordinated re-threading that curls a direction (T54's
+patch needs k² switches in step), the cheapest move out of flat space is a loss of squares (damage) in every case, and
+under the tie a damaged point costs nothing where a curled one costs 2a, so the tie makes breaking cheaper than
+curling; more energy means more scars, not a fold. If a FOLDED majority appears anywhere, we are wrong about what
+concentrated energy can do in this family, and the counting half (interchangeable points) and a carrier for a pull
+become the next things to add to it.
+
+### Named or interchangeable points
+
+Named (the table tie runs with named points only). T42's interchangeable result stands beside it.
+
+### What this cannot show
+
+That a black hole does this: the toy has no pull, so nothing in it gathers energy; the energy is placed by hand. Anything
+about gravity. Which direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.

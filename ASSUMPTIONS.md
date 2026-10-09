@@ -2644,6 +2644,203 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     `reality_targets.md`; `gravity_brief.md` §7; `v2_changes.md`; `series_plan.md`; HANDOFF; the public pages named
     in (k).
 
+- **O104 T51, read: as the cooling slows, the curled columns heal off a cliff and the other small pieces do not; the
+  energy left falls as a slow power of the cooling time and would need about 10¹⁸ fair sweeps to reach the birth share;
+  the fair clock's prediction fails at one of its two points; the size check holds.** (2026-10-09, read from 04:55 ET
+  by the clock, recorded from 05:01 ET; PREREGISTRATION T51 with Amendments 1 to 3 and the owner's prediction of 8
+  October, all written before any result was read. The 91 Batch jobs finished on 6 October, were fetched on 9 October
+  through `cloud/fetch/request.txt`, checked against their committed configs by `scripts/accept_inbox.py` (120 of 120
+  pass, with T53's) and read with `scripts/analyse_t51.py`; Amendment 3's reported-not-scored items with
+  `scripts/analyse_t51_amendment3.py`, written and tested today. The 600 saved final graphs were read again from
+  their wiring and none differs from its row.)
+  - **The opening.** Every tube opened: 40 of 40 at L = 128, 80 of 80 at 256, 40 of 40 at 512 (N = 512, 1,024, 2,048),
+    in a mean of 16,300, 38,200 and 85,400 chain sweeps. At the stop (90 % of points flat, no stretch of tube left) the
+    sheets held 1.27 ± 0.21, 2.14 ± 0.15 and 4.90 ± 0.33 curled columns per tube, one per 100 to 120 columns of tube
+    at every length, with 1.75, 2.67 and 3.90 other small pieces, 97.5 to 98.3 % of points flat and 0.06 to 0.09 per
+    point of energy left. No replica was MELTED OR DEFECTED in any cell.
+  - **Verdict: CLIFF.** On the replicas shared by both cells, R(10,000) = C(100,000)/C(10,000) = 0.347 ± 0.040
+    (59 columns over 170, 80 replicas) and R(30,000) = C(300,000)/C(30,000) = 0.079 ± 0.035 (5 over 63, 40 replicas);
+    the second is below 0.25. **The owner's GENTLE fails. Ours (GENTLE, about half per decade) fails too:** the
+    first decade loses two thirds and the second loses twelve in thirteen; the fall steepens. Every decade available:
+    R(1,000) = 0.91 ± 0.03, R(10,000) = 0.35, R(30,000) = 0.08.
+  - **P1, the fair clock: FAILS** at one of its two points. C(30,000)/C(10,000) = 0.78 ± 0.05 against T25's 0.99 at 96
+    points (outside the 0.20 window); C(100,000)/C(10,000) = 0.35 ± 0.04 against 0.47 (inside). On the fair clock the
+    1,024-point sheets lose their columns sooner than the 96-point sheet did. **P2, the size check: HOLDS.** At
+    t_cool = 10,000 the columns left per column of tube are 0.0107 ± 0.0014, 0.0083 ± 0.0005 and 0.0093 ± 0.0006 at
+    L = 128, 256 and 512, each pair within two standard errors of its difference.
+  - **The frozen share** (energy left per point over the release of 1 per point), L = 256: 0.043 after a quench,
+    0.044 at 1,000, 0.042 at 3,000, 0.040 at 10,000, 0.034 at 30,000, 0.021 at 100,000, 0.013 ± 0.003 at 300,000 fair
+    sweeps. The columns' survival S falls from 1.04 to 0.06 over the same cells; the energy's survival S_E only from
+    0.69 to 0.22. **The energy that stays is not in the columns.**
+  - **Amendment 3's items.** Over the cells from 10,000 fair sweeps upward, the columns per sheet fall as
+    t^(−0.82 ± 0.13) and the frozen share as t^(−0.34 ± 0.06) (least squares on the cell means; errors from 2,000
+    resamples of replica ids, the pairing kept). The time at which the frozen-share fit would reach O89's share at
+    1 MeV, 7 × 10⁻⁷, is 1.4 × 10¹⁸ fair sweeps, 12.7 decades beyond the last cell: **an extrapolation, and it says that
+    with this shape the leftover does not reach the birth share in any cooling the toy could run.** *The size
+    distribution, from the wiring* (points per connected piece not at d = 2, L = 256, per 80 sheets): pieces of two
+    points number 91, 101, 101, 102, 101, 103 and (per 40) 53 from the quench to 300,000, **unchanged by the cooling
+    time**; pieces of eight 16, 15, 16, 16, 16, 15 and (per 40) 9, unchanged; pieces of four fall from 179 to (per 40)
+    7, of which 5 are columns. Pieces of one, three, five, six and ten are rare. At L = 512, 7 of 40 sheets are two
+    separate spaces at the end (T37 saw the same in long tubes); at 256, 78 to 80 of 80 are one piece; at 128, 39 of 40.
+    About two fifths of the "other" pieces heal during any cooling, even the quench (2.67 → 1.5 to 1.65 per tube), and
+    the rest never do within 300,000 fair sweeps.
+  - **What the pieces of two and eight are is not read from their positions** (the rule of O88). Candidates, *ours,
+    unverified*, each to be checked against the wiring before any is named: the swapped pair of links that flickers in
+    a healed sheet (O82); the far links of O99 and O102, which sat inside "other" pieces and were read as possible
+    stitches between patches that opened from different seeds. If they are seams between patches, no local move can
+    remove them and their number is set by the seeds, not the cooling, which is the Kibble–Zurek picture (general
+    knowledge, to verify) and would be the first topological leftover in this project. That is a guess until read.
+  - **Rule 11's four answers, for the failed GENTLE (hers and ours).** (1) *Does it falsify the mechanism as stated?*
+    The mechanism behind GENTLE was that a column's healing time is spread widely, so each slower cooling catches
+    another slice. The columns' fall on these two decades is a cliff, so that mechanism is wrong as stated; the
+    freeze-in itself (T25) stands: at fast cooling every column survives. (2) *Implementation, parameters, finite size,
+    or the mechanism?* Not implementation: 600 saved graphs agree with their rows, no sheet melted, the paired design
+    held (every cooling time started from the same opened sheet). Parameters: one λ, one opening coupling, one target
+    coupling. Finite size: P2 holds from 512 to 2,048 points at 10,000 fair sweeps, but the cliff itself was measured
+    at 1,024 points only. The mechanism: T19's healing times at g = 1.25 span 500 to 13,000 sweeps, less than two
+    decades; a geometric cooling spends a fixed share of its time in each band of coupling, so once the cooling is
+    slow enough for the slowest column, every column heals, and a bounded spread of healing times gives a cliff. Our
+    GENTLE assumed a wider spread than T19 measured. (3) *The cheaper test:* the 100,000 and 300,000 cells at L = 128
+    (cheap) and 512, to see whether the cliff's position moves with size; and the pieces of two and eight read from
+    their wiring, which is exact and needs no run. (4) *What would make us abandon "the scrap is the dark matter":*
+    the pre-registration's own line, a frozen share that does not fall toward nothing as the cooling slows. The
+    columns' share does; the whole share falls as a slow power with a floor of about 1 % of the release in small
+    pieces that no cooling here removed. By the letter the branch is not abandoned; what is left of it is about those
+    pieces, not the columns, and it is abandoned if they turn out to be seams that no local move can heal.
+  - **Also on the record.** T25's prediction that the "other" pieces heal faster than the columns (ours) holds for
+    two fifths of them and fails for the rest. The frozen share after the quench, 0.043, is below T37's 0.08 (T37's
+    tubes were read at their own stopping time, warm); our "below 0.03 at 300,000" holds (0.013). The caveat of
+    Amendment 3 stands: nothing here says what happens at a size much larger than 2,048 points, and the endpoint of the
+    fall was not reached.
+
+- **O105 T53, read: in a warm bath the "spaghetti" X opens its first curled direction at every length and both λ and
+  rests on the one-curled rung; its second direction opens only in a minority of replicas, at the two shorter lengths
+  and the larger curling cost, in baths that then damage the space; ADVANCES ONLY at every (L, λ); the openings start
+  in several places in the long torus (SEVERAL).** (2026-10-09, read from 04:55 ET by the clock, recorded from 05:01 ET;
+  PREREGISTRATION T53, written 2026-10-05 before any run, the owner's prediction confirmed 8 October before any
+  result was read. 29 of 30 Batch jobs finished on 6 October and were fetched, checked and read today with
+  `scripts/analyse_t53.py`; the cell L = 72, λ = 1.25, g = 3.0 failed on Batch before it started and was resubmitted
+  today (`cloud/queue/2026-10-09_t53_resubmit.txt`). Named points, no tie, no push. Every six-link result carries
+  VISION Update 24's caveat: the reproduction gate is open.)
+  - **The cells** (replicas of 8, by T48's rule from the last reading). λ = 1.25: at L = 18, STAYS at g = 1.5 (5 stay,
+    2 advance, 1 damaged), ADVANCES at 2.0, 2.5, 3.0 (8 of 8) and 3.5 (6, with 2 damaged); at L = 36, ADVANCES at 1.5
+    to 3.0 and DAMAGED at 3.5 (8 of 8); at L = 72, ADVANCES at 1.5, 2.0, 2.5 and DAMAGED at 3.5 (the 3.0 cell is the
+    missing one). λ = 1.40: at L = 18, ADVANCES at 1.5, MIXED at 2.0 (2 open, 3 advance, 3 damaged), DAMAGED at 2.5
+    (6 damaged, 1 open), MIXED at 3.0 (4 open, 2 damaged, 2 advance), DAMAGED at 3.5 (8 of 8); at L = 36, ADVANCES at
+    1.5, DAMAGED at 2.0, MIXED at 2.5 (1 open), DAMAGED at 3.0 (1 open) and 3.5; at L = 72, ADVANCES at 1.5, MIXED at
+    2.0 (4 and 4), DAMAGED at 2.5, 3.0, 3.5. **No cell has an OPENS majority. No replica at λ = 1.25 opened its second
+    direction at any length or bath. At L = 72 none did at either λ.**
+  - **Verdicts.** The window: **ADVANCES ONLY** at all six (L, λ); for (72, 1.25) provisional until the resubmitted
+    cell lands, which can change it only by an OPENS majority at g = 3.0 where no λ = 1.25 replica anywhere opened.
+    One place or several: **SEVERAL** (median open regions at the first tenth 2 over 30 replicas at L = 72, with 1 to
+    6; 1 over 50 at L = 18).
+  - **Predictions.** The owner's: OPENS IN A WINDOW at both λ and every length **fails everywhere**; SEVERAL
+    **holds**. Ours: ADVANCES ONLY at every length at λ = 1.25 **holds**; a window at λ = 1.40 at L = 18 around
+    g = 2.5 to 3.0 **fails by the letter** (MIXED at 2.0 and 3.0, DAMAGED at 2.5: the second direction opened in 2, 1
+    and 4 replicas of 8, never a majority); "at L = 72 the window narrows or closes" holds (0 of 40 replicas opened
+    there at λ = 1.40); ONE **fails**.
+  - **Not scored: when the second direction opened, and what came after.** Half the points at d = 3 was reached at
+    L = 18, λ = 1.40 in 3 of 8 replicas at g = 2.0 (71,000 to 186,000 sweeps), 3 of 8 at 2.5, 7 of 8 at 3.0 (15,000 to
+    124,000) and 6 of 8 at 3.5 (34,000 to 92,000); at L = 36 in 2, 6 and 1 of 8 at g = 2.5, 3.0 and 3.5; never at
+    λ = 1.25 and never at L = 72. The baths that open the second direction most often (g = 3.0 and 3.5) end with the
+    space DAMAGED in most or all replicas: **the bath that crosses the second wall (28.8 at λ = 1.40) also takes flat
+    space apart (its wall is 64).** At λ = 1.25 the opening pauses on the one-curled rung and rests there to the end in
+    nearly every replica; at λ = 1.40 in the warm baths it goes straight through or pauses and then d = 3 takes over.
+    The whole graph stays one connected piece at every reading seen.
+  - **Rule 11's four answers, for the owner's failed OPENS IN A WINDOW** (the second use of the rule on piece 5; the
+    first was Update 44). (1) *Does it falsify the mechanism as stated?* The claim (Update 42; Update 44's replacement)
+    was that a connected X with one direction open is unstable enough to burp at once from several seeds when a bath
+    supplies each push in turn. It is unstable to its *first* opening (that direction opens at every bath, even the
+    coldest, in most replicas), and it burps from several seeds; the *second* opening does not follow in this
+    family at these settings before the space is damaged. The mechanism as stated fails on its last step. (2) *Which?*
+    Not implementation: the kernel, the census and the rule are T48's, and the energies read as the rungs predict.
+    Parameters: λ = 1.25 and 1.40, g = 1.5 to 3.5, untied; no tie was run (her choice of tie is still open, O89).
+    Finite size: the second opening was seen only at L = 18 and 36 and never at 72, so size works against it, as O88
+    says a larger space melts at a lower coupling. The mechanism: the second wall (36 at 1.25, 28.8 at 1.40) is a
+    single move; a bath that crosses it often enough is one that also crosses flat space's wall of 64, and the exact
+    barrier beyond the single move has not been priced. (3) *The cheaper test:* T54, exact, no run: if the true barrier
+    to the second opening is a critical patch far above the single move, no bath that leaves flat space intact crosses
+    it, which is what was seen. (4) *What would make us abandon the branch:* T54's NO FINITE PATCH at every λ at which
+    X is stuck; or a window that fails to open at any size with the tie she chooses. **The replacement is hers to
+    propose** (rule 11: her ideas first, in her words); none is written here.
+
+- **O106 EXACT: the single-move walls under the owner's tie, "all at the last", across λ: the slab's wall falls from
+  39 to 4 between λ = 1.05 and 1.25 while flat space's stays at 64, so at λ = 1.15 to 1.20 the slab is stuck behind
+  13 to 22 with a release of 1.8 to 2.4 per point.** (2026-10-09, 06:30 ET by the clock; `scripts/exact_walls_tie_shape_d.py`
+  with f = (0, a, 2a, 0), a = 4(λ − 1), the tie the owner chose this morning, VISION Update 47; six links; the walls
+  are the cheapest single switch out of each exact torus, priced as O70 and O89 price them. Exact, no run.)
+
+  | λ | a | gas of 6-cubes | rod 4 × 4 × 18 (one open) | slab 4 × L × L (two open; L = 8, 12 alike) | flat 6 × 6 × 8 |
+  |---|---|---|---|---|---|
+  | 1.05 | 0.2 | 14.4 | 30.4 | 39.2 | 64 |
+  | 1.10 | 0.4 | 12.8 | 28.8 | 30.4 | 64 |
+  | 1.15 | 0.6 | 11.2 | 27.2 | 21.6 | 64 |
+  | 1.20 | 0.8 | 9.6 | 25.6 | 12.8 | 64 |
+  | 1.25 | 1.0 | 8.0 | 24.0 | 4.0 | 64 |
+
+  Every rung sits 3a per point above flat (0.6 to 3.0), the whole release, since under this tie nothing is released
+  until a point's last direction opens. The slab's cheapest move is of the kind dS = −6, dX = −12 at every λ (the same
+  kind as untied, whose cost is 96 − 48λ; the tie's part of the cost is what the table adds, read from the script's
+  output rather than derived here); the rod's is dS = −6, dX = −16, the gas's dS = −6, dX = −20.
+  - *Ours, reading the table.* The ratio that decided T53 (O105) was the wall out of the stuck state against flat
+    space's 64: 36 / 64 = 0.56 untied at λ = 1.25, where a bath warm enough to cross the first also crossed the second.
+    Under this tie the slab's ratio is 0.34 at λ = 1.15 and 0.20 at 1.20, better than the two-dimensional tube's
+    12 / 32 = 0.375 at which the tube opened cleanly in a bath at g = 1.5 (T7). So at the level of single moves the
+    slab at λ = 1.15 to 1.20 is where a bath should open it while sparing flat space; at 1.25 (wall 4) it is not stuck
+    in any bath, and at 1.05 to 1.10 (walls 30 to 39) the bath that crosses it is near the damage edge again. That is
+    T56's window to scan. Two cautions, as before: the single move is not the whole barrier in three directions (T54),
+    and under any table a damaged point (d > 3) costs 0, so a point on the slab (d = 2, charged 2a) is relieved of 2a
+    by breaking as well as by opening, 1.2 to 2 units at these λ against the 64 of the move itself (sealed_tie_d, as
+    T45 and T46 ran it; flagged in T56).
+
+- **O107 T55, read: the pieces T51 leaves that no cooling removes are KNOTS, stuck arrangements of their own, not
+  scars and not seams: every one of the 652 pieces of two and 103 pieces of eight at L = 256 is a dip (every single
+  move out costs, the cheapest 11 in nearly all) and none carries a far link. Read from the wiring, the pieces of two
+  are the quarters of an eight-point object of two kinds of point (two pairs at d = 1 and two at d = 3, 20 units at its
+  own points, 30 within one step) and the pieces of eight are tube segments two columns long (8 units).** (2026-10-09,
+  computed 06:28 ET, recorded from 06:32 ET by the clock; PREREGISTRATION T55, written this morning before any
+  computation, the owner's prediction SEAM recorded first; `scripts/analyse_t55.py` on the 600 saved T51 graphs,
+  `results/t55_pieces.csv`, 2,121 pieces; exact, nothing random; tests in `tests/test_t55.py`. The cluster reading
+  below is exploratory, from a scratch script over the same saved graphs, and writes nothing.)
+  - **Verdict, L = 256: KNOT for the pieces of two (652 of 652) and KNOT for the pieces of eight (103 of 103).**
+    SCAR needs a single switch that heals and lowers the energy: none exists for any piece of any size in any sheet
+    (every piece is A DIP; a few pieces of one and three have a move that costs exactly 0). SEAM needs a link whose
+    way round is 7 or more: 4 pieces of 2,121 carry one (one piece of two at L = 128, two at 512, one of six at 256),
+    none of them a piece of eight. **The owner's SEAM fails at both sizes. Ours: "neither is SCAR" holds; "the eights
+    are SEAM" fails; "the twos KNOT or SEAM" holds.** The other sizes read the same (KNOT at every size and length).
+  - **What the pieces of two are.** Two kinds, in almost equal numbers: an edge joining two points at d = 1 whose links
+    carry 2, 2, 3, 3 squares (1 unit each, 2 per piece; 342 at L = 256), and an edge joining two points at d = 3 whose
+    links carry 2, 1, 1, 2 (4 units each, 8 per piece; 310). Every piece of two sits exactly two steps from other
+    pieces, and grouping pieces within two steps of each other gives, 135 times, the same cluster: two of the first
+    kind and two of the second, eight points, 20 units at its own points and 30 within one step of them, its cheapest
+    single exit 11. In kind (pairs of points at d = 1 beside pairs at d = 3, 20 units) this is the object O15 found in
+    9 of 80 cold boxes and called a twist two points wide; whether it is the same arrangement or a larger relative of
+    it is not settled here (O15 counted four points). It is not named beyond that: a knot of two kinds of point.
+  - **What the pieces of eight are.** All 103 are eight points at d = 1 with 12 links among them, each point holding
+    three inside the piece and one out, 8 units at their points and nothing more within one step: the wiring of a
+    4 × 2 segment of the tube, a double column, left curled. The single column (1,142 clusters) reads as O16 read it:
+    4 units at its points, 14 within one step in 1,070 of them and 4 in 72.
+  - **Against the cooling** (O104's counts per 80 sheets): the columns fall from 179 to 7 (per 40) while the knots of
+    two kinds (about 0.3 per sheet) and the double columns (about 0.2 per sheet) stay. *Ours, unverified:* the
+    column's exit (12) and these knots' exits (11) cost the same, so a wall is not what separates them; what differs
+    is what lies past the wall, and the column has a downhill path to flat that the others do not within one or two
+    moves. That is a guess until the paths are enumerated.
+  - **Rule 11's four answers, for the owner's failed SEAM.** (1) *Falsified as stated?* Yes: the leftover of a space
+    opened from several seeds is not the stitching between patches; no seam exists in 2,121 pieces. (2) *Which?* Not
+    implementation (exact; tests; the far-link reading is O99's own). The reading's unit was wrong in one way: a
+    connected piece of non-flat points cuts the eight-point knot into four pieces of two, which O104 counted as
+    separate; the verdict is unchanged by that. The mechanism: patches that open from different seeds join without
+    mismatch here. *Ours, unverified:* on the tube the way two columns join when they open is fixed by the tube itself
+    (column x joins its partner across the fold), so neighbouring patches have no freedom to disagree; a seam needs
+    a choice the opening can make differently in two places, and this opening has none. (3) *Cheaper test:* none
+    needed; the far-link count answers it. (4) *What would make us abandon "the leftover is dark matter":* the
+    pre-registered line stands (a frozen share that does not fall toward nothing). What is left of the branch is now
+    exact: the leftover is knots of fixed energy (14, 20 to 30, 8 units) whose number is set at the opening, not by the
+    cooling; it is abandoned if that number cannot be made small, which is T17's and T37's seed question, not T51's.
+  - **Not claimed.** That the knots never heal: the range run ends at 300,000 fair sweeps. Anything about the "pieces
+    of one and three", which are the fragments of larger clusters (the table of compositions is in the scratch log of
+    this session, not in `results/`; it can be rerun from the CSV).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

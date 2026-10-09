@@ -497,7 +497,8 @@ In order, each pre-registered before it runs:
 
 1. **PREREGISTRATION T51**, the frozen scrap against cooling time in tubes that seed themselves, on the fair clock
    (`scripts/run_scrap_freeze.py`, `scripts/analyse_t51.py`, `cloud/queue/2026-10-05_t51.txt`). The owner's prediction
-   is owed before any result is read.
+   is owed before any result is read. *Done 2026-10-09: her prediction GENTLE (8 October); read CLIFF, P1 fails at one
+   point, P2 holds (O104; the 9 October section below).*
 2. **The hidden count at wider windows** (`graphity.hidden`): windows of three to five columns round a relic of a saved
    T37 end state, with flat windows as controls; count against the links cut and against the points inside. To be
    pre-registered with the chat's prediction (flat gives 1; a relic gives the number of places and forms it can take).
@@ -554,6 +555,49 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
 Owed by the owner: ~~her T51 prediction~~ (given 2026-10-08: GENTLE, PREREGISTRATION T51); ~~her T54 prediction~~ (given 2026-10-08: CRITICAL PATCH, PREREGISTRATION T54); her T53 prediction confirmed the same day; the open items of
 Update 44 (claim 4's wording; piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's
 revision; the Fife reference).
+
+## 9 October: T51 and T53 read; what follows  ◑
+
+**Added 2026-10-09** (ASSUMPTIONS O104, O105; VISION Update 46). The 5 October section's item 1 (T51) is done: CLIFF,
+P1 fails at one point, P2 holds; T53 is read: ADVANCES ONLY at every (L, λ), SEVERAL, with one cell (L = 72, λ = 1.25,
+g = 3.0) resubmitted after it failed on Batch before starting. Both of the owner's predictions failed in part; rule 11's
+four answers are in the O entries and the replacement for piece 5 is hers. In order:
+
+1. **Read the pieces of two and eight points from their wiring** (exact, no run): what they are, whether a local move
+   can remove them, and whether they sit where patches from different seeds met. Pre-register the reading with her
+   prediction first; the candidates are in O104. It decides what paper 2's scrap is. *Done 2026-10-09 (T55; O107):
+   KNOT at both sizes; her SEAM failed. The pieces of two are the quarters of an eight-point knot of two kinds of point
+   (20 units, in kind O15's twist); the pieces of eight are double columns. Paper 2's scrap is three knots of fixed
+   energy: the column (14), the knot of two kinds (20 to 30), the double column (8).*
+2. **T54**: the script with the exact definitions of "patch" and "grows", tested; commit the draft as a
+   pre-registration; compute L = 8 and 12; write the L = 16 prediction as a dated amendment; then L = 16.
+3. **Restart T52** on the laptop (its run died on 5 October at 66 rows; the runner has no resume, so the scratch
+   `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first).
+4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then.
+5. The rest of the 5 and 6 October sections as they stand.
+
+**Added 2026-10-09, 06:15 ET** (VISION Update 47: the tie is "all at the last"; untied is a stepping stone; her shape
+is the slab). Item 1 above proceeds on her prediction (SEAM). New, ahead of items 3 to 5:
+
+- **T56, the reservoir test with the tie**: the connected slab (4 × L × L, one curled) and the rod (4 × 4 × L) in a
+  steady bath under "all at the last", λ scanned, g from cold to the damage edge, with a held-out size; needs a thermal
+  chain with a tie table (`sealed_tie_d` has the sealed one; the bath one is to be built with rule-6 tests) and the
+  exact walls of the tie at each λ first. Pre-registered with her prediction before any run. *Built, pre-registered
+  (O106 for the walls) and launched 2026-10-09, 06:43 ET: her prediction "opens into one flat space"; stage 1, 68
+  Batch jobs (`cloud/queue/2026-10-09_t56_stage1.txt`). To read: `t56_*` in `cloud/fetch/request.txt`, accept, then
+  `python scripts/analyse_t56.py`; then write the held-out prediction as a dated amendment and run
+  `python scripts/make_t56_configs.py --held-out` for stage 2.*
+- **T54 under the tie** as well as untied (Amendment 1). *Stage 1 (L = 8, 12) computing on the laptop from 06:52 ET
+  (Amendment 2 fixed the patch; Amendment 3 disclosed that the tied case ran before her confirmation); her held-out
+  prediction (CRITICAL PATCH, small) recorded 06:58 ET; then the L = 16 prediction as a dated amendment, then L = 16.*
+- **T57, her fold mechanism under the tie** (VISION Update 51; PREREGISTRATION T57): T34's protocol (flat six-link
+  space, sealed, concentrated energy) tied and untied, λ = 1.10 and 1.25, energies up to twice one direction's worth;
+  her prediction RE-CURLS, ours MELTS or HEALS; 16 Batch jobs launched 2026-10-09 (`cloud/queue/2026-10-09_t57.txt`).
+  To read: `t57_*` in `cloud/fetch/request.txt`, accept, `python scripts/analyse_t57.py`.
+
+Owed by the owner: her prediction for T56 once its design is written; her tied T54 prediction (inferred CRITICAL
+PATCH); whether the fair clock stays for new kinetic runs after P1's miss; the open items of Update 44. Her replacement
+for piece 5's mechanism is now the tie, by her choice; T56 tests it.
 
 ## Later
 

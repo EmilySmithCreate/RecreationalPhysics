@@ -1,0 +1,5 @@
+# T53's one failed cell (PREREGISTRATION T53, written 2026-10-05 before any run). The Batch job
+# t53_l72_lam125_g30-4eb5afa failed on 6 October without ever starting (no start time in cloud/status/latest.md,
+# nothing under its prefix in the bucket), so this is the same config submitted once more, not a rerun of a result.
+# The other 29 cells succeeded and are in results/.
+run_curled_bath_d t53_l72_lam125_g30

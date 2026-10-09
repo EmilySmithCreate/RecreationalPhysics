@@ -143,3 +143,61 @@ def test_table_kernel_at_eight_links_is_exact_and_conserves():
         assert abs(energy_table_d(adj, lam, ftab) + stores.sum() - e0) < 1e-8
         changed = changed or len(set(local_dimension_d(adj).tolist())) > 1
     assert changed and cqg_d.is_valid(adj) and (stores >= -1e-12).all()
+
+
+def test_thermal_chain_with_a_zero_table_is_run_chain_draw_for_draw():
+    """run_chain_table_d (9 October, for T56): with ftab all zero it must be cqg_d.run_chain, draw for draw."""
+    from graphity.sealed_tie_d import run_chain_table_d
+    lam, inv_g = 1.25, 1.0 / 2.5
+    adj0, part = cqg_d.torus([4, 4, 6])
+    side_u = np.flatnonzero(part == 0)
+    a1, a2 = adj0.copy(), adj0.copy()
+    s1, x1, acc1 = cqg_d.run_chain(a1, side_u, inv_g, 0, 40, 17, lam)
+    s2, x2, t2, acc2 = run_chain_table_d(a2, side_u, inv_g, 40, 17, lam, np.zeros(4))
+    assert (s1 == s2).all() and (x1 == x2).all() and (a1 == a2).all() and acc1 == acc2 and (t2 == 0).all()
+
+
+def test_thermal_chain_with_a_table_is_exact_valid_and_repeats():
+    """The incremental tie agrees with full recomputation on a warm, damaged run of the owner's 'all at the last'
+    shape; the graph stays valid; the same seed gives the same chain; a carried-on stream equals one call."""
+    from graphity.sealed_tie_d import run_chain_table_d
+    lam = 1.20
+    a = 4.0 * (lam - 1.0)
+    ftab = np.array([0.0, a, 2.0 * a, 0.0])
+    adj, part = cqg_d.torus([4, 8, 8])
+    side_u = np.flatnonzero(part == 0)
+    one = adj.copy()
+    s, x, t, _ = run_chain_table_d(one, side_u, 1.0 / 3.0, 80, 23, lam, ftab)
+    assert abs(t[-1] - table_total(one, ftab)) < 1e-9
+    assert s[-1] == cqg_d.total_squares(one) and x[-1] == cqg_d.surplus(one)
+    assert abs(energy_table_d(one, lam, ftab) - (16.0 * (3 * one.shape[0] - s[-1]) + 4.0 * lam * x[-1] + t[-1])) < 1e-9
+    assert cqg_d.is_valid(one)
+    assert (local_dimension_d(one) != 3).any(), "the warm run should have moved the slab"
+    again = adj.copy()
+    s2, x2, t2, _ = run_chain_table_d(again, side_u, 1.0 / 3.0, 80, 23, lam, ftab)
+    assert (again == one).all() and (s2 == s).all() and np.allclose(t2, t)
+    blocks = adj.copy()
+    out = []
+    for k in range(4):
+        sb, _, _, _ = run_chain_table_d(blocks, side_u, 1.0 / 3.0, 20, 23 if k == 0 else -1, lam, ftab)
+        out += list(sb)
+    assert (blocks == one).all() and out == list(s)
+
+
+def test_thermal_chain_tie_matches_networkx_energy_on_a_damaged_graph():
+    """Full recomputation by an independent route: the tie total from local_dimension_d, H from networkx cycles."""
+    from graphity.sealed_tie_d import run_chain_table_d
+    lam = 1.15
+    a = 4.0 * (lam - 1.0)
+    ftab = np.array([0.0, a, 2.0 * a, 0.0])
+    adj, part = cqg_d.torus([4, 4, 6])
+    side_u = np.flatnonzero(part == 0)
+    s, x, t, _ = run_chain_table_d(adj, side_u, 1.0 / 3.5, 30, 5, lam, ftab)
+    d = local_dimension_d(adj)
+    assert abs(t[-1] - sum(ftab[k] for k in d if k < 4)) < 1e-9
+    g = nx.Graph()
+    for u in range(adj.shape[0]):
+        for v in adj[u]:
+            g.add_edge(u, int(v))
+    squares = sum(1 for c in nx.simple_cycles(g, length_bound=4) if len(c) == 4)
+    assert squares == s[-1]

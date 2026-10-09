@@ -17,3 +17,7 @@ t48_*
 t49_*
 t50_*
 t37_lam125_g125_L1024_*
+# 2026-10-09: T51 (91 jobs, finished 6 October) and T53 (29 of 30 finished; t53_l72_lam125_g30 failed before it
+# started and is resubmitted separately). Neither has been read.
+t51_*
+t53_*

@@ -1,0 +1,20 @@
+# T57 (PREREGISTRATION T57, written 2026-10-09 07:22 ET before any run; VISION Update 51): does too much concentrated
+# energy curl flat six-link space under the owner's tie "all at the last"? T34's protocol (flat 6x6x6 and 8x8x8,
+# sealed, packed into one point or spread through a bath), tied and untied, lambda 1.10 and 1.25, five energies up to
+# twice one direction's worth under the tie, eight replicas. 16 jobs. Seeds 20265701 to 20265716.
+run_sealed_curled_d t57_tied_packed_lam110_n216
+run_sealed_curled_d t57_tied_packed_lam110_n512
+run_sealed_curled_d t57_tied_spread_lam110_n216
+run_sealed_curled_d t57_tied_spread_lam110_n512
+run_sealed_curled_d t57_tied_packed_lam125_n216
+run_sealed_curled_d t57_tied_packed_lam125_n512
+run_sealed_curled_d t57_tied_spread_lam125_n216
+run_sealed_curled_d t57_tied_spread_lam125_n512
+run_sealed_curled_d t57_untied_packed_lam110_n216
+run_sealed_curled_d t57_untied_packed_lam110_n512
+run_sealed_curled_d t57_untied_spread_lam110_n216
+run_sealed_curled_d t57_untied_spread_lam110_n512
+run_sealed_curled_d t57_untied_packed_lam125_n216
+run_sealed_curled_d t57_untied_packed_lam125_n512
+run_sealed_curled_d t57_untied_spread_lam125_n216
+run_sealed_curled_d t57_untied_spread_lam125_n512
