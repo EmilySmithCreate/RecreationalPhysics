@@ -3627,6 +3627,42 @@ case, until she confirms or replaces it before the tied computation.** Ours for 
 λ = 1.10 and 1.25 with a smaller patch and a lower barrier than untied, and at λ = 1.25 possibly FIXED WALL (the
 single move of 4 may be the whole barrier when the release per point is 3). The untied computation may proceed first.
 
+### Amendment 2, 2026-10-09, 06:50 ET by the clock, before any computation at a pre-registered size: the exact definitions of "patch" and "grows", the script, and two disclosures
+
+**The patch** (`scripts/exact_t54_patch.py`, tests in `tests/test_t54.py`; written and tested on L = 6 and 8 only, sizes
+outside the pre-registration). The slab is `cqg_d.torus([4, L, L])`, axis 0 the curled direction, a ring of four at
+each column (x, y). **Read from T48's saved end states on 9 October (O91's runs; exploratory, prints only):** every link
+the opening created joins a point to the point two steps round the ring in the neighbouring column, and every link it
+removed was a ring link; the rings become helices. One switch does that for a pair of rings in neighbouring columns
+(x, y) and (x + 1, y): remove (3, x, y)-(2, x, y) and (0, x+1, y)-(1, x+1, y); add (0, x+1, y)-(2, x, y) and
+(3, x, y)-(1, x+1, y). **A patch of size k is that switch applied to every pair (x, x + 1) for k values of x and every
+one of k rows:** k² switches over k + 1 columns and k rows; the rings inside are cut twice and open (d = 3), the rings
+at the two ends of each row are cut once (the seam). Applied to every pair of every row it gives flat space exactly
+(H = 0, every point at d = 3; tested at L = 6 and 8). ΔH(k) = E(patch) − E(slab), E = H untied and H + T_f tied.
+**"Grows"** is read two ways, both reported: from ΔH(k) itself (the verdict words as written, over the k computed, with
+a fourth word, RISES AGAIN, reported and not scored, for a ΔH that falls and then rises within the k computed, which a
+patch wrapping round the torus can produce); and from the cheapest single switch out of each patch state (every switch
+whose first point lies within 3 links of a point the patch changed, priced exactly by `exact_walls_tie_d.kinds`), so
+that a route cheaper than the construction's own next step shows as a move costing less than ΔH(k + 1) − ΔH(k).
+
+**Disclosure 1.** The chain's cheapest single exit from the slab is not the helix switch. Enumerated on 4 × 8 × 8
+today: the kind (ΔS = −6, ΔX = −12; 36 at λ = 1.25 untied, O106's wall) is a swap of the same ring link between two
+rings in *diagonally* neighbouring columns, (x, y) and (x + 1, y + 1); the helix switch between orthogonal neighbours is
+of kind (−6, −8), 56 at λ = 1.25. So the construction's first step costs more than the chain's first move, and the
+construction is an upper bound on the barrier along the wiring T48's openings end in; the cheapest-move column is what
+says whether a cheaper seam exists at each k. Which seam the chain itself uses is not known and is not claimed.
+
+**Disclosure 2.** On L = 8 at λ = 1.25 untied (outside the pre-registered fit, which needs L = 8 *and* 12 together),
+ΔH(k) read 56, 104, 144, 176 for k = 1 to 4 while the construction was being checked. These four numbers were seen
+before this amendment was written and are recorded here so that they cannot later be presented as a prediction. The
+stage-1 fit, the held-out prediction and the verdicts are computed after this amendment is committed, by the script,
+and nothing else has been computed at any pre-registered size.
+
+**The tied λ.** Amendment 1 computes the tied case at the draft's λ (1.10, 1.25, 1.40). T56's window under the tie lies
+at λ = 1.15 to 1.20 (O106), so the tied case is also computed at those two λ, with the same fit and held-out procedure,
+reported beside; the untied case is computed at them too, for the comparison. Config: `configs/t54_patch_stage1.json`
+(L = 8, 12); the held-out size gets its own config after the amendment that names its prediction.
+
 
 ---
 
