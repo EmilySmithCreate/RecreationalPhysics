@@ -3614,6 +3614,19 @@ Anything about the parent model (Gate C open; Update 24's caveat). The dynamics:
 is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89). The critical patch on a
 sheet much larger than the held-out size, beyond what the fit's form assumes.
 
+### Amendment 1, 2026-10-09, 06:15 ET by the clock, before any computation: the tied case
+
+The owner chose the tie on 9 October (VISION Update 47): "all at the last", f = (0, a, 2a, 0) per point with
+a = 4(λ − 1), and said the untied runs are a stepping stone. So T54 is computed twice at every λ and size, untied (as
+written, the control) and under that tie, with the same patches, the same fit and the same held-out procedure for
+each; the tied case is the one her picture needs. Under the tie a point inside the opened patch (three directions
+open) costs 0 and releases 3a instead of a, and a point on the seam, with one or two directions open, is charged a or
+2a, so the fit's a and b change and the exact walls of O89 say where the slab's single move stands (44.5, 30.4, 4.0 at
+λ = 1.02, 1.10, 1.25). **The owner's prediction for the tied case is inferred as CRITICAL PATCH, as for the untied
+case, until she confirms or replaces it before the tied computation.** Ours for the tied case: CRITICAL PATCH at
+λ = 1.10 and 1.25 with a smaller patch and a lower barrier than untied, and at λ = 1.25 possibly FIXED WALL (the
+single move of 4 may be the whole barrier when the release per point is 3). The untied computation may proceed first.
+
 
 ---
 
@@ -3680,7 +3693,10 @@ move and the number of distinct such moves (the attempt frequency, as paper 1 co
 
 ### Predictions
 
-**The owner's:** owed before any computation.
+**The owner's (given 2026-10-09, between 05:30 and 06:15 ET by the clock, before any computation): SEAM.** Her words,
+on the pieces that no cooling removes: "this would lean toward complete separation / ie a seam." Read as SEAM for both
+the pieces of two and the pieces of eight (the assistant's reading of "the pieces"; she can narrow it to one size before
+the result is read).
 
 **Ours, unverified:** neither size is SCAR. A move that lowers the energy is always accepted, and at L = 256 each sheet
 was offered about 3 × 10⁶ chain sweeps at g ≤ 0.5 in the slowest cooling; a scar one move from flat would have gone. The

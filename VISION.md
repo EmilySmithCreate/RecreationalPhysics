@@ -1311,6 +1311,44 @@ prediction in part; both are recorded as the rules require, before anything new 
   decide it. (2) Whether the pieces of two and eight are to be read from their wiring before paper 2 is rewritten
   (ours: yes; it is exact and cheap, and it decides what the scrap is).
 
+Update 47 (2026-10-09, 06:15 ET by the clock): **DECISION (the author's): the tie is "all at the last"; the untied
+runs are a stepping stone; and the stand-in that matches her shape is the slab, two directions open and one curled.**
+Her words, from the conversation of this morning, put in order. Why this page changes: the reservoir test (O94) has
+waited since 5 October on her choice of tie, T54's tied case waited on the same choice, and her shape statement
+changes which stand-in is X and what piece 6 asks.
+
+- **The tie: "All at the last, I think."** Under S1 the form is fixed before any run: f = (0, a, 2a, 0) per point with
+  a = 4(λ − 1), the shape O89 wrote down on 5 October: a point with one or two directions open costs as much extra as
+  the curled directions it still holds would release, so nothing is released until a point's last direction opens,
+  and then the whole 3a. No constant to fit. Her "the three go together" of Update 22, in an energy. The model with
+  it is our family, never CQG.
+- **Untied is a stepping stone.** "I really only care about tied. Untied doesn't make sense to me anyway, it is just a
+  stepping stone." *Ours:* the untied verdicts stand as scored (T30 to T53); from here the hypothesis's runs in three
+  and four directions carry the tie, and an untied cell is a control.
+- **Her shape.** "3D, one curled, two open: a slab rolled in one direction. This is actually what aligned to my shape
+  intuition, just was not changing from original tube in my description." Recorded as her statement, not a decision:
+  the stand-in for X that matches her picture is the slab, 4 × L × L, two directions open and one curled, which is
+  the state the model lands on from both ends (T48, T53). *Ours, exact (O89):* under "all at the last" the slab's
+  single-move wall is 44.5, 30.4 and 4.0 at λ = 1.02, 1.10 and 1.25, with a release of 3a = 0.24, 1.2 and 3 per
+  point; under "all at the second" the slab would be the end state (its last direction never opens), so her shape
+  and her tie together say the slab is X and not spacetime. *Ours, unverified:* with the slab as X only one opening
+  remains at the birth, so piece 6's three shares would not come from the order of openings; what they come from is
+  open again.
+- **Her story, scored** (her words of this morning, put in order, each step set against the record): warmth makes
+  seeds (measured, T37, T53); the last curled direction opens and releases the lump, so all three are open (2D yes;
+  3D not from warmth untied, T53; tied, untested on a slab); the new space contains the net energy (the sealed
+  picture; 2D only); the other kinds of matter and energy are the leftover (T55); the energy makes black holes within,
+  re-curled regions, in a stable space (five tries, nothing folds; waits on a carrier for a pull, piece 8).
+- **On a put-in rule.** "Once it is in we can still find predictions to do that make the case persuasive, assuming
+  this does seem to make the math come together." *Ours:* agreed, and the bar is rule 13's: the tie's constants
+  pinned by one requirement, then predictions it was not fitted to, at a held-out size (rule 14).
+- **Gravity's carrier.** Her question of this morning, whether a carrier for a pull can be added to the toy and
+  tested in isolation: yes, it is the decision of Update 40 (a quantity on the points), its brief is not written, and
+  it changes nothing exact. Next on piece 8 after the tie.
+- **What runs next, pre-registered with her prediction:** the connected slab and the rod in a steady bath under
+  "all at the last", λ scanned, with a held-out size (T56, the reservoir test of O94); T54 computed under the tie as
+  well as untied. T55 (the pieces of two and eight) is computed on her prediction, SEAM.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

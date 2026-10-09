@@ -573,8 +573,18 @@ four answers are in the O entries and the replacement for piece 5 is hers. In or
 4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then.
 5. The rest of the 5 and 6 October sections as they stand.
 
-Owed by the owner: her replacement for piece 5's mechanism, or her decision to let T54 decide; whether the fair clock
-stays for new kinetic runs after P1's miss; the open items of Update 44.
+**Added 2026-10-09, 06:15 ET** (VISION Update 47: the tie is "all at the last"; untied is a stepping stone; her shape
+is the slab). Item 1 above proceeds on her prediction (SEAM). New, ahead of items 3 to 5:
+
+- **T56, the reservoir test with the tie**: the connected slab (4 × L × L, one curled) and the rod (4 × 4 × L) in a
+  steady bath under "all at the last", λ scanned, g from cold to the damage edge, with a held-out size; needs a thermal
+  chain with a tie table (`sealed_tie_d` has the sealed one; the bath one is to be built with rule-6 tests) and the
+  exact walls of the tie at each λ first. Pre-registered with her prediction before any run.
+- **T54 under the tie** as well as untied (Amendment 1).
+
+Owed by the owner: her prediction for T56 once its design is written; her tied T54 prediction (inferred CRITICAL
+PATCH); whether the fair clock stays for new kinetic runs after P1's miss; the open items of Update 44. Her replacement
+for piece 5's mechanism is now the tie, by her choice; T56 tests it.
 
 ## Later
 
