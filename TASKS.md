@@ -542,8 +542,16 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
 7. **A red-team pass at each milestone** (rule 12), recorded as an O entry; the first is O103 (i).
 8. **Low priority: an independent reimplementation** of the four-link energy and one verdict (T7 at λ = 1.25) by a
    second person or a second agent working from paper 1 alone.
+9. **Added 2026-10-08 (VISION Update 45; CLAUDE.md rules 12, 14, 15).** (a) The prior-work note for paper 1's sentence
+   "A different kind of change has not, as far as we have found, been studied in this model", on
+   `docs/reading/notes/prior_work_template.md`, before any revision of paper 1 is posted; the decompactification
+   relatives of `v2_changes.md` item 4 are its first near misses. (b) T54, still a draft, gains a held-out size under
+   rule 14 before it is committed as a pre-registration: its claim that the barrier "rises with the opened patch without
+   bound" is a size claim. *Done 2026-10-08: held out L = 16, fitted on L = 8 and 12, prediction written before L = 16 is computed (PREREGISTRATION T54, "Held-out size").* (c) The first red-team pass under the new rule 12: a fresh read-only session, ideally a
+   different model, given the repository and paper 1's question, recorded as an O entry. Accept: (a) has a verdict;
+   (b) names its held-out size and number before any run; (c) is recorded with what it found and what it got wrong.
 
-Owed by the owner: her T51 prediction (before any result is read); her T54 prediction (before any run); the open items of
+Owed by the owner: ~~her T51 prediction~~ (given 2026-10-08: GENTLE, PREREGISTRATION T51); ~~her T54 prediction~~ (given 2026-10-08: CRITICAL PATCH, PREREGISTRATION T54); her T53 prediction confirmed the same day; the open items of
 Update 44 (claim 4's wording; piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's
 revision; the Fife reference).
 

@@ -2,6 +2,12 @@
 
 Rule 4 of `CLAUDE.md`: predictions and analysis choices are committed here **before** the runs that test them. The git commit containing a section is its timestamp. Nothing below may be edited after its runs have started; corrections are added as dated amendments underneath, with the original left standing.
 
+**Standing requirements for every section written from 2026-10-08** (CLAUDE.md rules 14 and 15; VISION Update 45). Sections written before that date are not changed.
+
+1. **Held-out size.** If the section claims anything about how a result behaves as N grows, it names the largest size as held out, says what is fitted on the smaller sizes, and writes a number with a range for the held-out size here, before that size runs. The size verdict is scored at the held-out size only.
+2. **Prior work.** If the section, or the write-up it serves, will say "we have not found", it names the note in `docs/reading/notes/` that records the search.
+3. **Review.** If its verdict is a milestone, it names the fresh read-only review (CLAUDE.md rule 12) that will check it after the reading, and that review's report becomes an O entry.
+
 ---
 
 ## T6. The order of the geometry-forming transition
@@ -3279,6 +3285,22 @@ TASKS T9).
 **What does not change:** the runs (launched 5 October), the seeds, the cooling schedule, the fair clock, the hold, the
 cells, the verdict rule, P1, P2 and our predictions. **The owner's prediction is still owed before any result is read.**
 
+### The owner's prediction, recorded 2026-10-08, 10:56 ET by the clock, before any result has been read (no T51 file is in `results/` or `cloud/inbox/` of this working copy at this writing)
+
+**The owner's: GENTLE.** Her words: "Gentle yes". Given after a plain-language explanation of the three verdicts, and
+with a question of hers recorded beside it: "aren't gentle and cliff just describing diff temps?"
+
+*Ours, the answer given to her question, unverified:* both verdicts cover the same temperatures, 1.25 down to 0.25; what
+differs is how the healing times of the scraps are spread. If every scrap needed about the same time to heal at a given
+temperature (one wall height), all of them would heal together once the cooling became slower than that time, and the
+survival would drop off a cliff. If the healing times are spread over a wide range (T19: 500 to 13,000 sweeps at
+g = 1.25), each slower cooling catches another slice of them, and the fall is gentle. Her intuition is right in one way:
+a cliff corresponds to one sharp temperature at which the scraps stop healing, and a gentle fall to a smeared one. And
+the verdict reads only the decades from 10,000 to 300,000 fair sweeps, so a GENTLE verdict there does not rule out a
+cliff further out (Amendment 3, "the endpoint of the fall").
+
+Nothing else in T51 changes.
+
 ---
 
 ## T52. What does a cut hide? The hidden count round a relic, exact (gravity; ASSUMPTIONS O87; written 2026-10-05, 05:00 ET, before the count is taken on any saved state with the corrected module)
@@ -3466,6 +3488,12 @@ between the directions, which waits for the owner's choice (O89). Whether a wind
 larger ones. Time: the toy's clock is its count of moves, and this run uses the chain's own sweeps at each size, so
 times are compared between couplings, not between sizes.
 
+### The owner's prediction, confirmed 2026-10-08, 11:17 ET by the clock, before any result has been read (no T53 file is in `results/` or `cloud/inbox/` of this working copy at this writing; the runs were launched 5 October)
+
+**The owner's: confirmed as written above.** Her words: "Mine is good, proceed." Given after a plain-language
+explanation of the verdicts. The inferred prediction is now hers: OPENS IN A WINDOW at both λ and every length, sooner at
+1.40; SEVERAL. Nothing else in T53 changes.
+
 
 ---
 
@@ -3511,13 +3539,50 @@ the cheapest single move out of each patch (whether a patch of size k sits above
 
 ### Predictions
 
-**The owner's:** owed before any run.
+**The owner's (given 2026-10-08, 11:17 ET by the clock, before any computation):** CRITICAL PATCH. Her words: "I'm
+thinking critical patch." She named the verdict only; at which λ, and how large the patch or barrier, she did not say,
+so the prediction is read as CRITICAL PATCH at every λ computed. It coincides with ours, so this section tests a shared
+expectation. Still owed before this draft becomes a pre-registration: its held-out size under CLAUDE.md rule 14 (TASKS,
+the reviews of 6 October, item 9 (b)).
 
 **Ours, unverified (O103 (b)):** CRITICAL PATCH at every λ, with ΔH* rising as λ → 1 roughly as the seam cost squared
 over the release (the two-dimensional case of classical nucleation); at λ = 1.25 a barrier well above the single move
 of 36, which is why T48 stayed shut.
 
+### Held-out size (CLAUDE.md rule 14; added 2026-10-08, 11:24 ET by the clock, before any computation)
+
+The verdict words are size claims: FIXED WALL and CRITICAL PATCH say what ΔH(k) does as the patch grows, and NO FINITE
+PATCH says it rises "for every k computed", which a small sheet can fake by running out of room. So:
+
+1. **Held out: L = 16.** L = 8 and L = 12 are computed first, at all three λ, and nothing at L = 16 is computed until
+   step 3 is committed.
+2. **The fit, fixed now.** At each λ, from L = 8 and 12 only, fit ΔH(k) = a·k − b·k² + c over the patches that do not
+   touch their own wrap-around images (k ≤ L/2 − 1), by least squares on the exact values, the same model on both
+   sizes. a is the seam cost per unit of patch edge, b the release per unit of patch area, c a constant for the patch's
+   corners. *Ours, unverified:* this is the two-dimensional form of classical nucleation (general knowledge, to verify);
+   the critical patch is k* = a/(2b) and the barrier ΔH* = c + a²/(4b). If b ≤ 0 at some λ the fit predicts NO FINITE
+   PATCH there.
+3. **The prediction, written before L = 16 runs.** A dated amendment under this section records, at each λ: the
+   predicted verdict at L = 16; k* and ΔH* from the fit to L = 8 and 12 together; and a range for each, set as the
+   larger of ±10 % and the spread between the values fitted to L = 8 alone and to L = 12 alone. Then L = 16 is computed.
+4. **Scoring.** The verdict at each λ is read at L = 16 alone. The held-out prediction HOLDS at a λ if L = 16's exact
+   critical patch and barrier both fall inside their ranges; otherwise it MISSES, and the fit is reported beside the
+   exact values.
+5. **If the patch does not fit.** If the predicted k* at some λ is larger than L = 16 can hold without the patch
+   touching its own image (k* > 7), the verdict there is **UNREADABLE AT L = 16**: L = 24 becomes the held-out size at
+   that λ, by the same steps, and nothing at L = 16 is scored for that λ. NO FINITE PATCH is never given at a λ where
+   this happens.
+
+**Also owed under the standing requirements of 8 October:** T54 decides whether a branch is abandoned (Update 44), so
+it is a milestone: after the reading, a fresh read-only review (CLAUDE.md rule 12) checks the construction of the seam
+and the fit, and its report becomes an O entry. T54 makes no "we have not found" claim, so no prior-work note is
+required.
+
+**Still to do before this draft becomes a pre-registration:** the script and the exact definitions of "patch" and
+"grows", written and tested, as the Status above says.
+
 ### What this cannot show
 
 Anything about the parent model (Gate C open; Update 24's caveat). The dynamics: whether a bath crosses the barrier
-is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89).
+is part B. Anything at λ ≤ 1. Anything with a tie, which waits for the owner's choice (O89). The critical patch on a
+sheet much larger than the held-out size, beyond what the fit's form assumes.
