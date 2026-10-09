@@ -1,4 +1,4 @@
-\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\documentclass[aps,pre,10pt,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{booktabs}
@@ -40,8 +40,8 @@ been reproduced, there is no published eight-link curve, and every result here c
 \section{Introduction}
 
 The companion paper \cite{paper1} studied a four-link torus with one direction curled, the two-dimensional model's
-stand-in for a curled arrangement, and found a metastable state that opens into flat space by nucleation and a single
-front. The author's framework holds that the real curled arrangement has three, or four, directions curled together,
+stand-in for a curled arrangement, and found activated escape followed by rapid changes in square-count signatures, often with a dominant
+connected converted region. A unique moving front and macroscopic opening of both periods were not established. The author's framework holds that the real curled arrangement has three, or four, directions curled together,
 that they open together, and that one activation releases the whole burp \cite{repo}. That rule cannot be posed with
 four links, where a fully curled state (a gas of 4-cubes) has no wall at any $\lambda > 1$ and falls apart at once
 \cite{repo}. With six and eight links it can, and this paper poses it: exactly, by listing the single moves out of
@@ -69,8 +69,9 @@ validated against a published curve. The flat $D$-torus (every
 side at least 6) has $H = 0$. A side curled to length 4 puts one extra square on every edge along it, so each curled
 direction costs $4(\lambda - 1)$ per vertex, additively: with six links the rungs are $0$, $4(\lambda - 1)$,
 $8(\lambda - 1)$ and $12(\lambda - 1)$ (the 6-cube); with eight links there is a fourth rung at $16(\lambda - 1)$
-(the 8-cube). The local dimension $d(v)$, the number of edge pairs at $v$ that close no square, counts the open
-directions: $D$ on the flat torus, one less per curled direction, above $D$ where squares are missing.
+(the 8-cube). The legacy statistic $d(v)$ counts edge pairs at $v$ that close no square. On the reference product tori
+it matches the number of open directions: $D$ on the flat torus, one less per curled direction, above $D$ where squares are missing. On a general graph these counts do not certify a dimension,
+a product-torus geometry, or a macroscopic open direction.
 
 \subsection{The walls}
 
@@ -226,14 +227,14 @@ start is the question of the push scan (T40). What would carry the question furt
 couples the directions, which would be a new knob and needs its own decision before any run.
 
 \begin{acknowledgments}
-Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
+Code, analysis and text were drafted with Claude (Anthropic), with the 9 October scope review
+assisted by Codex (OpenAI), in conversation with the author, who directed and
 checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
 pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
 \end{acknowledgments}
 
 \begin{thebibliography}{9}
-\bibitem{paper1} E. Smith, The curled torus burps: front-driven decompactification between ordered states in a
-graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
+\bibitem{paper1} E. Smith, The curled torus burps: activated escape and conversion in a graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
 \bibitem{paper2} E. Smith, What the burp leaves behind, draft (2026), \texttt{docs/papers/relic/}.
 \bibitem{T22} C. A. Trugenberger, Emergent time, cosmological constant and boundary dimension at infinity in
 combinatorial quantum gravity, JHEP 04, 019 (2022); arXiv:2112.03778.

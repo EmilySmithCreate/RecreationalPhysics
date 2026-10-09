@@ -1,4 +1,4 @@
-\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\documentclass[aps,pre,10pt,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{booktabs}
@@ -23,8 +23,8 @@ The author's hypothesis holds that a black hole is a region of space re-curled t
 and that concentrated energy is what pays for the re-curling. We ask the model, sealed and energy-conserving, what
 energy does to flat space, three ways: spread through a bath any move may draw on, packed into one place as heat only
 one vertex may spend or as disorder wired into one patch, and spread then drained at four rates from a slow leak to
-a quench. Read by rules fixed before the runs, vertices whose local dimension falls below 2 are folded and those
-whose dimension rises above 2 are melted. At 36 to 256 vertices, with named points and with the points treated as
+a quench. Read by rules fixed before the runs, vertices whose square-count signature falls below 2 are classified as folded and those
+whose square-count signature rises above 2 are classified as melted. At 36 to 256 vertices, with named points and with the points treated as
 interchangeable, each test's verdict is a melt. In the local test 26 of 27 cells have a melted majority and one,
 with interchangeable points at 64 vertices, healed; in the leaking test all 15 cells melted, 134 of the 144 draining
 replicas; in the spread test the folded share of the damage stayed below one half at 64 vertices, while at 36 it
@@ -61,9 +61,10 @@ $X = \sum_e (S_e - 2)_+$ surplus squares,
 \begin{equation}
   H = 16(N - S) + 4\lambda X ,
 \end{equation}
-so a square destroyed costs 16 and a surplus square costs $4\lambda$. The local dimension $d(v)$ is the number of the
+so a square destroyed costs 16 and a surplus square costs $4\lambda$. The square-count signature $d(v)$ is the number of the
 six edge pairs at $v$ that close no square: 2 on the flat sheet, 1 on a curled direction, 0 in a 4-cube, above 2 where
-squares are missing. A vertex is \emph{folded} if $d < 2$ and \emph{melted} if $d > 2$; a replica's outcome, read from
+squares are missing. These reference values alone do not establish geometry, dimensionality or
+a return to the random phase. A vertex is \emph{folded} if $d < 2$ and \emph{melted} if $d > 2$; a replica's outcome, read from
 its final block, is FOLDED if at least four vertices are damaged and folded ones are at least as many as melted,
 MELTED if at least four are damaged and melted ones outnumber folded, HEALED if fewer than four are damaged. Four is
 the smallest curled object, one column. A cell's outcome is the majority over replicas (the spread test, T21, was read
@@ -86,10 +87,11 @@ the spread protocol with every store scaled by $1 - \ell$ after each block of 10
 0.1 and 1.0, the last a quench. Under the per-vertex bath a store below 32 can never act, because leaving the flat
 sheet costs at least that, so the packed budgets are 32 to 192 units in one store, or 288 and 576 spread over nine.
 
-With the points treated as interchangeable, every arrangement is weighted by its number of symmetries (the
-relabelings that keep every edge), which favors a complete fold, a 4-cube with 192 symmetries, over any partial
-state. The packed test was run that way at 64 vertices, the smallest size at which a complete fold exists, with the
-fast automorphism count of Ref.~\cite{repo}.
+The alternative uniform-unlabelled-class ensemble reweights labelled graphs by their side-preserving
+automorphism count, in addition to the energy weight. This can favor symmetric configurations;
+it does not guarantee that a folded endpoint dominates every partial state or determine its formation rate.
+The packed test used this weighting at 64 vertices, where four disconnected 4-cubes can fit,
+with the automorphism implementation of Ref.~\cite{repo}.
 
 \section{Spread through a bath: it melts}
 
@@ -125,7 +127,7 @@ patch.
 keeps the heat the patch gives off in per-vertex stores.}
 \label{tab:t26}
 \begin{ruledtabular}
-\begin{tabular}{llrrrr}
+\begin{tabular}{@{}llrrrr@{}}
 protocol & $N$ & budgets & melted & folded & healed \\
 \hline
 stores, radius 0 & 144 & 32 to 192 & 115 & 4 & 1 \\
@@ -183,14 +185,14 @@ pre-registered (T42) \cite{repo}. And it carries the model's standing caveat: th
 calls matter, and the author does not; what the melt is called does not change what it does.
 
 \begin{acknowledgments}
-Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
+Code, analysis and text were drafted with Claude (Anthropic), with the 9 October scope review
+assisted by Codex (OpenAI), in conversation with the author, who directed and
 checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
 pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
 \end{acknowledgments}
 
 \begin{thebibliography}{9}
-\bibitem{paper1} E. Smith, The curled torus burps: front-driven decompactification between ordered states in a
-graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
+\bibitem{paper1} E. Smith, The curled torus burps: activated escape and conversion in a graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
 \bibitem{paper2} E. Smith, What the burp leaves behind, draft (2026), \texttt{docs/papers/relic/}.
 \bibitem{T25} C. A. Trugenberger, Networks as the fundamental constituents of the universe, J. Phys. Complex. 6,
 042001 (2025); arXiv:2512.17676.

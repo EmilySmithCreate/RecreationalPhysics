@@ -4,14 +4,14 @@
 
 PREREGISTRATION.md T7: the waiting time is the sweep at which phi first leaves the tube's value
 by more than three times its resting standard deviation, the latter measured over the first 200
-sweeps. A change that starts by a rare local event is memoryless, so the waiting times are
-exponential and their coefficient of variation (std / mean) is 1; a smooth deformation has a
+sweeps. A constant-hazard process has exponential waiting times and coefficient of variation
+(std / mean) 1. A CV near 1 alone does not establish that model; a smooth deformation has a
 characteristic time and CV << 1. The prediction on record is CV in [0.7, 1.3] at every size.
 
-Replicas that never leave the tube within the run are right-censored: they are counted and
-reported, and the CV is computed two ways -- over the decays seen, and with the censored ones
-placed at the run length (a lower bound on their waiting time), so the reader can see whether
-the censoring matters.
+Replicas with no recorded detector crossing are counted separately. The historical CV
+diagnostic is computed over recorded crossings and with missing values placed at the run
+length. That imputation is not a survival analysis: a missing detector crossing does not
+establish that the graph remained an unconverted tube (see the T38 counterexample in O108).
 """
 import csv
 import sys

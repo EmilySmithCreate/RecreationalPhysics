@@ -41,6 +41,9 @@ def manifest():
         "scripts/exact_torus_level.py", "scripts/analyse_paper_stats.py", "scripts/analyse_t38.py",
         "scripts/plot_paper_fig1.py", "scripts/plot_paper_fig_lambda.py", "scripts/plot_paper_fig_tori.py",
         "scripts/run_sealed_tube.py", "src/graphity/sealed.py", "tests/test_curled_revision.py",
+        "docs/papers/measurement_scope.md", "src/graphity/dimension.py",
+        "scripts/analyse_t9.py", "scripts/analyse_t10.py", "scripts/analyse_t22.py",
+        "scripts/run_sealed_sheet_budget.py", "tests/test_t22.py", "tests/test_sealed_budget_thermometer.py",
         "docs/reading/notes/2026-10-09_prior_work_curled_torus.md")]
     # Normalize release text to the UTF-8/LF representation stored by Git.
     # PowerShell-redirection logs can otherwise be UTF-16 and Windows files CRLF.

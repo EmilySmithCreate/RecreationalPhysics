@@ -140,7 +140,7 @@ def run_sealed_bath(adj, side_u, demons, n_sweeps, seed, lam=1.0, cap=CAP, conn=
     demons : float array of length C, the energy each demon starts with. Each attempted move
              picks one demon at random to pay for it or be paid by it; a move the chosen demon
              cannot afford is refused. H + sum(demons) is conserved exactly. The demons' mean
-             energy reads the temperature, and C sets how far that temperature rises per unit
+             energy is an observable, not a calibrated temperature; C sets the mean energy gain per unit
              of energy released -- which is the knob the experiment scans. With C = 1 no random
              choice is made and the run is bit-for-bit run_sealed with leak = 0 (tested).
     by_vertex : PREREGISTRATION T26 (the local spark; ASSUMPTIONS Q22). When True, `demons` has one
