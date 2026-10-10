@@ -561,7 +561,19 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    λ = 1.30, N = 64, on the move clock and on a look every five sweeps in the same histories. Ours: the long waits
    were chance and the 7 % is the looks. Launched on the laptop the same hour (`scripts/make_t59_configs.py`,
    `scripts/run_first_exits.py`). **Her prediction is owed before any stage is read.** To read:
-   `python scripts/analyse_t59.py`, then an O entry, then the paper's two sentences.*
+   `python scripts/analyse_t59.py`, then an O entry, then the paper's two sentences.* *Her prediction, recorded
+   18:17 ET before any reading: chance, and exits hidden between two looks. Read at 18:29 ET, the two stages
+   that had finished: T8's long wait was a tube that sat (TRUE WAIT); the 7 % is the looks (HIDDEN EXITS: by the
+   move the first exit is 1.005 ± 0.016 of the count, and a look every five sweeps reads it 0.096 ± 0.007 later).
+   Stages A2 and B (λ = 1.05) were still running; when they finish, `python scripts/analyse_t59.py` again, then
+   the O entry and the paper's two sentences.*
+   **The λ map a fourth time is PREREGISTRATION T60** (10 October, 18:45 ET; the owner's "Proceed"): T24's grid and
+   protocol, fresh seeds, the wait timed with no detector (`first_left`), the bar unchanged (VISION Update 53), and
+   a held-out size, N = 288, scored against numbers written from stage 1 alone. Stage 1, 28 Batch jobs
+   (`cloud/queue/2026-10-10_t60_stage1.txt`). To read: `t60_*` in `cloud/fetch/request.txt`, accept, then
+   `python scripts/analyse_t60.py`; then `python scripts/analyse_t60.py --write-prediction`, a dated amendment with
+   the numbers and the owner's prediction for N = 288, `python scripts/make_t60_configs.py --held-out`, and a
+   queue file for stage 2. A red-team pass (rule 12) is owed before paper 1 quotes the verdict.
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be

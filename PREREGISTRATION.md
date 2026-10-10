@@ -4417,3 +4417,145 @@ a thousand; a memoryless wait has 1 and equality.
 **What it says.** Counted by the move, the first exit at λ = 1.30 is on the count. A look every five sweeps reads
 it about 10 % late, and nearly all of that is first exits that come back before the look: about one in thirteen.
 T58's 7 % is that effect. The look lengthens the wait and leaves its shape alone: a memoryless wait stays memoryless.
+
+---
+
+## T60. The λ map a fourth time: the wait timed with no detector, the same bar, and a size held out (paper 1; piece 2; the owner's decision of 10 October; ASSUMPTIONS O44, O52, O109, O110; written 2026-10-10, 18:45 ET by the clock, before any run)
+
+### Why
+
+Three registered runs of the map (T8, T23, T24) were each INCONCLUSIVE by the letter, each for a different reason,
+while what they measured read the same each time: two orders side by side and one front in every cell of the window,
+the exact release, and break-up beginning at λ = 1.35. The first tripped on a memoryless check sized wrongly for
+thirty decays; the second on an energy gate that compared a warm average with an exact wiring; the third, with both
+repaired, on the memoryless check in four cells of 28.
+
+The third run's failures were on the clock. The wait was the detector's: it watches a tube for 200 sweeps, sets a
+threshold from the tube's own jitter in that watch, and then looks every five sweeps. Read on 10 October (O109),
+the two enormous waits that failed two of the four cells (24 and 76 mean waits, both at N = 64) were not waits:
+those tubes had mostly converted inside the watch and then rested on a defective sheet until the threshold was
+crossed. The other two failures (λ = 1.30 at N = 192, inside the window; λ = 1.35 at N = 144, the edge) were on the
+spread of the waits and have not been read.
+
+So the one thing left to repair is the clock, and the repair exists: T58's read-only recorder writes the first look,
+from sweep 0, at which a decay no longer reads as the perfect tube, with no watch and no threshold. T59 stage C
+(read at 18:29 ET today) measured what that clock does at λ = 1.30, N = 64: it runs about 10 % later than a count by
+the move, because about one first exit in thirteen comes back before the look, and it leaves the shape of the wait
+alone (spread over mean 0.993 against 0.990 by the move).
+
+Asked on 10 October, the owner said to proceed. She also said what her words of 25 September meant (VISION Update
+53): continued interest even if the change is not seen every time, not a lower bar. **The bar here is T23's and
+T24's, unchanged.**
+
+**Said plainly: this is the fourth attempt at one verdict.** Each repair has been to the instrument, written before
+its run, with fresh seeds, and all four runs are reported whatever this one returns. A reader is entitled to weigh a
+fourth attempt less than a first, and paper 1 will say that it is the fourth.
+
+**Disclosed: what is known before this is written.** Every result of T8, T23 and T24 at these settings, N = 192
+included, which is why the size held out below is one this map has never run. T58, T59 stages A1 and C, O109 and
+O110. That tubes much longer than these, run under other protocols, open from several seeds (T37, T51). Nothing of
+T60 has been run.
+
+### What will be run
+
+`scripts/run_tube_decay.py`, the runner of all three earlier maps, on Batch, one job per cell
+(`scripts/make_t60_configs.py`; `cloud/queue/2026-10-10_t60_stage1.txt`).
+
+- **Stage 1: T24's grid and protocol exactly.** λ = 1.05, 1.10, 1.15, 1.20, 1.25, 1.30, 1.35; N = 64, 96, 144, 192
+  (tubes 16, 24, 36, 48 × 4); 120 decays per cell; g = 1.5; block 5; stop at 98 %; `n_sweeps` 100,000; settle 600
+  with `settle_max` 100,000; `save_adjacency`; `record_f_200`. Fresh seeds, one per λ (20266105 to 20266135). One
+  addition, `record_detector`, which reads the chain and draws nothing (tested to leave every column of a run
+  unchanged, `tests/test_tube_decay_seeds.py`): each row gains `first_left`, the first look at which the decay no
+  longer read as the perfect tube (S = 5N/4, X = N, every point at d = 1), counted from sweep 0.
+- **Stage 2: the held-out size, N = 288 (72 × 4), the same seven λ, 120 decays each.** It is not run until stage 1
+  has been read and the numbers below have been written for it and committed. Its caps are 200,000 sweeps, because a
+  conversion takes more chain sweeps in a longer tube (the fair clock, O90); that is at least the room in fair
+  sweeps that N = 192 has in stage 1.
+
+Durations are in chain sweeps, as in the three earlier maps, because this is a repeat of them and because the first
+exit's rate per chain sweep is the same at every size (exact; paper 1, Eq. (2)).
+
+### Definitions, fixed now (`scripts/analyse_t60.py`, tested in `tests/test_t60.py` before any run)
+
+- **Metastable, reached, (b) two orders side by side, (c) one front, gate 2, gate 3′, the resting states read
+  exactly, the status per λ, the window verdict and the edge verdict: exactly as T24**, by calling `analyse_t24`,
+  `analyse_t23` and `analyse_t8`. For reference: (b) at least 80 % of points at d ∈ {1, 2} at half conversion; (c)
+  the largest converted piece holds at least 70 %; gate 2, at least 30 decays reaching 75 %; gate 3′, every such
+  decay has a valid saved final graph.
+- **(a″) Memoryless, replacing (a′).** The wait of a decay is `first_left`, in sweeps. It is taken over **every**
+  decay of a metastable cell, not only those that converted, so nothing is selected on success. A decay that never
+  left by the cap enters at the cap and is reported. (a″) holds when the sample CV of those waits (ddof 1) lies
+  inside T23's central 99.9 % band for that many independent memoryless waits (for 120: 0.756 to 1.379; the same
+  simulation and seed as T23). A look every five sweeps rounds each wait up to a multiple of five, which lowers the
+  CV by less than 1.5 % at these λ; no correction is made.
+- **Sharp at (λ, N):** (a″), (b) and (c).
+- **The window (λ = 1.05 to 1.30), scored on stage 1's four sizes:** SHARP ACROSS THE WINDOW, NOT SHARP AT (the
+  list), or INCONCLUSIVE with the reason, as T23.
+- **The edge (λ = 1.35 against 1.30), pooled over stage 1's sizes:** BREAK-UP BEGINS AT THE EDGE, NO BREAK-UP or
+  PARTIAL, as T23.
+- **The waiting-time law**, reported and not scored: the mean wait over τ(λ). A look every five sweeps is expected to
+  read it late (T59 stage C), so "within 25 %" is not a test of Eq. (2) here.
+
+**The held-out size (rule 14).** The claim about size is that the change stays sharp as the tube gets longer. It is
+scored at N = 288 alone, against numbers written from stage 1 alone by this recipe, per window λ:
+- the mean wait over τ: the mean of the four stage-1 cells' values, with a range of 32 % either side (a little over
+  three standard errors of a memoryless mean of 120, with the prediction's own error added);
+- (b), the share of points at d ∈ {1, 2} at half conversion: the least-squares straight line against N through the
+  four stage-1 cells, read at 288 and kept between 0 and 1, with a range of 0.03 either side;
+- (c), the largest converted piece's share: the same line, with a range of 0.10 either side;
+- and whether those predicted values make the cell sharp ((b) at least 0.80 and (c) at least 0.70).
+
+`python scripts/analyse_t60.py --write-prediction` writes them to `configs/t60_heldout_prediction.json`, once, and
+that file is committed with a dated amendment here before stage 2 is queued. Two lines are then read at N = 288:
+**AS PREDICTED AT THE HELD-OUT SIZE** if at every window λ the cell is metastable, passes gates 2 and 3′, has (a″)
+inside its band and all three numbers inside their ranges, otherwise **NOT AS PREDICTED AT** (the list, with what
+missed); and the λ at which N = 288 is sharp. A prediction of "not sharp" that comes true is as predicted, and is
+reported as not sharp.
+
+Nothing here says that something has not been found in the literature (rule 15). A red-team pass (rule 12) is owed
+before paper 1 quotes this run's verdict.
+
+### Predictions
+
+**The owner's, for stage 1, standing from T23 and T24: SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE.**
+On 10 October she was told a fourth run needed her yes and her prediction and was reminded of that one; she
+answered "Proceed". It is recorded as her prediction for stage 1 unless she replaces it before stage 1 is read.
+**For the held-out size hers is owed**, and is asked for when stage 1 has been read and the numbers written.
+
+**Ours, unverified, for stage 1: the same.** (a″) holds in all 24 window cells (a memoryless cell fails it one time
+in a thousand, so a false fail somewhere has a chance of 2.4 %), including λ = 1.30 at N = 192, whose failure in T24
+we expect was the detector's clock; (b) and (c) hold in every window cell as they did three times; the edge breaks
+up. Not scored: the mean wait by the look runs 0 to 15 % above τ, most at the smallest size.
+
+**Ours, for the held-out size, said now and before stage 1:** (a″) and (b) hold at N = 288 at every window λ. (c),
+one front, is the one at risk at the top of the window (λ = 1.25 and 1.30): the first exit comes at the same rate
+per sweep whatever the length, while a front needs more sweeps to cross a longer tube, so a second seed has more
+time to start (T37, T51). The numbers follow from stage 1.
+
+### What each outcome would mean
+
+- **SHARP ACROSS THE WINDOW.** Paper 1's map gets a registered verdict in place of three inconclusives, reported as
+  the fourth attempt, with the earlier three beside it.
+- **NOT SHARP AT (a list).** The window is narrower than 1.05 to 1.30 at these sizes, and the paper says where it
+  ends and which of (a″), (b), (c) failed.
+- **INCONCLUSIVE.** Reported with its reason. **No fifth run is planned for paper 1** (ours; the owner may overrule
+  it in a dated note): a further run would need a new reason written before it, as this one has.
+- **The edge other than BREAK-UP.** The owner's prediction, which held twice, fails on the third try, and the paper's
+  sentence about where break-up begins is withdrawn or weakened.
+- **NOT AS PREDICTED at the held-out size.** The straight line from four sizes does not carry to a tube half as long
+  again. Which number missed says what changes with length. If it is (c), the single front is a property of short
+  tubes at that λ, the window narrows as the tube lengthens, and paper 1 says so beside its size table.
+- **AS PREDICTED and sharp.** The size claim holds one step beyond every size this map had run.
+
+### Named or interchangeable points
+
+Named, for T8's reason (the count of each proposed arrangement's symmetries at every move is unaffordable at these
+sizes). The expected effect of interchangeable points is T8's: waits multiplied by about N, the release and the
+front unchanged (ours, unverified).
+
+### What this cannot show
+
+Anything outside λ = 1.05 to 1.35, at other couplings, beyond N = 288, or with interchangeable points. That Eq. (2)
+is right: the look's clock runs late by an amount that depends on how often exits come back, which T59 measures by
+the move. That the resting states are stable. Anything at λ = 1: at λ ≠ 1 this is our family around the published
+model, never combinatorial quantum gravity.

@@ -84,6 +84,21 @@ branch; written 07:20 ET by the clock).**
   **VISION Update 53 (18:22 ET):** her clarification that "her bar" of Update 26 meant continued interest, not a
   lower bar for scoring; a fourth map, if she asks for one, keeps the registered bar, times the waits without
   the detector, and names a held-out size first.
+  **Read at 18:29 ET, stages A1 and C only** (PREREGISTRATION T59, "Reading"): T8's long wait at N = 96 read as
+  the tube at every look for 78,205 sweeps (TRUE WAIT); at λ = 1.30 the first exit counted by the move is
+  1.005 ± 0.016 of the count and a look every five sweeps reads it 0.096 ± 0.007 later, 94 % of that from first
+  exits that came back before the look (HIDDEN EXITS; her prediction and ours hold). **Stages A2 and B were still
+  running** (the laptop, to about 22:00 ET); their files land in `results/t59_*`; run the analyzer again, record
+  the reading and O112, then change paper 1's two sentences (the "within 7 %" and the "motivates an
+  attempt-resolved audit") and rebuild.
+- **T60, the λ map a fourth time, pre-registered 10 October, 18:45 ET, at the owner's "Proceed"**
+  (`scripts/make_t60_configs.py`, `scripts/analyse_t60.py`, 28 configs `configs/t60_*`,
+  `cloud/queue/2026-10-10_t60_stage1.txt`). T24's grid and protocol with fresh seeds; the one repair is the clock:
+  the wait is the first look at which a decay stopped being the tube, with no watch and no threshold. The bar is
+  T23's and T24's. Her prediction stands from those runs (sharp across the window; break-up at the edge). Rule 14:
+  N = 288 is held out; after stage 1 is read, `python scripts/analyse_t60.py --write-prediction`, a dated
+  amendment, **her prediction for N = 288**, then `python scripts/make_t60_configs.py --held-out` and a queue file.
+  Ours for 288: one front is the criterion at risk at the top of the window. No fifth run is planned.
   New in the kernel folder: `graphity.exits.first_exit_clocks` and `offers_until_exit` (T22's chain, draw for
   draw), and `graphity.results.provenance` (the commit and a dirty flag in a run's meta; TASKS, the reviews of
   6 October, item 5, for new runners only so far).

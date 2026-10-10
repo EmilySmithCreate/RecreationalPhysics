@@ -1,0 +1,32 @@
+# PREREGISTRATION T60, stage 1 (written 2026-10-10, 18:45 ET, before any run): the lambda map a fourth time, T24's grid
+# and protocol with fresh seeds and the first look at which each decay stopped being the tube recorded, so that the
+# wait is timed with no detector. 28 jobs. Stage 2 (N = 288, held out) is queued only after its numbers are written.
+# One line per Batch job: <runner> <config>.
+run_tube_decay t60_lam105_n64
+run_tube_decay t60_lam105_n96
+run_tube_decay t60_lam105_n144
+run_tube_decay t60_lam105_n192
+run_tube_decay t60_lam110_n64
+run_tube_decay t60_lam110_n96
+run_tube_decay t60_lam110_n144
+run_tube_decay t60_lam110_n192
+run_tube_decay t60_lam115_n64
+run_tube_decay t60_lam115_n96
+run_tube_decay t60_lam115_n144
+run_tube_decay t60_lam115_n192
+run_tube_decay t60_lam120_n64
+run_tube_decay t60_lam120_n96
+run_tube_decay t60_lam120_n144
+run_tube_decay t60_lam120_n192
+run_tube_decay t60_lam125_n64
+run_tube_decay t60_lam125_n96
+run_tube_decay t60_lam125_n144
+run_tube_decay t60_lam125_n192
+run_tube_decay t60_lam130_n64
+run_tube_decay t60_lam130_n96
+run_tube_decay t60_lam130_n144
+run_tube_decay t60_lam130_n192
+run_tube_decay t60_lam135_n64
+run_tube_decay t60_lam135_n96
+run_tube_decay t60_lam135_n144
+run_tube_decay t60_lam135_n192
