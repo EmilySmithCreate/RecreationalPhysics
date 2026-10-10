@@ -532,7 +532,8 @@ A grid drawn on paper has edges, where the dots run out of links. The toy remove
 \end{tikzpicture}
 \caption{The toy's flat space. \Exact\ The grid wraps around both ways, like an old game screen whose
 edges join. It has no edges, so every dot has its four links, and when both ways around are long every
-dot reads $d=2$. We call it \textbf{the flat sheet}. Mathematicians call the shape a \textbf{torus}.}
+dot reads $d=2$. We call it \textbf{the flat sheet}. Mathematicians call any grid that wraps both ways a
+\textbf{torus}. Every shape in this paper is a torus; this one is the flat kind.}
 \label{fig:wrap}
 \end{figure}
 
@@ -567,8 +568,8 @@ If a direction is not large, what else can it be? Small: curled up on itself.
 \end{scope}
 \end{tikzpicture}
 \caption{Curling one direction. \Exact\ Make one of the two ways around only four steps long. A grid
-four dots around and $L$ dots along, wrapped both ways, is the $4 \times L$ torus. We call it
-\textbf{the tube}.}
+four dots around and $L$ dots along, wrapped both ways, is still a torus, the $4 \times L$ torus:
+the curled kind. We call it \textbf{the tube}.}
 \label{fig:tube}
 \end{figure}
 
@@ -646,7 +647,7 @@ that way closes one: the direction no longer counts as large, and every dot on t
 \end{figure}
 
 Curl both ways around to four steps and every dot reads $d = 0$: a closed sixteen-dot knot called the
-4-cube. Most of the closed pieces of Chapter~2 are these knots. Figure~\ref{fig:directions} puts the
+4-cube. It is a torus too, curled both ways. Most of the closed pieces of Chapter~2 are these knots. Figure~\ref{fig:directions} puts the
 three arrangements side by side.
 
 \begin{figure}[H]
@@ -698,8 +699,9 @@ certified geometry: Chapter~6 says what it can and cannot vouch for.}
 
 \par\Needspace{17\baselineskip}
 \sub{The ladder}
-\Exact\ Put the three arrangements side by side: flat sheet, tube, knot. Each curls one more direction
-than the one before, so we call them the rungs of a \textbf{ladder}. The price list of Chapter~2 gives
+\Exact\ Put the three arrangements side by side: flat sheet, tube, knot. All three are tori, and we
+tell them apart by how they are curled: flat, curled, knot. Each curls one more direction than the one
+before, so we call them the rungs of a \textbf{ladder}. The price list of Chapter~2 gives
 each rung its bill, per dot:
 
 \begin{center}
@@ -1769,6 +1771,7 @@ conversion (6), the sealed system (7 and~8) and the dependence on $\lambda$ (9).
 In the paper & What to keep in mind\\
 \midrule
 $N$ & Number of dots. The running example uses $N=96$.\\
+Torus & Any grid that wraps both ways. The flat torus is the sheet, the curled torus is the tube, and the smallest one, curled both ways, is the knot.\\
 $4\times L$ & Four steps around the short wrap and $L$ around the other, $L$ even and above 4. $4\times4$ is the knot.\\
 $\lambda$ and $g$ & Lambda sets the price of a surplus square and so the whole ladder; $g$ is the bath's warmth, which sets how often an uphill swap is accepted.\\
 $H = 16(N-S) + 4\lambda X$ & The price list: $S$ squares, $X$ surplus squares. Zero on the flat sheet; $4(\lambda-1)$ per dot on the tube.\\

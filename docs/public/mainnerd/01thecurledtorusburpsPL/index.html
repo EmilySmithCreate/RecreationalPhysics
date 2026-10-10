@@ -249,7 +249,7 @@
      "name": "What is a curled torus?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "A torus is a grid that wraps around in both directions. Curl one direction until it is only four steps around and you have a tube. In the model the tube has one large direction where the flat sheet has two, and it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."
+      "text": "A torus is a grid that wraps around in both directions, and every shape in the paper is one: flat (the sheet), curled (the tube) or knot. Curl one direction of the flat one until it is only four steps around and you have a tube. In the model the tube has one large direction where the flat sheet has two, and it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."
      }
     },
     {
@@ -311,6 +311,12 @@
      "@type": "DefinedTerm",
      "name": "N",
      "description": "Number of dots. The running example uses N = 96.",
+     "inDefinedTermSet": "https://sidenerdapps.com/mainnerd/01thecurledtorusburpsPL/#translations"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Torus",
+     "description": "Any grid that wraps both ways. The flat torus is the sheet, the curled torus is the tube, and the smallest one, curled both ways, is the knot.",
      "inDefinedTermSet": "https://sidenerdapps.com/mainnerd/01thecurledtorusburpsPL/#translations"
     },
     {
@@ -507,16 +513,16 @@
 <figure class="fig" id="fig-7"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-07.svg" width="657" height="235" loading="lazy" alt="Figure 7: What a direction is, in a network with no positions."><figcaption><b>Figure 7.</b> What a direction is, in a network with no positions. <span class="tag tag-exact">EXACT</span> Count the pairs at a dot that close no square, and call the count <span class="m"><i>d</i></span>. On a flat grid, <span class="m"><i>d</i> = 2</span>.</figcaption></figure>
 <h3 id="ch3-a-grid-with-no-edges">A grid with no edges</h3>
 <p>A grid drawn on paper has edges, where the dots run out of links. The toy removes the edges.</p>
-<figure class="fig" id="fig-8"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-08.svg" width="657" height="217" loading="lazy" alt="Figure 8: The toy’s flat space."><figcaption><b>Figure 8.</b> The toy’s flat space. <span class="tag tag-exact">EXACT</span> The grid wraps around both ways, like an old game screen whose edges join. It has no edges, so every dot has its four links, and when both ways around are long every dot reads <span class="m"><i>d</i> = 2</span>. We call it <strong>the flat sheet</strong>. Mathematicians call the shape a <strong>torus</strong>.</figcaption></figure>
+<figure class="fig" id="fig-8"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-08.svg" width="657" height="217" loading="lazy" alt="Figure 8: The toy’s flat space."><figcaption><b>Figure 8.</b> The toy’s flat space. <span class="tag tag-exact">EXACT</span> The grid wraps around both ways, like an old game screen whose edges join. It has no edges, so every dot has its four links, and when both ways around are long every dot reads <span class="m"><i>d</i> = 2</span>. We call it <strong>the flat sheet</strong>. Mathematicians call any grid that wraps both ways a <strong>torus</strong>. Every shape in this paper is a torus; this one is the flat kind.</figcaption></figure>
 <h3 id="ch3-curling">Curling</h3>
 <p>If a direction is not large, what else can it be? Small: curled up on itself.</p>
-<figure class="fig" id="fig-9"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-09.svg" width="657" height="206" loading="lazy" alt="Figure 9: Curling one direction."><figcaption><b>Figure 9.</b> Curling one direction. <span class="tag tag-exact">EXACT</span> Make one of the two ways around only four steps long. A grid four dots around and <span class="m"><i>L</i></span> dots along, wrapped both ways, is the <span class="m">4 × <i>L</i></span> torus. We call it <strong>the tube</strong>.</figcaption></figure>
+<figure class="fig" id="fig-9"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-09.svg" width="657" height="206" loading="lazy" alt="Figure 9: Curling one direction."><figcaption><b>Figure 9.</b> Curling one direction. <span class="tag tag-exact">EXACT</span> Make one of the two ways around only four steps long. A grid four dots around and <span class="m"><i>L</i></span> dots along, wrapped both ways, is still a torus, the <span class="m">4 × <i>L</i></span> torus: the curled kind. We call it <strong>the tube</strong>.</figcaption></figure>
 <figure class="fig" id="fig-10"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-10.svg" width="657" height="187" loading="lazy" alt="Figure 10: Why four steps around, and not three or two."><figcaption><b>Figure 10.</b> Why four steps around, and not three or two. <span class="tag tag-exact">EXACT</span></figcaption></figure>
 <figure class="fig" id="fig-11"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-11.svg" width="657" height="247" loading="lazy" alt="Figure 11: Curling puts a third square on a link."><figcaption><b>Figure 11.</b> Curling puts a third square on a link. <span class="tag tag-exact">EXACT</span> So curling a direction is exactly what the surplus price charges for. And because the way around is now a square, the pair of links that points that way closes one: the direction no longer counts as large, and every dot on the tube reads <span class="m"><i>d</i> = 1</span>.</figcaption></figure>
-<p>Curl both ways around to four steps and every dot reads <span class="m"><i>d</i> = 0</span>: a closed sixteen-dot knot called the 4-cube. Most of the closed pieces of Chapter <a href="#ch2">2</a> are these knots. Figure <a href="#fig-12">12</a> puts the three arrangements side by side.</p>
+<p>Curl both ways around to four steps and every dot reads <span class="m"><i>d</i> = 0</span>: a closed sixteen-dot knot called the 4-cube. It is a torus too, curled both ways. Most of the closed pieces of Chapter <a href="#ch2">2</a> are these knots. Figure <a href="#fig-12">12</a> puts the three arrangements side by side.</p>
 <figure class="fig" id="fig-12"><img src="/mainnerd/assets/01thecurledtorusburps/plain-fig-12.svg" width="657" height="464" loading="lazy" alt="Figure 12: How many directions a dot has."><figcaption><b>Figure 12.</b> How many directions a dot has. <span class="tag tag-exact">EXACT</span> Top: with four links per dot, the count <span class="m"><i>d</i></span> is the number of pairs of a dot’s links that close no square, and it tells the flat sheet, the tube and the knot apart dot by dot. Grey box, outside this paper: the same count with six or eight links per dot allows three or four large directions, the subject of a later paper. The count is a signature, not a certified geometry: Chapter <a href="#ch6">6</a> says what it can and cannot vouch for.</figcaption></figure>
 <h3 id="ch3-the-ladder">The ladder</h3>
-<p><span class="tag tag-exact">EXACT</span> Put the three arrangements side by side: flat sheet, tube, knot. Each curls one more direction than the one before, so we call them the rungs of a <strong>ladder</strong>. The price list of Chapter <a href="#ch2">2</a> gives each rung its bill, per dot:</p>
+<p><span class="tag tag-exact">EXACT</span> Put the three arrangements side by side: flat sheet, tube, knot. All three are tori, and we tell them apart by how they are curled: flat, curled, knot. Each curls one more direction than the one before, so we call them the rungs of a <strong>ladder</strong>. The price list of Chapter <a href="#ch2">2</a> gives each rung its bill, per dot:</p>
 <div class="tablewrap"><table>
 <thead>
 <tr><th></th><th>flat sheet</th><th>tube</th><th>knot</th></tr>
@@ -748,6 +754,7 @@
 </thead>
 <tbody>
 <tr><td><span class="m"><i>N</i></span></td><td>Number of dots. The running example uses <span class="m"><i>N</i> = 96</span>.</td></tr>
+<tr><td>Torus</td><td>Any grid that wraps both ways. The flat torus is the sheet, the curled torus is the tube, and the smallest one, curled both ways, is the knot.</td></tr>
 <tr><td><span class="m">4 × <i>L</i></span></td><td>Four steps around the short wrap and <span class="m"><i>L</i></span> around the other, <span class="m"><i>L</i></span> even and above 4. <span class="m">4 × 4</span> is the knot.</td></tr>
 <tr><td><span class="m"><i>λ</i></span> and <span class="m"><i>g</i></span></td><td>Lambda sets the price of a surplus square and so the whole ladder; <span class="m"><i>g</i></span> is the bath’s warmth, which sets how often an uphill swap is accepted.</td></tr>
 <tr><td><span class="m"><i>H</i> = 16(<i>N</i> − <i>S</i>) + 4<i>λ</i><i>X</i></span></td><td>The price list: <span class="m"><i>S</i></span> squares, <span class="m"><i>X</i></span> surplus squares. Zero on the flat sheet; <span class="m">4(<i>λ</i> − 1)</span> per dot on the tube.</td></tr>
@@ -792,7 +799,7 @@
 <section class="faq" id="quick-answers"><h2>Quick answers</h2>
 <h3>What is “The curled torus burps” about?</h3><p>It is a plain-language edition of a computational physics paper by Emily Smith. It asks what a sharp change from one specific arrangement into flat space would look like, and tests each part of that picture in a toy model made of dots and links: what it costs to start, how long the wait is, what takes shape, where the released energy goes, and what remains.</p>
 <h3>What is combinatorial quantum gravity, and is this it?</h3><p>Combinatorial quantum gravity is a published model, built by Carlo Trugenberger, Christy Kelly and Fabio Biancalana, in which space is a network with no positions at all and the energy is a count of squares that acts as a curvature. This paper uses a close cousin of that model, not the model itself: it turns one knob, the price of a surplus square (λ), above the published value of 1.</p>
-<h3>What is a curled torus?</h3><p>A torus is a grid that wraps around in both directions. Curl one direction until it is only four steps around and you have a tube. In the model the tube has one large direction where the flat sheet has two, and it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25.</p>
+<h3>What is a curled torus?</h3><p>A torus is a grid that wraps around in both directions, and every shape in the paper is one: flat (the sheet), curled (the tube) or knot. Curl one direction of the flat one until it is only four steps around and you have a tube. In the model the tube has one large direction where the flat sheet has two, and it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25.</p>
 <h3>What is the burp?</h3><p>The burp is the energy given off when the tube opens into the flat sheet. For a clean change it is exactly 4(λ − 1) per dot, so it grows with the size of the tube, while the push needed to start it does not.</p>
 <h3>How much energy does it take to start the change?</h3><p>Twelve units at λ = 1.25: the cost of the cheapest partner swap out of a perfect tube, counted exactly, the same at every size from 48 to 288 dots. In 320 sealed runs, no tube left with a budget below 12 and every tube left with 12 or more.</p>
 <h3>How long does the tube wait before it starts?</h3><p>Count the exits a sweep offers, multiply by the chance each is taken, and you predict the mean wait with nothing fitted. Across twelve conditions the measured mean wait divided by the predicted one averaged 0.98. The waiting is memoryless, like rolling a die until a six comes up.</p>

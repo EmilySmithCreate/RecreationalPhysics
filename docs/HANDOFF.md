@@ -110,8 +110,12 @@ branch; written 07:20 ET by the clock).**
     on a new pushed branch of the SideNerdMarketing repository, `feat/sidenerdapps-main-nerd-blog` (commit
     `4522930`), with the sitemap entries. She merged that first copy into the marketing `main` the same day
     (pull request 56). After the correction to both editions (one long wait, not two) the folder was copied to
-    the same branch again (commit `17acde2`, pushed after the merge), so **the marketing `main` holds the first
-    copy and the correction needs a second pull request; nothing deployed** as of that push. Copy again after any
+    the same branch again (commit `17acde2`, pushed after the merge), which she also merged (pull request 57) and deployed: **the blog is
+    live** with the corrected text. Later the same day, at her note that "mathematicians call the shape a torus"
+    read as if torus meant the flat sheet only, the plain edition says every shape in the paper is a torus, told
+    apart as flat, curled and knot (four sentences and a row of the translations table; the web page's quick
+    answer too); rebuilt and copied to the same branch again, which needs a third pull request. No analytics tag
+    of the site's own is on sidenerdapps.com, so nothing counts the blog's visits yet. Copy again after any
     rebuild;
     `docs/public/mainnerd_PORTING.md` has the steps and the cautions (root-absolute links; no analytics on
     that site yet, so the UTMs record nothing; do not deploy from a stale checkout). Her addresses were typed

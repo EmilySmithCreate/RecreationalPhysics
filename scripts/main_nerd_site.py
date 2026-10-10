@@ -208,7 +208,8 @@ FAQ = [
      "acts as a curvature. This paper uses a close cousin of that model, not the model itself: it turns one knob, "
      "the price of a surplus square (λ), above the published value of 1."),
     ("What is a curled torus?",
-     "A torus is a grid that wraps around in both directions. Curl one direction until it is only four steps "
+     "A torus is a grid that wraps around in both directions, and every shape in the paper is one: flat (the "
+     "sheet), curled (the tube) or knot. Curl one direction of the flat one until it is only four steps "
      "around and you have a tube. In the model the tube has one large direction where the flat sheet has two, and "
      "it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."),
     ("What is the burp?",

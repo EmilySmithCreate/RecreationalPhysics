@@ -8,9 +8,12 @@ Built here on 10 October 2026 for the Side Nerd marketing site. Nothing in this 
 with the four addresses added to the sitemap, and pushed. The owner merged that first copy into the
 marketing repository's `main` the same day (pull request 56). The folder was then rebuilt here after a
 correction to both editions (one long wait, not two) and copied to the same branch again as commit `17acde2`,
-pushed after the merge: **`main` there holds the first copy, and the correction needs a second pull request
-from the same branch.** Nothing was deployed as of that push (the site still answered `/mainnerd/` with its
-home page). After any rebuild here, copy the folder again.
+pushed after the merge; she merged that too (pull request 57) and deployed, so **the blog is live** with the
+corrected text. Each later rebuild is copied to the same branch as a new commit and needs its own pull request
+and deploy: the next is the wording of 10 October that every shape in the paper is a torus (flat, curled,
+knot). As of 10 October sidenerdapps.com carries no analytics tag of its own (one compliance page carries
+another site's), so visits to the blog and clicks on its advertisements are not counted; a measurement ID for
+the site is the owner's to create. After any rebuild here, copy the folder again.
 
 **The name.** The blog is "Main Nerd" (the owner's choice, 10 October: funnier beside "Side Nerd"). It was
 built first at `/ownedmediaphysics/` and then as "Primary Nerd" at `/primarynerd/`, both the same day; nothing
