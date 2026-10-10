@@ -274,6 +274,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 25 Sep 2026, early morning: The author's decision: proceed with six links while the reproduction stays open.
 
 **Piece 6.**
+- 10 Oct 2026, 16:25 ET: The author's lean (VISION Update 52): the burp is the hot lump, the scrap is the best guess for the dark matter, dark energy is what space itself keeps (the one that does not thin out as space grows). The page's piece 6 (Version 65) leads with it, under her name, with what the toy has for each: one opening carries the whole release under her tie; the knots' number is set at the opening; fully open space keeps exactly nothing, and a direction left curled would keep far too much. Hers to confirm or correct.
 - 6 Oct 2026, about 04:00 ET: The 10⁻³⁵ at 4 MeV corrected to 10⁻³⁷; dark energy's only candidate carrier in the toy named as kept energy (a direction that stays curled); the dilution-law bar and the N_eff bound recorded (O103 (e); `reality_targets.md`).
 - 5 Oct 2026, 15:00 ET: Her ideas of 5 Oct recorded (Update 42): dark energy as a relic of a direction already open; the releases cancelling to a net excess. Asymmetric dark matter and baryogenesis at bubble walls read in abstract.
 - 5 Oct 2026, 09:00 ET: The shares at birth with the light counted (O89): the hot lump nearly everything, dark matter about 0.67 eV over the temperature of birth, dark energy nothing; 5.36 compares two slivers; the inputs checked at the source ([Planck18], [deSalas15]). Two shapes of tie match birth with nothing to fit; neither adopted. The fit to 5.36 withdrawn as an aim.
@@ -290,6 +291,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 25 Sep 2026, 15:40 to 17:53 ET: The author's triad and budget: red, the direction the push hits, releases ordinary matter; the other two release dark matter and dark energy (VISION Update 30).
 
 **Piece 7.**
+- 10 Oct 2026, 16:25 ET: The page drops the sentence that the knots are not seams (the author: obvious by now); T55's verdict stays in the record. The author's line on the page now reads as her best guess: the scrap is the dark matter (piece 6; Update 52).
 - 9 Oct 2026, 06:32 ET by the clock: T55 read (O107): KNOT at both sizes; her SEAM failed. The stubborn pieces are an eight-point knot of two kinds of point (in kind O15's twist) and double columns; neither a scar nor a seam. The scrap is three knots of fixed energy; its number is set at the opening.
 - 9 Oct 2026, 05:01 ET by the clock: T51 read (O104): CLIFF. The columns heal off a cliff as the cooling slows (her GENTLE and ours failed); pieces of two and eight points do not heal at all over the range run, so the energy left falls as a slow power and would reach the birth share only after 10¹⁸ fair sweeps. P1 (the fair clock) missed at one of two points; P2 (size) held. Next: those pieces read from the wiring.
 - 6 Oct 2026, about 04:00 ET: T51 amendment 3, before any result is read: the shape of the fall as a power-law exponent, the size distribution, the size caveat; the five properties a scrap needs before it is called dark matter (O103).

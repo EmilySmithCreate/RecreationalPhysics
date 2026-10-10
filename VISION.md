@@ -1434,6 +1434,36 @@ curling macrodimensional space itself."
   curled, because random kicks do not find the coordinated re-threading a fold needs and the tie makes breaking
   cheaper than curling.
 
+Update 52 (2026-10-10, 16:25 ET by the clock): **the author's lean on the three shares: the burp is the hot lump, the
+scrap is the best guess for the dark matter, and dark energy is what does not thin out.** Why this page changes:
+Update 50 left dark matter open "between the scrap and something else" and dark energy's source open; asked to bring
+the programme page's piece 6 up to date, the author gave the direction it should lean. Her words: "adjust this
+section so it leans toward our current view: the one curled direction and the scrap best guess of what it is given
+currnet evidence. doesnt expand = dark energy, or was it dark matter.... remind me?"
+
+- **Recorded as her lean, not a decision; the mapping below is the assistant's reading of her words and is hers to
+  correct.** The burp, released when the slab's one curled direction opens (Updates 47, 50), is the hot lump: light and
+  ordinary matter. The scrap is the best current guess for the dark matter (Update 16's reading, open again since
+  Update 41). Dark energy is the energy that space itself keeps.
+- **The reminder she asked for** (*ours; general knowledge, to verify with a physicist, as O89*). What tells the three
+  apart is how each thins out as space grows. A fixed number of things in more room thins out: ordinary matter, dark
+  matter, and a fixed number of knots would. Light thins faster. Dark energy is the one that does not thin: the same
+  density however large space gets. So "does not thin as space expands" is dark energy.
+- **What the toy has for each** (*exact and measured; the toy has no expansion, so none of this is a measurement of
+  thinning*). Under the tie "all at the last" one opening carries the whole release (O89, O106). The knots have a
+  fixed energy each and a number set at the opening (O104, O107); the stubborn ones hold about one per cent of the
+  release, where birth can afford far less than a millionth, so the guess rests on the seed count. Fully open space
+  keeps exactly nothing (flat space is the floor, Q18); the only thing in the toy that would not thin is the cost of
+  a direction that stays curled, which is far too large (O103 (e)).
+- **Also hers, the same day, about the programme page.** A prediction about a thing that turned out not to be real
+  (T58's second curl, for long waits that were mostly the detector's) is not discussed on that page unless real
+  evidence appears of an unknown mechanism adding to the tail; the registration keeps it as written. And the
+  sentence that the knots are not seams is dropped from the page as obvious by now; T55's verdict stays in the
+  record.
+- **Nothing here is a new knob or a run.** The claim at the head of the programme page, confirmed by her on 9
+  October, still says the two identifications are open; this lean sits in piece 6 under her name until she confirms
+  or corrects it.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
