@@ -3066,6 +3066,10 @@ to the owner's hypothesis or a new simulation result.
       relic's, with a stretch of the first curl in place of a new one. A new curl with a wall of its own is a
       three-direction matter (the more-curled states there are stuck above λ = 1: O41, O49), and T57 is the sealed
       test of it under her tie.
+  - **Addendum, the same day, 11:45 ET by the clock: the prediction is hers.** Asked after both readings, the owner
+    confirmed SECOND CURL as her prediction for T58 (PREREGISTRATION T58, "Confirmation"). It had been recorded
+    from her "maybe" as inferred. Confirmed after the result was known, so it changes no verdict: her prediction
+    fails, as scored.
 
 ## Provenance
 

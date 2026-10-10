@@ -56,7 +56,8 @@ branch; written 07:20 ET by the clock).**
 - **T58, pre-registered 10 October, 07:47 ET, and run on the laptop** (`scripts/make_t58_configs.py`,
   `scripts/analyse_t58.py`): the replay owed above, with the owner's idea of that morning as her prediction (the
   three tubes curled a second direction and the energy sat in the new curl; ASSUMPTIONS O110) and ours (their own
-  detectors' thresholds). Her "maybe" is recorded as her prediction until she confirms or replaces it.
+  detectors' thresholds). Her "maybe" is recorded as her prediction until she confirms or replaces it. *Confirmed by her as her
+  prediction on 10 October, 11:45 ET, after both readings; the verdict (it fails) is unchanged.*
   **Read the same day:** gates passed; no second curl in any of 4,000 tubes; of the three waits one was the
   detector and two were real waits of the perfect tube (11 to 12 times the mean); with no detector the first exit
   is one memoryless population at 1.07 of the counted rate. Her follow-up (does a knot turn back into tube; why
@@ -102,9 +103,9 @@ branch; written 07:20 ET by the clock).**
     `4522930`), with the sitemap entries; **not merged, not deployed**: merging and running the manual deploy
     workflow are hers. Copy again after any rebuild;
     `docs/public/mainnerd_PORTING.md` has the steps and the cautions (root-absolute links; no analytics on
-    that site yet, so the UTMs record nothing; do not deploy from a stale checkout). **Her addresses were typed
-    "...01thecurledtourusburps"; the pages are built with "torus" and the spelling was put to her** (one
-    constant, `SLUG`). The first build of the morning was at `/ownedmediaphysics/`, the second was "Primary Nerd" at
+    that site yet, so the UTMs record nothing; do not deploy from a stale checkout). Her addresses were typed
+    "...01thecurledtourusburps"; the pages are built with "torus", and asked which she wanted she said to spell
+    it as mathematics and the source papers do, so "torus" stands (one constant, `SLUG`). The first build of the morning was at `/ownedmediaphysics/`, the second was "Primary Nerd" at
     `/primarynerd/`; she renamed the blog **Main Nerd** (`/mainnerd/`) the same day, and the scripts, test and
     notes carry that name.
   - *Her notes on the pages, the same morning, applied:* the masthead is "Welcome to the Side Nerd Blog, Main

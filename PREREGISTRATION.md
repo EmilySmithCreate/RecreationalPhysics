@@ -4194,3 +4194,15 @@ computed. T22, which counted attempt by attempt, found first exits on time.
 
 **T58 in one line:** gates passed; stage A MIXED (one LOW THRESHOLD, two TRUE WAIT, no SECOND CURL); stage B's P1,
 P2 and P3 hold.
+
+### Confirmation, 2026-10-10, 11:45 ET by the clock, after both readings
+
+The registration above reads the owner's words as SECOND CURL and keeps that reading marked as inferred "until she
+confirms or replaces it". Asked on 10 October, after stages A and B had been read, whether SECOND CURL is the
+prediction she wants on the record as hers, and offered three answers (yes; a guess to test and not a prediction;
+replace it with other wording), the owner chose yes. **SECOND CURL is the owner's prediction for T58, confirmed by
+her after the result was known.** It is no longer inferred.
+
+The verdict does not change: her prediction fails (no second curl in any of the 4,000 tubes). A confirmation given
+after the reading adds no weight to the test either way; it settles only whose prediction it was. The sentences
+above that call it inferred are left as they were written.

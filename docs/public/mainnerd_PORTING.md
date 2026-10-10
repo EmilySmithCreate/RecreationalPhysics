@@ -26,8 +26,9 @@ was ported under either name. The address is the one constant `BLOG` in `scripts
 
 **The folder name is spelled "torus".** The owner's message of 10 October gave the addresses as
 `.../01thecurledtourusburpsPL` and `.../01thecurledtourusburps`; the paper's title is "The curled torus burps", so
-the pages were built with `torus` and the difference was put to her. The name is the one constant `SLUG` in
-`scripts/main_nerd_site.py`; change it there and rebuild.
+the pages were built with `torus` and the difference was put to her. **Her answer, the same day: spell it as
+it is spelled in mathematics and the source papers.** That is "torus", so the addresses stand as built. (The
+name is the one constant `SLUG` in `scripts/main_nerd_site.py`.)
 
 Each chapter of the plain page links to the matching section of the technical page and each section links
 back. The cross-links open in a second named window (`mn-technical`, `mn-plain`), so with both pages open a
