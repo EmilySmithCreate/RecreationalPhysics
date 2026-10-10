@@ -5,8 +5,12 @@ Built here on 10 October 2026 for the Side Nerd marketing site. Nothing in this 
 **Status, 10 October.** At the owner's instruction the folder was copied, file for file, to
 `sites/sidenerdapps/mainnerd/` on a new branch of the SideNerdMarketing repository,
 `feat/sidenerdapps-main-nerd-blog` (commit `4522930`, branched from that repository's up-to-date `main`),
-with the four addresses added to the sitemap, and pushed. It is not merged and not deployed: steps 1 to 3
-below are done on that branch, step 4 is hers. After any rebuild here, copy the folder again.
+with the four addresses added to the sitemap, and pushed. The owner merged that first copy into the
+marketing repository's `main` the same day (pull request 56). The folder was then rebuilt here after a
+correction to both editions (one long wait, not two) and copied to the same branch again as commit `17acde2`,
+pushed after the merge: **`main` there holds the first copy, and the correction needs a second pull request
+from the same branch.** Nothing was deployed as of that push (the site still answered `/mainnerd/` with its
+home page). After any rebuild here, copy the folder again.
 
 **The name.** The blog is "Main Nerd" (the owner's choice, 10 October: funnier beside "Side Nerd"). It was
 built first at `/ownedmediaphysics/` and then as "Primary Nerd" at `/primarynerd/`, both the same day; nothing

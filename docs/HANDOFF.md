@@ -108,8 +108,11 @@ branch; written 07:20 ET by the clock).**
     PDFs still to the artifact.
     At her instruction of the same day the folder was copied, file for file, to `sites/sidenerdapps/mainnerd/`
     on a new pushed branch of the SideNerdMarketing repository, `feat/sidenerdapps-main-nerd-blog` (commit
-    `4522930`), with the sitemap entries; **not merged, not deployed**: merging and running the manual deploy
-    workflow are hers. Copy again after any rebuild;
+    `4522930`), with the sitemap entries. She merged that first copy into the marketing `main` the same day
+    (pull request 56). After the correction to both editions (one long wait, not two) the folder was copied to
+    the same branch again (commit `17acde2`, pushed after the merge), so **the marketing `main` holds the first
+    copy and the correction needs a second pull request; nothing deployed** as of that push. Copy again after any
+    rebuild;
     `docs/public/mainnerd_PORTING.md` has the steps and the cautions (root-absolute links; no analytics on
     that site yet, so the UTMs record nothing; do not deploy from a stale checkout). Her addresses were typed
     "...01thecurledtourusburps"; the pages are built with "torus", and asked which she wanted she said to spell
