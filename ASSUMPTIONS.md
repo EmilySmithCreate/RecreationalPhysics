@@ -3118,6 +3118,55 @@ to the owner's hypothesis or a new simulation result.
       of thing that would lengthen a first exit timed by blocks: whether it accounts for the 7 % of stage B needs
       the whole cell timed by sweeps, which would be pre-registered first.
 
+- **O111 Bianconi's discrete entropy action evaluated on this project's wirings (10 October 2026, 16:12 ET by the
+  clock). Exact linear algebra for the arrangements named; the reading of her action across wirings is ours,
+  unverified, and is the question put to her.** (`scripts/exact_entropy_action.py`;
+  `tests/test_exact_entropy_action.py`; series paper 10, "An entropy action across wirings".)
+  - **Why.** The owner asked which paper works off [Bia25] (arXiv:2408.14391, "Gravity from entropy") and for a
+    letter to its author with a replication and a question. Papers 10 and 11 of the series plan do: 11 through the
+    G-field (a quantity on the points, VISION Update 40), 10 through [Bia24], the discrete form of the same action.
+    [Bia24] keeps the wiring fixed and leaves "the possible implied dynamics of the network topology to future
+    works" (Sec. 3.1; its conclusions end on the same point). This model's networks change their wiring.
+  - **Sourced** ([Bia24], arXiv HTML, searched again on 10 October): d = G^(−1/2) B^T G^(1/2) and D = d + d†
+    (Eqs. 23, 31); D² is the Gauss-Bonnet Laplacian, block diagonal in the Hodge Laplacians (Eqs. 35 to 40);
+    {D, γ0} = 0 (Eq. 34); S+ = σ Tr ln G + Tr G (ln G − ln G̃) − Tr G (Eq. 41); with no matter and no gauge field
+    G̃ = I + c0 L (Eq. 52), "also dependent on the topology of the higher-order network"; the vacuum is G̃ = I,
+    where −G ln G = σ I (Eq. 65).
+  - **Ours (rule 1).** Every 4-cycle is taken as a 2-cell, as this model's energy counts them (checked against the
+    kernel's count and a trace formula). The same root of Eq. (65) is taken for every cell. For c0 > 0 the action
+    is evaluated at the identity metric, where d = B^T; the metric that solves her equation of motion is not
+    computed.
+  - **Checked: a replication of the construction, not of a published number (her paper reports none).** On each
+    arrangement a boundary has no boundary, D² is her Laplacian block by block, D anticommutes with γ0, and the
+    vanishing eigenvalues count the holes (flat torus: one piece, two loops, one cavity).
+  - **Exact, N = 64** (σ = 0.1 for the vacuum, where g = 0.894194 and the action is −1.005377 per cell):
+
+    | arrangement | squares | cells, 3N + S | holes | vacuum S+ | S+ at G = I, c0 = 0.1 | c0 = 1 |
+    |---|---:|---:|---|---:|---:|---:|
+    | flat torus, 8 × 8 | 64 | 256 | 1, 2, 1 | −257.377 | −339.462 | −642.034 |
+    | curled torus, 16 × 4 | 80 | 272 | 1, 1, 16 | −273.463 | −364.763 | −688.133 |
+    | the same, re-glued once | 80 | 272 | 1, 1, 16 | −273.463 | −364.763 | −688.133 |
+    | four 4-cubes | 96 | 288 | 4, 0, 28 | −289.549 | −390.065 | −734.780 |
+
+  - **What it says (ours).** (1) In her vacuum the action is one number per cell, so across wirings it depends only
+    on the number of cells, which here is the number of squares. (2) At the identity metric with c0 > 0 the order
+    is the same. Either way the action grows more negative with every square, without limit, as the
+    square-counting term of [T25] does by itself (λ = 0, where the network shatters into knots: Gate A). Nothing
+    in it yet plays the part of the local term, which cancels the reward once a link carries two squares and,
+    above λ = 1, makes the flat torus the floor. Whether "more negative" means
+    "favored" is not ours to say; it is her question of how the topology would be weighted. (3) The re-glued tube
+    is not isomorphic to the tube and has another spectrum (eigenvalues differ by up to 0.39), yet the two agree
+    in the first six moments of each Laplacian and in the action at the identity metric to nine figures: they
+    differ only through closed walks that go all the way round the tube. (4) Read as her cell complex the curled
+    torus has one independent loop and N/4 cavities (each ring of four is a filled square); a 4-cube has no loop
+    and seven cavities.
+  - **Not claimed.** That this is the comparison her theory intends. Anything about gravity. Anything at a metric
+    that solves her equations for c0 > 0. Anything about the continuum theory of [Bia25], whose stability is
+    disputed in print this year (`docs/reading/notes/2026-10-05_bianconi_gravity_from_entropy.md`).
+  - **The question for her** (a draft is kept locally and nothing is sent from a session): is S+ compared across
+    wirings at a fixed number of nodes the comparison meant by dynamics of the topology; and if so, must the metric
+    be solved for each wiring first, or is something else meant to keep the action from rewarding more cells?
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

@@ -66,6 +66,15 @@ branch; written 07:20 ET by the clock).**
   two looks (sweeps 3,166 to 3,168). **One long wait is left in the cell, of the size chance produces, not two.**
   *Corrected at her word the same day:* the two papers and the supplement now say one tube sat and one made an
   exit between two looks; PDFs and blog pages rebuilt, and the folder copied to the marketing branch again.
+  **Her word later that day:** the second-curl prediction is not discussed on the programme page unless real
+  evidence appears of an unknown mechanism adding to the tail; the page says what was found (Version 64), and the
+  registration keeps the prediction as written.
+- **Bianconi's entropy action on our wirings (O111, 10 October; series paper 10).** At the owner's request for a
+  letter to Ginestra Bianconi with a replication and a question: `scripts/exact_entropy_action.py` builds the
+  operators of [Bia24] on the flat torus, the tube, a re-glued tube and a gas of 4-cubes at 64 points and evaluates
+  her action. In her vacuum it is one number per cell; at the identity metric the order is the same; both ways it
+  grows more negative with every square. The draft letter is local (`docs/outreach/`), and nothing is sent from a
+  session.
   **Read the same day:** gates passed; no second curl in any of 4,000 tubes; of the three waits one was the
   detector and two were real waits of the perfect tube (11 to 12 times the mean); with no detector the first exit
   is one memoryless population at 1.07 of the counted rate. Her follow-up (does a knot turn back into tube; why
