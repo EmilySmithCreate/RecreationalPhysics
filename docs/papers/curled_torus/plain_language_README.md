@@ -47,7 +47,7 @@ curl, the third square on a curled link, bath against sealed, and the four check
 certify a torus. The arithmetic of the ladder and of the two exit routes is set out as bills
 in small tables.
 
-The 32-page edition has 31 figures: the three figures of the technical paper
+The 33-page edition has 31 figures: the three figures of the technical paper
 (`fig_tori.pdf`, `fig1.pdf`, `fig_lambda.pdf`) and 28 drawn in TikZ/pgfplots inside the
 source, including data charts built from the record (the seed-threshold staircase, the
 twelve waiting-time conditions against the count, the reservoir outcomes, the relic count
@@ -62,7 +62,9 @@ extreme waits of the third map and the fast share are tubes that changed inside 
 stands as scored. The author's instruction: state it and move on. The technical manuscript
 carries the same reading since its revision of 10 October (its Sec. VII and Methods; the
 supplement's "Retrospective reading of the saved rows"). Three long waits at λ = 1.30, N = 64
-remain open, and a pre-registered replay of those runs is owed.
+were left open; the pre-registered replay of that group (T58, the same day; ASSUMPTIONS O110)
+found one more detector case and two real waits with nothing hidden, and both editions say so
+in a few sentences.
 
 **The ending, 10 October.** The edition has eleven chapters. The last, "What we have learned,
 and what comes next", closes on the two papers that follow, named by their working titles in
@@ -88,6 +90,18 @@ results only where this paper's simulations ran. Its data are the technical pape
 (T8 at g = 1.5), the warmth scan (`results/cqg_tube_arrhenius_lam125.csv`), the T7 table, and
 the push, reservoir and scrap counts as charted in this edition. The wider page, "The Curling
 Ladder" (`docs/public/curling_ladder.html`), covers two to five directions and the ties.
+
+**Sources, 10 October.** A source number now means the same source in both editions: sources
+1 to 8 are the technical paper's reference list in its order (three of them newly cited here:
+the model's founding paper, the fixed-energy method, and the published proposal of stuck
+patches at λ = 1), and 9 to 12 are this edition's own.
+
+**Web pages, 10 October.** `scripts/build_main_nerd_pages.py` turns this edition and the
+technical paper into two cross-linked static pages in `docs/public/mainnerd/`, for the
+author to port to sidenerdapps.com/mainnerd/ ("the Side Nerd Blog"; notes in
+`docs/public/mainnerd_PORTING.md`). The text and figures on the pages are generated from
+these LaTeX sources; the frame around them adds a searched question at the head of each
+chapter with an answer that claims no more than the chapter does.
 
 The technical [paper.pdf](paper.pdf) is a separate document. This edition adds no
 experiments or scientific claims.

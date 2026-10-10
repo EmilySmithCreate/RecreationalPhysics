@@ -48,6 +48,8 @@ def manifest():
         # revision of 10 October 2026: the retrospective reading of the decay rows, the second
         # prior-work search, and the interactive companion of the plain-language edition
         "scripts/read_wait_detector.py", "tests/test_read_wait_detector.py",
+        "scripts/analyse_t58.py", "tests/test_t58.py", "scripts/make_t58_configs.py",
+        "scripts/run_tube_decay.py",
         "docs/reading/notes/2026-10-10_prior_work_lambda_above_one.md",
         "docs/public/curling_ladder_tube.html")]
     # Normalize release text to the UTF-8/LF representation stored by Git.

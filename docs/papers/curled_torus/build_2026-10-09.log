@@ -1,36 +1,40 @@
 Tectonic 0.17.0
 note: Running TeX ...
 Fontconfig error: Cannot load default config file: No such file: (null)
-warning: paper.tex:106: Underfull \hbox (badness 7238) in paragraph at lines 100--106
-warning: paper.tex:198: Underfull \hbox (badness 10000) in paragraph at lines 198--198
-warning: paper.tex:204: Underfull \hbox (badness 10000) in paragraph at lines 202--204
-warning: paper.tex:204: Underfull \hbox (badness 10000) in paragraph at lines 204--204
-warning: paper.tex:243: Underfull \hbox (badness 10000) in paragraph at lines 233--243
-warning: paper.tex:243: Underfull \hbox (badness 10000) in paragraph at lines 233--243
-warning: paper.tex:453: Underfull \hbox (badness 2426) in paragraph at lines 442--453
-warning: paper.tex:693: Underfull \hbox (badness 3291) in paragraph at lines 685--693
-warning: paper.tex:693: Underfull \hbox (badness 2460) in paragraph at lines 685--693
-warning: paper.tex:693: Underfull \hbox (badness 8000) in paragraph at lines 685--693
-warning: paper.tex:697: Underfull \hbox (badness 1968) in paragraph at lines 695--697
+warning: paper.tex:182: Underfull \hbox (badness 1558) in paragraph at lines 167--182
+warning: paper.tex:182: Underfull \hbox (badness 1237) in paragraph at lines 167--182
+warning: paper.tex:194: Underfull \hbox (badness 10000) in paragraph at lines 194--194
+warning: paper.tex:200: Underfull \hbox (badness 10000) in paragraph at lines 198--200
+warning: paper.tex:200: Underfull \hbox (badness 10000) in paragraph at lines 200--200
+warning: paper.tex:240: Underfull \hbox (badness 7344) in paragraph at lines 230--240
+warning: paper.tex:240: Underfull \hbox (badness 1521) in paragraph at lines 230--240
+warning: paper.tex:240: Underfull \hbox (badness 1406) in paragraph at lines 230--240
+warning: paper.tex:679: Underfull \hbox (badness 1072) in paragraph at lines 675--679
+warning: paper.tex:688: Underfull \hbox (badness 3291) in paragraph at lines 680--688
+warning: paper.tex:688: Underfull \hbox (badness 2460) in paragraph at lines 680--688
+warning: paper.tex:688: Underfull \hbox (badness 8000) in paragraph at lines 680--688
+warning: paper.tex:692: Underfull \hbox (badness 1968) in paragraph at lines 690--692
 note: Running BibTeX on paper.aux ...
 note: warnings were issued by BibTeX; use --print and/or --keep-logs for details.
 note: Rerunning TeX because bibtex was run ...
-warning: paper.tex:106: Underfull \hbox (badness 7238) in paragraph at lines 100--106
-warning: paper.tex:198: Underfull \hbox (badness 10000) in paragraph at lines 198--198
-warning: paper.tex:204: Underfull \hbox (badness 10000) in paragraph at lines 202--204
-warning: paper.tex:204: Underfull \hbox (badness 10000) in paragraph at lines 204--204
-warning: paper.tex:243: Underfull \hbox (badness 10000) in paragraph at lines 233--243
-warning: paper.tex:243: Underfull \hbox (badness 10000) in paragraph at lines 233--243
-warning: paper.tex:453: Underfull \hbox (badness 2426) in paragraph at lines 442--453
-warning: paper.tex:693: Underfull \hbox (badness 3291) in paragraph at lines 685--693
-warning: paper.tex:693: Underfull \hbox (badness 2460) in paragraph at lines 685--693
-warning: paper.tex:693: Underfull \hbox (badness 8000) in paragraph at lines 685--693
-warning: paper.tex:697: Underfull \hbox (badness 1968) in paragraph at lines 695--697
-warning: paper.tex:706: Underfull \hbox (badness 1215) in paragraph at lines 704--706
+warning: paper.tex:182: Underfull \hbox (badness 1558) in paragraph at lines 167--182
+warning: paper.tex:182: Underfull \hbox (badness 1237) in paragraph at lines 167--182
+warning: paper.tex:194: Underfull \hbox (badness 10000) in paragraph at lines 194--194
+warning: paper.tex:200: Underfull \hbox (badness 10000) in paragraph at lines 198--200
+warning: paper.tex:200: Underfull \hbox (badness 10000) in paragraph at lines 200--200
+warning: paper.tex:240: Underfull \hbox (badness 7344) in paragraph at lines 230--240
+warning: paper.tex:240: Underfull \hbox (badness 1521) in paragraph at lines 230--240
+warning: paper.tex:240: Underfull \hbox (badness 1406) in paragraph at lines 230--240
+warning: paper.tex:679: Underfull \hbox (badness 1072) in paragraph at lines 675--679
+warning: paper.tex:688: Underfull \hbox (badness 3291) in paragraph at lines 680--688
+warning: paper.tex:688: Underfull \hbox (badness 2460) in paragraph at lines 680--688
+warning: paper.tex:688: Underfull \hbox (badness 8000) in paragraph at lines 680--688
+warning: paper.tex:692: Underfull \hbox (badness 1968) in paragraph at lines 690--692
+warning: paper.tex:701: Underfull \hbox (badness 1215) in paragraph at lines 699--701
 warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
 note: Running xdvipdfmx ...
-note: Writing `paper.pdf` (212.583984375 KiB)
-note: Writing `paper.log` (14.6796875 KiB)
+note: Writing `paper.pdf` (215.1640625 KiB)
+note: Writing `paper.log` (14.8642578125 KiB)
 note: Writing `paper.blg` (1.2919921875 KiB)
 note: Skipped writing 4 intermediate files (use --keep-intermediates to keep them)
 

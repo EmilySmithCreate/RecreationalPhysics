@@ -61,7 +61,23 @@ No `results/t38_*_waiting/*.npz` files exist in the frozen snapshot. Final state
 | 1.30 | 64 | 27.4% | 38.0% | 132, 0.75 | 267 | 443 | 3 / 11 | 7.03 | 3 (0.13) |
 | 1.30 | 192 | 31.4% | 38.0% | 0 | 238 | 446 | 0 / 5 | 3.31 | 0 (0.03) |
 
-All 190 missing crossings have f_200≥0.75 and their quarter snapshot at sweep 205: they converted inside the resting window. Of the runs detected within 20 sweeps of the window's end, 80–84% have f_200>0. The expected counts use a single exponential with the mean wait of the f_200=0 runs of the same cell. The two exceptional T24 waits (N=64; lambda=1.25 replica 90 and lambda=1.30 replica 94) have f_200=0.75 and 0.875 with all three snapshots at sweep 205. Three waits at lambda=1.30, N=64 (replicas 553, 2748 and 3072; W=5080, 5000 and 4705) remain beyond ten of their cell's own mean; in replica 553 the detector fires 575 sweeps after the quarter snapshot. f_200=0 does not exclude an excursion that returned inside the window, so this reading cannot classify those three. `tests/test_read_wait_detector.py` checks the classification and shows, on synthetic exponential waits read through a 200-sweep window, that a fast share alone produces k10≥3 under the registered rule.
+All 190 missing crossings have f_200≥0.75 and their quarter snapshot at sweep 205: they converted inside the resting window. Of the runs detected within 20 sweeps of the window's end, 80–84% have f_200>0. The expected counts use a single exponential with the mean wait of the f_200=0 runs of the same cell. The two exceptional T24 waits (N=64; lambda=1.25 replica 90 and lambda=1.30 replica 94) have f_200=0.75 and 0.875 with all three snapshots at sweep 205. Three waits at lambda=1.30, N=64 (replicas 553, 2748 and 3072; W=5080, 5000 and 4705) remain beyond ten of their cell's own mean; in replica 553 the detector fires 575 sweeps after the quarter snapshot. f_200=0 does not exclude an excursion that returned inside the window, so this reading cannot classify those three; the replay below does. `tests/test_read_wait_detector.py` checks the classification and shows, on synthetic exponential waits read through a 200-sweep window, that a fast share alone produces k10≥3 under the registered rule.
+
+Per-cell numbers that the manuscript now gives as ranges or leaves here: the shares of runs detected within 20 sweeps of the window's end are 12.0, 12.0, 21.2 and 23.4%; among f_200=0 runs the waits beyond 10 tau_hat number 0, 1, 11 and 5, with Poisson tail probabilities 1, 0.29, 0.10 and 0.24 under those runs' own mean; and for 120 exponentials with the predicted first-exit means, the bounds 120·exp(−r) at the two T24 waits (r=23.98 and 76.74) would be 4.6×10⁻⁹ and 5.7×10⁻³² (illustrative, not p-values: the stopping times differ and the cases were examined after observation).
+
+### Replay of the T38 cell at lambda=1.30, N=64 (T58, 10 October 2026)
+
+Registered before it ran (PREREGISTRATION T58), with two predictions for the three unaccounted waits: a hidden doubly curled state, recorded from the author's suggestion, and a lowered detector threshold in all three, the assistant's. The runner's recorder reads the chain and draws no random numbers, so each decay repeats its original random stream. Gate: every saved column of the original row must return unchanged, and each traced decay must end on its saved graph. Passed for all 4,000 decays and all nine traced ones.
+
+| Replica | Recorded wait | Detector threshold (S/N below) | History before detection, in five-sweep blocks | Label |
+|---|---:|---:|---|---|
+| 553 | 5080 | 1.1647 | left the perfect torus inside the resting window (sweeps 45–110, down to 76 squares) and returned; three later exits that fell back (sweeps 2870; 4505–4540; 4895–4915) went undetected; left for good at 5030 | LOW THRESHOLD |
+| 2748 | 5000 | 1.2500 | read as the perfect torus at every block from sweep 0 to 5000 | TRUE WAIT |
+| 3072 | 4705 | 1.2296 | one exit of two blocks inside the window (sweeps 25–30), then the perfect torus at every block to 4705 | TRUE WAIT |
+
+In none of the three, before detection, did S exceed 80, any vertex read d=0, or the graph have more than one component. Registered verdict on the three: MIXED; neither prediction held.
+
+For the cell, the first exit is timed with no detector, as the first block at which a decay no longer has S=80, X=64 and every vertex at d=1. From sweep 0 over all 4,000 decays its mean is 448.8 sweeps, 1.071±0.017 of tau_AB=419.0 (registered prediction 0.95–1.10); one first exit is later than 10 tau_AB, where a single exponential expects 0.18 (prediction: at most 1); and no decay ever has S above 80 or eight vertices at d=0 (prediction: none; 137 decays show one to four such vertices in passing). Described, not scored: from sweep 200 over the 2,903 decays that read as the perfect torus then, the mean is 438.9 sweeps (1.047±0.020 tau_AB) and two are later than 10 tau_AB (0.13 expected); against their own mean, the 4,000 first exits beyond 4, 6, 8 and 10 means number 67, 11, 3 and 1, where one exponential expects 73, 9.9, 1.3 and 0.18. The 7% excess over the count is in the direction a five-sweep block gives, since an exit that returns inside a block is not seen; its size has not been computed.
 
 T22 observes all 240 first exits, but only 239 runs reach f≥0.25 before the cap. First-exit means and intervals include all observed exits; the reciprocal-exit statistic uses completed runs. For example, the N=96, lambda=1.05 first-exit mean is about 9302; restricting it to committed runs would instead give about 7485. These samples answer different questions.
 
@@ -114,6 +130,7 @@ Paths are relative to the repository root. Experiment identifiers provide stable
 | 120-run maps | `scripts/analyse_t23.py`, `scripts/analyse_t24.py` | `configs/t23_*.json`, `configs/t24_*.json`; CSVs and T24 endpoint graphs |
 | Dedicated tail test | `scripts/analyse_t38.py` | `configs/t38_*.json`; matching CSVs; `t38_audit_2026-10-09.log` |
 | Retrospective reading of detected waits | `scripts/read_wait_detector.py`, `tests/test_read_wait_detector.py` | T38 and T24 result CSVs; no new run |
+| Replay of the T38 cell at lambda=1.30, N=64 (T58) | `scripts/analyse_t58.py`, `tests/test_t58.py`; recorder in `scripts/run_tube_decay.py` | `configs/t58_*.json`; `results/t58_*.csv` and traces; PREREGISTRATION T58 |
 | Pooled distributions / positions | `scripts/analyse_paper_stats.py` | T7, T8, T11, T22; `paper_stats_2026-10-09.log` |
 | Intervals / event counts / bath proxies | `scripts/analyse_curled_revision.py` | `revision_analysis_2026-10-09.log` |
 | Schematic / Fig. 1 | `scripts/plot_paper_fig_tori.py` | Drawing only, not a measured interface |
@@ -129,6 +146,7 @@ python scripts/analyse_curled_revision.py
 python scripts/analyse_paper_stats.py
 python scripts/analyse_t38.py
 python scripts/read_wait_detector.py
+python scripts/analyse_t58.py
 python -m pytest -q
 python scripts/build_curled_paper.py --tectonic /path/to/tectonic
 ```
