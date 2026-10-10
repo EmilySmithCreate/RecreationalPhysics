@@ -4559,3 +4559,32 @@ Anything outside λ = 1.05 to 1.35, at other couplings, beyond N = 288, or with 
 is right: the look's clock runs late by an amount that depends on how often exits come back, which T59 measures by
 the move. That the resting states are stable. Anything at λ = 1: at λ ≠ 1 this is our family around the published
 model, never combinatorial quantum gravity.
+
+### Reading of T59, stage A2, 2026-10-10, 19:15 ET by the clock (`python scripts/analyse_t59.py`)
+
+Placed here because T60's registration was appended before stage A2 of T59 had finished. Stage B of T59 was still
+running and is not read.
+
+**Gate passed.** All fourteen replays return the first exit T22 saved, to the attempt.
+
+**Verdict on the seven: OFFERED AS COUNTED.** Ours holds (for one target it was known, as disclosed). In every whole
+stretch of 5,000 sweeps of every long wait the chain was offered 2.94 to 3.03 exits of kind A a sweep and 1.94 to
+2.04 of kind B, where the count says 3 and 2.
+
+| T22 run | first exit, sweeps | in mean waits | exits its offers would have produced | chance that none was taken |
+|---|---|---|---|---|
+| N = 64, replica 7 | 80,985 | 9.72 | 9.71 | 6.0 × 10⁻⁵ |
+| N = 96, replica 12 | 80,174 | 9.63 | 9.66 | 6.4 × 10⁻⁵ |
+| N = 64, replica 6 | 43,196 | 5.19 | 5.18 | 0.0056 |
+| N = 96, replica 29 | 41,484 | 4.98 | 4.97 | 0.0069 |
+| N = 96, replica 6 | 37,792 | 4.54 | 4.54 | 0.011 |
+| N = 64, replica 17 | 36,974 | 4.44 | 4.42 | 0.012 |
+| N = 64, replica 11 | 36,635 | 4.40 | 4.40 | 0.012 |
+
+The three controls that lasted a whole stretch (first exits at 6,356, 17,299 and 8,465 sweeps) were offered the
+same; the other four left before one stretch was over and have nothing to score.
+
+**What it says.** The waiting tori were offered their ways out at the counted rate throughout. The enumeration
+behind "three classes, one census" did not fail, and no long wait was a torus that had found a place with fewer
+exits. Each long wait is a run of acceptance draws that all fell above the threshold. Whether such runs come more
+often than independent draws make them is what stage B measures.
