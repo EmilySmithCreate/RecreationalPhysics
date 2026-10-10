@@ -12,7 +12,7 @@
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{9 October 2026}
+\date{10 October 2026}
 
 \begin{abstract}
 We study activated escape from a curled torus in four-regular bipartite graph energies adjacent to
@@ -27,8 +27,10 @@ endpoints at $\lambda=1.05$, without establishing macroscopic period growth.
 At $\lambda=1.25$, energy-conserving graph-plus-reservoir runs escape with a 12-unit budget over
 $N=48$--192; exhaustive neutral-class enumeration certifies the matching lower bound at those sizes.
 The product depends on the reservoir's thermal response; full release requires a zero-energy endpoint.
-Detected-decay waits are a distinct observable with unresolved long tails: a dedicated registered tail
-test fails in two cells. All three registered conversion maps remain inconclusive. These results
+Detected-decay waits are a distinct observable, and a registered tail test classifies them as two
+populations. Read retrospectively from the saved runs, the missed detections, the extreme waits and the
+fast component are tori that converted inside the detector's 200-sweep resting window; three long waits
+in one cell remain unexplained. All three registered conversion maps remain inconclusive. These results
 support a bounded kinetic claim while leaving the conversion mechanism and reservoir equilibration open.
 \end{abstract}
 
@@ -69,9 +71,21 @@ measure, but does not establish mixing at production sizes; we do not claim phys
 emergent space. What does not
 depend on it is the energetics: the gap between the two arrangements, the cost of the cheapest single move out,
 and hence the least energy a sealed system needs to leave by such moves. What does depend on it are the rates,
-including how the waiting time scales with size (Sec.~II).
+including how the waiting time scales with size (Sec.~\ref{sec:model}).
+
+The sections follow the order of the questions. Section~\ref{sec:model} fixes the model and its exact
+results. Section~\ref{sec:cost} asks what it costs to leave the curled torus, Sec.~\ref{sec:exit} when the
+first exit comes, Sec.~\ref{sec:conversion} what the conversion looks like, Sec.~\ref{sec:sealed} where
+the released energy goes in a sealed system and what remains, and Sec.~\ref{sec:lambda} how all of this
+depends on $\lambda$, including what the decay detector does and does not time. A plain-language edition
+with diagrams accompanies the source (Methods); its chapters are cited as ``PL, Ch.~$n$'' where a concept
+is developed at greater length.
 
 \section{Model and exact results}
+\label{sec:model}
+
+The model, its energy and the counting signatures of this section are developed with diagrams in PL,
+Chs.~2 and~3.
 
 States are simple undirected four-regular graphs on a fixed labelled bipartition, with $N/2$ vertices on
 each side, obeying the hard-core rule (no two vertices share more than two neighbours)
@@ -120,7 +134,7 @@ produces vertices whose incident edge square counts are $[1,2,2,3]$, rather than
 \begin{figure*}[t]
 \includegraphics[width=\textwidth]{fig_tori.pdf}
 \caption{(a) The flat lattice torus. (b) The $4\times L$ torus drawn as a tube: its short direction is a single
-square, so the edges round each column carry three squares. (c) Schematic of the change of Sec.~III, not a
+square, so the edges round each column carry three squares. (c) Schematic of the change of Sec.~\ref{sec:conversion}, not a
 simulation snapshot: a possible boundary between curled and flat regions. Neither the schematic nor the
 square counts establish the number of moving interfaces. The graph ensemble also permits disconnected states.}
 \label{fig:tori}
@@ -199,13 +213,41 @@ not an energetic spinodal. \\
 \end{ruledtabular}
 \end{table*}
 
-\section{Decay at fixed coupling}
-
-Table~\ref{tab:clocks} defines the distinct stopping times and observables used below.
+\section{The cost of leaving}
+\label{sec:cost}
 
 At $\lambda = 1.25$ the minimum energetic barrier to leave the perfect curled torus, the cost of move A, is
 $\Delta E^\ddagger = 12$. This is a first-exit cost, not a proven minimum maximum energy along a complete
-conversion path. Whether an excursion grows or returns is a separate question. In an exploratory test
+conversion path. Whether an excursion grows or returns is a separate question (Sec.~\ref{sec:exit}). The
+neutral-class enumeration of Sec.~\ref{sec:model} makes 12 a lower bound at the enumerated sizes. An
+energy-conserving test asks whether it is also sufficient (PL, Ch.~4).
+
+Giving the graph a Creutz reservoir \cite{Creutz83} replaces fixed $g$ by energy-conserving dynamics
+on graph plus stores. Each valid candidate selects one of $C$ nonnegative stores uniformly; the move
+is refused if that store cannot pay $\Delta H$, and otherwise its energy changes by $-\Delta H$.
+The stores and edge proposals are globally selected: the seed is a total activation budget, not energy
+deposited at a chosen vertex. The conserved quantity is $E_{\rm tot}=H+\sum_i E_i$.
+The recorded maximum drift is zero in all T9 runs at $\lambda=1.25$; this is an observed numerical
+check, not a claim about bitwise arithmetic at arbitrary $\lambda$.
+
+\emph{A size-independent escape budget (exploratory).} With one store initially holding
+$s\in\{4,8,10,11,11.5,12,13,16\}$, the torus left its initial $(S,X)$ values in 8 of 8 runs at each
+tested $s\ge12$, and 0 of 8 at each $s\le11.5$, for each $N=48,64,96,144,192$ (320 runs of
+12,000 sweeps). The runner checks $(S,X)$ once per sweep: its success flag measures escape,
+not completed conversion. Eight successes give a two-sided exact 95\% binomial interval of
+$[0.631,1]$ at an individual setting; zero of eight gives $[0,0.369]$.
+The neutral-class certificate in Sec.~\ref{sec:model} proves the lower bound 12 at these sizes: all nonneutral
+moves cost at least 12, so nonnegative stores with total budget below 12 cannot leave the basin.
+Observed sufficiency is protocol- and duration-dependent. The escape budget is fixed while the
+available ideal-state energy decrease $\varepsilon N$ grows with the system.
+
+\section{The first exit}
+\label{sec:exit}
+
+Table~\ref{tab:clocks} defines the distinct stopping times and observables used below; PL, Ch.~5,
+develops the rate count.
+
+In an exploratory test
 (the prediction was written into
 the run's configuration before it ran, but not pre-registered), over twelve conditions ($g = 1.4$ to 2.5,
 $N = 64$ and 144,
@@ -221,6 +263,42 @@ The exploratory scan reuses each replica's seed across couplings, so its fitted 
 tests do not account for dependence between cells.
 Including move B lowers the predicted waiting time by 15\% at $g = 1.5$; across $\lambda$, the full
 Eq.~(\ref{eq:tau}) is compared separately with first exits and detected-decay waits below.
+
+T22 counts exits attempt by attempt in forty further runs in each of six cells
+($\lambda=1.05,1.10,1.25$; $N=64,96$). All 240 first exits are observed; 239 runs reach $f\ge0.25$
+before the cap. First-exit means are consistent with Eq.~(\ref{eq:tau}) in the model-conditional
+95\% intervals in the Supplemental Material. For completed runs, the reciprocal of mean exits per run
+is 0.56--0.68; its replica-bootstrap intervals span roughly 0.45--0.78 across cells.
+This estimates successful departures per counted exit under the $f\ge0.25$ commitment rule, excluding
+the one incomplete run. It is not a derived transmission coefficient.
+Multiplying the exit rate by this fraction would require independent renewal excursions and control
+of time spent in failed excursions and growth.
+
+The coefficient of variation is a coarse diagnostic, not sufficient to establish memorylessness.
+In an exploratory distribution analysis, first-exit data are consistent with an exponential approximation
+[Fig.~\ref{fig:data}(c)]: pooled over conditions after dividing each
+time by its condition's mean, the 432 first exits we recorded give a Kolmogorov--Smirnov distance
+$D = 0.035$ from the unit exponential (nominal $p = 0.53$; shared-stream caveat in Methods), and the 240 of them counted move by move
+(T22, above) are consistent with an exponential using the mean of Eq.~(\ref{eq:tau}), nothing estimated
+($p = 0.85$). This does not establish exponential tails in each cell. Detected-decay waits show stronger
+departures, including the later T38 tail-test failures (Sec.~\ref{sec:lambda}).
+
+\begin{figure*}
+\includegraphics[width=\textwidth]{fig1.pdf}
+\caption{(a) Mean waiting time of the perfect $4\times L$ torus at $\lambda = 1.25$ against inverse coupling,
+sixteen runs per point; error bars are one standard error of the mean. Lines: Eq.~(\ref{eq:tau}) using move A
+only (solid) and moves A and B (dashed); nothing is fitted. (b) Share of vertices at each local dimension $d$
+at the first sampled $f\ge0.5$, averaged over the thirty decays per size of the rerun in
+Table~\ref{tab:t7}. (c) Share of tori still waiting against time in units of the mean of its condition,
+pooled, on a logarithmic scale; the dashed line is the exponential $e^{-x}$ of a memoryless wait. Blue: all
+432 recorded first exits (twelve conditions of panel a, and the six cells of the direct count, T22).
+Orange: the selected 589 decay waits of the $\lambda$ map with $f_{200}=0$ and $W>205$, shown as
+$W-205$ (Methods). This selection does not establish that no earlier exit occurred. Not pre-registered.}
+\label{fig:data}
+\end{figure*}
+
+\section{The conversion}
+\label{sec:conversion}
 
 The decay itself was pre-registered: at $\lambda = 1.25$, $g = 1.5$, thirty decays at each of
 $N = 64, 96, 144, 192$, and the adjacency read when the conversion fraction first crossed 25, 50 and 75\%.
@@ -239,14 +317,9 @@ pre-registered test of whether a coarse law of a single front governs these deca
 that nucleated converted in more than one patch, mostly at the warmer coupling, and the front's rate fell roughly
 as $N^{-0.7}$.
 
-The coefficient of variation is a coarse diagnostic, not sufficient to establish memorylessness.
-In an exploratory distribution analysis, first-exit data are consistent with an exponential approximation
-[Fig.~\ref{fig:data}(c)]: pooled over conditions after dividing each
-time by its condition's mean, the 432 first exits we recorded give a Kolmogorov--Smirnov distance
-$D = 0.035$ from the unit exponential (nominal $p = 0.53$; shared-stream caveat in Methods), and the 240 of them counted move by move
-(Sec.~\ref{sec:lambda}) are consistent with an exponential using the mean of Eq.~(\ref{eq:tau}), nothing estimated
-($p = 0.85$). This does not establish exponential tails in each cell. Detected-decay waits show stronger
-departures, including the later T38 tail-test failures (Sec.~\ref{sec:lambda}).
+The 25 and 75\% snapshots were recorded but are not part of the registered criteria. They give the same
+picture: the mean share at $d \in \{1,2\}$ is 0.988--0.997 and 0.985--0.995 across the eight cells, against
+0.988--0.998 at 50\% (PL, Ch.~6).
 
 \begin{table}[b]
 \caption{The decay of the $4\times L$ torus at $\lambda = 1.25$, $g = 1.5$ (first run / independent rerun,
@@ -266,24 +339,10 @@ $N$ & mean wait & CV & $d \in \{1,2\}$ at 50\% & largest piece \\
 \end{ruledtabular}
 \end{table}
 
-\begin{figure*}
-\includegraphics[width=\textwidth]{fig1.pdf}
-\caption{(a) Mean waiting time of the perfect $4\times L$ torus at $\lambda = 1.25$ against inverse coupling,
-sixteen runs per point; error bars are one standard error of the mean. Lines: Eq.~(\ref{eq:tau}) using move A
-only (solid) and moves A and B (dashed); nothing is fitted. (b) Share of vertices at each local dimension $d$
-at the first sampled $f\ge0.5$, averaged over the thirty decays per size of the rerun in
-Table~\ref{tab:t7}. (c) Share of tori still waiting against time in units of the mean of its condition,
-pooled, on a logarithmic scale; the dashed line is the exponential $e^{-x}$ of a memoryless wait. Blue: all
-432 recorded first exits (twelve conditions of panel a, and six cells of the count in Sec.~\ref{sec:lambda}).
-Orange: the selected 589 decay waits of the $\lambda$ map with $f_{200}=0$ and $W>205$, shown as
-$W-205$ (Methods). This selection does not establish that no earlier exit occurred. Not pre-registered.}
-\label{fig:data}
-\end{figure*}
-
 The ideal-state energy difference is exact. After settling, 24 to 28 of 30 decays per size have a
 window-averaged release within 1\% of $\varepsilon$ per vertex. This energy criterion alone does not
 certify torus topology. Other endpoints contain defects, read from their wiring:
-most often combinations of small defects of 8 to 45 units, and less often the four-point relic of Sec.~IV, a
+most often combinations of small defects of 8 to 45 units, and less often the four-point relic of Sec.~\ref{sec:sealed}, a
 closed loop of four vertices at $d = 1$ with $S = N + 1$ and, in its commonest form, $X = 6$, costing
 $24\lambda - 16$ (14 at $\lambda = 1.25$). Whether these states are stable or only slow is not known. The energy criteria were developed after
 inspecting endpoints, so this energy analysis is exploratory. Under the resulting criteria, the full
@@ -291,19 +350,20 @@ two-state classification holds at $N=64,96,192$, while one $N=144$ run fails bec
 inside the final measuring window. The prespecified waiting and morphology criteria pass at all four
 sizes in both sets of thirty runs. A passing component test is not a passing combined classification.
 
+At $\lambda=1.05$ all 120 saved endpoints of the map of Sec.~\ref{sec:lambda}
+have zero energy. Filling every square, checking two faces per edge, a cyclic vertex
+link, connectedness, orientability and Euler characteristic zero certifies torus topology for all
+120 graphs. This does not cover all other datasets or determine period lengths.
+
 A separate equilibrium scan at $\lambda=1.25$ has a single energy-distribution peak over the tested
 sizes and couplings, with an INCONCLUSIVE classification under its stated rules. Neither that finite-size
 observation nor the kinetic conversion studied here establishes a thermodynamic first-order transition.
 
-\section{Sealed system}
+\section{Sealed system: the reservoir and the relic}
+\label{sec:sealed}
 
-Giving the graph a Creutz reservoir \cite{Creutz83} replaces fixed $g$ by energy-conserving dynamics
-on graph plus stores. Each valid candidate selects one of $C$ nonnegative stores uniformly; the move
-is refused if that store cannot pay $\Delta H$, and otherwise its energy changes by $-\Delta H$.
-The stores and edge proposals are globally selected: the seed is a total activation budget, not energy
-deposited at a chosen vertex. The conserved quantity is $E_{\rm tot}=H+\sum_i E_i$.
-The recorded maximum drift is zero in all T9 runs at $\lambda=1.25$; this is an observed numerical
-check, not a claim about bitwise arithmetic at arbitrary $\lambda$.
+With $C$ stores in place of one, the reservoir of Sec.~\ref{sec:cost} also determines how the released
+energy is taken up (PL, Chs.~7 and~8).
 
 \emph{Thermometer and ensemble.} At $\lambda=1.25$, $\Delta H=-16\Delta S+5\Delta X$ is integral.
 The initial T9 stores contain 0 or 12. Allowed exit costs include 12 and 25, with greatest common
@@ -325,17 +385,6 @@ total energy. They do not demonstrate equilibration. If all integer bath allocat
 are accessible, their number is $\Omega_C(M)=\binom{M+C-1}{C-1}$, where
 $M=E_{\rm tot}-H(G)\ge0$. The graph marginal is weighted by this bath multiplicity; changing $C$
 changes the entropy as well as the thermal response.
-
-\emph{A size-independent escape budget (exploratory).} With one store initially holding
-$s\in\{4,8,10,11,11.5,12,13,16\}$, the torus left its initial $(S,X)$ values in 8 of 8 runs at each
-tested $s\ge12$, and 0 of 8 at each $s\le11.5$, for each $N=48,64,96,144,192$ (320 runs of
-12,000 sweeps). The runner checks $(S,X)$ once per sweep: its success flag measures escape,
-not completed conversion. Eight successes give a two-sided exact 95\% binomial interval of
-$[0.631,1]$ at an individual setting; zero of eight gives $[0,0.369]$.
-The neutral-class certificate in Sec.~II proves the lower bound 12 at these sizes: all nonneutral
-moves cost at least 12, so nonnegative stores with total budget below 12 cannot leave the basin.
-Observed sufficiency is protocol- and duration-dependent. The escape budget is fixed while the
-available ideal-state energy decrease $\varepsilon N$ grows with the system.
 
 \emph{The reservoir's thermal response.} With the seed in one of $C$ stores, $C$ setting the reservoir's
 heat capacity ($N = 64, 96, 192$; twenty runs each; 420 runs): the converted region melts into the random
@@ -385,30 +434,10 @@ this does not derive the boundary. An exponential first exit with 50\% survival 
 instead require a mean $200/\ln2$, and $f_{200}$ also includes growth.
 
 In persistent cells, means at half conversion give 95--100\% in the two counting signatures and
-76--100\% of flat-like vertices in the largest component. At $\lambda=1.05$ all 120 saved endpoints
-have zero energy. Filling every square, checking two faces per edge, a cyclic vertex
-link, connectedness, orientability and Euler characteristic zero certifies torus topology for all
-120 graphs. This does not cover all other datasets or determine period lengths.
-The full-window-release fraction falls to 79\% at 1.30 and 46\% at 1.35; the table retains this
-energy-window criterion rather than treating it as a topology test.
-
-Figure~\ref{fig:lambda}(a) compares detected means with the first-exit prediction over two decades;
-these are distinct observables. For the idealized floor $W=\max(T,a)$ with exponential $T$ of
-mean $\tau$, $E[W]=a+\tau e^{-a/\tau}$. At $a=205$ this gives 462 and 265 sweeps at $\lambda=1.30$
-and 1.35, against 403--505 and 280--350 measured. The dashed curve is a recording-floor approximation,
-not a calibrated detector prediction. Conditioning on actual survival gives the different mean
-$E[T\mid T>a]=a+\tau$. The detector uses the same trajectory's first 200 sweeps to estimate its
-threshold; early conversion changes both the threshold and sample selection (Methods).
-
-T22 counts exits attempt by attempt in forty further runs in each of six cells
-($\lambda=1.05,1.10,1.25$; $N=64,96$). All 240 first exits are observed; 239 runs reach $f\ge0.25$
-before the cap. First-exit means are consistent with Eq.~(\ref{eq:tau}) in the model-conditional
-95\% intervals in the Supplemental Material. For completed runs, the reciprocal of mean exits per run
-is 0.56--0.68; its replica-bootstrap intervals span roughly 0.45--0.78 across cells.
-This estimates successful departures per counted exit under the $f\ge0.25$ commitment rule, excluding
-the one incomplete run. It is not a derived transmission coefficient.
-Multiplying the exit rate by this fraction would require independent renewal excursions and control
-of time spent in failed excursions and growth.
+76--100\% of flat-like vertices in the largest component. The full-window-release fraction falls to 79\%
+at 1.30 and 46\% at 1.35; the table retains this energy-window criterion rather than treating it as a
+topology test. The topology certificate for the $\lambda=1.05$ endpoints is in Sec.~\ref{sec:conversion};
+PL, Ch.~9, walks through the map.
 
 \emph{Conversion-map diagnostics.} Three independently seeded maps fail their full prespecified
 acceptance criteria. In the thirty-run map (T8), the wait CV falls outside 0.7--1.3 in nine of 24
@@ -426,34 +455,6 @@ Multiple early patches are common even when one component dominates later. From 
 1.35, the fraction with several flat-like pieces at quarter conversion rises from 0.44 to 0.69 in
 T23 and 0.43 to 0.68 in T24. The corresponding full-release or zero-energy fractions fall from
 0.71 to 0.47 and 0.74 to 0.49, respectively. T24's ``FLAT'' class means $H=0$ only.
-
-The two exceptional T24 waits at $N=64$ are 20,270 sweeps ($\lambda=1.25$) and 32,155 (1.30),
-or 23.98 and 76.74 times the predicted first-exit means. For 120 exponentials with those means,
-the bounds $120e^{-r}$ would be $4.6\times10^{-9}$ and $5.7\times10^{-32}$.
-These illustrative null bounds are not final $p$-values: the stopping times differ and the cases
-were examined after observation. They nevertheless preclude dismissing the detected tails as
-ordinary scatter around that particular first-exit model.
-
-\emph{Dedicated tail test (T38).} A prespecified tail-count test gives the classification
-TWO POPULATIONS. The rule uses $w'=W-200$,
-$\widehat\tau=\operatorname{median}(w')/\ln2$, and counts $k_{10}$ above $10\widehat\tau$:
-TAIL for $k_{10}\ge3$, NO TAIL for $k_{10}\le1$, otherwise UNCLEAR.
-\begin{center}
-\begin{tabular}{ccrrl}
-$\lambda$ & $N$ & recorded / total & $k_{10}$ & result \\
-1.25 & 64 & 3942 / 4000 & 2 & UNCLEAR \\
-1.25 & 192 & 1000 / 1000 & 1 & NO TAIL \\
-1.30 & 64 & 3868 / 4000 & 14 & TAIL \\
-1.30 & 192 & 1000 / 1000 & 5 & TAIL
-\end{tabular}
-\end{center}
-Two TAIL cells trigger the verdict; it does not establish two physical basins.
-All 190 missing detector crossings nevertheless reach $f\ge0.75$, so they are detector omissions,
-not simply long survivors. The tail statistic excludes these missing crossings. A descriptive two-exponential fit
-also includes a fast component near the recording floor; it is not a mechanism diagnosis.
-No T38 waiting-graph files are present in the frozen \texttt{results/} inventory. Endpoints cannot
-reconstruct their histories. Separating detector effects, failed growth and additional traps
-requires the waiting snapshots or new attempt-resolved trajectories with prespecified tail tests.
 
 \begin{table}[b]
 \caption{T8 at $g=1.5$. Ranges are cell means over $N=64,96,144,192$, thirty runs per cell;
@@ -490,6 +491,75 @@ and full-window-release fraction, pooled over sizes. Neither series certifies ge
 \label{fig:lambda}
 \end{figure*}
 
+\emph{Detected waits and the resting window.}
+Figure~\ref{fig:lambda}(a) compares detected means with the first-exit prediction over two decades;
+these are distinct observables. For the idealized floor $W=\max(T,a)$ with exponential $T$ of
+mean $\tau$, $E[W]=a+\tau e^{-a/\tau}$. At $a=205$ this gives 462 and 265 sweeps at $\lambda=1.30$
+and 1.35, against 403--505 and 280--350 measured. The dashed curve is a recording-floor approximation,
+not a calibrated detector prediction. Conditioning on actual survival gives the different mean
+$E[T\mid T>a]=a+\tau$. The detector uses the same trajectory's first 200 sweeps to estimate its
+threshold; early conversion changes both the threshold and sample selection (Methods).
+
+The two exceptional T24 waits at $N=64$ are 20,270 sweeps ($\lambda=1.25$) and 32,155 (1.30),
+or 23.98 and 76.74 times the predicted first-exit means. For 120 exponentials with those means,
+the bounds $120e^{-r}$ would be $4.6\times10^{-9}$ and $5.7\times10^{-32}$.
+These illustrative bounds are not $p$-values: the stopping times differ and the cases were examined
+after observation.
+They are not waits of a resting torus. The rows saved for those two runs record $f_{200}=0.75$ and
+0.875 and place the 25, 50 and 75\% snapshots at sweep 205, the first check after the resting window.
+Both tori had converted three quarters or more inside the window from which the detector estimates
+$\sigma_{\rm rest}$. The threshold was correspondingly low, and $W$ records when $S/N$ at last fell
+below it, from endpoints that retained energy (window releases 0.744 of 1.000 and 0.563 of 1.200 per
+vertex).
+
+\emph{Dedicated tail test (T38).} A prespecified tail-count test gives the classification
+TWO POPULATIONS. The rule uses $w'=W-200$,
+$\widehat\tau=\operatorname{median}(w')/\ln2$, and counts $k_{10}$ above $10\widehat\tau$:
+TAIL for $k_{10}\ge3$, NO TAIL for $k_{10}\le1$, otherwise UNCLEAR.
+\begin{center}
+\begin{tabular}{ccrrl}
+$\lambda$ & $N$ & recorded / total & $k_{10}$ & result \\
+1.25 & 64 & 3942 / 4000 & 2 & UNCLEAR \\
+1.25 & 192 & 1000 / 1000 & 1 & NO TAIL \\
+1.30 & 64 & 3868 / 4000 & 14 & TAIL \\
+1.30 & 192 & 1000 / 1000 & 5 & TAIL
+\end{tabular}
+\end{center}
+Two TAIL cells trigger the verdict, which stands as scored; it does not establish two physical basins.
+A retrospective, exploratory reading of the saved rows (no new run; Methods) uses two recorded
+quantities that do not depend on the detector's threshold: $f_{200}$ and the sweep of the first sampled
+$f\ge0.25$.
+
+(i) All 190 runs without a detector crossing have $f_{200}\ge0.75$ and reach $f\ge0.25$ at sweep 205.
+They converted inside the resting window; they are the fastest runs, not long survivors. The tail
+statistic excludes them.
+
+(ii) A descriptive two-exponential fit includes a fast component near the recording floor.
+The fraction of runs with $f_{200}>0$ is 0.144 and 0.146 at $\lambda=1.25$ ($N=64$ and 192) and
+0.274 and 0.314 at 1.30, against $1-e^{-200/\tau_{AB}}=0.211$ and 0.380 for a first exit before sweep
+200. Of the runs detected within 20 sweeps of the window's end (12.0, 12.0, 21.2 and 23.4\% of each
+cell), 80--84\% have $f_{200}>0$. The fast component is exits inside the window.
+
+(iii) The scale $\widehat\tau$ is taken over all detected waits, the fast component included. It is 750,
+671, 267 and 238 sweeps in the four cells, against means of 917, 858, 443 and 446 for runs with
+$f_{200}=0$ ($\tau_{AB}=845$ and 419). The cutoff $10\widehat\tau$ is therefore only 5.7--8.9
+$\tau_{AB}$, and the reference expectation $ne^{-10}$ does not apply to it. Among runs with
+$f_{200}=0$, the waits beyond $10\widehat\tau$ number 0, 1, 11 and 5, where a single exponential with
+those runs' own mean gives 0.96, 0.34, 7.0 and 3.3 (Poisson tail probabilities 1, 0.29, 0.10 and
+0.24). The other 2, 0, 3 and 0 waits beyond the cutoff have $f_{200}\ge0.75$ and every snapshot at
+sweep 205, like the two T24 cases.
+
+(iv) Measured against their own mean, the $f_{200}=0$ runs have 0, 0, 3 and 0 waits beyond ten
+means, where 0.16, 0.04, 0.13 and 0.03 are expected. Three waits at $\lambda=1.30$, $N=64$
+($W=4705$, 5000 and 5080) are not accounted for. In one of them the detector fires 575 sweeps after
+the $f\ge0.25$ snapshot, so its threshold had been lowered by an excursion that returned before sweep
+200; $f_{200}=0$ does not exclude that for the others.
+
+This reading was made after the data were seen and is not a registered test.
+No T38 waiting-graph files are present in the frozen \texttt{results/} inventory, and endpoints
+cannot reconstruct their histories. An attempt-resolved replay of the three runs from their seeds,
+registered first, is the remaining check.
+
 \section{Discussion}
 
 At $\lambda = 1$, which is CQG, the flat, curled and 4-cube tori are degenerate and the change
@@ -504,8 +574,10 @@ The strongest quantitative kinetic result is the agreement of directly counted f
 prediction from enumerated moves, with the omitted-channel correction stated. The energetic lower bound
 for sealed escape is certified over the tested sizes. Conversion snapshots support dominance by a
 connected flat-like region, but do not establish a unique seed or one moving boundary. Exact endpoint
-geometry is certified only for the stated T8 set. Detected-decay tails, finite-bath equilibration and
-period growth remain open; the inconclusive maps and T38 failures are part of the result.
+geometry is certified only for the stated T8 set. Finite-bath equilibration and period growth remain
+open. The detected-decay tails are largely accounted for, retrospectively, by conversion inside the
+detector's resting window; three long waits in one cell are not. The inconclusive maps and the T38
+classification are part of the result.
 
 \emph{Labelled or interchangeable vertices.} All runs here, like the published CQG simulations we know of
 \cite{KTB19,T25}, treat vertices as labelled: two graphs that differ only by renaming vertices are different
@@ -547,8 +619,6 @@ $N=160$ agrees with Ref.~\cite{KTB19}, Fig.~8a, to rms 0.005 but differs from Re
 by up to 0.41 between $g=2$ and 6.3. Given the differing stated protocols discussed in the Introduction,
 this remains an unresolved reproduction issue, not a validation of the entire uncapped equilibrium curve.
 
-
-
 \emph{Conversion protocol.} The runner advances in five-sweep blocks, recording square counts and
 the threshold crossings in Table~\ref{tab:clocks}. The main conversion stage stops at $f\ge0.98$
 or the configured cap; the settling stage follows even if that crossing was not reached.
@@ -576,7 +646,7 @@ The last are conditional on the continuous exponential approximation, not distri
 For the T7b largest-component means, the intervals at $N=64,96,144,192$ are respectively
 $[0.983,1]$, $[0.928,0.986]$, $[0.906,0.995]$, $[0.864,0.971]$.
 The median is one in each cell, but 0, 1, 3 and 5 of the thirty individual runs have a fraction
-below 0.7. Thus a passing mean does not describe every replica.
+below 0.7 (0, 2, 4 and 9 in the first set). Thus a passing mean does not describe every replica.
 Map waiting summaries are restricted to runs reaching $f\ge0.75$; this selection
 can favor successful conversions. Counts of observed events, omissions and snapshot availability
 are given in the Supplemental Material.
@@ -596,7 +666,21 @@ T7 alone gives $p<10^{-3}$. Selecting T8 cells passing persistence, $f_{200}=0$ 
 Pooling and fitting means can mask cell
 heterogeneity, and KS is not a decisive far-tail test.
 Three of 200 mixed first-exit and detected waits at $\lambda=1.05$ exceed 75,000 sweeps. Their
-post-hoc rarity calculation, as well as T24 and T38, motivates an attempt-resolved mechanism audit.
+post-hoc rarity calculation, and the three T38 waits left unexplained in Sec.~\ref{sec:lambda},
+motivate an attempt-resolved audit.
+
+\emph{Retrospective reading of the decay rows.} The reading in Sec.~\ref{sec:lambda} uses only
+columns saved by the registered runs, \texttt{f\_200} and the snapshot sweeps, through
+\path{scripts/read_wait_detector.py}. It was made after the T24 and T38 results were known, is
+exploratory, and changes no registered classification. A run is called perfect at sweep 200 when
+$f_{200}=0$; this does not exclude an excursion that returned inside the window. Poisson tail
+probabilities use each cell's own mean wait among such runs.
+
+\emph{Companion documents.} A plain-language edition, \path{paper_plain_language.pdf} beside this
+manuscript in the source repository, develops the model, the ladder, the detector and each test with
+diagrams, in the order of Secs.~\ref{sec:model}--\ref{sec:lambda}. An interactive page linked from it
+evaluates Eqs.~(\ref{eq:H}) and (\ref{eq:tau}) and shows the tabulated measurements. Neither adds a
+result about this study; the edition's closing section previews later work.
 
 \emph{Data and code.} The source-data snapshot is available at
 \href{https://github.com/EmilySmithCreate/RecreationalPhysics/tree/40b1ae68844a72bd73ffdc74d5c385844ab16f17}{RecreationalPhysics, commit 40b1ae68}.
@@ -604,6 +688,8 @@ The Supplemental Material provides a claim-to-script/configuration/data map, com
 and content hashes in \path{release_manifest.json}. The release includes the analysis and figure
 scripts needed to reproduce this paper. Configurations specify seeds and durations; associated metadata
 record software versions but do not consistently identify the original execution commit.
+The retrospective-reading script and the plain-language edition postdate that snapshot and are in
+the same repository.
 
 \begin{acknowledgments}
 The author used Claude (Anthropic) and ChatGPT/Codex (OpenAI) to assist with code, analysis and writing,

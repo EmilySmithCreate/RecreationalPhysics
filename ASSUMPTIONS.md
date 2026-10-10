@@ -2897,6 +2897,94 @@ conditioning on completed conversion, alongside its historical score. Companion 
 unpublished manuscripts. This is a correction to the stated evidential scope, not a change
 to the owner's hypothesis or a new simulation result.
 
+- **O109 Paper 1's long waits and missed detections, read retrospectively from the saved rows: almost all of it is
+  the detector's 200-sweep watch, not a second population.** (2026-10-10, 06:52 ET by the clock;
+  `scripts/read_wait_detector.py`, tested in `tests/test_read_wait_detector.py`; reads `results/t38_*.csv` and
+  `results/t24_*.csv` only. **EXPLORATORY and post hoc: no new run, no verdict changed.** T38's pre-registered
+  verdict TWO POPULATIONS stands as scored; this entry is about what that verdict means. *Ours, unverified.* O108,
+  above, is the paper-1 revision entry this one follows.)
+  - **The owner's remark that started it** (10 October, on the plain-language edition's sentence that the detector
+    "learns its threshold from the tube's own first 200 sweeps; a tube that begins to change early widens that
+    threshold and is caught late, or never"): "this seems pretty testible considering having some explaination would
+    change the focus at the end of the paper. if something is hidden that implies from our known model not a basic
+    issue of model structure code." Read by us as: test whether the stragglers are the detector's doing (a matter of
+    protocol and code) or something hidden in the model.
+  - **Why the saved rows can say.** The runner records two clocks that do not depend on the detector's threshold:
+    `f_200`, how far the tube had converted when the watch ended, and `sweep_25`, the first sweep after 200 at which
+    a quarter of it had converted. The detector's own clock, `waiting`, is the first sweep after 200 at which φ falls
+    below 1.25 − 3 sd, sd being the spread of φ over the first 200 sweeps. A tube that changes inside the watch has a
+    large sd and so a low threshold.
+  - **The 190 tubes the detector never caught** (58 at λ = 1.25 and 132 at 1.30, all at N = 64): every one was at
+    least three-quarters converted **when the watch ended** (smallest `f_200` 0.88 and 0.75; median 0.94, which at 64
+    points is the sheet with one extra square left). All 190 passed the quarter mark at the first check after the
+    watch. They are the fastest tubes in the sample, not the slowest. (O108 and the corrected manuscript already say
+    they reach f ≥ 0.75; what is added is that they were there by sweep 200.)
+  - **T24's two extreme waits, the ones that made that map inconclusive and motivated T38** (N = 64: λ = 1.25,
+    replica 90, 20,070 sweeps after the watch, 24 τ; λ = 1.30, replica 94, 31,955 sweeps, 76 τ): `f_200` = 0.75 and
+    0.875, quarter, half and three-quarter marks all at sweep 205. **Neither was a tube waiting.** Each had converted
+    three-quarters or more inside the watch, then rested on a defective sheet (they released 0.744 of 1.000 and
+    0.563 of 1.200 per point) until φ at last crossed the lowered threshold. This is TASKS' "read the two extreme T24
+    waits", answered from the rows; their wiring was not needed for it. The longest waits in T38 are the same kind:
+    both of the λ = 1.25, N = 64 waits beyond 10 τ̂ (11,370 and 15,365) and three of the fourteen at λ = 1.30
+    (3,050, 5,740, 7,195) have `f_200` ≥ 0.75 and every mark at sweep 205.
+  - **The fast share** (tubes detected within 20 sweeps of the watch's end: 12.0, 12.0, 21.2 and 23.4 % in the four
+    cells): 80 to 84 % of them had already left the perfect tube at sweep 200. The share of all tubes with
+    `f_200` > 0 is 14.4 and 14.6 % at λ = 1.25 and 27.4 and 31.4 % at 1.30; the count (τ = 845 and 419) puts a first
+    exit before sweep 200 in 21.1 and 38.0 %, and T22's fall-back share of about a third takes those to 14 and 25 %.
+    So the fast share is the count's own first exits, landing inside the watch.
+  - **The tail count.** T38's yardstick τ̂ = median(w′)/ln 2 was taken over all detected waits, the fast share
+    included, which pulls it down: 750, 671, 267, 238 against 917, 858, 443, 446 for the tubes still perfect at sweep
+    200 (the count: 845 and 419). So "10 τ̂" was only 5.7 to 8.9 of the real scale, and the pre-registered
+    expectation of 0.18 or 0.05 waits beyond it assumed a single exponential from sweep 200 that the watch itself
+    breaks. Among tubes still perfect at sweep 200, the waits beyond 10 τ̂ number 0, 1, 11 and 5 (cells in the order
+    λ = 1.25 N = 64, 1.25 N = 192, 1.30 N = 64, 1.30 N = 192), where one memoryless population with those tubes' own
+    mean expects 0.96, 0.34, 7.0 and 3.3 (chance of at least as many: 1, 0.29, 0.10, 0.24). Measured against their
+    own scale, the waits beyond ten of it number 0, 0, **3** and 0, where one population expects 0.16, 0.04, 0.13 and
+    0.03.
+  - **What is left unexplained: three waits in one cell.** At λ = 1.30, N = 64, replicas 553, 2748 and 3072 were
+    perfect tubes at sweep 200, were detected at 5,080, 5,000 and 4,705 sweeps (10.2 to 11.0 of their cell's scale
+    after the watch) and passed the quarter mark at 4,505, 5,000 and 4,710 (chance of three or more waits that long
+    under one population: about 3 in 10,000). In replica 553 the detector
+    fired 575 sweeps *after* the quarter mark, so its threshold had been lowered by an excursion inside the watch
+    that came all the way back. *Ours, unverified:* a tube blinded that way is timed to its committed change, not its
+    first exit, and T22 puts the committed change at 1.5 to 1.7 times the first exit, with a tail of its own; that
+    could account for a few such waits, and the rows cannot say whether it accounts for these three.
+  - **Rule 11's four answers, for T38's TWO POPULATIONS** (the owner's inferred prediction and ours, both scored as
+    holding). (1) *Does the result show a second population in the model?* No: the rule fired, and its count is
+    reproduced here, but the rule's yardstick and its expectation both assumed away the watch. (2) *Implementation,
+    parameters, finite size or mechanism?* Implementation, almost entirely: the detector's watch (protocol) and a
+    yardstick biased by it (analysis). The three waits above are the only candidates for anything else, and they are
+    at the smallest size. Our own prediction for T38, that long waiters sit on a variant of the tube with a dearer
+    exit, has nothing in these rows to support it. (3) *The cheaper test that tells them apart:* done here for
+    everything but the three, from two columns already saved. For the three: replay those replicas from their seeds
+    (the chain reproduces exactly) and record what the runner did not, the threshold and every exit and return. That
+    is the "prespecified attempt-resolved history test" O108 names, and it is minutes on a laptop. It is a run, so it
+    is pre-registered first, with the owner's prediction. (4) *What would make us abandon the reading:* first exits
+    timed from sweep 0 with no detector showing three or more waits beyond ten of the count's τ in a cell of 4,000;
+    then a slow population is real and this entry is wrong.
+  - **Previous claim → failed because → replacement → new test** (rule 11's form). The detected waits show two
+    populations (O84; the plain-language edition, Chapter 11: "a measurement with no mechanism attached") → the two
+    populations are produced by timing tubes with a detector that watches for 200 sweeps before it starts: tubes that
+    change inside the watch are caught at once, late, or never, and the yardstick is bent by them → the first exit is
+    one memoryless population (T22 and the 432 exits already say so); the detected wait is that same population seen
+    through the watch; and a tube that changes fast can then rest for tens of thousands of sweeps on a defective
+    sheet, which is a fact about the end of the change and not about the wait → the replay above.
+  - **What this corrects.** The plain-language edition's "The saved files cannot separate these" (they separate
+    nearly all of it); its "190 ... the detector never fired at all, although the progress meter shows the tube
+    three-quarters converted" (true, and they were so by sweep 200); and the reading of T24's two extreme waits as
+    waits, in O52, O84, T38's "Why" and TASKS. *Added the same day, 07:20 ET by the clock, at the owner's instruction ("now you've noticed the fast movers
+    issue pls correct the paper and update the conclusion"; then "align the technical manuscript to this plain
+    language paper"):* the technical manuscript, `docs/papers/curled_torus/paper.tex`, now carries this reading in
+    its abstract, Sec. VII, Discussion and Methods, and its sections were reordered to follow the plain-language
+    edition (cost of leaving, first exit, conversion, sealed system, dependence on λ); `supplement.md` has the
+    table. No passage of the 9 October manuscript was reworded except the ones on the detected tails, the section
+    cross-references, and two additions (the 25 and 75 % signature shares; the first set's count of runs below
+    0.7). O52's verdict for T24 (INCONCLUSIVE by the letter) stands: the rule read `waiting`, and `waiting` is what
+    it is.
+  - **Not claimed.** That no slow population exists: three waits are open, and λ = 1.05's far tail (O52; the
+    corrected manuscript) was not read here beyond noting that its longest T24 waits all have `f_200` = 0. That the
+    defective sheets these tubes rest on are understood: they are the resting states of O13 and paper 2's subject.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

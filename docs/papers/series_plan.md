@@ -27,7 +27,11 @@ inconclusive by the letter for a stated reason (the memoryless-wait criterion wa
 Submission or endorsement logistics do not imply scientific review. See [measurement scope](measurement_scope.md).
 
 **Draft.** `docs/papers/curled_torus/paper.tex`, `paper.pdf`; review page
-https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR.
+https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR. *Added 10 October:* the plain-language edition,
+`paper_plain_language.pdf`, whose chapters the manuscript's sections now follow, and its interactive companion,
+"The Tube's Curling Ladder", https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8 (source
+`docs/public/curling_ladder_tube.html`). The edition closes by previewing short papers 2 and 5 of the list
+below ("What the burp leaves behind"; "How curled directions open").
 
 ---
 

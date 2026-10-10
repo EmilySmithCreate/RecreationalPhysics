@@ -2,7 +2,7 @@
 
 **The curled torus burps: activated escape and conversion in a graph model of emergent geometry**
 
-Emily Smith · 9 October 2026
+Emily Smith · 9 October 2026, revised 10 October 2026
 
 This supplement gives computational certificates, sampling details, uncertainty estimates and a map from claims to code and data. Calculations beyond the cited literature are the author's, computer-checked and not independently reviewed by a physicist. The analyses below use existing trajectories; none changes the recorded data or the prespecified tests.
 
@@ -48,7 +48,20 @@ T38 uses w′=W−200, scale tau_hat=median(w′)/ln 2, and the count k10 above 
 
 All 190 missing detector crossings reach f≥0.75. They are therefore not ordinary censored long survivors. The reported tail statistic excludes these rows. At T8 lambda=1.30 and 1.35, respectively 118 and 117 of 120 runs have detector crossings, while all reach half and three-quarter conversion.
 
-No `results/t38_*_waiting/*.npz` files exist in the frozen snapshot. Final states cannot reconstruct those waiting histories. Detector effects, repeated failed growth and additional traps cannot be distinguished decisively from these files. A future attempt-resolved experiment should record the first exit, every return, commitment, threshold history and missing events jointly, under prespecified tail tests.
+No `results/t38_*_waiting/*.npz` files exist in the frozen snapshot. Final states cannot reconstruct those waiting histories. A future attempt-resolved experiment should record the first exit, every return, commitment, threshold history and missing events jointly, under prespecified tail tests.
+
+### Retrospective reading of the saved rows (10 October 2026)
+
+`scripts/read_wait_detector.py` reads the T38 and T24 result rows only. It is exploratory, was written after those results were known, runs nothing and changes no registered classification. It uses two saved columns that do not depend on the detector's threshold: `f_200`, the conversion fraction when the 200-sweep resting window ends, and `sweep_25`, the first sampled f≥0.25 after the window.
+
+| lambda | N | Runs with f_200>0 | 1−exp(−200/tau_AB) | Missing crossings, least f_200 | tau_hat | Mean wait, f_200=0 | Waits beyond 10 tau_hat: f_200≥0.75 / f_200=0 | Expected, f_200=0 | Beyond 10 own means, f_200=0 (expected) |
+|---|---:|---:|---:|---|---:|---:|---|---:|---|
+| 1.25 | 64 | 14.4% | 21.1% | 58, 0.875 | 750 | 917 | 2 / 0 | 0.96 | 0 (0.16) |
+| 1.25 | 192 | 14.6% | 21.1% | 0 | 671 | 858 | 0 / 1 | 0.34 | 0 (0.04) |
+| 1.30 | 64 | 27.4% | 38.0% | 132, 0.75 | 267 | 443 | 3 / 11 | 7.03 | 3 (0.13) |
+| 1.30 | 192 | 31.4% | 38.0% | 0 | 238 | 446 | 0 / 5 | 3.31 | 0 (0.03) |
+
+All 190 missing crossings have f_200≥0.75 and their quarter snapshot at sweep 205: they converted inside the resting window. Of the runs detected within 20 sweeps of the window's end, 80–84% have f_200>0. The expected counts use a single exponential with the mean wait of the f_200=0 runs of the same cell. The two exceptional T24 waits (N=64; lambda=1.25 replica 90 and lambda=1.30 replica 94) have f_200=0.75 and 0.875 with all three snapshots at sweep 205. Three waits at lambda=1.30, N=64 (replicas 553, 2748 and 3072; W=5080, 5000 and 4705) remain beyond ten of their cell's own mean; in replica 553 the detector fires 575 sweeps after the quarter snapshot. f_200=0 does not exclude an excursion that returned inside the window, so this reading cannot classify those three. `tests/test_read_wait_detector.py` checks the classification and shows, on synthetic exponential waits read through a 200-sweep window, that a fast share alone produces k10≥3 under the registered rule.
 
 T22 observes all 240 first exits, but only 239 runs reach f≥0.25 before the cap. First-exit means and intervals include all observed exits; the reciprocal-exit statistic uses completed runs. For example, the N=96, lambda=1.05 first-exit mean is about 9302; restricting it to committed runs would instead give about 7485. These samples answer different questions.
 
@@ -100,6 +113,7 @@ Paths are relative to the repository root. Experiment identifiers provide stable
 | First exits / returns | `scripts/run_exits.py`, `scripts/analyse_t22.py`, supplementary analysis | `configs/t22_exits_*.json`; matching CSVs |
 | 120-run maps | `scripts/analyse_t23.py`, `scripts/analyse_t24.py` | `configs/t23_*.json`, `configs/t24_*.json`; CSVs and T24 endpoint graphs |
 | Dedicated tail test | `scripts/analyse_t38.py` | `configs/t38_*.json`; matching CSVs; `t38_audit_2026-10-09.log` |
+| Retrospective reading of detected waits | `scripts/read_wait_detector.py`, `tests/test_read_wait_detector.py` | T38 and T24 result CSVs; no new run |
 | Pooled distributions / positions | `scripts/analyse_paper_stats.py` | T7, T8, T11, T22; `paper_stats_2026-10-09.log` |
 | Intervals / event counts / bath proxies | `scripts/analyse_curled_revision.py` | `revision_analysis_2026-10-09.log` |
 | Schematic / Fig. 1 | `scripts/plot_paper_fig_tori.py` | Drawing only, not a measured interface |
@@ -114,8 +128,13 @@ python scripts/analyse_curled_revision.py --neutral
 python scripts/analyse_curled_revision.py
 python scripts/analyse_paper_stats.py
 python scripts/analyse_t38.py
+python scripts/read_wait_detector.py
 python -m pytest -q
 python scripts/build_curled_paper.py --tectonic /path/to/tectonic
 ```
 
 The build regenerates the three figures, synchronizes the abstract directly from TeX, checks references and layout, compiles the PDF and writes the release manifest. Validation outputs accompany the package. The simulations remain reproducible through the frozen configurations and their recorded seeds, subject to the stated execution-provenance limitation.
+
+## Companion documents
+
+A plain-language edition, `paper_plain_language.pdf` (source `paper_plain_language.tex`, notes in `plain_language_README.md`), follows the manuscript's section order chapter by chapter and adds no result about this study; its closing section previews later work. Its interactive companion, `docs/public/curling_ladder_tube.html`, evaluates the energy and first-exit formulas at any setting and shows the tabulated measurements where they were run. The plain-language edition is built separately with Tectonic from its own directory.

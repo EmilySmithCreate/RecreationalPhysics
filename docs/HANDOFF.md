@@ -23,6 +23,38 @@ endorsement logistics below are not evidence of scientific review. T38 is alread
 its missing detector crossings must not be treated as unconverted survivors. Outstanding
 work is the mechanism, not another claim of universal exponential conversion waits.
 
+**Addendum, 10 October 2026 (branch `claude/paper1-plain-language-2026-10-10`, cut from the review
+branch; written 07:20 ET by the clock).**
+- **The plain-language edition of paper 1** is `papers/curled_torus/paper_plain_language.pdf` (source `.tex`,
+  notes in `plain_language_README.md`), rewritten through the day from the owner's page-by-page notes. Her rules
+  for such an edition: no term before it is defined; results in reading order; a diagram with callouts wherever
+  the reader would have to build a picture; one metaphor per idea; everyday comparisons; her idea stated once.
+  It has eleven chapters and ends on two upcoming papers and one line: "A push of twelve units opens a tube.
+  What opens a space?"
+- **Its interactive companion** is the artifact "The Tube's Curling Ladder",
+  https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8 (source `docs/public/curling_ladder_tube.html`; shared by the
+  owner by link). It has not been seen rendered by the assistant that wrote it; its script was checked at every
+  knob setting. The older artifact "The Curling Ladder" still shows the order-of-opening release chart set aside
+  in VISION Update 50 and is owed a revision if it becomes the three-direction version.
+- **The long waits (O109).** Read retrospectively from the saved rows (`scripts/read_wait_detector.py`;
+  exploratory, no new run): T38's 190 missed detections, T24's two extreme waits and the fast share are tubes that
+  converted inside the detector's 200-sweep resting window, and T38's yardstick was biased by them. The
+  pre-registered verdict TWO POPULATIONS stands as scored. Three waits at λ = 1.30, N = 64 are unexplained.
+- **The technical manuscript** was reordered to the plain edition's order at the owner's instruction (model; cost
+  of leaving; first exit; conversion; sealed system; dependence on λ) and carries the O109 reading. Passages were
+  moved, not reworded, except those on the detected tails. `python scripts/build_curled_paper.py` was rerun: the
+  manifest's hashes are current.
+- **A fresh prior-work search** for the coefficient above 1 is `reading/notes/2026-10-10_prior_work_lambda_above_one.md`
+  (NOT FOUND for any finite λ above 1; a ban on surplus squares is described in the text of [KTB19] and [KT19];
+  its quotations are from web conversions and are to be checked against the PDFs).
+- **Owed to or by the owner.** Her prediction, then a pre-registered replay of the three T38 waits from their
+  seeds (threshold and every exit and return recorded). The far tail at λ = 1.05 read the same way. A physicist's
+  glance at the edition's one-paragraph description of Coleman's bounce, which is from general knowledge. Whether
+  a paper on converting the model's units is added to the series (the edition says "a later paper").
+- **The main checkout** was left on the stale `claude/read-t51-t53-2026-10-09` with uncommitted duplicates of this
+  branch's work (ASSUMPTIONS, TASKS, REFERENCES and the new files); this branch is the source of truth for them.
+- **Next record numbers:** ASSUMPTIONS **O110**, VISION **Update 52**, PREREGISTRATION **T58**.
+
 ## 0. The first ten minutes (as of 9 October 2026)
 
 1. **Fetch first.** `git fetch --all --prune`, then `git log --oneline -8 origin/main` and `git branch -a`. On 5 October

@@ -34,7 +34,7 @@ def check_source_and_abstract():
 
 def manifest():
     files = list(PAPER.glob("*.tex")) + list(PAPER.glob("*.pdf"))
-    files += [PAPER / "supplement.md", PAPER / "README.md"] + list(PAPER.glob("*.py"))
+    files += [PAPER / "supplement.md", PAPER / "README.md", PAPER / "plain_language_README.md"] + list(PAPER.glob("*.py"))
     files += list(PAPER.glob("*_2026-10-09.log")) + [PAPER / "arxiv_abstract.txt"]
     files += [ROOT / name for name in (
         "ASSUMPTIONS.md", "scripts/analyse_curled_revision.py", "scripts/build_curled_paper.py",
@@ -44,7 +44,12 @@ def manifest():
         "docs/papers/measurement_scope.md", "src/graphity/dimension.py",
         "scripts/analyse_t9.py", "scripts/analyse_t10.py", "scripts/analyse_t22.py",
         "scripts/run_sealed_sheet_budget.py", "tests/test_t22.py", "tests/test_sealed_budget_thermometer.py",
-        "docs/reading/notes/2026-10-09_prior_work_curled_torus.md")]
+        "docs/reading/notes/2026-10-09_prior_work_curled_torus.md",
+        # revision of 10 October 2026: the retrospective reading of the decay rows, the second
+        # prior-work search, and the interactive companion of the plain-language edition
+        "scripts/read_wait_detector.py", "tests/test_read_wait_detector.py",
+        "docs/reading/notes/2026-10-10_prior_work_lambda_above_one.md",
+        "docs/public/curling_ladder_tube.html")]
     # Normalize release text to the UTF-8/LF representation stored by Git.
     # PowerShell-redirection logs can otherwise be UTF-16 and Windows files CRLF.
     for path in set(files):
@@ -55,7 +60,7 @@ def manifest():
             path.write_text(text, encoding="utf-8", newline="\n")
     hashes = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
               for p in sorted(set(files))}
-    payload = dict(base_source_and_data_commit=BASE, release_date="2026-10-09",
+    payload = dict(base_source_and_data_commit=BASE, release_date="2026-10-10",
                    status="Reader manuscript and accompanying computational materials",
                    analysis_environment=dict(python=platform.python_version(),
                        packages={name: version(name) for name in
