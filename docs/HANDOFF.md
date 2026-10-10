@@ -187,8 +187,8 @@ branch; written 07:20 ET by the clock).**
    8 October apply to every new section.
 7. **Read section 3 before writing anything public or anything to a physicist.** The programme page is the Claude
    artifact "A Phase-Changing Reality" (the owner's request of 4 October); its text source is
-   `docs/papers/programme_draft.md`, current to 9 October; the artifact was last republished on 6 October and is owed a
-   republish from the 9 October draft. `docs/public/programme.html` is older and not maintained by hand.
+   `docs/papers/programme_draft.md`, current to 10 October (pieces 1 and 2, the papers' state and what is waiting
+   to be read; the rest is the state of 9 October); the artifact was republished from it on 10 October as Version 63. `docs/public/programme.html` is older and not maintained by hand.
 8. **Environment.** The interpreter with the project's dependencies is the Microsoft Store one,
    `~/AppData/Local/Microsoft/WindowsApps/python3` (NumPy 2.0, Numba, pytest); bare `python` and `.venv` lack NumPy.
    Run `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`. Long scripts go in a file with
