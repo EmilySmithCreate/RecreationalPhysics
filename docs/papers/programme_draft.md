@@ -113,7 +113,10 @@ question. (8) Paper 1's reader request after 9 October; paper 2 rewritten after 
 **Papers.** The author's decision of 5 October: many short papers, each supporting one piece and readable alone by a
 physicist, brought together by a last one; where possible each takes up the model or open question of one researcher's
 most recent work, replicates it, then extends it. The list of seventeen, with the anchor of each, is in
-`docs/papers/series_plan.md`; paper 1 is written, paper 2 drafted, five more have their results in hand.
+`docs/papers/series_plan.md`: seventeen short papers (the owner's decision of 5 October). As of 10 October paper 1
+is written and published in two editions; papers 2, 10 and 11 are drafted; earlier drafts of 25 September exist for
+papers 5, 6 and 12 and are to be brought up to date. The programme page lists all seventeen with their pieces
+(Version 66, 17:04 ET; until then its table still showed the older grouping of eight).
 
 ---
 
