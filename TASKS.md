@@ -554,7 +554,14 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    *Looked at sweep by sweep the same day at her question (exploratory, O110): no second curl at any sweep;
    decay 3072 made a three-sweep exit between two looks, so one long wait is left, not two. That sentence was corrected in the two papers and the supplement the same day, at her word. Owed,
    pre-registered first: the whole cell timed by sweeps, to say whether exits hidden between looks are the 7 % of stage B.* Still unread: the far tail at
-   λ = 1.05.*
+   λ = 1.05.* *Both are PREREGISTRATION **T59** (10 October, 17:50 ET), at the owner's question whether closing them
+   would make paper 1 more complete. Stage A reads the three long waits at λ = 1.05 from their seeds (T8's decay 11
+   block by block; T22's seven first exits later than four mean waits with what the chain was offered tallied).
+   Stage B counts 2,000 and 1,000 fresh first exits at λ = 1.05, N = 64 and 96, move by move. Stage C counts 4,000 at
+   λ = 1.30, N = 64, on the move clock and on a look every five sweeps in the same histories. Ours: the long waits
+   were chance and the 7 % is the looks. Launched on the laptop the same hour (`scripts/make_t59_configs.py`,
+   `scripts/run_first_exits.py`). **Her prediction is owed before any stage is read.** To read:
+   `python scripts/analyse_t59.py`, then an O entry, then the paper's two sentences.*
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be

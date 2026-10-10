@@ -69,6 +69,20 @@ branch; written 07:20 ET by the clock).**
   **Her word later that day:** the second-curl prediction is not discussed on the programme page unless real
   evidence appears of an unknown mechanism adding to the tail; the page says what was found (Version 64), and the
   registration keeps the prediction as written.
+- **T59, pre-registered 10 October, 17:50 ET, and launched on the laptop** (`scripts/make_t59_configs.py`,
+  `scripts/run_first_exits.py`, `scripts/analyse_t59.py`; 54 configs `configs/t59_*`). The owner asked whether
+  closing paper 1's two loose ends on the count would make it more complete. Stage A1: T8's decay 11 at N = 96
+  (78,205 sweeps) replayed block by block. Stage A2: T22's seven first exits later than four mean waits at
+  λ = 1.05 replayed with what the chain was offered tallied. Stage B: fresh first exits at λ = 1.05 counted move by
+  move, 2,000 at N = 64 and 1,000 at N = 96. Stage C: 4,000 at λ = 1.30, N = 64, on the move clock and on a look
+  every five sweeps. What is exact going in: the waiting torus's three classes share one census, so the first exit
+  should be exactly memoryless; T22's two first exits near 9.7 mean waits then have a chance of about 1 in 70,000.
+  One target was seen before the registration (T22's replica 7 at N = 64, offered three cheapest exits a sweep
+  throughout) and is disclosed there. **Nothing of T59 has been read. The owner's prediction is owed first; when
+  it is in, record it in PREREGISTRATION T59 with the time by the clock, then `python scripts/analyse_t59.py`.**
+  New in the kernel folder: `graphity.exits.first_exit_clocks` and `offers_until_exit` (T22's chain, draw for
+  draw), and `graphity.results.provenance` (the commit and a dirty flag in a run's meta; TASKS, the reviews of
+  6 October, item 5, for new runners only so far).
 - **Bianconi's entropy action on our wirings (O111, 10 October; series paper 10).** At the owner's request for a
   letter to Ginestra Bianconi with a replication and a question: `scripts/exact_entropy_action.py` builds the
   operators of [Bia24] on the flat torus, the tube, a re-glued tube and a gas of 4-cubes at 64 points and evaluates

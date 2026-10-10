@@ -4216,3 +4216,159 @@ every sweep from 1 to 4,998; decay 3072 left the tube at sweeps 3,166 to 3,168 a
 3,165 and 3,170, so its "4,670 sweeps without a break" holds block by block and not sweep by sweep, and its first
 exit after sweep 200 came 7.1 mean waits in. One long wait is left in the cell, not two. The details, the exact
 census of the tube's free switches and what is not excluded are in O110's addendum of the same hour.
+
+---
+
+## T59. Were the long waits at the lowest curling cost chance, and is T58's 7 % the looks? T8's and T22's long waits at λ = 1.05 read from their seeds, and fresh first exits counted move by move at λ = 1.05 and 1.30 (paper 1; pieces 1 and 2; the owner's question of 10 October; ASSUMPTIONS O42, O108 to O110; written 2026-10-10, 17:50 ET by the clock, before any run)
+
+### Why
+
+Paper 1's strongest number is the count: the mean wait for a first exit from the curled torus, from the moves alone,
+with nothing fitted. Two loose ends are left on it, and the programme page lists both as next. On 10 October the owner
+asked whether closing them would make paper 1 more complete.
+
+1. **T58's 7 %.** Timed with no detector, by a look every five sweeps, the 4,000 first exits of T38's cell
+   (λ = 1.30, N = 64) have a mean 1.071 ± 0.017 of the count. T58 said what might do it and did not compute it: a
+   look every five sweeps cannot see an exit that comes back before the look.
+2. **The far tail at λ = 1.05.** Three of 200 waits there exceed 75,000 sweeps, nine mean waits (O42): 80,985 and
+   80,174 among T22's 80 first exits, which were counted move by move with no detector at all, and 78,205 among T8's
+   120 detected decays. None has been read.
+
+*Exact, ours (arithmetic on a complete enumeration, unreviewed):* the arrangements a waiting torus can reach without
+changing its squares form three classes at every size from 48 to 288 points, and all three have the same census of
+moves (`scripts/analyse_curled_revision.py --neutral`). The chain's chance of leaving is therefore the same at every
+attempt of the wait, and the first exit is exactly memoryless with the census's mean. If that is right, a long first
+exit can only be a rare run of draws. Two first exits near 9.7 mean waits among 80 has a chance of about 1 in 70,000
+(worked out after seeing them). So either the enumeration is wrong, or the draws are not behaving as independent
+draws, or it was that rare. This registration tells the three apart.
+
+**Disclosed: what had been read before this was written.**
+- T22's saved rows. At λ = 1.05 seven of 80 first exits are later than four mean waits (4.40, 4.44, 5.19 and 9.73 at
+  N = 64; 4.54, 4.98 and 9.63 at N = 96) where 1.5 are expected; the means are 1.22 and 1.12 of the count. At
+  λ = 1.10 and 1.25 the four cells hold one such exit in 160, where 2.9 are expected.
+- T8's saved rows for decays 9, 10 and 11 at N = 96: waits of 10,450, 5,975 and 78,205 sweeps, all three still the
+  tube at sweep 200 (`f_200` = 0), and decay 11's quarter mark at sweep 95,725.
+- **One target of stage A2 has been seen.** While sizing this run, T22's replicas 1 and 7 at N = 64 were replayed in
+  a scratch script with the tally below (nothing was written to `results/`). Replica 7's first exit came back as
+  saved (80,985.17 sweeps). In each of its sixteen whole stretches the chain was offered 14,728 to 15,141 exits of
+  kind A (2.95 to 3.03 a sweep) and 9,876 to 10,209 of kind B; 242,726 of kind A in all, of which independent draws
+  would take 9.6; the chance of none is 6.5 × 10⁻⁵. So that target's label is known: OFFERED AS COUNTED. The other
+  six targets and the seven controls have not been replayed.
+- The new readers were tested on plain seeds and on six of T22's seeds at λ = 1.25 (`tests/test_first_exit_clocks.py`):
+  400 tubes at λ = 1.45, 40 at λ = 1.30. None of these uses this run's seed. Timing: about 2 ms a sweep at N = 64.
+- Nothing of stages A1, B or C has been run.
+
+### What will be run
+
+On the laptop, 54 configs from `scripts/make_t59_configs.py`. Named points throughout.
+
+- **Stage A1, `t59_t8wait_lam105_n96`** (`scripts/run_tube_decay.py`, T8's runner with T58's read-only recorder):
+  T8's decay 11 at N = 96 and, as controls fixed now, the two before it (9 and 10), from T8's seed (20261201), sides,
+  coupling, block and caps, each written block by block.
+- **Stage A2, `t59_offers_lam105`** (`scripts/run_first_exits.py`, mode `offers`; `graphity.exits.offers_until_exit`):
+  T22's seven first exits later than four mean waits at λ = 1.05 (N = 64 replicas 6, 7, 11, 17; N = 96 replicas 6, 12,
+  29) and, as controls fixed now, the replica after each (N = 64: 8, 12, 18, and 5 for replica 6, whose successor is
+  a target; N = 96: 7, 13, 30), from T22's seeds. Each is stopped at its first exit. The wait is cut into stretches
+  of 5,000 sweeps, and for each stretch the valid proposals are tallied: kind A (lose 2 squares and 4 surplus
+  squares), kind B (lose 4 and 10), any other change, and those that change nothing; with the smallest acceptance
+  draw made against a kind-A and a kind-B proposal.
+- **Stage B, `t59_lam105_n64_00` to `_15` and `t59_lam105_n96_00` to `_19`** (mode `clocks`;
+  `graphity.exits.first_exit_clocks`): 2,000 fresh tubes at N = 64 and 1,000 at N = 96, λ = 1.05, g = 1.5, seed
+  20265900, cap 200,000 sweeps. Each tube runs to the first exit that a look every five sweeps sees, and its row holds
+  the first exit counted by the move, by a look every sweep and by a look every five sweeps, and the exits made
+  before each look saw one.
+- **Stage C, `t59_lam130_n64_00` to `_15`**: 4,000 fresh tubes at λ = 1.30, N = 64, the same reader, cap 50,000
+  sweeps.
+
+Both new readers are `run_until_through`, T22's chain, with its draws in its order; tested to give the same first
+exit attempt for the same seed, to return T22's saved first exits exactly, and, where waits are short, a mean first
+exit equal to the exact census's (`tests/test_first_exit_clocks.py`). They look between sweeps and draw nothing to
+look. The cell of T58 was driven by `cqg.run_chain`, which proposes the same moves with the same chances and draws
+them in a different order, so stage C is a fresh sample of the same chain and not a replay of T58's histories.
+
+### Definitions, fixed now (`scripts/analyse_t59.py`, tested in `tests/test_t59.py` before any run)
+
+**The count.** τ = 1 / (3 e^(−(32 − 16λ)/g) + 2 e^(−(64 − 40λ)/g)) sweeps, paper 1's Eq. (2): 8,329.7 at λ = 1.05 and
+419.0 at λ = 1.30, g = 1.5. (The census over every way out gives 8,326 and 417.5.)
+
+**The tube:** S = 5N/4 and X = N. **An exit:** an accepted move out of it. **Seen by a look:** not the tube when
+looked at after a sweep.
+
+**A1.** Gate: every column of T8's row comes back unchanged for decays 9, 10 and 11 (two numbers may differ by one
+part in 10⁹, as in T58) and each replay ends on the graph T8 saved. Label for decay 11 by T58's rules with this
+size's numbers (S = 120, X = 96, every point at d = 1): SECOND CURL, LOW THRESHOLD, TRUE WAIT or OTHER STATE.
+
+**A2.** Gate: all fourteen first exits are the attempts T22 saved. Label per run, over its whole stretches:
+**OFFERED AS COUNTED** if in every one the kind-A offers are within 5 % of three a sweep and the kind-B offers within
+5 % of two a sweep (the scatter of such a tally is under 1 %); **STARVED** otherwise. Verdict on the seven targets:
+OFFERED AS COUNTED if all are, else STARVED with the number. Reported with each: the exits its offers would have
+produced under independent draws, and the chance of none.
+
+**B, each size scored alone.** A tube that has not left by the cap enters the mean at the cap and counts as beyond.
+- **P1.** The mean first exit by the move, divided by τ, is within 0.07 of 1 at N = 64 and within 0.10 at N = 96
+  (three standard errors of a memoryless sample of that size).
+- **P2.** The first exits later than 8 τ number at most 4 at N = 64 and at most 3 at N = 96 (expected 0.67 and
+  0.34; more than that has a chance under one in a thousand; T22's own frequency would give about 50 and 25).
+- **ON THE COUNT** if both hold; **SLOW TAIL** if P2 fails; **OFF THE COUNT** if P1 fails and P2 holds.
+
+**C.**
+- **P3.** The mean first exit by the move is within 0.05 of τ.
+- **P4.** In the same tubes, the look every five sweeps runs later than the move by 0.035 to 0.107 of τ on average
+  (T58's 0.071 ± 0.017 above the count, two standard errors either way with this run's own error added).
+- **P5.** More than half of that gap comes from tubes whose first exit came back before a look saw it.
+- **HIDDEN EXITS** if all three hold; **OFF THE COUNT** if P3 fails; **NOT THE LOOKS** if P3 holds and P4 fails;
+  **THE LOOK'S ROUNDING** if P3 and P4 hold and P5 fails.
+
+Described, not scored, for B and C: the numbers later than 4, 6, 8 and 10 τ beside one memoryless population's; the
+look clocks in stage B; the longest wait.
+
+No claim about size is made: each size is scored against the same count, and nothing is said about growth with N, so
+there is no held-out size (rule 14). Nothing here says that something has not been found in the literature (rule 15).
+Not a milestone (rule 12).
+
+### Predictions
+
+**The owner's: owed.** She is asked at launch. Her answer is recorded here, with its time by the clock, before any
+stage is read; no stage is read until then.
+
+**Ours, unverified.**
+- **A1: TRUE WAIT.** Decay 11 was the tube at sweep 200 with a resting spread of zero or near it, so its detector
+  fires on the first exit a look sees.
+- **A2: OFFERED AS COUNTED for all seven** (one known, as disclosed).
+- **B: ON THE COUNT at both sizes.** The long first exits of T22 were rare draws, not a property of the chain.
+- **C: HIDDEN EXITS.** Counted by the move, the first exit is on the count; the look every five sweeps reads about
+  7 % late because some first exits come back before it looks. Why: the exactness above; T22's first exits on time at
+  λ = 1.10 and 1.25; and a rough count (the move that undoes an exit is offered about once in N sweeps, and several
+  such moves lead back into the torus's family) that puts the hidden share within reach of 7 %.
+
+### What each outcome would mean
+
+- **A2 STARVED.** The waiting torus reached arrangements with fewer ways out than the count gives it. The enumeration
+  behind "three classes, one census" is wrong somewhere, Eq. (2) is not exact, and paper 1's central number needs a
+  correction that this run measures.
+- **A2 OFFERED AS COUNTED and B ON THE COUNT.** The long waits at λ = 1.05 were chance. Paper 1 replaces "their
+  post-hoc rarity calculation motivates an attempt-resolved audit" with the audit's result, and reports the rarity.
+- **A2 OFFERED AS COUNTED and B SLOW TAIL.** The chain is offered exits at the counted rate and, in some runs, takes
+  too few for too long. Independent draws do not do that. The fault would be in the random draws or in how the kernel
+  uses them, every waiting time in paper 1 would carry that caveat, and nothing else on paper 1 is done until it is
+  found.
+- **B OFF THE COUNT.** No tail, but the mean is off: the count is wrong at λ = 1.05 by the amount measured.
+- **C HIDDEN EXITS.** T58's 7 % is the look interval. Paper 1's "within 7 % of the count" becomes "on the count when
+  counted by the move", with the size of the looks' effect stated.
+- **C NOT THE LOOKS.** By the move the exit is on the count, and the looks do not lag by enough: T58's 7 % is not
+  explained here. Next would be T58's own cell replayed with every sweep written.
+- **C OFF THE COUNT.** The first exit itself is late at λ = 1.30; the count is off there and the paper says by how much.
+- **C THE LOOK'S ROUNDING.** The looks lag, but because exits are seen late, not because they come back.
+- **A1 other than TRUE WAIT.** Read from the trace and reported as found; T8's long wait would then be the detector's.
+
+### Named or interchangeable points
+
+Named, as in the runs replayed; a replay has to be, and the fresh tubes are set beside them. With interchangeable
+points an exit would also be weighed by how many renamings it destroys, and the torus has many, so waits would
+lengthen by a factor these runs do not measure (ours, unverified). Not run.
+
+### What this cannot show
+
+Why the detected waits of the λ = 1.05 map run 15 to 43 % above the count: that is the detector's clock, which O109
+read at λ = 1.25 and 1.30 only. Anything about a size above 96. Anything at λ = 1: at λ ≠ 1 this is our family
+around the published model, never combinatorial quantum gravity.
