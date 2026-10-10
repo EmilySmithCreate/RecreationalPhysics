@@ -4388,3 +4388,32 @@ prediction there.
 State of the run when this was written: launched at 18:01 ET from commit c7840ed6; stage A1 and fourteen of stage
 C's sixteen files had finished computing; stage A2 and stage B were still running. Nothing had been read: the
 analysis script had not been run on any T59 file, and only the jobs' exit codes had been looked at.
+
+### Reading, stages A1 and C, 2026-10-10, 18:29 ET by the clock (`python scripts/analyse_t59.py`)
+
+Run after the commit that holds the owner's prediction (d935cf71, 18:20 ET). Stages A2 and B were still running and
+are not read here.
+
+**A1. Gate passed; TRUE WAIT.** T8's decays 9, 10 and 11 at N = 96 return every column of the original unchanged and
+end on the graphs T8 saved. Decay 11 read as the tube at every one of the 15,600 looks from sweep 205 to its
+detection at sweep 78,205, 9.4 mean waits; it never had more squares than the tube and no point ever read d = 0.
+The two controls read as the tube to their detections at 10,450 and 5,975 sweeps. Ours holds. This long wait was
+a tube that sat, not the detector.
+
+**C. HIDDEN EXITS. P3, P4 and P5 hold; the owner's prediction holds, and ours.** 4,000 fresh tubes at λ = 1.30,
+N = 64; none failed to leave.
+- **P3.** Counted by the move, the mean first exit is 1.005 ± 0.016 of the count (registered: within 0.05 of 1).
+- **P4.** In the same tubes a look every five sweeps runs later by 0.096 ± 0.007 of the count (registered: 0.035
+  to 0.107). Its own mean is 1.101 ± 0.017 of the count; T58 found 1.071 ± 0.017 by the same kind of look.
+- **P5.** 94 % of that gap comes from tubes whose first exit came back before a look saw it (registered: more than
+  half): 312 tubes of 4,000, of which 278 made one such exit, 30 two, 3 three and 1 four.
+
+Described, not scored: first exits later than 4, 6, 8 and 10 mean waits number 79, 7, 3 and 0, where one memoryless
+population expects 73, 9.9, 1.3 and 0.18; the longest is 8.8. A look every sweep runs later than the move by
+0.017 ± 0.003. *Added after the registration, exploratory:* the spread of the wait divided by its mean is 0.990 by
+the move and 0.993 by the look every five sweeps, and each clock's median over ln 2 equals its mean to one part in
+a thousand; a memoryless wait has 1 and equality.
+
+**What it says.** Counted by the move, the first exit at λ = 1.30 is on the count. A look every five sweeps reads
+it about 10 % late, and nearly all of that is first exits that come back before the look: about one in thirteen.
+T58's 7 % is that effect. The look lengthens the wait and leaves its shape alone: a memoryless wait stays memoryless.
