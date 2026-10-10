@@ -76,3 +76,38 @@ def test_recording_the_detector_does_not_change_the_chain(tmp_path):
         assert int(rb["exits_unseen"]) == sum(1 for i in unseen if tube[i - 1])
         final = np.load(tmp_path / "watched_trace" / ("N96_rep%s_final.npz" % rb["replica"]))["adj"]
         assert final.shape == (n, 4)
+
+
+def test_writing_every_sweep_does_not_change_the_chain(tmp_path):
+    """10 October 2026: with `trace_sweeps` every sweep of a traced replica is written, with the pieces, baby
+    universes and 4-cubes after it and the number of moves accepted in its block. The chain is the chain without it,
+    every fifth row is the block-by-block trace, and a block with no move accepted is a block with no change."""
+    base = {"record_f_200": True, "record_detector": True, "trace_replicas": [0, 1]}
+    a = _run(tmp_path, "blocks", base)
+    b = _run(tmp_path, "sweeps", dict(base, trace_sweeps=True))
+    assert a == b                                          # every column of every row
+    seen_change = False
+    for row in b:
+        name = "N96_rep%s" % row["replica"]
+        blocks_a = (tmp_path / "blocks_trace" / (name + ".csv")).read_text()
+        blocks_b = (tmp_path / "sweeps_trace" / (name + ".csv")).read_text()
+        assert blocks_a == blocks_b and not (tmp_path / "blocks_trace" / (name + "_sweeps.csv")).exists()
+        blocks = list(csv.DictReader(blocks_b.splitlines()))
+        sweeps = list(csv.DictReader(open(tmp_path / "sweeps_trace" / (name + "_sweeps.csv"), newline="")))
+        assert [int(t["sweep"]) for t in sweeps] == list(range(1, 5 * len(blocks) + 1))
+        before = (120, 96)                                 # the tube it starts as: S, X
+        for k, block in enumerate(blocks):
+            rows = sweeps[5 * k:5 * k + 5]
+            last = rows[-1]
+            for key in ("S", "X", "pieces", "largest", "baby", "cubes"):
+                assert last[key] == block[key]             # the fifth sweep is the block's own look
+            moves = {int(t["accepted_in_block"]) for t in rows}
+            assert len(moves) == 1 and min(moves) >= 0
+            states = [before] + [(int(t["S"]), int(t["X"])) for t in rows]
+            if len(set(states)) > 1:
+                assert min(moves) >= 1                     # a change needs a move
+                seen_change = True
+            if min(moves) == 0:
+                assert len(set(states)) == 1               # no move, no change
+            before = states[-1]
+    assert seen_change

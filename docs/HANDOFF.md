@@ -58,6 +58,14 @@ branch; written 07:20 ET by the clock).**
   three tubes curled a second direction and the energy sat in the new curl; ASSUMPTIONS O110) and ours (their own
   detectors' thresholds). Her "maybe" is recorded as her prediction until she confirms or replaces it. *Confirmed by her as her
   prediction on 10 October, 11:45 ET, after both readings; the verdict (it fails) is unchanged.*
+  **Looked at sweep by sweep the same day, at her question (exploratory; O110, addendum of 12:22 ET;
+  `configs/t58_exploratory_sweeps_lam130_n64.json`, `scripts/read_t58_sweeps.py`):** no second curl at any
+  sweep in the nine traced decays, and no single switch of a tube adds a square (exact, from the neutral-class
+  census already on the record); a waiting tube makes a neutral re-gluing switch about every two sweeps and stays
+  a tube with the same ways out; decay 2748 sat at every sweep, decay 3072 made a three-sweep exit between
+  two looks (sweeps 3,166 to 3,168). **One long wait is left in the cell, of the size chance produces, not two.**
+  *Corrected at her word the same day:* the two papers and the supplement now say one tube sat and one made an
+  exit between two looks; PDFs and blog pages rebuilt, and the folder copied to the marketing branch again.
   **Read the same day:** gates passed; no second curl in any of 4,000 tubes; of the three waits one was the
   detector and two were real waits of the perfect tube (11 to 12 times the mean); with no detector the first exit
   is one memoryless population at 1.07 of the counted rate. Her follow-up (does a knot turn back into tube; why

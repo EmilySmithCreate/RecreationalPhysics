@@ -539,14 +539,17 @@ That leaves three waits at $\lambda=1.30$, $N=64$ ($W=4705$, 5000 and 5080). A r
 that cell from its seeds (T58) returns all 4,000 saved rows unchanged. For the three runs it records
 every five-sweep block: before detection the square count never exceeds the torus's, no vertex reads
 $d=0$, and the graph stays connected. One wait is the window again: an excursion inside it lowered
-the threshold, and three later exits that fell back went undetected. The other two are real by the
-counting signature: at every block the run read as the perfect torus, for 5,000 and 4,670 sweeps
-(11.9 and 11.1 $\tau_{AB}$). Neither registered prediction for the three held (a hidden doubly
-curled state; a lowered threshold in all three). Those for the cell did. Timed with no detector, the
+the threshold, and three later exits that fell back went undetected. The other two read as the
+perfect torus at every block, for 5,000 and 4,670 sweeps. Neither registered prediction for the
+three held (a hidden doubly curled state; a lowered threshold in all three). Those for the cell did.
+Timed with no detector, the
 first exits of the 4,000 runs have mean $1.071\pm0.017$ $\tau_{AB}$ (four standard errors above the
 count; Methods), one lies beyond $10\tau_{AB}$ (0.18 expected), and no run ever exceeds the torus's
-square count. Described and not scored, two runs rest beyond $10\tau_{AB}$ after sweep 200, where
-0.13 are expected: rare, and unexplained.
+square count. An exploratory replay of these runs, read after every sweep, finds no sweep with more
+squares than the torus and separates the two: the $W=5000$ run is the perfect torus through sweep
+4,998 ($11.9\,\tau_{AB}$), while the $W=4705$ run left it for three sweeps between two block
+readings, $7.1\,\tau_{AB}$ after the window. One long wait remains, which chance allows about one
+time in six.
 
 \section{Discussion}
 
@@ -626,7 +629,7 @@ nominal duration, identifies each replay. Saved final graphs are post-settling s
 tail-count test, were fixed before their respective runs, as were the gate, labels and cell
 predictions of the T58 replay (one of its three target rows already implied a lowered threshold). Endpoint-energy criteria were partly
 chosen after inspecting data, so the energy classification is exploratory. The Arrhenius and seed
-scans, pooled distribution checks, topology certificates and interval estimates are also exploratory
+scans, the sweep-by-sweep replay, pooled distribution checks, topology certificates and interval estimates are also exploratory
 analyses, not independent confirmatory experiments. Experiment identifiers such as T8 and T38 connect
 the paper to the configurations and complete analysis record in the Supplemental Material.
 Our computational derivations remain unverified by an independent physicist.
@@ -667,8 +670,9 @@ $f_{200}=0$; this does not exclude an excursion that returned inside the window.
 reruns registered configurations from their seeds with a read-only recorder; its gate requires every
 saved column to return unchanged. Its detector-free first exit is the first five-sweep block at which
 a run no longer has $S=5N/4$, $X=N$ and every vertex at $d=1$ (the basin of Table~\ref{tab:clocks},
-neutral classes included). An exit that returns within a block is not seen, which lengthens the
-measured wait by an amount not computed. No T38 waiting-graph files are in the frozen
+neutral classes included). An exit that returns within a block is not seen (the exploratory
+sweep-by-sweep replay of nine runs shows two), which lengthens the measured wait by an amount not
+computed. No T38 waiting-graph files are in the frozen
 \texttt{results/} inventory, so in the three cells not replayed endpoints cannot reconstruct
 histories.
 
@@ -683,8 +687,8 @@ The Supplemental Material provides a claim-to-script/configuration/data map, com
 and content hashes in \path{release_manifest.json}, with the analysis and figure scripts.
 Configurations specify seeds and durations; associated metadata
 record software versions but do not consistently identify the original execution commit.
-The retrospective-reading and replay scripts, the T58 configurations and results, and the
-plain-language edition postdate that snapshot and are in the same repository.
+The retrospective-reading and replay scripts, the T58 configurations and results, the exploratory
+sweep-by-sweep replay, and the plain-language edition postdate that snapshot and are in the same repository.
 
 \begin{acknowledgments}
 The author used Claude (Anthropic) and ChatGPT/Codex (OpenAI) to assist with code, analysis and writing,

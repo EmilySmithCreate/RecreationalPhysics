@@ -3070,6 +3070,53 @@ to the owner's hypothesis or a new simulation result.
     confirmed SECOND CURL as her prediction for T58 (PREREGISTRATION T58, "Confirmation"). It had been recorded
     from her "maybe" as inferred. Confirmed after the result was known, so it changes no verdict: her prediction
     fails, as scored.
+  - **Addendum, the same day, 12:22 ET by the clock: her second question, and a look at every sweep (exploratory).**
+    Her words: "what did we figure out could be the reason for the remaining unlikley waits? still populations?
+    sure it's not the 2 step change to a more curled space enven if it very short lived that could impact the
+    measurements. just double check". The gap she names is real: T58 looked every five sweeps, so anything that
+    came and went between two looks was not seen. *Exploratory, not pre-registered, no verdict*
+    (`configs/t58_exploratory_sweeps_lam130_n64.json`; `scripts/run_tube_decay.py` with `trace_sweeps`, tested to
+    leave the chain unchanged; `scripts/read_t58_sweeps.py`; tests in `tests/test_t58_sweeps.py`): the nine decays
+    of stage A replayed from their seeds once more, with the squares, surplus squares, pieces, baby universes and
+    4-cubes written after every sweep and the moves accepted counted in every block. The replay is the same
+    history: every row and every block of every trace is unchanged.
+    - *No second curl at any sweep.* In all nine, at every sweep up to the detection, the square count never
+      exceeded the tube's 80, no 4-cube and no baby universe existed, and the network was one piece. Every stretch
+      off the tube had fewer squares (74 to 78): an ordinary exit, the opening direction.
+    - *Exact, and already on the record* (the neutral switches of O42 and paper 1's neutral-class certificate,
+      O108; `scripts/analyse_curled_revision.py --neutral`). N/2 switches change neither squares nor surplus
+      squares: read from their positions at N = 64, all 32 are two opposite points of one ring swapping their
+      links to a neighbouring ring, the tube re-glued and point for point still a tube. The chain makes one about
+      every two sweeps. The exhaustive census at N = 64 reaches three classes of such tubes with one full list of
+      switches between them (192 at 32 − 16λ, 128 at 64 − 40λ, and the dearer ones), so a tube that has wandered
+      this way has the same ways out at the same prices. *Read for this question, new:* in that list of 5,536
+      switches none adds a square (the largest dS is 0). So a second curl cannot begin in one move from any of
+      them: it needs an exit first, and an exit shows as fewer squares.
+    - *So the waiting tubes were not frozen, and that is not a hidden state.* Decay 2748 accepted 2,580 moves in
+      its 5,000 sweeps and decay 3072 2,363 in 4,705, where the neutral switches alone give 2,500 ± 50 and
+      2,352 ± 49. "Every single move out costs" stays true: these are not moves out.
+    - *Decay 2748 is a true wait at every sweep:* the tube after each of sweeps 1 to 4,998, then its one exit.
+    - *Decay 3072 is not.* Besides its exit inside the watch (sweeps 23 to 32), it left the tube at sweeps 3,166
+      to 3,168 (78 squares, one exit that fell back), between the looks at 3,165 and 3,170, and left for good at
+      4,701. Its threshold (φ below 1.2296) would have fired on 78 squares; the detector looks every five sweeps
+      and did not see it. So its recorded wait of 4,705 is the detector's five-sweep look, and its first exit
+      after sweep 200 came 7.1 mean waits in, not 11.1. Decay 553 also has a one-sweep exit (sweep 463) that the
+      blocks did not show.
+    - *What this does to the readings of T58, which stay as scored by their block-by-block rules.* Stage A's
+      "two tubes that sat for 5,000 and 4,670 sweeps without a break" is true of one. Stage B's described count
+      "two later than 10 τ after sweep 200, where 0.13 are expected" is one at sweep resolution (a first exit timed
+      by sweeps can only come earlier than one timed by blocks, so no other decay can join it), which chance
+      allows about one time in eight; from sweep 0 it was already one where 0.18 are expected (P2), about one
+      time in six. **One long wait is left in the cell, of the size one memoryless population produces by chance,
+      with nothing hidden in it at any sweep.** Not two populations: O109 traced T38's two to the detector's watch,
+      and T58's P1 and P2 hold for one.
+    - *Not excluded:* something that begins and ends inside a single sweep (128 attempted moves). It would have to
+      leave the tube, do its work and return exactly, and it would leave nothing behind for a wait to depend on.
+    - *The papers, corrected the same day at the owner's word ("correct please"):* the two editions and the
+      supplement said two tubes sat; they now say one sat and one made an exit between two looks, with the
+      sweep-by-sweep look marked exploratory. And a brief exit hidden between looks is the kind
+      of thing that would lengthen a first exit timed by blocks: whether it accounts for the 7 % of stage B needs
+      the whole cell timed by sweeps, which would be pre-registered first.
 
 ## Provenance
 

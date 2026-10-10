@@ -97,11 +97,26 @@ def main(path, out_dir="results"):
                 tube_at_200, first_left, first_left_after_200 = "", "", ""
                 exits_unseen, off_blocks, deepest_unseen, was_tube = 0, 0, "", True
                 trace = []
+                # 10 October 2026, the owner's question (could a second curl come and go between two looks?): with
+                # `trace_sweeps` a traced replica also has every sweep written, with the connected pieces, baby
+                # universes and 4-cubes after it, and the number of moves accepted in its block of sweeps. A block
+                # with none accepted is a block in which the graph did not change at all. Reading only.
+                sweep_trace = []
+                conn = np.zeros((block, 4), dtype=np.int64) if (traced and cfg.get("trace_sweeps")) else None
                 while sweeps_done < n_sweeps:
-                    s, x, _ = run_chain(adj, side_u, 1.0 / g, 0, block, seed if first else -1,
-                                        lam, NO_CAP, False)
+                    if conn is None:
+                        s, x, acc = run_chain(adj, side_u, 1.0 / g, 0, block, seed if first else -1,
+                                              lam, NO_CAP, False)
+                    else:               # looking after every sweep draws no random numbers: the chain is the same
+                        s, x, acc = run_chain(adj, side_u, 1.0 / g, 0, block, seed if first else -1,
+                                              lam, NO_CAP, False, conn)
                     first = False
                     sweeps_done += block
+                    if conn is not None:
+                        moves = int(round(float(acc) * block * 2 * n))
+                        for i in range(block):
+                            sweep_trace.append([sweeps_done - block + i + 1, int(s[i]), int(x[i])]
+                                               + [int(v) for v in conn[i]] + [moves])
                     phi = float(s[-1]) / n
                     phis.append(phi)
                     if detect or traced:
@@ -220,6 +235,13 @@ def main(path, out_dir="results"):
                     lines = [header] + [",".join(str(v) for v in line) for line in trace]
                     target.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
                     np.savez(final, adj=adj, part=part, lam=lam, g=g, h0=h0 * n)
+                    if sweep_trace:                        # every sweep up to the end of the detection loop
+                        by_sweep = trace_dir / ("N%d_rep%d_sweeps.csv" % (n, rep))
+                        if by_sweep.exists():
+                            raise FileExistsError("results are append-only; %s exists" % by_sweep)
+                        lines = ["sweep,S,X,pieces,largest,baby,cubes,accepted_in_block"]
+                        lines += [",".join(str(v) for v in line) for line in sweep_trace]
+                        by_sweep.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
                 if patch_every:                            # T37; absent from earlier files
                     row["seeds"] = seeds
                     row["seed_sweeps"] = " ".join(seed_sweeps)

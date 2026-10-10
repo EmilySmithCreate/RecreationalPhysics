@@ -4206,3 +4206,13 @@ her after the result was known.** It is no longer inferred.
 The verdict does not change: her prediction fails (no second curl in any of the 4,000 tubes). A confirmation given
 after the reading adds no weight to the test either way; it settles only whose prediction it was. The sentences
 above that call it inferred are left as they were written.
+
+### Exploratory follow-up, 2026-10-10, 12:22 ET by the clock (not part of this registration; ASSUMPTIONS O110)
+
+At the owner's question (could a second curl have come and gone between two looks of five sweeps?) the nine decays
+of stage A were replayed once more with every sweep written. The readings above stand as scored by their
+block-by-block rules. Read by sweeps: no second curl at any sweep in any of the nine; decay 2748 is the tube after
+every sweep from 1 to 4,998; decay 3072 left the tube at sweeps 3,166 to 3,168 and came back, between the looks at
+3,165 and 3,170, so its "4,670 sweeps without a break" holds block by block and not sweep by sweep, and its first
+exit after sweep 200 came 7.1 mean waits in. One long wait is left in the cell, not two. The details, the exact
+census of the tube's free switches and what is not excluded are in O110's addendum of the same hour.

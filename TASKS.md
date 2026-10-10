@@ -551,7 +551,10 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    exit is one memoryless population at 1.07 of the counted rate, with one exit beyond 10 τ where 0.18 are
    expected. Her prediction (inferred) and ours for the three both failed; ours for the cell held.** *Her
    prediction confirmed by her as hers on 10 October, after both readings (PREREGISTRATION T58, "Confirmation").*
-   Still unread: the far tail at λ = 1.05.*
+   *Looked at sweep by sweep the same day at her question (exploratory, O110): no second curl at any sweep;
+   decay 3072 made a three-sweep exit between two looks, so one long wait is left, not two. That sentence was corrected in the two papers and the supplement the same day, at her word. Owed,
+   pre-registered first: the whole cell timed by sweeps, to say whether exits hidden between looks are the 7 % of stage B.* Still unread: the far tail at
+   λ = 1.05.*
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be
