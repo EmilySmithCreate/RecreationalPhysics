@@ -78,8 +78,12 @@ branch; written 07:20 ET by the clock).**
   every five sweeps. What is exact going in: the waiting torus's three classes share one census, so the first exit
   should be exactly memoryless; T22's two first exits near 9.7 mean waits then have a chance of about 1 in 70,000.
   One target was seen before the registration (T22's replica 7 at N = 64, offered three cheapest exits a sweep
-  throughout) and is disclosed there. **Nothing of T59 has been read. The owner's prediction is owed first; when
-  it is in, record it in PREREGISTRATION T59 with the time by the clock, then `python scripts/analyse_t59.py`.**
+  throughout) and is disclosed there. **Her prediction was recorded at 18:17 ET, before any reading: chance, and
+  exits hidden between two looks (both as ours). Nothing of T59 has been read; when every file is in, run
+  `python scripts/analyse_t59.py` and read the four parts in its order.**
+  **VISION Update 53 (18:22 ET):** her clarification that "her bar" of Update 26 meant continued interest, not a
+  lower bar for scoring; a fourth map, if she asks for one, keeps the registered bar, times the waits without
+  the detector, and names a held-out size first.
   New in the kernel folder: `graphity.exits.first_exit_clocks` and `offers_until_exit` (T22's chain, draw for
   draw), and `graphity.results.provenance` (the commit and a dirty flag in a run's meta; TASKS, the reviews of
   6 October, item 5, for new runners only so far).
@@ -160,7 +164,7 @@ branch; written 07:20 ET by the clock).**
     at `main`, which lacks this branch's files until it is merged.
   - *Uncommitted when this was written:* the two papers, the web pages and their scripts, awaiting her review.
     T58 and its record are committed.
-- **Next record numbers:** ASSUMPTIONS **O111**, VISION **Update 52**, PREREGISTRATION **T59**.
+- **Next record numbers:** ASSUMPTIONS **O112**, VISION **Update 54**, PREREGISTRATION **T60**.
 
 ## 0. The first ten minutes (as of 9 October 2026)
 

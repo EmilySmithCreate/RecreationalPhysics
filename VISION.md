@@ -1464,6 +1464,23 @@ currnet evidence. doesnt expand = dark energy, or was it dark matter.... remind 
   October, still says the two identifications are open; this lean sits in piece 6 under her name until she confirms
   or corrects it.
 
+Update 53 (2026-10-10, 18:22 ET by the clock): **the author's clarification of "her bar" (Update 26): it was a
+statement of continued interest, not a lower bar she wants the runs scored by.** Why this page changes: Update 26
+recorded her words on reading T24 as "her bar" and proposed, without enacting it, a fourth run of the λ map
+"pre-registered with a bar written her way"; the programme page has since said her bar is different from ours. Asked
+on 10 October whether she wants that fourth run, she answered: "Hopefully we won't need that low bar, what I meant by
+it was just that I'm still interested in this space even if we couldn't see this stuff happening every time."
+
+- **What stands of Update 26.** Her words there, and their meaning as she now gives it: her theory needs the change
+  to be possible, not to be seen in every instance at every size, and a result short of "every time" would not end
+  her interest in this family.
+- **What is withdrawn.** The proposal that a fourth map be scored by a lower bar (a majority of instances at some
+  size, stragglers not counted against). It was the assistant's wording and was never enacted. A fourth map, if she
+  asks for one, keeps the registered bar of T23 and T24: sharp at every curling cost in the window and at every size
+  run, with a held-out size named first (rule 14).
+- *Ours:* the difference between her claim (existence and fertility) and a mechanism claim (every size) is still
+  worth saying wherever a verdict is quoted; it is a description of what each needs, not a rule for scoring.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
