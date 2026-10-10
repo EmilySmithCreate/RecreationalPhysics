@@ -3020,6 +3020,16 @@ to the owner's hypothesis or a new simulation result.
   - **The rules of T58 that are ours** (rule 1): a second curl is read as S above the tube's, or 8 or more points at
     d = 0 (half a knot), or a closed piece with three squares on every edge; "reads as the tube" is S = 80, X = 64 and
     every point at d = 1, a signature and not a certificate (O108).
+  - **Addendum, the same day, 07:55 ET by the clock: the replay's first stage is read (PREREGISTRATION T58, "Reading,
+    stage A"). No second curl; her prediction and ours both fail.** *Measured, pre-registered; the gate passed (all
+    nine replayed decays return T38's rows unchanged and end on the saved graphs).* In the three long waits, at every
+    block before the detector fired: never more squares than the tube, never a point at d = 0, never a second piece.
+    Decay 553 is the detector again (LOW THRESHOLD: it left inside the watch and came back, which lowered its
+    threshold, and three later exits that fell back went unseen). Decays 2748 and 3072 are TRUE WAITs: each read as
+    the tube at every block for 5,000 and 4,670 sweeps without a break, 11.9 and 11.1 times the mean wait. So what O109 left open
+    resolves into one more detector case and two real long waits with nothing hidden inside them. *Ours, worked out after seeing them:* two
+    stays that long among 4,000 tubes, where about 0.1 is expected, is unlikely by chance (roughly one in two hundred)
+    and is not a mechanism; whether the cell's first exits as a whole follow one memoryless population is stage B.
 
 ## Provenance
 

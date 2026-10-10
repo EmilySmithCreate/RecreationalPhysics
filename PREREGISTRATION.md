@@ -4107,3 +4107,56 @@ Anything beyond one cell at the smallest size. That no slow population exists el
 unread. Why a tube that changes fast can then rest for tens of thousands of sweeps on a defective sheet, which is paper
 2's subject. Anything at λ = 1: at λ ≠ 1 this is our family around the published model, never combinatorial quantum
 gravity.
+
+---
+
+### Reading, stage A, 2026-10-10, 07:55 ET by the clock (ASSUMPTIONS O110; `python scripts/analyse_t58.py`)
+
+Run after the commit that holds this pre-registration (07:50 ET). Stage B, the whole cell, was still running when
+this was written and is read below it.
+
+**Reproduction gate: passed.** All nine traced decays return every column of T38's rows unchanged, the three waits
+(5,080, 5,000 and 4,705 sweeps) among them, and each ends on the graph T38 saved. The histories read here are the
+histories of 25 September.
+
+**Verdict on the three: MIXED. One LOW THRESHOLD, two TRUE WAIT, no SECOND CURL.**
+
+| decay | recorded wait | threshold (φ below) | what it did before its detector fired | label |
+|---|---|---|---|---|
+| 553 | 5,080 | 1.1647 | left the tube inside the watch (sweeps 45 to 110, down to 76 squares) and came all the way back; then the tube, with three brief exits that each fell back (sweep 2,870 for one block; 4,505 for 40 sweeps; 4,895 for 25); left for good at 5,030 | LOW THRESHOLD |
+| 2748 | 5,000 | 1.2500 | read as the tube at every block from sweep 0 to sweep 5,000 | TRUE WAIT |
+| 3072 | 4,705 | 1.2296 | one exit of two blocks inside the watch (sweeps 25 to 30) and back; then read as the tube at every block to sweep 4,705 | TRUE WAIT |
+
+In none of the three, at any block before the detector fired, did the square count exceed the tube's 80, did any point
+read d = 0, or did the network come apart into more than one piece. The most energy any of them held above the tube
+was 17.6 units (decay 553, on its deepest unseen exit, which had lost five squares).
+
+**The owner's prediction (SECOND CURL; inferred from her "maybe" until she confirms or replaces it): fails.** Nothing
+was curled a second time and nothing was stored. **Ours (LOW THRESHOLD for all three, each first leaving the tube
+before sweep 2,295): fails for two of three**, and its second half fails for the third as well (decay 553 first left
+the tube after the watch at sweep 2,870). Two of the three long waits were real: a tube that sat, reading as the tube
+at every block, for 5,000 and 4,670 sweeps without a break, 11.9 and 11.1 times the count's mean wait of 419.
+
+Of the six controls, five waited as the tube from sweep 200 to their first exit, which their detectors caught at once
+(waits 290 to 920); the sixth (2747) had left the tube inside the watch and was detected at 235.
+
+**Rule 11, the four answers, for both failed predictions.**
+1. *Does the result falsify the mechanism as stated?* Hers, for these three runs: yes. The replay is the same three
+   histories with nothing hidden, and there is no second curl in them. Ours, for two of the three: yes. Their
+   thresholds sat at or near the bare tube's and they made no exit the detector missed.
+2. *Implementation, parameters, finite size, or the mechanism itself?* Hers: the mechanism, in this toy at this
+   setting. Above λ = 1 a knot is not a resting place (exact, O110), so energy cannot be parked in one; below λ = 1 it
+   can, which is the wrong-way-round regime of VISION Update 7. Ours: none of the four. The two waits are not an
+   artifact; they are long waits.
+3. *The exact or cheaper test that tells those apart:* this replay was it for the three. For "long by chance, or a
+   slow tail": P1 and P2 on the whole cell (stage B).
+4. *What would make us abandon the branch:* hers, in the two-dimensional toy above λ = 1, is set down on this
+   evidence, and stage B's P3 says whether any of the 4,000 tubes ever did it; it says nothing about three directions
+   under her tie, which T57 tests. Ours: three or more first exits later than 10 τ in the cell (P2), and O109's
+   reading that the first exit is one memoryless population is abandoned.
+
+**Previous claim → failed because → replacement → new falsification test.** The three long waits are the detector's
+doing (ours) or a second curl holding the energy (the owner's) → the replay shows one detector case and two tubes that
+simply sat, with no second curl in any → two of the three are plain long waits of the perfect tube, eleven to twelve
+times the mean, where one memoryless population expects about 0.1 stays that long among 4,000 tubes (a figure worked
+out after seeing them) → P2 on the whole cell.
