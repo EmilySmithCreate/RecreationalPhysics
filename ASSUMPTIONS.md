@@ -2985,6 +2985,42 @@ to the owner's hypothesis or a new simulation result.
     corrected manuscript) was not read here beyond noting that its longest T24 waits all have `f_200` = 0. That the
     defective sheets these tubes rest on are understood: they are the resting states of O13 and paper 2's subject.
 
+- **O110 The owner's idea for the three long waits: a second curl. What the saved data and three exact facts say, and
+  the replay that tests it (PREREGISTRATION T58).** (2026-10-10, 07:47 ET by the clock. The readings of saved data
+  are **EXPLORATORY and post hoc**; the exact statements are arithmetic on the model's energy, *ours*; nothing here is
+  a verdict.)
+  - **Her idea, in her words** (10 October, on the three waits O109 left unexplained): "maybe they curled another
+    direction instead of flattening. like have a big shake and all the energy and then it's stored in a new curl which
+    would need way more activation energy than we have in our closed system". *Kind of statement: the owner's
+    hypothesis about the toy's runs.*
+  - **What it is in the model** (*ours*). The tube has one direction curled. Curling the other one too turns a stretch
+    of it into a knot, the 4-cube: sixteen points, each with both of its directions closing squares (d = 0). The
+    detector that timed these runs watches only for squares being **lost**, and a second curl **gains** squares, so
+    a tube that did this would sit unseen for as long as it stayed there. The idea names something the instrument
+    was blind to, which is why it could not be answered from the recorded waits.
+  - **Exact** (*ours; arithmetic on H = 16(N − S) + 4λX, and the move census `docs/figures/ladder_kinds.json`*).
+    (a) No single switch from the perfect tube adds a square: its seven kinds of move lose 2 to 6. So a second curl
+    is at least two moves away, through a state that has lost squares. (b) Sixteen points of the tube carry 20
+    squares and 16 surplus squares; as a 4-cube they carry 24 and 32. Pinching a knot off the tube therefore costs
+    −64 + 64λ = 64(λ − 1): 16 units at λ = 1.25 and 19.2 at 1.30, against 12 and 11.2 for the cheapest exit. The
+    energy is affordable at g = 1.5; the wall on the way to it has not been priced. (c) A 4-cube's own cheapest move
+    changes its energy by 32 − 32λ, which is negative above λ = 1: a knot is not stuck there and gives way at the
+    first offer. A second curl would hold energy, as she says, and would not hold it for long by this route.
+  - **Read from saved data** (`results/t38_*`, `results/t24_*`; scratch reading, 10 October). No decay at λ = 1.25 or
+    1.30 was above the tube's square count when the watch ended. In the snapshots taken at a quarter, half and
+    three-quarters of the change, points at d = 0 appear in at most ten of 4,000 snapshots per cell and are never
+    more than two points. The three unexplained waits' snapshots have none. The final graphs of the tubes that changed
+    inside the watch and then rested have none either: of 197 such tubes at N = 64, 183 ended as the perfect sheet,
+    and T24's two extreme waits ended with 16 and 12 points still at d = 1, the tube's own signature, and none at
+    d = 0. By signature that is some of the **first** curl left unopened, not a new curl; their positions were not
+    read, so no shape is named.
+  - **What that does and does not settle.** For the tubes that rested after changing, the stored energy sits in points
+    that still read as the original curl. For the three unexplained waits the saved data cannot say, because every saved
+    reading was taken once the tube was already changing; the wait itself was never recorded. The replay records it.
+  - **The rules of T58 that are ours** (rule 1): a second curl is read as S above the tube's, or 8 or more points at
+    d = 0 (half a knot), or a closed piece with three squares on every edge; "reads as the tube" is S = 80, X = 64 and
+    every point at d = 1, a signature and not a certificate (O108).
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

@@ -40,3 +40,39 @@ def test_saving_waiting_tubes_does_not_change_the_chain(tmp_path):
         w = int(rb["waiting"]) if rb["waiting"] else 10 ** 9
         for s in (300, 600):
             assert (("N96_rep%s_sweep%d.npz" % (rb["replica"], s)) in saved) == (w > s)
+
+
+def test_recording_the_detector_does_not_change_the_chain(tmp_path):
+    """T58: the detector's threshold, what it cannot see and a block-by-block trace are read off the chain. The
+    chain is the chain without them, and the recorded numbers are the ones the detector used."""
+    import numpy as np
+
+    a = _run(tmp_path, "plain3", {"record_f_200": True})
+    b = _run(tmp_path, "watched", {"record_f_200": True, "record_detector": True, "trace_replicas": [0, 1]})
+    n, s_tube = 96, 120
+    for ra, rb in zip(a, b):
+        for key in ra:                                    # every column the plain run writes
+            assert ra[key] == rb[key]
+        trace = list(csv.DictReader(open(tmp_path / "watched_trace" / ("N96_rep%s.csv" % rb["replica"]), newline="")))
+        assert [int(t["sweep"]) for t in trace] == list(range(5, 5 * len(trace) + 1, 5))
+        phis = [int(t["S"]) / n for t in trace]
+        rest = np.array(phis[:40])
+        thresh = 1.25 - 3.0 * max(rest.std(), 1e-6) - 1e-9
+        assert float(rb["thresh"]) == thresh and float(rb["rest_sd"]) == float(rest.std())
+        fired = [int(t["sweep"]) for t, phi in zip(trace, phis) if int(t["sweep"]) > 200 and phi < thresh]
+        assert rb["waiting"] == (str(fired[0]) if fired else "")
+        assert float(rb["phi_max"]) == max([1.25] + phis)
+        assert int(rb["d0_max"]) == max(int(t["d0"]) for t in trace)
+        tube = [int(t["S"]) == s_tube and int(t["X"]) == n and int(t["d1"]) == n for t in trace]
+        assert all(sum(int(t["d%d" % k]) for k in range(7)) == n for t in trace)
+        assert rb["tube_at_200"] == str(int(tube[39]))
+        left = [int(t["sweep"]) for t, ok in zip(trace, tube) if not ok]
+        assert rb["first_left"] == (str(left[0]) if left else "")
+        after = [s for s in left if s > 200]
+        assert rb["first_left_after_200"] == (str(after[0]) if after else "")
+        stop = fired[0] if fired else 10 ** 9
+        unseen = [i for i, t in enumerate(trace) if 200 < int(t["sweep"]) < stop and not tube[i]]
+        assert int(rb["off_blocks"]) == len(unseen)
+        assert int(rb["exits_unseen"]) == sum(1 for i in unseen if tube[i - 1])
+        final = np.load(tmp_path / "watched_trace" / ("N96_rep%s_final.npz" % rb["replica"]))["adj"]
+        assert final.shape == (n, 4)

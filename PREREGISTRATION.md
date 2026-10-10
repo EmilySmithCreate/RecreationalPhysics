@@ -3976,3 +3976,134 @@ Named (the table tie runs with named points only). T42's interchangeable result 
 
 That a black hole does this: the toy has no pull, so nothing in it gathers energy; the energy is placed by hand. Anything
 about gravity. Which direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
+
+## T58. What were the three long waits doing? T38's cell at λ = 1.30, N = 64 replayed from its seeds, with the detector's threshold and what it cannot see recorded (paper 1; piece 2; the owner's idea of 10 October; ASSUMPTIONS O108, O109, O110; written 2026-10-10, 07:47 ET by the clock, before any run)
+
+### Why
+
+O109 read the saved rows of T38 and T24 and found that almost all of paper 1's long waits and missed detections were
+tubes that had changed inside the detector's 200-sweep watch. Three waits were left. At λ = 1.30, N = 64, decays 553,
+2748 and 3072 read as the tube at sweep 200 and were detected at 5,080, 5,000 and 4,705 sweeps, where one memoryless
+population expects 0.13 such waits in the cell. O109 named the test and said it must be pre-registered: replay those
+decays from their seeds and record what the runner did not, the threshold and every exit and return (the
+"attempt-resolved history test" of O108). On 10 October the owner proposed what the three were doing (her words are
+under Predictions). The chain is fixed by its seed, so a replay is the same three histories watched with nothing hidden.
+
+**Disclosed: what had been read before this was written.**
+- The saved rows (O109). Decay 553 passed its quarter mark at sweep 4,505, which is 575 sweeps before its detector
+  fired; so its threshold was already known to have been lowered by something inside the watch. Decay 2748 was
+  detected in the block in which it passed the quarter mark, and 3072 one block before. For one target of three,
+  then, our prediction below was partly known in advance.
+- For the owner's idea, from saved data (O110): no decay of T38 or T24 at λ = 1.25 or 1.30 was above the tube's square
+  count at sweep 200; points with both directions curled (d = 0) in the quarter, half and three-quarter snapshots are
+  in at most ten of 4,000 snapshots per cell and never more than two points; the three targets' snapshots have none; the final
+  graphs of the tubes that rested have none. Every one of these is a reading at or after the moment the tube was
+  already changing. None of them sees the wait itself.
+- Exact (O110): no single switch from the perfect tube adds a square; a 4-cube is not stuck above λ = 1; sixteen
+  points of the tube pinched off as a 4-cube would cost 64(λ − 1), which is 19.2 here.
+- The graphs T38 saved of tubes still waiting at 5,000 sweeps (decay 553 among them) were never fetched from the cloud
+  and are not in the repository (O84: "not yet read").
+- Nothing of the replay had been run. The kernel was timed on an unrelated seed (12345) to size the run: about 22
+  seconds per 100,000 sweeps in blocks of 5.
+
+### What will be run
+
+`scripts/run_tube_decay.py`, T38's runner, with two additions that read the chain and draw no random numbers
+(`record_detector`, `trace_replicas`; tested to leave every column of a run unchanged,
+`tests/test_tube_decay_seeds.py`). Seventeen configs from `scripts/make_t58_configs.py`, each with T38's seed
+(20263930), sides (16 × 4), coupling (g = 1.5), λ = 1.30, block (5 sweeps) and caps, so every decay draws the random
+stream it drew the first time. On the laptop.
+
+- **Stage A, `t58_targets_lam130_n64`** (seconds): the three targets and, as controls fixed now, the two decays
+  before each (551, 552, 2746, 2747, 3070, 3071). Each is written block by block: the squares S, the surplus squares
+  X, the number of points at each d, the number of connected pieces, the largest piece, the points in closed pieces
+  with three squares on every edge, and the 4-cubes; and its final graph is saved.
+- **Stage B, `t58_lam130_n64_00` to `_15`** (about half an hour on sixteen cores): all 4,000 decays of the cell. Each
+  row gains the detector's threshold and the resting spread it came from; whether the decay read as the tube at sweep
+  200; the first block at which it no longer read as the tube (from sweep 0, and again from sweep 200); the exits the
+  detector did not see and the blocks spent away from the tube unseen; the highest square count reached; and the most
+  points at d = 0.
+
+The stages are read apart, A first.
+
+### Definitions, fixed now (`scripts/analyse_t58.py`, tested in `tests/test_t58.py` before any run)
+
+**Reproduction gate (rule 2), once per stage.** Every column the original row has must come back unchanged for every
+replayed decay, and each traced decay must end on the graph the original saved. "Unchanged" is as written; two numbers
+may differ by one part in 10⁹, because the original ran on Batch (Linux) and the replay runs on the laptop (Windows),
+and an average of floating-point numbers can differ in its last digit between machines, while a count cannot differ at
+all. If the gate fails, that stage is not read and the failure is the result.
+
+**Reads as the tube:** S = 80, X = 64, and every point at d = 1. This is a signature and not a certificate (O108): a
+tube with a twist along its length would read the same.
+
+**Per target,** over the blocks before its detector fired:
+- **SECOND CURL** if at any block the square count is above the tube's (S > 80), or at least 8 points read d = 0 (half
+  a 4-cube), or a closed piece with three squares on every edge exists.
+- otherwise **LOW THRESHOLD** if, after sweep 200, the tube lost squares in some block without the detector firing.
+- otherwise **TRUE WAIT** if it read as the tube in at least 95 % of the blocks after sweep 200.
+- otherwise **OTHER STATE**.
+
+**Verdict on the three:** SECOND CURL if at least two targets are SECOND CURL; LOW THRESHOLD if all three are;
+TRUE WAIT if all three are; otherwise MIXED, reported target by target. Reported with each label, not scored: the
+threshold, the first block away from the tube after sweep 200, the unseen exits, the blocks away from the tube, the
+most squares, the most points at d = 0, the most separate pieces, and the most energy held above the tube.
+
+**The cell (stage B),** with τ = 419.0 sweeps, the count's mean wait for a first exit at λ = 1.30, g = 1.5 (paper 1,
+Eq. (2)). The first exit is timed with no detector: the first block at which a decay no longer reads as the tube,
+from sweep 0, over all 4,000 decays.
+- **P1.** Its mean, divided by τ.
+- **P2.** The number of decays whose first exit comes later than 10 τ (one memoryless population expects 0.18).
+- **P3.** The number of decays whose square count ever exceeds the tube's, and the number that ever show 8 or more
+  points at d = 0, at any block before the change is complete.
+
+Described, not scored: the same timing from sweep 200 over the decays that read as the tube then; and the recorded
+waits of the decays whose threshold sat at or below a single exit (φ ≤ 1.25 − 2/64) beside the rest.
+
+No claim about size is made (one size, the smallest), so there is no held-out size (rule 14). Nothing here says that
+something has not been found in the literature (rule 15). Not a milestone (rule 12).
+
+### Predictions
+
+**The owner's (her words of 10 October, received between 07:21 and 07:34 ET by the clock, recorded before any run):**
+"maybe they curled another direction instead of flattening. like have a big shake and all the energy and then it's
+stored in a new curl which would need way more activation energy than we have in our closed system". Read as:
+**SECOND CURL.** During their long waits the three tubes had curled a second direction somewhere, the energy of the
+shake sat in that new curl, and the way out of it is a wall the system rarely pays. She wrote "maybe"; it is recorded
+as her prediction for this run until she confirms or replaces it (inferred from her message, as T25 to T27's were).
+*Ours, noted beside it:* these decays ran in a bath at fixed warmth, not sealed, so here a wall out of a new curl
+would be paid by a rare kick from the bath rather than from a closed budget; that changes the wording, not the test.
+
+**Ours, unverified: LOW THRESHOLD for all three**, each first leaving the tube before sweep 2,295 (200 + 5 τ). Each of
+the three made an excursion inside its own watch and came all the way back, which widened its threshold, so the
+detector slept through its later exits and fired only on a deeper drop; no target shows a second curl. **P1: between
+0.95 and 1.10. P2: at most 1. P3: none and none.** Why: O109's reading of every other long wait; the saved row of
+decay 553; no single switch from the tube adds a square; a 4-cube is not stuck above λ = 1, so a second curl would
+not hold; and T22 found first exits on time at every λ it ran.
+
+### What each outcome would mean
+
+- **SECOND CURL.** The tube can gain a curl on the way, and that state hides from a detector that only watches for
+  squares being lost. Her idea holds in the toy; paper 1's ladder gains a side step above the tube; next would be the
+  price of the wall into and out of it, and whether it appears at other sizes and λ.
+- **LOW THRESHOLD, with P1 and P2 holding.** The three long waits are the detector's too, and paper 1's sentence that
+  three remain unexplained is replaced. The first exit is one memoryless population at the counted rate.
+- **TRUE WAIT.** Three real waits beyond ten τ where 0.13 are expected. They stay unexplained, and P2 says whether the
+  cell as a whole has a slow tail. Three or more first exits later than 10 τ in the cell, and O109's reading is
+  abandoned (its own fourth answer).
+- **OTHER STATE.** Something rests out of the detector's sight without a second curl. It is described from the trace
+  and named only after its positions have been read.
+- **P1 outside its range** with the gate passed: the count of Eq. (2) is off at this λ by more than the block
+  resolution explains, which is a result about paper 1's central number and is reported as prominently as any other.
+
+### Named or interchangeable points
+
+Named, as the original; a replay has to be. With interchangeable points a symmetric arrangement weighs more (a 4-cube
+has 192 renamings of its own), which would favor a knot if one formed. Not run.
+
+### What this cannot show
+
+Anything beyond one cell at the smallest size. That no slow population exists elsewhere: the far tail at λ = 1.05 is
+unread. Why a tube that changes fast can then rest for tens of thousands of sweeps on a defective sheet, which is paper
+2's subject. Anything at λ = 1: at λ ≠ 1 this is our family around the published model, never combinatorial quantum
+gravity.

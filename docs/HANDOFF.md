@@ -53,7 +53,11 @@ branch; written 07:20 ET by the clock).**
   a paper on converting the model's units is added to the series (the edition says "a later paper").
 - **The main checkout** was left on the stale `claude/read-t51-t53-2026-10-09` with uncommitted duplicates of this
   branch's work (ASSUMPTIONS, TASKS, REFERENCES and the new files); this branch is the source of truth for them.
-- **Next record numbers:** ASSUMPTIONS **O110**, VISION **Update 52**, PREREGISTRATION **T58**.
+- **T58, pre-registered 10 October, 07:47 ET, and run on the laptop** (`scripts/make_t58_configs.py`,
+  `scripts/analyse_t58.py`): the replay owed above, with the owner's idea of that morning as her prediction (the
+  three tubes curled a second direction and the energy sat in the new curl; ASSUMPTIONS O110) and ours (their own
+  detectors' thresholds). Her "maybe" is recorded as her prediction until she confirms or replaces it.
+- **Next record numbers:** ASSUMPTIONS **O111**, VISION **Update 52**, PREREGISTRATION **T59**.
 
 ## 0. The first ten minutes (as of 9 October 2026)
 
