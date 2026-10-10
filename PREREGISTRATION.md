@@ -4160,3 +4160,37 @@ doing (ours) or a second curl holding the energy (the owner's) → the replay sh
 simply sat, with no second curl in any → two of the three are plain long waits of the perfect tube, eleven to twelve
 times the mean, where one memoryless population expects about 0.1 stays that long among 4,000 tubes (a figure worked
 out after seeing them) → P2 on the whole cell.
+
+### Reading, stage B, 2026-10-10, 09:06 ET by the clock (ASSUMPTIONS O110; `python scripts/analyse_t58.py`)
+
+**Reproduction gate: passed.** All 4,000 replayed decays return every column of T38's rows unchanged. (The
+original ran on Batch; the replay ran on the laptop, sixteen processes, about seventy minutes.)
+
+**P1 holds.** Timed with no detector, from sweep 0 over all 4,000 decays, the first exit has mean 448.8 sweeps:
+1.071 ± 0.017 of the count's 419.0 (predicted 0.95 to 1.10). **P2 holds.** One first exit comes later than 10 τ
+(decay 2748, at sweep 5,000), where one memoryless population expects 0.18 (predicted at most 1). **P3 holds.** No
+decay's square count ever exceeded the tube's, and none ever showed 8 points at d = 0. Points at d = 0 appeared in
+137 decays, never more than four at a time and in 119 of them a single point.
+
+Described, not scored. Timed from sweep 200 over the 2,903 decays that read as the tube then, the mean is 438.9
+sweeps (1.047 ± 0.020 of the count), and two are later than 10 τ, decays 2748 and 3072, where 0.13 are expected.
+Measured against their own mean, the 4,000 first exits beyond 4, 6, 8 and 10 means number 67, 11, 3 and 1, where one
+exponential expects 73, 9.9, 1.3 and 0.18; the mean (448.8) and the median over ln 2 (447.2) agree. Of the 2,903, the
+detector's threshold sat at or below a single exit in 116, and 90 of those made at least one exit their detector did
+not see; their mean recorded wait is 553 sweeps, against 439 for the other 2,787.
+
+**What it says.** Timed without the detector, the first exit in this cell is one memoryless population at 1.07 of
+the counted rate, with no slow tail by the pre-registered count. O109's reading stands by its own fourth answer:
+three or more first exits later than 10 τ would have ended it, and there is one. The owner's second curl did not
+occur in any of the 4,000 tubes. Of the three long waits, one was the detector and two were real waits of the
+perfect tube. By P2 the cell holds one first exit beyond 10 τ, which chance allows about one time in six; that two
+tubes stayed so long after sweep 200 is rarer (one or two times in a hundred, worked out after seeing them) and has
+no mechanism attached to it.
+
+*Ours, unverified:* the mean sits 7 % above the count, four standard errors from 1. The count leaves out dearer
+exits, and those would shorten the wait, so they are not the cause. A five-sweep block cannot see an exit that
+returns inside the block, which lengthens the measured first exit; whether that accounts for 7 % has not been
+computed. T22, which counted attempt by attempt, found first exits on time.
+
+**T58 in one line:** gates passed; stage A MIXED (one LOW THRESHOLD, two TRUE WAIT, no SECOND CURL); stage B's P1,
+P2 and P3 hold.

@@ -57,6 +57,32 @@ branch; written 07:20 ET by the clock).**
   `scripts/analyse_t58.py`): the replay owed above, with the owner's idea of that morning as her prediction (the
   three tubes curled a second direction and the energy sat in the new curl; ASSUMPTIONS O110) and ours (their own
   detectors' thresholds). Her "maybe" is recorded as her prediction until she confirms or replaces it.
+  **Read the same day:** gates passed; no second curl in any of 4,000 tubes; of the three waits one was the
+  detector and two were real waits of the perfect tube (11 to 12 times the mean); with no detector the first exit
+  is one memoryless population at 1.07 of the counted rate. Her follow-up (does a knot turn back into tube; why
+  not a closed system) is answered exactly in O110: a knot above λ = 1 runs downhill to tube-like points, so no
+  box can hold it (`scripts/exact_knot_descent.py`).
+- **Later the same morning (written 09:20 ET by the clock), all at the owner's instruction.**
+  - *The technical manuscript, plain-wording pass:* simpler statements carrying the plain edition's ideas (the
+    energy as a price list, the push, the opened door that is not a departure, enough room or not, the scrap), at
+    the same length (10 pages, the text ending where it did). Two small tables became sentences; the per-cell
+    numbers of the detector reading and the illustrative rarity bounds moved to the supplement; the Introduction's
+    roadmap sentence went. The abstract lost the detector sentences at her instruction; "All three registered
+    conversion maps remain inconclusive" was kept (rule 7) and she may still cut it. A fresh read-only agent was
+    asked to compare the text before and after for any changed claim.
+  - *Source numbers:* a number now means the same source in both editions. The plain edition's sources 1 to 8 are
+    the technical paper's reference list, 9 to 12 its own. `REFERENCES.bib` gained T17 and Creutz83, both marked
+    not read, titles to verify.
+  - *The two editions as web pages:* `docs/public/ownedmediaphysics/` (`index.html`, `technical/index.html`,
+    `assets/`), generated from the LaTeX by `scripts/build_owned_media_pages.py` with `owned_media_latex.py`
+    (converter), `owned_media_site.py` (the frame: a 1990s home page in Side Nerd's colors, a few labelled joke
+    advertisements for Side Nerd, quick answers, glossary, JSON-LD, UTM links) and `make_owned_media_assets.py`
+    (the cow GIF she supplied, cropped; the share image). Chapters and sections link to each other across the two
+    pages. She ports the folder to `sites/sidenerdapps/ownedmediaphysics/` of the SideNerdMarketing repository
+    herself; `docs/public/ownedmediaphysics_PORTING.md` has the steps and the cautions (root-absolute links; no
+    analytics on that site yet, so the UTMs record nothing; do not deploy from a stale checkout).
+  - *Uncommitted when this was written:* the two papers, the web pages and their scripts, awaiting her review.
+    T58 and its record are committed.
 - **Next record numbers:** ASSUMPTIONS **O111**, VISION **Update 52**, PREREGISTRATION **T59**.
 
 ## 0. The first ten minutes (as of 9 October 2026)

@@ -546,7 +546,11 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    reading since 10 October.* *The replay is PREREGISTRATION **T58** (10 October, 07:47 ET), with the owner's idea of
    that morning as her prediction (a second curl holding the energy; O110) and ours (the detector's threshold): the
    three waits and six neighbours written block by block, then the whole cell of 4,000 with the detector's numbers.
-   To read: `python scripts/analyse_t58.py`.*
+   **Read the same day (`python scripts/analyse_t58.py`): gates passed; no second curl in any tube; one of the
+   three waits was the detector and two were real waits of the perfect tube; timed with no detector the first
+   exit is one memoryless population at 1.07 of the counted rate, with one exit beyond 10 τ where 0.18 are
+   expected. Her prediction (inferred) and ours for the three both failed; ours for the cell held.** Still
+   unread: the far tail at λ = 1.05.*
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be

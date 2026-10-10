@@ -3030,6 +3030,42 @@ to the owner's hypothesis or a new simulation result.
     resolves into one more detector case and two real long waits with nothing hidden inside them. *Ours, worked out after seeing them:* two
     stays that long among 4,000 tubes, where about 0.1 is expected, is unlikely by chance (roughly one in two hundred)
     and is not a mechanism; whether the cell's first exits as a whole follow one memoryless population is stage B.
+  - **Addendum, the same day, 09:06 ET by the clock: the whole cell is read (PREREGISTRATION T58, "Reading,
+    stage B"). No second curl in any of 4,000 tubes; the first exit is one memoryless population.** *Measured,
+    pre-registered; the gate passed (all 4,000 replayed decays return T38's rows unchanged).* Timed with no
+    detector, the first exit has mean 448.8 sweeps, 1.071 ± 0.017 of the count (P1 holds); one first exit is later
+    than 10 τ where 0.18 are expected (P2 holds); and no tube ever had more squares than the tube or eight points at
+    d = 0 (P3 holds; 137 tubes showed one to four such points in passing). So O109's reading stands by its own
+    fourth answer, and the owner's idea is set down for the two-dimensional tube above λ = 1 on a complete count:
+    it did not happen once. What is left of the three waits is two real waits of the perfect tube, eleven to twelve
+    times the mean, with nothing hidden inside them and no mechanism attached. *Ours, unverified:* the 7 % excess
+    of the mean over the count is in the direction a five-sweep block gives (an exit that returns inside the block
+    is not seen); its size has not been computed.
+  - **Her follow-up, and the exact answer** (10 October, on reading stage A; her words): "λ = 1 a knot is not
+    stuck -> this is actually interesting would that mean it turns right back into a tube, or that it would need
+    to go through tube phase and couldnt accept the additional energy for the additional curl in one tube?" and
+    "why not use closed system then?" *(The sentence she quotes was about λ above 1; at exactly λ = 1 the three
+    rungs tie.)* **Exact, ours** (`scripts/exact_knot_descent.py`, tested in `tests/test_exact_knot_descent.py`;
+    no chain is run):
+    - *Beside a tube.* A 12 × 4 tube with a knot beside it (64 points; S = 84, X = 80) sits 64(λ − 1) above the
+      16 × 4 tube. All 48 switches inside the knot have ΔS = −2, ΔX = −8 and cost 32 − 32λ, which is −9.6 at
+      λ = 1.30: downhill. Joining the two pieces again costs at least 80 − 56λ (7.2 at 1.30). The tube part keeps
+      paper 1's two exits at their prices.
+    - *Alone.* Following every switch that lowers the energy, a lone knot runs through (S, X) = (24, 32),
+      (22, 24), (21, 20) and (20, 16), with 16, 8, 4 and 0 points at d = 0 and energies 38.4, 28.8, 24.0 and 19.2
+      at λ = 1.30. At the bottom every point reads d = 1 and no downhill switch is left (3,456 labelled states
+      reached, all of them resting). 19.2 is what sixteen points of plain tube cost: the whole price of the second
+      curl has been given back. The bottom state's wiring was not read, so its shape is not named.
+    - *So, her first reading:* the knot turns back into tube-like points by itself. It does not rejoin the long
+      tube by itself (that costs). *Not her second:* taking the energy in is not the obstacle (19.2 units, against
+      11.2 for an ordinary exit that the bath pays every few hundred sweeps); keeping it is.
+    - *A closed system.* A downhill switch takes nothing from a store, so sealing cannot hold a knot above λ = 1.
+      This follows from the census above and has not been run. A sealed box holds a state only when every way out
+      is uphill and nothing is left to pay with: the tube with an empty store (Q12), and the relic in a cold box.
+      *Ours, unverified:* her mechanism, energy held in a curl behind a wall the closed system cannot pay, is the
+      relic's, with a stretch of the first curl in place of a new one. A new curl with a wall of its own is a
+      three-direction matter (the more-curled states there are stuck above λ = 1: O41, O49), and T57 is the sealed
+      test of it under her tie.
 
 ## Provenance
 
