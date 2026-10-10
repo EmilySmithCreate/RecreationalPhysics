@@ -1,0 +1,222 @@
+\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{An entropy action across wirings: Bianconi's discrete entropic action evaluated on networks that rewire}
+
+\author{Emily Smith}
+\email{emilysmithcreate@gmail.com}
+\affiliation{Independent researcher, Charlottesville, Virginia, USA}
+
+\date{DRAFT, 10 October 2026. Series paper 10. Not reviewed by a physicist.}
+
+\begin{abstract}
+Bianconi's information-theoretic action for network geometry is defined on a cell complex with fixed wiring, and
+its author names the dynamics of the wiring as open. We evaluate that action, unchanged, on networks whose wiring
+does change: four-regular bipartite graphs from a family of square-counting energies next to combinatorial quantum
+gravity, with every square taken as a 2-cell. (i) The construction passes the identities the source states.
+(ii) In the action's vacuum the metric is the same on every cell, so the action is one number per cell and, across
+wirings with the same number of nodes, a function of the number of squares alone; it orders wirings exactly as the
+square-counting energy without its local term does. (iii) With the topology-dependent induced metric
+$\mathbf{I}+c_0\boldsymbol{\mathcal{L}}$, evaluated at the identity metric, the action on 445 saved wirings of 64
+nodes falls with every square and rises with every surplus square, as that energy does, with an effective local
+coefficient $\lambda_{\rm eff}=0.001$ to 0.55 for $c_0=0.01$ to 100. That is below 1, the range in which curled
+arrangements lie lower than the flat torus. The metric that solves the action's own equation for $c_0>0$ is not
+computed, and whether a comparison across wirings is the intended one is put as a question to its author. Nothing
+here is a statement about gravity.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Ref.~\cite{Bia24} proposes an action for a network geometry coupled to matter and gauge fields: the quantum
+relative entropy between a metric on the cells of a complex and the metric that matter induces on them. It is the
+discrete form of ``gravity from entropy'' \cite{Bia25}. The complex is held fixed. The action ``depend[s] also on the
+topology of the higher-order networks,'' and the paper leaves ``the possible implied dynamics of the network topology
+to future works'' (its Sec.~3.1; its conclusions end on the same point).
+
+The companion paper \cite{paper1} studies networks that do rewire, under an energy that counts squares. Its
+arrangements can be handed to the action of Ref.~\cite{Bia24} as they are. We ask one narrow question: read in the
+most direct way, what does that action say about arrangements with the same nodes and different wiring?
+
+Three kinds of statement appear and are kept apart. \emph{Sourced}: taken from Ref.~\cite{Bia24}, with its equation
+numbers. \emph{Exact}: linear algebra on named graphs, reproducible from the repository. \emph{Ours}: a reading or a
+fit, unreviewed. The reading of the action across wirings is ours throughout.
+
+\section{Setting}
+
+\emph{The networks.} Four-regular bipartite graphs on $N$ vertices in which no two vertices share more than two
+neighbors. With $S$ the number of 4-cycles (squares), $S_e$ the squares on link $e$ and $X=\sum_e(S_e-2)_+$ the
+surplus squares, the energy is
+\begin{equation}
+H = 16(N-S) + 4\lambda X .
+\label{eq:H}
+\end{equation}
+Only $\lambda=1$ is combinatorial quantum gravity (CQG) \cite{KTB19,T25}; other values are a family next to it. Three
+arrangements of the same vertices are the rungs of a ladder \cite{paper1}: the flat torus ($S=N$, $X=0$), the curled
+torus, four steps around in one direction ($S=5N/4$, $X=N$), and the 4-cube, curled both ways ($S=3N/2$, $X=2N$). At
+$\lambda=1$ the three are degenerate; below 1 the curled ones lie lower; above 1 the flat torus is lowest.
+
+\emph{The complex (ours).} Vertices, the $2N$ links, and every square as a 2-cell: $\mathcal{N}=3N+S$ cells. The
+square count used here agrees with the simulation kernel's and with $(\mathrm{Tr}A^4-28N)/8$.
+
+\emph{The action (sourced).} With boundary matrices $\mathbf{B}_{[1]},\mathbf{B}_{[2]}$ and a block-diagonal metric
+$\boldsymbol{\mathcal{G}}$ on the cells, Ref.~\cite{Bia24} defines the weighted exterior derivative
+$\mathbf{d}=\boldsymbol{\mathcal{G}}^{-1/2}\mathbf{B}^{\dagger}\boldsymbol{\mathcal{G}}^{1/2}$, the Dirac operator
+$\mathbf{D}=\mathbf{d}+\mathbf{d}^{\dagger}$ (its Eq.~31), whose square is the Gauss--Bonnet Laplacian
+$\boldsymbol{\mathcal{L}}=\mathbf{L}_{[0]}\oplus\mathbf{L}_{[1]}\oplus\mathbf{L}_{[2]}$ (Eqs.~35--40), and
+\begin{equation}
+\mathcal{S}_{+}=\sigma\,\mathrm{Tr}\ln\boldsymbol{\mathcal{G}}
++\mathrm{Tr}\,\boldsymbol{\mathcal{G}}\bigl(\ln\boldsymbol{\mathcal{G}}-\ln\mathbf{G}\bigr)
+-\mathrm{Tr}\,\boldsymbol{\mathcal{G}}
+\label{eq:S}
+\end{equation}
+(Eq.~41), with $\mathbf{G}$ the induced metric. With no matter and no gauge field,
+$\mathbf{G}=\mathbf{I}+c_0\boldsymbol{\mathcal{L}}$ (Eq.~52), which the source notes is ``also dependent on the
+topology.'' Its vacuum is $\mathbf{G}=\mathbf{I}$, where the metric obeys
+$-\boldsymbol{\mathcal{G}}\ln\boldsymbol{\mathcal{G}}=\sigma\mathbf{I}$ (Eq.~65).
+
+\section{The construction, checked}
+
+Ref.~\cite{Bia24} reports no number to reproduce, so what is replicated is the construction. On every graph used
+here (exact): $\mathbf{B}_{[1]}\mathbf{B}_{[2]}=0$; at the identity metric $\mathbf{D}^2$ equals
+$\boldsymbol{\mathcal{L}}$ block by block; $\mathbf{D}$ anticommutes with $\gamma_0$ ($+1$ on vertices and squares,
+$-1$ on links; Eq.~34); and the numbers of zero modes of $\mathbf{L}_{[0]},\mathbf{L}_{[1]},\mathbf{L}_{[2]}$ are
+those of the complex: $(1,2,1)$ for the flat torus. For the curled torus they are $(1,1,N/4)$: each ring of four is
+itself a square, a filled disk, so one independent loop survives and neighboring disks enclose $N/4$ cavities. A
+4-cube gives $(1,0,7)$.
+
+\section{The vacuum counts cells}
+
+\emph{Exact, given the reading.} With $\mathbf{G}=\mathbf{I}$ and the same root $g$ of $-g\ln g=\sigma$ on every
+cell, Eq.~(\ref{eq:S}) is
+\begin{equation}
+\mathcal{S}_{+}=\mathcal{N}\,s(\sigma),\qquad s(\sigma)=\sigma\ln g-\sigma-g .
+\end{equation}
+The wiring enters only through the number of cells. Since $\mathcal{N}=3N+S$ and $H_{\lambda=0}=16(N-S)$,
+\begin{equation}
+\mathcal{S}_{+}=4N\,s-\frac{s}{16}\,H_{\lambda=0},
+\end{equation}
+and $s<0$ (for example $g=0.894194$, $s=-1.005377$ at $\sigma=0.1$). At fixed $N$ the vacuum action is therefore an
+increasing function of the square-counting energy with no local term: the two order every wiring alike. That energy
+is the one under which the network is reported to break into isolated hypercubes \cite{KTB19,T25}. Two cautions. For
+$\sigma<1/e$ Eq.~(65) has two roots, and a metric may take either on each eigen-direction; we take the root that
+tends to 1 as $\sigma\to0$ everywhere. And ``more negative'' is not ``favored'' until a weight over wirings is
+given, which the source does not give.
+
+\section{At the identity metric}
+
+For $c_0>0$ the induced metric carries the spectra. At
+$\boldsymbol{\mathcal{G}}=\mathbf{I}$, where $\mathbf{d}=\mathbf{B}^{\dagger}$,
+\begin{equation}
+\mathcal{S}_{+}=-\sum_i\ln(1+c_0\mu_i)-\mathcal{N},
+\label{eq:id}
+\end{equation}
+with $\mu_i$ the eigenvalues of the three Hodge Laplacians. This is the action at one uniform metric, not at a
+solution of its equations (ours).
+
+\begin{table}[t]
+\caption{Four arrangements of 64 vertices. Zero modes are those of
+$\mathbf{L}_{[0]},\mathbf{L}_{[1]},\mathbf{L}_{[2]}$. Vacuum: $\sigma=0.1$. Exact.}
+\label{tab:ladder}
+\begin{ruledtabular}
+\begin{tabular}{lccccc}
+ & $S$ & zero modes & vacuum & \multicolumn{2}{c}{Eq.~(\ref{eq:id})} \\
+ & & & $\mathcal{S}_+$ & $c_0=0.1$ & $c_0=1$ \\
+\hline
+flat, $8\times8$ & 64 & 1, 2, 1 & $-257.38$ & $-339.46$ & $-642.03$ \\
+curled, $16\times4$ & 80 & 1, 1, 16 & $-273.46$ & $-364.76$ & $-688.13$ \\
+curled, re-glued & 80 & 1, 1, 16 & $-273.46$ & $-364.76$ & $-688.13$ \\
+four 4-cubes & 96 & 4, 0, 28 & $-289.55$ & $-390.07$ & $-734.78$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\emph{The ladder (exact).} Table~\ref{tab:ladder}: the more squares, the more negative the action. The order,
+4-cubes below curled torus below flat torus, holds at every $c_0$ tried from 0.01 to 1000.
+
+\emph{A twin (exact).} Re-gluing two neighboring rings of the curled torus at opposite points gives a graph that is
+not isomorphic to it and has a different spectrum (eigenvalues differ by up to 0.39), with the same cells. The two
+agree in the first six moments of each Laplacian and in Eq.~(\ref{eq:id}) to nine figures: they differ only through
+closed walks that go all the way round the long direction. At this size the action at the identity metric does not
+see the global twist.
+
+\emph{Why a penalty appears (ours).} For small $c_0$,
+$\mathcal{S}_{+}=-\mathcal{N}-c_0\mathrm{Tr}\boldsymbol{\mathcal{L}}
++\tfrac12c_0^2\mathrm{Tr}\boldsymbol{\mathcal{L}}^2-\dots$, and
+$\mathrm{Tr}\boldsymbol{\mathcal{L}}=8N+8S$: to first order the action counts squares and nothing else. At second
+order pairs of squares that share a link enter with the opposite sign. Crowded links are penalized without that
+being put in, and the surplus term of Eq.~(\ref{eq:H}) is one measure of crowding.
+
+\begin{table}[t]
+\caption{Fit of Eq.~(\ref{eq:id}) to $a+bS+cX$ over 445 wirings of 64 vertices: end states saved by the registered
+runs of Ref.~\cite{paper1} (at most 25 of each kind $(S,X)$; 42 kinds, $61\le S\le96$) and the three rungs.
+$\lambda_{\rm eff}=-4c/b$. Exact for each wiring; the fit is exploratory.}
+\label{tab:fit}
+\begin{ruledtabular}
+\begin{tabular}{lcccc}
+$c_0$ & $b$ & $c$ & $\lambda_{\rm eff}$ & rms left over \\
+\hline
+0.01 & $-1.078$ & $0.0002$ & 0.001 & 0.000 \\
+0.1 & $-1.645$ & $0.015$ & 0.037 & 0.014 \\
+1 & $-3.980$ & $0.250$ & 0.25 & 0.36 \\
+10 & $-7.863$ & $0.891$ & 0.45 & 2.4 \\
+100 & $-11.91$ & $1.62$ & 0.55 & 6.2 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\emph{Many wirings (exact per wiring; the fit is ours).} Table~\ref{tab:fit}: every square lowers the action and
+every surplus square raises it. Since $H=16(N-S)+4\lambda X$, the action orders these wirings as $H$ would with
+$\lambda_{\rm eff}=-4c/b$, which grows with $c_0$ and stays below 1 (0.034, 0.20 and 0.28 at $c_0=0.1$, 1 and 10 if
+the curled torus and the 4-cubes are left out). The linear form is a good description at small $c_0$ and a poorer
+one as $c_0$ grows.
+
+\section{Beside combinatorial quantum gravity}
+
+In the family of Eq.~(\ref{eq:H}), $\lambda<1$ is where curling pays: over-full arrangements lie below the flat
+torus. At $\lambda=1$ they tie, and above it the flat torus is lowest. Read at the identity metric, the action of
+Ref.~\cite{Bia24} places these networks on the first side, for every $c_0$ tried. It contains the ingredient that
+saturates the reward for squares, and too weakly to make flat space the floor.
+
+What this does not show. That the comparison across wirings at fixed $N$ is the one the theory intends. Anything at
+a metric that solves the equation of motion
+$\sigma\boldsymbol{\mathcal{G}}^{-1}+\ln\boldsymbol{\mathcal{G}}=\boldsymbol{\mathcal{T}}$ (Eq.~57) for $c_0>0$,
+where the metric will differ from cell to cell and from wiring to wiring. Anything with matter or gauge fields.
+Anything about the continuum theory \cite{Bia25}. Anything about gravity.
+
+\section{The question}
+
+Is $\mathcal{S}_+$ compared across wirings at a fixed number of nodes the comparison meant by dynamics of the
+topology? If it is, must the metric be solved for each wiring first, or is something else meant to keep the action
+from rewarding more cells? The natural next steps follow from the answer: the metric equation solved on the ladder,
+where symmetry leaves a few unknowns per rung; the same on a flat sheet holding one of the leftover knots of the
+companion work; and six links per vertex.
+
+\begin{acknowledgments}
+Code, analysis and text were drafted with Claude (Anthropic) in conversation with the author, who directed and
+checked the work. The passages of Ref.~\cite{Bia24} used here were read by an AI agent from the arXiv HTML and are to
+be checked against the published version. No physicist has reviewed this. Everything is in the repository,
+\url{https://github.com/EmilySmithCreate/RecreationalPhysics}: ASSUMPTIONS O111,
+\texttt{scripts/exact\_entropy\_action.py}, \texttt{tests/test\_exact\_entropy\_action.py}.
+\end{acknowledgments}
+
+\begin{thebibliography}{9}
+\bibitem{Bia24} G. Bianconi, ``Quantum entropy couples matter with geometry,'' J. Phys. A \textbf{57}, 365002 (2024),
+arXiv:2404.08556.
+\bibitem{Bia25} G. Bianconi, ``Gravity from entropy,'' Phys. Rev. D \textbf{111}, 066001 (2025), arXiv:2408.14391.
+\bibitem{paper1} E. Smith, ``The curled torus burps: activated escape and conversion in a graph model of emergent
+geometry,'' manuscript (2026), in the repository above.
+\bibitem{KTB19} C. Kelly, C. A. Trugenberger and F. Biancalana, ``Self-assembly of geometric space from random
+graphs,'' Class. Quantum Grav. \textbf{36}, 125012 (2019), arXiv:1901.09870.
+\bibitem{T25} C. A. Trugenberger, ``Networks as the fundamental constituents of the universe,'' J. Phys. Complex.
+\textbf{6}, 042001 (2025), arXiv:2512.17676.
+\end{thebibliography}
+
+\end{document}

@@ -73,8 +73,14 @@ branch; written 07:20 ET by the clock).**
   letter to Ginestra Bianconi with a replication and a question: `scripts/exact_entropy_action.py` builds the
   operators of [Bia24] on the flat torus, the tube, a re-glued tube and a gas of 4-cubes at 64 points and evaluates
   her action. In her vacuum it is one number per cell; at the identity metric the order is the same; both ways it
-  grows more negative with every square. The draft letter is local (`docs/outreach/`), and nothing is sent from a
-  session.
+  grows more negative with every square; across 445 saved wirings it acts like this model's energy with a
+  coefficient below 1. The draft letter is local (`docs/outreach/`), and nothing is sent from a session.
+- **Drafts of series papers 10 and 11, in two versions each (10 October, at the owner's request).** Paper 10:
+  `docs/papers/entropy_action/paper.tex` (three pages) and `plain_language.md`. Paper 11:
+  `docs/papers/gravity/paper.tex` (the 25 September draft, retitled "A pull between leftovers" and given a section
+  on where the two routes stand) and `plain_language.md`. Both connect to piece 8 of the programme page; paper 11
+  also rests on piece 7's knots. Neither has been read by her yet. **VISION Update 52** (her lean on the three
+  shares) and the programme page's piece 6 (Version 65) are hers to confirm or correct.
   **Read the same day:** gates passed; no second curl in any of 4,000 tubes; of the three waits one was the
   detector and two were real waits of the perfect tube (11 to 12 times the mean); with no detector the first exit
   is one memoryless population at 1.07 of the counted rate. Her follow-up (does a knot turn back into tube; why

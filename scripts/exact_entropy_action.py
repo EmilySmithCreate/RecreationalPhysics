@@ -131,6 +131,37 @@ def arrangements(n=64):
             ("%d knots (4-cubes)" % (n // 16), knots)]
 
 
+def saved_wirings(per_kind=25, n=64):
+    """End states saved by this project's registered runs at N points (results/*_adj), at most `per_kind` of each
+    kind (S - N, X), in file order, with the three rungs of the ladder added. Reading only."""
+    from graphity.cqg import surplus, total_squares
+    results = Path(__file__).resolve().parents[1] / "results"
+    kinds = {}
+    for path in sorted(results.glob("*_adj/N%d_rep*.npz" % n)):
+        adj = np.load(path)["adj"]
+        if adj.shape != (n, 4):
+            continue
+        key = (int(total_squares(adj)), int(surplus(adj)))
+        if len(kinds.setdefault(key, [])) < per_kind:
+            kinds[key].append(adj)
+    for name, adj in arrangements(n):
+        if "re-glued" not in name:
+            kinds.setdefault((int(total_squares(adj)), int(surplus(adj))), []).append(adj)
+    return [(s, x, adj) for (s, x), adjs in sorted(kinds.items()) for adj in adjs]
+
+
+def effective_rule(wirings, c0):
+    """Least-squares fit of S+ at G = I to a + b S + c X over the wirings given. This model's energy is
+    16 (N - S) + 4 lambda X, so the action orders these wirings like that energy with lambda_eff = -4 c / b.
+    Returns (b, c, lambda_eff, rms residual, largest residual)."""
+    design = np.array([[1.0, s, x] for s, x, _adj in wirings])
+    action = np.array([action_at_identity(spectra(adj), c0) for _s, _x, adj in wirings])
+    coef = np.linalg.lstsq(design, action, rcond=None)[0]
+    left = action - design @ coef
+    return (float(coef[1]), float(coef[2]), float(-4.0 * coef[2] / coef[1]),
+            float(np.sqrt((left ** 2).mean())), float(np.abs(left).max()))
+
+
 def main(n=64, sigma=0.1, c0s=(0.1, 1.0)):
     per_cell = vacuum_action_per_cell(sigma)
     print("Her vacuum (c0 = 0), sigma = %.2f: g = %.6f, action per cell %.6f (ours: the wiring enters only "
@@ -143,6 +174,14 @@ def main(n=64, sigma=0.1, c0s=(0.1, 1.0)):
         n_cells = sum(len(mu) for mu in spec)
         print("%-22s %7d %6d %-14s %12.3f" % (name, len(spec[2]), n_cells, betti(spec), per_cell * n_cells)
               + "".join("   %18.4f" % action_at_identity(spec, c) for c in c0s))
+    wirings = saved_wirings(n=n)
+    kinds = len({(s, x) for s, x, _adj in wirings})
+    print("\nAcross %d wirings of %d kinds (saved end states of the registered runs, and the ladder), S+ at G = I"
+          " fitted to a + b S + c X (ours, exploratory):" % (len(wirings), kinds))
+    print("   c0      per square b   per surplus square c   lambda_eff   rms left over   largest")
+    for c0 in (0.01, 0.1, 1.0, 10.0, 100.0):
+        b, c, lam, rms, worst = effective_rule(wirings, c0)
+        print("  %-6g %12.4f %18.4f %14.3f %13.3f %10.3f" % (c0, b, c, lam, rms, worst))
 
 
 if __name__ == "__main__":

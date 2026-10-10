@@ -15,7 +15,7 @@
   },
   "provenance_limit": "Original execution commits are not consistently recorded in run metadata",
   "sha256": {
-    "ASSUMPTIONS.md": "734c2708d6aad32f55320a9b5154aa7b9cea98071bec7ba27c4a455bdea18ed1",
+    "ASSUMPTIONS.md": "4c4df65c7250204c2dce51016327b22a78c1dcae76fca88bafd63f289bdff281",
     "docs/papers/curled_torus/arxiv_abstract.txt": "231a617257ac56081a657cf637c1292ce89c61e42c570c16a3ee29cc9bdd6d8f",
     "docs/papers/curled_torus/build_2026-10-09.log": "7b284885918f4c67d12cfde6ef9c8b5f6b64370f2cff2afee1f187ef943a107f",
     "docs/papers/curled_torus/fig1.pdf": "670369ae9e932d5989423cc2aad65069420b0a15651354483b8964bc3e18f530",

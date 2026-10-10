@@ -79,3 +79,21 @@ def test_the_recorded_numbers():
     assert max(float(np.abs(np.sort(x) - np.sort(y)).max()) for x, y in zip(tube, twin)) > 0.3
     assert all(abs(float((x ** p).sum() - (y ** p).sum())) < 1e-6 for x, y in zip(tube, twin) for p in range(1, 7))
     assert abs(ea.action_at_identity(tube, 1.0) - ea.action_at_identity(twin, 1.0)) < 1e-8
+
+
+def test_across_saved_wirings_the_action_acts_like_the_energy_below_lambda_one():
+    """ASSUMPTIONS O111, addendum. At the identity metric the action falls with every square and rises with every
+    surplus square, as this model's energy does, with an effective coefficient well below 1."""
+    wirings = ea.saved_wirings(per_kind=4)
+    assert len(wirings) > 100 and len({(s, x) for s, x, _adj in wirings}) > 30
+    for c0 in (0.1, 1.0, 10.0):
+        per_square, per_surplus, lam, rms, _worst = ea.effective_rule(wirings, c0)
+        assert per_square < 0 < per_surplus and 0 < lam < 1
+    lam_small, lam_one, lam_ten = (ea.effective_rule(wirings, c0)[2] for c0 in (0.1, 1.0, 10.0))
+    assert lam_small < lam_one < lam_ten                       # it grows with c0 and stays below 1
+    assert abs(lam_one - 0.2755) < 0.002
+    # the three rungs, at every c0 from a hundredth to a thousand: more squares, a more negative action
+    spec = {name: ea.spectra(adj) for name, adj in ARRANGED.items()}
+    for c0 in (0.01, 0.1, 1.0, 10.0, 100.0, 1000.0):
+        flat, tube, knots = (ea.action_at_identity(spec[k], c0) for k in ("flat torus", "curled torus (tube)", "4 knots (4-cubes)"))
+        assert knots < tube < flat

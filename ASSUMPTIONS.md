@@ -3163,6 +3163,20 @@ to the owner's hypothesis or a new simulation result.
   - **Not claimed.** That this is the comparison her theory intends. Anything about gravity. Anything at a metric
     that solves her equations for c0 > 0. Anything about the continuum theory of [Bia25], whose stability is
     disputed in print this year (`docs/reading/notes/2026-10-05_bianconi_gravity_from_entropy.md`).
+  - **Addendum, the same day, 16:33 ET by the clock: across 445 saved wirings the action acts like this model's energy
+    with a coefficient below 1.** *Exact for each wiring; the fit is ours and exploratory.* The same script
+    evaluates S+ at the identity metric on end states saved by the registered runs at N = 64 (`results/*_adj`, at
+    most 25 of each kind (S, X), 42 kinds: sheets with and without knots and damage) and on the three rungs, and
+    fits it to a + bS + cX. Every square lowers the action and every surplus square raises it: b = −1.65, −3.98,
+    −7.86 and c = +0.015, +0.25, +0.89 at c0 = 0.1, 1, 10. This model's energy is 16(N − S) + 4λX, so the action
+    orders these wirings like that energy with λ_eff = −4c/b = 0.001, 0.037, 0.25, 0.45, 0.55 at c0 = 0.01, 0.1,
+    1, 10, 100 (0.034, 0.20, 0.28 at c0 = 0.1, 1, 10 without the tube and the knots). The fit worsens as c0 grows
+    (what is left over has rms 0.014, 0.36, 2.4 at c0 = 0.1, 1, 10, against actions of several hundred). The three
+    rungs keep their order, knots below tube below flat, at every c0 from 0.01 to 1000. *Ours:* a surplus-square
+    penalty appears in her action without being put in (it enters through pairs of squares that share a link), so
+    the action has the ingredient that saturates the reward, but too weakly: below λ = 1 is the stretch where
+    curling pays and flat space is not the floor (VISION Update 7). At a metric that solves her equations this may
+    differ; that is the question.
   - **The question for her** (a draft is kept locally and nothing is sent from a session): is S+ compared across
     wirings at a fixed number of nodes the comparison meant by dynamics of the topology; and if so, must the metric
     be solved for each wiring first, or is something else meant to keep the action from rewarding more cells?
