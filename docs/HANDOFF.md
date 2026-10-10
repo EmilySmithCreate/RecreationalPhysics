@@ -65,22 +65,54 @@ branch; written 07:20 ET by the clock).**
 - **Later the same morning (written 09:12 ET by the clock), all at the owner's instruction.**
   - *The technical manuscript, plain-wording pass:* simpler statements carrying the plain edition's ideas (the
     energy as a price list, the push, the opened door that is not a departure, enough room or not, the scrap), at
-    the same length (10 pages, the text ending where it did). Two small tables became sentences; the per-cell
+    the same page count (10; six lines longer than before, which is the replay's result and its limits). Two
+    small tables became sentences; the per-cell
     numbers of the detector reading and the illustrative rarity bounds moved to the supplement; the Introduction's
     roadmap sentence went. The abstract lost the detector sentences at her instruction; "All three registered
-    conversion maps remain inconclusive" was kept (rule 7) and she may still cut it. A fresh read-only agent was
-    asked to compare the text before and after for any changed claim.
+    conversion maps remain inconclusive" was kept (rule 7) and she may still cut it. **A fresh read-only agent
+    compared the text before and after for any changed claim** and found no wrong number, formula, label or
+    cross-reference, but five added sentences that asserted more than the original, six strengthened phrasings
+    and seven dropped caveats, and replay wording without the limits its registered readings carry. All were
+    corrected the same morning: the added interpretive sentences removed or qualified ("a necessary condition
+    for a change that starts locally"; "measured waits would exceed Eq. (2)"; the "sharp change" rationale for
+    the pre-registration; "the detector does not see the first exit"; "metastable" without the enumerated
+    sizes), the hedges restored, the per-cell numbers of the detector reading put back, and the replay stated
+    as one cell, by counting signature, at five-sweep blocks, 7 % and four standard errors off the count, with
+    the two real waits called rare and unexplained. The lesson for the next pass: a gloss borrowed from the
+    plain edition is a claim, and is checked like one.
   - *Source numbers:* a number now means the same source in both editions. The plain edition's sources 1 to 8 are
     the technical paper's reference list, 9 to 12 its own. `REFERENCES.bib` gained T17 and Creutz83, both marked
     not read, titles to verify.
-  - *The two editions as web pages:* `docs/public/ownedmediaphysics/` (`index.html`, `technical/index.html`,
-    `assets/`), generated from the LaTeX by `scripts/build_owned_media_pages.py` with `owned_media_latex.py`
-    (converter), `owned_media_site.py` (the frame: a 1990s home page in Side Nerd's colors, a few labelled joke
-    advertisements for Side Nerd, quick answers, glossary, JSON-LD, UTM links) and `make_owned_media_assets.py`
+  - *The two editions as web pages ("the Side Nerd Blog"):* `docs/public/mainnerd/` (a front page, the plain
+    edition at `01thecurledtorusburpsPL/`, the technical one at `01thecurledtorusburps/`, `assets/`), generated
+    from the LaTeX by `scripts/build_main_nerd_pages.py` with `main_nerd_latex.py` (converter),
+    `main_nerd_site.py` (the frame: a 1990s home page in Side Nerd's colors, advertisements for Side Nerd,
+    question headings, quick answers, glossary, guestbook, JSON-LD, UTM links) and `make_main_nerd_assets.py`
     (the cow GIF she supplied, cropped; the share image). Chapters and sections link to each other across the two
-    pages. She ports the folder to `sites/sidenerdapps/ownedmediaphysics/` of the SideNerdMarketing repository
-    herself; `docs/public/ownedmediaphysics_PORTING.md` has the steps and the cautions (root-absolute links; no
-    analytics on that site yet, so the UTMs record nothing; do not deploy from a stale checkout).
+    pages. Each edition's footer has "all posts | next post"; until a second post exists "next post" lands on a
+    placeholder (`comingsoon/`, "not up yet", noindex), and a second post replaces `SOON` in `NEXT_POST`. Two of
+    the plain page's advertisements show Ither on a phone in the logo's place (cut by the stylesheet out of the
+    site's one Ither picture, the three-phone hero); the cow is on the two editions and not on the front page
+    (her notes of 10 October). The interactive companion is hosted on the blog as well
+    (`01thecurledtorusburpsKnobs/`, built whole and unchanged from `docs/public/curling_ladder_tube.html`, which is
+    byte for byte what the Claude artifact was published from); the editions' web pages link to that copy, the
+    PDFs still to the artifact.
+    At her instruction of the same day the folder was copied, file for file, to `sites/sidenerdapps/mainnerd/`
+    on a new pushed branch of the SideNerdMarketing repository, `feat/sidenerdapps-main-nerd-blog` (commit
+    `4522930`), with the sitemap entries; **not merged, not deployed**: merging and running the manual deploy
+    workflow are hers. Copy again after any rebuild;
+    `docs/public/mainnerd_PORTING.md` has the steps and the cautions (root-absolute links; no analytics on
+    that site yet, so the UTMs record nothing; do not deploy from a stale checkout). **Her addresses were typed
+    "...01thecurledtourusburps"; the pages are built with "torus" and the spelling was put to her** (one
+    constant, `SLUG`). The first build of the morning was at `/ownedmediaphysics/`, the second was "Primary Nerd" at
+    `/primarynerd/`; she renamed the blog **Main Nerd** (`/mainnerd/`) the same day, and the scripts, test and
+    notes carry that name.
+  - *Her notes on the pages, the same morning, applied:* the masthead is "Welcome to the Side Nerd Blog, Main
+    Nerd" (first "Primary Nerd") and the papers are posts; each chapter opens with a commonly searched question ("What was there before
+    the Big Bang?") and an answer that claims nothing the paper does not; advertisements are labelled with the
+    one word and carry the Side Nerd logo; a call for a scientist to volunteer as a reader opens an e-mail to
+    her; a guestbook form sends entries by e-mail; the PDFs ship with the pages because the GitHub links point
+    at `main`, which lacks this branch's files until it is merged.
   - *Uncommitted when this was written:* the two papers, the web pages and their scripts, awaiting her review.
     T58 and its record are committed.
 - **Next record numbers:** ASSUMPTIONS **O111**, VISION **Update 52**, PREREGISTRATION **T59**.
