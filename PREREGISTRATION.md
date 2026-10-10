@@ -4372,3 +4372,19 @@ lengthen by a factor these runs do not measure (ours, unverified). Not run.
 Why the detected waits of the λ = 1.05 map run 15 to 43 % above the count: that is the detector's clock, which O109
 read at λ = 1.25 and 1.30 only. Anything about a size above 96. Anything at λ = 1: at λ ≠ 1 this is our family
 around the published model, never combinatorial quantum gravity.
+
+### The owner's prediction, 2026-10-10, 18:17 ET by the clock, before any stage was read
+
+Asked at launch two questions (the long waits at the lowest curling cost: chance, or a real slow tail that shows up
+again in fresh tubes? the 7 per cent: exits hidden between two looks, or something else?), the owner answered:
+"I predict it was chance. Exists hidden between 2 loops." Read as, and matching the two answers offered:
+
+- **Stage B: ON THE COUNT.** The long waits were chance; fresh tubes show no slow tail.
+- **Stage C: HIDDEN EXITS.** The 7 per cent is exits that come back between two looks.
+
+Both coincide with ours, so stages B and C test a shared expectation. She was not asked about A1 or A2 and has no
+prediction there.
+
+State of the run when this was written: launched at 18:01 ET from commit c7840ed6; stage A1 and fourteen of stage
+C's sixteen files had finished computing; stage A2 and stage B were still running. Nothing had been read: the
+analysis script had not been run on any T59 file, and only the jobs' exit codes had been looked at.
