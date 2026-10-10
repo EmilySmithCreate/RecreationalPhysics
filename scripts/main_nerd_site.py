@@ -126,8 +126,8 @@ SUMMARY = (
     "hypothetical sharp change in which flat space emerges from something more curled up. It uses a toy model of "
     "space as a network of dots and links, a close cousin of the published model called combinatorial quantum "
     "gravity. In that toy, a tube (a torus curled to four steps around) sits above the flat sheet in energy and "
-    "is stable for now. The paper counts what it costs to start the change (12 units at the main setting, at "
-    "every size tested), predicts how long the tube waits by counting its exits, watches the flat arrangement "
+    "is stable for now. The paper counts what it costs to start the change (12 units at the main setting, for "
+    "every size of tube tested), predicts how long the tube waits by counting its exits, watches the flat arrangement "
     "spread, seals the system to see where the released energy (the burp) goes, and counts what is left behind "
     "(about one four-dot scrap). A toy can show that a mechanism is possible or impossible within a class of "
     "models; that is the whole claim.</p>")
@@ -146,7 +146,8 @@ CHAPTER_QUESTIONS = {
         "This chapter builds a stand-in for that arrangement inside the toy model."),
     4: ("What could have set off the Big Bang?",
         "Unknown. In the toy model a change of this kind needs a push, and the push can be counted exactly: "
-        "twelve units, the same at every size tested."),
+        "twelve units at the paper's main setting of the knob (λ = 1.25), the same for every size of tube "
+        "tested."),
     5: ("What is a metastable state, or false vacuum?",
         "A state that is stable for now: it lasts until chance hands it enough energy to leave. This chapter "
         "predicts how long the toy's version waits, and checks the prediction."),
