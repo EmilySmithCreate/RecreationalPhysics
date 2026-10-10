@@ -62,7 +62,7 @@ branch; written 07:20 ET by the clock).**
   is one memoryless population at 1.07 of the counted rate. Her follow-up (does a knot turn back into tube; why
   not a closed system) is answered exactly in O110: a knot above λ = 1 runs downhill to tube-like points, so no
   box can hold it (`scripts/exact_knot_descent.py`).
-- **Later the same morning (written 09:20 ET by the clock), all at the owner's instruction.**
+- **Later the same morning (written 09:12 ET by the clock), all at the owner's instruction.**
   - *The technical manuscript, plain-wording pass:* simpler statements carrying the plain edition's ideas (the
     energy as a price list, the push, the opened door that is not a departure, enough room or not, the scrap), at
     the same length (10 pages, the text ending where it did). Two small tables became sentences; the per-cell
