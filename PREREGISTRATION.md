@@ -4685,3 +4685,17 @@ says sharp there, and a cell inside the range could come out either side. That i
 stage 2 (`scripts/make_t60_configs.py --held-out`; `cloud/queue/2026-10-10_t60_stage2.txt`; 7 jobs) is queued in
 the same commit. **The owner's prediction for the held-out size is asked for now and recorded here before stage 2
 is read; stage 2 is not read until then.**
+
+### The owner's prediction for the held-out size, 2026-10-11, 09:14 ET by the clock, before stage 2 is fetched or read
+
+Told stage 1's reading, the numbers above for N = 288 and ours, the owner answered: "I agree with your prediction,
+let's read it in." **Her prediction for N = 288 is ours as written under "Predictions" on 10 October: (a″) and (b)
+hold at every window λ, and (c), one front, is the criterion at risk at the top of the window (λ = 1.25 and
+1.30).** It is recorded as hers. It coincides with ours, so stage 2 tests a shared expectation. Neither says on which
+side of the 0.70 line the cell at λ = 1.30 lands; the verdict at the held-out size is scored against the recipe's
+numbers, as fixed above.
+
+Disclosed, what she had been told when she answered: stage 1's verdict and its table; the table of numbers for
+N = 288; that at λ = 1.30 the recipe's range for (c) crosses the line; that the largest piece falls with size at
+the top of the window (0.93, 0.92, 0.87, 0.83). Nothing of stage 2: when this was written no N = 288 file had been
+fetched (`results/` and `cloud/inbox/` hold none), and the fetch request is pushed after this is committed.
