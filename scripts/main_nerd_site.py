@@ -142,7 +142,7 @@ CHAPTER_QUESTIONS = {
     2: ("Is space made of something smaller?",
         "Some physicists think so. This chapter describes one published model, combinatorial quantum gravity, "
         "in which space is a network of dots and links and nothing else, and then the toy this paper works in: "
-        "a close cousin of that model with one knob turned up, not the model itself."),
+        "a close cousin of that model with one knob turned up, not that model itself."),
     3: ("What existed before space?",
         "The author's hypothesis is that it was not nothing and not chaos, but a specific curled-up arrangement. "
         "This chapter builds a stand-in for that arrangement inside the toy model."),
@@ -208,12 +208,12 @@ FAQ = [
     ("What is combinatorial quantum gravity, and is this it?",
      "Combinatorial quantum gravity is a published model, built by Carlo Trugenberger, Christy Kelly and Fabio "
      "Biancalana, in which space is a network with no positions at all and the energy is a count of squares that "
-     "acts as a curvature. This paper uses a close cousin of that model, not the model itself: it turns one knob, "
+     "acts as a curvature. This paper's toy is a close cousin of that model, not that model itself: it turns one knob, "
      "the price of a surplus square (λ), above the published value of 1."),
     ("What is a curled torus?",
      "A torus is a grid that wraps around in both directions, and every shape in the paper is one: flat (the "
      "sheet), curled (the tube) or knot. Curl one direction of the flat one until it is only four steps "
-     "around and you have a tube. In the model the tube has one large direction where the flat sheet has two, and "
+     "around and you have a tube. In the toy the tube has one large direction where the flat sheet has two, and "
      "it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."),
     ("What is the burp?",
      "The burp is the energy given off when the tube opens into the flat sheet. For a clean change it is exactly "

@@ -140,7 +140,7 @@ The project keeps four kinds of statement apart, and this edition tags them wher
 that a sentence is never quietly promoted from one kind to another. One more tag marks other
 people's published work.
 \begin{itemize}\setlength{\itemsep}{1pt}
-\item \Exact\ Arithmetic, or a complete listing of every possibility. True of the model whatever a
+\item \Exact\ Arithmetic, or a complete listing of every possibility. True of the toy whatever a
 run does.
 \item \Meas\ A simulation whose rules and predictions were written down before it ran, with its
 verdict. \MeasX\ means a run that was not formally pre-registered: its prediction was only written
@@ -266,12 +266,17 @@ thing to check.
 ask what \emph{kind} of change produces it. The author's idea needs the sharp kind: a hill, a push, a
 release of energy, a remainder.}
 
-\chapterpage{2 \enspace THE TOY}{A published model of space made of links}
+\chapterpage{2 \enspace THE TOY}{A published model of space made of links, and the one knob we add}
 
-\Pub\ The model is called combinatorial quantum gravity, built by Carlo Trugenberger, Christy Kelly
-and Fabio Biancalana~\cite{T17,KTB19,T25}. It is a network of dots and links with no positions at all: a
-dot has no place, only neighbors. Figure~\ref{fig:model} shows every rule it has. The mathematical
-word for such a thing is a \textbf{graph}; its dots are vertices, its links are edges.
+\Pub\ Our toy is built beside a published model. That model is called combinatorial quantum gravity,
+and it is the work of Carlo Trugenberger, Christy Kelly and Fabio Biancalana~\cite{T17,KTB19,T25}. The
+published model is a network of dots and links with no positions at all: a dot has no place, only
+neighbors. Figure~\ref{fig:model} shows every rule it has, and our toy keeps all of them. The
+mathematical word for such a thing is a \textbf{graph}; its dots are vertices, its links are edges.
+
+Two names are kept apart from here on. \textbf{The published model} is theirs. \textbf{The toy} is
+ours: the published model with one of its prices turned into a knob, as described below. Wherever this
+paper says ``the toy,'' it means ours, and the published one is always called the published model.
 
 \begin{figure}[H]
 \centering
@@ -308,28 +313,30 @@ word for such a thing is a \textbf{graph}; its dots are vertices, its links are 
 \draw[no,very thick] (13.65,-0.55) -- (13.95,-0.25) (13.65,-0.25) -- (13.95,-0.55);
 \end{scope}
 \end{tikzpicture}
-\caption{The whole model: dots, four links each, two groups, and the loops of four links called
-squares. There are no positions. Drawing the dots on a grid is a convenience; only the links are
+\caption{Every rule of the published model, all of which the toy keeps: dots, four links each, two
+groups, and the loops of four links called squares. There are no positions. Drawing the dots on a grid is a convenience; only the links are
 real.}
 \label{fig:model}
 \end{figure}
 
 \sub{The price list}
-\Pub\ The model gives every arrangement an energy, and the energy is worked out by counting squares.
+\Pub\ The published model gives every arrangement an energy, and the energy is worked out by counting squares.
 Compared with an arrangement that has one square for every dot, every missing square has a cost. A
 single link may carry at most three squares; a link carrying a third one has one square too many, and
 every such surplus square has a cost of its own. Those two prices are the entire rule. To be clear,
 this energy has no meters or joules in it. We will just call its amount a \textbf{unit}, and leave the
 conversion of units into physical energy for a later paper. Everything below is in these units.
 
-\Pub\ A missing square costs 16 units. A surplus square costs $4\lambda$ units, where $\lambda$
-(lambda) is a number that sets the surplus price. It can be turned up or down, so we call it
-\textbf{the knob}. At exactly $\lambda = 1$ a surplus square costs 4, and the energy is then a measure
-of how curved the network is: a graph version of the curvature in Einstein's equations of gravity.
-That is where the model's name comes from, a theory of gravity built by combinatorics, the mathematics
-of counting. The published work also studies a simpler version with the surplus price switched off,
-$\lambda = 0$, where a link can carry a third square for free. Turning the knob to other values is our
-addition.
+\Pub\ In the published model a missing square costs 16 units and a surplus square costs 4. With those
+two prices the energy is a measure of how curved the network is: a graph version of the curvature in
+Einstein's equations of gravity. That is where the published model's name comes from, a theory of
+gravity built by combinatorics, the mathematics of counting. The published work also studies a simpler
+version with the surplus price switched off, where a link can carry a third square for free.
+
+The toy turns that one price into a knob. In the toy a surplus square costs $4\lambda$ units, where
+$\lambda$ (lambda) is a number that can be turned up or down, so we call it \textbf{the knob}. With
+the knob at exactly $\lambda = 1$ the toy is the published model. With the knob at $\lambda = 0$ it is
+the published simpler version. Every other setting is our addition.
 
 The whole point of the published program is to get general relativity, Einstein's theory of gravity,
 back out of a network, so the curvature setting is the one that matters to it. At any other
@@ -402,7 +409,7 @@ rest of this paper is a long chain of these.}
 \end{figure}
 
 \sub{Warmth, and the bath}
-\Pub\ A run of the model is a long chain of such swaps, each one proposed at random and then accepted
+\Pub\ A run, of the published model or of the toy, is a long chain of such swaps, each one proposed at random and then accepted
 or refused. A second number, $g$, decides which. It plays the part of temperature, and we call it
 \textbf{the warmth}. A swap that lowers the energy is always accepted. A swap that raises it by
 $\Delta E$ units is accepted only some of the time, with a chance of $e^{-\Delta E/g}$, where $e$ is a
@@ -427,7 +434,7 @@ the thesis declines to call the evidence definitive.
 \Meas\ We repeated this before anything else.\footnote{One published 2025 figure from the same
 group~\cite{T25} disagrees with ours over one stretch, but it also disagrees with that group's own
 2019 curve~\cite{KTB19}, so it is a question for them and is recorded as open.} Our simulations land
-on the model's published 2019 curve~\cite{KTB19} to about half a percent at the same size, match exact
+on the published model's 2019 curve~\cite{KTB19} to about half a percent at the same size, match exact
 averages at sizes small enough to list every possible arrangement, and reproduce the sharp change into
 closed pieces with the surplus price off. Then we measured how much energy the change gives off as the
 tangle orders, at several sizes, with the rules written down first.
@@ -454,8 +461,9 @@ one hump at every size we ran, and any energy given off is small and shrinking. 
 1.5 gave the same picture. We got the same answer the published work did, and added the comparison
 across sizes that the 2019 paper said was out of reach.
 
-\takeaway{The model's energy is a price list: 16 per missing square, $4\lambda$ per surplus square.
-At $\lambda=1$ it is a curvature, which is why that setting is studied. Out of randomness, at that
+\takeaway{The toy's energy is a price list: 16 per missing square, $4\lambda$ per surplus square.
+At $\lambda=1$ the toy is the published model and its energy is a curvature, which is why that setting
+is studied. Out of randomness, at that
 setting, the change is smooth: no sign of a release of energy at the sizes anyone can reach.}
 
 \chapterpage{3 \enspace THE PHASE BEFORE}{What if what came before space was not random?}
@@ -773,7 +781,7 @@ hers, and it is unreviewed.
 \sub{Stable for now: is there a window?}
 Energy to give is not enough. Supercooled water has energy to give and sits there. For the tube to be
 a stand-in for X it must be stuck: every single swap away from it must cost energy. \Exact\ At 18 dots
-the model is small enough to list every allowed arrangement: there are 26, counting arrangements that
+the toy is small enough to list every allowed arrangement: there are 26, counting arrangements that
 differ only in the names of their dots as one. Among them, arrangements above the flat sheet from
 which every single swap costs energy exist for knob settings between 1 and 1.6, and for no larger
 setting. So the knob has a window, and a narrow one.
@@ -804,11 +812,11 @@ hundreds of repeated runs and, where possible, from counting every allowed move.
 Now the question that decides whether any of this is a story at all. Ninety-six units are waiting to
 come out. What does it cost to start?
 
-\takeaway{A direction, in the model, is a pair of links at a dot that closes no square. Curling a
+\takeaway{A direction, in the toy, is a pair of links at a dot that closes no square. Curling a
 direction four steps around turns the walk around it into a square, which puts a surplus square on its
 links. The tube has one large direction where the sheet has two, and sits $4(\lambda-1)$ per dot above
 it: one unit per dot at $\lambda=1.25$. At $\lambda=1$ there is nothing to release, which is why the
-knob sits above 1, and why this is a cousin of the published model and not the model.}
+knob sits above 1, and why the toy is a cousin of the published model and not that model itself.}
 
 \chapterpage{4 \enspace THE OBSTACLE}{What does it cost to start?}
 
@@ -950,7 +958,7 @@ five sizes from 48 to 192 dots: 320 runs in all, each 12,000 sweeps long.
 \label{fig:staircase}
 \end{figure}
 
-\Exact\ The lower half of this staircase is a theorem of the model at these sizes: with no exit
+\Exact\ The lower half of this staircase is a theorem of the toy at these sizes: with no exit
 cheaper than 12 and a store that cannot go negative, a budget below 12 can only pay for free twists.
 The upper half is an observation about this protocol and duration.\footnote{Why not run a hundred
 tubes at each budget instead of eight? Our reasoning, from the exact counts, is that it would add
@@ -965,7 +973,7 @@ at every size tried, while what waits behind it grows with the system.
 \whyhere{This is the pivot of the whole paper. Suppose the push had grown with the size of the tube,
 so that a tube twice as long needed a push twice as large. Then no single spot could start the change:
 something would have to push the whole tube at once, and the picture of a seed and a spreading front
-would fail in this model. We would have had to look for this kind of change in another one. A fixed,
+would fail in this toy. We would have had to look for this kind of change in another one. A fixed,
 cheap push against a growing release is the condition under which something small can start something
 large.}
 
@@ -1091,7 +1099,7 @@ change, with no trend in $\lambda$. The formula predicts when the door opens, no
 \sub{A caution about the clock}
 \Ours\ The clock here counts attempted swaps, not seconds. One sweep offers any one neighborhood a
 way out about $1/N$ as often as a clock that gave every neighborhood its own fixed rate would. On that
-fairer clock the wait would fall as $1/N$, and a longer tube would go sooner. The model has no time
+fairer clock the wait would fall as $1/N$, and a longer tube would go sooner. The toy has no time
 in it; which clock is ``right'' is not a question it can answer, and a later paper adopts the
 fairer one.
 
@@ -1360,7 +1368,7 @@ individual store balances were not saved, so it is a budget, not a calibrated th
 
 \Meas\ No run stalled with tube and sheet side by side and nothing melting. Our reasoning said that
 outcome needs a temperature at which the two arrangements are equally happy, and no such temperature
-exists in this model. A single stalled run would have refuted that reasoning. Said carefully: none
+exists in this toy. A single stalled run would have refuted that reasoning. Said carefully: none
 appeared in 420 runs of 30,000 sweeps on this grid of $C$. That is not a proof that the two can never
 coexist.
 
@@ -1497,7 +1505,7 @@ of runs that released the full amount.}
 burp per dot but a less patient X and a messier birth; a smaller $\lambda$ means a cleaner change that
 releases less. The release is exactly $4(\lambda-1)$ per dot and vanishes at the published setting,
 so this family of models has no setting with a large release and a quiet, clean X at once.
-\Pub\ At the published setting itself, the model's author has proposed that patches of the network
+\Pub\ At the published setting itself, the published model's author has proposed that patches of the network
 can sit stuck in a different arrangement~\cite{T24}; the questions asked here could be put to those
 patches too.
 
@@ -1518,7 +1526,7 @@ pre-registered test of 10,000 tubes then counted too many long waits and returne
 POPULATIONS. It also found a fast share, 12 to 23 percent of tubes that seemed to change at once, and
 190 tubes the detector never caught.
 
-Was something hidden in the model, or was this the detector? It was the detector
+Was something hidden in the toy, or was this the detector? It was the detector
 (Figure~\ref{fig:watch}). For its first 200 sweeps the detector only watches, to learn how much a
 resting tube jiggles, and then it sets its bar at three times that jiggle. A tube that changes
 \emph{during} the watch teaches it that large swings are normal.
@@ -1631,7 +1639,7 @@ longer above anything. Below 1 the ladder flips. \MeasX\ In a rehearsal the auth
 reaction, a perfect flat sheet at $\lambda<1$ sat at zero for hundreds to thousands of sweeps and then
 curled, one direction first, releasing energy in steps that landed on the exact rungs of the ladder.
 Above 1.45, \Meas\ at 1.5 the tube falls apart within 50 sweeps in every run; \Exact\ at 1.6 route B
-costs nothing and at 18 dots no stuck state above flat exists; by a knob setting of 5 to 10 the model
+costs nothing and at 18 dots no stuck state above flat exists; by a knob setting of 5 to 10 the toy
 behaves as one with a third square simply forbidden. Nothing curled is stable for now out there.
 
 \sub{The warmth $g$: 1.4 to 2.5, with the maps at 1.5}
@@ -1648,7 +1656,7 @@ The upper limit was run time on one laptop and the choice to spend compute on re
 size. \Exact\ The exit count was certified at 48 through 288; the control at 32 dots breaks the
 pattern, and 16 dots is the knot. \Meas\ The front's speed fell roughly as the size to the power
 $-0.7$, so longer tubes take longer to finish. \Ours\ Whether the wait itself grows, stays flat or
-falls with size depends on the clock the model does not fix (Chapter~5). The technical paper claims
+falls with size depends on the clock the toy does not fix (Chapter~5). The technical paper claims
 nothing beyond 288. Networks into the thousands of dots are the subject of a later paper on the
 scrap.
 
@@ -1661,7 +1669,7 @@ calibrated temperature after the fact.
 \Exact\ Below 12 nothing can leave by single swaps, at the certified sizes; a tube with nothing to
 spare waits for ever, which is now a permanent test in the code. \MeasX\ Above, pushes of 12 to 160
 units at 64 dots all left, and the hotter the box the more disordered the sheet it ended with, with
-the ending predicted from the model's equilibrium curve before the run: 0.97 squares per dot measured
+the ending predicted from the toy's equilibrium curve before the run: 0.97 squares per dot measured
 against 0.95 predicted at the smallest push, 0.81 against 0.81 at the largest. Give it far more and it
 melts.
 
@@ -1707,7 +1715,7 @@ change. And it shows that the remainder, from one seed, is a speck.
 
 What it does not show is anything about reality. A toy can show that a mechanism is possible or
 impossible within a class of models; that is the whole claim. \Claim\ The author claims that reality
-works this way, and people can argue. The model's part is to make the claim concrete enough to be
+works this way, and people can argue. The toy's part is to make the claim concrete enough to be
 wrong in specific ways, and several of those ways have now been tried: the remainder did not grow,
 the single-front law was not established, three maps were inconclusive by their own rules, and a
 test that reported a second population of waits turned out to be reporting on its own detector.
@@ -1760,7 +1768,7 @@ This edition follows the technical paper~\cite{tech}, which holds the equations,
 calculations and full references. Every number above is taken from it or from the project's record,
 and the kinds-of-statement tags follow the project's own rule that no statement is promoted from one
 kind to another without a dated note saying why. Its sections run in the same order as the chapters here:
-the model and its exact results (Chapters~2 and~3), the cost of leaving (4), the first exit (5), the
+the toy and its exact results (Chapters~2 and~3), the cost of leaving (4), the first exit (5), the
 conversion (6), the sealed system (7 and~8) and the dependence on $\lambda$ (9).
 
 \sub{A few translations for the next step}
@@ -1769,6 +1777,7 @@ conversion (6), the sealed system (7 and~8) and the dependence on $\lambda$ (9).
 \toprule
 In the paper & What to keep in mind\\
 \midrule
+``The model'' & In the technical paper, our toy: the published model with the knob $\lambda$. Only $\lambda=1$ is the published model, combinatorial quantum gravity.\\
 $N$ & Number of dots. The running example uses $N=96$.\\
 Torus & Any grid that wraps both ways. The flat torus is the sheet, the curled torus is the tube, and the smallest one, curled both ways, is the knot.\\
 $4\times L$ & Four steps around the short wrap and $L$ around the other, $L$ even and above 4. $4\times4$ is the knot.\\
