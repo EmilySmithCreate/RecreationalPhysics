@@ -684,7 +684,7 @@ The replacements for pieces 5 and 11 are hers. In order:
    (started 23:17 ET on 10 October). When it lands: push a comment line to `cloud/fetch/request.txt`,
    `python scripts/accept_inbox.py --move`, commit, `python scripts/analyse_t60.py`, the reading, an O entry. The
    registered analyzer reads stage 2 only when all seven cells are in. Do not work round it.
-2. **Paper 1 says what its end states are** (O116): both editions, the supplement, `measurement_scope.md` and the
+2. *Held by the owner, 11 October: paper 1, the outside review and the reader request wait until it is settled whether the small direction grows (`sandbox/NOTEBOOK.md` has her words; `sandbox/LOG.md` the first looks). Piece 1's title loses "into space".* **Paper 1 says what its end states are** (O116): both editions, the supplement, `measurement_scope.md` and the
    blog pages, before it is shown to anyone. The wording is the owner's to settle (Update 54, item 4).
 3. **The red-team pass (rule 12)** by a fresh read-only reviewer. The brief is
    `docs/papers/curled_torus/red_team_brief_2026-10-11.md`; the owner gives it to the reviewer; the report becomes
