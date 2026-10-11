@@ -25,3 +25,6 @@ t53_*
 t60_*
 # 2026-10-10, 22:43 ET (corrected from a guessed 22:50; the time of the commit): 27 of T60's 28 cells fetched and accepted; asking again for the last, t60_lam135_n192.
 # 2026-10-10, 23:12 ET: asking again for t60_lam135_n192.
+# 2026-10-11, 09:22 ET: T60 stage 2 (7 jobs at N = 288, queued 23:15 ET on 10 October from commit c484d2ec); the owner's prediction for it was recorded first (commit 31a7a70c). Also T56 stage 1 (68 jobs) and T57 (16 jobs), both launched 9 October with her predictions on the record; neither has been read.
+t56_*
+t57_*
