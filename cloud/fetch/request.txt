@@ -21,3 +21,5 @@ t37_lam125_g125_L1024_*
 # started and is resubmitted separately). Neither has been read.
 t51_*
 t53_*
+# 2026-10-10: T60 stage 1 (28 jobs, submitted 19:16 ET from commit db632d75), the lambda map a fourth time. Not read.
+t60_*
