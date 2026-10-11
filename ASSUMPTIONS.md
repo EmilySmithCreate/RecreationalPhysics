@@ -3405,6 +3405,28 @@ to the owner's hypothesis or a new simulation result.
     its own 120-second limit while the laptop was also computing T54. Run alone it passes (10 of 10). GitHub's own run of that commit passed. The
     commit had been chained after the test command without a check of its exit status.
 
+- **O118 T54, the held-out size, read: along the helix patch the barrier is the same exact quadratic at every sheet
+  size, and under the owner's tie a finite patch exists at every curling cost; the registered verdict word is not
+  scored in four rows of six (11 October 2026, 16:01 ET by the clock). Exact; pre-registered with a held-out
+  size.** (PREREGISTRATION T54, Amendment 4 and "Reading ... the held-out size", which is the full account;
+  `scripts/exact_t54_patch.py`; `results/t54_patch_stage1.csv`, `results/t54_patch_heldout.csv`. Six links: VISION
+  Update 24's caveat.)
+  - **Exact.** ΔH(k) = a·k − b·k² with nothing left over, the same at L = 8, 12 and 16 for every patch that does
+    not meet its own image. Untied a = 80 − 16λ and b = 16(λ − 1); tied a = 176 − 112λ and b = 48(λ − 1) (read off
+    the values, not derived). Under the tie the peak is at 5.5, 3.3, 2.2 and 1.5 columns with barriers of 145, 77,
+    45 and 27 for λ = 1.10 to 1.25; untied, 19.5 to 7.5 columns and 608 to 225.
+  - **Scored.** The held-out numbers hold exactly at all six scored rows. The verdict word, read as registered
+    over every k computed, is RISES AGAIN (reported, not scored) at tied λ = 1.10 to 1.20 and untied 1.40, because
+    the one patch that wraps the torus (k = 15) lies above the quadratic; FIXED WALL at tied 1.25 and 1.40. The
+    owner's CRITICAL PATCH is not scored in four rows and fails by the letter in two; ours failed by the letter at
+    tied 1.25. NO FINITE PATCH appears nowhere, so the condition that would end the branch (Update 44) is not met.
+  - **Rule 11** for the two failures by the letter. (1) They do not touch the mechanism: at tied 1.25 two whole
+    patches tie at 24 round a fitted peak of 27, and at 1.40 the first patch is free. (2) The cause is the rule:
+    it reads the word over whole patches and over every k computed, the wrapped one included. (3) No further test
+    is needed to tell that apart; the values are exact. (4) Nothing here would make us abandon the branch.
+  - **Owed.** A fresh read-only review of the seam's construction and the fit (rule 12). Whether the verdict word
+    is to be read only over patches that do not meet their own image is the owner's to decide.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

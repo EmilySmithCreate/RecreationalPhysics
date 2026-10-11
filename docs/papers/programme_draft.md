@@ -25,7 +25,7 @@ opens into is still a tube: 9,208 of 9,215 flat end states are the same tube wit
 steps around where it was four, and no wider at any size. The sharp change, its wall and its exact release stand;
 the picture of a small direction growing large does not. The longer tube of piece 2 was read at 11:16 ET: as
 predicted, and sharp at every setting in the range (O117). A brief for a fresh outside reviewer of paper 1 is
-written. The drafts of papers 5, 6 and 12 were brought up to date. The page (Version 74) says all of this, and that the barrier of piece 5 is read at two sizes with the third computing.
+written. The drafts of papers 5, 6 and 12 were brought up to date. The page (Version 75) says all of this, and that the barrier of piece 5 is read at all three sizes.
 
 
 **What changed on 10 October.** Paper 1 was revised after the AI review of 9 October: the same results in narrower
@@ -280,6 +280,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026: Read: T18, the room needed grows faster than the burp as λ rises (PROPORTIONAL).
 
 **Piece 5.**
+- 11 Oct 2026, 16:01 ET: T54 read at its held-out size (O118). The barrier along the helix patch is the same exact quadratic at all three sheet sizes; under the tie a finite patch exists at every curling cost, 5.5 to 1.5 columns with barriers of 145 to 27. The numbers written beforehand hold exactly. The verdict word is unscored in four rows of six, because the rule reads it over a patch that wraps the torus, and FIXED WALL in two. The word that would end the branch does not appear. A fresh review of the construction is owed.
 - 11 Oct 2026, 09:28 ET: T56 stage 1 read (O115): under the tie the slab STAYS at λ = 1.10 to 1.20 and ADVANCES ONLY at 1.25, the rod STAYS, the control NO DIFFERENCE; no cell opens. Her prediction (opens into one flat space) failed, and ours (a window at 1.15 and 1.20). The tie as written charges a damaged point nothing, and the barrier is T54's patch. Rule 11's third use on this piece; the replacement is hers. By shape about a third of the runs that read OPENS are the start glued together differently (O116).
 - 9 Oct 2026, 05:01 ET by the clock: T53 read (O105): ADVANCES ONLY at every length and both λ; SEVERAL. The first direction opens at every bath, the second only in a minority before the space is damaged, never at λ = 1.25 or in the longest torus. Her OPENS IN A WINDOW failed; rule 11's second use on this piece; her replacement owed; T54 next.
 - 6 Oct 2026, about 04:00 ET: T53 was launched 5 Oct at 15:17 ET (the draft of 15:00 said not yet); T54 drafted, the true barrier priced exactly, first in the order; rule 11 applied to the failures of T44 to T49 (O103 (i); Update 44).

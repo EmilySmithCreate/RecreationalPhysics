@@ -46,7 +46,11 @@ work is the mechanism, not another claim of universal exponential conversion wai
   Batch at 09:27 ET. The analyzer registered before the run reads stage 2 only when all seven are in: when the
   last lands, fetch, accept, `python scripts/analyse_t60.py`, record the reading. Do not open the N = 288 files
   before that (`scripts/read_endpoint_width.py` leaves them out for this reason).
-- **T54.** Stage 1 (L = 8, 12) is on this branch and read: ΔH(k) is the same exact quadratic at both sizes. The
+- **T54 is read at its held-out size (16:01 ET; O118; PREREGISTRATION T54, "Reading ... the held-out size").** The
+  numbers hold exactly; under the tie a finite patch exists at every λ (barriers 145, 77, 45, 27 for λ = 1.10 to
+  1.25); the verdict word is unscored in four rows (the wrapped patch) and FIXED WALL in two. A fresh review of the
+  construction is owed (rule 12). *As it stood that morning:*
+  Stage 1 (L = 8, 12) is on this branch and read: ΔH(k) is the same exact quadratic at both sizes. The
   prediction for the held-out size is Amendment 4 (committed first, ed1970be). **L = 16 has been computing on the
   laptop since 10:08 ET** (`configs/t54_patch_heldout.json` → `results/t54_patch_heldout.csv`; a `.partial` file
   beside it means it is still running or was killed; the runner refuses to overwrite). Read it as the amendment
@@ -59,7 +63,7 @@ work is the mechanism, not another claim of universal exponential conversion wai
   up to date and built. The owner has not read them.
 - **A test that had been failing on GitHub since 10 October** (the entropy-action fit read every saved graph, so
   T60's end states moved its recorded number) is fixed: the script reads only the runs O111 was computed on.
-- **Next record numbers:** ASSUMPTIONS **O117**, VISION **Update 55**, PREREGISTRATION **T61**.
+- **Next record numbers:** ASSUMPTIONS **O119**, VISION **Update 55**, PREREGISTRATION **T61**.
 
 **Addendum, 10 October 2026 (branch `claude/paper1-plain-language-2026-10-10`, cut from the review
 branch; written 07:20 ET by the clock).**

@@ -3758,6 +3758,63 @@ at those λ stays unread.
 The owner's prediction for the held-out size stands as recorded on 9 October: CRITICAL PATCH, untied and tied, with
 a small patch as her lean.
 
+### Reading of T54, the held-out size, 2026-10-11, 16:01 ET by the clock (`results/t54_patch_heldout.csv`; the script's own fit lines)
+
+L = 16 was computed on the laptop from 10:08 to 16:00 ET, after Amendment 4 was committed (ed1970be). Its recorded
+config equals the committed one, and all 150 patch states are valid under the hard-core rule.
+
+**The held-out prediction HOLDS at every (λ, tie) at which it is scored.** Fitted to L = 16's own exact values over
+k ≤ 7, the quadratic has exactly the coefficients of stage 1, so k* and ΔH* equal the predicted values. Tied: 5.50
+and 145.2 (λ = 1.10), 3.28 and 77.4 (1.15), 2.17 and 45.1 (1.20), 1.50 and 27.0 (1.25), 0.50 and 4.8 (1.40). Untied:
+4.50 and 129.6 (1.40). The untied λ = 1.10 to 1.25 are UNREADABLE AT L = 16 by step 5, as written beforehand, and
+nothing is scored there.
+
+**The verdict word, read as registered over every k computed (k = 1 to 15), is RISES AGAIN in four of the six
+scored rows and FIXED WALL in two.**
+
+| | λ = 1.10 | 1.15 | 1.20 | 1.25 | 1.40 |
+|---|---|---|---|---|---|
+| tied | RISES AGAIN | RISES AGAIN | RISES AGAIN | FIXED WALL | FIXED WALL |
+| untied | unreadable | unreadable | unreadable | unreadable | RISES AGAIN |
+
+RISES AGAIN is the fourth word of Amendment 2, reported and not scored, and here it has one cause in every row.
+ΔH(k) is the exact quadratic a·k − b·k² for every k from 1 to 14; only the last patch, k = 15, which covers all but
+one row and one column of the sheet and meets its own image, lies above it. So by the letter **the verdict word is
+not scored in those four rows**, for a reason the amendment named in advance (a patch wrapping round the torus) and
+the rule did not exclude. Up to k = 14 their shape is the registered CRITICAL PATCH: ΔH rises and then falls. Its
+largest whole-patch value is 144.0 at k = 5 and 6 (tied, λ = 1.10), 76.8 at k = 3 (1.15), 44.8 at k = 2 (1.20), and
+128.0 at k = 4 and 5 (untied, 1.40).
+
+At λ = 1.25 tied, ΔH(1) = ΔH(2) = 24 and it falls from there: no whole patch stands higher than the first, and the
+fitted peak of 27.0 lies between them, at one and a half columns. By the words that is FIXED WALL. At λ = 1.40 tied
+the first patch costs nothing (ΔH(1) = 0) and every larger one is downhill: FIXED WALL.
+
+**Predictions.** The numbers of Amendment 4 hold, exactly. Its words: FIXED WALL at tied 1.40 **holds**; CRITICAL
+PATCH at tied 1.25 **fails by the letter** (FIXED WALL; ours of Amendment 1 had said "possibly FIXED WALL" there);
+CRITICAL PATCH at tied 1.10, 1.15 and 1.20 and at untied 1.40 is **not scored** (RISES AGAIN). The owner's, CRITICAL
+PATCH with a small patch as her lean: **not scored** at tied 1.10 to 1.20 and untied 1.40, where the shape before
+the wrap is a critical patch, of 5, 3 and 2 columns under the tie; **fails by the letter** at tied 1.25 and 1.40
+(FIXED WALL). NO FINITE PATCH is read nowhere.
+
+**The second reading of "grows", reported.** For patches of 2 to 8 columns the cheapest single switch out of the
+patch state costs 9.6, 8.8 to 10.4, 6.4 to 8.0 and 4.0 under the tie at λ = 1.10 to 1.25 (it is downhill by 22.4
+at 1.40), and 6.0 to 11.2 untied. At λ = 1.10 to 1.20 that is well under the bare slab's cheapest move (30.4, 21.6,
+12.8; O106): the edge of an existing patch moves more easily than the slab does. A whole step from k to k + 1 is
+2k + 1 switches, so these single moves are not comparable with ΔH(k + 1) − ΔH(k) in the way Amendment 2 proposed.
+Which of them extend a patch, and what the barrier is along a path of single switches, is not computed.
+
+**What it says.** Along this construction the barrier does not depend on the size of the sheet: the same exact
+quadratic at L = 8, 12 and 16. Under the owner's tie a finite patch exists at every λ computed, of 5.5, 3.3, 2.2
+and 1.5 columns with barriers of 145, 77, 45 and 27 for λ = 1.10 to 1.25, against flat space's 64. Untied the
+barrier is 608 to 225 over the same λ, and the patch does not fit the sheet. The branch-ending word, NO FINITE
+PATCH, does not appear. *Ours, unverified:* these barriers are why the slab stayed shut in T56's baths at λ ≤ 1.20;
+at 1.25, where the barrier is lowest, it broke instead (O115). The construction is an upper bound along one wiring
+(Amendment 2, Disclosure 1), and a lower path is not excluded.
+
+**Owed.** T54 bears on whether a branch is abandoned, so a fresh read-only reviewer checks the seam's construction
+and the fit before anything is built on these numbers (rule 12). And one repair that is the owner's to make:
+whether the verdict word should be read only over patches that do not meet their own image. Proposed, not enacted.
+
 ---
 
 ## T55 (DRAFT, 2026-10-09, 05:12 ET by the clock, before any computation). What are the pieces T51 leaves that no cooling removes? The pieces of two and eight points read from their wiring, exact (paper 2; piece 7; ASSUMPTIONS O104; VISION Update 46)
