@@ -1525,6 +1525,25 @@ has used for the two-direction change since Update 8.
   Whether T56's held-out stage runs (ours: no; PREREGISTRATION T56, amendment). (4) How she wants piece 1 worded
   now that the product is a tube six around, and whether the next test there is what makes it widen.
 
+Update 55 (2026-10-11): **DECISION (the author's, "adopt"): two lanes, three rules changed, three added.** Why this
+page changes: outside feedback on the process, which she passed on, said that the rules protect claims well and tax
+looking: after a failed prediction a new idea had to wait for four written answers (rule 11), new ideas went to a
+parked list by default (rule 9), every sentence on every page had to say its kind (rule 10), and each failure added
+a rule while nothing ever removed one. Checked against the record, the diagnosis holds, with two corrections: no
+idea of hers actually waited on rule 11 or was parked by rule 9 in recent weeks, and the heavier costs were each
+result being written in seven to nine places and clock times kept to the minute. Her word on the proposal: "adopt".
+
+- **Kept as they were**, by the feedback's list and hers: reproduce before extending, pre-registration, append-only
+  results, the assumption register, "a close number is not a result", held-out sizes, prior-work notes.
+- **Changed and added.** The rule text is in `CLAUDE.md` (rules 9, 10, 11 and 16 to 18) and is not repeated here: a
+  sandbox for looking, which can kill a claim but never support one, never opens unread registered results, and
+  promotes only onto fresh data; ideas start in a notebook and are tried at once; kinds of statement are labeled on
+  what outside readers see; one question, not four, before a replacement is promoted; one fact, one home; a review
+  of the rules each month, the first in `docs/RULES_REVIEW.md`.
+- **What does not change.** S1 to S5 and the claims. A new knob still needs her dated decision here. Nothing already
+  scored is rescored.
+- **From this update on** this page records decisions only. Her ideas go to `sandbox/NOTEBOOK.md` in her words.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

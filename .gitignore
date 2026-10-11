@@ -27,3 +27,6 @@ docs/outreach/
 .env
 .env.*
 *.partial.resumed
+
+# Sandbox output is scratch (CLAUDE.md rule 16); the log and the notebook are tracked.
+sandbox/out/

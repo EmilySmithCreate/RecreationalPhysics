@@ -23,6 +23,8 @@ endorsement logistics below are not evidence of scientific review. T38 is alread
 its missing detector crossings must not be treated as unconverted survivors. Outstanding
 work is the mechanism, not another claim of universal exponential conversion waits.
 
+**The process changed on 11 October 2026 (VISION Update 55). Read `CLAUDE.md` rules 9 to 11 and 16 to 18 before recording anything: a result is written once (its Reading, and one O entry if it changes what is known); looking happens in `sandbox/`; next VISION number is Update 56.**
+
 **Addendum, 11 October 2026 (the same branch; written 09:50 ET by the clock). Read this first.**
 - **What the tube opens into is a tube** (ASSUMPTIONS O116; VISION Update 54; CLAUDE.md, "Added 2026-10-11").
   Read from the saved wiring, 9,208 of the 9,215 exactly flat end states of T8, T23, T24 and T60 stage 1 are the
