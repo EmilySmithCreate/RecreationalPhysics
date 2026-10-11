@@ -1481,6 +1481,50 @@ it was just that I'm still interested in this space even if we couldn't see this
 - *Ours:* the difference between her claim (existence and fertility) and a mechanism claim (every size) is still
   worth saying wherever a verdict is quoted; it is a description of what each needs, not a rule for scoring.
 
+Update 54 (2026-10-11, 09:43 ET by the clock): **T56 and T57 read: under the author's tie the slab does not open in
+a warm bath and concentrated energy still only breaks flat space; and, read from the wiring, what the tube opens
+into in two directions is a tube six steps around, not a sheet.** Why this page changes: two pre-registered tests
+carrying her predictions on pieces 5 and 11 were read this morning and both predictions failed (ASSUMPTIONS O114,
+O115); and a reading of saved end states (O116, exploratory, exact for each graph) corrects the picture this page
+has used for the two-direction change since Update 8.
+
+- **T56 (piece 5; the slab and the rod in a warm bath under "all at the last"): no cell opens.** Her prediction
+  (the slab opens into one flat space) fails at every curling cost; ours (a window at 1.15 and 1.20) fails too.
+  The slab stays where its wall is high and breaks where it is low, and the untied control shows no difference.
+  Two reasons, separated by the data: the barrier to an opening that spreads is a patch several moves big (T54's
+  exact numbers), far above the single-move wall our prediction used; and the tie as written charges a damaged
+  point nothing, so it rewards breaking.
+- **T57 (piece 11; her fold under the tie): MELTS, tied and untied.** Given up to twice the price of curling a
+  whole direction, flat space ends half broken and not curled at all: 582 of 640 replicas MELTED, 58 HEALED, none
+  FOLDED. Her prediction (RE-CURLS) fails; ours holds.
+- **Rule 11.** The four answers for both are in O114 and O115. In the fixed form. *Piece 5.* Previous claim (hers,
+  Update 47): with the tie "all at the last", her slab opens into one flat space from warmth. Failed because: the
+  barrier is a patch, not a move, and the table rewards breaking (O115). Replacement: **hers to propose; none is
+  written here.** New falsification test: T54 to its held-out size under the tie, and the exact price of breaking
+  against opening under the table. *Piece 11.* Previous claim (hers, Update 51): too much concentrated energy has
+  nowhere to go but into curling space. Failed because: it goes into broken squares, with the tie as without
+  (O114). Replacement: **hers to propose.** New falsification test: the exact price of the smallest curled patch
+  in flat space against the same number of broken points, under each table.
+- **What the tube opens into (O116).** *Exact for each graph; the reading is exploratory.* Of 9,215 exactly flat
+  end states saved by the four maps of paper 1, 9,208 are the same tube with its seam shifted by two: six steps
+  around where the tube was four, the least a flat torus can be, at every size from 64 to 192 points. So in these
+  runs the small direction stops being counted as curled and does not grow. The wall, the wait, the front, the
+  exact release and every registered verdict stand: they are energies and counts. **What is corrected is the
+  picture**: "opens out ... into one connected, perfectly flat sheet" (Update 8), "a tube opening into a sheet"
+  (Update 13), and any reading of Update 7's ladder as saying how many directions are *large*. The ladder counts,
+  at each point, the pairs of links that close no square. It is a local count. This is the fifth shape named from
+  a count and wrong (CLAUDE.md). Where the released energy was kept in place (T48), some end states did widen;
+  that is the lead.
+- **What this does to claim 4 (ours).** Its measured content in this toy is: a specific stable-for-now
+  arrangement, a wall, a sharp change that spreads, an exact release. Not measured, and in the cold runs not
+  true: that a small direction becomes large. The illustration under "What X is" ("a tiny direction becoming
+  large", "the tube opens") is the author's and is not changed here; what the toy has shown for it is narrower
+  than this page said.
+- **Asked of the author.** (1) Her replacement for piece 5's mechanism under a tie, or a table that charges
+  damage: a new table is a new knob and needs her dated decision (S1). (2) Her replacement for piece 11. (3)
+  Whether T56's held-out stage runs (ours: no; PREREGISTRATION T56, amendment). (4) How she wants piece 1 worded
+  now that the product is a tube six around, and whether the next test there is what makes it widen.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

@@ -23,6 +23,34 @@ endorsement logistics below are not evidence of scientific review. T38 is alread
 its missing detector crossings must not be treated as unconverted survivors. Outstanding
 work is the mechanism, not another claim of universal exponential conversion waits.
 
+**Addendum, 11 October 2026 (the same branch; written 09:50 ET by the clock). Read this first.**
+- **What the tube opens into is a tube** (ASSUMPTIONS O116; VISION Update 54; CLAUDE.md, "Added 2026-10-11").
+  Read from the saved wiring, 9,208 of the 9,215 exactly flat end states of T8, T23, T24 and T60 stage 1 are the
+  4 × L tube with its seam shifted by two: six steps around where the tube was four, the least a flat torus can
+  be, at every size from 64 to 192. Every verdict stands (they are energies and counts). The picture "opens into a
+  sheet" does not. **Paper 1 does not say this yet and must, before anyone is asked to read it.** The readers are
+  `scripts/read_endpoint_width.py` and `scripts/read_open_shells.py` (exploratory; `tests/test_read_shapes.py`).
+- **T57 read (O114): MELTS in all four groups**, with the owner's tie as without; 582 of 640 replicas MELTED, 58
+  HEALED, none FOLDED. Her RE-CURLS fails; ours holds. **T56 stage 1 read (O115): no cell opens.** The slab STAYS
+  at λ = 1.10 to 1.20 and ADVANCES ONLY at 1.25; the rod STAYS; the control NO DIFFERENCE. Her prediction fails,
+  and ours. The tie as written charges a damaged point nothing, so the tied slab breaks; and the barrier is T54's
+  patch, not the single move. Rule 11's four answers are in the O entries; the replacements are hers. T56's
+  held-out prediction is "none" and its stage 2 is not queued (ours: do not run it as registered).
+- **T60 stage 2.** Her prediction for N = 288 was recorded at 09:14 ET (as ours), before anything was fetched.
+  Six of the seven cells are accepted into `results/` and **unread**; `t60_lam135_n288` was still running on
+  Batch at 09:27 ET. The analyzer registered before the run reads stage 2 only when all seven are in: when the
+  last lands, fetch, accept, `python scripts/analyse_t60.py`, record the reading. Do not open the N = 288 files
+  before that (`scripts/read_endpoint_width.py` leaves them out for this reason).
+- **The red-team brief** for a fresh outside reviewer (rule 12) is
+  `docs/papers/curled_torus/red_team_brief_2026-10-11.md`. It gives the questions and where things are, not the
+  conclusions; the owner hands it over. Paper 1's sentence on the fourth map and the reader request to the
+  model's author wait for the report.
+- **The drafts of papers 5, 6 and 12** (`docs/papers/six_links/`, `fertile_window/`, `black_hole/`) were brought
+  up to date and built. The owner has not read them.
+- **A test that had been failing on GitHub since 10 October** (the entropy-action fit read every saved graph, so
+  T60's end states moved its recorded number) is fixed: the script reads only the runs O111 was computed on.
+- **Next record numbers:** ASSUMPTIONS **O117**, VISION **Update 55**, PREREGISTRATION **T61**.
+
 **Addendum, 10 October 2026 (branch `claude/paper1-plain-language-2026-10-10`, cut from the review
 branch; written 07:20 ET by the clock).**
 - **The plain-language edition of paper 1** is `papers/curled_torus/paper_plain_language.pdf` (source `.tex`,
@@ -190,7 +218,7 @@ branch; written 07:20 ET by the clock).**
     at `main`, which lacks this branch's files until it is merged.
   - *Uncommitted when this was written:* the two papers, the web pages and their scripts, awaiting her review.
     T58 and its record are committed.
-- **Next record numbers:** ASSUMPTIONS **O114**, VISION **Update 54**, PREREGISTRATION **T61**.
+- **Next record numbers (superseded by the 11 October addendum):** ASSUMPTIONS **O114**, VISION **Update 54**, PREREGISTRATION **T61**.
 
 ## 0. The first ten minutes (as of 9 October 2026)
 

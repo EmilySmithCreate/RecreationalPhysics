@@ -3263,6 +3263,120 @@ to the owner's hypothesis or a new simulation result.
     per sweep at every length while a front needs more sweeps to cross.
   - **Rule 11.** No registered prediction failed.
 
+- **O114 T57, read: under the owner's tie too, concentrated energy breaks flat six-link space and curls none of
+  it (MELTS in all four groups; 11 October 2026, read at 09:27 ET by the clock). Measured, pre-registered; the
+  owner's prediction fails and ours holds.** (PREREGISTRATION T57 and its "Reading"; `scripts/analyse_t57.py`;
+  `results/t57_*`; 16 Batch jobs, 640 replicas; energy conserved to 5 × 10⁻¹². Six links: VISION Update 24's
+  caveat.)
+  - **Measured.** Flat 6 × 6 × 6 and 8 × 8 × 8 space, sealed, given 128 to 3,200 units packed into one point's
+    store or spread through a bath, under "all at the last" and untied, at λ = 1.10 and 1.25. Of 640 replicas 582
+    read MELTED, 58 HEALED and none FOLDED. No replica reached one direction's worth of curled points; the most
+    points with fewer open directions than flat space, at any reading of any replica, is 25 untied and 15 tied.
+    The verdict is MELTS in the two tied groups and in the two untied controls.
+  - **Where the energy went.** Into broken squares. Up to about one direction's worth a replica ends with one or
+    a few scars (a median of 12 damaged points, the swapped pair of O82). Packed at one direction's worth and at
+    twice it, a fifth and then half of the space is damaged at the end (medians of 97 to 107 and 255 to 263 of
+    512 points), the same with the tie as without. Spread through a bath the same energies leave 12 to 79.
+  - **Rule 11, the owner's failed RE-CURLS (the first use on piece 11).** (1) *Does it falsify the mechanism as
+    stated?* Her mechanism (Update 51): with too much energy in one place "the only mechanism it can go to is
+    curling macrodimensional space itself". In this family it has another place to go and goes there: breaking
+    squares. For this toy with this tie, yes. (2) *Which?* Not the size or the amount: twice the price of curling
+    a whole direction was delivered at both sizes. Partly the rule as written: the tie's table charges a damaged
+    point nothing (disclosed in the registration), so under the tie breaking a point is cheaper than curling it
+    by 2a. Mostly the mechanism: no single move out of flat space adds a square, a fold needs many switches in
+    step (T54's patch), and nothing in the toy gathers energy or steers it. (3) *The cheaper test.* Exact, no run:
+    the price of the smallest curled patch in flat space against the price of the same number of damaged points,
+    untied, under this table, and under a table that charges damage as much as curling. If curling is dearer at
+    every patch size under all three, random energy never folds this space and no run is needed. (4) *What would
+    make us abandon the branch.* That count coming out against curling under every table; or, with a table that
+    charges damage, a rerun that still only breaks. Then a fold from concentrated energy is abandoned in this
+    family, and piece 11 waits for something that gathers energy (a carrier for a pull, Update 40) or for another
+    model. **The replacement is hers to propose; none is written here.**
+  - **No test of the fold has found one**: O20, T21, T26 and T27 in two directions; T34, T42 and this one in
+    three; T47 part B in four.
+  - *A label corrected.* The analyzer's unscored line "largest folded" printed `largest_flat`, the largest piece
+    of flat points; the runner writes no folded-piece column. The label is corrected and no rule is touched.
+
+- **O115 T56, stage 1, read: under the owner's tie a warm bath does not open the slab, at any curling cost, bath or
+  size run; the tie as written breaks the slab instead (11 October 2026, read at 09:28 ET by the clock). Measured,
+  pre-registered; the owner's prediction fails, and so does ours.** (PREREGISTRATION T56 and its "Reading";
+  `scripts/analyse_t56.py`; `results/t56_*`; 68 Batch jobs, 544 replicas, named points. Six links: Update 24's
+  caveat.)
+  - **Measured.** The window: the slab STAYS at λ = 1.10, 1.15 and 1.20 and ADVANCES ONLY at 1.25, at both sizes;
+    the rod STAYS at every λ and both lengths; no cell of 64 has an OPENS majority. The control: NO DIFFERENCE
+    (tied and untied both STAY). SEVERAL for both shapes. Of 256 tied slab replicas 2 read OPENS; of 256 tied rod
+    replicas 17, all at λ = 1.20 or 1.25 in baths of g = 2.0 to 3.0, beside damage.
+  - **Described.** The tied slab is damaged where the untied one is untouched (5 to 10 % of points at λ = 1.20,
+    an eighth to three tenths at 1.25, none untied), which is the asymmetry the registration disclosed: the table
+    charges a damaged point nothing. The tied rod no longer opens its first direction in the cooler baths, since
+    under this tie that opening releases nothing. No replica that reads OPENS ended flat (0.74 to 2.6 per point
+    left).
+  - **Rule 11, the owner's failed OPENS IN A WINDOW (the third use on piece 5).** (1) *Does it falsify the
+    mechanism as stated?* The claim (Update 47; O106): with "all at the last" the slab is stuck behind a low wall
+    and a bath opens it into one flat space while sparing the space. With this table, at these sizes, it fails
+    at every λ: stuck where the wall is high, broken where it is low. (2) *Which?* Two things, and the data
+    separate them. *The barrier is not the single move.* T54's exact numbers at its smallest size (Update 49) put
+    the patch that grows at about 2, 3.3 and 5.5 columns, with barriers of 45, 77 and 145, at λ = 1.20, 1.15 and
+    1.10. The factor e^(−barrier/g) at g = 3.0 is then about 3 × 10⁻⁷, 10⁻¹¹ and 10⁻²¹, against 10⁻⁹ for flat
+    space's own 64. Our prediction read the single-move walls of O106 (13 to 30) as the barrier, against O106's
+    own caution, and that is why it failed. *The table rewards breaking.* At λ = 1.25, where the barrier is
+    lowest (27), the slab moved in every bath and went to damage, not to flat. Not size: the two sizes agree. Not
+    the chain or the census: they are T53's, tested draw for draw. (3) *The cheaper test.* T54 to its held-out
+    size under the tie (exact, no run), which says whether any bath that spares flat space can cross the patch's
+    barrier; and the exact price of the cheapest breaking move out of the slab under the table against the
+    cheapest opening one. (4) *What would make us abandon the branch.* T54 reading NO FINITE PATCH, or a barrier
+    above flat space's at every λ where the slab is stuck; or a table that charges damage, chosen by the owner
+    and priced exactly first, that still does not open the slab. **The replacement is hers to propose; none is
+    written here.**
+  - **The size claim.** By the registered rule the prediction for the held-out sizes is "none". Stage 2 is not
+    queued (PREREGISTRATION T56, amendment of 11 October): ours is that it should not be run as registered. T56
+    therefore makes no claim about size.
+
+- **O116 EXPLORATORY, read from saved wirings (11 October 2026, from 09:30 ET by the clock): what a tube opens
+  into is a tube. The flat end states of the two-direction maps are the same tube with its seam shifted by two,
+  six steps around where the tube was four, in 9,208 of 9,215; and in three directions "OPENS" by the count is
+  sometimes the rod glued together differently. The fifth shape named from a count.**
+  (`scripts/read_endpoint_width.py`, `scripts/read_open_shells.py`, `tests/test_read_shapes.py`; reading only; no
+  run; no verdict changes. Each graph's width is exact; which graphs were read and how they are grouped is ours
+  and was not registered.)
+  - **Why it was read.** One rod of T56 ended with every point at d = 3, none damaged, and 1.2 per point above
+    flat space. d is a count at a point, and a connected piece of points at d = D says nothing about how wide a
+    space is. Paper 1 says as much ("growth of both geometric periods has not been measured"; its scope page of
+    9 October). Nobody had measured it.
+  - **The measure.** On a flat torus (every edge on exactly two squares) the number of points within r steps of
+    a point equals the endless sheet's 2r² + 2r + 1 until 2r reaches the length of the shortest loop that cannot
+    be shrunk to a point: the torus's width. Exact. The tube's width is 4; a flat torus needs at least 6.
+  - **Two directions, exact per graph.** Among the saved end states of T8, T23, T24 and T60 stage 1 (N = 64 to
+    192, λ = 1.05 to 1.45), 9,215 are exactly flat. **9,208 of them have width 6**, the least there is: all 2,276
+    at N = 144 and all 2,183 at N = 192. Seven are wider (six of width 8 at N = 64, one of width 12 at N = 96).
+    Three read differently from different points, so are not plain tori, and are not read further. Sampled and
+    compared with a graph built for the purpose, 41 of 41 at N = 64 and 96 are, point for point (networkx
+    isomorphism), **the 4 × L tube with its seam shifted by two**: four points to a ring as before, but a walk
+    round the ring arrives two steps along the tube, so no four steps close and the shortest way round is six.
+    At N = 144 and 192, 38 of 39 sampled have that graph's shells. It has eight points at each distance, as the
+    tube has: one long direction before, one long direction after.
+  - **What stands, and what does not.** The wall, the wait, the front, the full release (H = 0 exactly) and every
+    registered verdict are untouched: they are counts and energies, and the energy cannot tell a torus six round
+    from a wide one. **What does not stand is the picture**: "the tube opens into a sheet", "one large direction
+    becomes two" (VISION Updates 8 and 13; TASKS T12; the dimension ladder of Update 7 read as a statement about
+    extent). In these runs the small direction stops being counted as curled and does not grow, and the width
+    does not grow with N.
+  - **Where it did widen.** In T48's two-direction control, sealed, with the released energy kept where it is
+    released: of 15 replicas reading OPENS at λ = 1.25, 9 have the tube's shells and 6 are wider (largest shell
+    18 to 20, against the tube's 8 and 24 for a 12 × 16 torus); at λ = 1.40, 5 of 5 are wider. In three
+    directions, of the replicas reading OPENS: T48's two-curled torus at λ = 1.40, 4 of 5 nearer flat space's
+    shells than the rod's (so O91's "one space in 5 of 16" is 4 by shape); T53, 7 of 9; T56 under the tie, 9 of
+    17. The two slab replicas of T56 that read OPENS are a little wider than the slab (largest shell 60 and 63
+    against 52); no flat torus of 256 points with every side at least 6 exists to compare them with.
+  - *Ours, unverified.* Every flat torus has energy zero, and a cold flat torus accepts no move (O20 to O22), so
+    the chain stops at the first flat state it reaches, and the nearest one to the tube is the tube twisted by
+    two. Widening would need heat that stays (as in T48) or a drive the energy does not contain. Whether the two
+    possible twists, one each way, meeting along a tube that opened from two places, is what leaves a knot (O107)
+    is a question this raises and nothing here answers.
+  - **Owed.** Paper 1 must say what its end states are before it is shown to anyone, and the plain-language
+    edition and the programme page with it. The registered runs that read OPENS, ONE SPACE or FLAT keep their
+    labels; a width or shell line is to be written into any new registration that uses those words.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

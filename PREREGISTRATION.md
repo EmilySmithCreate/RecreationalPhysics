@@ -3912,6 +3912,75 @@ the control says THE TIE MADE THE DIFFERENCE, a fresh read-only review (CLAUDE.m
 implementation and the reading, and its report becomes an O entry.
 
 
+### Reading of T56, stage 1, 2026-10-11, 09:28 ET by the clock (`python scripts/analyse_t56.py`)
+
+All 68 stage-1 runs were fetched on 11 October and passed `scripts/accept_inbox.py` (the recorded config equal to
+the committed one) before anything was read. The owner's prediction and ours had been on the record since
+9 October.
+
+**No cell has an OPENS majority: not the slab, not the rod, at any λ, any bath or either size. The owner's
+prediction (the slab OPENS IN A WINDOW into ONE SPACE) fails at every λ. Ours fails as well: the window we expected
+at λ = 1.15 and 1.20 is not there, and the control reads NO DIFFERENCE where we said the tie would make it.**
+
+The window, tied, by the registered rule:
+
+| | λ = 1.10 | 1.15 | 1.20 | 1.25 |
+|---|---|---|---|---|
+| slab, L = 8 (256 points) | STAYS | STAYS | STAYS | ADVANCES ONLY |
+| slab, L = 12 (576) | STAYS | STAYS | STAYS | ADVANCES ONLY |
+| rod, L = 18 (288) | STAYS | STAYS | STAYS | STAYS |
+| rod, L = 36 (576) | STAYS | STAYS | STAYS | STAYS |
+
+- **The control** (slab, λ = 1.20, g = 2.0 and 2.5, both sizes): the tied cell STAYS and the untied cell STAYS in
+  all four pairs. **NO DIFFERENCE.**
+- **One place or several: SEVERAL** for the slab and for the rod.
+- **Replicas, by T48's rule from the last reading.** Slab, tied, 256: 212 STAYS, 32 ADVANCES, 10 DAMAGED, 2 OPENS.
+  Rod, tied, 256: 203 STAYS, 3 ADVANCES, 33 DAMAGED, 17 OPENS. Slab, untied, 32: 32 STAYS.
+- **Where anything opened.** The rod at λ = 1.20 and 1.25 in the warmer baths, never in a majority. At L = 18:
+  1 of 8 at (1.20, g = 2.5); 2 of 8 at (1.20, 3.0), with 5 damaged; 1 of 8 at (1.25, 2.0); 2 of 8 at (1.25, 2.5),
+  with 6 damaged; 4 of 8 at (1.25, 3.0), with 4 damaged. At L = 36: 2 of 8 at (1.20, 3.0); 1 of 8 at (1.25, 2.5),
+  with 7 damaged; 4 of 8 at (1.25, 3.0), with 4 damaged. Those cells read STAYS, DAMAGED or MIXED. By the window
+  rule, which asks for an ADVANCES majority at some g or a DAMAGED majority at every g where anything moved, the
+  rod's windows read STAYS.
+
+**Predictions.** The owner's, the slab OPENS IN A WINDOW with ONE SPACE at every λ and both sizes: **fails at all
+eight.** Ours for the slab: a window at λ = 1.15 and 1.20 **fails** (STAYS at both, both sizes); OPENS at every g
+at 1.25 **fails** (ADVANCES ONLY; one replica of 64 opened); ADVANCES ONLY or DAMAGED at 1.10 **fails by the
+letter** (STAYS: nothing moved). Ours for the rod: ADVANCES ONLY at 1.10 and 1.15 **fails** (STAYS); OPENS IN A
+WINDOW at 1.20 and 1.25 at g = 2.5 to 3.0 with damage beside it **fails by the letter** (the openings and the
+damage are there; no majority is). The control, THE TIE MADE THE DIFFERENCE: **fails**. SEVERAL for both:
+**holds**.
+
+**Described, not scored.**
+- **Under the tie the slab breaks where the untied slab is untouched.** At λ = 1.20 the tied slab ends with 5 to
+  10 % of its points damaged on average at g = 2.0 and 2.5 (25 % in one replica), and the untied control with
+  none in 32 replicas. At λ = 1.25 every tied slab replica holds between an eighth and three tenths of its points
+  damaged, at every bath; at the coldest its energy is down only from 3.0 to about 2.8 per point. The
+  registration named the cause before the run: the table charges a damaged point nothing, so a point of the slab
+  is relieved of its 2a by breaking as well as by opening.
+- **Under the tie the rod no longer opens its first direction in the cooler baths**, where untied it did in every
+  bath (T53). Under "all at the last" the first opening releases nothing.
+- **No replica that reads OPENS ended flat.** Their energy at the end is 0.74 to 2.6 per point, against 0 for flat
+  space and 2.4 or 3.0 at the start.
+- **OPENS by the count is not always an opening.** One rod (L = 18, λ = 1.20, g = 2.5, replica 2) ended with every
+  point at d = 3, none damaged, and exactly 1.2 per point above flat. Read from its wiring the same morning
+  (exploratory; ASSUMPTIONS O116), it is still a rod: it has 32 points at each distance, as the starting torus
+  has, where a flat torus of 288 points has up to 60. By that reading 8 of the 17 rod replicas that read OPENS
+  are nearer the rod's shape and 9 nearer flat space's.
+
+**The held-out sizes (rule 14).** No (geometry, λ) has an OPENS majority at either stage-1 size, so the rule fixed
+above gives the prediction "none" for the slab at L = 16 and the rod at L = 72, at every λ.
+
+### Amendment to T56, 2026-10-11, 09:43 ET by the clock: the held-out prediction is "none", and stage 2 is not queued
+
+By the rule fixed in the registration, the prediction for the held-out sizes is that no g has an OPENS majority,
+for the slab at L = 16 and the rod at L = 72, at every λ. **Stage 2 (32 jobs at 1,024 and 1,152 points) has not
+been queued.** Ours: it should not be run as registered. It would test whether something that did not happen at
+two sizes also does not happen at a third, with the longest jobs this project runs, and what O88 and T53 found
+about size (a larger space is damaged at a lower coupling) points the same way. Unrun, T56 makes no claim about
+size, and nothing written from it may say that the slab stays shut "at every size". The owner may overrule this in
+a dated note; the configs are written by `python scripts/make_t56_configs.py --held-out`.
+
 ---
 
 ## T57. Does too much concentrated energy curl flat six-link space under the owner's tie? T34's protocol, tied, with controls (piece 11; VISION Updates 47 and 51; ASSUMPTIONS O69, O82, O106; written 2026-10-09, 07:22 ET by the clock, before any run)
@@ -3984,6 +4053,41 @@ Named (the table tie runs with named points only). T42's interchangeable result 
 
 That a black hole does this: the toy has no pull, so nothing in it gathers energy; the energy is placed by hand. Anything
 about gravity. Which direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
+
+### Reading of T57, 2026-10-11, 09:27 ET by the clock (`python scripts/analyse_t57.py`)
+
+All 16 runs were fetched on 11 October and passed `scripts/accept_inbox.py` (the recorded config equal to the
+committed one; the largest drift in the conserved total 5 × 10⁻¹²) before anything was read. The owner's
+prediction and ours had been on the record since 9 October.
+
+**MELTS in all four groups: tied at λ = 1.10 and 1.25, and untied at both. The owner's prediction (RE-CURLS in the
+tied groups at the largest energies) fails. Ours (MELTS at 1.25, MELTS or HEALS at 1.10, tied and untied alike, no
+FOLDED replica, no ONE DIRECTION) holds.**
+
+| group | cells MELTED, HEALED, MIXED (of 20) | replicas MELTED, HEALED, FOLDED (of 160) | ONE DIRECTION, CASCADE | most points at d < 3: at any reading, at the end |
+|---|---|---|---|---|
+| tied, λ = 1.10 | 20, 0, 0 | 145, 15, 0 | 0, 0 | 15, 4 |
+| tied, λ = 1.25 | 20, 0, 0 | 147, 13, 0 | 0, 0 | 11, 5 |
+| untied, λ = 1.10 | 18, 1, 1 | 140, 20, 0 | 0, 0 | 25, 16 |
+| untied, λ = 1.25 | 20, 0, 0 | 150, 10, 0 | 0, 0 | 14, 6 |
+
+**Described, not scored.**
+- **Where the energy went: into broken squares.** At most energies a replica ends with a median of 12 damaged
+  points (d > 3), one swapped pair of links, the scar of O82. Packed into one point's store at the two largest
+  energies (one direction's worth under the tie, and twice it) the damage is large: at N = 512 a median of 97 to
+  107 damaged points at 1,600 units and 255 to 263 at 3,200, half the space, in every group; at N = 216, 101 to
+  116 at 1,360. Spread through a bath, the largest energies leave a median of 12 to 79.
+- **The tie made no visible difference to the damage** (N = 512, packed, 3,200 units, λ = 1.25: a median of 261
+  damaged points tied against 262.5 untied), and no more points curled with it than without.
+- **The registered line "the largest folded piece" cannot be given**: the runner writes no such column. The
+  analyzer's unscored line labeled "largest folded" printed `largest_flat`, the largest connected piece of points
+  at d = 3 (204 of 216 where there is one scar). The label was corrected today; no rule is touched. What the
+  census does say: no replica had more than 25 points at d < 3 at any reading.
+- T34's caution stands (O66, O82): MELTED is the rule's word for at least four damaged points and more of them
+  than curled ones. At the smaller energies that is one flickering scar. At the largest it is half the space.
+
+**What it says.** Given up to twice the price of curling a whole direction, in one place, with the tie that makes
+the first fold pay for all three, flat space broke and did not curl. The energy had somewhere else to go.
 
 ## T58. What were the three long waits doing? T38's cell at λ = 1.30, N = 64 replayed from its seeds, with the detector's threshold and what it cannot see recorded (paper 1; piece 2; the owner's idea of 10 October; ASSUMPTIONS O108, O109, O110; written 2026-10-10, 07:47 ET by the clock, before any run)
 

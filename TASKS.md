@@ -659,10 +659,54 @@ is the slab). Item 1 above proceeds on her prediction (SEAM). New, ahead of item
   space, sealed, concentrated energy) tied and untied, λ = 1.10 and 1.25, energies up to twice one direction's worth;
   her prediction RE-CURLS, ours MELTS or HEALS; 16 Batch jobs launched 2026-10-09 (`cloud/queue/2026-10-09_t57.txt`).
   To read: `t57_*` in `cloud/fetch/request.txt`, accept, `python scripts/analyse_t57.py`.
+  *Read 2026-10-11, 09:27 ET (O114): MELTS in all four groups, tied and untied; 582 of 640 replicas MELTED, 58
+  HEALED, none FOLDED; her RE-CURLS fails and ours holds.*
+- *T56 stage 1 read 2026-10-11, 09:28 ET (O115): no cell has an OPENS majority; the slab STAYS at λ = 1.10 to 1.20
+  and ADVANCES ONLY at 1.25; the rod STAYS; the control NO DIFFERENCE; SEVERAL. Her prediction fails, and ours. The
+  held-out prediction is "none" and stage 2 is not queued (PREREGISTRATION T56, amendment of 11 October; ours: do
+  not run it as registered).*
 
 Owed by the owner: her prediction for T56 once its design is written; her tied T54 prediction (inferred CRITICAL
 PATCH); whether the fair clock stays for new kinetic runs after P1's miss; the open items of Update 44. Her replacement
 for piece 5's mechanism is now the tie, by her choice; T56 tests it.
+
+## 11 October: T56 and T57 read; what the tube opens into; what follows  ◑
+
+**Added 2026-10-11** (ASSUMPTIONS O114 to O116; VISION Update 54). Both of the owner's predictions failed (T56: the
+slab opens into one flat space; T57: too much energy re-curls), and ours failed on T56 too. Read from the wiring,
+the flat end states of paper 1's maps are the tube with its seam shifted by two: six around, and no wider (O116).
+The replacements for pieces 5 and 11 are hers. In order:
+
+1. **T60 stage 2, the held-out size.** Her prediction for N = 288 is recorded (PREREGISTRATION T60, 11 October,
+   09:14 ET: as ours). Six of seven cells are accepted and unread; `t60_lam135_n288` was still running at 09:27 ET
+   (started 23:17 ET on 10 October). When it lands: push a comment line to `cloud/fetch/request.txt`,
+   `python scripts/accept_inbox.py --move`, commit, `python scripts/analyse_t60.py`, the reading, an O entry. The
+   registered analyzer reads stage 2 only when all seven cells are in. Do not work round it.
+2. **Paper 1 says what its end states are** (O116): both editions, the supplement, `measurement_scope.md` and the
+   blog pages, before it is shown to anyone. The wording is the owner's to settle (Update 54, item 4).
+3. **The red-team pass (rule 12)** by a fresh read-only reviewer. The brief is
+   `docs/papers/curled_torus/red_team_brief_2026-10-11.md`; the owner gives it to the reviewer; the report becomes
+   an O entry with what it found and what it got wrong. Only after it: paper 1's sentence on the fourth map, and
+   the reader request to the model's author.
+4. **The exact prices rule 11 names** (no run): the cheapest breaking move out of the slab under the table against
+   the cheapest opening one (O115); the smallest curled patch in flat space against the same number of broken
+   points, untied, under the table, and under a table that charges damage (O114).
+5. **T54 to its held-out size.** Stage 1 (L = 8, 12) is computed; its files sit untracked in the main checkout's
+   `results/` and are not on this branch. Bring them over by name, read stage 1, write the L = 16 prediction as a
+   dated amendment, then L = 16.
+6. **What widens a flat torus** (the lead from T48: 6 of 15 sealed conversions with the heat kept in place are
+   wider). To be pre-registered, with a width line in the registration.
+7. **Whether opposite twists meeting leave a knot** (O116; ours, unverified): read the saved T51 sheets for the
+   twist on either side of each knot. Exploratory unless registered.
+8. **The drafts of papers 5, 6 and 12** were brought up to date on 11 October (`docs/papers/six_links/`,
+   `fertile_window/`, `black_hole/`, each with a built PDF). The owner has not read them. Paper 6 carries a marked
+   gap for T60 stage 2. The three were first rewritten by assistant agents against the record and then checked and
+   patched; their reports listed places where the record disagrees with itself (the two-curled window 1.5 against
+   O100's 1.45; the eight-link three-curled window; "joins" in T30's reading against O85), which are not yet
+   reconciled in `series_plan.md`'s (D, λ) table.
+
+Owed by the owner: her replacements for pieces 5 and 11, or a table that charges damage (a new knob, S1); whether
+T56's held-out stage runs (ours: no); how piece 1 is to be worded; the open items of Updates 44 and 52.
 
 ## Later
 
