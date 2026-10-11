@@ -71,8 +71,8 @@ for i, (n, color) in enumerate(((64, BLUE), (96, ORANGE), (144, AQUA), (192, YEL
     assert count == 30, count                      # the caption says thirty decays per size
     bx.bar(np.arange(4) + (i - 1.5) * width, shares, width=width * 0.9, color=color, label="N = %d" % n)
 bx.set_xticks(range(4))
-bx.set_xticklabels(["0", "1\ncurled", "2\nflat", "3"])
-bx.set_xlabel("local dimension d", labelpad=1)
+bx.set_xticklabels(["0", "1", "2", "3"])
+bx.set_xlabel("square-count signature d", labelpad=1)
 bx.set_ylabel("share of vertices")
 bx.set_ylim(0, 0.95)
 bx.set_title("(b) at half conversion", fontsize=9, loc="left")
@@ -80,7 +80,7 @@ bx.legend(frameon=False, fontsize=6.5, loc="upper right", ncol=2, handlelength=1
 
 first, beyond = survival_sets()
 for x, color, label in ((first, BLUE, "first exits (%d)" % len(first)),
-                        (beyond, ORANGE, "decay waits (%d)" % len(beyond))):
+                        (beyond, ORANGE, "selected decay waits (%d)" % len(beyond))):
     x = np.sort(x)
     cx.step(x, 1.0 - np.arange(len(x)) / len(x), where="post", color=color, lw=1.1, label=label)
 grid = np.linspace(0, 9, 100)
@@ -90,7 +90,7 @@ cx.set_xlim(0, 9)                    # the largest rescaled time is 8.6 (T22, la
 cx.set_ylim(1e-3, 1.05)
 cx.set_xlabel("time / mean of its condition", labelpad=1)
 cx.set_ylabel("share still waiting")
-cx.set_title("(c) memoryless", fontsize=9, loc="left")
+cx.set_title("(c) pooled survival", fontsize=9, loc="left")
 cx.legend(frameon=False, fontsize=6.5, loc="upper right", handlelength=1.4)
 fig.tight_layout()
 fig.savefig(out)

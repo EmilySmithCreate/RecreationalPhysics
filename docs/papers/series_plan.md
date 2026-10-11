@@ -15,20 +15,23 @@ not hold. *Designed*: pre-registered or drafted, not yet run. *Idea*: the owner'
 
 **Claim.** In the graph energy of combinatorial quantum gravity with its local term's coefficient raised
 above 1 (not CQG itself, which is λ = 1 only; the author's condition of 24 September), a torus with one
-direction curled is metastable and opens into flat space sharply: a memoryless start, one front, two orders
-side by side, an exact release, a local push of fixed size, one leftover of fixed size.
+direction curled shows activated escape and rapid conversion in counting observables. The initial gap is exact;
+the release subtracts the final energy. A dominant connected component does not prove a unique front,
+and the global seed scan measures escape. About one relic remains in the tested cold sealed boxes.
 
 **Status.** Established at λ = 1.25 (T7, T9, T10, T11); exact results for all λ; the λ map (T8, O38) run and
 written into section V: sharp wherever the torus is stuck (1.05 to 1.35), edge between 1.35 and 1.40, verdict
 inconclusive by the letter for a stated reason (the memoryless-wait criterion was too tight).
 
-**Status, 6 October.** Written and submitted; endorsed by the model's author; on hold at arXiv pending a reader or a
-journal (HANDOFF). Candidates for a revision from the reviews of 6 October are in `curled_torus/v2_changes.md`;
-applying them is the owner's call (VISION Update 44). *(The line first written here, "Missing: only the owner's
-review, then the endorsement request", is superseded.)*
+**Current status, 9 October.** Unpublished reader manuscript, with supplement and reproducibility manifest.
+Submission or endorsement logistics do not imply scientific review. See [measurement scope](measurement_scope.md).
 
 **Draft.** `docs/papers/curled_torus/paper.tex`, `paper.pdf`; review page
-https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR.
+https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR. *Added 10 October:* the plain-language edition,
+`paper_plain_language.pdf`, whose chapters the manuscript's sections now follow, and its interactive companion,
+"The Tube's Curling Ladder", https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8 (source
+`docs/public/curling_ladder_tube.html`). The edition closes by previewing short papers 2 and 5 of the list
+below ("What the burp leaves behind"; "How curled directions open").
 
 ---
 
@@ -328,7 +331,7 @@ measured entries and exact for the walls. Every curled direction costs 4(λ − 
 
 | D (links) | Curled state | Stuck for now (exact wall > 0) | Wall at λ = 1.25 | Fixed with size? | Opening pattern | Source |
 |---|---|---|---|---|---|---|
-| 2 (4) | one curled (the tube) | 1 < λ < 2 (wall 32 − 16λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | one front, memoryless, the exact release; one relic | paper 1; T7 to T24 |
+| 2 (4) | one curled (the tube) | 1 < λ < 1.6 (minimum of 32−16λ and 64−40λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | dominant component, clock-dependent waits, release εN−H_final; about one relic in cold boxes | paper 1; T7 to T24 |
 | 2 (4) | both curled (a gas of 4-cubes) | never above λ = 1 | downhill | | falls apart at once | O40 |
 | 3 (6) | one curled (4 × L × L′) | 1 < λ < 2 (96 − 48λ) | 36 | | never opened: T41 NEVER OPENS at both λ (O81); T48 STAYS, 32 of 32 (O91); the true barrier for a growing patch is not priced (T54, draft; O103 (b)) | O41, O81, O91 |
 | 3 (6) | two curled (4 × 4 × L, L ≥ 18) | 1 < λ < 1.5 (96 − 64λ) | 16 | yes, 192 to 512 points (T32) | first direction fully open in 28 of 84, partly in most others (corrected); the second's wall (36) unpaid; near-flat only at a hot bath (T30) | O49, O54 |
@@ -447,18 +450,18 @@ the paper builds on; the readings are in `docs/reading/notes/` (5 October for mo
 
 | # | Short paper | Piece | Anchor (whose model or question) | Replicate first | Then extend | State |
 |---|---|---|---|---|---|---|
-| 1 | The curled torus burps | 1, 2 | Kelly, Trugenberger, Biancalana [KTB19]; [T25] | [KTB19] Fig. 8a (done) | a sharp change between two ordered states at λ > 1 | Written; on hold at arXiv pending a reader or a journal |
-| 2 | What the burp leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's size, number, place, lifetime; how much freezes in (T51) | Drafted; T51 running |
+| 1 | The curled torus burps | 1, 2 | Kelly, Trugenberger, Biancalana [KTB19]; [T25] | [KTB19] Fig. 8a (done) | a sharp change between two ordered states at λ > 1 | Written; revised 10 Oct after the AI review of 9 Oct, with a plain-language edition; both published on the owner's company blog (sidenerdapps.com/mainnerd); on hold at arXiv pending a reader or a journal |
+| 2 | What the burp leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's size, number, place, lifetime; how much freezes in (T51) | Drafted (`relic/paper.tex`, 5 Oct); T51 and T55 are read (the columns heal off a cliff; three kinds of knot); to be rewritten around the three knots |
 | 3 | Links that reach far, left where starting points meet | 7 | Markopoulou and Smolin [MS07]; Quach and co-authors [QSMG12]; Hossenfelder [H13] | a frozen boundary between domains, in this model | their count, reach and scaling with size; whether cooling heals them; whether the opening splits X in two | First look only (O95, O100); to be pre-registered |
 | 4 | The order of the transition in three directions | 5 (Gate C) | Trugenberger [T22] | his D = 3 figure (needs its size and whether its graphs were two-sided) | cooling against heating at 500 points with replica exchange | The bounded joint project to offer the model's author |
-| 5 | How curled directions open, three and four | 5 | [T22]; Mulder's theorem [Mul79]; the topology conjecture of [AGGN22]; the decompactification relatives [GM04], [CJR09], [BSV10], [GHR10] | the exact ladder (done) | one at a time; a gas never joins; a connected X; the true barrier | Results in hand; outline |
-| 6 | The rule, the room, and which settings give a birth | 3, 4 | The local term of [T25] | none needed | the map over the curling cost and the number of directions; room; melting moving with size | Outline |
-| 7 | The make-up at birth and the three shares | 6 | Planck 2018; asymmetric dark matter [KLZ09], [PV13]; Verlinde [Ver16] | the published numbers (done, O89) | which shapes of shares match birth; run them | Needs a physicist's check and the owner's choice of shape |
+| 5 | How curled directions open, three and four | 5 | [T22]; Mulder's theorem [Mul79]; the topology conjecture of [AGGN22]; the decompactification relatives [GM04], [CJR09], [BSV10], [GHR10] | the exact ladder (done) | one at a time; a gas never joins; a connected X; the true barrier | An earlier draft exists (`six_links/paper.tex`, 25 Sep) and is to be brought up to date; T53 read; T54's first stage computed and T56 launched, neither read |
+| 6 | The rule, the room, and which settings give a birth | 3, 4 | The local term of [T25] | none needed | the map over the curling cost and the number of directions; room; melting moving with size | An earlier draft exists (`fertile_window/paper.tex`, 25 Sep) and is to be brought up to date |
+| 7 | The make-up at birth and the three shares | 6 | Planck 2018; asymmetric dark matter [KLZ09], [PV13]; Verlinde [Ver16] | the published numbers (done, O89) | which shapes of shares match birth; run them | Outline. The owner chose the shape "all at the last" on 9 Oct and gave her best guess for the three shares on 10 Oct (VISION Updates 47, 52); needs a physicist's check |
 | 8 | Dimensions that open in order: a crossover or a sharp change? | 5, 6 | Stojkovic [St14] | his crossover in a layered lattice | set beside an opening with a fixed push and an exact release | Idea |
-| 9 | What a cut hides | 8 | Jacobson [Jac95]; Verlinde [Ver11] | none needed | the hidden count: does it follow the boundary or the volume (T52) | Pre-registered with Amendment 1 before the run; running; no verdict until it finishes |
-| 10 | An entropy action across wirings | 8 | Bianconi [Bia24] | her vacuum action on a regular lattice | the same action on flat, curled and leftover wirings: her "variation with respect to the topology" | Idea; one narrow question for her first |
-| 11 | A pull between leftovers | 8 | Verlinde [Ver11]; the G-field of [Bia25] | none needed | the pull in a warm bath in three directions; the design of a quantity on the points | Design |
-| 12 | Concentrated energy does not fold space | 11 | Black holes as random bubbles [T25]; Smolin [Smolin06]; as benchmarks only, the black-hole-cosmology lineage (Pathria, Popławski, Fife; unread, O103 (j)) | none needed | five negative results and what they need (T21, T26, T27, T34, T42) | Results in hand; outline |
+| 9 | What a cut hides | 8 | Jacobson [Jac95]; Verlinde [Ver11] | none needed | the hidden count: does it follow the boundary or the volume (T52) | Pre-registered with Amendment 1 before the run; computed 9 Oct; not yet read |
+| 10 | An entropy action across wirings | 8 | Bianconi [Bia24] | her vacuum action on a regular lattice | the same action on flat, curled and leftover wirings: her "variation with respect to the topology" | First computation done 10 Oct (O111): flat, curled, re-glued and knots at 64 points; the action rewards squares without limit. Across 445 saved wirings it acts like this model's energy with a coefficient below 1 (0.001 to 0.55). Drafted 10 Oct in two versions, technical and plain language (`docs/papers/entropy_action/`). The question for her is drafted (local); the metric solved per wiring and a sheet holding one knot are not done |
+| 11 | A pull between leftovers | 8 | Verlinde [Ver11]; the G-field of [Bia25] | none needed | the pull in a warm bath in three directions; the design of a quantity on the points | The technical draft of 25 Sep (`docs/papers/gravity/paper.tex`, the exact negatives and what a pull needs) revised 10 Oct with where the two routes stand, and a plain-language draft beside it. Its measurements are not run: the hidden count is computed and unread (T52), the warm sheet's reach and the pull are not started, the design of the quantity on the points is not written |
+| 12 | Concentrated energy does not fold space | 11 | Black holes as random bubbles [T25]; Smolin [Smolin06]; as benchmarks only, the black-hole-cosmology lineage (Pathria, Popławski, Fife; unread, O103 (j)) | none needed | five negative results and what they need (T21, T26, T27, T34, T42) | An earlier draft exists (`black_hole/paper.tex`, 25 Sep) and is to be brought up to date; the owner's fold under her tie (T57) is launched, not read |
 | 13 | Counting versions cannot beat Bell | 9 | Smolin [Smolin11]; Hardy [Hardy01] | none needed | the rungs of T15; the exchange sign | Results in hand; outline |
 | 14 | A front's pace | 10 | Ellis [Ell14] | none needed | steady on a fair clock; faster where energy sits (T47, T50) | Results in hand; outline |
 | 15 | Allotropes dissolve | parked | Trugenberger [T24] | none needed | the first numerical data on them (T36, T43) | Results in hand; kept for the correspondence with him |

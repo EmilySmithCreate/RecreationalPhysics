@@ -1,5 +1,11 @@
 # Pre-registration
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Rule 4 of `CLAUDE.md`: predictions and analysis choices are committed here **before** the runs that test them. The git commit containing a section is its timestamp. Nothing below may be edited after its runs have started; corrections are added as dated amendments underneath, with the original left standing.
 
 **Standing requirements for every section written from 2026-10-08** (CLAUDE.md rules 14 and 15; VISION Update 45). Sections written before that date are not changed.
@@ -3524,6 +3530,14 @@ owner's.
 
 ---
 
+#### Addendum, 2026-10-10, 22:45 ET by the clock: the resubmitted cell is in
+
+`t53_l72_lam125_g30`, which failed on Batch before starting and was resubmitted on 9 October, was fetched and
+accepted on 10 October (`scripts/accept_inbox.py`: its recorded config equals the committed one). Read with
+`python scripts/analyse_t53.py`: 7 of its 8 replicas DAMAGED and 1 ADVANCES, so the cell is DAMAGED, like its
+neighbors at g = 3.5 and at λ = 1.40. **The window verdict at L = 72, λ = 1.25 is ADVANCES ONLY, as read on
+9 October, and is no longer provisional.** All 30 cells are now on the record; no verdict of T53 changes.
+
 ## T54 (DRAFT, 2026-10-06, 03:56 ET by the clock, before any computation). The true barrier in three directions: the smallest opened patch of a one-curled torus that grows, exact; then whether a warm bath crosses it (piece 5; ASSUMPTIONS O79, O94, O103 (b); VISION Update 44)
 
 ### Status
@@ -3970,3 +3984,704 @@ Named (the table tie runs with named points only). T42's interchangeable result 
 
 That a black hole does this: the toy has no pull, so nothing in it gathers energy; the energy is placed by hand. Anything
 about gravity. Which direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
+
+## T58. What were the three long waits doing? T38's cell at λ = 1.30, N = 64 replayed from its seeds, with the detector's threshold and what it cannot see recorded (paper 1; piece 2; the owner's idea of 10 October; ASSUMPTIONS O108, O109, O110; written 2026-10-10, 07:47 ET by the clock, before any run)
+
+### Why
+
+O109 read the saved rows of T38 and T24 and found that almost all of paper 1's long waits and missed detections were
+tubes that had changed inside the detector's 200-sweep watch. Three waits were left. At λ = 1.30, N = 64, decays 553,
+2748 and 3072 read as the tube at sweep 200 and were detected at 5,080, 5,000 and 4,705 sweeps, where one memoryless
+population expects 0.13 such waits in the cell. O109 named the test and said it must be pre-registered: replay those
+decays from their seeds and record what the runner did not, the threshold and every exit and return (the
+"attempt-resolved history test" of O108). On 10 October the owner proposed what the three were doing (her words are
+under Predictions). The chain is fixed by its seed, so a replay is the same three histories watched with nothing hidden.
+
+**Disclosed: what had been read before this was written.**
+- The saved rows (O109). Decay 553 passed its quarter mark at sweep 4,505, which is 575 sweeps before its detector
+  fired; so its threshold was already known to have been lowered by something inside the watch. Decay 2748 was
+  detected in the block in which it passed the quarter mark, and 3072 one block before. For one target of three,
+  then, our prediction below was partly known in advance.
+- For the owner's idea, from saved data (O110): no decay of T38 or T24 at λ = 1.25 or 1.30 was above the tube's square
+  count at sweep 200; points with both directions curled (d = 0) in the quarter, half and three-quarter snapshots are
+  in at most ten of 4,000 snapshots per cell and never more than two points; the three targets' snapshots have none; the final
+  graphs of the tubes that rested have none. Every one of these is a reading at or after the moment the tube was
+  already changing. None of them sees the wait itself.
+- Exact (O110): no single switch from the perfect tube adds a square; a 4-cube is not stuck above λ = 1; sixteen
+  points of the tube pinched off as a 4-cube would cost 64(λ − 1), which is 19.2 here.
+- The graphs T38 saved of tubes still waiting at 5,000 sweeps (decay 553 among them) were never fetched from the cloud
+  and are not in the repository (O84: "not yet read").
+- Nothing of the replay had been run. The kernel was timed on an unrelated seed (12345) to size the run: about 22
+  seconds per 100,000 sweeps in blocks of 5.
+
+### What will be run
+
+`scripts/run_tube_decay.py`, T38's runner, with two additions that read the chain and draw no random numbers
+(`record_detector`, `trace_replicas`; tested to leave every column of a run unchanged,
+`tests/test_tube_decay_seeds.py`). Seventeen configs from `scripts/make_t58_configs.py`, each with T38's seed
+(20263930), sides (16 × 4), coupling (g = 1.5), λ = 1.30, block (5 sweeps) and caps, so every decay draws the random
+stream it drew the first time. On the laptop.
+
+- **Stage A, `t58_targets_lam130_n64`** (seconds): the three targets and, as controls fixed now, the two decays
+  before each (551, 552, 2746, 2747, 3070, 3071). Each is written block by block: the squares S, the surplus squares
+  X, the number of points at each d, the number of connected pieces, the largest piece, the points in closed pieces
+  with three squares on every edge, and the 4-cubes; and its final graph is saved.
+- **Stage B, `t58_lam130_n64_00` to `_15`** (about half an hour on sixteen cores): all 4,000 decays of the cell. Each
+  row gains the detector's threshold and the resting spread it came from; whether the decay read as the tube at sweep
+  200; the first block at which it no longer read as the tube (from sweep 0, and again from sweep 200); the exits the
+  detector did not see and the blocks spent away from the tube unseen; the highest square count reached; and the most
+  points at d = 0.
+
+The stages are read apart, A first.
+
+### Definitions, fixed now (`scripts/analyse_t58.py`, tested in `tests/test_t58.py` before any run)
+
+**Reproduction gate (rule 2), once per stage.** Every column the original row has must come back unchanged for every
+replayed decay, and each traced decay must end on the graph the original saved. "Unchanged" is as written; two numbers
+may differ by one part in 10⁹, because the original ran on Batch (Linux) and the replay runs on the laptop (Windows),
+and an average of floating-point numbers can differ in its last digit between machines, while a count cannot differ at
+all. If the gate fails, that stage is not read and the failure is the result.
+
+**Reads as the tube:** S = 80, X = 64, and every point at d = 1. This is a signature and not a certificate (O108): a
+tube with a twist along its length would read the same.
+
+**Per target,** over the blocks before its detector fired:
+- **SECOND CURL** if at any block the square count is above the tube's (S > 80), or at least 8 points read d = 0 (half
+  a 4-cube), or a closed piece with three squares on every edge exists.
+- otherwise **LOW THRESHOLD** if, after sweep 200, the tube lost squares in some block without the detector firing.
+- otherwise **TRUE WAIT** if it read as the tube in at least 95 % of the blocks after sweep 200.
+- otherwise **OTHER STATE**.
+
+**Verdict on the three:** SECOND CURL if at least two targets are SECOND CURL; LOW THRESHOLD if all three are;
+TRUE WAIT if all three are; otherwise MIXED, reported target by target. Reported with each label, not scored: the
+threshold, the first block away from the tube after sweep 200, the unseen exits, the blocks away from the tube, the
+most squares, the most points at d = 0, the most separate pieces, and the most energy held above the tube.
+
+**The cell (stage B),** with τ = 419.0 sweeps, the count's mean wait for a first exit at λ = 1.30, g = 1.5 (paper 1,
+Eq. (2)). The first exit is timed with no detector: the first block at which a decay no longer reads as the tube,
+from sweep 0, over all 4,000 decays.
+- **P1.** Its mean, divided by τ.
+- **P2.** The number of decays whose first exit comes later than 10 τ (one memoryless population expects 0.18).
+- **P3.** The number of decays whose square count ever exceeds the tube's, and the number that ever show 8 or more
+  points at d = 0, at any block before the change is complete.
+
+Described, not scored: the same timing from sweep 200 over the decays that read as the tube then; and the recorded
+waits of the decays whose threshold sat at or below a single exit (φ ≤ 1.25 − 2/64) beside the rest.
+
+No claim about size is made (one size, the smallest), so there is no held-out size (rule 14). Nothing here says that
+something has not been found in the literature (rule 15). Not a milestone (rule 12).
+
+### Predictions
+
+**The owner's (her words of 10 October, received between 07:21 and 07:34 ET by the clock, recorded before any run):**
+"maybe they curled another direction instead of flattening. like have a big shake and all the energy and then it's
+stored in a new curl which would need way more activation energy than we have in our closed system". Read as:
+**SECOND CURL.** During their long waits the three tubes had curled a second direction somewhere, the energy of the
+shake sat in that new curl, and the way out of it is a wall the system rarely pays. She wrote "maybe"; it is recorded
+as her prediction for this run until she confirms or replaces it (inferred from her message, as T25 to T27's were).
+*Ours, noted beside it:* these decays ran in a bath at fixed warmth, not sealed, so here a wall out of a new curl
+would be paid by a rare kick from the bath rather than from a closed budget; that changes the wording, not the test.
+
+**Ours, unverified: LOW THRESHOLD for all three**, each first leaving the tube before sweep 2,295 (200 + 5 τ). Each of
+the three made an excursion inside its own watch and came all the way back, which widened its threshold, so the
+detector slept through its later exits and fired only on a deeper drop; no target shows a second curl. **P1: between
+0.95 and 1.10. P2: at most 1. P3: none and none.** Why: O109's reading of every other long wait; the saved row of
+decay 553; no single switch from the tube adds a square; a 4-cube is not stuck above λ = 1, so a second curl would
+not hold; and T22 found first exits on time at every λ it ran.
+
+### What each outcome would mean
+
+- **SECOND CURL.** The tube can gain a curl on the way, and that state hides from a detector that only watches for
+  squares being lost. Her idea holds in the toy; paper 1's ladder gains a side step above the tube; next would be the
+  price of the wall into and out of it, and whether it appears at other sizes and λ.
+- **LOW THRESHOLD, with P1 and P2 holding.** The three long waits are the detector's too, and paper 1's sentence that
+  three remain unexplained is replaced. The first exit is one memoryless population at the counted rate.
+- **TRUE WAIT.** Three real waits beyond ten τ where 0.13 are expected. They stay unexplained, and P2 says whether the
+  cell as a whole has a slow tail. Three or more first exits later than 10 τ in the cell, and O109's reading is
+  abandoned (its own fourth answer).
+- **OTHER STATE.** Something rests out of the detector's sight without a second curl. It is described from the trace
+  and named only after its positions have been read.
+- **P1 outside its range** with the gate passed: the count of Eq. (2) is off at this λ by more than the block
+  resolution explains, which is a result about paper 1's central number and is reported as prominently as any other.
+
+### Named or interchangeable points
+
+Named, as the original; a replay has to be. With interchangeable points a symmetric arrangement weighs more (a 4-cube
+has 192 renamings of its own), which would favor a knot if one formed. Not run.
+
+### What this cannot show
+
+Anything beyond one cell at the smallest size. That no slow population exists elsewhere: the far tail at λ = 1.05 is
+unread. Why a tube that changes fast can then rest for tens of thousands of sweeps on a defective sheet, which is paper
+2's subject. Anything at λ = 1: at λ ≠ 1 this is our family around the published model, never combinatorial quantum
+gravity.
+
+---
+
+### Reading, stage A, 2026-10-10, 07:55 ET by the clock (ASSUMPTIONS O110; `python scripts/analyse_t58.py`)
+
+Run after the commit that holds this pre-registration (07:50 ET). Stage B, the whole cell, was still running when
+this was written and is read below it.
+
+**Reproduction gate: passed.** All nine traced decays return every column of T38's rows unchanged, the three waits
+(5,080, 5,000 and 4,705 sweeps) among them, and each ends on the graph T38 saved. The histories read here are the
+histories of 25 September.
+
+**Verdict on the three: MIXED. One LOW THRESHOLD, two TRUE WAIT, no SECOND CURL.**
+
+| decay | recorded wait | threshold (φ below) | what it did before its detector fired | label |
+|---|---|---|---|---|
+| 553 | 5,080 | 1.1647 | left the tube inside the watch (sweeps 45 to 110, down to 76 squares) and came all the way back; then the tube, with three brief exits that each fell back (sweep 2,870 for one block; 4,505 for 40 sweeps; 4,895 for 25); left for good at 5,030 | LOW THRESHOLD |
+| 2748 | 5,000 | 1.2500 | read as the tube at every block from sweep 0 to sweep 5,000 | TRUE WAIT |
+| 3072 | 4,705 | 1.2296 | one exit of two blocks inside the watch (sweeps 25 to 30) and back; then read as the tube at every block to sweep 4,705 | TRUE WAIT |
+
+In none of the three, at any block before the detector fired, did the square count exceed the tube's 80, did any point
+read d = 0, or did the network come apart into more than one piece. The most energy any of them held above the tube
+was 17.6 units (decay 553, on its deepest unseen exit, which had lost five squares).
+
+**The owner's prediction (SECOND CURL; inferred from her "maybe" until she confirms or replaces it): fails.** Nothing
+was curled a second time and nothing was stored. **Ours (LOW THRESHOLD for all three, each first leaving the tube
+before sweep 2,295): fails for two of three**, and its second half fails for the third as well (decay 553 first left
+the tube after the watch at sweep 2,870). Two of the three long waits were real: a tube that sat, reading as the tube
+at every block, for 5,000 and 4,670 sweeps without a break, 11.9 and 11.1 times the count's mean wait of 419.
+
+Of the six controls, five waited as the tube from sweep 200 to their first exit, which their detectors caught at once
+(waits 290 to 920); the sixth (2747) had left the tube inside the watch and was detected at 235.
+
+**Rule 11, the four answers, for both failed predictions.**
+1. *Does the result falsify the mechanism as stated?* Hers, for these three runs: yes. The replay is the same three
+   histories with nothing hidden, and there is no second curl in them. Ours, for two of the three: yes. Their
+   thresholds sat at or near the bare tube's and they made no exit the detector missed.
+2. *Implementation, parameters, finite size, or the mechanism itself?* Hers: the mechanism, in this toy at this
+   setting. Above λ = 1 a knot is not a resting place (exact, O110), so energy cannot be parked in one; below λ = 1 it
+   can, which is the wrong-way-round regime of VISION Update 7. Ours: none of the four. The two waits are not an
+   artifact; they are long waits.
+3. *The exact or cheaper test that tells those apart:* this replay was it for the three. For "long by chance, or a
+   slow tail": P1 and P2 on the whole cell (stage B).
+4. *What would make us abandon the branch:* hers, in the two-dimensional toy above λ = 1, is set down on this
+   evidence, and stage B's P3 says whether any of the 4,000 tubes ever did it; it says nothing about three directions
+   under her tie, which T57 tests. Ours: three or more first exits later than 10 τ in the cell (P2), and O109's
+   reading that the first exit is one memoryless population is abandoned.
+
+**Previous claim → failed because → replacement → new falsification test.** The three long waits are the detector's
+doing (ours) or a second curl holding the energy (the owner's) → the replay shows one detector case and two tubes that
+simply sat, with no second curl in any → two of the three are plain long waits of the perfect tube, eleven to twelve
+times the mean, where one memoryless population expects about 0.1 stays that long among 4,000 tubes (a figure worked
+out after seeing them) → P2 on the whole cell.
+
+### Reading, stage B, 2026-10-10, 09:06 ET by the clock (ASSUMPTIONS O110; `python scripts/analyse_t58.py`)
+
+**Reproduction gate: passed.** All 4,000 replayed decays return every column of T38's rows unchanged. (The
+original ran on Batch; the replay ran on the laptop, sixteen processes, about seventy minutes.)
+
+**P1 holds.** Timed with no detector, from sweep 0 over all 4,000 decays, the first exit has mean 448.8 sweeps:
+1.071 ± 0.017 of the count's 419.0 (predicted 0.95 to 1.10). **P2 holds.** One first exit comes later than 10 τ
+(decay 2748, at sweep 5,000), where one memoryless population expects 0.18 (predicted at most 1). **P3 holds.** No
+decay's square count ever exceeded the tube's, and none ever showed 8 points at d = 0. Points at d = 0 appeared in
+137 decays, never more than four at a time and in 119 of them a single point.
+
+Described, not scored. Timed from sweep 200 over the 2,903 decays that read as the tube then, the mean is 438.9
+sweeps (1.047 ± 0.020 of the count), and two are later than 10 τ, decays 2748 and 3072, where 0.13 are expected.
+Measured against their own mean, the 4,000 first exits beyond 4, 6, 8 and 10 means number 67, 11, 3 and 1, where one
+exponential expects 73, 9.9, 1.3 and 0.18; the mean (448.8) and the median over ln 2 (447.2) agree. Of the 2,903, the
+detector's threshold sat at or below a single exit in 116, and 90 of those made at least one exit their detector did
+not see; their mean recorded wait is 553 sweeps, against 439 for the other 2,787.
+
+**What it says.** Timed without the detector, the first exit in this cell is one memoryless population at 1.07 of
+the counted rate, with no slow tail by the pre-registered count. O109's reading stands by its own fourth answer:
+three or more first exits later than 10 τ would have ended it, and there is one. The owner's second curl did not
+occur in any of the 4,000 tubes. Of the three long waits, one was the detector and two were real waits of the
+perfect tube. By P2 the cell holds one first exit beyond 10 τ, which chance allows about one time in six; that two
+tubes stayed so long after sweep 200 is rarer (one or two times in a hundred, worked out after seeing them) and has
+no mechanism attached to it.
+
+*Ours, unverified:* the mean sits 7 % above the count, four standard errors from 1. The count leaves out dearer
+exits, and those would shorten the wait, so they are not the cause. A five-sweep block cannot see an exit that
+returns inside the block, which lengthens the measured first exit; whether that accounts for 7 % has not been
+computed. T22, which counted attempt by attempt, found first exits on time.
+
+**T58 in one line:** gates passed; stage A MIXED (one LOW THRESHOLD, two TRUE WAIT, no SECOND CURL); stage B's P1,
+P2 and P3 hold.
+
+### Confirmation, 2026-10-10, 11:45 ET by the clock, after both readings
+
+The registration above reads the owner's words as SECOND CURL and keeps that reading marked as inferred "until she
+confirms or replaces it". Asked on 10 October, after stages A and B had been read, whether SECOND CURL is the
+prediction she wants on the record as hers, and offered three answers (yes; a guess to test and not a prediction;
+replace it with other wording), the owner chose yes. **SECOND CURL is the owner's prediction for T58, confirmed by
+her after the result was known.** It is no longer inferred.
+
+The verdict does not change: her prediction fails (no second curl in any of the 4,000 tubes). A confirmation given
+after the reading adds no weight to the test either way; it settles only whose prediction it was. The sentences
+above that call it inferred are left as they were written.
+
+### Exploratory follow-up, 2026-10-10, 12:22 ET by the clock (not part of this registration; ASSUMPTIONS O110)
+
+At the owner's question (could a second curl have come and gone between two looks of five sweeps?) the nine decays
+of stage A were replayed once more with every sweep written. The readings above stand as scored by their
+block-by-block rules. Read by sweeps: no second curl at any sweep in any of the nine; decay 2748 is the tube after
+every sweep from 1 to 4,998; decay 3072 left the tube at sweeps 3,166 to 3,168 and came back, between the looks at
+3,165 and 3,170, so its "4,670 sweeps without a break" holds block by block and not sweep by sweep, and its first
+exit after sweep 200 came 7.1 mean waits in. One long wait is left in the cell, not two. The details, the exact
+census of the tube's free switches and what is not excluded are in O110's addendum of the same hour.
+
+---
+
+## T59. Were the long waits at the lowest curling cost chance, and is T58's 7 % the looks? T8's and T22's long waits at λ = 1.05 read from their seeds, and fresh first exits counted move by move at λ = 1.05 and 1.30 (paper 1; pieces 1 and 2; the owner's question of 10 October; ASSUMPTIONS O42, O108 to O110; written 2026-10-10, 17:50 ET by the clock, before any run)
+
+### Why
+
+Paper 1's strongest number is the count: the mean wait for a first exit from the curled torus, from the moves alone,
+with nothing fitted. Two loose ends are left on it, and the programme page lists both as next. On 10 October the owner
+asked whether closing them would make paper 1 more complete.
+
+1. **T58's 7 %.** Timed with no detector, by a look every five sweeps, the 4,000 first exits of T38's cell
+   (λ = 1.30, N = 64) have a mean 1.071 ± 0.017 of the count. T58 said what might do it and did not compute it: a
+   look every five sweeps cannot see an exit that comes back before the look.
+2. **The far tail at λ = 1.05.** Three of 200 waits there exceed 75,000 sweeps, nine mean waits (O42): 80,985 and
+   80,174 among T22's 80 first exits, which were counted move by move with no detector at all, and 78,205 among T8's
+   120 detected decays. None has been read.
+
+*Exact, ours (arithmetic on a complete enumeration, unreviewed):* the arrangements a waiting torus can reach without
+changing its squares form three classes at every size from 48 to 288 points, and all three have the same census of
+moves (`scripts/analyse_curled_revision.py --neutral`). The chain's chance of leaving is therefore the same at every
+attempt of the wait, and the first exit is exactly memoryless with the census's mean. If that is right, a long first
+exit can only be a rare run of draws. Two first exits near 9.7 mean waits among 80 has a chance of about 1 in 70,000
+(worked out after seeing them). So either the enumeration is wrong, or the draws are not behaving as independent
+draws, or it was that rare. This registration tells the three apart.
+
+**Disclosed: what had been read before this was written.**
+- T22's saved rows. At λ = 1.05 seven of 80 first exits are later than four mean waits (4.40, 4.44, 5.19 and 9.73 at
+  N = 64; 4.54, 4.98 and 9.63 at N = 96) where 1.5 are expected; the means are 1.22 and 1.12 of the count. At
+  λ = 1.10 and 1.25 the four cells hold one such exit in 160, where 2.9 are expected.
+- T8's saved rows for decays 9, 10 and 11 at N = 96: waits of 10,450, 5,975 and 78,205 sweeps, all three still the
+  tube at sweep 200 (`f_200` = 0), and decay 11's quarter mark at sweep 95,725.
+- **One target of stage A2 has been seen.** While sizing this run, T22's replicas 1 and 7 at N = 64 were replayed in
+  a scratch script with the tally below (nothing was written to `results/`). Replica 7's first exit came back as
+  saved (80,985.17 sweeps). In each of its sixteen whole stretches the chain was offered 14,728 to 15,141 exits of
+  kind A (2.95 to 3.03 a sweep) and 9,876 to 10,209 of kind B; 242,726 of kind A in all, of which independent draws
+  would take 9.6; the chance of none is 6.5 × 10⁻⁵. So that target's label is known: OFFERED AS COUNTED. The other
+  six targets and the seven controls have not been replayed.
+- The new readers were tested on plain seeds and on six of T22's seeds at λ = 1.25 (`tests/test_first_exit_clocks.py`):
+  400 tubes at λ = 1.45, 40 at λ = 1.30. None of these uses this run's seed. Timing: about 2 ms a sweep at N = 64.
+- Nothing of stages A1, B or C has been run.
+
+### What will be run
+
+On the laptop, 54 configs from `scripts/make_t59_configs.py`. Named points throughout.
+
+- **Stage A1, `t59_t8wait_lam105_n96`** (`scripts/run_tube_decay.py`, T8's runner with T58's read-only recorder):
+  T8's decay 11 at N = 96 and, as controls fixed now, the two before it (9 and 10), from T8's seed (20261201), sides,
+  coupling, block and caps, each written block by block.
+- **Stage A2, `t59_offers_lam105`** (`scripts/run_first_exits.py`, mode `offers`; `graphity.exits.offers_until_exit`):
+  T22's seven first exits later than four mean waits at λ = 1.05 (N = 64 replicas 6, 7, 11, 17; N = 96 replicas 6, 12,
+  29) and, as controls fixed now, the replica after each (N = 64: 8, 12, 18, and 5 for replica 6, whose successor is
+  a target; N = 96: 7, 13, 30), from T22's seeds. Each is stopped at its first exit. The wait is cut into stretches
+  of 5,000 sweeps, and for each stretch the valid proposals are tallied: kind A (lose 2 squares and 4 surplus
+  squares), kind B (lose 4 and 10), any other change, and those that change nothing; with the smallest acceptance
+  draw made against a kind-A and a kind-B proposal.
+- **Stage B, `t59_lam105_n64_00` to `_15` and `t59_lam105_n96_00` to `_19`** (mode `clocks`;
+  `graphity.exits.first_exit_clocks`): 2,000 fresh tubes at N = 64 and 1,000 at N = 96, λ = 1.05, g = 1.5, seed
+  20265900, cap 200,000 sweeps. Each tube runs to the first exit that a look every five sweeps sees, and its row holds
+  the first exit counted by the move, by a look every sweep and by a look every five sweeps, and the exits made
+  before each look saw one.
+- **Stage C, `t59_lam130_n64_00` to `_15`**: 4,000 fresh tubes at λ = 1.30, N = 64, the same reader, cap 50,000
+  sweeps.
+
+Both new readers are `run_until_through`, T22's chain, with its draws in its order; tested to give the same first
+exit attempt for the same seed, to return T22's saved first exits exactly, and, where waits are short, a mean first
+exit equal to the exact census's (`tests/test_first_exit_clocks.py`). They look between sweeps and draw nothing to
+look. The cell of T58 was driven by `cqg.run_chain`, which proposes the same moves with the same chances and draws
+them in a different order, so stage C is a fresh sample of the same chain and not a replay of T58's histories.
+
+### Definitions, fixed now (`scripts/analyse_t59.py`, tested in `tests/test_t59.py` before any run)
+
+**The count.** τ = 1 / (3 e^(−(32 − 16λ)/g) + 2 e^(−(64 − 40λ)/g)) sweeps, paper 1's Eq. (2): 8,329.7 at λ = 1.05 and
+419.0 at λ = 1.30, g = 1.5. (The census over every way out gives 8,326 and 417.5.)
+
+**The tube:** S = 5N/4 and X = N. **An exit:** an accepted move out of it. **Seen by a look:** not the tube when
+looked at after a sweep.
+
+**A1.** Gate: every column of T8's row comes back unchanged for decays 9, 10 and 11 (two numbers may differ by one
+part in 10⁹, as in T58) and each replay ends on the graph T8 saved. Label for decay 11 by T58's rules with this
+size's numbers (S = 120, X = 96, every point at d = 1): SECOND CURL, LOW THRESHOLD, TRUE WAIT or OTHER STATE.
+
+**A2.** Gate: all fourteen first exits are the attempts T22 saved. Label per run, over its whole stretches:
+**OFFERED AS COUNTED** if in every one the kind-A offers are within 5 % of three a sweep and the kind-B offers within
+5 % of two a sweep (the scatter of such a tally is under 1 %); **STARVED** otherwise. Verdict on the seven targets:
+OFFERED AS COUNTED if all are, else STARVED with the number. Reported with each: the exits its offers would have
+produced under independent draws, and the chance of none.
+
+**B, each size scored alone.** A tube that has not left by the cap enters the mean at the cap and counts as beyond.
+- **P1.** The mean first exit by the move, divided by τ, is within 0.07 of 1 at N = 64 and within 0.10 at N = 96
+  (three standard errors of a memoryless sample of that size).
+- **P2.** The first exits later than 8 τ number at most 4 at N = 64 and at most 3 at N = 96 (expected 0.67 and
+  0.34; more than that has a chance under one in a thousand; T22's own frequency would give about 50 and 25).
+- **ON THE COUNT** if both hold; **SLOW TAIL** if P2 fails; **OFF THE COUNT** if P1 fails and P2 holds.
+
+**C.**
+- **P3.** The mean first exit by the move is within 0.05 of τ.
+- **P4.** In the same tubes, the look every five sweeps runs later than the move by 0.035 to 0.107 of τ on average
+  (T58's 0.071 ± 0.017 above the count, two standard errors either way with this run's own error added).
+- **P5.** More than half of that gap comes from tubes whose first exit came back before a look saw it.
+- **HIDDEN EXITS** if all three hold; **OFF THE COUNT** if P3 fails; **NOT THE LOOKS** if P3 holds and P4 fails;
+  **THE LOOK'S ROUNDING** if P3 and P4 hold and P5 fails.
+
+Described, not scored, for B and C: the numbers later than 4, 6, 8 and 10 τ beside one memoryless population's; the
+look clocks in stage B; the longest wait.
+
+No claim about size is made: each size is scored against the same count, and nothing is said about growth with N, so
+there is no held-out size (rule 14). Nothing here says that something has not been found in the literature (rule 15).
+Not a milestone (rule 12).
+
+### Predictions
+
+**The owner's: owed.** She is asked at launch. Her answer is recorded here, with its time by the clock, before any
+stage is read; no stage is read until then.
+
+**Ours, unverified.**
+- **A1: TRUE WAIT.** Decay 11 was the tube at sweep 200 with a resting spread of zero or near it, so its detector
+  fires on the first exit a look sees.
+- **A2: OFFERED AS COUNTED for all seven** (one known, as disclosed).
+- **B: ON THE COUNT at both sizes.** The long first exits of T22 were rare draws, not a property of the chain.
+- **C: HIDDEN EXITS.** Counted by the move, the first exit is on the count; the look every five sweeps reads about
+  7 % late because some first exits come back before it looks. Why: the exactness above; T22's first exits on time at
+  λ = 1.10 and 1.25; and a rough count (the move that undoes an exit is offered about once in N sweeps, and several
+  such moves lead back into the torus's family) that puts the hidden share within reach of 7 %.
+
+### What each outcome would mean
+
+- **A2 STARVED.** The waiting torus reached arrangements with fewer ways out than the count gives it. The enumeration
+  behind "three classes, one census" is wrong somewhere, Eq. (2) is not exact, and paper 1's central number needs a
+  correction that this run measures.
+- **A2 OFFERED AS COUNTED and B ON THE COUNT.** The long waits at λ = 1.05 were chance. Paper 1 replaces "their
+  post-hoc rarity calculation motivates an attempt-resolved audit" with the audit's result, and reports the rarity.
+- **A2 OFFERED AS COUNTED and B SLOW TAIL.** The chain is offered exits at the counted rate and, in some runs, takes
+  too few for too long. Independent draws do not do that. The fault would be in the random draws or in how the kernel
+  uses them, every waiting time in paper 1 would carry that caveat, and nothing else on paper 1 is done until it is
+  found.
+- **B OFF THE COUNT.** No tail, but the mean is off: the count is wrong at λ = 1.05 by the amount measured.
+- **C HIDDEN EXITS.** T58's 7 % is the look interval. Paper 1's "within 7 % of the count" becomes "on the count when
+  counted by the move", with the size of the looks' effect stated.
+- **C NOT THE LOOKS.** By the move the exit is on the count, and the looks do not lag by enough: T58's 7 % is not
+  explained here. Next would be T58's own cell replayed with every sweep written.
+- **C OFF THE COUNT.** The first exit itself is late at λ = 1.30; the count is off there and the paper says by how much.
+- **C THE LOOK'S ROUNDING.** The looks lag, but because exits are seen late, not because they come back.
+- **A1 other than TRUE WAIT.** Read from the trace and reported as found; T8's long wait would then be the detector's.
+
+### Named or interchangeable points
+
+Named, as in the runs replayed; a replay has to be, and the fresh tubes are set beside them. With interchangeable
+points an exit would also be weighed by how many renamings it destroys, and the torus has many, so waits would
+lengthen by a factor these runs do not measure (ours, unverified). Not run.
+
+### What this cannot show
+
+Why the detected waits of the λ = 1.05 map run 15 to 43 % above the count: that is the detector's clock, which O109
+read at λ = 1.25 and 1.30 only. Anything about a size above 96. Anything at λ = 1: at λ ≠ 1 this is our family
+around the published model, never combinatorial quantum gravity.
+
+### The owner's prediction, 2026-10-10, 18:17 ET by the clock, before any stage was read
+
+Asked at launch two questions (the long waits at the lowest curling cost: chance, or a real slow tail that shows up
+again in fresh tubes? the 7 per cent: exits hidden between two looks, or something else?), the owner answered:
+"I predict it was chance. Exists hidden between 2 loops." Read as, and matching the two answers offered:
+
+- **Stage B: ON THE COUNT.** The long waits were chance; fresh tubes show no slow tail.
+- **Stage C: HIDDEN EXITS.** The 7 per cent is exits that come back between two looks.
+
+Both coincide with ours, so stages B and C test a shared expectation. She was not asked about A1 or A2 and has no
+prediction there.
+
+State of the run when this was written: launched at 18:01 ET from commit c7840ed6; stage A1 and fourteen of stage
+C's sixteen files had finished computing; stage A2 and stage B were still running. Nothing had been read: the
+analysis script had not been run on any T59 file, and only the jobs' exit codes had been looked at.
+
+### Reading, stages A1 and C, 2026-10-10, 18:29 ET by the clock (`python scripts/analyse_t59.py`)
+
+Run after the commit that holds the owner's prediction (d935cf71, 18:20 ET). Stages A2 and B were still running and
+are not read here.
+
+**A1. Gate passed; TRUE WAIT.** T8's decays 9, 10 and 11 at N = 96 return every column of the original unchanged and
+end on the graphs T8 saved. Decay 11 read as the tube at every one of the 15,600 looks from sweep 205 to its
+detection at sweep 78,205, 9.4 mean waits; it never had more squares than the tube and no point ever read d = 0.
+The two controls read as the tube to their detections at 10,450 and 5,975 sweeps. Ours holds. This long wait was
+a tube that sat, not the detector.
+
+**C. HIDDEN EXITS. P3, P4 and P5 hold; the owner's prediction holds, and ours.** 4,000 fresh tubes at λ = 1.30,
+N = 64; none failed to leave.
+- **P3.** Counted by the move, the mean first exit is 1.005 ± 0.016 of the count (registered: within 0.05 of 1).
+- **P4.** In the same tubes a look every five sweeps runs later by 0.096 ± 0.007 of the count (registered: 0.035
+  to 0.107). Its own mean is 1.101 ± 0.017 of the count; T58 found 1.071 ± 0.017 by the same kind of look.
+- **P5.** 94 % of that gap comes from tubes whose first exit came back before a look saw it (registered: more than
+  half): 312 tubes of 4,000, of which 278 made one such exit, 30 two, 3 three and 1 four.
+
+Described, not scored: first exits later than 4, 6, 8 and 10 mean waits number 79, 7, 3 and 0, where one memoryless
+population expects 73, 9.9, 1.3 and 0.18; the longest is 8.8. A look every sweep runs later than the move by
+0.017 ± 0.003. *Added after the registration, exploratory:* the spread of the wait divided by its mean is 0.990 by
+the move and 0.993 by the look every five sweeps, and each clock's median over ln 2 equals its mean to one part in
+a thousand; a memoryless wait has 1 and equality.
+
+**What it says.** Counted by the move, the first exit at λ = 1.30 is on the count. A look every five sweeps reads
+it about 10 % late, and nearly all of that is first exits that come back before the look: about one in thirteen.
+T58's 7 % is that effect. The look lengthens the wait and leaves its shape alone: a memoryless wait stays memoryless.
+
+---
+
+## T60. The λ map a fourth time: the wait timed with no detector, the same bar, and a size held out (paper 1; piece 2; the owner's decision of 10 October; ASSUMPTIONS O44, O52, O109, O110; written 2026-10-10, 18:45 ET by the clock, before any run)
+
+### Why
+
+Three registered runs of the map (T8, T23, T24) were each INCONCLUSIVE by the letter, each for a different reason,
+while what they measured read the same each time: two orders side by side and one front in every cell of the window,
+the exact release, and break-up beginning at λ = 1.35. The first tripped on a memoryless check sized wrongly for
+thirty decays; the second on an energy gate that compared a warm average with an exact wiring; the third, with both
+repaired, on the memoryless check in four cells of 28.
+
+The third run's failures were on the clock. The wait was the detector's: it watches a tube for 200 sweeps, sets a
+threshold from the tube's own jitter in that watch, and then looks every five sweeps. Read on 10 October (O109),
+the two enormous waits that failed two of the four cells (24 and 76 mean waits, both at N = 64) were not waits:
+those tubes had mostly converted inside the watch and then rested on a defective sheet until the threshold was
+crossed. The other two failures (λ = 1.30 at N = 192, inside the window; λ = 1.35 at N = 144, the edge) were on the
+spread of the waits and have not been read.
+
+So the one thing left to repair is the clock, and the repair exists: T58's read-only recorder writes the first look,
+from sweep 0, at which a decay no longer reads as the perfect tube, with no watch and no threshold. T59 stage C
+(read at 18:29 ET today) measured what that clock does at λ = 1.30, N = 64: it runs about 10 % later than a count by
+the move, because about one first exit in thirteen comes back before the look, and it leaves the shape of the wait
+alone (spread over mean 0.993 against 0.990 by the move).
+
+Asked on 10 October, the owner said to proceed. She also said what her words of 25 September meant (VISION Update
+53): continued interest even if the change is not seen every time, not a lower bar. **The bar here is T23's and
+T24's, unchanged.**
+
+**Said plainly: this is the fourth attempt at one verdict.** Each repair has been to the instrument, written before
+its run, with fresh seeds, and all four runs are reported whatever this one returns. A reader is entitled to weigh a
+fourth attempt less than a first, and paper 1 will say that it is the fourth.
+
+**Disclosed: what is known before this is written.** Every result of T8, T23 and T24 at these settings, N = 192
+included, which is why the size held out below is one this map has never run. T58, T59 stages A1 and C, O109 and
+O110. That tubes much longer than these, run under other protocols, open from several seeds (T37, T51). Nothing of
+T60 has been run.
+
+### What will be run
+
+`scripts/run_tube_decay.py`, the runner of all three earlier maps, on Batch, one job per cell
+(`scripts/make_t60_configs.py`; `cloud/queue/2026-10-10_t60_stage1.txt`).
+
+- **Stage 1: T24's grid and protocol exactly.** λ = 1.05, 1.10, 1.15, 1.20, 1.25, 1.30, 1.35; N = 64, 96, 144, 192
+  (tubes 16, 24, 36, 48 × 4); 120 decays per cell; g = 1.5; block 5; stop at 98 %; `n_sweeps` 100,000; settle 600
+  with `settle_max` 100,000; `save_adjacency`; `record_f_200`. Fresh seeds, one per λ (20266105 to 20266135). One
+  addition, `record_detector`, which reads the chain and draws nothing (tested to leave every column of a run
+  unchanged, `tests/test_tube_decay_seeds.py`): each row gains `first_left`, the first look at which the decay no
+  longer read as the perfect tube (S = 5N/4, X = N, every point at d = 1), counted from sweep 0.
+- **Stage 2: the held-out size, N = 288 (72 × 4), the same seven λ, 120 decays each.** It is not run until stage 1
+  has been read and the numbers below have been written for it and committed. Its caps are 200,000 sweeps, because a
+  conversion takes more chain sweeps in a longer tube (the fair clock, O90); that is at least the room in fair
+  sweeps that N = 192 has in stage 1.
+
+Durations are in chain sweeps, as in the three earlier maps, because this is a repeat of them and because the first
+exit's rate per chain sweep is the same at every size (exact; paper 1, Eq. (2)).
+
+### Definitions, fixed now (`scripts/analyse_t60.py`, tested in `tests/test_t60.py` before any run)
+
+- **Metastable, reached, (b) two orders side by side, (c) one front, gate 2, gate 3′, the resting states read
+  exactly, the status per λ, the window verdict and the edge verdict: exactly as T24**, by calling `analyse_t24`,
+  `analyse_t23` and `analyse_t8`. For reference: (b) at least 80 % of points at d ∈ {1, 2} at half conversion; (c)
+  the largest converted piece holds at least 70 %; gate 2, at least 30 decays reaching 75 %; gate 3′, every such
+  decay has a valid saved final graph.
+- **(a″) Memoryless, replacing (a′).** The wait of a decay is `first_left`, in sweeps. It is taken over **every**
+  decay of a metastable cell, not only those that converted, so nothing is selected on success. A decay that never
+  left by the cap enters at the cap and is reported. (a″) holds when the sample CV of those waits (ddof 1) lies
+  inside T23's central 99.9 % band for that many independent memoryless waits (for 120: 0.756 to 1.379; the same
+  simulation and seed as T23). A look every five sweeps rounds each wait up to a multiple of five, which lowers the
+  CV by less than 1.5 % at these λ; no correction is made.
+- **Sharp at (λ, N):** (a″), (b) and (c).
+- **The window (λ = 1.05 to 1.30), scored on stage 1's four sizes:** SHARP ACROSS THE WINDOW, NOT SHARP AT (the
+  list), or INCONCLUSIVE with the reason, as T23.
+- **The edge (λ = 1.35 against 1.30), pooled over stage 1's sizes:** BREAK-UP BEGINS AT THE EDGE, NO BREAK-UP or
+  PARTIAL, as T23.
+- **The waiting-time law**, reported and not scored: the mean wait over τ(λ). A look every five sweeps is expected to
+  read it late (T59 stage C), so "within 25 %" is not a test of Eq. (2) here.
+
+**The held-out size (rule 14).** The claim about size is that the change stays sharp as the tube gets longer. It is
+scored at N = 288 alone, against numbers written from stage 1 alone by this recipe, per window λ:
+- the mean wait over τ: the mean of the four stage-1 cells' values, with a range of 32 % either side (a little over
+  three standard errors of a memoryless mean of 120, with the prediction's own error added);
+- (b), the share of points at d ∈ {1, 2} at half conversion: the least-squares straight line against N through the
+  four stage-1 cells, read at 288 and kept between 0 and 1, with a range of 0.03 either side;
+- (c), the largest converted piece's share: the same line, with a range of 0.10 either side;
+- and whether those predicted values make the cell sharp ((b) at least 0.80 and (c) at least 0.70).
+
+`python scripts/analyse_t60.py --write-prediction` writes them to `configs/t60_heldout_prediction.json`, once, and
+that file is committed with a dated amendment here before stage 2 is queued. Two lines are then read at N = 288:
+**AS PREDICTED AT THE HELD-OUT SIZE** if at every window λ the cell is metastable, passes gates 2 and 3′, has (a″)
+inside its band and all three numbers inside their ranges, otherwise **NOT AS PREDICTED AT** (the list, with what
+missed); and the λ at which N = 288 is sharp. A prediction of "not sharp" that comes true is as predicted, and is
+reported as not sharp.
+
+Nothing here says that something has not been found in the literature (rule 15). A red-team pass (rule 12) is owed
+before paper 1 quotes this run's verdict.
+
+### Predictions
+
+**The owner's, for stage 1, standing from T23 and T24: SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE.**
+On 10 October she was told a fourth run needed her yes and her prediction and was reminded of that one; she
+answered "Proceed". It is recorded as her prediction for stage 1 unless she replaces it before stage 1 is read.
+**For the held-out size hers is owed**, and is asked for when stage 1 has been read and the numbers written.
+
+**Ours, unverified, for stage 1: the same.** (a″) holds in all 24 window cells (a memoryless cell fails it one time
+in a thousand, so a false fail somewhere has a chance of 2.4 %), including λ = 1.30 at N = 192, whose failure in T24
+we expect was the detector's clock; (b) and (c) hold in every window cell as they did three times; the edge breaks
+up. Not scored: the mean wait by the look runs 0 to 15 % above τ, most at the smallest size.
+
+**Ours, for the held-out size, said now and before stage 1:** (a″) and (b) hold at N = 288 at every window λ. (c),
+one front, is the one at risk at the top of the window (λ = 1.25 and 1.30): the first exit comes at the same rate
+per sweep whatever the length, while a front needs more sweeps to cross a longer tube, so a second seed has more
+time to start (T37, T51). The numbers follow from stage 1.
+
+### What each outcome would mean
+
+- **SHARP ACROSS THE WINDOW.** Paper 1's map gets a registered verdict in place of three inconclusives, reported as
+  the fourth attempt, with the earlier three beside it.
+- **NOT SHARP AT (a list).** The window is narrower than 1.05 to 1.30 at these sizes, and the paper says where it
+  ends and which of (a″), (b), (c) failed.
+- **INCONCLUSIVE.** Reported with its reason. **No fifth run is planned for paper 1** (ours; the owner may overrule
+  it in a dated note): a further run would need a new reason written before it, as this one has.
+- **The edge other than BREAK-UP.** The owner's prediction, which held twice, fails on the third try, and the paper's
+  sentence about where break-up begins is withdrawn or weakened.
+- **NOT AS PREDICTED at the held-out size.** The straight line from four sizes does not carry to a tube half as long
+  again. Which number missed says what changes with length. If it is (c), the single front is a property of short
+  tubes at that λ, the window narrows as the tube lengthens, and paper 1 says so beside its size table.
+- **AS PREDICTED and sharp.** The size claim holds one step beyond every size this map had run.
+
+### Named or interchangeable points
+
+Named, for T8's reason (the count of each proposed arrangement's symmetries at every move is unaffordable at these
+sizes). The expected effect of interchangeable points is T8's: waits multiplied by about N, the release and the
+front unchanged (ours, unverified).
+
+### What this cannot show
+
+Anything outside λ = 1.05 to 1.35, at other couplings, beyond N = 288, or with interchangeable points. That Eq. (2)
+is right: the look's clock runs late by an amount that depends on how often exits come back, which T59 measures by
+the move. That the resting states are stable. Anything at λ = 1: at λ ≠ 1 this is our family around the published
+model, never combinatorial quantum gravity.
+
+### Reading of T59, stage A2, 2026-10-10, 19:15 ET by the clock (`python scripts/analyse_t59.py`)
+
+Placed here because T60's registration was appended before stage A2 of T59 had finished. Stage B of T59 was still
+running and is not read.
+
+**Gate passed.** All fourteen replays return the first exit T22 saved, to the attempt.
+
+**Verdict on the seven: OFFERED AS COUNTED.** Ours holds (for one target it was known, as disclosed). In every whole
+stretch of 5,000 sweeps of every long wait the chain was offered 2.94 to 3.03 exits of kind A a sweep and 1.94 to
+2.04 of kind B, where the count says 3 and 2.
+
+| T22 run | first exit, sweeps | in mean waits | exits its offers would have produced | chance that none was taken |
+|---|---|---|---|---|
+| N = 64, replica 7 | 80,985 | 9.72 | 9.71 | 6.0 × 10⁻⁵ |
+| N = 96, replica 12 | 80,174 | 9.63 | 9.66 | 6.4 × 10⁻⁵ |
+| N = 64, replica 6 | 43,196 | 5.19 | 5.18 | 0.0056 |
+| N = 96, replica 29 | 41,484 | 4.98 | 4.97 | 0.0069 |
+| N = 96, replica 6 | 37,792 | 4.54 | 4.54 | 0.011 |
+| N = 64, replica 17 | 36,974 | 4.44 | 4.42 | 0.012 |
+| N = 64, replica 11 | 36,635 | 4.40 | 4.40 | 0.012 |
+
+The three controls that lasted a whole stretch (first exits at 6,356, 17,299 and 8,465 sweeps) were offered the
+same; the other four left before one stretch was over and have nothing to score.
+
+**What it says.** The waiting tori were offered their ways out at the counted rate throughout. The enumeration
+behind "three classes, one census" did not fail, and no long wait was a torus that had found a place with fewer
+exits. Each long wait is a run of acceptance draws that all fell above the threshold. Whether such runs come more
+often than independent draws make them is what stage B measures.
+
+### Reading of T59, stage B, 2026-10-10, 22:38 ET by the clock (`python scripts/analyse_t59.py`)
+
+All 54 jobs finished at 22:37 ET with no file left partial. Read after the owner's prediction (18:17 ET).
+
+**ON THE COUNT at both sizes. P1 and P2 hold. The owner's prediction (chance) holds, and ours.**
+
+| N | fresh tubes | mean first exit by the move, over the count | later than 4, 6, 8, 10 mean waits | one memoryless population expects | longest |
+|---|---|---|---|---|---|
+| 64 | 2,000 | 0.992 ± 0.023 | 36, 7, 1, 0 | 36.6, 5.0, 0.67, 0.09 | 9.0 |
+| 96 | 1,000 | 0.946 ± 0.031 | 21, 2, 0, 0 | 18.3, 2.5, 0.34, 0.05 | 7.5 |
+
+Registered: the mean within 0.07 of 1 at N = 64 and within 0.10 at N = 96; at most 4 and at most 3 first exits later
+than 8 mean waits. Every tube left before its cap. T22's own frequency of very long first exits would have put about
+50 and 25 beyond 8 mean waits; there is 1 in 3,000.
+
+Described, not scored: the same tubes read by a look every five sweeps run later than the move by 0.094 ± 0.009 of
+the count at N = 64 and 0.076 ± 0.015 at N = 96, all of it from tubes whose first exit came back before a look (198
+of 2,000 and 64 of 1,000).
+
+**What it says.** Counted by the move, the first exit at λ = 1.05 is one memoryless population on the count, with no
+slow tail. T22's two first exits near 9.7 mean waits, and T8's wait of 9.4, were each a torus that sat as a torus
+(A1), was offered its exits at the counted rate throughout (A2), and took none: rare runs of draws, not a property of
+the chain. Worked out after seeing them, two such first exits among T22's 80 had a chance of about 1 in 70,000;
+that number is reported, and the fresh sample is the reason it is read as chance and not as a fault.
+
+**T59 in one line:** gates passed; A1 TRUE WAIT; A2 OFFERED AS COUNTED; B ON THE COUNT at both sizes; C HIDDEN
+EXITS. All of ours hold, and both of the owner's.
+
+### Reading of T60, stage 1, 2026-10-10, 23:13 ET by the clock (`python scripts/analyse_t60.py`)
+
+All 28 cells were fetched from Batch and passed `scripts/accept_inbox.py` (the recorded config equal to the
+committed one) before anything was read; the last arrived at 23:13 ET. The owner had not replaced her standing
+prediction.
+
+**The window: SHARP ACROSS THE WINDOW. The edge: BREAK-UP BEGINS AT THE EDGE. The owner's prediction holds on
+both, and ours.** This is the fourth attempt at the window verdict and the first to return one.
+
+Gates 2 and 3′ pass in all 28 cells, and no decay failed to leave its tube. Per λ, over the four sizes (120 decays
+each):
+
+| λ | (a″) CV of the wait (band 0.758 to 1.379) | (b) points at d ∈ {1, 2} at half conversion | (c) largest converted piece | mean wait over τ, by the look | decays ending flat, of 120 |
+|---|---|---|---|---|---|
+| 1.05 | 0.936 to 1.006 | 0.999 to 1.000 | 0.99 to 1.00 | 0.93 to 1.05 | 117 to 120 |
+| 1.10 | 0.868 to 1.034 | 0.999 to 1.000 | 0.98 to 1.00 | 0.96 to 1.19 | 118 to 120 |
+| 1.15 | 0.897 to 1.095 | 0.998 to 0.999 | 0.97 to 0.99 | 0.91 to 1.16 | 113 to 118 |
+| 1.20 | 0.932 to 1.119 | 0.996 to 0.998 | 0.95 to 0.98 | 1.01 to 1.18 | 110 to 115 |
+| 1.25 | 0.846 to 1.004 | 0.990 to 0.994 | 0.90 to 0.98 | 1.01 to 1.20 | 98 to 109 |
+| 1.30 | 0.928 to 1.090 | 0.974 to 0.986 | 0.83 to 0.93 | 0.92 to 1.13 | 82 to 94 |
+| 1.35 (the edge) | 0.858 to 1.124 | 0.947 to 0.962 | 0.68 to 0.86 | 1.05 to 1.10 | 44 to 83 |
+
+- **(a″) holds in all 28 cells**, the three that failed (a′) in T24's window among them: λ = 1.25 at N = 64 (CV
+  0.846), λ = 1.30 at N = 64 (0.968) and at N = 192 (1.057). The band computed by T23's function for 120 waits is
+  0.758 to 1.379; this registration quoted T23's text, 0.756. No cell is near either.
+- **(b) and (c) hold in all 24 window cells**, as in each earlier run. The largest converted piece falls with size
+  at the top of the window: at λ = 1.30 it is 0.93, 0.92, 0.87 and 0.83 at N = 64, 96, 144 and 192.
+- **The edge.** Decays ending flat fall from 0.73 at λ = 1.30 to 0.50 at 1.35 (E1), and those whose converted region
+  is in more than one piece at a quarter conversion rise from 0.40 to 0.69 (E2). At λ = 1.35 the cells at N = 64, 96
+  and 144 are sharp and N = 192 is not: its largest piece holds 0.68, under the 0.70 line.
+- **Not scored.** The mean wait read by a look every five sweeps is 1.06 of τ over the 24 window cells (1.14,
+  0.99, 1.08 and 1.02 at the four sizes, each give or take 0.04), which is the lag T59 measured for such a look.
+  The exact release per point is 0.199 to 0.200 at λ = 1.05 and 1.12 to 1.14 at 1.30 against 0.2 and 1.2, with 26
+  to 37 of 120 decays at 1.30 resting on states other than the flat torus or the ledge, as in T24.
+
+**What it says.** With the wait timed by when a tube first stops being a tube, the change is memoryless, two orders
+sit side by side and one front dominates at every setting from λ = 1.05 to 1.30 and every size from 64 to 192, and
+break-up begins at 1.35. T24's three window failures do not recur, which is what O109 and T59 said of that clock.
+Four runs, three repairs to the instrument, one verdict; the three earlier runs stay on the record as scored.
+
+### Amendment, 2026-10-10, 23:14 ET by the clock: the numbers for the held-out size, written before it runs
+
+`python scripts/analyse_t60.py results --write-prediction` wrote `configs/t60_heldout_prediction.json` from stage 1
+alone, by the recipe fixed above. For N = 288, per window λ (predicted value, with its range):
+
+| λ | mean wait over τ | (b) two orders | (c) one front | the recipe predicts |
+|---|---|---|---|---|
+| 1.05 | 1.02 (0.69 to 1.35) | 0.999 (0.969 to 1) | 0.980 (0.880 to 1) | sharp |
+| 1.10 | 1.08 (0.73 to 1.42) | 1.000 (0.970 to 1) | 0.965 (0.865 to 1) | sharp |
+| 1.15 | 1.05 (0.71 to 1.38) | 0.999 (0.969 to 1) | 0.949 (0.849 to 1) | sharp |
+| 1.20 | 1.08 (0.73 to 1.42) | 1.000 (0.970 to 1) | 0.942 (0.842 to 1) | sharp |
+| 1.25 | 1.08 (0.74 to 1.43) | 0.996 (0.966 to 1) | 0.850 (0.750 to 0.950) | sharp |
+| 1.30 | 1.04 (0.71 to 1.37) | 0.997 (0.967 to 1) | 0.754 (0.654 to 0.854) | sharp |
+
+At λ = 1.30 the line puts the largest piece at 0.754, close to the 0.70 line, and its range crosses it: the recipe
+says sharp there, and a cell inside the range could come out either side. That is what ours said before stage 1
+(one front is the criterion at risk at the top of the window). The file is committed with this amendment, and
+stage 2 (`scripts/make_t60_configs.py --held-out`; `cloud/queue/2026-10-10_t60_stage2.txt`; 7 jobs) is queued in
+the same commit. **The owner's prediction for the held-out size is asked for now and recorded here before stage 2
+is read; stage 2 is not read until then.**

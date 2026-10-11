@@ -1,5 +1,11 @@
 # Assumption register
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Every assumption in the code and the planned paper, with its source and how far
 it has been checked. Keys in square brackets refer to `REFERENCES.bib`.
 
@@ -60,10 +66,10 @@ Full statements and derivations are in the docstring of `src/graphity/cqg.py`.
 | Q9 | Ergodicity of the edge switch (task T4). **What has to hold:** the switch must join all *classes* of states, a class being all states that differ only by renaming vertices within a side. That is enough, and joining all labelled states is not needed: every observable we use is unchanged by such renaming, and renaming turns moves into moves, so if all classes are joined, every region the chain can be confined to is a renamed copy of every other and gives the same averages. **How completeness is proved:** by counting. The labelled states are counted directly, without reference to the moves (L = G·C(n,4)·(n−1)!, where G is the number of tables with increasing rows that contain one fixed row). The classes reached by switches from one state are collected, and a class whose graph has A side-preserving symmetries holds (n!)²/A labelled states. If these add up to L, the list is complete and the switch joins all of it. | Ours: the argument, the counting formula and the code (`src/graphity/small_graphs.py`). Isomorphism tests and symmetry counts: networkx (VF2). | Ours, tested (`tests/test_small_graphs.py`; recorded run `results/ergodicity_small.csv`). **Result, exhaustive, no sampling:** no states exist for N ≤ 12. N = 14: 151 200 labelled states, one class (the biplane graph of Q8), and *no* switch from it is valid, so the chain cannot move there at all; harmless, because there is one class. N = 16: 635 040 000 states, 5 classes, all joined. N = 18: 1 785 021 235 200 states, 26 classes, all joined. Under the cap: no states up to N = 16; N = 18: 20 118 067 200 states, 3 classes, all joined. The counting formula is checked against a brute-force count that shares none of its reasoning (N = 14). **The chain is then checked against exact answers:** with every state and its energy known, ⟨S⟩ is a finite sum. At N = 16 and N = 18, for λ = 0, 0.5 and 1, both acceptance rules, the chain agrees with the exact value to within its error of about 0.03 % (section D below). This tests the proposal, both terms of the energy, the acceptance rules and ergodicity together. Also tested: the kernel's quick validity check agrees with the full one on every possible switch from several states (`test_quick_validity_check_agrees_with_the_full_one`). **Limits, stated plainly:** this proves ergodicity only for N ≤ 18. N = 20 was started and its direct count did not finish in about 40 minutes. For the sizes we simulate (64 and up) ergodicity remains unproven, as it is in the published work, which does not discuss it; what these sizes give is the absence of a counterexample where one could be found, and a sampler verified against exact results. The "neighbourhood swap" of [T25] Fig. 8 was not needed at these sizes and has not been added. |
 | Q10 | The energy on graphs that need not be two-sided, so that triangles and pentagons can occur (`src/graphity/full_curvature.py`; a slow exact reference for small graphs, not a simulation kernel). Edge curvature κ = T/4 − [1 − (2+T+S)/4]₊ − [1 − (2+T+S+P)/4]₊ with T, S, P the triangles, squares and pentagons through the edge; H = −4 Σ κ over both directions of every edge. Valid graphs: 4-regular, simple, no two cycles of length 3 to 5 sharing more than one edge. Move: the general edge switch, (a,b),(c,d) → (a,c),(b,d) or (a,d),(b,c). | Curvature: [T25] Eq. (8); energy: Eq. (21); prices of the three kinds of loop in the global term, 9/8 : 1 : 5/8, Eq. (22); the rule about shared edges: [T25] Def. 2 and Fig. 1. All read from the text. The published simulations, and our kernel, use two-sided graphs, where T = P = 0 ([T25]; [KTB19] Sec. 4). The general move: ours. | Ours, tested (`tests/test_full_curvature.py`): on two-sided graphs the general energy equals the kernel's H at λ = 1 on every state tried. **Why it was written:** the owner asked whether a "brace", a diagonal support across a block, could stabilise an arrangement. A brace makes triangles, so the published formula already prices it. **Exact results at the published prices:** (1) the flat square sheet stays a dip when braces are allowed (cheapest way out +16). (2) The braced sheet (kagome: every edge in one triangle, no squares) is valid, sits 4 per vertex above the flat sheet, and is *not* a dip: one move that puts a pentagon beside two triangles lowers it by 20, whatever price the triangles are given; followed downhill on a 27-vertex torus it stops in a dip at 1.78 per vertex. (3) **The 30-vertex closed piece with a triangle and a pentagon on every edge (the icosidodecahedron) has κ = 0 on every edge, so H = 0, the same as the flat sheet, and it is a dip (way out +20).** In the global term this is (9/8)(2/3) + (5/8)(2/5) = 1 square's worth per vertex. [T25] argues that triangles and pentagons "are excluded for an homogenous ground state" because a triangle–pentagon couple earns 9/8 + 5/8 < 2; that compares per couple, not per vertex, and this arrangement looks like a counterexample to the conclusion. The rule about shared edges was checked against [T25] Fig. 1 (image inspected 2026-09-20): each of its five excluded subgraphs is a pair of short cycles sharing two or more edges, which is the rule the code applies, and in this piece a triangle and a pentagon share exactly one edge, which the text allows. *Ours, unreviewed;* one for the note to the authors. It is a closed piece, not a space: paying braces any more than the published price would favour such pieces over the flat sheet. |
 | Q11 | Parallel tempering (task T5): one copy of the system at each of several couplings, ordinary sweeps, then offers to swap whole graphs between neighbouring couplings, accepted with probability min(1, exp((1/g_i − 1/g_j)(H_i − H_j))). Neighbours only, pairs (1,2),(3,4),… and (2,3),(4,5),… on alternate rounds; every (round, copy) has its own seed and the swap decisions their own stream, all from one numpy `SeedSequence`. | The method: standard (replica exchange), from general knowledge, [NB99] for the Metropolis rule. The detailed-balance argument for the swap is written out in `src/graphity/tempering.py`. The details listed here: ours. | Ours, tested (`tests/test_tempering.py`). **Decisive test:** at N = 18, four couplings at once, each coupling reproduces the exact average for *its own* coupling (λ = 0 and 1, both acceptance rules); a wrong swap rule would pull the four together. **Limit:** tempering makes a frozen chain move, it does not make slow physics fast. Report `round_trips` (graphs that went from the hottest coupling to the coldest and back) with every run; where it is 0 or 1 the cold end has not been refreshed from the hot end and is not in equilibrium. |
-| Q12 | Sealed and leaky runs (`src/graphity/sealed.py`). Beside the graph one number, the DEMON, holds energy and is never allowed to go negative; a switch is accepted exactly when the demon can pay for it, ΔH ≤ demon, and then demon −= ΔH. Same moves, same configuration space, same validity rules as `cqg.run_chain`. After each sweep the demon keeps a fraction (1 − leak) of its energy and the rest is counted as gone: leak = 0 is sealed, leak = 1 removes everything given off as fast as it appears, in between is the author's semi-permeable wall. The leak is a choice of protocol, not of model, and is declared before a run like any other knob (S1). | The demon: Creutz 1983, from general knowledge, not read by us; standard. The leak and the rest: ours. | Ours, tested (`tests/test_sealed.py`). **Exact by construction and checked:** H + demon + what has leaked never changes, to the last bit, at λ = 0, 0.5, 1 and 1.25; the demon never goes negative; energy only ever leaves. That is the bookkeeping VISION claim 6 asks for. **The temperature is measured, not set:** the demon settles into P(demon) ∝ exp(−demon/g), so its mean gives g = step/ln(1 + step/mean) where step is the smallest possible change of H (16 at λ = 0, 4 at λ = 1, 5 at λ = 1.25). Prepared at a known coupling and then sealed, the demon reads it back: 5.1 ± 0.1 for g = 5, 7.7 ± 0.2 for 8, 13.5 ± 1.9 for 12, 20.9 ± 1.4 for 20 (N = 144, six runs each; the error grows with g because the demon fluctuates more). **Limit:** the demon is one degree of freedom against N, so it takes almost none of the energy; the temperature reading is meaningful only after the run has settled. |
+| Q12 | Sealed and leaky runs (`src/graphity/sealed.py`). Beside the graph one number, the DEMON, holds energy and is never allowed to go negative; a switch is accepted exactly when the demon can pay for it, ΔH ≤ demon, and then demon −= ΔH. Same moves, same configuration space, same validity rules as `cqg.run_chain`. After each sweep the demon keeps a fraction (1 − leak) of its energy and the rest is counted as gone: leak = 0 is sealed, leak = 1 removes everything given off as fast as it appears, in between is the author's semi-permeable wall. The leak is a choice of protocol, not of model, and is declared before a run like any other knob (S1). | The demon: Creutz 1983, from general knowledge, not read by us; standard. The leak and the rest: ours. | Ours, tested (`tests/test_sealed.py`). **Exact by construction and checked:** H + demon + what has leaked never changes, to the last bit, at λ = 0, 0.5, 1 and 1.25; the demon never goes negative; energy only ever leaves. That is the bookkeeping VISION claim 6 asks for. **Historical thermometer interpretation, superseded by O108 (9 October 2026):** the demon settles into P(demon) ∝ exp(−demon/g), so its mean gives g = step/ln(1 + step/mean) where step must be the separately justified accessible level spacing, not the smallest uphill move (the former λ=1.25 value 5 is incorrect; increments 12 and 25 have gcd 1). Prepared at a known coupling and then sealed, the demon reads it back: 5.1 ± 0.1 for g = 5, 7.7 ± 0.2 for 8, 13.5 ± 1.9 for 12, 20.9 ± 1.4 for 20 (N = 144, six runs each; the error grows with g because the demon fluctuates more). **Limit:** the demon is one degree of freedom against N, so it takes almost none of the energy; the temperature reading is meaningful only after the run has settled. |
 | Q13 | The wall round an arrangement, and how often the sampler offers a way over it, are both countable exactly rather than fitted. From a perfect tube at λ = 1.25: the cheapest valid switch costs **B = 12** (it loses two squares and four surplus squares, 32 − 20), and the number of proposals that do so is exactly **6N**, out of the 4N² the sampler can make (it picks (u₁, slot) and (u₂, slot) independently from N/2 vertices and 4 slots). A sweep is 2N attempts, so the chances of a way over the wall per sweep are 2N · 6N/4N² = **3, at every size**. Under Metropolis the waiting time should then be 1/(3 exp(−B/g)) sweeps. | Ours; the counting is exact and is checked by `scripts/run_waiting_time.py` against the measured waits. | Ours, tested (section D below). **This settles a contradiction we had written down and resolves it in favour of the local wall.** The earlier claim that the waiting time ought to fall like 1/N was simply a malformed prediction: a sweep is already 2N attempts, and the proposals go as N² while the good ones go as N, so the two factors of N cancel exactly and a flat waiting time in sweeps is what a *local* wall predicts. |
 | Q14 | **Re-seeding the random generator in short blocks damages a run, and every driver that calls the kernel repeatedly must carry one stream instead.** `cqg.run_chain`, `wang_landau._wl_sweeps` and `wl_ising._ising_sweeps` now take `seed < 0` to mean "carry on the previous call's stream"; `seed >= 0` seeds as before, so every existing script and the bit-for-bit regression are untouched. `tempering.temper` and the Wang-Landau drivers seed once and then pass −1. | Ours. The effect was found while validating T6 against a known answer and is measured, not assumed. | Ours, measured. **The evidence:** 4×4 Ising, weights held at the exactly correct density of states, total work fixed at 200 000 sweeps, twelve independent runs of each variant. Carried on one stream the visit histogram is flat to **0.023 ± 0.009**; re-seeded every 200 sweeps it is flat only to **0.409 ± 0.280**, and the damage grows with the number of re-seeds (1 block 0.985, 10 blocks 0.971, 100 blocks 0.871, 1000 blocks 0.879 on min/mean). **It is extra noise, not a bias:** the draws themselves are clean (200 000 fresh seeds; the mean, the share of each value and the pairwise correlations of the first six draws are all where they should be), and averaged over runs the histogram is flat to 0.4 %. **Does it change any result already recorded?** Checked, and no. `tempering.temper` used to re-seed at every (round, copy), about 200 000 times per production run, five sweeps apart. Measured against the exactly known ⟨S⟩ at N = 18, λ = 1, four couplings, 24 runs each way: the old seeding lands −0.0, +0.7, −0.5, +0.5 standard errors from exact and the new one −0.3, −0.6, −1.8, −1.5. Both are consistent with exact, so **T5 and everything built on it stand**; the run-to-run spread we already report absorbs the extra noise. For a flat-histogram walk it would not have been absorbed, because the noise goes straight into ln g, which is why it was found there and fixed everywhere. |
-| Q15 | **CORRECTION, 2026-09-21, by the owner, before any run: quotienting by isomorphism is STANDARD practice in neighbouring approaches and is not a new idea.** Causal dynamical triangulations sums over *inequivalent* triangulations weighted by 1/|Aut(T)|, and states the reason as principled rather than technical: a path integral over geometries should carry no relabelling redundancy, because relabelling is not a physical change. Causal set theory treats labels as surplus structure in the same way. Any claim that this is unexplored is false and is withdrawn. **What may survive is narrower and is the owner's formulation:** those approaches quotient labels out of an ensemble that already assumes a great deal of geometric structure (simplices glued into causal spacetimes; orderings already causal), whereas the proposal here is to use interchangeable-constituent counting as the central thermodynamic quantity in a comparison *between* a pre-geometric relational organisation and a spacetime-like one, with neither side assumed to be a geometry. Those are different operations. **Before any novelty is claimed**, search group field theory, tensor models, causal sets and graphity for isomorphism-class microstate entropy compared across a geometric phase transition (task T12). **A point of precision that sharpens the concern and was worth checking:** the number of named versions of a shape is (n!)^2/A. The (n!)^2 is the same for every shape at a given size, so it cancels from every ratio, average and difference and inflates nothing -- the factorial does *not* swamp the measurement. What does not cancel is the division by A, and A varies by e^62 between a shattered state and a sheet at N = 160 (measured below). So named counting underweights symmetric arrangements by exactly their symmetry, which is a real, finite and computable effect rather than an artefact. | **Named points against interchangeable ones**, and how much of an arrangement is genuinely interchangeable. Named counting (what every run here and, as far as we know, every published CQG run does) weights a shape by its number of distinct named versions, (n!)^2/A; interchangeable counting weights every shape once. So the second favours a shape by **exactly A**, the number of renamings that leave every relationship intact and keep each point on its own side. `small_graphs.log_automorphisms` computes ln A piece by piece, because the group factorises over connected pieces and the arrangements whose groups are too large to list are exactly the ones that come apart. | The two ensembles, and the sampling rule that realises the second (Metropolis ratio x |Aut(G')|/|Aut(G)|): [DQM25] Eq. (72), read in full by the owner. The reading that a point is distinguishable only to the extent that its relationships distinguish it, and therefore that A *derives* rather than assumes which points are interchangeable: ours. | Ours, tested and measured. **Tested:** `log_automorphisms` returns 192 for the 4-cube, which is the side-preserving half of its known group of order 2^4 x 4! = 384 and independently the value `results/ergodicity_small.csv` records for that class; 320 for the 16x10 torus (160 translations x 2 reflections); the exact factorisation A^k k! for k copies of one shape; and 1 for a melted graph. **Measured at N = 160** (`scripts/measure_symmetry_cost.py`): ten separate 4-cubes are favoured by e^67.7 = 10^29.4 and take 0.11 s to count; a perfect sheet by 320, 11.7 s; a melted graph by exactly 1, 24.3 s. The ordering of the costs is the opposite of the obvious guess: the shattered state is cheapest because it factorises, and the melted one is dearest because the work goes into proving there is no symmetry, for an answer that is always 1. **Consequence for the plan:** a correction at every move is unaffordable at any of those speeds (a run makes about 10^8 moves), so it is applied to measured configurations or per energy level, and that approximation is checked against the exact small-size answer. **Exact at small size** (`scripts/labelled_vs_unlabelled.py`, arithmetic on a committed result): at N = 16 the 4-cube's share rises from 1.3 % to 20 % at lambda = 1 where every class is degenerate, and at lambda = 0, g = 20 from 0.13 to 0.73 with phi moving 1.347 to 1.454, towards the shattered 1.5; at N = 18, where no 4-cube fits, the shift is smaller and at lambda = 1 runs the other way. **Limits:** N <= 18 is one piece and cannot shatter, so this is the mechanism and not its consequence; and it is a statement about which arrangements an ensemble favours, not about the order of a transition, which is what T10 is actually for. *Ours, unverified:* at lambda > 1 and cold, the energy gap between a shattered state and a sheet (320 units at N = 160) suppresses the shattered one by about 10^-70 against a symmetry gain of 10^29.4, so this does not overturn which arrangement is lowest; at warmer couplings the two become comparable, which is a calculation rather than a worry. |
+| Q15 | **CORRECTION, 2026-09-21, by the owner, before any run: quotienting by isomorphism is STANDARD practice in neighbouring approaches and is not a new idea.** Causal dynamical triangulations sums over *inequivalent* triangulations weighted by 1/|Aut(T)|, and states the reason as principled rather than technical: a path integral over geometries should carry no relabelling redundancy, because relabelling is not a physical change. Causal set theory treats labels as surplus structure in the same way. Any claim that this is unexplored is false and is withdrawn. **What may survive is narrower and is the owner's formulation:** those approaches quotient labels out of an ensemble that already assumes a great deal of geometric structure (simplices glued into causal spacetimes; orderings already causal), whereas the proposal here is to use interchangeable-constituent counting as the central thermodynamic quantity in a comparison *between* a pre-geometric relational organisation and a spacetime-like one, with neither side assumed to be a geometry. Those are different operations. **Before any novelty is claimed**, search group field theory, tensor models, causal sets and graphity for isomorphism-class microstate entropy compared across a geometric phase transition (task T12). **A point of precision that sharpens the concern and was worth checking:** the number of named versions of a shape is (n!)^2/A. The (n!)^2 is the same for every shape at a given size, so it cancels from every ratio, average and difference and inflates nothing -- the factorial does *not* swamp the measurement. What does not cancel is the division by A, and A varies by e^62 between a shattered state and a sheet at N = 160 (measured below). So named counting underweights symmetric arrangements by exactly their symmetry, which is a real, finite and computable effect rather than an artefact. | **Named points against interchangeable ones**, and how much of an arrangement is genuinely interchangeable. Named counting (what every run here and, as far as we know, every published CQG run does) weights a shape by its number of distinct named versions, (n!)^2/A; interchangeable counting weights every shape once. So the second favours a shape by **exactly A**, the number of renamings that leave every relationship intact and keep each point on its own side. `small_graphs.log_automorphisms` computes ln A piece by piece, because the group factorises over connected pieces and the arrangements whose groups are too large to list are exactly the ones that come apart. | The uniform-class ensemble is our classical modeling choice, not derived from [DQM25]. Its acceptance rule is min(1, |Aut(G')|/|Aut(G)| exp(−ΔH/g)); the symmetry ratio belongs inside the minimum (O108). The reading that a point is distinguishable only to the extent that its relationships distinguish it, and therefore that A *derives* rather than assumes which points are interchangeable: ours. | Ours, tested and measured. **Tested:** `log_automorphisms` returns 192 for the 4-cube, which is the side-preserving half of its known group of order 2^4 x 4! = 384 and independently the value `results/ergodicity_small.csv` records for that class; 320 for the 16x10 torus (160 translations x 2 reflections); the exact factorisation A^k k! for k copies of one shape; and 1 for a melted graph. **Measured at N = 160** (`scripts/measure_symmetry_cost.py`): ten separate 4-cubes are favoured by e^67.7 = 10^29.4 and take 0.11 s to count; a perfect sheet by 320, 11.7 s; a melted graph by exactly 1, 24.3 s. The ordering of the costs is the opposite of the obvious guess: the shattered state is cheapest because it factorises, and the melted one is dearest because the work goes into proving there is no symmetry, for an answer that is always 1. **Consequence for the plan:** a correction at every move is unaffordable at any of those speeds (a run makes about 10^8 moves), so it is applied to measured configurations or per energy level, and that approximation is checked against the exact small-size answer. **Exact at small size** (`scripts/labelled_vs_unlabelled.py`, arithmetic on a committed result): at N = 16 the 4-cube's share rises from 1.3 % to 20 % at lambda = 1 where every class is degenerate, and at lambda = 0, g = 20 from 0.13 to 0.73 with phi moving 1.347 to 1.454, towards the shattered 1.5; at N = 18, where no 4-cube fits, the shift is smaller and at lambda = 1 runs the other way. **Limits:** N <= 18 is one piece and cannot shatter, so this is the mechanism and not its consequence; and it is a statement about which arrangements an ensemble favours, not about the order of a transition, which is what T10 is actually for. *Ours, unverified:* at lambda > 1 and cold, the energy gap between a shattered state and a sheet (320 units at N = 160) suppresses the shattered one by about 10^-70 against a symmetry gain of 10^29.4, so this does not overturn which arrangement is lowest; at warmer couplings the two become comparable, which is a calculation rather than a worry. |
 | Q16 | **Connected runs use the simplest possible move: the ordinary switch, with any proposal that would break the graph into pieces refused.** No new move, no new algorithm. `one_switch_away(..., connected=True)` and `explore(..., connected=True)` in `small_graphs.py`; the production flag is still to be added to the kernel. | **Detailed balance is automatic** and is not an assumption: restricting a symmetric proposal to a subset of states leaves it symmetric. **Irreducibility is the assumption.** [Taylor81] proves it for a space constrained only by degree -- any connected graph reaches any other by switches with every intermediate graph connected -- and that is quoted from sources citing it rather than from the original. | **Ours, and NOT established on our space. Read this before interpreting any connected run.** [Swap17] reports that adding a constraint can destroy exactly the swap-connectivity Taylor guarantees, and our space adds the hard-core rule on top of degree, so the guarantee is not inherited. **We tried to check it exhaustively and the check is vacuous** (`scripts/check_connected_ergodicity.py`, 2026-09-21). The restricted walk does reach every connected class at N = 16 and 18, with and without the cap -- but the restriction **refused zero moves** at both sizes, so the walk it performed was the unrestricted one and the result says nothing. The reason is arithmetic: the smallest valid piece has 14 vertices (Q8), so two pieces need at least 28, and every valid state at 16 or 18 vertices is connected whether or not you ask. Exhaustive enumeration cannot reach 28 (N = 20 did not finish in about 40 minutes, Q9), so **this property cannot be established exhaustively with the machinery we have.** **What must therefore be reported with every connected run:** the share of proposals refused for disconnection. Where it is small the restriction barely bites and the chain is effectively the unrestricted one, whose ergodicity T4 did establish at small size; where it is large -- the shattered phase at λ = 0 is the case to worry about -- the restriction is doing real work and any result carries this caveat. A cheaper partial check that has not been done: start the restricted chain from two very different connected states at a simulable size and see whether each reaches the other's neighbourhood. That is evidence, not proof. |
 | Q17 | **The flat-histogram approach to T6 does not work on this model at production size, and the reason is structural rather than a tuning problem.** Diagnosed 2026-09-21 at N = 36, the smallest pre-registered size, before any result was taken from it. | Ours, measured. | Ours, measured, and the numbers are the point. **What was seen.** Starting from a perfect flat torus with the whole (S, X) range as the window: 4015 cells of which 737 reachable, 2x10^7 moves, and **zero round trips** -- the walk never crossed its own window once. Consequences, in order: (a) the flatness criterion was never met, because new bins were still being discovered at round 358 of 556 and every late bin drags the histogram minimum down; (b) so ln f never left its starting value of 1.0 through the entire run; (c) so the accumulated weights ran to a spread of **24 796** where the true spread of ln g at this size is of order 90; (d) so the frozen-weight second stage could not move at all, visiting **one bin** out of 737. Two repairs were made and are kept because they are right in themselves -- the histogram now restarts whenever a new bin appears, and ln f is halved after a bounded number of rounds whether or not the histogram is flat -- and together they got ln f down to 2x10^-3 and the second stage up from 1 bin to 24. **Still useless, and still zero round trips.** A window restricted to S in 20..40, X in 0..24 did produce 30 round trips, which shows the diffusion distance is the obstacle rather than the kernel; but the transition needs a window spanning the disordered and the ordered side, which is exactly the wide window that cannot be crossed. **The kernel is not at fault** and was checked separately: an ordinary chain on the same graph at infinite temperature accepts 45 % of moves and visits 63 distinct (S, X) in 2000 sweeps. **Conclusion:** flat-histogram sampling over a two-dimensional bin space is the wrong instrument here. Measuring one energy ladder at a time, or splicing overlapping windows, would each address it; but [RdF15], which asks precisely our question in a neighbouring model, answers it with **parallel tempering**, which this project already has and has validated against exact averages (Q11). T6 is redirected accordingly; see TASKS. The Wang-Landau code, its Ising and exact-enumeration validations (Q14, section D) and the two repairs above are kept: they are correct, they are tested, and nothing about them is withdrawn except the claim that this is the right tool for this measurement. |
 | Q18 | **Zero is the floor of the published energy, and allowing braces does not change that.** A chain over graphs that need not be two-sided (`src/graphity/general_chain.py`), so that the static reference of Q10 can be asked what a *run* does. Same energy, same validity rule, the general edge switch of Q10, energy recomputed exactly at every attempted move; a sweep is 2N attempts as elsewhere. | The energy and the validity rule: [T25] Eqs. (8), (21), Def. 2, Fig. 1, as Q10 records. The chain, the floor argument and everything below: ours. | **Ours, tested** (`tests/test_general_chain.py`), and it answers the question the author asked on 2026-09-22: if refolding space is free, does space refold? **(1) Two exclusions that come from the hard-core rule and not from the prices.** A triangle and a square sharing an edge leave a pentagon that shares two edges with each, and two triangles on one edge leave a square that does the same; both are refused. The cuboctahedron, the obvious candidate for an arrangement below the sheet, is invalid for exactly this reason. **(2) So a valid edge carries T = 0, or T = 1 with S = 0, and over every such loading the curvature is at most zero. H is therefore never negative: the flat sheet is not metastable, and nothing in this model family sits below space.** Equality needs every edge to carry either two squares (a sheet) or one triangle and a pentagon (a closed braced piece). **(3) The H = 0 family has at least three members**: the flat sheet (a dip, wall 16); the 30-point icosidodecahedron (a dip, wall 20); and the 15-point L(Petersen), ten triangles and twelve pentagons, which is **frozen** -- not one valid switch exists out of it. **(4) Braces without pentagons are expensive**: the line graphs of the girth-6 cubic graphs (Heawood, Moebius-Kantor, Pappus, Desargues) all sit at exactly +4 per vertex and none is a dip, as the kagome sheet does. **(5) A sheet that wraps in an odd number of steps carries free pentagons** -- once an edge has two squares both brackets are saturated, so further loops on it cost nothing -- **and they halve its wall, 8 against 16.** **What this means for the author's picture** (*ours, unverified*): dark energy as space holding a little extra above something lower needs an arrangement below space, and there is none here, with or without braces. Refolding is free but never downhill, so what decides between space and a knot at a given temperature is entropy, not energy. **Limit, stated plainly:** the chain has no exactly known distribution to check against, because the hard-core rule leaves no valid graph below 14 points (Q8) and enumeration cannot reach the sizes that do exist (Q9), so its runs are read qualitatively -- does it refold, does it survive -- and not as equilibrium averages; irreducibility is unproven for this move set (Q10). |
@@ -1186,6 +1192,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     in the torus's family, so a stickier member of it is not the explanation as far as we have looked. Chance, or
     something not identified that slows some runs; open. It accounts for part, not all,
     of the map's excess at λ = 1.05 (the other cells stay 3 to 27 % above without their largest wait).
+    *Read 10 October 2026 (O112; PREREGISTRATION T59): chance. Each of the three was a torus that sat, offered its exits at the
+    counted rate throughout, and 3,000 fresh first exits counted by the move show no slow tail.*
   - **Relic position, named test.** Rotating each T11 relic through every column with the start held fixed: mean
     distance 4.17 against 4.00 (N = 64, 36 runs, p = 0.67) and 6.38 against 6.00 (N = 96, 28 runs, p = 0.59).
   - **Paper 1 also corrected on the way:** Table 1's N = 192 rerun (1428 / 1.19 / 0.995 / 0.92) had been left as
@@ -2764,6 +2772,9 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     X is stuck; or a window that fails to open at any size with the tie she chooses. **The replacement is hers to
     propose** (rule 11: her ideas first, in her words); none is written here.
 
+  - *Addendum, 10 October 2026, 22:45 ET by the clock:* the one cell that had failed on Batch (L = 72, λ = 1.25,
+    g = 3.0) was resubmitted, fetched and accepted. It reads DAMAGED (7 of 8 replicas; 1 ADVANCES). The window
+    verdict at (72, 1.25) stays ADVANCES ONLY and is no longer provisional; nothing else changes.
 - **O106 EXACT: the single-move walls under the owner's tie, "all at the last", across λ: the slab's wall falls from
   39 to 4 between λ = 1.05 and 1.25 while flat space's stays at 64, so at λ = 1.15 to 1.20 the slab is stuck behind
   13 to 22 with a release of 1.8 to 2.4 per point.** (2026-10-09, 06:30 ET by the clock; `scripts/exact_walls_tie_shape_d.py`
@@ -2840,6 +2851,384 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
   - **Not claimed.** That the knots never heal: the range run ends at 300,000 fair sweeps. Anything about the "pieces
     of one and three", which are the fragments of larger clusters (the table of compositions is in the scratch log of
     this session, not in `results/`; it can be rerun from the CSV).
+
+- **O108 Paper 1 revision after the 9 October 2026 review.** **Ours, unverified by an independent physicist.**
+  Scope: `docs/papers/curled_torus/feedback_resolution_2026-10-09.md` maps the feedback to changes and evidence;
+  `scripts/analyse_curled_revision.py` is a retrospective, read-only analysis, not a new registered run.
+  - **Exact finite-size computation:** exhaustive side-preserving neutral-class closure at lambda=1.25
+    yields three reachable classes and the same full switch census at N=48,64,96,144,192,288. Minimum
+    nonneutral cost is 12; all energy-neutral moves preserve (S,X). This replaces the sampled-walk
+    lower-bound argument at those sizes only. The exact N=18 strict-minimum intervals and T8 endpoint
+    topology checks in the supplied reviewer script reproduce; all 120 lambda=1.05 endpoints are tori.
+  - **Thermometer correction to Q12 and historical T9/T10 interpretations:** mean integer-store energy
+    is not g. Conditional on a canonical distribution on levels 0,delta,2delta,..., u=delta/expm1(delta/g).
+    At lambda=1.25 the known increments 12 and 25 have gcd 1; this does not prove the full reachable
+    spectrum or mixing. C*≈[epsilon N+s−U_graph(g_m)]/u(g_m); no coexistence conclusion follows.
+    Raw `bath_T` and historical scoring are retained; analyzer labels now explicitly identify the mean-energy proxy. T10's discrete proxies reach 1.0128,
+    so “every bath below g=1” is withdrawn even under that conditional calibration.
+  - **Correction to Q20 / the old symmetry wording:** a=min(1,A(G')/A(G) exp(−Delta H/g)), with the ratio
+    inside the clipping operation. Rate suppression cN corresponds to g log(cN), not a barrier O(N).
+    Uniform unlabelled-class weights are an alternative measure, not a deduction from quantum identity.
+  - **Measured versus inferred:** d counts missing squares, f=mean(d)−1, and neither certifies geometry.
+    The dominant component does not prove a unique front. Full release is epsilon N−H_f. The seed scan's
+    `left` flag means escape, not completed conversion. The 200-sweep boundary is operational persistence.
+  - **Tail audit:** O84's completed T38 TWO POPULATIONS was absent from the old paper and is now included.
+    All 190 missing T38 detector crossings nevertheless reach f≥0.75; these are not ordinary censored
+    survivors. Waiting snapshots are absent from the frozen results inventory, so the physical mechanism
+    cannot be identified. Previous common-clock claim → detector and tail failures → distinct first-exit
+    and detected-conversion claims → prespecified attempt-resolved history test. No mechanism patch proposed.
+  - **Additional scope checks:** N=32 has three neutral classes but distinct full censuses, so the
+    production-size hazard statement is not extrapolated to that smaller control. The Arrhenius runner
+    reuses each replica's seed across couplings, whereas its pooled bootstrap draws cells independently;
+    the combined 432-wait p-value is therefore nominal. T22 includes lambda in its seed derivation.
+  - **Presentation:** the reader manuscript is a first release, with no draft-revision narrative or
+    unpublished self-citations; the computational supplement is `docs/papers/curled_torus/supplement.md`.
+  - **Status:** all original failures and verdicts remain. Revised wording separates retrospective energy
+    amendments, registered component tests and fresh repeats. Replica uncertainty and build/check outputs
+    accompany the paper. The starting snapshot is 40b1ae68844a72bd73ffdc74d5c385844ab16f17; the release
+    manifest hashes the new artifacts. No production trajectories or `results/` files were changed.
+
+### O108 follow-through: dependent documents and analysis
+
+The 9 October review also corrects the README, glossary, companion manuscripts, programme
+summary, public-page sources, plotting labels and analyzer reports. The shared interpretation
+is `docs/papers/measurement_scope.md`. T9 and T10 retain their historical score computations;
+their reports identify count-based classes and the mean-energy proxy. No simulation kernel,
+raw result, config or original registered criterion is changed. The sealed-sheet budget runner
+no longer substitutes 4λ for a demon level spacing: it always records the measured mean and
+reports a conditional temperature proxy only for an explicit positive `thermometer_step`. Old
+temperature columns are unvalidated. T22 now also reports all observed first exits without
+conditioning on completed conversion, alongside its historical score. Companion drafts remain
+unpublished manuscripts. This is a correction to the stated evidential scope, not a change
+to the owner's hypothesis or a new simulation result.
+
+- **O109 Paper 1's long waits and missed detections, read retrospectively from the saved rows: almost all of it is
+  the detector's 200-sweep watch, not a second population.** (2026-10-10, 06:52 ET by the clock;
+  `scripts/read_wait_detector.py`, tested in `tests/test_read_wait_detector.py`; reads `results/t38_*.csv` and
+  `results/t24_*.csv` only. **EXPLORATORY and post hoc: no new run, no verdict changed.** T38's pre-registered
+  verdict TWO POPULATIONS stands as scored; this entry is about what that verdict means. *Ours, unverified.* O108,
+  above, is the paper-1 revision entry this one follows.)
+  - **The owner's remark that started it** (10 October, on the plain-language edition's sentence that the detector
+    "learns its threshold from the tube's own first 200 sweeps; a tube that begins to change early widens that
+    threshold and is caught late, or never"): "this seems pretty testible considering having some explaination would
+    change the focus at the end of the paper. if something is hidden that implies from our known model not a basic
+    issue of model structure code." Read by us as: test whether the stragglers are the detector's doing (a matter of
+    protocol and code) or something hidden in the model.
+  - **Why the saved rows can say.** The runner records two clocks that do not depend on the detector's threshold:
+    `f_200`, how far the tube had converted when the watch ended, and `sweep_25`, the first sweep after 200 at which
+    a quarter of it had converted. The detector's own clock, `waiting`, is the first sweep after 200 at which φ falls
+    below 1.25 − 3 sd, sd being the spread of φ over the first 200 sweeps. A tube that changes inside the watch has a
+    large sd and so a low threshold.
+  - **The 190 tubes the detector never caught** (58 at λ = 1.25 and 132 at 1.30, all at N = 64): every one was at
+    least three-quarters converted **when the watch ended** (smallest `f_200` 0.88 and 0.75; median 0.94, which at 64
+    points is the sheet with one extra square left). All 190 passed the quarter mark at the first check after the
+    watch. They are the fastest tubes in the sample, not the slowest. (O108 and the corrected manuscript already say
+    they reach f ≥ 0.75; what is added is that they were there by sweep 200.)
+  - **T24's two extreme waits, the ones that made that map inconclusive and motivated T38** (N = 64: λ = 1.25,
+    replica 90, 20,070 sweeps after the watch, 24 τ; λ = 1.30, replica 94, 31,955 sweeps, 76 τ): `f_200` = 0.75 and
+    0.875, quarter, half and three-quarter marks all at sweep 205. **Neither was a tube waiting.** Each had converted
+    three-quarters or more inside the watch, then rested on a defective sheet (they released 0.744 of 1.000 and
+    0.563 of 1.200 per point) until φ at last crossed the lowered threshold. This is TASKS' "read the two extreme T24
+    waits", answered from the rows; their wiring was not needed for it. The longest waits in T38 are the same kind:
+    both of the λ = 1.25, N = 64 waits beyond 10 τ̂ (11,370 and 15,365) and three of the fourteen at λ = 1.30
+    (3,050, 5,740, 7,195) have `f_200` ≥ 0.75 and every mark at sweep 205.
+  - **The fast share** (tubes detected within 20 sweeps of the watch's end: 12.0, 12.0, 21.2 and 23.4 % in the four
+    cells): 80 to 84 % of them had already left the perfect tube at sweep 200. The share of all tubes with
+    `f_200` > 0 is 14.4 and 14.6 % at λ = 1.25 and 27.4 and 31.4 % at 1.30; the count (τ = 845 and 419) puts a first
+    exit before sweep 200 in 21.1 and 38.0 %, and T22's fall-back share of about a third takes those to 14 and 25 %.
+    So the fast share is the count's own first exits, landing inside the watch.
+  - **The tail count.** T38's yardstick τ̂ = median(w′)/ln 2 was taken over all detected waits, the fast share
+    included, which pulls it down: 750, 671, 267, 238 against 917, 858, 443, 446 for the tubes still perfect at sweep
+    200 (the count: 845 and 419). So "10 τ̂" was only 5.7 to 8.9 of the real scale, and the pre-registered
+    expectation of 0.18 or 0.05 waits beyond it assumed a single exponential from sweep 200 that the watch itself
+    breaks. Among tubes still perfect at sweep 200, the waits beyond 10 τ̂ number 0, 1, 11 and 5 (cells in the order
+    λ = 1.25 N = 64, 1.25 N = 192, 1.30 N = 64, 1.30 N = 192), where one memoryless population with those tubes' own
+    mean expects 0.96, 0.34, 7.0 and 3.3 (chance of at least as many: 1, 0.29, 0.10, 0.24). Measured against their
+    own scale, the waits beyond ten of it number 0, 0, **3** and 0, where one population expects 0.16, 0.04, 0.13 and
+    0.03.
+  - **What is left unexplained: three waits in one cell.** At λ = 1.30, N = 64, replicas 553, 2748 and 3072 were
+    perfect tubes at sweep 200, were detected at 5,080, 5,000 and 4,705 sweeps (10.2 to 11.0 of their cell's scale
+    after the watch) and passed the quarter mark at 4,505, 5,000 and 4,710 (chance of three or more waits that long
+    under one population: about 3 in 10,000). In replica 553 the detector
+    fired 575 sweeps *after* the quarter mark, so its threshold had been lowered by an excursion inside the watch
+    that came all the way back. *Ours, unverified:* a tube blinded that way is timed to its committed change, not its
+    first exit, and T22 puts the committed change at 1.5 to 1.7 times the first exit, with a tail of its own; that
+    could account for a few such waits, and the rows cannot say whether it accounts for these three.
+  - **Rule 11's four answers, for T38's TWO POPULATIONS** (the owner's inferred prediction and ours, both scored as
+    holding). (1) *Does the result show a second population in the model?* No: the rule fired, and its count is
+    reproduced here, but the rule's yardstick and its expectation both assumed away the watch. (2) *Implementation,
+    parameters, finite size or mechanism?* Implementation, almost entirely: the detector's watch (protocol) and a
+    yardstick biased by it (analysis). The three waits above are the only candidates for anything else, and they are
+    at the smallest size. Our own prediction for T38, that long waiters sit on a variant of the tube with a dearer
+    exit, has nothing in these rows to support it. (3) *The cheaper test that tells them apart:* done here for
+    everything but the three, from two columns already saved. For the three: replay those replicas from their seeds
+    (the chain reproduces exactly) and record what the runner did not, the threshold and every exit and return. That
+    is the "prespecified attempt-resolved history test" O108 names, and it is minutes on a laptop. It is a run, so it
+    is pre-registered first, with the owner's prediction. (4) *What would make us abandon the reading:* first exits
+    timed from sweep 0 with no detector showing three or more waits beyond ten of the count's τ in a cell of 4,000;
+    then a slow population is real and this entry is wrong.
+  - **Previous claim → failed because → replacement → new test** (rule 11's form). The detected waits show two
+    populations (O84; the plain-language edition, Chapter 11: "a measurement with no mechanism attached") → the two
+    populations are produced by timing tubes with a detector that watches for 200 sweeps before it starts: tubes that
+    change inside the watch are caught at once, late, or never, and the yardstick is bent by them → the first exit is
+    one memoryless population (T22 and the 432 exits already say so); the detected wait is that same population seen
+    through the watch; and a tube that changes fast can then rest for tens of thousands of sweeps on a defective
+    sheet, which is a fact about the end of the change and not about the wait → the replay above.
+  - **What this corrects.** The plain-language edition's "The saved files cannot separate these" (they separate
+    nearly all of it); its "190 ... the detector never fired at all, although the progress meter shows the tube
+    three-quarters converted" (true, and they were so by sweep 200); and the reading of T24's two extreme waits as
+    waits, in O52, O84, T38's "Why" and TASKS. *Added the same day, 07:20 ET by the clock, at the owner's instruction ("now you've noticed the fast movers
+    issue pls correct the paper and update the conclusion"; then "align the technical manuscript to this plain
+    language paper"):* the technical manuscript, `docs/papers/curled_torus/paper.tex`, now carries this reading in
+    its abstract, Sec. VII, Discussion and Methods, and its sections were reordered to follow the plain-language
+    edition (cost of leaving, first exit, conversion, sealed system, dependence on λ); `supplement.md` has the
+    table. No passage of the 9 October manuscript was reworded except the ones on the detected tails, the section
+    cross-references, and two additions (the 25 and 75 % signature shares; the first set's count of runs below
+    0.7). O52's verdict for T24 (INCONCLUSIVE by the letter) stands: the rule read `waiting`, and `waiting` is what
+    it is.
+  - **Not claimed.** That no slow population exists: three waits are open, and λ = 1.05's far tail (O52; the
+    corrected manuscript) was not read here beyond noting that its longest T24 waits all have `f_200` = 0. That the
+    defective sheets these tubes rest on are understood: they are the resting states of O13 and paper 2's subject.
+
+- **O110 The owner's idea for the three long waits: a second curl. What the saved data and three exact facts say, and
+  the replay that tests it (PREREGISTRATION T58).** (2026-10-10, 07:47 ET by the clock. The readings of saved data
+  are **EXPLORATORY and post hoc**; the exact statements are arithmetic on the model's energy, *ours*; nothing here is
+  a verdict.)
+  - **Her idea, in her words** (10 October, on the three waits O109 left unexplained): "maybe they curled another
+    direction instead of flattening. like have a big shake and all the energy and then it's stored in a new curl which
+    would need way more activation energy than we have in our closed system". *Kind of statement: the owner's
+    hypothesis about the toy's runs.*
+  - **What it is in the model** (*ours*). The tube has one direction curled. Curling the other one too turns a stretch
+    of it into a knot, the 4-cube: sixteen points, each with both of its directions closing squares (d = 0). The
+    detector that timed these runs watches only for squares being **lost**, and a second curl **gains** squares, so
+    a tube that did this would sit unseen for as long as it stayed there. The idea names something the instrument
+    was blind to, which is why it could not be answered from the recorded waits.
+  - **Exact** (*ours; arithmetic on H = 16(N − S) + 4λX, and the move census `docs/figures/ladder_kinds.json`*).
+    (a) No single switch from the perfect tube adds a square: its seven kinds of move lose 2 to 6. So a second curl
+    is at least two moves away, through a state that has lost squares. (b) Sixteen points of the tube carry 20
+    squares and 16 surplus squares; as a 4-cube they carry 24 and 32. Pinching a knot off the tube therefore costs
+    −64 + 64λ = 64(λ − 1): 16 units at λ = 1.25 and 19.2 at 1.30, against 12 and 11.2 for the cheapest exit. The
+    energy is affordable at g = 1.5; the wall on the way to it has not been priced. (c) A 4-cube's own cheapest move
+    changes its energy by 32 − 32λ, which is negative above λ = 1: a knot is not stuck there and gives way at the
+    first offer. A second curl would hold energy, as she says, and would not hold it for long by this route.
+  - **Read from saved data** (`results/t38_*`, `results/t24_*`; scratch reading, 10 October). No decay at λ = 1.25 or
+    1.30 was above the tube's square count when the watch ended. In the snapshots taken at a quarter, half and
+    three-quarters of the change, points at d = 0 appear in at most ten of 4,000 snapshots per cell and are never
+    more than two points. The three unexplained waits' snapshots have none. The final graphs of the tubes that changed
+    inside the watch and then rested have none either: of 197 such tubes at N = 64, 183 ended as the perfect sheet,
+    and T24's two extreme waits ended with 16 and 12 points still at d = 1, the tube's own signature, and none at
+    d = 0. By signature that is some of the **first** curl left unopened, not a new curl; their positions were not
+    read, so no shape is named.
+  - **What that does and does not settle.** For the tubes that rested after changing, the stored energy sits in points
+    that still read as the original curl. For the three unexplained waits the saved data cannot say, because every saved
+    reading was taken once the tube was already changing; the wait itself was never recorded. The replay records it.
+  - **The rules of T58 that are ours** (rule 1): a second curl is read as S above the tube's, or 8 or more points at
+    d = 0 (half a knot), or a closed piece with three squares on every edge; "reads as the tube" is S = 80, X = 64 and
+    every point at d = 1, a signature and not a certificate (O108).
+  - **Addendum, the same day, 07:55 ET by the clock: the replay's first stage is read (PREREGISTRATION T58, "Reading,
+    stage A"). No second curl; her prediction and ours both fail.** *Measured, pre-registered; the gate passed (all
+    nine replayed decays return T38's rows unchanged and end on the saved graphs).* In the three long waits, at every
+    block before the detector fired: never more squares than the tube, never a point at d = 0, never a second piece.
+    Decay 553 is the detector again (LOW THRESHOLD: it left inside the watch and came back, which lowered its
+    threshold, and three later exits that fell back went unseen). Decays 2748 and 3072 are TRUE WAITs: each read as
+    the tube at every block for 5,000 and 4,670 sweeps without a break, 11.9 and 11.1 times the mean wait. So what O109 left open
+    resolves into one more detector case and two real long waits with nothing hidden inside them. *Ours, worked out after seeing them:* two
+    stays that long among 4,000 tubes, where about 0.1 is expected, is unlikely by chance (roughly one in two hundred)
+    and is not a mechanism; whether the cell's first exits as a whole follow one memoryless population is stage B.
+  - **Addendum, the same day, 09:06 ET by the clock: the whole cell is read (PREREGISTRATION T58, "Reading,
+    stage B"). No second curl in any of 4,000 tubes; the first exit is one memoryless population.** *Measured,
+    pre-registered; the gate passed (all 4,000 replayed decays return T38's rows unchanged).* Timed with no
+    detector, the first exit has mean 448.8 sweeps, 1.071 ± 0.017 of the count (P1 holds); one first exit is later
+    than 10 τ where 0.18 are expected (P2 holds); and no tube ever had more squares than the tube or eight points at
+    d = 0 (P3 holds; 137 tubes showed one to four such points in passing). So O109's reading stands by its own
+    fourth answer, and the owner's idea is set down for the two-dimensional tube above λ = 1 on a complete count:
+    it did not happen once. What is left of the three waits is two real waits of the perfect tube, eleven to twelve
+    times the mean, with nothing hidden inside them and no mechanism attached. *Ours, unverified:* the 7 % excess
+    of the mean over the count is in the direction a five-sweep block gives (an exit that returns inside the block
+    is not seen); its size has not been computed.
+  - **Her follow-up, and the exact answer** (10 October, on reading stage A; her words): "λ = 1 a knot is not
+    stuck -> this is actually interesting would that mean it turns right back into a tube, or that it would need
+    to go through tube phase and couldnt accept the additional energy for the additional curl in one tube?" and
+    "why not use closed system then?" *(The sentence she quotes was about λ above 1; at exactly λ = 1 the three
+    rungs tie.)* **Exact, ours** (`scripts/exact_knot_descent.py`, tested in `tests/test_exact_knot_descent.py`;
+    no chain is run):
+    - *Beside a tube.* A 12 × 4 tube with a knot beside it (64 points; S = 84, X = 80) sits 64(λ − 1) above the
+      16 × 4 tube. All 48 switches inside the knot have ΔS = −2, ΔX = −8 and cost 32 − 32λ, which is −9.6 at
+      λ = 1.30: downhill. Joining the two pieces again costs at least 80 − 56λ (7.2 at 1.30). The tube part keeps
+      paper 1's two exits at their prices.
+    - *Alone.* Following every switch that lowers the energy, a lone knot runs through (S, X) = (24, 32),
+      (22, 24), (21, 20) and (20, 16), with 16, 8, 4 and 0 points at d = 0 and energies 38.4, 28.8, 24.0 and 19.2
+      at λ = 1.30. At the bottom every point reads d = 1 and no downhill switch is left (3,456 labelled states
+      reached, all of them resting). 19.2 is what sixteen points of plain tube cost: the whole price of the second
+      curl has been given back. The bottom state's wiring was not read, so its shape is not named.
+    - *So, her first reading:* the knot turns back into tube-like points by itself. It does not rejoin the long
+      tube by itself (that costs). *Not her second:* taking the energy in is not the obstacle (19.2 units, against
+      11.2 for an ordinary exit that the bath pays every few hundred sweeps); keeping it is.
+    - *A closed system.* A downhill switch takes nothing from a store, so sealing cannot hold a knot above λ = 1.
+      This follows from the census above and has not been run. A sealed box holds a state only when every way out
+      is uphill and nothing is left to pay with: the tube with an empty store (Q12), and the relic in a cold box.
+      *Ours, unverified:* her mechanism, energy held in a curl behind a wall the closed system cannot pay, is the
+      relic's, with a stretch of the first curl in place of a new one. A new curl with a wall of its own is a
+      three-direction matter (the more-curled states there are stuck above λ = 1: O41, O49), and T57 is the sealed
+      test of it under her tie.
+  - **Addendum, the same day, 11:45 ET by the clock: the prediction is hers.** Asked after both readings, the owner
+    confirmed SECOND CURL as her prediction for T58 (PREREGISTRATION T58, "Confirmation"). It had been recorded
+    from her "maybe" as inferred. Confirmed after the result was known, so it changes no verdict: her prediction
+    fails, as scored.
+  - **Addendum, the same day, 12:22 ET by the clock: her second question, and a look at every sweep (exploratory).**
+    Her words: "what did we figure out could be the reason for the remaining unlikley waits? still populations?
+    sure it's not the 2 step change to a more curled space enven if it very short lived that could impact the
+    measurements. just double check". The gap she names is real: T58 looked every five sweeps, so anything that
+    came and went between two looks was not seen. *Exploratory, not pre-registered, no verdict*
+    (`configs/t58_exploratory_sweeps_lam130_n64.json`; `scripts/run_tube_decay.py` with `trace_sweeps`, tested to
+    leave the chain unchanged; `scripts/read_t58_sweeps.py`; tests in `tests/test_t58_sweeps.py`): the nine decays
+    of stage A replayed from their seeds once more, with the squares, surplus squares, pieces, baby universes and
+    4-cubes written after every sweep and the moves accepted counted in every block. The replay is the same
+    history: every row and every block of every trace is unchanged.
+    - *No second curl at any sweep.* In all nine, at every sweep up to the detection, the square count never
+      exceeded the tube's 80, no 4-cube and no baby universe existed, and the network was one piece. Every stretch
+      off the tube had fewer squares (74 to 78): an ordinary exit, the opening direction.
+    - *Exact, and already on the record* (the neutral switches of O42 and paper 1's neutral-class certificate,
+      O108; `scripts/analyse_curled_revision.py --neutral`). N/2 switches change neither squares nor surplus
+      squares: read from their positions at N = 64, all 32 are two opposite points of one ring swapping their
+      links to a neighbouring ring, the tube re-glued and point for point still a tube. The chain makes one about
+      every two sweeps. The exhaustive census at N = 64 reaches three classes of such tubes with one full list of
+      switches between them (192 at 32 − 16λ, 128 at 64 − 40λ, and the dearer ones), so a tube that has wandered
+      this way has the same ways out at the same prices. *Read for this question, new:* in that list of 5,536
+      switches none adds a square (the largest dS is 0). So a second curl cannot begin in one move from any of
+      them: it needs an exit first, and an exit shows as fewer squares.
+    - *So the waiting tubes were not frozen, and that is not a hidden state.* Decay 2748 accepted 2,580 moves in
+      its 5,000 sweeps and decay 3072 2,363 in 4,705, where the neutral switches alone give 2,500 ± 50 and
+      2,352 ± 49. "Every single move out costs" stays true: these are not moves out.
+    - *Decay 2748 is a true wait at every sweep:* the tube after each of sweeps 1 to 4,998, then its one exit.
+    - *Decay 3072 is not.* Besides its exit inside the watch (sweeps 23 to 32), it left the tube at sweeps 3,166
+      to 3,168 (78 squares, one exit that fell back), between the looks at 3,165 and 3,170, and left for good at
+      4,701. Its threshold (φ below 1.2296) would have fired on 78 squares; the detector looks every five sweeps
+      and did not see it. So its recorded wait of 4,705 is the detector's five-sweep look, and its first exit
+      after sweep 200 came 7.1 mean waits in, not 11.1. Decay 553 also has a one-sweep exit (sweep 463) that the
+      blocks did not show.
+    - *What this does to the readings of T58, which stay as scored by their block-by-block rules.* Stage A's
+      "two tubes that sat for 5,000 and 4,670 sweeps without a break" is true of one. Stage B's described count
+      "two later than 10 τ after sweep 200, where 0.13 are expected" is one at sweep resolution (a first exit timed
+      by sweeps can only come earlier than one timed by blocks, so no other decay can join it), which chance
+      allows about one time in eight; from sweep 0 it was already one where 0.18 are expected (P2), about one
+      time in six. **One long wait is left in the cell, of the size one memoryless population produces by chance,
+      with nothing hidden in it at any sweep.** Not two populations: O109 traced T38's two to the detector's watch,
+      and T58's P1 and P2 hold for one.
+    - *Not excluded:* something that begins and ends inside a single sweep (128 attempted moves). It would have to
+      leave the tube, do its work and return exactly, and it would leave nothing behind for a wait to depend on.
+    - *The papers, corrected the same day at the owner's word ("correct please"):* the two editions and the
+      supplement said two tubes sat; they now say one sat and one made an exit between two looks, with the
+      sweep-by-sweep look marked exploratory. And a brief exit hidden between looks is the kind
+      of thing that would lengthen a first exit timed by blocks: whether it accounts for the 7 % of stage B needs
+      the whole cell timed by sweeps, which would be pre-registered first.
+
+- **O111 Bianconi's discrete entropy action evaluated on this project's wirings (10 October 2026, 16:12 ET by the
+  clock). Exact linear algebra for the arrangements named; the reading of her action across wirings is ours,
+  unverified, and is the question put to her.** (`scripts/exact_entropy_action.py`;
+  `tests/test_exact_entropy_action.py`; series paper 10, "An entropy action across wirings".)
+  - **Why.** The owner asked which paper works off [Bia25] (arXiv:2408.14391, "Gravity from entropy") and for a
+    letter to its author with a replication and a question. Papers 10 and 11 of the series plan do: 11 through the
+    G-field (a quantity on the points, VISION Update 40), 10 through [Bia24], the discrete form of the same action.
+    [Bia24] keeps the wiring fixed and leaves "the possible implied dynamics of the network topology to future
+    works" (Sec. 3.1; its conclusions end on the same point). This model's networks change their wiring.
+  - **Sourced** ([Bia24], arXiv HTML, searched again on 10 October): d = G^(−1/2) B^T G^(1/2) and D = d + d†
+    (Eqs. 23, 31); D² is the Gauss-Bonnet Laplacian, block diagonal in the Hodge Laplacians (Eqs. 35 to 40);
+    {D, γ0} = 0 (Eq. 34); S+ = σ Tr ln G + Tr G (ln G − ln G̃) − Tr G (Eq. 41); with no matter and no gauge field
+    G̃ = I + c0 L (Eq. 52), "also dependent on the topology of the higher-order network"; the vacuum is G̃ = I,
+    where −G ln G = σ I (Eq. 65).
+  - **Ours (rule 1).** Every 4-cycle is taken as a 2-cell, as this model's energy counts them (checked against the
+    kernel's count and a trace formula). The same root of Eq. (65) is taken for every cell. For c0 > 0 the action
+    is evaluated at the identity metric, where d = B^T; the metric that solves her equation of motion is not
+    computed.
+  - **Checked: a replication of the construction, not of a published number (her paper reports none).** On each
+    arrangement a boundary has no boundary, D² is her Laplacian block by block, D anticommutes with γ0, and the
+    vanishing eigenvalues count the holes (flat torus: one piece, two loops, one cavity).
+  - **Exact, N = 64** (σ = 0.1 for the vacuum, where g = 0.894194 and the action is −1.005377 per cell):
+
+    | arrangement | squares | cells, 3N + S | holes | vacuum S+ | S+ at G = I, c0 = 0.1 | c0 = 1 |
+    |---|---:|---:|---|---:|---:|---:|
+    | flat torus, 8 × 8 | 64 | 256 | 1, 2, 1 | −257.377 | −339.462 | −642.034 |
+    | curled torus, 16 × 4 | 80 | 272 | 1, 1, 16 | −273.463 | −364.763 | −688.133 |
+    | the same, re-glued once | 80 | 272 | 1, 1, 16 | −273.463 | −364.763 | −688.133 |
+    | four 4-cubes | 96 | 288 | 4, 0, 28 | −289.549 | −390.065 | −734.780 |
+
+  - **What it says (ours).** (1) In her vacuum the action is one number per cell, so across wirings it depends only
+    on the number of cells, which here is the number of squares. (2) At the identity metric with c0 > 0 the order
+    is the same. Either way the action grows more negative with every square, without limit, as the
+    square-counting term of [T25] does by itself (λ = 0, where the network shatters into knots: Gate A). Nothing
+    in it yet plays the part of the local term, which cancels the reward once a link carries two squares and,
+    above λ = 1, makes the flat torus the floor. Whether "more negative" means
+    "favored" is not ours to say; it is her question of how the topology would be weighted. (3) The re-glued tube
+    is not isomorphic to the tube and has another spectrum (eigenvalues differ by up to 0.39), yet the two agree
+    in the first six moments of each Laplacian and in the action at the identity metric to nine figures: they
+    differ only through closed walks that go all the way round the tube. (4) Read as her cell complex the curled
+    torus has one independent loop and N/4 cavities (each ring of four is a filled square); a 4-cube has no loop
+    and seven cavities.
+  - **Not claimed.** That this is the comparison her theory intends. Anything about gravity. Anything at a metric
+    that solves her equations for c0 > 0. Anything about the continuum theory of [Bia25], whose stability is
+    disputed in print this year (`docs/reading/notes/2026-10-05_bianconi_gravity_from_entropy.md`).
+  - **Addendum, the same day, 16:33 ET by the clock: across 445 saved wirings the action acts like this model's energy
+    with a coefficient below 1.** *Exact for each wiring; the fit is ours and exploratory.* The same script
+    evaluates S+ at the identity metric on end states saved by the registered runs at N = 64 (`results/*_adj`, at
+    most 25 of each kind (S, X), 42 kinds: sheets with and without knots and damage) and on the three rungs, and
+    fits it to a + bS + cX. Every square lowers the action and every surplus square raises it: b = −1.65, −3.98,
+    −7.86 and c = +0.015, +0.25, +0.89 at c0 = 0.1, 1, 10. This model's energy is 16(N − S) + 4λX, so the action
+    orders these wirings like that energy with λ_eff = −4c/b = 0.001, 0.037, 0.25, 0.45, 0.55 at c0 = 0.01, 0.1,
+    1, 10, 100 (0.034, 0.20, 0.28 at c0 = 0.1, 1, 10 without the tube and the knots). The fit worsens as c0 grows
+    (what is left over has rms 0.014, 0.36, 2.4 at c0 = 0.1, 1, 10, against actions of several hundred). The three
+    rungs keep their order, knots below tube below flat, at every c0 from 0.01 to 1000. *Ours:* a surplus-square
+    penalty appears in her action without being put in (it enters through pairs of squares that share a link), so
+    the action has the ingredient that saturates the reward, but too weakly: below λ = 1 is the stretch where
+    curling pays and flat space is not the floor (VISION Update 7). At a metric that solves her equations this may
+    differ; that is the question.
+  - **The question for her** (a draft is kept locally and nothing is sent from a session): is S+ compared across
+    wirings at a fixed number of nodes the comparison meant by dynamics of the topology; and if so, must the metric
+    be solved for each wiring first, or is something else meant to keep the action from rewarding more cells?
+
+- **O112 The two loose ends on paper 1's count, closed: T58's 7 % is the looks, and the long waits at λ = 1.05 were
+  chance (T59, 10 October 2026; read at 18:29, 19:15 and 22:38 ET by the clock). Measured, pre-registered; both of the
+  owner's predictions hold, and all of ours.** (`scripts/run_first_exits.py`, `scripts/make_t59_configs.py`,
+  `scripts/analyse_t59.py`; `graphity.exits.first_exit_clocks` and `offers_until_exit`;
+  `tests/test_first_exit_clocks.py`, `tests/test_t59.py`; `results/t59_*`.)
+  - **Why.** The owner asked on 10 October whether closing the two open items on the count would make paper 1 more
+    complete. They were O110's 7 % (timed by a look every five sweeps, T58's first exits ran 1.071 ± 0.017 of the
+    count) and O42's long tail at λ = 1.05 (three waits beyond nine mean waits among 200).
+  - **Exact, going in (ours; arithmetic on a complete enumeration, unreviewed).** The arrangements a waiting torus
+    reaches without changing its squares are three classes at every size from 48 to 288 points, with one census of
+    moves between them (O108; `scripts/analyse_curled_revision.py --neutral`). So the chance of leaving is the same
+    at every attempt, and the first exit is exactly memoryless with the census's mean.
+  - **Measured, stage A1 (TRUE WAIT).** T8's decay 11 at N = 96, replayed from its seed with every column
+    reproduced, read as the torus at every look for 78,205 sweeps (9.4 mean waits). It was a wait, not the detector.
+  - **Measured, stage A2 (OFFERED AS COUNTED).** T22's seven first exits later than four mean waits at λ = 1.05,
+    replayed to the attempt, were offered 2.94 to 3.03 exits of kind A and 1.94 to 2.04 of kind B per sweep in
+    every stretch of 5,000 sweeps, where the count says 3 and 2. The two longest (80,985 and 80,174 sweeps) were
+    offered about 243,000 cheapest exits each and took none, a chance of 6 × 10⁻⁵ apiece. No torus had found a
+    place with fewer ways out.
+  - **Measured, stage B (ON THE COUNT at both sizes; the owner's "chance" holds).** Fresh tubes at λ = 1.05, first
+    exit counted by the move: 2,000 at N = 64, mean 0.992 ± 0.023 of the count, with 36, 7, 1 and 0 later than 4,
+    6, 8 and 10 mean waits (expected 36.6, 5.0, 0.67, 0.09); 1,000 at N = 96, mean 0.946 ± 0.031, with 21, 2, 0, 0
+    (expected 18.3, 2.5, 0.34, 0.05). T22's own frequency would have put about 75 beyond 8 mean waits; there is 1.
+  - **Measured, stage C (HIDDEN EXITS; the owner's prediction holds).** 4,000 fresh tubes at λ = 1.30, N = 64: by
+    the move the mean first exit is 1.005 ± 0.016 of the count; a look every five sweeps reads the same tubes
+    0.096 ± 0.007 later, and 94 % of that gap is first exits that came back before the look (312 tubes).
+  - **What it changes.** O42's item "Unexplained: a long tail at λ = 1.05" is read as chance: rare runs of draws
+    (two such first exits among T22's 80 had a chance of about 1 in 70,000, worked out after seeing them), which a
+    sample forty times larger does not repeat. O110's "whether that accounts for 7 % has not been computed" is
+    answered: it does. Eq. (2) is now checked by the move on 7,000 fresh first exits at two settings and two sizes.
+  - **A by-product, described and not scored.** A look every five sweeps reads the mean first exit late by 9.6 %
+    (λ = 1.30, N = 64), 9.4 % (1.05, 64) and 7.6 % (1.05, 96), because 7.8 %, 9.9 % and 6.4 % of first exits come
+    back before the look, and it leaves the wait memoryless (spread over mean 0.993 against 0.990 by the move;
+    added after the registration, exploratory). So every mean wait in the record that was read by looks (T7, T8,
+    T23, T24, T38, T58, and T60 now running) sits that much above the count for this reason alone. *Ours,
+    unverified:* the share falls with size because the move that undoes an exit is offered about once in N sweeps.
+  - **Not shown.** Why the detected waits of the λ = 1.05 map run 15 to 43 % above the count: the looks account for
+    8 to 9 points of it; the rest is the detector's watch, unread at that setting, or chance in cells of 30. The
+    N = 96 mean, 0.946, is 1.7 standard errors low and inside its registered band; it is reported, not explained.
+    Nothing about sizes above 96, or about interchangeable points.
+  - **Rule 11.** No registered prediction failed, so its four answers are not owed.
+  - **Also new.** `graphity.results.provenance` writes the commit and a dirty flag into a run's meta (TASKS, the
+    reviews of 6 October, item 5); so far only T59's runner calls it.
 
 ## Provenance
 

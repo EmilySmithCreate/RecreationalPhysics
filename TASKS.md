@@ -1,5 +1,11 @@
 # Tasks, in order
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Each task has an acceptance test. Do them in order; do not start a task whose predecessor's gate has not passed. When a task is done, tick it here in the same commit.
 
 Notation: N vertices, S total squares, S_e squares on edge e, φ = S/N, g coupling (acts like temperature), λ strength of the local term. D = 2 throughout (4-regular bipartite graphs).
@@ -529,6 +535,53 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    in this family (Update 44, rule 11's first use).
 2. **Read the two extreme T24 waits** (N = 64; λ = 1.25 at 24 τ and 1.30 at 76 τ) from their saved wiring before any
    further waiting-time run (O52, O84). The review's guess that those runs started in a different state is a guess.
+   *Read 2026-10-10 from their saved rows, which was enough (O109; `scripts/read_wait_detector.py`; exploratory, no
+   new run): neither was a wait. Both tubes were three-quarters or more converted when the detector's 200-sweep watch
+   ended (`f_200` 0.75 and 0.875, every mark at sweep 205) and then rested on a defective sheet until φ crossed the
+   lowered threshold. The same reading of T38: the 190 never-detected tubes had all converted inside the watch, the
+   fast share is first exits inside the watch, and the tail count's yardstick was bent by them. Left open: three
+   waits at λ = 1.30, N = 64. Owed before any further waiting-time run: a pre-registered replay of those replicas
+   from their seeds, recording the threshold and every exit and return (the "attempt-resolved history test" of
+   O108), with the owner's prediction. The technical manuscript and the plain-language edition both carry the
+   reading since 10 October.* *The replay is PREREGISTRATION **T58** (10 October, 07:47 ET), with the owner's idea of
+   that morning as her prediction (a second curl holding the energy; O110) and ours (the detector's threshold): the
+   three waits and six neighbours written block by block, then the whole cell of 4,000 with the detector's numbers.
+   **Read the same day (`python scripts/analyse_t58.py`): gates passed; no second curl in any tube; one of the
+   three waits was the detector and two were real waits of the perfect tube; timed with no detector the first
+   exit is one memoryless population at 1.07 of the counted rate, with one exit beyond 10 τ where 0.18 are
+   expected. Her prediction (inferred) and ours for the three both failed; ours for the cell held.** *Her
+   prediction confirmed by her as hers on 10 October, after both readings (PREREGISTRATION T58, "Confirmation").*
+   *Looked at sweep by sweep the same day at her question (exploratory, O110): no second curl at any sweep;
+   decay 3072 made a three-sweep exit between two looks, so one long wait is left, not two. That sentence was corrected in the two papers and the supplement the same day, at her word. Owed,
+   pre-registered first: the whole cell timed by sweeps, to say whether exits hidden between looks are the 7 % of stage B.* Still unread: the far tail at
+   λ = 1.05.* *Both are PREREGISTRATION **T59** (10 October, 17:50 ET), at the owner's question whether closing them
+   would make paper 1 more complete. Stage A reads the three long waits at λ = 1.05 from their seeds (T8's decay 11
+   block by block; T22's seven first exits later than four mean waits with what the chain was offered tallied).
+   Stage B counts 2,000 and 1,000 fresh first exits at λ = 1.05, N = 64 and 96, move by move. Stage C counts 4,000 at
+   λ = 1.30, N = 64, on the move clock and on a look every five sweeps in the same histories. Ours: the long waits
+   were chance and the 7 % is the looks. Launched on the laptop the same hour (`scripts/make_t59_configs.py`,
+   `scripts/run_first_exits.py`). **Her prediction is owed before any stage is read.** To read:
+   `python scripts/analyse_t59.py`, then an O entry, then the paper's two sentences.* *Her prediction, recorded
+   18:17 ET before any reading: chance, and exits hidden between two looks. Read at 18:29 ET, the two stages
+   that had finished: T8's long wait was a tube that sat (TRUE WAIT); the 7 % is the looks (HIDDEN EXITS: by the
+   move the first exit is 1.005 ± 0.016 of the count, and a look every five sweeps reads it 0.096 ± 0.007 later).
+   Stages A2 and B (λ = 1.05) were still running; when they finish, `python scripts/analyse_t59.py` again, then
+   the O entry and the paper's two sentences.* **Read in full the same evening (19:15 and 22:38 ET; O112): the
+   seven long first exits were offered their ways out at the counted rate throughout (OFFERED AS COUNTED), and
+   3,000 fresh first exits at λ = 1.05 are on the count with no slow tail (ON THE COUNT at both sizes). Every
+   gate passed; both of her predictions and all of ours hold. Both editions of paper 1 and the supplement carry
+   it; the far tail at λ = 1.05 is closed as chance.**
+   **The λ map a fourth time is PREREGISTRATION T60** (10 October, 18:45 ET; the owner's "Proceed"): T24's grid and
+   protocol, fresh seeds, the wait timed with no detector (`first_left`), the bar unchanged (VISION Update 53), and
+   a held-out size, N = 288, scored against numbers written from stage 1 alone. Stage 1, 28 Batch jobs
+   (`cloud/queue/2026-10-10_t60_stage1.txt`). To read: `t60_*` in `cloud/fetch/request.txt`, accept, then
+   `python scripts/analyse_t60.py`; then `python scripts/analyse_t60.py --write-prediction`, a dated amendment with
+   the numbers and the owner's prediction for N = 288, `python scripts/make_t60_configs.py --held-out`, and a
+   queue file for stage 2. A red-team pass (rule 12) is owed before paper 1 quotes the verdict.
+   *As of 22:46 ET on 10 October: 27 of the 28 stage-1 cells are fetched and accepted into `results/`; the last,
+   `t60_lam135_n192`, had not finished. Nothing of T60 has been read, and `scripts/analyse_t60.py` is not to be
+   run until all 28 are in (it prints each cell as it goes). To get the last cell: add a comment line to
+   `cloud/fetch/request.txt` and push; then `python scripts/accept_inbox.py --move`.*
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be
@@ -546,7 +599,13 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
 9. **Added 2026-10-08 (VISION Update 45; CLAUDE.md rules 12, 14, 15).** (a) The prior-work note for paper 1's sentence
    "A different kind of change has not, as far as we have found, been studied in this model", on
    `docs/reading/notes/prior_work_template.md`, before any revision of paper 1 is posted; the decompactification
-   relatives of `v2_changes.md` item 4 are its first near misses. (b) T54, still a draft, gains a held-out size under
+   relatives of `v2_changes.md` item 4 are its first near misses. *A transcription of the 23 September search is `docs/reading/notes/2026-10-09_prior_work_curled_torus.md`. A fresh
+   search, 2026-10-10, by an assistant agent (`docs/reading/notes/2026-10-10_prior_work_lambda_above_one.md`): NOT FOUND for a simulation or measurement of such
+   a change in this model, but "studied" is too broad, since [KTB19] Sec. 3.3.2 argues about one in words; the
+   9 October manuscript no longer carries that sentence, so nothing is left to reword; citing [KTB19] Sec. 3.3.2
+   in its introduction is offered to the owner, not done. The same note covers the plain-language edition's sentence on λ > 1:
+   NOT FOUND for any finite λ above 1, with a ban on surplus squares described in the text of [KTB19] and [KT19].
+   Its quotations are from HTML-to-text conversions and are to be checked against the PDFs.* (b) T54, still a draft, gains a held-out size under
    rule 14 before it is committed as a pre-registration: its claim that the barrier "rises with the opened patch without
    bound" is a size claim. *Done 2026-10-08: held out L = 16, fitted on L = 8 and 12, prediction written before L = 16 is computed (PREREGISTRATION T54, "Held-out size").* (c) The first red-team pass under the new rule 12: a fresh read-only session, ideally a
    different model, given the repository and paper 1's question, recorded as an O entry. Accept: (a) has a verdict;
@@ -573,7 +632,7 @@ four answers are in the O entries and the replacement for piece 5 is hers. In or
    pre-registration; compute L = 8 and 12; write the L = 16 prediction as a dated amendment; then L = 16.
 3. **Restart T52** on the laptop (its run died on 5 October at 66 rows; the runner has no resume, so the scratch
    `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first).
-4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then.
+4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then. *Done 2026-10-10: the cell reads DAMAGED; the window verdict stays ADVANCES ONLY and is no longer provisional (PREREGISTRATION T53, addendum; O105).*
 5. The rest of the 5 and 6 October sections as they stand.
 
 **Added 2026-10-09, 06:15 ET** (VISION Update 47: the tie is "all at the last"; untied is a stepping stone; her shape

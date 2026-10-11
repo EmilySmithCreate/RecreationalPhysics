@@ -1,11 +1,191 @@
 # Start here: handoff for the next assistant (state as of 2026-10-09, 05:10 ET by the clock; dated addenda below)
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Written for the AI assistant that opens this repository next. Emily is the owner; she reads it too. It is
 newer than `CLAUDE.md`'s "Known state". **Section 0 is the current state; the dated addenda under it are history,
 newest first, kept because the record refers to them.** Sessions may share one working tree: add files by name, never
 `git add -A`, and never switch branches under another session. `main` is current as of 8 October (PR #42) and Emily
 merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t53-2026-10-09`). The branch
 `claude/vision-programme-updates-9sje7s`, which carried the record from 26 September to 8 October, is merged and deleted.
+
+## Paper materials for readers
+
+The current manuscript is `papers/curled_torus/paper.pdf`, with `supplement.md` and
+`release_manifest.json` alongside it. It is an unpublished first-release manuscript; do not
+describe it as published or scientifically endorsed. The 9 October corrections and dependent
+document review are on `review/curled-torus-feedback-2026-10-09`. Historical submission and
+endorsement logistics below are not evidence of scientific review. T38 is already read (O84);
+its missing detector crossings must not be treated as unconverted survivors. Outstanding
+work is the mechanism, not another claim of universal exponential conversion waits.
+
+**Addendum, 10 October 2026 (branch `claude/paper1-plain-language-2026-10-10`, cut from the review
+branch; written 07:20 ET by the clock).**
+- **The plain-language edition of paper 1** is `papers/curled_torus/paper_plain_language.pdf` (source `.tex`,
+  notes in `plain_language_README.md`), rewritten through the day from the owner's page-by-page notes. Her rules
+  for such an edition: no term before it is defined; results in reading order; a diagram with callouts wherever
+  the reader would have to build a picture; one metaphor per idea; everyday comparisons; her idea stated once.
+  It has eleven chapters and ends on two upcoming papers and one line: "A push of twelve units opens a tube.
+  What opens a space?"
+- **Its interactive companion** is the artifact "The Tube's Curling Ladder",
+  https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8 (source `docs/public/curling_ladder_tube.html`; shared by the
+  owner by link). It has not been seen rendered by the assistant that wrote it; its script was checked at every
+  knob setting. The older artifact "The Curling Ladder" still shows the order-of-opening release chart set aside
+  in VISION Update 50 and is owed a revision if it becomes the three-direction version.
+- **The long waits (O109).** Read retrospectively from the saved rows (`scripts/read_wait_detector.py`;
+  exploratory, no new run): T38's 190 missed detections, T24's two extreme waits and the fast share are tubes that
+  converted inside the detector's 200-sweep resting window, and T38's yardstick was biased by them. The
+  pre-registered verdict TWO POPULATIONS stands as scored. Three waits at λ = 1.30, N = 64 are unexplained.
+- **The technical manuscript** was reordered to the plain edition's order at the owner's instruction (model; cost
+  of leaving; first exit; conversion; sealed system; dependence on λ) and carries the O109 reading. Passages were
+  moved, not reworded, except those on the detected tails. `python scripts/build_curled_paper.py` was rerun: the
+  manifest's hashes are current.
+- **A fresh prior-work search** for the coefficient above 1 is `reading/notes/2026-10-10_prior_work_lambda_above_one.md`
+  (NOT FOUND for any finite λ above 1; a ban on surplus squares is described in the text of [KTB19] and [KT19];
+  its quotations are from web conversions and are to be checked against the PDFs).
+- **Owed to or by the owner.** Her prediction, then a pre-registered replay of the three T38 waits from their
+  seeds (threshold and every exit and return recorded). The far tail at λ = 1.05 read the same way. A physicist's
+  glance at the edition's one-paragraph description of Coleman's bounce, which is from general knowledge. Whether
+  a paper on converting the model's units is added to the series (the edition says "a later paper").
+- **The main checkout** was left on the stale `claude/read-t51-t53-2026-10-09` with uncommitted duplicates of this
+  branch's work (ASSUMPTIONS, TASKS, REFERENCES and the new files); this branch is the source of truth for them.
+- **T58, pre-registered 10 October, 07:47 ET, and run on the laptop** (`scripts/make_t58_configs.py`,
+  `scripts/analyse_t58.py`): the replay owed above, with the owner's idea of that morning as her prediction (the
+  three tubes curled a second direction and the energy sat in the new curl; ASSUMPTIONS O110) and ours (their own
+  detectors' thresholds). Her "maybe" is recorded as her prediction until she confirms or replaces it. *Confirmed by her as her
+  prediction on 10 October, 11:45 ET, after both readings; the verdict (it fails) is unchanged.*
+  **Looked at sweep by sweep the same day, at her question (exploratory; O110, addendum of 12:22 ET;
+  `configs/t58_exploratory_sweeps_lam130_n64.json`, `scripts/read_t58_sweeps.py`):** no second curl at any
+  sweep in the nine traced decays, and no single switch of a tube adds a square (exact, from the neutral-class
+  census already on the record); a waiting tube makes a neutral re-gluing switch about every two sweeps and stays
+  a tube with the same ways out; decay 2748 sat at every sweep, decay 3072 made a three-sweep exit between
+  two looks (sweeps 3,166 to 3,168). **One long wait is left in the cell, of the size chance produces, not two.**
+  *Corrected at her word the same day:* the two papers and the supplement now say one tube sat and one made an
+  exit between two looks; PDFs and blog pages rebuilt, and the folder copied to the marketing branch again.
+  **Her word later that day:** the second-curl prediction is not discussed on the programme page unless real
+  evidence appears of an unknown mechanism adding to the tail; the page says what was found (Version 64), and the
+  registration keeps the prediction as written.
+- **T59, pre-registered 10 October, 17:50 ET, and launched on the laptop** (`scripts/make_t59_configs.py`,
+  `scripts/run_first_exits.py`, `scripts/analyse_t59.py`; 54 configs `configs/t59_*`). The owner asked whether
+  closing paper 1's two loose ends on the count would make it more complete. Stage A1: T8's decay 11 at N = 96
+  (78,205 sweeps) replayed block by block. Stage A2: T22's seven first exits later than four mean waits at
+  λ = 1.05 replayed with what the chain was offered tallied. Stage B: fresh first exits at λ = 1.05 counted move by
+  move, 2,000 at N = 64 and 1,000 at N = 96. Stage C: 4,000 at λ = 1.30, N = 64, on the move clock and on a look
+  every five sweeps. What is exact going in: the waiting torus's three classes share one census, so the first exit
+  should be exactly memoryless; T22's two first exits near 9.7 mean waits then have a chance of about 1 in 70,000.
+  One target was seen before the registration (T22's replica 7 at N = 64, offered three cheapest exits a sweep
+  throughout) and is disclosed there. **Her prediction was recorded at 18:17 ET, before any reading: chance, and
+  exits hidden between two looks (both as ours). Nothing of T59 has been read; when every file is in, run
+  `python scripts/analyse_t59.py` and read the four parts in its order.**
+  **VISION Update 53 (18:22 ET):** her clarification that "her bar" of Update 26 meant continued interest, not a
+  lower bar for scoring; a fourth map, if she asks for one, keeps the registered bar, times the waits without
+  the detector, and names a held-out size first.
+  **Read at 18:29 ET, stages A1 and C only** (PREREGISTRATION T59, "Reading"): T8's long wait at N = 96 read as
+  the tube at every look for 78,205 sweeps (TRUE WAIT); at λ = 1.30 the first exit counted by the move is
+  1.005 ± 0.016 of the count and a look every five sweeps reads it 0.096 ± 0.007 later, 94 % of that from first
+  exits that came back before the look (HIDDEN EXITS; her prediction and ours hold). **Read in full by 22:38 ET
+  (O112):** T22's seven long first exits were offered exits at the counted rate throughout and took none
+  (OFFERED AS COUNTED); 3,000 fresh first exits at λ = 1.05 have means 0.992 ± 0.023 (N = 64) and 0.946 ± 0.031
+  (N = 96) of the count with one beyond 8 mean waits where 1.0 is expected (ON THE COUNT; her "chance" holds).
+  Both editions of paper 1, the supplement, the manifest (57 files) and the blog pages carry it (commit
+  dec10c6e); the marketing branch has the copy.
+- **T60, the λ map a fourth time, pre-registered 10 October, 18:45 ET, at the owner's "Proceed"**
+  (`scripts/make_t60_configs.py`, `scripts/analyse_t60.py`, 28 configs `configs/t60_*`,
+  `cloud/queue/2026-10-10_t60_stage1.txt`). T24's grid and protocol with fresh seeds; the one repair is the clock:
+  the wait is the first look at which a decay stopped being the tube, with no watch and no threshold. The bar is
+  T23's and T24's. Her prediction stands from those runs (sharp across the window; break-up at the edge). Rule 14:
+  N = 288 is held out; after stage 1 is read, `python scripts/analyse_t60.py --write-prediction`, a dated
+  amendment, **her prediction for N = 288**, then `python scripts/make_t60_configs.py --held-out` and a queue file.
+  Ours for 288: one front is the criterion at risk at the top of the window. No fifth run is planned.
+  **State at 22:46 ET, 10 October:** the queue workflow succeeded at 19:16 ET; 27 of the 28 cells are fetched,
+  checked and in `results/` (commit c864aac7); `t60_lam135_n192` had not finished after three fetches. **Nothing
+  of T60 has been read.** Do not run `scripts/analyse_t60.py` until all 28 are in. T53's resubmitted cell came
+  with the same fetch and is read (DAMAGED; its window verdict is no longer provisional).
+  New in the kernel folder: `graphity.exits.first_exit_clocks` and `offers_until_exit` (T22's chain, draw for
+  draw), and `graphity.results.provenance` (the commit and a dirty flag in a run's meta; TASKS, the reviews of
+  6 October, item 5, for new runners only so far).
+- **Bianconi's entropy action on our wirings (O111, 10 October; series paper 10).** At the owner's request for a
+  letter to Ginestra Bianconi with a replication and a question: `scripts/exact_entropy_action.py` builds the
+  operators of [Bia24] on the flat torus, the tube, a re-glued tube and a gas of 4-cubes at 64 points and evaluates
+  her action. In her vacuum it is one number per cell; at the identity metric the order is the same; both ways it
+  grows more negative with every square; across 445 saved wirings it acts like this model's energy with a
+  coefficient below 1. The draft letter is local (`docs/outreach/`), and nothing is sent from a session.
+- **Drafts of series papers 10 and 11, in two versions each (10 October, at the owner's request).** Paper 10:
+  `docs/papers/entropy_action/paper.tex` (three pages) and `plain_language.md`. Paper 11:
+  `docs/papers/gravity/paper.tex` (the 25 September draft, retitled "A pull between leftovers" and given a section
+  on where the two routes stand) and `plain_language.md`. Both connect to piece 8 of the programme page; paper 11
+  also rests on piece 7's knots. Neither has been read by her yet. **VISION Update 52** (her lean on the three
+  shares) and the programme page's piece 6 (Version 65) are hers to confirm or correct.
+  **Read the same day:** gates passed; no second curl in any of 4,000 tubes; of the three waits one was the
+  detector and two were real waits of the perfect tube (11 to 12 times the mean); with no detector the first exit
+  is one memoryless population at 1.07 of the counted rate. Her follow-up (does a knot turn back into tube; why
+  not a closed system) is answered exactly in O110: a knot above λ = 1 runs downhill to tube-like points, so no
+  box can hold it (`scripts/exact_knot_descent.py`).
+- **Later the same morning (written 09:12 ET by the clock), all at the owner's instruction.**
+  - *The technical manuscript, plain-wording pass:* simpler statements carrying the plain edition's ideas (the
+    energy as a price list, the push, the opened door that is not a departure, enough room or not, the scrap), at
+    the same page count (10; six lines longer than before, which is the replay's result and its limits). Two
+    small tables became sentences; the per-cell
+    numbers of the detector reading and the illustrative rarity bounds moved to the supplement; the Introduction's
+    roadmap sentence went. The abstract lost the detector sentences at her instruction; "All three registered
+    conversion maps remain inconclusive" was kept (rule 7) and she may still cut it. **A fresh read-only agent
+    compared the text before and after for any changed claim** and found no wrong number, formula, label or
+    cross-reference, but five added sentences that asserted more than the original, six strengthened phrasings
+    and seven dropped caveats, and replay wording without the limits its registered readings carry. All were
+    corrected the same morning: the added interpretive sentences removed or qualified ("a necessary condition
+    for a change that starts locally"; "measured waits would exceed Eq. (2)"; the "sharp change" rationale for
+    the pre-registration; "the detector does not see the first exit"; "metastable" without the enumerated
+    sizes), the hedges restored, the per-cell numbers of the detector reading put back, and the replay stated
+    as one cell, by counting signature, at five-sweep blocks, 7 % and four standard errors off the count, with
+    the two real waits called rare and unexplained. The lesson for the next pass: a gloss borrowed from the
+    plain edition is a claim, and is checked like one.
+  - *Source numbers:* a number now means the same source in both editions. The plain edition's sources 1 to 8 are
+    the technical paper's reference list, 9 to 12 its own. `REFERENCES.bib` gained T17 and Creutz83, both marked
+    not read, titles to verify.
+  - *The two editions as web pages ("the Side Nerd Blog"):* `docs/public/mainnerd/` (a front page, the plain
+    edition at `01thecurledtorusburpsPL/`, the technical one at `01thecurledtorusburps/`, `assets/`), generated
+    from the LaTeX by `scripts/build_main_nerd_pages.py` with `main_nerd_latex.py` (converter),
+    `main_nerd_site.py` (the frame: a 1990s home page in Side Nerd's colors, advertisements for Side Nerd,
+    question headings, quick answers, glossary, guestbook, JSON-LD, UTM links) and `make_main_nerd_assets.py`
+    (the cow GIF she supplied, cropped; the share image). Chapters and sections link to each other across the two
+    pages. Each edition's footer has "all posts | next post"; until a second post exists "next post" lands on a
+    placeholder (`comingsoon/`, "not up yet", noindex), and a second post replaces `SOON` in `NEXT_POST`. Two of
+    the plain page's advertisements show Ither on a phone in the logo's place (cut by the stylesheet out of the
+    site's one Ither picture, the three-phone hero); the cow is on the two editions and not on the front page
+    (her notes of 10 October). The interactive companion is hosted on the blog as well
+    (`01thecurledtorusburpsKnobs/`, built whole and unchanged from `docs/public/curling_ladder_tube.html`, which is
+    byte for byte what the Claude artifact was published from); the editions' web pages link to that copy, the
+    PDFs still to the artifact.
+    At her instruction of the same day the folder was copied, file for file, to `sites/sidenerdapps/mainnerd/`
+    on a new pushed branch of the SideNerdMarketing repository, `feat/sidenerdapps-main-nerd-blog` (commit
+    `4522930`), with the sitemap entries. She merged that first copy into the marketing `main` the same day
+    (pull request 56). After the correction to both editions (one long wait, not two) the folder was copied to
+    the same branch again (commit `17acde2`, pushed after the merge), which she also merged (pull request 57) and deployed: **the blog is
+    live** with the corrected text. Later the same day, at her note that "mathematicians call the shape a torus"
+    read as if torus meant the flat sheet only, the plain edition says every shape in the paper is a torus, told
+    apart as flat, curled and knot (four sentences and a row of the translations table; the web page's quick
+    answer too); rebuilt and copied to the same branch again, which needs a third pull request. No analytics tag
+    of the site's own is on sidenerdapps.com, so nothing counts the blog's visits yet. Copy again after any
+    rebuild;
+    `docs/public/mainnerd_PORTING.md` has the steps and the cautions (root-absolute links; no analytics on
+    that site yet, so the UTMs record nothing; do not deploy from a stale checkout). Her addresses were typed
+    "...01thecurledtourusburps"; the pages are built with "torus", and asked which she wanted she said to spell
+    it as mathematics and the source papers do, so "torus" stands (one constant, `SLUG`). The first build of the morning was at `/ownedmediaphysics/`, the second was "Primary Nerd" at
+    `/primarynerd/`; she renamed the blog **Main Nerd** (`/mainnerd/`) the same day, and the scripts, test and
+    notes carry that name.
+  - *Her notes on the pages, the same morning, applied:* the masthead is "Welcome to the Side Nerd Blog, Main
+    Nerd" (first "Primary Nerd") and the papers are posts; each chapter opens with a commonly searched question ("What was there before
+    the Big Bang?") and an answer that claims nothing the paper does not; advertisements are labelled with the
+    one word and carry the Side Nerd logo; a call for a scientist to volunteer as a reader opens an e-mail to
+    her; a guestbook form sends entries by e-mail; the PDFs ship with the pages because the GitHub links point
+    at `main`, which lacks this branch's files until it is merged.
+  - *Uncommitted when this was written:* the two papers, the web pages and their scripts, awaiting her review.
+    T58 and its record are committed.
+- **Next record numbers:** ASSUMPTIONS **O112**, VISION **Update 54**, PREREGISTRATION **T60**.
 
 ## 0. The first ten minutes (as of 9 October 2026)
 
@@ -14,7 +194,7 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    Start a fresh branch from `origin/main`; never commit on `main`. `gh` is not installed; Emily opens the pull request
    from `https://github.com/EmilySmithCreate/RecreationalPhysics/compare/main...<branch>`.
 2. **Run `date` before writing any clock time** (CLAUDE.md, "Added 2026-10-05", item 6). Guessed times have been wrong
-   three times. Next record numbers (as of 9 October, 06:35 ET): ASSUMPTIONS **O108**, VISION **Update 49**,
+   three times. Next record numbers (as of 9 October, 06:35 ET): ASSUMPTIONS **O109**, VISION **Update 49**,
    PREREGISTRATION **T57**.
 3. **What is running, and how results come in.** Batch jobs are submitted by pushing a manifest in `cloud/queue/` on
    any branch but `main` (`.github/workflows/run_queue.yml`, which skips any config whose result is already in the
@@ -61,8 +241,8 @@ merges; work goes on a fresh branch off `main` (on 9 October, `claude/read-t51-t
    8 October apply to every new section.
 7. **Read section 3 before writing anything public or anything to a physicist.** The programme page is the Claude
    artifact "A Phase-Changing Reality" (the owner's request of 4 October); its text source is
-   `docs/papers/programme_draft.md`, current to 9 October; the artifact was last republished on 6 October and is owed a
-   republish from the 9 October draft. `docs/public/programme.html` is older and not maintained by hand.
+   `docs/papers/programme_draft.md`, current to 10 October (pieces 1 and 2, the papers' state and what is waiting
+   to be read; the rest is the state of 9 October); the artifact was republished from it on 10 October as Version 63. `docs/public/programme.html` is older and not maintained by hand.
 8. **Environment.** The interpreter with the project's dependencies is the Microsoft Store one,
    `~/AppData/Local/Microsoft/WindowsApps/python3` (NumPy 2.0, Numba, pytest); bare `python` and `.venv` lack NumPy.
    Run `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`. Long scripts go in a file with

@@ -1,5 +1,11 @@
 # Vision and plan
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 This page is the fixed reference. Changes to it are deliberate commits that say why.
 Source keys refer to `REFERENCES.bib`; assumption numbers refer to `ASSUMPTIONS.md`.
 
@@ -1427,6 +1433,53 @@ curling macrodimensional space itself."
   PREREGISTRATION T57 before any run; ours is MELTS or HEALS at every energy, tied and untied, with no direction
   curled, because random kicks do not find the coordinated re-threading a fold needs and the tie makes breaking
   cheaper than curling.
+
+Update 52 (2026-10-10, 16:25 ET by the clock): **the author's lean on the three shares: the burp is the hot lump, the
+scrap is the best guess for the dark matter, and dark energy is what does not thin out.** Why this page changes:
+Update 50 left dark matter open "between the scrap and something else" and dark energy's source open; asked to bring
+the programme page's piece 6 up to date, the author gave the direction it should lean. Her words: "adjust this
+section so it leans toward our current view: the one curled direction and the scrap best guess of what it is given
+currnet evidence. doesnt expand = dark energy, or was it dark matter.... remind me?"
+
+- **Recorded as her lean, not a decision; the mapping below is the assistant's reading of her words and is hers to
+  correct.** The burp, released when the slab's one curled direction opens (Updates 47, 50), is the hot lump: light and
+  ordinary matter. The scrap is the best current guess for the dark matter (Update 16's reading, open again since
+  Update 41). Dark energy is the energy that space itself keeps.
+- **The reminder she asked for** (*ours; general knowledge, to verify with a physicist, as O89*). What tells the three
+  apart is how each thins out as space grows. A fixed number of things in more room thins out: ordinary matter, dark
+  matter, and a fixed number of knots would. Light thins faster. Dark energy is the one that does not thin: the same
+  density however large space gets. So "does not thin as space expands" is dark energy.
+- **What the toy has for each** (*exact and measured; the toy has no expansion, so none of this is a measurement of
+  thinning*). Under the tie "all at the last" one opening carries the whole release (O89, O106). The knots have a
+  fixed energy each and a number set at the opening (O104, O107); the stubborn ones hold about one per cent of the
+  release, where birth can afford far less than a millionth, so the guess rests on the seed count. Fully open space
+  keeps exactly nothing (flat space is the floor, Q18); the only thing in the toy that would not thin is the cost of
+  a direction that stays curled, which is far too large (O103 (e)).
+- **Also hers, the same day, about the programme page.** A prediction about a thing that turned out not to be real
+  (T58's second curl, for long waits that were mostly the detector's) is not discussed on that page unless real
+  evidence appears of an unknown mechanism adding to the tail; the registration keeps it as written. And the
+  sentence that the knots are not seams is dropped from the page as obvious by now; T55's verdict stays in the
+  record.
+- **Nothing here is a new knob or a run.** The claim at the head of the programme page, confirmed by her on 9
+  October, still says the two identifications are open; this lean sits in piece 6 under her name until she confirms
+  or corrects it.
+
+Update 53 (2026-10-10, 18:22 ET by the clock): **the author's clarification of "her bar" (Update 26): it was a
+statement of continued interest, not a lower bar she wants the runs scored by.** Why this page changes: Update 26
+recorded her words on reading T24 as "her bar" and proposed, without enacting it, a fourth run of the λ map
+"pre-registered with a bar written her way"; the programme page has since said her bar is different from ours. Asked
+on 10 October whether she wants that fourth run, she answered: "Hopefully we won't need that low bar, what I meant by
+it was just that I'm still interested in this space even if we couldn't see this stuff happening every time."
+
+- **What stands of Update 26.** Her words there, and their meaning as she now gives it: her theory needs the change
+  to be possible, not to be seen in every instance at every size, and a result short of "every time" would not end
+  her interest in this family.
+- **What is withdrawn.** The proposal that a fourth map be scored by a lower bar (a majority of instances at some
+  size, stragglers not counted against). It was the assistant's wording and was never enacted. A fourth map, if she
+  asks for one, keeps the registered bar of T23 and T24: sharp at every curling cost in the window and at every size
+  run, with a held-out size named first (rule 14).
+- *Ours:* the difference between her claim (existence and fertility) and a mechanism claim (every size) is still
+  worth saying wherever a verdict is quoted; it is a description of what each needs, not a rule for scoring.
 
 ## The target ("the spot")
 

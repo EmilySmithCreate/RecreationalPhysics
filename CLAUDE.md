@@ -1,5 +1,11 @@
 # Project memory for Claude Code
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 Read this first, then **`docs/HANDOFF.md`** (the state as of 2026-10-05 with an addendum of 6 October: what is running, what the owner is owed, and the corrections that must not be undone — it is newer than the "Known state" section below). Then read @VISION.md (the fixed reference for what we are testing and why; Updates 13, 14 and 41 to 46 are the current statement) and @TASKS.md (what to do next, in order). Read `ASSUMPTIONS.md` before touching any model code.
 
 ## What this project is

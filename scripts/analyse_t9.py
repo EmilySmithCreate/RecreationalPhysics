@@ -5,7 +5,13 @@
 Reads every results/t9_n*_C*.csv, classifies each replica's end state, finds the crossover in C
 at each size, and applies PREREGISTRATION.md section T9 as written.
 
-END STATES, from the final local-dimension histogram and the conversion fraction f:
+END STATES are legacy count-based labels, not independent geometric certificates.
+They use d=6-q and f=mean(d)-1. A connected surface requires separate wiring checks.
+No observed "stalled" end state does not exclude equilibrium coexistence.
+Raw bath_T is mean store energy, not temperature. The original N/3.5 prediction
+is retained only to reproduce the registration; see O108 for its correction.
+
+END STATES, from the final square-count histogram and the conversion statistic f:
   sheet      f >= 0.9 and at least 90 % of vertices at d = 2 (leftover rings allowed: d = 1 in
              small clusters), and less than 5 % at d >= 3 or d = 0
   melted     at least 15 % of vertices at d >= 3 or d = 0 -- the order, old or new, is gone
@@ -50,7 +56,7 @@ def main(out_dir="results"):
         print("no T9 results yet"); return
     print("T9, sealed tube, lambda = 1.25. PREREGISTRATION.md section T9.\n")
     print("%-5s %-5s %-6s %-6s %-7s %-6s %-7s %-6s %-9s %-9s  %s"
-          % ("N", "C", "reps", "sheet", "melted", "tube", "stalled", "other", "bath T", "drift", "leftover rings"))
+          % ("N", "C", "reps", "sheet", "melted", "tube", "stalled", "other", "mean E", "drift", "d=1 pieces"))
     per_n = defaultdict(list)
     for (n, c) in sorted(runs):
         rows = list(runs[(n, c)].values())
@@ -66,7 +72,7 @@ def main(out_dir="results"):
         per_n[n].append(dict(C=c, reps=len(rows), **cnt, bath=bath))
 
     print("\nCrossover per size: the smallest C at which a majority of replicas end as a sheet, and the")
-    print("largest C at which a majority end melted. Prediction (a): C* ~ N * 4(lambda-1) / g_melt = N / %.1f."
+    print("largest C at which a majority end melted. Historical prediction (a), using an uncalibrated thermometer: C* ~ N * 4(lambda-1) / g_melt = N / %.1f."
           % G_MELT)
     cross = {}
     for n in sorted(per_n):
@@ -75,7 +81,7 @@ def main(out_dir="results"):
         melt_c = [d["C"] for d in rows if d["melted"] > d["reps"] / 2]
         stall_c = [d["C"] for d in rows if d["stalled"] > d["reps"] / 2]
         cross[n] = (min(sheet_c) if sheet_c else None, max(melt_c) if melt_c else None, stall_c)
-        print("   N=%-4d predicted C* = %5.1f   first majority-sheet C = %s   last majority-melted C = %s   majority-stalled at C = %s"
+        print("   N=%-4d legacy C* = %5.1f   first majority-sheet C = %s   last majority-melted C = %s   majority-stalled at C = %s"
               % (n, n / G_MELT, cross[n][0], cross[n][1], stall_c or "none"))
 
     # the verdict, as written
@@ -94,6 +100,10 @@ def main(out_dir="results"):
     else:
         verdict = "INCONCLUSIVE"
     print("\n  PRE-REGISTERED VERDICT, T9:  %s" % verdict)
+    print("Scope: count-based end-state verdict; no equilibrium coexistence conclusion.")
+    print("Conditional delta=1 store model: u(3.5)=%.6f, so neglecting seed and graph energy gives C*~N/%.6f."
+          % (1.0 / np.expm1(1.0 / G_MELT), 1.0 / np.expm1(1.0 / G_MELT)))
+    print("Full estimate: C*~[epsilon*N+seed-U_graph(g_m)]/u(g_m); spectrum and mixing unverified.")
 
 
 if __name__ == "__main__":

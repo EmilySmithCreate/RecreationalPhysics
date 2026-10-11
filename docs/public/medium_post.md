@@ -45,19 +45,19 @@ Then I wrote down my predictions, and what would count as failure, before runnin
 
 ## What came back
 
-**The question most researchers ask came back smooth.** Does space condense sharply out of random
-chaos? In this model, no: one hump instead of two, and any burst of energy that could be hiding is
-small and shrinking as the network grows. That matches the published work.
+**The disorder-to-order test was inconclusive.** The sampled histograms had one hump, but these
+finite runs do not establish the order of a thermodynamic transition or a general bound on its energy release.
 
 **The change my idea actually describes came back sharp.** Start the network as a curled-up tube,
 and it waits — hundreds to thousands of rounds — then opens out into flat space. It does it by a
-seed and a spreading front, and gives off exactly the energy worked out in advance. Halfway through,
-99% of the network is either still tube or already flat, with almost nothing in between. That's what
-"sharp" means, and all three tests were written before the runs.
+rapid change in square counts, often concentrated in a large connected region. Halfway through,
+about 99% of points have one of the two reference square counts. That does not prove two geometric
+phases or a unique moving front. The release is the starting energy minus the final energy.
+The tests retain their original failures; some energy checks were amended after seeing data.
 
 **Sealed in a box, it's a bonfire, not slush.** Let the released heat stay inside and the change
 either carries through to clean flat space or, with too little room, melts the space it just made.
-Of 420 runs: 179 clean, 154 melted, 87 in between, and none stuck half-and-half. Energy balanced to
+Of 420 runs: 179 sheet-like, 154 melted-like, 87 in between, and none classified as stalled by the registered square-count criteria. This does not rule out equilibrium coexistence. Energy balanced to
 the last unit in every run.
 
 **And a prediction of mine failed.** I predicted the leftover — a scrap of the old arrangement that

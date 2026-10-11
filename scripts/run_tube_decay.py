@@ -28,6 +28,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from graphity import __version__                                           # noqa: E402
+from graphity.connectivity import connectivity                             # noqa: E402
 from graphity.cqg import (ENERGY_PER_SQUARE, ENERGY_PER_SURPLUS, NO_CAP,     # noqa: E402
                           run_chain, surplus, torus, total_squares)
 from graphity.dimension import local_dimension, new_seeds, piece_labels, pieces_of  # noqa: E402
@@ -83,13 +84,55 @@ def main(path, out_dir="results"):
                 hit = {}
                 waited = None
                 thresh = None
+                # T58 (2026-10-10): the detector's own numbers, and what it cannot see. With `record_detector` the
+                # row gains the threshold and the resting spread it came from, the highest square count reached,
+                # the most points with both directions curled (d = 0), and how the stretch between sweep 200 and
+                # the detection was spent. A replica named in `trace_replicas` has every block written to a file
+                # and its final graph saved. Reading only: no random numbers are drawn.
+                detect = bool(cfg.get("record_detector"))
+                traced = rep in set(int(r) for r in cfg.get("trace_replicas", []))
+                s_tube, x_tube = int(total_squares(adj)), int(surplus(adj))
+                rest_sd = ""
+                phi_max, sweep_phi_max, d0_max, d0_blocks = PHI_TUBE, 0, 0, 0
+                tube_at_200, first_left, first_left_after_200 = "", "", ""
+                exits_unseen, off_blocks, deepest_unseen, was_tube = 0, 0, "", True
+                trace = []
+                # 10 October 2026, the owner's question (could a second curl come and go between two looks?): with
+                # `trace_sweeps` a traced replica also has every sweep written, with the connected pieces, baby
+                # universes and 4-cubes after it, and the number of moves accepted in its block of sweeps. A block
+                # with none accepted is a block in which the graph did not change at all. Reading only.
+                sweep_trace = []
+                conn = np.zeros((block, 4), dtype=np.int64) if (traced and cfg.get("trace_sweeps")) else None
                 while sweeps_done < n_sweeps:
-                    s, x, _ = run_chain(adj, side_u, 1.0 / g, 0, block, seed if first else -1,
-                                        lam, NO_CAP, False)
+                    if conn is None:
+                        s, x, acc = run_chain(adj, side_u, 1.0 / g, 0, block, seed if first else -1,
+                                              lam, NO_CAP, False)
+                    else:               # looking after every sweep draws no random numbers: the chain is the same
+                        s, x, acc = run_chain(adj, side_u, 1.0 / g, 0, block, seed if first else -1,
+                                              lam, NO_CAP, False, conn)
                     first = False
                     sweeps_done += block
+                    if conn is not None:
+                        moves = int(round(float(acc) * block * 2 * n))
+                        for i in range(block):
+                            sweep_trace.append([sweeps_done - block + i + 1, int(s[i]), int(x[i])]
+                                               + [int(v) for v in conn[i]] + [moves])
                     phi = float(s[-1]) / n
                     phis.append(phi)
+                    if detect or traced:
+                        d_hist = np.bincount(local_dimension(adj), minlength=D_BINS)[:D_BINS]
+                        is_tube = int(s[-1]) == s_tube and int(x[-1]) == x_tube and int(d_hist[1]) == n
+                        if phi > phi_max:
+                            phi_max, sweep_phi_max = phi, sweeps_done
+                        d0_max = max(d0_max, int(d_hist[0]))
+                        d0_blocks += int(d_hist[0] > 0)
+                        if first_left == "" and not is_tube:
+                            first_left = sweeps_done
+                        if sweeps_done == 200:
+                            tube_at_200 = int(is_tube)
+                        if traced:
+                            trace.append([sweeps_done, int(s[-1]), int(x[-1])] + [int(v) for v in d_hist]
+                                         + [int(v) for v in connectivity(adj)])
                     if patch_every and sweeps_done % patch_every == 0:
                         sheet = local_dimension(adj) == 2
                         converted_series.append(int(sheet.sum()))
@@ -105,12 +148,21 @@ def main(path, out_dir="results"):
                         # ended, so that "still a tube at sweep 200" can be read. Reading only.
                         f_200 = (PHI_TUBE - phi) / (PHI_TUBE - PHI_SHEET)
                     if sweeps_done <= 200:
+                        was_tube = (not (detect or traced)) or is_tube
                         continue
                     if thresh is None:
                         rest = np.array(phis[: max(1, 200 // block)])
                         thresh = PHI_TUBE - 3.0 * max(rest.std(), 1e-6) - 1e-9
+                        rest_sd = float(rest.std())
                     if waited is None and phi < thresh:
                         waited = sweeps_done
+                    if detect or traced:
+                        if first_left_after_200 == "" and not is_tube:
+                            first_left_after_200 = sweeps_done
+                        if waited is None and not is_tube:       # away from the tube, and the detector silent
+                            off_blocks += 1
+                            exits_unseen += int(was_tube)
+                            deepest_unseen = phi if deepest_unseen == "" else min(deepest_unseen, phi)
                     # T38 (2026-09-25): a tube still waiting at a named sweep has its graph saved, so a long wait can
                     # be read from its wiring. Reading only: no random numbers are drawn.
                     if waited is None and sweeps_done in save_waiting_at:
@@ -124,6 +176,8 @@ def main(path, out_dir="results"):
                     for m in MARKS:
                         if m not in hit and f >= m:
                             hit[m] = (sweeps_done,) + snapshot(adj)
+                    if detect or traced:
+                        was_tube = is_tube
                     if f >= stop_at:
                         break
                 # T7 amendment 1: settle until the released energy has stopped changing. The
@@ -164,6 +218,30 @@ def main(path, out_dir="results"):
                            reached=max([0.0] + [m for m in hit]))
                 if cfg.get("record_f_200"):
                     row["f_200"] = f_200                   # T8; absent from T7's files, which predate it
+                if detect:                                 # T58; absent from earlier files
+                    row.update(thresh=(thresh if thresh is not None else ""), rest_sd=rest_sd,
+                               tube_at_200=tube_at_200, first_left=first_left,
+                               first_left_after_200=first_left_after_200, exits_unseen=exits_unseen,
+                               off_blocks=off_blocks, deepest_unseen=deepest_unseen, phi_max=phi_max,
+                               sweep_phi_max=sweep_phi_max, d0_max=d0_max, d0_blocks=d0_blocks)
+                if traced:
+                    trace_dir = Path(out_dir) / (cfg["name"] + "_trace")
+                    trace_dir.mkdir(parents=True, exist_ok=True)
+                    target = trace_dir / ("N%d_rep%d.csv" % (n, rep))
+                    final = trace_dir / ("N%d_rep%d_final.npz" % (n, rep))
+                    if target.exists() or final.exists():
+                        raise FileExistsError("results are append-only; %s exists" % target)
+                    header = "sweep,S,X," + ",".join("d%d" % k for k in range(D_BINS)) + ",pieces,largest,baby,cubes"
+                    lines = [header] + [",".join(str(v) for v in line) for line in trace]
+                    target.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+                    np.savez(final, adj=adj, part=part, lam=lam, g=g, h0=h0 * n)
+                    if sweep_trace:                        # every sweep up to the end of the detection loop
+                        by_sweep = trace_dir / ("N%d_rep%d_sweeps.csv" % (n, rep))
+                        if by_sweep.exists():
+                            raise FileExistsError("results are append-only; %s exists" % by_sweep)
+                        lines = ["sweep,S,X,pieces,largest,baby,cubes,accepted_in_block"]
+                        lines += [",".join(str(v) for v in line) for line in sweep_trace]
+                        by_sweep.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
                 if patch_every:                            # T37; absent from earlier files
                     row["seeds"] = seeds
                     row["seed_sweeps"] = " ".join(seed_sweeps)
