@@ -124,9 +124,10 @@ TICKER = ("★ NEW POST! The curled torus burps ★ Twelve units opens a tube �
 SUMMARY = (
     "<p><b>In one paragraph.</b> <i>The curled torus burps</i> is a computational physics paper about a "
     "hypothetical sharp change in which flat space emerges from something more curled up. It uses a toy model of "
-    "space as a network of dots and links, a close cousin of the published model called combinatorial quantum "
-    "gravity. In that toy, a tube (a torus curled to four steps around) sits above the flat sheet in energy and "
-    "is stable for now. The paper counts what it costs to start the change (12 units at the main setting, for "
+    "space as a network of dots and links. The toy is the paper's own: a close cousin of the published model "
+    "called combinatorial quantum gravity, with one knob turned above the published value, and not that model "
+    "itself. In the paper's toy, a tube (a torus curled to four steps around) sits above the flat sheet in energy "
+    "and is stable for now. The paper counts what it costs to start the change (12 units at the main setting, for "
     "every size of tube tested), predicts how long the tube waits by counting its exits, watches the flat arrangement "
     "spread, seals the system to see where the released energy (the burp) goes, and counts what is left behind "
     "(about one four-dot scrap). A toy can show that a mechanism is possible or impossible within a class of "
@@ -140,7 +141,8 @@ CHAPTER_QUESTIONS = {
         "as one arrangement of something deeper, and ask what kind of change could have produced it."),
     2: ("Is space made of something smaller?",
         "Some physicists think so. This chapter describes one published model, combinatorial quantum gravity, "
-        "in which space is a network of dots and links and nothing else."),
+        "in which space is a network of dots and links and nothing else, and then the toy this paper works in: "
+        "a close cousin of that model with one knob turned up, not the model itself."),
     3: ("What existed before space?",
         "The author's hypothesis is that it was not nothing and not chaos, but a specific curled-up arrangement. "
         "This chapter builds a stand-in for that arrangement inside the toy model."),
