@@ -2,7 +2,9 @@
 
     python scripts/exact_torus_level.py
 
-EXACT, no simulation (ASSUMPTIONS Q13 and O42; paper 1, Eq. (2)). Two things a review of Eq. (2) (generated with ChatGPT) asked
+Exact move censuses at individual states, with sampled neutral walks (ASSUMPTIONS Q13 and O42;
+paper 1, Eq. (2)). Exhaustive neutral-class closure is in analyse_curled_revision.py --neutral.
+A review of Eq. (2) (generated with ChatGPT) asked
 to see made explicit (2026-09-24):
 
 1. Ordered proposals. cqg.run_chain draws a vertex of side 0 and one of its four slots, twice, so it makes
@@ -94,7 +96,7 @@ def rate_per_sweep(counts, n, lam, g):
 
 
 # Every condition the paper quotes a waiting time for: (lambda, g, sizes).
-CONDITIONS = ([(1.25, g, (64, 144)) for g in (1.4, 1.6, 1.8, 2.0, 2.2, 2.5)]      # Fig. 2(a)
+CONDITIONS = ([(1.25, g, (64, 144)) for g in (1.4, 1.5, 1.6, 1.75, 2.0, 2.5)]     # Fig. 2(a), committed config
               + [(lam, 1.5, (64, 96, 144, 192)) for lam in (1.05, 1.10, 1.15, 1.20, 1.25, 1.30, 1.35)])
 
 
@@ -125,7 +127,8 @@ def correction_table(sizes=(64, 96, 144, 192)):
 def symmetry_along_walk(length, walk=40, seed=0):
     """Side-preserving symmetry counts (graphity.symmetry) of the arrangements met along a walk of neutral
     switches, and of every arrangement one move A away from the last of them. With interchangeable vertices
-    each acceptance is multiplied by the ratio of these counts (paper 1, Discussion; ASSUMPTIONS Q20)."""
+    the symmetry ratio multiplies exp(-dH/g) BEFORE clipping at one (paper 1, Discussion;
+    the old multiply-an-acceptance wording in ASSUMPTIONS Q20 is corrected by O108)."""
     from graphity import symmetry
     adj, part = torus(4, length, cap=NO_CAP)
     side_u = np.flatnonzero(part == 0)

@@ -1,0 +1,147 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T59, stage A2 (written 2026-10-10, before any run): T22's seven first exits later than four mean waits at lambda 1.05 and the replica after each, replayed from T22's seeds and stopped at the first exit, with the exits the chain was offered tallied in stretches of 5,000 sweeps. Named points, as in the original. Not exploratory.",
+    "name": "t59_offers_lam105",
+    "mode": "offers",
+    "g": 1.5,
+    "lambda": 1.05,
+    "max_sweeps": 100000,
+    "stretch": 5000,
+    "targets": [
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 6,
+        "role": "target"
+      },
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 7,
+        "role": "target"
+      },
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 11,
+        "role": "target"
+      },
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 17,
+        "role": "target"
+      },
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 5,
+        "role": "control"
+      },
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 8,
+        "role": "control"
+      },
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 12,
+        "role": "control"
+      },
+      {
+        "side": [
+          16,
+          4
+        ],
+        "seed": 20261801,
+        "replica": 18,
+        "role": "control"
+      },
+      {
+        "side": [
+          24,
+          4
+        ],
+        "seed": 20261802,
+        "replica": 6,
+        "role": "target"
+      },
+      {
+        "side": [
+          24,
+          4
+        ],
+        "seed": 20261802,
+        "replica": 12,
+        "role": "target"
+      },
+      {
+        "side": [
+          24,
+          4
+        ],
+        "seed": 20261802,
+        "replica": 29,
+        "role": "target"
+      },
+      {
+        "side": [
+          24,
+          4
+        ],
+        "seed": 20261802,
+        "replica": 7,
+        "role": "control"
+      },
+      {
+        "side": [
+          24,
+          4
+        ],
+        "seed": 20261802,
+        "replica": 13,
+        "role": "control"
+      },
+      {
+        "side": [
+          24,
+          4
+        ],
+        "seed": 20261802,
+        "replica": 30,
+        "role": "control"
+      }
+    ]
+  },
+  "config_path": "configs/t59_offers_lam105.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T59, written 2026-10-10",
+  "git_commit": "c7840ed6e9bb3cd731f8ccb31e3408d313298d0f",
+  "git_dirty": false
+}

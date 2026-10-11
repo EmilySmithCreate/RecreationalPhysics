@@ -1,0 +1,92 @@
+RETROSPECTIVE; intervals 95%; no original verdict rescored.
+T7b: snapshot denominators, mean with replica bootstrap interval, distribution
+t7b_lam125_n144 total/half/75/detected 30 30 30 30 signature mean/CI 0.9965277777777779 (np.float64(0.992824074074074), np.float64(0.999537037037037)) largest mean/CI 0.955058990442055 (np.float64(0.9064449858124253), np.float64(0.994758064516129)) largest min/median/max [0.5, 1.0, 1.0] individual largest<.7 3
+t7b_lam125_n192 total/half/75/detected 30 30 30 30 signature mean/CI 0.9947916666666666 (np.float64(0.990625), np.float64(0.9986111111111111)) largest mean/CI 0.9218656343656344 (np.float64(0.8635026431901434), np.float64(0.9713286713286713)) largest min/median/max [0.5, 1.0, 1.0] individual largest<.7 5
+t7b_lam125_n64 total/half/75/detected 30 30 30 30 signature mean/CI 0.9979166666666667 (np.float64(0.99375), np.float64(1.0)) largest mean/CI 0.9944444444444444 (np.float64(0.9833333333333333), np.float64(1.0)) largest min/median/max [0.8333333333333334, 1.0, 1.0] individual largest<.7 0
+t7b_lam125_n96 total/half/75/detected 30 30 30 30 signature mean/CI 0.9878472222222222 (np.float64(0.9791666666666666), np.float64(0.9951388888888889)) largest mean/CI 0.9605539993775287 (np.float64(0.9282773109243697), np.float64(0.9862962962962963)) largest min/median/max [0.65, 1.0, 1.0] individual largest<.7 1
+T22: complete-event exponential mean intervals (model conditional); reciprocal-exits bootstrap
+t22_exits_n64_lam105 total/first/quarter 40 40 40 first mean/CI 10174.0572265625 [7633.269352105227, 14241.109234354835] reciprocal-exits/CI 0.6666666666666666 (np.float64(0.5714285714285714), np.float64(0.7843137254901962))
+t22_exits_n64_lam110 total/first/quarter 40 40 40 first mean/CI 5134.4962890625 [3852.2481532218494, 7186.997368662718] reciprocal-exits/CI 0.5555555555555556 (np.float64(0.47058823529411764), np.float64(0.6557377049180328))
+t22_exits_n64_lam125 total/first/quarter 40 40 40 first mean/CI 823.9533203125 [618.185792299869, 1153.3264436477157] reciprocal-exits/CI 0.6779661016949152 (np.float64(0.5882352941176471), np.float64(0.7843137254901962))
+t22_exits_n96_lam105 total/first/quarter 40 40 39 first mean/CI 9302.346223958335 [6979.252500037698, 13020.93410338899] reciprocal-exits/CI 0.5571428571428572 (np.float64(0.4482758620689655), np.float64(0.709090909090909))
+t22_exits_n96_lam110 total/first/quarter 40 40 40 first mean/CI 4326.452213541667 [3245.998557856898, 6055.939847615782] reciprocal-exits/CI 0.6060606060606061 (np.float64(0.5194805194805194), np.float64(0.7142857142857143))
+t22_exits_n96_lam125 total/first/quarter 40 40 40 first mean/CI 904.575390625 [678.6739500441524, 1266.1769696917954] reciprocal-exits/CI 0.6557377049180328 (np.float64(0.5714285714285714), np.float64(0.7692307692307692))
+T8 and T7b: full-window-release indicator, NOT certified topology
+1.05 total/detected/half/75 120 120 120 120 full-release count/nominal pooled CI 120 (np.float64(0.9697270274225799), 1.0)
+  size 64 full release 30 30 (np.float64(0.8842966917779722), 1.0)
+  size 96 full release 30 30 (np.float64(0.8842966917779722), 1.0)
+  size 144 full release 30 30 (np.float64(0.8842966917779722), 1.0)
+  size 192 full release 30 30 (np.float64(0.8842966917779722), 1.0)
+1.1 total/detected/half/75 120 120 120 120 full-release count/nominal pooled CI 117 (np.float64(0.928676805843095), np.float64(0.9948144250416786))
+  size 64 full release 30 30 (np.float64(0.8842966917779722), 1.0)
+  size 96 full release 30 30 (np.float64(0.8842966917779722), 1.0)
+  size 144 full release 27 30 (np.float64(0.7347115495257919), np.float64(0.9788828629702774))
+  size 192 full release 30 30 (np.float64(0.8842966917779722), 1.0)
+1.15 total/detected/half/75 120 120 120 120 full-release count/nominal pooled CI 116 (np.float64(0.9168512785714898), np.float64(0.9908444944431632))
+  size 64 full release 29 30 (np.float64(0.8278305443665873), np.float64(0.9991564290733695))
+  size 96 full release 29 30 (np.float64(0.8278305443665873), np.float64(0.9991564290733695))
+  size 144 full release 29 30 (np.float64(0.8278305443665873), np.float64(0.9991564290733695))
+  size 192 full release 29 30 (np.float64(0.8278305443665873), np.float64(0.9991564290733695))
+1.2 total/detected/half/75 120 120 120 120 full-release count/nominal pooled CI 112 (np.float64(0.872863251760787), np.float64(0.9707808156862036))
+  size 64 full release 29 30 (np.float64(0.8278305443665873), np.float64(0.9991564290733695))
+  size 96 full release 28 30 (np.float64(0.7792645984770381), np.float64(0.9918218655393437))
+  size 144 full release 28 30 (np.float64(0.7792645984770381), np.float64(0.9918218655393437))
+  size 192 full release 27 30 (np.float64(0.7347115495257919), np.float64(0.9788828629702774))
+1.25 total/detected/half/75 120 120 120 120 full-release count/nominal pooled CI 105 (np.float64(0.8022235896481744), np.float64(0.9283203231112478))
+  size 64 full release 28 30 (np.float64(0.7792645984770381), np.float64(0.9918218655393437))
+  size 96 full release 26 30 (np.float64(0.6927816497238732), np.float64(0.9624465036616366))
+  size 144 full release 27 30 (np.float64(0.7347115495257919), np.float64(0.9788828629702774))
+  size 192 full release 24 30 (np.float64(0.6143334890033928), np.float64(0.9228644879989344))
+1.3 total/detected/half/75 120 118 120 120 full-release count/nominal pooled CI 95 (np.float64(0.7080087218794338), np.float64(0.8604084551915839))
+  size 64 full release 25 30 (np.float64(0.6527883011658562), np.float64(0.9435783035319285))
+  size 96 full release 26 30 (np.float64(0.6927816497238732), np.float64(0.9624465036616366))
+  size 144 full release 22 30 (np.float64(0.5411063486052488), np.float64(0.8772051901276452))
+  size 192 full release 22 30 (np.float64(0.5411063486052488), np.float64(0.8772051901276452))
+1.35 total/detected/half/75 120 117 120 120 full-release count/nominal pooled CI 55 (np.float64(0.3670599277953185), np.float64(0.551711910505354))
+  size 64 full release 19 30 (np.float64(0.4385598490119575), np.float64(0.8007013749879656))
+  size 96 full release 16 30 (np.float64(0.3432552381607341), np.float64(0.716581920816463))
+  size 144 full release 13 30 (np.float64(0.254607549903263), np.float64(0.6257265493907792))
+  size 192 full release 7 30 (np.float64(0.09933786495801972), np.float64(0.4228365229782194))
+1.4 total/detected/half/75 120 115 120 120 full-release count/nominal pooled CI 37 (np.float64(0.2272551196338318), np.float64(0.3991367645319522))
+  size 64 full release 17 30 (np.float64(0.37427345060922074), np.float64(0.7453924500967369))
+  size 96 full release 12 30 (np.float64(0.22655764882859364), np.float64(0.5939650699481813))
+  size 144 full release 7 30 (np.float64(0.09933786495801972), np.float64(0.4228365229782194))
+  size 192 full release 1 30 (np.float64(0.0008435709266304788), np.float64(0.17216945563341268))
+1.45 total/detected/half/75 120 97 120 120 full-release count/nominal pooled CI 8 (np.float64(0.029219184313796418), np.float64(0.1271367482392129))
+  size 64 full release 5 30 (np.float64(0.056421696468071485), np.float64(0.34721169883414377))
+  size 96 full release 3 30 (np.float64(0.021117137029722573), np.float64(0.26528845047420807))
+  size 144 full release 0 30 (0.0, np.float64(0.11570330822202779))
+  size 192 full release 0 30 (0.0, np.float64(0.11570330822202779))
+T9: final mean-store energy and hypothetical canonical g(delta=1), NOT calibrated temperatures
+192 1 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 1.45 g proxy range (np.float64(0.0), np.float64(5.4848149477470765)) max drift 0.0
+192 384 sheet signature 20 20 (np.float64(0.8315665290169146), 1.0) mean store 0.49583333333333324 g proxy range (np.float64(0.8871652953900471), np.float64(0.944637663837415)) max drift 0.0
+192 192 sheet signature 20 20 (np.float64(0.8315665290169146), 1.0) mean store 0.9760416666666666 g proxy range (np.float64(1.3557503156870658), np.float64(1.5076265912649662)) max drift 0.0
+192 12 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 1.7083333333333333 g proxy range (np.float64(1.2682994037090305), np.float64(3.0561141255305064)) max drift 0.0
+192 96 sheet signature 19 20 (np.float64(0.7512672372279723), np.float64(0.9987349105020502)) mean store 1.8026041666666668 g proxy range (np.float64(1.7762472526180475), np.float64(2.4451806474468896)) max drift 0.0
+192 48 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 1.7541666666666669 g proxy range (np.float64(1.7441475715876746), np.float64(2.7826164315550646)) max drift 0.0
+192 24 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 1.6479166666666665 g proxy range (np.float64(1.4426950408889634), np.float64(3.0561141255305064)) max drift 0.0
+64 1 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 3.65 g proxy range (np.float64(0.0), np.float64(13.49382490085822)) max drift 0.0
+64 128 sheet signature 20 20 (np.float64(0.8315665290169146), 1.0) mean store 0.485546875 g proxy range (np.float64(0.7964572478576614), np.float64(1.0127744753250052)) max drift 0.0
+64 64 sheet signature 20 20 (np.float64(0.8315665290169146), 1.0) mean store 0.96875 g proxy range (np.float64(1.4101438263673558), np.float64(1.4101438263673558)) max drift 0.0
+64 4 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 2.3375 g proxy range (np.float64(1.1802225011438288), np.float64(5.234088407856629)) max drift 0.0
+64 32 sheet signature 18 20 (np.float64(0.6830172859809176), np.float64(0.9876514728297052)) mean store 1.859375 g proxy range (np.float64(1.5723548155690374), np.float64(2.84577693109843)) max drift 0.0
+64 16 sheet signature 3 20 (np.float64(0.03207093718546371), np.float64(0.378926826545314)) mean store 2.178125 g proxy range (np.float64(1.5723548155690374), np.float64(3.7276714354912728)) max drift 0.0
+64 8 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 2.05625 g proxy range (np.float64(1.5723548155690374), np.float64(4.2303192570684764)) max drift 0.0
+96 1 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 2.2 g proxy range (np.float64(0.0), np.float64(5.4848149477470765)) max drift 0.0
+96 192 sheet signature 20 20 (np.float64(0.8315665290169146), 1.0) mean store 0.4932291666666668 g proxy range (np.float64(0.8987172377940794), np.float64(0.978807594485609)) max drift 0.0
+96 96 sheet signature 19 20 (np.float64(0.7512672372279723), np.float64(0.9987349105020502)) mean store 0.9635416666666667 g proxy range (np.float64(1.2463443590062266), np.float64(1.5723548155690374)) max drift 0.0
+96 6 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 2.1750000000000003 g proxy range (np.float64(0.9102392266268373), np.float64(4.648754527913523)) max drift 0.0
+96 48 sheet signature 19 20 (np.float64(0.7512672372279723), np.float64(0.9987349105020502)) mean store 1.7958333333333332 g proxy range (np.float64(1.6154065629778074), np.float64(2.7194251082540832)) max drift 0.0
+96 24 sheet signature 1 20 (np.float64(0.0012650894979498038), np.float64(0.24873276277202766)) mean store 1.9229166666666668 g proxy range (np.float64(1.5292239263013645), np.float64(3.685751432465611)) max drift 0.0
+96 12 sheet signature 0 20 (0.0, np.float64(0.1684334709830853)) mean store 2.1583333333333337 g proxy range (np.float64(1.9576151889712174), np.float64(3.8952968080913877)) max drift 0.0
+T10: cold-box proxy range; no equilibration inferred
+t10_n192 mean store range (np.float64(0.4583333333333333), np.float64(0.4947916666666667)) g proxy range (np.float64(0.8639661243815346), np.float64(0.9044818961600033))
+t10_n288 mean store range (np.float64(0.4513888888888889), np.float64(0.5208333333333334)) g proxy range (np.float64(0.8562032483943463), np.float64(0.9331982915820606))
+t10_n64 mean store range (np.float64(0.4375), np.float64(0.59375)) g proxy range (np.float64(0.8406299544915281), np.float64(1.0127744753250052))
+t10_n96 mean store range (np.float64(0.4583333333333333), np.float64(0.5625)) g proxy range (np.float64(0.8639661243815346), np.float64(0.978807594485609))
+T38: row completeness and missing detections (excluded by historical analyzer)
+(1.25, 64) total/detected/missing 4000 3942 58 missing reaching 75% 58
+(1.25, 192) total/detected/missing 1000 1000 0 missing reaching 75% 0
+(1.3, 64) total/detected/missing 4000 3868 132 missing reaching 75% 132
+(1.3, 192) total/detected/missing 1000 1000 0 missing reaching 75% 0
+T38 waiting snapshots available in frozen results/: 0

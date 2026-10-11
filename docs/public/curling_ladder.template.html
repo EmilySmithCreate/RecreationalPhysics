@@ -145,7 +145,8 @@ td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-spa
   </section>
 
   <section>
-    <h2 id="wait-h">Waiting at coupling g</h2>
+    <h2 id="wait-h">Initial-state exit-rate estimate at coupling g</h2>
+    <p>Reciprocal rate from the enumerated nonneutral proposals at the starting graph. Neutral moves can change that rate; this is not a general basin lifetime or conversion time. Higher-dimensional nearby-partner searches are restricted censuses.</p>
     <p class="sub">The number of sweeps a rung waits before heat alone carries it over its wall, counted from every kind of move and how often each is offered. This is the count that matched the two-dimensional tube to within 2 %.</p>
     <div class="bars" id="wait"></div>
     <p class="note"><span class="ours">Ours</span>In three and four directions a first move out is not yet an opening that spreads: a push of that size opened one patch and stopped (O79). So these are waits for the first move only, not for the whole change.</p>
@@ -318,7 +319,7 @@ function drawPattern() {
 function drawWait() {
   const box = document.getElementById("wait"); box.innerHTML = "";
   const R = rungs(S.D); if (!R.length) { box.innerHTML = `<p class="pending">Not computed yet for ${S.D} directions.</p>`; return; }
-  document.getElementById("wait-h").textContent = `Waiting at coupling g = ${S.g.toFixed(2)}`;
+  document.getElementById("wait-h").textContent = `Initial-state exit-rate estimate at g = ${S.g.toFixed(2)}`;
   const rows = R.map(r => {
     const rate = r.kinds.reduce((s, k) => s + (k.ways / (S.D * S.D)) * Math.min(1, Math.exp(-(-16 * k.dS + 4 * S.lam * k.dX) / S.g)), 0);
     return { r, logt: Math.log10(1 / rate), falls: wallOf(r, S.lam) <= 0 };
@@ -326,7 +327,7 @@ function drawWait() {
   const top = Math.max(6, ...rows.map(q => Math.min(q.logt, 40)));
   rows.forEach(({ r, logt, falls }) => {
     const shown = Math.max(0, Math.min(logt, 40)), pct = (shown / top) * 100;
-    const val = falls ? "falls at once" : (logt > 40 ? "more than 10^40" : (logt < 3 ? `${Math.round(10 ** logt)} sweeps` : `about 10^${logt.toFixed(1)} sweeps`));
+    const val = falls ? "has a nonpositive exit" : (logt > 40 ? "more than 10^40" : (logt < 3 ? `${Math.round(10 ** logt)} sweeps` : `about 10^${logt.toFixed(1)} sweeps`));
     box.insertAdjacentHTML("beforeend", `<div class="bar-row"><div>${rungName(S.D, r.curled)}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${rungColor(r.curled)}"></div></div><div class="bar-val">${val}</div></div>`);
   });
 }

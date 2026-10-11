@@ -1,5 +1,10 @@
 # Reading notes: relics, defect counting, and black-hole interiors (2026-09-25)
 
+**Interpretation corrected 9 October 2026:** [measurement scope](../../papers/measurement_scope.md) supersedes
+older claims of certified geometry from square counts, unique fronts, guaranteed conversion from
+the 12-unit seed scan, or reservoir temperature equal to mean energy. The dated reasoning below
+is retained as history and hypotheses, not evidence for those stronger claims.
+
 > **Status of these notes:** written by an assistant agent on 2026-09-25 from fetched copies of the papers. Some passages
 > were read through a tool that summarizes a page, so every quotation must be checked against the paper itself before it is
 > used in a paper or a letter. Inferences marked *ours* are unreviewed.

@@ -66,7 +66,23 @@ as open work.
   arrangements differ under it is an exact, cheap question, and it is the question she names as open.
 - **A caution.** The theory's own stability is disputed in print this year.
 
-## One narrow question for her
+## Addendum, 10 October 2026: the action evaluated, and the question sharpened
+
+[Bia24] was searched again (Secs. 2.3 to 2.5, 3.1 to 3.3, 5) and its action evaluated on four arrangements of 64
+points (ASSUMPTIONS O111; `scripts/exact_entropy_action.py`). Two things the earlier note did not have. In her
+vacuum (the induced metric equal to the identity) Eq. (65) makes the metric the same on every cell, so the action is
+one number per cell and across wirings depends only on how many cells there are; the earlier inference "only through
+the spectra of the network's Laplacians" holds for c0 > 0 at the identity metric. And both ways the action grows more
+negative with every square, as the square-counting term of combinatorial quantum gravity does by itself. Her list of
+arXiv papers was checked the same day (the arXiv API, newest first): nothing newer than those above takes up the
+dynamics of the wiring; one paper not in the list above applies the same action to images ("Beyond holography: the
+entropic quantum gravity foundations of image processing", arXiv:2503.14048; *title only*).
+
+The question as it now stands: is S+ compared across wirings at a fixed number of nodes the comparison meant by
+dynamics of the topology; and if so, must the metric be solved for each wiring first, or is something else meant to
+keep the action from rewarding more cells?
+
+## One narrow question for her (5 October; superseded by the addendum above)
 
 In "Quantum entropy couples matter with geometry" the wiring is fixed, and varying it is named as open. For two
 networks with the same numbers of nodes, links and square faces but different wiring, in vacuum, is the quantity to

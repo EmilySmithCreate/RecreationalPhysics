@@ -7,9 +7,13 @@ T34's protocol with the table tie). The replica rule, the cell majority and the 
 (`analyse_t34`: FOLDED / MELTED / HEALED per replica from the final block; RE-CURLS / MELTS / HEALS / MIXED per
 group), imported and not rewritten. What is new: the groups. The verdict is read per (tie, lambda), over that group's
 cells (protocol, N, E); the tied groups are the test and the untied groups the control. Reported, not scored, as T34:
-ONE DIRECTION and CASCADE replicas, the largest folded piece, melt-then-fold; and, new, the energy with the tie per
+ONE DIRECTION and CASCADE replicas, the largest flat piece (*), melt-then-fold; and, new, the energy with the tie per
 point at the end and the share of the spark left in the stores. Every six-link result carries VISION Update 24's
 caveat.
+
+(*) Corrected 11 October 2026, after the reading: this line was labeled "largest folded". The runner writes no
+folded-piece column; what is read is `largest_flat`, the largest connected piece of points at d = 3. The line is
+not scored and no rule is touched.
 """
 import csv
 import glob
@@ -43,7 +47,7 @@ def by_replica(rows):
 
 
 def cells(rows):
-    """{(tie, lam, proto, N, E): (Counter of outcomes, majority or MIXED, [reach flags], largest folded, melt-then-fold)}"""
+    """{(tie, lam, proto, N, E): (Counter of outcomes, majority or MIXED, [reach flags], largest flat piece, melt-then-fold)}"""
     reps = by_replica(rows)
     grouped = defaultdict(list)
     for key, blocks in reps.items():
@@ -89,7 +93,7 @@ def main(results="results"):
     print("T57, read by T34's rules (PREREGISTRATION T57, written 2026-10-09 before any run). Six links: Gate C open.")
     for cell, (counts, majority, reaches, largest, mtf) in sorted(c.items()):
         tie, lam, proto, n, e = cell
-        print("%-16s lambda=%.2f %-6s N=%-3d E=%-6.0f %-42s -> %-7s | one direction %d, cascade %d of %d | largest folded %d | melt-then-fold %d"
+        print("%-16s lambda=%.2f %-6s N=%-3d E=%-6.0f %-42s -> %-7s | one direction %d, cascade %d of %d | largest flat piece %d | melt-then-fold %d"
               % (tie, lam, proto, n, e, counts, majority, sum(1 for a, _ in reaches if a), sum(1 for _, b in reaches if b),
                  len(reaches), largest, mtf))
     for (tie, lam), v in sorted(verdicts.items()):

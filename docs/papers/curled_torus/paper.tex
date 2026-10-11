@@ -1,4 +1,4 @@
-\documentclass[pre,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\documentclass[aps,pre,10pt,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{booktabs}
@@ -6,191 +6,323 @@
 
 \begin{document}
 
-\title{The curled torus burps: front-driven decompactification between ordered states in a graph model of
-emergent geometry}
+\title{The curled torus burps: activated escape and conversion in a graph model of emergent geometry}
 
 \author{Emily Smith}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{25 September 2026}
+\date{10 October 2026}
 
 \begin{abstract}
-In combinatorial quantum gravity (CQG) the energy of a four-regular bipartite graph is built from its total
-Ollivier curvature, which splits into a global term that rewards squares and a local term that removes the reward
-for a third square on an edge. We study the family of graph energies obtained by multiplying the local
-term by a coefficient $\lambda$. Only $\lambda = 1$ is CQG; every result below is at $\lambda > 1$, in a
-neighbouring family where the energy is no longer a curvature.
-For $\lambda \ge 1$ the flat lattice torus is a ground state exactly, and a $4 \times L$ torus, one direction curled to a single square, lies
-$4(\lambda - 1)$ per vertex above it. At $\lambda = 1.25$ the curled torus is metastable. Under the local
-edge-switch dynamics used to sample the model, with Metropolis acceptance, the minimum energetic barrier to leave
-it is a single move, $\Delta E^\ddagger = 12$, offered at a rate we count exactly, so the mean waiting time follows
-an Arrhenius law with nothing fitted, and the wait is close to memoryless (the pre-registered checks pass in most
-cells and fail in some, on a band too tight for the sample, on rare very long waits, or on a wide spread of waits;
-Sec.~\ref{sec:lambda}). After the first exit the conversion spreads as a
-single front: at half conversion 98.8 to 99.8\% of vertices belong to one ordered state or the other, and the
-energy released is exactly $\varepsilon = 4(\lambda-1)$ per vertex. Under an energy-conserving version of the
-same dynamics, a seed equal to the barrier, 12 units, sets off the change at every size from 48 to 192
-vertices and nothing smaller does, while the release grows with the system. The change then completes only if
-the reservoir can absorb the release, and it leaves about one relic defect of fixed size at every size tested,
-from 64 to 288 vertices. Mapped from $\lambda = 1.05$ to 1.45 in three pre-registered runs, each inconclusive
-by the letter of its rules, the torus is metastable up to 1.35; the change keeps its two-order, single-front
-character from 1.05 to 1.30 in all three runs and begins to break up at 1.35, finishing cleanly near
-$\lambda = 1$ and leaving more defects as $\lambda$ grows. The release vanishes at $\lambda = 1$, the CQG value.
-The Arrhenius test and the seed threshold were exploratory; every verdict quoted was pre-registered, and the
-two-state verdict at $\lambda = 1.25$ was reached after amendments to its energy gate, three of them written after
-the data they judged.
+We study how a curled torus gives way in four-regular bipartite graph energies next to combinatorial
+quantum gravity (CQG). A coefficient $\lambda$ multiplies the price of a surplus square; only
+$\lambda=1$ is CQG, and our decay experiments use $\lambda>1$, where the ideal curled torus lies exactly
+$4(\lambda-1)$ per vertex above the zero-energy states. For a specified Metropolis edge-switch chain,
+counting the exits offered per sweep predicts the mean first-exit time with no fitted parameter,
+consistently with direct measurements. During conversion most vertices keep a curled-like or
+flat-like square count, and one connected flat-like region usually dominates at half conversion,
+though several early patches occur. All 120 saved endpoints at $\lambda=1.05$ are certified tori;
+growth of both periods is not established. At $\lambda=1.25$, energy-conserving runs with a reservoir
+escape on a 12-unit budget over $N=48$--192, and exhaustive neutral-class enumeration certifies 12 as
+the lower bound at those sizes, while the available release grows with $N$. What the release produces
+depends on the reservoir's thermal response; full release requires a zero-energy endpoint. All three
+registered conversion maps remain inconclusive. These results support a bounded kinetic claim and
+leave the conversion mechanism and reservoir equilibration open.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 
-In combinatorial quantum gravity (CQG) \cite{T17,KTB19,T25} geometry emerges from random graphs driven by
-a discrete Ricci curvature. The question studied so far is whether geometry forms out of the random phase
-sharply or smoothly: a first-order transition with hysteresis when only the global term is kept
-\cite{GV21}, a continuous one with the full action \cite{KTB19,T25}. The answer may depend on the number of
-links per vertex: Kelly's thesis \cite{Kelly22} finds the transition continuous with three, and with four, as
-here, reports small but persistent hysteresis loops at $N = 50$ to $500$ that suggest a first-order transition,
-while declining to call that evidence definitive, with indications that the configurations stay nearly
-geometric. A different kind of
-change has not, as far as we have found, been studied in this model: one \emph{ordered} arrangement
-turning into another. Such changes arise wherever a region of the graph is stuck in one discrete arrangement
-while another is favored, as with the allotropes of CQG \cite{T24}. We study the simplest such
-change we have found, a torus with one direction curled, opening into the flat torus. It exists as a
-metastable state only when the local term is weighted by a coefficient $\lambda > 1$, where the energy is no
-longer the total curvature; this is therefore a study next to CQG, not in it, and the curled torus is not an
-allotrope in the sense of Ref.~\cite{T24}. It is a decompactification in
-miniature: a curled direction opens to full size, and the local dimension defined below rises from 1 to 2.
-Because the change waits quietly and then releases a fixed amount of energy all at once, we call the whole
-event a burp. We map it along $\lambda$, down to $\lambda = 1.05$, and follow its decay.
+Combinatorial quantum gravity (CQG) \cite{T17,KTB19,T25} treats space as a network: a discrete Ricci
+curvature, summed over a graph, favors configurations with geometric structure. Published equilibrium
+studies ask how geometry emerges from a random phase. Their ensembles require care:
+Ref.~\cite{KTB19}, Sec.~4, describes a restricted bipartite simulation in which no edge has surplus
+squares, whereas Ref.~\cite{T25} discusses the uncapped curvature action, and Ref.~\cite{GV21} finds
+first-order behavior in a related global-only model without the same fixed bipartite ensemble. These
+are context, not identical-model validation. Kelly's thesis \cite{Kelly22}, p.~219 and Fig.~4.58,
+reports small four-regular hysteresis loops over $N=50$--500 but declines a definitive first-order
+inference.
 
-Why deform CQG at all? At $\lambda = 1$ an edge carrying three squares costs exactly what an edge carrying two
-costs, so the flat torus, the curled torus and the 4-cube are degenerate, and no ordered arrangement can turn
-into another with any release. The coefficient $\lambda$ lifts that degeneracy and changes nothing else: the
-states, the moves and the hard-core rule are those of CQG. For $\lambda > 1$ the ground states are the arrangements with two
-squares on every edge, the flat torus and its twisted relatives, and each curled direction costs a known energy
-per vertex. The family is therefore a controlled
-laboratory for a change between two ordered arrangements, in which the barrier, the release and the relic can
-each be counted exactly, and $\lambda \to 1$ connects it to CQG.
+We ask instead how a specified ordered precursor escapes and converts at fixed coupling. The
+precursor is a tube: a torus curled to a period of four edges in one direction. It is stable for now
+in the energetic sense: at the sizes enumerated (Sec.~\ref{sec:model}) no single move out of the
+perfect torus lowers its energy for the $\lambda$ studied, yet lower states exist. We call its
+energy-releasing conversion a ``burp.'' ``Decompactification'' here means only removal of the
+four-cycle signature of the curled direction; growth of both geometric periods has not been measured
+(a $6\times L$ torus already has the flat local signature with a fixed short period). This is a
+deformation next to CQG, not a CQG allotrope in the sense of Ref.~\cite{T24}.
 
-Every kinetic statement below, about waiting times, barriers and fronts, concerns one Markov chain: the local
-edge switch used to sample the model \cite{KTB19}, with Metropolis acceptance and an ordered-pair proposal that
-are our choices (Ref.~\cite{T25} uses Glauber acceptance). It samples the model's
-equilibrium distribution; we do not claim it is the physical time evolution of emergent space. What does not
-depend on it is the energetics: the gap between the two arrangements, the cost of the cheapest single move out,
-and hence the least energy a sealed system needs to leave by such moves. What does depend on it are the rates,
-including how the waiting time scales with size (Sec.~II).
+Why deform CQG at all? At $\lambda=1$ an edge carrying three squares costs exactly what an edge
+carrying two costs, so the flat torus, the curled torus and the 4-cube are degenerate: conversion
+between these ideal states releases no energy (equal energies need not imply equal free energies).
+The coefficient
+$\lambda$ lifts that degeneracy and changes nothing else: the states, the moves and the hard-core rule
+are those of CQG. For $\lambda>1$ the ground states are the arrangements with two squares on every
+edge, a condition that fixes neither connectedness nor topology, and each curled direction costs a
+known energy per vertex. The family is therefore a controlled laboratory for a change between two
+ordered arrangements in which the barrier, the release and the relic can each be counted exactly, and
+$\lambda\to1$ connects it to CQG.
+
+Every kinetic statement below (waiting times, barriers, fronts) is about one
+Markov chain: the local edge switch used to sample the model \cite{KTB19}, with Metropolis acceptance
+and an ordered-pair proposal that are our choices (Ref.~\cite{T25} uses Glauber acceptance). Detailed
+balance gives the Boltzmann stationary measure but not mixing at production sizes, and we do not
+claim that the chain is the physical time evolution of emergent space. The energetics do not depend
+on it: the gap between the two arrangements, the cost of the cheapest single move out, and hence the
+least energy a sealed system needs to leave by such moves. The rates do, including how the waiting
+time scales with size (Sec.~\ref{sec:model}).
+
+A plain-language edition with diagrams accompanies the source (Methods); its chapters are cited as
+``PL, Ch.~$n$'' where a concept is developed at greater length.
 
 \section{Model and exact results}
+\label{sec:model}
 
-States are four-regular bipartite graphs obeying the hard-core rule (no two vertices share more than two
-neighbours) \cite{KTB19,T25}. With $S$ the number of squares, $S_e$ the squares on edge $e$ and
-$X = \sum_e (S_e - 2)_+$,
+Diagrams for this section are in PL, Chs.~2 and~3.
+
+A state is a simple undirected four-regular graph on a fixed labelled bipartition, $N/2$ vertices on
+each side, obeying the hard-core rule: no two vertices share more than two neighbours
+\cite{KTB19,T25}. Connectedness is not enforced. The energy is a price list on squares (four-cycles).
+With $S$ the number of squares, $S_e$ the number on edge $e$, and $X=\sum_e(S_e-2)_+$ the surplus
+squares on edges carrying more than two,
 \begin{equation}
-H = 16\,(N - S) + 4\lambda X = 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr].
+H = 16\,(N - S) + 4\lambda X = 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr],
 \label{eq:H}
 \end{equation}
-At $\lambda = 1$, $H$ is the total combinatorial curvature of Refs.~\cite{KTB19,T25}, the CQG action;
-$\lambda$ multiplies the local (saturation) term, and for $\lambda \ne 1$ $H$ is not a curvature. The hard-core rule limits $S_e \le 3$. Three exact consequences follow.
+so a missing square costs 16 and a surplus square $4\lambda$. The hard-core rule limits $S_e\le3$.
+At fixed dimensionless coupling $g>0$, which acts as a temperature in the units of $H$, the target is
+$\pi(G)\propto e^{-H(G)/g}$, and a valid symmetric proposal is accepted with probability
+$\min(1,e^{-\Delta H/g})$. At $\lambda=1$ this is the CQG curvature action: the convention
+$H=-4\sum_v\sum_{w\sim v}\kappa(v,w)$ of Ref.~\cite{T25}, Eq.~(21), with
+$\kappa(v,w)=-(2-S_{vw})_+/2$ on these bipartite graphs, gives $H=4\sum_e(2-S_e)_+$, each undirected
+edge counted once. For $\lambda\ne1$, $H$ is not this curvature action.
 
-\emph{Ground state.} For $\lambda \ge 1$ every term in the sum is non-negative, so $H \ge 0$, with $H = 0$
-for any graph with two squares on every edge: the flat lattice torus and its twisted relatives, of which there
-can be several (three classes at $N = 18$). For $\lambda > 1$ nothing else reaches zero.
+\emph{Zero is the floor (exact).} Rewriting Eq.~(\ref{eq:H}) as
+\[
+H=4\sum_e\bigl[(2-S_e)_+ +(\lambda-1)(S_e-2)_+\bigr]
+\]
+shows $H\ge0$ for $\lambda\ge1$: no state lies below flat. For $\lambda>1$, $H=0$ if and only if every
+edge carries exactly two squares; at $\lambda=1$, at least two. Flat lattice tori are ground states,
+and so are disconnected unions of them, so topology must be checked separately.
 
-\emph{Ladder.} The $4\times L$ torus has $S = 5N/4$ and $X = N$ (the edges of each wrap-around 4-cycle
-carry three squares), so $H/N = 4(\lambda - 1) \equiv \varepsilon$, the energy a burp releases per vertex;
-the 4-cube has $H/N = 8(\lambda-1)$. Each curled direction
-costs $4(\lambda - 1)$ per vertex (Fig.~\ref{fig:tori}). As a local order parameter for how many directions
-are curled we use $d(v)$, the number of pairs of edges at $v$ that close no square: 2 on the flat torus, 1 on
-the curled torus, 0 on the 4-cube. It is not a Hausdorff, spectral or graph dimension, and ``local dimension''
-below is shorthand for it: it counts the directions at $v$ that do not close into a single square, which is
-what tells the three arrangements apart vertex by vertex [Fig.~\ref{fig:data}(b)].
+\emph{The ladder (exact).} Periodic bipartite tori need even periods. Curl one direction of a torus to
+period four and the walk around it becomes a square, which puts a third square on every edge of each
+wrap-around 4-cycle. For even $L>4$ the $4\times L$ torus therefore has $S=5N/4$ and $X=N$, and sits
+$H/N=4(\lambda-1)\equiv\varepsilon$ above a zero-energy state. Curling the other direction too gives
+the 4-cube ($4\times4$), with $H/N=8(\lambda-1)$: each curled direction costs
+$4(\lambda-1)$ per vertex in these ideal products (Fig.~\ref{fig:tori}). A decay that ends with
+residual graph energy $H_f$ releases $Q=\varepsilon N-H_f$, which is $\varepsilon N$ only for a
+zero-energy endpoint.
+
+\emph{Counting signatures.} A vertex has six pairs of incident edges. Let $d(v)$ be the number of
+pairs that close no square: 2 on a flat lattice torus, 1 on a one-curled torus, 0 on the 4-cube. This
+is not a geometric dimension. Under the hard-core rule a pair
+closes at most one square, so with $q_v$ squares through $v$, $d(v)=6-q_v$ and $\sum_vd(v)=6N-4S$.
+The recorded conversion coordinate is
+\[
+f=\frac{5N/4-S}{N/4}=\overline d-1,
+\]
+which equals the fraction of vertices at $d=2$ only when no signature other than $d=1$ and $d=2$ is
+present. Melting raises $f$ too, and even $d=2$ does not certify
+flat order (a valid single switch at $N=64$ produces vertices whose incident edges carry $[1,2,2,3]$
+squares, not $[2,2,2,2]$). We therefore call $d=1$ curled-like and $d=2$ flat-like counting signatures.
 
 \begin{figure*}[t]
 \includegraphics[width=\textwidth]{fig_tori.pdf}
 \caption{(a) The flat lattice torus. (b) The $4\times L$ torus drawn as a tube: its short direction is a single
-square, so the edges round each column carry three squares. (c) Schematic of the change of Sec.~III, not a
-simulation snapshot: the curled order on one side of a single front, the flat order on the other. Spherical
-cows being unavailable, every space in this paper is a torus; still, every bull burps.}
+square, so the edges round each column carry three squares. (c) Schematic of the change of Sec.~\ref{sec:conversion}, not a
+simulation snapshot: a possible boundary between curled and flat regions. Neither the schematic nor the
+square counts establish the number of moving interfaces. The graph ensemble also permits disconnected states.}
 \label{fig:tori}
 \end{figure*}
 
-\emph{Metastability window.} Enumerating every valid graph at $N = 18$ (26 classes up to relabelling)
-\cite{repo}, states above the ground state from which every single move costs energy exist for
-$1 < \lambda < 1.6$, and at neither $\lambda = 1$ nor any $\lambda \ge 1.6$ (steps of 0.05 up to 1.7, coarser
-to 30).
+\emph{Other stuck states at $N=18$ (exact enumeration).} Enumerating all 26 graph classes and solving
+the affine inequalities $H>0$ and $\Delta H>0$ for every valid single switch, with no grid in
+$\lambda$, gives precisely two strict local minima above the ground state on $\lambda\ge1$:
+$(S,X)=(21,12)$ on the open interval $1<\lambda<8/5$ and $(22,16)$ on $1<\lambda<4/3$. This
+small-system certificate is not a large-$N$ phase diagram.
 
-\emph{The way out.} The Markov chain swaps one partner each between two vertices of the same side
-(an edge switch preserving the bipartition; Metropolis; the hard-core rule is enforced) \cite{repo}.
-A proposal draws two edges one after the other, each uniformly from the $2N$ edges (a vertex of one side and
-one of its four slots), so there are $4N^2$ equally likely ordered proposals, and the same two edges drawn in
-the opposite order give the same switch: every switch is proposed in two ways. A sweep is $2N$ attempts.
-From the perfect $4\times L$ torus the cheapest switches are of two kinds, counted exactly:
-move A ($\Delta S = -2$, $\Delta X = -4$; cost $32 - 16\lambda$; $3N$ distinct switches, hence $6N$ ordered
-proposals) and move B ($\Delta S = -4$, $\Delta X = -10$; cost $64 - 40\lambda$; $2N$ switches, $4N$
-proposals). Move A is therefore offered $2N \times 6N/4N^2 = 3$ times per sweep and B twice, independent of
-$N$. Switches that change neither $S$ nor $X$ ($N/2$ of them) do not leave this energy: each reconnects two
-neighbouring columns at opposite points, a reflection of the square that twists the torus globally but leaves
-every neighbourhood as it was, and every arrangement met along a 60-step walk of such switches (three classes
-up to relabelling) has the same counts of A and B \cite{repo}. The mean time to the first exit is therefore an
-Arrhenius law whose attempt frequencies are counted, not fitted,
+\emph{The way out: counting the exits.} The chain's one move swaps one partner each between two vertices of
+the same side (an edge switch preserving the bipartition), accepted by the Metropolis rule with the
+hard-core rule enforced. A proposal draws two edges one after the other, each uniformly from the $2N$
+edges (a vertex of one side and one of its four slots). There are $4N^2$ equally likely ordered
+proposals, and every switch is proposed in two ways. A sweep is $2N$ attempts.
+
+From the perfect $4\times L$ torus, at the sizes enumerated below, the cheapest switches are of two
+kinds. Move A ($\Delta S=-2$, $\Delta X=-4$) costs $32-16\lambda$ and can be made in $3N$ ways, hence
+$6N$ ordered proposals; move B ($\Delta S=-4$, $\Delta X=-10$) costs $64-40\lambda$ and can be made in
+$2N$ ways, $4N$ proposals. A sweep therefore offers move A $2N\times6N/4N^2=3$ times and move B twice,
+whatever $N$. Weighting each offer by its acceptance gives a two-channel approximation to the mean
+first-exit time with nothing fitted,
 \begin{equation}
-\tau(\lambda, g) = \bigl[3 e^{-(32 - 16\lambda)/g} + 2 e^{-(64-40\lambda)/g}\bigr]^{-1},
+\tau_{AB}(\lambda, g) = \bigl[3 e^{-(32 - 16\lambda)/g} + 2 e^{-(64-40\lambda)/g}\bigr]^{-1},
 \label{eq:tau}
 \end{equation}
-with A the cheaper for $\lambda < 4/3$. Every other exit costs at least 10 more than the cheaper of A and B
-for $1.05 \le \lambda \le 1.45$, and Eq.~(\ref{eq:tau}) leaves them out. Those that break two distant edges at
-once are offered a number of times per sweep that grows in proportion to $N$ (87 at $N = 192$); counted
-exactly, they add at most 2\% to the exit rate at $g = 1.5$ for every $\lambda$ and $N$ studied, and 16\% at
-the hottest point of Fig.~\ref{fig:data}(a) ($g = 2.5$, $N = 144$), within its error bar.
-That Eq.~(\ref{eq:tau}) does not depend on $N$ is a property of the proposal, not of the barrier: the chain
-draws its two edges from the whole graph, so any one region is offered a way out about $1/N$ as often per
-sweep, and a dynamics that updated every region at its own fixed rate would give a waiting time falling as
-$1/N$.
+with A the cheaper for $\lambda<4/3$ and both costs positive in the kinetic range used here. For a
+constant full per-attempt hazard $p$ the exact first-exit law is geometric, with mean $1/(2Np)$
+sweeps; the exponential is its small-$p$ approximation.
 
-\section{Decay at fixed coupling}
+First, $N/2$ switches change neither $S$ nor $X$: each reconnects two
+neighbouring columns at opposite points, twisting the torus globally without leaving its energy.
+Breadth-first enumeration exhausts the neutral classes reached this way at $\lambda=1.25$ for
+$N=48,64,96,144,192,288$. At each size there are three side-preserving isomorphism classes, all with
+the same full move census and minimum exit cost 12. Every valid switch is checked at each
+representative and every neutral target belongs to the exhausted list; since relabellings map switches
+bijectively, this certifies closure at these sizes, not for arbitrary $L$. Second,
+Eq.~(\ref{eq:tau}) leaves out every dearer exit. Each costs at least 10 more than the cheaper of A and
+B for $1.05\le\lambda\le1.45$, but those that break two distant edges at once are offered a number of
+times per sweep that grows in proportion to $N$ (87 at $N=192$). Counted exactly, they add at most
+2\% to the exit rate at the $g=1.5$ conditions of the decay maps, and 16\% at the hottest point of
+Fig.~\ref{fig:data}(a) ($g=2.5$, $N=144$), within its error bar. Third, that Eq.~(\ref{eq:tau}) does
+not depend on $N$ is a property of the proposal, not of the barrier: the chain draws its two edges
+from the whole graph, so any one region is offered a way out about $1/N$ as often per sweep. A
+dynamics that updated every region at its own fixed rate would give a waiting time falling as $1/N$.
 
-At $\lambda = 1.25$ the minimum energetic barrier to leave the perfect curled torus, the cost of move A, is
-$\Delta E^\ddagger = 12$. It is the barrier to the first exit; whether an exit then grows into a front is a
-separate question, answered in Sec.~\ref{sec:lambda}. In an exploratory test (the prediction was written into
-the run's configuration before it ran, but not pre-registered), over twelve conditions ($g = 1.4$ to 2.5,
-$N = 64$ and 144,
-16 runs each), the measured mean waiting time against the move-A term of Eq.~(\ref{eq:tau}) has a plain
-mean ratio of 0.98 and a weighted mean of $0.88 \pm 0.06$ (standard error), every ratio between 0.71 and 1.62,
-over a ninety-fold range of times [Fig.~\ref{fig:data}(a)]. A weighted straight-line fit of $\ln\tau$ against
-$1/g$ gives a barrier of $14.4 \pm 1.0$ at $N = 64$ and $12.1 \pm 0.9$ at $N = 144$; over this narrow range of
-$1/g$ the fitted barrier and prefactor trade off, which is why the test above uses the counted values of
-both.
-Including move B lowers the predicted waiting time by 15\% at $g = 1.5$; across $\lambda$, the full
-Eq.~(\ref{eq:tau}) describes the measured waits over two decades (Sec.~\ref{sec:lambda}).
+\begin{table*}[t]
+\caption{Observables and clocks. Counts and components are measured on the evolving graph. The terms
+``first exit,'' ``detected decay'' and ``conversion'' are not interchangeable.}
+\label{tab:clocks}
+\begin{ruledtabular}
+\begin{tabular}{p{0.15\textwidth}p{0.46\textwidth}p{0.31\textwidth}}
+Observable & Operational definition & Prediction or limitation \\
+\hline
+First exit $T_1$ & First accepted move out of $S=5N/4$, $X=N$; T22 counts each attempt.
+The exploratory Arrhenius run samples at sweep ends. & Eq.~(\ref{eq:tau}) is the A+B approximation;
+full constant hazard gives a geometric law in attempts. \\
+Successful departure & Last departure before the commitment event $f\ge0.25$; T22 counts exits and
+returns until that event or its 100,000-sweep cap. & $239/240$ reach commitment. Reciprocal mean
+exit count is a conditional empirical success statistic. \\
+Detected decay $W$ & First five-sweep check after 200 with $S/N<1.25-3\max(\sigma_{\rm rest},10^{-6})-10^{-9}$;
+$\sigma_{\rm rest}$ uses the first forty samples. & Earliest value 205; threshold is trajectory-dependent.
+The floor curve alone does not reproduce this detector. \\
+Conversion snapshot & First sampled $f\ge0.25,0.50,0.75$ after the resting window, where
+$f=5-4S/N$. & Histograms of $d$ and induced $d=2$ components refine the square count;
+neither certifies a geometric front. \\
+Energy release & $Q=H_i-H_f$ for a saved endpoint; separately, the CSV release is $H_i/N$ minus
+the final window mean of $H/N$. & Full ideal decrease requires $H_f=0$; a window mean and a
+saved configuration need not agree. \\
+Persistence & More than half a cell has $f_{200}<0.25$. & A finite-duration criterion at $g=1.5$,
+not an energetic spinodal. \\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
 
-The decay itself was pre-registered \cite{repo}: at $\lambda = 1.25$, $g = 1.5$, thirty decays at each of
-$N = 64, 96, 144, 192$, and the adjacency read when the conversion fraction first crossed 25, 50 and 75\%.
-The predictions were a memoryless waiting time (coefficient of variation between 0.7 and 1.3), at least
-80\% of vertices at $d \in \{1,2\}$ at half conversion, and the converted vertices in one piece holding at
-least 70\% of them. All three hold at every size and on two independent sets of seeds (Table~\ref{tab:t7}):
-under this dynamics the change starts at one place and runs as a single front, with the two orders on either
-side of it and almost nothing in between [Fig.~\ref{fig:data}(b)]. The mean waiting time does not fall with
-$N$, as the proposal's $N$-independent rate of exits requires (Sec.~II). The same pre-registration listed
-$\lambda = 1.5$; there the torus is not metastable at $g = 1.5$ (its number of squares per vertex falls to 0.95,
-below the flat torus's 1, within 50 sweeps in every replica), and no verdict was applied. A separate
-pre-registered test of whether a coarse law of a single front governs these decays (T12 in Ref.~\cite{repo};
-64 decays at $g = 1.5$ and 2.0, under Metropolis and Glauber acceptance) came out NOT ESTABLISHED: 21 of the 59
-that nucleated converted in more than one patch, mostly at the warmer coupling, and the front's rate fell roughly
-as $N^{-0.7}$.
+\section{The cost of leaving}
+\label{sec:cost}
 
-The coefficient of variation is a coarse test of memorylessness. Checked afterwards and not pre-registered,
-the whole distribution is exponential too [Fig.~\ref{fig:data}(c)]: pooled over conditions after dividing each
-time by its condition's mean, the 432 first exits we recorded give a Kolmogorov--Smirnov distance
-$D = 0.035$ from the unit exponential ($p = 0.53$), and the 240 of them counted move by move
-(Sec.~\ref{sec:lambda}) are exponential with the mean of Eq.~(\ref{eq:tau}) itself, nothing estimated
-($p = 0.85$). The pre-registered waits pass once a detection artefact of the protocol is allowed for, and one
-feature of the far tail at $\lambda = 1.05$ is unexplained; both are described in Methods.
+At $\lambda=1.25$ the cheapest move out of the perfect curled torus, move A, costs
+$\Delta E^\ddagger=12$. This opens the door: it is a first-exit cost, not a proven minimum of the
+maximum energy along a complete conversion path, and whether an excursion then grows or falls back is
+a separate question (Sec.~\ref{sec:exit}). The neutral-class enumeration of Sec.~\ref{sec:model} makes
+12 a lower bound at the enumerated sizes; an energy-conserving test asks whether it is also enough
+(PL, Ch.~4).
+
+To seal the system we replace the bath at fixed $g$ by a Creutz reservoir \cite{Creutz83}: $C$ stores
+of nonnegative energy. Each valid candidate move selects one store uniformly; the move is refused if
+that store cannot pay $\Delta H$, and otherwise the store's energy changes by $-\Delta H$, so that
+$E_{\rm tot}=H+\sum_iE_i$ is conserved. Stores and edge proposals are both selected globally: a seed
+is a total activation budget, not energy deposited at a chosen vertex. The recorded maximum drift of
+$E_{\rm tot}$ is zero in all T9 runs at $\lambda=1.25$ (an observed check, not a claim about bitwise
+arithmetic at arbitrary $\lambda$).
+
+\emph{A push that does not grow with size (exploratory).} With one store initially holding
+$s\in\{4,8,10,11,11.5,12,13,16\}$, the torus left its initial $(S,X)$ values in 8 of 8 runs at each
+tested $s\ge12$ and in 0 of 8 at each $s\le11.5$, for each $N=48,64,96,144,192$ (320 runs of 12,000
+sweeps). The lower half of this staircase is exact at these sizes: by the neutral-class certificate
+of Sec.~\ref{sec:model} all nonneutral moves cost at least 12, so nonnegative stores with total
+budget below 12 cannot leave the basin. The upper half is an observation, dependent on protocol and
+duration. Eight successes give a two-sided exact 95\% binomial interval of $[0.631,1]$ at an
+individual setting (zero of eight gives $[0,0.369]$), and the runner checks $(S,X)$ once per sweep,
+so its success flag measures escape, not completed conversion. The push is fixed while the available
+ideal-state energy decrease $\varepsilon N$ grows with the system.
+
+\section{The first exit}
+\label{sec:exit}
+
+Table~\ref{tab:clocks} defines the clocks used below, which are not interchangeable; PL,
+Ch.~5, develops the rate count.
+
+\emph{Testing the count (exploratory).} The prediction was written into the run's
+configuration before it ran, but not pre-registered. Over twelve conditions ($g=1.4$ to 2.5, $N=64$
+and 144, 16 runs each) and a ninety-fold range of times, the ratio of the measured mean waiting time
+to the move-A term of Eq.~(\ref{eq:tau}) has a plain mean of 0.98, every ratio between 0.71 and 1.62
+[Fig.~\ref{fig:data}(a)]. A weighted straight-line fit of $\ln\tau$ against $1/g$ gives effective
+slopes of $14.4\pm1.0$ at $N=64$ and $12.1\pm0.9$ at $N=144$; the first differs from 12 by 2.4 quoted
+standard errors. We do not read these slopes as independent measurements of a collective barrier:
+multiple channels give curvature in this plot, inverse-variance weighting based on 16 skewed waits can
+favor shorter sample means, and the scan reuses each replica's seed across couplings, so its fitted
+errors and pooled tests do not account for dependence between cells. The direct first-exit comparison
+below is the main rate test; model-conditional intervals are given in the Supplemental Material.
+Including move B lowers the predicted waiting time by 15\% at $g=1.5$; across $\lambda$, the full
+Eq.~(\ref{eq:tau}) is compared separately with first exits and detected-decay waits below.
+
+\emph{The direct count (T22).} Forty further runs in each of six cells ($\lambda=1.05,1.10,1.25$;
+$N=64,96$) count exits attempt by attempt. All 240 first exits are observed, and their means are
+consistent with Eq.~(\ref{eq:tau}) in the model-conditional 95\% intervals in the Supplemental
+Material. An opened door is not a departure, though: many exits fall back into the curled torus. Of
+the 240 runs, 239 reach $f\ge0.25$ before the cap, and for these completed runs the reciprocal of
+mean exits per run is 0.56--0.68, with replica-bootstrap intervals spanning roughly 0.45--0.78 across
+cells. This estimates successful departures per counted exit under the $f\ge0.25$ commitment rule. It
+is not a derived transmission coefficient: multiplying the exit rate by this fraction would require
+independent renewal excursions and control of time spent in failed excursions and growth.
+
+\emph{A memoryless wait? (exploratory).} A constant chance of exit per sweep gives a memoryless,
+exponential wait. The coefficient of variation is a coarse diagnostic, not sufficient to establish
+memorylessness. Dividing each time by its condition's mean and pooling over conditions, the 432
+first exits we recorded give a Kolmogorov--Smirnov distance $D=0.035$ from the unit exponential
+(nominal $p=0.53$; shared-stream caveat in Methods) [Fig.~\ref{fig:data}(c)]. The 240 of them counted
+move by move (T22, above) are consistent with an exponential using the mean of Eq.~(\ref{eq:tau}),
+nothing estimated ($p=0.85$). This does not establish exponential tails in each cell.
+Detected-decay waits show stronger departures, including the later T38 tail-test failures
+(Sec.~\ref{sec:lambda}).
+
+\begin{figure*}
+\includegraphics[width=\textwidth]{fig1.pdf}
+\caption{(a) Mean waiting time of the perfect $4\times L$ torus at $\lambda = 1.25$ against inverse coupling,
+sixteen runs per point; error bars are one standard error of the mean. Lines: Eq.~(\ref{eq:tau}) using move A
+only (solid) and moves A and B (dashed); nothing is fitted. (b) Share of vertices at each counting signature $d$
+at the first sampled $f\ge0.5$, averaged over the thirty decays per size of the rerun in
+Table~\ref{tab:t7}. (c) Share of tori still waiting against time in units of the mean of its condition,
+pooled, on a logarithmic scale; the dashed line is the exponential $e^{-x}$ of a memoryless wait. Blue: all
+432 recorded first exits (twelve conditions of panel a, and the six cells of the direct count, T22).
+Orange: the selected 589 decay waits of the $\lambda$ map with $f_{200}=0$ and $W>205$, shown as
+$W-205$ (Methods). This selection does not establish that no earlier exit occurred. Not pre-registered.}
+\label{fig:data}
+\end{figure*}
+
+\section{The conversion}
+\label{sec:conversion}
+
+The decay itself was pre-registered: at
+$\lambda=1.25$, $g=1.5$, thirty decays at each of $N=64,96,144,192$, with the adjacency read when the
+conversion fraction first crossed 25, 50 and 75\%. The predictions, averaged across replicas, were a
+memoryless waiting time (coefficient of variation between 0.7 and 1.3) and, at half conversion, at
+least 80\% of vertices at $d\in\{1,2\}$ and the converted vertices in one piece holding at least 70\%
+of them. All three component tests hold at every size and on two independent sets of seeds
+(Table~\ref{tab:t7}). They show a dominant connected flat-like region in the evolving graph at half
+conversion, not unique nucleation or a single moving interface. The measured means show no clear
+decrease with $N$ over these sizes; detected waits need not have the same size dependence as first
+exits.
+
+The same pre-registration listed $\lambda=1.5$;
+there the torus does not persist under the tested protocol at $g=1.5$ (its number of squares per
+vertex falls to 0.95, below the flat torus's 1, within 50 sweeps in every replica), and no verdict was
+applied. A separate pre-registered test of whether a coarse law of a single front governs these
+decays (T12; 64 decays at $g=1.5$ and 2.0, under Metropolis and Glauber acceptance) came out NOT
+ESTABLISHED: 21 of the 59 that nucleated converted in more than one patch, mostly at the warmer
+coupling, and the front's rate fell roughly as $N^{-0.7}$.
+
+The 25 and 75\% snapshots were recorded but are not part of the registered criteria. They give the same
+picture: the mean share at $d \in \{1,2\}$ is 0.988--0.997 and 0.985--0.995 across the eight cells, against
+0.988--0.998 at 50\% (PL, Ch.~6).
 
 \begin{table}[b]
 \caption{The decay of the $4\times L$ torus at $\lambda = 1.25$, $g = 1.5$ (first run / independent rerun,
-thirty decays each).}
+thirty decays each). ``Largest piece'' is the mean fraction of $d=2$ vertices in their largest induced
+component. These are counting observables. Replica distributions and 95\% bootstrap intervals are in
+the Supplemental Material; all 30 replicas per rerun size reach the half-conversion snapshot.}
 \label{tab:t7}
 \begin{ruledtabular}
 \begin{tabular}{lcccc}
@@ -204,150 +336,136 @@ $N$ & mean wait & CV & $d \in \{1,2\}$ at 50\% & largest piece \\
 \end{ruledtabular}
 \end{table}
 
-\begin{figure*}
-\includegraphics[width=\textwidth]{fig1.pdf}
-\caption{(a) Mean waiting time of the perfect $4\times L$ torus at $\lambda = 1.25$ against inverse coupling,
-sixteen runs per point; error bars are one standard error of the mean. Lines: Eq.~(\ref{eq:tau}) using move A
-only (solid) and moves A and B (dashed); nothing is fitted. (b) Share of vertices at each local dimension $d$
-when half the torus has converted, averaged over the thirty decays per size of the rerun in
-Table~\ref{tab:t7}. (c) Share of tori still waiting against time in units of the mean of its condition,
-pooled, on a logarithmic scale; the dashed line is the exponential $e^{-x}$ of a memoryless wait. Blue: all
-432 recorded first exits (twelve conditions of panel a, and six cells of the count in Sec.~\ref{sec:lambda}).
-Orange: the 589 decay waits of the $\lambda$ map beyond the 200-sweep watch, for tori not yet changing when
-the watch ended (Methods). Not pre-registered.}
-\label{fig:data}
-\end{figure*}
+\emph{What is released.} The energy difference between the ideal states is exact; what a given decay
+releases depends on where it ends. After settling, 24 to 28 of 30 decays per size have a
+window-averaged release within 1\% of $\varepsilon$ per vertex. This energy criterion alone does not
+certify torus topology. The other endpoints hold defects, read from their wiring: most often
+combinations of small defects of 8 to 45 units, and less often the four-point relic of
+Sec.~\ref{sec:sealed}, a closed loop of four vertices at $d=1$ with $S=N+1$ and, in its commonest
+form, $X=6$, costing $24\lambda-16$ (14 at $\lambda=1.25$). Whether these states are stable or only
+slow is not known. The energy criteria were written after endpoints had been inspected, so this part
+is exploratory. Under them the full two-state classification holds at $N=64,96,192$, while one
+$N=144$ run fails because its state changes inside the final measuring window. The prespecified
+waiting and morphology criteria pass at all four sizes in both sets of thirty runs; a passing
+component test is not a passing combined classification.
 
-The energy released is exact. After the burp, 24 to 28 of 30 decays per size rest on the flat torus with
-release $\varepsilon$ per vertex to within 1\%. The others settle on defected sheets, read from their wiring:
-most often combinations of small defects of 8 to 45 units, and less often the four-point relic of Sec.~IV, a
-closed loop of four vertices at $d = 1$ with $S = N + 1$ and, in its commonest form, $X = 6$, costing
-$24\lambda - 16$ (14 at $\lambda = 1.25$). Whether these states are stable or only slow is not known. The
-pre-registered verdict, a two-state change, holds at $N = 64$, 96 and 192, under an energy gate the author
-amended four times: once after the first runs, to fix when the release is read, and three times after the rerun
-whose verdict each amendment bore on (to allow the four-point relic, to replay the decays that reached the settle
-cap, and to read unusual resting states from their wiring); every amendment is on the record with its timing
-\cite{repo}. The three predictions, which concern the first switch, were not amended and held on both sets of
-seeds. At $N = 144$ one decay changed state inside its final measuring window and the size was set aside by the
-energy gate as written, with all three predictions holding there too.
+\emph{A count is not a geometry.} At $\lambda=1.05$ all 120 saved endpoints of the map of
+Sec.~\ref{sec:lambda} have zero energy. Filling every square as a face and checking two faces per
+edge, a cyclic vertex link, connectedness, orientability and Euler characteristic zero certifies
+torus topology for all 120 graphs. This does not cover the other datasets or determine period lengths.
 
-For contrast: at the same $\lambda = 1.25$ the change out of the random phase shows one hump in the
-energy distribution at every coupling, size and replica we ran, with any latent heat below 1.28 per vertex
-at $N = 100$ and falling with $N$ \cite{repo}; the pre-registered verdict there is INCONCLUSIVE, because one of
-its criteria cannot be read where the cold phase sits at zero energy and the replacement adopted for it reads the
-edge of the scan rather than the transition. At this $\lambda$ the sharp change is between orders.
+A separate equilibrium scan at $\lambda=1.25$ has a single energy-distribution peak over the tested
+sizes and couplings and is INCONCLUSIVE under its stated rules. Neither that finite-size observation
+nor the kinetic conversion studied here establishes a thermodynamic first-order transition.
 
-\section{Sealed system}
+\section{Sealed system: the reservoir and the relic}
+\label{sec:sealed}
 
-To follow the released energy we replace the heat bath by Creutz demons \cite{Creutz83}, which makes the
-simulation microcanonical: $C$ stores, each
-never negative; each attempted move picks one store to pay for it or be paid, and is refused if that store
-cannot pay. $H$ plus the stores' contents is conserved exactly, checked to the last unit in every run, and
-the stores' mean reads the temperature. This is one energy-conserving version of the same local dynamics, not
-the unique dynamics of a sealed system, and what follows is about it.
+Sealed, the released energy has to go somewhere, and the $C$ stores of Sec.~\ref{sec:cost} are the
+only place (PL, Chs.~7 and~8).
 
-\emph{A local, size-independent threshold (exploratory).} With one store holding a seed $s$ and nothing else,
-the torus
-converted in 8 of 8 runs for $s \ge 12$ and in 0 of 8 for $s \le 11.5$ (seeds 4 to 16), at each of
-$N = 48, 64, 96, 144, 192$ (320 runs). Twelve is $\Delta E^\ddagger$, the cost of move A. With nothing to
-spare the torus never converts, although the flat torus is lower. That nothing below 12 can set it off, from the
-perfect torus and from the twisted arrangements met by the walk of Sec.~II, holds for any energy-conserving dynamics made of
-single switches, since no switch out of them costs less; that 12 always
-sufficed is a property of this one. The activation energy is fixed while the release, $\varepsilon N$, grows
-with the system.
+\emph{Reading a temperature off the stores.} At $\lambda=1.25$, $\Delta H=-16\Delta S+5\Delta X$ is integral.
+The initial T9 stores contain 0 or 12, and allowed exit costs include 12 and 25, with greatest common
+divisor one, so store energies have no common increment coarser than one; accessibility of all
+allocations is not thereby proved. If equilibrated with an approximately canonical graph, an
+unbounded store with levels $k\delta$ has a geometric energy distribution, whose mean $u_D$ is tied
+to the coupling by
+\[
+u_D(g)=\frac{\delta}{e^{\delta/g}-1},\qquad
+g=\frac{\delta}{\ln(1+\delta/u_D)}.
+\]
+For $\delta=1$, $u_D(3.5)=3.024$, and $u_D=0.5$ corresponds to $g=0.910$. We report this inversion
+only as an equilibrium-conditional proxy: the CSV field \texttt{bath\_T} is the mean store energy, not
+the inferred coupling, and store histograms were not saved, so their canonical distribution cannot be
+checked from these files.
 
-\emph{The reservoir must absorb the release.} With the seed in one of $C$ stores, $C$ setting the reservoir's
-heat capacity ($N = 64, 96, 192$; twenty runs each; 420 runs): the converted region melts into the random
-phase in 17 to 20 of 20 runs for $C \le N/16$ and in 9 to 16 of 20 at $C = N/8$; at $C = N/4$ most runs
-end partly converted or partly melted; for $C \ge N/2$ the flat torus results in 18 to 20 of 20. The crossover scales with $N$, as a release of $\varepsilon N$ into $C$
-stores against a melting coupling near 3.5 predicts ($C^* \approx N/3.5$). No run stalled with both orders
-present and the bath below the melting coupling: under this protocol we find no evidence of a temperature at
-which the curled and flat tori coexist.
+Symmetric reverse moves support a uniform invariant measure on accessible states of graph plus stores
+at fixed total energy; they do not demonstrate equilibration. If all integer bath allocations at
+energy $M=E_{\rm tot}-H(G)\ge0$ are accessible, their number is $\Omega_C(M)=\binom{M+C-1}{C-1}$, and
+the graph marginal is weighted by this bath multiplicity. Changing $C$ therefore changes the entropy
+as well as the thermal response.
 
-\emph{About one relic at every size.} In the coldest box ($C = 2N$), the number of relic defects per
-converted torus is $0.90 \pm 0.31$, $0.85 \pm 0.37$, $1.05 \pm 0.22$ and $0.95 \pm 0.22$ at
-$N = 64, 96, 192, 288$ (mean $\pm$ standard deviation over twenty runs each; a weighted fit against $N$ gives
-a slope of $0.0003 \pm 0.0003$ per vertex, standard error). The defect is the four-point loop above (14 units),
-its points spanning one to four of the torus's original columns and lying along the torus, or occasionally a
-two-vertex twist (20 units). So the count is of order one, with no measurable growth, across the
-sizes we could reach. We find no dependence of where the relic sits on where the change started: the pre-registered
-test of whether it sits opposite the start or at it finds neither \cite{repo}, and, checked afterwards, a
-randomisation test that rotates each relic through every column of its torus with the start held fixed places
-the observed mean distance at $p = 0.67$ and $0.59$ ($N = 64$ and 96; 36 and 28 runs with one relic).
+\emph{Enough room, or not.} The seed sits in one of $C$ stores, and $C$ sets the reservoir's heat
+capacity ($C=1,N/16,N/8,N/4,N/2,N,2N$; $N=64,96,192$; twenty runs each of 30,000 sweeps; 420 runs).
+With too little room the
+converted region melts into the random phase in 17 to 20 of 20 runs for $C\le N/16$ and in 9 to 16 of
+20 at $C=N/8$. At $C=N/4$ most runs end partly converted or partly melted. With enough room,
+$C\ge N/2$, the ``sheet'' counting criterion holds in 18 to 20 of 20; for perspective, 18/20 and
+20/20 successes have exact 95\% binomial intervals $[0.683,0.988]$ and $[0.832,1]$. The criterion
+requires $f\ge0.9$, at least 90\% at $d=2$, and less than 5\% at $d=0$ or $d\ge3$; it is not a
+topology test. The observed crossover lies between $N/4$ and $N/2$ on this coarse grid. A conditional
+equilibrium energy-balance estimate at crossover coupling $g_m$ would be
+\[
+C^*\simeq\frac{\varepsilon N+s-U_{\rm graph}(g_m)}{u_D(g_m)}.
+\]
+Taking $g_m\simeq3.5$ and neglecting seed and residual graph energy gives $N/3.024$: an approximate
+energy budget, not a calibrated crossover prediction. Stores have no upper capacity, so a small bath
+heats; it does not fill up. No sustained stall with both signatures present was observed under the
+stated criterion and duration; this does not exclude equilibrium coexistence.
+
+\emph{What remains: about one relic at every size.} In the coldest box ($C=2N$; T10, also 30,000
+sweeps) a scrap of the old arrangement usually remains. A relic here is a connected component of the $d=1$ induced subgraph in the final snapshot, classified further where
+wiring is available. It is the four-point loop above (14 units), its points lying along the torus and
+spanning one to four of the torus's original columns, or occasionally a two-vertex twist (20 units).
+The number of relics per converted torus is $0.90\pm0.31$, $0.85\pm0.37$, $1.05\pm0.22$ and
+$0.95\pm0.22$ at $N=64,96,192,288$ (mean $\pm$ standard deviation over twenty runs each; a weighted
+fit against $N$ gives a slope of $0.0003\pm0.0003$ per vertex, standard error). So the count is of
+order one, with no measurable growth, across the sizes we could reach. Where the relic sits shows no
+detected association with where the change began: the pre-registered test of whether it sits opposite
+the start or at it finds neither, and, checked afterwards, a randomisation test that rotates each
+relic through every column of its torus with the start held fixed places the observed mean distance
+at $p=0.67$ and $0.59$ ($N=64$ and 96; 36 and 28 runs with one relic). These tests can miss other
+positional structure. Two cautions. The discrete coupling proxy ranges from 0.84 to 1.01 across the
+final baths, so even its conditional interpretation does not support a blanket ``below $g=1$''
+statement. And the relic count is a finite-duration observation, not a conclusion about the
+equilibrium density of defects.
 
 \section{Dependence on \texorpdfstring{$\boldsymbol{\lambda}$}{lambda}}
 \label{sec:lambda}
 
-The decay was mapped at $\lambda = 1.05$ to 1.45 in steps of 0.05, with the protocol of Sec.~III at all four
-sizes and thirty decays per ($\lambda$, $N$) (Table~\ref{tab:lambda}, Fig.~\ref{fig:lambda}). The torus counts as
-stuck at ($\lambda$, $N$) when more than half its decays are still at least 75\% torus after the 200-sweep rest
-that defines the waiting time (the pre-registered definition, PREREGISTRATION T8 in Ref.~\cite{repo}).
+T8 turns the knob: $\lambda=1.05$ to 1.45 in steps of 0.05 at $g=1.5$, using four sizes and thirty
+runs per cell (Table~\ref{tab:lambda}); its $\lambda=1.25$ comparison uses T7's data. The registered
+criterion for a torus that waits (persistence) is that more than half the runs have $f_{200}<0.25$.
+It holds from 1.05 to 1.35 at every size, and fails
+at 1.40 and 1.45. This is an operational persistence boundary, not an energetic spinodal: move B
+still costs energy until $\lambda=1.6$. Nor does Eq.~(\ref{eq:tau}) derive it. The equation gives a
+mean of 200 sweeps near $\lambda=1.345$, but an exponential first exit with 50\% survival at 200 would
+instead require a mean $200/\ln2$, and $f_{200}$ also includes growth.
 
-The torus is stuck from $\lambda = 1.05$ to 1.35 at every size and not at 1.40 or 1.45; Eq.~(\ref{eq:tau}) puts
-the mean wait at 200 sweeps at $\lambda = 1.345$, just above $4/3$, where move B takes over. Wherever it is stuck, the change keeps the character of
-Sec.~III: at half conversion 95 to 100\% of vertices belong to one order or the other, the converted region is
-one piece holding 76 to 100\% of it, and the release is exactly $\varepsilon$ per vertex wherever the flat
-torus is reached. The mean waiting time follows Eq.~(\ref{eq:tau}) with nothing fitted over two decades
-[Fig.~\ref{fig:lambda}(a)], and departs from it at both ends for different reasons. Near the edge the departure
-is in the measurement: a wait cannot be recorded before the 200-sweep watch ends (first check at 205), and for
-waits spread exponentially with mean $\tau$ the expected recorded mean is about $205 + \tau e^{-205/\tau}$
-(dashed; also fitted to nothing): 462 at $\lambda = 1.30$ and 265 at 1.35, against 403--505 and 280--350
-measured. Near $\lambda = 1$ the measured waits run 15 to 43\% longer than Eq.~(\ref{eq:tau}), 1 to 1.4
-standard errors per cell. A direct test does not reproduce this (PREREGISTRATION T22 in Ref.~\cite{repo}):
-counting every accepted move in forty further decays per cell at $\lambda = 1.05$, 1.10 and 1.25 and $N = 64$
-and 96, the first exit arrives when Eq.~(\ref{eq:tau}) says, within one standard error in all six cells, and
-its distribution is exponential with that mean (Sec.~III). The same count separates the barrier from the rest
-of nucleation. $\Delta E^\ddagger$ is the barrier to the first exit; about a third of exits then return to the
-torus instead of growing into a front, a transmission coefficient $\kappa = 0.56$ to 0.68 in the language of
-transition-state theory, with no trend in $\lambda$. Recrossings add to the time to convert, not to the time to
-the first exit, and do not single out small $\lambda$. We read the excess near $\lambda = 1$ as statistical,
-with one reservation: at $\lambda = 1.05$ three waits of 200 lie near 80,000 sweeps, which an exponential
-makes unlikely (Methods); the one among the map's decays raises its cell's mean from 9629 to 11915, and the
-other cells stay 3 to 27\% above Eq.~(\ref{eq:tau}) without their largest wait. How completely the change finishes
-depends on $\lambda$ [Fig.~\ref{fig:lambda}(b)]: at $\lambda = 1.05$ every decay ends at the flat torus, while the
-share ending on a defected sheet rises to 21\% at 1.30 and 54\% at 1.35. At fixed coupling, then, the relic is
-a feature of the larger coefficients, and near $\lambda = 1$ the change is clean. Beyond the edge
-($\lambda \ge 1.40$) the change starts more and more often in several places at once (in about half the decays at
-$N = 64$ and in all of them at $N = 192$) and ends mostly as a defected sheet.
+In persistent cells, means at half conversion give 95--100\% in the two counting signatures and 76--100\% of flat-like vertices in the
+largest component. Release is fullest nearest $\lambda=1$: the full-window-release fraction falls to 79\%
+at 1.30 and 46\% at 1.35 (the table retains this energy-window criterion rather than treating it as a
+topology test). The topology certificate for the $\lambda=1.05$ endpoints is in
+Sec.~\ref{sec:conversion}; PL, Ch.~9, walks through the map.
 
-The pre-registered verdict for the map as a whole is inconclusive, and the reason is stated. Besides the
-coexistence and single-front criteria, which hold everywhere the torus is stuck, it required the waiting times to
-be memoryless, with a coefficient of variation between 0.7 and 1.3; at thirty decays that band is about two
-standard errors wide, and it fails in nine of the 24 stuck cells the map ran (at two sizes at $\lambda = 1.10$,
-three at 1.30 and all four at 1.35). At
-$\lambda = 1.35$ the energy check also fails for two to five decays per size, whose final states match none of
-the allowed ones. A repair computed before being proposed (the variation of the time after the rest) changes no
-verdict. Tested afterwards on the whole distribution rather than its coefficient of variation, the waits of the
-stuck cells are exponential once the protocol's detection artefact is set aside [Fig.~\ref{fig:data}(c);
-Methods].
+\emph{Three maps, each inconclusive.} Three independently seeded maps fail their full prespecified
+acceptance criteria. In the thirty-run map (T8), the wait CV falls outside 0.7--1.3 in nine of 24
+persistent cells, and the endpoint-energy criterion fails for two to five runs per size at
+$\lambda=1.35$. In a 120-run map (T23), the sample-size-adjusted exponential CV criterion passes
+through 1.25 and in three sizes at 1.30, but the energy-window criterion fails at all sizes at 1.30
+(thermal window averages need not match the energy of a saved endpoint). A second 120-run map (T24)
+tests endpoint validity and reports energy separately: all required saved graphs are valid, but the CV
+criterion fails at $(N,\lambda)=(64,1.25),(64,1.30),(192,1.30),(144,1.35)$, and validity is not
+evidence for full release. All three combined classifications are INCONCLUSIVE, while their
+counting-signature and dominant-component means pass through $\lambda=1.30$. Full rules and cell
+results accompany the data.
 
-The map was repeated twice with 120 decays per cell and fresh seeds, each repeat pre-registered with its rules
-fixed before it ran \cite{repo}. The first repeat replaced the memoryless band by the central 99.9\% range of the
-coefficient of variation of an exponential sample of the same size, applied to the time after the rest; that check
-then held in every stuck cell up to $\lambda = 1.25$ and in three of four sizes at 1.30, but the unchanged energy
-check failed at every size at 1.30. The reason, read after the fact and not scored, is that it compared a window
-average of the energy with the exact energy of the final graph, and the sheet's own thermal excitations at
-$g = 1.5$ exceed its 1\% tolerance in a few decays per hundred. The second repeat replaced that check with one that asked only that each
-decay's saved final graph exist and be valid, which held in all 28 cells, and read the energy exactly from those
-graphs, reporting it rather than gating on it; two orders and one front held in every cell up to 1.30 as before.
-The memoryless check now failed in four cells: at $N = 64$ ($\lambda = 1.25$ and 1.30), each on a single wait 24
-and 76 times the predicted mean $\tau$, and at $N = 192$ (1.30) and 144 (1.35), with coefficients of variation of
-1.53 and 1.41 against a band ending at 1.38. So three runs have tripped three different criteria, on a band, a
-catalog, and the spread of the waits, while the physics has read the same each time.
-The break-up at the edge (Sec.~\ref{sec:lambda}) appeared in both repeats: pooled over sizes from $\lambda = 1.30$
-to 1.35, the share of decays ending at the flat torus falls from 0.71 to 0.47 and from 0.74 to 0.49, and the share
-whose converted region is in several pieces at a quarter conversion rises from 0.44 to 0.69 and from 0.43 to 0.68.
-The rare very long wait, first seen at $\lambda = 1.05$ (Methods), is now on the record at 1.25 and 1.30 as well,
-always at the smaller sizes; it is a feature to study on the saved graphs, not a rule to rewrite after the fact.
+Several early patches are common even when one component dominates later. From $\lambda=1.30$ to
+1.35, the fraction of runs with several flat-like pieces at quarter conversion rises from 0.44 to 0.69
+in T23 and 0.43 to 0.68 in T24, while the corresponding full-release or zero-energy fractions fall
+from 0.71 to 0.47 and 0.74 to 0.49, respectively (T24's ``FLAT'' class means $H=0$ only).
 
 \begin{table}[b]
-\caption{The map along $\lambda$ at $g = 1.5$ (ranges over $N = 64$ to 192; thirty decays per cell; $\lambda = 1.25$
-from the two runs of Table~\ref{tab:t7}, not rerun in the map, its flat share from the second). Two orders: share of vertices at $d \in \{1,2\}$ at half conversion. Flat: share of
-decays ending at the flat torus.}
+\caption{T8 at $g=1.5$. Ranges are cell means over $N=64,96,144,192$, thirty runs per cell;
+$\lambda=1.25$ waits span both T7 sets, its release fraction uses the rerun.
+Signatures: share at $d\in\{1,2\}$ at half conversion. Release: pooled fraction whose final
+window-averaged release is within 1\% of $\varepsilon$, not a topology classification.
+At 1.05, each size has 30/30 and a 95\% exact binomial interval $[0.884,1]$; other intervals and denominators
+are in the Supplemental Material. A dash denotes failure of the persistence criterion.}
 \label{tab:lambda}
 \begin{ruledtabular}
 \begin{tabular}{lcccc}
-$\lambda$ & $\tau$, Eq.~(\ref{eq:tau}) & mean wait & two orders & flat \\
+$\lambda$ & $\tau_{AB}$ & mean wait & signatures & release \\
 \hline
 1.05 & 8330 & 9617--11915 & 1.000 & 100\% \\
 1.10 & 4844 & 4154--6626 & 0.998--1.000 & 98\% \\
@@ -356,108 +474,241 @@ $\lambda$ & $\tau$, Eq.~(\ref{eq:tau}) & mean wait & two orders & flat \\
 1.25 & 845 & 660--1428 & 0.988--0.998 & 88\% \\
 1.30 & 419 & 403--505 & 0.980--0.984 & 79\% \\
 1.35 & 183 & 280--350 & 0.948--0.963 & 46\% \\
-1.40 & 68 & not stuck & 0.911--0.924 & 31\% \\
-1.45 & 22 & not stuck & 0.799--0.837 & 7\% \\
+1.40 & 68 & --- & 0.911--0.924 & 31\% \\
+1.45 & 22 & --- & 0.799--0.837 & 7\% \\
 \end{tabular}
 \end{ruledtabular}
 \end{table}
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{fig_lambda.pdf}
-\caption{The map along $\lambda$ at $g = 1.5$. (a) Mean waiting time where the torus is stuck, four sizes, thirty
-decays each; error bars are one standard error of the mean. Lines:
-Eq.~(\ref{eq:tau}) (solid) and the same prediction as it would be recorded given the 200-sweep watch,
-$205 + \tau e^{-205/\tau}$ (dashed); both fitted to nothing. Shaded, the $\lambda$ at which it is not stuck.
-(b) Share of vertices in one order or the other at half conversion, and share of decays ending at the flat
-torus, pooled over sizes.}
+\caption{T8 at $g=1.5$. (a) Detected mean waits in persistent cells; error bars are one standard error.
+Lines: Eq.~(\ref{eq:tau}) for first exits (solid) and the recording-floor approximation
+$205+\tau_{AB}e^{-205/\tau_{AB}}$ (dashed); neither has fitted parameters. Shading marks failure of
+the operational persistence criterion. (b) Mean share in the two counting signatures at half conversion,
+and full-window-release fraction, pooled over sizes. Neither series certifies geometry.}
 \label{fig:lambda}
 \end{figure*}
 
+\emph{What the detector times.} The decay detector first rests,
+taking the spread of $S/N$ over a run's first 200 sweeps as that run's noise, and only then checks
+every five sweeps whether $S/N$ has fallen more than three times that spread below its curled value
+(Table~\ref{tab:clocks}; the ``watch'' of PL, Ch.~9). Its mean wait $W$ and the first-exit
+prediction, compared over two decades in Fig.~\ref{fig:lambda}(a), are therefore distinct
+observables, for two reasons. First, nothing is recorded before sweep 205. For the idealized floor
+$W=\max(T,a)$ with exponential $T$ of mean $\tau$, $E[W]=a+\tau e^{-a/\tau}$, which at $a=205$ gives
+462 and 265 sweeps at $\lambda=1.30$ and 1.35, against 403--505 and 280--350 measured (the dashed
+curve: a recording-floor approximation, not a calibrated detector prediction, and different from the
+conditional mean $E[T\mid T>a]=a+\tau$). Second, the threshold is the run's own: a torus that begins
+to change inside the window widens its threshold and is caught late or never, which changes both the
+threshold and the sample selection (Methods).
+
+The second effect is how we read the two exceptional T24 waits at $N=64$: 20,270 sweeps
+($\lambda=1.25$) and 32,155 (1.30), or 23.98 and 76.74 times the predicted first-exit means. They are
+not waits of a resting torus. The rows saved for those two runs record $f_{200}=0.75$ and 0.875 and
+place the 25, 50 and 75\% snapshots at sweep 205, the first check after the resting window: both tori
+had converted three quarters or more inside the window from which the detector estimates
+$\sigma_{\rm rest}$. The threshold was correspondingly low, and $W$ records when $S/N$ at last fell
+below it, from endpoints that retained energy (window releases 0.744 of 1.000 and 0.563 of 1.200 per
+vertex).
+
+\emph{Dedicated tail test (T38).} A prespecified tail count asked whether long waits form a second
+population. With $w'=W-200$ and $\widehat\tau=\operatorname{median}(w')/\ln2$, it counts the waits
+$k_{10}$ above $10\widehat\tau$: TAIL for $k_{10}\ge3$, NO TAIL for $k_{10}\le1$, otherwise UNCLEAR.
+At $\lambda=1.25$ the result is UNCLEAR at $N=64$ ($k_{10}=2$; 3942 of 4000 runs recorded) and NO
+TAIL at $N=192$ ($k_{10}=1$; 1000 of 1000); at 1.30 it is TAIL at both sizes ($k_{10}=14$, 3868 of
+4000; and $k_{10}=5$, 1000 of 1000).
+Two TAIL cells give the registered classification TWO POPULATIONS, which stands as scored; it does
+not establish two physical basins. A retrospective, exploratory reading of the saved rows, made
+after the data were seen (no new run; Methods and Supplemental Material), uses two recorded
+quantities that do not depend on the detector's threshold, $f_{200}$ and the sweep of the first
+sampled $f\ge0.25$, and accounts for most of it by the resting window. (i) All 190 runs without a
+detector crossing have $f_{200}\ge0.75$ and reach $f\ge0.25$ at sweep 205: they converted inside the
+window and are the fastest runs, not long survivors. The tail statistic excludes them. (ii) The
+fastest detected waits are exits inside the window: of the runs detected within 20 sweeps of its end,
+80--84\% have $f_{200}>0$, and the fraction of all runs with $f_{200}>0$ is 0.144 and 0.146 at
+$\lambda=1.25$ ($N=64$ and 192) and 0.274 and 0.314 at 1.30, against $1-e^{-200/\tau_{AB}}=0.211$ and
+0.380 for a first exit before sweep 200. (iii) The scale $\widehat\tau$ is taken over all detected
+waits, those fast ones included: it is 750, 671, 267 and 238 sweeps in the four cells, against means
+of 917, 858, 443 and 446 for runs with $f_{200}=0$. The cutoff $10\widehat\tau$ is therefore only
+5.7--8.9 $\tau_{AB}$, and the reference expectation $ne^{-10}$ does not apply to it. Measured against
+their own mean, the $f_{200}=0$ runs have 0, 0, 3 and 0 waits beyond ten means, where 0.16, 0.04,
+0.13 and 0.03 are expected.
+
+That leaves three waits at $\lambda=1.30$, $N=64$ ($W=4705$, 5000 and 5080). A registered replay of
+that cell from its seeds (T58) returns all 4,000 saved rows unchanged. For the three runs it records
+every five-sweep block: before detection the square count never exceeds the torus's, no vertex reads
+$d=0$, and the graph stays connected. One wait is the window again: an excursion inside it lowered
+the threshold, and three later exits that fell back went undetected. The other two read as the
+perfect torus at every block, for 5,000 and 4,670 sweeps. Neither registered prediction for the
+three held (a hidden doubly curled state; a lowered threshold in all three). Those for the cell did.
+Timed with no detector, the
+first exits of the 4,000 runs have mean $1.071\pm0.017$ $\tau_{AB}$ (four standard errors above the
+count; Methods), one lies beyond $10\tau_{AB}$ (0.18 expected), and no run ever exceeds the torus's
+square count. An exploratory replay of these runs, read after every sweep, finds no sweep with more
+squares than the torus and separates the two: the $W=5000$ run is the perfect torus through sweep
+4,998 ($11.9\,\tau_{AB}$), while the $W=4705$ run left it for three sweeps between two block
+readings, $7.1\,\tau_{AB}$ after the window. One long wait remains, which chance allows about one
+time in six.
+
+A second registered run (T59) settles two points this leaves. Counted by the move in 4,000 fresh runs
+at the same setting, the first exit has mean $1.005\pm0.016\,\tau_{AB}$. Read every five sweeps, the
+same runs give a mean later by $0.096\pm0.007\,\tau_{AB}$, and 94\% of that comes from first exits
+that return before the reading. The 7\% belongs to the reading interval, not to the count. At
+$\lambda=1.05$, where three waits near $9.5\,\tau_{AB}$ had appeared among 200 (Methods), 3,000 fresh
+move-counted first exits have means $0.992\pm0.023$ ($N=64$) and $0.946\pm0.031\,\tau_{AB}$ ($N=96$),
+with one beyond $8\tau_{AB}$ where 1.0 is expected.
+
 \section{Discussion}
 
-At $\lambda = 1$, which is CQG, the flat, curled and 4-cube tori are degenerate and the change
-releases nothing. The burp described here therefore belongs to the family on the $\lambda > 1$ side; the map of
-Sec.~\ref{sec:lambda} shows it keeping its character down to $\lambda = 1.05$, where it is cleanest, with a
-release $\varepsilon = 4(\lambda - 1)$ that vanishes at the CQG value. The same
-questions can be asked in CQG itself, at $\lambda = 1$, of regions stuck in a different discrete arrangement
-inside a curved background \cite{T24}, such as the allotrope of Ref.~\cite{T25} (Fig.~9): whether such a region is metastable, and whether it gives way by a front with a
-definite release. The tools used here (exact barrier counting, front tracking, sealed baths) apply
-unchanged.
+The burp belongs to the $\lambda>1$ family. At $\lambda=1$, which is CQG, the flat, curled and 4-cube
+tori are degenerate and the available decrease $\varepsilon=4(\lambda-1)$ vanishes: the change has
+zero ideal-state energy difference. The same questions can still be asked in CQG itself, at
+$\lambda=1$, of regions stuck in a different discrete arrangement inside a curved background
+\cite{T24}, such as the allotrope of Ref.~\cite{T25} (Fig.~9): is such a region metastable, and does
+it give way by a front with a definite release? The tools used here (exact barrier counting, front
+tracking, sealed baths) apply unchanged.
 
-What has been shown, stated with its dynamics: an ordered, curled torus sits a known energy per vertex above
-the flat one; under local switch dynamics it escapes over a single move whose cost, $\Delta E^\ddagger$, does
-not depend on size; after escape the conversion runs as a sharp front between the two orders; and under an
-energy-conserving version of the same dynamics a fixed local activation unlocks a release that grows with the
-system. The energies hold for any dynamics made of these switches. The rates, and with them the waiting
-times, their independence of $N$ and the transmission coefficient, are properties of this chain.
+The strongest quantitative kinetic result is that counting moves predicts the mean first exit with
+nothing fitted, consistently with directly counted exits and with the omitted-channel correction
+stated. The energetic lower bound for sealed escape, 12 units at $\lambda=1.25$, is certified over the
+tested sizes, while the available release grows with the system. Conversion snapshots support
+dominance by a connected flat-like region, but do not establish a unique seed or one moving boundary.
+Exact endpoint geometry is certified only for the stated T8 set. Finite-bath equilibration and period
+growth remain open. The detected-decay tails are largely accounted for, retrospectively, by
+conversion inside the detector's resting window. A replay of one cell (Sec.~\ref{sec:lambda})
+finds one more such case and one wait of a length chance allows. Counted by the move in 7,000 fresh
+runs, first exits are on the count at $\lambda=1.05$ and 1.30 with no slow tail; five-sweep readings
+lengthen the mean by 8--10\% because some first exits return unseen.
+The inconclusive maps and the T38 classification are part of the result.
 
-\emph{Labelled or interchangeable vertices.} All runs here, like the published CQG simulations we know of
-\cite{KTB19,T25}, treat vertices as labelled: two graphs that differ only by renaming vertices are different
-states. Treating vertices as interchangeable, as identical particles are, counts each unlabelled graph once
-\cite{DQM25}; on labelled graphs this weights every state by its number of symmetries (the order of its
-side-preserving automorphism group), and a chain samples it by multiplying each acceptance by the ratio of
-the two counts. The choice leaves every energy unchanged, and so the gap $\varepsilon$, the barrier
-$\Delta E^\ddagger$, the existence of the one-move path and the least seed a sealed system needs. It changes
-the rates. The perfect curled torus has $2N$ symmetries, the twisted arrangements it reaches without leaving
-its energy have $N$ or $2N$, and every arrangement one move A away has 2 (counted exactly at $N = 64$ and
-96 \cite{repo}), so each exit would be accepted $N/2$ to $N$ times less often: the escape would be slower by a
-factor of order $N$, and the waiting time would grow with the system instead of staying flat. This is
-transition-state reasoning: the choice fixes the equilibrium weights but not the kinetics, so ``of order $N$'' is
-the change in the effective barrier, not a derived clock. We have not run the decay with interchangeable vertices.
+\emph{Named or interchangeable vertices.} All runs here, like the published CQG simulations we know of
+\cite{KTB19,T25}, treat vertices as named (labelled): two graphs that differ only by renaming vertices
+are different states. Giving each unlabelled class one Boltzmann weight is a different, legitimate
+modeling choice; quantum indistinguishability alone does not select this classical measure. A class
+has $(n!)^2/A(G)$ labelings, with $n=N/2$ and $A(G)$ its side-preserving automorphism count, so the
+corresponding target on labelled graphs is $A(G)e^{-H(G)/g}$, and the symmetric-proposal acceptance is
+\[
+a(G\to G')=\min\!\left[1,\frac{A(G')}{A(G)}e^{-\Delta H/g}\right],
+\]
+with the ratio inside the minimum (multiplying an already-clipped Metropolis probability is incorrect
+in general). Symmetric states then weigh more. Every energy and the certified energetic seed lower
+bound stay unchanged; the rates do not. The perfect curled torus has $2N$ symmetries and its neutral
+classes have $N$ or $2N$, while the enumerated A-move targets in the $N=64,96$ calculation have two,
+so for those uphill moves the instantaneous acceptance is suppressed by $N/2$ to $N$. A rate
+suppression by $cN$ corresponds to an effective free-energy increment $g\ln(cN)$, not a barrier
+proportional to $N$. Neutral-state occupancy, other exit channels and the quotient proposal also
+affect the lifetime; we supply no effective rate or decay simulation for this ensemble.
 
 Not claimed: that this chain is the physical time evolution of anything; a first-order transition in the
-thermodynamic sense (this is the decay of a metastable state at fixed coupling, and ``sharp'' is used in the
-pre-registered sense above); anything at sizes beyond 288; why the cold box leaves about one defect.
+thermodynamic sense; a latent heat; isotropic decompactification; a unique moving front; a general
+large-size law beyond the enumerated and measured sizes; or an explanation for the cold-box defect count.
 
 \emph{Outlook (motivation, not a result).} This work is motivated by the hypothesis that space emerged from a
 specific ordered precursor through a sharp change of this kind, a lattice cousin of false-vacuum decay
 \cite{C77}, releasing a definite energy and leaving relics behind. Nothing here tests that hypothesis beyond
-showing that a graph energy one coefficient away from a model of emergent geometry contains such a change. We note
-two things only. The relic found here is of fixed size and about one per change at every size we reached; it
-anneals away at every fixed coupling we tried, survives when the box cools faster than it heals, and grows in
-number with the number of seeds that start the change \cite{repo}. And the change needs a push of fixed size while
-what it releases grows with the system.
+showing classical activated escape and energy-releasing conversion in a specified graph model.
+No tunneling or Lorentzian spacetime dynamics has been computed. Geometric periods, interfaces and
+attempt-resolved commitment histories would make the next tests more discriminating.
 
 \section*{Methods and data}
 
-Simulations use single-edge switches that preserve the bipartition, with Metropolis acceptance; the chain
-reproduces exact averages computed by enumerating every valid graph at $N = 16$ and 18, and the published
-square density of Ref.~\cite{KTB19} (Fig.~8a) at $N = 160$ to rms 0.005; it does not reproduce the steeper
-curve of Ref.~\cite{T25} (Fig.~3) at the same size, from which it differs by up to 0.41 between $g = 2$ and 6.3, a
-disagreement between the two published figures that is still open. Every kinetic quantity quoted is
-for this chain (Introduction). Seeds are fixed in configuration
-files; every result file carries its configuration and software versions. The predictions and analysis rules
-behind every verdict quoted were committed before the runs they concern, with every amendment recorded; the two
-exploratory tests are labeled where they appear. Code, data, configurations and pre-registrations: \cite{repo}.
+\emph{Sampler and validation.} Simple bipartite switches preserve degree and the hard-core rule;
+invalid proposals are rejected. All clocks use sweeps of $2N$ attempts.
+The stationary measure follows from symmetric proposals and Metropolis detailed balance.
+Exhaustive small-graph checks and canonical averages validate the sampler at $N=16,18$;
+ergodicity and equilibration at production sizes are not proved. The square-density comparison at
+$N=160$ agrees with Ref.~\cite{KTB19}, Fig.~8a, to rms 0.005 but differs from Ref.~\cite{T25}, Fig.~3,
+by up to 0.41 between $g=2$ and 6.3. Given the differing stated protocols discussed in the Introduction,
+this remains an unresolved reproduction issue, not a validation of the entire uncapped equilibrium curve.
 
-\emph{Checks added after the runs} (not pre-registered; suggested by an AI-generated review, see Acknowledgments; committed data, no new
-simulation \cite{repo}). To test whether waits are exponential, each time is divided by the mean of its
-condition and the pooled times are compared with the unit exponential by the Kolmogorov--Smirnov distance
-$D$. Because the means come from the same data, $p$ is from a parametric bootstrap that repeats the whole
-procedure: 10,000 simulated data sets with each condition's mean and count, recorded as the runner records
-them. The 432 first exits (twelve conditions of Fig.~\ref{fig:data}(a), recorded to the sweep, and six cells
-of Sec.~\ref{sec:lambda}, to the attempt) give $D = 0.035$, $p = 0.53$; taken singly, two of the eighteen
-conditions give $p < 0.05$, both at $\lambda = 1.05$ (see below). The pre-registered waits of Secs.~III
-and~\ref{sec:lambda} are read every five sweeps and only after the 200-sweep watch, so we test the time beyond
-the first check, which for a memoryless wait is again exponential with the same mean. A torus that begins to
-change during the watch widens the resting spread that sets the detection threshold, so it is detected late,
-just after the watch. The map records how far each torus had converted at sweep 200; the 589 waits of its
-stuck cells from tori not yet changing then give $D = 0.030$, $p = 0.55$, against $p = 0.03$ for all 865
-waits of Secs.~III and~\ref{sec:lambda} with nothing set aside. Table~\ref{tab:t7}'s waits predate that record;
-for them the deviation fades as the clock is started later, $p < 10^{-3}$, 0.012, 0.094 and 0.66 from sweeps
-205, 255, 305 and 405, as an artefact confined to the start of the wait would. One feature is not explained:
-at $\lambda = 1.05$, three of 200 waits (the 80 first exits of Sec.~\ref{sec:lambda} and the 120 decays of
-the map) exceed 75,000 sweeps, where exponentials with the measured means give 0.19 such waits, and three or
-more with probability $10^{-3}$. Whether this is chance, or something we have not identified that slows some
-runs, is open.
-The exit counts behind Eq.~(\ref{eq:tau}), the twisted arrangements at the torus's energy and their symmetry
-counts are enumerated exactly, with no simulation \cite{repo}.
+\emph{Conversion protocol.} The runner advances in five-sweep blocks, recording square counts and
+the threshold crossings in Table~\ref{tab:clocks}. The main conversion stage stops at $f\ge0.98$
+or the configured cap; the settling stage follows even if that crossing was not reached.
+In T7b and T8, settling uses 600-sweep windows. The current stopping rule requires two consecutive
+window releases to agree within $0.005\varepsilon$ and the last to lie within $0.01\varepsilon$
+of full release. Otherwise it runs to the configured settle cap. Defected endpoints can therefore
+exhaust the cap even when long-lived. T7 uses a fixed 300-sweep settling stretch.
+T7b's nominal main and settle caps are 30,000 sweeps each; T8 uses 100,000 for each.
+Recorded replay configurations extend selected T7 settling caps. The frozen configuration, not the
+nominal duration, identifies each replay. Saved final graphs are post-settling states, whereas the
+25/50/75\% histograms are taken during conversion.
+
+\emph{Analysis design.} Waiting and morphology criteria for the conversion maps, and the dedicated
+tail-count test, were fixed before their respective runs, as were the gate, labels and cell
+predictions of the T58 replay (one of its three target rows already implied a lowered threshold)
+and of T59 (one of its seven replay targets had been replayed before registration). Endpoint-energy criteria were partly
+chosen after inspecting data, so the energy classification is exploratory. The Arrhenius and seed
+scans, the sweep-by-sweep replay, pooled distribution checks, topology certificates and interval estimates are also exploratory
+analyses, not independent confirmatory experiments. Experiment identifiers such as T8 and T38 connect
+the paper to the configurations and complete analysis record in the Supplemental Material.
+Our computational derivations remain unverified by an independent physicist.
+
+\emph{Uncertainty and selection.} Replicas, not vertices, are the independent units within a setting. We report 95\% exact binomial intervals for success fractions, percentile bootstrap intervals
+for replica means (10,000 resamples, seed 20261009), and exponential-model intervals
+$[2\sum T/\chi^2_{2m,0.975},2\sum T/\chi^2_{2m,0.025}]$ for complete first-exit samples.
+The last are conditional on the continuous exponential approximation, not distribution-free bounds.
+For the T7b largest-component means, the intervals at $N=64,96,144,192$ are respectively
+$[0.983,1]$, $[0.928,0.986]$, $[0.906,0.995]$, $[0.864,0.971]$.
+The median is one in each cell, but 0, 1, 3 and 5 of the thirty individual runs have a fraction
+below 0.7 (0, 2, 4 and 9 in the first set). Thus a passing mean does not describe every replica.
+Map waiting summaries are restricted to runs reaching $f\ge0.75$; this selection
+can favor successful conversions. Counts of observed events, omissions and snapshot availability
+are given in the Supplemental Material.
+
+\emph{Exploratory distribution checks.} We divide each wait by its cell mean
+and compare the pooled sample with the unit exponential using the Kolmogorov--Smirnov distance $D$.
+A parametric bootstrap refits cell means in each of 10,000 simulated datasets. It reproduces the
+sampling grid and residual-time convention, not the full trajectory-dependent threshold.
+For the 432 first exits, two of eighteen individual cells have $p<0.05$, both at $\lambda=1.05$. The 240 attempt-counted T22 exits, normalized by Eq.~(\ref{eq:tau}) without fitted
+means, give $D=0.039$, $p=0.85$. The Arrhenius scan reuses a seed across couplings at each
+size and replica. The pooled bootstrap simulates cells independently, so its 432-wait $p$-value
+does not model this dependence and is nominal. T22 includes $\lambda$ in its seed derivation.
+For detected waits, the unfiltered T7/T8 residual sample (865 waits with $W>205$) gives $p=0.03$;
+T7 alone gives $p<10^{-3}$. Selecting T8 cells passing persistence, $f_{200}=0$ and $W>205$ gives
+589 waits with $D=0.030$, $p=0.55$. Having $f_{200}=0$ does not rule out an earlier exit and return.
+Pooling and fitting means can mask cell
+heterogeneity, and KS is not a decisive far-tail test.
+Three of 200 mixed first-exit and detected waits at $\lambda=1.05$ exceed 75,000 sweeps
+(9.4--9.7 $\tau_{AB}$). A registered audit (T59) replayed them from their seeds. The detected one
+read as the torus at every block. The two move-counted ones were offered exits A and B at 2.94--3.03
+and 1.94--2.04 per sweep in every 5,000-sweep stretch, against the counted 3 and 2. With the fresh
+sample of Sec.~\ref{sec:lambda} we read the three as chance; two such first exits among 80 have
+probability about $10^{-5}$, computed after seeing them.
+
+\emph{Retrospective reading of the decay rows.} The reading in Sec.~\ref{sec:lambda} uses only
+columns saved by the registered runs, \texttt{f\_200} and the snapshot sweeps, through
+\path{scripts/read_wait_detector.py}. It was made after the T24 and T38 results were known, is
+exploratory, and changes no registered classification. A run is called perfect at sweep 200 when
+$f_{200}=0$; this does not exclude an excursion that returned inside the window. The replay (T58)
+reruns registered configurations from their seeds with a read-only recorder; its gate requires every
+saved column to return unchanged. Its detector-free first exit is the first five-sweep block at which
+a run no longer has $S=5N/4$, $X=N$ and every vertex at $d=1$ (the basin of Table~\ref{tab:clocks},
+neutral classes included). An exit that returns within a block is not seen (the exploratory
+sweep-by-sweep replay of nine runs shows two), which lengthens the measured mean wait. T59 measures
+the lengthening for this cell, $0.096\pm0.007\,\tau_{AB}$, by timing fresh runs by the move and by
+five-sweep readings together; its readers make the T22 chain's draws in the same order and return
+T22's saved first exits to the attempt. No T38 waiting-graph files are in the frozen
+\texttt{results/} inventory, so in the three cells not replayed endpoints cannot reconstruct
+histories.
+
+\emph{Companion documents.} A plain-language edition (\path{paper_plain_language.pdf}, same
+repository) develops each concept with diagrams in the order of
+Secs.~\ref{sec:model}--\ref{sec:lambda} and links an interactive page evaluating
+Eqs.~(\ref{eq:H}) and (\ref{eq:tau}). Neither adds a result about this study; the edition's closing section previews later work.
+
+\emph{Data and code.} The source-data snapshot is available at
+\href{https://github.com/EmilySmithCreate/RecreationalPhysics/tree/40b1ae68844a72bd73ffdc74d5c385844ab16f17}{RecreationalPhysics, commit 40b1ae68}.
+The Supplemental Material provides a claim-to-script/configuration/data map, complete check outputs
+and content hashes in \path{release_manifest.json}, with the analysis and figure scripts.
+Configurations specify seeds and durations; associated metadata
+record software versions but do not consistently identify the original execution commit.
+The retrospective-reading and replay scripts, the T58 and T59 configurations and results, the exploratory
+sweep-by-sweep replay, and the plain-language edition postdate that snapshot and are in the same repository.
 
 \begin{acknowledgments}
-Code, analysis and text were drafted with Claude (Anthropic), directed and checked by the author; every
-kernel is tested against an independent computation before use. A review of an earlier draft generated with
-ChatGPT (OpenAI) prompted the checks marked as added after the runs, and several clarifications. We thank
-C.~A.~Trugenberger for correspondence.
+The author used Claude (Anthropic) and ChatGPT/Codex (OpenAI) to assist with code, analysis and writing,
+and is responsible for the manuscript. We thank C.~A.~Trugenberger for correspondence.
 \end{acknowledgments}
 
 \begin{thebibliography}{99}
@@ -469,9 +720,7 @@ C.~A.~Trugenberger for correspondence.
 Heriot-Watt University (2022), \url{https://www.ros.hw.ac.uk/handle/10399/4591}.
 \bibitem{T24} C.~A. Trugenberger, \emph{Dark matter and dark energy in combinatorial quantum gravity}, arXiv:2409.09385.
 \bibitem{Creutz83} M.~Creutz, Phys. Rev. Lett. \textbf{50}, 1411 (1983).
-\bibitem{DQM25} K.~Betre and N.~Lewis, \emph{Dynamical quantum multigraphs}, arXiv:2509.08296 (2025).
 \bibitem{C77} S.~Coleman, Phys. Rev. D \textbf{15}, 2929 (1977).
-\bibitem{repo} E.~Smith, RecreationalPhysics, \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
 \end{thebibliography}
 
 \end{document}

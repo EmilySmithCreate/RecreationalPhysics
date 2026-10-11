@@ -19,6 +19,13 @@ cannot afford to melt may still afford to curl. The run measures which one the e
 Each row is one replica at one budget: the budget per point, the demon (the energy still loose)
 at the end, and the census of local dimension over the vertices. The sheet starts perfect, so
 every vertex begins at d = 2 and any row that is not all-d=2 is damage the energy paid for.
+
+These are square-count classes, not geometry certificates. The legacy temperature
+column is NaN unless the config supplies a positive thermometer_step, justified
+separately as an accessible level spacing. Even then it is a canonical proxy, not
+a calibrated temperature. The energy coefficient 4*lambda is NOT that spacing.
+The measured second-half mean is always recorded as demon_mean. Existing results
+are retained; their temperature column used the old unjustified 4*lambda spacing.
 """
 import json
 import platform
@@ -41,9 +48,15 @@ D_BINS = 7
 def main(path, out_dir="results"):
     cfg = json.loads(Path(path).read_text())
     lam = float(cfg["lambda"])
+    thermometer_step = cfg.get("thermometer_step")
+    if thermometer_step is not None:
+        thermometer_step = float(thermometer_step)
+        if not np.isfinite(thermometer_step) or thermometer_step <= 0:
+            raise ValueError("thermometer_step must be a finite positive level spacing")
     meta = dict(config=cfg, config_path=str(path), package=__version__,
                 python=platform.python_version(), numpy=np.__version__,
-                numba=numba.__version__, purpose=cfg.get("_purpose", ""))
+                numba=numba.__version__, purpose=cfg.get("_purpose", ""),
+                thermometer=dict(step=thermometer_step, status="conditional canonical proxy"))
     with ResultWriter(cfg["name"], meta, out_dir) as out:
         for lx, ly in cfg["sides"]:
             n = lx * ly
@@ -61,7 +74,9 @@ def main(path, out_dir="results"):
                     settled = demon[int(cfg["n_sweeps"]) // 2:]
                     row = dict(n=n, budget_per_point=budget, replica=rep, acceptance=round(acceptance, 4),
                                h_per_point=h / n, demon_end=demon[-1],
-                               temperature=demon_temperature(settled, ENERGY_PER_SURPLUS * lam),
+                               demon_mean=float(np.mean(settled)),
+                               temperature=(demon_temperature(settled, thermometer_step)
+                                            if thermometer_step is not None else float("nan")),
                                squares=int(s[-1]), surplus=int(x[-1]),
                                curled=int(hist[0] + hist[1]), flat=int(hist[2]),
                                melted=int(hist[3:].sum()))

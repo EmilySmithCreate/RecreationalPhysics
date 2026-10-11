@@ -1,5 +1,10 @@
 # Paper 1: corrections made before posting
 
+**Interpretation corrected 9 October 2026:** [measurement scope](../measurement_scope.md) supersedes
+older claims of certified geometry from square counts, unique fronts, guaranteed conversion from
+the 12-unit seed scan, or reservoir temperature equal to mean energy. The dated reasoning below
+is retained as history and hypotheses, not evidence for those stronger claims.
+
 **Status (25 September 2026, evening).** All 23 changes below were applied with the owner's approval (commits
 383c8326 and 714eafa5). The arXiv submission was withdrawn before announcement and is resubmitted in the corrected
 version, so the paper carries no "Changes from the first version" section. The git history of `paper.tex` holds the

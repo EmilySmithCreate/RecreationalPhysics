@@ -776,23 +776,23 @@
         </tbody></table></div></details>
     </figure>
 
-    <p>Each run waits, then opens out into a flat sheet within a few hundred rounds. It gives off exactly the energy worked out beforehand by arithmetic, 1 unit per point. Some runs pause part-way on a small leftover (the dotted line) before they finish. <b>Before running the main test, we wrote down three things "sharp" would have to mean:</b></p>
+    <p>Each run waits and then changes rapidly in square counts. Its initial gap is 1 unit per point; its release is that gap minus the energy remaining in the graph. Some runs pause part-way on a small leftover (the dotted line) before they finish. <b>The original tests used these three observables; energy checks were amended retrospectively and retain their recorded failures:</b></p>
 
     <div class="tests">
       <div class="test">
         <p class="t-h"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Held</p>
         <p class="t-big">Starts by chance</p>
-        <p>The waiting time is random, like a radioactive atom, not a timer running down.</p>
+        <p>The finite-sample wait statistic passes the registered spread check. This alone does not prove a memoryless process.</p>
       </div>
       <div class="test">
         <p class="t-h"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Held</p>
         <p class="t-big">99% one or the other</p>
-        <p>Halfway through, 99% of points are either still tube or already sheet. Almost nothing is in between.</p>
+        <p>Halfway through, about 99% of points have one of the two reference square counts. These counts alone do not certify geometry.</p>
       </div>
       <div class="test">
         <p class="t-h"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" style="fill:var(--good)"/><path d="M4.5,8.3 L7,10.7 L11.5,5.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Held</p>
-        <p class="t-big">One front</p>
-        <p>The new space grows as one connected region spreading along the tube, not as scattered patches.</p>
+        <p class="t-big">One dominant component</p>
+        <p>Most selected vertices belong to the largest connected component. Multiple early patches occur; this measurement does not certify one moving front.</p>
       </div>
     </div>
     <p><span class="tag ours">Our result</span> All three held at four sizes (64 to 192 points), on two independent sets of 30 runs each.</p>
@@ -802,7 +802,7 @@
     </div>
     <div class="means">
       <p class="eyebrow">What this means for the idea</p>
-      <p><b>This is the core of what we were looking for.</b> A curled-up arrangement opens out, one direction becoming large, and gives off a definite lump of energy. It happens sharply, with every piece claim 4 asks for: stable for now, a push, a seed, a spreading front and an exact lump. And it happens in a close cousin of a published model, one dial turned a little, with nothing else added to make it happen.</p>
+      <p><b>The model shows activated escape followed by rapid conversion in its counting observables.</b> The energy bookkeeping is exact. The stronger interpretation as a unique front opening a macroscopic direction still needs geometric measurements.</p>
       <p>One thing it isn't: energy from nowhere. The energy was stored in the curled shape and let go, and the books balance.</p>
     </div>
   </section>
@@ -851,8 +851,8 @@
       </div>
       <figcaption><span class="tag ours">Our result</span> Three sizes, seven amounts of room for the heat, twenty runs each. Clean space came almost entirely where the heat had room, melting where it didn't, and the in-between cases mostly at or below the switch-over.</figcaption>
     </figure>
-    <p><b>None ended as slush:</b> part tube and part sheet, sitting still, with nothing melting. Our reasoning said slush was impossible, because it needs a temperature at which tube and sheet are equally happy and no such temperature exists. A single case would have shown that reasoning wrong.</p>
-    <p><span class="tag ours">Our result</span> <b>A bonfire, with a threshold.</b> With enough room for the heat, the tube converts completely into a clean sheet. With too little, the heat melts the new space it has just made &mdash; <b>melts</b> meaning the points lose their neat two directions and go back to being connected any old way, which is the disordered state space came out of. The change undoes itself. At every size the switch-over falls between 1 place per 4 points and 1 per 2, where we had predicted 1 per 3.5. It moves in step with size, as predicted. <b>Energy balanced to the last unit in every run</b>, which is claim 6 holding in the model.</p>
+    <p><b>No run met the registered stalled-state criteria.</b> These criteria use square counts. The absence of that classification in 420 finite runs does not rule out equilibrium coexistence.</p>
+    <p><span class="tag ours">Our result</span> <b>A reservoir-size crossover.</b> The registered square-count classifier gives 179 sheet-like, 154 melted-like and 87 intermediate outcomes. At every size, the majority-sheet crossover lies between one store per four points and one per two. Mean store energy is not a thermometer: a conditional discrete-store estimate is about one store per 3.024 points when seed and remaining graph energy are neglected, and needs calibration. <b>Total energy is conserved in every run.</b></p>
   </section>
 
   <!-- ============ 7. result 3 ============ -->
@@ -947,7 +947,7 @@
       <div class="fact">
         <p class="who"><svg aria-hidden="true"><use href="#i-x"/></svg>X</p>
         <div class="body">
-          <p>The tube sits a fixed amount above space: 1 unit per point at the setting we used. It is <b>stable for now only inside a window</b>. At rule setting 1.25 it waits hundreds to thousands of rounds. At 1.5, where the lump per point would be twice as big, it falls apart within 50 rounds. So in this model, <b>a bigger lump comes with a less stable X.</b> Mapped setting by setting, the tube waits at every setting from 1.05 to 1.35 and stops waiting between 1.35 and 1.40. Wherever it waits, the change keeps its sharp character, cleanest near 1. Three pre-registered runs of that map each came back inconclusive by the letter, each for a stated reason. The waits themselves are memoryless for most tubes, with a few that wait far longer and about one in six that open almost at once: two populations, as the author predicted.</p>
+          <p>The tube sits a fixed amount above space: 1 unit per point at the setting we used. It is <b>stable for now only inside a window</b>. At rule setting 1.25 it waits hundreds to thousands of rounds. At 1.5, where the lump per point would be twice as big, it falls apart within 50 rounds. So in this model, <b>a bigger lump comes with a less stable X.</b> Mapped setting by setting, the tube waits at every setting from 1.05 to 1.35 and stops waiting between 1.35 and 1.40. Wherever it waits, the change keeps its sharp character, cleanest near 1. Three pre-registered runs of that map each came back inconclusive by the letter, each for a stated reason. First-exit times and detected conversion times are distinct. The T38 verdict is TWO POPULATIONS, with long detected waits in some cells; all 190 runs missing the detector crossing nevertheless reached the conversion-count threshold. The mechanism is unresolved.</p>
         </div>
       </div>
       <div class="fact">
@@ -1065,7 +1065,7 @@
             <text x="130" y="176" text-anchor="middle" class="c-tm">a shallow dip: stable for now</text>
             <line x1="300" y1="88" x2="300" y2="150" class="s-muted" stroke-width="1.3" stroke-dasharray="4 3"/>
             <text x="300" y="46" text-anchor="middle" class="c-tb">the wall</text>
-            <text x="300" y="64" text-anchor="middle" class="c-t">12 units &mdash; the same at every size</text>
+            <text x="300" y="64" text-anchor="middle" class="c-t">12 units &mdash; tested sizes 48&ndash;192</text>
             <circle cx="560" cy="197" r="10.5" class="f-space"/>
             <text x="560" y="176" text-anchor="middle" class="c-tb f-space">space</text>
             <text x="560" y="231" text-anchor="middle" class="c-tm">the bottom: nothing at all lies below it</text>
@@ -1580,7 +1580,7 @@
 
   // ---- chart: bonfire (result 3) ----
   (function () {
-    const s = root("c-bonfire", 640, 300, "Share of sealed runs ending as clean flat space, by room for the heat. At 1 place per 16 or per 8 points: none, at every size. At 1 per 4: 15, 5 and 0 percent for 64, 96 and 192 points. At 1 per 2: 90 to 95 percent. At 1 or 2 per point: 95 to 100 percent. The predicted switch-over, 1 per 3.5, lies between 1 per 4 and 1 per 2.");
+    const s = root("c-bonfire", 640, 300, "Share of sealed runs ending as clean flat space, by room for the heat. At 1 place per 16 or per 8 points: none, at every size. At 1 per 4: 15, 5 and 0 percent for 64, 96 and 192 points. At 1 per 2: 90 to 95 percent. At 1 or 2 per point: 95 to 100 percent. The observed majority-sheet crossover lies between 1 per 4 and 1 per 2; no calibrated temperature prediction is shown.");
     const cats = ["1 per 16", "1 per 8", "1 per 4", "1 per 2", "1 per 1", "2 per 1"];
     const cx = [90, 190, 290, 390, 490, 590];
     const y = function (p) { return 240 - p * 1.9; };
@@ -1590,9 +1590,6 @@
     });
     cats.forEach(function (c, i) { txt(s, cx[i], 262, c, "c-tm", "middle"); });
     txt(s, 341, 290, "room for the heat: places it can spread into, per point of tube", "c-tm", "middle");
-    const thr = 290 + (Math.log2(1 / 3.5) + 2) * 100;
-    el("line", { x1: thr, x2: thr, y1: 50, y2: 240, class: "s-muted", "stroke-width": 1.5, "stroke-dasharray": "5 4" }, s);
-    txt(s, thr - 6, 64, "predicted switch-over", "c-tm", "end");
     txt(s, 100, 128, "too little room:", "c-t");
     txt(s, 100, 146, "the heat melts the new space", "c-t");
     txt(s, 596, 150, "enough room:", "c-t", "end");

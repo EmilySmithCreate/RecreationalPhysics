@@ -1,5 +1,11 @@
 # Vision and plan
 
+**Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
+before reusing the historical claims below. Square counts do not certify geometry or a unique
+front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
+operational. O108 and the methods supplement give the evidence. Original dated predictions,
+scores and failed tests remain on record; their stronger interpretations are superseded.
+
 This page is the fixed reference. Changes to it are deliberate commits that say why.
 Source keys refer to `REFERENCES.bib`; assumption numbers refer to `ASSUMPTIONS.md`.
 
@@ -1427,6 +1433,97 @@ curling macrodimensional space itself."
   PREREGISTRATION T57 before any run; ours is MELTS or HEALS at every energy, tied and untied, with no direction
   curled, because random kicks do not find the coordinated re-threading a fold needs and the tie makes breaking
   cheaper than curling.
+
+Update 52 (2026-10-10, 16:25 ET by the clock): **the author's lean on the three shares: the burp is the hot lump, the
+scrap is the best guess for the dark matter, and dark energy is what does not thin out.** Why this page changes:
+Update 50 left dark matter open "between the scrap and something else" and dark energy's source open; asked to bring
+the programme page's piece 6 up to date, the author gave the direction it should lean. Her words: "adjust this
+section so it leans toward our current view: the one curled direction and the scrap best guess of what it is given
+currnet evidence. doesnt expand = dark energy, or was it dark matter.... remind me?"
+
+- **Recorded as her lean, not a decision; the mapping below is the assistant's reading of her words and is hers to
+  correct.** The burp, released when the slab's one curled direction opens (Updates 47, 50), is the hot lump: light and
+  ordinary matter. The scrap is the best current guess for the dark matter (Update 16's reading, open again since
+  Update 41). Dark energy is the energy that space itself keeps.
+- **The reminder she asked for** (*ours; general knowledge, to verify with a physicist, as O89*). What tells the three
+  apart is how each thins out as space grows. A fixed number of things in more room thins out: ordinary matter, dark
+  matter, and a fixed number of knots would. Light thins faster. Dark energy is the one that does not thin: the same
+  density however large space gets. So "does not thin as space expands" is dark energy.
+- **What the toy has for each** (*exact and measured; the toy has no expansion, so none of this is a measurement of
+  thinning*). Under the tie "all at the last" one opening carries the whole release (O89, O106). The knots have a
+  fixed energy each and a number set at the opening (O104, O107); the stubborn ones hold about one per cent of the
+  release, where birth can afford far less than a millionth, so the guess rests on the seed count. Fully open space
+  keeps exactly nothing (flat space is the floor, Q18); the only thing in the toy that would not thin is the cost of
+  a direction that stays curled, which is far too large (O103 (e)).
+- **Also hers, the same day, about the programme page.** A prediction about a thing that turned out not to be real
+  (T58's second curl, for long waits that were mostly the detector's) is not discussed on that page unless real
+  evidence appears of an unknown mechanism adding to the tail; the registration keeps it as written. And the
+  sentence that the knots are not seams is dropped from the page as obvious by now; T55's verdict stays in the
+  record.
+- **Nothing here is a new knob or a run.** The claim at the head of the programme page, confirmed by her on 9
+  October, still says the two identifications are open; this lean sits in piece 6 under her name until she confirms
+  or corrects it.
+
+Update 53 (2026-10-10, 18:22 ET by the clock): **the author's clarification of "her bar" (Update 26): it was a
+statement of continued interest, not a lower bar she wants the runs scored by.** Why this page changes: Update 26
+recorded her words on reading T24 as "her bar" and proposed, without enacting it, a fourth run of the λ map
+"pre-registered with a bar written her way"; the programme page has since said her bar is different from ours. Asked
+on 10 October whether she wants that fourth run, she answered: "Hopefully we won't need that low bar, what I meant by
+it was just that I'm still interested in this space even if we couldn't see this stuff happening every time."
+
+- **What stands of Update 26.** Her words there, and their meaning as she now gives it: her theory needs the change
+  to be possible, not to be seen in every instance at every size, and a result short of "every time" would not end
+  her interest in this family.
+- **What is withdrawn.** The proposal that a fourth map be scored by a lower bar (a majority of instances at some
+  size, stragglers not counted against). It was the assistant's wording and was never enacted. A fourth map, if she
+  asks for one, keeps the registered bar of T23 and T24: sharp at every curling cost in the window and at every size
+  run, with a held-out size named first (rule 14).
+- *Ours:* the difference between her claim (existence and fertility) and a mechanism claim (every size) is still
+  worth saying wherever a verdict is quoted; it is a description of what each needs, not a rule for scoring.
+
+Update 54 (2026-10-11, 09:43 ET by the clock): **T56 and T57 read: under the author's tie the slab does not open in
+a warm bath and concentrated energy still only breaks flat space; and, read from the wiring, what the tube opens
+into in two directions is a tube six steps around, not a sheet.** Why this page changes: two pre-registered tests
+carrying her predictions on pieces 5 and 11 were read this morning and both predictions failed (ASSUMPTIONS O114,
+O115); and a reading of saved end states (O116, exploratory, exact for each graph) corrects the picture this page
+has used for the two-direction change since Update 8.
+
+- **T56 (piece 5; the slab and the rod in a warm bath under "all at the last"): no cell opens.** Her prediction
+  (the slab opens into one flat space) fails at every curling cost; ours (a window at 1.15 and 1.20) fails too.
+  The slab stays where its wall is high and breaks where it is low, and the untied control shows no difference.
+  Two reasons, separated by the data: the barrier to an opening that spreads is a patch several moves big (T54's
+  exact numbers), far above the single-move wall our prediction used; and the tie as written charges a damaged
+  point nothing, so it rewards breaking.
+- **T57 (piece 11; her fold under the tie): MELTS, tied and untied.** Given up to twice the price of curling a
+  whole direction, flat space ends half broken and not curled at all: 582 of 640 replicas MELTED, 58 HEALED, none
+  FOLDED. Her prediction (RE-CURLS) fails; ours holds.
+- **Rule 11.** The four answers for both are in O114 and O115. In the fixed form. *Piece 5.* Previous claim (hers,
+  Update 47): with the tie "all at the last", her slab opens into one flat space from warmth. Failed because: the
+  barrier is a patch, not a move, and the table rewards breaking (O115). Replacement: **hers to propose; none is
+  written here.** New falsification test: T54 to its held-out size under the tie, and the exact price of breaking
+  against opening under the table. *Piece 11.* Previous claim (hers, Update 51): too much concentrated energy has
+  nowhere to go but into curling space. Failed because: it goes into broken squares, with the tie as without
+  (O114). Replacement: **hers to propose.** New falsification test: the exact price of the smallest curled patch
+  in flat space against the same number of broken points, under each table.
+- **What the tube opens into (O116).** *Exact for each graph; the reading is exploratory.* Of 9,215 exactly flat
+  end states saved by the four maps of paper 1, 9,208 are the same tube with its seam shifted by two: six steps
+  around where the tube was four, the least a flat torus can be, at every size from 64 to 192 points. So in these
+  runs the small direction stops being counted as curled and does not grow. The wall, the wait, the front, the
+  exact release and every registered verdict stand: they are energies and counts. **What is corrected is the
+  picture**: "opens out ... into one connected, perfectly flat sheet" (Update 8), "a tube opening into a sheet"
+  (Update 13), and any reading of Update 7's ladder as saying how many directions are *large*. The ladder counts,
+  at each point, the pairs of links that close no square. It is a local count. This is the fifth shape named from
+  a count and wrong (CLAUDE.md). Where the released energy was kept in place (T48), some end states did widen;
+  that is the lead.
+- **What this does to claim 4 (ours).** Its measured content in this toy is: a specific stable-for-now
+  arrangement, a wall, a sharp change that spreads, an exact release. Not measured, and in the cold runs not
+  true: that a small direction becomes large. The illustration under "What X is" ("a tiny direction becoming
+  large", "the tube opens") is the author's and is not changed here; what the toy has shown for it is narrower
+  than this page said.
+- **Asked of the author.** (1) Her replacement for piece 5's mechanism under a tie, or a table that charges
+  damage: a new table is a new knob and needs her dated decision (S1). (2) Her replacement for piece 11. (3)
+  Whether T56's held-out stage runs (ours: no; PREREGISTRATION T56, amendment). (4) How she wants piece 1 worded
+  now that the product is a tube six around, and whether the next test there is what makes it widen.
 
 ## The target ("the spot")
 

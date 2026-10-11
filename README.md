@@ -16,11 +16,15 @@ Nothing here is a claim about the real universe. The plain-language version of t
 | [`docs/HANDOFF.md`](docs/HANDOFF.md) | the current state in one page: verdicts, corrections that must not be undone, what is running |
 | [`VISION.md`](VISION.md) | the six claims, the success conditions (S1–S5, S2′), how this differs from the published programme, and every decision with its date |
 | [`PREREGISTRATION.md`](PREREGISTRATION.md) | what each test would measure and what each outcome would mean, committed before its runs, with dated amendments |
-| [`ASSUMPTIONS.md`](ASSUMPTIONS.md) | every assumption with a source or marked "Ours"; the observation log O1–O103 with the numbers |
+| [`ASSUMPTIONS.md`](ASSUMPTIONS.md) | every assumption with a source or marked "Ours"; the observation log and dated corrections with the numbers |
 | [`TASKS.md`](TASKS.md) | what is next, with acceptance tests and the two reproduction gates |
 | [`docs/design/known_physics_plan.md`](docs/design/known_physics_plan.md) | the ladder towards claim 2: dimension, a speed limit, defect interaction |
 | [`REFERENCES.bib`](REFERENCES.bib) | sources, each marked read-in-full / abstract-only / unread |
 | [`CLAUDE.md`](CLAUDE.md) | working rules for AI-assisted sessions |
+
+The current [reader manuscript](docs/papers/curled_torus/paper.pdf) and
+[supplement](docs/papers/curled_torus/supplement.md) are unpublished. The
+[measurement scope](docs/papers/measurement_scope.md) explains the limits shared by all summaries.
 
 ## The model
 
@@ -33,7 +37,7 @@ neighbours (the hard-core rule); moves are edge switches; the energy is
 with λ the knob between the two published settings: λ = 0 is the global term alone (cold phase:
 isolated 4-cubes and other "baby universes"), λ = 1 is the full Ollivier curvature (cold phase: a
 flat sheet), and the hard cap of two squares per edge is the λ → ∞ end. Observables: φ = S/N, the
-surplus X, the local dimension d(v) (2 = sheet, 1 = tube, 0 = knot), and connectivity.
+surplus X, the square-count signature d(v) = 6 − q(v) (2 on a square torus, 1 on a tube, 0 on a 4-cube; these values alone do not certify geometry), and connectivity.
 
 The hypothesis's own change is **order → order**: a *tube* (a torus with one side curled to length
 4, sitting 4(λ − 1) per vertex above the flat sheet at λ > 1) opening into the sheet. The published
@@ -55,9 +59,9 @@ Pre-registered verdicts are in `PREREGISTRATION.md`; the numbers behind each are
 | **T4** ergodicity | Do the moves reach every state? | exhaustive enumeration, N ≤ 18 (1,785,021,235,200 labelled states at N = 18) | Switch moves connect every class, with and without the cap; exact averages reproduced. Unproven above N = 18 |
 | **T5** tempering | Can the cold side be sampled? | N = 18 (vs exact), then N = 160 | Trustworthy down to g ≈ 3, where a single chain stopped at g ≈ 5 |
 | **T6 control** (λ = 0) | Is the disorder → order change first order where it is known to be? | flat-histogram walks along φ, N = 48, 64, 96 | **FIRST ORDER**: latent heat 10.32 / 11.27 / 12.50 per point, barrier growing at 34 σ. Criterion 3 had to be repaired (it could never have returned "first order" here); the repair is recorded beside the verdict |
-| **T6** (λ = 1, 1.25, 1.5) | Same question where the cold phase is a sheet | tempering along φ, N = 36, 64, 100, 4 replicas | **INCONCLUSIVE, final** (the author's decision): one hump at every λ, size and replica; any latent heat below 1.30 / 1.28 / 1.26 per point at N = 100 and falling. Criterion 3 cannot be read where the cold phase sits at H = 0, and the φ-cumulant replacement reads the hot edge instead of the transition |
-| **T7** (λ = 1.25) | Is the tube → sheet change sharp? | 4 sizes × 2 seed sets × 30 decays, N = 64–192 | **TWO-STATE CHANGE** at N = 64, 96, 192: memoryless waits (CV 0.76–1.19), ≥ 98.8 % of vertices at d ∈ {1,2} at half conversion, converted region 85–99 % in one front, exactly 4(λ − 1) released, in two sharp steps via a 14-unit four-point remnant. N = 144 fails the energy gate on one decay |
-| **T9** sealed | Bonfire, boil-off or slush? | 3 sizes × 7 bath sizes × 20 runs = 420 | **BONFIRE WITH A THRESHOLD**: 179 clean sheets, 154 melted, 87 in between, **0 slush**; crossover C* ∈ (N/4, N/2] at every size against a predicted N/3.5; energy conserved to the last unit in all 420 |
+| **T6** (λ = 1, 1.25, 1.5) | Same question where the cold phase is a sheet | tempering along φ, N = 36, 64, 100, 4 replicas | **INCONCLUSIVE, final** (the author's decision): one hump at every λ, size and replica; finite sampled distributions do not establish a thermodynamic latent-heat bound. Criterion 3 cannot be read where the cold phase sits at H = 0, and the φ-cumulant replacement reads the hot edge instead of the transition |
+| **T7** (λ = 1.25) | Is the tube → sheet change sharp? | 4 sizes × 2 seed sets × 30 decays, N = 64–192 | **TWO-STATE CHANGE** at N = 64, 96, 192: wait CV 0.76–1.19 (not proof of a memoryless process), ≥ 98.8 % of vertices at d ∈ {1,2} at half conversion, 85–99 % of the selected vertices in the largest connected component (not proof of a unique front), release εN−H_final with ε=4(λ−1), in two sharp steps via a 14-unit four-point remnant. N = 144 fails the energy gate on one decay |
+| **T9** sealed | Bonfire, boil-off or slush? | 3 sizes × 7 bath sizes × 20 runs = 420 | **BONFIRE WITH A THRESHOLD**: 179 sheet-like, 154 melted-like, 87 in between, **0 stalled** by the registered count-based classifier; crossover C* ∈ (N/4, N/2] at every size (the original N/3.5 prediction used mean store energy as temperature; the corrected conditional estimate is [εN+s−U_graph(g_m)]/u(g_m), with u(3.5)≈3.024 for unit-spaced stores); energy conserved to the last unit in all 420 |
 | **T10** leftover | Does the leftover grow with the space? | N = 64–288, fresh seeds, 80 runs | **ONE RING, HOWEVER LARGE**: 0.85–1.05 per box, slope indistinguishable from zero. The committed prediction failed |
 | **T11** seam | Is the leftover where the front's two ends meet? | N = 64, 96, 70 boxes | **NEITHER**: its position is indistinguishable from uniform. Why exactly one is open |
 
@@ -72,9 +76,9 @@ and space that is only stable for now. Two are exact arithmetic and two are expl
 | Left alone, does space **fold by itself**? | braces chain at four couplings (O21) | **No**: a cold sheet accepted no move at all; closed braced pieces survive exactly where the sheet does. Folding needs energy delivered |
 
 
-Exploratory, and labelled so (`ASSUMPTIONS.md` section D and O1–O18): the Arrhenius waiting time
-(measured/predicted 0.98 over a ninetyfold range, nothing fitted); the 12-unit spark threshold, the
-same at N = 48–192; the leftover fixed by the energy released (predicted from a separate equilibrium
+Exploratory, and labelled so (`ASSUMPTIONS.md` section D and O1–O18): the first-exit Arrhenius approximation
+(measured/predicted mean 0.98 over a ninetyfold range, with independently counted rates; pooled uncertainty is limited by shared seeds); the 12-unit globally available seed-energy threshold for leaving initial (S,X),
+observed at N = 48–192 for 12,000 sweeps (not a guaranteed completed conversion); the leftover fixed by the energy released (predicted from a separate equilibrium
 curve, matched to 0.003); labelled-vs-unlabelled counting (exact at N = 16, 18); and where the
 released energy sits in the sealed end states (O18).
 
@@ -89,7 +93,7 @@ incidence graph of the 7-point biplane) that ties with the 4-cube in energy at e
 | 1 — space is a settled arrangement of something deeper | Holds: geometry appears with nothing put in by hand; published work agrees |
 | 2 — known physics comes back out | Untested: no time, no quantum behaviour. The ladder is planned in `docs/design/known_physics_plan.md` |
 | 3 — X and space are two arrangements of one thing | Holds: sheet, tube and knot are the same edges rewired |
-| 4 — the change was sharp, releasing a lump | Split by route: **not sharp** out of disorder at N ≤ 100 (bound < 1.3/point, falling); **sharp** from one order to another (T7). S2′ was written after four of its five parts were met, so T7 does not count as clearing it |
+| 4 — the change was sharp, releasing a lump | Split by route: **INCONCLUSIVE** out of disorder at N ≤ 100; finite-run evidence for sharp changes in counting observables from the tube (T7). S2′ was written after four of its five parts were met, so T7 does not count as clearing it |
 | 5 — a leftover remains | Holds, but small: one four-point remnant per box however large. The author's hypothesis that it is dark matter is recorded in VISION Update 16 and tested by TASKS T14 |
 | 6 — the books balance | Holds by construction, and the construction survived 420 sealed conversions |
 
@@ -97,7 +101,7 @@ Not in the model, and now known to be absent rather than merely unmeasured: **an
 leftovers** (O22, exact). Whatever plays gravity here cannot be carried by the energy.
 
 **Open decisions and gaps:** whether Kelly et al. (2019) Fig. 8a should replace Trugenberger (2025)
-Fig. 3 as Gate B; where the metastable window closes between λ = 1.25 and 1.5; why a cold box ends
+Fig. 3 as Gate B; the mechanism of the long detected waits (T38); the observed 200-sweep persistence edge is between λ = 1.35 and 1.40 at g=1.5, not an energetic spinodal; why a cold box ends
 with exactly one remnant; and S5 — no physicist has read any of this. Correspondence with the model's authors is private and
 is not kept in this repository.
 
@@ -106,7 +110,7 @@ is not kept in this repository.
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
-pytest                                                          # 156 tests, about 90 s
+pytest                                                          # complete test suite
 python scripts/run_cqg_sweep.py configs/cqg_first_look.json     # about 3 minutes
 ```
 
@@ -141,7 +145,7 @@ Linux) reproduced its CSV byte for byte.
 
 ```
 src/graphity/cqg.py            the kernel: switch moves, energy, torus and melt starts
-src/graphity/dimension.py      local dimension d(v) and the pieces of a chosen set of vertices
+src/graphity/dimension.py      square-count signature d(v) and the pieces of a chosen set of vertices
 src/graphity/connectivity.py   connected pieces, baby universes, 4-cubes
 src/graphity/squares.py        the two smallest graph readers, shared by the modules above
 src/graphity/small_graphs.py   every state at N ≤ 18: ergodicity and exact averages
@@ -188,7 +192,7 @@ finding before its gate has passed.
 
 ## Disclosure
 
-Code and documents were drafted with Claude (Anthropic) in conversation with the author. Physics
+Code and documents were drafted with Claude (Anthropic), with the 9 October paper and dependent-document review assisted by Codex (OpenAI) in conversation with the author. Physics
 arguments marked "Ours" in `ASSUMPTIONS.md` have not been reviewed by a physicist. The curled-torus paper
 was also revised after a review generated with ChatGPT (OpenAI); what it prompted is recorded in
 `ASSUMPTIONS.md` (O42) and disclosed in the paper. On 6 October 2026 the programme's pages were revised after

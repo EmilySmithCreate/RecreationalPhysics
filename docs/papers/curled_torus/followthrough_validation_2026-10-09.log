@@ -1,0 +1,196 @@
+Dependent-document and analysis validation, 9 October 2026
+
+........................................................................ [  8%]
+........................................................................ [ 17%]
+........................................................................ [ 25%]
+........................................................................ [ 34%]
+........................................................................ [ 43%]
+........................................................................ [ 51%]
+........................................................................ [ 60%]
+........................................................................ [ 69%]
+........................................................................ [ 77%]
+........................................................................ [ 86%]
+........................................................................ [ 95%]
+.......................................                                  [100%]
+============================== warnings summary ===============================
+..\..\..\..\..\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\dateutil\tz\tz.py:37
+  C:\Users\emily\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\dateutil\tz\tz.py:37: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+    EPOCH = datetime.datetime.utcfromtimestamp(0)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+831 passed, 1 warning in 236.81s (0:03:56)
+
+......                                                                   [100%]
+6 passed in 1.41s
+
+
+analyse_t9.py
+T9, sealed tube, lambda = 1.25. PREREGISTRATION.md section T9.
+
+
+
+N     C     reps   sheet  melted  tube   stalled other  mean E    drift      d=1 pieces
+
+64    1     20     0      17      0      0       3      3.65      0.0e+00    -
+
+64    4     20     0      17      0      0       3      2.34      0.0e+00    -
+
+64    8     20     0      12      0      0       8      2.06      0.0e+00    -
+
+64    16    20     3      4       0      0       13     2.18      0.0e+00    100% of sheets
+
+64    32    20     18     0       0      0       2      1.86      0.0e+00    83% of sheets
+
+64    64    20     20     0       0      0       0      0.97      0.0e+00    100% of sheets
+
+64    128   20     20     0       0      0       0      0.49      0.0e+00    95% of sheets
+
+96    1     20     0      18      0      0       2      2.20      0.0e+00    -
+
+96    6     20     0      18      0      0       2      2.18      0.0e+00    -
+
+96    12    20     0      9       0      0       11     2.16      0.0e+00    -
+
+96    24    20     1      2       0      0       17     1.92      0.0e+00    0% of sheets
+
+96    48    20     19     0       0      0       1      1.80      0.0e+00    89% of sheets
+
+96    96    20     19     0       0      0       1      0.96      0.0e+00    84% of sheets
+
+96    192   20     20     0       0      0       0      0.49      0.0e+00    95% of sheets
+
+192   1     20     0      20      0      0       0      1.45      0.0e+00    -
+
+192   12    20     0      19      0      0       1      1.71      0.0e+00    -
+
+192   24    20     0      16      0      0       4      1.65      0.0e+00    -
+
+192   48    20     0      2       0      0       18     1.75      0.0e+00    -
+
+192   96    20     19     0       0      0       1      1.80      0.0e+00    84% of sheets
+
+192   192   20     20     0       0      0       0      0.98      0.0e+00    95% of sheets
+
+192   384   20     20     0       0      0       0      0.50      0.0e+00    95% of sheets
+
+
+
+Crossover per size: the smallest C at which a majority of replicas end as a sheet, and the
+
+largest C at which a majority end melted. Historical prediction (a), using an uncalibrated thermometer: C* ~ N * 4(lambda-1) / g_melt = N / 3.5.
+
+   N=64   legacy C* =  18.3   first majority-sheet C = 32   last majority-melted C = 8   majority-stalled at C = none
+
+   N=96   legacy C* =  27.4   first majority-sheet C = 48   last majority-melted C = 6   majority-stalled at C = none
+
+   N=192  legacy C* =  54.9   first majority-sheet C = 96   last majority-melted C = 24   majority-stalled at C = none
+
+
+
+  (a) bonfire above a C*, boil-off below, at every size:  yes
+
+      C*/N at each size: ['0.500', '0.500', '0.500']  -> scales with N: yes
+
+  (b) no supercooled-water stall:  holds
+
+
+
+  PRE-REGISTERED VERDICT, T9:  BONFIRE WITH A THRESHOLD
+
+Scope: count-based end-state verdict; no equilibrium coexistence conclusion.
+
+Conditional delta=1 store model: u(3.5)=3.023777, so neglecting seed and graph energy gives C*~N/3.023777.
+
+Full estimate: C*~[epsilon*N+seed-U_graph(g_m)]/u(g_m); spectrum and mixing unverified.
+
+
+
+analyse_t10.py
+T10, leftover rings in a cold sealed box, lambda = 1.25, C = 2N. PREREGISTRATION.md section T10.
+
+
+
+N     reps  rings mean   sd       max piece    additive       mean E    f drift
+
+64    20    0.90         0.31     4            19/20          0.49      ok
+
+96    20    0.85         0.37     4            17/20          0.49      ok
+
+192   20    1.05         0.22     4            19/20          0.49      ok
+
+288   20    0.95         0.22     4            16/20          0.49      ok
+
+
+
+  (a) slope of mean rings against N: 0.0003 +- 0.0003 per point (1.0 sigma); mean(N=288) - mean(N=64) = 0.05 against scatter 0.31 -> does not hold
+
+  (b) additive, 14 units per ring on replicas with separate rings: FAILS
+
+  (c) nothing leaves in the last 3000 sweeps and mean store energy < 1 (legacy proxy, NOT g < 1): holds
+
+
+
+  PRE-REGISTERED VERDICT, T10:  ONE RING, HOWEVER LARGE
+
+
+
+analyse_t22.py
+lambda=1.05 N=64  through 40 of 40 | exits per successful decay 1.50 +- 0.12 (reciprocal mean 0.67) F | conditional first exit 10174 +- 2466 sweeps vs two-channel approximation 8330 - | mean end 14745 sweeps
+
+  All observed first exits: 40/40, mean 10174.057 sweeps; not selected by conversion.
+
+lambda=1.05 N=96  through 39 of 40 | exits per successful decay 1.79 +- 0.21 (reciprocal mean 0.56) F | conditional first exit 7485 +- 1506 sweeps vs two-channel approximation 8330 - | mean end 11770 sweeps
+
+  All observed first exits: 40/40, mean 9302.346 sweeps; not selected by conversion.
+
+lambda=1.10 N=64  through 40 of 40 | exits per successful decay 1.80 +- 0.15 (reciprocal mean 0.56) F | conditional first exit 5134 +- 791 sweeps vs two-channel approximation 4844 - | mean end 8181 sweeps
+
+  All observed first exits: 40/40, mean 5134.496 sweeps; not selected by conversion.
+
+lambda=1.10 N=96  through 40 of 40 | exits per successful decay 1.65 +- 0.14 (reciprocal mean 0.61) F | conditional first exit 4326 +- 560 sweeps vs two-channel approximation 4844 - | mean end 6914 sweeps
+
+  All observed first exits: 40/40, mean 4326.452 sweeps; not selected by conversion.
+
+lambda=1.25 N=64  through 40 of 40 | exits per successful decay 1.48 +- 0.11 (reciprocal mean 0.68) F | conditional first exit 824 +- 110 sweeps vs two-channel approximation 845 - | mean end 1409 sweeps
+
+  All observed first exits: 40/40, mean 823.953 sweeps; not selected by conversion.
+
+lambda=1.25 N=96  through 40 of 40 | exits per successful decay 1.52 +- 0.11 (reciprocal mean 0.66) F | conditional first exit 905 +- 111 sweeps vs two-channel approximation 845 - | mean end 1517 sweeps
+
+  All observed first exits: 40/40, mean 904.575 sweeps; not selected by conversion.
+
+PRE-REGISTERED VERDICT (lambda = 1.05; historical conditional scoring): FALL-BACKS
+
+
+
+analyse_t38.py
+lambda=1.25 N=64   waits 3942 | tau_hat 750 | k10 2 (one exponential expects 0.18) -> UNCLEAR | mixture: short share 0.1162 tau 10, long tau 914, 2lnLR 939.9 | longest 15165 (20.2 tau)
+
+lambda=1.25 N=192  waits 1000 | tau_hat 671 | k10 1 (one exponential expects 0.05) -> NO TAIL | mixture: short share 0.1228 tau 14, long tau 844, 2lnLR 207.0 | longest 7360 (11.0 tau)
+
+lambda=1.30 N=64   waits 3868 | tau_hat 267 | k10 14 (one exponential expects 0.18) -> TAIL | mixture: short share 0.2031 tau 10, long tau 436, 2lnLR 1411.7 | longest 6995 (26.2 tau)
+
+lambda=1.30 N=192  waits 1000 | tau_hat 238 | k10 5 (one exponential expects 0.05) -> TAIL | mixture: short share 0.2250 tau 11, long tau 418, 2lnLR 402.4 | longest 2885 (12.1 tau)
+
+VERDICT T38: TWO POPULATIONS
+
+Scope: recorded detector crossings only; missing crossings are not ordinary censored survivors.
+
+See O108 and analyse_curled_revision.py for full denominators and snapshot availability.
+
+
+Companion relic: compiled successfully; no overfull boxes or undefined references.
+
+Companion fertile_window: compiled successfully; no overfull boxes or undefined references.
+
+Companion six_links: compiled successfully; no overfull boxes or undefined references.
+
+Companion black_hole: compiled successfully; no overfull boxes or undefined references.
+
+JavaScript syntax valid: docs/public/did-space-snap-open_v1.html
+
+JavaScript syntax valid: docs/public/site/physics/index.html
+
+JavaScript syntax valid: docs/public/curling_ladder.html
+
+All modified Python sources parse. Raw results and configs have no diff.

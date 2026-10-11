@@ -49,3 +49,18 @@ class ResultWriter:
             self.partial_path.rename(self.csv_path)
             self.meta_path.write_text(json.dumps(self.meta, indent=2))
         return False
+
+
+def provenance(root=None):
+    """The commit the code ran from and whether the working tree differed from it, for a run's .meta.json
+    (TASKS, the reviews of 6 October, item 5). Outside a git checkout, or without git, the commit is "unknown"."""
+    import subprocess
+    root = Path(root) if root is not None else Path(__file__).resolve().parents[2]
+    try:
+        commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, capture_output=True, text=True,
+                                check=True).stdout.strip()
+        dirty = bool(subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], cwd=root,
+                                    capture_output=True, text=True, check=True).stdout.strip())
+    except (OSError, subprocess.CalledProcessError):
+        return dict(git_commit="unknown", git_dirty=None)
+    return dict(git_commit=commit, git_dirty=dirty)

@@ -1,5 +1,10 @@
 # Plan: getting known physics out of it (claim 2)
 
+**Interpretation corrected 9 October 2026:** [measurement scope](../papers/measurement_scope.md) supersedes
+older claims of certified geometry from square counts, unique fronts, guaranteed conversion from
+the 12-unit seed scan, or reservoir temperature equal to mean energy. The dated reasoning below
+is retained as history and hypotheses, not evidence for those stronger claims.
+
 Written 2026-09-22 at the author's request ("can you start planning some work along this line?").
 This is a plan, not a pre-registration: every run below gets its own section in `PREREGISTRATION.md`
 before it starts (rule 4), and anything that adds a knob to the energy needs a dated VISION decision

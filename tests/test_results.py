@@ -323,3 +323,11 @@ def test_spark_threshold_script(tmp_path):
     path.write_text(json.dumps(cfg))
     with pytest.raises(ValueError):                               # a sealed run has no acceptance rule to choose
         load_script("run_spark_threshold").main(path, tmp_path)
+
+
+def test_provenance_names_a_commit_or_says_it_cannot(tmp_path):
+    from graphity.results import provenance
+    here = provenance()
+    assert set(here) == {"git_commit", "git_dirty"}
+    assert here["git_commit"] == "unknown" or (len(here["git_commit"]) == 40 and here["git_dirty"] in (True, False))
+    assert set(provenance(tmp_path)) == {"git_commit", "git_dirty"}      # a folder outside any checkout still answers

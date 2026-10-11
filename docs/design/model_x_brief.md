@@ -1,5 +1,10 @@
 # Design brief: a model of X turning into space
 
+**Interpretation corrected 9 October 2026:** [measurement scope](../papers/measurement_scope.md) supersedes
+older claims of certified geometry from square counts, unique fronts, guaranteed conversion from
+the 12-unit seed scan, or reservoir temperature equal to mean energy. The dated reasoning below
+is retained as history and hypotheses, not evidence for those stronger claims.
+
 **Status, 2026-09-22: much of the "cheap experiments" half of this brief has since been run.** The tube (the stand-in for X) has a pre-registered verdict of TWO-STATE CHANGE at N = 64, 96, 192 (`PREREGISTRATION.md` T7), the sealed runs are BONFIRE WITH A THRESHOLD (T9), and the leftover is one four-point remnant however large the space (T10, T11). `docs/HANDOFF.md` has the current state, and `docs/design/known_physics_plan.md` carries the next ladder. The brief below is left as written.
 
 *Started 2026-09-20 at the author's request. A brief, not a model: nothing in it had been built when it was written. It says what a design has to achieve, which factors decide how two phases relate, what the published model family already gives us, and which cheap experiments come first. Physics reasoning in it is ours and unreviewed unless a source is given.*
@@ -140,7 +145,7 @@ So the wiring the hypothesis needs (a specific arrangement, higher in F than the
 
    ![Three things the sealed runs say](../figures/sealed_story.png)
 
-   The wall round the tube is exactly 12 units and does not grow with the system, while the energy given off does, which is the condition for a runaway; a sealed system with nothing to spare can never start; and sealed, the end state is fixed by the energy put in and never reaches the flat sheet. Against that, a prediction of ours about the waiting time was not supported. The last two bear directly on the factors table above: "dips and walls" and "what happens to the released energy" are now measured rather than argued.
+   The wall round the tube is exactly 12 units and does not grow with the system, while the energy given off does, which is the condition for a runaway; a sealed system with nothing to spare can never start; and sealed, graph plus store energy is fixed, but neither a unique endpoint nor failure to reach zero graph energy follows from conservation alone. Against that, a prediction of ours about the waiting time was not supported. The last two bear directly on the factors table above: "dips and walls" and "what happens to the released energy" are now measured rather than argued.
 
 5. **Next on this line:** reconcile the wall and the waiting time (waiting time against g, and where in the graph a conversion starts); leaky runs across a range of leak rates, the author's semi-permeable wall; tempering at λ = 1.25 from random starts, to see whether cooling alone ever lands in a tube.
 

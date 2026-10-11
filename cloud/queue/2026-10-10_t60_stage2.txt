@@ -1,0 +1,10 @@
+# PREREGISTRATION T60, stage 2 (the held-out size, N = 288): queued after stage 1 was read and the numbers for it were
+# written to configs/t60_heldout_prediction.json and into the registration (amendment of 2026-10-10, 23:14 ET). 7 jobs.
+# One line per Batch job: <runner> <config>.
+run_tube_decay t60_lam105_n288
+run_tube_decay t60_lam110_n288
+run_tube_decay t60_lam115_n288
+run_tube_decay t60_lam120_n288
+run_tube_decay t60_lam125_n288
+run_tube_decay t60_lam130_n288
+run_tube_decay t60_lam135_n288

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tube&#x27;s Curling Ladder: turn the knobs | Side Nerd Apps</title>
+<meta name="description" content="Turn the toy model&#x27;s knobs yourself: an interactive companion to &quot;The curled torus burps&quot;. Exact numbers at every setting; measured results only where the simulations ran.">
+<meta name="author" content="Emily Smith">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://sidenerdapps.com/mainnerd/01thecurledtorusburpsKnobs/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sidenerdapps.com/mainnerd/01thecurledtorusburpsKnobs/">
+<meta property="og:title" content="The Tube&#x27;s Curling Ladder: turn the knobs">
+<meta property="og:description" content="Turn the toy model&#x27;s knobs yourself: an interactive companion to &quot;The curled torus burps&quot;. Exact numbers at every setting; measured results only where the simulations ran.">
+<meta property="og:image" content="https://sidenerdapps.com/mainnerd/assets/01thecurledtorusburps/og-image.png">
+<meta property="og:site_name" content="Side Nerd Apps">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Tube&#x27;s Curling Ladder: turn the knobs">
+<meta name="twitter:description" content="Turn the toy model&#x27;s knobs yourself: an interactive companion to &quot;The curled torus burps&quot;. Exact numbers at every setting; measured results only where the simulations ran.">
+<meta name="twitter:image" content="https://sidenerdapps.com/mainnerd/assets/01thecurledtorusburps/og-image.png">
+<meta name="theme-color" content="#34b1e8">
+<link rel="icon" type="image/png" href="https://sidenerd-marketing-assets.s3.us-east-1.amazonaws.com/sidenerdapps/sidenerd-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+.mnb{margin:0 -16px;padding:10px 16px;background:#192933;color:#e2e8f0;border:4px ridge #34b1e8;text-align:center;
+  font-family:"DM Sans",Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6}
+.mnb a{color:#5bc4f0}
+.mnb-name{display:block;font-family:"Comic Sans MS","Comic Sans",cursive;font-size:17px;color:#5bc4f0}
+.mnb-what{display:block;margin:2px 0 6px;color:#cbd5e1}
+.mnb .mnb-btn{display:inline-block;margin:3px;padding:3px 12px;background:#c9d3da;color:#0d1419;font-weight:700;
+  font-size:13.5px;text-decoration:none;border:3px outset #f1f5f9}
+.mnb .mnb-btn:active{border-style:inset}
+.mnb-sponsor{display:block;margin-top:6px;font-family:"Space Mono","Courier New",monospace;font-size:12.5px;
+  letter-spacing:.06em;color:#cbd5e1}
+.mnb-small{display:block;margin-top:8px;font-size:12.5px;color:#cbd5e1}
+.mnb-foot{margin-top:28px}
+@media print{.mnb{display:none}}
+</style>
+<style>
+/* Layout: one reading column under a sticky bar of the paper's knobs. Each section is one question the
+   paper asks of the tube: the exact number first, then what the simulations measured, or "not run here". */
+:root {
+  --ground: #F2F4F7;
+  --surface: #FFFFFF;
+  --ink: #17202B;
+  --ink-2: #4A5566;
+  --ink-3: #6E7A8C;
+  --rule: #D6DCE4;
+  --grid: #E6EAF0;
+  --accent: #2E49A6;
+  --ran: #DDE4F6;
+  --sheet: #1baf7a;
+  --tube: #eb6834;
+  --melt: #2a78d6;
+  --between: #A9B2BF;
+  --warn: #A84811;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #11151B; --surface: #181E27; --ink: #E5E9EF; --ink-2: #A6B0BF; --ink-3: #7F8A9B;
+    --rule: #2A3340; --grid: #222A35; --accent: #93A9FF; --ran: #263154;
+    --sheet: #199e70; --tube: #d95926; --melt: #3987e5; --between: #5C6675; --warn: #D97A3A;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #11151B; --surface: #181E27; --ink: #E5E9EF; --ink-2: #A6B0BF; --ink-3: #7F8A9B;
+  --rule: #2A3340; --grid: #222A35; --accent: #93A9FF; --ran: #263154;
+  --sheet: #199e70; --tube: #d95926; --melt: #3987e5; --between: #5C6675; --warn: #D97A3A;
+}
+body {
+  background: var(--ground); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.55;
+  padding-inline: 16px; padding-block: 0 64px;
+}
+.wrap { max-width: 920px; margin: 0 auto; }
+header { padding-block: 36px 14px; display: grid; gap: 12px; }
+.eyebrow { font-family: var(--sans); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0; }
+h1 { font-size: clamp(32px, 5.5vw, 46px); line-height: 1.05; font-weight: 500; margin: 0; text-wrap: balance; }
+.dek { font-size: 19px; color: var(--ink-2); margin: 0; max-width: 62ch; }
+h2 { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 6px; text-wrap: balance; }
+.sub { font-size: 15.5px; color: var(--ink-2); margin: 0 0 14px; max-width: 70ch; }
+p { margin: 0; }
+section { padding-block: 26px; border-top: 1px solid var(--rule); display: grid; gap: 12px; }
+section > * { min-width: 0; }
+.kinds { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 15px; color: var(--ink-2); }
+.tag { font-family: var(--sans); font-size: 11.5px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; border: 1px solid var(--ink-3); color: var(--ink); white-space: nowrap; margin-right: 6px; }
+.tag.exact { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.tag.meas { background: var(--ran); }
+.tag.none { border-style: dashed; color: var(--ink-2); }
+.controls {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--ground);
+  border-block: 1px solid var(--rule); padding-block: 10px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: flex-start;
+  font-family: var(--sans); font-size: 14px;
+}
+.ctl { display: grid; gap: 2px; min-width: 0; }
+.ctl-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ctl label, .ctl .lbl { color: var(--ink-2); }
+.ran-note { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
+.ran-note b { font-weight: 500; color: var(--ink); }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: inherit; border: 0; background: var(--surface); color: var(--ink); padding: 5px 10px; cursor: pointer; border-right: 1px solid var(--rule); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+.reset { font: inherit; border: 1px solid var(--accent); border-radius: 6px; background: var(--surface); color: var(--accent); padding: 5px 12px; cursor: pointer; }
+.reset:hover { background: var(--ran); }
+input[type="range"] { accent-color: var(--accent); width: 150px; max-width: 100%; }
+output { font-family: var(--mono); font-variant-numeric: tabular-nums; min-width: 3.2em; color: var(--ink); }
+button:focus-visible, input:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chart { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; }
+.chart svg { display: block; width: 100%; min-width: 560px; height: auto; font-family: var(--sans); }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.pair .chart svg { min-width: 280px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--sans); font-size: 13px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.line-sw { width: 18px; height: 3px; display: inline-block; border-radius: 2px; background: var(--ink); }
+.readout { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; display: grid; gap: 8px; font-size: 16px; }
+.readout p { max-width: 72ch; }
+.big { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 26px; font-weight: 500; color: var(--ink); line-height: 1.2; }
+.big small { font-family: var(--sans); font-size: 14px; font-weight: 400; color: var(--ink-2); }
+table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 14px; }
+th { text-align: left; font-weight: 600; color: var(--ink-2); font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 1px solid var(--rule); padding: 8px 10px 6px 0; }
+td { border-bottom: 1px solid var(--grid); padding: 7px 10px 7px 0; vertical-align: top; color: var(--ink); }
+td.num, th.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+tr.total td { font-weight: 600; border-top: 1px solid var(--rule); }
+.tablewrap { overflow-x: auto; }
+.note { font-size: 14.5px; color: var(--ink-2); max-width: 72ch; }
+details { font-family: var(--sans); font-size: 14px; color: var(--ink-2); }
+summary { cursor: pointer; }
+#tip { position: fixed; z-index: 20; pointer-events: none; background: var(--ink); color: var(--surface); font-family: var(--sans); font-size: 13px; line-height: 1.35; padding: 6px 9px; border-radius: 4px; max-width: 260px; }
+@media (max-width: 560px) { input[type="range"] { width: 130px; } .big { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="mnb"><span class="mnb-name">~ <a href="/mainnerd/">The Side Nerd Blog</a>, Main Nerd ~</span><span class="mnb-what">The interactive companion to Post No. 01, <i>The curled torus burps</i></span><a class="mnb-btn" href="/mainnerd/01thecurledtorusburpsPL/">« Read it in plain language</a><a class="mnb-btn" href="/mainnerd/01thecurledtorusburps/">Read the technical edition</a><span class="mnb-sponsor">Sponsored by <a href="https://sidenerdapps.com/?utm_source=mainnerd&amp;utm_medium=owned-media&amp;utm_campaign=physics-01-curled-torus-burps&amp;utm_content=knobs-sponsor">Side Nerd Apps</a></span></div>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">RecreationalPhysics · companion to "The curled torus burps", plain-language edition</p>
+    <h1>The Tube's Curling Ladder</h1>
+    <p class="dek">Turn the toy's knobs yourself. The exact numbers follow you to any setting. The measured results appear only where the simulations ran.</p>
+    <div class="kinds">
+      <span><span class="tag exact">Exact</span>arithmetic on the model, true at any setting</span>
+      <span><span class="tag meas">Measured</span>a simulation the paper reports</span>
+      <span><span class="tag none">Not run</span>outside what the paper simulated</span>
+    </div>
+  </header>
+
+  <div class="controls" role="group" aria-label="The knobs">
+    <div class="ctl">
+      <div class="ctl-row"><label for="lam">the knob λ</label><input id="lam" type="range" min="1" max="1.6" step="0.05" value="1.25"><output id="lamv" for="lam">1.25</output></div>
+      <span class="ran-note" id="lam-ran"></span>
+    </div>
+    <div class="ctl">
+      <div class="ctl-row"><label for="g">warmth g</label><input id="g" type="range" min="0.75" max="3.5" step="0.05" value="1.5"><output id="gv" for="g">1.50</output></div>
+      <span class="ran-note" id="g-ran"></span>
+    </div>
+    <div class="ctl">
+      <div class="ctl-row"><span class="lbl" id="n-lbl">dots N</span><span class="seg" id="nseg" role="group" aria-labelledby="n-lbl"></span></div>
+      <span class="ran-note" id="n-ran"></span>
+    </div>
+    <div class="ctl">
+      <div class="ctl-row"><button type="button" id="reset" class="reset">Reset to the paper's settings</button></div>
+      <span class="ran-note">λ = <b>1.25</b>, g = <b>1.5</b>, N = <b>96</b></span>
+    </div>
+  </div>
+
+  <section aria-labelledby="ladder-h">
+    <h2 id="ladder-h">The ladder</h2>
+    <p class="sub"><span class="tag exact">Exact</span>Three arrangements of the same dots. Each rung curls one more direction, and the knob sets what curling costs.</p>
+    <div class="chart"><svg id="ladder" viewBox="0 0 860 250" role="img" aria-labelledby="ladder-h"></svg></div>
+    <div class="readout" id="ladder-read"></div>
+  </section>
+
+  <section aria-labelledby="push-h">
+    <h2 id="push-h">The push</h2>
+    <p class="sub"><span class="tag exact">Exact</span>The two cheapest ways out of a perfect tube, priced swap by swap. A missing square costs 16; a surplus square removed refunds 4λ.</p>
+    <div class="tablewrap"><table id="bills" aria-describedby="push-h"></table></div>
+    <div class="readout" id="push-read"></div>
+  </section>
+
+  <section aria-labelledby="wait-h">
+    <h2 id="wait-h">The wait</h2>
+    <p class="sub"><span class="tag exact">Exact</span>In a bath, a sweep offers three route-A exits and two route-B exits on average. That count predicts the mean wait for the first exit, with nothing fitted.</p>
+    <div class="readout" id="wait-read"></div>
+    <div class="chart"><svg id="wait" viewBox="0 0 860 380" role="img" aria-labelledby="wait-h"></svg></div>
+    <div class="legend" id="wait-legend"></div>
+    <p class="note" id="wait-note"></p>
+  </section>
+
+  <section aria-labelledby="change-h">
+    <h2 id="change-h">The change</h2>
+    <p class="sub"><span class="tag meas">Measured</span>The map: every setting of the knob from 1.05 to 1.45, at warmth 1.5, four sizes from 64 to 192 dots, thirty tubes each.</p>
+    <div class="readout" id="change-read"></div>
+    <div class="pair">
+      <div class="chart"><svg id="sig" viewBox="0 0 430 300" role="img" aria-label="Share of dots reading as tube or sheet at the half mark, against the knob"></svg></div>
+      <div class="chart"><svg id="rel" viewBox="0 0 430 300" role="img" aria-label="Share of runs that released the full burp, against the knob"></svg></div>
+    </div>
+    <details><summary>Show the numbers</summary><div class="tablewrap"><table id="map-table"></table></div></details>
+  </section>
+
+  <section aria-labelledby="seal-h">
+    <h2 id="seal-h">Sealed: is the push enough?</h2>
+    <p class="sub">No bath. One store holds a fixed budget, and the tube can spend only that.</p>
+    <div class="controls" style="position:static;border:0;padding-block:0" role="group" aria-label="Budget">
+      <div class="ctl">
+        <div class="ctl-row"><label for="s">budget in the store</label><input id="s" type="range" min="0" max="20" step="0.5" value="12"><output id="sv" for="s">12.0</output></div>
+        <span class="ran-note">ran: <b>4, 8, 10, 11, 11.5, 12, 13, 16</b> at λ = 1.25</span>
+      </div>
+    </div>
+    <div class="readout" id="seal-read"></div>
+    <div class="chart"><svg id="stair" viewBox="0 0 860 280" role="img" aria-labelledby="seal-h"></svg></div>
+  </section>
+
+  <section aria-labelledby="room-h">
+    <h2 id="room-h">Sealed: where the burp goes</h2>
+    <p class="sub"><span class="tag meas">Measured</span>The released energy lands in stores beside the network. Few stores concentrate it; many spread it thin. Twenty tubes at each setting, λ = 1.25.</p>
+    <div class="controls" style="position:static;border:0;padding-block:0" role="group" aria-label="Stores">
+      <div class="ctl">
+        <div class="ctl-row"><span class="lbl" id="c-lbl">number of stores</span><span class="seg" id="cseg" role="group" aria-labelledby="c-lbl"></span></div>
+        <span class="ran-note">ran: <b>all seven</b>, at 64, 96 and 192 dots</span>
+      </div>
+    </div>
+    <div class="readout" id="room-read"></div>
+    <div class="chart"><svg id="room" viewBox="0 0 860 300" role="img" aria-labelledby="room-h"></svg></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--sheet)"></i>sheet-like</span>
+      <span><i class="sw" style="background:var(--between)"></i>in between</span>
+      <span><i class="sw" style="background:var(--melt)"></i>melted</span>
+    </div>
+    <details><summary>Show the numbers</summary><div class="tablewrap"><table id="room-table"></table></div></details>
+  </section>
+
+  <section aria-labelledby="scrap-h">
+    <h2 id="scrap-h">What remains</h2>
+    <p class="sub">The change usually leaves a scrap: four dots of the old tube that never opened.</p>
+    <div class="readout" id="scrap-read"></div>
+    <div class="chart"><svg id="scrap" viewBox="0 0 860 280" role="img" aria-labelledby="scrap-h"></svg></div>
+  </section>
+
+  <section aria-labelledby="out-h">
+    <h2 id="out-h">What this page leaves out</h2>
+    <p class="note">This page covers the paper's one change: a tube with one curled direction opening into a flat sheet, in a network with four links per dot. Three and four directions, ties between directions, and dots treated as interchangeable are outside the paper, and a separate version of the ladder covers them.</p>
+    <p class="note">Every measured number here is from the technical paper's tables or the project's recorded result files, at the sizes and settings stated. Nothing is claimed beyond them. The clock counts sweeps of attempted swaps, not seconds. No physicist has reviewed this page.</p>
+  </section>
+</div>
+<div id="tip" hidden></div>
+<div class="mnb mnb-foot"><a class="mnb-btn" href="/mainnerd/01thecurledtorusburpsPL/">« Back to the post</a><a class="mnb-btn" href="/mainnerd/">All posts</a><a class="mnb-btn" href="/mainnerd/01thecurledtorusburpsPL/#guestbook">Sign the guestbook</a><span class="mnb-sponsor">Sponsored by <a href="https://sidenerdapps.com/?utm_source=mainnerd&amp;utm_medium=owned-media&amp;utm_campaign=physics-01-curled-torus-burps&amp;utm_content=knobs-footer-sponsor">Side Nerd Apps</a></span><span class="mnb-small">Text and figures © 2026 Emily Smith. No physicist has reviewed this work. A toy model shows what is possible within a class of models, nothing about the real universe. <a href="https://github.com/EmilySmithCreate/RecreationalPhysics/issues">Report a mistake</a>.</span></div>
+<script>
+// ---- recorded results (the technical paper's tables and the project's result files) ----
+// The map at g = 1.5 (cell means over N = 64, 96, 144, 192; thirty runs per cell).
+const MAP = [
+  { lam: 1.05, pred: 8330, w: [9617, 11915], sig: [1.000, 1.000], rel: 100, stuck: true },
+  { lam: 1.10, pred: 4844, w: [4154, 6626],  sig: [0.998, 1.000], rel: 98,  stuck: true },
+  { lam: 1.15, pred: 2788, w: [2191, 3834],  sig: [0.996, 0.999], rel: 97,  stuck: true },
+  { lam: 1.20, pred: 1570, w: [1132, 1716],  sig: [0.996, 0.998], rel: 93,  stuck: true },
+  { lam: 1.25, pred: 845,  w: [660, 1428],   sig: [0.988, 0.998], rel: 88,  stuck: true },
+  { lam: 1.30, pred: 419,  w: [403, 505],    sig: [0.980, 0.984], rel: 79,  stuck: true },
+  { lam: 1.35, pred: 183,  w: [280, 350],    sig: [0.948, 0.963], rel: 46,  stuck: true },
+  { lam: 1.40, pred: 68,   w: null,          sig: [0.911, 0.924], rel: 31,  stuck: false },
+  { lam: 1.45, pred: 22,   w: null,          sig: [0.799, 0.837], rel: 7,   stuck: false },
+];
+// The warmth scan at lambda = 1.25: mean wait and its uncertainty, sixteen tubes per point.
+const SCAN = [
+  { N: 64,  g: 1.40, m: 2552.5, e: 499.0 }, { N: 64,  g: 1.50, m: 1610.6, e: 449.2 }, { N: 64,  g: 1.60, m: 620.0, e: 265.9 },
+  { N: 64,  g: 1.75, m: 301.5,  e: 53.2 },  { N: 64,  g: 2.00, m: 124.9,  e: 25.4 },  { N: 64,  g: 2.50, m: 29.9,  e: 10.3 },
+  { N: 144, g: 1.40, m: 1360.5, e: 340.7 }, { N: 144, g: 1.50, m: 877.5,  e: 223.1 }, { N: 144, g: 1.60, m: 457.1, e: 119.5 },
+  { N: 144, g: 1.75, m: 265.7,  e: 49.3 },  { N: 144, g: 2.00, m: 151.0,  e: 33.6 },  { N: 144, g: 2.50, m: 28.6,  e: 5.8 },
+];
+// The change at lambda = 1.25, g = 1.5, by size: first set / second set of thirty tubes.
+const BYSIZE = {
+  64:  { wait: [871, 660],   sig: [0.990, 0.998], big: [0.98, 0.99] },
+  96:  { wait: [913, 928],   sig: [0.990, 0.988], big: [0.95, 0.96] },
+  144: { wait: [856, 743],   sig: [0.997, 0.997], big: [0.92, 0.96] },
+  192: { wait: [1039, 1428], sig: [0.995, 0.995], big: [0.85, 0.92] },
+};
+// Sealed push test at lambda = 1.25: runs of 8 that left, the same at five sizes from 48 to 192 dots.
+const STAIR = [[4, 0], [8, 0], [10, 0], [11, 0], [11.5, 0], [12, 8], [13, 8], [16, 8]];
+// Sealed reservoir at lambda = 1.25: outcomes of 20 runs per number of stores.
+const CLABELS = ["1", "N/16", "N/8", "N/4", "N/2", "N", "2N"];
+const ROOM = {
+  64:  { sheet: [0, 0, 0, 3, 18, 20, 20], between: [3, 3, 8, 13, 2, 0, 0],  melted: [17, 17, 12, 4, 0, 0, 0] },
+  96:  { sheet: [0, 0, 0, 1, 19, 19, 20], between: [2, 2, 11, 17, 1, 1, 0], melted: [18, 18, 9, 2, 0, 0, 0] },
+  192: { sheet: [0, 0, 0, 0, 19, 20, 20], between: [0, 1, 4, 18, 1, 0, 0],  melted: [20, 19, 16, 2, 0, 0, 0] },
+};
+// Scraps per finished sheet in the coldest sealed box (two stores per dot), lambda = 1.25, twenty runs per size.
+const SCRAPS = [{ N: 64, m: 0.90, e: 0.31 }, { N: 96, m: 0.85, e: 0.37 }, { N: 192, m: 1.05, e: 0.22 }, { N: 288, m: 0.95, e: 0.22 }];
+const SIZES = [48, 64, 96, 144, 192, 288];
+
+// ---- exact arithmetic ----
+const costA = (lam) => 32 - 16 * lam;                 // route A: breaks 2 squares, removes 4 surplus
+const costB = (lam) => 64 - 40 * lam;                 // route B: breaks 4 squares, removes 10 surplus
+const cheapest = (lam) => Math.min(costA(lam), costB(lam));
+const perDot = (lam) => 4 * (lam - 1);                // the tube above the flat sheet, per dot
+const meanWait = (lam, g) => 1 / (3 * Math.min(1, Math.exp(-costA(lam) / g)) + 2 * Math.min(1, Math.exp(-costB(lam) / g)));
+const scrapCost = (lam) => 24 * lam - 16;
+
+const S = { lam: 1.25, g: 1.5, N: 96, s: 12, c: 4 };
+const NS = "http://www.w3.org/2000/svg";
+const near = (a, b) => Math.abs(a - b) < 1e-6;
+const f2 = (x) => (Math.abs(x) < 1e-9 ? 0 : x).toFixed(2);
+const f1 = (x) => (Math.abs(x) < 1e-9 ? 0 : x).toFixed(1);
+const int = (x) => Math.round(x).toLocaleString("en-US");
+const pct = (x) => (100 * x).toFixed(1);
+function sweeps(t) {
+  if (t < 1.5) return "about 1 sweep";
+  if (t < 1e7) return `${int(t)} sweeps`;
+  return `about 10^${Math.log10(t).toFixed(1)} sweeps`;
+}
+function el(name, attrs = {}, parent) {
+  const e = document.createElementNS(NS, name);
+  let style = "";
+  for (const [k, v] of Object.entries(attrs)) {
+    if ((k === "fill" || k === "stroke") && String(v).startsWith("var(")) style += `${k}:${v};`;
+    else e.setAttribute(k, v);
+  }
+  if (style) e.setAttribute("style", style);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function text(parent, x, y, s, attrs = {}) {
+  const t = el("text", Object.assign({ x, y, fill: "var(--ink-2)", "font-size": 13 }, attrs), parent);
+  t.textContent = s;
+  return t;
+}
+function clear(svg) { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+const tipBox = document.getElementById("tip");
+function tip(node, msg) {
+  node.setAttribute("tabindex", "0");
+  node.setAttribute("aria-label", msg);
+  const show = (ev) => {
+    tipBox.textContent = msg; tipBox.hidden = false;
+    const r = node.getBoundingClientRect();
+    const x = (ev && ev.clientX) || (r.left + r.width / 2), y = (ev && ev.clientY) || r.top;
+    tipBox.style.left = Math.max(8, Math.min(x + 12, window.innerWidth - 270)) + "px";
+    tipBox.style.top = Math.max(8, y - 44) + "px";
+  };
+  const hide = () => { tipBox.hidden = true; };
+  node.addEventListener("pointerenter", show); node.addEventListener("pointermove", show);
+  node.addEventListener("pointerleave", hide); node.addEventListener("focus", () => show(null)); node.addEventListener("blur", hide);
+}
+function mapRow(lam) { return MAP.find(r => near(r.lam, lam)); }
+
+// ---- the ladder ----
+function drawLadder() {
+  const svg = document.getElementById("ladder"); clear(svg);
+  const W = 860, H = 250, L = 150, T = 30, B = 40, top = 5;
+  const y = (e) => H - B - (e / top) * (H - T - B);
+  const a = perDot(S.lam);
+  const rungs = [
+    { name: "flat sheet", sub: "both directions large", e: 0, col: "var(--sheet)", x0: 560, x1: 800 },
+    { name: "tube", sub: "one direction curled", e: a, col: "var(--tube)", x0: 360, x1: 540 },
+    { name: "knot", sub: "both curled", e: 2 * a, col: "var(--ink-3)", x0: 170, x1: 340 },
+  ];
+  [0, 1, 2, 3, 4, 5].forEach(v => {
+    el("line", { x1: L, x2: W - 20, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }, svg);
+    text(svg, L - 10, y(v) + 4, String(v), { "text-anchor": "end", "font-size": 12 });
+  });
+  text(svg, 12, T - 12, "energy per dot above the flat sheet", { "font-size": 12 });
+  rungs.forEach(r => {
+    el("line", { x1: r.x0, x2: r.x1, y1: y(r.e), y2: y(r.e), stroke: r.col, "stroke-width": 6, "stroke-linecap": "round" }, svg);
+    text(svg, (r.x0 + r.x1) / 2, y(r.e) - 12, `${r.name}: ${f2(r.e)}`, { "text-anchor": "middle", fill: "var(--ink)", "font-weight": 500 });
+    text(svg, (r.x0 + r.x1) / 2, H - B + 22, r.sub, { "text-anchor": "middle", "font-size": 12 });
+  });
+  if (a > 0.05) {
+    const xx = 550;
+    el("line", { x1: xx, x2: xx, y1: y(a) + 5, y2: y(0) - 5, stroke: "var(--accent)", "stroke-width": 2 }, svg);
+    el("path", { d: `M${xx - 5},${y(0) - 12} L${xx},${y(0) - 4} L${xx + 5},${y(0) - 12}`, fill: "none", stroke: "var(--accent)", "stroke-width": 2 }, svg);
+  }
+  const box = document.getElementById("ladder-read");
+  if (near(S.lam, 1)) {
+    box.innerHTML = `<p class="big">0 <small>units to release</small></p><p>At λ = 1, the published setting, a surplus square costs 4 and curling saves exactly 4 per dot. All three rungs tie, so a tube that opens releases nothing.</p>`;
+  } else {
+    box.innerHTML = `<p class="big">${int(a * S.N)} <small>units: the burp on offer from a tube of ${S.N} dots</small></p><p>At λ = ${f2(S.lam)} a surplus square costs ${f2(4 * S.lam)}. Curling one direction saves 4 per dot and pays ${f2(4 * S.lam)}, so the tube sits ${f2(a)} per dot above the flat sheet.</p>`;
+  }
+}
+
+// ---- the push ----
+function drawPush() {
+  const A = costA(S.lam), B = costB(S.lam), p = 4 * S.lam, c = cheapest(S.lam), burp = perDot(S.lam) * S.N;
+  document.getElementById("bills").innerHTML =
+    `<thead><tr><th></th><th class="num">Route A</th><th class="num">Route B</th></tr></thead><tbody>
+     <tr><td>Squares broken</td><td class="num">2</td><td class="num">4</td></tr>
+     <tr><td>charged, at 16 each</td><td class="num">+32</td><td class="num">+64</td></tr>
+     <tr><td>Surplus squares removed</td><td class="num">4</td><td class="num">10</td></tr>
+     <tr><td>refunded, at ${f2(p)} each</td><td class="num">−${f1(4 * p)}</td><td class="num">−${f1(10 * p)}</td></tr>
+     <tr class="total"><td>The bill at λ = ${f2(S.lam)}</td><td class="num">${f1(A)}</td><td class="num">${f1(B)}</td></tr></tbody>`;
+  const box = document.getElementById("push-read");
+  if (c <= 1e-9) {
+    box.innerHTML = `<p class="big">no push needed</p><p>At λ = ${f2(S.lam)} route B costs nothing, so the tube is no longer stuck: it leaves by itself.</p>`;
+  } else if (burp < 1e-9) {
+    box.innerHTML = `<p class="big">${f1(c)} <small>units: the cheapest way out</small></p><p>The push is real, but at λ = 1 there is nothing behind it: the tube and the sheet cost the same.</p>`;
+  } else {
+    const which = near(S.lam, 1.25)
+      ? `This is the paper's 12: its main setting is λ = 1.25.`
+      : `The paper's 12 is this same exit at its main setting, λ = 1.25. The cost is 32 − 16λ, so it moves with the knob: here, at λ = ${f2(S.lam)}, it is ${f1(A)}${B < A ? `, and route B is cheaper still at ${f1(B)}` : ""}.`;
+    box.innerHTML = `<p class="big">${f1(c)} <small>units at λ = ${f2(S.lam)}: the cheapest way out, whatever the tube's length</small></p><p>${which}</p><p>For a tube of ${S.N} dots that push sets off a burp of ${int(burp)} units: ${f1(burp / c)} times the push. The count of exits was checked at six sizes from 48 to 288 dots.</p>`;
+  }
+}
+
+// ---- the wait ----
+function drawWait() {
+  const svg = document.getElementById("wait"); clear(svg);
+  const W = 860, H = 380, L = 96, T = 22, B = 46, R = 24, g0 = 0.75, g1 = 3.5, y0 = 0, y1 = 7;
+  const x = (g) => L + (g - g0) / (g1 - g0) * (W - L - R), y = (v) => T + (y1 - v) / (y1 - y0) * (H - T - B);
+  const yl = ["1", "10", "100", "1,000", "10,000", "100,000", "1 million", "10 million"];
+  el("rect", { x: x(1.4), y: T, width: x(2.5) - x(1.4), height: H - T - B, fill: "var(--ran)" }, svg);
+  text(svg, x(1.95), T + 16, "warmth scan ran here, at λ = 1.25", { "text-anchor": "middle", "font-size": 12 });
+  for (let v = y0; v <= y1; v++) {
+    el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--grid)" }, svg);
+    text(svg, L - 8, y(v) + 4, yl[v], { "text-anchor": "end", "font-size": 12 });
+  }
+  [1, 1.5, 2, 2.5, 3, 3.5].forEach(g => text(svg, x(g), H - B + 20, g.toFixed(1), { "text-anchor": "middle", "font-size": 12 }));
+  text(svg, (W + L) / 2, H - 8, "warmth g of the bath", { "text-anchor": "middle", fill: "var(--ink)" });
+  text(svg, 12, T - 8, "mean wait for the first exit (sweeps)", { "font-size": 12 });
+  const clip = el("clipPath", { id: "wclip" }, svg);
+  el("rect", { x: L, y: T, width: W - L - R, height: H - T - B }, clip);
+  const pts = [];
+  for (let i = 0; i <= 110; i++) { const g = g0 + i * (g1 - g0) / 110; pts.push(`${i ? "L" : "M"}${x(g).toFixed(1)},${y(Math.log10(meanWait(S.lam, g))).toFixed(1)}`); }
+  el("path", { d: pts.join(""), fill: "none", stroke: "var(--ink)", "stroke-width": 2, "clip-path": "url(#wclip)" }, svg);
+  const showScan = near(S.lam, 1.25);
+  if (showScan) SCAN.forEach(q => {
+    const cx = x(q.g) + (q.N === 64 ? -5 : 5), col = q.N === 64 ? "var(--ink-3)" : "var(--ink)";
+    el("line", { x1: cx, x2: cx, y1: y(Math.log10(q.m + q.e)), y2: y(Math.log10(Math.max(q.m - q.e, 1))), stroke: col, "stroke-width": 1.5 }, svg);
+    const mark = q.N === 64
+      ? el("circle", { cx, cy: y(Math.log10(q.m)), r: 5, fill: col, stroke: "var(--surface)", "stroke-width": 2 }, svg)
+      : el("rect", { x: cx - 4.5, y: y(Math.log10(q.m)) - 4.5, width: 9, height: 9, fill: col, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    tip(mark, `${q.N} dots, g = ${q.g.toFixed(2)}: measured ${int(q.m)} sweeps (give or take ${int(q.e)}), sixteen tubes. The count predicts ${int(meanWait(1.25, q.g))}.`);
+  });
+  const t = meanWait(S.lam, S.g), ty = Math.min(y1, Math.max(y0, Math.log10(t)));
+  el("line", { x1: x(S.g), x2: x(S.g), y1: T, y2: H - B, stroke: "var(--accent)", "stroke-dasharray": "4 4" }, svg);
+  el("circle", { cx: x(S.g), cy: y(ty), r: 6, fill: "var(--accent)", stroke: "var(--surface)", "stroke-width": 2 }, svg);
+  const lg = document.getElementById("wait-legend");
+  lg.innerHTML = `<span><i class="line-sw"></i>the count's prediction at λ = ${f2(S.lam)}</span>` +
+    (showScan ? `<span><i class="sw" style="background:var(--ink-3);border-radius:50%"></i>measured, 64 dots</span><span><i class="sw" style="background:var(--ink)"></i>measured, 144 dots</span>` : "") +
+    `<span><i class="sw" style="background:var(--accent);border-radius:50%"></i>your setting</span>`;
+  const stuck = cheapest(S.lam) > 1e-9, row = mapRow(S.lam);
+  let h = stuck
+    ? `<p class="big">${sweeps(t)} <small>predicted mean wait at λ = ${f2(S.lam)}, g = ${f2(S.g)}</small></p>`
+    : `<p class="big">no wait <small>at λ = ${f2(S.lam)} the tube is not stuck</small></p>`;
+  if (showScan) {
+    const here = SCAN.filter(q => near(q.g, S.g));
+    h += here.length
+      ? `<p><span class="tag meas">Measured</span>The warmth scan ran at this setting: ${here.map(q => `${int(q.m)} sweeps at ${q.N} dots`).join(" and ")}, sixteen tubes each.</p>`
+      : `<p><span class="tag none">Not run</span>The warmth scan measured g = 1.4, 1.5, 1.6, 1.75, 2.0 and 2.5 at this λ. Move the slider onto one of them to see its result.</p>`;
+  } else {
+    h += `<p><span class="tag none">Not run</span>The warmth scan ran only at λ = 1.25. Set the knob there to see its twelve measurements on the chart.</p>`;
+  }
+  if (row && row.w) {
+    h += `<p><span class="tag meas">Measured</span>The map timed this λ at g = 1.5: the detected change took ${int(row.w[0])} to ${int(row.w[1])} sweeps on average across four sizes, where the count gives ${int(row.pred)} for the first exit. The detector cannot record a change before sweep 205.</p>`;
+  }
+  document.getElementById("wait-read").innerHTML = h;
+  document.getElementById("wait-note").textContent = "The scale on the left multiplies by ten at each line. Colder than about g = 1 the wait outgrows what a laptop can sit through, which is why the scan stopped at 1.4. The count predicts the first exit only: about a third of first exits fall back.";
+}
+
+// ---- the change ----
+function axisLam(svg, W, H, L, T, B, R) {
+  const x = (l) => L + (l - 1.0) / 0.6 * (W - L - R);
+  [1.0, 1.2, 1.4, 1.6].forEach(l => text(svg, x(l), H - B + 18, l.toFixed(1), { "text-anchor": "middle", "font-size": 12 }));
+  text(svg, (W + L) / 2, H - 6, "the knob λ", { "text-anchor": "middle", "font-size": 12, fill: "var(--ink)" });
+  el("rect", { x: x(1.375), y: T, width: x(1.6) - x(1.375), height: H - T - B, fill: "var(--grid)" }, svg);
+  text(svg, x(1.49), T + 14, "tube not stuck", { "text-anchor": "middle", "font-size": 11 });
+  return x;
+}
+function drawChange() {
+  const W = 430, H = 300, L = 52, T = 34, B = 40, R = 12;
+  // share of dots in the two signatures, as a range across sizes
+  let svg = document.getElementById("sig"); clear(svg);
+  let x = axisLam(svg, W, H, L, T, B, R);
+  let y = (v) => T + (1.0 - v) / 0.25 * (H - T - B);
+  text(svg, 8, 16, "Dots reading as tube or sheet at the half mark", { "font-size": 12.5, fill: "var(--ink)", "font-weight": 600 });
+  [0.75, 0.80, 0.85, 0.90, 0.95, 1.0].forEach(v => {
+    el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--grid)" }, svg);
+    text(svg, L - 6, y(v) + 4, `${Math.round(v * 100)}%`, { "text-anchor": "end", "font-size": 11.5 });
+  });
+  MAP.forEach(r => {
+    const on = near(r.lam, S.lam), col = on ? "var(--accent)" : "var(--ink)";
+    el("line", { x1: x(r.lam), x2: x(r.lam), y1: y(r.sig[1]), y2: y(r.sig[0]), stroke: col, "stroke-width": 3, "stroke-linecap": "round" }, svg);
+    const m = el("circle", { cx: x(r.lam), cy: y((r.sig[0] + r.sig[1]) / 2), r: on ? 6 : 4.5, fill: col, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    tip(m, `λ = ${r.lam.toFixed(2)}: ${pct(r.sig[0])} to ${pct(r.sig[1])}% of dots read as tube or sheet at the half mark, across four sizes.`);
+  });
+  // share of runs releasing the full burp
+  svg = document.getElementById("rel"); clear(svg);
+  x = axisLam(svg, W, H, L, T, B, R);
+  y = (v) => T + (100 - v) / 100 * (H - T - B);
+  text(svg, 8, 16, "Runs that released the full burp", { "font-size": 12.5, fill: "var(--ink)", "font-weight": 600 });
+  [0, 25, 50, 75, 100].forEach(v => {
+    el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }, svg);
+    text(svg, L - 6, y(v) + 4, `${v}%`, { "text-anchor": "end", "font-size": 11.5 });
+  });
+  el("path", { d: MAP.map((r, i) => `${i ? "L" : "M"}${x(r.lam).toFixed(1)},${y(r.rel).toFixed(1)}`).join(""), fill: "none", stroke: "var(--ink)", "stroke-width": 2 }, svg);
+  MAP.forEach(r => {
+    const on = near(r.lam, S.lam);
+    const m = el("circle", { cx: x(r.lam), cy: y(r.rel), r: on ? 6 : 4.5, fill: on ? "var(--accent)" : "var(--ink)", stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    tip(m, `λ = ${r.lam.toFixed(2)}: ${r.rel}% of runs released the full burp, pooled over four sizes.`);
+  });
+  // readout
+  const row = mapRow(S.lam), box = document.getElementById("change-read");
+  let h;
+  if (row) {
+    h = `<p class="big">${row.rel}% <small>of runs released the full burp at λ = ${row.lam.toFixed(2)}</small></p>` +
+        `<p><span class="tag meas">Measured</span>${row.stuck ? "The tube is stuck here: it waits, then changes." : "The tube is not stuck here at warmth 1.5: fewer than half the tubes were still at least three-quarters tube after the first 200 sweeps."} At the half mark ${pct(row.sig[0])} to ${pct(row.sig[1])}% of dots read as tube or as sheet, with almost nothing in between.</p>`;
+    const bs = near(S.lam, 1.25) ? BYSIZE[S.N] : null;
+    if (bs) h += `<p><span class="tag meas">Measured</span>At ${S.N} dots, in two separate sets of thirty tubes: mean wait ${int(bs.wait[0])} and ${int(bs.wait[1])} sweeps; ${pct(bs.sig[0])} and ${pct(bs.sig[1])}% of dots tube or sheet at the half mark; the largest connected flat region held ${Math.round(bs.big[0] * 100)} and ${Math.round(bs.big[1] * 100)}% of the flat-like dots.</p>`;
+    else if (near(S.lam, 1.25)) h += `<p><span class="tag none">Not run</span>The size-by-size runs at this λ used 64, 96, 144 and 192 dots.</p>`;
+  } else if (near(S.lam, 1)) {
+    h = `<p class="big">nothing to release</p><p><span class="tag exact">Exact</span>At λ = 1 the tube and the sheet cost the same. <span class="tag none">Not run</span>The map starts at 1.05.</p>`;
+  } else if (near(S.lam, 1.5)) {
+    h = `<p class="big">falls apart at once</p><p><span class="tag meas">Measured</span>At λ = 1.5 the tube fell apart within 50 sweeps in every run. It is outside the map, which stops at 1.45.</p>`;
+  } else {
+    h = `<p class="big">not run</p><p><span class="tag none">Not run</span>The map covers 1.05 to 1.45. <span class="tag exact">Exact</span>At λ = 1.6 route B costs nothing, so no curled arrangement stays put from there on.</p>`;
+  }
+  box.innerHTML = h;
+  document.getElementById("map-table").innerHTML =
+    `<thead><tr><th class="num">λ</th><th class="num">Predicted first exit</th><th class="num">Measured mean wait</th><th class="num">Tube or sheet at half mark</th><th class="num">Released the full burp</th></tr></thead><tbody>` +
+    MAP.map(r => `<tr><td class="num">${r.lam.toFixed(2)}</td><td class="num">${int(r.pred)}</td><td class="num">${r.w ? `${int(r.w[0])} to ${int(r.w[1])}` : "not stuck"}</td><td class="num">${pct(r.sig[0])} to ${pct(r.sig[1])}%</td><td class="num">${r.rel}%</td></tr>`).join("") + `</tbody>`;
+}
+
+// ---- sealed: the push ----
+function drawStair() {
+  const svg = document.getElementById("stair"); clear(svg);
+  const W = 860, H = 280, L = 70, T = 24, B = 46, R = 24;
+  const x = (b) => L + b / 20 * (W - L - R), y = (v) => T + (8 - v) / 8 * (H - T - B);
+  [0, 2, 4, 6, 8].forEach(v => {
+    el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }, svg);
+    text(svg, L - 8, y(v) + 4, String(v), { "text-anchor": "end", "font-size": 12 });
+  });
+  [0, 4, 8, 12, 16, 20].forEach(b => text(svg, x(b), H - B + 20, String(b), { "text-anchor": "middle", "font-size": 12 }));
+  text(svg, (W + L) / 2, H - 8, "budget in the store (units)", { "text-anchor": "middle", fill: "var(--ink)" });
+  text(svg, 12, T - 8, "runs of 8 that left the tube, at λ = 1.25", { "font-size": 12 });
+  el("path", { d: `M${x(4)},${y(0)} L${x(12)},${y(0)} L${x(12)},${y(8)} L${x(16)},${y(8)}`, fill: "none", stroke: "var(--ink)", "stroke-width": 2 }, svg);
+  STAIR.forEach(([b, n]) => {
+    const m = el("circle", { cx: x(b), cy: y(n), r: 5, fill: "var(--ink)", stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    tip(m, `Budget ${b}: ${n} of 8 runs left the tube, at each of five sizes from 48 to 192 dots.`);
+  });
+  el("line", { x1: x(S.s), x2: x(S.s), y1: T, y2: H - B, stroke: "var(--accent)", "stroke-dasharray": "4 4" }, svg);
+  const c = cheapest(S.lam), box = document.getElementById("seal-read");
+  const tested = STAIR.find(([b]) => near(b, S.s));
+  let h;
+  if (c <= 1e-9) {
+    h = `<p class="big">no budget needed</p><p><span class="tag exact">Exact</span>At λ = ${f2(S.lam)} the tube is not stuck.</p>`;
+  } else if (S.s < c - 1e-9) {
+    h = `<p class="big">it stays <small>${f1(S.s)} units cannot pay for any exit</small></p><p><span class="tag exact">Exact</span>At λ = ${f2(S.lam)} the cheapest exit costs ${f1(c)}. A store cannot go below zero, so a smaller budget buys nothing that leaves.</p>`;
+  } else {
+    h = `<p class="big">it can leave <small>${f1(S.s)} units covers the cheapest exit, ${f1(c)}</small></p><p><span class="tag exact">Exact</span>The budget is enough to pay for a way out.</p>`;
+  }
+  if (near(S.lam, 1.25)) {
+    h += tested
+      ? `<p><span class="tag meas">Measured</span>This budget was run: ${tested[1]} of 8 tubes left, at each of five sizes from 48 to 192 dots. The test counted leaving the tube, not finishing the change.</p>`
+      : `<p><span class="tag none">Not run</span>This exact budget was not run. The eight budgets that were are the dots on the chart.</p>`;
+  } else {
+    h += `<p><span class="tag none">Not run</span>The 320 sealed push runs were all at λ = 1.25.</p>`;
+  }
+  box.innerHTML = h;
+}
+
+// ---- sealed: the stores ----
+function drawRoom() {
+  const svg = document.getElementById("room"); clear(svg);
+  const W = 860, H = 300, T = 44, B = 52, panelW = 250, gap = 30, L = 50;
+  const sizes = [64, 96, 192];
+  const y = (v) => T + (20 - v) / 20 * (H - T - B);
+  sizes.forEach((n, k) => {
+    const x0 = L + k * (panelW + gap), on = n === S.N, d = ROOM[n], bw = 24, step = panelW / 7;
+    text(svg, x0 + panelW / 2, 20, `${n} dots`, { "text-anchor": "middle", fill: "var(--ink)", "font-weight": on ? 600 : 400, "font-size": 13.5 });
+    [0, 10, 20].forEach(v => {
+      el("line", { x1: x0, x2: x0 + panelW, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }, svg);
+      if (k === 0) text(svg, x0 - 8, y(v) + 4, String(v), { "text-anchor": "end", "font-size": 12 });
+    });
+    CLABELS.forEach((lab, i) => {
+      const cx = x0 + step * (i + 0.5), chosen = i === S.c;
+      if (chosen) el("rect", { x: cx - step / 2 + 1, y: T - 6, width: step - 2, height: H - T - B + 6, fill: "var(--ran)" }, svg);
+      let base = 0;
+      [["sheet", "var(--sheet)", "sheet-like"], ["between", "var(--between)", "in between"], ["melted", "var(--melt)", "melted"]].forEach(([key, col, name]) => {
+        const v = d[key][i]; if (!v) return;
+        const top = y(base + v), bot = y(base), hgt = Math.max(1, bot - top - 2);
+        const r = el("rect", { x: cx - bw / 2, y: top + 1, width: bw, height: hgt, rx: 2, fill: col }, svg);
+        tip(r, `${n} dots, ${lab === "1" ? "one store" : lab + " stores"}: ${v} of 20 runs ended ${name}.`);
+        base += v;
+      });
+      const t = text(svg, cx, H - B + 16, lab, { "text-anchor": "middle", "font-size": 11, fill: chosen ? "var(--ink)" : "var(--ink-2)" });
+      if (chosen) t.setAttribute("font-weight", "600");
+    });
+  });
+  text(svg, 12, 36, "runs of 20", { "font-size": 12 });
+  text(svg, W / 2, H - 8, "number of stores, as a share of the number of dots N", { "text-anchor": "middle", fill: "var(--ink)" });
+  const box = document.getElementById("room-read"), lab = CLABELS[S.c], d = ROOM[S.N];
+  const words = lab === "1" ? "a single store" : `${lab} stores`;
+  if (d) {
+    const sh = d.sheet[S.c], be = d.between[S.c], me = d.melted[S.c];
+    const verdict = sh >= 15 ? "the burp has room, and the sheet completes" : (me >= 10 ? "the burp has too little room, and it melts the new sheet" : "near the switch-over: mostly in between");
+    box.innerHTML = `<p class="big">${sh} sheet-like, ${be} in between, ${me} melted <small>of 20 runs</small></p><p><span class="tag meas">Measured</span>With ${words} beside a tube of ${S.N} dots, ${verdict}. No run at any setting stalled with tube and sheet side by side.</p>`;
+  } else {
+    box.innerHTML = `<p class="big">not run at ${S.N} dots</p><p><span class="tag none">Not run</span>This test used tubes of 64, 96 and 192 dots. The chart shows all three with ${words} highlighted: the switch-over sits between N/4 and N/2 at every size.</p>`;
+  }
+  document.getElementById("room-table").innerHTML =
+    `<thead><tr><th>Dots</th><th>Outcome</th>${CLABELS.map(c => `<th class="num">${c}</th>`).join("")}</tr></thead><tbody>` +
+    sizes.map(n => [["sheet", "sheet-like"], ["between", "in between"], ["melted", "melted"]].map(([k, name]) =>
+      `<tr><td>${n}</td><td>${name}</td>${ROOM[n][k].map(v => `<td class="num">${v}</td>`).join("")}</tr>`).join("")).join("") + `</tbody>`;
+}
+
+// ---- what remains ----
+function drawScrap() {
+  const svg = document.getElementById("scrap"); clear(svg);
+  const W = 860, H = 280, L = 70, T = 24, B = 46, R = 24, n0 = 40, n1 = 310, top = 4;
+  const x = (n) => L + (n - n0) / (n1 - n0) * (W - L - R), y = (v) => T + (top - v) / top * (H - T - B);
+  [0, 1, 2, 3, 4].forEach(v => {
+    el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--ink-3)" : "var(--grid)" }, svg);
+    text(svg, L - 8, y(v) + 4, String(v), { "text-anchor": "end", "font-size": 12 });
+  });
+  SCRAPS.forEach(q => text(svg, x(q.N), H - B + 20, String(q.N), { "text-anchor": "middle", "font-size": 12 }));
+  text(svg, (W + L) / 2, H - 8, "dots in the tube", { "text-anchor": "middle", fill: "var(--ink)" });
+  text(svg, 12, T - 8, "scraps per finished sheet, at λ = 1.25", { "font-size": 12 });
+  const clip = el("clipPath", { id: "sclip" }, svg);
+  el("rect", { x: L, y: T, width: W - L - R, height: H - T - B }, clip);
+  el("line", { x1: x(n0), y1: y(0.9 * n0 / 64), x2: x(n1), y2: y(0.9 * n1 / 64), stroke: "var(--ink-3)", "stroke-dasharray": "6 5", "stroke-width": 1.5, "clip-path": "url(#sclip)" }, svg);
+  text(svg, x(150), y(2.45), "if the scrap grew with the space", { "font-size": 12, transform: `rotate(-33 ${x(150)} ${y(2.45)})` });
+  SCRAPS.forEach(q => {
+    const on = q.N === S.N, col = on ? "var(--accent)" : "var(--ink)";
+    el("line", { x1: x(q.N), x2: x(q.N), y1: y(q.m + q.e), y2: y(q.m - q.e), stroke: col, "stroke-width": 1.5 }, svg);
+    const m = el("circle", { cx: x(q.N), cy: y(q.m), r: on ? 6 : 5, fill: col, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    tip(m, `${q.N} dots: ${q.m.toFixed(2)} scraps per finished sheet on average, spread ${q.e.toFixed(2)} either way over twenty runs.`);
+  });
+  const here = SCRAPS.find(q => q.N === S.N), box = document.getElementById("scrap-read");
+  let h = `<p class="big">${f1(scrapCost(S.lam))} <small>units held by one scrap at λ = ${f2(S.lam)}</small></p><p><span class="tag exact">Exact</span>Read from its wiring, the scrap is a closed loop of four dots with one extra square and six surplus squares. It keeps that much of the burp.</p>`;
+  h += here
+    ? `<p><span class="tag meas">Measured</span>At ${S.N} dots: ${here.m.toFixed(2)} scraps per finished sheet. About one scrap per tube, however long the tube. The prediction written down beforehand, that the leftover grows with the space, failed.</p>`
+    : `<p><span class="tag none">Not run</span>The scrap count was measured at 64, 96, 192 and 288 dots, at λ = 1.25 in the coldest sealed box. It came out near one at every size.</p>`;
+  box.innerHTML = h;
+}
+
+// ---- controls ----
+function ranNotes() {
+  const inMap = !!mapRow(S.lam), inScan = S.g >= 1.4 - 1e-9 && S.g <= 2.5 + 1e-9;
+  document.getElementById("lam-ran").innerHTML = `ran: <b>1.05 to 1.45</b> · you are ${inMap ? "inside" : "outside"}`;
+  document.getElementById("g-ran").innerHTML = `ran: <b>1.4 to 2.5</b> · you are ${inScan ? "inside" : "outside"}`;
+  document.getElementById("n-ran").innerHTML = `ran: <b>48 to 288</b>, different sizes for different tests`;
+}
+function render() {
+  document.getElementById("lamv").textContent = S.lam.toFixed(2);
+  document.getElementById("gv").textContent = S.g.toFixed(2);
+  document.getElementById("sv").textContent = S.s.toFixed(1);
+  ranNotes(); drawLadder(); drawPush(); drawWait(); drawChange(); drawStair(); drawRoom(); drawScrap();
+}
+function segment(id, items, get, set) {
+  const seg = document.getElementById(id);
+  items.forEach((it, i) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = it.label; b.id = `${id}-${i}`; b.dataset.value = String(it.value);
+    b.setAttribute("aria-pressed", String(get() === it.value));
+    b.addEventListener("click", () => { set(it.value); seg.querySelectorAll("button").forEach(q => q.setAttribute("aria-pressed", String(q === b))); render(); });
+    seg.appendChild(b);
+  });
+}
+segment("nseg", SIZES.map(n => ({ label: String(n), value: n })), () => S.N, (v) => { S.N = v; });
+segment("cseg", CLABELS.map((c, i) => ({ label: c, value: i })), () => S.c, (v) => { S.c = v; });
+document.getElementById("lam").addEventListener("input", e => { S.lam = Math.round(+e.target.value * 100) / 100; render(); });
+document.getElementById("g").addEventListener("input", e => { S.g = Math.round(+e.target.value * 100) / 100; render(); });
+document.getElementById("s").addEventListener("input", e => { S.s = +e.target.value; render(); });
+// back to the paper's settings: λ = 1.25, g = 1.5, N = 96, with a 12-unit budget and N/2 stores
+document.getElementById("reset").addEventListener("click", () => {
+  Object.assign(S, { lam: 1.25, g: 1.5, N: 96, s: 12, c: 4 });
+  document.getElementById("lam").value = "1.25";
+  document.getElementById("g").value = "1.5";
+  document.getElementById("s").value = "12";
+  document.querySelectorAll("#nseg button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.value === S.N)));
+  document.querySelectorAll("#cseg button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.value === S.c)));
+  render();
+});
+render();
+</script>
+</body></html>

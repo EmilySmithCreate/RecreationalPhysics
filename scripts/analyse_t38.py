@@ -13,6 +13,9 @@ tube's resting band), and w' = w - 200, since nothing is read before sweep 200. 
 - per cell TAIL if k10 >= 3, NO TAIL if k10 <= 1, UNCLEAR otherwise.
 
 Verdict: TWO POPULATIONS if at least two cells read TAIL; ONE POPULATION if every cell reads NO TAIL; UNCLEAR otherwise.
+Only recorded detector crossings enter this historical score. Missing crossings are not
+ordinary right-censored survivors: O108 finds all 190 missing crossings reach f>=0.75.
+The mixture fit describes selected recorded waits; it does not diagnose the mechanism.
 Reported, not scored: the saved graphs of tubes still waiting at 5,000, 10,000 and 20,000 sweeps, read exactly (the
 energy above the start, the local-dimension histogram, whether the wiring is still the perfect tube).
 """
@@ -99,6 +102,8 @@ def main(results="results"):
               "short share %.4f tau %.0f, long tau %.0f, 2lnLR %.1f | longest %.0f (%.1f tau)"
               % (lam, n, len(w), tau, k10, len(w) * math.exp(-10), word, p, t1, t2, lr, max(w), max(w) / tau))
     print("VERDICT T38: %s" % verdict(readings))
+    print("Scope: recorded detector crossings only; missing crossings are not ordinary censored survivors.")
+    print("See O108 and analyse_curled_revision.py for full denominators and snapshot availability.")
 
 
 if __name__ == "__main__":

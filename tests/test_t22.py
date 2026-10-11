@@ -23,3 +23,12 @@ def test_verdict():
     assert a.verdict([(True, False), (True, False)]) == "FALL-BACKS"
     assert a.verdict([(True, False), (False, False)]) == "MIXED"
     assert a.verdict([(False, False), (False, False)]) == "NEITHER"
+
+
+def test_first_exit_includes_replica_that_did_not_convert():
+    rows = [dict(first_exit_sweeps="10", went_through="True"),
+            dict(first_exit_sweeps="90", went_through="False"),
+            dict(first_exit_sweeps="-1", went_through="False"),
+            dict(first_exit_sweeps="", went_through="False")]
+    assert a.observed_first_exits(rows).tolist() == [10.0, 90.0]
+    assert a.observed_first_exits(rows).mean() == 50.0

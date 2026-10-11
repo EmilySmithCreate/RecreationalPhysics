@@ -1,12 +1,12 @@
-"""The local dimension of every vertex, and the connected pieces of a set of vertices.
+"""The local square-count signature of every vertex, and the connected pieces of a set of vertices.
 
-A vertex has four edges and six pairs of edges. A pair that closes a square is a direction that
-has curled back on itself within four steps; a pair that closes none is a direction that stays
-large. The count of the latter is the vertex's local dimension: 2 on the flat sheet, 1 on a
-tube (one side of the torus curled to length 4), 0 in a 4-cube (VISION Update 7, the design
-brief's ladder of dimensions, `test_sheet_tube_cube_ladder`). Here it is computed per vertex,
-which is what PREREGISTRATION.md T7 needs: while a tube uncurls into a sheet, which vertices are
-already sheet and where they are.
+The legacy name local_dimension denotes a square-count signature, not a certified
+geometric dimension. In a valid four-regular hard-core graph, d(v)=6-q(v), where
+q(v) counts incident squares. It is 2 on a flat square torus, 1 on a 4 x L torus
+(even L > 4), and 0 on a 4-cube, but the converses do not hold. In particular,
+d=2 everywhere does not establish a surface or torus. Connected components of
+selected d values describe where that signature occurs, not a unique moving front.
+See ASSUMPTIONS O108 and docs/papers/curled_torus/supplement.md.
 """
 import numpy as np
 from numba import njit
@@ -139,7 +139,8 @@ def pieces_of(adj, members):
     """Connected pieces of the subgraph induced on `members` (a boolean mask over vertices).
 
     Returns the sizes of the pieces, largest first. Used for T7 observable 3: the vertices that
-    have already become sheet, and whether they form one front or many scattered patches.
+    carry the selected square-count signature, and how connected that set is.
+    It does not identify a unique front or certify sheet geometry.
     """
     members = np.asarray(members, dtype=bool)
     n = adj.shape[0]
