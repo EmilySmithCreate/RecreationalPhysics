@@ -65,7 +65,7 @@ work is the mechanism, not another claim of universal exponential conversion wai
   up to date and built. The owner has not read them.
 - **A test that had been failing on GitHub since 10 October** (the entropy-action fit read every saved graph, so
   T60's end states moved its recorded number) is fixed: the script reads only the runs O111 was computed on.
-- **Next record numbers:** ASSUMPTIONS **O119**, VISION **Update 55**, PREREGISTRATION **T61**.
+- **Next record numbers:** ASSUMPTIONS **O120**, VISION **Update 56**, PREREGISTRATION **T62**. T61 (does the burp's heat widen the tube) is registered and run on the laptop; the owner's prediction is owed before it is read.
 
 **Addendum, 10 October 2026 (branch `claude/paper1-plain-language-2026-10-10`, cut from the review
 branch; written 07:20 ET by the clock).**

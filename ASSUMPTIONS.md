@@ -3427,6 +3427,21 @@ to the owner's hypothesis or a new simulation result.
   - **Owed.** A fresh read-only review of the seam's construction and the fit (rule 12). Whether the verdict word
     is to be read only over patches that do not meet their own image is the owner's to decide.
 
+- **O119 EXACT: the flat tori of N points counted by width. Six around is the exception, and more so the larger the
+  torus (11 October 2026). Complete enumeration; promoted from a sandbox look with a tested script.**
+  (`scripts/exact_flat_torus_widths.py`, `tests/test_flat_torus_widths.py`.)
+  - **Exact.** A flat torus (every edge on exactly two squares, so H = 0 at every λ) is the grid wrapped up by a
+    lattice with N points per cell and no wrap shorter than six. Counting the two-sided wrappings by their shortest
+    wrap: of 47 at 64 points, 8 are six around; of 236 at 192 points, 20 (8.5 %); of 387 at 288, 20 (5.2 %); of
+    1,007 at 1,024, 8 (0.8 %); of 4,079 at 4,096, 8 (0.2 %). The median width is 8, 12, 16, 30 and 58: it grows
+    like the square root of N. Every wrapping of 64 points was built as a graph and checked: valid, flat, and of
+    the counted width.
+  - **Beside O116.** The maps' flat end states are six around in 9,858 of 9,865. The tube ends on the nearest flat
+    torus, not on a usual one. The energy is the same for all of them.
+  - *Ours, unverified.* With named points each wrapping carries the same number of labeled graphs, so a chain that
+    could move among flat tori at no cost would be found wide most of the time. It cannot: leaving a flat torus
+    costs 32. Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

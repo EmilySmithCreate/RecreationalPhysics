@@ -23,3 +23,15 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   Some T37 tubes of 1,024 points and more have far larger shells (far links or melting; O88, O95).
 - 2026-10-11. What does the three-direction slab become when its curled direction is opened everywhere by T54's
   construction? Exactly flat, every point at d = 3, and its shells are the slab's, one step fatter: a slab six thick.
+- 2026-10-11. If the burp's heat stays, does the tube end wider? Sealed tubes of 96 points at lambda = 1.25 with 2
+  down to a quarter of a store per point, then drained and cooled (`sandbox/burp_heat_width.py`, 8 replicas each).
+  With one store per point or more: clean tubes six around, most with one column left curled. With fewer: a few
+  end with flaws and more points at one distance. No clean flat end state wider than six.
+- 2026-10-11. The same at lambda = 1.40 and 1.50, at 192 points, and with a slower drain. More heat per point
+  leaves 16 to 108 units of flaws and none exactly flat.
+- 2026-10-11. Those flawed end states read point by point (`sandbox/burp_heat_room.py`): at lambda = 1.40 with a
+  third of a store per point, 12 to 45 % of points see an endless sheet out to three steps; in a tube none does.
+  A patchwork, wider in places. Promoted the same day as T61, on fresh seeds and with a held-out size.
+- 2026-10-11. Disordered and cooled ten times more slowly than before (400,000 sweeps; started before T61 was
+  registered, finished after). Still none exactly flat: 26 to 61 units of flaws stay. Not a tube any more, and not
+  a clean wide torus either.
