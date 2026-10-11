@@ -28,3 +28,4 @@ t60_*
 # 2026-10-11, 09:22 ET: T60 stage 2 (7 jobs at N = 288, queued 23:15 ET on 10 October from commit c484d2ec); the owner's prediction for it was recorded first (commit 31a7a70c). Also T56 stage 1 (68 jobs) and T57 (16 jobs), both launched 9 October with her predictions on the record; neither has been read.
 t56_*
 t57_*
+# 2026-10-11, 10:55 ET: asking for t60_lam135_n288, the last of T60's seven held-out cells (still running at 09:27 ET).
