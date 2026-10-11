@@ -566,7 +566,11 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    that had finished: T8's long wait was a tube that sat (TRUE WAIT); the 7 % is the looks (HIDDEN EXITS: by the
    move the first exit is 1.005 ± 0.016 of the count, and a look every five sweeps reads it 0.096 ± 0.007 later).
    Stages A2 and B (λ = 1.05) were still running; when they finish, `python scripts/analyse_t59.py` again, then
-   the O entry and the paper's two sentences.*
+   the O entry and the paper's two sentences.* **Read in full the same evening (19:15 and 22:38 ET; O112): the
+   seven long first exits were offered their ways out at the counted rate throughout (OFFERED AS COUNTED), and
+   3,000 fresh first exits at λ = 1.05 are on the count with no slow tail (ON THE COUNT at both sizes). Every
+   gate passed; both of her predictions and all of ours hold. Both editions of paper 1 and the supplement carry
+   it; the far tail at λ = 1.05 is closed as chance.**
    **The λ map a fourth time is PREREGISTRATION T60** (10 October, 18:45 ET; the owner's "Proceed"): T24's grid and
    protocol, fresh seeds, the wait timed with no detector (`first_left`), the bar unchanged (VISION Update 53), and
    a held-out size, N = 288, scored against numbers written from stage 1 alone. Stage 1, 28 Batch jobs
@@ -574,6 +578,10 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    `python scripts/analyse_t60.py`; then `python scripts/analyse_t60.py --write-prediction`, a dated amendment with
    the numbers and the owner's prediction for N = 288, `python scripts/make_t60_configs.py --held-out`, and a
    queue file for stage 2. A red-team pass (rule 12) is owed before paper 1 quotes the verdict.
+   *As of 22:46 ET on 10 October: 27 of the 28 stage-1 cells are fetched and accepted into `results/`; the last,
+   `t60_lam135_n192`, had not finished. Nothing of T60 has been read, and `scripts/analyse_t60.py` is not to be
+   run until all 28 are in (it prints each cell as it goes). To get the last cell: add a comment line to
+   `cloud/fetch/request.txt` and push; then `python scripts/accept_inbox.py --move`.*
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be

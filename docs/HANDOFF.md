@@ -87,10 +87,12 @@ branch; written 07:20 ET by the clock).**
   **Read at 18:29 ET, stages A1 and C only** (PREREGISTRATION T59, "Reading"): T8's long wait at N = 96 read as
   the tube at every look for 78,205 sweeps (TRUE WAIT); at λ = 1.30 the first exit counted by the move is
   1.005 ± 0.016 of the count and a look every five sweeps reads it 0.096 ± 0.007 later, 94 % of that from first
-  exits that came back before the look (HIDDEN EXITS; her prediction and ours hold). **Stages A2 and B were still
-  running** (the laptop, to about 22:00 ET); their files land in `results/t59_*`; run the analyzer again, record
-  the reading and O112, then change paper 1's two sentences (the "within 7 %" and the "motivates an
-  attempt-resolved audit") and rebuild.
+  exits that came back before the look (HIDDEN EXITS; her prediction and ours hold). **Read in full by 22:38 ET
+  (O112):** T22's seven long first exits were offered exits at the counted rate throughout and took none
+  (OFFERED AS COUNTED); 3,000 fresh first exits at λ = 1.05 have means 0.992 ± 0.023 (N = 64) and 0.946 ± 0.031
+  (N = 96) of the count with one beyond 8 mean waits where 1.0 is expected (ON THE COUNT; her "chance" holds).
+  Both editions of paper 1, the supplement, the manifest (57 files) and the blog pages carry it (commit
+  dec10c6e); the marketing branch has the copy.
 - **T60, the λ map a fourth time, pre-registered 10 October, 18:45 ET, at the owner's "Proceed"**
   (`scripts/make_t60_configs.py`, `scripts/analyse_t60.py`, 28 configs `configs/t60_*`,
   `cloud/queue/2026-10-10_t60_stage1.txt`). T24's grid and protocol with fresh seeds; the one repair is the clock:
@@ -99,6 +101,10 @@ branch; written 07:20 ET by the clock).**
   N = 288 is held out; after stage 1 is read, `python scripts/analyse_t60.py --write-prediction`, a dated
   amendment, **her prediction for N = 288**, then `python scripts/make_t60_configs.py --held-out` and a queue file.
   Ours for 288: one front is the criterion at risk at the top of the window. No fifth run is planned.
+  **State at 22:46 ET, 10 October:** the queue workflow succeeded at 19:16 ET; 27 of the 28 cells are fetched,
+  checked and in `results/` (commit c864aac7); `t60_lam135_n192` had not finished after three fetches. **Nothing
+  of T60 has been read.** Do not run `scripts/analyse_t60.py` until all 28 are in. T53's resubmitted cell came
+  with the same fetch and is read (DAMAGED; its window verdict is no longer provisional).
   New in the kernel folder: `graphity.exits.first_exit_clocks` and `offers_until_exit` (T22's chain, draw for
   draw), and `graphity.results.provenance` (the commit and a dirty flag in a run's meta; TASKS, the reviews of
   6 October, item 5, for new runners only so far).
