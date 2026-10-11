@@ -3694,6 +3694,70 @@ numbers for the held-out size are written by the pre-registered rule from the st
 scored against the verdict at L = 16.
 
 
+### Reading of T54, stage 1, 2026-10-11, 10:00 ET by the clock (`python scripts/exact_t54_patch.py results/t54_patch_stage1.csv`)
+
+Stage 1 (L = 8 and 12; computed on 9 October, 06:52 to 07:47 ET) was brought onto this branch from the working
+copy it was computed in; its recorded config equals the committed one. Read with the script's registered fit. Its
+tied values at L = 8 had been seen on 9 October (Amendment 3; VISION Update 49).
+
+**At both sizes ΔH(k) is an exact quadratic with nothing left over, and the two sizes give the same one:**
+ΔH(k) = a·k − b·k², with c = 0, for every k in the fit's range.
+
+| λ | untied: a, b | untied: k*, ΔH* | tied: a, b | tied: k*, ΔH* |
+|---|---|---|---|---|
+| 1.10 | 62.4, 1.6 | 19.5, 608.4 | 52.8, 4.8 | 5.50, 145.2 |
+| 1.15 | 61.6, 2.4 | 12.8, 395.3 | 47.2, 7.2 | 3.28, 77.4 |
+| 1.20 | 60.8, 3.2 | 9.5, 288.8 | 41.6, 9.6 | 2.17, 45.1 |
+| 1.25 | 60.0, 4.0 | 7.5, 225.0 | 36.0, 12.0 | 1.50, 27.0 |
+| 1.40 | 57.6, 6.4 | 4.5, 129.6 | 19.2, 19.2 | 0.50, 4.8 |
+
+*Ours, read off the fitted values and not derived:* untied a = 80 − 16λ and b = 16(λ − 1); tied a = 176 − 112λ and
+b = 48(λ − 1), three times the untied b, as a release of three curling costs per point in place of one would give.
+Stage 1 gives no verdict: the verdict is read at the held-out size.
+
+### Amendment 4 to T54, 2026-10-11, 10:01 ET by the clock, before anything at L = 16 is computed: the held-out prediction, and one ambiguity in the scoring settled
+
+By the rule of 8 October, from the joint fit to L = 8 and 12. The two sizes give identical fits, so every range is
+the ±10 %.
+
+**Tied, "all at the last" (the case the owner's picture needs):**
+
+| λ | predicted verdict at L = 16 | k* (range) | ΔH* (range) |
+|---|---|---|---|
+| 1.10 | CRITICAL PATCH | 5.50 (4.95 to 6.05) | 145.2 (130.7 to 159.7) |
+| 1.15 | CRITICAL PATCH | 3.28 (2.95 to 3.61) | 77.4 (69.6 to 85.1) |
+| 1.20 | CRITICAL PATCH | 2.17 (1.95 to 2.38) | 45.1 (40.6 to 49.6) |
+| 1.25 | CRITICAL PATCH | 1.50 (1.35 to 1.65) | 27.0 (24.3 to 29.7) |
+| 1.40 | FIXED WALL by the verdict words: the fitted peak lies at half a column, so ΔH(k) should fall from k = 1 on | 0.50 (0.45 to 0.55) | 4.8 (4.3 to 5.3) |
+
+**Untied (the control):**
+
+| λ | predicted verdict at L = 16 | k* (range) | ΔH* (range) |
+|---|---|---|---|
+| 1.40 | CRITICAL PATCH | 4.50 (4.05 to 4.95) | 129.6 (116.6 to 142.6) |
+| 1.25 | UNREADABLE AT L = 16 (step 5: k* = 7.5 is more than 7) | 7.50 | 225.0 |
+| 1.20 | UNREADABLE AT L = 16 (k* = 9.5) | 9.50 | 288.8 |
+| 1.15 | UNREADABLE AT L = 16 (k* = 12.8) | 12.83 | 395.3 |
+| 1.10 | UNREADABLE AT L = 16 (k* = 19.5) | 19.50 | 608.4 |
+
+**An ambiguity settled now.** Step 4 scores "L = 16's exact critical patch and barrier" against these ranges. A
+patch's size k is a whole number, and a range of ±10 % around 1.50 or 2.17 holds no whole number, so read as the
+whole k at which ΔH(k) is largest the prediction could not hold whatever L = 16 gives. The critical patch and the
+barrier at L = 16 are therefore read from the same quadratic fitted to L = 16's own exact values over its fit range
+(k ≤ 7): k* = a/(2b) and ΔH* = c + a²/(4b). The whole k at which ΔH(k) is largest, and that largest value, are
+reported beside and not scored. The verdict word is read as Amendment 2 says, from ΔH(k) over the k computed.
+This is our reading of our own rule, written with stage 1 known and nothing at L = 16 computed, and it is
+said here so that a reader can weigh it.
+
+**What is computed next.** `configs/t54_patch_heldout.json`: L = 16, the same five λ, untied and tied, by the same
+script. For the untied λ at which L = 16 is unreadable, step 5 names L = 24 as the held-out size; 1.20 and 1.25
+would fit there (k up to 11) and 1.10 and 1.15 would not. **L = 24 is not computed now**: it is the untied control,
+and at 2,304 points the computation is about a day on the laptop. It is recorded as not run, and the untied verdict
+at those λ stays unread.
+
+The owner's prediction for the held-out size stands as recorded on 9 October: CRITICAL PATCH, untied and tied, with
+a small patch as her lean.
+
 ---
 
 ## T55 (DRAFT, 2026-10-09, 05:12 ET by the clock, before any computation). What are the pieces T51 leaves that no cooling removes? The pieces of two and eight points read from their wiring, exact (paper 2; piece 7; ASSUMPTIONS O104; VISION Update 46)
