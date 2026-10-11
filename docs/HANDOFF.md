@@ -36,7 +36,12 @@ work is the mechanism, not another claim of universal exponential conversion wai
   and ours. The tie as written charges a damaged point nothing, so the tied slab breaks; and the barrier is T54's
   patch, not the single move. Rule 11's four answers are in the O entries; the replacements are hers. T56's
   held-out prediction is "none" and its stage 2 is not queued (ours: do not run it as registered).
-- **T60 stage 2.** Her prediction for N = 288 was recorded at 09:14 ET (as ours), before anything was fetched.
+- **T60 stage 2 is read (11:16 ET; O117; PREREGISTRATION T60, "Reading ... stage 2"): AS PREDICTED AT THE
+  HELD-OUT SIZE, and sharp at N = 288 at every window λ.** The largest converted piece landed within 0.04 of the
+  line at every λ (0.751 against 0.754 at λ = 1.30). Her prediction holds, and ours. Ours, not scored: the same
+  line reaches the 0.70 mark near 350 points, so one front at the top of the window is a property of short tubes.
+  Paper 1 still does not quote T60: the red-team pass comes first. *As it stood that morning:*
+  Her prediction for N = 288 was recorded at 09:14 ET (as ours), before anything was fetched.
   Six of the seven cells are accepted into `results/` and **unread**; `t60_lam135_n288` was still running on
   Batch at 09:27 ET. The analyzer registered before the run reads stage 2 only when all seven are in: when the
   last lands, fetch, accept, `python scripts/analyse_t60.py`, record the reading. Do not open the N = 288 files

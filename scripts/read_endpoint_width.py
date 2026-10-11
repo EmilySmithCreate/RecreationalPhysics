@@ -7,8 +7,9 @@ Why. A tube is a torus four steps around. Its end state counts as flat when ever
 says that growth of both periods has not been measured. Reading T56 on 11 October (`scripts/read_open_shells.py`)
 showed end states that are flat by every count and still long and thin. This script measures the width.
 
-What is read. Every saved final graph of the tube runs T8, T23, T24 and T60 stage 1 (sizes 64 to 192; T60's
-held-out size is left out until it has been read by its own rule). For each graph with H = 0 exactly: its
+What is read. Every saved final graph of the tube runs T8, T23, T24 and T60 (sizes 64 to 192, and T60's held-out
+size 288, which was left out until it had been read by its own rule on 11 October). For each graph with H = 0
+exactly: its
 **width**, the length of the shortest closed path that cannot be shrunk to a point. It is read from the balls: in
 an endless flat sheet the number of points within r steps of a point is 2r^2 + 2r + 1, and on a flat torus the
 count first falls short of that at r = width / 2 (exact for a flat torus: two paths of r steps close a loop of
@@ -31,7 +32,7 @@ from graphity.cqg import surplus, total_squares                   # noqa: E402
 from read_open_shells import shells                               # noqa: E402
 
 RUNS = ("t8_lam*_adj", "t23_lam*_adj", "t24_lam*_adj", "t60_lam*_adj")
-SIZES = (64, 96, 144, 192)            # T60's N = 288 is not read here
+SIZES = (64, 96, 144, 192, 288)       # 288 added 11 October, after T60's held-out size was read by its rule
 
 
 def twisted_tube(length, shift=2):

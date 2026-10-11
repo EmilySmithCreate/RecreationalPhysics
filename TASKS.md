@@ -677,7 +677,9 @@ slab opens into one flat space; T57: too much energy re-curls), and ours failed 
 the flat end states of paper 1's maps are the tube with its seam shifted by two: six around, and no wider (O116).
 The replacements for pieces 5 and 11 are hers. In order:
 
-1. **T60 stage 2, the held-out size.** Her prediction for N = 288 is recorded (PREREGISTRATION T60, 11 October,
+1. **T60 stage 2, the held-out size.** *Read 11 October, 11:16 ET (O117): AS PREDICTED AT THE HELD-OUT SIZE, and
+   sharp at N = 288 at every window λ; her prediction holds, and ours. What follows in this item is how it was
+   left that morning.* Her prediction for N = 288 is recorded (PREREGISTRATION T60, 11 October,
    09:14 ET: as ours). Six of seven cells are accepted and unread; `t60_lam135_n288` was still running at 09:27 ET
    (started 23:17 ET on 10 October). When it lands: push a comment line to `cloud/fetch/request.txt`,
    `python scripts/accept_inbox.py --move`, commit, `python scripts/analyse_t60.py`, the reading, an O entry. The

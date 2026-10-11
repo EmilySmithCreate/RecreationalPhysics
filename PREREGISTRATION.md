@@ -4867,3 +4867,46 @@ Disclosed, what she had been told when she answered: stage 1's verdict and its t
 N = 288; that at λ = 1.30 the recipe's range for (c) crosses the line; that the largest piece falls with size at
 the top of the window (0.93, 0.92, 0.87, 0.83). Nothing of stage 2: when this was written no N = 288 file had been
 fetched (`results/` and `cloud/inbox/` hold none), and the fetch request is pushed after this is committed.
+
+### Reading of T60, stage 2, the held-out size, 2026-10-11, 11:16 ET by the clock (`python scripts/analyse_t60.py`)
+
+All seven N = 288 cells were fetched from Batch and passed `scripts/accept_inbox.py` before anything was read. Six
+had been accepted that morning and left unread, because the analyzer written before the run reads stage 2 only
+when all seven are in; the last, at λ = 1.35, arrived at 10:56 ET. The owner's prediction for this size had been
+recorded at 09:14 ET.
+
+**AS PREDICTED AT THE HELD-OUT SIZE. Sharp at N = 288 at every window λ, 1.05 to 1.30. The owner's prediction
+holds, and ours.**
+
+| λ | (a″) CV (band 0.758 to 1.379) | (b): measured; predicted (range) | (c): measured; predicted (range) | mean wait over τ: measured; predicted (range) | decays ending flat, of 120 |
+|---|---|---|---|---|---|
+| 1.05 | 0.943 | 1.000; 0.999 (0.969 to 1) | 0.969; 0.980 (0.880 to 1) | 0.995; 1.02 (0.69 to 1.35) | 120 |
+| 1.10 | 1.072 | 0.999; 1.000 (0.970 to 1) | 0.959; 0.965 (0.865 to 1) | 1.041; 1.08 (0.73 to 1.42) | 117 |
+| 1.15 | 1.030 | 0.999; 0.999 (0.969 to 1) | 0.948; 0.949 (0.849 to 1) | 0.987; 1.05 (0.71 to 1.38) | 113 |
+| 1.20 | 0.984 | 0.998; 1.000 (0.970 to 1) | 0.911; 0.942 (0.842 to 1) | 0.946; 1.08 (0.73 to 1.42) | 112 |
+| 1.25 | 0.984 | 0.996; 0.996 (0.966 to 1) | 0.813; 0.850 (0.750 to 0.950) | 0.862; 1.08 (0.74 to 1.43) | 98 |
+| 1.30 | 0.943 | 0.986; 0.997 (0.967 to 1) | 0.751; 0.754 (0.654 to 0.854) | 0.976; 1.04 (0.71 to 1.37) | 72 |
+
+Gates 2 and 3′ pass in all seven cells, and every tube left.
+
+- **The predictions.** The owner's, as ours of 10 October: (a″) and (b) hold at every window λ: **holds.** (c), one
+  front, the criterion at risk at the top of the window: it held, by 0.05 at λ = 1.30 (0.751 against the line of
+  0.70) and by 0.11 at 1.25. Neither prediction said on which side it would land.
+- **The edge at this size, described and not scored** (the edge verdict is stage 1's). At λ = 1.35 the N = 288 cell
+  is not sharp: its largest piece holds 0.557, 18 of 120 decays end flat, and 114 of 120 have more than one piece
+  at a quarter conversion (80 of 120 at 1.30).
+- **Described, not scored.** The mean wait by the look is 0.86 of τ at λ = 1.25, and 0.95 to 1.04 at the other
+  five. With 120 memoryless waits the standard error is 0.09, so it is one and a half to two errors low. The exact
+  release per point is 0.2000 at λ = 1.05 and 1.143 at 1.30, against 0.2 and 1.2.
+
+**What it says.** The straight line through four sizes carried to a tube half as long again: the largest converted
+piece landed within 0.04 of the line at every λ, and at 1.30 within 0.003. The size claim as registered holds at
+the held-out size. **What the same line says beyond it (ours, not scored, not a registered claim):** at λ = 1.30
+the largest piece falls by about 0.08 for every hundred points of tube, so the line reaches the 0.70 mark near 350
+points. One front at the top of the window is a property of short tubes, as ours said before stage 1, and much
+longer tubes are known to open from several places (T37, T51). Nothing here says the window stays sharp at every
+length.
+
+**T60 in one line:** gates passed; SHARP ACROSS THE WINDOW; BREAK-UP BEGINS AT THE EDGE; AS PREDICTED AT THE
+HELD-OUT SIZE, and sharp there at every window λ. The owner's predictions hold, and ours. It is a fourth attempt,
+with three inconclusive runs beside it, and a red-team pass is owed before paper 1 quotes it.

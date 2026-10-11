@@ -3373,9 +3373,37 @@ to the owner's hypothesis or a new simulation result.
     two. Widening would need heat that stays (as in T48) or a drive the energy does not contain. Whether the two
     possible twists, one each way, meeting along a tube that opened from two places, is what leaves a knot (O107)
     is a question this raises and nothing here answers.
+  - *Addendum, 11 October 2026, 11:22 ET by the clock:* T60's held-out size was read by its own rule at 11:16 ET
+    (O117), and the reader was then run on it: all 650 exactly flat end states at N = 288 have width 6. Over the
+    five sizes, 9,858 of 9,865.
   - **Owed.** Paper 1 must say what its end states are before it is shown to anyone, and the plain-language
     edition and the programme page with it. The registered runs that read OPENS, ONE SPACE or FLAT keep their
     labels; a width or shell line is to be written into any new registration that uses those words.
+
+- **O117 The λ map a fourth time, the held-out size: AS PREDICTED; the change is sharp at N = 288 at every window λ
+  (T60 stage 2, 11 October 2026, read at 11:16 ET by the clock). Measured, pre-registered; the owner's prediction
+  holds, and ours.** (`scripts/analyse_t60.py`; `results/t60_lam*_n288*`; `configs/t60_heldout_prediction.json`,
+  written from stage 1 alone and committed before stage 2 was queued; her prediction recorded at 09:14 ET, before
+  anything was fetched.)
+  - **Measured.** All six window cells are metastable, pass their gates, have (a″) inside its band (CV 0.943 to
+    1.072) and all three numbers inside the ranges written beforehand. (b) is 0.986 to 1.000. (c), the largest
+    converted piece, is 0.969, 0.959, 0.948, 0.911, 0.813 and 0.751 for λ = 1.05 to 1.30, against the predicted
+    0.980, 0.965, 0.949, 0.942, 0.850 and 0.754. The cell the recipe marked as able to go either way, λ = 1.30, is
+    sharp, 0.05 above the line.
+  - **Described.** At the edge (λ = 1.35) the N = 288 cell is not sharp: its largest piece holds 0.557 and 18 of
+    120 decays end flat. All 650 exactly flat end states at N = 288 have width 6 (O116's reader, run on this size
+    only after it had been read by its own rule): 9,858 of 9,865 over the five sizes.
+  - **What it says, and what it does not.** The registered size claim holds one step beyond the map. The line that
+    predicted it also says where it ends (ours, not scored): the largest piece at λ = 1.30 falls about 0.08 for
+    every hundred points and reaches the 0.70 mark near 350 points. One front at the top of the window is a
+    property of short tubes, and "sharp across the window" is a statement at 64 to 288 points.
+  - **Rule 11.** No registered prediction failed.
+  - **Owed.** The red-team pass (rule 12) before paper 1 quotes the verdict; the brief is
+    `docs/papers/curled_torus/red_team_brief_2026-10-11.md`.
+  - *A slip of process, recorded.* The commit that accepted the seventh cell (a6c3a3db) says "Full suite: 917
+    pass". The run it followed had 916 passes and one failure: the resume test of `tests/test_t52.py`, which hit
+    its own 120-second limit while the laptop was also computing T54. Run alone it passes (10 of 10). GitHub's own run of that commit passed. The
+    commit had been chained after the test command without a check of its exit status.
 
 ## Provenance
 

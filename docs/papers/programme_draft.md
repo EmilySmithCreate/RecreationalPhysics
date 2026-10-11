@@ -23,9 +23,9 @@ broken point, and the barrier to an opening that spreads is a patch, not one mov
 propose. And read from the saved wiring (O116, exploratory, exact for each graph), what the tube of pieces 1 and 2
 opens into is still a tube: 9,208 of 9,215 flat end states are the same tube with its seam shifted by two, six
 steps around where it was four, and no wider at any size. The sharp change, its wall and its exact release stand;
-the picture of a small direction growing large does not. The longer tube of piece 2 is six-sevenths back and
-unread; the author's prediction for it is on the record. A brief for a fresh outside reviewer of paper 1 is
-written. The drafts of papers 5, 6 and 12 were brought up to date. The page (Version 73) says all of this, and that the barrier of piece 5 is read at two sizes with the third computing.
+the picture of a small direction growing large does not. The longer tube of piece 2 was read at 11:16 ET: as
+predicted, and sharp at every setting in the range (O117). A brief for a fresh outside reviewer of paper 1 is
+written. The drafts of papers 5, 6 and 12 were brought up to date. The page (Version 74) says all of this, and that the barrier of piece 5 is read at two sizes with the third computing.
 
 
 **What changed on 10 October.** Paper 1 was revised after the AI review of 9 October: the same results in narrower
@@ -248,6 +248,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026: Piece created.
 
 **Piece 2.**
+- 11 Oct 2026, 11:16 ET: Read: the longer tube (O117). AS PREDICTED AT THE HELD-OUT SIZE: at 288 points the change is sharp at every setting from 1.05 to 1.30, and each number landed inside the range written for it beforehand; the single front at the top of the range held 0.751 against a predicted 0.754 and a line of 0.70. The author's prediction holds, and ours. Ours, not scored: the same straight line reaches the line near 350 points, so the single front at the top of the range belongs to short tubes. The outside review comes before paper 1 quotes any of it.
 - 11 Oct 2026, 09:14 ET: The author's prediction for the longer tube recorded before anything was fetched: as ours (the waits and the two-orders check hold; one front is what is at risk at the top of the range). Six of its seven runs are back and unread; the last was still running. A brief for a fresh outside reviewer is written (`curled_torus/red_team_brief_2026-10-11.md`).
 - 10 Oct 2026, 23:13 ET: Read: the fourth map, its first stage (O113). SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE: the author's standing prediction holds, and ours. With the waits timed without the detector, every setting from 1.05 to 1.30 at every size from 64 to 192 points waits like a nucleus, shows two orders side by side and one front. The numbers for the longer tube (288 points) are written and it is running. Her prediction for it is owed before it is read. The page (Version 71) says so.
 - 10 Oct 2026, 22:46 ET: T59 read in full (O112): at the lowest curling cost the three long waits were tubes that sat, offered their ways out at the counted rate and taking none, and 3,000 fresh tubes show no slow tail. Chance, as the author predicted. Both editions of paper 1 carry it. Of the fourth map, 27 of 28 runs are back from the cloud and none is read until the last is in. The page (Version 70) says so.
