@@ -582,6 +582,12 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    `t60_lam135_n192`, had not finished. Nothing of T60 has been read, and `scripts/analyse_t60.py` is not to be
    run until all 28 are in (it prints each cell as it goes). To get the last cell: add a comment line to
    `cloud/fetch/request.txt` and push; then `python scripts/accept_inbox.py --move`.*
+   **Stage 1 read at 23:13 ET (O113): SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE; her standing
+   prediction holds, and ours.** The numbers for N = 288 are in `configs/t60_heldout_prediction.json` and the
+   registration's amendment; stage 2, 7 Batch jobs, was queued at 23:15 ET
+   (`cloud/queue/2026-10-10_t60_stage2.txt`). **Owed before stage 2 is read: her prediction for N = 288.** Then
+   fetch (`t60_*` is already in the request file; push a comment line), accept, `python scripts/analyse_t60.py`.
+   Then the red-team pass (rule 12), and only then paper 1's sentence on the map.
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be

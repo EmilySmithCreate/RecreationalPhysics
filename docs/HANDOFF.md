@@ -105,6 +105,11 @@ branch; written 07:20 ET by the clock).**
   checked and in `results/` (commit c864aac7); `t60_lam135_n192` had not finished after three fetches. **Nothing
   of T60 has been read.** Do not run `scripts/analyse_t60.py` until all 28 are in. T53's resubmitted cell came
   with the same fetch and is read (DAMAGED; its window verdict is no longer provisional).
+  **Stage 1 read at 23:13 ET, 10 October (O113; PREREGISTRATION T60, "Reading"): SHARP ACROSS THE WINDOW, and
+  BREAK-UP BEGINS AT THE EDGE.** The memoryless check holds in all 28 cells with the new clock; T24's three window
+  failures do not recur. The numbers for N = 288 were written from stage 1 alone and committed (c484d2ec) and
+  stage 2 was queued in the same push. **Her prediction for N = 288 is owed before stage 2 is read.** Paper 1 does
+  not yet say any of this: it waits for stage 2 and for a red-team pass by a fresh read-only reviewer (rule 12).
   New in the kernel folder: `graphity.exits.first_exit_clocks` and `offers_until_exit` (T22's chain, draw for
   draw), and `graphity.results.provenance` (the commit and a dirty flag in a run's meta; TASKS, the reviews of
   6 October, item 5, for new runners only so far).
@@ -185,7 +190,7 @@ branch; written 07:20 ET by the clock).**
     at `main`, which lacks this branch's files until it is merged.
   - *Uncommitted when this was written:* the two papers, the web pages and their scripts, awaiting her review.
     T58 and its record are committed.
-- **Next record numbers:** ASSUMPTIONS **O112**, VISION **Update 54**, PREREGISTRATION **T60**.
+- **Next record numbers:** ASSUMPTIONS **O114**, VISION **Update 54**, PREREGISTRATION **T61**.
 
 ## 0. The first ten minutes (as of 9 October 2026)
 

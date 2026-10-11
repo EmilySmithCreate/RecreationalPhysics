@@ -3230,6 +3230,32 @@ to the owner's hypothesis or a new simulation result.
   - **Also new.** `graphity.results.provenance` writes the commit and a dirty flag into a run's meta (TASKS, the
     reviews of 6 October, item 5); so far only T59's runner calls it.
 
+- **O113 The λ map a fourth time, stage 1: SHARP ACROSS THE WINDOW, and BREAK-UP BEGINS AT THE EDGE (T60, 10 October
+  2026, read at 23:13 ET by the clock). Measured, pre-registered; the owner's standing prediction holds, and ours.
+  The fourth attempt at this verdict.** (`scripts/make_t60_configs.py`, `scripts/analyse_t60.py`,
+  `tests/test_t60.py`; `results/t60_lam*_n{64,96,144,192}*`.)
+  - **Why a fourth.** T8, T23 and T24 were each inconclusive by the letter on the instrument: a memoryless check
+    sized wrongly, an energy gate that compared a warm average with an exact wiring, and then the detector's clock
+    (O44, O52). O109 and T59 showed the clock was the remaining fault. T60 is T24's grid and protocol with fresh
+    seeds and one repair: the wait is the first look at which a decay stops being the tube, with no 200-sweep watch
+    and no threshold, over every decay of a cell. The bar is T23's and T24's (VISION Update 53).
+  - **Measured.** Gates pass in all 28 cells and every tube left. The memoryless check holds in all 28 (CV 0.846
+    to 1.124, band 0.758 to 1.379), including T24's three window failures (λ = 1.25 and 1.30 at N = 64, λ = 1.30
+    at N = 192). In the 24 window cells at least 97.4 % of points are at d ∈ {1, 2} at half conversion and the
+    largest converted piece holds 0.83 to 1.00. At the edge, decays ending flat fall from 0.73 (λ = 1.30) to 0.50
+    (1.35) and decays in more than one piece at a quarter conversion rise from 0.40 to 0.69.
+  - **Described, not scored.** The largest piece falls with size at the top of the window (λ = 1.30: 0.93, 0.92,
+    0.87, 0.83 at N = 64 to 192), and at λ = 1.35 the N = 192 cell falls under the line (0.68). The mean wait by the
+    look is 1.06 of the count over the window, the lag T59 measured for a look every five sweeps.
+  - **What it changes.** Piece 2's status: the window verdict exists. Paper 1 may say so only as a fourth attempt
+    with the three earlier runs beside it, and after a red-team pass (rule 12), which is owed.
+  - **The size claim is not yet scored (rule 14).** Numbers for N = 288 were written from stage 1 alone
+    (`configs/t60_heldout_prediction.json`; PREREGISTRATION T60, amendment of 23:14 ET) and stage 2 was queued. At
+    λ = 1.30 the straight line puts the largest piece at 0.754 with a range that crosses 0.70. *Ours, said before
+    stage 1:* one front is the criterion at risk in a longer tube, because the first exit comes at the same rate
+    per sweep at every length while a front needs more sweeps to cross.
+  - **Rule 11.** No registered prediction failed.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
