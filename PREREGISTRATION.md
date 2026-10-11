@@ -4588,3 +4588,31 @@ same; the other four left before one stretch was over and have nothing to score.
 behind "three classes, one census" did not fail, and no long wait was a torus that had found a place with fewer
 exits. Each long wait is a run of acceptance draws that all fell above the threshold. Whether such runs come more
 often than independent draws make them is what stage B measures.
+
+### Reading of T59, stage B, 2026-10-10, 22:38 ET by the clock (`python scripts/analyse_t59.py`)
+
+All 54 jobs finished at 22:37 ET with no file left partial. Read after the owner's prediction (18:17 ET).
+
+**ON THE COUNT at both sizes. P1 and P2 hold. The owner's prediction (chance) holds, and ours.**
+
+| N | fresh tubes | mean first exit by the move, over the count | later than 4, 6, 8, 10 mean waits | one memoryless population expects | longest |
+|---|---|---|---|---|---|
+| 64 | 2,000 | 0.992 ± 0.023 | 36, 7, 1, 0 | 36.6, 5.0, 0.67, 0.09 | 9.0 |
+| 96 | 1,000 | 0.946 ± 0.031 | 21, 2, 0, 0 | 18.3, 2.5, 0.34, 0.05 | 7.5 |
+
+Registered: the mean within 0.07 of 1 at N = 64 and within 0.10 at N = 96; at most 4 and at most 3 first exits later
+than 8 mean waits. Every tube left before its cap. T22's own frequency of very long first exits would have put about
+50 and 25 beyond 8 mean waits; there is 1 in 3,000.
+
+Described, not scored: the same tubes read by a look every five sweeps run later than the move by 0.094 ± 0.009 of
+the count at N = 64 and 0.076 ± 0.015 at N = 96, all of it from tubes whose first exit came back before a look (198
+of 2,000 and 64 of 1,000).
+
+**What it says.** Counted by the move, the first exit at λ = 1.05 is one memoryless population on the count, with no
+slow tail. T22's two first exits near 9.7 mean waits, and T8's wait of 9.4, were each a torus that sat as a torus
+(A1), was offered its exits at the counted rate throughout (A2), and took none: rare runs of draws, not a property of
+the chain. Worked out after seeing them, two such first exits among T22's 80 had a chance of about 1 in 70,000;
+that number is reported, and the fresh sample is the reason it is read as chance and not as a fault.
+
+**T59 in one line:** gates passed; A1 TRUE WAIT; A2 OFFERED AS COUNTED; B ON THE COUNT at both sizes; C HIDDEN
+EXITS. All of ours hold, and both of the owner's.

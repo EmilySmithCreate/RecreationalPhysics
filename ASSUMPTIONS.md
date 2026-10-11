@@ -1192,6 +1192,8 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     in the torus's family, so a stickier member of it is not the explanation as far as we have looked. Chance, or
     something not identified that slows some runs; open. It accounts for part, not all,
     of the map's excess at λ = 1.05 (the other cells stay 3 to 27 % above without their largest wait).
+    *Read 10 October 2026 (O112; PREREGISTRATION T59): chance. Each of the three was a torus that sat, offered its exits at the
+    counted rate throughout, and 3,000 fresh first exits counted by the move show no slow tail.*
   - **Relic position, named test.** Rotating each T11 relic through every column with the start held fixed: mean
     distance 4.17 against 4.00 (N = 64, 36 runs, p = 0.67) and 6.38 against 6.00 (N = 96, 28 runs, p = 0.59).
   - **Paper 1 also corrected on the way:** Table 1's N = 192 rerun (1428 / 1.19 / 0.995 / 0.92) had been left as
@@ -3180,6 +3182,50 @@ to the owner's hypothesis or a new simulation result.
   - **The question for her** (a draft is kept locally and nothing is sent from a session): is S+ compared across
     wirings at a fixed number of nodes the comparison meant by dynamics of the topology; and if so, must the metric
     be solved for each wiring first, or is something else meant to keep the action from rewarding more cells?
+
+- **O112 The two loose ends on paper 1's count, closed: T58's 7 % is the looks, and the long waits at λ = 1.05 were
+  chance (T59, 10 October 2026; read at 18:29, 19:15 and 22:38 ET by the clock). Measured, pre-registered; both of the
+  owner's predictions hold, and all of ours.** (`scripts/run_first_exits.py`, `scripts/make_t59_configs.py`,
+  `scripts/analyse_t59.py`; `graphity.exits.first_exit_clocks` and `offers_until_exit`;
+  `tests/test_first_exit_clocks.py`, `tests/test_t59.py`; `results/t59_*`.)
+  - **Why.** The owner asked on 10 October whether closing the two open items on the count would make paper 1 more
+    complete. They were O110's 7 % (timed by a look every five sweeps, T58's first exits ran 1.071 ± 0.017 of the
+    count) and O42's long tail at λ = 1.05 (three waits beyond nine mean waits among 200).
+  - **Exact, going in (ours; arithmetic on a complete enumeration, unreviewed).** The arrangements a waiting torus
+    reaches without changing its squares are three classes at every size from 48 to 288 points, with one census of
+    moves between them (O108; `scripts/analyse_curled_revision.py --neutral`). So the chance of leaving is the same
+    at every attempt, and the first exit is exactly memoryless with the census's mean.
+  - **Measured, stage A1 (TRUE WAIT).** T8's decay 11 at N = 96, replayed from its seed with every column
+    reproduced, read as the torus at every look for 78,205 sweeps (9.4 mean waits). It was a wait, not the detector.
+  - **Measured, stage A2 (OFFERED AS COUNTED).** T22's seven first exits later than four mean waits at λ = 1.05,
+    replayed to the attempt, were offered 2.94 to 3.03 exits of kind A and 1.94 to 2.04 of kind B per sweep in
+    every stretch of 5,000 sweeps, where the count says 3 and 2. The two longest (80,985 and 80,174 sweeps) were
+    offered about 243,000 cheapest exits each and took none, a chance of 6 × 10⁻⁵ apiece. No torus had found a
+    place with fewer ways out.
+  - **Measured, stage B (ON THE COUNT at both sizes; the owner's "chance" holds).** Fresh tubes at λ = 1.05, first
+    exit counted by the move: 2,000 at N = 64, mean 0.992 ± 0.023 of the count, with 36, 7, 1 and 0 later than 4,
+    6, 8 and 10 mean waits (expected 36.6, 5.0, 0.67, 0.09); 1,000 at N = 96, mean 0.946 ± 0.031, with 21, 2, 0, 0
+    (expected 18.3, 2.5, 0.34, 0.05). T22's own frequency would have put about 75 beyond 8 mean waits; there is 1.
+  - **Measured, stage C (HIDDEN EXITS; the owner's prediction holds).** 4,000 fresh tubes at λ = 1.30, N = 64: by
+    the move the mean first exit is 1.005 ± 0.016 of the count; a look every five sweeps reads the same tubes
+    0.096 ± 0.007 later, and 94 % of that gap is first exits that came back before the look (312 tubes).
+  - **What it changes.** O42's item "Unexplained: a long tail at λ = 1.05" is read as chance: rare runs of draws
+    (two such first exits among T22's 80 had a chance of about 1 in 70,000, worked out after seeing them), which a
+    sample forty times larger does not repeat. O110's "whether that accounts for 7 % has not been computed" is
+    answered: it does. Eq. (2) is now checked by the move on 7,000 fresh first exits at two settings and two sizes.
+  - **A by-product, described and not scored.** A look every five sweeps reads the mean first exit late by 9.6 %
+    (λ = 1.30, N = 64), 9.4 % (1.05, 64) and 7.6 % (1.05, 96), because 7.8 %, 9.9 % and 6.4 % of first exits come
+    back before the look, and it leaves the wait memoryless (spread over mean 0.993 against 0.990 by the move;
+    added after the registration, exploratory). So every mean wait in the record that was read by looks (T7, T8,
+    T23, T24, T38, T58, and T60 now running) sits that much above the count for this reason alone. *Ours,
+    unverified:* the share falls with size because the move that undoes an exit is offered about once in N sweeps.
+  - **Not shown.** Why the detected waits of the λ = 1.05 map run 15 to 43 % above the count: the looks account for
+    8 to 9 points of it; the rest is the detector's watch, unread at that setting, or chance in cells of 30. The
+    N = 96 mean, 0.946, is 1.7 standard errors low and inside its registered band; it is reported, not explained.
+    Nothing about sizes above 96, or about interchangeable points.
+  - **Rule 11.** No registered prediction failed, so its four answers are not owed.
+  - **Also new.** `graphity.results.provenance` writes the commit and a dirty flag into a run's meta (TASKS, the
+    reviews of 6 October, item 5); so far only T59's runner calls it.
 
 ## Provenance
 

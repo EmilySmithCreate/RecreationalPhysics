@@ -1,0 +1,26 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T59, stage B (written 2026-10-10, before any run): fresh tubes 550 to 599 at lambda 1.05, N = 96, each run to the first exit that a look every five sweeps sees, with the first exit also counted move by move and by a look every sweep. Named points. Not exploratory.",
+    "name": "t59_lam105_n96_11",
+    "mode": "clocks",
+    "side": [
+      24,
+      4
+    ],
+    "g": 1.5,
+    "lambda": 1.05,
+    "replica_start": 550,
+    "replicas": 50,
+    "max_sweeps": 200000,
+    "look": 5,
+    "seed": 20265900
+  },
+  "config_path": "configs/t59_lam105_n96_11.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T59, written 2026-10-10",
+  "git_commit": "bebb218fdbe77ed9bf7ecc520318376e6859ed78",
+  "git_dirty": false
+}
