@@ -10,12 +10,12 @@ import platform
 import re
 import subprocess
 import sys
-from importlib.metadata import version
+from importlib.metadata import version, PackageNotFoundError
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "docs/papers/curled_torus"
-BASE = "40b1ae68844a72bd73ffdc74d5c385844ab16f17"
+BASE = "5382053a60c4137cd446f83355e2a12177bb94ea"
 
 
 def check_source_and_abstract():
@@ -36,8 +36,13 @@ def manifest():
     files = list(PAPER.glob("*.tex")) + list(PAPER.glob("*.pdf"))
     files += [PAPER / "supplement.md", PAPER / "README.md", PAPER / "plain_language_README.md"] + list(PAPER.glob("*.py"))
     files += list(PAPER.glob("*_2026-10-09.log")) + [PAPER / "arxiv_abstract.txt"]
+    files += [PAPER / name for name in (
+        "endpoint_geometry_2026-10-11.json", "t60_wait_criterion_2026-10-11.json",
+        "review_corrections_2026-10-11.md", "pytest_2026-10-11.log")]
     files += [ROOT / name for name in (
         "ASSUMPTIONS.md", "scripts/analyse_curled_revision.py", "scripts/build_curled_paper.py",
+        "scripts/read_endpoint_geometry.py", "scripts/audit_t60_wait_criterion.py",
+        "tests/test_endpoint_geometry.py", "tests/test_main_nerd_pages.py", "scripts/analyse_t60.py",
         "scripts/exact_torus_level.py", "scripts/analyse_paper_stats.py", "scripts/analyse_t38.py",
         "scripts/plot_paper_fig1.py", "scripts/plot_paper_fig_lambda.py", "scripts/plot_paper_fig_tori.py",
         "scripts/run_sealed_tube.py", "src/graphity/sealed.py", "tests/test_curled_revision.py",
@@ -66,10 +71,16 @@ def manifest():
             path.write_text(text, encoding="utf-8", newline="\n")
     hashes = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
               for p in sorted(set(files))}
-    payload = dict(base_source_and_data_commit=BASE, release_date="2026-10-10",
+    def installed_version(name):
+        try:
+            return version(name)
+        except PackageNotFoundError:
+            return None  # --manifest-only can retain existing, hashed figures without matplotlib
+
+    payload = dict(base_source_and_data_commit=BASE, release_date="2026-10-11",
                    status="Reader manuscript and accompanying computational materials",
                    analysis_environment=dict(python=platform.python_version(),
-                       packages={name: version(name) for name in
+                       packages={name: installed_version(name) for name in
                                  ("numpy", "scipy", "numba", "igraph", "networkx", "matplotlib")}),
                    provenance_limit="Original execution commits are not consistently recorded in run metadata",
                    sha256=hashes)

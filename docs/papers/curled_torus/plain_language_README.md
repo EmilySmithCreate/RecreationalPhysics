@@ -1,5 +1,14 @@
 # Plain-language edition
 
+**Current revision: 11 October 2026.** Review [the corrections](review_corrections_2026-10-11.md)
+before the earlier drafting notes below. The PDF now has 34 pages and 32 figures, including a
+new seam diagram. Chapter 6 reports reconstructed narrow endpoints and distinguishes tori,
+disconnected surfaces and Klein bottles. Chapter 9 includes T60 and the held-out size.
+The conclusion separates first escape, committed conversion and large-scale geometric opening.
+Both editions and the supplement include these corrections; sources and PDFs are synchronized.
+
+## Earlier drafting notes (historical)
+
 Read [paper_plain_language.pdf](paper_plain_language.pdf). It is a standalone explanation of
 paper 1 for readers without a physics background, rebuilt on 9 October 2026 around one
 narrative: we live in flat space and cannot rerun its birth; a published model of space made

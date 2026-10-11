@@ -3405,6 +3405,44 @@ to the owner's hypothesis or a new simulation result.
     its own 120-second limit while the laptop was also computing T54. Run alone it passes (10 of 10). GitHub's own run of that commit passed. The
     commit had been chained after the test command without a check of its exit status.
 
+## O118. Retrospective independent endpoint and manuscript audit (11 October 2026)
+
+**Ours, computationally checked; physical interpretation unverified.** Prepared with OpenAI
+Codex on base `5382053a`. This is an AI audit, not independent human peer review. New endpoint
+analysis is retrospective and does not change original registration verdicts. The reader and
+known-surface controls are `scripts/read_endpoint_geometry.py` and
+`tests/test_endpoint_geometry.py`; detailed selection, algorithm and limitations are in the
+11 October supplement addendum. Per-input hashes and certificates are in
+`docs/papers/curled_torus/endpoint_geometry_2026-10-11.json`.
+
+All 120 original T8 lambda=1.05 endpoints reconstruct as narrow square-grid tori with shortest
+noncontractible loop six and shortest independent loop N/4. Among 3,521 reached, zero-energy
+T60 saved final endpoints, 3,446 are narrow tori, 73 disconnected surfaces and two Klein bottles.
+The two nonreached rows are outside that selection even though their settled graphs also have
+zero energy. Width alone does not certify one torus. The surface test explicitly checks cyclic
+vertex links; torus lengths follow a full lattice and adjacency reconstruction.
+
+**Previous claim → correction:** endpoint periods were unmeasured → reconstructed original
+endpoints remain narrow → local flatness is insufficient for two large directions in this
+sample → future claims of macroscopic opening must preregister global geometry measures and
+a held-out size. This does not negate wider-shell outcomes in later six-link experiments,
+whose conditions and denominators differ.
+
+**Diagnostic and interpretation corrections:** T60 passes its finite-sample criteria and frozen
+held-out prediction; the first three maps remain inconclusive. T24's residual-wait CV criterion
+also passes on the new 24-cell smaller-size window, so the later pass is not uniquely evidence
+for clock repair. The n=120 calibrated CV interval starts at 0.7577404651, not the printed 0.756;
+no verdict changes. Lambda > 1 supplies a positive ideal energy gap, not a physical derivation
+or proof of thermodynamic first order. The 12-unit bound concerns escape under the stated move
+set, not a measured commitment barrier. No-stall observations do not exclude coexistence;
+the sealed runs do not establish reservoir equilibration. No claim of a wholly error-free
+manuscript follows from this audit.
+
+The Paper 1 sources and abstracts are revised accordingly; raw results and historical
+registrations are unchanged. Review order and scope are in `review_corrections_2026-10-11.md`
+beside the manuscripts. The prior disclosure below describes the original drafting; these
+11 October corrections and their checker were prepared with OpenAI Codex.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
