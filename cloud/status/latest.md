@@ -1,10 +1,10 @@
-# Batch queue and results bucket, as of 2026-10-08 21:29 UTC (commit faed377)
+# Batch queue and results bucket, as of 2026-10-11 13:27 UTC (commit bfeccfe)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- none
+- t60_lam135_n288-c484d2e  created 10-11 03:16  started 10-11 03:17  stopped 
 
 ## RUNNABLE
 - none
@@ -139,6 +139,87 @@ until a person downloads, checks and commits them.
 - t53_l72_lam140_g25-4eb5afa  created 10-05 19:20  started 10-06 10:01  stopped 10-06 23:37
 - t53_l72_lam140_g30-4eb5afa  created 10-05 19:20  started 10-06 10:04  stopped 10-06 22:58
 - t53_l72_lam140_g35-4eb5afa  created 10-05 19:20  started 10-06 10:09  stopped 10-06 23:41
+- t53_l72_lam125_g30-72fef92  created 10-09 08:55  started 10-09 08:56  stopped 10-09 20:13
+- t56_slab_l8_lam110_g15-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:18
+- t56_slab_l8_lam110_g20-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:08
+- t56_slab_l8_lam110_g25-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:08
+- t56_slab_l8_lam110_g30-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:09
+- t56_slab_l8_lam115_g15-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:31
+- t56_slab_l8_lam115_g20-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:32
+- t56_slab_l8_lam115_g25-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:18
+- t56_slab_l8_lam115_g30-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 13:41
+- t56_slab_l8_lam120_g15-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:12
+- t56_slab_l8_lam120_g20-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 14:29
+- t56_slab_l8_lam120_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 15:44
+- t56_slab_l8_lam120_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 15:21
+- t56_slab_l8_lam125_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 14:32
+- t56_slab_l8_lam125_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 15:14
+- t56_slab_l8_lam125_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 13:51
+- t56_slab_l8_lam125_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 13:28
+- t56_slab_l12_lam110_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 21:04
+- t56_slab_l12_lam110_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:09
+- t56_slab_l12_lam110_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 19:03
+- t56_slab_l12_lam110_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 22:55
+- t56_slab_l12_lam115_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:49
+- t56_slab_l12_lam115_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-10 00:06
+- t56_slab_l12_lam115_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:25
+- t56_slab_l12_lam115_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 21:10
+- t56_slab_l12_lam120_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 21:04
+- t56_slab_l12_lam120_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:17
+- t56_slab_l12_lam120_g25-b41d6c5  created 10-09 10:45  started 10-09 10:46  stopped 10-09 23:18
+- t56_slab_l12_lam120_g30-b41d6c5  created 10-09 10:45  started 10-09 10:46  stopped 10-09 23:39
+- t56_slab_l12_lam125_g15-b41d6c5  created 10-09 10:45  started 10-09 10:46  stopped 10-09 23:27
+- t56_slab_l12_lam125_g20-b41d6c5  created 10-09 10:45  started 10-09 13:29  stopped 10-10 02:15
+- t56_slab_l12_lam125_g25-b41d6c5  created 10-09 10:45  started 10-09 13:42  stopped 10-09 21:02
+- t56_slab_l12_lam125_g30-b41d6c5  created 10-09 10:45  started 10-09 13:51  stopped 10-10 02:47
+- t56_rod_l18_lam110_g15-b41d6c5  created 10-09 10:45  started 10-09 14:30  stopped 10-09 19:19
+- t56_rod_l18_lam110_g20-b41d6c5  created 10-09 10:45  started 10-09 14:33  stopped 10-09 19:22
+- t56_rod_l18_lam110_g25-b41d6c5  created 10-09 10:45  started 10-09 15:09  stopped 10-09 20:52
+- t56_rod_l18_lam110_g30-b41d6c5  created 10-09 10:45  started 10-09 15:09  stopped 10-09 19:20
+- t56_rod_l18_lam115_g15-b41d6c5  created 10-09 10:45  started 10-09 15:10  stopped 10-09 21:07
+- t56_rod_l18_lam115_g20-b41d6c5  created 10-09 10:45  started 10-09 15:13  stopped 10-09 20:53
+- t56_rod_l18_lam115_g25-b41d6c5  created 10-09 10:45  started 10-09 15:15  stopped 10-09 20:27
+- t56_rod_l18_lam115_g30-b41d6c5  created 10-09 10:45  started 10-09 15:19  stopped 10-09 22:04
+- t56_rod_l18_lam120_g15-b41d6c5  created 10-09 10:45  started 10-09 15:19  stopped 10-09 21:13
+- t56_rod_l18_lam120_g20-b41d6c5  created 10-09 10:45  started 10-09 15:21  stopped 10-09 21:02
+- t56_rod_l18_lam120_g25-b41d6c5  created 10-09 10:45  started 10-09 15:32  stopped 10-09 21:55
+- t56_rod_l18_lam120_g30-b41d6c5  created 10-09 10:45  started 10-09 15:32  stopped 10-09 22:02
+- t56_rod_l18_lam125_g15-b41d6c5  created 10-09 10:45  started 10-09 15:45  stopped 10-09 21:22
+- t56_rod_l18_lam125_g20-b41d6c5  created 10-09 10:45  started 10-09 19:04  stopped 10-10 01:22
+- t56_rod_l18_lam125_g25-b41d6c5  created 10-09 10:45  started 10-09 19:19  stopped 10-10 00:08
+- t56_rod_l18_lam125_g30-b41d6c5  created 10-09 10:45  started 10-09 19:20  stopped 10-10 01:44
+- t56_rod_l36_lam110_g15-b41d6c5  created 10-09 10:45  started 10-09 19:22  stopped 10-10 06:19
+- t56_rod_l36_lam110_g20-b41d6c5  created 10-09 10:45  started 10-09 20:15  stopped 10-10 07:11
+- t56_rod_l36_lam110_g25-b41d6c5  created 10-09 10:46  started 10-09 20:29  stopped 10-10 10:38
+- t56_rod_l36_lam110_g30-b41d6c5  created 10-09 10:46  started 10-09 20:52  stopped 10-10 11:08
+- t56_rod_l36_lam115_g15-b41d6c5  created 10-09 10:46  started 10-09 20:54  stopped 10-10 10:41
+- t56_rod_l36_lam115_g20-b41d6c5  created 10-09 10:46  started 10-09 21:03  stopped 10-10 09:59
+- t56_rod_l36_lam115_g25-b41d6c5  created 10-09 10:46  started 10-09 21:03  stopped 10-10 09:55
+- t56_rod_l36_lam115_g30-b41d6c5  created 10-09 10:46  started 10-09 21:04  stopped 10-10 08:36
+- t56_rod_l36_lam120_g15-b41d6c5  created 10-09 10:46  started 10-09 21:05  stopped 10-10 11:23
+- t56_rod_l36_lam120_g20-b41d6c5  created 10-09 10:46  started 10-09 21:08  stopped 10-10 09:59
+- t56_rod_l36_lam120_g25-b41d6c5  created 10-09 10:46  started 10-09 21:11  stopped 10-10 08:15
+- t56_rod_l36_lam120_g30-b41d6c5  created 10-09 10:46  started 10-09 21:14  stopped 10-10 12:13
+- t56_rod_l36_lam125_g15-b41d6c5  created 10-09 10:46  started 10-09 21:23  stopped 10-10 10:53
+- t56_rod_l36_lam125_g20-b41d6c5  created 10-09 10:46  started 10-09 21:55  stopped 10-10 11:13
+- t56_rod_l36_lam125_g25-b41d6c5  created 10-09 10:46  started 10-09 22:03  stopped 10-10 10:50
+- t56_rod_l36_lam125_g30-b41d6c5  created 10-09 10:46  started 10-09 22:04  stopped 10-10 12:51
+- t56_slab_l8_lam120_g20_untied-b41d6c5  created 10-09 10:46  started 10-09 22:56  stopped 10-10 03:42
+- t56_slab_l8_lam120_g25_untied-b41d6c5  created 10-09 10:46  started 10-09 23:10  stopped 10-10 03:48
+- t56_slab_l12_lam120_g20_untied-b41d6c5  created 10-09 10:46  started 10-09 23:18  stopped 10-10 12:14
+- t56_slab_l12_lam120_g25_untied-b41d6c5  created 10-09 10:46  started 10-09 23:19  stopped 10-10 11:55
+- t57_tied_packed_lam110_n216-624a5dd  created 10-09 11:27  started 10-09 23:25  stopped 10-10 04:15
+- t57_tied_packed_lam110_n512-624a5dd  created 10-09 11:27  started 10-09 23:27  stopped 10-10 14:12
+- t57_tied_spread_lam110_n216-624a5dd  created 10-09 11:27  started 10-09 23:40  stopped 10-10 04:13
+- t57_tied_spread_lam110_n512-624a5dd  created 10-09 11:27  started 10-09 23:50  stopped 10-10 14:19
+- t57_tied_packed_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 00:06  stopped 10-10 04:47
+- t57_tied_packed_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 00:09  stopped 10-10 13:07
+- t57_tied_spread_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 01:23  stopped 10-10 05:26
+- t57_tied_spread_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 01:45  stopped 10-10 16:42
+- t57_untied_packed_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 02:15  stopped 10-10 04:14
+- t57_untied_packed_lam110_n512-624a5dd  created 10-09 11:27  started 10-10 02:48  stopped 10-10 08:50
+- t57_untied_spread_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 03:42  stopped 10-10 05:41
+- None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
 
 ## FAILED
 - t53_l72_lam125_g30-4eb5afa  created 10-05 19:20  started   stopped 10-06 09:52
@@ -534,11 +615,130 @@ until a person downloads, checks and commits them.
 - t53_l72_lam125_g15/t53_l72_lam125_g15.csv  (2026-10-06 19:25:40, 184538 bytes)
 - t53_l72_lam125_g20/t53_l72_lam125_g20.csv  (2026-10-06 22:31:55, 209195 bytes)
 - t53_l72_lam125_g25/t53_l72_lam125_g25.csv  (2026-10-06 21:51:10, 211171 bytes)
+- t53_l72_lam125_g30/t53_l72_lam125_g30.csv  (2026-10-09 20:13:29, 214975 bytes)
 - t53_l72_lam125_g35/t53_l72_lam125_g35.csv  (2026-10-06 22:42:36, 209052 bytes)
 - t53_l72_lam140_g15/t53_l72_lam140_g15.csv  (2026-10-06 21:19:58, 226033 bytes)
 - t53_l72_lam140_g20/t53_l72_lam140_g20.csv  (2026-10-06 18:01:37, 227157 bytes)
 - t53_l72_lam140_g25/t53_l72_lam140_g25.csv  (2026-10-06 23:36:54, 225799 bytes)
 - t53_l72_lam140_g30/t53_l72_lam140_g30.csv  (2026-10-06 22:58:26, 215835 bytes)
 - t53_l72_lam140_g35/t53_l72_lam140_g35.csv  (2026-10-06 23:40:49, 209976 bytes)
+- t56_rod_l18_lam110_g15/t56_rod_l18_lam110_g15.csv  (2026-10-09 19:18:49, 238857 bytes)
+- t56_rod_l18_lam110_g20/t56_rod_l18_lam110_g20.csv  (2026-10-09 19:21:41, 238971 bytes)
+- t56_rod_l18_lam110_g25/t56_rod_l18_lam110_g25.csv  (2026-10-09 20:51:47, 240165 bytes)
+- t56_rod_l18_lam110_g30/t56_rod_l18_lam110_g30.csv  (2026-10-09 19:19:37, 247691 bytes)
+- t56_rod_l18_lam115_g15/t56_rod_l18_lam115_g15.csv  (2026-10-09 21:07:33, 240465 bytes)
+- t56_rod_l18_lam115_g20/t56_rod_l18_lam115_g20.csv  (2026-10-09 20:53:17, 240531 bytes)
+- t56_rod_l18_lam115_g25/t56_rod_l18_lam115_g25.csv  (2026-10-09 20:27:24, 244977 bytes)
+- t56_rod_l18_lam115_g30/t56_rod_l18_lam115_g30.csv  (2026-10-09 22:03:34, 253507 bytes)
+- t56_rod_l18_lam120_g15/t56_rod_l18_lam120_g15.csv  (2026-10-09 21:13:26, 235660 bytes)
+- t56_rod_l18_lam120_g20/t56_rod_l18_lam120_g20.csv  (2026-10-09 21:01:41, 235978 bytes)
+- t56_rod_l18_lam120_g25/t56_rod_l18_lam120_g25.csv  (2026-10-09 21:54:42, 237625 bytes)
+- t56_rod_l18_lam120_g30/t56_rod_l18_lam120_g30.csv  (2026-10-09 22:02:25, 246066 bytes)
+- t56_rod_l18_lam125_g15/t56_rod_l18_lam125_g15.csv  (2026-10-09 21:22:28, 176272 bytes)
+- t56_rod_l18_lam125_g20/t56_rod_l18_lam125_g20.csv  (2026-10-10 01:22:31, 185791 bytes)
+- t56_rod_l18_lam125_g25/t56_rod_l18_lam125_g25.csv  (2026-10-10 00:08:13, 217701 bytes)
+- t56_rod_l18_lam125_g30/t56_rod_l18_lam125_g30.csv  (2026-10-10 01:44:14, 242205 bytes)
+- t56_rod_l36_lam110_g15/t56_rod_l36_lam110_g15.csv  (2026-10-10 06:18:44, 237249 bytes)
+- t56_rod_l36_lam110_g20/t56_rod_l36_lam110_g20.csv  (2026-10-10 07:11:01, 237329 bytes)
+- t56_rod_l36_lam110_g25/t56_rod_l36_lam110_g25.csv  (2026-10-10 10:37:40, 239592 bytes)
+- t56_rod_l36_lam110_g30/t56_rod_l36_lam110_g30.csv  (2026-10-10 11:08:29, 250063 bytes)
+- t56_rod_l36_lam115_g15/t56_rod_l36_lam115_g15.csv  (2026-10-10 10:40:34, 240465 bytes)
+- t56_rod_l36_lam115_g20/t56_rod_l36_lam115_g20.csv  (2026-10-10 09:59:16, 240633 bytes)
+- t56_rod_l36_lam115_g25/t56_rod_l36_lam115_g25.csv  (2026-10-10 09:54:33, 243070 bytes)
+- t56_rod_l36_lam115_g30/t56_rod_l36_lam115_g30.csv  (2026-10-10 08:36:07, 256715 bytes)
+- t56_rod_l36_lam120_g15/t56_rod_l36_lam120_g15.csv  (2026-10-10 11:22:55, 235641 bytes)
+- t56_rod_l36_lam120_g20/t56_rod_l36_lam120_g20.csv  (2026-10-10 09:58:36, 235942 bytes)
+- t56_rod_l36_lam120_g25/t56_rod_l36_lam120_g25.csv  (2026-10-10 08:15:19, 243619 bytes)
+- t56_rod_l36_lam120_g30/t56_rod_l36_lam120_g30.csv  (2026-10-10 12:12:59, 272545 bytes)
+- t56_rod_l36_lam125_g15/t56_rod_l36_lam125_g15.csv  (2026-10-10 10:52:46, 177753 bytes)
+- t56_rod_l36_lam125_g20/t56_rod_l36_lam125_g20.csv  (2026-10-10 11:13:02, 179122 bytes)
+- t56_rod_l36_lam125_g25/t56_rod_l36_lam125_g25.csv  (2026-10-10 10:49:55, 237999 bytes)
+- t56_rod_l36_lam125_g30/t56_rod_l36_lam125_g30.csv  (2026-10-10 12:51:28, 251603 bytes)
+- t56_slab_l12_lam110_g15/t56_slab_l12_lam110_g15.csv  (2026-10-09 21:03:37, 243681 bytes)
+- t56_slab_l12_lam110_g20/t56_slab_l12_lam110_g20.csv  (2026-10-09 23:09:19, 243681 bytes)
+- t56_slab_l12_lam110_g25/t56_slab_l12_lam110_g25.csv  (2026-10-09 19:03:10, 243970 bytes)
+- t56_slab_l12_lam110_g30/t56_slab_l12_lam110_g30.csv  (2026-10-09 22:55:09, 246515 bytes)
+- t56_slab_l12_lam115_g15/t56_slab_l12_lam115_g15.csv  (2026-10-09 23:49:15, 243681 bytes)
+- t56_slab_l12_lam115_g20/t56_slab_l12_lam115_g20.csv  (2026-10-10 00:05:35, 245002 bytes)
+- t56_slab_l12_lam115_g25/t56_slab_l12_lam115_g25.csv  (2026-10-09 23:24:38, 251183 bytes)
+- t56_slab_l12_lam115_g30/t56_slab_l12_lam115_g30.csv  (2026-10-09 21:10:18, 265348 bytes)
+- t56_slab_l12_lam120_g15/t56_slab_l12_lam120_g15.csv  (2026-10-09 21:03:59, 250933 bytes)
+- t56_slab_l12_lam120_g20/t56_slab_l12_lam120_g20.csv  (2026-10-09 23:17:01, 267653 bytes)
+- t56_slab_l12_lam120_g20_untied/t56_slab_l12_lam120_g20_untied.csv  (2026-10-10 12:13:41, 201873 bytes)
+- t56_slab_l12_lam120_g25/t56_slab_l12_lam120_g25.csv  (2026-10-09 23:18:30, 277489 bytes)
+- t56_slab_l12_lam120_g25_untied/t56_slab_l12_lam120_g25_untied.csv  (2026-10-10 11:55:10, 201911 bytes)
+- t56_slab_l12_lam120_g30/t56_slab_l12_lam120_g30.csv  (2026-10-09 23:39:13, 279629 bytes)
+- t56_slab_l12_lam125_g15/t56_slab_l12_lam125_g15.csv  (2026-10-09 23:26:56, 251994 bytes)
+- t56_slab_l12_lam125_g20/t56_slab_l12_lam125_g20.csv  (2026-10-10 02:15:05, 251339 bytes)
+- t56_slab_l12_lam125_g25/t56_slab_l12_lam125_g25.csv  (2026-10-09 21:02:07, 253416 bytes)
+- t56_slab_l12_lam125_g30/t56_slab_l12_lam125_g30.csv  (2026-10-10 02:47:18, 255029 bytes)
+- t56_slab_l8_lam110_g15/t56_slab_l8_lam110_g15.csv  (2026-10-09 15:18:12, 243681 bytes)
+- t56_slab_l8_lam110_g20/t56_slab_l8_lam110_g20.csv  (2026-10-09 15:08:28, 243689 bytes)
+- t56_slab_l8_lam110_g25/t56_slab_l8_lam110_g25.csv  (2026-10-09 15:08:15, 243723 bytes)
+- t56_slab_l8_lam110_g30/t56_slab_l8_lam110_g30.csv  (2026-10-09 15:09:05, 244458 bytes)
+- t56_slab_l8_lam115_g15/t56_slab_l8_lam115_g15.csv  (2026-10-09 15:31:28, 240481 bytes)
+- t56_slab_l8_lam115_g20/t56_slab_l8_lam115_g20.csv  (2026-10-09 15:31:36, 240807 bytes)
+- t56_slab_l8_lam115_g25/t56_slab_l8_lam115_g25.csv  (2026-10-09 15:18:27, 243654 bytes)
+- t56_slab_l8_lam115_g30/t56_slab_l8_lam115_g30.csv  (2026-10-09 13:41:17, 251398 bytes)
+- t56_slab_l8_lam120_g15/t56_slab_l8_lam120_g15.csv  (2026-10-09 15:12:19, 243764 bytes)
+- t56_slab_l8_lam120_g20/t56_slab_l8_lam120_g20.csv  (2026-10-09 14:29:23, 251526 bytes)
+- t56_slab_l8_lam120_g20_untied/t56_slab_l8_lam120_g20_untied.csv  (2026-10-10 03:41:41, 200265 bytes)
+- t56_slab_l8_lam120_g25/t56_slab_l8_lam120_g25.csv  (2026-10-09 15:44:25, 246592 bytes)
+- t56_slab_l8_lam120_g25_untied/t56_slab_l8_lam120_g25_untied.csv  (2026-10-10 03:48:20, 200265 bytes)
+- t56_slab_l8_lam120_g30/t56_slab_l8_lam120_g30.csv  (2026-10-09 15:20:49, 238029 bytes)
+- t56_slab_l8_lam125_g15/t56_slab_l8_lam125_g15.csv  (2026-10-09 14:32:25, 207228 bytes)
+- t56_slab_l8_lam125_g20/t56_slab_l8_lam125_g20.csv  (2026-10-09 15:14:27, 211517 bytes)
+- t56_slab_l8_lam125_g25/t56_slab_l8_lam125_g25.csv  (2026-10-09 13:50:54, 212225 bytes)
+- t56_slab_l8_lam125_g30/t56_slab_l8_lam125_g30.csv  (2026-10-09 13:28:02, 212867 bytes)
+- t57_tied_packed_lam110_n216/t57_tied_packed_lam110_n216.csv  (2026-10-10 04:14:37, 1703152 bytes)
+- t57_tied_packed_lam110_n512/t57_tied_packed_lam110_n512.csv  (2026-10-10 14:11:31, 1505903 bytes)
+- t57_tied_packed_lam125_n216/t57_tied_packed_lam125_n216.csv  (2026-10-10 04:47:31, 1591603 bytes)
+- t57_tied_packed_lam125_n512/t57_tied_packed_lam125_n512.csv  (2026-10-10 13:07:09, 1380635 bytes)
+- t57_tied_spread_lam110_n216/t57_tied_spread_lam110_n216.csv  (2026-10-10 04:13:31, 1631100 bytes)
+- t57_tied_spread_lam110_n512/t57_tied_spread_lam110_n512.csv  (2026-10-10 14:18:49, 1488777 bytes)
+- t57_tied_spread_lam125_n216/t57_tied_spread_lam125_n216.csv  (2026-10-10 05:25:37, 1554933 bytes)
+- t57_tied_spread_lam125_n512/t57_tied_spread_lam125_n512.csv  (2026-10-10 16:42:20, 1362688 bytes)
+- t57_untied_packed_lam110_n216/t57_untied_packed_lam110_n216.csv  (2026-10-10 04:14:15, 1135599 bytes)
+- t57_untied_packed_lam110_n512/t57_untied_packed_lam110_n512.csv  (2026-10-10 08:50:14, 1052522 bytes)
+- t57_untied_packed_lam125_n216/t57_untied_packed_lam125_n216.csv  (2026-10-10 06:17:40, 1057872 bytes)
+- t57_untied_packed_lam125_n512/t57_untied_packed_lam125_n512.csv  (2026-10-10 10:38:51, 925579 bytes)
+- t57_untied_spread_lam110_n216/t57_untied_spread_lam110_n216.csv  (2026-10-10 05:41:17, 1116037 bytes)
+- t57_untied_spread_lam110_n512/t57_untied_spread_lam110_n512.csv  (2026-10-10 09:59:29, 1068991 bytes)
+- t57_untied_spread_lam125_n216/t57_untied_spread_lam125_n216.csv  (2026-10-10 06:10:50, 1036946 bytes)
+- t57_untied_spread_lam125_n512/t57_untied_spread_lam125_n512.csv  (2026-10-10 11:00:38, 918882 bytes)
+- t60_lam105_n144/t60_lam105_n144.csv  (2026-10-11 00:27:29, 32677 bytes)
+- t60_lam105_n192/t60_lam105_n192.csv  (2026-10-11 00:49:00, 32784 bytes)
+- t60_lam105_n288/t60_lam105_n288.csv  (2026-10-11 08:02:09, 35309 bytes)
+- t60_lam105_n64/t60_lam105_n64.csv  (2026-10-10 23:36:51, 31981 bytes)
+- t60_lam105_n96/t60_lam105_n96.csv  (2026-10-10 23:52:34, 32105 bytes)
+- t60_lam110_n144/t60_lam110_n144.csv  (2026-10-11 00:04:00, 32329 bytes)
+- t60_lam110_n192/t60_lam110_n192.csv  (2026-10-11 00:32:50, 32526 bytes)
+- t60_lam110_n288/t60_lam110_n288.csv  (2026-10-11 06:12:32, 35279 bytes)
+- t60_lam110_n64/t60_lam110_n64.csv  (2026-10-10 23:28:23, 31637 bytes)
+- t60_lam110_n96/t60_lam110_n96.csv  (2026-10-10 23:36:33, 31750 bytes)
+- t60_lam115_n144/t60_lam115_n144.csv  (2026-10-10 23:50:20, 32289 bytes)
+- t60_lam115_n192/t60_lam115_n192.csv  (2026-10-11 00:24:03, 32572 bytes)
+- t60_lam115_n288/t60_lam115_n288.csv  (2026-10-11 05:07:59, 35186 bytes)
+- t60_lam115_n64/t60_lam115_n64.csv  (2026-10-10 23:25:02, 31433 bytes)
+- t60_lam115_n96/t60_lam115_n96.csv  (2026-10-10 23:34:42, 31593 bytes)
+- t60_lam120_n144/t60_lam120_n144.csv  (2026-10-10 23:47:55, 32151 bytes)
+- t60_lam120_n192/t60_lam120_n192.csv  (2026-10-11 00:07:18, 32796 bytes)
+- t60_lam120_n288/t60_lam120_n288.csv  (2026-10-11 06:08:27, 35591 bytes)
+- t60_lam120_n64/t60_lam120_n64.csv  (2026-10-10 23:27:31, 31322 bytes)
+- t60_lam120_n96/t60_lam120_n96.csv  (2026-10-10 23:38:44, 31559 bytes)
+- t60_lam125_n144/t60_lam125_n144.csv  (2026-10-11 00:04:16, 29620 bytes)
+- t60_lam125_n192/t60_lam125_n192.csv  (2026-10-11 00:30:35, 30349 bytes)
+- t60_lam125_n288/t60_lam125_n288.csv  (2026-10-11 07:14:45, 34554 bytes)
+- t60_lam125_n64/t60_lam125_n64.csv  (2026-10-10 23:26:38, 27209 bytes)
+- t60_lam125_n96/t60_lam125_n96.csv  (2026-10-10 23:43:06, 28979 bytes)
+- t60_lam130_n144/t60_lam130_n144.csv  (2026-10-11 00:30:00, 34569 bytes)
+- t60_lam130_n192/t60_lam130_n192.csv  (2026-10-11 01:25:18, 35323 bytes)
+- t60_lam130_n288/t60_lam130_n288.csv  (2026-10-11 10:25:26, 38715 bytes)
+- t60_lam130_n64/t60_lam130_n64.csv  (2026-10-10 23:38:07, 32453 bytes)
+- t60_lam130_n96/t60_lam130_n96.csv  (2026-10-11 00:05:14, 33083 bytes)
+- t60_lam135_n144/t60_lam135_n144.csv  (2026-10-11 01:35:08, 37263 bytes)
+- t60_lam135_n192/t60_lam135_n192.csv  (2026-10-11 02:58:06, 38334 bytes)
+- t60_lam135_n64/t60_lam135_n64.csv  (2026-10-10 23:45:34, 33554 bytes)
+- t60_lam135_n96/t60_lam135_n96.csv  (2026-10-11 00:37:19, 36301 bytes)
 
 ## scratch from runs that died (partial/)
