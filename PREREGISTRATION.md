@@ -4624,3 +4624,64 @@ that number is reported, and the fresh sample is the reason it is read as chance
 
 **T59 in one line:** gates passed; A1 TRUE WAIT; A2 OFFERED AS COUNTED; B ON THE COUNT at both sizes; C HIDDEN
 EXITS. All of ours hold, and both of the owner's.
+
+### Reading of T60, stage 1, 2026-10-10, 23:13 ET by the clock (`python scripts/analyse_t60.py`)
+
+All 28 cells were fetched from Batch and passed `scripts/accept_inbox.py` (the recorded config equal to the
+committed one) before anything was read; the last arrived at 23:13 ET. The owner had not replaced her standing
+prediction.
+
+**The window: SHARP ACROSS THE WINDOW. The edge: BREAK-UP BEGINS AT THE EDGE. The owner's prediction holds on
+both, and ours.** This is the fourth attempt at the window verdict and the first to return one.
+
+Gates 2 and 3′ pass in all 28 cells, and no decay failed to leave its tube. Per λ, over the four sizes (120 decays
+each):
+
+| λ | (a″) CV of the wait (band 0.758 to 1.379) | (b) points at d ∈ {1, 2} at half conversion | (c) largest converted piece | mean wait over τ, by the look | decays ending flat, of 120 |
+|---|---|---|---|---|---|
+| 1.05 | 0.936 to 1.006 | 0.999 to 1.000 | 0.99 to 1.00 | 0.93 to 1.05 | 117 to 120 |
+| 1.10 | 0.868 to 1.034 | 0.999 to 1.000 | 0.98 to 1.00 | 0.96 to 1.19 | 118 to 120 |
+| 1.15 | 0.897 to 1.095 | 0.998 to 0.999 | 0.97 to 0.99 | 0.91 to 1.16 | 113 to 118 |
+| 1.20 | 0.932 to 1.119 | 0.996 to 0.998 | 0.95 to 0.98 | 1.01 to 1.18 | 110 to 115 |
+| 1.25 | 0.846 to 1.004 | 0.990 to 0.994 | 0.90 to 0.98 | 1.01 to 1.20 | 98 to 109 |
+| 1.30 | 0.928 to 1.090 | 0.974 to 0.986 | 0.83 to 0.93 | 0.92 to 1.13 | 82 to 94 |
+| 1.35 (the edge) | 0.858 to 1.124 | 0.947 to 0.962 | 0.68 to 0.86 | 1.05 to 1.10 | 44 to 83 |
+
+- **(a″) holds in all 28 cells**, the three that failed (a′) in T24's window among them: λ = 1.25 at N = 64 (CV
+  0.846), λ = 1.30 at N = 64 (0.968) and at N = 192 (1.057). The band computed by T23's function for 120 waits is
+  0.758 to 1.379; this registration quoted T23's text, 0.756. No cell is near either.
+- **(b) and (c) hold in all 24 window cells**, as in each earlier run. The largest converted piece falls with size
+  at the top of the window: at λ = 1.30 it is 0.93, 0.92, 0.87 and 0.83 at N = 64, 96, 144 and 192.
+- **The edge.** Decays ending flat fall from 0.73 at λ = 1.30 to 0.50 at 1.35 (E1), and those whose converted region
+  is in more than one piece at a quarter conversion rise from 0.40 to 0.69 (E2). At λ = 1.35 the cells at N = 64, 96
+  and 144 are sharp and N = 192 is not: its largest piece holds 0.68, under the 0.70 line.
+- **Not scored.** The mean wait read by a look every five sweeps is 1.06 of τ over the 24 window cells (1.14,
+  0.99, 1.08 and 1.02 at the four sizes, each give or take 0.04), which is the lag T59 measured for such a look.
+  The exact release per point is 0.199 to 0.200 at λ = 1.05 and 1.12 to 1.14 at 1.30 against 0.2 and 1.2, with 26
+  to 37 of 120 decays at 1.30 resting on states other than the flat torus or the ledge, as in T24.
+
+**What it says.** With the wait timed by when a tube first stops being a tube, the change is memoryless, two orders
+sit side by side and one front dominates at every setting from λ = 1.05 to 1.30 and every size from 64 to 192, and
+break-up begins at 1.35. T24's three window failures do not recur, which is what O109 and T59 said of that clock.
+Four runs, three repairs to the instrument, one verdict; the three earlier runs stay on the record as scored.
+
+### Amendment, 2026-10-10, 23:14 ET by the clock: the numbers for the held-out size, written before it runs
+
+`python scripts/analyse_t60.py results --write-prediction` wrote `configs/t60_heldout_prediction.json` from stage 1
+alone, by the recipe fixed above. For N = 288, per window λ (predicted value, with its range):
+
+| λ | mean wait over τ | (b) two orders | (c) one front | the recipe predicts |
+|---|---|---|---|---|
+| 1.05 | 1.02 (0.69 to 1.35) | 0.999 (0.969 to 1) | 0.980 (0.880 to 1) | sharp |
+| 1.10 | 1.08 (0.73 to 1.42) | 1.000 (0.970 to 1) | 0.965 (0.865 to 1) | sharp |
+| 1.15 | 1.05 (0.71 to 1.38) | 0.999 (0.969 to 1) | 0.949 (0.849 to 1) | sharp |
+| 1.20 | 1.08 (0.73 to 1.42) | 1.000 (0.970 to 1) | 0.942 (0.842 to 1) | sharp |
+| 1.25 | 1.08 (0.74 to 1.43) | 0.996 (0.966 to 1) | 0.850 (0.750 to 0.950) | sharp |
+| 1.30 | 1.04 (0.71 to 1.37) | 0.997 (0.967 to 1) | 0.754 (0.654 to 0.854) | sharp |
+
+At λ = 1.30 the line puts the largest piece at 0.754, close to the 0.70 line, and its range crosses it: the recipe
+says sharp there, and a cell inside the range could come out either side. That is what ours said before stage 1
+(one front is the criterion at risk at the top of the window). The file is committed with this amendment, and
+stage 2 (`scripts/make_t60_configs.py --held-out`; `cloud/queue/2026-10-10_t60_stage2.txt`; 7 jobs) is queued in
+the same commit. **The owner's prediction for the held-out size is asked for now and recorded here before stage 2
+is read; stage 2 is not read until then.**
