@@ -691,9 +691,13 @@ The replacements for pieces 5 and 11 are hers. In order:
 4. **The exact prices rule 11 names** (no run): the cheapest breaking move out of the slab under the table against
    the cheapest opening one (O115); the smallest curled patch in flat space against the same number of broken
    points, untied, under the table, and under a table that charges damage (O114).
-5. **T54 to its held-out size.** Stage 1 (L = 8, 12) is computed; its files sit untracked in the main checkout's
-   `results/` and are not on this branch. Bring them over by name, read stage 1, write the L = 16 prediction as a
-   dated amendment, then L = 16.
+5. **T54 to its held-out size.** *Done as far as the launch, 11 October: stage 1 brought onto the branch and read
+   (the same exact quadratic at both sizes); the L = 16 prediction written as Amendment 4 and committed first
+   (ed1970be); L = 16 started on the laptop at 10:08 ET (`configs/t54_patch_heldout.json`; it writes
+   `results/t54_patch_heldout.csv`; a few hours; log in the session scratchpad).* To read: the same quadratic
+   fitted to L = 16's own values over k ≤ 7, its k* and ΔH* against Amendment 4's ranges, and the verdict word from
+   ΔH(k). The untied L = 24 cases are not run. Then a fresh review of the seam's construction (rule 12): T54 decides
+   a branch.
 6. **What widens a flat torus** (the lead from T48: 6 of 15 sealed conversions with the heat kept in place are
    wider). To be pre-registered, with a width line in the registration.
 7. **Whether opposite twists meeting leave a knot** (O116; ours, unverified): read the saved T51 sheets for the

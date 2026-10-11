@@ -41,6 +41,11 @@ work is the mechanism, not another claim of universal exponential conversion wai
   Batch at 09:27 ET. The analyzer registered before the run reads stage 2 only when all seven are in: when the
   last lands, fetch, accept, `python scripts/analyse_t60.py`, record the reading. Do not open the N = 288 files
   before that (`scripts/read_endpoint_width.py` leaves them out for this reason).
+- **T54.** Stage 1 (L = 8, 12) is on this branch and read: ΔH(k) is the same exact quadratic at both sizes. The
+  prediction for the held-out size is Amendment 4 (committed first, ed1970be). **L = 16 has been computing on the
+  laptop since 10:08 ET** (`configs/t54_patch_heldout.json` → `results/t54_patch_heldout.csv`; a `.partial` file
+  beside it means it is still running or was killed; the runner refuses to overwrite). Read it as the amendment
+  says. The untied L = 24 cases are not run.
 - **The red-team brief** for a fresh outside reviewer (rule 12) is
   `docs/papers/curled_torus/red_team_brief_2026-10-11.md`. It gives the questions and where things are, not the
   conclusions; the owner hands it over. Paper 1's sentence on the fourth map and the reader request to the
