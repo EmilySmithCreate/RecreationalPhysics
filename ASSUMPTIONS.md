@@ -3182,6 +3182,13 @@ to the owner's hypothesis or a new simulation result.
     the action has the ingredient that saturates the reward, but too weakly: below λ = 1 is the stretch where
     curling pays and flat space is not the floor (VISION Update 7). At a metric that solves her equations this may
     differ; that is the question.
+  - **Addendum, 11 October 2026, 09:20 ET by the clock: the 445 wirings are now a fixed set.** The script read every
+    saved 64-point graph in `results/`, so when T60's end states were accepted on 10 October the set grew and the
+    fit moved; a test that pins the recorded number failed from that commit on (the automatic test run on GitHub
+    flagged it; it was missed here until the next morning). `scripts/exact_entropy_action.py` now reads only the
+    runs this entry was computed on (T7d, T8, T23, T24, T38), which returns the numbers above exactly. *Exploratory,
+    for the record:* with T60's 64-point end states added (455 wirings, 43 kinds) λ_eff is 0.038, 0.25, 0.45 at
+    c0 = 0.1, 1, 10; nothing said above changes.
   - **The question for her** (a draft is kept locally and nothing is sent from a session): is S+ compared across
     wirings at a fixed number of nodes the comparison meant by dynamics of the topology; and if so, must the metric
     be solved for each wiring first, or is something else meant to keep the action from rewarding more cells?

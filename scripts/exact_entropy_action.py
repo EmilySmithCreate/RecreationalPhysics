@@ -131,13 +131,20 @@ def arrangements(n=64):
             ("%d knots (4-cubes)" % (n // 16), knots)]
 
 
+# The runs whose saved end states O111 was computed on (10 October 2026). Runs saved later are left out, so that
+# the numbers on the record do not move when new results arrive (T60's end states did move them, on 10 October).
+RECORDED_RUNS = ("t7d_", "t8_", "t23_", "t24_", "t38_")
+
+
 def saved_wirings(per_kind=25, n=64):
-    """End states saved by this project's registered runs at N points (results/*_adj), at most `per_kind` of each
-    kind (S - N, X), in file order, with the three rungs of the ladder added. Reading only."""
+    """End states saved by the registered runs in RECORDED_RUNS at N points (results/<run>_adj), at most `per_kind`
+    of each kind (S - N, X), in file order, with the three rungs of the ladder added. Reading only."""
     from graphity.cqg import surplus, total_squares
     results = Path(__file__).resolve().parents[1] / "results"
     kinds = {}
     for path in sorted(results.glob("*_adj/N%d_rep*.npz" % n)):
+        if not path.parent.name.startswith(RECORDED_RUNS):
+            continue
         adj = np.load(path)["adj"]
         if adj.shape != (n, 4):
             continue
