@@ -51,6 +51,9 @@ def manifest():
         "scripts/analyse_t58.py", "tests/test_t58.py", "scripts/make_t58_configs.py",
         "scripts/read_t58_sweeps.py", "tests/test_t58_sweeps.py",
         "scripts/run_tube_decay.py",
+        # 10 October 2026, later: first exits counted by the move, and the long waits at lambda = 1.05 (T59)
+        "scripts/run_first_exits.py", "scripts/analyse_t59.py", "scripts/make_t59_configs.py",
+        "src/graphity/exits.py", "tests/test_first_exit_clocks.py", "tests/test_t59.py",
         "docs/reading/notes/2026-10-10_prior_work_lambda_above_one.md",
         "docs/public/curling_ladder_tube.html")]
     # Normalize release text to the UTF-8/LF representation stored by Git.
