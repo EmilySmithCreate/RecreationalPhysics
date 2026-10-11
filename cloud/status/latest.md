@@ -1,10 +1,10 @@
-# Batch queue and results bucket, as of 2026-10-11 13:27 UTC (commit bfeccfe)
+# Batch queue and results bucket, as of 2026-10-11 16:28 UTC (commit d2497ff)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- t60_lam135_n288-c484d2e  created 10-11 03:16  started 10-11 03:17  stopped 
+- none
 
 ## RUNNABLE
 - none
@@ -738,6 +738,7 @@ until a person downloads, checks and commits them.
 - t60_lam130_n96/t60_lam130_n96.csv  (2026-10-11 00:05:14, 33083 bytes)
 - t60_lam135_n144/t60_lam135_n144.csv  (2026-10-11 01:35:08, 37263 bytes)
 - t60_lam135_n192/t60_lam135_n192.csv  (2026-10-11 02:58:06, 38334 bytes)
+- t60_lam135_n288/t60_lam135_n288.csv  (2026-10-11 14:13:23, 41894 bytes)
 - t60_lam135_n64/t60_lam135_n64.csv  (2026-10-10 23:45:34, 33554 bytes)
 - t60_lam135_n96/t60_lam135_n96.csv  (2026-10-11 00:37:19, 36301 bytes)
 
