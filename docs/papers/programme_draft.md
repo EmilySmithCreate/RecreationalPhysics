@@ -25,7 +25,7 @@ opens into is still a tube: 9,208 of 9,215 flat end states are the same tube wit
 steps around where it was four, and no wider at any size. The sharp change, its wall and its exact release stand;
 the picture of a small direction growing large does not. The longer tube of piece 2 is six-sevenths back and
 unread; the author's prediction for it is on the record. A brief for a fresh outside reviewer of paper 1 is
-written. The drafts of papers 5, 6 and 12 were brought up to date. The page (Version 72) says all of this.
+written. The drafts of papers 5, 6 and 12 were brought up to date. The page (Version 73) says all of this, and that the barrier of piece 5 is read at two sizes with the third computing.
 
 
 **What changed on 10 October.** Paper 1 was revised after the AI review of 9 October: the same results in narrower
