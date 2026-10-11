@@ -2772,6 +2772,9 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     X is stuck; or a window that fails to open at any size with the tie she chooses. **The replacement is hers to
     propose** (rule 11: her ideas first, in her words); none is written here.
 
+  - *Addendum, 10 October 2026, 22:45 ET by the clock:* the one cell that had failed on Batch (L = 72, λ = 1.25,
+    g = 3.0) was resubmitted, fetched and accepted. It reads DAMAGED (7 of 8 replicas; 1 ADVANCES). The window
+    verdict at (72, 1.25) stays ADVANCES ONLY and is no longer provisional; nothing else changes.
 - **O106 EXACT: the single-move walls under the owner's tie, "all at the last", across λ: the slab's wall falls from
   39 to 4 between λ = 1.05 and 1.25 while flat space's stays at 64, so at λ = 1.15 to 1.20 the slab is stuck behind
   13 to 22 with a release of 1.8 to 2.4 per point.** (2026-10-09, 06:30 ET by the clock; `scripts/exact_walls_tie_shape_d.py`

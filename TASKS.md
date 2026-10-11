@@ -624,7 +624,7 @@ four answers are in the O entries and the replacement for piece 5 is hers. In or
    pre-registration; compute L = 8 and 12; write the L = 16 prediction as a dated amendment; then L = 16.
 3. **Restart T52** on the laptop (its run died on 5 October at 66 rows; the runner has no resume, so the scratch
    `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first).
-4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then.
+4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then. *Done 2026-10-10: the cell reads DAMAGED; the window verdict stays ADVANCES ONLY and is no longer provisional (PREREGISTRATION T53, addendum; O105).*
 5. The rest of the 5 and 6 October sections as they stand.
 
 **Added 2026-10-09, 06:15 ET** (VISION Update 47: the tie is "all at the last"; untied is a stepping stone; her shape

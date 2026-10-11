@@ -3530,6 +3530,14 @@ owner's.
 
 ---
 
+#### Addendum, 2026-10-10, 22:45 ET by the clock: the resubmitted cell is in
+
+`t53_l72_lam125_g30`, which failed on Batch before starting and was resubmitted on 9 October, was fetched and
+accepted on 10 October (`scripts/accept_inbox.py`: its recorded config equals the committed one). Read with
+`python scripts/analyse_t53.py`: 7 of its 8 replicas DAMAGED and 1 ADVANCES, so the cell is DAMAGED, like its
+neighbors at g = 3.5 and at λ = 1.40. **The window verdict at L = 72, λ = 1.25 is ADVANCES ONLY, as read on
+9 October, and is no longer provisional.** All 30 cells are now on the record; no verdict of T53 changes.
+
 ## T54 (DRAFT, 2026-10-06, 03:56 ET by the clock, before any computation). The true barrier in three directions: the smallest opened patch of a one-curled torus that grows, exact; then whether a warm bath crosses it (piece 5; ASSUMPTIONS O79, O94, O103 (b); VISION Update 44)
 
 ### Status

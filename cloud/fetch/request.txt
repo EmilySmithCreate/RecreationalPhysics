@@ -23,4 +23,4 @@ t51_*
 t53_*
 # 2026-10-10: T60 stage 1 (28 jobs, submitted 19:16 ET from commit db632d75), the lambda map a fourth time. Not read.
 t60_*
-# 2026-10-10, 22:50 ET: 27 of T60's 28 cells fetched and accepted; asking again for the last, t60_lam135_n192.
+# 2026-10-10, 22:43 ET (corrected from a guessed 22:50; the time of the commit): 27 of T60's 28 cells fetched and accepted; asking again for the last, t60_lam135_n192.
