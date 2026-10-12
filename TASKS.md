@@ -731,7 +731,7 @@ The replacements for pieces 5 and 11 are hers. In order:
     her prediction holds at three prices of four; one end state of 480 clean and wide. The held-out numbers are
     written and N = 384 is queued (`cloud/queue/2026-10-12_t62_stage2.txt`, 10 jobs). Then: fetch `t62_*n384`,
     accept, read, one O entry (O126).* *T63 registered and queued the same day:
-    the same from the curled tube itself (PREREGISTRATION T63; 10 Batch jobs); her prediction given 12 October (WIDENS at every price above zero).* Sandbox looks so far:
+    the same from the curled tube itself (PREREGISTRATION T63; 10 Batch jobs); her prediction given 12 October (WIDENS at every price above zero).* *T63 read 12 October: NOT READ at every price; its control missed a bar of nine tenths that paper 1's own maps do not meet (0.80 to 0.91 end exactly flat). T64 registered and queued the same day: T63's design on fresh seeds, the control's rule written from paper 1's record (PREREGISTRATION T64; 10 Batch jobs; a second attempt). Owed with it: a tested reading of paper 1's saved end states that are not flat, which T63's control suggests are partly wide.* Sandbox looks so far:
     `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
     most runs unfinished or stuck on a flaw).
 

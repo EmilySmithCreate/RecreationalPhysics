@@ -142,3 +142,14 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   units of flaws. mu = 0.10, 0.20 and 0.25: the same, 45 to 83 %, 16 to 74 units. Never fewer than 0.75 squares
   per point. None exactly flat. So with even a small price the curled tube opens straight to mostly wide and
   never visits the narrow tube. Promoted the same day as T63, with the no-price run as its control.
+- 2026-10-12. Seen in T63's control (no price; eight end states; a registered run whose gate failed, so nothing
+  here is evidence): the burps that end on a leftover are not six around. 33 to 92 % of their points see a sheet,
+  and one at 96 points sees 92 % with 20 units of energy left (not read from its wiring). Paper 1's "ends six around" was read from exactly flat
+  end states only. To do: a tested reading of paper 1's saved end states that are not flat (T60 keeps them).
+- 2026-10-12. The same question on paper 1's own saved end states (`sandbox/leftover_width.py`; T60 at lambda = 1.25,
+  120 a size; `sandbox/out/leftover_width.txt`). Exactly flat: every one six around (109, 102, 107, 98, 98 at 64
+  to 288 points). With a leftover (11, 18, 13, 22, 22): mostly wide at the two small sizes (10 of 11; 13 of 18),
+  mostly patchwork at the larger (9 of 13; 14 of 22; 15 of 22, and none wide at 288). By the medians, 27 to 64
+  points see a sheet at every size, so the share falls as the tube gets longer. It looks as if a leftover sits in
+  a wider stretch of roughly fixed size. Not read from positions. Not promoted. It narrows one sentence: "the
+  tube ends six around" is true of the exactly flat end states, eight or nine in ten, and not shown for the rest.
