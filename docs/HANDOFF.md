@@ -23,6 +23,8 @@ endorsement logistics below are not evidence of scientific review. T38 is alread
 its missing detector crossings must not be treated as unconverted survivors. Outstanding
 work is the mechanism, not another claim of universal exponential conversion waits.
 
+**The process changed on 11 October 2026 (VISION Update 55). Read `CLAUDE.md` rules 9 to 11 and 16 to 18 before recording anything: a result is written once (its Reading, and one O entry if it changes what is known); looking happens in `sandbox/`; next VISION number is Update 56.**
+
 **Addendum, 11 October 2026 (the same branch; written 09:50 ET by the clock). Read this first.**
 - **What the tube opens into is a tube** (ASSUMPTIONS O116; VISION Update 54; CLAUDE.md, "Added 2026-10-11").
   Read from the saved wiring, 9,208 of the 9,215 exactly flat end states of T8, T23, T24 and T60 stage 1 are the
@@ -46,7 +48,11 @@ work is the mechanism, not another claim of universal exponential conversion wai
   Batch at 09:27 ET. The analyzer registered before the run reads stage 2 only when all seven are in: when the
   last lands, fetch, accept, `python scripts/analyse_t60.py`, record the reading. Do not open the N = 288 files
   before that (`scripts/read_endpoint_width.py` leaves them out for this reason).
-- **T54.** Stage 1 (L = 8, 12) is on this branch and read: ΔH(k) is the same exact quadratic at both sizes. The
+- **T54 is read at its held-out size (16:01 ET; O118; PREREGISTRATION T54, "Reading ... the held-out size").** The
+  numbers hold exactly; under the tie a finite patch exists at every λ (barriers 145, 77, 45, 27 for λ = 1.10 to
+  1.25); the verdict word is unscored in four rows (the wrapped patch) and FIXED WALL in two. A fresh review of the
+  construction is owed (rule 12). *As it stood that morning:*
+  Stage 1 (L = 8, 12) is on this branch and read: ΔH(k) is the same exact quadratic at both sizes. The
   prediction for the held-out size is Amendment 4 (committed first, ed1970be). **L = 16 has been computing on the
   laptop since 10:08 ET** (`configs/t54_patch_heldout.json` → `results/t54_patch_heldout.csv`; a `.partial` file
   beside it means it is still running or was killed; the runner refuses to overwrite). Read it as the amendment
@@ -59,7 +65,7 @@ work is the mechanism, not another claim of universal exponential conversion wai
   up to date and built. The owner has not read them.
 - **A test that had been failing on GitHub since 10 October** (the entropy-action fit read every saved graph, so
   T60's end states moved its recorded number) is fixed: the script reads only the runs O111 was computed on.
-- **Next record numbers:** ASSUMPTIONS **O117**, VISION **Update 55**, PREREGISTRATION **T61**.
+- **Next record numbers:** ASSUMPTIONS **O120**, VISION **Update 56**, PREREGISTRATION **T62**. T61 (does the burp's heat widen the tube) is registered and run on the laptop; the owner's prediction is owed before it is read.
 
 **Addendum, 10 October 2026 (branch `claude/paper1-plain-language-2026-10-10`, cut from the review
 branch; written 07:20 ET by the clock).**

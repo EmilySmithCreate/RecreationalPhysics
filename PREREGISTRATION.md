@@ -3758,6 +3758,63 @@ at those λ stays unread.
 The owner's prediction for the held-out size stands as recorded on 9 October: CRITICAL PATCH, untied and tied, with
 a small patch as her lean.
 
+### Reading of T54, the held-out size, 2026-10-11, 16:01 ET by the clock (`results/t54_patch_heldout.csv`; the script's own fit lines)
+
+L = 16 was computed on the laptop from 10:08 to 16:00 ET, after Amendment 4 was committed (ed1970be). Its recorded
+config equals the committed one, and all 150 patch states are valid under the hard-core rule.
+
+**The held-out prediction HOLDS at every (λ, tie) at which it is scored.** Fitted to L = 16's own exact values over
+k ≤ 7, the quadratic has exactly the coefficients of stage 1, so k* and ΔH* equal the predicted values. Tied: 5.50
+and 145.2 (λ = 1.10), 3.28 and 77.4 (1.15), 2.17 and 45.1 (1.20), 1.50 and 27.0 (1.25), 0.50 and 4.8 (1.40). Untied:
+4.50 and 129.6 (1.40). The untied λ = 1.10 to 1.25 are UNREADABLE AT L = 16 by step 5, as written beforehand, and
+nothing is scored there.
+
+**The verdict word, read as registered over every k computed (k = 1 to 15), is RISES AGAIN in four of the six
+scored rows and FIXED WALL in two.**
+
+| | λ = 1.10 | 1.15 | 1.20 | 1.25 | 1.40 |
+|---|---|---|---|---|---|
+| tied | RISES AGAIN | RISES AGAIN | RISES AGAIN | FIXED WALL | FIXED WALL |
+| untied | unreadable | unreadable | unreadable | unreadable | RISES AGAIN |
+
+RISES AGAIN is the fourth word of Amendment 2, reported and not scored, and here it has one cause in every row.
+ΔH(k) is the exact quadratic a·k − b·k² for every k from 1 to 14; only the last patch, k = 15, which covers all but
+one row and one column of the sheet and meets its own image, lies above it. So by the letter **the verdict word is
+not scored in those four rows**, for a reason the amendment named in advance (a patch wrapping round the torus) and
+the rule did not exclude. Up to k = 14 their shape is the registered CRITICAL PATCH: ΔH rises and then falls. Its
+largest whole-patch value is 144.0 at k = 5 and 6 (tied, λ = 1.10), 76.8 at k = 3 (1.15), 44.8 at k = 2 (1.20), and
+128.0 at k = 4 and 5 (untied, 1.40).
+
+At λ = 1.25 tied, ΔH(1) = ΔH(2) = 24 and it falls from there: no whole patch stands higher than the first, and the
+fitted peak of 27.0 lies between them, at one and a half columns. By the words that is FIXED WALL. At λ = 1.40 tied
+the first patch costs nothing (ΔH(1) = 0) and every larger one is downhill: FIXED WALL.
+
+**Predictions.** The numbers of Amendment 4 hold, exactly. Its words: FIXED WALL at tied 1.40 **holds**; CRITICAL
+PATCH at tied 1.25 **fails by the letter** (FIXED WALL; ours of Amendment 1 had said "possibly FIXED WALL" there);
+CRITICAL PATCH at tied 1.10, 1.15 and 1.20 and at untied 1.40 is **not scored** (RISES AGAIN). The owner's, CRITICAL
+PATCH with a small patch as her lean: **not scored** at tied 1.10 to 1.20 and untied 1.40, where the shape before
+the wrap is a critical patch, of 5, 3 and 2 columns under the tie; **fails by the letter** at tied 1.25 and 1.40
+(FIXED WALL). NO FINITE PATCH is read nowhere.
+
+**The second reading of "grows", reported.** For patches of 2 to 8 columns the cheapest single switch out of the
+patch state costs 9.6, 8.8 to 10.4, 6.4 to 8.0 and 4.0 under the tie at λ = 1.10 to 1.25 (it is downhill by 22.4
+at 1.40), and 6.0 to 11.2 untied. At λ = 1.10 to 1.20 that is well under the bare slab's cheapest move (30.4, 21.6,
+12.8; O106): the edge of an existing patch moves more easily than the slab does. A whole step from k to k + 1 is
+2k + 1 switches, so these single moves are not comparable with ΔH(k + 1) − ΔH(k) in the way Amendment 2 proposed.
+Which of them extend a patch, and what the barrier is along a path of single switches, is not computed.
+
+**What it says.** Along this construction the barrier does not depend on the size of the sheet: the same exact
+quadratic at L = 8, 12 and 16. Under the owner's tie a finite patch exists at every λ computed, of 5.5, 3.3, 2.2
+and 1.5 columns with barriers of 145, 77, 45 and 27 for λ = 1.10 to 1.25, against flat space's 64. Untied the
+barrier is 608 to 225 over the same λ, and the patch does not fit the sheet. The branch-ending word, NO FINITE
+PATCH, does not appear. *Ours, unverified:* these barriers are why the slab stayed shut in T56's baths at λ ≤ 1.20;
+at 1.25, where the barrier is lowest, it broke instead (O115). The construction is an upper bound along one wiring
+(Amendment 2, Disclosure 1), and a lower path is not excluded.
+
+**Owed.** T54 bears on whether a branch is abandoned, so a fresh read-only reviewer checks the seam's construction
+and the fit before anything is built on these numbers (rule 12). And one repair that is the owner's to make:
+whether the verdict word should be read only over patches that do not meet their own image. Proposed, not enacted.
+
 ---
 
 ## T55 (DRAFT, 2026-10-09, 05:12 ET by the clock, before any computation). What are the pieces T51 leaves that no cooling removes? The pieces of two and eight points read from their wiring, exact (paper 2; piece 7; ASSUMPTIONS O104; VISION Update 46)
@@ -4910,3 +4967,84 @@ length.
 **T60 in one line:** gates passed; SHARP ACROSS THE WINDOW; BREAK-UP BEGINS AT THE EDGE; AS PREDICTED AT THE
 HELD-OUT SIZE, and sharp there at every window λ. The owner's predictions hold, and ours. It is a fourth attempt,
 with three inconclusive runs beside it, and a red-team pass is owed before paper 1 quotes it.
+
+---
+
+## T61. If the burp's heat stays, does the tube come out wider? A sealed tube, drained and cooled, read from its wiring (paper 1; piece 1; the owner's "proceed" of 11 October; ASSUMPTIONS O116; written 2026-10-11, before any run)
+
+### Why
+
+Read from their wiring, the flat end states of the four maps are the tube with its seam shifted by two: six around
+and no wider at any size (O116, O117). Those maps ran in a bath that takes the released energy away at once. The
+owner held paper 1 until it is settled whether the small direction grows. Of three ways it could
+(`sandbox/NOTEBOOK.md`) the first is tested here: the burp's own heat breaks up the new tube and it re-forms wider.
+
+Exact, and known before writing: the energy charges a loop of four and nothing longer, so every flat torus costs
+zero whatever its width, and nothing in the energy pays for widening. The release is 4(λ − 1) per point, 1 and 1.6
+at λ = 1.25 and 1.40, against 32 for the cheapest move out of a flat torus.
+
+### Disclosed: what was looked at first
+
+Under CLAUDE.md rule 16 this registration promotes sandbox looks onto fresh seeds and a held-out size. Ten looks
+came before it (`sandbox/LOG.md`); none of them is evidence. What they showed, at 96 and 192 points with other
+seeds: with one store per point or more the tube ended as a clean tube six around, often with one column left
+curled; with a third or a quarter of a store per point most ended with flaws, none exactly flat, and a minority of
+their points saw a sheet out to three steps (12 to 45 % at λ = 1.40 with a third of a store per point). No end
+state was a clean flat torus wider than six. Counted exactly, six around is 8.5 % of the flat tori of 192 points.
+The thresholds and words below were written with those looks known. Nothing of T61 has been run.
+
+### What will be run
+
+`scripts/run_burp_heat.py` (tests in `tests/test_t61.py`), on the laptop; configs from
+`scripts/make_t61_configs.py`. The tube 4 × L, named points, λ = 1.25 and 1.40. Sealed with C stores, C/N = 2, 1,
+1/2, 1/3 and 1/4, and a spark the size of the wall (12 and 8) in one store. Three spells: sealed for 20,000 sweeps
+(40,000 at N = 384); drained, every store losing 2 % each 100 sweeps until under half a unit is left in all; then
+2,000 sweeps of the thermal chain at g = 0.05, which takes no uphill move. 24 replicas a cell; the end graph saved.
+Stage 1: N = 96 and 192, 20 cells. Held out: N = 384, 10 cells. Seeds from 20266100. Durations are chain sweeps.
+
+### Definitions, fixed now (`scripts/analyse_t61.py`)
+
+- **sees3**, per end state: the share of its points that have exactly 25 points within three steps, as an endless
+  flat sheet has. It is 0 on any flat torus six around and 1 on any flat torus eight or more around (exact).
+- **Per replica:** WIDE if sees3 ≥ 0.5; TUBE if sees3 < 0.05; PATCHWORK between. A replica with more than a
+  quarter of its points still at d = 1 did not convert; it is reported and left out.
+- **Per cell** (λ, N, C/N): the outcome of more than half its converted replicas, else MIXED. **Gates:** every
+  replica's energy books balance (drift under 10⁻⁶), every end graph is valid, at least nine tenths converted.
+- **Per (λ, N):** **WIDENS** if some cell has a WIDE majority; else **PATCHWORK** if some cell has a PATCHWORK
+  majority; else **STAYS A TUBE** if every cell has a TUBE majority; else MIXED.
+- Reported, not scored: the exactly flat end states and their widths; the energy left; the points within five
+  steps; the stores' mean energy at the end of the sealed spell.
+
+### The held-out size (rule 14)
+
+The size claim is that the shares do not change as the tube lengthens. For every (λ, C/N) the shares of WIDE and
+of TUBE replicas at N = 384 are predicted as the mean of the shares at N = 96 and 192, each with a range of 0.25
+either side, written by `python scripts/analyse_t61.py --write-prediction` to `configs/t61_heldout_prediction.json`
+and committed with a dated amendment here before N = 384 runs. **AS PREDICTED** at a λ if every cell at N = 384
+passes its gates and has both shares inside their ranges. The verdict word at N = 384 is read from N = 384 alone.
+
+### Predictions
+
+**The owner's: owed.** Asked on 11 October what she thinks makes the small direction grow, she said "proceed".
+She is asked again at the launch, and nothing of T61 is read until her prediction is recorded here.
+
+**Ours, unverified.** With one store per point or more: TUBE majorities, at both λ and both sizes. With a third
+and a quarter of a store per point: PATCHWORK majorities at λ = 1.40, and TUBE or MIXED at 1.25. A WIDE majority
+nowhere. So PATCHWORK at λ = 1.40, STAYS A TUBE or PATCHWORK at 1.25, and never WIDENS. No exactly flat end state
+wider than six. At N = 384 the same, with the shares inside their ranges.
+
+### What each outcome would mean
+
+- **WIDENS.** Heat that cannot leave makes the product wider. Paper 1 says with how little room, and the next test
+  is how wide and whether that grows with the tube.
+- **PATCHWORK.** Heat that cannot leave damages the new tube and leaves it wider only in patches: not a wider
+  space. Paper 1 says the product is a tube six around when the heat can leave and a flawed patchwork when it
+  cannot.
+- **STAYS A TUBE.** The released heat does not change the product's shape in this range.
+
+### What this cannot show
+
+Whether counting widens a flat torus over long times (not run). Other λ, drain rates or protocols. Three
+directions. That reality has heat that stays. sees3 is a count of points within three steps and certifies no
+geometry beyond that. Named points; with interchangeable points the weights of the flat tori differ only by their
+few symmetries (ours, unverified). At λ ≠ 1 this is our family, never combinatorial quantum gravity.
