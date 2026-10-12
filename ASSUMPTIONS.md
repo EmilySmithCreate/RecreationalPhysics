@@ -3331,6 +3331,8 @@ to the owner's hypothesis or a new simulation result.
   - **The size claim.** By the registered rule the prediction for the held-out sizes is "none". Stage 2 is not
     queued (PREREGISTRATION T56, amendment of 11 October): ours is that it should not be run as registered. T56
     therefore makes no claim about size.
+  - *Corrected 11 October 2026, evening (O118, "Correction"):* T54's numbers are completed-patch energies, not
+    barriers. "The barrier is T54's patch" is withdrawn here; why the tied slab stayed is not explained by them.
 
 - **O116 EXPLORATORY, read from saved wirings (11 October 2026, from 09:30 ET by the clock): what a tube opens
   into is a tube. The flat end states of the two-direction maps are the same tube with its seam shifted by two,
@@ -3376,6 +3378,22 @@ to the owner's hypothesis or a new simulation result.
   - *Addendum, 11 October 2026, 11:22 ET by the clock:* T60's held-out size was read by its own rule at 11:16 ET
     (O117), and the reader was then run on it: all 650 exactly flat end states at N = 288 have width 6. Over the
     five sizes, 9,858 of 9,865.
+  - *Addendum, 11 October 2026, evening: the flat end states by kind, exact per graph.*
+    (`scripts/read_flat_kind.py`, two tests in `tests/test_read_shapes.py`; reading only; no verdict changes.) A
+    graph with H = 0 need not be one piece, and a flat piece need not be two-sided. Gluing the squares along the
+    links they share makes each piece a closed surface with as many squares as points, so a torus or a **Klein
+    bottle**: a one-sided surface, flat at every point, which need not look the same from every point. A Klein
+    bottle built for the purpose has H = 0 at every λ, so the toy's zero-energy states include one-sided ones. Of
+    the maps' 9,865 flat end states: **9,676 are one torus six around** (98.1 %); 2 are one wider torus (eight
+    around at N = 64, twelve around at N = 96); 5 are one Klein bottle of 64 points, eight around from every
+    point; and 182 are two to four separate pieces, every piece a torus six around in 147 of them. 39 end states
+    contain a one-sided piece, of 18 to 64 points. **This corrects two lines above.** Of the "six of width 8 at
+    N = 64", five are Klein bottles and one is a torus. And "9,858 of 9,865 have width 6" was read from three
+    points, which may lie in different pieces, so it counts the split states with the single tori. The break-up
+    into pieces is what the maps' criterion (c) measures by the largest piece; the one-sided pieces are new.
+    Checked a second way: each of the 42 one-sided pieces (these and T61's) is isomorphic, by networkx, to none
+    of the flat tori of its size, which `scripts/exact_flat_torus_widths.py` lists in full; each of the 19
+    two-sided pieces beside them is isomorphic to one.
   - **Owed.** Paper 1 must say what its end states are before it is shown to anyone, and the plain-language
     edition and the programme page with it. The registered runs that read OPENS, ONE SPACE or FLAT keep their
     labels; a width or shell line is to be written into any new registration that uses those words.
@@ -3405,43 +3423,127 @@ to the owner's hypothesis or a new simulation result.
     its own 120-second limit while the laptop was also computing T54. Run alone it passes (10 of 10). GitHub's own run of that commit passed. The
     commit had been chained after the test command without a check of its exit status.
 
-## O118. Retrospective independent endpoint and manuscript audit (11 October 2026)
+- **O118 T54, the held-out size, read: along the helix patch the barrier is the same exact quadratic at every sheet
+  size, and under the owner's tie a finite patch exists at every curling cost; the registered verdict word is not
+  scored in four rows of six (11 October 2026, 16:01 ET by the clock). Exact; pre-registered with a held-out
+  size.** (PREREGISTRATION T54, Amendment 4 and "Reading ... the held-out size", which is the full account;
+  `scripts/exact_t54_patch.py`; `results/t54_patch_stage1.csv`, `results/t54_patch_heldout.csv`. Six links: VISION
+  Update 24's caveat.)
+  - **Exact.** ΔH(k) = a·k − b·k² with nothing left over, the same at L = 8, 12 and 16 for every patch that does
+    not meet its own image. Untied a = 80 − 16λ and b = 16(λ − 1); tied a = 176 − 112λ and b = 48(λ − 1) (read off
+    the values, not derived). Under the tie the peak is at 5.5, 3.3, 2.2 and 1.5 columns with barriers of 145, 77,
+    45 and 27 for λ = 1.10 to 1.25; untied, 19.5 to 7.5 columns and 608 to 225.
+  - **Scored.** The held-out numbers hold exactly at all six scored rows. The verdict word, read as registered
+    over every k computed, is RISES AGAIN (reported, not scored) at tied λ = 1.10 to 1.20 and untied 1.40, because
+    the one patch that wraps the torus (k = 15) lies above the quadratic; FIXED WALL at tied 1.25 and 1.40. The
+    owner's CRITICAL PATCH is not scored in four rows and fails by the letter in two; ours failed by the letter at
+    tied 1.25. NO FINITE PATCH appears nowhere, so the condition that would end the branch (Update 44) is not met.
+  - **Rule 11** for the two failures by the letter. (1) They do not touch the mechanism: at tied 1.25 two whole
+    patches tie at 24 round a fitted peak of 27, and at 1.40 the first patch is free. (2) The cause is the rule:
+    it reads the word over whole patches and over every k computed, the wrapped one included. (3) No further test
+    is needed to tell that apart; the values are exact. (4) Nothing here would make us abandon the branch.
+  - **Owed.** A fresh read-only review of the seam's construction and the fit (rule 12). Whether the verdict word
+    is to be read only over patches that do not meet their own image is the owner's to decide.
+  - **Correction, 11 October 2026, evening: these are the energies of completed square patches, not a barrier.
+    "Barrier" is withdrawn from the lines above.** (Found the same day by an outside review with its own code;
+    reproduced with ours, each state checked valid: `scripts/exact_t54_between_patches.py`,
+    `tests/test_t54_between.py`. Exact.) Going from the k × k patch to the next takes 2k + 1 switches, and T54 did
+    not price the states between. Priced now, under the tie: at λ = 1.25 the first two patches both stand at 24
+    and the best order of the three switches between them passes 24, 20, 45, 24, so the highest energy met is 45,
+    above the fitted peak of 27. At λ = 1.20 the first two steps reach 62 and 66 against a fitted 45; at 1.15, 80
+    and 98 against 77. So the fitted peak bounds nothing from above. **Nor are squares the cheap shapes.** A
+    single line of columns, along one of the construction's two directions, costs a − b for its first column and
+    96 − 80λ more for each further one under the tie: 24, 20, 16, 12, 8, 4 at λ = 1.25; level at 32 at 1.20; rising
+    by 4 and by 8 a column at 1.15 and 1.10. Untied, every further column costs 32 − 16λ. At tied λ = 1.25 a line
+    meets nothing higher than its first switch for the six columns priced; what closing it round the torus costs
+    was not priced. **What stands:** the completed-patch energies, the exact quadratic at the three sizes tested,
+    the six held-out numbers, and the verdict words as registered labels over completed patches. **What is
+    withdrawn:** "barrier" for the fitted peak; "critical patch" as the size of a seed; paper 5's "it bounds the
+    barrier from above"; O115's and paper 5's use of 45, 77 and 145 to say why the tied slab stayed; and the
+    reading that the tie turns the climb into one a bath could make (VISION Update 49; the programme page). **Not
+    known:** the barrier to opening the slab's curled direction, tied or untied. It needs a search over paths
+    with every state priced, shapes other than squares included.
+  - **Two limits on the lines above, from the same review.** "Every sheet size" and "every curling cost" mean the
+    three sizes and the settings computed; nothing here is derived for all sizes. And "NO FINITE PATCH appears
+    nowhere" holds among the scored rows; the rows registered as unreadable are not among them.
 
-**Ours, computationally checked; physical interpretation unverified.** Prepared with OpenAI
-Codex on base `5382053a`. This is an AI audit, not independent human peer review. New endpoint
-analysis is retrospective and does not change original registration verdicts. The reader and
-known-surface controls are `scripts/read_endpoint_geometry.py` and
-`tests/test_endpoint_geometry.py`; detailed selection, algorithm and limitations are in the
-11 October supplement addendum. Per-input hashes and certificates are in
-`docs/papers/curled_torus/endpoint_geometry_2026-10-11.json`.
+- **O119 EXACT: the flat tori of N points counted by width. Six around is the exception, and more so the larger the
+  torus (11 October 2026). Complete enumeration; promoted from a sandbox look with a tested script.**
+  (`scripts/exact_flat_torus_widths.py`, `tests/test_flat_torus_widths.py`.)
+  - **Exact.** A flat torus (every edge on exactly two squares, so H = 0 at every λ) is the grid wrapped up by a
+    lattice with N points per cell and no wrap shorter than six. Counting the two-sided wrappings by their shortest
+    wrap: of 47 at 64 points, 8 are six around; of 236 at 192 points, 20 (8.5 %); of 387 at 288, 20 (5.2 %); of
+    1,007 at 1,024, 8 (0.8 %); of 4,079 at 4,096, 8 (0.2 %). The median width is 8, 12, 16, 30 and 58: it grows
+    like the square root of N. Every wrapping of 64 points was built as a graph and checked: valid, flat, and of
+    the counted width.
+  - **Beside O116.** The maps' flat end states are six around in 9,858 of 9,865. The tube ends on the nearest flat
+    torus, not on a usual one. The energy is the same for all of them.
+  - *Ours, unverified.* With named points each wrapping carries the same number of labeled graphs, so a chain that
+    could move among flat tori at no cost would be found wide most of the time. It cannot: leaving a flat torus
+    costs 32. Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
 
-All 120 original T8 lambda=1.05 endpoints reconstruct as narrow square-grid tori with shortest
-noncontractible loop six and shortest independent loop N/4. Among 3,521 reached, zero-energy
-T60 saved final endpoints, 3,446 are narrow tori, 73 disconnected surfaces and two Klein bottles.
-The two nonreached rows are outside that selection even though their settled graphs also have
-zero energy. Width alone does not certify one torus. The surface test explicitly checks cyclic
-vertex links; torus lengths follow a full lattice and adjacency reconstruction.
+- **O120 The outside review of 11 October 2026, recorded: what it checked, what it found, what was done, and what it
+  got wrong (rule 12's first pass by a different model).** (Reviewer: OpenAI Codex, from
+  `docs/papers/curled_torus/red_team_brief_2026-10-11.md`, read-only on this branch; a first report on paper 1 and
+  T60, and a follow-up on the commits up to f3a76688. Its reports and scratch calculations are local and
+  untracked, `.tools/independent-review-2026-10-11/`. Its proposed rewrite of paper 1's two editions, with an
+  endpoint-geometry reader of its own, is the branch `codex/paper1-review-corrections-2026-10-11` (33be5462),
+  **not merged here: adopting it is the owner's decision.** AI output: its physics is unverified, as ours is.)
+  - **Checked with its own code, and holds.** The energy algebra and the ideal gap. The complete census of first
+    exits at N = 64 (192, 128 and 32 switches of the three kinds in each class; none under 12 at λ = 1.25). The
+    sealed lower bound of 12. T59's paired clocks (move-counted mean 1.005 ± 0.016 τ; 94 % of the gap from exits
+    missed between looks). T60's scoring: every verdict, gate, CV, mean and count agrees, to 4 × 10⁻¹⁶. The order
+    of registrations in git: no scoring code changed after data arrived. T54's 330 stored energies: no mismatch.
+  - **Found, and accepted.** (1) Paper 1's picture is wrong where it says the tube opens into a sheet: the end
+    states are the tube with its seam shifted by two (found here the same morning, O116). Its lattice
+    reconstruction of T60's 3,521 reached flat end states gives 3,446 such tubes, 73 in separate pieces and 2
+    Klein bottles; `scripts/read_flat_kind.py`, written that evening without its code, gives the same three
+    counts (O116, last addendum). (2) The plain-language edition restores claims the technical edition had
+    dropped (eleven passages). (3) A passing CV does not show a memoryless wait: a law with two values, mean 1
+    and variance 1, passes every time. "Memoryless", "two orders" and "one front" in T60's reading are names for
+    three registered diagnostics, no more. (4) T60's own rows also pass the old waiting-time criterion in all 24
+    window cells, so "the repaired clock is why the fourth map passes" is not shown. (5) The held-out size is
+    less sharp a test than "the size claim holds": at λ = 1.30 the range written beforehand straddles the cutoff
+    of 0.70, 65 of 120 replicas meet it one by one, and the line through the smaller sizes crosses it near 350
+    points (O117 says the last). (6) T54's fitted peak is not a barrier (corrected: O118). (7) T61's analyzer
+    could give a word on incomplete or failed data (repaired before the held-out size was read: PREREGISTRATION
+    T61, amendment), and its words are about neighborhoods, not one connected space (accepted there). (8) Paper
+    5 misreported our own T54 prediction (corrected). (9) O119 counts wrappings of the grid, not graphs up to
+    renaming, and says nothing about which the dynamics reaches. (10) O116's "a cold flat torus accepts no move"
+    is true at zero temperature only; at any g above zero a move that costs is accepted sometimes.
+  - **Done about it on this branch:** (6), (7) and (8), and the notes that carry (9) and (10) here. **Not done:**
+    (1) to (5) in paper 1's text and paper 6's draft, which wait on the owner's decision about its branch.
+  - **What it got wrong.** Nothing we have found. Two of its results were recomputed here with our code and
+    reproduce exactly (T54's 24, 20, 45, 24; T60's 73 and 2). Two things it could not see: it numbered its own
+    geometry audit O118, which is T54 here (to be renumbered at merging, as it says); and it had not opened
+    T61's results, so it gives no view on them. Its limits are its own list: it did not redo the N = 18
+    enumeration, the sealed runs, T58's replays, or O116's 9,215 end states.
+  - **Its advice on what paper 1 is, for the owner:** a controlled study of an activated change in a deformation
+    of the published model, with an exact first exit and an end state that stays narrow; worth a reader as that,
+    and not yet a tested account of the origin of space.
 
-**Previous claim → correction:** endpoint periods were unmeasured → reconstructed original
-endpoints remain narrow → local flatness is insufficient for two large directions in this
-sample → future claims of macroscopic opening must preregister global geometry measures and
-a held-out size. This does not negate wider-shell outcomes in later six-link experiments,
-whose conditions and denominators differ.
-
-**Diagnostic and interpretation corrections:** T60 passes its finite-sample criteria and frozen
-held-out prediction; the first three maps remain inconclusive. T24's residual-wait CV criterion
-also passes on the new 24-cell smaller-size window, so the later pass is not uniquely evidence
-for clock repair. The n=120 calibrated CV interval starts at 0.7577404651, not the printed 0.756;
-no verdict changes. Lambda > 1 supplies a positive ideal energy gap, not a physical derivation
-or proof of thermodynamic first order. The 12-unit bound concerns escape under the stated move
-set, not a measured commitment barrier. No-stall observations do not exclude coexistence;
-the sealed runs do not establish reservoir equilibration. No claim of a wholly error-free
-manuscript follows from this audit.
-
-The Paper 1 sources and abstracts are revised accordingly; raw results and historical
-registrations are unchanged. Review order and scope are in `review_corrections_2026-10-11.md`
-beside the manuscripts. The prior disclosure below describes the original drafting; these
-11 October corrections and their checker were prepared with OpenAI Codex.
+- **O121 If the burp's heat stays, the tube does not come out wider: PATCHWORK at both curling costs and all three
+  sizes; the size prediction misses in one cell of ten (T61, both stages, 11 October 2026). Measured,
+  pre-registered; the owner's prediction fails, and ours in particulars.** (PREREGISTRATION T61 and its two
+  "Reading" sections, which are the full account; `scripts/analyse_t61.py`, `tests/test_t61.py`,
+  `tests/test_t61_safeguards.py`; `results/t61_lam*`. The four-link tube, sealed, drained and cooled; named points.
+  At λ ≠ 1 this is our family.)
+  - **Measured.** With one store per point or more at λ = 1.25 every replica ends as the tube six around, most
+    with one column left curled (144 of 144 over the three sizes). With less room, and at λ = 1.40 with any, the
+    majority is a patchwork. Replicas with more than half their points in sheet-like surroundings: 42 of 479 at
+    96 and 192 points, 2 of 240 at 384. No end state of 720 is a clean flat torus wider than six. The network was
+    never melted: at its worst about one square in twelve was missing.
+  - **Scored.** PATCHWORK at λ = 1.25 and 1.40 at N = 96, 192 and 384. The owner's WIDENS fails at all three
+    sizes. The held-out numbers hold at λ = 1.40 and miss at λ = 1.25 with a third of a store per point.
+  - **Not scored, and against a hopeful reading:** the mostly-sheet-like share falls as the tube lengthens, from
+    one in five to one in sixty at λ = 1.40.
+  - **The one question (rule 11): what is the cheapest exact test that tells the possible causes apart, and has it
+    been read?** It has. The energy charges loops of four and nothing longer, so every flat torus costs zero and
+    nothing in the rule pays for width (O116, O119). The failure is the rule's, not the sizes' or the settings'.
+  - **What follows.** The owner decided the same evening to test a price on loops of six (VISION Update 56).
+    Paper 1 can say that the product is a tube six around when the heat can leave and a flawed patchwork when it
+    cannot. *Ours, unverified:* trapped heat is flaws everywhere at once, each re-stitching its own neighborhood,
+    and the flaws that have not cancelled when the heat is drained stay where they are.
 
 ## Provenance
 

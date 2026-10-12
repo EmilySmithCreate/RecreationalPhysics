@@ -61,3 +61,42 @@ def test_a_saved_flat_end_state_is_that_twisted_tube():
     saved = np.load(ROOT / "results" / "t60_lam105_n64_adj" / "N64_rep0.npz")["adj"]
     assert is_flat(saved) and width(saved) == 6
     assert nx.is_isomorphic(graph(saved), graph(twisted_tube(16, 2)))
+
+
+def test_a_flat_piece_is_a_torus_or_a_klein_bottle():
+    """scripts/read_flat_kind.py: two-sided and one-sided flat surfaces built for the purpose are told apart."""
+    from read_flat_kind import KLEIN, TORUS, describe, kind, klein_bottle, pieces
+    for adj in (torus((8, 8)), torus((6, 16)), twisted_tube(24, 2), twisted_tube(24, 4)):
+        assert is_flat(adj) and kind(adj) == TORUS
+        assert len({width(adj, s) for s in range(adj.shape[0])}) == 1          # a torus looks the same from every point
+    for around, along in ((8, 8), (6, 16), (8, 12)):
+        bottle = klein_bottle(around, along)
+        assert squares_on_each_edge(bottle) == {2} and is_flat(bottle)          # zero energy at every lambda
+        assert nx.is_bipartite(graph(bottle)) and set(dict(graph(bottle).degree()).values()) == {4}
+        assert nx.is_connected(graph(bottle)) and kind(bottle) == KLEIN
+    # independent of the gluing argument: a one-sided flat surface does not look the same from every point
+    assert {width(klein_bottle(6, 16), s) for s in range(96)} == {6, 8, 10, 12}
+    assert kind(twisted_tube(24, 0)).startswith("not flat")                     # the tube itself: links with three squares
+    # two separate pieces in one graph
+    a, b = torus((6, 6)), klein_bottle(6, 8)
+    both = np.vstack([a, b + a.shape[0]])
+    assert [p.shape[0] for p in pieces(both)] == [36, 48]
+    assert describe(both) == ((36, TORUS, 6), (48, KLEIN, 6))
+
+
+def test_a_saved_flat_end_state_is_a_torus_beside_a_klein_bottle():
+    """One end state of T61's stage 1 (lambda = 1.40, N = 96, two stores per point, replica 6) has H = 0 and is two
+    pieces: a torus six around and a one-sided piece. Checked against networkx for the pieces."""
+    from read_flat_kind import KLEIN, TORUS, describe, pieces
+    saved = np.load(ROOT / "results" / "t61_lam140_n96_adj" / "N96_C192_rep6.npz")["adj"]
+    assert is_flat(saved)
+    assert sorted(len(c) for c in nx.connected_components(graph(saved))) == [40, 56]
+    parts = describe(saved)
+    assert [(n, k) for n, k, _ in parts] == [(40, KLEIN), (56, TORUS)] and parts[1][2] == 6
+    bottle = [p for p in pieces(saved) if p.shape[0] == 40][0]
+    assert {width(bottle, s) for s in range(40)} == {6, 8}
+    # a second way: the one-sided piece is none of the flat tori of 40 points, and the other piece is one of 56
+    import exact_flat_torus_widths as flat_tori
+    other = [p for p in pieces(saved) if p.shape[0] == 56][0]
+    assert not any(nx.is_isomorphic(graph(bottle), graph(flat_tori.graph(a, b, d))) for a, b, d, _ in flat_tori.wrappings(40))
+    assert any(nx.is_isomorphic(graph(other), graph(flat_tori.graph(a, b, d))) for a, b, d, _ in flat_tori.wrappings(56))

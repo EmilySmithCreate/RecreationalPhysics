@@ -3,7 +3,8 @@
     python scripts/analyse_t61.py [results_dir]                     # the report
     python scripts/analyse_t61.py [results_dir] --write-prediction  # after stage 1: the numbers for N = 384
 
-Implements PREREGISTRATION.md section T61 on results/t61_lam<tag>_n<N>.csv (scripts/run_burp_heat.py).
+Implements PREREGISTRATION.md section T61 on results/t61_lam<tag>_n<N>.csv and, for the held-out size, one file
+per cell, results/t61_lam<tag>_n384_c<stores>.csv (scripts/run_burp_heat.py).
 
 Per replica, from its end state: `sees3` is the share of points with exactly 25 points within three steps, as an
 endless flat sheet has (0 on a flat torus six around, 1 on one eight or more around).
@@ -21,10 +22,17 @@ The held-out size (rule 14), N = 384: for every (lambda, stores per point) the s
 are predicted as the mean of the shares at N = 96 and 192, each with a range of 0.25 either side, written to
 configs/t61_heldout_prediction.json before N = 384 runs. AS PREDICTED at a lambda if every cell passes its gates and
 has both shares inside their ranges; the verdict word at N = 384 is read from N = 384 alone.
+
+Safeguards (amendment of 11 October 2026, after an outside review and before N = 384 was read). No word is given on
+incomplete or failed data. The registered design is fixed here: two lambda, five amounts of room, 24 replicas
+numbered 0 to 23 in every cell, every number the reading uses present and finite. A (lambda, N) whose cells do not
+all meet the design and pass their gates reads NOT READ, with the reason; the prediction for N = 384 is refused
+unless all of stage 1 does; and N = 384 is scored at a lambda only when all five of its cells are complete.
 """
 import csv
 import glob
 import json
+import math
 import re
 import statistics
 import sys
@@ -34,6 +42,10 @@ from pathlib import Path
 STAGE1 = (96, 192)
 HELD_OUT = 384
 WIDE_AT, TUBE_BELOW, RANGE = 0.5, 0.05, 0.25
+LAMBDAS = (1.25, 1.40)                              # the registered design
+RATIOS = (2.0, 1.0, 0.5, 0.333333, 0.25)            # stores per point, as the configs write them
+REPLICAS = 24
+NUMBERS = ("N", "d1", "sees3", "drift", "h_end", "near5")
 PREDICTION = Path(__file__).resolve().parents[1] / "configs" / "t61_heldout_prediction.json"
 
 
@@ -60,6 +72,68 @@ def cell(rows):
                 flat=len(flat), widths=dict(Counter(int(r["width"]) for r in flat)),
                 left=(statistics.median(float(r["h_end"]) for r in converted) if n else float("nan")),
                 near5=(statistics.median(float(r["near5"]) for r in converted) if n else float("nan")))
+
+
+def readable(rows):
+    """True if every number the reading uses is present and finite in every row, and the flags are flags."""
+    try:
+        return all(math.isfinite(float(r[f])) for r in rows for f in NUMBERS) and all(
+            r["valid"] in ("True", "False") and r["flat"] in ("True", "False") for r in rows)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def find(groups, lam, n, ratio):
+    """The key of the registered cell (lambda, N, stores per point) among the groups, or None."""
+    for key in groups:
+        if abs(key[0] - lam) < 1e-9 and key[1] == n and abs(key[2] - ratio) < 1e-4:
+            return key
+    return None
+
+
+def design_problems(groups, sizes, lambdas=LAMBDAS):
+    """What the rows lack against the registered design at these sizes and lambda: a list of sentences, empty if
+    nothing. A missing cell, a cell without exactly the replicas 0 to 23, an unreadable number, and a cell that
+    is not in the design are each a problem."""
+    problems, wanted = [], set()
+    for lam in lambdas:
+        for n in sizes:
+            for ratio in RATIOS:
+                where = "lambda=%.2f N=%d stores per point %g" % (lam, n, ratio)
+                key = find(groups, lam, n, ratio)
+                if key is None:
+                    problems.append("missing cell: " + where)
+                    continue
+                wanted.add(key)
+                rows = groups[key]
+                try:
+                    ids = sorted(int(r["replica"]) for r in rows)
+                except (KeyError, TypeError, ValueError):
+                    ids = []
+                if ids != list(range(REPLICAS)):
+                    problems.append("%s: %d rows, not the replicas 0 to %d once each" % (where, len(rows), REPLICAS - 1))
+                if not readable(rows):
+                    problems.append("%s: a number the reading uses is missing or not finite" % where)
+    for key in sorted(groups):
+        if key[1] in sizes and any(abs(key[0] - lam) < 1e-9 for lam in lambdas) and key not in wanted:
+            problems.append("a cell outside the registered design: lambda=%.2f N=%d stores per point %g" % key)
+    return problems
+
+
+def strays(groups):
+    """Rows that belong to no registered lambda or size: a list of sentences."""
+    out = ["a lambda outside the registered design: %.2f" % lam for lam in sorted({k[0] for k in groups})
+           if not any(abs(lam - x) < 1e-9 for x in LAMBDAS)]
+    return out + ["a size outside the registered design: N=%d" % n for n in sorted({k[1] for k in groups})
+                  if n not in STAGE1 + (HELD_OUT,)]
+
+
+def blocked(groups, cells, lam, n):
+    """Why no word may be given at (lambda, N): its design problems and its cells that fail their gates."""
+    why = design_problems(groups, (n,), (lam,))
+    why += ["gate fails with %g stores per point" % k[2] for k, c in sorted(cells.items())
+            if abs(k[0] - lam) < 1e-9 and k[1] == n and not c["gate"]]
+    return why
 
 
 def verdict(majorities):
@@ -101,7 +175,7 @@ def held_out_misses(c, p):
 def load(out_dir="results"):
     groups = defaultdict(list)
     for f in sorted(glob.glob(str(Path(out_dir) / "t61_lam*_n*.csv"))):
-        if not re.search(r"t61_lam\d+_n\d+\.csv$", f):
+        if not re.search(r"t61_lam\d+_n\d+(_c\d+)?\.csv$", f):
             continue
         with open(f, newline="", encoding="utf-8") as fh:
             for r in csv.DictReader(fh):
@@ -110,48 +184,67 @@ def load(out_dir="results"):
 
 
 def main(out_dir="results", flag=""):
-    cells = {k: cell(v) for k, v in load(out_dir).items()}
-    if not cells:
+    groups = load(out_dir)
+    if not groups:
         print("no t61_lam*_n*.csv in %s" % out_dir)
         return 1
+    cells = {k: cell(v) for k, v in groups.items() if readable(v)}
     print("T61: if the burp's heat stays, does the tube come out wider? (PREREGISTRATION T61)")
-    for key in sorted(cells):
+    for key in sorted(groups):
         lam, n, ratio = key
+        if key not in cells:
+            print("lambda=%.2f N=%-3d stores per point %-6g UNREADABLE: a number is missing or not finite" % key)
+            continue
         c = cells[key]
         print("lambda=%.2f N=%-3d stores per point %-6g gate %s | %s -> %-9s | wide %.2f tube %.2f | exactly flat %d %s"
               " | energy left, median %.1f | within five steps, median %.1f"
               % (lam, n, ratio, "pass" if c["gate"] else "FAIL", c["outcomes"], c["majority"], c["wide"], c["tube"],
                  c["flat"], c["widths"], c["left"], c["near5"]))
-    for lam in sorted({k[0] for k in cells}):
-        for n in sorted({k[1] for k in cells if k[0] == lam and k[1] in STAGE1}):
-            print("VERDICT lambda=%.2f N=%d: %s"
-                  % (lam, n, verdict([c["majority"] for k, c in sorted(cells.items()) if k[0] == lam and k[1] == n])))
-    recipe = predict(cells)
+    stage1_clean = True
+    for lam in LAMBDAS:
+        for n in STAGE1:
+            why = blocked(groups, cells, lam, n)
+            stage1_clean = stage1_clean and not why
+            print("VERDICT lambda=%.2f N=%d: %s" % (lam, n, "NOT READ (%s)" % "; ".join(why) if why else verdict(
+                [c["majority"] for k, c in sorted(cells.items()) if abs(k[0] - lam) < 1e-9 and k[1] == n])))
+    stray = strays(groups)
+    for line in stray:
+        print("NOTE:", line)
     if flag == "--write-prediction":
         if PREDICTION.exists():
             raise SystemExit("refusing to overwrite %s" % PREDICTION)
-        expected = len({(k[0], k[2]) for k in cells})
-        if len(recipe) < expected:
-            raise SystemExit("stage 1 is not complete; nothing written")
+        if not stage1_clean or stray:
+            raise SystemExit("stage 1 is not complete and clean; nothing written")
+        recipe = predict(cells)
+        if len(recipe) != len(LAMBDAS) * len(RATIOS):
+            raise SystemExit("stage 1 does not give all %d numbers; nothing written" % (len(LAMBDAS) * len(RATIOS)))
         PREDICTION.write_text(json.dumps(recipe, indent=2) + "\n", encoding="utf-8", newline="\n")
         print("wrote", PREDICTION.name)
         return 0
-    held = {k: c for k, c in cells.items() if k[1] == HELD_OUT}
-    if not held:
+    if not any(k[1] == HELD_OUT for k in groups):
         return 0
     if not PREDICTION.exists():
         print("N = %d is present but no prediction file is committed: not read." % HELD_OUT)
         return 1
     fixed = json.loads(PREDICTION.read_text(encoding="utf-8"))
-    for lam in sorted({k[0] for k in held}):
-        mine = {k: c for k, c in held.items() if k[0] == lam}
+    status = 0
+    for lam in LAMBDAS:
+        why = design_problems(groups, (HELD_OUT,), (lam,))
+        why += ["no number was written beforehand for %g stores per point" % ratio for ratio in RATIOS
+                if "%.2f|%g" % (lam, ratio) not in fixed]
+        if why:
+            print("HELD-OUT lambda=%.2f N=%d: NOT READ (%s)" % (lam, HELD_OUT, "; ".join(why)))
+            status = 1
+            continue
+        mine = {k: c for k, c in cells.items() if abs(k[0] - lam) < 1e-9 and k[1] == HELD_OUT}
         wrong = {k[2]: held_out_misses(c, fixed["%.2f|%g" % (lam, k[2])]) for k, c in mine.items()}
         wrong = {r: m for r, m in wrong.items() if m}
+        gates = all(c["gate"] for c in mine.values())
         print("HELD-OUT lambda=%.2f N=%d: %s | verdict there: %s"
               % (lam, HELD_OUT, "AS PREDICTED" if not wrong else "NOT AS PREDICTED AT " + "; ".join(
                   "%g (%s)" % (r, ", ".join(m)) for r, m in sorted(wrong.items())),
-                 verdict([c["majority"] for _k, c in sorted(mine.items())])))
-    return 0
+                 verdict([c["majority"] for _k, c in sorted(mine.items())]) if gates else "NOT READ (a gate fails)"))
+    return status
 
 
 if __name__ == "__main__":

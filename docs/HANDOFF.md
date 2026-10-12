@@ -51,7 +51,9 @@ work is the mechanism, not another claim of universal exponential conversion wai
 - **T54 is read at its held-out size (16:01 ET; O118; PREREGISTRATION T54, "Reading ... the held-out size").** The
   numbers hold exactly; under the tie a finite patch exists at every λ (barriers 145, 77, 45, 27 for λ = 1.10 to
   1.25); the verdict word is unscored in four rows (the wrapped patch) and FIXED WALL in two. A fresh review of the
-  construction is owed (rule 12). *As it stood that morning:*
+  construction is owed (rule 12). **Corrected that evening, and not to be undone (O118, "Correction"): these are
+  completed-patch energies, not barriers.** The states between patches go higher and a line of columns goes
+  lower; do not quote 145, 77, 45 or 27 as a barrier, or "critical patch" as a seed's size. *As it stood that morning:*
   Stage 1 (L = 8, 12) is on this branch and read: ΔH(k) is the same exact quadratic at both sizes. The
   prediction for the held-out size is Amendment 4 (committed first, ed1970be). **L = 16 has been computing on the
   laptop since 10:08 ET** (`configs/t54_patch_heldout.json` → `results/t54_patch_heldout.csv`; a `.partial` file
@@ -65,7 +67,10 @@ work is the mechanism, not another claim of universal exponential conversion wai
   up to date and built. The owner has not read them.
 - **A test that had been failing on GitHub since 10 October** (the entropy-action fit read every saved graph, so
   T60's end states moved its recorded number) is fixed: the script reads only the runs O111 was computed on.
-- **Next record numbers:** ASSUMPTIONS **O120**, VISION **Update 56**, PREREGISTRATION **T62**. T61 (does the burp's heat widen the tube) is registered and run on the laptop; the owner's prediction is owed before it is read.
+- **Two decisions of the owner's, 11 October, evening (VISION Update 56):** claim 4 says "a jump in energy", not "first order" (her words; Update 44's open item (a) is closed); and the toy is to be tested with a price on loops of six, μ × (a link's loops of six − 6) where positive. Sandbox looks only so far (`sandbox/LOG.md`); a registered test needs a tested kernel, a held-out size and her prediction.
+- **Next record numbers:** ASSUMPTIONS **O122**, VISION **Update 57**, PREREGISTRATION **T62**. T61 (does the burp's heat widen the tube): the owner predicted WIDENS; stage 1 read PATCHWORK at both curling costs and both sizes (PREREGISTRATION T61, "Reading"); the held-out size (N = 384) was read that night: PATCHWORK at both; the numbers written beforehand hold at λ = 1.40 and miss in one cell at 1.25 (**O121**).
+- **The outside review of 11 October is recorded as O120.** Its proposed rewrite of paper 1 is the branch `codex/paper1-review-corrections-2026-10-11` (33be5462), not merged: adopting it is the owner's decision. That branch numbers its own geometry audit O118, which is T54 here; renumber at merging. Its reports are local, `.tools/independent-review-2026-10-11/`.
+- **The flat end states by kind** (O116, last addendum; `scripts/read_flat_kind.py`): one torus six around in 98 %, the rest separate pieces, a few of them one-sided (Klein bottles). An end state with H = 0 is not thereby one torus.
 
 **Addendum, 10 October 2026 (branch `claude/paper1-plain-language-2026-10-10`, cut from the review
 branch; written 07:20 ET by the clock).**

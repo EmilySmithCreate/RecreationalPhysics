@@ -618,8 +618,8 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    (b) names its held-out size and number before any run; (c) is recorded with what it found and what it got wrong.
 
 Owed by the owner: ~~her T51 prediction~~ (given 2026-10-08: GENTLE, PREREGISTRATION T51); ~~her T54 prediction~~ (given 2026-10-08: CRITICAL PATCH, PREREGISTRATION T54); her T53 prediction confirmed the same day; the open items of
-Update 44 (claim 4's wording; piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's
-revision; the Fife reference).
+Update 44 (~~claim 4's wording~~, decided 11 October: "a jump in energy", VISION Update 56; piece 10's attachment to
+the toy; dark energy as release or kept energy; paper 1's revision; the Fife reference).
 
 ## 9 October: T51 and T53 read; what follows  ◑
 
@@ -713,8 +713,23 @@ The replacements for pieces 5 and 11 are hers. In order:
    O100's 1.45; the eight-link three-curled window; "joins" in T30's reading against O85), which are not yet
    reconciled in `series_plan.md`'s (D, λ) table.
 
+9. **T61 is read at all three sizes (O121): trapped heat does not widen the tube.** Item 6 is answered for this
+   route. Paper 1's end-state section can now be written.
+10. **The outside review (O120).** Its rewrite of paper 1's two editions is the branch
+    `codex/paper1-review-corrections-2026-10-11`; adopting it is the owner's decision, and her notes on its
+    sentences of 11 October (the why of "two humps"; the curling cost as something to test; "zero energy" for
+    "perfect flat sheet") go in with it. Owed from it on this branch: T60's wording in paper 6 ("memoryless",
+    "two orders", "one front" as names of three diagnostics; the repaired clock not shown to be why the fourth map
+    passes); a search for the lowest path in T54 (O118, "Correction").
+11. **A price on loops of six** (VISION Update 56). In order: the term as a tested kernel in `src/graphity/`
+    (rule 6: brute force against networkx, incremental exactness, constraints, same seed); the exact walls and the
+    push as a tested script; a registration, T62, with a held-out size and her prediction. Sandbox looks so far:
+    `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
+    most runs unfinished or stuck on a flaw).
+
 Owed by the owner: her replacements for pieces 5 and 11, or a table that charges damage (a new knob, S1); whether
-T56's held-out stage runs (ours: no); how piece 1 is to be worded; the open items of Updates 44 and 52.
+T56's held-out stage runs (ours: no); whether the outside reviewer's rewrite of paper 1 is adopted; her prediction
+for T62 once it is written; the open items of Updates 44 (less claim 4's wording, decided) and 52.
 
 ## Later
 
