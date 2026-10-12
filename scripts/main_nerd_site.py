@@ -116,7 +116,7 @@ AD_READER = ('<aside class="ad ad-wanted" aria-label="Advertisement">'
              '</span><span class="ad-btn">E-MAIL THE AUTHOR »</span></span></a></aside>'
              % html.escape(mailto("Volunteer reader: The curled torus burps")))
 
-TICKER = ("★ NEW POST! The curled torus burps ★ Twelve units opens a tube ★ What opens a space? ★ No physicist "
+TICKER = ("★ NEW POST! The curled torus burps ★ Twelve units start an escape ★ What opens a space? ★ No physicist "
           "has reviewed this page (volunteers wanted) ★ Sign the guestbook ★")
 
 
@@ -126,12 +126,14 @@ SUMMARY = (
     "hypothetical sharp change in which flat space emerges from something more curled up. It uses a toy model of "
     "space as a network of dots and links. The toy is the paper's own: a close cousin of the published model "
     "called combinatorial quantum gravity, with one knob turned above the published value, and not that model "
-    "itself. In the paper's toy, a tube (a torus curled to four steps around) sits above the flat sheet in energy "
-    "and is stable for now. The paper counts what it costs to start the change (12 units at the main setting, for "
+    "itself. In the paper's toy, a tube (a torus curled to four steps around) sits above the flat arrangement in "
+    "energy and is stable for now. The paper counts what it costs to start the change (12 units at the main setting, for "
     "every size of tube tested), predicts how long the tube waits by counting its exits, watches the flat arrangement "
     "spread, seals the system to see where the released energy (the burp) goes, and counts what is left behind "
-    "(about one four-dot scrap). A toy can show that a mechanism is possible or impossible within a class of "
-    "models; that is the whole claim.</p>")
+    "(about one four-dot scrap). It also reads what the tube turns into: the tight curl is gone and the energy "
+    "is released, but the result is still a narrow tube, six steps around, and a second large direction does "
+    "not appear. A toy can show that a mechanism is possible or impossible within a class of models; that is "
+    "the whole claim.</p>")
 
 # One searched question per chapter, as a heading, with a bridge to what the chapter does. Each bridge is true
 # of the plain-language edition's chapter and claims no more than it does.
@@ -155,7 +157,8 @@ CHAPTER_QUESTIONS = {
         "predicts how long the toy's version waits, and checks the prediction."),
     6: ("Can space change phase, the way water freezes?",
         "In the toy model it can: a patch of the new arrangement appears and grows while the old one is still "
-        "there beside it. This chapter watches that happen and says what the pictures do and do not prove."),
+        "there beside it. This chapter watches that happen, says what the pictures do and do not prove, and "
+        "reads what the tube turns into: a tube six steps around, not a wide sheet."),
     7: ("Where did the energy of the Big Bang come from?",
         "In the author's hypothesis the change itself released it, the way freezing water gives off heat. In "
         "the toy model that release, the burp, can be counted exactly and followed when nothing is allowed to "
@@ -178,8 +181,9 @@ BIG_QUESTIONS = [
     ("What was there before the Big Bang?",
      "Nobody knows, and this work does not settle it. It tests one hypothesis, the author's: that space is one "
      "settled arrangement of something deeper, and that before the change there was a different, specific "
-     "arrangement, curled up and stable for now. A toy model shows that such a change can happen in a network of "
-     "dots and links, with a countable push and a countable release. That is a possibility shown in a toy, not "
+     "arrangement, curled up and stable for now. A toy model shows that a curled arrangement can give way "
+     "sharply in a network of dots and links, with a countable push and a countable release. What it turns into "
+     "there is a slightly wider tube, not a wide space. That is part of a possibility shown in a toy, not "
      "evidence about the real universe."),
     ("Where did the Big Bang come from?",
      "One hypothesis, tested here only in a toy model: the hot early universe is the energy released when an "
@@ -216,8 +220,13 @@ FAQ = [
      "around and you have a tube. In the toy the tube has one large direction where the flat sheet has two, and "
      "it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."),
     ("What is the burp?",
-     "The burp is the energy given off when the tube opens into the flat sheet. For a clean change it is exactly "
-     "4(λ − 1) per dot, so it grows with the size of the tube, while the push needed to start it does not."),
+     "The burp is the energy given off when the tube's tight curl comes undone. For a clean change it is "
+     "exactly 4(λ − 1) per dot, so it grows with the size of the tube, while the push needed to start it does "
+     "not."),
+    ("Does the tube open into a wide space?",
+     "Not in this toy as it stands. Read from the saved wiring, the tube ends as a tube six steps around where "
+     "it was four: flat at every dot, and still narrow. The toy's rule charges for loops of four and for nothing "
+     "longer, so nothing pays for widening further."),
     ("How much energy does it take to start the change?",
      "Twelve units at λ = 1.25: the cost of the cheapest partner swap out of a perfect tube, counted exactly, the "
      "same at every size from 48 to 288 dots. In 320 sealed runs, no tube left with a budget below 12 and every "
@@ -435,8 +444,8 @@ def footer(kind):
 def page_plain(plain, technical, chapter_to_section):
     url = SITE + BASE
     description = ("What came before space? A plain-language physics paper tests one hypothesis in a toy model: a "
-                   "curled-up arrangement opens into flat space for a push of 12 units, releases a burp of energy "
-                   "and leaves a scrap behind.")
+                   "curled-up arrangement gives way for a push of 12 units, releases a burp of energy and leaves "
+                   "a scrap behind. What it turns into is still a narrow tube.")
     terms = _terms(plain["back"])
     ld = json_ld("plain", url, TITLE + ": " + SUBTITLE, description,
                  extra={"alternativeHeadline": "Plain-language edition",
