@@ -1,10 +1,24 @@
-# Batch queue and results bucket, as of 2026-10-11 16:28 UTC (commit d2497ff)
+# Batch queue and results bucket, as of 2026-10-12 17:55 UTC (commit a7cfede)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- none
+- t62_mu020_g200_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu025_g150_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu025_g200_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu030_g150_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu030_g200_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu000_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu000_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu010_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu010_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu020_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu020_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu025_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu025_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu030_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t62_mu030_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
 
 ## RUNNABLE
 - none
@@ -19,26 +33,6 @@ until a person downloads, checks and commits them.
 - none
 
 ## SUCCEEDED
-- t51_l256_fast_00-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:54
-- t51_l256_fast_01-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:37
-- t51_l256_fast_02-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:49
-- t51_l256_fast_03-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 14:31
-- t51_l256_fast_04-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:36
-- t51_l256_fast_05-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:30
-- t51_l256_fast_06-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:00
-- t51_l256_fast_07-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:36
-- t51_l256_fast_08-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:53
-- t51_l256_fast_09-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:33
-- t51_l256_fast_10-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:47
-- t51_l256_fast_11-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:04
-- t51_l256_fast_12-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 15:44
-- t51_l256_fast_13-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:21
-- t51_l256_fast_14-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:01
-- t51_l256_fast_15-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:09
-- t51_l256_fast_16-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:45
-- t51_l256_fast_17-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:13
-- t51_l256_fast_18-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:17
-- t51_l256_fast_19-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:30
 - t51_l256_100k_00-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:08
 - t51_l256_100k_01-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
 - t51_l256_100k_02-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
@@ -46,7 +40,6 @@ until a person downloads, checks and commits them.
 - t51_l256_100k_04-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:55
 - t51_l256_100k_05-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:52
 - t51_l256_100k_06-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:24
-- t51_l256_100k_07-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:29
 - t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:30
 - t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:42
 - t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 10-05 21:16
@@ -219,6 +212,27 @@ until a person downloads, checks and commits them.
 - t57_untied_packed_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 02:15  stopped 10-10 04:14
 - t57_untied_packed_lam110_n512-624a5dd  created 10-09 11:27  started 10-10 02:48  stopped 10-10 08:50
 - t57_untied_spread_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 03:42  stopped 10-10 05:41
+- t57_untied_spread_lam110_n512-624a5dd  created 10-09 11:27  started 10-10 03:49  stopped 10-10 09:59
+- t57_untied_packed_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 04:14  stopped 10-10 06:18
+- t57_untied_packed_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 04:15  stopped 10-10 10:39
+- t57_untied_spread_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 04:15  stopped 10-10 06:11
+- t57_untied_spread_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 04:48  stopped 10-10 11:01
+- t60_lam105_n64-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-10 23:37
+- t60_lam105_n96-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-10 23:53
+- t60_lam105_n144-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-11 00:27
+- t60_lam105_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:49
+- t60_lam110_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:28
+- t60_lam110_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:37
+- t60_lam110_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:04
+- t60_lam110_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:33
+- t60_lam115_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:25
+- t60_lam115_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:35
+- t60_lam115_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:50
+- t60_lam115_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:24
+- t60_lam120_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:27
+- t60_lam120_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:39
+- t60_lam120_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:48
+- t60_lam120_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:07
 - None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
 
 ## FAILED
@@ -741,5 +755,10 @@ until a person downloads, checks and commits them.
 - t60_lam135_n288/t60_lam135_n288.csv  (2026-10-11 14:13:23, 41894 bytes)
 - t60_lam135_n64/t60_lam135_n64.csv  (2026-10-10 23:45:34, 33554 bytes)
 - t60_lam135_n96/t60_lam135_n96.csv  (2026-10-11 00:37:19, 36301 bytes)
+- t62_mu000_g150_n96/t62_mu000_g150_n96.csv  (2026-10-12 17:50:46, 3671 bytes)
+- t62_mu000_g200_n96/t62_mu000_g200_n96.csv  (2026-10-12 17:54:53, 3678 bytes)
+- t62_mu010_g150_n96/t62_mu010_g150_n96.csv  (2026-10-12 17:49:30, 3670 bytes)
+- t62_mu010_g200_n96/t62_mu010_g200_n96.csv  (2026-10-12 17:54:43, 3740 bytes)
+- t62_mu020_g150_n96/t62_mu020_g150_n96.csv  (2026-10-12 17:53:56, 3681 bytes)
 
 ## scratch from runs that died (partial/)
