@@ -34,3 +34,8 @@ t57_*
 # recorded in the commit that carries this request. Neither has been read.
 t62_*
 t63_*
+# 2026-10-12: the last four of T63's stage-1 cells (N = 192 with a price; still running at 19:10 UTC). Not read.
+t63_mu0025_n192*
+t63_mu0050_n192*
+t63_mu0100_n192*
+t63_mu0200_n192*
