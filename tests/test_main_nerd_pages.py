@@ -64,7 +64,7 @@ def pages():
 
 def test_the_pages_hold_the_whole_of_both_papers(pages):
     plain_html, tech_html, plain, technical = pages
-    assert [c["num"] for c in plain["chapters"]] == list(range(1, 12)) and plain["n_figures"] == 31
+    assert [c["num"] for c in plain["chapters"]] == list(range(1, 12)) and plain["n_figures"] == 32
     assert [s["roman"] for s in technical["sections"]] == ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", ""]
     for page in (plain_html, tech_html):
         body = re.sub(r"<script.*?</script>|<pre>.*?</pre>|\\\(.*?\\\)|\\\[.*?\\\]", " ", page[page.index("<body"):],

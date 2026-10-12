@@ -3405,42 +3405,43 @@ to the owner's hypothesis or a new simulation result.
     its own 120-second limit while the laptop was also computing T54. Run alone it passes (10 of 10). GitHub's own run of that commit passed. The
     commit had been chained after the test command without a check of its exit status.
 
-- **O118 T54, the held-out size, read: along the helix patch the barrier is the same exact quadratic at every sheet
-  size, and under the owner's tie a finite patch exists at every curling cost; the registered verdict word is not
-  scored in four rows of six (11 October 2026, 16:01 ET by the clock). Exact; pre-registered with a held-out
-  size.** (PREREGISTRATION T54, Amendment 4 and "Reading ... the held-out size", which is the full account;
-  `scripts/exact_t54_patch.py`; `results/t54_patch_stage1.csv`, `results/t54_patch_heldout.csv`. Six links: VISION
-  Update 24's caveat.)
-  - **Exact.** ΔH(k) = a·k − b·k² with nothing left over, the same at L = 8, 12 and 16 for every patch that does
-    not meet its own image. Untied a = 80 − 16λ and b = 16(λ − 1); tied a = 176 − 112λ and b = 48(λ − 1) (read off
-    the values, not derived). Under the tie the peak is at 5.5, 3.3, 2.2 and 1.5 columns with barriers of 145, 77,
-    45 and 27 for λ = 1.10 to 1.25; untied, 19.5 to 7.5 columns and 608 to 225.
-  - **Scored.** The held-out numbers hold exactly at all six scored rows. The verdict word, read as registered
-    over every k computed, is RISES AGAIN (reported, not scored) at tied λ = 1.10 to 1.20 and untied 1.40, because
-    the one patch that wraps the torus (k = 15) lies above the quadratic; FIXED WALL at tied 1.25 and 1.40. The
-    owner's CRITICAL PATCH is not scored in four rows and fails by the letter in two; ours failed by the letter at
-    tied 1.25. NO FINITE PATCH appears nowhere, so the condition that would end the branch (Update 44) is not met.
-  - **Rule 11** for the two failures by the letter. (1) They do not touch the mechanism: at tied 1.25 two whole
-    patches tie at 24 round a fitted peak of 27, and at 1.40 the first patch is free. (2) The cause is the rule:
-    it reads the word over whole patches and over every k computed, the wrapped one included. (3) No further test
-    is needed to tell that apart; the values are exact. (4) Nothing here would make us abandon the branch.
-  - **Owed.** A fresh read-only review of the seam's construction and the fit (rule 12). Whether the verdict word
-    is to be read only over patches that do not meet their own image is the owner's to decide.
+## O118. Retrospective independent endpoint and manuscript audit (11 October 2026)
 
-- **O119 EXACT: the flat tori of N points counted by width. Six around is the exception, and more so the larger the
-  torus (11 October 2026). Complete enumeration; promoted from a sandbox look with a tested script.**
-  (`scripts/exact_flat_torus_widths.py`, `tests/test_flat_torus_widths.py`.)
-  - **Exact.** A flat torus (every edge on exactly two squares, so H = 0 at every λ) is the grid wrapped up by a
-    lattice with N points per cell and no wrap shorter than six. Counting the two-sided wrappings by their shortest
-    wrap: of 47 at 64 points, 8 are six around; of 236 at 192 points, 20 (8.5 %); of 387 at 288, 20 (5.2 %); of
-    1,007 at 1,024, 8 (0.8 %); of 4,079 at 4,096, 8 (0.2 %). The median width is 8, 12, 16, 30 and 58: it grows
-    like the square root of N. Every wrapping of 64 points was built as a graph and checked: valid, flat, and of
-    the counted width.
-  - **Beside O116.** The maps' flat end states are six around in 9,858 of 9,865. The tube ends on the nearest flat
-    torus, not on a usual one. The energy is the same for all of them.
-  - *Ours, unverified.* With named points each wrapping carries the same number of labeled graphs, so a chain that
-    could move among flat tori at no cost would be found wide most of the time. It cannot: leaving a flat torus
-    costs 32. Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
+**Ours, computationally checked; physical interpretation unverified.** Prepared with OpenAI
+Codex on base `5382053a`. This is an AI audit, not independent human peer review. New endpoint
+analysis is retrospective and does not change original registration verdicts. The reader and
+known-surface controls are `scripts/read_endpoint_geometry.py` and
+`tests/test_endpoint_geometry.py`; detailed selection, algorithm and limitations are in the
+11 October supplement addendum. Per-input hashes and certificates are in
+`docs/papers/curled_torus/endpoint_geometry_2026-10-11.json`.
+
+All 120 original T8 lambda=1.05 endpoints reconstruct as narrow square-grid tori with shortest
+noncontractible loop six and shortest independent loop N/4. Among 3,521 reached, zero-energy
+T60 saved final endpoints, 3,446 are narrow tori, 73 disconnected surfaces and two Klein bottles.
+The two nonreached rows are outside that selection even though their settled graphs also have
+zero energy. Width alone does not certify one torus. The surface test explicitly checks cyclic
+vertex links; torus lengths follow a full lattice and adjacency reconstruction.
+
+**Previous claim → correction:** endpoint periods were unmeasured → reconstructed original
+endpoints remain narrow → local flatness is insufficient for two large directions in this
+sample → future claims of macroscopic opening must preregister global geometry measures and
+a held-out size. This does not negate wider-shell outcomes in later six-link experiments,
+whose conditions and denominators differ.
+
+**Diagnostic and interpretation corrections:** T60 passes its finite-sample criteria and frozen
+held-out prediction; the first three maps remain inconclusive. T24's residual-wait CV criterion
+also passes on the new 24-cell smaller-size window, so the later pass is not uniquely evidence
+for clock repair. The n=120 calibrated CV interval starts at 0.7577404651, not the printed 0.756;
+no verdict changes. Lambda > 1 supplies a positive ideal energy gap, not a physical derivation
+or proof of thermodynamic first order. The 12-unit bound concerns escape under the stated move
+set, not a measured commitment barrier. No-stall observations do not exclude coexistence;
+the sealed runs do not establish reservoir equilibration. No claim of a wholly error-free
+manuscript follows from this audit.
+
+The Paper 1 sources and abstracts are revised accordingly; raw results and historical
+registrations are unchanged. Review order and scope are in `review_corrections_2026-10-11.md`
+beside the manuscripts. The prior disclosure below describes the original drafting; these
+11 October corrections and their checker were prepared with OpenAI Codex.
 
 ## Provenance
 

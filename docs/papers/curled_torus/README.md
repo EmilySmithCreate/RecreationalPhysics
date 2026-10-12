@@ -2,6 +2,10 @@
 
 **Activated escape and conversion in a graph model of emergent geometry**
 
+Revision of 11 October: [review the plain-language changes first, then the technical edition](review_corrections_2026-10-11.md).
+The retrospective endpoint audit distinguishes narrow tori, disconnected surfaces and Klein
+bottles. The fourth registered map and its held-out size are included; earlier verdicts are retained.
+
 - [Read the paper](paper.pdf).
 - [Read the plain-language edition](paper_plain_language.pdf) ([source](paper_plain_language.tex), [notes](plain_language_README.md)). Its chapters run in the same order as the paper's sections, and the paper cites them as "PL, Ch. n".
 - [Turn the knobs](https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8): the interactive companion ([source](../../public/curling_ladder_tube.html)).
