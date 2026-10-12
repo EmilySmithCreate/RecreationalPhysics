@@ -1,10 +1,19 @@
-# Batch queue and results bucket, as of 2026-10-12 19:30 UTC (commit d0f21e0)
+# Batch queue and results bucket, as of 2026-10-12 19:59 UTC (commit fef0650)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- none
+- t62_mu000_g150_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu000_g200_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu010_g150_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu010_g200_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu020_g150_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu020_g200_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu025_g150_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu025_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
+- t62_mu030_g150_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
+- t62_mu030_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
 
 ## RUNNABLE
 - none
@@ -25,7 +34,6 @@ until a person downloads, checks and commits them.
 - t51_l256_100k_03-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:56
 - t51_l256_100k_04-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:55
 - t51_l256_100k_05-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:52
-- t51_l256_100k_06-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:24
 - t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:30
 - t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:42
 - t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 10-05 21:16
@@ -219,6 +227,7 @@ until a person downloads, checks and commits them.
 - t60_lam120_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:39
 - t60_lam120_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:48
 - t60_lam120_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:07
+- t60_lam125_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:27
 - None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
 
 ## FAILED
