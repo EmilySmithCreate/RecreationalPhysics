@@ -5064,3 +5064,68 @@ The held-out size takes several hours as two files. `scripts/make_t61_configs.py
 per cell (ten files, `t61_lam<tag>_n384_c<stores>`), so that the cells run side by side. Nothing else changes: a
 replica's seed depends on (seed, N, λ, stores, replica) and not on the file it is in, and the analyzer reads the
 ten files as it would the two. Written and committed before stage 1 was read.
+
+### Reading of T61, stage 1, 2026-10-11 (`python scripts/analyse_t61.py`; read after the owner's prediction was committed, fafd1aaa)
+
+**PATCHWORK at both λ and both sizes. No cell has a WIDE majority. The owner's prediction (WIDENS) fails. Ours
+holds on the verdict words and fails in three particulars.**
+
+Gates pass in all 20 cells: the energy books balance to 5 × 10⁻¹³, every end graph is valid, and all but one of
+480 replicas converted. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| stores per point | λ = 1.25, N = 96 | λ = 1.25, N = 192 | λ = 1.40, N = 96 | λ = 1.40, N = 192 |
+|---|---|---|---|---|
+| 2 | 24, 0, 0 | 24, 0, 0 | 3, 16, 5 | 0, 19, 4 (one not converted) |
+| 1 | 24, 0, 0 | 24, 0, 0 | 2, 17, 5 | 0, 22, 2 |
+| 1/2 | 22, 1, 1 | 20, 4, 0 | 1, 17, 6 | 0, 21, 3 |
+| 1/3 | 12, 11, 1 | 9, 15, 0 | 1, 20, 3 | 0, 21, 3 |
+| 1/4 | 3, 20, 1 | 4, 20, 0 | 0, 19, 5 | 0, 21, 3 |
+
+- **The owner's prediction.** WIDENS: **fails** at all four (λ, N). WIDE replicas exist, in a minority: 3 of 240 at
+  λ = 1.25 and 39 of 239 at λ = 1.40 (one in six). "Some configs flat": one end state (λ = 1.40, N = 96, two stores
+  per point) is exactly flat and reads eight around from the point the reader starts at. From four fifths of its
+  points it is six around (sees3 = 0.21), so it is not a torus, like the three such states of O116. **By the
+  letter of a reader that looks from one point, her second clause holds; no clean flat torus wider than six
+  appeared.** The 26 other exactly flat end states are six around.
+- **Ours.** TUBE majorities with one store per point or more: **holds at λ = 1.25** (96 of 96 replicas), **fails
+  at 1.40**, where every amount of room gives a PATCHWORK majority. PATCHWORK with a third and a quarter of a
+  store per point at 1.40: holds. TUBE or MIXED there at 1.25: **fails in three cells of four** (PATCHWORK). A WIDE
+  majority nowhere: holds. No exactly flat end state wider than six: holds in substance, fails by the letter of
+  the one-point reader.
+- **Described, not scored.** At λ = 1.25 the outcome follows the room: the stores' mean energy at the end of the
+  sealed spell is 0.5, 1.0, 1.8 and about 2.0 for 2, 1, 1/2 and 1/3 or 1/4 of a store per point, and no point sees
+  a sheet until the room is under one store per point. At λ = 1.40 the median share of points that see a sheet out
+  to three steps is 0.30 to 0.42 in every cell, whatever the room, and the energy left in flaws is 42 to 64 at 96
+  points and 81 to 144 at 192. The median number of points within five steps reaches 59 and 61 at a quarter of a
+  store per point, the endless sheet's own 61; flaws add shortcuts, so that number overstates how wide the bulk is.
+
+**What it says.** Heat that cannot leave does not turn the tube into a wide flat torus. With room for it, at
+λ = 1.25, the product is the clean tube six around. With little room, or at λ = 1.40 with any room, it is a
+patchwork: part of it sheet-like, part tube-like, with flaws frozen in. About one in six at λ = 1.40 has more than
+half its points in sheet-like surroundings. None is a clean wide torus. *Ours, unverified:* at λ = 1.40 the tube
+breaks up as it converts whether or not its heat can leave (the maps' edge, 1.35), which is why room makes no
+difference there.
+
+### Amendment to T61, 2026-10-11, before N = 384 runs: the numbers for the held-out size
+
+`python scripts/analyse_t61.py results --write-prediction` wrote `configs/t61_heldout_prediction.json` from stage 1
+alone, by the rule fixed above (the mean of the two sizes' shares, 0.25 either side):
+
+| λ | stores per point | share WIDE (range) | share TUBE (range) |
+|---|---|---|---|
+| 1.25 | 2 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 1.25 | 1 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 1.25 | 1/2 | 0.02 (0 to 0.27) | 0.88 (0.63 to 1) |
+| 1.25 | 1/3 | 0.02 (0 to 0.27) | 0.44 (0.19 to 0.69) |
+| 1.25 | 1/4 | 0.02 (0 to 0.27) | 0.15 (0 to 0.40) |
+| 1.40 | 2 | 0.19 (0 to 0.44) | 0.06 (0 to 0.31) |
+| 1.40 | 1 | 0.15 (0 to 0.40) | 0.04 (0 to 0.29) |
+| 1.40 | 1/2 | 0.19 (0 to 0.44) | 0.02 (0 to 0.27) |
+| 1.40 | 1/3 | 0.13 (0 to 0.38) | 0.02 (0 to 0.27) |
+| 1.40 | 1/4 | 0.17 (0 to 0.42) | 0.00 (0 to 0.25) |
+
+Said plainly: a range of 0.25 either side is wide, and where a share is near zero it can miss only upward. What
+could miss is a WIDE share above about 0.4 at N = 384, or a TUBE share far from the smaller sizes'. The file is
+committed with this amendment, and the ten held-out configs (`scripts/make_t61_configs.py --held-out`) run after
+it. The owner's prediction for stage 1 was WIDENS; for the held-out size she is not asked again, and it is read
+against the same words.
