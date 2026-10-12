@@ -75,5 +75,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   stays one; interacting observers must be modeled jointly; and where in cosmic time observer-moments fall needs a
   declared reference class. To be treated as a program inside Everettian quantum mechanics, not a new theory. Worked
   the same day in the strict lane: `docs/theory/orh_*.md`, `src/orh/`.
+- 2026-10-12, the owner, on the reviewer's sentence that local flatness is insufficient to ensure large-scale
+  opening: "but makkes it more probable?" Ours: by count, yes (most flat wrappings are wide, O119); by what the
+  runs do, no (they stop at the nearest flat arrangement, six around). Both sentences are now in paper 1.
+- 2026-10-12, the owner, on "the network melts while it is fed ... it is a patchwork": "what if melted isnt a
+  thing? can part of a patchwork become flat or other tori again?" Ours: for the burp's own heat, melted is not
+  a thing, exactly (O123). And parts of a patchwork do come out flat: see the log.
+- 2026-10-12, the owner, on the photon idea of 11 October: "I'll pick this up in another thread".
 - 2026-10-12, the owner, evening, on the prior-work result that every candidate claim was already published: "I don't need this to be new, much better if I can apply existing math and physics to my theory and use it to predict and identify testable hypotheses and understand the key variables and constants." And: "is there any narrative or mathematical connection between this and the strange loop block universe?"
 - 2026-10-12, ours, the answer (`docs/theory/orh_findings.md`, section 10): the loop's measure must be Born-weighted; the view from outside is the decoherence functional of a closed system; a loop that turns for ever needs a record-erasing turn boundary, and the toy can run two turns with the records erased between them against kept. Not registered.

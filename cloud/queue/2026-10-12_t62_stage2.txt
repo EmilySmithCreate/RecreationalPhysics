@@ -1,0 +1,13 @@
+# PREREGISTRATION T62, the held-out size (N = 384): ten cells, queued after stage 1 was read and the numbers for
+# this size were written and committed (configs/t62_heldout_prediction.json; the amendment of 2026-10-12).
+# One line per Batch job: <runner> <config>.
+run_sixloop_widen t62_mu000_g150_n384
+run_sixloop_widen t62_mu000_g200_n384
+run_sixloop_widen t62_mu010_g150_n384
+run_sixloop_widen t62_mu010_g200_n384
+run_sixloop_widen t62_mu020_g150_n384
+run_sixloop_widen t62_mu020_g200_n384
+run_sixloop_widen t62_mu025_g150_n384
+run_sixloop_widen t62_mu025_g200_n384
+run_sixloop_widen t62_mu030_g150_n384
+run_sixloop_widen t62_mu030_g200_n384

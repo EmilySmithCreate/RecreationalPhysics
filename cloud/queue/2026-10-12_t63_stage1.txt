@@ -1,0 +1,14 @@
+# PREREGISTRATION T63, stage 1 (written 2026-10-12, before any run): the curled tube itself under a price mu on
+# loops of six, warm, cooled and read from its wiring. Five prices (mu = 0 is the control, paper 1's own run) x
+# two sizes, one cell to a config, 10 jobs. The held-out size (N = 384) is queued only after its numbers are
+# written. One line per Batch job: <runner> <config>.
+run_sixloop_widen t63_mu0000_n96
+run_sixloop_widen t63_mu0025_n96
+run_sixloop_widen t63_mu0050_n96
+run_sixloop_widen t63_mu0100_n96
+run_sixloop_widen t63_mu0200_n96
+run_sixloop_widen t63_mu0000_n192
+run_sixloop_widen t63_mu0025_n192
+run_sixloop_widen t63_mu0050_n192
+run_sixloop_widen t63_mu0100_n192
+run_sixloop_widen t63_mu0200_n192

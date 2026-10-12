@@ -5213,3 +5213,500 @@ Gates pass in all ten cells and every replica converted. Replicas ending TUBE, P
 warm fabric that was never melted, wider in places, flawed at the joins and often in separate pieces. The share
 that is mostly sheet-like shrinks as the tube gets longer. No clean flat torus wider than six appeared in 720 end
 states.
+
+## T62. With a price on loops of six, does the tube six around give way and come out wider? (piece 1; the owner's decision of 11 October, VISION Update 56; ASSUMPTIONS O124; written 2026-10-12, before any run)
+
+### Why
+
+What the tube becomes is a tube six around (O116), and its own trapped heat does not widen it (T61, O121). Exact:
+the toy's rule charges a loop of four and nothing longer, so nothing in it pays for width. Beside the outside
+reviewer's sentence that a second large direction has not appeared, the owner wrote "if this kept happening", and
+then decided: "Yes let's do some tests where there is a price on loops of 6." The term was fixed in VISION Update
+56 before any run: H6 = 16(N − S) + 4λX + μE6, with E6 the sum over links of (loops of six through the link − 6),
+counted only where positive. It is the toy's own rule one loop-length up. **Ours: with μ above zero this is our
+family, never the published model.**
+
+Exact, and known before writing (O124; `scripts/exact_sixloop_walls.py`): E6 is 15 per point on the tube six
+around and 0 on the tube eight around, so six around sits 15μ per point above a wide flat torus. Eight around is
+stuck at every μ. Six around is stuck for μ below 4/11. Its cheapest way out is local below μ = 0.28 (31 − 59μ)
+and long-range above (64 − 176μ, joining links five or more steps apart, and N² of them).
+
+### Disclosed: what was looked at first
+
+Under CLAUDE.md rule 16 this registration promotes sandbox looks onto fresh seeds and a held-out size. The looks
+are in `sandbox/LOG.md` (11 and 12 October); none of them is evidence. What they showed, at 96 and 192 points
+with other seeds and no push: at μ = 0.20 and g = 1.5 the tube stayed six around (8 of 8, 100,000 sweeps); at
+μ = 0.20 and g = 2.0 it left by itself and ended mostly wide, 50 to 83 % of points seeing a sheet, with 16 to 112
+units of flaws (14 of 14); at μ = 0.25 and g = 1.5 the same, 47 to 71 % (8 of 8). Cooling slowly did not remove
+the flaws, and none of those end states was exactly flat. Earlier looks pushed the tube by hand; the push turned
+out to be a long-range re-link (O124), and no push is used here. An earlier form of the term, which paid for
+having fewer six-loops than a sheet, rewarded breaking squares and was dropped before Update 56. The settings,
+the thresholds and our prediction below were written with those looks known. Nothing of T62 has been run.
+
+### What will be run
+
+`scripts/run_sixloop_widen.py` with the kernel `graphity.sixloop.run_chain6` (tests: `tests/test_sixloop.py`,
+`tests/test_t62.py`); configs from `scripts/make_t62_configs.py`, one cell to a config; on the cloud queue
+(`cloud/queue/2026-10-12_t62_stage1.txt`). The start is the 4 × L tube with its seam shifted by two: exactly flat,
+six around. Named points. Nothing is pushed by hand. λ = 1.25. **μ = 0 (the control), 0.10, 0.20, 0.25, 0.30;
+g = 1.5 and 2.0.** Three spells of the thermal chain for H6: 30,000 sweeps at g; 60,000 sweeps while g falls to 0.5
+in 40 equal steps; 1,000 sweeps at g = 0.05, which takes no uphill move. Both long spells are doubled at N = 384.
+24 replicas a cell; the end graph saved. Stage 1: N = 96 and 192, 20 cells. Held out: N = 384, 10 cells. Seeds from
+20266200. Durations are chain sweeps, not the fair clock of O90: the long-range switches on offer grow in number
+with the size, which is one reason the size claim has a held-out size.
+
+### Definitions, fixed now (`scripts/analyse_t62.py`)
+
+- **sees3**, per end state, as in T61: the share of its points that have exactly 25 points within three steps.
+- **Per replica:** WIDE if sees3 ≥ 0.5; TUBE if sees3 < 0.05; PATCHWORK between.
+- **Per cell** (μ, g, N): the outcome of more than half its replicas, else MIXED. **Gates:** every end graph valid,
+  and the chain's running counts of squares, surplus and E6 equal to a full recount in every replica.
+- **The control.** At μ = 0 the rule is the toy's own, under which six around is stuck. A cell with μ above zero
+  is read only if the control cell at its own g and N passes its gates and at least nine tenths of its replicas
+  end TUBE. Otherwise the bath alone is moving the tube at that g, and the cell is NOT READ.
+- **Per (μ, N)**, over the cells that are read: **WIDENS** if some cell has a WIDE majority; else **PATCHWORK** if
+  some cell has a PATCHWORK majority; else **STAYS SIX AROUND** if every cell has a TUBE majority; else MIXED.
+- No word on incomplete or failed data: the design (five prices, two couplings, 24 replicas numbered 0 to 23) is
+  written into the analyzer, as T61's was after its review.
+- **Reported, not scored.** The share that left six around during the warm spell; the energy and the six-loop
+  excess left; the fewest squares per point on the way. And from the saved wiring (`scripts/read_flat_kind.py`):
+  how many end states are in more than one piece, how many hold a one-sided piece, and how many are **CLEAN AND
+  WIDE**: exactly flat, no excess left, one piece, two-sided, eight or more around.
+
+### The held-out size (rule 14)
+
+The size claim is that the shares do not change as the tube lengthens. For every (μ, g) the shares of WIDE and of
+TUBE replicas at N = 384 are predicted as the mean of the shares at N = 96 and 192, each with a range of 0.25
+either side, written by `python scripts/analyse_t62.py --write-prediction` to
+`configs/t62_heldout_prediction.json` and committed with a dated amendment here before N = 384 runs. **AS
+PREDICTED** at a μ if every one of its cells at N = 384 is read and has both shares inside their ranges. The
+verdict word at N = 384 is read from N = 384 alone.
+
+### Predictions
+
+**The owner's: owed.** Nothing of T62 is read until her prediction is recorded here.
+
+**Ours, unverified.** The control holds at both g and both sizes. μ = 0.10: STAYS SIX AROUND (its way out costs 25
+and is not found in the time). μ = 0.20: TUBE at g = 1.5 and a WIDE majority at g = 2.0, so WIDENS. μ = 0.25: a WIDE
+majority at g = 2.0 and WIDE or MIXED at 1.5, so WIDENS. μ = 0.30: it leaves at both g, more damaged; WIDENS or
+PATCHWORK. No end state is CLEAN AND WIDE, or at most two of the 480 of stage 1: the flaws freeze in. The fewest
+squares per point is never under 0.75. At N = 384 the same words, with the shares inside their ranges and the
+WIDE shares, if anything, lower than at the smaller sizes, as in T61.
+
+### What each outcome would mean
+
+- **WIDENS** at some μ, with the control holding: a rule that pays for width makes the tube six around give way
+  and come out mostly wide, in a toy. "If this kept happening" then has a mechanism, and the CLEAN AND WIDE count
+  says whether it happens cleanly. The next tests are the same from the curled tube itself, and how the product
+  depends on size.
+- **PATCHWORK:** the price moves the tube off six around, and what it leaves is mostly not wide.
+- **STAYS SIX AROUND** at every μ: the price is not enough at these settings.
+- **The control fails:** the bath at that g moves the bare tube, and nothing at that g is read.
+
+### What this cannot show
+
+That reality has such a term, or what it would be. Anything in three directions. A change that starts from the
+curled tube. Whether the change starts locally or by a long-range re-link: the chain offers any two links, and
+only when the tube left is recorded. A clean opening, unless the CLEAN AND WIDE count shows one. Equilibrium:
+these are runs of fixed length. sees3 is a count of points within three steps and certifies no geometry. Named
+points. At μ above zero this is our family, never combinatorial quantum gravity.
+
+## T63. With a price on loops of six, what does the curled tube itself open into? (piece 1; VISION Update 56; ASSUMPTIONS O124; written 2026-10-12, after T62 was queued and before any run of T63)
+
+### Why
+
+T62 starts from the tube six around, paper 1's product. The hypothesis's own picture starts earlier: a curled
+arrangement that is stable for now gives way and what comes out is wide. So this test starts from the curled tube
+itself, four around, with the same price on loops of six.
+
+Exact, and known before writing (O124): with the price the curled tube sits 1 + 18μ per point above a wide flat
+torus at λ = 1.25, and 1 + 3μ above the tube six around. It is stuck only for μ below 0.106, because the price
+also pays for its first re-gluing: its cheapest exit falls from 12 to 14 − 132μ, and from μ = 0.013 on that exit
+is not paper 1's move but one that removes six-loops as well. The tube six around is stuck for μ below 4/11.
+
+### Disclosed: what was looked at first
+
+A sandbox look came before this registration (`sandbox/LOG.md`, 12 October; `sandbox/six_loop_from_tube.py`); it
+is not evidence. At 96 points, g = 1.5, six replicas a setting, other seeds: with no price the curled tube waited
+and ended as the clean tube six around, six of six, as in paper 1. With μ = 0.05, 0.10, 0.20 and 0.25 it waited
+(shorter the larger the price), and then did not stop at six around: after the warm spell 0 to 10 % of its
+six-loop excess was left, and it ended with 42 to 83 % of its points seeing a sheet and 16 to 74 units of flaws.
+None was exactly flat. μ = 0.025 has not been looked at. The settings, the thresholds and our prediction were
+written with that look known. Nothing of T63 has been run, and nothing of T62 had been read when this was written.
+
+### What will be run
+
+`scripts/run_sixloop_widen.py` with `"start": "tube"` (tests: `tests/test_t63.py`); configs from
+`scripts/make_t63_configs.py`, one cell to a config; on the cloud queue (`cloud/queue/2026-10-12_t63_stage1.txt`).
+The start is the 4 × L curled tube of paper 1. Named points. Nothing is pushed by hand. λ = 1.25, g = 1.5, paper
+1's own setting. **μ = 0 (the control), 0.025, 0.05, 0.10 and 0.20**; at the last the tube is not stuck at all.
+The three spells are T62's: 30,000 sweeps at g; 60,000 while g falls to 0.5 in 40 equal steps; 1,000 at g = 0.05;
+the two long spells doubled at N = 384. 24 replicas a cell; the end graph saved. Stage 1: N = 96 and 192, 10
+cells. Held out: N = 384, 5 cells. Seeds from 20266300. Durations are chain sweeps.
+
+### Definitions, fixed now (`scripts/analyse_t63.py`)
+
+- **Per replica.** NOT CONVERTED if more than a quarter of a surplus square per point is left at the end (the
+  curled tube has one per point); it is reported and left out. Otherwise by sees3, as in T61 and T62: WIDE if
+  sees3 ≥ 0.5; TUBE if sees3 < 0.05; PATCHWORK between.
+- **Per cell** (μ, N): the outcome of more than half its converted replicas, else MIXED. **Gates:** every end
+  graph valid, the chain's running counts equal to a full recount, and at least nine tenths converted.
+- **The control.** At μ = 0 this is paper 1's own run, and its product is the tube six around. A cell with μ above
+  zero is read only if the control at its N passes its gates and at least nine tenths of its converted replicas
+  end TUBE. If the control does not reproduce paper 1, nothing at that size is read.
+- **Per (μ, N):** **WIDENS** if the cell has a WIDE majority; **PATCHWORK** if a PATCHWORK majority; **ENDS SIX
+  AROUND** if a TUBE majority; else MIXED.
+- No word on incomplete or failed data, as in T62.
+- **Reported, not scored.** When the curl was gone; the energy and six-loop excess left; the fewest squares per
+  point on the way; and from the saved wiring the end states in more than one piece, those with a one-sided
+  piece, and those that are **CLEAN AND WIDE** (exactly flat, no excess left, one piece, two-sided, eight or more
+  around).
+
+### The held-out size (rule 14)
+
+For every μ the shares of WIDE and of TUBE among converted replicas at N = 384 are predicted as the mean of the
+shares at N = 96 and 192, each with a range of 0.25 either side, written by
+`python scripts/analyse_t63.py --write-prediction` to `configs/t63_heldout_prediction.json` and committed with a
+dated amendment here before N = 384 runs. **AS PREDICTED** at a μ if its cell at N = 384 is read and has both
+shares inside their ranges. The verdict word at N = 384 is read from N = 384 alone.
+
+### Predictions
+
+**The owner's: owed.** Nothing of T63 is read until her prediction is recorded here.
+
+**Ours, unverified.** The control ENDS SIX AROUND at both sizes. μ = 0.10 and 0.20: WIDENS. μ = 0.05: WIDENS or
+PATCHWORK, the shares near one half. μ = 0.025: we have not looked; PATCHWORK or ENDS SIX AROUND. No end state is
+CLEAN AND WIDE, or at most one of the 240 of stage 1. The fewest squares per point is never under 0.75. At
+N = 384 the same words, with the WIDE shares, if anything, lower.
+
+### What each outcome would mean
+
+- **WIDENS** at a μ where the curled tube is stuck (0.025, 0.05, 0.10), with the control holding: in this toy a
+  curled arrangement that is stable for now gives way and what comes out is mostly wide, in one change. That is
+  the hypothesis's picture for two directions, under a rule that pays for width; the flaws left, and the CLEAN AND
+  WIDE count, say how far from clean.
+- **ENDS SIX AROUND** at every μ where it is stuck: the change still stops at the narrow tube, and widening is a
+  second, separate step (T62).
+- **PATCHWORK:** it goes past six around and does not come out mostly wide.
+- **The control fails:** this setup does not reproduce paper 1, and nothing at that size is read.
+
+### What this cannot show
+
+That reality has such a term. Anything in three directions. A clean opening, unless the CLEAN AND WIDE count
+shows one. What the energy released does afterwards: this is a bath, which takes it away. Whether the change
+starts locally. sees3 certifies no geometry. Named points. At μ above zero, and at λ other than 1, this is our
+family, never combinatorial quantum gravity.
+
+### The owner's predictions for T62 and T63, 2026-10-12, recorded before anything of either was fetched or read
+
+Stage 1 of both tests was running or finished on the cloud when she answered (T62 queued from dc61b3b2, T63 from
+27f13005). Nothing had been fetched into the repository and nothing of either test had been read. She had been
+told what the unregistered looks showed, as each registration discloses, and had our predictions in front of her.
+Asked for a prediction for each test, she wrote:
+
+- For T62 (the tube six around): "wider (most end with over half their dots in sheet-like surroundings)". And to
+  "at which prices, if any, does it leave, and when it leaves, is the result wide or a patchwork?": "leaves when
+  price exists".
+- For T63 (the curled tube itself): "straight to something mostly wide".
+- And on ours: "agree with yours they just get more specific but allow my guess aat some settings?"
+
+**Her predictions, as read here (the reading is ours; the words above are hers).**
+
+- **T62: WIDENS at every price above zero** (μ = 0.10, 0.20, 0.25 and 0.30), at both sizes. She named no warmth; a
+  price is read as WIDENS when the verdict word for it is WIDENS.
+- **T63: WIDENS at every price above zero** (μ = 0.025, 0.05, 0.10 and 0.20), at both sizes.
+- She agrees with ours where ours is the more specific (the controls hold; essentially no end state CLEAN AND
+  WIDE), and **her guess stands wherever the two differ**. They differ in four places. T62 at μ = 0.10: hers
+  WIDENS, ours STAYS SIX AROUND. T62 at μ = 0.30: hers WIDENS, ours WIDENS or PATCHWORK. T63 at μ = 0.025: hers
+  WIDENS, ours PATCHWORK or ENDS SIX AROUND. T63 at μ = 0.05: hers WIDENS, ours WIDENS or PATCHWORK.
+- For the held-out size she is not asked again; it is read against the same words.
+
+### Reading of T62, stage 1, 2026-10-12 (`python scripts/analyse_t62.py results`; read after the owner's predictions were committed, 4ec36a8d, and the results accepted unread, 4b4f05cf)
+
+**WIDENS at μ = 0.20, 0.25 and 0.30. STAYS SIX AROUND at μ = 0.10 and at the control. The same at both sizes. The
+owner's prediction holds at three prices of four and fails at 0.10. Ours holds on every verdict word and fails in
+one particular.**
+
+Gates pass in all 20 cells. The control holds at both couplings and both sizes: 96 of 96 end exactly flat and six
+around. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| μ | g | N = 96 | N = 192 |
+|---|---|---|---|
+| 0 | 1.5 | 24, 0, 0 | 24, 0, 0 |
+| 0 | 2.0 | 24, 0, 0 | 24, 0, 0 |
+| 0.10 | 1.5 | 24, 0, 0 | 24, 0, 0 |
+| 0.10 | 2.0 | 19, 0, 5 | 21, 0, 3 |
+| 0.20 | 1.5 | 24, 0, 0 | 23, 1, 0 |
+| 0.20 | 2.0 | 1, 0, 23 | 0, 0, 24 |
+| 0.25 | 1.5 | 3, 6, 15 | 0, 7, 17 |
+| 0.25 | 2.0 | 0, 3, 21 | 0, 0, 24 |
+| 0.30 | 1.5 | 0, 5, 19 | 0, 7, 17 |
+| 0.30 | 2.0 | 0, 0, 24 | 0, 0, 24 |
+
+- **The owner's prediction** (WIDENS at every price above zero): **holds** at μ = 0.20, 0.25 and 0.30, at both
+  sizes. **Fails** at μ = 0.10, which reads STAYS SIX AROUND: most tubes never left. Of the twelve that did leave
+  there (eleven during the warm spell at g = 2.0, one while cooling), eight ended WIDE and four ended back at six
+  around.
+- **Ours.** Every word holds: the control; STAYS at 0.10; at 0.20 TUBE at g = 1.5 and a WIDE majority at 2.0; WIDE
+  majorities at 0.25; WIDENS at 0.30. "No end state CLEAN AND WIDE, or at most two": there is one. "The fewest
+  squares per point is never under 0.75": **fails**, 0.73 and 0.74 at μ = 0.30 and g = 2.0.
+- **Where the two differed.** At μ = 0.10 ours holds and hers fails. At 0.30 both hold.
+- **Described, not scored.** Where the tube widened it is not clean. In the ~~nine~~ ten cells with a WIDE majority (a miscount, corrected the same day: five settings at two sizes) the
+  energy left in flaws has cell medians of 32 to 48 at 96 points (0.33 to 0.50 per point) and 82 to 128 at 192
+  (0.43 to 0.67 per point), so a little more per point at the larger size; 2 to 3 % of the six-loop excess is
+  left. No end state of the 480 is in more than one piece (in T61 a quarter to a third were). The fewest squares
+  per point in those cells was 0.73 to 0.83. Among the tubes that left, the median time of leaving was 12,000 and
+  5,250 sweeps (96 and 192 points) at μ = 0.20 and g = 2.0, 9,000 and 7,000 at μ = 0.25 and g = 1.5, and inside
+  the first 500 at μ = 0.30. From 96 to 192 points the WIDE share rises in three of those cells (0.96 to 1.00,
+  0.62 to 0.71, 0.88 to 1.00), holds in one (1.00) and falls by two replicas in one (0.79 to 0.71, μ = 0.30 and
+  g = 1.5); in T61 it fell at every setting. Whether it holds is what the held-out size is for.
+- **Clean and wide: one of 480.** At μ = 0.10, g = 2.0, N = 96, one tube left while cooling and ended as an
+  exactly flat torus eight around, in one piece, with no excess. In the same cell one more ended exactly flat,
+  eight around from every point, with no excess, and one-sided; and at 192 points one ended flat and one-sided
+  with an eighth of its excess left. All three are at the gentlest price.
+- **Rule 11's four answers for the part that failed** (her "leaves when price exists", at μ = 0.10). (1) Does the
+  result falsify it as stated? In these runs, yes: at μ = 0.10, 37 tubes of 48 had not left after 30,000 sweeps
+  at g = 2.0 and none of 48 left at g = 1.5. (2) Implementation, parameters, finite size or the mechanism?
+  *Ours, unverified:* parameters, the length of the run against the wall. Exact (O124): six around is a dip at
+  every price below 4/11, so at every price in this test it leaves only by crossing a wall, and the cheapest way
+  out costs 31 − 59μ, which is 25.1 at μ = 0.10 against 19.2 at 0.20. Measured: of the twelve that did cross it,
+  eight ended WIDE and four went back to six around. (3) What cheaper test tells those apart? The same cell
+  (μ = 0.10, g = 2.0) with a warm spell ten times as long: if most tubes then leave and most of those end WIDE, it
+  was the wait; if the tubes that leave mostly go back to six around, the product at a gentle price is not wide.
+  Not run; it would be a new registration. The held-out size, whose warm spell is twice as long, bears on it
+  weakly. (4) What would make us give up the branch? The WIDE shares falling at the held-out size as they did in
+  T61, or a longer warm spell at μ = 0.10 showing most leavers back at six around. No new mechanism or knob is
+  proposed here.
+
+**What stage 1 says.** With a price on loops of six the narrow tube is no longer where the change ends. Where its
+wall can be crossed in the time, the tube six around gives way by itself and the product is mostly wide: at least
+half its points in sheet-like surroundings in 15 to 24 runs of 24. It is not clean: flaws are left, about a
+third to two thirds of a unit of energy per point, a little more per point at the larger size. At the gentlest
+price most tubes wait out the run, and the few that leave end cleanest. Measured, at two sizes, in a bath that
+takes the released energy away; the size claim waits for N = 384.
+
+### Amendment to T62, 2026-10-12, before N = 384 runs: the numbers for the held-out size
+
+`python scripts/analyse_t62.py results --write-prediction` wrote `configs/t62_heldout_prediction.json` from stage 1
+alone, by the rule fixed above (the mean of the two sizes' shares, 0.25 either side):
+
+| μ | g | share WIDE (range) | share TUBE (range) |
+|---|---|---|---|
+| 0 | 1.5 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 0 | 2.0 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 0.10 | 1.5 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 0.10 | 2.0 | 0.17 (0 to 0.42) | 0.83 (0.58 to 1) |
+| 0.20 | 1.5 | 0.00 (0 to 0.25) | 0.98 (0.73 to 1) |
+| 0.20 | 2.0 | 0.98 (0.73 to 1) | 0.02 (0 to 0.27) |
+| 0.25 | 1.5 | 0.67 (0.42 to 0.92) | 0.06 (0 to 0.31) |
+| 0.25 | 2.0 | 0.94 (0.69 to 1) | 0.00 (0 to 0.25) |
+| 0.30 | 1.5 | 0.75 (0.50 to 1) | 0.00 (0 to 0.25) |
+| 0.30 | 2.0 | 1.00 (0.75 to 1) | 0.00 (0 to 0.25) |
+
+Said plainly: where a share is at 0 or 1 it can miss in one direction only. What could miss: the tubes at
+μ = 0.10 and g = 2.0, or at μ = 0.20 and g = 1.5, leaving in numbers at the larger size, where both long spells are
+twice as long and the long-range ways out are four times as many; or the WIDE shares falling with size, as they
+did in T61. The file is committed with this amendment, and the ten held-out configs
+(`scripts/make_t62_configs.py --held-out`) are queued after it (`cloud/queue/2026-10-12_t62_stage2.txt`). The
+owner is not asked again for the held-out size; it is read against the same words.
+
+### Reading of T63, stage 1, 2026-10-12 (`python scripts/analyse_t63.py results`; read after the owner's predictions were committed, 4ec36a8d, and all ten cells accepted unread, 4b4f05cf and 77e8ec19)
+
+**NOT READ at every price, at both sizes. The control did not meet the bar written for it, so by T63's own rule
+nothing at either size is read. The owner's prediction and ours are not scored. The held-out size is not run.**
+
+- **The control.** At μ = 0, 19 of 24 converted replicas end TUBE at 96 points (0.79) and 21 of 24 at 192 (0.88).
+  The rule asked for nine tenths. Every other gate passes in all ten cells.
+- **Why, read from the control's own rows.** Every TUBE replica of the control is exactly flat and six around
+  (19 of 19; 21 of 21). The other five and three are not a different product: each came to rest with curl left (4
+  to 16 surplus squares, 16 to 44 units of energy), the resting states with a leftover that paper 1 reports (O13,
+  O107).
+- **The bar was ours, and it was set too high.** Paper 1's own record at this setting (λ = 1.25, g = 1.5; T24 and
+  T60, 120 decays a size, counted today from `released` against `expected`) is that 99 and 102 of 120 tubes end
+  exactly flat at 96 points, 96 and 98 of 120 at 192, and 0.80 to 0.91 over the five sizes. So 0.79 and 0.88 of 24
+  is paper 1's own rate, and nine tenths asked the control for more than paper 1 delivers. It was written from a
+  sandbox look of six runs. This is a mis-written rule, like T6's criterion 3 and T7's gate 3; it is not evidence
+  that the setup fails to reproduce paper 1, and it is not evidence that it does. The verdict stays as the rule
+  gives it.
+- **Described, not scored** (the analyzer prints each cell before it reads the control). Replicas ending TUBE,
+  PATCHWORK, WIDE, of 24:
+
+| μ | N = 96 | N = 192 |
+|---|---|---|
+| 0 | 19, 3, 2 | 21, 2, 1 |
+| 0.025 | 8, 6, 10 | 8, 6, 10 |
+| 0.05 | 0, 2, 22 | 0, 2, 22 |
+| 0.10 | 0, 5, 19 | 0, 4, 20 |
+| 0.20 | 0, 7, 17 | 0, 3, 21 |
+
+  No replica is NOT CONVERTED. Where most end WIDE the energy left has cell medians of 42 to 64 at 96 points and
+  104 to 122 at 192; no end state of the 240 is exactly flat with its excess gone, and none is CLEAN AND WIDE. The
+  fewest squares per point is 0.77. These rows support nothing: they are what a second run has to reproduce.
+- **Seen on the way, eight states, not evidence.** The control's resting states with a leftover are not six
+  around: 33 to 92 % of their points have sheet-like surroundings, and one at 96 points has 92 %, with 20 units of
+  energy left (what it is has not been read from its wiring). So in the toy with no price, the minority of burps that end on a leftover may be partly wide. Paper
+  1's statement that the tube ends six around was read from its exactly flat end states only (O116). A reading of
+  paper 1's saved end states that are not flat is owed before that statement is quoted for all of them.
+- **What follows.** T63 is not amended and its rows are not read under another rule. The same design runs again
+  on fresh seeds as T64, with the control's rule written from paper 1's record before it runs.
+
+## T64. T63 again on fresh seeds: with a price on loops of six, what does the curled tube itself open into? (piece 1; VISION Update 56; ASSUMPTIONS O124; written 2026-10-12, after T63 was read as NOT READ and before any run of T64)
+
+### Why
+
+T63's control failed a bar that paper 1's own maps do not meet (the reading above), so T63 gave no word. The
+question is unchanged: starting from the curled tube itself, with a price on loops of six, does the change stop at
+the tube six around or go on to something wide?
+
+### Disclosed: what was seen first
+
+All of T63's stage 1: every row of the table above, the control's eight resting states, and the counts from T24
+and T60 that the new control rule is written from. The new rule was written knowing that T63's control would have
+passed it. Our prediction below is written with T63's rows known. **So T64 is a second attempt, and weighs less
+than a first; wherever it is quoted it is quoted as the second.** What makes it worth running: every seed is
+fresh, and the control's rule is taken from paper 1's record, not from T63's control.
+
+### What will be run
+
+T63's design, unchanged except for the seeds: `scripts/run_sixloop_widen.py` with `"start": "tube"`; configs from
+`scripts/make_t64_configs.py` (tests: `tests/test_t64.py`, which checks that no seed of T63's is run again); on
+the cloud queue (`cloud/queue/2026-10-12_t64_stage1.txt`). The 4 × L curled tube of paper 1, named points, nothing
+pushed by hand. λ = 1.25, g = 1.5. **μ = 0 (the control), 0.025, 0.05, 0.10 and 0.20.** 30,000 sweeps at g; 60,000
+while g falls to 0.5 in 40 equal steps; 1,000 at g = 0.05; the two long spells doubled at N = 384. 24 replicas a
+cell; the end graph saved. Stage 1: N = 96 and 192, 10 cells. Held out: N = 384, 5 cells. Seeds from 20266400.
+Durations are chain sweeps.
+
+### Definitions, fixed now (`scripts/analyse_t64.py`)
+
+Everything is T63's (per replica NOT CONVERTED, WIDE, TUBE, PATCHWORK by sees3; per cell the majority and its
+gates; per (μ, N) the words WIDENS, PATCHWORK, ENDS SIX AROUND, MIXED; no word on incomplete or failed data; the
+things reported and not scored), **except the control**:
+
+- **The control holds at an N if** its cell passes its gates, **at least 0.6 of its 24 replicas end exactly flat
+  and TUBE** (15 or more), **and at least nine tenths of its replicas that end exactly flat are TUBE.** A cell with
+  μ above zero is read only if the control at its N holds.
+- **Where the two numbers come from.** Paper 1's record at this setting: 0.80 to 0.91 of tubes end exactly flat
+  (T24, T60), and 98 in 100 exactly flat end states are six around (O116). With 24 replicas a true share of 0.80
+  to 0.85 gives fewer than 15 by chance about once in a hundred runs or less (1.3 % at 0.80, 0.1 % at 0.85). Nine tenths of the exactly flat ones being six around is
+  what O116 says the product is.
+- **Reported, not scored:** the control's counts (replicas, exactly flat, exactly flat and six around), beside
+  paper 1's rate; and for its resting states with a leftover, their sees3.
+
+### The held-out size (rule 14)
+
+As T63: for every μ the shares of WIDE and of TUBE among converted replicas at N = 384 are predicted as the mean of
+the shares at N = 96 and 192, each with a range of 0.25 either side, written by
+`python scripts/analyse_t64.py --write-prediction` to `configs/t64_heldout_prediction.json` and committed with a
+dated amendment here before N = 384 runs. The numbers are not written if a control fails. **AS PREDICTED** at a μ
+if its cell at N = 384 is read and has both shares inside their ranges. The verdict word at N = 384 is read from
+N = 384 alone.
+
+### Predictions
+
+**The owner's, carried from T63.** Her words of 12 October for this question, given before anything of T63 was
+fetched or read: "straight to something mostly wide"; and of ours, "agree with yours they just get more specific
+but allow my guess aat some settings?" As read then (the reading is ours): **WIDENS at every price above zero**
+(μ = 0.025, 0.05, 0.10 and 0.20), at both sizes; her guess stands wherever the two differ. She has not been asked
+again, as T24 kept her T23 predictions. She had seen nothing of T63 when this was written.
+
+**Ours, unverified, written with T63's rows known.** The control holds at both sizes. μ = 0.05, 0.10 and 0.20:
+WIDENS at both sizes. μ = 0.025: MIXED at both sizes, no outcome in the majority. No end state CLEAN AND WIDE. The
+fewest squares per point never under 0.75. At N = 384 the same words.
+
+**Where the two differ:** μ = 0.025, hers WIDENS and ours MIXED.
+
+### What each outcome would mean
+
+As T63. **WIDENS** at a μ where the curled tube is stuck (0.025, 0.05, 0.10), with the control holding: in this
+toy a curled arrangement that is stable for now gives way and what comes out is mostly wide, in one change, under
+a rule that pays for width; the flaws left, and the CLEAN AND WIDE count, say how far from clean. **ENDS SIX
+AROUND** at every μ where it is stuck: the change still stops at the narrow tube. **PATCHWORK** or **MIXED:** it
+goes past six around and does not come out mostly wide. **The control fails again:** this setup does not reproduce
+paper 1 at paper 1's own rate, nothing at that size is read, and the branch stops until that is understood.
+
+### What this cannot show
+
+That reality has such a term. Anything in three directions. A clean opening, unless the CLEAN AND WIDE count
+shows one. What the energy released does afterwards: this is a bath, which takes it away. Whether the change
+starts locally. sees3 certifies no geometry. Named points. At μ above zero, and at λ other than 1, this is our
+family, never combinatorial quantum gravity.
+
+### Reading of T64, stage 1, 2026-10-12 (`python scripts/analyse_t64.py results`; read after all ten cells were accepted unread, 33554de6)
+
+**The control holds at both sizes. WIDENS at μ = 0.05, 0.10 and 0.20; MIXED at μ = 0.025. The same at both sizes.
+The owner's prediction holds at three prices of four and fails at 0.025. Ours holds on every item, and it was
+written with T63's rows known. A second attempt.**
+
+Gates pass in all ten cells; no replica is NOT CONVERTED. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| μ | N = 96 | N = 192 |
+|---|---|---|
+| 0 | 24, 0, 0 | 18, 5, 1 |
+| 0.025 | 12, 3, 9 | 7, 10, 7 |
+| 0.05 | 0, 3, 21 | 0, 3, 21 |
+| 0.10 | 0, 2, 22 | 0, 7, 17 |
+| 0.20 | 0, 4, 20 | 0, 2, 22 |
+
+- **The control.** With no price, 24 of 24 end exactly flat and six around at 96 points, and 16 of 24 at 192; the
+  bar is 15. Every exactly flat end state is six around. At 192 points it passed by two runs: 16 of 24 is on the
+  low side of paper 1's rate there (96 and 98 of 120), which chance gives about one time in twelve to twenty.
+- **The owner's prediction** (WIDENS at every price above zero): **holds** at μ = 0.05, 0.10 and 0.20, at both
+  sizes. **Fails** at μ = 0.025, which reads MIXED: about as many end six around as end wide.
+- **Ours.** Holds on every item: the control; WIDENS at 0.05, 0.10 and 0.20; MIXED at 0.025; no end state CLEAN
+  AND WIDE (none of 240); the fewest squares per point never under 0.75 (it is 0.77). It was written with T63's
+  rows known, so it predicted little.
+- **Where the two differed:** μ = 0.025; ours holds and hers fails.
+- **T63's rows**, which were not read, show the same picture; they are not added to any count here.
+- **Described, not scored.** The wide product is not clean. In the six cells that read WIDENS no end state is
+  exactly flat; the energy left has cell medians of 42 to 48 at 96 points (0.44 to 0.50 per point) and 114 to
+  119 at 192 (0.59 to 0.62 per point), so more per point at the larger size; 2 to 7 % of the six-loop excess is
+  left; and a little curl is left in 7 to 24 of every 24 (at most 12 surplus squares where the tube began with
+  192). The fewest squares per point on the way was 0.85 to 0.90 at μ = 0.05 and 0.10 and 0.77 at 0.20. Five end
+  states are in more than one piece, all at μ = 0.025 and 192 points. None holds a one-sided piece.
+- **Read from positions, exploratory** (`scripts/read_clear_points.py`; `scripts/read_leftover_width.py` says why
+  a count beside a flaw is not a width). A clear point is one with no flawed link within three steps. In the six
+  WIDENS cells only 4 to 12 points in 100 are clear: **the wide product has a flaw within three steps of nine
+  points in ten.** Of the clear points, 88 to 100 in 100 have no loop of six round them, and in five of the six
+  cells none is six around. In the controls every clear point at 96 points is six around, and at 192 points 21
+  end states of 24 are six around at every clear point. The same reading of T62's stage 1: in its ten cells with
+  a WIDE majority 8 to 18 points in 100 are clear, and in those cells no clear point of a tube that left six
+  around is six around. So the word WIDE is supported by three counts that agree (sees3, the six-loop excess gone, the clear
+  points), and what it describes is a wide surface flawed nearly everywhere, not a clean sheet with a few flaws.
+- **Rule 11's four answers for the part that failed** (her "straight to something mostly wide", at μ = 0.025).
+  (1) Does the result falsify it as stated? At that price, yes: 12 and 7 of 24 end six around, 9 and 7 end WIDE,
+  and no outcome has a majority at either size. (2) Implementation, parameters, finite size or the mechanism?
+  *Ours, unverified:* the mechanism at a gentle price. Exact (O124): at μ = 0.025 a tube six around is stuck
+  behind a wall of 29.5, which these runs do not cross (in T62 no tube of 48 left at μ = 0.10 and g = 1.5, where
+  the wall is 25.1). So a tube that lands on six around stays there, and what is mixed is where the change
+  itself lands. (3) What cheaper test tells those apart? None is needed for the fact. Whether the tubes that
+  land on six around would widen given time is T62's question at μ = 0.025, and a wall of 29.5 at g = 1.5 is out
+  of reach of a run. (4) What would make us give up the branch? The WIDE shares at μ = 0.05 to 0.20 falling at
+  the held-out size as T61's did, or the control failing there. No new mechanism or knob is proposed here.
+
+**What stage 1 says.** With a price on loops of six of 0.05 or more, the curled tube does not stop at the tube
+six around: it gives way and what comes out is mostly wide, in one change. At μ = 0.05 and 0.10 the curled tube
+is stuck first (O124: its cheapest way out costs 7.4 and 0.8), so there it is a stable-for-now arrangement
+opening into something wide; at 0.20 it is not stuck at all. The product is flawed nearly everywhere. At the
+gentlest price the change lands on six around about as often as on wide. Measured, at two sizes, in a bath that
+takes the released energy away, under a term that is ours and not the published model's; a second attempt; the
+size claim waits for N = 384.
+
+### Amendment to T64, 2026-10-12, before N = 384 runs: the numbers for the held-out size
+
+`python scripts/analyse_t64.py results --write-prediction` wrote `configs/t64_heldout_prediction.json` from stage 1
+alone, by the rule fixed above (the mean of the two sizes' shares, 0.25 either side):
+
+| μ | share WIDE (range) | share TUBE (range) |
+|---|---|---|
+| 0 | 0.02 (0 to 0.27) | 0.88 (0.62 to 1) |
+| 0.025 | 0.33 (0.08 to 0.58) | 0.40 (0.15 to 0.65) |
+| 0.05 | 0.88 (0.62 to 1) | 0.00 (0 to 0.25) |
+| 0.10 | 0.81 (0.56 to 1) | 0.00 (0 to 0.25) |
+| 0.20 | 0.88 (0.62 to 1) | 0.00 (0 to 0.25) |
+
+Said plainly, what could miss. The control: its bar is 15 of 24 exactly flat and six around, it got 16 at 192
+points, and paper 1 has no record at 384; if it fails, nothing at 384 is read. The WIDE shares falling with
+size, as T61's did. And the long spells are doubled at 384, so the curl may be gone in more runs than at 192.
+The file is committed with this amendment, and the five held-out configs
+(`scripts/make_t64_configs.py --held-out`) are queued after it (`cloud/queue/2026-10-12_t64_stage2.txt`). The
+owner is not asked again for the held-out size; it is read against the same words.

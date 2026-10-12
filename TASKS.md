@@ -715,21 +715,29 @@ The replacements for pieces 5 and 11 are hers. In order:
 
 9. **T61 is read at all three sizes (O121): trapped heat does not widen the tube.** Item 6 is answered for this
    route. Paper 1's end-state section can now be written.
-10. **The outside review (O120).** Its rewrite of paper 1's two editions is the branch
-    `codex/paper1-review-corrections-2026-10-11`; adopting it is the owner's decision, and her notes on its
-    sentences of 11 October (the why of "two humps"; the curling cost as something to test; "zero energy" for
-    "perfect flat sheet") go in with it. Owed from it on this branch: T60's wording in paper 6 ("memoryless",
+10. **The outside review (O120).** Its rewrite of paper 1's two editions was merged to main by the owner on 12
+    October, and her notes on its sentences (the why of "two humps"; the curling cost as something to test; the
+    jump in energy; "if this kept happening"; whether flat makes wide likely) were applied the same day on
+    `claude/paper1-after-review-2026-10-12`, with T61 and O123. *Done on that branch; it waits for her read and
+    her merge. The Side Nerd pages are not refreshed.* Owed from it on this branch: T60's wording in paper 6 ("memoryless",
     "two orders", "one front" as names of three diagnostics; the repaired clock not shown to be why the fourth map
     passes); a search for the lowest path in T54 (O118, "Correction").
-11. **A price on loops of six** (VISION Update 56). In order: the term as a tested kernel in `src/graphity/`
-    (rule 6: brute force against networkx, incremental exactness, constraints, same seed); the exact walls and the
-    push as a tested script; a registration, T62, with a held-out size and her prediction. Sandbox looks so far:
+11. **A price on loops of six** (VISION Update 56). *Done 12 October: the kernel (`src/graphity/sixloop.py`) and
+    the exact listing (`scripts/exact_sixloop_walls.py`), both tested; O124.* *T62 registered and queued 12 October
+    (PREREGISTRATION T62; no push; five prices with a control at none; two couplings; N = 96 and 192, held-out
+    384; 20 Batch jobs).* Her prediction: given 12 October (WIDENS at every price above zero), recorded before anything was fetched. Then fetch, accept, commit unread, read
+    (`scripts/analyse_t62.py`), write the held-out numbers, queue N = 384. *Stage 1 read 12 October (PREREGISTRATION
+    T62, "Reading"): WIDENS at μ = 0.20, 0.25 and 0.30 and STAYS SIX AROUND at 0.10 and the control, at both sizes;
+    her prediction holds at three prices of four; one end state of 480 clean and wide. The held-out numbers are
+    written and N = 384 is queued (`cloud/queue/2026-10-12_t62_stage2.txt`, 10 jobs). Then: fetch `t62_*n384`,
+    accept, read, one O entry (O126).* *T63 registered and queued the same day:
+    the same from the curled tube itself (PREREGISTRATION T63; 10 Batch jobs); her prediction given 12 October (WIDENS at every price above zero).* *T63 read 12 October: NOT READ at every price; its control missed a bar of nine tenths that paper 1's own maps do not meet (0.80 to 0.91 end exactly flat). T64 registered and queued the same day: T63's design on fresh seeds, the control's rule written from paper 1's record (PREREGISTRATION T64; 10 Batch jobs; a second attempt). *T64 stage 1 read the same day: the control holds; WIDENS at μ = 0.05, 0.10 and 0.20, MIXED at 0.025, at both sizes; her prediction holds at three prices of four; the wide product is flawed nearly everywhere. N = 384 queued with its numbers written first (5 jobs).* *Done the same day: paper 1's saved end states that are not flat, read from points clear of flaws (`scripts/read_leftover_width.py`; O116, addendum of 12 October): about half hold a stretch wider than six around, a few tens of points. Where both widths occur in one end state (440 of them) they never touch directly: a flaw lies between. Owed: which of the three knots the joints are, and how wide the wider stretch is.* Sandbox looks so far:
     `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
     most runs unfinished or stuck on a flaw).
 
 Owed by the owner: her replacements for pieces 5 and 11, or a table that charges damage (a new knob, S1); whether
-T56's held-out stage runs (ours: no); whether the outside reviewer's rewrite of paper 1 is adopted; her prediction
-for T62 once it is written; the open items of Updates 44 (less claim 4's wording, decided) and 52.
+T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4's wording, decided) and 52.
+*(Given 12 October: the reviewer's rewrite of paper 1 adopted; her predictions for T62 and T63.)*
 
 ## Later
 
@@ -746,7 +754,7 @@ VISION S5: a physicist reads it. Draft a short, honest note to C. Kelly, F. Bian
 **Added 2026-10-12** from the owner's handoff `docs/theory/observer_relative_histories_research_handoff.md`. Not a run
 of the toy and not a knob; no VISION decision needed. Done the same day, Stages A to F of the handoff: the literature
 map, the exact unitary toy (Stages B to D), the cosmic-time population model (Stage E) and the figures (Stage F);
-one home for the results is `docs/theory/orh_findings.md` (O119). Owed, in order: (1) the owner's reading of the
+one home for the results is `docs/theory/orh_findings.md` (O125). Owed, in order: (1) the owner's reading of the
 findings page and her decision whether this line stays on the programme page (two draft cards are on it, marked
 ours: 13, interference and records; 14, observers inside the loop; the page is arranged as a book of seven chapters
 at her request of the same afternoon); (2) Martellini 2026 (arXiv:2607.25307) read in full before the record surprisal is cited anywhere;
