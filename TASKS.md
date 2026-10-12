@@ -715,10 +715,11 @@ The replacements for pieces 5 and 11 are hers. In order:
 
 9. **T61 is read at all three sizes (O121): trapped heat does not widen the tube.** Item 6 is answered for this
    route. Paper 1's end-state section can now be written.
-10. **The outside review (O120).** Its rewrite of paper 1's two editions is the branch
-    `codex/paper1-review-corrections-2026-10-11`; adopting it is the owner's decision, and her notes on its
-    sentences of 11 October (the why of "two humps"; the curling cost as something to test; "zero energy" for
-    "perfect flat sheet") go in with it. Owed from it on this branch: T60's wording in paper 6 ("memoryless",
+10. **The outside review (O120).** Its rewrite of paper 1's two editions was merged to main by the owner on 12
+    October, and her notes on its sentences (the why of "two humps"; the curling cost as something to test; the
+    jump in energy; "if this kept happening"; whether flat makes wide likely) were applied the same day on
+    `claude/paper1-after-review-2026-10-12`, with T61 and O123. *Done on that branch; it waits for her read and
+    her merge. The Side Nerd pages are not refreshed.* Owed from it on this branch: T60's wording in paper 6 ("memoryless",
     "two orders", "one front" as names of three diagnostics; the repaired clock not shown to be why the fourth map
     passes); a search for the lowest path in T54 (O118, "Correction").
 11. **A price on loops of six** (VISION Update 56). In order: the term as a tested kernel in `src/graphity/`

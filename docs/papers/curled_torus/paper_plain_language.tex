@@ -211,8 +211,11 @@ depends on free energy, which includes the number of available arrangements as w
 How can you test which kind you have? \Pub\ Near coexistence, a well-sampled energy histogram
 can show two humps: the system spends time in each phase. But one hump in a small system does not
 prove a continuous transition, and two humps alone do not establish a first-order transition.
-The behavior as the system grows matters. Here the equilibrium test remained inconclusive;
-the paper measures escape and conversion from a prepared tube.
+A small system can show two humps that merge as it grows. First order means that the humps stay
+apart and the valley between them deepens as the system gets larger, so the test is what happens
+with size. Here that equilibrium test remained inconclusive, and this paper does not rest on it.
+It measures something plainer: whether a prepared tube gives way with a jump in energy at the
+sizes run, and how large the jump is.
 
 \begin{figure}[H]
 \centering
@@ -256,9 +259,11 @@ knows about the universe.
 
 \Claim\ Space is one settled arrangement of something deeper, which she calls X because nobody knows
 what it is. X was not chaos. It was a specific arrangement, stable for now, the way a reagent is
-stable until something gives it a push. The change that made space was sharp: it started at a seed,
-spread as a front, released a definite amount of energy that became matter and light, and left a
-remainder. Across the change the energy books balance.
+stable until something gives it a push. The change that made space came with a jump in energy: it
+started at a seed, spread as a front, released a definite amount of energy that became matter and
+light, and left a remainder. Across the change the energy books balance. She holds each part of this
+as something to test, not as a belief, and she does not ask that the change be first order in the
+physicists' sense: a jump in energy at the sizes that can be measured is what she is after.
 
 That paragraph is a hypothesis, not a result, and nothing in a computer can prove it about reality.
 What a computer can do is take a model in which space is an arrangement of links, and ask whether a
@@ -785,9 +790,13 @@ its hill. The burp is about the end: what comes out. And the toy has no tunnelin
 \emph{over} the rim, with energy lent by the bath or handed to it as a push, never through it.
 
 \Exact\ The changed rule is the published curvature energy plus $4(\lambda-1)$ times the surplus
-square count. The extra term vanishes when that count is zero. \Ours\ The author proposes reading
-it as a \emph{curling cost}. No physical derivation of that reading is supplied: the counting rule
-is precise, but its proposed meaning for nature is unverified.
+square count. The extra term vanishes when that count is zero. \Claim\ The author proposes reading
+it as a \emph{curling cost}: energy has to be paid to curl space tight, and is given back when it
+uncurls. She holds that as something to test. \Exact\ In the toy it is plain bookkeeping: a curled
+tube sits $4(\lambda-1)$ per dot above the flat arrangement, so uncurling gives that much back and
+curling again would have to pay it. \Ours\ What is not supplied is a derivation. At $\lambda=1$ the
+rule is the published graph version of the curvature in Einstein's gravity; nothing known requires
+the extra term or fixes its size, so its meaning for nature is unverified.
 
 \sub{Stable for now: is there a window?}
 Energy to give is not enough. Supercooled water has energy to give and sits there. For the tube to be
@@ -1237,6 +1246,17 @@ dots across: the shifted seam still joins a grid with four times its length in d
 The energy has fallen and the local square pattern has changed, yet a second large direction
 has not appeared in these endpoints.
 
+\Exact\ Shift the seam by two more places and the six-step loop goes as well, leaving eight; each
+further shift adds two. If the re-gluing kept happening, a second large direction would appear.
+But the toy's rule charges for loops of four and for nothing longer. Only the first shift releases
+energy. The later ones are neither rewarded nor charged, so nothing pushes them along.
+
+Does being flat at least make a wide shape likely? \Exact\ Counted as ways of wrapping the grid,
+yes: of the flat wrappings of 192 dots about one in twelve is six around, and the typical one is
+twelve around. \MeasX\ But the runs do not choose among them at random. Every move out of a flat
+arrangement costs at least 32 units, so in a cool bath the network stays at the first flat
+arrangement it reaches, and from the tube that is the nearest one: six around.
+
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=0.65cm,y=0.65cm,>=Stealth,font=\small]
@@ -1399,16 +1419,16 @@ otherwise.
 \end{axis}
 \end{tikzpicture}
 \caption{Bonfire or melt. \Meas\ The horizontal axis is the number of stores $C$, as a share of the
-number of dots $N$. With few stores the release melts the new sheet back into disorder; with many it
-leaves a clean sheet. The switch-over lies between one store per four dots and one per two at all
+number of dots $N$. With few stores the release damages the new sheet (the registered label is
+``melted''; the next section says what that can mean); with many it leaves a clean sheet. The switch-over lies between one store per four dots and one per two at all
 three sizes, and no run ended stalled with both orders side by side. Totals: 179 sheet-like, 87 in
 between, 154 melted.}
 \end{figure}
 
 \Meas\ A bonfire with a threshold, as the pre-registered verdict put it. Where the heat has room, the
-change feeds itself to completion; where it does not, the heat melts what the change made. Melted
-means the dots lose their neat two directions and go back to being linked any old way, which is the
-random phase the published model starts from. The switch-over moves in step with size, as a release
+change feeds itself to completion; where it does not, the heat damages what the change made. Melted,
+in this classification, means that at least 15 percent of the dots have lost their neat two
+directions. The switch-over moves in step with size, as a release
 of one unit per dot shared among the stores predicts. \Ours\ A rough energy budget puts it near one
 store per three dots; the measured crossover sits between one per four and one per two, which is as
 fine as the grid can say. That estimate assumes the stores settle into a thermal balance, and
@@ -1419,12 +1439,36 @@ individual store balances were not saved, so it is a budget, not a calibrated th
 temperature exists. Such a claim would require free-energy and equilibration evidence that these
 sealed runs do not supply.
 
+\sub{What ``melted'' can and cannot mean here}
+\Exact\ A sealed box holds only the energy it started with: at $\lambda=1.25$, one unit per dot,
+plus the push. A missing square costs 16 units. So the burp's own heat can break at most about one
+square in sixteen, however few stores there are. \MeasX\ Read again from the saved runs, every one of
+the 154 networks labelled melted still had 94 to 100 percent of its squares. That is damage: warm
+fabric with flaws in it. It is not the random tangle the published model starts from, which has
+about an eighth as many squares as flat fabric. The burp cannot melt its own product. An earlier
+draft of this chapter said that it could.
+
+\sub{Does trapped heat make the product wider?}
+\Meas\ Pre-registered, with the author's prediction that it would: tubes of 96, 192 and 384 dots at
+$\lambda=1.25$ and 1.40, sealed with two stores per dot down to one per four, then drained of their
+heat, cooled, and read from the wiring. It did not. With one store per dot or more at
+$\lambda=1.25$, every one of 144 tubes ended narrow, six around, and with half a store per dot most
+still did. With a third or a quarter of a store per dot, or at $\lambda=1.40$ with any amount of
+room, most ended as a \emph{patchwork}: good fabric almost everywhere, six
+around in one stretch and eight or more in the next, with flaws frozen in where the stretches meet,
+and often in two or more separate pieces. None of 720 end states was one clean torus wider than
+six. The share that was mostly sheet-like fell as the tube got longer, from one in five at 96 dots
+to one in sixty at 384 ($\lambda=1.40$). For the largest size the shares were written down
+beforehand from the two smaller ones: they held at nine of ten settings and missed at one.
+\Ours\ Trapped heat is flaws in many places at once, each re-stitching its own neighborhood. A
+clean re-gluing needs one edge moving alone.
+
 \whyhere{What the burp turns into, and whether the energy books balance across the change, only have
 meaning in a sealed system. In a bath the burp leaves and nothing can be asked of it. The sealed box is
 where the balance becomes a measurement.}
 
 \takeaway{Sealed, the release has to go somewhere, and where it goes decides the ending: into enough
-room and the sheet completes, into too little and the heat melts the new space. The books balance to
+room and the sheet completes, into too little and the heat damages the new space. The books balance to
 the unit in every run. Nothing stalled half and half.}
 
 \chapterpage{8 \enspace WHAT REMAINS}{A scrap of the old arrangement}
@@ -1783,7 +1827,8 @@ $\lambda=1.25$. The fourth bath map passes its criteria from 1.05 to 1.30 at the
 \sub{What the toy shows about this kind of change}
 \Ours\ The toy gives the larger hypothesis a concrete first question: can a prepared curled
 arrangement wait, escape and release a calculable amount of energy? Under the specified rules,
-it can. But its measured endpoint also limits the analogy: removing the four-step curl usually
+it can. That is the jump in energy the author asks for, at the sizes run. But its measured endpoint
+also limits the analogy: removing the four-step curl usually
 leaves a narrow torus, not two large directions. A fixed first-escape cost is not a measured
 commitment barrier, and a nonzero ideal energy gap is not a thermodynamic phase-transition test.
 
@@ -1791,7 +1836,8 @@ commitment barrier, and a nonzero ideal energy gap is not a thermodynamic phase-
 of space. This paper supplies a controlled toy-model test of part of that proposal, not a test
 against observations of the universe. Its results remain useful to the next model: the local
 energy can be priced exactly, the first exit can be predicted, and local flatness is insufficient
-to ensure large-scale opening. The remainder did not grow, a single front was not established,
+to ensure large-scale opening: by count most flat wrappings are wide, but the runs stop at the
+nearest flat arrangement, the narrow one, and their own trapped heat does not widen it. The remainder did not grow, a single front was not established,
 and three registered maps remained inconclusive before a fourth passed its stated criteria.
 
 \sub{What another researcher can build on}
@@ -1820,8 +1866,8 @@ cross-size kinetic comparisons clearer. Continue predicting a held-out size befo
 \sub{What comes next}
 The question that began the work survives its first test. Can an organized arrangement give way
 sharply, release energy and leave a remainder? In this small laboratory it can, and the first step
-can be priced to the unit. Two things were left standing at the edge of what this paper measured, and
-each has a paper of its own coming, with its predictions written down first.
+can be priced to the unit. Three things were left standing at the edge of what this paper measured,
+and each has work of its own coming, with its predictions written down first.
 
 \textbf{The scrap.} A scrap is the only thing in the new space that still carries the old
 arrangement, so the next paper, \emph{What the burp leaves behind}, asks what it takes to keep one.
@@ -1833,6 +1879,11 @@ that, \emph{How curled directions open}, runs the same rules with six links per 
 result: escape from the four-link tube does not settle the larger-direction question. Later runs
 find a separate barrier for each curled direction. Some reach broader shell profiles, but that
 does not establish a fixed-budget route that opens every direction.
+
+\textbf{A rule that pays for width.} The toy's rule charges only for loops of four, which is why the
+first re-gluing is paid for and the next is not. The author's next test adds a small price on loops
+of six, the same rule one loop-length up, so that a torus six around is itself stable for now and
+has somewhere to go. Nothing is reported from it here.
 
 \begin{center}
 {\color{ink}\Large\bfseries Twelve units start an escape. What opens a space?}

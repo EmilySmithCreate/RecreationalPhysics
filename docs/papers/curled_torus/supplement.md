@@ -167,7 +167,7 @@ python scripts/build_curled_paper.py --tectonic /path/to/tectonic
 
 The build regenerates the three figures, synchronizes the abstract directly from TeX, checks references and layout, compiles the PDF and writes the release manifest. Validation outputs accompany the package. The simulations remain reproducible through the frozen configurations and their recorded seeds, subject to the stated execution-provenance limitation.
 
-## Retrospective endpoint geometry and fourth-map audit, 11 October 2026 (O118)
+## Retrospective endpoint geometry and fourth-map audit, 11 October 2026 (O122)
 
 This addendum is an exploratory analysis of existing graphs, not a new preregistered test.
 Source/data base: `5382053a60c4137cd446f83355e2a12177bb94ea`. The checker is
@@ -241,6 +241,32 @@ would measure return-versus-completion probabilities. A half-commitment configur
 does not determine a free-energy activation barrier; an appropriate probability/free-energy
 calculation and a stated dynamics would also be needed. Store-energy histograms and checks
 of equilibration are needed before interpreting a sealed reservoir's mean balance as a temperature.
+
+## Addendum, 12 October 2026: retained heat, what "melted" can mean, and seam shifts
+
+Prepared with Claude (Anthropic) after the author's notes on the 11 October revision. Interpretations remain
+**Ours, unverified**.
+
+**Retained heat (T61, pre-registered).** Design, definitions, the author's prediction, both readings and the
+held-out numbers are in `PREREGISTRATION.md`, section T61; the summary entry is `ASSUMPTIONS.md` O121. Runner and
+analyzer: `scripts/run_burp_heat.py`, `scripts/analyse_t61.py`; tests `tests/test_t61.py` and
+`tests/test_t61_safeguards.py`; results `results/t61_lam*`. The outcome classes use a local statistic (the share
+of vertices whose three-step ball has 25 vertices) and certify no topology. Pieces and the kind of each
+zero-energy piece are read separately by `scripts/read_flat_kind.py`, a second implementation written without
+reference to `scripts/read_endpoint_geometry.py`; the two agree on the fourth map's counts (3,446 narrow tori,
+73 disconnected, 2 Klein bottles of 3,521).
+
+**The floor on squares in a sealed run (exact).** With $X\ge0$, $16(N-S)\le H\le E_{\rm tot}$, so
+$S/N\ge1-E_{\rm tot}/16N$ at every moment. `scripts/read_t9_squares.py` reads the final rows of the 420 sealed
+runs of Sec. V and reports squares per vertex by registered class; `tests/test_t9_squares.py` checks the bound on a
+fresh sealed run and on the saved ones. The 154 runs classed "melted" end with 0.938 to 1.000 squares per vertex.
+The class is a count of vertices off both signatures, not the random phase (`ASSUMPTIONS.md` O123).
+
+**Seam shifts and the count of wrappings (exact).** `scripts/read_endpoint_width.py` builds the $4\times L$ tube
+with its seam shifted by $s$ sites; `tests/test_read_shapes.py` checks zero energy and shortest loop six at
+$s=2$, and the shortest loops $4+s$ for $s\le8$ were verified at $L=24$, 48 and 72. The count of zero-energy
+lattice wrappings by shortest loop is `scripts/exact_flat_torus_widths.py` (`ASSUMPTIONS.md` O119): wrappings,
+not isomorphism classes, and not a statement about which the dynamics reaches.
 
 ## Companion documents
 

@@ -3515,7 +3515,7 @@ to the owner's hypothesis or a new simulation result.
     (1) to (5) in paper 1's text and paper 6's draft, which wait on the owner's decision about its branch.
   - **What it got wrong.** Nothing we have found. Two of its results were recomputed here with our code and
     reproduce exactly (T54's 24, 20, 45, 24; T60's 73 and 2). Two things it could not see: it numbered its own
-    geometry audit O118, which is T54 here (to be renumbered at merging, as it says); and it had not opened
+    geometry audit O118, which is T54 here (renumbered O122 on 12 October, when its branch was merged); and it had not opened
     T61's results, so it gives no view on them. Its limits are its own list: it did not redo the N = 18
     enumeration, the sealed runs, T58's replays, or O116's 9,215 end states.
   - **Its advice on what paper 1 is, for the owner:** a controlled study of an activated change in a deformation
@@ -3544,6 +3544,71 @@ to the owner's hypothesis or a new simulation result.
     Paper 1 can say that the product is a tube six around when the heat can leave and a flawed patchwork when it
     cannot. *Ours, unverified:* trapped heat is flaws everywhere at once, each re-stitching its own neighborhood,
     and the flaws that have not cancelled when the heat is drained stay where they are.
+
+- **O122 The outside reviewer's own audit entry: a retrospective, independent reading of paper 1's end states and
+  of the manuscript (11 October 2026; written by OpenAI Codex on its branch as "O118" and renumbered here on 12
+  October, because O118 is T54).** The text below is the reviewer's, unedited except for this heading. It was
+  merged to main with the reviewer's rewrite of paper 1 (33be5462). In that merge main's copy of this file lost
+  O118 (T54) and O119 (the flat tori counted), and when main was merged into the author branch this entry was
+  lost in turn; both are restored on 12 October. Its counts for the fourth map (3,446 narrow tori, 73 in separate
+  pieces, 2 Klein bottles, of 3,521) agree with `scripts/read_flat_kind.py`, written separately (O116, last
+  addendum). O120 is our record of the review as a whole.
+
+  > **Ours, computationally checked; physical interpretation unverified.** Prepared with OpenAI
+  > Codex on base `5382053a`. This is an AI audit, not independent human peer review. New endpoint
+  > analysis is retrospective and does not change original registration verdicts. The reader and
+  > known-surface controls are `scripts/read_endpoint_geometry.py` and
+  > `tests/test_endpoint_geometry.py`; detailed selection, algorithm and limitations are in the
+  > 11 October supplement addendum. Per-input hashes and certificates are in
+  > `docs/papers/curled_torus/endpoint_geometry_2026-10-11.json`.
+  >
+  > All 120 original T8 lambda=1.05 endpoints reconstruct as narrow square-grid tori with shortest
+  > noncontractible loop six and shortest independent loop N/4. Among 3,521 reached, zero-energy
+  > T60 saved final endpoints, 3,446 are narrow tori, 73 disconnected surfaces and two Klein bottles.
+  > The two nonreached rows are outside that selection even though their settled graphs also have
+  > zero energy. Width alone does not certify one torus. The surface test explicitly checks cyclic
+  > vertex links; torus lengths follow a full lattice and adjacency reconstruction.
+  >
+  > **Previous claim → correction:** endpoint periods were unmeasured → reconstructed original
+  > endpoints remain narrow → local flatness is insufficient for two large directions in this
+  > sample → future claims of macroscopic opening must preregister global geometry measures and
+  > a held-out size. This does not negate wider-shell outcomes in later six-link experiments,
+  > whose conditions and denominators differ.
+  >
+  > **Diagnostic and interpretation corrections:** T60 passes its finite-sample criteria and frozen
+  > held-out prediction; the first three maps remain inconclusive. T24's residual-wait CV criterion
+  > also passes on the new 24-cell smaller-size window, so the later pass is not uniquely evidence
+  > for clock repair. The n=120 calibrated CV interval starts at 0.7577404651, not the printed 0.756;
+  > no verdict changes. Lambda > 1 supplies a positive ideal energy gap, not a physical derivation
+  > or proof of thermodynamic first order. The 12-unit bound concerns escape under the stated move
+  > set, not a measured commitment barrier. No-stall observations do not exclude coexistence;
+  > the sealed runs do not establish reservoir equilibration. No claim of a wholly error-free
+  > manuscript follows from this audit.
+  >
+  > The Paper 1 sources and abstracts are revised accordingly; raw results and historical
+  > registrations are unchanged. Review order and scope are in `review_corrections_2026-10-11.md`
+  > beside the manuscripts. The prior disclosure below describes the original drafting; these
+  > 11 October corrections and their checker were prepared with OpenAI Codex.
+
+- **O123 EXACT: a sealed tube cannot melt. The burp's own energy can break at most about one square in sixteen,
+  and every run T9 classed "melted" kept 94 to 100 % of its squares (12 October 2026). Exact arithmetic, and a
+  reading of saved runs by a tested script; it corrects how that class was described, not how it was scored.**
+  (`scripts/read_t9_squares.py`, `tests/test_t9_squares.py`. The owner's question of 12 October, in her words:
+  "what if melted isnt a thing?")
+  - **Exact.** H = 16(N − S) + 4λX with X never below zero, and a sealed run holds only what it started with,
+    E = 4(λ − 1)N plus the push. So the squares per point can never fall below 1 − E/16N: 0.93 at λ = 1.25 and
+    0.90 at λ = 1.40, however few stores there are. The random phase has about 0.13.
+  - **Read.** T9's 154 runs classed "melted" end with 0.938 to 1.000 squares per point (medians 0.953 to 0.958
+    at the three sizes). T61's sealed spells never went below 0.92. No sealed run is below its floor.
+  - **What it corrects.** "Melted" in T9 is a registered class: at least 15 % of points at d = 0 or d ≥ 3. It
+    stands as scored (BONFIRE WITH A THRESHOLD). What does not stand is its description as the random phase:
+    paper 1's two editions ("melts into the random phase"; "linked any old way, which is the random phase the
+    published model starts from"), the programme page's piece 4, and our account on 11 October of a patchwork as
+    a melt that froze (corrected that night). All are corrected on 12 October. Melting in the proper sense needs
+    energy from outside: a warm bath (O88), a feed, or a budget handed over (O20).
+  - **The answer to her question** (ours). For the burp's own heat, melted is not a thing. Too little room
+    leaves damage: flaws in fabric that keeps fifteen squares in sixteen, and it sets as a patchwork when the
+    heat is drained (O121).
 
 ## Provenance
 

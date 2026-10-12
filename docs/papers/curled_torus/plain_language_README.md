@@ -1,5 +1,12 @@
 # Plain-language edition
 
+**Revised 12 October 2026 from the author's notes on the 11 October revision.** Chapter 1 says why two humps
+are not enough and that the author asks for a jump in energy, not for the words "first order". Chapter 3
+states the curling cost as something she wants tested, with what is exact in the toy and what is missing.
+Chapter 6 adds what would happen if the re-gluing kept happening and whether being flat makes a wide shape
+likely. Chapter 7 corrects "melted" (a sealed tube cannot melt: O123) and reports the trapped-heat test
+(T61). Chapter 12 names the next test, a price on loops of six, and reports nothing from it. 35 pages.
+
 **Current revision: 11 October 2026.** Review [the corrections](review_corrections_2026-10-11.md)
 before the earlier drafting notes below. The PDF now has 34 pages and 32 figures, including a
 new seam diagram. Chapter 6 reports reconstructed narrow endpoints and distinguishes tori,

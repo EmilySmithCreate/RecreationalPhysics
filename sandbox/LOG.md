@@ -97,3 +97,13 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   Reading their numbers corrected an explanation of ours: T61's patchworks were never melted. The fewest squares
   per point in the sealed spell was 0.92 to 0.99. Warm fabric with flaws in it, not a melt that froze. Yet most
   of their links join dots that started far apart: the dots trade neighbors while the squares stay.
+- 2026-10-12. Can part of a patchwork be flat on its own? (`sandbox/no_melt.py pieces`, on T61's end states at all
+  three sizes, all read.) Of 213 end states that are not flat as a whole and are in two or more pieces, 124 have
+  at least one piece that is exactly flat by itself: 117 such pieces are tori six around, 2 are tori eight
+  around, and 16 are one-sided. So parts of a patchwork do close up as clean small tori, nearly always narrow.
+- 2026-10-12. "What if melted isn't a thing?" (`sandbox/no_melt.py heal`: the 24 mostly-wide end states of T61 at
+  lambda = 1.40, 96 points, run with a ceiling on the energy so that flaws can wander and cancel and the fabric
+  can never gain more than about one flaw; 200,000 sweeps.) Still running when this was written; of the first six
+  at each of three settings, one or two healed to exactly flat, as separate small pieces (tori six around, one
+  eight around, and one-sided ones). Promoted the same day in a different form: the exact floor on squares in a
+  sealed run (O123).

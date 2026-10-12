@@ -70,3 +70,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-11, ours. With a price on loops of six and one push, the first finished end states were one-sided
   (Klein bottles). Why? One push makes one defect, not a pair; does a lone defect that runs the length of the tube
   close the seam with a flip? Would two pushes, or a push of the other kind, give a torus?
+- 2026-10-12, the owner, on the reviewer's sentence that local flatness is insufficient to ensure large-scale
+  opening: "but makkes it more probable?" Ours: by count, yes (most flat wrappings are wide, O119); by what the
+  runs do, no (they stop at the nearest flat arrangement, six around). Both sentences are now in paper 1.
+- 2026-10-12, the owner, on "the network melts while it is fed ... it is a patchwork": "what if melted isnt a
+  thing? can part of a patchwork become flat or other tori again?" Ours: for the burp's own heat, melted is not
+  a thing, exactly (O123). And parts of a patchwork do come out flat: see the log.
+- 2026-10-12, the owner, on the photon idea of 11 October: "I'll pick this up in another thread".

@@ -1,4 +1,4 @@
-"""Known surfaces, non-surfaces and relabelling controls for O118."""
+"""Known surfaces, non-surfaces and relabelling controls for O122."""
 import numpy as np
 import pytest
 from scripts.read_endpoint_geometry import inspect, topology, validate
