@@ -404,31 +404,40 @@ $12/32 = 0.375$. At $\lambda = 1.25$, with a wall of 4, the slab is not stuck in
 move is not the whole barrier in three directions. And under the tie as implemented a damaged vertex pays no tie, so
 a slab vertex is relieved of its $2a$ by breaking as well as by opening.
 
-\emph{Exact, verdict pending} (T54). T54 prices the barrier beyond the single move: the energy $\Delta H(k)$ of a
-slab whose curled direction is opened over a patch of $k \times k$ columns, wired as the saved end states of T48 are
-wired. The construction's first step costs more than the chain's cheapest move (56 against 36 at $\lambda = 1.25$,
-untied), so it bounds the barrier from above along that wiring. The registered verdict words are FIXED WALL,
-CRITICAL PATCH and NO FINITE PATCH, read at a held-out size, $L = 16$, after a prediction for it is written from a
-fit at $L = 8$ and 12. The author's prediction is CRITICAL PATCH, with a small patch as her lean; ours is CRITICAL
-PATCH. On the record so far
-is the first stage, $L = 8$ and 12, not the verdict. At both sizes $\Delta H(k)$ is the same exact quadratic,
-$ak - bk^2$, with nothing left over. Untied, $a = 80 - 16\lambda$ and $b = 16(\lambda - 1)$ (read off the values,
-not derived): at $\lambda = 1.25$ it reads 56, 104, 144, 176 for $k = 1$ to 4 and peaks at 7.5 columns, at 225; at
-$\lambda = 1.10$, at 19.5 columns and 608. Under the tie $a = 176 - 112\lambda$ and $b = 48(\lambda - 1)$: it peaks
-at 1.5 columns and 27 at $\lambda = 1.25$, 2.2 and 45 at 1.20, 3.3 and 77 at 1.15, and 5.5 and 145 at 1.10. The
-tied numbers at $L = 8$ were computed before the author confirmed her tied prediction, as the registration
-discloses. The prediction for $L = 16$ was written from these, each within 10\%; for the untied
-$\lambda \le 1.25$ the peak lies beyond what $L = 16$ can hold, and those were registered as unreadable there.
-\emph{The held-out size} ($L = 16$): the quadratic fitted to its own values has exactly the same coefficients, so the
-predicted peaks and barriers hold at all six scored rows, and $\Delta H(k)$ follows the quadratic for every $k$ up
-to 14. The verdict word, read as registered over every $k$ computed, is RISES AGAIN, a word that is reported and
-not scored, at $\lambda = 1.10$ to 1.20 tied and at 1.40 untied: the last patch, $k = 15$, wraps the torus and lies
-above the quadratic. It is FIXED WALL at $\lambda = 1.25$ tied, where two whole patches tie at 24 around the fitted
-peak of 27, and at 1.40 tied, where the first patch is free. So the author's CRITICAL PATCH, and ours, are not
-scored in four rows and fail by the letter in two. NO FINITE PATCH appears nowhere. A fresh review of the
-construction is owed before anything is built on these numbers. \emph{Interpretation (ours,
-unverified):} untied, the climb is one no bath of T53 could make while sparing flat space; the tie turns it into a
-much smaller one, and the size of the sheet does not enter.
+\emph{Exact} (T54; O118, as corrected). T54 prices completed patches: the energy $\Delta H(k)$ of a slab whose
+curled direction is opened over a patch of $k \times k$ columns, wired as the saved end states of T48 are wired.
+These are energies of completed square patches and not a barrier: going from one patch to the next takes $2k + 1$
+switches, and T54 did not price the states between. The registered verdict words are FIXED WALL, CRITICAL PATCH and
+NO FINITE PATCH, read over completed patches at a held-out size, $L = 16$, after a prediction for it was written
+from a fit at $L = 8$ and 12. The author's prediction was CRITICAL PATCH, with a small patch as her lean; ours was
+CRITICAL PATCH, amended before the held-out size to FIXED WALL at $\lambda = 1.40$ under the tie. At all three sizes
+$\Delta H(k)$ is the same exact quadratic, $ak - bk^2$, with nothing left over, for every patch that does not meet
+its own image. Untied, $a = 80 - 16\lambda$ and $b = 16(\lambda - 1)$ (read off the values, not derived): at
+$\lambda = 1.25$ it reads 56, 104, 144, 176 for $k = 1$ to 4, and the fitted curve peaks at 7.5 columns, at 225; at
+$\lambda = 1.10$, at 19.5 columns and 608. Under the tie $a = 176 - 112\lambda$ and $b = 48(\lambda - 1)$: the fitted
+curve peaks at 1.5 columns and 27 at $\lambda = 1.25$, 2.2 and 45 at 1.20, 3.3 and 77 at 1.15, and 5.5 and 145 at
+1.10. The tied numbers at $L = 8$ were computed before the author confirmed her tied prediction, as the registration
+discloses. The prediction for $L = 16$ was written from these, each within 10\%; for the untied $\lambda \le 1.25$
+the fitted peak lies beyond what $L = 16$ can hold, and those were registered as unreadable there. \emph{The
+held-out size} ($L = 16$): the quadratic fitted to its own values has exactly the same coefficients, so all six
+readable numbers hold. The verdict word, read as registered over every $k$ computed, is RISES AGAIN, a word that is
+reported and not scored, at $\lambda = 1.10$ to 1.20 tied and at 1.40 untied: the last patch, $k = 15$, wraps the
+torus and lies above the quadratic. It is FIXED WALL at $\lambda = 1.25$ tied, where two whole patches tie at 24,
+and at 1.40 tied, where the first patch is free. So the author's CRITICAL PATCH is not scored in four rows and fails
+by the letter in the two that are scored; ours fails at tied 1.25 and holds at tied 1.40. Among the scored rows NO
+FINITE PATCH does not appear.
+
+\emph{Exact, and a correction} (11 October 2026; an outside review found it with its own code, and ours reproduces
+it). The fitted peak is not a barrier and bounds none. Between the first two patches under the tie at
+$\lambda = 1.25$, which both stand at 24, the best order of the three switches passes through 24, 20, 45, 24: the
+highest energy met is 45, above the fitted 27. At $\lambda = 1.20$ the first two steps reach 62 and 66 against a
+fitted 45, and at 1.15, 80 and 98 against 77. Nor are squares the cheap shapes. A single line of columns along one
+of the construction's two directions costs $a - b$ for its first column and $96 - 80\lambda$ more for each further
+one under the tie: 24, 20, 16, 12, 8, 4 at $\lambda = 1.25$, level at 32 at 1.20, and rising by 4 and by 8 a column
+at 1.15 and 1.10; untied, every further column costs $32 - 16\lambda$. An earlier draft said the construction
+``bounds the barrier from above''. That is withdrawn, and with it the reading that the tie turns the climb into one
+a bath could make. The barrier to opening the slab's curled direction, tied or untied, is not known: it needs a
+search over paths with every state priced, shapes other than squares included.
 
 \emph{Measured} (T56, stage 1; O115). The slab ($L = 8$ and 12; 256 and 576 vertices) and the rod ($L = 18$ and 36)
 were held in a warm bath under this tie at $\lambda = 1.10$, 1.15, 1.20 and 1.25 and $g = 1.5$ to 3.0, eight replicas
@@ -443,10 +452,12 @@ Ours failed too: a window at 1.15 and 1.20, and that the tie would make the diff
 Two things, not scored, say why. First, the tied slab is damaged where the untied one is untouched: 5 to 10\% of its
 vertices on average at $\lambda = 1.20$, between an eighth and three tenths at 1.25 in every bath, and none in the 32
 untied replicas. That is the second caution above: the table charges a damaged vertex nothing, so it rewards
-breaking. Second, where the slab stayed, T54's first numbers already put the barrier well above the single move: 45,
-77 and 145 at $\lambda = 1.20$, 1.15 and 1.10, for which $e^{-\Delta H/g}$ at $g = 3.0$ is about $3 \times 10^{-7}$,
-$10^{-11}$ and $10^{-21}$, against $10^{-9}$ for flat space's own 64. \emph{Interpretation (ours, unverified):} our
-prediction read the single-move wall as the barrier, against the first caution. By the registered rule the
+breaking. Second, where the slab stayed, opening takes more than the single move, though how much more is not
+known: T54's completed patches stand 32 to 145 above the slab at $\lambda = 1.20$ to 1.10, the states between them
+stand higher, and a line of columns costs 32, 40 and 48 for its first column and no less for each further one
+(O118, as corrected). An earlier draft quoted T54's fitted peaks here as the barrier; that is withdrawn.
+\emph{Interpretation (ours, unverified):} our prediction read the single-move wall as the barrier, against the
+first caution. By the registered rule the
 prediction for the held-out sizes ($L = 16$ and 72) is that nothing opens. That stage has not been run, so nothing
 here is a claim about size.
 
@@ -512,12 +523,15 @@ to T49; O103). \emph{Replacement} (the author's): the curled start is one connec
 open, and a bath supplies each push in turn. \emph{Its test}, T53, read ADVANCES ONLY: the bath opens the first
 direction and not the second before it damages the space. \emph{Second replacement} (the author's): the tie all at
 the last, with the slab as the stand-in. \emph{Its test}, T56, read STAYS or ADVANCES ONLY for the slab, with NO
-DIFFERENCE from the untied control: the barrier is a patch and not a move, and the table rewards breaking (O115). A
+DIFFERENCE from the untied control: an opening that spreads takes more than one move, and the table rewards
+breaking (O115). A
 third replacement is the author's to propose; none is written here. \emph{New falsification tests:} T54 to its
 held-out size under the tie, and the exact price of the cheapest breaking move out of the slab against the cheapest
 opening one. The branch is abandoned in this family if T54 reads NO FINITE PATCH, or a barrier above flat space's,
 at every $\lambda$ at which the slab is stuck; or if a table that also charges damage, chosen by the author and
-priced exactly first, still does not open it (O115).
+priced exactly first, still does not open it (O115). That condition was written when T54's numbers were taken for a
+barrier. With the correction above, the test that would decide it is a search for the lowest path, which is not yet
+designed.
 
 What the curled start may be is the author's to say. Her statements so far \cite{repo}: it may begin with one
 direction already open; a foam of small fully curled pieces that open separately and then join is a possibility she

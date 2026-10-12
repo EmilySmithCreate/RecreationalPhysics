@@ -5048,3 +5048,168 @@ Whether counting widens a flat torus over long times (not run). Other λ, drain 
 directions. That reality has heat that stays. sees3 is a count of points within three steps and certifies no
 geometry beyond that. Named points; with interchangeable points the weights of the flat tori differ only by their
 few symmetries (ours, unverified). At λ ≠ 1 this is our family, never combinatorial quantum gravity.
+
+### The owner's prediction for T61, 2026-10-11, recorded before anything of T61 was read
+
+Stage 1 had run and its results were committed unread (f3a76688) when she answered. Asked which of the three
+verdicts she predicts, she said: "wider, with some configs flat." **Her prediction: WIDENS, and in some cells end
+states that are exactly flat and wider than six around.** She gave no curling cost or amount of room; it is read as
+WIDENS at both λ and both sizes, with at least one exactly flat end state wider than six somewhere in stage 1. She
+also asked what a patchwork is and whether one can lead to something flat; that question is not part of the
+prediction.
+
+### Amendment to T61, 2026-10-11, before anything was read: the held-out size is run one cell to a file
+
+The held-out size takes several hours as two files. `scripts/make_t61_configs.py --held-out` now writes one config
+per cell (ten files, `t61_lam<tag>_n384_c<stores>`), so that the cells run side by side. Nothing else changes: a
+replica's seed depends on (seed, N, λ, stores, replica) and not on the file it is in, and the analyzer reads the
+ten files as it would the two. Written and committed before stage 1 was read.
+
+### Reading of T61, stage 1, 2026-10-11 (`python scripts/analyse_t61.py`; read after the owner's prediction was committed, fafd1aaa)
+
+**PATCHWORK at both λ and both sizes. No cell has a WIDE majority. The owner's prediction (WIDENS) fails. Ours
+holds on the verdict words and fails in three particulars.**
+
+Gates pass in all 20 cells: the energy books balance to 5 × 10⁻¹³, every end graph is valid, and all but one of
+480 replicas converted. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| stores per point | λ = 1.25, N = 96 | λ = 1.25, N = 192 | λ = 1.40, N = 96 | λ = 1.40, N = 192 |
+|---|---|---|---|---|
+| 2 | 24, 0, 0 | 24, 0, 0 | 3, 16, 5 | 0, 19, 4 (one not converted) |
+| 1 | 24, 0, 0 | 24, 0, 0 | 2, 17, 5 | 0, 22, 2 |
+| 1/2 | 22, 1, 1 | 20, 4, 0 | 1, 17, 6 | 0, 21, 3 |
+| 1/3 | 12, 11, 1 | 9, 15, 0 | 1, 20, 3 | 0, 21, 3 |
+| 1/4 | 3, 20, 1 | 4, 20, 0 | 0, 19, 5 | 0, 21, 3 |
+
+- **The owner's prediction.** WIDENS: **fails** at all four (λ, N). WIDE replicas exist, in a minority: 3 of 240 at
+  λ = 1.25 and 39 of 239 at λ = 1.40 (one in six). "Some configs flat": one end state (λ = 1.40, N = 96, two stores
+  per point) is exactly flat and reads eight around from the point the reader starts at. From four fifths of its
+  points it is six around (sees3 = 0.21), so it is not a torus, like the three such states of O116. **By the
+  letter of a reader that looks from one point, her second clause holds; no clean flat torus wider than six
+  appeared.** The 26 other exactly flat end states are six around.
+- **Ours.** TUBE majorities with one store per point or more: **holds at λ = 1.25** (96 of 96 replicas), **fails
+  at 1.40**, where every amount of room gives a PATCHWORK majority. PATCHWORK with a third and a quarter of a
+  store per point at 1.40: holds. TUBE or MIXED there at 1.25: **fails in three cells of four** (PATCHWORK). A WIDE
+  majority nowhere: holds. No exactly flat end state wider than six: holds in substance, fails by the letter of
+  the one-point reader.
+- **Described, not scored.** At λ = 1.25 the outcome follows the room: the stores' mean energy at the end of the
+  sealed spell is 0.5, 1.0, 1.8 and about 2.0 for 2, 1, 1/2 and 1/3 or 1/4 of a store per point, and no point sees
+  a sheet until the room is under one store per point. At λ = 1.40 the median share of points that see a sheet out
+  to three steps is 0.30 to 0.42 in every cell, whatever the room, and the energy left in flaws is 42 to 64 at 96
+  points and 81 to 144 at 192. The median number of points within five steps reaches 59 and 61 at a quarter of a
+  store per point, the endless sheet's own 61; flaws add shortcuts, so that number overstates how wide the bulk is.
+
+**What it says.** Heat that cannot leave does not turn the tube into a wide flat torus. With room for it, at
+λ = 1.25, the product is the clean tube six around. With little room, or at λ = 1.40 with any room, it is a
+patchwork: part of it sheet-like, part tube-like, with flaws frozen in. About one in six at λ = 1.40 has more than
+half its points in sheet-like surroundings. None is a clean wide torus. *Ours, unverified:* at λ = 1.40 the tube
+breaks up as it converts whether or not its heat can leave (the maps' edge, 1.35), which is why room makes no
+difference there.
+
+### Amendment to T61, 2026-10-11, before N = 384 runs: the numbers for the held-out size
+
+`python scripts/analyse_t61.py results --write-prediction` wrote `configs/t61_heldout_prediction.json` from stage 1
+alone, by the rule fixed above (the mean of the two sizes' shares, 0.25 either side):
+
+| λ | stores per point | share WIDE (range) | share TUBE (range) |
+|---|---|---|---|
+| 1.25 | 2 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 1.25 | 1 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 1.25 | 1/2 | 0.02 (0 to 0.27) | 0.88 (0.63 to 1) |
+| 1.25 | 1/3 | 0.02 (0 to 0.27) | 0.44 (0.19 to 0.69) |
+| 1.25 | 1/4 | 0.02 (0 to 0.27) | 0.15 (0 to 0.40) |
+| 1.40 | 2 | 0.19 (0 to 0.44) | 0.06 (0 to 0.31) |
+| 1.40 | 1 | 0.15 (0 to 0.40) | 0.04 (0 to 0.29) |
+| 1.40 | 1/2 | 0.19 (0 to 0.44) | 0.02 (0 to 0.27) |
+| 1.40 | 1/3 | 0.13 (0 to 0.38) | 0.02 (0 to 0.27) |
+| 1.40 | 1/4 | 0.17 (0 to 0.42) | 0.00 (0 to 0.25) |
+
+Said plainly: a range of 0.25 either side is wide, and where a share is near zero it can miss only upward. What
+could miss is a WIDE share above about 0.4 at N = 384, or a TUBE share far from the smaller sizes'. The file is
+committed with this amendment, and the ten held-out configs (`scripts/make_t61_configs.py --held-out`) run after
+it. The owner's prediction for stage 1 was WIDENS; for the held-out size she is not asked again, and it is read
+against the same words.
+
+### Note to T61's stage-1 reading, 2026-10-11, evening (exact, from the saved wiring; nothing scored changes)
+
+`scripts/read_flat_kind.py` (ASSUMPTIONS O116, last addendum) reads each flat end state's pieces and their kind.
+
+- **The end state the reading called "flat and eight around from the reader's point"** (λ = 1.40, N = 96, two
+  stores per point, replica 6) **is two separate pieces**: a torus of 56 points six around, and a Klein bottle of
+  40 points, a one-sided flat surface, from which half the points see eight around. So "some configs flat" holds by
+  the letter in a way nobody meant: no torus wider than six appeared. Of the 27 flat end states, 23 are one torus
+  six around and 4 are two pieces.
+- **Described, not scored: the trapped heat also breaks the tube into pieces.** End states in more than one
+  piece, of 24, for 2, 1, 1/2, 1/3 and 1/4 of a store per point: λ = 1.25, N = 96: 0, 1, 3, 9, 17; N = 192: 0, 0,
+  7, 13, 15. λ = 1.40, N = 96: 11, 8, 9, 4, 1; N = 192: 8, 10, 11, 7, 7. The smaller pieces hold 16 to 94 points.
+  The three outcome words are read over all points together and do not see this.
+
+### Amendment to T61, 2026-10-11, before the held-out size is read: no word on incomplete or failed data
+
+An outside review of the same day (OpenAI Codex, working from `docs/papers/curled_torus/red_team_brief_2026-10-11.md`;
+it read `scripts/analyse_t61.py` and synthetic rows only, and opened no T61 result) showed three ways the analyzer
+could give a word it should not: a cell of 24 invalid graphs printed `gate FAIL` and was still counted towards a
+verdict; a stage 1 with settings missing still wrote numbers for the held-out size; and a single held-out cell read
+AS PREDICTED. All three are right, and none had happened: stage 1 was complete and every gate passed.
+
+**Changed, in `scripts/analyse_t61.py` (tests in `tests/test_t61_safeguards.py`, on synthetic rows):** the
+registered design is written into the analyzer (λ = 1.25 and 1.40; 2, 1, 1/2, 1/3 and 1/4 of a store per point; 24
+replicas numbered 0 to 23 in every cell; every number the reading uses present and finite). A (λ, N) whose five
+cells do not all meet the design and pass their gates reads NOT READ, with the reason. The numbers for the held-out
+size are refused unless all of stage 1 does. N = 384 is scored at a λ only when all five of its cells are
+complete, and its verdict word is withheld if a gate fails there. **No definition, threshold, range or word
+changes.** Run again on stage 1 alone, the hardened analyzer gives the four verdicts already read (PATCHWORK), and
+the committed prediction file has all ten numbers.
+
+**Also from that review, and accepted: the words are about neighborhoods, not about one space.** sees3 counts
+points within three steps. Two separate tori eight around would read WIDE. The registration says so under "What
+this cannot show"; the sentence under WIDENS, "makes the product wider", says more than the count can. Beside the
+held-out reading, and scored nowhere, the end states' pieces and the kind of each flat piece are reported from the
+saved wiring (`scripts/read_flat_kind.py`), as the note above does for stage 1.
+
+### Note to T54's readings, 2026-10-11, evening: the numbers are completed-patch energies, not a barrier
+
+An outside review of this day priced the states between T54's first two completed patches and found them higher
+than the fitted peak; ours reproduces it and finds shapes that go lower than any square. The readings above stand
+as readings of completed patches and their registered words. Their use of "barrier", and "critical patch" as the
+size of a seed, is withdrawn. The account is ASSUMPTIONS O118, "Correction".
+
+### Reading of T61, the held-out size (N = 384), 2026-10-11 (`python scripts/analyse_t61.py results`; read after the ten files were committed unread, a27ab6dd, with the safeguards of 5de443f9)
+
+**At N = 384 the verdict is PATCHWORK at both λ. The numbers written beforehand hold at λ = 1.40 and miss in one
+cell of five at λ = 1.25. The owner's WIDENS fails at the held-out size too; ours fails in that one cell.**
+
+Gates pass in all ten cells and every replica converted. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| stores per point | λ = 1.25 | λ = 1.40 |
+|---|---|---|
+| 2 | 24, 0, 0 | 0, 24, 0 |
+| 1 | 24, 0, 0 | 0, 24, 0 |
+| 1/2 | 21, 3, 0 | 0, 22, 2 |
+| 1/3 | 1, 23, 0 | 0, 24, 0 |
+| 1/4 | 2, 22, 0 | 0, 24, 0 |
+
+- **The size claim (rule 14), scored at N = 384 alone.** λ = 1.40: **AS PREDICTED**, all ten shares inside their
+  ranges. λ = 1.25: **NOT AS PREDICTED** at a third of a store per point, where the TUBE share is 0.04 against a
+  range of 0.19 to 0.69 (it was 0.50 and 0.38 at the two smaller sizes); the other four cells are inside. So "the
+  shares do not change as the tube lengthens" fails in the one cell where the outcome was undecided at the smaller
+  sizes: there the longer tube ends as a patchwork.
+- **Said plainly about the pass at λ = 1.40.** The WIDE share at N = 384 is 2 replicas of 120. It was 24 of 120 at
+  96 points and 15 of 119 at 192. That is inside the ranges only because they reach down to zero. The share of end
+  states that are more than half sheet-like falls as the tube lengthens (0.20, 0.13, 0.02). The rule did not score
+  that and we did not predict it.
+- **The owner's prediction** (WIDENS, with some exactly flat end states wider than six): **fails** at N = 384. No
+  cell has a WIDE majority. One end state of 240 is exactly flat, and it is one torus six around.
+- **Ours** ("at N = 384 the same, with the shares inside their ranges"): the words hold; the ranges **fail in one
+  cell**.
+- **Described, not scored.** The energy left in flaws grows with the tube: medians of 175 to 316 at λ = 1.40,
+  against 42 to 64 at 96 points and 78 to 144 at 192. That is 0.4 to 0.8 per point at every size: the flaws are a
+  fixed share, not a fixed number. **Never melted:** the fewest squares per point in the sealed spell was 0.92 to
+  1.00 in every replica, at every size. End states in more than one piece, of 24, for 2, 1, 1/2, 1/3 and 1/4 of a
+  store per point (`scripts/read_flat_kind.py`): λ = 1.25: 0, 2, 16, 9, 16; λ = 1.40: 8, 5, 9, 6, 5.
+
+**What T61 says, both stages together.** Heat that cannot leave does not widen the tube. With room for the heat, at
+λ = 1.25, the product is the clean tube six around. With little room, or at λ = 1.40 with any, it is a patchwork:
+warm fabric that was never melted, wider in places, flawed at the joins and often in separate pieces. The share
+that is mostly sheet-like shrinks as the tube gets longer. No clean flat torus wider than six appeared in 720 end
+states.
