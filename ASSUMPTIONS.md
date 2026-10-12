@@ -3376,6 +3376,22 @@ to the owner's hypothesis or a new simulation result.
   - *Addendum, 11 October 2026, 11:22 ET by the clock:* T60's held-out size was read by its own rule at 11:16 ET
     (O117), and the reader was then run on it: all 650 exactly flat end states at N = 288 have width 6. Over the
     five sizes, 9,858 of 9,865.
+  - *Addendum, 11 October 2026, evening: the flat end states by kind, exact per graph.*
+    (`scripts/read_flat_kind.py`, two tests in `tests/test_read_shapes.py`; reading only; no verdict changes.) A
+    graph with H = 0 need not be one piece, and a flat piece need not be two-sided. Gluing the squares along the
+    links they share makes each piece a closed surface with as many squares as points, so a torus or a **Klein
+    bottle**: a one-sided surface, flat at every point, which need not look the same from every point. A Klein
+    bottle built for the purpose has H = 0 at every λ, so the toy's zero-energy states include one-sided ones. Of
+    the maps' 9,865 flat end states: **9,676 are one torus six around** (98.1 %); 2 are one wider torus (eight
+    around at N = 64, twelve around at N = 96); 5 are one Klein bottle of 64 points, eight around from every
+    point; and 182 are two to four separate pieces, every piece a torus six around in 147 of them. 39 end states
+    contain a one-sided piece, of 18 to 64 points. **This corrects two lines above.** Of the "six of width 8 at
+    N = 64", five are Klein bottles and one is a torus. And "9,858 of 9,865 have width 6" was read from three
+    points, which may lie in different pieces, so it counts the split states with the single tori. The break-up
+    into pieces is what the maps' criterion (c) measures by the largest piece; the one-sided pieces are new.
+    Checked a second way: each of the 42 one-sided pieces (these and T61's) is isomorphic, by networkx, to none
+    of the flat tori of its size, which `scripts/exact_flat_torus_widths.py` lists in full; each of the 19
+    two-sided pieces beside them is isomorphic to one.
   - **Owed.** Paper 1 must say what its end states are before it is shown to anyone, and the plain-language
     edition and the programme page with it. The registered runs that read OPENS, ONE SPACE or FLAT keep their
     labels; a width or shell line is to be written into any new registration that uses those words.

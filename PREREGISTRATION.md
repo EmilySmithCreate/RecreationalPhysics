@@ -5129,3 +5129,17 @@ could miss is a WIDE share above about 0.4 at N = 384, or a TUBE share far from 
 committed with this amendment, and the ten held-out configs (`scripts/make_t61_configs.py --held-out`) run after
 it. The owner's prediction for stage 1 was WIDENS; for the held-out size she is not asked again, and it is read
 against the same words.
+
+### Note to T61's stage-1 reading, 2026-10-11, evening (exact, from the saved wiring; nothing scored changes)
+
+`scripts/read_flat_kind.py` (ASSUMPTIONS O116, last addendum) reads each flat end state's pieces and their kind.
+
+- **The end state the reading called "flat and eight around from the reader's point"** (λ = 1.40, N = 96, two
+  stores per point, replica 6) **is two separate pieces**: a torus of 56 points six around, and a Klein bottle of
+  40 points, a one-sided flat surface, from which half the points see eight around. So "some configs flat" holds by
+  the letter in a way nobody meant: no torus wider than six appeared. Of the 27 flat end states, 23 are one torus
+  six around and 4 are two pieces.
+- **Described, not scored: the trapped heat also breaks the tube into pieces.** End states in more than one
+  piece, of 24, for 2, 1, 1/2, 1/3 and 1/4 of a store per point: λ = 1.25, N = 96: 0, 1, 3, 9, 17; N = 192: 0, 0,
+  7, 13, 15. λ = 1.40, N = 96: 11, 8, 9, 4, 1; N = 192: 8, 10, 11, 7, 7. The smaller pieces hold 16 to 94 points.
+  The three outcome words are read over all points together and do not see this.
