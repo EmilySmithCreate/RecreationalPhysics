@@ -1,4 +1,4 @@
-# Batch queue and results bucket, as of 2026-10-12 20:39 UTC (commit 616ae84)
+# Batch queue and results bucket, as of 2026-10-12 21:06 UTC (commit ee327c4)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
@@ -14,11 +14,6 @@ until a person downloads, checks and commits them.
 - t62_mu025_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
 - t62_mu030_g150_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
 - t62_mu030_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
-- t64_mu0000_n192-fef0650  created 10-12 20:00  started 10-12 20:00  stopped 
-- t64_mu0025_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
-- t64_mu0050_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
-- t64_mu0100_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
-- t64_mu0200_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
 
 ## RUNNABLE
 - none
@@ -35,7 +30,6 @@ until a person downloads, checks and commits them.
 ## SUCCEEDED
 - t51_l256_100k_00-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:08
 - t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:30
-- t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:42
 - t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 10-05 21:16
 - t51_l256_100k_11-aa6b835  created 10-05 09:56  started 10-05 15:44  stopped 10-06 00:13
 - t51_l256_100k_12-aa6b835  created 10-05 09:56  started 10-05 16:01  stopped 10-06 00:37
@@ -233,6 +227,7 @@ until a person downloads, checks and commits them.
 - t60_lam125_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:31
 - t60_lam130_n64-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-10 23:38
 - t60_lam130_n96-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 00:05
+- t60_lam130_n144-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 00:30
 - None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
 
 ## FAILED
@@ -785,10 +780,15 @@ until a person downloads, checks and commits them.
 - t63_mu0100_n96/t63_mu0100_n96.csv  (2026-10-12 18:47:48, 4271 bytes)
 - t63_mu0200_n192/t63_mu0200_n192.csv  (2026-10-12 19:24:14, 4436 bytes)
 - t63_mu0200_n96/t63_mu0200_n96.csv  (2026-10-12 18:48:38, 4261 bytes)
+- t64_mu0000_n192/t64_mu0000_n192.csv  (2026-10-12 20:50:19, 4201 bytes)
 - t64_mu0000_n96/t64_mu0000_n96.csv  (2026-10-12 20:23:23, 3973 bytes)
+- t64_mu0025_n192/t64_mu0025_n192.csv  (2026-10-12 20:52:22, 4474 bytes)
 - t64_mu0025_n96/t64_mu0025_n96.csv  (2026-10-12 20:23:38, 4190 bytes)
+- t64_mu0050_n192/t64_mu0050_n192.csv  (2026-10-12 20:51:21, 4517 bytes)
 - t64_mu0050_n96/t64_mu0050_n96.csv  (2026-10-12 20:25:08, 4329 bytes)
+- t64_mu0100_n192/t64_mu0100_n192.csv  (2026-10-12 20:51:12, 4471 bytes)
 - t64_mu0100_n96/t64_mu0100_n96.csv  (2026-10-12 20:20:08, 4257 bytes)
+- t64_mu0200_n192/t64_mu0200_n192.csv  (2026-10-12 20:54:31, 4444 bytes)
 - t64_mu0200_n96/t64_mu0200_n96.csv  (2026-10-12 20:26:33, 4250 bytes)
 
 ## scratch from runs that died (partial/)
