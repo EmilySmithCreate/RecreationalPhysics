@@ -684,7 +684,7 @@ The replacements for pieces 5 and 11 are hers. In order:
    (started 23:17 ET on 10 October). When it lands: push a comment line to `cloud/fetch/request.txt`,
    `python scripts/accept_inbox.py --move`, commit, `python scripts/analyse_t60.py`, the reading, an O entry. The
    registered analyzer reads stage 2 only when all seven cells are in. Do not work round it.
-2. **Paper 1 says what its end states are** (O116): both editions, the supplement, `measurement_scope.md` and the
+2. *T61 registered 11 October (does the burp's heat widen the tube; laptop; her prediction owed before any reading; read with `python scripts/analyse_t61.py`, then the held-out prediction, then N = 384).* *Held by the owner, 11 October: paper 1, the outside review and the reader request wait until it is settled whether the small direction grows (`sandbox/NOTEBOOK.md` has her words; `sandbox/LOG.md` the first looks). Piece 1's title loses "into space".* **Paper 1 says what its end states are** (O116): both editions, the supplement, `measurement_scope.md` and the
    blog pages, before it is shown to anyone. The wording is the owner's to settle (Update 54, item 4).
 3. **The red-team pass (rule 12)** by a fresh read-only reviewer. The brief is
    `docs/papers/curled_torus/red_team_brief_2026-10-11.md`; the owner gives it to the reviewer; the report becomes
@@ -699,7 +699,9 @@ The replacements for pieces 5 and 11 are hers. In order:
    `results/t54_patch_heldout.csv`; a few hours; log in the session scratchpad).* To read: the same quadratic
    fitted to L = 16's own values over k ≤ 7, its k* and ΔH* against Amendment 4's ranges, and the verdict word from
    ΔH(k). The untied L = 24 cases are not run. Then a fresh review of the seam's construction (rule 12): T54 decides
-   a branch.
+   a branch. *Read 11 October, 16:01 ET (O118): the held-out numbers hold exactly (the same quadratic at all three
+   sizes); the verdict word is RISES AGAIN, unscored, in four rows because the last patch wraps the torus, and
+   FIXED WALL at tied λ = 1.25 and 1.40; NO FINITE PATCH nowhere. The review is owed.*
 6. **What widens a flat torus** (the lead from T48: 6 of 15 sealed conversions with the heat kept in place are
    wider). To be pre-registered, with a width line in the registration.
 7. **Whether opposite twists meeting leave a knot** (O116; ours, unverified): read the saved T51 sheets for the
