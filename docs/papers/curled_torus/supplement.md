@@ -167,6 +167,81 @@ python scripts/build_curled_paper.py --tectonic /path/to/tectonic
 
 The build regenerates the three figures, synchronizes the abstract directly from TeX, checks references and layout, compiles the PDF and writes the release manifest. Validation outputs accompany the package. The simulations remain reproducible through the frozen configurations and their recorded seeds, subject to the stated execution-provenance limitation.
 
+## Retrospective endpoint geometry and fourth-map audit, 11 October 2026 (O118)
+
+This addendum is an exploratory analysis of existing graphs, not a new preregistered test.
+Source/data base: `5382053a60c4137cd446f83355e2a12177bb94ea`. The checker is
+`scripts/read_endpoint_geometry.py`; controls are in `tests/test_endpoint_geometry.py`.
+The per-file output, including input SHA-256 hashes, is `endpoint_geometry_2026-10-11.json`.
+
+**Selection.** Include all 120 files in `results/t8_lam105_adj`. Separately scan all 35
+`t60_lam*_n*.csv` cells, each with 120 replicas. Select rows with `reached >= 0.75`, then
+their saved final adjacency if `S=N` and `X=0`. This is the zero-energy condition for the
+lambda > 1 range used here. The saved final graph is after settling, not the graph at
+the three-quarter crossing. The resulting T60 geometry denominator is 3,521. Two excluded
+nonreached rows also have zero-energy final graphs; no claim about all zero-energy files
+should silently use this reached-subset denominator.
+
+**Surface certificate.** Verify a simple, reciprocal, four-regular bipartite graph with the
+common-neighbor bound. Fill every four-cycle. Check that every edge has two incident faces,
+each vertex link is a single cycle, and count connected components. Propagate face orientations
+across shared edges and compute Euler characteristic. For a connected closed surface,
+orientability and characteristic zero certify a torus; nonorientability and characteristic
+zero certify a Klein bottle. Disconnected surfaces are reported as disconnected, not as one torus.
+
+**Translation certificate and loop lengths.** For a torus, propagate four edge directions
+through its squares and require globally consistent frames. Assign integer grid coordinates
+along a spanning traversal. All closure displacements generate the period lattice. Its
+determinant must equal N; every vertex must have a distinct lattice coset; reconstructing
+the four neighbors from those cosets must reproduce every original adjacency. Enumerate
+nonzero lattice vectors with Manhattan length at most N and report the shortest and shortest
+linearly independent lengths. This bound suffices: the Hermite-normal-form generators have
+length at most N after reducing the off-diagonal entry. These are graph-edge lengths, not
+physical length measurements. A failed translation certificate is an error to investigate,
+not a graph silently dropped from the sample.
+
+**Results.** All 120 original T8 endpoints are narrow tori. Their shortest loop is six;
+the shortest independent loop is N/4 at N=64,96,144,192. Their lattice and adjacency agree
+with a four-around tube joined with a two-site seam shift, not a rectangular six-by-L grid.
+The seam identity can be checked directly from each recorded Hermite form `[a,b,c]`:
+a vector `(x,y)` is a period iff `y % c == 0` and `(x - (y//c)*b) % a == 0`.
+Up to interchanging coordinate axes and reversing a sign, both `(4,2)` and `(0,N/4)`
+are periods. Their determinant is N, so they generate the entire reconstructed lattice.
+The T60 selection contains 3,446 connected tori, all with shortest loop six, 73 disconnected
+surfaces and two Klein bottles. The latter are `t60_lam130_n64_adj/N64_rep36.npz` and
+`t60_lam135_n64_adj/N64_rep41.npz`. At N=288 the selection contains 650 graphs: 627 narrow
+tori and 23 disconnected surfaces. This analysis establishes the topology of these selected
+files, not an arbitrary-size law or the geometry of every intermediate state.
+
+Reproduce without rerunning simulations (the output file must not already exist):
+
+```sh
+python scripts/read_endpoint_geometry.py --output endpoint_geometry_new.json
+python -m pytest tests/test_endpoint_geometry.py -q
+```
+
+**T60 and diagnostic scope.** O117 records the frozen held-out prediction and its scoring.
+All six window settings pass the prediction intervals and the operational sharpness criteria
+at N=288. For lambda=1.30 the largest-component mean is 0.751181, but just 65/120 individual
+replicas exceed 0.7. A CV band alone is not a distributional proof of memorylessness.
+Applying T24's residual-wait criterion retrospectively to the T60 sample also passes all
+24 smaller-size window cells; this comparison cannot identify clock repair as the unique
+cause of the later pass. Earlier failed registrations retain their original verdicts.
+Reproduce with `python scripts/audit_t60_wait_criterion.py`; the recorded output is
+`t60_wait_criterion_2026-10-11.json`. Calibration uses 200,000 exponential samples with
+seed 20262399 and the number of eligible residual waits in each cell (119 or 120),
+not an assumed common sample size.
+The n=120 exponential CV calibration gives [0.7577404651, 1.3794758716]; the printed lower
+bound 0.756 in the earlier record is a numerical transcription discrepancy, with no verdict
+changed. The original record has not been rewritten.
+
+**What remains to measure.** First-exit cost is not a commitment barrier. Repeated forward
+trajectories from saved intermediate states, with tube and converted basins defined in advance,
+would measure return-versus-completion probabilities. A half-commitment configuration alone
+does not determine a free-energy activation barrier; an appropriate probability/free-energy
+calculation and a stated dynamics would also be needed. Store-energy histograms and checks
+of equilibration are needed before interpreting a sealed reservoir's mean balance as a temperature.
+
 ## Companion documents
 
 A plain-language edition, `paper_plain_language.pdf` (source `paper_plain_language.tex`, notes in `plain_language_README.md`), follows the manuscript's section order chapter by chapter and adds no result about this study; its closing section previews later work. Its interactive companion, `docs/public/curling_ladder_tube.html`, evaluates the energy and first-exit formulas at any setting and shows the tabulated measurements where they were run. The plain-language edition is built separately with Tectonic from its own directory.
