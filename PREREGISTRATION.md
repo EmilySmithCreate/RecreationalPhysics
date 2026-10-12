@@ -5143,3 +5143,26 @@ against the same words.
   piece, of 24, for 2, 1, 1/2, 1/3 and 1/4 of a store per point: λ = 1.25, N = 96: 0, 1, 3, 9, 17; N = 192: 0, 0,
   7, 13, 15. λ = 1.40, N = 96: 11, 8, 9, 4, 1; N = 192: 8, 10, 11, 7, 7. The smaller pieces hold 16 to 94 points.
   The three outcome words are read over all points together and do not see this.
+
+### Amendment to T61, 2026-10-11, before the held-out size is read: no word on incomplete or failed data
+
+An outside review of the same day (OpenAI Codex, working from `docs/papers/curled_torus/red_team_brief_2026-10-11.md`;
+it read `scripts/analyse_t61.py` and synthetic rows only, and opened no T61 result) showed three ways the analyzer
+could give a word it should not: a cell of 24 invalid graphs printed `gate FAIL` and was still counted towards a
+verdict; a stage 1 with settings missing still wrote numbers for the held-out size; and a single held-out cell read
+AS PREDICTED. All three are right, and none had happened: stage 1 was complete and every gate passed.
+
+**Changed, in `scripts/analyse_t61.py` (tests in `tests/test_t61_safeguards.py`, on synthetic rows):** the
+registered design is written into the analyzer (λ = 1.25 and 1.40; 2, 1, 1/2, 1/3 and 1/4 of a store per point; 24
+replicas numbered 0 to 23 in every cell; every number the reading uses present and finite). A (λ, N) whose five
+cells do not all meet the design and pass their gates reads NOT READ, with the reason. The numbers for the held-out
+size are refused unless all of stage 1 does. N = 384 is scored at a λ only when all five of its cells are
+complete, and its verdict word is withheld if a gate fails there. **No definition, threshold, range or word
+changes.** Run again on stage 1 alone, the hardened analyzer gives the four verdicts already read (PATCHWORK), and
+the committed prediction file has all ten numbers.
+
+**Also from that review, and accepted: the words are about neighborhoods, not about one space.** sees3 counts
+points within three steps. Two separate tori eight around would read WIDE. The registration says so under "What
+this cannot show"; the sentence under WIDENS, "makes the product wider", says more than the count can. Beside the
+held-out reading, and scored nowhere, the end states' pieces and the kind of each flat piece are reported from the
+saved wiring (`scripts/read_flat_kind.py`), as the note above does for stage 1.

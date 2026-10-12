@@ -65,3 +65,8 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
 - 2026-10-11. An end state of T61 that was flat and still uneven turned out to be two separate pieces, one of them
   one-sided (a Klein bottle). Promoted the same day as an exact reading by a tested script
   (`scripts/read_flat_kind.py`; ASSUMPTIONS O116, last addendum).
+- 2026-10-11. Can a patchwork become flat? (`sandbox/heal_patchwork.py`: the 24 WIDE end states of T61's stage 1
+  at lambda = 1.40, 96 points, held at g = 2.0 for 100,000 sweeps and cooled over 100,000.) Three end exactly
+  flat, and those are six around again (one) or uneven (two: separate pieces or one-sided). The other 21 keep 16
+  to 50 units of flaws; about as many see less sheet afterwards as see more. Healing leads back to six around,
+  not on to a wide torus.
