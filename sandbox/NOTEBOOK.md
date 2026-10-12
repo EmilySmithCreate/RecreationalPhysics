@@ -50,3 +50,23 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   measured in wavelengths, and probabilities come from the sum: count-like, length-of-loop-like and time-like at
   once. The record's caution stands beside it: counting the versions of one fixed arrangement cannot reproduce the
   quantum correlations (T15 rung 3a); a view from more dimensions is a different proposal and has no test here yet.
+- 2026-10-11, the owner, late evening. On "two humps alone do not establish first order": "So I don't care whether
+  it's first order. I'm just interested in if there is a jump in energy at some sizes we are measuring." Then: "I
+  want claim 4's 'first order' reworded to match." (Done: VISION Update 56.)
+- 2026-10-11, the owner, on the line that put "energy must be paid to curl space tight and is given back when it
+  uncurls; this is how energy and space act on each other" down as hers: "This isn't a belief it's something I'd
+  like to test if we can."
+- 2026-10-11, the owner. "Yes let's do some tests where there is a price on loops of 6". (Decision: VISION Update
+  56.) And: "I need you to help me understand patches and melting".
+- 2026-10-11, the owner. "OK note that energy as heat does that energy is curling energy or another type in our
+  interesting runs". Ours, bookkeeping, exact in the toy: there is one energy, held in three places. In the curl
+  (4(λ − 1) per point of a curled tube). In broken squares (16 each). In the reservoir, as heat. The burp is curl
+  energy becoming heat. The push that starts it is a little heat gathered in one place, lent and given back. The
+  reverse, heat becoming curl, has not happened in any run (T21, T26, T27, T34, T57, and the looks in the log).
+- 2026-10-11, ours. Why heat does not curl fabric, to check with a physicist: heat is energy with no direction,
+  and there are far more broken arrangements than curled ones for it to land in. Curling needs energy delivered
+  along one route: work, not heat. The toy has no way to do work on a direction. One that it could be given: a
+  store that pays only for the moves of one chosen column, a piston.
+- 2026-10-11, ours. With a price on loops of six and one push, the first finished end states were one-sided
+  (Klein bottles). Why? One push makes one defect, not a pair; does a lone defect that runs the length of the tube
+  close the seam with a flip? Would two pushes, or a push of the other kind, give a torus?

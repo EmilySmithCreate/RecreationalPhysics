@@ -2,9 +2,9 @@
 
 Monte Carlo experiments on a published model of emergent geometry, testing one link in a personal
 hypothesis: that our spacetime is a settled arrangement of something else, and that the change which
-produced it was sharp, with a bounded lump of energy released. Her word for that change is **first order**;
-in the model it is the decay of a stable-for-now arrangement over an activation wall, and a first-order
-transition in the thermodynamic sense is not claimed for it (VISION S2′; paper 1, "Not claimed").
+produced it was sharp, with a jump in energy: a bounded lump released. In the model it is the decay of a
+stable-for-now arrangement over an activation wall, and a first-order transition in the thermodynamic sense is
+not claimed for it (VISION claim 4 as reworded on 11 October 2026, Update 56; S2′; paper 1, "Not claimed").
 
 This is a hobby project by a software engineer, not a physicist. Every run is pre-registered or
 labelled exploratory; every setting that was run is reported; no physicist has reviewed any of it.

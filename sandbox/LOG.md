@@ -70,3 +70,30 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   flat, and those are six around again (one) or uneven (two: separate pieces or one-sided). The other 21 keep 16
   to 50 units of flaws; about as many see less sheet afterwards as see more. Healing leads back to six around,
   not on to a wide torus.
+- 2026-10-11. The second heal look, held at g = 2.5 (100,000 sweeps, cooled over 200,000): the same. None of the
+  24 ends as a wide flat torus.
+- 2026-10-11. Does supplied energy curl flat fabric back up? (`sandbox/feed_energy.py`, START twist: the tube
+  already re-glued, flat and six around, 96 points, fed for 40,000 sweeps, 4 replicas each.) Energy that can only
+  curl or uncurl, 2 units per point in all, twice the price of curling the whole tube: nothing moves at all, in 4
+  of 4; the energy sits in the stores. Four times as much: the fabric melts (0.77 squares per point) and the curl
+  it gains is 1 to 6 % of a curled tube's. With every move allowed: the same. Supplied energy breaks; it does not
+  curl.
+- 2026-10-11. NEW RULE (`sandbox/six_loop_push.py`): a gentle price on loops of six, link by link, with the first
+  move made by hand. Exact at 48 points: after that push (4 squares broken, cost 64 − 176 mu) there are moves
+  that keep every square and remove six-loops, all downhill, and ten times as many ways forward as back. Run at 96
+  points, mu = 0.10, g = 0.8, 3,000 sweeps, 6 replicas: none fell back; never more than 5 squares missing at a
+  time, so a moving defect and not a melt; one finished exactly flat with no six-loop left and every point seeing
+  a sheet to three steps, and it is one-sided (a Klein bottle); one more flat and one-sided with a quarter of its
+  six-loops left; four still under way. Colder (g = 0.4) none finished. At mu = 0.15 five of six ended flawed.
+- 2026-10-11. The same push, run five times longer (15,000 sweeps, 8 replicas each; `sandbox/out/push_long_*`).
+  mu = 0.10, g = 1.0: one fell back at once; **one finished as an exactly flat torus twelve around** (no six-loop
+  excess left by sweep 755, every point seeing a sheet out to five steps, never more than 5 squares missing on
+  the way); six still held 8 to 79 units of flaws. g = 0.8: one finished flat and one-sided, eight or more around;
+  one flat and one-sided with a quarter of its six-loops left; six with 32 to 63 units of flaws. mu = 0.05,
+  g = 0.8: none finished; one fell back; the others sat at 28 to 48 units. One state, 8 units left and three
+  quarters of its points seeing a sheet, turned up three times. Two clean finishes in sixteen at mu = 0.10: the
+  first clean wide shape the toy has made from a tube by any route. One replica; a new rule; pushed by hand.
+- 2026-10-11. The explainer page "Patches and melting" was drawn from five real states (`sandbox/patches_page.py`).
+  Reading their numbers corrected an explanation of ours: T61's patchworks were never melted. The fewest squares
+  per point in the sealed spell was 0.92 to 0.99. Warm fabric with flaws in it, not a melt that froze. Yet most
+  of their links join dots that started far apart: the dots trade neighbors while the squares stay.

@@ -618,8 +618,8 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    (b) names its held-out size and number before any run; (c) is recorded with what it found and what it got wrong.
 
 Owed by the owner: ~~her T51 prediction~~ (given 2026-10-08: GENTLE, PREREGISTRATION T51); ~~her T54 prediction~~ (given 2026-10-08: CRITICAL PATCH, PREREGISTRATION T54); her T53 prediction confirmed the same day; the open items of
-Update 44 (claim 4's wording; piece 10's attachment to the toy; dark energy as release or kept energy; paper 1's
-revision; the Fife reference).
+Update 44 (~~claim 4's wording~~, decided 11 October: "a jump in energy", VISION Update 56; piece 10's attachment to
+the toy; dark energy as release or kept energy; paper 1's revision; the Fife reference).
 
 ## 9 October: T51 and T53 read; what follows  ◑
 
