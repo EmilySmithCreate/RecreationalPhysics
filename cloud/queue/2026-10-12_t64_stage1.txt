@@ -1,0 +1,13 @@
+# PREREGISTRATION T64, stage 1 (written 2026-10-12, before any run): T63's design on fresh seeds, the curled tube
+# itself under a price mu on loops of six. Five prices (mu = 0 is the control) x two sizes, 10 jobs. The held-out
+# size (N = 384) is queued only after its numbers are written. One line per Batch job: <runner> <config>.
+run_sixloop_widen t64_mu0000_n96
+run_sixloop_widen t64_mu0025_n96
+run_sixloop_widen t64_mu0050_n96
+run_sixloop_widen t64_mu0100_n96
+run_sixloop_widen t64_mu0200_n96
+run_sixloop_widen t64_mu0000_n192
+run_sixloop_widen t64_mu0025_n192
+run_sixloop_widen t64_mu0050_n192
+run_sixloop_widen t64_mu0100_n192
+run_sixloop_widen t64_mu0200_n192
