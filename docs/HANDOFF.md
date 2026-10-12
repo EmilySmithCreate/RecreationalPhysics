@@ -297,6 +297,20 @@ branch; written 07:20 ET by the clock).**
    Run `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`. Long scripts go in a file with
    the Write tool (the shell cuts long heredocs). Background runs: `nohup <py> scripts/... > log 2>&1 &`.
 
+## Addendum, 12 October 2026 (a second line of work; the toy's state above is unchanged)
+
+- The owner's handoff `docs/theory/observer_relative_histories_research_handoff.md` (observer-relative histories in a
+  Level-2 Everettian universe) was worked through its Stages A to F on the branch
+  `claude/observer-relative-histories-2026-10-12`, in a separate git worktree because the shared working tree was
+  72 commits behind `main` and held another session's uncommitted edits. Everything is in one place:
+  `docs/theory/orh_findings.md` (read it first), then the Stage A map, the assumption register (P1 to P24), the
+  plan, the six reading notes of 12 October and the prior-work note (FOUND on all three of the handoff's candidate
+  claims). Code `src/orh/` with `tests/test_orh_*.py`; results `results/orh_stage_bcd.csv`, `results/orh_stage_e_*.csv`;
+  figures `docs/figures/orh_*.png`. ASSUMPTIONS O119 is the pointer. The programme artifact carries a draft card for
+  this line, marked ours, for the owner to keep or drop.
+- Next ASSUMPTIONS number after this branch: **O120** (if the other session's branch also used O119, renumber this one
+  at the merge).
+
 ## Addendum, 9 October 2026
 
 - The branch `claude/vision-programme-updates-9sje7s` was merged to `main` on 8 October (PRs #40 to #42) with VISION

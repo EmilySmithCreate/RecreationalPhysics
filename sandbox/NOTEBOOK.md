@@ -14,3 +14,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-11, ours. Three ways a small direction could grow in a toy like this: the burp's own heat breaks up the
   new tube and it re-forms wide; the rule gains a price for longer loops, so that wider is cheaper; or growth is a
   separate, slow stage driven by counting, which needs the space to stay warm enough to rearrange.
+- 2026-10-12, the owner, a research handoff (`docs/theory/observer_relative_histories_research_handoff.md`):
+  an observer's retained records pick out a nested set of histories whose Born measure never grows, while the total
+  stays one; interacting observers must be modeled jointly; and where in cosmic time observer-moments fall needs a
+  declared reference class. To be treated as a program inside Everettian quantum mechanics, not a new theory. Worked
+  the same day in the strict lane: `docs/theory/orh_*.md`, `src/orh/`.

@@ -3448,3 +3448,24 @@ beside the manuscripts. The prior disclosure below describes the original drafti
 Code and documents were drafted with Claude (Anthropic) in conversation with the
 author and should be disclosed as such in any submission. Physics estimates marked
 "Ours" originated in that conversation and have not been reviewed by a physicist.
+
+## O119. The observer-relative histories program: what is standard, what is assumed, what was computed (12 October 2026)
+
+*Kind: ours, unverified (a reading of published work by assistant agents and exact computations on a toy); the
+handoff it answers is the owner's.* The owner's research handoff `docs/theory/observer_relative_histories_research_handoff.md`
+asks which of its statements about records, branches and observer-moments are established, which are assumptions,
+and whether any new falsifiable consequence follows. One home for the answer, by rule 17: the findings page
+`docs/theory/orh_findings.md`, with the Stage A map `docs/theory/orh_stage_a_literature_map.md`, the assumption
+register `docs/theory/orh_assumptions.md` (P1 to P24; the detailed register lives there because this file was being
+edited by another session in the shared working tree that day), the plan `docs/theory/orh_implementation_plan.md`,
+six reading notes `docs/reading/notes/2026-10-12_orh_*.md` and the prior-work search
+`docs/reading/notes/2026-10-12_prior_work_observer_relative_histories.md`. In three lines: the handoff's quantum
+core is Everett 1957 Sec. 5 and Gell-Mann and Hartle's decoherent histories restated, its record surprisal is a
+definition already made elsewhere (Martellini 2026, to be read in full), and its cosmic-time fraction is Loeb et al.
+2016's calculation under other weights, which four published papers already give as anything from 0.1 % to 68 %
+depending on the reference class; the prior-work search returned FOUND on all three candidate-novel claims. The toy
+(`src/orh/`, tests `tests/test_orh_*.py`, results `results/orh_stage_bcd.csv`, `results/orh_stage_e_*.csv`) makes
+each standard statement exact, and makes two of the handoff's own sentences sharper than it had them: the total of
+history weights is one for every family, interfering or not, so it tests nothing (the sum rules do); and an erased
+record is not a permanent fact (off-diagonal D = 1/4 once the record is undone). No new prediction was found.
+
