@@ -19,7 +19,8 @@ A flaw changes the count of every point near it, so a count of 25 beside a flaw 
 second number is read from positions: the points with **no flawed link within three steps** (a flawed link is one
 not on exactly two squares). Round such a point everything it can see in three steps is locally flat, and then
 the count is a statement about the tube there: 25 if no loop of six runs round it, 22 on a tube six around, 20
-on the curled tube. These are the "clear" points.
+on the curled tube. These are the "clear" points. Last, where an end state has clear points of both kinds: is
+any clear point seeing 22 linked to a clear point seeing 25? If never, the two widths meet only across a flaw.
 
 What this is not. sees3 certifies no geometry and names no shape; a count is not a position. Nothing here is a
 registered rule and no verdict changes. It reads results/ and writes nothing.
@@ -82,6 +83,16 @@ def clear_counts(adj):
     return balls(adj)[:, 0][(dist < 0) | (dist > REACH)]
 
 
+def joint(adj):
+    """(both, touch). both: clear points seeing 22 and clear points seeing 25 both occur. touch: some clear point
+    seeing 22 is linked to a clear point seeing 25, so the two widths meet with no flaw between them."""
+    dist = flaw_distance(adj)
+    clear = (dist < 0) | (dist > REACH)
+    count = balls(adj)[:, 0]
+    six, wide = clear & (count == 22), clear & (count == 25)
+    return bool(six.any() and wide.any()), bool(np.any(six[:, None] & wide[adj]))
+
+
 def sees3(adj):
     return float(np.mean(balls(adj)[:, 0] == 25))
 
@@ -91,12 +102,13 @@ def word(share):
 
 
 def read(adj):
-    """(class, sees3, clear points, clear points seeing 25, clear points seeing 22) of one end state."""
+    """(class, sees3, clear points, clear points seeing 25, clear points seeing 22, both widths present, the two
+    widths touching) of one end state."""
     n = adj.shape[0]
     s, x = int(total_squares(adj)), int(surplus(adj))
     kind = FLAT if (s == n and x == 0) else (STILL if x > n / 4 else LEFTOVER)
     clear = clear_counts(adj)
-    return kind, sees3(adj), len(clear), int(np.sum(clear == 25)), int(np.sum(clear == 22))
+    return (kind, sees3(adj), len(clear), int(np.sum(clear == 25)), int(np.sum(clear == 22))) + joint(adj)
 
 
 def table(results="results", runs=RUNS):
@@ -123,6 +135,9 @@ def summary(rows):
                 some_wide=sum(r[3] > 0 for r in left),          # a clear point with no loop of six round it
                 mostly_wide=sum(r[2] > 0 and 2 * r[3] > r[2] for r in left),
                 all_six=sum(r[2] > 0 and r[4] == r[2] for r in left),
+                all_wide=sum(r[2] > 0 and r[3] == r[2] for r in left),      # no loop of six away from the flaws
+                both=sum(r[3] > 0 and r[4] > 0 and r[3] + r[4] == r[2] for r in left),
+                two_widths=sum(r[5] for r in left), touching=sum(r[6] for r in left),
                 no_clear=sum(r[2] == 0 for r in left))
 
 
@@ -153,9 +168,11 @@ def main(results="results"):
     for n, rows in sorted(by_size.items()):
         s = summary(rows)
         print("N = %-4d leftover %4d | no clear point %4d | every clear point six around %4d | a clear point with no loop "
-              "of six round it %4d, most of the clear points so %4d | clear points %6d: seeing 22 %6d, seeing 25 %6d" % (
-                  n, s["leftover"], s["no_clear"], s["all_six"], s["some_wide"], s["mostly_wide"], s["clear"],
-                  s["clear22"], s["clear25"]))
+              "of six round it %4d (most of the clear points so %4d; every one %4d; some 22 and some 25 and nothing else "
+              "%4d) | clear points %6d: seeing 22 %6d, seeing 25 %6d | both widths among the clear points %4d, of those "
+              "with the two widths linked directly %d" % (
+                  n, s["leftover"], s["no_clear"], s["all_six"], s["some_wide"], s["mostly_wide"], s["all_wide"],
+                  s["both"], s["clear"], s["clear22"], s["clear25"], s["two_widths"], s["touching"]))
     return 0
 
 

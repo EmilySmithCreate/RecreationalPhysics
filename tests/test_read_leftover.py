@@ -15,9 +15,10 @@ from run_sixloop_widen import balls, seam_shifted                 # noqa: E402
 
 
 def test_the_three_clean_tubes():
-    assert w.read(seam_shifted(24, 0)[0]) == (w.STILL, 0.0, 0, 0, 0)          # the curled tube: every link flawed
-    assert w.read(seam_shifted(24, 2)[0]) == (w.FLAT, 0.0, 96, 0, 96)         # six around: every point sees 22
-    assert w.read(seam_shifted(24, 4)[0]) == (w.FLAT, 1.0, 96, 96, 0)         # eight around: every point sees 25
+    none = (False, False)
+    assert w.read(seam_shifted(24, 0)[0]) == (w.STILL, 0.0, 0, 0, 0) + none   # the curled tube: every link flawed
+    assert w.read(seam_shifted(24, 2)[0]) == (w.FLAT, 0.0, 96, 0, 96) + none  # six around: every point sees 22
+    assert w.read(seam_shifted(24, 4)[0]) == (w.FLAT, 1.0, 96, 96, 0) + none  # eight around: every point sees 25
     assert [w.word(s) for s in (0.0, 0.049, 0.05, 0.499, 0.5)] == ["TUBE", "TUBE", "PATCHWORK", "PATCHWORK", "WIDE"]
 
 
@@ -31,8 +32,9 @@ def with_one_flaw(shift):
 
 def test_a_flaw_changes_the_counts_near_it_and_the_clear_points_do_not_see_it():
     six, eight = with_one_flaw(2), with_one_flaw(4)
-    assert w.read(six) == (w.LEFTOVER, 0.0, 64, 0, 64)        # one flaw in a tube six around: the clear points see 22
-    kind, share, clear, wide, narrow = w.read(eight)
+    assert w.read(six)[:5] == (w.LEFTOVER, 0.0, 64, 0, 64)    # one flaw in a tube six around: the clear points see 22
+    kind, share, clear, wide, narrow, both, touch = w.read(eight)
+    assert (both, touch) == (False, False)
     assert (kind, clear, wide, narrow) == (w.LEFTOVER, 44, 44, 0)             # in a tube eight around: they see 25
     dist = w.flaw_distance(eight)
     assert int(np.sum(dist == 0)) == 8 and int(np.sum(dist <= w.REACH)) == 52
@@ -51,6 +53,11 @@ def test_one_saved_cell_of_the_fourth_map():
     assert dict(s["words"]) == {"WIDE": 13, "PATCHWORK": 4, "TUBE": 1}
     assert (s["clear"], s["clear25"], s["clear22"]) == (550, 441, 108)
     assert (s["some_wide"], s["mostly_wide"], s["all_six"], s["no_clear"]) == (14, 13, 4, 0)
+    assert (s["all_wide"], s["both"]) == (12, 1)             # 12 of the 18 have no loop of six away from their flaws
+    assert (s["two_widths"], s["touching"]) == (1, 0)
+    longer = w.summary(w.table(str(ROOT / "results"), ("t60_lam125_n192_adj",))[("t60", "125", 192)])
+    assert (longer["leftover"], longer["all_wide"], longer["all_six"], longer["both"]) == (22, 2, 8, 12)
+    assert (longer["two_widths"], longer["touching"]) == (12, 0)   # the two widths never meet except across a flaw
 
 
 def test_the_report_runs_on_a_folder_with_nothing_in_it(tmp_path, capsys):

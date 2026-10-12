@@ -3403,16 +3403,22 @@ to the owner's hypothesis or a new simulation result.
     points**: those with no flawed link within three steps, round which everything in view is locally flat. A
     clear point sees 25 if no loop of six runs round the tube there, and 22 on a tube six around. **In 960 of
     the 2,014 at least one clear point sees 25** (180, 211, 219, 257 and 93 by size), and in 533 most of the clear
-    points do (177, 176, 101, 69 and 10). In 774 every clear point sees 22: six around throughout, with a flaw in
+    points do (177, 176, 101, 69 and 10). **In 473 every clear point sees 25** (175, 171, 77, 46 and 4): no loop
+    of six anywhere away from the flaws, in 4 runs of 100 over all sizes and 1 in 200 at 288 points. In 368 some
+    clear points see 22, the others 25 and none anything else (0, 21, 107, 171 and 69): a stretch six around
+    beside a wider one. In 774 every clear point sees 22: six around throughout, with a flaw in
     it. 119 have no clear point (87 of them at 64 points), and 161 are neither. From 96 points up, the clear
     points seeing 25 number about 26 to 38 for each such state at every size, which is why the share that is
     mostly wide falls as the tube gets longer. **So "the tube ends six around" is exact for the end states that
     are exactly flat, 83 in 100, and is not true of about half of the rest: those hold a stretch, a few tens of
-    points, with no loop of six round it.** *Ours, unverified:* a stretch of one width can meet a stretch of
-    another only at a flaw, so a leftover may be the joint between a stretch six around and a wider one. That is
-    close to the owner's guess of 9 October that the small pieces sit where patches met; T55 scored SEAM as
-    failed under its own definition, a link joining distant places, and that verdict stands. Whether each
-    leftover is such a joint has not been read: it needs the widths on the two sides of each flaw. And our
+    points, with no loop of six round it.** **Exact, per graph: the two widths never meet directly.** In the 440
+    end states whose clear points include both kinds (0, 24, 129, 199 and 88 by size), no clear point seeing 22
+    is linked to a clear point seeing 25: a flaw always lies between a stretch six around and a wider one.
+    *Ours, unverified:* so in those states a leftover is the joint between two widths. That is close to the
+    owner's guess of 9 October that the small pieces sit where patches met; T55 scored SEAM as failed under its
+    own definition, a link joining distant places, and that verdict stands. Not read: whether every flaw in
+    them is such a joint, how wide the wider stretch is, and which of the three knots of O107 the joints are.
+    And our
     reason in Update 48 for why no seam forms (the tube leaves the opening no choice to make) is in doubt: the
     seam can shift either way, and by more than two. Not claimed: that a wider stretch grows, or that any end
     state is wide throughout. T63's control showed the same thing first (PREREGISTRATION T63, "Reading"). Paper

@@ -42,3 +42,4 @@ t63_mu0200_n192*
 # 2026-10-12: T64 stage 1 (10 jobs) and T62's held-out size (10 jobs, queued from d0f21e01). Neither has been read.
 t64_*
 # 2026-10-12, later: asking again for T64's stage 1 (queued from fef06504) and T62's held-out cells. Not read.
+# 2026-10-12, 20:40 UTC by the clock: asking again for T64's stage 1. Not read.
