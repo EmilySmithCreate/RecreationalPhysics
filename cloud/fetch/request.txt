@@ -29,3 +29,20 @@ t60_*
 t56_*
 t57_*
 # 2026-10-11, 10:55 ET: asking for t60_lam135_n288, the last of T60's seven held-out cells (still running at 09:27 ET).
+# 2026-10-12: T62 stage 1 (20 jobs, queued from dc61b3b2) and T63 stage 1 (10 jobs, queued from 27f13005): the
+# six-loop price, from the tube six around and from the curled tube. The owner's predictions for both are
+# recorded in the commit that carries this request. Neither has been read.
+t62_*
+t63_*
+# 2026-10-12: the last four of T63's stage-1 cells (N = 192 with a price; still running at 19:10 UTC). Not read.
+t63_mu0025_n192*
+t63_mu0050_n192*
+t63_mu0100_n192*
+t63_mu0200_n192*
+# 2026-10-12: T64 stage 1 (10 jobs) and T62's held-out size (10 jobs, queued from d0f21e01). Neither has been read.
+t64_*
+# 2026-10-12, later: asking again for T64's stage 1 (queued from fef06504) and T62's held-out cells. Not read.
+# 2026-10-12, 20:40 UTC by the clock: asking again for T64's stage 1. Not read.
+# 2026-10-12, 21:00 UTC by the clock: asking for T64's five N = 192 cells. Not read.
+# 2026-10-12, 21:10 UTC by the clock: the request above was pushed with a skip-ci tag, which stops this workflow too; asking again.
+# 2026-10-12, evening: T64's held-out size (5 jobs) and T62's (10 jobs, still running). Neither has been read.

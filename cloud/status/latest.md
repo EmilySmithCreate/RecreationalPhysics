@@ -1,10 +1,16 @@
-# Batch queue and results bucket, as of 2026-10-11 16:28 UTC (commit d2497ff)
+# Batch queue and results bucket, as of 2026-10-12 21:29 UTC (commit 5a5c2b2)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- none
+- t62_mu010_g200_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu020_g150_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu020_g200_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu025_g150_n384-d0f21e0  created 10-12 19:31  started 10-12 19:32  stopped 
+- t62_mu025_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
+- t62_mu030_g150_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
+- t62_mu030_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
 
 ## RUNNABLE
 - none
@@ -19,37 +25,7 @@ until a person downloads, checks and commits them.
 - none
 
 ## SUCCEEDED
-- t51_l256_fast_00-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:54
-- t51_l256_fast_01-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:37
-- t51_l256_fast_02-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:49
-- t51_l256_fast_03-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 14:31
-- t51_l256_fast_04-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:36
-- t51_l256_fast_05-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:30
-- t51_l256_fast_06-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:00
-- t51_l256_fast_07-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:36
-- t51_l256_fast_08-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:53
-- t51_l256_fast_09-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:33
-- t51_l256_fast_10-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:47
-- t51_l256_fast_11-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 17:04
-- t51_l256_fast_12-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 15:44
-- t51_l256_fast_13-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:21
-- t51_l256_fast_14-aa6b835  created 10-05 09:56  started 10-05 09:56  stopped 10-05 16:01
-- t51_l256_fast_15-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:09
-- t51_l256_fast_16-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:45
-- t51_l256_fast_17-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:13
-- t51_l256_fast_18-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 17:17
-- t51_l256_fast_19-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:30
-- t51_l256_100k_00-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:08
-- t51_l256_100k_01-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
-- t51_l256_100k_02-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
-- t51_l256_100k_03-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:56
-- t51_l256_100k_04-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:55
-- t51_l256_100k_05-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:52
-- t51_l256_100k_06-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:24
-- t51_l256_100k_07-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 16:29
 - t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:30
-- t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:42
-- t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 10-05 21:16
 - t51_l256_100k_11-aa6b835  created 10-05 09:56  started 10-05 15:44  stopped 10-06 00:13
 - t51_l256_100k_12-aa6b835  created 10-05 09:56  started 10-05 16:01  stopped 10-06 00:37
 - t51_l256_100k_13-aa6b835  created 10-05 09:56  started 10-05 16:22  stopped 10-06 02:24
@@ -219,6 +195,36 @@ until a person downloads, checks and commits them.
 - t57_untied_packed_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 02:15  stopped 10-10 04:14
 - t57_untied_packed_lam110_n512-624a5dd  created 10-09 11:27  started 10-10 02:48  stopped 10-10 08:50
 - t57_untied_spread_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 03:42  stopped 10-10 05:41
+- t57_untied_spread_lam110_n512-624a5dd  created 10-09 11:27  started 10-10 03:49  stopped 10-10 09:59
+- t57_untied_packed_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 04:14  stopped 10-10 06:18
+- t57_untied_packed_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 04:15  stopped 10-10 10:39
+- t57_untied_spread_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 04:15  stopped 10-10 06:11
+- t57_untied_spread_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 04:48  stopped 10-10 11:01
+- t60_lam105_n64-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-10 23:37
+- t60_lam105_n96-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-10 23:53
+- t60_lam105_n144-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-11 00:27
+- t60_lam105_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:49
+- t60_lam110_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:28
+- t60_lam110_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:37
+- t60_lam110_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:04
+- t60_lam110_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:33
+- t60_lam115_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:25
+- t60_lam115_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:35
+- t60_lam115_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:50
+- t60_lam115_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:24
+- t60_lam120_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:27
+- t60_lam120_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:39
+- t60_lam120_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:48
+- t60_lam120_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:07
+- t60_lam125_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:27
+- t60_lam125_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:43
+- t60_lam125_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:04
+- t60_lam125_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:31
+- t60_lam130_n64-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-10 23:38
+- t60_lam130_n96-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 00:05
+- t60_lam130_n144-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 00:30
+- t60_lam130_n192-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 01:25
+- t60_lam135_n64-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-10 23:46
 - None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
 
 ## FAILED
@@ -741,5 +747,48 @@ until a person downloads, checks and commits them.
 - t60_lam135_n288/t60_lam135_n288.csv  (2026-10-11 14:13:23, 41894 bytes)
 - t60_lam135_n64/t60_lam135_n64.csv  (2026-10-10 23:45:34, 33554 bytes)
 - t60_lam135_n96/t60_lam135_n96.csv  (2026-10-11 00:37:19, 36301 bytes)
+- t62_mu000_g150_n192/t62_mu000_g150_n192.csv  (2026-10-12 18:05:58, 3793 bytes)
+- t62_mu000_g150_n384/t62_mu000_g150_n384.csv  (2026-10-12 21:27:47, 3975 bytes)
+- t62_mu000_g150_n96/t62_mu000_g150_n96.csv  (2026-10-12 17:50:46, 3671 bytes)
+- t62_mu000_g200_n192/t62_mu000_g200_n192.csv  (2026-10-12 18:09:36, 3798 bytes)
+- t62_mu000_g200_n384/t62_mu000_g200_n384.csv  (2026-10-12 21:24:24, 4006 bytes)
+- t62_mu000_g200_n96/t62_mu000_g200_n96.csv  (2026-10-12 17:54:53, 3678 bytes)
+- t62_mu010_g150_n192/t62_mu010_g150_n192.csv  (2026-10-12 18:02:01, 3793 bytes)
+- t62_mu010_g150_n384/t62_mu010_g150_n384.csv  (2026-10-12 21:26:47, 3980 bytes)
+- t62_mu010_g150_n96/t62_mu010_g150_n96.csv  (2026-10-12 17:49:30, 3670 bytes)
+- t62_mu010_g200_n192/t62_mu010_g200_n192.csv  (2026-10-12 18:09:21, 3876 bytes)
+- t62_mu010_g200_n96/t62_mu010_g200_n96.csv  (2026-10-12 17:54:43, 3740 bytes)
+- t62_mu020_g150_n192/t62_mu020_g150_n192.csv  (2026-10-12 18:14:59, 3812 bytes)
+- t62_mu020_g150_n96/t62_mu020_g150_n96.csv  (2026-10-12 17:53:56, 3681 bytes)
+- t62_mu020_g200_n192/t62_mu020_g200_n192.csv  (2026-10-12 18:27:57, 4235 bytes)
+- t62_mu020_g200_n96/t62_mu020_g200_n96.csv  (2026-10-12 18:00:30, 4056 bytes)
+- t62_mu025_g150_n192/t62_mu025_g150_n192.csv  (2026-10-12 18:27:23, 4284 bytes)
+- t62_mu025_g150_n96/t62_mu025_g150_n96.csv  (2026-10-12 17:58:29, 4048 bytes)
+- t62_mu025_g200_n192/t62_mu025_g200_n192.csv  (2026-10-12 18:32:58, 4190 bytes)
+- t62_mu025_g200_n96/t62_mu025_g200_n96.csv  (2026-10-12 18:01:01, 4054 bytes)
+- t62_mu030_g150_n192/t62_mu030_g150_n192.csv  (2026-10-12 18:28:29, 4160 bytes)
+- t62_mu030_g150_n96/t62_mu030_g150_n96.csv  (2026-10-12 18:00:49, 4013 bytes)
+- t62_mu030_g200_n192/t62_mu030_g200_n192.csv  (2026-10-12 18:30:01, 4172 bytes)
+- t62_mu030_g200_n96/t62_mu030_g200_n96.csv  (2026-10-12 17:57:21, 3987 bytes)
+- t63_mu0000_n192/t63_mu0000_n192.csv  (2026-10-12 19:07:07, 4158 bytes)
+- t63_mu0000_n96/t63_mu0000_n96.csv  (2026-10-12 18:47:48, 4045 bytes)
+- t63_mu0025_n192/t63_mu0025_n192.csv  (2026-10-12 19:19:01, 4435 bytes)
+- t63_mu0025_n96/t63_mu0025_n96.csv  (2026-10-12 18:49:49, 4250 bytes)
+- t63_mu0050_n192/t63_mu0050_n192.csv  (2026-10-12 19:20:39, 4514 bytes)
+- t63_mu0050_n96/t63_mu0050_n96.csv  (2026-10-12 18:44:05, 4325 bytes)
+- t63_mu0100_n192/t63_mu0100_n192.csv  (2026-10-12 19:21:02, 4503 bytes)
+- t63_mu0100_n96/t63_mu0100_n96.csv  (2026-10-12 18:47:48, 4271 bytes)
+- t63_mu0200_n192/t63_mu0200_n192.csv  (2026-10-12 19:24:14, 4436 bytes)
+- t63_mu0200_n96/t63_mu0200_n96.csv  (2026-10-12 18:48:38, 4261 bytes)
+- t64_mu0000_n192/t64_mu0000_n192.csv  (2026-10-12 20:50:19, 4201 bytes)
+- t64_mu0000_n96/t64_mu0000_n96.csv  (2026-10-12 20:23:23, 3973 bytes)
+- t64_mu0025_n192/t64_mu0025_n192.csv  (2026-10-12 20:52:22, 4474 bytes)
+- t64_mu0025_n96/t64_mu0025_n96.csv  (2026-10-12 20:23:38, 4190 bytes)
+- t64_mu0050_n192/t64_mu0050_n192.csv  (2026-10-12 20:51:21, 4517 bytes)
+- t64_mu0050_n96/t64_mu0050_n96.csv  (2026-10-12 20:25:08, 4329 bytes)
+- t64_mu0100_n192/t64_mu0100_n192.csv  (2026-10-12 20:51:12, 4471 bytes)
+- t64_mu0100_n96/t64_mu0100_n96.csv  (2026-10-12 20:20:08, 4257 bytes)
+- t64_mu0200_n192/t64_mu0200_n192.csv  (2026-10-12 20:54:31, 4444 bytes)
+- t64_mu0200_n96/t64_mu0200_n96.csv  (2026-10-12 20:26:33, 4250 bytes)
 
 ## scratch from runs that died (partial/)

@@ -97,3 +97,71 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   Reading their numbers corrected an explanation of ours: T61's patchworks were never melted. The fewest squares
   per point in the sealed spell was 0.92 to 0.99. Warm fabric with flaws in it, not a melt that froze. Yet most
   of their links join dots that started far apart: the dots trade neighbors while the squares stay.
+- 2026-10-12. Can part of a patchwork be flat on its own? (`sandbox/no_melt.py pieces`, on T61's end states at all
+  three sizes, all read.) Of 213 end states that are not flat as a whole and are in two or more pieces, 124 have
+  at least one piece that is exactly flat by itself: 117 such pieces are tori six around, 2 are tori eight
+  around, and 16 are one-sided. So parts of a patchwork do close up as clean small tori, nearly always narrow.
+- 2026-10-12. "What if melted isn't a thing?" (`sandbox/no_melt.py heal`: the 24 mostly-wide end states of T61 at
+  lambda = 1.40, 96 points, run with a ceiling on the energy so that flaws can wander and cancel and the fabric
+  can never gain more than about one flaw; 200,000 sweeps.) Still running when this was written; of the first six
+  at each of three settings, one or two healed to exactly flat, as separate small pieces (tori six around, one
+  eight around, and one-sided ones). Promoted the same day in a different form: the exact floor on squares in a
+  sealed run (O123).
+- 2026-10-12. The no-melt look finished (`sandbox/out/nomelt_*`; 24 mostly-wide patchworks each). With a ceiling
+  of 16 above the lowest energy reached, at g = 2.0: 2 of 24 healed to exactly flat, both as separate small pieces.
+  With a ceiling of 32: 3 of 24, and **one of them is a single clean torus eight around** (96 points); the other
+  two are pieces. With a ceiling of 32 at g = 3.0: 1 of 24, in pieces, one of them a torus eight around. The
+  rest kept their flaws through 200,000 sweeps. So with melting ruled out a patchwork usually stays a patchwork;
+  now and then its flaws cancel, and what is left can be wider than six.
+- 2026-10-12. **A correction to the push looks of 11 October.** The "push" there was the switch that removes
+  the most six-loops, and listed exactly it turns out to join two links seven steps apart: a long-range re-link,
+  not a local nudge (ASSUMPTIONS O124). So "one push and the change ran on" was a tube re-linked across a
+  distance and then healing, which is why its clean end states were odd ones: a torus twelve around, one-sided
+  surfaces. Local pushes exist (two or three steps apart) and also have square-keeping moves onward. They are
+  being looked at with the tested kernel (`sandbox/six_loop_scan.py`, which names its push).
+- 2026-10-12. Local pushes and no push, with the tested kernel (`sandbox/six_loop_scan.py`; 96 points,
+  lambda = 1.25; `sandbox/out/scan2_*`). (a) A local push that breaks two squares, mu = 0.10, g = 1.0: 7 of 10
+  fell straight back; 3 ran on, never with more than two squares missing, and ended exactly flat and one-sided
+  with a quarter of the six-loop excess left. (b) A local push that breaks two squares and makes two surplus,
+  same settings, 40,000 sweeps: none fell back and none finished; two ended flat and still six around with 40 %
+  of the excess left; eight kept 20 to 90 units of flaws, with 32 to 92 % of their points seeing a sheet. (c) The
+  same at mu = 0.20: all ten kept 32 to 106 units of flaws. (d) **No push at all, mu = 0.20, g = 2.0, 60,000
+  sweeps: all eight left six around by themselves and ended mostly wide**, 50 to 83 % of points seeing a sheet,
+  with 16 to 64 units of flaws and never fewer than 0.84 squares per point. None exactly flat. For comparison,
+  with no price and trapped heat one end state in five was mostly wide at this size (T61).
+- 2026-10-12. No push, held warm and then cooled slowly (`sandbox/out/scan3_*`; 96 points unless said). mu = 0.20,
+  g = 1.5: all eight stayed six around through 100,000 sweeps. mu = 0.20, g = 2.0, then cooled over 60,000 sweeps:
+  all eight left and ended mostly wide (50 to 83 % of points seeing a sheet) with 16 to 64 units of flaws; at 192
+  points six of six, 57 to 66 %, with 85 to 112 units. mu = 0.25, g = 1.5: eight of eight left, 47 to 71 %. The
+  slow cooling did not remove the flaws; none is exactly flat. Promoted the same day as T62, on fresh seeds, with
+  a control at no price and a held-out size.
+- 2026-10-12. The same price from the curled tube itself (`sandbox/six_loop_from_tube.py`; 96 points, g = 1.5, six
+  replicas a setting; `sandbox/out/fromtube_*`). No price: the tube waits and ends as the clean tube six around,
+  6 of 6, as in paper 1. mu = 0.05: it waits about as long, and then does not stop at six around; 4 to 10 % of its
+  six-loop excess is left after the warm spell, and it ends with 42 to 78 % of points seeing a sheet and 32 to 64
+  units of flaws. mu = 0.10, 0.20 and 0.25: the same, 45 to 83 %, 16 to 74 units. Never fewer than 0.75 squares
+  per point. None exactly flat. So with even a small price the curled tube opens straight to mostly wide and
+  never visits the narrow tube. Promoted the same day as T63, with the no-price run as its control.
+- 2026-10-12. Seen in T63's control (no price; eight end states; a registered run whose gate failed, so nothing
+  here is evidence): the burps that end on a leftover are not six around. 33 to 92 % of their points see a sheet,
+  and one at 96 points sees 92 % with 20 units of energy left (not read from its wiring). Paper 1's "ends six around" was read from exactly flat
+  end states only. To do: a tested reading of paper 1's saved end states that are not flat (T60 keeps them).
+- 2026-10-12. The same question on paper 1's own saved end states (`sandbox/leftover_width.py`; T60 at lambda = 1.25,
+  120 a size; `sandbox/out/leftover_width.txt`). Exactly flat: every one six around (109, 102, 107, 98, 98 at 64
+  to 288 points). With a leftover (11, 18, 13, 22, 22): mostly wide at the two small sizes (10 of 11; 13 of 18),
+  mostly patchwork at the larger (9 of 13; 14 of 22; 15 of 22, and none wide at 288). By the medians, 27 to 64
+  points see a sheet at every size, so the share falls as the tube gets longer. It looks as if a leftover sits in
+  a wider stretch of roughly fixed size. Not read from positions. Promoted the same day as an exact reading with a tested script (`scripts/read_leftover_width.py`; O116, addendum of 12 October), which reads width only from points clear of flaws: about half of those end states do hold a wider stretch. It narrows one sentence: "the
+  tube ends six around" is true of the exactly flat end states, eight or nine in ten, and not shown for the rest.
+- 2026-10-12. The owner's idea, "what if melting isnt allowed": a rule against bare links (a link on no square,
+  so its ends are not otherwise close), hard, or soft at a cost of 8 or 32 (`sandbox/no_far_links.py`; 96 points,
+  lambda = 1.25; `sandbox/out/no_far_links_BC.txt`). Exact, by listing every switch: the hard rule forbids about
+  nine switches in ten, all the long-reach ones, and none of the cheap ones; paper 1's ways out of the curled tube
+  (12, 14) and the local moves out of flat tubes (20, 31, 32, 42) all stay. Runs, 12 a rule: the burp still
+  starts, but it ends exactly flat in 5 of 12 under the hard rule against 11 of 12 with none (9 and 10 under the
+  soft ones); the rest keep a leftover. A flat tube heated and cooled, 6 a setting: at g = 3 nothing happens with
+  or without. At g = 5 and 8 with no rule it melts (0.46 to 0.73 squares per point, up to 89 bare links at once);
+  with a rule it keeps more (0.65 to 0.89), and under the hard one it never has a bare link. After cooling none
+  comes back flat either way, and the ruled ones keep about twice the energy in flaws (116 to 156 against 67 to
+  78). So in this look the rule stops melting, as built, and does not bring the fabric back: it heals worse. One
+  cooling time; the owner has not yet said which reading of the rule she means. Not promoted.

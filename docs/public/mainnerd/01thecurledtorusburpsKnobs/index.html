@@ -250,7 +250,7 @@ summary { cursor: pointer; }
 
   <section aria-labelledby="out-h">
     <h2 id="out-h">What this page leaves out</h2>
-    <p class="note">This page covers the paper's one change: a tube with one curled direction opening into a flat sheet, in a network with four links per dot. Three and four directions, ties between directions, and dots treated as interchangeable are outside the paper, and a separate version of the ladder covers them.</p>
+    <p class="note">This page covers the paper's one change: a tube with one curled direction giving way, in a network with four links per dot. What the runs end on is a tube six steps around: flat at every dot, and still narrow. Three and four directions, ties between directions, and dots treated as interchangeable are outside the paper, and a separate version of the ladder covers them.</p>
     <p class="note">Every measured number here is from the technical paper's tables or the project's recorded result files, at the sizes and settings stated. Nothing is claimed beyond them. The clock counts sweeps of attempted swaps, not seconds. No physicist has reviewed this page.</p>
   </section>
 </div>
@@ -598,7 +598,7 @@ function drawRoom() {
   const words = lab === "1" ? "a single store" : `${lab} stores`;
   if (d) {
     const sh = d.sheet[S.c], be = d.between[S.c], me = d.melted[S.c];
-    const verdict = sh >= 15 ? "the burp has room, and the sheet completes" : (me >= 10 ? "the burp has too little room, and it melts the new sheet" : "near the switch-over: mostly in between");
+    const verdict = sh >= 15 ? "the burp has room, and the change completes" : (me >= 10 ? "the burp has too little room, and it damages what it made (the registered label is melted; these runs keep 94 percent or more of their squares)" : "near the switch-over: mostly in between");
     box.innerHTML = `<p class="big">${sh} sheet-like, ${be} in between, ${me} melted <small>of 20 runs</small></p><p><span class="tag meas">Measured</span>With ${words} beside a tube of ${S.N} dots, ${verdict}. No run at any setting stalled with tube and sheet side by side.</p>`;
   } else {
     box.innerHTML = `<p class="big">not run at ${S.N} dots</p><p><span class="tag none">Not run</span>This test used tubes of 64, 96 and 192 dots. The chart shows all three with ${words} highlighted: the switch-over sits between N/4 and N/2 at every size.</p>`;

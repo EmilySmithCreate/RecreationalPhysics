@@ -3394,6 +3394,35 @@ to the owner's hypothesis or a new simulation result.
     Checked a second way: each of the 42 one-sided pieces (these and T61's) is isomorphic, by networkx, to none
     of the flat tori of its size, which `scripts/exact_flat_torus_widths.py` lists in full; each of the 19
     two-sided pieces beside them is isomorphic to one.
+  - *Addendum, 12 October 2026: the end states that are not exactly flat.* (`scripts/read_leftover_width.py`,
+    four tests in `tests/test_read_leftover.py`; exploratory, exact for each graph; reading only; no verdict
+    changes.) Of the 11,880 saved end states of T8, T23, T24 and T60, 9,865 are exactly flat (above), one is still
+    a tube, and **2,014 are converted with energy left**: 333, 430, 484, 577 and 190 at 64, 96, 144, 192 and 288
+    points. They were not read above. A flaw changes the three-step count of every point near it (on a tube eight
+    around with one flaw, the points beside it see 25, 26 or 28), so width is read only from the **clear
+    points**: those with no flawed link within three steps, round which everything in view is locally flat. A
+    clear point sees 25 if no loop of six runs round the tube there, and 22 on a tube six around. **In 960 of
+    the 2,014 at least one clear point sees 25** (180, 211, 219, 257 and 93 by size), and in 533 most of the clear
+    points do (177, 176, 101, 69 and 10). **In 473 every clear point sees 25** (175, 171, 77, 46 and 4): no loop
+    of six anywhere away from the flaws, in 4 runs of 100 over all sizes and 1 in 200 at 288 points. In 368 some
+    clear points see 22, the others 25 and none anything else (0, 21, 107, 171 and 69): a stretch six around
+    beside a wider one. In 774 every clear point sees 22: six around throughout, with a flaw in
+    it. 119 have no clear point (87 of them at 64 points), and 161 are neither. From 96 points up, the clear
+    points seeing 25 number about 26 to 38 for each such state at every size, which is why the share that is
+    mostly wide falls as the tube gets longer. **So "the tube ends six around" is exact for the end states that
+    are exactly flat, 83 in 100, and is not true of about half of the rest: those hold a stretch, a few tens of
+    points, with no loop of six round it.** **Exact, per graph: the two widths never meet directly.** In the 440
+    end states whose clear points include both kinds (0, 24, 129, 199 and 88 by size), no clear point seeing 22
+    is linked to a clear point seeing 25: a flaw always lies between a stretch six around and a wider one.
+    *Ours, unverified:* so in those states a leftover is the joint between two widths. That is close to the
+    owner's guess of 9 October that the small pieces sit where patches met; T55 scored SEAM as failed under its
+    own definition, a link joining distant places, and that verdict stands. Not read: whether every flaw in
+    them is such a joint, how wide the wider stretch is, and which of the three knots of O107 the joints are.
+    And our
+    reason in Update 48 for why no seam forms (the tube leaves the opening no choice to make) is in doubt: the
+    seam can shift either way, and by more than two. Not claimed: that a wider stretch grows, or that any end
+    state is wide throughout. T63's control showed the same thing first (PREREGISTRATION T63, "Reading"). Paper
+    1 reads its width from zero-energy endpoints only and says so; nothing in it changes.
   - **Owed.** Paper 1 must say what its end states are before it is shown to anyone, and the plain-language
     edition and the programme page with it. The registered runs that read OPENS, ONE SPACE or FLAT keep their
     labels; a width or shell line is to be written into any new registration that uses those words.
@@ -3480,7 +3509,10 @@ to the owner's hypothesis or a new simulation result.
     torus, not on a usual one. The energy is the same for all of them.
   - *Ours, unverified.* With named points each wrapping carries the same number of labeled graphs, so a chain that
     could move among flat tori at no cost would be found wide most of the time. It cannot: leaving a flat torus
-    costs 32. Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
+    costs 32. *(Corrected 12 October 2026: 32 from a torus eight to twelve around. From one six around the
+    cheapest switch costs 16λ, 20 at λ = 1.25: no square broken, four surplus squares made; every switch
+    listed at 48 and 96 points, `tests/test_sixloop_walls.py`. Both editions of paper 1 said "at least 32"
+    and are corrected. A cool six-around tube still stays put: the T62 controls, 96 of 96.)* Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
 
 - **O120 The outside review of 11 October 2026, recorded: what it checked, what it found, what was done, and what it
   got wrong (rule 12's first pass by a different model).** (Reviewer: OpenAI Codex, from
@@ -3515,7 +3547,7 @@ to the owner's hypothesis or a new simulation result.
     (1) to (5) in paper 1's text and paper 6's draft, which wait on the owner's decision about its branch.
   - **What it got wrong.** Nothing we have found. Two of its results were recomputed here with our code and
     reproduce exactly (T54's 24, 20, 45, 24; T60's 73 and 2). Two things it could not see: it numbered its own
-    geometry audit O118, which is T54 here (to be renumbered at merging, as it says); and it had not opened
+    geometry audit O118, which is T54 here (renumbered O122 on 12 October, when its branch was merged); and it had not opened
     T61's results, so it gives no view on them. Its limits are its own list: it did not redo the N = 18
     enumeration, the sealed runs, T58's replays, or O116's 9,215 end states.
   - **Its advice on what paper 1 is, for the owner:** a controlled study of an activated change in a deformation
@@ -3544,6 +3576,103 @@ to the owner's hypothesis or a new simulation result.
     Paper 1 can say that the product is a tube six around when the heat can leave and a flawed patchwork when it
     cannot. *Ours, unverified:* trapped heat is flaws everywhere at once, each re-stitching its own neighborhood,
     and the flaws that have not cancelled when the heat is drained stay where they are.
+
+- **O122 The outside reviewer's own audit entry: a retrospective, independent reading of paper 1's end states and
+  of the manuscript (11 October 2026; written by OpenAI Codex on its branch as "O118" and renumbered here on 12
+  October, because O118 is T54).** The text below is the reviewer's, unedited except for this heading. It was
+  merged to main with the reviewer's rewrite of paper 1 (33be5462). In that merge main's copy of this file lost
+  O118 (T54) and O119 (the flat tori counted), and when main was merged into the author branch this entry was
+  lost in turn; both are restored on 12 October. Its counts for the fourth map (3,446 narrow tori, 73 in separate
+  pieces, 2 Klein bottles, of 3,521) agree with `scripts/read_flat_kind.py`, written separately (O116, last
+  addendum). O120 is our record of the review as a whole.
+
+  > **Ours, computationally checked; physical interpretation unverified.** Prepared with OpenAI
+  > Codex on base `5382053a`. This is an AI audit, not independent human peer review. New endpoint
+  > analysis is retrospective and does not change original registration verdicts. The reader and
+  > known-surface controls are `scripts/read_endpoint_geometry.py` and
+  > `tests/test_endpoint_geometry.py`; detailed selection, algorithm and limitations are in the
+  > 11 October supplement addendum. Per-input hashes and certificates are in
+  > `docs/papers/curled_torus/endpoint_geometry_2026-10-11.json`.
+  >
+  > All 120 original T8 lambda=1.05 endpoints reconstruct as narrow square-grid tori with shortest
+  > noncontractible loop six and shortest independent loop N/4. Among 3,521 reached, zero-energy
+  > T60 saved final endpoints, 3,446 are narrow tori, 73 disconnected surfaces and two Klein bottles.
+  > The two nonreached rows are outside that selection even though their settled graphs also have
+  > zero energy. Width alone does not certify one torus. The surface test explicitly checks cyclic
+  > vertex links; torus lengths follow a full lattice and adjacency reconstruction.
+  >
+  > **Previous claim → correction:** endpoint periods were unmeasured → reconstructed original
+  > endpoints remain narrow → local flatness is insufficient for two large directions in this
+  > sample → future claims of macroscopic opening must preregister global geometry measures and
+  > a held-out size. This does not negate wider-shell outcomes in later six-link experiments,
+  > whose conditions and denominators differ.
+  >
+  > **Diagnostic and interpretation corrections:** T60 passes its finite-sample criteria and frozen
+  > held-out prediction; the first three maps remain inconclusive. T24's residual-wait CV criterion
+  > also passes on the new 24-cell smaller-size window, so the later pass is not uniquely evidence
+  > for clock repair. The n=120 calibrated CV interval starts at 0.7577404651, not the printed 0.756;
+  > no verdict changes. Lambda > 1 supplies a positive ideal energy gap, not a physical derivation
+  > or proof of thermodynamic first order. The 12-unit bound concerns escape under the stated move
+  > set, not a measured commitment barrier. No-stall observations do not exclude coexistence;
+  > the sealed runs do not establish reservoir equilibration. No claim of a wholly error-free
+  > manuscript follows from this audit.
+  >
+  > The Paper 1 sources and abstracts are revised accordingly; raw results and historical
+  > registrations are unchanged. Review order and scope are in `review_corrections_2026-10-11.md`
+  > beside the manuscripts. The prior disclosure below describes the original drafting; these
+  > 11 October corrections and their checker were prepared with OpenAI Codex.
+
+- **O123 EXACT: a sealed tube cannot melt. The burp's own energy can break at most about one square in sixteen,
+  and every run T9 classed "melted" kept 94 to 100 % of its squares (12 October 2026). Exact arithmetic, and a
+  reading of saved runs by a tested script; it corrects how that class was described, not how it was scored.**
+  (`scripts/read_t9_squares.py`, `tests/test_t9_squares.py`. The owner's question of 12 October, in her words:
+  "what if melted isnt a thing?")
+  - **Exact.** H = 16(N − S) + 4λX with X never below zero, and a sealed run holds only what it started with,
+    E = 4(λ − 1)N plus the push. So the squares per point can never fall below 1 − E/16N: 0.93 at λ = 1.25 and
+    0.90 at λ = 1.40, however few stores there are. The random phase has about 0.13.
+  - **Read.** T9's 154 runs classed "melted" end with 0.938 to 1.000 squares per point (medians 0.953 to 0.958
+    at the three sizes). T61's sealed spells never went below 0.92. No sealed run is below its floor.
+  - **What it corrects.** "Melted" in T9 is a registered class: at least 15 % of points at d = 0 or d ≥ 3. It
+    stands as scored (BONFIRE WITH A THRESHOLD). What does not stand is its description as the random phase:
+    paper 1's two editions ("melts into the random phase"; "linked any old way, which is the random phase the
+    published model starts from"), the programme page's piece 4, and our account on 11 October of a patchwork as
+    a melt that froze (corrected that night). All are corrected on 12 October. Melting in the proper sense needs
+    energy from outside: a warm bath (O88), a feed, or a budget handed over (O20).
+  - **The answer to her question** (ours). For the burp's own heat, melted is not a thing. Too little room
+    leaves damage: flaws in fabric that keeps fifteen squares in sixteen, and it sets as a patchwork when the
+    heat is drained (O121).
+
+- **O124 A price on loops of six: the term as tested code, and what is exact about it (12 October 2026). OURS: a
+  new term, decided by the owner in VISION Update 56 and fixed in form there; with it the model is our family,
+  never the published model. Exact where marked; nothing here is a run.** (`src/graphity/sixloop.py`,
+  `tests/test_sixloop.py`; `scripts/exact_sixloop_walls.py`, `tests/test_sixloop_walls.py`.)
+  - **The term.** H6 = 16(N − S) + 4λX + μE6, with E6 the sum over links of (loops of six through the link − 6),
+    counted only where positive. *Exact:* in a flat torus eight or more around every link lies on exactly six
+    loops of six, the outlines of two neighbouring squares, so E6 = 0 there. On the tube E6 is 18 per point, on
+    the tube six around 15, on the tube eight around 0 (48 and 96 points).
+  - **The kernel (rule 6).** The count of loops through a link agrees with a brute-force count by networkx on
+    flat, curled and melted graphs. The chain's incremental update agrees with a chain that recomputes the whole
+    energy for every candidate, move for move, in five settings. Over long walks the books stay exact and the
+    graph valid. The same seed gives the same chain. At μ = 0 it is `cqg.run_chain` draw for draw.
+  - **Exact, by listing every switch at 48 points, λ = 1.25.** Eight around is stuck at every price: its
+    cheapest switch costs 32 + 12μ. Six around is stuck for μ below 4/11. The tube itself is stuck only for μ
+    below 0.106, because the price also pays for its first re-gluing: its cheapest exit falls from 12 to
+    14 − 132μ.
+  - **The cheapest way out of six around is long-range above μ = 0.28 and local below.** The switch that removes
+    the most E6 (four squares broken, E6 down by 176, cost 64 − 176μ) joins two links five or more steps apart,
+    and their number grows as N² (96 at 48 points, 2,496 at 96). The local ones, their two links two or three
+    steps apart and N of each: one square broken and three surplus made, E6 down by 59, cost 31 − 59μ; two
+    squares broken, E6 down by 24, cost 32 − 24μ; two squares and two surplus, E6 down by 94, cost 42 − 94μ.
+    *(Added 12 October: these are the switches that lower E6. The cheapest switch of all out of six around
+    while μ is below 0.103 is another: no square broken, four surplus made, E6 up by 48, cost 20 + 48μ. It
+    leads away from widening and its way back is free.)*
+  - **After a switch out, the change can go on without breaking more squares.** From the long-range push there
+    are 14 distinct switches that keep every square and lower E6, all downhill at any μ above zero, against one
+    straight back. Local pushes have them too.
+  - **Not known:** whether a re-gluing then runs to the end, what it ends as, and how often. The sandbox looks
+    of 11 October that reported clean wide end states used the long-range push without knowing it was one
+    (`sandbox/LOG.md`, 12 October). Those end states (a torus twelve around, one-sided surfaces) are what a
+    long-range re-link can leave, and say nothing yet about a local seed.
 
 ## Provenance
 

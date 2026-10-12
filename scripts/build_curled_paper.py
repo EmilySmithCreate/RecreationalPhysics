@@ -60,7 +60,14 @@ def manifest():
         "scripts/run_first_exits.py", "scripts/analyse_t59.py", "scripts/make_t59_configs.py",
         "src/graphity/exits.py", "tests/test_first_exit_clocks.py", "tests/test_t59.py",
         "docs/reading/notes/2026-10-10_prior_work_lambda_above_one.md",
-        "docs/public/curling_ladder_tube.html")]
+        "docs/public/curling_ladder_tube.html",
+        # revision of 12 October 2026: retained heat (T61), the kinds of zero-energy end state, the count of
+        # wrappings, and what the sealed runs' class "melted" can mean
+        "scripts/run_burp_heat.py", "scripts/analyse_t61.py", "scripts/make_t61_configs.py",
+        "tests/test_t61.py", "tests/test_t61_safeguards.py", "configs/t61_heldout_prediction.json",
+        "scripts/read_flat_kind.py", "scripts/read_endpoint_width.py", "scripts/read_open_shells.py",
+        "tests/test_read_shapes.py", "scripts/exact_flat_torus_widths.py", "tests/test_flat_torus_widths.py",
+        "scripts/read_t9_squares.py", "tests/test_t9_squares.py")]
     # Normalize release text to the UTF-8/LF representation stored by Git.
     # PowerShell-redirection logs can otherwise be UTF-16 and Windows files CRLF.
     for path in set(files):
@@ -77,7 +84,7 @@ def manifest():
         except PackageNotFoundError:
             return None  # --manifest-only can retain existing, hashed figures without matplotlib
 
-    payload = dict(base_source_and_data_commit=BASE, release_date="2026-10-11",
+    payload = dict(base_source_and_data_commit=BASE, release_date="2026-10-12",
                    status="Reader manuscript and accompanying computational materials",
                    analysis_environment=dict(python=platform.python_version(),
                        packages={name: installed_version(name) for name in

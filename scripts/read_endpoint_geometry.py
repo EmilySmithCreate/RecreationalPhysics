@@ -1,4 +1,4 @@
-"""Retrospective endpoint checks (O118); no Monte Carlo dynamics.
+"""Retrospective endpoint checks (O122); no Monte Carlo dynamics.
 
 Certify adjacency as a square-grid translation quotient, then measure its
 shortest noncontractible loop and shortest linearly independent loop in edges.

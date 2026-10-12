@@ -70,3 +70,22 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-11, ours. With a price on loops of six and one push, the first finished end states were one-sided
   (Klein bottles). Why? One push makes one defect, not a pair; does a lone defect that runs the length of the tube
   close the seam with a flip? Would two pushes, or a push of the other kind, give a torus?
+- 2026-10-12, the owner, on the reviewer's sentence that local flatness is insufficient to ensure large-scale
+  opening: "but makkes it more probable?" Ours: by count, yes (most flat wrappings are wide, O119); by what the
+  runs do, no (they stop at the nearest flat arrangement, six around). Both sentences are now in paper 1.
+- 2026-10-12, the owner, on "the network melts while it is fed ... it is a patchwork": "what if melted isnt a
+  thing? can part of a patchwork become flat or other tori again?" Ours: for the burp's own heat, melted is not
+  a thing, exactly (O123). And parts of a patchwork do come out flat: see the log.
+- 2026-10-12, the owner, on the photon idea of 11 October: "I'll pick this up in another thread".
+- 2026-10-12, the owner, reading paper 1's sentence "Does being flat at least make a wide shape likely?": "what
+  exactly does 'being flat' mean here? i hope flat flat not wide tube flat." Ours: it meant flat at every dot,
+  which a narrow tube also is; the paper now says so in that place.
+- 2026-10-12, the owner, on the sealed runs labelled "melted": "can we do some tests on the idea what if melting
+  isnt allowed the connections return to connecting locally close points pretty quick?" Ours, two readings to
+  put to her before anything is registered (a new rule either way, S1). A hard one: a link may only be re-joined
+  between points that are already near each other, so no link ever reaches across the network. A soft one: a
+  long reach is allowed but costs energy in proportion to how far it reaches, so it snaps back. Where it would
+  bite: the patchworks of T61, the flawed wide products of T62 and T64, the breakage of T34 and T57, and the
+  long-range way out of the tube six around (O124). First a sandbox look.
+- 2026-10-12, the owner, on "The burp cannot melt its own product. An earlier draft of this chapter said that it
+  could.": "good, this makes sense to me now."

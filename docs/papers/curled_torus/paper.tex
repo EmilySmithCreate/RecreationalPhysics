@@ -367,6 +367,15 @@ width alone cannot certify topology. The two rows outside the reached subset als
 energy after settling, but are excluded from this denominator. The supplement gives the selection,
 algorithm and per-file certificates. This is a finite-sample result, not an arbitrary-size theorem.
 
+A seam shift of $2m$ sites gives a zero-energy torus with shortest loop $4+2m$ (verified for
+$m\le4$, $L\ge24$), so the energy neither favors nor opposes widening beyond six: it prices
+four-cycles and nothing longer. Counted as lattice wrappings (not isomorphism classes, and not a
+statement about what the dynamics reaches), zero-energy tori with shortest loop six are 8.5\% of the
+236 wrappings at $N=192$ and 5.2\% of 387 at $N=288$. Every switch out of a zero-energy torus costs
+energy: by exhaustive listing at $N=48$ and 96, at least $16\lambda$ from the torus with shortest loop six
+(no square broken, four surplus squares made) and at least 32 from those with shortest loop eight to
+twelve. The observed endpoints are the nearest one.
+
 A separate equilibrium scan at $\lambda=1.25$ has a single energy-distribution peak over the tested
 sizes and couplings and is INCONCLUSIVE under its stated rules. Neither that finite-size observation
 nor the kinetic conversion studied here establishes a thermodynamic first-order transition.
@@ -401,8 +410,12 @@ as well as the thermal response.
 \emph{Enough room, or not.} The seed sits in one of $C$ stores, and $C$ sets the reservoir's heat
 capacity ($C=1,N/16,N/8,N/4,N/2,N,2N$; $N=64,96,192$; twenty runs each of 30,000 sweeps; 420 runs).
 With too little room the
-converted region melts into the random phase in 17 to 20 of 20 runs for $C\le N/16$ and in 9 to 16 of
-20 at $C=N/8$. At $C=N/4$ most runs end partly converted or partly melted. With enough room,
+run ends in the registered class ``melted'' (at least 15\% of vertices at $d=0$ or $d\ge3$) in 17 to
+20 of 20 runs for $C\le N/16$ and in 9 to 16 of 20 at $C=N/8$. At $C=N/4$ most runs end in neither
+class. That class is damage and not the random phase. A sealed run holds $\varepsilon N+s$, and with
+$X\ge0$ the squares per vertex cannot fall below $1-(\varepsilon N+s)/16N$, about $15/16$ here; the
+154 runs so classified end with 0.94 to 1.00 squares per vertex, against about 0.13 in the random
+phase. With enough room,
 $C\ge N/2$, the ``sheet'' counting criterion holds in 18 to 20 of 20; for perspective, 18/20 and
 20/20 successes have exact 95\% binomial intervals $[0.683,0.988]$ and $[0.832,1]$. The criterion
 requires $f\ge0.9$, at least 90\% at $d=2$, and less than 5\% at $d=0$ or $d\ge3$; it is not a
@@ -415,6 +428,19 @@ Taking $g_m\simeq3.5$ and neglecting seed and residual graph energy gives $N/3.0
 energy budget, not a calibrated crossover prediction. Stores have no upper capacity, so a small bath
 heats; it does not fill up. No sustained stall with both signatures present was observed under the
 stated criterion and duration; this does not exclude equilibrium coexistence.
+
+\emph{Retained heat does not widen the endpoint.} A later registered test (T61) sealed tori of
+$N=96$, 192 and, held out, 384 at $\lambda=1.25$ and 1.40 with $C/N=2,1,1/2,1/3,1/4$, drained the
+stores, cooled, and read each endpoint by the fraction $w$ of vertices whose three-step ball has the
+square lattice's 25 vertices ($w=0$ on a zero-energy torus with shortest loop six, 1 on one with
+shortest loop eight or more); 24 runs per cell. No cell has a majority with $w\ge1/2$ at any size.
+For $C\ge N$ at $\lambda=1.25$ all 144 endpoints have $w<0.05$, and at $C=N/2$, 63 of 72. At
+$\lambda=1.25$ with $C=N/4$, with $C=N/3$ for $N\ge192$, and in every cell at $\lambda=1.40$, the
+majority has $0.05\le w<1/2$: square-lattice regions of differing short period joined at defects,
+and often disconnected. The share with $w\ge1/2$ at $\lambda=1.40$ falls with size, 24/120, 15/119 and 2/120.
+The shares written beforehand for $N=384$ hold in nine cells of ten. None of the 720 endpoints is a
+connected zero-energy torus with shortest loop above six. $w$ is a local statistic and certifies no
+topology.
 
 \emph{What remains: about one relic at every size.} In the coldest box ($C=2N$; T10, also 30,000
 sweeps) a scrap of the old arrangement usually remains. A relic here is a connected component of the $d=1$ induced subgraph in the final snapshot, classified further where
@@ -603,7 +629,8 @@ stated. The energetic lower bound for sealed escape, 12 units at $\lambda=1.25$,
 tested sizes, while the available release grows with the system. Conversion snapshots support
 dominance by a connected flat-like region, but do not establish a unique seed or one moving boundary.
 Endpoint geometry is certified for the stated T8 and reached zero-energy T60 sets; the reconstructed
-tori remain narrow. Finite-bath equilibration and geometric opening in other regimes remain open.
+tori remain narrow, and retained heat did not widen them in a registered test (T61). Finite-bath
+equilibration and geometric opening in other regimes remain open.
 The detected-decay tails are largely accounted for, retrospectively, by
 conversion inside the detector's resting window. A replay of one cell (Sec.~\ref{sec:lambda})
 finds one more such case and one wait of a length chance allows. Counted by the move in 7,000 fresh
@@ -732,7 +759,7 @@ The Supplemental Material provides a claim-to-script/configuration/data map, com
 and content hashes in \path{release_manifest.json}, with the analysis and figure scripts.
 Configurations specify seeds and durations; associated metadata
 record software versions but do not consistently identify the original execution commit.
-The endpoint certificates and manuscript corrections of 11 October postdate that snapshot and
+The endpoint certificates postdate that snapshot and
 are identified by the accompanying release manifest. The retrospective selection and algorithms
 are documented in the supplement.
 
