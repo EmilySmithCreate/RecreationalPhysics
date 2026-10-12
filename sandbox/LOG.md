@@ -151,5 +151,5 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   to 288 points). With a leftover (11, 18, 13, 22, 22): mostly wide at the two small sizes (10 of 11; 13 of 18),
   mostly patchwork at the larger (9 of 13; 14 of 22; 15 of 22, and none wide at 288). By the medians, 27 to 64
   points see a sheet at every size, so the share falls as the tube gets longer. It looks as if a leftover sits in
-  a wider stretch of roughly fixed size. Not read from positions. Not promoted. It narrows one sentence: "the
+  a wider stretch of roughly fixed size. Not read from positions. Promoted the same day as an exact reading with a tested script (`scripts/read_leftover_width.py`; O116, addendum of 12 October), which reads width only from points clear of flaws: about half of those end states do hold a wider stretch. It narrows one sentence: "the
   tube ends six around" is true of the exactly flat end states, eight or nine in ten, and not shown for the rest.

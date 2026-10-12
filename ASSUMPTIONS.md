@@ -3394,6 +3394,29 @@ to the owner's hypothesis or a new simulation result.
     Checked a second way: each of the 42 one-sided pieces (these and T61's) is isomorphic, by networkx, to none
     of the flat tori of its size, which `scripts/exact_flat_torus_widths.py` lists in full; each of the 19
     two-sided pieces beside them is isomorphic to one.
+  - *Addendum, 12 October 2026: the end states that are not exactly flat.* (`scripts/read_leftover_width.py`,
+    four tests in `tests/test_read_leftover.py`; exploratory, exact for each graph; reading only; no verdict
+    changes.) Of the 11,880 saved end states of T8, T23, T24 and T60, 9,865 are exactly flat (above), one is still
+    a tube, and **2,014 are converted with energy left**: 333, 430, 484, 577 and 190 at 64, 96, 144, 192 and 288
+    points. They were not read above. A flaw changes the three-step count of every point near it (on a tube eight
+    around with one flaw, the points beside it see 25, 26 or 28), so width is read only from the **clear
+    points**: those with no flawed link within three steps, round which everything in view is locally flat. A
+    clear point sees 25 if no loop of six runs round the tube there, and 22 on a tube six around. **In 960 of
+    the 2,014 at least one clear point sees 25** (180, 211, 219, 257 and 93 by size), and in 533 most of the clear
+    points do (177, 176, 101, 69 and 10). In 774 every clear point sees 22: six around throughout, with a flaw in
+    it. 119 have no clear point (87 of them at 64 points), and 161 are neither. From 96 points up, the clear
+    points seeing 25 number about 26 to 38 for each such state at every size, which is why the share that is
+    mostly wide falls as the tube gets longer. **So "the tube ends six around" is exact for the end states that
+    are exactly flat, 83 in 100, and is not true of about half of the rest: those hold a stretch, a few tens of
+    points, with no loop of six round it.** *Ours, unverified:* a stretch of one width can meet a stretch of
+    another only at a flaw, so a leftover may be the joint between a stretch six around and a wider one. That is
+    close to the owner's guess of 9 October that the small pieces sit where patches met; T55 scored SEAM as
+    failed under its own definition, a link joining distant places, and that verdict stands. Whether each
+    leftover is such a joint has not been read: it needs the widths on the two sides of each flaw. And our
+    reason in Update 48 for why no seam forms (the tube leaves the opening no choice to make) is in doubt: the
+    seam can shift either way, and by more than two. Not claimed: that a wider stretch grows, or that any end
+    state is wide throughout. T63's control showed the same thing first (PREREGISTRATION T63, "Reading"). Paper
+    1 reads its width from zero-energy endpoints only and says so; nothing in it changes.
   - **Owed.** Paper 1 must say what its end states are before it is shown to anyone, and the plain-language
     edition and the programme page with it. The registered runs that read OPENS, ONE SPACE or FLAT keep their
     labels; a width or shell line is to be written into any new registration that uses those words.
