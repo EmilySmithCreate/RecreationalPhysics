@@ -1,4 +1,4 @@
-# Batch queue and results bucket, as of 2026-10-12 19:59 UTC (commit fef0650)
+# Batch queue and results bucket, as of 2026-10-12 20:22 UTC (commit ef2f2e3)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
@@ -14,6 +14,15 @@ until a person downloads, checks and commits them.
 - t62_mu025_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
 - t62_mu030_g150_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
 - t62_mu030_g200_n384-d0f21e0  created 10-12 19:32  started 10-12 19:32  stopped 
+- t64_mu0000_n96-fef0650  created 10-12 20:00  started 10-12 20:00  stopped 
+- t64_mu0025_n96-fef0650  created 10-12 20:00  started 10-12 20:00  stopped 
+- t64_mu0050_n96-fef0650  created 10-12 20:00  started 10-12 20:00  stopped 
+- t64_mu0200_n96-fef0650  created 10-12 20:00  started 10-12 20:00  stopped 
+- t64_mu0000_n192-fef0650  created 10-12 20:00  started 10-12 20:00  stopped 
+- t64_mu0025_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
+- t64_mu0050_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
+- t64_mu0100_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
+- t64_mu0200_n192-fef0650  created 10-12 20:00  started 10-12 20:01  stopped 
 
 ## RUNNABLE
 - none
@@ -31,9 +40,6 @@ until a person downloads, checks and commits them.
 - t51_l256_100k_00-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:08
 - t51_l256_100k_01-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
 - t51_l256_100k_02-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:13
-- t51_l256_100k_03-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:56
-- t51_l256_100k_04-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:55
-- t51_l256_100k_05-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 19:52
 - t51_l256_100k_08-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 21:30
 - t51_l256_100k_09-aa6b835  created 10-05 09:56  started 10-05 09:57  stopped 10-05 20:42
 - t51_l256_100k_10-aa6b835  created 10-05 09:56  started 10-05 14:31  stopped 10-05 21:16
@@ -228,6 +234,9 @@ until a person downloads, checks and commits them.
 - t60_lam120_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:48
 - t60_lam120_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:07
 - t60_lam125_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:27
+- t60_lam125_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:43
+- t60_lam125_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:04
+- t60_lam125_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:31
 - None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
 
 ## FAILED
@@ -780,5 +789,6 @@ until a person downloads, checks and commits them.
 - t63_mu0100_n96/t63_mu0100_n96.csv  (2026-10-12 18:47:48, 4271 bytes)
 - t63_mu0200_n192/t63_mu0200_n192.csv  (2026-10-12 19:24:14, 4436 bytes)
 - t63_mu0200_n96/t63_mu0200_n96.csv  (2026-10-12 18:48:38, 4261 bytes)
+- t64_mu0100_n96/t64_mu0100_n96.csv  (2026-10-12 20:20:08, 4257 bytes)
 
 ## scratch from runs that died (partial/)
