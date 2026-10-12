@@ -44,3 +44,4 @@ t64_*
 # 2026-10-12, later: asking again for T64's stage 1 (queued from fef06504) and T62's held-out cells. Not read.
 # 2026-10-12, 20:40 UTC by the clock: asking again for T64's stage 1. Not read.
 # 2026-10-12, 21:00 UTC by the clock: asking for T64's five N = 192 cells. Not read.
+# 2026-10-12, 21:10 UTC by the clock: the request above was pushed with a skip-ci tag, which stops this workflow too; asking again.
