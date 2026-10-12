@@ -726,14 +726,18 @@ The replacements for pieces 5 and 11 are hers. In order:
     the exact listing (`scripts/exact_sixloop_walls.py`), both tested; O124.* *T62 registered and queued 12 October
     (PREREGISTRATION T62; no push; five prices with a control at none; two couplings; N = 96 and 192, held-out
     384; 20 Batch jobs).* Her prediction: given 12 October (WIDENS at every price above zero), recorded before anything was fetched. Then fetch, accept, commit unread, read
-    (`scripts/analyse_t62.py`), write the held-out numbers, queue N = 384. *T63 registered and queued the same day:
+    (`scripts/analyse_t62.py`), write the held-out numbers, queue N = 384. *Stage 1 read 12 October (PREREGISTRATION
+    T62, "Reading"): WIDENS at μ = 0.20, 0.25 and 0.30 and STAYS SIX AROUND at 0.10 and the control, at both sizes;
+    her prediction holds at three prices of four; one end state of 480 clean and wide. The held-out numbers are
+    written and N = 384 is queued (`cloud/queue/2026-10-12_t62_stage2.txt`, 10 jobs). Then: fetch `t62_*n384`,
+    accept, read, one O entry (O126).* *T63 registered and queued the same day:
     the same from the curled tube itself (PREREGISTRATION T63; 10 Batch jobs); her prediction given 12 October (WIDENS at every price above zero).* Sandbox looks so far:
     `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
     most runs unfinished or stuck on a flaw).
 
 Owed by the owner: her replacements for pieces 5 and 11, or a table that charges damage (a new knob, S1); whether
-T56's held-out stage runs (ours: no); whether the outside reviewer's rewrite of paper 1 is adopted; her prediction
-for T62 once it is written; the open items of Updates 44 (less claim 4's wording, decided) and 52.
+T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4's wording, decided) and 52.
+*(Given 12 October: the reviewer's rewrite of paper 1 adopted; her predictions for T62 and T63.)*
 
 ## Later
 

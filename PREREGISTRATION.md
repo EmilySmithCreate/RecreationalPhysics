@@ -5420,3 +5420,92 @@ Asked for a prediction for each test, she wrote:
   WIDENS, ours STAYS SIX AROUND. T62 at μ = 0.30: hers WIDENS, ours WIDENS or PATCHWORK. T63 at μ = 0.025: hers
   WIDENS, ours PATCHWORK or ENDS SIX AROUND. T63 at μ = 0.05: hers WIDENS, ours WIDENS or PATCHWORK.
 - For the held-out size she is not asked again; it is read against the same words.
+
+### Reading of T62, stage 1, 2026-10-12 (`python scripts/analyse_t62.py results`; read after the owner's predictions were committed, 4ec36a8d, and the results accepted unread, 4b4f05cf)
+
+**WIDENS at μ = 0.20, 0.25 and 0.30. STAYS SIX AROUND at μ = 0.10 and at the control. The same at both sizes. The
+owner's prediction holds at three prices of four and fails at 0.10. Ours holds on every verdict word and fails in
+one particular.**
+
+Gates pass in all 20 cells. The control holds at both couplings and both sizes: 96 of 96 end exactly flat and six
+around. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| μ | g | N = 96 | N = 192 |
+|---|---|---|---|
+| 0 | 1.5 | 24, 0, 0 | 24, 0, 0 |
+| 0 | 2.0 | 24, 0, 0 | 24, 0, 0 |
+| 0.10 | 1.5 | 24, 0, 0 | 24, 0, 0 |
+| 0.10 | 2.0 | 19, 0, 5 | 21, 0, 3 |
+| 0.20 | 1.5 | 24, 0, 0 | 23, 1, 0 |
+| 0.20 | 2.0 | 1, 0, 23 | 0, 0, 24 |
+| 0.25 | 1.5 | 3, 6, 15 | 0, 7, 17 |
+| 0.25 | 2.0 | 0, 3, 21 | 0, 0, 24 |
+| 0.30 | 1.5 | 0, 5, 19 | 0, 7, 17 |
+| 0.30 | 2.0 | 0, 0, 24 | 0, 0, 24 |
+
+- **The owner's prediction** (WIDENS at every price above zero): **holds** at μ = 0.20, 0.25 and 0.30, at both
+  sizes. **Fails** at μ = 0.10, which reads STAYS SIX AROUND: most tubes never left. Of the twelve that did leave
+  there (eleven during the warm spell at g = 2.0, one while cooling), eight ended WIDE and four ended back at six
+  around.
+- **Ours.** Every word holds: the control; STAYS at 0.10; at 0.20 TUBE at g = 1.5 and a WIDE majority at 2.0; WIDE
+  majorities at 0.25; WIDENS at 0.30. "No end state CLEAN AND WIDE, or at most two": there is one. "The fewest
+  squares per point is never under 0.75": **fails**, 0.73 and 0.74 at μ = 0.30 and g = 2.0.
+- **Where the two differed.** At μ = 0.10 ours holds and hers fails. At 0.30 both hold.
+- **Described, not scored.** Where the tube widened it is not clean. In the nine cells with a WIDE majority the
+  energy left in flaws has cell medians of 32 to 48 at 96 points (0.33 to 0.50 per point) and 82 to 128 at 192
+  (0.43 to 0.67 per point), so a little more per point at the larger size; 2 to 3 % of the six-loop excess is
+  left. No end state of the 480 is in more than one piece (in T61 a quarter to a third were). The fewest squares
+  per point in those cells was 0.73 to 0.83. Among the tubes that left, the median time of leaving was 12,000 and
+  5,250 sweeps (96 and 192 points) at μ = 0.20 and g = 2.0, 9,000 and 7,000 at μ = 0.25 and g = 1.5, and inside
+  the first 500 at μ = 0.30. From 96 to 192 points the WIDE share rises in three of those cells (0.96 to 1.00,
+  0.62 to 0.71, 0.88 to 1.00), holds in one (1.00) and falls by two replicas in one (0.79 to 0.71, μ = 0.30 and
+  g = 1.5); in T61 it fell at every setting. Whether it holds is what the held-out size is for.
+- **Clean and wide: one of 480.** At μ = 0.10, g = 2.0, N = 96, one tube left while cooling and ended as an
+  exactly flat torus eight around, in one piece, with no excess. In the same cell one more ended exactly flat,
+  eight around from every point, with no excess, and one-sided; and at 192 points one ended flat and one-sided
+  with an eighth of its excess left. All three are at the gentlest price.
+- **Rule 11's four answers for the part that failed** (her "leaves when price exists", at μ = 0.10). (1) Does the
+  result falsify it as stated? In these runs, yes: at μ = 0.10, 37 tubes of 48 had not left after 30,000 sweeps
+  at g = 2.0 and none of 48 left at g = 1.5. (2) Implementation, parameters, finite size or the mechanism?
+  *Ours, unverified:* parameters, the length of the run against the wall. Exact (O124): six around is a dip at
+  every price below 4/11, so at every price in this test it leaves only by crossing a wall, and the cheapest way
+  out costs 31 − 59μ, which is 25.1 at μ = 0.10 against 19.2 at 0.20. Measured: of the twelve that did cross it,
+  eight ended WIDE and four went back to six around. (3) What cheaper test tells those apart? The same cell
+  (μ = 0.10, g = 2.0) with a warm spell ten times as long: if most tubes then leave and most of those end WIDE, it
+  was the wait; if the tubes that leave mostly go back to six around, the product at a gentle price is not wide.
+  Not run; it would be a new registration. The held-out size, whose warm spell is twice as long, bears on it
+  weakly. (4) What would make us give up the branch? The WIDE shares falling at the held-out size as they did in
+  T61, or a longer warm spell at μ = 0.10 showing most leavers back at six around. No new mechanism or knob is
+  proposed here.
+
+**What stage 1 says.** With a price on loops of six the narrow tube is no longer where the change ends. Where its
+wall can be crossed in the time, the tube six around gives way by itself and the product is mostly wide: at least
+half its points in sheet-like surroundings in 15 to 24 runs of 24. It is not clean: flaws are left, about a
+third to two thirds of a unit of energy per point, a little more per point at the larger size. At the gentlest
+price most tubes wait out the run, and the few that leave end cleanest. Measured, at two sizes, in a bath that
+takes the released energy away; the size claim waits for N = 384.
+
+### Amendment to T62, 2026-10-12, before N = 384 runs: the numbers for the held-out size
+
+`python scripts/analyse_t62.py results --write-prediction` wrote `configs/t62_heldout_prediction.json` from stage 1
+alone, by the rule fixed above (the mean of the two sizes' shares, 0.25 either side):
+
+| μ | g | share WIDE (range) | share TUBE (range) |
+|---|---|---|---|
+| 0 | 1.5 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 0 | 2.0 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 0.10 | 1.5 | 0.00 (0 to 0.25) | 1.00 (0.75 to 1) |
+| 0.10 | 2.0 | 0.17 (0 to 0.42) | 0.83 (0.58 to 1) |
+| 0.20 | 1.5 | 0.00 (0 to 0.25) | 0.98 (0.73 to 1) |
+| 0.20 | 2.0 | 0.98 (0.73 to 1) | 0.02 (0 to 0.27) |
+| 0.25 | 1.5 | 0.67 (0.42 to 0.92) | 0.06 (0 to 0.31) |
+| 0.25 | 2.0 | 0.94 (0.69 to 1) | 0.00 (0 to 0.25) |
+| 0.30 | 1.5 | 0.75 (0.50 to 1) | 0.00 (0 to 0.25) |
+| 0.30 | 2.0 | 1.00 (0.75 to 1) | 0.00 (0 to 0.25) |
+
+Said plainly: where a share is at 0 or 1 it can miss in one direction only. What could miss: the tubes at
+μ = 0.10 and g = 2.0, or at μ = 0.20 and g = 1.5, leaving in numbers at the larger size, where both long spells are
+twice as long and the long-range ways out are four times as many; or the WIDE shares falling with size, as they
+did in T61. The file is committed with this amendment, and the ten held-out configs
+(`scripts/make_t62_configs.py --held-out`) are queued after it (`cloud/queue/2026-10-12_t62_stage2.txt`). The
+owner is not asked again for the held-out size; it is read against the same words.
