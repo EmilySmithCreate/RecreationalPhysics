@@ -3610,6 +3610,35 @@ to the owner's hypothesis or a new simulation result.
     leaves damage: flaws in fabric that keeps fifteen squares in sixteen, and it sets as a patchwork when the
     heat is drained (O121).
 
+- **O124 A price on loops of six: the term as tested code, and what is exact about it (12 October 2026). OURS: a
+  new term, decided by the owner in VISION Update 56 and fixed in form there; with it the model is our family,
+  never the published model. Exact where marked; nothing here is a run.** (`src/graphity/sixloop.py`,
+  `tests/test_sixloop.py`; `scripts/exact_sixloop_walls.py`, `tests/test_sixloop_walls.py`.)
+  - **The term.** H6 = 16(N − S) + 4λX + μE6, with E6 the sum over links of (loops of six through the link − 6),
+    counted only where positive. *Exact:* in a flat torus eight or more around every link lies on exactly six
+    loops of six, the outlines of two neighbouring squares, so E6 = 0 there. On the tube E6 is 18 per point, on
+    the tube six around 15, on the tube eight around 0 (48 and 96 points).
+  - **The kernel (rule 6).** The count of loops through a link agrees with a brute-force count by networkx on
+    flat, curled and melted graphs. The chain's incremental update agrees with a chain that recomputes the whole
+    energy for every candidate, move for move, in five settings. Over long walks the books stay exact and the
+    graph valid. The same seed gives the same chain. At μ = 0 it is `cqg.run_chain` draw for draw.
+  - **Exact, by listing every switch at 48 points, λ = 1.25.** Eight around is stuck at every price: its
+    cheapest switch costs 32 + 12μ. Six around is stuck for μ below 4/11. The tube itself is stuck only for μ
+    below 0.106, because the price also pays for its first re-gluing: its cheapest exit falls from 12 to
+    14 − 132μ.
+  - **The cheapest way out of six around is long-range above μ = 0.28 and local below.** The switch that removes
+    the most E6 (four squares broken, E6 down by 176, cost 64 − 176μ) joins two links five or more steps apart,
+    and their number grows as N² (96 at 48 points, 2,496 at 96). The local ones, their two links two or three
+    steps apart and N of each: one square broken and three surplus made, E6 down by 59, cost 31 − 59μ; two
+    squares broken, E6 down by 24, cost 32 − 24μ; two squares and two surplus, E6 down by 94, cost 42 − 94μ.
+  - **After a switch out, the change can go on without breaking more squares.** From the long-range push there
+    are 14 distinct switches that keep every square and lower E6, all downhill at any μ above zero, against one
+    straight back. Local pushes have them too.
+  - **Not known:** whether a re-gluing then runs to the end, what it ends as, and how often. The sandbox looks
+    of 11 October that reported clean wide end states used the long-range push without knowing it was one
+    (`sandbox/LOG.md`, 12 October). Those end states (a torus twelve around, one-sided surfaces) are what a
+    long-range re-link can leave, and say nothing yet about a local seed.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

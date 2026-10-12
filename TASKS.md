@@ -722,9 +722,10 @@ The replacements for pieces 5 and 11 are hers. In order:
     her merge. The Side Nerd pages are not refreshed.* Owed from it on this branch: T60's wording in paper 6 ("memoryless",
     "two orders", "one front" as names of three diagnostics; the repaired clock not shown to be why the fourth map
     passes); a search for the lowest path in T54 (O118, "Correction").
-11. **A price on loops of six** (VISION Update 56). In order: the term as a tested kernel in `src/graphity/`
-    (rule 6: brute force against networkx, incremental exactness, constraints, same seed); the exact walls and the
-    push as a tested script; a registration, T62, with a held-out size and her prediction. Sandbox looks so far:
+11. **A price on loops of six** (VISION Update 56). *Done 12 October: the kernel (`src/graphity/sixloop.py`) and
+    the exact listing (`scripts/exact_sixloop_walls.py`), both tested; O124.* Still to do: choose the design of
+    T62 from sandbox looks with the tested kernel (a local push, the long-range one, or none; the price; the
+    warmth), then a registration with a held-out size and her prediction. Sandbox looks so far:
     `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
     most runs unfinished or stuck on a flaw).
 

@@ -107,3 +107,25 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   at each of three settings, one or two healed to exactly flat, as separate small pieces (tori six around, one
   eight around, and one-sided ones). Promoted the same day in a different form: the exact floor on squares in a
   sealed run (O123).
+- 2026-10-12. The no-melt look finished (`sandbox/out/nomelt_*`; 24 mostly-wide patchworks each). With a ceiling
+  of 16 above the lowest energy reached, at g = 2.0: 2 of 24 healed to exactly flat, both as separate small pieces.
+  With a ceiling of 32: 3 of 24, and **one of them is a single clean torus eight around** (96 points); the other
+  two are pieces. With a ceiling of 32 at g = 3.0: 1 of 24, in pieces, one of them a torus eight around. The
+  rest kept their flaws through 200,000 sweeps. So with melting ruled out a patchwork usually stays a patchwork;
+  now and then its flaws cancel, and what is left can be wider than six.
+- 2026-10-12. **A correction to the push looks of 11 October.** The "push" there was the switch that removes
+  the most six-loops, and listed exactly it turns out to join two links seven steps apart: a long-range re-link,
+  not a local nudge (ASSUMPTIONS O124). So "one push and the change ran on" was a tube re-linked across a
+  distance and then healing, which is why its clean end states were odd ones: a torus twelve around, one-sided
+  surfaces. Local pushes exist (two or three steps apart) and also have square-keeping moves onward. They are
+  being looked at with the tested kernel (`sandbox/six_loop_scan.py`, which names its push).
+- 2026-10-12. Local pushes and no push, with the tested kernel (`sandbox/six_loop_scan.py`; 96 points,
+  lambda = 1.25; `sandbox/out/scan2_*`). (a) A local push that breaks two squares, mu = 0.10, g = 1.0: 7 of 10
+  fell straight back; 3 ran on, never with more than two squares missing, and ended exactly flat and one-sided
+  with a quarter of the six-loop excess left. (b) A local push that breaks two squares and makes two surplus,
+  same settings, 40,000 sweeps: none fell back and none finished; two ended flat and still six around with 40 %
+  of the excess left; eight kept 20 to 90 units of flaws, with 32 to 92 % of their points seeing a sheet. (c) The
+  same at mu = 0.20: all ten kept 32 to 106 units of flaws. (d) **No push at all, mu = 0.20, g = 2.0, 60,000
+  sweeps: all eight left six around by themselves and ended mostly wide**, 50 to 83 % of points seeing a sheet,
+  with 16 to 64 units of flaws and never fewer than 0.84 squares per point. None exactly flat. For comparison,
+  with no price and trapped heat one end state in five was mostly wide at this size (T61).
