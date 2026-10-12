@@ -5310,3 +5310,89 @@ curled tube. Whether the change starts locally or by a long-range re-link: the c
 only when the tube left is recorded. A clean opening, unless the CLEAN AND WIDE count shows one. Equilibrium:
 these are runs of fixed length. sees3 is a count of points within three steps and certifies no geometry. Named
 points. At μ above zero this is our family, never combinatorial quantum gravity.
+
+## T63. With a price on loops of six, what does the curled tube itself open into? (piece 1; VISION Update 56; ASSUMPTIONS O124; written 2026-10-12, after T62 was queued and before any run of T63)
+
+### Why
+
+T62 starts from the tube six around, paper 1's product. The hypothesis's own picture starts earlier: a curled
+arrangement that is stable for now gives way and what comes out is wide. So this test starts from the curled tube
+itself, four around, with the same price on loops of six.
+
+Exact, and known before writing (O124): with the price the curled tube sits 1 + 18μ per point above a wide flat
+torus at λ = 1.25, and 1 + 3μ above the tube six around. It is stuck only for μ below 0.106, because the price
+also pays for its first re-gluing: its cheapest exit falls from 12 to 14 − 132μ, and from μ = 0.013 on that exit
+is not paper 1's move but one that removes six-loops as well. The tube six around is stuck for μ below 4/11.
+
+### Disclosed: what was looked at first
+
+A sandbox look came before this registration (`sandbox/LOG.md`, 12 October; `sandbox/six_loop_from_tube.py`); it
+is not evidence. At 96 points, g = 1.5, six replicas a setting, other seeds: with no price the curled tube waited
+and ended as the clean tube six around, six of six, as in paper 1. With μ = 0.05, 0.10, 0.20 and 0.25 it waited
+(shorter the larger the price), and then did not stop at six around: after the warm spell 0 to 10 % of its
+six-loop excess was left, and it ended with 42 to 83 % of its points seeing a sheet and 16 to 74 units of flaws.
+None was exactly flat. μ = 0.025 has not been looked at. The settings, the thresholds and our prediction were
+written with that look known. Nothing of T63 has been run, and nothing of T62 had been read when this was written.
+
+### What will be run
+
+`scripts/run_sixloop_widen.py` with `"start": "tube"` (tests: `tests/test_t63.py`); configs from
+`scripts/make_t63_configs.py`, one cell to a config; on the cloud queue (`cloud/queue/2026-10-12_t63_stage1.txt`).
+The start is the 4 × L curled tube of paper 1. Named points. Nothing is pushed by hand. λ = 1.25, g = 1.5, paper
+1's own setting. **μ = 0 (the control), 0.025, 0.05, 0.10 and 0.20**; at the last the tube is not stuck at all.
+The three spells are T62's: 30,000 sweeps at g; 60,000 while g falls to 0.5 in 40 equal steps; 1,000 at g = 0.05;
+the two long spells doubled at N = 384. 24 replicas a cell; the end graph saved. Stage 1: N = 96 and 192, 10
+cells. Held out: N = 384, 5 cells. Seeds from 20266300. Durations are chain sweeps.
+
+### Definitions, fixed now (`scripts/analyse_t63.py`)
+
+- **Per replica.** NOT CONVERTED if more than a quarter of a surplus square per point is left at the end (the
+  curled tube has one per point); it is reported and left out. Otherwise by sees3, as in T61 and T62: WIDE if
+  sees3 ≥ 0.5; TUBE if sees3 < 0.05; PATCHWORK between.
+- **Per cell** (μ, N): the outcome of more than half its converted replicas, else MIXED. **Gates:** every end
+  graph valid, the chain's running counts equal to a full recount, and at least nine tenths converted.
+- **The control.** At μ = 0 this is paper 1's own run, and its product is the tube six around. A cell with μ above
+  zero is read only if the control at its N passes its gates and at least nine tenths of its converted replicas
+  end TUBE. If the control does not reproduce paper 1, nothing at that size is read.
+- **Per (μ, N):** **WIDENS** if the cell has a WIDE majority; **PATCHWORK** if a PATCHWORK majority; **ENDS SIX
+  AROUND** if a TUBE majority; else MIXED.
+- No word on incomplete or failed data, as in T62.
+- **Reported, not scored.** When the curl was gone; the energy and six-loop excess left; the fewest squares per
+  point on the way; and from the saved wiring the end states in more than one piece, those with a one-sided
+  piece, and those that are **CLEAN AND WIDE** (exactly flat, no excess left, one piece, two-sided, eight or more
+  around).
+
+### The held-out size (rule 14)
+
+For every μ the shares of WIDE and of TUBE among converted replicas at N = 384 are predicted as the mean of the
+shares at N = 96 and 192, each with a range of 0.25 either side, written by
+`python scripts/analyse_t63.py --write-prediction` to `configs/t63_heldout_prediction.json` and committed with a
+dated amendment here before N = 384 runs. **AS PREDICTED** at a μ if its cell at N = 384 is read and has both
+shares inside their ranges. The verdict word at N = 384 is read from N = 384 alone.
+
+### Predictions
+
+**The owner's: owed.** Nothing of T63 is read until her prediction is recorded here.
+
+**Ours, unverified.** The control ENDS SIX AROUND at both sizes. μ = 0.10 and 0.20: WIDENS. μ = 0.05: WIDENS or
+PATCHWORK, the shares near one half. μ = 0.025: we have not looked; PATCHWORK or ENDS SIX AROUND. No end state is
+CLEAN AND WIDE, or at most one of the 240 of stage 1. The fewest squares per point is never under 0.75. At
+N = 384 the same words, with the WIDE shares, if anything, lower.
+
+### What each outcome would mean
+
+- **WIDENS** at a μ where the curled tube is stuck (0.025, 0.05, 0.10), with the control holding: in this toy a
+  curled arrangement that is stable for now gives way and what comes out is mostly wide, in one change. That is
+  the hypothesis's picture for two directions, under a rule that pays for width; the flaws left, and the CLEAN AND
+  WIDE count, say how far from clean.
+- **ENDS SIX AROUND** at every μ where it is stuck: the change still stops at the narrow tube, and widening is a
+  second, separate step (T62).
+- **PATCHWORK:** it goes past six around and does not come out mostly wide.
+- **The control fails:** this setup does not reproduce paper 1, and nothing at that size is read.
+
+### What this cannot show
+
+That reality has such a term. Anything in three directions. A clean opening, unless the CLEAN AND WIDE count
+shows one. What the energy released does afterwards: this is a bath, which takes it away. Whether the change
+starts locally. sees3 certifies no geometry. Named points. At μ above zero, and at λ other than 1, this is our
+family, never combinatorial quantum gravity.

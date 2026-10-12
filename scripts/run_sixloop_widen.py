@@ -19,6 +19,11 @@ equal a full recount, the points at each d, and for every point the number of po
 pieces and the kind of each flat piece are read from it afterwards (scripts/analyse_t62.py).
 
 Seeds: numpy SeedSequence([seed, N, round(100 lambda), round(1000 mu), round(100 g), replica]).
+
+T63 (PREREGISTRATION.md, written 2026-10-12 after T62 was queued) uses the same runner with `"start": "tube"` in
+its config: the curled tube itself, four around. A config without `start` begins six around, as T62's do, and
+T62's configs are unchanged. `curl_sweep` is the first block of the warm spell after which no surplus square was
+left (0 if there was none to begin with).
 """
 import json
 import platform
@@ -40,19 +45,28 @@ BLOCK = 500
 COOL_STEPS = 40
 
 
-def six_around(length):
-    """The 4 x `length` tube with its seam shifted by two: point (x, y), x in 0..3 round it and y along it, and a
-    step round past x = 3 arrives at (0, y - 2). Exactly flat, six around. Returns (neighbour array, side U)."""
+def seam_shifted(length, shift):
+    """The 4 x `length` tube with its seam shifted by `shift`: point (x, y), x in 0..3 round it and y along it, and a
+    step round past x = 3 arrives at (0, y - shift). Shift 0 is the curled tube, four around; shift 2 is exactly
+    flat and six around. Returns (neighbour array, side U)."""
     def index(x, y):
         return x * length + (y % length)
     adj = np.empty((4 * length, 4), dtype=np.int64)
     for x in range(4):
         for y in range(length):
-            ahead = index(0, y - 2) if x == 3 else index(x + 1, y)
-            back = index(3, y + 2) if x == 0 else index(x - 1, y)
+            ahead = index(0, y - shift) if x == 3 else index(x + 1, y)
+            back = index(3, y + shift) if x == 0 else index(x - 1, y)
             adj[index(x, y)] = (ahead, back, index(x, y + 1), index(x, y - 1))
     side = np.array([x * length + y for x in range(4) for y in range(length) if (x + y) % 2 == 0], dtype=np.int64)
     return adj, side
+
+
+def six_around(length):
+    """T62's start: the tube re-glued, exactly flat and six around."""
+    return seam_shifted(length, 2)
+
+
+STARTS = {"six": 2, "tube": 0}
 
 
 @njit(cache=True)
@@ -88,13 +102,14 @@ def balls(adj):
     return out
 
 
-def replica(length, lam, mu, g, seed, hold, cool, cool_to, cold_sweeps, cold_g):
-    """One tube six around, warm, cooled, cold. Returns (row fields, end graph, side U)."""
-    adj, side = six_around(length)
+def replica(length, lam, mu, g, seed, hold, cool, cool_to, cold_sweeps, cold_g, start="six"):
+    """One tube (six around, or the curled tube itself), warm, cooled, cold. Returns (row fields, end graph, side U)."""
+    adj, side = seam_shifted(length, STARTS[start])
     n = adj.shape[0]
     e_start = int(excess6(adj, side))
-    low = 1.0
+    low = float(total_squares(adj)) / n
     left = half = -1
+    curl = 0 if surplus(adj) == 0 else -1
     used = 0
     first = True
     s = x = e = None
@@ -107,6 +122,8 @@ def replica(length, lam, mu, g, seed, hold, cool, cool_to, cold_sweeps, cold_g):
             left = used
         if half < 0 and 2 * e[-1] < e_start:
             half = used
+        if curl < 0 and x[-1] == 0:
+            curl = used
     warm = (int(s[-1]), int(x[-1]), int(e[-1]))
     per_step = max(1, cool // COOL_STEPS)
     for step in range(COOL_STEPS if cool > 0 else 0):
@@ -120,7 +137,8 @@ def replica(length, lam, mu, g, seed, hold, cool, cool_to, cold_sweeps, cold_g):
     recount = (int(total_squares(adj)), int(surplus(adj)), int(excess6(adj, side)))
     near = balls(adj)
     d = np.bincount(local_dimension(adj), minlength=7)[:7]
-    fields = dict(e6_start=e_start, left_sweep=left, half_sweep=half, phi_min=round(low, 6),
+    fields = dict(start=start, e6_start=e_start, left_sweep=left, half_sweep=half, curl_sweep=curl,
+                  phi_min=round(low, 6),
                   s_warm=warm[0], x_warm=warm[1], e6_warm=warm[2], s_cooled=cooled[0], x_cooled=cooled[1],
                   e6_cooled=cooled[2], s_end=end[0], x_end=end[1], e6_end=end[2],
                   h_end=16.0 * (n - end[0]) + 4.0 * lam * end[1],
@@ -142,7 +160,8 @@ def main(path, out_dir="results"):
     lam, mu, g = float(cfg["lambda"]), float(cfg["mu"]), float(cfg["g"])
     meta = dict(config=cfg, config_path=str(path), package=__version__, python=platform.python_version(),
                 numpy=np.__version__, numba=numba.__version__,
-                preregistration="PREREGISTRATION.md section T62, written 2026-10-12", **provenance())
+                preregistration="PREREGISTRATION.md section %s, written 2026-10-12" % cfg.get("section", "T62"),
+                **provenance())
     adj_dir = Path(out_dir) / (cfg["name"] + "_adj")
     if cfg.get("save_adjacency") and adj_dir.exists():
         raise SystemExit("refusing to overwrite %s" % adj_dir)
@@ -154,7 +173,7 @@ def main(path, out_dir="results"):
             for rep in range(int(cfg["replicas"])):
                 seed = seed_of(cfg["seed"], n, lam, mu, g, rep)
                 fields, adj, side = replica(int(length), lam, mu, g, seed, hold, cool, float(cfg["cool_to"]),
-                                            int(cfg["cold_sweeps"]), float(cfg["cold_g"]))
+                                            int(cfg["cold_sweeps"]), float(cfg["cold_g"]), cfg.get("start", "six"))
                 out.write(dict(N=n, length=int(length), lam=lam, mu=mu, g=g, replica=rep, seed=seed,
                                hold_sweeps=hold, cool_sweeps=cool, **fields))
                 if cfg.get("save_adjacency"):

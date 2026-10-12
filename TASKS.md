@@ -726,8 +726,8 @@ The replacements for pieces 5 and 11 are hers. In order:
     the exact listing (`scripts/exact_sixloop_walls.py`), both tested; O124.* *T62 registered and queued 12 October
     (PREREGISTRATION T62; no push; five prices with a control at none; two couplings; N = 96 and 192, held-out
     384; 20 Batch jobs).* Owed: her prediction, before anything is read. Then fetch, accept, commit unread, read
-    (`scripts/analyse_t62.py`), write the held-out numbers, queue N = 384. After it: the same from the curled
-    tube itself, as T63. Sandbox looks so far:
+    (`scripts/analyse_t62.py`), write the held-out numbers, queue N = 384. *T63 registered and queued the same day:
+    the same from the curled tube itself (PREREGISTRATION T63; 10 Batch jobs); her prediction owed for it too.* Sandbox looks so far:
     `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
     most runs unfinished or stuck on a flaw).
 

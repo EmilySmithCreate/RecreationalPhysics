@@ -135,3 +135,10 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   points six of six, 57 to 66 %, with 85 to 112 units. mu = 0.25, g = 1.5: eight of eight left, 47 to 71 %. The
   slow cooling did not remove the flaws; none is exactly flat. Promoted the same day as T62, on fresh seeds, with
   a control at no price and a held-out size.
+- 2026-10-12. The same price from the curled tube itself (`sandbox/six_loop_from_tube.py`; 96 points, g = 1.5, six
+  replicas a setting; `sandbox/out/fromtube_*`). No price: the tube waits and ends as the clean tube six around,
+  6 of 6, as in paper 1. mu = 0.05: it waits about as long, and then does not stop at six around; 4 to 10 % of its
+  six-loop excess is left after the warm spell, and it ends with 42 to 78 % of points seeing a sheet and 32 to 64
+  units of flaws. mu = 0.10, 0.20 and 0.25: the same, 45 to 83 %, 16 to 74 units. Never fewer than 0.75 squares
+  per point. None exactly flat. So with even a small price the curled tube opens straight to mostly wide and
+  never visits the narrow tube. Promoted the same day as T63, with the no-price run as its control.
