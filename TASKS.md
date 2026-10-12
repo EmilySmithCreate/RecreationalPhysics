@@ -732,8 +732,9 @@ VISION S5: a physicist reads it. Draft a short, honest note to C. Kelly, F. Bian
 of the toy and not a knob; no VISION decision needed. Done the same day, Stages A to F of the handoff: the literature
 map, the exact unitary toy (Stages B to D), the cosmic-time population model (Stage E) and the figures (Stage F);
 one home for the results is `docs/theory/orh_findings.md` (O119). Owed, in order: (1) the owner's reading of the
-findings page and her decision whether this line becomes a piece of the programme page (a draft card is on the
-page, marked ours); (2) Martellini 2026 (arXiv:2607.25307) read in full before the record surprisal is cited anywhere;
+findings page and her decision whether this line stays on the programme page (two draft cards are on it, marked
+ours: 13, interference and records; 14, observers inside the loop; the page is arranged as a book of seven chapters
+at her request of the same afternoon); (2) Martellini 2026 (arXiv:2607.25307) read in full before the record surprisal is cited anywhere;
 (3) a fresh read-only review of the Stage C claims (rule 12) if any of them is ever quoted outside the repository;
 (4) nothing is to be written as "we have not found" about any of the three claims (the prior-work note says FOUND).
 

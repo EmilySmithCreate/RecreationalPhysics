@@ -306,8 +306,10 @@ branch; written 07:20 ET by the clock).**
   `docs/theory/orh_findings.md` (read it first), then the Stage A map, the assumption register (P1 to P24), the
   plan, the six reading notes of 12 October and the prior-work note (FOUND on all three of the handoff's candidate
   claims). Code `src/orh/` with `tests/test_orh_*.py`; results `results/orh_stage_bcd.csv`, `results/orh_stage_e_*.csv`;
-  figures `docs/figures/orh_*.png`. ASSUMPTIONS O119 is the pointer. The programme artifact carries a draft card for
-  this line, marked ours, for the owner to keep or drop.
+  figures `docs/figures/orh_*.png`. ASSUMPTIONS O119 is the pointer. At the owner's request the programme artifact and `programme_draft.md` were
+  arranged the same afternoon as a book in seven chapters (the burp to the view from outside the loop), with two
+  draft pieces from this line, marked ours: 13 (interference and records, beside piece 9) and 14 (observers inside
+  the loop, the last chapter); hers to keep or drop.
 - Next ASSUMPTIONS number after this branch: **O120** (if the other session's branch also used O119, renumber this one
   at the merge).
 
