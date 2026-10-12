@@ -3522,6 +3522,29 @@ to the owner's hypothesis or a new simulation result.
     of the published model, with an exact first exit and an end state that stays narrow; worth a reader as that,
     and not yet a tested account of the origin of space.
 
+- **O121 If the burp's heat stays, the tube does not come out wider: PATCHWORK at both curling costs and all three
+  sizes; the size prediction misses in one cell of ten (T61, both stages, 11 October 2026). Measured,
+  pre-registered; the owner's prediction fails, and ours in particulars.** (PREREGISTRATION T61 and its two
+  "Reading" sections, which are the full account; `scripts/analyse_t61.py`, `tests/test_t61.py`,
+  `tests/test_t61_safeguards.py`; `results/t61_lam*`. The four-link tube, sealed, drained and cooled; named points.
+  At λ ≠ 1 this is our family.)
+  - **Measured.** With one store per point or more at λ = 1.25 every replica ends as the tube six around, most
+    with one column left curled (144 of 144 over the three sizes). With less room, and at λ = 1.40 with any, the
+    majority is a patchwork. Replicas with more than half their points in sheet-like surroundings: 42 of 479 at
+    96 and 192 points, 2 of 240 at 384. No end state of 720 is a clean flat torus wider than six. The network was
+    never melted: at its worst about one square in twelve was missing.
+  - **Scored.** PATCHWORK at λ = 1.25 and 1.40 at N = 96, 192 and 384. The owner's WIDENS fails at all three
+    sizes. The held-out numbers hold at λ = 1.40 and miss at λ = 1.25 with a third of a store per point.
+  - **Not scored, and against a hopeful reading:** the mostly-sheet-like share falls as the tube lengthens, from
+    one in five to one in sixty at λ = 1.40.
+  - **The one question (rule 11): what is the cheapest exact test that tells the possible causes apart, and has it
+    been read?** It has. The energy charges loops of four and nothing longer, so every flat torus costs zero and
+    nothing in the rule pays for width (O116, O119). The failure is the rule's, not the sizes' or the settings'.
+  - **What follows.** The owner decided the same evening to test a price on loops of six (VISION Update 56).
+    Paper 1 can say that the product is a tube six around when the heat can leave and a flawed patchwork when it
+    cannot. *Ours, unverified:* trapped heat is flaws everywhere at once, each re-stitching its own neighborhood,
+    and the flaws that have not cancelled when the heat is drained stay where they are.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

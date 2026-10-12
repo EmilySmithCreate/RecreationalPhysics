@@ -5173,3 +5173,43 @@ An outside review of this day priced the states between T54's first two complete
 than the fitted peak; ours reproduces it and finds shapes that go lower than any square. The readings above stand
 as readings of completed patches and their registered words. Their use of "barrier", and "critical patch" as the
 size of a seed, is withdrawn. The account is ASSUMPTIONS O118, "Correction".
+
+### Reading of T61, the held-out size (N = 384), 2026-10-11 (`python scripts/analyse_t61.py results`; read after the ten files were committed unread, a27ab6dd, with the safeguards of 5de443f9)
+
+**At N = 384 the verdict is PATCHWORK at both λ. The numbers written beforehand hold at λ = 1.40 and miss in one
+cell of five at λ = 1.25. The owner's WIDENS fails at the held-out size too; ours fails in that one cell.**
+
+Gates pass in all ten cells and every replica converted. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| stores per point | λ = 1.25 | λ = 1.40 |
+|---|---|---|
+| 2 | 24, 0, 0 | 0, 24, 0 |
+| 1 | 24, 0, 0 | 0, 24, 0 |
+| 1/2 | 21, 3, 0 | 0, 22, 2 |
+| 1/3 | 1, 23, 0 | 0, 24, 0 |
+| 1/4 | 2, 22, 0 | 0, 24, 0 |
+
+- **The size claim (rule 14), scored at N = 384 alone.** λ = 1.40: **AS PREDICTED**, all ten shares inside their
+  ranges. λ = 1.25: **NOT AS PREDICTED** at a third of a store per point, where the TUBE share is 0.04 against a
+  range of 0.19 to 0.69 (it was 0.50 and 0.38 at the two smaller sizes); the other four cells are inside. So "the
+  shares do not change as the tube lengthens" fails in the one cell where the outcome was undecided at the smaller
+  sizes: there the longer tube ends as a patchwork.
+- **Said plainly about the pass at λ = 1.40.** The WIDE share at N = 384 is 2 replicas of 120. It was 24 of 120 at
+  96 points and 15 of 119 at 192. That is inside the ranges only because they reach down to zero. The share of end
+  states that are more than half sheet-like falls as the tube lengthens (0.20, 0.13, 0.02). The rule did not score
+  that and we did not predict it.
+- **The owner's prediction** (WIDENS, with some exactly flat end states wider than six): **fails** at N = 384. No
+  cell has a WIDE majority. One end state of 240 is exactly flat, and it is one torus six around.
+- **Ours** ("at N = 384 the same, with the shares inside their ranges"): the words hold; the ranges **fail in one
+  cell**.
+- **Described, not scored.** The energy left in flaws grows with the tube: medians of 175 to 316 at λ = 1.40,
+  against 42 to 64 at 96 points and 78 to 144 at 192. That is 0.4 to 0.8 per point at every size: the flaws are a
+  fixed share, not a fixed number. **Never melted:** the fewest squares per point in the sealed spell was 0.92 to
+  1.00 in every replica, at every size. End states in more than one piece, of 24, for 2, 1, 1/2, 1/3 and 1/4 of a
+  store per point (`scripts/read_flat_kind.py`): λ = 1.25: 0, 2, 16, 9, 16; λ = 1.40: 8, 5, 9, 6, 5.
+
+**What T61 says, both stages together.** Heat that cannot leave does not widen the tube. With room for the heat, at
+λ = 1.25, the product is the clean tube six around. With little room, or at λ = 1.40 with any, it is a patchwork:
+warm fabric that was never melted, wider in places, flawed at the joins and often in separate pieces. The share
+that is mostly sheet-like shrinks as the tube gets longer. No clean flat torus wider than six appeared in 720 end
+states.
