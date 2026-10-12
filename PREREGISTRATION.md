@@ -5166,3 +5166,10 @@ points within three steps. Two separate tori eight around would read WIDE. The r
 this cannot show"; the sentence under WIDENS, "makes the product wider", says more than the count can. Beside the
 held-out reading, and scored nowhere, the end states' pieces and the kind of each flat piece are reported from the
 saved wiring (`scripts/read_flat_kind.py`), as the note above does for stage 1.
+
+### Note to T54's readings, 2026-10-11, evening: the numbers are completed-patch energies, not a barrier
+
+An outside review of this day priced the states between T54's first two completed patches and found them higher
+than the fitted peak; ours reproduces it and finds shapes that go lower than any square. The readings above stand
+as readings of completed patches and their registered words. Their use of "barrier", and "critical patch" as the
+size of a seed, is withdrawn. The account is ASSUMPTIONS O118, "Correction".

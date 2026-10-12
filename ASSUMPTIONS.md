@@ -3331,6 +3331,8 @@ to the owner's hypothesis or a new simulation result.
   - **The size claim.** By the registered rule the prediction for the held-out sizes is "none". Stage 2 is not
     queued (PREREGISTRATION T56, amendment of 11 October): ours is that it should not be run as registered. T56
     therefore makes no claim about size.
+  - *Corrected 11 October 2026, evening (O118, "Correction"):* T54's numbers are completed-patch energies, not
+    barriers. "The barrier is T54's patch" is withdrawn here; why the tied slab stayed is not explained by them.
 
 - **O116 EXPLORATORY, read from saved wirings (11 October 2026, from 09:30 ET by the clock): what a tube opens
   into is a tube. The flat end states of the two-direction maps are the same tube with its seam shifted by two,
@@ -3442,6 +3444,28 @@ to the owner's hypothesis or a new simulation result.
     is needed to tell that apart; the values are exact. (4) Nothing here would make us abandon the branch.
   - **Owed.** A fresh read-only review of the seam's construction and the fit (rule 12). Whether the verdict word
     is to be read only over patches that do not meet their own image is the owner's to decide.
+  - **Correction, 11 October 2026, evening: these are the energies of completed square patches, not a barrier.
+    "Barrier" is withdrawn from the lines above.** (Found the same day by an outside review with its own code;
+    reproduced with ours, each state checked valid: `scripts/exact_t54_between_patches.py`,
+    `tests/test_t54_between.py`. Exact.) Going from the k × k patch to the next takes 2k + 1 switches, and T54 did
+    not price the states between. Priced now, under the tie: at λ = 1.25 the first two patches both stand at 24
+    and the best order of the three switches between them passes 24, 20, 45, 24, so the highest energy met is 45,
+    above the fitted peak of 27. At λ = 1.20 the first two steps reach 62 and 66 against a fitted 45; at 1.15, 80
+    and 98 against 77. So the fitted peak bounds nothing from above. **Nor are squares the cheap shapes.** A
+    single line of columns, along one of the construction's two directions, costs a − b for its first column and
+    96 − 80λ more for each further one under the tie: 24, 20, 16, 12, 8, 4 at λ = 1.25; level at 32 at 1.20; rising
+    by 4 and by 8 a column at 1.15 and 1.10. Untied, every further column costs 32 − 16λ. At tied λ = 1.25 a line
+    meets nothing higher than its first switch for the six columns priced; what closing it round the torus costs
+    was not priced. **What stands:** the completed-patch energies, the exact quadratic at the three sizes tested,
+    the six held-out numbers, and the verdict words as registered labels over completed patches. **What is
+    withdrawn:** "barrier" for the fitted peak; "critical patch" as the size of a seed; paper 5's "it bounds the
+    barrier from above"; O115's and paper 5's use of 45, 77 and 145 to say why the tied slab stayed; and the
+    reading that the tie turns the climb into one a bath could make (VISION Update 49; the programme page). **Not
+    known:** the barrier to opening the slab's curled direction, tied or untied. It needs a search over paths
+    with every state priced, shapes other than squares included.
+  - **Two limits on the lines above, from the same review.** "Every sheet size" and "every curling cost" mean the
+    three sizes and the settings computed; nothing here is derived for all sizes. And "NO FINITE PATCH appears
+    nowhere" holds among the scored rows; the rows registered as unreadable are not among them.
 
 - **O119 EXACT: the flat tori of N points counted by width. Six around is the exception, and more so the larger the
   torus (11 October 2026). Complete enumeration; promoted from a sandbox look with a tested script.**
@@ -3457,6 +3481,46 @@ to the owner's hypothesis or a new simulation result.
   - *Ours, unverified.* With named points each wrapping carries the same number of labeled graphs, so a chain that
     could move among flat tori at no cost would be found wide most of the time. It cannot: leaving a flat torus
     costs 32. Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
+
+- **O120 The outside review of 11 October 2026, recorded: what it checked, what it found, what was done, and what it
+  got wrong (rule 12's first pass by a different model).** (Reviewer: OpenAI Codex, from
+  `docs/papers/curled_torus/red_team_brief_2026-10-11.md`, read-only on this branch; a first report on paper 1 and
+  T60, and a follow-up on the commits up to f3a76688. Its reports and scratch calculations are local and
+  untracked, `.tools/independent-review-2026-10-11/`. Its proposed rewrite of paper 1's two editions, with an
+  endpoint-geometry reader of its own, is the branch `codex/paper1-review-corrections-2026-10-11` (33be5462),
+  **not merged here: adopting it is the owner's decision.** AI output: its physics is unverified, as ours is.)
+  - **Checked with its own code, and holds.** The energy algebra and the ideal gap. The complete census of first
+    exits at N = 64 (192, 128 and 32 switches of the three kinds in each class; none under 12 at λ = 1.25). The
+    sealed lower bound of 12. T59's paired clocks (move-counted mean 1.005 ± 0.016 τ; 94 % of the gap from exits
+    missed between looks). T60's scoring: every verdict, gate, CV, mean and count agrees, to 4 × 10⁻¹⁶. The order
+    of registrations in git: no scoring code changed after data arrived. T54's 330 stored energies: no mismatch.
+  - **Found, and accepted.** (1) Paper 1's picture is wrong where it says the tube opens into a sheet: the end
+    states are the tube with its seam shifted by two (found here the same morning, O116). Its lattice
+    reconstruction of T60's 3,521 reached flat end states gives 3,446 such tubes, 73 in separate pieces and 2
+    Klein bottles; `scripts/read_flat_kind.py`, written that evening without its code, gives the same three
+    counts (O116, last addendum). (2) The plain-language edition restores claims the technical edition had
+    dropped (eleven passages). (3) A passing CV does not show a memoryless wait: a law with two values, mean 1
+    and variance 1, passes every time. "Memoryless", "two orders" and "one front" in T60's reading are names for
+    three registered diagnostics, no more. (4) T60's own rows also pass the old waiting-time criterion in all 24
+    window cells, so "the repaired clock is why the fourth map passes" is not shown. (5) The held-out size is
+    less sharp a test than "the size claim holds": at λ = 1.30 the range written beforehand straddles the cutoff
+    of 0.70, 65 of 120 replicas meet it one by one, and the line through the smaller sizes crosses it near 350
+    points (O117 says the last). (6) T54's fitted peak is not a barrier (corrected: O118). (7) T61's analyzer
+    could give a word on incomplete or failed data (repaired before the held-out size was read: PREREGISTRATION
+    T61, amendment), and its words are about neighborhoods, not one connected space (accepted there). (8) Paper
+    5 misreported our own T54 prediction (corrected). (9) O119 counts wrappings of the grid, not graphs up to
+    renaming, and says nothing about which the dynamics reaches. (10) O116's "a cold flat torus accepts no move"
+    is true at zero temperature only; at any g above zero a move that costs is accepted sometimes.
+  - **Done about it on this branch:** (6), (7) and (8), and the notes that carry (9) and (10) here. **Not done:**
+    (1) to (5) in paper 1's text and paper 6's draft, which wait on the owner's decision about its branch.
+  - **What it got wrong.** Nothing we have found. Two of its results were recomputed here with our code and
+    reproduce exactly (T54's 24, 20, 45, 24; T60's 73 and 2). Two things it could not see: it numbered its own
+    geometry audit O118, which is T54 here (to be renumbered at merging, as it says); and it had not opened
+    T61's results, so it gives no view on them. Its limits are its own list: it did not redo the N = 18
+    enumeration, the sealed runs, T58's replays, or O116's 9,215 end states.
+  - **Its advice on what paper 1 is, for the owner:** a controlled study of an activated change in a deformation
+    of the published model, with an exact first exit and an end state that stays narrow; worth a reader as that,
+    and not yet a tested account of the origin of space.
 
 ## Provenance
 

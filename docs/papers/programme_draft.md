@@ -19,7 +19,8 @@ Our spacetime is one settled arrangement of something deeper, X: a specific, rel
 warm bath the slab did not open: it stayed, or at the largest curling cost it broke, and an untied control behaved
 the same (T56; O115; ours failed too). Given up to twice the price of curling a whole direction, flat space ended
 half broken and not curled at all, with the tie as without (T57; O114). The tie as written charges nothing for a
-broken point, and the barrier to an opening that spreads is a patch, not one move. What replaces it is hers to
+broken point, and an opening that spreads takes more than one move (how much more is not known: O118, as
+corrected that evening). What replaces it is hers to
 propose. And read from the saved wiring (O116, exploratory, exact for each graph), what the tube of pieces 1 and 2
 opens into is still a tube: 9,208 of 9,215 flat end states are the same tube with its seam shifted by two, six
 steps around where it was four, and no wider at any size. The sharp change, its wall and its exact release stand;
@@ -280,6 +281,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026: Read: T18, the room needed grows faster than the burp as λ rises (PROPORTIONAL).
 
 **Piece 5.**
+- 11 Oct 2026, evening: T54 corrected (O118). An outside review showed, and our code confirms, that T54's numbers are the energies of completed square patches and not a barrier: the states between two patches go higher (45 against a fitted 27 under the tie at λ = 1.25), and a line of columns goes lower than any square. "Barrier" and "critical patch" are withdrawn; what the barrier is, is not known.
 - 11 Oct 2026, 16:01 ET: T54 read at its held-out size (O118). The barrier along the helix patch is the same exact quadratic at all three sheet sizes; under the tie a finite patch exists at every curling cost, 5.5 to 1.5 columns with barriers of 145 to 27. The numbers written beforehand hold exactly. The verdict word is unscored in four rows of six, because the rule reads it over a patch that wraps the torus, and FIXED WALL in two. The word that would end the branch does not appear. A fresh review of the construction is owed.
 - 11 Oct 2026, 09:28 ET: T56 stage 1 read (O115): under the tie the slab STAYS at λ = 1.10 to 1.20 and ADVANCES ONLY at 1.25, the rod STAYS, the control NO DIFFERENCE; no cell opens. Her prediction (opens into one flat space) failed, and ours (a window at 1.15 and 1.20). The tie as written charges a damaged point nothing, and the barrier is T54's patch. Rule 11's third use on this piece; the replacement is hers. By shape about a third of the runs that read OPENS are the start glued together differently (O116).
 - 9 Oct 2026, 05:01 ET by the clock: T53 read (O105): ADVANCES ONLY at every length and both λ; SEVERAL. The first direction opens at every bath, the second only in a minority before the space is damaged, never at λ = 1.25 or in the longest torus. Her OPENS IN A WINDOW failed; rule 11's second use on this piece; her replacement owed; T54 next.
