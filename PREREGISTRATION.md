@@ -5396,3 +5396,27 @@ That reality has such a term. Anything in three directions. A clean opening, unl
 shows one. What the energy released does afterwards: this is a bath, which takes it away. Whether the change
 starts locally. sees3 certifies no geometry. Named points. At μ above zero, and at λ other than 1, this is our
 family, never combinatorial quantum gravity.
+
+### The owner's predictions for T62 and T63, 2026-10-12, recorded before anything of either was fetched or read
+
+Stage 1 of both tests was running or finished on the cloud when she answered (T62 queued from dc61b3b2, T63 from
+27f13005). Nothing had been fetched into the repository and nothing of either test had been read. She had been
+told what the unregistered looks showed, as each registration discloses, and had our predictions in front of her.
+Asked for a prediction for each test, she wrote:
+
+- For T62 (the tube six around): "wider (most end with over half their dots in sheet-like surroundings)". And to
+  "at which prices, if any, does it leave, and when it leaves, is the result wide or a patchwork?": "leaves when
+  price exists".
+- For T63 (the curled tube itself): "straight to something mostly wide".
+- And on ours: "agree with yours they just get more specific but allow my guess aat some settings?"
+
+**Her predictions, as read here (the reading is ours; the words above are hers).**
+
+- **T62: WIDENS at every price above zero** (μ = 0.10, 0.20, 0.25 and 0.30), at both sizes. She named no warmth; a
+  price is read as WIDENS when the verdict word for it is WIDENS.
+- **T63: WIDENS at every price above zero** (μ = 0.025, 0.05, 0.10 and 0.20), at both sizes.
+- She agrees with ours where ours is the more specific (the controls hold; essentially no end state CLEAN AND
+  WIDE), and **her guess stands wherever the two differ**. They differ in four places. T62 at μ = 0.10: hers
+  WIDENS, ours STAYS SIX AROUND. T62 at μ = 0.30: hers WIDENS, ours WIDENS or PATCHWORK. T63 at μ = 0.025: hers
+  WIDENS, ours PATCHWORK or ENDS SIX AROUND. T63 at μ = 0.05: hers WIDENS, ours WIDENS or PATCHWORK.
+- For the held-out size she is not asked again; it is read against the same words.

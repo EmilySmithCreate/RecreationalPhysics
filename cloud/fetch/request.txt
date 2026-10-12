@@ -29,3 +29,8 @@ t60_*
 t56_*
 t57_*
 # 2026-10-11, 10:55 ET: asking for t60_lam135_n288, the last of T60's seven held-out cells (still running at 09:27 ET).
+# 2026-10-12: T62 stage 1 (20 jobs, queued from dc61b3b2) and T63 stage 1 (10 jobs, queued from 27f13005): the
+# six-loop price, from the tube six around and from the curled tube. The owner's predictions for both are
+# recorded in the commit that carries this request. Neither has been read.
+t62_*
+t63_*
