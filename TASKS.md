@@ -723,9 +723,11 @@ The replacements for pieces 5 and 11 are hers. In order:
     "two orders", "one front" as names of three diagnostics; the repaired clock not shown to be why the fourth map
     passes); a search for the lowest path in T54 (O118, "Correction").
 11. **A price on loops of six** (VISION Update 56). *Done 12 October: the kernel (`src/graphity/sixloop.py`) and
-    the exact listing (`scripts/exact_sixloop_walls.py`), both tested; O124.* Still to do: choose the design of
-    T62 from sandbox looks with the tested kernel (a local push, the long-range one, or none; the price; the
-    warmth), then a registration with a held-out size and her prediction. Sandbox looks so far:
+    the exact listing (`scripts/exact_sixloop_walls.py`), both tested; O124.* *T62 registered and queued 12 October
+    (PREREGISTRATION T62; no push; five prices with a control at none; two couplings; N = 96 and 192, held-out
+    384; 20 Batch jobs).* Owed: her prediction, before anything is read. Then fetch, accept, commit unread, read
+    (`scripts/analyse_t62.py`), write the held-out numbers, queue N = 384. After it: the same from the curled
+    tube itself, as T63. Sandbox looks so far:
     `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
     most runs unfinished or stuck on a flaw).
 

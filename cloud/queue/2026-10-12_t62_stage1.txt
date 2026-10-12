@@ -1,0 +1,24 @@
+# PREREGISTRATION T62, stage 1 (written 2026-10-12, before any run): the tube six around under a price mu on loops
+# of six (graphity.sixloop; VISION Update 56), warm, cooled and read from its wiring. Five prices (mu = 0 is the
+# control) x two couplings x two sizes, one cell to a config, 20 jobs. The held-out size (N = 384) is queued only
+# after its numbers are written. One line per Batch job: <runner> <config>.
+run_sixloop_widen t62_mu000_g150_n96
+run_sixloop_widen t62_mu000_g200_n96
+run_sixloop_widen t62_mu010_g150_n96
+run_sixloop_widen t62_mu010_g200_n96
+run_sixloop_widen t62_mu020_g150_n96
+run_sixloop_widen t62_mu020_g200_n96
+run_sixloop_widen t62_mu025_g150_n96
+run_sixloop_widen t62_mu025_g200_n96
+run_sixloop_widen t62_mu030_g150_n96
+run_sixloop_widen t62_mu030_g200_n96
+run_sixloop_widen t62_mu000_g150_n192
+run_sixloop_widen t62_mu000_g200_n192
+run_sixloop_widen t62_mu010_g150_n192
+run_sixloop_widen t62_mu010_g200_n192
+run_sixloop_widen t62_mu020_g150_n192
+run_sixloop_widen t62_mu020_g200_n192
+run_sixloop_widen t62_mu025_g150_n192
+run_sixloop_widen t62_mu025_g200_n192
+run_sixloop_widen t62_mu030_g150_n192
+run_sixloop_widen t62_mu030_g200_n192

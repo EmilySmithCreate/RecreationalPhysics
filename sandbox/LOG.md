@@ -129,3 +129,9 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   sweeps: all eight left six around by themselves and ended mostly wide**, 50 to 83 % of points seeing a sheet,
   with 16 to 64 units of flaws and never fewer than 0.84 squares per point. None exactly flat. For comparison,
   with no price and trapped heat one end state in five was mostly wide at this size (T61).
+- 2026-10-12. No push, held warm and then cooled slowly (`sandbox/out/scan3_*`; 96 points unless said). mu = 0.20,
+  g = 1.5: all eight stayed six around through 100,000 sweeps. mu = 0.20, g = 2.0, then cooled over 60,000 sweeps:
+  all eight left and ended mostly wide (50 to 83 % of points seeing a sheet) with 16 to 64 units of flaws; at 192
+  points six of six, 57 to 66 %, with 85 to 112 units. mu = 0.25, g = 1.5: eight of eight left, 47 to 71 %. The
+  slow cooling did not remove the flaws; none is exactly flat. Promoted the same day as T62, on fresh seeds, with
+  a control at no price and a held-out size.
