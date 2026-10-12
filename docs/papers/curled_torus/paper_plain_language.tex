@@ -214,8 +214,8 @@ prove a continuous transition, and two humps alone do not establish a first-orde
 A small system can show two humps that merge as it grows. First order means that the humps stay
 apart and the valley between them deepens as the system gets larger, so the test is what happens
 with size. Here that equilibrium test remained inconclusive, and this paper does not rest on it.
-It measures something plainer: whether a prepared tube gives way with a jump in energy at the
-sizes run, and how large the jump is.
+Neither does the author's idea. What she asks of the toy, and what is measured here, is plainer:
+does a prepared tube give way with a jump in energy at the sizes run, and how large is the jump?
 
 \begin{figure}[H]
 \centering
@@ -259,11 +259,9 @@ knows about the universe.
 
 \Claim\ Space is one settled arrangement of something deeper, which she calls X because nobody knows
 what it is. X was not chaos. It was a specific arrangement, stable for now, the way a reagent is
-stable until something gives it a push. The change that made space came with a jump in energy: it
-started at a seed, spread as a front, released a definite amount of energy that became matter and
-light, and left a remainder. Across the change the energy books balance. She holds each part of this
-as something to test, not as a belief, and she does not ask that the change be first order in the
-physicists' sense: a jump in energy at the sizes that can be measured is what she is after.
+stable until something gives it a push. The change that made space started at a seed, spread as a
+front, released a definite amount of energy all at once, which became matter and light, and left a
+remainder. Across the change the energy books balance.
 
 That paragraph is a hypothesis, not a result, and nothing in a computer can prove it about reality.
 What a computer can do is take a model in which space is an arrangement of links, and ask whether a
@@ -273,8 +271,8 @@ in that model. If the answer is yes, the idea gains a laboratory, and every numb
 thing to check.
 
 \takeaway{We cannot rerun the birth of space, so we build a toy in which space is an arrangement and
-ask what \emph{kind} of change produces it. The author's idea needs the sharp kind: a hill, a push, a
-release of energy, a remainder.}
+ask what \emph{kind} of change produces it. The author's idea needs the kind with a hill, a push, a
+release of energy and a remainder.}
 
 \chapterpage{2 \enspace THE TOY}{A published model of space made of links, and the one knob we add}
 
@@ -1246,17 +1244,6 @@ dots across: the shifted seam still joins a grid with four times its length in d
 The energy has fallen and the local square pattern has changed, yet a second large direction
 has not appeared in these endpoints.
 
-\Exact\ Shift the seam by two more places and the six-step loop goes as well, leaving eight; each
-further shift adds two. If the re-gluing kept happening, a second large direction would appear.
-But the toy's rule charges for loops of four and for nothing longer. Only the first shift releases
-energy. The later ones are neither rewarded nor charged, so nothing pushes them along.
-
-Does being flat at least make a wide shape likely? \Exact\ Counted as ways of wrapping the grid,
-yes: of the flat wrappings of 192 dots about one in twelve is six around, and the typical one is
-twelve around. \MeasX\ But the runs do not choose among them at random. Every move out of a flat
-arrangement costs at least 32 units, so in a cool bath the network stays at the first flat
-arrangement it reaches, and from the tube that is the nearest one: six around.
-
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=0.65cm,y=0.65cm,>=Stealth,font=\small]
@@ -1277,6 +1264,64 @@ of the four-step path to a dot two steps from its start. Four steps across and t
 six-step loop. The long direction wraps too and is only partly drawn. The full reconstruction,
 not this sketch, establishes that six is the shortest noncontractible loop in the checked tori.}
 \end{figure}
+
+\Exact\ Shift the seam by two more places and the six-step loop goes as well, leaving eight; each
+further shift adds two. If the re-gluing kept happening, a second large direction would appear.
+But the toy's rule charges for loops of four and for nothing longer. Only the first shift releases
+energy. The later ones are neither rewarded nor charged, so nothing pushes them along.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=0.42cm,y=0.42cm,>=Stealth,font=\small]
+% one unrolled strip: #1 x-offset, #2 seam shift, #3 fill, #4 grid colour, #5 title, #6 steps around, #7 what is charged
+\newcommand{\seamstrip}[7]{%
+\begin{scope}[shift={(#1,0)}]
+\fill[#3] (0,0) rectangle (4,10);
+\draw[#4!40,step=1] (0,0) grid (4,10);
+\draw[ink,thick] (0,0) rectangle (4,10);
+\draw[->,accent,very thick] (0,1) -- (3.72,1);
+\fill[ink] (0,1) circle (0.13);
+\ifnum#2>0
+\draw[ink!55,densely dashed] (3.8,1.05) -- (0.2,0.95+#2);
+\draw[->,accent,very thick] (0,0.75+#2) -- (0,1.25);
+\node[anchor=east,text=accent,font=\footnotesize] at (-0.35,1+0.5*#2) {#2 back};
+\fi
+\draw[ink,thick,fill=white] (4,1) circle (0.24);
+\draw[ink,thick,fill=white] (0,1+#2) circle (0.24);
+\node[font=\scriptsize,text=accent] at (2,0.45) {4 across};
+\node[font=\footnotesize,text=ink] at (2,10.8) {#5};
+\node[font=\footnotesize\bfseries,text=ink] at (2,-0.95) {#6 steps around};
+\node[font=\footnotesize,text=ink] at (2,-2.1) {#7};
+\end{scope}}
+\seamstrip{0}{0}{curlpale}{curl}{seam straight}{4}{charged: 1 unit a dot}
+\seamstrip{8.8}{2}{flatpale}{flat}{shifted by 2}{6}{charged: nothing}
+\seamstrip{17.6}{4}{flatpale}{flat}{shifted by 4}{8}{charged: nothing}
+\seamstrip{26.4}{6}{flatpale}{flat}{shifted by 6}{10}{charged: nothing}
+% what each shift does to the energy
+\draw[->,very thick,sun!80!black] (4.7,8.4) -- (8.1,8.4);
+\node[font=\scriptsize,text=sun!80!black,align=center] at (6.4,9.45) {gives off\\energy};
+\foreach \x in {13.5,22.3} {
+\draw[->,thick,ink!55,densely dashed] (\x,8.4) -- (\x+3.4,8.4);
+\node[font=\scriptsize,text=ink!75,align=center] at (\x+1.7,9.45) {no reward,\\no charge};}
+\node[font=\small,text=ink] at (32.3,5) {$\cdots$};
+\end{tikzpicture}
+\caption{One shift pays; the rest are free. \Exact\ Each strip is a piece of the unrolled tube, four
+dots across. The two rings in a strip are one dot: the seam joins the end of a four-step row to it.
+With the seam joined straight, the row closes on itself in four steps. Each shift of the seam by two
+places sends the row's end two dots further along, so the shortest way around grows by two: six,
+eight, ten. Only loops of four are charged (one unit a dot at the setting most runs use), so the first shift
+gives off energy, and the later ones neither cost nor repay anything. The widths were checked up to twelve around, on tubes of 96 dots or
+more.}
+\label{fig:shifts}
+\end{figure}
+
+A word about ``flat.'' Here it means flat at every dot: every link on exactly two squares, at
+zero energy. A tube six around is flat in that sense and still narrow, so it is not what most people
+would call flat. Does being flat at every dot at least make a wide shape likely? \Exact\ Counted as
+ways of wrapping the grid, yes: of the wrappings of 192 dots that are flat at every dot, about one in
+twelve is six around, and the typical one is twelve around. \MeasX\ But the runs do not choose among
+them at random. Every move out of such an arrangement costs at least 32 units, so in a cool bath the
+network stays at the first one it reaches, and from the tube that is the nearest: six around.
 
 \MeasX\ The newer map in Chapter~9 makes another distinction necessary. Among its 3,521 saved
 zero-energy endpoints from runs that reached the three-quarter conversion mark, 3,446 are narrow
@@ -1827,7 +1872,7 @@ $\lambda=1.25$. The fourth bath map passes its criteria from 1.05 to 1.30 at the
 \sub{What the toy shows about this kind of change}
 \Ours\ The toy gives the larger hypothesis a concrete first question: can a prepared curled
 arrangement wait, escape and release a calculable amount of energy? Under the specified rules,
-it can. That is the jump in energy the author asks for, at the sizes run. But its measured endpoint
+it can. But its measured endpoint
 also limits the analogy: removing the four-step curl usually
 leaves a narrow torus, not two large directions. A fixed first-escape cost is not a measured
 commitment barrier, and a nonzero ideal energy gap is not a thermodynamic phase-transition test.
@@ -1883,7 +1928,8 @@ does not establish a fixed-budget route that opens every direction.
 \textbf{A rule that pays for width.} The toy's rule charges only for loops of four, which is why the
 first re-gluing is paid for and the next is not. The author's next test adds a small price on loops
 of six, the same rule one loop-length up, so that a torus six around is itself stable for now and
-has somewhere to go. Nothing is reported from it here.
+has somewhere to go. That test has now been run at two sizes, with a third under way. Its results
+belong to a later paper and are not reported here.
 
 \begin{center}
 {\color{ink}\Large\bfseries Twelve units start an escape. What opens a space?}
