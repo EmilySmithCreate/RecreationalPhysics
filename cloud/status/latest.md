@@ -1,13 +1,10 @@
-# Batch queue and results bucket, as of 2026-10-12 19:10 UTC (commit 4ec36a8)
+# Batch queue and results bucket, as of 2026-10-12 19:30 UTC (commit d0f21e0)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- t63_mu0025_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
-- t63_mu0050_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
-- t63_mu0100_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
-- t63_mu0200_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
+- none
 
 ## RUNNABLE
 - none
@@ -766,9 +763,13 @@ until a person downloads, checks and commits them.
 - t62_mu030_g200_n96/t62_mu030_g200_n96.csv  (2026-10-12 17:57:21, 3987 bytes)
 - t63_mu0000_n192/t63_mu0000_n192.csv  (2026-10-12 19:07:07, 4158 bytes)
 - t63_mu0000_n96/t63_mu0000_n96.csv  (2026-10-12 18:47:48, 4045 bytes)
+- t63_mu0025_n192/t63_mu0025_n192.csv  (2026-10-12 19:19:01, 4435 bytes)
 - t63_mu0025_n96/t63_mu0025_n96.csv  (2026-10-12 18:49:49, 4250 bytes)
+- t63_mu0050_n192/t63_mu0050_n192.csv  (2026-10-12 19:20:39, 4514 bytes)
 - t63_mu0050_n96/t63_mu0050_n96.csv  (2026-10-12 18:44:05, 4325 bytes)
+- t63_mu0100_n192/t63_mu0100_n192.csv  (2026-10-12 19:21:02, 4503 bytes)
 - t63_mu0100_n96/t63_mu0100_n96.csv  (2026-10-12 18:47:48, 4271 bytes)
+- t63_mu0200_n192/t63_mu0200_n192.csv  (2026-10-12 19:24:14, 4436 bytes)
 - t63_mu0200_n96/t63_mu0200_n96.csv  (2026-10-12 18:48:38, 4261 bytes)
 
 ## scratch from runs that died (partial/)
