@@ -8,6 +8,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "src"))
+import read_clear_points as c                                     # noqa: E402
 import read_leftover_width as w                                   # noqa: E402
 from exact_sixloop_walls import switches                          # noqa: E402
 from graphity.cqg import NO_CAP, _switch, is_valid                # noqa: E402
@@ -63,3 +64,15 @@ def test_one_saved_cell_of_the_fourth_map():
 def test_the_report_runs_on_a_folder_with_nothing_in_it(tmp_path, capsys):
     assert w.main(str(tmp_path)) == 1
     assert "no saved end states" in capsys.readouterr().out
+    assert c.main(str(tmp_path)) == 1 and c.cell(str(tmp_path), "t64_mu0100_n96") is None
+
+
+def test_clear_points_of_two_saved_cells_of_t62_and_t64():
+    results = str(ROOT / "results")
+    control = c.cell(results, "t62_mu000_g150_n96")           # no price: every tube stayed exactly flat and six around
+    assert (control["states"], control["points"], control["clear"], control["see22"], control["all22"]) == (
+        24, 2304, 2304, 2304, 24)
+    wide = c.cell(results, "t64_mu0100_n96")                  # a cell that reads WIDENS: flawed nearly everywhere
+    assert (wide["states"], wide["points"], wide["clear"], wide["see25"], wide["see22"]) == (24, 2304, 277, 276, 0)
+    assert (wide["with_clear"], wide["all25"], wide["all22"], wide["two_widths"], wide["touching"]) == (22, 21, 0, 0, 0)
+    assert len(c.T62) == 30 and len(c.T64) == 15              # a named set of runs, three sizes each
