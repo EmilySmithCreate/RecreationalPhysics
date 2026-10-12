@@ -1,24 +1,13 @@
-# Batch queue and results bucket, as of 2026-10-12 17:55 UTC (commit a7cfede)
+# Batch queue and results bucket, as of 2026-10-12 19:10 UTC (commit 4ec36a8)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- t62_mu020_g200_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu025_g150_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu025_g200_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu030_g150_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu030_g200_n96-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu000_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu000_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu010_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu010_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu020_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu020_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu025_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu025_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu030_g150_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
-- t62_mu030_g200_n192-dc61b3b  created 10-12 17:37  started 10-12 17:37  stopped 
+- t63_mu0025_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
+- t63_mu0050_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
+- t63_mu0100_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
+- t63_mu0200_n192-27f1300  created 10-12 18:24  started 10-12 18:25  stopped 
 
 ## RUNNABLE
 - none
@@ -755,10 +744,31 @@ until a person downloads, checks and commits them.
 - t60_lam135_n288/t60_lam135_n288.csv  (2026-10-11 14:13:23, 41894 bytes)
 - t60_lam135_n64/t60_lam135_n64.csv  (2026-10-10 23:45:34, 33554 bytes)
 - t60_lam135_n96/t60_lam135_n96.csv  (2026-10-11 00:37:19, 36301 bytes)
+- t62_mu000_g150_n192/t62_mu000_g150_n192.csv  (2026-10-12 18:05:58, 3793 bytes)
 - t62_mu000_g150_n96/t62_mu000_g150_n96.csv  (2026-10-12 17:50:46, 3671 bytes)
+- t62_mu000_g200_n192/t62_mu000_g200_n192.csv  (2026-10-12 18:09:36, 3798 bytes)
 - t62_mu000_g200_n96/t62_mu000_g200_n96.csv  (2026-10-12 17:54:53, 3678 bytes)
+- t62_mu010_g150_n192/t62_mu010_g150_n192.csv  (2026-10-12 18:02:01, 3793 bytes)
 - t62_mu010_g150_n96/t62_mu010_g150_n96.csv  (2026-10-12 17:49:30, 3670 bytes)
+- t62_mu010_g200_n192/t62_mu010_g200_n192.csv  (2026-10-12 18:09:21, 3876 bytes)
 - t62_mu010_g200_n96/t62_mu010_g200_n96.csv  (2026-10-12 17:54:43, 3740 bytes)
+- t62_mu020_g150_n192/t62_mu020_g150_n192.csv  (2026-10-12 18:14:59, 3812 bytes)
 - t62_mu020_g150_n96/t62_mu020_g150_n96.csv  (2026-10-12 17:53:56, 3681 bytes)
+- t62_mu020_g200_n192/t62_mu020_g200_n192.csv  (2026-10-12 18:27:57, 4235 bytes)
+- t62_mu020_g200_n96/t62_mu020_g200_n96.csv  (2026-10-12 18:00:30, 4056 bytes)
+- t62_mu025_g150_n192/t62_mu025_g150_n192.csv  (2026-10-12 18:27:23, 4284 bytes)
+- t62_mu025_g150_n96/t62_mu025_g150_n96.csv  (2026-10-12 17:58:29, 4048 bytes)
+- t62_mu025_g200_n192/t62_mu025_g200_n192.csv  (2026-10-12 18:32:58, 4190 bytes)
+- t62_mu025_g200_n96/t62_mu025_g200_n96.csv  (2026-10-12 18:01:01, 4054 bytes)
+- t62_mu030_g150_n192/t62_mu030_g150_n192.csv  (2026-10-12 18:28:29, 4160 bytes)
+- t62_mu030_g150_n96/t62_mu030_g150_n96.csv  (2026-10-12 18:00:49, 4013 bytes)
+- t62_mu030_g200_n192/t62_mu030_g200_n192.csv  (2026-10-12 18:30:01, 4172 bytes)
+- t62_mu030_g200_n96/t62_mu030_g200_n96.csv  (2026-10-12 17:57:21, 3987 bytes)
+- t63_mu0000_n192/t63_mu0000_n192.csv  (2026-10-12 19:07:07, 4158 bytes)
+- t63_mu0000_n96/t63_mu0000_n96.csv  (2026-10-12 18:47:48, 4045 bytes)
+- t63_mu0025_n96/t63_mu0025_n96.csv  (2026-10-12 18:49:49, 4250 bytes)
+- t63_mu0050_n96/t63_mu0050_n96.csv  (2026-10-12 18:44:05, 4325 bytes)
+- t63_mu0100_n96/t63_mu0100_n96.csv  (2026-10-12 18:47:48, 4271 bytes)
+- t63_mu0200_n96/t63_mu0200_n96.csv  (2026-10-12 18:48:38, 4261 bytes)
 
 ## scratch from runs that died (partial/)
