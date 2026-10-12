@@ -193,3 +193,74 @@ consequence would need an observable the knobs do not absorb; none was found.
    as ours anywhere.
 3. Whether to keep the handoff's pooled F(t_0) or Srednicki and Hartle's averaged form as the declared rule, if
    Stage E is ever quoted.
+4. Whether piece 9 adopts the published rule as the hypothesis's own (the amplitude rule proposed on 23 September
+   and held since), with the toy of section 2 as the benchmark it must pass before Bell.
+5. Whether the two-turn test of section 10, item 5, is registered.
+6. Whether the claim's last sentence, revised on 12 October from this page (programme draft and page), is hers.
+
+## 10. What the published mathematics gives the hypothesis (ours, unverified; added later on 12 October)
+
+The owner's framing of the same day, on the prior-work result that every candidate-novel claim was already
+published: "I don't need this to be new, much better if I can apply existing math and physics to my theory and use
+it to predict and identify testable hypotheses and understand the key variables and constants." Sections 1 to 8
+answer the handoff's question (what is established, what is new). This section answers hers, and her question of
+the same evening: is there a narrative or mathematical connection between the amplitude-and-record rule and the
+strange loop? Every item is ours and unverified. Published relatives are named where we know them; "general
+knowledge" means not read by us, to verify before it is cited.
+
+1. **Piece 9's missing rule is identified, and it is the standard one.** Her versions, standing at once until an
+   interaction tells them apart, are Everett's branches. The interaction that tells them apart is one that writes a
+   record somewhere in the surroundings, and two versions interfere exactly as much as their records overlap
+   (section 2: V equals the overlap; section 3: a kept record makes the family decoherent, an undone one brings the
+   interference back). The cancelling that counting could not do (T15 rung 3a: positive weights only add) is done
+   by amplitudes. What this changes for piece 9: the search is no longer for a cancelling rule but for where the
+   loop puts the amplitudes. The rule proposed on 23 September (`docs/design/amplitude_rule_brief.md`: amplitudes
+   on a loop's points, evolving by the loop's Laplacian; quantum mechanics put in, not derived) is that rule in the
+   toy's terms, and she held it. The benchmark any version must pass before Bell is this toy: visibility equal to
+   record overlap, interference restored when a record is undone.
+2. **Her strange-loop measure must be Born-weighted, by Everett's own derivation.** Everett 1957 Sec. 5 (Eqs. 26,
+   33, 34, read in the Stage A note) asks for a measure on the branches of a superposition that is additive (the
+   measure of a branch equals the sum of the measures of its sub-branches) and depends only on the amplitudes, and
+   finds that the squared amplitude is the only such measure. Her count per turn (VISION Updates 23, 26, 43; O101)
+   needs exactly that additivity across the branches of a turn. So, if her versions are Everett's branches (item
+   1), a turn's yield is the Born-weighted sum over its branches of the observers each holds, in the declared unit:
+   an expected yield, not a count of versions. A plain count is additive but ignores the amplitudes, which is rung
+   3a's failure in another form; in the toy, duplicating an observer changed the count and no weight (section 4).
+   What is left to choose is the unit (observer-moments, observers, civilizations per turn), which is the
+   reference-class choice of Stage E in other words, and the combination rule across histories (pooled, Sebens and
+   Carroll's form, or averaged, Srednicki and Hartle's; a factor of fifty apart in the two-history example of
+   section 6). Both are hers.
+3. **The view from outside the loop is a computed object.** In decoherent histories the probabilities of whole
+   coarse-grained histories of a closed system, p(alpha) = D(alpha, alpha), are defined with no observer outside
+   (Gell-Mann and Hartle 1993, 2018; Hartle 2020). The observer with one more dimension who sees every turn and
+   every branch at once, each with its weight, is in the mathematics the decoherence functional of the universal
+   state. Everett's relative state was built for exactly the loop's condition, no vantage point outside: each
+   observer's state is relative to what it has interacted with. That is the mathematics of the sentence Update 20
+   left "untouched as philosophy and unused as physics". Her words of 11 October (`sandbox/NOTEBOOK.md`: a view
+   from the fourth dimension in which "there is no meaningful difference between the particles until a measurement
+   pulls the particle into 3d") are this picture, with the measurement as a record written in the surroundings.
+   Relatives of a timeless whole with time read from correlations inside it: Page and Wootters 1983 and the
+   "problem of time" of canonical quantum gravity (general knowledge).
+4. **A loop that turns for ever needs a stage that erases records, and the toy says what erasure does.** Within a
+   turn, records accumulate one way only because the registers start blank (section 5; Hartle 2020 puts the
+   direction in the asymmetry between the two ends of a history). In a loop the end of one turn is the start of the
+   next, so for every turn to carry the arrow, the turn's end must return the registers to blank: the turn boundary,
+   in her picture black holes gathering everything and burping, must erase records. Exact in the toy: an erased
+   record restores interference between the histories that differed in it (section 3), and forgetting leaves the
+   branch weights untouched (section 4). So, ours and unverified: to the extent the boundary erases, the branches of
+   one turn re-merge there and the next turn's branching starts fresh, which is what her "turns need not differ;
+   all equally real" requires; to the extent it preserves, branches never re-merge, the compatible set shrinks turn
+   after turn without reset, and each turn inherits the last turn's arrow instead of renewing it. Which it is, is the
+   black-hole information question in her terms (general knowledge: whether black holes destroy information is
+   open; Penrose's conformal cyclic cosmology needs information loss at the end of each aeon to reset the entropy;
+   Gell-Mann and Hartle's time-neutral formulation, with both an initial and a final condition, is the published
+   place where a history with both ends fixed is written down, and a loop would set the two ends equal). We have not
+   searched for that calculation, so no "we have not found" sentence is written about it (rule 15).
+5. **A test the toy can run, not run.** Two turns of the circuit of section 4 in one run, with the records erased
+   at the boundary (the swap to a sink, or the inverse interaction) against two turns with the records kept: whether
+   the second turn's branch weights, sum rules and compatible sets are those of a fresh start or are conditioned on
+   the first turn's records. Exact and cheap, and the only place the toy touches the loop. Not registered; the
+   owner decides whether it is.
+6. **What is not here.** No calculation of a cyclic universe in the decoherent-histories formalism; Stage E's
+   cosmology is one expanding universe, not a cycle; nothing on gravity, the burp or which settings give observers.
+   The toy has no loop, no black hole and no turn boundary; item 5 would give it a boundary by hand.

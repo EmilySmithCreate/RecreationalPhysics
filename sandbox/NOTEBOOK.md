@@ -75,3 +75,5 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   stays one; interacting observers must be modeled jointly; and where in cosmic time observer-moments fall needs a
   declared reference class. To be treated as a program inside Everettian quantum mechanics, not a new theory. Worked
   the same day in the strict lane: `docs/theory/orh_*.md`, `src/orh/`.
+- 2026-10-12, the owner, evening, on the prior-work result that every candidate claim was already published: "I don't need this to be new, much better if I can apply existing math and physics to my theory and use it to predict and identify testable hypotheses and understand the key variables and constants." And: "is there any narrative or mathematical connection between this and the strange loop block universe?"
+- 2026-10-12, ours, the answer (`docs/theory/orh_findings.md`, section 10): the loop's measure must be Born-weighted; the view from outside is the decoherence functional of a closed system; a loop that turns for ever needs a record-erasing turn boundary, and the toy can run two turns with the records erased between them against kept. Not registered.

@@ -751,5 +751,5 @@ findings page and her decision whether this line stays on the programme page (tw
 ours: 13, interference and records; 14, observers inside the loop; the page is arranged as a book of seven chapters
 at her request of the same afternoon); (2) Martellini 2026 (arXiv:2607.25307) read in full before the record surprisal is cited anywhere;
 (3) a fresh read-only review of the Stage C claims (rule 12) if any of them is ever quoted outside the repository;
-(4) nothing is to be written as "we have not found" about any of the three claims (the prior-work note says FOUND).
+(4) nothing is to be written as "we have not found" about any of the three claims (the prior-work note says FOUND); (5) her decision on piece 9, whether the published rule (the amplitude rule of 23 September) becomes the hypothesis's own, with piece 13's toy as its benchmark before Bell; (6) whether the two-turn erasure test of the findings page (section 10, item 5) is registered; (7) her confirmation of the claim's revised last sentence (12 October). Her framing of 12 October stands over all of it: finding the mathematics already published is the result wanted, not a null.
 

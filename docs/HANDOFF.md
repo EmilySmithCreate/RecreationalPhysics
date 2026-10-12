@@ -315,8 +315,10 @@ branch; written 07:20 ET by the clock).**
   arranged the same afternoon as a book in seven chapters (the burp to the view from outside the loop), with two
   draft pieces from this line, marked ours: 13 (interference and records, beside piece 9) and 14 (observers inside
   the loop, the last chapter); hers to keep or drop.
-- Next ASSUMPTIONS number after this branch: **O120** (if the other session's branch also used O119, renumber this one
-  at the merge).
+- Later on 12 October: `origin/main` merged into this branch (main had used O120 and O121; this branch's O119 stands, no collision). The owner's framing recorded: she does not need this line to be new; "already published" is the result wanted, to be applied to her theory. Her question on the loop answered in section
+  10 of the findings page (ours, unverified: a Born-weighted measure, the view from outside as the decoherence functional, a record-erasing turn boundary; a two-turn toy test proposed, not registered). Piece 9 updated on the page and the draft; the claim's last sentence revised for her confirmation; the provenance
+  paragraph under the claim removed at her request.
+- Next ASSUMPTIONS number after this branch: **O122**.
 
 ## Addendum, 9 October 2026
 
