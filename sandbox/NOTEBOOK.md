@@ -14,3 +14,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-11, ours. Three ways a small direction could grow in a toy like this: the burp's own heat breaks up the
   new tube and it re-forms wide; the rule gains a price for longer loops, so that wider is cheaper; or growth is a
   separate, slow stage driven by counting, which needs the space to stay warm enough to rearrange.
+- 2026-10-11, the owner. "im interested in the idea of a tube opening a new long dimension, so if this can happen
+  here, I want to learn as much as possible about that case and scenerio and configs that make it most likely. num
+  of points, g, lambda, ammount of available energy (especially what if available energy cant do anything but curl
+  and uncurl and maybe increase g), the rate of change (growth) of available energy, have we tried anything where
+  it changes (analogous to a black hole where energy comes in but cannot leave)? etc. if it cannot happen, i want
+  to know and move on to 3d and more tying experiments. we can potentially try introducing a tie term in 2d to see
+  if that does anything." And on a direction growing meaning wider and shorter at once: "yes stay with fixed points
+  count".

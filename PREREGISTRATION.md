@@ -5048,3 +5048,19 @@ Whether counting widens a flat torus over long times (not run). Other λ, drain 
 directions. That reality has heat that stays. sees3 is a count of points within three steps and certifies no
 geometry beyond that. Named points; with interchangeable points the weights of the flat tori differ only by their
 few symmetries (ours, unverified). At λ ≠ 1 this is our family, never combinatorial quantum gravity.
+
+### The owner's prediction for T61, 2026-10-11, recorded before anything of T61 was read
+
+Stage 1 had run and its results were committed unread (f3a76688) when she answered. Asked which of the three
+verdicts she predicts, she said: "wider, with some configs flat." **Her prediction: WIDENS, and in some cells end
+states that are exactly flat and wider than six around.** She gave no curling cost or amount of room; it is read as
+WIDENS at both λ and both sizes, with at least one exactly flat end state wider than six somewhere in stage 1. She
+also asked what a patchwork is and whether one can lead to something flat; that question is not part of the
+prediction.
+
+### Amendment to T61, 2026-10-11, before anything was read: the held-out size is run one cell to a file
+
+The held-out size takes several hours as two files. `scripts/make_t61_configs.py --held-out` now writes one config
+per cell (ten files, `t61_lam<tag>_n384_c<stores>`), so that the cells run side by side. Nothing else changes: a
+replica's seed depends on (seed, N, λ, stores, replica) and not on the file it is in, and the analyzer reads the
+ten files as it would the two. Written and committed before stage 1 was read.

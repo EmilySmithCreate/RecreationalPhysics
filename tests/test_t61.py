@@ -94,7 +94,10 @@ def test_configs_and_the_guard_on_the_held_out_size(tmp_path, monkeypatch):
     assert [c["name"] for c in stage1] == ["t61_lam125_n96", "t61_lam125_n192", "t61_lam140_n96", "t61_lam140_n192"]
     assert all(c["replicas"] == 24 and c["stores_per_point"] == [2, 1, 0.5, 0.333333, 0.25] for c in stage1)
     assert [int(round(x * 192)) for x in stage1[1]["stores_per_point"]] == [384, 192, 96, 64, 48]
-    assert [c["name"] for c in make_t61_configs.configs(held_out=True)] == ["t61_lam125_n384", "t61_lam140_n384"]
+    held = make_t61_configs.configs(held_out=True)
+    assert [c["name"] for c in held][:5] == ["t61_lam125_n384_c768", "t61_lam125_n384_c384", "t61_lam125_n384_c192",
+                                             "t61_lam125_n384_c128", "t61_lam125_n384_c96"]
+    assert len(held) == 10 and all(len(c["stores_per_point"]) == 1 and c["lengths"] == [96] for c in held)
     monkeypatch.setattr(make_t61_configs, "PREDICTION", tmp_path / "none.json")
     with pytest.raises(SystemExit):
         make_t61_configs.main("--held-out")

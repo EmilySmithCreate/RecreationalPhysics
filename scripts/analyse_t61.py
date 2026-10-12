@@ -3,7 +3,8 @@
     python scripts/analyse_t61.py [results_dir]                     # the report
     python scripts/analyse_t61.py [results_dir] --write-prediction  # after stage 1: the numbers for N = 384
 
-Implements PREREGISTRATION.md section T61 on results/t61_lam<tag>_n<N>.csv (scripts/run_burp_heat.py).
+Implements PREREGISTRATION.md section T61 on results/t61_lam<tag>_n<N>.csv and, for the held-out size, one file
+per cell, results/t61_lam<tag>_n384_c<stores>.csv (scripts/run_burp_heat.py).
 
 Per replica, from its end state: `sees3` is the share of points with exactly 25 points within three steps, as an
 endless flat sheet has (0 on a flat torus six around, 1 on one eight or more around).
@@ -101,7 +102,7 @@ def held_out_misses(c, p):
 def load(out_dir="results"):
     groups = defaultdict(list)
     for f in sorted(glob.glob(str(Path(out_dir) / "t61_lam*_n*.csv"))):
-        if not re.search(r"t61_lam\d+_n\d+\.csv$", f):
+        if not re.search(r"t61_lam\d+_n\d+(_c\d+)?\.csv$", f):
             continue
         with open(f, newline="", encoding="utf-8") as fh:
             for r in csv.DictReader(fh):
