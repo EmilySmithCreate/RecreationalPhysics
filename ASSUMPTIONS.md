@@ -3509,7 +3509,10 @@ to the owner's hypothesis or a new simulation result.
     torus, not on a usual one. The energy is the same for all of them.
   - *Ours, unverified.* With named points each wrapping carries the same number of labeled graphs, so a chain that
     could move among flat tori at no cost would be found wide most of the time. It cannot: leaving a flat torus
-    costs 32. Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
+    costs 32. *(Corrected 12 October 2026: 32 from a torus eight to twelve around. From one six around the
+    cheapest switch costs 16λ, 20 at λ = 1.25: no square broken, four surplus squares made; every switch
+    listed at 48 and 96 points, `tests/test_sixloop_walls.py`. Both editions of paper 1 said "at least 32"
+    and are corrected. A cool six-around tube still stays put: the T62 controls, 96 of 96.)* Not counted here: turns and mirror images as one graph, and zero-energy graphs that are not tori.
 
 - **O120 The outside review of 11 October 2026, recorded: what it checked, what it found, what was done, and what it
   got wrong (rule 12's first pass by a different model).** (Reviewer: OpenAI Codex, from
@@ -3660,6 +3663,9 @@ to the owner's hypothesis or a new simulation result.
     and their number grows as N² (96 at 48 points, 2,496 at 96). The local ones, their two links two or three
     steps apart and N of each: one square broken and three surplus made, E6 down by 59, cost 31 − 59μ; two
     squares broken, E6 down by 24, cost 32 − 24μ; two squares and two surplus, E6 down by 94, cost 42 − 94μ.
+    *(Added 12 October: these are the switches that lower E6. The cheapest switch of all out of six around
+    while μ is below 0.103 is another: no square broken, four surplus made, E6 up by 48, cost 20 + 48μ. It
+    leads away from widening and its way back is free.)*
   - **After a switch out, the change can go on without breaking more squares.** From the long-range push there
     are 14 distinct switches that keep every square and lower E6, all downhill at any μ above zero, against one
     straight back. Local pushes have them too.

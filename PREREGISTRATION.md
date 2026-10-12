@@ -5710,3 +5710,13 @@ size, as T61's did. And the long spells are doubled at 384, so the curl may be g
 The file is committed with this amendment, and the five held-out configs
 (`scripts/make_t64_configs.py --held-out`) are queued after it (`cloud/queue/2026-10-12_t64_stage2.txt`). The
 owner is not asked again for the held-out size; it is read against the same words.
+
+### Correction to the readings of T62 and T64, 2026-10-12: which switch is "the cheapest way out"
+
+Both readings say that the cheapest way out of the tube six around costs 31 − 59μ (25.1 at μ = 0.10, 29.5 at
+0.025). That is the cheapest switch that **lowers the six-loop excess**. The cheapest switch of all, while μ is
+below 0.103, breaks no square, makes four surplus squares and raises the six-loop excess by 48: it costs 20 + 48μ,
+which is 24.8 at μ = 0.10 and 21.2 at 0.025 (every switch listed at 48 and 96 points, λ = 1.25;
+`tests/test_sixloop_walls.py`). It leads away from widening and its way back is free, so the walls that matter
+for the two readings are the ones they quote; the word "cheapest" was wrong. No count, verdict or held-out
+number changes.
