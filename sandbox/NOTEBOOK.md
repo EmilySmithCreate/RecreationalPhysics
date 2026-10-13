@@ -89,3 +89,28 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   long-range way out of the tube six around (O124). First a sandbox look.
 - 2026-10-12, the owner, on "The burp cannot melt its own product. An earlier draft of this chapter said that it
   could.": "good, this makes sense to me now."
+- 2026-10-13, ours, from reading the Chern group's papers (`docs/reading/notes/2026-10-13_chern_group_vocabulary.md`).
+  (a) The column and the knots of O107 have nearly the same first-exit cost (12 and 11) and only the column
+  anneals. Price the least possible highest point on any route from each to flat (their "minimax barrier"), by
+  listing routes at a small size. The same calculation is what T54 still lacks (O118: patch energies, not
+  barriers). (b) The question of 11 October above, two twists meeting, is in their words whether the product has
+  two mirror-image versions with a wall where they meet; a joint between two widths (O116, 12 October) is a wall
+  between two different members. Can a joint be removed while its two stretches keep different widths? (c) A
+  point at d = 1 has a square too many and a point at d = 3 one too few; the knot of two kinds of point may be a
+  bound pair of opposite flaws. In crystals a tube changes its width at such a pair (general knowledge, to
+  verify). (d) The outcomes of T9 and T61 against room and curling cost, drawn as one map: their "dynamical
+  phase diagram".
+- 2026-10-13, the owner, on Chern's group: "would they use or do they describe a different toy than paper 1
+  currently does? would including or running both help our paper 1 and our programme more generally? especially
+  because we can ask trugenburger to read the first couple questions but we don't have an identified reader for
+  the measurement side". *Ours:* their toys are different (electrons on a fixed lattice; spins on a fixed
+  lattice), and running those would test nothing of ours. Two things would help. Run their measurements on our
+  toy (defect count against time, the lowest wall on any route, the map of outcomes). And check our measuring
+  tools once on a textbook chain whose answer is known exactly (an Ising chain with single-spin flips, where
+  the borders between up and down regions thin out as one over the square root of time; general knowledge, to
+  verify), the way the flat-histogram sampler was checked on Ising before it was trusted (T6).
+- 2026-10-13, ours, from M. Vucelja's papers on relaxation (the note of 13 October, section 8). A Mpemba-style
+  question for the scrap: cool two sets of finished tubes to the same cold bath over the same time, one set
+  started from a warmer bath and one from a cooler. Which keeps more curled columns? Her field's surprise would
+  be the warmer start keeping fewer. And for paper 1's sealed box: does it matter how the stores are prepared
+  (one store holding the push, or the same energy spread over many) for how fast the box settles?

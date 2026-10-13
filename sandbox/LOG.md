@@ -165,3 +165,11 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   comes back flat either way, and the ruled ones keep about twice the energy in flaws (116 to 156 against 67 to
   78). So in this look the rule stops melting, as built, and does not bring the fabric back: it heals worse. One
   cooling time; the owner has not yet said which reading of the rule she means. Not promoted.
+- 2026-10-13. Is T51's slow fall a power law, or a floor plus one exponential? (`sandbox/t51_shape.py`: arithmetic
+  on the numbers already written in O104, no result file opened.) The seven recorded frozen shares, from the
+  quench to 300,000 fair sweeps, fit a floor of 0.012 plus 0.031 × exp(−t/80,000) to the rounding (rms 0.0004;
+  three numbers chosen after seeing seven). The four recorded column ratios each give a time of 80,000 to 106,000
+  fair sweeps. So the fitted exponents −0.82 and −0.34 may be apparent ones over 1.5 decades, and the
+  extrapolation to 10¹⁸ sweeps would not follow: the share would level off near 0.012, about the energy of the
+  knots that do not anneal. The two readings part at a million fair sweeps (0.012 against 0.008) and in between
+  the cells already run. Not promoted.
