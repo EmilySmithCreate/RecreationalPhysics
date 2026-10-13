@@ -325,9 +325,52 @@ def test_spark_threshold_script(tmp_path):
         load_script("run_spark_threshold").main(path, tmp_path)
 
 
+PROVENANCE_KEYS = {"git_commit", "git_dirty", "git_untracked_count", "git_untracked"}
+
+
 def test_provenance_names_a_commit_or_says_it_cannot(tmp_path):
     from graphity.results import provenance
     here = provenance()
-    assert set(here) == {"git_commit", "git_dirty"}
+    assert set(here) == PROVENANCE_KEYS
     assert here["git_commit"] == "unknown" or (len(here["git_commit"]) == 40 and here["git_dirty"] in (True, False))
-    assert set(provenance(tmp_path)) == {"git_commit", "git_dirty"}      # a folder outside any checkout still answers
+    assert set(provenance(tmp_path)) == PROVENANCE_KEYS          # a folder outside any checkout still answers
+
+
+def test_provenance_counts_untracked_files_as_dirty(tmp_path):
+    """An untracked file (not ignored) makes the tree dirty and is listed; an ignored one does not count. Until
+    2026-10-12 untracked files were invisible to this helper, which let results name a commit holding none of
+    their code (docs/theory/orh_findings.md, the provenance note)."""
+    import subprocess
+    from graphity.results import provenance
+
+    def git(*args):
+        subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@example.com", *args], cwd=tmp_path,
+                       check=True, capture_output=True)
+
+    git("init", "-q")
+    (tmp_path / ".gitignore").write_text("*.log\n")
+    (tmp_path / "tracked.txt").write_text("a\n")
+    git("add", ".")
+    git("commit", "-q", "-m", "start")
+    clean = provenance(tmp_path)
+    assert len(clean["git_commit"]) == 40
+    assert (clean["git_dirty"], clean["git_untracked_count"], clean["git_untracked"]) == (False, 0, [])
+
+    (tmp_path / "scratch.log").write_text("ignored\n")                   # matches .gitignore: not counted
+    assert provenance(tmp_path)["git_dirty"] is False
+
+    (tmp_path / "new_code.py").write_text("x = 1\n")                     # untracked, not ignored
+    (tmp_path / "pkg").mkdir()
+    (tmp_path / "pkg" / "inner.py").write_text("y = 2\n")
+    dirty = provenance(tmp_path)
+    assert dirty["git_commit"] == clean["git_commit"]
+    assert dirty["git_dirty"] is True
+    assert dirty["git_untracked_count"] == 2
+    assert dirty["git_untracked"] == ["new_code.py", "pkg/inner.py"]     # files, not a collapsed folder
+    assert provenance(tmp_path, max_listed=1)["git_untracked"] == ["new_code.py"]
+
+    (tmp_path / "tracked.txt").write_text("b\n")                          # a modified tracked file still counts
+    git("add", "new_code.py", "pkg")
+    git("commit", "-q", "-m", "add code")
+    assert provenance(tmp_path) == dict(git_commit=provenance(tmp_path)["git_commit"], git_dirty=True,
+                                        git_untracked_count=0, git_untracked=[])

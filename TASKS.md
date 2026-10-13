@@ -595,7 +595,10 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    closed without running the pull (O103 (d)).
 5. **The git commit hash in `.meta.json`.** The runners record the config, the package version and the Python, NumPy and
    Numba versions (`scripts/*.py`, the `meta = dict(...)` lines), not the commit. Add the hash and a dirty-tree flag to
-   new runs through one shared helper, with a test; existing results are untouched (rule 5).
+   new runs through one shared helper, with a test; existing results are untouched (rule 5). *Done for laptop runs
+   (`graphity.results.provenance`, 10 October); 12 October: it now counts untracked files as dirty and lists them, after
+   three meta files named a commit that held none of their code. **Still open for cloud runs:** the Batch container has
+   no checkout, so every cloud meta file since says `git_commit: unknown` (T62, T63, T64).*
 6. **Reading, before any citation:** Pathria (1972), Popławski (the universe inside a black hole), and the Fife paper
    the third review cites (its reference to be obtained from the owner), as the benchmark lineage for piece 11; read
    status recorded in `REFERENCES.bib` (rule 1). Benchmarks, never evidence (rule 13).
@@ -765,3 +768,24 @@ Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth 
 **Status, 2026-09-22.** The note is drafted and not sent: `docs/outreach/note_to_model_authors.md`, with the two addresses that are published (C. A. Trugenberger, F. Biancalana) and the route for the third. A plain-language write-up for a general audience is in `docs/public/`. Nothing has been sent or posted yet.
 
 VISION S5: a physicist reads it. Draft a short, honest note to C. Kelly, F. Biancalana or C. Trugenberger once Gates A and B have passed: what was reproduced, what was not, the code link, and a request for a sanity check. **Ask also where the evidence for "continuous" lives.** [T25] cites [29] for "several other diagnostics ... with positive results", and [29] is [KTB19], which says of itself that a finite-size-scaling analysis is "at present even ... precluded" and that "we are some way off the asymptotic regime". So the decisive test has not been attempted by anyone (ASSUMPTIONS, section D). That is the gap T6 fills, and we are better placed than they were. The sharpest way to put the disagreement (ASSUMPTIONS, axis section): we match Fig. 3 at both ends, to 0.001 to 0.039 over eleven points from g = 6.3 to 178 and to 0.04 at g = 2, and differ only in between, where its points drop almost vertically at one coupling and ours rise smoothly. The author asked whether Fig. 3 might have allowed triangles and pentagons, since [T25]'s Eq. (22) includes them and it says only that one *can* use bipartite graphs. Tested and ruled out: allowing them roughly halves the square count in the hot phase, while Fig. 3's hot dots sit where the bipartite value is (ASSUMPTIONS, axis section). So the question for the authors is the narrow one about the window between g = 2 and g = 6.3. Also worth a line each: the 14-vertex baby universe (Q8) and the 30-vertex triangle-and-pentagon piece with H = 0 (Q10).
+
+## 12 October: the observer-relative histories program (a second line, inside Everettian quantum mechanics)  ◑
+
+**Added 2026-10-12** from the owner's handoff `docs/theory/observer_relative_histories_research_handoff.md`. Not a run
+of the toy and not a knob; no VISION decision needed. Done the same day, Stages A to F of the handoff: the literature
+map, the exact unitary toy (Stages B to D), the cosmic-time population model (Stage E) and the figures (Stage F);
+one home for the results is `docs/theory/orh_findings.md` (O125). Owed, in order: (1) the owner's reading of the
+findings page and her decision whether this line stays on the programme page (two draft cards are on it, marked
+ours: 13, interference and records; 14, observers inside the loop; the page is arranged as a book of seven chapters
+at her request of the same afternoon); (2) Martellini 2026 (arXiv:2607.25307) read in full before the record surprisal is cited anywhere;
+(3) a fresh read-only review of the Stage C claims (rule 12) if any of them is ever quoted outside the repository;
+(4) nothing is to be written as "we have not found" about any of the three claims (the prior-work note says FOUND); (5) her decision on piece 9, whether the published rule (the amplitude rule of 23 September) becomes the hypothesis's own, with piece 13's toy as its benchmark before Bell; (6) whether the two-turn erasure test of the findings page (section 10, item 5) is registered; (7) her confirmation of the claim's revised last sentence (12 October). Her framing of 12 October stands over all of it: finding the mathematics already published is the result wanted, not a null.
+
+*Later on 12 October: the branch is merged with `main` after PR #49 (three bookkeeping conflicts). A fresh reviewer's
+findings were fixed in the working tree (`docs/HANDOFF.md`, 12 October addendum, one line each): the provenance helper
+flags untracked files; the Stage E class that ran undeclared and the declared one that never ran are recorded with
+dated lines; "model output" withdrawn as a kind of statement; figure 6 redrawn; ten bibliography entries; piece 9's
+status softened to a candidate. Open for the owner: whether the T64 rerun and its bar stand as her decision; whether
+the Stage E numbers stay on the programme page while its config is exploratory (tabled); item (7) above; the cloud
+meta files' `git_commit: unknown`, a container issue, not fixed here.*
+
