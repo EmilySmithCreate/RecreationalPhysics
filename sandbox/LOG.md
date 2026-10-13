@@ -153,3 +153,15 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   points see a sheet at every size, so the share falls as the tube gets longer. It looks as if a leftover sits in
   a wider stretch of roughly fixed size. Not read from positions. Promoted the same day as an exact reading with a tested script (`scripts/read_leftover_width.py`; O116, addendum of 12 October), which reads width only from points clear of flaws: about half of those end states do hold a wider stretch. It narrows one sentence: "the
   tube ends six around" is true of the exactly flat end states, eight or nine in ten, and not shown for the rest.
+- 2026-10-12. The owner's idea, "what if melting isnt allowed": a rule against bare links (a link on no square,
+  so its ends are not otherwise close), hard, or soft at a cost of 8 or 32 (`sandbox/no_far_links.py`; 96 points,
+  lambda = 1.25; `sandbox/out/no_far_links_BC.txt`). Exact, by listing every switch: the hard rule forbids about
+  nine switches in ten, all the long-reach ones, and none of the cheap ones; paper 1's ways out of the curled tube
+  (12, 14) and the local moves out of flat tubes (20, 31, 32, 42) all stay. Runs, 12 a rule: the burp still
+  starts, but it ends exactly flat in 5 of 12 under the hard rule against 11 of 12 with none (9 and 10 under the
+  soft ones); the rest keep a leftover. A flat tube heated and cooled, 6 a setting: at g = 3 nothing happens with
+  or without. At g = 5 and 8 with no rule it melts (0.46 to 0.73 squares per point, up to 89 bare links at once);
+  with a rule it keeps more (0.65 to 0.89), and under the hard one it never has a bare link. After cooling none
+  comes back flat either way, and the ruled ones keep about twice the energy in flaws (116 to 156 against 67 to
+  78). So in this look the rule stops melting, as built, and does not bring the fabric back: it heals worse. One
+  cooling time; the owner has not yet said which reading of the rule she means. Not promoted.

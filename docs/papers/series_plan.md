@@ -476,3 +476,16 @@ joint work. (d) Nothing here changes the rule that a paper at λ ≠ 1 is not ca
 adopt: a modified emergent-geometry toy supports a stable-for-now compactified arrangement, local nucleation, a
 propagating geometric change and a calculable release in two directions, with the freeze-out of defects under test;
 the cosmological interpretation comes later. Paper 1's revision candidates are in `curled_torus/v2_changes.md`.
+
+## 12 October 2026: where the price on loops of six belongs (the owner's question)
+
+Asked whether T62 and T64 deserve a paper of their own, and which papers they belong in. *Ours:* not a paper of
+their own yet. They are a change to the rule, so their home is **paper 6** (the rule, the room, and which settings
+give a birth), as a section: what the rule charges for decides what the product is. Loops of four only: a tube six
+around. Loops of six as well: mostly wide, flawed nearly everywhere. They also change what two other papers have to
+ask. **Paper 2** (what the burp leaves behind): the flaws become the main obstacle, and paper 1's own leftovers turn
+out to sit at the joint between two widths (O116, addendum of 12 October). **Paper 5** (how curled directions open,
+three and four): an opened direction should be measured for how far around it is, and a rule may have to pay for each
+further step. A short paper of its own would be earned by two things not yet in hand: the 384-point runs holding, and
+a way to get the wide product clean (slower cooling is the first thing to try). Paper 1 states the result in its
+closing section, in a few sentences.

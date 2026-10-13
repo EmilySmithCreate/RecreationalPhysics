@@ -719,7 +719,7 @@ The replacements for pieces 5 and 11 are hers. In order:
     October, and her notes on its sentences (the why of "two humps"; the curling cost as something to test; the
     jump in energy; "if this kept happening"; whether flat makes wide likely) were applied the same day on
     `claude/paper1-after-review-2026-10-12`, with T61 and O123. *Done on that branch; it waits for her read and
-    her merge. The Side Nerd pages are not refreshed.* Owed from it on this branch: T60's wording in paper 6 ("memoryless",
+    her merge. The Side Nerd pages are not refreshed.* *Refreshed 12 October at her request: the pages were rebuilt from both editions as they stand and pushed to the marketing repository on the branch `feat/main-nerd-post01-2026-10-12` (not merged, not deployed; both are hers). The blog's summary, quick answers and the interactive page no longer say the tube opens into a flat sheet.* *Owed, hers to review first: a new structure for the plain-language edition in four parts (what we are looking at and why; the replications; the ways we tested and changed the toy, organized; what that teaches for three directions, the scrap and the energy). An outline was put to her on 12 October; nothing is rewritten until she has seen it.* Owed from it on this branch: T60's wording in paper 6 ("memoryless",
     "two orders", "one front" as names of three diagnostics; the repaired clock not shown to be why the fourth map
     passes); a search for the lowest path in T54 (O118, "Correction").
 11. **A price on loops of six** (VISION Update 56). *Done 12 October: the kernel (`src/graphity/sixloop.py`) and

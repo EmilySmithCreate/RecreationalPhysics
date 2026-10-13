@@ -30,6 +30,7 @@ def test_the_tube_six_around_is_stuck_below_four_elevenths(six):
     assert table[(-1, 3, -59)] == 48 and table[(-2, 0, -24)] == 96 and table[(-2, 2, -94)] == 48
     assert w.stuck_below(table, LAM) == pytest.approx(64 / 176)              # 4/11
     assert min(w.cost(k, LAM, 0.0) for k in table) == 20.0                   # with no price: a re-curling switch
+    assert table[(0, 4, 48)] == 72                                           # it breaks no square: 16 lambda, not 32
     assert all(w.cost(k, LAM, 0.30) > 0 for k in table) and any(w.cost(k, LAM, 0.37) < 0 for k in table)
 
 
