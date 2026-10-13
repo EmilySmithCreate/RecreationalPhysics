@@ -162,7 +162,40 @@ Numbers are the short papers of `docs/papers/series_plan.md` (5 October list).
 2. For paper 2: how would they tell a floor plus one exponential from a slow power law over 1.5 decades?
 3. For paper 1, later: whether a member of the group would read the statistical-mechanics half.
 
-## 8. Not established
+## 8. M. Vucelja, the reader for the measurement side (added later on 13 October, at the owner's question)
+
+The owner asked whether the paper Vucelja and Chern wrote together should be read and the connection fleshed out.
+It was read, and so was the list of her papers (the arXiv API listing of 13 October 2026).
+
+- **The joint paper [FPVC26] is not the connection.** It is an equilibrium Monte Carlo study of how two-faced
+  particles line up (abstract; text searched for its methods). It shows that the two work together and little
+  else for us. One sentence of it is worth keeping, because this project has made the mistake it warns of: a
+  snapshot "taken during relaxation rather than from the equilibrated ensemble" illustrates the defects a model
+  supports and does not measure their statistics (Sec. III).
+- **Her own line of work is.** Her recent papers are about how fast a system relaxes after a change of
+  temperature, in Markov chains and under Metropolis dynamics: the Mpemba effect, in which a system started
+  hotter reaches the bath's temperature sooner than one started warm, expressed through mean first passage times
+  ([WV22], abstract); a 2025 review of such effects ([TBLRV25], abstract); a 2018 exact solution of Metropolis
+  dynamics on a complete graph (title only, arXiv:1812.11962, with I. Klich); and in August 2026 "thermalization
+  packets", auxiliary systems prepared in advance and coupled to a target to speed its relaxation,
+  "characterized not only by their temperature or heat capacity, but also by their microscopic preparation"
+  ([KV26], abstract). Earlier: non-reversible Monte Carlo sampling (titles only).
+- **Where that meets this project (*ours*).** Three places. (a) Paper 1's first exit is a mean first passage
+  time under Metropolis dynamics, with its channels counted exactly and about a third of exits falling back
+  (T22): her subject, and the question already written for her in the series plan. (b) Paper 1's reservoir of
+  stores is a finite bath whose number and starting contents are declared parameters, and the paper already
+  says that changing the number of stores "changes the entropy as well as the thermal response": [KV26] is
+  about exactly such a prepared auxiliary system. (c) Paper 2's cooling results (T25, T51) are relaxation
+  against a cooling protocol. A test in her terms that the toy can run: do products started from a warmer bath
+  lose their curled columns sooner on the way to the same cold bath than products started from a cooler one?
+  That is a Mpemba-style question, it has a yes or no answer, and it is in the sandbox notebook.
+- **So the measurement side has two natural readers, who publish together:** Vucelja for the kinetics of the
+  chain (first exits, relaxation, what a finite prepared bath does) and Chern for defects and energy
+  landscapes. J. Bechhoefer, a co-author of her review, is also an author of the one-dimensional
+  nucleation-and-growth paper T37 was scored against.
+- **Before anything is put to her:** read [TBLRV25] and [WV22] in full; neither has been.
+
+## 9. Not established
 
 - That any member of the group has seen this project. None has.
 - Any quotation's context beyond the passages searched; eight of the eleven papers were not read in full.

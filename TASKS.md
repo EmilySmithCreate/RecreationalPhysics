@@ -739,6 +739,23 @@ Owed by the owner: her replacements for pieces 5 and 11, or a table that charges
 T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4's wording, decided) and 52.
 *(Given 12 October: the reviewer's rewrite of paper 1 adopted; her predictions for T62 and T63.)*
 
+## 13 October: readers for the measurement side, and what would serve them  ☐
+
+**Added 2026-10-13** (the owner's question of that day; nothing here is registered or run). The model's author
+can read the model half of paper 1; nobody is identified for the measurement half. Two candidates who publish
+together: M. Vucelja (relaxation and first passage under Metropolis dynamics) and G.-W. Chern (defects and
+energy landscapes); what was read is `docs/reading/notes/2026-10-13_chern_group_vocabulary.md`. The work that
+would serve such a reader is laid out, cheapest first, in
+`docs/papers/curled_torus/handoff_2026-10-13_measurement_side.md`: (1) check the measuring tools on a chain
+whose answer is known exactly; (2) the lowest wall on any route out of the curled tube, by listing; (3) one map
+of T9's and T61's outcomes; (4) what the stores are doing; (5) whether a first exit commits. Items 4 and 5
+need a registration and the owner's prediction. Owed before any letter: [WV22] and [TBLRV25] read in full.
+Paper 2 (`docs/papers/relic/`) was rewritten the same day with T51, T55 and O116's wording, and has a draft
+plain-language edition; the owner has not read either.
+
+Accept: item 1 has a test in `tests/` and a paragraph in the supplement; item 2 returns 12 for the first exit
+and a ceiling or a stated bound for the full route.
+
 ## Later
 
 Scorecard against "the spot" (VISION step 4): spectral dimension, volume-growth dimension, curvature uniformity, shortcut census, stability under perturbation. Allotrope ladder of [T24]: does squares-per-vertex move in jumps with hysteresis?

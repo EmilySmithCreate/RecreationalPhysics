@@ -503,7 +503,7 @@ hypothesis (rule 13). Nothing has been sent to anyone.
 | Short paper | Their work that bears on it | What it gives | Done on 13 October |
 |---|---|---|---|
 | 1, the curled torus | [JC26]; [LLC26a] | "isolated" and "microcanonical" for sealed; "minimax barrier" for the barrier the paper says the 12 units is not; "domains separated by defects" for T61's endpoints | Four insertions and two references in the technical manuscript; rebuilt. The plain-language edition is unchanged |
-| 2, what the burp leaves behind | [JC26]; [JYC25]; [BBJC26]; [FZC26] | The defect vocabulary; the caution that an exponent fitted over a short range is an apparent one | The draft's process words aligned and a paragraph of relatives added. Still owed: T51, T55 and O116's wording |
+| 2, what the burp leaves behind | [JC26]; [JYC25]; [BBJC26]; [FZC26] | The defect vocabulary; the caution that an exponent fitted over a short range is an apparent one | The technical draft rewritten with T51, T55, O116's wording and O123, and a draft plain-language edition written. The owner has read neither |
 | 3, links that reach far | [JC26] Sec. III | Walls form where independently nucleated domains meet | Note only |
 | 5, how curled directions open | [LLC26a] | The method for the barrier T54 did not price | A pointer at the head of the draft |
 | 6, the rule, the room | [JC26]; [BaC26] | A dynamical phase diagram; entropy maximized under what the dynamics retains | A pointer at the head of the draft |
@@ -514,3 +514,9 @@ hypothesis (rule 13). Nothing has been sent to anyone.
 A candidate reader for paper 2, beside the model's author in the table of 24 September: G.-W. Chern (the note,
 section 7, has the question; the reading note of 25 September named him first). The owner's rules apply: one
 narrow question, the AI disclosure sentence, a check of his recent papers, which the note records.
+
+For paper 1 the candidate of 24 September, M. Vucelja, was looked at again the same day (the note, section 8).
+Her joint paper with Chern is not the connection; her own work on relaxation and mean first passage times
+under Metropolis dynamics is, and it touches paper 1 in three places (the first exit, the reservoir of stores,
+and paper 2's cooling). The work that would serve a reader from that side is in
+`curled_torus/handoff_2026-10-13_measurement_side.md`.

@@ -100,3 +100,17 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   bound pair of opposite flaws. In crystals a tube changes its width at such a pair (general knowledge, to
   verify). (d) The outcomes of T9 and T61 against room and curling cost, drawn as one map: their "dynamical
   phase diagram".
+- 2026-10-13, the owner, on Chern's group: "would they use or do they describe a different toy than paper 1
+  currently does? would including or running both help our paper 1 and our programme more generally? especially
+  because we can ask trugenburger to read the first couple questions but we don't have an identified reader for
+  the measurement side". *Ours:* their toys are different (electrons on a fixed lattice; spins on a fixed
+  lattice), and running those would test nothing of ours. Two things would help. Run their measurements on our
+  toy (defect count against time, the lowest wall on any route, the map of outcomes). And check our measuring
+  tools once on a textbook chain whose answer is known exactly (an Ising chain with single-spin flips, where
+  the borders between up and down regions thin out as one over the square root of time; general knowledge, to
+  verify), the way the flat-histogram sampler was checked on Ising before it was trusted (T6).
+- 2026-10-13, ours, from M. Vucelja's papers on relaxation (the note of 13 October, section 8). A Mpemba-style
+  question for the scrap: cool two sets of finished tubes to the same cold bath over the same time, one set
+  started from a warmer bath and one from a cooler. Which keeps more curled columns? Her field's surprise would
+  be the warmer start keeping fewer. And for paper 1's sealed box: does it matter how the stores are prepared
+  (one store holding the push, or the same energy spread over many) for how fast the box settles?

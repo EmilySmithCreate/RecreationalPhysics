@@ -5,341 +5,349 @@
 \usepackage[hidelinks]{hyperref}
 
 % Working notes, not part of the paper (13 October 2026).
-% (1) Vocabulary. On 13 October the process words were set beside those of nonequilibrium defect kinetics as
-%     used by G.-W. Chern's group (University of Virginia): sealed = isolated, energy strictly conserved
-%     (microcanonical); the stores = an internal reservoir; fixed coupling g = an external bath; seed = nucleus;
-%     front = propagating interface; patch = domain; relic = localized defect; freezes in = arrested. The map,
-%     the sources and the words that look alike and are not (lambda, g, seed, kink, freeze-out time) are in
-%     docs/reading/notes/2026-10-13_chern_group_vocabulary.md. Do not call the relic a kink. In 440 of the
-%     2,014 flawed end states a leftover lies between two widths of the product (O116, addendum of 12 October,
-%     exploratory): that kind is the nearer relative of a domain wall, and the Discussion says so.
-% (2) Still owed before this draft is shared: T51 (CLIFF) and T55 (KNOT) are not in it; "opens into the flat
-%     torus", "flat sheet" and "clean sheet" predate O116 (the tube re-glues into a flat torus six around) and
-%     "melt" in sealed runs predates O123; T51's fitted exponents are apparent exponents over 1.5 decades
-%     (the note, section 6).
+% (1) Vocabulary. The process words sit beside those of nonequilibrium defect kinetics as used by G.-W. Chern's
+%     group (University of Virginia): sealed = isolated, energy strictly conserved (microcanonical); the stores =
+%     an internal reservoir; fixed coupling g = an external bath; seed = nucleus; front = propagating interface;
+%     patch = domain; relic = localized defect; freezes in = arrested. The map, the sources and the words that look
+%     alike and are not (lambda, g, seed, kink, freeze-out time) are in
+%     docs/reading/notes/2026-10-13_chern_group_vocabulary.md. Do not call a relic a kink.
+% (2) "Flat" here is the local count d = 2. The exactly flat end states are tori six edges around (O116); never
+%     write that the tube opens into a sheet. A sealed tube cannot melt (O123).
+% (3) Kept out by the owner's decision of 5 October: any share of a cosmic energy budget.
+% (4) The plain-language edition is paper_plain_language.tex; a source number means the same source in both.
 
 \begin{document}
 
-\title{What the burp leaves behind: a relic defect of fixed size in a graph model of emergent geometry, its
-number, its position, and how long it lasts}
+\title{What the burp leaves behind: relic defects of fixed size in a graph model of emergent geometry, their
+kinds, their number, and how long they last}
 
 \author{Emily Smith}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 5 October 2026}
+\date{DRAFT, 13 October 2026}
 
 \begin{abstract}
-In a companion paper we showed that, in the family of graph energies obtained from combinatorial quantum
+In a companion paper a $4 \times L$ torus with one direction curled was shown to be metastable, and to convert
+after activation with a release of energy, in the family of graph energies obtained from combinatorial quantum
 gravity (CQG) by raising the coefficient $\lambda$ of its local term above 1 (only $\lambda = 1$ is CQG; every
-result here is at $\lambda > 1$, next to CQG and not in it), a $4 \times L$ torus with one direction curled is
-metastable and converts rapidly after activation. Its initial gap is $\varepsilon N$, with
-$\varepsilon = 4(\lambda-1)$; its release is $\varepsilon N-H_f$, where $H_f$ is the final graph energy. Here we study the defects the change leaves behind. Sealed, that is, isolated with the total energy of graph and
-reservoir strictly conserved, and with an internal reservoir large enough to stay cold after taking up the release, the
-conversion ends as a flat sheet with about one relic defect, at every size from 64 to 288 vertices: the relic does
-not grow with the space. Read from its wiring it is a closed loop of four vertices at square-count signature $d=1$, costing
-$24\lambda - 16$ above the flat torus in the cold boxes (14 at $\lambda = 1.25$), with lighter forms of 4 and 9 units
-and rarer resting states of 8 to 45 units. Its position is neither at the seed (the nucleation site) nor opposite it: it is
-indistinguishable from uniform. Planting $k = 1, 2, 4, 8$ seeds leaves $1.10, 2.15, 2.50, 3.40$ relics on
-average: more seeds make more scrap, but fewer than one each. A tube long enough to nucleate spontaneously in several
-places leaves relics in
-proportion to its length, about one for every three seeds, where the product is a clean sheet; at warmer couplings
-the longest tubes melt instead. Held in an external bath at a fixed coupling $g$ of 1.0, 1.25 or 1.5 ($g$ plays the
-role of a temperature) a lone relic
-anneals away within $500$ to $80{,}500$ sweeps; cooled from 1.25 toward a coupling at which nothing moves, it
-is arrested (it freezes in): every relic survives a fast cooling, about four in five survive a cooling of ten to thirty thousand sweeps,
-and a third survive the slowest tried. Every verdict quoted was pre-registered before its run.
+result here is at $\lambda = 1.25$, next to CQG and not in it). Here we study the defects the conversion leaves.
+Read from the saved wiring there are three kinds, each of fixed size and each a local minimum of the energy: a
+column of the parent torus left curled (four vertices, $24\lambda - 16 = 14$ units), a double column (eight
+vertices, 8 units), and a knot of eight vertices of two kinds (20 to 30 units). Isolated, with a reservoir large
+enough to stay cold, a conversion started at one place leaves about one relic at every size from 64 to 288
+vertices, at a position indistinguishable from uniform. The number rises with the number of nucleation events
+by less than one per event ($1.10, 2.15, 2.50, 3.40$ relics for $1, 2, 4, 8$ planted seeds), and in proportion
+to length when a long torus nucleates spontaneously. In an external bath at fixed coupling a lone column anneals
+within $500$ to $80{,}500$ sweeps; under cooling it is arrested. When products of spontaneous nucleation at
+1,024 vertices are cooled over 0 to 300,000 size-fair sweeps, the columns fall from about 2 to 0.1 per product while
+the other two kinds do not change, so that the excess energy falls only from 4.3\% to 1.3\% of the release. Two
+predictions of a gentler fall, the author's and ours, failed. Every verdict quoted was pre-registered before
+its run; the readings from wiring are exact.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 
-A change from one ordered arrangement to another releases energy and, in a sealed system, must keep the released energy in the graph or its reservoir. Conservation alone does not
-require residual graph disorder or a relic. In the companion paper
-\cite{paper1} (the curled torus) the starting geometry is a $4 \times L$ torus, one
-direction curled to a single square, opens into the flat torus once the local term of CQG \cite{T17,KTB19,T25} is
-weighted by a coefficient $\lambda > 1$. That paper measured distinct escape and conversion clocks, the barrier, connected-component statistics and the release; those statistics do not prove a unique front or macroscopic growth of both torus periods. This
-one measures the remainder: its size, its number, where it sits, and how long it lasts.
+A change from one ordered arrangement to another releases energy and, in an isolated system, must keep the
+released energy in the graph or its reservoir. Conservation alone does not require a residual defect. In the
+companion paper \cite{paper1} the starting arrangement is a $4 \times L$ torus, one direction curled to a single
+square, which is metastable once the local term of CQG \cite{T17,KTB19,T25} is weighted by a coefficient
+$\lambda > 1$ and which converts, after activation, to arrangements with two squares on every edge. That paper
+measured the escape and conversion clocks, the cost of the first exit and the release. This one measures what
+is left: its kinds, its number, where it sits, and how long it lasts.
 
-The question is narrow and the answer is measurable. The reason for asking is the author's hypothesis that a
-change of this kind leaves a remainder, whatever did not convert, which has to account for the rest of the energy
-books (claim 5 of the project's VISION). Ref.~\cite{T24} describes something in the same family for CQG itself: allotropes, long-lived metastable domains of the network in a different discrete arrangement, as diamond
-survives where graphite is stable. The relic studied here is not an allotrope in that sense: it is a single object
-of fixed size, made by the burp, at $\lambda > 1$. The two are cousins, and we say so where it matters.
+The question is narrow and the answer is measurable. The reason for asking is the author's hypothesis that
+space emerged from an ordered precursor by a change of this kind, and that such a change leaves a remainder;
+she wants tested whether a remainder can last. Ref.~\cite{T24} describes something in the same family for CQG
+itself: allotropes, long-lived metastable domains of the network in a different discrete arrangement. The
+relics studied here are not allotropes in that sense: they are small objects of fixed size, made by the
+conversion, at $\lambda > 1$.
 
 The process has a second set of relatives, in the nonequilibrium dynamics of ordered phases in condensed-matter
-models, and we use that field's words where the concept is the same. There, order that forms in an isolated system,
-one whose total energy is strictly conserved, does so by nucleation and growth and can end in an arrested state
-whose defects no longer move \cite{JC26}; in contact with a thermal bath the defects diffuse and annihilate in pairs
-\cite{JYC25}. Those works study other models and are context, not validation. Their defects are kinks, walls
-between two symmetry-related versions of one order, which vanish only in pairs. A relic is a small piece of the parent
-arrangement left in place. Some relics sit inside one uniform region of the product and others at the joint between
-two regions of differing short period (Sec.~X); we do not call either a kink.
+models, and we use that field's words where the concept is the same. There, order that forms in an isolated
+system does so by nucleation and growth and can end in an arrested state whose defects no longer move
+\cite{JC26}; in contact with a thermal bath the defects diffuse and annihilate in pairs \cite{JYC25}. Those
+works study other models and are context, not validation. Their defects are kinks, walls between two
+symmetry-related versions of one order. A relic is a small piece of the parent arrangement left in place, and
+we do not call it a kink (Sec.~\ref{sec:discussion}).
 
 Every kinetic statement below concerns one Markov chain, the local edge switch used to sample the model
-\cite{KTB19}, with Metropolis acceptance, and the sealed (isolated, microcanonical) version of it built from Creutz
-demons \cite{Creutz83}. Energies,
-the relic's cost and the exact classification of end states do not depend on the chain; waiting times, annealing
-times and the count of relics per seed do.
+\cite{KTB19}, with Metropolis acceptance, and the sealed (isolated, microcanonical) version of it built from
+Creutz demons \cite{Creutz83}. Energies, the relics' costs and the classification of end states do not depend
+on the chain; waiting times, annealing times and counts per seed do.
 
-\section{Model, isolated (sealed) dynamics, and how a relic is read}
+\section{Model, dynamics, and how a relic is read}
+\label{sec:model}
 
-The state is a four-regular bipartite graph on $N$ vertices obeying the hard-core rule of CQG (no two vertices share
-more than two neighbors). With $S$ the number of squares and $X = \sum_e (S_e - 2)_+$ the number of surplus squares
-on edges carrying more than two, the energy is
+The state is a four-regular bipartite graph on $N$ vertices obeying the hard-core rule of CQG (no two vertices
+share more than two neighbors). With $S$ the number of squares and $X = \sum_e (S_e - 2)_+$ the number of
+surplus squares on edges carrying more than two, the energy is
 \begin{equation}
   H = 16(N - S) + 4\lambda X,
   \label{eq:H}
 \end{equation}
-which for $\lambda = 1$ is the CQG action, $-4\sum_v\sum_{w\sim v}\kappa(v,w)$, \cite{T25}, and for $\lambda \ne 1$ is not a curvature.
-Written edge by edge, $H = 4\sum_e [(2 - S_e) + \lambda (S_e - 2)_+]$: the flat torus, with two squares on every
-edge, sits at $H = 0$ and is the ground state for $\lambda \ge 1$; each curled direction costs $4(\lambda - 1)$ per
-vertex above it.
+which for $\lambda = 1$ is the CQG action \cite{T25} and for $\lambda \ne 1$ is not a curvature. Any
+arrangement with two squares on every edge has $H = 0$ and is a ground state for $\lambda \ge 1$; the curled
+torus sits $\varepsilon = 4(\lambda - 1)$ per vertex above it, 1 at $\lambda = 1.25$.
 
 Two letters need a warning for a reader from condensed matter, where both name interaction strengths. Here
-$\lambda$ weights the local term of the energy. The coupling $g$ of CQG plays the role of a temperature: at fixed $g$
-a proposed switch is accepted with probability $\min[1,\exp(-\Delta H/g)]$, which puts the graph in contact with
+$\lambda$ weights the local term. The coupling $g$ of CQG plays the role of a temperature: at fixed $g$ a
+proposed switch is accepted with probability $\min[1,\exp(-\Delta H/g)]$, which puts the graph in contact with
 an external thermal bath.
 
-The square-count signature $d(v)=6-q(v)$ of a vertex is the number of its six edge pairs that close no square: 2 on the flat sheet,
-1 on the curled torus, 0 in a 4-cube. These values do not certify geometry; $d$ serves as a local order parameter. A relic is a localized defect: it is counted as a connected piece of vertices at $d = 1$ in an otherwise
-flat sheet, and its excess energy, the energy above the flat torus, is read exactly from Eq.~\eqref{eq:H} on the saved wiring. A defect
-that leaves every vertex at $d = 2$ is not seen by this count; one such state, holding 20 units, is among the rare
-states of Sec.~IV.
+\emph{Reading a relic.} The square-count signature $d(v)$ of a vertex is the number of its six edge pairs that
+close no square: 2 where the graph is locally a square lattice, 1 on the curled torus, 0 in a 4-cube. It serves
+as a local order parameter and does not certify geometry. A relic is a localized defect: a connected piece of
+vertices not at $d = 2$ in a product that is otherwise at $d = 2$. Its excess energy is read exactly from
+Eq.~\eqref{eq:H} on the saved wiring.
 
-Sealed runs are isolated: they keep a reservoir of $C$ stores beside the graph and exchange energy with nothing
+\emph{What the product is.} ``Flat'' below means $d = 2$, a local statement. The companion paper reconstructed
+3,521 of its zero-energy end states: 3,446 are connected tori whose shortest noncontractible loop is six edges,
+the parent torus re-glued with its seam shifted by two sites; 73 are disconnected and two are Klein bottles
+\cite{paper1}. The product is therefore not a wide sheet, and nothing here measures a width unless it says so.
+
+\emph{Isolated (sealed) runs} keep a reservoir of $C$ stores beside the graph and exchange energy with nothing
 else. The stores play the part of the internal bath of Ref.~\cite{JC26}, degrees of freedom inside the isolated
-system that take up and give back energy without dissipating it; here the reservoir is put in by hand and its size
-$C$ is a declared parameter. A proposed switch picks one store at random, is refused if
-that store cannot pay for it, and otherwise pays or is paid; $H + \sum \text{stores}$ is conserved to the last unit
-in every run reported here. The stores' mean energy $u$ is not a calibrated temperature.
-Under a canonical distribution on levels $0,\delta,2\delta,\ldots$, it would satisfy
-$u=\delta/[\exp(\delta/g)-1]$, but the accessible spectrum and mixing have not been established.
-The companion paper found a majority of count-classified sheet-like outcomes at $C\ge N/2$ on the
-sampled grid, with the crossover in $(N/4,N/2]$. The conditional estimate is
-$C^*\simeq[\varepsilon N+s-U_{\rm graph}(g_m)]/u(g_m)$; for $\delta=1$, $u(3.5)\simeq3.024$. All runs below use $C = 2N$ stores, cold enough that the release is held and the sheet does not
-melt: in T10 and T11 one store starts with a 12-unit spark and the rest are empty; in T17, T19 and T25 every store
-starts empty and the change is started by planted seeds. A seed here is a nucleus of the product arrangement, planted
-or spontaneous; a front is the moving boundary of the domain that grows from it; and where two fronts meet, two
-domains coalesce.
+system that take up and give back energy without dissipating it; here the reservoir is put in by hand and $C$ is
+a declared parameter. A proposed switch picks one store at random, is refused if that store cannot pay for it,
+and otherwise pays or is paid; $H + \sum \text{stores}$ is conserved to the last unit in every run reported.
+The stores' mean energy is not a calibrated temperature \cite{paper1}. The isolated runs below use $C = 2N$,
+large enough that the release leaves the reservoir cold and the product at $d = 2$ \cite{paper1}: in T10 and T11
+one store starts with a 12-unit seed and the rest are empty; in T17, T19 and T25 every store starts empty and the
+change is started by planted seeds. A seed is a nucleus of the product arrangement, planted or spontaneous; a
+front is the moving boundary of the domain that grows from it; where two fronts meet, two domains coalesce. T37
+and T51 run in an external bath.
 
-\section{One relic, however large the space}
+\section{Three kinds of relic, read from the wiring}
+\label{sec:kinds}
 
-\emph{Pre-registered as T10.} Twenty sealed conversions at each of $N = 64, 96, 192, 288$ ($4 \times L$ tori,
-$\lambda = 1.25$, $C = 2N$, a 12-unit spark to start the change, 30,000 sweeps). The prediction on record was that
-the mean number of relics rises with $N$; the verdict was ONE RING, HOWEVER LARGE: at every size the product is a
-flat sheet with about one relic of four vertices, the mean count $0.85$ to $1.05$, within the replica scatter of 1,
-with a slope of $0.0003 \pm 0.0003$ per vertex. A second check, that every relic holds the expected 14 units, failed
-in 9 of the 80 boxes, which held instead a different leftover: a twist two points wide, costing 20 units. (The
-pre-registered label keeps the word ``ring''; in these cold boxes the four points lie along the torus, spanning one
-to four of its original columns, mostly two or three, not round its short direction.)
+\emph{Exact for each graph read.} A leftover has been named from a count and been wrong before in this project,
+so each kind below was read from saved adjacency lists.
 
-\section{What the relic is, read from its wiring}
+\emph{The column.} A closed loop of four vertices at $d = 1$, each of its edges lying in three squares: one
+column of the parent torus that stayed curled while the columns around it converted. It has one extra square,
+and holds 4, 9 or 14 units at $\lambda = 1.25$ according to how many edges around it carry a third square
+($S = N + 1$ and $X = 4$, 5 or 6). The 14-unit form, $24\lambda - 16$, is the common one: 1,070 of the 1,142
+single columns in the end states of Sec.~\ref{sec:cooling}. Its cheapest single switch out costs 12.
 
-Read from the saved final graphs of two of the companion paper's decays, the four-point relic is a closed loop of
-four vertices at $d = 1$, each of its edges lying in three squares; in one of the two it is an original column of the
-torus that stayed curled while the columns around it opened. At $\lambda = 1.25$ it comes in three forms, holding 4,
-9 or 14 units according to how many of the edges around it carry a third square ($S = N + 1$ and $X = 4$, 5 or 6).
-The form left in the cold boxes of T10 and T11 is the 14-unit one, costing $24\lambda - 16$ above the flat torus;
-there it was identified from its energy and the positions of its points, not read from its wiring. Rarer resting
-states, 8 to 45 units, are combinations of small defects in the sheet: a two-point twist (20 units), a 3-cube, an
-open line of three, single edges and single points; eleven of twelve unusual states read this way matched their
-recorded release exactly, and the twelfth was set aside as a decay that changed state inside its last measuring
-window. In the states read these are small, 8 to 45 units at every tube length; whether the list of kinds is
-complete is not known.
+\emph{The double column.} Eight vertices at $d = 1$ with twelve edges among them, each vertex keeping three
+edges inside the piece and one out: a $4 \times 2$ segment of the parent torus. It holds 8 units.
 
-The share of the release kept by the 14-unit relic is exact: $(24\lambda - 16)/[4(\lambda - 1)N]$, which is 22\% at $\lambda = 1.25$
-and $N = 64$, 72\% at $\lambda = 1.05$, and falls as $1/N$. Near $\lambda = 1$ the scrap keeps a large share of
-the lump; in a large space it is negligible.
+\emph{The knot of two kinds.} Eight vertices: two joined pairs at $d = 1$, each vertex's four edges carrying 2,
+2, 3 and 3 squares, and two joined pairs at $d = 3$, each vertex's edges carrying 2, 1, 1 and 2. It holds 20
+units at its own vertices and 30 within one step. Counted by connected pieces it appears as four pieces of two vertices, two steps apart, which is how the
+registered analysis first counted it. A 20-unit ``twist'' seen in 9 of 80 isolated runs (Sec.~\ref{sec:one}) is
+of the same kind; whether it is the same arrangement was not settled.
 
-\section{Where it sits}
+\emph{Pre-registered as T55}, on the 600 end states of Sec.~\ref{sec:cooling}, before any of them was read
+this way. Three readings of the pieces that cooling does not remove were registered: SCAR (a single switch
+removes the piece and lowers the energy), SEAM (the piece carries an edge joining places at least seven steps
+apart by any other route, the stitching between domains that grew from different seeds) and KNOT (neither). The
+verdict was KNOT for both piece sizes scored: all 652 pieces of two and all 103 pieces of eight at $L = 256$ are local
+minima, with a cheapest exit of 11 in nearly all, and 4 of 2,121 pieces of any size carry such an edge. The
+author's prediction, SEAM, failed; ours held in part (not SCAR; the pieces of eight are not SEAM as we had
+guessed).
 
-\emph{Pre-registered as T11}, in cold boxes as T10 at $N = 64$ and 96. Two readings were possible: the relic marks
-the seed, or it marks the seam opposite the seed, where a front spreading both ways from one start would meet itself.
-In the 36 and 28 boxes holding one relic its position is indistinguishable from uniform along the torus: neither.
-Where fronts actually met was not measured. The verdict on record is NEITHER.
+Rarer resting states, 8 to 45 units, were read from twelve of the companion paper's decays: combinations of
+small defects, among them a two-vertex twist (20 units), a 3-cube, an open line of three vertices, single edges
+and single vertices; eleven matched their recorded release exactly, and the twelfth changed state inside its
+last measuring window. Whether the list of
+kinds is complete is not known.
 
-\section{How many: one per tube, or one per seed?}
+The share of the release kept by one 14-unit column is exact, $(24\lambda - 16)/[4(\lambda - 1)N]$: 22\% at
+$N = 64$, falling as $1/N$.
 
-\emph{Pre-registered as T17.} A $96 \times 4$ torus ($N = 384$) at $\lambda = 1.25$ in a cold sealed box, $k$ seeds
-planted as the cheapest move out of the torus at evenly spaced columns, twenty runs per $k$, all converting, energy
-exact. The author's hypothesis corresponds to one relic per seed, though she did not pick among the pre-registered
-options; ours was between, leaning toward one per tube whatever $k$. Neither one per seed nor one per tube held:
+\section{One seed, about one relic, at every size}
+\label{sec:one}
 
-\begin{table*}
-\centering
-\begin{tabular}{@{}lcccc@{}}
-\toprule
-seeds $k$ & 1 & 2 & 4 & 8 \\
-relics per tube & 1.10 & 2.15 & 2.50 & 3.40 \\
-\bottomrule
-\end{tabular}
-\end{table*}
+\emph{Pre-registered as T10.} Twenty isolated conversions at each of $N = 64, 96, 192, 288$ ($C = 2N$, a
+12-unit seed, 30,000 sweeps). The prediction on record was that the mean number of relics rises with $N$. The
+verdict was ONE RING, HOWEVER LARGE: at every size the product holds about one column, the mean count $0.85$
+to $1.05$, with a slope of $0.0003 \pm 0.0003$ per vertex. (The registered label keeps the word ``ring''; the
+four vertices lie along the torus, spanning one to four of its original columns.) A second check, that every
+relic holds 14 units, failed in 9 of the 80 runs, which held the 20-unit twist instead.
 
-\noindent The slope is $0.29 \pm 0.04$ relics per extra seed; the verdict on record is BETWEEN, though the slope is
-only about one standard error above the boundary with one per tube (0.25), and a straight line describes poorly means
-that rise by 1.05, then 0.35, then 0.90. More seeds make more scrap, but fewer than one each, and the growth looks
-less than proportional. The counts are also more regular than independent events would give (sub-Poissonian): their variance over
-their mean is 0.09 to 0.50, against about 1. Where the domains grown from neighboring
-seeds coalesce, their relics may merge or anneal; that was not measured and the saved end states hold the positions.
+\emph{Pre-registered as T11}, at $N = 64$ and 96. Two readings were possible: the relic marks the seed, or it
+marks the place opposite the seed, where the two fronts from one nucleus would meet. In the 36 and 28 runs
+holding one relic its position is indistinguishable from uniform along the torus: NEITHER. Where the fronts
+actually met was not measured.
 
-\section{A tube that seeds itself: spontaneous nucleation at many sites}
+\section{How many}
+\label{sec:count}
 
-\emph{Pre-registered as T37.} The chance of a seed per sweep does not grow with the tube, while a front's speed per
-sweep falls with its size, so a long enough tube nucleates in several places before any one domain has grown across it.
-Tubes $4 \times L$ at $\lambda = 1.25$ were started from the exact tube in an external bath at fixed coupling: $g = 1.25$ at $L = 1024$
-(12 replicas), and $g = 1.5$ and $1.75$ at $L = 64$ to $1024$ (20 to 40 replicas a cell). A run stopped when the
-square count had fallen 97\% of the way from the tube's to the sheet's, and was then settled for 600 to 2,400 sweeps.
-A new seed (a nucleation event) was counted when a flat patch (a domain) of at least eight vertices appeared touching no patch counted before. The
-predictions on record were ours, with the same verdict inferred for the author: that seeds grow with length, that the
-converted fraction follows the one-dimensional law of nucleation and growth \cite{KJMA} (Avrami exponent 2), and that
-the energy left per tube at the largest $L$ is at least three times that at $L = 64$.
+\emph{Planted seeds; pre-registered as T17.} A $96 \times 4$ torus ($N = 384$), isolated and cold, with $k$
+seeds planted as the cheapest move out of the torus at evenly spaced columns; twenty runs per $k$, all
+converting. The author's hypothesis corresponds to one relic per seed, though she did not pick among the
+registered options; ours leaned toward one per torus whatever $k$. Neither held: $1.10$, $2.15$, $2.50$ and
+$3.40$ relics per torus for $k = 1, 2, 4, 8$, a slope of $0.29 \pm 0.04$ per extra seed, verdict BETWEEN. The
+slope is only about one standard error above the boundary with one per torus, and the rises (1.05, then 0.35,
+then 0.90) are poorly described by a line. The counts are more regular than independent events would give
+(sub-Poissonian: variance over mean 0.09 to 0.50). Where domains grown from neighboring seeds coalesce, relics
+may merge or anneal; that was not measured.
 
-All three held by the registered rules. The seed count grows with $L$ (exponent $0.92$ at $g = 1.5$, $0.78$ at $1.75$);
-the Avrami exponent is $2.02$, $2.14$ and $2.03$ at the three couplings; and the energy left per tube grows far more
-than threefold, for the verdict MANY SEEDS, MANY SCRAPS. A fourth prediction, the seed count computed from the measured
-nucleation rate and front speed with nothing fitted, holds at $g = 1.25$ ($0.71$ of the observed) and fails at the
-warmer couplings ($0.41$ and $0.16$ at $L = 1024$): more seeds form there than the single-seed rate predicts.
+\emph{Spontaneous nucleation; pre-registered as T37.} The chance of a seed per sweep does not grow with the
+torus while a front's speed per sweep falls with its size, so a long enough torus nucleates in several places
+before any one domain has grown across it. Tori $4 \times L$ were started in an external bath at $g = 1.25$
+($L = 1024$) and at $g = 1.5$ and $1.75$ ($L = 64$ to $1024$), 12 to 40 replicas a cell. The registered
+predictions were ours, with the same verdict inferred for the author: that the seed count grows with length,
+that the converted fraction follows the one-dimensional law of nucleation and growth \cite{KJMA} (Avrami
+exponent 2), and that the energy left grows at least threefold from $L = 64$ to the largest $L$. All three held:
+the seed count grows as $L^{0.92}$ and $L^{0.78}$ at $g = 1.5$ and 1.75, and the Avrami exponent is $2.02$,
+$2.14$ and $2.03$ at the three couplings. A fourth, the seed count computed from the measured nucleation rate
+and front speed with nothing fitted, holds at $g = 1.25$ (0.71 of the observed) and fails at the warmer
+couplings (0.41 and 0.16 at $L = 1024$).
 
-The saved final graphs were read after that verdict, and they divide the cells in two.
+Read afterwards from the saved graphs, the cells divide in two. Where the product stays at $d = 2$ (about 95\%
+of vertices), columns are left in proportion to length: one per 57 to 72 columns of torus at $g = 1.5$ for
+$L \le 256$, and at $g = 1.25$ about one for every three seeds, close to the $0.29$ per planted seed above. At
+$L = 1024$ and $g = 1.5$ or $1.75$, 55\% and 74\% of vertices ended at $d > 2$, the squares per vertex fell to
+$0.90$ and $0.83$, and the graph had absorbed $1.75$ and $2.49$ per vertex from the bath: thermal melting, with
+energy supplied from outside. At this $\lambda$ an isolated torus's own release is too small to do that
+\cite{paper1}. The coupling at which the product gives way to the random phase falls as the system grows
+(the published curves for $N = 100$ to 200 in the parent model do not collapse either; Ref.~\cite{KTB19},
+Fig.~8a, our reading), so the test of Sec.~\ref{sec:cooling} nucleates at the coldest of these couplings.
+
+\section{Lifetime in an external bath}
+\label{sec:lifetime}
+
+\emph{Pre-registered as T19.} Products with exactly one column, made as in T17 at $k = 1$ from a $24 \times 4$
+torus ($N = 96$), were held at fixed coupling $g = 1.0$, $1.25$ and $1.5$ for 100,000 sweeps, the relic's
+position read every 500. The options on record were that it moves, that it anneals at the warmer couplings and
+stays at the colder, or that it stays. It anneals at every coupling: at $g = 1.0$ all nine were gone between
+4,000 and 80,500 sweeps; at 1.25 all ten within 500 to 13,000; at 1.5 all ten within 11,000, two after moving
+first. Our prediction, that it would stay at $g = 1.0$, was wrong. In T10's cold isolated runs the relic lasted
+the whole 30,000 sweeps.
+
+In the terms of defect kinetics: each product held one relic, so each annealed singly, with no partner to
+meet, and 27 of the 29 did so without first being seen to move. A column has low mobility and is not removed
+by pair annihilation, which is how the kinks of Refs.~\cite{JC26,JYC25} are removed.
+
+\section{Cooling}
+\label{sec:cooling}
+
+Reality cools as it expands, so what matters for a long-lived relic is a race between annealing and cooling.
+
+\emph{One relic; pre-registered as T25.} A product with one column ($N = 96$) was cooled from $g = 1.25$, where
+every column anneals within 13,000 sweeps, to $g = 0.25$, where no move is accepted, by the same factor each
+block of 500 sweeps over $t_{\rm cool} = 300$ to $100{,}000$ sweeps, then held cold for 20,000 sweeps. The
+registered verdict was FREEZES IN if some cooling time keeps a majority of relics and the fastest keeps the
+most. The prediction recorded for the author was FREEZES IN; it was inferred from her stated positions, and
+she confirmed it only after the reading. Ours was FREEZES IN with a threshold between 1,000 and 10,000 sweeps.
+The relics surviving were 20/20, 17/17, 19/19, 15/19, 14/18 and 7/19 at $t_{\rm cool} = 300$, 1,000, 3,000,
+10,000, 30,000 and 100,000: FREEZES IN, with the registered ``freeze-out time'', the longest cooling that keeps
+a majority, at 30,000 sweeps, three to thirty times longer than we predicted. (That label is a threshold
+cooling duration. It is not the freeze-out time of the Kibble--Zurek literature, the instant at which a system
+can no longer keep up with a cooling of finite rate \cite{dCZ14}.) A relic that anneals at every fixed coupling
+tried is therefore kept by cooling. This is dynamical arrest in the sense of Ref.~\cite{JC26}, where defects
+become immobile once the energy available to them falls below the local barrier; there the arrest follows a
+sudden change in an isolated system, and here it follows cooling by an external bath (our reading).
+
+\emph{Many relics; pre-registered as T51.} Tori $4 \times L$ were started at $g = 1.25$ and left to nucleate
+spontaneously until at least 90\% of vertices were at $d = 2$ and no stretch of unconverted torus remained.
+Each product was then cooled to $g = 0.25$ over $t_{\rm cool}$ and held, every cooling time starting from the
+same product. Times are in size-fair sweeps, $N/96$ sweeps of the chain, so that each local pair of edges is
+offered as often per unit time as at T25's 96 vertices. At $L = 256$ ($N = 1{,}024$) there were 80 products
+for $t_{\rm cool} = 0$ to 100,000 and 40 for 300,000; at $L = 128$ and 512, 40 each at 10,000. All 160 tori
+converted, and at the end of the nucleation stage they held $1.27 \pm 0.21$, $2.14 \pm 0.15$ and $4.90 \pm 0.33$
+columns at $L = 128$, 256 and 512, one per 100 to 120 columns of torus, with 1.75, 2.67 and 3.90 pieces of
+other kinds.
+
+The registered question was the shape of the fall of the column count $C$ with cooling time, scored on
+$R(t) = C(10t)/C(t)$ at $t = 10{,}000$ and $30{,}000$: GENTLE if both lie between 0.25 and 0.85, CLIFF if
+either is below 0.25. The author predicted GENTLE and so did we. The result is $R(10{,}000) = 0.347 \pm 0.040$
+and $R(30{,}000) = 0.079 \pm 0.035$: CLIFF. Both predictions failed.
 
 \begin{table*}
 \centering
 \small
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular}{@{}lccccccc@{}}
 \toprule
- & \multicolumn{3}{c}{$g = 1.5$} & $g = 1.25$ \\
-$L$ & 64 & 128 & 256 & 1024 \\
+$t_{\rm cool}$ (size-fair sweeps) & 0 & 1,000 & 3,000 & 10,000 & 30,000 & 100,000 & 300,000 \\
 \midrule
-seeds per tube & 1.9 & 4.5 & 9.2 & 20.6 \\
-four-point relics per tube & 1.12 & 1.98 & 3.55 & 7.25 \\
-other leftover pieces & 0.60 & 2.70 & 7.20 & 15.0 \\
-vertices at $d = 2$ & 0.97 & 0.97 & 0.94 & 0.95 \\
-energy left per vertex (median) & 0.06 & 0.10 & 0.14 & 0.08 \\
+columns, relative to the end of nucleation & 1.04 & 1.09 & 1.08 & 0.99 & 0.78 & 0.35 & 0.06 \\
+excess energy, share of the release & 0.043 & 0.044 & 0.042 & 0.040 & 0.034 & 0.021 & 0.013 \\
+pieces of two vertices, per 80 products & 91 & 101 & 101 & 102 & 101 & 103 & 106 \\
+pieces of eight vertices, per 80 products & 16 & 15 & 16 & 16 & 16 & 15 & 18 \\
 \bottomrule
 \end{tabular}
+\caption{Cooling 1,024-vertex products of spontaneous nucleation (T51, $L = 256$). The column count can exceed
+its value at the end of nucleation because columns can still form after that count. Standard errors are 0.03 to
+0.06 on the first row and 0.003 on the second. The last column is from 40 products, scaled to 80. The pieces of
+two are the quarters of the knot of Sec.~\ref{sec:kinds}; the pieces of eight are double columns.}
+\label{tab:t51}
 \end{table*}
 
-\noindent \emph{Where the product is a clean sheet, the relics grow in proportion to the length}: about one per 57 to
-72 columns at $g = 1.5$, and at $g = 1.25$ about one for every three seeds ($0.35$; Sec.~VI found $0.29$ per extra
-planted seed), in eleven tubes of twelve. So the single relic of Sec.~III is what one seed leaves; a space long enough
-to seed itself leaves relics in proportion to its size. The energy these sheets still hold above the flat torus,
-$0.05$ to $0.21$ per vertex against a release of 1, is a reading at the moment the run stopped, at couplings where
-Sec.~VIII shows every relic annealing in time; it is not a frozen amount.
-
-\emph{The longest tubes at the warmer couplings melted.} This is thermal melting, with energy supplied by the external
-bath; at this $\lambda$ an isolated tube's own release is too small to do it \cite{paper1}. At $L = 1024$, 55\% ($g = 1.5$) and 74\% ($g = 1.75$) of the
-vertices ended at $d > 2$, the squares per vertex had fallen to $0.90$ and $0.83$, and the tubes had absorbed $1.75$
-and $2.49$ per vertex from the bath where an opening releases 1. The stopping rule watches the square count, which
-melting lowers as an opening does, and the registered score counts the energy left; in these cells it counted melt.
-A sheet of 96 vertices holds at $g = 1.5$ (Sec.~VIII) and a tube of 4,096 does not: the coupling at which the sheet
-gives way to the random phase falls as the system grows (in the parent model the published curves for $N = 100$ to
-200 do not collapse either; Ref.~\cite{KTB19}, Fig.~8a, our reading). The run lengths
-compound this: the chain offers any one local pair of links about $2/N$ times a sweep, so in sweeps a long tube was
-given less local time than a short one before it was read.
-
-\section{How long it lasts at a fixed coupling: the relic's lifetime in an external bath}
-
-\emph{Pre-registered as T19.} Sheets with exactly one relic, made as in T17 at $k = 1$ but from a $24 \times 4$ torus
-($N = 96$), were held at fixed coupling
-$g = 1.0$, $1.25$ and $1.5$ for 100,000 sweeps, the relic's position read every 500. The options on record were
-that it moves, that it anneals at the warmer couplings and stays at the colder, or that it stays at every $g$. It
-anneals at every coupling: at $g = 1.0$ all nine followed relics were gone between 4,000 and 80,500 sweeps; at 1.25
-all ten within 500 to 13,000; at 1.5 eight annealed and two moved first, all gone within 11,000. In T10's cold boxes,
-whose mean store energy ends near $u=0.5$ (a conditional unit-level canonical proxy gives $g\simeq0.91$, not a calibrated temperature), the relic lasted the whole 30,000 sweeps. Our own prediction, that it would stay at
-$g = 1.0$, was wrong. Said plainly: in this model the relic did not last at any of the three fixed couplings tried,
-and it lasted where its surroundings stayed very cold. In the terms of defect kinetics: each sheet held one relic, so
-each relic annealed singly, with no partner to meet, and 27 of the 29 followed did so without first being seen to
-move (positions were read every 500 sweeps). The relic
-has low mobility and is not removed by pair annihilation, which is how the kinks of Refs.~\cite{JC26,JYC25} are
-removed.
-
-\section{The race: it is arrested (freezes in) when the box cools}
-
-\emph{Pre-registered as T25.} Reality cools as it expands, so the question that matters for a long-lived relic is a
-race between healing and cooling. A sheet with one relic, made as in Sec.~VIII ($N = 96$), was cooled from
-$g = 1.25$, where every
-relic anneals within 13,000 sweeps at fixed coupling, to $g = 0.25$, where nothing moves, by the same factor each block
-of 500 sweeps over $t_{\rm cool} = 300$ to $100{,}000$ sweeps, and then held cold for 20,000 sweeps; twenty replicas per
-cooling time, of which 17 to 20 ended the making step with exactly one relic and were followed. The pre-registered
-verdict was FREEZES IN if some cooling time keeps a majority of relics and the fastest cooling keeps the most, ALWAYS
-HEALS if no cooling time keeps a majority. The prediction recorded for the author was FREEZES IN, with no
-freeze-out time; it was inferred by the assistant from her stated positions, and she confirmed it as her own only
-after the reading below had been recorded. Ours was FREEZES IN with a freeze-out time between 1,000 and 10,000
-sweeps.
-
-\begin{table*}
-\centering
-\small
-\begin{tabular}{@{}lcccccc@{}}
-\toprule
-$t_{\rm cool}$ (sweeps) & 300 & 1,000 & 3,000 & 10,000 & 30,000 & 100,000 \\
-relics surviving & 20/20 & 17/17 & 19/19 & 15/19 & 14/18 & 7/19 \\
-\bottomrule
-\end{tabular}
-\end{table*}
-
-\noindent The verdict is FREEZES IN, with the freeze-out time, the longest cooling that keeps a majority, at 30,000
-sweeps. (That registered label is a threshold cooling duration. It is not the freeze-out time of the Kibble--Zurek
-literature, which is the instant at which a system can no longer keep up with a cooling of finite rate
-\cite{dCZ14}.) Even a cooling of 30,000 sweeps, more than twice the longest annealing time seen at the starting coupling in
-T19, keeps most relics, because the coupling leaves the range where healing is fast early in the schedule: the relics
-that healed were last seen within the first 15,000 sweeps of cooling, while the coupling was still above about 1. Our
-prediction of the freeze-out time was too short by a factor of three to thirty; the verdict is the one recorded for
-the author, whose prediction named no freeze-out time. A relic that anneals at every fixed coupling tried is
-therefore kept by cooling in this model, which bears on whether a remainder of the change can last. This is dynamical
-arrest in the sense of Ref.~\cite{JC26}, where defects become immobile once the energy available to them falls below
-the local barrier; there the arrest follows a sudden change in an isolated system, and here it follows cooling by an
-external bath (our reading). What the model
-cannot say is how its sweep relates to a cosmological clock.
+Three further results are in Table~\ref{tab:t51} and beside it. \emph{The energy that stays is not in the
+columns.} The columns fall seventeenfold while the excess energy falls threefold, because the knots and
+double columns do not change with cooling time at all over the range run. Fitted from 10,000 upward, as
+registered before the reading, the columns fall as $t_{\rm cool}^{-0.82 \pm 0.13}$ and the excess energy as
+$t_{\rm cool}^{-0.34 \pm 0.06}$. These are apparent exponents over a decade and a half \cite{BBJC26}, and a
+constant population beside a vanishing one implies a floor that a power law does not have; a form with a floor
+has not been tested on registered data. \emph{The size-fair clock missed one of its two points.} Its
+registered prediction was that the survival at 1,024 vertices would repeat T25's at 96: against T25's
+$C(30{,}000)/C(10{,}000) = 0.99$ and $C(100{,}000)/C(10{,}000) = 0.47$ we find $0.78 \pm 0.05$ and
+$0.35 \pm 0.04$, the first outside the registered window of 0.20. On that clock the larger product loses its
+columns sooner. \emph{The count per length does not depend on size} at the one cooling time tested: $0.0107$,
+$0.0083$ and $0.0093$ columns per column of torus at $L = 128$, 256 and 512, each pair within two standard
+errors. At $L = 512$, 7 of 40 products ended as two separate pieces.
 
 \section{Discussion}
+\label{sec:discussion}
 
-Four facts about the relic are now on the record for this model. It is small and of fixed size, a closed loop of
-four points left curled, and one seed leaves one of it whatever the size of the space. Its number depends on how the
-change started, growing with the number of seeds by less than one per seed, and in proportion to the length of a
-tube that seeds itself. It anneals away at each fixed coupling tried, from 1.0 to
-1.5. And it freezes in when its surroundings cool, even slowly.
+\emph{What is on the record for this model.} The conversion leaves three kinds of small defect of fixed size,
+each a local minimum. Started at one place it leaves about one, whatever the size. Their number is set by how
+the conversion started: it grows with the number of nucleation events by less than one per event, and in
+proportion to the length of a torus that nucleates spontaneously. A lone column anneals at each fixed coupling
+tried and is arrested by cooling. Among many, slow cooling removes the columns and leaves the knots and double
+columns, which hold most of the energy that stays.
 
-For the author's hypothesis, which needs the change to leave a remainder, the first two say what that remainder is
-in this model: small, of fixed size, and more of it when the change starts in more places. The last two say when
-it lasts: a relic survives when its surroundings cool, even slowly, on a clock the model cannot relate to cosmic
-time. What part such a remainder plays at cosmic scale is beyond what this model can address.
+\emph{For the author's hypothesis}, which asks whether a remainder of such a change can last: in this model
+the remainder that lasts is not the common relic. It is the two rarer kinds, whose number over the range run
+depends on how the change started and not on how slowly its product cooled. Whether they anneal on longer
+clocks is not known: the range ends at 300,000 size-fair sweeps. A first exit of nearly the same cost separates
+the kind that anneals (12 units) from the kinds that do not (11), so the first exit is not what decides; the
+barrier that would is the highest point on the lowest route to the product, which has not been computed for
+any of the three.
 
-Said in the vocabulary of nonequilibrium defect kinetics \cite{JC26,JYC25,FZC26} (our reading; those works study
-other models): the change is the decay of a metastable ordered state by nucleation and growth; the relic is a
-localized defect, a piece of the parent arrangement trapped in a local minimum; its number is set by the number of
-nucleation events, with a yield below one per event; in an external bath it anneals singly and has low mobility; and
-under cooling it is dynamically arrested. Two differences from the kinks studied there matter to anyone carrying
-results across. A kink separates two symmetry-related versions of one order and is removed only by meeting another,
-while a lone relic anneals by itself. And the dynamics there is a physical equation of motion, while ours is a
-sampling chain whose rates are its own. One point cuts the other way. The product here is not unique: every
-arrangement with two squares on every edge has zero energy, whatever its short period. An exploratory reading of the companion paper's saved end
-states (the project record, entry O116) finds that about half of the 2,014 that keep a defect hold a stretch of the
-product wider than six edges around, and that in the 440 where a stretch six around and a wider one are both present
-the two never meet directly: a defect always lies between them. Such a relic is
-the joint between two regions of the product, which makes it the nearer relative of a domain wall; regions of
-differing short period joined at defects are also the majority outcome of the companion paper's isolated runs when the
-reservoir is small or the curling cost larger \cite{paper1}. Whether the relics followed in Secs.~VIII and IX were
-joints of that kind was not read.
+\emph{In the vocabulary of nonequilibrium defect kinetics} \cite{JC26,JYC25,FZC26} (our reading; those works
+study other models): the conversion is the decay of a metastable ordered state by nucleation and growth; a
+relic is a localized defect trapped in a local minimum; its number is set by the nucleation events, with a
+yield below one per event; in an external bath a column anneals singly and has low mobility; under cooling it
+is dynamically arrested. Two differences from the kinks studied there matter to anyone carrying results
+across. A kink separates two symmetry-related versions of one order and is removed only by meeting another,
+while a lone column anneals by itself. And the dynamics there is a physical equation of motion, while ours is
+a sampling chain whose rates are its own.
 
-What this cannot show: anything about the real universe; how the model's cooling clock relates to a cosmological
-one; and whether a relic in three dimensions, or with the model's points treated as interchangeable, behaves the
-same way. Reweighting by the side-preserving automorphism count changes relative equilibrium
-weights. For symmetric proposals its acceptance is
-$\min\{1,[A(G')/A(G)]\exp(-\Delta H/g)\}$; the ratio belongs inside the minimum.
-A favorable endpoint weight alone does not determine an annealing rate or lifetime.
+\emph{Is a relic a wall between two regions? (exploratory).} One point cuts the other way. The product is not
+unique: every arrangement with two squares on every edge has zero energy, whatever its short period. A reading
+of the companion paper's 2,014 saved end states that keep a defect (the project record, entry O116) finds that
+about half hold a stretch wider than six edges around, and that in the 440 where a stretch six around and a
+wider one are both present the two never meet directly: a defect always lies between them. A relic of that
+sort is the joint between two regions of the product, the nearer relative of a domain wall, and T55's SEAM did
+not test for it, since a joint need carry no long-range edge. Which of the three kinds are joints, and whether
+the relics followed in Secs.~\ref{sec:lifetime} and \ref{sec:cooling} were, has not been read. Regions of
+differing short period joined at defects are also the majority outcome of the companion paper's isolated runs
+when the reservoir is small or the curling cost larger \cite{paper1}.
+
+\emph{Not claimed:} anything about the real universe; a relation between the model's sweep and a cosmological
+clock; that the knots and double columns never anneal; that the list of kinds is complete; a law for the fall
+with cooling time; or that a relic in three dimensions, or with the model's vertices treated as
+interchangeable, behaves the same way. Under a rule that also charges for loops of six, tested since, the
+product widens and holds flaws throughout; there the defects are the main obstacle to a clean product and not
+a rare remainder, and that rule is the subject of another paper.
 
 \begin{acknowledgments}
-Code, analysis and text were drafted with Claude (Anthropic), with the 9 October scope review
-assisted by Codex (OpenAI), in conversation with the author, who directed and
-checked the work; no physicist has reviewed it. The repository holds every configuration, seed, result and
-pre-registration: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+Code, analysis and text were drafted with Claude (Anthropic), with a scope review assisted by Codex (OpenAI),
+in conversation with the author, who directed and checked the work; no physicist has reviewed it. The
+repository holds every configuration, seed, result and pre-registration:
+\url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
 \end{acknowledgments}
 
 \begin{thebibliography}{99}
-\bibitem{paper1} E. Smith, The curled torus burps: activated escape and conversion in a graph model of emergent geometry, draft (2026), \texttt{docs/papers/curled\_torus/}.
+\bibitem{paper1} E. Smith, The curled torus burps: activated escape and conversion in a graph model of emergent
+geometry, technical manuscript (2026), \texttt{docs/papers/curled\_torus/} in the repository above.
 \bibitem{T17} C. A. Trugenberger, Combinatorial quantum gravity: geometry from random bits, JHEP 09, 045 (2017).
 \bibitem{KTB19} C. Kelly, C. A. Trugenberger and F. Biancalana, Self-assembly of geometric space from random
 graphs, Class. Quantum Grav. 36, 125012 (2019).
@@ -347,7 +355,8 @@ graphs, Class. Quantum Grav. 36, 125012 (2019).
 042001 (2025); arXiv:2512.17676.
 \bibitem{T24} C. A. Trugenberger, Dark matter and dark energy in combinatorial quantum gravity, arXiv:2409.09385
 (2024).
-\bibitem{Creutz83} M. Creutz, Microcanonical Monte Carlo simulation, Phys. Rev. Lett. 50, 1411 (1983).
+\bibitem{Creutz83} M. Creutz, Microcanonical Monte Carlo simulation, Phys. Rev. Lett. 50, 1411 (1983). (Not read
+by us.)
 \bibitem{KJMA} A. N. Kolmogorov, Izv. Akad. Nauk SSSR, Ser. Mat. 1, 355 (1937); W. A. Johnson and R. F. Mehl, Trans.
 AIME 135, 416 (1939); M. Avrami, J. Chem. Phys. 7, 1103 (1939). (Not read by us; details to verify.)
 \bibitem{JC26} H. Jang and G.-W. Chern, Suppressed coarsening after an interaction quench in the Holstein chain,
@@ -359,6 +368,8 @@ wave insulators, arXiv:2601.07583 (2026). (Read in part.)
 \bibitem{dCZ14} A. del Campo and W. H. Zurek, Universality of phase transition dynamics: topological defects from
 symmetry breaking, Int. J. Mod. Phys. A 29, 1430018 (2014); arXiv:1310.1600. (Read in part; journal details to
 verify.)
+\bibitem{BBJC26} A. Bora, S. S. Bakshi, H. Jang and G.-W. Chern, Cooperative domain-wall dynamics in a
+two-dimensional quasiclassical Holstein model, arXiv:2609.28436 (2026). (Read in part.)
 \end{thebibliography}
 
 \end{document}
