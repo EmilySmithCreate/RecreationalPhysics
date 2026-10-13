@@ -1,5 +1,36 @@
 # Plain-language edition
 
+**Draft of 13 October 2026, from the author's notes on Chapters 1 to 3; she has not read it.** Her notes: the
+edition is dense; Chapter 1 should be a third as long and run author, hypothesis, approach, outline, then what a
+toy is and why this one; Chapter 2 about half as long, on reproducing the published model and the one thing our
+toy changes; and "flat" in Chapter 3's words and drawings misleads, because the tube is a ring and the sheet is
+a fatter doughnut.
+
+- **Chapter 1** is one page (0.6 of a page of text; it was 1.9 pages), in her order. Its two sketches are gone:
+  the hill returns with its numbers in Chapter 4, and the histogram sketch left with the word "hump".
+- **Chapter 2** is two pages (it was three). The published model is one figure, a card with its rules, its
+  price list and its one move, in place of three figures; the card shows the published prices (16 and 4), and
+  the knob comes after the reproduction, as the one thing we change. Sharp against smooth is three sentences
+  (water, a magnet, the two names); the test is described as a jump in energy, and the six numbers are a
+  two-row table. The caveats on the published simulations and Kelly's thesis share one footnote.
+- **Chapter 3** has a new section, "Ring and doughnut: flat is not the same as open" (about a page). Every
+  arrangement in the toy closes on itself; flat is about each dot's surroundings and wide is about the whole
+  shape; a count an inhabitant could make (dots within one, two, three steps of home) matches an endless
+  grid's until half the way around, so a doughnut much wider than its inhabitants is open in every way they can
+  check, and the tube falls short at two steps. One paragraph sets this beside real space, measured flat and
+  not measured endless (source 15, read by abstract). A direction is no longer called "large" where the count
+  $d$ is defined: the count says a direction is not closed up in one square, not how far around it is.
+  Chapters 6 and 7 now point back to these two words and this count.
+- **The table's numbers are new to this edition and exact**: counted with the record's own readers
+  (`scripts/read_open_shells.py`, `scripts/read_endpoint_width.py`) and pinned in
+  `tests/test_read_shapes.py::test_the_count_from_inside_falls_short_at_half_the_way_round`. The technical
+  manuscript does not carry them; its `width` reading of the saved end states is the same count.
+- The PDF has 36 pages and 30 figures (it had 36 and 33). **The blog pages are not rebuilt**: post 01 under
+  `docs/public/mainnerd/` and its record of figure sizes still hold the 12 October text and its 33 figures.
+  When they are rebuilt, the pinned `plain-fig-33.svg` in `tests/test_main_nerd_pages.py` becomes 30.
+- Not done, hers to decide: renaming "the flat sheet" through Chapters 4 to 11 (it is defined honestly in
+  Chapter 3 and keeps its name after that), and any shortening of Chapters 3 to 11.
+
 **Revised 12 October 2026 from the author's notes on the 11 October revision.** Chapter 1 says why two humps
 are not enough and that the author asks for a jump in energy, not for the words "first order". Chapter 3
 states the curling cost as something she wants tested, with what is exact in the toy and what is missing.

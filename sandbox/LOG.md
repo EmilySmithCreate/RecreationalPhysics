@@ -173,3 +173,9 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   extrapolation to 10¹⁸ sweeps would not follow: the share would level off near 0.012, about the energy of the
   knots that do not anneal. The two readings part at a million fair sweeps (0.012 against 0.008) and in between
   the cells already run. Not promoted.
+- 2026-10-13. From inside, when does a wrapping grid stop looking endless? Counted the points within r steps on
+  grids 4, 8 and 12 around and on the tube with its seam shifted by two, two ways (the record's `shells`, and the
+  square lattice with the gluing vectors identified). The count first falls short at r = half the way around: 12
+  of 13 at two steps on the tube, 40 of 41 at four steps eight around, 84 of 85 at six steps twelve around, 22 of
+  25 at three steps on the shifted seam. Exact, and pinned in `tests/test_read_shapes.py`; a table in the
+  plain-language edition of paper 1, Chapter 3.

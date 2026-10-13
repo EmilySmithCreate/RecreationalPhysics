@@ -78,10 +78,9 @@
 Everything you have ever seen happened in space with three large directions you can move in. We know its
 rules well. What we do not know is how it came to be.
 
-This paper is about a hypothetical change: space emerging sharply from something else. We want to
-understand that change, and how the two phases of being are related. We engage a toy model of dots
-and links and ask three questions: what does it take to start such a change, what comes out when it
-happens, and what is left behind.
+This paper tests one piece of one hypothesis about that: a sharp change from something else into
+space. In a small world of dots and links it asks three questions. What does it take to start such a
+change? What comes out when it happens? What is left behind?
 
 \begin{figure}[H]
 \centering
@@ -128,167 +127,75 @@ happens, and what is left behind.
 \end{scope}
 \end{tikzpicture}
 \caption{The idea in one picture. \Sketch\ What came before space, called X here (left), waits until a
-small push starts it; the new arrangement spreads behind a front (middle); when it is done, flat space holds the energy
-that came out plus a small scrap of the old arrangement (right). Everything in this paper is a test of
-some part of this proposed picture inside one toy model. A single front and the large opened space
-are hypotheses, not established outcomes of these runs. Total energy includes the reservoir.
-Chapter~3 says why X is drawn as a tube; Chapter~6 shows how its measured endpoint differs.}
+small push starts it; the new arrangement spreads behind a front (middle); when it is done, space
+holds the energy that came out plus a small scrap of the old arrangement (right). Everything in this
+paper tests some part of this picture inside one small model world. The single front and the large
+opened space are the hypothesis, not outcomes of these runs. Chapter~3 says why X is drawn as a tube
+and what both shapes are in that world, where each closes on itself; Chapter~6 shows what the runs
+reached.}
 \label{fig:idea}
 \end{figure}
 
 \sub{Who is saying what}
 The project keeps four kinds of statement apart, and this edition tags them where it matters, so
-that a sentence is never quietly promoted from one kind to another. One more tag marks other
-people's published work.
-\begin{itemize}\setlength{\itemsep}{1pt}
-\item \Exact\ Arithmetic, or a complete listing of every possibility. True of the toy whatever a
-run does.
-\item \Meas\ A simulation whose rules and predictions were written down before it ran, with its
-verdict. \MeasX\ means a run that was not formally pre-registered: its prediction was only written
-into its configuration, or it is a closer look at runs already read.
-\item \Pub\ Other researchers' published results.
-\item \Ours\ A reading of a result, offered by the author and her AI assistants and checked by no
-physicist. \Claim\ The author's hypothesis about reality, stated as hers.
-\end{itemize}
-Numbers in square brackets point to the sources listed at the end.
+that a sentence is never quietly promoted from one kind to another. \Exact\ is arithmetic, or a
+complete listing of every possibility: true whatever a run does. \Meas\ is a simulation whose rules
+and predictions were written down before it ran, with its verdict; \MeasX\ is a run that was not
+formally pre-registered, or a closer look at runs already read. \Ours\ is a reading of a result,
+offered by the author and her AI assistants and checked by no physicist. \Claim\ is the author's
+hypothesis about reality, stated as hers. One more tag, \Pub, marks other researchers' published
+results. Numbers in square brackets point to the sources listed at the end.
 
 \chapterpage{1 \enspace THE PLACE WE START}{We live in space, and we cannot rerun its birth}
 
-\Pub\ On the largest scales, observations are consistent with zero spatial curvature within the
-cosmological analysis used to interpret them~\cite{Planck18}. That does not mean space is flat
-everywhere: gravity curves spacetime around stars and planets.
-It has three large directions. Its rules are known: general relativity for gravity and the shape of
-space, quantum mechanics for everything small.
+\textbf{The author.} Emily Smith is a software engineer, not a physicist, and also a startup founder
+and a foster mom, so her recreational time is scarce and the computing bills are her own. The project
+is called RecreationalPhysics anyway. Her reason is simple: she wants to map her intuition about how
+reality is organized onto what humanity knows about the universe.
 
-What is not known is how such a thing comes to exist. Candidate theories say that space is not the
-stage on which everything happens but a \emph{phase} of something deeper, the way ice is a phase of
-water. If that is right, there was a change, and changes come in two kinds.
+\textbf{Her hypothesis.} \Claim\ Space is one settled arrangement of something deeper, which she
+calls X because nobody knows what it is. X was not chaos. It was a specific arrangement, stable for
+now, the way a reagent is stable until something gives it a push. The change that made space started
+at a seed, spread as a front, released a definite amount of energy all at once, which became matter
+and light, and left a remainder. Across the change the energy books balance.
+Figure~\ref{fig:idea} is that paragraph as a picture.
 
-\Pub\ Cool water, and nothing much happens until it reaches zero degrees. Then it freezes, giving off
-heat as it goes, with ice and water side by side for a while. Very clean water can even stay liquid
-below zero, stuck behind a hill it cannot climb on its own, until a jolt sets it off. Heat a fridge
-magnet instead and its pull fades away: no hill, no burst of heat, no moment when half of it has
-changed. Physicists call the first kind \textbf{first order} and the second \textbf{continuous}.
-Plainer words: sharp and smooth.
+\textbf{The approach.} That is a hypothesis, not a result, and nothing in a computer can prove it
+about reality. What a computer can do is take a small world whose rules are written out in full, in
+which space is an arrangement and not a given, and ask whether a change of this kind can happen there
+at all. If the answer were no, the idea would have no home in that world. If it is yes, the idea gains
+a laboratory, and every number in it becomes a thing to check. Three habits keep the laboratory
+honest: published results are reproduced first, each prediction is written down before its run, and
+a result that goes against the author is reported as prominently as one that goes her way.
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,font=\small]
-% left: sharp
-\begin{scope}
-\draw[->] (0,0) -- (0,3.1) node[above,font=\footnotesize] {energy};
-\draw[->] (0,0) -- (6.3,0) node[right,font=\footnotesize] {arrangement};
-\draw[very thick,ink] plot[smooth] coordinates {(0.2,2.0) (0.9,1.75) (1.5,1.95) (2.1,2.4) (2.7,2.05) (3.5,1.2) (4.4,0.45) (5.2,0.6) (5.9,1.3)};
-\fill[curl] (0.9,1.9) circle (0.14);
-\node[font=\footnotesize,align=center,text=ink] at (0.9,1.25) {stable\\for now};
-\node[font=\footnotesize,align=center,text=ink] at (2.45,2.8) {the hill};
-\draw[->,thick,sun!80!black] (1.05,2.15) to[bend left=35] (1.85,2.55);
-\node[font=\footnotesize,text=sun!80!black,anchor=south east] at (1.45,2.5) {a push};
-\draw[<->,thick,accent] (5.6,0.55) -- (5.6,1.9);
-\node[font=\footnotesize,align=left,text=accent,anchor=west] at (5.72,1.25) {energy\\given off};
-\node[font=\footnotesize,align=center,text=ink] at (4.75,1.3) {more stable};
-\node[font=\small\bfseries,text=ink] at (3.1,-0.55) {Activated escape: a hill and a release};
-\end{scope}
-% right: smooth
-\begin{scope}[shift={(8.1,0)}]
-\draw[->] (0,0) -- (0,3.1) node[above,font=\footnotesize] {energy};
-\draw[->] (0,0) -- (6.3,0) node[right,font=\footnotesize] {arrangement};
-\draw[very thick,ink!40] plot[smooth] coordinates {(0.3,2.3) (1.5,1.15) (2.7,0.8) (3.9,1.0) (5.4,1.9)};
-\draw[very thick,ink] plot[smooth] coordinates {(0.3,2.6) (1.5,1.5) (2.7,0.75) (3.3,0.55) (4.0,0.7) (5.4,1.6)};
-\fill[flat] (2.7,0.9) circle (0.14);
-\draw[->,thick,ink!60] (2.3,1.55) -- (3.1,1.0);
-\node[font=\footnotesize,align=center,text=ink] at (3.2,2.6) {the lowest point\\just slides over};
-\node[font=\small\bfseries,text=ink] at (3.1,-0.55) {A smoothly changing preference};
-\end{scope}
-\end{tikzpicture}
-\caption{A landscape analogy. \Sketch\ The left picture illustrates activated escape from a
-local energy minimum; the right illustrates a smoothly changing preferred arrangement. These
-energy sketches are not a test of thermodynamic order. At nonzero temperature, phase stability
-depends on free energy, which includes the number of available arrangements as well as their energy.}
-\label{fig:landscape}
-\end{figure}
+\textbf{The parts of this paper.} Chapter~2 is the starting point: a published model, what we
+reproduced of it, and the one thing we change. Chapters~3 to~9 are the experiment. They take one
+specific arrangement and ask what it is, what it costs to start changing, how long it waits, what
+takes shape, where the energy goes, what remains, and whether the answers hold at other settings.
+Chapters~10 and~11 say where the simulations stop, what held, what failed, and what the next papers
+take up.
 
-How can you test which kind you have? \Pub\ Near coexistence, a well-sampled energy histogram
-can show two humps: the system spends time in each phase. But one hump in a small system does not
-prove a continuous transition, and two humps alone do not establish a first-order transition.
-A small system can show two humps that merge as it grows. First order means that the humps stay
-apart and the valley between them deepens as the system gets larger, so the test is what happens
-with size. Here that equilibrium test remained inconclusive, and this paper does not rest on it.
-Neither does the author's idea. What she asks of the toy, and what is measured here, is plainer:
-does a prepared tube give way with a jump in energy at the sizes run, and how large is the jump?
+\textbf{A toy, and why this one.} Physicists call a small world of that kind a \textbf{toy model}:
+simple enough that every consequence of its rules can be counted or simulated, and not to be mistaken
+for the real thing. Ours starts from a published one, combinatorial quantum
+gravity~\cite{T17,KTB19,T25}, for four reasons. Space is not built into it: there are only dots and
+links, and geometry has to form. Its energy is a version of the curvature in Einstein's theory of
+gravity. It has published results to check our code against. And at the smallest sizes every possible
+arrangement can be listed, which gives exact answers to test the simulations on.
+
+\chapterpage{2 \enspace THE TOY}{A published model, reproduced, and the one knob we add}
+
+\Pub\ Combinatorial quantum gravity is the work of Carlo Trugenberger, Christy Kelly and Fabio
+Biancalana~\cite{T17,KTB19,T25}. It is a network of dots and links with no positions at all: a dot has
+no place, only neighbors. Mathematicians call such a thing a \textbf{graph}.
+Figure~\ref{fig:model} is the whole of it.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,font=\small]
-\begin{scope}
-\draw[->] (0,0) -- (0,2.6) node[above,font=\footnotesize] {how often};
-\draw[->] (0,0) -- (6,0) node[right,font=\footnotesize] {energy};
-\fill[curlpale] plot[smooth] coordinates {(0.4,0) (1.0,1.2) (1.6,2.1) (2.2,1.2) (2.8,0.25) (3.4,0.25) (4.0,1.0) (4.6,1.8) (5.2,1.0) (5.8,0)} -- cycle;
-\draw[thick,ink] plot[smooth] coordinates {(0.4,0) (1.0,1.2) (1.6,2.1) (2.2,1.2) (2.8,0.25) (3.4,0.25) (4.0,1.0) (4.6,1.8) (5.2,1.0) (5.8,0)};
-\draw[<->,thick,accent] (1.6,2.35) -- (4.6,2.35) node[midway,above,font=\footnotesize,text=accent] {gap between the peak energies};
-\node[font=\footnotesize,text=ink] at (3.1,0.6) {valley};
-\node[font=\small\bfseries,text=ink] at (3,-0.5) {Two humps: possible coexistence};
-\end{scope}
-\begin{scope}[shift={(7.6,0)}]
-\draw[->] (0,0) -- (0,2.6) node[above,font=\footnotesize] {how often};
-\draw[->] (0,0) -- (6,0) node[right,font=\footnotesize] {energy};
-\fill[flatpale] plot[smooth] coordinates {(0.6,0) (1.6,0.6) (2.8,2.1) (4.0,0.6) (5.2,0)} -- cycle;
-\draw[thick,ink] plot[smooth] coordinates {(0.6,0) (1.6,0.6) (2.8,2.1) (4.0,0.6) (5.2,0)};
-\draw[thick,ink!50,dashed] plot[smooth] coordinates {(1.6,0) (2.2,0.8) (2.8,2.4) (3.4,0.8) (4.0,0)};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (3.9,1.9) {larger system:\\narrower, same hump};
-\node[font=\small\bfseries,text=ink] at (3,-0.5) {One hump: inconclusive at these sizes};
-\end{scope}
-\end{tikzpicture}
-\caption{What an equilibrated run can measure. \Sketch\ An energy histogram depends both on
-the cost of arrangements and on how many have each energy. Near coexistence, separated peaks
-can estimate a finite-size energy gap. Classifying a transition requires a size study and adequate
-sampling; neither sketch is a verdict on this toy.}
-\label{fig:humps}
-\end{figure}
-
-Two things make this hard. Small systems hide the hill: with only a few pieces, everything can flip at
-once, so even a sharp change looks like one broad hump. And the real test is whether the valley
-deepens as the system grows, which needs sizes nobody can simulate cheaply. Still, we set out a series
-of simulations that let us describe a sharp change of this kind in some detail.
-
-Here is the author's idea, in one paragraph. First, who is asking, and why. She is a software
-engineer, not a physicist, and also a startup founder and a foster mom, so her recreational time is
-scarce and the computing bills are her own. The project is called RecreationalPhysics anyway. Her
-reason is simple: she wants to map her intuition about how reality is organized onto what humanity
-knows about the universe.
-
-\Claim\ Space is one settled arrangement of something deeper, which she calls X because nobody knows
-what it is. X was not chaos. It was a specific arrangement, stable for now, the way a reagent is
-stable until something gives it a push. The change that made space started at a seed, spread as a
-front, released a definite amount of energy all at once, which became matter and light, and left a
-remainder. Across the change the energy books balance.
-
-That paragraph is a hypothesis, not a result, and nothing in a computer can prove it about reality.
-What a computer can do is take a model in which space is an arrangement of links, and ask whether a
-change of this kind can happen in it at all: whether there is a hill, how high it is, what comes
-down the far side, and what the far side is like. If the answer were no, the idea would have no home
-in that model. If the answer is yes, the idea gains a laboratory, and every number in it becomes a
-thing to check.
-
-\takeaway{We cannot rerun the birth of space, so we build a toy in which space is an arrangement and
-ask what \emph{kind} of change produces it. The author's idea needs the kind with a hill, a push, a
-release of energy and a remainder.}
-
-\chapterpage{2 \enspace THE TOY}{A published model of space made of links, and the one knob we add}
-
-\Pub\ Our toy is built beside a published model. That model is called combinatorial quantum gravity,
-and it is the work of Carlo Trugenberger, Christy Kelly and Fabio Biancalana~\cite{T17,KTB19,T25}. The
-published model is a network of dots and links with no positions at all: a dot has no place, only
-neighbors. Figure~\ref{fig:model} shows every rule it has, and our toy keeps all of them. The
-mathematical word for such a thing is a \textbf{graph}; its dots are vertices, its links are edges.
-
-Two names are kept apart from here on. \textbf{The published model} is theirs. \textbf{The toy} is
-ours: the published model with one of its prices turned into a knob, as described below. Wherever this
-paper says ``the toy,'' it means ours, and the published one is always called the published model.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\resizebox{0.9\linewidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small,>=Stealth]
+% ---------------- 1. the rules
+\node[font=\small\bfseries,text=accent,anchor=west] at (-0.6,3.05) {1. The rules};
 \foreach \i in {0,...,4} \foreach \j in {0,...,2} {
   \pgfmathparse{int(mod(\i+\j,2))}
   \ifnum\pgfmathresult=0 \fill[flat] (\i,\j) circle (0.11); \else \fill[curl] (\i,\j) circle (0.11); \fi }
@@ -297,186 +204,150 @@ paper says ``the toy,'' it means ours, and the published one is always called th
 \draw[ink!60] (0,0) -- (-0.5,0) (0,1) -- (-0.5,1) (0,2) -- (-0.5,2) (4,0) -- (4.5,0) (4,1) -- (4.5,1) (4,2) -- (4.5,2);
 \foreach \i in {0,...,4} {\draw[ink!60] (\i,2) -- (\i,2.5) (\i,0) -- (\i,-0.5);}
 \draw[very thick,accent] (1,0) -- (2,0) -- (2,1) -- (1,1) -- cycle;
-\node[font=\footnotesize,text=accent,align=center] at (1.5,-0.95) {a square: four links\\that close a loop};
-% the rules, each with what it forbids
-\node[font=\footnotesize\bfseries,text=ink,anchor=west] at (5.4,2.75) {The rules};
-\node[font=\footnotesize\bfseries,text=no,anchor=west] at (12.2,2.75) {Not allowed};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,2.1) {Every dot has exactly four links.};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,1.3) {Two groups of dots: \textcolor{flat}{$\bullet$} links only to \textcolor{curl}{$\bullet$}.};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,0.5) {Never two links between the same two dots.};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,-0.4) {No two dots share more than two neighbors.};
-\begin{scope}[shift={(0.45,0)}]
-% not allowed: a link inside one group
+\node[font=\footnotesize,text=accent,align=left,anchor=west] at (5.4,-0.35) {A \textbf{square}: four links that close a loop.};
+\draw[accent] (5.35,-0.35) -- (2.1,0.45);
+\node[font=\footnotesize\bfseries,text=ink,anchor=west] at (5.4,2.6) {Always};
+\node[font=\footnotesize\bfseries,text=no,anchor=west] at (12.2,2.6) {Never};
+\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,2.0) {Every dot has exactly four links.};
+\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,1.4) {Two groups of dots: \textcolor{flat}{$\bullet$} links only to \textcolor{curl}{$\bullet$}.};
+\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,0.8) {Never two links between the same two dots.};
+\node[font=\footnotesize,text=ink,align=left,anchor=west] at (5.4,0.2) {No two dots share more than two neighbors.};
+\begin{scope}[shift={(0.45,0.1)}]
+% never: a link inside one group
 \draw[thick,ink] (12.0,1.3) -- (13.2,1.3);
 \fill[flat] (12.0,1.3) circle (0.1); \fill[flat] (13.2,1.3) circle (0.1);
 \draw[no,very thick] (13.65,1.15) -- (13.95,1.45) (13.65,1.45) -- (13.95,1.15);
-% not allowed: two links between the same two dots
+\end{scope}
+\begin{scope}[shift={(0.45,0.3)}]
+% never: two links between the same two dots
 \draw[thick,ink] (12.0,0.5) to[bend left=35] (13.2,0.5);
 \draw[thick,ink] (12.0,0.5) to[bend right=35] (13.2,0.5);
 \fill[flat] (12.0,0.5) circle (0.1); \fill[curl] (13.2,0.5) circle (0.1);
 \draw[no,very thick] (13.65,0.35) -- (13.95,0.65) (13.65,0.65) -- (13.95,0.35);
-% not allowed: two dots sharing three neighbors
-\foreach \y in {-0.05,-0.4,-0.75} {\draw[thick,ink] (12.0,-0.4) -- (12.6,\y) -- (13.2,-0.4); \fill[curl] (12.6,\y) circle (0.08);}
+\end{scope}
+\begin{scope}[shift={(0.45,0.55)}]
+% never: two dots sharing three neighbors
+\foreach \y in {-0.1,-0.4,-0.7} {\draw[thick,ink] (12.0,-0.4) -- (12.6,\y) -- (13.2,-0.4); \fill[curl] (12.6,\y) circle (0.08);}
 \fill[flat] (12.0,-0.4) circle (0.1); \fill[flat] (13.2,-0.4) circle (0.1);
 \draw[no,very thick] (13.65,-0.55) -- (13.95,-0.25) (13.65,-0.25) -- (13.95,-0.55);
 \end{scope}
-\end{tikzpicture}
-\caption{Every rule of the published model, all of which the toy keeps: dots, four links each, two
-groups, and the loops of four links called squares. There are no positions. Drawing the dots on a grid is a convenience; only the links are
-real.}
-\label{fig:model}
-\end{figure}
-
-\sub{The price list}
-\Pub\ The published model gives every arrangement an energy, and the energy is worked out by counting squares.
-Compared with an arrangement that has one square for every dot, every missing square has a cost. A
-single link may carry at most three squares; a link carrying a third one has one square too many, and
-every such surplus square has a cost of its own. Those two prices are the entire rule. To be clear,
-this energy has no meters or joules in it. We will just call its amount a \textbf{unit}, and leave the
-conversion of units into physical energy for a later paper. Everything below is in these units.
-
-\Pub\ In the published model a missing square costs 16 units and a surplus square costs 4. With those
-two prices the energy is a measure of how curved the network is: a graph version of the curvature in
-Einstein's equations of gravity. That is where the published model's name comes from, a theory of
-gravity built by combinatorics, the mathematics of counting. The published work also studies a simpler
-version with the surplus price switched off, where a link can carry a third square for free.
-
-The toy turns that one price into a knob. In the toy a surplus square costs $4\lambda$ units, where
-$\lambda$ (lambda) is a number that can be turned up or down, so we call it \textbf{the knob}. With
-the knob at exactly $\lambda = 1$ the toy is the published model. With the knob at $\lambda = 0$ it is
-the published simpler version. Every other setting is our addition.
-
-The whole point of the published program is to get general relativity, Einstein's theory of gravity,
-back out of a network, so the curvature setting is the one that matters to it. At any other
-$\lambda$, however, the energy is still a perfectly good rule for a network, but it is no longer a
-curvature. So everything in this paper at $\lambda \neq 1$ is a close cousin of combinatorial quantum
-gravity, not the thing itself.
-
-We have not found published work that sets the surplus price to any value above 1~\cite{search}. In
-print, as far as we have found, are the two settings just described and, in the text of two of the
-papers~\cite{KTB19,KT19}, a version in which a third square is forbidden outright. So, barring a gap in
-our search, the approach taken here and what it turned up are new.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
-\foreach \k/\lab/\price/\col in {0/one square: a square is missing nearby/costs/curl,4.6/two squares: just right/costs nothing/flat,9.2/three squares: one too many/costs/melt} {
- \begin{scope}[shift={(\k,0)}]
+% ---------------- 2. the price list
+\node[font=\small\bfseries,text=accent,anchor=west] at (-0.6,-1.1) {2. The price list, read link by link};
+\foreach \k/\lab/\col in {0/{one square: a square\\is missing nearby}/curl,3.3/{two squares:\\just right}/flat,6.6/{three squares:\\one too many}/melt} {
+ \begin{scope}[shift={(\k-0.4,-3.6)}]
   \draw[very thick,ink] (1.5,0.2) -- (1.5,1.6);
   \fill[ink] (1.5,0.2) circle (0.09) (1.5,1.6) circle (0.09);
   \draw[\col,thick] (1.5,0.2) -- (0.6,0.2) -- (0.6,1.6) -- (1.5,1.6);
-  \node[font=\footnotesize,text=ink,align=center] at (1.5,-0.55) {\lab};
+  \node[font=\footnotesize,text=ink,align=center] at (1.5,-0.45) {\lab};
  \end{scope}}
-\begin{scope}[shift={(4.6,0)}] \draw[flat,thick] (1.5,0.2) -- (2.4,0.2) -- (2.4,1.6) -- (1.5,1.6); \end{scope}
-\begin{scope}[shift={(9.2,0)}] \draw[melt,thick] (1.5,0.2) -- (2.4,0.2) -- (2.4,1.6) -- (1.5,1.6);
+\begin{scope}[shift={(2.9,-3.6)}] \draw[flat,thick] (1.5,0.2) -- (2.4,0.2) -- (2.4,1.6) -- (1.5,1.6); \end{scope}
+\begin{scope}[shift={(6.2,-3.6)}] \draw[melt,thick] (1.5,0.2) -- (2.4,0.2) -- (2.4,1.6) -- (1.5,1.6);
   \draw[melt,thick] (1.5,0.2) .. controls (2.6,-0.4) and (2.6,2.2) .. (1.5,1.6); \end{scope}
-\node[font=\footnotesize,text=curl] at (1.5,2.0) {16 per missing square};
-\node[font=\footnotesize,text=flat] at (6.1,2.0) {0};
-\node[font=\footnotesize,text=melt] at (10.7,2.0) {$4\lambda$ per surplus square (4 at $\lambda=1$)};
-\end{tikzpicture}
-\caption{The price list, read link by link. \Exact\ The thick link carries one, two or three squares.
-Two is free. Fewer means a square is missing nearby, at 16 per missing square; a third is a surplus
-square, at $4\lambda$, set by the knob. At $\lambda = 1$ the two prices make the energy a measure of
-the network's curvature; at $\lambda = 0$ a third square is free.}
-\label{fig:prices}
+\node[font=\footnotesize,text=curl] at (1.1,-1.7) {16 per missing square};
+\node[font=\footnotesize,text=flat] at (4.4,-1.7) {free};
+\node[font=\footnotesize,text=melt] at (7.7,-1.7) {4 per surplus square};
+% ---------------- 3. the one move
+\node[font=\small\bfseries,text=accent,anchor=west] at (10.0,-1.1) {3. The one move: a partner swap};
+\begin{scope}[shift={(10.5,-3.5)}]
+\fill[flat] (0,1.5) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Alice};
+\fill[flat] (0,0.2) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Cara};
+\fill[curl] (1.5,1.5) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Ben};
+\fill[curl] (1.5,0.2) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Dan};
+\draw[very thick,ink] (0,1.5) -- (1.5,1.5) (0,0.2) -- (1.5,0.2);
+\draw[->,very thick,accent] (2.0,0.85) -- (2.9,0.85);
+\begin{scope}[shift={(3.4,0)}]
+\fill[flat] (0,1.5) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Alice};
+\fill[flat] (0,0.2) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Cara};
+\fill[curl] (1.5,1.5) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Ben};
+\fill[curl] (1.5,0.2) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Dan};
+\draw[very thick,ink] (0,1.5) -- (1.5,0.2) (0,0.2) -- (1.5,1.5);
+\end{scope}
+\end{scope}
+\end{tikzpicture}}
+\caption{The published model on one card. \Pub\ There are no positions: drawing the dots on a grid is
+a convenience, and only the links are real. The energy is worked out from the \textbf{squares}: a
+link on exactly two is free, fewer means a square is missing nearby, and a third is a \textbf{surplus
+square}. In a swap every dot keeps its four links and its group, and a swap that would break a rule is
+thrown out.}
+\label{fig:model}
 \end{figure}
 
-\sub{The one move}
-The network cannot leap to a new arrangement. \Pub\ It changes by \textbf{swapping partners}: pick
-two links, Alice--Ben and Cara--Dan, and rewire them as Alice--Dan and Cara--Ben. Every dot keeps its
-four links and its group. Any swap that breaks the other rules is thrown out. That is the only move.
+\Pub\ With those two prices the energy measures how curved the network is: a graph version of the
+curvature in Einstein's equations of gravity. It has no meters or joules in it. We call its amount a
+\textbf{unit}, and leave the conversion into physical energy for a later paper. The published work
+also studies a simpler version with the surplus price switched off, where a third square is free.
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\small,>=Stealth]
-\begin{scope}
-\fill[flat] (0,1.6) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Alice};
-\fill[flat] (0,0) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Cara};
-\fill[curl] (2.4,1.6) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Ben};
-\fill[curl] (2.4,0) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Dan};
-\draw[very thick,ink] (0,1.6) -- (2.4,1.6) (0,0) -- (2.4,0);
-\node[font=\footnotesize,text=ink] at (1.2,-0.95) {before};
-\end{scope}
-\draw[->,very thick,accent] (3.4,0.8) -- (4.6,0.8) node[midway,above,font=\footnotesize,text=accent] {one swap};
-\begin{scope}[shift={(5.6,0)}]
-\fill[flat] (0,1.6) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Alice};
-\fill[flat] (0,0) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Cara};
-\fill[curl] (2.4,1.6) circle (0.11) node[above=2pt,text=ink,font=\footnotesize] {Ben};
-\fill[curl] (2.4,0) circle (0.11) node[below=2pt,text=ink,font=\footnotesize] {Dan};
-\draw[very thick,ink] (0,1.6) -- (2.4,0) (0,0) -- (2.4,1.6);
-\node[font=\footnotesize,text=ink] at (1.2,-0.95) {after};
-\end{scope}
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (9.0,1.3) {Every dot keeps four links.};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (9.0,0.8) {Squares around the four dots};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (9.0,0.4) {are broken or made, and the};
-\node[font=\footnotesize,text=ink,align=left,anchor=west] at (9.0,0.0) {price list says what it costs.};
-\end{tikzpicture}
-\caption{The one move the network has. \Pub\ Two links swap partners. Everything that happens in the
-rest of this paper is a long chain of these.}
-\label{fig:swap}
-\end{figure}
+\Pub\ A run is a long chain of swaps, each one proposed at random. A swap that lowers the energy is
+always accepted. A swap that raises it by $\Delta E$ units is accepted with a chance of
+$e^{-\Delta E/g}$, where $e$ is a fixed number, about 2.7, and $g$ plays the part of temperature. We
+call $g$ \textbf{the warmth}: the bigger the cost, the rarer the swap, and the warmer the network, the
+more often a costly swap goes through. Picture an endless \textbf{bath} that lends energy for an uphill swap and
+takes back what a downhill swap gives off. Time is counted in \textbf{sweeps}: one sweep is two
+proposed swaps for every dot. This is the standard way to sample such a model, not a claim about how
+anything moved in real time.
 
-\sub{Warmth, and the bath}
-\Pub\ A run, of the published model or of the toy, is a long chain of such swaps, each one proposed at random and then accepted
-or refused. A second number, $g$, decides which. It plays the part of temperature, and we call it
-\textbf{the warmth}. A swap that lowers the energy is always accepted. A swap that raises it by
-$\Delta E$ units is accepted only some of the time, with a chance of $e^{-\Delta E/g}$, where $e$ is a
-fixed number, about 2.7: the bigger the cost, the rarer the swap, and the warmer the network, the more
-often it goes through. Picture the network sitting in a bath that lends it energy for an uphill swap
-and takes back whatever a downhill swap gives off. The bath is endless: it never runs out and never
-fills up. Lowering $g$ is cooling the network. Time in a run is counted in \textbf{sweeps}: one sweep
-is two proposed swaps for every dot. Rules of this kind are the standard way to sample such a model;
-they are not a claim about how anything moved in real time.
+\sub{Reproduced before changed}
+\Pub\ The published work starts from a random tangle of links, cools it, and asks how geometry
+condenses out of the tangle. Sharply, the way water freezes, giving off heat with ice and water side
+by side? (Very clean water can even stay liquid below zero, stuck, until a jolt sets it off.) Or
+smoothly, the way a fridge magnet loses its pull as it warms, with no burst of heat and no moment
+when half of it has changed? Physicists call the two kinds \textbf{first order} and
+\textbf{continuous}. Published work reports continuous behavior for curvature-based
+models~\cite{KTB19,T25} and first-order behavior in a related model with no surplus
+price~\cite{GV21}, where the network breaks into closed pieces.
 
-\sub{The question the field asks, and reproduction as a starting point}
-\Pub\ Start from a random tangle of links, cool it slowly, and watch. Does geometry condense out of the
-tangle sharply, with two humps, or smoothly? Published work reports continuous behavior for
-curvature-based models~\cite{KTB19,T25} and first-order behavior in a related global-only
-model~\cite{GV21}, where the network fragments. These are not identical experiments:
-the 2019 simulation forbids surplus squares, the later curvature action permits them, and the
-global-only study does not use the same fixed bipartite ensemble.
-With a third square free, cooling packs in as many squares as the rules allow, and the most tightly
-packed arrangements close up on themselves; Chapter~3 shows what those pieces are. Kelly's doctoral
-thesis~\cite{Kelly22} adds a hint for four links per dot: cooled and then warmed again, the network
-does not quite retrace its path, a small but persistent gap of the kind a sharp change leaves, though
-the thesis declines to call the evidence definitive.
-
-\Meas\ We checked published observables before extending the model.\footnote{Our square-density
-curve differs from a 2025 figure~\cite{T25} by up to 0.41 over part of its range. Given the
-different stated protocols, agreement with the 2019 curve does not validate the whole uncapped
-equilibrium curve. This reproduction issue remains open.} Our simulations match the 2019
-square-density curve~\cite{KTB19} with a root-mean-square difference of 0.005 at the same size, match exact
-averages at sizes small enough to list every possible arrangement, and reproduce the sharp change into
-closed pieces with the surplus price off. Then we measured how much energy the change gives off as the
-tangle orders, at several sizes, with the rules written down first.
+\Meas\ We checked published results before extending the model.\footnote{The published simulations are
+not identical experiments: the 2019 simulation forbids surplus squares, the later curvature action
+permits them, and the study with no surplus price does not use the same fixed two-group networks. Our
+square-density curve differs from a 2025 figure~\cite{T25} by up to 0.41 over part of its range. Given
+the different stated protocols, agreement with the 2019 curve does not validate our whole curve, and
+this reproduction issue remains open. Kelly's doctoral thesis~\cite{Kelly22} adds a hint for four
+links per dot: cooled and then warmed again, the network does not quite retrace its path, though the
+thesis declines to call the evidence definitive.} Our simulations match the 2019 square-density curve~\cite{KTB19} with a root-mean-square
+difference of 0.005 at the same size, match exact averages at sizes small enough to list every
+possible arrangement, and reproduce the sharp change into closed pieces with the surplus price off.
+Then, with the rules written down first, we measured the jump: the energy given off per dot as the
+tangle orders.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{llr}
+\begin{tabular}{@{}ll@{}}
 \toprule
-Setting & Dots & Energy given off per dot as the tangle orders \\
+Price list & Energy given off per dot, in units, as the tangle orders \\
 \midrule
-Surplus price off ($\lambda = 0$) & 48 & 10.3 \\
- & 64 & 11.3 \\
- & 96 & 12.5 \\
-Full rule ($\lambda = 1$) & 36 & at most 1.65 \\
- & 64 & at most 1.51 \\
- & 100 & at most 1.30, and falling \\
+Surplus price off & 10.3, 11.3 and 12.5 at 48, 64 and 96 dots: large, and growing \\
+Full, as published & at most 1.65, 1.51 and 1.30 at 36, 64 and 100 dots: small, and falling \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\Meas\ With the surplus price off, the energy given off is large and grows with size, but the cold
-state is a pile of closed pieces. With the full rule, there is
-one hump at every size we ran, and the estimated energy gap is small and shrinking. Settings of 1.25 and
-1.5 gave the same picture. Those registered equilibrium tests were inconclusive; agreement with
-one published observable does not resolve the differences between the published ensembles.
+\Meas\ With the surplus price off the jump is large, but what forms is a pile of closed pieces, not a
+space. With the full price list we found no clear jump at any size we ran. That settles nothing, since
+a small network can hide a jump a larger one would show: the registered tests there were inconclusive.
 
-\takeaway{The toy's energy is a price list: 16 per missing square, $4\lambda$ per surplus square.
-At $\lambda=1$ the toy is the published model and its energy is a curvature, which is why that setting
-is studied. Out of randomness, at that
-setting, our tested sizes do not establish a first-order transition. A single histogram peak does
-not establish a continuous transition either.}
+\sub{The one thing we change}
+The toy turns one price into a knob. In the toy a surplus square costs $4\lambda$ units, where
+$\lambda$ (lambda) is a number that can be turned up or down, so we call it \textbf{the knob}. With
+the knob at exactly $\lambda = 1$ the toy is the published model. With the knob at $\lambda = 0$ it is
+the published simpler version. Every other setting is our addition, and there the energy is still a
+perfectly good rule for a network, but it is no longer a curvature. So two names are kept apart from
+here on. \textbf{The published model} is theirs. \textbf{The toy} is ours: a close cousin of
+combinatorial quantum gravity, not the thing itself.
+
+We have not found published work that sets the surplus price to any value above 1~\cite{search}. In
+print, as far as we have found, are the two settings just described and, in the text of two of the
+papers~\cite{KTB19,KT19}, a version in which a third square is forbidden outright. So, barring a gap in
+our search, the approach taken here is new.
+
+Why turn the knob at all? \Meas\ Not to settle sharp or smooth: out of a random tangle, settings of
+1.25 and 1.5 gave the same picture as 1. Neither this paper nor the author's idea rests on that test.
+What she asks of the toy is plainer: does a prepared arrangement give way with a jump in energy at
+the sizes run, and how large is the jump? Chapter~3 shows how the knob makes room for that question.
+
+\takeaway{The published model is a network with a price list, 16 per missing square and 4 per surplus
+square, which makes its energy a curvature. We reproduced it before changing anything; with the full
+price list our sizes show no clear jump out of randomness, which settles nothing either way. The toy
+changes one thing: a surplus square costs $4\lambda$, and only $\lambda=1$ is the published model.}
 
 \chapterpage{3 \enspace THE PHASE BEFORE}{What if what came before space was not random?}
 
@@ -486,8 +357,8 @@ give? That question is the focus of everything that follows. To ask it in the to
 say what space looks like in a network with no positions, and what the alternative to it could be.
 
 \sub{Directions}
-Space, at its simplest, is a set of large directions: directions you can keep walking in.
-Figure~\ref{fig:pairs} shows how to find them in a network that has no positions.
+Space, at its simplest, is a set of directions with room in them. Figure~\ref{fig:pairs} shows how to
+find a direction in a network that has no positions.
 
 \begin{figure}[H]
 \centering
@@ -522,11 +393,11 @@ Figure~\ref{fig:pairs} shows how to find them in a network that has no positions
  \draw[very thick,flat,dashed,->] (2,1) -- (3.0,1);
  \draw[very thick,flat,dashed,->] (0,1) -- (-1.0,1);
  \fill[ink] (1,1) circle (0.12);
- \node[text=ink,align=center,text width=4.5cm,anchor=north] at (1,-0.7) {A pair that runs straight through closes no square: follow it and you keep going. That is a \textbf{large direction}. Two of the six pairs do this.};
+ \node[text=ink,align=center,text width=4.5cm,anchor=north] at (1,-0.7) {A pair that runs straight through closes no square: four steps along it do not bring you back. That is a \textbf{direction}. Two of the six pairs do this.};
 \end{scope}
 \end{tikzpicture}
 \caption{What a direction is, in a network with no positions. \Exact\ Count the pairs at a dot that
-close no square, and call the count $d$. On a flat grid, $d = 2$.}
+close no square, and call the count $d$. On a grid, $d = 2$.}
 \label{fig:pairs}
 \end{figure}
 
@@ -550,10 +421,10 @@ A grid drawn on paper has edges, where the dots run out of links. The toy remove
 \node[text=accent,anchor=south] at (4,5.7) {Walk off the top \ldots};
 \node[text=accent,anchor=north] at (4,-1.7) {\ldots and you come back at the bottom.};
 \end{tikzpicture}
-\caption{The toy's flat space. \Exact\ The grid wraps around both ways, like an old game screen whose
-edges join. It has no edges, so every dot has its four links, and when both ways around are long every
-dot reads $d=2$. We call it \textbf{the flat sheet}. Mathematicians call any grid that wraps both ways a
-\textbf{torus}. These ideal wrapping grids are tori; arbitrary networks reached during a run need not be.}
+\caption{A grid with no edges. \Exact\ The grid wraps around both ways, like an old game screen whose
+edges join, so every dot has its four links, and when both ways around are long every dot reads
+$d=2$. We call it \textbf{the flat sheet}. Mathematicians call any grid that wraps both ways a
+\textbf{torus}, the surface of a doughnut; arbitrary networks reached during a run need not be one.}
 \label{fig:wrap}
 \end{figure}
 
@@ -575,7 +446,7 @@ If a direction is not large, what else can it be? Small: curled up on itself.
 % the long way around
 \draw[->,very thick,flat] (10.5,1) -- (11.6,1);
 \draw[->,very thick,flat] (-1.6,1) -- (-0.5,1);
-\node[text=flat,anchor=north west,align=left,text width=7.6cm] at (2.4,-0.6) {The other way is still long, $L$ steps around: a large direction.};
+\node[text=flat,anchor=north west,align=left,text width=7.6cm] at (2.4,-0.6) {The other way is still long, $L$ steps around: a direction with room in it.};
 \node[text=ink,font=\large] at (12.6,1.5) {$=$};
 % the same thing rolled up
 \begin{scope}[shift={(13.9,0.1)},x=1cm,y=1cm]
@@ -584,12 +455,13 @@ If a direction is not large, what else can it be? Small: curled up on itself.
  \draw[curl,thick] (0,1) ellipse (0.25 and 0.65);
  \draw[curl,thick] (3.2,1) ellipse (0.25 and 0.65);
  \foreach \x in {0.55,1.1,...,2.8} {\draw[curl!70] (\x,1) ellipse (0.25 and 0.65);}
- \node[text=ink,align=center] at (1.6,-0.25) {the same thing, rolled up};
+ \node[text=ink,align=center] at (1.6,-0.25) {a stretch of the same thing, rolled up};
 \end{scope}
 \end{tikzpicture}
 \caption{Curling one direction. \Exact\ Make one of the two ways around only four steps long. A grid
 four dots around and $L$ dots along, wrapped both ways, is still a torus, the $4 \times L$ torus:
-the curled kind. We call it \textbf{the tube}.}
+the curled kind. We call it \textbf{the tube}. Its long way wraps around too, so the tube has no open
+ends.}
 \label{fig:tube}
 \end{figure}
 
@@ -662,10 +534,110 @@ the curled kind. We call it \textbf{the tube}.}
 \end{tikzpicture}
 \caption{Curling puts a third square on a link. \Exact\ So curling a direction is exactly what the
 surplus price charges for. And because the way around is now a square, the pair of links that points
-that way closes one: the direction no longer counts as large, and every dot on the tube reads $d=1$.}
+that way closes one: the direction no longer counts, and every dot on the tube reads $d=1$.}
 \label{fig:third}
 \end{figure}
 
+\par\Needspace{9\baselineskip}
+\sub{Ring and doughnut: flat is not the same as open}
+The drawings so far leave something out: the edges are joined. \Exact\ Join the tube's two ends and
+it is a thin ring, like a hula hoop, four steps around the thin way and $L$ steps around the long way.
+The sheet is a fatter doughnut, long both ways (Figure~\ref{fig:shapes}). Nothing in the toy is
+open-ended, and nothing can be: every dot must have its four links, so there is no edge to stop at,
+and with a finite number of dots a walk that keeps going must come back around.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=0.95cm,y=0.95cm,font=\footnotesize,>=Stealth]
+% ================= the tube: a pipe, then a ring
+\node[text=ink!70] at (1.3,2.75) {as drawn so far};
+\begin{scope}[shift={(0,0.55)}]
+ \fill[curlpale] (0,0.35) rectangle (2.6,1.65);
+ \draw[curl,thick] (0,0.35) -- (2.6,0.35) (0,1.65) -- (2.6,1.65);
+ \draw[curl,thick] (0,1) ellipse (0.25 and 0.65);
+ \draw[curl,thick] (2.6,1) ellipse (0.25 and 0.65);
+ \foreach \x in {0.52,1.04,...,2.3} {\draw[curl!70] (\x,1) ellipse (0.25 and 0.65);}
+\end{scope}
+\draw[->,very thick,accent] (3.05,1.55) -- (3.85,1.55);
+\node[text=accent,align=center] at (3.45,2.45) {join its\\two ends};
+\begin{scope}[shift={(6.1,1.55)}]
+ \fill[curlpale,even odd rule] (0,0) ellipse (2.0 and 1.0) (0,0.05) ellipse (1.62 and 0.68);
+ \foreach \a in {0,12,...,348} {\draw[curl!70] ({1.62*cos(\a)},{0.05+0.68*sin(\a)}) -- ({2.0*cos(\a)},{1.0*sin(\a)});}
+ \draw[curl,thick] (0,0) ellipse (2.0 and 1.0);
+ \draw[curl,thick] (0,0.05) ellipse (1.62 and 0.68);
+ \draw[->,flat,thick] (-1.05,0.0) arc (180:350:1.05 and 0.36);
+ \node[text=flat] at (0,0.22) {$L$ steps around};
+ \draw[ink,very thick] (0,-0.82) circle (0.27);
+\end{scope}
+\node[text=ink,align=center,text width=7.4cm,anchor=north] at (4.1,0.3) {\textbf{The tube is a thin ring.} Four steps around the thin way. What an inhabitant can reach (the circle) goes right around it.};
+% ================= the sheet: a grid, then a doughnut
+\node[text=ink!70] at (10.25,2.75) {as drawn so far};
+\begin{scope}[shift={(8.9,0.8)}]
+ \fill[flatpale] (0,0) rectangle (2.7,1.5);
+ \draw[flat!60,step=0.3] (0,0) grid (2.7,1.5);
+ \draw[flat,thick] (0,0) rectangle (2.7,1.5);
+\end{scope}
+\draw[->,very thick,accent] (11.85,1.55) -- (12.65,1.55);
+\node[text=accent,align=center] at (12.3,2.6) {join both\\pairs of\\edges};
+\begin{scope}[shift={(15.0,1.55)}]
+ \fill[flatpale] (0,0) ellipse (2.2 and 1.2);
+ \draw[flat!45] (0,-0.08) ellipse (1.75 and 0.9);
+ \draw[flat!45] (0,-0.02) ellipse (1.3 and 0.6);
+ \foreach \a in {0,20,...,340} {\draw[flat!45] ({0.8*cos(\a)},{0.11+0.23*sin(\a)}) -- ({2.2*cos(\a)},{1.2*sin(\a)});}
+ \fill[white] (-0.78,0.12) .. controls (-0.38,-0.17) and (0.38,-0.17) .. (0.78,0.12) .. controls (0.38,0.38) and (-0.38,0.38) .. (-0.78,0.12) -- cycle;
+ \draw[flat,thick] (-0.98,0.25) .. controls (-0.5,-0.23) and (0.5,-0.23) .. (0.98,0.25);
+ \draw[flat,thick] (-0.78,0.12) .. controls (-0.38,0.38) and (0.38,0.38) .. (0.78,0.12);
+ \draw[flat,thick] (0,0) ellipse (2.2 and 1.2);
+ \draw[ink,very thick] (0.3,-0.72) circle (0.24);
+\end{scope}
+\node[text=ink,align=center,text width=7.4cm,anchor=north] at (13.1,0.3) {\textbf{The sheet is a fatter doughnut.} Long both ways. What an inhabitant can reach (the circle) is a patch that looks like an endless grid.};
+\end{tikzpicture}
+\caption{The two arrangements with their edges joined. \Exact\ Neither has an end or an edge.
+\Sketch\ Drawn in three dimensions the doughnut looks bent. The network is not: it has no positions,
+only links, and the game-screen picture of Figure~\ref{fig:wrap} keeps its distances true.}
+\label{fig:shapes}
+\end{figure}
+
+Two words are kept apart from here on. \textbf{Flat} is about each dot's surroundings: every link on
+exactly two squares, the wiring of a plain grid, at zero energy. \textbf{Wide} is about the whole
+shape: how many steps it takes to walk around it and come back. A doughnut from a bakery is not flat,
+since its skin is stretched on the outside and squeezed around the hole, but the toy's doughnut is the
+game-screen kind and is not bent anywhere. The sheet is flat and wide. The tube is neither.
+
+Can anyone inside tell a wide doughnut from an endless grid? Suppose something lived in the network
+and could learn only what it reaches by walking links. Let it count the dots within one step of home,
+then two, then three. \Exact\ On a wrapping grid the counts match an endless grid's until walks that
+set out in opposite directions meet around the back, and then they fall short. In the table each grid
+is long the other way, and bold marks the first count that falls short.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccccc}
+\toprule
+Dots within & 1 step & 2 steps & 3 steps & 4 steps & 6 steps \\
+\midrule
+An endless grid & 5 & 13 & 25 & 41 & 85 \\
+The tube: 4 steps around & 5 & \textbf{12} & 20 & 28 & 44 \\
+A grid 8 steps around & 5 & 13 & 25 & \textbf{40} & 72 \\
+A grid 12 steps around & 5 & 13 & 25 & 41 & \textbf{84} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Exact\ The count first falls short at half the way around. So from inside, a doughnut much wider
+than its inhabitants is open in every way they can check. The tube is the opposite case. Its count
+falls short at two steps, as early as a count can, because its way around is the smallest loop the
+rules allow. That direction has no room in it at all, which is what $d=1$ records: from inside, the
+tube is little more than a line.
+
+\Pub\ Astronomers put the same question to real space. On the largest scales, observations are
+consistent with zero spatial curvature within the cosmological analysis used to interpret
+them~\cite{Planck18}, though gravity still curves spacetime around stars and planets. Whether space is
+also endless is a separate question. A search of the sky for the repeated patterns that a space closed
+up like a doughnut would show found none on scales smaller than the part of space we can
+see~\cite{Planck15topo}. Flat has been measured. Endless has not.
+
+\sub{The knot, and the count for all three}
 Curl both ways around to four steps and every dot reads $d = 0$: a closed sixteen-dot knot called the
 4-cube. It is a torus too, curled both ways. Most of the closed pieces of Chapter~2 are these knots. Figure~\ref{fig:directions} puts the
 three arrangements side by side.
@@ -685,11 +657,11 @@ three arrangements side by side.
 \begin{scope} \foreach \a in {0,90,180,270} {\draw[flat,dashed,very thick,->] (1.5,1.2) ++(\a:1.0) -- ++(\a:0.55);} \end{scope}
 \begin{scope}[shift={(5,0)}] \foreach \a in {0,180} {\draw[curl,dashed,very thick,->] (1.5,1.2) ++(\a:1.0) -- ++(\a:0.55);} \draw[curl,thick] (1.5,0.2) .. controls (0.4,0.2) and (0.4,2.2) .. (1.5,2.2); \end{scope}
 \begin{scope}[shift={(10,0)}] \draw[melt,thick] (1.5,0.2) .. controls (0.4,0.2) and (0.4,2.2) .. (1.5,2.2); \draw[melt,thick] (0.5,1.2) .. controls (0.5,2.3) and (2.5,2.3) .. (2.5,1.2); \end{scope}
-\node[font=\footnotesize,text=ink,align=center,text width=15.5cm] at (6.5,3.85) {One dot in each arrangement. An arc marks a pair of links that closes a square. A dashed arrow marks a pair you can keep walking along. A loop marks a pair that is curled shut.};
+\node[font=\footnotesize,text=ink,align=center,text width=15.5cm] at (6.5,3.85) {One dot in each arrangement. An arc marks a pair of links that closes a square. A dashed arrow marks a pair that closes no square: a direction. A loop marks a pair that is curled shut.};
 \end{tikzpicture}
 
 \vspace{0.5em}
-{\footnotesize\color{ink}\textbf{This paper:} four links per dot, and the simplest change on the ladder: one curled direction opening ($d$ from 1 to 2).\par}
+{\footnotesize\color{ink}\textbf{This paper:} four links per dot, and the simplest change: one curled direction opening ($d$ from 1 to 2).\par}
 \vspace{0.7em}
 \begin{tikzpicture}[x=1cm,y=1cm,font=\small,>=Stealth]
 % grey box: outside this paper's scope
@@ -712,7 +684,7 @@ three arrangements side by side.
 \caption{How many directions a dot has. \Exact\ Top: with four links per dot, the count $d$ is the
 number of pairs of a dot's links that close no square, and it tells the flat sheet, the tube and the
 knot apart dot by dot. Grey box, outside this paper: the same count with six or eight links per dot
-allows three or four large directions, the subject of a later paper. The count is a signature, not a
+allows three or four directions, the subject of a later paper. The count is a signature, not a
 certified geometry: Chapter~6 says what it can and cannot vouch for.}
 \label{fig:directions}
 \end{figure}
@@ -797,7 +769,8 @@ rule is the published graph version of the curvature in Einstein's gravity; noth
 the extra term or fixes its size, so its meaning for nature is unverified.
 
 \sub{Stable for now: is there a window?}
-Energy to give is not enough. Supercooled water has energy to give and sits there. For the tube to be
+Energy to give is not enough. The clean water of Chapter~2, still liquid below zero, has energy to
+give and sits there. For the tube to be
 a stand-in for X it must be stuck: leaving its equal-energy family must cost energy. \Exact\ At 18 dots
 the toy is small enough to list every allowed arrangement: there are 26, counting arrangements that
 differ only in the names of their dots as one. Among them, arrangements above the flat sheet from
@@ -806,7 +779,7 @@ setting. So the knob has a window, and a narrow one.
 
 \sub{The stand-in}
 Our stand-in for X is therefore the tube. At $\lambda = 1.25$ it sits exactly one unit per dot above
-the flat sheet. It is a stand-in and not X: it has one large direction where space has three, its
+the flat sheet. It is a stand-in and not X: it has one direction with room in it where space has three, its
 curled direction is always four dots around, and it lives in a network of a few hundred dots. What it
 shares with X is the shape of the idea under test: a specific, curled, stable-for-now arrangement with
 energy to give.
@@ -814,7 +787,8 @@ energy to give.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\linewidth]{fig_tori.pdf}
-\caption{The two arrangements. (a) The flat sheet: a wrapping grid, two squares on every link. (b) The
+\caption{The two arrangements. (a) The flat sheet: a wrapping grid, two squares on every link; the
+dotted stubs are where it wraps around. (b) The
 $4\times L$ torus drawn as a tube: its short way around is a single square, so the links around each
 column carry three. (c) A sketch of the change, not a snapshot from a simulation. In the labels, $H$
 is the energy and a vertex is a dot.}
@@ -832,8 +806,10 @@ come out. What does it cost to start?
 
 \takeaway{A direction, in the toy, is a pair of links at a dot that closes no square. Curling a
 direction four steps around turns the walk around it into a square, which puts a surplus square on its
-links. The tube has one large direction where the sheet has two, and sits $4(\lambda-1)$ per dot above
-it: one unit per dot at $\lambda=1.25$. At $\lambda=1$ there is nothing to release, which is why the
+links. The tube has one direction with room in it where the sheet has two, and sits $4(\lambda-1)$ per
+dot above it: one unit per dot at $\lambda=1.25$. Both close on themselves: the tube is a thin ring and
+the sheet a fatter doughnut, flat at every dot and, from inside, as good as endless to anything much
+smaller than the way around it. At $\lambda=1$ there is nothing to release, which is why the
 knob sits above 1, and why the toy is a cousin of the published model and not that model itself.}
 
 \chapterpage{4 \enspace THE OBSTACLE}{What does it cost to start?}
@@ -842,7 +818,8 @@ Before any number, consider what the number could mean. If the push needed were 
 then any warmth at all would set the tube off, and it would not be stable for now. If the push were
 as large as the burp itself, 96 units for our tube and more for a bigger one, then starting the
 change would cost what the change gives back, and the cost would grow with the size of the tube.
-Nothing small could ever start something large. A sharp change of the kind pictured in Chapter~1
+Nothing small could ever start something large. A sharp change of the kind pictured at the start of
+this paper
 needs a middle answer: a push that is small, and that does not grow with the size of the thing being
 pushed, so that a bigger tube releases a bigger burp from the same spark. A fixed push and a growing
 release is the condition for a runaway.
@@ -902,7 +879,7 @@ the change needed, and it is arithmetic.
 \draw[dashed,ink!50] (1.2,2.85) -- (8.2,2.85);
 \node[font=\footnotesize,text=ink,align=center] at (8.2,-0.45) {the flat sheet: 0, and nothing lies below it};
 \end{tikzpicture}
-\caption{The landscape with its numbers filled in. \Exact\ The hollow is the tube; the rim is the
+\caption{The change as a landscape, with its numbers. \Exact\ The hollow is the tube; the rim is the
 cheapest swap out; the floor is the flat sheet. For our running example the rim is 12 and the drop is
 96. Make the tube three times longer and the rim is still 12 while the drop is 288.}
 \end{figure}
@@ -1315,9 +1292,9 @@ more.}
 \label{fig:shifts}
 \end{figure}
 
-A word about ``flat.'' Here it means flat at every dot: every link on exactly two squares, at
-zero energy. A tube six around is flat in that sense and still narrow, so it is not what most people
-would call flat. Does being flat at every dot at least make a wide shape likely? \Exact\ Counted as
+Chapter~3 kept two words apart: flat, about each dot's surroundings, and wide, about the whole shape.
+A tube six around is flat and still narrow: an inhabitant running the count of Chapter~3 would find
+the way around at three steps. Does being flat at every dot at least make a wide shape likely? \Exact\ Counted as
 ways of wrapping the grid, yes: of the wrappings of 192 dots that are flat at every dot, about one in
 twelve is six around, and the typical one is twelve around. \MeasX\ But the runs do not choose among
 them at random. Every move out of such an arrangement costs energy, at least 20 units from a tube six
@@ -1502,8 +1479,9 @@ still did. With a third or a quarter of a store per dot, or at $\lambda=1.40$ wi
 room, most ended as a \emph{patchwork}: good fabric almost everywhere, six
 around in one stretch and eight or more in the next, with flaws frozen in where the stretches meet,
 and often in two or more separate pieces. None of 720 end states was one clean torus wider than
-six. Call an end state \emph{mostly wide} if at least half its dots have 25 dots within three steps,
-as a dot on a wide flat sheet does; a dot on a tube six around has 22. The share that came out
+six. Use the inhabitant's count of Chapter~3: call an end state \emph{mostly wide} if at least half
+its dots have 25 dots within three steps, as a dot on a wide sheet does; a dot on one of these tubes
+six around has 22. The share that came out
 mostly wide fell as the tube got longer, from one in five at 96 dots to one in sixty at 384
 ($\lambda=1.40$). For the largest size the shares were written down
 beforehand from the two smaller ones: they held at nine of ten settings and missed at one.
@@ -1855,7 +1833,7 @@ and the reason is partly exact and partly still open.
 
 \sub{The route}
 The published route starts from a random tangle; this paper starts from an ordered tube. \Meas\ Both
-were run. From randomness at $\lambda \geq 1$: one hump, no sign of a release at these sizes. From the tube at
+were run. From randomness at $\lambda \geq 1$: one energy, not two, and no sign of a release at these sizes. From the tube at
 $\lambda>1$: a hill, a push, a burp. The two routes are different questions, and the toy gives them
 different answers.
 
@@ -1922,7 +1900,7 @@ arrangement, so the next paper, \emph{What the burp leaves behind}, asks what it
 \Meas\ One result: the scrap counted here is not permanent. Cool the new sheet slowly enough and it
 heals away, while another kind of leftover survives every cooling we could run.
 
-\textbf{Three directions.} The tube has one open direction, and space has three, so the paper after
+\textbf{Three directions.} The tube has one long direction, and space has three, so the paper after
 that, \emph{How curled directions open}, runs the same rules with six links per dot. \Meas\ One
 result: escape from the four-link tube does not settle the larger-direction question. Later runs
 find a separate barrier for each curled direction. Some reach broader shell profiles, but that
@@ -1969,7 +1947,8 @@ In the paper & What to keep in mind\\
 \midrule
 ``The model'' & In the technical paper, our toy: the published model with the knob $\lambda$. Only $\lambda=1$ is the published model, combinatorial quantum gravity.\\
 $N$ & Number of dots. The running example uses $N=96$.\\
-Torus & Any grid that wraps both ways. The flat torus is the sheet, the curled torus is the tube, and the smallest one, curled both ways, is the knot.\\
+Torus & Any grid that wraps both ways: the surface of a doughnut. The flat torus is the sheet (a fat doughnut), the curled torus is the tube (a thin ring), and the smallest one, curled both ways, is the knot.\\
+Flat, wide & Flat is about each dot's surroundings: every link on exactly two squares, at zero energy. Wide is about the whole shape: many steps around both ways. A torus six around is flat and narrow.\\
 $4\times L$ & Four steps around the short wrap and $L$ around the other, $L$ even and above 4. $4\times4$ is the knot.\\
 $\lambda$ and $g$ & Lambda sets the price of a surplus square and so the whole ladder; $g$ is the bath's warmth, which sets how often an uphill swap is accepted.\\
 $H = 16(N-S) + 4\lambda X$ & The price list: $S$ squares, $X$ surplus squares. Zero on the flat sheet; $4(\lambda-1)$ per dot on the tube.\\
@@ -2005,7 +1984,7 @@ evidence. No physicist has reviewed any of it.
 \renewcommand{\refname}{Sources}
 \begin{thebibliography}{99}\small
 % Sources 1 to 10 are the technical paper's reference list in its order, so that a number means the same
-% source in both documents; 11 to 14 are this edition's own.
+% source in both documents; 11 to 15 are this edition's own.
 \bibitem{T17} C.~A. Trugenberger, \emph{Combinatorial quantum gravity: geometry from random bits}, 
 J.\ High Energy Phys.\ \textbf{09} (2017) 045, arXiv:1610.05934. Cited as in the technical paper.
 \bibitem{KTB19} C.~Kelly, C.~A. Trugenberger, and F.~Biancalana, \emph{Self-assembly of geometric space
@@ -2040,9 +2019,12 @@ terms, and what came closest. File
 \href{https://github.com/EmilySmithCreate/RecreationalPhysics}{the project repository}.
 \bibitem{KT19} C.~Kelly and C.~A. Trugenberger, \emph{Combinatorial quantum gravity: emergence of
 geometric space from random graphs}, arXiv:1811.12905 (2018).
+\bibitem{Planck15topo} Planck Collaboration, \emph{Planck 2015 results. XVIII. Background geometry and
+topology of the Universe}, Astron.\ Astrophys.\ \textbf{594}, A18 (2016), arXiv:1502.01593. Described
+here from its abstract; we have not read it in full.
 \end{thebibliography}
 
-\noindent{\small Sources 1 to 10 carry the same numbers as in the technical paper~\cite{tech}; 11 to 14 are this
+\noindent{\small Sources 1 to 10 carry the same numbers as in the technical paper~\cite{tech}; 11 to 15 are this
 edition's own.}
 
 \end{document}

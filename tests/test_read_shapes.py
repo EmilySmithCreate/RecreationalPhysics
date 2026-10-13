@@ -46,6 +46,23 @@ def test_width_is_the_shortest_way_round():
         assert is_flat(adj) == (min(dims) >= 6)
 
 
+def test_the_count_from_inside_falls_short_at_half_the_way_round():
+    """The table of paper 1's plain-language edition, Chapter 3: the points within r steps of a point, on a grid
+    that wraps both ways, match the endless grid's 2r^2 + 2r + 1 until r is half the short way round."""
+    endless = [2 * r * r + 2 * r + 1 for r in range(7)]
+    assert [endless[r] for r in (1, 2, 3, 4, 6)] == [5, 13, 25, 41, 85]
+    for round_, expected in ((4, [5, 12, 20, 28, 44]), (8, [5, 13, 25, 40, 72]), (12, [5, 13, 25, 41, 84])):
+        adj = torus((round_, 48))
+        within = np.cumsum(shells(adj, 0))
+        assert [int(within[r]) for r in (1, 2, 3, 4, 6)] == expected
+        by_networkx = nx.single_source_shortest_path_length(graph(adj), 0)
+        assert [sum(1 for d in by_networkx.values() if d <= r) for r in (1, 2, 3, 4, 6)] == expected
+        first_short = next(r for r in range(7) if within[r] < endless[r])
+        assert first_short == round_ // 2 and width(adj) == round_
+    # the saved end states six round have their seam shifted (the next test), and count 22 within three steps
+    assert int(np.cumsum(shells(twisted_tube(48, 2), 0))[3]) == 22
+
+
 def test_the_tube_with_its_seam_shifted_by_two_is_flat_and_six_round():
     for length in (16, 24, 48):
         tube, twisted = twisted_tube(length, 0), twisted_tube(length, 2)

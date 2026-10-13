@@ -81,7 +81,7 @@ def pages():
 
 def test_the_pages_hold_the_whole_of_both_papers(pages):
     plain_html, tech_html, plain, technical = pages
-    assert [c["num"] for c in plain["chapters"]] == list(range(1, 12)) and plain["n_figures"] == 33
+    assert [c["num"] for c in plain["chapters"]] == list(range(1, 12)) and plain["n_figures"] == 30
     assert [s["roman"] for s in technical["sections"]] == ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", ""]
     for page in (plain_html, tech_html):
         assert not re.search(r"\\[a-zA-Z]+|\$", reading_text(page))    # no LaTeX left in the reading text
