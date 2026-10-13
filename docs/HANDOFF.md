@@ -359,6 +359,16 @@ branch; written 07:20 ET by the clock).**
     edition; the programme draft's piece 14 row still says "model output on published equations"; the share by today
     reaches 0.96 in the summary CSV where the draft says 0.9 and the findings page 0.92; the claim paragraph reads
     firmer than piece 9's status (hers to settle, below).
+- **State of the branch, 13 October.** Merged with `main` again, as it stood after PRs #51 and #52 (the vocabulary
+  pass for condensed-matter readers, paper 2's rewrite, blog post 02), so that it merges into `main` without
+  conflict. Four conflicts: the bibliography, this page and the sandbox notebook keep both sides' additions in day
+  order; paper 1's plain-language PDF, which each side had built, is rebuilt from the merged source (the four
+  reworded "melted" sentences of 12 October together with main's two added sources; 36 pages). From that source
+  the release manifest was regenerated (three hashes change: ASSUMPTIONS.md and the plain edition's source and PDF)
+  and post 01's plain-language page was rebuilt with its PDF copy (`scripts/build_main_nerd_pages.py
+  --skip-figures`; three lines of the page change). **The copy in the marketing repository
+  (`feat/main-nerd-post02-2026-10-13`) was made from main's pages before this, so by that account it lacks those
+  three lines and the new PDF; not checked there.** No code or result changed; 1069 tests pass on the merged tree.
 - **Open for the owner, exactly:** (1) whether the T64 rerun and its bar stand as her decision (T64 is T63 on fresh
   seeds with the control's rule written from paper 1's record, a second attempt; its held-out size N = 384 is queued
   and O127 waits on it); (2) whether the Stage E numbers stay on the programme page (piece 14) while the config that
