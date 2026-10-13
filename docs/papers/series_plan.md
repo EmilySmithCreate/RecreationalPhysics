@@ -489,3 +489,28 @@ three and four): an opened direction should be measured for how far around it is
 further step. A short paper of its own would be earned by two things not yet in hand: the 384-point runs holding, and
 a way to get the wide product clean (slower cooling is the first thing to try). Paper 1 states the result in its
 closing section, in a few sentences.
+
+## 13 October 2026: a second set of relatives and one vocabulary (the owner's request)
+
+The owner is considering G.-W. Chern's condensed-matter theory group at the University of Virginia as readers,
+first of paper 2, and asked for our wording to match theirs where the concept is the same. What was read, the
+map of terms, the words that look alike and are not, and the comparison with Trugenberger's programme are in one
+place: `docs/reading/notes/2026-10-13_chern_group_vocabulary.md`. *Ours, in one sentence:* the model is
+Trugenberger's, deformed; the questions asked of it (how one ordered state turns into another, isolated or in a
+bath, and what defects remain) are the kind this group asks of its own models; neither is evidence for the
+hypothesis (rule 13). Nothing has been sent to anyone.
+
+| Short paper | Their work that bears on it | What it gives | Done on 13 October |
+|---|---|---|---|
+| 1, the curled torus | [JC26]; [LLC26a] | "isolated" and "microcanonical" for sealed; "minimax barrier" for the barrier the paper says the 12 units is not; "domains separated by defects" for T61's endpoints | Four insertions and two references in the technical manuscript; rebuilt. The plain-language edition is unchanged |
+| 2, what the burp leaves behind | [JC26]; [JYC25]; [BBJC26]; [FZC26] | The defect vocabulary; the caution that an exponent fitted over a short range is an apparent one | The draft's process words aligned and a paragraph of relatives added. Still owed: T51, T55 and O116's wording |
+| 3, links that reach far | [JC26] Sec. III | Walls form where independently nucleated domains meet | Note only |
+| 5, how curled directions open | [LLC26a] | The method for the barrier T54 did not price | A pointer at the head of the draft |
+| 6, the rule, the room | [JC26]; [BaC26] | A dynamical phase diagram; entropy maximized under what the dynamics retains | A pointer at the head of the draft |
+| 12, concentrated energy | [BBM26]; [BFC26]; [YC24] | Two kinds of melting; recovery after an energy pulse | A pointer at the head of the draft |
+| 14, a front's pace | [FZC26]; [BBJC26] | A propagating interface between two phases; a growth law written as a crossover | Note only |
+| 15, allotropes dissolve | [JC26] Sec. III.2 | A criterion for arrest: the energy available against the local barrier | Note only |
+
+A candidate reader for paper 2, beside the model's author in the table of 24 September: G.-W. Chern (the note,
+section 7, has the question; the reading note of 25 September named him first). The owner's rules apply: one
+narrow question, the AI disclosure sentence, a check of his recent papers, which the note records.

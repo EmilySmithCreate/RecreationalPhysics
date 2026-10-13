@@ -89,3 +89,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   long-range way out of the tube six around (O124). First a sandbox look.
 - 2026-10-12, the owner, on "The burp cannot melt its own product. An earlier draft of this chapter said that it
   could.": "good, this makes sense to me now."
+- 2026-10-13, ours, from reading the Chern group's papers (`docs/reading/notes/2026-10-13_chern_group_vocabulary.md`).
+  (a) The column and the knots of O107 have nearly the same first-exit cost (12 and 11) and only the column
+  anneals. Price the least possible highest point on any route from each to flat (their "minimax barrier"), by
+  listing routes at a small size. The same calculation is what T54 still lacks (O118: patch energies, not
+  barriers). (b) The question of 11 October above, two twists meeting, is in their words whether the product has
+  two mirror-image versions with a wall where they meet; a joint between two widths (O116, 12 October) is a wall
+  between two different members. Can a joint be removed while its two stretches keep different widths? (c) A
+  point at d = 1 has a square too many and a point at d = 3 one too few; the knot of two kinds of point may be a
+  bound pair of opposite flaws. In crystals a tube changes its width at such a pair (general knowledge, to
+  verify). (d) The outcomes of T9 and T61 against room and curling cost, drawn as one map: their "dynamical
+  phase diagram".
