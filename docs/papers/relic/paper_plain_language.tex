@@ -80,9 +80,10 @@ stadium leaves coats on the seats.
 
 This paper is about what a sharp change leaves behind in a toy model of dots and links. The first
 paper in this series~\cite{paper1} found that a particular curled arrangement of the toy waits, then
-changes all at once and gives off energy. It also found that the change usually leaves one small scrap
-of the old arrangement. Here we ask three questions about scraps: how many are left, what they are,
-and whether they last.
+changes all at once and gives off energy. That paper named the release \textbf{the burp}. It also
+found that the change usually stops one small piece short of finishing. We call a leftover piece like
+that a \textbf{scrap}. Here we ask three questions about scraps: how many are left, what they are, and
+whether they last.
 
 \Claim\ The reason for asking is the author's hypothesis that space emerged from something else by a
 sharp change, and that such a change leaves a remainder. She wants to test whether a remainder can
@@ -105,7 +106,7 @@ the real universe.
 \draw[->,very thick,sun!80!black] (3.9,1) -- (5.3,1) node[midway,above,text=ink,align=center,font=\footnotesize] {a sharp\\change};
 \node[circle,fill=sun,inner sep=4pt] (sun) at (4.6,2.35) {};
 \foreach \a in {0,45,...,315} {\draw[sun,thick] (sun) ++(\a:0.23) -- ++(\a:0.2);}
-\node[text=ink,font=\footnotesize,anchor=west] at (4.95,2.35) {energy given off};
+\node[text=ink,font=\footnotesize,anchor=east] at (4.25,2.35) {energy given off};
 % --- the new arrangement, with leftovers
 \begin{scope}[shift={(6.0,0)}]
 \fill[flatpale] (0,0.1) rectangle (8.1,1.9);
@@ -171,14 +172,15 @@ four dots around the tube is itself a square, so every link around the tube carr
 and pays for it. Call this \textbf{the curled tube}. It costs exactly 1 unit per dot more than an
 arrangement in which every link carries two squares, which costs nothing at all.
 
-So a lower arrangement exists. But no single swap leads toward it: every swap out of the curled tube
-costs at least 12 units. The tube is stable for now. \Meas\ Give it 12 units and it leaves, and the
-change then spreads along the tube until every dot has been through it, giving off 1 unit for each
-dot. We call that release, and the event that gives it off, \textbf{the burp}.
+So a lower arrangement exists. But no single swap leads toward it: a swap either leaves the tube's
+energy where it was or costs at least 12 units. The tube is stable for now. \MeasX\ Given 12 units,
+every tube tested left, and with less none did. The change then spreads along the tube until every dot
+has been through it, giving off 1 unit for each dot. That release, and the event that gives it off, is the burp.
 
 \sub{What the tube turns into}
-\Exact\ Here is the first paper's least expected result. What the curled tube turns into is another
-tube. Its seam has slipped by two dots, so that going around it now takes six steps where it took
+\Exact\ Here is the first paper's least expected result. Read link by link, 98 of every 100 runs that
+finished with nothing left over had turned the curled tube into another tube. Its seam has slipped by
+two dots, so that going around it now takes six steps where it took
 four. Six around is the least a tube can be without paying for surplus squares, so the new tube costs
 nothing. Around every dot the squares fit together as they do on a flat sheet of graph paper, and we
 call an arrangement like that \textbf{flat}. Flat describes what a dot sees close by. It says nothing
@@ -198,13 +200,13 @@ after the burp, six around, one common scrap & 14 units & 82 units\\
 \end{center}
 
 The last line of that table is this paper's subject. \Meas\ In the first paper's runs the change
-usually stopped one small piece short of finishing. We call a piece like that a \textbf{scrap}.
+usually stopped one small piece short of finishing, leaving a scrap.
 
 \takeaway{A curled tube of dots is stable for now. Given a small push it changes all at once into a
 wider tube, six around, and gives off 1 unit of energy per dot: the burp. The change usually leaves
 a scrap.}
 
-\chapterpage{2 \enspace THE SCRAP}{What one start leaves behind}
+\chapterpage{2 \enspace THE SCRAP}{What a single change leaves behind}
 
 \sub{Read the wiring, not the count}
 A run reports numbers: how many squares, how many dots that look flat. It is tempting to name a shape
@@ -234,7 +236,7 @@ loop's extra squares, which is why the wiring had to be read.}
 \label{fig:loop}
 \end{figure}
 
-\sub{One start, about one scrap}
+\sub{One push, about one scrap}
 To follow the energy to the last unit, the first paper sealed the toy in a box. \Exact\ A
 \textbf{sealed} run has no outside. Beside the network sit \textbf{stores}, each holding some units.
 A swap that costs energy is paid from a store, and a swap that gives energy off pays into one.
@@ -242,7 +244,8 @@ Network plus stores never changes, and that was checked in every run. With two s
 the burp spreads so thin that the box stays cold.
 
 \Meas\ Eighty tubes were sealed in cold boxes, twenty each at 64, 96, 192 and 288 dots, and each was
-given one 12-unit push. The prediction written down beforehand was that a longer tube leaves more
+given one 12-unit push, so that the change began in one place. We call a place where the change begins
+a \textbf{start}. The prediction written down beforehand was that a longer tube leaves more
 scraps. It does not. The count was 0.90, 0.85, 1.05 and 0.95 scraps per tube.
 
 \begin{figure}[H]
@@ -275,7 +278,7 @@ A change in a large space need not start in one place. So the next question is w
 leave.
 
 \sub{Starts planted by hand}
-A \textbf{start} is a place where the change begins. From each start the change spreads both ways
+From each start the change spreads both ways
 along the tube. The moving edge between changed and unchanged tube is a \textbf{front}, and where two
 fronts meet, two changed stretches join.
 
@@ -368,7 +371,7 @@ It healed at every warmth.
 \addplot[accent,line width=5pt] coordinates {(500,3) (11000,3)};
 \node[font=\footnotesize,text=ink,anchor=south] at (axis cs:18000,1.12) {9 scraps: 4,000 to 80,500};
 \node[font=\footnotesize,text=ink,anchor=south] at (axis cs:2600,2.12) {10 scraps: 500 to 13,000};
-\node[font=\footnotesize,text=ink,anchor=south] at (axis cs:2400,3.12) {10 scraps: all within 11,000};
+\node[font=\footnotesize,text=ink,anchor=south] at (axis cs:2400,3.12) {10 scraps: 500 to 11,000};
 \end{axis}
 \end{tikzpicture}
 \caption{How long a lone curled loop lasted in a bath. \Meas\ Each bar runs from the first scrap healed
@@ -457,9 +460,10 @@ then collapse (a cliff)? The author predicted a gentle fall. So did we.
 \end{axis}
 \end{tikzpicture}
 \caption{The curled loops fall off a cliff. The energy does not follow them. \Meas\ Slowing the
-cooling from 10,000 to 100,000 fair sweeps lost two curled loops in three. Slowing it again to
-300,000 lost twelve of the remaining thirteen. The energy held in leftovers fell far less. The loop
-count can start above 100\% because a few loops form after the first count.}
+cooling from 10,000 to 100,000 fair sweeps lost two curled loops in three. Slowing it from 30,000 to
+300,000 lost twelve in thirteen. The energy held in leftovers fell far less. About three units in ten of
+that energy go in any cooling, even an instant chill, as loose small pieces settle. The loop count can
+start above 100\% because a few loops form after the first count.}
 \label{fig:cliff}
 \end{figure}
 
@@ -474,15 +478,15 @@ the leftover energy. Something else was holding energy, and cooling slowly did n
 \centering
 \begin{tikzpicture}
 \begin{axis}[width=0.86\linewidth,height=5.6cm,xlabel={fair sweeps taken to cool the bath},ylabel={pieces counted in 80 tubes},xmin=0.5,xmax=7.5,ymin=0,ymax=215,xtick={1,2,3,4,5,6,7},xticklabels={0,{1,000},{3,000},{10,000},{30,000},{100,000},{300,000}},grid=both,grid style={gray!20},tick label style={font=\footnotesize},label style={font=\footnotesize},legend style={at={(0.97,0.97)},anchor=north east,font=\footnotesize,draw=none,fill=white,fill opacity=0.9,text opacity=1},legend cell align=left]
-\addplot[accent,very thick,mark=*,mark options={fill=accent}] coordinates {(1,179) (2,187) (3,185) (4,170) (5,133) (6,59) (7,10)};
+\addplot[accent,very thick,mark=*,mark options={fill=accent}] coordinates {(1,178) (2,187) (3,184) (4,170) (5,133) (6,59) (7,10)};
 \addplot[melt,very thick,mark=triangle*,mark options={fill=melt}] coordinates {(1,91) (2,101) (3,101) (4,102) (5,101) (6,103) (7,106)};
 \addplot[curl,very thick,mark=square*,mark options={fill=curl}] coordinates {(1,16) (2,15) (3,16) (4,16) (5,16) (6,15) (7,18)};
-\legend{pieces of four dots, pieces of two dots, pieces of eight dots}
+\legend{curled loops (four dots), pieces of two dots, pieces of eight dots}
 \end{axis}
 \end{tikzpicture}
 \caption{What slow cooling removes, and what it does not. \Meas\ Leftover pieces sorted by how many
-dots they hold. The pieces of four, nearly all of them curled loops, fall away. The pieces of two and
-of eight do not change at all across the whole range. The slowest cooling was run on forty tubes and
+dots they hold. The curled loops fall away. The pieces of two and of eight do not change at all
+across the whole range. The slowest cooling was run on forty tubes and
 its counts are doubled here.}
 \label{fig:kinds}
 \end{figure}
@@ -577,7 +581,7 @@ Scrap & what it is & holds & cheapest swap out\\
 \midrule
 curled loop & one ring of the old tube, still curled & 14 units & costs 12\\
 double loop & two rings of the old tube, still curled & 8 units & costs 11\\
-twist & two pairs with a square too many, two pairs with one too few & 20 to 30 units & costs 11\\
+twist & eight dots of two kinds & 20 to 30 units & costs 11\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -591,8 +595,8 @@ boxes in Chapter~2 is the same kind of object. Whether it is wired exactly the s
 settled.
 
 \sub{The same first step, a different fate}
-\Exact\ Every swap out of a curled loop costs at least 12 units. Every swap out of a double loop or a
-twist costs at least 11. Those are nearly the same. Yet the curled loop heals when cooled slowly and
+\Exact\ The cheapest swap out of a curled loop costs 12 units. The cheapest swap out of a double loop
+or a twist costs 11 in nearly every one read. Those are nearly the same. Yet the curled loop heals when cooled slowly and
 the other two do not.
 
 \Ours\ So the first step cannot be what decides. What decides must lie further along: after the first
@@ -705,7 +709,7 @@ be seams, and by the registered test they are not (Chapter~7).
 \Pub\ People who study how order forms in materials have names for nearly everything in this paper. A
 change that starts at scattered places and spreads is nucleation and growth. A scrap is a defect.
 Healing is annealing. A system sealed with its energy is isolated, and one whose defects stop moving
-is arrested. A recent study of a sealed chain of atoms finds the same broad outcomes we do: order
+is arrested. A recent study of a sealed chain of atoms finds outcomes with the same outline as ours: order
 that spreads from scattered starts, and defects that either slowly disappear or freeze where they
 are~\cite{JC26}. \Ours\ The differences matter as much. Their defects are borders between two
 mirror-image versions of one pattern, and they vanish only in pairs. A lone curled loop heals by
