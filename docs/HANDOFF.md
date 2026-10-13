@@ -307,7 +307,7 @@ branch; written 07:20 ET by the clock).**
    Run `pytest -q > log; echo $?` and read the status; never pipe pytest through `tail`. Long scripts go in a file with
    the Write tool (the shell cuts long heredocs). Background runs: `nohup <py> scripts/... > log 2>&1 &`.
 
-## Addendum, 12 October 2026 (a second line of work; the toy's state above is unchanged)
+## Addendum, 12 October 2026 (a second line of work; the toy's state above is unchanged; the branch's state at the end of the day is the last three bullets)
 
 - The owner's handoff `docs/theory/observer_relative_histories_research_handoff.md` (observer-relative histories in a
   Level-2 Everettian universe) was worked through its Stages A to F on the branch
@@ -323,7 +323,50 @@ branch; written 07:20 ET by the clock).**
 - Later on 12 October: `origin/main` merged into this branch (main had used O120 and O121; this branch's entry, numbered O119 there, collided with main's O119 (the flat tori counted) and was renumbered O125 at the merge of 12 October). The owner's framing recorded: she does not need this line to be new; "already published" is the result wanted, to be applied to her theory. Her question on the loop answered in section
   10 of the findings page (ours, unverified: a Born-weighted measure, the view from outside as the decoherence functional, a record-erasing turn boundary; a two-turn toy test proposed, not registered). Piece 9 updated on the page and the draft; the claim's last sentence revised for her confirmation; the provenance
   paragraph under the claim removed at her request.
-- Next ASSUMPTIONS number after this branch: **O122**.
+- **State of the branch, end of 12 October.** `claude/observer-relative-histories-2026-10-12` is merged with `main` as
+  it stood after PR #49 (main's merge of the paper 1 branch `claude/paper1-after-review-2026-10-12`); three conflicts,
+  all bookkeeping (the queue status and inbox snapshots take main's newer copies; the sandbox notebook keeps both
+  sides' 12 October entries in day order); no code or result changed in the merge. Then a fresh reviewer's findings on
+  the branch were fixed in the working tree, uncommitted at this writing (Emily commits; nothing under `results/`
+  changed, which `git status` confirms). One line each:
+  - **Provenance helper** (`graphity.results.provenance`): now runs `git status` with untracked files included, so an
+    untracked file makes `git_dirty` true, with two new fields, `git_untracked_count` and `git_untracked`; tested in a
+    temporary repository. Why: the three ORH meta files name commit e59d87ba, which holds nothing under `src/orh` (the
+    code was first committed with the results as c23803cf). The meta files stand (rule 5); a dated provenance note on
+    the findings page and an addendum to O125 record it; a re-run reproduced all three CSVs line for line.
+  - **Stage E reference classes:** the run's `late` class was never declared and the declared "uniform over observers"
+    never ran (two of three ran as declared). Dated entries in the plan, in P20 and on the findings page say exactly
+    what was written when: the three run classes were in P20 at c23803cf; the replacement was noted nowhere until
+    12 October. No number is claimed for the class that did not run.
+  - **Findings page:** the fifth kind of statement, "model output", withdrawn with a dated line (Stage E is exact
+    arithmetic on declared inputs, exploratory, every reading ours); the nested-records, conditional-total and
+    conserved-weight checks relabeled as checks of the code, not findings.
+  - **Figure 6** (`docs/figures/orh_stage_e_f_today.png`) redrawn: four late-weighted values below the axis floor are
+    shown on the floor as open markers, the three classes labeled, the legend pointing to
+    `results/orh_stage_e_summary.csv`; `scripts/orh_stage_e.py --figures-only` redraws it without touching `results/`.
+  - **REFERENCES.bib:** ten entries added for works cited on the ORH pages with none (Kipping 2025 and 2021, Behroozi
+    and Peeples, Lingam and Loeb, Cirkovic and Balbi, Blume-Kohout and Zurek, Page and Wootters, Vaidman's SEP entry,
+    1998 and 2012); each note gives the read status; author-and-year-only entries say "details to verify".
+  - **Programme draft:** piece 9's status softened to a candidate proposed to the author (ours, unverified; it reads the
+    model's renamings as Everett's branches, untested), with the softening line placed newest first in its log; piece
+    13's "are Everett's branches" marked an identification, not a result; piece 14's Stage E sentence marked an
+    exploratory population model and its Born-weighting made conditional; header date 12 October, no clock time.
+  - **ASSUMPTIONS and CLAUDE.md:** O123's heading carries the λ dependence (the floor 1 − (λ − 1)/4 less the push's
+    share, zero at λ = 5); O125 gains the provenance addendum; CLAUDE.md's 12 October paragraph is split into lessons
+    and facts. **Plain-language edition:** four sentences that said "melted" of a sealed box reworded, PDF rebuilt.
+  - **Left as nits, not fixed:** British "labeled" on the findings page and at line 1492 of the plain-language
+    edition; the programme draft's piece 14 row still says "model output on published equations"; the share by today
+    reaches 0.96 in the summary CSV where the draft says 0.9 and the findings page 0.92; the claim paragraph reads
+    firmer than piece 9's status (hers to settle, below).
+- **Open for the owner, exactly:** (1) whether the T64 rerun and its bar stand as her decision (T64 is T63 on fresh
+  seeds with the control's rule written from paper 1's record, a second attempt; its held-out size N = 384 is queued
+  and O127 waits on it); (2) whether the Stage E numbers stay on the programme page (piece 14) while the config that
+  produced them is exploratory, which she tabled; (3) the claim's last sentence, the amplitude-and-record rule, awaits
+  her confirmation (until then the 9 October sentence, "the rule that lets them cancel is still to be found", is the
+  confirmed one); (4) the cloud `.meta.json` files say `git_commit: unknown` (40 in `results/`: T62, T63 and T64),
+  because the Batch container has no checkout; a container issue, not fixed here.
+- **Next record numbers after this branch:** ASSUMPTIONS **O126** (the "O122" written here earlier was stale: main had
+  used O120 to O124 by the merge), VISION **Update 57**, PREREGISTRATION **T65**.
 
 ## Addendum, 9 October 2026
 

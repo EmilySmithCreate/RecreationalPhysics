@@ -2,6 +2,10 @@
 in one fixed Planck-2018 background, under the scenario grid of the config. Usage:
 
     python scripts/orh_stage_e.py configs/orh_stage_e.json [out_dir]
+    python scripts/orh_stage_e.py configs/orh_stage_e.json [results_dir] --figures-only
+
+The first form refuses to run if its result files already exist (graphity.results.ResultWriter; results are
+append-only). The second redraws figure 6 from the summary CSV already in results/ and writes nothing there.
 
 Writes two result files and two figures:
     results/orh_stage_e_summary.csv   one row per (scenario, reference class, interaction gamma, exotic eps):
@@ -29,6 +33,12 @@ from orh import __version__, cosmic                           # noqa: E402
 
 SERIES = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 INK, INK2, SURFACE, RULE = "#0b0b0b", "#52514e", "#fcfcfb", "#d9d8d2"
+F_AXIS_FLOOR = 1e-5
+REF_LABELS = {                       # what each reference class of src/orh/cosmic.py is, in words
+    "moments": "uniform over observer-moments",
+    "origins": "uniform over inhabited planets (each counted once, at its origin)",
+    "late": "observer-moments weighted by the age of the planet's observer era",
+}
 
 
 def style(ax, title, xlabel, ylabel):
@@ -51,9 +61,14 @@ def model_for(cfg, cutoff):
 
 
 def main(argv):
+    figures_only = "--figures-only" in argv
+    argv = [a for a in argv if a != "--figures-only"]
     cfg_path = (Path(argv[1]) if len(argv) > 1 else ROOT / "configs" / "orh_stage_e.json").resolve()
     out_dir = Path(argv[2]) if len(argv) > 2 else ROOT / "results"
     cfg = json.loads(cfg_path.read_text())
+    if figures_only:
+        redraw_figures(cfg, out_dir)
+        return
     t0 = cfg["t_today_gyr"]
     figdir = ROOT / "docs" / "figures"
     figdir.mkdir(parents=True, exist_ok=True)
@@ -135,29 +150,65 @@ def main(argv):
     fig.savefig(figdir / "orh_stage_e_w_of_t.png", dpi=160)
     plt.close(fig)
 
-    # figure: F(today) by scenario and reference class (gamma 0, eps 0)
+    figure_f_today(cfg, summary_rows, figdir, plt)
+    print(f"wrote {out_dir / (cfg['name'] + '_summary.csv')}, {out_dir / (cfg['name'] + '_curves.csv')} and figures")
+
+
+def figure_f_today(cfg, summary_rows, figdir, plt):
+    """Figure 6: F(today) by scenario and reference class (gamma 0, eps 0). A value below the axis floor is drawn
+    as an open marker sitting on the floor, with its own legend entry, so that no point drops off the axis (until
+    2026-10-12 values were clamped at 1e-6 on an axis starting at 1e-5, which hid four of them)."""
     names = [sc["name"] for sc in cfg["scenarios"]]
     refs = cfg["reference_classes"]
-    fig, ax = plt.subplots(figsize=(8.4, 4.6), facecolor=SURFACE)
+    fig, ax = plt.subplots(figsize=(9.8, 5.2), facecolor=SURFACE)
     y = np.arange(len(names))
+    any_below = False
     for k, ref in enumerate(refs):
-        vals = []
-        for name in names:
+        shown, below = [], []
+        for i, name in enumerate(names):
             r = next(r for r in summary_rows if r["scenario"] == name and r["reference_class"] == ref
-                     and r["gamma"] == 0.0 and r["exotic_eps"] == 0.0)
-            vals.append(max(r["F_today"], 1e-6))
-        ax.scatter(vals, y + (k - 1) * 0.22, color=SERIES[k], s=56, label=f"uniform over {ref}", zorder=3)
+                     and float(r["gamma"]) == 0.0 and float(r["exotic_eps"]) == 0.0)
+            v = float(r["F_today"])
+            if not np.isfinite(v):
+                continue                                    # no F where the integral does not converge
+            (shown if v >= F_AXIS_FLOOR else below).append((v, y[i] + (k - 1) * 0.22))
+        if shown:
+            ax.scatter([v for v, _ in shown], [yy for _, yy in shown], color=SERIES[k], s=56,
+                       label=REF_LABELS.get(ref, ref), zorder=3)
+        if below:
+            any_below = True
+            ax.scatter([F_AXIS_FLOOR] * len(below), [yy for _, yy in below], s=70, marker="o", facecolors="none",
+                       edgecolors=SERIES[k], linewidths=1.6, zorder=4, clip_on=False)
+    if any_below:
+        ax.scatter([], [], s=70, marker="o", facecolors="none", edgecolors=INK2, linewidths=1.6,
+                   label=f"below the axis floor of 10^{int(np.log10(F_AXIS_FLOOR))} "
+                         "(value in results/orh_stage_e_summary.csv)")
     ax.set_xscale("log")
-    ax.set_xlim(1e-5, 1.2)
+    ax.set_xlim(F_AXIS_FLOOR, 1.2)
     ax.set_yticks(y)
     ax.set_yticklabels([n.replace("_", " ") for n in names], fontsize=8, color=INK2)
     ax.invert_yaxis()
     style(ax, "F(13.8 Gyr): the share of observer-moments at or before today, by scenario", "F(13.8 Gyr)", "")
-    ax.legend(frameon=False, fontsize=8, loc="lower left")
+    ax.legend(frameon=False, fontsize=7, loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=2)
     fig.tight_layout()
     fig.savefig(figdir / "orh_stage_e_f_today.png", dpi=160)
     plt.close(fig)
-    print(f"wrote {out_dir / (cfg['name'] + '_summary.csv')}, {out_dir / (cfg['name'] + '_curves.csv')} and figures")
+
+
+def redraw_figures(cfg, results_dir):
+    """--figures-only: redraw figure 6 from the summary CSV already in results/, writing nothing under results/.
+    The dP/d ln t figure is not redrawn: it is made from the fine time grid, which is not stored."""
+    import csv
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    path = Path(results_dir) / (cfg["name"] + "_summary.csv")
+    with path.open(newline="") as fh:
+        rows = list(csv.DictReader(fh))
+    figdir = ROOT / "docs" / "figures"
+    figdir.mkdir(parents=True, exist_ok=True)
+    figure_f_today(cfg, rows, figdir, plt)
+    print(f"redrew {figdir / 'orh_stage_e_f_today.png'} from {path}; results/ untouched")
 
 
 if __name__ == "__main__":

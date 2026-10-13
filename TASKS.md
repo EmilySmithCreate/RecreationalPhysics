@@ -595,7 +595,10 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    closed without running the pull (O103 (d)).
 5. **The git commit hash in `.meta.json`.** The runners record the config, the package version and the Python, NumPy and
    Numba versions (`scripts/*.py`, the `meta = dict(...)` lines), not the commit. Add the hash and a dirty-tree flag to
-   new runs through one shared helper, with a test; existing results are untouched (rule 5).
+   new runs through one shared helper, with a test; existing results are untouched (rule 5). *Done for laptop runs
+   (`graphity.results.provenance`, 10 October); 12 October: it now counts untracked files as dirty and lists them, after
+   three meta files named a commit that held none of their code. **Still open for cloud runs:** the Batch container has
+   no checkout, so every cloud meta file since says `git_commit: unknown` (T62, T63, T64).*
 6. **Reading, before any citation:** Pathria (1972), Popławski (the universe inside a black hole), and the Fife paper
    the third review cites (its reference to be obtained from the owner), as the benchmark lineage for piece 11; read
    status recorded in `REFERENCES.bib` (rule 1). Benchmarks, never evidence (rule 13).
@@ -760,4 +763,12 @@ ours: 13, interference and records; 14, observers inside the loop; the page is a
 at her request of the same afternoon); (2) Martellini 2026 (arXiv:2607.25307) read in full before the record surprisal is cited anywhere;
 (3) a fresh read-only review of the Stage C claims (rule 12) if any of them is ever quoted outside the repository;
 (4) nothing is to be written as "we have not found" about any of the three claims (the prior-work note says FOUND); (5) her decision on piece 9, whether the published rule (the amplitude rule of 23 September) becomes the hypothesis's own, with piece 13's toy as its benchmark before Bell; (6) whether the two-turn erasure test of the findings page (section 10, item 5) is registered; (7) her confirmation of the claim's revised last sentence (12 October). Her framing of 12 October stands over all of it: finding the mathematics already published is the result wanted, not a null.
+
+*Later on 12 October: the branch is merged with `main` after PR #49 (three bookkeeping conflicts). A fresh reviewer's
+findings were fixed in the working tree (`docs/HANDOFF.md`, 12 October addendum, one line each): the provenance helper
+flags untracked files; the Stage E class that ran undeclared and the declared one that never ran are recorded with
+dated lines; "model output" withdrawn as a kind of statement; figure 6 redrawn; ten bibliography entries; piece 9's
+status softened to a candidate. Open for the owner: whether the T64 rerun and its bar stand as her decision; whether
+the Stage E numbers stay on the programme page while its config is exploratory (tabled); item (7) above; the cloud
+meta files' `git_commit: unknown`, a container issue, not fixed here.*
 

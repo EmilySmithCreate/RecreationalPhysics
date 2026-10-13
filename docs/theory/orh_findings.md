@@ -8,9 +8,27 @@ exact tests: `tests/test_orh_*.py` (49 tests); results: `results/orh_stage_bcd.c
 `docs/figures/orh_*.png`.
 
 **Kinds of statement (CLAUDE.md rule 10).** *Exact*: closed forms and exact state-vector computations, each
-checked by a test. *Model output*: the cosmological population model, a classical calculation on declared inputs,
-with no claim that any of its knobs is right. *Ours*: every reading below. *The owner's*: the handoff and its
-commitments. No physicist has read any of this.
+checked by a test; the Stage E population model's arithmetic on its declared inputs is exact in this sense too
+(given those inputs; its config is labeled exploratory and no claim is made that any of its knobs is right).
+*Ours, unverified*: every reading below, including every reading of a Stage E number. *The owner's*: the handoff
+and its commitments. Nothing here is measured in rule 10's sense: no pre-registered run of the project's toy was
+made. No physicist has read any of this. *(Reworded 2026-10-12, later the same day: an earlier version of this
+paragraph and of the section 6 heading used a fifth kind, "model output", which rule 10 does not have.)*
+
+**Provenance note (2026-10-12).** The three files `results/orh_stage_bcd.meta.json`,
+`results/orh_stage_e_curves.meta.json` and `results/orh_stage_e_summary.meta.json` name commit `e59d87ba` with
+`git_dirty: true`. That commit contains nothing under `src/orh/` (`git ls-tree -r --name-only e59d87ba -- src/orh`
+is empty): the code that produced the results was untracked when they ran and was first committed, together with
+the results, as `c23803cf`. The cause is that `graphity.results.provenance` looked only at tracked files, so
+untracked code never counted as a departure from the named commit; it was found by a reviewer on 12 October and
+the helper now counts untracked files as dirty and lists them (`git_untracked_count`, `git_untracked`; a test
+exercises it in a temporary repository). The three `.meta.json` files are left as written (rule 5). The check in
+their place: the results are deterministic computations with no random number, so a re-run under the committed
+code is the test. Done on 12 October in the worktree at the merge of `c23803cf`'s branch with `main`, with the
+scripts and `src/orh/` byte-identical to `c23803cf`, writing to a scratch directory outside `results/`: all three
+CSVs (`orh_stage_bcd.csv`, 157 lines; `orh_stage_e_summary.csv`, 200; `orh_stage_e_curves.csv`, 9,901) came out
+identical to the stored ones line for line, differing only in the line ending (the re-run on Windows wrote CRLF).
+The figures redrawn by that re-run were byte-identical to the stored ones as well. (Later the same day the figure code in `scripts/orh_stage_e.py` was changed for figure 6, so that script is no longer byte-identical to `c23803cf`; the computation it runs is unchanged, and the `--figures-only` path writes nothing under `results/`.)
 
 ## 1. The answer to the first question: what is established, assumed, new
 
@@ -68,9 +86,13 @@ perfect copy), observer registers that copy fragments. Everything below matches 
   coarse graining, are the test.
 - **Nested records (Stage F item 3).** Four systems with Born weights 0.3, 0.8, 0.5, 0.9, each recorded by its own
   register. The compatible set of the record "1, 1, 1, 1" shrinks from 8 histories to 1; its measure falls 0.3,
-  0.24, 0.12, 0.108, exactly the running products; the surprisal rises 1.74, 2.06, 3.06, 3.21 bits; the conditional
-  measure inside each set sums to one; the total weight stays one; the family is exactly decoherent at every step
-  (`orh_stage_c_nested_measure.png`). This is Everett's product measure, as the map says.
+  0.24, 0.12, 0.108, exactly the running products; the surprisal rises 1.74, 2.06, 3.06, 3.21 bits; the family is
+  exactly decoherent at every step (`orh_stage_c_nested_measure.png`). This is Everett's product measure, as the
+  map says. *Checks of the code, not findings (exact, by construction; relabeled 2026-10-12):* the compatible
+  sets nest, which holds for any record that extends the one before, since the set is an intersection; the
+  conditional measure inside each set sums to one, which is how it is normalized; and the total weight stays one,
+  which section 7 item 1 says holds for interfering families too. The script computes all three and the tests
+  assert them, so that a bug would show; none of them says anything about decoherence or about records.
 - **Two observers of one record.** mu(A = 0 and B = 0) = mu(A = 0) = 0.7, not 0.49; mu(A = 0 and B = 1) = 0.
 - **An erased record is not a permanent fact.** With the record undone before the second time, the family that
   includes the earlier record value has off-diagonal D = 1/4 again and is not decoherent; with the record kept it
@@ -108,12 +130,26 @@ indifference), and none of the fourteen papers says anything about *experienced*
 the question as worded: partly standard (no collapse is needed; records are physical correlations that nest along a
 branch) and an overreach in "explain" and "experienced".** What the toy adds to the standard account is nothing.
 
-## 6. Stage E: the cosmological population model (model output)
+## 6. Stage E: the cosmological population model (exact arithmetic on declared inputs; every reading ours, unverified)
 
 One fixed Planck-2018 background; Loeb et al. 2016's equations for star formation, the mass function, lifetimes and
 the habitability window; our declared knobs (delay, observer window, lower stellar mass, reference class, interaction
-factor, exotic late observers; register P11 to P24). The scenario grid was written before the script ran. Figures:
-`orh_stage_e_w_of_t.png` (Stage F item 5) and `orh_stage_e_f_today.png` (item 6).
+factor, exotic late observers; register P11 to P24). The numbers are exact given those inputs (a deterministic
+integral on a fixed grid; the grid is in the config); nothing about the inputs is measured, and the config
+`configs/orh_stage_e.json` is labeled exploratory. The scenario grid was written before the script ran. Figures:
+`orh_stage_e_w_of_t.png` (Stage F item 5) and `orh_stage_e_f_today.png` (item 6). *Two notes of 2026-10-12, later
+the same day:* (a) the three reference classes that ran are not the three the plan declared. The classes that ran
+were recorded at the time in register entry P20 (commit c23803cf, with the results); what was never written, until
+a reviewer found the mismatch on 12 October, was that the plan's declared "uniform over observers" had been replaced
+by `late`. The plan carries the dated entry (Stage E, "What ran, against what was declared"); "late-weighted
+moments" in the table below is the class `late` of `src/orh/cosmic.py`, observer-moments weighted by the age of the
+planet's observer era, and "uniform over origins" is `origins`, each inhabited planet counted once at its origin.
+(b) Figure 6 was redrawn from the stored summary CSV: its first version clamped values at 10^-6 on an axis starting
+at 10^-5, so the four late-weighted values below 10^-5 fell off the axis, and it labeled the `late` class "uniform
+over late". They now sit on the axis floor as open markers with their own legend entry, which points to
+`results/orh_stage_e_summary.csv` for the values. Three of the four are in the table below (7 x 10^-7, 2 x 10^-6,
+1 x 10^-7); the fourth is Loeb et al.'s own setting (`loeb_baseline`) under the late-weighted class, 2.5 x 10^-6,
+which has no row in the table.
 
 **The published core is reproduced in kind.** Loeb et al.'s own setting (stars from 0.08 to 3 solar masses, no delay,
 observers for the star's life, the 50 Gyr cutoff) gives F(13.8 Gyr) = 0.0017 against their "0.1 % at most", with
@@ -180,9 +216,10 @@ one named quantity not in the fourteen papers is a definition already published 
 model whose output is absorbed by its declared knobs: the reference class and the observer window move F(13.8 Gyr)
 across six orders of magnitude, so no observation of "how early we are" can test the quantum part, and the
 cosmological part reproduces the published spread rather than narrowing it. The handoff's success criteria 1 to 4 are
-met in the narrow technical sense it asks for (interference suppression and shared records; nested subsets with
-rising surprisal and conserved norm; joint histories for interacting observers; a declared weighting giving a
-distribution with its sensitivity), and criterion 5 is answered: nothing here is a new prediction. A falsifiable
+met in the narrow technical sense it asks for (interference suppression and shared records; rising surprisal along a
+record sequence, where the nesting and the conserved norm beside it are checks of the code and not findings, section
+3; joint histories for interacting observers; a declared weighting giving a distribution with its sensitivity), and
+criterion 5 is answered: nothing here is a new prediction. A falsifiable
 consequence would need an observable the knobs do not absorb; none was found.
 
 ## 9. What is asked of the owner

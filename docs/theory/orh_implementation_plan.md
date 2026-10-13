@@ -134,6 +134,19 @@ integral converges; all on a logarithmic time axis from 10^8 to 10^14 years; a t
 scenario and three reference classes (uniform over observer-moments; uniform over observers, which divides by the
 observer lifetime; uniform over inhabited planets).
 
+*What ran, against what was declared (added 2026-10-12, after the run; the mismatch was found by a reviewer).* The
+config that ran, `configs/orh_stage_e.json`, names the classes `moments`, `origins` and `late` of
+`src/orh/cosmic.py`. Against the three declared above: `moments` is uniform over observer-moments, as declared;
+`origins` (each inhabited planet counted once, at the time its observers first appear) is the declared uniform over
+inhabited planets; `late` (observer-moments weighted linearly by the age of the planet's observer era, Loeb et al.'s
+Sec. 4 remark) is not in the declaration above, and the declared uniform over observers, which divides each planet's
+observer-moments by its observer lifetime, never ran. So one declared class was replaced by an undeclared one
+between this plan and the config. What was and was not written at the time, exactly: the three classes that ran
+were recorded when the results were committed, in register entry P20 of `orh_assumptions.md` (commit c23803cf, the
+commit that holds the results); this plan was not amended, and no page said that a declared class had been replaced,
+until this entry. The config and the results stand as run (rule 5); the findings page's table names the classes
+that ran; the uniform-over-observers class is not computed and no number is claimed for it.
+
 *Our expectation before computing (ours; recorded so that it can be wrong).* Under the red-dwarf-friendly scenario
 F(13.8 Gyr) is small, a few per cent at most, because the integrated star-formation of the far future is dominated
 by stars that live 10^12 to 10^13 years; under the suppressed scenario (0.5 M_sun cutoff) F(13.8 Gyr) lies between

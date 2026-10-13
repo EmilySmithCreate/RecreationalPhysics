@@ -71,7 +71,10 @@ tree on 12 October 2026; `ASSUMPTIONS.md` carries one pointer entry to this file
   observer-moments weighted linearly by the age of the planet's observer era.** Ours. The first is the handoff's and
   Sebens and Carroll's (their Eq. 42); the second is Lineweaver and Egan 2007's and Hanson et al. 2021's kind; the
   third is the simplest form of Loeb et al.'s remark (Sec. 4) that a given observer is more likely later in a planet's
-  existence. Unverified against any data; nothing could verify it.
+  existence. Unverified against any data; nothing could verify it. *Added 2026-10-12:* these are the three classes
+  that ran (`moments`, `origins`, `late` in `src/orh/cosmic.py`), and this entry recorded them when the results were
+  committed (c23803cf); the plan had declared a different third class, uniform over observers, which never ran, and
+  that replacement was not noted anywhere until a reviewer found it on 12 October (the plan's Stage E, dated entry).
 - **P21. The interaction factor (n(t)/n_max)^gamma, gamma in {0, 0.5, -0.5}.** Ours; speculative, as the handoff
   says of its interactions scenario. Hanson et al. 2021's preemption rule is the published relative.
 - **P22. Exotic late observers at a constant rate per physical volume (eps a^3 per comoving volume).** Ours, as the

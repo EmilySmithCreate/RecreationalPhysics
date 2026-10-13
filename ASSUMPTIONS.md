@@ -3622,14 +3622,20 @@ to the owner's hypothesis or a new simulation result.
   > beside the manuscripts. The prior disclosure below describes the original drafting; these
   > 11 October corrections and their checker were prepared with OpenAI Codex.
 
-- **O123 EXACT: a sealed tube cannot melt. The burp's own energy can break at most about one square in sixteen,
-  and every run T9 classed "melted" kept 94 to 100 % of its squares (12 October 2026). Exact arithmetic, and a
-  reading of saved runs by a tested script; it corrects how that class was described, not how it was scored.**
+- **O123 EXACT: a sealed tube cannot melt at the curling costs run. The burp's own energy can break at most about
+  one square in sixteen at λ = 1.25 and one in ten at λ = 1.40, a bound that weakens as λ grows and says nothing
+  by λ = 5; and every run T9 classed "melted" kept 94 to 100 % of its squares (12 October 2026). Exact arithmetic,
+  and a reading of saved runs by a tested script; it corrects how that class was described, not how it was scored.**
   (`scripts/read_t9_squares.py`, `tests/test_t9_squares.py`. The owner's question of 12 October, in her words:
-  "what if melted isnt a thing?")
+  "what if melted isnt a thing?" *Heading reworded 12 October 2026, later the same day, after a fresh reviewer
+  noted that it stated the bound without its λ. The Exact bullet gained three clauses in the same edit, all the same
+  arithmetic: the floor written out as 1 − (λ − 1)/4 less the push's share, its zero at λ = 5, and its value over
+  paper 1's range; a second reviewer then caught the push's sign, corrected below the same day.*)
   - **Exact.** H = 16(N − S) + 4λX with X never below zero, and a sealed run holds only what it started with,
-    E = 4(λ − 1)N plus the push. So the squares per point can never fall below 1 − E/16N: 0.93 at λ = 1.25 and
-    0.90 at λ = 1.40, however few stores there are. The random phase has about 0.13.
+    E = 4(λ − 1)N plus the push. So the squares per point can never fall below 1 − E/16N = 1 − (λ − 1)/4 less the
+    push's small share (the push is part of E, so it lowers the floor a little): 0.93 at λ = 1.25 and 0.90 at
+    λ = 1.40, however few stores there are. The bound falls with λ and reaches zero at λ = 5, so it says nothing there; paper 1's runs sit between 1.05 and 1.45, where it
+    holds at 0.89 or above. The random phase has about 0.13.
   - **Read.** T9's 154 runs classed "melted" end with 0.938 to 1.000 squares per point (medians 0.953 to 0.958
     at the three sizes). T61's sealed spells never went below 0.92. No sealed run is below its floor.
   - **What it corrects.** "Melted" in T9 is a registered class: at least 15 % of points at d = 0 or d ≥ 3. It
@@ -3696,6 +3702,8 @@ record is not a permanent fact (off-diagonal D = 1/4 once the record is undone).
 
 
 *Addendum, later on 12 October 2026 (ours, unverified).* The owner, on the FOUND result: "I don't need this to be new, much better if I can apply existing math and physics to my theory and use it to predict and identify testable hypotheses and understand the key variables and constants." Section 10 of the findings page records what the published mathematics gives the hypothesis, in answer to her question whether the amplitude-and-record rule connects to the strange loop: (1) piece 9's missing rule is the standard one, so what is left to the loop is where the amplitudes live (the amplitude rule of 23 September is the candidate); (2) her per-turn measure must be Born-weighted, by Everett 1957 Sec. 5's own derivation of the only additive measure on branches, which leaves the unit and the combination rule as the choices; (3) the view from outside the loop is the decoherence functional of a closed system, defined with no observer outside; (4) a loop that turns for ever needs a turn boundary that erases records, since records accumulate only from blank registers, and in the toy an erased record restores interference and leaves the weights untouched, so branches re-merge at the boundary to the extent it erases (the black-hole information question in her terms; Penrose's cyclic cosmology and Gell-Mann and Hartle's time-neutral formulation are the relatives, general knowledge, to verify). A two-turn version of the toy, records erased at the boundary against kept, is proposed and not registered. `origin/main` was merged into the branch the same evening; O119 stands beside main's O120 and O121.
+
+*Addendum, 12 October 2026: provenance of the three results files, and one mismatch between the plan and the Stage E config (exact; found by a fresh reviewer on 12 October).* The three files `results/orh_stage_bcd.meta.json`, `results/orh_stage_e_curves.meta.json` and `results/orh_stage_e_summary.meta.json` record `git_commit` e59d87ba with `git_dirty` true. That commit is a merge that contains none of `src/orh`; the code that produced the files was first committed as c23803cf. The `git_dirty` flag did fire, on edits to tracked files; what it could not say is that the code itself was absent from the named commit, because the helper `graphity.results.provenance` ran `git status` with `--untracked-files=no` at the time, and `src/orh` was untracked when the runs were made. Had the new files been the only change, the tree would have read as clean. The helper is being fixed on this branch to count untracked files as dirty and to list them. The three meta files are not edited (rule 5); this line is the correction. Also recorded: the Stage E config (`configs/orh_stage_e.json`) ran the reference classes named `moments`, `origins` and `late`, where the plan declared uniform over observer-moments, over observers and over inhabited planets. Read from `src/orh/cosmic.py` (the plan's dated entry, Stage E, "What ran, against what was declared"; the findings page's note (a)): `moments` is the declared uniform over observer-moments and `origins` is the declared uniform over inhabited planets, so two of the three declared classes ran as declared; `late` (observer-moments weighted by the age of the planet's observer era) is not in the declaration, and the declared uniform over observers never ran. One declared class was replaced by an undeclared one without a written line at the time; no number is claimed for the class that did not run.
 
 ## Provenance
 
