@@ -216,12 +216,15 @@ not an energetic spinodal. \\
 
 At $\lambda=1.25$ the cheapest move out of the perfect curled torus, move A, costs
 $\Delta E^\ddagger=12$. This opens the door: it is a first-exit cost, not a proven minimum of the
-maximum energy along a complete conversion path, and whether an excursion then grows or falls back is
+maximum energy along a complete conversion path (the minimax barrier of energy-landscape analysis
+\cite{LLC26a}), and whether an excursion then grows or falls back is
 a separate question (Sec.~\ref{sec:exit}). The neutral-class enumeration of Sec.~\ref{sec:model} makes
 12 a lower bound at the enumerated sizes; an energy-conserving test asks whether it is also enough
 (PL, Ch.~4).
 
-To seal the system we replace the bath at fixed $g$ by a Creutz reservoir \cite{Creutz83}: $C$ stores
+To seal the system, that is, to make it isolated with its total energy strictly conserved
+(microcanonical dynamics), we replace the external bath at fixed $g$ by a Creutz reservoir
+\cite{Creutz83}: $C$ stores
 of nonnegative energy. Each valid candidate move selects one store uniformly; the move is refused if
 that store cannot pay $\Delta H$, and otherwise the store's energy changes by $-\Delta H$, so that
 $E_{\rm tot}=H+\sum_iE_i$ is conserved. Stores and edge proposals are both selected globally: a seed
@@ -436,7 +439,8 @@ square lattice's 25 vertices ($w=0$ on a zero-energy torus with shortest loop si
 shortest loop eight or more); 24 runs per cell. No cell has a majority with $w\ge1/2$ at any size.
 For $C\ge N$ at $\lambda=1.25$ all 144 endpoints have $w<0.05$, and at $C=N/2$, 63 of 72. At
 $\lambda=1.25$ with $C=N/4$, with $C=N/3$ for $N\ge192$, and in every cell at $\lambda=1.40$, the
-majority has $0.05\le w<1/2$: square-lattice regions of differing short period joined at defects,
+majority has $0.05\le w<1/2$: square-lattice regions of differing short period joined at defects
+(in the language of phase-ordering kinetics, domains separated by defects),
 and often disconnected. The share with $w\ge1/2$ at $\lambda=1.40$ falls with size, 24/120, 15/119 and 2/120.
 The shares written beforehand for $N=384$ hold in nine cells of ten. None of the 720 endpoints is a
 connected zero-energy torus with shortest loop above six. $w$ is a local statistic and certifies no
@@ -638,6 +642,15 @@ runs, first exits are on the count at $\lambda=1.05$ and 1.30 with no detected e
 lengthen the mean by 8--10\% because some first exits return unseen.
 The inconclusive maps and the T38 classification are part of the result.
 
+\emph{Relatives in condensed-matter kinetics (context, not validation).} Energy-conserving conversion
+that ends with residual defects has relatives outside this model. In an isolated electron-lattice
+chain, order forms after a sudden change by nucleation and growth and can end arrested, with immobile
+defects, when the energy available falls below a local barrier \cite{JC26}. The defects there are
+kinks between two symmetry-related orders, removed in pairs, and the dynamics is a physical equation
+of motion; neither is established here. The commitment barrier this paper does not compute is, in
+that literature, a minimax barrier, obtained by exact enumeration on small systems and displayed as a
+disconnectivity graph \cite{LLC26a}.
+
 \emph{Named or interchangeable vertices.} All runs here, like the published CQG simulations we know of
 \cite{KTB19,T25}, treat vertices as named (labelled): two graphs that differ only by renaming vertices
 are different states. Giving each unlabelled class one Boltzmann weight is a different, legitimate
@@ -778,6 +791,8 @@ Heriot-Watt University (2022), \url{https://www.ros.hw.ac.uk/handle/10399/4591}.
 \bibitem{T24} C.~A. Trugenberger, \emph{Dark matter and dark energy in combinatorial quantum gravity}, arXiv:2409.09385.
 \bibitem{Creutz83} M.~Creutz, Phys. Rev. Lett. \textbf{50}, 1411 (1983).
 \bibitem{C77} S.~Coleman, Phys. Rev. D \textbf{15}, 2929 (1977).
+\bibitem{JC26} H.~Jang and G.-W. Chern, \emph{Suppressed coarsening after an interaction quench in the Holstein chain}, arXiv:2602.05815.
+\bibitem{LLC26a} B.~B. Le, S.-H. Lee, and G.-W. Chern, \emph{Energy landscape of the kagome antiferromagnet: Characterization of multiple energy scales}, arXiv:2604.18902.
 \end{thebibliography}
 
 \end{document}

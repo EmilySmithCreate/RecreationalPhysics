@@ -1,52 +1,53 @@
-"""The page shell for the web pages of paper 1 on the Side Nerd Blog, sidenerdapps.com/mainnerd/: each edition
-is a post, at /mainnerd/01thecurledtorusburpsPL/ (plain language) and /mainnerd/01thecurledtorusburps/
-(technical), drawn as a 1990s home page in Side Nerd's colors, with a few advertisements (for Side Nerd, the author's
-company, which sponsors the pages, and one that asks for a scientist to read the work), the mascot GIF, a
-guestbook that runs on
-e-mail, and the blocks search engines and AI assistants read (summary, question headings, quick answers, glossary,
-how to cite, JSON-LD).
+"""The page shell for the posts of the Side Nerd Blog, sidenerdapps.com/mainnerd/: each edition of a paper is a
+page, at /mainnerd/<slug>PL/ (plain language) and, where the post has one, /mainnerd/<slug>/ (technical), drawn as
+a 1990s home page in Side Nerd's colors, with a few advertisements (for Side Nerd, the author's company, which
+sponsors the pages, and one that asks for a scientist to read the work), a guestbook that runs on e-mail, and the
+blocks search engines and AI assistants read (summary, question headings, quick answers, glossary, how to cite,
+JSON-LD).
 
-Everything about the paper on these pages comes from the papers' own text (scripts/build_main_nerd_pages.py);
-what is written here is the frame around it. The questions and answers restate the plain-language edition and
-carry its numbers; change them there first. The headings that echo common searches ("What was there before the
-Big Bang?") are bridges to the paper, and each answer says what the work does not show.
+Everything about a paper on these pages comes from the papers' own text (scripts/build_main_nerd_pages.py);
+what is written here is the frame around it, the same for every post. What differs from post to post (title,
+addresses, the questions and answers, the mascot) is data, in scripts/main_nerd_posts.py, and each page function
+takes the post it draws. A block whose text is empty is left off the page, with the links that would lead to it.
 
 Links are root-absolute because the site serves a folder with and without a trailing slash, and a relative
-link breaks without one. The post's folder name is SLUG; change it there and nowhere else.
+link breaks without one. A post's folder name is its slug; change it in main_nerd_posts.py and nowhere else.
 """
 import html
 import json
 import re
 from urllib.parse import quote
 
+from main_nerd_posts import BLOG, POST_01, POSTS, REPO, SHARED
+
 SITE = "https://sidenerdapps.com"
-BLOG = "/mainnerd/"                             # the blog: one folder per post
-SLUG = "01thecurledtorusburps"                     # post 01; the plain-language edition adds "PL"
-BASE = BLOG + SLUG + "PL/"                         # the plain-language edition
-TECH = BLOG + SLUG + "/"                           # the technical edition
-SHARED = BLOG + "assets/"                          # the stylesheet, shared by every post
-ASSETS = SHARED + SLUG + "/"                       # this paper's figures, PDFs, mascot and share image
 STYLESHEET = "main-nerd.css"
 SOON = BLOG + "comingsoon/"                        # where "next post" goes while the next post is not up yet
-KNOBS = BLOG + SLUG + "Knobs/"                     # the interactive companion, "The Tube's Curling Ladder"
-REPO = "https://github.com/EmilySmithCreate/RecreationalPhysics"
-PAPER_DIR = REPO + "/tree/main/docs/papers/curled_torus"
-PDF_PLAIN_NAME = "the-curled-torus-burps-plain-language.pdf"      # copied beside the pages by the build
-PDF_TECH_NAME = "the-curled-torus-burps-technical.pdf"
-PDF_PLAIN, PDF_TECH = ASSETS + PDF_PLAIN_NAME, ASSETS + PDF_TECH_NAME
-# The companion was first published as a Claude artifact, and the papers' PDFs link to it there. The blog hosts
-# its own copy, built from the same source file, and the web pages link to that.
-ARTIFACT = "https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8"
-LADDER = KNOBS
 LOGO = "https://sidenerd-marketing-assets.s3.us-east-1.amazonaws.com/sidenerdapps/logo-original.png"
 AUTHOR_EMAIL = "emilysmithcreate@gmail.com"                      # the address printed on the technical paper
-PUBLISHED = "2026-10-10"
-TITLE = "The curled torus burps"
-SUBTITLE = "A small push, a large release, and the question of what survives"
+MONTHS = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+          "November", "December")
+
+# Post 01 under the names it had when it was the only post.
+SLUG, TITLE, SUBTITLE, PUBLISHED = POST_01.slug, POST_01.title, POST_01.subtitle, POST_01.published
+BASE, TECH, KNOBS, ASSETS = POST_01.base, POST_01.tech, POST_01.knobs, POST_01.assets
+PAPER_DIR = POST_01.paper_url
+PDF_PLAIN_NAME, PDF_TECH_NAME = POST_01.pdf_plain_name, POST_01.pdf_tech_name
+PDF_PLAIN, PDF_TECH = POST_01.pdf_plain, POST_01.pdf_tech
+ARTIFACT, LADDER = POST_01.artifact, POST_01.knobs
+SUMMARY, CHAPTER_QUESTIONS, BIG_QUESTIONS = POST_01.summary, POST_01.chapter_questions, POST_01.big_questions
+FAQ, KEY_TERMS = POST_01.faq, POST_01.key_terms
+
+
+def long_date(iso):
+    """'2026-10-10' as it is written on the pages: 10 October 2026."""
+    year, month, day = (int(x) for x in iso.split("-"))
+    return "%d %s %d" % (day, MONTHS[month - 1], year)
 
 
 def utm(slot, path="/"):
-    """A link back to Side Nerd, tagged the way the site's other links are (lowercase, hyphenated)."""
+    """A link back to Side Nerd, tagged the way the site's other links are (lowercase, hyphenated). The campaign
+    is the blog's one campaign, named when post 01 was its only post, and is the same on every page."""
     return ("%s%s?utm_source=mainnerd&utm_medium=owned-media&utm_campaign=physics-01-curled-torus-burps"
             "&utm_content=%s" % (SITE, path, slot))
 
@@ -106,220 +107,128 @@ AD_FOOT = ad("footer-banner", "banner", "THIS PHYSICS IS BROUGHT TO YOU BY CONVE
 AD_TECH = ad("technical-footer", "banner", "YOU READ A TECHNICAL PAPER.",
              "Your users will not read a manual. Side Nerd: they text what happened, and the "
              "structured record appears where it belongs.", "See how »")
-# the work has had no scientific reader yet
-AD_READER = ('<aside class="ad ad-wanted" aria-label="Advertisement">'
-             '<span class="ad-label">ADVERTISEMENT</span>'
-             '<a href="%s"><span class="ad-copy">'
-             '<span class="ad-head">REAL PHYSICIST, MATHEMATICIAN OR RELEVANT SCIENTIST?</span>'
-             '<span class="ad-body">Volunteer to be a reader! No physicist has reviewed this work yet, and you '
-             'could be the first. Compensation: sincere thanks, and first rights to say what is wrong with it.'
-             '</span><span class="ad-btn">E-MAIL THE AUTHOR »</span></span></a></aside>'
-             % html.escape(mailto("Volunteer reader: The curled torus burps")))
 
-TICKER = ("★ NEW POST! The curled torus burps ★ Twelve units start an escape ★ What opens a space? ★ No physicist "
-          "has reviewed this page (volunteers wanted) ★ Sign the guestbook ★")
+
+def ad_reader(post):
+    """The work has had no scientific reader yet. The e-mail the advertisement opens names the post."""
+    return ('<aside class="ad ad-wanted" aria-label="Advertisement">'
+            '<span class="ad-label">ADVERTISEMENT</span>'
+            '<a href="%s"><span class="ad-copy">'
+            '<span class="ad-head">REAL PHYSICIST, MATHEMATICIAN OR RELEVANT SCIENTIST?</span>'
+            '<span class="ad-body">Volunteer to be a reader! No physicist has reviewed this work yet, and you '
+            'could be the first. Compensation: sincere thanks, and first rights to say what is wrong with it.'
+            '</span><span class="ad-btn">E-MAIL THE AUTHOR »</span></span></a></aside>'
+            % html.escape(mailto("Volunteer reader: " + post.title)))
+
+
+TICKER_ALWAYS = ("No physicist has reviewed this page (volunteers wanted)", "Sign the guestbook")
+
+
+def ticker(post):
+    """The line that runs across the top of a page: the post, its own lines, then the blog's. A post's pages
+    announce that post; the front page and the placeholder announce the newest one."""
+    return "★ " + " ★ ".join(("NEW POST! " + post.title,) + tuple(post.ticker) + TICKER_ALWAYS) + " ★"
+
+
+# ------------------------------------------------------------------ the posts that are up
+# The page functions take `posts`: the posts that are up, oldest first. The build passes the ones it could build.
+def neighbors(post, posts):
+    """(the post before, the post after) among the posts that are up; None where there is none."""
+    k = [p.number for p in posts].index(post.number)
+    return (posts[k - 1] if k else None), (posts[k + 1] if k + 1 < len(posts) else None)
+
+
+def share_image(post):
+    """The picture shown when a page is shared: the post's own, or the first post's where it has none."""
+    own = post if post.share_image else POSTS[0]
+    return SITE + own.assets + own.share_image
+
+
+def own_companions(page, posts):
+    """Links to a companion's first home, the artifact, lead to the blog's own copy of it."""
+    for p in posts:
+        if p.has_companion and p.artifact:
+            page = page.replace(p.artifact, p.knobs)
+    return page
 
 
 # ------------------------------------------------------------------ what the answer engines read
-SUMMARY = (
-    "<p><b>In one paragraph.</b> <i>The curled torus burps</i> is a computational physics paper about a "
-    "hypothetical sharp change in which flat space emerges from something more curled up. It uses a toy model of "
-    "space as a network of dots and links. The toy is the paper's own: a close cousin of the published model "
-    "called combinatorial quantum gravity, with one knob turned above the published value, and not that model "
-    "itself. In the paper's toy, a tube (a torus curled to four steps around) sits above the flat arrangement in "
-    "energy and is stable for now. The paper counts what it costs to start the change (12 units at the main setting, for "
-    "every size of tube tested), predicts how long the tube waits by counting its exits, watches the flat arrangement "
-    "spread, seals the system to see where the released energy (the burp) goes, and counts what is left behind "
-    "(about one four-dot scrap). It also reads what the tube turns into: the tight curl is gone and the energy "
-    "is released, but the result is still a narrow tube, six steps around, and a second large direction does "
-    "not appear. A toy can show that a mechanism is possible or impossible within a class of models; that is "
-    "the whole claim.</p>")
-
-# One searched question per chapter, as a heading, with a bridge to what the chapter does. Each bridge is true
-# of the plain-language edition's chapter and claims no more than it does.
-CHAPTER_QUESTIONS = {
-    1: ("What was there before the Big Bang?",
-        "Nobody knows. This chapter sets up one way to study the question without a time machine: treat space "
-        "as one arrangement of something deeper, and ask what kind of change could have produced it."),
-    2: ("Is space made of something smaller?",
-        "Some physicists think so. This chapter describes one published model, combinatorial quantum gravity, "
-        "in which space is a network of dots and links and nothing else, and then the toy this paper works in: "
-        "a close cousin of that model with one knob turned up, not that model itself."),
-    3: ("What existed before space?",
-        "The author's hypothesis is that it was not nothing and not chaos, but a specific curled-up arrangement. "
-        "This chapter builds a stand-in for that arrangement inside the toy model."),
-    4: ("What could have set off the Big Bang?",
-        "Unknown. In the toy model a change of this kind needs a push, and the push can be counted exactly: "
-        "twelve units at the paper's main setting of the knob (λ = 1.25), the same for every size of tube "
-        "tested."),
-    5: ("What is a metastable state, or false vacuum?",
-        "A state that is stable for now: it lasts until chance hands it enough energy to leave. This chapter "
-        "predicts how long the toy's version waits, and checks the prediction."),
-    6: ("Can space change phase, the way water freezes?",
-        "In the toy model it can: a patch of the new arrangement appears and grows while the old one is still "
-        "there beside it. This chapter watches that happen, says what the pictures do and do not prove, and "
-        "reads what the tube turns into: a tube six steps around, not a wide sheet."),
-    7: ("Where did the energy of the Big Bang come from?",
-        "In the author's hypothesis the change itself released it, the way freezing water gives off heat. In "
-        "the toy model that release, the burp, can be counted exactly and followed when nothing is allowed to "
-        "leave."),
-    8: ("Is anything left over from before the Big Bang?",
-        "In the toy model something is: about one small scrap of the old arrangement survives each change. "
-        "Whether anything like it exists in reality is not something a toy can say."),
-    9: ("How do you test an idea about the universe with a simulation?",
-        "By turning one knob at a time with the rules written down first, and publishing every setting, "
-        "including the ones that failed. This chapter is that map."),
-    10: ("Can a computer simulate the beginning of the universe?",
-         "Not the real one. This chapter lists exactly how far these simulations go, where each stops, and what "
-         "lies past each edge."),
-    11: ("Is this a theory of where the universe came from?",
-         "It is a hypothesis, with one mechanism tested in a toy model and no physicist's review yet. This "
-         "chapter says what was learned and what would have to come next."),
-}
-
-BIG_QUESTIONS = [
-    ("What was there before the Big Bang?",
-     "Nobody knows, and this work does not settle it. It tests one hypothesis, the author's: that space is one "
-     "settled arrangement of something deeper, and that before the change there was a different, specific "
-     "arrangement, curled up and stable for now. A toy model shows that a curled arrangement can give way "
-     "sharply in a network of dots and links, with a countable push and a countable release. What it turns into "
-     "there is a slightly wider tube, not a wide space. That is part of a possibility shown in a toy, not "
-     "evidence about the real universe."),
-    ("Where did the Big Bang come from?",
-     "One hypothesis, tested here only in a toy model: the hot early universe is the energy released when an "
-     "earlier arrangement gave way and space opened out, the way water gives off heat when it freezes. In the toy "
-     "the release can be counted exactly and grows with the size of the system, while the push that starts it "
-     "stays small and fixed at every size tested."),
-    ("What was there before time?",
-     "This paper cannot say. The toy model has no time in it: its clock counts attempted moves, not seconds. In "
-     "the author's wider hypothesis, which this paper does not test, what came before space had order but not "
-     "time as we experience it."),
-    ("Is space made of something?",
-     "Possibly. In the published model this work builds on, space is a network of dots and links with no "
-     "positions at all, and flat space is one arrangement of that network. Whether real space is like that is an "
-     "open research question."),
-    ("Is this an accepted theory?",
-     "No. It is a hobbyist's hypothesis, tested on a toy model with the predictions written down first, written "
-     "with AI assistance and not yet reviewed by a physicist. The paper says exactly what was and was not shown."),
-]
-
-FAQ = [
-    ("What is “The curled torus burps” about?",
-     "It is a plain-language edition of a computational physics paper by Emily Smith. It asks what a sharp change "
-     "from one specific arrangement into flat space would look like, and tests each part of that picture in a toy "
-     "model made of dots and links: what it costs to start, how long the wait is, what takes shape, where the "
-     "released energy goes, and what remains."),
-    ("What is combinatorial quantum gravity, and is this it?",
-     "Combinatorial quantum gravity is a published model, built by Carlo Trugenberger, Christy Kelly and Fabio "
-     "Biancalana, in which space is a network with no positions at all and the energy is a count of squares that "
-     "acts as a curvature. This paper's toy is a close cousin of that model, not that model itself: it turns one knob, "
-     "the price of a surplus square (λ), above the published value of 1."),
-    ("What is a curled torus?",
-     "A torus is a grid that wraps around in both directions, and every shape in the paper is one: flat (the "
-     "sheet), curled (the tube) or knot. Curl one direction of the flat one until it is only four steps "
-     "around and you have a tube. In the toy the tube has one large direction where the flat sheet has two, and "
-     "it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."),
-    ("What is the burp?",
-     "The burp is the energy given off when the tube's tight curl comes undone. For a clean change it is "
-     "exactly 4(λ − 1) per dot, so it grows with the size of the tube, while the push needed to start it does "
-     "not."),
-    ("Does the tube open into a wide space?",
-     "Not in this toy as it stands. Read from the saved wiring, the tube ends as a tube six steps around where "
-     "it was four: flat at every dot, and still narrow. The toy's rule charges for loops of four and for nothing "
-     "longer, so nothing pays for widening further."),
-    ("How much energy does it take to start the change?",
-     "Twelve units at λ = 1.25: the cost of the cheapest partner swap out of a perfect tube, counted exactly, the "
-     "same at every size from 48 to 288 dots. In 320 sealed runs, no tube left with a budget below 12 and every "
-     "tube left with 12 or more."),
-    ("How long does the tube wait before it starts?",
-     "Count the exits a sweep offers, multiply by the chance each is taken, and you predict the mean wait with "
-     "nothing fitted. Across twelve conditions the measured mean wait divided by the predicted one averaged 0.98. "
-     "The waiting is memoryless, like rolling a die until a six comes up."),
-    ("What is left behind after the change?",
-     "About one four-dot scrap of the old arrangement per sheet, holding 14 units, whatever the size of the tube, "
-     "in the sealed runs with the most room. What the scrap does afterwards is the subject of the next paper."),
-    ("Does this show how the universe began?",
-     "No. A toy can show that a mechanism is possible or impossible within a class of models; that is the whole "
-     "claim. The clock in the simulation is a sampling rule, not physical time, and no physicist has reviewed the "
-     "work."),
-    ("Was AI used to write this?",
-     "Yes. The author used Claude (Anthropic) and ChatGPT/Codex (OpenAI) to assist with code, analysis and "
-     "writing, and is responsible for the result. The predictions for the main tests were written down before the "
-     "runs."),
-]
-
-KEY_TERMS = ["what came before the Big Bang", "emergent spacetime", "combinatorial quantum gravity",
-             "graph model of space", "curled torus", "metastable state", "false vacuum decay", "activation energy",
-             "first exit time", "memoryless waiting time", "nucleation and front", "sealed system (microcanonical)",
-             "Creutz reservoir", "relic defect", "pre-registration", "Markov chain Monte Carlo",
-             "decompactification"]
-
-
-def cite_block(url, title, note):
-    bib = ("@misc{smith2026curledtorus,\n  author = {Smith, Emily},\n  title  = {%s},\n  year   = {2026},\n"
-           "  month  = oct,\n  note   = {%s},\n  url    = {%s}\n}" % (title, note, url))
+def cite_block(post, url, title, note):
+    year, month, _day = post.published.split("-")
+    bib = ("@misc{%s,\n  author = {Smith, Emily},\n  title  = {%s},\n  year   = {%s},\n"
+           "  month  = %s,\n  note   = {%s},\n  url    = {%s}\n}"
+           % (post.cite_key, title, year, MONTHS[int(month) - 1][:3].lower(), note, url))
     return ('<section class="cite-box" id="how-to-cite"><h2>How to cite this page</h2>'
-            '<p>Emily Smith, <i>%s</i> (%s), 10 October 2026. <a href="%s">%s</a></p>'
-            '<pre>%s</pre></section>' % (html.escape(title), html.escape(note), url, url, html.escape(bib)))
+            '<p>Emily Smith, <i>%s</i> (%s), %s. <a href="%s">%s</a></p>'
+            '<pre>%s</pre></section>' % (html.escape(title), html.escape(note), long_date(post.published), url, url,
+                                         html.escape(bib)))
 
 
-def json_ld(kind, url, headline, description, extra=None, faq=None, terms=None):
+def json_ld(post, kind, url, headline, description, extra=None, faq=None, terms=None):
     article = {
         "@type": "ScholarlyArticle", "@id": url + "#article", "headline": headline, "description": description,
-        "url": url, "mainEntityOfPage": url, "inLanguage": "en", "datePublished": PUBLISHED,
-        "dateModified": PUBLISHED,
+        "url": url, "mainEntityOfPage": url, "inLanguage": "en", "datePublished": post.published,
+        "dateModified": post.published,
         "author": {"@type": "Person", "name": "Emily Smith", "affiliation": "Independent researcher",
                    "url": SITE + "/"},
         "publisher": {"@type": "Organization", "name": "Side Nerd Apps", "url": SITE + "/"},
         "isPartOf": {"@type": "Blog", "name": "The Side Nerd Blog", "url": SITE + BLOG},
-        "keywords": ", ".join(KEY_TERMS), "image": SITE + ASSETS + "og-image.png",
-        "isAccessibleForFree": True, "sameAs": [PAPER_DIR],
-        "about": [{"@type": "Thing", "name": t} for t in KEY_TERMS[:9]],
+        "keywords": ", ".join(post.key_terms), "image": share_image(post),
+        "isAccessibleForFree": True, "sameAs": [post.paper_url],
+        "about": [{"@type": "Thing", "name": t} for t in post.key_terms[:9]],
     }
     article.update(extra or {})
+    article = {k: v for k, v in article.items() if v not in ("", [])}      # nothing is said with an empty value
     graph = [article, {
         "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Side Nerd Apps", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "The Side Nerd Blog", "item": SITE + BLOG},
             {"@type": "ListItem", "position": 3,
-             "name": TITLE + (" (technical edition)" if kind == "technical" else " (plain-language edition)"),
+             "name": post.title + (" (technical edition)" if kind == "technical" else " (plain-language edition)"),
              "item": url}]}]
     if faq:
         graph.append({"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     if terms:
         graph.append({"@type": "DefinedTermSet", "@id": url + "#translations",
-                      "name": "Terms used in The curled torus burps",
+                      "name": "Terms used in " + post.title,
                       "hasDefinedTerm": [{"@type": "DefinedTerm", "name": n, "description": d,
                                           "inDefinedTermSet": url + "#translations"} for n, d in terms]})
     return ('<script type="application/ld+json">%s</script>'
             % json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=1))
 
 
-def head(title, description, url, ld, mathjax, pdf, paper=True):
-    """`paper=False` is for pages that are not a paper (the front page, the placeholder): no citation tags."""
+def head(post, title, description, url, ld, mathjax, pdf="", paper=True):
+    """`post` gives the share picture and, on a paper's own pages, the citation tags; `pdf` is that edition's PDF
+    where it has one. `paper=False` is for pages that are not a paper (the front page, the placeholder, the
+    companion): no citation tags. A page with no description yet goes without the tags that would carry it."""
+    image = share_image(post)
+
+    def only(wanted, tag):
+        return tag if wanted else None
+
     parts = [
         '<!DOCTYPE html>', '<html lang="en">', '<head>', '<meta charset="utf-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1">',
         '<title>%s | Side Nerd Apps</title>' % html.escape(title),
-        '<meta name="description" content="%s">' % html.escape(description),
+        only(description, '<meta name="description" content="%s">' % html.escape(description)),
         '<meta name="author" content="Emily Smith">',
         '<meta name="robots" content="index, follow, max-image-preview:large">',
         '<link rel="canonical" href="%s">' % url,
         '<meta property="og:type" content="article">', '<meta property="og:url" content="%s">' % url,
         '<meta property="og:title" content="%s">' % html.escape(title),
-        '<meta property="og:description" content="%s">' % html.escape(description),
-        '<meta property="og:image" content="%s">' % (SITE + ASSETS + "og-image.png"),
+        only(description, '<meta property="og:description" content="%s">' % html.escape(description)),
+        '<meta property="og:image" content="%s">' % image,
         '<meta property="og:site_name" content="Side Nerd Apps">',
         '<meta name="twitter:card" content="summary_large_image">',
         '<meta name="twitter:title" content="%s">' % html.escape(title),
-        '<meta name="twitter:description" content="%s">' % html.escape(description),
-        '<meta name="twitter:image" content="%s">' % (SITE + ASSETS + "og-image.png"),
+        only(description, '<meta name="twitter:description" content="%s">' % html.escape(description)),
+        '<meta name="twitter:image" content="%s">' % image,
         '<meta name="theme-color" content="#34b1e8">',
-        '<meta name="citation_title" content="%s">' % html.escape(title),
-        '<meta name="citation_author" content="Smith, Emily">',
-        '<meta name="citation_publication_date" content="2026/10/10">',
-        '<meta name="citation_pdf_url" content="%s">' % (SITE + pdf),
+        only(paper, '<meta name="citation_title" content="%s">' % html.escape(title)),
+        only(paper, '<meta name="citation_author" content="Smith, Emily">'),
+        only(paper, '<meta name="citation_publication_date" content="%s">' % post.published.replace("-", "/")),
+        only(paper and pdf, '<meta name="citation_pdf_url" content="%s">' % (SITE + pdf)),
         '<link rel="icon" type="image/png" href="https://sidenerd-marketing-assets.s3.us-east-1.amazonaws.com/'
         'sidenerdapps/sidenerd-icon.png">',
         '<link rel="preconnect" href="https://fonts.googleapis.com">',
@@ -329,8 +238,7 @@ def head(title, description, url, ld, mathjax, pdf, paper=True):
         '<link rel="stylesheet" href="%s%s">' % (SHARED, STYLESHEET),
         ld,
     ]
-    if not paper:
-        parts = [p for p in parts if 'name="citation_' not in p]
+    parts = [p for p in parts if p is not None]
     if mathjax:
         parts.append("<script>window.MathJax={tex:{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']],"
                      "tags:'none'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};"
@@ -340,28 +248,37 @@ def head(title, description, url, ld, mathjax, pdf, paper=True):
     return "\n".join(parts)
 
 
-def masthead(edition, other_label, other_href, other_target, answers="#quick-answers", guestbook="#guestbook"):
+def mascot(post, caption=""):
+    """The post's mascot under its own caption, or under the one given; nothing for a post without a mascot."""
+    m = post.mascot
+    if not m:
+        return ""
+    return ('\n <figure class="mascot">\n  <img src="%s%s" width="%d" height="%d" alt="%s">\n'
+            '  <figcaption>%s</figcaption>\n </figure>'
+            % (post.assets, m["file"], m["width"], m["height"], m["alt"], caption or m["caption"]))
+
+
+def masthead(post, edition, other=None, answers="#quick-answers", guestbook="#guestbook"):
+    """`other` is the button to the post's other edition, as (label, address, window name). It is left out where
+    there is no other edition to open, and so is the button to the quick answers where `answers` is empty."""
+    other = '<a class="bevel" href="%s" target="%s">%s</a>\n   ' % (other[1], other[2], other[0]) if other else ""
+    answers = '<a class="bevel" href="%s">Quick answers</a> ' % answers if answers else ""
+    subtitle = '\n  <p class="subtitle">%s</p>' % post.subtitle if post.subtitle else ""
     return '''
 <div class="ticker" aria-hidden="true"><div class="ticker-run">%(ticker)s %(ticker)s</div></div>
 <header class="masthead">
  <div class="mast-text">
   <p class="welcome">~ Welcome to <a href="%(blog)s">the Side Nerd Blog</a>, Main Nerd ~</p>
-  <h1>%(title)s</h1>
-  <p class="subtitle">%(subtitle)s</p>
-  <p class="byline">Post No. 01 · 10 October 2026 · by <b>Emily Smith</b>, independent researcher · filed under Physics · %(edition)s</p>
-  <p class="jump"><a class="bevel" href="%(other_href)s" target="%(other_target)s">%(other_label)s</a>
-   <a class="bevel" href="%(answers)s">Quick answers</a> <a class="bevel" href="%(guestbook)s">Sign the guestbook</a>
+  <h1>%(title)s</h1>%(subtitle)s
+  <p class="byline">Post No. %(number)02d · %(date)s · by <b>Emily Smith</b>, independent researcher · filed under Physics · %(edition)s</p>
+  <p class="jump">%(other)s%(answers)s<a class="bevel" href="%(guestbook)s">Sign the guestbook</a>
    <a class="bevel" href="#how-to-cite">Cite</a></p>
   <p class="sponsor">Sponsored by <a href="%(sponsor)s">Side Nerd Apps</a></p>
- </div>
- <figure class="mascot">
-  <img src="%(assets)ssleepy-cow.gif" width="208" height="254" alt="A line drawing of a shaggy cow curled up asleep; in the next frame it stretches both front legs and lets out a small burp.">
-  <figcaption>Fig. 0. A curled arrangement, stable for now, gives way and burps. Round cow not available, artist's impression. Not a torus.</figcaption>
- </figure>
-</header>''' % dict(ticker=html.escape(TICKER), title=TITLE, subtitle=SUBTITLE, edition=edition,
-                    other_href=other_href, other_label=other_label, other_target=other_target, assets=ASSETS,
-                    answers=answers, guestbook=guestbook, sponsor=html.escape(utm("masthead-sponsor")),
-                    blog=BLOG)
+ </div>%(mascot)s
+</header>''' % dict(ticker=html.escape(ticker(post)), title=post.title, subtitle=subtitle, number=post.number,
+                    date=long_date(post.published), edition=edition, other=other, answers=answers,
+                    guestbook=guestbook, sponsor=html.escape(utm("masthead-sponsor")), blog=BLOG,
+                    mascot=mascot(post))
 
 
 def badges():
@@ -381,13 +298,16 @@ document.getElementById('gb-form').addEventListener('submit', function (e) {
   function v(n) { return (f.elements[n].value || '').trim(); }
   var body = 'Name: ' + v('name') + '\nE-mail: ' + v('email') + '\nSurfing in from: ' + v('from') +
     '\nTell me when the next paper is posted: ' + (f.elements.updates.checked ? 'yes' : 'no') + '\n\n' + v('entry');
-  window.location.href = 'mailto:ADDRESS?subject=' + encodeURIComponent('Guestbook: The curled torus burps') +
+  window.location.href = 'mailto:ADDRESS?subject=' + encodeURIComponent(SUBJECT) +
     '&body=' + encodeURIComponent(body);
 });
 </script>'''
 
 
-def guestbook():
+def guestbook(post):
+    """The same guestbook on every post; the e-mail it opens names the post it was signed on."""
+    subject = "Guestbook: " + post.title
+    quoted = "'%s'" % subject.replace("\\", "\\\\").replace("'", "\\'")       # as the script writes a string
     return ('''
 <section class="guestbook" id="guestbook"><h2>Sign the guestbook</h2>
 <p>Leave a note, a question or a correction. The guestbook runs on e-mail, as in 1996: the button opens your mail
@@ -402,27 +322,28 @@ program with your entry filled in, and you press send.</p>
 </form>
 <p class="small-ink">Your address is used only to reply to you and, if you tick the box, to tell you about the next
 paper. Or skip the form and write to <a href="%(mailto)s">%(address)s</a>.</p>
-''' % dict(mailto=html.escape(mailto("Guestbook: The curled torus burps")), address=AUTHOR_EMAIL)
-            + GUESTBOOK_SCRIPT.replace("ADDRESS", AUTHOR_EMAIL) + "\n</section>")
+''' % dict(mailto=html.escape(mailto(subject)), address=AUTHOR_EMAIL)
+            + GUESTBOOK_SCRIPT.replace("ADDRESS", AUTHOR_EMAIL).replace("SUBJECT", quoted) + "\n</section>")
 
 
-# Navigation between posts, in the footer. A post links on to the next one; while that is not up, to the
-# placeholder. When a second post is published, put its address here in place of SOON.
-NEXT_POST = SOON
-
-
-def post_nav(kind):
+def post_nav(kind, post, posts):
+    """Navigation between posts, in the footer. A post links back to the one before it and on to the next one;
+    while that is not up, to the placeholder. On the placeholder, `post` is the newest post."""
     links = ['<a href="%s">all posts</a>' % BLOG]
     if kind in ("plain", "technical"):
-        links.append('<a href="%s">next post »</a>' % NEXT_POST)
+        before, after = neighbors(post, posts)
+        if before:
+            links.insert(0, '<a href="%s">« previous post</a>' % before.base)
+        links.append('<a href="%s">next post »</a>' % (after.base if after else SOON))
     elif kind == "soon":
-        links.insert(0, '<a href="%s">« previous post</a>' % BASE)
+        links.insert(0, '<a href="%s">« previous post</a>' % post.base)
     else:                                              # the front page is the list of posts
         return ""
     return '<div class="postnav">%s</div>' % " | ".join(links)
 
 
-def footer(kind):
+def footer(kind, post, posts):
+    """`post` is the post the page belongs to; on the front page and the placeholder, the newest one."""
     return '''
 <footer class="foot">
  %(nav)s
@@ -435,79 +356,114 @@ def footer(kind):
  %(badges)s
  <p class="small">Text and figures © 2026 Emily Smith. No physicist has reviewed this work. A toy model shows what is
   possible within a class of models, nothing about the real universe. The advertisements are real.</p>
-</footer>''' % dict(base=BASE, tech=TECH, repo=REPO, paper=PAPER_DIR, side=html.escape(utm("footer-text-" + kind)),
+</footer>''' % dict(base=post.base, repo=REPO, paper=post.paper_url, side=html.escape(utm("footer-text-" + kind)),
                     sponsor=html.escape(utm("footer-sponsor-" + kind)), logo=LOGO, badges=badges(),
-                    nav=post_nav(kind))
+                    nav=post_nav(kind, post, posts))
 
 
 # ------------------------------------------------------------------ the plain-language page
-def page_plain(plain, technical, chapter_to_section):
-    url = SITE + BASE
-    description = ("What came before space? A plain-language physics paper tests one hypothesis in a toy model: a "
-                   "curled-up arrangement gives way for a push of 12 units, releases a burp of energy and leaves "
-                   "a scrap behind. What it turns into is still a narrow tube.")
+def page_plain(post, plain, technical=None, posts=None):
+    """`technical` is the converted technical edition, for a post that has one as a page of its own; `posts` are
+    the posts that are up, oldest first (this post alone if they are not given)."""
+    posts = posts or [post]
+    url = SITE + post.base
     terms = _terms(plain["back"])
-    ld = json_ld("plain", url, TITLE + ": " + SUBTITLE, description,
+    ld = json_ld(post, "plain", url, post.headline, post.description,
                  extra={"alternativeHeadline": "Plain-language edition",
-                        "isBasedOn": SITE + TECH, "hasPart": [
+                        "isBasedOn": SITE + post.technical_href if post.technical_href else "", "hasPart": [
                             {"@type": "WebPageElement", "name": c["title_text"], "url": url + "#ch%d" % c["num"]}
                             for c in _with_text(plain["chapters"])]},
-                 faq=BIG_QUESTIONS + FAQ, terms=terms)
+                 faq=post.big_questions + post.faq, terms=terms)
     nav = ['<nav class="side" aria-label="Chapters"><p class="side-head">THIS POST</p><ol>']
     for c in plain["chapters"]:
         nav.append('<li><a href="#ch%d">%s</a></li>' % (c["num"], _title_case(c["kicker"])))
-    nav.append('</ol><p class="side-head">ELSEWHERE</p><ul>'
-               '<li><a href="%s" target="mn-technical">Technical edition</a></li>'
-               '<li><a href="%s">Turn the knobs (interactive)</a></li>'
-               '<li><a href="%s">This edition as a PDF</a></li>'
-               '<li><a href="#big-questions">The big questions</a></li>'
-               '<li><a href="#translations">Glossary</a></li>'
-               '<li><a href="#sources-head">Sources</a></li>'
-               '<li><a href="#guestbook">Guestbook</a></li></ul>' % (TECH, LADDER, PDF_PLAIN))
+    nav.append('</ol><p class="side-head">ELSEWHERE</p><ul>%s</ul>' % _listed([
+        (post.has_technical, '<a href="%s" target="mn-technical">Technical edition</a>' % post.tech),
+        (post.pdf_tech and not post.has_technical, '<a href="%s">Technical edition (PDF)</a>' % post.pdf_tech),
+        (post.has_companion, '<a href="%s">Turn the knobs (interactive)</a>' % post.knobs),
+        (post.pdf_plain, '<a href="%s">This edition as a PDF</a>' % post.pdf_plain),
+        (post.big_questions, '<a href="#big-questions">The big questions</a>'),
+        (_has_id(plain, "translations"), '<a href="#translations">Glossary</a>'),
+        (_has_id(plain, "sources-head"), '<a href="#sources-head">Sources</a>'),
+        (True, '<a href="#guestbook">Guestbook</a>')]))
     nav.append(AD_SIDE)
     nav.append('</nav>')
 
-    body = [head(TITLE + ": what came before space? A hypothesis tested in a toy model, in plain language",
-                 description, url, ld, plain["mathjax"], PDF_PLAIN),
-            '<body class="plain">', '<a class="skip" href="#ch1">Skip to the paper</a>',
-            masthead("plain-language edition", "Read the technical edition »", TECH, "mn-technical"),
+    body = [head(post, post.page_title or post.title + " (plain-language edition)", post.description, url, ld,
+                 plain["mathjax"], post.pdf_plain),
+            '<body class="plain">', '<a class="skip" href="#ch%d">Skip to the paper</a>' % plain["chapters"][0]["num"],
+            masthead(post, "plain-language edition", _technical_button(post),
+                     answers="#quick-answers" if post.faq else ""),
             AD_TOP, '<div class="frame">', "\n".join(nav), '<main class="paper">',
-            '<section class="opening">', SUMMARY, plain["opening"], '</section>']
+            '<section class="opening">']
+    body += [part for part in (post.summary, plain["opening"]) if part]
+    body.append('</section>')
+    mid = _mid_ad_chapter(post, plain["chapters"])
     for c in plain["chapters"]:
-        sec = chapter_to_section[c["num"]]
-        question, bridge = CHAPTER_QUESTIONS[c["num"]]
         body.append('<section class="chapter" id="ch%d">' % c["num"])
         body.append('<p class="kicker">CHAPTER %d · %s</p><h2>%s</h2>' % (c["num"], c["kicker"], c["title"]))
-        body.append('<div class="ask"><h3 id="ch%d-question">%s</h3><p>%s</p></div>'
-                    % (c["num"], html.escape(question), html.escape(bridge)))
-        body.append('<p class="xlink">Side by side: <a href="%s#%s" target="mn-technical">the same ground in the '
-                    'technical edition, %s »</a></p>' % (TECH, sec, _section_label(technical, sec)))
+        if c["num"] in post.chapter_questions:
+            question, bridge = post.chapter_questions[c["num"]]
+            body.append('<div class="ask"><h3 id="ch%d-question">%s</h3><p>%s</p></div>'
+                        % (c["num"], html.escape(question), html.escape(bridge)))
+        if post.has_technical:
+            sec = post.chapter_to_section[c["num"]]
+            body.append('<p class="xlink">Side by side: <a href="%s#%s" target="mn-technical">the same ground in '
+                        'the technical edition, %s »</a></p>' % (post.tech, sec, _section_label(technical, sec)))
         body.append(c["html"])
         body.append('</section>')
-        if c["num"] == 4:
+        if c["num"] == mid:
             body.append(AD_MID)
-    body.append(AD_READER)
+    body.append(ad_reader(post))
     body.append('<section class="back">%s</section>' % plain["back"])
     if plain["notes"]:
         body.append('<section class="notes" id="notes"><h2>Notes</h2><ol>%s</ol></section>' % plain["notes"])
-    body.append('<section class="faq" id="big-questions"><h2>The big questions, and what this work can honestly '
-                'say</h2>')
-    for q, a in BIG_QUESTIONS:
-        body.append('<h3>%s</h3><p>%s</p>' % (html.escape(q), html.escape(a)))
-    body.append('</section>')
-    body.append('<section class="faq" id="quick-answers"><h2>Quick answers</h2>')
-    for q, a in FAQ:
-        body.append('<h3>%s</h3><p>%s</p>' % (html.escape(q), html.escape(a)))
-    body.append('</section>')
-    body.append('<section class="terms" id="key-terms"><h2>What this page is about</h2><p>%s.</p></section>'
-                % ", ".join(KEY_TERMS))
-    body.append(guestbook())
-    body.append(cite_block(url, TITLE + ": " + SUBTITLE, "plain-language edition"))
+    if post.big_questions:
+        body.append('<section class="faq" id="big-questions"><h2>The big questions, and what this work can '
+                    'honestly say</h2>')
+        for q, a in post.big_questions:
+            body.append('<h3>%s</h3><p>%s</p>' % (html.escape(q), html.escape(a)))
+        body.append('</section>')
+    if post.faq:
+        body.append('<section class="faq" id="quick-answers"><h2>Quick answers</h2>')
+        for q, a in post.faq:
+            body.append('<h3>%s</h3><p>%s</p>' % (html.escape(q), html.escape(a)))
+        body.append('</section>')
+    if post.key_terms:
+        body.append('<section class="terms" id="key-terms"><h2>What this page is about</h2><p>%s.</p></section>'
+                    % ", ".join(post.key_terms))
+    body.append(guestbook(post))
+    body.append(cite_block(post, url, post.headline, "plain-language edition"))
     body.append('</main></div>')
     body.append(AD_FOOT)
-    body.append(footer("plain"))
+    body.append(footer("plain", post, posts))
     body.append('</body></html>')
-    return ("\n".join(body) + "\n").replace(ARTIFACT, KNOBS)      # the blog's own copy of the companion
+    return own_companions("\n".join(body) + "\n", posts)
+
+
+def _listed(links):
+    """The (wanted, link) pairs as list items; a link is left out where there is nothing for it to open."""
+    return "".join("<li>%s</li>" % link for wanted, link in links if wanted)
+
+
+def _has_id(plain, ident):
+    return any('id="%s"' % ident in part
+               for part in [plain["opening"], plain["back"]] + [c["html"] for c in plain["chapters"]])
+
+
+def _technical_button(post):
+    """The masthead's button from the plain edition to the technical one: its page, or its PDF where the post
+    has no technical page, or no button while there is neither."""
+    if post.has_technical:
+        return "Read the technical edition »", post.tech, "mn-technical"
+    if post.pdf_tech:
+        return "Read the technical edition (PDF) »", post.pdf_tech, "mn-technical"
+    return None
+
+
+def _mid_ad_chapter(post, chapters):
+    """The chapter the mid-article advertisement follows: the post's choice, or one a third of the way in."""
+    return post.mid_ad_after or chapters[(len(chapters) - 1) // 3]["num"]
 
 
 def _with_text(chapters):
@@ -538,14 +494,12 @@ def _terms(back_html):
 
 
 # ------------------------------------------------------------------ the technical page
-def page_technical(technical, plain, section_to_chapters):
-    url = SITE + TECH
+def page_technical(post, technical, plain, posts=None):
+    posts = posts or [post]
+    url = SITE + post.tech
     meta = technical["meta"]
-    description = ("Technical edition: activated escape and conversion of a curled torus in four-regular bipartite "
-                   "graph energies next to combinatorial quantum gravity. Exact barrier of 12 units, first-exit "
-                   "times from counted moves, sealed-reservoir runs and relics.")
     abstract_text = html.unescape(re.sub(r"<[^>]+>", "", technical["abstract"]))
-    ld = json_ld("technical", url, re.sub(r"<[^>]+>", "", meta["title"]), description,
+    ld = json_ld(post, "technical", url, re.sub(r"<[^>]+>", "", meta["title"]), post.technical_description,
                  extra={"abstract": abstract_text, "alternativeHeadline": "Technical edition",
                         "hasPart": [{"@type": "WebPageElement", "name": re.sub(r"<[^>]+>", "", s["title"]),
                                      "url": url + "#" + s["id"]} for s in technical["sections"]]})
@@ -554,21 +508,20 @@ def page_technical(technical, plain, section_to_chapters):
     for s in technical["sections"]:
         nav.append('<li><a href="#%s">%s%s</a></li>' % (s["id"], (s["roman"] + ". ") if s["roman"] else "",
                                                        re.sub(r"<[^>]+>", "", s["title"])))
-    nav.append('</ol><p class="side-head">ELSEWHERE</p><ul>'
-               '<li><a href="%s" target="mn-plain">Plain-language edition</a></li>'
-               '<li><a href="%s">Turn the knobs (interactive)</a></li>'
-               '<li><a href="%s">This paper as a PDF</a></li>'
-               '<li><a href="%s">Supplement, data and code</a></li>'
-               '<li><a href="#references-head">References</a></li>'
-               '<li><a href="%s#guestbook" target="mn-plain">Guestbook</a></li></ul></nav>'
-               % (BASE, LADDER, PDF_TECH, PAPER_DIR, BASE))
+    nav.append('</ol><p class="side-head">ELSEWHERE</p><ul>%s</ul></nav>' % _listed([
+        (True, '<a href="%s" target="mn-plain">Plain-language edition</a>' % post.base),
+        (post.has_companion, '<a href="%s">Turn the knobs (interactive)</a>' % post.knobs),
+        (post.pdf_tech, '<a href="%s">This paper as a PDF</a>' % post.pdf_tech),
+        (True, '<a href="%s">Supplement, data and code</a>' % post.paper_url),
+        (True, '<a href="#references-head">References</a>'),
+        (True, '<a href="%s#guestbook" target="mn-plain">Guestbook</a>' % post.base)]))
 
-    body = [head(re.sub(r"<[^>]+>", "", meta["title"]) + " (technical edition)", description, url, ld,
-                 technical["mathjax"], PDF_TECH), '<body class="technical">',
-            '<a class="skip" href="#sec-intro">Skip to the paper</a>',
-            masthead("technical edition", "« Read the plain-language edition", BASE, "mn-plain",
-                     answers=BASE + "#quick-answers", guestbook=BASE + "#guestbook"),
-            AD_READER,
+    body = [head(post, re.sub(r"<[^>]+>", "", meta["title"]) + " (technical edition)", post.technical_description,
+                 url, ld, technical["mathjax"], post.pdf_tech), '<body class="technical">',
+            '<a class="skip" href="#%s">Skip to the paper</a>' % technical["sections"][0]["id"],
+            masthead(post, "technical edition", ("« Read the plain-language edition", post.base, "mn-plain"),
+                     answers=post.base + "#quick-answers" if post.faq else "", guestbook=post.base + "#guestbook"),
+            ad_reader(post),
             '<div class="frame">', "\n".join(nav), '<main class="paper">',
             '<section class="abstract" id="abstract"><h2 class="full-title">%s</h2>'
             '<p class="affil">%s · %s · %s</p><p><b>Abstract.</b> %s</p></section>'
@@ -576,37 +529,40 @@ def page_technical(technical, plain, section_to_chapters):
     for s in technical["sections"]:
         body.append('<section class="chapter" id="%s">' % s["id"])
         body.append('<h2>%s%s</h2>' % ((s["roman"] + ". ") if s["roman"] else "", s["title"]))
-        chapters = section_to_chapters.get(s["id"], [])
+        chapters = post.section_to_chapters.get(s["id"], [])
         if chapters:
             links = " and ".join('<a href="%s#ch%d" target="mn-plain">Chapter %d, %s</a>'
-                                 % (BASE, n, n, html.escape(kickers[n])) for n in chapters)
+                                 % (post.base, n, n, html.escape(kickers[n])) for n in chapters)
             body.append('<p class="xlink">Side by side: in the plain-language edition this is %s »</p>' % links)
         body.append(s["html"])
         body.append('</section>')
-    body.append(cite_block(url, re.sub(r"<[^>]+>", "", meta["title"]), "technical edition"))
+    body.append(cite_block(post, url, re.sub(r"<[^>]+>", "", meta["title"]), "technical edition"))
     body.append('</main></div>')
     body.append(AD_TECH)
-    body.append(footer("technical"))
+    body.append(footer("technical", post, posts))
     body.append('</body></html>')
-    return ("\n".join(body) + "\n").replace(ARTIFACT, KNOBS)      # the blog's own copy of the companion
+    return own_companions("\n".join(body) + "\n", posts)
 
 
 # ------------------------------------------------------------------ the blog's front page
-def page_index():
-    url = SITE + BLOG
+def page_index(posts):
+    """The list of posts, newest first. `posts` are the posts that are up, oldest first."""
+    newest, url = posts[-1], SITE + BLOG
     description = ("The Side Nerd Blog: physics papers by Emily Smith, each in a plain-language edition and a "
                    "technical edition, hosted by Side Nerd Apps.")
+    postings = []
+    for p in reversed(posts):
+        postings.append(_posting(p, p.headline, p.base))
+        if p.has_technical:
+            postings.append(_posting(p, p.title + " (technical edition)", p.tech))
     ld = ('<script type="application/ld+json">%s</script>' % json.dumps({
         "@context": "https://schema.org", "@type": "Blog", "@id": url + "#blog", "name": "The Side Nerd Blog",
         "url": url, "description": description, "inLanguage": "en",
         "publisher": {"@type": "Organization", "name": "Side Nerd Apps", "url": SITE + "/"},
         "author": {"@type": "Person", "name": "Emily Smith"},
-        "blogPost": [{"@type": "BlogPosting", "headline": TITLE + ": " + SUBTITLE, "url": SITE + BASE,
-                      "datePublished": PUBLISHED, "author": {"@type": "Person", "name": "Emily Smith"}},
-                     {"@type": "BlogPosting", "headline": TITLE + " (technical edition)", "url": SITE + TECH,
-                      "datePublished": PUBLISHED, "author": {"@type": "Person", "name": "Emily Smith"}}],
+        "blogPost": postings,
     }, ensure_ascii=False, indent=1))
-    body = [head("The Side Nerd Blog", description, url, ld, False, PDF_PLAIN, paper=False), '<body class="index">',
+    body = [head(newest, "The Side Nerd Blog", description, url, ld, False, paper=False), '<body class="index">',
             '''
 <div class="ticker" aria-hidden="true"><div class="ticker-run">%(ticker)s %(ticker)s</div></div>
 <header class="masthead">
@@ -616,28 +572,46 @@ def page_index():
   <p class="subtitle">Recreational physics, in plain language and in full</p>
   <p class="sponsor">Sponsored by <a href="%(sponsor)s">Side Nerd Apps</a></p>
  </div>
-</header>''' % dict(ticker=html.escape(TICKER), sponsor=html.escape(utm("index-sponsor"))),
+</header>''' % dict(ticker=html.escape(ticker(newest)), sponsor=html.escape(utm("index-sponsor"))),
             AD_TOP, '<div class="frame index-frame"><main class="paper">',
-            '<h2>Posts</h2>',
-            '<article class="post-card"><p class="kicker">POST No. 01 · 10 OCTOBER 2026 · PHYSICS</p>'
-            '<h3><a href="%s">%s</a></h3><p><i>%s.</i> By Emily Smith.</p>%s'
-            '<p class="jump"><a class="bevel" href="%s">Read it in plain language »</a> '
-            '<a class="bevel" href="%s">Read the technical edition »</a> '
-            '<a class="bevel" href="%s">Plain PDF</a> <a class="bevel" href="%s">Technical PDF</a></p></article>'
-            % (BASE, TITLE, SUBTITLE, SUMMARY.replace("<b>In one paragraph.</b> ", ""), BASE, TECH, PDF_PLAIN,
-               PDF_TECH),
-            AD_READER, '</main></div>', footer("index"), '</body></html>']
+            '<h2>Posts</h2>']
+    body += [_post_card(p) for p in reversed(posts)]
+    body += [ad_reader(newest), '</main></div>', footer("index", newest, posts), '</body></html>']
     return "\n".join(body) + "\n"
 
 
+def _posting(post, headline, address):
+    return {"@type": "BlogPosting", "headline": headline, "url": SITE + address, "datePublished": post.published,
+            "author": {"@type": "Person", "name": "Emily Smith"}}
+
+
+def _post_card(post):
+    """One post in the front page's list, with a button for each way there is to read it."""
+    buttons = [(post.base, "Read it in plain language »"),
+               (post.tech if post.has_technical else "", "Read the technical edition »"),
+               (post.pdf_plain, "Plain PDF"), (post.pdf_tech, "Technical PDF")]
+    by = "<i>%s.</i> By Emily Smith." % post.subtitle if post.subtitle else "By Emily Smith."
+    return ('<article class="post-card"><p class="kicker">POST No. %02d · %s · PHYSICS</p>'
+            '<h3><a href="%s">%s</a></h3><p>%s</p>%s'
+            '<p class="jump">%s</p></article>'
+            % (post.number, long_date(post.published).upper(), post.base, post.title, by,
+               post.summary.replace("<b>In one paragraph.</b> ", ""),
+               " ".join('<a class="bevel" href="%s">%s</a>' % button for button in buttons if button[0])))
+
+
 # ------------------------------------------------------------------ the placeholder for a post that is not up yet
-def page_coming_soon():
-    """Where "next post" lands while the next post does not exist. Kept out of search results; when a second post
-    is published, put its address in NEXT_POST in place of SOON."""
-    url = SITE + SOON
+def page_coming_soon(posts):
+    """Where the newest post's "next post" lands while the next post does not exist. Kept out of search results.
+    `posts` are the posts that are up, oldest first; the page leads back to the newest of them."""
+    newest, url = posts[-1], SITE + SOON
     description = "The next post on the Side Nerd Blog is not up yet."
-    top = head("The next post is not up yet", description, url, "", False, PDF_PLAIN, paper=False)
+    top = head(newest, "The next post is not up yet", description, url, "", False, paper=False)
     top = top.replace("index, follow, max-image-preview:large", "noindex, follow")
+    buttons = ['<a class="bevel" href="%s">Post No. %02d in plain language »</a>' % (newest.base, newest.number)]
+    if newest.has_technical:
+        buttons.append('<a class="bevel" href="%s">Post No. %02d, technical edition »</a>'
+                       % (newest.tech, newest.number))
+    buttons.append('<a class="bevel" href="%s#guestbook">Sign the guestbook to hear when it is up</a>' % newest.base)
     body = [top, '<body class="index">',
             '''
 <div class="ticker" aria-hidden="true"><div class="ticker-run">%(ticker)s %(ticker)s</div></div>
@@ -647,22 +621,15 @@ def page_coming_soon():
   <h1>Not up yet</h1>
   <p class="subtitle">The next post is still curled up</p>
   <p class="sponsor">Sponsored by <a href="%(sponsor)s">Side Nerd Apps</a></p>
- </div>
- <figure class="mascot">
-  <img src="%(assets)ssleepy-cow.gif" width="208" height="254" alt="A line drawing of a shaggy cow curled up asleep; in the next frame it stretches both front legs and lets out a small burp.">
-  <figcaption>Stable for now.</figcaption>
- </figure>
-</header>''' % dict(ticker=html.escape(TICKER), assets=ASSETS, blog=BLOG,
-                    sponsor=html.escape(utm("comingsoon-sponsor"))),
+ </div>%(mascot)s
+</header>''' % dict(ticker=html.escape(ticker(newest)), blog=BLOG, sponsor=html.escape(utm("comingsoon-sponsor")),
+                    mascot=next((mascot(p, "Stable for now.") for p in posts if p.mascot), "")),
             '<div class="frame index-frame"><main class="paper">',
             '<h2>This post is not up yet</h2>'
             '<p>You have reached the end of what has been posted. The next post is being written; '
             'there is nothing to read here yet.</p>'
-            '<p class="jump"><a class="bevel" href="%s">Post No. 01 in plain language »</a> '
-            '<a class="bevel" href="%s">Post No. 01, technical edition »</a> '
-            '<a class="bevel" href="%s#guestbook">Sign the guestbook to hear when it is up</a></p>'
-            % (BASE, TECH, BASE),
-            '</main></div>', footer("soon"), '</body></html>']
+            '<p class="jump">%s</p>' % " ".join(buttons),
+            '</main></div>', footer("soon", newest, posts), '</body></html>']
     return "\n".join(body) + "\n"
 
 
@@ -688,10 +655,11 @@ html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{dis
 """
 
 
-def page_knobs(source):
-    """The companion as a page of the blog. `source` is the text of docs/public/curling_ladder_tube.html: a title,
-    font links, a style sheet, the markup and one script, written as an artifact's body. Its parts are moved to
-    where a whole document wants them and nothing in them is changed."""
+def page_knobs(post, source):
+    """The post's companion as a page of the blog. `source` is the text of its source file (for post 01,
+    docs/public/curling_ladder_tube.html): a title, font links, a style sheet, the markup and one script, written
+    as an artifact's body. Its parts are moved to where a whole document wants them and nothing in them is
+    changed."""
     title = re.search(r"<title>(.*?)</title>", source, flags=re.S)
     links = re.findall(r"<link\b[^>]*>", source)
     style = re.search(r"<style>.*?</style>", source, flags=re.S)
@@ -699,20 +667,19 @@ def page_knobs(source):
     body = source[style.end():].strip()
     assert "<link" not in body and "<title" not in body and body.rstrip().endswith("</script>")
     name = html.unescape(title.group(1))
-    url = SITE + KNOBS
-    description = ("Turn the toy model's knobs yourself: an interactive companion to \"The curled torus burps\". Exact "
-                   "numbers at every setting; measured results only where the simulations ran.")
-    top = head(name + ": turn the knobs", description, url, "", False, PDF_PLAIN, paper=False)
+    url = SITE + post.knobs
+    top = head(post, name + ": turn the knobs", post.companion_description, url, "", False, paper=False)
     top = top.replace('<link rel="stylesheet" href="%s%s">\n' % (SHARED, STYLESHEET), "")   # not the blog's style sheet
     top = top.replace("</head>", "\n".join(links) + "\n<style>" + KNOBS_BAR_CSS + "</style>\n" + style.group(0)
                       + "\n</head>")
+    technical = '<a class="mnb-btn" href="%s">Read the technical edition</a>' % post.tech if post.has_technical else ""
     bar = ('<div class="mnb">'
            '<span class="mnb-name">~ <a href="%(blog)s">The Side Nerd Blog</a>, Main Nerd ~</span>'
-           '<span class="mnb-what">The interactive companion to Post No. 01, <i>%(paper)s</i></span>'
-           '<a class="mnb-btn" href="%(base)s">« Read it in plain language</a>'
-           '<a class="mnb-btn" href="%(tech)s">Read the technical edition</a>'
+           '<span class="mnb-what">The interactive companion to Post No. %(number)02d, <i>%(paper)s</i></span>'
+           '<a class="mnb-btn" href="%(base)s">« Read it in plain language</a>%(technical)s'
            '<span class="mnb-sponsor">Sponsored by <a href="%(sponsor)s">Side Nerd Apps</a></span></div>'
-           % dict(blog=BLOG, paper=TITLE, base=BASE, tech=TECH, sponsor=html.escape(utm("knobs-sponsor"))))
+           % dict(blog=BLOG, number=post.number, paper=post.title, base=post.base, technical=technical,
+                  sponsor=html.escape(utm("knobs-sponsor"))))
     foot = ('<div class="mnb mnb-foot">'
             '<a class="mnb-btn" href="%(base)s">« Back to the post</a>'
             '<a class="mnb-btn" href="%(blog)s">All posts</a>'
@@ -721,7 +688,7 @@ def page_knobs(source):
             '<span class="mnb-small">Text and figures © 2026 Emily Smith. No physicist has reviewed this work. A toy '
             'model shows what is possible within a class of models, nothing about the real universe. '
             '<a href="%(repo)s/issues">Report a mistake</a>.</span></div>'
-            % dict(blog=BLOG, base=BASE, repo=REPO, sponsor=html.escape(utm("knobs-footer-sponsor"))))
+            % dict(blog=BLOG, base=post.base, repo=REPO, sponsor=html.escape(utm("knobs-footer-sponsor"))))
     cut = body.index("<script>")
     return "\n".join([top, "<body>", bar, body[:cut].rstrip(), foot, body[cut:], "</body></html>"]) + "\n"
 
