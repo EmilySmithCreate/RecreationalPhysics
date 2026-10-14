@@ -11,7 +11,7 @@ argument or run most likely to show why, and do the cheap ones.
 
 Two objects are under review.
 
-1. **Paper 1**, "The curled torus burps": `docs/papers/curled_torus/paper.tex` (built as `paper.pdf`), its methods
+1. **Paper 1**, "The curled torus burps": `docs/papers/01_curled_torus/paper.tex` (built as `paper.pdf`), its methods
    supplement `supplement.md`, its file list `release_manifest.json`, and its plain-language edition
    `paper_plain_language.tex`. It is an unpublished manuscript. No physicist has reviewed it.
 2. **One pre-registered run that the paper does not yet quote**: `PREREGISTRATION.md`, the section headed
@@ -36,7 +36,7 @@ only whether the paper's statements about this toy model are true and fairly wor
   later; `VISION.md` Updates 53 and later; in `CLAUDE.md`, the paragraph that begins "Added 2026-10-11";
   `configs/t60_heldout_prediction.json`; `docs/HANDOFF.md`; `TASKS.md`; `docs/papers/programme_draft.md`; the
   scripts `read_endpoint_width.py` and `read_open_shells.py` with `tests/test_read_shapes.py`; the other paper
-  drafts under `docs/papers/` (`fertile_window/`, `six_links/`, `black_hole/`), which quote results under review;
+  drafts under `docs/papers/` (`06_fertile_window/`, `05_six_links/`, `12_black_hole/`), which quote results under review;
   the output of `scripts/analyse_t60.py`. Commit messages written after the T60 registration state our readings,
   so until then list history with hashes and dates only:
   `git log --format="%h %ad" --date=iso -- <path>`.

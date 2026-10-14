@@ -2596,7 +2596,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     time to a quarter converted 1.5 to 1.7 times the first exit, with κ = 0.56 to 0.68 (O39); paper 1 says it in words
     without the number. "0.9 to 1.4" is not a recorded figure: T22's first-exit ratios are 0.89 to 1.22 and T8's waits
     near λ = 1 run 15 to 43 % long; the review combined them. Not imported. Candidates for a revision of paper 1 are in
-    `docs/papers/curled_torus/v2_changes.md`.
+    `docs/papers/01_curled_torus/v2_changes.md`.
   - **(h) Not in the record.** The first review quotes "all matter and energy eventually enters a black hole, so there
     is no motion through space and therefore no time"; the record and the published programme artifact have no such
     sentence (nearest: VISION Update 26, "until the last star is eaten by the last black hole"). The owner says on
@@ -2853,7 +2853,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     this session, not in `results/`; it can be rerun from the CSV).
 
 - **O108 Paper 1 revision after the 9 October 2026 review.** **Ours, unverified by an independent physicist.**
-  Scope: `docs/papers/curled_torus/feedback_resolution_2026-10-09.md` maps the feedback to changes and evidence;
+  Scope: `docs/papers/01_curled_torus/feedback_resolution_2026-10-09.md` maps the feedback to changes and evidence;
   `scripts/analyse_curled_revision.py` is a retrospective, read-only analysis, not a new registered run.
   - **Exact finite-size computation:** exhaustive side-preserving neutral-class closure at lambda=1.25
     yields three reachable classes and the same full switch census at N=48,64,96,144,192,288. Minimum
@@ -2882,7 +2882,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     reuses each replica's seed across couplings, whereas its pooled bootstrap draws cells independently;
     the combined 432-wait p-value is therefore nominal. T22 includes lambda in its seed derivation.
   - **Presentation:** the reader manuscript is a first release, with no draft-revision narrative or
-    unpublished self-citations; the computational supplement is `docs/papers/curled_torus/supplement.md`.
+    unpublished self-citations; the computational supplement is `docs/papers/01_curled_torus/supplement.md`.
   - **Status:** all original failures and verdicts remain. Revised wording separates retrospective energy
     amendments, registered component tests and fresh repeats. Replica uncertainty and build/check outputs
     accompany the paper. The starting snapshot is 40b1ae68844a72bd73ffdc74d5c385844ab16f17; the release
@@ -2979,7 +2979,7 @@ to the owner's hypothesis or a new simulation result.
     three-quarters converted" (true, and they were so by sweep 200); and the reading of T24's two extreme waits as
     waits, in O52, O84, T38's "Why" and TASKS. *Added the same day, 07:20 ET by the clock, at the owner's instruction ("now you've noticed the fast movers
     issue pls correct the paper and update the conclusion"; then "align the technical manuscript to this plain
-    language paper"):* the technical manuscript, `docs/papers/curled_torus/paper.tex`, now carries this reading in
+    language paper"):* the technical manuscript, `docs/papers/01_curled_torus/paper.tex`, now carries this reading in
     its abstract, Sec. VII, Discussion and Methods, and its sections were reordered to follow the plain-language
     edition (cost of leaving, first exit, conversion, sealed system, dependence on λ); `supplement.md` has the
     table. No passage of the 9 October manuscript was reworded except the ones on the detected tails, the section
@@ -3446,7 +3446,7 @@ to the owner's hypothesis or a new simulation result.
     property of short tubes, and "sharp across the window" is a statement at 64 to 288 points.
   - **Rule 11.** No registered prediction failed.
   - **Owed.** The red-team pass (rule 12) before paper 1 quotes the verdict; the brief is
-    `docs/papers/curled_torus/red_team_brief_2026-10-11.md`.
+    `docs/papers/01_curled_torus/red_team_brief_2026-10-11.md`.
   - *A slip of process, recorded.* The commit that accepted the seventh cell (a6c3a3db) says "Full suite: 917
     pass". The run it followed had 916 passes and one failure: the resume test of `tests/test_t52.py`, which hit
     its own 120-second limit while the laptop was also computing T54. Run alone it passes (10 of 10). GitHub's own run of that commit passed. The
@@ -3516,7 +3516,7 @@ to the owner's hypothesis or a new simulation result.
 
 - **O120 The outside review of 11 October 2026, recorded: what it checked, what it found, what was done, and what it
   got wrong (rule 12's first pass by a different model).** (Reviewer: OpenAI Codex, from
-  `docs/papers/curled_torus/red_team_brief_2026-10-11.md`, read-only on this branch; a first report on paper 1 and
+  `docs/papers/01_curled_torus/red_team_brief_2026-10-11.md`, read-only on this branch; a first report on paper 1 and
   T60, and a follow-up on the commits up to f3a76688. Its reports and scratch calculations are local and
   untracked, `.tools/independent-review-2026-10-11/`. Its proposed rewrite of paper 1's two editions, with an
   endpoint-geometry reader of its own, is the branch `codex/paper1-review-corrections-2026-10-11` (33be5462),
@@ -3592,7 +3592,7 @@ to the owner's hypothesis or a new simulation result.
   > known-surface controls are `scripts/read_endpoint_geometry.py` and
   > `tests/test_endpoint_geometry.py`; detailed selection, algorithm and limitations are in the
   > 11 October supplement addendum. Per-input hashes and certificates are in
-  > `docs/papers/curled_torus/endpoint_geometry_2026-10-11.json`.
+  > `docs/papers/01_curled_torus/endpoint_geometry_2026-10-11.json`.
   >
   > All 120 original T8 lambda=1.05 endpoints reconstruct as narrow square-grid tori with shortest
   > noncontractible loop six and shortest independent loop N/4. Among 3,521 reached, zero-energy

@@ -6,7 +6,7 @@ q(v) counts incident squares. It is 2 on a flat square torus, 1 on a 4 x L torus
 (even L > 4), and 0 on a 4-cube, but the converses do not hold. In particular,
 d=2 everywhere does not establish a surface or torus. Connected components of
 selected d values describe where that signature occurs, not a unique moving front.
-See ASSUMPTIONS O108 and docs/papers/curled_torus/supplement.md.
+See ASSUMPTIONS O108 and docs/papers/01_curled_torus/supplement.md.
 """
 import numpy as np
 from numba import njit

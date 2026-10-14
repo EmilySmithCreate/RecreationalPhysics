@@ -26,7 +26,7 @@ inconclusive by the letter for a stated reason (the memoryless-wait criterion wa
 **Current status, 9 October.** Unpublished reader manuscript, with supplement and reproducibility manifest.
 Submission or endorsement logistics do not imply scientific review. See [measurement scope](measurement_scope.md).
 
-**Draft.** `docs/papers/curled_torus/paper.tex`, `paper.pdf`; review page
+**Draft.** `docs/papers/01_curled_torus/paper.tex`, `paper.pdf`; review page
 https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR. *Added 10 October:* the plain-language edition,
 `paper_plain_language.pdf`, whose chapters the manuscript's sections now follow, and its interactive companion,
 "The Tube's Curling Ladder", https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8 (source
@@ -247,9 +247,9 @@ that would go with it.
 
 - **Paper 1:** drafted; T24 will replace T23 in section V if it reads clean, and the memoryless claim then rests on
   a run whose gates were all fixed before it ran.
-- **Paper 2:** T10, T11, T17, T19 on the record; T25 running. Drafted tonight (`docs/papers/relic/paper.tex`) with
+- **Paper 2:** T10, T11, T17, T19 on the record; T25 running. Drafted tonight (`docs/papers/02_relic/paper.tex`) with
   T25's section left as the pre-registered question.
-- **Paper 3:** T8, T18, T22, T23 on the record; O41 exact. Drafted tonight (`docs/papers/fertile_window/paper.tex`).
+- **Paper 3:** T8, T18, T22, T23 on the record; O41 exact. Drafted tonight (`docs/papers/06_fertile_window/paper.tex`).
 - **Paper 4:** O20, T21 on the record; T26 and T27 running. Not drafted: its first result is tonight's.
 - **Paper 5:** waits on the six-link gate. **Paper 6:** waits on the owner's decision about a rule for canceling
   versions. **Paper 7:** the programme page, kept current.
@@ -357,9 +357,9 @@ energy; if it exists in reality it is an ingredient this family lacks, which is 
   draft.
 - **Paper 3:** T24 written in; a new section, "The same map across the number of directions", with the exact-wall table
   and the six-link measurements; the 3D window sentence corrected to O49.
-- **Paper 4, drafted:** `docs/papers/black_hole/paper.tex`, "Does concentrated energy re-curl space? Three sealed tests
+- **Paper 4, drafted:** `docs/papers/12_black_hole/paper.tex`, "Does concentrated energy re-curl space? Three sealed tests
   ... and a melt every time" (O20/T21, T26, T27).
-- **The six-link companion, drafted:** `docs/papers/six_links/paper.tex` (O41, O49, O50, T32, T30, the gas; the
+- **The six-link companion, drafted:** `docs/papers/05_six_links/paper.tex` (O41, O49, O50, T32, T30, the gas; the
   reproduction gate as its own section; the eight-link section left for T33).
 - None has a PDF (Tectonic is not installed system-wide); all are American-spelled; none has been read by the owner.
 
@@ -454,14 +454,14 @@ the paper builds on; the readings are in `docs/reading/notes/` (5 October for mo
 | 2 | What the change leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's kinds, number, place, lifetime; how much freezes in (T51); free scraps and joints | Rewritten 13 Oct around the three kinds, renamed 14 Oct (was "What the burp leaves behind"); both editions drafted; the plain one revised from the owner's notes of 14 Oct (free scraps and joints, the column's wiring, O126); the technical draft has no figures yet and owes three |
 | 3 | Links that reach far, left where starting points meet | 7 | Markopoulou and Smolin [MS07]; Quach and co-authors [QSMG12]; Hossenfelder [H13] | a frozen boundary between domains, in this model | their count, reach and scaling with size; whether cooling heals them; whether the opening splits X in two | First look only (O95, O100); to be pre-registered |
 | 4 | The order of the transition in three directions | 5 (Gate C) | Trugenberger [T22] | his D = 3 figure (needs its size and whether its graphs were two-sided) | cooling against heating at 500 points with replica exchange | The bounded joint project to offer the model's author |
-| 5 | How curled directions open, three and four | 5 | [T22]; Mulder's theorem [Mul79]; the topology conjecture of [AGGN22]; the decompactification relatives [GM04], [CJR09], [BSV10], [GHR10] | the exact ladder (done) | one at a time; a gas never joins; a connected X; the true barrier | Draft brought up to date 11 Oct (`six_links/paper.tex`, with a PDF): thirteen registered tests, T56 stage 1 and the shape reading (O115, O116) included; not yet read by the owner; T54's first stage computed, not read |
-| 6 | The rule, the room, and which settings give a birth | 3, 4 | The local term of [T25] | none needed | the map over the curling cost and the number of directions; room; melting moving with size | Draft brought up to date 11 Oct (`fertile_window/paper.tex`, with a PDF): T58 to T60 stage 1, the product (a flat torus six around, O116), the room, the scrap, one table across directions; T60's held-out size (O117); not yet read by the owner |
+| 5 | How curled directions open, three and four | 5 | [T22]; Mulder's theorem [Mul79]; the topology conjecture of [AGGN22]; the decompactification relatives [GM04], [CJR09], [BSV10], [GHR10] | the exact ladder (done) | one at a time; a gas never joins; a connected X; the true barrier | Draft brought up to date 11 Oct (`05_six_links/paper.tex`, with a PDF): thirteen registered tests, T56 stage 1 and the shape reading (O115, O116) included; not yet read by the owner; T54's first stage computed, not read |
+| 6 | The rule, the room, and which settings give a birth | 3, 4 | The local term of [T25] | none needed | the map over the curling cost and the number of directions; room; melting moving with size | Draft brought up to date 11 Oct (`06_fertile_window/paper.tex`, with a PDF): T58 to T60 stage 1, the product (a flat torus six around, O116), the room, the scrap, one table across directions; T60's held-out size (O117); not yet read by the owner |
 | 7 | The make-up at birth and the three shares | 6 | Planck 2018; asymmetric dark matter [KLZ09], [PV13]; Verlinde [Ver16] | the published numbers (done, O89) | which shapes of shares match birth; run them | Outline. The owner chose the shape "all at the last" on 9 Oct and gave her best guess for the three shares on 10 Oct (VISION Updates 47, 52); needs a physicist's check |
 | 8 | Dimensions that open in order: a crossover or a sharp change? | 5, 6 | Stojkovic [St14] | his crossover in a layered lattice | set beside an opening with a fixed push and an exact release | Idea |
 | 9 | What a cut hides | 8 | Jacobson [Jac95]; Verlinde [Ver11] | none needed | the hidden count: does it follow the boundary or the volume (T52) | Pre-registered with Amendment 1 before the run; computed 9 Oct; not yet read |
-| 10 | An entropy action across wirings | 8 | Bianconi [Bia24] | her vacuum action on a regular lattice | the same action on flat, curled and leftover wirings: her "variation with respect to the topology" | First computation done 10 Oct (O111): flat, curled, re-glued and knots at 64 points; the action rewards squares without limit. Across 445 saved wirings it acts like this model's energy with a coefficient below 1 (0.001 to 0.55). Drafted 10 Oct in two versions, technical and plain language (`docs/papers/entropy_action/`). The question for her is drafted (local); the metric solved per wiring and a sheet holding one knot are not done |
-| 11 | A pull between leftovers | 8 | Verlinde [Ver11]; the G-field of [Bia25] | none needed | the pull in a warm bath in three directions; the design of a quantity on the points | The technical draft of 25 Sep (`docs/papers/gravity/paper.tex`, the exact negatives and what a pull needs) revised 10 Oct with where the two routes stand, and a plain-language draft beside it. Its measurements are not run: the hidden count is computed and unread (T52), the warm sheet's reach and the pull are not started, the design of the quantity on the points is not written |
-| 12 | Concentrated energy does not fold space | 11 | Black holes as random bubbles [T25]; Smolin [Smolin06]; as benchmarks only, the black-hole-cosmology lineage (Pathria, Popławski, Fife; unread, O103 (j)) | none needed | five negative results and what they need (T21, T26, T27, T34, T42) | Draft brought up to date 11 Oct (`black_hole/paper.tex`, with a PDF): seven registered tests, T57 included (MELTS, tied and untied; O114); not yet read by the owner |
+| 10 | An entropy action across wirings | 8 | Bianconi [Bia24] | her vacuum action on a regular lattice | the same action on flat, curled and leftover wirings: her "variation with respect to the topology" | First computation done 10 Oct (O111): flat, curled, re-glued and knots at 64 points; the action rewards squares without limit. Across 445 saved wirings it acts like this model's energy with a coefficient below 1 (0.001 to 0.55). Drafted 10 Oct in two versions, technical and plain language (`docs/papers/10_entropy_action/`). The question for her is drafted (local); the metric solved per wiring and a sheet holding one knot are not done |
+| 11 | A pull between leftovers | 8 | Verlinde [Ver11]; the G-field of [Bia25] | none needed | the pull in a warm bath in three directions; the design of a quantity on the points | The technical draft of 25 Sep (`docs/papers/11_gravity/paper.tex`, the exact negatives and what a pull needs) revised 10 Oct with where the two routes stand, and a plain-language draft beside it. Its measurements are not run: the hidden count is computed and unread (T52), the warm sheet's reach and the pull are not started, the design of the quantity on the points is not written |
+| 12 | Concentrated energy does not fold space | 11 | Black holes as random bubbles [T25]; Smolin [Smolin06]; as benchmarks only, the black-hole-cosmology lineage (Pathria, Popławski, Fife; unread, O103 (j)) | none needed | five negative results and what they need (T21, T26, T27, T34, T42) | Draft brought up to date 11 Oct (`12_black_hole/paper.tex`, with a PDF): seven registered tests, T57 included (MELTS, tied and untied; O114); not yet read by the owner |
 | 13 | Counting versions cannot beat Bell | 9 | Smolin [Smolin11]; Hardy [Hardy01] | none needed | the rungs of T15; the exchange sign | Results in hand; outline |
 | 14 | A front's pace | 10 | Ellis [Ell14] | none needed | steady on a fair clock; faster where energy sits (T47, T50) | Results in hand; outline |
 | 15 | Allotropes dissolve | parked | Trugenberger [T24] | none needed | the first numerical data on them (T36, T43) | Results in hand; kept for the correspondence with him |
@@ -475,7 +475,7 @@ joint work. (d) Nothing here changes the rule that a paper at λ ≠ 1 is not ca
 6 October (O103): the narrow statement the three AI reviews propose for papers 1 and 2 together, which the author may
 adopt: a modified emergent-geometry toy supports a stable-for-now compactified arrangement, local nucleation, a
 propagating geometric change and a calculable release in two directions, with the freeze-out of defects under test;
-the cosmological interpretation comes later. Paper 1's revision candidates are in `curled_torus/v2_changes.md`.
+the cosmological interpretation comes later. Paper 1's revision candidates are in `01_curled_torus/v2_changes.md`.
 
 ## 12 October 2026: where the price on loops of six belongs (the owner's question)
 
@@ -519,7 +519,7 @@ For paper 1 the candidate of 24 September, M. Vucelja, was looked at again the s
 Her joint paper with Chern is not the connection; her own work on relaxation and mean first passage times
 under Metropolis dynamics is, and it touches paper 1 in three places (the first exit, the reservoir of stores,
 and paper 2's cooling). The work that would serve a reader from that side is in
-`curled_torus/handoff_2026-10-13_measurement_side.md`.
+`01_curled_torus/handoff_2026-10-13_measurement_side.md`.
 
 ## 14 October 2026: paper 1 tightened, and where its cut material belongs (the owner's notes)
 
@@ -549,3 +549,8 @@ each would need is listed below (drawn by script from saved results, as paper 1'
 | 10, an entropy action | the action against squares for the 445 wirings; λ_eff against c₀; the action per cell for the three rungs; a sketch of the tube and its re-glued twin |
 | 11, a pull between leftovers | Table I as two log-log panels; a sketch of two defects at separation r; symmetry count against placement |
 | 12, concentrated energy | outcome shares per cell for the seven tests; T21's folded share against budget; the scar against time (T42, T34); T57's damage against energy; the six-link ladder under the tie; the counting crossover |
+
+**Folders numbered (14 October, the owner's request).** Each paper's folder now carries its number in the table of
+5 October: `01_curled_torus`, `02_relic`, `05_six_links`, `06_fertile_window`, `10_entropy_action`, `11_gravity`,
+`12_black_hole`. Paths in the record were updated to match; older commits and links name the folders without the
+number. `observer_relative_histories/` (programme pieces 13 and 14) is not a numbered paper and keeps its name.

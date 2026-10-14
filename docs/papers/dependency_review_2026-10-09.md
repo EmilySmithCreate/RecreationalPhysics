@@ -27,6 +27,6 @@ JavaScript passes syntax checks. The regenerated figure and companion table page
 visually inspected. The paper release manifest now covers 38 files, including the affected
 analysis sources and validation log. Raw results and configs are unchanged.
 
-Evidence: [validation log](curled_torus/followthrough_validation_2026-10-09.log).
+Evidence: [validation log](01_curled_torus/followthrough_validation_2026-10-09.log).
 This pass checks propagation of the identified errors; it is not independent physics review
 or a new validation of every later research claim in the repository.

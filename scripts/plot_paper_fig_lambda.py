@@ -1,6 +1,6 @@
 """Figure 3 of the curled-torus paper: the lambda map (PREREGISTRATION T8). Usage:
 
-    python scripts/plot_paper_fig_lambda.py docs/papers/curled_torus/fig_lambda.pdf
+    python scripts/plot_paper_fig_lambda.py docs/papers/01_curled_torus/fig_lambda.pdf
 
 Reads results/t8_lam*.csv (and T7's t7b_lam125_n*.csv for lambda = 1.25, which T8 does not rerun).
 (a) mean waiting time against lambda for each size where the tube is stuck (T8's definition), with one

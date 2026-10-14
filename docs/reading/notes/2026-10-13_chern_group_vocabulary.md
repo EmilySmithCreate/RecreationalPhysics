@@ -31,8 +31,8 @@ paper with M. Vucelja (2609.30025), who is named in the series plan for paper 1.
 
 ## 2. The same concept in two vocabularies
 
-"Used" says where the term was added on 13 October: P1 is `docs/papers/curled_torus/paper.tex`, P2 is
-`docs/papers/relic/paper.tex`.
+"Used" says where the term was added on 13 October: P1 is `docs/papers/01_curled_torus/paper.tex`, P2 is
+`docs/papers/02_relic/paper.tex`.
 
 | Ours | Theirs | Where they say it | Used |
 |---|---|---|---|

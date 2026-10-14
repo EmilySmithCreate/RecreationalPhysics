@@ -2,7 +2,7 @@
 
 This reference states the interpretation used across the repository as of 9 October 2026.
 Derivations and retrospective analysis are **Ours, unverified by an independent physicist**.
-The [paper](curled_torus/paper.pdf), [methods supplement](curled_torus/supplement.md), and
+The [paper](01_curled_torus/paper.pdf), [methods supplement](01_curled_torus/supplement.md), and
 [O108](../../ASSUMPTIONS.md) give the detailed evidence. Historical predictions and verdicts
 remain records of what was tested; they do not establish stronger physical interpretations.
 

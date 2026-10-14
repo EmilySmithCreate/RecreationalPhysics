@@ -358,7 +358,7 @@ Anything at exactly λ = 1, where there is no release. Anything at other couplin
 
 #### Reading, 24 September 2026: INCONCLUSIVE by the letter; the change is sharp at every λ where the tube is stuck
 
-`python scripts/analyse_t8.py` (tests `tests/test_t8.py`); figure `docs/papers/curled_torus/fig_lambda.pdf`.
+`python scripts/analyse_t8.py` (tests `tests/test_t8.py`); figure `docs/papers/01_curled_torus/fig_lambda.pdf`.
 
 **Per λ, by the rules as written.** 1.05, 1.15, 1.20: **sharp** at every size that passes its gates (1.20, N = 96 fails gate 3 on one decay). 1.10: **unread**, criterion (a) fails at N = 64 (CV 0.64) and N = 192 (1.36). 1.30: **unread**, (a) fails at N = 96, 144, 192 (0.65 to 0.67). 1.35: **unread**, gate 3 fails at every size (2 to 5 decays per size end in states whose energy matches none of the allowed ones) and (a) fails (0.37 to 0.62). 1.40, 1.45: **not metastable** (median f_200 0.28 to 1.12). λ = 1.25 is T7's TWO-STATE CHANGE, not rerun. **Verdict: INCONCLUSIVE.**
 
@@ -5146,7 +5146,7 @@ against the same words.
 
 ### Amendment to T61, 2026-10-11, before the held-out size is read: no word on incomplete or failed data
 
-An outside review of the same day (OpenAI Codex, working from `docs/papers/curled_torus/red_team_brief_2026-10-11.md`;
+An outside review of the same day (OpenAI Codex, working from `docs/papers/01_curled_torus/red_team_brief_2026-10-11.md`;
 it read `scripts/analyse_t61.py` and synthetic rows only, and opened no T61 result) showed three ways the analyzer
 could give a word it should not: a cell of 24 invalid graphs printed `gate FAIL` and was still counted towards a
 verdict; a stage 1 with settings missing still wrote numbers for the held-out size; and a single held-out cell read

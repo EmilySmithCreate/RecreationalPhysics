@@ -14,7 +14,7 @@ from importlib.metadata import version, PackageNotFoundError
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PAPER = ROOT / "docs/papers/curled_torus"
+PAPER = ROOT / "docs/papers/01_curled_torus"
 BASE = "5382053a60c4137cd446f83355e2a12177bb94ea"
 
 

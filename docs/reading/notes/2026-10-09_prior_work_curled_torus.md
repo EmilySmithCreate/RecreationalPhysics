@@ -1,6 +1,6 @@
 # Prior-work search: the coefficient deformation and curled-torus conversion
 
-**Sentence supported:** “Our 23 September literature search did not identify the same coefficient deformation or curled-to-flat kinetic experiment; its scope and limitations are recorded separately.” See the Introduction of `docs/papers/curled_torus/paper.tex`.
+**Sentence supported:** “Our 23 September literature search did not identify the same coefficient deformation or curled-to-flat kinetic experiment; its scope and limitations are recorded separately.” See the Introduction of `docs/papers/01_curled_torus/paper.tex`.
 
 **Search date:** 23 September 2026. **Transcribed:** 9 October 2026. This note preserves the search recorded in `REFERENCES.bib`, rather than claiming a new exhaustive search. The record was produced in an assistant session; it does not identify a human literature reviewer.
 

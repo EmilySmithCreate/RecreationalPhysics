@@ -8,7 +8,7 @@ back. The three files produced in chat are listed in section 6 and should be add
 The programme page is the Claude artifact **"A Phase-Changing Reality"** (https://claude.ai/artifact/JLtR2aqHmL2FghWmNZU8xW).
 It is now a state-of-the-programme document, not a log: the owner asked (4 Oct) that it carry no revision status, only
 the current picture and the current results. Keep it that way. The plain-language visual of paper 2 is
-https://claude.ai/artifact/36h2aUFjagLUG61ozzRqo5 (built from `docs/papers/relic/paper.tex` and the saved results).
+https://claude.ai/artifact/36h2aUFjagLUG61ozzRqo5 (built from `docs/papers/02_relic/paper.tex` and the saved results).
 
 Conventions as in `CLAUDE.md`: every assumption sourced or marked "Ours"; pre-register before runs; results append-only;
 tests pass before commit; AI physics reasoning labelled unverified. Record each item below in ASSUMPTIONS at the next O

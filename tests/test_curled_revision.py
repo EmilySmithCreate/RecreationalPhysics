@@ -11,7 +11,7 @@ from scripts.analyse_curled_revision import binomial_interval, neutral_closure
 
 
 def geometry_reader():
-    path = Path(__file__).resolve().parents[1] / "docs/papers/curled_torus/reviewer_checks_2026-10-09.py"
+    path = Path(__file__).resolve().parents[1] / "docs/papers/01_curled_torus/reviewer_checks_2026-10-09.py"
     spec = importlib.util.spec_from_file_location("curled_reviewer", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

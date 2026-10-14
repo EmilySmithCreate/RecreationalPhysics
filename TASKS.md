@@ -690,7 +690,7 @@ The replacements for pieces 5 and 11 are hers. In order:
 2. *T61 registered 11 October (does the burp's heat widen the tube; laptop; her prediction owed before any reading; read with `python scripts/analyse_t61.py`, then the held-out prediction, then N = 384).* *Held by the owner, 11 October: paper 1, the outside review and the reader request wait until it is settled whether the small direction grows (`sandbox/NOTEBOOK.md` has her words; `sandbox/LOG.md` the first looks). Piece 1's title loses "into space".* **Paper 1 says what its end states are** (O116): both editions, the supplement, `measurement_scope.md` and the
    blog pages, before it is shown to anyone. The wording is the owner's to settle (Update 54, item 4).
 3. **The red-team pass (rule 12)** by a fresh read-only reviewer. The brief is
-   `docs/papers/curled_torus/red_team_brief_2026-10-11.md`; the owner gives it to the reviewer; the report becomes
+   `docs/papers/01_curled_torus/red_team_brief_2026-10-11.md`; the owner gives it to the reviewer; the report becomes
    an O entry with what it found and what it got wrong. Only after it: paper 1's sentence on the fourth map, and
    the reader request to the model's author.
 4. **The exact prices rule 11 names** (no run): the cheapest breaking move out of the slab under the table against
@@ -709,8 +709,8 @@ The replacements for pieces 5 and 11 are hers. In order:
    wider). To be pre-registered, with a width line in the registration.
 7. **Whether opposite twists meeting leave a knot** (O116; ours, unverified): read the saved T51 sheets for the
    twist on either side of each knot. Exploratory unless registered.
-8. **The drafts of papers 5, 6 and 12** were brought up to date on 11 October (`docs/papers/six_links/`,
-   `fertile_window/`, `black_hole/`, each with a built PDF). The owner has not read them. Paper 6 carries a marked
+8. **The drafts of papers 5, 6 and 12** were brought up to date on 11 October (`docs/papers/05_six_links/`,
+   `06_fertile_window/`, `12_black_hole/`, each with a built PDF). The owner has not read them. Paper 6 carries a marked
    gap for T60 stage 2. The three were first rewritten by assistant agents against the record and then checked and
    patched; their reports listed places where the record disagrees with itself (the two-curled window 1.5 against
    O100's 1.45; the eight-link three-curled window; "joins" in T30's reading against O85), which are not yet
@@ -722,7 +722,7 @@ The replacements for pieces 5 and 11 are hers. In order:
     October, and her notes on its sentences (the why of "two humps"; the curling cost as something to test; the
     jump in energy; "if this kept happening"; whether flat makes wide likely) were applied the same day on
     `claude/paper1-after-review-2026-10-12`, with T61 and O123. *Done on that branch; it waits for her read and
-    her merge. The Side Nerd pages are not refreshed.* *Refreshed 12 October at her request: the pages were rebuilt from both editions as they stand and pushed to the marketing repository on the branch `feat/main-nerd-post01-2026-10-12` (not merged, not deployed; both are hers). The blog's summary, quick answers and the interactive page no longer say the tube opens into a flat sheet.* *Owed, hers to review first: a new structure for the plain-language edition in four parts (what we are looking at and why; the replications; the ways we tested and changed the toy, organized; what that teaches for three directions, the scrap and the energy). An outline was put to her on 12 October; nothing is rewritten until she has seen it.* *13 October: she answered with notes on Chapters 1 to 3 (Chapter 1 a third as long, in the order author, hypothesis, approach, outline, toy; Chapter 2 about half as long, on the reproduction and the one change; "flat" misleads, the tube is a ring and the sheet a fatter doughnut). The whole edition is redrafted on `claude/paper1-plain-structure-2026-10-13` (what changed: `docs/papers/curled_torus/plain_language_README.md`): those three chapters first, then, at her request the same day, the rest made shorter and more visual, with what is only about how the measuring went taken out (the long waits and the detector are two sentences and a pointer to the technical paper). 32 pages, 26 figures. She has not read the draft. The blog pages are rebuilt from it and post 01's plain page is offered to the marketing repository as a pull request, hers to merge. Her sentence on Chapter 2 broke off ("and then talk about"), so what should follow the knob there is still hers to say.* Owed from it on this branch: T60's wording in paper 6 ("memoryless",
+    her merge. The Side Nerd pages are not refreshed.* *Refreshed 12 October at her request: the pages were rebuilt from both editions as they stand and pushed to the marketing repository on the branch `feat/main-nerd-post01-2026-10-12` (not merged, not deployed; both are hers). The blog's summary, quick answers and the interactive page no longer say the tube opens into a flat sheet.* *Owed, hers to review first: a new structure for the plain-language edition in four parts (what we are looking at and why; the replications; the ways we tested and changed the toy, organized; what that teaches for three directions, the scrap and the energy). An outline was put to her on 12 October; nothing is rewritten until she has seen it.* *13 October: she answered with notes on Chapters 1 to 3 (Chapter 1 a third as long, in the order author, hypothesis, approach, outline, toy; Chapter 2 about half as long, on the reproduction and the one change; "flat" misleads, the tube is a ring and the sheet a fatter doughnut). The whole edition is redrafted on `claude/paper1-plain-structure-2026-10-13` (what changed: `docs/papers/01_curled_torus/plain_language_README.md`): those three chapters first, then, at her request the same day, the rest made shorter and more visual, with what is only about how the measuring went taken out (the long waits and the detector are two sentences and a pointer to the technical paper). 32 pages, 26 figures. She has not read the draft. The blog pages are rebuilt from it and post 01's plain page is offered to the marketing repository as a pull request, hers to merge. Her sentence on Chapter 2 broke off ("and then talk about"), so what should follow the knob there is still hers to say.* Owed from it on this branch: T60's wording in paper 6 ("memoryless",
     "two orders", "one front" as names of three diagnostics; the repaired clock not shown to be why the fourth map
     passes); a search for the lowest path in T54 (O118, "Correction").
 11. **A price on loops of six** (VISION Update 56). *Done 12 October: the kernel (`src/graphity/sixloop.py`) and
@@ -749,11 +749,11 @@ can read the model half of paper 1; nobody is identified for the measurement hal
 together: M. Vucelja (relaxation and first passage under Metropolis dynamics) and G.-W. Chern (defects and
 energy landscapes); what was read is `docs/reading/notes/2026-10-13_chern_group_vocabulary.md`. The work that
 would serve such a reader is laid out, cheapest first, in
-`docs/papers/curled_torus/handoff_2026-10-13_measurement_side.md`: (1) check the measuring tools on a chain
+`docs/papers/01_curled_torus/handoff_2026-10-13_measurement_side.md`: (1) check the measuring tools on a chain
 whose answer is known exactly; (2) the lowest wall on any route out of the curled tube, by listing; (3) one map
 of T9's and T61's outcomes; (4) what the stores are doing; (5) whether a first exit commits. Items 4 and 5
 need a registration and the owner's prediction. Owed before any letter: [WV22] and [TBLRV25] read in full.
-Paper 2 (`docs/papers/relic/`) was rewritten the same day with T51, T55 and O116's wording, and has a draft
+Paper 2 (`docs/papers/02_relic/`) was rewritten the same day with T51, T55 and O116's wording, and has a draft
 plain-language edition; the owner has not read either.
 
 Accept: item 1 has a test in `tests/` and a paragraph in the supplement; item 2 returns 12 for the first exit

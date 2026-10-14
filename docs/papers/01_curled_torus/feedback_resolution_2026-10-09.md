@@ -101,7 +101,7 @@ Paths are relative to the repository root. Configurations and raw data are in th
 Use Python with the project's `dev` and `plots` dependencies installed. Run from the repository root:
 
 ```text
-python docs/papers/curled_torus/reviewer_checks_2026-10-09.py
+python docs/papers/01_curled_torus/reviewer_checks_2026-10-09.py
 python scripts/analyse_curled_revision.py --neutral
 python scripts/analyse_curled_revision.py
 python scripts/analyse_paper_stats.py

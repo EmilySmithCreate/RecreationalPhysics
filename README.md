@@ -22,8 +22,8 @@ Nothing here is a claim about the real universe. The plain-language version of t
 | [`REFERENCES.bib`](REFERENCES.bib) | sources, each marked read-in-full / abstract-only / unread |
 | [`CLAUDE.md`](CLAUDE.md) | working rules for AI-assisted sessions |
 
-The current [reader manuscript](docs/papers/curled_torus/paper.pdf) and
-[supplement](docs/papers/curled_torus/supplement.md) are unpublished. The
+The current [reader manuscript](docs/papers/01_curled_torus/paper.pdf) and
+[supplement](docs/papers/01_curled_torus/supplement.md) are unpublished. The
 [measurement scope](docs/papers/measurement_scope.md) explains the limits shared by all summaries.
 
 ## The model

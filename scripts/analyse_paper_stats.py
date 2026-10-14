@@ -1,4 +1,4 @@
-"""Two statistical checks for the curled-torus paper (docs/papers/curled_torus/). Usage:
+"""Two statistical checks for the curled-torus paper (docs/papers/01_curled_torus/). Usage:
 
     python scripts/analyse_paper_stats.py
 

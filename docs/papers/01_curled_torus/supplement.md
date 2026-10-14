@@ -154,7 +154,7 @@ Paths are relative to the repository root. Experiment identifiers provide stable
 Install the project's `dev` and `plots` dependencies and Tectonic. From the repository root:
 
 ```text
-python docs/papers/curled_torus/reviewer_checks_2026-10-09.py
+python docs/papers/01_curled_torus/reviewer_checks_2026-10-09.py
 python scripts/analyse_curled_revision.py --neutral
 python scripts/analyse_curled_revision.py
 python scripts/analyse_paper_stats.py

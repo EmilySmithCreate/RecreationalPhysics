@@ -1,6 +1,6 @@
-"""Schematic figure of the curled-torus paper (docs/papers/curled_torus/). Usage:
+"""Schematic figure of the curled-torus paper (docs/papers/01_curled_torus/). Usage:
 
-    python scripts/plot_paper_fig_tori.py docs/papers/curled_torus/fig_tori.pdf
+    python scripts/plot_paper_fig_tori.py docs/papers/01_curled_torus/fig_tori.pdf
 
 Drawn, not simulated. (a) the flat lattice torus, every vertex at local dimension d = 2; (b) the 4 x L
 torus, whose short direction is a single square, drawn as a square tube, every vertex at d = 1; (c) a

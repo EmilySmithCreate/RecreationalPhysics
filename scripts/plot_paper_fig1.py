@@ -1,6 +1,6 @@
-"""Figure 1 of the curled-torus paper (docs/papers/curled_torus/). Usage:
+"""Figure 1 of the curled-torus paper (docs/papers/01_curled_torus/). Usage:
 
-    python scripts/plot_paper_fig1.py docs/papers/curled_torus/fig1.pdf
+    python scripts/plot_paper_fig1.py docs/papers/01_curled_torus/fig1.pdf
 
 Reads committed files only.
   (a) mean waiting time of the perfect 4 x L torus at lambda = 1.25 against 1/g

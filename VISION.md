@@ -1243,7 +1243,7 @@ is X.
   dilation and read the opposite way (O93), or is kept as her philosophy until a model with time exists. (c) Dark
   energy as a release (Update 41) or as energy the final state keeps, the curling cost of a direction that stays
   curled (O103 (e)). (d) Her prediction for T51, still owed, and for T54 before it runs. (e) Whether paper 1 is revised
-  now or after a physicist has read it (candidates in `docs/papers/curled_torus/v2_changes.md`). (f) The reference for
+  now or after a physicist has read it (candidates in `docs/papers/01_curled_torus/v2_changes.md`). (f) The reference for
   the Fife paper the third review cites, so that it can be read rather than cited from a review.
 - **A correction to Update 41:** "about 1 MeV, the latest a hot beginning can be placed" is 4 to 5 MeV by O89's own
   addendum ([deSalas15]); the dark-energy share of about 10⁻³⁵ is at 1 MeV and about 10⁻³⁷ at 4 MeV (O103 (a)).
