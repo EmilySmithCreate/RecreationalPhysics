@@ -90,23 +90,30 @@ each side, obeying the hard-core rule: no two vertices share more than two neigh
 With $S$ the number of squares, $S_e$ the number on edge $e$, and $X=\sum_e(S_e-2)_+$ the surplus
 squares on edges carrying more than two,
 \begin{equation}
-H = 16\,(N - S) + 4\lambda X = 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr],
+\begin{aligned}
+H &= 16\,(N - S) + 4\lambda X\\
+  &= 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr],
+\end{aligned}
 \label{eq:H}
 \end{equation}
 so a missing square costs 16 and a surplus square $4\lambda$. The hard-core rule limits $S_e\le3$: two
 squares on edge $uv$ through the same neighbour $w$ of $v$ would give $u$ and $w$ three common neighbours.
 At fixed dimensionless coupling $g>0$, which acts as a temperature in the units of $H$, the target is
 $\pi(G)\propto e^{-H(G)/g}$, and a valid symmetric proposal is accepted with probability
-$\min(1,e^{-\Delta H/g})$. At $\lambda=1$ this is the CQG curvature action: the convention
-$H=-4\sum_v\sum_{w\sim v}\kappa(v,w)$ of Ref.~\cite{T25}, Eq.~(21), with
-$\kappa(v,w)=-(2-S_{vw})_+/2$ on these bipartite graphs, gives $H=4\sum_e(2-S_e)_+$, each undirected
-edge counted once. For $\lambda\ne1$, $H$ is not this curvature action.
+$\min(1,e^{-\Delta H/g})$. At $\lambda=1$ this is the CQG curvature action, which Ref.~\cite{T25}
+(its Eq.~(21)) writes as a sum of the curvature $\kappa$ over every vertex and each of its neighbours,
+\[
+H=-4\sum_v\sum_{w\sim v}\kappa(v,w),
+\]
+so that each edge appears twice. On these bipartite graphs $\kappa(v,w)=-(2-S_{vw})_+/2$, which gives
+$H=4\sum_e(2-S_e)_+$ with each undirected edge counted once. For $\lambda\ne1$, $H$ is not this
+curvature action.
 
-\emph{Zero is the floor (exact).} Rewriting Eq.~(\ref{eq:H}) as
+\emph{Zero is the floor (exact).} Since $2-S_e=(2-S_e)_+-(S_e-2)_+$, Eq.~(\ref{eq:H}) can be rewritten as
 \[
 H=4\sum_e\bigl[(2-S_e)_+ +(\lambda-1)(S_e-2)_+\bigr]
 \]
-shows $H\ge0$ for $\lambda\ge1$: no state lies below flat. For $\lambda>1$, $H=0$ if and only if every
+which shows $H\ge0$ for $\lambda\ge1$: no state lies below flat. For $\lambda>1$, $H=0$ if and only if every
 edge carries exactly two squares; at $\lambda=1$, at least two. Flat lattice tori are ground states,
 and so are disconnected unions of them, so topology must be checked separately.
 
