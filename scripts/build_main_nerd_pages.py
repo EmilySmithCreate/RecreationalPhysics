@@ -256,6 +256,9 @@ def paragraphs(conv, blocks, body, id_prefix=""):
         text = conv.inline(chunk).strip()
         if not text:
             continue
+        if text.startswith("<strong>The experiment:</strong>"):       # the line that says where a chapter stands
+            out.append('<p class="trail">%s</p>' % text)
+            continue
         ident = ""
         m = re.match(r"<em>([^<]{3,80}?)\.?</em>", text)             # a run-in head gets an anchor
         if m and id_prefix:

@@ -81,7 +81,8 @@ def pages():
 
 def test_the_pages_hold_the_whole_of_both_papers(pages):
     plain_html, tech_html, plain, technical = pages
-    assert [c["num"] for c in plain["chapters"]] == list(range(1, 12)) and plain["n_figures"] == 30
+    assert [c["num"] for c in plain["chapters"]] == list(range(1, 12)) and plain["n_figures"] == 26
+    assert plain_html.count('<p class="trail"><strong>The experiment:</strong>') == 7     # chapters 3 to 9
     assert [s["roman"] for s in technical["sections"]] == ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", ""]
     for page in (plain_html, tech_html):
         assert not re.search(r"\\[a-zA-Z]+|\$", reading_text(page))    # no LaTeX left in the reading text
@@ -187,7 +188,7 @@ def test_a_post_is_data_and_post_01_keeps_its_old_names():
     assert build.size_key(POST_01, "plain-fig-01.svg") == "plain-fig-01.svg"
     assert build.size_key(POST_02, "plain-fig-01.svg") == POST_02.slug + "/plain-fig-01.svg"
     recorded = build.recorded_sizes(POST_01)
-    assert "plain-fig-33.svg" in recorded and "tech-fig1.svg" in recorded and not any("/" in k for k in recorded)
+    assert "plain-fig-26.svg" in recorded and "tech-fig1.svg" in recorded and not any("/" in k for k in recorded)
 
 
 def test_figure_sizes_are_recorded_post_by_post(tmp_path, monkeypatch):

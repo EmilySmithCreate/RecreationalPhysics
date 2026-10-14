@@ -129,3 +129,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   tube's hollow, which is only in the drawing; what the tube lacks is any room along its curled direction.
   *Published, abstract only ([Planck15topo]):* astronomers put the same question to real space, which is
   measured flat and not measured endless. In the edition's Chapter 3 from 13 October.
+- 2026-10-13, the owner, on the plain-language edition of paper 1: it "doesn't need to include sections that
+  don't tell us important information about the next questions that we're gonna ask or help explain something
+  about what the model says with support or against"; the pages on the long waits being "a measurement issue"
+  are "just not necessary for this version of the paper"; its reader is "a lay person but somebody who really
+  enjoys math physics and they want to understand how reality works and this theory", who does not need "how
+  we got to where we got to unless it's part of the narrative". *Ours:* the technical edition keeps the full
+  account, and the plain one keeps one sentence saying three earlier maps stay inconclusive, so that nothing
+  inconvenient is hidden by the cut (rule 7).
+

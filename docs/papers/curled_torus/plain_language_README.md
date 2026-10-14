@@ -1,35 +1,57 @@
 # Plain-language edition
 
-**Draft of 13 October 2026, from the author's notes on Chapters 1 to 3; she has not read it.** Her notes: the
-edition is dense; Chapter 1 should be a third as long and run author, hypothesis, approach, outline, then what a
-toy is and why this one; Chapter 2 about half as long, on reproducing the published model and the one thing our
-toy changes; and "flat" in Chapter 3's words and drawings misleads, because the tube is a ring and the sheet is
-a fatter doughnut.
+**Draft of 13 October 2026, from the author's notes of that day; she has not read it.** Her notes, in order.
+The edition is dense. Chapter 1 should be a third as long and run author, hypothesis, approach, outline, then
+what a toy is and why this one. Chapter 2 about half as long, on reproducing the published model and the one
+thing our toy changes. "Flat" in Chapter 3's words and drawings misleads, because the tube is a ring and the
+sheet is a fatter doughnut. The rest should be clearer, shorter, more visual and better structured. And the
+reader is a lay person who enjoys mathematics and physics and wants to understand the theory: a section stays
+only if it says something about what the toy shows, for or against, or about the next question; how we got
+there stays out unless it is part of the story (the pages on the long waits being a measuring problem were her
+example).
 
-- **Chapter 1** is one page (0.6 of a page of text; it was 1.9 pages), in her order. Its two sketches are gone:
-  the hill returns with its numbers in Chapter 4, and the histogram sketch left with the word "hump".
-- **Chapter 2** is two pages (it was three). The published model is one figure, a card with its rules, its
-  price list and its one move, in place of three figures; the card shows the published prices (16 and 4), and
-  the knob comes after the reproduction, as the one thing we change. Sharp against smooth is three sentences
-  (water, a magnet, the two names); the test is described as a jump in energy, and the six numbers are a
-  two-row table. The caveats on the published simulations and Kelly's thesis share one footnote.
-- **Chapter 3** has a new section, "Ring and doughnut: flat is not the same as open" (about a page). Every
-  arrangement in the toy closes on itself; flat is about each dot's surroundings and wide is about the whole
-  shape; a count an inhabitant could make (dots within one, two, three steps of home) matches an endless
-  grid's until half the way around, so a doughnut much wider than its inhabitants is open in every way they can
-  check, and the tube falls short at two steps. One paragraph sets this beside real space, measured flat and
-  not measured endless (source 15, read by abstract). A direction is no longer called "large" where the count
-  $d$ is defined: the count says a direction is not closed up in one square, not how far around it is.
-  Chapters 6 and 7 now point back to these two words and this count.
-- **The table's numbers are new to this edition and exact**: counted with the record's own readers
+- **Length.** 32 pages and 26 figures (36 and 33 before). Chapter 1 is one page (0.6 of a page of text; 1.9
+  before), Chapter 2 two (three before), Chapter 9 two (3.5 before).
+- **Chapter 1** in her order. Its two sketches are gone: the hill returns with its numbers in Chapter 4, and
+  the histogram sketch left with the word "hump".
+- **Chapter 2.** The published model is one figure, a card with its rules, its price list and its one move, in
+  place of three; the card shows the published prices (16 and 4), and the knob comes after the reproduction, as
+  the one thing we change. Sharp against smooth is three sentences; the test is described as a jump in energy,
+  and the six numbers are a two-row table.
+- **Chapter 3** has a new section, "Ring and doughnut: flat is not the same as open". Every arrangement in the
+  toy closes on itself; flat is about each dot's surroundings and wide is about the whole shape; a count an
+  inhabitant could make (dots within one, two, three steps of home) matches an endless grid's until half the
+  way around, so a doughnut much wider than its inhabitants is open in every way they can check, and the tube
+  falls short at two steps. One paragraph sets this beside real space, measured flat and not measured endless
+  (source 15, read by abstract). The count $d$ no longer calls a direction "large". The technical figure of the
+  two tori is no longer shown here, and the six- and eight-link dots are a figure of their own.
+- **Chapters 3 to 9 open with one line** that says where the chapter stands in the experiment (the
+  arrangement, the cost, the wait, the change, the energy, what remains, other settings).
+- **Chapter 5** no longer shows the technical paper's three-panel figure; its own chart of the twelve
+  conditions carries the result.
+- **Chapter 6** is organized as: the zipper picture and its instrument; one zipper or several; a count is not a
+  shape; what the tube turns into. A new figure shows that last result (four around becomes six around; a wide
+  sheet is not reached) in place of the "same count, different floor plan" figure and the single-seam sketch.
+  The four-checks figure is gone; the text says the end states are tori with no twist.
+- **Chapter 7.** The trapped-heat result is a three-point list. "Melted" is explained once.
+- **Chapter 9** keeps what the map shows (three points), the trade, and whether it holds up. The detector, the
+  long waits and the three inconclusive maps are two sentences with a pointer to the technical paper; the
+  figure of the watch and the replays are gone. Nothing is claimed that the fuller account did not support:
+  the pass is the fourth map's, the three earlier ones are said to stay inconclusive, and the weakening of
+  the single patch at 288 dots is kept.
+- **Chapter 10** merges its last five headings into two and drops remarks about laptops, saved balances and
+  tests in the code.
+- **Chapter 11** opens with a table of everything asked of the 96-dot tube, each answer with its kind. "What
+  another researcher can build on" and "What the next round should record" are gone (the technical paper has
+  both); the remark that one test was run twice is gone.
+- **The table's numbers in Chapter 3 are new to this edition and exact**: counted with the record's own readers
   (`scripts/read_open_shells.py`, `scripts/read_endpoint_width.py`) and pinned in
-  `tests/test_read_shapes.py::test_the_count_from_inside_falls_short_at_half_the_way_round`. The technical
-  manuscript does not carry them; its `width` reading of the saved end states is the same count.
-- The PDF has 36 pages and 30 figures (it had 36 and 33). **The blog pages are not rebuilt**: post 01 under
-  `docs/public/mainnerd/` and its record of figure sizes still hold the 12 October text and its 33 figures.
-  When they are rebuilt, the pinned `plain-fig-33.svg` in `tests/test_main_nerd_pages.py` becomes 30.
+  `tests/test_read_shapes.py::test_the_count_from_inside_falls_short_at_half_the_way_round`. Every other number
+  is unchanged from the 12 October edition.
+- **The blog pages are rebuilt** from this text (`docs/public/mainnerd/`; post 01's plain page, its 26 figures
+  and its PDF). The progress line has its own small style (`.trail`).
 - Not done, hers to decide: renaming "the flat sheet" through Chapters 4 to 11 (it is defined honestly in
-  Chapter 3 and keeps its name after that), and any shortening of Chapters 3 to 11.
+  Chapter 3 and keeps its name after that).
 
 **Revised 12 October 2026 from the author's notes on the 11 October revision.** Chapter 1 says why two humps
 are not enough and that the author asks for a jump in energy, not for the words "first order". Chapter 3

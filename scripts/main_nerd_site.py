@@ -765,6 +765,8 @@ a:visited{color:#5a4a9a}
 .xlink{font-family:Arial,Helvetica,sans-serif;font-size:14px;background:var(--canvas);border:1px dashed var(--aqua-ink);padding:5px 10px}
 .takeaway{background:#e8f6fc;border-left:6px solid var(--aqua);padding:10px 14px;margin:1.3em 0}
 .why{font-size:16px;color:#374151;border-left:3px dotted var(--aqua-ink);padding-left:12px}
+.trail{font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.03em;color:#6b7280;margin:.2em 0 1em}
+.trail strong{color:var(--aqua-ink)}
 .pull{text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:25px;line-height:1.25;margin:1.2em 0;color:#0d1419}
 .m{white-space:nowrap}
 .m i,.paper i.v{font-family:"Times New Roman",Times,serif}

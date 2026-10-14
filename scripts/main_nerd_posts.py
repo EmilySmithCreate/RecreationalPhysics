@@ -191,10 +191,16 @@ FAQ_01 = [
      "acts as a curvature. This paper's toy is a close cousin of that model, not that model itself: it turns one knob, "
      "the price of a surplus square (λ), above the published value of 1."),
     ("What is a curled torus?",
-     "A torus is a grid that wraps around in both directions, and every shape in the paper is one: flat (the "
-     "sheet), curled (the tube) or knot. Curl one direction of the flat one until it is only four steps "
-     "around and you have a tube. In the toy the tube has one large direction where the flat sheet has two, and "
-     "it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."),
+     "A torus is a grid that wraps around in both directions, the surface of a doughnut, and every shape in the "
+     "paper is one: flat (the sheet, a fat doughnut), curled (the tube, a thin ring) or knot. Curl one direction "
+     "of the flat one until it is only four steps around and you have a tube. In the toy the tube has one long "
+     "direction where the flat sheet has two, and it sits 4(λ − 1) units of energy per dot above the flat sheet: "
+     "one unit per dot at λ = 1.25."),
+    ("Is flat space the same as endless space?",
+     "No. Flat is about each place's surroundings; whether space goes on for ever is a separate question. In the "
+     "toy every shape closes on itself, like a doughnut, and a count made from inside matches an endless grid's "
+     "until half the way around, so a doughnut much wider than its inhabitants looks endless to them. Real space "
+     "is measured to be flat on the largest scales; whether it is endless has not been measured."),
     ("What is the burp?",
      "The burp is the energy given off when the tube's tight curl comes undone. For a clean change it is "
      "exactly 4(λ − 1) per dot, so it grows with the size of the tube, while the push needed to start it does "

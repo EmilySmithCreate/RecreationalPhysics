@@ -351,10 +351,12 @@ changes one thing: a surplus square costs $4\lambda$, and only $\lambda=1$ is th
 
 \chapterpage{3 \enspace THE PHASE BEFORE}{What if what came before space was not random?}
 
+{\footnotesize\color{ink!55}\textbf{The experiment:} {\color{accent}\textbf{the arrangement}} \textbullet\ the cost \textbullet\ the wait \textbullet\ the change \textbullet\ the energy \textbullet\ what remains \textbullet\ other settings\par}
+
 The published question starts from a random tangle. This program asks a different one: what if what
 came before space was not random at all, but a specific arrangement, stable for now, with energy to
-give? That question is the focus of everything that follows. To ask it in the toy, we first need to
-say what space looks like in a network with no positions, and what the alternative to it could be.
+give? To ask it in the toy, we first need to say what space looks like in a network with no
+positions, and what the alternative to it could be.
 
 \sub{Directions}
 Space, at its simplest, is a set of directions with room in them. Figure~\ref{fig:pairs} shows how to
@@ -373,7 +375,7 @@ find a direction in a network that has no positions.
 \begin{scope}
  \foreach \a/\n in {0/1,90/2,180/3,270/4} {\draw[very thick,ink] (1,1) -- ++(\a:1); \node[text=ink,font=\scriptsize] at ($(1,1)+(\a:0.6)+(\a+90:0.2)$) {\n};}
  \fill[ink] (1,1) circle (0.12);
- \node[text=ink,align=center,text width=4.5cm,anchor=north] at (1,-0.7) {Every dot has four links. Four links make six pairs: 1--2, 2--3, 3--4, 4--1, 1--3 and 2--4.};
+ \node[text=ink,align=center,text width=5.0cm,anchor=north] at (1,-0.7) {Every dot has four links. Four links make six pairs: 1--2, 2--3, 3--4, 4--1, 1--3 and 2--4.};
 \end{scope}
 % 2: a pair at right angles closes a square
 \begin{scope}[shift={(5.7,0)}]
@@ -385,7 +387,7 @@ find a direction in a network that has no positions.
  \draw[->,accent,thick] (1.75,1.8) -- (1.25,1.8);
  \draw[->,accent,thick] (1.2,1.75) -- (1.2,1.25);
  \fill[ink] (1,1) circle (0.12);
- \node[text=ink,align=center,text width=4.5cm,anchor=north] at (1,-0.7) {A pair at right angles closes a square: out along one link, one more step, and back along the other. Four of the six pairs do this.};
+ \node[text=ink,align=center,text width=5.0cm,anchor=north] at (1,-0.7) {A pair at right angles closes a square: out along one link, across, and back along the other. Four of the six pairs do this.};
 \end{scope}
 % 3: a pair straight through closes no square
 \begin{scope}[shift={(11.4,0)}]
@@ -393,7 +395,7 @@ find a direction in a network that has no positions.
  \draw[very thick,flat,dashed,->] (2,1) -- (3.0,1);
  \draw[very thick,flat,dashed,->] (0,1) -- (-1.0,1);
  \fill[ink] (1,1) circle (0.12);
- \node[text=ink,align=center,text width=4.5cm,anchor=north] at (1,-0.7) {A pair that runs straight through closes no square: four steps along it do not bring you back. That is a \textbf{direction}. Two of the six pairs do this.};
+ \node[text=ink,align=center,text width=5.0cm,anchor=north] at (1,-0.7) {A pair that runs straight through closes no square. That is a \textbf{direction}. Two of the six pairs do this.};
 \end{scope}
 \end{tikzpicture}
 \caption{What a direction is, in a network with no positions. \Exact\ Count the pairs at a dot that
@@ -406,7 +408,7 @@ A grid drawn on paper has edges, where the dots run out of links. The toy remove
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=0.6cm,y=0.6cm,font=\footnotesize,>=Stealth]
+\begin{tikzpicture}[x=0.52cm,y=0.52cm,font=\footnotesize,>=Stealth]
 \foreach \i in {0,...,8} {\draw[flat!50] (\i,-0.45) -- (\i,4.45);}
 \foreach \j in {0,...,4} {\draw[flat!50] (-0.45,\j) -- (8.45,\j);}
 \foreach \i in {0,...,8} \foreach \j in {0,...,4} {\fill[flat] (\i,\j) circle (0.09);}
@@ -639,8 +641,8 @@ see~\cite{Planck15topo}. Flat has been measured. Endless has not.
 
 \sub{The knot, and the count for all three}
 Curl both ways around to four steps and every dot reads $d = 0$: a closed sixteen-dot knot called the
-4-cube. It is a torus too, curled both ways. Most of the closed pieces of Chapter~2 are these knots. Figure~\ref{fig:directions} puts the
-three arrangements side by side.
+4-cube. It is a torus too, curled both ways. Most of the closed pieces of Chapter~2 are these knots.
+Figure~\ref{fig:directions} puts the three arrangements side by side.
 
 \begin{figure}[H]
 \centering
@@ -659,10 +661,16 @@ three arrangements side by side.
 \begin{scope}[shift={(10,0)}] \draw[melt,thick] (1.5,0.2) .. controls (0.4,0.2) and (0.4,2.2) .. (1.5,2.2); \draw[melt,thick] (0.5,1.2) .. controls (0.5,2.3) and (2.5,2.3) .. (2.5,1.2); \end{scope}
 \node[font=\footnotesize,text=ink,align=center,text width=15.5cm] at (6.5,3.85) {One dot in each arrangement. An arc marks a pair of links that closes a square. A dashed arrow marks a pair that closes no square: a direction. A loop marks a pair that is curled shut.};
 \end{tikzpicture}
+\caption{How many directions a dot has. \Exact\ With four links per dot, the count $d$ is the number of
+pairs of a dot's links that close no square, and it tells the flat sheet, the tube and the knot apart
+dot by dot. It is a signature, not a certified geometry: Chapter~6 says what it can and cannot vouch
+for. This paper is about the simplest change among the three: one curled direction opening, $d$ from 1
+to 2.}
+\label{fig:directions}
+\end{figure}
 
-\vspace{0.5em}
-{\footnotesize\color{ink}\textbf{This paper:} four links per dot, and the simplest change: one curled direction opening ($d$ from 1 to 2).\par}
-\vspace{0.7em}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[x=1cm,y=1cm,font=\small,>=Stealth]
 % grey box: outside this paper's scope
 \fill[gray!13,rounded corners=5pt] (-0.95,-2.55) rectangle (15.25,3.0);
@@ -681,12 +689,9 @@ three arrangements side by side.
 \end{scope}
 \node[font=\footnotesize,text=ink,align=left,anchor=west,text width=3.9cm] at (11.0,0.6) {\textbf{Outside this paper.}\\[2pt]Six and eight links per dot give three and four directions. A later paper takes them up. Nothing in this paper depends on them.};
 \end{tikzpicture}
-\caption{How many directions a dot has. \Exact\ Top: with four links per dot, the count $d$ is the
-number of pairs of a dot's links that close no square, and it tells the flat sheet, the tube and the
-knot apart dot by dot. Grey box, outside this paper: the same count with six or eight links per dot
-allows three or four directions, the subject of a later paper. The count is a signature, not a
-certified geometry: Chapter~6 says what it can and cannot vouch for.}
-\label{fig:directions}
+\caption{Outside this paper. \Exact\ The same count with six or eight links per dot allows three or
+four directions, the subject of a later paper.}
+\label{fig:moredirections}
 \end{figure}
 
 \par\Needspace{17\baselineskip}
@@ -742,12 +747,12 @@ off.}
 \label{fig:ladder}
 \end{figure}
 
-This is the first thing the toy teaches. \Exact\ At the curvature setting, curled and flat cost the
-same, so conversion between these ideal states releases no energy. Equal energies do not mean
-equal likelihoods or forbid a change. The knob must exceed 1 for this particular ideal energy gap
-to be positive. There, a tube ending at zero energy gives off exactly $4(\lambda-1)$ units per dot.
-That is a reason to study this deformation, not a proof of a first-order transition or a physical
-reason why nature should choose it.
+This is what the knob is for. \Exact\ At the published setting, curled and flat cost the same, so
+turning one into the other gives off nothing. Equal cost does not make the two equally likely, and it
+does not forbid a change. Turn the knob above 1, and a tube
+that ends at zero energy gives off exactly $4(\lambda-1)$ units per dot. That is a reason to study this
+cousin of the published model. It is not proof of a first-order transition, and it is not a reason
+why nature should choose it.
 
 That release is what the rest of this paper is about, so it gets a name of its own. The author calls
 it \textbf{the burp}: the energy given off, and by extension the event that gives it off, a quiet wait,
@@ -784,17 +789,6 @@ curled direction is always four dots around, and it lives in a network of a few 
 shares with X is the shape of the idea under test: a specific, curled, stable-for-now arrangement with
 energy to give.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.96\linewidth]{fig_tori.pdf}
-\caption{The two arrangements. (a) The flat sheet: a wrapping grid, two squares on every link; the
-dotted stubs are where it wraps around. (b) The
-$4\times L$ torus drawn as a tube: its short way around is a single square, so the links around each
-column carry three. (c) A sketch of the change, not a snapshot from a simulation. In the labels, $H$
-is the energy and a vertex is a dot.}
-\label{fig:tori}
-\end{figure}
-
 \sub{The running example}
 Take a tube of 96 dots: four around, 24 along. At $\lambda = 1.25$ it holds 96 units above the flat
 sheet. That is the burp on offer. We will follow this tube through the rest of the paper so that the
@@ -813,6 +807,8 @@ smaller than the way around it. At $\lambda=1$ there is nothing to release, whic
 knob sits above 1, and why the toy is a cousin of the published model and not that model itself.}
 
 \chapterpage{4 \enspace THE OBSTACLE}{What does it cost to start?}
+
+{\footnotesize\color{ink!55}\textbf{The experiment:} the arrangement \textbullet\ {\color{accent}\textbf{the cost}} \textbullet\ the wait \textbullet\ the change \textbullet\ the energy \textbullet\ what remains \textbullet\ other settings\par}
 
 Before any number, consider what the number could mean. If the push needed were tiny, a few units,
 then any warmth at all would set the tube off, and it would not be stable for now. If the push were
@@ -890,9 +886,8 @@ twists lead to other arrangements with the same energy, and one of those might h
 \Exact\ So the calculation followed every free twist, at six sizes from 48 to 288 dots, until no new
 arrangement appeared. At each size there are exactly three reachable arrangements, counting
 arrangements that differ only in the names of their dots as one; every one has the same menu of exits,
-and the cheapest costs 12. This is a complete finite computation, conditional on the enumeration code
-being right, not a proof for every conceivable size: at a control size of 32 dots the pattern is
-different, which is a reminder not to extrapolate.
+and the cheapest costs 12. That is a complete listing at those sizes, not a proof for every size: at
+32 dots the pattern is different.
 
 \sub{The test from the other side}
 Arithmetic says nothing below 12 can leave. Does 12 suffice? To find out, take the bath away and hand
@@ -955,13 +950,7 @@ five sizes from 48 to 192 dots: 320 runs in all, each 12,000 sweeps long.
 
 \Exact\ The lower half of this staircase is a theorem of the toy at these sizes: with no exit
 cheaper than 12 and a store that cannot go negative, a budget below 12 can only pay for free twists.
-The upper half is an observation about this protocol and duration.\footnote{Why not run a hundred
-tubes at each budget instead of eight? Our reasoning, from the exact counts, is that it would add
-little. Below 12, leaving is impossible, which is
-arithmetic, and no number of runs can strengthen it. At 12 or more, the count of Chapter~5 says a
-perfect tube is offered, on average, three exits costing 12 in every sweep, and with 12 in the store
-the first one offered is paid for at once. A run that stayed put for 12,000 sweeps would itself be
-the surprise. The runs check that count; they are not estimating an unknown chance.}
+The upper half is a measurement.
 \MeasX\ Together they say that the wall is local, exactly 12 units high at $\lambda=1.25$, and the same
 at every size tried, while what waits behind it grows with the system.
 
@@ -977,6 +966,8 @@ counted exactly, the same whatever the tube's size, and confirmed from the other
 the tube; the push does not.}
 
 \chapterpage{5 \enspace THE WAIT}{How long before the door opens, and what kind of waiting is it?}
+
+{\footnotesize\color{ink!55}\textbf{The experiment:} the arrangement \textbullet\ the cost \textbullet\ {\color{accent}\textbf{the wait}} \textbullet\ the change \textbullet\ the energy \textbullet\ what remains \textbullet\ other settings\par}
 
 A rim of 12 says what a push must be. It does not say when a tube left to itself will go. For that we
 put it back in the bath of Chapter~2 and let the network jiggle at warmth $g$. A swap that climbs the
@@ -1067,24 +1058,13 @@ across six settings of $\lambda$ and size, and compared the first exits with the
 routes. All 240 first exits were observed, and their mean arrived when the formula said it would in
 every cell, within the scatter expected from that many runs.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{fig1.pdf}
-\caption{The wait, measured. (a) Mean waiting time against the inverse warmth $1/g$, at
-$\lambda=1.25$; the lines are the formula with route A alone (solid) and A plus B (dashed), nothing
-fitted. (b) The share of dots at each direction count $d$ halfway through the change, averaged over
-thirty runs per size: almost everything is at 1 or 2. (c) The fraction of tubes still waiting against
-time, in units of each condition's mean; a memoryless wait gives the dashed straight line.}
-\end{figure}
-
 \sub{What kind of waiting}
 If the chance of escape is the same on every attempt, the waits are \textbf{memoryless}. It is like
 rolling a die until a six comes up: twenty rolls without one do not make a six any likelier on the next
 roll, and a tube that has waited a long time is no nearer to leaving. One sign of a memoryless wait is
 that the waits spread out by about as much as their average. \Meas\ That check was pre-registered, and
-it passed at every size in the main run. \MeasX\ Checked afterwards, the whole distribution of first exits is consistent with that
-picture too, panel (c) above. The time to a \emph{detected} change looked different, with a tail the
-first exits do not have. Chapter~9 finds out why.
+it passed at every size in the main run. \MeasX\ Checked afterwards, the whole pattern of first exits
+fits that picture too.
 
 \Meas\ One more thing the move-by-move count revealed: the first swap out does not always lead
 anywhere. Think of that first swap as a door opening. About a third of the time the door closes again,
@@ -1109,30 +1089,31 @@ again: an opened door is not a departure.}
 
 \chapterpage{6 \enspace THE CHANGE}{What takes shape on the other side}
 
-Chapter~5 was about the start: the first swap out, and whether it holds. This chapter is about what
-comes next: how the change spreads through the tube. It spreads fast.
+{\footnotesize\color{ink!55}\textbf{The experiment:} the arrangement \textbullet\ the cost \textbullet\ the wait \textbullet\ {\color{accent}\textbf{the change}} \textbullet\ the energy \textbullet\ what remains \textbullet\ other settings\par}
 
+Chapter~5 was about the start: the first swap out, and whether it holds. This chapter is about what
+comes next: how the change spreads through the tube, and what the tube turns into. It spreads fast.
+
+\sub{The zipper picture, and an instrument to test it}
 The natural picture is a zipper. One spot of the tube opens, and the opening runs along the tube the
 way a zipper runs along a jacket. The slider, the tab you pull, is the boundary: behind it the tube
 has already opened into flat sheet, and ahead of it the tube is still closed. Physicists call a moving
-boundary like this a \textbf{front}. To find out whether the zipper picture is right, we need an
-instrument.
+boundary like this a \textbf{front}.
 
-\Exact\ The fastest instrument is the direction count $d$ of Chapter~3. Dots still in the tube read
-$d = 1$; dots on a flat sheet read $d = 2$; a melted, disordered dot reads 0 or 3 and up. The program
-marks every dot and also keeps a progress meter that runs from 0 (all tube) to 1 (all flat). It takes
-a snapshot of the whole network at three stages fixed in advance: when the meter first reads a
-quarter, a half and three-quarters. These are stages of the change, not times on the clock, and there
-is nothing special about them. They were fixed beforehand so that nobody could pick a moment because
-its picture looks persuasive. The predictions were scored at the half mark, where tube and sheet are
-most evenly matched and anything in between would have the most room to show.
+\Exact\ The instrument is the direction count $d$ of Chapter~3. Dots still in the tube read $d = 1$;
+dots on a flat sheet read $d = 2$; a disordered dot reads 0 or 3 and up. The program marks every dot
+and keeps a progress meter that runs from 0 (all tube) to 1 (all flat). It takes a snapshot of the
+whole network at three stages fixed in advance, so that nobody could pick a moment because its picture
+looks persuasive: when the meter first reads a quarter, a half and three-quarters. The predictions
+were scored at the half mark, where anything in between tube and sheet would have the most room to
+show.
 
 \Meas\ At $\lambda = 1.25$ and $g=1.5$, thirty tubes at each of four sizes, run twice with fresh random
 numbers, and three predictions written down first: a memoryless wait; at least 80 percent of dots in
 one of the two signatures at the half mark; and at least 70 percent of the flat-like dots in one
 connected region, on average. All three held at every size in both runs. At the half mark 98.8 to 99.8
-percent of dots read as tube or sheet. The other two snapshots were recorded but not scored. Read
-afterwards, they say the same: 98.8 to 99.7 percent at a quarter, and 98.5 to 99.5 percent at
+percent of dots read as tube or sheet. The other two snapshots, which were not scored, say the same:
+98.8 to 99.7 percent at a quarter, and 98.5 to 99.5 percent at
 three-quarters. Something organized was happening, early, midway and late, with almost nothing in
 between.
 
@@ -1172,80 +1153,76 @@ a single open patch has two sliders, one at each end, moving apart.}
 \label{fig:zipper}
 \end{figure}
 
-\sub{What the count cannot vouch for}
+\sub{One zipper, or several?}
 A jacket found open along one long stretch could have been unzipped from one spot, or from two spots
 whose openings ran into each other before anyone looked. So one large open region is weaker evidence
-than one zipper. \Meas\ The averages passed the 70-percent rule at every size, but individual runs did
+than one zipper. \Meas\ The averages passed the 70-percent rule at every size, but single runs did
 not always. Of the thirty runs at 64, 96, 144 and 192 dots, 0, 2, 4 and 9 fell below it in the first
 set, and 0, 1, 3 and 5 in the second. A separate pre-registered test of a simple one-front law came
 out NOT ESTABLISHED: 21 of 59 tubes that started converted in several patches, mostly at the warmer
 bath. The honest description is that one connected flat-like region usually dominates by the half
-mark, and that the change often starts in more than one place: more than one zipper.
+mark, and that the change often starts in more than one place.
 
-Nor does a count certify a geometry. \Exact\ A single swap from a perfect tube can produce dots that
-read $d=2$ while their links carry one, two, two and three squares, which no dot on a flat sheet
-does. Two buildings can contain the same number of rooms and have different floor plans. And a grid
-six steps around and enormously long reads flat at every dot while keeping one direction short. The
-paper therefore calls $d = 1$ and $d=2$ \emph{curled-like} and \emph{flat-like} signatures. When it
-says the curled direction opened, it means only that the four-step curl is gone, not that both
-directions grew large. The saved endpoints now let us test that distinction directly.
+\sub{A count is not a shape}
+\Exact\ A single swap from a perfect tube can produce dots that read $d=2$ while their links carry
+one, two, two and three squares, which no dot on a flat sheet does. Two buildings can have the same
+number of rooms and different floor plans. So the paper calls $d = 1$ and $d=2$ \emph{curled-like} and
+\emph{flat-like} signatures, and when it says the curled direction opened, it means only that the
+four-step curl is gone. Whether what is left is wide, in the sense of Chapter~3, the count cannot say.
+The saved wiring can.
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=0.42cm,y=0.42cm,font=\small]
-\begin{scope}
-\fill[flatpale] (0,0) rectangle (16,6); \draw[flat!50,step=1] (0,0) grid (16,6); \draw[ink] (0,0) rectangle (16,6);
-\node[font=\footnotesize,text=ink] at (8,-1.1) {6 around, 16 along: 96 dots, every dot $d=2$};
-\end{scope}
-\begin{scope}[shift={(19,0)}]
-\fill[flatpale] (0,0) rectangle (12,8); \draw[flat!50,step=1] (0,0) grid (12,8); \draw[ink] (0,0) rectangle (12,8);
-\node[font=\footnotesize,text=ink] at (6,-1.1) {8 around, 12 along: 96 dots, every dot $d=2$};
-\end{scope}
-\end{tikzpicture}
-\caption{Same count, different floor plan. \Exact\ Both grids wrap in both directions, cost zero, and
-read $d=2$ at every dot. The left one still has a short way around. The signature alone cannot tell
-them apart; only measuring both ways around could.}
-\end{figure}
-
-\sub{A stronger look at the finished wiring}
-\MeasX\ For the 120 saved final networks at $\lambda = 1.05$ in the original map, the wiring
-passes all four checks in Figure~\ref{fig:certify}. A new, retrospective check goes further: it
-reconstructs every link as a square grid with its edges joined. All 120 are tori, but all remain
-narrow. The shortest loop around is six links at every size tested. A second route around,
-independent of repeating that first loop, is at least 16, 24, 36 and 48 links long at
-64, 96, 144 and 192 dots respectively; in each case a loop of that length exists.
-
-Think of the original four-around tube with its seam joined two places further along. That
-shift removes the four-step loop, but leaves a six-step loop. It is not a rectangular grid six
-dots across: the shifted seam still joins a grid with four times its length in dots.
-The energy has fallen and the local square pattern has changed, yet a second large direction
-has not appeared in these endpoints.
+\sub{What the tube turns into}
+\MeasX\ The 120 final networks saved at $\lambda = 1.05$ were rebuilt, link by link, as grids with
+their edges joined. All 120 are tori: one connected surface, with no twist in it. And all 120 are
+narrow. The shortest way around is
+six steps at every size tested, where the tube's was four. A second way around, independent of the
+first, is 16, 24, 36 and 48 steps long at 64, 96, 144 and 192 dots, as long as the tube was.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=0.65cm,y=0.65cm,>=Stealth,font=\small]
-\fill[flatpale] (0,0) rectangle (4,6);
-\draw[flat!40,step=1] (0,0) grid (4,6);
-\draw[ink,thick] (0,0) rectangle (4,6);
-\draw[->,accent,very thick] (0,2) -- (4,2);
-\draw[->,accent,very thick] (0,4) -- (0,2);
-\foreach \x in {0,1,2,3,4} {\fill[ink] (\x,2) circle (0.07);}
-\foreach \y in {3,4} {\fill[ink] (0,\y) circle (0.07);}
-\node[anchor=north,text=accent] at (2,1.8) {four steps};
-\node[anchor=east,text=accent,align=right] at (-0.2,3) {two steps\\back};
-\node[anchor=west,align=left,text width=7.0cm] at (5,3) {The right-hand endpoint and the upper left-hand dot are the \emph{same dot} after joining the seam. Joining it adds no step.};
-\node[anchor=north,align=center] at (2,-0.35) {A piece of the unrolled grid};
+\begin{tikzpicture}[x=0.95cm,y=0.95cm,font=\footnotesize,>=Stealth]
+% before: four around
+\begin{scope}[shift={(2.1,1.2)}]
+ \fill[curlpale,even odd rule] (0,0) ellipse (2.0 and 1.0) (0,0.05) ellipse (1.68 and 0.74);
+ \foreach \a in {0,12,...,348} {\draw[curl!70] ({1.68*cos(\a)},{0.05+0.74*sin(\a)}) -- ({2.0*cos(\a)},{1.0*sin(\a)});}
+ \draw[curl,thick] (0,0) ellipse (2.0 and 1.0);
+ \draw[curl,thick] (0,0.05) ellipse (1.68 and 0.74);
+\end{scope}
+\node[text=ink,align=center,text width=4.4cm,anchor=north] at (2.1,0.0) {\textbf{The tube.} Four steps around.};
+\draw[->,very thick,accent] (4.45,1.2) -- (5.55,1.2);
+\node[text=accent,align=center] at (5.0,1.75) {the change};
+% after: six around
+\begin{scope}[shift={(7.9,1.2)}]
+ \fill[flatpale,even odd rule] (0,0) ellipse (2.0 and 1.0) (0,0.07) ellipse (1.5 and 0.6);
+ \foreach \a in {0,12,...,348} {\draw[flat!55] ({1.5*cos(\a)},{0.07+0.6*sin(\a)}) -- ({2.0*cos(\a)},{1.0*sin(\a)});}
+ \draw[flat,thick] (0,0) ellipse (2.0 and 1.0);
+ \draw[flat,thick] (0,0.07) ellipse (1.5 and 0.6);
+\end{scope}
+\node[text=ink,align=center,text width=4.6cm,anchor=north] at (7.9,0.0) {\textbf{What the runs reached.} Six steps around: flat at every dot, and still a ring.};
+\draw[->,very thick,ink!35,dashed] (10.25,1.2) -- (11.35,1.2);
+\node[text=ink!55,align=center] at (10.8,1.75) {not reached};
+% not reached: wide
+\begin{scope}[shift={(13.9,1.2)}]
+ \fill[ink!5] (0,0) ellipse (2.2 and 1.2);
+ \fill[white] (-0.78,0.12) .. controls (-0.38,-0.17) and (0.38,-0.17) .. (0.78,0.12) .. controls (0.38,0.38) and (-0.38,0.38) .. (-0.78,0.12) -- cycle;
+ \draw[ink!40,thick,dashed] (-0.98,0.25) .. controls (-0.5,-0.23) and (0.5,-0.23) .. (0.98,0.25);
+ \draw[ink!40,thick,dashed] (-0.78,0.12) .. controls (-0.38,0.38) and (0.38,0.38) .. (0.78,0.12);
+ \draw[ink!40,thick,dashed] (0,0) ellipse (2.2 and 1.2);
+\end{scope}
+\node[text=ink!70,align=center,text width=4.6cm,anchor=north] at (13.9,-0.2) {\textbf{A wide sheet.} Long both ways, as in the picture that opens this paper.};
 \end{tikzpicture}
-\caption{Why the changed tube stays narrow. \Sketch\ A seam shifted by two places joins the end
-of the four-step path to a dot two steps from its start. Four steps across and two back make a
-six-step loop. The long direction wraps too and is only partly drawn. The full reconstruction,
-not this sketch, establishes that six is the shortest noncontractible loop in the checked tori.}
+\caption{What the tube turns into. \MeasX\ The tight curl goes and the energy comes out, but the ring
+only gets a little fatter: six steps around where it was four. \Sketch\ Widths are drawn to suggest,
+not to scale; grey is what these runs did not reach.}
+\label{fig:reached}
 \end{figure}
 
-\Exact\ Shift the seam by two more places and the six-step loop goes as well, leaving eight; each
-further shift adds two. If the re-gluing kept happening, a second large direction would appear.
-But the toy's rule charges for loops of four and for nothing longer. Only the first shift releases
-energy. The later ones are neither rewarded nor charged, so nothing pushes them along.
+How does a ring four around become a ring six around? Its seam is re-glued two places further along
+(Figure~\ref{fig:shifts}). That removes the four-step loop and leaves a six-step one. \Exact\ Shift the
+seam by two more places and the six-step loop goes as well, leaving eight; each further shift adds
+two. If the re-gluing kept happening, the ring would fatten into a doughnut. But the toy's price list
+charges for loops of four and for nothing longer. Only the first shift releases energy. The later
+ones are neither rewarded nor charged, so nothing pushes them along.
 
 \begin{figure}[H]
 \centering
@@ -1292,68 +1269,18 @@ more.}
 \label{fig:shifts}
 \end{figure}
 
-Chapter~3 kept two words apart: flat, about each dot's surroundings, and wide, about the whole shape.
-A tube six around is flat and still narrow: an inhabitant running the count of Chapter~3 would find
-the way around at three steps. Does being flat at every dot at least make a wide shape likely? \Exact\ Counted as
-ways of wrapping the grid, yes: of the wrappings of 192 dots that are flat at every dot, about one in
-twelve is six around, and the typical one is twelve around. \MeasX\ But the runs do not choose among
-them at random. Every move out of such an arrangement costs energy, at least 20 units from a tube six
-around and 32 from a wider one at the setting most runs use, so in a cool bath the network stays at
-the first one it reaches, and from the tube that is the nearest: six around.
+Does being flat at every dot at least make a wide shape likely? \Exact\ Counted as ways of wrapping the
+grid, yes: of the wrappings of 192 dots that are flat at every dot, about one in twelve is six around,
+and the typical one is twelve around. \MeasX\ But the runs do not choose among them at random. Every
+move out of such an arrangement costs energy, at least 20 units from a ring six around and 32 from a
+wider one at the setting most runs use. So in a cool bath the network stays at the first flat
+arrangement it reaches, and from the tube that is the nearest one: six around, where an inhabitant
+running the count of Chapter~3 would find the way around at three steps.
 
-\MeasX\ The newer map in Chapter~9 makes another distinction necessary. Among its 3,521 saved
-zero-energy endpoints from runs that reached the three-quarter conversion mark, 3,446 are narrow
-tori with a shortest loop of six links; 73 are disconnected surfaces; two are Klein bottles,
-surfaces whose orientation reverses on going around them. The two runs outside that selection
-also eventually reached zero energy, but are not included in these counts. ``Zero energy,''
-``locally flat'' and ``one torus'' are different statements. The supplementary geometry check
-records the selection and reconstructs the torus wiring rather than inferring it from width alone.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=0.8cm,y=0.8cm,font=\footnotesize,>=Stealth]
-% 1: two squares on every link
-\begin{scope}
- \fill[flatpale] (0,0) rectangle (2,1);
- \draw[ink!35] (0,0) rectangle (2,1);
- \draw[line width=2pt,ink] (1,0) -- (1,1);
- \foreach \p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1)} {\fill[ink!45] \p circle (0.08);}
- \node[text=flat,font=\small\bfseries] at (0.5,0.5) {1}; \node[text=flat,font=\small\bfseries] at (1.5,0.5) {2};
- \node[font=\footnotesize\bfseries,text=ink] at (1,2.6) {1. Links};
- \node[text=ink,align=center,text width=3.5cm,anchor=north] at (1,-0.5) {Every link borders exactly two squares.};
-\end{scope}
-% 2: the squares around a dot form one ring
-\begin{scope}[shift={(5.1,-0.5)}]
- \fill[flatpale] (0,0) rectangle (2,2);
- \draw[ink!35] (0,0) grid (2,2);
- \foreach \i in {0,1,2} \foreach \j in {0,1,2} {\fill[ink!45] (\i,\j) circle (0.08);}
- \fill[ink] (1,1) circle (0.12);
- \draw[->,accent,very thick] (1.55,1) arc (0:320:0.55);
- \node[font=\footnotesize\bfseries,text=ink] at (1,3.1) {2. Dots};
- \node[text=ink,align=center,text width=3.5cm,anchor=north] at (1,0.0) {Around every dot the squares close into one ring.};
-\end{scope}
-% 3: one sense of turning everywhere
-\begin{scope}[shift={(10.2,0)}]
- \fill[flatpale] (0,0) rectangle (2,1);
- \draw[ink!35] (0,0) rectangle (2,1) (1,0) -- (1,1);
- \foreach \p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1)} {\fill[ink!45] \p circle (0.08);}
- \draw[->,accent,thick] (0.78,0.5) arc (0:300:0.28);
- \draw[->,accent,thick] (1.78,0.5) arc (0:300:0.28);
- \node[font=\footnotesize\bfseries,text=ink] at (1,2.6) {3. No twist};
- \node[text=ink,align=center,text width=3.5cm,anchor=north] at (1,-0.5) {``The same way round'' means the same thing on every square: no hidden twist like a M\"obius strip's.};
-\end{scope}
-% 4: one piece, and the count
-\begin{scope}[shift={(15.3,0)}]
- \node[font=\footnotesize\bfseries,text=ink] at (1,2.6) {4. The count};
- \node[text=ink,align=center,text width=3.6cm] at (1,0.75) {dots $-$ links $+$ squares $= 0$};
- \node[text=ink,align=center,text width=3.6cm,anchor=north] at (1,-0.5) {One connected piece, and the count comes out to zero ($N - 2N + N$ for $N$ dots), as it must for a torus.};
-\end{scope}
-\end{tikzpicture}
-\caption{Certifying a torus from its wiring. \Exact\ Four checks, run on each of the 120 saved networks
-after filling in every square. A network that passes all four is a torus, whatever its dots' direction
-counts say.}
-\label{fig:certify}
-\end{figure}
+\MeasX\ The newer map of Chapter~9 saved many more end states: 3,521 at zero energy, from runs that
+passed the three-quarter mark. Of those, 3,446 are narrow tori six around, 73 came apart into separate
+surfaces, and two are Klein bottles, closed surfaces with a twist in them. So ``zero energy,''
+``flat'' and ``one torus'' are three different statements.
 
 \sub{The energy comes out exactly}
 \Meas\ When a tube finishes at zero energy, the energy given off is exactly one unit per dot
@@ -1362,16 +1289,18 @@ release was within one percent of that. The rest settled on sheets with small de
 worth read from their wiring, and held back that much. The ideal gap is exact; how much of it comes
 out depends on where the network stops.
 
-\whyhere{A snapshot during conversion tests whether the local signatures coexist and whether one
-connected patch dominates. Those are useful, limited questions. They do not by themselves establish
-a single advancing front, global opening or a thermodynamic first-order transition.}
+\whyhere{A snapshot during the change tests whether the two signatures sit side by side and whether one
+connected patch dominates. Those are useful, limited questions. They do not by themselves establish a
+single advancing front, a wide space or a thermodynamic first-order transition.}
 
 \takeaway{A quarter, half and three-quarters of the way through, about 99 dots in 100 read as tube or
 sheet, and one connected sheet-like region usually dominates. That is sharp in the sense written down
-beforehand. It is not proof of a single zipper. The original 120 finished tori remain narrow: their shortest
-loop is six links at every tested size. Local flatness has not produced two large directions here.}
+beforehand, and it is not proof of a single zipper. What the tube turns into is a ring six around where
+it was four: flat at every dot, and still narrow.}
 
 \chapterpage{7 \enspace CLOSE THE LID}{Where does the energy go when it has nowhere to go?}
+
+{\footnotesize\color{ink!55}\textbf{The experiment:} the arrangement \textbullet\ the cost \textbullet\ the wait \textbullet\ the change \textbullet\ {\color{accent}\textbf{the energy}} \textbullet\ what remains \textbullet\ other settings\par}
 
 Apart from the budget test of Chapter~4, every run so far sat in the bath, and the bath carried the
 released energy away as fast as it appeared. If a change like this made all of space, there was no
@@ -1449,54 +1378,55 @@ between, 154 melted.}
 \end{figure}
 
 \Meas\ A bonfire with a threshold, as the pre-registered verdict put it. Where the heat has room, the
-change feeds itself to completion; where it does not, the heat damages what the change made. Melted,
-in this classification, means that at least 15 percent of the dots have lost their neat two
-directions. The switch-over moves in step with size, as a release
-of one unit per dot shared among the stores predicts. \Ours\ A rough energy budget puts it near one
-store per three dots; the measured crossover sits between one per four and one per two, which is as
-fine as the grid can say. That estimate assumes the stores settle into a thermal balance, and
-individual store balances were not saved, so it is a budget, not a calibrated thermometer.
+change feeds itself to completion; where it does not, the heat damages what the change made. The
+switch-over moves in step with size, as a release of one unit per dot shared among the stores
+predicts. \Ours\ A rough energy budget puts it near one store per three dots; the measured switch-over
+sits between one per four and one per two.
 
-\Meas\ No run ended stalled with tube and sheet side by side and nothing melting in 420 runs of
-30,000 sweeps on this grid of $C$. That finite observation does not establish that no coexistence
-temperature exists. Such a claim would require free-energy and equilibration evidence that these
-sealed runs do not supply.
+\Meas\ No run ended stalled, with tube and sheet side by side and nothing melting, in 420 runs of
+30,000 sweeps. That is an observation about these runs. It does not show that such a standoff is
+impossible, which would take evidence these sealed runs do not supply.
 
-\sub{What ``melted'' can and cannot mean here}
+\sub{What ``melted'' means here}
 \Exact\ A sealed box holds only the energy it started with: at $\lambda=1.25$, one unit per dot,
 plus the push. A missing square costs 16 units. So the burp's own heat can break at most about one
-square in sixteen, however few stores there are. \MeasX\ Read again from the saved runs, every one of
-the 154 networks labelled melted still had 94 to 100 percent of its squares. That is damage: warm
+square in sixteen, however few stores there are. \MeasX\ Every one of the 154 networks classed as
+melted still had 94 to 100 percent of its squares. That is damage: warm
 fabric with flaws in it. It is not the random tangle the published model starts from, which has
 about an eighth as many squares as flat fabric. The burp cannot melt its own product.
 
 \sub{Does trapped heat make the product wider?}
 \Meas\ Pre-registered, with the author's prediction that it would: tubes of 96, 192 and 384 dots at
 $\lambda=1.25$ and 1.40, sealed with two stores per dot down to one per four, then drained of their
-heat, cooled, and read from the wiring. It did not. With one store per dot or more at
-$\lambda=1.25$, every one of 144 tubes ended narrow, six around, and with half a store per dot most
-still did. With a third or a quarter of a store per dot, or at $\lambda=1.40$ with any amount of
-room, most ended as a \emph{patchwork}: good fabric almost everywhere, six
-around in one stretch and eight or more in the next, with flaws frozen in where the stretches meet,
-and often in two or more separate pieces. None of 720 end states was one clean torus wider than
-six. Use the inhabitant's count of Chapter~3: call an end state \emph{mostly wide} if at least half
-its dots have 25 dots within three steps, as a dot on a wide sheet does; a dot on one of these tubes
-six around has 22. The share that came out
-mostly wide fell as the tube got longer, from one in five at 96 dots to one in sixty at 384
-($\lambda=1.40$). For the largest size the shares were written down
+heat, cooled, and read from the wiring. It did not.
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{Plenty of room.} With one store per dot or more at $\lambda=1.25$, every one of 144
+tubes ended narrow, six around. With half a store per dot most still did.
+\item \textbf{Little room.} With a third or a quarter of a store per dot, or at $\lambda=1.40$ with
+any amount of room, most ended as a \emph{patchwork}: good fabric almost everywhere, six around in one
+stretch and eight or more in the next, with flaws frozen in where the stretches meet, and often in two
+or more separate pieces.
+\item \textbf{Either way.} None of 720 end states was one clean torus wider than six.
+\end{itemize}
+Use the inhabitant's count of Chapter~3: call an end state \emph{mostly wide} if at least half its
+dots have 25 dots within three steps, as a dot on a wide sheet does; a dot on one of these tubes six
+around has 22. The share that came out mostly wide fell as the tube got longer, from one in five at
+96 dots to one in sixty at 384 ($\lambda=1.40$). For the largest size the shares were written down
 beforehand from the two smaller ones: they held at nine of ten settings and missed at one.
-\Ours\ Trapped heat is flaws in many places at once, each re-stitching its own neighborhood. A
-clean re-gluing needs one edge moving alone.
+\Ours\ Trapped heat is flaws in many places at once, each re-stitching its own neighborhood. A clean
+re-gluing needs one edge moving alone.
 
 \whyhere{What the burp turns into, and whether the energy books balance across the change, only have
 meaning in a sealed system. In a bath the burp leaves and nothing can be asked of it. The sealed box is
 where the balance becomes a measurement.}
 
 \takeaway{Sealed, the release has to go somewhere, and where it goes decides the ending: into enough
-room and the sheet completes, into too little and the heat damages the new space. The books balance to
-the unit in every run. Nothing stalled half and half.}
+room and the sheet completes, into too little and the heat damages the new space without melting it or
+widening it. The books balance to the unit in every run. Nothing stalled half and half.}
 
 \chapterpage{8 \enspace WHAT REMAINS}{A scrap of the old arrangement}
+
+{\footnotesize\color{ink!55}\textbf{The experiment:} the arrangement \textbullet\ the cost \textbullet\ the wait \textbullet\ the change \textbullet\ the energy \textbullet\ {\color{accent}\textbf{what remains}} \textbullet\ other settings\par}
 
 Almost every sheet that formed in a cold sealed box kept something: four dots of the old curled
 arrangement that the change swept past without opening. A remainder raises one question first: does
@@ -1518,8 +1448,8 @@ prediction, written down before the measurement, was that it grows.
 \end{tikzpicture}
 \caption{The usual leftover. \Exact\ Read from the wiring: a closed loop of four dots with one extra
 square and six surplus squares, costing $24\lambda - 16$ (14 at $\lambda=1.25$), its points spanning one
-to four of the tube's original columns and lying along the tube. Earlier notes called it a ring
-around the tube; the wiring says otherwise. Occasionally a different, 20-unit twist appears instead.}
+to four of the tube's original columns and lying along the tube. Occasionally a different, 20-unit
+twist appears instead.}
 \end{figure}
 
 \Meas\ Eighty fresh runs in the coldest box, two stores per dot, pre-registered: tubes of 64, 96, 192
@@ -1565,14 +1495,12 @@ speck. What it does afterwards, and what several seeds leave, is the next paper'
 
 \chapterpage{9 \enspace THE MAP}{Turning the knob}
 
+{\footnotesize\color{ink!55}\textbf{The experiment:} the arrangement \textbullet\ the cost \textbullet\ the wait \textbullet\ the change \textbullet\ the energy \textbullet\ what remains \textbullet\ {\color{accent}\textbf{other settings}}\par}
+
 Everything so far was at one setting of the knob, $\lambda=1.25$, chosen in advance. A single setting
 proves little: a result that only holds at one carefully chosen number is the kind of thing the
 project's rules forbid. So the whole stretch of the knob was run, from 1.05 to 1.45 in steps of 0.05,
-at four sizes, thirty tubes per cell, with the rules fixed first. Then it was run twice more with 120
-tubes per cell and fresh random numbers. Each run carries a detector that decides when the change has
-happened. It watches the tube for its first 200 sweeps to learn what an unchanged tube looks like, and
-only then starts checking, so it cannot record a change earlier than that. The end of this chapter returns to
-what this costs.
+at four sizes, with the rules fixed first.
 
 \begin{figure}[H]
 \centering
@@ -1591,158 +1519,71 @@ what this costs.
 \node[font=\scriptsize,text=ink,align=center] at (1.32,-0.85) {release per dot: $4(\lambda-1)$, from 0.2 at 1.05 to 1.4 at 1.35; zero at 1};
 \end{tikzpicture}
 \caption{The stretch of the knob that was run. \Meas\ Shaded, where the tube is stuck (more than half
-the tubes still at least three-quarters tube after the 200-sweep watch) and the change keeps its
-two-signature, dominant-region character. The edge between 1.35 and 1.40 is where the wait drops
-below the watch, not where the hill disappears: route B still costs energy until 1.6. \Exact}
+the tubes still at least three-quarters tube after 200 sweeps) and the change keeps its two-signature,
+dominant-region character. The edge between 1.35 and 1.40 is where the wait becomes too short to see,
+not where the hill disappears: route B still costs energy until 1.6. \Exact}
 \end{figure}
 
-\Meas\ Three things the map shows. First, the tube is stuck at every setting from 1.05 to 1.35 and
-at none from 1.40 up, and wherever it is stuck the change keeps the character of Chapter~6: 95 to 100
-percent of dots in one signature or the other at the half mark, one connected region holding
-most of the flat-like dots. Second, the mean wait follows the counted lottery of Chapter~5 over a
-hundred-fold range of waiting times with nothing fitted, drifting above it only where the 200-sweep watch cannot record
-shorter waits, and running 15 to 43 percent long near $\lambda = 1$, where the direct move-by-move
-count finds no excess. Third, the change is cleanest near the published setting and gets messier as
-the knob turns: at 1.05 every one of 120 tubes ended as a perfect flat torus, at 1.25 about 88
-percent did, at 1.35 fewer than half, and beyond the edge the change starts in several places at
-once in most runs and ends mostly on a sheet with defects.
+\sub{What the map shows}
+\Meas\ Three things.
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{Where the tube is stuck.} At every setting from 1.05 to 1.35, and at none from 1.40 up.
+Wherever it is stuck the change keeps the character of Chapter~6: 95 to 100 percent of dots in one
+signature or the other at the half mark, and one connected region holding most of the flat-like dots.
+\item \textbf{When it leaves.} The mean wait follows the counted lottery of Chapter~5 over a
+hundred-fold range of waiting times, with nothing fitted.
+\item \textbf{How clean the ending is.} Cleanest near the published setting, and messier as the knob
+turns. At 1.05 every one of 120 tubes ended as a perfect flat torus, at 1.25 about 88 percent did, at
+1.35 fewer than half, and beyond the edge the change starts in several places at once in most runs and
+ends mostly on a sheet with defects.
+\end{itemize}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{fig_lambda.pdf}
-\caption{The map, measured. (a) Mean detected wait against $\lambda$ at $g=1.5$, four sizes;
-the solid line is the counted lottery for the first exit, the dashed line the same prediction as the
-200-sweep watch would record it; neither is fitted. Shading marks where the tube is not stuck. (b)
+\caption{The map, measured. (a) Mean wait against $\lambda$ at $g=1.5$, four sizes; the solid line is
+the counted lottery for the first exit, and the dashed line is the same prediction for a detector that
+cannot see a change in its first 200 sweeps; neither is fitted. Shading marks where the tube is not
+stuck. (b)
 Pooled over sizes: the share of dots in one signature or the other at the half mark, and the share
 of runs that released the full amount.}
 \end{figure}
 
-\Ours\ There is a trade here. A larger $\lambda$ means a larger
-burp per dot but a less patient X and a messier birth; a smaller $\lambda$ means a cleaner change that
-releases less. The ideal release is $4(\lambda-1)$ per dot, attained only at a zero-energy endpoint, and vanishes at the published setting,
-so this family of models has no setting with a large release and a quiet, clean X at once.
-\Pub\ At the published setting itself, the published model's author has proposed that patches of the network
-can sit stuck in a different arrangement~\cite{T24}; the questions asked here could be put to those
-patches too.
+\Ours\ There is a trade here. A larger $\lambda$ means a larger burp per dot but a less patient X and a
+messier birth; a smaller $\lambda$ means a cleaner change that releases less. The ideal release is
+$4(\lambda-1)$ per dot, reached only when the change ends at zero energy, and it vanishes at the
+published setting, so this family of rules has no setting with a large release and a quiet, clean X
+at once. \Pub\ At the published setting itself, the published model's author has proposed that patches
+of the network can sit stuck in a different arrangement~\cite{T24}; the questions asked here could be
+put to those patches too.
 
-\sub{Three verdicts, all inconclusive by the letter}
-\Meas\ Each of the three maps was scored against rules fixed before it ran, and each failed one of
-them: the first on a band for the spread of waits that, with thirty tubes, turned out to be not much
-wider than ordinary run-to-run scatter, so a cell could fall outside it by chance alone; the second on an energy check that compared a window average with an exact final
-energy and was tripped by the sheet's own thermal jitter; the third on the spread of waits again, in
-four cells, two of them on a single tube recorded as waiting 24 and 76 times the predicted mean
-(neither of those two was a wait, as the end of this chapter shows). Three runs,
-three sets of rules not satisfied. Each verdict stays inconclusive. Later diagnoses explain
-specific failures; they do not retroactively turn those tests into passes.
+\sub{Does it hold up?}
+\Meas\ The map was scored against rules fixed before it ran, and it passes: in all 24 cells from
+$\lambda=1.05$ to 1.30 and 64 to 192 dots, the waits spread as a memoryless wait should, the dots sit in
+one signature or the other, and one connected patch dominates. A larger size, 288 dots, was predicted
+before it was read, and all six settings landed inside their predicted ranges. At 1.35 the
+connected-patch test fails at 192 and 288 dots, so the stretch where everything holds is 1.05 to 1.30.
 
-\sub{The long waits that were not waits}
-\Meas\ One loose end from these maps looked alarming for a while. The third map recorded two tubes
-waiting 24 and 76 times the predicted mean, which a memoryless wait all but forbids. A dedicated
-pre-registered test of 10,000 tubes then counted too many long waits and returned the verdict TWO
-POPULATIONS. It also found a fast share, 12 to 23 percent of tubes that seemed to change at once, and
-190 tubes the detector never caught.
+Two things keep that pass in proportion. It took four tries: three earlier maps each failed one of
+their rules and stay inconclusive, for reasons that mostly traced to the measuring and not to the tube, and
+the technical paper~\cite{tech} has that story. And the single patch weakens toward the edge: at 288
+dots and $\lambda=1.30$ the largest patch holds 75 percent of the flat-like dots on average, against a
+cutoff of 70, and only 65 of 120 single runs clear it.
 
-Much of this apparent anomaly came from the detector
-(Figure~\ref{fig:watch}). For its first 200 sweeps the detector only watches, to learn how much a
-resting tube jiggles, and then it sets its bar at three times that jiggle. A tube that changes
-\emph{during} the watch teaches it that large swings are normal.
+\whyhere{The project's first success condition is no cherry-picking: a family of rules may be explored,
+but only along knobs fixed in advance, and every setting run is published. The map is that rule
+applied, and it also locates where the stand-in for X stops being stable for now.}
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize,>=Stealth]
-% the watch
-\fill[sun!22] (0,-0.25) rectangle (3.0,4.75);
-\node[text=ink,font=\footnotesize\bfseries] at (1.5,5.05) {the watch: sweeps 0 to 200};
-\draw[ink,thick] (3.0,-0.25) -- (3.0,4.75);
-\draw[->,thick,ink] (0,-0.25) -- (8.6,-0.25);
-\node[text=ink,anchor=north] at (3.0,-0.3) {200};
-\node[text=ink,anchor=north] at (6.4,-0.3) {time, not to scale};
-% row A: waits past the watch
-\fill[curlpale] (0,3.5) rectangle (6.2,4.1); \fill[flatpale] (6.2,3.5) rectangle (8.2,4.1); \draw[ink!50] (0,3.5) rectangle (8.2,4.1);
-\fill[ink] (6.2,4.2) -- (6.05,4.5) -- (6.35,4.5) -- cycle;
-\node[text=ink,align=left,anchor=west,text width=6.6cm] at (8.9,3.8) {\textbf{Sits still through the watch.} Caught at its first exit. Its wait is right.};
-% row B: begins to change inside the watch
-\fill[curlpale] (0,1.9) rectangle (2.0,2.5); \fill[flatpale] (2.0,1.9) rectangle (8.2,2.5); \draw[ink!50] (0,1.9) rectangle (8.2,2.5);
-\fill[ink] (3.1,2.6) -- (2.95,2.9) -- (3.25,2.9) -- cycle;
-\node[text=ink,align=left,anchor=west,text width=6.6cm] at (8.9,2.2) {\textbf{Starts changing inside the watch.} Caught at the first check afterwards. It looks like an instant change.};
-% row C: nearly finishes inside the watch
-\fill[curlpale] (0,0.3) rectangle (0.8,0.9); \fill[flatpale] (0.8,0.3) rectangle (8.2,0.9); \fill[curl!70] (0.8,0.3) rectangle (7.0,0.42); \draw[ink!50] (0,0.3) rectangle (8.2,0.9);
-\fill[ink] (7.0,1.0) -- (6.85,1.3) -- (7.15,1.3) -- cycle;
-\node[text=ink,align=left,anchor=west,text width=6.6cm] at (8.9,0.6) {\textbf{Nearly finishes inside the watch,} then rests with a defect. The bar is now very low: it trips only when the defect gives way, far later, or never. It looks like a very long wait.};
-% key
-\fill[curlpale] (0,-1.35) rectangle (0.5,-1.05); \draw[ink!50] (0,-1.35) rectangle (0.5,-1.05); \node[text=ink,anchor=west] at (0.6,-1.2) {still tube};
-\fill[flatpale] (2.4,-1.35) rectangle (2.9,-1.05); \draw[ink!50] (2.4,-1.35) rectangle (2.9,-1.05); \node[text=ink,anchor=west] at (3.0,-1.2) {changed};
-\fill[curl!70] (4.6,-1.26) rectangle (5.1,-1.14); \node[text=ink,anchor=west] at (5.2,-1.2) {a leftover defect};
-\fill[ink] (8.75,-1.3) -- (8.6,-1.05) -- (8.9,-1.05) -- cycle; \node[text=ink,anchor=west] at (9.0,-1.2) {the detector fires};
-\end{tikzpicture}
-\caption{Three tubes, one detector. \Exact\ The detector's rule is the same for all three; what differs
-is what each tube did while the detector was still watching.}
-\label{fig:watch}
-\end{figure}
-
-\MeasX\ Every run saved two readings that do not depend on the detector's bar: how far the tube had
-converted when the watch ended, and when a quarter of it had converted. Read afterwards from those
-saved rows (a reading made after the fact, not a pre-registered test), the puzzle comes apart. The 190
-tubes never caught had all finished at least three-quarters of the change inside the watch. The two
-extreme waits were tubes already 75 and 88 percent converted when the watch ended, resting on a sheet
-with defects. The fast share is tubes whose first exit came inside the watch, about as many as the
-counted lottery says there should be. And the test's yardstick for a typical wait, taken with the fast
-share included, came out too short, which pushed ordinary long waits past its cutoff.
-
-The verdict stands as scored; these checks explain most of the apparent anomaly. Three long waits in one group
-of 4,000, at $\lambda = 1.30$ and 64 dots, were not explained this way, so we replayed that whole group
-move for move from its saved starting numbers, this time recording everything, with the rules for
-reading it written down first. \Meas\ One of the three was the detector again. The other two
-looked like perfect tubes every time the replay looked, which was once every five sweeps. So we
-replayed them once more and looked after every single sweep. \MeasX\ One had sat, perfect, for
-about twelve times the average wait. The other had slipped out for three sweeps between two looks
-and come back, about seven average waits in, so its long wait was the spacing of the looks. At no
-sweep did any tube hold more squares than a perfect tube, which a second curl would need.
-\Meas\ Neither written guess about the three held (a hidden second curl; the detector three times
-over). Timed with no detector at all, the 4,000 first exits follow the counted lottery to within 7
-percent, and one comes later than ten average waits, which chance allows about one time in six.
-
-\Meas\ One more run, with its rules written first, closed that 7 percent. On 4,000 fresh tubes we
-counted the first exit move by move and, in the same tubes, by a look every five sweeps. Counted by
-the move it lands on the count: 1.005 times the predicted wait, give or take 0.016. The looks read it
-about 10 percent late, because about one first exit in thirteen comes back before the next look. So
-the 7 percent was the looking, not the lottery.
-
-\Meas\ The same run settled an older puzzle at the lowest setting of the knob, $\lambda = 1.05$, where
-three tubes among 200 had waited about nine times the average. Replayed from their saved starting
-numbers, each was a tube that simply sat: it was offered its ways out at the usual rate the whole
-time and took none. Then 3,000 fresh tubes there, counted move by move, showed no detected excess of long waits: one
-wait past eight averages, where chance expects one. The observations are consistent with ordinary
-random variation; a finite sample cannot rule out every rare alternative.
-
-\whyhere{The project's first success condition is no cherry-picking: a family of rules may be
-explored, but only along knobs fixed in advance, and every setting run is published. The map is that
-rule applied, and it also locates where the stand-in for X stops being stable for now.}
-
-\sub{The fourth map and its held-out size}
-\Meas\ A fourth registered map records the first exit move by move and uses 120 replicas per
-setting. All 24 combinations of $\lambda=1.05$ through 1.30 and 64, 96, 144 and 192 dots pass its
-specified waiting-spread, signature and connected-patch tests. Predictions were frozen before
-reading the larger, 288-dot runs. All six window settings meet those prediction intervals and
-pass the conversion criteria there. At 1.35, the connected-patch criterion fails at 192 and 288 dots.
-
-The pass has a precise scope. At 288 dots and $\lambda=1.30$, the mean share in the largest patch
-is 0.751 against a cutoff of 0.7; only 65 of 120 individual runs exceed that cutoff. Passing a
-test of the spread of waits is not proof that the whole waiting-time distribution is memoryless.
-\MeasX\ Applying the earlier map's residual-wait criterion to these same new rows also passes
-all 24 smaller-size window cells. The fourth map changes the sample and the diagnostic as well as
-the clock; its success cannot be attributed to the clock repair alone.
-
-\takeaway{The fourth map passes its registered criteria over the tested window, including the
-held-out size. The earlier three remain inconclusive. This supports a bounded result about escape
-and conversion under the specified rules. It does not establish a thermodynamic first-order
-transition, and the reconstructed zero-energy tori still have a short way around.}
+\takeaway{The tube is stuck, and the change keeps its character, from 1.05 to 1.35, and the map passes
+its registered tests from 1.05 to 1.30, including a size predicted in advance. A bigger release comes
+with a messier change. None of this is a test of a thermodynamic first-order transition, and the
+finished tori are still narrow.}
 
 \chapterpage{10 \enspace THE EDGES}{Where the simulations stop, and what lies past each edge}
 
 Every knob the toy has was turned only so far. This chapter is the honest map of the box: for each
-knob, what was run, why it stopped there, and what is on the other side, with the kind of knowledge
-marked. ``Unknown'' means no one has looked.
+knob, what was run, why it stopped there, and what is on the other side. ``Unknown'' means no one has
+looked.
 
 \begin{figure}[H]
 \centering
@@ -1750,12 +1591,12 @@ marked. ``Unknown'' means no one has looked.
 % rows: label at x=0, bar from 2.6 to 12.4
 \foreach \yy/\name/\lo/\hi/\ltext/\rtext/\inside in {
  0/the knob $\lambda$/4.6/8.6/{below 1.05: smaller, cleaner burps; at 1 nothing to release; below 1 the sheet itself curls}/{above 1.45: nothing curled stays put; at 1.5 the tube collapses within 50 sweeps}/{1.05 to 1.45},
- -2.0/the warmth $g$/5.2/7.8/{colder than 1.4: waits grow exponentially, 50,000 sweeps at $g=1$; a laptop cannot wait}/{hotter than 2.5: opens at once from many seeds; near 3.5 the flat sheet itself melts}/{1.4 to 2.5},
- -4.0/the size $N$/4.0/8.8/{below 48: 32 dots break the exit pattern; 16 dots is the knot}/{above 288: unknown here; a later paper goes into the thousands}/{48 to 288},
- -6.0/stores $C$/3.4/9.4/{one store: damaged every time}/{more than 2 per dot: untested}/{1 store to 2 per dot},
- -8.0/the push $s$/4.2/8.4/{below 12: can never leave (exact); 0 waits for ever}/{up to 160: all leave, and the end gets hotter as predicted}/{4 to 160},
- -10.0/named points/2.6/5.4/{this paper: every dot has a name}/{interchangeable dots: an exit about $N$ times rarer, estimated; never run}/{named},
- -12.0/directions/2.6/5.4/{this paper: two directions (four links per dot)}/{three and four: a later paper, and not a simple repeat of this one}/{two}} {
+ -1.7/the warmth $g$/5.2/7.8/{colder than 1.4: waits grow exponentially, 50,000 sweeps at $g=1$; too long to run}/{hotter than 2.5: opens at once from many seeds; near 3.5 the flat sheet itself melts}/{1.4 to 2.5},
+ -3.4/the size $N$/4.0/8.8/{below 48: 32 dots break the exit pattern; 16 dots is the knot}/{above 288: unknown here; a later paper goes into the thousands}/{48 to 288},
+ -5.1/stores $C$/3.4/9.4/{one store: damaged every time}/{more than 2 per dot: untested}/{1 store to 2 per dot},
+ -6.8/the push $s$/4.2/8.4/{below 12: can never leave (exact); 0 waits for ever}/{up to 160: all leave, and the end gets hotter as predicted}/{4 to 160},
+ -8.5/named points/2.6/5.4/{this paper: every dot has a name}/{interchangeable dots: an exit about $N$ times rarer, estimated; never run}/{named},
+ -10.2/directions/2.6/5.4/{this paper: two directions (four links per dot)}/{three and four: a later paper, and not a simple repeat of this one}/{two}} {
  \node[anchor=east,text=ink] at (2.4,\yy) {\name};
  \draw[ink!25,line width=7pt] (2.6,\yy) -- (12.4,\yy);
  \draw[accent,line width=7pt] (\lo,\yy) -- (\hi,\yy);
@@ -1766,76 +1607,68 @@ marked. ``Unknown'' means no one has looked.
 \end{tikzpicture}
 \caption{The box, knob by knob. Each teal bar is the stretch of a knob where tubes were actually
 simulated for this paper; the gray is the knob's range as far as anything is known about it; the notes
-say what lies past each edge. You can turn the first five knobs yourself in the interactive companion
-to this figure, \href{https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8}{The Tube's Curling Ladder}:
-its exact numbers follow you to any setting, and its measured results appear only inside the teal
-bars. Details and the kind of knowledge behind each note follow.}
+say what lies past each edge.}
 \label{fig:box}
 \end{figure}
 
+You can turn the first five knobs yourself in the interactive companion to this figure,
+\href{https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8}{The Tube's Curling Ladder}: its exact numbers
+follow you to any setting, and its measured results appear only inside the teal bars.
+
 \sub{The knob $\lambda$: 1.05 to 1.45}
-Below 1.05 the burp gets smaller and cleaner, not longer-awaited. \Exact\ The wait saturates as the
+Below 1.05 the burp gets smaller and cleaner, not longer-awaited. \Exact\ The wait levels off as the
 knob approaches 1 (the counted lottery gives about 8,300 sweeps at 1.05 and about 14,000 at 1.001),
-while the release shrinks to nothing at exactly 1, where curled and flat tie and the tube is no
-longer above anything. Below 1 the ladder flips. \MeasX\ In a rehearsal the author calls the backwards
-reaction, a perfect flat sheet at $\lambda<1$ sat at zero for hundreds to thousands of sweeps and then
-curled, one direction first, releasing energy in steps that landed on the exact rungs of the ladder.
-Above 1.45, \Meas\ at 1.5 the tube falls apart within 50 sweeps in every run; \Exact\ at 1.6 route B
-costs nothing and at 18 dots no stuck state above flat exists; by a knob setting of 5 to 10 the toy
-behaves as one with a third square simply forbidden. Nothing curled is stable for now out there.
+while the release shrinks to nothing at exactly 1, where curled and flat tie. Below 1 the ladder
+flips. \MeasX\ In a rehearsal the author calls the backwards reaction, a perfect flat sheet at
+$\lambda<1$ sat at zero for hundreds to thousands of sweeps and then curled, one direction first,
+releasing energy in steps that landed on the exact rungs of the ladder. \Meas\ Above the range, at 1.5,
+the tube falls apart within 50 sweeps in every run. \Exact\ At 1.6 route B costs nothing, and at 18
+dots no stuck state above flat exists; by a setting of 5 to 10 the toy behaves as one with a third
+square simply forbidden. Nothing curled is stable for now out there.
 
 \sub{The warmth $g$: 1.4 to 2.5, with the maps at 1.5}
-\Exact\ Colder, the wait grows like $e^{12/g}$: about 50,000 sweeps at $g=1$ and nearly three million at
-$g = 0.75$. \MeasX\ At $g=1$, two of four tubes were still tubes after 30,000 sweeps. A laptop cannot
-wait long enough below about 1, which is why the knob stopped there. Hotter, the tube opens almost at
-once and from many places, and near $g \approx 3.5$ the flat sheet itself melts into the random phase;
-that melting point is the one the reservoir estimate of Chapter~7 used. How that melting point
-moves with the size of the sheet is taken up in a later paper; until then every warm result carries a
-size caveat.
+\Exact\ Colder, the wait grows like $e^{12/g}$: about 50,000 sweeps at $g=1$ and nearly three million
+at $g = 0.75$. \MeasX\ At $g=1$, two of four tubes were still tubes after 30,000 sweeps, which is why
+the range stops there. Hotter, the tube opens almost
+at once and from many places, and near $g \approx 3.5$ the flat sheet itself melts into the random
+tangle; the reservoir estimate of Chapter~7 used that melting point. How it moves with the size of
+the sheet is taken up in a later paper, and until then every warm result carries a size caveat.
 
 \sub{The size $N$: 48 to 288 dots}
-The upper limit was run time on one laptop and the choice to spend compute on repeats rather than
-size. \Exact\ The exit count was certified at 48 through 288; the control at 32 dots breaks the
-pattern, and 16 dots is the knot. \Meas\ The front's speed fell roughly as the size to the power
-$-0.7$, so longer tubes take longer to finish. \Ours\ Whether the wait itself grows, stays flat or
-falls with size depends on the clock the toy does not fix (Chapter~5). The technical paper claims
-nothing beyond 288. Networks into the thousands of dots are the subject of a later paper on the
-scrap.
+The upper limit was computing time, spent on repeats rather than size.
+\Exact\ The exit count was certified at 48 through 288; a control at 32 dots breaks the pattern, and
+16 dots is the knot. \Meas\ The front's speed fell roughly as the size to the power $-0.7$, so longer
+tubes take longer to finish. \Ours\ Whether the wait itself grows, stays flat or falls with size
+depends on the clock, which the toy does not fix (Chapter~5). The technical paper claims nothing
+beyond 288; networks into the thousands of dots are the subject of a later paper on the scrap.
 
-\sub{Stores $C$: one to two per dot}
-\Meas\ With a single store every tube ends damaged (the registered label is ``melted''); two per dot leaves
-clean sheets with one scrap. Colder boxes
-than two per dot were not tried. The store balances were not saved, so they cannot be turned into a
-calibrated temperature after the fact.
+\sub{The sealed box: stores and push}
+\Meas\ With a single store every tube ends damaged; two stores per dot leave clean sheets with one
+scrap. Colder boxes than that were not tried. \Exact\ With a push below 12 nothing can leave by single
+swaps at the certified sizes, and a tube with nothing to spare waits for ever. \MeasX\ Pushes of 12 to
+160 units at 64 dots all left, and the hotter the
+box the more disordered the sheet it ended with, as predicted from the toy's equilibrium curve before
+the run: 0.97 squares per dot measured against 0.95 predicted at the smallest push, 0.81 against 0.81
+at the largest. Larger pushes were not run.
 
-\sub{The push $s$: 4 to 16, then 12 to 160}
-\Exact\ Below 12 nothing can leave by single swaps, at the certified sizes; a tube with nothing to
-spare waits for ever, which is now a permanent test in the code. \MeasX\ Above, pushes of 12 to 160
-units at 64 dots all left, and the hotter the box the more disordered the sheet it ended with, with
-the ending predicted from the toy's equilibrium curve before the run: 0.97 squares per dot measured
-against 0.95 predicted at the smallest push, 0.81 against 0.81 at the largest. Larger pushes were
-not run.
-
-\sub{Named or interchangeable dots}
+\sub{Named dots, two directions, one starting point}
 \Ours\ Every run treats dot 17 as a different thing from dot 41. Giving each distinct wiring one
-statistical weight, regardless of names, would be a different ensemble; quantum indistinguishability
-does not by itself require that choice. Energies and the certified 12-unit escape bound stay the
-same. For the counted A exits at 64 and 96 dots, the corresponding acceptance is reduced by a
-factor between $N/2$ and $N$. That does not determine the whole waiting time: other exits and the
-time spent in neutral arrangements also matter. This paper does not simulate that alternative.
+weight, whatever its dots are called, would be a different way of counting, and quantum
+indistinguishability does not by itself require it. Energies and the certified 12-unit bound would
+stay the same. For the counted route-A exits at 64 and 96 dots the chance of acceptance would fall by
+a factor between $N/2$ and $N$, which does not settle the whole waiting time: other exits, and the
+time spent in arrangements of equal energy, matter too. This paper does not simulate it; that knob is
+decided on and not yet turned.
 
-\sub{Directions: two}
-For ideal product grids, four links per dot give two directions; six and eight give three and four.
-Degree alone does not assign a dimension to an arbitrary network. These larger-degree models
-(Figure~\ref{fig:directions}) approach the three-direction question and are the subject of a
-later paper. The tease: a curled direction in three dimensions does not open the way the tube does,
-and the reason is partly exact and partly still open.
+On ideal grids, four links per dot give two directions; six and eight give three and four
+(Figure~\ref{fig:moredirections}), though the number of links alone does not give an arbitrary network a
+dimension. Those are the subject of a later paper. The tease: a curled direction in three dimensions
+does not open the way the tube does, and the reason is partly exact and partly still open.
 
-\sub{The route}
-The published route starts from a random tangle; this paper starts from an ordered tube. \Meas\ Both
-were run. From randomness at $\lambda \geq 1$: one energy, not two, and no sign of a release at these sizes. From the tube at
-$\lambda>1$: a hill, a push, a burp. The two routes are different questions, and the toy gives them
-different answers.
+\Meas\ And the starting point matters. The published route starts from a random tangle; this paper
+starts from an ordered tube. Both were run. From randomness at $\lambda \geq 1$: no sign of a release
+at these sizes. From the tube at $\lambda>1$: a hill, a push, a burp. They are different questions,
+and the toy gives them different answers.
 
 \takeaway{The box is small and its edges are known. Past most of them lies either an exact statement
 (nothing below 12 can leave; nothing is below flat), a later measurement with its own paper, or a
@@ -1843,51 +1676,45 @@ plain ``unknown.'' The one edge the toy cannot push on its own is the clock.}
 
 \chapterpage{11 \enspace WHAT WE HAVE LEARNED, AND WHAT COMES NEXT}{A mechanism we can price, and two questions it opens}
 
-Return one last time to the 96-dot tube. Its excess energy is exact: 96 units. The cheapest way out is
-exact: 12 units at $\lambda = 1.25$, the same at every tube size certified. The counted lottery predicts when it first leaves,
-and the tube keeps that appointment over a ninety-fold range of waits. Halfway through, 99 dots in
-100 belong to one arrangement or the other. When it finishes flat, it gives off exactly one unit per
-dot, and sealed, the energy is followed to the unit into stores and into a four-dot scrap. These statements come from different tests and parameter ranges; the sealed result is at
-$\lambda=1.25$. The fourth bath map passes its criteria from 1.05 to 1.30 at the tested sizes.
+Return one last time to the 96-dot tube. Here is everything this paper asked of it, with the answer
+and the kind of answer it is.
 
-\sub{What the toy shows about this kind of change}
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{0.24\linewidth}p{0.47\linewidth}l@{}}
+\toprule
+The question & The answer, in the toy & Kind \\
+\midrule
+What is it holding? & 96 units above flat: one per dot at $\lambda=1.25$. & \Exact \\
+What does it cost to start? & 12 units, the same at every size certified, from 48 to 288 dots. & \Exact \\
+When does it first leave? & When the counted lottery says: over a ninety-fold range of waits in a first scan, and in every cell of a stricter registered test. & \Meas \\
+What takes shape? & Halfway through, 99 dots in 100 belong to one arrangement or the other. & \Meas \\
+What does it turn into? & A ring six around where it was four: flat at every dot, and still narrow. & \MeasX \\
+Where does the energy go? & Finishing flat, it gives off exactly one unit per dot. Sealed, every unit is followed into the stores. & \Meas \\
+What remains? & About one four-dot scrap, 14 units, whatever the size of the tube. & \Meas \\
+Does it hold at other settings? & The fourth map passes from 1.05 to 1.30. Three earlier maps stay inconclusive. & \Meas \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The rows come from different tests and different ranges of settings; the sealed ones are at
+$\lambda=1.25$ only.
+
+\sub{What the toy shows, and where it stops}
 \Ours\ The toy gives the larger hypothesis a concrete first question: can a prepared curled
-arrangement wait, escape and release a calculable amount of energy? Under the specified rules,
-it can. But its measured endpoint
-also limits the analogy: removing the four-step curl usually
-leaves a narrow torus, not two large directions. A fixed first-escape cost is not a measured
-commitment barrier, and a nonzero ideal energy gap is not a thermodynamic phase-transition test.
+arrangement wait, escape and release an amount of energy that can be calculated? Under the stated
+rules, it can. But its ending limits the comparison with the picture that opens this paper: the runs
+stop at the nearest flat arrangement, the narrow one, and their own trapped heat does not widen it.
+Two cautions go with the result. The fixed cost is the cost of opening the door, not of committing to
+the change. And an energy gap between two ideal arrangements is not a test of a thermodynamic
+first-order transition.
 
-\Claim\ The author's wider proposal is that an organized precursor could underlie the origin
-of space. This paper supplies a controlled toy-model test of part of that proposal, not a test
-against observations of the universe. Its results remain useful to the next model: the local
-energy can be priced exactly, the first exit can be predicted, and local flatness is insufficient
-to ensure large-scale opening: by count most flat wrappings are wide, but the runs stop at the
-nearest flat arrangement, the narrow one, and their own trapped heat does not widen it. The remainder did not grow, a single front was not established,
-and three registered maps remained inconclusive before a fourth passed its stated criteria.
-
-\sub{What another researcher can build on}
-Some parts are exact or complete finite listings: the ladder, the 12, the three reachable
-arrangements, the topology of 120 endpoints. Their scope is the stated rules, sizes and the
-correctness of the code, which is tested against independent calculations. Other parts are
-measurements with variation between repeated runs, where a hundred dots in one run are not a hundred
-experiments. Tests written down before the data are marked pre-registered; the Arrhenius scan, the
-push threshold and the endpoint-energy reading are exploratory and say so. Interpretations are the
-author's and her assistants' and have not been checked by a physicist.
-
-Even what to count is a choice. The simulations count named dots. Counting each wiring once, with the
-names removed, leaves every energy alone and changes the rates, most for the symmetric arrangements
-that are easiest to calculate with and that nothing is ever in. That knob is decided and not yet
-turned.
-
-\sub{What the next round of this experiment should record}
-The fourth map now records the first exit without the old watch, and the saved torus endpoints
-have been reconstructed. Next, save states after successive swaps and launch repeated continuations
-from each: how often does each state return to the tube, and how often does it complete conversion?
-That would distinguish opening the door from committing to the change. Register endpoint topology
-and loop lengths as outcomes in their own right. Record each store's balance and test equilibration
-before inferring temperature. A clock with a specified attempt rate per neighborhood would make
-cross-size kinetic comparisons clearer. Continue predicting a held-out size before reading it.
+\Claim\ The author's wider proposal is that an organized arrangement came before space. This paper is a
+controlled test of part of that proposal in a toy, not a test against observations of the universe.
+What it hands to the next model: the local energy can be priced exactly, the first exit can be
+predicted, and flatness dot by dot is not enough to make a shape wide. What did not go the way it
+might have: the remainder did not grow, a single front was not established, and three registered maps
+stayed inconclusive before a fourth passed.
 
 \sub{What comes next}
 The question that began the work survives its first test. Can an organized arrangement give way
@@ -1902,25 +1729,24 @@ heals away, while another kind of leftover survives every cooling we could run.
 
 \textbf{Three directions.} The tube has one long direction, and space has three, so the paper after
 that, \emph{How curled directions open}, runs the same rules with six links per dot. \Meas\ One
-result: escape from the four-link tube does not settle the larger-direction question. Later runs
-find a separate barrier for each curled direction. Some reach broader shell profiles, but that
-does not establish a fixed-budget route that opens every direction.
+result: escape from the four-link tube does not settle the question for more directions. Later runs
+find a separate barrier for each curled direction. Some end in wider shapes, but no fixed budget has
+been shown to open every direction.
 
 \textbf{A rule that pays for width.} The toy's rule charges only for loops of four, which is why the
 first re-gluing is paid for and the next is not. So the author asked for the same rule one
-loop-length up: a small price on loops of six, which a tube six around has many of and a wide sheet
+loop-length up: a small price on loops of six, which a ring six around has many of and a wide sheet
 has none. \Meas\ What happened, at 96 and 192 dots, with a larger size still running. With no such
-price the tubes ended six around, as in this paper. With one, they did not stop there: a tube six
+price the tubes ended six around, as in this paper. With one, they did not stop there: a ring six
 around gave way without any push, a curled tube went straight past six around, and at three prices
 of the four tried most runs ended mostly wide. At the gentlest price most tubes waited out the run or
 ended six around. The wide result is not a clean sheet. Flaws are frozen in all through it, so that
 nine dots in ten have one within three steps. The price is our addition and not part of the
-published model, and the test that starts from the curled tube was run twice, because the first
-time its no-price check was set stricter than this paper's own runs can meet.
+published model.
 
 \Ours\ Two things follow for the papers above. For the scrap: once the tube widens, leftovers stop
 being a rare remainder and become the main obstacle, so that paper has to ask how many are made and
-whether slow cooling removes them. For three directions: a direction does not become large just
+whether slow cooling removes them. For three directions: a direction does not become long just
 because its tightest loop is gone. Something has to pay for each further step, and those runs should
 measure how far around an opened direction really is.
 
@@ -1957,7 +1783,7 @@ $d$ & The square-count signature: pairs of links at a dot that close no square. 
 $f$ & The progress meter, 0 for the tube and 1 for the sheet. Disorder raises it too.\\
 Arrhenius law & Uphill events becoming much rarer as the bath cools, as $e^{-\text{cost}/g}$. Here its two ingredients are counted, not fitted.\\
 Memoryless & The chance of leaving is the same on every attempt, like rolling a die until a six comes up; a long wait so far makes leaving no nearer.\\
-Metastable & Stable for now: escaping the tube's neutral family costs energy. The map's edge near 1.37 is where the wait drops below the watch, not where that stops being true.\\
+Metastable & Stable for now: escaping the tube's neutral family costs energy. The map's edge near 1.37 is where the wait becomes too short to see, not where that stops being true.\\
 Microcanonical & Sealed: total energy fixed. Inferring temperature from the stores also requires a checked equilibrium distribution.\\
 Pre-registered & The prediction and the rules of the test were committed before the run. Exploratory runs say so.\\
 95\% interval & A range from a statistical procedure that, under its assumptions, covers the truth 95 times in 100.\\
