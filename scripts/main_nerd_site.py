@@ -168,7 +168,7 @@ def json_ld(post, kind, url, headline, description, extra=None, faq=None, terms=
     article = {
         "@type": "ScholarlyArticle", "@id": url + "#article", "headline": headline, "description": description,
         "url": url, "mainEntityOfPage": url, "inLanguage": "en", "datePublished": post.published,
-        "dateModified": post.published,
+        "dateModified": post.updated or post.published,
         "author": {"@type": "Person", "name": "Emily Smith", "affiliation": "Independent researcher",
                    "url": SITE + "/"},
         "publisher": {"@type": "Organization", "name": "Side Nerd Apps", "url": SITE + "/"},
@@ -276,7 +276,8 @@ def masthead(post, edition, other=None, answers="#quick-answers", guestbook="#gu
   <p class="sponsor">Sponsored by <a href="%(sponsor)s">Side Nerd Apps</a></p>
  </div>%(mascot)s
 </header>''' % dict(ticker=html.escape(ticker(post)), title=post.title, subtitle=subtitle, number=post.number,
-                    date=long_date(post.published), edition=edition, other=other, answers=answers,
+                    date=long_date(post.published) + (" · updated %s" % long_date(post.updated) if post.updated else ""),
+                    edition=edition, other=other, answers=answers,
                     guestbook=guestbook, sponsor=html.escape(utm("masthead-sponsor")), blog=BLOG,
                     mascot=mascot(post))
 
@@ -582,6 +583,7 @@ def page_index(posts):
 
 def _posting(post, headline, address):
     return {"@type": "BlogPosting", "headline": headline, "url": SITE + address, "datePublished": post.published,
+            "dateModified": post.updated or post.published,
             "author": {"@type": "Person", "name": "Emily Smith"}}
 
 

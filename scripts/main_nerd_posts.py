@@ -24,9 +24,10 @@ class Post:
     number: int
     slug: str                           # the post's folder name; the plain-language edition adds "PL"
     title: str
-    published: str                      # ISO date
+    published: str                      # ISO date the post first went up
     paper_dir: str                      # the paper's folder, from the repository root
     subtitle: str = ""
+    updated: str = ""                   # ISO date of the latest revision, if any
     plain_source: str = "paper_plain_language.tex"     # in paper_dir; each PDF is the same name with .pdf
     technical_source: str = "paper.tex"
     pdf_plain_name: str = ""            # the PDFs' names beside the pages; empty where there is none to offer
@@ -235,7 +236,7 @@ KEY_TERMS_01 = ["what came before the Big Bang", "emergent spacetime", "combinat
 
 POST_01 = Post(
     number=1, slug="01thecurledtorusburps", title="The curled torus burps",
-    subtitle="A small push, a large release, and the question of what survives", published="2026-10-10",
+    subtitle="A small push, a large release, and the question of what survives", published="2026-10-10", updated="2026-10-14",
     paper_dir="docs/papers/curled_torus",
     pdf_plain_name="the-curled-torus-burps-plain-language.pdf",      # copied beside the pages by the build
     pdf_tech_name="the-curled-torus-burps-technical.pdf",
@@ -403,7 +404,7 @@ TICKER_02 = ("Three kinds of scrap", "The common one heals. What holds the other
 
 POST_02 = Post(
     number=2, slug="02whatthechangeleavesbehind", title="What the change leaves behind", subtitle=SUBTITLE_02,
-    published="2026-10-13", paper_dir="docs/papers/relic",
+    published="2026-10-13", updated="2026-10-14", paper_dir="docs/papers/relic",
     pdf_plain_name="what-the-change-leaves-behind-plain-language.pdf",
     pdf_tech_name="what-the-change-leaves-behind-technical.pdf",
     opening_words="A sharp change rarely finishes the job.", cite_key="smith2026changeleavesbehind",

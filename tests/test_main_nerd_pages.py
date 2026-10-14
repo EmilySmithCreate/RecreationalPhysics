@@ -346,6 +346,7 @@ def test_an_empty_block_is_left_off_the_page(blog):
     article = graph[0]
     assert all(value not in ("", [], None) for value in article.values())
     assert article["headline"] == post.headline and article["datePublished"] == post.published
+    assert article["dateModified"] == (post.updated or post.published)
     assert ("isBasedOn" in article) == bool(post.pdf_tech) and ("keywords" in article) == bool(post.key_terms)
     # the front page lists it the same way: no empty subtitle, no button without a file behind it
     card = re.search(r'<article class="post-card">.*?%s.*?</article>' % re.escape(post.title), pages["index.html"],
