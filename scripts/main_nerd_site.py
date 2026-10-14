@@ -168,7 +168,7 @@ def json_ld(post, kind, url, headline, description, extra=None, faq=None, terms=
     article = {
         "@type": "ScholarlyArticle", "@id": url + "#article", "headline": headline, "description": description,
         "url": url, "mainEntityOfPage": url, "inLanguage": "en", "datePublished": post.published,
-        "dateModified": post.published,
+        "dateModified": post.updated or post.published,
         "author": {"@type": "Person", "name": "Emily Smith", "affiliation": "Independent researcher",
                    "url": SITE + "/"},
         "publisher": {"@type": "Organization", "name": "Side Nerd Apps", "url": SITE + "/"},
@@ -276,7 +276,8 @@ def masthead(post, edition, other=None, answers="#quick-answers", guestbook="#gu
   <p class="sponsor">Sponsored by <a href="%(sponsor)s">Side Nerd Apps</a></p>
  </div>%(mascot)s
 </header>''' % dict(ticker=html.escape(ticker(post)), title=post.title, subtitle=subtitle, number=post.number,
-                    date=long_date(post.published), edition=edition, other=other, answers=answers,
+                    date=long_date(post.published) + (" · updated %s" % long_date(post.updated) if post.updated else ""),
+                    edition=edition, other=other, answers=answers,
                     guestbook=guestbook, sponsor=html.escape(utm("masthead-sponsor")), blog=BLOG,
                     mascot=mascot(post))
 
@@ -582,6 +583,7 @@ def page_index(posts):
 
 def _posting(post, headline, address):
     return {"@type": "BlogPosting", "headline": headline, "url": SITE + address, "datePublished": post.published,
+            "dateModified": post.updated or post.published,
             "author": {"@type": "Person", "name": "Emily Smith"}}
 
 
@@ -765,6 +767,8 @@ a:visited{color:#5a4a9a}
 .xlink{font-family:Arial,Helvetica,sans-serif;font-size:14px;background:var(--canvas);border:1px dashed var(--aqua-ink);padding:5px 10px}
 .takeaway{background:#e8f6fc;border-left:6px solid var(--aqua);padding:10px 14px;margin:1.3em 0}
 .why{font-size:16px;color:#374151;border-left:3px dotted var(--aqua-ink);padding-left:12px}
+.trail{font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.03em;color:#6b7280;margin:.2em 0 1em}
+.trail strong{color:var(--aqua-ink)}
 .pull{text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:25px;line-height:1.25;margin:1.2em 0;color:#0d1419}
 .m{white-space:nowrap}
 .m i,.paper i.v{font-family:"Times New Roman",Times,serif}

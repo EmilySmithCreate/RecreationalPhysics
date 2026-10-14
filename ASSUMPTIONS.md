@@ -3705,6 +3705,29 @@ record is not a permanent fact (off-diagonal D = 1/4 once the record is undone).
 
 *Addendum, 12 October 2026: provenance of the three results files, and one mismatch between the plan and the Stage E config (exact; found by a fresh reviewer on 12 October).* The three files `results/orh_stage_bcd.meta.json`, `results/orh_stage_e_curves.meta.json` and `results/orh_stage_e_summary.meta.json` record `git_commit` e59d87ba with `git_dirty` true. That commit is a merge that contains none of `src/orh`; the code that produced the files was first committed as c23803cf. The `git_dirty` flag did fire, on edits to tracked files; what it could not say is that the code itself was absent from the named commit, because the helper `graphity.results.provenance` ran `git status` with `--untracked-files=no` at the time, and `src/orh` was untracked when the runs were made. Had the new files been the only change, the tree would have read as clean. The helper is being fixed on this branch to count untracked files as dirty and to list them. The three meta files are not edited (rule 5); this line is the correction. Also recorded: the Stage E config (`configs/orh_stage_e.json`) ran the reference classes named `moments`, `origins` and `late`, where the plan declared uniform over observer-moments, over observers and over inhabited planets. Read from `src/orh/cosmic.py` (the plan's dated entry, Stage E, "What ran, against what was declared"; the findings page's note (a)): `moments` is the declared uniform over observer-moments and `origins` is the declared uniform over inhabited planets, so two of the three declared classes ran as declared; `late` (observer-moments weighted by the age of the planet's observer era) is not in the declaration, and the declared uniform over observers never ran. One declared class was replaced by an undeclared one without a written line at the time; no number is claimed for the class that did not run.
 
+- **O126 EXPLORATORY, read from saved wirings (14 October 2026): the column's wiring, and it does not go around the
+  new tube.** (`scripts/read_column_wiring.py`, `tests/test_read_column_wiring.py`; reading only; no run; no verdict
+  changes. Exact per graph; which graphs were read is ours and was not registered.) Read for the plain-language
+  editions' drawings of the leftover, at the owner's request of 14 October for drawings of the scraps.
+  - **What was read.** Every column (a piece of four points, all at d = 1; O107) in the 12,480 saved final graphs of
+    T8, T23, T24, T60 (paper 1's maps) and T51 (paper 2's large test): 2,045 columns.
+  - **Which links carry a third square.** 1,094 have two opposite sides of the loop on three squares, the other two
+    sides on two, and at each point one link out on three and one on two: six surplus squares and one extra square,
+    the 14-unit kind of O16 (24λ − 16). 914 have all four sides of the loop on three squares and every link out on
+    two: four surplus squares, the 4-unit kind (16λ − 16) that O107 counted 72 of at L = 256 and that is common in
+    the maps' warmer and larger-λ cells. 34 have five (9 units); 3 are odd.
+  - **It does not go around the new tube.** Remove the four points: in all 2,045 their eight outside neighbours
+    stay joined to one another within ten steps. A loop that went around the tube, as a ring of the old tube does,
+    would cut it locally into two (the test's control: a ring of the curled 4 × 24 tube cuts it into two). So the
+    column is a loop of four points that still closes a square, as the old tube's rings did, and it lies in the
+    new tube's wall, not around it. This confirms O16's correction from the new tube's side; "one ring of the old
+    tube, still curled" in paper 2's draft wiring table is to be read as a statement about the loop's squares, not
+    its place, and is reworded there.
+  - *Ours.* A distance-preserving 3D layout of the neighbourhood was tried for a drawing and gave different
+    pictures for different columns of the same kind (which links cross the hollow varied); the tube is six around
+    and too narrow for any flat or 3D placement to be read off the wiring. The editions therefore draw the wiring
+    (which links carry a third square) and say that the placement is a sketch.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the

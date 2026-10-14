@@ -121,3 +121,27 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   started from a warmer bath and one from a cooler. Which keeps more curled columns? Her field's surprise would
   be the warmer start keeping fewer. And for paper 1's sealed box: does it matter how the stores are prepared
   (one store holding the push, or the same energy spread over many) for how fast the box settles?
+- 2026-10-13, the owner, reading the plain-language edition of paper 1: "Flat" in its descriptions and diagrams
+  is misleading; "we need to state that the tube is a ring and the flat is a fatter doughnut"; "these are not
+  truly flat in the open direction way ... they are bigger doughnuts". Her question: "is there a thought
+  experiment, a way they are like flat and from some perspective are open direction? because if you cannot walk
+  through squares no one could be inside the 4 tube, but they can be inside the bigger doughnut". *Ours, exact:*
+  nothing in any toy of the programme is open-ended, at four, six or eight links. A finite network in which
+  every point has all its links has no edge, so every arrangement closes on itself, and "opening a direction"
+  has only ever meant its way around becoming longer than one square. Flat (every link on exactly two squares)
+  is about a point's surroundings; wide is about the whole. Her view from inside is the `width` reading already
+  in the record (`scripts/read_endpoint_width.py`): the number of points within r steps matches the endless
+  grid's 2r² + 2r + 1 until r is half the way around. So a torus W around is open to anything that can check
+  fewer than W/2 steps, and the tube falls short at two steps, as early as a count can. Nobody is inside the
+  tube's hollow, which is only in the drawing; what the tube lacks is any room along its curled direction.
+  *Published, abstract only ([Planck15topo]):* astronomers put the same question to real space, which is
+  measured flat and not measured endless. In the edition's Chapter 3 from 13 October.
+- 2026-10-13, the owner, on the plain-language edition of paper 1: it "doesn't need to include sections that
+  don't tell us important information about the next questions that we're gonna ask or help explain something
+  about what the model says with support or against"; the pages on the long waits being "a measurement issue"
+  are "just not necessary for this version of the paper"; its reader is "a lay person but somebody who really
+  enjoys math physics and they want to understand how reality works and this theory", who does not need "how
+  we got to where we got to unless it's part of the narrative". *Ours:* the technical edition keeps the full
+  account, and the plain one keeps one sentence saying three earlier maps stay inconclusive, so that nothing
+  inconvenient is hidden by the cut (rule 7).
+

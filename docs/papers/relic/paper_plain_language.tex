@@ -41,11 +41,11 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\color{ink}What the burp leaves behind}
+\fancyhead[L]{\small\color{ink}What the change leaves behind}
 \fancyhead[R]{\small Plain-language edition}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
-\hypersetup{pdftitle={What the burp leaves behind: the story behind the experiment},pdfauthor={Emily Smith}}
+\hypersetup{pdftitle={What the change leaves behind: the story behind the experiment},pdfauthor={Emily Smith}}
 
 % Chapter opener, sub-heading, take-away box
 \newcommand{\chapterpage}[2]{\par\Needspace{16\baselineskip}\vspace{1.4em}{\color{accent}\small\textbf{#1}}\par\vspace{0.2em}{\color{ink}\LARGE\bfseries #2}\par\vspace{0.5em}}
@@ -67,12 +67,12 @@
 \thispagestyle{empty}
 {\color{accent}\small\textbf{THE STORY BEHIND THE EXPERIMENT}}\par
 \vspace{1em}
-{\color{ink}\fontsize{29}{33}\selectfont\bfseries What the burp leaves behind}\par
+{\color{ink}\fontsize{29}{33}\selectfont\bfseries What the change leaves behind}\par
 \vspace{0.5em}
 {\raggedright\Large How many scraps a sharp change leaves,\\and which of them last\par}
 \vspace{0.7em}
 \textbf{Emily Smith}\quad Independent researcher\par
-13 October 2026 \enspace\textbullet\enspace Draft plain-language edition of the technical paper of the same date~\cite{tech}
+14 October 2026 \enspace\textbullet\enspace Draft plain-language edition of the technical paper of the same date~\cite{tech}
 \vspace{0.9em}
 
 A sharp change rarely finishes the job. Ice that forms quickly traps bubbles. A crowd that leaves a
@@ -80,10 +80,11 @@ stadium leaves coats on the seats.
 
 This paper is about what a sharp change leaves behind in a toy model of dots and links. The first
 paper in this series~\cite{paper1} found that a particular curled arrangement of the toy waits, then
-changes all at once and gives off energy. That paper named the release \textbf{the burp}. It also
-found that the change usually stops one small piece short of finishing. We call a leftover piece like
-that a \textbf{scrap}. Here we ask three questions about scraps: how many are left, what they are, and
-whether they last.
+changes all at once and gives off energy. That paper named the release \textbf{the burp}. The change
+makes two things: the burp, and what is left behind. The first paper found that the change usually
+stops one small piece short of finishing, and that the leftover piece is not always the same kind of
+thing. We call a leftover piece a \textbf{scrap}. Here we ask what kinds of scrap there are, what they
+have in common and what sets them apart, how they come to be, how many are left, and whether they last.
 
 \Claim\ The reason for asking is the author's hypothesis that space emerged from something else by a
 sharp change, and that such a change leaves a remainder. She wants to test whether a remainder can
@@ -186,6 +187,11 @@ nothing. Around every dot the squares fit together as they do on a flat sheet of
 call an arrangement like that \textbf{flat}. Flat describes what a dot sees close by. It says nothing
 about how wide the tube is.
 
+The seam could slip further, by four dots or six, and the tube would be eight or ten around, also at no
+cost. Runs that finished clean almost never did that; runs that kept a scrap sometimes did, in part of
+the tube. Like the first paper, this one mostly follows the tube six around. Chapter~8 comes back to the
+other widths.
+
 \begin{center}
 \renewcommand{\arraystretch}{1.15}
 \begin{tabular}{lrr}
@@ -213,26 +219,50 @@ A run reports numbers: how many squares, how many dots that look flat. It is tem
 from those numbers. This project has done that five times and been wrong five times. So every
 statement below about what a scrap \emph{is} comes from reading a saved network link by link.
 
-\Exact\ The common scrap is a closed loop of four dots, wired the way a ring of the old tube was
-wired: still curled. Each of its four links carries a third square. At our knob setting it holds 14
+\Exact\ The common scrap is a closed loop of four dots that still closes a square, as each ring of
+the old tube did. It is still curled, in that sense, but it does not go around the new tube: it lies
+in the tube's wall. Six of the links at its dots carry a third square. At our knob setting it holds 14
 units, which is the burp of fourteen dots, held back. We call it a \textbf{curled loop}.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
-\fill[flatpale] (0,0) rectangle (6.0,1.2);
-\draw[flat!45,step=0.3] (0,0) grid (6.0,1.2);
-\draw[ink] (0,0) rectangle (6.0,1.2);
-\foreach \p in {(2.7,0.3),(3.0,0.3),(2.7,0.6),(3.0,0.6)} {\fill[curl] \p circle (0.08);}
-\draw[curl,very thick] (2.7,0.3) rectangle (3.0,0.6);
-\draw[curl] (3.1,0.5) -- (6.3,0.85);
-\node[font=\footnotesize,text=curl,anchor=west,align=left] at (6.4,0.85) {a curled loop: four dots still wired\\like a ring of the old tube; 14 units};
-\node[font=\footnotesize,text=ink] at (3.0,-0.45) {the new tube, drawn slit open and laid flat};
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize,>=Stealth]
+% the new tube, a short stretch of it, drawn as a pipe
+\fill[flatpale] (0,-1.1) rectangle (5.6,1.1);
+\foreach \t in {-64,-38,-13,13,38,64} {\draw[flat!45] (0,{1.1*sin(\t)}) -- (5.6,{1.1*sin(\t)});}
+\foreach \x in {0.45,0.9,...,5.2} {\draw[flat!45] (\x,1.1) arc (90:-90:0.32 and 1.1);}
+\draw[flat,thick] (0,-1.1) -- (5.6,-1.1) (0,1.1) -- (5.6,1.1);
+\draw[flat,thick] (0,0) ellipse (0.32 and 1.1);
+\draw[flat,thick] (5.6,1.1) arc (90:-90:0.32 and 1.1);
+\draw[flat!60,dashed] (5.6,1.1) arc (90:270:0.32 and 1.1);
+% the scrap on its wall: a closed loop of four dots
+\fill[curlpale] (2.2,-0.38) -- (2.95,-0.38) -- (3.45,0.42) -- (2.7,0.42) -- cycle;
+\draw[curl,line width=2pt] (2.2,-0.38) -- (2.95,-0.38);
+\draw[curl,line width=2pt] (2.7,0.42) -- (3.45,0.42);
+\draw[melt,line width=3.2pt] (2.95,-0.38) -- (3.45,0.42);
+\draw[melt,line width=3.2pt] (2.2,-0.38) -- (2.7,0.42);
+\foreach \p/\q in {{(2.2,-0.38)}/{(1.85,-0.78)},{(2.95,-0.38)}/{(3.3,-0.78)},{(3.45,0.42)}/{(3.8,0.82)},{(2.7,0.42)}/{(2.35,0.82)}} {\draw[melt,line width=3.2pt] \p -- \q;}
+\foreach \p in {(2.2,-0.38),(2.95,-0.38),(3.45,0.42),(2.7,0.42)} {\fill[curl] \p circle (0.11);}
+% callouts
+\draw[curl] (2.8,0.42) -- (2.8,1.55);
+\node[text=curl,anchor=south,align=center] at (2.8,1.55) {four dots joined in a loop that still closes a square};
+\draw[melt] (3.25,0.05) -- (6.3,0.35);
+\draw[melt] (3.4,-0.85) -- (6.3,0.2);
+\node[text=melt,anchor=west,align=left] at (6.35,0.27) {thick: a link that carries a third square,\\like each link around the old tube;\\six of them, two on the loop\\and one leaving each dot};
+\node[text=ink,align=center] at (2.8,-1.55) {a short stretch of the new tube, six around};
+% the bill
+\node[anchor=north west,inner sep=0pt] at (6.35,-0.75) {\renewcommand{\arraystretch}{1.1}\begin{tabular}{@{}lr@{}}
+six surplus squares, at 5 each & $+30$\\
+one extra square, saved & $-16$\\ \midrule
+\textbf{the curled loop holds} & \textbf{14}\\ \end{tabular}};
 \end{tikzpicture}
-\caption{The common scrap. \Exact\ Read from the wiring: a closed loop of four dots with one extra
-square and six surplus squares, 14 units at our knob setting. Lighter versions with four or five
-surplus squares hold 4 or 9 units. The drawing shows where it sits in the new tube. It cannot show the
-loop's extra squares, which is why the wiring had to be read.}
+\caption{The common scrap, link by link. \Exact\ The wiring and the bill. Read from the saved
+networks of the first paper's maps and this paper's large test, 1,094 of 2,045 four-dot scraps are
+wired this way. Most of the rest are a lighter kind, 4 units, in which all four sides of the loop carry
+a third square and no link leaving it does; a few have five surplus squares and hold 9. None of the
+2,045 goes around the new tube. \Sketch\ Where the loop sits on the tube is drawn to show its size. The
+network has no positions, and the tube is too narrow for a picture of the fabric around the scrap to
+be read off the wiring.}
 \label{fig:loop}
 \end{figure}
 
@@ -264,13 +294,16 @@ the tube would look like. The measured counts sit flat. The prediction that they
 
 \Meas\ A second test asked where the scrap sits. Two guesses were written down: at the place the
 change started, or at the far side, where the change spreading both ways around the tube would meet
-itself. It sits at neither. Its position is spread evenly along the tube.
+itself. It sits at neither. Its position is spread evenly along the tube. So this scrap is not a seam
+where the change met itself. We call a scrap that sits inside the new tube, away from any meeting
+place, a \textbf{free scrap}.
 
 \MeasX\ In 9 of the 80 boxes the leftover was not a curled loop. It was a different object holding 20
 units, which the first paper called a twist. It comes back in Chapter~7.
 
 \takeaway{A change that starts in one place leaves about one scrap, whatever the size of the tube,
-and the scrap can sit anywhere. The common scrap is a curled loop of four dots holding 14 units.}
+and the scrap can sit anywhere: it is a free scrap. The common one is a curled loop of four dots
+holding 14 units, and it is not the only kind.}
 
 \chapterpage{3 \enspace MORE STARTS}{Does every start leave a scrap?}
 
@@ -284,7 +317,8 @@ fronts meet, two changed stretches join.
 
 \Meas\ A tube of 384 dots was sealed in a cold box, and the change was started by hand at one, two,
 four or eight evenly spaced places, twenty runs each. The author's hypothesis fits one scrap per
-start. Our own guess leaned toward one scrap per tube, however many starts. Neither held.
+start. Another guess, which the last chapter invites, is one scrap per tube, however many starts.
+Neither held.
 
 \begin{figure}[H]
 \centering
@@ -376,7 +410,7 @@ It healed at every warmth.
 \end{tikzpicture}
 \caption{How long a lone curled loop lasted in a bath. \Meas\ Each bar runs from the first scrap healed
 to the last. The scrap's position was read every 500 sweeps, so 500 is the shortest time the test
-could report. Our own prediction, that it would stay in the coolest bath, was wrong.}
+could report. Even the coolest bath healed every one, in time.}
 \label{fig:heal}
 \end{figure}
 
@@ -417,12 +451,6 @@ It freezes in. Even a cooling of 30,000 sweeps, more than twice the longest heal
 starting warmth, kept most scraps, because the bath leaves the range where healing is quick early in
 the cooling. The scraps that healed did so in the first 15,000 sweeps.
 
-\Meas\ The author's prediction was that it would freeze in. It was written down for her from what she
-had said, and she confirmed it as hers only after the result was in, so it does not count as a
-prediction made beforehand. Ours was made beforehand: that it freezes in, and that cooling slower than
-1,000 to 10,000 sweeps would lose most scraps. The first half held. The second was wrong by a factor
-of three to thirty.
-
 \takeaway{A scrap that would heal in any warm bath survives if the bath cools, even slowly. Cooling
 freezes it in.}
 
@@ -436,9 +464,10 @@ then cooled.
 One thing has to be fixed first. A swap needs two particular links to be picked together. In a
 network ten times larger, any particular pair is picked a tenth as often in a sweep. So anything
 local, like a scrap healing, takes more sweeps in a bigger network for no reason but bookkeeping. To
-compare sizes we count time in \textbf{fair sweeps}: sweeps scaled so that each small neighborhood
-gets as many chances as it would in a 96-dot network. At 1,024 dots one fair sweep is about eleven
-sweeps.
+compare sizes we count time in \textbf{fair sweeps}, the fair clock of the first paper's Chapter~5:
+sweeps scaled so that each small neighborhood gets as many chances as it would in a 96-dot network. At
+1,024 dots one fair sweep is about eleven sweeps. The clock decides how a cooling time at one size
+compares with a cooling time at another. No energy, and no reading of a scrap's wiring, depends on it.
 
 \sub{The test}
 \Meas\ Eighty tubes of 1,024 dots were left in a bath at warmth 1.25 until the change was over. Each
@@ -448,7 +477,7 @@ slowest cooling used the first forty.
 
 The question written down beforehand was the \emph{shape} of the fall. Does each tenfold slowing of
 the cooling lose a steady fraction of the curled loops (a gentle fall), or does the count hold and
-then collapse (a cliff)? The author predicted a gentle fall. So did we.
+then collapse (a cliff)? The author predicted a gentle fall.
 
 \begin{figure}[H]
 \centering
@@ -467,7 +496,7 @@ start above 100\% because a few loops form after the first count.}
 \label{fig:cliff}
 \end{figure}
 
-A cliff. Both predictions failed.
+A cliff. The prediction failed.
 
 \sub{The energy that stays is not in the curled loops}
 \Meas\ If curled loops were the only leftovers, the energy held in leftovers would have fallen with
@@ -533,71 +562,89 @@ stuck on its own. The author's prediction failed.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
-% curled loop
-\begin{scope}[shift={(0,0)}]
-\fill[flatpale] (0,0) rectangle (3.0,1.8);
-\draw[flat!45,step=0.3] (0,0) grid (3.0,1.8);
-\draw[ink] (0,0) rectangle (3.0,1.8);
-\foreach \p in {(1.2,0.6),(1.5,0.6),(1.2,0.9),(1.5,0.9)} {\fill[curl] \p circle (0.08);}
-\draw[curl,very thick] (1.2,0.6) rectangle (1.5,0.9);
-\node[text=ink,align=center,font=\footnotesize] at (1.5,-0.75) {\textbf{curled loop}\\4 dots, 14 units\\heals when cooled slowly};
+% a short stretch of the new tube drawn as a pipe, at x-offset #1
+\newcommand{\pipe}[1]{%
+\begin{scope}[shift={(#1,0)}]
+\fill[flatpale] (0,-1.0) rectangle (4.0,1.0);
+\foreach \t in {-62,-36,-12,12,36,62} {\draw[flat!45] (0,{1.0*sin(\t)}) -- (4.0,{1.0*sin(\t)});}
+\foreach \x in {0.4,0.8,...,3.7} {\draw[flat!45] (\x,1.0) arc (90:-90:0.28 and 1.0);}
+\draw[flat,thick] (0,-1.0) -- (4.0,-1.0) (0,1.0) -- (4.0,1.0);
+\draw[flat,thick] (0,0) ellipse (0.28 and 1.0);
+\draw[flat,thick] (4.0,1.0) arc (90:-90:0.28 and 1.0);
+\draw[flat!60,dashed] (4.0,1.0) arc (90:270:0.28 and 1.0);
+\end{scope}}
+\begin{tikzpicture}[x=0.95cm,y=0.95cm,font=\footnotesize]
+% ---------- the curled loop
+\pipe{0}
+\fill[curlpale] (1.5,-0.32) -- (2.1,-0.32) -- (2.5,0.36) -- (1.9,0.36) -- cycle;
+\draw[curl,line width=1.8pt] (1.5,-0.32) -- (2.1,-0.32) (1.9,0.36) -- (2.5,0.36);
+\draw[melt,line width=2.8pt] (2.1,-0.32) -- (2.5,0.36) (1.5,-0.32) -- (1.9,0.36);
+\foreach \p/\q in {{(1.5,-0.32)}/{(1.2,-0.66)},{(2.1,-0.32)}/{(2.4,-0.66)},{(2.5,0.36)}/{(2.8,0.7)},{(1.9,0.36)}/{(1.6,0.7)}} {\draw[melt,line width=2.8pt] \p -- \q;}
+\foreach \p in {(1.5,-0.32),(2.1,-0.32),(2.5,0.36),(1.9,0.36)} {\fill[curl] \p circle (0.1);}
+\node[text=ink,align=center] at (2.0,-1.75) {\textbf{curled loop}\\a loop of four that still\\closes a square; 14 units};
+% ---------- the double loop: wired like the corners and edges of a cube
+\pipe{5.0}
+\begin{scope}[shift={(5.0,0)}]
+\fill[curlpale,opacity=0.85] (1.4,-0.55) -- (2.25,-0.55) -- (2.25,0.3) -- (1.4,0.3) -- cycle;
+\fill[curlpale!70,opacity=0.85] (2.25,-0.55) -- (2.65,-0.23) -- (2.65,0.62) -- (2.25,0.3) -- cycle;
+\fill[curlpale!85,opacity=0.85] (1.4,0.3) -- (2.25,0.3) -- (2.65,0.62) -- (1.8,0.62) -- cycle;
+\draw[curl,line width=1.4pt,dashed] (1.8,0.62) -- (1.8,-0.23) -- (1.4,-0.55) (1.8,-0.23) -- (2.65,-0.23);
+\draw[curl,line width=1.8pt] (1.4,-0.55) -- (2.25,-0.55) -- (2.25,0.3) -- (1.4,0.3) -- cycle;
+\draw[curl,line width=1.8pt] (2.25,-0.55) -- (2.65,-0.23) -- (2.65,0.62) -- (2.25,0.3) (2.65,0.62) -- (1.8,0.62) -- (1.4,0.3);
+\foreach \p in {(1.4,-0.55),(2.25,-0.55),(2.25,0.3),(1.4,0.3),(1.8,-0.23),(2.65,-0.23),(2.65,0.62),(1.8,0.62)} {\fill[curl] \p circle (0.09);}
+\node[text=ink,align=center] at (2.0,-1.75) {\textbf{double loop}\\eight dots wired like the\\corners of a cube; 8 units};
 \end{scope}
-% double loop
-\begin{scope}[shift={(4.4,0)}]
-\fill[flatpale] (0,0) rectangle (3.0,1.8);
-\draw[flat!45,step=0.3] (0,0) grid (3.0,1.8);
-\draw[ink] (0,0) rectangle (3.0,1.8);
-\foreach \p in {(1.2,0.6),(1.5,0.6),(1.2,0.9),(1.5,0.9),(1.2,1.2),(1.5,1.2),(1.2,0.3),(1.5,0.3)} {\fill[curl] \p circle (0.08);}
-\draw[curl,very thick] (1.2,0.3) rectangle (1.5,0.6);
-\draw[curl,very thick] (1.2,0.9) rectangle (1.5,1.2);
-\draw[curl,thick] (1.2,0.6) -- (1.2,0.9) (1.5,0.6) -- (1.5,0.9);
-\node[text=ink,align=center,font=\footnotesize] at (1.5,-0.75) {\textbf{double loop}\\8 dots, 8 units\\stayed through every cooling};
+% ---------- the twist: two pairs with a square too many, two with a square too few
+\pipe{10.0}
+\begin{scope}[shift={(10.0,0)}]
+\draw[curl,line width=1.8pt] (1.15,0.42) -- (1.6,0.42) (2.4,-0.42) -- (2.85,-0.42);
+\foreach \p in {(1.15,0.42),(1.6,0.42),(2.4,-0.42),(2.85,-0.42)} {\fill[curl] \p circle (0.1);}
+\draw[ink,line width=1.4pt,densely dashed] (1.15,-0.42) -- (1.6,-0.42) (2.4,0.42) -- (2.85,0.42);
+\foreach \p in {(1.15,-0.42),(1.6,-0.42),(2.4,0.42),(2.85,0.42)} {\filldraw[fill=white,draw=ink,line width=1.2pt] \p circle (0.1);}
+\node[text=ink,align=center] at (2.0,-1.75) {\textbf{twist}\\eight dots of two kinds;\\20 to 30 units};
 \end{scope}
-% twist
-\begin{scope}[shift={(8.8,0)}]
-\fill[flatpale] (0,0) rectangle (3.0,1.8);
-\draw[flat!45,step=0.3] (0,0) grid (3.0,1.8);
-\draw[ink] (0,0) rectangle (3.0,1.8);
-\foreach \p in {(0.9,1.2),(1.2,1.2),(1.8,0.6),(2.1,0.6)} {\fill[curl] \p circle (0.08);}
-\foreach \p in {(0.9,0.6),(1.2,0.6),(1.8,1.2),(2.1,1.2)} {\fill[melt] \p circle (0.08);}
-\draw[curl,very thick] (0.9,1.2) -- (1.2,1.2) (1.8,0.6) -- (2.1,0.6);
-\draw[melt,very thick] (0.9,0.6) -- (1.2,0.6) (1.8,1.2) -- (2.1,1.2);
-\node[text=ink,align=center,font=\footnotesize] at (1.5,-0.75) {\textbf{twist}\\8 dots of two kinds, 20 to 30 units\\stayed through every cooling};
-\end{scope}
+% legend
+\node[anchor=north west,align=left,text width=14.6cm] at (-0.3,-2.75) {%
+\tikz\fill[curl] (0,0) circle (0.09); a dot with a square too many \quad
+\tikz\filldraw[fill=white,draw=ink,line width=1.1pt] (0,0) circle (0.09); a dot with a square too few \quad
+\tikz\draw[melt,line width=2.6pt] (0,0) -- (0.4,0); a link with a third square};
 \end{tikzpicture}
-\caption{The three kinds of scrap. \Sketch\ The positions are drawn to show the sizes and are not
-copied from a network. \Exact\ What is exact is in the text and the table: how many dots, how they are
-wired, and what they hold. Orange dots have a square too many around them. Purple dots have a square
-too few.}
+\caption{The three kinds of scrap. \Exact\ How many dots, how they are wired, and what they hold, read
+from the saved networks. The curled loop is the one of Figure~\ref{fig:loop}. The double loop's eight
+dots have twelve links among them, three each, wired like the corners and edges of a cube: two loops of
+four joined corner to corner, as two neighboring rings of the old tube were. In the twist, each orange dot
+has two links that carry a third square, and each hollow dot has two links that carry only one. \Sketch\ Where each sits on the tube, and the pairs' arrangement, are drawn to
+show the sizes.}
 \label{fig:three}
 \end{figure}
 
 \begin{center}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{llrl}
+\begin{tabular}{@{}lccc@{}}
 \toprule
-Scrap & what it is & holds & cheapest swap out\\
+ & curled loop & double loop & twist\\
 \midrule
-curled loop & one ring of the old tube, still curled & 14 units & costs 12\\
-double loop & two rings of the old tube, still curled & 8 units & costs 11\\
-twist & eight dots of two kinds & 20 to 30 units & costs 11\\
+dots & 4 & 8 & 8, of two kinds\\
+holds & 14 units & 8 units & 20 to 30 units\\
+cheapest swap out & costs 12 & costs 11 & costs 11\\
+when cooled slowly & heals & stays & stays\\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The \textbf{double loop} is eight dots wired as a short stub of the old tube, two rings long. The
-\textbf{twist} is eight dots of two kinds. Four of them, in two linked pairs, have a square too many
-around them, as the dots of a curled loop do. The other four, also in two linked pairs, have a square
-too few. The count of leftover pieces in the last chapter split each twist into four pieces of two
-dots, which is why so many pieces of two appeared. \Ours\ The 20-unit twist that turned up in 9 of 80
-boxes in Chapter~2 is the same kind of object. Whether it is wired exactly the same has not been
-settled.
+\textbf{What the three share.} \Exact\ Each is stuck on its own: every single swap out of it costs
+energy. Each holds a fixed amount, set by its wiring and not by the size of the tube. Each was made by
+the change, and almost none holds a link reaching far across the tube (4 pieces of 2,121). \textbf{What sets them apart} is their
+size, what they hold, whether their dots have a square too many or also a square too few, and their
+fate when cooled slowly. The count of leftover pieces in the last chapter split each twist into four
+pieces of two dots, which is why so many pieces of two appeared. \Ours\ The 20-unit twist that turned
+up in 9 of 80 boxes in Chapter~2 is the same kind of object. Whether it is wired exactly the same has
+not been settled.
 
 \sub{The same first step, a different fate}
 \Exact\ The cheapest swap out of a curled loop costs 12 units. The cheapest swap out of a double loop
-or a twist costs 11 in nearly every one read. Those are nearly the same. Yet the curled loop heals when cooled slowly and
-the other two do not.
+or a twist costs 11 in nearly every one read. Those are nearly the same. Yet the curled loop heals when
+cooled slowly and the other two do not.
 
 \Ours\ So the first step cannot be what decides. What decides must lie further along: after the first
 costly swap, a curled loop must have a way downhill to the flat pattern, and the other two must not
@@ -607,35 +654,39 @@ have one within reach. Nobody has traced those paths. Until someone does, this p
 survived cooling were going to carry the paper's main result, so they were read from the wiring
 before they were named, with the guesses and their tests written down first.}
 
-\takeaway{The change leaves three kinds of scrap: the curled loop, the double loop and the twist.
-Each is stuck on its own, and none is a seam. Leaving any of them costs about the same first step,
-yet only the curled loop heals.}
+\takeaway{The change leaves three kinds of scrap: the curled loop, the double loop and the twist. All
+three are stuck on their own and hold a fixed amount, and none is a seam of the kind tested, a
+far-reaching link. Leaving any of them costs about the same first step, yet only the curled loop
+heals.}
 
-\chapterpage{8 \enspace WHERE SCRAPS SIT}{A scrap can be the joint between two widths}
+\chapterpage{8 \enspace WHERE SCRAPS SIT}{Free scraps, and scraps that are joints}
 
-The author's guess in the last chapter was that leftovers are seams: what is left where two stretches
-of new tube met. As tested, by looking for a far-reaching link, that failed. A reading made three
-days later suggests it may be right in a different form.
+Two tests so far said the scraps are not seams. The single scrap of Chapter~2 does not sit where the
+change met itself, and almost no leftover in Chapter~7 holds a link reaching far across the tube. A
+reading of the first paper's saved runs finds a seam of a different sort.
 
 \sub{The new tube does not have to be six around}
 \Exact\ Chapter~1 said the curled tube turns into a tube six around, its seam slipped by two dots.
 The seam can slip further. Slip it by four and the tube is eight around. Slip it by six and it is ten
 around. Every one of those costs nothing, because the toy charges for loops of four dots and for
-nothing longer. So the toy has many arrangements of zero energy, and it has no preference among them.
+nothing longer. So only the first slip, from four around to six, gives off energy, and nothing pushes
+the change past it. Runs that finished clean almost always stopped there.
 
 \MeasX\ The first paper saved the final network of 11,880 runs. In 2,014 of them the change had
 finished with something left over. Those were read again, looking only at dots far enough from any
-leftover to see clean flat pattern all around them.
+leftover to see clean flat pattern all around them, which shows how wide the tube is there.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{lr}
+\begin{tabular}{@{}lr@{}}
 \toprule
 Of 2,014 finished runs with something left over & runs\\
 \midrule
-at least one stretch wider than six around & 960\\
+six around wherever it could be read & 774\\
+wider than six wherever it could be read & 473\\
 a stretch six around \emph{and} a wider stretch & 440\\
 \quad of those, the two stretches touch directly & 0\\
+the rest: too few clean dots, or counts that fit neither width & 327\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -645,42 +696,63 @@ a stretch six around \emph{and} a wider stretch & 440\\
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm,font=\small]
-\fill[flatpale] (0,0.3) rectangle (4.2,1.5);
-\draw[flat!45,step=0.3] (0,0.3) grid (4.2,1.5);
-\draw[flat,thick] (0,0.3) rectangle (4.2,1.5);
-\fill[flatpale] (5.1,0) rectangle (9.6,1.8);
-\draw[flat!45,step=0.3] (5.1,0) grid (9.6,1.8);
-\draw[flat,thick] (5.1,0) rectangle (9.6,1.8);
-\fill[curlpale] (4.2,0.3) -- (5.1,0) -- (5.1,1.8) -- (4.2,1.5) -- cycle;
-\draw[curl,thick] (4.2,0.3) -- (5.1,0) (4.2,1.5) -- (5.1,1.8);
-\foreach \p in {(4.5,0.75),(4.8,0.75),(4.5,1.05),(4.8,1.05)} {\fill[curl] \p circle (0.08);}
-\node[text=ink,font=\footnotesize,align=center] at (2.1,-0.45) {a stretch six around};
-\node[text=ink,font=\footnotesize,align=center] at (7.35,-0.45) {a wider stretch};
-\node[text=curl,font=\footnotesize,align=center] at (4.65,2.25) {a scrap\\between them};
+% the narrower stretch: six around
+\fill[flatpale] (0,-0.75) rectangle (4.0,0.75);
+\foreach \t in {-58,-30,0,30,58} {\draw[flat!45] (0,{0.75*sin(\t)}) -- (4.0,{0.75*sin(\t)});}
+\foreach \x in {0.4,0.8,...,3.7} {\draw[flat!45] (\x,0.75) arc (90:-90:0.22 and 0.75);}
+\draw[flat,thick] (0,-0.75) -- (4.0,-0.75) (0,0.75) -- (4.0,0.75);
+\draw[flat,thick] (0,0) ellipse (0.22 and 0.75);
+% the collar where they meet: the scrap
+\fill[curlpale] (4.0,-0.75) -- (5.0,-1.15) -- (5.0,1.15) -- (4.0,0.75) -- cycle;
+\draw[curl,thick] (4.0,-0.75) -- (5.0,-1.15) (4.0,0.75) -- (5.0,1.15);
+\draw[curl,thick] (4.0,0.75) arc (90:-90:0.22 and 0.75);
+\foreach \p in {(4.32,-0.18),(4.68,-0.18),(4.32,0.22),(4.68,0.22)} {\fill[curl] \p circle (0.08);}
+% the wider stretch
+\fill[flatpale] (5.0,-1.15) rectangle (9.6,1.15);
+\foreach \t in {-62,-38,-13,13,38,62} {\draw[flat!45] (5.0,{1.15*sin(\t)}) -- (9.6,{1.15*sin(\t)});}
+\foreach \x in {5.45,5.9,...,9.3} {\draw[flat!45] (\x,1.15) arc (90:-90:0.33 and 1.15);}
+\draw[flat,thick] (5.0,-1.15) -- (9.6,-1.15) (5.0,1.15) -- (9.6,1.15);
+\draw[curl,thick] (5.0,1.15) arc (90:-90:0.33 and 1.15);
+\draw[flat,thick] (9.6,1.15) arc (90:-90:0.33 and 1.15);
+\draw[flat!60,dashed] (9.6,1.15) arc (90:270:0.33 and 1.15);
+\node[text=ink,font=\footnotesize,align=center] at (2.0,-1.35) {a stretch six around};
+\node[text=ink,font=\footnotesize,align=center] at (7.3,-1.6) {a wider stretch};
+\node[text=curl,font=\footnotesize,align=center] at (4.5,1.75) {a scrap where they meet};
 \end{tikzpicture}
-\caption{A scrap as a joint. \Sketch\ A tube drawn slit open: narrower on the left, wider on the right.
-\Exact\ In every one of the 440 saved networks that hold both widths, the two never meet directly. A
-leftover always sits between them.}
+\caption{A scrap as a joint. \Sketch\ Narrower on the left, wider on the right; the widths are drawn to
+suggest, not to scale. \Exact\ In every one of the 440 saved networks that hold both widths, the two
+never meet directly. A leftover always sits between them.}
 \label{fig:joint}
 \end{figure}
 
-\Ours\ So some scraps are not strays inside one uniform tube. They are the joint where a narrower
-stretch meets a wider one. A joint like that may not be removable at all while the two stretches keep
-different widths, which would be a reason for a scrap to last that has nothing to do with cooling.
-That is a reading of old runs, made after the fact. Which of the three kinds of scrap are joints has
-not been read. Before it counts, it needs its own prediction and fresh runs.
+\sub{Two places a scrap can sit}
+So a scrap can sit in one of two places. A \textbf{free scrap} sits inside a stretch of one width, as
+the scrap of Chapter~2 does. A \textbf{joint} sits where a stretch six around meets a wider one: a seam,
+though not the kind Chapter~7 tested, since it needs no link reaching far across the tube. \MeasX\ Free
+scraps are the common case. In about three of every five runs that kept a leftover, every leftover sat
+inside one width; about one in five holds a joint. The first paper's sealed boxes with little room show
+the same thing on a larger scale: patchworks of stretches six around and wider, with flaws frozen in
+where the stretches meet~\cite{paper1}.
 
-\takeaway{The new tube can be six around, eight around or wider at no cost. Where a run holds two
-widths, a scrap always sits between them. Some scraps may be joints and not strays.}
+\Ours\ How a joint might come to be: two starts whose stretches slipped by different amounts, say by
+two and by four, grow toward each other, and where they meet the wiring cannot match. A joint like that
+may not be removable at all while the two stretches keep different widths, which would be a reason for
+a scrap to last that has nothing to do with cooling. That is a reading of old runs, made after the
+fact. Which of the three kinds of scrap are joints has not been read. Before it counts, it needs its own
+prediction and fresh runs.
+
+\takeaway{A scrap can be free, inside one width, or a joint, where a stretch six around meets a wider
+one. Free scraps are the common case. Where a run holds two widths, a scrap always sits between them.}
 
 \chapterpage{9 \enspace WHAT WE HAVE LEARNED, AND WHAT COMES NEXT}{The remainder that lasts is not the common one}
 
 \sub{What is established in the toy}
-A sharp change in this toy leaves small scraps of three kinds, each stuck on its own. One start
-leaves about one. More starts leave more, though fewer than one each, and a tube that starts itself
-leaves them in step with its length. A lone curled loop heals in any warm bath and is frozen in by
-cooling. Among many scraps, slow cooling removes the curled loops and leaves the double loops and
-twists, which hold most of the energy that stays.
+A sharp change in this toy leaves small scraps of three kinds, each stuck on its own and each holding a
+fixed amount. Most are free, sitting inside the new tube; some are joints, where a stretch six around
+meets a wider one. One start leaves about one. More starts leave more, though fewer than one each, and
+a tube that starts itself leaves them in step with its length. A lone curled loop heals in any warm
+bath and is frozen in by cooling. Among many scraps, slow cooling removes the curled loops and leaves
+the double loops and twists, which hold most of the energy that stays.
 
 \Ours\ For the question the author wants tested, whether a remainder can last, the toy's answer has a
 twist of its own. The scrap everyone counted first is the one that goes. The ones that last are rarer,
@@ -701,9 +773,10 @@ three large directions to work with instead of one.
 
 \sub{Three predictions that failed}
 \Meas\ They are part of the result. Scraps were predicted to grow with the tube, and they do not
-(Chapter~2). The curled loops were predicted to fall gently with slower cooling, by the author and by
-us, and they fall off a cliff (Chapter~6). The leftovers that survive were predicted by the author to
-be seams, and by the registered test they are not (Chapter~7).
+(Chapter~2). The curled loops were predicted to fall gently with slower cooling, and they fall off a
+cliff (Chapter~6). The leftovers that survive were predicted by the author to be seams, and by the
+registered test they are not (Chapter~7), though some scraps turn out to be joints of another kind
+(Chapter~8).
 
 \sub{This has been studied before, in other materials}
 \Pub\ People who study how order forms in materials have names for nearly everything in this paper. A
@@ -722,8 +795,9 @@ that stay. The next step is to list, swap by swap, every route from each kind of
 pattern, and find the lowest pass on any of them. That is an exact calculation, with no chance in
 it.
 
-\textbf{Test the joint.} Chapter~8's reading becomes a prediction: in fresh runs, scraps that sit
-between two widths should outlast scraps that sit inside one.
+\textbf{Test the joint.} Chapter~8's reading becomes a prediction: in fresh runs, joints should
+outlast free scraps, and two starts that slip by different amounts should leave a joint where they
+meet.
 
 \textbf{A rule that pays for width.} The first paper ends with a new price, on loops of six dots,
 which makes tubes go on widening past six around. \Meas\ In those runs the wide result was full of
@@ -757,7 +831,7 @@ $N$, $L$ & $N$ is the number of dots. A $4\times L$ torus is the curled tube: fo
 $\lambda$ and $g$ & Lambda is the knob. $g$ is the bath's warmth. People who study materials use both letters for other things, and the technical paper warns them.\\
 $d$ & The square-count signature: how many of the six pairs of links at a dot close no square. 2 where the pattern is flat, 1 on the curled tube, 3 where a square is missing.\\
 Relic & A scrap.\\
-Column & A curled loop: one ring of the old tube still curled.\\
+Column & A curled loop: four dots in a loop that still closes a square, as a ring of the old tube did. It does not go around the new tube.\\
 Double column & A double loop.\\
 Knot of two kinds & A twist.\\
 Seed, nucleation & A start: a place where the change begins.\\
@@ -778,7 +852,8 @@ The technical manuscript is in
 with every configuration, random seed, result file and prediction. Experiment labels in that record:
 T10 and T11 (one start, and where the scrap sits), T17 (planted starts), T37 (tubes that start
 themselves), T19 (warm baths), T25 (cooling one scrap), T51 (the large test) and T55 (the three
-guesses). The reading of Chapter~8 is entry O116 of the project's list of findings.
+guesses). The reading of Chapter~8 is entry O116 of the project's list of findings, and the curled
+loop's wiring in Figure~\ref{fig:loop} is entry O126.
 
 \sub{Disclosure}
 The author used Claude (Anthropic) and ChatGPT/Codex (OpenAI) to assist with code, analysis and
@@ -820,8 +895,8 @@ Cited in the technical paper only; read in part.
 \bibitem{BBJC26} A.~Bora, S.~S. Bakshi, H.~Jang, and G.-W. Chern, \emph{Cooperative domain-wall dynamics in
 a two-dimensional quasiclassical Holstein model}, arXiv:2609.28436 (2026). Cited in the technical paper
 only; read in part.
-\bibitem{tech} E.~Smith, \emph{What the burp leaves behind: relic defects of fixed size in a graph model
-of emergent geometry}, technical manuscript, draft of 13 October 2026,
+\bibitem{tech} E.~Smith, \emph{What the change leaves behind: relic defects of fixed size in a graph model
+of emergent geometry}, technical manuscript, draft of 14 October 2026,
 \href{https://github.com/EmilySmithCreate/RecreationalPhysics/tree/main/docs/papers/relic}{in the project repository}.
 \end{thebibliography}
 

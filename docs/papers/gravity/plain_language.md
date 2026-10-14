@@ -1,13 +1,18 @@
 # Why the leftovers do not pull on each other, and what a pull would need
 
-**Series paper 11, plain-language draft, 10 October 2026.** The technical version is `paper.tex` in this folder
-(first written 25 September, revised today). No physicist has reviewed either. Labels in capitals say what kind of
-statement follows: PUBLISHED (someone else's printed work), EXACT (arithmetic anyone can rerun), MEASURED (a
-simulation whose rules were written first), OURS (our reading, unchecked), THE AUTHOR'S (Emily Smith's hypothesis).
+**Series paper 11, plain-language draft of 10 October 2026, revised 14 October 2026.** The technical version is
+`paper.tex` in this folder (first written 25 September, revised 14 October). No physicist has reviewed either.
+
+Labels in capitals say what kind of statement follows:
+
+- PUBLISHED: someone else's printed work.
+- EXACT: arithmetic anyone can rerun.
+- OUR READING: a reading offered by the author and her AI assistants, checked by no physicist.
+- THE AUTHOR'S: Emily Smith's hypothesis, which she wants tested.
 
 ## The question in one paragraph
 
-In this series a curled-up arrangement opens into flat space and leaves a few small knots behind. THE AUTHOR'S
+In this series a curled-up arrangement opens out into flat space and leaves a few small knots behind. THE AUTHOR'S
 hypothesis says gravity belongs to space: space has its own drive to curve, and things in it are drawn together
 through the space between them. So here is a plain test for the toy model. Put two leftover knots into flat space,
 some distance apart. Do they pull on each other?
@@ -39,9 +44,9 @@ park. The only discount comes when they touch.
 arrangements with more symmetry weigh more. That favors tidy placements, such as two knots exactly opposite each
 other. It does not favor near over far, so it is not a pull.
 
-**3. Flat space is stiff.** EXACT for the cost, OURS for what follows from it. Every single change to flat space
-costs a fixed amount, the same however large the space is. A stiff medium passes a disturbance along only a few
-steps before it dies out. Think of pushing on a brick wall: the push is felt where you push, not across the
+**3. Flat space is stiff.** EXACT for the cost, OUR READING for what follows from it. Every single change to flat
+space costs a fixed amount, the same however large the space is. A stiff medium passes a disturbance along only a
+few steps before it dies out. Think of pushing on a brick wall: the push is felt where you push, not across the
 building. PUBLISHED work on stiff media says the same: a force carried by a medium reaches only as far as the
 medium's own ripples do.
 
@@ -62,25 +67,26 @@ PUBLISHED work on forces that arise inside a medium names three ingredients, all
 ## The simplest thing that would do it
 
 EXACT. A network already carries one freely rippling thing if you allow it: a number on every dot, with a small
-cost whenever neighboring dots disagree. We worked out exactly what this would add.
+cost whenever neighboring dots disagree. Here is exactly what it would add.
 
 - By itself it gives a faint attraction that dies off very fast with distance. Right direction, wrong shape.
-- If each leftover is a source for it, the result has the shape of Newton's gravity in three directions: it falls
-  off as one over the distance.
+- If each leftover is a source for it, then in a space with three directions, like ours, the result has the shape of
+  Newton's gravity: it falls off as one over the distance.
 - It barely changes which arrangements the toy prefers, so nothing in the first papers would move.
 
-OURS. This would be putting gravity in, not finding it. What would be new is that the number lives on a network
-that rearranges itself, so the thing carrying the pull travels through a space that the same rules built.
+OUR READING. This would be putting gravity in, not finding it. What would be new is that the number lives on a
+network that rearranges itself, so the thing carrying the pull travels through a space that the same rules built.
 
 ## Where things stand now
 
-**Two routes.** THE AUTHOR'S decision and OURS for the cautions.
+There are two routes. Choosing them is THE AUTHOR'S decision; the cautions are OUR READING.
 
 *A pull from counting, with nothing added.* Some published accounts get gravity from counting what a boundary
-hides. For that to work here, the hidden count around a leftover has to grow with the boundary's size, and warm
-flat space has to feel two leftovers at once. The count has been computed and is waiting to be read by the rules
-written for it. How far warm space feels a disturbance is measured next. If that reach is short, this route is
-closed.
+hides. For that to work here, two things must hold:
+
+- the hidden count around a leftover has to grow with the boundary's size;
+- warm flat space has to feel two leftovers at once. If warm space feels a disturbance only a short way, this route
+  is closed.
 
 *A number on every dot.* The author has decided to add one, on a condition: it must match her account of gravity
 and give Einstein's numbers wherever those have been measured. Here is the catch. One number per dot is a theory
@@ -88,8 +94,8 @@ physicists tried a century ago. It gets falling apples right and starlight wrong
 is seen to bend. So the condition needs more than one number per dot.
 
 **The nearest published relative.** PUBLISHED. Ginestra Bianconi's "gravity from entropy" has a field of this kind
-at every point of space, with equations for it. OURS: we tried the network version of her rule on our own
-arrangements (the paper before this one). Used in the most direct way, it behaves like our rule with the knob set
+at every point of space, with equations for it. OUR READING: the network version of her rule was tried on the toy's
+own arrangements (the paper before this one). Used in the most direct way, it behaves like the toy with its knob set
 where curling up wins, so it could not simply be borrowed. It is something to compare against, not evidence.
 
 ## What this paper does not show
@@ -98,10 +104,16 @@ It does not show that the author's account of gravity is wrong. It shows that th
 nothing in it that could carry a pull across a distance, and it names what would. A pull that comes from the
 network rearranging itself in warm surroundings has not been measured.
 
+## Why it matters
+
+The author's account puts gravity in space itself, so whether the toy's space can carry a pull decides what the toy
+must gain before it can test that account. It shapes the next questions: whether counting alone
+can supply a pull, and, if not, what a number on every dot must represent before it is added.
+
 ## What comes next
 
-- The reading of the hidden count.
-- How far a disturbance is felt in warm flat space.
+- Reading the hidden count around a leftover, by the rules written for it before it was computed.
+- Measuring how far a disturbance is felt in warm flat space.
 - A design for the quantity on the dots that says, before anything is run, what it must represent and what it must
   bend.
 

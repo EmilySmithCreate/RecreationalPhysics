@@ -10,6 +10,19 @@
 % (abstract only) recasts where an isolated system settles as entropy maximized under what the dynamics retains,
 % a possible formal home for the energy-budget estimate of the room. Vocabulary and sources:
 % docs/reading/notes/2026-10-13_chern_group_vocabulary.md, sections 2 and 6.
+%
+% Working note (14 October 2026): figures this draft needs, each to be drawn by a script from saved results.
+% (1) The price list against lambda: the two walls (A and B, crossing at 4/3), tau_AB on a log axis, the gap, and
+% the column's share at N = 64 and 192 (Table I; exact). (2) The wait: mean first exit over tau_AB against lambda,
+% by the move and by the look (T22, T59), with the count at 1. (3) The four maps: CV with its band, signatures and
+% largest component against lambda for T8, T23, T24 and T60, failed cells marked. (4) The largest component's share
+% against N at each lambda, the straight-line fits, the 0.70 line and the held-out N = 288 points with their
+% predicted ranges. (5) The edge: zero-energy share and break-up share against lambda for T23, T24 and T60.
+% (6) The product: width of the flat end states, and a drawing of the tube beside the torus re-glued two along
+% (drawn from a saved graph, or labelled SKETCH). (7) The room: share of births against C/N at lambda = 1.10, 1.25
+% and 1.40 (T18), with C* marked. (8) More directions: each rung's wall against lambda, flat space's wall as a
+% reference, the registered verdicts as markers (Table III). (9) The trade-off: gap, wall, counted wait, zero-energy
+% share and room per unit of release against lambda on one shared axis.
 
 \begin{document}
 
@@ -20,38 +33,37 @@ on the coefficient of the local term}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 11 October 2026}
+\date{DRAFT, 14 October 2026}
 
 \begin{abstract}
-In graph energies next to combinatorial quantum gravity (CQG), a coefficient $\lambda$ multiplies the price of
-a surplus square. Only $\lambda=1$ is CQG; everything here is at $\lambda>1$, in our family. There a torus with
+In a family of graph energies around combinatorial quantum gravity (CQG), a coefficient $\lambda$ multiplies the
+price of a surplus square. Only $\lambda=1$ is CQG; everything here is at $\lambda>1$, in our family. There a torus with
 one direction curled lies $4(\lambda-1)$ per vertex above flat and gives way after an activated first exit. We map each ingredient of that change against $\lambda$.
 Exact: the wall, the cheapest single move out, costs $32-16\lambda$ below $\lambda=4/3$ and $64-40\lambda$ above,
 and counting the exits offered gives a first-exit time of 8330 to 183 sweeps for $\lambda=1.05$ to 1.35 at
 coupling $g=1.5$. Measured: first exits counted by the move are on that count at $\lambda=1.05$ and 1.30. Three
-registered maps of the conversion were inconclusive; a fourth, timed without a detector, met its criteria in
-every cell from $\lambda=1.05$ to 1.30 at 64 to 192 vertices, and at a held-out size of 288 predicted from
-those. Read from
-their wiring, 9,858 of 9,865 flat end states have the least width a flat torus can have, six edges around, and
-those sampled are the tube with its seam shifted by two: the product does not widen. Sealed, the
-reservoir a clean conversion needs grows at least in proportion to the release, at one size. With six and eight
-links no setting opened a curled state into one flat space by its registered criterion, under an open
-reproduction gate. A larger $\lambda$ gives a larger release, a shorter-lived curled state and a harder birth.
+registered maps of the conversion were inconclusive; a fourth, timed without the earlier threshold detector,
+met its criteria in every cell from $\lambda=1.05$ to 1.30 at 64 to 192 vertices, and at a held-out size of 288
+predicted from those. Read from their wiring, 9,858 of 9,865 flat end states have the least width a flat torus
+can have, six edges around, and those sampled are the tube re-glued two steps along: the clean product does not
+widen. Sealed, the reservoir a clean conversion needs grows at least in proportion to the release, at one size.
+With six and eight links no setting opened a curled state into one flat space by its registered criterion; the
+published six-link curve has not been reproduced. A larger $\lambda$ gives a larger release, a shorter-lived curled state and a harder birth.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 
-In graph energies next to combinatorial quantum gravity (CQG) \cite{T17,KTB19,T25}, a coefficient $\lambda$
+In a family of graph energies around combinatorial quantum gravity (CQG) \cite{T17,KTB19,T25}, a coefficient $\lambda$
 multiplies the price of a surplus square, and only $\lambda=1$ is CQG. The companion paper \cite{paper1} studied
 a tube at $\lambda>1$: a $4\times L$ torus with one direction curled to a period of four edges. The tube is
 stable for now: no single move out of it lowers its energy, yet lower states exist. After an activated first
 exit it converts toward a flat torus and releases energy, a change that paper calls a burp. Most of that work is at one
 setting, $\lambda=1.25$, and one setting could be a lucky point. This paper asks how each ingredient of the change
 depends on $\lambda$: the wall (the cost of the cheapest single move out), the wait, the release, the room the
-product needs when the system is sealed, and the scrap left behind. It also records, compactly, what the same
-price list gives with more directions, which a companion paper treats in full \cite{paper5}.
+product needs when the system is sealed, and the scrap left behind. It also summarizes what the same price list
+gives with more directions, which a companion paper treats in full \cite{paper5}.
 
 \emph{Why a coefficient at all.} At $\lambda=1$ an edge carrying three squares costs what an edge
 carrying two costs, so the flat torus, the tube and the 4-cube have the same energy and a change between them
@@ -65,11 +77,10 @@ version in which surplus squares are forbidden outright \cite{search}.
 \emph{Four kinds of statement} are kept apart and labeled. \emph{Exact}: arithmetic or complete enumeration.
 \emph{Measured}: a run registered before it ran, quoted with its registered verdict in capitals and with whose
 prediction held or failed. \emph{Interpretation}: ours, unverified. \emph{The author's}: the hypothesis that
-motivates the work. In that hypothesis the extra term is a curling cost, a constant whose value is whatever
-reality has, and among possible settings the one observed would be the one whose cycle yields the most, counted
-by her in observers who evolved. That framing is the author's and is not a claim of this paper. Readings made after a result was known are labeled
-retrospective. Test numbers such as T60 refer to registrations in the project's record \cite{repo}. Every kinetic statement is about one Markov chain, the local edge switch with Metropolis
-acceptance \cite{paper1}; we do not claim it is the physical time evolution of anything.
+motivates the work. In that hypothesis the extra term is a curling cost whose value is whatever reality has, and
+the setting observed is the one whose cycle yields the most observers who evolved; that framing is not a claim of
+this paper. Readings made after a result was known are labeled retrospective. Test numbers such as T60 refer to registrations in the project's record \cite{repo}. Every kinetic statement is about one Markov chain, the local edge switch with Metropolis
+acceptance \cite{paper1}; we do not claim it is a physical time evolution.
 
 \section{The price list: what is exact}
 \label{sec:exact}
@@ -78,14 +89,20 @@ A state is a simple four-regular graph on a fixed labeled bipartition of $N$ ver
 no two vertices share more than two neighbors \cite{KTB19,T25}. With $S$ the number of squares (four-cycles),
 $S_e$ the number on edge $e$ and $X=\sum_e(S_e-2)_+$ the surplus squares,
 \begin{equation}
-  H = 16(N - S) + 4\lambda X = 4 \sum_e \big[(2 - S_e) + \lambda\,(S_e - 2)_+\big],
-  \label{eq:H}
+\begin{aligned}
+H &= 16\,(N - S) + 4\lambda X\\
+  &= 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr],
+\end{aligned}
+\label{eq:H}
 \end{equation}
-so a missing square costs 16 and a surplus square $4\lambda$. For $\lambda\ge1$ no state lies below zero, and for
+the second line using $\sum_e S_e=4S$ over the $2N$ edges. A missing square costs 16 and a surplus square
+$4\lambda$. Since $2-S_e=(2-S_e)_+-(S_e-2)_+$, each edge contributes
+$4[(2-S_e)_++(\lambda-1)(S_e-2)_+]\ge0$ for $\lambda\ge1$: no state lies below zero, and for
 $\lambda>1$, $H=0$ if and only if every edge carries exactly two squares \cite{paper1}.
 
-\emph{The ladder.} Curling one direction of a torus to period four puts a third square on every edge along it.
-The tube (even $L>4$) has $S=5N/4$, $X=N$ and lies $\varepsilon N$ above zero, with
+\emph{The ladder.} Curling one direction of a torus to period four makes each ring of four a square, a third
+square on each of the $N$ edges around the curl; the $N$ edges along it keep two. So the tube (even $L>4$) has
+$S=5N/4$, $X=N$ and lies $\varepsilon N$ above zero, with
 $\varepsilon=4(\lambda-1)$; the 4-cube, both directions curled, lies $2\varepsilon$ per vertex above. A
 conversion that ends with graph energy $H_f$ releases $Q=\varepsilon N-H_f$, the full gap only when $H_f=0$.
 
@@ -101,18 +118,20 @@ count:
   \label{eq:tau}
 \end{equation}
 (Table~\ref{tab:exact}). Dearer exits add at most 2\% to the rate at the $g=1.5$ conditions of the maps
-\cite{paper1}. The count is the time to the first exit, not every clock of the conversion, and the wall is a first-exit cost, not a proven saddle of a
-complete conversion path. That $\tau_{AB}$ does not depend on $N$ is a property of the proposal, which draws its
-two edges from the whole graph. Durations in the maps below are in these chain sweeps, as in the earlier maps,
-because the fourth map repeats them and the first exit's rate per chain sweep is the same at every size. Where
-local rates are compared across sizes (the cooling times of Sec.~\ref{sec:scrap}) we use a fair clock, on
-which one fair sweep is $N/96$ chain sweeps and every local pair of edges is offered equally often at every size.
+\cite{paper1}. The count is the time to the first exit, not to the end of the conversion, and the wall is a
+first-exit cost, not a proven saddle of a complete conversion path. That $\tau_{AB}$ does not depend on $N$ is a
+property of the proposal, which draws its two edges from the whole graph. Durations in the maps below are in these
+chain sweeps, as in the earlier maps, because the fourth map repeats them. Where local rates are compared across
+sizes (the cooling times of Sec.~\ref{sec:scrap}) we use a size-fair clock: one size-fair sweep is $N/96$ chain
+sweeps, giving every local pair of edges the chances it has at 96 vertices. It changes how times compare across
+sizes, nothing else.
 
 \emph{The scrap's share.} The commonest relic of the cold sealed boxes of Ref.~\cite{paper1} is one column of
 the tube left curled: a closed loop of four vertices, costing $24\lambda-16$ above flat. It does not vanish as
 $\lambda\to1$, while the gap does. Its share of the gap is $(24\lambda-16)/[4(\lambda-1)N]$: 22\% at
-$\lambda=1.25$ and 72\% at 1.05 for $N=64$ (Table~\ref{tab:exact}), 7\% and 24\% for $N=192$. Below
-$\lambda=1+8/(4N-24)$, which is 1.035 at $N=64$, one such column costs more than the whole gap.
+$\lambda=1.25$ and 72\% at 1.05 for $N=64$ (Table~\ref{tab:exact}), 7\% and 24\% for $N=192$. Setting
+$24\lambda-16=4(\lambda-1)N$ gives $\lambda=1+8/(4N-24)$, which is 1.035 at $N=64$; below it one such column
+costs more than the whole gap.
 
 \begin{table}[b]
 \caption{The tube's price list against $\lambda$ (exact). Wall: the cheaper of moves A and B. $\tau_{AB}$:
@@ -141,13 +160,13 @@ $\lambda$ & wall & $\tau_{AB}$ & $\varepsilon$ & column \\
 
 \emph{Measured, counted by the move.} T22 counted every accepted move in forty runs per cell
 ($\lambda=1.05,1.10,1.25$; $N=64,96$; $g=1.5$). All 240 first exits were observed, and their means are consistent
-with Eq.~(\ref{eq:tau}) within model-conditional 95\% intervals \cite{paper1}. (At $N=96$, $\lambda=1.05$ the mean
+with Eq.~(\ref{eq:tau}) within 95\% intervals that assume an exponential wait \cite{paper1}. (At $N=96$, $\lambda=1.05$ the mean
 over all forty is 9302 sweeps; over the 39 that went on to convert, 7485.) Its registered verdict at
 $\lambda=1.05$ was FALL-BACKS: exits return to the tube, and the first exit is not late. Our predicted verdict
 held and our predicted numbers did not: we expected 70 to 87\% of exits to go through at $\lambda=1.05$ and nearly
 all at 1.25. The author had given no prediction. For the 239 runs that reach a quarter conversion, the reciprocal
 of the mean number of exits per run is 0.56 to 0.68, with no trend in $\lambda$. This is a diagnostic, not a
-derived transmission coefficient. Returns are a feature of the chain at every $\lambda$ tested, not a
+derived correction factor for the exit rate. Returns are a feature of the chain at every $\lambda$ tested, not a
 near-$\lambda=1$ effect.
 
 T59 counted fresh first exits by the move at the two ends of the window. At $\lambda=1.05$
@@ -158,16 +177,15 @@ every five sweeps, the same runs give a mean later by $0.096\pm0.007\,\tau_{AB}$
 first exits that return before the look, about one first exit in thirteen: HIDDEN EXITS. The author's two
 predictions (chance; exits hidden between two looks) held, as did ours. Described, not scored: a mean wait read
 by five-sweep looks sits about 8 to 10\% above the count for this reason alone, and the look leaves the wait's
-CV unchanged (0.993 against 0.990 by the move). The same registration replayed, from
+coefficient of variation (CV) unchanged (0.993 against 0.990 by the move). The same registration replayed, from
 their seeds, the long waits recorded earlier at $\lambda=1.05$. A detected wait of 78,205 sweeps read as the tube
 at every look (TRUE WAIT). Seven long first exits were offered moves A and B at 2.94 to 3.03 and 1.94 to 2.04 per
 sweep throughout (OFFERED AS COUNTED). We read those long waits as chance.
 
 \emph{Exact, behind that reading.} At the sizes enumerated ($N=48$ to 288, at $\lambda=1.25$) the graphs a
-waiting tube reaches without changing its squares form three classes with one census of moves \cite{paper1}. The
-chance of leaving is then the same at every attempt, so the first exit is exactly memoryless with the census's
-mean: 8326 and 417.5 sweeps at $\lambda=1.05$ and 1.30, against $\tau_{AB}$'s 8329.7 and 419.0. This is our
-arithmetic on a complete enumeration, unreviewed.
+waiting tube reaches without changing its squares form three classes, each with the same count of moves at
+every price \cite{paper1}. The chance of leaving is then the same at every attempt, so the first exit is exactly
+memoryless, with mean 8326 and 417.5 sweeps at $\lambda=1.05$ and 1.30, against $\tau_{AB}$'s 8329.7 and 419.0. Our arithmetic, unreviewed.
 
 \emph{Interpretation (ours, unverified).} Across the window, what $\lambda$ changes about the first exit is the
 two exponents of Eq.~(\ref{eq:tau}), and nothing else we have measured.
@@ -178,8 +196,8 @@ two exponents of Eq.~(\ref{eq:tau}), and nothing else we have measured.
 \emph{Protocol and the registered bar.} The tube at $g=1.5$, $N=64,96,144,192$, is followed in blocks of five
 sweeps until 98\% converted or 100,000 sweeps, and the final graph is saved. Let $d(v)$ be the number of pairs
 of edges at $v$ that close no square: 1 on the tube (curled-like), 2 on the flat torus (flat-like). It is a
-square count, not a dimension. Three criteria are registered per cell $(\lambda,N)$: (a) the coefficient of
-variation (CV) of the wait lies in a stated band, as a memoryless wait's would; (b) at least 80\% of vertices
+square count, not a dimension. Three criteria are registered per cell $(\lambda,N)$: (a) the CV of the wait
+lies in a stated band around 1, the value for a memoryless wait; (b) at least 80\% of vertices
 have the square-count signature $d\in\{1,2\}$ at half conversion; (c) the largest connected piece of flat-like
 vertices holds at least 70\% of them at half conversion. A cell meeting all three is called sharp. The window
 verdict asks for a sharp change at every $\lambda$ from 1.05 to 1.30, at every size that passes its gates;
@@ -189,8 +207,8 @@ orders, a unique seed or a single moving front.
 \emph{Where the tube persists.} A tube persists in a cell when more than half its runs are under a quarter
 converted at sweep 200. In T8 that holds at every size from $\lambda=1.05$ to 1.35 and fails at 1.40 and 1.45;
 our registered prediction for this edge, between 1.3 and 1.4, held, and the author had made none.
-(In T23, $\lambda=1.35$ sat on the line at $N=64$ and 96.) The persistence edge is operational, not an energetic
-spinodal: the walls there are still 8 to 10 units, and move B costs energy up to $\lambda=1.6$.
+(In T23, $\lambda=1.35$ sat on the line at $N=64$ and 96.) This edge is set by the stated criterion, not by
+where the barrier vanishes: the walls there are still 8 to 10 units, and move B costs energy up to $\lambda=1.6$.
 Equation~(\ref{eq:tau}) gives a mean of 200 sweeps near $\lambda=1.345$ but does not derive the edge
 \cite{paper1}.
 
@@ -229,7 +247,7 @@ first five-sweep look at which a run no longer reads as the tube (registered ban
 mean share of vertices at $d\in\{1,2\}$ at half conversion (registered line 0.80). Largest component: mean share
 of flat-like vertices in their largest connected piece at half conversion (line 0.70). Wait: mean wait over
 $\tau_{AB}$, read by the look; not scored. Zero energy: runs of 120 whose saved final graph has $H=0$; not
-scored. None of these certifies a geometry or a single front.}
+scored.}
 \label{tab:t60}
 \begin{ruledtabular}
 \begin{tabular}{lccccc}
@@ -253,8 +271,7 @@ cell. The bar is T23's and T24's, unchanged. Stage 1 ($\lambda=1.05$ to 1.35; $N
 returned SHARP ACROSS THE WINDOW and, for the edge, BREAK-UP BEGINS AT THE EDGE. The author's standing prediction held on both,
 and ours. This is the fourth attempt at the window verdict and the first to return one, and the three
 inconclusive maps stand beside it as scored; in the registration's words, ``A reader is entitled to weigh a
-fourth attempt less than a first.'' An independent adversarial review of this verdict, by a reviewer with no
-history of the work, is pending.
+fourth attempt less than a first.'' A red-team review of this verdict by a fresh reviewer is pending.
 
 All three criteria hold in all 24 window cells, and (a) in all 28, including T24's three window failures
 (Table~\ref{tab:t60}). Described, not scored: the largest component's share falls with size at the top of the
@@ -265,12 +282,12 @@ Sec.~\ref{sec:wait}. T8's detected waits at $\lambda=1.05$ had run 15 to 43\% ab
 with no detector, the cells at $\lambda=1.05$ read 0.93 to 1.05 of it.
 
 Whether the change stays sharp as the tube lengthens is scored at a held-out size, $N=288$, alone, against
-numbers written from the four smaller sizes before that size ran (the registration's amendment of 10 October,
-23:14 ET). \emph{Measured:} AS PREDICTED AT THE HELD-OUT SIZE, and sharp at $N=288$ at every $\lambda$ from 1.05
+numbers written from the four smaller sizes before that size ran (the registration's amendment of 10 October).
+\emph{Measured:} AS PREDICTED AT THE HELD-OUT SIZE, and sharp at $N=288$ at every $\lambda$ from 1.05
 to 1.30. Every cell has its CV in the band (0.943 to 1.072) and each of its three numbers inside the range written
 for it. The largest component's share is 0.969, 0.959, 0.948, 0.911, 0.813 and 0.751 for $\lambda=1.05$ to 1.30,
 against predicted values of 0.980, 0.965, 0.949, 0.942, 0.850 and 0.754, each with a range of 0.10 either side. The
-author's prediction for this size, recorded before it was read, was ours: criteria (a) and (b) hold, and (c) is the
+author's prediction for this size, recorded before it was read, matched ours: criteria (a) and (b) hold, and (c) is the
 one at risk at the top of the window. It held. \emph{Interpretation (ours, not scored):} the straight line that
 predicted the held-out size also says where criterion (c) ends. At $\lambda=1.30$ the largest component's share
 falls by about 0.08 for every hundred vertices and reaches the 0.70 line near 350, so this sharpness at the top of
@@ -290,35 +307,38 @@ the window too.
 
 \emph{A retrospective reading of saved final graphs: exploratory; each graph's width is exact} \cite{repo}. A run
 that ends at zero energy ends on a flat torus: every edge on exactly two squares. That is a count at each edge, and
-a torus six edges around already satisfies it; Ref.~\cite{paper1} says that growth of both periods had not been
-measured. We measured it. The \emph{width} of a flat torus is the length of its shortest loop that cannot be shrunk
-to a point. It can be read exactly from the number of vertices within $r$ steps of a vertex, which equals the
-endless flat sheet's $2r^2+2r+1$ until $2r$ reaches the width. The tube's width is 4, and a flat torus needs at
-least 6.
+a torus six edges around already satisfies it, so the energy does not say how wide the product is. The
+\emph{width} of a flat torus is the length of its shortest noncontractible loop. It can be read exactly from the
+number of vertices within $r$ steps of a vertex, which equals the endless flat sheet's $2r^2+2r+1$ until $2r$
+reaches the width. The tube's width is 4. A flat torus needs at least 6: loops are even on a bipartite graph, and
+a noncontractible loop of four would itself be a square, a third on each of its edges.
 
 Of the saved end states of the four maps ($N=64$ to 288, $\lambda=1.05$ to 1.45), 9,865 are exactly flat, and 9,858
 of them have width 6: every one at $N=144$, 192 and 288, and all but seven at 64 and 96 (six of width 8, one of
-width 12). Sampled against a graph built for the purpose, 41 of 41 at $N=64$ and 96 are isomorphic to the tube with its
-seam shifted by two: four vertices to a ring as before, but a walk around the ring arrives two steps along the tube,
-so no four steps close and the shortest way around is six. It has eight vertices at each distance, as the tube has.
+width 12). Sampled against a graph built for the purpose, 41 of 41 at $N=64$ and 96 are isomorphic to the tube
+re-glued two steps along: four vertices to a ring as before, but a walk around the ring arrives two steps along the
+tube, so no four steps close and the shortest way around is six. It has eight vertices at each distance, as the
+tube has.
 
-So in these maps a birth is the birth of a flat torus six around, at every $\lambda$ and every size, and its width
-does not grow with $N$. The wall, the wait, the release and every registered verdict above are unaffected: they are
-energies and counts, and the energy cannot tell a flat torus six around from a wide one. What is not shown, here or
+So in these maps a clean birth is the birth of a flat torus six around, at every $\lambda$ and every size, and its
+width does not grow with $N$. Runs that kept a scrap can mix widths: about half hold a stretch wider than six, and
+in all 440 that hold both a six-around and a wider stretch a scrap lies between them \cite{paper2}. The wall, the wait, the release and every registered verdict above are unaffected: they are
+energies and counts, blind to width. What is not shown, here or
 in Ref.~\cite{paper1}, is a small direction becoming large. \emph{Interpretation (ours, unverified):} every flat
-torus has zero energy, and at these couplings a flat torus accepts almost no move (leaving it costs 32), so the
-chain stops at the first flat state it reaches, and the nearest to the tube is the tube twisted by two. Where
+torus has zero energy, and at these couplings a flat torus accepts almost no move (leaving the one six around costs at least $16\lambda$, a wider one 32), so the
+chain stops at the first flat state it reaches, and the nearest to the tube is the tube re-glued two along. Where
 released energy stays in place the product can be wider: in a sealed control with one store per vertex (T48,
-$\lambda=1.25$), 6 of the 15 tubes that converted are wider by the same kind of reading, and 9 are not. What makes a
-flat torus widen is the next thing to measure.
+$\lambda=1.25$), 6 of the 15 tubes that converted are wider by the same kind of reading, and 9 are not. Heat kept
+in the stores instead does not widen it (T61 \cite{paper1}); a price on loops of six does, with flaws throughout
+(T62 and T64, registered, read at 96 and 192 vertices; the held-out size is not read). What the rule charges
+for decides how wide the product is.
 
 \section{The room}
 \label{sec:room}
 
 Sealed, the released energy has only a reservoir to go to: $C$ stores of nonnegative energy, each move paid from
 or into one store chosen uniformly, so that graph plus stores conserve energy \cite{paper1}. We call $C$ the
-room. It is a number of stores, not a heat capacity in temperature units, and conservation alone does not
-establish equilibrium. A conversion is called a birth here when its end state meets the sheet criterion of
+room. It is a number of stores, not a heat capacity; conservation alone does not establish equilibrium. A conversion is called a birth here when its end state meets the sheet criterion of
 Ref.~\cite{paper1}, a count ($f\ge0.9$ with $f=\overline d-1$, at least 90\% of vertices at $d=2$, under 5\% at
 $d=0$ or $d\ge3$), not a topology test.
 
@@ -362,11 +382,13 @@ column or on combinations of small defects.
 
 After cooling, the scrap has been read only at $\lambda=1.25$ \cite{paper2}. In 1024-vertex sheets that opened
 from several starting places, the columns heal as the cooling slows, falling from 2.1 to 0.1 per sheet between
-cooling times of 10,000 and 300,000 fair sweeps (T51, registered verdict CLIFF; the author's prediction and ours,
-a gentle fall, both failed). The counts of two other kinds of piece do not change over that range. Read exactly
-from their wiring (T55, registered verdict KNOT; the author's prediction, a seam between patches, failed), those
-pieces are stuck arrangements of their own, so the scrap is three kinds of knot of fixed energy: the column
-(14 units), an eight-vertex knot of two kinds of vertex (20 to 30) and a double column (8). The exact share of
+cooling times of 10,000 and 300,000 size-fair sweeps (T51, registered verdict CLIFF; the author's prediction and
+ours, a gentle fall, both failed). The counts of two other kinds of piece do not change over that range. Read
+exactly from their wiring (T55, registered verdict KNOT), those pieces are stuck arrangements of their own, so the
+scrap is three kinds of knot of fixed energy: the column (14 units in its common form), an eight-vertex knot of two
+kinds of vertex (20 to 30) and a double column (8). The author's prediction, a seam (a piece with an edge joining
+distant places), failed; a scrap between stretches of different widths (Sec.~\ref{sec:product}) is a seam of
+another sort \cite{paper2}. The exact share of
 Sec.~\ref{sec:exact} is the single column's. T51 and T55 are at one $\lambda$; how the three kinds divide the
 scrap at other $\lambda$ has not been read.
 
@@ -375,17 +397,17 @@ scrap at other $\lambda$ has not been read.
 
 In the author's hypothesis the space directions are tied: they curl and open together. That makes the number of
 directions a second axis of the map. With $2D$ links per vertex, $D=3$ or 4, the same price list (16 per
-missing square, $4\lambda$ per surplus square, an edge full at $2D-2$ squares) gives a ladder that stays
+missing square, $4\lambda$ per surplus square, surplus counted above $2D-2$ squares on an edge) gives a ladder that stays
 additive: each curled direction costs $\varepsilon$ per vertex. Every rung's cheapest single move was priced by
 listing switches (Table~\ref{tab:dmap}).
 
 \begin{table*}[t]
 \caption{More directions. Exact: the wall (the cheapest single move out of each ideal curled state), the range
 of $\lambda$ over which it is positive, and its value at $\lambda=1.25$. Measured: registered verdicts in
-capitals; sealed unless stated, named vertices, no tie between directions. Flat space's own wall is 32, 64 and
-128 with four, six and eight links, at every $\lambda$. On the $4\times4\times4\times12$ torus of T48 the
+capitals; sealed unless stated, named vertices, no tie between directions. Wide flat space's own wall is 32, 64 and
+128 with four, six and eight links, at every $\lambda$ (the four-link torus six around has a lower one, $16\lambda$). On the $4\times4\times4\times12$ torus of T48 the
 cheapest move at $\lambda=1.40$ is a different one, $192-136\lambda=1.6$. Six- and eight-link rows carry the
-open reproduction gate (text). Whose predictions held is in the text and the record \cite{repo}.}
+reproduction caveat of the text. Whose predictions held is in the text and the record \cite{repo}.}
 \label{tab:dmap}
 \begin{ruledtabular}
 \begin{tabular}{lp{3.2cm}p{2.3cm}p{1.9cm}p{1.35cm}p{6.6cm}}
@@ -414,8 +436,8 @@ T33 NO CASCADE and T40 NEVER STARTS at 1.10; T49 (one cube) STUCK at 1.10 and 1.
 \end{ruledtabular}
 \end{table*}
 
-\emph{Exact.} (i) Each rung has its own wall, and the walls differ from rung to rung at every $\lambda>1$,
-so nothing in this energy ties the directions together. (ii) The ratio of flat
+\emph{Exact.} (i) Each rung has its own wall, different at every $\lambda>1$: nothing in this energy ties the
+directions together. (ii) The ratio of flat
 space's wall to the last rung's wall at $\lambda=1.25$ is 2.7, 1.8 and 1.6 with two, three and four directions.
 Read as a margin between a bath that pays the last rung and one that damages flat space (our reading), more
 directions leave less, not more; a rule of ours built on this ratio, a window wherever it is at least 2, failed
@@ -424,7 +446,8 @@ is the hypercube, so a fully curled state larger than one cube is a gas of separ
 published theorem \cite{Mul79} whose proof we have not read.
 
 \emph{Measured.} By the registered verdicts, which rest on counts of flat-like vertices and their largest
-connected piece, no setting with six or eight links opened a curled state into one flat space. The price of the first move out of the two-curled six-link torus is fixed with size (T32; the
+connected piece, no setting with six or eight links opened a curled state into one flat space. The price of the
+first move out of the two-curled six-link torus is fixed with size (T32; the
 author's prediction and ours held). Given that push at $\lambda=1.25$, its first curled direction opened fully
 in 28 of 84 runs and its second never in a cold reservoir (T30; both predictions failed). The one-curled six-link torus, the direct counterpart of
 Sec.~\ref{sec:room}, never opened at any reservoir from $N/8$ to $4N$ (T41), so the room it would need could not
@@ -434,7 +457,7 @@ some of them inferred from her stated positions, failed in T30, T39 and T41 and 
 where nothing opened. Ours were right that nothing opens all and wrong in particulars: the windows we expected
 at larger $\lambda$ did not appear (T39), and our estimate of the push that starts four directions was too low.
 
-Three results cut the other way and are reported as prominently. In a gas of 6-cubes at $\lambda=1.10$, two of
+Three results cut the other way. In a gas of 6-cubes at $\lambda=1.10$, two of
 three directions opened in 21 of 24 runs, in many small flat-like patches and never one space (T30-gas). With
 released energy kept at the vertex that releases it (T48), the two-curled torus at $\lambda=1.25$ advanced one
 rung and stopped, as the author and we had predicted (ADVANCES ONLY). At $\lambda=1.40$ that prediction failed:
@@ -487,9 +510,8 @@ per cell end on a zero-energy graph, a flat torus six edges around (Sec.~\ref{se
 least 12, 36 and 72 stores at $\lambda=1.10$, 1.25 and 1.40. Outside that: break-up from $\lambda=1.35$ and no persistence from 1.40; in long warm tubes, melting;
 with six and eight links, no setting with a registered verdict of one flat space.
 
-\emph{The author's framing.} In the author's hypothesis this trade-off is what a selection among settings would
-act on. The toy can map the ingredients; it cannot count what a cycle yields, and this paper claims only the
-map.
+\emph{The author's framing.} In the author's hypothesis a selection among settings would act on this trade-off.
+The toy maps the ingredients; it cannot count what a cycle yields.
 
 \emph{What this cannot show.} Anything at exactly $\lambda=1$, where nothing is released. Anything in the maps at
 couplings other than $g=1.5$, or at sizes above 288. The room at any size but 96.
@@ -510,8 +532,8 @@ every configuration, seed, result and pre-registration:
 \newpage
 \begin{thebibliography}{99}
 \bibitem{paper1} E. Smith, The curled torus burps: activated escape and conversion in a graph model of emergent
-geometry, manuscript of 10 October 2026 with its supplement, \path{docs/papers/curled_torus/}.
-\bibitem{paper2} E. Smith, What the burp leaves behind, draft in revision (2026), \path{docs/papers/relic/}.
+geometry, manuscript of 14 October 2026 with its supplement, \path{docs/papers/curled_torus/}.
+\bibitem{paper2} E. Smith, What the change leaves behind, draft in revision (2026), \path{docs/papers/relic/}.
 \bibitem{paper5} E. Smith, How curled directions open, three and four, draft in revision (2026),
 \path{docs/papers/six_links/}.
 \bibitem{T17} C. A. Trugenberger, Combinatorial quantum gravity: geometry from random bits, JHEP 09, 045 (2017),

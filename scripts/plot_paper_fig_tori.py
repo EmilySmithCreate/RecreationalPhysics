@@ -91,25 +91,25 @@ ax.set_ylim(-1.9, 2.1)
 ax = axes[2]
 panel(ax, "(c) the change under way (schematic)")
 tube(ax, 0.0, 3.0)
-# the flat order: a sheet opening out beyond the front
-x0 = 4.4
-for i in range(5):
-    y = -1.2 + 0.85 * i
-    ax.plot([x0, x0 + 3.2], [y, y], color=EDGE, lw=1, zorder=1)
-for j in range(5):
+# the flat order beyond the front, six dots around (the width the clean runs reach), five columns shown
+x0, y0, dy, ROWS, COLS = 4.4, -1.3, 0.72, 6, 5
+for i in range(ROWS):
+    y = y0 + dy * i
+    ax.plot([x0, x0 + 0.8 * (COLS - 1)], [y, y], color=EDGE, lw=1, zorder=1)
+for j in range(COLS):
     x = x0 + 0.8 * j
-    ax.plot([x, x], [-1.2, -1.2 + 0.85 * 4], color=EDGE, lw=1, zorder=1)
-ax.scatter([x0 + 0.8 * j for j in range(5) for _ in range(5)], [-1.2 + 0.85 * i for _ in range(5) for i in range(5)],
+    ax.plot([x, x], [y0, y0 + dy * (ROWS - 1)], color=EDGE, lw=1, zorder=1)
+ax.scatter([x0 + 0.8 * j for j in range(COLS) for _ in range(ROWS)], [y0 + dy * i for _ in range(COLS) for i in range(ROWS)],
            s=22, color=SHEET, edgecolor="white", linewidth=0.6, zorder=3)
 for p in ring_at(3.0):                               # the front: last ring joined to the sheet's edge
-    ax.plot([p[0], x0], [p[1], -1.2 + 0.85 * round((p[1] + 1.2) / 0.85)], color=EDGE, lw=1, ls="--", zorder=1)
+    ax.plot([p[0], x0], [p[1], y0 + dy * round((p[1] - y0) / dy)], color=EDGE, lw=1, ls="--", zorder=1)
 ax.plot([3.9, 3.9], [-1.9, 2.35], color=INK2, lw=0.8, ls=(0, (3, 3)))
 ax.annotate("", xy=(2.7, 2.6), xytext=(3.9, 2.6), arrowprops=dict(arrowstyle="->", color=INK2, lw=0.8))
 ax.text(4.0, 2.6, "possible advancing boundary", ha="left", va="center", fontsize=7.5, color=INK2)
 ax.text(1.6, -1.55, "curled (d = 1)", ha="center", fontsize=7.5, color=TUBE)
-ax.text(6.0, -1.75, "flat (d = 2)", ha="center", fontsize=7.5, color=SHEET)
+ax.text(6.0, -1.95, "flat (d = 2)", ha="center", fontsize=7.5, color=SHEET)
 ax.set_xlim(-0.6, 7.9)
-ax.set_ylim(-2.1, 2.9)
+ax.set_ylim(-2.3, 2.9)
 
 fig.tight_layout(w_pad=0.6)
 fig.savefig(out, dpi=220 if out.endswith(".png") else None)

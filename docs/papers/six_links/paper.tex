@@ -20,7 +20,7 @@ with six and eight links per vertex}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 11 October 2026}
+\date{DRAFT, 14 October 2026}
 
 \begin{abstract}
 We ask how a torus with several curled directions opens, in a graph toy with six and eight links per vertex. The toy
@@ -44,17 +44,17 @@ not reproduced, so every result concerns our family only.
 
 Combinatorial quantum gravity (CQG) \cite{KTB19,T25} gives a regular graph an energy built from its squares
 (4-cycles). A companion paper \cite{paper1} raised the coefficient $\lambda$ of that energy's local term above 1 and
-studied a four-link torus with one direction curled. It found activated escape followed by rapid changes in
-square-count signatures, often with a dominant connected converted region; a unique moving front and macroscopic
-opening of both periods were not established. Only $\lambda = 1$ is CQG. Everything here is at $\lambda > 1$, some of
+studied a four-link torus with one direction curled. It found activated escape and a rapid change of the square
+counts, often into one dominant connected region; the runs that finish clean end as the tube re-glued two along its
+seam, a flat torus six around where it was four, not two large directions. Only $\lambda = 1$ is CQG. Everything here is at $\lambda > 1$, some of
 it with an added tie between directions. We call it our family, or the toy: next to CQG and not in it.
 
 \emph{The hypothesis's claim (the author's \cite{repo}).} The curled arrangement that precedes space, which she
 calls X, has three or four directions curled together; they open together; and one activation releases everything.
 With four links the claim cannot be posed: a fully curled state, a gas of 4-cubes, has no wall at any $\lambda > 1$
 and falls apart at once (O40). With six and eight links it can. This paper poses it twice: exactly, by pricing the
-single moves out of every rung of the ladder of curled states; and by runs, each registered before it ran, with the
-author's prediction and ours recorded before any result was read.
+single moves out of every rung of the ladder of curled states; and by runs registered in advance, with the author's
+prediction and ours recorded before any result was read.
 
 Statements are of four kinds and are labeled: \emph{exact} (arithmetic or complete enumeration); \emph{measured}
 (a pre-registered run, with its registered verdict in capitals and whose prediction held or failed);
@@ -66,11 +66,11 @@ Three caveats govern everything below. First, the published six-link curve of CQ
 our kernel (Sec.~\ref{sec:gate}), and the eight-link kernel is checked against no published curve: the published
 simulations we rely on are for two and three directions \cite{KTB19,T22}. The author decided to proceed with that
 gate open. Every six- and eight-link statement is therefore about our family and its kernel, not about the published
-model. The kernel is the four-link code with the number of links read from the array. At four links it makes the
-companion paper's chain draw for draw, and its energy and moves are checked by brute force against an independent
-implementation; it is validated at four and six links only. Second, the toy has no time. A direction of a torus is a
-direction, and which one would be time the toy cannot say. Third, ``curled'' and ``open'' below are square-count
-signatures (Sec.~\ref{sec:exact}), not measured geometry.
+model. The kernel is the four-link code generalized to any number of links. At four links it reproduces the
+companion paper's chain random draw by random draw, and its energy and moves are checked by brute force against an
+independent implementation, at four and six links only. Second, the toy has no time: which direction of a torus would
+be time it cannot say. Third, ``curled'' and ``open'' below are read from counts of squares (Sec.~\ref{sec:exact}),
+not from measured geometry.
 
 Published continuum work treats a change in the number of large dimensions as a decay by tunneling or nucleation
 \cite{GM04,CJR09,BSV10}; there the compact directions change together by construction (a single volume modulus, or a
@@ -84,25 +84,30 @@ here. Their texts were searched by an AI assistant, and no quotation has been ch
 \subsection{The energy, the ladder and the counts}
 
 With $D$ directions a vertex has $2D$ links. Graphs are $2D$-regular and bipartite, and no two vertices share more
-than two neighbors (the hard-core rule, as we read it). With $S$ squares, $S_e$ squares on link $e$ and
-$X = \sum_e (S_e - (2D - 2))_+$ surplus squares,
+than two neighbors (the hard-core rule, as we read it). With $S$ squares, $S_e$ squares on link $e$, and $X$ the surplus
+squares above the $2D - 2$ that a link carries on the flat torus,
 \begin{equation}
-  H = 16\Big(\tfrac{D(D-1)}{2} N - S\Big) + 4\lambda X ,
+\begin{aligned}
+  H &= 16\Big(\tfrac{D(D-1)}{2} N - S\Big) + 4\lambda X ,\\
+  X &= \textstyle\sum_e \big(S_e - (2D - 2)\big)_+ ,
+\end{aligned}
 \end{equation}
 derived by us from the published definitions as the four-link energy was (Q21), and not validated against a
-published curve.
+published curve. The first term vanishes on the flat torus, which has one square per vertex for each of its
+$D(D-1)/2$ pairs of directions.
 
 \emph{Exact} (O41, O50). The flat $D$-torus, every side at least 6, has $H = 0$. A side of length 4 is a
-\emph{curled} direction: it puts one extra square on every link along it and costs $a \equiv 4(\lambda - 1)$ per
+\emph{curled} direction: the four links around it close a square, which puts one extra square on every link along
+it and costs $a \equiv 4(\lambda - 1)$ per
 vertex. The cost is additive, so a torus with $k$ curled directions, the $k$th \emph{rung} of the ladder, lies $ka$
 per vertex above flat. The six-link torus with every side 4 is the 6-cube (64 vertices); its eight-link
 counterpart is the 8-cube (256).
 
-The statistic $d(v)$ counts the pairs of links at $v$ that close no square. On the exact tori it equals the number
+The count $d(v)$ is the number of pairs of links at $v$ that close no square. On the exact tori it equals the number
 of directions that are not curled: $D$ on the flat torus, one less per curled direction. Where squares are missing it
 exceeds $D$. We call a vertex with $d = D$ \emph{open} and one with $d > D$ \emph{damaged}, and we say a direction
 \emph{opens} at a vertex where $d$ rises by one. An \emph{open region} is a connected set of open vertices at one
-reading. These are counts of squares and of connectivity. On a general graph they do not certify a dimension, a
+reading. On a general graph these counts do not certify a dimension, a
 product-torus geometry, a macroscopic period or a moving front \cite{repo}.
 
 \subsection{The walls}
@@ -119,14 +124,14 @@ all exact.
 $96 - 48\lambda$ out of the rungs with three, two and one directions curled; with eight, $160 - 128\lambda$,
 $160 - 112\lambda$, $160 - 96\lambda$ and $160 - 64\lambda$. Each exceeds the one before by $16\lambda$ or
 $32\lambda$, so the doubling 20, 40, 80 at eight links holds at $\lambda = 1.25$ only (O55). The energy ties no
-direction to another: each has its own wall, and the later walls are the higher.
+direction to another: each has its own wall.
 
 (ii) The cheapest move out of flat space costs 32, 64 and 128 with four, six and eight links, at every $\lambda$
 (O50, O51). Its ratio to the last rung's wall at $\lambda = 1.25$ is $32/12 = 2.7$, $64/36 = 1.8$ and
 $128/80 = 1.6$: more directions leave less room between paying the last wall and breaking flat space (O65).
 
-(iii) The fully curled gas is stuck for now only for $1 < \lambda < 1.2$ with six links and $1 < \lambda < 1.25$ with
-eight (O41, O50).
+(iii) The fully curled gas is stuck for now only where its wall is positive: $1 < \lambda < 1.2$ with six links and
+$1 < \lambda < 1.25$ with eight (O41, O50).
 
 (iv) At larger $\lambda$ another kind of move can undercut the one in Table~\ref{tab:walls}. On the two-curled
 six-link torus it is $128 - 88\lambda$ (4.8 at $\lambda = 1.40$), so that torus is stuck for $1 < \lambda < 1.45$
@@ -177,8 +182,8 @@ one hypercube is a gas of separate pieces. The gas starts below are not a choice
 
 A \emph{tie} adds $T_f = \sum_v f(d(v))$ to $H$, with $f(0) = f(D) = 0$ and $f = 0$ at damaged vertices. It is a rule
 put in by hand, at the author's decision \cite{repo}, and the toy with it is our family. \emph{Exact}, six links
-(O70): the gaps between rungs become $a - f(1)$, $a + f(1) - f(2)$ and $a + f(2)$ per vertex in order of opening;
-their sum stays $3a$.
+(O70): a state with $d$ directions open lies $(3 - d)a + f(d)$ per vertex above flat, so the gaps between rungs
+become $a - f(1)$, $a + f(1) - f(2)$ and $a + f(2)$ in order of opening; their sum stays $3a$.
 
 Two forms matter below. The \emph{follow} form is $f(d) = \kappa(D - d)$ for $1 \le d \le D$. At $\lambda = 1.25$
 its walls out of the gas, the two-curled torus and the one-curled torus are $-4$, 16, 36 at $\kappa = 0$; 20, $-6$,
@@ -267,18 +272,20 @@ window at 1.15 and 1.20; the tie makes the difference) failed; O (SEVERAL) held 
 \end{ruledtabular}
 \end{table*}
 
-Three protocols are used. \emph{Sealed}: a bath of $C$ stores, one holding the push and the rest empty; a proposed
+Three protocols are used. \emph{Sealed}: a bath of $C$ stores (a Creutz reservoir of $C$ demons), one holding the
+push and the rest empty; a proposed
 switch draws on one store at random and is refused if that store cannot pay; $H$, the tie where there is one, and the
 stores are conserved together. \emph{Local heat}: sealed, with one store per vertex, so released energy stays with
 the vertex that releases it. \emph{Warm bath}: the Metropolis chain at a fixed coupling $g$, with no push.
 Conservation does not establish equilibrium, and a mean store energy is not a calibrated temperature \cite{repo}.
 The sealed dynamics are those of the companion papers \cite{paper1,paper2}.
 
-Table~\ref{tab:runs} lists every test. Each registration defines its per-replica outcome words from the census of
-$d$. In brief, at a run's last reading: STUCK or STAYS, most vertices still on the starting rung; ADVANCES, the most
+Table~\ref{tab:runs} lists every test. Each registration defines its per-replica outcome words from the number of
+vertices at each value of $d$. In brief, at a run's last reading: STUCK or STAYS, most vertices still on the starting rung; ADVANCES, the most
 populated rung is above the start; OPENS (T48, T53), at least half the vertices open and the largest open region
-holding at least half of all vertices; MELTED or DAMAGED, a quarter or more of the vertices damaged. A cell's
-outcome is its majority, and the verdict follows from the cells by the registered rule.
+holding at least half of all vertices; MELTED or DAMAGED, a quarter or more of the vertices damaged. A cell (one
+start at one setting) takes the outcome of most of its replicas, and the verdict follows from the cells by the
+registered rule.
 
 \subsection{The price of the first move is fixed with size}
 
@@ -290,12 +297,12 @@ of Table~\ref{tab:walls}. It is not the price of a conversion, as the next tests
 \emph{Interpretation (ours, unverified; O103).} On the four-link tube and on the $4 \times 4 \times L$ torus the
 cross-section is fixed, 4 and 16 vertices, so the boundary between converted and unconverted parts cannot grow. On a
 $4 \times L \times L$ torus it grows with the converted patch. A first-move price that is fixed with size is
-therefore not evidence that the barrier to opening a slab is fixed. Section~\ref{sec:tie} returns to this.
+therefore not evidence that the barrier to opening a slab is fixed (Sec.~\ref{sec:tie}).
 
 \subsection{One push, untied}
 
 \emph{Measured} (T30; O54, O64). At $\lambda = 1.25$, push 16, twelve replicas per cell and 100,000 sweeps, 84
-replicas in seven cells. By the final census the first curled direction opened completely, no vertex left at
+replicas in seven cells. By the final count the first curled direction opened completely, no vertex left at
 $d = 1$, in 28. In 21 it went most of the way (15 to 24\% of vertices still at $d = 1$). In 32 it stalled early (36
 to 53\% still at $d = 1$; energy 1.86 to 1.95 per vertex against 2.0 at the start). In 3, at the hottest baths, it
 went past the one-curled rung; at $C = N/8$ two of twelve replicas reached a defective near-flat state (88 to 90\%
@@ -343,8 +350,9 @@ read MELTED: 37 to 38\% of vertices at $d = 2$, 23 to 24\% at $d = 3$, 2.5 to 2.
 T44 to T46). From a gas, no open region
 exceeded one starting piece: at most 64 of 512 vertices with six links and at most 4 of 2304 with eight. One open
 region in 156 graphs held vertices of two pieces. In one T45 setting at $\lambda = 1.40$, 10 cubes in 24 graphs
-opened completely on their own. The damaged vertices are joints and seams, not disordered blobs. In that setting 50
-to 81\% of them are ends of links between two starting pieces; in the other settings, and in the connected torus of
+opened completely on their own. The damaged vertices are not disordered blobs: they lie on links between starting
+pieces and on boundaries between open and curled parts. In that setting 50 to 81\% of them are ends of links between
+two starting pieces; in the other settings, and in the connected torus of
 T39, 33 to 69\% touch both an open and a curled vertex; nowhere do more than 5\% have only damaged neighbors. So the registered word MELTED in these
 runs does not mean a melted space. Each cube opens, or partly opens, inside itself, and the cubes do not join into
 one space (O85, O100). The graphs of T30-gas were not among those read; its largest open patches are no larger than
@@ -353,7 +361,7 @@ one cube.
 Two consequences. The share of open vertices cannot tell one large region from many small ones; the largest open
 region can, and it is recorded at every reading from T48 on. And a connected start differs: from the
 $4 \times 4 \times 18$ torus (T39, $\lambda = 1.25$, $C = N/16$) the largest open region reached 186 to 250 of 288
-vertices in 9 of 12 replicas, with seams beside it.
+vertices in 9 of 12 replicas, with a damaged boundary beside it.
 
 \subsection{Released energy kept in place, and one cube alone}
 
@@ -365,11 +373,11 @@ one-curled torus read STAYS in 32 of 32. The three-curled eight-link torus read 
 
 Not scored, and the result closest to the claim: at $\lambda = 1.40$ the two-curled torus met the OPENS rule in 5
 replicas of 16, every curled direction open in one region holding at least half the vertices, reached between 45,000
-and 197,000 sweeps; 7 were damaged. At that $\lambda$ the start's wall is 4.8 and each rung's gap is 1.6 per vertex.
+and 197,000 sweeps (4 of them nearer flat space by shape; Sec.~\ref{sec:shape}); 7 were damaged. At that $\lambda$ the start's wall is 4.8 and each rung's gap is 1.6 per vertex.
 It is a minority, beside damage, at one size.
 
 \emph{Measured} (T49; O92). One hypercube alone, 32 replicas per cell, with named points and with interchangeable
-points (unlabeled graphs, where a state is weighted by its number of symmetries). The 6-cube where it is stuck
+points (unlabeled graphs: relative to named points, each state is weighted by its number of symmetries). The 6-cube where it is stuck
 ($\lambda = 1.10$ and 1.15, pushes 8 and 4): named points read PART OPEN (31 and 27 of 32; 1 and 5 fully open);
 interchangeable points read STUCK (20 of 32) and MIXED. Where it has a move downhill ($\lambda = 1.25$, no push):
 PART OPEN with both, fully open in 4 of 32 named and 14 of 32 interchangeable. The 8-cube read STUCK, 32 of 32, at
@@ -418,10 +426,11 @@ switches, and T54 did not price the states between. The registered verdict words
 NO FINITE PATCH, read over completed patches at a held-out size, $L = 16$, after a prediction for it was written
 from a fit at $L = 8$ and 12. The author's prediction was CRITICAL PATCH, with a small patch as her lean; ours was
 CRITICAL PATCH, amended before the held-out size to FIXED WALL at $\lambda = 1.40$ under the tie. At all three sizes
-$\Delta H(k)$ is the same exact quadratic, $ak - bk^2$, with nothing left over, for every patch that does not meet
-its own image. Untied, $a = 80 - 16\lambda$ and $b = 16(\lambda - 1)$ (read off the values, not derived): at
-$\lambda = 1.25$ it reads 56, 104, 144, 176 for $k = 1$ to 4, and the fitted curve peaks at 7.5 columns, at 225; at
-$\lambda = 1.10$, at 19.5 columns and 608. Under the tie $a = 176 - 112\lambda$ and $b = 48(\lambda - 1)$: the fitted
+$\Delta H(k)$ is the same exact quadratic, $\alpha k - \beta k^2$, with nothing left over, for every patch that does
+not wrap around the torus. Untied, $\alpha = 80 - 16\lambda$ and $\beta = 16(\lambda - 1)$ (read off the values, not
+derived): at $\lambda = 1.25$ it reads 56, 104, 144, 176 for $k = 1$ to 4, and the fitted curve peaks at
+$k = \alpha/2\beta = 7.5$ columns, at 225; at $\lambda = 1.10$, at 19.5 columns and 608. Under the tie
+$\alpha = 176 - 112\lambda$ and $\beta = 48(\lambda - 1)$: the fitted
 curve peaks at 1.5 columns and 27 at $\lambda = 1.25$, 2.2 and 45 at 1.20, 3.3 and 77 at 1.15, and 5.5 and 145 at
 1.10. The tied numbers at $L = 8$ were computed before the author confirmed her tied prediction, as the registration
 discloses. The prediction for $L = 16$ was written from these, each within 10\%; for the untied $\lambda \le 1.25$
@@ -434,17 +443,17 @@ and at 1.40 tied, where the first patch is free. So the author's CRITICAL PATCH 
 by the letter in the two that are scored; ours fails at tied 1.25 and holds at tied 1.40. Among the scored rows NO
 FINITE PATCH does not appear.
 
-\emph{Exact, and a correction} (11 October 2026; an outside review found it with its own code, and ours reproduces
-it). The fitted peak is not a barrier and bounds none. Between the first two patches under the tie at
+\emph{Exact} (an outside review found this with its own code, and ours reproduces it). The fitted peak is not a
+barrier and bounds none. Between the first two patches under the tie at
 $\lambda = 1.25$, which both stand at 24, the best order of the three switches passes through 24, 20, 45, 24: the
 highest energy met is 45, above the fitted 27. At $\lambda = 1.20$ the first two steps reach 62 and 66 against a
-fitted 45, and at 1.15, 80 and 98 against 77. Nor are squares the cheap shapes. A single line of columns along one
-of the construction's two directions costs $a - b$ for its first column and $96 - 80\lambda$ more for each further
-one under the tie: 24, 20, 16, 12, 8, 4 at $\lambda = 1.25$, level at 32 at 1.20, and rising by 4 and by 8 a column
-at 1.15 and 1.10; untied, every further column costs $32 - 16\lambda$. An earlier draft said the construction
-``bounds the barrier from above''. That is withdrawn, and with it the reading that the tie turns the climb into one
-a bath could make. The barrier to opening the slab's curled direction, tied or untied, is not known: it needs a
-search over paths with every state priced, shapes other than squares included.
+fitted 45, and at 1.15, 80 and 98 against 77. Nor are square patches the cheapest shapes. A single line of columns
+along one of the construction's two directions costs $\alpha - \beta$ for its first column and $96 - 80\lambda$ more
+for each further one under the tie: 24, 20, 16, 12, 8, 4 at $\lambda = 1.25$, level at 32 at 1.20, and rising by 4
+and by 8 a column at 1.15 and 1.10; untied, every further column costs $32 - 16\lambda$. So nothing here shows that the
+tie turns the climb into one a bath could make. The barrier
+to opening the slab's curled direction, tied or untied, is not known: it is the minimax barrier (the highest energy
+on the lowest path) and needs a search over paths with every state priced, shapes other than squares included.
 
 \emph{Measured} (T56, stage 1; O115). The slab ($L = 8$ and 12; 256 and 576 vertices) and the rod ($L = 18$ and 36)
 were held in a warm bath under this tie at $\lambda = 1.10$, 1.15, 1.20 and 1.25 and $g = 1.5$ to 3.0, eight replicas
@@ -456,14 +465,13 @@ $\lambda = 1.20$ or 1.25 in baths of $g = 2.0$ to 3.0, beside damage. None of th
 vertex was left. The author's prediction, that the slab OPENS IN A WINDOW into ONE SPACE, failed at every $\lambda$.
 Ours failed too: a window at 1.15 and 1.20, and that the tie would make the difference. SEVERAL held.
 
-Two things, not scored, say why. First, the tied slab is damaged where the untied one is untouched: 5 to 10\% of its
+Two things, not scored, say why. First, as the second caution above warns, the tied slab is damaged where the
+untied one is untouched: 5 to 10\% of its
 vertices on average at $\lambda = 1.20$, between an eighth and three tenths at 1.25 in every bath, and none in the 32
-untied replicas. That is the second caution above: the table charges a damaged vertex nothing, so it rewards
-breaking. Second, where the slab stayed, opening takes more than the single move, though how much more is not
+untied replicas. Second, where the slab stayed, opening takes more than the single move, though how much more is not
 known: T54's completed patches stand 32 to 145 above the slab at $\lambda = 1.20$ to 1.10, the states between them
 stand higher, and a line of columns costs 32, 40 and 48 for its first column and no less for each further one
-(O118, as corrected). An earlier draft quoted T54's fitted peaks here as the barrier; that is withdrawn.
-\emph{Interpretation (ours, unverified):} our prediction read the single-move wall as the barrier, against the
+(O118, as corrected). \emph{Interpretation (ours, unverified):} our prediction read the single-move wall as the barrier, against the
 first caution. By the registered rule the
 prediction for the held-out sizes ($L = 16$ and 72) is that nothing opens. That stage has not been run, so nothing
 here is a claim about size.
@@ -472,17 +480,17 @@ here is a claim about size.
 \label{sec:shape}
 
 \emph{A retrospective reading of saved final graphs: exploratory, exact for each graph; it changes no verdict}
-(O116). OPENS asks for open vertices in one connected region. That is a count. It does not say how wide the region
-is. One rod of T56 ended with every vertex open, none damaged, and 1.2 per vertex above flat space. So for every
+(O116). OPENS counts open vertices in one connected region; it does not say how wide the region is. One rod of T56 ended with every vertex open, none damaged, and 1.2 per vertex above flat space. So for every
 replica that reads OPENS we counted the vertices at each distance from a vertex. The $4 \times 4 \times 18$ rod has
 at most 32 at any distance, and its farthest vertex is 13 steps away. The flat $6 \times 6 \times 8$ torus, with the
 same 288 vertices, has up to 60, and its farthest is 10 away. That rod of T56 has the rod's numbers: it is the
 starting torus glued together differently, so that no vertex reads as curled. Sorting each replica that reads OPENS
 by the nearer profile: for T48's two-curled torus at $\lambda = 1.40$, 4 of 5 are nearer flat space; for T53, 7 of
 9; for T56's rod, 9 of 17. T56's two slab replicas are a little wider than the slab. In the four-link control of T48
-at $\lambda = 1.25$, 9 of the 15 replicas that read OPENS have the tube's profile and 6 are wider. The companion
-paper's maps show the same at scale: of 9,215 exactly flat end states, 9,208 are the tube with its seam shifted by
-two, a flat torus six links around where the tube was four. So OPENS and ONE SPACE in Table~\ref{tab:runs} are met
+at $\lambda = 1.25$, 9 of the 15 replicas that read OPENS have the tube's profile, eight vertices at each distance,
+as has the tube re-glued two along its seam; 6 are wider. The companion paper's maps show the same at scale: of
+their 11,880 runs, 9,865 finished exactly flat, nearly all of them that re-glued tube, six around where it was four.
+So OPENS and ONE SPACE in Table~\ref{tab:runs} are met
 by the count in every case listed, and by the shape in about two thirds of the six-link ones. A width or a distance
 profile belongs in any registration that uses those words.
 
@@ -494,18 +502,17 @@ is Fig.~3 of Ref.~\cite{T22}: squares per vertex against $\ln \hbar g$ for $D = 
 Its caption gives neither the size of the graphs nor a protocol; we ran $N = 500$, the size the paper states for
 another figure (O96). \emph{Measured.} Under the plain reading of the axis our curve is ordered at every published
 coupling (Gate C, failed; O43). A reading in which the weight goes as $1/g^2$ was pre-registered and FAILS, and the
-same code's two-dimensional figure is not compressed (ONE POWER) (Gate C$'$; O53). One difference is since accounted
-for (O96): Eq.~(1) of Ref.~\cite{T22} counts every link twice and our energy counts it once, a factor of two in the
-coupling. With the coupling halved, our cooling legs cross 9 and 6 squares per vertex at 0.677 and 0.737, and at
+same code's two-dimensional figure is not compressed (ONE POWER) (Gate C$'$; O53). One difference has since been
+accounted for (O96): the energy of Ref.~\cite{T22}, its Eq.~(1), counts every link twice, and ours counts it once, a
+factor of two in the coupling. With the coupling halved, our cooling legs cross 9 and 6 squares per vertex at 0.677 and 0.737, and at
 0.970 and 0.961, in $\ln \hbar g$, against the published 0.666 and 0.996; this was reported after the run and not
 scored. Two differences remain. The published curve reaches 2 squares per vertex a factor 2.8 sooner in coupling,
-and its plateau is 10.07 against our 11.4. \emph{Interpretation (ours, unverified).} Two readings are open and
-neither is settled. The published runs may have been short and out of equilibrium: in an exploratory run a fast
+and its plateau is 10.07 against our 11.4. \emph{Interpretation (ours, unverified).} Two readings are open. The published runs may have been short and out of equilibrium: in an exploratory run a fast
 heating leg from a slowly cooled state comes near the published plateau and width (O45). Or the published graphs may
 carry triangles and pentagons, which the paper's text allows and our bipartite kernel does not (O96); against that,
 the published hot end, 1.09 squares per vertex, sits at our bipartite value, 1.15, where such graphs would sit near
 half of it. The gate stays open. The exact results of Sec.~\ref{sec:exact} are properties of the energy as we
-derived it and do not depend on the sampler. Every measured statement is about our family and its kernel.
+derived it and do not depend on the sampler.
 
 \section{Discussion}
 
@@ -516,8 +523,8 @@ pre-registered tests, untied or under the ties run, no push of any size tried, n
 six- or eight-link setting in which a majority of runs had every curled direction open in one region. A gas opened
 cube by cube. A two-curled torus opened one direction and rested, or opened fully in a minority at $\lambda = 1.40$,
 beside damage. A one-curled torus given its wall did not move, and under the author's tie in a warm bath it stayed or
-broke. The four-link control read ONE SPACE at $\lambda = 1.25$, though by shape most of those tubes were still
-tubes (Sec.~\ref{sec:shape}). The author's predictions that one push, or a bath, opens every direction failed in every test that
+broke. The four-link control read ONE SPACE at $\lambda = 1.25$, though by shape most of those had the profile of the tube
+re-glued six around, no wider (Sec.~\ref{sec:shape}). The author's predictions that one push, or a bath, opens every direction failed in every test that
 could score them; her
 predictions that the first move's price is fixed with size (T32) and that openings start in several places (T53)
 held. Several of ours failed too: FIRST ONLY for the tori of T30, the windows we expected at $\lambda = 1.40$ and
@@ -537,12 +544,12 @@ held-out size under the tie, and the exact price of the cheapest breaking move o
 opening one. The branch is abandoned in this family if T54 reads NO FINITE PATCH, or a barrier above flat space's,
 at every $\lambda$ at which the slab is stuck; or if a table that also charges damage, chosen by the author and
 priced exactly first, still does not open it (O115). That condition was written when T54's numbers were taken for a
-barrier. With the correction above, the test that would decide it is a search for the lowest path, which is not yet
+barrier; since they are not one (Sec.~\ref{sec:tie}), deciding it needs a search for the lowest path, not yet
 designed.
 
 What the curled start may be is the author's to say. Her statements so far \cite{repo}: it may begin with one
-direction already open; a foam of small fully curled pieces that open separately and then join is a possibility she
-holds open and has not adopted; it may be long in one open direction with two curled; and the shape that matches her
+direction already open; a foam of small fully curled pieces that open separately and then join she holds open,
+not adopted; it may be long in one open direction with two curled; and the shape that matches her
 picture is the slab. In the toy, only connected starts with a direction already open have reached one large open
 region, and no run has shown separate pieces joining (O85).
 
@@ -586,7 +593,7 @@ multiverse, JCAP 05, 005 (2010); arXiv:0912.4082.
 \bibitem{GHR10} P. W. Graham, R. Harnik, and S. Rajendran, Observing the dimensionality of our parent vacuum, Phys.
 Rev. D \textbf{82}, 063524 (2010); arXiv:1003.0236.
 \bibitem{Mul79} H. M. Mulder, $(0,\lambda)$-graphs and $n$-cubes, Discrete Math. \textbf{28}, 179 (1979).
-\bibitem{paper2} E. Smith, What the burp leaves behind, draft (2026), \texttt{docs/papers/relic/}.
+\bibitem{paper2} E. Smith, What the change leaves behind, draft (2026), \texttt{docs/papers/relic/}.
 \bibitem{paper3} E. Smith, The rule, the room, and which settings give a birth, draft (2026),
 \texttt{docs/papers/fertile\_window/}.
 \bibitem{paper4} E. Smith, Concentrated energy does not fold space, draft (2026),

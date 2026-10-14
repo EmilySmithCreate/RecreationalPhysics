@@ -13,27 +13,27 @@ would need}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT of 25 September 2026, revised 10 October 2026. Series paper 11. Not reviewed by a physicist.}
+\date{DRAFT of 25 September 2026, revised 14 October 2026. Series paper 11. Not reviewed by a physicist.}
 
 \begin{abstract}
-The author's hypothesis holds that gravity is the wish of curved space to refold: that small curled leftovers of the
+The author proposes that gravity is the wish of curved space to refold: that small curled leftovers of the
 change that made space pull on each other through the arrangement around them. We ask whether the family of graph
 energies obtained from combinatorial quantum gravity (CQG) by raising the coefficient $\lambda$ of its local term above
 1 can produce such a pull. At fixed wiring, exact results say it does not. The energy is a sum over links, so two
 defects that share no square are exactly additive; counting symmetries, in the cases computed, prefers symmetric
 placements, not near ones; and flat space is gapped in the extreme: every single move out of it costs 32, 64 or 128
-units with four, six or eight links per point, at every $\lambda$. That a medium with such a gap carries a force only
-over a short range is argued from the published literature, by analogy, not derived for this model; a force with the
+units with four, six or eight links per point, at every $\lambda$. That such a gap allows only a short-range force is
+argued by analogy with the published literature, not derived for this model; a force with the
 wiring free to rearrange has not been measured, and with six links the relic such a force would act on has not been
 found. We then state what the published work says a pull needs (a mode with no gap, each relic a source for it in
 proportion to its energy, and a mode of the kind that makes like sources attract), and compute exactly what the
 simplest such mode a graph carries, a field on its points, would add: its fluctuations give a Casimir-type attraction
-under the field reading, a free-energy term falling roughly as $r^{-4}$ in two directions and $r^{-6}$ in three, worth
-about 0.02 of the coupling at contact in two directions and 0.002 in three; with relics as its sources it gives a
+under the field reading, a free-energy term falling roughly as $r^{-4}$ in two directions and $r^{-6}$ in three; with
+relics as its sources it gives a
 potential falling as $1/r$ in three directions, Newton's shape, carried by the emergent wiring; and the field barely
-changes which arrangement is favored. That rule would put the pull in, not derive it. Since this draft was first
-written the author has decided to add a quantity on the points if it matches her account of gravity; one number per
-point is scalar gravity, which does not bend light, so that condition asks for more than one (Sec.~VI).
+changes which arrangement is favored. Such a field would put the pull in, not derive it. The author has decided to
+add a quantity on the points if it matches her account of gravity; one number per point is scalar gravity, which
+does not bend light, so that condition needs more than one (Sec.~VI).
 \end{abstract}
 
 \maketitle
@@ -44,39 +44,54 @@ The companion papers \cite{paper1,paper2} study a curled torus that opens into f
 small curled leftover it leaves behind, the relic. The author's framework reads gravity as the refolding drive of curved
 space: relics, being curled, should draw one another together through the arrangement between them. That makes a
 definite question of the model: do two relics in flat space pull on each other, and if so, how does the pull fall with
-distance? We answer it for the model as it stands, say why the answer is what it is, and say what would change it.
+distance?
 
-The energy is that of CQG \cite{T25} with the coefficient of its local term raised: $H = 16(D(D-1)N/2 - S) + 4\lambda X$
-on $2D$-regular bipartite graphs, $S$ the number of 4-cycles (squares) and $X$ the surplus squares on over-full links.
-Only $\lambda = 1$ is CQG; everything run here is at $\lambda > 1$, next to it. The exact statements hold at every
-$\lambda$, including 1. The six- and eight-link energies are derived by us from the published definitions; the
-six-link kernel has not reproduced the published six-link curve, and there is no published eight-link curve, so every
+The energy is that of CQG \cite{T25} with the coefficient $\lambda$ of its local term raised. On $2D$-regular bipartite
+graphs in which no two points share more than two neighbors (the hard-core rule),
+\begin{equation}
+\begin{aligned}
+H &= 16\Bigl(\tfrac{D(D-1)}{2}\,N - S\Bigr) + 4\lambda X,\\
+X &= \textstyle\sum_e (S_e - s_0)_+ ,
+\end{aligned}
+\label{eq:H}
+\end{equation}
+with $S$ the number of 4-cycles (squares), $S_e$ the number through link $e$, and $D(D-1)N/2$ the number of squares
+of flat space, where every link carries $s_0 = 2(D-1)$. Since $\sum_e S_e = 4S$ over the $DN$ links and
+$a = a_+ - (-a)_+$, Eq.~(\ref{eq:H}) is also
+\begin{equation}
+H = 4\sum_e \bigl[(s_0 - S_e)_+ + (\lambda - 1)(S_e - s_0)_+\bigr],
+\label{eq:Hlinks}
+\end{equation}
+a sum over links that is $\ge 0$ for $\lambda \ge 1$ and $0$ on flat space. Only $\lambda = 1$ is CQG; everything run
+here is at $\lambda > 1$, next to it. The exact statements hold at every $\lambda$, including 1. The six- and
+eight-link energies are derived by us from the published definitions; the six-link kernel has not reproduced the published six-link curve, and there is no published eight-link curve, so every
 statement here at six and eight links is about our family and its kernel.
 
 \section{Three exact facts}
 
-\emph{Additivity.} $H$ is a sum of terms on links, each depending on the squares through that link. Two defects that
-share no square therefore cost exactly the sum of their separate costs, at every separation; an attraction appears only
-at contact (16 with four links, 64 with six), where they share squares. We checked it by construction for local defects at
-every separation on flat tori with four and with six links.
+\emph{Additivity.} By Eq.~(\ref{eq:Hlinks}), $H$ is a sum of terms on links, each depending only on the squares through
+that link. Two defects that share no square therefore cost exactly the sum of their separate costs, at every
+separation; an attraction appears only at contact (16 with four links, 64 with six), where they share squares. We
+checked it by construction for local defects at every separation on flat tori with four and with six links.
 
 \emph{No counting pull at fixed wiring.} With the points treated as interchangeable, as the author's framework treats
-them, each placement of two identical defects is weighted by its number of symmetries. With four links, for one simple
+them, each wiring counts once rather than once per labeling, so each placement of two identical defects is weighted,
+relative to named points, by its number of symmetries. With four links, for one simple
 defect on one torus, that number is one or two at ordinary separations and four only at exactly opposite placements;
 with six links it is 8 at generic separations, 16 exactly opposite, 32 along the defect's own axis at any separation
 and 4 on a diagonal. That is a preference for symmetric placements, not one that grows as the defects approach: not a
 pull.
 
-\emph{A gapped vacuum.} Flat space is the exact ground state for $\lambda \ge 1$, and the cheapest single move out of it
-costs 32, 64 and 128 with four, six and eight links, the same at every $\lambda$ (listed over every switch with four
-links; with six and eight, by a search over nearby partners that was checked against the full search on one six-link
-torus). At the couplings where curled arrangements are stuck for now ($g \lesssim 2$), a cold flat region accepts
-essentially no move at all; the relic itself anneals away within 500 to 80,500 sweeps at $g = 1.0$ to 1.5 and lasts
-only where its surroundings stay very cold \cite{paper2}. The relic is a dip with four links (it costs
-$24\lambda - 16$ and every single move out of it costs energy); with six links, a search at $\lambda = 1.02$ on the flat
-$6 \times 6 \times 6$ torus, over the 9,049 curled arrangements made by one or two switches within three steps of one
-point, testing the 30 lowest in energy, found none that is a dip, so the object a pull would act on is not yet known to
-exist there.
+\emph{A gapped vacuum.} Flat space is an exact ground state for $\lambda \ge 1$ (Eq.~\ref{eq:Hlinks}), and the cheapest
+single move out of it costs 32, 64 and 128 with four, six and eight links, the same at every $\lambda$ (found by trying
+every switch with four links; with six and eight, by trying switches between nearby links, a search checked against
+the full one on one six-link torus). At the couplings where curled arrangements are metastable ($g \lesssim 2$), a
+cold flat region accepts essentially no move at all; the relic itself anneals away within 500 to 80,500 sweeps at
+$g = 1.0$ to 1.5 and lasts only where its surroundings stay very cold \cite{paper2}. With four links the relic is a
+local minimum (its energy is $24\lambda - 16$ and every single move out of it costs energy); with six links, a search
+at $\lambda = 1.02$ on the flat $6 \times 6 \times 6$ torus, over the 9,049 curled arrangements made by one or two
+switches within three steps of one point, testing the 30 lowest in energy, found no local minimum, so the object a
+pull would act on is not yet known to exist there.
 
 \section{Why the facts are one fact}
 
@@ -88,18 +103,16 @@ out of flat space costs at least a fixed energy; the theorem of Ref.~\cite{HK06}
 and carrying it over to this classical ensemble, defined by its moves, is an analogy we have not proved. A vacuum whose
 every excitation costs 32 or more is the extreme case: at fixed wiring there is nothing to carry a force (the first two
 facts), and with the wiring free there is almost nothing that moves. So, by this argument, the absence of a pull
-between point defects is what this energy should give in its geometric phase, not a failure to look hard enough; a
-force with the wiring free to rearrange, which would be entropic, has not been measured. One long-range force does
-exist in this family, of another kind: because two orders differ by a fixed energy per point, a boundary between them
+between point defects is what this energy should give in its geometric phase (with the wiring free to rearrange, a
+force would be entropic; Sec.~VI). One long-range force does exist in this family, of another kind: because two orders differ by a fixed energy per point, a boundary between them
 is pushed with a constant force, the force that drives the front of Ref.~\cite{paper1}. It acts between regions of
 different order, not between separated lumps, and it is not gravity.
 
-We had also measured, in the published model ($\lambda = 1$), that the curvature correlation falls to zero within two
+We also measured, in the published model ($\lambda = 1$), that the curvature correlation falls to zero within two
 steps at every coupling and every size up to 676 points; the same measurement did not reproduce the model's
-published correlation length.
-That is consistent with a gap but does not show one: in Einstein's theory, which has a massless graviton, the curvature
-correlator is a contact term at tree level, and it is the volume correlator that carries the massless mode \cite{LR25}.
-The gap is shown by the walls.
+published correlation length. That is consistent with a gap but does not show one: in Einstein's theory, which has a
+massless graviton, the curvature correlator is a contact term at tree level, and it is the volume correlator that
+carries the massless mode \cite{LR25}. The gap itself is shown by the move costs of Sec.~II.
 
 \section{What a pull needs}
 
@@ -107,41 +120,47 @@ The published work names three things, all needed together. (i) A mode with no g
 fall as a power, not an exponential. The robust classical route is a hard local constraint with many ground states, as
 in dimer models on bipartite lattices, where counting alone gives defects an inverse-square force \cite{HKMS03,Henley};
 the quantum route is a gauge structure \cite{GW09}. (ii) Each relic a source for that mode in proportion to its energy,
-a charge whose flux through every surrounding surface is the same; without it a gapless medium gives only the fast
-Casimir laws that stiff inclusions feel in a membrane \cite{GBP93,KG99}. (iii) A mode of the kind that makes like sources
+a charge whose flux through every surrounding surface is the same; without it a gapless medium gives only the
+rapidly decaying Casimir-type forces that stiff inclusions feel in a membrane \cite{GBP93,KG99}. (iii) A mode of the kind that makes like sources
 attract: a scalar, as in Nordstr\"om's theory \cite{Giulini}, or the tensor of Einstein's; the vector modes that hard
 constraints produce make like defects repel \cite{Henley}, as electric charges do. In three large directions the three
-together give Newton's $1/r$ potential. The one discrete random-geometry model we have found reported to show a
-Newtonian pull, four-dimensional
-dynamical triangulations, did so with test particles moving on a geometry tuned near a transition \cite{dBS97,DLSU21}.
+together give Newton's $1/r$ potential. A discrete random-geometry model reported to show a Newtonian pull is
+four-dimensional dynamical triangulations, which did so with test particles moving on a geometry tuned near a transition \cite{dBS97,DLSU21}.
 
 \section{The simplest candidate, computed}
 
-A graph carries one mode with no gap for free: a field $\phi$ on its points with energy $\frac{\kappa}{2}\sum_{\rm
-links}(\phi_u - \phi_v)^2$, whose propagator is the graph's own Green's function and so follows the emergent geometry.
-Integrated out exactly, it adds to the free energy of a wiring $\frac{g}{2}\ln\det{}'L$ (with $L$ the graph Laplacian;
-$\det{}'L$ is $N$ times the number of spanning trees), and, if relics are sources $q$ for it, a cross term
-$-q_1^{\mathsf T}L^{+}q_2$ between two relics. We evaluated both on fixed wirings holding two identical defects at every
-even separation (Table~\ref{tab:pull}), each with its expectation written before the calculation. The defect is the
-one-switch curled line of four, which is not a relic (with six links it is not a dip, and with four it is not the
-relic of Ref.~\cite{paper2}, which adds a square where a single switch from flat space cannot), with a unit charge on
-each of its points; for two identical defects that differs from a charge in proportion to energy only by a common factor. The
-fluctuation term is lower when the defects are close, so under the field reading it pulls them together (if the
-spanning trees were counted instead as hidden structure, the sign would reverse), but weakly and briefly, falling
-roughly as $r^{-4}$ in two directions and $r^{-6}$ in three (local exponents 2.8 to 4.9 and 4.2 to 6.2 across the
-separations of Table~\ref{tab:pull}) and worth about $0.024g$ in two directions and $0.0016g$ in three at contact: it
-passes the test of sign and fails that of shape. The source term, a potential, grows as the relics approach, as the
-lattice Green's function does, like $1/r$ in three directions, less the images of the periodic torus, and like
-$-\ln r$ in two. Across the rungs of the ladder the field's own term favors a curled torus over flat space by
+A graph supports one gapless mode with no further structure: a field $\phi$ on its points with energy
+\begin{equation}
+E_\phi = \frac{\kappa}{2}\sum_{{\rm links}\ uv}(\phi_u - \phi_v)^2 = \frac{\kappa}{2}\,\phi^{\mathsf T}L\,\phi ,
+\label{eq:field}
+\end{equation}
+with $L$ the graph Laplacian, whose propagator is the graph's own Green's function and so follows the emergent
+geometry. The Gaussian integral over $\phi$ (zero mode removed) adds $\frac{g}{2}\ln\det{}'L$ to the free energy of a
+wiring, up to a constant the same for every wiring; by the matrix-tree theorem $\det{}'L$ is $N$ times the number
+$\tau$ of spanning trees. If relics are sources $q$ for the field (adding $-q^{\mathsf T}\phi$ to $E_\phi$), minimizing
+over $\phi$ gives a cross term proportional to $-q_1^{\mathsf T}L^{+}q_2$ between two relics. We evaluated both on fixed
+wirings holding two identical defects at every even separation (Table~\ref{tab:pull}), each with its expectation
+written before the calculation. The defect is the curled line of four made by one switch, with a unit charge on each
+of its points. It is not a relic: with six links it is not a local minimum, and with four it is not the relic of
+Ref.~\cite{paper2}, which adds a square that a single switch from flat space cannot make. For two identical defects,
+unit charges differ from charges in proportion to energy only by a common factor.
+
+Table~\ref{tab:pull} shows fewer spanning trees when the defects are close. Since $\ln\det{}'L$ enters the free energy
+with a plus sign, under the field reading the fluctuation term then pulls them together (counted instead as hidden
+structure, an entropy, the trees would push them apart). The pull is weak and short
+in reach, falling roughly as $r^{-4}$ in two directions and $r^{-6}$ in three (local exponents 2.8 to 4.9 and 4.2 to
+6.2 across the separations of Table~\ref{tab:pull}) and worth about $0.024g$ in two directions and $0.0016g$ in three
+at contact: it passes the test of sign and fails that of shape. The source term, a potential, grows as the relics
+approach, as the lattice Green's function does, like $1/r$ in three directions, less the images of the periodic torus,
+and like $-\ln r$ in two. Between a curled torus and flat space, the field's own term favors the curled torus by
 0.0144$g$ per point with four links, and by 0.0026$g$ to 0.0039$g$ per point per curled direction with six (one and
 two curled): the same as lowering $\lambda$ by about $0.004g$ with four links and $0.001g$ or less with six, too little
-to move the window in which the change happens at $\lambda = 1.25$.
+to move the metastable range of the curled torus near $\lambda = 1.25$.
 
 \begin{table}[t]
-\caption{Two identical defects (the one-switch curled line of four, not a relic) at separation $r$ along an axis, on
-fixed wirings: the change in
-$\ln$(spanning trees) and in the source cross term $q_1^{\mathsf T}L^{+}q_2$ (unit charge on each defect point), each
-relative to the farthest placement. Exact.}
+\caption{Two identical defects (the curled line of four made by one switch, not a relic) at separation $r$ along an
+axis, on fixed wirings: the change in $\ln\tau$, $\tau$ the number of spanning trees, and in the source cross term
+$q_1^{\mathsf T}L^{+}q_2$ (unit charge on each defect point), each relative to the farthest placement. Exact.}
 \label{tab:pull}
 \begin{ruledtabular}
 \begin{tabular}{lccc}
@@ -160,49 +179,49 @@ $16 \times 16 \times 16$ & 2 & $-0.0032$ & 0.369 \\
 
 \section{Where the two routes stand, October 2026}
 
-\emph{The leftovers.} The relic of this draft's first version is now known to be one of three kinds of small knot,
-read from the wiring of sheets that opened from many seeds: a ring of four points left curled, two neighboring rings
-left curled, and a knot of eight points of two kinds. With four links each is stuck in its own right, every single
-move out of it costs energy, and their number is set at the opening and not by the cooling \cite{paper2}. These are
-the objects a pull would act on in two directions. With six links none has been found, as before.
+\emph{The leftovers.} The relic is one of three kinds of small knot, read from the wiring of sheets that opened from
+many seeds \cite{paper2}: a loop of four points left curled, two neighboring such loops wired like a cube, and a knot
+of eight points of two kinds. With four links each is a local minimum of its own, and their number is set at the
+opening and not by the cooling. These are the objects a pull would act on in two directions. With six links none has
+been found (Sec.~II).
 
-\emph{The route that needs nothing new: a pull from counting.} It needs two things. First, that what a boundary
+\emph{The route that needs nothing new: a pull from counting.} It needs, first, that what a boundary
 hides around a leftover grows with the boundary, as in the accounts of Jacobson and Verlinde \cite{Jac95,Ver11}; an
-exact count of this kind around a relic was registered and has been computed, and awaits its registered reading.
+exact count of this kind around a relic has been pre-registered and computed, and awaits its pre-registered reading.
 Second, that the warm sheet feels both leftovers at once: a fluctuation-induced pull has the range of the
-surroundings' correlations (Sec.~III), so how far a disturbance is felt in a warm sheet is measured before any pull
-is, and a short reach closes this route without running it.
+surroundings' correlations (Sec.~III), so the warm sheet's correlation length is measured first, and a short one
+closes this route without measuring the pull.
 
 \emph{The route that adds something: a quantity on the points.} The author has decided to add one on the condition
 that it matches her account, in which gravity belongs to space, and gives Einstein's numbers wherever they have been
-measured. The field of Sec.~V is the simplest such quantity, and it is one number per point. One number per point
-sourced by energy is Nordstr\"om's theory: the right Newtonian limit, no bending of light, and the wrong perihelion
+measured. The field of Sec.~V is the simplest such quantity: one number per point, which, sourced by energy, is
+Nordstr\"om's theory: the right Newtonian limit, no bending of light, and the wrong perihelion
 shift \cite{Giulini}. So the condition cannot be met by a scalar alone; it needs the rate of time and the curvature
 of space together.
 
 \emph{The nearest published form.} In Bianconi's ``gravity from entropy'' \cite{Bia25} an auxiliary field, the
-G-field, lives at every point, vanishes in flat empty space and generates a small positive cosmological constant. It
-is the closest published relative of a quantity on the points, and it comes with equations. Two cautions: its
+G-field, lives at every point, vanishes in flat empty space and generates a small positive cosmological constant: the
+closest published relative of a quantity on the points, with equations. Two cautions: its
 stability is disputed in print (arXiv:2607.18518 and 2609.03082, of which only the abstracts were read), and its
-discrete form \cite{Bia24}, evaluated on this model's own wirings at a uniform metric, rewards squares as this
-energy does with its local coefficient below 1, the range in which flat space is not the lowest state
-\cite{paper10}. Borrowed whole, it would not leave flat space the floor. It is a target to compare against, not
-evidence.
+discrete form \cite{Bia24}, evaluated on this model's own wirings at a uniform metric, rewards squares as
+Eq.~(\ref{eq:H}) does with $\lambda < 1$, where flat space is not the lowest state \cite{paper10}. Borrowed whole, it
+would not keep flat space the ground state. It is a target to compare against, not evidence.
 
 \section{Discussion}
 
-What this paper shows is narrow. In this family of energies at $\lambda > 1$, at fixed wiring, point defects that
-share no square do not pull on each other through the energy, and counting symmetries gives no attraction that grows
-as they approach, in the cases computed; the gap of flat space argues, by analogy with the published results, that
+What this paper shows is narrow. At fixed wiring and $\lambda > 1$, point defects that share no square do not pull on
+each other through the energy, and counting symmetries, in the cases computed, gives no attraction that grows as they
+approach; the gap of flat space argues, by analogy with the published results, that
 nothing longer-ranged is carried either, whatever the size of the runs. At $\lambda = 1$, which is CQG, we claim only
 the exact facts. A force with the wiring free to rearrange has not been measured, and with six links the relic it
-would act on has not been found. It does not show that the author's account of gravity is wrong; it argues that this
-energy does not contain the ingredient that the published accounts of a long-range pull need. The simplest ingredient that would, a massless field on the points with relics as its sources,
-gives Newton's shape, but it puts the pull in by hand; what would be new is that the field travels through the emergent
-wiring rather than a fixed lattice, and can act back on it. Three tests follow if it is adopted, each to be
-pre-registered with the author's prediction: whether two relics drift together in a sealed run; the shape of the pull in
-three directions and its scaling with the relics' energies; and whether many relics clump under it and a dense clump
-re-curls space, which is the author's mechanism for black holes \cite{paper4}. Whether the field could itself arise from
+would act on has not been found. The paper does not show that the author's account of gravity is wrong; it argues
+that this energy lacks the ingredient that the published accounts of a long-range pull need. The simplest ingredient
+that would supply it, a massless field on the points with relics as its sources, gives Newton's shape, but it puts the
+pull in by hand; what would be new is that the field travels through the emergent wiring rather than a fixed lattice,
+and can act back on it. Three tests follow if it is adopted, each to be pre-registered with the author's prediction:
+whether two relics drift together in a sealed run; the shape of the pull in three directions and its scaling with the
+relics' energies; and whether many relics clump under it and a dense clump re-curls space, the author's proposed
+mechanism for black holes \cite{paper4}. Whether the field could itself arise from
 the loops of the graph, rather than be added, is the harder question behind all three.
 
 \begin{acknowledgments}
@@ -217,10 +236,10 @@ O51, O56, O58, O60, O61, and for Sec.~VI O87, O103, O107, O111 and VISION Update
 \begin{thebibliography}{99}
 \bibitem{paper1} E. Smith, ``The curled torus burps: activated escape and conversion in a graph model of emergent
 geometry,'' manuscript (2026).
-\bibitem{paper2} E. Smith, ``What the burp leaves behind: a relic defect of fixed size in a graph model of emergent
-geometry, its number, its position, and how long it lasts,'' draft (2026).
-\bibitem{paper4} E. Smith, ``Does concentrated energy re-curl space? Three sealed tests in a graph model of emergent
-geometry, and a melt every time,'' draft (2026).
+\bibitem{paper2} E. Smith, ``What the change leaves behind: relic defects of fixed size in a graph model of emergent
+geometry, their kinds, their number, and how long they last,'' draft (2026).
+\bibitem{paper4} E. Smith, ``Concentrated energy does not fold space: seven pre-registered tests in a graph toy model of
+emergent geometry,'' draft (2026).
 \bibitem{paper10} E. Smith, ``An entropy action across wirings: Bianconi's discrete entropic action evaluated on
 networks that rewire,'' draft (2026).
 \bibitem{Jac95} T. Jacobson, ``Thermodynamics of spacetime: the Einstein equation of state,'' Phys. Rev. Lett.

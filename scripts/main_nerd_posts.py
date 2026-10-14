@@ -24,9 +24,10 @@ class Post:
     number: int
     slug: str                           # the post's folder name; the plain-language edition adds "PL"
     title: str
-    published: str                      # ISO date
+    published: str                      # ISO date the post first went up
     paper_dir: str                      # the paper's folder, from the repository root
     subtitle: str = ""
+    updated: str = ""                   # ISO date of the latest revision, if any
     plain_source: str = "paper_plain_language.tex"     # in paper_dir; each PDF is the same name with .pdf
     technical_source: str = "paper.tex"
     pdf_plain_name: str = ""            # the PDFs' names beside the pages; empty where there is none to offer
@@ -138,17 +139,14 @@ CHAPTER_QUESTIONS_01 = {
     7: ("Where did the energy of the Big Bang come from?",
         "In the author's hypothesis the change itself released it, the way freezing water gives off heat. In "
         "the toy model that release, the burp, can be counted exactly and followed when nothing is allowed to "
-        "leave."),
-    8: ("Is anything left over from before the Big Bang?",
-        "In the toy model something is: about one small scrap of the old arrangement survives each change. "
-        "Whether anything like it exists in reality is not something a toy can say."),
-    9: ("How do you test an idea about the universe with a simulation?",
+        "leave, and the change leaves a small scrap of the old arrangement behind."),
+    8: ("How do you test an idea about the universe with a simulation?",
         "By turning one knob at a time with the rules written down first, and publishing every setting, "
         "including the ones that failed. This chapter is that map."),
-    10: ("Can a computer simulate the beginning of the universe?",
+    9: ("Can a computer simulate the beginning of the universe?",
          "Not the real one. This chapter lists exactly how far these simulations go, where each stops, and what "
          "lies past each edge."),
-    11: ("Is this a theory of where the universe came from?",
+    10: ("Is this a theory of where the universe came from?",
          "It is a hypothesis, with one mechanism tested in a toy model and no physicist's review yet. This "
          "chapter says what was learned and what would have to come next."),
 }
@@ -191,10 +189,16 @@ FAQ_01 = [
      "acts as a curvature. This paper's toy is a close cousin of that model, not that model itself: it turns one knob, "
      "the price of a surplus square (λ), above the published value of 1."),
     ("What is a curled torus?",
-     "A torus is a grid that wraps around in both directions, and every shape in the paper is one: flat (the "
-     "sheet), curled (the tube) or knot. Curl one direction of the flat one until it is only four steps "
-     "around and you have a tube. In the toy the tube has one large direction where the flat sheet has two, and "
-     "it sits 4(λ − 1) units of energy per dot above the flat sheet: one unit per dot at λ = 1.25."),
+     "A torus is a grid that wraps around in both directions, the surface of a doughnut, and every shape in the "
+     "paper is one: flat (the sheet, a fat doughnut), curled (the tube, a thin ring) or knot. Curl one direction "
+     "of the flat one until it is only four steps around and you have a tube. In the toy the tube has one long "
+     "direction where the flat sheet has two, and it sits 4(λ − 1) units of energy per dot above the flat sheet: "
+     "one unit per dot at λ = 1.25."),
+    ("Is flat space the same as endless space?",
+     "No. Flat is about each place's surroundings; whether space goes on for ever is a separate question. In the "
+     "toy every shape closes on itself, like a doughnut, and a count made from inside matches an endless grid's "
+     "until half the way around, so a doughnut much wider than its inhabitants looks endless to them. Real space "
+     "is measured to be flat on the largest scales; whether it is endless has not been measured."),
     ("What is the burp?",
      "The burp is the energy given off when the tube's tight curl comes undone. For a clean change it is "
      "exactly 4(λ − 1) per dot, so it grows with the size of the tube, while the push needed to start it does "
@@ -232,18 +236,18 @@ KEY_TERMS_01 = ["what came before the Big Bang", "emergent spacetime", "combinat
 
 POST_01 = Post(
     number=1, slug="01thecurledtorusburps", title="The curled torus burps",
-    subtitle="A small push, a large release, and the question of what survives", published="2026-10-10",
+    subtitle="A small push, a large release, and the question of what survives", published="2026-10-10", updated="2026-10-14",
     paper_dir="docs/papers/curled_torus",
     pdf_plain_name="the-curled-torus-burps-plain-language.pdf",      # copied beside the pages by the build
     pdf_tech_name="the-curled-torus-burps-technical.pdf",
     opening_words="Everything you have ever seen", cite_key="smith2026curledtorus",
     has_technical=True, technical_figures=("fig_tori", "fig1", "fig_lambda"),
     chapter_to_section={1: "sec-intro", 2: "sec-model", 3: "sec-model", 4: "sec-cost", 5: "sec-exit",
-                        6: "sec-conversion", 7: "sec-sealed", 8: "sec-sealed", 9: "sec-lambda",
-                        10: "sec-discussion", 11: "sec-discussion"},
+                        6: "sec-conversion", 7: "sec-sealed", 8: "sec-lambda",
+                        9: "sec-discussion", 10: "sec-discussion"},
     section_to_chapters={"sec-intro": [1], "sec-model": [2, 3], "sec-cost": [4], "sec-exit": [5],
-                         "sec-conversion": [6], "sec-sealed": [7, 8], "sec-lambda": [9],
-                         "sec-discussion": [10, 11], "sec-methods": [10]},
+                         "sec-conversion": [6], "sec-sealed": [7], "sec-lambda": [8],
+                         "sec-discussion": [9, 10], "sec-methods": [9]},
     # The companion, "The Tube's Curling Ladder", was first published as a Claude artifact, and the papers' PDFs
     # link to it there. The blog hosts its own copy, built from the same source file, and the web pages link to that.
     has_companion=True, companion_source="docs/public/curling_ladder_tube.html",
@@ -273,12 +277,13 @@ POST_01 = Post(
 SUBTITLE_02 = "How many scraps a sharp change leaves, and which of them last"
 
 SUMMARY_02 = (
-    "<p><b>In one paragraph.</b> <i>What the burp leaves behind</i> is the second paper in a series about a "
+    "<p><b>In one paragraph.</b> <i>What the change leaves behind</i> is the second paper in a series about a "
     "hypothetical sharp change in which space emerges from something more curled up. It works in a toy model of "
     "space as a network of dots and links. The toy is the paper's own: a close cousin of the published model "
     "called combinatorial quantum gravity, with one knob turned above the published value, and not that model "
     "itself. In the toy a curled tube changes all at once into a wider tube and gives off energy (the burp), and "
-    "the change leaves small scraps. This paper counts them and reads what they are. One start leaves about one "
+    "the change leaves small scraps. This paper counts them, reads what kinds there are, and asks how they come to "
+    "be. One start leaves about one "
     "scrap, whatever the size of the tube. More starts leave more, but fewer than one each. The common scrap, a "
     "curled loop of four dots, heals away in warm surroundings and is frozen in when its surroundings cool. "
     "Cooled slowly enough, nearly all of them heal, yet most of the leftover energy stays, held by two rarer "
@@ -310,11 +315,11 @@ CHAPTER_QUESTIONS_02 = {
         "Mostly, in the toy: cooled slowly enough, nearly all of the common scraps heal. But most of the leftover "
         "energy stays, and this chapter shows what the slow cooling did not touch."),
     7: ("What kinds of defect can a sharp change leave?",
-        "In the toy, three, read link by link: a curled loop, a double loop and a twist. Each is stuck on its own, "
-        "and none is a seam between regions."),
+        "In the toy, three, read link by link: a curled loop, a double loop and a twist. Each is stuck on its own "
+        "and holds a fixed amount, and none is a seam of the kind first tested."),
     8: ("Why do some defects never heal?",
-        "One possible reason, seen in old runs and not yet tested: a scrap can be the joint between two stretches "
-        "of different width, and a joint may not be removable while the widths differ."),
+        "One possible reason, seen in old runs and not yet tested: most scraps are free, but some are joints "
+        "between two stretches of different width, and a joint may not be removable while the widths differ."),
     9: ("Could something left over from the birth of space still be around?",
         "This paper cannot say. It shows which leftovers last in one toy model, lists the three predictions that "
         "failed, and says what has to be computed next."),
@@ -341,7 +346,7 @@ BIG_QUESTIONS_02 = [
 ]
 
 FAQ_02 = [
-    ("What is “What the burp leaves behind” about?",
+    ("What is “What the change leaves behind” about?",
      "It is a plain-language edition of a computational physics paper by Emily Smith, the second in a series. The "
      "first paper found that a curled arrangement in a toy model of dots and links changes all at once and gives "
      "off energy. This one asks what that change leaves behind: how many leftover pieces, what they are, and "
@@ -369,7 +374,7 @@ FAQ_02 = [
      "from 4.3 percent of the burp to 1.3 percent, because the other two kinds stayed."),
     ("Which predictions failed?",
      "Three. That scraps would grow with the size of the tube. That the curled loops would fall gently as the "
-     "cooling slowed, predicted by the author and by her AI assistants. And that the leftovers which survive "
+     "cooling slowed. And that the leftovers which survive "
      "cooling would be seams between regions, predicted by the author. All three are reported in the paper."),
     ("What is combinatorial quantum gravity, and is this it?",
      "Combinatorial quantum gravity is a published model, built by Carlo Trugenberger, Christy Kelly and Fabio "
@@ -391,20 +396,25 @@ KEY_TERMS_02 = ["what is left over from before the Big Bang", "relic defect", "d
                 "combinatorial quantum gravity", "graph model of space", "metastable state",
                 "isolated system (microcanonical)", "pre-registration", "Markov chain Monte Carlo"]
 
-PAGE_TITLE_02 = ("What the burp leaves behind: is anything left over from before space? A question tested in a toy "
+PAGE_TITLE_02 = ("What the change leaves behind: is anything left over from before space? A question tested in a toy "
                  "model, in plain language")
 DESCRIPTION_02 = ("Is anything left over when space emerges? A plain-language physics paper counts the leftover "
                   "pieces of a sharp change in a toy model of dots and links, and follows which of them last.")
 TICKER_02 = ("Three kinds of scrap", "The common one heals. What holds the others?")
 
 POST_02 = Post(
-    number=2, slug="02whattheburpleavesbehind", title="What the burp leaves behind", subtitle=SUBTITLE_02,
-    published="2026-10-13", paper_dir="docs/papers/relic",
-    pdf_plain_name="what-the-burp-leaves-behind-plain-language.pdf",
-    pdf_tech_name="what-the-burp-leaves-behind-technical.pdf",
-    opening_words="A sharp change rarely finishes the job.", cite_key="smith2026burpleavesbehind",
+    number=2, slug="02whatthechangeleavesbehind", title="What the change leaves behind", subtitle=SUBTITLE_02,
+    published="2026-10-13", updated="2026-10-14", paper_dir="docs/papers/relic",
+    pdf_plain_name="what-the-change-leaves-behind-plain-language.pdf",
+    pdf_tech_name="what-the-change-leaves-behind-technical.pdf",
+    opening_words="A sharp change rarely finishes the job.", cite_key="smith2026changeleavesbehind",
     ticker=TICKER_02, page_title=PAGE_TITLE_02, description=DESCRIPTION_02,
     summary=SUMMARY_02, chapter_questions=CHAPTER_QUESTIONS_02, big_questions=BIG_QUESTIONS_02, faq=FAQ_02,
-    key_terms=KEY_TERMS_02)
+    key_terms=KEY_TERMS_02,
+    mascot=dict(file="meadow-calf.gif", width=272, height=204,
+                alt="A line drawing of a shaggy calf stretching and burping in a meadow of flowers; in the next "
+                    "frame it stands up, looking sheepish, beside the flattened patch of grass where it lay.",
+                caption="Fig. 0. A burp, and the patch it leaves behind. Round cow still not available, artist's "
+                        "impression. Not a torus."))
 
 POSTS = [POST_01, POST_02]              # oldest first
