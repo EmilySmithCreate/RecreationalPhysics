@@ -1104,9 +1104,9 @@ boundary like this a \textbf{front}.
 dots on a flat sheet read $d = 2$; a disordered dot reads 0 or 3 and up. The program marks every dot
 and keeps a progress meter that runs from 0 (all tube) to 1 (all flat). It takes a snapshot of the
 whole network at three stages fixed in advance, so that nobody could pick a moment because its picture
-looks persuasive: when the meter first reads a quarter, a half and three-quarters. The predictions
-were scored at the half mark, where anything in between tube and sheet would have the most room to
-show.
+looks persuasive: when the meter first reads a quarter, a half and three-quarters. These are stages of
+the change, not times on the clock, and nothing is special about them. The predictions were scored at
+the half mark, where anything in between tube and sheet would have the most room to show.
 
 \Meas\ At $\lambda = 1.25$ and $g=1.5$, thirty tubes at each of four sizes, run twice with fresh random
 numbers, and three predictions written down first: a memoryless wait; at least 80 percent of dots in
@@ -1370,18 +1370,19 @@ otherwise.
 \legend{sheet-like,in between,melted}
 \end{axis}
 \end{tikzpicture}
-\caption{Bonfire or melt. \Meas\ The horizontal axis is the number of stores $C$, as a share of the
+\caption{Bonfire, or damage. \Meas\ The horizontal axis is the number of stores $C$, as a share of the
 number of dots $N$. With few stores the release damages the new sheet (the registered label is
 ``melted''; the next section says what that can mean); with many it leaves a clean sheet. The switch-over lies between one store per four dots and one per two at all
 three sizes, and no run ended stalled with both orders side by side. Totals: 179 sheet-like, 87 in
-between, 154 melted.}
+between, 154 ``melted'' (damaged, not melted: see the next section).}
 \end{figure}
 
 \Meas\ A bonfire with a threshold, as the pre-registered verdict put it. Where the heat has room, the
-change feeds itself to completion; where it does not, the heat damages what the change made. The
-switch-over moves in step with size, as a release of one unit per dot shared among the stores
-predicts. \Ours\ A rough energy budget puts it near one store per three dots; the measured switch-over
-sits between one per four and one per two.
+change feeds itself to completion; where it does not, the heat damages what the change made
+(``melted'' in this classification is a label: at least 15 percent of the dots have lost their neat two
+directions). The switch-over moves in step with size, as a release of one unit per dot shared among the
+stores predicts. \Ours\ A rough energy budget puts it near one store per three dots; the measured
+switch-over sits between one per four and one per two.
 
 \Meas\ No run ended stalled, with tube and sheet side by side and nothing melting, in 420 runs of
 30,000 sweeps. That is an observation about these runs. It does not show that such a standoff is

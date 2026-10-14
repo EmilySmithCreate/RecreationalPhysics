@@ -51,16 +51,26 @@ class ResultWriter:
         return False
 
 
-def provenance(root=None):
+def provenance(root=None, max_listed=20):
     """The commit the code ran from and whether the working tree differed from it, for a run's .meta.json
-    (TASKS, the reviews of 6 October, item 5). Outside a git checkout, or without git, the commit is "unknown"."""
+    (TASKS, the reviews of 6 October, item 5). Outside a git checkout, or without git, the commit is "unknown".
+
+    The tree counts as dirty when any tracked file is modified, staged or deleted, or when any file that git does
+    not ignore is untracked: code that has never been committed cannot be recovered from the commit named here,
+    so an untracked file is as much a departure from the commit as an edited one. (Until 2026-10-12 untracked files
+    were not looked at, which let three results of that day name a commit that held none of their code; the
+    provenance note in docs/theory/orh_findings.md records it.) `git_untracked_count` says how many such files there
+    were and `git_untracked` lists the first `max_listed` of them, so a reader can see why the tree was dirty."""
     import subprocess
     root = Path(root) if root is not None else Path(__file__).resolve().parents[2]
     try:
         commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, capture_output=True, text=True,
                                 check=True).stdout.strip()
-        dirty = bool(subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], cwd=root,
-                                    capture_output=True, text=True, check=True).stdout.strip())
+        status = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=root,
+                                capture_output=True, text=True, check=True).stdout
     except (OSError, subprocess.CalledProcessError):
-        return dict(git_commit="unknown", git_dirty=None)
-    return dict(git_commit=commit, git_dirty=dirty)
+        return dict(git_commit="unknown", git_dirty=None, git_untracked_count=None, git_untracked=None)
+    lines = [l for l in status.splitlines() if l.strip()]
+    untracked = sorted(l[3:] for l in lines if l.startswith("??"))      # ignored files never appear here
+    return dict(git_commit=commit, git_dirty=bool(lines), git_untracked_count=len(untracked),
+                git_untracked=untracked[:max_listed])
