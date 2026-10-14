@@ -93,7 +93,8 @@ squares on edges carrying more than two,
 H = 16\,(N - S) + 4\lambda X = 4 \sum_e \bigl[(2 - S_e) + \lambda\,(S_e - 2)_+\bigr],
 \label{eq:H}
 \end{equation}
-so a missing square costs 16 and a surplus square $4\lambda$. The hard-core rule limits $S_e\le3$.
+so a missing square costs 16 and a surplus square $4\lambda$. The hard-core rule limits $S_e\le3$: two
+squares on edge $uv$ through the same neighbour $w$ of $v$ would give $u$ and $w$ three common neighbours.
 At fixed dimensionless coupling $g>0$, which acts as a temperature in the units of $H$, the target is
 $\pi(G)\propto e^{-H(G)/g}$, and a valid symmetric proposal is accepted with probability
 $\min(1,e^{-\Delta H/g})$. At $\lambda=1$ this is the CQG curvature action: the convention
