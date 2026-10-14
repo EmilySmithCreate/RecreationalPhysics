@@ -9,13 +9,15 @@ knowledge unless a source is named, and a source not yet read is marked so.
 | the tube; X's stand-in | the curled torus (the 4 × L torus) | | One direction closes on a single square. |
 | the tube opens | conversion; decompactification only when periods are measured | | d(v) rising from 1 to 2 is a counting signature. Macroscopic opening of both periods has not been measured. |
 | the burp | activated escape followed by conversion | | The owner's word for a quiet wait followed by rapid change and energy release; it does not assert a unique seed or front. |
-| the lump; the burp's energy | initial gap and actual release | ε = 4(λ − 1) | The initial gap is εN; the released energy is εN−H_final, not necessarily the full gap. |
+| the burp's energy (never "the lump" on the public pages, from 9 October) | initial gap and actual release | ε = 4(λ − 1) | The initial gap is εN; the released energy is εN−H_final, not necessarily the full gap. |
 | stable for now | metastable | | In the outlook only: a lattice cousin of a false vacuum [C77]. |
 | the push of 12 | minimum exit cost at λ = 1.25 | ΔE = 12 | Globally available seed energy. Exact neutral-basin closure at N=48,64,96,144,192,288; the seed scan records escape, not guaranteed conversion. |
 | the waiting-time formula | two-channel approximation for first exit | τ_AB | Attempt frequencies 3 and 2 per sweep are counted. Other exits and recrossings prevent identifying this with every conversion clock. |
 | starts at one place, runs as a front | proposed nucleation and growth interpretation | | A dominant connected component alone does not establish a unique seed, front or interface; rapid loss of persistence alone does not establish a spinodal. |
 | fall-backs | recrossings | | T22 measures exits and returns. The reciprocal mean exit count is a diagnostic, not a derived transmission coefficient. |
-| the scrap; the leftover | relic defect; relic | | The curled column, costing 24λ − 16 (14 at λ = 1.25). Not an allotrope (below), and not called "topological" (not shown). |
+| the scrap; the leftover | relic defect; relic | | Three kinds, read from the wiring: the curled loop or column (four points in a loop that still closes a square; 24λ − 16 = 14 at λ = 1.25 in its common form, 4 in a lighter form; it does not go around the new tube, O126), the double loop or double column (8), the twist or knot of two kinds (20 to 30). Not an allotrope (below), and not called "topological" (not shown). |
+| a free scrap; a joint | a relic inside one region; a relic between regions of differing short period (the nearer relative of a domain wall) | | Free: the common case. A joint sits between a stretch six around and a wider one (O116). The registered SEAM test (a long-range edge) failed; a joint is a seam of another sort. |
+| the fair clock | size-fair sweeps | N/96 sweeps | Gives every local pair the chances it has at 96 points. It changes how times compare across sizes and nothing else (O90). |
 | room the new space needs | number of reservoir stores | C | Not a heat capacity in temperature units. T9 majority-sheet crossover: (N/4,N/2]. Conditional estimate C*≈[εN+s−U_graph(g_m)]/u(g_m), u(g)=δ/expm1(δ/g); spectrum and mixing need validation. |
 | sealed box / open to a bath | energy-conserving graph plus stores / canonical graph sampler | | Conservation alone does not establish equilibrium or equal graph weights at fixed total energy. |
 | interchangeable points | unlabelled graphs | \|Aut(G)\| | Relative to named points, a state gains a factor of its number of symmetries. |

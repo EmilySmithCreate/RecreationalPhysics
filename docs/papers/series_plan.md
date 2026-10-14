@@ -450,8 +450,8 @@ the paper builds on; the readings are in `docs/reading/notes/` (5 October for mo
 
 | # | Short paper | Piece | Anchor (whose model or question) | Replicate first | Then extend | State |
 |---|---|---|---|---|---|---|
-| 1 | The curled torus burps | 1, 2 | Kelly, Trugenberger, Biancalana [KTB19]; [T25] | [KTB19] Fig. 8a (done) | a sharp change between two ordered states at λ > 1 | Written; revised 10 Oct after the AI review of 9 Oct, with a plain-language edition; both published on the owner's company blog (sidenerdapps.com/mainnerd); on hold at arXiv pending a reader or a journal |
-| 2 | What the change leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's size, number, place, lifetime; how much freezes in (T51) | Drafted (`relic/paper.tex`, 5 Oct); T51 and T55 are read (the columns heal off a cliff; three kinds of knot); to be rewritten around the three knots |
+| 1 | The curled torus burps | 1, 2 | Kelly, Trugenberger, Biancalana [KTB19]; [T25] | [KTB19] Fig. 8a (done) | a sharp change between two ordered states at λ > 1 | Written; revised 10 Oct after the AI review of 9 Oct, and again 14 Oct from the owner's own read (plain edition ten chapters on the one question; technical paper in plainer words); both on the owner's company blog (sidenerdapps.com/mainnerd); on hold at arXiv pending a reader or a journal |
+| 2 | What the change leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's kinds, number, place, lifetime; how much freezes in (T51); free scraps and joints | Rewritten 13 Oct around the three kinds, renamed 14 Oct (was "What the burp leaves behind"); both editions drafted; the plain one revised from the owner's notes of 14 Oct (free scraps and joints, the column's wiring, O126); the technical draft has no figures yet and owes three |
 | 3 | Links that reach far, left where starting points meet | 7 | Markopoulou and Smolin [MS07]; Quach and co-authors [QSMG12]; Hossenfelder [H13] | a frozen boundary between domains, in this model | their count, reach and scaling with size; whether cooling heals them; whether the opening splits X in two | First look only (O95, O100); to be pre-registered |
 | 4 | The order of the transition in three directions | 5 (Gate C) | Trugenberger [T22] | his D = 3 figure (needs its size and whether its graphs were two-sided) | cooling against heating at 500 points with replica exchange | The bounded joint project to offer the model's author |
 | 5 | How curled directions open, three and four | 5 | [T22]; Mulder's theorem [Mul79]; the topology conjecture of [AGGN22]; the decompactification relatives [GM04], [CJR09], [BSV10], [GHR10] | the exact ladder (done) | one at a time; a gas never joins; a connected X; the true barrier | Draft brought up to date 11 Oct (`six_links/paper.tex`, with a PDF): thirteen registered tests, T56 stage 1 and the shape reading (O115, O116) included; not yet read by the owner; T54's first stage computed, not read |
@@ -520,3 +520,32 @@ Her joint paper with Chern is not the connection; her own work on relaxation and
 under Metropolis dynamics is, and it touches paper 1 in three places (the first exit, the reservoir of stores,
 and paper 2's cooling). The work that would serve a reader from that side is in
 `curled_torus/handoff_2026-10-13_measurement_side.md`.
+
+## 14 October 2026: paper 1 tightened, and where its cut material belongs (the owner's notes)
+
+Reading paper 1 on 14 October the owner asked that it keep to its one question and that each side topic be teased
+once, in the paper it belongs to. Her rules for all the papers are gathered in `docs/papers/feedback_2026-10-14.md`.
+Where paper 1's cut material now belongs:
+
+| Cut from paper 1 | Its home |
+|---|---|
+| The scrap's kinds, where it sits, free scraps and joints | Paper 2 (paper 1 keeps the cold-box count, one paragraph, and a tease) |
+| Trapped heat does not widen the tube (T61) | Paper 6, beside the price on loops of six (T62, T64): what decides how wide the product is |
+| The price on loops of six | Paper 6 (12 October section above); paper 1 no longer states it |
+| Named against interchangeable dots | Papers 12 and 5, which run both; a paper of its own if the counting drive is tested near λ = 1.02 |
+| Six and eight links per dot, more directions | Paper 5 (paper 1 keeps one tease, in its last chapter) |
+| The random-tangle route (the published question) | Paper 4; paper 1 keeps its reproduction and one sentence on the jump |
+
+The fair clock is now named in paper 1 (plain edition, Chapter 5; the technical paper, Sec. II), and papers 2, 6 and
+14 use it. The same day the other drafts (papers 5, 6, 10, 11, 12 and 2) were given the plain-wording pass and the
+consistency checks of the rules file; the technical drafts of papers 2, 5, 6, 10, 11 and 12 have no figures, and what
+each would need is listed below (drawn by script from saved results, as paper 1's are; sketches labelled so).
+
+| Paper | Figures owed |
+|---|---|
+| 2, what the change leaves behind | relics against size and against seeds (T10, T17, T37); the cooling result (columns, energy, pieces of each kind against cooling time, T51); the three kinds' wiring |
+| 5, how curled directions open | the ladder and its walls for six and eight links, untied and tied; outcomes per test; counts at each d against time; the saved wiring of an opened gas; distance profiles of the OPENS replicas; T54's barrier against patch size; T56 tied against untied; the gate curve |
+| 6, the rule, the room | the price list against λ; first exits against the count (T22, T59); the four maps' criteria; the largest component against size with the held-out points; the edge; widths of the end states; births against room (T18); walls against λ; the trade-off |
+| 10, an entropy action | the action against squares for the 445 wirings; λ_eff against c₀; the action per cell for the three rungs; a sketch of the tube and its re-glued twin |
+| 11, a pull between leftovers | Table I as two log-log panels; a sketch of two defects at separation r; symmetry count against placement |
+| 12, concentrated energy | outcome shares per cell for the seven tests; T21's folded share against budget; the scar against time (T42, T34); T57's damage against energy; the six-link ladder under the tie; the counting crossover |
