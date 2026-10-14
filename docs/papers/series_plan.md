@@ -31,7 +31,7 @@ https://claude.ai/artifact/3TcXFYr51m955zTkgitXwR. *Added 10 October:* the plain
 `paper_plain_language.pdf`, whose chapters the manuscript's sections now follow, and its interactive companion,
 "The Tube's Curling Ladder", https://claude.ai/artifact/F4sBf955J5ZT7rCq8uebW8 (source
 `docs/public/curling_ladder_tube.html`). The edition closes by previewing short papers 2 and 5 of the list
-below ("What the burp leaves behind"; "How curled directions open").
+below ("What the change leaves behind"; "How curled directions open").
 
 ---
 
@@ -451,7 +451,7 @@ the paper builds on; the readings are in `docs/reading/notes/` (5 October for mo
 | # | Short paper | Piece | Anchor (whose model or question) | Replicate first | Then extend | State |
 |---|---|---|---|---|---|---|
 | 1 | The curled torus burps | 1, 2 | Kelly, Trugenberger, Biancalana [KTB19]; [T25] | [KTB19] Fig. 8a (done) | a sharp change between two ordered states at λ > 1 | Written; revised 10 Oct after the AI review of 9 Oct, with a plain-language edition; both published on the owner's company blog (sidenerdapps.com/mainnerd); on hold at arXiv pending a reader or a journal |
-| 2 | What the burp leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's size, number, place, lifetime; how much freezes in (T51) | Drafted (`relic/paper.tex`, 5 Oct); T51 and T55 are read (the columns heal off a cliff; three kinds of knot); to be rewritten around the three knots |
+| 2 | What the change leaves behind | 7 | Nucleation and growth (KJMA); freeze-out | the KJMA exponent (done, T37) | the scrap's size, number, place, lifetime; how much freezes in (T51) | Drafted (`relic/paper.tex`, 5 Oct); T51 and T55 are read (the columns heal off a cliff; three kinds of knot); to be rewritten around the three knots |
 | 3 | Links that reach far, left where starting points meet | 7 | Markopoulou and Smolin [MS07]; Quach and co-authors [QSMG12]; Hossenfelder [H13] | a frozen boundary between domains, in this model | their count, reach and scaling with size; whether cooling heals them; whether the opening splits X in two | First look only (O95, O100); to be pre-registered |
 | 4 | The order of the transition in three directions | 5 (Gate C) | Trugenberger [T22] | his D = 3 figure (needs its size and whether its graphs were two-sided) | cooling against heating at 500 points with replica exchange | The bounded joint project to offer the model's author |
 | 5 | How curled directions open, three and four | 5 | [T22]; Mulder's theorem [Mul79]; the topology conjecture of [AGGN22]; the decompactification relatives [GM04], [CJR09], [BSV10], [GHR10] | the exact ladder (done) | one at a time; a gas never joins; a connected X; the true barrier | Draft brought up to date 11 Oct (`six_links/paper.tex`, with a PDF): thirteen registered tests, T56 stage 1 and the shape reading (O115, O116) included; not yet read by the owner; T54's first stage computed, not read |
@@ -483,7 +483,7 @@ Asked whether T62 and T64 deserve a paper of their own, and which papers they be
 their own yet. They are a change to the rule, so their home is **paper 6** (the rule, the room, and which settings
 give a birth), as a section: what the rule charges for decides what the product is. Loops of four only: a tube six
 around. Loops of six as well: mostly wide, flawed nearly everywhere. They also change what two other papers have to
-ask. **Paper 2** (what the burp leaves behind): the flaws become the main obstacle, and paper 1's own leftovers turn
+ask. **Paper 2** (what the change leaves behind): the flaws become the main obstacle, and paper 1's own leftovers turn
 out to sit at the joint between two widths (O116, addendum of 12 October). **Paper 5** (how curled directions open,
 three and four): an opened direction should be measured for how far around it is, and a rule may have to pay for each
 further step. A short paper of its own would be earned by two things not yet in hand: the 384-point runs holding, and
@@ -503,7 +503,7 @@ hypothesis (rule 13). Nothing has been sent to anyone.
 | Short paper | Their work that bears on it | What it gives | Done on 13 October |
 |---|---|---|---|
 | 1, the curled torus | [JC26]; [LLC26a] | "isolated" and "microcanonical" for sealed; "minimax barrier" for the barrier the paper says the 12 units is not; "domains separated by defects" for T61's endpoints | Four insertions and two references in the technical manuscript; rebuilt. The plain-language edition is unchanged |
-| 2, what the burp leaves behind | [JC26]; [JYC25]; [BBJC26]; [FZC26] | The defect vocabulary; the caution that an exponent fitted over a short range is an apparent one | The technical draft rewritten with T51, T55, O116's wording and O123, and a draft plain-language edition written. The owner has read neither |
+| 2, what the change leaves behind | [JC26]; [JYC25]; [BBJC26]; [FZC26] | The defect vocabulary; the caution that an exponent fitted over a short range is an apparent one | The technical draft rewritten with T51, T55, O116's wording and O123, and a draft plain-language edition written. The owner has read neither |
 | 3, links that reach far | [JC26] Sec. III | Walls form where independently nucleated domains meet | Note only |
 | 5, how curled directions open | [LLC26a] | The method for the barrier T54 did not price | A pointer at the head of the draft |
 | 6, the rule, the room | [JC26]; [BaC26] | A dynamical phase diagram; entropy maximized under what the dynamics retains | A pointer at the head of the draft |

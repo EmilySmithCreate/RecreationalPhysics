@@ -81,8 +81,8 @@ def pages():
 
 def test_the_pages_hold_the_whole_of_both_papers(pages):
     plain_html, tech_html, plain, technical = pages
-    assert [c["num"] for c in plain["chapters"]] == list(range(1, 12)) and plain["n_figures"] == 26
-    assert plain_html.count('<p class="trail"><strong>The experiment:</strong>') == 7     # chapters 3 to 9
+    assert [c["num"] for c in plain["chapters"]] == list(range(1, 11)) and plain["n_figures"] == 23
+    assert plain_html.count('<p class="trail"><strong>The experiment:</strong>') == 6     # chapters 3 to 8
     assert [s["roman"] for s in technical["sections"]] == ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", ""]
     for page in (plain_html, tech_html):
         assert not re.search(r"\\[a-zA-Z]+|\$", reading_text(page))    # no LaTeX left in the reading text
@@ -101,15 +101,15 @@ def test_every_cross_link_lands_on_an_anchor(pages):
             elif href.startswith(site.BASE + "#"):
                 assert href.split("#")[1] in ids["plain"], href
     # every chapter points across, and every numbered section points back
-    assert plain_html.count('class="xlink"') == 11 and tech_html.count('class="xlink"') == 9
+    assert plain_html.count('class="xlink"') == 10 and tech_html.count('class="xlink"') == 9
     assert re.search(r'PL, Chs\.\u00a0<a href="/mainnerd/01thecurledtorusburpsPL/#ch2"', tech_html)
 
 
 def test_the_frame_keeps_its_promises(pages):
     plain_html, tech_html, _plain, _technical = pages
     # every chapter carries one searched question as a heading, and its answer never claims the paper settles it
-    assert plain_html.count('<div class="ask"><h3 id="ch') == 11
-    assert set(site.CHAPTER_QUESTIONS) == set(range(1, 12))
+    assert plain_html.count('<div class="ask"><h3 id="ch') == 10
+    assert set(site.CHAPTER_QUESTIONS) == set(range(1, 11))
     for question, answer in site.BIG_QUESTIONS:
         assert question.endswith("?") and html.escape(question) in plain_html
     joined = " ".join(a for _q, a in site.BIG_QUESTIONS)
@@ -188,7 +188,7 @@ def test_a_post_is_data_and_post_01_keeps_its_old_names():
     assert build.size_key(POST_01, "plain-fig-01.svg") == "plain-fig-01.svg"
     assert build.size_key(POST_02, "plain-fig-01.svg") == POST_02.slug + "/plain-fig-01.svg"
     recorded = build.recorded_sizes(POST_01)
-    assert "plain-fig-26.svg" in recorded and "tech-fig1.svg" in recorded and not any("/" in k for k in recorded)
+    assert "plain-fig-23.svg" in recorded and "tech-fig1.svg" in recorded and not any("/" in k for k in recorded)
 
 
 def test_figure_sizes_are_recorded_post_by_post(tmp_path, monkeypatch):

@@ -179,8 +179,9 @@ times per sweep that grows in proportion to $N$ (87 at $N=192$). Counted exactly
 2\% to the exit rate at the $g=1.5$ conditions of the decay maps, and 16\% at the hottest point of
 Fig.~\ref{fig:data}(a) ($g=2.5$, $N=144$), within its error bar. Third, that Eq.~(\ref{eq:tau}) does
 not depend on $N$ is a property of the proposal, not of the barrier: the chain draws its two edges
-from the whole graph, so any one region is offered a way out about $1/N$ as often per sweep. A
-dynamics that updated every region at its own fixed rate would give a waiting time falling as $1/N$.
+from the whole graph, so any one region is offered a way out about $1/N$ as often per sweep. On a
+size-fair clock, which gives every region the same chances at every $N$ ($N/96$ sweeps to the unit, as
+in the companion paper on the relic), the waiting time falls as $1/N$.
 
 \begin{table*}[t]
 \caption{Observables and clocks. Counts and components are measured on the evolving graph. The terms
@@ -249,19 +250,12 @@ ideal-state energy decrease $\varepsilon N$ grows with the system.
 Table~\ref{tab:clocks} defines the clocks used below, which are not interchangeable; PL,
 Ch.~5, develops the rate count.
 
-\emph{Testing the count (exploratory).} The prediction was written into the run's
-configuration before it ran, but not pre-registered. Over twelve conditions ($g=1.4$ to 2.5, $N=64$
-and 144, 16 runs each) and a ninety-fold range of times, the ratio of the measured mean waiting time
-to the move-A term of Eq.~(\ref{eq:tau}) has a plain mean of 0.98, every ratio between 0.71 and 1.62
-[Fig.~\ref{fig:data}(a)]. A weighted straight-line fit of $\ln\tau$ against $1/g$ gives effective
-slopes of $14.4\pm1.0$ at $N=64$ and $12.1\pm0.9$ at $N=144$; the first differs from 12 by 2.4 quoted
-standard errors. We do not read these slopes as independent measurements of a collective barrier:
-multiple channels give curvature in this plot, inverse-variance weighting based on 16 skewed waits can
-favor shorter sample means, and the scan reuses each replica's seed across couplings, so its fitted
-errors and pooled tests do not account for dependence between cells. The direct first-exit comparison
-below is the main rate test; model-conditional intervals are given in the Supplemental Material.
-Including move B lowers the predicted waiting time by 15\% at $g=1.5$; across $\lambda$, the full
-Eq.~(\ref{eq:tau}) is compared separately with first exits and detected-decay waits below.
+\emph{Testing the count (exploratory).} The prediction was written into the run's configuration
+before it ran, but not pre-registered. Over twelve conditions ($g=1.4$ to 2.5, $N=64$ and 144, 16 runs
+each) and a ninety-fold range of times, the ratio of the measured mean waiting time to the move-A term
+of Eq.~(\ref{eq:tau}) has a plain mean of 0.98, every ratio between 0.71 and 1.62
+[Fig.~\ref{fig:data}(a)]. The scan reuses each replica's seed across couplings, so its cells are not
+independent; the direct count below is the rate test.
 
 \emph{The direct count (T22).} Forty further runs in each of six cells ($\lambda=1.05,1.10,1.25$;
 $N=64,96$) count exits attempt by attempt. All 240 first exits are observed, and their means are
@@ -317,7 +311,7 @@ vertex falls to 0.95, below the flat torus's 1, within 50 sweeps in every replic
 applied. A separate pre-registered test of whether a coarse law of a single front governs these
 decays (T12; 64 decays at $g=1.5$ and 2.0, under Metropolis and Glauber acceptance) came out NOT
 ESTABLISHED: 21 of the 59 that nucleated converted in more than one patch, mostly at the warmer
-coupling, and the front's rate fell roughly as $N^{-0.7}$.
+coupling, and the front's rate per sweep fell roughly as $N^{-0.7}$ (on the size-fair clock, $N^{+0.3}$).
 
 The 25 and 75\% snapshots were recorded but are not part of the registered criteria. They give the same
 picture: the mean share at $d \in \{1,2\}$ is 0.988--0.997 and 0.985--0.995 across the eight cells, against
@@ -387,7 +381,7 @@ nor the kinetic conversion studied here establishes a thermodynamic first-order 
 \label{sec:sealed}
 
 Sealed, the released energy has to go somewhere, and the $C$ stores of Sec.~\ref{sec:cost} are the
-only place (PL, Chs.~7 and~8).
+only place (PL, Ch.~7).
 
 \emph{Reading a temperature off the stores.} At $\lambda=1.25$, $\Delta H=-16\Delta S+5\Delta X$ is integral.
 The initial T9 stores contain 0 or 12, and allowed exit costs include 12 and 25, with greatest common
@@ -432,19 +426,11 @@ energy budget, not a calibrated crossover prediction. Stores have no upper capac
 heats; it does not fill up. No sustained stall with both signatures present was observed under the
 stated criterion and duration; this does not exclude equilibrium coexistence.
 
-\emph{Retained heat does not widen the endpoint.} A later registered test (T61) sealed tori of
-$N=96$, 192 and, held out, 384 at $\lambda=1.25$ and 1.40 with $C/N=2,1,1/2,1/3,1/4$, drained the
-stores, cooled, and read each endpoint by the fraction $w$ of vertices whose three-step ball has the
-square lattice's 25 vertices ($w=0$ on a zero-energy torus with shortest loop six, 1 on one with
-shortest loop eight or more); 24 runs per cell. No cell has a majority with $w\ge1/2$ at any size.
-For $C\ge N$ at $\lambda=1.25$ all 144 endpoints have $w<0.05$, and at $C=N/2$, 63 of 72. At
-$\lambda=1.25$ with $C=N/4$, with $C=N/3$ for $N\ge192$, and in every cell at $\lambda=1.40$, the
-majority has $0.05\le w<1/2$: square-lattice regions of differing short period joined at defects
-(in the language of phase-ordering kinetics, domains separated by defects),
-and often disconnected. The share with $w\ge1/2$ at $\lambda=1.40$ falls with size, 24/120, 15/119 and 2/120.
-The shares written beforehand for $N=384$ hold in nine cells of ten. None of the 720 endpoints is a
-connected zero-energy torus with shortest loop above six. $w$ is a local statistic and certifies no
-topology.
+\emph{Retained heat does not widen the endpoint.} A later registered test (T61; $N=96$, 192 and,
+held out, 384; $\lambda=1.25$ and 1.40; $C/N=2$ to $1/4$) drained, cooled and read the endpoints.
+With ample reservoirs at $\lambda=1.25$ they keep a shortest loop of six; with small ones, and at
+$\lambda=1.40$, most are square-lattice regions of differing short period joined at defects, often
+disconnected. None of the 720 endpoints is a connected zero-energy torus with shortest loop above six.
 
 \emph{What remains: about one relic at every size.} In the coldest box ($C=2N$; T10, also 30,000
 sweeps) a scrap of the old arrangement usually remains. A relic here is a connected component of the $d=1$ induced subgraph in the final snapshot, classified further where
@@ -479,7 +465,7 @@ In persistent cells, means at half conversion give 95--100\% in the two counting
 largest component. Release is fullest nearest $\lambda=1$: the full-window-release fraction falls to 79\%
 at 1.30 and 46\% at 1.35 (the table retains this energy-window criterion rather than treating it as a
 topology test). The topology certificate for the $\lambda=1.05$ endpoints is in
-Sec.~\ref{sec:conversion}; PL, Ch.~9, walks through the map.
+Sec.~\ref{sec:conversion}; PL, Ch.~8, walks through the map.
 
 \emph{Three maps, each inconclusive.} Three independently seeded maps fail their full prespecified
 acceptance criteria. In the thirty-run map (T8), the wait CV falls outside 0.7--1.3 in nine of 24
@@ -536,7 +522,7 @@ and full-window-release fraction, pooled over sizes. Neither series certifies ge
 \emph{What the detector times.} The decay detector first rests,
 taking the spread of $S/N$ over a run's first 200 sweeps as that run's noise, and only then checks
 every five sweeps whether $S/N$ has fallen more than three times that spread below its curled value
-(Table~\ref{tab:clocks}; the ``watch'' of PL, Ch.~9). Its mean wait $W$ and the first-exit
+(Table~\ref{tab:clocks}; the ``watch'' of PL, Ch.~8). Its mean wait $W$ and the first-exit
 prediction, compared over two decades in Fig.~\ref{fig:lambda}(a), are therefore distinct
 observables, for two reasons. First, nothing is recorded before sweep 205. For the idealized floor
 $W=\max(T,a)$ with exponential $T$ of mean $\tau$, $E[W]=a+\tau e^{-a/\tau}$, which at $a=205$ gives
@@ -621,11 +607,7 @@ first-exit clock: the sample and diagnostic changed. The three earlier verdicts 
 
 The burp belongs to the $\lambda>1$ family. At $\lambda=1$, which is CQG, the flat, curled and 4-cube
 tori are degenerate and the available decrease $\varepsilon=4(\lambda-1)$ vanishes: the change has
-zero ideal-state energy difference. The same questions can still be asked in CQG itself, at
-$\lambda=1$, of regions stuck in a different discrete arrangement inside a curved background
-\cite{T24}, such as the allotrope of Ref.~\cite{T25} (Fig.~9): is such a region metastable, and does
-it give way by a front with a definite release? Move enumeration, component tracking and sealed
-reservoirs could be adapted to those states; the tube's formulas would need to be recalculated.
+zero ideal-state energy difference.
 
 The strongest quantitative kinetic result is that counting moves predicts the mean first exit with
 nothing fitted, consistently with directly counted exits and with the omitted-channel correction
@@ -651,27 +633,10 @@ of motion; neither is established here. The commitment barrier this paper does n
 that literature, a minimax barrier, obtained by exact enumeration on small systems and displayed as a
 disconnectivity graph \cite{LLC26a}.
 
-\emph{Named or interchangeable vertices.} All runs here, like the published CQG simulations we know of
-\cite{KTB19,T25}, treat vertices as named (labelled): two graphs that differ only by renaming vertices
-are different states. Giving each unlabelled class one Boltzmann weight is a different, legitimate
-modeling choice; quantum indistinguishability alone does not select this classical measure. A class
-has $(n!)^2/A(G)$ labelings, with $n=N/2$ and $A(G)$ its side-preserving automorphism count, so the
-corresponding target on labelled graphs is $A(G)e^{-H(G)/g}$, and the symmetric-proposal acceptance is
-\[
-a(G\to G')=\min\!\left[1,\frac{A(G')}{A(G)}e^{-\Delta H/g}\right],
-\]
-with the ratio inside the minimum (multiplying an already-clipped Metropolis probability is incorrect
-in general). Symmetric states then weigh more. Every energy and the certified energetic seed lower
-bound stay unchanged; the rates do not. The perfect curled torus has $2N$ symmetries and its neutral
-classes have $N$ or $2N$, while the enumerated A-move targets in the $N=64,96$ calculation have two,
-so for those uphill moves the instantaneous acceptance is suppressed by $N/2$ to $N$. A rate
-suppression by $cN$ corresponds to an effective free-energy increment $g\ln(cN)$, not a barrier
-proportional to $N$. Neutral-state occupancy, other exit channels and the quotient proposal also
-affect the lifetime; we supply no effective rate or decay simulation for this ensemble.
-
 Not claimed: that this chain is the physical time evolution of anything; a first-order transition in the
 thermodynamic sense; a latent heat; isotropic decompactification; a unique moving front; a general
-large-size law beyond the enumerated and measured sizes; or an explanation for the cold-box defect count.
+large-size law beyond the enumerated and measured sizes; an explanation for the cold-box defect count; or any rate for interchangeable (unlabelled)
+vertices, which would change the rates here but not the energies.
 
 \emph{Outlook (motivation, not a result).} This work is motivated by the hypothesis that space emerged from a
 specific ordered precursor through a sharp change of this kind, a lattice cousin of false-vacuum decay

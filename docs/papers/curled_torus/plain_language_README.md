@@ -137,7 +137,7 @@ in a few sentences.
 
 **The ending, 10 October.** The edition has eleven chapters. The last, "What we have learned,
 and what comes next", closes on the two papers that follow, named by their working titles in
-`docs/papers/series_plan.md` ("What the burp leaves behind"; "How curled directions open"),
+`docs/papers/series_plan.md` ("What the change leaves behind"; "How curled directions open"),
 each teased at a high level with one measured result and no numbers, and on one line: "A push
 of twelve units opens a tube. What opens a space?"
 
