@@ -356,3 +356,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   would set the birth temperature, O89's one unknown, which the hypothesis does not yet give. The toy has no light,
   expansion or temperature but a bath's; its shape, one front from one seed leaving a uniform product with a sprinkle
   of fixed knots, is in kind what the sky shows (ours, unverified; the uniformity of a re-glued tube, not of a sky).
+- 2026-10-15, evening, the owner: "Could the form of the release be a bunch of strings, all 1 d objects vibrating in
+  the length direction, which is the largest but all are microscopic and closed as in nothing can move around them".
+  *Ours.* In form this is the toy's scrap, exact: the column is a closed loop of four points, the old tube's ring
+  left curled in the new tube's wall (O16, O126), and tonight's three-direction stubs are the same kind; the published
+  relative is the winding string round a curled direction, whose energy is set by that direction's size (*general
+  knowledge, not read by us, to verify*). Two corrections: in the toy the loops are the leftover, not the release,
+  which is heat (Update 19); and "vibrating" is Update 17's particle sentence, tested on her prediction and failed
+  (T15 rung 0b, O30: the loop of four is not a resonator inside a sheet; the cap, column plus collar of eight, resonated
+  in two states of seven and is the surviving candidate). With the amplitude rule adopted this morning (Update 57) the
+  exact test is rung 0b redone with the cap as the object, in the tube six around and in the slab, from saved end
+  states, her prediction first; and whether tonight's pieces of 1, 2, 11, 12 and 14 points have distinct frequencies.
