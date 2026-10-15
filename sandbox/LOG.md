@@ -179,3 +179,13 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   of 13 at two steps on the tube, 40 of 41 at four steps eight around, 84 of 85 at six steps twelve around, 22 of
   25 at three steps on the shifted seam. Exact, and pinned in `tests/test_read_shapes.py`; a table in the
   plain-language edition of paper 1, Chapter 3.
+- 2026-10-14. Does a relic seed a fold (the owner's (a), NOTEBOOK same day)? (`sandbox/relic_seed.py`; a 4 x 48 tube
+  burps sealed at lambda = 1.25, is cooled, and is kept if it ends with exactly one curled column and no damage: 6
+  starts from 10 burps. Then E units packed into one store, one store per point (T26's local spark), next to the
+  column or as far from it as possible, 20,000 sweeps, sealed.) No fold grows. Of 192 points the most ever curled
+  at once is 23, the largest curled piece 12, at any energy from 16 to 512 (2.7 times the price of curling the whole
+  space). Near and far read alike. A small push next to the relic moves or dissolves it (16 units: the column is
+  gone in 1 of 6 and moved in the other 5; the same push far away leaves it untouched in 6 of 6); larger pushes break space as in T57 (a third of the points damaged at 512, near or
+  far) and the relic does not survive. Narrows (a) in two directions at this curling cost: a relic plus energy
+  delivered beside it does not grow a curled region. Not tried: energy that may only curl (feed_energy.py's mode
+  "curl") delivered at a relic, which is (a) and (b) together.
