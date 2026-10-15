@@ -176,3 +176,43 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   breaking one is a single move with thousands of choices, and breaking takes 16 units at once where a curled
   point stores 4(lambda - 1); random energy goes through the nearest, most numerous door. Energy that may only curl
   (her (b)) closes those doors; a cluster of relics with such energy is her picture in the toy.
+
+- 2026-10-15, the owner, answering the programme page's open items. On reading (b) of 14 October, that a kind of energy
+  that only curls would reverse Update 32's "one kind of energy pays every push": "Correct. that was based off the idea
+  that different dimensions curl separately, but that is not the case with the tie as we learned. the new idea is
+  curling energy is a thing, relic seeds a doughnut from space, 2 wide / long dimesions. then it gets to its activation
+  energy, then boom. but a cool boom. billions of points?! a section of 3 log directions. maybe it takes the skin of the
+  dougnut and folds it into an inner loop, filling the doughnut from the outside inside a ring, through an unzipping an
+  one or more seeds, until it is a stable for now tube. when it takes an additional activation energy, gets concentated
+  as dark matter and converts the inside of a black hole to a wide space (again). the wide space opens allowing travel
+  inside the yeasty airholes in the dougnut that are now there. because the" (her sentence broke off; what follows
+  "because the" is hers to finish, as is the wording of her prediction for the knots at lambda = 1, which the same
+  message did not reach). The adoption of curling energy as an ingredient is VISION Update 57; the picture is an idea.
+  *Ours, reading it in the toy:* the fold is the burp run backwards. A wide flat torus is re-glued into the tube four
+  around by a front from one or more seeds; curling energy pays for it and a relic seeds it; the black hole's inside is
+  then the tube, paper 1's stand-in for X; a second activation opens it into a wide space again. If that reading is
+  hers, the whole cycle lives in two directions and can be looked at now: `sandbox/feed_energy.py` with START twist and
+  MODE curl, a relic planted first (the LOG of 11 October: with no relic, curl-only energy at 2 units per point moved
+  nothing and at 8 per point melted the fabric). One exact point against "boom": in the toy curling takes energy in,
+  4(lambda - 1) per point, and releases nothing, so a fold of k points can grow only as far as the curling energy
+  supplied pays for, k = E / 4(lambda - 1); the release comes at the later opening. A "cool boom" that stores energy
+  fits that; a fold that gives energy off does not. Questions put to her the same day, so that the design brief S1
+  needs can be written from her answers:
+  - *Piece 11, the fold.* (1) What carries curling energy: each relic, as its own stored curling cost (a column holds
+    14 at lambda = 1.25), or stores at the relic filled from outside, or both? (2) What may a curl-only store pay for:
+    only moves that add a surplus square without lowering the square count (strict), or any move that changes the
+    curl even if it breaks squares too (the 11 October rule, which still melted at fast feeds)? (3) Is the relic
+    required? A control with the same energy and no relic says whether it seeds. (4) Does the fold stop when the
+    curling energy is spent, so that its size is set by the energy supplied and by nothing else? (5) Is the black
+    hole's inside the tube four around, paper 1's X, so that the cycle closes in two directions; or does it need
+    three? (6) What counts as a fold: a curled region attached to the relic that outlives the draining of the stores
+    and is larger than T54's critical patch?
+  - *Piece 5, the tie.* (7) Should a broken point (one with more open directions than the space has, or off the
+    ladder) pay the tie as a curled point does, more, or nothing as now? The table as written charges it nothing, which
+    is why T56's slab broke instead of opening. (8) Is the push to be supplied as a patch of several columns opened by
+    hand (T54's critical patch), since a single move is not the barrier in three directions? (9) Is the slab still X,
+    or is X now the relic-seeded tube of her fold, with the three-direction runs set aside as the untied ones were?
+  - *Piece 7, the knots.* (10) Her prediction, in a word, for whether the double column and the knot of two kinds are
+    still stuck at a curling cost of zero: STUCK, FREE, or one of each.
+- 2026-10-15, the owner, on piece 9: "Piece 9 should adopt the published amplitude rule, why would it not?" (a
+  decision; VISION Update 57, where what it costs is said once). On pieces 13 and 14: "tbd".

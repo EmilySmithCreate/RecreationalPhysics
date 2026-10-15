@@ -1568,6 +1568,32 @@ dated decision before a new ingredient is run.
   our family, never the published model. Sandbox looks so far are in `sandbox/LOG.md` and are not evidence. A
   registered test needs a tested kernel (rule 6), a held-out size (rule 14) and her prediction.
 
+Update 57 (2026-10-15): **three answers of the author's to the programme page's open items: piece 9 adopts the
+published amplitude rule; curling energy is adopted as an ingredient, which reverses Update 32 for the fold; pieces 13
+and 14 stay undecided.** Her words, from the conversation of this morning, put in order. Why this page changes: two of
+the answers are decisions under S1 and one of them withdraws a decision of 25 September. Her new picture of the fold,
+given in the same message, is an idea and is in `sandbox/NOTEBOOK.md` (15 October) with the questions it raises.
+
+- **DECISION: piece 9 adopts the published amplitude rule.** Her words: "Piece 9 should adopt the published amplitude
+  rule, why would it not?" The rule is the one proposed in `docs/design/amplitude_rule_brief.md` and held by her since
+  Update 21: versions carry amplitudes that evolve and can cancel, and a record in the surroundings keeps them apart
+  (O125). What it costs, said once: it is quantum mechanics put in, not derived, so the claim's quantum sentence
+  becomes a bar the loop has to meet and not evidence that it does; the object the amplitudes live on is open, since
+  the loop of four is not a resonator inside a sheet (T15 rung 0b, O30); and it assumes the model's versions are
+  Everett's branches, which is untested (O125). None of these is a reason not to adopt it as the working rule; each is
+  what paper 13 and piece 13's toy now have to say. The quantum rungs already scored (T15 rungs 0, 0b, 3a) stand.
+- **DECISION: curling energy is an ingredient of the toy.** Asked whether reading (b) of 14 October, a kind of energy
+  that may only curl, reverses Update 32's "one kind of energy pays every push": "Correct. that was based off the idea
+  that different dimensions curl separately, but that is not the case with the tie as we learned. the new idea is
+  curling energy is a thing". Under S1 this is a new ingredient and a new kind of state. What is decided is that it
+  exists; its exact form (what a curl-only store may pay for, where it sits, what carries it, and when a fold counts) is
+  fixed in a design brief before any registered run, from her answers to the ten questions in the notebook, and every
+  setting run is published. Sandbox looks may run first and may narrow it, never support it (rule 16). What stands of
+  Update 32: in X the directions are alike, and chance picks which opens first. The untied verdicts stand as scored.
+- **Pieces 13 and 14: "tbd".** Not decided. They stay on the programme page as drafts marked ours.
+- *Ours:* the knots' prediction (whether the stubborn knots are still stuck at a curling cost of zero, piece 7) is
+  still owed; her message broke off before it.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
