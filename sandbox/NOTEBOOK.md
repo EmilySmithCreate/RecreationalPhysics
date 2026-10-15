@@ -223,3 +223,28 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   above that. Whether anything smaller than 64 is fully curled at six links is not listed (at four links the 14-point
   piece is). Read as her answer to question (9): X keeps at least one direction open; the fully curled state is a
   knot, a product and not a start.
+- 2026-10-15, the owner, later, revising the start of her fold: "Oh wait it was 2 open directions, flat, wide torus.
+  What if the start is that it one of the 6 directions curls, the black hole front, basically a 2 sided wide tube with
+  one direction capped? Can we visilualze how this works ? wondering if that is connected to stringification? can't
+  travel on that direction, it also feeds the curling energy to the closed system, then that direction opens again and
+  releases the burp. 3d both ways curl to 2d just one way possible or no? The seed relec gives curling type energy. Or
+  no. So then it collects enough energy to snap the space open again to 3d. Anything to add update or should we run
+  stuff?" *Ours, in the toy:* the start is flat six-link space; one of the three directions curls to four around, which
+  is the one-curled rung, her slab of Update 47 (4 x L x L, two open directions). Nothing is capped: the torus has no
+  edges, and the curled direction can be travelled, four steps and back. Exact (O41): curling one direction stores
+  4(lambda - 1) per point, 1 per point at lambda = 1.25, so a 4 x 8 x 8 slab holds 256 units, and that is exactly what
+  the direction gives back when it opens, because the ladder is additive; her "feeds the curling energy in, then opens
+  and releases the burp" is the toy's bookkeeping. The slab is stuck for now for 1 < lambda < 2, wall 96 - 48 lambda
+  (36 at 1.25, three times the two-direction tube's 12); under her tie the single-move wall is 44.5, 30.4 and 4.0 at
+  lambda = 1.02, 1.10, 1.25 (O89). "Both ways": any of the three directions can curl, alike, by chance (O41); but in two
+  directions and in three the toy has only ever uncurled, never curled from supplied energy (T26, T34, T57, the feed
+  looks of 11 October), so "curl" is the half that needs her new ingredient. A relic's curling energy, exact (O126): a
+  column costs 24 lambda - 16, of which 24(lambda - 1) is curling cost, 6 units at lambda = 1.25; curling a 256-point slab
+  would take about 43 such relics' worth, a 192-point tube about 32. In six links no stable relic has been found (O58:
+  the column has no one- or two-switch analog there), so in the toy her three-direction cycle has no relic to plant
+  yet; the two-direction cycle has, and is the one that can run now. "Stringification": the published word is
+  compactification, a direction curled small beside large ones (Kaluza-Klein; string theory's extra dimensions), and
+  the toy's four-around direction is its counterpart in shape only; the relatives for a direction opening or closing
+  are the decompactification papers already anchoring paper 5 ([GM04], [CJR09], [BSV10], [GHR10]); the toy has no
+  strings (*general knowledge, to verify*). Tried at once: `sandbox/relic_curl_seed.py`, the relic plus energy that may
+  only curl, in two directions (LOG, same day). Visual: the artifact "The Curl and Snap Cycle", a sketch.
