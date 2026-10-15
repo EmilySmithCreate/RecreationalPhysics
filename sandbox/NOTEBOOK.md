@@ -292,3 +292,17 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   within a slice would be a different model and a new knob; its published relatives are the braneworld pictures
   (matter confined to a surface, only gravity crossing; *general knowledge, not read by us, to verify*). Energy beside
   a 2D column moved or dissolved it in 5 to 6 of 6 (LOG, 14 October), the toy's nearest thing to "collides".
+- 2026-10-15, evening, the owner, on "the relic survives only while the slice has no neighbours": "this could be just in
+  a black hole and the galaxies circling each other? We actually don't want to see it elsewhere?" *Ours.* In the toy
+  this is self-consistent if the first listing finds no six-link relic: relics then live only in separate 2D slices,
+  never in open 3D space. Its cost: the black hole's inside would have to be separate four-link slices, which is not
+  the slab (six-link, one curled) and not a state the six-link toy can reach, since every point keeps six links; a fold
+  that turns six links into four is a varying link count, parked in VISION, a new knob. *General knowledge, to
+  verify:* as dark matter, "only inside black holes" fails on the observation that first revealed dark matter. Flat
+  rotation curves need the extra mass spread through a halo far larger than the galaxy; a central mass gives orbits
+  that slow with distance. The Milky Way's central black hole is about 4 × 10⁶ solar masses against a halo of about
+  10¹²; the cosmic microwave background needs dark matter present and spread before any star or black hole; in
+  colliding clusters the lensing mass sits apart from the galaxies' centres; dwarf galaxies are the most dark-matter
+  dominated and have little or no central black hole. A relic inside a horizon counts from outside as black-hole mass
+  only, so it is "feels gravity, nothing more" as she says, but it is black-hole mass, not the dark matter, unless
+  black holes are the dark matter (primordial black holes, published and heavily constrained; the toy says nothing).
