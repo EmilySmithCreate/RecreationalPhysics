@@ -213,10 +213,14 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   the global recount on 200 random moves. For every connected piece of points still at d <= 1, every single switch
   with a point in the piece is priced at the run's lambda; STUCK means all cost more than zero. Exact per graph; the
   states are sealed or in a bath, not cooled; `sandbox/out/rod_relic_dip.txt`.) In the rod's product, which is the
-  slab rung (d = 2), stuck curled pieces are common: of 90 pieces listed over 48 end states, 88 are STUCK and 2 FALL
-  (both large unopened stretches whose cheapest move costs exactly 0). The small ones, 1 to 14 points holding 8 to 84
-  units, are the three-direction counterpart of the column; four pieces of two points at 14 units each in one state at
-  lambda = 1.25, cheapest move out 28. So in "stringified" space, one direction still curled, stuck relics exist; in
+  slab rung (d = 2), stuck curled pieces are common: of 107 pieces listed over 48 end states, 105 are STUCK and 2 FALL
+  (both large unopened stretches whose cheapest move costs exactly 0; counted again from the output file after a
+  first rough count of 90 and 88). The 91 small ones (1 to 15 points; 8 to 84 units at lambda = 1.25, 13 to 130 at
+  1.40; cheapest exits 11 to 28 at 1.25, 1.6 to 30 at 1.40) are all STUCK and are the three-direction counterpart of
+  the column; the 16 large ones (17 to 160 points) are the unopened rod itself. Read from the wiring, the four
+  two-point pieces of 14 units in one state at lambda = 1.25 are each a pair of adjacent points still at d = 1 with
+  four links on five squares and two on four, a two-point stub of rod inside the slab, cheapest move out 28, more
+  stuck than the four-point column (6). So in "stringified" space, one direction still curled, stuck relics exist; in
   flat six-link space (d = 3 everywhere) none is found (O56, O58), and these pieces have not been tried there. Also:
   the 14-unit column's cheapest exit in a tube six around at lambda = 1.25 is 6 (dS -1, dX -2; 16 - 8 lambda, so it is
   a dip for 1 < lambda < 2), not the 12 that O107 guessed ("ours, unverified") and the 13 October note repeated; O107's
