@@ -367,3 +367,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   in two states of seven and is the surviving candidate). With the amplitude rule adopted this morning (Update 57) the
   exact test is rung 0b redone with the cap as the object, in the tube six around and in the slab, from saved end
   states, her prediction first; and whether tonight's pieces of 1, 2, 11, 12 and 14 points have distinct frequencies.
+- 2026-10-15, evening, the owner: "one direction still curled this is a slab, what we want for our 3d opening as a
+  bunch of energy is stored in that one fold as much as in 3". *Ours, exact:* under her tie every rung holds 3a per
+  point, so the slab holds the whole burp, 12(lambda - 1) per point, as the 6-cube does (O106); untied it holds a
+  third. The slab is Update 47's stand-in. Under the tie it does not open in a bath (T56: the table charges damage
+  nothing, so breaking comes first) and its barrier is a patch of about 27 at lambda = 1.25, 45 at 1.20, fixed with
+  size (T54, O118); no push to a slab has been tried tied. The run her picture asks for: the slab under the tie, a
+  patch push of 30 to 50 units at lambda = 1.20 to 1.25, sealed, her prediction first, once she has decided whether
+  the table charges damage and whether the push is a patch opened by hand. Tonight's stuck pieces then live inside X,
+  and whether they outlive the last opening is the flat-space listing.
