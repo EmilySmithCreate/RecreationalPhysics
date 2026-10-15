@@ -168,3 +168,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   lambda = 1 nothing makes them (the tube has no reason to open), and the column's price falls from 14 to 8. The
   4-unit column of O126 (16 lambda - 16) costs nothing at lambda = 1. Whether the double column and the twist are
   still dips at lambda = 1 is an exact count on the saved T51 graphs; her prediction's wording is not settled.
+- 2026-10-14, the owner, after the relic-seed look: "so the blackhole starts when you have high density dark matter,
+  which is more of space in curled relic form that carries curling energy, is concentrated and curls the 3
+  dimensions into one". Does the curled region stay attached to the relic? "i think it does, but it's an
+  arrangement, another is set at the end like our 14 pointer." And: "why would it break when it can curl and the
+  curl can take the energy efficiently." *Ours:* in the toy no single move out of flat space adds a square, while
+  breaking one is a single move with thousands of choices, and breaking takes 16 units at once where a curled
+  point stores 4(lambda - 1); random energy goes through the nearest, most numerous door. Energy that may only curl
+  (her (b)) closes those doors; a cluster of relics with such energy is her picture in the toy.
