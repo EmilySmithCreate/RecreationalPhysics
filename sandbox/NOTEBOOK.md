@@ -346,3 +346,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   no speed of light; its only speed is a front's pace (T47). (1): a fully curled piece is the 6-cube, 64 points (O41,
   O85); one cube opens fully in a minority (T49) and from a gas no opening grew past one cube; "bulging out,
   expanding" needs a varying count of points, parked (claim 3). Which answer on c she holds is hers to say.
+- 2026-10-15, evening, the owner: "Can the cosmic microwave background come from the vacuum of being a new space
+  from within a knot?" *Ours; general knowledge, to verify:* not as a vacuum. The background is light with the most
+  exact thermal spectrum ever measured (2.725 K), which needs a history of contact with hot matter; it was hotter
+  earlier (read from distant gas clouds it warms) and cools as space grows, where a vacuum's energy would not; its
+  ripples are sound waves in the hot gas, whose peaks fix the dark-to-ordinary ratio. The published temperature of an
+  expanding space's vacuum (Gibbons and Hawking 1977, not read by us) is about 10⁻³⁰ K today. In the hypothesis the
+  background is the surviving light of the burp (claim 4; Update 41's hot lump), and the burp's release per point
+  would set the birth temperature, O89's one unknown, which the hypothesis does not yet give. The toy has no light,
+  expansion or temperature but a bath's; its shape, one front from one seed leaving a uniform product with a sprinkle
+  of fixed knots, is in kind what the sky shows (ours, unverified; the uniformity of a re-glued tube, not of a sky).
