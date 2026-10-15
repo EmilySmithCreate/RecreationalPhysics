@@ -279,3 +279,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   stacked slice is not a dip and no three-direction relic has been found (O56, O58); energy curling flat space has not
   been seen in eight tries, so the black hole's fold rests on the curling energy adopted this morning (Update 57).
   Nothing measured makes the picture impossible. Three exact listings, no run, are named there.
+- 2026-10-15, evening, the owner, on the page's line that "one relic in each slice, looking like dark matter" rests on
+  an object not found in three directions: "can this exist in 2d and not 3d? Doesn't interact with 3d?" *Ours, exact:*
+  in the toy a slice is a set of points of the one six-link network, four links within the slice and two to the slices
+  either side; the 2D column's re-wiring adds surplus squares in the slice and, once the points have their two
+  between-slice links, breaks the squares those links were on, which is why it costs 120.5 in 3D instead of 14 and has
+  a move downhill (O56). So "exists in 2D and not in 3D" means it survives only while the slice has no neighbours and
+  dissolves once the slice is part of space. "Does not interact" is true of every defect at a distance (additive,
+  O22, O56) and so cannot single the relic out; at contact a relic in a slice touches the slices either side through
+  the squares its points sit on. For her picture the relic has to be a 3D object, a stuck re-wiring that includes the
+  up and down links, not found yet (O58, searched narrowly). A rule in which slices are linked more weakly than points
+  within a slice would be a different model and a new knob; its published relatives are the braneworld pictures
+  (matter confined to a surface, only gravity crossing; *general knowledge, not read by us, to verify*). Energy beside
+  a 2D column moved or dissolved it in 5 to 6 of 6 (LOG, 14 October), the toy's nearest thing to "collides".
