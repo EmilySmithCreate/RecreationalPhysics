@@ -248,3 +248,34 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   are the decompactification papers already anchoring paper 5 ([GM04], [CJR09], [BSV10], [GHR10]); the toy has no
   strings (*general knowledge, to verify*). Tried at once: `sandbox/relic_curl_seed.py`, the relic plus energy that may
   only curl, in two directions (LOG, same day). Visual: the artifact "The Curl and Snap Cycle", a sketch.
+- 2026-10-15, evening, the owner, her whole picture drawn on a whiteboard (photos in
+  `docs/figures/whiteboard_2026-10-15/`) and described, because "I'm having a hard time explaining this and I think
+  that is impacting the quality and direction of our research." Her words, put in order. A wide doughnut is 3D space:
+  1) length round the outer ring, 2) width across, 3) height, the thick skin's cross section, "represented height = 6
+  (wide)". A slice of the doughnut (length small, width over 6) started with height 4, "our stable tube torus with 1
+  open direction and one closed direction. with paper 1's numbers: that tube got 12 units curling energy, released 96,
+  and left a scrap in the form of a column and or one of the other scrap types. Now it's in a stable, floor
+  arrangement of space." 3D space is "all those slices put together, side by side, in a way that a person in space can
+  move across the height and the width and also the length." On the relic: "there is one in each slice. it could be
+  anywhere. so when you stack slices, relic distribution looks like dark matter. we don't interact with it, as it is in
+  2 d it doesn't interact with 3d / normal matter"; "there is curling energy distributed throughout 3 d space, contained
+  in the relics." The black hole: matter and energy released at the birth concentrate until the area "is in a single
+  slice, then it is connected to curling energy ... a place where you cannot move in all the directions? yes. it's a
+  knot. a shell of 4 points, existing in vast 3d space ... (its because gravity is too strong.) a singularity. it
+  concentrates the force that curls 3 dimensions into 1. the dimensions are tied together, all the energy goes to
+  curling the first direction, so you can imagine, the first direction to collapse creates a slab. basically, height
+  goes from 6 to 4. it is a place in the doughnut where the thick skin is thin. which would be stable. except more
+  energy keeps flooding in, curling more 6 height into 4 height." Her question: "can that create a hole in the slice?
+  and place a 3d knot in the middle of the 3 places it intersects? that keeps amassing curling energy?" Then: "energy
+  is amassed until '12' is applied to the length and width and height, all the 3 dimensions, and then the 3 pop together
+  creating a full new 3 d space." Dark energy: "the background dark energy or cosmic constant can have to do with the
+  infinite loop, and the idea that our universe is in the vacuum energy of being in an infinite set of nested 3 wise
+  dimension space. and because of how loops work there does not need to be a beginning or end or total size, and time
+  and space only exist from the perspective of inside the new spacetime, so there is no real difference between being
+  in one or another unless something has been measured or observed, it is like everything everywhere all at once in
+  this loop where the rules are the same (and curling cost exists)." *Ours:* read element by element against the
+  record in `docs/design/whiteboard_picture_2026-10-15.md`. In one line: the slice is paper 1 exactly, down to "height
+  4 becomes height 6" (O116); the stack of slices is the six-link torus in shape, but a two-direction relic inside a
+  stacked slice is not a dip and no three-direction relic has been found (O56, O58); energy curling flat space has not
+  been seen in eight tries, so the black hole's fold rests on the curling energy adopted this morning (Update 57).
+  Nothing measured makes the picture impossible. Three exact listings, no run, are named there.
