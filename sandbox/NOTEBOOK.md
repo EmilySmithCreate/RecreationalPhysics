@@ -318,3 +318,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   re-glued (O116), as the tube's is the tube re-glued. And its opening leaves stuck relics in the slab product
   (sandbox look of this evening, LOG). What the link count would have to change for is only the earlier picture of
   separate 2D slices with no neighbours; the rod replaces that picture and does not need it.
+- 2026-10-15, evening, the owner: "Maybe the size of dark matter is one per black hole independent of the size of
+  the black hole?" *Ours:* in the toy this is claim 5's result with "seed" for "black hole": one ring however large the
+  tube (T10, O15), and with several seeds a number set by the seeds, not the size or the cooling (O104, O107).
+  *General knowledge, to verify:* as "one per black hole" it fails on the halo (one lump gives Kepler orbits, not flat
+  curves; a halo needs of order 10⁶⁰ pieces or a fluid), on the range (dark matter per galaxy runs from 10⁷ to 10¹⁴
+  solar masses against one large black hole each, while the dark-to-ordinary ratio is the constant), and on the cosmic
+  microwave background. What survives is the toy's own form: many relics, number fixed at the birth by the seeds, each
+  of fixed energy, thinning as matter. The number it needs, in toy units (ours, unverified): a share of about 2 × 10⁻⁷
+  at a 4 MeV birth (O89), so with a 14-unit relic and a release of 1 per point about one seed per 10⁸ points, fewer
+  for a hotter birth; T51's self-seeding tubes gave one per few hundred points, so the seeds must be 10⁵ to 10⁶ times
+  rarer than anything run. The seed question (T17, T37), not a cooling one.
