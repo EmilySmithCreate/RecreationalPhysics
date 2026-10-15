@@ -329,3 +329,20 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   at a 4 MeV birth (O89), so with a 14-unit relic and a release of 1 per point about one seed per 10⁸ points, fewer
   for a hotter birth; T51's self-seeding tubes gave one per few hundred points, so the seeds must be 10⁵ to 10⁶ times
   rarer than anything run. The seed question (T17, T37), not a cooling one.
+- 2026-10-15, evening, the owner, two ideas. (1) "New space is formed within a 6 knot bulging out, expanding. So in
+  the strange loop, we imagine Could falling into its clumps" (the sentence broke off). (2) "The burp is released.
+  Matter, antimatter, dark matter. E = Mass times the speed of light squared. So what if dark matter has a different
+  speed of light. A faster speed of light. It spreads bigger. Slower speed of light. Energy divided by a smaller number
+  is a greater mass. When space snapped could it release 2 types that don't interact with each other but with gravity.
+  Matter with wavelengths that don't interact with regular ones. Because different speed of light." *Ours.* (2)
+  reverses her answer of 26 September (VISION Update 33, 04:23 ET: one c for all three kinds, agreed), and the reason
+  stands (*general knowledge, to verify*): c is spacetime's one conversion factor, shared by gravity and light to a
+  part in 10¹⁵ (the 2017 merger); a smaller c would change how much mass an energy makes, not whether it talks to
+  light, which is a missing coupling (her charge per kind, Update 34); waves of different wavelengths pass through one
+  another anyway (Update 33). Published relative in form: species-dependent maximum speeds (Coleman and Glashow 1999,
+  not read by us), tightly constrained. The content that holds, two kinds made at one snap meeting only through gravity
+  in a ratio near five, is asymmetric dark matter (Update 42; [KLZ09], [PV13], [MRM12], abstracts), where the ratio
+  comes from related leftover numbers and a dark mass about five times the proton's, not from a second c. The toy has
+  no speed of light; its only speed is a front's pace (T47). (1): a fully curled piece is the 6-cube, 64 points (O41,
+  O85); one cube opens fully in a minority (T49) and from a gas no opening grew past one cube; "bulging out,
+  expanding" needs a varying count of points, parked (claim 3). Which answer on c she holds is hers to say.
