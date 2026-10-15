@@ -189,3 +189,20 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   far) and the relic does not survive. Narrows (a) in two directions at this curling cost: a relic plus energy
   delivered beside it does not grow a curled region. Not tried: energy that may only curl (feed_energy.py's mode
   "curl") delivered at a relic, which is (a) and (b) together.
+- 2026-10-15. Does a relic seed a fold when the energy beside it may only curl (the owner's (a) and (b) together,
+  NOTEBOOK 14 and 15 October)? (`sandbox/relic_curl_seed.py`: relic_seed's protocol, 6 one-column starts from 10
+  burps of a 4 x 48 tube at lambda = 1.25, E = 16, 64, 256 packed into one store beside the column or far from it,
+  20,000 sweeps sealed; two rules for what a store may pay.) Rule "curl" (11 October's: refuse only moves that
+  break without changing the curl): the same as ordinary energy. At 64 and 256 the fabric breaks (20 to 37 damaged
+  points at the end at 256, peaks 39 to 48), the relic is gone in 12 of 12, and the largest curled piece is 12 points
+  once. Rule "strict" (pay only for a move that adds surplus squares and loses none): nothing breaks at any energy
+  (damage 0 at the end everywhere; transient peaks of 1 to 12), and most of the energy is never spent: of 256 units
+  at most 42 left the stores, in steps of 14, each a new column of the 24 lambda - 16 kind forming in the fabric. So
+  curl-only energy curls space only in column-sized bites. The end states hold 1 to 6 curled pieces, almost all
+  separate columns of 4; in 2 of 6 near-relic runs at 256 a curled piece of 14 to 16 points persisted (worth about
+  three columns of energy, so touching columns rather than a stretch of re-curled tube, unread). Near and far read
+  alike in what forms; the relic itself moves or dissolves under a push beside it in both rules (kept whole in 0 to
+  3 of 6 near, 6 of 6 far). Narrows (a) + (b) at this curling cost and size: a kind of energy that can only curl does
+  not break space, and does not grow a fold from a relic either; it sits, or buys isolated columns. Not tried: a
+  cluster of relics; longer runs; the owner's question (4), whether the fold's size tracks the energy, cannot be read
+  from a fold that does not grow.
