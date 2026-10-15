@@ -216,3 +216,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
     still stuck at a curling cost of zero: STUCK, FREE, or one of each.
 - 2026-10-15, the owner, on piece 9: "Piece 9 should adopt the published amplitude rule, why would it not?" (a
   decision; VISION Update 57, where what it costs is said once). On pieces 13 and 14: "tbd".
+- 2026-10-15, the owner, later, on the questions above: "Actually the no open dimensions would be a knot, how many
+  points in 6 link knot?" *Ours, exact (O41, O85):* 64, the 6-cube, five squares on every link; a fully curled piece
+  can be no larger and stay connected (4^D, Mulder's bound), so more is a gas of 6-cubes; it costs 12(lambda - 1) per
+  point above flat and is stuck for now only for 1 < lambda < 1.2 (wall 96 - 80 lambda), falling apart with no wait
+  above that. Whether anything smaller than 64 is fully curled at six links is not listed (at four links the 14-point
+  piece is). Read as her answer to question (9): X keeps at least one direction open; the fully curled state is a
+  knot, a product and not a start.
