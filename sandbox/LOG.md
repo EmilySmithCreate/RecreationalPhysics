@@ -206,3 +206,18 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   not break space, and does not grow a fold from a relic either; it sits, or buys isolated columns. Not tried: a
   cluster of relics; longer runs; the owner's question (4), whether the fold's size tracks the energy, cannot be read
   from a fold that does not grow.
+- 2026-10-15. Does the rod's opening leave a stuck relic, as the tube leaves a column (the owner's question whether
+  the rod, one open direction, is the three-direction equivalent of the tube)? (`sandbox/rod_relic_dip.py` on saved
+  end states: T48's rod cells, four, and T53's rod at L = 18, lambda = 1.25, the two coldest baths; the method checked
+  first on T48's two-direction control, where it finds the 14-unit column STUCK, and its local dS, dX checked equal to
+  the global recount on 200 random moves. For every connected piece of points still at d <= 1, every single switch
+  with a point in the piece is priced at the run's lambda; STUCK means all cost more than zero. Exact per graph; the
+  states are sealed or in a bath, not cooled; `sandbox/out/rod_relic_dip.txt`.) In the rod's product, which is the
+  slab rung (d = 2), stuck curled pieces are common: of 90 pieces listed over 48 end states, 88 are STUCK and 2 FALL
+  (both large unopened stretches whose cheapest move costs exactly 0). The small ones, 1 to 14 points holding 8 to 84
+  units, are the three-direction counterpart of the column; four pieces of two points at 14 units each in one state at
+  lambda = 1.25, cheapest move out 28. So in "stringified" space, one direction still curled, stuck relics exist; in
+  flat six-link space (d = 3 everywhere) none is found (O56, O58), and these pieces have not been tried there. Also:
+  the 14-unit column's cheapest exit in a tube six around at lambda = 1.25 is 6 (dS -1, dX -2; 16 - 8 lambda, so it is
+  a dip for 1 < lambda < 2), not the 12 that O107 guessed ("ours, unverified") and the 13 October note repeated; O107's
+  comparison of the column's and the knots' walls needs that number. Not promoted.

@@ -61,7 +61,7 @@ so the drawing is the right drawing. But the relic she puts in each slice is a t
 record has already priced what happens to it when the slice is given neighbours: it is no longer a dip
 (O56), and no stuck curled object has been found in six-link flat space at all (O58, searched at λ = 1.02 over
 one- and two-switch constructions). So "one relic in each slice, carrying curling energy, looking like dark
-matter" rests, in the toy, on an object that does not yet exist. This is the single fact most worth her
+matter" rests, in the toy, on an object that does not yet exist. *Narrowed the same evening by a sandbox look (`sandbox/LOG.md`, 15 October; not promoted): the sentence holds for flat six-link space; in the slab product of the rod's opening, one direction still curled, stuck curled pieces of 1 to 14 points were found in 48 saved end states. Whether any of them is a dip in flat space is still the listing above.* This is the single fact most worth her
 attention, because her dark-matter half and her black-hole seed both stand on it (NOTEBOOK 14 October: the
 black hole "connects open space to a relic").
 

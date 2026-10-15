@@ -306,3 +306,15 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   dominated and have little or no central black hole. A relic inside a horizon counts from outside as black-hole mass
   only, so it is "feels gravity, nothing more" as she says, but it is black-hole mass, not the dark matter, unless
   black holes are the dark matter (primordial black holes, published and heavily constrained; the toy says nothing).
+- 2026-10-15, evening, the owner, on the link count: "a change in the number of links per point: if space is
+  stringified, can 1 long direction open in 1 direction be equivalent to the tube?" *Ours, exact (O41, O100, O106,
+  O116):* read as the rod, 4 x 4 x L with six links, one open direction and two curled, a chain of 4-cubes. It needs no
+  change in the link count: it is a state of the six-link toy already. Against the tube: both are one connected piece
+  with one long direction, both stuck for now up to about lambda = 1.45, both with a wall fixed with size; the rod
+  holds two curling costs per point (8(lambda - 1)) where the tube holds one, its untied wall is 16 at lambda = 1.25
+  where the tube's is 12, and under her tie 24 (O106); its first opening is sharp and spreads (T30, T48, T53) and
+  lands on the slab, and the second direction has not opened from a bath before damage (T53) or at all under the tie
+  (T56), so the rod's burp is half the tube's unless the second direction opens too. Its product is sometimes the rod
+  re-glued (O116), as the tube's is the tube re-glued. And its opening leaves stuck relics in the slab product
+  (sandbox look of this evening, LOG). What the link count would have to change for is only the earlier picture of
+  separate 2D slices with no neighbours; the rod replaces that picture and does not need it.
