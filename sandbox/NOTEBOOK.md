@@ -483,3 +483,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   through a declared leak (the semi-permeable wall, Q12; T27 ran four rates). Not measured: how long damage
   takes to heal against store temperature in three directions (the measurement-side handoff's item 4 asks what
   the stores do).
+- 2026-10-16, the owner, on the fold and on healing: "Energy additive across shared edge due to tie. Breaks curls or
+  stored based on amount. Damage heals yes we can even maybe say less sweeps than 2d untied." *Ours, before any
+  look:* (1) the tie's price is additive in the sense that each rung is topped up to the full 3a, so the first fold
+  is charged all three directions at once (O106); the untied energy is additive edge by edge (O22), the tie point by
+  point. (2) Stored or broken, by amount: yes, as measured (Q22's floor, then damage in T57). Curled by amount: not
+  seen at any amount tried, which is the gap piece 11 sits in. (3) Her prediction, tried at once in the sandbox:
+  flat three-direction space under the tie heals its damage in fewer sweeps than flat two-direction space untied,
+  same N, same λ, same energy packed into one store of a bath of 4N. Ours, written first: the tie makes no
+  difference to healing (a damaged point pays no tie), and the three-direction space takes less damage at the same
+  energy (its cheapest break costs 64 against 32) and heals to the scar level in about the same number of sweeps.
