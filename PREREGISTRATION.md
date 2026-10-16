@@ -5877,6 +5877,76 @@ columns rare after cooling). Ours: the slab's stuck pieces are mostly two-point 
 rod look found (LOG, 16 October), a kind the two-direction record does not have. Her word for the control itself is
 still owed.
 
+### Reading of T65, stage 1 (L = 8 and 12), 2026-10-16 (`python scripts/analyse_t65.py`; read after all eight cells were accepted unread and committed, 8ee58427 and d8536575)
+
+**No cell OPENS. Tied arm A: PARTIAL at λ = 1.20 and DAMAGED at λ = 1.25. Arm B: PARTIAL, MIXED or DAMAGED by cell,
+FALLS BACK in one. The untied control: FALLS BACK in every cell.** Energy drift at most 5 × 10⁻¹² in any row.
+
+| cell | verdicts by spark (16, 32, 64, 128) at C = N | at C = 4N |
+|---|---|---|
+| tied, λ = 1.20, L = 8 | FALLS BACK, FALLS BACK, MIXED, MIXED | FALLS BACK, FALLS BACK, PARTIAL, PARTIAL |
+| tied, λ = 1.20, L = 12 | FALLS BACK, FALLS BACK, FALLS BACK, PARTIAL | FALLS BACK ×4 |
+| tied, λ = 1.25, L = 8 | PARTIAL, PARTIAL, MIXED, DAMAGED | FALLS BACK, MIXED, MIXED, DAMAGED |
+| tied, λ = 1.25, L = 12 | FALLS BACK, MIXED, MIXED, DAMAGED | FALLS BACK, PARTIAL, MIXED, DAMAGED |
+| arm B (patch k = 2), λ = 1.25, L = 8 | PARTIAL, MIXED (sparks 16, 32) | PARTIAL, DAMAGED |
+| arm B, L = 12 | PARTIAL, MIXED | FALLS BACK, PARTIAL |
+| control, untied, spark 128 | FALLS BACK (7 of 8 at L = 8; 8 of 8 at L = 12) | FALLS BACK (8 of 8, both sizes) |
+
+Not one replica of 512 read OPENS. Three replicas at tied λ = 1.25, L = 8, C = N passed half open late in the run
+(sweeps 8,000, 15,500 and 29,000) and ended PARTIAL or DAMAGED. The release per point is negative or a few
+hundredths everywhere (the stores hold at most a fifth of 3aN at the largest spark), so the slab gave back nothing
+of its 3a.
+
+**Her predictions.** "Opens in room" (the tied arms): fails at both curling costs and both sizes. PARTIAL (the
+untied control, given 16 October after the tie was withdrawn): fails; the control FALLS BACK in every cell, 31 of
+32 replicas. Her prediction on the leftover pieces (reported, not scored): the slab did not open, so there is no
+product in which to count relics; see below.
+
+**Ours.** No cell OPENS: holds. PARTIAL at sparks 16 and 32 and DAMAGED at 64 and 128 at λ = 1.25: holds in
+direction, the per-λ word DAMAGED as written; at λ = 1.20 we wrote "the same, with fewer first moves" and the cells
+are mostly FALLS BACK with the per-λ word PARTIAL, so the small-spark half of that fails. Arm B PARTIAL: holds in
+five cells of eight, with one DAMAGED and one FALLS BACK (the patch of two columns closed again at L = 12 with the
+roomy bath and the smallest spark). The control PARTIAL or DAMAGED: fails; it FALLS BACK.
+
+**Reported, not scored, from the saved end graphs** (`scripts/read_t65_pieces.py`, written for this reading;
+tests in `tests/test_read_t65_pieces.py`). The opening is a sprinkle, never a front: at the stop the open points
+lie in 6 to 22 separate regions per replica whose largest is 2 to 61 points, and the first move at every spark is a
+scatter of pairs. In the tied cells at λ = 1.25 and spark 128 the open share ends at a third (median 182 of 576)
+with a tenth or more of the points broken. The damage is mostly the swapped pair of O82 (pieces of two points, 4 to
+59 per cell) with larger broken clusters of 6, 16, 20 and up to 120 points at the larger sparks; arm B's hand-opened
+patch leaves broken pieces of 16 points in most of its replicas, the joints of the patch. The control ends with a
+median of 12 open points in six pairs at C = N and none at C = 4N, and its only damage is a few swapped pairs: the
+spark opened a few pairs and the slab closed them again. Width (`scripts/read_endpoint_width.py`) is not read, since
+nothing opened; the curled leftovers the registration listed do not exist here for the same reason.
+
+**What the rows say beyond the words** (*ours, unverified*). A spark of 128 is below the patch that grows (about 7.5
+columns and 225 untied, 1.5 columns and 27 tied at λ = 1.25, T54), and the chain does not gather a spark into one
+patch: it buys pairs all over the slab, which close again untied and break open tied, where a damaged point pays
+nothing. The tied slab at λ = 1.25 goes to damage from a spark exactly as it went to damage from a bath (T56). The
+untied slab is simply stable against a spark of 128, which is what the walls say (36 by single move, O41) and what
+her feed-rather-than-spark reading of 16 October expects of one spark. The sandbox feed look of the same day
+(`sandbox/LOG.md`) is the other half of that picture: a feed opens the slab from many spots at once and breaks it
+before a third is open.
+
+**Rule 11, on piece 5, fifth use.** Previous claim (hers, Update 58): X is the untied slab; one direction opens from
+a push and releases a per point. Failed because: one spark of 128, the push run here, opens a scatter of pairs that
+close again (FALLS BACK, 31 of 32); the push that would open it is a patch of about 225 units delivered in one place,
+which nothing in the toy gathers. Replacement: hers, in her words of 16 October, "a flow with various rates based on
+what black hole eats and so it's one spot per seed", that is a feed rather than a spark. New falsification test: a
+registered feed run on the untied slab, rates fixed in advance, with her prediction, scored by whether an open region
+grows past half the slab before a tenth of the points are broken; the sandbox look says it will not, at three rates
+and one size, which is the thing a registered run on fresh seeds would kill or keep.
+
+### Amendment, 16 October 2026, after stage 1 was read: the numbers for the held-out size (rule 14)
+
+The tie is withdrawn (Update 58), so the held-out stage, if it runs, is the untied control alone: L = 16
+(N = 1024), spark 128, C = N and 4N, eight replicas, 30,000 sweeps. Written from L = 8 and 12 before L = 16 runs:
+**FALLS BACK in at least 7 of 8 replicas at each bath**, with a median of 0 to 20 open points at the end and no
+replica past half open; the cell words FALLS BACK at both baths. AS PREDICTED if both cells read FALLS BACK; the
+size claim is then that one spark of 128 does not open the untied slab at any size run. **The owner's prediction for
+L = 16 is owed before it runs.** Ours is the number above. Whether to run it at all is hers: it is one cloud job,
+and its expected answer is the one the two smaller sizes gave.
+
 ### What this cannot show
 
 How the patch comes to be: it is opened by hand, which is the push the record says a single move cannot supply; a

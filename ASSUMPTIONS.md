@@ -3779,3 +3779,22 @@ author and should be disclosed as such in any submission. Physics estimates mark
   - **What stands of the sandbox look** (`sandbox/LOG.md`, 16 October): its finding at N = 216 is reproduced on
     fresh seeds with twice the replicas and twice the sweeps; its extrapolation to larger sizes was not made and
     would have been wrong.
+
+- **O130 T65, stage 1, read: given one spark, the owner's slab does not open at either size; tied it goes PARTIAL
+  (λ = 1.20) or DAMAGED (λ = 1.25), and untied it FALLS BACK in 31 replicas of 32; not one of 512 replicas opened
+  (16 October 2026, 18:06 UTC by the clock). Measured, pre-registered; her "Opens in room" and her PARTIAL for the
+  control both fail; ours holds on the tied word at λ = 1.25 and fails on the control.** (PREREGISTRATION T65,
+  "Reading of T65, stage 1", the full account with the cell table and the held-out numbers; `scripts/analyse_t65.py`;
+  `scripts/read_t65_pieces.py` for the end graphs; `results/t65_*`; eight Batch jobs of 64 replicas, accepted unread
+  and committed first, 8ee58427 and d8536575. Six links carry VISION Update 24's caveat; the tie is withdrawn, Update
+  58, so the tied arms are the record of the tied slab and the control is the cell that speaks to the hypothesis.)
+  - **What the end graphs show, reported:** the opening is a sprinkle of pairs in 6 to 22 separate regions, never a
+    front; the damage is mostly the swapped pair of O82 with larger broken clusters at the larger sparks; the
+    untied control's few opened pairs close again. No curled leftover inside an opened space exists, since nothing
+    opened.
+  - **Rule 11, fifth use on piece 5** (in the registration): a spark of 128 is below the patch that grows (T54) and
+    the chain does not gather it; her replacement is a feed rather than a spark; the new test is a registered feed
+    run with her prediction, which the sandbox feed look of 16 October says will open from many spots and break
+    before a third is open.
+  - **The size claim** waits on the held-out size, the untied control at L = 16, with the numbers written (FALLS
+    BACK in at least 7 of 8 at each bath); her prediction for it is owed, and whether it runs is hers.

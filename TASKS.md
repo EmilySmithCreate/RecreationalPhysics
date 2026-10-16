@@ -751,6 +751,12 @@ T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4
     *16 October, later: the owner withdrew the tie (VISION Update 58). T65 is read as registered; its untied control
     is the cell that speaks to the hypothesis as it now stands (PREREGISTRATION T65, amendment of 16 October). Any
     new three-direction registration is untied unless a new table is decided first.*
+    *Read 16 October, all eight cells (O130): no cell OPENS; tied PARTIAL at λ = 1.20 and DAMAGED at 1.25; the untied
+    control FALLS BACK in 31 of 32. Her "Opens in room" and her PARTIAL fail; ours holds on the tied word at 1.25 and
+    fails on the control. The opening is a sprinkle of pairs, never a front (`scripts/read_t65_pieces.py`). The held-out
+    numbers are written for the untied control at L = 16 (FALLS BACK); her prediction for it, and whether it runs, are
+    hers. Rule 11's fifth use on piece 5: her replacement is a feed rather than a spark; the next test is a registered
+    feed run with her prediction.*
 13. **T66, does flat three-direction space heal damage in fewer sweeps than flat two-direction space** (PREREGISTRATION
     T66; the owner's prediction FASTER IN 3D and her "Yes proceed" of 16 October; one sandbox look first, `sandbox/LOG.md`
     16 October). Launched 16 October, 4 Batch jobs (`cloud/queue/2026-10-16_t66_stage1.txt`). To read: fetch `t66_*`,
