@@ -503,3 +503,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   stable slab yet." *Ours:* recorded in Update 58 as her confirmation. The slab she could not picture is the toy's
   own answer: a rod or a fully curled start in a bath opens one direction and rests there (T48, T53), and untied that
   rest lasts for every curling cost between 1 and 2 (O41).
+- 2026-10-16, the owner, asked for her prediction for T65's untied control (one spark of 128 into the slab): "I think
+  it's a flow with various rates based on what black hole eats and so it's one spot per seed." *Ours, as read:* the
+  push is not one spark but a feed, energy arriving at a rate set by what the black hole swallows; each seed opens
+  from one spot. The toy's nearest protocol is a feed: so many units a sweep added to the stores of a sealed slab,
+  either to one shared store or to one point's own store (the spot). Not run before; a bath at fixed coupling (T53,
+  T56) is the limit of a feed that has already filled. Tried at once: untied slab 4 x 8 x 8, lambda 1.25, 4N empty
+  stores, feed rates 2, 8 and 32 a sweep, into one shared store and into one point's store. Her prediction: the slab
+  opens, from one spot per seed. Ours, written first: a feed is a bath warming slowly, and T56's untied control says
+  the slab STAYS until the stores are hot enough to break flat space (64), so no rate opens it cleanly; the fast feed
+  breaks it, the slow one sits, and whatever opens does so where the damage is. The control's registered prediction
+  stays inferred from "Opens in room" until she gives a word.
