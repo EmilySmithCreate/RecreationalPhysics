@@ -493,3 +493,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   same N, same λ, same energy packed into one store of a bath of 4N. Ours, written first: the tie makes no
   difference to healing (a damaged point pays no tie), and the three-direction space takes less damage at the same
   energy (its cheapest break costs 64 against 32) and heals to the scar level in about the same number of sweeps.
+- 2026-10-16, the owner, on what the work is for, after the assistant ranked what is most likely a net add to physics
+  (the exact and measured facts about the model first, the cosmological story last): "I think a coherent story is good
+  add to humanity if not physics. It's helpful in understanding the pieces." *Ours:* agreed, under rule 10: the story
+  is an add when every joint says its kind (exact, measured, interpretation, hers). It also does work inside the
+  project: her picture of 15 October produced T65, the slab as X and the dot-count arithmetic.
