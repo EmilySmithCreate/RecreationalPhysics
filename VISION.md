@@ -1628,6 +1628,12 @@ carrying its own wall.
   Untied, the directions do curl separately again (each has its own wall; O55). Whether curling energy stays as an
   ingredient, and whether Update 32's "one kind of energy pays every push" returns with it, is hers to say; nothing is
   built for it meanwhile.
+- **Her answer, the same morning: "Yes curling energy. Yes curl separately. Now I understand better ofc they curl
+  separately. I just couldn't picture the stable slab yet."** So curling energy stays as an ingredient (Update 57), now
+  on its own footing and not on the tie's; the directions curl separately, each behind its own wall (O55); and the
+  slab, two open and one curled, is the stable-for-now X she had not been able to picture. Update 32's "one kind of
+  energy pays every push" is not thereby restored: curling energy is a kind that may only curl (Update 57), and its
+  form is still owed in a design brief before any registered run.
 - *Ours:* the tie did one thing well that the record should keep: it showed that a per-point cost on half-open states
   lowers the slab's barrier (O106, O118). If a later form charges damage as much as curling, that is a new knob and
   needs its own dated decision here.

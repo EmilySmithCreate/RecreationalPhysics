@@ -498,3 +498,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   add to humanity if not physics. It's helpful in understanding the pieces." *Ours:* agreed, under rule 10: the story
   is an add when every joint says its kind (exact, measured, interpretation, hers). It also does work inside the
   project: her picture of 15 October produced T65, the slab as X and the dot-count arithmetic.
+- 2026-10-16, the owner, after the tie was withdrawn (VISION Update 58) and asked whether curling energy stays: "Yes
+  curling energy. Yes curl separately. Now I understand better ofc they curl separately. I just couldn't picture the
+  stable slab yet." *Ours:* recorded in Update 58 as her confirmation. The slab she could not picture is the toy's
+  own answer: a rod or a fully curled start in a bath opens one direction and rests there (T48, T53), and untied that
+  rest lasts for every curling cost between 1 and 2 (O41).
