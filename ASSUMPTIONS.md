@@ -3765,7 +3765,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
 
 - **O129 T66, stage 1, read: flat three-direction space heals its damage to the scar level where the two-direction
   sheet never does at N = 216 (FASTER IN 3D at both energies), and at N = 512 neither reaches it within the run
-  (MIXED); the cube ends about a third as damaged as the sheet at every size and energy (16 October 2026, 12:00 UTC
+  (MIXED); the cube ends about a third as damaged as the sheet at every size and energy (16 October 2026, 11:54 UTC
   by the clock). Measured, pre-registered; the owner's prediction holds at 216 and fails at 512 by the letter, and
   so does ours.** (PREREGISTRATION T66, "Reading of T66, stage 1", the full account with the table and the held-out
   numbers; `scripts/analyse_t66.py`; `results/t66_*`; four Batch jobs of 16 replicas at two energies, accepted
