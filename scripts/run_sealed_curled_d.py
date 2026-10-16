@@ -85,6 +85,15 @@ def gas(dims, copies):
 
 
 def start_of(cfg):
+    if "patch" in cfg:
+        # T65 (2026-10-15): the slab 4 x L x L with a patch of k columns opened by hand (the helix patch of T54,
+        # exact_t54_patch.patch), the sealed box then started with empty stores. Absent, the runner is what it was.
+        from exact_t54_patch import patch as open_patch
+        pt = cfg["patch"]
+        length, k = int(pt["L"]), int(pt["k"])
+        adj0, part = torus([4, length, length])
+        adj, _ = open_patch(adj0, length, k, int(pt.get("x0", 0)), int(pt.get("y0", 0)))
+        return adj, part, "4 %d %d patch %d" % (length, length, k)
     if "gas" in cfg:
         g = cfg["gas"]
         adj, part = gas([int(x) for x in g["dims"]], int(g["copies"]))

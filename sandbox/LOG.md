@@ -225,3 +225,18 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   the 14-unit column's cheapest exit in a tube six around at lambda = 1.25 is 6 (dS -1, dX -2; 16 - 8 lambda, so it is
   a dip for 1 < lambda < 2), not the 12 that O107 guessed ("ours, unverified") and the 13 October note repeated; O107's
   comparison of the column's and the knots' walls needs that number. Not promoted.
+- 2026-10-15, late. PREDICTIONS WRITTEN BEFORE READING (the owner's instruction of this hour: log predictions from
+  the full story before reading results). Two looks are running. (1) `sandbox/slab_patch_sealed.py`: the tied slab
+  4 x 8 x 8, sealed with empty stores, from a patch opened by hand (T54's helix patch) of k columns, lambda 1.25 with
+  k = 2, 3 and lambda 1.20 with k = 3, 4, room C = N and 4N stores, 20,000 sweeps, three replicas. Disclosed: the
+  control cells k = 0 (sits for ever, as it must) and k = 1 at lambda 1.25 (below the peak; grew a little and damaged
+  a little, 160 to 208 of 256 points still on the slab rung) had printed and were seen before this was written; the
+  past-peak cells had not. *Ours:* at lambda 1.25, k = 2 and 3 with C = 4N, the opening spreads to most of the slab
+  (over 200 of 256 points at d = 3) and the stores end near 0.7 per store, with a few curled pieces and some damage;
+  with C = N the release warms the box past what flat space bears and the end state is mostly damaged (over 50 points
+  at d > 3). At lambda 1.20, k = 3 and 4, the same in kind, slower. *The owner's (inferred from her picture of 15
+  October, "the 3 pop together creating a full new 3 d space"):* the whole slab opens into one flat space. Her word is
+  owed. (2) `scripts/exact_relic_search_d.py` at lambda 1.25 (O58's one- and two-switch search, which found no dip at
+  1.02): *ours:* no dip at 1.25 either; a dip is hardest at the higher curling cost because every move that sheds a
+  surplus square gains more there. *Hers:* not asked; the flat-space relic is her dark-matter candidate, so her
+  picture needs a dip to exist.

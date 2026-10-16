@@ -376,3 +376,17 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   patch push of 30 to 50 units at lambda = 1.20 to 1.25, sealed, her prediction first, once she has decided whether
   the table charges damage and whether the push is a patch opened by hand. Tonight's stuck pieces then live inside X,
   and whether they outlive the last opening is the flat-space listing.
+- 2026-10-15, evening, the owner: "Proceed. I'll hold answers about microscopic strings it is not needed at this point
+  of the program lest test the new theories." The strings questions (the cap under the amplitude rule; the pieces'
+  frequencies) are held by her. *Ours, what proceeds without her:* two sandbox looks launched the same hour
+  (`sandbox/slab_patch_sealed.py`: the tied slab, sealed, from a patch opened by hand above T54's critical size, does
+  the opening spread and release 3a per point; `scripts/exact_relic_search_d.py` at lambda = 1.25: the one- and
+  two-switch relic search of O58 at the curling cost the runs use), and the registration draft for the slab run with
+  her prediction slot. A table that charges damage is a new knob and is not touched.
+- 2026-10-16, early, the owner, her prediction for the T65 draft (the tied slab, sealed, from a hand-opened patch past
+  the barrier): "Opens in room". Recorded before any registered run; after she had been told that the first
+  past-barrier cell of the sandbox look (k = 2, lambda = 1.25, empty stores) did not move. And on the flat-space relic:
+  "I am not attached to the dip idea I don't think it's needed we have another dark matter hypothesis that is better
+  right now." Which hypothesis she means is hers to name (the candidates on the record: many relics with their number
+  set by the seeds at the birth; asymmetric dark matter, two leftovers of one snap, Update 42). The flat-space listing
+  stays on the list as exact bookkeeping, not as a dark-matter test.
