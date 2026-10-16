@@ -5947,6 +5947,13 @@ size claim is then that one spark of 128 does not open the untied slab at any si
 L = 16 is owed before it runs.** Ours is the number above. Whether to run it at all is hers: it is one cloud job,
 and its expected answer is the one the two smaller sizes gave.
 
+**Launched 2026-10-16, evening, on the owner's word** ("if the untied control is still relevant run it"): it is
+relevant, since the untied control is the cell that speaks to the hypothesis as it stands, and the size claim
+of rule 14 needs it. One cloud job, `cloud/queue/2026-10-16_t65_heldout.txt`, config
+`t65_control_lam125_l16` (seed 20266604, the maker's fourth held-out cell; its tied cells were written and discarded, since the tie is withdrawn); the tied arms do not run at L = 16. **Her prediction for L = 16, inferred
+from her word for the control at stage 1, PARTIAL, and marked inferred until she confirms or replaces it before the
+cell is read.** Ours stands as written above: FALLS BACK in at least 7 of 8 at each bath.
+
 ### What this cannot show
 
 How the patch comes to be: it is opened by hand, which is the push the record says a single move cannot supply; a
@@ -6072,3 +6079,79 @@ Anything at a fixed temperature (the store temperature here is set by ρ and C a
 another curling cost; the reason, which is a reading of the exact costs and not a measurement; anything about
 curling, since nothing here is curled (T57 found none); anything about the real universe. Every six-link result
 carries VISION Update 24's caveat.
+
+## T67. Does the owner's untied slab open from a feed, energy arriving at a fixed rate? (piece 5; rule 11's fifth use; the owner's words of 16 October; VISION Updates 58 and 59; ASSUMPTIONS O41, O118, O130, O131; written 2026-10-16, evening, after one sandbox look and before any registered run; launched the same evening)
+
+### Why
+
+T65 read FALLS BACK for the untied slab given one spark of 128 (O130): the spark buys a scatter of pairs that close
+again, and the push that would open the slab, a completed patch of about 225 units in one place (T54, O118), is
+gathered by nothing in the toy. Rule 11's fifth use on piece 5 names the owner's replacement, in her words of
+16 October: the push is "a flow with various rates based on what black hole eats and so it's one spot per seed". Her
+handoff of the same evening (VISION Update 59) makes this the first thing to establish: energy entering the black
+hole raises the excitation g, the chance of an opening rises with it, and a front, once started, may be paid from the
+reservoir and from the release. On the rates: "the rates may not be fixed but it's good to run that way for
+starting."
+
+### Disclosed
+
+One sandbox look came first (`sandbox/LOG.md`, 16 October; `sandbox/slab_feed.py`; `sandbox/out/slab_feed.txt`):
+the untied slab 4 × 8 × 8 at λ = 1.25, rates 0.25, 1, 4 and 16 units a sweep into a shared store and into one point's
+store, 3 replicas, a damage stop at a tenth. Every one of 24 replicas stopped DAMAGED, after 275 to 1,600 units fed,
+with a third or less open in 8 to 23 separate regions and no region past half; a first try at rates 2 to 32 with no
+damage stop broke every point. That look is why the registration exists and it is not evidence (rule 16): the seeds
+below are fresh, a slower rate is added, the words are fixed now, and the held-out size is named before anything
+runs. Her prediction below is inferred from her words and is marked so.
+
+### What will be run
+
+| Choice | Value | Why this and not something else |
+|---|---|---|
+| Geometry | the untied slab 4 × L × L, one direction curled, λ = 1.25 | X as it stands (Update 58); T65's slab and curling cost, so the two are read side by side |
+| Sizes | L = 8 and 12 (N = 256, 576); **held out: L = 16 (N = 1024)** | T65's sizes; the held-out size runs only after the two are read and the numbers are written (rule 14) |
+| The feed | r units a sweep, added after every block of 50 sweeps: r = 1/16, 1/4, 1 and 4 | The look's 1/4 to 4 (every rate broke the slab) with a slower rate below, to see whether a slow enough feed sits or opens; 16 is dropped as the look's fastest break |
+| Where it arrives | shared: store 0 of a bath of C = N or 4N stores, which any move may draw; spot: one point's own store, with a store at every point, which only moves from that point spend | The two readings of "one spot per seed": energy that spreads and energy held at one place; C scanned as T9 and T65 |
+| Stop rules | OPEN at the first record with open ≥ 0.9 N; DAMAGED at damaged > 0.1 N; else TIME at 20,000 sweeps | The look's rules, fixed before any fresh seed runs |
+| Replicas | 8 per cell | T65's count; 96 per size |
+| Records | every 50 sweeps: open (local dimension 3), curled (≤ 2), damaged (> 3), the number of open regions and the largest, the store mean, the energy fed, the drift; the final graph saved | The three outcomes below are read from these |
+| g | not a knob: the stores' mean energy, written in every row (Q12; O108) | A feed sets g by construction; this is H2 of the owner's handoff, one line |
+| Script | `scripts/run_slab_feed.py`; configs from `scripts/make_t67_configs.py` (seeds 20266701 to 20266706; held-out 20266801 to 20266803); read with `scripts/analyse_t67.py`; tests `tests/test_t67.py` | Written and tested before any run |
+| Where | the cloud queue, `cloud/queue/2026-10-16_t67_stage1.txt`, 6 jobs | Up to a few hours a job at L = 12 if the slow feeds run to the limit |
+
+### Definitions, fixed now
+
+Per replica, from its records in order: the **first escape** = the first record with curled < N; the **front** = the
+first record whose largest open region exceeds N/2 while damaged ≤ N/10; **completion** = the first record with open
+≥ 0.9 N. The replica's word: **OPENS** if it completed with damaged ≤ N/10 at that record; **FRONT** if a front record
+exists and no completion; **BREAKS** if damaged exceeded N/10 before any front; **SITS** otherwise. Per cell (mode, C,
+rate, N): the word held by more than half of the 8 replicas, else MIXED; the median stop sweep; the median energy
+fed at the stop. Per size: **OPENS** if any cell reads OPENS or FRONT, else **BREAKS** if every cell reads BREAKS, else
+MIXED. The drift must be below 10⁻⁶ in every row or the file is not read. Reported, not scored: the first-escape
+sweeps, the number of open regions at the stop, the end census, the store mean at the stop, and the saved end graphs
+read with `scripts/read_t65_pieces.py`.
+
+**The size claim and the held-out size (rule 14).** Scored at L = 16 alone: the word per (mode, C, rate) and whether
+its median stop sweep and median fed at the stop fall inside ranges written, as a dated amendment, from L = 8 and 12
+only, before L = 16 runs.
+
+### Predictions
+
+**The owner's, inferred from her words of 16 October and marked inferred until she confirms or replaces it:**
+OPENS at some rate, from one spot: a single open region that grows past half the slab before a tenth is broken, at
+the slow rates, more readily when the feed arrives at one point. Her words: "a flow with various rates based on
+what black hole eats and so it's one spot per seed"; "the rates may not be fixed but it's good to run that way for
+starting."
+
+**Ours, unverified, written after the look and before the fresh seeds run:** BREAKS in every cell at both stage-1
+sizes; no replica reaches a front; the slowest rate stops DAMAGED later (a median stop between 4,000 and 12,000
+sweeps at r = 1/16) and on no more energy than the others (a median fed at the stop between 250 and 800 units at
+every rate); the first escape comes within 100 to 400 sweeps at r ≥ 1/4; the spot mode breaks on less energy than
+the shared one. Reason, ours: a feed is a bath warming slowly; the slab's single-move wall is 36 and flat space's is
+64 (O41), so the stores reach the energy that breaks pairs long before anything gathers the completed patch of about
+225 units that grows (O118); the look saw exactly that. The held-out ranges are written after stage 1, not now.
+
+### What this cannot show
+
+Whether a feed whose rate varies, or one that arrives at many points, does better: the rates are fixed and the spot
+is one point, as she allowed "for starting". Anything about a black hole, a pull, or what sets the rate. Which
+direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.

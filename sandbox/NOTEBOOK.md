@@ -580,3 +580,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-16, later, the owner, on Update 59's first decision as worded ("The black hole's inside is the parent's own
   geometry curled, not a slab inside it"): "correct". Recorded in Update 59 as her confirmation. The second decision
   (the reset no longer required), her feed prediction and which count piece 12 keeps are still owed.
+- 2026-10-16, later, the owner, on Update 59's second decision: "the whole-universe reset is no longer required -
+  correct. each individual universe is only reset when its last black hole has desolved that is the end state each
+  is working toward. stuff keeps unfolding. every blackhole births multiple new ones. that is what we can call a
+  larger infinity (length of time just as long, but each universe producing a trillion more, vs just one more. that
+  makes this more likely from the anthro observers perspecting which is a nice cohesion." Recorded in Update 59 as
+  her confirmation and as piece 12's count (branching). And on the feed run: "the rates may not be fixed but it's
+  good to run that way for starting. if the untied control is still relevant run it." *Ours:* both launched the same
+  evening: T67, the feed at fixed rates (her prediction inferred from her words of the day, OPENS from one spot, and
+  marked inferred until she confirms), and T65's held-out control at L = 16 (her prediction inferred as her stage-1
+  word, PARTIAL). Her own words for either, before they are read, replace the inferred ones.

@@ -824,12 +824,15 @@ and its review). Her document's eight investigations are H1 to H8 in the record 
 registrations). Her priority, adopted as the order: the energy-coupled nucleation and stable propagation mechanism
 first; the daughter-universe interpretation after. In order, each registered before it runs:
 
-1. **The registered feed run on the untied slab** (H1 to H4; rule 11's fifth use, PREREGISTRATION T65). Rates fixed
-   in advance, into one shared store and into one point's store, two capacities C, two sizes and a held-out size;
-   three sweeps recorded per replica (first escape, a region past half, completion at nine tenths open) and the
-   damage at each; g written from the mean store energy (Q12, O108) in the registration, so H2 is one line. Scored
-   by an open region past half the slab before a tenth of the points are broken. **Her prediction is owed before it
-   runs**; the sandbox look says it opens from many spots and breaks first.
+1. **The registered feed run on the untied slab** (H1 to H4; rule 11's fifth use). *Registered and launched the same
+   evening as PREREGISTRATION T67 on her words "the rates may not be fixed but it's good to run that way for
+   starting": rates 1/16 to 4 a sweep into a shared store (C = N, 4N) or one point's store, L = 8 and 12, held-out
+   L = 16; words OPENS, FRONT, BREAKS, SITS per replica from the first escape, a region past half and completion; 6
+   Batch jobs (`cloud/queue/2026-10-16_t67_stage1.txt`). Her prediction is inferred (OPENS from one spot) and marked
+   so; ours BREAKS everywhere. To read: fetch `t67_*`, accept, commit unread, `python scripts/analyse_t67.py`; then
+   `--write-prediction`, the dated amendment, her L = 16 word, `python scripts/make_t67_configs.py --held-out`.*
+   *T65's held-out control at L = 16 launched the same evening on her "if the untied control is still relevant run
+   it" (1 job, `cloud/queue/2026-10-16_t65_heldout.txt`; her prediction inferred as PARTIAL, ours FALLS BACK).*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.
@@ -837,9 +840,9 @@ first; the daughter-universe interpretation after. In order, each registered bef
    count of points) is claim 3's parked decision; H7 (a daughter distinguishable from a healed patch) needs a
    definition first.
 4. **The programme page and the papers** carry the handoff as hers (piece 11 and 12 rows; paper 12's new section;
-   series paper 15, a feed rather than a spark, as an outline). Owed by her: confirmation of Update 59's second
-   decision (the first, the black hole as the parent's own geometry curled, she confirmed the same evening); which
-   count piece 12 keeps (per turn or per generation); her feed prediction.
+   series paper 15, a feed rather than a spark, as an outline). Both of Update 59's decisions she confirmed the
+   same evening, and piece 12's count is the branching one (Update 59, confirmation). Owed by her: her own words for
+   T67's and T65's held-out predictions before they are read.
 
-Owed by the owner, unchanged from the morning: T65's L = 16 word and whether the untied control runs there; T66's
-repair choice and her N = 1000 word; the curling-energy design brief's answers (Update 57).
+Owed by the owner, unchanged from the morning: T66's repair choice and her N = 1000 word; the curling-energy design
+brief's answers (Update 57). T65's L = 16 control is launched (above); her own word for it replaces the inferred one.

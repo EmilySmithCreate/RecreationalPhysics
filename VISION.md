@@ -1663,6 +1663,20 @@ T1 to T8 are registrations here. Merging this update is her acceptance of the wo
   43) stays as a candidate beside the daughter picture. *Ours:* the per-turn measure of Update 23 needs the reset; a
   daughter that opens inside a parent that goes on is counted per generation, which is the branching case O101
   flagged. Which count she holds is hers (piece 12).
+  **Confirmed by the author, 2026-10-16, later the same evening ("correct"), with the count decided.** Her words,
+  put in order: each individual universe is reset only when its last black hole has dissolved; that is the end state
+  each is working toward; stuff keeps unfolding; every black hole births multiple new ones; that is what we can call
+  a larger infinity: the length of time just as long, but each universe producing a trillion more rather than just
+  one more; and that makes this more likely from the anthropic observer's perspective, which is a nice cohesion.
+  *What is decided:* piece 12's count is the branching one. A universe's turn still ends (her conjecture of 6
+  October, Update 44, now worded as its last black hole dissolving), but the next generation is not one reset of
+  the whole: it is every black hole's daughter, so the tree multiplies by a large factor each generation at the
+  same cold time per universe. *Ours:* this is the branching case O101 named, now chosen rather than avoided. With
+  the cold time held equal, the branching factor is what the selection acts on, which is Smolin's selection for the
+  most black holes with her observer requirement as the filter; the "larger infinity" is a faster-growing tree, not
+  a larger cardinality (the count of universes is countable either way), and that is what the anthropic weight
+  compares. The trade she named on 5 October (more black holes sooner cuts the cold time) is the constraint that
+  keeps the branching from running away, and it is the function piece 12 still has to write down.
 - **Standing positions, restated by her.** λ is a universal constant, the same in parent and daughter, not raised
   by infall (Update 23, extended across generations). What infall raises is g, the excitation; the chance of an
   opening rises with it and there is no single threshold. *Exact, from the toy's machinery:* in a sealed box g is

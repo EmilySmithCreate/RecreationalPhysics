@@ -1,0 +1,12 @@
+# T67 stage 1 (PREREGISTRATION T67, written 2026-10-16 after one sandbox look and before any registered run; rule 11's
+# fifth use on piece 5; VISION Updates 58 and 59; the owner's words "the rates may not be fixed but it's good to run
+# that way for starting"): does the owner's untied slab (4 x L x L, one direction curled) open from a feed? lambda
+# 1.25, sealed, energy fed at 1/16, 1/4, 1 and 4 units a sweep into store 0 of a shared bath (C = N and 4N) or into one
+# point's own store; L = 8 and 12; 8 replicas; up to 20,000 sweeps read every 50; the final graph saved. The held-out
+# size L = 16 runs after these are read. 6 jobs. Seeds 20266701 to 20266706.
+run_slab_feed t67_shared_cn_l8
+run_slab_feed t67_shared_c4n_l8
+run_slab_feed t67_spot_l8
+run_slab_feed t67_shared_cn_l12
+run_slab_feed t67_shared_c4n_l12
+run_slab_feed t67_spot_l12
