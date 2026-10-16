@@ -5755,7 +5755,7 @@ which is 24.8 at μ = 0.10 and 21.2 at 0.025 (every switch listed at 48 and 96 p
 for the two readings are the ones they quote; the word "cheapest" was wrong. No count, verdict or held-out
 number changes.
 
-## T65 (DRAFT, not launched). Does the owner's slab open into one flat space when given a push? The tied slab, sealed, with a spark in its stores, with and without a patch opened by hand (piece 5; the owner's picture of 15 October; VISION Updates 47 and 57; ASSUMPTIONS O106, O115, O118; drafted 2026-10-15, evening, revised 16 October after the sandbox look; her prediction given 16 October, before any run)
+## T65. Does the owner's slab open into one flat space when given a push? The tied slab, sealed, with a spark in its stores, with and without a patch opened by hand (piece 5; the owner's picture of 15 October; VISION Updates 47 and 57; ASSUMPTIONS O106, O115, O118; drafted 2026-10-15, evening, revised 16 October after the sandbox look; her prediction given 16 October, before any run; launched 16 October on her word "Launch in cloud")
 
 ### Why
 
@@ -5796,7 +5796,7 @@ conserved from the start) and with its new `"patch"` start (tests in `tests/test
 - **Sizes:** L = 8 and 12 (N = 256, 576); **held out L = 16 (N = 1,024)**, run after the smaller sizes are read and a
   number is written for it (rule 14).
 
-### Definitions, fixed now (`scripts/analyse_t65.py`, to be written and tested before any run)
+### Definitions, fixed now (`scripts/analyse_t65.py`, written and tested before any run, `tests/test_t65.py`)
 
 Per replica, from the final block: **open** = points at d = 3; **curled** = points at d ≤ 2; **damaged** = points at
 d > 3. OPENS if open ≥ 0.9 N and damaged ≤ 0.02 N; FALLS BACK if curled ≥ 0.9 N (the patch closed); DAMAGED if
@@ -5823,6 +5823,14 @@ with C = N and 4N alike (the stores never fill, since nothing spreads). At λ = 
 Arm B: PARTIAL, the patch neither bridged nor undone. If a cell OPENS at any spark, the slab is the three-direction X
 her picture needs and the room question (T9's) is next; if every cell is DAMAGED, the table's free damage is what
 stops the slab, and a table that charges damage, a new knob, is the next decision for the owner (Update 54's ask).
+
+### Launch
+
+Stage 1, 8 Batch jobs (`cloud/queue/2026-10-16_t65_stage1.txt`; configs from `scripts/make_t65_configs.py`, tested
+against this section in `tests/test_t65.py`), seeds 20266501 to 20266508, pushed on 16 October after a smoke run of
+one replica of each arm for 1,000 sweeps in the session scratchpad. The held-out size L = 16 is written by the same
+script with `--held-out` after a dated amendment names its numbers (rule 14). To read: `t65_*` into
+`cloud/fetch/request.txt`, accept, commit unread, then `python scripts/analyse_t65.py`.
 
 ### What this cannot show
 

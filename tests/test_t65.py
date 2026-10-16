@@ -42,3 +42,50 @@ def test_patch_absent_leaves_the_runner_as_it_was():
     adj, part, label = start_of({"dims": [4, 6, 6]})
     ref, _ = torus([4, 6, 6])
     assert (adj == ref).all() and label == "4 6 6"
+
+
+def _row(n, d3, dam, sweep=30000, tie="all at the last", lam=1.25, h0=3.0, h1=0.0, total=0.0, spark=16.0, rep=0, dims="4 8 8", c=256):
+    d2 = n - d3 - dam
+    return dict(N=str(n), dims=dims, C=str(c), spark=str(spark), replica=str(rep), lam=str(lam), tie_label=tie, sweep=str(sweep),
+                d0="0", d1="0", d2=str(d2), d3=str(d3), damaged_d=str(dam), h_tie_per_vertex=str(h1 if sweep else h0),
+                h_per_vertex=str(h1 if sweep else h0), total=str(total))
+
+
+def test_t65_replica_words_and_lambda_verdicts():
+    from analyse_t65 import replica_outcome, lambda_verdict, cells, k_of
+    assert replica_outcome(_row(256, 240, 2)) == "OPENS"
+    assert replica_outcome(_row(256, 240, 8)) == "PARTIAL"          # damaged above 2 % of N
+    assert replica_outcome(_row(256, 10, 0)) == "FALLS BACK"
+    assert replica_outcome(_row(256, 100, 40)) == "DAMAGED"
+    assert replica_outcome(_row(256, 100, 10)) == "PARTIAL"
+    assert lambda_verdict(["PARTIAL", "OPENS"]) == "OPENS IN ROOM"
+    assert lambda_verdict(["FALLS BACK", "FALLS BACK"]) == "FALLS BACK"
+    assert lambda_verdict(["PARTIAL", "DAMAGED"]) == "DAMAGED"
+    assert lambda_verdict(["PARTIAL", "MIXED"]) == "PARTIAL"
+    assert k_of({"dims": "4 8 8 patch 2"}) == 2 and k_of({"dims": "4 8 8"}) == 0
+    rows = []
+    for rep in range(8):
+        rows.append(_row(256, 0, 0, sweep=0, rep=rep))
+        rows.append(_row(256, 250, 1, sweep=30000, rep=rep, total=3.0 * 256 * 0.9))
+    c = cells(rows)
+    (maj, counts, rel, share, firsts), = c.values()
+    assert maj == "OPENS" and counts["OPENS"] == 8 and abs(rel - 3.0) < 1e-9 and abs(share - 0.9) < 1e-9 and firsts == [30000] * 8
+
+
+def test_t65_configs_match_the_registration():
+    from make_t65_configs import cells, config
+    stage1 = cells()
+    names = [c[0] for c in stage1]
+    assert len(stage1) == 8 and len(set(names)) == 8
+    for i, (name, start, lam, tied, sparks, label) in enumerate(stage1):
+        cfg = config(name, start, lam, tied, sparks, label, 1 + i)
+        assert cfg["capacities"] == ["N", "4*N"] and cfg["replicas"] == 8 and cfg["n_sweeps"] == 30000
+        assert ("ftable_per_a" in cfg) == tied
+        if "patch" in cfg:
+            assert cfg["patch"]["k"] == 2 and cfg["lambda"] == 1.25 and cfg["sparks"] == [16.0, 32.0]
+        elif not tied:
+            assert cfg["sparks"] == [128.0]
+        else:
+            assert cfg["sparks"] == [16.0, 32.0, 64.0, 128.0] and cfg["lambda"] in (1.20, 1.25)
+    held = cells(held_out=True)
+    assert len(held) == 4 and all(c[1].get("dims", [None, 16])[1] == 16 or c[1]["patch"]["L"] == 16 for c in held)

@@ -741,6 +741,13 @@ The replacements for pieces 5 and 11 are hers. In order:
 
 Owed by the owner: her replacements for pieces 5 and 11, or a table that charges damage (a new knob, S1); whether
 T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4's wording, decided) and 52.
+
+12. **T65, the slab given a push under the tie** (PREREGISTRATION T65; the owner's picture of 15 October and her
+    "Opens in room" of 16 October). Launched 16 October on her word, 8 Batch jobs (`cloud/queue/2026-10-16_t65_stage1.txt`).
+    Before it: a sandbox look showed that a patch opened by hand is a dip of its own and is not a push (`sandbox/LOG.md`,
+    16 October), so the registered run supplies a spark. To read: fetch `t65_*`, accept, commit unread,
+    `python scripts/analyse_t65.py`; then the held-out numbers for L = 16 as a dated amendment and
+    `python scripts/make_t65_configs.py --held-out`.
 *(Given 12 October: the reviewer's rewrite of paper 1 adopted; her predictions for T62 and T63.)*
 
 ## 13 October: readers for the measurement side, and what would serve them  ☐

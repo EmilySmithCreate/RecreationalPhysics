@@ -250,3 +250,8 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   narrows: a hand-opened patch with no energy is not a push, and T65 as drafted cannot run that way; an opening of
   the slab needs energy in the stores to cross the single-move walls between patches (the slab's own is 4 at 1.25
   under the tie, O106), which is a spark run, not a patch run. Not promoted; the T65 draft is revised to a spark.
+- 2026-10-16, 00:58 UTC. READ: the relic search at lambda = 1.25 (prediction above, written before). O58's one- and
+  two-switch search in flat 6 x 6 x 6 listed two candidate kinds, (dS, dX) = (-4, 4) at 84 units and (-7, 4) at 132,
+  the same two O58 flagged at 1.02; rebuilt and tested on the full move list (`scripts/exact_relic_confirm_d.py 1.25`;
+  `sandbox/out/relic_confirm_lam125.txt`) every arrangement of both kinds has a move downhill (by 84, 68 or 48):
+  NO DIP at 1.25, as at 1.02. Ours held. Bookkeeping only: the owner set the flat-space dip aside on 16 October.
