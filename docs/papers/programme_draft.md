@@ -297,6 +297,7 @@ The allotropes (old piece 12) are parked in `docs/parked/allotropes.md` (VISION 
 - 24 Sep 2026, afternoon: Brought into line with paper 1.
 
 **Piece 3.**
+- 16 Oct 2026: Decided by the author: the tie "all at the last" is withdrawn (VISION Update 58). The rule is curvature plus a curling cost, untied; X is the slab; its one remaining opening releases a per point. Tied verdicts stand as scored; T65 is read as registered with its untied control as the cell that speaks to the hypothesis.
 - 5 Oct 2026, 15:00 ET: Exploratory (O102): Bianconi's discrete entropy action evaluated on flat, curled and leftover wirings; one of her two forms has this ladder's order, the other the reverse; one question for her.
 - 26 Sep 2026, 11:04 ET: The cost of curling vanishes in smooth space because nothing is curled; the drive to curve (counting) is present everywhere; mass pays for curling locally.
 - 26 Sep 2026, 04:10 ET: Exact (O71): in this rule an activation wall is returned on the far side, not spent, and every direction costs the same to curl, so the three releases are equal at every λ. No λ gives the author's ledger of 26 September; only strain held in partly open states (the tie of piece 6) can make the shares unequal.

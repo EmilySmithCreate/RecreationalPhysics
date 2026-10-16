@@ -5832,6 +5832,18 @@ one replica of each arm for 1,000 sweeps in the session scratchpad. The held-out
 script with `--held-out` after a dated amendment names its numbers (rule 14). To read: `t65_*` into
 `cloud/fetch/request.txt`, accept, commit unread, then `python scripts/analyse_t65.py`.
 
+### Amendment, 16 October 2026, after launch and before any result was fetched: the tie is withdrawn
+
+The owner withdrew the tie "all at the last" on 16 October (VISION Update 58) after the eight jobs were submitted and
+before anything was fetched or read. Nothing above changes: the arms, the seeds, the definitions, the verdict rules,
+her prediction and ours are read as written. What this amendment records is which cell speaks to the hypothesis as it
+now stands: the untied control (`t65_control_lam125_l{8,12}`, spark 128). Arms A and B are read as registered and
+recorded as the tied slab's answer to a push. Her prediction for the control is taken to be the same word, "Opens in
+room", marked inferred until she confirms or replaces it; ours for the control, written now before any reading: no
+cell OPENS, since the untied single move out of the slab costs 36 at λ = 1.25 and the patch that grows is about 7.5
+columns (T54), far above one spark of 128 spread over C stores; PARTIAL or DAMAGED. If the held-out stage runs, it runs
+untied unless a new table is decided first.
+
 ### What this cannot show
 
 How the patch comes to be: it is opened by hand, which is the push the record says a single move cannot supply; a

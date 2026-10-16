@@ -106,3 +106,5 @@ in the other.
 
 Each is an afternoon of exact listing. A registered run on the fold waits for the design brief of curling
 energy (Update 57) and for her answers to the ten questions of 15 October.
+
+*16 October, later: the author withdrew the tie (VISION Update 58). Rows that read "under her tie" above are kept as written; the rule is now untied, so the fold's first direction holds one direction's worth, a per point, and the slab's push is the untied one (36 by single move, about 7.5 columns as a patch at λ = 1.25).*

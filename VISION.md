@@ -1594,6 +1594,44 @@ given in the same message, is an idea and is in `sandbox/NOTEBOOK.md` (15 Octobe
 - *Ours:* the knots' prediction (whether the stubborn knots are still stuck at a curling cost of zero, piece 7) is
   still owed; her message broke off before it.
 
+Update 58 (2026-10-16): **DECISION (the author's, "I think it's time to remove the tie then"): the direction tie
+"all at the last" is withdrawn; the hypothesis's three-direction runs are untied from here.** Why this page changes:
+the tie was a knob decided under S1 (Update 47) and its withdrawal is a decision of the same kind. Her reasoning, from
+the conversation of this morning put in order: with the slab as X two directions are already open, so only one
+opening remains at the birth and there is no "together" for the tie to enforce; the tie as written charges a damaged
+point nothing and so rewards breaking (O114, O115); and the untied record is the larger one. The toy's rule returns
+to curvature plus a curling cost, 4(λ − 1) per curled link (Update 23), with every direction costing the same and
+carrying its own wall.
+
+- **What stands.** X is the slab, two directions open and one curled (Update 47's shape statement, now without its
+  tie). Untied it is stuck for now for every curling cost between 1 and 2 (O41) and it is the state the toy lands on
+  from both ends (T48, T53). Its one remaining opening releases a = 4(λ − 1) per point, the two-direction number,
+  not 3a. The barrier to that opening is a patch of several columns (T54 untied: about 7.5 columns and 225 units at
+  λ = 1.25), out of reach of warmth, so the slab opens only from a push, which is her picture. Everything in two
+  directions, the scrap, dark energy as the vacuum of the end state, and the relic count set at the opening never
+  carried the tie.
+- **What is lost, said plainly.** The whole burp from one fold ("as much energy stored in that one fold as in
+  three", her words of 15 October): untied, one fold holds one direction's worth. The low tied barrier (1.5
+  columns, 27 units at λ = 1.25). And "the three go together" as an energy (Update 22) is no longer in the rule; with
+  the slab as X it has nothing to act on.
+- **Verdicts.** Every tied verdict stands as scored (T44 to T46 with their ties; T54 tied; T56; T57 tied). T65,
+  launched this morning with two tied arms and one untied control, is read as registered; its registration carries a
+  dated amendment saying the tie was withdrawn between launch and reading, so that its untied control is the cell
+  that speaks to the hypothesis as it now stands.
+- **Rule 11, on piece 5, fourth use.** Previous claim (hers, Update 47): under "all at the last" the slab opens into
+  one flat space. Failed because: the barrier is a patch, not a move, and the table rewards breaking (O115); and
+  with the slab as X the tie has no second direction to pull along. Replacement (hers, this update): X is the untied
+  slab; one direction opens from a push and releases a per point. New falsification test: T65's untied control, then
+  an untied spark scan of the slab at its registered sizes with her prediction, and the held-out size.
+- **A consequence she has not yet ruled on.** Update 57's "curling energy is a thing" was adopted with the reason
+  "that was based off the idea that different dimensions curl separately, but that is not the case with the tie".
+  Untied, the directions do curl separately again (each has its own wall; O55). Whether curling energy stays as an
+  ingredient, and whether Update 32's "one kind of energy pays every push" returns with it, is hers to say; nothing is
+  built for it meanwhile.
+- *Ours:* the tie did one thing well that the record should keep: it showed that a per-point cost on half-open states
+  lowers the slab's barrier (O106, O118). If a later form charges damage as much as curling, that is a new knob and
+  needs its own dated decision here.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

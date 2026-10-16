@@ -748,6 +748,9 @@ T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4
     16 October), so the registered run supplies a spark. To read: fetch `t65_*`, accept, commit unread,
     `python scripts/analyse_t65.py`; then the held-out numbers for L = 16 as a dated amendment and
     `python scripts/make_t65_configs.py --held-out`.
+    *16 October, later: the owner withdrew the tie (VISION Update 58). T65 is read as registered; its untied control
+    is the cell that speaks to the hypothesis as it now stands (PREREGISTRATION T65, amendment of 16 October). Any
+    new three-direction registration is untied unless a new table is decided first.*
 *(Given 12 October: the reviewer's rewrite of paper 1 adopted; her predictions for T62 and T63.)*
 
 ## 13 October: readers for the measurement side, and what would serve them  ☐
