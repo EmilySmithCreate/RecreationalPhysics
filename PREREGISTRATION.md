@@ -5311,6 +5311,40 @@ only when the tube left is recorded. A clean opening, unless the CLEAN AND WIDE 
 these are runs of fixed length. sees3 is a count of points within three steps and certifies no geometry. Named
 points. At μ above zero this is our family, never combinatorial quantum gravity.
 
+### Reading of T62, the held-out size (N = 384), 2026-10-16, 00:02 UTC by the clock (`python scripts/analyse_t62.py results`; read after the ten cells were accepted unread and committed, 24e60b69)
+
+**AS PREDICTED at every price. At N = 384 alone: STAYS SIX AROUND at μ = 0 and 0.10, WIDENS at μ = 0.20, 0.25 and
+0.30, the same words as at N = 96 and 192. The owner's prediction (WIDENS at every price above zero) holds at three
+prices of four and fails at 0.10, as at stage 1. Ours holds.**
+
+Gates pass in all ten cells. The control holds (μ = 0: 24 of 24 end exactly flat and six around at both couplings).
+The shares of WIDE and TUBE replicas sit inside the ranges written in `configs/t62_heldout_prediction.json` on
+12 October in every cell. Replicas ending TUBE, PATCHWORK, WIDE, of 24:
+
+| μ | g = 1.5 | g = 2.0 |
+|---|---|---|
+| 0 | 24, 0, 0 | 24, 0, 0 |
+| 0.10 | 24, 0, 0 | 19, 1, 4 |
+| 0.20 | 21, 0, 3 | 0, 0, 24 |
+| 0.25 | 0, 2, 22 | 0, 0, 24 |
+| 0.30 | 0, 2, 22 | 0, 0, 24 |
+
+- **The size claim holds.** Rule 14's test was whether the words and the shares written from the two smaller sizes
+  would hold at a size four times the smallest: they do, at every price. The price on loops of six makes the tube
+  six around give way and come out wider, and that does not fade with size over the range run.
+- **The wide product is flawed, as at stage 1.** Among the 236 WIDE and PATCHWORK end states at N = 384 none is
+  exactly flat and none reads clean and wide from the wiring; the median energy left is 168 to 224 units (0.4 to 0.6
+  per point) and the fewest squares per point 0.74 to 0.83. The one clean wide end state of stage 1 (one of 480) has
+  no counterpart here (none of 240). The verdict word is unchanged by this: WIDENS was defined on the width, with the
+  energy left reported and not scored.
+- **At μ = 0.10 the warmer coupling moves a minority** (4 WIDE and 1 PATCHWORK of 24 at g = 2.0; 3 at N = 192; 5 and
+  3 at N = 96), inside the predicted range; the price there is below the one that makes the tube give way.
+
+Rule 11 for the owner's one miss, as at stage 1: the mechanism is not touched (the tube gives way at every price
+above 0.10); the cause is the size of the price against the coupling; the exact listing of O124 already prices
+the walls, and no further test is needed to tell that apart. Not a milestone; a red-team pass (rule 12) is owed
+before paper 1 quotes any of T62, T63 or T64.
+
 ## T63. With a price on loops of six, what does the curled tube itself open into? (piece 1; VISION Update 56; ASSUMPTIONS O124; written 2026-10-12, after T62 was queued and before any run of T63)
 
 ### Why

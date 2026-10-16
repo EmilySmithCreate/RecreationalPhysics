@@ -3728,6 +3728,23 @@ record is not a permanent fact (off-diagonal D = 1/4 once the record is undone).
     and too narrow for any flat or 3D placement to be read off the wiring. The editions therefore draw the wiring
     (which links carry a third square) and say that the placement is a sketch.
 
+- **O127 T62's held-out size, read: with a price on loops of six the tube six around widens at N = 384 as the
+  numbers written from N = 96 and 192 said it would, AS PREDICTED at every price; the wide product is flawed
+  (16 October 2026, 00:02 UTC by the clock). Measured, pre-registered with a held-out size.** (PREREGISTRATION
+  T62, "Reading of T62, the held-out size", which is the full account; `scripts/analyse_t62.py`;
+  `results/t62_*_n384`; ten Batch jobs of 24 replicas, accepted unread and committed first, 24e60b69. Four links;
+  at μ > 0 our family, never the published model.)
+  - **Measured.** STAYS SIX AROUND at μ = 0 and 0.10, WIDENS at 0.20, 0.25 and 0.30, at N = 384 as at 96 and 192;
+    every cell's WIDE and TUBE shares inside the ranges written on 12 October before the size ran. The control holds.
+    The owner's prediction (WIDENS at every price above zero) holds at three prices of four, fails at 0.10; ours
+    holds.
+  - **What it changes.** The first size claim scored under rule 14 at its held-out size holds. The lead of O116 (what
+    widens a flat torus) has one answer that survives a fourfold change of size: a price on loops of six, μ of 0.20
+    or more at these couplings. It does not make a clean space: no end state of 240 at N = 384 is exactly flat or
+    clean and wide; the products hold 0.4 to 0.6 units per point in flaws (T64's "flawed nearly everywhere", again).
+    What the flaws are, and whether a slower cooling removes them, is not measured. A red-team pass (rule 12) is owed
+    before paper 1 quotes any of the six-loop runs.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
