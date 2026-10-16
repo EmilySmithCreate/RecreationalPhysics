@@ -457,3 +457,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   exact fits grow denser with m. Two cautions: a flat torus need not be a rectangular box (twisted gluings exist,
   as the tube six around is at N = 64), so this is a sufficient condition, not the toy's rule; and the relic count
   is measured, about one per seed (T10, T51), not chosen to fill a remainder.
+- 2026-10-16, the owner, on the flat boxes: "Oh except then at large scales l and w and h are not interchangeable?
+  It's a doughnut! 6x8x12 and 6x8x22 are nice. First curl will be the 6 dropping to 4. That makes the curl choose a
+  direction to curl obvious." *Ours:* at large scale the sides are indeed told apart by their lengths, which the
+  energy cannot see (every curled direction costs the same per point, O41, O106) and the moves cannot see either
+  (they are local). Whether the dynamics picks the shortest side was tried at once in two directions (LOG, same day):
+  it does not; the product's rings are made of links from both original directions about equally, diagonal to the
+  axes, and the long side's links are rewired slightly more. In three directions, untested; the slab 4 x 12 x 12 of
+  T65 has two equal open sides, so T65 cannot ask it, and a 6 x 8 x 12 box under the fold would. Her sentence stands
+  as her prediction for that fold run when there is one.

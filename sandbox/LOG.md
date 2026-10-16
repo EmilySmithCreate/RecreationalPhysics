@@ -255,3 +255,19 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   the same two O58 flagged at 1.02; rebuilt and tested on the full move list (`scripts/exact_relic_confirm_d.py 1.25`;
   `sandbox/out/relic_confirm_lam125.txt`) every arrangement of both kinds has a move downhill (by 84, 68 or 48):
   NO DIP at 1.25, as at 1.02. Ours held. Bookkeeping only: the owner set the flat-space dip aside on 16 October.
+- 2026-10-16. Does an unequal flat torus curl its shortest side first (the owner: "first curl will be the 6 dropping
+  to 4")? (`sandbox/which_side_curls.py`, `which_side_curls2.py`, `which_side_curls3.py`; the two-direction rehearsal
+  at lambda = 0.5, where the sheet gives way to a tube 2 per point lower; flat 6 x 16, 8 x 12, 6 x 24 tori of 96 and
+  144 points, each also with its axes swapped as a control for slot bias; `sandbox/out/which_side_curls*.txt`.)
+  Pass 1 at g = 3.0 was too hot: the sheets went past the tube to knots and most links were rewired on both axes, so
+  no direction could be named. Pass 2 at g = 2.5, stopped at the first tube: the links along the LONG side (16) were
+  replaced more than those along the short side in 12 of 12 for 6 x 16 and 16 x 6 (survival 0.36 to 0.53 long against
+  0.17 to 0.58 short, with the swap control agreeing), the opposite of the owner's expectation; at g = 2.0 nothing
+  moved in 40,000 sweeps and 8 x 12 stayed flat at both. Pass 3, the product's own rings (the links on three squares)
+  traced to their origin in the clean tubes (d = 1 at 90 % of points, none at d = 0): about equal numbers come from
+  the original x and y links, with a third to a half new (6 x 16: 32/29/35, 32/40/24, 37/37/22, 33/29/34, 25/26/45;
+  6 x 24: 50/51/43; 24 x 6: 49/47/40), so the new rings run across both original directions, not along the short one.
+  Reading: at this curling cost and size the curl does not choose the shortest side; the energy and the moves are
+  local and see no length, and the rings the chain builds are diagonal to the original axes, as the seam-shifted
+  tube of O116 is. Her prediction, read as "the short side's links become the rings", does not hold here. One lambda,
+  one coupling, two directions, small sizes. Not promoted.
