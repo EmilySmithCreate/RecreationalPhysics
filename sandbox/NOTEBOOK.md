@@ -410,3 +410,24 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   macrostate every branch reaches, not of the branches. In the toy: no expansion, no time, the floor is exactly zero
   (Q18); its one counterpart is that thousands of runs end in the same arrangement (9,208 of 9,215, O116), the toy's
   version of an attractor. Not a knob, not a run; her position, recorded.
+- 2026-10-16, the owner, on the beginning: "The rate of change is increasing at an increasing rate. So it used to be
+  growing more slowly. That's one of many things we can say about the beginning: small, space opens a certain size
+  probably 64 dots. A singularity with a 3d 6x6x6 shell that light cannot escape from. Would it need to have a gap
+  that needs to merge points for 3d to have enough to open into 3d so at least 280 n, probably symmetrically. So we
+  have the curling energy to uncurl the knot, with all the energy from all the mass collected surrounding it.
+  Arithmetic. I want a cube of an even number to add to 64 that also has a whole, even square root. Unless there are
+  defined relics, then subtract out their points. Trying to figure out lowest n that works." *Ours, exact
+  arithmetic:* N = 64 + m³ with m even and N an even square: the smallest is m = 8, N = 576 = 24². With relic points
+  taken out (r = 2, 8, 14, 20, 28, 36 for the scraps and their sums) the smaller hits are 64 + 8 − 8 = 64 = 8²,
+  64 + 8 − 36 = 36 = 6², 64 + 64 − 28 = 100 = 10². 576 is also the slab 4 × 12 × 12 (T65's L = 12 cells) and the
+  rectangular flat tori 6 × 8 × 12 and 6 × 6 × 16, so the one size on her list that the toy already runs is the
+  one it is running. *What the toy itself constrains (exact):* a fully curled piece is at most 64 points (O85); the
+  count of points is fixed, so a 64-point knot alone can never be flat three-direction space (every side must be
+  even and at least 6 to be flat, so the smallest rectangular flat torus is 6 × 6 × 6 = 216; twisted gluings exist and
+  the smallest flat three-direction arrangement is not listed); "merging points" is the one thing never seen (O85:
+  separate cubes opened and never joined). Her even-square condition is not a constraint of the toy; its meaning
+  is hers to say (a square cross-section, as in the slab 4 × L × L, is the nearest the toy has). Rule 13: a size
+  that matches is not a result. *General knowledge, to verify:* the expansion slowed for about nine billion years
+  and has sped up since dark energy overtook matter about five billion years ago; under a constant vacuum energy the
+  size grows ever faster while the rate per unit size settles to a constant, so "increasing at an increasing rate"
+  is right for the size and not for the rate.
