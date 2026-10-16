@@ -46,3 +46,6 @@ t64_*
 # 2026-10-12, 21:00 UTC by the clock: asking for T64's five N = 192 cells. Not read.
 # 2026-10-12, 21:10 UTC by the clock: the request above was pushed with a skip-ci tag, which stops this workflow too; asking again.
 # 2026-10-12, evening: T64's held-out size (5 jobs) and T62's (10 jobs, still running). Neither has been read.
+# 2026-10-16, 11:50 UTC by the clock: T65 stage 1 (8 jobs, submitted 01:10 UTC) and T66 stage 1 (4 jobs, submitted 08:40 UTC). Neither has been read.
+t65_*
+t66_*
