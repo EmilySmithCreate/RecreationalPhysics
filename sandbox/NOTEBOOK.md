@@ -525,3 +525,4 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   slab product the two-point stubs of 14 units stuck behind 28 (the rod look, 16 October). The one lasting damaged form
   is the swapped pair of O82, which flickers. Nothing moves on its own. To read when T65's graphs arrive: sort the
   slab's leftover pieces by wiring into curled stubs, knots and damaged scars.
+- 2026-10-16, the owner, on T65: "So you want me to predict how many of what in t65? I think the proportions of pieces will be similar to 2d?" Recorded in T65 as her prediction on the leftover pieces (reported, not scored); the control's word is still hers to give.

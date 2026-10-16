@@ -5846,6 +5846,13 @@ cell OPENS, since the untied single move out of the slab costs 36 at λ = 1.25 a
 columns (T54), far above one spark of 128 spread over C stores; PARTIAL or DAMAGED. If the held-out stage runs, it runs
 untied unless a new table is decided first.
 
+**The owner's prediction on the leftover pieces, 16 October, before anything was fetched (reported, not scored):**
+"I think the proportions of pieces will be similar to 2d?" Read as: the kinds of stuck leftover piece in the slab's
+product, and their mix, resemble the two-direction record (T51, T55: knots of two kinds and double columns lead,
+columns rare after cooling). Ours: the slab's stuck pieces are mostly two-point stubs of 14 units, as the sandbox
+rod look found (LOG, 16 October), a kind the two-direction record does not have. Her word for the control itself is
+still owed.
+
 ### What this cannot show
 
 How the patch comes to be: it is opened by hand, which is the push the record says a single move cannot supply; a
