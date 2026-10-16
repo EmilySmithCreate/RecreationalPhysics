@@ -549,3 +549,31 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   hold at once. The gap the record shows: for the reset to make one space, the many insides must be one connected
   X before the burp; from a gas of separate curled cubes no opening ever joined (O85), and seeds join only inside
   one connected X (T53). That is the foam question of 27 September, now load-bearing for the loop.
+- 2026-10-16, evening, the owner, a handoff document of hers ("Updated relational cosmology hypothesis and research
+  handoff", drafted in another conversation of hers and passed on; kept as received in
+  `docs/theory/relational_cosmology_handoff_2026-10-16.md`; read against the record in
+  `docs/theory/relational_cosmology_review_2026-10-16.md`; its decisions VISION Update 59). Her words from it, as
+  that assistant put them in order: "Fundamental reality consists of relationships, not spatial points." The black
+  hole's inside is the slab, L × L × 4, and "the two extended (L) directions are those of the parent universe itself.
+  They are not severed at the event horizon. Instead, existing spatial relationships curl inward in a whirlpool-like
+  configuration. This is not a proposal involving a little, separately contained slab inside a black hole." "Lambda is
+  a universal constant, identical in parent and daughter universes. It is not increased by incoming matter or energy."
+  What incoming energy raises is g, "the effective excitation parameter", and "the transition becomes increasingly
+  likely as energy accumulates. It is not necessarily triggered at a single deterministic energy value." "The amount of
+  curled space is not necessarily a fundamental quantity." "Points are not fundamentally real; relationships are.
+  Consequently, a daughter universe is not required to be smaller than its parent." Both ways of paying a front may
+  operate: the reservoir and the release; her concern "is that release might occur too rapidly and disrupt the
+  emerging geometry." "The black hole might remain present in the parent universe while the daughter has its own
+  emergent spacetime." "The earlier whole-universe-reset model may still be investigated, but it is no longer a
+  requirement for daughter-universe formation." "The energy available within any individual emergent universe may be
+  finite, while the cumulative energy accessible through repeated relational transitions may be unbounded." Research
+  priority, hers: "Establish the energy-coupled nucleation and stable propagation mechanism before attempting to
+  demonstrate the full cosmological interpretation." *Ours, the short form of the review:* the document calls the
+  hypothesis Omega (the record writes X) and numbers its tests T1 to T8 (the record calls them H1 to H8). Its
+  waiting-time law is the four-link tube's and does not govern the slab, whose growing patch is about 225 units of
+  completed-patch energy (T54, O118) and which no g has opened cleanly in a bath, from a spark or under a feed. Its
+  "melts into disorder" is withdrawn by O123. In the sealed toy g is already read off the stores (Q12, O108), so a
+  feed sets g and H2 needs no derivation. Her new reading of the black hole (the parent's own geometry curling, not a
+  shell round a knot) revises her knot-and-shell picture of this morning and lands on piece 11, where nothing has
+  folded. "The reset is no longer required" sets the daughter picture beside the loop; the loop's per-turn measure
+  needs the reset. The toy cannot hold a varying count of points; that is claim 3's parked decision.

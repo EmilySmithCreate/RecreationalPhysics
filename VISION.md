@@ -1638,6 +1638,47 @@ carrying its own wall.
   lowers the slab's barrier (O106, O118). If a later form charges damage as much as curling, that is a new knob and
   needs its own dated decision here.
 
+Update 59 (2026-10-16, evening): **the author's handoff of 16 October, recorded: the black hole is the parent's
+own geometry re-curled, not a slab contained inside it; what infall raises is g, not λ; nucleation is a rising
+chance, not a threshold; and the whole-universe reset is no longer required, so a daughter space may form while the
+black hole remains in the parent.** Why this page changes: two of these are decisions about the hypothesis's shape,
+and S1 and rule 9 require that what is decided be written here and what is only an idea stay in the notebook. The
+document is hers, drafted with another assistant and passed on; it is kept as received in
+`docs/theory/relational_cosmology_handoff_2026-10-16.md`, her words from it are in `sandbox/NOTEBOOK.md`, and it is
+read against the record in `docs/theory/relational_cosmology_review_2026-10-16.md` (short form: ASSUMPTIONS O131).
+It calls the hypothesis "Omega"; this page writes X. Its research items T1 to T8 are H1 to H8 in the record, since
+T1 to T8 are registrations here. Merging this update is her acceptance of the wording.
+
+- **DECISION: the black hole's inside is the parent's own geometry curled.** Her words: the two extended directions
+  of the slab "are those of the parent universe itself. They are not severed at the event horizon. Instead, existing
+  spatial relationships curl inward in a whirlpool-like configuration. This is not a proposal involving a little,
+  separately contained slab inside a black hole." This revises the knot-and-shell picture of the same morning
+  (notebook: a 64-point knot with a 4 × L × L shell inside the horizon), which stays in the notebook as an idea.
+  *Ours:* in the toy this is the fold of piece 11, where nothing has yet curled from energy alone (T21, T26, T27,
+  T34, T42, T57); the reading changes what the fold is of, not what it waits on (a carrier for a pull, piece 8).
+- **DECISION: the reset is no longer required.** Her words: "The black hole might remain present in the parent
+  universe while the daughter has its own emergent spacetime. ... The earlier whole-universe-reset model may still be
+  investigated, but it is no longer a requirement for daughter-universe formation." The loop (Updates 23, 26, 33,
+  43) stays as a candidate beside the daughter picture. *Ours:* the per-turn measure of Update 23 needs the reset; a
+  daughter that opens inside a parent that goes on is counted per generation, which is the branching case O101
+  flagged. Which count she holds is hers (piece 12).
+- **Standing positions, restated by her.** λ is a universal constant, the same in parent and daughter, not raised
+  by infall (Update 23, extended across generations). What infall raises is g, the excitation; the chance of an
+  opening rises with it and there is no single threshold. *Exact, from the toy's machinery:* in a sealed box g is
+  read off the stores (Q12; O108), so a feed that raises the stores' energy raises g by construction; H2 of her list
+  needs no derivation. Points are not fundamental, so a daughter need not be smaller than its parent: her answer
+  to her own question of the morning (how the parent holds more than 640 points). *Ours:* the toy's count is fixed
+  and a varying count is claim 3's parked decision; the toy cannot represent this and does not contradict it.
+- **Her research priority, adopted as the order of work:** "Establish the energy-coupled nucleation and stable
+  propagation mechanism before attempting to demonstrate the full cosmological interpretation." That is the
+  registered feed run already named by rule 11's fifth use on piece 5 (PREREGISTRATION T65), with the three
+  outcomes of her H3 (first escape, a front that persists, completion) recorded separately. H5 to H7 wait on it.
+- **Two cautions carried from the review.** Her waiting-time law is the four-link tube's (paper 1), measured to
+  hold with nothing fitted there; it does not govern the slab, whose growing patch is a completed-patch energy of
+  about 225 at λ = 1.25 (T54, O118) and which no g has opened cleanly in a bath, from a spark or under a feed (T53,
+  T56, T65, the feed look). And "melts into disorder" is withdrawn by O123; with too little room the product is
+  damaged, not melted.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

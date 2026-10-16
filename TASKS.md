@@ -816,3 +816,29 @@ status softened to a candidate. Open for the owner: whether the T64 rerun and it
 the Stage E numbers stay on the programme page while its config is exploratory (tabled); item (7) above; the cloud
 meta files' `git_commit: unknown`, a container issue, not fixed here.*
 
+
+## 16 October: the author's relational cosmology handoff, and what follows  ☐
+
+**Added 2026-10-16, evening** (VISION Update 59; ASSUMPTIONS O131; `docs/theory/relational_cosmology_handoff_2026-10-16.md`
+and its review). Her document's eight investigations are H1 to H8 in the record (its T1 to T8 collide with the
+registrations). Her priority, adopted as the order: the energy-coupled nucleation and stable propagation mechanism
+first; the daughter-universe interpretation after. In order, each registered before it runs:
+
+1. **The registered feed run on the untied slab** (H1 to H4; rule 11's fifth use, PREREGISTRATION T65). Rates fixed
+   in advance, into one shared store and into one point's store, two capacities C, two sizes and a held-out size;
+   three sweeps recorded per replica (first escape, a region past half, completion at nine tenths open) and the
+   damage at each; g written from the mean store energy (Q12, O108) in the registration, so H2 is one line. Scored
+   by an open region past half the slab before a tenth of the points are broken. **Her prediction is owed before it
+   runs**; the sandbox look says it opens from many spots and breaks first.
+2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
+   first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
+   before it is used for anything.
+3. **H5 to H7 wait.** H5 (moves for intermediate curls) is a new knob and needs her dated decision; H6 (a varying
+   count of points) is claim 3's parked decision; H7 (a daughter distinguishable from a healed patch) needs a
+   definition first.
+4. **The programme page and the papers** carry the handoff as hers (piece 11 and 12 rows; paper 12's new section;
+   series paper 15, a feed rather than a spark, as an outline). Owed by her: confirmation of Update 59's two
+   decisions; which count piece 12 keeps (per turn or per generation); her feed prediction.
+
+Owed by the owner, unchanged from the morning: T65's L = 16 word and whether the untied control runs there; T66's
+repair choice and her N = 1000 word; the curling-energy design brief's answers (Update 57).

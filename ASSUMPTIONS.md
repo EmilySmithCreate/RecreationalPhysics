@@ -3798,3 +3798,28 @@ author and should be disclosed as such in any submission. Physics estimates mark
     before a third is open.
   - **The size claim** waits on the held-out size, the untied control at L = 16, with the numbers written (FALLS
     BACK in at least 7 of 8 at each bath); her prediction for it is owed, and whether it runs is hers.
+
+- **O131 The author's handoff of 16 October ("Updated relational cosmology hypothesis and research handoff"),
+  checked against the record: what it gets right, what it gets wrong, and what of its eight investigations is
+  already run (16 October 2026, 20:23 UTC by the clock). OURS, a review; its decisions are VISION Update 59.**
+  (`docs/theory/relational_cosmology_handoff_2026-10-16.md`, her document as received;
+  `docs/theory/relational_cosmology_review_2026-10-16.md`, the full reading, which is this entry's one home for
+  detail; her words in `sandbox/NOTEBOOK.md`.)
+  - **Right, and already on the record:** the relational substrate (claims 1, 3; Update 12); the slab as X with a
+    curled side of 4 (Updates 47, 58); λ a constant, ε = 4(λ − 1) (Q1, Update 23); the two-channel waiting-time law
+    of paper 1, measured with nothing fitted (T22, T59); the sealed box with the spark of 12 at every size (Q12);
+    room as a knob (T9, T18); first escape, front and completion as distinct outcomes (two directions: a spark of 12
+    always converts; three: T65 falls back); O85 kept as the open limit on pieces joining.
+  - **Wrong or to reword:** "Omega" (the record writes X); "melts into disorder" (withdrawn, O123: damaged, not
+    melted); the tube's waiting-time law applied to the slab, whose growing patch is about 225 units of
+    completed-patch energy at λ = 1.25 (T54; O118) and which no g has opened cleanly in a bath (T56 control), from a
+    spark (T65) or under a feed (the sandbox look); "g must be connected to the reservoir energy" (in the sealed toy
+    g is read off the stores, Q12 and O108, so a feed sets it); the item numbers T1 to T8, which are registrations
+    here (called H1 to H8 in the record).
+  - **Already run of H1 to H8:** H1 (fixed λ, g rising) three ways on the slab; H2 defined by the machinery; H3's
+    three outcomes are the analyser's words; H4's knobs exist (C, `by_vertex`, the feed rate). Not run: H5 (a move
+    set for intermediate curls would be a new knob), H6 (needs a varying count, claim 3's parked decision), H7
+    (nothing in the toy distinguishes a daughter from a healed patch). H8 is the rule 11 ledger.
+  - **What it changes:** her reading of the black hole (the parent's geometry curled, not a shell round a knot)
+    lands on piece 11; "the reset is no longer required" sets a per-generation picture beside the loop's per-turn
+    one (piece 12). Next: the registered feed run named by rule 11's fifth use (T65), with her prediction.
