@@ -440,3 +440,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   produces and their frequencies (O116, O107), catalogued by the (D, λ) map. Whether she means the existing Everett
   line or a third theory beyond it is hers to say; a third would be a new model under Update 28 and needs a dated
   decision and a brief.
+- 2026-10-16, the owner, correcting the arithmetic above: "I mean is it also an even cube not even square, why using
+  square?" *Ours, exact:* 64 + m³ = k³ with m, k even has no solution (a sum of two cubes is never a cube; Euler's
+  case of Fermat's last theorem, general knowledge). With relic points removed, 64 + m³ − r = k³ with r < 64 has only
+  m = 2, k = 4, r = 8: the knot itself. If the whole space is to be a flat even cube (216, 512, 1,000), the remainder
+  after the knot (152, 448, 936) is never a cube. Neither condition is one the toy imposes; what the condition stands
+  for in her picture is hers to say.
