@@ -271,3 +271,20 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   local and see no length, and the rings the chain builds are diagonal to the original axes, as the seam-shifted
   tube of O116 is. Her prediction, read as "the short side's links become the rings", does not hold here. One lambda,
   one coupling, two directions, small sizes. Not promoted.
+- 2026-10-16. **Does three-direction space heal damage in fewer sweeps than two-direction space untied?** (The owner's
+  prediction, notebook, same day; `sandbox/heal_time.py` → `sandbox/out/heal_time.txt`.) N = 216 both (12 × 18 against
+  6 × 6 × 6), λ = 1.25, E = 192, 384, 768 packed into one store of 4N empty stores, sealed, 4,000 sweeps, 8 replicas,
+  damaged = points with d above flat. **Yes.** The sheet never returned to the scar level (≤ 2 damaged) at any energy
+  (0 of 24; end medians 26, 37, 54 damaged); the cube did in 8, 6, 5 of 8 at the three energies, median 1,250, 1,629,
+  2,462 sweeps after the peak (end medians 12, 17, 20, the warm stores re-breaking a little). Matched by breaks bought
+  (2D at 192 against 3D at 384) the same. The tie "all at the last" made no difference at all: tied and untied 3D
+  cells are identical draw for draw, since a damaged point pays no tie and healing never passes a half-curled state.
+  Reason, ours: at one store temperature a break costs 64 in 3D against 32 in 2D, so the bath re-breaks the sheet and
+  leaves the cube alone. Her prediction holds; ours held on the tie and failed on the time. One size, one λ, one bath,
+  a look. Not promoted.
+- 2026-10-16. **A feed instead of a spark** (the owner: "a flow with various rates based on what black hole eats and
+  so it's one spot per seed"; `sandbox/slab_feed.py` → `sandbox/out/slab_feed.txt`). Untied slab 4 × 8 × 8, λ = 1.25,
+  4N empty stores, r units a sweep into one shared store or one point's own store. First try (rates 2, 8, 32 over
+  10,000 sweeps; `slab_feed_try1.txt`): the two rows that finished had every point broken and 12 units a store, so the
+  rates were far too high; lowered to 0.25 to 16 with a damage stop, rows unread as this line is written. Reading
+  appended when it finishes.
