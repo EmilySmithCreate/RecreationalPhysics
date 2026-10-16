@@ -540,3 +540,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   640 = 8 x 8 x 10, a flat box; the shells 4 x 8 x 8, 4 x 10 x 10, 4 x 16 x 16 plus 64 fit no flat box. The toy has
   no pull, so "space cannot leave" is untested; what it has is the slab forming by itself from a rod or a cube in a
   bath (T48, T53). The published relative to read before citing is Poplawski (TASKS, 6 October item 6).
+- 2026-10-16, the owner, on the loop and the point count: "That is an interesting idea and elegant. So if the
+  universe space inside the black hole is about 640 at the start and cannot change, then how could the space that
+  creates the black hole have over 640?" *Ours:* in the fixed-count toy one black hole's inside is always smaller
+  than the universe that made it, so a burp inside one hole makes a daughter space and never the next turn (that
+  is Smolin's tree, with N shrinking by generation). A loop with constant N needs her conjecture of 6 October: the
+  turn ends when all N are inside black holes, and the next turn is all those insides opening together. Both can
+  hold at once. The gap the record shows: for the reset to make one space, the many insides must be one connected
+  X before the burp; from a gas of separate curled cubes no opening ever joined (O85), and seeds join only inside
+  one connected X (T53). That is the foam question of 27 September, now load-bearing for the loop.
