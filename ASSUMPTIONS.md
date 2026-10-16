@@ -3753,7 +3753,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
 
 - **O128 T64's held-out size, read: the control misses its bar by one run at N = 384 (14 of 24 end exactly flat
   and six around against 15 asked), so every price above zero is NOT READ there; μ = 0 is AS PREDICTED, ENDS SIX
-  AROUND (16 October 2026, 12:00 UTC by the clock). Measured, pre-registered with a held-out size; no size claim.**
+  AROUND (16 October 2026, 11:54 UTC by the clock). Measured, pre-registered with a held-out size; no size claim.**
   (PREREGISTRATION T64, "Reading of T64, the held-out size", the full account; `scripts/analyse_t64.py`;
   `results/t64_*_n384`; five Batch jobs of 24 replicas, accepted unread and committed first, 8ee58427.)
   - **Reported, not scored:** the N = 384 rows at μ = 0.05, 0.10 and 0.20 read WIDE in 21 to 23 of 24, as at the
