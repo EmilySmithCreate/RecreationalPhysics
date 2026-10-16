@@ -527,3 +527,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   slab's leftover pieces by wiring into curled stubs, knots and damaged scars.
 - 2026-10-16, the owner, on T65: "So you want me to predict how many of what in t65? I think the proportions of pieces will be similar to 2d?" Recorded in T65 as her prediction on the leftover pieces (reported, not scored); the control's word is still hers to give.
 - 2026-10-16, the owner, her word for T65's untied control: "Partial". Recorded in T65's amendment before any fetch.
+- 2026-10-16, the owner, on T66's held-out stage: "Leaning toward a and b." (a) lengthen the held-out run to
+  40,000 sweeps; (b) add the end-damage ratio to the scored size claim. Recorded as a lean, not a decision; nothing
+  runs until she decides and gives her N = 1000 word. Then her idea and question: "Enough energy creates a knot in
+  3d space, the singularity. Due to gravity space cannot leave so a shell forms around the singularity within the
+  horizon, lxlx4 probably. Then that curled sheet burps and maybe combines points with the knot or forms as a
+  doughnut around the knot. But how are there the same number of points inside and outside the black hole?"
+  *Ours, from the record:* the toy never makes or loses a point, so the new space a burp makes has exactly the
+  points of the shell that curled (plus the knot's, if they join), never more; "inside equals outside" is not
+  something the toy requires or forbids, it is a count of which points curled. The knot can be at most 64 points
+  in one piece (the 6-cube; [Mul79], O85), which is her 64. Exact arithmetic: a 6-cube plus a 4 x 12 x 12 shell is
+  640 = 8 x 8 x 10, a flat box; the shells 4 x 8 x 8, 4 x 10 x 10, 4 x 16 x 16 plus 64 fit no flat box. The toy has
+  no pull, so "space cannot leave" is untested; what it has is the slab forming by itself from a rod or a cube in a
+  bath (T48, T53). The published relative to read before citing is Poplawski (TASKS, 6 October item 6).
