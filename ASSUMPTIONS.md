@@ -3782,7 +3782,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
 
 - **O130 T65, stage 1, read: given one spark, the owner's slab does not open at either size; tied it goes PARTIAL
   (λ = 1.20) or DAMAGED (λ = 1.25), and untied it FALLS BACK in 31 replicas of 32; not one of 512 replicas opened
-  (16 October 2026, 18:06 UTC by the clock). Measured, pre-registered; her "Opens in room" and her PARTIAL for the
+  (16 October 2026, 18:02 UTC by the clock). Measured, pre-registered; her "Opens in room" and her PARTIAL for the
   control both fail; ours holds on the tied word at λ = 1.25 and fails on the control.** (PREREGISTRATION T65,
   "Reading of T65, stage 1", the full account with the cell table and the held-out numbers; `scripts/analyse_t65.py`;
   `scripts/read_t65_pieces.py` for the end graphs; `results/t65_*`; eight Batch jobs of 64 replicas, accepted unread
