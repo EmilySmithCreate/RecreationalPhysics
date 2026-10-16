@@ -431,3 +431,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   and has sped up since dark energy overtook matter about five billion years ago; under a constant vacuum energy the
   size grows ever faster while the rate per unit size settles to a constant, so "increasing at an increasing rate"
   is right for the size and not for the rate.
+- 2026-10-16, the owner: "I think that the toy is part of the theory but we need a somewhat separate theory for
+  bringing all the infinite variations of reality from our settings' big bang size and full set of states." *Ours:*
+  the record already has three layers: the toy (the mechanism at one setting); the theory of variations, which is
+  the observer-relative histories line inside Everettian quantum mechanics (pieces 13 and 14, O125, with her loop's
+  measure, O101) whose place on the programme page she has left "tbd"; and the coarse dial model, parked as a reading
+  task (T12). The toy hands the second theory the one thing it cannot invent: the set of end states a setting
+  produces and their frequencies (O116, O107), catalogued by the (D, λ) map. Whether she means the existing Everett
+  line or a third theory beyond it is hers to say; a third would be a new model under Update 28 and needs a dated
+  decision and a brief.
