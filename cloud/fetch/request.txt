@@ -49,3 +49,4 @@ t64_*
 # 2026-10-16, 11:50 UTC by the clock: T65 stage 1 (8 jobs, submitted 01:10 UTC) and T66 stage 1 (4 jobs, submitted 08:40 UTC). Neither has been read.
 t65_*
 t66_*
+# 2026-10-16, 14:57 UTC by the clock: asking again for T65's last two cells (t65_a_lam120_l12, t65_a_lam125_l12). Not read.
