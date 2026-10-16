@@ -466,3 +466,20 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   axes, and the long side's links are rewired slightly more. In three directions, untested; the slab 4 x 12 x 12 of
   T65 has two equal open sides, so T65 cannot ask it, and a 6 x 8 x 12 box under the fold would. Her sentence stands
   as her prediction for that fold run when there is one.
+- 2026-10-16, the owner, on the fold: "Yes that makes sense re no micro selection of edge. But then does it need 3x
+  curling energy to curl? What happens to energy that doesn't cause snap? Just stored in stores? Damage? Released
+  back? When?" *Ours, from the record, no new run:* (1) Yes, under "all at the last" the first fold of flat space
+  costs the whole 3a per point and the later two folds cost nothing (O106: every rung sits 3a above flat), so curling
+  one direction is as dear as curling all three; untied it costs a per direction. The toy charges the energy, not a
+  wall, for a fold: the single-move wall out of flat space is 64 either way. (2) In a sealed box energy that does not
+  cause a snap has three homes and nothing else: the stores (the bath, or one point's store), broken squares
+  (damage, 16 a square), and curled or opened structure; the sum is conserved to the last bit (Q12). It moves between
+  them every sweep in both directions: a move that raises H draws from a store, a move that lowers H pays into one,
+  so "released back" is continuous, not an event. (3) What was measured: concentrated energy went into damage, not
+  curl (T57, O114: a fifth to a half of the space broken at one to two directions' worth, tied and untied); given a
+  spark the tube's own release returns to the stores and the box ends with stores warm and the graph flat or
+  flawed (T9); damage heals back into the stores when the stores can take it (T42, O82), and a push below the
+  cheapest move (32 in 2D, 64 in 3D) sits in its store for ever and does nothing (Q22). Energy leaves the box only
+  through a declared leak (the semi-permeable wall, Q12; T27 ran four rates). Not measured: how long damage
+  takes to heal against store temperature in three directions (the measurement-side handoff's item 4 asks what
+  the stores do).
