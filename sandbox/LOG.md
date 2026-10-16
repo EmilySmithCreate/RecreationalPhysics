@@ -281,10 +281,19 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   cells are identical draw for draw, since a damaged point pays no tie and healing never passes a half-curled state.
   Reason, ours: at one store temperature a break costs 64 in 3D against 32 in 2D, so the bath re-breaks the sheet and
   leaves the cube alone. Her prediction holds; ours held on the tie and failed on the time. One size, one λ, one bath,
-  a look. Not promoted.
+  a look. **Promoted the same day on the owner's word (rule 16 (c)): PREREGISTRATION T66, fresh seeds, 16 replicas, a held-out size; one look came before it.**
 - 2026-10-16. **A feed instead of a spark** (the owner: "a flow with various rates based on what black hole eats and
   so it's one spot per seed"; `sandbox/slab_feed.py` → `sandbox/out/slab_feed.txt`). Untied slab 4 × 8 × 8, λ = 1.25,
   4N empty stores, r units a sweep into one shared store or one point's own store. First try (rates 2, 8, 32 over
   10,000 sweeps; `slab_feed_try1.txt`): the two rows that finished had every point broken and 12 units a store, so the
-  rates were far too high; lowered to 0.25 to 16 with a damage stop, rows unread as this line is written. Reading
-  appended when it finishes.
+  rates were far too high; lowered to 0.25 to 16 with a damage stop. **Read:** at every rate, shared store or one point's store, the slab
+  moved and then broke: every one of 24 runs stopped on damage (a tenth of the points) with a third of the points
+  open (31 to 92 of 256) and none past half. The first move came at the slowest rate after about 250 to 400 sweeps
+  (60 to 100 units fed) and was an opening of 8 to 18 points in 4 to 9 separate regions with 4 points damaged; by
+  the stop there were 8 to 23 separate open regions, a sprinkle and not a front, about two points opened for every
+  one broken, after 275 to 1,600 units fed (slow feeds broke it on less energy than fast ones). Her prediction
+  (opens, one spot per seed): half holds, it opens from many spots at once and from the slowest feed on; half
+  fails, it never gets past a third open before a tenth is broken. Ours (no rate opens it cleanly; the fast feed
+  breaks it, the slow one sits): the clean half holds, the "slow one sits" half fails, the slowest feed moved it
+  too. Reason, ours: each completed patch is a dip (O118), so every extension has to be paid for again, and the
+  feed pays for breaks as readily. One size, one λ, three replicas, a look. Not promoted.

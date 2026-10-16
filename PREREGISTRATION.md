@@ -5851,3 +5851,74 @@ untied unless a new table is decided first.
 How the patch comes to be: it is opened by hand, which is the push the record says a single move cannot supply; a
 run in which a bath or a store opens it is T56 and T48, and they did not. Anything about a black hole or a pull. Which
 direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
+
+## T66. Does flat three-direction space heal damage in fewer sweeps than flat two-direction space? (pieces 8 and 11; the owner's prediction of 16 October; VISION Updates 24 and 58; ASSUMPTIONS O82, O114; written 2026-10-16, after one sandbox look and before any registered run; her word "Yes proceed" to registering it)
+
+### Why
+
+The sealed runs say where a push's energy goes when it does not open or curl anything: into broken squares, which
+then heal back into the stores (T9, T42, T57; O82, O114). The owner's statement of 16 October, in her words: "Damage
+heals yes we can even maybe say less sweeps than 2d untied." Whether the two toys heal at different rates bears on
+the room a burp needs (T9's threshold in three directions, which T65 cannot read because its slab is curled) and on
+piece 11 (a push into flat space breaks it; how long the break lasts is what a black hole's surroundings would see).
+
+### Disclosed
+
+One sandbox look came first (`sandbox/LOG.md`, 16 October; `sandbox/heal_time.py`): N = 216, λ = 1.25, E = 192, 384
+and 768 packed into one store of 4N, 4,000 sweeps, 8 replicas; the two-direction sheet never returned to two damaged
+points at any energy and the three-direction cube did in 8, 6 and 5 of 8, median 1,250 to 2,462 sweeps after the
+peak; the tie "all at the last" made no difference draw for draw. That look is why the registration exists, and it is
+not evidence (rule 16): the seeds below are fresh, the thresholds below are set now, and the held-out size is named
+before anything runs. The tie is withdrawn (Update 58), so every cell is untied.
+
+### What will be run
+
+| Choice | Value | Why this and not something else |
+|---|---|---|
+| Geometries | flat tori at matched N: two directions 12 × 18 and 16 × 32; three directions 6 × 6 × 6 and 8 × 8 × 8 | The same number of points, so the bath (4N stores) and the energy (ρN) are the same; every side even and at least 6, the smallest flat sides (Q5, O41) |
+| Held-out size (rule 14) | N = 1000: 20 × 50 and 10 × 10 × 10 | Runs only after the two smaller sizes are read and the numbers below are written as a dated amendment |
+| Curling cost λ | 1.25 | The project's working value in two directions (T7, T9) and the slab's (T65); one value, since the question is about healing and not about λ |
+| Tie | none | Withdrawn, Update 58; the look found tied and untied identical draw for draw, since a damaged point pays no tie |
+| Energy | E = ρN packed into one store, ρ = 1 and 2 per point | Per point so that sizes compare; 1 and 2 bracket the look's 192 and 384 at N = 216; packed, as T9 and T65 |
+| Bath | C = 4N empty stores, shared | T9's roomy bath, in which a two-direction tube converts cleanly; the store temperature at equilibrium is then the same at every size for a given ρ |
+| Replicas | 16 per cell | Twice the look's 8 |
+| Duration | 8,000 sweeps, the census every 10 | Twice the look's 4,000; the census every 10 sweeps resolves healing times of hundreds |
+| Script | `scripts/run_heal_time.py`; configs from `scripts/make_t66_configs.py` (seeds 20266601 to 20266604; held-out 20266701, 20266702); read with `scripts/analyse_t66.py`; tests `tests/test_t66.py` | Written and tested before any run |
+| Where | The cloud queue, `cloud/queue/2026-10-16_t66_stage1.txt`, 4 jobs | About two hours a job at N = 512 |
+
+### Definitions, fixed now
+
+Per replica: **damaged** = points whose local dimension exceeds the number of directions D; the **peak** = the
+largest damaged count over the records; the **scar level** = ⌈N/100⌉ damaged points (3 at 216, 6 at 512, 10 at 1000);
+the **healing time** = sweeps from the peak record to the first record at or below the scar level; a replica that
+never gets there within the run is NOT HEALED and its time is censored at the sweeps left after its peak. Per cell
+(D, N, ρ): the **healed share**, and the **median healing time** with censored times counted as larger than any
+uncensored one (more than half censored: "beyond the run"). Per (N, ρ): **FASTER IN 3D** if the three-direction cell's
+healed share is at least the two-direction cell's and its median time is smaller (a median beyond the run is larger
+than any number); **SLOWER IN 3D** if both the other way; else **MIXED**. Per size: FASTER IN 3D if both ρ read
+FASTER IN 3D; SLOWER IN 3D if both read SLOWER; else MIXED. Reported, not scored: the matched-by-breaks comparison
+(two directions at ρ = 1 against three at ρ = 2, each about six breaks' worth); the peak; the end damage; the store
+mean at the end; the energy drift (must be below 10⁻⁶ in every row, or the cell is not read).
+
+**The size claim and the held-out size (rule 14).** The claim scored at N = 1000 alone is the word (FASTER IN 3D or
+not) and whether the three-direction median healing time at each ρ falls inside a range written, as a dated
+amendment, from N = 216 and 512 only, before N = 1000 runs.
+
+### Predictions
+
+**The owner's, 16 October, before any registered run:** FASTER IN 3D at every size. Her words: "Damage heals yes we
+can even maybe say less sweeps than 2d untied."
+
+**Ours, unverified, written after the look and before the fresh seeds run:** FASTER IN 3D at both stage-1 sizes and
+both ρ; the two-direction healed share below one quarter at every cell (its warm bath keeps re-breaking it); the
+three-direction median time between 800 and 3,000 sweeps at ρ = 1 and between 1,000 and 5,000 at ρ = 2, growing
+slowly with N; the matched-by-breaks comparison the same word. Reason, ours: at one store temperature a break costs
+64 with six links against 32 with four, so the same bath re-breaks the sheet and leaves the cube alone (O22, O41).
+The held-out range is written after stage 1, not now.
+
+### What this cannot show
+
+Anything at a fixed temperature (the store temperature here is set by ρ and C and is not controlled); anything at
+another curling cost; the reason, which is a reading of the exact costs and not a measurement; anything about
+curling, since nothing here is curled (T57 found none); anything about the real universe. Every six-link result
+carries VISION Update 24's caveat.

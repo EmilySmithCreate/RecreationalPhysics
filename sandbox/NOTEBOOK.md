@@ -514,3 +514,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the slab STAYS until the stores are hot enough to break flat space (64), so no rate opens it cleanly; the fast feed
   breaks it, the slow one sits, and whatever opens does so where the damage is. The control's registered prediction
   stays inferred from "Opens in room" until she gives a word.
+- 2026-10-16, scored: the feed look (LOG, same day). Her "opens, one spot per seed": opens from many spots at the slowest feed on, never past a third before a tenth is broken. Ours half wrong: the slow feed does not sit.
+- 2026-10-16, the owner, a title to note: "Our strange loop: a coherent story of reality." Recorded as hers, for the
+  programme artifact or the 16th paper that brings the short papers together (VISION Update 42); not applied to any
+  page yet.
+- 2026-10-16, the owner: "Can some be broken ie points lost through breaking to the open space are their own thing
+  floating around in the black hole." *Ours, from the record:* no point is ever lost in the toy (the count is fixed,
+  every point keeps its links; damage is missing squares, which heal). What the opening leaves that is its own thing
+  is curled, not broken: the knots (20 units, stuck at 11 a move, O107), the columns and double columns, and inside the
+  slab product the two-point stubs of 14 units stuck behind 28 (the rod look, 16 October). The one lasting damaged form
+  is the swapped pair of O82, which flickers. Nothing moves on its own. To read when T65's graphs arrive: sort the
+  slab's leftover pieces by wiring into curled stubs, knots and damaged scars.

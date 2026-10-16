@@ -1,0 +1,9 @@
+# T66 stage 1 (PREREGISTRATION T66, written 2026-10-16 after one sandbox look and before any registered run; the
+# owner's prediction FASTER IN 3D, her word "Yes proceed"; VISION Update 58): does flat three-direction space heal
+# damage in fewer sweeps than flat two-direction space? Flat tori at N = 216 and 512 (12 x 18, 16 x 32; 6 x 6 x 6,
+# 8 x 8 x 8), lambda 1.25, untied, sealed, E = rho N packed into one store of 4N, rho 1 and 2, 16 replicas, 8,000 sweeps
+# read every 10. The held-out size N = 1000 runs after these are read. 4 jobs. Seeds 20266601 to 20266604.
+run_heal_time t66_d2_n216
+run_heal_time t66_d3_n216
+run_heal_time t66_d2_n512
+run_heal_time t66_d3_n512

@@ -751,6 +751,11 @@ T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4
     *16 October, later: the owner withdrew the tie (VISION Update 58). T65 is read as registered; its untied control
     is the cell that speaks to the hypothesis as it now stands (PREREGISTRATION T65, amendment of 16 October). Any
     new three-direction registration is untied unless a new table is decided first.*
+13. **T66, does flat three-direction space heal damage in fewer sweeps than flat two-direction space** (PREREGISTRATION
+    T66; the owner's prediction FASTER IN 3D and her "Yes proceed" of 16 October; one sandbox look first, `sandbox/LOG.md`
+    16 October). Launched 16 October, 4 Batch jobs (`cloud/queue/2026-10-16_t66_stage1.txt`). To read: fetch `t66_*`,
+    accept, commit unread, `python scripts/analyse_t66.py`; then the held-out ranges for N = 1000 as a dated amendment,
+    her prediction for N = 1000, and `python scripts/make_t66_configs.py --held-out`.
 *(Given 12 October: the reviewer's rewrite of paper 1 adopted; her predictions for T62 and T63.)*
 
 ## 13 October: readers for the measurement side, and what would serve them  ☐
