@@ -390,3 +390,23 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   right now." Which hypothesis she means is hers to name (the candidates on the record: many relics with their number
   set by the seeds at the birth; asymmetric dark matter, two leftovers of one snap, Update 42). The flat-space listing
   stays on the list as exact bookkeeping, not as a dark-matter test.
+- 2026-10-16, the owner, on dark energy and the end state: "Dark energy is connected to inflation. I don't think that it
+  changes over time. It's a feature in. From some perspective they are outside of time but hold time, so we know the
+  start and the end (end of observers is call it 8) space is emergent, from the burp. In some ways, it is all
+  happening inside a backdrop of the end state of the universe: which for this example we'll describe the point where
+  the last black hole dissolves. Stable, flat, cold, similar in every universe, and another part of the theory says
+  every version infinite versions exist. What would that say about what is going on in the background? Some universes
+  are the same, we've talked about the way, as time passes, they move towards being 1 exact same thing, moving from
+  the most variants to the least. Can something about that be a vacuum force? A background radiation? What else?"
+  *Ours; general knowledge, not read for this entry, to verify with a physicist.* The published form of nearly all of
+  it: a cosmological constant is a vacuum energy whose density never changes, and a universe that has one ends as de
+  Sitter space, flat, cold, empty and expanding, whatever it started from (the cosmic no-hair theorem, Wald 1983),
+  which is "many variants to one end state" as a theorem; that end state has a horizon with a thermal glow (Gibbons
+  and Hawking 1977) at about 10⁻³⁰ K, which is the "background radiation" of the backdrop, real and far too faint to
+  see; its "force" is the accelerated expansion itself, not a pull on history; inflation is the same kind of energy
+  at about 10¹⁰⁰ times the density, which ended, and models that tie the two exist (quintessential inflation, Peebles
+  and Vilenkin 1999). What no picture yet gives is the number, 10⁻¹²⁰ in natural units (Update 41 carries it openly).
+  In her Everett line (O125) branches diverge and do not merge, so "becoming one exact same thing" is true of the
+  macrostate every branch reaches, not of the branches. In the toy: no expansion, no time, the floor is exactly zero
+  (Q18); its one counterpart is that thousands of runs end in the same arrangement (9,208 of 9,215, O116), the toy's
+  version of an attractor. Not a knob, not a run; her position, recorded.
