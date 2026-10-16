@@ -577,3 +577,6 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   shell round a knot) revises her knot-and-shell picture of this morning and lands on piece 11, where nothing has
   folded. "The reset is no longer required" sets the daughter picture beside the loop; the loop's per-turn measure
   needs the reset. The toy cannot hold a varying count of points; that is claim 3's parked decision.
+- 2026-10-16, later, the owner, on Update 59's first decision as worded ("The black hole's inside is the parent's own
+  geometry curled, not a slab inside it"): "correct". Recorded in Update 59 as her confirmation. The second decision
+  (the reset no longer required), her feed prediction and which count piece 12 keeps are still owed.

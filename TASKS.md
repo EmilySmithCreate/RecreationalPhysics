@@ -837,8 +837,9 @@ first; the daughter-universe interpretation after. In order, each registered bef
    count of points) is claim 3's parked decision; H7 (a daughter distinguishable from a healed patch) needs a
    definition first.
 4. **The programme page and the papers** carry the handoff as hers (piece 11 and 12 rows; paper 12's new section;
-   series paper 15, a feed rather than a spark, as an outline). Owed by her: confirmation of Update 59's two
-   decisions; which count piece 12 keeps (per turn or per generation); her feed prediction.
+   series paper 15, a feed rather than a spark, as an outline). Owed by her: confirmation of Update 59's second
+   decision (the first, the black hole as the parent's own geometry curled, she confirmed the same evening); which
+   count piece 12 keeps (per turn or per generation); her feed prediction.
 
 Owed by the owner, unchanged from the morning: T65's L = 16 word and whether the untied control runs there; T66's
 repair choice and her N = 1000 word; the curling-energy design brief's answers (Update 57).

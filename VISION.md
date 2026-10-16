@@ -1656,6 +1656,7 @@ T1 to T8 are registrations here. Merging this update is her acceptance of the wo
   (notebook: a 64-point knot with a 4 × L × L shell inside the horizon), which stays in the notebook as an idea.
   *Ours:* in the toy this is the fold of piece 11, where nothing has yet curled from energy alone (T21, T26, T27,
   T34, T42, T57); the reading changes what the fold is of, not what it waits on (a carrier for a pull, piece 8).
+  **Confirmed by the author, 2026-10-16, later the same evening ("correct"). This decision is hers as worded.**
 - **DECISION: the reset is no longer required.** Her words: "The black hole might remain present in the parent
   universe while the daughter has its own emergent spacetime. ... The earlier whole-universe-reset model may still be
   investigated, but it is no longer a requirement for daughter-universe formation." The loop (Updates 23, 26, 33,
