@@ -3750,3 +3750,32 @@ record is not a permanent fact (off-diagonal D = 1/4 once the record is undone).
 Code and documents were drafted with Claude (Anthropic) in conversation with the
 author and should be disclosed as such in any submission. Physics estimates marked
 "Ours" originated in that conversation and have not been reviewed by a physicist.
+
+- **O128 T64's held-out size, read: the control misses its bar by one run at N = 384 (14 of 24 end exactly flat
+  and six around against 15 asked), so every price above zero is NOT READ there; μ = 0 is AS PREDICTED, ENDS SIX
+  AROUND (16 October 2026, 12:00 UTC by the clock). Measured, pre-registered with a held-out size; no size claim.**
+  (PREREGISTRATION T64, "Reading of T64, the held-out size", the full account; `scripts/analyse_t64.py`;
+  `results/t64_*_n384`; five Batch jobs of 24 replicas, accepted unread and committed first, 8ee58427.)
+  - **Reported, not scored:** the N = 384 rows at μ = 0.05, 0.10 and 0.20 read WIDE in 21 to 23 of 24, as at the
+    smaller sizes, and the wide product is flawed with about twice the energy left of N = 192.
+  - **What is new** (*ours, unverified*): the share of untouched tubes ending exactly flat falls with size (1.00,
+    0.67, 0.58 at N = 96, 192, 384), as a fixed chance per column of being left behind would give (O16, O107). A
+    control bar written from sizes up to 192 did not carry. Any rerun's control needs a bar that falls with N,
+    fitted on the smaller sizes and itself held out (rule 14).
+
+- **O129 T66, stage 1, read: flat three-direction space heals its damage to the scar level where the two-direction
+  sheet never does at N = 216 (FASTER IN 3D at both energies), and at N = 512 neither reaches it within the run
+  (MIXED); the cube ends about a third as damaged as the sheet at every size and energy (16 October 2026, 12:00 UTC
+  by the clock). Measured, pre-registered; the owner's prediction holds at 216 and fails at 512 by the letter, and
+  so does ours.** (PREREGISTRATION T66, "Reading of T66, stage 1", the full account with the table and the held-out
+  numbers; `scripts/analyse_t66.py`; `results/t66_*`; four Batch jobs of 16 replicas at two energies, accepted
+  unread and committed first, 8ee58427. Untied; six links carry VISION Update 24's caveat.)
+  - **A flaw in the registered observable, found by the data and disclosed:** in a sealed box the damage settles
+    at a fixed share of the points (about 5 % of the cube, 12 to 23 % of the sheet at ρ = 1 and 2 per point in a
+    bath of 4N), so "reaches one point in a hundred" is a fluctuation below that level, rarer the larger N. The
+    size-stable quantity in the rows is the ratio of end damage, cube to sheet, 0.25 to 0.48. The held-out numbers
+    are written under the registered rule (MIXED, medians beyond the run) with the ratio reported; three repairs are
+    proposed to the owner and none enacted.
+  - **What stands of the sandbox look** (`sandbox/LOG.md`, 16 October): its finding at N = 216 is reproduced on
+    fresh seeds with twice the replicas and twice the sweeps; its extrapolation to larger sizes was not made and
+    would have been wrong.

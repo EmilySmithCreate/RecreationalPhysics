@@ -5755,6 +5755,29 @@ which is 24.8 at μ = 0.10 and 21.2 at 0.025 (every switch listed at 48 and 96 p
 for the two readings are the ones they quote; the word "cheapest" was wrong. No count, verdict or held-out
 number changes.
 
+### Reading of T64, the held-out size (N = 384), 2026-10-16 (`python scripts/analyse_t64.py`; read after the five cells were accepted unread and committed, 8ee58427)
+
+**The control does not hold at N = 384, so every price above zero is NOT READ there; μ = 0 is AS PREDICTED by its
+own cell, ENDS SIX AROUND.** The control's bar, written on 12 October from paper 1's record, asks that at least 0.6
+of its 24 replicas (15) end exactly flat and six around. At N = 384 14 of 24 do, one short, after 24 of 24 at N = 96
+and 16 of 24 at N = 192. The rule is read as written: no verdict word at μ = 0.025, 0.05, 0.10 or 0.20 at the
+held-out size, and T64 makes no claim about size.
+
+**Reported, not scored** (the rows are on the record whatever the control did). At every price above zero the
+N = 384 cells read as the smaller sizes did: WIDE in 21, 21 and 23 of 24 at μ = 0.05, 0.10 and 0.20 (the written
+ranges would have been met), MIXED at 0.025 (10 WIDE, 11 PATCHWORK, 3 TUBE); no cell holds a clean and wide end
+state; the energy left is about 210 to 230 units at μ ≥ 0.05, twice the N = 192 figure, so the wide product is
+flawed in proportion to its size. At μ = 0 three of the 24 end states are in pieces.
+
+**What the control's miss says** (*ours, unverified*): the share of untouched tubes that end exactly flat falls
+with size, 1.00, 0.67 and 0.58 at N = 96, 192 and 384 at this cooling, which is what one would expect if each
+column has a fixed chance of being left behind (T10: the leftover is a fixed object; T51: about one per seed). A
+bar of 0.6 was written from sizes up to 192 and does not carry to 384. Any rerun needs a control bar that falls
+with N, written from a fit on the smaller sizes, which is itself a size claim under rule 14. Not proposed here.
+
+**Her prediction** (WIDENS at every price above zero) is not scored at N = 384; it stands as scored at N = 96 and
+192 (three prices of four). **Ours** (the same words at N = 384) is not scored either.
+
 ## T65. Does the owner's slab open into one flat space when given a push? The tied slab, sealed, with a spark in its stores, with and without a patch opened by hand (piece 5; the owner's picture of 15 October; VISION Updates 47 and 57; ASSUMPTIONS O106, O115, O118; drafted 2026-10-15, evening, revised 16 October after the sandbox look; her prediction given 16 October, before any run; launched 16 October on her word "Launch in cloud")
 
 ### Why
@@ -5923,6 +5946,55 @@ three-direction median time between 800 and 3,000 sweeps at ρ = 1 and between 1
 slowly with N; the matched-by-breaks comparison the same word. Reason, ours: at one store temperature a break costs
 64 with six links against 32 with four, so the same bath re-breaks the sheet and leaves the cube alone (O22, O41).
 The held-out range is written after stage 1, not now.
+
+### Reading of T66, stage 1 (N = 216 and 512), 2026-10-16 (`python scripts/analyse_t66.py`; read after the four cells were accepted unread and committed, 8ee58427)
+
+**FASTER IN 3D at N = 216, at both energies; MIXED at N = 512, at both.** Every row's drift is zero. The cells:
+
+| D | N | ρ | healed (of 16) | median healing time | peak damaged (median) | end damaged (median) | store mean at the end |
+|---|---|---|---|---|---|---|---|
+| 2 | 216 | 1 | 0 | beyond the run | 43 | 25 | 0.111 |
+| 2 | 216 | 2 | 0 | beyond the run | 80 | 41 | 0.258 |
+| 3 | 216 | 1 | 16 | 1,220 | 32 | 12 | 0.181 |
+| 3 | 216 | 2 | 15 | 3,120 | 56 | 14 | 0.399 |
+| 2 | 512 | 1 | 0 | beyond the run | 100 | 69 | 0.093 |
+| 2 | 512 | 2 | 0 | beyond the run | 192 | 119 | 0.221 |
+| 3 | 512 | 1 | 6 | beyond the run | 76 | 20 | 0.185 |
+| 3 | 512 | 2 | 2 | beyond the run | 145 | 30 | 0.403 |
+
+At N = 216 the three-direction cube reaches the scar level (3 points) in 16 and 15 replicas of 16, in a median of
+1,220 and 3,120 sweeps after its peak, while the two-direction sheet never does: FASTER IN 3D by the rule, and the
+same word matched by breaks. At N = 512 the sheet again never reaches its scar level (6 points) and the cube does
+in only 6 and 2 of 16, so both medians are beyond the run and the rule gives MIXED, at both ρ and matched by breaks.
+
+**Her prediction** (FASTER IN 3D at every size) holds at N = 216 and fails at N = 512 by the letter. **Ours**:
+FASTER IN 3D at both stage-1 sizes fails at 512; the two-direction healed share below one quarter holds (it is
+zero everywhere); the three-direction median of 800 to 3,000 at ρ = 1 and 1,000 to 5,000 at ρ = 2 holds at 216 and
+fails at 512, where both are beyond the run.
+
+**What the rows say beyond the words** (*ours, unverified*). The three-direction space is the less damaged one at
+every size and energy, by the same margin: the end damage is 12 against 25, 14 against 41, 20 against 69 and 30
+against 119 points, about a third of the sheet's, with the stores at nearly the same temperature. What changes
+with size is not that ratio but whether the cube's damage ever dips to one point in a hundred. In a sealed box the
+stores hold a fixed share of the energy, so the damage settles at a fixed share of the points (about 5 % of the
+cube and 12 to 23 % of the sheet at these ρ), and reaching 1 % is then a fluctuation below that level whose chance
+falls steeply with N. The registered observable therefore measures, at large N, how often a fluctuation reaches an
+arbitrary line, not how fast the space heals. That is a flaw in the definition we wrote, found by the data, and
+it is disclosed here rather than repaired after the fact.
+
+**The numbers for the held-out size (rule 14), written now from N = 216 and 512, before N = 1000 runs.** Under the
+registered definitions: the three-direction median healing time at N = 1000 is **beyond the run at both ρ** (the
+smaller sizes give 1,220 then beyond at ρ = 1, and 3,120 then beyond at ρ = 2); the two-direction median is beyond
+the run at both; the word at N = 1000 is **MIXED at both ρ**; the three-direction healed share is 0 to 3 of 16 at
+ρ = 1 and 0 to 1 at ρ = 2; the two-direction share is 0. Reported, not scored, and the number we actually expect
+to carry: the three-direction end damage at N = 1000 is **0.25 to 0.45 of the two-direction end damage at the same
+ρ** (the stage-1 ratios are 0.48, 0.34, 0.29 and 0.25).
+
+**Proposed, not enacted (a change after seeing data is the owner's to make):** before N = 1000 runs, either (a)
+lengthen the held-out run to 40,000 sweeps with the census every 50, keeping every definition, so that the medians
+have room to be finite; or (b) add to the scored size claim the ratio of end damage written above, which is the
+quantity the rows show is size-stable; or (c) run as registered and accept MIXED as the likely word. **The owner's
+prediction for N = 1000 is owed before it runs, whichever she chooses.**
 
 ### What this cannot show
 
