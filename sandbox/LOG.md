@@ -240,3 +240,13 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   1.02): *ours:* no dip at 1.25 either; a dip is hardest at the higher curling cost because every move that sheds a
   surplus square gains more there. *Hers:* not asked; the flat-space relic is her dark-matter candidate, so her
   picture needs a dip to exist.
+- 2026-10-16, 00:05 UTC. READ: the sealed slab from a hand-opened patch (`sandbox/slab_patch_sealed.py`; predictions
+  above, written before). Every past-peak patch state sat exactly still for 20,000 sweeps with empty stores: k = 2 and
+  3 at lambda 1.25, k = 3 and 4 at 1.20, with C = N and 4N stores alike (d-census unchanged, nothing left the stores,
+  drift 0). Only the below-peak control, k = 1 at 1.25 (24 above the slab), moved: it grew a little and damaged a
+  little. So T54's completed patches of two columns and more are dips of their own: no single switch out of them
+  goes downhill, which is O118's correction seen in a run (the states between completed patches lie higher). Our
+  prediction (OPENS IN ROOM at C = 4N) fails; the owner's "Opens in room" would fail on this protocol. What it
+  narrows: a hand-opened patch with no energy is not a push, and T65 as drafted cannot run that way; an opening of
+  the slab needs energy in the stores to cross the single-move walls between patches (the slab's own is 4 at 1.25
+  under the tie, O106), which is a spark run, not a patch run. Not promoted; the T65 draft is revised to a spark.

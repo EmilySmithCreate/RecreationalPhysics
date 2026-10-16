@@ -5754,3 +5754,78 @@ which is 24.8 at μ = 0.10 and 21.2 at 0.025 (every switch listed at 48 and 96 p
 `tests/test_sixloop_walls.py`). It leads away from widening and its way back is free, so the walls that matter
 for the two readings are the ones they quote; the word "cheapest" was wrong. No count, verdict or held-out
 number changes.
+
+## T65 (DRAFT, not launched). Does the owner's slab open into one flat space when given a push? The tied slab, sealed, with a spark in its stores, with and without a patch opened by hand (piece 5; the owner's picture of 15 October; VISION Updates 47 and 57; ASSUMPTIONS O106, O115, O118; drafted 2026-10-15, evening, revised 16 October after the sandbox look; her prediction given 16 October, before any run)
+
+### Why
+
+The owner's whiteboard of 15 October and her words the same evening: the slab, 4 × L × L with one direction still
+curled, is X for the three-direction opening, "as a bunch of energy is stored in that one fold as much as in 3". Under
+her tie "all at the last" that is exact: every rung sits 3a per point above flat space, a = 4(λ − 1), so the slab
+holds the whole burp (O106). What the record says about opening it: in a bath it does not open at any curling cost,
+because the table charges a damaged point nothing and the bath finds breaking first (T56, O115); and its barrier is
+not one move but a patch, ΔH(k) = (176 − 112λ) k − 48(λ − 1) k² under the tie, peaking at k = 1.5 columns (27) at
+λ = 1.25, 2.2 (45) at 1.20, 3.3 (77) at 1.15, the same quadratic at L = 8, 12 and 16 (T54, O118). No push to a slab
+has been tried under the tie. This run supplies the push the record says is needed, a patch opened by hand past the
+peak, with no bath, and asks T9's question in three directions: does the opening spread as a front and release 3a per
+point into the stores, and does the space come out whole?
+
+**Disclosed.** Exact, known before writing: O106, O118 above; ΔH(3) = 0 exactly at λ = 1.25 under the tie. Measured
+before writing: T48 (a one-curled torus given a single-move push, untied, STAYS), T53 and T56 (baths). One sandbox
+look came before this draft (`sandbox/slab_patch_sealed.py`, `sandbox/LOG.md` 15 and 16 October): a patch of two or more
+columns opened by hand sat exactly still for 20,000 sweeps with empty stores at λ = 1.20 and 1.25, with N and 4N stores
+alike, so T54's completed patches are dips of their own and a hand-opened patch with no energy is not a push; the
+first form of this draft (a patch and empty stores) was withdrawn on that look. By rule 16 the look is not evidence;
+this registration runs on fresh seeds with a held-out size.
+
+### What will be run
+
+`scripts/run_sealed_curled_d.py` as T48 ran its one-curled torus (a spark in one store of a shared bath, energy
+conserved from the start) and with its new `"patch"` start (tests in `tests/test_t65.py`): the slab, sealed, tied,
+30,000 sweeps read every 500, eight replicas per cell, the final graph saved.
+
+- **Tie:** "all at the last", f = (0, a, 2a, 0), a = 4(λ − 1), the table as the owner decided it (a damaged point pays
+  nothing). The untied cell at the largest spark is the control, as T57 ran it.
+- **λ:** 1.20 and 1.25 (the slab's single-move walls under the tie 12.8 and 4.0, O106; its patch barriers 45 and 27,
+  O118; its release 2.4 and 3 per point).
+- **Arm A, the push alone:** no patch; a spark E = 16, 32, 64 and 128 in one store (above the single-move wall at
+  both λ; 128 is four to five times the patch barrier and about a sixth of the slab's release at N = 256).
+- **Arm B, the push on a patch:** the patch of k = 2 opened by hand (a dip of its own, by the look above) and a
+  spark of 16 or 32 beside it, at λ = 1.25 only: does a small push bridge the completed patches?
+- **Room:** a shared bath of C = N and 4N stores (T9's knob; the full release is 3aN).
+- **Sizes:** L = 8 and 12 (N = 256, 576); **held out L = 16 (N = 1,024)**, run after the smaller sizes are read and a
+  number is written for it (rule 14).
+
+### Definitions, fixed now (`scripts/analyse_t65.py`, to be written and tested before any run)
+
+Per replica, from the final block: **open** = points at d = 3; **curled** = points at d ≤ 2; **damaged** = points at
+d > 3. OPENS if open ≥ 0.9 N and damaged ≤ 0.02 N; FALLS BACK if curled ≥ 0.9 N (the patch closed); DAMAGED if
+damaged > 0.1 N; else PARTIAL. Per cell (λ, k, C, L): the majority of at least six of eight, else MIXED. **Per λ:**
+OPENS IN ROOM if some cell with k past the peak reads OPENS; FALLS BACK if every past-peak cell reads FALLS BACK;
+DAMAGED if none opens and some cell reads DAMAGED; else PARTIAL. Reported, not scored: the release per point at the
+end (3a if OPENS and whole); the share of the release the stores hold; the sweep at which open first passed N/2 (the
+front's pace); the number of separate open regions at that sweep; the width of the product read as O116 reads it
+(`scripts/read_endpoint_width.py`); and the leftover curled pieces, read as the sandbox look of 15 October read them
+(every single move touching a piece priced; `sandbox/rod_relic_dip.py`, to be promoted to `scripts/` with a test if
+this is scored). The size claim: whether the cell verdicts at L = 16 match the number written from L = 8 and 12.
+
+### Predictions
+
+**The owner's, 16 October, early, before any registered run: "Opens in room."** Scored as OPENS IN ROOM at every λ.
+Her picture of 15 October, in her words: "energy is amassed until '12' is applied to the length and width and height,
+all the 3 dimensions, and then the 3 pop together creating a full new 3 d space." Disclosed: she gave the word after
+being told that the sandbox look's first past-barrier cell (k = 2, λ = 1.25, empty stores) had not moved.
+
+**Ours, unverified:** no cell OPENS. At λ = 1.25 the slab's cheapest move (4) is an opening move, so every spark
+starts one, but the table charges a damaged point nothing, so the same spark finds breaking as readily as opening and
+the opened patch stops at the first completed patch, which is a dip: PARTIAL at E = 16 and 32, DAMAGED at 64 and 128,
+with C = N and 4N alike (the stores never fill, since nothing spreads). At λ = 1.20 the same, with fewer first moves.
+Arm B: PARTIAL, the patch neither bridged nor undone. If a cell OPENS at any spark, the slab is the three-direction X
+her picture needs and the room question (T9's) is next; if every cell is DAMAGED, the table's free damage is what
+stops the slab, and a table that charges damage, a new knob, is the next decision for the owner (Update 54's ask).
+
+### What this cannot show
+
+How the patch comes to be: it is opened by hand, which is the push the record says a single move cannot supply; a
+run in which a bath or a store opens it is T56 and T48, and they did not. Anything about a black hole or a pull. Which
+direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
