@@ -446,3 +446,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   m = 2, k = 4, r = 8: the knot itself. If the whole space is to be a flat even cube (216, 512, 1,000), the remainder
   after the knot (152, 448, 936) is never a cube. Neither condition is one the toy imposes; what the condition stands
   for in her picture is hers to say.
+- 2026-10-16, the owner: "That makes sense, it can be asymmetrical. The main point is check the dot counts compared to
+  64 + m³ = L × W × H + that arrangement's relics. Is there a pattern? A minimum? A maximum?" *Ours, exact
+  arithmetic:* with m even, N = 64 + m³ is a multiple of 8, and so is any flat rectangular box (even sides, each at
+  least 6), so the relic remainder r = N − LWH is always a multiple of 8. An exact fit (r = 0) exists exactly when
+  8 + (m/2)³ is a product of three whole numbers each at least 3. Over m = 2 to 40: no flat box fits below 216
+  (m = 2, 4); m = 6 leaves 64 over the 6 × 6 × 6; the first exact fit is m = 8, N = 576 (6 × 6 × 16 and 6 × 8 × 12);
+  then m = 12, 14, 16, 20, 24, 26, 28, 32, 34, 36, 38, 40 fit exactly, and the misses leave r = 8 (m = 10: 6 × 8 × 22
+  plus one double column; m = 18), 32 (m = 22) and 16 (m = 30: a column and a pair). Minimum 576; no maximum, the
+  exact fits grow denser with m. Two cautions: a flat torus need not be a rectangular box (twisted gluings exist,
+  as the tube six around is at N = 64), so this is a sufficient condition, not the toy's rule; and the relic count
+  is measured, about one per seed (T10, T51), not chosen to fill a remainder.
