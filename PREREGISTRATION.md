@@ -5800,9 +5800,11 @@ conserved from the start) and with its new `"patch"` start (tests in `tests/test
 
 Per replica, from the final block: **open** = points at d = 3; **curled** = points at d ≤ 2; **damaged** = points at
 d > 3. OPENS if open ≥ 0.9 N and damaged ≤ 0.02 N; FALLS BACK if curled ≥ 0.9 N (the patch closed); DAMAGED if
-damaged > 0.1 N; else PARTIAL. Per cell (λ, k, C, L): the majority of at least six of eight, else MIXED. **Per λ:**
-OPENS IN ROOM if some cell with k past the peak reads OPENS; FALLS BACK if every past-peak cell reads FALLS BACK;
-DAMAGED if none opens and some cell reads DAMAGED; else PARTIAL. Reported, not scored: the release per point at the
+damaged > 0.1 N; else PARTIAL. Per cell (λ, k, C, L): the majority of at least six of eight, else MIXED. **Per λ,** over the tied arm-A cells (both sizes, both baths, every spark):
+OPENS IN ROOM if some cell reads OPENS; FALLS BACK if every cell reads FALLS BACK;
+DAMAGED if none opens and some cell reads DAMAGED; else PARTIAL. Arm B and the untied control are reported by cell.
+*(Wording corrected 16 October, after launch and before any reading, to match `scripts/analyse_t65.py` as written and
+tested before the run; the first draft's "k past the peak" was left over from the hand-opened-patch design.)* Reported, not scored: the release per point at the
 end (3a if OPENS and whole); the share of the release the stores hold; the sweep at which open first passed N/2 (the
 front's pace); the number of separate open regions at that sweep; the width of the product read as O116 reads it
 (`scripts/read_endpoint_width.py`); and the leftover curled pieces, read as the sandbox look of 15 October read them
