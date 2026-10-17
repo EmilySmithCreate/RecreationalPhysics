@@ -590,3 +590,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   evening: T67, the feed at fixed rates (her prediction inferred from her words of the day, OPENS from one spot, and
   marked inferred until she confirms), and T65's held-out control at L = 16 (her prediction inferred as her stage-1
   word, PARTIAL). Her own words for either, before they are read, replace the inferred ones.
+- 2026-10-17, the owner, on T67's reading ("The registration names what it did not try: a rate that varies, and a
+  feed that arrives at many points"): "proceed with these." Registered and launched as PREREGISTRATION T68 the same
+  hour, with her prediction inferred (OPENS at some setting, from one spot) and marked so; her own word is asked for.
+- 2026-10-17, the owner: "is this all with lambda 1.25 or did we vary it?" *Ours:* the feed (T67) and the spark
+  (T65's untied control) ran at λ = 1.25 only; the bath runs had 1.25 and 1.40 (T53, T48); T56 scanned 1.10 to 1.25
+  under the tie; T57 ran 1.10 and 1.25. T68 scans 1.25, 1.40 and 1.60 (the slab's single-move wall 96 − 48λ falls
+  from 36 to 19.2 while flat space's stays at 64, O41).
+- 2026-10-17, the owner asked for a recap of two owed items (the curling-energy design brief's answers; the
+  programme page's claim wording of 17 October). Given in the reply of the same hour; nothing decided.

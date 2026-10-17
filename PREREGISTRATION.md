@@ -6282,3 +6282,76 @@ propose; untried here are a rate that varies and a feed that arrives at many poi
 Whether a feed whose rate varies, or one that arrives at many points, does better: the rates are fixed and the spot
 is one point, as she allowed "for starting". Anything about a black hole, a pull, or what sets the rate. Which
 direction is time. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
+
+## T68. Does the owner's untied slab open from a feed whose rate varies, or that arrives at many points, at three curling costs? (piece 5; rule 11's sixth use; the owner's "proceed with these" of 17 October; VISION Updates 58 and 59; ASSUMPTIONS O41, O118, O130, O132, O133; written 2026-10-17, 15:20 UTC by the clock, before any registered run; launched the same hour)
+
+### Why
+
+T67 read, at three sizes, that a feed at a fixed rate into one shared store or one point's store does not open the
+untied slab: the open points never gather into one region and the broken points reach a tenth first (O132, O133).
+Its registration named two things it did not try: a rate that varies, and a feed that arrives at many points. Under
+rule 11 the replacement for piece 5's mechanism is the owner's, and on 17 October she said of those two: "proceed
+with these." She asked in the same message whether the runs so far were all at λ = 1.25. They were, for the feed
+(T67) and the spark (T65's control); the bath runs had 1.25 and 1.40 (T53, T48). So this test also scans the
+curling cost.
+
+**Rule 11's one question, answered in writing.** The cheapest exact test that tells the possible causes of T67's
+failure apart (the feed never gathers energy at one place; or the slab's barrier is a completed patch that no local
+sequence of single moves descends to) is a listing of the lowest path out of the slab, which T54's completed-patch
+energies (O118) are not. It has not been read; it is owed (TASKS, 11 October, item 10). T68 does not wait for it: it
+tests the two protocol variables the owner named, on the tested runner, at the cost of one queue, and whichever way
+it reads the listing is still owed.
+
+### Disclosed
+
+No sandbox look preceded this registration. The runner is T67's with the schedule and the places added
+(`scripts/run_slab_feed.py`; T67's cells are unchanged and their seeds reproduce bit for bit, `tests/test_t68.py`).
+Two smoke runs of 300 sweeps in the session scratchpad checked that it runs end to end; nothing was read from them.
+Her prediction below is inferred from her words and is marked so.
+
+### What will be run
+
+| Choice | Value | Why this and not something else |
+|---|---|---|
+| Geometry | the untied slab 4 × L × L, one direction curled | X as it stands (Update 58) |
+| Curling cost | λ = 1.25, 1.40, 1.60 | Her question of 17 October; the slab is stuck for 1 < λ < 2 with a single-move wall of 96 − 48λ (36, 28.8, 19.2) against flat space's 64 (O41), so a larger λ makes opening cheaper beside breaking; 1.40 is where T53 and T48 saw the last direction open in a minority |
+| Schedule | fixed (the control, T67's); ramp (the rate rising linearly from zero to twice the mean over the run); pulse (bursts of 128 units, T65's spark, whenever the mean rate has accrued 128) | "A rate that varies": a slowly rising excitation (her H1) and infall in lumps, written as a cumulative feed F(t) with the same mean |
+| Place | shared (store 0 of a bath of N stores); spot (one point's store); spots (16 points' stores, chosen at random, each getting 1/16); all (every point's store, each getting 1/N) | "A feed that arrives at many points": one, sixteen, every; shared as T67's control |
+| Mean rate | r = 1/16, 1/4, 1 units a sweep | T67's three slower rates; 4 broke every cell within 500 sweeps and is dropped |
+| Sizes | L = 8 and 12 in one job; **held out: L = 16** | T67's; the held-out size runs after the two are read and the numbers written (rule 14) |
+| Stop rules, records, words | T67's, unchanged: OPEN at open ≥ 0.9 N, DAMAGED at damaged > 0.1 N, else TIME at 20,000 sweeps; records every 50 sweeps; per replica OPENS, FRONT, BREAKS, SITS; per cell the majority word; the final graph saved | Read side by side with T67 |
+| Replicas | 8 per cell; 36 jobs of 48 replicas (`cloud/queue/2026-10-17_t68_stage1.txt`; configs from `scripts/make_t68_configs.py`, seeds 20266901 to 20266936; read with `scripts/analyse_t68.py`; tests `tests/test_t68.py`) | |
+
+### Definitions, fixed now
+
+A cell is (λ, schedule, place, k, C, rate, N); its word is T67's majority rule over 8 replicas. Per (λ, N): OPENS if
+any cell reads OPENS or FRONT; BREAKS if every cell reads BREAKS; else MIXED. Reported, not scored: the number of
+replicas with a front in each cell, the first-escape sweeps, the regions at the stop, the store mean, the energy fed
+at the stop, and for the pulse cells how many pulses had landed. The drift must be below 10⁻⁶ in every row.
+
+**The size claim (rule 14):** scored at L = 16 alone, against words and ranges written from L = 8 and 12 as a dated
+amendment before L = 16 runs.
+
+### Predictions
+
+**The owner's, inferred from "proceed with these" and her picture (the black hole's infall supplies the push, one
+spot per seed), marked inferred until she confirms or replaces it:** OPENS at some setting: a single open region
+grows past half the slab before a tenth is broken, more readily under the pulse (infall in lumps) at one spot, and
+more readily at the larger curling cost. Her own word for the three curling costs is asked for before anything is
+read.
+
+**Ours, unverified, written before any run:** no (λ, N) reads OPENS. At λ = 1.25 every cell reads BREAKS or SITS
+with no replica reaching a front, as T67 (the schedule changes when the break comes, not whether: pulses break on
+less total energy, since each 128 lands at once and T65 showed what one 128 buys, a sprinkle of pairs; the ramp
+breaks later than fixed; "all" is a bath warming slowly and breaks later still, SITS at r = 1/16). At λ = 1.40 and
+1.60 the opened pairs are cheaper and the release per point larger, so a front may appear in a minority of replicas
+in the shared and "all" cells at the slowest rate, but no cell's majority reads FRONT or OPENS, and the broken
+points still reach a tenth first in most replicas. Reason: nothing in any of these protocols gathers energy into one
+place faster than the chain spends it on pairs; the spots and "all" places spread it thinner; the pulse gathers 128
+at once, which T65 read as too little at every size.
+
+### What this cannot show
+
+Whether a feed shaped by what a black hole eats (a rate set by the state of the slab itself, or by a pull) does
+better: the schedules are fixed functions of time. Anything about a black hole or a pull. Which direction is time.
+Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.

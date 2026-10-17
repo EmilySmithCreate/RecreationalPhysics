@@ -845,6 +845,13 @@ first; the daughter-universe interpretation after. In order, each registered bef
    broke at 6,200 sweeps, 800 early), no front in 96 of 96; her inferred OPENS fails, ours holds. T67 is complete: a
    feed at a fixed rate opens the untied slab at no rate and no size run. Owed by her: her replacement for the
    mechanism (rule 11, sixth use); the registration names a varying rate and a feed at many points as untried.*
+   *Her word, 17 October: "proceed with these." **T68 registered and launched** (PREREGISTRATION T68; 36 Batch jobs,
+   `cloud/queue/2026-10-17_t68_stage1.txt`): the feed's rate fixed, ramped or pulsed; arriving at one shared store,
+   one point, 16 points or every point; λ = 1.25, 1.40 and 1.60 (her question of the same message: T67 and T65 were
+   at 1.25 only); L = 8 and 12 in one job, L = 16 held out; her prediction inferred (OPENS at some setting, from one
+   spot) and marked so; ours, no (λ, N) reads OPENS. To read: `t68_*` into `cloud/fetch/request.txt`, accept, commit
+   unread, `python scripts/analyse_t68.py`; then `--write-prediction`, the dated amendment, her L = 16 word,
+   `python scripts/make_t68_configs.py --held-out`. Owed by her: her own word for T68 before it is read.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.
