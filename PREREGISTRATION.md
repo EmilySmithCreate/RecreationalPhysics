@@ -6355,3 +6355,69 @@ at once, which T65 read as too little at every size.
 Whether a feed shaped by what a black hole eats (a rate set by the state of the slab itself, or by a pull) does
 better: the schedules are fixed functions of time. Anything about a black hole or a pull. Which direction is time.
 Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
+
+## T69. The lowest path out of the owner's slab: does the energy released by the first steps pay for the next, or does the path climb? (piece 5; the owner's "I think yes, can we check?" of 17 October; VISION Updates 58, 60; ASSUMPTIONS O41, O118, O130, O132, O133; written 2026-10-17, 21:36 UTC by the clock, before any registered computation)
+
+### Why
+
+T54 priced completed square patches of the slab's opening, and its correction (O118) found that the states between the
+patches lie higher and that squares are not the cheap shapes, so the barrier to opening the slab's one curled direction
+is not known; a listing of the lowest path has been owed since 11 October. The owner's claim, 17 October, on being told
+that whether the released energy keeps paying for the next step is exactly that listing: "I think yes, can we check?"
+Her picture: after the first wall the energy released by each step pays for the next, as the two-direction front does.
+Ours: in the slab every shape found so far climbs (the square family by 60k − 4k², a line of columns by 12 a column at
+λ = 1.25), and T65's spark of 128, enough to pay any path with a saddle below 128 if the chain found one, fell back at
+three sizes.
+
+### Disclosed
+
+While the code was tested, one 40-state run at L = 6 (not a registered size) found a state with no broken point, eight
+or more points open and energy 48 below the slab at a saddle of 36, six steps from the slab; L = 6 is the size at which
+a patch meets its own image round the torus, which O118 excluded. One 60-state timing run at L = 8, λ = 1.25 reached a
+saddle of 44 with no clean milestone and showed the slab's cheapest move (36) opening twelve points and breaking four.
+Both are disclosed here; neither is a result; the stage below runs fresh with its budget. The owner's prediction was
+given in words before either run.
+
+### What is computed
+
+| Choice | Value | Why |
+|---|---|---|
+| Start | the untied slab 4 × L × L, λ = 1.10, 1.25, 1.40 | X as it stands; her question of 17 October on smaller curling costs; 1.40 is where T48 saw a full opening in a minority |
+| Steps | the kernel's switch, both side-0 points within `near` = 1 of a point the path has changed (the seed and its neighbours at the start), valid by the hard-core rule | An opening grows from where it is; the chain's own move |
+| Search | best-first on the saddle (the highest energy above the slab met along the path), so the first time a state with a property is popped its saddle is the lowest over every path in the move set; children above the cap of 128 (T65's spark) are not kept; 5,000 states popped per cell | Exact for every milestone whose saddle lies at or below the exhausted saddle |
+| Sizes | L = 8; **held out L = 12**, run after L = 8 is read and its numbers written (rule 14) | |
+| Energy | H = 16(3N − S) + 4λX computed on the points within one step of the switch, checked against the full energy (`tests/test_lowest_path.py`) | |
+| Script | `scripts/exact_lowest_path.py`; configs `t69_lowest_path_l8`, `t69_lowest_path_l12` | Written and tested before the computation |
+
+### Definitions, fixed now
+
+Per cell (L, λ): **S(m)**, the lowest saddle at which a state with at least m points at local dimension 3 and no point
+above 3 is popped, for m = 2, 4, 8, 12, 16, 24, 32, 48, 64, with that state's energy above the slab and its step count;
+beside it the same with broken points allowed, reported and not scored; the **exhausted saddle**, the saddle of the last
+state popped, below which every state the move set reaches has been seen. A milestone is REACHED if S(m) exists.
+Per cell: **PAYS** if, over the milestones reached, S(m) never exceeds S(2) and some clean state lies at or below the
+slab's energy; **CLIMBS** if S(m) is larger at each of at least three successive milestones reached than at the one
+before; **MIXED** otherwise; **NOT REACHED** if fewer than three milestones are reached within the budget. Reported,
+not scored: the energy and steps at each milestone, the exhausted saddle, the states seen.
+
+**The size claim (rule 14):** scored at L = 12 alone against S(m) and the word written from L = 8 as a dated amendment
+before L = 12 runs.
+
+### Predictions
+
+**The owner's (17 October, her words "I think yes"):** PAYS. After the first wall the released energy pays for the next
+steps: S(m) stays at the first wall as m grows, and a clean state below the slab's energy is reached.
+
+**Ours, unverified, written before the computation:** CLIMBS at every λ. S(2) = 36 or a little above at λ = 1.25 (the
+cheapest move breaks points, so the first clean opening costs more than the single-move wall); then S(m) rises by about
+12 for every four further points opened at λ = 1.25 (the line of columns, O118), by about 14 at 1.10 and 10 at 1.40; no
+clean state at or below the slab's energy is reached within the cap of 128 at L = 8 or at L = 12. The L = 6 state of
+the disclosure is a wrap round the small torus and does not appear at L = 8. Reason: the slab's release per point
+(4(λ − 1), 1 at 1.25) is far below any move that opens, so energy only comes back once a region is complete, and no
+completed region smaller than the whole torus lies below the slab in any family priced (O118).
+
+### What this cannot show
+
+Any path the move set excludes: moves with a point farther than one step from the changed region, or more than one
+switch at a time. Anything above the cap of 128. Whether the chain, which samples moves at random, finds the lowest
+path even where one exists. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.

@@ -704,3 +704,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   no higher than the slab is about 7.5 columns and 225 units at 1.25, the same at L = 8, 12 and 16, with the states between
   lying higher (T54, O118). Unknown: the lowest path to that patch (owed), and whether a slab that re-curled from flat
   space behaves as the built one does (no run has made one).
+- 2026-10-17, later, the owner, on whether a path exists along which the released energy keeps paying for the next
+  step: "I think yes, can we check?" Registered as PREREGISTRATION T69 with her prediction PAYS and ours CLIMBS before
+  the computation; the search is written and tested (`scripts/exact_lowest_path.py`). Then: "if it could [gather a few
+  hundred units], with the flow rate energy for example, would it net positive energy?" *Ours, exact:* yes, if it
+  finishes: a wall is a hill, not a toll (O71), the energy paid to reach the patch comes back into the stores on the far
+  side, and the whole curled direction then releases 4(lambda - 1) per point, 256 for the 256-point slab at 1.25; two
+  conditions, that it finishes (T48 at 1.40: 5 of 16 fully, 7 damaged) and that the new space has room (T9, O123).
