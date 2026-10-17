@@ -697,3 +697,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   against a wall of 12 still runs a front because the moves along a seam cost less than the first; in three directions each
   completed patch is a dip of its own (O118), so every extension is paid for again, and whether a path exists along which
   the release keeps paying is the lowest-path listing still owed (TASKS, 11 October, item 10).
+- 2026-10-17, later, the owner: "is [the single move] the barrier for opening the 3rd direction on the folded slab?"
+  *Ours:* no. The single move (36 at lambda = 1.25) opens one pair, which closes again (T65: a spark of 128 at three sizes,
+  a sprinkle of pairs, FALLS BACK). In two directions the front is a ring of four, fixed in size, so the first move is the
+  whole barrier (O103 (b)); in the slab an opened patch has a boundary that grows with it, and the smallest completed patch
+  no higher than the slab is about 7.5 columns and 225 units at 1.25, the same at L = 8, 12 and 16, with the states between
+  lying higher (T54, O118). Unknown: the lowest path to that patch (owed), and whether a slab that re-curled from flat
+  space behaves as the built one does (no run has made one).
