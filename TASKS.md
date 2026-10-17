@@ -840,6 +840,11 @@ first; the daughter-universe interpretation after. In order, each registered bef
    the same hour with its numbers written first (PREREGISTRATION T67, amendment of 17 October; 3 jobs,
    `cloud/queue/2026-10-17_t67_heldout.txt`). To read: `t67_*l16` into the fetch request, accept, commit unread,
    `python scripts/analyse_t67.py`. Owed by her: her own word for L = 16 before it is read.*
+   *Held-out size read 17 October, 08:32 UTC (O133): every cell's word as written (SITS at r = 1/16 in all three
+   modes, BREAKS at the rest), the medians inside the written ranges in 11 cells of 12 (the spot feed at r = 1/4
+   broke at 6,200 sweeps, 800 early), no front in 96 of 96; her inferred OPENS fails, ours holds. T67 is complete: a
+   feed at a fixed rate opens the untied slab at no rate and no size run. Owed by her: her replacement for the
+   mechanism (rule 11, sixth use); the registration names a varying rate and a feed at many points as untried.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

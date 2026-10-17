@@ -6235,6 +6235,48 @@ until she gives her own word**, which replaces it if it comes before the cells a
 provided: the smaller sizes read, the numbers written. To read: `t67_*l16` into `cloud/fetch/request.txt`, accept,
 commit unread, `python scripts/analyse_t67.py`.
 
+### Reading of the held-out size (L = 16, N = 1,024), 2026-10-17, 08:32 UTC by the clock (`python scripts/analyse_t67.py`; the three cells accepted unread and committed first, 058696cb; every row's drift 0)
+
+**Every cell's word is as written: SITS at r = 1/16 in all three modes (8 of 8 replicas each), BREAKS at r = 1/4, 1
+and 4 in all three modes (8 of 8 each); no replica of 96 reaches a front or completes.** Per size: N = 1,024 MIXED,
+as the words imply. The medians fall inside the written ranges in 11 cells of 12; the one miss is named: the spot
+feed at r = 1/4 broke at a median of 6,200 sweeps, below the 7,000 to 14,000 written (its median fed at the stop,
+1,550, is inside the 1,400 to 3,500 written). So, by the letter of the amendment, **AS PREDICTED in every word and in
+the numbers of 11 cells of 12, with one median stop 800 sweeps early.** The size claim stands: a feed at these rates
+opens the untied slab at no size run (N = 256, 576, 1,024), and a larger slab outlasts the slowest feed only because
+the damage threshold grows with N while the feed does not. The owner's prediction for L = 16, inferred from stage 1
+(OPENS at some rate, from one spot) and never replaced by her own word, fails.
+
+| cell (N = 1,024) | word | median stop | written | median fed | written | first escape (median) | regions at stop |
+|---|---|---|---|---|---|---|---|
+| shared C = N, r = 1/16 | SITS 8/8 | 20,000 (limit) | SITS | 1,250 | | 1,050 | 53 |
+| shared C = N, r = 1/4 | BREAKS 8/8 | 8,500 | 7,000 to 14,000 | 2,125 | 1,400 to 3,500 | 350 | 69 |
+| shared C = N, r = 1 | BREAKS 8/8 | 1,750 | 1,500 to 2,600 | 1,750 | 1,400 to 3,500 | 150 | 73 |
+| shared C = N, r = 4 | BREAKS 8/8 | 500 | 350 to 650 | 2,000 | 1,400 to 3,500 | 100 | 75 |
+| shared C = 4N, r = 1/16 | SITS 8/8 | 20,000 (limit) | SITS | 1,250 | | 1,150 | 42 |
+| shared C = 4N, r = 1/4 | BREAKS 8/8 | 12,850 | 7,000 to 14,000 | 3,212 | 1,400 to 3,500 | 400 | 66 |
+| shared C = 4N, r = 1 | BREAKS 8/8 | 1,950 | 1,500 to 2,600 | 1,950 | 1,400 to 3,500 | 150 | 67 |
+| shared C = 4N, r = 4 | BREAKS 8/8 | 500 | 350 to 650 | 2,000 | 1,400 to 3,500 | 100 | 68 |
+| spot, r = 1/16 | SITS 8/8 | 20,000 (limit) | SITS | 1,250 | | 800 | 39 |
+| spot, r = 1/4 | BREAKS 8/8 | **6,200** | 7,000 to 14,000 | 1,550 | 1,400 to 3,500 | 300 | 56 |
+| spot, r = 1 | BREAKS 8/8 | 1,750 | 1,500 to 2,600 | 1,750 | 1,400 to 3,500 | 150 | 68 |
+| spot, r = 4 | BREAKS 8/8 | 500 | 350 to 650 | 2,000 | 1,400 to 3,500 | 100 | 73 |
+
+**Reported, not scored.** The SITS cells are, as at N = 576, breaks the run did not live to see: at the limit the
+broken count is 44.5 (shared C = N), 31 (shared C = 4N) and 76 (spot) against a threshold of 102.4, and it rose
+through the run in every cell (the spot cell: 21, 34, 51.5, 76 at 5,000 to 20,000 sweeps). At the break the energy
+fed per point is 1.5 to 3.1 (1,550 to 3,212 units), the same band as at the two smaller sizes. The largest open
+region at any stop is 66 points of 1,024; the open points sit in 39 to 75 separate regions. The first-escape medians
+(100 to 1,150 sweeps) are inside the 100 to 1,500 written, and the regions at the stop (39 to 75) are inside the 40
+to 90 written except the spot r = 1/16 cell at 39. The end graphs are saved and not read.
+
+**What T67 says, in full, now that all three sizes are read (ours):** in this family a feed at a fixed rate into a
+shared bath or one point's store does not open the untied slab at any rate from 1/16 to 4 units a sweep or any size
+from 256 to 1,024 points. It warms the stores until pairs open and break alike; the open points never gather into one
+region, the broken ones reach a tenth first, and the only effect of a slower feed or a larger slab is that the break
+comes later. Rule 11's sixth use stands as written in the reading of stage 1: the replacement is the owner's to
+propose; untried here are a rate that varies and a feed that arrives at many points.
+
 ### What this cannot show
 
 Whether a feed whose rate varies, or one that arrives at many points, does better: the rates are fixed and the spot

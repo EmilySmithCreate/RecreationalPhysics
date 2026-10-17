@@ -3858,3 +3858,23 @@ author and should be disclosed as such in any submission. Physics estimates mark
     flat space's (64) are both far below the completed patch that grows (about 225 at λ = 1.25, O118), so what the
     warmth buys first is pairs, opened and broken alike; nothing in the protocol gathers energy into one place.
     Whether a feed that arrives at many points, or one whose rate varies, changes that is not run.
+
+- **O133 T67, the held-out size, read: at N = 1,024 every cell's word is as written before it ran (SITS at the
+  slowest feed in all three modes, BREAKS at the other three rates), the medians inside the written ranges in 11
+  cells of 12, and no replica of 96 reaches a front; so a feed at a fixed rate opens the owner's untied slab at no
+  rate from 1/16 to 4 units a sweep and no size from 256 to 1,024 points (17 October 2026, 08:32 UTC by the clock).
+  Measured, pre-registered, scored at the held-out size alone (rule 14); her inferred OPENS fails; ours holds in
+  every word with one median stop early.** (PREREGISTRATION T67, "Reading of the held-out size", the cell table
+  against the amendment's numbers; `scripts/analyse_t67.py`; `results/t67_*_l16`; three Batch jobs of 32 replicas
+  each, accepted unread and committed first, 058696cb. Six links carry VISION Update 24's caveat.)
+  - **The one miss, named:** the spot feed at r = 1/4 broke at a median of 6,200 sweeps where 7,000 to 14,000 was
+    written; its energy at the break (1,550) is inside the written range. Everything else written held: the words in
+    12 cells of 12, the stop and fed medians in 11, the first escapes within 100 to 1,500 sweeps.
+  - **What SITS is at this size too:** a break the run did not live to see; the broken count rose through every
+    SITS cell and reached 76 of the 102 threshold in the spot cell. The slab breaks when 1.5 to 3.1 units per point
+    have been fed at all three sizes.
+  - **What the three sizes say together (ours):** a feed warms the stores until pairs open and break alike; the open
+    points never gather into one region (the largest at any stop 66 of 1,024, in 39 to 75 separate regions); a
+    slower feed or a larger slab only delays the break. The size claim of the registration stands. Rule 11's sixth
+    use on piece 5 (O132) is unchanged: the owner's replacement is hers to propose; a varying rate and a feed arriving
+    at many points are the untried variants the registration names.
