@@ -5954,6 +5954,19 @@ of rule 14 needs it. One cloud job, `cloud/queue/2026-10-16_t65_heldout.txt`, co
 from her word for the control at stage 1, PARTIAL, and marked inferred until she confirms or replaces it before the
 cell is read.** Ours stands as written above: FALLS BACK in at least 7 of 8 at each bath.
 
+### Reading of the held-out size (L = 16, N = 1,024, the untied control), 2026-10-17, 02:14 UTC by the clock (`python scripts/analyse_t65.py`; the cell accepted unread and committed first, df81fd9a)
+
+**AS PREDICTED. FALLS BACK in 8 of 8 replicas at each bath** (C = 1,024 and 4,096; spark 128; 30,000 sweeps). At the
+end a median of 16 (C = N) and 4 (C = 4N) points are open, 24 at most, out of 1,024; at least 992 points are still
+curled in every replica; the largest open region is 2 points; no replica came near half open; the damage is at most 8
+points. Both numbers written in the amendment above hold (at least 7 of 8 FALLS BACK; a median of 0 to 20 open
+points; none past half). **The size claim stands: one spark of 128 does not open the untied slab at any size run
+(N = 256, 576, 1,024).** The owner's prediction for L = 16, inferred from her PARTIAL for the control at stage 1 and
+never replaced by her own word, fails: no cell reads PARTIAL. Ours holds. Reported, not scored: the stores hold 2 to
+3 % of the slab's release; the release per point is negative (−0.05 and −0.03: the spark's energy sits in the stores
+and a few opened pairs, nothing was released). Nothing new is said about the mechanism: the three sizes agree, and
+the opening a spark buys is the sprinkle of pairs O130 read from the stage-1 graphs.
+
 ### What this cannot show
 
 How the patch comes to be: it is opened by hand, which is the push the record says a single move cannot supply; a
@@ -6149,6 +6162,78 @@ every rate); the first escape comes within 100 to 400 sweeps at r ≥ 1/4; the s
 the shared one. Reason, ours: a feed is a bath warming slowly; the slab's single-move wall is 36 and flat space's is
 64 (O41), so the stores reach the energy that breaks pairs long before anything gathers the completed patch of about
 225 units that grows (O118); the look saw exactly that. The held-out ranges are written after stage 1, not now.
+
+### Reading of stage 1 (L = 8 and 12), 2026-10-17, 02:14 UTC by the clock (`python scripts/analyse_t67.py`; all six cells accepted unread and committed first, df81fd9a; every row's drift 0)
+
+**No replica OPENS and no replica reaches a FRONT, in 96 of 96. BREAKS in 22 cells of 24; SITS in 2. Per size:
+N = 256 BREAKS; N = 576 MIXED.** The two SITS cells are the slowest feed (r = 1/16 a sweep) into the shared bath at
+N = 576, C = N and C = 4N: all 8 replicas of each ran to the 20,000-sweep limit with 1,250 units fed and the damage
+below a tenth (a median of 31.5 and 24.5 broken points against the threshold of 57.6), while the same rate at
+N = 256 broke the slab at a median of 7,525 and 10,200 sweeps, and the spot feed at N = 576 broke 7 of 8 at a median
+of 15,075. Read along the records (reported, not scored), the SITS replicas are not resting: the broken count rises
+through the run (shared C = N: 17.5, 22.5, 31.0, 31.5 at 5,000, 10,000, 15,000, 20,000 sweeps) and the open count with
+it, in about 29 separate regions whose largest is 8 to 16 points. So SITS here is a break the run did not live to
+see: the damage threshold is a tenth of N while the feed is so many units a sweep, and at the break the energy fed
+per point is 1.6 to 3.1 at both sizes (428 to 800 units at N = 256; 906 to 1,675 at N = 576).
+
+| cell | word | median stop | median fed | first escape (median) | regions at stop (median) |
+|---|---|---|---|---|---|
+| shared C = N, r = 1/16, 1/4, 1, 4; N = 256 | BREAKS ×4 | 7,950; 1,900; 500; 200 | 497; 475; 500; 800 | 850; 250; 150; 100 | 16; 20; 16; 19 |
+| shared C = N; N = 576 | SITS; BREAKS ×3 | 20,000; 4,950; 1,050; 300 | 1,250; 1,238; 1,050; 1,200 | 850; 300; 150; 100 | 31; 34; 39; 39 |
+| shared C = 4N; N = 256 | BREAKS ×4 | 10,650; 2,700; 550; 200 | 666; 675; 550; 800 | 1,100; 350; 150; 100 | 16; 19; 20; 20 |
+| shared C = 4N; N = 576 | SITS; BREAKS ×3 | 20,000; 6,700; 1,250; 300 | 1,250; 1,675; 1,250; 1,200 | 1,150; 400; 150; 100 | 30; 41; 36; 42 |
+| spot; N = 256 | BREAKS ×4 | 6,950; 1,650; 450; 200 | 434; 412; 450; 800 | 800; 300; 150; 100 | 15; 14; 22; 21 |
+| spot; N = 576 | BREAKS ×4 (7 of 8 at r = 1/16) | 15,350; 3,650; 1,000; 300 | 959; 912; 1,000; 1,200 | 800; 300; 150; 100 | 27; 30; 38; 39 |
+
+**What every replica did** (the records; the end graphs are saved and not yet read with `read_t65_pieces.py`): the
+first escape comes early at every rate (medians 100 to 1,150 sweeps, sooner the faster the feed); the open points then
+accumulate as a sprinkle of small separate regions, 14 to 42 of them at the stop with the largest a median of 8 to 30
+points and never past a third of the slab (the most open at any stop: 87 of 256, 176 of 576); the broken points
+accumulate beside them and reach a tenth first. The spot feed breaks on less energy than the shared one at both
+sizes. The store mean at the break is 0.15 to 1.04 (shared) and 0.27 to 0.92 (spot); at the SITS cells' end it had
+reached 1.45 (C = N) and 0.40 (C = 4N).
+
+**Predictions scored.** The owner's (inferred, never replaced by her own word): OPENS at some rate, from one spot,
+a single region past half before a tenth is broken: **fails**; nothing opened, at any rate, shared or at one point.
+Ours: "BREAKS in every cell at both sizes" **fails by the letter** at N = 576 (two SITS cells); "no replica reaches
+a front" holds; "the slowest rate stops DAMAGED later, median 4,000 to 12,000 sweeps" holds at N = 256 (6,950 to
+10,650) and fails at N = 576 (15,350 and two runs to the limit); "median fed at the stop between 250 and 800 at every
+rate" holds at N = 256 and fails at N = 576 (906 to 1,675): we wrote a fixed range where the damage threshold scales
+with N; "the first escape within 100 to 400 sweeps at r ≥ 1/4" holds (100 to 400); "the spot mode breaks on less
+energy than the shared one" holds. Our reason stands as written: a feed is a bath warming slowly, and the stores
+reach the energy that breaks pairs long before anything gathers the completed patch that grows.
+
+**Rule 11, sixth use on piece 5.** Previous claim (the owner's, 16 October): the push is "a flow with various rates
+based on what black hole eats and so it's one spot per seed", and it opens the slab. Failed because: at every rate
+from 1/16 to 4 units a sweep, into a shared bath or one point's store, the feed opens a sprinkle of small separate
+regions and breaks a tenth of the points before any region passes half; the slowest feed at the larger size only
+postpones the break past the run's end, with the damage still rising. Replacement: **hers to propose; none is
+written here.** What the registration itself names as untried: a rate that varies, and a feed that arrives at many
+points. New falsification test: the held-out size as registered (below), then whatever she proposes, registered
+with her prediction.
+
+### Amendment, 2026-10-17, after stage 1 was read: the numbers for the held-out size (rule 14), and its launch
+
+Written from L = 8 and 12 alone, before L = 16 (N = 1,024) runs. The reasoning is the one fact above that holds at
+both sizes: the slab breaks when 1.6 to 3.1 units per point have been fed, so at N = 1,024 the break needs about
+1,650 to 3,200 units, which the feed of 1/16 a sweep cannot deliver in 20,000 sweeps (1,250). **Per cell at
+L = 16:** shared C = N and C = 4N at r = 1/16: **SITS**, every replica at the limit with the damage still below a
+tenth and rising; spot at r = 1/16: **SITS** in a majority (the break, at 15,350 sweeps at N = 576, falls past the
+limit); every cell at r = 1/4, 1 and 4: **BREAKS**, with median stops of 7,000 to 14,000 (r = 1/4), 1,500 to 2,600
+(r = 1) and 350 to 650 (r = 4) sweeps and a median fed at the stop of 1,400 to 3,500 at those three rates. No
+replica reaches a front; the first-escape medians 100 to 1,500 sweeps; 40 to 90 open regions at the stop. **The
+size claim, scored at L = 16 alone:** a feed at these rates opens the untied slab at no size run, and a larger slab
+outlasts the slowest feed only because the damage threshold grows with N while the feed does not. AS PREDICTED if
+every cell's word matches and the medians fall inside the ranges; otherwise the cells that miss are named.
+The mechanical ranges `analyse_t67.py --write-prediction` prints (the stage-1 extremes) are the loose form of the
+same numbers.
+
+**The owner's prediction for L = 16 is inferred from stage 1 (OPENS at some rate, from one spot) and marked so
+until she gives her own word**, which replaces it if it comes before the cells are read. **Launched 2026-10-17,
+02:20 UTC by the clock**, three cloud jobs (`cloud/queue/2026-10-17_t67_heldout.txt`; configs
+`t67_shared_cn_l16`, `t67_shared_c4n_l16`, `t67_spot_l16`, seeds 20266801 to 20266803), as the registration
+provided: the smaller sizes read, the numbers written. To read: `t67_*l16` into `cloud/fetch/request.txt`, accept,
+commit unread, `python scripts/analyse_t67.py`.
 
 ### What this cannot show
 

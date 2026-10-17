@@ -104,7 +104,7 @@ def main(results="results", write_prediction=False):
         print("N = %d: %s" % (n, size_verdict(words)))
     if write_prediction:
         print("\nHeld-out numbers (rule 14), from stage 1 alone, per (mode, C, rate): the word at both sizes, and the range of the median stop sweep and median fed at stop across the stage-1 sizes:")
-        keys = sorted({(k[0], k[1] if k[0] == "spot" else k[1] // k[3], k[2]) for k in table})
+        keys = sorted({(k[0], 1 if k[0] == "spot" else k[1] // k[3], k[2]) for k in table})
         for mode, cper, rate in keys:
             rows = [c for k, c in table.items() if k[0] == mode and k[2] == rate and (mode == "spot" or k[1] // k[3] == cper)]
             print("%s C=%s r=%g: words %s; median stop %d to %d; median fed %.0f to %.0f"

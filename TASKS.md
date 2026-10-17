@@ -833,6 +833,13 @@ first; the daughter-universe interpretation after. In order, each registered bef
    `--write-prediction`, the dated amendment, her L = 16 word, `python scripts/make_t67_configs.py --held-out`.*
    *T65's held-out control at L = 16 launched the same evening on her "if the untied control is still relevant run
    it" (1 job, `cloud/queue/2026-10-16_t65_heldout.txt`; her prediction inferred as PARTIAL, ours FALLS BACK).*
+   *Read 17 October (O130 addendum; O132). T65's held-out: FALLS BACK in 16 of 16, AS PREDICTED; one spark opens the
+   slab at no size run. T67 stage 1: no replica of 96 opens or reaches a front; BREAKS in 22 cells of 24, SITS in 2
+   (the slowest feed at N = 576, out of time with the damage still rising); her inferred OPENS fails, ours fails by
+   the letter at N = 576. Rule 11's sixth use: her replacement is hers to propose. The held-out size L = 16 launched
+   the same hour with its numbers written first (PREREGISTRATION T67, amendment of 17 October; 3 jobs,
+   `cloud/queue/2026-10-17_t67_heldout.txt`). To read: `t67_*l16` into the fetch request, accept, commit unread,
+   `python scripts/analyse_t67.py`. Owed by her: her own word for L = 16 before it is read.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

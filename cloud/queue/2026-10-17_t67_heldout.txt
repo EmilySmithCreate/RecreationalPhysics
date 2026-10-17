@@ -1,0 +1,8 @@
+# T67 held-out size (PREREGISTRATION T67, amendment of 2026-10-17: the numbers for L = 16 written from L = 8 and 12
+# alone, rule 14, before this stage runs): the owner's untied slab 4 x 16 x 16 (N = 1024), lambda 1.25, sealed, fed at
+# 1/16, 1/4, 1 and 4 units a sweep into store 0 of a shared bath (C = N and 4N) or into one point's own store; 8
+# replicas; up to 20,000 sweeps read every 50; the final graph saved. 3 jobs. Seeds 20266801 to 20266803. Her prediction
+# for L = 16 is inferred from stage 1 (OPENS at some rate, from one spot) and marked so until she gives her word.
+run_slab_feed t67_shared_cn_l16
+run_slab_feed t67_shared_c4n_l16
+run_slab_feed t67_spot_l16
