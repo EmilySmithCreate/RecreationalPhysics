@@ -22,7 +22,7 @@ with it is our family around the published one, never combinatorial quantum grav
 4. **The knots at a curling cost of zero (question 10).** Her lean: FREE. Her instruction: she is not interested in a
    curling cost of zero; where she has no intuition the prediction is to be set from the research. Not run; not a priority.
 
-## What is open (the author's to decide; the brief cannot be finished without 1 and 6)
+## What is open (the author's to decide; the brief cannot be finished without 1)
 
 1. **What carries curling energy.** Each relic as its own stored curling cost (a column holds 14 at λ = 1.25), stores at
    the relic filled from outside, or both?
@@ -31,12 +31,11 @@ with it is our family around the published one, never combinatorial quantum grav
    unsnap other points at a seam?" That is a question about the opening, not the fold, and it is recorded under piece 5 in
    the notebook (17 October) with what the toy already says. For the fold itself the sandbox look says: under the strict
    rule the fold's size is set by what the stores pay out, and most of it is never paid; a fold does not grow of itself.
-6. **What counts as a fold.** Her picture (17 October): "it's more like a spiral in 3d a la walter russel." *Ours:* the
-   toy's one spiral is the opened tube's seam, shifted by two, running as spirals round the doughnut (O116); a fold read
-   that way is a region where the curled direction's seam shifts along the open ones, a twisted torus. What to measure
-   (the shift per turn; the region's size; whether it outlives the draining of the stores) is still hers to say. Our
-   earlier proposal stands beside it: a curled region attached to the relic that outlives the stores and is larger than the
-   completed patch of T54 (about 7.5 columns at λ = 1.25, O118).
+6. **What counts as a fold: decided (VISION Update 61, her "agree").** A connected region of open space whose points
+   have dropped to two open directions, at least as large as T54's completed patch (about 7.5 columns at λ = 1.25, O118),
+   and still there after the stores are empty. The seam's shift along the open directions is read from the wiring and
+   reported, not scored, until a spiral is seen: her picture (17 October) is "more like a spiral in 3d a la walter russel",
+   and the toy's one spiral so far is the opened tube's seam, shifted by two, running as spirals round the doughnut (O116).
 
 ## Relics: what is known (exact and measured; the record's entries named)
 

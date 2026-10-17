@@ -676,3 +676,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   fixed N the slab's product cannot be a cubic torus at all (no three sides of 6 or more multiply to 144 or 256), the
   three-direction form of what O116 found for the tube: it opens into something flat point by point whose shape is not a
   wider torus.
+- 2026-10-17, later, the owner: "agree" to the proposed definition of a fold (a connected region of open space whose
+  points have dropped to two open directions, at least as large as T54's completed patch, still there after the stores are
+  empty; the seam's shift reported, not scored). Decided; VISION Update 61; the brief's question 6 is closed. Then: on the
+  64-point knot given 1024 units ending as the random phase, "what would this look like if it is contained in a flat space
+  3d?" *Ours, from the record:* a 6-cube cannot be wired into flat space (all six links at every point are used inside it),
+  so "contained" can only mean a separate piece sharing the stores, and then the energy does not stay in the knot: the
+  stores carry it into the flat space around, which is T57's and T34's setting. What that looks like, read from the
+  wiring (O82, O114): points with more than three open directions, links reaching past their neighbours, squares lost,
+  a scrambled pocket where the lattice was; up to twice a direction's worth of energy leaves about half the points broken
+  (T57, 582 of 640 MELTED), and when the energy can drain the pocket heals, faster in three directions than in two (T66),
+  with named points leaving a few flickering scars (T42). In two directions the same pocket stays melted while its energy
+  has nowhere to go (T27) and heals when it leaks. Nothing curls in any of it. So a melted knot inside flat space would be
+  a broken pocket that heals as its energy spreads, not a knot and not a black hole.

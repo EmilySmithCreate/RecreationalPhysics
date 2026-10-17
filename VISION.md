@@ -1756,3 +1756,12 @@ is `docs/design/curling_energy_brief.md`; her words are in `sandbox/NOTEBOOK.md`
   instruction that a curling cost of zero is not of interest and that where she has no intuition the prediction is set
   from the research and marked ours.
 - **Moot:** question 7 of 15 October (whether a broken point pays the tie); the tie is withdrawn (Update 58).
+
+Update 61 (2026-10-17, 16:30 UTC by the clock): **DECISION (the author's, "agree"): what counts as a fold.** A fold is a
+connected region of open space whose points have dropped to two open directions (one curled), at least as large as the
+smallest completed patch that lies no higher than the slab (T54, O118; about 7.5 columns at λ = 1.25), and still there
+after the stores are empty. The seam's shift along the open directions is read from the wiring and reported, not scored,
+until a spiral (her picture of 17 October) is seen. The last condition is the one that carries her claim: X is "stable for
+now", so a curled region that needs the stores to hold it up is not X. This closes question 6 of the curling-energy brief
+(`docs/design/curling_energy_brief.md`); question 1, what carries curling energy, is the one still open before anything
+registered runs with it.
