@@ -297,3 +297,13 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   breaks it, the slow one sits): the clean half holds, the "slow one sits" half fails, the slowest feed moved it
   too. Reason, ours: each completed patch is a dip (O118), so every extension has to be paid for again, and the
   feed pays for breaks as readily. One size, one λ, three replicas, a look. Not promoted.
+- 2026-10-17. What happens to one 64-point knot given lots of energy (the owner's question, NOTEBOOK same day)?
+  (`scripts/run_sealed_curled_d.py` on a scratchpad config: one 6-cube, lambda = 1.25, sealed, named points, a spark of
+  0, 64, 192, 512 or 1024 in one store of a shared bath of 2N, 4 replicas, 5,000 sweeps; output in the scratchpad, not
+  in `results/`.) It opens at once at every energy (the way downhill, O41), and what it ends as is set by the energy.
+  With nothing added: 1 of 4 fully open (64 at d = 3), 3 of 4 rest at 48 open and 16 still two-curled, the T49 picture.
+  At 64 added (one direction's worth): the same, with 8 broken points in 2 of 4. At 192 (the knot's whole release again):
+  20 to 27 open, 13 to 35 half-curled, 3 to 15 broken: a mess, neither open nor curled. At 512: 12 to 16 open, 45 to 50
+  broken. At 1024: 4 to 7 open, 56 to 58 broken, the random phase. So more energy never helps a knot open: past about
+  one direction's worth it breaks instead, as flat space does (T57) and the slab does under a feed (T67). One lambda, one
+  size, four replicas, named points; a look. Not promoted.

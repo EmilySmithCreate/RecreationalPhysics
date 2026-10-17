@@ -647,3 +647,19 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   point in F so that the count is set by the energy and not by hand (the published precedent is dynamical triangulations,
   where the cost per building block plays the cosmological constant's part; claim 3). That is a new knob under S1 and
   needs her dated decision before anything is built; nothing is built on this message.
+- 2026-10-17, later, the owner, three questions. (a) On the fold's measurable form (shift per turn, size, outliving the
+  stores): "idk what do u think." *Ours, proposed for her to adopt or replace (the brief, question 6):* a fold is a
+  connected region of open space whose points have dropped to two open directions (one curled), at least as large as the
+  completed patch of T54 (so it is past the barrier and not a flicker), that is still there after the stores are empty;
+  the seam's shift is read from the wiring and reported, not scored, until a spiral is seen. The last condition is the
+  one that matters: X is "stable for now", so a curled region that needs the stores to hold it is not X. (b) "the fully
+  curled 6-cube is stuck ... that mattered when X was fully curled -> so it doesnt matter now?" *Ours:* for opening X
+  (piece 5) it does not, since X is the slab. It still matters in two places: for the fold (piece 11), because above
+  lambda = 1.2 a fully curled region cannot even rest, so at 1.25 a black hole in the toy can curl at most two directions
+  and never all three, which fits her "two directions still open and one curled"; and for her knot idea, because at
+  1.25 a 6-cube is not a thing that can sit anywhere, it falls apart at once (LOG, same day). (c) "what would happen to a
+  64 given lots of energy?" *Ours, from the sandbox look (LOG, same day):* it opens at once at every energy, and more
+  energy makes it worse, not better: with nothing or one direction's worth added it ends mostly open (fully in 1 of 4),
+  with its whole release again added it is a mess of open, half-curled and broken points, and with eight times its
+  release it is the random phase. Past about one direction's worth, energy breaks the knot instead of opening it, as it
+  breaks flat space (T57) and the slab (T67).
