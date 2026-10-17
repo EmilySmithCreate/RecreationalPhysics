@@ -31,9 +31,12 @@ with it is our family around the published one, never combinatorial quantum grav
    unsnap other points at a seam?" That is a question about the opening, not the fold, and it is recorded under piece 5 in
    the notebook (17 October) with what the toy already says. For the fold itself the sandbox look says: under the strict
    rule the fold's size is set by what the stores pay out, and most of it is never paid; a fold does not grow of itself.
-6. **What counts as a fold.** Proposed (ours): a curled region attached to the relic that outlives the draining of the
-   stores and is larger than the smallest completed patch that lies no higher than the slab (T54, O118; about 7.5 columns at
-   λ = 1.25). Hers to confirm or replace.
+6. **What counts as a fold.** Her picture (17 October): "it's more like a spiral in 3d a la walter russel." *Ours:* the
+   toy's one spiral is the opened tube's seam, shifted by two, running as spirals round the doughnut (O116); a fold read
+   that way is a region where the curled direction's seam shifts along the open ones, a twisted torus. What to measure
+   (the shift per turn; the region's size; whether it outlives the draining of the stores) is still hers to say. Our
+   earlier proposal stands beside it: a curled region attached to the relic that outlives the stores and is larger than the
+   completed patch of T54 (about 7.5 columns at λ = 1.25, O118).
 
 ## Relics: what is known (exact and measured; the record's entries named)
 

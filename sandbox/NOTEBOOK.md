@@ -622,3 +622,28 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   10: "I'd say free but i'm not interested in curling cost 0 - let's predict whatever aligns with the research." Her lean
   FREE recorded; the test is not a priority; where she has no intuition the prediction is to be set from the research and
   marked ours.
+- 2026-10-17, later, the owner, three more. (a) What counts as a fold: "it's more like a spiral in 3d a la walter
+  russel." Recorded in the brief as her picture of the fold; not yet a thing the toy can score. *Ours:* the toy already
+  holds one spiral: the opened tube's seam is shifted by two and runs as spirals round the doughnut (O116; paper 1's plain
+  edition draws it), and her handoff of 16 October called the black hole's inside "whirlpool-like". A fold read as a spiral
+  would be a region where the curled direction's seam shifts along the open ones, a twisted torus; what to measure (the
+  shift per turn, the region's size) is hers to say before the brief's question 6 is closed. Walter Russell's spiral
+  cosmogony is not a published physics model (general knowledge, to verify); it is recorded as her reference. (b) "can you
+  explain why we are not trying more lambda <1.2, 1.02 -1.15?" *Ours, exact:* the window 1 < λ < 1.2 is where the fully
+  curled 6-cube is stuck (O41), which mattered when X was fully curled; her X is the slab, stuck for every λ up to 2, and
+  for opening the slab a smaller λ is harder, not easier: the release per point falls (0.08 at 1.02, 0.4 at 1.10, 0.6 at
+  1.15, 1 at 1.25) while the slab's single-move wall barely moves (47, 43, 41, 36) and flat space's stays at 64, so the
+  completed patch grows (T54 untied: about 19.5 columns and 608 units at 1.10 against 7.5 and 225 at 1.25; O118). The
+  small-λ setting she named on 4 October, about 1.02, is for the fold with interchangeable points, where the counting drive
+  beats the curling cost (O55, O72): piece 11, not piece 5. What has run below 1.2: T56 scanned 1.10 to 1.25 under the
+  tie, T57 ran 1.10. Whether to add 1.10 to the feed runs is hers; it is cheap, and ours is that it breaks later and opens
+  no more. (c) "what if the points are not real the relationships are so we don't have to follow all the pointkeeping?
+  they can describe the state and be helpful for transition math, but what if the uncurling actually created new points
+  that were not there before?" *Ours:* this is claim 3's varying count, parked since 19 September ("a varying base-level
+  count (needs a cost-per-element term)"), and it is what her handoff meant by "points are not fundamental" (Update 59).
+  The toy fixes N because the published model does; the smallest flat torus of 216 points is a fact about where 64 fixed
+  points can go, not about reality. With a count that varies, a knot's opening could end as a larger flat region, and the
+  room question (piece 4) changes shape. What it takes in the toy: a move that adds or removes a point, and a price per
+  point in F so that the count is set by the energy and not by hand (the published precedent is dynamical triangulations,
+  where the cost per building block plays the cosmological constant's part; claim 3). That is a new knob under S1 and
+  needs her dated decision before anything is built; nothing is built on this message.
