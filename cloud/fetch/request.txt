@@ -51,3 +51,6 @@ t65_*
 t66_*
 # 2026-10-16, 14:57 UTC by the clock: asking again for T65's last two cells (t65_a_lam120_l12, t65_a_lam125_l12). Not read.
 # 2026-10-16, 17:59 UTC by the clock: asking again for T65's last two cells. Not read.
+# 2026-10-17, 02:12 UTC by the clock: T67 stage 1 (6 jobs, submitted 23:10 UTC on 16 October) and T65's held-out control at L = 16 (1 job). Neither has been read.
+t67_*
+t65_control_lam125_l16
