@@ -663,3 +663,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   with its whole release again added it is a mess of open, half-curled and broken points, and with eight times its
   release it is the random phase. Past about one direction's worth, energy breaks the knot instead of opening it, as it
   breaks flat space (T57) and the slab (T67).
+- 2026-10-17, later, the owner, on the slab's release: "but it can create a lot of squares worth +16 each? that would be
+  6x6x4 -> 6x6x6: +72 squares is 1152 units? am I getting this wrong?" *Ours, exact (counted on the built graphs):* the
+  direction runs the other way. Curling adds squares, opening removes them: the 6 x 6 x 4 slab (144 points) has 468
+  squares, 3.25 per point, against flat space's 3.00; the extra quarter-square per point is the ring of four round the
+  curled direction, and every one of those extra squares sits on over-full links, so it carries a surplus penalty of 4 per
+  link, 4 links, 16 lambda in all, against its reward of 16. Net, each extra square costs 16(lambda - 1), 4 units at
+  lambda = 1.25, and the slab's 36 extra squares hold 144 units, which is the 1 per point that opening releases (the energy
+  function on the built slab: H = -576 + 720 = 144). Squares at +16 each with nothing against them is what healing a
+  broken point gains, not what opening gains, and it is why flat space heals (T34, T66). Two other things in the sum:
+  6 x 6 x 4 becoming 6 x 6 x 6 adds 72 points, which is her varying-count idea (parked; the toy keeps N fixed), and at
+  fixed N the slab's product cannot be a cubic torus at all (no three sides of 6 or more multiply to 144 or 256), the
+  three-direction form of what O116 found for the tube: it opens into something flat point by point whose shape is not a
+  wider torus.
