@@ -689,3 +689,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   with named points leaving a few flickering scars (T42). In two directions the same pocket stays melted while its energy
   has nowhere to go (T27) and heals when it leaks. Nothing curls in any of it. So a melted knot inside flat space would be
   a broken pocket that heals as its energy spreads, not a knot and not a black hole.
+- 2026-10-17, later, the owner: "144 units, thats still more energy than the startup cost at any lambda?" *Ours, exact:*
+  against the single-move wall (96 - 48 lambda: 43 at 1.10, 36 at 1.25) yes, for 144 points at any lambda above about 1.08;
+  against the completed patch no higher than the slab (T54, O118: 608 at 1.10, 225 at 1.25) no at 144 points, and the
+  256-point slab clears it only at 1.25. Neither settles it: the release comes after the opening, so the whole slab's release
+  cannot pay its own start; what pays each step is what the steps before it released. In two directions one column's 4 units
+  against a wall of 12 still runs a front because the moves along a seam cost less than the first; in three directions each
+  completed patch is a dip of its own (O118), so every extension is paid for again, and whether a path exists along which
+  the release keeps paying is the lowest-path listing still owed (TASKS, 11 October, item 10).
