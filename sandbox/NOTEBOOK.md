@@ -599,3 +599,26 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   from 36 to 19.2 while flat space's stays at 64, O41).
 - 2026-10-17, the owner asked for a recap of two owed items (the curling-energy design brief's answers; the
   programme page's claim wording of 17 October). Given in the reply of the same hour; nothing decided.
+- 2026-10-17, the owner, her answers to the curling-energy questions of 15 October (recapped to her the same day), and
+  one new idea. (a) "how much would it cost to open a 64 cube to fully open." *Ours, exact (O41, O55, O92; the brief
+  `docs/design/curling_energy_brief.md`):* it costs nothing, it releases 192 at λ = 1.25 (3 per point); the walls out of it
+  are 96 − 80λ (nothing at 1.25, 16 as λ → 1) and the one wall standing at 1.25 is the slab's, 36; alone it opens fully in a
+  minority (T49). (b) Her idea, "havent fully thought it through": "a patch of open space in the LxLx4 -> LxLx6 releasing
+  energy that is enough to open a net new knot to space." *Ours, exact:* a 64-point patch of the slab releases 64 at
+  λ = 1.25, more than any knot's wall; but a 6-cube uses all six links at every point, so it cannot be wired into the slab
+  and is always a separate piece that no release can reach (the stores are the only carrier, Q12), and the slab's release
+  of 1 per point is far below its own wall of 36, so one patch does not pay the next (O118). Recorded as her idea; the
+  exact question it leaves is whether any partly open curled piece larger than a two-point stub can sit inside a slab.
+  (c) Question 2, what a curl-only store may pay for: "let's try this: ... only moves that add a surplus square without
+  lowering the square count." Decided: the strict rule (Update 60). (d) Question 3, is the relic required: "not sure,
+  remind me the key points we've learned about relics in 3d and 2d relevant here." The recap is in the brief. (e) Question
+  4: "can energy released from first snaps unsnap other points at a seam?" *Ours:* in two directions yes, that is the
+  front: the release goes to the stores and pays the next moves, faster where energy sits (T47, T50), and sealed the
+  change completes when the stores have room (T9); in three directions the slab's release per point (1 at λ = 1.25) is
+  36 below its single-move wall, so one point's release cannot pay a neighbour's, and with the released energy kept at the
+  front the connected torus opened one direction and stopped (T48); what a seam is in the slab's product is unread
+  (T65's end graphs are saved). (f) Question 7: "didn't we drop the tie?" Yes (Update 58); the question is moot. (g)
+  Question 9: "the curled slab, LxLx4, likely with relics, is my current x best guess." Decided (Update 60). (h) Question
+  10: "I'd say free but i'm not interested in curling cost 0 - let's predict whatever aligns with the research." Her lean
+  FREE recorded; the test is not a priority; where she has no intuition the prediction is to be set from the research and
+  marked ours.

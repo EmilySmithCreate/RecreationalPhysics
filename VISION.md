@@ -1732,3 +1732,27 @@ Lorentz symmetry; quantum behaviour; why 3+1; hidden dimensions; inflation numbe
 ## What no outcome can show
 
 Anything about the real universe. A toy model can show that a mechanism is possible or impossible within a class of models. That is the whole claim.
+
+Update 60 (2026-10-17, 15:40 UTC by the clock): **two decisions of the author's on curling energy and on X, and her
+answers to the questions of 15 October.** Why this page changes: Update 57 adopted curling energy as an ingredient with its
+form owed, and the design brief could not be written without her answers; she gave most of them on 17 October. The brief
+is `docs/design/curling_energy_brief.md`; her words are in `sandbox/NOTEBOOK.md`, 17 October.
+
+- **DECISION: a curl-only store pays only for moves that add a surplus square without lowering the square count** (the
+  strict rule; her "let's try this"). Under S1 this fixes the store's rule before any registered run; the model with it is
+  our family, never CQG. *Ours, from the sandbox look of 15 October (a look, not evidence):* under this rule nothing
+  breaks, most of the energy is never spent, and what is spent buys separate columns of 14 units each.
+- **DECISION: X is the curled slab, L × L × 4, likely with relics.** Her words: "the curled slab, LxLx4, likely with
+  relics, is my current x best guess." This is Update 47's shape, untied (Update 58), now allowed to carry relics inside
+  it. *Ours:* the slab's own relics in the toy are two-point stubs of 14 units (the rod's product); a fully curled 6-cube
+  cannot be wired into a slab, so "a knot in X" means a partly open piece, never a 6-cube (the brief).
+- **Open, hers:** what carries curling energy (each relic, stores at the relic, or both); whether the relic is required
+  ("not sure"); what counts as a fold. The brief cannot be finished, and nothing registered runs with curling energy,
+  until the first and third are answered.
+- **Recorded, not decided:** her idea that a patch of the slab opening (4 wide becoming 6) releases enough energy to open a
+  net new knot into space ("havent fully thought it through"), with the exact arithmetic beside it in the brief; her
+  question whether the energy released at first snaps unsnaps points at a seam (the notebook has what the toy says); her
+  lean FREE on whether the double column and the knot of two kinds are stuck at a curling cost of zero, with her
+  instruction that a curling cost of zero is not of interest and that where she has no intuition the prediction is set
+  from the research and marked ours.
+- **Moot:** question 7 of 15 October (whether a broken point pays the tie); the tie is withdrawn (Update 58).

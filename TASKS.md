@@ -852,6 +852,12 @@ first; the daughter-universe interpretation after. In order, each registered bef
    spot) and marked so; ours, no (λ, N) reads OPENS. To read: `t68_*` into `cloud/fetch/request.txt`, accept, commit
    unread, `python scripts/analyse_t68.py`; then `--write-prediction`, the dated amendment, her L = 16 word,
    `python scripts/make_t68_configs.py --held-out`. Owed by her: her own word for T68 before it is read.*
+   *17 October, later: her answers on curling energy and X (VISION Update 60): the strict rule for a curl-only store; X
+   the curled slab L × L × 4, likely with relics. The design brief `docs/design/curling_energy_brief.md` is drafted and
+   waits on her answers to its open questions 1 (what carries curling energy) and 6 (what counts as a fold). Her idea of
+   a slab patch's release opening a knot is recorded with its arithmetic in the brief; the exact question it leaves, whether
+   a partly open curled piece larger than a two-point stub can sit inside a slab, is the three-direction relic search O58
+   left open and is the next exact item on piece 11 if she wants it.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.
