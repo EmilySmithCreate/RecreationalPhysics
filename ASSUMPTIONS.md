@@ -3878,3 +3878,35 @@ author and should be disclosed as such in any submission. Physics estimates mark
     slower feed or a larger slab only delays the break. The size claim of the registration stands. Rule 11's sixth
     use on piece 5 (O132) is unchanged: the owner's replacement is hers to propose; a varying rate and a feed arriving
     at many points are the untried variants the registration names.
+
+- **O134 T68, stage 1, read: a feed whose rate ramps or pulses, or that arrives at 16 points or every point, does not
+  open the owner's untied slab at λ = 1.25, 1.40 or 1.60: no replica of 1,728 reaches a front; 166 cells of 216
+  BREAK, 48 SIT, 2 are MIXED; and a feed spread over every point's own store moves nothing until each store holds the
+  single-move wall, then breaks (17 October 2026, 22:31 UTC by the clock). Measured, pre-registered; her inferred
+  OPENS fails; ours holds in its claim and fails on one detail (pulses break on more energy, not less).**
+  (PREREGISTRATION T68, "Reading of stage 1", with the λ table and the scoring; `scripts/analyse_t68.py`;
+  `results/t68_*`; 36 Batch jobs of 48 replicas, accepted unread and committed first, f7802417. Six links carry VISION
+  Update 24's caveat.)
+  - **The curling cost, scanned for the first time on the feed** (her question of 17 October): the break comes
+    sooner and on less energy as λ rises (energy per point at the break, N = 576: shared 1.98, 1.75, 1.28; one spot
+    1.63, 1.46, 1.11; 16 spots 3.11, 2.68, 1.78 at λ = 1.25, 1.40, 1.60), and no front appears at any λ. The largest
+    open region outside the "all" place is 108 of 576, in 13 to 45 separate regions.
+  - **A uniform feed is a threshold, not a bath** (a property of the protocol, disclosed): with a store at every
+    point a move is paid from the moving point's store alone, so a feed split over all N stores does nothing until
+    every store holds about 96 − 48λ (the "all" cells broke at store means of 34, 28 and 18.6 against walls of 36,
+    28.8 and 19.2) and then every point can move at once: the largest open regions of the test (up to 212 of 576,
+    under half) in the fewest pieces, followed by the break. T53's bath at a fixed coupling is the warming bath; this
+    is not one. 37 of the 48 SITS cells are this frozen state (0 open, 0 broken at 20,000 sweeps); the other 11 are
+    T67's kind, the slow feed at N = 576 with the damage still rising.
+  - **The schedules:** the ramp breaks later in sweeps on about the same energy; the pulse breaks on more energy than
+    the fixed feed (each burst of 128 buys pairs that close again, T65's reading, so the break is quantised upward
+    to the next burst); 16 spots break on 1.6 to 1.9 times one spot's energy.
+  - **Rule 11, seventh use on piece 5** (in the registration): her "proceed with these" is spent; the replacement
+    is hers to propose; the exact test that decides whether any path pays for itself is T69, registered 17 October
+    in her other session (her PAYS, ours CLIMBS). The held-out size L = 16 is launched with its words written by one
+    rule for all 108 cells (`configs/t68_heldout_prediction.csv`): BREAKS in 62, SITS in 46, no front.
+  - *Ours, unverified:* six feeds, three curling costs, three sizes and 1,728 replicas have now all said the same
+    thing: in this family energy delivered to the untied slab, however shaped or placed, is spent on pairs that open
+    and break before any region grows, and the only thing that changes is when the break comes. If the slab is to
+    open from energy alone, something must gather it faster than the chain spends it, or a path must exist on which
+    the first steps pay for the next (T69).

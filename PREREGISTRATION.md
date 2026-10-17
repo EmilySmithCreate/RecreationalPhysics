@@ -6350,6 +6350,90 @@ points still reach a tenth first in most replicas. Reason: nothing in any of the
 place faster than the chain spends it on pairs; the spots and "all" places spread it thinner; the pulse gathers 128
 at once, which T65 read as too little at every size.
 
+### Reading of stage 1 (L = 8 and 12; 36 jobs, 216 cells, 1,728 replicas), 2026-10-17, 22:31 UTC by the clock (`python scripts/analyse_t68.py`; all 36 cells accepted unread and committed first, f7802417; the largest drift 4.6 × 10⁻¹³)
+
+**No replica of 1,728 OPENS or reaches a FRONT, at any curling cost, any schedule, any place, any rate or either
+size. Cell words: BREAKS in 166 cells, SITS in 48, MIXED in 2. Per (λ, N): MIXED at all six, since every (λ, N) holds
+SITS cells beside BREAKS cells and none holds OPENS or FRONT.** The owner's prediction, inferred from "proceed with
+these" and never replaced by her own word (OPENS at some setting, from one spot, more readily under pulses and at the
+larger curling cost), **fails everywhere.** Ours holds in its claim and most of its detail and fails in one part,
+scored below.
+
+**The 48 SITS cells are two different things.** (a) **37 are the "all" place at the slower rates** (every rate below
+1 at every λ, and r = 1 at N = 576, λ = 1.25): nothing happened at all, 0 points open and 0 broken after 20,000 sweeps,
+with the stores' mean at 2 to 35 units. A feed split equally over every point's own store moves nothing until each
+store holds about the slab's single-move wall (96 − 48λ), and then the slab breaks within a few hundred sweeps: the
+"all" cells that broke did so at store means of 33.5 to 34.3 (λ = 1.25, wall 36), 27.7 to 28.2 (1.40, wall 28.8) and
+18.5 to 18.8 (1.60, wall 19.2), at r = 1 (and r = 1/4 at 1.60, N = 256). *Disclosed as a property of the protocol, not
+of the slab:* with per-vertex stores a move is paid from the moving point's store alone, so a uniform feed is a
+threshold at the single-move wall, not a bath warming slowly as our prediction called it; the bath is T53. When the
+threshold is crossed every point can move at once, and these cells show the largest open regions of the test (up to
+212 points of 576, still under half) with the fewest regions (8 to 37), and then break. (b) **11 are the slow feeds
+(r = 1/16) into the shared store or the 16 spots at N = 576**, at λ = 1.25 and 1.40: T67's kind of SITS, the damage
+still rising at the limit (a median of 23 to 46 broken points against the threshold of 57.6). The two MIXED cells
+(pulse into one spot at r = 1/16, λ = 1.25, N = 576: 4 BREAKS, 4 SITS; ramp into the shared store at r = 1/16,
+λ = 1.40, N = 576: 4 and 4) are the same kind on the edge of the run's length.
+
+**The curling cost.** The break comes sooner and on less energy as λ rises, and no front appears at any λ. The energy
+fed per point at the break (N = 576, cells that broke in a majority, medians over the three schedules and rates):
+
+| λ | shared | one spot | 16 spots |
+|---|---|---|---|
+| 1.25 | 1.98 (1.78 to 2.22) | 1.63 (1.40 to 1.78) | 3.11 (2.75 to 3.36) |
+| 1.40 | 1.75 (1.56 to 2.04) | 1.46 (1.32 to 1.78) | 2.68 (2.17 to 3.78) |
+| 1.60 | 1.28 (1.06 to 1.56) | 1.11 (1.01 to 1.35) | 1.78 (1.48 to 2.60) |
+
+The largest open region at any stop outside the "all" place is 108 of 576; the open points sit in 13 to 45 separate
+regions at the stop. The first escape comes within 100 to 5,050 sweeps (sooner the faster the feed; the ramp's
+first escapes are the latest).
+
+**The schedules.** The ramp breaks later in sweeps than the fixed feed at the same mean rate (it has delivered less
+by any given time) and on about the same energy. **The pulse breaks on more energy than the fixed feed, not less**
+(λ = 1.25, shared, r = 1/16, N = 256: 704 against 436; one spot, r = 1/16: 512 against 423): each burst of 128 lands
+in a store that spends it on pairs which close again, as T65 read, so the energy at the break is quantised upward to
+the next burst. Sixteen spots break on about 1.6 to 1.9 times the energy of one spot at every λ.
+
+**Predictions scored.** The owner's (inferred): **fails**; nothing opened at any setting. Ours: "no (λ, N) reads
+OPENS" **holds** (MIXED at all six); "at λ = 1.25 every cell BREAKS or SITS with no front" **holds**; "at 1.40 and
+1.60 a front may appear in a minority of replicas but no cell's majority reads FRONT or OPENS" **holds** (no front
+appeared at all, so the hedge was not needed); "the ramp breaks later than fixed" **holds**; "'all' breaks later
+still and SITS at r = 1/16" **holds in word and not in reason**: it sits because a uniform feed is a threshold, not a
+slow bath; "pulses break on less total energy" **fails**: they break on more.
+
+**Rule 11, seventh use on piece 5.** Previous claim (the owner's, 17 October, "proceed with these"): a feed whose
+rate varies, or one that arrives at many points, opens the untied slab. Failed because: in 1,728 replicas at three
+curling costs no region ever passed half the slab; the energy goes into pairs that break, a burst does what T65's
+spark did, and a feed spread over every point moves nothing until every point can break. Replacement: **hers to
+propose; none is written here.** New falsification test: T69, the lowest path out of the slab (registered 17 October
+in her other session, her prediction PAYS and ours CLIMBS), which is the exact test this registration's rule-11 answer
+named as owed; and the held-out size below.
+
+### Amendment, 2026-10-17, 22:35 UTC by the clock, after stage 1 was read: the words and ranges for the held-out size (rule 14), and its launch
+
+Written from L = 8 and 12 alone, before L = 16 (N = 1,024) runs, by one rule applied to every cell, with the table in
+`configs/t68_heldout_prediction.csv` (108 rows: λ, schedule, place, rate; the word; the predicted energy and sweep of
+the break; the ranges). **The rule.** For the shared, one-spot and 16-spot places: the slab breaks when the energy fed
+per point reaches what the same (λ, schedule, place, rate) cell needed at N = 576 (or at N = 256 where the N = 576
+cell did not break in a majority), so the break at N = 1,024 needs E = 1,024 × that number, and the cell reads
+**BREAKS** if the schedule delivers E within 20,000 sweeps (fixed and pulse: E/r; ramp: √(E × 20,000 / r)), else
+**SITS**. For the "all" place: the slab moves only when every store holds the single-move wall less 1.5 units (34.5,
+27.3, 17.7), so E = 1,024 × that, and the same test. **The words this gives:** BREAKS in 62 cells and SITS in 46; no
+cell OPENS or FRONT; per (λ, N = 1,024) MIXED at every λ. In plain words: at every λ the "all" place sits at r ≤ 1/4
+and at r = 1 sits at 1.25 and 1.40 and breaks late at 1.60; r = 1/16 into the shared store, one spot or 16 spots sits
+at 1.25 and 1.40 and breaks late at 1.60 except the 16 spots and the pulse into the shared store; r = 1/4 and r = 1
+break everywhere else. **Ranges:** for a BREAKS cell the median stop within 0.7 to 1.4 times the predicted sweep and
+the median fed within 0.7 to 1.4 times the predicted energy; for a SITS cell the median stop 20,000. Sixteen cells are
+marginal, their predicted break between 16,000 and 25,000 sweeps, and are flagged in the table; a miss there is named
+but is the rule's edge, not its failure. **Scored at L = 16 alone:** AS PREDICTED if every cell's word matches and no
+replica reaches a front; otherwise the cells that miss are named. The size claim: a feed at these rates, shapes and
+places opens the untied slab at no size run, and whether a slab breaks within the run is set by the energy fed per
+point and, for a uniform feed, by the single-move wall.
+
+**The owner's prediction for L = 16 is inferred from stage 1 (OPENS at some setting, from one spot) and marked so
+until she gives her own word.** **Launched 2026-10-17, 22:40 UTC by the clock**, 36 cloud jobs
+(`cloud/queue/2026-10-17_t68_heldout.txt`; configs `t68_*_l16`, seeds 20267001 to 20267036). To read: `t68_*_l16`
+into `cloud/fetch/request.txt`, accept, commit unread, `python scripts/analyse_t68.py`, scored against the table.
+
 ### What this cannot show
 
 Whether a feed shaped by what a black hole eats (a rate set by the state of the slab itself, or by a pull) does

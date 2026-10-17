@@ -858,6 +858,14 @@ first; the daughter-universe interpretation after. In order, each registered bef
    a slab patch's release opening a knot is recorded with its arithmetic in the brief; the exact question it leaves, whether
    a partly open curled piece larger than a two-point stub can sit inside a slab, is the three-direction relic search O58
    left open and is the next exact item on piece 11 if she wants it.*
+   *Stage 1 read 17 October, 22:31 UTC (O134): no replica of 1,728 opens or reaches a front at any curling cost;
+   BREAKS in 166 cells of 216, SITS in 48 (37 of them the "all" place frozen below the single-move wall, a property
+   of per-vertex stores, disclosed), MIXED in 2; her inferred OPENS fails, ours holds (one detail wrong: pulses break
+   on more energy, not less). Rule 11's seventh use: her replacement is hers; T69 is the exact test. **The held-out
+   size launched** (36 jobs, `cloud/queue/2026-10-17_t68_heldout.txt`) with every cell's word written by one rule
+   first (`configs/t68_heldout_prediction.csv`: BREAKS 62, SITS 46, no front). To read: `t68_*_l16` into the fetch
+   request, accept, commit unread, `python scripts/analyse_t68.py`, scored against the table. Owed by her: her own
+   word for L = 16.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.
