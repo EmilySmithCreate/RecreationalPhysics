@@ -54,3 +54,5 @@ t66_*
 # 2026-10-17, 02:12 UTC by the clock: T67 stage 1 (6 jobs, submitted 23:10 UTC on 16 October) and T65's held-out control at L = 16 (1 job). Neither has been read.
 t67_*
 t65_control_lam125_l16
+# 2026-10-17, 08:31 UTC by the clock: T67's held-out size, L = 16 (3 jobs, submitted 02:28 UTC). Not read.
+t67_*l16
