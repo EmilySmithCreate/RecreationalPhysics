@@ -3910,3 +3910,25 @@ author and should be disclosed as such in any submission. Physics estimates mark
     and break before any region grows, and the only thing that changes is when the break comes. If the slab is to
     open from energy alone, something must gather it faster than the chain spends it, or a path must exist on which
     the first steps pay for the next (T69).
+
+- **O135 T69, stage 1, read: in the owner's untied slab no local path opens a single point cleanly below a saddle of
+  64 at λ = 1.10 or 1.25 (the first clean state is two switches from the slab, holds 16 open points and lies 64 above
+  it), nothing cleaner than that reaches 24 open points below 64, and at λ = 1.40 no clean opening exists at or below
+  53.6; the slab's cheapest move (96 − 48λ) opens twelve points and breaks four (17 October 2026, 22:49 UTC by the
+  clock). Exact within the move set and the reach of the budget; pre-registered; MIXED at 1.10 and 1.25, NOT REACHED at
+  1.40 by the letter; her PAYS fails on its second half within the reach, ours is not yet scorable and its 36 was
+  wrong.** (PREREGISTRATION T69, "Reading of stage 1", with the table and the held-out amendment;
+  `scripts/exact_lowest_path.py`, `tests/test_lowest_path.py`; `results/t69_lowest_path_l8.csv`. Six links: VISION
+  Update 24's caveat.)
+  - **What is exact.** A best-first search on the saddle pops states in order of the lowest saddle at which the move set
+    reaches them, so every statement "no state with property P below saddle s" is exact for the move set (switches with
+    both side-0 points within one step of the changed region) once the exhausted saddle has passed s. The reach was 64
+    at λ = 1.10 and 1.25 and 53.6 at 1.40.
+  - **What this says about piece 5 (ours).** The single-move wall is not the price of opening the slab cleanly: the
+    cheapest move breaks, and a clean opening costs 64 at both smaller curling costs, the same number as flat space's own
+    wall. One clean state holds 16 open points at once, so an opening does not start with a pair; and whether it can
+    grow past 16 points for less than 64 more is what the reach did not settle. "The released energy pays for the next
+    step" has no support below 64: nothing clean lies below the slab there.
+  - **What limited the reach:** memory, not time; the symmetries of the slab are the exact way to go further and are
+    proposed as a second stage (the registration). The held-out size L = 12 runs with the stage-1 budget and its numbers
+    written first.

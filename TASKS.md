@@ -858,6 +858,14 @@ first; the daughter-universe interpretation after. In order, each registered bef
    a slab patch's release opening a knot is recorded with its arithmetic in the brief; the exact question it leaves, whether
    a partly open curled piece larger than a two-point stub can sit inside a slab, is the three-direction relic search O58
    left open and is the next exact item on piece 11 if she wants it.*
+   *17 October, evening: **T69 registered and computed** (PREREGISTRATION T69; O135), the lowest path out of the slab, on
+   her "I think yes, can we check?" (PAYS; ours CLIMBS). Stage 1 (L = 8): no clean opening below a saddle of 64 at
+   lambda = 1.10 and 1.25 (the first clean state has 16 open points, two switches from the slab), none at or below 53.6 at
+   1.40; MIXED, MIXED, NOT REACHED by the letter; the reach was set by memory (5,000 states popped, up to 19 million
+   children seen). The held-out size L = 12 is running with its numbers written. Next on this item: a second stage that
+   uses the slab's symmetries to reach further, registered as an amendment before it runs; to read L = 12:
+   `python scripts/exact_lowest_path.py configs/t69_lowest_path_l12.json` writes `results/t69_lowest_path_l12.csv`;
+   score it against the amendment.*
    *Stage 1 read 17 October, 22:31 UTC (O134): no replica of 1,728 opens or reaches a front at any curling cost;
    BREAKS in 166 cells of 216, SITS in 48 (37 of them the "all" place frozen below the single-move wall, a property
    of per-vertex stores, disclosed), MIXED in 2; her inferred OPENS fails, ours holds (one detail wrong: pulses break

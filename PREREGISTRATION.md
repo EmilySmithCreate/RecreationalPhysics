@@ -6505,3 +6505,45 @@ completed region smaller than the whole torus lies below the slab in any family 
 Any path the move set excludes: moves with a point farther than one step from the changed region, or more than one
 switch at a time. Anything above the cap of 128. Whether the chain, which samples moves at random, finds the lowest
 path even where one exists. Anything at λ = 1. Every six-link result carries VISION Update 24's caveat.
+
+### Reading of stage 1 (L = 8), 2026-10-17, 22:49 UTC by the clock (`python scripts/exact_lowest_path.py configs/t69_lowest_path_l8.json`; `results/t69_lowest_path_l8.csv`; 5,000 states popped per cell; children seen 4.0, 16.3 and 19.0 million at λ = 1.10, 1.25, 1.40; the exhausted saddle 64.0, 64.0 and 53.6)
+
+**MIXED at λ = 1.10 and 1.25; NOT REACHED at λ = 1.40.** The budget, not the move set, set the reach: every state with a
+saddle at or below 64 (1.10, 1.25) or 53.6 (1.40) in the move set has been seen, and nothing above.
+
+| λ | cheapest move (breaks four points) | first clean opening: S(m), m reached, energy, steps | clean milestones beyond | with breaks allowed |
+|---|---|---|---|---|
+| 1.10 | 43.2 | **64.0**, m = 2 to 16 in one state, energy 64.0, 2 steps | m = 24: none below 64 | 16 open and 4 broken at 64.0 |
+| 1.25 | 36.0 | **64.0**, m = 2 to 16 in one state, energy 64.0, 2 steps | m = 24: none below 64 | 16 open and 4 broken at 58.0 |
+| 1.40 | 28.8 | none at or below 53.6 | | 16 open and 4 broken at 49.6 |
+
+**Exact, from the order of the search.** At λ = 1.10 and 1.25 no path in the move set opens a single point cleanly below
+a saddle of 64; the first clean state is two steps from the slab and holds 16 open points at energy 64 above the slab,
+so S(2) = S(4) = S(8) = S(12) = S(16) = 64; and S(24) > 64. At λ = 1.40, S(2) > 53.6. The slab's cheapest move at each λ
+(96 − 48λ, O41) opens twelve points and breaks four, so the single-move wall is not the price of a clean opening.
+
+**Scored.** The owner's PAYS: its first half holds trivially over the milestones reached (S(m) does not rise from
+m = 2 to 16, because one state carries them all) and its second half, a clean state at or below the slab's energy,
+fails within the reach: every clean state seen lies 64 above the slab. Ours, CLIMBS: not scorable, since no milestone
+beyond 16 was reached; our number for the first clean opening ("36 or a little above") fails, it is 64; "no clean state
+at or below the slab within the cap" holds within the reach; the rise "by about 12 for every four further points" is
+untested. Both predictions stand for the held-out size and for any later stage with a larger reach.
+
+**What limited the reach, reported.** Each popped state spawns about 800 to 3,800 children (the window grows with the
+changed region), and the children are kept in memory until popped; 5,000 pops cost 4 to 19 million children and 20 to
+40 minutes a cell. Raising the budget tenfold would exceed the laptop's memory. The symmetries of the slab (its
+translations and reflections, which map every reachable state to one with the same energy and the same future) are
+not used; using them is the one exact way to reach further, and it is proposed as a second stage, registered as an
+amendment before it runs.
+
+### Amendment, 2026-10-17, after stage 1 was read: the numbers for the held-out size (rule 14), and its launch
+
+Written from L = 8 alone, before L = 12 runs, with the same budget and cap: at λ = 1.10 and 1.25 the first clean
+opening is at **S = 64.0**, two steps from the slab, holding 16 open points (so m = 2 to 16 are reached together) and
+m = 24 is not reached below 64; at λ = 1.40 no clean opening is reached at or below the exhausted saddle, which lies
+between 50 and 58; the cheapest move at each λ is 96 − 48λ and breaks four points; the words MIXED, MIXED, NOT REACHED.
+Reason: every move in the window is local and the slab looks the same at every column, so nothing in the first two
+steps can know how large the sheet is; only paths that wrap could differ, and at L = 12 they are longer. AS PREDICTED if
+every word and number above holds at L = 12. **Launched 2026-10-17, 23:03 UTC by the clock**, on the laptop
+(`configs/t69_lowest_path_l12.json`). The owner's prediction for L = 12 is hers of stage 1 (PAYS) unless she replaces it
+before the cells are read.

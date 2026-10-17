@@ -711,3 +711,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   finishes: a wall is a hill, not a toll (O71), the energy paid to reach the patch comes back into the stores on the far
   side, and the whole curled direction then releases 4(lambda - 1) per point, 256 for the 256-point slab at 1.25; two
   conditions, that it finishes (T48 at 1.40: 5 of 16 fully, 7 damaged) and that the new space has room (T9, O123).
+- 2026-10-17, later: T69 stage 1 read (O135). Her "I think yes" (PAYS): within the search's reach (saddle 64 at
+  lambda = 1.10 and 1.25, 53.6 at 1.40) no clean state lies at or below the slab, so the second half fails so far; the
+  first clean opening costs 64, two switches, and holds 16 open points at once; nothing clean reaches 24 points below 64.
+  Ours (CLIMBS) is not yet scorable and our 36 for the first clean opening was wrong. The held-out size L = 12 is running
+  with its numbers written. Her word for L = 12 is hers of stage 1 unless she replaces it.
