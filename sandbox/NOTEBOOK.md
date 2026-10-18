@@ -894,3 +894,18 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   toy nothing ties them: the release grows with the region (4(λ − 1) per point) while a barrier is a fixed number, and under
   tonight's rule the seam payment ran 4 per point against a release of 4(λ − 1), equal only at λ = 2, where the slab is no
   longer stuck (O41). Ours, from a look at two sizes, not a measurement; a close number would not be a result (rule 13).
+- 2026-10-18, the owner, on "a close number would not be a result in any case": "because no matter the lambda, within
+  our current no break rule set, the amount released is always way higher than the barrier not just a few parts per
+  billion?" *Ours:* two separate points, and the second runs the other way from her reading. (1) The sentence is rule
+  13, a standing rule: a number that lands on an observed value counts only after it has been derived independently,
+  its inputs checked for containing the target, its neighbours tested and the other combinations that would match
+  counted. It applies whatever the arithmetic says. (2) The arithmetic. In the plain toy (single switches, no store
+  rule) the release grows with the region, 4(λ − 1) per point, and the barrier is a fixed number (the completed patch,
+  about 225 at λ = 1.25), so at a large enough size the release does dwarf the barrier and the excess fraction
+  (release − barrier)/release goes to 1, not to a billionth. Under the no-break rule, in the look of this night, the
+  payment was not fixed: the seam charged 4 units for every point opened, against a release of 4(λ − 1) per point at
+  completion, so at λ = 1.25 the payment was four times the release, equal only at λ = 2 (where the slab is no longer
+  stuck, O41). So there the opening costs more than it gives back, the excess fraction is negative, and whether the
+  seam stops growing with the region at larger sizes (area against volume) is the size question T70 asks. Neither
+  version lands anywhere near six parts in ten billion; and if some λ or N were found at which it did, that would be a
+  fit of one number to one number, which is what rule 13 forbids calling a result.
