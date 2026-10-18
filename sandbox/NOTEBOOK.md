@@ -1187,3 +1187,46 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   holds for most inflation models and not all; the measure problem it brings is O101. (8) Denser regions collapsing into
   galaxies is standard structure formation; nothing to test in the toy. Her two questions about Brian Cox and "Dr Katy
   at Melbourne" are answered in `docs/reading/notes/2026-10-18_cox_mack.md` (search summaries only).
+- 2026-10-18, the owner, later the same afternoon, on how long a turn yields observers: "The universe will stop producing
+  new stars in 100billion years, or we can count forward many more until the last black hole peters out and there is no
+  more mass, no more time, no more faint stellar remnants. A planet can stay habitable for life say 10billion years. And
+  how many observer societies that get to the point of asking about the universe and everything, per planet lifetime? On
+  earth, the homo lines. Travel through space? just us so far. We're what, 5billion in since the planet formed? The
+  expansion of the universe is speeding up too, solar systems and planets farther and farther away from each other. This
+  version of dark energy takes us towards the heat death of the universe. That also gives us trillions of new universes vs
+  a big rip idea that only gives you one. That's a loop, sure, but it is a much smaller loop vs each single black hole
+  birthing a large amount of similar and sometimes identical daughter universes and every possible version of reality
+  plays out in its own spacetime. That does give us the longest observer evolution hotspot too. Phantom dark energy pulls
+  apart galaxies. Breaks apart all matter. Vacuum decay. So 10^1000 is really the max. In way less than that an observer
+  won't get to collect data to see the birth of the universe and learn all the stuff we have. So maybe there is only 10-15
+  billion years left of good observational science."
+  *Ours: this is piece 12's function (Update 43: observers who evolved per turn, times the branching), written out in
+  stages for the first time. Nothing here is a knob or a run; the toy has no stars, no observers and no expansion. The
+  standard numbers, from search summaries and general knowledge, all to verify
+  (`docs/reading/notes/2026-10-18_far_future_and_observation_window.md`):* (1) **The eras.** Star formation is already past
+  its peak (about ten billion years ago) and is nearly over by about 100 billion years, as she says; but the last small red
+  stars burn for about 10^14 years, so the era of starlight ends there, not at 10^11. Then stellar remnants to about 10^39,
+  then black holes evaporating, the largest gone by about 10^100 years. **10^1000 is not a milestone anyone has named**; if
+  her conjecture of 6 October (no mass, no time; Update 44, now worded as the last black hole dissolving, Update 59) sets
+  the end of a turn, that end is near 10^100 years. (2) **Observers per planet.** Earth is about 4.5 billion years old and
+  stays habitable for complex life for roughly another one to two billion, not ten; a planet round a small red star could
+  stay habitable for trillions. One technological society per planet lifetime is the only data point there is, and it
+  cannot be read as a rate (it is the sample that had to exist to ask). (3) **The observation window.** Her "10 to 15
+  billion years left of good observational science" has a published form: Krauss and Scherrer (2007) argue that in the
+  standard model every galaxy outside our Local Group passes beyond the horizon and the cosmic microwave background
+  redshifts out of reach, so a future observer sees one island of stars, infers a static universe and cannot infer a Big
+  Bang. Their scale is of order 100 billion years, so her number is about ten times too early; the shape of her point
+  stands. (4) **Heat death against big rip.** A constant dark energy (w = −1) gives her slow heat death; a phantom one
+  (w < −1) gives a big rip in finite time. Her argument that the measure prefers no rip is a selection argument of the
+  kind the record already holds (Update 43: the yield counts observers who evolved; Update 59: the branching count): a rip
+  cuts the black hole era short, so a universe at w ≥ −1 births more daughters. Two cautions. The count of black holes is
+  mostly fixed in the first tens of billions of years (structure stops forming once dark energy dominates), so heat death
+  buys time, not many more black holes; and the current data (DESI DR2 and supernovae, 2025 to 2026) weakly favour a dark
+  energy that was phantom in the past and is weakening now, at one to two sigma, which is neither of her two cases and
+  would also avoid a rip. (5) **Vacuum decay** is a third ending, separate from both: the Higgs field dropping to a lower
+  state at a random time, a bubble spreading at nearly light speed (the [C77] picture claim 4 borrows). Nothing measured
+  dates it. (6) **The hotspot.** Her "longest observer evolution hotspot" is Dicke's argument (Update 26) applied to the
+  whole era of starlight: observers sit where stars burn and planets last, which is now, early in a 10^14-year era. What
+  the toy can say about any of this: nothing. What the record can do: write piece 12's function with these stages as its
+  terms (the length of the era of starlight, the number of black holes formed, the observation window) so that a setting
+  of the loop can be scored, which is the exact item Update 59 left open.
