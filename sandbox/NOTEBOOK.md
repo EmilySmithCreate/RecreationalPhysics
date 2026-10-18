@@ -1142,3 +1142,48 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   hold the whole cost" is the gate's natural value, the slab's whole curling cost 4(λ − 1) N_slab held in the pool of
   the two layers beside the cut; it is one of the three candidates put to her in T71, not adopted for her.
 
+- 2026-10-18, the owner, after the layer form's kernels were built: "Why is universe flat? Any setting 6 or up is flat.
+  Inflation theory: it started expanding very fast, then there is a stretch where it slows down and expands sedately for a
+  while, here we are 13.8 b years after the big bang. But that really really fast expansion that must have happened before
+  the big bang was the w=4 to w=6 part. The energy was released when it hit 6 and got flat. Maybe it is just expanding
+  sedately now as forces balance, the scalar field inflaton field, spaces out cools down, then it accelerates again? Due to
+  something else. Generates repulsive gravity, then gravity overwhelms it, then something else. Some expanded a bit more
+  than others some more dense. Could this be related to scraps? It's so efficient you can't use up the fuel, which is why
+  a black hole isn't a universe womb, it's a universe machine. The natural outcome and it shows what a big infinity this
+  strange loop is, among other loops that could exist at different settings, configurations. If you adjust the strength
+  of gravity, electromagnetism, you very quickly get to a point that wouldn't allow life, an observer, to exist.
+  Inflationary multiverse (although our bubble keeps laws of physics constant across cycles, other settings are a topic
+  we haven't dove into yet.) is inevitable. Denser regions collapse to form galaxies and stuff. Seeds of structure."
+  *Ours, set against the toy, point by point; nothing here is a decision or a run.* (1) **Flat at every width from six
+  up** is exact in the toy (the ladder 10 → 8 → 6 costs nothing; LOG, 18 October), but the toy's "flat" is a count at a
+  point (every link carrying its full number of squares, d = 3; O116), not the cosmologist's flat (no spatial curvature,
+  Ω = 1). A torus has no curvature by construction and the toy has no horizon and no expansion, so it has no flatness
+  problem to solve: in this energy nothing wide can be curved. Her observation is right about the toy and does not carry
+  to the sky. (2) **The 4 → 6 step as the fast expansion, the release at 6:** under the layer form the step is one move,
+  it releases exactly 4(λ − 1) N_slab into the stores, and no later widening releases anything (exact). The shape is
+  inflation's reheating (energy stored while the geometry changes, released as a hot lump when it ends), and the
+  mismatch is size: one step of 50 % in one direction against at least e^60 in all three (general knowledge, to verify).
+  (3) **"Expanding sedately as forces balance":** exact in the toy. With layer moves alone the width's distribution is
+  Boltzmann in μ_N N (addendum to Update 65), so at μ_N = 0 the width random-walks between six and the wall with nothing
+  driving it either way; "forces balance" is μ_N = 0. An accelerating phase would be μ_N < 0, a reward per point, which
+  is a knob (S1) and the side on which a varying count runs away (the dynamical-triangulations note of today). (4)
+  **Repulsive, then gravity wins, then something else:** this is the standard history (inflation; then radiation and
+  matter slowing the expansion; then dark energy speeding it up again since about five billion years ago; general
+  knowledge, to verify). The record's name for the "something else" is dark energy as the energy space keeps (Update 52);
+  the toy has none of it. (5) **Scraps as the seeds of structure:** consistent with her lean that the scraps are the dark
+  matter (Update 52), since in the standard picture dark matter's overdensities are where galaxies form. One way it can
+  be wrong, exact and cheap to check: the scraps are knots of fixed energy at a number set by the opening (O107); knots
+  scattered at random with equal energy make shot noise (a white spectrum), while the measured primordial spectrum is
+  nearly scale-invariant (n_s ≈ 0.965) and correlated on every scale (Planck 2018; general knowledge, to verify). The
+  saved T51 sheets (`results/t51_*_adj`) hold the knots' positions; whether they are Poisson or clustered along the
+  seeds' boundaries is a sandbox look not yet run. (6) **"You can't use up the fuel; a machine, not a womb":** exact in
+  the toy, and double-edged. The split credits the stores with exactly the fold's price, so the fold can be paid back at
+  the next proposal; under a uniform leak any feed strong enough to pass the "whole cost" gate (r/ℓ ≥ 2a) can pay the
+  fold back (r/ℓ ≥ a). Energy is conserved to the last unit, so the cycle makes nothing: the machine runs on the feed.
+  The same fact is why the product does not stay open unless the lump leaves, which is the feed-after-the-burp choice
+  (f1, f2) owed for T71. (7) **The constants and the multiverse:** on the record as hers (λ a constant of our loop,
+  Updates 23 and 59; other settings as the (D, λ) map, Update 26; observers as the reward, Update 43; the branching
+  count, Update 59). "Inevitable" is eternal inflation's claim (Vilenkin, Linde; general knowledge, not read), which
+  holds for most inflation models and not all; the measure problem it brings is O101. (8) Denser regions collapsing into
+  galaxies is standard structure formation; nothing to test in the toy. Her two questions about Brian Cox and "Dr Katy
+  at Melbourne" are answered in `docs/reading/notes/2026-10-18_cox_mack.md` (search summaries only).
