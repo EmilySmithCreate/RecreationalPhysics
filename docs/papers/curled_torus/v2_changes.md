@@ -380,3 +380,28 @@ Not applied: the paper is on hold at arXiv with the model's author's endorsement
    definitive. The paper's existing sentence on the random-to-ordered question is unchanged; the new sentence adds that
    the answer may depend on the number of links. Status of the statement (rule 10): published, from the thesis as read
    on 21 September (`REFERENCES.bib`, Kelly22 note); nothing of ours is claimed by it.
+
+## Candidates from 18 October 2026: the fixed count as a setting, and breaking as the published model's own move
+
+Not applied: the paper is the owner's and is held (VISION Update 54, item 4; TASKS, 11 October, item 2). Proposed by her
+on 18 October, after the contraction model of that day (VISION Updates 63 to 66) made the count of points vary and removed
+breaking: "call point conservation a setting in paper 1 so people don't assume it needs to be there", and say that "square
+breaking is allowed/required for the model to not step too far from CQG in the first paper". Nothing in paper 1's results
+changes; both are statements of what the paper's model is. The drafts below are ours for her to edit; each is labelled by
+kind (rule 10): what the model is (exact), what is published (cited), what is ours (marked).
+
+1. **Sec. II, after "Connectedness is not enforced." (line 88).** *The number of vertices is fixed, and no move creates or
+   removes one. This is the published model's setting \cite{KTB19,T25}, kept so that $\lambda$ is the only change from
+   it; it is not a requirement of the question asked. A count that varies, with a price per vertex, is the setting of
+   dynamical triangulations \cite{AJL05,Loll19}, and a variant of this model in which linked vertices compact instead
+   of breaking is left to later work.* (Exact and published; the last clause ours. [Loll19] is not read; cite [AJL05] alone
+   if the owner prefers a read source, or neither.)
+2. **Sec. II, after the move set (line 162, "A sweep is $2N$ attempts.").** *Every exit from the curled torus under this
+   move breaks squares: the cheapest loses two squares and four surplus squares (Eq. (2)), and no switch leaves every
+   edge full. Breaking is therefore allowed, and within this move set it is required for the change. We keep the published
+   move so that the model stays the published one apart from $\lambda$; a move set without breaking is a different model.*
+   (Exact for the first two sentences, from the enumeration already in the paper; the last is a statement of scope.)
+3. **The Not-claimed list (line 643).** Add: *that a fixed vertex count or the breaking of squares is needed for a change
+   of this kind; both are the published model's setting.*
+4. **Not to be added.** Anything about the contraction model's results (VISION Updates 63 to 66): its first registered test
+   (T71) has not run, and nothing from it is a result (rule 16).

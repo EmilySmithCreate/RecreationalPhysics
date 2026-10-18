@@ -6676,6 +6676,36 @@ ledger must equal the number of daughters times a N_slab to 1e-9 in arm B.
 **The size claim (rule 14):** every per-cell word and median at L = 16 are written from L = 8 and 12 as a dated
 amendment before L = 16 runs; AS PREDICTED if they hold.
 
+### What the owner is asked, in plain words (added 2026-10-18, 22:15 UTC, before any run)
+
+**The gate.** Under the layer form the slab's one move, splitting from four around to six around, is downhill: it
+releases a N_slab and nothing holds it shut, so without a rule the slab splits at the first proposal and X is never
+"stable for now". In the switch model the wall did this job (12 in two directions; 64 and up in three); the layer form
+has no wall, and the gate stands in for it. The rule: the split fires only when the stores of the two layers beside the
+cut (2L² points) already hold at least G, and G is not spent. G is a knob (S1) and is hers. The three candidates, and what
+each does: **g0**, none, the slab exists for about a sweep each cycle and her "stable for now" fails by construction;
+**g1**, G = a N_slab, the slab's whole curling cost (2a per pool point), her own words "a step when the stores first hold
+the whole cost", so the slab sits about 2a/r sweeps before each burp (128 sweeps at λ = 1.25, r = 1/64); **g2**, G = 64,
+the price of the first clean switch step, a number the other kind of move sets, reached earlier than g1 at every size run
+and falling with size per point, which g1 does not. What the gate does not do: change the number of daughters or the
+energy of each. Those are fixed by the feed (one daughter of a N_slab per a N_slab fed); the gate sets only how long X
+sits between re-forming and burping, so it changes the slab share and the time of the first burp. Our recommendation is
+g1, as the reading of her words; any of the three is a legitimate choice, and every cell is run at the one she picks.
+
+**The prediction.** A cell is one move set (arm A, the model: layer moves plus the clean two-switch move; arm B, the
+reference: layer moves alone; arm C, the control: the single switch, T68's protocol), one curling cost (λ = 1.10, 1.25,
+1.40), one feed rate (r = 1/64, 1/16 per point per sweep) and one size (L = 8, 12; L = 16 held out). What is read per
+replica: a word, CYCLES (two or more daughters with the slab re-forming between), ONE BURP (one daughter, no re-forming)
+or NEVER SPLITS; and beside it the number of daughters, the energy per daughter against a N_slab, the period between
+daughters in sweeps, the share of sweeps spent as the slab, and in arm A whether a clean switch move was paid before any
+split (SPENT FIRST). She is asked for: the word she expects in arms A and B (one word for all cells, or per λ or r if she
+expects a difference); whether every daughter carries exactly a N_slab; whether the clean switch move ever fires in arm A;
+the word for arm C; and, after L = 8 and 12 are read, her word for L = 16. Said plainly, arm B is close to arithmetic and
+the kernel's own check at L = 6 and 8 already shows CYCLES with exactly a N_slab per daughter; the parts a run can still
+decide are arm A (whether the switch move ever interferes), the period and the slab share at each gate, and the size claim.
+What would count against her picture as she states it: a daughter other than a N_slab in arm B, or a cell in which the slab
+never re-forms (ONE BURP) with the feed continuing.
+
 ### Predictions
 
 **The owner's: OWED before launch**, together with her choice of gate (g0, g1, g2). What happens after the burp is
@@ -6698,7 +6728,7 @@ t_gate = a N_slab / (2L² r) = 2a / r sweeps exactly (128 at λ = 1.25, r = 1/64
 first proposal after it (one layer proposal a sweep, half of them splits, every position equivalent on a canonical state: a wait of about two sweeps);
 the release is a N_slab exactly; under f1 OSCILLATES in every cell, refolding at nearly every proposal; under f2
 OPENS AND STAYS in every cell once the lump has leaked below a per pool point. Under g0 the split is at sweep 1. Under
-g2 the pool holds 64 at sweep 32/(L² r), earlier than g1 at L = 8 and later at L = 12 and 16 for a = 1.
+g2 the pool holds 64 at sweep 32/(L² r), earlier than g1 at L = 8 and later at L = 12 and 16 for a = 1. *Correction, 2026-10-18, 22:15 UTC, before any run: that comparison is wrong. g2 needs 64/(2L²) per pool point against g1's 2a, so g2 is reached first whenever L² > 16/a, that is at every size run (L ≥ 8) for every λ run; at a = 1, sweep 32/(L² r) against 2/r: 0.5/r at L = 8, 0.22/r at L = 12, 0.125/r at L = 16.*
 Arm A: **the layer split comes first in every cell** (never SPENT FIRST), because the gate's threshold per pool point
 (2a ≤ 3.2) is below the 8 per point the first clean switch step needs, and the clean move is rare besides; after the
 burp, with the lump sitting at about 2a per point on two layers and the feed continuing (f1), clean switch moves become

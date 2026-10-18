@@ -1356,3 +1356,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   observer who can learn its universe's history, chosen before this question arose) and the smallest stars' habitability,
   which astronomy can measure; the reference class is hers to choose on its own grounds, and whichever she chooses, the
   function is not scored on our age.
+- 2026-10-18, the owner, on paper 1: "I think we should call point conservation a setting in paper 1 so people don't
+  assume it needs to be there. And that square breaking is allowed/required for the model to not step too far from cqg in
+  the first paper." *Ours:* drafted as candidates 1 to 3 of the 18 October section of
+  `docs/papers/curled_torus/v2_changes.md`, for her to edit; the paper itself is hers and held, and nothing in its results
+  changes. Nothing else of today (the contraction model, the daughter ledger, the gate, piece 12) belongs in paper 1: none
+  of it has run, and paper 1 is the two-direction tube under the published move.
