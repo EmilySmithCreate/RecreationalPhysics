@@ -73,7 +73,10 @@ on a point. *Exact (O41; `test_sheet_tube_cube_ladder` and its six-link counterp
 **2.2 A cost per point (ours, a decision for her; default zero).** With the count varying, a term μ_N · N is the natural
 knob (claim 3's parked "cost-per-element term", the cosmological constant of dynamical triangulations). This brief sets
 μ_N = 0: adding or removing a pair in flat space changes H by nothing, and the count is set by the moves and the stores
-alone. Any other value is a new knob and needs her dated decision.
+alone. Any other value is a new knob and needs her dated decision. In dynamical triangulations this constant has to be tuned
+to a critical value, below which the sum over geometries runs away because every extra block is cheap; μ_N = 0 is that
+side of the published balance, and the brief says so (`docs/reading/notes/2026-10-18_dynamical_triangulations.md`, search
+summaries only, not read).
 
 **2.3 The compaction move, exactly (ours, from her words).** Let u (side 0) and v (side 1) be linked. Let A be u's five
 other neighbours (all side 1) and B be v's five other neighbours (all side 0). Choose a one-to-one map σ: A → B. Remove u
@@ -199,6 +202,9 @@ conservation of H + stores − fed + leaked, the untied rule (Update 58), and ev
    count change only by compaction and splitting?
 6. **The names.** "Antimatter" for the seam's payment and "matter" for the net are hers; the toy has nothing that comes
    in opposite kinds, and the brief records them as an interpretation.
+7. **Decided, 18 October (VISION Update 64):** X is the straight curl; the spiral is the seam shape of the product. A
+   shifted (spiral) layer contraction is flat and stores nothing (`sandbox/spiral_contraction.py`), so the toy's one
+   continuous curl variable is the fraction of a layer compacted (section 2.5).
 
 ## 6. Tests, in order (each exact one is cheap; nothing registered runs before her answers to 1 and 2)
 

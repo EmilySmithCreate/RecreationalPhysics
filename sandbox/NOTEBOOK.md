@@ -1102,4 +1102,25 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   contraction leaves broken points, and only the step remains. (5) The question this puts to her: is the spiral the
   geometry of X (then X stores nothing in this toy and the mechanism has no lump), or is X the straight curl, with the
   spiral the seam shape of the product (O116)? Idea and two looks; nothing registered.
+- 2026-10-18, the owner: "Let's learn a little bit more about dynamical triangulation? It may be a helpful published model
+  to align with part of our phase changing reality model." *Ours:* the reading note is
+  `docs/reading/notes/2026-10-18_dynamical_triangulations.md`, from search summaries only (the proxy refused every paper
+  host); the entry point is [Loll19], not read. What lines up: a varying count priced per block (the bare cosmological
+  constant), the practice of running at fixed count, the spectral dimension as the test of "is it a space". What does
+  not: time put in by hand, and the continuum limit as the aim.
+- 2026-10-18, the owner: "Nothing is stored until the pooled stores hold the whole curling cost - how can it pool if it's
+  not stored somewhere? Can it be stored as antimatter?" *Ours:* the sentence was badly put. It IS stored: in the stores,
+  one number per point, conserved with H to the last unit (Q12). What was meant is that nothing is stored in the WIRING
+  (as a curl) until the stores, read together, hold enough to pay the whole layer; "pooled" names only where the payment is
+  drawn from at the moment of the move (the stores of the points whose links move), not a place of its own. So before the
+  fold every unit fed sits in the stores, free and unshaped; after it, 4(lambda - 1) per point sits in the wiring as the
+  curl and the rest stays in the stores. Can the store's energy be called antimatter? As a name, yes, and it is a natural
+  one for her ledger (the stores pay the seam, the seam repays them at completion). As more than a name, not in this toy:
+  every unit of energy here is positive, nothing comes in two signs, and store energy and wiring energy convert into each
+  other freely. Real antimatter is matter with its charges reversed that cancels with matter to light (general knowledge,
+  to verify); a toy counterpart would need a quantity of two signs whose sum is what is conserved, which is a new
+  ingredient under S1 and is not built. What the toy can offer is the split she is pointing at: shaped energy (the curl,
+  the net) and unshaped energy (the stores, the gross less the net).
+- 2026-10-18, the owner: "X is straight curl, with the spiral being the seam shape of the product after the burp." *Ours:*
+  a decision; VISION Update 64. The fraction of a layer compacted is the toy's curl variable from here.
 

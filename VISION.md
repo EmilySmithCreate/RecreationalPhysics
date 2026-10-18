@@ -1825,3 +1825,20 @@ order, is `docs/design/contraction_model_brief.md`.
   this energy (every compaction above six around is free), and it keeps the count of 3-cubes exactly while the steps
   above it do not. Reported, not claimed.
 
+Update 64 (2026-10-18, 13:35 UTC by the clock): **DECISION (the author's): X is the straight curl; the spiral is the seam
+shape of the product after the burp.** Why this page changes: the sandbox look of the same day (`sandbox/spiral_contraction.py`;
+LOG, 18 October) found that a layer contracted with its splice shifted, so that the seam of the curled direction spirals, is
+flat (X = 0, H = 0, every point open) at every shift tried, and that only the straight contraction is the slab; the brief
+put the choice to her and she made it. Her words: "X is straight curl, with the spiral being the seam shape of the product
+after the burp."
+
+- **What is decided.** The stand-in for X stays the straight slab of Update 60 (4 x L x L, one direction curled to four
+  with no shift), which stores 4(lambda - 1) per point. The spiral of her picture of 17 October (Update 61) is the product's
+  seam, the flat torus six around with its seam shifted by two that paper 1's maps end in (O116), and is reported from the
+  wiring as Update 61 says, not scored as a curl.
+- **What follows.** "Fold points and the count of spiral turns" is not a curl variable in this toy; the energy does not see
+  it except at zero turns. The one continuous curl variable the toy offers is the fraction of a layer compacted (the
+  front), with its area and rim costs (the brief, section 2.5). The curling-energy brief's seam line (Update 61) stands.
+- **Still owed by her** (the brief, questions 1 and 2): the local form or the whole-layer form, and what the no-break rule
+  means under it. Nothing registered runs before that.
+
