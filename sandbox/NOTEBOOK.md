@@ -1050,4 +1050,24 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   its rim and costs more than the finished slab. So her two sentences of the day, "points don't break" and "the front
   pays until the threshold and the rest cancels", pick out two different forms of the model (whole layer, or local with
   a seam), and the brief puts that choice to her as its first question. Nothing registered runs before her answer.
+- 2026-10-18, the owner: "Why do you think the 1.02 originally resonated so well with my intuition? Based on something else
+  it's a prediction and the 1/100000000 net release is testable in reality". *Ours:* (1) Where 1.02 came from: it is the λ
+  at which the counting of look-alike arrangements (interchangeable points) just balances the curling cost for a gas of
+  eight 6-cubes, 512 points, at g = 1.5 (O55, Update 27). It is not a constant of the toy: the balance moves with size
+  (1.031 at 10³ cells, 1.126 at 10²⁴, 1.288 at 10⁶⁰; O72) and with g. So the number that resonated was the toy's
+  smallest size and one temperature. (2) Why it resonated, our guess: it is the one place a calculation put a number
+  near 1, and λ near 1 is the picture she already held, X all but degenerate with space (the tie of Update 5), stable
+  for ever, the lump a sliver (Update 41). A number that fits a picture one already holds is the case rule 13 guards
+  against, and it should be said plainly. (3) The arithmetic does not reach her number: on the clean switch path the net
+  over gross is (λ − 1)/λ, which at λ = 1.02 is 0.0196, one part in fifty, not one in a hundred million; one in a
+  hundred million needs λ = 1 + 10⁻⁸, and the measured sliver (the baryon-to-photon ratio, about 6 × 10⁻¹⁰; general
+  knowledge, to verify) needs λ = 1 + 6 × 10⁻¹⁰. Nothing in the record pins λ to within parts in a billion of 1; the
+  counting balance is the only independent handle and it gives 1.02 at 512 points, drifting up with size. (4) Her
+  logic is right in form, and it is rule 13's own: if something other than the sky fixes λ, then (λ − 1)/λ is a
+  prediction and the sky tests it. What would have to be true: a quantity of the toy that pins λ independently
+  (candidates in the record: the fertile window, the width of the product, the waiting-time law, the counting balance
+  at the real size, which is itself a function of N and g and so needs the real N and g), its uncertainty propagated,
+  and the neighbouring values tested. And one more condition that the contraction model raises: the ratio exists only
+  in the local form (a seam paid along the front and repaid at completion); in the layer form gross = net and there is
+  no ratio to compare. Idea, recorded; nothing to run until λ has an independent handle.
 
