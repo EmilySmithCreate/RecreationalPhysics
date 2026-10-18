@@ -1,0 +1,44 @@
+# T68 stage 1 (PREREGISTRATION T68, written 2026-10-17 on the owner's "proceed with these", before any registered run;
+# rule 11's sixth use on piece 5; VISION Updates 58 and 59): does the owner's untied slab (4 x L x L, one direction
+# curled) open from a feed whose rate varies (ramp: rising from zero to twice the mean; pulse: bursts of 128 at the mean
+# rate; fixed as the control) or that arrives at many points (shared store 0; one point; 16 points; every point), at
+# curling costs 1.25, 1.40 and 1.60? Sealed; mean rates 1/16, 1/4 and 1 units a sweep; L = 8 and 12 in one job; 8
+# replicas; up to 20,000 sweeps read every 50; the final graph saved. The held-out size L = 16 runs after these are
+# read. 36 jobs. Seeds 20266901 to 20266936. Her prediction is inferred (OPENS at some setting, from one spot) and
+# marked so until she gives her word.
+run_slab_feed t68_fixed_shared_lam125
+run_slab_feed t68_fixed_spot_lam125
+run_slab_feed t68_fixed_spots_lam125
+run_slab_feed t68_fixed_all_lam125
+run_slab_feed t68_ramp_shared_lam125
+run_slab_feed t68_ramp_spot_lam125
+run_slab_feed t68_ramp_spots_lam125
+run_slab_feed t68_ramp_all_lam125
+run_slab_feed t68_pulse_shared_lam125
+run_slab_feed t68_pulse_spot_lam125
+run_slab_feed t68_pulse_spots_lam125
+run_slab_feed t68_pulse_all_lam125
+run_slab_feed t68_fixed_shared_lam140
+run_slab_feed t68_fixed_spot_lam140
+run_slab_feed t68_fixed_spots_lam140
+run_slab_feed t68_fixed_all_lam140
+run_slab_feed t68_ramp_shared_lam140
+run_slab_feed t68_ramp_spot_lam140
+run_slab_feed t68_ramp_spots_lam140
+run_slab_feed t68_ramp_all_lam140
+run_slab_feed t68_pulse_shared_lam140
+run_slab_feed t68_pulse_spot_lam140
+run_slab_feed t68_pulse_spots_lam140
+run_slab_feed t68_pulse_all_lam140
+run_slab_feed t68_fixed_shared_lam160
+run_slab_feed t68_fixed_spot_lam160
+run_slab_feed t68_fixed_spots_lam160
+run_slab_feed t68_fixed_all_lam160
+run_slab_feed t68_ramp_shared_lam160
+run_slab_feed t68_ramp_spot_lam160
+run_slab_feed t68_ramp_spots_lam160
+run_slab_feed t68_ramp_all_lam160
+run_slab_feed t68_pulse_shared_lam160
+run_slab_feed t68_pulse_spot_lam160
+run_slab_feed t68_pulse_spots_lam160
+run_slab_feed t68_pulse_all_lam160

@@ -94,3 +94,8 @@ one extra job is the interconnections: the same landscape read both ways (Parts 
 count read as gravity and as superposition (Parts II and V), and the same recurrence read as "every
 version exists" and as "why the floor" (Parts IV and V). Those three sentences are the theory's claim to
 be one thing rather than five.
+
+## Research handoffs
+
+- `observer_relative_histories_research_handoff.md` (12 October 2026): observers, histories and the quantum part.
+- `observations_research_handoff.md` (14 October 2026): connecting the hypothesis to observations (dark matter as relics, black holes from concentrated relics, the birth and a signal it could leave, dark energy).

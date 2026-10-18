@@ -46,3 +46,18 @@ t64_*
 # 2026-10-12, 21:00 UTC by the clock: asking for T64's five N = 192 cells. Not read.
 # 2026-10-12, 21:10 UTC by the clock: the request above was pushed with a skip-ci tag, which stops this workflow too; asking again.
 # 2026-10-12, evening: T64's held-out size (5 jobs) and T62's (10 jobs, still running). Neither has been read.
+# 2026-10-16, 11:50 UTC by the clock: T65 stage 1 (8 jobs, submitted 01:10 UTC) and T66 stage 1 (4 jobs, submitted 08:40 UTC). Neither has been read.
+t65_*
+t66_*
+# 2026-10-16, 14:57 UTC by the clock: asking again for T65's last two cells (t65_a_lam120_l12, t65_a_lam125_l12). Not read.
+# 2026-10-16, 17:59 UTC by the clock: asking again for T65's last two cells. Not read.
+# 2026-10-17, 02:12 UTC by the clock: T67 stage 1 (6 jobs, submitted 23:10 UTC on 16 October) and T65's held-out control at L = 16 (1 job). Neither has been read.
+t67_*
+t65_control_lam125_l16
+# 2026-10-17, 08:31 UTC by the clock: T67's held-out size, L = 16 (3 jobs, submitted 02:28 UTC). Not read.
+t67_*l16
+# 2026-10-17, 22:28 UTC by the clock: T68 stage 1 (36 jobs, submitted 15:26 UTC). Not read.
+t68_*
+# 2026-10-18, 05:45 UTC by the clock: T68 held-out size, L = 16 (36 jobs, submitted about 22:40 UTC on 17 October). Not read.
+t68_*_l16
+# 2026-10-18, 09:50 UTC by the clock: asking again for the six outstanding T68 held-out cells. Not read.

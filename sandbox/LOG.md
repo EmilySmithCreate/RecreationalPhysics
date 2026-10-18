@@ -179,3 +179,181 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   of 13 at two steps on the tube, 40 of 41 at four steps eight around, 84 of 85 at six steps twelve around, 22 of
   25 at three steps on the shifted seam. Exact, and pinned in `tests/test_read_shapes.py`; a table in the
   plain-language edition of paper 1, Chapter 3.
+- 2026-10-14. Does a relic seed a fold (the owner's (a), NOTEBOOK same day)? (`sandbox/relic_seed.py`; a 4 x 48 tube
+  burps sealed at lambda = 1.25, is cooled, and is kept if it ends with exactly one curled column and no damage: 6
+  starts from 10 burps. Then E units packed into one store, one store per point (T26's local spark), next to the
+  column or as far from it as possible, 20,000 sweeps, sealed.) No fold grows. Of 192 points the most ever curled
+  at once is 23, the largest curled piece 12, at any energy from 16 to 512 (2.7 times the price of curling the whole
+  space). Near and far read alike. A small push next to the relic moves or dissolves it (16 units: the column is
+  gone in 1 of 6 and moved in the other 5; the same push far away leaves it untouched in 6 of 6); larger pushes break space as in T57 (a third of the points damaged at 512, near or
+  far) and the relic does not survive. Narrows (a) in two directions at this curling cost: a relic plus energy
+  delivered beside it does not grow a curled region. Not tried: energy that may only curl (feed_energy.py's mode
+  "curl") delivered at a relic, which is (a) and (b) together.
+- 2026-10-15. Does a relic seed a fold when the energy beside it may only curl (the owner's (a) and (b) together,
+  NOTEBOOK 14 and 15 October)? (`sandbox/relic_curl_seed.py`: relic_seed's protocol, 6 one-column starts from 10
+  burps of a 4 x 48 tube at lambda = 1.25, E = 16, 64, 256 packed into one store beside the column or far from it,
+  20,000 sweeps sealed; two rules for what a store may pay.) Rule "curl" (11 October's: refuse only moves that
+  break without changing the curl): the same as ordinary energy. At 64 and 256 the fabric breaks (20 to 37 damaged
+  points at the end at 256, peaks 39 to 48), the relic is gone in 12 of 12, and the largest curled piece is 12 points
+  once. Rule "strict" (pay only for a move that adds surplus squares and loses none): nothing breaks at any energy
+  (damage 0 at the end everywhere; transient peaks of 1 to 12), and most of the energy is never spent: of 256 units
+  at most 42 left the stores, in steps of 14, each a new column of the 24 lambda - 16 kind forming in the fabric. So
+  curl-only energy curls space only in column-sized bites. The end states hold 1 to 6 curled pieces, almost all
+  separate columns of 4; in 2 of 6 near-relic runs at 256 a curled piece of 14 to 16 points persisted (worth about
+  three columns of energy, so touching columns rather than a stretch of re-curled tube, unread). Near and far read
+  alike in what forms; the relic itself moves or dissolves under a push beside it in both rules (kept whole in 0 to
+  3 of 6 near, 6 of 6 far). Narrows (a) + (b) at this curling cost and size: a kind of energy that can only curl does
+  not break space, and does not grow a fold from a relic either; it sits, or buys isolated columns. Not tried: a
+  cluster of relics; longer runs; the owner's question (4), whether the fold's size tracks the energy, cannot be read
+  from a fold that does not grow.
+- 2026-10-15. Does the rod's opening leave a stuck relic, as the tube leaves a column (the owner's question whether
+  the rod, one open direction, is the three-direction equivalent of the tube)? (`sandbox/rod_relic_dip.py` on saved
+  end states: T48's rod cells, four, and T53's rod at L = 18, lambda = 1.25, the two coldest baths; the method checked
+  first on T48's two-direction control, where it finds the 14-unit column STUCK, and its local dS, dX checked equal to
+  the global recount on 200 random moves. For every connected piece of points still at d <= 1, every single switch
+  with a point in the piece is priced at the run's lambda; STUCK means all cost more than zero. Exact per graph; the
+  states are sealed or in a bath, not cooled; `sandbox/out/rod_relic_dip.txt`.) In the rod's product, which is the
+  slab rung (d = 2), stuck curled pieces are common: of 107 pieces listed over 48 end states, 105 are STUCK and 2 FALL
+  (both large unopened stretches whose cheapest move costs exactly 0; counted again from the output file after a
+  first rough count of 90 and 88). The 91 small ones (1 to 15 points; 8 to 84 units at lambda = 1.25, 13 to 130 at
+  1.40; cheapest exits 11 to 28 at 1.25, 1.6 to 30 at 1.40) are all STUCK and are the three-direction counterpart of
+  the column; the 16 large ones (17 to 160 points) are the unopened rod itself. Read from the wiring, the four
+  two-point pieces of 14 units in one state at lambda = 1.25 are each a pair of adjacent points still at d = 1 with
+  four links on five squares and two on four, a two-point stub of rod inside the slab, cheapest move out 28, more
+  stuck than the four-point column (6). So in "stringified" space, one direction still curled, stuck relics exist; in
+  flat six-link space (d = 3 everywhere) none is found (O56, O58), and these pieces have not been tried there. Also:
+  the 14-unit column's cheapest exit in a tube six around at lambda = 1.25 is 6 (dS -1, dX -2; 16 - 8 lambda, so it is
+  a dip for 1 < lambda < 2), not the 12 that O107 guessed ("ours, unverified") and the 13 October note repeated; O107's
+  comparison of the column's and the knots' walls needs that number. Not promoted.
+- 2026-10-15, late. PREDICTIONS WRITTEN BEFORE READING (the owner's instruction of this hour: log predictions from
+  the full story before reading results). Two looks are running. (1) `sandbox/slab_patch_sealed.py`: the tied slab
+  4 x 8 x 8, sealed with empty stores, from a patch opened by hand (T54's helix patch) of k columns, lambda 1.25 with
+  k = 2, 3 and lambda 1.20 with k = 3, 4, room C = N and 4N stores, 20,000 sweeps, three replicas. Disclosed: the
+  control cells k = 0 (sits for ever, as it must) and k = 1 at lambda 1.25 (below the peak; grew a little and damaged
+  a little, 160 to 208 of 256 points still on the slab rung) had printed and were seen before this was written; the
+  past-peak cells had not. *Ours:* at lambda 1.25, k = 2 and 3 with C = 4N, the opening spreads to most of the slab
+  (over 200 of 256 points at d = 3) and the stores end near 0.7 per store, with a few curled pieces and some damage;
+  with C = N the release warms the box past what flat space bears and the end state is mostly damaged (over 50 points
+  at d > 3). At lambda 1.20, k = 3 and 4, the same in kind, slower. *The owner's (inferred from her picture of 15
+  October, "the 3 pop together creating a full new 3 d space"):* the whole slab opens into one flat space. Her word is
+  owed. (2) `scripts/exact_relic_search_d.py` at lambda 1.25 (O58's one- and two-switch search, which found no dip at
+  1.02): *ours:* no dip at 1.25 either; a dip is hardest at the higher curling cost because every move that sheds a
+  surplus square gains more there. *Hers:* not asked; the flat-space relic is her dark-matter candidate, so her
+  picture needs a dip to exist.
+- 2026-10-16, 00:05 UTC. READ: the sealed slab from a hand-opened patch (`sandbox/slab_patch_sealed.py`; predictions
+  above, written before). Every past-peak patch state sat exactly still for 20,000 sweeps with empty stores: k = 2 and
+  3 at lambda 1.25, k = 3 and 4 at 1.20, with C = N and 4N stores alike (d-census unchanged, nothing left the stores,
+  drift 0). Only the below-peak control, k = 1 at 1.25 (24 above the slab), moved: it grew a little and damaged a
+  little. So T54's completed patches of two columns and more are dips of their own: no single switch out of them
+  goes downhill, which is O118's correction seen in a run (the states between completed patches lie higher). Our
+  prediction (OPENS IN ROOM at C = 4N) fails; the owner's "Opens in room" would fail on this protocol. What it
+  narrows: a hand-opened patch with no energy is not a push, and T65 as drafted cannot run that way; an opening of
+  the slab needs energy in the stores to cross the single-move walls between patches (the slab's own is 4 at 1.25
+  under the tie, O106), which is a spark run, not a patch run. Not promoted; the T65 draft is revised to a spark.
+- 2026-10-16, 00:58 UTC. READ: the relic search at lambda = 1.25 (prediction above, written before). O58's one- and
+  two-switch search in flat 6 x 6 x 6 listed two candidate kinds, (dS, dX) = (-4, 4) at 84 units and (-7, 4) at 132,
+  the same two O58 flagged at 1.02; rebuilt and tested on the full move list (`scripts/exact_relic_confirm_d.py 1.25`;
+  `sandbox/out/relic_confirm_lam125.txt`) every arrangement of both kinds has a move downhill (by 84, 68 or 48):
+  NO DIP at 1.25, as at 1.02. Ours held. Bookkeeping only: the owner set the flat-space dip aside on 16 October.
+- 2026-10-16. Does an unequal flat torus curl its shortest side first (the owner: "first curl will be the 6 dropping
+  to 4")? (`sandbox/which_side_curls.py`, `which_side_curls2.py`, `which_side_curls3.py`; the two-direction rehearsal
+  at lambda = 0.5, where the sheet gives way to a tube 2 per point lower; flat 6 x 16, 8 x 12, 6 x 24 tori of 96 and
+  144 points, each also with its axes swapped as a control for slot bias; `sandbox/out/which_side_curls*.txt`.)
+  Pass 1 at g = 3.0 was too hot: the sheets went past the tube to knots and most links were rewired on both axes, so
+  no direction could be named. Pass 2 at g = 2.5, stopped at the first tube: the links along the LONG side (16) were
+  replaced more than those along the short side in 12 of 12 for 6 x 16 and 16 x 6 (survival 0.36 to 0.53 long against
+  0.17 to 0.58 short, with the swap control agreeing), the opposite of the owner's expectation; at g = 2.0 nothing
+  moved in 40,000 sweeps and 8 x 12 stayed flat at both. Pass 3, the product's own rings (the links on three squares)
+  traced to their origin in the clean tubes (d = 1 at 90 % of points, none at d = 0): about equal numbers come from
+  the original x and y links, with a third to a half new (6 x 16: 32/29/35, 32/40/24, 37/37/22, 33/29/34, 25/26/45;
+  6 x 24: 50/51/43; 24 x 6: 49/47/40), so the new rings run across both original directions, not along the short one.
+  Reading: at this curling cost and size the curl does not choose the shortest side; the energy and the moves are
+  local and see no length, and the rings the chain builds are diagonal to the original axes, as the seam-shifted
+  tube of O116 is. Her prediction, read as "the short side's links become the rings", does not hold here. One lambda,
+  one coupling, two directions, small sizes. Not promoted.
+- 2026-10-16. **Does three-direction space heal damage in fewer sweeps than two-direction space untied?** (The owner's
+  prediction, notebook, same day; `sandbox/heal_time.py` → `sandbox/out/heal_time.txt`.) N = 216 both (12 × 18 against
+  6 × 6 × 6), λ = 1.25, E = 192, 384, 768 packed into one store of 4N empty stores, sealed, 4,000 sweeps, 8 replicas,
+  damaged = points with d above flat. **Yes.** The sheet never returned to the scar level (≤ 2 damaged) at any energy
+  (0 of 24; end medians 26, 37, 54 damaged); the cube did in 8, 6, 5 of 8 at the three energies, median 1,250, 1,629,
+  2,462 sweeps after the peak (end medians 12, 17, 20, the warm stores re-breaking a little). Matched by breaks bought
+  (2D at 192 against 3D at 384) the same. The tie "all at the last" made no difference at all: tied and untied 3D
+  cells are identical draw for draw, since a damaged point pays no tie and healing never passes a half-curled state.
+  Reason, ours: at one store temperature a break costs 64 in 3D against 32 in 2D, so the bath re-breaks the sheet and
+  leaves the cube alone. Her prediction holds; ours held on the tie and failed on the time. One size, one λ, one bath,
+  a look. **Promoted the same day on the owner's word (rule 16 (c)): PREREGISTRATION T66, fresh seeds, 16 replicas, a held-out size; one look came before it.**
+- 2026-10-16. **A feed instead of a spark** (the owner: "a flow with various rates based on what black hole eats and
+  so it's one spot per seed"; `sandbox/slab_feed.py` → `sandbox/out/slab_feed.txt`). Untied slab 4 × 8 × 8, λ = 1.25,
+  4N empty stores, r units a sweep into one shared store or one point's own store. First try (rates 2, 8, 32 over
+  10,000 sweeps; `slab_feed_try1.txt`): the two rows that finished had every point broken and 12 units a store, so the
+  rates were far too high; lowered to 0.25 to 16 with a damage stop. **Read:** at every rate, shared store or one point's store, the slab
+  moved and then broke: every one of 24 runs stopped on damage (a tenth of the points) with a third of the points
+  open (31 to 92 of 256) and none past half. The first move came at the slowest rate after about 250 to 400 sweeps
+  (60 to 100 units fed) and was an opening of 8 to 18 points in 4 to 9 separate regions with 4 points damaged; by
+  the stop there were 8 to 23 separate open regions, a sprinkle and not a front, about two points opened for every
+  one broken, after 275 to 1,600 units fed (slow feeds broke it on less energy than fast ones). Her prediction
+  (opens, one spot per seed): half holds, it opens from many spots at once and from the slowest feed on; half
+  fails, it never gets past a third open before a tenth is broken. Ours (no rate opens it cleanly; the fast feed
+  breaks it, the slow one sits): the clean half holds, the "slow one sits" half fails, the slowest feed moved it
+  too. Reason, ours: each completed patch is a dip (O118), so every extension has to be paid for again, and the
+  feed pays for breaks as readily. One size, one λ, three replicas, a look. Not promoted.
+- 2026-10-17. What happens to one 64-point knot given lots of energy (the owner's question, NOTEBOOK same day)?
+  (`scripts/run_sealed_curled_d.py` on a scratchpad config: one 6-cube, lambda = 1.25, sealed, named points, a spark of
+  0, 64, 192, 512 or 1024 in one store of a shared bath of 2N, 4 replicas, 5,000 sweeps; output in the scratchpad, not
+  in `results/`.) It opens at once at every energy (the way downhill, O41), and what it ends as is set by the energy.
+  With nothing added: 1 of 4 fully open (64 at d = 3), 3 of 4 rest at 48 open and 16 still two-curled, the T49 picture.
+  At 64 added (one direction's worth): the same, with 8 broken points in 2 of 4. At 192 (the knot's whole release again):
+  20 to 27 open, 13 to 35 half-curled, 3 to 15 broken: a mess, neither open nor curled. At 512: 12 to 16 open, 45 to 50
+  broken. At 1024: 4 to 7 open, 56 to 58 broken, the random phase. So more energy never helps a knot open: past about
+  one direction's worth it breaks instead, as flat space does (T57) and the slab does under a feed (T67). One lambda, one
+  size, four replicas, named points; a look. Not promoted.
+- 2026-10-18. The owner: "maybe we should be pricing cubes not squares." `sandbox/cube_price.py` counts 3-cubes (eight
+  points wired as Q3) on the built six-link ladder and for every valid single switch from the slab 4×6×6 and from flat
+  6×6×6 (`sandbox/out/cube_price_2026-10-18.txt`). Ladder, cubes per point: flat 1.0, slab 1.5, rod 2.0, 6-cube 2.5, so a
+  curled direction adds half a cube a point as it adds a quarter square and one surplus square: the same ladder, and
+  opening a direction loses N/2 cubes as it loses N/4 squares. Single switches: the opening move of the slab (36 units,
+  dS −6, dX −12) destroys 14 or 16 cubes; the pure breaking move (64 units, dS −4, dX 0) destroys 8 cubes in the slab and 6
+  in flat space. So under a cube count the opening move is about twice as destructive as a break, not less: a price on
+  cubes does not make opening cheap and breaking dear, and it does not remove the loss of small loops that opening is.
+  One size each, exact, a look. Not promoted.
+- 2026-10-18. The owner: "Yes let's look" at her picture run as a rule: the slab fed at every point, with only closed
+  and open allowed (no point ever broken). `sandbox/clean_feed.py`: the untied slab 4 × L × L at λ = 1.25, a store at
+  every point fed r/N a sweep (T68's "all" place), moves of two switches at once (the second within two steps of the
+  first) accepted only if no point is left broken (d ≤ 3 everywhere), paid from the pooled stores of the moved points;
+  dH checked exact against the full Hamiltonian, energy conserved to the unit. Rates 2, 8, 32 a sweep, two seeds, 6,000
+  sweeps; then r = 32 for 60,000 sweeps at L = 8 and 30,000 at L = 12 (`sandbox/out/clean_feed_*2026-10-18.txt`,
+  `clean_feed_long_l8.txt`, `clean_feed_long_l12.txt`). Seen: (1) clean moves are rare under random proposal (two in
+  40,000 attempts with unlimited stores), so the clock is the proposal's, not T68's, and the stores are never the
+  limit (they bank hundreds of thousands of units unused). (2) The slab opens in clean steps of 16 or 8 points, first
+  as 1 to 4 separate patches, which merge into ONE open region by about a third open: at L = 8 one region of 184 of
+  256 at its largest (72 %), then back and forth between 164 and 184 for the last 20,000 sweeps; at L = 12 one region
+  of 316 of 576 (55 %) at 28,000 sweeps and still rising. The first growing open region larger than one cube that a
+  three-direction run of the slab has shown, T48 at λ = 1.40 aside. (3) It climbs: H − H₀ = 4 × (points open), to the
+  unit at L = 8 and within 2 % at L = 12, so every opened point costs the seam 4 units and nothing is released on the
+  way; the release of 1 per point could come only at completion. At L = 8 it did not complete (no flat six-link
+  torus has 256 points, so the clean end state there, if any, is not a torus). (4) The control with breaking allowed,
+  same moves and stores: every point broken by sweep 2,000 at every rate (the random phase), as T68. Two seeds, one
+  λ, L = 8 and 12; the move set and the pooled payment are choices made for the look. Not promoted.
+- 2026-10-18. The owner: "A no-break store could, if the reshaping seams leave no point broken, which nobody has
+  checked. Check this?" `sandbox/clean_moves_census.py`: every pair of switches (the first through one point, the second
+  within two steps of its ends) from flat 6 × 6 × 6 and 6 × 6 × 8 and from the slab 4 × 6 × 6, kept if no point is left
+  at d > 3 (`sandbox/out/clean_moves_census_2026-10-18.txt`). Flat space: 563,670 and 607,384 pairs tried, and the only
+  clean ones are the 102 in which the second switch undoes the first (dS 0, dX 0, nothing changed). The slab: 303,580
+  pairs, 80 undo pairs, and 24 real clean moves, all the known first opening (dS −4, dX 0, 64 units, 16 points to d = 3).
+  So within two switches flat six-link space has no clean move at all: it cannot curl, narrow or reshape without a
+  point passing through broken, and the reshaping of a flat torus toward the slab cannot even start under the no-break
+  rule at this move size. Three or more switches at once not checked. Exact within its reach; a look. Not promoted.
+- 2026-10-18. The owner's compaction move made exact (`sandbox/pair_moves.py`; `sandbox/out/pair_moves_2026-10-18.txt`):
+  a linked pair of the two kinds is removed and its ten other neighbours spliced five to five. The whole layer
+  (x = 0, 1 removed, x = −1 spliced to x = 2) takes 6 × 6 × 6 to 4 × 6 × 6 and 6 × 6 × 8 to 4 × 6 × 8 and is the built
+  slab exactly (N, S, X, H, every point d = 2, valid). One pair removed from flat 6 × 6 × 6: 5 of 120 splicings valid, all
+  leaving broken points (dH 176 with 24 broken, or 191 with 26); from the slab 4 × 6 × 6 none valid. Exact; a look.
+- 2026-10-18. A part of a layer contracted (`sandbox/partial_contraction.py`; `sandbox/out/partial_contraction_2026-10-18.txt`
+  and `_L8_`): patches of 1, 4 and 6 positions with every side-respecting re-linking of the rim tried (the 1 × 2 patch has
+  none valid), strips of 1 to 4 rows with canonical re-linkings, and the whole layer; λ = 1.25, L = 6 and 8. Every partial
+  contraction leaves 26 to 80 points broken and sits above the finished slab (191 to 432 against 144 at L = 6, 256 at L = 8);
+  the blocks cost the same at both sizes, so the seam's cost is local; only the whole layer is clean. Read backward, the
+  slab is separated from flat space on these paths by a seam of about 230 to 280 units, the size of T54's completed patch.
+  Not tried: re-linkings that move the x = −1 to x = 2 splice, patches of 3 × 3 or more, L above 8. Exact within reach; a
+  look. Not promoted. Written up in `docs/design/contraction_model_brief.md`, section 2.5.
+

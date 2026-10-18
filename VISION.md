@@ -1568,6 +1568,132 @@ dated decision before a new ingredient is run.
   our family, never the published model. Sandbox looks so far are in `sandbox/LOG.md` and are not evidence. A
   registered test needs a tested kernel (rule 6), a held-out size (rule 14) and her prediction.
 
+Update 57 (2026-10-15): **three answers of the author's to the programme page's open items: piece 9 adopts the
+published amplitude rule; curling energy is adopted as an ingredient, which reverses Update 32 for the fold; pieces 13
+and 14 stay undecided.** Her words, from the conversation of this morning, put in order. Why this page changes: two of
+the answers are decisions under S1 and one of them withdraws a decision of 25 September. Her new picture of the fold,
+given in the same message, is an idea and is in `sandbox/NOTEBOOK.md` (15 October) with the questions it raises.
+
+- **DECISION: piece 9 adopts the published amplitude rule.** Her words: "Piece 9 should adopt the published amplitude
+  rule, why would it not?" The rule is the one proposed in `docs/design/amplitude_rule_brief.md` and held by her since
+  Update 21: versions carry amplitudes that evolve and can cancel, and a record in the surroundings keeps them apart
+  (O125). What it costs, said once: it is quantum mechanics put in, not derived, so the claim's quantum sentence
+  becomes a bar the loop has to meet and not evidence that it does; the object the amplitudes live on is open, since
+  the loop of four is not a resonator inside a sheet (T15 rung 0b, O30); and it assumes the model's versions are
+  Everett's branches, which is untested (O125). None of these is a reason not to adopt it as the working rule; each is
+  what paper 13 and piece 13's toy now have to say. The quantum rungs already scored (T15 rungs 0, 0b, 3a) stand.
+- **DECISION: curling energy is an ingredient of the toy.** Asked whether reading (b) of 14 October, a kind of energy
+  that may only curl, reverses Update 32's "one kind of energy pays every push": "Correct. that was based off the idea
+  that different dimensions curl separately, but that is not the case with the tie as we learned. the new idea is
+  curling energy is a thing". Under S1 this is a new ingredient and a new kind of state. What is decided is that it
+  exists; its exact form (what a curl-only store may pay for, where it sits, what carries it, and when a fold counts) is
+  fixed in a design brief before any registered run, from her answers to the ten questions in the notebook, and every
+  setting run is published. Sandbox looks may run first and may narrow it, never support it (rule 16). What stands of
+  Update 32: in X the directions are alike, and chance picks which opens first. The untied verdicts stand as scored.
+- **Pieces 13 and 14: "tbd".** Not decided. They stay on the programme page as drafts marked ours.
+- *Ours:* the knots' prediction (whether the stubborn knots are still stuck at a curling cost of zero, piece 7) is
+  still owed; her message broke off before it.
+
+Update 58 (2026-10-16): **DECISION (the author's, "I think it's time to remove the tie then"): the direction tie
+"all at the last" is withdrawn; the hypothesis's three-direction runs are untied from here.** Why this page changes:
+the tie was a knob decided under S1 (Update 47) and its withdrawal is a decision of the same kind. Her reasoning, from
+the conversation of this morning put in order: with the slab as X two directions are already open, so only one
+opening remains at the birth and there is no "together" for the tie to enforce; the tie as written charges a damaged
+point nothing and so rewards breaking (O114, O115); and the untied record is the larger one. The toy's rule returns
+to curvature plus a curling cost, 4(λ − 1) per curled link (Update 23), with every direction costing the same and
+carrying its own wall.
+
+- **What stands.** X is the slab, two directions open and one curled (Update 47's shape statement, now without its
+  tie). Untied it is stuck for now for every curling cost between 1 and 2 (O41) and it is the state the toy lands on
+  from both ends (T48, T53). Its one remaining opening releases a = 4(λ − 1) per point, the two-direction number,
+  not 3a. The barrier to that opening is a patch of several columns (T54 untied: about 7.5 columns and 225 units at
+  λ = 1.25), out of reach of warmth, so the slab opens only from a push, which is her picture. Everything in two
+  directions, the scrap, dark energy as the vacuum of the end state, and the relic count set at the opening never
+  carried the tie.
+- **What is lost, said plainly.** The whole burp from one fold ("as much energy stored in that one fold as in
+  three", her words of 15 October): untied, one fold holds one direction's worth. The low tied barrier (1.5
+  columns, 27 units at λ = 1.25). And "the three go together" as an energy (Update 22) is no longer in the rule; with
+  the slab as X it has nothing to act on.
+- **Verdicts.** Every tied verdict stands as scored (T44 to T46 with their ties; T54 tied; T56; T57 tied). T65,
+  launched this morning with two tied arms and one untied control, is read as registered; its registration carries a
+  dated amendment saying the tie was withdrawn between launch and reading, so that its untied control is the cell
+  that speaks to the hypothesis as it now stands.
+- **Rule 11, on piece 5, fourth use.** Previous claim (hers, Update 47): under "all at the last" the slab opens into
+  one flat space. Failed because: the barrier is a patch, not a move, and the table rewards breaking (O115); and
+  with the slab as X the tie has no second direction to pull along. Replacement (hers, this update): X is the untied
+  slab; one direction opens from a push and releases a per point. New falsification test: T65's untied control, then
+  an untied spark scan of the slab at its registered sizes with her prediction, and the held-out size.
+- **A consequence she has not yet ruled on.** Update 57's "curling energy is a thing" was adopted with the reason
+  "that was based off the idea that different dimensions curl separately, but that is not the case with the tie".
+  Untied, the directions do curl separately again (each has its own wall; O55). Whether curling energy stays as an
+  ingredient, and whether Update 32's "one kind of energy pays every push" returns with it, is hers to say; nothing is
+  built for it meanwhile.
+- **Her answer, the same morning: "Yes curling energy. Yes curl separately. Now I understand better ofc they curl
+  separately. I just couldn't picture the stable slab yet."** So curling energy stays as an ingredient (Update 57), now
+  on its own footing and not on the tie's; the directions curl separately, each behind its own wall (O55); and the
+  slab, two open and one curled, is the stable-for-now X she had not been able to picture. Update 32's "one kind of
+  energy pays every push" is not thereby restored: curling energy is a kind that may only curl (Update 57), and its
+  form is still owed in a design brief before any registered run.
+- *Ours:* the tie did one thing well that the record should keep: it showed that a per-point cost on half-open states
+  lowers the slab's barrier (O106, O118). If a later form charges damage as much as curling, that is a new knob and
+  needs its own dated decision here.
+
+Update 59 (2026-10-16, evening): **the author's handoff of 16 October, recorded: the black hole is the parent's
+own geometry re-curled, not a slab contained inside it; what infall raises is g, not λ; nucleation is a rising
+chance, not a threshold; and the whole-universe reset is no longer required, so a daughter space may form while the
+black hole remains in the parent.** Why this page changes: two of these are decisions about the hypothesis's shape,
+and S1 and rule 9 require that what is decided be written here and what is only an idea stay in the notebook. The
+document is hers, drafted with another assistant and passed on; it is kept as received in
+`docs/theory/relational_cosmology_handoff_2026-10-16.md`, her words from it are in `sandbox/NOTEBOOK.md`, and it is
+read against the record in `docs/theory/relational_cosmology_review_2026-10-16.md` (short form: ASSUMPTIONS O131).
+It calls the hypothesis "Omega"; this page writes X. Its research items T1 to T8 are H1 to H8 in the record, since
+T1 to T8 are registrations here. Merging this update is her acceptance of the wording.
+
+- **DECISION: the black hole's inside is the parent's own geometry curled.** Her words: the two extended directions
+  of the slab "are those of the parent universe itself. They are not severed at the event horizon. Instead, existing
+  spatial relationships curl inward in a whirlpool-like configuration. This is not a proposal involving a little,
+  separately contained slab inside a black hole." This revises the knot-and-shell picture of the same morning
+  (notebook: a 64-point knot with a 4 × L × L shell inside the horizon), which stays in the notebook as an idea.
+  *Ours:* in the toy this is the fold of piece 11, where nothing has yet curled from energy alone (T21, T26, T27,
+  T34, T42, T57); the reading changes what the fold is of, not what it waits on (a carrier for a pull, piece 8).
+  **Confirmed by the author, 2026-10-16, later the same evening ("correct"). This decision is hers as worded.**
+- **DECISION: the reset is no longer required.** Her words: "The black hole might remain present in the parent
+  universe while the daughter has its own emergent spacetime. ... The earlier whole-universe-reset model may still be
+  investigated, but it is no longer a requirement for daughter-universe formation." The loop (Updates 23, 26, 33,
+  43) stays as a candidate beside the daughter picture. *Ours:* the per-turn measure of Update 23 needs the reset; a
+  daughter that opens inside a parent that goes on is counted per generation, which is the branching case O101
+  flagged. Which count she holds is hers (piece 12).
+  **Confirmed by the author, 2026-10-16, later the same evening ("correct"), with the count decided.** Her words,
+  put in order: each individual universe is reset only when its last black hole has dissolved; that is the end state
+  each is working toward; stuff keeps unfolding; every black hole births multiple new ones; that is what we can call
+  a larger infinity: the length of time just as long, but each universe producing a trillion more rather than just
+  one more; and that makes this more likely from the anthropic observer's perspective, which is a nice cohesion.
+  *What is decided:* piece 12's count is the branching one. A universe's turn still ends (her conjecture of 6
+  October, Update 44, now worded as its last black hole dissolving), but the next generation is not one reset of
+  the whole: it is every black hole's daughter, so the tree multiplies by a large factor each generation at the
+  same cold time per universe. *Ours:* this is the branching case O101 named, now chosen rather than avoided. With
+  the cold time held equal, the branching factor is what the selection acts on, which is Smolin's selection for the
+  most black holes with her observer requirement as the filter; the "larger infinity" is a faster-growing tree, not
+  a larger cardinality (the count of universes is countable either way), and that is what the anthropic weight
+  compares. The trade she named on 5 October (more black holes sooner cuts the cold time) is the constraint that
+  keeps the branching from running away, and it is the function piece 12 still has to write down.
+- **Standing positions, restated by her.** λ is a universal constant, the same in parent and daughter, not raised
+  by infall (Update 23, extended across generations). What infall raises is g, the excitation; the chance of an
+  opening rises with it and there is no single threshold. *Exact, from the toy's machinery:* in a sealed box g is
+  read off the stores (Q12; O108), so a feed that raises the stores' energy raises g by construction; H2 of her list
+  needs no derivation. Points are not fundamental, so a daughter need not be smaller than its parent: her answer
+  to her own question of the morning (how the parent holds more than 640 points). *Ours:* the toy's count is fixed
+  and a varying count is claim 3's parked decision; the toy cannot represent this and does not contradict it.
+- **Her research priority, adopted as the order of work:** "Establish the energy-coupled nucleation and stable
+  propagation mechanism before attempting to demonstrate the full cosmological interpretation." That is the
+  registered feed run already named by rule 11's fifth use on piece 5 (PREREGISTRATION T65), with the three
+  outcomes of her H3 (first escape, a front that persists, completion) recorded separately. H5 to H7 wait on it.
+- **Two cautions carried from the review.** Her waiting-time law is the four-link tube's (paper 1), measured to
+  hold with nothing fitted there; it does not govern the slab, whose growing patch is a completed-patch energy of
+  about 225 at λ = 1.25 (T54, O118) and which no g has opened cleanly in a bath, from a spark or under a feed (T53,
+  T56, T65, the feed look). And "melts into disorder" is withdrawn by O123; with too little room the product is
+  damaged, not melted.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
@@ -1606,3 +1732,96 @@ Lorentz symmetry; quantum behaviour; why 3+1; hidden dimensions; inflation numbe
 ## What no outcome can show
 
 Anything about the real universe. A toy model can show that a mechanism is possible or impossible within a class of models. That is the whole claim.
+
+Update 60 (2026-10-17, 15:40 UTC by the clock): **two decisions of the author's on curling energy and on X, and her
+answers to the questions of 15 October.** Why this page changes: Update 57 adopted curling energy as an ingredient with its
+form owed, and the design brief could not be written without her answers; she gave most of them on 17 October. The brief
+is `docs/design/curling_energy_brief.md`; her words are in `sandbox/NOTEBOOK.md`, 17 October.
+
+- **DECISION: a curl-only store pays only for moves that add a surplus square without lowering the square count** (the
+  strict rule; her "let's try this"). Under S1 this fixes the store's rule before any registered run; the model with it is
+  our family, never CQG. *Ours, from the sandbox look of 15 October (a look, not evidence):* under this rule nothing
+  breaks, most of the energy is never spent, and what is spent buys separate columns of 14 units each.
+- **DECISION: X is the curled slab, L × L × 4, likely with relics.** Her words: "the curled slab, LxLx4, likely with
+  relics, is my current x best guess." This is Update 47's shape, untied (Update 58), now allowed to carry relics inside
+  it. *Ours:* the slab's own relics in the toy are two-point stubs of 14 units (the rod's product); a fully curled 6-cube
+  cannot be wired into a slab, so "a knot in X" means a partly open piece, never a 6-cube (the brief).
+- **Open, hers:** what carries curling energy (each relic, stores at the relic, or both); whether the relic is required
+  ("not sure"); what counts as a fold. The brief cannot be finished, and nothing registered runs with curling energy,
+  until the first and third are answered.
+- **Recorded, not decided:** her idea that a patch of the slab opening (4 wide becoming 6) releases enough energy to open a
+  net new knot into space ("havent fully thought it through"), with the exact arithmetic beside it in the brief; her
+  question whether the energy released at first snaps unsnaps points at a seam (the notebook has what the toy says); her
+  lean FREE on whether the double column and the knot of two kinds are stuck at a curling cost of zero, with her
+  instruction that a curling cost of zero is not of interest and that where she has no intuition the prediction is set
+  from the research and marked ours.
+- **Moot:** question 7 of 15 October (whether a broken point pays the tie); the tie is withdrawn (Update 58).
+
+Update 61 (2026-10-17, 16:30 UTC by the clock): **DECISION (the author's, "agree"): what counts as a fold.** A fold is a
+connected region of open space whose points have dropped to two open directions (one curled), at least as large as the
+smallest completed patch that lies no higher than the slab (T54, O118; about 7.5 columns at λ = 1.25), and still there
+after the stores are empty. The seam's shift along the open directions is read from the wiring and reported, not scored,
+until a spiral (her picture of 17 October) is seen. The last condition is the one that carries her claim: X is "stable for
+now", so a curled region that needs the stores to hold it up is not X. This closes question 6 of the curling-energy brief
+(`docs/design/curling_energy_brief.md`); question 1, what carries curling energy, is the one still open before anything
+registered runs with it.
+
+Update 62 (2026-10-18, 02:15 UTC by the clock): **DECISION (the author's, "All 3 yes"; "adopt the move set and the
+store rule as knobs"): the toy gains a one-step patch-opening move, a store that pays no breaking move, and pooled
+payment.** Why this page changes: S1 requires a dated decision before any registered run on a new ingredient, and these
+three are new. They come from her picture of the same night (`sandbox/NOTEBOOK.md`, 18 October): energy arrives at every
+point of the slab; a point is closed (four around) or open (six around) and nothing else; breaking is not in the picture.
+The exact fact behind the move: every single switch from the slab leaves four broken points, so under her picture the
+toy's one move cannot move the slab at all, and T69's first clean state is two switches away.
+
+- **The move:** two switches of the kernel's kind made at once, the second with its side-0 ends within two steps of the
+  first's four ends, accepted only if the hard-core rule holds and no point is left broken (every point at d ≤ 3 after
+  the move). Started from a clean state the chain stays clean, so breaking is excluded by the move set, not priced.
+- **The store rule:** a store pays no move that leaves a point broken. With the move above this is automatic; it is
+  stated so that it also governs any single-switch chain that carries the same energy. It is a different rule from the
+  strict curl-only rule of Update 60, which stands for curling energy; whether both kinds of store exist side by side,
+  or the no-break rule replaces the strict one, is hers to say and is not decided here.
+- **The payment:** a move's cost is paid from the pooled stores of the points whose links moved (up to eight), each
+  in proportion to what it holds; a release is credited to them evenly; a move the pool cannot pay is refused. No
+  temperature.
+- **What it is for:** piece 5 under her picture, the slab fed at every point (T68's "all" place). The sandbox look of
+  this night (`sandbox/LOG.md`) saw the slab open as one growing region climbing 4 units per point opened, with no
+  release before completion; a look, not evidence. The first registered test is that climb at sizes where a flat torus
+  exists (L = 12, 16; a held-out size), with her prediction, after the kernel has its rule-6 tests.
+- **What stands.** Every untied single-switch verdict (T30 to T68) as scored; the curling cost 4(λ − 1) per curled
+  link and the square count as the energy (her "keep using the square counting"); the slab as X (Update 60). With
+  these knobs the model is our family, never the published model. The untied single-switch chain is the control.
+- *Ours, unverified:* with breaking excluded and a seam cost, this is a nucleation-and-growth model; what the toy can
+  decide is whether the release 4(λ − 1) per point ever beats the seam at a size it can reach, and whether the lump then
+  arrives at completion rather than along the front.
+
+Update 63 (2026-10-18, 11:55 UTC by the clock): **DECISION (the author's, "Okay let's adjust the model"): the toy is
+adjusted so that points compact instead of breaking, with a count of points that varies.** Why this page changes: a
+varying count is claim 3's parked decision, a compaction move is a new move set, and S1 requires a dated decision here
+before either is run. Her words of the day are in `sandbox/NOTEBOOK.md` (18 October); the form of the model, with a
+glossary, the mathematics, how it differs from the published model and from the curling-energy version, and the tests in
+order, is `docs/design/contraction_model_brief.md`.
+
+- **What is decided (hers):** points do not break, they compact: two linked points of the two kinds collapse into
+  nothing and the points that were linked to them link to each other; the count is not fixed and rises with what comes
+  into the black hole; the square count stays the energy; the picture it serves is a front that pays as it goes and is
+  repaid at completion, leaving the stored curling cost as the net.
+- **What is ours, pending her confirmation (the brief, section 0 and 5):** the move's exact form as a pair removal with
+  neighbour splicing and its inverse; the whole-layer form, which is exactly the slab (6 × L × L → 4 × L × L with no
+  point broken; `sandbox/pair_moves.py`); the hard-core check on every move; a per-point cost of zero; where the stores
+  sit and what they pay (Update 62's pooled payment carried over).
+- **What the exact looks already say (sandbox, 18 October; not evidence for any claim):** done pair by pair the
+  compaction always breaks points at its rim (26 to 80 within reach) and costs more than the finished slab (191 to 432
+  against 144 at L = 6), the same at L = 8 for the same patch; only the whole layer at once is clean. So the model has two
+  forms that cannot both hold with the move as defined: a local form with a seam and a front (her ledger of 18 October),
+  or a layer form with no seam, no front and no cancellation (her "points don't break"). **Which form is hers to say**
+  before anything registered runs (the brief, question 1), together with what the no-break rule means under it (question
+  2).
+- **What stands.** The curling cost 4(λ − 1), the square count, the slab as X (Update 60), the stores and their
+  conservation, untied (Update 58), the knobs of Update 62 for the fixed-count chain, and every verdict scored. The
+  fixed-count test T70 stays as planned; the contraction model's first registered test is T71, written after her
+  answers. With these ingredients the model is our family, never the published model.
+- *Ours, unverified:* the whole-layer step 6 → 4 is the one step of her ladder "100 → 8 → 6 → 4" that costs anything in
+  this energy (every compaction above six around is free), and it keeps the count of 3-cubes exactly while the steps
+  above it do not. Reported, not claimed.
+

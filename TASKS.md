@@ -733,13 +733,40 @@ The replacements for pieces 5 and 11 are hers. In order:
     T62, "Reading"): WIDENS at μ = 0.20, 0.25 and 0.30 and STAYS SIX AROUND at 0.10 and the control, at both sizes;
     her prediction holds at three prices of four; one end state of 480 clean and wide. The held-out numbers are
     written and N = 384 is queued (`cloud/queue/2026-10-12_t62_stage2.txt`, 10 jobs). Then: fetch `t62_*n384`,
-    accept, read, one O entry (O126).* *T63 registered and queued the same day:
-    the same from the curled tube itself (PREREGISTRATION T63; 10 Batch jobs); her prediction given 12 October (WIDENS at every price above zero).* *T63 read 12 October: NOT READ at every price; its control missed a bar of nine tenths that paper 1's own maps do not meet (0.80 to 0.91 end exactly flat). T64 registered and queued the same day: T63's design on fresh seeds, the control's rule written from paper 1's record (PREREGISTRATION T64; 10 Batch jobs; a second attempt). *T64 stage 1 read the same day: the control holds; WIDENS at μ = 0.05, 0.10 and 0.20, MIXED at 0.025, at both sizes; her prediction holds at three prices of four; the wide product is flawed nearly everywhere. N = 384 queued with its numbers written first (5 jobs).* *Done the same day: paper 1's saved end states that are not flat, read from points clear of flaws (`scripts/read_leftover_width.py`; O116, addendum of 12 October): about half hold a stretch wider than six around, a few tens of points. Where both widths occur in one end state (440 of them) they never touch directly: a flaw lies between. Owed: which of the three knots the joints are, and how wide the wider stretch is.* Sandbox looks so far:
+    accept, read, one O entry.* *Done 16 October: AS PREDICTED at every price, the same words at N = 384; the wide
+    product flawed in every one of 240 (O127).* *T63 registered and queued the same day:
+    the same from the curled tube itself (PREREGISTRATION T63; 10 Batch jobs); her prediction given 12 October (WIDENS at every price above zero).* *T63 read 12 October: NOT READ at every price; its control missed a bar of nine tenths that paper 1's own maps do not meet (0.80 to 0.91 end exactly flat). T64 registered and queued the same day: T63's design on fresh seeds, the control's rule written from paper 1's record (PREREGISTRATION T64; 10 Batch jobs; a second attempt). *T64 stage 1 read the same day: the control holds; WIDENS at μ = 0.05, 0.10 and 0.20, MIXED at 0.025, at both sizes; her prediction holds at three prices of four; the wide product is flawed nearly everywhere. N = 384 queued with its numbers written first (5 jobs).* *T64's held-out size read 16 October (O128): the control misses its bar by one run at N = 384, so every price above zero is NOT READ there and T64 makes no size claim; μ = 0 AS PREDICTED. The rows at μ ≥ 0.05 read WIDE as before, reported not scored.* *Done the same day: paper 1's saved end states that are not flat, read from points clear of flaws (`scripts/read_leftover_width.py`; O116, addendum of 12 October): about half hold a stretch wider than six around, a few tens of points. Where both widths occur in one end state (440 of them) they never touch directly: a flaw lies between. Owed: which of the three knots the joints are, and how wide the wider stretch is.* Sandbox looks so far:
     `sandbox/LOG.md` (two clean finishes in sixteen pushed runs, one a torus twelve around; one-sided end states;
     most runs unfinished or stuck on a flaw).
 
 Owed by the owner: her replacements for pieces 5 and 11, or a table that charges damage (a new knob, S1); whether
 T56's held-out stage runs (ours: no); the open items of Updates 44 (less claim 4's wording, decided) and 52.
+
+12. **T65, the slab given a push under the tie** (PREREGISTRATION T65; the owner's picture of 15 October and her
+    "Opens in room" of 16 October). Launched 16 October on her word, 8 Batch jobs (`cloud/queue/2026-10-16_t65_stage1.txt`).
+    Before it: a sandbox look showed that a patch opened by hand is a dip of its own and is not a push (`sandbox/LOG.md`,
+    16 October), so the registered run supplies a spark. To read: fetch `t65_*`, accept, commit unread,
+    `python scripts/analyse_t65.py`; then the held-out numbers for L = 16 as a dated amendment and
+    `python scripts/make_t65_configs.py --held-out`.
+    *16 October, later: the owner withdrew the tie (VISION Update 58). T65 is read as registered; its untied control
+    is the cell that speaks to the hypothesis as it now stands (PREREGISTRATION T65, amendment of 16 October). Any
+    new three-direction registration is untied unless a new table is decided first.*
+    *Read 16 October, all eight cells (O130): no cell OPENS; tied PARTIAL at λ = 1.20 and DAMAGED at 1.25; the untied
+    control FALLS BACK in 31 of 32. Her "Opens in room" and her PARTIAL fail; ours holds on the tied word at 1.25 and
+    fails on the control. The opening is a sprinkle of pairs, never a front (`scripts/read_t65_pieces.py`). The held-out
+    numbers are written for the untied control at L = 16 (FALLS BACK); her prediction for it, and whether it runs, are
+    hers. Rule 11's fifth use on piece 5: her replacement is a feed rather than a spark; the next test is a registered
+    feed run with her prediction.*
+13. **T66, does flat three-direction space heal damage in fewer sweeps than flat two-direction space** (PREREGISTRATION
+    T66; the owner's prediction FASTER IN 3D and her "Yes proceed" of 16 October; one sandbox look first, `sandbox/LOG.md`
+    16 October). Launched 16 October, 4 Batch jobs (`cloud/queue/2026-10-16_t66_stage1.txt`). To read: fetch `t66_*`,
+    accept, commit unread, `python scripts/analyse_t66.py`; then the held-out ranges for N = 1000 as a dated amendment,
+    her prediction for N = 1000, and `python scripts/make_t66_configs.py --held-out`.
+    *Stage 1 read 16 October (O129): FASTER IN 3D at N = 216, MIXED at N = 512, at both energies; her prediction
+    holds at 216 and fails at 512 by the letter, ours too; the registered observable is a fluctuation below the
+    equilibrium damage at large N (disclosed). The held-out numbers are written (MIXED, medians beyond the run; the
+    end-damage ratio 0.25 to 0.45 reported); three repairs proposed to the owner, none enacted. Owed: her choice and
+    her N = 1000 prediction before `make_t66_configs.py --held-out`.*
 *(Given 12 October: the reviewer's rewrite of paper 1 adopted; her predictions for T62 and T63.)*
 
 ## 13 October: readers for the measurement side, and what would serve them  ☐
@@ -789,3 +816,99 @@ status softened to a candidate. Open for the owner: whether the T64 rerun and it
 the Stage E numbers stay on the programme page while its config is exploratory (tabled); item (7) above; the cloud
 meta files' `git_commit: unknown`, a container issue, not fixed here.*
 
+
+## 16 October: the author's relational cosmology handoff, and what follows  ☐
+
+**Added 2026-10-16, evening** (VISION Update 59; ASSUMPTIONS O131; `docs/theory/relational_cosmology_handoff_2026-10-16.md`
+and its review). Her document's eight investigations are H1 to H8 in the record (its T1 to T8 collide with the
+registrations). Her priority, adopted as the order: the energy-coupled nucleation and stable propagation mechanism
+first; the daughter-universe interpretation after. In order, each registered before it runs:
+
+1. **The registered feed run on the untied slab** (H1 to H4; rule 11's fifth use). *Registered and launched the same
+   evening as PREREGISTRATION T67 on her words "the rates may not be fixed but it's good to run that way for
+   starting": rates 1/16 to 4 a sweep into a shared store (C = N, 4N) or one point's store, L = 8 and 12, held-out
+   L = 16; words OPENS, FRONT, BREAKS, SITS per replica from the first escape, a region past half and completion; 6
+   Batch jobs (`cloud/queue/2026-10-16_t67_stage1.txt`). Her prediction is inferred (OPENS from one spot) and marked
+   so; ours BREAKS everywhere. To read: fetch `t67_*`, accept, commit unread, `python scripts/analyse_t67.py`; then
+   `--write-prediction`, the dated amendment, her L = 16 word, `python scripts/make_t67_configs.py --held-out`.*
+   *T65's held-out control at L = 16 launched the same evening on her "if the untied control is still relevant run
+   it" (1 job, `cloud/queue/2026-10-16_t65_heldout.txt`; her prediction inferred as PARTIAL, ours FALLS BACK).*
+   *Read 17 October (O130 addendum; O132). T65's held-out: FALLS BACK in 16 of 16, AS PREDICTED; one spark opens the
+   slab at no size run. T67 stage 1: no replica of 96 opens or reaches a front; BREAKS in 22 cells of 24, SITS in 2
+   (the slowest feed at N = 576, out of time with the damage still rising); her inferred OPENS fails, ours fails by
+   the letter at N = 576. Rule 11's sixth use: her replacement is hers to propose. The held-out size L = 16 launched
+   the same hour with its numbers written first (PREREGISTRATION T67, amendment of 17 October; 3 jobs,
+   `cloud/queue/2026-10-17_t67_heldout.txt`). To read: `t67_*l16` into the fetch request, accept, commit unread,
+   `python scripts/analyse_t67.py`. Owed by her: her own word for L = 16 before it is read.*
+   *Held-out size read 17 October, 08:32 UTC (O133): every cell's word as written (SITS at r = 1/16 in all three
+   modes, BREAKS at the rest), the medians inside the written ranges in 11 cells of 12 (the spot feed at r = 1/4
+   broke at 6,200 sweeps, 800 early), no front in 96 of 96; her inferred OPENS fails, ours holds. T67 is complete: a
+   feed at a fixed rate opens the untied slab at no rate and no size run. Owed by her: her replacement for the
+   mechanism (rule 11, sixth use); the registration names a varying rate and a feed at many points as untried.*
+   *Her word, 17 October: "proceed with these." **T68 registered and launched** (PREREGISTRATION T68; 36 Batch jobs,
+   `cloud/queue/2026-10-17_t68_stage1.txt`): the feed's rate fixed, ramped or pulsed; arriving at one shared store,
+   one point, 16 points or every point; λ = 1.25, 1.40 and 1.60 (her question of the same message: T67 and T65 were
+   at 1.25 only); L = 8 and 12 in one job, L = 16 held out; her prediction inferred (OPENS at some setting, from one
+   spot) and marked so; ours, no (λ, N) reads OPENS. To read: `t68_*` into `cloud/fetch/request.txt`, accept, commit
+   unread, `python scripts/analyse_t68.py`; then `--write-prediction`, the dated amendment, her L = 16 word,
+   `python scripts/make_t68_configs.py --held-out`. Owed by her: her own word for T68 before it is read.*
+   *17 October, later: her answers on curling energy and X (VISION Update 60): the strict rule for a curl-only store; X
+   the curled slab L × L × 4, likely with relics. The design brief `docs/design/curling_energy_brief.md` is drafted and
+   waits on her answers to its open questions 1 (what carries curling energy) and 6 (what counts as a fold). Her idea of
+   a slab patch's release opening a knot is recorded with its arithmetic in the brief; the exact question it leaves, whether
+   a partly open curled piece larger than a two-point stub can sit inside a slab, is the three-direction relic search O58
+   left open and is the next exact item on piece 11 if she wants it.*
+   *17 October, evening: **T69 registered and computed** (PREREGISTRATION T69; O135), the lowest path out of the slab, on
+   her "I think yes, can we check?" (PAYS; ours CLIMBS). Stage 1 (L = 8): no clean opening below a saddle of 64 at
+   lambda = 1.10 and 1.25 (the first clean state has 16 open points, two switches from the slab), none at or below 53.6 at
+   1.40; MIXED, MIXED, NOT REACHED by the letter; the reach was set by memory (5,000 states popped, up to 19 million
+   children seen). The held-out size L = 12 is running with its numbers written. Next on this item: a second stage that
+   uses the slab's symmetries to reach further, registered as an amendment before it runs; to read L = 12:
+   `python scripts/exact_lowest_path.py configs/t69_lowest_path_l12.json` writes `results/t69_lowest_path_l12.csv`;
+   score it against the amendment.*
+   *Held-out size read 18 October (O135, addendum): AS PREDICTED at lambda = 1.10 and 1.40; at 1.25 the budget exhausted
+   saddle 62 and had not reached the predicted 64, untested. Next: the second stage with the slab's symmetries, as an
+   amendment with its budget and the numbers it must beat (a clean state below the slab, or S(24) and beyond), before it
+   runs.*
+   *Stage 1 read 17 October, 22:31 UTC (O134): no replica of 1,728 opens or reaches a front at any curling cost;
+   BREAKS in 166 cells of 216, SITS in 48 (37 of them the "all" place frozen below the single-move wall, a property
+   of per-vertex stores, disclosed), MIXED in 2; her inferred OPENS fails, ours holds (one detail wrong: pulses break
+   on more energy, not less). Rule 11's seventh use: her replacement is hers; T69 is the exact test. **The held-out
+   size launched** (36 jobs, `cloud/queue/2026-10-17_t68_heldout.txt`) with every cell's word written by one rule
+   first (`configs/t68_heldout_prediction.csv`: BREAKS 62, SITS 46, no front). To read: `t68_*_l16` into the fetch
+   request, accept, commit unread, `python scripts/analyse_t68.py`, scored against the table. Owed by her: her own
+   word for L = 16.*
+   *Held-out size read 18 October, 09:53 UTC (O136): 106 of 108 cells as written; the two misses are marginal cells
+   (the shared store at r = 1/16, λ = 1.60, fixed and ramped, which sat where the rule said they would just break); one
+   matched BREAKS cell's medians 4 % over range; no front in 864 replicas; per (λ, N = 1,024) MIXED at every λ as
+   written. Not AS PREDICTED by the letter, the misses named. Her inferred OPENS fails, ours holds. T68 is complete at
+   three sizes: a feed of any shape or place tried opens the untied slab at no size run. Her own word for L = 16 was not
+   given. Next on piece 5: T70 under VISION Update 62's knobs.*
+   *18 October, 02:15 UTC: **VISION Update 62**, her "All 3 yes": the one-step patch-opening move (two switches at once,
+   no point left broken), the no-break store rule and pooled payment are knobs. The sandbox look that prompted it
+   (`sandbox/clean_feed.py`; LOG, 18 October): the slab fed at every point opens as one growing region, 72 % at L = 8 and
+   55 % at L = 12 when the look ended, climbing 4 units per point opened with no release before completion; the breaking
+   control melts. Next, in order: the kernel as a module with rule-6 tests (dH against the full Hamiltonian, the clean
+   guarantee, conservation, same-seed); PREREGISTRATION **T70**, the climb at L = 12 and 16 with a held-out size (does
+   the region complete, and does completion release 4(λ − 1) per point), her prediction owed before launch.*
+   *18 October, 11:55 UTC: **VISION Update 63**, her "Okay let's adjust the model": points compact instead of breaking and
+   the count varies. The brief is `docs/design/contraction_model_brief.md` (glossary, mathematics, the three models side by
+   side, tests in order). Exact looks first (LOG): the whole-layer contraction is the slab exactly; any part of a layer
+   breaks 26 to 80 points at its rim and costs more than the finished slab, the same at L = 6 and 8. **Owed by her before
+   anything registered runs:** which form (local with a seam, or whole layer) and what the no-break rule means under it
+   (the brief, questions 1 and 2). Then, in order: the seam census extended (E1), the ledger against size (E2), the seam's
+   locality (E3), reach by exhaustive listing (E4); the kernel with rule-6 tests; the looks S1 to S3; T70 as planned for
+   the fixed count; **T71** for the contraction model with her prediction and a held-out size.*
+2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
+   first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
+   before it is used for anything.
+3. **H5 to H7 wait.** H5 (moves for intermediate curls) is a new knob and needs her dated decision; H6 (a varying
+   count of points) is claim 3's parked decision; H7 (a daughter distinguishable from a healed patch) needs a
+   definition first.
+4. **The programme page and the papers** carry the handoff as hers (piece 11 and 12 rows; paper 12's new section;
+   series paper 15, a feed rather than a spark, as an outline). Both of Update 59's decisions she confirmed the
+   same evening, and piece 12's count is the branching one (Update 59, confirmation). Owed by her: her own words for
+   T67's and T65's held-out predictions before they are read.
+
+Owed by the owner, unchanged from the morning: T66's repair choice and her N = 1000 word; the curling-energy design
+brief's answers (Update 57). T65's L = 16 control is launched (above); her own word for it replaces the inferred one.

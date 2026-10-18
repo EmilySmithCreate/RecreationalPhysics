@@ -1,0 +1,6 @@
+# T65 held-out size (PREREGISTRATION T65, amendment of 16 October; rule 14): the untied control alone at L = 16
+# (N = 1024), one spark of 128, C = N and 4N, 8 replicas, 30,000 sweeps, the final graph saved. The tied arms do not
+# run at this size (the tie is withdrawn, VISION Update 58). Launched on the owner's word "if the untied control is
+# still relevant run it". The numbers were written before it runs: FALLS BACK in at least 7 of 8 at each bath. 1 job.
+# Seed 20266604.
+run_sealed_curled_d t65_control_lam125_l16

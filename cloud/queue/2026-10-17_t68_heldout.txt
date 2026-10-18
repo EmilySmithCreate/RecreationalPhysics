@@ -1,0 +1,42 @@
+# T68 held-out size (PREREGISTRATION T68, amendment of 2026-10-17: the words and ranges for L = 16 written from L = 8 and
+# 12 alone, rule 14, in configs/t68_heldout_prediction.csv, before this stage runs): the owner's untied slab 4 x 16 x 16
+# (N = 1024), curling costs 1.25, 1.40 and 1.60, sealed, fed under schedules fixed, ramp and pulse into one shared store,
+# one point, 16 points or every point; mean rates 1/16, 1/4 and 1 units a sweep; 8 replicas; up to 20,000 sweeps read
+# every 50; the final graph saved. 36 jobs. Seeds 20267001 to 20267036. Her prediction is inferred from stage 1 (OPENS at
+# some setting, from one spot) and marked so until she gives her word.
+run_slab_feed t68_fixed_shared_lam125_l16
+run_slab_feed t68_fixed_spot_lam125_l16
+run_slab_feed t68_fixed_spots_lam125_l16
+run_slab_feed t68_fixed_all_lam125_l16
+run_slab_feed t68_ramp_shared_lam125_l16
+run_slab_feed t68_ramp_spot_lam125_l16
+run_slab_feed t68_ramp_spots_lam125_l16
+run_slab_feed t68_ramp_all_lam125_l16
+run_slab_feed t68_pulse_shared_lam125_l16
+run_slab_feed t68_pulse_spot_lam125_l16
+run_slab_feed t68_pulse_spots_lam125_l16
+run_slab_feed t68_pulse_all_lam125_l16
+run_slab_feed t68_fixed_shared_lam140_l16
+run_slab_feed t68_fixed_spot_lam140_l16
+run_slab_feed t68_fixed_spots_lam140_l16
+run_slab_feed t68_fixed_all_lam140_l16
+run_slab_feed t68_ramp_shared_lam140_l16
+run_slab_feed t68_ramp_spot_lam140_l16
+run_slab_feed t68_ramp_spots_lam140_l16
+run_slab_feed t68_ramp_all_lam140_l16
+run_slab_feed t68_pulse_shared_lam140_l16
+run_slab_feed t68_pulse_spot_lam140_l16
+run_slab_feed t68_pulse_spots_lam140_l16
+run_slab_feed t68_pulse_all_lam140_l16
+run_slab_feed t68_fixed_shared_lam160_l16
+run_slab_feed t68_fixed_spot_lam160_l16
+run_slab_feed t68_fixed_spots_lam160_l16
+run_slab_feed t68_fixed_all_lam160_l16
+run_slab_feed t68_ramp_shared_lam160_l16
+run_slab_feed t68_ramp_spot_lam160_l16
+run_slab_feed t68_ramp_spots_lam160_l16
+run_slab_feed t68_ramp_all_lam160_l16
+run_slab_feed t68_pulse_shared_lam160_l16
+run_slab_feed t68_pulse_spot_lam160_l16
+run_slab_feed t68_pulse_spots_lam160_l16
+run_slab_feed t68_pulse_all_lam160_l16

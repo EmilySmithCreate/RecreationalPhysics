@@ -1,0 +1,14 @@
+# T65 stage 1 (PREREGISTRATION T65, drafted 2026-10-15 and revised 16 October before any run; the owner's prediction
+# "Opens in room" of 16 October; VISION Updates 47 and 57): does the owner's slab, 4 x L x L with one direction curled,
+# open into one flat space when given a push? Sealed under her tie "all at the last", a spark in one store of a shared
+# bath (C = N and 4N), arm A the push alone (sparks 16 to 128 at lambda 1.20 and 1.25), arm B the push on a patch of
+# two columns opened by hand (lambda 1.25), and an untied control; L = 8 and 12, eight replicas, 30,000 sweeps.
+# The held-out size L = 16 runs after these are read. 8 jobs. Seeds 20266501 to 20266508.
+run_sealed_curled_d t65_a_lam120_l8
+run_sealed_curled_d t65_a_lam125_l8
+run_sealed_curled_d t65_b_lam125_l8
+run_sealed_curled_d t65_control_lam125_l8
+run_sealed_curled_d t65_a_lam120_l12
+run_sealed_curled_d t65_a_lam125_l12
+run_sealed_curled_d t65_b_lam125_l12
+run_sealed_curled_d t65_control_lam125_l12

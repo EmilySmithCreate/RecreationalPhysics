@@ -3728,8 +3728,245 @@ record is not a permanent fact (off-diagonal D = 1/4 once the record is undone).
     and too narrow for any flat or 3D placement to be read off the wiring. The editions therefore draw the wiring
     (which links carry a third square) and say that the placement is a sketch.
 
+- **O127 T62's held-out size, read: with a price on loops of six the tube six around widens at N = 384 as the
+  numbers written from N = 96 and 192 said it would, AS PREDICTED at every price; the wide product is flawed
+  (16 October 2026, 00:02 UTC by the clock). Measured, pre-registered with a held-out size.** (PREREGISTRATION
+  T62, "Reading of T62, the held-out size", which is the full account; `scripts/analyse_t62.py`;
+  `results/t62_*_n384`; ten Batch jobs of 24 replicas, accepted unread and committed first, 24e60b69. Four links;
+  at μ > 0 our family, never the published model.)
+  - **Measured.** STAYS SIX AROUND at μ = 0 and 0.10, WIDENS at 0.20, 0.25 and 0.30, at N = 384 as at 96 and 192;
+    every cell's WIDE and TUBE shares inside the ranges written on 12 October before the size ran. The control holds.
+    The owner's prediction (WIDENS at every price above zero) holds at three prices of four, fails at 0.10; ours
+    holds.
+  - **What it changes.** The first size claim scored under rule 14 at its held-out size holds. The lead of O116 (what
+    widens a flat torus) has one answer that survives a fourfold change of size: a price on loops of six, μ of 0.20
+    or more at these couplings. It does not make a clean space: no end state of 240 at N = 384 is exactly flat or
+    clean and wide; the products hold 0.4 to 0.6 units per point in flaws (T64's "flawed nearly everywhere", again).
+    What the flaws are, and whether a slower cooling removes them, is not measured. A red-team pass (rule 12) is owed
+    before paper 1 quotes any of the six-loop runs.
+
 ## Provenance
 
 Code and documents were drafted with Claude (Anthropic) in conversation with the
 author and should be disclosed as such in any submission. Physics estimates marked
 "Ours" originated in that conversation and have not been reviewed by a physicist.
+
+- **O128 T64's held-out size, read: the control misses its bar by one run at N = 384 (14 of 24 end exactly flat
+  and six around against 15 asked), so every price above zero is NOT READ there; μ = 0 is AS PREDICTED, ENDS SIX
+  AROUND (16 October 2026, 11:54 UTC by the clock). Measured, pre-registered with a held-out size; no size claim.**
+  (PREREGISTRATION T64, "Reading of T64, the held-out size", the full account; `scripts/analyse_t64.py`;
+  `results/t64_*_n384`; five Batch jobs of 24 replicas, accepted unread and committed first, 8ee58427.)
+  - **Reported, not scored:** the N = 384 rows at μ = 0.05, 0.10 and 0.20 read WIDE in 21 to 23 of 24, as at the
+    smaller sizes, and the wide product is flawed with about twice the energy left of N = 192.
+  - **What is new** (*ours, unverified*): the share of untouched tubes ending exactly flat falls with size (1.00,
+    0.67, 0.58 at N = 96, 192, 384), as a fixed chance per column of being left behind would give (O16, O107). A
+    control bar written from sizes up to 192 did not carry. Any rerun's control needs a bar that falls with N,
+    fitted on the smaller sizes and itself held out (rule 14).
+
+- **O129 T66, stage 1, read: flat three-direction space heals its damage to the scar level where the two-direction
+  sheet never does at N = 216 (FASTER IN 3D at both energies), and at N = 512 neither reaches it within the run
+  (MIXED); the cube ends about a third as damaged as the sheet at every size and energy (16 October 2026, 11:54 UTC
+  by the clock). Measured, pre-registered; the owner's prediction holds at 216 and fails at 512 by the letter, and
+  so does ours.** (PREREGISTRATION T66, "Reading of T66, stage 1", the full account with the table and the held-out
+  numbers; `scripts/analyse_t66.py`; `results/t66_*`; four Batch jobs of 16 replicas at two energies, accepted
+  unread and committed first, 8ee58427. Untied; six links carry VISION Update 24's caveat.)
+  - **A flaw in the registered observable, found by the data and disclosed:** in a sealed box the damage settles
+    at a fixed share of the points (about 5 % of the cube, 12 to 23 % of the sheet at ρ = 1 and 2 per point in a
+    bath of 4N), so "reaches one point in a hundred" is a fluctuation below that level, rarer the larger N. The
+    size-stable quantity in the rows is the ratio of end damage, cube to sheet, 0.25 to 0.48. The held-out numbers
+    are written under the registered rule (MIXED, medians beyond the run) with the ratio reported; three repairs are
+    proposed to the owner and none enacted.
+  - **What stands of the sandbox look** (`sandbox/LOG.md`, 16 October): its finding at N = 216 is reproduced on
+    fresh seeds with twice the replicas and twice the sweeps; its extrapolation to larger sizes was not made and
+    would have been wrong.
+
+- **O130 T65, stage 1, read: given one spark, the owner's slab does not open at either size; tied it goes PARTIAL
+  (λ = 1.20) or DAMAGED (λ = 1.25), and untied it FALLS BACK in 31 replicas of 32; not one of 512 replicas opened
+  (16 October 2026, 18:02 UTC by the clock). Measured, pre-registered; her "Opens in room" and her PARTIAL for the
+  control both fail; ours holds on the tied word at λ = 1.25 and fails on the control.** (PREREGISTRATION T65,
+  "Reading of T65, stage 1", the full account with the cell table and the held-out numbers; `scripts/analyse_t65.py`;
+  `scripts/read_t65_pieces.py` for the end graphs; `results/t65_*`; eight Batch jobs of 64 replicas, accepted unread
+  and committed first, 8ee58427 and d8536575. Six links carry VISION Update 24's caveat; the tie is withdrawn, Update
+  58, so the tied arms are the record of the tied slab and the control is the cell that speaks to the hypothesis.)
+  - **What the end graphs show, reported:** the opening is a sprinkle of pairs in 6 to 22 separate regions, never a
+    front; the damage is mostly the swapped pair of O82 with larger broken clusters at the larger sparks; the
+    untied control's few opened pairs close again. No curled leftover inside an opened space exists, since nothing
+    opened.
+  - **Rule 11, fifth use on piece 5** (in the registration): a spark of 128 is below the patch that grows (T54) and
+    the chain does not gather it; her replacement is a feed rather than a spark; the new test is a registered feed
+    run with her prediction, which the sandbox feed look of 16 October says will open from many spots and break
+    before a third is open.
+  - **The size claim** waits on the held-out size, the untied control at L = 16, with the numbers written (FALLS
+    BACK in at least 7 of 8 at each bath); her prediction for it is owed, and whether it runs is hers.
+  - **Addendum, 17 October 2026, 02:14 UTC by the clock: the held-out size read, AS PREDICTED.** The untied
+    control at L = 16 (N = 1,024; spark 128; C = N and 4N; 8 replicas each) reads FALLS BACK in 16 of 16: a median of
+    16 and 4 points open at the end, 24 at most, the largest open region 2 points, at least 992 curled in every
+    replica. The size claim stands: one spark of 128 does not open the untied slab at N = 256, 576 or 1,024. Her
+    prediction, inferred as PARTIAL and never replaced by her word, fails; ours holds (PREREGISTRATION T65, "Reading
+    of the held-out size"). Measured, pre-registered.
+
+- **O131 The author's handoff of 16 October ("Updated relational cosmology hypothesis and research handoff"),
+  checked against the record: what it gets right, what it gets wrong, and what of its eight investigations is
+  already run (16 October 2026, 20:23 UTC by the clock). OURS, a review; its decisions are VISION Update 59.**
+  (`docs/theory/relational_cosmology_handoff_2026-10-16.md`, her document as received;
+  `docs/theory/relational_cosmology_review_2026-10-16.md`, the full reading, which is this entry's one home for
+  detail; her words in `sandbox/NOTEBOOK.md`.)
+  - **Right, and already on the record:** the relational substrate (claims 1, 3; Update 12); the slab as X with a
+    curled side of 4 (Updates 47, 58); λ a constant, ε = 4(λ − 1) (Q1, Update 23); the two-channel waiting-time law
+    of paper 1, measured with nothing fitted (T22, T59); the sealed box with the spark of 12 at every size (Q12);
+    room as a knob (T9, T18); first escape, front and completion as distinct outcomes (two directions: a spark of 12
+    always converts; three: T65 falls back); O85 kept as the open limit on pieces joining.
+  - **Wrong or to reword:** "Omega" (the record writes X); "melts into disorder" (withdrawn, O123: damaged, not
+    melted); the tube's waiting-time law applied to the slab, whose growing patch is about 225 units of
+    completed-patch energy at λ = 1.25 (T54; O118) and which no g has opened cleanly in a bath (T56 control), from a
+    spark (T65) or under a feed (the sandbox look); "g must be connected to the reservoir energy" (in the sealed toy
+    g is read off the stores, Q12 and O108, so a feed sets it); the item numbers T1 to T8, which are registrations
+    here (called H1 to H8 in the record).
+  - **Already run of H1 to H8:** H1 (fixed λ, g rising) three ways on the slab; H2 defined by the machinery; H3's
+    three outcomes are the analyser's words; H4's knobs exist (C, `by_vertex`, the feed rate). Not run: H5 (a move
+    set for intermediate curls would be a new knob), H6 (needs a varying count, claim 3's parked decision), H7
+    (nothing in the toy distinguishes a daughter from a healed patch). H8 is the rule 11 ledger.
+  - **What it changes:** her reading of the black hole (the parent's geometry curled, not a shell round a knot)
+    lands on piece 11; "the reset is no longer required" sets a per-generation picture beside the loop's per-turn
+    one (piece 12). Next: the registered feed run named by rule 11's fifth use (T65), with her prediction.
+
+- **O132 T67, stage 1, read: a feed at a fixed rate does not open the owner's untied slab; at every rate from 1/16
+  to 4 units a sweep, into a shared bath or one point's store, it opens a sprinkle of small regions and breaks a
+  tenth of the points first, in 94 replicas of 96, and the other two cells ran out of time with the damage still
+  rising; no replica reached a front (17 October 2026, 02:14 UTC by the clock). Measured, pre-registered; her
+  inferred OPENS fails; ours (BREAKS everywhere) fails by the letter at the larger size.** (PREREGISTRATION T67,
+  "Reading of stage 1", the full account with the cell table, the scoring of both predictions and the held-out
+  numbers; `scripts/analyse_t67.py`; `results/t67_*`; six Batch jobs of 8 replicas each at L = 8 and 12, accepted
+  unread and committed first, df81fd9a. Six links carry VISION Update 24's caveat.)
+  - **The words.** BREAKS in 22 cells of 24; SITS in 2 (the slowest feed into the shared bath at N = 576, both
+    capacities: 20,000 sweeps, 1,250 units fed, a median of 24.5 and 31.5 broken points against a threshold of
+    57.6). Per size: N = 256 BREAKS, N = 576 MIXED. No OPENS, no FRONT.
+  - **What SITS is here, read along the records (reported, not scored):** a break the run did not live to see. The
+    broken count rises through the run (17.5, 22.5, 31.0, 31.5 at 5,000 to 20,000 sweeps in one cell) and the slab
+    breaks, at both sizes, when 1.6 to 3.1 units per point have been fed; the damage threshold is a tenth of N and
+    the feed is not, so a larger slab outlasts a slow feed. That scaling is what our fixed range of 250 to 800 units
+    missed, and it is the held-out prediction's one input.
+  - **What every replica did:** the first escape within 100 to 1,150 sweeps, sooner the faster the feed; then open
+    points in 14 to 42 separate regions at the stop, the largest a median of 8 to 30 points, never past a third of
+    the slab; the broken points reach a tenth first. The spot feed breaks on less energy than the shared one. The
+    same sprinkle, never a front, that T65 read from one spark (O130). The end graphs are saved and not yet read.
+  - **Rule 11, sixth use on piece 5** (in the registration): her flow at fixed rates, one spot per seed, does not
+    open the slab; her replacement is hers to propose; the registration names what it did not try (a rate that
+    varies; a feed arriving at many points). The held-out size is launched as registered, with her prediction
+    inferred and marked so.
+  - *Ours, unverified:* in this family a feed is a bath warming slowly, and the slab's single-move wall (36) and
+    flat space's (64) are both far below the completed patch that grows (about 225 at λ = 1.25, O118), so what the
+    warmth buys first is pairs, opened and broken alike; nothing in the protocol gathers energy into one place.
+    Whether a feed that arrives at many points, or one whose rate varies, changes that is not run.
+
+- **O133 T67, the held-out size, read: at N = 1,024 every cell's word is as written before it ran (SITS at the
+  slowest feed in all three modes, BREAKS at the other three rates), the medians inside the written ranges in 11
+  cells of 12, and no replica of 96 reaches a front; so a feed at a fixed rate opens the owner's untied slab at no
+  rate from 1/16 to 4 units a sweep and no size from 256 to 1,024 points (17 October 2026, 08:32 UTC by the clock).
+  Measured, pre-registered, scored at the held-out size alone (rule 14); her inferred OPENS fails; ours holds in
+  every word with one median stop early.** (PREREGISTRATION T67, "Reading of the held-out size", the cell table
+  against the amendment's numbers; `scripts/analyse_t67.py`; `results/t67_*_l16`; three Batch jobs of 32 replicas
+  each, accepted unread and committed first, 058696cb. Six links carry VISION Update 24's caveat.)
+  - **The one miss, named:** the spot feed at r = 1/4 broke at a median of 6,200 sweeps where 7,000 to 14,000 was
+    written; its energy at the break (1,550) is inside the written range. Everything else written held: the words in
+    12 cells of 12, the stop and fed medians in 11, the first escapes within 100 to 1,500 sweeps.
+  - **What SITS is at this size too:** a break the run did not live to see; the broken count rose through every
+    SITS cell and reached 76 of the 102 threshold in the spot cell. The slab breaks when 1.5 to 3.1 units per point
+    have been fed at all three sizes.
+  - **What the three sizes say together (ours):** a feed warms the stores until pairs open and break alike; the open
+    points never gather into one region (the largest at any stop 66 of 1,024, in 39 to 75 separate regions); a
+    slower feed or a larger slab only delays the break. The size claim of the registration stands. Rule 11's sixth
+    use on piece 5 (O132) is unchanged: the owner's replacement is hers to propose; a varying rate and a feed arriving
+    at many points are the untried variants the registration names.
+
+- **O134 T68, stage 1, read: a feed whose rate ramps or pulses, or that arrives at 16 points or every point, does not
+  open the owner's untied slab at λ = 1.25, 1.40 or 1.60: no replica of 1,728 reaches a front; 166 cells of 216
+  BREAK, 48 SIT, 2 are MIXED; and a feed spread over every point's own store moves nothing until each store holds the
+  single-move wall, then breaks (17 October 2026, 22:31 UTC by the clock). Measured, pre-registered; her inferred
+  OPENS fails; ours holds in its claim and fails on one detail (pulses break on more energy, not less).**
+  (PREREGISTRATION T68, "Reading of stage 1", with the λ table and the scoring; `scripts/analyse_t68.py`;
+  `results/t68_*`; 36 Batch jobs of 48 replicas, accepted unread and committed first, f7802417. Six links carry VISION
+  Update 24's caveat.)
+  - **The curling cost, scanned for the first time on the feed** (her question of 17 October): the break comes
+    sooner and on less energy as λ rises (energy per point at the break, N = 576: shared 1.98, 1.75, 1.28; one spot
+    1.63, 1.46, 1.11; 16 spots 3.11, 2.68, 1.78 at λ = 1.25, 1.40, 1.60), and no front appears at any λ. The largest
+    open region outside the "all" place is 108 of 576, in 13 to 45 separate regions.
+  - **A uniform feed is a threshold, not a bath** (a property of the protocol, disclosed): with a store at every
+    point a move is paid from the moving point's store alone, so a feed split over all N stores does nothing until
+    every store holds about 96 − 48λ (the "all" cells broke at store means of 34, 28 and 18.6 against walls of 36,
+    28.8 and 19.2) and then every point can move at once: the largest open regions of the test (up to 212 of 576,
+    under half) in the fewest pieces, followed by the break. T53's bath at a fixed coupling is the warming bath; this
+    is not one. 37 of the 48 SITS cells are this frozen state (0 open, 0 broken at 20,000 sweeps); the other 11 are
+    T67's kind, the slow feed at N = 576 with the damage still rising.
+  - **The schedules:** the ramp breaks later in sweeps on about the same energy; the pulse breaks on more energy than
+    the fixed feed (each burst of 128 buys pairs that close again, T65's reading, so the break is quantised upward
+    to the next burst); 16 spots break on 1.6 to 1.9 times one spot's energy.
+  - **Rule 11, seventh use on piece 5** (in the registration): her "proceed with these" is spent; the replacement
+    is hers to propose; the exact test that decides whether any path pays for itself is T69, registered 17 October
+    in her other session (her PAYS, ours CLIMBS). The held-out size L = 16 is launched with its words written by one
+    rule for all 108 cells (`configs/t68_heldout_prediction.csv`): BREAKS in 62, SITS in 46, no front.
+  - *Ours, unverified:* six feeds, three curling costs, three sizes and 1,728 replicas have now all said the same
+    thing: in this family energy delivered to the untied slab, however shaped or placed, is spent on pairs that open
+    and break before any region grows, and the only thing that changes is when the break comes. If the slab is to
+    open from energy alone, something must gather it faster than the chain spends it, or a path must exist on which
+    the first steps pay for the next (T69).
+
+- **O135 T69, stage 1, read: in the owner's untied slab no local path opens a single point cleanly below a saddle of
+  64 at λ = 1.10 or 1.25 (the first clean state is two switches from the slab, holds 16 open points and lies 64 above
+  it), nothing cleaner than that reaches 24 open points below 64, and at λ = 1.40 no clean opening exists at or below
+  53.6; the slab's cheapest move (96 − 48λ) opens twelve points and breaks four (17 October 2026, 22:49 UTC by the
+  clock). Exact within the move set and the reach of the budget; pre-registered; MIXED at 1.10 and 1.25, NOT REACHED at
+  1.40 by the letter; her PAYS fails on its second half within the reach, ours is not yet scorable and its 36 was
+  wrong.** (PREREGISTRATION T69, "Reading of stage 1", with the table and the held-out amendment;
+  `scripts/exact_lowest_path.py`, `tests/test_lowest_path.py`; `results/t69_lowest_path_l8.csv`. Six links: VISION
+  Update 24's caveat.)
+  - **What is exact.** A best-first search on the saddle pops states in order of the lowest saddle at which the move set
+    reaches them, so every statement "no state with property P below saddle s" is exact for the move set (switches with
+    both side-0 points within one step of the changed region) once the exhausted saddle has passed s. The reach was 64
+    at λ = 1.10 and 1.25 and 53.6 at 1.40.
+  - **What this says about piece 5 (ours).** The single-move wall is not the price of opening the slab cleanly: the
+    cheapest move breaks, and a clean opening costs 64 at both smaller curling costs, the same number as flat space's own
+    wall. One clean state holds 16 open points at once, so an opening does not start with a pair; and whether it can
+    grow past 16 points for less than 64 more is what the reach did not settle. "The released energy pays for the next
+    step" has no support below 64: nothing clean lies below the slab there.
+  - **What limited the reach:** memory, not time; the symmetries of the slab are the exact way to go further and are
+    proposed as a second stage (the registration). The held-out size L = 12 runs with the stage-1 budget and its numbers
+    written first.
+  - **Addendum, 18 October 2026, 01:15 UTC by the clock: the held-out size read.** AS PREDICTED at λ = 1.10 (the first
+    clean opening at 64, two switches, 16 open points; nothing to 24 below 64) and at 1.40 (nothing clean at or below
+    52.8, inside the written 50 to 58); at 1.25 the budget exhausted saddle 62 and had not reached the predicted 64, so
+    that cell is untested, with no clean state below 62, as the prediction implies. The price of a clean opening does not
+    change with the sheet's size where it was reached; the search's reach shrinks with size at a fixed budget (the window
+    grows), which is the reason for the second stage (PREREGISTRATION T69, "Reading of the held-out size").
+- **O136 T68, the held-out size, read: at 1,024 points the words written before the run hold in 106 cells of 108; the
+  two misses are two of the sixteen marginal cells (the slowest feed into the shared store at λ = 1.60, fixed and
+  ramped, predicted to break at about 18,400 and 18,700 sweeps, which sat to 20,000); one matched BREAKS cell's medians
+  fall 4 % above their range (the fixed feed at 16 spots, r = 1, λ = 1.40: stop and fed 3,250 against a ceiling of
+  3,111); and no replica of 864 reaches a front (18 October 2026, 09:53 UTC by the clock). Measured; pre-registered;
+  by the letter not AS PREDICTED, since two words miss, with the misses named and both at the rule's stated edge; per
+  (λ, N = 1,024) MIXED at every λ, as written; her inferred OPENS (at some setting, from one spot) fails, ours (no
+  (λ, N) reads OPENS) holds.** (PREREGISTRATION T68, "Reading of the held-out size"; the table
+  `configs/t68_heldout_prediction.csv`; `python scripts/analyse_t68.py` over `results/t68_*_l16.csv`, 36 cells, 8
+  replicas each.) **What was read.** SITS in 48 cells and BREAKS in 60 against 46 and 62 written. The "all" place, a
+  store at every point fed equally: SITS at every rate at λ = 1.25 and 1.40, and at r = 1/16 and 1/4 at 1.60; at r = 1
+  and λ = 1.60 it breaks at 19,750 to 19,950 sweeps (fixed, pulse, ramp), inside the written range (the wall less 1.5
+  per point, 17.7 × 1,024 = 18,125 units), so the frozen-then-pop behaviour of stage 1 (O134) carries to the third size.
+  The shared store, one spot and 16 spots: SITS at r = 1/16 at λ = 1.25 and 1.40 everywhere; at λ = 1.60 and r = 1/16
+  the one spot breaks late (18,050 to 19,700 sweeps; two of its three cells by a 5 to 6 of 8 majority) as written, the
+  16 spots sit as written, and the shared store sits where the rule said it would just break (the two marginal misses).
+  Every r = 1/4 and r = 1 cell into those three places BREAKS, as written, with the medians inside their ranges except
+  the one named. Regions at the stop: 35 to 76 separate open pieces, never one; first escapes from 100 sweeps (r = 1)
+  to 13,650 (the ramp at 16 spots, r = 1/16). **What it means.** T68 is complete at three sizes (256, 576, 1,024): a
+  feed at a fixed, ramped or pulsed rate of 1/16 to 1 unit a sweep, arriving at one shared store, one point, 16 points
+  or every point, at curling costs 1.25, 1.40 and 1.60, opens the untied slab at no size run, and whether the slab
+  breaks within 20,000 sweeps is set by the energy fed per point (the break energy per point read at N = 576 carried to
+  N = 1,024 in 58 of 60 BREAKS cells) and, for the uniform feed, by the single-move wall. That is the size claim the
+  amendment named, and it holds at the held-out size with the two marginal exceptions. **Rule 11's seventh use on
+  piece 5, completed:** previous claim (hers, inferred from Update 59), a feed of varying rate or at many points opens
+  the slab from one spot; failed because the feed breaks the slab or sits, at every shape, place, cost and size, before
+  any region grows (O134, this entry). Replacement: hers, given the same night (notebook, 18 October): energy arriving
+  at every point with breaking not in the picture, adopted as knobs in VISION Update 62. New falsification test: T70,
+  the clean-move feed at sizes where a flat torus exists, with her prediction before launch. **Not shown:** anything
+  about a feed shaped by the state of the slab or by a pull; anything at λ = 1; anything about the real universe. The
+  owner has not given her own word for L = 16, so this reads against the inferred one, and says so. Every six-link
+  result carries VISION Update 24's caveat.
