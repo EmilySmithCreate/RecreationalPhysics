@@ -316,3 +316,21 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   in flat space. So under a cube count the opening move is about twice as destructive as a break, not less: a price on
   cubes does not make opening cheap and breaking dear, and it does not remove the loss of small loops that opening is.
   One size each, exact, a look. Not promoted.
+- 2026-10-18. The owner: "Yes let's look" at her picture run as a rule: the slab fed at every point, with only closed
+  and open allowed (no point ever broken). `sandbox/clean_feed.py`: the untied slab 4 × L × L at λ = 1.25, a store at
+  every point fed r/N a sweep (T68's "all" place), moves of two switches at once (the second within two steps of the
+  first) accepted only if no point is left broken (d ≤ 3 everywhere), paid from the pooled stores of the moved points;
+  dH checked exact against the full Hamiltonian, energy conserved to the unit. Rates 2, 8, 32 a sweep, two seeds, 6,000
+  sweeps; then r = 32 for 60,000 sweeps at L = 8 and 30,000 at L = 12 (`sandbox/out/clean_feed_*2026-10-18.txt`,
+  `clean_feed_long_l8.txt`, `clean_feed_long_l12.txt`). Seen: (1) clean moves are rare under random proposal (two in
+  40,000 attempts with unlimited stores), so the clock is the proposal's, not T68's, and the stores are never the
+  limit (they bank hundreds of thousands of units unused). (2) The slab opens in clean steps of 16 or 8 points, first
+  as 1 to 4 separate patches, which merge into ONE open region by about a third open: at L = 8 one region of 184 of
+  256 at its largest (72 %), then back and forth between 164 and 184 for the last 20,000 sweeps; at L = 12 one region
+  of 316 of 576 (55 %) at 28,000 sweeps and still rising. The first growing open region larger than one cube that a
+  three-direction run of the slab has shown, T48 at λ = 1.40 aside. (3) It climbs: H − H₀ = 4 × (points open), to the
+  unit at L = 8 and within 2 % at L = 12, so every opened point costs the seam 4 units and nothing is released on the
+  way; the release of 1 per point could come only at completion. At L = 8 it did not complete (no flat six-link
+  torus has 256 points, so the clean end state there, if any, is not a torus). (4) The control with breaking allowed,
+  same moves and stores: every point broken by sweep 2,000 at every rate (the random phase), as T68. Two seeds, one
+  λ, L = 8 and 12; the move set and the pooled payment are choices made for the look. Not promoted.

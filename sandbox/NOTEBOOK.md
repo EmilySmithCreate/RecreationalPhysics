@@ -839,3 +839,26 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   what the look would show. (4) The continuous picture: the toy's 4 and 6 are the least curled and the least open a torus
   can be; everything between 4 around and wide open is a seam, and the toy has no state "a little open". Nothing here is
   decided; the move set is hers to decide before anything registered runs.
+- 2026-10-18, the owner: "I think we should explore what this model would mean? Imply about reality? ... Yes let's look.
+  I more mean like there is 0 (a point containing g relationships), 4 (curled), and 6 to infinity, there is no a little
+  open but the length of open direction is not constant it is increasing." *Ours, from the look (`sandbox/LOG.md`,
+  18 October; a look, not evidence):* (1) Under her rule, no breaking, energy at every point, the slab's last direction
+  does open as ONE growing region in three directions: separate clean patches merge into one by about a third open, and
+  it reached 72 % of the slab at L = 8 and 55 % at L = 12 before the look ended. That is the front the untied runs
+  never showed (T53 to T68), and it appears the moment breaking is taken off the table. (2) But it climbs. Every point
+  opened costs the seam 4 units, paid by the stores, and nothing is released along the way: in two directions the
+  front pays out 1 per point as it goes, here the 1 per point could arrive only when the last seam closes. So in her
+  picture the burp would come at the END of the opening, all at once, not along the front, and the opening itself
+  needs energy fed in throughout, which is her "coming at every point on the edge equally" and is why T65's one spark
+  could not do it. Whether completion ever pays back the seam is a size question (seam against volume; rule 14) and at
+  L = 8 the slab cannot complete at all (no flat six-link torus has 256 points). (3) What the model would mean, in
+  her terms, if adopted: the random phase does not exist in her world, so his matter (the melt) has no home and matter
+  has to be the scrap (her Update 19); a black hole's inside opening into a daughter needs energy supplied across the
+  whole opening until it completes, and then releases the whole lump; the toy's ladder is her 0, 4, 6 (6-cube, slab,
+  flat), with "6 to infinity" the width of the open direction, which the toy holds only at fixed N (O116: the tube's
+  flat product is six around, and T62 and T64 needed a price on loops of six to widen it). (4) What it costs to adopt:
+  a move of two switches at once with no broken point between is a new move set (S1, the cousin of H5), the store rule
+  "pays no move that leaves a point broken" is a second ingredient, and how the pooled stores pay is a third choice;
+  all three were made for the look and none is decided. Ours, unverified: this is a nucleation-and-growth model with a
+  seam cost and a release only at completion, the oldest shape in the subject, and the question it puts is whether
+  the release 4(λ − 1) per point ever beats the seam at a size the toy can reach.
