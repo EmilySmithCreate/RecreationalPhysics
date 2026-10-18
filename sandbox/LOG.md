@@ -356,4 +356,10 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   slab is separated from flat space on these paths by a seam of about 230 to 280 units, the size of T54's completed patch.
   Not tried: re-linkings that move the x = −1 to x = 2 splice, patches of 3 × 3 or more, L above 8. Exact within reach; a
   look. Not promoted. Written up in `docs/design/contraction_model_brief.md`, section 2.5.
+- 2026-10-18. The owner's spiral (`sandbox/spiral_contraction.py`; `sandbox/out/spiral_contraction_2026-10-18.txt`): the
+  layer contraction of flat 6 × L × L with the splice shifted s steps along y, so the seam of the curled direction runs
+  as a spiral with s/L turns per circuit. Every even shift above zero gives a valid state with X = 0, H = 0 and every
+  point d = 3 (L = 6: s = 2, 4; L = 8: s = 2, 4, 6); only s = 0 is the slab (X = N, H = 4(λ − 1) N, d = 2). The spiral
+  stores no curling cost in this toy; it is O116's flat product (the seam shifted by two) reached from the other side.
+  Exact; a look. Not promoted.
 

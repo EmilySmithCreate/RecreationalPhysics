@@ -1070,4 +1070,36 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   and the neighbouring values tested. And one more condition that the contraction model raises: the ratio exists only
   in the local form (a seam paid along the front and repaid at completion); in the layer form gross = net and there is
   no ratio to compare. Idea, recorded; nothing to run until λ has an independent handle.
+- 2026-10-18, the owner: "What about turning that smallest 6xLxL to 4xLxL to continuous change. The stored curling
+  energy where H (the 4 and 6 / curling dimension here) is greater than or equal to 6 is 0. As space spirals in from
+  LxLxL to LxLx6, no energy stored except the matter that crosses the horizon. That's consistent with lambda= 1 where
+  H>=6 and cqg. But energy is stored as the spiral shaped curl reduces H from 6 to 4. That's curling in a bath of matter
+  heat g. How does the energy change over curl (maybe we measure curl in terms of the spiral with some variable
+  representing fold points and the count of spiral turns occurring as h moves from 6 to 4 continuously. How does the
+  curl tightness change as the energy changes if energy flows into the black hole at a relatively consistent rate?"
+  *Ours (her H is the width around, written w below; H is the toy's energy):* (1) Exact: her first two sentences hold in
+  the toy at every λ, not only λ = 1. The curling cost is charged only on a link carrying a fifth square, which exists
+  only at width 4, so above six around our family and the published model are the same energy to the last unit, and a
+  torus of any width ≥ 6 and any count sits at zero. (2) Exact: between 6 and 4 the toy has nothing. A bipartite torus has
+  no odd width, so the energy against width is a step, 0 for w ≥ 6 and 4(λ − 1) per point at w = 4; "continuous" has to
+  be carried by something other than the width. (3) Two continuous variables the toy offers, both computed today. (a) The
+  fraction of a layer contracted (the front): from `sandbox/partial_contraction.py`, the stored curling cost grows about
+  3 surplus squares per contracted position (4 at completion), and a seam cost rides on top, proportional to the rim's
+  length (12 to 27 squares lost beyond the 5 per position the contraction needs, for rims of 4 to 10 positions; 24 for
+  a strip whose rim is two rows of six, at every width of strip), at 16 per square. An area term plus a rim term, both
+  positive, the rim repaid at completion. (b) The spiral: `sandbox/spiral_contraction.py` contracts the layer with the
+  splice shifted along a transverse direction so the seam runs as a spiral, s/L turns per circuit. **Every spiral
+  contraction is flat**: X = 0, H = 0, every point d = 3, at shifts 2 and 4 on L = 6 and 2, 4, 6 on L = 8. Only the
+  straight contraction (zero turns) is the slab and stores 4(λ − 1) per point. This is O116 run backwards: the tube
+  with its seam shifted by two is the flat torus six around. So in this toy the spiral is not a carrier of stored
+  curling energy; it is the shape of the product's seam, and the count of turns is a variable the energy does not see
+  except at exactly zero. A look (rule 16): it can narrow her picture and does; it supports nothing. (4) A constant feed.
+  Under the layer form the tightness is a step in time: nothing stored until the pooled stores hold 4(λ − 1) N_slab,
+  then the whole layer at once, at t* = 4(λ − 1) N_slab / r. Under the local form the first pair needs about 190 at once
+  (the rim), then each further position about 3 to 4 plus the rim's change, and the rim is repaid when it closes; so the
+  stored energy against time is a ramp with a hump and the tightness is a wait, a climb at about r/(3 to 4) positions
+  per sweep, and a refund at the end. Under her no-break rule the local form cannot start, since every partial
+  contraction leaves broken points, and only the step remains. (5) The question this puts to her: is the spiral the
+  geometry of X (then X stores nothing in this toy and the mechanism has no lump), or is X the straight curl, with the
+  spiral the seam shape of the product (O116)? Idea and two looks; nothing registered.
 
