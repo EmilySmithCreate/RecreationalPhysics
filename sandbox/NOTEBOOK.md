@@ -978,3 +978,23 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   Cheap and exact, not done: T69's search run the other way, from the flat 6 × 6 × 8 to the slab 4 × 6 × 12 through clean
   states, which prices her last step's path; and a sandbox look at a flat torus fed curl-only energy at every point (the
   strict rule) to see whether anything curls. Idea; nothing decided or registered.
+- 2026-10-18, the owner: "At a fixed count of points- no fixed count, count increases at the rate of what comes into the
+  black hole. The matter compacted in the black hole can maybe also hold curling energy and contribute to the antimatter?
+  Like curled matter is antimatter?" *Ours:* (1) A growing count removes the reshaping objection: if what falls in is
+  added as curled points, the slab grows in its open directions (4 × L × L with L rising) and nothing wide ever has to be
+  brought down to six; the curled direction is four from the start. The toy cannot do this (no move adds a point; a
+  varying count is claim 3's parked decision, and Update 59 already notes that the toy's fixed count neither represents
+  nor contradicts her growing one). What the toy can say exactly is static: the ladder is additive (O41), so a slab of N
+  curled points holds 4(λ − 1) N, and the lump at completion scales with how much fell in. That is her sentence as a
+  number: the burp is set by the mass eaten, times the curling cost. (2) "Compacted matter holds curling energy": in the
+  toy, yes, by construction: a curled point is the curling cost stored, 4(λ − 1) per point, and under her rule it is
+  released only when the last seam closes (the check of this morning). (3) "Curled matter is antimatter": nothing in the
+  toy supports or excludes it, and one fact from standard physics (general knowledge, to verify) weighs against the name:
+  a black hole made of antimatter is indistinguishable from one made of matter of the same mass, charge and spin, so
+  what falls in loses the matter/antimatter label at the horizon; and antimatter is not stored energy of any kind, it is
+  particles with equal positive mass and opposite charges. In the toy a curled point against an open point is a two-state
+  label, not a signed pair that cancels: opening costs the seam and nothing annihilates. If "antimatter" here means
+  "the curled half of the books, released as the lump", that is the curling cost by another name and needs no new
+  ingredient; if it means the thing that cancelled against matter at the start, the toy has nothing that comes in two
+  kinds, as recorded this night. (4) Nothing to run; the growing count is the "other model" of Update 28 and claim 3's
+  parked decision, hers to reopen. Idea, not a decision.
