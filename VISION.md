@@ -1924,3 +1924,24 @@ daughter picture of Update 59 (a daughter forms while the black hole remains in 
   model. And the sentence "nothing can go from open space to the slab" is put in by the rule, not derived.
 - **What runs.** T71 as redrafted this evening: release_to "daughter" in every model cell, the reference arm with the
   release to the stores, her prediction and the gate's value owed before launch.
+
+Update 67 (2026-10-18, 20:54 UTC by the clock): **DECISION (the author's): how piece 12's measure combines the generations.**
+Her words: "Per universe only ignoring the branching when we are thinking about identicle universes that can only be
+differentiated by a particle or quantum measurement that makes something different at the macro scale. 2 for predictions
+of when an observer is most likely to occur in time where t=0 and the end of life supporting stars." Why this page changes:
+the function for piece 12 (`docs/design/loop_measure_brief.md`, written the same evening) could score no setting until the
+combination rule was chosen, and it had to be hers (O101).
+
+- **What is decided (hers).** Two rules for two questions. (i) Universes of one setting that differ only by a quantum
+  outcome with a macroscopic consequence (versions, in the sense of Update 17 and piece 14) are counted **per universe**,
+  the branching ignored. (ii) For **when** an observer is most likely to exist, counted from a universe's birth to the
+  end of its life-supporting stars, the **growth rate** rule is used (the brief's rule 2: the growth of the tree, with
+  "holds observers at all" as the filter).
+- *Ours, unverified.* Rule (i) is the one that avoids the trap O101 named: no exponential weight on the deepest
+  generations within a setting. Rule (ii), read as counting observers across the whole tree at one moment, carries a
+  consequence the literature knows as the youngness pressure ([Freivogel11], read in part): where daughters are born at a
+  steady rate, most universes alive at any moment are young, so the prediction for an observer's time is pulled toward
+  the earliest time observers can exist. With trillions of daughters per universe within about 10^10 years the pull is
+  strong, and we are at 1.4 × 10^10 years, near the peak of star and planet formation rather than at its start. So her
+  rule (ii) makes a prediction that can fail, which is what the measure needed; the brief sets out the two readings of
+  "at one moment" under which it does and does not. Nothing here is a knob of the toy or a run.

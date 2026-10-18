@@ -920,7 +920,8 @@ first; the daughter-universe interpretation after. In order, each registered bef
    reforms, the feed continues. Built as a daughter ledger in the protocol (tests), T71 draft amended (f3 the model, f1
    the reference). Exact: the parent converts the whole feed into daughters of a N_slab each; the gate sets only how
    long X sits. **Owed by her before launch: the gate's value and her prediction.** Piece 12's function written as
-   `docs/design/loop_measure_brief.md` on her "proceed" (the combination rule is hers to choose).*
+   `docs/design/loop_measure_brief.md` on her "proceed"; the combination rule decided by her the same evening (VISION
+   Update 67: per universe within a setting; the growth rate for when an observer exists).*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

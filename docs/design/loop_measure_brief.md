@@ -59,31 +59,52 @@ generations the tree holds B^k universes and, with every term equal across a set
 sooner shortens the cold time, so N_BH(s) and O(s) pull against each other. Written as a dependence, O(s) falls as the
 black-hole formation rate rises; the shape of that fall is the unknown function of section 2's last row.
 
-## 4. The one choice left to her: how the generations are combined
+## 4. How the generations are combined: decided by the owner, 18 October (VISION Update 67)
 
 Y_k grows without bound in k for any setting with B > 1, so settings cannot be compared by their total yield (O101: a
-turn's count has to be finite, and a branching process is dominated by its rate of multiplying). Three rules, each of
-which ranks settings differently:
+turn's count has to be finite, and a branching process is dominated by its rate of multiplying). Three rules were put to
+the owner, each ranking settings differently: (1) per universe, score O(s), the branching ignored; (2) the growth rate,
+score ln B(s) with O(s) > 0 as a filter (Smolin's selection for the most black holes, [Smolin06], not read, with her
+observer requirement as the gate); (3) a fixed depth or a discount, O(s) · B(s)^K or Σ_k O(s) B(s)^k β^k, which imports a
+number nothing fixes ([Bostrom11], [Askell18], read in part, O101).
 
-1. **Per universe:** score O(s). Ignores the branching; Update 59's "larger infinity" plays no part.
-2. **Growth rate:** score ln B(s), with O(s) > 0 as a filter. This is Smolin's selection for the most black holes
-   ([Smolin06], not read) with her observer requirement as the gate: a setting with no observers scores nothing, and
-   among settings with observers the fastest-growing tree wins however few observers each universe holds.
-3. **A fixed depth or a discount:** score O(s) · B(s)^K for a chosen K, or Σ_k O(s) B(s)^k β^k with β B(s) < 1. Both
-   are well defined and both import a number (K or β) that nothing in the hypothesis fixes; the economics of infinite
-   streams offers exactly these choices ([Bostrom11], [Askell18], read in part, O101).
+**Her decision, two rules for two questions.** Her words: "Per universe only ignoring the branching when we are thinking
+about identicle universes that can only be differentiated by a particle or quantum measurement that makes something
+different at the macro scale. 2 for predictions of when an observer is most likely to occur in time where t=0 and the end
+of life supporting stars."
 
-Her words of 16 October lean to the second: "each universe producing a trillion more rather than just one more" is what
-makes the arrangement more likely from the observer's perspective, with the cold time "just as long". Put as a rule: among
-settings whose universes hold observers at all, the setting with the largest B wins; the cold time enters only as the
-condition that O(s) stays above zero. That is the recommendation here, with one caution: under it, the measured universe
-is predicted to sit near the maximum of B among settings that still allow observers, so the test of the measure is
-whether neighbouring settings (a stronger gravity, say) make more black holes and no observers. Rule 13 applies to any
-such comparison: a setting that lands near the maximum is not a result until its neighbours have been scored.
-
-A second caution from piece 14 (`docs/theory/orh_findings.md`, section 10): if the loop's versions are Everett's branches,
-the count over branches must be Born-weighted, so the plain count of universes in Stage 2 would need a weight per branch.
-That is a different question from the combination rule and is not decided either.
+- **Rule (i), per universe, within a setting.** Universes of one setting that differ only by a quantum outcome with a
+  macroscopic consequence (versions; Update 17, piece 14) are each counted whole. *Ours:* this is the rule that avoids
+  O101's trap. Within a setting every universe has the same O(s), so the branching adds nothing but copies, and no
+  exponential weight falls on the deepest generations. The Born-weight caution of piece 14 still applies to the copies
+  (if versions are Everett's branches, each copy carries a weight), and is not decided.
+- **Rule (ii), the growth rate, for when an observer exists.** The question: between a universe's birth (t = 0) and the
+  end of its life-supporting stars, when is an observer most likely? *Ours, unverified; the mathematics is textbook
+  demography and the cosmological form is published ([Freivogel11], read in part; [BFY08], read in full by an assistant
+  agent, Eqs. 35 to 40).* Two readings of "most likely", and they disagree:
+  - **Counted per universe** (rule (i) applied to the clock): the distribution over t is Stage 1's integrand,
+    n_pl(t) · p_obs · W(t), the same in every universe of the setting. For our setting it peaks where habitable planets
+    form and have had time to evolve observers, inside the observation window: from a few billion years after the start
+    to a few tens of billions (piece 14's population model puts the share of observer-moments already past by today
+    anywhere from under a millionth to 0.9 depending on who counts; `docs/theory/orh_findings.md`, O125). Our 1.4 × 10^10
+    years sits inside that range and is not a surprise under this reading.
+  - **Counted across the tree at one moment** (the growth rate at work): if each universe births daughters at a rate
+    β(τ) per unit of its own age τ, the tree grows as e^(γT) in a common time T with γ fixed by 1 = ∫ β(τ) e^(−γτ) dτ,
+    and the universes alive at any one moment have ages distributed as e^(−γτ) (the stable age distribution). Observers
+    are then found at age τ in proportion to n_pl(τ) p_obs W(τ) e^(−γτ): the branching pulls the prediction toward the
+    earliest age at which observers can exist. This is the youngness pressure of eternal inflation. **How strong, for her
+    numbers:** "trillions" of daughters per universe, born as its black holes form within about 10^10 years, gives
+    γ ≈ ln(10^12) / 10^10 years ≈ 3 × 10^−9 per year, so between the first possible observers (about 10^9 years) and us
+    (1.4 × 10^10) the weight falls by e^(−γ × 1.3 × 10^10) ≈ e^(−36). Under this reading an observer at our age is
+    predicted essentially never; an observer should find itself within the first billion years of its universe.
+  - **What follows.** Her rule (ii) makes a prediction that can fail, which is what the measure needed. Under the
+    across-the-tree reading it fails already, by our own age, unless the daughters per universe are far fewer than
+    trillions (γ × 10^10 years of order one needs b N_BH of order e, that is a few daughters per universe, not 10^12) or
+    the daughters are born late in the parent's life (β concentrated at ages past ours, which the black hole era allows:
+    the mass that falls in over 10^100 years, not the formation of the holes, would set the births). Under the per-universe
+    reading nothing fails. Which reading her rule (ii) means is the one question this decision leaves, and it decides
+    whether the measure already contradicts our age. Rule 13 applies: the published form of this argument was made for
+    eternal inflation and is carried here as a target, not as a result.
 
 ## 5. What the toy supplies now, and what it never will
 
@@ -99,13 +120,13 @@ astrophysical term of section 2. The toy's one contribution to the score is ther
 T_star about 10^14 years; T_obs about 10^11; N_BH of order 10^20, formed mostly within the first 10^11 years; T_turn
 about 10^100; b and p_obs unknown; today at 1.4 × 10^10 years, early in the era of starlight and inside the observation
 window. The dark energy measured now (a constant, or weakening, at one to two sigma; DESI 2025 to 2026) gives the long
-heat death and not the rip, which under rule 2 of section 4 is the branch with the larger B, as the owner argued on 18
+heat death and not the rip, which under her rule (ii) is the branch with the larger B, as the owner argued on 18
 October. That is consistent with her measure; it is not evidence for it, since the rule was chosen with the outcome
 known.
 
 ## 7. What would kill it
 
-A setting with observers and a larger B than ours, found among the neighbours of our constants, would falsify the
-recommended rule as a selection principle. No model here can score a neighbouring setting, so the function stands as a
-specification until one can; what it fixes now is the list of terms a model would have to produce, and the single
-choice (section 4) that is the owner's.
+A setting with observers and a larger B than ours, found among the neighbours of our constants, would falsify her
+rule (ii) as a selection principle; and under its across-the-tree reading our own age already does (section 4). No model here can score a neighbouring setting, so the function stands as a
+specification until one can; what it fixes now is the list of terms a model would have to produce, and the one
+question section 4 leaves her: which reading of "at one moment" her rule (ii) means.

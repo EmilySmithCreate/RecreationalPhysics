@@ -1264,3 +1264,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   converter; b = energy in over the lump), so that no prediction is scored on an input (rule 13: inputs checked for
   containing the target). On "once it's built the best it can be": the toy already predicts (T71's words are written);
   the project's way is a registered prediction at each stage, not one after a finished build.
+- 2026-10-18, the owner, on the converter reading of Update 66 ("the parent makes nothing, it passes the feed through"):
+  "Yes this makes sense." *Ours:* recorded as her acceptance of the reading.
+- 2026-10-18, the owner, choosing piece 12's combination rule (the brief's section 4): "Per universe only ignoring the
+  branching when we are thinking about identicle universes that can only be differentiated by a particle or quantum
+  measurement that makes something different at the macro scale. 2 for predictions of when an observer is most likely to
+  occur in time where t=0 and the end of life supporting stars." *Ours:* a decision (VISION Update 67). Her first rule is
+  the one that avoids the trap O101 named: universes of one setting that differ only by a quantum outcome are counted each
+  as a whole, so no exponential weight favours the deepest generations. Her second rule, read as counting observers across
+  the tree, carries a known consequence (the youngness pressure of eternal inflation, [Freivogel11]; general knowledge, to
+  verify): with daughters born at a steady rate, the universes alive at any one moment are mostly young, so the prediction
+  for "when" is pulled toward the earliest time observers can exist; with "trillions" of daughters per universe within
+  about 10^10 years that pull is strong, and we are at 1.4 × 10^10 years. Written out in the brief with the escape her
+  first rule provides.
