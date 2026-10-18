@@ -783,3 +783,32 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   many points appear, since the energy is indifferent to the size of flat space, and the toy has no move that adds a
   point (every move is a switch of two links). Both are claim 3's parked decision (a cost or credit per point) and
   Update 28's other model. Idea, not a decision.
+- 2026-10-18, the owner: "No, I feel like I wanna keep using the Square counting classical methods, but I want us to have
+  an open mind about how we can get this curled slab to open into three dimensional space I know we want to use the
+  square counts and math but when I visualize it, there's basically a closed point at the convergence of the
+  three-dimensional whirlpool. All the energy is directed right at that point the only thing the energy can be used for
+  is curling and curling so eventually it has to curl and I don't understand what breaking squares is we are trying to
+  think about what actually can happen inside a black hole." *Ours:* (1) What breaking is, in the toy: at a flat point
+  the six links make fifteen pairs; the three opposite pairs are the directions and the other twelve each close a loop
+  of four. A curled point has one of the opposite pairs closing a loop of four as well (the direction four around).
+  A broken point has some of the twelve closing nothing: its neighbours no longer sit as a lattice. Every move is a
+  switch of two links and does one of three things to a point: curls it (a loop of four appears on an opposite pair,
+  a surplus square, charged 4(λ − 1)), opens it (that loop goes, paying the same back), or breaks it (a loop among the
+  twelve goes, charged 16, and nothing is curled). From flat space the cheapest move breaks (64, four squares lost, no
+  surplus) and every move that curls a point also breaks squares beside it (84 and up: four lost, four surplus). There
+  are far more ways to break than to curl (O20), which is why T21, T26, T27, T34, T42 and T57 broke and nothing folded.
+  (2) The published model has already read what we call breaking: the random phase is [T25]'s matter, and a black hole
+  is a large region returned to it; O20's correction, hers, says concentrated energy breaking space "may be nothing more
+  than what a great deal of energy in one place looks like". So her picture and the published one disagree about the
+  inside: his is broken, hers is curled (Update 59). The toy as it stands sides with his, because energy pays breaking
+  as readily as curling. (3) "The only thing the energy can be used for is curling" is, in square counting, a rule on
+  the store, not on the energy: a store that may not pay a move that breaks a point. That keeps every count and price
+  as they are and changes only which moves the arriving energy is allowed to buy. It is the no-break store named this
+  morning; the strict rule of Update 60 is its narrower cousin (curl only, so it cannot open either). T69's clean
+  milestones are the exact question for the opening half (a path from the slab to open space through states with no
+  broken point: the first clean state costs 64 at L = 8); the fold half, flat space fed at one point with breaking
+  refused, has no listing yet. (4) The whirlpool's centre: the slab has none (every point alike); the toy's object with
+  all directions converging is the 6-cube, 64 points, and a curl that tightens toward a centre is not a torus. The seam's
+  shift along the open directions is what Update 61 reads for a spiral. Question for her: in her picture is breaking
+  forbidden (a store rule) or merely dear (a table that charges damage more than 16)? The first is cheap to look at in
+  the sandbox and T69 already asks half of it; the second is a new table (Update 54's open item).
