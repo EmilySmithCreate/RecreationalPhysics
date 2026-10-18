@@ -134,6 +134,19 @@ of life supporting stars."
     per-universe count predicts the red-dwarf era. A "balance" in the across-the-tree reading (the youngness pull
     against the red dwarfs' numbers) would need γ of a few × 10^−11 per year, two numbers set to land on our age, which
     rule 13 forbids counting as anything.
+  - **Her lean, later the same evening ("yes this makes sense"): the births set by the mass that falls in over the long
+    black hole era, holes birthing now still running at 10^50 years.** Recorded as a lean, not as her word on the reading.
+    *Ours, to verify against the sources:* under the converter (Update 66) a hole births only while fed, and the published
+    far future has the feed front-loaded: nearly all infall in the first 10^10 to 10^11 years; a late minority tranche at
+    about 10^20 years when galaxies relax (most remnants ejected, a minority swallowed); after that nothing to fall in, and
+    Hawking loss outrunning gain, the stellar holes gone by about 10^67 years and the largest by 10^100 (Adams and Laughlin
+    1997, search summaries only). At 10^50 years the holes exist and birth nothing. And the early floor is set per
+    universe over all its holes together: 10^20 holes birthing one daughter each in the first 10^10 years gives e^(−60) at
+    our age, 10^10 daughters e^(−30), a thousand e^(−9). So the across-the-tree reading needs the whole universe to birth
+    at most a handful of daughters in its first 10^10 years, which is not "trillions" and, with the lump per daughter
+    proportional to the energy fed, would make the late total small as well. The three together (across the tree,
+    trillions, the converter) do not fit our age under the published infall history; the per-universe reading needs none
+    of this.
 
 ## 5. What the toy supplies now, and what it never will
 

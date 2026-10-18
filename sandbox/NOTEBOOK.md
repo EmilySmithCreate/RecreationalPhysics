@@ -1308,3 +1308,23 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   and the per-universe count predicts the red-dwarf era. (5) A "balance" in the across-the-tree reading, the youngness pull
   against the red dwarfs' numbers, would need γ of a few × 10^−11 per year, two knobs set to land on our age; rule 13.
   Nothing here is a run or a knob of the toy.
+- 2026-10-18, the owner, on the escape from the youngness weight: "And also that the black holes birthing now may still be
+  running in 10^50 b years?" and, on "set by the mass that falls in over the long black hole era rather than by the holes'
+  formation": "yes this makes sense". *Ours:* recorded as her lean toward late births, not as her word on which reading rule
+  (ii) means. Two things stand against it, both from outside the toy. (1) Under the converter she accepted (Update 66) a
+  black hole births only while it is fed, and the published far future has the feed front-loaded: nearly all the mass that
+  ever falls in does so in the first 10^10 to 10^11 years (stars collapsing; the central black holes growing, mostly in the
+  first few billion years); one late tranche follows at about 10^20 years, when galaxies relax and a minority of their
+  remnants fall into the central hole while most are ejected; after that nothing is left to fall in (protons decaying from
+  about 10^37 years, if they do), and a black hole loses mass by Hawking radiation faster than it gains it from the cold sky,
+  the stellar ones gone by about 10^67 years, the largest by about 10^100 (Adams and Laughlin 1997, search summaries only;
+  general knowledge, to verify). So at 10^50 years the holes exist but are fed nothing, and under the converter birth
+  nothing. (2) Even granting late births, the early floor is set per universe, over all its black holes together:
+  γ ≥ ln(B_early)/10^10 years. With about 10^20 black holes formed in the first 10^10 years, one daughter from each already
+  gives e^(−60) at our age; 10^10 daughters give e^(−30); a thousand give e^(−9). The across-the-tree reading therefore
+  needs the whole universe to birth at most a handful of daughters in its first 10^10 years, which with the lump per daughter
+  proportional to the energy fed means a daughter costing more than almost any black hole holds by then. That is not
+  "trillions"; with late infall a minority of a galaxy's remnants, the total would then be small too. So the three together
+  (across the tree, trillions of daughters, the converter) do not fit our age under the published infall history; the
+  per-universe reading, her instinct, needs none of this. The timescales above are a reading task before they are cited
+  (`docs/reading/notes/2026-10-18_far_future_and_observation_window.md`).

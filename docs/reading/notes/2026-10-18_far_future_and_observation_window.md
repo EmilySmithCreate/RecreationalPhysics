@@ -14,6 +14,17 @@
 | Black hole | to about 10^100 | black holes evaporating by Hawking radiation, the largest last |
 | Dark | after | electrons, neutrinos, low-energy light |
 
+**When mass falls into black holes [search summary of the same paper; general knowledge, to verify].** The paper is
+reported to say that a galaxy gradually disperses by ejecting the majority of its stellar remnants into intergalactic space
+and driving a minority onto its central black hole, over about 10^20 years; proton decay (if it occurs) begins near
+cosmological decade 37; black holes then lose mass by Hawking radiation and are gone by about 10^100 years (a solar-mass
+hole in about 10^67, general knowledge). Nearly all the mass that ever falls into black holes therefore falls in during the
+starlight era (stars collapsing; the central holes growing, mostly in the first few billion years), with one late minority
+tranche at about 10^20 years and nothing after. The 10^19 figure sometimes quoted for the central-hole capture was not
+confirmed by the search; the text itself has not been read. *What this is for:* piece 12's birth-time distribution
+(`docs/design/loop_measure_brief.md`, section 4): under the converter rule a hole births daughters only while fed, so the
+births follow this infall history.
+
 *Ours:* the owner's "no more mass, no more time" end of a turn (VISION Update 44, worded in Update 59 as the last black
 hole dissolving) sits at the end of the black hole era, about 10^100 years. No published milestone sits near 10^1000.
 
@@ -46,6 +57,6 @@ Piece 12's function (VISION Updates 43 and 59) needs terms: the length of the er
 universe forms and when, and the window in which an observer can learn the universe's history. The two papers above are
 where those terms are published. The toy has none of them.
 
-Sources (search engine summaries of): arxiv.org/abs/0704.0221; sciencedaily.com (24 May 2007); kirkusreviews.com
+Sources (search engine summaries of): arxiv.org/abs/0704.0221; arxiv.org/abs/astro-ph/9701131 (ar5iv); michigannow.vpcomm.umich.edu (January 1997); pbs.org/wgbh/nova ("a trip to the deep future"); sciencedaily.com (24 May 2007); kirkusreviews.com
 (*The Five Ages of the Universe*); astronomy.com ("The Degenerate Era"); michigannow.vpcomm.umich.edu (January 1997);
 arxiv.org/abs/2508.10514; arxiv.org/html/2606.21826; arxiv.org/html/2606.04886.
