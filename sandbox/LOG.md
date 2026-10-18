@@ -362,4 +362,8 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   point d = 3 (L = 6: s = 2, 4; L = 8: s = 2, 4, 6); only s = 0 is the slab (X = N, H = 4(λ − 1) N, d = 2). The spiral
   stores no curling cost in this toy; it is O116's flat product (the seam shifted by two) reached from the other side.
   Exact; a look. Not promoted.
+- 2026-10-18. The ladder of whole-layer contractions (`sandbox/out/ladder_contraction_2026-10-18.txt`, from
+  `sandbox/pair_moves.layer_contraction`): flat 10 × L × L → 8 → 6 → 4 at L = 6 and 8, λ = 1.25. Every step above six
+  leaves H = 0, X = 0, every point open and the graph valid; the step 6 → 4 gives X = N, H = 4(λ − 1) N exactly (144 at
+  L = 6, 256 at L = 8), every point closed. Exact; the brief's test E2 for the layer form. A look.
 

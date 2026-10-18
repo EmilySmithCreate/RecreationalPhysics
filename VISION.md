@@ -1842,3 +1842,36 @@ after the burp."
 - **Still owed by her** (the brief, questions 1 and 2): the local form or the whole-layer form, and what the no-break rule
   means under it. Nothing registered runs before that.
 
+Update 65 (2026-10-18, 13:50 UTC by the clock): **DECISION (the author's, "Whole layer form."): the contraction model
+takes the layer form; and three positions of hers recorded with it.** Why this page changes: the brief of Update 63 put
+two questions to her before anything registered could run, and this answers both. Her words of the same message: "Yes
+this is what I meant" (the split of energy into shaped and unshaped); "seems useful" (running at a fixed count and reading
+the constant off the fluctuations); "Time emerges from 3d space so in the folded slab there is no time we need something
+else like sweeps or spirals."
+
+- **DECISION: the layer form.** The compaction and splitting moves act on a whole layer pair at once: flat L₁ × L₂ × L₃
+  to (L₁ − 2) × L₂ × L₃ and back, with no seam and no point broken. *Exact (`sandbox/out/ladder_contraction_2026-10-18.txt`):*
+  from width 10 to 8 to 6 the energy stays at zero; the step from 6 to 4 costs exactly 4(λ − 1) per surviving point
+  (144 at L = 6, 256 at L = 8, λ = 1.25), and splitting the slab returns exactly that. **Question 2 of the brief is moot
+  under this form:** the move set contains no breaking move, so the no-break rule holds by construction and nothing
+  is priced. *Ours, pending her confirmation:* the move set is the layer moves plus the clean two-switch move of Update 62;
+  the single switch is the control, not a move of the model.
+- **What it costs, said plainly (ours).** Under the layer form the opening is one move. There is no front, no seam paid
+  along the way and no refund at completion, so the ledger reads gross = net = 4(λ − 1) per slab point, and her picture of
+  18 October (payment building until a threshold, then cancelling to leave the net) has no counterpart in this form.
+  Claim 4's "seed and a front" is not what this form shows; the toy's content under it is the ledger, the timing against
+  a feed (a step at t* = 4(λ − 1) N_slab / r), and what sets the width of the product. The local form stays in the brief
+  as the alternative she did not choose.
+- **The split of energy (hers, confirmed):** shaped energy is the curl in the wiring, the net; unshaped energy is what the
+  stores hold, the gross less the net. Calling the unshaped part antimatter is a name; the toy has nothing of two signs.
+- **A practice adopted from dynamical triangulations (hers, "seems useful"; not a knob):** run at a fixed count and read the
+  cost per point off the fluctuations, rather than set it by hand. In this toy every flat width at or above six sits at
+  zero, so at μ_N = 0 nothing prefers one count to another; a measured μ_N would be what sets the width of the product.
+  How to measure it is written in the brief before any run.
+- **Time (hers; a position, not a knob):** time emerges from open three-dimensional space, so the folded slab has none; the
+  toy's clock is sweeps, and the spiral of the product's seam (Update 64) is a candidate clock after the burp. This agrees
+  with her positions of Updates 33 (5) and 41; what dynamical triangulations put in by hand is not copied.
+- **What runs next.** The kernel for the layer moves with rule-6 tests; the exact reach check (E4); then T71 with her
+  prediction and a held-out size: the slab fed at every point under the layer form, the time to open against the feed,
+  the ledger at completion, and the width the product settles at under μ_N read off the fluctuations.
+

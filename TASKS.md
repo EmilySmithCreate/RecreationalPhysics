@@ -899,6 +899,13 @@ first; the daughter-universe interpretation after. In order, each registered bef
    (the brief, questions 1 and 2). Then, in order: the seam census extended (E1), the ledger against size (E2), the seam's
    locality (E3), reach by exhaustive listing (E4); the kernel with rule-6 tests; the looks S1 to S3; T70 as planned for
    the fixed count; **T71** for the contraction model with her prediction and a held-out size.*
+   *18 October, 13:50 UTC: **VISION Update 65**, her "Whole layer form.": the brief's questions 1 and 2 are closed. E2 is
+   done for the energies (the ladder 10 → 8 → 6 → 4 is free until the last step; LOG). Under the layer form the opening is
+   one move, so T71 tests the timing against the feed and the ledger, not a front. Next, in order: the kernel
+   (`src/graphity/contraction.py`: layer contraction and splitting, the clean two-switch move, pooled stores, feed and
+   leak; rule-6 tests; detailed balance or a declared driven protocol in the docstring); E4, reach by exhaustive listing
+   at the smallest sizes; E5, μ_N read off the fluctuations of a free flat torus; then PREREGISTRATION **T71** with her
+   prediction and L = 16 held out.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

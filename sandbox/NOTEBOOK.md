@@ -1123,4 +1123,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the net) and unshaped energy (the stores, the gross less the net).
 - 2026-10-18, the owner: "X is straight curl, with the spiral being the seam shape of the product after the burp." *Ours:*
   a decision; VISION Update 64. The fraction of a layer compacted is the toy's curl variable from here.
+- 2026-10-18, the owner: "What the toy does offer is the split you are pointing at: shaped energy, the curl, which is
+  the net; and unshaped energy, the stores, which is the gross less the net. Yes this is what I meant." / "Their practice
+  of running at a fixed count and reading the constant off the fluctuations is something the toy could copy- seems
+  useful." / "time put in by hand. Time emerges from 3d space so in the folded slab there is no time we need something
+  else like sweeps or spirals." / "Whole layer form." *Ours:* the fourth is a decision (VISION Update 65) and closes the
+  brief's questions 1 and 2. On time: the toy's one clock is the count of moves (sweeps), and under the layer form the
+  opening takes one move, so "how long" is set by the feed alone (t* = stored cost / rate). Her "spirals" as a clock: the
+  product's seam shift (O116, Update 64) is a count the wiring carries after the burp; whether it advances with anything
+  is not known and is an idea, not a test. On the fixed-count practice: in this toy every flat width ≥ 6 sits at zero, so
+  nothing prefers one count to another at μ_N = 0; a measured μ_N is what would set the product's width, and the brief now
+  says how it would be read (section 6, E5). Exact, run for this: the ladder 10 → 8 → 6 → 4 at L = 6 and 8 costs 0, 0,
+  then 4(λ − 1) N exactly (LOG).
 

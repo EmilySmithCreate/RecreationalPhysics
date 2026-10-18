@@ -186,13 +186,16 @@ conservation of H + stores − fed + leaked, the untied rule (Update 58), and ev
 5. Every partial contraction within reach leaves 26 to 60 broken points and sits above the finished slab
    (`sandbox/partial_contraction.py`; the table in 2.5).
 
-## 5. Open for the author (the brief cannot be finished without 1 and 2)
+## 5. Open for the author (questions 1 and 2 answered 18 October, VISION Update 65; the brief can now be finished)
 
-1. **Which form:** local (pairs compact one at a time; the seam's broken points are allowed and priced) or layer (the
+**Answered:** question 1, **the whole-layer form** ("Whole layer form."); question 2 is moot under it, since the move
+set holds no breaking move. The rest below stand as they were written, with the answers marked.
+
+1. **Which form (ANSWERED: layer):** local (pairs compact one at a time; the seam's broken points are allowed and priced) or layer (the
    whole layer at once; no seam, no front, no cancellation in the ledger). Her picture of 18 October has a front and a
    cancellation, which is the local form; her "points don't break" is the layer form. The exact table says they cannot
    both hold with the compaction move as defined.
-2. **The no-break rule under the local form:** forbid every move that leaves a point broken (then the slab is frozen,
+2. **The no-break rule under the local form (MOOT under the layer form):** forbid every move that leaves a point broken (then the slab is frozen,
    since no local pair move is clean), or let the store pay for a seam up to a stated size, or price broken points by
    the energy alone (which is the toy as it stands).
 3. **The per-point cost** μ_N (ours: zero).
@@ -215,7 +218,15 @@ conservation of H + stores − fed + leaked, the untied rule (Update 58), and ev
   compact with no point broken? If none does, the layer form is the only clean one and the local form always carries a
   seam. *Decides question 1's arithmetic.*
 - **E2. The ledger against size and λ.** Layer contraction 8 → 6 → 4 at L = 6, 8, 10: ΔH = 0 then 4(λ − 1) N_slab; the
-  cube count; the stores' balance under pooled payment. *A test of the kernel once it exists; the arithmetic is in 2.4.*
+  cube count; the stores' balance under pooled payment. *Done 18 October for the energies
+  (`sandbox/out/ladder_contraction_2026-10-18.txt`): 10 → 8 → 6 free, 6 → 4 exactly 4(λ − 1) N at L = 6 and 8. The stores'
+  balance waits for the kernel.*
+- **E5. The cost per point read off the fluctuations (the practice she adopted, Update 65).** Under the layer form every
+  flat width at or above six sits at zero, so with μ_N = 0 nothing prefers one count to another and the width of the
+  product is set by the moves alone. The published practice is to hold the count fixed on average and read the constant
+  that holds it there. Here: a flat torus free to split and contract at zero cost, with a soft target count; the μ_N that
+  keeps the width at its target, and how the width wanders without it, is the measurement. Exact where the move set is
+  small enough to list; a chain otherwise, after the kernel.
 - **E3. Does the seam's cost depend only on the patch?** For the local form: the lowest-energy re-linking for each patch
   shape at two sizes; if the rim cost is a function of the rim alone (local), the net-over-gross ratio at completion is
   the toy's own number; if it depends on L it is a size effect to be held out (rule 14).
@@ -242,11 +253,13 @@ the splicings, detailed balance stated in the docstring.
 
 - **T70 as planned** stays the switch-path test under Update 62's knobs (the climb at L = 12, 16; completion and the
   release 4(λ − 1) per point). It tests the fixed-count form of her picture.
-- **T71 (to be written): the slab splits under the contraction model.** The slab fed at every point under the form she
-  chooses, λ = 1.10, 1.25, 1.40, L = 8 and 12, L = 16 held out; words per replica from the first splitting, a region
-  past half, completion; the ledger at completion; the count at the end. Her prediction before launch, ours beside it.
-  What would kill the model's claim: no replica completes at any λ and size, or completion releases something other than
-  4(λ − 1) per slab point.
+- **T71 (to be written): the slab splits under the layer form.** The slab fed at every point, λ = 1.10, 1.25, 1.40,
+  L = 8 and 12, L = 16 held out. Under the layer form the opening is one move, so the words per replica are about timing
+  and the ledger, not a front: the sweep at which the stores first hold the whole cost, the sweep at which the split is
+  made, the energy released at it against 4(λ − 1) N_slab, the count before and after, and the width the product then
+  settles at under E5's μ_N. Her prediction before launch, ours beside it. What would kill the model's claim: the split
+  never made at any λ and size although the stores hold the cost, or a release other than 4(λ − 1) per slab point.
+  *Said plainly:* under this form T71 tests the ledger and the timing; it cannot test a front, because the form has none.
 
 ## 7. What this cannot show
 
