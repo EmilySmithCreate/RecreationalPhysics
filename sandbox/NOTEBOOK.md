@@ -773,3 +773,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   directions the published energy already prices the top cell (the square); in three it still prices squares because that
   is what the Ollivier curvature counts, so a cube price is a new knob with no published source (S1) and would be our
   family, never the published model. Idea, not a decision; nothing registered.
+- 2026-10-18, the owner: "And let's think of the end [N] is not conserved, but anyway the spirit is to move, but we have
+  60% more volume". *Ours, exact (the slab 4 × 6 × 6 growing into 6 × 6 × 6 with its cross-section kept; counts by
+  `sandbox/cube_price.py`):* points 144 → 216, half again as many (50 %, not 60); squares 468 → 648, so the count rises
+  and nothing need be lost once points may appear; surplus squares 144 → 0; cubes 216 → 216, exactly conserved. The
+  cube count is conserved for four around growing to six around and for no other width (8 × 6 × 6 has 288), and six
+  around is what the tube opened into in two directions (O116). The energy: flat space has H = 0 at every size, so the
+  release is 4(λ − 1) per slab point whether the points are kept or grow; what a growing count has no answer for is how
+  many points appear, since the energy is indifferent to the size of flat space, and the toy has no move that adds a
+  point (every move is a switch of two links). Both are claim 3's parked decision (a cost or credit per point) and
+  Update 28's other model. Idea, not a decision.
