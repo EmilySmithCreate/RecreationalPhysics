@@ -378,3 +378,18 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   undid the first as an accepted move; the kernel refuses that null move. Its census numbers (open points, regions)
   were read from the wiring and are unaffected; its `acc` column was inflated.
 
+- 2026-10-18. Where do T51's knots sit along the sheet (`sandbox/knot_positions.py`; `sandbox/out/knot_positions_2026-10-18.txt`;
+  the owner's "scraps as the seeds of structure", notebook 18 October)? Over the 600 saved end states, 1,456 knots (1,142
+  columns, 96 double columns, 136 knots of two kinds, 82 groups that are two or more knots within two steps of each other).
+  **Clustered, not random:** 23.5 % of knots have another within four columns of the 128 to 512 along the ring, against 7.7 %
+  for uniform random positions with the same count per sheet; the smallest-gap bin holds 228 gaps where uniform gives 134;
+  the median nearest-neighbour distance is 0.36 of the mean spacing against 0.43. The clustering is on the scale of a few
+  columns; beyond it the gaps look uniform (the upper p-value bins sit near their expectation). **Set at the opening:** of
+  the knots that survive a slower cooling, 88 % lie within two columns of a knot after the next faster cooling of the same
+  opened sheet (random positions: 4 %), which fits O107's reading that the number is set at the opening and the cooling
+  only removes. Kinds sit beside kinds: a double column's nearest neighbour is a knot of two kinds 77 times in 96 and never
+  a column. A look; it supports nothing. What it kills: a sprinkle of fixed-energy knots, clustered on a few columns and
+  random beyond, is white noise at larger scales (density spectrum flat in k, n_s = 0 in the cosmologist's convention),
+  while the sky's seeds are nearly scale-invariant (n_s ≈ 0.965; Planck 2018, general knowledge, to verify); so the scraps'
+  own layout cannot be the seed spectrum in this toy. Untouched: scraps as dark matter falling into seeds laid by something
+  else.

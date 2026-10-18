@@ -1230,3 +1230,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the toy can say about any of this: nothing. What the record can do: write piece 12's function with these stages as its
   terms (the length of the era of starlight, the number of black holes formed, the observation window) so that a setting
   of the loop can be scored, which is the exact item Update 59 left open.
+- 2026-10-18, the owner: "Proceed" (the sandbox look at the knots' positions). *Ours, the look (`sandbox/LOG.md`, 18 October,
+  last entry): the knots are clustered on the scale of a few columns and random beyond, their positions are set at the
+  opening (88 % persist across cooling times), and kinds sit beside kinds. For her idea it means: the scraps' own layout is
+  white noise at large scales, which is not the sky's nearly scale-invariant seed spectrum; what survives is the weaker
+  form, scraps as dark matter that falls into seeds laid by something else. A look; it narrows, it supports nothing.*
