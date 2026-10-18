@@ -876,3 +876,21 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   count. A test would need something in the toy that comes in opposite kinds; the only candidate is surplus against
   missing squares, and the rule just adopted removes the missing kind. So: not supported, not excluded, and no test
   designed.
+- 2026-10-18, the owner: "I thought I read there was matter and antimatter at the start and they canceled out? They
+  they even know something of proportions?" *Ours; settled cosmology from general knowledge, to verify with a physicist
+  and against [Planck18] before any of it is cited:* yes to both. The hot early universe held matter and antimatter in
+  almost equal amounts; as it cooled below the temperature at which pairs could be made, they met and became light, and
+  what is left is the excess. The proportion is measured as the number of ordinary-matter particles per particle of light
+  today, about six in ten billion (6 × 10⁻¹⁰), from two independent routes that agree: the amount of deuterium made in the
+  first minutes, and the pattern of the cosmic microwave background. Read backwards, for roughly every billion
+  matter-antimatter pairs that cancelled there was one unpaired matter particle. No bulk antimatter is seen anywhere now
+  (the antiparticles in cosmic rays are made in collisions). The excess itself is unexplained: making it needs three
+  things at once (a process that changes the matter count, a difference in how matter and antimatter behave, and a moment
+  out of equilibrium: Sakharov's conditions), and the known differences in the standard model are far too small. The
+  record already uses this (Update 41: ordinary matter is "the billionth-part left when matter and antimatter
+  cancelled"; Update 42: a sharp front supplies the out-of-equilibrium moment). *What it does to her idea of tonight:*
+  if antimatter were the threshold payment and matter the release less that payment, the excess fraction would be
+  (release − payment)/release ≈ 6 × 10⁻¹⁰, so the payment would have to equal the release to one part in a billion. In the
+  toy nothing ties them: the release grows with the region (4(λ − 1) per point) while a barrier is a fixed number, and under
+  tonight's rule the seam payment ran 4 per point against a release of 4(λ − 1), equal only at λ = 2, where the slab is no
+  longer stuck (O41). Ours, from a look at two sizes, not a measurement; a close number would not be a result (rule 13).
