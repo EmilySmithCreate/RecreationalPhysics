@@ -878,6 +878,12 @@ first; the daughter-universe interpretation after. In order, each registered bef
    first (`configs/t68_heldout_prediction.csv`: BREAKS 62, SITS 46, no front). To read: `t68_*_l16` into the fetch
    request, accept, commit unread, `python scripts/analyse_t68.py`, scored against the table. Owed by her: her own
    word for L = 16.*
+   *Held-out size read 18 October, 09:53 UTC (O136): 106 of 108 cells as written; the two misses are marginal cells
+   (the shared store at r = 1/16, λ = 1.60, fixed and ramped, which sat where the rule said they would just break); one
+   matched BREAKS cell's medians 4 % over range; no front in 864 replicas; per (λ, N = 1,024) MIXED at every λ as
+   written. Not AS PREDICTED by the letter, the misses named. Her inferred OPENS fails, ours holds. T68 is complete at
+   three sizes: a feed of any shape or place tried opens the untied slab at no size run. Her own word for L = 16 was not
+   given. Next on piece 5: T70 under VISION Update 62's knobs.*
    *18 October, 02:15 UTC: **VISION Update 62**, her "All 3 yes": the one-step patch-opening move (two switches at once,
    no point left broken), the no-break store rule and pooled payment are knobs. The sandbox look that prompted it
    (`sandbox/clean_feed.py`; LOG, 18 October): the slab fed at every point opens as one growing region, 72 % at L = 8 and

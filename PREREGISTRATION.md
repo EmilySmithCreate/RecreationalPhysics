@@ -6434,6 +6434,23 @@ until she gives her own word.** **Launched 2026-10-17, 22:40 UTC by the clock**,
 (`cloud/queue/2026-10-17_t68_heldout.txt`; configs `t68_*_l16`, seeds 20267001 to 20267036). To read: `t68_*_l16`
 into `cloud/fetch/request.txt`, accept, commit unread, `python scripts/analyse_t68.py`, scored against the table.
 
+### Reading of the held-out size, 2026-10-18, 09:53 UTC by the clock (O136)
+
+All 36 cells (N = 1,024; seeds 20267001 to 20267036) fetched, accepted unread and committed (ac25b0d0, 77f853c1), then
+read with `python scripts/analyse_t68.py` and scored against the table. **Words:** SITS in 48 cells, BREAKS in 60; 106 of
+108 match the table. **The two misses**, both among the sixteen marginal cells: the shared store at r = 1/16 and λ = 1.60,
+fixed (predicted BREAKS at about 18,400 sweeps) and ramped (about 18,700), read SITS in 8 of 8; the rule's edge, as the
+amendment said a miss there would be, and named here. **Ranges:** of the 60 matched BREAKS cells 59 have both medians
+inside their ranges; the fixed feed at 16 spots, r = 1, λ = 1.40 stops and has fed 3,250 against a ceiling of 3,111
+(4 % over). The 48 SITS cells all have median stop 20,000. **Fronts:** none in 864 replicas; open regions at the stop
+number 35 to 76 and never one. **Per (λ, N = 1,024): MIXED at every λ**, as written. **Verdict by the letter: not AS
+PREDICTED**, since two words miss; the misses are named above and both lie at the rule's stated edge, so the size claim
+stands as written: a feed at these rates, shapes and places opens the untied slab at no size run (256, 576, 1,024), and
+whether a slab breaks within the run is set by the energy fed per point and, for a uniform feed, by the single-move wall.
+**Predictions:** the owner's, inferred (OPENS at some setting, from one spot), fails; she has not given her own word for
+L = 16, so this reads against the inferred one. Ours (no (λ, N) reads OPENS) holds. **T68 is complete.** Rule 11's
+seventh use on piece 5 is completed in O136; the replacement is hers (VISION Update 62) and T70 is its test.
+
 ### What this cannot show
 
 Whether a feed shaped by what a black hole eats (a rate set by the state of the slab itself, or by a pull) does

@@ -3938,3 +3938,35 @@ author and should be disclosed as such in any submission. Physics estimates mark
     that cell is untested, with no clean state below 62, as the prediction implies. The price of a clean opening does not
     change with the sheet's size where it was reached; the search's reach shrinks with size at a fixed budget (the window
     grows), which is the reason for the second stage (PREREGISTRATION T69, "Reading of the held-out size").
+- **O136 T68, the held-out size, read: at 1,024 points the words written before the run hold in 106 cells of 108; the
+  two misses are two of the sixteen marginal cells (the slowest feed into the shared store at λ = 1.60, fixed and
+  ramped, predicted to break at about 18,400 and 18,700 sweeps, which sat to 20,000); one matched BREAKS cell's medians
+  fall 4 % above their range (the fixed feed at 16 spots, r = 1, λ = 1.40: stop and fed 3,250 against a ceiling of
+  3,111); and no replica of 864 reaches a front (18 October 2026, 09:53 UTC by the clock). Measured; pre-registered;
+  by the letter not AS PREDICTED, since two words miss, with the misses named and both at the rule's stated edge; per
+  (λ, N = 1,024) MIXED at every λ, as written; her inferred OPENS (at some setting, from one spot) fails, ours (no
+  (λ, N) reads OPENS) holds.** (PREREGISTRATION T68, "Reading of the held-out size"; the table
+  `configs/t68_heldout_prediction.csv`; `python scripts/analyse_t68.py` over `results/t68_*_l16.csv`, 36 cells, 8
+  replicas each.) **What was read.** SITS in 48 cells and BREAKS in 60 against 46 and 62 written. The "all" place, a
+  store at every point fed equally: SITS at every rate at λ = 1.25 and 1.40, and at r = 1/16 and 1/4 at 1.60; at r = 1
+  and λ = 1.60 it breaks at 19,750 to 19,950 sweeps (fixed, pulse, ramp), inside the written range (the wall less 1.5
+  per point, 17.7 × 1,024 = 18,125 units), so the frozen-then-pop behaviour of stage 1 (O134) carries to the third size.
+  The shared store, one spot and 16 spots: SITS at r = 1/16 at λ = 1.25 and 1.40 everywhere; at λ = 1.60 and r = 1/16
+  the one spot breaks late (18,050 to 19,700 sweeps; two of its three cells by a 5 to 6 of 8 majority) as written, the
+  16 spots sit as written, and the shared store sits where the rule said it would just break (the two marginal misses).
+  Every r = 1/4 and r = 1 cell into those three places BREAKS, as written, with the medians inside their ranges except
+  the one named. Regions at the stop: 35 to 76 separate open pieces, never one; first escapes from 100 sweeps (r = 1)
+  to 13,650 (the ramp at 16 spots, r = 1/16). **What it means.** T68 is complete at three sizes (256, 576, 1,024): a
+  feed at a fixed, ramped or pulsed rate of 1/16 to 1 unit a sweep, arriving at one shared store, one point, 16 points
+  or every point, at curling costs 1.25, 1.40 and 1.60, opens the untied slab at no size run, and whether the slab
+  breaks within 20,000 sweeps is set by the energy fed per point (the break energy per point read at N = 576 carried to
+  N = 1,024 in 58 of 60 BREAKS cells) and, for the uniform feed, by the single-move wall. That is the size claim the
+  amendment named, and it holds at the held-out size with the two marginal exceptions. **Rule 11's seventh use on
+  piece 5, completed:** previous claim (hers, inferred from Update 59), a feed of varying rate or at many points opens
+  the slab from one spot; failed because the feed breaks the slab or sits, at every shape, place, cost and size, before
+  any region grows (O134, this entry). Replacement: hers, given the same night (notebook, 18 October): energy arriving
+  at every point with breaking not in the picture, adopted as knobs in VISION Update 62. New falsification test: T70,
+  the clean-move feed at sizes where a flat torus exists, with her prediction before launch. **Not shown:** anything
+  about a feed shaped by the state of the slab or by a pull; anything at λ = 1; anything about the real universe. The
+  owner has not given her own word for L = 16, so this reads against the inferred one, and says so. Every six-link
+  result carries VISION Update 24's caveat.
