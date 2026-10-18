@@ -21,34 +21,42 @@ every move; keeping the square-count energy unchanged (her "keep using the squar
 what they pay; a per-point cost of zero. Where this brief had to choose, it chose the smallest change to the toy that
 holds her sentence, and says so.
 
-## 1. Glossary (plain words first, then the toy's definition)
+## 1. Glossary (plain words first, then the toy's definition, then whose it is)
 
-| Word | In plain words | In the toy |
-|---|---|---|
-| **point, link** | a degree of freedom and a relationship between two of them | a vertex and an edge; every point has six links (three directions) |
-| **the two kinds of point** | her "two types of points that can connect" | the two sides of the bipartite graph; a link always joins one of each; the switch and the compaction both respect this |
-| **square** | the smallest closed loop; the toy's unit of flatness | a 4-cycle; flat space has 3 per point and 4 through every link |
-| **surplus square** | a loop closed only because a direction is curled tight | a fifth square through a link; the count X; a direction four around gives one per link along it |
-| **hard-core rule** | two points may not share too many neighbours | no two points with more than two common neighbours ([T25] Fig. 1b; Q2, Q21) |
-| **closed point** (hers: "4") | a point on a direction curled to four around | d(v) = 2: one of its three opposite link pairs closes a square (`local_dimension_d`) |
-| **open point** (hers: "6") | a point whose three directions are all at least six around | d(v) = 3 |
-| **broken point** | a point that is neither: squares missing where flat space has them | d(v) > 3; every single switch out of the slab makes four of them (notebook, 18 October) |
-| **flat space** | the product; any width, any count | an L₁ × L₂ × L₃ torus with every side ≥ 6; H = 0 at every λ and every count (Q18) |
-| **the slab, X** | two directions open, one curled: her X (Update 60) | the 4 × L × L torus; 4(λ − 1) per point above flat; stuck for 1 < λ < 2 against single switches (O41) |
-| **curling cost** | what a tight curl costs in energy | 4(λ − 1) per surplus square (Update 23; glossary) |
-| **curling energy** | energy that may only curl (Update 57) | in this model: energy in stores that pays a contraction; its stored form is the slab's curling cost |
-| **compaction, pair removal** (hers) | two linked points of opposite kind collapse into nothing and their other neighbours join across the gap | remove a linked pair u (side 0), v (side 1); splice u's five other neighbours to v's five, one to one; N falls by 2, links by 6 |
-| **splitting, pair insertion** | the reverse: a new pair of points opens between five links | cut five links a_i–b_i, add u linked to the five b_i, v to the five a_i, and u to v; N rises by 2 |
-| **layer contraction / layer splitting** | a whole sheet of pairs compacts at once, taking a direction from six around to four | remove the layers x = 0 and x = 1 and splice x = −1 to x = 2 at every transverse position; its inverse inserts a pair at every position |
-| **rim, seam** | the border between a compacted patch and the rest | the points in the two layers that lose a link into the patch and must be re-linked across it |
-| **store** | where a point keeps energy it has not spent | one number per point (`sealed_d`); the stores and H together are conserved exactly |
-| **feed** | what comes into the black hole | energy added to the stores at a declared rate and place (T67, T68) |
-| **leak** | what is returned to the black hole | energy removed from the stores at a declared rate (Update 9's semi-permeable wall) |
-| **no-break rule** | space cannot break, only curl (hers) | a store pays no move that leaves a point broken (Update 62); under the compaction move set this is a rule about which splicings are allowed |
-| **pooled payment** | a move is paid by the points it touches | the cost is drawn from the stores of the points whose links moved, in proportion to what they hold; a release is credited to them evenly (Update 62) |
-| **front, patch, completion** | the moving edge of the change, the region it has converted, the moment the last point converts | a connected set of converted points; completion is the whole layer |
-| **the ledger** | what was paid, what came back, what is left | paid to walls and seams; refunded at completion; net = the stored curling cost |
-| **per point** | the unit of every energy here | with a varying count this must say which points: per surviving point of the slab, or per point of the flat product (a flat product has 3/2 the slab's points) |
+The last column names the source of each definition, as rule 10 asks: **the author's** (her words or decision, with the
+Update); **ours** (the assistant's construction or reading, unverified unless marked exact); **the CQG model** (the
+published combinatorial quantum gravity model, [T25], [KTB19]); **another model** (a published model that is not CQG);
+**general knowledge** (textbook, not read by us for this, to verify). Where a row has two sources the plain words and the
+toy's definition are credited separately.
+
+| Word | In plain words | In the toy | Whose |
+|---|---|---|---|
+| **point, link** | a degree of freedom and a relationship between two of them | a vertex and an edge; every point has six links (three directions) | plain words the author's (claim 3); the toy's definition the CQG model |
+| **the two kinds of point** | her "two types of points that can connect" | the two sides of the bipartite graph; a link always joins one of each; the switch and the compaction both respect this | plain words the author's (18 October); bipartite graphs the CQG model ([T25]) |
+| **square** | the smallest closed loop; the toy's unit of flatness | a 4-cycle; flat space has 3 per point and 4 through every link | the CQG model |
+| **surplus square** | a loop closed only because a direction is curled tight | a fifth square through a link; the count X; a direction four around gives one per link along it | the CQG model's saturation bracket ([T25] Eq. 22); the name and the count X ours (Q1, exact) |
+| **hard-core rule** | two points may not share too many neighbours | no two points with more than two common neighbours ([T25] Fig. 1b; Q2, Q21) | the CQG model |
+| **closed point** (hers: "4") | a point on a direction curled to four around | d(v) = 2: one of its three opposite link pairs closes a square (`local_dimension_d`) | plain words the author's (18 October); the count d(v) ours (Update 7, exact) |
+| **open point** (hers: "6") | a point whose three directions are all at least six around | d(v) = 3 | the same |
+| **broken point** | a point that is neither: squares missing where flat space has them | d(v) > 3; every single switch out of the slab makes four of them (notebook, 18 October) | ours (exact) |
+| **flat space** | the product; any width, any count | an L₁ × L₂ × L₃ torus with every side ≥ 6; H = 0 at every λ and every count (Q18) | the CQG model's ground state at λ = 1; "at every λ and every count" ours (exact) |
+| **count of points, N** | how many degrees of freedom there are; in this model it varies | the number of vertices; changed only by compaction and splitting | fixed N the CQG model; a varying N the author's (18 October); the precedent another model (dynamical triangulations, Ambjørn, Jurkiewicz and Loll, not read by us) |
+| **the slab, X** | two directions open, one curled: her X (Update 60) | the 4 × L × L torus; 4(λ − 1) per point above flat; stuck for 1 < λ < 2 against single switches (O41) | the author's (Updates 47, 60); the torus as its stand-in and its numbers ours (exact) |
+| **curling cost** | what a tight curl costs in energy | 4(λ − 1) per surplus square (Update 23; glossary) | the author's rule (Update 23, "curvature plus a curling cost"); the λ knob and the arithmetic ours |
+| **curling energy** | energy that may only curl (Update 57) | in this model: energy in stores that pays a contraction; its stored form is the slab's curling cost | the author's (Updates 57, 60); the toy's reading ours |
+| **compaction, pair removal** | two linked points of opposite kind collapse into nothing and their other neighbours join across the gap | remove a linked pair u (side 0), v (side 1); splice u's five other neighbours to v's five, one to one; N falls by 2, links by 6 | plain words the author's (18 October); the exact form ours; in graph theory an edge contraction with a splice, general knowledge |
+| **splitting, pair insertion** | the reverse: a new pair of points opens between five links | cut five links a_i–b_i, add u linked to the five a_i, v to the five b_i, and u to v; N rises by 2 | ours (the inverse); vertex splitting, general knowledge |
+| **layer contraction / layer splitting** | a whole sheet of pairs compacts at once, taking a direction from six around to four | remove the layers x = 0 and x = 1 and splice x = −1 to x = 2 at every transverse position; its inverse inserts a pair at every position | ours (exact: it is the slab) |
+| **rim, seam** | the border between a compacted patch and the rest | the points in the two layers that lose a link into the patch and must be re-linked across it | ours |
+| **store** | where a point keeps energy it has not spent | one number per point (`sealed_d`); the stores and H together are conserved exactly | ours (Q12), after Creutz's demon, another model (general knowledge) |
+| **feed** | what comes into the black hole | energy added to the stores at a declared rate and place (T67, T68) | plain words the author's (Update 59: infall raises g); the protocol ours |
+| **leak** | what is returned to the black hole | energy removed from the stores at a declared rate (Update 9's semi-permeable wall) | the author's semi-permeable wall (Update 9); the protocol ours |
+| **no-break rule** | space cannot break, only curl (hers) | a store pays no move that leaves a point broken (Update 62); under the compaction move set this is a rule about which splicings are allowed | plain words the author's (18 October); the toy's rule ours (Update 62) |
+| **pooled payment** | a move is paid by the points it touches | the cost is drawn from the stores of the points whose links moved, in proportion to what they hold; a release is credited to them evenly (Update 62) | ours (Update 62) |
+| **front, patch, completion** | the moving edge of the change, the region it has converted, the moment the last point converts | a connected set of converted points; completion is the whole layer | the author's picture (claim 4: a seed and a front); nucleation and growth, another model ([C77]; general knowledge); the toy's definition ours |
+| **the ledger** | what was paid, what came back, what is left | paid to walls and seams; refunded at completion; net = the stored curling cost | plain words the author's (18 October: antimatter builds, cancels, net matter); the arithmetic ours (exact) |
+| **cost per point, μ_N** | a price for a point's existing at all | a term μ_N · N in H; set to zero here pending her decision | ours (a choice); the cosmological constant of dynamical triangulations, another model (claim 3) |
+| **per point** | the unit of every energy here | with a varying count this must say which points: per surviving point of the slab, or per point of the flat product (a flat product has 3/2 the slab's points) | ours |
 
 ## 2. The mathematics
 
