@@ -1020,3 +1020,24 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   graph, which is what the switch already respects). (4) This is the first mechanism offered that avoids the broken
   state by construction rather than by forbidding it, and it is the one the toy cannot run without a new move set and a
   varying count. Whether to open claim 3's parked decision for it is hers (S1). Nothing built.
+- 2026-10-18, the owner: "So antimatter builds in black hole until front meets threshold then everything outside of that
+  energy release cancels leaving net matter." *Ours:* (1) Her sentence is, almost word for word, the ledger of the clean
+  path measured this morning. As the front advances the stores pay 4 per point opened (the climb, λ-independent); at
+  completion the direction's surplus is shed and 4λ per point comes back to the stores; the two cancel to within 4(λ − 1)
+  per point, which is the net. Paid 4N, refunded 4λN, net 4(λ − 1)N = the curling cost that was stored. So "everything
+  outside that energy release cancels, leaving net matter" has an exact counterpart: the climb is repaid at completion
+  and only the stored curling cost remains. What differs from her words: in the toy the "antimatter" (the climb) builds
+  along the front during the opening, not in the hole before it; and whether it is called antimatter is a name, not a
+  measurement. (2) The ratio this ledger gives is net over gross = 4(λ − 1) / 4λ = (λ − 1)/λ, exact for the fixed-count
+  path. At λ = 1.25 it is 0.2. For it to be six parts in ten billion, λ would have to sit at 1 + 6 × 10⁻¹⁰: X all but
+  degenerate with space (the tie of Update 5), stable for ever (the wall about 48), and a lump a billionth of the energy
+  that passed through. That is her Update 41 picture in one number (the hot lump nearly everything, matter a sliver), and
+  it is where she said she expected to work (λ about 1.02, Update 41). **But rule 13 applies with full force:** λ is the
+  one free constant, so reading η = (λ − 1)/λ off the sky and setting λ from it is a determination, not a prediction. It
+  becomes a prediction only if λ is pinned by something else first (the fertile window, the width of the product, the
+  waiting-time law) and then lands near 1 + 6 × 10⁻¹⁰ unasked; and "the refund is the light, the net is the matter" is
+  an interpretation of two numbers in a ledger, ours and unverified. (3) Under her contraction model the ledger is not
+  yet known: if layers split with no seam there is no climb to repay, and the gross and net would both be the curling
+  cost. (4) Nothing to run on this; it is arithmetic on the clean path plus a reading. Recorded as her claim in the
+  form rule 11 asks: previous (Update 42) matter and antimatter as a question; now: the climb paid along the front and
+  repaid at completion is the pair that cancels, the stored curling cost is the net.
