@@ -956,3 +956,25 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   need not be stable on its own; under her rule it is held shut by the move set, opens only while fed, refolds if the
   feed stops before completion, and releases the whole curling cost at once when the last seam closes. Idea and exact
   check, not a decision; T70's registration should name the back-loaded release and the λ-independence of the climb.
+- 2026-10-18, the owner: "6 is the minimum to convert, but curling energy could have applied within the horizon
+  bringing a 100 or 10 or 8 down to 6 then 4". *Ours, exact where marked:* (1) At a fixed count of points, shrinking
+  one direction stretches another: 8 × 6 × 6 and 6 × 6 × 8 are the same torus (288 points), and the slab it can curl
+  into is 4 × 6 × 12; from the cube 8 × 8 × 8 (512) there is no six-around torus at all, and the only curl is straight
+  to the slab 4 × 8 × 16. So her ladder of widths is a volume-preserving reshaping, her whirlpool, and which rungs
+  exist is set by the point count. (2) Every flat torus sits at H = 0 whatever its widths (checked: 8 × 6 × 6, 6 × 6 × 8,
+  8 × 8 × 8, 10 × 6 × 6 all 0), so "100 down to 8 down to 6" costs nothing at the ends and has no drive either way; it
+  is a walk among degenerate flat states with seams between them that cost. Only the last step, 6 to 4, changes the
+  books: the slab holds a quarter square and one surplus square more per point than any flat torus (3.25 and 1.0 a
+  point against 3.0 and 0), and lies 4(λ − 1) per point above it (288 units at λ = 1.25 for 288 points). (3) The strict
+  curl-only store of Update 60 (pays only moves that add surplus without lowering squares) can pay for that last step,
+  since the curl adds both; it cannot pay for the reshaping steps, which add no surplus and lower squares at every seam
+  along the way. A no-break store could pay them if the reshaping seams leave no point broken, which is unknown. (4)
+  The measured record on widths runs against a drive to narrow: six around stays six around (O116), trapped heat does
+  not widen a tube (T61), widening needed a price on loops of six and still left flaws (T62, T64), and no run has ever
+  narrowed a direction at λ > 1. The one setting in which flat space curls by itself is λ < 1, where curling pays and
+  flat space is the unstable state (Update 8's rehearsal), which is the wrong way round for X. So her picture needs
+  either curling energy spent on the reshaping and the last curl (a feed into the fold, never tried: every fold test
+  gave energy of the ordinary kind, and it broke space) or a drive to narrow that the toy does not have at λ > 1. (5)
+  Cheap and exact, not done: T69's search run the other way, from the flat 6 × 6 × 8 to the slab 4 × 6 × 12 through clean
+  states, which prices her last step's path; and a sandbox look at a flat torus fed curl-only energy at every point (the
+  strict rule) to see whether anything curls. Idea; nothing decided or registered.
