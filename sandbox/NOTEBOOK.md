@@ -816,3 +816,26 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   shift along the open directions is what Update 61 reads for a spiral. Question for her: in her picture is breaking
   forbidden (a store rule) or merely dear (a table that charges damage more than 16)? The first is cheap to look at in
   the sandbox and T69 already asks half of it; the second is a new table (Update 54's open item).
+- 2026-10-18, the owner, on his broken inside against her curled one: "yes that is why we are exploring another shift
+  to the model or multiple shifts to better align it within intuition and the whirlpool to singularity black hole
+  visualization. Would the above be fed at one point I think it would be fed at every point. In real life, the points
+  are probably not discrete but more continuous. With open enclosed states with associated values, but not really like
+  different numbers of squares. The open space continues to expand increasing at a continuous increasing rate it's not
+  adding discrete squares. We increase squares to get closer to the continuous view but only care about 4 and 6, closed
+  and open." *Ours:* (1) Fed at every point is T68's "all" place; her "only 4 and 6, closed and open" answers the
+  question of the hour: broken points are not in her picture at all, so breaking is forbidden, a store rule, not a
+  price. (2) Exact, looked at the same hour (every valid single switch from the slab 4 × 6 × 6, partners within four
+  steps, 492 switches of 11 kinds): every one of them leaves exactly four broken points (d > 3) while opening 8 to 20.
+  So with breaking forbidden and the toy's one move, a switch of two links, the slab cannot move at all: her picture
+  cannot be run with the moves the toy has. T69 says the same from the other side: the first clean state is two switches
+  from the slab (16 points open, 64 units). Her picture therefore needs a move that opens a patch in one step, two
+  switches at once with no broken point between; that is a new move set, a knob under S1 (the cousin of H5, moves for
+  intermediate curls), and nothing is built for it. (3) What the toy would become under it: every point closed or open,
+  nothing else, with the energy of a clean state set by the open patch's seam (T54's quadratic in the patch size at
+  every size run). That is a two-state field with a surface cost, the oldest nucleation model there is, and it is the
+  dial model of T12 one level down with the dials enforced by the wiring. Fed everywhere with per-point stores it has
+  the same threshold shape T68's "all" place showed, pop when every store holds the move's price, and without breaking
+  the pop could only open. Whether it then opens into one space or into a patchwork of seams is the question, and it is
+  what the look would show. (4) The continuous picture: the toy's 4 and 6 are the least curled and the least open a torus
+  can be; everything between 4 around and wide open is a seam, and the toy has no state "a little open". Nothing here is
+  decided; the move set is hers to decide before anything registered runs.
