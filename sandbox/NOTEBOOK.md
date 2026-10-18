@@ -716,3 +716,19 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   first clean opening costs 64, two switches, and holds 16 open points at once; nothing clean reaches 24 points below 64.
   Ours (CLIMBS) is not yet scorable and our 36 for the first clean opening was wrong. The held-out size L = 12 is running
   with its numbers written. Her word for L = 12 is hers of stage 1 unless she replaces it.
+- 2026-10-18, the owner, on T68's reading ("spent on pairs that open and break before any region grows"): "So there is
+  no moving front in 3d? But why is front even matter if the energy is flowing in the form of matter making bath and
+  gravity curling energy Coming at every point on the edge of the 4 side equally. Then hits the threshold and pops to a
+  floor state 3 open dimensions. So I feel like curling cannot break only curl, it would come at all points at once
+  becaus of spread." *Ours:* (1) No front for the slab's last direction in any three-direction run (T53, T56, T65, T67,
+  T68); the one growing region in three directions is T48 at λ = 1.40 (5 of 16, the heat kept in place). (2) Her
+  uniform picture is what T68's "all" place did: a feed split over every point's store moved nothing until every store
+  held the single-move wall, then every point moved at once; the largest open regions of the test appeared there (up to
+  212 of 576, about 2 points opened per point broken) and the slab then broke, because the energy could pay a breaking
+  move as readily as an opening one (O134). (3) "Curling cannot break, only curl" is, in the toy, a rule on which moves a
+  store may pay. Her strict rule of 17 October (Update 60: only moves that add a surplus square without losing squares)
+  can curl but cannot open the slab either, since opening loses squares. The rule her sentence needs is a store that pays
+  any move after which no point is broken (no point above three open directions). That is a variant of curling energy,
+  not yet decided, and whether a damage-free path from the slab to open space exists, and how high it climbs, is exactly
+  T69's clean-milestone listing (registered 17 October, her PAYS, ours CLIMBS). Proposed, not run: a sandbox look at
+  T68's "all" feed with breaking moves refused, L = 8, λ = 1.25, to see whether the uniform pop gives a clean floor state.
