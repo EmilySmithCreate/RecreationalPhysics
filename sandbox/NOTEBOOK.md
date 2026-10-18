@@ -1277,3 +1277,34 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   for "when" is pulled toward the earliest time observers can exist; with "trillions" of daughters per universe within
   about 10^10 years that pull is strong, and we are at 1.4 × 10^10 years. Written out in the brief with the escape her
   first rule provides.
+- 2026-10-18, the owner, on piece 14's open question (whether the versions are Everett's branches): "I believe they are as
+  needed for amplitudes and interference to work correctly." And on the youngness consequence of her rule (ii): "Okay my
+  first instinct is to say we don't count across the tree then the rate and order doesn't matter as we can line up all the
+  universes aligning big bang time. But I need to understand this better: most universes alive at any moment are young, as
+  in my scenario yes they are increasing exponentially, but when we make a prediction of when we are I'd want to look from
+  outside of time: are you sure that forwards weight can't be balanced by the universe's last observer being way out at
+  10^100 years? And red draws being stable for way longer than our type of star and there being more of those in the
+  future?" *Ours:* (1) Her belief on the branches is recorded as her position; the brief's rule (i) now says the copies
+  carry Born weights on her word, and O125's "untested" stands until piece 13's toy tests it. (2) Late observers cannot
+  balance the weight; late births can. The across-the-tree count weights age τ by e^(−γτ), and γ is set by when daughters
+  are born, not by when observers live: with 10^12 daughters born within 10^10 years, γ ≈ 2.8 × 10^−9 per year, and an
+  observer at 10^12 years (the red dwarfs' era) would need 10^1180 times more observers than now to balance it, at 10^100
+  years 10^(10^91); no finite universe holds them. What lowers γ is the birth time: the same 10^12 daughters born at 10^12
+  years give e^(−0.4) at our age, nothing. And early births set a floor whatever comes later: more than about three daughters
+  per universe within the first 10^10 years already costs e^(−1.4) at our age, a million costs e^(−18). So the across-the-tree
+  reading survives only if the black holes formed early birth almost nothing and the daughters come from what falls in late,
+  which under Update 66 (b proportional to the energy fed) is not what the toy says. (3) "Line up all the universes at their
+  big bang" is the per-universe count by age, and it is what "from outside time" gives: the whole tree counted per universe
+  has every universe with the same distribution over its own age, so the branching adds copies and no weight. The
+  across-the-tree count needs a common clock across universes, which her hypothesis denies (time emerges inside each open
+  space, Update 65; a daughter's clock is not the parent's). Her instinct is the reading consistent with her own picture,
+  and it is the one eternal inflation's youngness paradox is an argument against the other (a regulator by a global time;
+  [Freivogel11]). (4) Her red-dwarf point does bite, in the per-universe reading and against her own age the other way: with
+  habitable planets round 0.1 solar-mass stars, the chance of an observer as early as now is at most about 0.1 % ([LBS16],
+  read in full on 12 October; `src/orh/cosmic.py`), so a per-universe count predicts an observer at about 10^13 years unless
+  red dwarfs are poor hosts or late observers are weighted down. Her own observation-window term W(t) (Krauss and Scherrer,
+  about 10^11 years, not read) does the second: observers who cannot learn their universe's history count less, so the peak
+  moves inside 10^11 years and our age is unremarkable. That makes the window a load-bearing choice, not a flourish: drop it
+  and the per-universe count predicts the red-dwarf era. (5) A "balance" in the across-the-tree reading, the youngness pull
+  against the red dwarfs' numbers, would need γ of a few × 10^−11 per year, two knobs set to land on our age; rule 13.
+  Nothing here is a run or a knob of the toy.

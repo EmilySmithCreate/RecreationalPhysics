@@ -76,8 +76,10 @@ of life supporting stars."
 - **Rule (i), per universe, within a setting.** Universes of one setting that differ only by a quantum outcome with a
   macroscopic consequence (versions; Update 17, piece 14) are each counted whole. *Ours:* this is the rule that avoids
   O101's trap. Within a setting every universe has the same O(s), so the branching adds nothing but copies, and no
-  exponential weight falls on the deepest generations. The Born-weight caution of piece 14 still applies to the copies
-  (if versions are Everett's branches, each copy carries a weight), and is not decided.
+  exponential weight falls on the deepest generations. The Born-weight caution of piece 14 applies to the copies: if versions are Everett's
+  branches, each copy carries a weight. **Her position, the same evening:** "I believe they are as needed for amplitudes
+  and interference to work correctly." So the copies carry Born weights on her word; whether the toy's versions are such
+  branches is still untested (O125, piece 13).
 - **Rule (ii), the growth rate, for when an observer exists.** The question: between a universe's birth (t = 0) and the
   end of its life-supporting stars, when is an observer most likely? *Ours, unverified; the mathematics is textbook
   demography and the cosmological form is published ([Freivogel11], read in part; [BFY08], read in full by an assistant
@@ -105,6 +107,33 @@ of life supporting stars."
     reading nothing fails. Which reading her rule (ii) means is the one question this decision leaves, and it decides
     whether the measure already contradicts our age. Rule 13 applies: the published form of this argument was made for
     eternal inflation and is carried here as a target, not as a result.
+  - **Her question, the same evening: can the forward weight be balanced by late observers (the last at 10^100 years;
+    red dwarfs stable far longer than stars like ours)?** Her first instinct: do not count across the tree, line every
+    universe up at its own birth and look from outside time. *Ours, arithmetic.* **Late observers cannot balance the
+    weight; late births can.** The weight e^(−γτ) is fixed by when daughters are born, not by when observers live. With
+    γ = 2.8 × 10^−9 per year (10^12 daughters within 10^10 years) an observer at 3 × 10^10 years needs 10^19 times the
+    observers of now to pull even, one at 10^12 years (the red dwarfs' era) 10^1180 times, one at 10^100 years
+    10^(10^91); no finite universe holds them. What lowers γ is the birth time: the same 10^12 daughters born at 10^12
+    years give γ = 2.8 × 10^−11 and a weight of e^(−0.4) at our age, nothing. And early births set a floor whatever comes
+    later, since 1 = Σ B_i e^(−γτ_i) ≥ B_early e^(−γτ_early): more than about three daughters per universe within the
+    first 10^10 years already costs e^(−1.4) at our age, ten cost e^(−3), a million e^(−18). So the across-the-tree
+    reading survives only if the black holes formed early birth almost nothing and the daughters come from what falls in
+    over the long black hole era; under Update 66 (b proportional to the energy fed) that is not what the toy says.
+    *On "from outside time":* lining every universe up at its birth is the per-universe count by age, and it is what an
+    outside view gives: the whole tree counted per universe has every universe with the same distribution over its own
+    age, so the branching adds copies and no weight. The across-the-tree count needs a common clock across universes,
+    which the hypothesis itself denies (time emerges inside each open space, Update 65; a daughter's clock is not its
+    parent's). Her instinct is the reading consistent with her own picture; eternal inflation's youngness paradox is the
+    published argument against the other ([Freivogel11]: a regulator by a global time). *Her red-dwarf point does bite,
+    in the per-universe reading, the other way:* with habitable planets round 0.1 solar-mass stars, the chance of an
+    observer as early as now is at most about 0.1 % ([LBS16], read in full 12 October; `src/orh/cosmic.py`), so a
+    per-universe count predicts an observer at about 10^13 years unless red dwarfs are poor hosts or late observers are
+    weighted down. Her own term W(t) does the second: observers who cannot learn their universe's history (beyond about
+    10^11 years, Krauss and Scherrer, not read) count less, so the peak moves inside 10^11 years and our age is
+    unremarkable. The window is therefore a load-bearing term of her function, not a flourish: without it the
+    per-universe count predicts the red-dwarf era. A "balance" in the across-the-tree reading (the youngness pull
+    against the red dwarfs' numbers) would need γ of a few × 10^−11 per year, two numbers set to land on our age, which
+    rule 13 forbids counting as anything.
 
 ## 5. What the toy supplies now, and what it never will
 
@@ -129,4 +158,7 @@ known.
 A setting with observers and a larger B than ours, found among the neighbours of our constants, would falsify her
 rule (ii) as a selection principle; and under its across-the-tree reading our own age already does (section 4). No model here can score a neighbouring setting, so the function stands as a
 specification until one can; what it fixes now is the list of terms a model would have to produce, and the one
-question section 4 leaves her: which reading of "at one moment" her rule (ii) means.
+question section 4 leaves her: which reading of "at one moment" her rule (ii) means. Her first instinct of the same evening
+(per universe, lined up at birth) is recorded there with the arithmetic that supports it; her word that it is the decision is
+not yet given. Under that reading the observation window W(t) is what keeps the per-universe count from predicting the
+red-dwarf era ([LBS16]), so W(t) is the term a critic would attack first.
