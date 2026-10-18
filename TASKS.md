@@ -878,6 +878,13 @@ first; the daughter-universe interpretation after. In order, each registered bef
    first (`configs/t68_heldout_prediction.csv`: BREAKS 62, SITS 46, no front). To read: `t68_*_l16` into the fetch
    request, accept, commit unread, `python scripts/analyse_t68.py`, scored against the table. Owed by her: her own
    word for L = 16.*
+   *18 October, 02:15 UTC: **VISION Update 62**, her "All 3 yes": the one-step patch-opening move (two switches at once,
+   no point left broken), the no-break store rule and pooled payment are knobs. The sandbox look that prompted it
+   (`sandbox/clean_feed.py`; LOG, 18 October): the slab fed at every point opens as one growing region, 72 % at L = 8 and
+   55 % at L = 12 when the look ended, climbing 4 units per point opened with no release before completion; the breaking
+   control melts. Next, in order: the kernel as a module with rule-6 tests (dH against the full Hamiltonian, the clean
+   guarantee, conservation, same-seed); PREREGISTRATION **T70**, the climb at L = 12 and 16 with a held-out size (does
+   the region complete, and does completion release 4(λ − 1) per point), her prediction owed before launch.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

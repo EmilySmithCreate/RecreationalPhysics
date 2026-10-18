@@ -1765,3 +1765,32 @@ until a spiral (her picture of 17 October) is seen. The last condition is the on
 now", so a curled region that needs the stores to hold it up is not X. This closes question 6 of the curling-energy brief
 (`docs/design/curling_energy_brief.md`); question 1, what carries curling energy, is the one still open before anything
 registered runs with it.
+
+Update 62 (2026-10-18, 02:15 UTC by the clock): **DECISION (the author's, "All 3 yes"; "adopt the move set and the
+store rule as knobs"): the toy gains a one-step patch-opening move, a store that pays no breaking move, and pooled
+payment.** Why this page changes: S1 requires a dated decision before any registered run on a new ingredient, and these
+three are new. They come from her picture of the same night (`sandbox/NOTEBOOK.md`, 18 October): energy arrives at every
+point of the slab; a point is closed (four around) or open (six around) and nothing else; breaking is not in the picture.
+The exact fact behind the move: every single switch from the slab leaves four broken points, so under her picture the
+toy's one move cannot move the slab at all, and T69's first clean state is two switches away.
+
+- **The move:** two switches of the kernel's kind made at once, the second with its side-0 ends within two steps of the
+  first's four ends, accepted only if the hard-core rule holds and no point is left broken (every point at d ≤ 3 after
+  the move). Started from a clean state the chain stays clean, so breaking is excluded by the move set, not priced.
+- **The store rule:** a store pays no move that leaves a point broken. With the move above this is automatic; it is
+  stated so that it also governs any single-switch chain that carries the same energy. It is a different rule from the
+  strict curl-only rule of Update 60, which stands for curling energy; whether both kinds of store exist side by side,
+  or the no-break rule replaces the strict one, is hers to say and is not decided here.
+- **The payment:** a move's cost is paid from the pooled stores of the points whose links moved (up to eight), each
+  in proportion to what it holds; a release is credited to them evenly; a move the pool cannot pay is refused. No
+  temperature.
+- **What it is for:** piece 5 under her picture, the slab fed at every point (T68's "all" place). The sandbox look of
+  this night (`sandbox/LOG.md`) saw the slab open as one growing region climbing 4 units per point opened, with no
+  release before completion; a look, not evidence. The first registered test is that climb at sizes where a flat torus
+  exists (L = 12, 16; a held-out size), with her prediction, after the kernel has its rule-6 tests.
+- **What stands.** Every untied single-switch verdict (T30 to T68) as scored; the curling cost 4(λ − 1) per curled
+  link and the square count as the energy (her "keep using the square counting"); the slab as X (Update 60). With
+  these knobs the model is our family, never the published model. The untied single-switch chain is the control.
+- *Ours, unverified:* with breaking excluded and a seam cost, this is a nucleation-and-growth model; what the toy can
+  decide is whether the release 4(λ − 1) per point ever beats the seam at a size it can reach, and whether the lump then
+  arrives at completion rather than along the front.

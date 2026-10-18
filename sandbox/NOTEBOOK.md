@@ -862,3 +862,17 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   all three were made for the look and none is decided. Ours, unverified: this is a nucleation-and-growth model with a
   seam cost and a release only at completion, the oldest shape in the subject, and the question it puts is whether
   the release 4(λ − 1) per point ever beats the seam at a size the toy can reach.
+- 2026-10-18, the owner: "matter has to be the scrap: can't matter just be the energy? Or part of it? All 3 yes. adopt
+  the move set and the store rule as knobs. Tell me what we learn. Any evidence of the energy: matter and antimatter as
+  curling and uncurling energy?" *Ours:* (1) Yes, and "has to be the scrap" was too strong: in the toy the released
+  lump is the stores' energy, and her lean of 10 October already makes the burp the hot lump, light and ordinary matter,
+  with the scrap the guess for dark matter (Update 52). What the no-break rule removes is only his melt as matter; the
+  energy and the scrap both remain, and matter can be the energy, or part of it. (2) The three are adopted (VISION
+  Update 62). (3) Matter and antimatter as curling and uncurling energy: no evidence in the toy either way. The toy has
+  one kind of energy with no sign; a move either curls (surplus squares appear), opens (they go) or breaks, and under the
+  new rule only the first two remain. The look showed the arriving energy spent on uncurling at 4 units a point and held
+  in the seam, recoverable only at completion; nothing in it comes in two kinds that cancel. In standard physics matter
+  and antimatter carry equal positive energy and annihilate to light of the same energy, so "cancel" can only be a
+  count. A test would need something in the toy that comes in opposite kinds; the only candidate is surplus against
+  missing squares, and the rule just adopted removes the missing kind. So: not supported, not excluded, and no test
+  designed.
