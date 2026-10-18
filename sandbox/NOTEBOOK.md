@@ -732,3 +732,19 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   not yet decided, and whether a damage-free path from the slab to open space exists, and how high it climbs, is exactly
   T69's clean-milestone listing (registered 17 October, her PAYS, ours CLIMBS). Proposed, not run: a sandbox look at
   T68's "all" feed with breaking moves refused, L = 8, λ = 1.25, to see whether the uniform pop gives a clean floor state.
+- 2026-10-18, the owner: "Maybe antimatter is curling energy used to uncurl, paying the threshold. Then matter is the
+  released energy from the that is partly canceled by the threshold payment." *Ours, against the record:* (1) Its
+  nearest home is Update 42's line on matter and antimatter: in standard physics the hot lump held almost equal amounts
+  of each, they turned to light as it cooled, and ordinary matter is the one-part-in-a-billion excess; her idea makes
+  the activation the antimatter and the release less the activation the matter, so the excess would be "release minus
+  threshold". (2) Two facts stand against it as worded. Annihilation does not cancel energy: matter and antimatter meeting
+  become light of the same energy, and what cancels is the particle count (baryon number), so "partly canceled" has to
+  mean a count, not an energy. And in the toy a wall is a hill, not a toll (O71): the energy paid to cross comes back on
+  the far side, so the threshold payment cancels nothing unless the paying energy is of a kind that is used up, which is
+  what curling energy would be (Update 57) and which the strict rule of Update 60 cannot do, since that store pays only
+  moves that add a surplus square without losing squares and uncurling loses squares. So the idea needs a store that may
+  pay for uncurling and is spent in doing so, a third store rule beside the strict one and the no-break one of 18 October.
+  (3) The toy has nothing that comes in opposite kinds (Update 42). The one signed pair it does have: a point's departure
+  from flat is either a missing square (damage, 16 each) or a surplus square (curl, 4(λ − 1) each), and a switch can trade
+  one for the other (the opening move loses 2 squares and 4 surplus: 32 − 20 = 12). If anything in the toy is to play
+  matter against antimatter it is these two excesses, and no test of that is designed. Idea, not a decision; no knob.
