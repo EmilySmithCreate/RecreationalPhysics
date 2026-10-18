@@ -783,6 +783,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   many points appear, since the energy is indifferent to the size of flat space, and the toy has no move that adds a
   point (every move is a switch of two links). Both are claim 3's parked decision (a cost or credit per point) and
   Update 28's other model. Idea, not a decision.
+- 2026-10-18: T69's held-out size read (O135, addendum): AS PREDICTED at lambda = 1.10 and 1.40; at 1.25 the budget ran
+  out at saddle 62, two below the predicted 64, so that cell is untested with nothing against the prediction. The price
+  of a clean opening is 64 at both sizes where reached, not the single-move wall. Her PAYS is unsupported within the
+  reach and not excluded above it; the second stage (the slab's symmetries) is what decides.
 - 2026-10-18, the owner: "No, I feel like I wanna keep using the Square counting classical methods, but I want us to have
   an open mind about how we can get this curled slab to open into three dimensional space I know we want to use the
   square counts and math but when I visualize it, there's basically a closed point at the convergence of the

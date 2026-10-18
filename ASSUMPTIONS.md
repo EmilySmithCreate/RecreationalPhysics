@@ -3932,3 +3932,9 @@ author and should be disclosed as such in any submission. Physics estimates mark
   - **What limited the reach:** memory, not time; the symmetries of the slab are the exact way to go further and are
     proposed as a second stage (the registration). The held-out size L = 12 runs with the stage-1 budget and its numbers
     written first.
+  - **Addendum, 18 October 2026, 01:15 UTC by the clock: the held-out size read.** AS PREDICTED at λ = 1.10 (the first
+    clean opening at 64, two switches, 16 open points; nothing to 24 below 64) and at 1.40 (nothing clean at or below
+    52.8, inside the written 50 to 58); at 1.25 the budget exhausted saddle 62 and had not reached the predicted 64, so
+    that cell is untested, with no clean state below 62, as the prediction implies. The price of a clean opening does not
+    change with the sheet's size where it was reached; the search's reach shrinks with size at a fixed budget (the window
+    grows), which is the reason for the second stage (PREREGISTRATION T69, "Reading of the held-out size").

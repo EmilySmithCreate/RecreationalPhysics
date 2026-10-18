@@ -6500,6 +6500,28 @@ the disclosure is a wrap round the small torus and does not appear at L = 8. Rea
 (4(λ − 1), 1 at 1.25) is far below any move that opens, so energy only comes back once a region is complete, and no
 completed region smaller than the whole torus lies below the slab in any family priced (O118).
 
+### Reading of the held-out size (L = 12), 2026-10-18, 01:15 UTC by the clock (`python scripts/exact_lowest_path.py configs/t69_lowest_path_l12.json`; `results/t69_lowest_path_l12.csv`; 5,000 states popped per cell; children seen 4.0, 17.9 and 35.8 million; the exhausted saddle 64.0, 62.0 and 52.8 at λ = 1.10, 1.25, 1.40)
+
+**AS PREDICTED at λ = 1.10 and 1.40; at λ = 1.25 the budget fell short of the predicted saddle and the cell is
+untested, with nothing in it against the prediction.** λ = 1.10: the first clean opening at S = 64.0, two steps from the
+slab, holding 16 open points, m = 2 to 16 reached together, m = 24 not reached below 64; the cheapest move 43.2 breaks
+four points; MIXED, as written. λ = 1.40: no clean opening at or below the exhausted saddle 52.8, inside the written 50
+to 58; the cheapest move 28.8 breaks four; NOT REACHED, as written. λ = 1.25: the search exhausted saddle 62.0 and had
+not reached 64 when the budget ended (the window grows faster at the larger sheet, so 5,000 pops reach less far); no
+clean state exists at or below 62, which is what the prediction implies, and the written state at 64 was neither seen
+nor excluded; by the letter the word is NOT REACHED where MIXED was written, and the number is untested. **The size
+claim:** at λ = 1.10 the price of a clean opening is 64 at both sizes, and nothing clean reaches 24 points below 64 at
+either; at 1.40 nothing clean lies below about 53 at either; at 1.25 the L = 8 number stands untested at L = 12. With
+breaks allowed the first states agree at the two sizes to the unit (43.2, 36.0, 28.8 with four broken; 64.0, 58.0,
+49.6 with 16 open and four broken). Reported, not scored: the search's reach shrinks with L at fixed budget (62 and
+52.8 against 64 and 53.6), which is the cost of the growing window and the reason for the second stage.
+
+**What stands after both sizes (ours).** In the move set, a clean opening of the slab costs 64 at the two smaller
+curling costs, not the single-move wall, and it arrives as 16 points at once; whether the released energy then pays
+for growth past 16 points is unknown at every λ, since no search reached a saddle above 64. The owner's PAYS is not
+supported anywhere in the reach and not excluded above it; ours is untested above 64. The second stage, with the slab's
+symmetries used to reach further, is the test that decides, and it is registered as an amendment before it runs.
+
 ### What this cannot show
 
 Any path the move set excludes: moves with a point farther than one step from the changed region, or more than one
