@@ -1041,3 +1041,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   cost. (4) Nothing to run on this; it is arithmetic on the clean path plus a reading. Recorded as her claim in the
   form rule 11 asks: previous (Update 42) matter and antimatter as a question; now: the climb paid along the front and
   repaid at completion is the pair that cancels, the stored curling cost is the net.
+- 2026-10-18, the owner: "Okay let's adjust the model, describe to me in a glossary and math the new model and how it
+  differs from traganburger + curling energy version. Then let's come up with some tests to run and proceed". *Ours:*
+  done as VISION Update 63 (the decision) and `docs/design/contraction_model_brief.md` (glossary, mathematics, the three
+  models side by side, the tests in order). Two exact looks were run first (LOG, 18 October): her compaction move made
+  exact as a pair removal with neighbour splicing, and a layer of it contracted a patch at a time. What they say: the
+  whole layer at once is exactly the slab with no point broken; a patch of it, any size tried, breaks 26 to 80 points at
+  its rim and costs more than the finished slab. So her two sentences of the day, "points don't break" and "the front
+  pays until the threshold and the rest cancels", pick out two different forms of the model (whole layer, or local with
+  a seam), and the brief puts that choice to her as its first question. Nothing registered runs before her answer.
+

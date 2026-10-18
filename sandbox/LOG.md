@@ -343,3 +343,17 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   So within two switches flat six-link space has no clean move at all: it cannot curl, narrow or reshape without a
   point passing through broken, and the reshaping of a flat torus toward the slab cannot even start under the no-break
   rule at this move size. Three or more switches at once not checked. Exact within its reach; a look. Not promoted.
+- 2026-10-18. The owner's compaction move made exact (`sandbox/pair_moves.py`; `sandbox/out/pair_moves_2026-10-18.txt`):
+  a linked pair of the two kinds is removed and its ten other neighbours spliced five to five. The whole layer
+  (x = 0, 1 removed, x = −1 spliced to x = 2) takes 6 × 6 × 6 to 4 × 6 × 6 and 6 × 6 × 8 to 4 × 6 × 8 and is the built
+  slab exactly (N, S, X, H, every point d = 2, valid). One pair removed from flat 6 × 6 × 6: 5 of 120 splicings valid, all
+  leaving broken points (dH 176 with 24 broken, or 191 with 26); from the slab 4 × 6 × 6 none valid. Exact; a look.
+- 2026-10-18. A part of a layer contracted (`sandbox/partial_contraction.py`; `sandbox/out/partial_contraction_2026-10-18.txt`
+  and `_L8_`): patches of 1, 4 and 6 positions with every side-respecting re-linking of the rim tried (the 1 × 2 patch has
+  none valid), strips of 1 to 4 rows with canonical re-linkings, and the whole layer; λ = 1.25, L = 6 and 8. Every partial
+  contraction leaves 26 to 80 points broken and sits above the finished slab (191 to 432 against 144 at L = 6, 256 at L = 8);
+  the blocks cost the same at both sizes, so the seam's cost is local; only the whole layer is clean. Read backward, the
+  slab is separated from flat space on these paths by a seam of about 230 to 280 units, the size of T54's completed patch.
+  Not tried: re-linkings that move the x = −1 to x = 2 splice, patches of 3 × 3 or more, L above 8. Exact within reach; a
+  look. Not promoted. Written up in `docs/design/contraction_model_brief.md`, section 2.5.
+

@@ -891,6 +891,14 @@ first; the daughter-universe interpretation after. In order, each registered bef
    control melts. Next, in order: the kernel as a module with rule-6 tests (dH against the full Hamiltonian, the clean
    guarantee, conservation, same-seed); PREREGISTRATION **T70**, the climb at L = 12 and 16 with a held-out size (does
    the region complete, and does completion release 4(λ − 1) per point), her prediction owed before launch.*
+   *18 October, 11:55 UTC: **VISION Update 63**, her "Okay let's adjust the model": points compact instead of breaking and
+   the count varies. The brief is `docs/design/contraction_model_brief.md` (glossary, mathematics, the three models side by
+   side, tests in order). Exact looks first (LOG): the whole-layer contraction is the slab exactly; any part of a layer
+   breaks 26 to 80 points at its rim and costs more than the finished slab, the same at L = 6 and 8. **Owed by her before
+   anything registered runs:** which form (local with a seam, or whole layer) and what the no-break rule means under it
+   (the brief, questions 1 and 2). Then, in order: the seam census extended (E1), the ledger against size (E2), the seam's
+   locality (E3), reach by exhaustive listing (E4); the kernel with rule-6 tests; the looks S1 to S3; T70 as planned for
+   the fixed count; **T71** for the contraction model with her prediction and a held-out size.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

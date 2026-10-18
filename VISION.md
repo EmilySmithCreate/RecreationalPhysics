@@ -1794,3 +1794,34 @@ toy's one move cannot move the slab at all, and T69's first clean state is two s
 - *Ours, unverified:* with breaking excluded and a seam cost, this is a nucleation-and-growth model; what the toy can
   decide is whether the release 4(λ − 1) per point ever beats the seam at a size it can reach, and whether the lump then
   arrives at completion rather than along the front.
+
+Update 63 (2026-10-18, 11:55 UTC by the clock): **DECISION (the author's, "Okay let's adjust the model"): the toy is
+adjusted so that points compact instead of breaking, with a count of points that varies.** Why this page changes: a
+varying count is claim 3's parked decision, a compaction move is a new move set, and S1 requires a dated decision here
+before either is run. Her words of the day are in `sandbox/NOTEBOOK.md` (18 October); the form of the model, with a
+glossary, the mathematics, how it differs from the published model and from the curling-energy version, and the tests in
+order, is `docs/design/contraction_model_brief.md`.
+
+- **What is decided (hers):** points do not break, they compact: two linked points of the two kinds collapse into
+  nothing and the points that were linked to them link to each other; the count is not fixed and rises with what comes
+  into the black hole; the square count stays the energy; the picture it serves is a front that pays as it goes and is
+  repaid at completion, leaving the stored curling cost as the net.
+- **What is ours, pending her confirmation (the brief, section 0 and 5):** the move's exact form as a pair removal with
+  neighbour splicing and its inverse; the whole-layer form, which is exactly the slab (6 × L × L → 4 × L × L with no
+  point broken; `sandbox/pair_moves.py`); the hard-core check on every move; a per-point cost of zero; where the stores
+  sit and what they pay (Update 62's pooled payment carried over).
+- **What the exact looks already say (sandbox, 18 October; not evidence for any claim):** done pair by pair the
+  compaction always breaks points at its rim (26 to 80 within reach) and costs more than the finished slab (191 to 432
+  against 144 at L = 6), the same at L = 8 for the same patch; only the whole layer at once is clean. So the model has two
+  forms that cannot both hold with the move as defined: a local form with a seam and a front (her ledger of 18 October),
+  or a layer form with no seam, no front and no cancellation (her "points don't break"). **Which form is hers to say**
+  before anything registered runs (the brief, question 1), together with what the no-break rule means under it (question
+  2).
+- **What stands.** The curling cost 4(λ − 1), the square count, the slab as X (Update 60), the stores and their
+  conservation, untied (Update 58), the knobs of Update 62 for the fixed-count chain, and every verdict scored. The
+  fixed-count test T70 stays as planned; the contraction model's first registered test is T71, written after her
+  answers. With these ingredients the model is our family, never the published model.
+- *Ours, unverified:* the whole-layer step 6 → 4 is the one step of her ladder "100 → 8 → 6 → 4" that costs anything in
+  this energy (every compaction above six around is free), and it keeps the count of 3-cubes exactly while the steps
+  above it do not. Reported, not claimed.
+
