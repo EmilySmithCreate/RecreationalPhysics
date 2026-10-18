@@ -1244,3 +1244,23 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   formed and when, the observation window), so that a setting of the loop can be score: proceed." *Ours:* written as
   `docs/design/loop_measure_brief.md`: the terms, the function in stages, the one choice left to her (how generations
   are combined), and the one term the toy now supplies exactly (daughters per unit of energy fed, Update 66).
+- 2026-10-18, the owner, on method: "So the toy does not explain flatness. It assumes it. So can't we say that because we
+  know it's flat from measuring it is acceptable to use this toy? The point of the toy is to be the most simple
+  mathematical description that describes what we know about reality. That is a useful thing to build, once it's built
+  the best it can be, we can use it to make predictions." / "has a degree of freedom the toy lacks: a curvature radius
+  for the large direction - should we add this on before making any predictions with it, then?" / "Flat in the toy says
+  nothing about size. That's fine and good we can paste on other scientists' size stuff, as needed for predicting."
+  *Ours:* (1) Yes, a measured fact may be an input; the price is that the toy can then never be scored on it, and
+  flatness must not be counted among the things the toy got right. One caution with the words: the toy's "flat" (every
+  link full, a count at a point) and the sky's "flat" (a curvature radius far beyond the horizon) are not the same
+  quantity, so the match is of words, not numbers (rule 13). (2) No curvature radius before predictions: add a degree of
+  freedom only when a registered prediction needs it. In this family nothing wide can be curved at the floor, so a
+  curvature radius would be a new ingredient (a different lattice or a term that charges or rewards curvature), a knob
+  under S1, and it would buy nothing for the questions the toy is built for (the ledger, the gate, the timing, the
+  daughters per unit fed, the knots). (3) Pasting other scientists' results on is how piece 12's brief already works
+  (the toy supplies one term, b; the rest is published). The discipline it needs: at every join, say which number is the
+  toy's and which is pasted, and keep the list of what was put in (flatness; three directions; the curling cost; the
+  gate; one-way daughters; the slab as X) apart from what came out (the lump a per point; the knots and their sizes; the
+  converter; b = energy in over the lump), so that no prediction is scored on an input (rule 13: inputs checked for
+  containing the target). On "once it's built the best it can be": the toy already predicts (T71's words are written);
+  the project's way is a registered prediction at each stage, not one after a finished build.
