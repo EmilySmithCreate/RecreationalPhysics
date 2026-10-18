@@ -58,3 +58,5 @@ t65_control_lam125_l16
 t67_*l16
 # 2026-10-17, 22:28 UTC by the clock: T68 stage 1 (36 jobs, submitted 15:26 UTC). Not read.
 t68_*
+# 2026-10-18, 05:45 UTC by the clock: T68 held-out size, L = 16 (36 jobs, submitted about 22:40 UTC on 17 October). Not read.
+t68_*_l16
