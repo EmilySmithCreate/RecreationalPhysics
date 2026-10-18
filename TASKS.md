@@ -866,6 +866,10 @@ first; the daughter-universe interpretation after. In order, each registered bef
    uses the slab's symmetries to reach further, registered as an amendment before it runs; to read L = 12:
    `python scripts/exact_lowest_path.py configs/t69_lowest_path_l12.json` writes `results/t69_lowest_path_l12.csv`;
    score it against the amendment.*
+   *Held-out size read 18 October (O135, addendum): AS PREDICTED at lambda = 1.10 and 1.40; at 1.25 the budget exhausted
+   saddle 62 and had not reached the predicted 64, untested. Next: the second stage with the slab's symmetries, as an
+   amendment with its budget and the numbers it must beat (a clean state below the slab, or S(24) and beyond), before it
+   runs.*
    *Stage 1 read 17 October, 22:31 UTC (O134): no replica of 1,728 opens or reaches a front at any curling cost;
    BREAKS in 166 cells of 216, SITS in 48 (37 of them the "all" place frozen below the single-move wall, a property
    of per-vertex stores, disclosed), MIXED in 2; her inferred OPENS fails, ours holds (one detail wrong: pulses break
