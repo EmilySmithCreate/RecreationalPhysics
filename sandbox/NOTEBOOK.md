@@ -748,3 +748,17 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   from flat is either a missing square (damage, 16 each) or a surplus square (curl, 4(λ − 1) each), and a switch can trade
   one for the other (the opening move loses 2 squares and 4 surplus: 32 − 20 = 12). If anything in the toy is to play
   matter against antimatter it is these two excesses, and no test of that is designed. Idea, not a decision; no knob.
+- 2026-10-18, the owner, on "opening the curled direction loses squares": "why does it need to lose squares we are not
+  conserving points". *Ours, exact:* in the toy the points are fixed (N) and so are the links (six a point); squares are
+  not conserved, they are counted, and the energy is the count. The squares an opening loses are the loops of four that
+  run round the curled direction: a direction four around has one such square on every edge along it, and a direction
+  six around has none, because a loop of six is not a square. At fixed N the slab 4 × L × L holds 3.25 squares a point
+  (3 flat + the wrap squares, N/4) and every flat three-direction torus holds exactly 3, so the opening must lose N/4
+  squares (16 each, 4N) while it sheds N surplus squares (4λ each, 4λN): the release 4(λ − 1)N is the difference. Her
+  point is right one level up: if points are not conserved, the total square count need not fall. A 6 × L × L flat torus
+  holds 18L² squares against the slab's 13L²: the wrap squares are still destroyed, but the new points bring new squares.
+  The toy cannot do this (every move is a switch of two links at fixed N), and a varying count is claim 3's parked
+  decision (it needs a cost per point, the cosmological-constant term of dynamical triangulations). What follows for the
+  curl-only store: the strict rule of Update 60 is written on the toy's moves, where opening always lowers the count. If
+  the count may grow, "pays only moves that do not lower the square count" would let a store pay for an opening that
+  adds points, and the rule would need rewriting for a growing toy before it meant anything there.
