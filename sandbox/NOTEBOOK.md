@@ -1235,3 +1235,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   opening (88 % persist across cooling times), and kinds sit beside kinds. For her idea it means: the scraps' own layout is
   white noise at large scales, which is not the sky's nearly scale-invariant seed spectrum; what survives is the weaker
   form, scraps as dark matter that falls into seeds laid by something else. A look; it narrows, it supports nothing.*
+- 2026-10-18, the owner, on what happens to the lump after the burp: "I think it goes in its own daughter universe. Then
+  the slab reforms and continues accepting energy. Nothing can go from open space to the slab, it's one way." *Ours:* a
+  decision (VISION Update 66); built as a daughter ledger in the T71 protocol the same evening, with the exact arithmetic
+  there: the parent converts the whole feed into daughters of exactly a N_slab each, and the gate sets only how long X
+  sits between fold and burp. Still owed: the gate and her prediction.
+- 2026-10-18, the owner: "write piece 12's function with these as its terms (length of the starlight era, black holes
+  formed and when, the observation window), so that a setting of the loop can be score: proceed." *Ours:* written as
+  `docs/design/loop_measure_brief.md`: the terms, the function in stages, the one choice left to her (how generations
+  are combined), and the one term the toy now supplies exactly (daughters per unit of energy fed, Update 66).

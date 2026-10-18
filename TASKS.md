@@ -916,6 +916,11 @@ first; the daughter-universe interpretation after. In order, each registered bef
    gate's value (S1), her prediction, and whether the feed stops at the burp. Done the same hour: the one runner that puts both kernels in one protocol
    (`graphity.layer_feed`, `scripts/run_layer_feed.py`, with its tests; a smoke run in the scratchpad reproduced the
    arithmetic: first split at the gate plus a two-sweep wait, then oscillation with no leak). The analyzer `scripts/analyse_t71.py` is written and tested too. Nothing is owed by us before launch. T70 (the fixed-count switch-path climb) stays planned and unwritten.*
+   *18 October, 20:25 UTC: **VISION Update 66**, hers: after the burp the lump leaves one way into a daughter, the slab
+   reforms, the feed continues. Built as a daughter ledger in the protocol (tests), T71 draft amended (f3 the model, f1
+   the reference). Exact: the parent converts the whole feed into daughters of a N_slab each; the gate sets only how
+   long X sits. **Owed by her before launch: the gate's value and her prediction.** Piece 12's function written as
+   `docs/design/loop_measure_brief.md` on her "proceed" (the combination rule is hers to choose).*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

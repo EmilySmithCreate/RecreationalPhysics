@@ -49,3 +49,14 @@ def test_the_runner_refuses_to_overwrite(tmp_path):
     _run(tmp_path, "t71_test_c", n_sweeps=5)
     with pytest.raises(FileExistsError):
         _run(tmp_path, "t71_test_c", n_sweeps=5)
+
+
+def test_the_daughter_mode_reads_cycles_with_the_period_and_the_energy_per_daughter(tmp_path):
+    rows = _run(tmp_path, "t71_test_d", release_to="daughter", feed_stops_at_split=False, n_sweeps=240)
+    assert all(abs(float(r["residual"])) < 1e-9 for r in rows)
+    (cell,) = A.read_cells(rows).values()
+    assert cell["majority"] == "CYCLES"
+    assert cell["median_per_daughter"] == pytest.approx(144.0)
+    assert cell["median_daughters"] >= 2 and cell["median_period"] is not None
+    for rep in cell["replicas"]:
+        assert rep["first_split"] >= 32 and rep["release"] == pytest.approx(144.0)

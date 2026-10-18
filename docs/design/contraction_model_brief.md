@@ -274,6 +274,14 @@ saddle 64), and a full reach check with it is still owed before any chain result
   never made at any λ and size although the stores hold the cost, or a release other than 4(λ − 1) per slab point.
   *Said plainly:* under this form T71 tests the ledger and the timing; it cannot test a front, because the form has none.
 
+## 6a. After the burp (added 18 October, evening; VISION Update 66)
+
+The owner decided where the lump goes: into its own daughter universe, one way; the slab reforms and goes on accepting
+the feed. In the protocol this is a daughter ledger (`graphity.layer_feed`, `release_to` "daughter"): every release of a
+downhill layer move is counted there and nothing in the parent draws on it. Exact from the kernel: the parent converts the
+whole feed into daughters of exactly a N_slab each, and the gate sets only how long X sits between fold and burp. The
+oscillation of section 6 (the lump paying the fold back) is T71's reference arm from here.
+
 ## 7. What this cannot show
 
 Anything about antimatter, the baryon asymmetry, or the inside of a real black hole. The toy has no particles and no

@@ -6591,6 +6591,11 @@ before the cells are read.
 
 *T70 is reserved for the fixed-count switch-path test of Update 62 and is not written.*
 
+*Amendment 1 (2026-10-18, 20:25 UTC by the clock, before any run): the owner decided what happens after the burp (VISION
+Update 66): the lump leaves one way into a daughter ledger and the slab reforms (f3). The design table, the definitions
+and our predictions below are rewritten for it; f1 becomes the reference arm and f2 is not run. Still owed: her gate
+and her prediction.*
+
 ### Why
 
 The author's picture of 18 October: energy arrives at every point of the slab; the slab is X; when the stores first
@@ -6635,8 +6640,8 @@ Let a = 4(λ − 1), the curling cost per point; the slab 4 × L × L has N_slab
 |---|---|---|
 | Start | the untied slab 4 × L × L, λ = 1.10, 1.25, 1.40 | X as decided (Update 60); the three curling costs of T68 and T69 |
 | Feed | r per point per sweep into every point's store ("all" place); r = 1/64 and 1/16 | her picture: energy arrives everywhere; two rates to see the timing scale as 1/r |
-| After the burp | **owner's choice:** (f1) the feed continues; (f2) the feed stops at the first split and a leak ℓ drains every store | item 2: under f1 the product refolds whatever the leak; f2 is the one reading in which it can stay open |
-| Leak | ℓ = 0, and under f2 ℓ such that the lump has fallen below a per pool point within 50 sweeps | fixed from item 2's arithmetic, not tuned |
+| After the burp | **decided by the owner, 18 October, 20:25 UTC (VISION Update 66): (f3) the lump leaves one way into a daughter ledger, the feed continues, the slab reforms from the stores** (`release_to` "daughter"); (f1) the release credited to the parent's stores, feed continuing, is kept as the **reference** in arm B only; f2 (feed stops, leak) is not run, its question being answered by item 2's arithmetic | her words: "it goes in its own daughter universe. Then the slab reforms and continues accepting energy. Nothing can go from open space to the slab, it's one way." |
+| Leak | ℓ = 0 in every cell | f2 is not run; nothing to tune |
 | Gate | **owner's choice** among g0, g1, g2 (item 1); the chosen value in every cell | S1: a new knob, decided before any run |
 | Move set | arm A: layer moves + the clean two-switch move (the model); arm B: layer moves alone (the reference, nearly exact); arm C: the single switch (the control; T68's protocol) | hers: "with the single switch kept only as a control" |
 | μ_N | 0 | pending her word (the brief, 2.2) |
@@ -6644,7 +6649,7 @@ Let a = 4(λ − 1), the curling cost per point; the slab 4 × L × L has N_slab
 | Sizes | L = 8 and 12; **held out L = 16** (rule 14) | |
 | Replicas | 16 per cell | |
 | Length | 20 × the sweep at which gate g1 would be reached under arm B (= 20 × a N_slab / (2L² r) = 40 a / r sweeps), at least 2,000 | so the timing is read with room |
-| Runner | `scripts/run_layer_feed.py` over `graphity.layer_feed.run_layer_feed` (both kernels in one protocol; a sweep is the feed, the leak, N clean-switch attempts, then one layer proposal), written and tested 18 October (`tests/test_layer_feed.py`: conservation to 1e-9 under every move set, the clean guarantee, same-seed, the feed stopping at the split, the gate's timing), rows logged every sweep so the release at the split is read exactly; `scripts/analyse_t71.py`, written and tested the same hour (`tests/test_analyse_t71.py`) | both written before launch |
+| Runner | `scripts/run_layer_feed.py` over `graphity.layer_feed.run_layer_feed` (both kernels in one protocol; a sweep is the feed, the leak, N clean-switch attempts, then one layer proposal), written and tested 18 October (`tests/test_layer_feed.py`: conservation to 1e-9 under every move set and with the daughter ledger, the clean guarantee, same-seed, the feed stopping at the split, the gate's timing, the slab reforming and every daughter exactly a N_slab), rows logged every sweep so the release at the split is read exactly; `scripts/analyse_t71.py`, written and tested the same day (`tests/test_analyse_t71.py`, including CYCLES with the period and the energy per daughter) | both written before launch |
 
 ### Definitions, fixed now
 
@@ -6653,26 +6658,42 @@ of the first split; **the release**, the energy credited to the stores at the fi
 the first sweep at which a clean switch move is paid for (arm A); **refolds**, the number of contractions after the
 first split; **open share**, the fraction of the sweeps after the first split spent at width ≥ 6; the final width, the
 final energy above flat, the count of open and curled points at the end, and (arm C) the broken points.
-Words per replica: **OPENS AND STAYS** (a split is made and the open share is at least 0.9); **OSCILLATES** (a split
-is made, at least one refold, open share below 0.9); **NEVER SPLITS** (no split in the run); **SPENT FIRST** (arm A:
-a clean switch move is paid before any split; reported beside the word above). Per cell: the majority word, the
+Words per replica under f3 (the model): **CYCLES** (two or more daughters with at least one refold between: the slab
+reforms and burps again); **ONE BURP** (one daughter and no refold); **NEVER SPLITS** (no split in the run); and
+beside the word the **number of daughters**, the **energy per daughter** against a N_slab, the **period** between
+daughters in sweeps, and the **slab share** (the fraction of sweeps spent at width 4). Words under f1 (the reference):
+**OPENS AND STAYS** (a split is made and the open share is at least 0.9); **OSCILLATES** (a split is made, at least one
+refold, open share below 0.9); **NEVER SPLITS**. In both: **SPENT FIRST** (arm A: a clean switch move is paid before
+any split; reported beside the word above). Per cell: the majority word, the
 median t_split with its range, the release against a N_slab (exact unless a switch move came first), and the median
 energy above flat at the end.
 
-**Ledger.** The energy fed, the energy in the stores, the energy in the wiring above flat, and the energy leaked, at
-the first split and at the end; the first split's release must equal a N_slab to 1e-9 in arm B, and in arm A unless a
-clean switch move came first (then the difference is reported).
+**Ledger.** The energy fed, the energy in the stores, the energy in the wiring above flat, the energy in the daughter
+ledger and the energy leaked, at the first split and at the end; the first split's release must equal a N_slab to 1e-9
+in arm B, and in arm A unless a clean switch move came first (then the difference is reported); under f3 the daughter
+ledger must equal the number of daughters times a N_slab to 1e-9 in arm B.
 
 **The size claim (rule 14):** every per-cell word and median at L = 16 are written from L = 8 and 12 as a dated
 amendment before L = 16 runs; AS PREDICTED if they hold.
 
 ### Predictions
 
-**The owner's: OWED before launch**, together with her choice of gate (g0, g1, g2) and of what happens to the feed
-after the burp (f1, f2). Her words so far, recorded as her claim and not yet as a prediction for these cells: a step
-when the stores first hold the whole cost (g1's reading).
+**The owner's: OWED before launch**, together with her choice of gate (g0, g1, g2). What happens after the burp is
+decided (f3, Update 66). Her words so far, recorded as her claim and not yet as a prediction for these cells: a step
+when the stores first hold the whole cost (g1's reading); the slab reforms and continues accepting energy.
 
-**Ours, unverified, written before any run, per setting.** Arm B is arithmetic plus the proposal's wait: under g1
+**Ours under f3, unverified, written 18 October after the kernel's own check at L = 6 and 8 and before any registered
+run.** Arm B: **CYCLES in every cell**; every daughter carries exactly a N_slab; the energy fed between daughters is
+exactly a N_slab, so the period in sweeps is a N_slab / (r N(t)) averaged over the widths visited (about 10 sweeps at
+r = 1/16, λ = 1.25; the first daughter at 2a / r plus the proposal's wait under g1, at sweep 1 to 3 under g0); the slab
+share above one half under g1 and below one quarter under g0; and, since every threshold and the feed are per point,
+the daughters are born at the same sweeps at every L for the same seed (the held-out size then tests only this). Arm A:
+**no clean switch move in any cell** (never SPENT FIRST, zero clean moves): the stores never reach the 8 per point a
+pool of eight ends needs before a layer move fires at 2a per point or less, for every λ run (2a ≤ 3.2). Arm C: BREAKS
+as under f1. What would count against the model as she states it: a daughter other than a N_slab in arm B; or a cell in
+which the slab never reforms (ONE BURP) with the feed continuing.
+
+**Ours under f1 (the reference), unverified, written before any run, per setting.** Arm B is arithmetic plus the proposal's wait: under g1
 t_gate = a N_slab / (2L² r) = 2a / r sweeps exactly (128 at λ = 1.25, r = 1/64), the same at every size; t_split is the
 first proposal after it (one layer proposal a sweep, half of them splits, every position equivalent on a canonical state: a wait of about two sweeps);
 the release is a N_slab exactly; under f1 OSCILLATES in every cell, refolding at nearly every proposal; under f2

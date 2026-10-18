@@ -1893,3 +1893,34 @@ else like sweeps or spirals."
   this form, and only the switch moves could change it. (3) The first clean two-switch step out of the slab costs
   exactly 64 and opens 16 points, T69's first clean state, at λ = 1.25 as at 1.10.
 
+
+Update 66 (2026-10-18, 20:25 UTC by the clock): **DECISION (the author's): after the burp the lump leaves one way into
+its own daughter universe; the slab reforms and goes on accepting energy; nothing passes from open space back to the
+slab.** Her words: "I think it goes in its own daughter universe. Then the slab reforms and continues accepting energy.
+Nothing can go from open space to the slab, it's one way." Why this page changes: PREREGISTRATION T71 asked what happens
+to the feed after the burp (f1, the feed continues and the lump sits in the parent's stores; f2, the feed stops and the
+lump leaks) and this is a third answer, a rule of the protocol decided under S1 before any registered run; it is the
+daughter picture of Update 59 (a daughter forms while the black hole remains in the parent) written as a rule of the toy.
+
+- **What is decided (hers).** The release of the opening goes to the daughter, never to the parent's stores; the parent
+  keeps accepting the feed; the slab re-forms; nothing of the daughter can pay for anything in the parent.
+- **Its form in the toy (ours, pending her confirmation).** A daughter ledger: every release of a downhill layer move is
+  counted there, one daughter per release above zero; the parent keeps its geometry and its stores, and re-contracts
+  when its stores can pay a N_slab; nothing in the parent draws on the ledger. Conservation reads F + stores + daughters
+  − fed + leaked = F0 (`graphity.layer_feed`, release_to "daughter"; tests to 1e-9). The daughter is a ledger entry and
+  not a geometry: the toy keeps one torus, which plays the parent, and the daughter's open space is not represented.
+- **Exact consequences, from the kernel the same evening.** (1) **The parent is a converter.** Every a N_slab fed becomes
+  one daughter of exactly a N_slab: at L = 6, λ = 1.25, r = 1/16 over 600 sweeps, 61 daughters of 144 each, 8,784 in
+  all, equal to the energy fed to the unit, with the original curl's 144 left in the stores. The gate sets how long X
+  sits between re-forming and burping, not the rate: with no gate the slab exists for about a sweep each cycle (111 of
+  600 sweeps at width 4); with the gate at the slab's whole cost it sits for about a/r sweeps (463 of 600). (2) Per
+  point everything scales together, so with the same seed the daughters are born at the same sweeps at L = 6 and L = 8:
+  under the layer moves alone the timing is free of size, and T71's held-out size tests only that in arm B. (3) "Stable
+  for now" therefore still needs the gate: without it X is an instant between a fold and a burp. **Her gate choice is
+  still owed**; the candidate that matches her words ("a step when the stores first hold the whole cost") is g1.
+- **What it costs, said plainly (ours).** Her "you can't use up the fuel" (notebook, 18 October) is exact here and
+  means the opposite of a perpetual machine: the parent makes nothing, it passes the feed through, one lump at a time.
+  The oscillation of the addendum to Update 65 (the lump paying the fold back) becomes T71's reference arm, not the
+  model. And the sentence "nothing can go from open space to the slab" is put in by the rule, not derived.
+- **What runs.** T71 as redrafted this evening: release_to "daughter" in every model cell, the reference arm with the
+  release to the stores, her prediction and the gate's value owed before launch.

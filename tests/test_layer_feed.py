@@ -55,3 +55,24 @@ def test_the_feed_stops_at_the_first_split_and_the_gate_sets_its_time():
     # the release at the split is the slab's whole curling cost, credited to the stores
     row_t = next(r for r in rows if r[0] == t)
     assert row_t[4] == pytest.approx(row_t[5] - row_t[6] + a * st.n, abs=1e-9)
+
+
+def test_the_lump_leaves_one_way_into_a_daughter_and_the_slab_reforms():
+    """VISION Update 66: a release is never credited to the parent's stores; it is counted in a daughter ledger.
+    Conservation holds with the ledger included; the slab reforms from the stores and burps again; every daughter
+    carries exactly a N_slab."""
+    st = C.build((4, 6, 6))
+    lam = 1.25
+    a = 4.0 * (lam - 1.0)
+    rate = 1.0 / 16
+    final, rows, first = LF.run_layer_feed(st, lam, rate=rate, n_sweeps=240, seed=3, gate=a * st.n, leak=0.0,
+                                           move_set="layer", max_width=8, release_to="daughter")
+    for res, row in zip(LF.conservation_residuals(first["f0"], rows), rows):
+        assert abs(res) < 1e-9 * max(1.0, row[5])
+    last = rows[-1]
+    assert last[13] >= 2 and last[8] >= 1                      # two or more daughters, at least one refold between
+    assert last[14] == pytest.approx(last[13] * a * st.n)      # each daughter is exactly a N_slab
+    # the parent's books never receive a release: stores + F never exceed what was fed plus the slab's own curl
+    for row in rows:
+        assert row[3] + row[4] <= first["f0"] + row[5] + 1e-9
+    brute_ok(final)
