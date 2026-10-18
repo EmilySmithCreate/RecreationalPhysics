@@ -1135,4 +1135,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   nothing prefers one count to another at μ_N = 0; a measured μ_N is what would set the product's width, and the brief now
   says how it would be read (section 6, E5). Exact, run for this: the ladder 10 → 8 → 6 → 4 at L = 6 and 8 costs 0, 0,
   then 4(λ − 1) N exactly (LOG).
+- 2026-10-18, the owner: "What the toy can test under the layer form is the ledger, the timing against a feed (a step
+  when the stores first hold the whole cost), and what sets the width of the product. Proceed." / "under the layer form
+  the move set is the layer moves plus the clean two-switch move of this morning, with the single switch kept only as a
+  control. Confirmed." *Ours:* both recorded as decisions (VISION Update 65, addendum). "A step when the stores first
+  hold the whole cost" is the gate's natural value, the slab's whole curling cost 4(λ − 1) N_slab held in the pool of
+  the two layers beside the cut; it is one of the three candidates put to her in T71, not adopted for her.
 

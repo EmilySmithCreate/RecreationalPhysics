@@ -209,7 +209,7 @@ set holds no breaking move. The rest below stand as they were written, with the 
    shifted (spiral) layer contraction is flat and stores nothing (`sandbox/spiral_contraction.py`), so the toy's one
    continuous curl variable is the fraction of a layer compacted (section 2.5).
 
-## 6. Tests, in order (each exact one is cheap; nothing registered runs before her answers to 1 and 2)
+## 6. Tests, in order (questions 1 and 2 answered 18 October; the move set confirmed the same afternoon, VISION Update 65 addendum; nothing registered runs before her prediction and her gate decision, T71)
 
 **Exact, no run (sandbox, rule 16; this week):**
 
@@ -234,16 +234,28 @@ set holds no breaking move. The rest below stand as they were written, with the 
   moves together reach every valid graph of every count? (The counterpart of Q9.) Owed before any chain result is
   interpreted (rule 6).
 
-**Kernel (rule 6), after her answers to 1 and 2:** `src/graphity/contraction.py`: pair removal and insertion, layer
-contraction and splitting, the no-break check, pooled stores; tests: ΔH against the full Hamiltonian, the clean
-guarantee where claimed, conservation of H + stores − fed + leaked, same-seed reproducibility, networkx brute force on
-the splicings, detailed balance stated in the docstring.
+**Kernel (rule 6), built 18 October.** Two modules. `src/graphity/contraction.py`: layer contraction and splitting on
+canonical tori with coordinates kept per point (the moves check the lattice links they need and refuse otherwise), one
+store per point, pooled payment, a feed, a leak, a gate, μ_N, the driven protocol `run_feed` (no detailed balance
+claimed; the invariant H + μ_N N + stores − fed + leaked is checked to 1e-9) and a Metropolis chain over widths
+(`run_thermal_widths`, symmetric proposals on canonical states, checked against the exact Boltzmann sum). Pair removal
+one at a time is not in it: under the layer form it is not a move of the model (section 2.3 keeps its definition).
+`src/graphity/clean_move.py`: the clean two-switch move of Update 62, ported from `sandbox/clean_feed.py`; dH computed
+on the points within one step of each switch and checked exact against the full Hamiltonian for every accepted move;
+the clean guarantee; networkx brute force; conservation; same-seed; the control (`allow_break`) breaks. A second switch
+that exactly undoes the first is a null move and is refused (the sandbox counted it). The one runner that puts both kernels in one
+protocol (a sweep: feed, leak, N clean-switch attempts, then the layer proposals) is `src/graphity/layer_feed.py` with
+`scripts/run_layer_feed.py`, tested (conservation to 1e-9 under every move set). **E4 under the layer form:** the layer moves reach every width between 4 and the wall by
+construction; what the clean two-switch move reaches from the slab is listed by T69's search (the first clean state at
+saddle 64), and a full reach check with it is still owed before any chain result that depends on it is interpreted.
+**E5 under layer moves alone is exact:** the width's stationary distribution is Boltzmann in μ_N N (plus the slab's
+4(λ − 1) N at width 4), so at μ_N = 0 nothing sets the width but a wall; only the switch moves could change that.
 
 **Sandbox looks, after the kernel:**
 
 - **S1. The black hole run forward.** Flat 8 × L × L, stores fed curling energy at every point, compaction moves only:
-  does it compact 8 → 6 → 4, and does the energy stored at the end equal 4(λ − 1) N_slab? (Layer form: one move, trivially
-  yes; local form: does a seam ever close?)
+  does it compact 8 → 6 → 4, and does the energy stored at the end equal 4(λ − 1) N_slab? *Under the layer form this is
+  exact and in the tests: one move, and exactly 4(λ − 1) N_slab paid from the pool.*
 - **S2. The slab fed at every point under the local form.** Does a splitting front form and complete, and what does
   the ledger read at completion (paid, refunded, net)? Against the switch-path look of 18 October (`clean_feed.py`).
 - **S3. The leak.** S2 with a leak on every store: does the front still complete when the interior drains, and what
@@ -253,7 +265,8 @@ the splicings, detailed balance stated in the docstring.
 
 - **T70 as planned** stays the switch-path test under Update 62's knobs (the climb at L = 12, 16; completion and the
   release 4(λ − 1) per point). It tests the fixed-count form of her picture.
-- **T71 (to be written): the slab splits under the layer form.** The slab fed at every point, λ = 1.10, 1.25, 1.40,
+- **T71 (drafted 18 October as PREREGISTRATION T71; her prediction and her gate decision owed before launch): the slab
+  splits under the layer form.** The slab fed at every point, λ = 1.10, 1.25, 1.40,
   L = 8 and 12, L = 16 held out. Under the layer form the opening is one move, so the words per replica are about timing
   and the ledger, not a front: the sweep at which the stores first hold the whole cost, the sweep at which the split is
   made, the energy released at it against 4(λ − 1) N_slab, the count before and after, and the width the product then

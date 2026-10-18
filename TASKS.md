@@ -906,6 +906,16 @@ first; the daughter-universe interpretation after. In order, each registered bef
    leak; rule-6 tests; detailed balance or a declared driven protocol in the docstring); E4, reach by exhaustive listing
    at the smallest sizes; E5, μ_N read off the fluctuations of a free flat torus; then PREREGISTRATION **T71** with her
    prediction and L = 16 held out.*
+   *18 October, 14:50 UTC: her "Proceed" and "Confirmed" (VISION Update 65, addendum): the move set is the layer moves
+   plus the clean two-switch move, the single switch a control. **Both kernels built with rule-6 tests**
+   (`src/graphity/contraction.py`, `src/graphity/clean_move.py`). Exact on the way: the split is downhill, so X needs a
+   gate to be stable for now (a new knob, hers to decide); the lump in the stores pays the fold back unless it leaks;
+   with layer moves alone the width is Boltzmann in μ_N N; the first clean switch step out of the slab is T69's state at
+   64. **PREREGISTRATION T71 drafted** (the slab under the layer form: timing against the feed, the ledger, the fate of
+   the product), with the gate's three candidates and the leak's arithmetic laid out. **Owed by her before launch:** the
+   gate's value (S1), her prediction, and whether the feed stops at the burp. Done the same hour: the one runner that puts both kernels in one protocol
+   (`graphity.layer_feed`, `scripts/run_layer_feed.py`, with its tests; a smoke run in the scratchpad reproduced the
+   arithmetic: first split at the gate plus a two-sweep wait, then oscillation with no leak). The analyzer `scripts/analyse_t71.py` is written and tested too. Nothing is owed by us before launch. T70 (the fixed-count switch-path climb) stays planned and unwritten.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

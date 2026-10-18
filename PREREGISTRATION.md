@@ -6586,3 +6586,111 @@ steps can know how large the sheet is; only paths that wrap could differ, and at
 every word and number above holds at L = 12. **Launched 2026-10-17, 23:03 UTC by the clock**, on the laptop
 (`configs/t69_lowest_path_l12.json`). The owner's prediction for L = 12 is hers of stage 1 (PAYS) unless she replaces it
 before the cells are read.
+
+## T71. Does the owner's slab open under the layer form, when does it open against the feed, what does the ledger read, and what becomes of the product? (piece 5; the contraction model, layer form; VISION Updates 63 to 65 and the addendum of 18 October; the design brief `docs/design/contraction_model_brief.md`; ASSUMPTIONS O41, O118, O135; DRAFT written 2026-10-18, 14:50 UTC by the clock, before any registered run; NOT LAUNCHED: the owner's gate decision and her prediction are owed first)
+
+*T70 is reserved for the fixed-count switch-path test of Update 62 and is not written.*
+
+### Why
+
+The author's picture of 18 October: energy arrives at every point of the slab; the slab is X; when the stores first
+hold the whole curling cost there is a step, the burp, and the net left behind is the curl's energy. Under the layer
+form she chose (Update 65) the opening is one move, so there is no front to measure; what the toy can test, in her
+words, is "the ledger, the timing against a feed (a step when the stores first hold the whole cost), and what sets the
+width of the product." The move set is hers too: the layer moves plus the clean two-switch move, the single switch
+kept only as a control.
+
+### What is exact before any run (ours; the kernels' tests)
+
+Let a = 4(λ − 1), the curling cost per point; the slab 4 × L × L has N_slab = 4L² points and stores a N_slab.
+
+1. **The split is downhill.** Splitting the slab releases exactly a N_slab into the stores of the two layers beside
+   the cut. Nothing in the energy holds the slab shut; left to the layer moves alone with no gate it splits at the
+   first proposal, whatever the feed. So the layer form's X is not "stable for now" by itself. The one ingredient that
+   makes it so is a **gate**: a move that costs nothing fires only when its pool already holds at least a set energy,
+   which is not spent. The gate's value is a knob (S1) and is **the owner's to decide**; three candidates:
+   (g0) none; (g1) **the slab's whole curling cost, a N_slab**, her "when the stores first hold the whole cost"; (g2)
+   the first clean switch step, 64, the price T69 found for the first clean state (16 points open, two switches away),
+   the same at λ = 1.10 and 1.25 (the kernel reproduces it).
+2. **The lump pays the fold back.** After the split the stores hold the lump; the contraction back to the slab costs
+   exactly the lump, and its pool (the four layers it touches) holds it, so with no leak the product refolds at the next
+   proposal and the chain oscillates between widths 4 and 6 (the kernel's gate test shows one such cycle). Under a
+   uniform leak ℓ (a fraction of every store each sweep) with a feed r per point per sweep, the steady store per point
+   is about r/ℓ, so at steady state the fold back is affordable iff r/ℓ ≥ a, and the gate g1 is reachable iff
+   2L² r/ℓ ≥ a N_slab, that is r/ℓ ≥ 2a. **So under a uniform leak, any feed strong enough to pass gate g1 is strong
+   enough to pay the fold back: the product never stays open.** It stays open only if the feed changes after the
+   burp (it stops, or the lump leaves faster than the feed refills). This is the layer form's version of T9's "room",
+   and it is arithmetic, not a run.
+3. **With layer moves alone the width is Boltzmann in μ_N N** (plus a N at width 4). At μ_N = 0 nothing sets the
+   width of the product but a wall. Only the switch moves could change that, by rewiring the lattice links a layer
+   move needs (the move is then refused there).
+4. **The clean two-switch move's first step out of the slab costs 64 and opens 16 points** (T69's state), at λ = 1.10
+   and 1.25 alike; the first clean move was hit once in about 10⁵ attempts (one seed; a look). Its pool is the eight
+   ends of the two switches, so it needs 8 per point where gate g1 needs a N_slab / 2L² = 2a per pool point (2 at
+   λ = 1.25).
+
+### What would run (the design; every setting run is published, S1)
+
+| Choice | Value | Why |
+|---|---|---|
+| Start | the untied slab 4 × L × L, λ = 1.10, 1.25, 1.40 | X as decided (Update 60); the three curling costs of T68 and T69 |
+| Feed | r per point per sweep into every point's store ("all" place); r = 1/64 and 1/16 | her picture: energy arrives everywhere; two rates to see the timing scale as 1/r |
+| After the burp | **owner's choice:** (f1) the feed continues; (f2) the feed stops at the first split and a leak ℓ drains every store | item 2: under f1 the product refolds whatever the leak; f2 is the one reading in which it can stay open |
+| Leak | ℓ = 0, and under f2 ℓ such that the lump has fallen below a per pool point within 50 sweeps | fixed from item 2's arithmetic, not tuned |
+| Gate | **owner's choice** among g0, g1, g2 (item 1); the chosen value in every cell | S1: a new knob, decided before any run |
+| Move set | arm A: layer moves + the clean two-switch move (the model); arm B: layer moves alone (the reference, nearly exact); arm C: the single switch (the control; T68's protocol) | hers: "with the single switch kept only as a control" |
+| μ_N | 0 | pending her word (the brief, 2.2) |
+| Width wall | 8 along axis 0 (the slab may split twice) | widths above six are all free; the wall is a convenience, declared |
+| Sizes | L = 8 and 12; **held out L = 16** (rule 14) | |
+| Replicas | 16 per cell | |
+| Length | 20 × the sweep at which gate g1 would be reached under arm B (= 20 × a N_slab / (2L² r) = 40 a / r sweeps), at least 2,000 | so the timing is read with room |
+| Runner | `scripts/run_layer_feed.py` over `graphity.layer_feed.run_layer_feed` (both kernels in one protocol; a sweep is the feed, the leak, N clean-switch attempts, then one layer proposal), written and tested 18 October (`tests/test_layer_feed.py`: conservation to 1e-9 under every move set, the clean guarantee, same-seed, the feed stopping at the split, the gate's timing), rows logged every sweep so the release at the split is read exactly; `scripts/analyse_t71.py`, written and tested the same hour (`tests/test_analyse_t71.py`) | both written before launch |
+
+### Definitions, fixed now
+
+Per replica: **t_gate**, the first sweep at which the pool of any possible split holds the gate; **t_split**, the sweep
+of the first split; **the release**, the energy credited to the stores at the first split, against a N_slab; **t_spent**,
+the first sweep at which a clean switch move is paid for (arm A); **refolds**, the number of contractions after the
+first split; **open share**, the fraction of the sweeps after the first split spent at width ≥ 6; the final width, the
+final energy above flat, the count of open and curled points at the end, and (arm C) the broken points.
+Words per replica: **OPENS AND STAYS** (a split is made and the open share is at least 0.9); **OSCILLATES** (a split
+is made, at least one refold, open share below 0.9); **NEVER SPLITS** (no split in the run); **SPENT FIRST** (arm A:
+a clean switch move is paid before any split; reported beside the word above). Per cell: the majority word, the
+median t_split with its range, the release against a N_slab (exact unless a switch move came first), and the median
+energy above flat at the end.
+
+**Ledger.** The energy fed, the energy in the stores, the energy in the wiring above flat, and the energy leaked, at
+the first split and at the end; the first split's release must equal a N_slab to 1e-9 in arm B, and in arm A unless a
+clean switch move came first (then the difference is reported).
+
+**The size claim (rule 14):** every per-cell word and median at L = 16 are written from L = 8 and 12 as a dated
+amendment before L = 16 runs; AS PREDICTED if they hold.
+
+### Predictions
+
+**The owner's: OWED before launch**, together with her choice of gate (g0, g1, g2) and of what happens to the feed
+after the burp (f1, f2). Her words so far, recorded as her claim and not yet as a prediction for these cells: a step
+when the stores first hold the whole cost (g1's reading).
+
+**Ours, unverified, written before any run, per setting.** Arm B is arithmetic plus the proposal's wait: under g1
+t_gate = a N_slab / (2L² r) = 2a / r sweeps exactly (128 at λ = 1.25, r = 1/64), the same at every size; t_split is the
+first proposal after it (one layer proposal a sweep, half of them splits, every position equivalent on a canonical state: a wait of about two sweeps);
+the release is a N_slab exactly; under f1 OSCILLATES in every cell, refolding at nearly every proposal; under f2
+OPENS AND STAYS in every cell once the lump has leaked below a per pool point. Under g0 the split is at sweep 1. Under
+g2 the pool holds 64 at sweep 32/(L² r), earlier than g1 at L = 8 and later at L = 12 and 16 for a = 1.
+Arm A: **the layer split comes first in every cell** (never SPENT FIRST), because the gate's threshold per pool point
+(2a ≤ 3.2) is below the 8 per point the first clean switch step needs, and the clean move is rare besides; after the
+burp, with the lump sitting at about 2a per point on two layers and the feed continuing (f1), clean switch moves become
+affordable once a pool of eight ends holds 64, and we expect a few of them at the largest λ and the faster feed, each
+raising the energy above flat, so the end state in those cells is a flat torus with rewired patches and the refolds
+fewer than in arm B where a switch has moved a link the fold needs. Arm C: BREAKS as in T68 (the stores pay single
+switches that break points before any layer move; the layer move is refused where the lattice links are gone), at
+every λ and size.
+What would count against the model as she states it: a release other than a N_slab at a split that nothing preceded;
+or arm A never splitting at a gate the stores do reach.
+
+### What this cannot show
+
+A front, a seam or a payment that cancels: the layer form has none of them (Update 65). Anything about the real
+universe (VISION, "What no outcome can show").
+

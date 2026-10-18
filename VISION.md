@@ -1875,3 +1875,21 @@ else like sweeps or spirals."
   prediction and a held-out size: the slab fed at every point under the layer form, the time to open against the feed,
   the ledger at completion, and the width the product settles at under μ_N read off the fluctuations.
 
+- **Addendum, 2026-10-18, 14:50 UTC by the clock: the move set confirmed; the gate is a knob awaiting her decision.**
+  Her words of the same afternoon: "What the toy can test under the layer form is the ledger, the timing against a feed
+  (a step when the stores first hold the whole cost), and what sets the width of the product. Proceed." and "under the
+  layer form the move set is the layer moves plus the clean two-switch move of this morning, with the single switch kept
+  only as a control. Confirmed." So the move set of the layer form is decided: layer contraction and splitting
+  (`src/graphity/contraction.py`), the clean two-switch move of Update 62 (`src/graphity/clean_move.py`), and the
+  single switch as the control only. Both kernels carry rule-6 tests. *Ours, exact, from the kernel:* (1) the split of
+  the slab is downhill, so with nothing to hold it the slab splits at the first proposal, and after it the lump sitting
+  in the stores can pay the contraction back at the next proposal; nothing in the protocol holds the product open unless
+  the lump leaves (a leak). The one ingredient the layer form needs to make X "stable for now" is therefore a **gate**:
+  a move that costs nothing fires only when its pool already holds a set energy, which is not spent (a hill, not a toll).
+  Its value is a new knob under S1 and is **hers to decide before T71 launches**; the candidates are written in
+  PREREGISTRATION T71 (none; the slab's whole curling cost, her "when the stores first hold the whole cost"; the first
+  clean switch step, 64). (2) With layer moves alone the stationary distribution over widths is exactly Boltzmann in
+  μ_N N, so at μ_N = 0 nothing sets the width of the product but a wall; "what sets the width" has an exact answer under
+  this form, and only the switch moves could change it. (3) The first clean two-switch step out of the slab costs
+  exactly 64 and opens 16 points, T69's first clean state, at λ = 1.25 as at 1.10.
+

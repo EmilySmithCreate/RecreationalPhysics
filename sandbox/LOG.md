@@ -366,4 +366,15 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   `sandbox/pair_moves.layer_contraction`): flat 10 × L × L → 8 → 6 → 4 at L = 6 and 8, λ = 1.25. Every step above six
   leaves H = 0, X = 0, every point open and the graph valid; the step 6 → 4 gives X = N, H = 4(λ − 1) N exactly (144 at
   L = 6, 256 at L = 8), every point closed. Exact; the brief's test E2 for the layer form. A look.
+- 2026-10-18. Two kernels built with rule-6 tests (`src/graphity/contraction.py`, `src/graphity/clean_move.py`; tests
+  `tests/test_contraction.py`, `tests/test_clean_move.py`). Exact facts met on the way, none a result: (a) under the
+  layer form the split of the slab is downhill, so with no gate it fires at the first proposal, and the lump then
+  sitting in the stores pays the contraction back at the next; a uniform leak holds the product open only once the
+  steady store per point, about r/ℓ, falls below the curling cost 4(λ − 1) (arithmetic in T71). (b) With layer moves
+  alone the width's stationary distribution is exactly Boltzmann in μ_N N (a test checks the chain against the sum). (c)
+  The first clean two-switch move out of the slab costs exactly 64 and opens 16 points, T69's first clean state, at
+  λ = 1.25 as at 1.10; one seed hit it after 1.2 × 10⁵ attempts at L = 6 and 2.2 × 10⁵ at L = 8
+  (`scratchpad/clean_rate.py`, not kept). (d) The sandbox script `clean_feed.py` counted a second switch that exactly
+  undid the first as an accepted move; the kernel refuses that null move. Its census numbers (open points, regions)
+  were read from the wiring and are unaffected; its `acc` column was inflated.
 
