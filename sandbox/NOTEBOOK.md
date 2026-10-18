@@ -1328,3 +1328,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   (across the tree, trillions of daughters, the converter) do not fit our age under the published infall history; the
   per-universe reading, her instinct, needs none of this. The timescales above are a reading task before they are cited
   (`docs/reading/notes/2026-10-18_far_future_and_observation_window.md`).
+- 2026-10-18, the owner, settling the reading of rule (ii): "daughter's clock is not her parent's - it's an exact copy
+  though, starts at big bang runs though heat death, every time so yes The across-the-tree count needs a common clock
+  running across universes, we don't have one clocks are only within a universe." *Ours:* a decision (VISION Update 68):
+  rule (ii) is read per universe by each universe's own age, and the youngness weight has no common time to live in. What
+  the function then predicts, and where it can fail, is in the brief's section 4 and Update 68: the observation window W(t)
+  carries the weight against the red-dwarf era ([LBS16]).

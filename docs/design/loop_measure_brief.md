@@ -59,7 +59,7 @@ generations the tree holds B^k universes and, with every term equal across a set
 sooner shortens the cold time, so N_BH(s) and O(s) pull against each other. Written as a dependence, O(s) falls as the
 black-hole formation rate rises; the shape of that fall is the unknown function of section 2's last row.
 
-## 4. How the generations are combined: decided by the owner, 18 October (VISION Update 67)
+## 4. How the generations are combined: decided by the owner, 18 October (VISION Updates 67 and 68)
 
 Y_k grows without bound in k for any setting with B > 1, so settings cannot be compared by their total yield (O101: a
 turn's count has to be finite, and a branching process is dominated by its rate of multiplying). Three rules were put to
@@ -104,9 +104,12 @@ of life supporting stars."
     trillions (γ × 10^10 years of order one needs b N_BH of order e, that is a few daughters per universe, not 10^12) or
     the daughters are born late in the parent's life (β concentrated at ages past ours, which the black hole era allows:
     the mass that falls in over 10^100 years, not the formation of the holes, would set the births). Under the per-universe
-    reading nothing fails. Which reading her rule (ii) means is the one question this decision leaves, and it decides
-    whether the measure already contradicts our age. Rule 13 applies: the published form of this argument was made for
-    eternal inflation and is carried here as a target, not as a result.
+    reading nothing fails. Which reading her rule (ii) means was the one question this decision left; **she settled it
+    the same evening (VISION Update 68): per universe, by each universe's own age.** Her words: "daughter's clock is not
+    her parent's - it's an exact copy though, starts at big bang runs though heat death, every time so yes The
+    across-the-tree count needs a common clock running across universes, we don't have one clocks are only within a
+    universe." So the across-the-tree reading below is not her rule; it is kept as the record of why it was asked. Rule 13
+    applies to the youngness argument either way: it was made for eternal inflation and is carried here as a target.
   - **Her question, the same evening: can the forward weight be balanced by late observers (the last at 10^100 years;
     red dwarfs stable far longer than stars like ours)?** Her first instinct: do not count across the tree, line every
     universe up at its own birth and look from outside time. *Ours, arithmetic.* **Late observers cannot balance the
@@ -171,7 +174,8 @@ known.
 A setting with observers and a larger B than ours, found among the neighbours of our constants, would falsify her
 rule (ii) as a selection principle; and under its across-the-tree reading our own age already does (section 4). No model here can score a neighbouring setting, so the function stands as a
 specification until one can; what it fixes now is the list of terms a model would have to produce, and the one
-question section 4 leaves her: which reading of "at one moment" her rule (ii) means. Her first instinct of the same evening
-(per universe, lined up at birth) is recorded there with the arithmetic that supports it; her word that it is the decision is
-not yet given. Under that reading the observation window W(t) is what keeps the per-universe count from predicting the
-red-dwarf era ([LBS16]), so W(t) is the term a critic would attack first.
+reading of rule (ii), decided the same evening (Update 68): per universe, by each universe's own age, since clocks exist
+only inside a universe. Under that reading the observation window W(t) is what keeps the per-universe count from predicting
+the red-dwarf era ([LBS16]), so W(t) is the term a critic would attack first: what it must mean (an observer who can learn
+its universe's history), and whether planets round the smallest stars host observers at all. The function was not scored on
+our age, which was known when W(t) was chosen (rule 13).

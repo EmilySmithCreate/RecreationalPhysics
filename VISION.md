@@ -1945,3 +1945,27 @@ combination rule was chosen, and it had to be hers (O101).
   strong, and we are at 1.4 × 10^10 years, near the peak of star and planet formation rather than at its start. So her
   rule (ii) makes a prediction that can fail, which is what the measure needed; the brief sets out the two readings of
   "at one moment" under which it does and does not. Nothing here is a knob of the toy or a run.
+
+Update 68 (2026-10-18, 21:55 UTC by the clock): **DECISION (the author's): piece 12's rule (ii) is read per universe, by each
+universe's own age; there is no clock across universes.** Her words: "daughter's clock is not her parent's - it's an exact
+copy though, starts at big bang runs though heat death, every time so yes The across-the-tree count needs a common clock
+running across universes, we don't have one clocks are only within a universe." Why this page changes: Update 67 left one
+question open, which reading of "at one moment" her rule (ii) means, and the brief (`docs/design/loop_measure_brief.md`,
+section 4) showed that the two readings disagree about our own age. This closes it.
+
+- **What is decided (hers).** Every universe of a setting carries the same clock, a copy that starts at its birth and runs
+  to its heat death; clocks exist only inside a universe. So the question "when is an observer most likely" is asked of a
+  universe's own age, and every universe of the setting is counted whole and lined up at its birth. A count of the tree
+  "at one moment" has no meaning in the hypothesis, because the moment does not exist across universes.
+- *Ours.* (1) This removes the youngness pressure (Update 67; [Freivogel11]) from her measure by the hypothesis's own
+  structure, not by a choice of regulator: the exponential weight e^(−γτ) needs a common time, and there is none. Our age
+  is then unremarkable under her function, and when daughters are born in a parent's life no longer bears on it (so her
+  lean of the same evening toward late births, and the published infall history set against it in the notebook, decide
+  nothing about our age). (2) What the function now predicts, so that it can fail: an observer finds itself at the age its
+  universe forms habitable planets that have had time to evolve one, inside the observation window. Without the window
+  term W(t) the published count puts that at about 10^13 years round the smallest stars, with at most about 0.1 % of the
+  chance before now ([LBS16], read in full); with it the peak lies inside about 10^11 years. The window is therefore
+  load-bearing: it was her term before this question arose (18 October, afternoon), but it was chosen with our age known,
+  so the function is not scored on our age (rule 13). It is scored on what W(t) must mean (an observer who can learn its
+  universe's history) and on whether planets round the smallest stars host observers at all, which is a question
+  astronomy can answer. (3) Nothing here is a knob of the toy or a run; the toy supplies one term of the function, b.
