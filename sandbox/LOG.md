@@ -393,3 +393,13 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   while the sky's seeds are nearly scale-invariant (n_s ≈ 0.965; Planck 2018, general knowledge, to verify); so the scraps'
   own layout cannot be the seed spectrum in this toy. Untouched: scraps as dark matter falling into seeds laid by something
   else.
+- 2026-10-18, evening. Under the per-universe reading (Update 68), what brings "when we are" forward from [LBS16]'s
+  trillions of years? `sandbox/when_we_are_shorteners.py` on the Stage E population model
+  (`sandbox/out/when_we_are_shorteners_2026-10-18.txt`). Seen: with every inhabited planet weighted by how long its
+  observers last and all stars counted, the share before today is 0.002 (Loeb et al.'s thousandth); her window as a hard cut
+  at 100 Gyr gives 0.083; a rip at 30 or 50 Gyr 0.33 or 0.18 (the same arithmetic as a window at that time); excluding
+  red dwarfs 0.16, Sun-like only 0.77; a factor multiplying every time alike (an interaction term, company helps or hurts)
+  moves nothing (0.002, 0.001); counting each inhabited planet once at its origin, or observers lasting 1 Gyr per planet,
+  0.92 with the peak near 5 Gyr. A look; it supports nothing. What it kills: "no interaction between planets" as a
+  shortening of the habitable era (a uniform factor); it survives only as a rule for who counts (each civilization once),
+  piece 14's lever, which then makes us late rather than early.

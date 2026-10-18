@@ -178,4 +178,9 @@ reading of rule (ii), decided the same evening (Update 68): per universe, by eac
 only inside a universe. Under that reading the observation window W(t) is what keeps the per-universe count from predicting
 the red-dwarf era ([LBS16]), so W(t) is the term a critic would attack first: what it must mean (an observer who can learn
 its universe's history), and whether planets round the smallest stars host observers at all. The function was not scored on
-our age, which was known when W(t) was chosen (rule 13).
+our age, which was known when W(t) was chosen (rule 13). Other shorteners the owner named the same evening (a rip; dark
+energy pulling galaxies apart; no interaction between planets) are in the notebook with what each does: a rip would bring
+the peak forward but the data lean away from one and it cuts against her heat-death argument for many daughters; a
+constant dark energy leaves bound structures bound and shortens only the window, which is W(t); and "no interaction"
+moves nothing as a factor and a great deal as a rule for who counts (each civilization once), which is piece 14's
+reference-class choice and is hers to make on its own grounds (sandbox look, LOG 18 October; a look, not evidence).

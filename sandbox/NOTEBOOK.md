@@ -1334,3 +1334,25 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   rule (ii) is read per universe by each universe's own age, and the youngness weight has no common time to live in. What
   the function then predicts, and where it can fail, is in the brief's section 4 and Update 68: the observation window W(t)
   carries the weight against the red-dwarf era ([LBS16]).
+- 2026-10-18, the owner, on what is left under the per-universe reading: "so the only issue is that we are at 13.8 b years
+  rather than 10^13. But we know more about ourselves: a no cross planet interaction universe, no space wars, possibly a
+  rift or the rate of the increasing universe size pulling apart galaxies as the vacuum, the repulsion force, exceeds
+  gravity: something reduces the length of time bringing forward the prediction." *Ours:* yes, that is the one issue left,
+  and it is [LBS16]'s own puzzle (their two readings: we are early, or the smallest stars are poor hosts). Her candidates,
+  put through the Stage E population model as a sandbox look (LOG, 18 October; a look, not evidence): (1) The rip brings
+  the prediction forward (a rip at 30 Gyr puts a third of the count before today) but the data lean weakly the other way
+  (DESI DR2: a weakening dark energy, w0 > −1, wa < 0; `docs/reading/notes/2026-10-18_far_future_and_observation_window.md`),
+  and it cuts against her own argument of this afternoon that the heat death is the branch with trillions of daughters;
+  she cannot have both without a number. (2) Under a constant dark energy the vacuum does not pull galaxies apart: bound
+  things (galaxies, the Local Group, solar systems) stay bound; what it does is carry everything else beyond the horizon,
+  which shortens the window in which an observer can learn its universe's history. That is her W(t), already in the
+  function: with a hard cut at 100 Gyr, 8 % of the count falls before today, unremarkable. So dark energy's measured effect
+  is the shortener she already has, not a new one. (3) "No interaction between planets, no space wars" does nothing as a
+  multiplier (a factor that acts on every time alike leaves the peak where it was), and does a great deal as a rule for who
+  counts: count each civilization once at its origin, or give observers a short life per planet, and the count follows the
+  planet-formation rate, peaks near 5 Gyr and puts over nine tenths before today. That is piece 14's known lever (the
+  reference class; Hartle and Srednicki), and it overshoots: it makes us late rather than early. (4) Rule 13 applies to all
+  of them: a term added because it lands on our age is a fit. The two that stand on their own grounds are her window (an
+  observer who can learn its universe's history, chosen before this question arose) and the smallest stars' habitability,
+  which astronomy can measure; the reference class is hers to choose on its own grounds, and whichever she chooses, the
+  function is not scored on our age.
