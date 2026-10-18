@@ -909,3 +909,27 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   seam stops growing with the region at larger sizes (area against volume) is the size question T70 asks. Neither
   version lands anywhere near six parts in ten billion; and if some λ or N were found at which it did, that would be a
   fit of one number to one number, which is what rule 13 forbids calling a result.
+- 2026-10-18, the owner: "What if only a patch converted, so all the unused curl still canceled out without creating
+  space? What if there are layers of points (the 6 space still within the black holes horizon but not right at the
+  front), accepting curl energy but not actually snapping?" *Ours:* (1) The second half is what the look of this night
+  did, read from the other side: fed at every point, the slab's interior accepted energy and did not snap, because under
+  the no-break rule a point far from any open region has no clean single move at all, and a fresh nucleus costs 64 for
+  16 points wherever it starts; the stores banked hundreds of thousands of units unspent while one region grew from
+  its seam. So "layers accepting energy but not snapping" is the toy's interior under her rule, and it gives the front
+  something real: the stores ahead of it are already charged, so the seam is paid as the front arrives and the front
+  need not wait for the feed. In the look the pace was set by how rarely a clean move was proposed, not by energy, so
+  this has not been tested as a mechanism. A feed that falls off with distance from the front (layers) is a new place
+  for the feed, cheap to add to `sandbox/clean_feed.py`. (2) "Unused curl cancels out without creating space": in the
+  toy nothing cancels. Energy in a store stays until a move spends it; the toy conserves it to the unit (every look
+  this night closed its books to 0.000000). The one knob the toy already has for energy that leaves without making
+  space is the leak (Update 9: the semi-permeable wall, a declared leak rate per protocol), which is her "what remains
+  is returned to the black hole" (Update 30). Under a leak, points that never snap give their energy back, and only
+  the patch that converted keeps anything, which is her sentence as a protocol: the patch is the excess, the leaked
+  rest the cancelled pairs. (3) What it would and would not give. The share that ends as space, (energy spent opening)
+  over (energy fed), is then set by how long the feed runs, how far it reaches and the leak rate, which are protocol
+  settings, not the toy's own numbers; so the ratio could be made anything, and a match to six in ten billion would be
+  a setting, not a prediction (rule 13), unless the toy fixes the patch's size at completion by itself (the area-against-
+  volume question T70 asks). (4) Two cheap looks, neither run: the clean feed with a leak on every store (does the
+  front still complete when the interior drains?); the clean feed with a layered place (most at a seed, falling off
+  with distance). Both are sandbox looks under the knobs of Update 62; a leak rate is a protocol setting already in the
+  record, not a new knob. Idea, not a decision.
