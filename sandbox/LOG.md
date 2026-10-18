@@ -334,3 +334,12 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   torus has 256 points, so the clean end state there, if any, is not a torus). (4) The control with breaking allowed,
   same moves and stores: every point broken by sweep 2,000 at every rate (the random phase), as T68. Two seeds, one
   λ, L = 8 and 12; the move set and the pooled payment are choices made for the look. Not promoted.
+- 2026-10-18. The owner: "A no-break store could, if the reshaping seams leave no point broken, which nobody has
+  checked. Check this?" `sandbox/clean_moves_census.py`: every pair of switches (the first through one point, the second
+  within two steps of its ends) from flat 6 × 6 × 6 and 6 × 6 × 8 and from the slab 4 × 6 × 6, kept if no point is left
+  at d > 3 (`sandbox/out/clean_moves_census_2026-10-18.txt`). Flat space: 563,670 and 607,384 pairs tried, and the only
+  clean ones are the 102 in which the second switch undoes the first (dS 0, dX 0, nothing changed). The slab: 303,580
+  pairs, 80 undo pairs, and 24 real clean moves, all the known first opening (dS −4, dX 0, 64 units, 16 points to d = 3).
+  So within two switches flat six-link space has no clean move at all: it cannot curl, narrow or reshape without a
+  point passing through broken, and the reshaping of a flat torus toward the slab cannot even start under the no-break
+  rule at this move size. Three or more switches at once not checked. Exact within its reach; a look. Not promoted.

@@ -998,3 +998,25 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   ingredient; if it means the thing that cancelled against matter at the start, the toy has nothing that comes in two
   kinds, as recorded this night. (4) Nothing to run; the growing count is the "other model" of Update 28 and claim 3's
   parked decision, hers to reopen. Idea, not a decision.
+- 2026-10-18, the owner: "Check this? Points don't break, they compact, kind of like 2 come together, of the 2 did
+  types of points that can connect with the relationship, the length of the links in flat space decreases to 0 then
+  those points collapse and the front link is between the points that connected to the now compacted into themselves
+  now connect to each other". *Ours:* (1) Checked (LOG, 18 October): within two switches, flat six-link space has no
+  clean move of any kind; the only pairs that leave every point at d ≤ 3 are the ones that undo themselves. The slab has
+  exactly one kind, the 64-unit first opening. So under the no-break rule with the toy's switches flat space is frozen
+  outright: it cannot be curled, narrowed or reshaped, and the question "do the reshaping seams leave a point broken"
+  has the answer that there is no clean reshaping step to take. (2) What she describes is a different move. Two points
+  whose link shrinks to nothing merge into one, and the links that met them now meet each other: that is contracting a
+  link (in graph terms an edge contraction), which lowers the count of points by one and is the inverse of splitting a
+  point in two. Done to a whole layer at once it takes a direction from six around to four with no seam and no broken
+  point: 6 × 6 × 8 (288 points) contracts to the slab 4 × 6 × 8 (192), and the slab splits back to the flat torus. It is
+  her growing count run backwards: the black hole compacts layers, storing 4(λ − 1) per surviving point, and the burp
+  splits them again, with the count rising by half. (3) The toy does not have this move: every move is a switch of two
+  links among a fixed set of points with six links each, and a merged point would carry ten links. Contraction and
+  splitting are a varying count, which is claim 3's parked decision and the "other model" of Update 28; under the energy
+  as it stands the arithmetic already works in her direction (contraction into a curled layer costs the curling cost,
+  splitting it releases it, and flat space of any count sits at zero), so the model would need only the move pair and a
+  rule for which pairs of points may merge ("the two types of points that can connect": the two sides of the bipartite
+  graph, which is what the switch already respects). (4) This is the first mechanism offered that avoids the broken
+  state by construction rather than by forbidding it, and it is the one the toy cannot run without a new move set and a
+  varying count. Whether to open claim 3's parked decision for it is hers (S1). Nothing built.
