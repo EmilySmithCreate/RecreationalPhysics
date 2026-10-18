@@ -762,3 +762,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   curl-only store: the strict rule of Update 60 is written on the toy's moves, where opening always lowers the count. If
   the count may grow, "pays only moves that do not lower the square count" would let a store pay for an opening that
   adds points, and the rule would need rewriting for a growing toy before it meant anything there.
+- 2026-10-18, the owner, on the toy conserving points and links: "but maybe we should be pricing cubes not squares".
+  *Ours:* looked at the same hour (`sandbox/LOG.md`, 18 October; exact counts, one size each). Cubes per point run
+  1.0, 1.5, 2.0, 2.5 up the ladder (flat, slab, rod, 6-cube), so curling adds cubes as it adds squares and opening loses
+  them: a curled direction four around holds more small closed loops of every kind, and whatever small closed thing is
+  priced, opening it loses some. On the single moves a cube count runs the wrong way for her sentence: the slab's opening
+  move destroys 14 to 16 cubes, a breaking move 6 to 8. What a cube price would change is elsewhere: the energy would no
+  longer be a sum over edges (a cube has twelve), so defects would stop being exactly additive (O22) and a growing patch's
+  energy could take a different shape from T54's quadratic; that is untested and is not the single-move question. In two
+  directions the published energy already prices the top cell (the square); in three it still prices squares because that
+  is what the Ollivier curvature counts, so a cube price is a new knob with no published source (S1) and would be our
+  family, never the published model. Idea, not a decision; nothing registered.

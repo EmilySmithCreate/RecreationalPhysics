@@ -307,3 +307,12 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   broken. At 1024: 4 to 7 open, 56 to 58 broken, the random phase. So more energy never helps a knot open: past about
   one direction's worth it breaks instead, as flat space does (T57) and the slab does under a feed (T67). One lambda, one
   size, four replicas, named points; a look. Not promoted.
+- 2026-10-18. The owner: "maybe we should be pricing cubes not squares." `sandbox/cube_price.py` counts 3-cubes (eight
+  points wired as Q3) on the built six-link ladder and for every valid single switch from the slab 4×6×6 and from flat
+  6×6×6 (`sandbox/out/cube_price_2026-10-18.txt`). Ladder, cubes per point: flat 1.0, slab 1.5, rod 2.0, 6-cube 2.5, so a
+  curled direction adds half a cube a point as it adds a quarter square and one surplus square: the same ladder, and
+  opening a direction loses N/2 cubes as it loses N/4 squares. Single switches: the opening move of the slab (36 units,
+  dS −6, dX −12) destroys 14 or 16 cubes; the pure breaking move (64 units, dS −4, dX 0) destroys 8 cubes in the slab and 6
+  in flat space. So under a cube count the opening move is about twice as destructive as a break, not less: a price on
+  cubes does not make opening cheap and breaking dear, and it does not remove the loss of small loops that opening is.
+  One size each, exact, a look. Not promoted.
