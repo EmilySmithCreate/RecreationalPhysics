@@ -933,3 +933,26 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   front still complete when the interior drains?); the clean feed with a layered place (most at a seed, falling off
   with distance). Both are sandbox looks under the knobs of Update 62; a leak rate is a protocol setting already in the
   record, not a new knob. Idea, not a decision.
+- 2026-10-18, the owner: "where the slab is no longer stuck - does the slab need to be stuck inside the black hole if
+  energy is being constantly fed into it? If space cannot break just curl?" *Ours, with one exact check made for it
+  (`sandbox/clean_feed.py` chains at L = 8, λ = 1.25 and 1.40, unlimited stores, squares and surplus read as the clean
+  region grew):* (1) "Stuck" in the record means a dip against single switches: for 1 < λ < 2 every single switch out
+  of the slab costs (96 − 48λ at least), and at λ ≥ 2 a breaking switch is downhill (O41, O49). (2) Under her rule it
+  does not need that window. Every clean move seen, in T69's listing (the first clean state costs 64 at λ = 1.10 and
+  1.25 alike) and in tonight's chains, loses squares and sheds NO surplus square: at both λ the growing region lost
+  exactly a quarter square per point opened and dX stayed 0, so the climb is 16 × ¼ = 4 per point whatever λ. With
+  breaking forbidden the slab is therefore stuck at every λ, held by the move set and not by the curling cost, and it
+  opens only while energy is fed. (3) The curling cost's release, 4(λ − 1) per point, is not paid out along the way at
+  all: the open points still sit on edges carrying their surplus square, and the surplus goes only when the direction's
+  last wrap is undone (at L = 12 the look's 3.94 per point near 55 % open is the first sliver of it). So the lump is
+  back-loaded to completion, and the larger λ the larger the lump, at no cost in stability under her rule. The toy's
+  recorded trade-off, a bigger λ buys a bigger burp but a less stable X (T18, Update 23), belongs to the breaking toy.
+  **Correction of two sentences of ours this night:** "the seam payment ran 4 per point against a release of 4(λ − 1),
+  equal only at λ = 2" compared the climb with a release that never arrives during the climb; there is no λ at which
+  the clean front pays for itself as it goes. (4) "Space cannot break, just curl" has a sharp consequence the toy can
+  check: a clean move run backwards releases its 4 per point, so an unfinished clean patch with no energy coming in
+  should re-curl by itself, downhill, back to the slab. The look never stopped the feed, so this is untested; one
+  sandbox look (feed to half open, then stop) decides it. (5) What this does to her picture: X inside the horizon
+  need not be stable on its own; under her rule it is held shut by the move set, opens only while fed, refolds if the
+  feed stops before completion, and releases the whole curling cost at once when the last seam closes. Idea and exact
+  check, not a decision; T70's registration should name the back-loaded release and the λ-independence of the climb.
