@@ -6910,7 +6910,7 @@ the control).
 
 ### Predictions
 
-- **The owner's:** owed before any number is computed; recorded here as a dated amendment in her words.
+- **The owner's (2026-10-19, before any number was computed): "agree"**, given on reading our four predictions below. So her predictions are ours in every class: A TYPICAL; B TYPICAL with a later peak than A; C EARLY as published; D TYPICAL with a later peak than A and nearly unchanged by the cap. Disclosed: she agreed to predictions we had written first, so T72 tests a shared expectation; what it can still decide is the comparison across classes (whether the sun-like restriction or the window shape does the work, and whether the hard-steps shape moves the peak).
 - **Ours (unverified; from the published expectations):** A TYPICAL with F_A between 0.3 and 0.7; B TYPICAL but with a
   peak later than A's, F_B between 0.1 and 0.4; C EARLY, F_C about 0.001, reproducing the 2016 paper; D TYPICAL with its
   peak later than A's (the hard-steps shape pushes observers toward each planet's end) and F_D between 0.2 and 0.6 with
