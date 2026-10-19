@@ -51,6 +51,24 @@ number is about ten times earlier than theirs.
   past and weakening now (a "phantom crossing" near redshift 0.4 to 0.5); several papers warn it rests on particular
   tracers and on extrapolating a two-parameter form; DESI DR3 is expected in 2027. A weakening dark energy avoids a rip.
 
+## Is the expansion still speeding up? The supernova age-bias debate [search summaries, 19 October 2026; nothing read]
+
+- **Son, Lee et al. (Yonsei), MNRAS, November 2025** ("Strong progenitor age bias in supernova cosmology II"): a 5.5σ
+  correlation between the standardised brightness of type Ia supernovae and the age of their progenitors; corrected, the
+  supernova data align with DESI's evolving dark energy and the authors say the universe has already entered a decelerating
+  phase. Covered by Smithsonian (the owner's link, 19 October) and a Royal Astronomical Society release; both refused by the
+  proxy.
+- **Wiseman, Riess, Schmidt et al., "Still accelerating", arXiv:2601.13785, MNRAS 2026**: the standard host-mass correction
+  captures the environmental dependence, and with it no age dependence remains; a progenitor is far younger than its host
+  galaxy (the delay-time distribution). Secondary coverage speaks of two errors; only the omitted correction is confirmed
+  from the abstract.
+- **Yonsei group, "Still non-accelerating", arXiv:2605.21586, May 2026**: defends the bias (5.5σ in one sample, 4.8σ in
+  another by a remeasurement) and its robustness to the host-progenitor age mapping.
+- *Ours:* unresolved; the mainstream reading is still acceleration. If the fading holds, the observation window above
+  (Krauss and Scherrer) no longer closes at about 10^11 years, since it relies on a constant dark energy carrying galaxies
+  beyond the horizon; that window is the load-bearing term of piece 12's function (VISION Update 68). Both arXiv papers
+  are to be read before any of this is cited.
+
 ## What this note is for
 
 Piece 12's function (VISION Updates 43 and 59) needs terms: the length of the era of starlight, the number of black holes a

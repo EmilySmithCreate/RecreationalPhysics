@@ -1372,3 +1372,22 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   and 8: "L = 6 and 8 oh I didn't look at the kernel, I agree with u here given initial results." *Ours:* recorded as
   PREREGISTRATION T71, Amendment 3, after launch and before any result was fetched; her original words stay on the record.
   Both of us now predict CYCLES in every cell of both layer arms.
+- 2026-10-19, the owner, sharing a Smithsonian article: "new research says space growth possibly slowing?" *Ours (search
+  summaries only; the proxy refused the article, the RAS release and arXiv; `docs/reading/notes/2026-10-18_far_future_and_observation_window.md`):*
+  the article (November 2025) reports Son, Lee and colleagues (Yonsei), MNRAS 2025: the standardised brightness of type Ia
+  supernovae correlates with the age of the stars that made them (5.5σ claimed); corrected for it, the supernova data line
+  up with DESI's weakening dark energy, and they claim the expansion has already stopped accelerating. Rebutted in January
+  2026 by Wiseman, Riess, Schmidt and others ("Still accelerating", arXiv:2601.13785, MNRAS 2026): the standard correction
+  for the host galaxy's mass already captures the environmental dependence, with it no age dependence remains, and a
+  supernova's progenitor is far younger than its galaxy; a reply from the Yonsei group in May 2026 ("Still non-accelerating",
+  arXiv:2605.21586). Unresolved and contested; the mainstream reading is still acceleration; nothing here says space is
+  shrinking, only that the speeding-up may be ending. What it would mean for her picture if it held, each a target and not
+  a confirmation (rule 13): (1) dark energy as "the energy space itself keeps" is a constant, and a dark energy that fades
+  needs a source that changes, which the toy has nothing for; the dark-energy target sheet of piece 15 already asks whether
+  her dark energy should change with time, and this is the observation it would be scored against. (2) A fading dark energy
+  means no rip and a longer era of structure formation, so more black holes form late: more daughters, later, which her
+  measure likes. (3) The observation window W(t), the load-bearing term of piece 12 and 14 (Update 68), rests on a constant
+  dark energy carrying other galaxies beyond the horizon in about 10^11 years (Krauss and Scherrer); if dark energy fades,
+  the window may be far longer, and the per-universe count drifts back toward the red-dwarf era ([LBS16]), which would make
+  our age early again under her own rule. So the result, if it stands, would weaken the term that rescued our age; that is
+  the sharpest thing it says to her picture. Nothing recorded as a decision; nothing in the toy changes.
