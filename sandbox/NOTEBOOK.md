@@ -1391,6 +1391,108 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the window may be far longer, and the per-universe count drifts back toward the red-dwarf era ([LBS16]), which would make
   our age early again under her own rule. So the result, if it stands, would weaken the term that rescued our age; that is
   the sharpest thing it says to her picture. Nothing recorded as a decision; nothing in the toy changes.
+- 2026-10-19, the owner, on the sealed result that a new space finishes cleanly only if its surroundings can take in
+  the burp: "With too little room it is left with flaws in fabric that is still nearly all there - is it possible there
+  wasn't enough room and the seeds are that damage?" *Ours, against the record:* two readings, and the toy answers each.
+  (a) Seeds of further opening: no. The flaws left when the room is short are the three knots (the column, 14; the knot of
+  two kinds, 20 to 30; the double column, 8; O107), each a dip of its own with every single move out costing 11 or more,
+  and none has ever been seen to start an opening; the seeds the toy knows are warm patches of the curled state going over
+  the wall (T37, T53), which form before the front, not behind it. (b) Seeds of matter: that is the scrap-as-dark-matter
+  reading (Updates 16 and 52), and the room is indeed what sets how much scrap there is: T9's crossover at N/4 to N/2 of
+  room, T18's PROPORTIONAL (the room needed grows faster than the lump, O34). What stands against it is the amount: the
+  stubborn knots hold about 1 % of the release where birth can afford less than a millionth (O107, Update 52). So "the
+  damage is where the room ran out" is exact in the toy; "the damage is the seeds" needs the word seed to mean matter,
+  and then the count is the problem, not the mechanism.
+  *Corrected an hour later, on her next message: by "seeds" she meant the primordial density differences of standard
+  cosmology, not the toy's seeds of an opening; the entry below is the one that answers her question.*
+- 2026-10-19, the owner, "the electromagnetism hypothesis": "curling energy is matter and uncurling energy is antimatter.
+  There is a tiny bit more matter because in addition to the amount of the release the stores hold a little more: maybe
+  it's what comes in during the 4 to 6 pre big bang transition? So plasma settles to the building blocks of both. then
+  they cancel. Reversed values of certain quantum particles. When the canceling happens we get that full photon blast that
+  lights everything, becomes the background radiation. / sufficiently energetic radiation can produce particle-antiparticle
+  pairs, provided conservation laws are satisfied. This is what happened with the release: particles and antiparticles from
+  energy only. / Uncurling energy is very energy dense. We know some fundamental processes treat matter and antimatter
+  slightly differently. This is called CP violation - can we start exploring cp violation? / Curl and uncurl, a little more
+  curl." *Ours.* Her earlier form of the same idea is the entry of 18 October ("antimatter is curling energy used to
+  uncurl") with three facts against it as worded; this version moves the excess from "release minus threshold" to "what
+  the stores hold beyond the release", and that is a different and better-defined claim, because the toy has that number.
+  (1) **What is standard physics in it, and right as she says it** (general knowledge; the reading note has the sources):
+  pair production from radiation above twice the rest energy, conserving charge and the rest; a hot early plasma with
+  nearly equal matter and antimatter; their annihilation feeding the photon bath whose last scattering is the microwave
+  background; the excess of matter about one part in 10^9 to 10^10 of the photons (the baryon-to-photon ratio, about
+  6 × 10^-10); and that the known processes treating matter and antimatter differently (CP violation, seen in kaons since
+  1964, in B and D mesons, and in a baryon for the first time in 2025) are far too weak in the Standard Model to make that
+  excess. So the origin of the excess is an open problem (baryogenesis), and Sakharov's three conditions for solving it
+  are: a process that changes the net count, a process that treats the two differently (C and CP violation), and a
+  departure from equilibrium. One correction of detail: the annihilation light is not itself the background radiation we
+  see; it was thermalised long before, and the background is the bath's light released when atoms formed, 380,000 years
+  on. The excess is what survived; the bath carries everything else. (2) **Where her picture meets the open problem.** The
+  burp is a departure from equilibrium, Sakharov's third condition, and the record already says so (Update 42: the
+  best-studied mechanism makes the excess at the walls of a first-order transition's bubbles). Her "the stores hold a
+  little more" supplies the asymmetry as an input (the second condition put in by hand), not as something the toy makes.
+  (3) **What the toy has for "curl and uncurl, a little more curl", exact under the layer form (`sandbox/LOG.md`, 19
+  October).** A contraction costs exactly a N_slab and a split releases exactly a N_slab, so curl and uncurl cancel to the
+  unit: that is the reference arm of T71 (the lump paying the fold back). Under her one-way rule (Update 66) every daughter
+  carries exactly a N_slab and nothing more, and the "little more" sits in the **parent**: it is whatever the stores hold
+  when one looks, the gate plus the feed since the last burp. In one seed it read 0.3 % of everything released at
+  λ = 1.25 and 28 % at λ = 1.10; a number set by the gate, the rate and the moment, not by the burp. Two things follow.
+  The daughter, which is the universe that would have the excess, gets none under the current rule; for a daughter to
+  carry "a little more", something of the parent's stores would have to go with the lump, which Update 66 forbids
+  ("nothing can go from open space to the slab" is one way; this would be the other direction, and it is not decided).
+  And the ratio is not 6 × 10^-10 and must not be made so (rule 13). "The 4 to 6 pre big bang transition": read as the
+  fold 6 → 4, the only step of the ladder that costs (Update 65); what comes in during it is the feed, and under g1 the
+  parent holds exactly one slab's worth more than it releases at the instant of each burp. (4) **CP violation in the toy:
+  an exact no, with one door.** The toy's only two kinds are the two sides of the bipartite graph, every link joins one of
+  each, and every point has the same number of links, so the two kinds are equal in number in every valid state at every
+  size: an excess of one kind cannot exist (confirmed on the run's end states, 108 and 108). The energy is symmetric
+  under swapping the two kinds, and so is every move (the contraction removes one of each). So the toy as it stands has
+  no C, no P, and nothing that treats the kinds differently; "exploring CP violation" in it means a new ingredient under
+  S1: a term or a move rule that tells the two kinds apart, or a degree rule that lets their counts differ. The one door
+  that exists already: the exchange sign of Update 29 (O57) gives some arrangements an odd renaming and zero weight, a
+  selection rule and not an asymmetry, but it is the only place the toy's weights ever see a sign. (5) **What can be done
+  now without a knob:** the reading (`docs/reading/notes/2026-10-19_cp_violation_and_baryogenesis.md`, search summaries,
+  the papers not read), so that the words are used as physics uses them, and the exact statement above. What cannot:
+  any claim that the toy makes or explains an excess. Idea, not a decision; no knob; the question whether the stores'
+  excess may travel with the lump is hers.
+- 2026-10-19, the owner, passing on an explanation (drafted elsewhere; her words where quoted): "'Seeds' are the tiny
+  differences in density that the early universe started with. 'Laid by something else' means the scraps can't be the
+  source of that pattern, so some other process has to make it." The text sets out, as standard cosmology to check with a
+  physicist, the one-part-in-100,000 density differences seen in the microwave background, their growth by gravity into
+  galaxies and voids, and dark matter falling into the dense spots first because light does not push it ("scraps falling
+  into seeds" means the scraps as the dark matter that collects in dense spots someone else made); then, marked "ours,
+  from the 18 Oct look, not evidence", that knots scattered at random "make noticeable lumpiness up close, but it
+  averages out quickly over larger regions, like a pinch of sand on a beach", so they give "far too little lumpiness at
+  large scales" against the sky's nearly equal strength at every scale (tilt about 0.965); that inflation is the standard
+  seed-maker and cosmic strings and other defects "were tested and mostly lost", "a caution for your picture: scraps are
+  exactly that kind of leftover"; and two candidates inside her picture, untested: the burp starting at slightly
+  different moments in different places, and quantum jitter in X before the opening, both facing the test that a process
+  with a built-in size makes lumps of that size. *Ours, against the record and general knowledge, to verify with a
+  physicist.* (1) So her question of this morning reads: are the primordial density differences the damage left where the
+  room ran out? In the toy the damage is the knots, laid along the front as it passes (T51, T55), so the question becomes
+  whether a sprinkle of knots laid by a front could carry the sky's pattern; the passed-on text answers no, and we agree
+  with its conclusion, with two corrections to its reasons. (2) The "pinch of sand" argument as written is backwards for
+  knots placed independently at random: such a sprinkle has density differences that fall as one over the square root of
+  the count, slower than the sky's pattern, so it gives too much relative lumpiness at large scales, not too little (seen
+  in the gravitational potential it diverges at large scales). The "far too little" is right for a different and
+  stronger reason: knots made by a process that rearranges energy locally, as the front does, cannot make differences
+  larger than the region the process has reached, and the published bound for any such causal, conserving process is a
+  spectrum that falls far faster at large scales than the sky's (the k^4 bound of Zel'dovich and Peebles; general
+  knowledge, to verify). The sky's differences are correlated across regions that had never been in contact at the time
+  the light was released, which is the horizon problem, and inflation's answer is to stretch them from inside one region.
+  (3) Cosmic strings and other defects lost on the microwave background not mainly through the strength at each scale
+  (strings give roughly equal strength at every scale) but because defects keep making new differences at all times, so
+  the sound waves in the early plasma are not in step and the peaks in the map are washed out, where the sky shows sharp
+  peaks (COBE, Boomerang, WMAP, Planck; general knowledge, to verify). The caution stands and is sharper than stated: a
+  leftover laid by a front after the opening is the kind of source that fails that test. (4) What the toy has for the
+  two candidates. The first, the burp starting at different moments in different places, is what T37 and T53 show:
+  several seeds in a long torus, fronts meeting; T50 measured the front's speed; the energy density at completion from
+  several seeds is measurable in the toy at one size and would have the seed spacing as its built-in scale, exactly the
+  test the text names; in the toy there is no expansion, so nothing stretches it. The second, jitter in X, has no
+  counterpart: X is the slab, a uniform arrangement with nothing that flickers at fixed total energy except the stores,
+  and the toy has no quantum rule for it (Update 57 adopted the amplitude rule for piece 9, not for X). (5) The one thing
+  the text does not say: in the toy, the release itself is uniform, a per point, so the burp makes a perfectly smooth
+  hot lump; the only differences it makes are the knots and the seams of the front, both laid behind the front. That is
+  the exact statement of the problem for her picture. Idea and reading, not a decision; no knob; nothing measured.
 - 2026-10-19, the owner, on paper 13's sentence that it "asks the loop only where the amplitudes live": "in the loop
   there are sets of universes that are identicle until each moment passes. From the macro perspective those versions are
   indistinguishable so we experience all of the set, until a measurement or some next moment locks us into one version."

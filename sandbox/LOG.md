@@ -403,3 +403,10 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   0.92 with the peak near 5 Gyr. A look; it supports nothing. What it kills: "no interaction between planets" as a
   shortening of the habitable era (a uniform factor); it survives only as a rule for who counts (each civilization once),
   piece 14's lever, which then makes us late rather than early.
+- 2026-10-19. Does the parent hold "a little more" than it hands to daughters, and can the toy hold an excess of one
+  kind of point? (`sandbox/curl_uncurl_ledger.py`, out `sandbox/out/curl_uncurl_ledger_2026-10-19.txt`; layer moves only,
+  g1, daughter mode, one seed, 3,000 sweeps.) Every daughter carries exactly a N_slab (144 at L = 6, 256 at L = 8,
+  λ = 1.25). The parent's excess over its starting curl is whatever the stores hold at the moment of reading: 0.3 % of all
+  it released at λ = 1.25 (both sizes), 28 % at λ = 1.10 (the torus wandered to width 8 and the feed piled up). So the
+  excess is set by the gate, the rate and when one looks, not by the burp. The two kinds of point are equal at every
+  sweep (108 and 108; 192 and 192): exact, by the degree rule, so no excess of one kind can exist in the toy. A look.
