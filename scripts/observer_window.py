@@ -34,6 +34,9 @@ from pathlib import Path
 
 import numpy as np
 
+# np.trapz was renamed np.trapezoid in NumPy 2.0 and later removed; the same trapezoid rule either way.
+trapezoid = getattr(np, "trapezoid", None) or np.trapz
+
 GYR = 1.0
 T_TODAY = 13.8          # Gyr, Planck 2018 (13.79; general knowledge, to verify)
 H0_KM_S_MPC = 67.4      # Planck 2018
@@ -136,7 +139,7 @@ class Model:
             k = (self.cum_sfr(t - lo[None, :]) - self.cum_sfr(t - win[None, :])) / width[None, :]
         else:
             raise ValueError(kernel)
-        return np.trapz(k * w_m[None, :], m, axis=1)
+        return trapezoid(k * w_m[None, :], m, axis=1)
 
     # ------------------------------------------------------------ T73: the causal diamond's comoving volume
     def diamond_volume(self, t_i: float = 0.0) -> np.ndarray:
@@ -175,7 +178,7 @@ def summarize(t: np.ndarray, p: np.ndarray, cap_gyr: float | None = None) -> dic
     p = np.where(np.isfinite(p), p, 0.0)
     if cap_gyr is not None:
         p = p * (t <= cap_gyr)
-    norm = np.trapz(p, t)
+    norm = trapezoid(p, t)
     p = p / norm
     cum = np.concatenate([[0.0], np.cumsum(0.5 * (p[1:] + p[:-1]) * np.diff(t))])
     f_now = float(np.interp(T_TODAY, t, cum))
