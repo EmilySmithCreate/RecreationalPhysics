@@ -43,7 +43,7 @@ def read_replica(rows):
     out = dict(first_split=first_split, first_clean=first_clean,
                spent_first=bool(first_clean is not None and (first_split is None or first_clean < first_split)),
                end_width=width_of(rows[-1]["dims"]), end_F=float(rows[-1]["F"]), a_n=a_n, release=None,
-               refolds=None, open_share=None, daughters=n_dau, per_daughter=None, period=None)
+               refolds=None, open_share=None, slab_share=None, daughters=n_dau, per_daughter=None, period=None)
     if daughter_mode and n_dau:
         out["per_daughter"] = float(rows[-1]["daughter_energy"]) / n_dau
         births = [int(r["sweep"]) for prev, r in zip(rows[:-1], rows[1:])
@@ -56,14 +56,25 @@ def read_replica(rows):
         out["word"] = "NEVER SPLITS"
         return out
     by_sweep = {int(r["sweep"]): r for r in rows}
-    if first_split in by_sweep and (first_split - 1) in by_sweep:
-        out["release"] = float(by_sweep[first_split - 1]["F"]) - float(by_sweep[first_split]["F"])
-    elif first_split in by_sweep and first_split == 1:
-        out["release"] = a_n - float(by_sweep[1]["F"])
+    before = [r for r in rows if int(r["sweep"]) < first_split]
+    if first_split in by_sweep:
+        # F changes only in a sweep with a move, and every such sweep is logged (layer_feed, log_events), so the last
+        # row before the split holds F as it stood the sweep before; with no row before it, F was the slab's a N_slab.
+        f_before = float(before[-1]["F"]) if before else a_n
+        out["release"] = f_before - float(by_sweep[first_split]["F"])
     after = [r for r in rows if int(r["sweep"]) >= first_split]
     n_contract_at = int(by_sweep[first_split]["n_contract"]) if first_split in by_sweep else 0
     out["refolds"] = int(rows[-1]["n_contract"]) - n_contract_at
-    out["open_share"] = float(np.mean([width_of(r["dims"]) >= 6 for r in after])) if after else 0.0
+    # the share of sweeps after the split spent at width >= 6, weighted by how long each logged width stood (the width
+    # changes only in logged sweeps); the last row counts for one sweep
+    if after:
+        sweeps = [int(r["sweep"]) for r in after]
+        durations = [b - a for a, b in zip(sweeps[:-1], sweeps[1:])] + [1]
+        wide = [width_of(r["dims"]) >= 6 for r in after]
+        out["open_share"] = float(sum(d for d, w in zip(durations, wide) if w) / sum(durations))
+    else:
+        out["open_share"] = 0.0
+    out["slab_share"] = 1.0 - out["open_share"]
     if daughter_mode:
         out["word"] = "CYCLES" if (n_dau >= 2 and out["refolds"] >= 1) else "ONE BURP"
         return out
@@ -96,7 +107,9 @@ def read_cells(rows):
             median_per_daughter=(float(np.median([x["per_daughter"] for x in reads if x["per_daughter"] is not None]))
                                  if any(x["per_daughter"] is not None for x in reads) else None),
             median_period=(float(np.median([x["period"] for x in reads if x["period"] is not None]))
-                           if any(x["period"] is not None for x in reads) else None))
+                           if any(x["period"] is not None for x in reads) else None),
+            median_slab_share=(float(np.median([x["slab_share"] for x in reads if x["slab_share"] is not None]))
+                               if any(x["slab_share"] is not None for x in reads) else None))
     return cells
 
 
@@ -110,7 +123,7 @@ def main(paths):
         print("lam=%.2f L=%2d r=%-7g gate=%-7.1f leak=%-7g %-8s %-8s feed stops=%d | %-15s %s | first split median %s range %s | release median %s vs a N_slab %.1f | end F median %.1f | spent first %d/%d%s"
               % (lam, L, rate, gate, leak, move_set, release_to, stops, c["majority"], c["words"], c["median_first_split"],
                  c["range_first_split"], c["median_release"], c["a_n"], c["median_end_F"], c["spent_first"], c["n"],
-                 (" | daughters median %s, per daughter %s, period %s" % (c["median_daughters"], c["median_per_daughter"], c["median_period"]))
+                 (" | daughters median %s, per daughter %s, period %s, slab share %s" % (c["median_daughters"], c["median_per_daughter"], c["median_period"], c["median_slab_share"]))
                  if release_to == "daughter" else ""))
     return cells
 

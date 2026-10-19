@@ -1362,3 +1362,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   `docs/papers/curled_torus/v2_changes.md`, for her to edit; the paper itself is hers and held, and nothing in its results
   changes. Nothing else of today (the contraction model, the daughter ledger, the gate, piece 12) belongs in paper 1: none
   of it has run, and paper 1 is the two-direction tube under the published move.
+- 2026-10-19, the owner, deciding T71's gate and giving her prediction: "g1 is right. / B cycles at each curling cost. / A
+  Layer moves alone gives less consistent cycles but may cycle at some settings, but less often and less times. Clean switch
+  rarely. / Arm c doesn't cycle / 3. Yes one N Slab." *Ours:* the gate is a decision (VISION Update 69); the prediction is
+  recorded verbatim in PREREGISTRATION T71, Amendment 2, scored by the move sets she names (her letters A and B are the
+  registration's B and A), and T71 is launched (12 jobs). Where she and we differ: layer moves alone, which she expects to
+  cycle less consistently and we expect to cycle in every cell.

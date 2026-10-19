@@ -923,6 +923,10 @@ first; the daughter-universe interpretation after. In order, each registered bef
    `docs/design/loop_measure_brief.md` on her "proceed"; the combination rule decided by her the same evening (VISION
    Update 67: per universe within a setting; the growth rate for when an observer exists; Update 68: rule (ii) read per
    universe by each universe's own age, since clocks exist only inside a universe).*
+   *19 October, about 01:30 UTC: her gate (g1; VISION Update 69) and her prediction given; **T71 launched**, 12 Batch jobs
+   (`cloud/queue/2026-10-19_t71_stage1.txt`; PREREGISTRATION T71, Amendment 2). To read: fetch `t71_*`, accept, commit unread,
+   `python3 scripts/analyse_t71.py` (the control cells by T68's words); then the held-out numbers for L = 16 as a dated
+   amendment, her word for L = 16, and the L = 16 configs.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

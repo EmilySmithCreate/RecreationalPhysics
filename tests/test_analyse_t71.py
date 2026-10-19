@@ -60,3 +60,22 @@ def test_the_daughter_mode_reads_cycles_with_the_period_and_the_energy_per_daugh
     assert cell["median_daughters"] >= 2 and cell["median_period"] is not None
     for rep in cell["replicas"]:
         assert rep["first_split"] >= 32 and rep["release"] == pytest.approx(144.0)
+
+
+def test_logging_at_events_reads_the_same_as_logging_every_sweep(tmp_path):
+    """The reading (word, release, births, period, shares) must not depend on log_every once events are logged."""
+    dense = _run(tmp_path, "t71_test_e1", release_to="daughter", feed_stops_at_split=False, n_sweeps=240, log_every=1)
+    sparse = _run(tmp_path, "t71_test_e50", release_to="daughter", feed_stops_at_split=False, n_sweeps=240, log_every=50)
+    assert len(sparse) < len(dense) / 3
+    (c1,) = A.read_cells(dense).values()
+    (c50,) = A.read_cells(sparse).values()
+    for r1, r50 in zip(c1["replicas"], c50["replicas"]):
+        for key in ("word", "first_split", "first_clean", "spent_first", "release", "refolds", "daughters",
+                    "per_daughter", "period", "end_width", "end_F"):
+            assert r1[key] == r50[key], key
+        assert r1["open_share"] == pytest.approx(r50["open_share"], abs=1e-12)
+        assert r1["slab_share"] == pytest.approx(r50["slab_share"], abs=1e-12)
+    # and with events switched off the sparse log cannot read the release exactly, which is why events are logged
+    off = _run(tmp_path, "t71_test_off", release_to="daughter", feed_stops_at_split=False, n_sweeps=240, log_every=50,
+               log_events=False)
+    assert len(off) < len(sparse)

@@ -1969,3 +1969,11 @@ section 4) showed that the two readings disagree about our own age. This closes 
   so the function is not scored on our age (rule 13). It is scored on what W(t) must mean (an observer who can learn its
   universe's history) and on whether planets round the smallest stars host observers at all, which is a question
   astronomy can answer. (3) Nothing here is a knob of the toy or a run; the toy supplies one term of the function, b.
+
+Update 69 (2026-10-19, about 01:20 UTC by the clock): **DECISION (the author's, "g1 is right."): the layer form's gate is the
+slab's whole curling cost, a N_slab.** Why this page changes: the gate is a new knob of the layer form (Update 65, addendum;
+Update 66) and S1 requires her dated decision before the registered run that carries it. A split of the slab, which costs
+nothing, fires only when the stores of the two layers beside the cut already hold a N_slab, which is not spent. It is her
+own words of 18 October ("a step when the stores first hold the whole cost") made a rule. *Ours, exact (Update 66):* the gate
+sets how long X sits between re-forming and burping, about 2a/r sweeps under g1, and not how many daughters are born or what
+each carries; those are fixed by the feed. Her prediction for T71 is recorded in its Amendment 2, and T71 is launched.

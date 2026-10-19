@@ -61,3 +61,5 @@ t68_*
 # 2026-10-18, 05:45 UTC by the clock: T68 held-out size, L = 16 (36 jobs, submitted about 22:40 UTC on 17 October). Not read.
 t68_*_l16
 # 2026-10-18, 09:50 UTC by the clock: asking again for the six outstanding T68 held-out cells. Not read.
+# 2026-10-19, 01:30 UTC by the clock: T71 stage 1 (12 jobs). Not read.
+t71_*

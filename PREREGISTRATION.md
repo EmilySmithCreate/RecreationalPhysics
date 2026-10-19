@@ -6587,7 +6587,7 @@ every word and number above holds at L = 12. **Launched 2026-10-17, 23:03 UTC by
 (`configs/t69_lowest_path_l12.json`). The owner's prediction for L = 12 is hers of stage 1 (PAYS) unless she replaces it
 before the cells are read.
 
-## T71. Does the owner's slab open under the layer form, when does it open against the feed, what does the ledger read, and what becomes of the product? (piece 5; the contraction model, layer form; VISION Updates 63 to 65 and the addendum of 18 October; the design brief `docs/design/contraction_model_brief.md`; ASSUMPTIONS O41, O118, O135; DRAFT written 2026-10-18, 14:50 UTC by the clock, before any registered run; NOT LAUNCHED: the owner's gate decision and her prediction are owed first)
+## T71. Does the owner's slab open under the layer form, when does it open against the feed, what does the ledger read, and what becomes of the product? (piece 5; the contraction model, layer form; VISION Updates 63 to 65 and the addendum of 18 October; the design brief `docs/design/contraction_model_brief.md`; ASSUMPTIONS O41, O118, O135; DRAFT written 2026-10-18, 14:50 UTC by the clock, before any registered run; LAUNCHED 2026-10-19, about 01:30 UTC, after the owner's gate decision (g1; VISION Update 69) and her prediction were recorded in Amendment 2)
 
 *T70 is reserved for the fixed-count switch-path test of Update 62 and is not written.*
 
@@ -6595,6 +6595,32 @@ before the cells are read.
 Update 66): the lump leaves one way into a daughter ledger and the slab reforms (f3). The design table, the definitions
 and our predictions below are rewritten for it; f1 becomes the reference arm and f2 is not run. Still owed: her gate
 and her prediction.*
+
+*Amendment 2 (2026-10-19, about 01:20 UTC by the clock, before launch): the gate, the owner's prediction, the logging rule
+and the launch.* **The gate is g1, a N_slab** (her words: "g1 is right."; VISION Update 69), in every cell. **Her prediction,
+verbatim:** "B cycles at each curling cost. A Layer moves alone gives less consistent cycles but may cycle at some settings,
+but less often and less times. Clean switch rarely. Arm c doesn't cycle. 3. Yes one N Slab." Her letters do not match the
+registration's (here arm A is the model, layer moves plus the clean switch, and arm B is layer moves alone), and her
+descriptions do, so her prediction is **scored by the move sets she names, not by the letters**: the model arm (layer moves
+plus the clean switch) CYCLES at every curling cost; layer moves alone cycles less consistently, at some settings only, less
+often and fewer times; the clean switch move fires rarely; the single-switch control does not cycle; every daughter carries
+exactly a N_slab. If she meant the letters as registered she says so before anything is read, and the reading follows the
+letters. *Ours:* this differs from our prediction on the layer-moves-alone arm, where we expect CYCLES in every cell (the
+kernel's own check already shows it at L = 6 and 8), so the arms discriminate between her picture and ours; on the model
+arm and the control we agree. **The logging rule, changed before launch:** rows are logged at every sweep in which a layer
+move or a clean switch move is accepted or a daughter is born, and at every 50th sweep besides (`graphity.layer_feed`,
+`log_events`; `scripts/run_layer_feed.py` key `log_every` 50, `log_events` true), instead of at every sweep; F and the width
+change only in logged sweeps, so the release at every split and the sweep of every birth are read exactly from the last row
+before the event (`scripts/analyse_t71.py`, with a test that the reading is identical to logging every sweep,
+`tests/test_analyse_t71.py`), and the files stay a few megabytes instead of tens. The shares (open, slab) are read
+time-weighted over the logged widths. **The launch:** 12 jobs, `cloud/queue/2026-10-19_t71_stage1.txt`: per curling cost
+(1.10, 1.25, 1.40) one job each for the model arm (`t71_model_lam*`), layer moves alone with the daughter rule
+(`t71_layer_lam*`), layer moves alone with the release to the parent's stores, the f1 reference (`t71_layerref_lam*`), and
+the single-switch control under T68's runner (`t71_control_lam*`, `scripts/run_slab_feed.py`, mode "all", fixed rate, 16
+replicas, read every 50 sweeps, the final graph saved); L = 8 and 12 in each job; r = 1/64 and 1/16; the length
+max(2000, 40 a / r) sweeps per cell (2,000 at λ = 1.10; 2,560 and 2,000 at 1.25; 4,096 and 2,000 at 1.40; the control takes
+each curling cost's longest); seeds 20267101 to 20267112. The held-out size L = 16 runs after L = 8 and 12 are read and its
+words and numbers are written (rule 14), with her word for it.
 
 ### Why
 
@@ -6708,9 +6734,8 @@ never re-forms (ONE BURP) with the feed continuing.
 
 ### Predictions
 
-**The owner's: OWED before launch**, together with her choice of gate (g0, g1, g2). What happens after the burp is
-decided (f3, Update 66). Her words so far, recorded as her claim and not yet as a prediction for these cells: a step
-when the stores first hold the whole cost (g1's reading); the slab reforms and continues accepting energy.
+**The owner's: given 2026-10-19 before launch, Amendment 2 above** (the gate g1; the model arm CYCLES at every curling cost; layer moves alone cycles less consistently, at some settings only, less often and fewer times; the clean switch rarely; the control does not cycle; one a N_slab per daughter). What happens after the burp is
+decided (f3, Update 66).
 
 **Ours under f3, unverified, written 18 October after the kernel's own check at L = 6 and 8 and before any registered
 run.** Arm B: **CYCLES in every cell**; every daughter carries exactly a N_slab; the energy fed between daughters is

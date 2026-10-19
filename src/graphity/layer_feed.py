@@ -67,12 +67,19 @@ def census(adj):
 
 def run_layer_feed(state, lam, rate, n_sweeps, seed, gate=0.0, leak=0.0, feed_stops_at_split=False,
                    move_set="model", max_width=8, axes=(0,), proposals_per_sweep=1, mu_n=0.0, log_every=1,
-                   release_to="stores"):
+                   release_to="stores", log_events=True):
     """The protocol of the module docstring. Returns (final_state, rows, summary).
 
     rows: one tuple per logged sweep, (sweep, N, dims, F, stores_sum, fed, leaked, n_split, n_contract, n_clean,
     open, curled, broken, daughters, daughter_energy). summary: dict(first_split, first_clean, first_contract) as
     sweeps or None, and f0. Under release_to "stores" the last two columns stay zero.
+
+    Which sweeps are logged: every `log_every`-th sweep, the last sweep, and, with `log_events` (the default), every
+    sweep in which a layer move or a clean switch move was accepted or a daughter was born. F and the width change
+    only in those sweeps, so a reader that takes the last logged row before an event has F and the width exactly as
+    they stood the sweep before it, whatever `log_every` is; the stores and the feed between events are linear in the
+    sweep. Added 2026-10-19 before T71 launched, so that its files stay small while the release at every split and
+    the sweep of every birth are exact.
     """
     assert move_set in MOVE_SETS and release_to in RELEASE_TO
     rng = np.random.default_rng(seed)
@@ -89,6 +96,7 @@ def run_layer_feed(state, lam, rate, n_sweeps, seed, gate=0.0, leak=0.0, feed_st
     side0 = np.flatnonzero(st.part == 0).astype(np.int64)
     rows = []
     for sweep in range(1, n_sweeps + 1):
+        before = (n_split, n_contract, n_clean, daughters)
         if not (feed_stops_at_split and first["first_split"] is not None):
             st.stores += rate
             fed += rate * st.n
@@ -119,7 +127,8 @@ def run_layer_feed(state, lam, rate, n_sweeps, seed, gate=0.0, leak=0.0, feed_st
                 n_contract += 1
                 if first["first_contract"] is None:
                     first["first_contract"] = sweep
-        if sweep % log_every == 0 or sweep == n_sweeps:
+        fired = (n_split, n_contract, n_clean, daughters) != before
+        if sweep % log_every == 0 or sweep == n_sweeps or (log_events and fired):
             op, cu, br = census(st.adj)
             rows.append((sweep, st.n, tuple(st.dims), float(f), float(st.stores.sum()), fed, leaked, n_split,
                          n_contract, n_clean, op, cu, br, daughters, daughter_energy))

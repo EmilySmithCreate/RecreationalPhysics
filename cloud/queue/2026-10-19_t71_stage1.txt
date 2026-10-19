@@ -1,0 +1,19 @@
+# T71 stage 1 (PREREGISTRATION T71, drafted 2026-10-18, Amendment 2 of 2026-10-19 before this launch: the owner's gate g1 = a N_slab
+# (VISION Update 69) and her prediction recorded): the owner's untied slab 4 x L x L under the layer form, fed r = 1/64 and 1/16
+# per point per sweep at every point, curling costs 1.10, 1.25 and 1.40, L = 8 and 12 in one job, L = 16 held out; the lump leaves
+# one way into a daughter ledger and the slab reforms (VISION Update 66); 16 replicas; max(2000, 40 a / r) sweeps, rows logged at
+# every move and every 50th sweep. Arm A the model (layer moves + the clean two-switch move), arm B the reference (layer moves
+# alone), arm B with the release to the parent's stores (f1), arm C the single-switch control under T68's protocol. 12 jobs.
+# Seeds 20267101 to 20267112.
+run_layer_feed t71_model_lam110
+run_layer_feed t71_layer_lam110
+run_layer_feed t71_layerref_lam110
+run_slab_feed t71_control_lam110
+run_layer_feed t71_model_lam125
+run_layer_feed t71_layer_lam125
+run_layer_feed t71_layerref_lam125
+run_slab_feed t71_control_lam125
+run_layer_feed t71_model_lam140
+run_layer_feed t71_layer_lam140
+run_layer_feed t71_layerref_lam140
+run_slab_feed t71_control_lam140

@@ -13,7 +13,8 @@ decision of 18 October, VISION Update 66), in which case the slab reforms when t
 single-switch control (arm C of T71) is T68's runner, `scripts/run_slab_feed.py`, not this one.
 
 Config keys: name, section, written, lambdas (list), sizes (list of L), rates (list, per point per sweep), gate,
-leak, n_sweeps, replicas, seed, move_set, release_to, feed_stops_at_split, max_width, log_every. `gate`, `leak` and `n_sweeps`
+leak, n_sweeps, replicas, seed, move_set, release_to, feed_stops_at_split, max_width, log_every, log_events (default
+true: every sweep in which a move fires or a daughter is born is logged besides every log_every-th). `gate`, `leak` and `n_sweeps`
 may be numbers or expressions in a = 4 (lambda - 1), L, N_slab = 4 L^2 and r (the rate), evaluated per cell, so that a
 registration can fix them by rule rather than by hand (for example gate "a * N_slab", n_sweeps "max(2000, 40 * a / r)").
 Energy is conserved exactly; every row carries the residual F + stores + daughter_energy - fed + leaked - F0, which must
@@ -70,7 +71,7 @@ def main(path, out_dir="results"):
                             state, lam, rate, n_sweeps, seed, gate=gate, leak=leak,
                             feed_stops_at_split=bool(cfg.get("feed_stops_at_split", False)), move_set=move_set,
                             max_width=int(cfg.get("max_width", 8)), log_every=int(cfg.get("log_every", 1)),
-                            release_to=release_to)
+                            release_to=release_to, log_events=bool(cfg.get("log_events", True)))
                         for sweep, n, dims, f, stores, fed, leaked, n_split, n_contract, n_clean, op, cu, br, dau, dau_e in rows:
                             out.write(dict(lam=lam, L=L, N_slab=state.n, rate=rate, gate=gate, leak=leak, move_set=move_set,
                                            release_to=release_to,
