@@ -6942,6 +6942,62 @@ taken as passed on the share and the paper's loose wording (then the classes are
 registered), or whether the peak is to be checked against the paper's figure first (digitise Fig. 4), or whether the
 inputs are to be checked again.
 
+
+**The owner's decision on the gate (2026-10-19):** "Take the gate as passed on the share plus the paper's loose wording,
+and read the four classes from the committed file as registered." Read the same evening from
+`results/t72_observer_window.csv` (committed unread, 77ce69e6), with the reader `scripts/read_t72.py`.
+
+*Amendment 2 (2026-10-19, written on reading, before the variant was run). The registration said the observer-moment
+variant (each civilization weighted by the length of its own window) would be reported beside the scored count. The
+first script did not compute it. It is added as a second kernel (`fixed_moments`), run under its own config
+(`configs/t72_observer_moments.json`, `results/t72_observer_moments.csv`) and reported below, not scored, as registered.*
+
+### Reading (2026-10-19; scored rows: the registered delay, n = 5, the 50 Gyr tail, the class's own cap setting)
+
+| Class | F_R (share before our age) | Peak of dP/dt (Gyr) | Median (Gyr) | Word | Sensitivity (all 18 rows) | Our prediction | Hers ("agree") |
+|---|---|---|---|---|---|---|---|
+| A sun-like, lifetime window, delay 4.5 | 0.81 | 7.9 | 9.5 | TYPICAL | F 0.73 to 0.88; peak 6.9 to 9.0; one word | TYPICAL, F 0.3 to 0.7: **word holds, F misses high** | same |
+| B K and G, 10 Gyr window, delay 3 | 0.86 | 6.4 | 8.0 | TYPICAL | F 0.80 to 0.92; peak 5.4 to 7.5; one word | TYPICAL with a later peak than A, F 0.1 to 0.4: **word holds; the peak is earlier, not later; F misses high** | same |
+| C all stars, lifetime window, delay 4.5 | 0.81 | 7.9 | 9.5 | TYPICAL | F 0.73 to 0.88; one word | EARLY, F about 0.001: **fails** | same |
+| D her composite (hard steps, n = 5, cap 100 Gyr) | 0.24 | 17.3 | 17.1 | TYPICAL | F 0.21 to 0.30 over n = 3, 5, 7 and the tails; one word; identical with the cap on and off | TYPICAL with a later peak than A, F 0.2 to 0.6, unchanged by the cap: **holds in every part** | same |
+| gate (the 2016 paper's planet-years) | 0.0017 | 41.6 (dP/d ln t: 4,434) | 2,666 | EARLY | the 100 Gyr cap alone lifts F to 0.08, TYPICAL; the tails change little | EARLY as published: holds | same |
+
+**What the table says, exactly (ours; it follows from the kernel and is now a test,
+`test_fixed_once_kernel_is_blind_to_the_mass_range`).** Under the registered counting unit, one civilization per
+planet at a fixed delay d, the distribution over a universe's age is the star-formation history shifted by d, for
+every mass range whose stars outlive d. The stars' masses and lifetimes enter only as a yes-or-no filter, so **classes
+A and C are the same curve to the last digit**, and B differs from A only through its delay (3 against 4.5 Gyr), which is
+why its peak is earlier, not later. The 2016 paper's "we are early" comes entirely from counting planet-years, which
+weights each planet by how long it lives; that is the observer-moment unit, not the once-per-civilization unit the
+owner chose on 18 October. So the registered unit cannot see the stellar-mass cut at all, and the published disagreement
+over red dwarfs is a disagreement about the counting unit as much as about habitability.
+
+**The observer-moment variant (Amendment 2; reported, not scored; `results/t72_observer_moments.csv`).** A civilization
+that arises at the delay and lasts until its planet's window closes, counted at every age it exists: A F = 0.44, peak
+12.9 Gyr, TYPICAL; B F = 0.67, peak 11.3, TYPICAL; C F = 0.0009, peak of dP/d ln t at 4.4 × 10³ Gyr, EARLY. So the
+lifetime weighting restores the 2016 paper's "early" for the all-stars class exactly as the kernel reasoning says, and
+under this unit the sun-like restriction does the work it was meant to do (A against C). A first version of this
+variant placed the whole weight at one instant and gave A's curve again; it was wrong and was replaced before the run,
+and the test `test_observer_moment_variant_for_all_stars_is_early` guards the corrected form.
+
+**Verdicts, per class, as registered:** A TYPICAL; B TYPICAL; C TYPICAL; D TYPICAL. **Our prediction failed on C and
+on B's peak, and the shared prediction of the owner ("agree") fails with it.** No INCONCLUSIVE: every class keeps one
+word across its sensitivity rows.
+
+**What is informative across the table, as the registration asked.** (1) A, B and C agree because the unit makes them
+agree: the sun-like restriction does no work under this unit, and neither does the window shape. (2) D's hard-steps
+shape does move the peak, from 7.9 to 17.3 Gyr, and lowers the share before now from 0.81 to 0.24: Carter's selected
+fast case puts a typical observer later than we are, with about a quarter of such observers before our age. That is
+the one difference in the table that comes from physics rather than from the counting rule. (3) C's published "early"
+result is reproduced only under the planet-years unit (the gate), and that unit, with the owner's 100 Gyr cap added,
+already reads TYPICAL by the letter (F = 0.08).
+
+**Rule 11, in one line (a failed registered prediction).** Previous claim (ours; hers by agreement): the all-stars
+class is EARLY. Failed because: under the once-per-civilization unit the stellar lifetimes do not weight the count.
+Replacement: none proposed; the unit is hers (18 October) and the finding is that the unit, not the stars, decides.
+New test: the observer-moment variant of Amendment 2, reported beside, which should restore EARLY for C if the
+reasoning above is right (it is also a test, `test_observer_moment_variant_for_all_stars_is_early`).
+
 ### Standing requirements of 8 October
 
 1. No size claim; no held-out size. 2. The prior-work note is `docs/reading/notes/2026-10-19_observer_window_endpoints.md`,
@@ -6967,3 +7023,108 @@ the fixed delay plus or minus 1 Gyr, n = 3, 5, 7 hard steps, the future tail at 
 
 The owner's predictions for the four classes; the three reading notes of gate 2; a tested script (`scripts/observer_window.py`,
 with its known-answer test on class C) committed before it is run.
+
+## T73. Does weighting by the causal diamond's volume move the observer peak? (piece 12; the variant of T72 with the "how many places" factor of the causal entropic principle; VISION Updates 68 and 70; `docs/reading/notes/2026-10-19_causal_entropic_principle.md`; DRAFT written 2026-10-19 on the owner's "yes draft it"; its text was first drafted before T72 was read and revised after, as disclosed below; RUN 2026-10-19 after the owner's prediction was recorded)
+
+**Kind of statement.** A calculation in standard cosmology, as T72; it tests nothing in the toy or the hypothesis.
+
+### Why
+
+T72 counts observers by a universe's own age inside a fixed comoving volume, so "how many places exist at age t" is
+constant and drops out. The causal entropic principle ([BHKP07], read in full on 19 October) counts instead inside the
+causal diamond: the region bounded by the future light cone of the beginning and the past light cone of the end, whose
+comoving volume rises from zero, peaks at the middle of the universe's conformal lifetime (about 3.9 Gyr for our
+constant; Eq. (20)) and falls as the acceleration carries matter out of reach. The owner asked whether that factor
+belongs in her measure as the "how many places" term (notebook, 19 October, section 9 of the day's notes) and whether it
+is the same as class D's observation cap. It is not: the cap (Krauss and Scherrer 2007) is a step at about 100 Gyr; the
+diamond is a smooth hump centred near 4 Gyr with slow tails, already falling at our age and small in the first few Gyr.
+So the two weight the ages differently, and only a run says by how much. T73 runs T72's four classes under the diamond
+weight and reports the change.
+
+### The calculation, exactly
+
+p_R^diamond(t) ∝ p_R(t) × V_c(t), with p_R(t) the registered T72 density of class R (same inputs, same kernels, same
+sensitivities) and V_c(t) = (4π/3) r(t)³ the diamond's comoving volume, r(t) = min(η(t) − η(t_i), η_∞ − η(t)), where η is
+conformal time in the flat Planck 2018 cosmology of T72 (η(t) = ∫ dt'/a(t'), a(t) = (Ω_m/Ω_Λ)^{1/3} sinh^{2/3}(3 H_0 √Ω_Λ t/2)),
+t_i = 0, the bottom tip at reheating as the paper places it (a first draft of this section put it at the first stars,
+30 Myr; the known-answer test then failed, the diamond's peak landing at 5.4 Gyr instead of 4.0, because conformal time
+has already run 7 Gyr by 30 Myr; corrected before any T73 number was computed), and η_∞ the finite conformal lifetime. This is [BHKP07] Eqs. (18) and (19) written in the
+cosmology T72 uses; their normalization constant 2.804 t_Λ^{1/3} is replaced by the integral and checked against it as
+a known-answer test (the diamond's volume must peak at 0.23 t_Λ, their Eq. (20), to 5 %). Nothing else changes: the
+counting unit, the classes, the delays, the tails and class D's cap are T72's, so that the one difference between T72
+and T73 is the factor V_c(t).
+
+### What is read, per class
+
+The same two numbers as T72 (the peak age of dP/dt and F_R = P(t < 13.8 Gyr)) under the diamond weight, beside T72's,
+and the ratio F_R^diamond / F_R. Verdict words per class as T72's (TYPICAL, EARLY, LATE, INCONCLUSIVE), plus one word for
+the comparison:
+
+- **MOVES**: the diamond weight changes the peak age of at least one class by more than a factor of two, or changes a
+  class's verdict word.
+- **NO CHANGE**: neither.
+
+### Predictions
+
+- **Ours (unverified; revised after T72 was read, and said so).** A first draft, written before T72's reading,
+  predicted that class C would stay EARLY; T72 showed C is TYPICAL under the registered unit (A and C coincide), so that
+  line is withdrawn before registration. Revised: the diamond's volume falls by about a factor of two between 4 and
+  14 Gyr and keeps falling, so every class's peak moves earlier and every F_R rises; A, B and C stay TYPICAL with peaks
+  near 5 to 7 Gyr; D's peak moves from 17 Gyr to below 12 Gyr and its F_D rises above 0.4 but stays TYPICAL; the gate
+  (planet-years) moves most, its F from 0.002 toward 0.1 or more, and may cross from EARLY to TYPICAL. Comparison word:
+  MOVES (D's peak by more than a factor of 1.4 but not two; the gate's word may change). If the gate's word changes,
+  MOVES; else NO CHANGE on words and MOVES only if any peak shifts by more than a factor of two, which we do not expect.
+- **The owner's (2026-10-19, before any T73 number was computed), in her words:** "whether the diamond weight moves the peaks - yes it will." On our first-draft wording (the diamond pulls every peak toward 4 to 10 billion years and lifts the share before now; no verdict word changes): "I agree this aligns with my logic." And her reason: it "lifts the share before now, especially because equal energy 50/50 has already passed and that is where the cone concentrates." Scored as: MOVES on the peaks; the shares before now rise; no verdict word changes. Disclosed: she agreed to the first-draft wording, which also said class C stays EARLY; T72 had by then shown C TYPICAL under the registered unit, so that clause is moot and is not scored against her. *Ours on her reason:* the diamond's volume peaks at about 4 Gyr, the middle of the universe's conformal lifetime, and matter and dark energy were equal at about 10 Gyr; both are before our age, so the weight does concentrate before now, as she says, though the diamond's peak is set by the light cones, not by the equality.
+
+### Gates
+
+1. T72's gate stands as decided by the owner (passed on the share and the paper's wording; 19 October).
+2. The known-answer test on V_c(t): its peak at 0.23 t_Λ within 5 % of [BHKP07] Eq. (20), with t_Λ = (2/(3 H_0 √Ω_Λ))
+   as the paper defines it (to verify against the note when coded).
+3. The script is T72's with one factor and one flag, tested before it runs.
+
+
+### Reading (2026-10-19, the same evening; `results/t73_diamond.csv`, read with `scripts/read_t72.py`; the owner's prediction recorded first)
+
+| Class | T72 (no weight): F, peak, word | T73 (diamond): F, peak, word | Sensitivity under the diamond (all rows) | Comparison |
+|---|---|---|---|---|
+| gate (planet-years, all stars) | 0.0017, 41.6 (dP/d ln t 4,434), EARLY | 0.80, 5.2, TYPICAL | F 0.79 to 0.81; one word | **word changes** |
+| A sun-like | 0.81, 7.9, TYPICAL | 0.955, 7.4, LATE | F 0.92 to 0.98; words LATE and TYPICAL | word changes; INCONCLUSIVE by the sensitivity rule |
+| B K and G | 0.86, 6.4, TYPICAL | 0.976, 5.9, LATE | F 0.96 to 0.99; one word | **word changes** |
+| C all stars, once | 0.81, 7.9, TYPICAL | 0.955, 7.4, LATE | as A | as A |
+| D composite | 0.24, 17.3, TYPICAL | 0.53, 11.3, TYPICAL | F 0.50 to 0.59; peak 10.9 to 11.5; one word | peak moves by a factor 1.5; word holds |
+
+**Comparison word: MOVES** (verdict words change in the gate and in B outright, and in A and C from TYPICAL to a
+LATE-or-TYPICAL spread; D's peak moves by 1.5, under the factor-two line). **Known-answer gate 2 held:** the diamond's
+volume peaks at 0.231 of the dark-energy timescale against the paper's 0.23, at 4.05 Gyr.
+
+**Predictions.** The owner's: "yes it will" move the peaks: **holds**; the shares before now rise: **holds in every
+class**; no verdict word changes: **fails** (the gate, B, and A and C's spread). Ours (revised before the run): every
+peak earlier and every F higher: holds; A, B, C stay TYPICAL: **fails** (they go LATE); D's peak below 12 Gyr and F_D
+above 0.4, TYPICAL: holds; the gate toward TYPICAL: holds. Both of us underestimated how hard the diamond's falling
+volume cuts the ages after our own.
+
+**What it says (ours).** The diamond's volume is already about half its peak at our age and keeps falling, so under it
+most weighted observers in classes A, B and C sit before us: we would be late, not typical. Class D, whose hard-steps
+delay pushes observers toward their planets' ends, lands with us almost exactly at its median (F = 0.53): under the
+owner's composite class and the diamond weight together, our age is as typical as it can be. Rule 13 stands over that
+sentence: D's class was built from our own case, and the diamond is one published choice of "how many places"; the
+sentence is a declared-assumption result, not a finding. The 2016 paper's "early" survives nowhere under the diamond:
+the planet-years that made us early are the late ones the diamond removes.
+
+**What is informative, as registered.** The diamond is not the same weight as class D's 100 Gyr cap: the cap changed
+nothing in T72 (it bites where nothing lives), while the diamond changes every class. So the owner's question of this
+evening (are they the same calculation) has a measured answer: no, and the difference is large. Whether the diamond is
+the right "how many places" term for her measure is still a choice, now with its consequence known.
+
+### What this cannot show
+
+Whether the diamond is the right "how many places" term for her measure (it is one published choice); anything about
+versions or branch probabilities, which live at the observer level and are the observer-relative-histories work's
+question; anything about the toy.
+
+### Standing requirements of 8 October
+
+1. No size claim. 2. Prior work: `docs/reading/notes/2026-10-19_causal_entropic_principle.md` (the diamond as a weight
+on an observer-time distribution is not a combination that note found published; the entropy paper weights entropy, not
+planets). 3. Not a milestone.

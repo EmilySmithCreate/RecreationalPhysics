@@ -963,3 +963,10 @@ record in her words; paper 1 waits (no corrected copy to the model's author unti
 Done the same day: [BHKP07] read in full (`docs/reading/notes/2026-10-19_causal_entropic_principle.md`; its structure
 resembles her "pasts times futures" count but multiplies volumes, not histories); the observer-window endpoints read
 (`2026-10-19_observer_window_endpoints.md`); her words of the day in the notebook.
+
+*19 October, later: **T72 read** (the owner took the gate as passed on the share and the paper's wording): A, B, C and D
+all TYPICAL under her once-per-civilization unit, the stellar-mass cut invisible under it (exact), only the hard-steps
+shape moving the peak (O138); Amendment 2's observer-moment variant restores the 2016 paper's EARLY for all stars.
+**T73 drafted, her prediction recorded, run and read** (O139): the diamond weight makes every class but D LATE, MOVES;
+her "no word changes" and our "A, B, C stay TYPICAL" fail. Next on piece 12, hers to decide: which counting unit and
+which "how many places" weight the measure uses, now that each is measured; the full suite ran green before the commit.*

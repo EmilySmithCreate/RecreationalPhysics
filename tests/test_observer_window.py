@@ -62,3 +62,30 @@ def test_sun_like_gate_peaks_near_the_present():
     p = model.density(0.9, 1.1, "gate")
     s = ow.summarize(model.t, p)
     assert 7.0 <= s["peak_dPdlnt_Gyr"] <= 30.0, s
+
+
+def test_fixed_once_kernel_is_blind_to_the_mass_range():
+    """Exact under the registered counting unit (T72 Reading): one civilization per planet at a fixed delay gives the
+    same shape for every mass range whose stars outlive the delay, so classes A and C coincide."""
+    model = ow.Model(tail_gyr=50.0)
+    a = model.density(0.8, 1.2, "fixed", delay=4.5)
+    c = model.density(0.08, 3.0, "fixed", delay=4.5)
+    a, c = a / np.trapz(a, model.t), c / np.trapz(c, model.t)
+    assert np.max(np.abs(a - c)) < 1e-9 * np.max(a)
+
+
+def test_observer_moment_variant_for_all_stars_is_early():
+    """T72 Amendment 2: weighting each civilization by its remaining window restores the 2016 paper's lifetime weighting,
+    so the all-stars class is EARLY again under it."""
+    model = ow.Model(tail_gyr=50.0)
+    p = model.density(0.08, 3.0, "fixed_moments", delay=4.5)
+    s = ow.summarize(model.t, p)
+    assert s["F_now"] < 0.05, s
+
+
+def test_diamond_volume_peaks_where_the_entropy_paper_says():
+    """T73 gate 2: V_c peaks at 0.23 t_Lambda ([BHKP07] Eq. 20) within 5 %."""
+    model = ow.Model(tail_gyr=50.0)
+    v = model.diamond_volume()
+    t_peak = float(model.t[np.argmax(v)])
+    assert abs(t_peak / ow.t_lambda() - 0.23) < 0.05 * 0.23 + 0.005, (t_peak, ow.t_lambda())

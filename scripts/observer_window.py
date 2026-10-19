@@ -127,6 +127,9 @@ class Model:
         elif kernel == "fixed":         # one civilization per planet at formation + delay, if the window allows
             alive = (win > delay).astype(float)[None, :]
             k = sfr_density_cached(self, t - delay) * alive
+        elif kernel == "fixed_moments":  # T72's reported-not-scored variant (observer-moments): a civilization that
+            alive = (win > delay).astype(float)[None, :]          # arises at t' + delay exists at every age until its
+            k = (self.cum_sfr(t - delay) - self.cum_sfr(t - win[None, :])) * alive   # planet's window ends at t' + win
         elif kernel == "hardsteps":     # uniform over the last 1/(n+1) of the window
             lo = win * n_steps / (n_steps + 1.0)
             width = win - lo
@@ -134,6 +137,31 @@ class Model:
         else:
             raise ValueError(kernel)
         return np.trapz(k * w_m[None, :], m, axis=1)
+
+    # ------------------------------------------------------------ T73: the causal diamond's comoving volume
+    def diamond_volume(self, t_i: float = 0.0) -> np.ndarray:
+        """V_c(t) = (4 pi / 3) r^3 with r = min(eta(t) - eta(t_i), eta_inf - eta(t)) ([BHKP07] Eqs. 18, 19), eta the
+        conformal time of the flat Planck 2018 cosmology, on self.t; the bottom tip at reheating, t_i = 0, as the paper
+        places it (not at the first stars: that offset moves the peak to 5.4 Gyr). Known answer: peaks at 0.23 t_Lambda (Eq. 20)."""
+        h0 = _h0_per_gyr()
+        tt = np.geomspace(1e-9, self.t[-1], 2_000_001)
+        with np.errstate(over="ignore"):
+            a = (OMEGA_M / OMEGA_L) ** (1.0 / 3.0) * np.sinh(1.5 * h0 * np.sqrt(OMEGA_L) * tt) ** (2.0 / 3.0)
+            a0 = (OMEGA_M / OMEGA_L) ** (1.0 / 3.0) * np.sinh(1.5 * h0 * np.sqrt(OMEGA_L) * T_TODAY) ** (2.0 / 3.0)
+            inv = a0 / a
+        inv = np.where(np.isfinite(inv), inv, 0.0)
+        eta = np.concatenate([[0.0], np.cumsum(0.5 * (inv[1:] + inv[:-1]) * np.diff(tt))])
+        eta += 3.0 * tt[0] * inv[0]          # the piece below the first grid point, a ~ t^(2/3)
+        eta_inf = eta[-1]
+        e = np.interp(self.t, tt, eta)
+        e_i = np.interp(t_i, tt, eta)
+        r = np.clip(np.minimum(e - e_i, eta_inf - e), 0.0, None)
+        return (4.0 * np.pi / 3.0) * r ** 3
+
+
+def t_lambda() -> float:
+    """The dark-energy timescale 1 / H_infinity = 1 / (H0 sqrt(Omega_Lambda)), as [BHKP07] define t_Lambda (to verify)."""
+    return 1.0 / (_h0_per_gyr() * np.sqrt(OMEGA_L))
 
 
 def sfr_density_cached(model: Model, t: np.ndarray) -> np.ndarray:
@@ -170,17 +198,18 @@ def run_class(spec: dict, tail_gyr: float | None) -> list[dict]:
     rows = []
     kern = spec["kernel"]
     delays = [spec.get("delay_Gyr", 0.0)]
-    if kern == "fixed":
+    if kern in ("fixed", "fixed_moments"):
         delays = [spec["delay_Gyr"] - 1.0, spec["delay_Gyr"], spec["delay_Gyr"] + 1.0]
     steps = spec.get("n_steps", [5]) if kern == "hardsteps" else [None]
     caps = [None, 100.0] if spec.get("cap_Gyr") is None else [spec["cap_Gyr"], None]
+    weight = model.diamond_volume() if spec.get("diamond") else 1.0
     for d in delays:
         for n in steps:
             p = model.density(spec["m_min"], spec["m_max"], kern, delay=d, window_fixed=spec.get("window_fixed_Gyr"),
-                              n_steps=n or 5)
+                              n_steps=n or 5) * weight
             for cap in caps:
                 s = summarize(model.t, p, cap_gyr=cap)
-                rows.append(dict(cls=spec["name"], kernel=kern, delay_Gyr=d, n_steps=n, tail_Gyr=tail_gyr, cap_Gyr=cap,
+                rows.append(dict(cls=spec["name"], kernel=kern, diamond=bool(spec.get("diamond")), delay_Gyr=d, n_steps=n, tail_Gyr=tail_gyr, cap_Gyr=cap,
                                  scored=(d == spec.get("delay_Gyr", 0.0) and (n in (None, 5)) and tail_gyr == 50.0
                                          and cap == spec.get("cap_Gyr")),
                                  verdict=verdict(s["F_now"]), **s))
