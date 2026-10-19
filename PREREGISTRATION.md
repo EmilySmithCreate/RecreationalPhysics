@@ -3436,6 +3436,51 @@ its ring of four can be turned or flipped where it joins the rest, which is a co
 is one curled ring, so STAYS WITH THE CUT, with 4 or fewer shapes at both radii, would not surprise us now. The
 registered prediction is the one that is scored.
 
+### Reading, 2026-10-19
+
+**Provenance.** The run finished on the laptop on 9 October, resumed from the 66 rows of the run that died on 5 October
+(`--resume`, recorded in the `.meta.json`). It was never committed: it lived only on the laptop's checkout until it was
+recovered onto `claude/local-only-files-2026-10-18`, and it is brought onto the record here, unread until now. Its
+`.meta.json` has no git commit (the provenance helper came on 10 October). 147 windows in twelve end states; read with
+the counts in `results/t52_hidden_relics.csv` against the definitions above. No analysis script was registered; the
+tallies below are the rows counted by kind and radius.
+
+**Counted.** Relic windows at r = 1: 87 of 87. Relic windows at r = 2: **0 of 12** (each stopped at the 20-minute
+limit). Flat windows at r = 1: 35 of 36. Flat windows at r = 2: 7 of 12.
+
+**C1 (flat space hides nothing): FAILS at r = 1.** Every one of the 35 flat windows counted at r = 1 hides **2 shapes**
+(raw count 8; 12 points, 16 links cut, two sealed points on each side), not 1. At r = 2 the 7 counted hide 1 shape each
+(raw 29,030,400; 22 points, 12 links cut). The second shape at r = 1 trades the outer pair of links of two opposite
+corners of the square on one side, at the same energy. *Seen while reading, a look and not part of the verdict:* the same
+window round a square of a built flat torus (16 × 16, 16 × 6, 6 × 16, 8 × 16) hides 1 shape, as Amendment 1 said, so the
+second shape belongs to the wiring of these end states, which are not built tori (O116: the tube re-glued six around,
+with joints between widths); why it is allowed there has not been read from the wiring.
+
+**The relic, at r = 1: SOMETHING HIDDEN.** 84 of 87 windows hide more than 1 shape: 83 hide **5** (raw 20; 12 points,
+12 links cut) and one hides 7 (raw 28). The other 3 hide exactly 1; their cut is 8, and all three sit where the relic's
+window takes in a whole ring of four, as on the curled tube.
+
+**The scaling: NOT READ.** No relic window at r = 2 finished inside the limit, which is more than half, so by the rule
+fixed above everything that needs r = 2 is NOT READ. Whether the count follows the region or the cut is not answered.
+
+**Predictions.** The chat sessions': flat windows hide 1, which fails at r = 1 and holds at r = 2; that the relic's count
+grows with the region, not read. Ours: C1 fails at r = 1; SOMETHING HIDDEN holds; FOLLOWS THE REGION not read. The lean
+written beside Amendment 1 (STAYS WITH THE CUT, 4 or fewer shapes) is not scored, and the 5 at r = 1 is already above it.
+
+**Reported, not scored: the wirings at other energies** (r = 1 only). In 84 of 87 relic windows **4 wirings lie 14
+below the original**: the relic's own cost (the column costs 14 at λ = 1.25), so inside its 12-point window the relic
+can be wired away entirely, which up to the renamings of its four sealed points is one shape. The window of 7 also has
+8 wirings 4 below. The three relic windows with a cut of 8 have nothing below, and no flat window has anything below the
+original. Every relic window has 2,360 to 9,216 valid wirings at all energies; every flat window 1,264. So the relic is
+a dip against single moves (O107) and not against a rewiring of its window.
+
+**What it means (ours).** Behind a cut round a relic the model hides about five arrangements, against two (at r = 1) and
+one (at r = 2) for flat space: a small number, ln 5 ≈ 1.6. The test that bears on gravity, whether that number grows
+with the cut or with what is inside, was not reached: the counts at r = 2 are too slow under this limit. So the
+entropic route is neither opened nor closed by T52. A rerun at r = 2 needs either a faster count or a longer limit, and
+either is a new registration; the flat control's second shape is to be read from the wiring first, since a control
+that does not give 1 makes any excess hard to read.
+
 ---
 
 ## T53. The "spaghetti" X in a warm bath: does a space with two directions curled and one open open by itself, from one place or several? (piece 5; VISION Update 42; ASSUMPTIONS O94, O100; written 2026-10-05, 11:52 ET by the clock, before any run)

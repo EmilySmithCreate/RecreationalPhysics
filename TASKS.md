@@ -640,7 +640,7 @@ four answers are in the O entries and the replacement for piece 5 is hers. In or
 2. **T54**: the script with the exact definitions of "patch" and "grows", tested; commit the draft as a
    pre-registration; compute L = 8 and 12; write the L = 16 prediction as a dated amendment; then L = 16.
 3. **Restart T52** on the laptop (its run died on 5 October at 66 rows; the runner has no resume, so the scratch
-   `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first).
+   `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first). *Done 9 October on the laptop with `--resume`; the result was recovered on 18 October and read 19 October (O137): SOMETHING HIDDEN at r = 1, C1 fails at r = 1, the scaling NOT READ.*
 4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then. *Done 2026-10-10: the cell reads DAMAGED; the window verdict stays ADVANCES ONLY and is no longer provisional (PREREGISTRATION T53, addendum; O105).*
 5. The rest of the 5 and 6 October sections as they stand.
 
