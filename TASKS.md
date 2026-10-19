@@ -529,6 +529,14 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
    in this family (Update 44, rule 11's first use).
 2. **Read the two extreme T24 waits** (N = 64; λ = 1.25 at 24 τ and 1.30 at 76 τ) from their saved wiring before any
    further waiting-time run (O52, O84). The review's guess that those runs started in a different state is a guess.
+   *Read 2026-10-10 from their saved rows, which was enough (O109; `scripts/read_wait_detector.py`; exploratory, no
+   new run): neither was a wait. Both tubes were three-quarters or more converted when the detector's 200-sweep watch
+   ended (`f_200` 0.75 and 0.875, every mark at sweep 205) and then rested on a defective sheet until φ crossed the
+   lowered threshold. The same reading of T38: the 190 never-detected tubes had all converted inside the watch, the
+   fast share is first exits inside the watch, and the tail count's yardstick was bent by them. Left open: three
+   waits at λ = 1.30, N = 64. Owed before any further waiting-time run: a pre-registered replay of those replicas
+   from their seeds, recording the threshold and every exit and return (the "attempt-resolved history test" of the
+   review branch's O108), with the owner's prediction. The technical paper still calls the tail unexplained.*
 3. **Finish T9** (16/g against ln N with errors, several replicas). Its result becomes the size caveat on every warm run
    at a fixed coupling (O88; the sourced B4): a larger network melts at a lower coupling.
 4. **The warm sheet's correlation length** (how far a disturbance at one point is felt) at the couplings a pull would be
@@ -546,7 +554,13 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
 9. **Added 2026-10-08 (VISION Update 45; CLAUDE.md rules 12, 14, 15).** (a) The prior-work note for paper 1's sentence
    "A different kind of change has not, as far as we have found, been studied in this model", on
    `docs/reading/notes/prior_work_template.md`, before any revision of paper 1 is posted; the decompactification
-   relatives of `v2_changes.md` item 4 are its first near misses. (b) T54, still a draft, gains a held-out size under
+   relatives of `v2_changes.md` item 4 are its first near misses. *Note written 2026-10-10 by a fresh assistant agent
+   (`docs/reading/notes/2026-10-10_prior_work_lambda_above_one.md`): NOT FOUND for a simulation or measurement of such
+   a change in this model, but "studied" is too broad, since [KTB19] Sec. 3.3.2 argues about one in words; the
+   sentence in `paper.tex` is to be reworded to "simulated or measured" and that section cited before any revision is
+   posted (not yet done; the owner's decision). The same note covers the plain-language edition's sentence on λ > 1:
+   NOT FOUND for any finite λ above 1, with a ban on surplus squares described in the text of [KTB19] and [KT19].
+   Its quotations are from HTML-to-text conversions and are to be checked against the PDFs.* (b) T54, still a draft, gains a held-out size under
    rule 14 before it is committed as a pre-registration: its claim that the barrier "rises with the opened patch without
    bound" is a size claim. *Done 2026-10-08: held out L = 16, fitted on L = 8 and 12, prediction written before L = 16 is computed (PREREGISTRATION T54, "Held-out size").* (c) The first red-team pass under the new rule 12: a fresh read-only session, ideally a
    different model, given the repository and paper 1's question, recorded as an O entry. Accept: (a) has a verdict;
