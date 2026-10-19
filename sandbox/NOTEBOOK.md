@@ -1570,3 +1570,4 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   Proposed glossary entries (network level, daughter level, observer level; daughter; black hole in the picture; storage
   pool; the network; turn; observer window) are drafted in the private briefing and wait on her word before they go into
   `docs/papers/glossary.md`.
+- 2026-10-19, the owner, on Carter's hard-steps reading that Earth's intelligence is a selected fast case: "yes this seems right, seems like evolution to intelligent life went about as fast as it could have everything kinda came together for us!" And on the observer-window classes: test three, "and we can add a 4th that factors more of the things in and preregister that too." (PREREGISTRATION T72, class D.) Her decisions of the evening are VISION Update 70.

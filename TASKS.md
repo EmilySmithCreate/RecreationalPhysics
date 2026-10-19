@@ -940,3 +940,26 @@ first; the daughter-universe interpretation after. In order, each registered bef
 
 Owed by the owner, unchanged from the morning: T66's repair choice and her N = 1000 word; the curling-energy design
 brief's answers (Update 57). T65's L = 16 control is launched (above); her own word for it replaces the inferred one.
+
+## 19 October, evening: the owner's decisions after her call with the model's author; the observer-window calculation registered  ◑
+
+**Added 2026-10-19** (VISION Update 70; PREREGISTRATION T72; `sandbox/NOTEBOOK.md`, 19 October; the call itself is
+private, `docs/outreach/`). Decided by her: the loop's coupling is fixed by the loop's total energy at the end of a
+turn; dark energy as the network's thermal defect density at that coupling is adopted as a hypothesis to test; the
+glossary gains the levels of description and six terms; the divergence with the published model on the Big Bang is on
+record in her words; paper 1 waits (no corrected copy to the model's author until it carries O116). In order:
+
+1. **T72, the observer-window calculation** (standard cosmology; four reference classes declared; her predictions owed
+   before any number). Before the first number: reading notes on Madau and Dickinson 2014, Bryson and others 2021 and
+   Krauss and Scherrer 2007; the script with its known-answer test on class C (the 2016 paper's 0.1 %).
+2. **A design brief for the two-system kernel** (a network at a fixed cold coupling, a daughter at its own
+   temperature): `docs/design/two_system_brief.md`, not written; nothing registered runs with it before her answers to
+   its questions (S1). Its first exact question: what the network's defect density is at a coupling g in the toy, read
+   from the equilibrium curves already measured (T6, T13), and how it scales.
+3. **Carried from before, unchanged:** T71 running on her gate and prediction; owed by her T66's repair and N = 1000
+   word, the curling-energy brief's first question, confirmation of the programme page's claim wording of 17 and 19
+   October.
+
+Done the same day: [BHKP07] read in full (`docs/reading/notes/2026-10-19_causal_entropic_principle.md`; its structure
+resembles her "pasts times futures" count but multiplies volumes, not histories); the observer-window endpoints read
+(`2026-10-19_observer_window_endpoints.md`); her words of the day in the notebook.

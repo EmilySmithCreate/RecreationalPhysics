@@ -28,6 +28,25 @@ knowledge unless a source is named, and a source not yet read is marked so.
 | the curling cost | the local term's excess over curvature, 4(λ − 1) per surplus square | 4(λ − 1)X | The author's rule is the published curvature plus this one term (VISION Update 23): every link closing a third small loop, i.e. curled tight, costs 4(λ − 1) extra. Zero at λ = 1; zero wherever space is smooth. A constant of our loop, in her account. |
 | the melt | the random phase | | [T25] calls it matter; the owner does not (VISION Update 19). |
 | Omega | X | | The name X had in an earlier version of the theory; outside reviews and older notes may still use it. The record writes X. Added 6 October 2026 (ASSUMPTIONS O103). |
+| the network | the substrate outside any daughter; in the toy, the graph and its stores | g | Where energy that has left a daughter is said to be ("could be any daughter, so we just say it is in the network"). Its coupling is the loop's quantity, fixed by the loop's total energy (VISION Update 70). Added 19 October 2026. |
+| a daughter (universe) | one connected open region produced by a burp, with its own clock | | The loop may hold many; each runs from its birth to its heat death on a copy of the same clock, and no clock runs across daughters (Updates 66, 68). In the toy a ledger entry, not a geometry (T71). Added 19 October 2026. |
+| a black hole (in the picture) | a region of a daughter whose geometry has re-curled and holds energy | | The parent's own geometry curled, not a slab inside it (Update 59). Below the burp threshold it sits; at or above it, it burps a daughter. In the toy no run has yet produced one from energy (eight tests); the nearest object is the sealed slab or tube with a spark below its threshold. Added 19 October 2026. |
+| a storage pool | the stores | | Energy held neither in open space nor in a curled region; the bath of stores of the sealed machinery (Q12), pooled under Update 62. Added 19 October 2026. |
+| a turn | one universe's life, from its burp to its last black hole dissolving | | The unit of the loop (Updates 23, 44, 59). Its end sets the network's temperature (Update 70). Added 19 October 2026. |
+| the observer window | the span of a universe's age in which observers like us can exist and can still learn its history | T_obs, W(t) | Inside a turn: a later start (the first observer-like conditions) and an earlier end (the last observer-hosting star), and the cap of about 10¹¹ years after which the history is unreadable (`docs/design/loop_measure_brief.md`). Its reference class is declared before any count (PREREGISTRATION T72). Added 19 October 2026. |
+
+## Levels of description (added 19 October 2026 at the owner's request)
+
+A statement is made at one of three levels, and a quantity defined at one is not carried to another without a stated
+rule. Her words: "levels like photon or quark are not relevant at the observer level only the superposition and light
+wave really are"; when the toy predicts an observer date the record-based count is the level; for quantum predictions
+another level and another set of terms.
+
+| Level | What exists at it | Where its statements live |
+|---|---|---|
+| the network level | wirings, squares, surplus squares, the stores, the coupling g; every exact and sealed result | ASSUMPTIONS Q and O entries; the registered runs |
+| the daughter level | one connected open region with its own temperature, matter, relics and clock | the sealed end states; T71's ledger; pieces 5, 7, 11 |
+| the observer level | histories distinguished by records an observer can hold (the quasiclassical realm of decoherent histories; records carried by light in quantum Darwinism, 12 October notes), weighted by their probabilities (Born weights, her position of 18 October) | the observer-relative-histories work (`docs/papers/observer_relative_histories`); piece 12's function; PREREGISTRATION T72 |
 
 ## Not used, and why
 

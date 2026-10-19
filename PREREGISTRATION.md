@@ -6825,3 +6825,109 @@ or arm A never splitting at a gate the stores do reach.
 A front, a seam or a payment that cancels: the layer form has none of them (Update 65). Anything about the real
 universe (VISION, "What no outcome can show").
 
+## T72. When is an observer like us most likely to find itself, by its universe's own age, under declared reference classes? (piece 12; standard cosmology, not the toy; VISION Updates 67, 68 and 70; `docs/design/loop_measure_brief.md`; the reading notes of 12 October (`2026-10-12_orh_cosmic_time_observer_measure.md`) and 19 October (`2026-10-19_causal_entropic_principle.md`, `2026-10-19_observer_window_endpoints.md`); DRAFT written 2026-10-19 on the owner's "proceed", before any number is computed)
+
+**Kind of statement.** A calculation in standard cosmology with published inputs. It tests nothing in the toy and
+nothing in the hypothesis; it fixes the target epoch that piece 12's function must reproduce, and it says what each
+declared reference class implies about our own age. Rule 13 governs it throughout: the classes built from our own case
+cannot make "we are typical" a finding.
+
+### Why this calculation, now
+
+The owner's measure (Update 68) asks, per universe and by the universe's own age, when an observer is most likely to
+exist between its birth and the end of its life-supporting stars, inside the window in which it can still learn its
+history. The published answer depends entirely on three choices the papers make differently (the 19 October reading
+note, Secs. C and D): which stars can host observers, how long a planet's window lasts, and how long it takes a mind to
+evolve. Her own criteria (a sun-like star because sight is the primary sense; a clear sky and a stable atmosphere; water
+and a carbon-like chemistry with fast generations; a civilization that can pass mathematics on) are one such choice.
+The three conditions she accepted on 19 October: the windows are declared here first; every class is reported, not the
+one that lands near now; a search note stands behind any "not found" (`2026-10-19_observer_window_endpoints.md`, Sec. F).
+
+### The question, exactly
+
+For each reference class R, compute the probability density over a universe's age t that a randomly chosen member of
+R exists at t, under rule (ii) of Update 67 read per universe (Update 68):
+
+    p_R(t) ∝ n_pl(t; R) ⊛ D_R(t) × W(t)
+
+where n_pl(t; R) is the rate at which habitable planets of class R begin their windows (the cosmic star-formation
+history times the planet occurrence for the class's stars), D_R is the class's delay distribution from a planet's
+start to an observer (convolved, ⊛), and W(t) is the observation-window cap. **The counting unit is one civilization
+per planet, counted once** (her rule of 18 October: "no interaction between planets" read as each civilization once),
+with the observer-moment variant (weighting by the length of the civilization's own window) reported beside it, not
+scored. Two numbers are read per class: the age of the peak of p_R, and F_R = P(t < 13.8 Gyr), the share of the class
+that exists before our age.
+
+### The four reference classes, fixed now
+
+All numbers are published values to be read from the sources named before they are used (reading notes owed where
+marked "to read"); none may be adjusted after a result is seen.
+
+| | A. Sun-like, by stellar lifetime (her class) | B. K and G stars, planetary window (the current middle) | C. All stars (the control) | D. Her composite |
+|---|---|---|---|---|
+| Stars | 0.8 to 1.2 M⊙ | 0.5 to 1.4 M⊙ (lower cut: atmospheric erosion and UV, Lingam and Loeb 2018; Kipping 2025's M_crit 0.34 to 0.74) | 0.08 to 3 M⊙ (Loeb, Batista and Sloan 2016) | 0.8 to 1.2 M⊙ (sight as the primary sense) |
+| Planet start rate n_pl | cosmic star-formation history (Madau and Dickinson 2014, to read) × occurrence of Earth-size planets in the habitable zone for the class (Kepler; Bryson and others 2021, to read), rising with metallicity as Lineweaver 2001 and Behroozi and Peeples 2015 model it | same | same, with the M-dwarf occurrence of the 12 October note | same as A |
+| Window per planet | the star's main-sequence lifetime, about 10 Gyr × (M/M⊙)⁻²·⁵ (standard relation, to verify), capped by the planet's habitability | a fixed 10 Gyr per planet whatever the star (Kipping 2025; O'Neill as cited there) | the star's main-sequence lifetime, to 10¹³ yr | the star's lifetime, but the observer appears only in the planet's last stretch (next row) |
+| Delay D_R | fixed 4.5 Gyr after the planet forms (Haqq-Misra and others 2018; Earth's own) | fixed 3 Gyr (Kipping 2025) | fixed 4.5 Gyr (as the 2016 paper's assumptions allow; see the gate) | hard steps as a selected fast case (Carter 1983; Hanson 1998; Snyder-Beattie and others 2021): the time left after the last step is distributed like one more step, so the observer's age is drawn from the last 1/(n+1) of the planet's window, with n = 5 steps (Carter's 2008 revision, 5 to 6; reported also at n = 3 and 7) |
+| Observation cap W(t) | none (reported with and without the 10¹¹ yr cap) | none (same) | none (same) | the cap of about 10¹¹ yr after which a universe's history is unreadable (Krauss and Scherrer 2007, to read), as a hard cut |
+| Future star formation | the exponential tail of Loeb and others (e-fold 50 Gyr) | same | same (their choice) | same, with Behroozi and Peeples' longer tail reported beside |
+| Published expectation (from the 19 October note; not ours) | peak near the present | a few to ten times in the future if the stellar lifetime ends the window; near the present with the 10 Gyr planetary window | peak near 10¹³ yr; about 0.1 % before now | not published as a combination (the note's Sec. F: not found) |
+
+**Why these four and not others (ours).** A is the class she stated on 19 October, in its simplest published form. B is
+the most recent and most widely cited middle position: the three latest papers (Lingam and Loeb 2018, Snyder-Beattie
+2021, Kipping 2025) all suppress red dwarfs, by different mechanisms, and Kipping's planetary window is the newest
+proposal for how a window ends. C is the reproduction gate of rule 2: it must return the 2016 paper's published
+numbers before any other class is believed. D carries everything she has said: sun-like stars for sight, the hard-steps
+delay she agreed with ("evolution to intelligent life went about as fast as it could have"), her two nested windows
+(the observer's later start and earlier end inside the turn; Update 68), the observation cap she adopted on 18 October,
+and one civilization per planet. Its one fitted-looking input is the number of hard steps, which is why n is reported
+at three values. The things she named that no class can carry: a clear sky and a particular atmosphere (no published
+rate), written language (inside the delay, not separable), and the strange-loop measure's branching (ruled out of this
+question by Update 68).
+
+### Gates, before any class is interpreted
+
+1. **Reproduction (rule 2).** Class C, with the 2016 paper's assumptions (their IMF, their SFR tail, constant occurrence
+   and life probability), returns F_C within a factor of two of their 0.1 % and a peak within a factor of two of 10¹³ yr.
+   If it does not, the inputs or the arithmetic are wrong and nothing else is read.
+2. **Inputs read at the source.** Madau and Dickinson 2014, Bryson and others 2021 and Krauss and Scherrer 2007 have
+   reading notes before their numbers are used; the stellar-lifetime relation is stated with its source.
+3. **Every class reported**, with the peak age, F_R, and the sensitivity of each to the future-SFR choice and to the
+   delay (±1 Gyr for fixed delays; n = 3, 5, 7 for class D).
+
+### Verdict words, per class
+
+- **TYPICAL**: 0.05 ≤ F_R ≤ 0.95.
+- **EARLY**: F_R < 0.05 (most of the class exists after us).
+- **LATE**: F_R > 0.95.
+- **INCONCLUSIVE**: the class's F_R crosses a boundary under the sensitivity variations of gate 3.
+
+For classes A and D, which are built from our own case, TYPICAL is a declared assumption holding together, not a
+finding (rule 13). What is informative across the table: whether B and D agree with A (then the sun-like restriction is
+doing the work, not the window shape); whether D's hard-steps shape moves the peak relative to A's fixed delay (a
+prediction of Carter's that was not fitted to our age); and by how much C disagrees (the published "early" result, as
+the control).
+
+### Predictions
+
+- **The owner's:** owed before any number is computed; recorded here as a dated amendment in her words.
+- **Ours (unverified; from the published expectations):** A TYPICAL with F_A between 0.3 and 0.7; B TYPICAL but with a
+  peak later than A's, F_B between 0.1 and 0.4; C EARLY, F_C about 0.001, reproducing the 2016 paper; D TYPICAL with its
+  peak later than A's (the hard-steps shape pushes observers toward each planet's end) and F_D between 0.2 and 0.6 with
+  the cap, nearly the same without it, because the cap bites only past 10¹¹ yr where class D's planets are gone.
+
+### What this cannot show
+
+Anything about the toy or the hypothesis (no term of it depends on either); whether the reference class is right (that
+is a declaration); the branching across daughters (excluded by Update 68); and anything about observers unlike us.
+
+### Standing requirements of 8 October
+
+1. No size claim; no held-out size. 2. The prior-work note is `docs/reading/notes/2026-10-19_observer_window_endpoints.md`,
+Sec. F (no paper found that combines the cosmic planet history, a stellar-mass cut and a hard-steps delay). 3. Not a
+milestone; no fresh review named.
+
+### What is owed before the first number
+
+The owner's predictions for the four classes; the three reading notes of gate 2; a tested script (`scripts/observer_window.py`,
+with its known-answer test on class C) committed before it is run.
