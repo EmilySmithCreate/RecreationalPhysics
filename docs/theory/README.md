@@ -98,4 +98,6 @@ be one thing rather than five.
 ## Research handoffs
 
 - `observer_relative_histories_research_handoff.md` (12 October 2026): observers, histories and the quantum part.
+- `relational_cosmology_handoff_2026-10-16.md` (16 October 2026, the author's, kept as received): the slab as the black hole's inside, lambda constant, daughters; read against the record in `relational_cosmology_review_2026-10-16.md` (VISION Update 59).
+- `omega_opening_inflow_density_handoff_2026-10-19.md` (19 October 2026, the author's, kept as received): late inflow during the opening and the primordial density differences; read against the record in `sandbox/NOTEBOOK.md` (19 October) with the look `sandbox/inflow_density.py`.
 - `observations_research_handoff.md` (14 October 2026): connecting the hypothesis to observations (dark matter as relics, black holes from concentrated relics, the birth and a signal it could leave, dark energy).

@@ -1503,3 +1503,73 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   counting alone could not give (T15 rung 3a); and "the next moment locks us in" holds only where that moment leaves a
   record, since a version change that leaves no record can still be undone (piece 13's toy, O125). What the toy still
   lacks is the object: which arrangement in it carries the versions (the loop of four is not a resonator; O30).
+- 2026-10-19, the owner, a handoff of hers on the inflow and the primordial density differences (drafted in another
+  conversation of hers, a spoken exploration, and passed on; kept as received in
+  `docs/theory/omega_opening_inflow_density_handoff_2026-10-19.md`; it calls the hypothesis Omega). Her choices from it, as
+  that assistant put them in order: the question is the primordial density differences of standard cosmology, not the
+  toy's seeds of an opening, and the matter-antimatter excess is parked as a separate track; her candidate is that
+  "additional energy continues to flow into the black-hole-associated curled region during the short interval in which
+  its opening transition is underway", "spread throughout the curled structure, not injected through a single doorway or
+  location", a contribution that "may be tiny compared with the larger stored energy released at opening", and the
+  question is "whether slightly asynchronous entry and conversion could leave spatial variations in the daughter's
+  initial energy or later matter distribution". Her order of events: one direction curled inside the black hole; what
+  falls in is stored and "does not retain its particle identity"; "lambda is a universal model coefficient, not
+  something that rises with energy"; the opening begins and "further energy continues arriving while the transition is
+  still in progress", the region "opening almost all at once" with "a brief transition interval" allowed; "the entire
+  curled region opens first", then pairs are made and annihilate in the daughter; the daughter is a finite space whose
+  expansion is "stretching existing relationships, not additional spatial regions continually uncurling"; her "roughly
+  one-in-a-billion" was said of the matter excess and is "a conceptual suggestion, not a calculated energy fraction".
+  The document's own program: a symmetry control first (a uniform inflow must give zero contrast), then the spatial
+  response to a uniform, a time-varying and a spatially variable inflow at the same total, then stretching, then the
+  sky's criteria; and its first question back to her: after the opening, does every region stretch equally, or do the
+  rules already allow different rates in different places?
+  *Ours, against the record, with one look (`sandbox/inflow_density.py`; LOG, 19 October).* (1) **Where her sequence
+  already is the toy.** Under the layer form she chose (Update 65) with the gate g1 (Update 69) the whole region opens
+  in one move: "the entire curled region opens first" is what the toy does, the "transition interval" has no length,
+  and the late inflow is exactly what the stores hold beyond a N_slab at the instant of the split, which the ledger look
+  of this morning already read (0.3 % of the release at λ = 1.25, 28 % at 1.10; set by the gate, the rate and the
+  moment). Under Update 66 none of it reaches the daughter: the daughter is a ledger entry of exactly a N_slab with no
+  geometry, so **in the toy as decided the daughter has no spatial field at all**, and her question cannot be put to it.
+  Two things would have to change, both hers under S1: something of the parent's stores would have to travel with the
+  lump (Update 66 forbids the other direction and does not decide this one; the same door the CP entry of this morning
+  found), and the daughter's space would have to be represented, which it is not. (2) **The symmetry control (her
+  document's Stage 1), run on the kernel.** The slab 4 × 16 × 16 at λ = 1.25 fed uniformly, or uniformly in space and in
+  bursts in time, reaches the gate with every store equal; the field's contrast is exactly zero and the split releases
+  a N_slab to the unit. The layer form passes the control: symmetric inputs give a symmetric output. (3) **The grain,
+  not the rate (Stages 2 and 3; exact arithmetic, confirmed by the kernel).** A feed arriving in deposits of size q at
+  random points is a Poisson sprinkle: when the stores hold m per point the contrast per point is sqrt(q/m), over b
+  points sqrt(q/(m b)), and the spectrum is flat. At the gate m = 2a, so at λ = 1.25 deposits of 1 give 0.71 per point
+  (measured 0.69 to 0.74), deposits of 4 give 1.41 (1.41 to 1.47), deposits of 0.01 give 0.071 (0.069 to 0.073), and at
+  four times the rate 0.67 to 0.73: **the rate does not enter.** A contrast of one part in 10^5 at the gate would need a
+  grain of 2 × 10^-10 of a unit. The field is white: averaged over 4 × 4 columns it falls from 0.7 to 0.06 to 0.08, as
+  1/sqrt(b) says. So a grainy inflow hands on its own grain, as her document warns, and the toy adds that the grain is
+  the only thing it hands on. Under the reference rule f1 (the release credited to the two layers beside the cut, the
+  new layers empty) the field after the split reads 4, 0, 0, 4, 2, 2 per layer: a pattern with the width as its scale,
+  the "built-in size" her document cautions against, made by the move and not by the inflow. (4) **The front form (the
+  2D tube 4 × 128 with a store at every point: the local form she did not choose, kept as the control), where the lump
+  lands where the front made it.** Fed uniformly, every store reaches the wall of 12 in the same sweep and the tube goes
+  everywhere at once (81 to 103 of 128 columns in one block of 50 sweeps): a uniform feed makes a flash, not a front,
+  because the wall is a gate at every point and uniformity trips them all together. Fed in random deposits the Poisson
+  tail trips a few points early (1 to 17 columns in the first block, at sweep 150 to 700 against 1,250), and a front
+  runs from them. In both the product is hot and largely broken: 4 to 8 units per point are fed before the first seed
+  can go, against a release of 1, because with one store per point nothing can start until the stores hold the wall,
+  which is twelve times the lump; the inflow before the opening is never a sliver in this form (T9's "too little room"
+  seen from the other side). The energy per column at the end has a contrast of 0.24 to 0.35 under every feed, uniform
+  included, falls as 1/sqrt(b) (about 0.15 over 4 columns, 0.06 over 16, 0.03 over 32), has a flat spectrum (fitted
+  slopes between −0.6 and +0.5, about zero) and no correlation with when the column opened (−0.07 to 0.15). So in the
+  front form the control does not give zero, because the chain's own randomness (which point moves next) is an input
+  her document's Stage 1 did not list, and what it gives is white noise with no scale beyond the column: the
+  "microscopic fluctuations" candidate, in the toy, is the sampler, and it makes the same spectrum as the knots (the
+  look of 18 October). (5) **What the toy cannot do (Stage 4).** Nothing stretches: the only move that adds space is
+  the split, deterministic and uniform; stores exchange energy only through moves, so a deposited pattern neither
+  mixes nor grows; there is no pull to amplify it and no expansion to carry it to large scales. Her first question
+  (does every region stretch equally?) has no counterpart in the toy, and is hers to answer before anything is built.
+  (6) **The rate's one role, exact.** In the front form the late inflow per point is r × T_front, the rate times the
+  crossing time, against a release of a; "tiny" means r far below a / T_front. The crossing time grows with the tube
+  (the speed per chain sweep halves as the length doubles, O93; fixed per fair sweep), so the admissible rate falls with
+  the size of the daughter. The rate sets the size of the late sliver, never its pattern. (7) **Said plainly.** The
+  inflow's unevenness, if any, is what the toy hands on; the toy makes no unevenness of its own except white noise
+  from its sampler and its knots; and under the decisions in force the daughter has no field to hold any of it. The
+  sky's pattern (nearly equal strength at every scale, in step across regions never in contact) is not white noise,
+  and no feed can make it so here. Idea, reading and a look; no knob; nothing registered. Asked of her: the stretching
+  question, and whether anything of the stores may travel with the lump.
