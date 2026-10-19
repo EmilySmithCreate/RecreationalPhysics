@@ -1977,3 +1977,83 @@ nothing, fires only when the stores of the two layers beside the cut already hol
 own words of 18 October ("a step when the stores first hold the whole cost") made a rule. *Ours, exact (Update 66):* the gate
 sets how long X sits between re-forming and burping, about 2a/r sweeps under g1, and not how many daughters are born or what
 each carries; those are fixed by the feed. Her prediction for T71 is recorded in its Amendment 2, and T71 is launched.
+
+Update 70 (2026-10-19): **DECISION (the author's, "YES"): at the end of a turn every daughter's energy has returned to
+the network, and the network's temperature is fixed by the loop's total energy alone; and, adopted as a hypothesis to
+test, dark energy is the network's thermal defect density at that coupling.** Why this page changes: the first is a
+claim about the hypothesis's shape (the loop's coupling becomes a derived number), the second names a new ingredient
+the toy would need (S1), and both came out of her thinking on 19 October after her video call with the model's author
+(her words are in `sandbox/NOTEBOOK.md`, 19 October; the call itself is private correspondence and stays in the
+gitignored outreach folder). Merging this update is her acceptance of the wording.
+
+- **DECISION: the loop's coupling is derived, not chosen.** Her words: the matter is not in the network, "it is in each
+  daughter universe. The network's cold coupling is the total entropy in the network"; energy that has left a daughter
+  "could be any daughter, so we just say it is in the network"; and, confirmed, at the end of a turn every daughter's
+  energy has returned to the network and the network's temperature is fixed by the loop's total energy alone. *Ours,
+  exact in the toy's terms:* a sealed system's temperature is defined by how its entropy changes with energy (Q12: g is
+  read off the stores), and its end state depends on total energy and the count of states, not on history (Update 11's
+  test: end states predicted from the energy alone to 0.003 over a threefold range of total energy). So the loop's cold
+  g is set by the loop's total energy, the same on every turn. Claim 6 (conservation across the change) is what makes
+  "the loop's total energy" a number at every stage. *Ours, unverified:* the standard counterpart of a universe's end
+  state having a temperature is the Gibbons–Hawking temperature of empty de Sitter space, set by its own curvature
+  (about 10⁻³⁰ K for our dark energy; general knowledge, to verify; sign caution, de Sitter's spacetime curvature is
+  positive where the published model's spatial curvature is negative, [T22]).
+- **Adopted as a hypothesis to test (hers, "yes proceed"): dark energy is the network's thermal defect density at the
+  loop's own coupling.** At any coupling above zero the equilibrium network carries defects, because there are vastly
+  more defected arrangements than one perfect lattice; the published model reads that finite-coupling curvature as de
+  Sitter space and dark energy ([T22], [T24]). Her version freezes the coupling: if g is the loop's constant and not the
+  matter's temperature, the defect density per volume never thins as space grows and behaves as a cosmological constant,
+  tiny if g is small. This gives Update 41's "dark energy is the energy of space itself, source open" a candidate source,
+  and the previous decision supplies the g. *Ours:* what is measured is a density, constant to about ten per cent over the
+  last eight billion years, of scale about (2 meV)⁴ (general knowledge, to verify); the shares at any epoch follow from
+  it (68 % now, about 10⁻³⁷ at 4 MeV, O103 (a)). What the toy cannot yet do: every sealed run gives the network and the
+  matter one temperature, so the sealed end state's defects (about 5 % of points) are at the matter's temperature and
+  cannot be compared with the loop's. **The next modelling step is therefore named, not built:** a two-system kernel, a
+  network at a fixed cold coupling with a daughter carrying its own temperature, which under S1 needs a design brief
+  with its exact form before any registered run. Rule 13 applies: a density that comes out small is a result only after
+  the brief's constants are pinned by something other than the target.
+- **Her position, recorded (not a knob):** on Carter's hard-steps reading that intelligence on Earth is a selected
+  fast case, "yes this seems right, seems like evolution to intelligent life went about as fast as it could have,
+  everything kinda came together for us." This enters PREREGISTRATION T72 as the delay shape of her composite reference
+  class.
+- **Where her picture and the published model's part, in her words.** The model's author holds, in print, that the
+  critical point of the random-to-geometric transition is the Big Bang and that time is a universal clock identified
+  with the coupling ([Trugenberger23], [T24]); in conversation on 19 October he described the Big Bang in his picture
+  as effective, an appearance to an observer inside a static network, with time not fundamental. Her picture has a
+  literal event (claim 4: a stable-for-now arrangement opens, a front moves, energy is released) and many of them: "my
+  trillions of black holes producing trillions of disconnected open spaces (that still share a fundamental connection of
+  shared constant settings)". The two agree that matter and space are one kind of thing (claim 3) and part on whether
+  the beginning is an event. *Ours, unverified:* they could meet if his "effective Big Bang for an internal observer" is
+  what an observer inside one of her daughters sees of its own opening; nothing tests that.
+- **What runs.** Nothing new in the toy. PREREGISTRATION T72, the observer-window calculation in standard cosmology
+  (four reference classes declared before any number), on her "proceed"; it sets the target epoch for piece 12 and tests
+  nothing in the toy. The glossary gains the levels of description she asked for (`docs/papers/glossary.md`).
+
+Update 71 (2026-10-19, late): **DECISION (the author's): piece 12's measure counts once per civilization, weights the
+ages by the causal diamond, and an observer is a civilization in which at least one intelligent being asks this
+particular question.** Why this page changes: Update 68 left two definitions of the measure open, the counting unit
+and the "how many places" weight; T72 and T73 (ASSUMPTIONS O138, O139) measured what each choice does, and she chose.
+Her words, from the same evening.
+
+- **The counting unit: "let's go once per civilization."** Every civilization that ever arises counts one, placed at
+  its birth, however long it lasts.
+- **The weight: the causal diamond**, only the places an observer at that age can be causally tied to, "because I
+  believe in the strange loop and the version probability mattering."
+- **What an observer is:** "a civilization where at least one intelligent being asks this particular question. So
+  much interaction and uncontrolled stuff otherwise: like how long does a being last, how do they learn / share / pass
+  information, what is the lifecycle, how violent / destructive is said civilization. Things asking the question itself
+  can affect." *Ours:* this is the reason for counting once rather than by moments: the length of a civilization's
+  life depends on things the asking itself can change, so the measure does not weight by it. It agrees with the
+  observer level of the glossary (an observer holds a record) and with her rule of 18 October (each civilization once).
+- **Disclosed under rule 13.** The numbers were known when she chose: under this unit alone every stellar class is
+  TYPICAL (O138); with the diamond, every class but her composite D is LATE, and D lands at F = 0.53 (O139). Choosing
+  the combination under which our age is most typical, for reasons stated after the numbers, is exactly what rule 13
+  forbids as evidence; so **nothing about our own age is scored under this measure from here.** Her reasons are
+  recorded as reasons of principle (what an observer is; what the loop and the versions require), and the measure's
+  first real test must be a quantity it predicts that was not put in. *Ours, candidates, none chosen:* the share of
+  observers that find their universe's dark energy already dominant (ours did, four billion years ago); the
+  distribution of the ratio of a universe's age to its dark-energy timescale among observers; or, in the toy, the one
+  term the toy supplies, the daughters per unit of energy fed (b of the brief).
+- **What stands.** Updates 67 and 68 (per universe within a setting; by each universe's own age; no clock across
+  universes); the observation window W(t) as her term; the hard-steps delay as the shape she agreed with (Update 70).
+  The brief `docs/design/loop_measure_brief.md` carries the two definitions in its section 7.

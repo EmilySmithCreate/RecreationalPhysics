@@ -184,3 +184,19 @@ the peak forward but the data lean away from one and it cuts against her heat-de
 constant dark energy leaves bound structures bound and shortens only the window, which is W(t); and "no interaction"
 moves nothing as a factor and a great deal as a rule for who counts (each civilization once), which is piece 14's
 reference-class choice and is hers to make on its own grounds (sandbox look, LOG 18 October; a look, not evidence).
+
+## 7a. The two definitions, decided (2026-10-19; VISION Update 71)
+
+- **Counting unit: once per civilization.** The owner's choice ("let's go once per civilization"). In T72's terms the
+  `fixed` and `hardsteps` kernels; the observer-moment and planet-years units are reported beside as variants, never
+  scored. Her reason: a civilization's length of life depends on things the asking itself can affect (how long a
+  being lasts, how it learns and passes information, its lifecycle, how destructive it is), so the measure does not
+  weight by it.
+- **Weight on ages: the causal diamond's comoving volume** ([BHKP07] Eqs. 18, 19; bottom tip at reheating; peaks at
+  0.23 t_Λ, 4.05 Gyr for our constant; `Model.diamond_volume` in `scripts/observer_window.py`). Her reason: the strange
+  loop and the version probabilities. It replaces the fixed comoving volume; the 100 Gyr cap stays as part of W(t).
+- **An observer:** a civilization in which at least one intelligent being asks this particular question.
+- **Measured consequences, known when chosen (O138, O139), and rule 13:** under these two choices class D (sun-like
+  stars, hard steps) gives F = 0.53 and every other stellar class gives LATE. Our own age is therefore not scored under
+  the measure from here; the measure's first test is a quantity it predicts that was not put in (candidates in Update
+  71).

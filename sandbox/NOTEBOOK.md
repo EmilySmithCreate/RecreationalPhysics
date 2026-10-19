@@ -1503,3 +1503,73 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   counting alone could not give (T15 rung 3a); and "the next moment locks us in" holds only where that moment leaves a
   record, since a version change that leaves no record can still be undone (piece 13's toy, O125). What the toy still
   lacks is the object: which arrangement in it carries the versions (the loop of four is not a resonator; O30).
+- 2026-10-19, the owner, afternoon and evening, after her video call with the model's author (the call itself is
+  private correspondence and is recorded only in the gitignored outreach folder; what follows is her own thinking,
+  in her words where quoted). On the point that the physically relevant network at finite coupling is negatively
+  curved: "turn up temp, sample higher excited entropy is very relevant"; and, on whether that warm network is the
+  loop: the network has no matter in it, "the matter isn't in the network it is in each daughter universe. The
+  network's cold coupling is the total entropy in the network, which in my toy is the strange loop and in his is a
+  doughnut with lots of handles." Asked how a coupling could run over time if the network has no time: it cannot; time
+  belongs to each daughter (Updates 33 (5), 41, 68) and the coupling is a constant of the loop (Update 23). *Ours:*
+  "the coupling is the network's entropy" is the microcanonical definition of temperature, the toy's own rule (Q12: g is
+  read off the stores); every sealed run so far gives the network and the matter one temperature, so her picture needs
+  two systems, a network at a fixed cold coupling and a daughter with its own temperature, which no kernel does (S1).
+- 2026-10-19, the owner. Dark energy as the network's thermal defect density at the loop's own coupling: if g is a
+  constant of the loop rather than the matter's temperature, the defect density is fixed by that small g, never thins as
+  space grows, and behaves as a cosmological constant. Her question whether the dark-energy share is compared at the
+  birth temperature or averaged over time ("all the cold end time would balance the warm time to a very low g"). *Ours:*
+  what is measured is a density, constant to about ten per cent over eight billion years, of scale about (2 meV)^4
+  (general knowledge, to verify); shares at any epoch follow from it (68 % now, about 10^-37 at 4 MeV, O103 (a)). The
+  sealed end state's defects are at the matter's temperature, not the loop's, so they cannot yet be compared with it.
+  This is Update 41's "dark energy is the energy of space itself, source open" given a candidate source, and the
+  published identification of dark energy with the network's curvature at finite coupling ([T24]) with the coupling
+  frozen rather than running. Not decided.
+- 2026-10-19, the owner, confirmed ("yes I think this is the case"): **at the end of a turn every daughter's energy has
+  returned to the network, and the network's temperature is fixed by the loop's total energy alone.** *Ours:* claim 6
+  makes the loop's total energy well defined; the toy's sealed end state depends on total energy and the count of
+  states, not on history (Q12; Update 11's test, end states predicted from energy alone to 0.003 over a threefold range,
+  which she called "really important"). Consequence: the loop's cold g is derived from the loop's energy, the same every
+  turn, and supplies the g of the previous line; two unknowns become one. Still needed: what "returns to the network"
+  means for a black hole in the toy (no fold has been produced from energy in eight tests; the daughter is a ledger under
+  Update 66), and the two-system kernel. A candidate for a VISION decision; hers to say.
+- 2026-10-19, the owner: from a daughter's point of view energy is in one of four places, "in the universe, in a black
+  hole curled torus waiting to burp, in a storage pool, or outside of it, in space"; energy that has left a universe
+  "could be any daughter, so we just say it is in the network. Which doesn't matter, all the same." A daughter's possible
+  end state: a black hole that "has as much energy as it is going to get but it is not at the threshold of the burp so it
+  just sits ... 3d space is empty and the front in the black hole is frozen forever, unless there is a mechanism for it
+  to dissolve and that bit of not enough energy returns to the daughter space in a way it can never be a black hole."
+  *Ours:* the frozen sub-threshold hole is the sealed tube with nothing to spare (Update 9); the toy has no dissolve rule
+  (a knob under S1); the standard counterpart is Hawking evaporation (general knowledge, to verify). Her question whether
+  the network's temperature when the last black hole dissolves could "create a negative-curvature-looking temp": empty
+  de Sitter space has the Gibbons-Hawking temperature set by its own curvature, about 10^-30 K for our dark energy
+  (general knowledge, to verify; sign caution: de Sitter's spacetime curvature is positive, the published model's spatial
+  curvature negative, and [T22] argues the latter behaves like the former).
+- 2026-10-19, the owner. Two nested windows: "from the network temp perspective, the last black hole is the end. From
+  the observer, we need the later start point and earlier end point." *Ours:* this is T_turn and T_obs / W(t) of
+  `docs/design/loop_measure_brief.md` (Update 68), said as a rule. Her reference class for the observer window: a
+  sun-like star, "as non-sun like stars would likely not make sight the observer's primary sense like it is the humans.
+  Need clear view of sky, a particular type of atmosphere. Consumable energy. Water and carbon or similar molecule set
+  that can create a DNA like thing for lots of fast evolution cycles." And on the delay: Earth took over three billion
+  years with fast life cycles and abundant energy; then a civilization that cares about cosmology, light as the central
+  sense because of stars, written language across millions of people. *Ours:* [LBS16] (read in full; 12 October note,
+  line 59): "for mass ranges centered narrowly around a solar mass ... the current time indeed represents the peak"; the
+  criteria are the Rare Earth line (Ward and Brownlee 2000, not read); Carter's hard steps (1983, not read) is the
+  delay. Rule 13: the class is chosen from our own case, so "typical under it" is a declared assumption, to be
+  pre-registered before any count. Reading in progress: `docs/reading/notes/2026-10-19_observer_window_endpoints.md`.
+- 2026-10-19, the owner, on counting versions: at the observer level, "levels like photon or quark are not relevant at
+  the observer level only the superposition and light wave really are"; when the toy predicts an observer date the
+  record-based count of the observer-relative-histories work is the level; for other predictions (quantum) another level
+  and set of terms; "we should have a clear glossary." *Ours:* the causal entropic principle ([BHKP07], now read in
+  full, `docs/reading/notes/2026-10-19_causal_entropic_principle.md`) counts thermodynamic entropy produced inside a
+  causal diamond, which is the log of a version count over microstates of matter and light; her count needs the
+  record-level coarse graining (decoherent histories; quantum Darwinism's records carried by light, 12 October notes) and
+  Born weights (her position of 18 October). Her "pasts leading to a state times futures from it, peaking in the middle"
+  has the shape of the diamond (its size at t is the smaller of past reach and future reach, [BHKP07] Eq. 18), but the
+  paper multiplies volumes, not counts of histories; both factors are needed (how many places times how likely each holds
+  an observer), and a plain count of versions multiplies across regions and diverges where entropy, its logarithm, adds.
+  Proposed glossary entries (network level, daughter level, observer level; daughter; black hole in the picture; storage
+  pool; the network; turn; observer window) are drafted in the private briefing and wait on her word before they go into
+  `docs/papers/glossary.md`.
+- 2026-10-19, the owner, on Carter's hard-steps reading that Earth's intelligence is a selected fast case: "yes this seems right, seems like evolution to intelligent life went about as fast as it could have everything kinda came together for us!" And on the observer-window classes: test three, "and we can add a 4th that factors more of the things in and preregister that too." (PREREGISTRATION T72, class D.) Her decisions of the evening are VISION Update 70.
+- 2026-10-19, the owner, her T73 prediction and reason, in her words: "whether the diamond weight moves the peaks - yes it will"; it "lifts the share before now, especially because equal energy 50/50 has already passed and that is where the cone concentrates." Her decision on T72's gate: "Take the gate as passed on the share plus the paper's loose wording, and read the four classes from the committed file as registered." Read: O138, O139. *Ours:* the one class that keeps our age typical under both the plain and the diamond weight is hers (sun-like stars with Carter's hard steps); the counting unit decides more than the stars; which unit and which weight the measure uses is now her choice with the consequences measured.
+- 2026-10-19, the owner, late, her decisions on piece 12's measure (VISION Update 71), in her words: "let's go once per civilization"; the causal diamond as the weight "because I believe in the strange loop and the version probability mattering"; "an observer is a civilization where at least one intelligent being asks this particular question. so much interaction and uncontrolled stuff otherwise. like how long does a being last, how do they learn / share / pass information, what is the lifecycle, how violent / destructive is said civilization. things asking the question itself can affect." And on D landing at the median under the diamond: "is it just me or is this amazing!" *Ours:* recorded with rule 13's disclosure that the numbers were known when she chose; our age is not scored under the measure from here.
