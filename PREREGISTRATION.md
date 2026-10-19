@@ -6622,6 +6622,16 @@ max(2000, 40 a / r) sweeps per cell (2,000 at λ = 1.10; 2,560 and 2,000 at 1.25
 each curling cost's longest); seeds 20267101 to 20267112. The held-out size L = 16 runs after L = 8 and 12 are read and its
 words and numbers are written (rule 14), with her word for it.
 
+*Amendment 3 (2026-10-19, about 01:35 UTC by the clock, after launch and before any result was fetched or read): the owner
+revises her prediction for layer moves alone.* Told that the kernel's own check at L = 6 and 8 (an exploratory smoke
+run of 18 October, not a registered result) already shows CYCLES with exactly a N_slab per daughter under layer moves alone,
+she wrote: "L = 6 and 8 oh I didn't look at the kernel, I agree with u here given initial results." So her prediction for
+the layer-moves-alone arm becomes CYCLES in every cell, as ours; her original words of Amendment 2 stay on the record above,
+and this change is disclosed as made on the kernel's check, before any registered cell was read. Her predictions for the
+model arm, the clean switch, the control and the energy per daughter are unchanged. The two of us now predict the same
+words in every arm, so T71 tests a shared expectation; what it can still decide is whether the clean switch ever interferes
+in the model arm, the period and the slab share under g1, and the size claim at L = 16.
+
 ### Why
 
 The author's picture of 18 October: energy arrives at every point of the slab; the slab is X; when the stores first

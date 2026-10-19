@@ -1368,3 +1368,7 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   recorded verbatim in PREREGISTRATION T71, Amendment 2, scored by the move sets she names (her letters A and B are the
   registration's B and A), and T71 is launched (12 jobs). Where she and we differ: layer moves alone, which she expects to
   cycle less consistently and we expect to cycle in every cell.
+- 2026-10-19, the owner, revising her T71 prediction for layer moves alone after hearing of the kernel's check at L = 6
+  and 8: "L = 6 and 8 oh I didn't look at the kernel, I agree with u here given initial results." *Ours:* recorded as
+  PREREGISTRATION T71, Amendment 3, after launch and before any result was fetched; her original words stay on the record.
+  Both of us now predict CYCLES in every cell of both layer arms.
