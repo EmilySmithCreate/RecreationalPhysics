@@ -6921,11 +6921,47 @@ the control).
 Anything about the toy or the hypothesis (no term of it depends on either); whether the reference class is right (that
 is a declaration); the branching across daughters (excluded by Update 68); and anything about observers unlike us.
 
+
+### Reading, gate 1 (2026-10-19; `tests/test_observer_window.py`; the classes are not read)
+
+**The reproduction gate passes on the share and fails by the letter on the peak.** Under the 2016 paper's assumptions
+(their IMF, their lifetimes, the Madau and Dickinson rate with their 50 Gyr tail, planet-years while the star lives,
+stars from 0.08 to 3 solar masses) the share before now is **0.17 %**, inside the registered factor of two of their
+0.1 %. The peak of dP/d ln t is **4.4 × 10³ Gyr (4.4 × 10¹² yr)**, against the registered window of 5 × 10³ to 2 × 10⁴
+Gyr around their "around 10¹³ yr": a factor of 2.25 below, outside by the letter. The paper's own statement is loose
+("peaks around the lifetime of the lowest mass stars t ∼ 10¹³ yr"), the lifetime of its lightest star is 1.07 × 10¹³ yr,
+and its Fig. 4 is not digitised, so whether 4.4 × 10¹² is what their curve shows is not known from the text. The
+tolerance was ours, written before the number, and is not changed after it. *Ours, exact under the model:* by 10¹³ yr
+only stars below about 0.08 solar masses still live, so dP/d ln t must fall to zero at their lifetime and its peak must
+lie below it; a peak at four to five times 10¹² yr is what the integrand gives.
+
+**By the gate as written, nothing else is read.** The script was run once in full and its output committed unread
+(`results/t72_observer_window.csv`, the classes' rows included); the test for the peak is marked an expected failure
+with this reason so that the suite passes and the failure stays visible. **The owner decides** whether the gate is
+taken as passed on the share and the paper's loose wording (then the classes are read from the committed file as
+registered), or whether the peak is to be checked against the paper's figure first (digitise Fig. 4), or whether the
+inputs are to be checked again.
+
 ### Standing requirements of 8 October
 
 1. No size claim; no held-out size. 2. The prior-work note is `docs/reading/notes/2026-10-19_observer_window_endpoints.md`,
 Sec. F (no paper found that combines the cosmic planet history, a stellar-mass cut and a hard-steps delay). 3. Not a
 milestone; no fresh review named.
+
+*Amendment 1 (2026-10-19, written before any number was computed). Three things fixed by the script as built
+(`scripts/observer_window.py`, `configs/t72_observer_window.json`, tests in `tests/test_observer_window.py`):*
+*(a) No metallicity factor on planet formation in the main computation: the 2016 paper's assumption is kept, and the
+rising factor of Lineweaver 2001 and Behroozi and Peeples 2015 is deferred to a sensitivity run once those functions
+have been read at the source (gate 2 did not cover them). (b) The reproduction gate (class C under the 2016 paper's
+assumptions) is computed in a separate "gate" kernel, planet-years while the star lives with no delay, which is what
+that paper counts; the registered class C (one civilization per planet at a fixed 4.5 Gyr delay) is scored separately.
+The gate's peak is read on dP/d ln t, the quantity the 2016 paper's "10^13 yr" refers to; the classes' peaks are read on
+dP/dt as registered, with dP/d ln t reported beside. (c) The cosmology is flat matter plus Lambda with Planck 2018
+values (H0 = 67.4, Omega_m = 0.315, age 13.8 Gyr; general knowledge, to verify), the stellar lifetime is the 2016
+paper's piecewise relation (which equals 10 Gyr (M/Msun)^-2.5 over the sun-like range), and the sensitivity cases are
+the fixed delay plus or minus 1 Gyr, n = 3, 5, 7 hard steps, the future tail at 50 and 20 Gyr and none, and the cap at
+100 Gyr on and off. The 50 % lifetime difference at 0.8 Msun between the simple law and stellar-model tables
+(`2026-10-19_t72_inputs.md`) is noted and not run.*
 
 ### What is owed before the first number
 
