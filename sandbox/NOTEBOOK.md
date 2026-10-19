@@ -1493,3 +1493,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the text does not say: in the toy, the release itself is uniform, a per point, so the burp makes a perfectly smooth
   hot lump; the only differences it makes are the knots and the seams of the front, both laid behind the front. That is
   the exact statement of the problem for her picture. Idea and reading, not a decision; no knob; nothing measured.
+- 2026-10-19, the owner, on paper 13's sentence that it "asks the loop only where the amplitudes live": "in the loop
+  there are sets of universes that are identicle until each moment passes. From the macro perspective those versions are
+  indistinguishable so we experience all of the set, until a measurement or some next moment locks us into one version."
+  *Ours, unverified (general knowledge, to verify):* this is her Everett reading (18 October) stated as a place: the
+  amplitudes live on a set of versions that agree on every record, and they separate when a record (a measurement, or any
+  next interaction) makes them differ, which is decoherence. Two things the published rule adds, and paper 13 must say:
+  until they separate the versions are not only all experienced but can cancel one another (interference), which is what
+  counting alone could not give (T15 rung 3a); and "the next moment locks us in" holds only where that moment leaves a
+  record, since a version change that leaves no record can still be undone (piece 13's toy, O125). What the toy still
+  lacks is the object: which arrangement in it carries the versions (the loop of four is not a resonator; O30).

@@ -3970,3 +3970,11 @@ author and should be disclosed as such in any submission. Physics estimates mark
   about a feed shaped by the state of the slab or by a pull; anything at λ = 1; anything about the real universe. The
   owner has not given her own word for L = 16, so this reads against the inferred one, and says so. Every six-link
   result carries VISION Update 24's caveat.
+- **O137 T52, read: round a four-point relic a cut hides 5 arrangements in 83 of 87 windows (SOMETHING HIDDEN at
+  r = 1); flat windows hide 2 at r = 1, not 1 (C1 fails), and 1 at r = 2; no relic window at r = 2 finished, so whether
+  the count follows the region or the cut is NOT READ (19 October 2026). Measured; exact counts; pre-registered.**
+  (PREREGISTRATION T52, "Reading"; `results/t52_hidden_relics.csv`, computed 9 October and recovered from the laptop.)
+  Reported, not scored: inside its 12-point window the relic can be wired away entirely, 14 below the original, so it is
+  a dip against single moves (O107) and not against a rewiring of its window. *Ours:* T52 neither opens nor closes the
+  entropic route to a pull (O87, O97); its deciding radius was out of reach under the 20-minute limit. Next, each
+  registered first: read the flat control's second shape from the wiring; then a faster or longer count at r = 2.
