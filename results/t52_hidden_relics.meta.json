@@ -1,0 +1,44 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T52 with its Amendment 1 (both written 2026-10-05, before any count was taken on a saved state with graphity.hidden): the hidden count, scored as shapes (wirings up to renaming of the window's sealed points), on windows of graph distance 1 and 2 round the four-point relics of T37's twelve cold end states, with flat controls. Exact enumeration, no random numbers. Not exploratory.",
+    "name": "t52_hidden_relics",
+    "lambda": 1.25,
+    "states": "results/t37_lam125_g125_L1024_*_adj/*.npz",
+    "radii_all": [
+      1
+    ],
+    "radii_first": [
+      2
+    ],
+    "first_per_state": 1,
+    "flat_squares_per_state": 3,
+    "flat_distance": 6,
+    "time_limit_s": 1200,
+    "flat_first_per_state": 1
+  },
+  "config_path": "configs/t52_hidden_relics.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "states": [
+    "results/t37_lam125_g125_L1024_a_adj/N4096_rep0.npz",
+    "results/t37_lam125_g125_L1024_a_adj/N4096_rep1.npz",
+    "results/t37_lam125_g125_L1024_b_adj/N4096_rep2.npz",
+    "results/t37_lam125_g125_L1024_b_adj/N4096_rep3.npz",
+    "results/t37_lam125_g125_L1024_c_adj/N4096_rep4.npz",
+    "results/t37_lam125_g125_L1024_c_adj/N4096_rep5.npz",
+    "results/t37_lam125_g125_L1024_d_adj/N4096_rep6.npz",
+    "results/t37_lam125_g125_L1024_d_adj/N4096_rep7.npz",
+    "results/t37_lam125_g125_L1024_e_adj/N4096_rep8.npz",
+    "results/t37_lam125_g125_L1024_e_adj/N4096_rep9.npz",
+    "results/t37_lam125_g125_L1024_f_adj/N4096_rep10.npz",
+    "results/t37_lam125_g125_L1024_f_adj/N4096_rep11.npz"
+  ],
+  "preregistration": "PREREGISTRATION.md section T52, written 2026-10-05",
+  "resumed": {
+    "rows_reused": 66,
+    "from_partial": "results/t52_hidden_relics.csv.partial",
+    "date": "2026-10-09"
+  }
+}
