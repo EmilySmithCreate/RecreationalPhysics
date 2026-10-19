@@ -1825,3 +1825,155 @@ order, is `docs/design/contraction_model_brief.md`.
   this energy (every compaction above six around is free), and it keeps the count of 3-cubes exactly while the steps
   above it do not. Reported, not claimed.
 
+Update 64 (2026-10-18, 13:35 UTC by the clock): **DECISION (the author's): X is the straight curl; the spiral is the seam
+shape of the product after the burp.** Why this page changes: the sandbox look of the same day (`sandbox/spiral_contraction.py`;
+LOG, 18 October) found that a layer contracted with its splice shifted, so that the seam of the curled direction spirals, is
+flat (X = 0, H = 0, every point open) at every shift tried, and that only the straight contraction is the slab; the brief
+put the choice to her and she made it. Her words: "X is straight curl, with the spiral being the seam shape of the product
+after the burp."
+
+- **What is decided.** The stand-in for X stays the straight slab of Update 60 (4 x L x L, one direction curled to four
+  with no shift), which stores 4(lambda - 1) per point. The spiral of her picture of 17 October (Update 61) is the product's
+  seam, the flat torus six around with its seam shifted by two that paper 1's maps end in (O116), and is reported from the
+  wiring as Update 61 says, not scored as a curl.
+- **What follows.** "Fold points and the count of spiral turns" is not a curl variable in this toy; the energy does not see
+  it except at zero turns. The one continuous curl variable the toy offers is the fraction of a layer compacted (the
+  front), with its area and rim costs (the brief, section 2.5). The curling-energy brief's seam line (Update 61) stands.
+- **Still owed by her** (the brief, questions 1 and 2): the local form or the whole-layer form, and what the no-break rule
+  means under it. Nothing registered runs before that.
+
+Update 65 (2026-10-18, 13:50 UTC by the clock): **DECISION (the author's, "Whole layer form."): the contraction model
+takes the layer form; and three positions of hers recorded with it.** Why this page changes: the brief of Update 63 put
+two questions to her before anything registered could run, and this answers both. Her words of the same message: "Yes
+this is what I meant" (the split of energy into shaped and unshaped); "seems useful" (running at a fixed count and reading
+the constant off the fluctuations); "Time emerges from 3d space so in the folded slab there is no time we need something
+else like sweeps or spirals."
+
+- **DECISION: the layer form.** The compaction and splitting moves act on a whole layer pair at once: flat L₁ × L₂ × L₃
+  to (L₁ − 2) × L₂ × L₃ and back, with no seam and no point broken. *Exact (`sandbox/out/ladder_contraction_2026-10-18.txt`):*
+  from width 10 to 8 to 6 the energy stays at zero; the step from 6 to 4 costs exactly 4(λ − 1) per surviving point
+  (144 at L = 6, 256 at L = 8, λ = 1.25), and splitting the slab returns exactly that. **Question 2 of the brief is moot
+  under this form:** the move set contains no breaking move, so the no-break rule holds by construction and nothing
+  is priced. *Ours, pending her confirmation:* the move set is the layer moves plus the clean two-switch move of Update 62;
+  the single switch is the control, not a move of the model.
+- **What it costs, said plainly (ours).** Under the layer form the opening is one move. There is no front, no seam paid
+  along the way and no refund at completion, so the ledger reads gross = net = 4(λ − 1) per slab point, and her picture of
+  18 October (payment building until a threshold, then cancelling to leave the net) has no counterpart in this form.
+  Claim 4's "seed and a front" is not what this form shows; the toy's content under it is the ledger, the timing against
+  a feed (a step at t* = 4(λ − 1) N_slab / r), and what sets the width of the product. The local form stays in the brief
+  as the alternative she did not choose.
+- **The split of energy (hers, confirmed):** shaped energy is the curl in the wiring, the net; unshaped energy is what the
+  stores hold, the gross less the net. Calling the unshaped part antimatter is a name; the toy has nothing of two signs.
+- **A practice adopted from dynamical triangulations (hers, "seems useful"; not a knob):** run at a fixed count and read the
+  cost per point off the fluctuations, rather than set it by hand. In this toy every flat width at or above six sits at
+  zero, so at μ_N = 0 nothing prefers one count to another; a measured μ_N would be what sets the width of the product.
+  How to measure it is written in the brief before any run.
+- **Time (hers; a position, not a knob):** time emerges from open three-dimensional space, so the folded slab has none; the
+  toy's clock is sweeps, and the spiral of the product's seam (Update 64) is a candidate clock after the burp. This agrees
+  with her positions of Updates 33 (5) and 41; what dynamical triangulations put in by hand is not copied.
+- **What runs next.** The kernel for the layer moves with rule-6 tests; the exact reach check (E4); then T71 with her
+  prediction and a held-out size: the slab fed at every point under the layer form, the time to open against the feed,
+  the ledger at completion, and the width the product settles at under μ_N read off the fluctuations.
+
+- **Addendum, 2026-10-18, 14:50 UTC by the clock: the move set confirmed; the gate is a knob awaiting her decision.**
+  Her words of the same afternoon: "What the toy can test under the layer form is the ledger, the timing against a feed
+  (a step when the stores first hold the whole cost), and what sets the width of the product. Proceed." and "under the
+  layer form the move set is the layer moves plus the clean two-switch move of this morning, with the single switch kept
+  only as a control. Confirmed." So the move set of the layer form is decided: layer contraction and splitting
+  (`src/graphity/contraction.py`), the clean two-switch move of Update 62 (`src/graphity/clean_move.py`), and the
+  single switch as the control only. Both kernels carry rule-6 tests. *Ours, exact, from the kernel:* (1) the split of
+  the slab is downhill, so with nothing to hold it the slab splits at the first proposal, and after it the lump sitting
+  in the stores can pay the contraction back at the next proposal; nothing in the protocol holds the product open unless
+  the lump leaves (a leak). The one ingredient the layer form needs to make X "stable for now" is therefore a **gate**:
+  a move that costs nothing fires only when its pool already holds a set energy, which is not spent (a hill, not a toll).
+  Its value is a new knob under S1 and is **hers to decide before T71 launches**; the candidates are written in
+  PREREGISTRATION T71 (none; the slab's whole curling cost, her "when the stores first hold the whole cost"; the first
+  clean switch step, 64). (2) With layer moves alone the stationary distribution over widths is exactly Boltzmann in
+  μ_N N, so at μ_N = 0 nothing sets the width of the product but a wall; "what sets the width" has an exact answer under
+  this form, and only the switch moves could change it. (3) The first clean two-switch step out of the slab costs
+  exactly 64 and opens 16 points, T69's first clean state, at λ = 1.25 as at 1.10.
+
+
+Update 66 (2026-10-18, 20:25 UTC by the clock): **DECISION (the author's): after the burp the lump leaves one way into
+its own daughter universe; the slab reforms and goes on accepting energy; nothing passes from open space back to the
+slab.** Her words: "I think it goes in its own daughter universe. Then the slab reforms and continues accepting energy.
+Nothing can go from open space to the slab, it's one way." Why this page changes: PREREGISTRATION T71 asked what happens
+to the feed after the burp (f1, the feed continues and the lump sits in the parent's stores; f2, the feed stops and the
+lump leaks) and this is a third answer, a rule of the protocol decided under S1 before any registered run; it is the
+daughter picture of Update 59 (a daughter forms while the black hole remains in the parent) written as a rule of the toy.
+
+- **What is decided (hers).** The release of the opening goes to the daughter, never to the parent's stores; the parent
+  keeps accepting the feed; the slab re-forms; nothing of the daughter can pay for anything in the parent.
+- **Its form in the toy (ours, pending her confirmation).** A daughter ledger: every release of a downhill layer move is
+  counted there, one daughter per release above zero; the parent keeps its geometry and its stores, and re-contracts
+  when its stores can pay a N_slab; nothing in the parent draws on the ledger. Conservation reads F + stores + daughters
+  − fed + leaked = F0 (`graphity.layer_feed`, release_to "daughter"; tests to 1e-9). The daughter is a ledger entry and
+  not a geometry: the toy keeps one torus, which plays the parent, and the daughter's open space is not represented.
+- **Exact consequences, from the kernel the same evening.** (1) **The parent is a converter.** Every a N_slab fed becomes
+  one daughter of exactly a N_slab: at L = 6, λ = 1.25, r = 1/16 over 600 sweeps, 61 daughters of 144 each, 8,784 in
+  all, equal to the energy fed to the unit, with the original curl's 144 left in the stores. The gate sets how long X
+  sits between re-forming and burping, not the rate: with no gate the slab exists for about a sweep each cycle (111 of
+  600 sweeps at width 4); with the gate at the slab's whole cost it sits for about a/r sweeps (463 of 600). (2) Per
+  point everything scales together, so with the same seed the daughters are born at the same sweeps at L = 6 and L = 8:
+  under the layer moves alone the timing is free of size, and T71's held-out size tests only that in arm B. (3) "Stable
+  for now" therefore still needs the gate: without it X is an instant between a fold and a burp. **Her gate choice is
+  still owed**; the candidate that matches her words ("a step when the stores first hold the whole cost") is g1.
+- **What it costs, said plainly (ours).** Her "you can't use up the fuel" (notebook, 18 October) is exact here and
+  means the opposite of a perpetual machine: the parent makes nothing, it passes the feed through, one lump at a time.
+  The oscillation of the addendum to Update 65 (the lump paying the fold back) becomes T71's reference arm, not the
+  model. And the sentence "nothing can go from open space to the slab" is put in by the rule, not derived.
+- **What runs.** T71 as redrafted this evening: release_to "daughter" in every model cell, the reference arm with the
+  release to the stores, her prediction and the gate's value owed before launch.
+
+Update 67 (2026-10-18, 20:54 UTC by the clock): **DECISION (the author's): how piece 12's measure combines the generations.**
+Her words: "Per universe only ignoring the branching when we are thinking about identicle universes that can only be
+differentiated by a particle or quantum measurement that makes something different at the macro scale. 2 for predictions
+of when an observer is most likely to occur in time where t=0 and the end of life supporting stars." Why this page changes:
+the function for piece 12 (`docs/design/loop_measure_brief.md`, written the same evening) could score no setting until the
+combination rule was chosen, and it had to be hers (O101).
+
+- **What is decided (hers).** Two rules for two questions. (i) Universes of one setting that differ only by a quantum
+  outcome with a macroscopic consequence (versions, in the sense of Update 17 and piece 14) are counted **per universe**,
+  the branching ignored. (ii) For **when** an observer is most likely to exist, counted from a universe's birth to the
+  end of its life-supporting stars, the **growth rate** rule is used (the brief's rule 2: the growth of the tree, with
+  "holds observers at all" as the filter).
+- *Ours, unverified.* Rule (i) is the one that avoids the trap O101 named: no exponential weight on the deepest
+  generations within a setting. Rule (ii), read as counting observers across the whole tree at one moment, carries a
+  consequence the literature knows as the youngness pressure ([Freivogel11], read in part): where daughters are born at a
+  steady rate, most universes alive at any moment are young, so the prediction for an observer's time is pulled toward
+  the earliest time observers can exist. With trillions of daughters per universe within about 10^10 years the pull is
+  strong, and we are at 1.4 × 10^10 years, near the peak of star and planet formation rather than at its start. So her
+  rule (ii) makes a prediction that can fail, which is what the measure needed; the brief sets out the two readings of
+  "at one moment" under which it does and does not. Nothing here is a knob of the toy or a run.
+
+Update 68 (2026-10-18, 21:55 UTC by the clock): **DECISION (the author's): piece 12's rule (ii) is read per universe, by each
+universe's own age; there is no clock across universes.** Her words: "daughter's clock is not her parent's - it's an exact
+copy though, starts at big bang runs though heat death, every time so yes The across-the-tree count needs a common clock
+running across universes, we don't have one clocks are only within a universe." Why this page changes: Update 67 left one
+question open, which reading of "at one moment" her rule (ii) means, and the brief (`docs/design/loop_measure_brief.md`,
+section 4) showed that the two readings disagree about our own age. This closes it.
+
+- **What is decided (hers).** Every universe of a setting carries the same clock, a copy that starts at its birth and runs
+  to its heat death; clocks exist only inside a universe. So the question "when is an observer most likely" is asked of a
+  universe's own age, and every universe of the setting is counted whole and lined up at its birth. A count of the tree
+  "at one moment" has no meaning in the hypothesis, because the moment does not exist across universes.
+- *Ours.* (1) This removes the youngness pressure (Update 67; [Freivogel11]) from her measure by the hypothesis's own
+  structure, not by a choice of regulator: the exponential weight e^(−γτ) needs a common time, and there is none. Our age
+  is then unremarkable under her function, and when daughters are born in a parent's life no longer bears on it (so her
+  lean of the same evening toward late births, and the published infall history set against it in the notebook, decide
+  nothing about our age). (2) What the function now predicts, so that it can fail: an observer finds itself at the age its
+  universe forms habitable planets that have had time to evolve one, inside the observation window. Without the window
+  term W(t) the published count puts that at about 10^13 years round the smallest stars, with at most about 0.1 % of the
+  chance before now ([LBS16], read in full); with it the peak lies inside about 10^11 years. The window is therefore
+  load-bearing: it was her term before this question arose (18 October, afternoon), but it was chosen with our age known,
+  so the function is not scored on our age (rule 13). It is scored on what W(t) must mean (an observer who can learn its
+  universe's history) and on whether planets round the smallest stars host observers at all, which is a question
+  astronomy can answer. (3) Nothing here is a knob of the toy or a run; the toy supplies one term of the function, b.
+
+Update 69 (2026-10-19, about 01:20 UTC by the clock): **DECISION (the author's, "g1 is right."): the layer form's gate is the
+slab's whole curling cost, a N_slab.** Why this page changes: the gate is a new knob of the layer form (Update 65, addendum;
+Update 66) and S1 requires her dated decision before the registered run that carries it. A split of the slab, which costs
+nothing, fires only when the stores of the two layers beside the cut already hold a N_slab, which is not spent. It is her
+own words of 18 October ("a step when the stores first hold the whole cost") made a rule. *Ours, exact (Update 66):* the gate
+sets how long X sits between re-forming and burping, about 2a/r sweeps under g1, and not how many daughters are born or what
+each carries; those are fixed by the feed. Her prediction for T71 is recorded in its Amendment 2, and T71 is launched.

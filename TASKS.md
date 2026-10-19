@@ -640,7 +640,7 @@ four answers are in the O entries and the replacement for piece 5 is hers. In or
 2. **T54**: the script with the exact definitions of "patch" and "grows", tested; commit the draft as a
    pre-registration; compute L = 8 and 12; write the L = 16 prediction as a dated amendment; then L = 16.
 3. **Restart T52** on the laptop (its run died on 5 October at 66 rows; the runner has no resume, so the scratch
-   `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first).
+   `.partial` is deleted and the run started again, or a resume that skips finished windows is added with a test first). *Done 9 October on the laptop with `--resume`; the result was recovered on 18 October and read 19 October (O137): SOMETHING HIDDEN at r = 1, C1 fails at r = 1, the scaling NOT READ.*
 4. **Fetch and accept the resubmitted T53 cell** when it lands; the (72, 1.25) window verdict is provisional until then. *Done 2026-10-10: the cell reads DAMAGED; the window verdict stays ADVANCES ONLY and is no longer provisional (PREREGISTRATION T53, addendum; O105).*
 5. The rest of the 5 and 6 October sections as they stand.
 
@@ -899,6 +899,34 @@ first; the daughter-universe interpretation after. In order, each registered bef
    (the brief, questions 1 and 2). Then, in order: the seam census extended (E1), the ledger against size (E2), the seam's
    locality (E3), reach by exhaustive listing (E4); the kernel with rule-6 tests; the looks S1 to S3; T70 as planned for
    the fixed count; **T71** for the contraction model with her prediction and a held-out size.*
+   *18 October, 13:50 UTC: **VISION Update 65**, her "Whole layer form.": the brief's questions 1 and 2 are closed. E2 is
+   done for the energies (the ladder 10 → 8 → 6 → 4 is free until the last step; LOG). Under the layer form the opening is
+   one move, so T71 tests the timing against the feed and the ledger, not a front. Next, in order: the kernel
+   (`src/graphity/contraction.py`: layer contraction and splitting, the clean two-switch move, pooled stores, feed and
+   leak; rule-6 tests; detailed balance or a declared driven protocol in the docstring); E4, reach by exhaustive listing
+   at the smallest sizes; E5, μ_N read off the fluctuations of a free flat torus; then PREREGISTRATION **T71** with her
+   prediction and L = 16 held out.*
+   *18 October, 14:50 UTC: her "Proceed" and "Confirmed" (VISION Update 65, addendum): the move set is the layer moves
+   plus the clean two-switch move, the single switch a control. **Both kernels built with rule-6 tests**
+   (`src/graphity/contraction.py`, `src/graphity/clean_move.py`). Exact on the way: the split is downhill, so X needs a
+   gate to be stable for now (a new knob, hers to decide); the lump in the stores pays the fold back unless it leaks;
+   with layer moves alone the width is Boltzmann in μ_N N; the first clean switch step out of the slab is T69's state at
+   64. **PREREGISTRATION T71 drafted** (the slab under the layer form: timing against the feed, the ledger, the fate of
+   the product), with the gate's three candidates and the leak's arithmetic laid out. **Owed by her before launch:** the
+   gate's value (S1), her prediction, and whether the feed stops at the burp. Done the same hour: the one runner that puts both kernels in one protocol
+   (`graphity.layer_feed`, `scripts/run_layer_feed.py`, with its tests; a smoke run in the scratchpad reproduced the
+   arithmetic: first split at the gate plus a two-sweep wait, then oscillation with no leak). The analyzer `scripts/analyse_t71.py` is written and tested too. Nothing is owed by us before launch. T70 (the fixed-count switch-path climb) stays planned and unwritten.*
+   *18 October, 20:25 UTC: **VISION Update 66**, hers: after the burp the lump leaves one way into a daughter, the slab
+   reforms, the feed continues. Built as a daughter ledger in the protocol (tests), T71 draft amended (f3 the model, f1
+   the reference). Exact: the parent converts the whole feed into daughters of a N_slab each; the gate sets only how
+   long X sits. **Owed by her before launch: the gate's value and her prediction.** Piece 12's function written as
+   `docs/design/loop_measure_brief.md` on her "proceed"; the combination rule decided by her the same evening (VISION
+   Update 67: per universe within a setting; the growth rate for when an observer exists; Update 68: rule (ii) read per
+   universe by each universe's own age, since clocks exist only inside a universe).*
+   *19 October, about 01:30 UTC: her gate (g1; VISION Update 69) and her prediction given; **T71 launched**, 12 Batch jobs
+   (`cloud/queue/2026-10-19_t71_stage1.txt`; PREREGISTRATION T71, Amendment 2). To read: fetch `t71_*`, accept, commit unread,
+   `python3 scripts/analyse_t71.py` (the control cells by T68's words); then the held-out numbers for L = 16 as a dated
+   amendment, her word for L = 16, and the L = 16 configs.*
 2. **A sandbox look at the survival law** (H1, section 6 of her document): the tube's stores fed at a fixed rate,
    first exits timed, against 1 − exp(−∫Γ[g(t)]dt) with paper 1's τ_AB. Cheap; kills or keeps the law's form
    before it is used for anything.

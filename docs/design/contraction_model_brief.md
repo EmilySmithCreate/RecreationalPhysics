@@ -73,7 +73,10 @@ on a point. *Exact (O41; `test_sheet_tube_cube_ladder` and its six-link counterp
 **2.2 A cost per point (ours, a decision for her; default zero).** With the count varying, a term μ_N · N is the natural
 knob (claim 3's parked "cost-per-element term", the cosmological constant of dynamical triangulations). This brief sets
 μ_N = 0: adding or removing a pair in flat space changes H by nothing, and the count is set by the moves and the stores
-alone. Any other value is a new knob and needs her dated decision.
+alone. Any other value is a new knob and needs her dated decision. In dynamical triangulations this constant has to be tuned
+to a critical value, below which the sum over geometries runs away because every extra block is cheap; μ_N = 0 is that
+side of the published balance, and the brief says so (`docs/reading/notes/2026-10-18_dynamical_triangulations.md`, search
+summaries only, not read).
 
 **2.3 The compaction move, exactly (ours, from her words).** Let u (side 0) and v (side 1) be linked. Let A be u's five
 other neighbours (all side 1) and B be v's five other neighbours (all side 0). Choose a one-to-one map σ: A → B. Remove u
@@ -183,13 +186,16 @@ conservation of H + stores − fed + leaked, the untied rule (Update 58), and ev
 5. Every partial contraction within reach leaves 26 to 60 broken points and sits above the finished slab
    (`sandbox/partial_contraction.py`; the table in 2.5).
 
-## 5. Open for the author (the brief cannot be finished without 1 and 2)
+## 5. Open for the author (questions 1 and 2 answered 18 October, VISION Update 65; the brief can now be finished)
 
-1. **Which form:** local (pairs compact one at a time; the seam's broken points are allowed and priced) or layer (the
+**Answered:** question 1, **the whole-layer form** ("Whole layer form."); question 2 is moot under it, since the move
+set holds no breaking move. The rest below stand as they were written, with the answers marked.
+
+1. **Which form (ANSWERED: layer):** local (pairs compact one at a time; the seam's broken points are allowed and priced) or layer (the
    whole layer at once; no seam, no front, no cancellation in the ledger). Her picture of 18 October has a front and a
    cancellation, which is the local form; her "points don't break" is the layer form. The exact table says they cannot
    both hold with the compaction move as defined.
-2. **The no-break rule under the local form:** forbid every move that leaves a point broken (then the slab is frozen,
+2. **The no-break rule under the local form (MOOT under the layer form):** forbid every move that leaves a point broken (then the slab is frozen,
    since no local pair move is clean), or let the store pay for a seam up to a stated size, or price broken points by
    the energy alone (which is the toy as it stands).
 3. **The per-point cost** μ_N (ours: zero).
@@ -199,8 +205,11 @@ conservation of H + stores − fed + leaked, the untied rule (Update 58), and ev
    count change only by compaction and splitting?
 6. **The names.** "Antimatter" for the seam's payment and "matter" for the net are hers; the toy has nothing that comes
    in opposite kinds, and the brief records them as an interpretation.
+7. **Decided, 18 October (VISION Update 64):** X is the straight curl; the spiral is the seam shape of the product. A
+   shifted (spiral) layer contraction is flat and stores nothing (`sandbox/spiral_contraction.py`), so the toy's one
+   continuous curl variable is the fraction of a layer compacted (section 2.5).
 
-## 6. Tests, in order (each exact one is cheap; nothing registered runs before her answers to 1 and 2)
+## 6. Tests, in order (questions 1 and 2 answered 18 October; the move set confirmed the same afternoon, VISION Update 65 addendum; nothing registered runs before her prediction and her gate decision, T71)
 
 **Exact, no run (sandbox, rule 16; this week):**
 
@@ -209,7 +218,15 @@ conservation of H + stores − fed + leaked, the untied rule (Update 58), and ev
   compact with no point broken? If none does, the layer form is the only clean one and the local form always carries a
   seam. *Decides question 1's arithmetic.*
 - **E2. The ledger against size and λ.** Layer contraction 8 → 6 → 4 at L = 6, 8, 10: ΔH = 0 then 4(λ − 1) N_slab; the
-  cube count; the stores' balance under pooled payment. *A test of the kernel once it exists; the arithmetic is in 2.4.*
+  cube count; the stores' balance under pooled payment. *Done 18 October for the energies
+  (`sandbox/out/ladder_contraction_2026-10-18.txt`): 10 → 8 → 6 free, 6 → 4 exactly 4(λ − 1) N at L = 6 and 8. The stores'
+  balance waits for the kernel.*
+- **E5. The cost per point read off the fluctuations (the practice she adopted, Update 65).** Under the layer form every
+  flat width at or above six sits at zero, so with μ_N = 0 nothing prefers one count to another and the width of the
+  product is set by the moves alone. The published practice is to hold the count fixed on average and read the constant
+  that holds it there. Here: a flat torus free to split and contract at zero cost, with a soft target count; the μ_N that
+  keeps the width at its target, and how the width wanders without it, is the measurement. Exact where the move set is
+  small enough to list; a chain otherwise, after the kernel.
 - **E3. Does the seam's cost depend only on the patch?** For the local form: the lowest-energy re-linking for each patch
   shape at two sizes; if the rim cost is a function of the rim alone (local), the net-over-gross ratio at completion is
   the toy's own number; if it depends on L it is a size effect to be held out (rule 14).
@@ -217,16 +234,28 @@ conservation of H + stores − fed + leaked, the untied rule (Update 58), and ev
   moves together reach every valid graph of every count? (The counterpart of Q9.) Owed before any chain result is
   interpreted (rule 6).
 
-**Kernel (rule 6), after her answers to 1 and 2:** `src/graphity/contraction.py`: pair removal and insertion, layer
-contraction and splitting, the no-break check, pooled stores; tests: ΔH against the full Hamiltonian, the clean
-guarantee where claimed, conservation of H + stores − fed + leaked, same-seed reproducibility, networkx brute force on
-the splicings, detailed balance stated in the docstring.
+**Kernel (rule 6), built 18 October.** Two modules. `src/graphity/contraction.py`: layer contraction and splitting on
+canonical tori with coordinates kept per point (the moves check the lattice links they need and refuse otherwise), one
+store per point, pooled payment, a feed, a leak, a gate, μ_N, the driven protocol `run_feed` (no detailed balance
+claimed; the invariant H + μ_N N + stores − fed + leaked is checked to 1e-9) and a Metropolis chain over widths
+(`run_thermal_widths`, symmetric proposals on canonical states, checked against the exact Boltzmann sum). Pair removal
+one at a time is not in it: under the layer form it is not a move of the model (section 2.3 keeps its definition).
+`src/graphity/clean_move.py`: the clean two-switch move of Update 62, ported from `sandbox/clean_feed.py`; dH computed
+on the points within one step of each switch and checked exact against the full Hamiltonian for every accepted move;
+the clean guarantee; networkx brute force; conservation; same-seed; the control (`allow_break`) breaks. A second switch
+that exactly undoes the first is a null move and is refused (the sandbox counted it). The one runner that puts both kernels in one
+protocol (a sweep: feed, leak, N clean-switch attempts, then the layer proposals) is `src/graphity/layer_feed.py` with
+`scripts/run_layer_feed.py`, tested (conservation to 1e-9 under every move set). **E4 under the layer form:** the layer moves reach every width between 4 and the wall by
+construction; what the clean two-switch move reaches from the slab is listed by T69's search (the first clean state at
+saddle 64), and a full reach check with it is still owed before any chain result that depends on it is interpreted.
+**E5 under layer moves alone is exact:** the width's stationary distribution is Boltzmann in μ_N N (plus the slab's
+4(λ − 1) N at width 4), so at μ_N = 0 nothing sets the width but a wall; only the switch moves could change that.
 
 **Sandbox looks, after the kernel:**
 
 - **S1. The black hole run forward.** Flat 8 × L × L, stores fed curling energy at every point, compaction moves only:
-  does it compact 8 → 6 → 4, and does the energy stored at the end equal 4(λ − 1) N_slab? (Layer form: one move, trivially
-  yes; local form: does a seam ever close?)
+  does it compact 8 → 6 → 4, and does the energy stored at the end equal 4(λ − 1) N_slab? *Under the layer form this is
+  exact and in the tests: one move, and exactly 4(λ − 1) N_slab paid from the pool.*
 - **S2. The slab fed at every point under the local form.** Does a splitting front form and complete, and what does
   the ledger read at completion (paid, refunded, net)? Against the switch-path look of 18 October (`clean_feed.py`).
 - **S3. The leak.** S2 with a leak on every store: does the front still complete when the interior drains, and what
@@ -236,11 +265,22 @@ the splicings, detailed balance stated in the docstring.
 
 - **T70 as planned** stays the switch-path test under Update 62's knobs (the climb at L = 12, 16; completion and the
   release 4(λ − 1) per point). It tests the fixed-count form of her picture.
-- **T71 (to be written): the slab splits under the contraction model.** The slab fed at every point under the form she
-  chooses, λ = 1.10, 1.25, 1.40, L = 8 and 12, L = 16 held out; words per replica from the first splitting, a region
-  past half, completion; the ledger at completion; the count at the end. Her prediction before launch, ours beside it.
-  What would kill the model's claim: no replica completes at any λ and size, or completion releases something other than
-  4(λ − 1) per slab point.
+- **T71 (drafted 18 October as PREREGISTRATION T71; her prediction and her gate decision owed before launch): the slab
+  splits under the layer form.** The slab fed at every point, λ = 1.10, 1.25, 1.40,
+  L = 8 and 12, L = 16 held out. Under the layer form the opening is one move, so the words per replica are about timing
+  and the ledger, not a front: the sweep at which the stores first hold the whole cost, the sweep at which the split is
+  made, the energy released at it against 4(λ − 1) N_slab, the count before and after, and the width the product then
+  settles at under E5's μ_N. Her prediction before launch, ours beside it. What would kill the model's claim: the split
+  never made at any λ and size although the stores hold the cost, or a release other than 4(λ − 1) per slab point.
+  *Said plainly:* under this form T71 tests the ledger and the timing; it cannot test a front, because the form has none.
+
+## 6a. After the burp (added 18 October, evening; VISION Update 66)
+
+The owner decided where the lump goes: into its own daughter universe, one way; the slab reforms and goes on accepting
+the feed. In the protocol this is a daughter ledger (`graphity.layer_feed`, `release_to` "daughter"): every release of a
+downhill layer move is counted there and nothing in the parent draws on it. Exact from the kernel: the parent converts the
+whole feed into daughters of exactly a N_slab each, and the gate sets only how long X sits between fold and burp. The
+oscillation of section 6 (the lump paying the fold back) is T71's reference arm from here.
 
 ## 7. What this cannot show
 

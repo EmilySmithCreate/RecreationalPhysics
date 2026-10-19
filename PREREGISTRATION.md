@@ -3436,6 +3436,51 @@ its ring of four can be turned or flipped where it joins the rest, which is a co
 is one curled ring, so STAYS WITH THE CUT, with 4 or fewer shapes at both radii, would not surprise us now. The
 registered prediction is the one that is scored.
 
+### Reading, 2026-10-19
+
+**Provenance.** The run finished on the laptop on 9 October, resumed from the 66 rows of the run that died on 5 October
+(`--resume`, recorded in the `.meta.json`). It was never committed: it lived only on the laptop's checkout until it was
+recovered onto `claude/local-only-files-2026-10-18`, and it is brought onto the record here, unread until now. Its
+`.meta.json` has no git commit (the provenance helper came on 10 October). 147 windows in twelve end states; read with
+the counts in `results/t52_hidden_relics.csv` against the definitions above. No analysis script was registered; the
+tallies below are the rows counted by kind and radius.
+
+**Counted.** Relic windows at r = 1: 87 of 87. Relic windows at r = 2: **0 of 12** (each stopped at the 20-minute
+limit). Flat windows at r = 1: 35 of 36. Flat windows at r = 2: 7 of 12.
+
+**C1 (flat space hides nothing): FAILS at r = 1.** Every one of the 35 flat windows counted at r = 1 hides **2 shapes**
+(raw count 8; 12 points, 16 links cut, two sealed points on each side), not 1. At r = 2 the 7 counted hide 1 shape each
+(raw 29,030,400; 22 points, 12 links cut). The second shape at r = 1 trades the outer pair of links of two opposite
+corners of the square on one side, at the same energy. *Seen while reading, a look and not part of the verdict:* the same
+window round a square of a built flat torus (16 × 16, 16 × 6, 6 × 16, 8 × 16) hides 1 shape, as Amendment 1 said, so the
+second shape belongs to the wiring of these end states, which are not built tori (O116: the tube re-glued six around,
+with joints between widths); why it is allowed there has not been read from the wiring.
+
+**The relic, at r = 1: SOMETHING HIDDEN.** 84 of 87 windows hide more than 1 shape: 83 hide **5** (raw 20; 12 points,
+12 links cut) and one hides 7 (raw 28). The other 3 hide exactly 1; their cut is 8, and all three sit where the relic's
+window takes in a whole ring of four, as on the curled tube.
+
+**The scaling: NOT READ.** No relic window at r = 2 finished inside the limit, which is more than half, so by the rule
+fixed above everything that needs r = 2 is NOT READ. Whether the count follows the region or the cut is not answered.
+
+**Predictions.** The chat sessions': flat windows hide 1, which fails at r = 1 and holds at r = 2; that the relic's count
+grows with the region, not read. Ours: C1 fails at r = 1; SOMETHING HIDDEN holds; FOLLOWS THE REGION not read. The lean
+written beside Amendment 1 (STAYS WITH THE CUT, 4 or fewer shapes) is not scored, and the 5 at r = 1 is already above it.
+
+**Reported, not scored: the wirings at other energies** (r = 1 only). In 84 of 87 relic windows **4 wirings lie 14
+below the original**: the relic's own cost (the column costs 14 at λ = 1.25), so inside its 12-point window the relic
+can be wired away entirely, which up to the renamings of its four sealed points is one shape. The window of 7 also has
+8 wirings 4 below. The three relic windows with a cut of 8 have nothing below, and no flat window has anything below the
+original. Every relic window has 2,360 to 9,216 valid wirings at all energies; every flat window 1,264. So the relic is
+a dip against single moves (O107) and not against a rewiring of its window.
+
+**What it means (ours).** Behind a cut round a relic the model hides about five arrangements, against two (at r = 1) and
+one (at r = 2) for flat space: a small number, ln 5 ≈ 1.6. The test that bears on gravity, whether that number grows
+with the cut or with what is inside, was not reached: the counts at r = 2 are too slow under this limit. So the
+entropic route is neither opened nor closed by T52. A rerun at r = 2 needs either a faster count or a longer limit, and
+either is a new registration; the flat control's second shape is to be read from the wiring first, since a control
+that does not give 1 makes any excess hard to read.
+
 ---
 
 ## T53. The "spaghetti" X in a warm bath: does a space with two directions curled and one open open by itself, from one place or several? (piece 5; VISION Update 42; ASSUMPTIONS O94, O100; written 2026-10-05, 11:52 ET by the clock, before any run)
@@ -6586,3 +6631,197 @@ steps can know how large the sheet is; only paths that wrap could differ, and at
 every word and number above holds at L = 12. **Launched 2026-10-17, 23:03 UTC by the clock**, on the laptop
 (`configs/t69_lowest_path_l12.json`). The owner's prediction for L = 12 is hers of stage 1 (PAYS) unless she replaces it
 before the cells are read.
+
+## T71. Does the owner's slab open under the layer form, when does it open against the feed, what does the ledger read, and what becomes of the product? (piece 5; the contraction model, layer form; VISION Updates 63 to 65 and the addendum of 18 October; the design brief `docs/design/contraction_model_brief.md`; ASSUMPTIONS O41, O118, O135; DRAFT written 2026-10-18, 14:50 UTC by the clock, before any registered run; LAUNCHED 2026-10-19, about 01:30 UTC, after the owner's gate decision (g1; VISION Update 69) and her prediction were recorded in Amendment 2)
+
+*T70 is reserved for the fixed-count switch-path test of Update 62 and is not written.*
+
+*Amendment 1 (2026-10-18, 20:25 UTC by the clock, before any run): the owner decided what happens after the burp (VISION
+Update 66): the lump leaves one way into a daughter ledger and the slab reforms (f3). The design table, the definitions
+and our predictions below are rewritten for it; f1 becomes the reference arm and f2 is not run. Still owed: her gate
+and her prediction.*
+
+*Amendment 2 (2026-10-19, about 01:20 UTC by the clock, before launch): the gate, the owner's prediction, the logging rule
+and the launch.* **The gate is g1, a N_slab** (her words: "g1 is right."; VISION Update 69), in every cell. **Her prediction,
+verbatim:** "B cycles at each curling cost. A Layer moves alone gives less consistent cycles but may cycle at some settings,
+but less often and less times. Clean switch rarely. Arm c doesn't cycle. 3. Yes one N Slab." Her letters do not match the
+registration's (here arm A is the model, layer moves plus the clean switch, and arm B is layer moves alone), and her
+descriptions do, so her prediction is **scored by the move sets she names, not by the letters**: the model arm (layer moves
+plus the clean switch) CYCLES at every curling cost; layer moves alone cycles less consistently, at some settings only, less
+often and fewer times; the clean switch move fires rarely; the single-switch control does not cycle; every daughter carries
+exactly a N_slab. If she meant the letters as registered she says so before anything is read, and the reading follows the
+letters. *Ours:* this differs from our prediction on the layer-moves-alone arm, where we expect CYCLES in every cell (the
+kernel's own check already shows it at L = 6 and 8), so the arms discriminate between her picture and ours; on the model
+arm and the control we agree. **The logging rule, changed before launch:** rows are logged at every sweep in which a layer
+move or a clean switch move is accepted or a daughter is born, and at every 50th sweep besides (`graphity.layer_feed`,
+`log_events`; `scripts/run_layer_feed.py` key `log_every` 50, `log_events` true), instead of at every sweep; F and the width
+change only in logged sweeps, so the release at every split and the sweep of every birth are read exactly from the last row
+before the event (`scripts/analyse_t71.py`, with a test that the reading is identical to logging every sweep,
+`tests/test_analyse_t71.py`), and the files stay a few megabytes instead of tens. The shares (open, slab) are read
+time-weighted over the logged widths. **The launch:** 12 jobs, `cloud/queue/2026-10-19_t71_stage1.txt`: per curling cost
+(1.10, 1.25, 1.40) one job each for the model arm (`t71_model_lam*`), layer moves alone with the daughter rule
+(`t71_layer_lam*`), layer moves alone with the release to the parent's stores, the f1 reference (`t71_layerref_lam*`), and
+the single-switch control under T68's runner (`t71_control_lam*`, `scripts/run_slab_feed.py`, mode "all", fixed rate, 16
+replicas, read every 50 sweeps, the final graph saved); L = 8 and 12 in each job; r = 1/64 and 1/16; the length
+max(2000, 40 a / r) sweeps per cell (2,000 at λ = 1.10; 2,560 and 2,000 at 1.25; 4,096 and 2,000 at 1.40; the control takes
+each curling cost's longest); seeds 20267101 to 20267112. The held-out size L = 16 runs after L = 8 and 12 are read and its
+words and numbers are written (rule 14), with her word for it.
+
+*Amendment 3 (2026-10-19, about 01:35 UTC by the clock, after launch and before any result was fetched or read): the owner
+revises her prediction for layer moves alone.* Told that the kernel's own check at L = 6 and 8 (an exploratory smoke
+run of 18 October, not a registered result) already shows CYCLES with exactly a N_slab per daughter under layer moves alone,
+she wrote: "L = 6 and 8 oh I didn't look at the kernel, I agree with u here given initial results." So her prediction for
+the layer-moves-alone arm becomes CYCLES in every cell, as ours; her original words of Amendment 2 stay on the record above,
+and this change is disclosed as made on the kernel's check, before any registered cell was read. Her predictions for the
+model arm, the clean switch, the control and the energy per daughter are unchanged. The two of us now predict the same
+words in every arm, so T71 tests a shared expectation; what it can still decide is whether the clean switch ever interferes
+in the model arm, the period and the slab share under g1, and the size claim at L = 16.
+
+### Why
+
+The author's picture of 18 October: energy arrives at every point of the slab; the slab is X; when the stores first
+hold the whole curling cost there is a step, the burp, and the net left behind is the curl's energy. Under the layer
+form she chose (Update 65) the opening is one move, so there is no front to measure; what the toy can test, in her
+words, is "the ledger, the timing against a feed (a step when the stores first hold the whole cost), and what sets the
+width of the product." The move set is hers too: the layer moves plus the clean two-switch move, the single switch
+kept only as a control.
+
+### What is exact before any run (ours; the kernels' tests)
+
+Let a = 4(λ − 1), the curling cost per point; the slab 4 × L × L has N_slab = 4L² points and stores a N_slab.
+
+1. **The split is downhill.** Splitting the slab releases exactly a N_slab into the stores of the two layers beside
+   the cut. Nothing in the energy holds the slab shut; left to the layer moves alone with no gate it splits at the
+   first proposal, whatever the feed. So the layer form's X is not "stable for now" by itself. The one ingredient that
+   makes it so is a **gate**: a move that costs nothing fires only when its pool already holds at least a set energy,
+   which is not spent. The gate's value is a knob (S1) and is **the owner's to decide**; three candidates:
+   (g0) none; (g1) **the slab's whole curling cost, a N_slab**, her "when the stores first hold the whole cost"; (g2)
+   the first clean switch step, 64, the price T69 found for the first clean state (16 points open, two switches away),
+   the same at λ = 1.10 and 1.25 (the kernel reproduces it).
+2. **The lump pays the fold back.** After the split the stores hold the lump; the contraction back to the slab costs
+   exactly the lump, and its pool (the four layers it touches) holds it, so with no leak the product refolds at the next
+   proposal and the chain oscillates between widths 4 and 6 (the kernel's gate test shows one such cycle). Under a
+   uniform leak ℓ (a fraction of every store each sweep) with a feed r per point per sweep, the steady store per point
+   is about r/ℓ, so at steady state the fold back is affordable iff r/ℓ ≥ a, and the gate g1 is reachable iff
+   2L² r/ℓ ≥ a N_slab, that is r/ℓ ≥ 2a. **So under a uniform leak, any feed strong enough to pass gate g1 is strong
+   enough to pay the fold back: the product never stays open.** It stays open only if the feed changes after the
+   burp (it stops, or the lump leaves faster than the feed refills). This is the layer form's version of T9's "room",
+   and it is arithmetic, not a run.
+3. **With layer moves alone the width is Boltzmann in μ_N N** (plus a N at width 4). At μ_N = 0 nothing sets the
+   width of the product but a wall. Only the switch moves could change that, by rewiring the lattice links a layer
+   move needs (the move is then refused there).
+4. **The clean two-switch move's first step out of the slab costs 64 and opens 16 points** (T69's state), at λ = 1.10
+   and 1.25 alike; the first clean move was hit once in about 10⁵ attempts (one seed; a look). Its pool is the eight
+   ends of the two switches, so it needs 8 per point where gate g1 needs a N_slab / 2L² = 2a per pool point (2 at
+   λ = 1.25).
+
+### What would run (the design; every setting run is published, S1)
+
+| Choice | Value | Why |
+|---|---|---|
+| Start | the untied slab 4 × L × L, λ = 1.10, 1.25, 1.40 | X as decided (Update 60); the three curling costs of T68 and T69 |
+| Feed | r per point per sweep into every point's store ("all" place); r = 1/64 and 1/16 | her picture: energy arrives everywhere; two rates to see the timing scale as 1/r |
+| After the burp | **decided by the owner, 18 October, 20:25 UTC (VISION Update 66): (f3) the lump leaves one way into a daughter ledger, the feed continues, the slab reforms from the stores** (`release_to` "daughter"); (f1) the release credited to the parent's stores, feed continuing, is kept as the **reference** in arm B only; f2 (feed stops, leak) is not run, its question being answered by item 2's arithmetic | her words: "it goes in its own daughter universe. Then the slab reforms and continues accepting energy. Nothing can go from open space to the slab, it's one way." |
+| Leak | ℓ = 0 in every cell | f2 is not run; nothing to tune |
+| Gate | **owner's choice** among g0, g1, g2 (item 1); the chosen value in every cell | S1: a new knob, decided before any run |
+| Move set | arm A: layer moves + the clean two-switch move (the model); arm B: layer moves alone (the reference, nearly exact); arm C: the single switch (the control; T68's protocol) | hers: "with the single switch kept only as a control" |
+| μ_N | 0 | pending her word (the brief, 2.2) |
+| Width wall | 8 along axis 0 (the slab may split twice) | widths above six are all free; the wall is a convenience, declared |
+| Sizes | L = 8 and 12; **held out L = 16** (rule 14) | |
+| Replicas | 16 per cell | |
+| Length | 20 × the sweep at which gate g1 would be reached under arm B (= 20 × a N_slab / (2L² r) = 40 a / r sweeps), at least 2,000 | so the timing is read with room |
+| Runner | `scripts/run_layer_feed.py` over `graphity.layer_feed.run_layer_feed` (both kernels in one protocol; a sweep is the feed, the leak, N clean-switch attempts, then one layer proposal), written and tested 18 October (`tests/test_layer_feed.py`: conservation to 1e-9 under every move set and with the daughter ledger, the clean guarantee, same-seed, the feed stopping at the split, the gate's timing, the slab reforming and every daughter exactly a N_slab), rows logged every sweep so the release at the split is read exactly; `scripts/analyse_t71.py`, written and tested the same day (`tests/test_analyse_t71.py`, including CYCLES with the period and the energy per daughter) | both written before launch |
+
+### Definitions, fixed now
+
+Per replica: **t_gate**, the first sweep at which the pool of any possible split holds the gate; **t_split**, the sweep
+of the first split; **the release**, the energy credited to the stores at the first split, against a N_slab; **t_spent**,
+the first sweep at which a clean switch move is paid for (arm A); **refolds**, the number of contractions after the
+first split; **open share**, the fraction of the sweeps after the first split spent at width ≥ 6; the final width, the
+final energy above flat, the count of open and curled points at the end, and (arm C) the broken points.
+Words per replica under f3 (the model): **CYCLES** (two or more daughters with at least one refold between: the slab
+reforms and burps again); **ONE BURP** (one daughter and no refold); **NEVER SPLITS** (no split in the run); and
+beside the word the **number of daughters**, the **energy per daughter** against a N_slab, the **period** between
+daughters in sweeps, and the **slab share** (the fraction of sweeps spent at width 4). Words under f1 (the reference):
+**OPENS AND STAYS** (a split is made and the open share is at least 0.9); **OSCILLATES** (a split is made, at least one
+refold, open share below 0.9); **NEVER SPLITS**. In both: **SPENT FIRST** (arm A: a clean switch move is paid before
+any split; reported beside the word above). Per cell: the majority word, the
+median t_split with its range, the release against a N_slab (exact unless a switch move came first), and the median
+energy above flat at the end.
+
+**Ledger.** The energy fed, the energy in the stores, the energy in the wiring above flat, the energy in the daughter
+ledger and the energy leaked, at the first split and at the end; the first split's release must equal a N_slab to 1e-9
+in arm B, and in arm A unless a clean switch move came first (then the difference is reported); under f3 the daughter
+ledger must equal the number of daughters times a N_slab to 1e-9 in arm B.
+
+**The size claim (rule 14):** every per-cell word and median at L = 16 are written from L = 8 and 12 as a dated
+amendment before L = 16 runs; AS PREDICTED if they hold.
+
+### What the owner is asked, in plain words (added 2026-10-18, 22:15 UTC, before any run)
+
+**The gate.** Under the layer form the slab's one move, splitting from four around to six around, is downhill: it
+releases a N_slab and nothing holds it shut, so without a rule the slab splits at the first proposal and X is never
+"stable for now". In the switch model the wall did this job (12 in two directions; 64 and up in three); the layer form
+has no wall, and the gate stands in for it. The rule: the split fires only when the stores of the two layers beside the
+cut (2L² points) already hold at least G, and G is not spent. G is a knob (S1) and is hers. The three candidates, and what
+each does: **g0**, none, the slab exists for about a sweep each cycle and her "stable for now" fails by construction;
+**g1**, G = a N_slab, the slab's whole curling cost (2a per pool point), her own words "a step when the stores first hold
+the whole cost", so the slab sits about 2a/r sweeps before each burp (128 sweeps at λ = 1.25, r = 1/64); **g2**, G = 64,
+the price of the first clean switch step, a number the other kind of move sets, reached earlier than g1 at every size run
+and falling with size per point, which g1 does not. What the gate does not do: change the number of daughters or the
+energy of each. Those are fixed by the feed (one daughter of a N_slab per a N_slab fed); the gate sets only how long X
+sits between re-forming and burping, so it changes the slab share and the time of the first burp. Our recommendation is
+g1, as the reading of her words; any of the three is a legitimate choice, and every cell is run at the one she picks.
+
+**The prediction.** A cell is one move set (arm A, the model: layer moves plus the clean two-switch move; arm B, the
+reference: layer moves alone; arm C, the control: the single switch, T68's protocol), one curling cost (λ = 1.10, 1.25,
+1.40), one feed rate (r = 1/64, 1/16 per point per sweep) and one size (L = 8, 12; L = 16 held out). What is read per
+replica: a word, CYCLES (two or more daughters with the slab re-forming between), ONE BURP (one daughter, no re-forming)
+or NEVER SPLITS; and beside it the number of daughters, the energy per daughter against a N_slab, the period between
+daughters in sweeps, the share of sweeps spent as the slab, and in arm A whether a clean switch move was paid before any
+split (SPENT FIRST). She is asked for: the word she expects in arms A and B (one word for all cells, or per λ or r if she
+expects a difference); whether every daughter carries exactly a N_slab; whether the clean switch move ever fires in arm A;
+the word for arm C; and, after L = 8 and 12 are read, her word for L = 16. Said plainly, arm B is close to arithmetic and
+the kernel's own check at L = 6 and 8 already shows CYCLES with exactly a N_slab per daughter; the parts a run can still
+decide are arm A (whether the switch move ever interferes), the period and the slab share at each gate, and the size claim.
+What would count against her picture as she states it: a daughter other than a N_slab in arm B, or a cell in which the slab
+never re-forms (ONE BURP) with the feed continuing.
+
+### Predictions
+
+**The owner's: given 2026-10-19 before launch, Amendment 2 above** (the gate g1; the model arm CYCLES at every curling cost; layer moves alone cycles less consistently, at some settings only, less often and fewer times; the clean switch rarely; the control does not cycle; one a N_slab per daughter). What happens after the burp is
+decided (f3, Update 66).
+
+**Ours under f3, unverified, written 18 October after the kernel's own check at L = 6 and 8 and before any registered
+run.** Arm B: **CYCLES in every cell**; every daughter carries exactly a N_slab; the energy fed between daughters is
+exactly a N_slab, so the period in sweeps is a N_slab / (r N(t)) averaged over the widths visited (about 10 sweeps at
+r = 1/16, λ = 1.25; the first daughter at 2a / r plus the proposal's wait under g1, at sweep 1 to 3 under g0); the slab
+share above one half under g1 and below one quarter under g0; and, since every threshold and the feed are per point,
+the daughters are born at the same sweeps at every L for the same seed (the held-out size then tests only this). Arm A:
+**no clean switch move in any cell** (never SPENT FIRST, zero clean moves): the stores never reach the 8 per point a
+pool of eight ends needs before a layer move fires at 2a per point or less, for every λ run (2a ≤ 3.2). Arm C: BREAKS
+as under f1. What would count against the model as she states it: a daughter other than a N_slab in arm B; or a cell in
+which the slab never reforms (ONE BURP) with the feed continuing.
+
+**Ours under f1 (the reference), unverified, written before any run, per setting.** Arm B is arithmetic plus the proposal's wait: under g1
+t_gate = a N_slab / (2L² r) = 2a / r sweeps exactly (128 at λ = 1.25, r = 1/64), the same at every size; t_split is the
+first proposal after it (one layer proposal a sweep, half of them splits, every position equivalent on a canonical state: a wait of about two sweeps);
+the release is a N_slab exactly; under f1 OSCILLATES in every cell, refolding at nearly every proposal; under f2
+OPENS AND STAYS in every cell once the lump has leaked below a per pool point. Under g0 the split is at sweep 1. Under
+g2 the pool holds 64 at sweep 32/(L² r), earlier than g1 at L = 8 and later at L = 12 and 16 for a = 1. *Correction, 2026-10-18, 22:15 UTC, before any run: that comparison is wrong. g2 needs 64/(2L²) per pool point against g1's 2a, so g2 is reached first whenever L² > 16/a, that is at every size run (L ≥ 8) for every λ run; at a = 1, sweep 32/(L² r) against 2/r: 0.5/r at L = 8, 0.22/r at L = 12, 0.125/r at L = 16.*
+Arm A: **the layer split comes first in every cell** (never SPENT FIRST), because the gate's threshold per pool point
+(2a ≤ 3.2) is below the 8 per point the first clean switch step needs, and the clean move is rare besides; after the
+burp, with the lump sitting at about 2a per point on two layers and the feed continuing (f1), clean switch moves become
+affordable once a pool of eight ends holds 64, and we expect a few of them at the largest λ and the faster feed, each
+raising the energy above flat, so the end state in those cells is a flat torus with rewired patches and the refolds
+fewer than in arm B where a switch has moved a link the fold needs. Arm C: BREAKS as in T68 (the stores pay single
+switches that break points before any layer move; the layer move is refused where the lattice links are gone), at
+every λ and size.
+What would count against the model as she states it: a release other than a N_slab at a split that nothing preceded;
+or arm A never splitting at a gate the stores do reach.
+
+### What this cannot show
+
+A front, a seam or a payment that cancels: the layer form has none of them (Update 65). Anything about the real
+universe (VISION, "What no outcome can show").
+

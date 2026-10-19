@@ -1070,4 +1070,334 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   and the neighbouring values tested. And one more condition that the contraction model raises: the ratio exists only
   in the local form (a seam paid along the front and repaid at completion); in the layer form gross = net and there is
   no ratio to compare. Idea, recorded; nothing to run until λ has an independent handle.
+- 2026-10-18, the owner: "What about turning that smallest 6xLxL to 4xLxL to continuous change. The stored curling
+  energy where H (the 4 and 6 / curling dimension here) is greater than or equal to 6 is 0. As space spirals in from
+  LxLxL to LxLx6, no energy stored except the matter that crosses the horizon. That's consistent with lambda= 1 where
+  H>=6 and cqg. But energy is stored as the spiral shaped curl reduces H from 6 to 4. That's curling in a bath of matter
+  heat g. How does the energy change over curl (maybe we measure curl in terms of the spiral with some variable
+  representing fold points and the count of spiral turns occurring as h moves from 6 to 4 continuously. How does the
+  curl tightness change as the energy changes if energy flows into the black hole at a relatively consistent rate?"
+  *Ours (her H is the width around, written w below; H is the toy's energy):* (1) Exact: her first two sentences hold in
+  the toy at every λ, not only λ = 1. The curling cost is charged only on a link carrying a fifth square, which exists
+  only at width 4, so above six around our family and the published model are the same energy to the last unit, and a
+  torus of any width ≥ 6 and any count sits at zero. (2) Exact: between 6 and 4 the toy has nothing. A bipartite torus has
+  no odd width, so the energy against width is a step, 0 for w ≥ 6 and 4(λ − 1) per point at w = 4; "continuous" has to
+  be carried by something other than the width. (3) Two continuous variables the toy offers, both computed today. (a) The
+  fraction of a layer contracted (the front): from `sandbox/partial_contraction.py`, the stored curling cost grows about
+  3 surplus squares per contracted position (4 at completion), and a seam cost rides on top, proportional to the rim's
+  length (12 to 27 squares lost beyond the 5 per position the contraction needs, for rims of 4 to 10 positions; 24 for
+  a strip whose rim is two rows of six, at every width of strip), at 16 per square. An area term plus a rim term, both
+  positive, the rim repaid at completion. (b) The spiral: `sandbox/spiral_contraction.py` contracts the layer with the
+  splice shifted along a transverse direction so the seam runs as a spiral, s/L turns per circuit. **Every spiral
+  contraction is flat**: X = 0, H = 0, every point d = 3, at shifts 2 and 4 on L = 6 and 2, 4, 6 on L = 8. Only the
+  straight contraction (zero turns) is the slab and stores 4(λ − 1) per point. This is O116 run backwards: the tube
+  with its seam shifted by two is the flat torus six around. So in this toy the spiral is not a carrier of stored
+  curling energy; it is the shape of the product's seam, and the count of turns is a variable the energy does not see
+  except at exactly zero. A look (rule 16): it can narrow her picture and does; it supports nothing. (4) A constant feed.
+  Under the layer form the tightness is a step in time: nothing stored until the pooled stores hold 4(λ − 1) N_slab,
+  then the whole layer at once, at t* = 4(λ − 1) N_slab / r. Under the local form the first pair needs about 190 at once
+  (the rim), then each further position about 3 to 4 plus the rim's change, and the rim is repaid when it closes; so the
+  stored energy against time is a ramp with a hump and the tightness is a wait, a climb at about r/(3 to 4) positions
+  per sweep, and a refund at the end. Under her no-break rule the local form cannot start, since every partial
+  contraction leaves broken points, and only the step remains. (5) The question this puts to her: is the spiral the
+  geometry of X (then X stores nothing in this toy and the mechanism has no lump), or is X the straight curl, with the
+  spiral the seam shape of the product (O116)? Idea and two looks; nothing registered.
+- 2026-10-18, the owner: "Let's learn a little bit more about dynamical triangulation? It may be a helpful published model
+  to align with part of our phase changing reality model." *Ours:* the reading note is
+  `docs/reading/notes/2026-10-18_dynamical_triangulations.md`, from search summaries only (the proxy refused every paper
+  host); the entry point is [Loll19], not read. What lines up: a varying count priced per block (the bare cosmological
+  constant), the practice of running at fixed count, the spectral dimension as the test of "is it a space". What does
+  not: time put in by hand, and the continuum limit as the aim.
+- 2026-10-18, the owner: "Nothing is stored until the pooled stores hold the whole curling cost - how can it pool if it's
+  not stored somewhere? Can it be stored as antimatter?" *Ours:* the sentence was badly put. It IS stored: in the stores,
+  one number per point, conserved with H to the last unit (Q12). What was meant is that nothing is stored in the WIRING
+  (as a curl) until the stores, read together, hold enough to pay the whole layer; "pooled" names only where the payment is
+  drawn from at the moment of the move (the stores of the points whose links move), not a place of its own. So before the
+  fold every unit fed sits in the stores, free and unshaped; after it, 4(lambda - 1) per point sits in the wiring as the
+  curl and the rest stays in the stores. Can the store's energy be called antimatter? As a name, yes, and it is a natural
+  one for her ledger (the stores pay the seam, the seam repays them at completion). As more than a name, not in this toy:
+  every unit of energy here is positive, nothing comes in two signs, and store energy and wiring energy convert into each
+  other freely. Real antimatter is matter with its charges reversed that cancels with matter to light (general knowledge,
+  to verify); a toy counterpart would need a quantity of two signs whose sum is what is conserved, which is a new
+  ingredient under S1 and is not built. What the toy can offer is the split she is pointing at: shaped energy (the curl,
+  the net) and unshaped energy (the stores, the gross less the net).
+- 2026-10-18, the owner: "X is straight curl, with the spiral being the seam shape of the product after the burp." *Ours:*
+  a decision; VISION Update 64. The fraction of a layer compacted is the toy's curl variable from here.
+- 2026-10-18, the owner: "What the toy does offer is the split you are pointing at: shaped energy, the curl, which is
+  the net; and unshaped energy, the stores, which is the gross less the net. Yes this is what I meant." / "Their practice
+  of running at a fixed count and reading the constant off the fluctuations is something the toy could copy- seems
+  useful." / "time put in by hand. Time emerges from 3d space so in the folded slab there is no time we need something
+  else like sweeps or spirals." / "Whole layer form." *Ours:* the fourth is a decision (VISION Update 65) and closes the
+  brief's questions 1 and 2. On time: the toy's one clock is the count of moves (sweeps), and under the layer form the
+  opening takes one move, so "how long" is set by the feed alone (t* = stored cost / rate). Her "spirals" as a clock: the
+  product's seam shift (O116, Update 64) is a count the wiring carries after the burp; whether it advances with anything
+  is not known and is an idea, not a test. On the fixed-count practice: in this toy every flat width ≥ 6 sits at zero, so
+  nothing prefers one count to another at μ_N = 0; a measured μ_N is what would set the product's width, and the brief now
+  says how it would be read (section 6, E5). Exact, run for this: the ladder 10 → 8 → 6 → 4 at L = 6 and 8 costs 0, 0,
+  then 4(λ − 1) N exactly (LOG).
+- 2026-10-18, the owner: "What the toy can test under the layer form is the ledger, the timing against a feed (a step
+  when the stores first hold the whole cost), and what sets the width of the product. Proceed." / "under the layer form
+  the move set is the layer moves plus the clean two-switch move of this morning, with the single switch kept only as a
+  control. Confirmed." *Ours:* both recorded as decisions (VISION Update 65, addendum). "A step when the stores first
+  hold the whole cost" is the gate's natural value, the slab's whole curling cost 4(λ − 1) N_slab held in the pool of
+  the two layers beside the cut; it is one of the three candidates put to her in T71, not adopted for her.
 
+- 2026-10-18, the owner, after the layer form's kernels were built: "Why is universe flat? Any setting 6 or up is flat.
+  Inflation theory: it started expanding very fast, then there is a stretch where it slows down and expands sedately for a
+  while, here we are 13.8 b years after the big bang. But that really really fast expansion that must have happened before
+  the big bang was the w=4 to w=6 part. The energy was released when it hit 6 and got flat. Maybe it is just expanding
+  sedately now as forces balance, the scalar field inflaton field, spaces out cools down, then it accelerates again? Due to
+  something else. Generates repulsive gravity, then gravity overwhelms it, then something else. Some expanded a bit more
+  than others some more dense. Could this be related to scraps? It's so efficient you can't use up the fuel, which is why
+  a black hole isn't a universe womb, it's a universe machine. The natural outcome and it shows what a big infinity this
+  strange loop is, among other loops that could exist at different settings, configurations. If you adjust the strength
+  of gravity, electromagnetism, you very quickly get to a point that wouldn't allow life, an observer, to exist.
+  Inflationary multiverse (although our bubble keeps laws of physics constant across cycles, other settings are a topic
+  we haven't dove into yet.) is inevitable. Denser regions collapse to form galaxies and stuff. Seeds of structure."
+  *Ours, set against the toy, point by point; nothing here is a decision or a run.* (1) **Flat at every width from six
+  up** is exact in the toy (the ladder 10 → 8 → 6 costs nothing; LOG, 18 October), but the toy's "flat" is a count at a
+  point (every link carrying its full number of squares, d = 3; O116), not the cosmologist's flat (no spatial curvature,
+  Ω = 1). A torus has no curvature by construction and the toy has no horizon and no expansion, so it has no flatness
+  problem to solve: in this energy nothing wide can be curved. Her observation is right about the toy and does not carry
+  to the sky. (2) **The 4 → 6 step as the fast expansion, the release at 6:** under the layer form the step is one move,
+  it releases exactly 4(λ − 1) N_slab into the stores, and no later widening releases anything (exact). The shape is
+  inflation's reheating (energy stored while the geometry changes, released as a hot lump when it ends), and the
+  mismatch is size: one step of 50 % in one direction against at least e^60 in all three (general knowledge, to verify).
+  (3) **"Expanding sedately as forces balance":** exact in the toy. With layer moves alone the width's distribution is
+  Boltzmann in μ_N N (addendum to Update 65), so at μ_N = 0 the width random-walks between six and the wall with nothing
+  driving it either way; "forces balance" is μ_N = 0. An accelerating phase would be μ_N < 0, a reward per point, which
+  is a knob (S1) and the side on which a varying count runs away (the dynamical-triangulations note of today). (4)
+  **Repulsive, then gravity wins, then something else:** this is the standard history (inflation; then radiation and
+  matter slowing the expansion; then dark energy speeding it up again since about five billion years ago; general
+  knowledge, to verify). The record's name for the "something else" is dark energy as the energy space keeps (Update 52);
+  the toy has none of it. (5) **Scraps as the seeds of structure:** consistent with her lean that the scraps are the dark
+  matter (Update 52), since in the standard picture dark matter's overdensities are where galaxies form. One way it can
+  be wrong, exact and cheap to check: the scraps are knots of fixed energy at a number set by the opening (O107); knots
+  scattered at random with equal energy make shot noise (a white spectrum), while the measured primordial spectrum is
+  nearly scale-invariant (n_s ≈ 0.965) and correlated on every scale (Planck 2018; general knowledge, to verify). The
+  saved T51 sheets (`results/t51_*_adj`) hold the knots' positions; whether they are Poisson or clustered along the
+  seeds' boundaries is a sandbox look not yet run. (6) **"You can't use up the fuel; a machine, not a womb":** exact in
+  the toy, and double-edged. The split credits the stores with exactly the fold's price, so the fold can be paid back at
+  the next proposal; under a uniform leak any feed strong enough to pass the "whole cost" gate (r/ℓ ≥ 2a) can pay the
+  fold back (r/ℓ ≥ a). Energy is conserved to the last unit, so the cycle makes nothing: the machine runs on the feed.
+  The same fact is why the product does not stay open unless the lump leaves, which is the feed-after-the-burp choice
+  (f1, f2) owed for T71. (7) **The constants and the multiverse:** on the record as hers (λ a constant of our loop,
+  Updates 23 and 59; other settings as the (D, λ) map, Update 26; observers as the reward, Update 43; the branching
+  count, Update 59). "Inevitable" is eternal inflation's claim (Vilenkin, Linde; general knowledge, not read), which
+  holds for most inflation models and not all; the measure problem it brings is O101. (8) Denser regions collapsing into
+  galaxies is standard structure formation; nothing to test in the toy. Her two questions about Brian Cox and "Dr Katy
+  at Melbourne" are answered in `docs/reading/notes/2026-10-18_cox_mack.md` (search summaries only).
+- 2026-10-18, the owner, later the same afternoon, on how long a turn yields observers: "The universe will stop producing
+  new stars in 100billion years, or we can count forward many more until the last black hole peters out and there is no
+  more mass, no more time, no more faint stellar remnants. A planet can stay habitable for life say 10billion years. And
+  how many observer societies that get to the point of asking about the universe and everything, per planet lifetime? On
+  earth, the homo lines. Travel through space? just us so far. We're what, 5billion in since the planet formed? The
+  expansion of the universe is speeding up too, solar systems and planets farther and farther away from each other. This
+  version of dark energy takes us towards the heat death of the universe. That also gives us trillions of new universes vs
+  a big rip idea that only gives you one. That's a loop, sure, but it is a much smaller loop vs each single black hole
+  birthing a large amount of similar and sometimes identical daughter universes and every possible version of reality
+  plays out in its own spacetime. That does give us the longest observer evolution hotspot too. Phantom dark energy pulls
+  apart galaxies. Breaks apart all matter. Vacuum decay. So 10^1000 is really the max. In way less than that an observer
+  won't get to collect data to see the birth of the universe and learn all the stuff we have. So maybe there is only 10-15
+  billion years left of good observational science."
+  *Ours: this is piece 12's function (Update 43: observers who evolved per turn, times the branching), written out in
+  stages for the first time. Nothing here is a knob or a run; the toy has no stars, no observers and no expansion. The
+  standard numbers, from search summaries and general knowledge, all to verify
+  (`docs/reading/notes/2026-10-18_far_future_and_observation_window.md`):* (1) **The eras.** Star formation is already past
+  its peak (about ten billion years ago) and is nearly over by about 100 billion years, as she says; but the last small red
+  stars burn for about 10^14 years, so the era of starlight ends there, not at 10^11. Then stellar remnants to about 10^39,
+  then black holes evaporating, the largest gone by about 10^100 years. **10^1000 is not a milestone anyone has named**; if
+  her conjecture of 6 October (no mass, no time; Update 44, now worded as the last black hole dissolving, Update 59) sets
+  the end of a turn, that end is near 10^100 years. (2) **Observers per planet.** Earth is about 4.5 billion years old and
+  stays habitable for complex life for roughly another one to two billion, not ten; a planet round a small red star could
+  stay habitable for trillions. One technological society per planet lifetime is the only data point there is, and it
+  cannot be read as a rate (it is the sample that had to exist to ask). (3) **The observation window.** Her "10 to 15
+  billion years left of good observational science" has a published form: Krauss and Scherrer (2007) argue that in the
+  standard model every galaxy outside our Local Group passes beyond the horizon and the cosmic microwave background
+  redshifts out of reach, so a future observer sees one island of stars, infers a static universe and cannot infer a Big
+  Bang. Their scale is of order 100 billion years, so her number is about ten times too early; the shape of her point
+  stands. (4) **Heat death against big rip.** A constant dark energy (w = −1) gives her slow heat death; a phantom one
+  (w < −1) gives a big rip in finite time. Her argument that the measure prefers no rip is a selection argument of the
+  kind the record already holds (Update 43: the yield counts observers who evolved; Update 59: the branching count): a rip
+  cuts the black hole era short, so a universe at w ≥ −1 births more daughters. Two cautions. The count of black holes is
+  mostly fixed in the first tens of billions of years (structure stops forming once dark energy dominates), so heat death
+  buys time, not many more black holes; and the current data (DESI DR2 and supernovae, 2025 to 2026) weakly favour a dark
+  energy that was phantom in the past and is weakening now, at one to two sigma, which is neither of her two cases and
+  would also avoid a rip. (5) **Vacuum decay** is a third ending, separate from both: the Higgs field dropping to a lower
+  state at a random time, a bubble spreading at nearly light speed (the [C77] picture claim 4 borrows). Nothing measured
+  dates it. (6) **The hotspot.** Her "longest observer evolution hotspot" is Dicke's argument (Update 26) applied to the
+  whole era of starlight: observers sit where stars burn and planets last, which is now, early in a 10^14-year era. What
+  the toy can say about any of this: nothing. What the record can do: write piece 12's function with these stages as its
+  terms (the length of the era of starlight, the number of black holes formed, the observation window) so that a setting
+  of the loop can be scored, which is the exact item Update 59 left open.
+- 2026-10-18, the owner: "Proceed" (the sandbox look at the knots' positions). *Ours, the look (`sandbox/LOG.md`, 18 October,
+  last entry): the knots are clustered on the scale of a few columns and random beyond, their positions are set at the
+  opening (88 % persist across cooling times), and kinds sit beside kinds. For her idea it means: the scraps' own layout is
+  white noise at large scales, which is not the sky's nearly scale-invariant seed spectrum; what survives is the weaker
+  form, scraps as dark matter that falls into seeds laid by something else. A look; it narrows, it supports nothing.*
+- 2026-10-18, the owner, on what happens to the lump after the burp: "I think it goes in its own daughter universe. Then
+  the slab reforms and continues accepting energy. Nothing can go from open space to the slab, it's one way." *Ours:* a
+  decision (VISION Update 66); built as a daughter ledger in the T71 protocol the same evening, with the exact arithmetic
+  there: the parent converts the whole feed into daughters of exactly a N_slab each, and the gate sets only how long X
+  sits between fold and burp. Still owed: the gate and her prediction.
+- 2026-10-18, the owner: "write piece 12's function with these as its terms (length of the starlight era, black holes
+  formed and when, the observation window), so that a setting of the loop can be score: proceed." *Ours:* written as
+  `docs/design/loop_measure_brief.md`: the terms, the function in stages, the one choice left to her (how generations
+  are combined), and the one term the toy now supplies exactly (daughters per unit of energy fed, Update 66).
+- 2026-10-18, the owner, on method: "So the toy does not explain flatness. It assumes it. So can't we say that because we
+  know it's flat from measuring it is acceptable to use this toy? The point of the toy is to be the most simple
+  mathematical description that describes what we know about reality. That is a useful thing to build, once it's built
+  the best it can be, we can use it to make predictions." / "has a degree of freedom the toy lacks: a curvature radius
+  for the large direction - should we add this on before making any predictions with it, then?" / "Flat in the toy says
+  nothing about size. That's fine and good we can paste on other scientists' size stuff, as needed for predicting."
+  *Ours:* (1) Yes, a measured fact may be an input; the price is that the toy can then never be scored on it, and
+  flatness must not be counted among the things the toy got right. One caution with the words: the toy's "flat" (every
+  link full, a count at a point) and the sky's "flat" (a curvature radius far beyond the horizon) are not the same
+  quantity, so the match is of words, not numbers (rule 13). (2) No curvature radius before predictions: add a degree of
+  freedom only when a registered prediction needs it. In this family nothing wide can be curved at the floor, so a
+  curvature radius would be a new ingredient (a different lattice or a term that charges or rewards curvature), a knob
+  under S1, and it would buy nothing for the questions the toy is built for (the ledger, the gate, the timing, the
+  daughters per unit fed, the knots). (3) Pasting other scientists' results on is how piece 12's brief already works
+  (the toy supplies one term, b; the rest is published). The discipline it needs: at every join, say which number is the
+  toy's and which is pasted, and keep the list of what was put in (flatness; three directions; the curling cost; the
+  gate; one-way daughters; the slab as X) apart from what came out (the lump a per point; the knots and their sizes; the
+  converter; b = energy in over the lump), so that no prediction is scored on an input (rule 13: inputs checked for
+  containing the target). On "once it's built the best it can be": the toy already predicts (T71's words are written);
+  the project's way is a registered prediction at each stage, not one after a finished build.
+- 2026-10-18, the owner, on the converter reading of Update 66 ("the parent makes nothing, it passes the feed through"):
+  "Yes this makes sense." *Ours:* recorded as her acceptance of the reading.
+- 2026-10-18, the owner, choosing piece 12's combination rule (the brief's section 4): "Per universe only ignoring the
+  branching when we are thinking about identicle universes that can only be differentiated by a particle or quantum
+  measurement that makes something different at the macro scale. 2 for predictions of when an observer is most likely to
+  occur in time where t=0 and the end of life supporting stars." *Ours:* a decision (VISION Update 67). Her first rule is
+  the one that avoids the trap O101 named: universes of one setting that differ only by a quantum outcome are counted each
+  as a whole, so no exponential weight favours the deepest generations. Her second rule, read as counting observers across
+  the tree, carries a known consequence (the youngness pressure of eternal inflation, [Freivogel11]; general knowledge, to
+  verify): with daughters born at a steady rate, the universes alive at any one moment are mostly young, so the prediction
+  for "when" is pulled toward the earliest time observers can exist; with "trillions" of daughters per universe within
+  about 10^10 years that pull is strong, and we are at 1.4 × 10^10 years. Written out in the brief with the escape her
+  first rule provides.
+- 2026-10-18, the owner, on piece 14's open question (whether the versions are Everett's branches): "I believe they are as
+  needed for amplitudes and interference to work correctly." And on the youngness consequence of her rule (ii): "Okay my
+  first instinct is to say we don't count across the tree then the rate and order doesn't matter as we can line up all the
+  universes aligning big bang time. But I need to understand this better: most universes alive at any moment are young, as
+  in my scenario yes they are increasing exponentially, but when we make a prediction of when we are I'd want to look from
+  outside of time: are you sure that forwards weight can't be balanced by the universe's last observer being way out at
+  10^100 years? And red draws being stable for way longer than our type of star and there being more of those in the
+  future?" *Ours:* (1) Her belief on the branches is recorded as her position; the brief's rule (i) now says the copies
+  carry Born weights on her word, and O125's "untested" stands until piece 13's toy tests it. (2) Late observers cannot
+  balance the weight; late births can. The across-the-tree count weights age τ by e^(−γτ), and γ is set by when daughters
+  are born, not by when observers live: with 10^12 daughters born within 10^10 years, γ ≈ 2.8 × 10^−9 per year, and an
+  observer at 10^12 years (the red dwarfs' era) would need 10^1180 times more observers than now to balance it, at 10^100
+  years 10^(10^91); no finite universe holds them. What lowers γ is the birth time: the same 10^12 daughters born at 10^12
+  years give e^(−0.4) at our age, nothing. And early births set a floor whatever comes later: more than about three daughters
+  per universe within the first 10^10 years already costs e^(−1.4) at our age, a million costs e^(−18). So the across-the-tree
+  reading survives only if the black holes formed early birth almost nothing and the daughters come from what falls in late,
+  which under Update 66 (b proportional to the energy fed) is not what the toy says. (3) "Line up all the universes at their
+  big bang" is the per-universe count by age, and it is what "from outside time" gives: the whole tree counted per universe
+  has every universe with the same distribution over its own age, so the branching adds copies and no weight. The
+  across-the-tree count needs a common clock across universes, which her hypothesis denies (time emerges inside each open
+  space, Update 65; a daughter's clock is not the parent's). Her instinct is the reading consistent with her own picture,
+  and it is the one eternal inflation's youngness paradox is an argument against the other (a regulator by a global time;
+  [Freivogel11]). (4) Her red-dwarf point does bite, in the per-universe reading and against her own age the other way: with
+  habitable planets round 0.1 solar-mass stars, the chance of an observer as early as now is at most about 0.1 % ([LBS16],
+  read in full on 12 October; `src/orh/cosmic.py`), so a per-universe count predicts an observer at about 10^13 years unless
+  red dwarfs are poor hosts or late observers are weighted down. Her own observation-window term W(t) (Krauss and Scherrer,
+  about 10^11 years, not read) does the second: observers who cannot learn their universe's history count less, so the peak
+  moves inside 10^11 years and our age is unremarkable. That makes the window a load-bearing choice, not a flourish: drop it
+  and the per-universe count predicts the red-dwarf era. (5) A "balance" in the across-the-tree reading, the youngness pull
+  against the red dwarfs' numbers, would need γ of a few × 10^−11 per year, two knobs set to land on our age; rule 13.
+  Nothing here is a run or a knob of the toy.
+- 2026-10-18, the owner, on the escape from the youngness weight: "And also that the black holes birthing now may still be
+  running in 10^50 b years?" and, on "set by the mass that falls in over the long black hole era rather than by the holes'
+  formation": "yes this makes sense". *Ours:* recorded as her lean toward late births, not as her word on which reading rule
+  (ii) means. Two things stand against it, both from outside the toy. (1) Under the converter she accepted (Update 66) a
+  black hole births only while it is fed, and the published far future has the feed front-loaded: nearly all the mass that
+  ever falls in does so in the first 10^10 to 10^11 years (stars collapsing; the central black holes growing, mostly in the
+  first few billion years); one late tranche follows at about 10^20 years, when galaxies relax and a minority of their
+  remnants fall into the central hole while most are ejected; after that nothing is left to fall in (protons decaying from
+  about 10^37 years, if they do), and a black hole loses mass by Hawking radiation faster than it gains it from the cold sky,
+  the stellar ones gone by about 10^67 years, the largest by about 10^100 (Adams and Laughlin 1997, search summaries only;
+  general knowledge, to verify). So at 10^50 years the holes exist but are fed nothing, and under the converter birth
+  nothing. (2) Even granting late births, the early floor is set per universe, over all its black holes together:
+  γ ≥ ln(B_early)/10^10 years. With about 10^20 black holes formed in the first 10^10 years, one daughter from each already
+  gives e^(−60) at our age; 10^10 daughters give e^(−30); a thousand give e^(−9). The across-the-tree reading therefore
+  needs the whole universe to birth at most a handful of daughters in its first 10^10 years, which with the lump per daughter
+  proportional to the energy fed means a daughter costing more than almost any black hole holds by then. That is not
+  "trillions"; with late infall a minority of a galaxy's remnants, the total would then be small too. So the three together
+  (across the tree, trillions of daughters, the converter) do not fit our age under the published infall history; the
+  per-universe reading, her instinct, needs none of this. The timescales above are a reading task before they are cited
+  (`docs/reading/notes/2026-10-18_far_future_and_observation_window.md`).
+- 2026-10-18, the owner, settling the reading of rule (ii): "daughter's clock is not her parent's - it's an exact copy
+  though, starts at big bang runs though heat death, every time so yes The across-the-tree count needs a common clock
+  running across universes, we don't have one clocks are only within a universe." *Ours:* a decision (VISION Update 68):
+  rule (ii) is read per universe by each universe's own age, and the youngness weight has no common time to live in. What
+  the function then predicts, and where it can fail, is in the brief's section 4 and Update 68: the observation window W(t)
+  carries the weight against the red-dwarf era ([LBS16]).
+- 2026-10-18, the owner, on what is left under the per-universe reading: "so the only issue is that we are at 13.8 b years
+  rather than 10^13. But we know more about ourselves: a no cross planet interaction universe, no space wars, possibly a
+  rift or the rate of the increasing universe size pulling apart galaxies as the vacuum, the repulsion force, exceeds
+  gravity: something reduces the length of time bringing forward the prediction." *Ours:* yes, that is the one issue left,
+  and it is [LBS16]'s own puzzle (their two readings: we are early, or the smallest stars are poor hosts). Her candidates,
+  put through the Stage E population model as a sandbox look (LOG, 18 October; a look, not evidence): (1) The rip brings
+  the prediction forward (a rip at 30 Gyr puts a third of the count before today) but the data lean weakly the other way
+  (DESI DR2: a weakening dark energy, w0 > −1, wa < 0; `docs/reading/notes/2026-10-18_far_future_and_observation_window.md`),
+  and it cuts against her own argument of this afternoon that the heat death is the branch with trillions of daughters;
+  she cannot have both without a number. (2) Under a constant dark energy the vacuum does not pull galaxies apart: bound
+  things (galaxies, the Local Group, solar systems) stay bound; what it does is carry everything else beyond the horizon,
+  which shortens the window in which an observer can learn its universe's history. That is her W(t), already in the
+  function: with a hard cut at 100 Gyr, 8 % of the count falls before today, unremarkable. So dark energy's measured effect
+  is the shortener she already has, not a new one. (3) "No interaction between planets, no space wars" does nothing as a
+  multiplier (a factor that acts on every time alike leaves the peak where it was), and does a great deal as a rule for who
+  counts: count each civilization once at its origin, or give observers a short life per planet, and the count follows the
+  planet-formation rate, peaks near 5 Gyr and puts over nine tenths before today. That is piece 14's known lever (the
+  reference class; Hartle and Srednicki), and it overshoots: it makes us late rather than early. (4) Rule 13 applies to all
+  of them: a term added because it lands on our age is a fit. The two that stand on their own grounds are her window (an
+  observer who can learn its universe's history, chosen before this question arose) and the smallest stars' habitability,
+  which astronomy can measure; the reference class is hers to choose on its own grounds, and whichever she chooses, the
+  function is not scored on our age.
+- 2026-10-18, the owner, on paper 1: "I think we should call point conservation a setting in paper 1 so people don't
+  assume it needs to be there. And that square breaking is allowed/required for the model to not step too far from cqg in
+  the first paper." *Ours:* drafted as candidates 1 to 3 of the 18 October section of
+  `docs/papers/curled_torus/v2_changes.md`, for her to edit; the paper itself is hers and held, and nothing in its results
+  changes. Nothing else of today (the contraction model, the daughter ledger, the gate, piece 12) belongs in paper 1: none
+  of it has run, and paper 1 is the two-direction tube under the published move.
+- 2026-10-19, the owner, deciding T71's gate and giving her prediction: "g1 is right. / B cycles at each curling cost. / A
+  Layer moves alone gives less consistent cycles but may cycle at some settings, but less often and less times. Clean switch
+  rarely. / Arm c doesn't cycle / 3. Yes one N Slab." *Ours:* the gate is a decision (VISION Update 69); the prediction is
+  recorded verbatim in PREREGISTRATION T71, Amendment 2, scored by the move sets she names (her letters A and B are the
+  registration's B and A), and T71 is launched (12 jobs). Where she and we differ: layer moves alone, which she expects to
+  cycle less consistently and we expect to cycle in every cell.
+- 2026-10-19, the owner, revising her T71 prediction for layer moves alone after hearing of the kernel's check at L = 6
+  and 8: "L = 6 and 8 oh I didn't look at the kernel, I agree with u here given initial results." *Ours:* recorded as
+  PREREGISTRATION T71, Amendment 3, after launch and before any result was fetched; her original words stay on the record.
+  Both of us now predict CYCLES in every cell of both layer arms.
+- 2026-10-19, the owner, sharing a Smithsonian article: "new research says space growth possibly slowing?" *Ours (search
+  summaries only; the proxy refused the article, the RAS release and arXiv; `docs/reading/notes/2026-10-18_far_future_and_observation_window.md`):*
+  the article (November 2025) reports Son, Lee and colleagues (Yonsei), MNRAS 2025: the standardised brightness of type Ia
+  supernovae correlates with the age of the stars that made them (5.5σ claimed); corrected for it, the supernova data line
+  up with DESI's weakening dark energy, and they claim the expansion has already stopped accelerating. Rebutted in January
+  2026 by Wiseman, Riess, Schmidt and others ("Still accelerating", arXiv:2601.13785, MNRAS 2026): the standard correction
+  for the host galaxy's mass already captures the environmental dependence, with it no age dependence remains, and a
+  supernova's progenitor is far younger than its galaxy; a reply from the Yonsei group in May 2026 ("Still non-accelerating",
+  arXiv:2605.21586). Unresolved and contested; the mainstream reading is still acceleration; nothing here says space is
+  shrinking, only that the speeding-up may be ending. What it would mean for her picture if it held, each a target and not
+  a confirmation (rule 13): (1) dark energy as "the energy space itself keeps" is a constant, and a dark energy that fades
+  needs a source that changes, which the toy has nothing for; the dark-energy target sheet of piece 15 already asks whether
+  her dark energy should change with time, and this is the observation it would be scored against. (2) A fading dark energy
+  means no rip and a longer era of structure formation, so more black holes form late: more daughters, later, which her
+  measure likes. (3) The observation window W(t), the load-bearing term of piece 12 and 14 (Update 68), rests on a constant
+  dark energy carrying other galaxies beyond the horizon in about 10^11 years (Krauss and Scherrer); if dark energy fades,
+  the window may be far longer, and the per-universe count drifts back toward the red-dwarf era ([LBS16]), which would make
+  our age early again under her own rule. So the result, if it stands, would weaken the term that rescued our age; that is
+  the sharpest thing it says to her picture. Nothing recorded as a decision; nothing in the toy changes.
+- 2026-10-19, the owner, on paper 13's sentence that it "asks the loop only where the amplitudes live": "in the loop
+  there are sets of universes that are identicle until each moment passes. From the macro perspective those versions are
+  indistinguishable so we experience all of the set, until a measurement or some next moment locks us into one version."
+  *Ours, unverified (general knowledge, to verify):* this is her Everett reading (18 October) stated as a place: the
+  amplitudes live on a set of versions that agree on every record, and they separate when a record (a measurement, or any
+  next interaction) makes them differ, which is decoherence. Two things the published rule adds, and paper 13 must say:
+  until they separate the versions are not only all experienced but can cancel one another (interference), which is what
+  counting alone could not give (T15 rung 3a); and "the next moment locks us in" holds only where that moment leaves a
+  record, since a version change that leaves no record can still be undone (piece 13's toy, O125). What the toy still
+  lacks is the object: which arrangement in it carries the versions (the loop of four is not a resonator; O30).

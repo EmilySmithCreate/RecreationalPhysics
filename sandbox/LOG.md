@@ -356,4 +356,50 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   slab is separated from flat space on these paths by a seam of about 230 to 280 units, the size of T54's completed patch.
   Not tried: re-linkings that move the x = −1 to x = 2 splice, patches of 3 × 3 or more, L above 8. Exact within reach; a
   look. Not promoted. Written up in `docs/design/contraction_model_brief.md`, section 2.5.
+- 2026-10-18. The owner's spiral (`sandbox/spiral_contraction.py`; `sandbox/out/spiral_contraction_2026-10-18.txt`): the
+  layer contraction of flat 6 × L × L with the splice shifted s steps along y, so the seam of the curled direction runs
+  as a spiral with s/L turns per circuit. Every even shift above zero gives a valid state with X = 0, H = 0 and every
+  point d = 3 (L = 6: s = 2, 4; L = 8: s = 2, 4, 6); only s = 0 is the slab (X = N, H = 4(λ − 1) N, d = 2). The spiral
+  stores no curling cost in this toy; it is O116's flat product (the seam shifted by two) reached from the other side.
+  Exact; a look. Not promoted.
+- 2026-10-18. The ladder of whole-layer contractions (`sandbox/out/ladder_contraction_2026-10-18.txt`, from
+  `sandbox/pair_moves.layer_contraction`): flat 10 × L × L → 8 → 6 → 4 at L = 6 and 8, λ = 1.25. Every step above six
+  leaves H = 0, X = 0, every point open and the graph valid; the step 6 → 4 gives X = N, H = 4(λ − 1) N exactly (144 at
+  L = 6, 256 at L = 8), every point closed. Exact; the brief's test E2 for the layer form. A look.
+- 2026-10-18. Two kernels built with rule-6 tests (`src/graphity/contraction.py`, `src/graphity/clean_move.py`; tests
+  `tests/test_contraction.py`, `tests/test_clean_move.py`). Exact facts met on the way, none a result: (a) under the
+  layer form the split of the slab is downhill, so with no gate it fires at the first proposal, and the lump then
+  sitting in the stores pays the contraction back at the next; a uniform leak holds the product open only once the
+  steady store per point, about r/ℓ, falls below the curling cost 4(λ − 1) (arithmetic in T71). (b) With layer moves
+  alone the width's stationary distribution is exactly Boltzmann in μ_N N (a test checks the chain against the sum). (c)
+  The first clean two-switch move out of the slab costs exactly 64 and opens 16 points, T69's first clean state, at
+  λ = 1.25 as at 1.10; one seed hit it after 1.2 × 10⁵ attempts at L = 6 and 2.2 × 10⁵ at L = 8
+  (`scratchpad/clean_rate.py`, not kept). (d) The sandbox script `clean_feed.py` counted a second switch that exactly
+  undid the first as an accepted move; the kernel refuses that null move. Its census numbers (open points, regions)
+  were read from the wiring and are unaffected; its `acc` column was inflated.
 
+- 2026-10-18. Where do T51's knots sit along the sheet (`sandbox/knot_positions.py`; `sandbox/out/knot_positions_2026-10-18.txt`;
+  the owner's "scraps as the seeds of structure", notebook 18 October)? Over the 600 saved end states, 1,456 knots (1,142
+  columns, 96 double columns, 136 knots of two kinds, 82 groups that are two or more knots within two steps of each other).
+  **Clustered, not random:** 23.5 % of knots have another within four columns of the 128 to 512 along the ring, against 7.7 %
+  for uniform random positions with the same count per sheet; the smallest-gap bin holds 228 gaps where uniform gives 134;
+  the median nearest-neighbour distance is 0.36 of the mean spacing against 0.43. The clustering is on the scale of a few
+  columns; beyond it the gaps look uniform (the upper p-value bins sit near their expectation). **Set at the opening:** of
+  the knots that survive a slower cooling, 88 % lie within two columns of a knot after the next faster cooling of the same
+  opened sheet (random positions: 4 %), which fits O107's reading that the number is set at the opening and the cooling
+  only removes. Kinds sit beside kinds: a double column's nearest neighbour is a knot of two kinds 77 times in 96 and never
+  a column. A look; it supports nothing. What it kills: a sprinkle of fixed-energy knots, clustered on a few columns and
+  random beyond, is white noise at larger scales (density spectrum flat in k, n_s = 0 in the cosmologist's convention),
+  while the sky's seeds are nearly scale-invariant (n_s ≈ 0.965; Planck 2018, general knowledge, to verify); so the scraps'
+  own layout cannot be the seed spectrum in this toy. Untouched: scraps as dark matter falling into seeds laid by something
+  else.
+- 2026-10-18, evening. Under the per-universe reading (Update 68), what brings "when we are" forward from [LBS16]'s
+  trillions of years? `sandbox/when_we_are_shorteners.py` on the Stage E population model
+  (`sandbox/out/when_we_are_shorteners_2026-10-18.txt`). Seen: with every inhabited planet weighted by how long its
+  observers last and all stars counted, the share before today is 0.002 (Loeb et al.'s thousandth); her window as a hard cut
+  at 100 Gyr gives 0.083; a rip at 30 or 50 Gyr 0.33 or 0.18 (the same arithmetic as a window at that time); excluding
+  red dwarfs 0.16, Sun-like only 0.77; a factor multiplying every time alike (an interaction term, company helps or hurts)
+  moves nothing (0.002, 0.001); counting each inhabited planet once at its origin, or observers lasting 1 Gyr per planet,
+  0.92 with the peak near 5 Gyr. A look; it supports nothing. What it kills: "no interaction between planets" as a
+  shortening of the habitable era (a uniform factor); it survives only as a rule for who counts (each civilization once),
+  piece 14's lever, which then makes us late rather than early.

@@ -1,7 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Phase-Changing Reality</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
 <style>
 /* Layout: one reading column. A status sheet: the claim, a twelve-row table, then one card per piece
    with the same three parts every time (current read, next, last updated). */
@@ -40,7 +47,7 @@
 body {
   background: var(--ground); color: var(--ink);
   font-family: var(--serif); font-size: 18px; line-height: 1.55;
-  padding-inline: 16px; padding-block: 0 64px;
+  padding-inline: 16px; padding-block: 0 64px; margin: 0;
 }
 .wrap { max-width: 760px; margin: 0 auto; }
 a { color: var(--accent); text-underline-offset: 2px; }
@@ -125,14 +132,10 @@ tr.grp td { font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-tra
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
-<aside><p><b>Archived programme page.</b> The current source is docs/papers/programme_draft.md.
-Model results must be read with docs/papers/measurement_scope.md: square counts do not certify geometry
-or a unique front, and mean store energy is not temperature. This snapshot is not the current research record.</p></aside>
-
 <div class="wrap">
   <div class="bar">
     <span><strong>Draft</strong> for the author's review</span>
-    <span>State of the program as of 5 October 2026</span>
+    <span>State of the program as of 19 October 2026</span>
     <span>Not for publication</span>
   </div>
 
@@ -155,14 +158,14 @@ or a unique front, and mean store energy is not temperature. This snapshot is no
       </g>
     </svg>
     <h1>A phase-changing reality</h1>
-    <p class="dek">Where each piece of the theory stands, what comes next, and when it last changed.</p>
+    <p class="dek">Where each piece of the theory stands, which paper carries it, and what comes next.</p>
     <p class="byline">Emily Smith · Charlottesville · analysis drafted with Claude (Anthropic)</p>
   </header>
 
   <section>
     <h2>The claim, in the author's words</h2>
-    <p class="idea">Our spacetime is one settled arrangement of something deeper, X: a specific arrangement that was stable for now, curled where ours is open. A push started a change in one small part of X. It spread as a front, X opened into space, and the change released a fixed lump of energy: the burp. X's three curled directions are alike, so which opens first is chance, and the order sets what each release becomes. The first becomes dark energy, the energy of space itself. The other two become ordinary matter and radiation, the Big Bang's energy, and dark matter. What did not convert stayed behind as scrap. Energy was conserved across the change, and what the burp does not deliver returns to the black hole it came from. Inside the new space, black holes are regions that curl back toward X; one that grows large enough gets its own push and burps a new space, by the same rules as before. So every arrangement a Big Bang can produce gets to exist. The quantum world is the set of undetectably different versions of an arrangement, all standing at once until an interaction tells them apart.</p>
-    <p class="idea-src">The author's hypothesis. What it has to match is the make-up of reality at its birth, not today's.</p>
+    <p class="idea">Our spacetime is one settled arrangement of something deeper, X: a specific, relatively stable arrangement with its own dimensions, curled where ours are open. X was stable for now, not for ever. Most likely X was a slab, two directions already open and one still curled tight; each curled direction stands behind its own wall and releases its own share when it opens. Energy arriving in X, as a black hole's infall arrives, raised its excitation until, when the stores first held the whole cost of the curl, the curled direction gave way: the burp, a fixed release of energy, which became the Big Bang's energy. The release leaves one way, into the daughter; nothing passes from open space back into X; the slab re-forms and goes on accepting energy, so the black hole is a converter, not a store. Dark energy is the energy of space itself; where it comes from is open. What did not convert remained as scrap: small knots of fixed energy, their number set at the opening; the scrap is the best current guess for the dark matter, and whether it is the dark matter is open. Energy was conserved across the change. The rules of the two phases are their constants and do not change from one generation to the next. Inside the space that forms, black holes are regions where the parent's own geometry re-curls, two directions still open and one curled tight. A daughter space opens while the black hole remains in the parent; each universe ends when its last black hole has dissolved, and every black hole births many new ones, so the tree of universes multiplies each generation. Every universe runs an exact copy of one clock, from its own birth to its own heat death, and no clock runs across universes; universes of one setting that differ only by a quantum outcome are counted each as a whole. The quantum world is the set of undetectably different versions of an arrangement, all standing at once, until an interaction makes them distinguishable; the versions are the branches of the many-worlds reading, and the rule that lets them cancel is the published one: versions carry amplitudes and a record in the surroundings is what keeps them apart.</p>
+    <p class="idea-src">The author's hypothesis, her current best guess. The claim of 9 October was confirmed by her; this version carries her decisions since, each dated in the record: the directions curling separately (16 Oct); the black hole as the parent's own geometry curled, a daughter without a whole-universe reset, the branching count (16 Oct); the burp when the stores first hold the whole cost, the release leaving one way into the daughter (18 Oct); the measure counted per universe, by each universe's own clock (18 Oct); the versions as Everett's branches (18 Oct). The sentences that changed are ours in wording and hers once she confirms them.</p>
   </section>
 
   <section>
@@ -171,46 +174,55 @@ or a unique front, and mean store energy is not temperature. This snapshot is no
       <div><dt>The author's</dt><dd>Emily Smith's hypothesis, stated to be argued with.</dd></div>
       <div><dt>Measured</dt><dd>A test whose rules were written down before it ran.</dd></div>
       <div><dt>Exact</dt><dd>Arithmetic or complete enumeration.</dd></div>
-      <div><dt>Ours</dt><dd>Analysis drafted with Claude, not yet reviewed.</dd></div>
+      <div><dt>Ours</dt><dd>Analysis drafted with Claude, not yet reviewed by a physicist.</dd></div>
     </dl>
-    <p class="note">The tests use a toy: a network of links whose rule is a published model of emergent geometry (Trugenberger's) plus one added term, a cost for curling tight. With that term the toy is a close cousin of his model, not his model. A toy can show that a mechanism is possible or impossible in a class of models. It cannot show that reality works this way; that is the author's claim.</p>
-    <p class="note"><strong>No physicist has reviewed any of this yet.</strong> Paper 1 is on hold at arXiv until a physicist has read it or a journal has it. A reader is being sought.</p>
+    <p class="note">The dots: <span class="st measured">measured, it held</span> &nbsp; <span class="st mixed">measured, part held</span> &nbsp; <span class="st exact">exact</span> &nbsp; <span class="st against">first version didn't hold · in progress</span> &nbsp; <span class="st author">the author's, not yet testable in the toy</span></p>
+    <p class="note">The tests use a toy: a network whose rule is a published model of emergent geometry (Trugenberger's) plus a cost for curling tight; since 18 October the version that stands in for the black hole also lets points compact in whole layers instead of breaking, with a count of points that varies. With those terms it is a close cousin of his model, not his model. A toy can show a mechanism is possible or impossible in a class of models; that reality works this way is the author's claim.</p>
+    <p class="note"><strong>No physicist has reviewed any of this yet.</strong> Paper 1 is with the model's author, asking him to read it. Both its editions are at <a href="https://sidenerdapps.com/mainnerd/">sidenerdapps.com/mainnerd</a>.</p>
   </section>
 
   <section>
-    <h2>The twelve pieces at a glance</h2>
+    <h2>The pieces at a glance</h2>
     <div class="scroll">
       <table>
-        <thead><tr><th></th><th>Piece</th><th>Where it stands</th><th class="when">Updated</th></tr></thead>
+        <thead><tr><th></th><th>Piece</th><th>Where it stands</th><th>Papers</th><th class="when">Updated</th></tr></thead>
         <tbody>
-          <tr class="grp"><td colspan="4">The burp: how X opens</td></tr>
-          <tr><td class="n">1</td><td><a href="#p1">Opens sharply into space</a></td><td><span class="st measured">Holds, in two directions</span></td><td class="when">25 Sep</td></tr>
-          <tr><td class="n">2</td><td><a href="#p2">Not a fluke of one setting</a></td><td><span class="st mixed">Holds across a range; two loose ends</span></td><td class="when">27 Sep</td></tr>
-          <tr><td class="n">3</td><td><a href="#p3">The rule: curvature plus a curling cost</a></td><td><span class="st exact">Exact</span></td><td class="when">24 Sep</td></tr>
-          <tr><td class="n">4</td><td><a href="#p4">Room for the burp</a></td><td><span class="st measured">Holds; a larger space melts sooner</span></td><td class="when">5 Oct</td></tr>
-          <tr><td class="n">5</td><td><a href="#p5">How the curled directions open</a></td><td><span class="st against">One at a time; one push is not enough</span></td><td class="when">5 Oct</td></tr>
-          <tr><td class="n">6</td><td><a href="#p6">The burp's three shares</a></td><td><span class="st author">Target reset to birth; needs a physicist's check</span></td><td class="when">5 Oct</td></tr>
-          <tr class="grp"><td colspan="4">The scrap</td></tr>
-          <tr><td class="n">7</td><td><a href="#p7">The scrap</a></td><td><span class="st measured">Small, real, freezes in; how much stays is running</span></td><td class="when">5 Oct</td></tr>
-          <tr class="grp"><td colspan="4">What it must give back</td></tr>
-          <tr><td class="n">8</td><td><a href="#p8">Curve-first gravity</a></td><td><span class="st against">No pull yet; the reason is known</span></td><td class="when">5 Oct</td></tr>
-          <tr><td class="n">9</td><td><a href="#p9">Quantum from counting versions</a></td><td><span class="st against">Counting alone is not enough</span></td><td class="when">25 Sep</td></tr>
-          <tr><td class="n">10</td><td><a href="#p10">Time and the speed limit</a></td><td><span class="st author">Fronts keep a steady pace</span></td><td class="when">5 Oct</td></tr>
-          <tr class="grp"><td colspan="4">The cycle</td></tr>
-          <tr><td class="n">11</td><td><a href="#p11">Black holes as re-curled regions</a></td><td><span class="st against">Nothing folds yet; space heals</span></td><td class="when">27 Sep</td></tr>
-          <tr><td class="n">12</td><td><a href="#p12">The cycle: a strange loop</a></td><td><span class="st author">The author's; outside what the toy can test</span></td><td class="when">25 Sep</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 1. The burp: how X opens</td></tr>
+          <tr><td class="n">1</td><td><a href="#p1">Opens sharply</a></td><td><span class="st mixed">Sharp, with an exact burp; what it opens into is still a tube</span></td><td>1</td><td class="when">14 Oct</td></tr>
+          <tr><td class="n">2</td><td><a href="#p2">Not a fluke of one setting</a></td><td><span class="st measured">Sharp across a range of settings and sizes</span></td><td>1</td><td class="when">14 Oct</td></tr>
+          <tr><td class="n">3</td><td><a href="#p3">The rule</a></td><td><span class="st exact">Curvature plus a curling cost, masked where space is smooth; each direction behind its own wall; curling energy an ingredient</span></td><td>6, 11</td><td class="when">18 Oct</td></tr>
+          <tr><td class="n">4</td><td><a href="#p4">Room for the burp</a></td><td><span class="st measured">Too little room leaves flaws, never a melt</span></td><td>6</td><td class="when">12 Oct</td></tr>
+          <tr><td class="n">5</td><td><a href="#p5">How the curled directions open</a></td><td><span class="st against">One at a time; no spark and no feed opened the slab at any size; the toy adjusted so points compact instead of breaking, and its first test is running</span></td><td>4, 5, 15</td><td class="when">19 Oct</td></tr>
+          <tr><td class="n">6</td><td><a href="#p6">The burp's three shares</a></td><td><span class="st author">Best guess; target sheets against the sky are the next step</span></td><td>7</td><td class="when">15 Oct</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 2. What the change leaves behind</td></tr>
+          <tr><td class="n">7</td><td><a href="#p7">The scrap</a></td><td><span class="st measured">Three kinds of knot, their number set at the opening; clustered on a few columns, random beyond, so their own layout is not the seed of structure</span></td><td>2, 3, 7</td><td class="when">18 Oct</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 3. Space, and its pull</td></tr>
+          <tr><td class="n">8</td><td><a href="#p8">Curve-first gravity</a></td><td><span class="st against">No pull yet; the reason is known; what a cut hides is counted, and does not yet decide the route</span></td><td>9, 10, 11</td><td class="when">19 Oct</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 4. The quantum world</td></tr>
+          <tr><td class="n">9</td><td><a href="#p9">Quantum from counting versions</a></td><td><span class="st exact">Counting alone is not enough; the published rule adopted 15 Oct</span></td><td>13</td><td class="when">15 Oct</td></tr>
+          <tr><td class="n">13</td><td><a href="#p13">Interference and records</a></td><td><span class="st exact">The missing rule is the published one</span></td><td>none yet</td><td class="when">12 Oct</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 5. Time</td></tr>
+          <tr><td class="n">10</td><td><a href="#p10">Time and the speed limit</a></td><td><span class="st author">Fronts keep a steady pace; a front is not a clock</span></td><td>14</td><td class="when">6 Oct</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 6. The cycle: black holes and the loop</td></tr>
+          <tr><td class="n">11</td><td><a href="#p11">Black holes as re-curled regions</a></td><td><span class="st against">Nothing folds yet; the black hole is the parent's own geometry curled; the curl-only rule and what counts as a fold decided; what carries curling energy still open</span></td><td>12, 1</td><td class="when">18 Oct</td></tr>
+          <tr><td class="n">12</td><td><a href="#p12">The strange loop</a></td><td><span class="st author">The author's; the measure written as one function; counted per universe by each universe's own clock; the toy supplies one term</span></td><td>16</td><td class="when">19 Oct</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 7. The view from outside the loop</td></tr>
+          <tr><td class="n">14</td><td><a href="#p14">Observers inside the loop</a></td><td><span class="st exact">"When we are" depends on who is counted; no clock across universes, so no youngness pressure; the observation window is the load-bearing term</span></td><td>none yet</td><td class="when">19 Oct</td></tr>
+          <tr class="grp"><td colspan="5">Chapter 8. From the toy to the sky</td></tr>
+          <tr><td class="n">15</td><td><a href="#p15">Connecting to observations</a></td><td><span class="st author">A handoff, written 14 Oct; five target sheets owed, nothing measured</span></td><td>7, 12</td><td class="when">15 Oct</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
   <section>
-    <h2>What happens next</h2>
+    <h2>Waiting on</h2>
     <ul class="todo">
-      <li><span class="lbl">Running</span><span>How much scrap stays frozen as a new space cools more slowly (piece 7). The author's prediction is owed before it is read.</span></li>
-      <li><span class="lbl">Ready to run</span><span>An exact count of what a boundary hides around a scrap: the count that gravity from counting needs (piece 8).</span></li>
-      <li><span class="lbl">For a physicist</span><span>A critical reading of paper 1. And a check of how piece 6 uses the published numbers for the make-up of reality at birth.</span></li>
-      <li><span class="lbl">For the author</span><span>Which opening is ordinary matter and which is dark matter. Whether dark matter is a release or the scrap. Which shape of shares to run. How an opening's front maps onto a clock.</span></li>
+      <li><span class="lbl">A reader</span><span>Paper 1 went to the model's author, Carlo Trugenberger, on 14 October, asking him to read it. The goal is a physicist reader; arXiv waits on one. Two candidate sentences for its next version, proposed by the author on 18 October (the fixed count of points as a setting of the published model, not a requirement; square breaking allowed and, under the published move, required), are drafted for her to edit.</span></li>
+      <li><span class="lbl">The author's read</span><span>Paper 2, and the drafts of papers 5, 6, 10, 11 and 12. Piece 12's function, written 18 October as a design brief.</span></li>
+      <li><span class="lbl">Decided 16 to 19 Oct</span><span>The directions curl separately. The black hole is the parent's own geometry curled; a daughter forms without a whole-universe reset; the count is the branching one. A curl-only store pays only for moves that add a curl without losing a square; what counts as a fold. For the black hole's inside: points compact in whole layers instead of breaking, the count of points varies, X is the straight curl and the spiral is the product's seam, the lump leaves one way into a daughter and the slab re-forms, the burp fires when the stores first hold the whole cost. The measure counts per universe within a setting, by each universe's own clock. The versions are Everett's branches.</span></li>
+      <li><span class="lbl">Her answers</span><span>What carries curling energy (each relic, stores at the relic, or both). Her repair choice and her word for the largest size of the healing test (T66). Her word for the held-out size of the slab's layer-form test (T71) once the two smaller sizes are read; whether her prediction's arm letters were meant as described (they are scored by the move sets she named).</span></li>
+      <li><span class="lbl">Running</span><span>T71, twelve jobs: the slab under the layer form, fed at every point, at three curling costs and two sizes, with the model arm, two reference arms and the single-switch control. Her prediction and ours agree in every arm; what the run can still decide is whether the clean switch ever interferes, the period and slab share under her gate, and the size claim.</span></li>
     </ul>
   </section>
 
@@ -218,168 +230,226 @@ or a unique front, and mean store energy is not temperature. This snapshot is no
     <h2>Where each piece stands</h2>
     <div class="pieces">
 
-      <h3 class="group">The burp: how X opens</h3>
+      <h3 class="group">Chapter 1. The burp: how X opens</h3>
 
       <article class="piece" id="p1">
-        <div class="head"><span class="n">1</span><h3>A stable-for-now arrangement opens sharply into space</h3>
-          <div class="meta"><span class="chip measured">Measured</span><span>Paper 1</span><span>Updated 25 Sep 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p>A torus with one direction curled, the toy's stand-in for X, sits still and then opens from one spot. The opening runs as a front, curled on one side and flat on the other, like a flame moving through paper, and gives up the same energy per point every time.</p>
-          <p>The push that starts it is one small move of fixed cost, the same at every size tried: a match lights a campfire or a forest. The height of that wall is a fact about the energy. How long the wait lasts depends on how the simulation walks.</p>
+        <div class="head"><span class="n">1</span><h3>A stable-for-now arrangement opens sharply</h3>
+          <div class="meta"><span class="chip mixed">Measured · the change holds; what it opens into is still a tube</span><span>Paper 1</span><span>Updated 14 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>A torus with one direction curled, the toy's stand-in for X, sits still, then changes from one spot. The change runs as a front, like a flame through paper, and gives up the same energy per point every time: the burp. The push that starts it is a single small move of fixed cost at every size: a match lights a campfire or a forest.</p>
+          <p>What the tube opens into is still a tube, its seam re-glued so the way around is six steps where it was four, not a wide sheet. The toy's rule cannot tell the two apart, so nothing pays for growing wider. With an added price on loops of six, the tube does come out mostly wide, though crumpled with flaws throughout.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>Get paper 1 read. A request for a critical reading goes to the model's author; a journal with open refereeing is the fallback.</p>
+          <p>Paper 1 is with Carlo Trugenberger since 14 October; the goal is a physicist reader, then arXiv. The six-loop price results belong to paper 6, once the largest size is read.</p>
         </div></div>
       </article>
 
       <article class="piece" id="p2">
         <div class="head"><span class="n">2</span><h3>It is not a fluke of one setting</h3>
-          <div class="meta"><span class="chip mixed">Measured · inconclusive by the letter</span><span>Paper 1</span><span>Updated 27 Sep 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p>Across a range of the curling cost the change stays sharp and releases exactly what the arithmetic says. Most tubes wait like a radioactive nucleus, with no memory of how long they have waited. Two smaller groups stand apart: a few wait far longer, and about one in six go almost at once.</p>
-          <p>Three registered runs of this map were each inconclusive by the letter, each for a stated reason: twice a rule we had written badly, once the rare long waits themselves. <span class="who hers">The author</span> Her bar is different from ours: the change has to happen at some size, not at every size in every instance.</p>
+          <div class="meta"><span class="chip measured">Measured</span><span>Paper 1</span><span>Updated 14 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>Across a range of the curling cost, and at a longer tube predicted beforehand, the change stays sharp and releases exactly what the arithmetic says. Tubes wait like a radioactive nucleus, with no memory of how long they have waited. Long tubes open from several places at once, which leads to piece 7.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>Read the long waiters and the fast starters from their saved wiring. A fourth run only if the author wants one, scored her way.</p>
+          <p>Part of paper 1; waits on the same reader.</p>
         </div></div>
       </article>
 
       <article class="piece" id="p3">
         <div class="head"><span class="n">3</span><h3>The rule: curvature plus a curling cost</h3>
-          <div class="meta"><span class="chip exact">Exact · the author's reading</span><span>Paper 3</span><span>Updated 24 Sep 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p>The rule is the published one, total curvature, plus one term: every link curled tight costs a little extra. The burp per point is exactly that cost. At the published setting curling is free and nothing is released. With the cost switched on, flat space is the floor and X sits above it.</p>
-          <p>Where space is smooth nothing is curled tight, so the extra term is silent and the rule there is curvature alone. <span class="who hers">The author</span> The cost is a constant of our loop, and it is what a black hole pays to curl space back.</p>
+          <div class="meta"><span class="chip exact">Exact · the author's reading</span><span>Papers 6, 11</span><span>Updated 18 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>The rule is the published one, total curvature, plus one term: every link curled tight costs a little extra, and the burp per point is exactly that cost. Where space is smooth nothing is curled tight, so there the rule is curvature alone. <span class="who hers">The author</span> The cost is a constant of our loop, the same in a parent and its daughters, what a black hole pays to curl space back.</p>
+          <p>Every direction costs the same to curl and stands behind its own wall. <span class="who">Exact</span> Written out, the toy's energy is the published model's energy plus the curling cost times the count of links on three squares, zero on flat space, so the extra term acts only where space is curled tight.</p>
+          <p><span class="who hers">The author, 15 to 17 Oct</span> Curling energy, a kind of energy that may only curl, is an ingredient of the toy: a curl-only store pays only for a move that adds a curl without losing a square. A fold is a connected curled region at least as large as the smallest patch that lies no higher than the slab, still there after the stores are empty. What carries curling energy is still hers to say; nothing registered runs with it before that.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>Whether curvature plus a curling cost gives back Einstein's gravity at large scale. That rides on piece 8.</p>
+          <p>Paper 6 is drafted and waits for her read; the masked-cost identity becomes one short section of it. The same identity opens paper 11's case that the rule can agree with Einstein wherever space is smooth, which still rides on piece 8 for a pull at a distance.</p>
         </div></div>
       </article>
 
       <article class="piece" id="p4">
         <div class="head"><span class="n">4</span><h3>The new space must have room for the burp</h3>
-          <div class="meta"><span class="chip measured">Measured</span><span>Paper 3</span><span>Updated 5 Oct 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p>Sealed off, a new space finishes opening only if its surroundings can take in the burp. With too little room it melts instead. A bigger burp is a harder birth.</p>
-          <p>Size matters too. Read from their saved wiring, long tubes in warm surroundings melted where short ones healed, so a larger space melts at a lower temperature. <span class="who hers">The author</span> Melting is not a real end state, so the burp always needs somewhere to go.</p>
+          <div class="meta"><span class="chip measured">Measured</span><span>Paper 6</span><span>Updated 12 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>Sealed off, a new space finishes cleanly only if its surroundings can take in the burp. With too little room it is left with flaws in fabric that is still nearly all there; the burp alone cannot melt it. A larger space in a warm bath does melt sooner. <span class="who hers">The author</span> The burp always needs somewhere to go.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>The same question in three directions has not been reached, because the last direction did not open (piece 5).</p>
+          <p>Paper 6, with piece 3. The same question in three directions waits on piece 5.</p>
         </div></div>
       </article>
 
       <article class="piece" id="p5">
         <div class="head"><span class="n">5</span><h3>How the curled directions open</h3>
-          <div class="meta"><span class="chip against">Measured · first version didn't hold · in progress</span><span>The paper on three and four directions</span><span>Updated 5 Oct 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p><span class="who hers">The author</span> The three directions are intertwined, and one activation opens all three. X may begin with one direction already open.</p>
-          <p>In three and four directions, one push has never opened all of X into one space. The directions open one at a time, each behind its own wall: a combination lock, not a zipper.</p>
-          <p>Exactly: in this toy a fully curled X bigger than one small cube is always a gas of separate cubes. Each cube opens on its own and they do not join. So an X that opens into one space has to be one connected piece with a direction already open, which the author allows.</p>
-          <p>Such a connected X, with the released energy kept at the front, opened its next direction and stopped. Where the next wall is low it opened all the way into one space in 5 runs of 16, with damage in most of the others. One cube alone opens part of the way, and fully only in a minority of runs. Treating its points as interchangeable holds a stuck cube shut, and helps a cube that is already rolling to open fully.</p>
+          <div class="meta"><span class="chip against">First version didn't hold · the toy adjusted; its first test running</span><span>Papers 4, 5, 15</span><span>Updated 19 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p><span class="who hers">The author</span> X is the slab, two directions open and one curled tight, likely with relics inside it; the directions curl separately, each behind its own wall. The opening is started not by one spark but by energy that keeps arriving, as a black hole's infall does, until the stores first hold the whole cost of the curl.</p>
+          <p>In three directions, one push has never opened all of X: the directions open one at a time, a combination lock rather than a zipper. Under the published move, which breaks squares, the slab did not open at any size tried: given one spark it fell back in 47 runs of 48 (T65); fed at a fixed rate it broke or sat, never a front (T67); fed at a rate fixed, ramped or pulsed, into one store, one point, sixteen points or every point, at three curling costs, it broke or sat in every one of 2,592 runs (T68). Exact: the cheapest clean opening out of the slab costs 64 and opens 16 points, two switches away, at every curling cost tried (T69). The published move cannot move the slab without first breaking four points.</p>
+          <p><span class="who hers">The author, 18 Oct · decided</span> The toy is adjusted for the black hole's inside: points do not break, they compact, two linked points collapsing into nothing and their neighbours joining up, so the count of points varies; the move acts on a whole layer at once (six around to four around and back), with no seam and no point broken; X is the straight curl, and the spiral she pictured is the seam of the product after the burp. A single switch is kept only as a control. <span class="who">Exact</span> Under this form the opening is one move. The split of the slab is downhill and releases the whole curl, so X is stable for now only with a gate: the split fires only when the stores beside the cut already hold the slab's whole cost, her "a step when the stores first hold the whole cost", decided 19 Oct. The lump pays the fold straight back unless it leaves.</p>
+          <p><span class="who hers">The author, 18 Oct · decided</span> "It goes in its own daughter universe. Then the slab reforms and continues accepting energy. Nothing can go from open space to the slab, it's one way." <span class="who">Exact, from the kernel</span> The parent is then a converter: every slab's worth of energy fed becomes one daughter of exactly that energy; at one small size, 61 daughters of 144 each over 600 sweeps, equal to the energy fed. The gate sets only how long X sits between re-forming and burping, not how many daughters there are or what each carries. Per point everything scales together, so the births fall at the same sweeps at every size for the same seed.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>Stop guessing pushes: price the true barrier exactly, the smallest opened patch that grows instead of shrinking. Then a warm bath on the connected space, in place of a single push.</p>
-          <p>Still owed: our three-direction code does not reproduce the published curve for the parent model. One question to its author.</p>
+          <p>T71 is running (19 Oct, twelve jobs): the slab under the layer form at three curling costs and two sizes, with a third size held out, the model arm (layer moves plus a clean two-switch move), layer moves alone, the same with the release kept in the parent as a reference, and the single-switch control. Her prediction and ours agree: the slab cycles at every curling cost, each daughter carries exactly the slab's cost, the clean switch fires rarely, and the control does not cycle. What the run can still decide is whether the clean switch ever interferes, the period and the share of time spent as X under her gate, and the size claim. Paper 15 (a feed, not a spark) is an outline anchored on T67 and T68; paper 5 is drafted and waits for her read; paper 4 needs one answer from the model's author.</p>
         </div></div>
       </article>
 
       <article class="piece" id="p6">
         <div class="head"><span class="n">6</span><h3>The burp's three shares</h3>
-          <div class="meta"><span class="chip author">The author's · exact arithmetic · needs a physicist</span><span>Paper 3</span><span>Updated 5 Oct 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p><span class="who hers">The author</span> The first opening releases dark energy. With the other directions still curled it cannot spread or clump, so it stays as the energy of space itself. The other two release ordinary matter and radiation, and dark matter; which is which is not decided. One problem is carried openly: the first opening has to net almost nothing, and nothing yet says why.</p>
-          <p><span class="who">Published numbers, our use of them</span> Early on nearly all the energy is the hot lump: light and fast particles. Matter and light were equal only when distances were about 3,400 times smaller than now (Planck 2018); before that, the earlier you look, the smaller cold matter's share. At the latest moment the hot era can have begun, dark matter that was already cold was under a millionth of the energy, and dark energy was too small to measure. The famous five-to-one of dark to ordinary matter is real and old, but it compares two slivers: the mass of ordinary matter is the crumb left when matter and antimatter cancelled. So matching birth asks one opening to carry nearly the whole burp. Two things are not known and keep this from being one number: how hot reality was at birth, and whether dark matter began hot, as one more ingredient of the lump, or cold.</p>
-          <p><span class="who">Exact</span> A wall is a hill, not a toll: what is spent climbing it comes back on the far side. So pushes cannot set the shares; only energy held in half-open states can. Two shapes would match birth with nothing to tune. In one, nothing is released until the last direction opens. In the other, the second opening releases everything and the last direction is free to stay curled. Neither has been run.</p>
-          <p>Settings tuned to today's five-to-one were run and did not open all the directions. That target is withdrawn.</p>
+          <div class="meta"><span class="chip author">The author's best guess · needs a physicist</span><span>Paper 7</span><span>Updated 15 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p><span class="who hers">The author</span> The burp is the hot lump, light and ordinary matter; the scrap is the dark matter; dark energy is the energy space itself keeps.</p>
+          <p><span class="who">Ours</span> At reality's birth nearly all the energy was the hot lump, so one opening has to carry nearly the whole burp. With the slab as X only one direction is left to open, so its single release is the whole burp. The scrap left in the toy is far more than birth can afford, so the dark-matter reading rests on how few starting points an opening can have. Flat space in the toy keeps no energy at all, which leaves today's small dark energy unexplained.</p>
+          <p><span class="who">14 Oct</span> This piece is where the observations work of chapter 8 lands. Three of its five target sheets are paper 7's: dark matter as relics (with piece 7), the temperature of birth against the gravitational-wave band a front-driven change would leave, and whether a dark energy that is the energy of space itself should change with time. The toy cannot say how any component thins as space grows, so each sheet states that bar rather than a result.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>A physicist's check of that use of the numbers. Then the author chooses a shape and it runs.</p>
-          <p>Open with the author: which opening is which; whether dark matter is a release or the scrap (piece 7); a charge for each kind.</p>
+          <p>Paper 7 is an outline. First a physicist's check of how it uses the published numbers for the make-up at birth; then the three target sheets, each with the measured numbers from their sources, what her picture offers, what the toy has shown, the nearest published work, and the observation that would rule the reading out. No number is fitted to the dark-to-ordinary ratio of 5.4: it compares two slivers, not two releases.</p>
         </div></div>
       </article>
 
-      <h3 class="group">The scrap</h3>
+      <h3 class="group">Chapter 2. What the change leaves behind</h3>
 
       <article class="piece" id="p7">
-        <div class="head"><span class="n">7</span><h3>The scrap: small, one per seed or fewer, and it freezes in</h3>
-          <div class="meta"><span class="chip measured">Measured · a run in progress</span><span>Paper 2</span><span>Updated 5 Oct 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p>One seed leaves one small scrap, a loop of four points left curled, whatever the size of the space. When the change starts in several places of one X at once, there is more scrap: about one for every three starting points. The starts usually grow together into one space.</p>
-          <p>Kept warm, every scrap heals. Cooled, some freeze in, more of them the faster the cooling; cosmology calls this freeze-out. A frozen scrap is a fixed count of objects, so as space grows it thins out the way matter does.</p>
-          <p>A first look, not yet a finding: among the leftovers of spaces that opened from several seeds are a few links joining points that are otherwise far apart.</p>
-          <p><span class="who hers">The author</span> The scrap may be the dark matter. That reading is open again, beside dark matter as a release (piece 6).</p>
+        <div class="head"><span class="n">7</span><h3>The scrap: three kinds of knot of fixed energy</h3>
+          <div class="meta"><span class="chip measured">Measured</span><span>Papers 2, 3, 7</span><span>Updated 18 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>Not every point converts. What is left is a handful of small knots, each stuck in its own right: a column, a loop of four that still closes a square as the old tube did; a double column; and a knot of two kinds of point. How many is decided at the opening, not by the cooling after. Slow cooling heals the columns; the other two never heal. Most scraps sit free in the new space; about one in five is the joint between two widths of tube, like the stitch where a knitted sleeve changes its number of loops.</p>
+          <p><span class="who">Ours</span> That is the shape cosmologists call freeze-out: durable objects whose number is fixed by how the space formed.</p>
+          <p><span class="who hers">The author, 18 Oct</span> Could the scraps be the seeds of structure, the denser regions that collapsed into galaxies? <span class="who">A look, 18 Oct · not evidence</span> Read from the 600 saved sheets, the knots sit clustered on a few columns and at random beyond, and where a knot sits after a slow cooling, one sat after a faster one nine times in ten: their positions are set at the opening. Equal knots scattered at random are shot noise, flat across scales, while the sky's seeds are nearly the same at every scale, so the scraps' own layout cannot be the seed pattern. What survives is scraps as dark matter falling into seeds laid by something else.</p>
+          <p><span class="who hers">The author, 14 Oct</span> The relics are "more of space in curled relic form that carries curling energy": her best guess for the dark matter, now with a reason it would gravitate. <span class="who">Exact, open</span> Part of each knot's energy is curling cost. The column costs 14 at the curling cost the maps used and 8 with no curling cost at all; a rarer column costs nothing at all without it. Whether the double column and the knot of two kinds are still stuck with no curling cost is an exact count on the saved sheets, not yet done; if they are not, the curling cost is what makes them stuck, which ties the scrap to the rule of piece 3.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>Running: how much scrap stays frozen as the cooling gets slower, in spaces that seeded themselves. A gentle fall would make a small leftover the ordinary result of slow cooling. A cliff would leave none. The author's prediction is owed before it is read.</p>
-          <p>Then: read the far-reaching links from their positions before saying what they are.</p>
+          <p>Paper 2, <em>What the change leaves behind</em>: the plain edition is drafted and waits for her read; the technical draft needs its figures; then a reader. The count at zero curling cost goes into paper 2 once her prediction is worded. Paper 7 takes the dark-matter target sheet: the mass range, number density and limits (lensing, the microwave background, structure formation, direct searches) that heavy, rare, gravity-only relics must satisfy, and what a map from toy units to physical ones would need. Paper 3, the far-reaching links where starting points meet, is written down before it runs.</p>
         </div></div>
       </article>
 
-      <h3 class="group">What it must give back</h3>
+      <h3 class="group">Chapter 3. Space, and its pull</h3>
 
       <article class="piece" id="p8">
         <div class="head"><span class="n">8</span><h3>Curve-first gravity</h3>
-          <div class="meta"><span class="chip against">First version didn't hold · in progress</span><span>Paper 5</span><span>Updated 5 Oct 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p><span class="who hers">The author</span> Space has its own drive to curve, and matter supplies the energy that starts the curve. Gravity belongs to space, not to X. Wherever Einstein's account has been measured, hers must give the same numbers.</p>
-          <p>With the wiring held still, leftovers do not pull on each other at a distance (exact). The reason is known. Flat space in this toy is stiff: every move out of it costs a fixed amount, and a stiff medium passes a pull along only a few steps. It also heals every damage it was given.</p>
-          <p>Two carriers are on the table. One needs nothing new: a pull from counting. It needs warmth, and it needs the count of what a boundary hides to grow with the boundary, as in Jacobson's and Verlinde's gravity. The other is new: a quantity living on the points of space, which the author has decided to add if it matches curve-first gravity.</p>
+          <div class="meta"><span class="chip against">First version didn't hold · in progress</span><span>Papers 9, 10, 11</span><span>Updated 19 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p><span class="who hers">The author</span> Space has its own drive to curve, and matter supplies the energy that starts it. Wherever Einstein's account has been measured, hers must give the same numbers.</p>
+          <p>With the wiring held still, scraps do not pull on each other at a distance. The reason is known: flat space in the toy is stiff, and a stiff medium passes a pull only a few steps. Two carriers are possible: a pull from counting, which needs warmth, or a new quantity living on the points of space, which the author has decided to add if it matches curve-first gravity.</p>
+          <p><span class="who">Measured, 19 Oct</span> The pull from counting, in Jacobson's and Verlinde's form, needs the number of arrangements hidden behind a surface to grow with the surface. That count was taken exactly round the scraps of twelve saved sheets (T52). Behind a small cut round a scrap the toy hides 5 arrangements, in 83 windows of 87; round flat space it hides 2 at that size, not the 1 predicted, and 1 one step wider. Whether the scrap's count grows with the cut or with what is inside, the question that decides the route, was not reached: no wider window round a scrap finished within the time allowed. So the counting route is neither opened nor closed. On the way: inside a window of 12 points a scrap can be wired away entirely, so it is stuck only against single moves.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>Count exactly what a boundary hides around a scrap. Does the count follow the boundary or the volume? Our guess is the volume, which would not give gravity.</p>
-          <p>Then the pull between two leftovers in a warm bath, in three directions only. And the design for the quantity on the points.</p>
+          <p>Paper 9: before the wider count, read from the wiring why flat space hides 2 rather than 1 (a control that does not give 1 makes any excess hard to read); then the wider windows with a faster count or a longer limit, registered first. Paper 10 is drafted, with one question for the author of the action it uses. Paper 11 is drafted; its next step is the design of the quantity on the points.</p>
         </div></div>
       </article>
+
+      <h3 class="group">Chapter 4. The quantum world</h3>
 
       <article class="piece" id="p9">
         <div class="head"><span class="n">9</span><h3>Quantum behavior from counting versions</h3>
-          <div class="meta"><span class="chip against">First version didn't hold · in progress</span><span>Paper 6</span><span>Updated 25 Sep 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p>Counting look-alike versions cannot give quantum behavior by itself: for any fixed arrangement it can never beat Bell's test. A count gives every version a positive weight, and positive weights only add. Quantum behavior needs versions that can cancel.</p>
-          <p>The first rule tried, a sign for each swap, prunes a few arrangements and changes little. <span class="who hers">The author</span> Versions are not copies and do not affect one another; the missing rule should come from the loop itself.</p>
+          <div class="meta"><span class="chip exact">First version didn't hold · the published rule adopted</span><span>Paper 13</span><span>Updated 15 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>Counting look-alike versions cannot give quantum behavior by itself: positive counts only add, and quantum behavior needs versions that cancel. The missing rule is the published one (piece 13): versions carry amplitudes, and a record in the surroundings keeps them apart.</p>
+          <p><span class="who hers">The author, 15 Oct</span> "Piece 9 should adopt the published amplitude rule, why would it not?" Adopted. <span class="who">Ours, what it costs</span> The rule is quantum mechanics put in, not derived, so the quantum sentence of the claim becomes a bar the loop has to meet rather than evidence that it does. The object the amplitudes live on is open: the loop of four is not a resonator inside a sheet. And it assumes the toy's versions are the branches of the many-worlds reading, which is untested. None of these is a reason not to adopt it as the working rule; each is what paper 13 now has to say.</p>
+          <p><span class="who hers">The author, 19 Oct</span> Where the amplitudes live: "in the loop there are sets of universes that are identical until each moment passes. From the macro perspective those versions are indistinguishable so we experience all of the set, until a measurement or some next moment locks us into one version." <span class="who">Ours</span> That is decoherence in her words. The published rule adds that until they separate the versions can also cancel one another, and that a next moment locks a version in only where it leaves a record. What the toy still lacks is the arrangement that carries the versions.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>The author's choice of a rule under which versions can cancel. It fails if it cannot reproduce what Bell experiments measure.</p>
+          <p>Paper 13 is an outline; it now states the published rule as the hypothesis's own and asks the loop only where the amplitudes live, with piece 13's toy as its benchmark before any Bell test. The three quantum rungs already scored stand.</p>
         </div></div>
       </article>
+
+      <article class="piece" id="p13">
+        <div class="head"><span class="n">13</span><h3>Interference and records</h3>
+          <div class="meta"><span class="chip exact">Exact in a toy · ours, a draft for the author</span><span>No numbered paper</span><span>Updated 12 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>How much two versions still interfere is exactly how much their records overlap: a perfect record, none; a record undone, all of it back. That is the published mathematics of decoherence, checked in a small exact toy. It supplies the cancelling that counting could not, as an input of the standard theory, not something derived from the loop.</p>
+        </div></div>
+        <div class="row"><div class="lbl">Next</div><div>
+          <p>Hers: whether this piece stays. A plain-language draft exists, with one question for a UVA researcher over coffee.</p>
+        </div></div>
+      </article>
+
+      <h3 class="group">Chapter 5. Time</h3>
 
       <article class="piece" id="p10">
         <div class="head"><span class="n">10</span><h3>Time and the speed limit</h3>
-          <div class="meta"><span class="chip author">The author's · its counterpart measured</span><span>Outline</span><span>Updated 5 Oct 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p><span class="who hers">The author</span> Time as we experience it exists because matter moves through three-dimensional space. X has order but not time. The speed of light is the limit of that relationship.</p>
-          <p>The toy has no time; its only clock is the count of moves. Its counterpart of a speed limit holds: an opening's front keeps a steady pace set by the medium, once time is counted fairly, so that one small place gets its turn as often in a large space as in a small one.</p>
-          <p>A front speeds up where extra energy sits, as the author predicted. Read as a clock, that is the opposite of clocks running slow near mass.</p>
+          <div class="meta"><span class="chip author">The author's · not a clock</span><span>Paper 14</span><span>Updated 6 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p><span class="who hers">The author</span> Time exists because matter moves through open space; X has order but not time.</p>
+          <p>The toy has no time. Its counterpart of a speed limit holds: an opening's front keeps a steady pace set by the medium. A front is not a clock, so the toy cannot test time dilation.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>The author's mapping from a front's pace to a clock's rate. A direction that is truly time-like needs a different kind of model, parked for a physicist collaborator.</p>
+          <p>Hers: whether this piece stays attached to the toy's fronts. Paper 14 is an outline.</p>
         </div></div>
       </article>
 
-      <h3 class="group">The cycle</h3>
+      <h3 class="group">Chapter 6. The cycle: black holes and the loop</h3>
 
       <article class="piece" id="p11">
-        <div class="head"><span class="n">11</span><h3>Black holes as re-curled regions</h3>
-          <div class="meta"><span class="chip against">First version didn't hold · in progress</span><span>Paper 4</span><span>Updated 27 Sep 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p><span class="who hers">The author</span> Inside a black hole gravity has won. The mass supplies the energy to curl space back, starting with one direction, and each fold makes the next easier.</p>
-          <p>Nothing folds. Energy packed into one place, or spread through a sealed space, shakes flat space and it heals. With points treated as interchangeable even the small scar rarely forms.</p>
-          <p><span class="who">Exact</span> Two facts fit her mechanism. Each fold lowers the cost of the next. And the drive to curl that comes from counting is real, but it wins only when the curling cost is nearly switched off.</p>
+        <div class="head"><span class="n">11</span><h3>Black holes as the parent's own geometry re-curled</h3>
+          <div class="meta"><span class="chip against">First version didn't hold · in progress</span><span>Papers 12, 1</span><span>Updated 18 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p><span class="who hers">The author, 16 Oct · decided</span> Inside a black hole the parent's own geometry curls in on itself, "in a whirlpool-like configuration", two directions still open and one curled tight: "not a little, separately contained slab inside a black hole." The curled region is X again, the slab of piece 5 seen from the other end. What falls in raises the excitation, never the curling cost, which is a constant across generations; the chance of a new opening rises with it.</p>
+          <p>In the toy nothing has yet curled from energy alone: energy packed into flat space breaks it or heals, and curls none of it (T34, T57). A relic beside ordinary energy grew no fold; a relic beside energy that may only curl kept the space whole and curled it only in column-sized bites. The toy has no pull yet, so the energy is placed by hand.</p>
+          <p><span class="who hers">The author, 15 to 17 Oct · decided</span> Curling energy is a thing; a curl-only store pays only for moves that add a curl without losing a square; a fold is a connected curled region at least as large as the smallest patch that lies no higher than the slab, still there after the stores are empty. Her picture of the fold (a relic seeds a doughnut that unzips into a stable-for-now tube, which a later activation opens wide again) stays in the notebook with what the toy says beside each step. <span class="who">Exact within what was tried, a look</span> Done pair by pair, every partial compaction tried broke 26 to 80 points at its edge and cost more than the finished slab; only a whole layer compacted cleanly, which is why the layer form of piece 5 was chosen. Bigger patches and other splices were not tried.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>This waits on piece 8: without something that carries a pull, energy has no reason to gather. Then the same test at the setting where counting can pay.</p>
+          <p>One question for her before anything registered runs with curling energy: what carries it, each relic as its own stored curling cost, stores at the relic filled from outside, or both. Then the design brief, a sandbox look that may narrow it, and a registered test on fresh seeds with her prediction. Paper 12 is drafted and waits for her read; it inherits the question from chapter 8 of how dark matter gets dense enough. Before anything is called a black hole, the staged bar of the targets file applies.</p>
         </div></div>
       </article>
 
       <article class="piece" id="p12">
-        <div class="head"><span class="n">12</span><h3>The cycle: a strange loop</h3>
-          <div class="meta"><span class="chip author">The author's · outside what the toy can test</span><span>Paper 7</span><span>Updated 25 Sep 2026</span></div></div>
-        <div class="row"><div class="lbl">Current read</div><div>
-          <p><span class="who hers">The author</span> Black holes burp new spaces by the same rules, so reality is a strange loop, in Hofstadter's phrase. We should expect to find ourselves in the kind of loop that holds the most time, matter and energy in a stable phase.</p>
-          <p>The toy has no black holes and no expansion. It can map the ingredients: how stuck X is, the push, the burp, the room, the scrap. It cannot count offspring.</p>
+        <div class="head"><span class="n">12</span><h3>The cycle: daughters from black holes, and the measure</h3>
+          <div class="meta"><span class="chip author">The author's · the measure written as a function</span><span>Paper 16</span><span>Updated 19 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p><span class="who hers">The author, 16 Oct · confirmed</span> A daughter space may open while the black hole remains in the parent; each universe ends when its last black hole has dissolved; every black hole births many new ones, "a larger infinity: the length of time just as long, but each universe producing a trillion more rather than just one more." We should expect to find ourselves in the setting that holds the most observer-friendly time, and the reward is observers who evolved.</p>
+          <p><span class="who">Ours, 18 Oct</span> Her measure is written as one function with her terms: the length of the era of starlight, the rate at which habitable planets form, how long one stays habitable, the chance a planet produces a society that asks about the universe, the window in which an observer can still learn its universe's history (about 10<sup>11</sup> years in the standard picture), the black holes formed and when, and the daughters per black hole. The toy supplies exactly one term, the daughters per unit of energy fed, and never the rest. Every number in it is pasted from published work and marked as such.</p>
+          <p><span class="who hers">The author, 18 Oct · decided</span> Universes of one setting that differ only by a quantum outcome are counted each as a whole, the branching ignored. For when an observer is most likely to exist, each universe is counted by its own clock, lined up at its own birth: "it's an exact copy though, starts at big bang runs though heat death, every time ... clocks are only within a universe." <span class="who">Ours</span> The first rule avoids the trap of letting the deepest generations dominate. The second removes the youngness pressure known from eternal inflation by the hypothesis's own structure: that pressure needs a common clock across universes, and there is none. Had the tree been counted at one common moment, with trillions of daughters born early, an observer at our age would have been weighted by about e<sup>−36</sup>, and no late observers could balance it; late births could, but the published infall into black holes is front-loaded.</p>
         </div></div>
         <div class="row"><div class="lbl">Next</div><div>
-          <p>The map of which settings give a stuck X, a burp that runs, and a clean birth, across the number of directions and the curling cost.</p>
+          <p>Paper 16: the function as written, with the one term the toy supplies and the map of settings as its input. What would kill it: a neighbouring setting with observers and a faster-growing tree than ours. No model here can score a neighbouring setting yet.</p>
+        </div></div>
+      </article>
+
+      <h3 class="group">Chapter 7. The view from outside the loop</h3>
+
+      <article class="piece" id="p14">
+        <div class="head"><span class="n">14</span><h3>Observers inside the loop: who counts, and when we are</h3>
+          <div class="meta"><span class="chip exact">Exact in a toy · the published count · the author's reading decided</span><span>No numbered paper</span><span>Updated 19 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p>Observers who read the same record agree, so they cannot be counted as independent. Whether we are early or late in cosmic time depends on who is counted: the same physics gives answers from under a millionth to nine tenths. <span class="who hers">The author, 18 Oct</span> The versions are Everett's branches, "as needed for amplitudes and interference to work correctly."</p>
+          <p><span class="who">Ours, 18 Oct</span> Under her per-universe reading the one issue left is the published count: with habitable planets round the smallest, longest-lived stars, the most likely observer lives near 10<sup>13</sup> years, and the chance of one as early as now is at most about a thousandth (Loeb, Batista and Sloan 2016). Her own window term answers it: observers who can no longer learn their universe's history count less, so the peak moves inside 10<sup>11</sup> years and our age is unremarkable. That makes the window the load-bearing term of her function, and it is not scored on our age, which was known when she chose it. Her other candidates for bringing the prediction forward were put through the population model as a look, not evidence: a rip would do it but the data lean the other way, and it cuts against her heat-death argument for many daughters; a constant dark energy leaves bound structures bound and shortens only the window; "no interaction between planets" does nothing as a factor and a great deal as a rule for who counts, each civilization once, which puts the peak near 5 billion years and makes us late rather than early.</p>
+        </div></div>
+        <div class="row"><div class="lbl">Next</div><div>
+          <p>Hers: who counts, chosen on its own grounds and not on our age; whether this piece stays; whether a two-turn version of the toy is tested. A critic would attack the window term first, and the habitability of planets round the smallest stars is a question astronomy is working on.</p>
+        </div></div>
+      </article>
+
+      <h3 class="group">Chapter 8. From the toy to the sky</h3>
+
+      <article class="piece" id="p15">
+        <div class="head"><span class="n">15</span><h3>Connecting the hypothesis to observations</h3>
+          <div class="meta"><span class="chip author">The author's request · a handoff, nothing measured</span><span>Papers 7, 12</span><span>Updated 15 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">Where it stands</div><div>
+          <p><span class="who hers">The author</span> "I need another bot to begin work on connecting the theory to observations and explaining the unexplainable." She wants published mathematics she can apply for predictions and constants, not novelty.</p>
+          <p>A handoff was written on 14 October for a fresh assistant. For each observation that standard physics measures well and does not explain, it asks for five things: the measured numbers with their uncertainties, from sources read; what her hypothesis says; what the toy has shown and cannot show; the nearest published work and its limits; and the observation that would rule the reading out. A target is something the hypothesis must reproduce, never evidence that it does. The sheets build on the existing targets file; they do not start a second list.</p>
+        </div></div>
+        <div class="row"><div class="lbl">The five</div><div>
+          <p><strong>Dark matter</strong>, the best candidate. Piece 7's relics; paper 7, with paper 2 for what the knots are. Nearest published relatives, none read yet: black-hole relics as dark matter (MacGibbon 1987), primordial black holes and their mass windows, asymmetric dark matter. First deliverable: the target sheet of limits a heavy, rare, gravity-only relic must meet, and the birth share of about 0.67 eV over the temperature of birth.</p>
+          <p><strong>Black holes from concentrated dark matter.</strong> Piece 11; paper 12. First deliverable: a reading note on how dark matter gets dense enough (direct collapse, dark-matter spikes around black holes, the seeds of the early supermassive ones). Benchmarks only, never evidence: Smolin, Pathria, Popławski, Fife.</p>
+          <p><strong>The birth, and a signal it could leave.</strong> Pieces 1, 2 and 6; paper 7. The hot era began no later than about 4 to 5 MeV. A front-driven change makes gravitational waves at a frequency set by the temperature of birth, and pulsar-timing arrays reported a background in 2023. First deliverable: temperature of birth against frequency band against what has been seen or bounded, so she can see which births are testable.</p>
+          <p><strong>Dark energy.</strong> Piece 6; paper 7. What each candidate source predicts for whether it changes with time, set against recent survey hints. Low priority until the first two sheets exist.</p>
+          <p><strong>Matter over antimatter.</strong> Pieces 1 and 2; a pointer for later in paper 7. The best-studied route makes the excess at the walls of bubbles in a sharp transition, and a front-driven burp supplies such walls; the toy has nothing that comes in opposite kinds.</p>
+        </div></div>
+        <div class="row"><div class="lbl">Next</div><div>
+          <p>A fresh branch and a first week: the reading list, the dark-matter sheet, the birth table, the black-hole reading note, and a plain-language summary for her of what would have to be true, what is already ruled out, and the one test that would tell most. Every sentence says its kind; every number is checked at its source before it is written anywhere else; any number that comes out close to a measured one goes through the targets file's checks before anyone calls it a match.</p>
+        </div></div>
+      </article>
+
+      <h3 class="group">The last page: the view from outside</h3>
+
+      <article class="piece" id="outside">
+        <div class="head"><span class="n">&#8734;</span><h3>What our reality would look like from outside the loop</h3>
+          <div class="meta"><span class="chip author">The author's framing · an interpretive picture, not a result</span><span>Paper 17</span><span>Updated 12 Oct 2026</span></div></div>
+        <div class="row"><div class="lbl">The picture</div><div>
+          <p>An observer with one more dimension than we have would see every turn of the loop at once: X curled, the push, the burp, the new space with its scrap, the black holes, the next burp; and inside each turn every branch, each with its weight. Our settings would be one point on a map of which settings burp, which leave a stable space, and how much observer-friendly time a turn holds.</p>
+        </div></div>
+        <div class="row"><div class="lbl">Next</div><div>
+          <p>Paper 17, after the others. The map of settings is what the toy can still fill in (pieces 5, 6, 12).</p>
         </div></div>
       </article>
 
@@ -388,19 +458,28 @@ or a unique front, and mean store energy is not temperature. This snapshot is no
 
   <section>
     <h2>The papers</h2>
-    <p class="note">Each paper supports one part of the theory and is written to be read and checked alone. Outlines and working notes are in the repository, in <span style="font-family:var(--mono);font-size:.88em">docs/papers/series_plan.md</span>.</p>
+    <p class="note">Many short papers, each checkable alone, brought together by the last. Outlines are in <span style="font-family:var(--mono);font-size:.88em">docs/papers/series_plan.md</span>; each paper's folder carries its number. The observation target sheets of chapter 8 are not a paper of their own: they are working material beside the targets file, and papers 7 and 12 draw on them.</p>
     <div class="scroll">
       <table class="papers">
-        <thead><tr><th>Paper</th><th>What it supports</th><th>State</th></tr></thead>
+        <thead><tr><th></th><th>Paper</th><th>Pieces</th><th>State and next</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td>The burp in two directions (pieces 1, 2)</td><td>Written. On hold at arXiv pending a reader or a journal.</td></tr>
-          <tr><td>2</td><td>The scrap (piece 7)</td><td>Drafted. Waits for the frozen-scrap run.</td></tr>
-          <tr><td>3</td><td>The rule, the room and the shares (pieces 3, 4, 6)</td><td>Outline. Waits for the check of the birth shares.</td></tr>
-          <tr><td>3D, 4D</td><td>How curled directions open (piece 5)</td><td>Outline. The two-direction mechanism does not carry over as it stands.</td></tr>
-          <tr><td>4</td><td>Black holes (piece 11)</td><td>Outline. Negative results so far.</td></tr>
-          <tr><td>5</td><td>Gravity (piece 8)</td><td>Drafted as a negative with its reason. Waits for the hidden count.</td></tr>
-          <tr><td>6</td><td>Quantum (piece 9)</td><td>Outline.</td></tr>
-          <tr><td>7</td><td>The framework and the loop (piece 12)</td><td>Outline.</td></tr>
+          <tr><td>1</td><td>The curled torus burps</td><td>1, 2</td><td>Written, two editions. With Carlo Trugenberger since 14 Oct; goal, a reader, then arXiv. Two sentences proposed by the author on 18 Oct for its next version: the fixed count of points is the published model's setting, not a requirement of the question; square breaking is allowed and, under the published move, required for the change. Drafted for her to edit.</td></tr>
+          <tr><td>2</td><td>What the change leaves behind</td><td>7</td><td>Drafted, two editions. Waits for her read; the technical draft needs figures. Takes the exact count of which knots stay stuck at zero curling cost, once her prediction is worded.</td></tr>
+          <tr><td>3</td><td>Links that reach far, left where starting points meet</td><td>7</td><td>First look. Rules to be written before it runs.</td></tr>
+          <tr><td>4</td><td>The order of the transition in three directions</td><td>5</td><td>Needs one answer from the model's author first. Proposed as joint work.</td></tr>
+          <tr><td>5</td><td>How curled directions open, three and four</td><td>5</td><td>Drafted. Waits for her read.</td></tr>
+          <tr><td>6</td><td>The rule, the room, and which settings give a birth</td><td>3, 4</td><td>Drafted. Waits for her read; takes in the six-loop price results and a short section on the masked curling cost (exact, 14 Oct).</td></tr>
+          <tr><td>7</td><td>The make-up at birth and the three shares</td><td>6, 7, 15</td><td>Outline. Needs a physicist's check. Home of the observation target sheets: dark matter as relics, the birth temperature against the gravitational-wave band, dark energy over time, and a pointer on matter over antimatter.</td></tr>
+          <tr><td>8</td><td>Dimensions that open in order</td><td>5, 6</td><td>Idea.</td></tr>
+          <tr><td>9</td><td>What a cut hides</td><td>8</td><td>Read 19 Oct: a scrap hides 5, flat space 2 then 1; whether the count follows the cut not reached. Next, the flat control's second shape, then a faster wider count.</td></tr>
+          <tr><td>10</td><td>An entropy action across wirings</td><td>8</td><td>Drafted, two editions. One question for the author of the action.</td></tr>
+          <tr><td>11</td><td>A pull between leftovers</td><td>8, 3</td><td>Drafted, two editions. Next, the design of a quantity on the points. States the masked-cost identity as the reason the rule can agree with Einstein where space is smooth.</td></tr>
+          <tr><td>12</td><td>Concentrated energy does not fold space</td><td>11, 15</td><td>Drafted. Waits for her read. Gains her relic-seeded mechanism of 14 Oct, the one sandbox look that narrows it, the black-hole target sheet and the question of how dark matter gets dense.</td></tr>
+          <tr><td>13</td><td>Counting versions cannot beat Bell</td><td>9, 13</td><td>Outline. States the published amplitude rule as the hypothesis's own (decided 15 Oct) and asks only where the loop puts the amplitudes.</td></tr>
+          <tr><td>14</td><td>A front's pace</td><td>10</td><td>Outline.</td></tr>
+          <tr><td>15</td><td>A feed, not a spark</td><td>5, 11</td><td>Outline, anchored on T67 and T68 (a feed of any shape or place tried opens the untied slab at no size) and now on T71 under the layer form.</td></tr>
+          <tr><td>16</td><td>The loop and its measure</td><td>12</td><td>The function written (18 Oct) with her terms and the combination rule she decided; counted per universe by each universe's own clock. The toy supplies one term.</td></tr>
+          <tr><td>17</td><td>A phase-changing reality</td><td>all</td><td>Brings the others together; after them.</td></tr>
         </tbody>
       </table>
     </div>
@@ -408,7 +487,9 @@ or a unique front, and mean store energy is not temperature. This snapshot is no
 
   <section class="foot">
     <h2>What is claimed, and by whom</h2>
-    <p>The author claims that reality works this way. The claim at the top is hers, stated to be argued with. The toy's results are narrower: piece 1 is established in the toy, and the others are measured, in progress or untested, as marked. We have not found published work that studies one ordered arrangement of this model turning into another.</p>
-    <p>Every configuration, seed, result file, rule written in advance and amendment is in the public repository: <a href="https://github.com/EmilySmithCreate/RecreationalPhysics">github.com/EmilySmithCreate/RecreationalPhysics</a>. Code, analysis and text were drafted with Claude (Anthropic), directed and checked by the author.</p>
+    <p>The author claims that reality works this way; the claim at the top is hers, stated to be argued with. The toy's results are narrower: each piece is marked measured, exact, in progress or untested. Every configuration, seed, result, rule written in advance and decision is in the public repository: <a href="https://github.com/EmilySmithCreate/RecreationalPhysics">github.com/EmilySmithCreate/RecreationalPhysics</a>. Code, analysis and text were drafted with Claude (Anthropic), directed and checked by the author.</p>
   </section>
 </div>
+
+</body>
+</html>
