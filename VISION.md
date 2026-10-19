@@ -2028,3 +2028,32 @@ gitignored outreach folder). Merging this update is her acceptance of the wordin
 - **What runs.** Nothing new in the toy. PREREGISTRATION T72, the observer-window calculation in standard cosmology
   (four reference classes declared before any number), on her "proceed"; it sets the target epoch for piece 12 and tests
   nothing in the toy. The glossary gains the levels of description she asked for (`docs/papers/glossary.md`).
+
+Update 71 (2026-10-19, late): **DECISION (the author's): piece 12's measure counts once per civilization, weights the
+ages by the causal diamond, and an observer is a civilization in which at least one intelligent being asks this
+particular question.** Why this page changes: Update 68 left two definitions of the measure open, the counting unit
+and the "how many places" weight; T72 and T73 (ASSUMPTIONS O138, O139) measured what each choice does, and she chose.
+Her words, from the same evening.
+
+- **The counting unit: "let's go once per civilization."** Every civilization that ever arises counts one, placed at
+  its birth, however long it lasts.
+- **The weight: the causal diamond**, only the places an observer at that age can be causally tied to, "because I
+  believe in the strange loop and the version probability mattering."
+- **What an observer is:** "a civilization where at least one intelligent being asks this particular question. So
+  much interaction and uncontrolled stuff otherwise: like how long does a being last, how do they learn / share / pass
+  information, what is the lifecycle, how violent / destructive is said civilization. Things asking the question itself
+  can affect." *Ours:* this is the reason for counting once rather than by moments: the length of a civilization's
+  life depends on things the asking itself can change, so the measure does not weight by it. It agrees with the
+  observer level of the glossary (an observer holds a record) and with her rule of 18 October (each civilization once).
+- **Disclosed under rule 13.** The numbers were known when she chose: under this unit alone every stellar class is
+  TYPICAL (O138); with the diamond, every class but her composite D is LATE, and D lands at F = 0.53 (O139). Choosing
+  the combination under which our age is most typical, for reasons stated after the numbers, is exactly what rule 13
+  forbids as evidence; so **nothing about our own age is scored under this measure from here.** Her reasons are
+  recorded as reasons of principle (what an observer is; what the loop and the versions require), and the measure's
+  first real test must be a quantity it predicts that was not put in. *Ours, candidates, none chosen:* the share of
+  observers that find their universe's dark energy already dominant (ours did, four billion years ago); the
+  distribution of the ratio of a universe's age to its dark-energy timescale among observers; or, in the toy, the one
+  term the toy supplies, the daughters per unit of energy fed (b of the brief).
+- **What stands.** Updates 67 and 68 (per universe within a setting; by each universe's own age; no clock across
+  universes); the observation window W(t) as her term; the hard-steps delay as the shape she agreed with (Update 70).
+  The brief `docs/design/loop_measure_brief.md` carries the two definitions in its section 7.
