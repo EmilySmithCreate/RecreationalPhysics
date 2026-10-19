@@ -333,13 +333,13 @@ measured entries and exact for the walls. Every curled direction costs 4(λ − 
 |---|---|---|---|---|---|---|
 | 2 (4) | one curled (the tube) | 1 < λ < 1.6 (minimum of 32−16λ and 64−40λ); metastable at g = 1.5 for 1.05 ≤ λ ≤ 1.35 | 12 | yes, 48 to 192 points | dominant component, clock-dependent waits, release εN−H_final; about one relic in cold boxes | paper 1; T7 to T24 |
 | 2 (4) | both curled (a gas of 4-cubes) | never above λ = 1 | downhill | | falls apart at once | O40 |
-| 3 (6) | one curled (4 × L × L′) | 1 < λ < 2 (96 − 48λ) | 36 | | never opened: T41 NEVER OPENS at both λ (O81); T48 STAYS, 32 of 32 (O91); the true barrier for a growing patch is not priced (T54, draft; O103 (b)) | O41, O81, O91 |
+| 3 (6) | one curled (4 × L × L′) | 1 < λ < 2 (96 − 48λ) | 36 | | never opened: T41 NEVER OPENS at both λ (O81); T48 STAYS, 32 of 32 (O91); T54 untied (computed 11 Oct): the energy of a completed patch peaks near 7.5 columns at about 225 at λ = 1.25, an energy of completed patches and not a barrier (O118 and its correction) | O41, O81, O91, O118 |
 | 3 (6) | two curled (4 × 4 × L, L ≥ 18) | 1 < λ < 1.5 (96 − 64λ) | 16 | yes, 192 to 512 points (T32) | first direction fully open in 28 of 84, partly in most others (corrected); the second's wall (36) unpaid; near-flat only at a hot bath (T30) | O49, O54 |
 | 3 (6) | all three (a gas of 6-cubes) | 1 < λ < 1.2 (96 − 80λ) | downhill | | at λ = 1.10: joins and opens two of three directions in 21 of 24, no rest between, never one space (T30-gas) | O41, O54 |
 | 4 (8) | one curled | 1 < λ < 2.5 (160 − 64λ) | 80 | | not run | O50 |
 | 4 (8) | two curled | 1 < λ < 1.67 (160 − 96λ) | 40 | | not run | O50 |
 | 4 (8) | three curled (4 × 4 × 4 × 36) | 1 < λ < 1.43 (160 − 112λ) | 20 | | T33: a push equal to the cheapest move buys one move and stalls (NO CASCADE); T40: pushes 20 to 160 never start (27 Sep readings, O79 to O84); T48 eight links STAYS at 1.25, ADVANCES ONLY at 1.40 (O91) | O50, O79 to O84, O91 |
-| 4 (8) | all four (a gas of 8-cubes) | 1 < λ < 1.25 (160 − 128λ) | downhill | | T33 at λ = 1.10: NO CASCADE; T49: the 8-cube never opens fully (O92) | O50, O92 |
+| 4 (8) | all four (a gas of 8-cubes) | 1 < λ < 1.25 (160 − 128λ) | 0 (the edge of the window) | | T33 at λ = 1.10: NO CASCADE; T49: the 8-cube never opens fully (O92) | O50, O92 |
 | flat space's own wall | 2D: 32; 3D: 64; 4D: 128 (the same at every λ) | | | | a cold sheet accepts no move in any D | O22, O51, O50 |
 
 What the map says so far (*ours*): the walls rise from rung to rung at every D (they double exactly only with eight links at
@@ -348,6 +348,16 @@ directions together, and the release of one rung in a cold bath does not pay the
 window in λ for the partly curled states and raise the flat state's own wall, so a four-direction change can be driven
 hot without melting where a two-direction one cannot. The "interconnection" the owner asks about is therefore not in this
 energy; if it exists in reality it is an ingredient this family lacks, which is a thing the map can say plainly.
+
+*Added 19 October 2026 (consistency audit): the table above is the untied ladder, which is the rule again since 16
+October.* From 9 to 16 October the hypothesis's three-direction runs carried the owner's tie "all at the last" (VISION
+Update 47); she withdrew it on 16 October (Update 58), and every tied verdict stands as scored (T54 tied, T56 and T57
+tied under this tie; T44 to T46 under the earlier ties). *Exact, six links (O106):* under that tie every rung sits 3a per point above flat, a = 4(λ − 1), the
+whole release coming at a point's last opening, and the cheapest single moves out, for λ = 1.05 to 1.25, are: the
+slab (one curled, 4 × L × L) 39.2 falling to 4.0; the rod (two curled, 4 × 4 × 18) 30.4 to 24.0; the gas of 6-cubes
+14.4 to 8.0; flat space 64 at every λ. Against the untied walls at λ = 1.25 (36, 16, downhill) the tie lowered the
+slab's wall and raised the others'. Under any table of that form a damaged point costs no tie, so the tie also
+rewarded breaking (O114, O115; one of the reasons in Update 58).
 
 ### 25 September, morning: paper progress
 
@@ -414,6 +424,10 @@ a massless field on the points with relics as its sources); (2) the exchange sig
   one 6-cube at λ = 1.25. The follow tie's walls at six links, λ = 1.25 (X, two-curled, one-curled): κ = 0: −4, 16, 36;
   κ = 1: 20, −6, 20; κ = 2: 44, −30, 4; κ = 2.5: 56, −42, −4. The middle rung loses its wall first at every λ from 1.05 to
   1.40, so "large, smaller, none" never occurs.
+  *(Annotated 19 October 2026, consistency audit: this column is superseded. The story in which the order of opening
+  sets the three releases was set aside on 9 October (VISION Update 50); the follow tie it uses was replaced by "all at
+  the last" the same day (Update 47), and that tie was withdrawn on 16 October (Update 58). The numbers stand as exact
+  results about the follow tie.)*
 - **The counting drive against size** (O72): per point 0.33, 0.16, 0.06 in ln A for four, six and eight links, plus the
   exchange of identical cells, which grows with their number; with six links at g = 1.5 the gas beats flat space below
   λ = 1.031 at 10³ cells and 1.126 at 10²⁴. O55's "does not move with N" corrected.
@@ -461,16 +475,16 @@ the paper builds on; the readings are in `docs/reading/notes/` (5 October for mo
 | 9 | What a cut hides | 8 | Jacobson [Jac95]; Verlinde [Ver11] | none needed | the hidden count: does it follow the boundary or the volume (T52) | Read 19 Oct (O137): a relic's window hides 5 shapes, flat 2 at r = 1 (the control fails) and 1 at r = 2; the scaling NOT READ (r = 2 too slow). Next: the flat control's second shape, then a faster count at r = 2 |
 | 10 | An entropy action across wirings | 8 | Bianconi [Bia24] | her vacuum action on a regular lattice | the same action on flat, curled and leftover wirings: her "variation with respect to the topology" | First computation done 10 Oct (O111): flat, curled, re-glued and knots at 64 points; the action rewards squares without limit. Across 445 saved wirings it acts like this model's energy with a coefficient below 1 (0.001 to 0.55). Drafted 10 Oct in two versions, technical and plain language (`docs/papers/entropy_action/`). The question for her is drafted (local); the metric solved per wiring and a sheet holding one knot are not done |
 | 11 | A pull between leftovers | 8 | Verlinde [Ver11]; the G-field of [Bia25] | none needed | the pull in a warm bath in three directions; the design of a quantity on the points | The technical draft of 25 Sep (`docs/papers/gravity/paper.tex`, the exact negatives and what a pull needs) revised 10 Oct with where the two routes stand, and a plain-language draft beside it. Its measurements are not run: the hidden count is read and does not decide the route (T52, O137), the warm sheet's reach and the pull are not started, the design of the quantity on the points is not written |
-| 12 | Concentrated energy does not fold space | 11 | Black holes as random bubbles [T25]; Smolin [Smolin06]; as benchmarks only, the black-hole-cosmology lineage (Pathria, Popławski, Fife; unread, O103 (j)) | none needed | five negative results and what they need (T21, T26, T27, T34, T42) | Draft brought up to date 11 Oct (`black_hole/paper.tex`, with a PDF): seven registered tests, T57 included (MELTS, tied and untied; O114); not yet read by the owner; 16 Oct: a section on the author's mechanism of that day (Update 59) added, the PDF not rebuilt |
+| 12 | Concentrated energy does not fold space | 11 | Black holes as random bubbles [T25]; Smolin [Smolin06]; as benchmarks only, the black-hole-cosmology lineage (Pathria, Popławski, Fife; unread, O103 (j)) | none needed | seven registered tests and what they need (T21, T26, T27, T34, T42, T47 part B, T57) | Draft brought up to date 11 Oct (`black_hole/paper.tex`, with a PDF): seven registered tests, T57 included (MELTS, tied and untied; O114); not yet read by the owner; 16 Oct: a section on the author's mechanism of that day (Update 59) added; 19 Oct: a paragraph on her Update 70 positions (her decision that the loop's coupling is fixed by its total energy, with our exact reading in the toy's terms; dark energy as the thermal defect density, adopted as a hypothesis to test, with rule 13) added; the PDF not rebuilt since 14 Oct |
 | 13 | Counting versions cannot beat Bell | 9 | Smolin [Smolin11]; Hardy [Hardy01] | none needed | the rungs of T15; the exchange sign | Results in hand; outline |
 | 14 | A front's pace | 10 | Ellis [Ell14] | none needed | steady on a fair clock; faster where energy sits (T47, T50) | Results in hand; outline |
 | 15 | A feed, not a spark: energy-coupled nucleation of the slab | 5, 11 | Kramers' escape with a slowly rising temperature; paper 1's two-channel law as the known case | the tube's first exits under a feed against 1 − exp(−∫Γ[g(t)]dt) (a sandbox look first) | the untied slab fed at fixed rates, shared store against one point's store, capacity scanned; first escape, a persisting front and completion recorded separately; the held-out size | Stage 1 read 17 Oct (O132): no replica of 96 opens or reaches a front; BREAKS in 22 cells of 24, SITS in 2 (out of time, damage rising); her inferred OPENS fails, ours fails by the letter at the larger size; the held-out size read 17 Oct (O133): every cell's word as written, no front at any size; T68 stage 1 read 17 Oct (O134): a ramped or pulsed rate, or a feed at 16 or all points, at λ 1.25 to 1.60, no front in 1,728 replicas; the held-out size read 18 Oct (O136): 106 of 108 cells as written, the two misses marginal, no front in 864 replicas, T68 complete at three sizes; T69 (the lowest path) is the exact test; VISION Update 62's knobs and T70 the next; the author's handoff, VISION Update 59, H1 to H4 |
-| 15 | Allotropes dissolve | parked | Trugenberger [T24] | none needed | the first numerical data on them (T36, T43) | Results in hand; kept for the correspondence with him |
-| 16 | The loop and its measure | 12, 14 | Hofstadter; Smolin [Smolin06]; the measure problem; [BHKP07]; [LBS16] | the 2016 paper's 0.1 % and peak (done, T72's gate; the share within a factor of two, the peak 1.1 beyond) | the measure as decided (Updates 67, 68, 71) and its first two calculations (T72, T73) | Drafted 19 Oct (`loop_measure/paper.tex`, no PDF built on this machine); waits for her read; rule 13 caveat throughout |
+| — | Allotropes dissolve | parked | Trugenberger [T24] | none needed | the first numerical data on them (T36, T43) | Results in hand; kept for the correspondence with him. *Parked and unnumbered (19 Oct, consistency audit): it was paper 15 from 5 to 16 October, when number 15 went to the feed paper above; every citation of paper 15 since then means the feed paper.* |
+| 16 | The loop and its measure | 12, 14 | [BHKP07] (the causal diamond); [LBS16] (the 2016 observer-window paper); the measure problem through [Freivogel11], [BFY08]; the stellar and hard-steps inputs of T72. Hofstadter (the strange loop) and Smolin [Smolin06] are not cited in the draft yet, nor is the branching count of Update 59 | the 2016 paper's 0.1 % and peak (T72's gate: the share 0.17 %, inside the registered factor of two; the classes read on the owner's decision to take the gate as passed (its peak missed the registered window by the letter; O138)) | the measure as decided (Updates 59, 67, 68, 70, 71; Update 70 gives class D its hard-steps delay shape) and its first two calculations (T72, T73) | Drafted 19 Oct (`loop_measure/paper.tex`, no PDF built on this machine); waits for her read; rule 13 caveat throughout |
 | 17 | A phase-changing reality | all | the sixteen above | | the assessment that brings them together | After the others |
 
 Notes. (a) Papers 5, 12, 13, 14 and 15 are mostly negative or bounding results already measured; each is short and
-can be written now. (b) Papers 3, 8 and 10 each begin with one narrow question to their anchor's author, which doubles
+can be written now. *(15 in this note, written 5 October, is the allotropes paper, now parked and unnumbered.)* (b) Papers 3, 8 and 10 each begin with one narrow question to their anchor's author, which doubles
 as the route to a reader (the questions are at the end of the reading notes). (c) Paper 4 is the only one proposed as
 joint work. (d) Nothing here changes the rule that a paper at λ ≠ 1 is not called combinatorial quantum gravity. (e) Added
 6 October (O103): the narrow statement the three AI reviews propose for papers 1 and 2 together, which the author may
@@ -510,7 +524,7 @@ hypothesis (rule 13). Nothing has been sent to anyone.
 | 6, the rule, the room | [JC26]; [BaC26] | A dynamical phase diagram; entropy maximized under what the dynamics retains | A pointer at the head of the draft |
 | 12, concentrated energy | [BBM26]; [BFC26]; [YC24] | Two kinds of melting; recovery after an energy pulse | A pointer at the head of the draft |
 | 14, a front's pace | [FZC26]; [BBJC26] | A propagating interface between two phases; a growth law written as a crossover | Note only |
-| 15, allotropes dissolve | [JC26] Sec. III.2 | A criterion for arrest: the energy available against the local barrier | Note only |
+| 15 (as numbered on 13 October; now the parked, unnumbered allotropes row), allotropes dissolve | [JC26] Sec. III.2 | A criterion for arrest: the energy available against the local barrier | Note only |
 
 A candidate reader for paper 2, beside the model's author in the table of 24 September: G.-W. Chern (the note,
 section 7, has the question; the reading note of 25 September named him first). The owner's rules apply: one

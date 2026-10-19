@@ -6,7 +6,7 @@ front; `bath_T` is mean store energy; the seed scan measures escape; the persist
 operational. O108 and the methods supplement give the evidence. Original dated predictions,
 scores and failed tests remain on record; their stronger interpretations are superseded.
 
-Read this first, then **`docs/HANDOFF.md`** (the state as of 2026-10-05 with an addendum of 6 October: what is running, what the owner is owed, and the corrections that must not be undone — it is newer than the "Known state" section below). Then read @VISION.md (the fixed reference for what we are testing and why; Updates 13, 14 and 41 to 46 are the current statement) and @TASKS.md (what to do next, in order). Read `ASSUMPTIONS.md` before touching any model code.
+Read this first, then **`docs/HANDOFF.md`** (its section 0 and the dated addenda under it, the newest of 19 October: what is running, what the owner is owed, and the corrections that must not be undone — it is newer than the "Known state" section below). Then read @VISION.md (the fixed reference for what we are testing and why; Updates 13, 14 and 41 to 46 were the current statement as of 6 October, and Updates 47 to 71 add later decisions) and @TASKS.md (what to do next, in order). Read `ASSUMPTIONS.md` before touching any model code.
 
 ## What this project is
 
@@ -14,7 +14,7 @@ A hobbyist's hypothesis about emergent spacetime, tested honestly on toy models.
 
 > When one specific, stable-for-now arrangement changes into another that looks like space, is the change sharp — a seed, a front, a definite lump of energy released — and what does the lump do when it has nowhere to go?
 
-*(Re-scoped 2026-09-22, VISION Update 13. The earlier form of the question — whether geometry forms first order **out of a random network** — is the published question, was tested first (T6), and is not the hypothesis's: X is a specific arrangement, never a random tangle. The model's stand-in for X is the tube of VISION Update 8.)*
+*(Re-scoped 2026-09-22, VISION Update 13. The earlier form of the question — whether geometry forms first order **out of a random network** — is the published question, was tested first (T6), and is not the hypothesis's: X is a specific arrangement, never a random tangle. The model's stand-in for X is the tube of VISION Update 8.)* *(Since 9 October the stand-in for X is the curled slab, two directions open and one curled: VISION Updates 47, 58, 60, 64. The tube stays the two-direction case of paper 1.)*
 
 Current test bed: Trugenberger's 2D combinatorial quantum gravity model (`src/graphity/cqg.py`). Earlier work on Konopka's graphity model and a "restricted menu" idea is parked but kept (`energy.py`, `mc.py`, `graphs.py`, `docs/parked/`).
 
@@ -68,9 +68,9 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 
 ## Known state (2026-09-22)
 
-`docs/HANDOFF.md` is the one-page current state and is newer than this section; `ASSUMPTIONS.md` O1–O103 holds the numbers. What follows is what stays true.
+`docs/HANDOFF.md` is the current state (its section 0 and dated addenda) and is newer than this section; `ASSUMPTIONS.md` O1–O139 (as of 19 October) holds the numbers. The heading's date is the date this section was written; the "Added" paragraphs below extend it. What follows is what stays true.
 
-**The kernel and the model.** `cqg.py` covers the whole λ line: `run_chain(..., lam, cap, glauber)` with `cap=CAP` (2) or `NO_CAP`; in a config, `"cap": null`, `"lambda"`, `"acceptance"`. The capped model is a published case ([KTB19] Sec. 4, Figs. 8 and 9; ASSUMPTIONS Q3) and is the λ → ∞ end of the knob; [T25] Eq. 22 is the soft penalty. A unit test pins the capped path bit for bit to its pre-T2 output. The energy (Q1), the hard-core rule (Q2) and the published hot-phase floor (O5: 0.126 is a formula, so our 0.120 at N = 160 is not a discrepancy) were checked against the sources directly.
+**The kernel and the model.** `cqg.py` covers the whole λ line: `run_chain(..., lam, cap, glauber)` with `cap=CAP` (2) or `NO_CAP`; in a config, `"cap": null`, `"lambda"`, `"acceptance"`. The capped model was read as a published case ([KTB19] Sec. 4, Figs. 8 and 9; ASSUMPTIONS Q3) and is the λ → ∞ end of the knob *(that reading is disputed by the model's author, VISION Update 18: the capped results stay on the record as our λ → ∞ end, not a reproduction, and the kernel that is his model is λ = 1 uncapped)*; [T25] Eq. 22 is the soft penalty. A unit test pins the capped path bit for bit to its pre-T2 output. The energy (Q1), the hard-core rule (Q2) and the published hot-phase floor (O5: 0.126 is a formula, so our 0.120 at N = 160 is not a discrepancy) were checked against the sources directly.
 
 **Gates.** Gate A passed (2026-09-20, owner's decision): at λ = 0 the jump, the hysteresis of about 2 in g and the shattering into baby universes appear at N = 64, 96, 160, with her wording "baby universes, reporting how many are 4-cubes". Gate B **cannot pass** against [T25] Fig. 3: we match it at both ends and differ by up to 0.41 between g = 2 and 6.3, while the same runs match [KTB19] Fig. 8a to rms 0.005, and the two published figures disagree with each other (0.62 against 0.99 at g = 5). The axis is log base 10, confirmed three ways; the owner's triangles-and-pentagons explanation was tested and ruled out. It is a question for the authors, not a bug hunt. Whether Fig. 8a should become the gate instead is her open decision.
 
@@ -86,7 +86,7 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 
 Three facts of the same day, recorded in O116, O118 and O122 and not to be contradicted: T54's numbers are completed-patch energies, not barriers (O118, "Correction"); an end state with H = 0 is not thereby one torus, since it can be separate pieces and a piece can be one-sided (O116, last addendum; O122); and "the tube ends six around" is exact for the exactly flat end states only, 83 in 100, with about half of those that keep a leftover holding a stretch wider than six around (O116, addendum of 12 October).
 
-**Never call the model's hot phase "X"** (owner's correction, 2026-09-20; VISION Update 5). X is a specific, relatively stable arrangement; the model's hot side is a random graph, a stand-in at best. Write "the random phase". The hypothesis's own route is order → order (the tube), and the disorder → order route is the published question (VISION Update 13).
+**Never call the model's hot phase "X"** (owner's correction, 2026-09-20; VISION Update 5). X is a specific, relatively stable arrangement; the model's hot side is a random graph, a stand-in at best. Write "the random phase". The hypothesis's own route is order → order (the tube; since 9 October the stand-in is the curled slab, VISION Updates 47, 58), and the disorder → order route is the published question (VISION Update 13).
 
 **Older notes and outside reviews may say "Omega"**: it is the name X had in an earlier version of the theory. The record writes X (glossary, `docs/papers/glossary.md`).
 

@@ -40,7 +40,7 @@ Status: a hobbyist's hypothesis. Items 4–6 are untested ideas. Nothing here ha
 
 One real difference: a reaction goes molecule by molecule, each on its own, while a phase change is collective. A flame is the bridge between the two: a reaction that spreads as a front. *(From general knowledge, not read by us: the growth of bubbles in early-universe phase transitions is treated with the mathematics of combustion fronts.)*
 
-**An illustration, not a claim.** One arrangement X might have, in the author's words put in order: ~~four large space dimensions, and~~ a time dimension that is tiny. In the change, time becomes large~~, and the fourth large space dimension collapses and loops in on itself, leaving a bud of spacetime with three large space dimensions and one large time dimension~~. *Revised 2026-09-22 at the author's decision (Update 13): X has **fewer** large dimensions than spacetime, not more. It is curled, and the change uncurls; a tiny direction becoming large is that, and the collapsing fourth dimension is withdrawn. In the author's words of the same day, "the tube opens".* Any relatively stable arrangement and set of degrees of freedom could play the part of X; claims 1–6 do not depend on this one. Its specifics (why 3+1, hidden dimensions) stay on the parked list.
+**An illustration, not a claim.** One arrangement X might have, in the author's words put in order: ~~four large space dimensions, and~~ a time dimension that is tiny. In the change, time becomes large~~, and the fourth large space dimension collapses and loops in on itself, leaving a bud of spacetime with three large space dimensions and one large time dimension~~. *Revised 2026-09-22 at the author's decision (Update 13): X has **fewer** large dimensions than spacetime, not more. It is curled, and the change uncurls; a tiny direction becoming large is that, and the collapsing fourth dimension is withdrawn. In the author's words of the same day, "the tube opens".* *(Annotated 2026-10-19, consistency audit: what the toy has shown for this is narrowed in Update 54 (O116); since 9 October the toy's stand-in for X is the curled slab, two directions open and one curled, not the tube (Updates 47, 58, 60, 64).)* Any relatively stable arrangement and set of degrees of freedom could play the part of X; claims 1–6 do not depend on this one. Its specifics (why 3+1, hidden dimensions) stay on the parked list.
 
 **Each element of the illustration has a published ancestor**, and a physicist reading this page (S5) will ask about them. *(All from general knowledge; none read by us. Bibliographic details checked against the Crossref catalogue on 2026-09-20.)*
 
@@ -56,7 +56,7 @@ One real difference: a reaction goes molecule by molecule, each on its own, whil
 An existence demonstration: at least one model in which the mechanism of claims 3–6 demonstrably happens, and which nobody qualified has shown to be wrong. The conditions are fixed here, before any run, so that the bar cannot move afterwards.
 
 - **S1 No cherry-picking.** We may explore a *family* of energy functions, but only along knobs fixed in advance, and we publish the whole map: every setting run, including those that give the answer we did not want. A single member of the family is never presented on its own. *(Reworded 2026-09-19 from "No tuning", after agreeing that the useful question is which ingredients force a first-order transition.)*
-- **S2 First order.** At the largest sizes we can reach, the energy histogram at the transition has two humps and the valley between them deepens as N grows; heating and cooling runs show hysteresis.
+- **S2 First order.** At the largest sizes we can reach, the energy histogram at the transition has two humps and the valley between them deepens as N grows; heating and cooling runs show hysteresis. *(Annotated 2026-10-19, consistency audit: since Update 56 S2 is the bar for the published question only, not one the hypothesis sets for itself; claim 4 now says "a jump in energy", and the hypothesis's own route is scored by S2′.)*
 - **S2′ Sharp change between two orders** *(added 2026-09-22, the author's decision; Update 13)*. S2 is written for a transition driven by temperature. A change from one specific arrangement to another under a fixed rule is a decay with an activation cost — the reaction of the analogy under "What X is" — and there is no temperature sweep in which it could show two humps, so S2 cannot be applied to it. For that case the bar is: (i) both arrangements are dips of F (every single move out costs) at every size tried; (ii) the energy gap per point between them is fixed and does not shrink with N; (iii) the change proceeds by a seed and a front, with the two orders coexisting on either side of it and almost nothing in between; (iv) the activation cost does not grow with N; (v) sealed, the leftover is fixed by the energy released and survives. **Said plainly: (i) to (iv) were met by T7 and Update 9 before this condition was written, so it is a bar written after those runs, and they must not be counted as having cleared a bar that did not exist when they ran. What it makes falsifiable from here is (v), which T9 tests, and whether the leftover grows with the space, which T10 pre-registers.** S2 stays as written for the temperature-driven case.
 - **S3 Sealed split.** At fixed total energy the system separates into an ordered region plus a hotter remainder, and the energy released per converted node is measured.
 - **S4 On the spot.** The ordered region passes the geometry and stability lines of the target below.
@@ -69,6 +69,8 @@ If S2 fails in Trugenberger's model, that is a result too: the hypothesis does n
 ## The working question
 
 **Which ingredients of F force two dips (first order, latent heat), and which remove them (continuous)?**
+
+*(Annotated 2026-10-19, consistency audit: since Update 56 whether the change is first order is no longer part of the claim; this question stays as the published question's, and the hypothesis asks for a jump in energy at the sizes measured.)*
 
 The mathematics of "requiring two humps": if φ is the order parameter (squares per node), the probability of finding the system at φ is P(φ) ∝ exp(−N·f(φ)/g), where f is the cost per node including entropy. Two humps in P means two dips in f. The smallest f with two dips is f = aφ² − bφ⁴ + cφ⁶ with b > 0, the same potential as in the author's original 10-step plan; with the opposite sign of the φ⁴ term there is one dip and the transition is continuous. The changeover is a tricritical point. Because N multiplies the exponent, a small barrier per node becomes an overwhelming one in a large system, which is why the valley deepens with N. *(Landau theory; textbook material, e.g. Chaikin and Lubensky, not re-read by us.)*
 
@@ -88,7 +90,7 @@ Why the local term is there at all: it was not added as a design choice. It is w
 
 **Does geometry form through a first-order transition with a latent heat, or a continuous one?**
 
-Items 4 and 5 stand or fall on it. First order → a latent heat exists, so Δρ has a home. Continuous → no latent heat, and the rival picture below is the one the models support.
+Items 4 and 5 stand or fall on it. First order → a latent heat exists, so Δρ has a home. Continuous → no latent heat, and the rival picture below is the one the models support. *(Annotated 2026-10-19, consistency audit: no longer so since Update 56: claim 4 says "a jump in energy", first order is not part of the claim, and this is the published question's root question, not the hypothesis's.)*
 
 ## How this differs from Trugenberger's combinatorial quantum gravity
 
@@ -189,7 +191,7 @@ Update 12 (2026-09-21): a second knob, decided; and the tension of Update 4 rest
 
 - **The literature is not one group, and the two groups do not contradict each other.** [GV21] is Monte Carlo on real graphs, not the mean-field study we had recorded, and it reports a **first-order transition with clear hysteresis** at the penalty-off end, with the same finite-size criticism of the earlier work that this project arrived at independently. [T25] reports a continuous transition with the full rule. **Each has looked at one end of the lambda line, and nobody has run both energies in one code at matched sizes.** That is the gap T6 and T8 fill, and it is a sharper statement of it than "nobody has tested this".
 - **DECISION: runs that test the hypothesis use interchangeable points, where affordable** (*the author's, dated here as S1 requires for a new knob*). Every run in this repository treats the points as individually named. The alternative treats them as interchangeable, as identical particles are. The argument for it is this page's own: if the relationships are the real thing and the layout is a convenience, then the **names are a convenience too**. The whole knob gets published either way, and the honest expectation is written down before the runs: symmetric arrangements gain weight, and a shattered state is about as symmetric as an arrangement gets, so this knob may well favour shattering and count against claim 4. Against that, in [DQM25]'s own model the interchangeable version has a transition where the named one has none, and [EK25] is cited for a first-order transition that exists only in the interchangeable version. **The question it actually raises, whether this changes the *order* of the transition, is open in both directions, which is why it is worth running.**
-- **Which points are interchangeable is not ours to choose; the arrangement decides it** (*ours, unverified*). A point is distinguishable exactly to the extent that its relationships distinguish it. The renamings that leave every relationship intact are precisely the ones nothing can detect, so counting them (Q15) *derives* how much of an arrangement is genuinely interchangeable instead of assuming it. Partial interchangeability, which the author raised, is therefore not a third option between the two: it is what the correction already does in every case. Measured at N = 160: a shattered state is favoured by about 10^29, a perfect sheet by 320, **and a melted graph by exactly 1**. So for a low-symmetry state, which is what a universe with matter in it is, the two treatments agree; they differ most for the idealised arrangements that are easiest to calculate with and that nothing is ever in.
+- **Which points are interchangeable is not ours to choose; the arrangement decides it** (*ours, unverified*). A point is distinguishable exactly to the extent that its relationships distinguish it. The renamings that leave every relationship intact are precisely the ones nothing can detect, so counting them (Q15) *derives* how much of an arrangement is genuinely interchangeable instead of assuming it. Partial interchangeability, which the author raised, is therefore not a third option between the two: it is what the correction already does in every case. Measured at N = 160: a shattered state is favoured by about 10^29 *(annotated 2026-10-19, consistency audit: 10^29.4 to one decimal, Q15)*, a perfect sheet by 320, **and a melted graph by exactly 1**. So for a low-symmetry state, which is what a universe with matter in it is, the two treatments agree; they differ most for the idealised arrangements that are easiest to calculate with and that nothing is ever in.
 - **The S2-against-S4 tension of Update 4 is real but has been stated about the wrong object** (*ours, unverified; raised by the author*). "Where the transition is first order the cold phase is not a space; where it is a space the transition is smooth" is a statement about the **fully settled** state, meaning the ground state or a run cooled far past the transition. **Nothing is ever in that state.** A fully settled network is an empty flat sheet; a universe with matter in it is partly converted, which [T25] says outright, since for him the matter *is* the unconverted part. The object claims 4, 5 and 6 are about is the half-converted state, and **whether that contains a connected geometric region has never been looked at by anyone**, because at fixed temperature it does not exist to be looked at: no temperature setting yields a flask of thirty per cent ice. At fixed total energy it does exist. This turns an apparent impasse into task T11, and the machinery for it (Q12) is already built.
 
 Update 9 (2026-09-20, the same day, after Update 8): a prediction of ours about the mechanism behind Update 8 was written down and then refuted, and sealed runs were built. Why this page changes: Update 8 offered a reading of *how* the tube gives way; the first test of that reading failed, and a page that is the fixed reference must not leave it standing. What Update 8 reports having seen is unchanged; what it guessed about the mechanism is not.
@@ -207,7 +209,7 @@ Update 13 (2026-09-22): the vision audited against T6, T7 and the first sealed r
 - **Direction, decided: X is curled, and the change uncurls.** X has fewer large dimensions than spacetime, not more. The illustration under "What X is" is revised in place. The λ > 1 track — a tube opening into a sheet — is therefore the vision's track and not merely the reachable one; the λ < 1 direction, where folding pays and the end state is shattered cubes, is the wrong way round and stays what Update 8 called it, a rehearsal.
 - **Trigger, decided: the rule is fixed and the activation is supplied.** X is metastable at a fixed λ > 1 and goes over the wall when something pays the activation cost: a thermal fluctuation (T7) or a delivered push (the 12-unit spark of Update 9 and T9; the author's colliding black holes in the parked extension). λ does not run across 1 in the vision. Consequence: a sweep of λ across 1 is not a test of the hypothesis's trigger and drops in priority; the λ map (PREREGISTRATION T8) keeps its narrower purpose of locating where the metastable window closes, which O13 puts between 1.25 and 1.5 at g = 1.5.
 - **The bar, decided: S2′**, written under "What success means" with its caveat beside it.
-- **The tube is this model's stand-in for X.** Update 5's sentence that nothing simulated fits the author's definition of X was true when written and is out of date: the tube is a specific, relatively stable arrangement with its own dimensions, above spacetime in F. A stand-in, not X; O13's "not claimed: that X is a tube" stands.
+- **The tube is this model's stand-in for X.** Update 5's sentence that nothing simulated fits the author's definition of X was true when written and is out of date: the tube is a specific, relatively stable arrangement with its own dimensions, above spacetime in F. A stand-in, not X; O13's "not claimed: that X is a tube" stands. *(Annotated 2026-10-19, consistency audit: superseded as the stand-in by the curled slab, two directions open and one curled (Updates 47, 58, 60, 64); the tube stays the two-direction case of paper 1.)*
 - **The claims, plainly, at this date.** Claim 4: for the disorder → order route the change is not sharp (T6, agreeing with the published work); for the order → order route it is sharp in every pre-registered sense (T7) and releases the exact gap, then does it again off a ledge that is one unconverted ring. Claim 5: the leftover is that ring. Sealed (T9, N = 64 and 96 read at this writing, N = 192 running), the verdict as written is BONFIRE WITH A THRESHOLD: complete conversion to a sheet when the bath can hold the lump, boil-off when it cannot, the crossover between N/4 and N/2 at both sizes with the predicted N/3.5 inside that interval, no stall anywhere, and a leftover ring in 83 to 100 % of the sheets. Claim 6: conserved to the last unit in every sealed run. Claims 1 and 3: the stand-in fits. Claim 2 and the spot: untouched.
 - **What is falsifiable from here.** Whether the leftover grows with the space (T10, pre-registered before its runs). If it does not — one ring however large the tube — claim 5's leftover is a single defect and negligible at scale, and the claim is back to bookkeeping.
 - **Task numbering.** PREREGISTRATION's T7, T8 and T9 are not TASKS.md's; the map is at the top of TASKS.md.
@@ -227,7 +229,7 @@ Update 15 (2026-09-22, evening): the two withheld verdicts, under the rules the 
 
 Update 16 (2026-09-22, late evening): a hypothesis of the author's about claim 5, recorded. Why this page changes: T10 showed the leftover is small and fixed in size, and the author decided that a small leftover is acceptable (the lump carrying the energy is what claim 4 needs) and proposed what the leftover is.
 
-- **The author's words, put in order.** Dark matter is the leftover: the part of X that did not convert. Ordinary matter comes from the lump; dark matter is the latent remainder, made in the same change at the same moment. It does not interact with ordinary matter in the usual ways because it is a different kind of thing from what ordinary matter is made of, but it carries energy and so feels gravity. It might be abundant through many seeds, each leaving a scrap, or as a quality of spacetime itself.
+- **The author's words, put in order.** Dark matter is the leftover: the part of X that did not convert. Ordinary matter comes from the lump; dark matter is the latent remainder, made in the same change at the same moment. It does not interact with ordinary matter in the usual ways because it is a different kind of thing from what ordinary matter is made of, but it carries energy and so feels gravity. It might be abundant through many seeds, each leaving a scrap, or as a quality of spacetime itself. *(Annotated 2026-10-19, consistency audit: replaced by a direction's release in Update 30 (17:50 ET); open again beside it in Update 41; the order-of-openings story set aside in Update 50; the scrap is her lean as best guess in Update 52, which records that the stubborn knots hold far more than birth can afford.)*
 - **Its published cousin** is [T24]'s allotropes: dark matter as patches of the network stuck in a different discrete arrangement. Claim 5 already names allotropes as a candidate for X2 (Update 10).
 - **What a first look says** (`ASSUMPTIONS.md` O18, exploratory): a small leftover may be exactly what dark matter needs, because matter thins out more slowly than radiation — at the conversion the leftover need hold only about 0.7 eV divided by the starting temperature, as a share of the energy. So the many-seed route needs few seeds, and ties their density to how hot the universe began. The "quality of spacetime" route, energy kept spread through the geometry, would overshoot, and in the sealed runs a geometry holding a large share of the energy is one whose sheet has melted.
 - **The test** is TASKS T14 (leftover per seed), now with a second question: how the leftover scales with the number of seeds. Nothing here is a result; it is a hypothesis with a stated way to be wrong.
@@ -280,9 +282,9 @@ Update 22 (2026-09-24): **DECISION (the author's): build the three-dimensional v
 
 Update 23 (2026-09-24, evening): **the rule, described: curvature plus a curling cost** (the author's answers, put in order). Why this page changes: the naming condition of Update 22 left the hypothesis's rule described only by what it is not ("not exactly curvature"). The author answered four questions about it, and her answers fix what λ > 1 means in this hypothesis.
 
-- **The rule, exactly** (*ours; arithmetic*). H = [16(N − S) + 4X] + 4(λ − 1)X. The bracket is the model's published energy, the total curvature, unchanged. The second term charges 4(λ − 1) for every link that closes a third small loop, which is what a link does where the arrangement is curled tight. So the hypothesis keeps curvature whole and adds one ingredient: **a curling cost**. At λ = 1 curling is free and nothing is released; above 1 the cost is what the burp releases.
+- **The rule, exactly** (*ours; arithmetic*). H = [16(N − S) + 4X] + 4(λ − 1)X. The bracket is the model's published energy, the total curvature, unchanged. The second term charges 4(λ − 1) for every link that closes a third small loop, which is what a link does where the arrangement is curled tight. So the hypothesis keeps curvature whole and adds one ingredient: **a curling cost**. At λ = 1 curling is free and nothing is released; above 1 the cost is what the burp releases. *(Annotated 2026-10-19, consistency audit: the energy is still this, but the toy later gains ingredients beyond it: a price on loops of six for tests (Update 56), curling-energy stores (Updates 57, 60), the clean two-switch move, no-break store rule and pooled payment (Update 62), compaction with a varying count in the layer form (Updates 63, 65), the daughter ledger (Update 66) and the gate g1 (Update 69).)*
 - **Where it comes from (the author's).** It is a fact of the arrangement of X: a line in F, the one quantity that runs through both phases (claim 3), and energy is what pays it. It could well come from the three directions being intertwined (Update 22), which a level down is simply part of X.
-- **Is it a constant (the author's).** Yes, in the strange loop we exist in and can observe. Other independent loops may exist with other values, unobservable from ours; within one loop there is no discernible difference between its turns. A different λ would make a lot of things different. Once our loop's rules are worked out in 3D, other possible loops can be explored; the author expects them to hold a smaller share per turn than ours. **Her measure: count per turn.** Every loop turns forever, so all have the same kind of infinity (countably many turns); what differs is what one turn produces, and a loop whose turn makes a trillion times more cold, matter-rich, observer-friendly time is a trillion times bigger by that measure. The turn is the natural unit for a loop, which a smoothly expanding universe lacks. *Ours, unverified (general knowledge, not read by us):* per-turn counting is a well-defined choice but still a choice; counting per unit time or per volume can rank loops differently, and in eternal inflation such choices famously disagree (the measure problem). The hypothesis has to defend per turn as the right count, and a loop's turn is the strongest case for it that we know of.
+- **Is it a constant (the author's).** Yes, in the strange loop we exist in and can observe. Other independent loops may exist with other values, unobservable from ours; within one loop there is no discernible difference between its turns. A different λ would make a lot of things different. Once our loop's rules are worked out in 3D, other possible loops can be explored; the author expects them to hold a smaller share per turn than ours. **Her measure: count per turn.** Every loop turns forever, so all have the same kind of infinity (countably many turns); what differs is what one turn produces, and a loop whose turn makes a trillion times more cold, matter-rich, observer-friendly time is a trillion times bigger by that measure. The turn is the natural unit for a loop, which a smoothly expanding universe lacks. *Ours, unverified (general knowledge, not read by us):* per-turn counting is a well-defined choice but still a choice; counting per unit time or per volume can rank loops differently, and in eternal inflation such choices famously disagree (the measure problem). The hypothesis has to defend per turn as the right count, and a loop's turn is the strongest case for it that we know of. *(Annotated 2026-10-19, consistency audit: "per turn" is superseded; the measure now counts per universe within a setting, by each universe's own age, once per civilization, with the causal-diamond weight (Updates 67, 68, 71).)*
 - **Does it exist in spacetime (the author's).** Yes: it is what a black hole has to pay to re-curl space. There is not enough energy in that balance to uncurl further degrees of freedom into new dimensions; given the energy, a black hole uses it to re-curl space, not to open something else. *Ours, unverified, and the most promising consequence:* where space is smooth nothing is curled tight, so X = 0 and the curling cost vanishes term by term. There the rule is curvature alone, which is how claim 2 could recover Einstein's gravity while the extra term acts only on tight curls: the scraps, and black holes, where general relativity is expected to fail anyway.
 - **Why its value (the author's).** It is simply whatever value reality has. The loop we find ourselves in is selected: of the values that give a strange loop, ours is the one that delivers the biggest loop with the longest cold period for matter, even if other values are mathematically possible. *Ours:* this is the claim series paper 3 (the fertile window) is built to map. The model already shows the trade-off it would select within: a bigger λ gives a bigger lump but a less stable X and a harder birth (T18, PROPORTIONAL).
 - **What changes on the pages.** The rule is described as "curvature plus a curling cost, a constant of our loop", never only as "not curvature". The naming condition of Update 22 stands: at λ ≠ 1 this is not Trugenberger's model.
@@ -362,7 +364,8 @@ order, on reading T24 (the window inconclusive by the letter for a third time, o
   the second is the argument for why an observer finds itself in the stellar era rather than at the end (Dicke, 1961), and
   the comparison of infinities is the measure problem of eternal inflation in her terms, where her unit is the turn of the
   loop (Update 23). The model has no observers and cannot count them; its counterpart is the (D, λ) map of how much
-  stable phase, matter and room each setting yields per turn.
+  stable phase, matter and room each setting yields per turn. *(Annotated 2026-10-19, consistency audit: "per turn"
+  is superseded by Updates 67, 68 and 71: per universe, by its own age, once per civilization, causal-diamond weight.)*
 
 Update 27 (2026-09-25, midday): **the black hole run backwards: the author's folding mechanism, and what is exact about
 it.** Her words, put in order. The area to understand now is the relationship between the activation energy, the three
@@ -518,6 +521,8 @@ there is a factor, or a couple of constants, related to the interconnectedness o
   smallest, opening first; in the present energy the first direction to open is the one with the largest cost, so either
   the triad's own terms reverse that ordering or the push reaches red by a route other than cheapness. Choosing three costs
   to match three numbers would be a fit; the claim becomes a prediction only if the model's requirements pin the costs.
+  *(Annotated 2026-10-19, consistency audit: (b) did not last: dark matter as the leftover is open again in Update 41,
+  the three-release story is set aside in Update 50, and the scrap is her lean as best guess in Update 52.)*
 - **The author's idea, 17:53 ET: one third and two thirds, and doubling.** Her words: there is something significant
   about the one third and the two thirds, in terms of the scale of subsequent energy releases doubling. *Ours, unverified:*
   today's budget does split near one third matter (ordinary and dark together, about 31.5 %) and two thirds dark energy
@@ -684,6 +689,8 @@ ASSUMPTIONS O71, O72.
     selects differently, for observers over a loop's turn, and says that too many black holes too early costs observers.
     In the model a burp's activation is returned rather than used up (O71), so what limits burps there is the room each
     needs (pieces 4 and 5), not activation spent. The model counts no observers; its counterpart remains the (D, λ) map.
+  - *(Annotated 2026-10-19, consistency audit: "burps per turn" and the 44-unit first activation belong to the ledger
+    set aside in Update 50; the measure is now per universe, by its own age, once per civilization (Updates 67, 68, 71).)*
 - **5. Time as an outcome of open space (the author's, added later the same morning).** Time as we experience it is an
   outcome of the space directions being uncurled: large space directions let matter and energy be in different places,
   which makes location an essential degree of freedom from the large-scale vantage point. Space allows movement, and
@@ -759,6 +766,9 @@ match the universe at the beginning and now, lock them in, and ask whether dark 
 put in order: use her theory, do the mathematics correctly, give the predictions, lock them, then identify possible
 values; consider four directions, relativity's time, and different tying constants; afterwards compute the size of the
 infinity, per her strange-loop measure, across the arrangements found. Details: ASSUMPTIONS O74; PREREGISTRATION T45.
+*(Annotated 2026-10-19, consistency audit: the fit's target (5.36 as a ratio of releases) was withdrawn in Update 41,
+the order-of-openings story behind it set aside in Update 50, and "per turn" superseded by Updates 67, 68 and 71;
+T45's verdicts stand as scored.)*
 
 - **What is measured, and what that fixes** (*ours; Planck 2018 central values from a search summary, to verify*). One
   number is fixed from the start: dark matter : ordinary = 5.36. Dark energy's share is large only now; at any early
@@ -801,6 +811,8 @@ that pays for the third, which opens the third direction. Maybe ordinary matter 
 started lower. It can build complex molecules because it has the triad of quarks, and we interact with it because it
 matches the three directions and time we experience; the others do not interact in three directions, though they still
 have mass: it is just not quite three-dimensional mass. Details: ASSUMPTIONS O75; PREREGISTRATION T45 addendum and T46.
+*(Annotated 2026-10-19, consistency audit: this order, with dark matter free and ordinary matter paying for time, is
+set aside in Update 50; T45 and T46 stand as scored.)*
 
 - **In three directions this is T45's setting C**, locked half an hour before her message: dark energy → dark matter →
   ordinary, λ = 1.30, walls 6.4, none, 43.7, releases per point 0, 3.034, 0.566. Her prediction for it, one push opens all,
@@ -1069,7 +1081,8 @@ questions decide what later runs aim at. Details: ASSUMPTIONS O86 to O90; PREREG
   still curled, its release cannot disperse or interact as matter and radiation do, so it stays as the energy of space
   itself, and part of it pays the next push. This keeps Update 36's first step and gives it a reason. **Not decided:**
   which of the other two openings is ordinary matter and which is dark matter, and which release pays which push.
-  Accepted by her: once all three are open they are alike again.
+  Accepted by her: once all three are open they are alike again. *(Annotated 2026-10-19, consistency audit: set aside
+  in Update 50, with the whole order-of-openings story; dark energy as the energy of space itself stands.)*
 - **DECISION (4 October): the cosmological-constant problem is carried openly, not solved.** The first opening's net
   release has to be nearly zero, and the ledger's whole numbers cannot say why. The pages say so plainly.
 - **DECISION (4 October): the ladder is rebuilt with a plane, two directions together, as the unit of opening**, exact
@@ -1195,7 +1208,8 @@ gap (the yield of a turn has to be finite), and her answer says what is being co
   produced, which is dominated by starlight warming dust ([BHKP07], abstract only). (3) Requiring that observers have
   evolved is one of the published answers to the chance-brain problem ([Freivogel11] reviews it). (4) The gap of O101
   remains: a turn's yield has to be finite, and her list (a long cold period, stars with planets) is finite in any one
-  turn once it is counted up to the last star.
+  turn once it is counted up to the last star. *(Annotated 2026-10-19, consistency audit: "per turn, times how the turns
+  multiply" is superseded by Updates 67, 68 and 71: per universe within a setting, by its own age, once per civilization.)*
 
 Update 44 (2026-10-06, 03:56 ET by the clock): **three AI-generated reviews of the programme, checked against the
 record, and the author's decisions on them.** Why this page changes: the reviews put four decisions to the author and
@@ -1217,7 +1231,9 @@ is X.
   ("this seems good"); decisive tests before patches, the four questions answered before any new mechanism is proposed
   ("seems reasonable"); a red-team pass at each milestone; outside theories as targets and a close number not a result
   until checked. Rule 11's form for a failed prediction, "previous claim → failed because → replacement → new
-  falsification test", applies from this update on; its first use is below.
+  falsification test", applies from this update on; its first use is below. *(Annotated 2026-10-19, consistency audit:
+  Update 55 shortened rule 11's four answers to one question before a replacement is promoted; the one-line form stays
+  on the programme page; CLAUDE.md rule 11 is the current text.)*
 - **The author's conjecture, recorded for the first time** (hers; "my best guess with current information"). Time as
   we experience it exists because matter moves through open space (Update 41). Over a loop's turn, matter and energy
   gather into black holes; when all of it has, nothing moves through space, and so there is no time: the turn ends.
@@ -1226,7 +1242,8 @@ is X.
   whether re-curling inside black holes supplies the mechanism, remain to be derived.* Not an established mechanism;
   and not the artificial cutoff of eternal-inflation measures ([Freivogel11]), which is a regulator for assigning
   probabilities and a different thing. It supplies the "stated end" that O101 said a turn needs. The toy has no time
-  and cannot test it.
+  and cannot test it. *(Annotated 2026-10-19, consistency audit: reworded in Update 59: each universe ends when its last
+  black hole has dissolved, and the whole-universe reset is no longer required.)*
 - **Rule 11's first use, on piece 5.** Previous claim (the author's, Update 22): one activation opens all three curled
   directions and releases the whole burp. Failed because: in this family each direction has its own wall and the
   energy ties nothing; a push the size of the cheapest move opens one direction, or one cube, and stops (T33, T40, T44
@@ -1239,7 +1256,8 @@ is X.
   decay of a stable-for-now state, not a first-order transition in the thermodynamic sense; paper 1 says so under
   "Not claimed", S2′ says "a decay with an activation cost", and the README and the public pages now carry the clause.
   The claim's own text is hers; the proposed wording is "sharp, with a bounded lump released: a decay with an
-  activation cost". (b) Whether piece 10 stays attached to the toy's front measurements, which do not bear on time
+  activation cost". *(Annotated 2026-10-19, consistency audit: (a) decided in Update 56; claim 4 now says "a jump in
+  energy".)* (b) Whether piece 10 stays attached to the toy's front measurements, which do not bear on time
   dilation and read the opposite way (O93), or is kept as her philosophy until a model with time exists. (c) Dark
   energy as a release (Update 41) or as energy the final state keeps, the curling cost of a direction that stays
   curled (O103 (e)). (d) Her prediction for T51, still owed, and for T54 before it runs. (e) Whether paper 1 is revised
@@ -1304,6 +1322,9 @@ prediction in part; both are recorded as the rules require, before anything new 
   damage the space afterwards; at λ = 1.25 never, at L = 72 never. *Ours, unverified:* the bath that crosses the
   second wall is the bath that takes flat space apart, so in this family a steady bath cannot do what Update 44's
   replacement asked of it, unless the true barrier is lower than the single move suggests, which is what T54 prices.
+  *(Annotated 2026-10-19, consistency audit: the (72, 1.25) window was provisional when this was written, one cell
+  having failed on Batch; the resubmitted cell (g = 3.0) was read on 10 October as DAMAGED, 7 of 8 replicas, and the
+  window stays ADVANCES ONLY, no longer provisional (O105, addendum; TASKS, 9 October, item 4).)*
 - **Rule 11, second use on piece 5.** Previous claim (hers, Updates 39, 42; the replacement of Update 44): X is one
   connected piece with a direction already open, unstable enough to burp at once from several seeds, each push
   supplied in turn by a bath. Failed because: the bath opens the first direction and not the second before it damages
@@ -1334,7 +1355,9 @@ changes which stand-in is X and what piece 6 asks.
 - **Her shape.** "3D, one curled, two open: a slab rolled in one direction. This is actually what aligned to my shape
   intuition, just was not changing from original tube in my description." Recorded as her statement, not a decision:
   the stand-in for X that matches her picture is the slab, 4 × L × L, two directions open and one curled, which is
-  the state the model lands on from both ends (T48, T53). *Ours, exact (O89):* under "all at the last" the slab's
+  the state the model lands on from both ends (T48, T53). *(Annotated 2026-10-19, consistency audit: "lands on the
+  slab" is the local count d(v) on the one-curled rung; O116 read widths from the wiring only for replicas that read
+  OPENS, so the resting end states of T48 and T53 have not been read for width.)* *Ours, exact (O89):* under "all at the last" the slab's
   single-move wall is 44.5, 30.4 and 4.0 at λ = 1.02, 1.10 and 1.25, with a release of 3a = 0.24, 1.2 and 3 per
   point; under "all at the second" the slab would be the end state (its last direction never opens), so her shape
   and her tie together say the slab is X and not spacetime. *Ours, unverified:* with the slab as X only one opening
@@ -1360,7 +1383,7 @@ seams; the author's SEAM fails.** Why this page changes: Update 46 held two read
 rates would remove, or a seam set by the seeds) and the exact reading (O107) is neither. Every piece of two and of
 eight in 600 sheets is a dip, a stuck arrangement of its own with every single move out costing 11, and none carries a
 link that joins distant places. Read from the wiring they are two known objects: the pieces of two are the quarters
-of an eight-point knot of two kinds of point (20 units; in kind O15's twist), and the pieces of eight are double
+of an eight-point knot of two kinds of point (20 units; in kind O15's twist) *(annotated 2026-10-19, consistency audit: 20 at its own points, 30 within one step, O107)*, and the pieces of eight are double
 columns of the tube (8 units). **What this does to claim 5 (ours):** the leftover of an opening from several seeds is
 a sprinkle of knots of fixed energy whose number is set at the opening, not by the cooling, and the slowest cooling
 run leaves about one knot of each kind in three to five sheets of 1,024 points. That is the structured leftover of
@@ -1384,6 +1407,8 @@ the first exact numbers say something plain.
   45), 1.5 at 1.25 (27), 3.3 at 1.15 (77) and 5.5 at 1.10 (145). *Ours, exact:* the tie turns a climb no bath can make
   into a small one; whether a bath then makes it while sparing flat space is T56's question. One disclosure, recorded
   in T54's Amendment 3: the tied stage-1 numbers were computed before she had confirmed her tied prediction.
+  *(Annotated 2026-10-19, consistency audit: corrected 11 October (O118, "Correction"): these numbers are the energies
+  of completed square patches, not barriers; "barrier" and "critical patch" are withdrawn for them.)*
 - **Her prediction for T54's held-out size:** "critical patch, I'm thinking small but not sure." Recorded before
   L = 16 is computed.
 
@@ -1493,7 +1518,8 @@ has used for the two-direction change since Update 8.
   The slab stays where its wall is high and breaks where it is low, and the untied control shows no difference.
   Two reasons, separated by the data: the barrier to an opening that spreads is a patch several moves big (T54's
   exact numbers), far above the single-move wall our prediction used; and the tie as written charges a damaged
-  point nothing, so it rewards breaking.
+  point nothing, so it rewards breaking. *(Annotated 2026-10-19, consistency audit: T54's numbers are completed-patch
+  energies, not a barrier (O118, "Correction", the evening of this day); the barrier itself is not known.)*
 - **T57 (piece 11; her fold under the tie): MELTS, tied and untied.** Given up to twice the price of curling a
   whole direction, flat space ends half broken and not curled at all: 582 of 640 replicas MELTED, 58 HEALED, none
   FOLDED. Her prediction (RE-CURLS) fails; ours holds.
@@ -1601,7 +1627,9 @@ the conversation of this morning put in order: with the slab as X two directions
 opening remains at the birth and there is no "together" for the tie to enforce; the tie as written charges a damaged
 point nothing and so rewards breaking (O114, O115); and the untied record is the larger one. The toy's rule returns
 to curvature plus a curling cost, 4(λ − 1) per curled link (Update 23), with every direction costing the same and
-carrying its own wall.
+carrying its own wall. *(Annotated 2026-10-19, consistency audit: the energy stays this, but the layer-form toy has more
+ingredients than it: curling-energy stores (Update 60), the clean two-switch move and pooled payment (Update 62),
+compaction with a varying count (Updates 63, 65), the daughter ledger (Update 66) and the gate g1 (Update 69).)*
 
 - **What stands.** X is the slab, two directions open and one curled (Update 47's shape statement, now without its
   tie). Untied it is stuck for now for every curling cost between 1 and 2 (O41) and it is the state the toy lands on
@@ -1609,7 +1637,9 @@ carrying its own wall.
   not 3a. The barrier to that opening is a patch of several columns (T54 untied: about 7.5 columns and 225 units at
   λ = 1.25), out of reach of warmth, so the slab opens only from a push, which is her picture. Everything in two
   directions, the scrap, dark energy as the vacuum of the end state, and the relic count set at the opening never
-  carried the tie.
+  carried the tie. *(Annotated 2026-10-19, consistency audit: "barrier" here, and "the low tied barrier" below, are
+  T54's completed-patch energies, not barriers (O118, "Correction"). "The state the toy lands on" is the local count
+  d(v); the resting end states of T48 and T53 have not been read for width (O116).)*
 - **What is lost, said plainly.** The whole burp from one fold ("as much energy stored in that one fold as in
   three", her words of 15 October): untied, one fold holds one direction's worth. The low tied barrier (1.5
   columns, 27 units at λ = 1.25). And "the three go together" as an energy (Update 22) is no longer in the rule; with
@@ -1668,7 +1698,10 @@ T1 to T8 are registrations here. Merging this update is her acceptance of the wo
   each is working toward; stuff keeps unfolding; every black hole births multiple new ones; that is what we can call
   a larger infinity: the length of time just as long, but each universe producing a trillion more rather than just
   one more; and that makes this more likely from the anthropic observer's perspective, which is a nice cohesion.
-  *What is decided:* piece 12's count is the branching one. A universe's turn still ends (her conjecture of 6
+  *What is decided:* piece 12's count is the branching one. *(Annotated 2026-10-19, consistency audit: refined by
+  Updates 67, 68 and 71: within a setting universes are counted per universe, each whole and by its own age, once per
+  civilization, so the branching adds copies and no weight; a count of the tree at one moment has no meaning (Update
+  68). The measure as now defined is in `docs/design/loop_measure_brief.md`, sections 4 and 7.)* A universe's turn still ends (her conjecture of 6
   October, Update 44, now worded as its last black hole dissolving), but the next generation is not one reset of
   the whole: it is every black hole's daughter, so the tree multiplies by a large factor each generation at the
   same cold time per universe. *Ours:* this is the branching case O101 named, now chosen rather than avoided. With
@@ -1713,10 +1746,10 @@ Out of reach for now, and stated openly: special relativity / Lorentz symmetry (
 | Step | What | Tests which claim | Status |
 |---|---|---|---|
 | 1 | Learn the diagnostic (energy histogram at the transition) on the existing Konopka model | tooling only | Done at N = 60: one broad hump, inconclusive, as expected at that size |
-| 2 | Build Trugenberger's model. Gate: reproduce the published square-density curve [KTB19 Fig. 8, D = 2] | none yet; establishes trust | Kernel built and tested; first look run. **Gate not yet passed.** As of Update 3: model readings Q1–Q3 checked against the sources; [T25] Fig. 3 digitised and compared at N = 160 (exploratory): agreement on the hot side, a jump on the cold side that the capped model does not have. As of Update 4: T2 built; λ = 1 without the cap reproduces the digitised [KTB19] Fig. 8a at N = 160 to rms 0.005 where our chain equilibrates (exploratory, one size; the owner decides whether that passes this gate). [T25] Fig. 3's cold-side jump is reproduced by neither variant and conflicts with Fig. 8a itself. The drift with ln N is not contradicted by any published measurement |
-| 3 | Map the order of the transition along the knob λ (see "The working question"), using the entropy curve s(φ). Then run it sealed (fixed total energy). Does it split into an ordered region plus a hot remainder? Energy released per node? Repeat at growing N. Also: as the coupling is lowered further, does the typical squares-per-vertex move in jumps with hysteresis (the allotrope ladder of [T24]) or smoothly? | 4, 5, 6 | |
+| 2 | Build Trugenberger's model. Gate: reproduce the published square-density curve [KTB19 Fig. 8, D = 2] | none yet; establishes trust | Kernel built and tested; first look run. **Gate not yet passed.** As of Update 3: model readings Q1–Q3 checked against the sources; [T25] Fig. 3 digitised and compared at N = 160 (exploratory): agreement on the hot side, a jump on the cold side that the capped model does not have. As of Update 4: T2 built; λ = 1 without the cap reproduces the digitised [KTB19] Fig. 8a at N = 160 to rms 0.005 where our chain equilibrates (exploratory, one size; the owner decides whether that passes this gate). [T25] Fig. 3's cold-side jump is reproduced by neither variant and conflicts with Fig. 8a itself. The drift with ln N is not contradicted by any published measurement. *Status added 2026-10-19 (consistency audit): Gate A passed (Update 6); the cap is no longer counted a published point, and the kernel that is the published model is λ = 1 uncapped, which matches [KTB19] Fig. 8a (Update 18); Gate B against [T25] Fig. 3 stays open (Update 19, TASKS).* |
+| 3 | Map the order of the transition along the knob λ (see "The working question"), using the entropy curve s(φ). Then run it sealed (fixed total energy). Does it split into an ordered region plus a hot remainder? Energy released per node? Repeat at growing N. Also: as the coupling is lowered further, does the typical squares-per-vertex move in jumps with hysteresis (the allotrope ladder of [T24]) or smoothly? | 4, 5, 6 | *Status added 2026-10-19 (consistency audit): the method was redirected from s(φ) to parallel tempering (TASKS T6, 21 September); T6's verdicts are λ = 0 FIRST ORDER and λ ≥ 1 INCONCLUSIVE, final (Updates 14, 15); the sealed half was run for the tube (T9, BONFIRE WITH A THRESHOLD); since Update 56 the order is not part of the claim.* |
 | 4 | Score the resulting phase against the spot. Do domains of a different arrangement persist, and for how long? | 1, 2, 5 | |
-| 5 | Design a model of X: a specific, stable-for-now arrangement that converts into a space-like one (`docs/design/model_x_brief.md`). Paper design and exact small-size checks may run alongside steps 2 to 4; simulations that interpret new physics wait for them | 1, 3, 4, 5 | Added 2026-09-20 (Update 7). Brief written; dip census done at N ≤ 18; first dynamical results, both directions, in Update 8 |
+| 5 | Design a model of X: a specific, stable-for-now arrangement that converts into a space-like one (`docs/design/model_x_brief.md`). Paper design and exact small-size checks may run alongside steps 2 to 4; simulations that interpret new physics wait for them | 1, 3, 4, 5 | Added 2026-09-20 (Update 7). Brief written; dip census done at N ≤ 18; first dynamical results, both directions, in Update 8. *Status added 2026-10-19 (consistency audit): the stand-in for X is now the curled slab, two directions open and one curled (Updates 47, 58, 60, 64), modeled in the layer form with a daughter ledger and the gate g1 (Updates 63, 65, 66, 69); T71 is its first registered test.* |
 
 Rules:
 
@@ -1728,6 +1761,8 @@ Rules:
 ## Parked
 
 Lorentz symmetry; quantum behaviour; why 3+1; hidden dimensions; inflation numbers (e-folds, n_s, r); dark-sector abundance; black holes as phase changes; a varying base-level count (needs a cost-per-element term); the restricted-menu study (code kept in this repo; draft pre-registration in `docs/parked/PREREGISTRATION_menu_study.md`); the cosmological extension of 2026-09-22 (tube opens at the Big Bang, gravity as the wish to refold, black holes as re-curled regions, colliding black holes seeding a new space; the author's words and what the model can and cannot reach in `docs/parked/extension_2026-09-22.md`; two of its pieces are step-4 items and are marked there).
+
+*(Annotated 2026-10-19, consistency audit: several parked items have since been taken up by decision: quantum behaviour (piece 9 adopts the published amplitude rule, Update 57); a varying base-level count (the contraction model, Update 63); black holes as re-curled regions (Updates 27, 51, 59) and gravity's carrier (Update 40); dark-sector abundance (the shares at birth and the candidates, Updates 41, 52, 70). The rest stay parked.)*
 
 ## What no outcome can show
 
@@ -1984,7 +2019,10 @@ test, dark energy is the network's thermal defect density at that coupling.** Wh
 claim about the hypothesis's shape (the loop's coupling becomes a derived number), the second names a new ingredient
 the toy would need (S1), and both came out of her thinking on 19 October after her video call with the model's author
 (her words are in `sandbox/NOTEBOOK.md`, 19 October; the call itself is private correspondence and stays in the
-gitignored outreach folder). Merging this update is her acceptance of the wording.
+gitignored outreach folder). Merging this update is her acceptance of the wording. *(Annotated 2026-10-19, consistency
+audit: "a turn" here leans on the loop, which Update 59 keeps only as a candidate beside the daughter picture, and a
+turn is not defined once the whole-universe reset is not required; which frame this decision is in is open for the
+owner.)*
 
 - **DECISION: the loop's coupling is derived, not chosen.** Her words: the matter is not in the network, "it is in each
   daughter universe. The network's cold coupling is the total entropy in the network"; energy that has left a daughter
@@ -2011,20 +2049,22 @@ gitignored outreach folder). Merging this update is her acceptance of the wordin
   cannot be compared with the loop's. **The next modelling step is therefore named, not built:** a two-system kernel, a
   network at a fixed cold coupling with a daughter carrying its own temperature, which under S1 needs a design brief
   with its exact form before any registered run. Rule 13 applies: a density that comes out small is a result only after
-  the brief's constants are pinned by something other than the target.
+  the brief's constants are pinned by something other than the target. *(Annotated 2026-10-19, consistency audit: this
+  bullet is the current statement on dark energy: the energy space itself keeps (Updates 41, 50, 52; "the vacuum of the
+  end state", Update 58), with this candidate source as a hypothesis to test. The release readings of Updates 35, 36
+  and 41 were set aside in Update 50; Update 42's "already open" stays an earlier candidate.)*
 - **Her position, recorded (not a knob):** on Carter's hard-steps reading that intelligence on Earth is a selected
   fast case, "yes this seems right, seems like evolution to intelligent life went about as fast as it could have,
   everything kinda came together for us." This enters PREREGISTRATION T72 as the delay shape of her composite reference
   class.
 - **Where her picture and the published model's part, in her words.** The model's author holds, in print, that the
   critical point of the random-to-geometric transition is the Big Bang and that time is a universal clock identified
-  with the coupling ([Trugenberger23], [T24]); in conversation on 19 October he described the Big Bang in his picture
-  as effective, an appearance to an observer inside a static network, with time not fundamental. Her picture has a
-  literal event (claim 4: a stable-for-now arrangement opens, a front moves, energy is released) and many of them: "my
+  with the coupling ([Trugenberger23], [T24]). Her picture has a literal event (claim 4: a stable-for-now arrangement opens, a front moves, energy is released) and many of them: "my
   trillions of black holes producing trillions of disconnected open spaces (that still share a fundamental connection of
   shared constant settings)". The two agree that matter and space are one kind of thing (claim 3) and part on whether
-  the beginning is an event. *Ours, unverified:* they could meet if his "effective Big Bang for an internal observer" is
-  what an observer inside one of her daughters sees of its own opening; nothing tests that.
+  the beginning is an event. *Ours, unverified:* they could meet if his published universal clock, identified with the
+  coupling, is what an observer inside one of her daughters sees of its own opening; nothing tests that. *(Edited
+  2026-10-19 evening: a paraphrase of private correspondence removed, CLAUDE.md, Public-facing work.)*
 - **What runs.** Nothing new in the toy. PREREGISTRATION T72, the observer-window calculation in standard cosmology
   (four reference classes declared before any number), on her "proceed"; it sets the target epoch for piece 12 and tests
   nothing in the toy. The glossary gains the levels of description she asked for (`docs/papers/glossary.md`).
@@ -2046,7 +2086,10 @@ Her words, from the same evening.
   life depends on things the asking itself can change, so the measure does not weight by it. It agrees with the
   observer level of the glossary (an observer holds a record) and with her rule of 18 October (each civilization once).
 - **Disclosed under rule 13.** The numbers were known when she chose: under this unit alone every stellar class is
-  TYPICAL (O138); with the diamond, every class but her composite D is LATE, and D lands at F = 0.53 (O139). Choosing
+  TYPICAL (O138); with the diamond, every class but her composite D is LATE, and D lands at F = 0.53 (O139).
+  *(Annotated 2026-10-19, consistency audit: not exact per O139: B goes LATE, A and C spread over LATE and TYPICAL
+  across the sensitivity rows (INCONCLUSIVE by the sensitivity rule), and the planet-years gate class goes EARLY to
+  TYPICAL; D stays TYPICAL.)* Choosing
   the combination under which our age is most typical, for reasons stated after the numbers, is exactly what rule 13
   forbids as evidence; so **nothing about our own age is scored under this measure from here.** Her reasons are
   recorded as reasons of principle (what an observer is; what the loop and the versions require), and the measure's

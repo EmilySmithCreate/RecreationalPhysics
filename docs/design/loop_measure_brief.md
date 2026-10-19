@@ -132,7 +132,7 @@ of life supporting stars."
     observer as early as now is at most about 0.1 % ([LBS16], read in full 12 October; `src/orh/cosmic.py`), so a
     per-universe count predicts an observer at about 10^13 years unless red dwarfs are poor hosts or late observers are
     weighted down. Her own term W(t) does the second: observers who cannot learn their universe's history (beyond about
-    10^11 years, Krauss and Scherrer, not read) count less, so the peak moves inside 10^11 years and our age is
+    10^11 years, Krauss and Scherrer; not read when this was written, read in full on 19 October, `docs/reading/notes/2026-10-19_t72_inputs.md`) count less, so the peak moves inside 10^11 years and our age is
     unremarkable. The window is therefore a load-bearing term of her function, not a flourish: without it the
     per-universe count predicts the red-dwarf era. A "balance" in the across-the-tree reading (the youngness pull
     against the red dwarfs' numbers) would need γ of a few × 10^−11 per year, two numbers set to land on our age, which
