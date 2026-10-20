@@ -1934,3 +1934,7 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   good reasoning but that may have just been a change in terminology. 5 if 2 d test are still useful to help us learn u
   can use them. growth-by-adding-points rule, not from the new field. Why this and not the negative curvature remnant?"
   VISION Update 76, her answers.
+- 2026-10-20, the owner: "A gravitational wave squeezes space one way while stretching it the other, and a single number
+  per point can only make everything swell or shrink together- would this be curling points and uncurling points and how
+  much energy each holds? That would be used to calculate the link length. I think both knots and the dark matter which we
+  think is flaws/ scraps would both induce gravity. Not the remnants dark energy that's diff and repels." VISION Update 76.

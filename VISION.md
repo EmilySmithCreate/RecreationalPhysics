@@ -2316,4 +2316,17 @@ open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 
   same defects over more volume and thin them as matter thins. A reading of the published relatives (fields on
   dynamical triangulations, Regge calculus, gravity as refraction, induced gravity, twisted grids) is under way
   (`docs/reading/notes/2026-10-20_soft_space_prior_work.md`).
+- **Her answers, 16:02 UTC by the clock.** Question 2: "I think both knots and the dark matter which we think is flaws/
+  scraps would both induce gravity. Not the remnants dark energy that's diff and repels." So the sources are every frozen
+  relic's energy, the knots of matter and the scraps (paper 2's knots of fixed energy, the dark-matter reading), and not
+  the network's flickering missing squares (the dark-energy reading of Update 70). *Ours, general knowledge, to verify:*
+  "dark energy repels" is standard physics: in Einstein's gravity pressure gravitates too, a cosmological constant's
+  pressure is minus its density, and the sum that pulls, density plus three times pressure, is then negative, so it
+  pushes. In the toy that would be the flaws as sources of the opposite sign, a later step. On gravitational waves:
+  "would this be curling points and uncurling points and how much energy each holds? That would be used to calculate the
+  link length." *Ours:* a length set from the two ends' values still swells or shrinks alike in every direction once
+  averaged over a few links, since every link has one point of each kind; what can carry a shear is a value per link or
+  per square, and the toy's curling cost already sits on links (4(λ − 1) per surplus square on a link). And a length
+  computed from the energy present would be fixed wherever no energy is, while gravitational waves cross empty space;
+  so the lengths need a life of their own that energy disturbs, not one that energy sets.
 - Nothing here changes a verdict. Merging this update is her acceptance of the wording.
