@@ -423,3 +423,16 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   made by 1 to 128 random switches from it never broke the bound in 1,000 random drawings each. Random drawings have far
   more handles than the fewest possible (slack 19 at least), so the check is weak and the proof carries the claim. Four
   links only: six- and eight-link networks are not surfaces. A look; an exact test in `tests/` before anything cites it.
+- 2026-10-20, the owner's "Proceed" on a look for a balancing halo round the burp's knots (her gravity idea of the same
+  night): `sandbox/knot_halo.py` and `sandbox/knot_halo_ring.py`, on T51's saved states at N = 512 (length 128, 10k cooling;
+  33 of 39 connected states with knots) and 1,024 (length 256, 300k cooling; 14 of 40), the held-out 2,048 not read. Exact
+  for each state; a look. **No halo beyond the first ring:** at two or more steps from a knot every link has exactly two
+  squares and every point's share of the energy is zero (at N = 512 a handful, 0.4 % of points at two to five steps,
+  carry other small irregularities). **In the first ring** a point is either exactly flat or has exactly one link with
+  three squares and one with one (223 of 530 at 512; 60 of 336 at 1,024), never anything else: curl and anti-curl
+  cancel point by point. *Ours:* that balance is forced by the counting, not a response: a point with two open directions
+  has exactly four squares (with the hard-core rule each pair of its links closes at most one), so a curled link must be
+  paid for by a short one; the toy has local neutrality built into its count of directions, and it stops at the knot's
+  edge. **The ring is softer:** the cheapest flaw costs 15 within two steps of a knot and 20 from three steps on. Read
+  with Update 73's expectation: in the toy's stiff space a knot's curling is balanced at its own edge and nothing reaches
+  farther; a balance that spreads, as the owner's curve-first gravity needs, needs soft space. Not promoted.
