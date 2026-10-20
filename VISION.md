@@ -2256,6 +2256,12 @@ points; this says where, and it is a new rule of the toy under S1.
   energy's density passed matter's about 4 billion years ago, about 10 billion years after the Big Bang, and the expansion
   began to speed up a little earlier, about 5 to 6 billion years ago; in timescape the apparent speed-up starts when voids
   fill about 59 % of the volume ([Wil07b]).
+  **Her answers on the growth test, the same day:** rows come two at a time ("Yes"); the test of dark energy's equation
+  of state is the one to run, and her prediction is "that it is a constant"; a shorter segment may be tested, "but it will
+  only work if there's two existing flaws lined up so that the two row additions can take advantage of as the end points
+  of the line segment otherwise it has to go across all of space"; and the coupling g is scanned. *Ours:* a segment ending
+  on two flaws already there would make no new flaw, which is why a lone segment costs one (the pair look of 20 October);
+  whether such an insertion is clean is an exact question to settle before it is used. Registration: PREREGISTRATION T76.
 - **The form is owed:** `docs/design/growth_rule_brief.md` asks which kind of growth (whole rows, single pairs, or both),
   how far "surrounding" reaches, what pays and how often, and whether growth flaws heal. Nothing is built or run before
   her answers. Merging this update is her acceptance of the wording.

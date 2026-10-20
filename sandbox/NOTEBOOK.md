@@ -1884,3 +1884,7 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   (general knowledge, to verify). In timescape our clocks are wall clocks; the volume-average clock runs faster by the mean
   lapse 1 + f_v/2 ([Wil07b]), about 1.37 at today's f_v, so a timescape curve is put on wall time before it is set beside
   the standard one.
+- 2026-10-20, the owner: "Yes, they come two at a time. Good note on Rows cleared. To yes my prediction is that it is a
+  constant. I think it's possible that a smaller segment can be tested, but it will only work if there's two existing flaws
+  lined up so that the two row additions can take advantage of as the end points of the line segment otherwise it has to
+  go across all of space. Yes 4 coupling is g right?" (Yes: g, the network's coupling.) VISION Update 75; T76.
