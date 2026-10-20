@@ -1712,3 +1712,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   early seeds with a nearly scale-free pattern, while random speckle adds a different, flat pattern whose size
   observations limit, more tightly the heavier and rarer the objects. So: flaws foamed at random while a daughter is
   young, then frozen and carried apart, with the clumps grown later by a pull the toy does not yet have (piece 8).
+- 2026-10-20 (19 October, late), the owner: "The extra square costs because it forces a Less than optimal setup of the dot
+  arrangement. It wants to be intersecting to xyz. Some repulse on being too close to too much of your own dot type. As it
+  curls it also gets too close to its own dot type, but then the 2 types of points become one and neutralize." *Ours,
+  against the toy:* a square is two points of one kind sharing two neighbours of the other, so the square count is the
+  number of close same-kind pairs (exact, with the hard-core rule's limit of two shared neighbours, Q2); flat space is the
+  grid her "xyz" names (the cubic lattice with six links); curling makes same-kind points closer than flat (a tube's points
+  share neighbours with partners across the curl), and the curling cost charges for that crowding, while the hard-core
+  rule forbids crowding beyond two shared neighbours outright. In the layer form, compaction removes points in linked
+  pairs, one of each kind (exact, by construction), which is her "the 2 types become one and neutralize" in the toy's own
+  terms. Standard relatives (general knowledge, to verify): like charges repel; exclusion keeps like particles apart.
