@@ -139,6 +139,13 @@ the stronger effect. Signal test: on a regular lattice waves travel at one speed
 wavelengths, so the signal job is scored on pulses several links wide. Pull: in Einstein's gravity stress gravitates too
 ([BCFVW05] in the note), which a φ sourced only by curling energy leaves out; small for slow, sparse relics, said here.
 
+**Her point, 20 October, evening: "Space is curving not pushing."** *Ours, general knowledge, to verify:* that is the
+reason gravity has no compression wave. Rearranging the points of space without bending it changes nothing
+physical in Einstein's gravity, so only two of the geometry's ten numbers travel as waves. Soft lengths built as
+springs charge for stretch and so carry a compression wave; soft lengths whose energy charges only for curvature
+(Regge calculus, where the energy is the deficit angles and a uniformly stretched flat patch costs nothing) do not.
+So the soft lengths' springiness is springiness against curving, not against stretching.
+
 ## Order of work once she has chosen
 
 1. The form written into VISION as a dated decision (S1), with κ and the source coupling as declared constants, scanned

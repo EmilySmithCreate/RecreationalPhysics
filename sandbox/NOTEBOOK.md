@@ -1974,3 +1974,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   there are about 1.6 billion photons of the cosmic background for each proton or neutron (baryon-to-photon ratio about
   6 × 10⁻¹⁰), quarks and antiquarks cancelling about a millionth of a second in, electrons and positrons at about a
   second.
+- 2026-10-20, the owner: "For gravity, what would be getting pushed t compress? Space is curving not pushing". *Ours
+  (general knowledge, to verify):* nothing; that is why gravity has no compression wave. In Einstein's gravity moving the
+  points of space around without bending it changes nothing physical, so a "squeeze" that is only a reshuffling of points
+  is not a wave at all, and of the geometry's ten numbers only two can travel. Springs give a compression wave because
+  they charge for stretch; an energy that charges only for curvature (Regge calculus: the deficit angles) does not.
+  Recorded in the soft-space brief.
