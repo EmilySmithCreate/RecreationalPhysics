@@ -1801,3 +1801,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   is growing, in proportion to the distance. Under Update 72 (space grows by gaining points, not by stretching), that
   needs new points throughout our space as well as at the edge. Also, the speed limit is local: in standard cosmology
   distant regions recede faster than light without breaking it.
+- 2026-10-20, the owner: "about one per three seeds - this seems important. Could there be some mechanism in the (expanded,
+  getting close to full) toy that sets the value?" *Ours:* the record's numbers: one seed leaves about one scrap (T10, 1.10
+  per tube in T17); each extra planted seed adds 0.29 ± 0.04 (T17); natural seeds in long tubes leave 0.35 columns per
+  seed (T37, twelve tubes at L = 1024, besides 15 other small pieces per tube). The published mechanism that sets defects
+  per seed is Kibble's (general knowledge, to verify; Kibble 1976, Zurek 1985): separately started regions each choose
+  one of a few equivalent ways to form, and where neighbours chose differently they cannot join cleanly, so the number of
+  defects per region is set by counting the ways, not by tuning. In the toy a tube opens into six around with its seam
+  shifted, which can happen in more than one way; whether the knots sit where neighbouring patches chose differently,
+  and what the count of ways predicts per seed, is an exact question on saved end states (T17, T37). Rule 13: the 0.29
+  and 0.35 are known, so a count that gives one third is a postdiction unless it also predicts a setting not yet run
+  (another λ, or the slab's opening in three directions).
