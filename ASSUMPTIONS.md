@@ -4041,3 +4041,16 @@ author and should be disclosed as such in any submission. Physics estimates mark
     space; the next test of it restricts switches to nearby links.
   - **What it bears on.** Piece 10 (a top speed): the toy has none as it stands. Pieces 8 and 3: the stiffness that keeps
     a disturbance in place is the same that gives no pull at a distance (O60). Nothing here is about real space.
+
+- **O141 The flat sheet's missing squares at a fixed coupling come in clusters, not as a thin steady gas (20 October
+  2026; T76's coupling bisection, settling runs alone; calibration, not a registered verdict).** (`results/t76_settle_r1`
+  to `r4`; flat 16 × 16 sheet at λ = 1.25.)
+  - **Measured, in 2,000 fair sweeps, 16 replicas:** up to g = 3.1 essentially none (median 0 to 0.0001 missing squares
+    per point); at g = 3.2 a small patchy density (median 0.0066, replicas from 0 to 0.13, none melted); from g = 3.3 the
+    replicas split between nearly flat and melted (density near 1.3 to 1.7), the melted share rising to all by g = 4.1.
+    In 200 fair sweeps the density had not settled.
+  - *Ours, unverified:* a flaw in flat space costs at least 32, so flaws are rare, and once a few gather they make more,
+    so the sheet either stays nearly perfect or melts; the small, uniform, steady density that Update 70's dark energy
+    would be is not what this toy's flat sheet does at any coupling. Larger sheets melt at lower couplings (the drift of
+    TASKS T9), so the window shrinks with size.
+  - **What it bears on.** Piece 6 and Update 70's hypothesis, and T76, whose coupling rule cannot be met.

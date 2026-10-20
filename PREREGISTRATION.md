@@ -7599,3 +7599,12 @@ at about ρ_eq Γ/(Γ + γ) and stays there: **CONSTANT** wherever growth contin
 ρ_eq and rising toward it as q falls; **STALLS** at the warmest coupling, where flaws block the rows. If instead the
 density keeps falling or rising at every q, a constant dark energy does not come out even in the slow limit. The owner's
 prediction (CONSTANT) stands for the new form unless she revises it. Runs go to the cloud once the couplings are fixed.*
+
+*Amendment 3 (2026-10-20, 14:23 UTC by the clock, before any growth run): the coupling rule cannot be met.* The bisection
+(`configs/t76_settle_r1` to `r4`; settling runs alone, growth off, flat 16 × 16 sheet) shows: in 200 fair sweeps the
+density is not settled (round 2, replicas disagreeing widely); in 2,000 fair sweeps (rounds 3 and 4, 16 replicas) the
+sheet has essentially no missing squares up to g = 3.1 (median 0 to 0.0001, a few replicas holding a small cluster), a
+small patchy density at g = 3.2 (median 0.0066, spread 0 to 0.13, none melted), and from g = 3.3 upward replicas split
+between nearly flat and melted (2 of 16 melted at 3.4, 12 of 16 at 3.8, all from 4.1). So no coupling gives a steady
+density of 0.003 to 0.1: missing squares come in clusters that either stay rare or grow into a melt. Growth is not run
+until the owner decides how to proceed; the finding is ASSUMPTIONS O141.*
