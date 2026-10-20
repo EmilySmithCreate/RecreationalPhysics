@@ -1722,3 +1722,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   rule forbids crowding beyond two shared neighbours outright. In the layer form, compaction removes points in linked
   pairs, one of each kind (exact, by construction), which is her "the 2 types become one and neutralize" in the toy's own
   terms. Standard relatives (general knowledge, to verify): like charges repel; exclusion keeps like particles apart.
+- 2026-10-20 (19 October, late), the owner: "If curling is like moving the curling dot close shortening the link between
+  and uncurling is stretching the link and moving the dots away from each other so both lxlxl lxlx4 are both stable."
+  *Ours, against the toy:* both are stable in its terms (exact): flat space is the lowest state at λ > 1, and the slab is
+  stuck for now for 1 < λ < 2, every single move out of it costing (O41), with a wall between: two dips. Links have no
+  length in the toy; closeness is shared neighbours, and four around is the tightest a curl can be (two-sided links allow
+  no shorter loop), with the hard-core rule stopping more crowding. Between four around and flat the toy has no spring:
+  every width from six around up costs the same, which is why an opened tube stays six around (O116). Her stretching is a
+  force the toy lacks; the nearest thing it has had is the price on loops of six (Update 56), under which tubes widened
+  (T62, T64). Whether that price is her stretching is hers to say.
