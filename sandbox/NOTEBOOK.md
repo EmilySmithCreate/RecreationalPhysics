@@ -1625,3 +1625,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   stable orbit, a few horizon radii out, matter cannot orbit and plunges, moving faster and thinning out, so the disk has
   an inner edge and a sparse plunging region below it. In her picture that thin, fast layer is where energy reaches the
   curl edge, which bears on her intake limit. The toy has no geometry of infall.
+- 2026-10-19, the owner, evening: "This is important you should dig in my logic is internally consistent with the
+  [space] being negative hyperbolic curvature." Read the same evening ([T22] to [T25];
+  `docs/reading/notes/2026-10-19_negative_curvature_de_sitter.md`). *Ours:* the "sign caution" above (and in VISION
+  Update 70) was our misreading: his negative curvature belongs to a timeless geometry and becomes de Sitter's positive
+  curvature by reversing time and curvature together, with space flat or closed. Her chain holds together: a slightly
+  negatively curved network at the end is, in spacetime terms, a small positive cosmological constant, the empty de
+  Sitter end of standard cosmology. Three things to keep straight: today's dark energy is the network's, set by the
+  loop's total energy, not our own black holes' (they have not dissolved); his dark energy falls as the coupling runs
+  and hers is constant because she freezes the coupling; for D > 2 his finite curvature needs the coupling to run with
+  size, which is open against her fixed coupling. Her "reverses" works in the toy's accounting: released curling energy
+  breaks squares, and too few squares is negative curvature (T9; O123).

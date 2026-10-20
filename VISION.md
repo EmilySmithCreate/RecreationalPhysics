@@ -2038,11 +2038,19 @@ over the sealed loop, not a common moment.)*
   "the loop's total energy" a number at every stage. *Ours, unverified:* the standard counterpart of a universe's end
   state having a temperature is the Gibbons–Hawking temperature of empty de Sitter space, set by its own curvature
   (about 10⁻³⁰ K for our dark energy; general knowledge, to verify; sign caution, de Sitter's spacetime curvature is
-  positive where the published model's spatial curvature is negative, [T22]).
+  positive where the published model's spatial curvature is negative, [T22]). *(Corrected 2026-10-19, evening, after
+  reading [T22] to [T25] for it, `docs/reading/notes/2026-10-19_negative_curvature_de_sitter.md`: the published model's
+  negative curvature is not spatial; it belongs to a timeless geometry of Euclidean signature, which his prescription
+  turns into the positive curvature of de Sitter spacetime by reversing the signs of time and curvature together, with
+  space flat or closed ([T22] Sec. V; [T23] after Eq. 20). The equivalence is asymptotic, far from the beginning. So
+  there is no sign conflict and no conflict with the observed flatness of space in his reading.)*
 - **Adopted as a hypothesis to test (hers, "yes proceed"): dark energy is the network's thermal defect density at the
   loop's own coupling.** At any coupling above zero the equilibrium network carries defects, because there are vastly
   more defected arrangements than one perfect lattice; the published model reads that finite-coupling curvature as de
-  Sitter space and dark energy ([T22], [T24]). Her version freezes the coupling: if g is the loop's constant and not the
+  Sitter space and dark energy ([T22], [T24]). *(Annotated 2026-10-19, evening, same note: in his words the curvature
+  comes from the finite-coupling ground state having too few squares, "apart from rare defects" ([T22] Sec. IV), and
+  "dark energy" is [T24]'s word; in [T24] it falls toward zero as the coupling runs, 1/g being his time, so freezing
+  the coupling is where hers differs from his.)* Her version freezes the coupling: if g is the loop's constant and not the
   matter's temperature, the defect density per volume never thins as space grows and behaves as a cosmological constant,
   tiny if g is small. This gives Update 41's "dark energy is the energy of space itself, source open" a candidate source,
   and the previous decision supplies the g. *Ours:* what is measured is a density, constant to about ten per cent over the
@@ -2153,7 +2161,10 @@ when the stores hold the whole cost' is a threshold."
   they evaporate only once the universe has cooled below their Hawking temperature. Her reasoning therefore points to
   that trigger, the surroundings turning colder than the black hole; hers to confirm. The returned curling energy
   becoming defects, which the published model reads as negative curvature and dark energy ([T22], [T24]), would make
-  Update 70's returned energy and its candidate dark energy one thing; rule 13 and Update 70's sign caution apply. The toy
+  Update 70's returned energy and its candidate dark energy one thing; rule 13 applies. *(Update 70's sign caution
+  was corrected the same evening: the published model's negative curvature is that of a timeless geometry and becomes
+  de Sitter's positive curvature in his reading, so a slightly negatively curved end state of the network is, in
+  spacetime terms, a small positive cosmological constant: the empty de Sitter end that standard cosmology expects.)* The toy
   has no dissolve rule; its form is a knob under S1, written before any run.
 - **What changes elsewhere.** Update 70's annotation of 19 October points here; Update 59's sentence is annotated; the
   programme page and draft, paper 12's statement of her hypothesis and the glossary say the same. Nothing runs.
