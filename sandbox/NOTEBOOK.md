@@ -1784,3 +1784,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   energy, O116), so new flat points are empty space at no cost; the toy has no rule for where or how fast they appear.
   Open: observed expansion is the same everywhere, with no edge in view, so an edge where points are made has to lie
   beyond what we can see, or our whole space has to be that edge.
+- 2026-10-20, the owner: "I'm thinking something about the bath creates flaws, no warm bath no flaws." *Ours, against the
+  record:* so it is in the toy. A flaw costs energy (20 at least in the burp's product, 32 in a plain flat torus), so a bath
+  makes them at a rate that falls as exp(−cost/g) and a cold one makes none (measured for the tube's wall, which follows
+  that law with nothing fitted). Three routes to flaws, all warmth: the network's own missing squares at a coupling above
+  zero (Update 70's dark-energy candidate); the knots an opening leaves, more of them the more seeds warmth starts (T37);
+  and the burp's own heat, which leaves flaws when the surroundings cannot absorb it (T9, T61), so even a cold box gets a
+  bath from the burp. Slow cooling heals some of them (the columns, T51). Standard counterpart (general knowledge, to
+  verify): thermal relic dark matter, whose abundance is set by the temperature at which it stops being made and
+  destroyed (freeze-out).
