@@ -1812,3 +1812,15 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   and what the count of ways predicts per seed, is an exact question on saved end states (T17, T37). Rule 13: the 0.29
   and 0.35 are known, so a count that gives one third is a postdiction unless it also predicts a setting not yet run
   (another λ, or the slab's opening in three directions).
+- 2026-10-20, the owner: on "the amount of dark matter is set by how warm things were when the flaws stopped forming",
+  "Yep." And: "Hmm so growth can happen in any flat space not just edges. It can't be growing at the speed of light that is
+  observationally too fast right? Maybe it can only grow where space is flat so anything too close to matter can't grow
+  freely but where there is enough space that curve is at least a little negative there it grows." *Ours (general
+  knowledge, to verify):* today's expansion is slow locally, about 7 % per billion years (the Hubble rate, about 70 km/s
+  per megaparsec), so growth at light speed everywhere would be far too fast. Bound systems (atoms, planets, galaxies) do
+  not expand, and in standard cosmology emptier regions, the voids, expand faster than average, behaving like little open
+  universes with slightly negative curvature: her rule's shape. With it, growth would be held back while matter fills
+  space and speed up as voids come to fill most of the volume, decelerating then accelerating, which is the observed
+  history; a published, contested relative attributes the acceleration to voids in this way (backreaction; Wiltshire's
+  timescape; not read). In the toy adding flat space costs nothing and no rule says where points appear; hers would be
+  one (points added only where the surrounding links are flat or short of squares), a new knob under S1.
