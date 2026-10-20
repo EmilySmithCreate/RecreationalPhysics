@@ -7259,6 +7259,14 @@ scored per cell when every replica's common mean lies on one side of 2a; a cell 
 not scored, said so. (4) A digestion that reaches 4,096 sweeps without balancing goes on to the unfed phase as
 registered and is flagged and counted, not excluded.*
 
+*Amendment 5 (2026-10-20, 12:33 UTC by the clock, before launch): the owner's prediction, confirmed against Amendments 2
+and 3.* Her words: "I agree with your t74 predictions." So hers is ours as revised: BURPS in every fed cell; SAME TIMING,
+with SPREAD ONLY where c = 2R and the meals are large; unfed, DISSOLVES under the cold background, FED BY ITS SURROUNDINGS
+under the warm one, and under the equal background WAITS where the common mean is below 2a and FED BY ITS SURROUNDINGS
+where it is above. T74 tests a shared expectation; what it can still decide is whether the kernel, the clean switch's
+spending and the layer proposals' noise match the arithmetic, and the size claim at L = 16. Launched with this amendment:
+108 jobs, `cloud/queue/2026-10-20_t74_stage1.txt`.*
+
 ### Runner and tests (to be written before launch)
 
 An `outside` option for `graphity.layer_feed.run_layer_feed` (the reservoir, the relaxation and the edge flow above), with
