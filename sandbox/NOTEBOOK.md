@@ -1858,3 +1858,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the crossover is about 4 billion years ago, not 4 billion years in (general knowledge, to verify); a reply of the same
   evening that said the speed-up began "about four billion years ago" was imprecise: the speed-up began about 5 to 6
   billion years ago, and dark energy's density passed matter's about 4 billion years ago.
+- 2026-10-20, the owner: "A constant moving number happening to be closed today doesn't tie them together, sometimes it's
+  worth exploring in case a single factor could be impacting them both, but I don't think that's the case here. ... The
+  74% and 68 % are both mowing to 100 and the difference in their rates and the shape of growth to get there can tell us
+  something important about matter." *Ours:* in the standard model dark energy's share rises as matter thins with the
+  volume, 1/(1 + (Ω_m/Ω_Λ) a^-3) with today's 0.315 and 0.685 (Planck 2018 as used in O89): 0.03 at z = 3, 0.21 at
+  z = 1, 0.50 at z = 0.3, 0.69 now, 0.95 when the universe is twice today's size (arithmetic). In timescape the void
+  fraction rises as matter clumps, so its curve is set by how fast structure forms. So the two curves read two different
+  properties of matter: how much there is and how it thins (the first), how it gathers (the second); in her picture the
+  second is how the knots gather, which needs a pull (piece 8). Caution: timescape's clocks run at different rates in
+  walls and voids, so the two curves have to be set on a stated clock before they are compared.
