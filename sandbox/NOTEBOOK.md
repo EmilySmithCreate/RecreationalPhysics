@@ -1754,3 +1754,20 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   state the toy does not have: a point of X before it divided into two kinds. Open, hers: whether X's points are
   undivided, with the two kinds appearing only when the burp splits them.
 - 2026-10-20, the owner: "Yes sharing more neighbors is a better description" (of curling than shortening a link). In the glossary.
+- 2026-10-20, the owner (her words, unedited): "Could a quark be like a group of knots (0d), or a set of knots all tangled due
+  to balancing electromagnetism. The smallest object. Can that be what they call strings? The quark spins on an axis
+  according to its type or color. There are rules about how quark colors makeup other subatomic particles. Other
+  subatomic particles could be from rarer flaw/scrap/relics . But there are a huge number of points, they keep splitting at
+  the edge which is how space gets bigger. It starts growing at a really fast pace, fastest possible, close to or at speed
+  of light. Then that balances towards the slight negitive curvature of space. So it's accelerating because there is more
+  surface area on the edge of space, but decelerating due to the effect of the big bang wearing out. So the speed at which
+  space is growing has to do with the interaction between volume growth and the push pressure of big bang and pull
+  pressure of dark energy." *Ours (general knowledge, none of it read, to verify):* particles as knotted or braided
+  structures have a long line of relatives: Kelvin's vortex atoms (1867), knotted solitons (Faddeev and Niemi), and braided
+  ribbons in a network that reproduce the charges of quarks and leptons (Bilson-Thompson 2005; with Markopoulou and Smolin,
+  in the quantum-graphity family the toy descends from). Strings in string theory are one-dimensional vibrating objects,
+  not knots. Color is a charge, not a direction of spin; the rule is that only color-neutral combinations are seen.
+  Expansion is observed to be the same everywhere with no edge or centre, so new points would have to appear throughout
+  our space, which they do if our space is itself the edge (the growing surface of an opening). If every point can make
+  new points at a fixed rate the growth is exponential, which is the behaviour of a cosmological constant; growth only at
+  a boundary is slower. Dark energy speeds expansion up (in effect a push); matter's gravity slows it.
