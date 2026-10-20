@@ -7235,6 +7235,22 @@ as written (half of what c allows over the phase) can exceed what the slab holds
    never taken below zero, the remainder shared evenly; the stored energy read is the sum of the slab's stores) are ours
    and are recorded in ASSUMPTIONS Q24.*
 
+*Amendment 3 (2026-10-20, 02:40 UTC by the clock, before launch): the end of a meal, made exact.* Writing the
+reader and a second exploratory kernel check (L = 6, λ = 1.25, steady feed, 1,024 + 1,024 sweeps, in memory only, not a
+registered cell; disclosed) showed that when the meals stop the reservoir still holds what has not yet crossed the edge,
+the disk around the black hole, and it goes on feeding the slab, so a background equal to the slab alone is not balanced
+and the words were read against a moving start. The repairs, ours, before any registered cell runs:
+1. **Digestion.** After the last meal the reservoir stays isolated until its mean store energy and the slab's agree
+   within 1 %, or 4,096 sweeps pass, whichever is first. Daughters born then are counted as fed.
+2. **The unfed phase** (4,096 sweeps, relaxation 1/64) starts there, and **equal** means the common mean of reservoir and
+   slab at that moment. The unfed words are read against the slab's stored energy at that moment.
+3. **Both bars at once** (a daughter born and half the stored energy lost): the word is MIXED, with both noted.
+4. **Our prediction for the equal background, revised by arithmetic:** the slab's gate needs 2a per point in the pool
+   beside the cut; if the common mean is below 2a nothing more happens and the word is WAITS; if it is above, the shared
+   surroundings keep the slab at the gate and it burps again: FED BY ITS SURROUNDINGS. Which cells lie above is read from
+   each run, not guessed. Cold: DISSOLVES; warm: FED BY ITS SURROUNDINGS; fed phases as before.
+5. The owner's prediction is still owed against this, as Amendment 2 item 6 says.*
+
 ### Runner and tests (to be written before launch)
 
 An `outside` option for `graphity.layer_feed.run_layer_feed` (the reservoir, the relaxation and the edge flow above), with
