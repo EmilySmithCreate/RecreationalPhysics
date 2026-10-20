@@ -2200,3 +2200,21 @@ T75).
   toy carries no signal but the fronts of a change, and a light cone, like a pull, would need the gapless quantity on
   the points of Update 40.
 - Her predictions for both are owed before either is launched. Merging this update is her acceptance of the wording.
+
+Update 74 (2026-10-20, 03:12 UTC by the clock; 19 October, late, in Charlottesville): **DECISION (the author's, "Yes make
+them diff types that repulse but if they touch they neutralize and the links on them connect with the closest free one
+of opposite type"): the toy's two kinds of point are to be made different, a curling kind and an uncurling kind.** Why
+this page changes: under S1 a new ingredient needs her dated decision, and this one bears on claim 5 and piece 6 (two
+opposite kinds that are not mirror images are what a net dark matter over dark antimatter needs; notebook, 19 October).
+
+- **What the toy already has (exact):** every link joins one point of each kind; same-kind crowding is charged by the
+  curling cost and limited by the hard-core rule (a square is two same-kind points sharing two neighbours); and in the
+  layer form points vanish in linked pairs, one of each kind. What is new is that the two kinds differ.
+- *Ours, exact within a look of 18 October (`sandbox/pair_moves.py`):* neutralizing one linked pair at a time breaks
+  points whichever way the loose links rejoin (5 of 120 rejoinings valid in flat 6 x 6 x 6, every one leaving 24 to 26
+  points broken; none valid in the slab); a whole layer at once is clean. Her rejoining rule is one of those 120, so it
+  is clean only layer-wide, which is the layer form.
+- **The form is owed:** `docs/design/two_type_points_brief.md` asks what makes the kinds differ in the energy, what
+  counts as touching, the rejoining rule, and where a healing knot's curling energy goes. Nothing is built or run before
+  her answers. The model with it is our family around the published one, never combinatorial quantum gravity. Merging
+  this update is her acceptance of the wording.

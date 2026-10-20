@@ -1731,3 +1731,7 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   every width from six around up costs the same, which is why an opened tube stays six around (O116). Her stretching is a
   force the toy lacks; the nearest thing it has had is the price on loops of six (Update 56), under which tubes widened
   (T62, T64). Whether that price is her stretching is hers to say.
+- 2026-10-20 (19 October, late), the owner: "They release curling energy when they heal as connecting to a not close point
+  Stretches the link then it snaps back (curl). Yes make them diff types that repulse but if they touch they neutralize and
+  the links on them connect with the closest free one of opposite type." Recorded as VISION Update 74; the form's
+  questions are in `docs/design/two_type_points_brief.md`.
