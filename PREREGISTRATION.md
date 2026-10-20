@@ -7251,6 +7251,14 @@ and the words were read against a moving start. The repairs, ours, before any re
    each run, not guessed. Cold: DISSOLVES; warm: FED BY ITS SURROUNDINGS; fed phases as before.
 5. The owner's prediction is still owed against this, as Amendment 2 item 6 says.*
 
+*Amendment 4 (2026-10-20, 02:38 UTC by the clock, before launch): the reader's choices, fixed as written in
+`scripts/analyse_t74.py` and `graphity.layer_outside`.* (1) The balance check is made at the end of each sweep from
+sweep n_fed on; "after the last meal" means after the fed phase. (2) The meals-against-steady timing uses births in the
+fed phase proper only; births during digestion count for BURPS and not for timing. (3) The equal-background prediction is
+scored per cell when every replica's common mean lies on one side of 2a; a cell with replicas on both sides is SPLIT and
+not scored, said so. (4) A digestion that reaches 4,096 sweeps without balancing goes on to the unfed phase as
+registered and is flagged and counted, not excluded.*
+
 ### Runner and tests (to be written before launch)
 
 An `outside` option for `graphity.layer_feed.run_layer_feed` (the reservoir, the relaxation and the edge flow above), with
