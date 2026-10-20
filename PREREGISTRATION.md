@@ -7557,3 +7557,16 @@ and accept the arithmetic; (b) offer each boundary with a probability q per fair
 CONSTANT requires the density to be above zero; a second half with a single reading is never CONSTANT; where CONSTANT
 and FALLING or RISING both reach 12 of 16, CONSTANT is the word and the others are reported beside it. The reader's
 remaining choices are in `scripts/analyse_t76.py` and are recorded in ASSUMPTIONS Q25.*
+
+*Amendment 2 (2026-10-20, 12:42 UTC by the clock, before any registered run): the owner's choice (b).* Her words: "(b)
+slow growth with a chance q per sweep, scanned downward (my recommendation) agree." Each clear offer is taken with chance
+q, drawn before the boundary is checked; **q = 1/16, 1/64, 1/256 and 1/1024**, a factor of four apart, at every coupling
+and size: 2 sizes × 4 couplings × 4 values of q = 32 cells, seeds 20267601 to 20267632; growth stops at 8 times the
+starting size or after 4,000 fair sweeps of growth. What is read across q: whether the density settles, the ratio of
+its settled level to ρ_eq, and w from the second half, against how slow growth is. **Our prediction, revised before any
+run** (the registered one assumed the fast rate): by a simple relaxation argument (ours), new rows arrive clean and fill
+in at a rate Γ set by the coupling while the space grows at a rate γ set by q, so after a transient the density settles
+at about ρ_eq Γ/(Γ + γ) and stays there: **CONSTANT** wherever growth continues, w = −1, with the settled level below
+ρ_eq and rising toward it as q falls; **STALLS** at the warmest coupling, where flaws block the rows. If instead the
+density keeps falling or rising at every q, a constant dark energy does not come out even in the slow limit. The owner's
+prediction (CONSTANT) stands for the new form unless she revises it. Runs go to the cloud once the couplings are fixed.*

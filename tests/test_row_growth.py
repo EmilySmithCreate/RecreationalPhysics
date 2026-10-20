@@ -273,3 +273,23 @@ def test_brute_census_on_known_states():
     assert brute_census(torus(8, 8, cap=NO_CAP)[0]) == (0, 0.0)
     adj = torus(4, 4, cap=NO_CAP)[0]                  # the 4-cube: three squares on every link
     assert brute_census(adj) == (0, 1.0) and edge_census(adj) == (0, 32, 32)
+
+
+# --- T76 Amendment 2: each clear offer is taken with chance q ---------------------------------------------------
+
+def test_q_zero_adds_nothing_and_q_one_is_the_registered_rate():
+    from graphity.row_growth import GrowthState, growth_step
+    st = GrowthState.from_torus(12)
+    assert growth_step(st, np.random.default_rng(1), q=0.0) == 0
+    assert st.n == 144
+    a, b = GrowthState.from_torus(12), GrowthState.from_torus(12)
+    pa = growth_step(a, np.random.default_rng(7))
+    pb = growth_step(b, np.random.default_rng(7), q=1.0)
+    assert pa == pb and a.n == b.n and np.array_equal(a.adj, b.adj)
+
+
+def test_q_half_takes_about_half_the_offers_on_a_clean_sheet():
+    from graphity.row_growth import GrowthState, growth_step
+    pairs = [growth_step(GrowthState.from_torus(12), np.random.default_rng(s), q=0.5) for s in range(40)]
+    mean = float(np.mean(pairs))
+    assert 0.5 * 24 * 0.5 < mean < 0.5 * 24 * 1.5   # 24 boundaries offered; about half taken

@@ -310,9 +310,11 @@ def insert_rows(state, axis, i):
     return np.concatenate([a, b])
 
 
-def growth_step(state, rng, reach=REACH, stop_at=None):
+def growth_step(state, rng, reach=REACH, stop_at=None, q=1.0):
     """Offer every boundary along both axes once, in an order drawn from `rng`, inserting a pair of rows wherever
-    can_insert allows at the moment of offering. Returns the number of pairs inserted."""
+    can_insert allows at the moment of offering. With q < 1 (T76 Amendment 2, the owner's choice (b)) each offer is
+    taken up only with chance q, drawn from `rng` before the boundary is checked; at q = 1 no number is drawn, so the
+    stream is that of the registered rate. Returns the number of pairs inserted."""
     candidates = [(axis, int(row_points(state, axis, i)[0]))
                   for axis in (0, 1) for i in range(state.at.shape[axis])]
     order = rng.permutation(len(candidates))
@@ -322,6 +324,8 @@ def growth_step(state, rng, reach=REACH, stop_at=None):
         if stop_at is not None and state.n >= stop_at:
             break
         axis, rep = candidates[c]
+        if q < 1.0 and rng.random() >= q:
+            continue
         i = int(state.coords[rep, axis])
         ok, _ = can_insert(state, axis, i, reach, flagged)
         if ok:
@@ -347,7 +351,7 @@ def stream_seeds(seed):
     return int(chain.generate_state(1)[0]), np.random.default_rng(grow)
 
 
-def run_growth(state, g, lam, n_settle, n_growth, cap_factor, seed, n_ref=N_REF, reach=REACH, cap=NO_CAP):
+def run_growth(state, g, lam, n_settle, n_growth, cap_factor, seed, n_ref=N_REF, reach=REACH, cap=NO_CAP, q=1.0):
     """T76's protocol on `state`, in place (see the module docstring). Returns the list of readings, one before any
     attempt (phase "start") and one after every fair sweep ("settle", then "grow")."""
     chain_seed, rng = stream_seeds(seed)
@@ -363,7 +367,7 @@ def run_growth(state, g, lam, n_settle, n_growth, cap_factor, seed, n_ref=N_REF,
         k, carry = num // n_ref, num % n_ref
         acc = _attempts(state.adj, state.side_u(), inv_g, int(k), chain_seed if first else -1, float(lam), int(cap))
         first = False
-        pairs = growth_step(state, rng, reach, stop_at) if growing else 0
+        pairs = growth_step(state, rng, reach, stop_at, q) if growing else 0
         out.append(_reading(state, t, "grow" if growing else "settle", int(k), int(acc), 2 * pairs))
         if growing and state.n >= stop_at:
             break

@@ -55,7 +55,7 @@ def run_replica(cfg, rep):
     state = GrowthState.from_torus(int(cfg["L"]))
     recs = run_growth(state, float(cfg["g"]), float(cfg["lambda"]), int(cfg["n_settle"]), int(cfg["n_growth"]),
                       int(cfg["cap_factor"]), seed=[int(cfg["seed"]), int(rep)], n_ref=int(cfg["n_ref"]),
-                      reach=int(cfg["reach"]))
+                      reach=int(cfg["reach"]), q=float(cfg.get("q", 1.0)))
     if not is_valid(state.adj, NO_CAP):
         raise RuntimeError("replica %d ended in an invalid state" % rep)
     return recs, state

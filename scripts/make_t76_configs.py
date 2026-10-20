@@ -30,10 +30,18 @@ def tag(g):
     return ("%g" % g).replace(".", "p")
 
 
-def config(size, g, target, seed):
-    return {"_purpose": PURPOSE % (size, "%g" % g, "%g" % target), "name": "t76_l%d_g%s" % (size, tag(g)),
-            "section": "T76", "L": size, "lambda": 1.25, "g": g, "rho_target": target, "replicas": 16,
-            "n_settle": 200, "n_growth": 400, "cap_factor": 8, "n_ref": 96, "reach": 3, "seed": seed}
+Q_VALUES = (1 / 16, 1 / 64, 1 / 256, 1 / 1024)   # Amendment 2: the chance each clear offer is taken, scanned downward
+
+
+def qtag(q):
+    return "q%d" % round(1 / q)
+
+
+def config(size, g, target, seed, q):
+    return {"_purpose": PURPOSE % (size, "%g" % g, "%g" % target) + " Amendment 2: each clear offer taken with chance q = 1/%d." % round(1 / q),
+            "name": "t76_l%d_g%s_%s" % (size, tag(g), qtag(q)),
+            "section": "T76", "L": size, "lambda": 1.25, "g": g, "rho_target": target, "q": q, "replicas": 16,
+            "n_settle": 200, "n_growth": 4000, "cap_factor": 8, "n_ref": 96, "reach": 3, "seed": seed}
 
 
 def main(couplings, out_dir=ROOT / "configs"):
@@ -46,15 +54,16 @@ def main(couplings, out_dir=ROOT / "configs"):
     i = 0
     for size in SIZES:
         for g, target in zip(couplings, TARGETS):
-            cfg = config(size, g, target, SEED0 + i)
-            i += 1
-            path = Path(out_dir) / (cfg["name"] + ".json")
-            if path.exists():
-                print("exists, not rewritten:", path.name, file=sys.stderr)
-            else:
-                path.write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
-            written.append(path)
-            print("run_t76", cfg["name"])
+            for q in Q_VALUES:
+                cfg = config(size, g, target, SEED0 + i, q)
+                i += 1
+                path = Path(out_dir) / (cfg["name"] + ".json")
+                if path.exists():
+                    print("exists, not rewritten:", path.name, file=sys.stderr)
+                else:
+                    path.write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
+                written.append(path)
+                print("run_t76", cfg["name"])
     return written
 
 

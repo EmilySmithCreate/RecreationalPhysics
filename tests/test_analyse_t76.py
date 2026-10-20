@@ -122,13 +122,15 @@ def test_make_configs(tmp_path):
     with pytest.raises(ValueError):
         M.main([1.0, 2.0, 3.0, 3.0], tmp_path)
     written = M.main([1.2, 1.5, 2.0, 3.0], tmp_path)
-    assert len(written) == 8
+    assert len(written) == 32                          # Amendment 2: 2 sizes x 4 couplings x 4 values of q
     cfgs = [json.loads(p.read_text()) for p in written]
-    assert [c["seed"] for c in cfgs] == list(range(20267601, 20267609))
-    assert [c["L"] for c in cfgs] == [16] * 4 + [24] * 4
-    assert all(c["replicas"] == 16 and c["n_settle"] == 200 and c["n_growth"] == 400 and c["cap_factor"] == 8
+    assert [c["seed"] for c in cfgs] == list(range(20267601, 20267633))
+    assert [c["L"] for c in cfgs] == [16] * 16 + [24] * 16
+    assert all(c["replicas"] == 16 and c["n_settle"] == 200 and c["n_growth"] == 4000 and c["cap_factor"] == 8
                and c["lambda"] == 1.25 and c["reach"] == 3 and c["n_ref"] == 96 for c in cfgs)
-    assert [c["rho_target"] for c in cfgs[:4]] == [0.003, 0.01, 0.03, 0.1]
+    assert [c["rho_target"] for c in cfgs[:16:4]] == [0.003, 0.01, 0.03, 0.1]
+    assert [c["q"] for c in cfgs[:4]] == [1 / 16, 1 / 64, 1 / 256, 1 / 1024]
+    assert len({c["name"] for c in cfgs}) == 32
     assert not any(c["L"] == 32 for c in cfgs)
     before = written[0].read_text()
     M.main([1.2, 1.5, 2.0, 3.0], tmp_path)            # refuses to rewrite
