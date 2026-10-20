@@ -1831,3 +1831,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   to curl than expand, so I think it's unlikely or a mechanism I don't understand." (VISION Update 75; the brief.)
 - 2026-10-20, the owner: three steps for "clear" ("I agree"); "Let's ignore the pairs thing and come back if we need it
   later"; "I think they heal if the temp is high enough otherwise freeze in."
+- 2026-10-20, the owner: "I mean maybe there is a couple through lines of flat space that can grow near matter, if that's
+  what the research shows." *Ours:* it does: in timescape the flat walls expand, on the late-time solution at two thirds
+  of the voids' rate (H_w/H_v = 2/3, [Wil07b], read in full), and only bound systems do not expand. Her rule as decided
+  gives that shape without change: where knots are sparse enough some rows pass clear within three steps, fewer than in
+  a void, so walls grow more slowly; inside a clump none do. The first growth test can read the rate in voids, walls and
+  clumps; two thirds is a target (rule 13), not something to tune toward.
