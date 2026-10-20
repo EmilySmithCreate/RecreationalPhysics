@@ -2132,6 +2132,12 @@ when the stores hold the whole cost' is a threshold."
   chance would rise with the excitation g, the stores' mean energy (Q12). So Update 59's "the chance of an opening
   rises with the excitation" can stand as how the threshold looks from outside; only "no single threshold" goes. That
   the chance rises with g is expected, not measured.
+  **Her refinement, the same evening:** "whether the opening is probabilistic - hmm would g still have an impact? Then
+  there is probability if g isn't consistent and stable within the black hole." *Ours:* g still matters, since it is
+  how full the stores are on average; where it is steady and even the burp comes on schedule, like a bucket that
+  tips when full under a steady tap (T71's registered period, a N_slab / (r N), is that case), and where infall is
+  uneven or the energy wanders between stores, when the stores first hold the cost is a chance. A test is the layer
+  form under an uneven feed, reading how the spread of the waits grows with the unevenness; not designed.
 - **What changes elsewhere.** Update 70's annotation of 19 October points here; Update 59's sentence is annotated; the
   programme page and draft, paper 12's statement of her hypothesis and the glossary say the same. Nothing runs.
   Merging this update is her acceptance of the wording.
