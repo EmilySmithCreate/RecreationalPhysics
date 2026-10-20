@@ -2301,4 +2301,19 @@ open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 
   than the Planck scale: the cosmological constant problem in her terms, restated rather than solved. In the toy, flaws
   appear at couplings where they cost about eight to ten times g; at 146 times, a sheet of any simulable size holds none.
   Rule 13 applies: a target, not a result.
+- **Her answers on the soft-space brief (2026-10-20, 15:33 UTC by the clock).** Question 1: "Clocks and link lengths I
+  agree." Question 3: "Let's go waves, baby." Question 5: "if 2 d test are still useful to help us learn u can use them."
+  So the form is one number per point that slows its clock and stretches its links oppositely, carrying a momentum so that
+  its disturbances travel at one fixed speed; four-link tests are allowed where they teach something. Still open:
+  question 2 (what sources it; she asked how a knot makes soft space, answered: it does not, the field is everywhere and
+  a knot only sets where it dips), and question 4 (whose clock times a move; she noted the assistant had not argued
+  against "things collect where clocks run slow", and it had not: the recommendation to start with one clock for both
+  ends was about checking the kernel, not about the physics). *Ours, general knowledge, to verify:* one number per point
+  cannot carry gravitational waves, whose two kinds squeeze one direction while stretching another; a length on each link
+  as its own variable can (linearized Regge calculus, being read). Her question, why a constant dark energy would come
+  from the growth rule and not from the negative-curvature remnant: the remnant (the network's defects) is the energy; the
+  growth rule is what keeps its amount per volume fixed as space grows, since points that stretched apart would carry the
+  same defects over more volume and thin them as matter thins. A reading of the published relatives (fields on
+  dynamical triangulations, Regge calculus, gravity as refraction, induced gravity, twisted grids) is under way
+  (`docs/reading/notes/2026-10-20_soft_space_prior_work.md`).
 - Nothing here changes a verdict. Merging this update is her acceptance of the wording.

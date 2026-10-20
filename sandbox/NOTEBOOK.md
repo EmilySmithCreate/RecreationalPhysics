@@ -1927,3 +1927,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   Update 76.
 - 2026-10-20, the owner, on T76's three options (Amendment 3): "Yes we need soft space. It's time lol. But u can do 1 and
   2 first if you like." T76 Amendment 4; VISION Update 76.
+- 2026-10-20, the owner, on the soft-space brief: "Any existing math or physics using a soft type space? That we can
+  examine and replicate to confirm the approach? Or a twisted grid? 1 Clocks and link lengths I agree. Can't get
+  gravitational waves huh? What creates soft space? I don't understand how a knot creates soft space pls explain. 3. Let's
+  go waves, baby. 4 things collect where clocks run slow- you didn't rebut this idea though? I thought you might have had
+  good reasoning but that may have just been a change in terminology. 5 if 2 d test are still useful to help us learn u
+  can use them. growth-by-adding-points rule, not from the new field. Why this and not the negative curvature remnant?"
+  VISION Update 76, her answers.

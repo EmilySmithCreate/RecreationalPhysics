@@ -103,6 +103,10 @@ but it is put in by the rule, and it should not be counted as the field predicti
    directions) for the pull, since with two open directions the pull goes as −ln r, and in Einstein's gravity with two
    space directions masses at rest feel no pull (to verify).
 
+**Her answers, 20 October, 15:33 UTC by the clock:** question 1, (b) ("Clocks and link lengths I agree"); question 3,
+(b) waves ("Let's go waves, baby"); question 5, two-direction tests wherever they teach something. Questions 2 and 4
+are still open (VISION Update 76).
+
 ## Order of work once she has chosen
 
 1. The form written into VISION as a dated decision (S1), with κ and the source coupling as declared constants, scanned
