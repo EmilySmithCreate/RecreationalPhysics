@@ -4064,7 +4064,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
   - **What the product does instead.** Up to g = 2.0 the coupling adds essentially nothing (median excess 0.0000 at
     N = 1,024; at N = 512 the knots' few missing squares heal slightly, median −0.0015). At g = 2.4 and 2.6 a thin
     density does appear, the excess inside the band in 11 and 12 of 16 replicas at N = 1,024, but it is uneven: at
-    g = 2.6 it ranges tenfold between replicas (0.011 to 0.122) and swings within a replica by a third to more than the
+    g = 2.6 it ranges tenfold between replicas (0.011 to 0.122) and swings within a replica by a fifth to more than the
     excess itself over the window. At g = 2.8 it runs to about half a missing square per point; from g = 3.0 at
     N = 1,024 every replica melted (at N = 512, 4 of 16 at 3.0, 13 at 3.2, all at 3.4).
   - *Ours, unverified:* the product's cheaper flaw (20 against 32, T75 Amendment 3) moves the onset from about g = 3.2
