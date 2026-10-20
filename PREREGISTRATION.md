@@ -7358,6 +7358,24 @@ repairs that writing the coupled chain showed were needed).*
    1.5 and 3, 200 fair sweeps) to see that it runs. Nothing from it was recorded or is read; it is not the registered
    space. The couplings are still fixed by amendment before launch, from the measured equilibrium curve.*
 
+*Amendment 3 (2026-10-20, 02:35 UTC by the clock, before launch): the flaw in the burp's product.* Building the
+placement code and reading the saved T51 states (read only; counts, not results) showed that Amendment 2's flaw hardly
+exists there: the products are flat at every point (two squares on every link), yet near flat points the cheapest valid
+switch costs 20, the domino switch of item 2 costs 31 where valid, and a cost of exactly 32 can be placed in only 2 to 14
+states of 40. *Ours, exact for these wirings, not a registered result:* the space a burp actually makes is less stiff
+than a plain flat torus (20 against 32 for the cheapest way out), though still gapped. The repairs:
+1. **The flaw is the cheapest valid switch available at the chosen point**: every valid switch of an edge at that point
+   with an edge within 3 steps is priced exactly at λ = 1.25 and the cheapest is taken, ties broken in a fixed sorted
+   order; its cost is recorded per replica and reported beside every word.
+2. **Beside a knot** means the flaw's nearest point is 1 or 2 steps from a knot point (touching the knot is excluded);
+   **far** means at least 6 steps from every knot point, as before.
+3. **Replicas:** 32 per cell, states reused with different placements and seeds where fewer than 32 states qualify, each
+   reuse recorded; states in more than one piece are skipped.
+4. The interpretive choices of the reader (TRAVELS read up to the first record with R ≥ D/4; words taken in the order
+   HEALS, CONFINED, TRAVELS, SPREADS, JUMPS, MIXED, with "with jumps" noted beside; TRAVELS counting as spreading for ONE
+   SPEED; 20 % relative to the larger speed; a cell's speed the mean over replicas that reached D/4) are fixed as written in
+   `scripts/analyse_t75.py`; if exactly one placement spreads the cross word is UNSCORED, said so.*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy
