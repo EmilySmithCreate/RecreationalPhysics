@@ -1993,3 +1993,6 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   so moving it costs nothing (exact only in flat regions; Dittrich's work on discrete diffeomorphisms, not read by us).
   One consequence for her growth rule: if points are not real, a new row makes more space only if it brings new length,
   not merely new points. Recorded in the soft-space brief.
+- 2026-10-20, the owner: "Regge calculus charges only for curvature brilliant", "Does science know the birth temp?",
+  and "So a positive curvature defect can only appear together with a negative one: the pairs you wanted, for fre
+  amazing. The caviates clarify the math, yes more complicated toy but moving toward testable model." VISION Update 77.

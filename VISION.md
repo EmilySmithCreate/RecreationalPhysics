@@ -2377,3 +2377,32 @@ open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 
   toy, the threshold of Update 72 is her first alternative; the second is the uneven-feed layer form, proposed there and
   not designed; T74, running, measures the feed side.
 - Nothing here changes a verdict. Merging this update is her acceptance of the wording.
+
+Update 77 (2026-10-20, 23:56 UTC by the clock): **DECISION (the author's): soft space's form, built in two stages
+toward a testable model.** Why this page changes: S1 requires the form of a new ingredient to be fixed before any run,
+and her answers of the same afternoon and evening fix it (`docs/design/soft_space_brief.md`, her answers; VISION Update
+76). Her words on the last of them: "Regge calculus charges only for curvature brilliant", and "The caviates clarify the
+math, yes more complicated toy but moving toward testable model." *Ours:* read as her choice of the full Regge form as the
+aim, reached through the simpler form as its first, checked stage; if she meant to skip the first stage she says so, and
+this paragraph is corrected.
+
+- **Stage A (built first).** One number φ on each point. Its energy is (κ/2) Σ over links (φ_p − φ_q)², with waves (φ
+  carries a momentum; sampled by molecular-dynamics trajectories with momentum refreshes, which keep the toy's
+  equilibrium exact and move disturbances at one speed between refreshes). Its sources are the frozen relics, knots and
+  scraps, read as the curling energy on each link (4(λ − 1) per surplus square, shared between the link's two points),
+  entering as +q Σ e_p φ_p so that φ dips where relics sit; the network's flickering missing squares are not sources (her
+  answer of 16:02 UTC), and their reversed sign is a later step. φ's mean over the space is held at zero, the closed-space
+  form of Poisson's equation (a closed space needs its sources balanced by a uniform background; *ours, general knowledge,
+  to verify:* this is the problem Einstein's cosmological constant of 1917 was partly introduced for). One clock for
+  both ends of a move; her departure-point clock is the second knob. φ is read as clocks and, oppositely, link lengths for
+  what is measured (distances, signal times), not yet in the energy. Constants κ and q are declared per run, scanned, and
+  every value run is published. With q = 0 and φ held at zero it must be the present chain draw for draw.
+- **Stage B (the aim).** Soft lengths on links and on each square's diagonal, the squares becoming pairs of triangles,
+  with an energy that charges only for curvature (Regge's deficit angles), in three directions, with time through the
+  wave momentum: the form that can carry the two shear-like gravitational waves. Written as its own brief before it is
+  built.
+- **What it must face, named now:** the preferred-frame limit on stage A's class (α₁ = −8 against pulsar limits of about
+  4 × 10⁻⁵; [WN72], [SW12]), the absence of gravitational waves in stage A, and the 1/r law being put in rather than
+  derived. The model with it is our family, never CQG.
+- Nothing runs on the hypothesis until the kernel passes its rule-6 tests and the published numbers of the brief's
+  "Order of work" (lattice resistances, equipartition). Merging this update is her acceptance of the wording.
