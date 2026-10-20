@@ -50,11 +50,18 @@ curled links. Growth is then confined to empty corridors, and there are more of 
 growth of space is tied to how clumped the matter is. A row is free, so questions 3 (what pays) and 4 (do growth flaws
 heal) fall away; what is left is how far "clear" reaches round the row and how often a clear row is added.
 
+## Decided (20 October, later): three steps; single pairs set aside
+
+"Clear" reaches three steps: a row may be added only where no link within three steps of it, anywhere along its length,
+is curled (her "I agree"). Single pairs are set aside, to come back to if needed ("Let's ignore the pairs thing and come
+back if we need it later"). Her position on flaws in general: "I think they heal if the temp is high enough otherwise
+freeze in", which is what the toy shows for the columns (T25 FREEZES IN; T51).
+
 ## Questions for her (the brief cannot be finished without them)
 
 1. ~~**Which kind of growth?**~~ Decided above: (a). The choices were: (a) whole rows only: clean and free, but a row runs right across the space, so it is not
    local; (b) single pairs: local, but each costs about 42 and leaves a small flaw, paid from the stores; (c) both.
-2. **How far does "surrounding" reach?** The cut links of a valid addition span three steps, so the check that no link
+2. ~~**How far does "surrounding" reach?**~~ Decided: three steps. The cut links of a valid addition span three steps, so the check that no link
    nearby is curled should reach at least three steps (ours: three).
 3. **What pays for a pair, and how often is one tried?** From the stores of the points involved, at a rate per sweep that
    is a knob (scanned, never tuned); or from the bath's warmth, so that a cold space never grows.

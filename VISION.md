@@ -2242,6 +2242,8 @@ points; this says where, and it is a new rule of the toy under S1.
   plane), so under her rule a row can be added only where its whole length is clear of curled links; growth is then
   confined to empty corridors, more of them as matter gathers into clumps, which ties the growth of space to how
   clumped the matter is. A row costs nothing, so no bath is needed; how often a clear row is added is the one knob left.
+  Later the same day she agreed that "clear" reaches three steps, set single pairs aside ("come back if we need it
+  later"), and held that flaws heal if the temperature is high enough and otherwise freeze in.
 - **The form is owed:** `docs/design/growth_rule_brief.md` asks which kind of growth (whole rows, single pairs, or both),
   how far "surrounding" reaches, what pays and how often, and whether growth flaws heal. Nothing is built or run before
   her answers. Merging this update is her acceptance of the wording.

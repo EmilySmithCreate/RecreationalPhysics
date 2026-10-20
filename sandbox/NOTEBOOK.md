@@ -1829,3 +1829,5 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-20, the owner, on the growth rule's form: "A sounds right. Empty space, more through lines, growth approaches light
   speed. ... B seems like maybe it can happen but it's got to be hot and concentrated and in that setting it's more likely
   to curl than expand, so I think it's unlikely or a mechanism I don't understand." (VISION Update 75; the brief.)
+- 2026-10-20, the owner: three steps for "clear" ("I agree"); "Let's ignore the pairs thing and come back if we need it
+  later"; "I think they heal if the temp is high enough otherwise freeze in."
