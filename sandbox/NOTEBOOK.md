@@ -1609,3 +1609,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-19, the owner, evening: the threshold does not move with g, only how full the stores get, "because we found the
   activation energy was the same at different g values" (VISION Update 72). *Ours:* the tube's wall of 12 fits six
   couplings with nothing fitted; the layer form's gate is fixed by λ and size by construction.
+- 2026-10-19, the owner, evening, on the end state: "so its universe's turn never ends. Yes not really end there is
+  curling energy inside still that is there in each in its end state. Then I think the black hole dissolves and the
+  curling energy reverses in the end state so the end state has the slight negative curvature." *Ours, unverified:* read
+  with her earlier answer ("otherwise it waits"), energy waits between stars and the black hole dissolves at the end; its
+  curling energy, returned to open space, becomes defects, which the published model reads as negative curvature and dark
+  energy ([T22], [T24]); that would make Update 70's "energy returned to the network" and its candidate dark energy the
+  same thing, the dissolved black holes' curling energy. In the toy, released energy left in a sealed space does stay as
+  scattered defects (T9; O123). Standard relative (general knowledge, to verify): a black hole colder than its
+  surroundings absorbs more than it radiates, and evaporates only once the universe has cooled below its Hawking
+  temperature, so it waits while it can be fed and dissolves at the end. Sign caution as in Update 70. What triggers the
+  dissolve, and her confirmation of the reading, are owed before anything is registered.
