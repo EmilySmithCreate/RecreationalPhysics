@@ -2,7 +2,8 @@
 
     python scripts/analyse_t75.py results/t75_n512_beside_g1p5.csv results/t75_n512_far_g1p5.csv ...
 
-Implements the verdict words of PREREGISTRATION.md T75 as amended (Amendment 2, item 4), with the reader's choices
+Implements the verdict words of PREREGISTRATION.md T75 as amended (Amendment 2, item 4; Amendment 7 for the cells and
+the cross word), with the reader's choices
 below fixed as written by Amendment 3, item 4. Per replica, records in order of fair time, D the diameter of the
 replica's starting graph:
 
@@ -22,9 +23,10 @@ replicas' speeds, with its standard error. The flaw's cost (Amendment 3, item 1,
 valid switch at its point, beside a knot the cheapest touching no knot point, always above zero by Amendment 5; it varies from place to place) is reported beside every word: its smallest, mean and largest over the
 cell's replicas.
 
-Per (coupling, size), across the two placements of the flaw (Amendment 2, item 1: the second kind of disturbance is
-the owner's to name, so this is read across placements of one kind): ONE SPEED if both cells SPREAD or TRAVEL and their
-speeds differ by at most 20 % of the larger; SEVERAL SPEEDS if both do and differ by more; NO SIGNAL if neither does.
+Per (coupling, size), across the two kinds of disturbance (Amendment 7: the single flaw far from knots, placement
+"far", against the pair of flaws far from knots, placement "pair"; the single flaw beside a knot is reported beside them
+as a placement and is not in this word): ONE SPEED if both cells SPREAD or TRAVEL and their speeds differ by at most
+20 % of the larger; SEVERAL SPEEDS if both do and differ by more; NO SIGNAL if neither does.
 When exactly one does, the word is UNSCORED, said so (Amendment 3, item 4).
 
 Prints the table. Nothing random; pure functions tested in tests/test_t75.py.
@@ -124,8 +126,8 @@ def verdicts(rows):
     cells = {k: cell_word(v) for k, v in by_cell.items()}
     signal = {}
     for (n, g) in sorted({(k[0], k[1]) for k in cells}):
-        if (n, g, "beside") in cells and (n, g, "far") in cells:
-            signal[(n, g)] = signal_word(cells[(n, g, "beside")], cells[(n, g, "far")])
+        if (n, g, "far") in cells and (n, g, "pair") in cells:
+            signal[(n, g)] = signal_word(cells[(n, g, "far")], cells[(n, g, "pair")])
     return cells, signal
 
 
@@ -138,7 +140,7 @@ def main(paths):
                  c["reached"], c["jumped"], c["replicas"], c["speed"], c["speed_err"], c["n_speed"], c["cost_min"],
                  c["cost_mean"], c["cost_max"]))
     for (n, g), w in sorted(signal.items()):
-        print("N %5d  g %-6g  across the two placements of the flaw: %s" % (n, g, w))
+        print("N %5d  g %-6g  single far flaw against the pair: %s" % (n, g, w))
     return cells, signal
 
 

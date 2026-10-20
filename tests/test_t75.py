@@ -320,6 +320,22 @@ def test_signal_words():
     assert analyse.signal_word(cell("spreads", 32), cell("confined", 32)).startswith("UNSCORED")
 
 
+def test_one_speed_compares_the_single_far_flaw_with_the_pair():
+    """Amendment 7: the cross word reads 'far' against 'pair'; 'beside' is reported as a cell and is not in it."""
+    def rows(placement, r_list, damaged):
+        return [dict(N=512, g=1.5, placement=placement, replica=k, D=D, fair_sweep=t, damaged=d, R=r, jump=False,
+                     flaw_cost=20.0) for k in range(32) for t, (r, d) in enumerate(zip(r_list, damaged))]
+    spread = ([0, 3, 5, 7, 9, 11], [4, 20, 20, 20, 20, 20])
+    faster = ([0, 3, 5.4, 7.8, 10.2, 12.6], [8, 20, 20, 20, 20, 20])
+    healed = ([0, -1], [4, 0])
+    cells, signal = analyse.verdicts(rows("far", *spread) + rows("pair", *faster) + rows("beside", *healed))
+    assert cells[(512, 1.5, "beside")]["word"] == "HEALS" and signal == {(512, 1.5): "ONE SPEED"}
+    cells, signal = analyse.verdicts(rows("far", *spread) + rows("pair", *healed) + rows("beside", *spread))
+    assert signal[(512, 1.5)].startswith("UNSCORED")              # beside spreading does not stand in for the pair
+    cells, signal = analyse.verdicts(rows("far", *spread) + rows("beside", *spread))
+    assert signal == {}                                           # no pair cell, no cross word
+
+
 # ---------------------------------------------------------------- the runner, on made-up saved states
 
 def fake_states(tmp_path, run="fake", l=16, n_states=3):
@@ -416,8 +432,8 @@ def test_beside_never_takes_a_flaw_that_touches_the_knot():
     assert touching and all(min(to_knot[v] for v in four) == 0 for four in touching)
     got = run_t75.place_flaw(knotted, knots, "beside", 1, 1.25, 3)
     assert got is not None
-    flawed, four, cost, near = got
-    assert not set(four) & set(knots.tolist()) and near in (1, 2) and is_valid(flawed, NO_CAP)
+    flawed, four, cost, near, parts = got
+    assert not set(four) & set(knots.tolist()) and near in (1, 2) and is_valid(flawed, NO_CAP) and parts == [cost]
 
 
 def test_runner_far_and_same_seed_same_rows(tmp_path):
@@ -453,6 +469,50 @@ def test_reuse_fills_32_with_different_placements_and_skips_a_disconnected_state
     assert len(placements) == 32                                  # every reuse a different placement
 
 
+def knotted_torus(l=24, at=5):
+    flat, part = torus(l, cap=NO_CAP)
+    return flaw_at(flat, at)[0], part
+
+
+def test_the_pair_is_two_positive_far_flaws_four_steps_apart():
+    adj, _ = knotted_torus()
+    knots = run_t75.knot_points(adj)
+    to_knot = graph_distances(adj, knots)
+    for seed in (1, 2, 3):
+        twice, eight, cost, near, (c1, c2) = run_t75.place_pair(adj, knots, seed, 1.25, 3)
+        first, second = eight[:4], eight[4:]
+        assert len(set(eight)) == 8 and is_valid(twice, NO_CAP)
+        assert min(graph_distances(adj, np.array(first))[list(second)]) == 4   # nearest points 4 apart
+        assert min(to_knot[list(eight)]) >= 6 and near == min(to_knot[list(eight)])
+        assert c1 > 0 and c2 > 0 and cost == pytest.approx(c1 + c2)
+        g0 = to_nx(adj)
+        g1 = nx_switched(g0, *first)
+        g2 = nx_switched(g1, *second)
+        assert nx_energy(g1, 1.25) - nx_energy(g0, 1.25) == pytest.approx(c1)
+        assert nx_energy(g2, 1.25) - nx_energy(g1, 1.25) == pytest.approx(c2)   # priced on the once-flawed state
+        assert set(np.flatnonzero(damage_mask(adj, twice))) == set(eight)
+
+
+def test_runner_pair_rows_carry_eight_points_and_both_costs(tmp_path):
+    d = tmp_path / "fake_00_adj"
+    d.mkdir()
+    flat, part = torus(24, cap=NO_CAP)
+    for rep, adj in enumerate([knotted_torus()[0], flat]):
+        np.savez(d / ("N576_rep%d_tc0.npz" % rep), adj=adj, part=part, lam=1.25, t_cool=0, replica=rep)
+    cfg_path = fake_config(tmp_path, "pair", replicas=3, fair_sweeps=1)
+    cfg = json.loads(cfg_path.read_text())
+    cfg["N"] = 576
+    cfg_path.write_text(json.dumps(cfg))
+    run_t75.main(cfg_path, tmp_path / "out")
+    rows = read_csv(tmp_path / "out" / "t75_fake_pair.csv")
+    first = [r for r in rows if r["fair_sweep"] == "0"]
+    assert len(first) == 3 and [r["state_replica"] for r in first] == ["0", "1", "0"]
+    for r in first:
+        assert len(r["flaw"].split()) == 8 and r["damaged"] == "8" and r["R"] == "0"
+        assert float(r["flaw_cost"]) == pytest.approx(float(r["flaw_cost_1"]) + float(r["flaw_cost_2"]))
+        assert float(r["flaw_cost_1"]) > 0 and float(r["flaw_cost_2"]) > 0
+
+
 def test_runner_refuses_when_a_pass_adds_nothing(tmp_path):
     flat, part = torus(16, cap=NO_CAP)
     d = tmp_path / "fake_00_adj"
@@ -469,13 +529,14 @@ def test_make_configs_needs_three_couplings_and_never_rewrites(tmp_path):
     with pytest.raises(ValueError):
         make.main([1.0, 1.5], tmp_path)
     paths = make.main([1.0, 1.5, 2.25], tmp_path)
-    assert len(paths) == 12 and len({p.name for p in paths}) == 12
+    assert len(paths) == 18 and len({p.name for p in paths}) == 18
     cfgs = [json.loads(p.read_text()) for p in paths]
-    assert {c["N"] for c in cfgs} == {512, 1024} and {c["placement"] for c in cfgs} == {"beside", "far"}
+    assert {c["N"] for c in cfgs} == {512, 1024} and {c["placement"] for c in cfgs} == {"beside", "far", "pair"}
     assert {c["states"] for c in cfgs} == {"t51_l128_10k", "t51_l256_300k"}
     assert all(c["replicas"] == 32 and c["fair_sweeps"] == 2000 and c["record_every"] == 1 for c in cfgs)
     assert all(c["flaw_reach"] == 3 and c["lambda"] == 1.25 for c in cfgs)
-    assert len({c["seed"] for c in cfgs}) == 12 and "t75_n512_far_g2p25" in {c["name"] for c in cfgs}
+    assert len({c["seed"] for c in cfgs}) == 18 and "t75_n512_far_g2p25" in {c["name"] for c in cfgs}
+    assert "t75_n1024_pair_g1" in {c["name"] for c in cfgs}
     before = paths[0].read_text()
     make.main([1.0, 1.5, 2.25], tmp_path)
     assert paths[0].read_text() == before

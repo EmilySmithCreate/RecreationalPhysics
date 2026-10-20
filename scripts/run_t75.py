@@ -2,7 +2,7 @@
 
     python scripts/run_t75.py configs/t75_n512_beside_g1p5.json [out_dir]
 
-Implements PREREGISTRATION.md section T75 with its Amendments 1 to 5. Not exploratory once its couplings are fixed
+Implements PREREGISTRATION.md section T75 with its Amendments 1 to 7. Not exploratory once its couplings are fixed
 by amendment; nothing here chooses them.
 
 The space (Amendment 2, item 1). The saved end states of a T51 run (`<states_dir>/<states>_NN_adj/N*_rep*_tc*.npz`,
@@ -23,6 +23,15 @@ the starting point is 1 or 2 steps from a knot point and the flaw touches no kno
 every knot point. The points that could start such a flaw are tried in an order drawn from the replica's own placement
 stream, and the first whose flaw meets the rule is taken. A state with no knot has no "beside" placement.
 
+The pair (Amendment 7, the second kind of disturbance). Two flaws, each the cheapest valid switch costing more than
+zero, both far from every knot point (at least 6 steps). The first is a "far" flaw on the state as saved. The second is
+placed after it, on the once-flawed state, priced against that state: its starting points are those 4 to 7 steps from
+the first flaw's points on the starting graph and at least 6 from every knot point, tried in the replica's order, and
+the first second flaw whose nearest point is exactly 4 steps from the first flaw's points (so neither lies in the other's
+two-step ring), with no point shared, is taken; if none exists, the next first flaw is tried. Copy B carries both. The
+row's `flaw` lists all eight points, `flaw_cost` is the whole pair's cost against the state as saved, and
+`flaw_cost_1`, `flaw_cost_2` the two flaws' own; R and the joined region are measured from all eight points.
+
 Replicas (Amendment 3, item 3): `replicas` (32) per cell. The connected states are taken in replica order; when they
 are used up before every replica has a flaw, they are used again in the same order, each new replica with its own
 placement and chain streams and a placement different from every earlier one in that state. The row's `use` says
@@ -42,7 +51,8 @@ same for the damaged region joined to the flaw through damaged points at most `s
 `jump`, damage with none joined to the flaw, or some farther than twice joined_R. `D` is the diameter of the starting
 graph. One row per reading. The verdicts are read by scripts/analyse_t75.py.
 
-Config keys: name, section, states_dir, states, N, lambda, g, placement ("beside" or "far"), replicas, fair_sweeps,
+Config keys: name, section, states_dir, states, N, lambda, g, placement ("beside", "far" or "pair"), replicas,
+fair_sweeps,
 record_every, n_ref, step, flaw_reach, seed.
 """
 import json
@@ -64,6 +74,7 @@ from graphity.results import ResultWriter, provenance                           
 from analyse_t55 import pieces_of                                                 # noqa: E402
 
 BESIDE, FAR = (1, 2), 6              # Amendment 3, item 2: beside at 1 or 2 steps, far at 6 or more
+PAIR_GAP, PAIR_REACH = 4, 7          # Amendment 7: the pair's nearest points 4 apart; second starts 4 to 7 away
 PLACE, CHAIN = 1, 2                  # stage words for the random streams
 
 
@@ -103,41 +114,78 @@ def is_connected(adj):
     return bool((graph_distances(adj, np.array([0], dtype=np.int64)) >= 0).all())
 
 
-def place_flaw(adj, knots, placement, seed, lam, reach, exclude=()):
-    """(flawed copy, four points, its cost, distance of the flaw's nearest point from a knot point or -1 if there are
-    no knots), or None if the placement does not exist in this state. A flaw whose four points, as a set, are in
-    `exclude` is passed over (a reused state gets a different placement)."""
+def _to_knot(adj, knots):
     n = adj.shape[0]
-    if knots.size:
-        to_knot = graph_distances(adj, knots)
-        to_knot[to_knot < 0] = n
-    else:
-        to_knot = np.full(n, n, dtype=np.int64)
+    if not knots.size:
+        return np.full(n, n, dtype=np.int64)
+    d = graph_distances(adj, knots)
+    d[d < 0] = n
+    return d
+
+
+def placements(adj, knots, placement, seed, lam, reach):
+    """Every single flaw meeting the placement rule, in the order of the replica's stream: yields (flawed copy, four
+    points, cost, distance of the nearest flaw point from a knot point or -1 if there are no knots)."""
+    to_knot = _to_knot(adj, knots)
     if placement == "beside":
         if not knots.size:
-            return None
+            return
         starts = np.flatnonzero((to_knot >= BESIDE[0]) & (to_knot <= BESIDE[1]))
     elif placement == "far":
         starts = np.flatnonzero(to_knot >= FAR)
     else:
-        raise ValueError("placement must be 'beside' or 'far'")
+        raise ValueError("placement must be 'beside', 'far' or 'pair'")
     for p in np.random.default_rng(seed).permutation(starts):
         try:
             flawed, four, cost = cheapest_switch_at(adj, int(p), lam, reach, NO_CAP,
                                                     avoid=knots if placement == "beside" else None, above=0.0)
         except ValueError:
             continue
-        if frozenset(four) in exclude:
-            continue
         near = int(to_knot[list(four)].min())
         if (placement == "beside" and BESIDE[0] <= near <= BESIDE[1]) or (placement == "far" and near >= FAR):
-            return flawed, four, cost, (near if knots.size else -1)
+            yield flawed, four, cost, (near if knots.size else -1)
+
+
+def place_flaw(adj, knots, placement, seed, lam, reach, exclude=()):
+    """(flawed copy, its points, total cost, knot distance, [each flaw's own cost]) for the first placement whose points,
+    as a set, are not in `exclude`; None if the placement does not exist in this state. `placement` "pair" gives the
+    pair of Amendment 7 (place_pair)."""
+    if placement == "pair":
+        return place_pair(adj, knots, seed, lam, reach, exclude)
+    for flawed, four, cost, near in placements(adj, knots, placement, seed, lam, reach):
+        if frozenset(four) not in exclude:
+            return flawed, four, cost, near, [cost]
+    return None
+
+
+def place_pair(adj, knots, seed, lam, reach, exclude=()):
+    """Amendment 7: a far flaw, then a second far flaw on the once-flawed state, nearest points exactly PAIR_GAP apart
+    on the starting graph. Returns as place_flaw does, with eight points and the two costs."""
+    to_knot = _to_knot(adj, knots)
+    first_seed, second_seed = np.random.SeedSequence(int(seed)).generate_state(2)
+    for once, four1, cost1, near1 in placements(adj, knots, "far", int(first_seed), lam, reach):
+        from_first = graph_distances(adj, np.array(four1, dtype=np.int64))
+        starts = np.flatnonzero((from_first >= PAIR_GAP) & (from_first <= PAIR_REACH) & (to_knot >= FAR))
+        for p in np.random.default_rng([int(second_seed)] + sorted(int(v) for v in four1)).permutation(starts):
+            try:
+                twice, four2, cost2 = cheapest_switch_at(once, int(p), lam, reach, NO_CAP, above=0.0)
+            except ValueError:
+                continue
+            if set(four1) & set(four2) or int(from_first[list(four2)].min()) != PAIR_GAP:
+                continue
+            if int(to_knot[list(four2)].min()) < FAR:
+                continue
+            eight = tuple(four1) + tuple(four2)
+            if frozenset(eight) in exclude:
+                continue
+            near = int(to_knot[list(eight)].min()) if knots.size else -1
+            return twice, eight, cost1 + cost2, near, [cost1, cost2]
     return None
 
 
 def assign(states, cfg):
-    """[(state index, pass, flawed copy, four points, cost, knot distance)] for each replica, fixed before any chain
-    runs (Amendment 3, item 3)."""
+    """[(state index, pass, flawed copy, flaw points, total cost, knot distance, [each flaw's cost])] for each replica,
+    fixed before any chain runs (Amendment 3, item 3)."""
     n_rep = int(cfg["replicas"])
     usable = [i for i, (_, adj, _, _) in enumerate(states) if is_connected(adj)]
     knots = {i: knot_points(states[i][1]) for i in usable}
@@ -188,12 +236,12 @@ def main(path, out_dir="results"):
     meta = dict(config=cfg, config_path=str(path), package=__version__, python=platform.python_version(),
                 numpy=np.__version__, numba=numba.__version__, **provenance(),
                 replicas_plan=[dict(replica=rep, state=str(states[k][0]), use=use, flaw=[int(v) for v in four],
-                                    flaw_cost=cost, knot_distance=near)
-                               for rep, (k, use, _, four, cost, near) in enumerate(plan)],
+                                    flaw_cost=cost, flaw_costs=parts, knot_distance=near)
+                               for rep, (k, use, _, four, cost, near, parts) in enumerate(plan)],
                 skipped_disconnected=[str(s[0]) for s in states if not is_connected(s[1])],
-                preregistration="PREREGISTRATION.md section T75, with its Amendments 1 to 5")
+                preregistration="PREREGISTRATION.md section T75, with its Amendments 1 to 7")
     with ResultWriter(cfg["name"], meta, out_dir) as out:
-        for rep, (k, use, flawed, four, cost, near) in enumerate(plan):
+        for rep, (k, use, flawed, four, cost, near, parts) in enumerate(plan):
             file, start, part, state_rep = states[k]
             side_u = np.flatnonzero(part == 0)
             anchors = np.array(four, dtype=np.int64)
@@ -206,6 +254,7 @@ def main(path, out_dir="results"):
             done = np.cumsum(sched)
             base = dict(N=n, g=g, lam=lam, placement=cfg["placement"], replica=rep, state=file.name,
                         state_replica=state_rep, use=use, flaw=" ".join(str(v) for v in four), flaw_cost=cost,
+                        flaw_cost_1=parts[0], flaw_cost_2=(parts[1] if len(parts) > 1 else ""),
                         knot_distance=near, D=d_start,
                         acceptance_a=res["acceptance_a"], acceptance_b=res["acceptance_b"])
             for r in range(len(sched)):
