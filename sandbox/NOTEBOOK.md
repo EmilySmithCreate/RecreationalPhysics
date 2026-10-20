@@ -1747,3 +1747,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   keep the balance local and give no pull. So her mechanism with soft space is a candidate for curve-first gravity, and
   with the toy's stiff space it gives none. (3) A cheap exact look: does the curvature around the burp's knots already
   show a balancing halo (T75's counts found flaws cheaper beside knots, 15 against 20)? Not yet made.
+- 2026-10-20, the owner, correcting the entry above: "Back to one point I mean." *Ours:* the pair that split from one point
+  collapses back into one point. In the toy points come and go in linked pairs, two to none, because the two kinds must
+  stay equal in number (exact, the degree rule); merging a linked pair into one point would give a point linked to both
+  kinds (in graph terms, contracting the link), which the two-sided toy does not allow. So "back to one point" is a third
+  state the toy does not have: a point of X before it divided into two kinds. Open, hers: whether X's points are
+  undivided, with the two kinds appearing only when the burp splits them.
