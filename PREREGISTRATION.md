@@ -7405,6 +7405,14 @@ TRAVELS**: it holds where a cell reads SPREADS and fails where it reads TRAVELS 
 Her reason also bears on the second kind of disturbance, still open: effects that travel when flaws interact point to a
 pair of flaws a few steps apart. Ours is unchanged.*
 
+*Amendment 7 (2026-10-20, 09:06 UTC by the clock, before launch): the second kind of disturbance, the owner's "Yes".* The
+second kind is **a pair of flaws**: two flaws, each the cheapest valid switch with a cost above zero (Amendments 3 and 5),
+far from every knot (at least 6 steps), their nearest points 4 steps apart, outside each other's two-step softened ring
+(the halo look of 20 October); the second is placed after the first, on the once-flawed state, and R is measured from the
+nearest of all eight flaw points. Cells per size and coupling: the single flaw far from knots, the single flaw beside a
+knot, and the pair far from knots; **ONE SPEED** compares the single far flaw with the pair (the two kinds); the flaw beside
+a knot is reported beside them as a placement. Her prediction (Amendment 6) covers both kinds: their effects spread.*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy

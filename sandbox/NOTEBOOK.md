@@ -1793,3 +1793,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   bath from the burp. Slow cooling heals some of them (the columns, T51). Standard counterpart (general knowledge, to
   verify): thermal relic dark matter, whose abundance is set by the temperature at which it stops being made and
   destroyed (freeze-out).
+- 2026-10-20, the owner: the second kind of disturbance for T75 is the pair of flaws ("Yes"; T75, Amendment 7). And on
+  the edge where points are made: "I mean its beyond what we can see, it's been moving outward at the speed of light since
+  the big bang, before light, so of course we can't see it." *Ours (general knowledge, to verify):* an edge beyond the
+  farthest light we can receive cannot be seen, so observation does not rule it out, provided we are far from it. But
+  growth at a far edge alone would not move galaxies apart here: Hubble's law says the space between us and every galaxy
+  is growing, in proportion to the distance. Under Update 72 (space grows by gaining points, not by stretching), that
+  needs new points throughout our space as well as at the edge. Also, the speed limit is local: in standard cosmology
+  distant regions recede faster than light without breaking it.
