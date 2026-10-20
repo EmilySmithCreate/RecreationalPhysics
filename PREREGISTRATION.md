@@ -7282,6 +7282,36 @@ flat torus registered above or the product an opening actually makes (the tube s
 runs as spirals, O116), and whether a flaw is placed on the seam or away from it; (2) which second kind of disturbance,
 since a knot written in by hand into a flat torus is not how a knot arises. Her prediction stays owed.
 
+*Amendment 2 (2026-10-20, 02:20 UTC by the clock, before launch; the owner's choice of space, her prediction, and the
+repairs that writing the coupled chain showed were needed).*
+1. **The space (hers): "Burps product w spiral seam."** The disturbance sits in the product a burp actually makes, not in
+   a flat torus: the saved end states of T51 (spaces that opened from several seeds and were cooled; `results/t51_*_adj`),
+   at N = 512 (length 128) and 1,024 (length 256), **held out N = 2,048** (length 512), in place of L = 16, 24 and 32.
+   *Ours:* in these products the spiral is the twist in how the tube is glued (O116), present all the way round, so there
+   is no one line on which to place a flaw; the placement that the product does make meaningful is beside a knot (its
+   nearest point within 2 steps) or far from every knot (at least 6 steps), and those two placements replace the flaw and
+   the knot as the two cells compared by ONE SPEED. A second kind of disturbance stays hers to name; until she does, the
+   universality word is read across the two placements of one kind and says so.
+2. **The flaw, repaired:** no valid switch of "two edges that share a square" exists in flat space (both new edges would
+   already exist). The flaw is the cheapest valid switch: the two outer parallel edges of two squares that share an edge,
+   which costs 32 at λ = 1.25, as every cheapest move out of flat space does (O22).
+3. **The coupling, fixed:** each attempt draws five numbers in a fixed order (a point, a rank, a point, a rank, a uniform),
+   and the neighbour taken is the one of that rank in sorted order, not the one in a storage slot, so that copies whose
+   neighbours agree get the same proposal however they came to agree. Each copy alone has the published chain's proposal
+   and acceptance probabilities (`graphity.coupled`, tested against the exact averages at N = 16 and 18).
+4. **Distances and the rules, made exact:** distance is counted in steps on the shared starting graph; R is the distance
+   of the farthest damaged point from the nearest of the flaw's four points; L/4 becomes D/4, D the starting graph's
+   diameter; for JUMPS the damaged region joined to the flaw is the set reachable through damaged points at most 2 steps
+   apart, and a record with damage elsewhere but none joined to the flaw counts as a jump. One word is added, **TRAVELS**:
+   R reaches D/4 while at most 8 points are damaged, in at least 24 of 32 replicas (the flaw moves rather than spreads).
+   One fair sweep is N²/48 attempts; the remainder is carried from record to record.
+5. **Her prediction, verbatim:** "If the flaw was a precursor to dark matter, would the flaw spread? Yes as dark matter
+   does." Scored as holding if a cell reads SPREADS or TRAVELS; if she meant one of the two she says so before anything is
+   read. *Ours is unchanged:* HEALS or CONFINED at the colder couplings.
+6. **Disclosed:** while writing the chain, the assistant's agent ran it once at L = 16 on a flat torus (a flaw at g = 1,
+   1.5 and 3, 200 fair sweeps) to see that it runs. Nothing from it was recorded or is read; it is not the registered
+   space. The couplings are still fixed by amendment before launch, from the measured equilibrium curve.*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy

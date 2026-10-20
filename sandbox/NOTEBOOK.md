@@ -1663,3 +1663,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-19, the owner, late evening: T74, "I agree with your assessment" (her prediction, as ours; PREREGISTRATION T74,
   Amendment 1). On T75: "Flat space isn't stiff. So we need to allow for that. What kind of disturbance? How does the knot
   or flaw get in there? In the spiral? Does it matter when we make space not stiff? Proceed w tests" (T75, Amendment 1).
+- 2026-10-20 (19 October, late, in Charlottesville), the owner: T75's space, "Burps product w spiral seam"; her
+  prediction, "If the flaw was a precursor to dark matter, would the flaw spread? Yes as dark matter does" (T75,
+  Amendment 2); and "If there is dark antimatter and dark matter the big bang could convert the flaw to those and the net
+  is net dark matter." *Ours:* that is asymmetric dark matter in her terms, a published family ([KLZ09], [PV13], abstracts
+  only; Update 42), which needs something that comes in two opposite kinds and an imbalance between them. In the toy the
+  two kinds of point are equal by the degree rule (exact; LOG, 19 October), but the product's twist has a handedness, left
+  or right, and the knot of two kinds of point (O107) has two orientations; whether the burp makes one handedness more
+  often than the other is a count on the saved products, not yet made. The energy treats left and right alike, so an
+  excess would have to come from the history of the opening (its front), which is the published route too ([MRM12],
+  abstract; Update 42).
