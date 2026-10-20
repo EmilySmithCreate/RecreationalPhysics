@@ -1659,3 +1659,4 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the network's coupling carry the same defect density, so dark energy per volume stays constant. If expansion only
   stretched the distances between fixed points, the density per volume would thin and dark energy would not be
   constant. Her picture needs the first; hers to confirm.
+- 2026-10-19, the owner, evening: "First is good": a daughter's space grows by gaining points, not by stretching (VISION Update 72).

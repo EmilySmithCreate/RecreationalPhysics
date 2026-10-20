@@ -2166,6 +2166,13 @@ when the stores hold the whole cost' is a threshold."
   de Sitter's positive curvature in his reading, so a slightly negatively curved end state of the network is, in
   spacetime terms, a small positive cosmological constant: the empty de Sitter end that standard cosmology expects.)* The toy
   has no dissolve rule; its form is a knob under S1, written before any run.
+- **The network is eternal and does not grow; a daughter's space grows by gaining points** (her answers, the same
+  evening: "in my picture the network doesn't grow it is eternal"; on the two ways a daughter's space could grow, "First
+  is good"). *Ours:* this removes [T22]'s requirement that the coupling shrink as the network grows, which exists only for
+  the limit N → ∞ (`docs/reading/notes/2026-10-19_negative_curvature_de_sitter.md`). Points are not fundamental (Update
+  59) and in the layer form their count changes as layers split or compact (Updates 63, 65); new points at the network's
+  coupling carry its density of missing squares, so dark energy per volume stays constant as space grows, where
+  stretching fixed points apart would thin it.
 - **What changes elsewhere.** Update 70's annotation of 19 October points here; Update 59's sentence is annotated; the
   programme page and draft, paper 12's statement of her hypothesis and the glossary say the same. Nothing runs.
   Merging this update is her acceptance of the wording.
