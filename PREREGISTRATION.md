@@ -7392,6 +7392,11 @@ from the saved states (counts only): near knots the cheapest flaw costs less (15
 the two placements compared by ONE SPEED also differ in the flaw's cost, which is reported beside each word. *Ours,
 exact for these wirings:* the knots soften the space around them.*
 
+*Amendment 5 (2026-10-20, 02:50 UTC by the clock, before launch): a flaw must cost something.* Counting placements
+under Amendment 4 found, at each size, one placement beside a knot whose cheapest switch costs exactly 0: a rewiring
+that changes nothing in the energy, not a flaw. The flaw is therefore the cheapest valid switch **with a cost above
+zero** (beside a knot, among those that touch no knot point); a cost-free rewiring is never used.*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy
