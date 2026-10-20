@@ -1642,3 +1642,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   speed." *Ours:* option 1 is energy that travels from store to store to reach the cut; a flow that can carry energy in
   can carry it out, so a cap is needed; her maximum curling speed is that cap. Written as a proposed form in
   `docs/design/curling_energy_brief.md` for her decision: which way the cap acts is hers.
+- 2026-10-19, the owner, evening, on the reading of [T22] to [T25]: "it seems like we did get to it with different
+  pictures with the multi handle Taurus and mine with the strange loop." *Ours:* both pictures put no time at the
+  fundamental level: in print his network is a timeless, negatively curved geometry from which time emerges in the
+  effective description ([T22] Sec. V; [T23]); hers is a loop seen from outside with every turn at once, X having order
+  but not time and clocks only inside a universe (Updates 41, 44, 68). They part on how many times there are: one
+  universal time for him, one clock per universe for her. Exact for smooth closed surfaces (Gauss-Bonnet, textbook):
+  total curvature is fixed by the number of handles, zero for a torus and negative for two or more, so a closed surface
+  that is negatively curved must have at least two handles; whether the toy's graph curvature obeys the same count is to
+  verify.
