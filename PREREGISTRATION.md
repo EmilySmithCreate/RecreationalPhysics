@@ -7235,7 +7235,7 @@ as written (half of what c allows over the phase) can exceed what the slab holds
    never taken below zero, the remainder shared evenly; the stored energy read is the sum of the slab's stores) are ours
    and are recorded in ASSUMPTIONS Q24.*
 
-*Amendment 3 (2026-10-20, 02:40 UTC by the clock, before launch): the end of a meal, made exact.* Writing the
+*Amendment 3 (2026-10-20, 02:30 UTC by the clock, before launch): the end of a meal, made exact.* Writing the
 reader and a second exploratory kernel check (L = 6, λ = 1.25, steady feed, 1,024 + 1,024 sweeps, in memory only, not a
 registered cell; disclosed) showed that when the meals stop the reservoir still holds what has not yet crossed the edge,
 the disk around the black hole, and it goes on feeding the slab, so a background equal to the slab alone is not balanced
