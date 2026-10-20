@@ -2359,4 +2359,21 @@ open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 
   and antimatter weigh exactly the same and the observed excess is about one part in a billion (general knowledge, to
   verify), so a fourfold price difference would have to act only slightly, for example at a very high temperature, to be
   consistent with it; that is a quantitative target, not yet a calculation.
+- **Her hypothesis for the matter excess, 23:39 UTC by the clock, recorded for testing, not decided** (her words in
+  `sandbox/NOTEBOOK.md`): the burp's release becomes matter and antimatter in equal amounts and a flash of light, except
+  for the small part still in the stores, uncurled, when the snap goes; that part flows into the new space as it was,
+  and since black holes eat matter and not antimatter, it is all matter. Its size would be the feed times how long the
+  snap takes to execute; and the release may come at the end, when every area holds its whole cost, or unevenly, where
+  some regions reach it first. *Ours, unverified:* (1) with a steady feed, her amount over the whole is the feed times
+  the snap's duration over the feed times the time fed, so the fraction is the ratio of two times, the snap's duration to
+  the feeding time; for one part in a billion over ten billion years of feeding the snap would last about ten years.
+  With an uneven release, the spread of the regions' firing times would play the snap's part. (2) The one part in a
+  billion is a count (about 6 × 10⁻¹⁰ protons and neutrons per photon); as a share of the energy at the birth it is
+  about that times the proton's mass over the energy of a photon then, about 2 × 10⁻¹⁰ at a birth temperature of 1 GeV
+  and 2 × 10⁻¹⁶ at 10⁶ GeV, so the target depends on the birth temperature, the unknown of O89. (3) In standard physics
+  a black hole keeps only its mass, charge and spin (general knowledge, to verify): whether what fell in was matter or
+  antimatter cannot be read from outside, and its Hawking radiation is evenly matter and antimatter. Her picture needs
+  the stores inside to remember it, which is a definite claim that differs from the standard expectation. (4) In the
+  toy, the threshold of Update 72 is her first alternative; the second is the uneven-feed layer form, proposed there and
+  not designed; T74, running, measures the feed side.
 - Nothing here changes a verdict. Merging this update is her acceptance of the wording.

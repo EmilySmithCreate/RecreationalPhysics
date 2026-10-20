@@ -1980,3 +1980,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   is not a wave at all, and of the geometry's ten numbers only two can travel. Springs give a compression wave because
   they charge for stretch; an energy that charges only for curvature (Regge calculus: the deficit angles) does not.
   Recorded in the soft-space brief.
+- 2026-10-20, the owner: "So the other hypothesis is that it was the matter pushed into the curve while it opened space,
+  the rate of space energy … so the release which would turn into just matter and antimatter and the flash, except
+  1/1000000000 of the activation curve energy was in the stores and fed into the space, that was all the matter part
+  (matter not antimatter is flowing into black hole that's (feed x time fed x time to exectute the snap in sweeps or
+  moves because I think the energy releases at the end, or the inconsistently in temp means some had enough energy to
+  curve and some didn't and it waited until it had total in all area?" VISION Update 76.
