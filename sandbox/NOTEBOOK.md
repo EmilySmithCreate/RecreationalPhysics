@@ -1579,3 +1579,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   probability if g isn't consistent and stable within the black hole." *Ours:* the threshold is the rule and the
   probability comes from how unevenly the energy reaches the stores: a steady, even feed tips the bucket on schedule
   (T71's case), uneven infall makes the moment a chance that rises with g. Test: the layer form under an uneven feed.
+- 2026-10-19, the owner, evening, on the uneven feed: "I think that what the curl can take how fast has a limit and unless
+  g is high enough it probably can't curl. And a star gets eaten that's a fast inflow, then there is time then another
+  inflow. I think the amount the curl will hold depends on g so if the space is cold the curld lxlx4 torus is metastable."
+  *Ours:* three statements: an intake limit on how fast the curled region takes energy; infall as bursts with quiet gaps
+  (a star eaten, then time, then another); and a capacity that rises with g, so a cold slab is stuck for now. In the toy's
+  bookkeeping a store's energy is how g is read (Q12), so "the stores beside the cut hold the whole cost" already means
+  "the local g is high enough"; with a leak, a burst too small to reach the threshold drains away in the gap. Published
+  relatives (general knowledge, to verify): the Eddington limit on accretion; tidal disruption flares. Not yet a decision.
