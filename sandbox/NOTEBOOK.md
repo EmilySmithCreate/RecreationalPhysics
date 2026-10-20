@@ -1837,3 +1837,6 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   gives that shape without change: where knots are sparse enough some rows pass clear within three steps, fewer than in
   a void, so walls grow more slowly; inside a clump none do. The first growth test can read the rate in voids, walls and
   clumps; two thirds is a target (rule 13), not something to tune toward.
+- 2026-10-20, the owner: three steps, "Agree"; on the rate: "I'm thinking it's like we learned in the outside of time
+  situation, it matches the relevant sweep rate at the temp to give a probability function of expanding but instead of
+  needing a hot spike it needs a cool spike." (The growth brief, "The rate".)

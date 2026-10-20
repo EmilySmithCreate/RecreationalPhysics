@@ -57,6 +57,20 @@ is curled (her "I agree"). Single pairs are set aside, to come back to if needed
 back if we need it later"). Her position on flaws in general: "I think they heal if the temp is high enough otherwise
 freeze in", which is what the toy shows for the columns (T25 FREEZES IN; T51).
 
+## The rate (20 October, her answer; our wording, hers once she confirms it)
+
+Her words: "I'm thinking it's like we learned in the outside of time situation, it matches the relevant sweep rate at the
+temp to give a probability function of expanding but instead of needing a hot spike it needs a cool spike." *Ours, the
+form this gives:* there is no free rate. As the tube's wait is the number of times the chain offers a way out times the
+chance each offer is taken (exp(−wall/g)), growth is the number of times a row is offered times the chance it is clear
+when offered. Each row (each position, along each axis) is offered once per fair sweep (O90), and it is added if, at that
+moment, no link within three steps of it anywhere along it is curled. A warm bath keeps flaws flickering in and out, which
+block rows, so a row is added only in a moment when its corridor happens to be clear: her "cool spike". Cold empty space
+is almost always clear and grows at the full offer rate; warmer space grows more slowly; space near matter not at all.
+*Ours, unverified, one consequence to face:* in standard cosmology the hot early universe expanded fastest, while this
+rule makes hot space grow slowest. Her own picture has two parts that answer it: the burp's push, which decelerates, and
+this growth, which turns on as space cools and empties and so speeds up late, the shape of dark energy. Hers to confirm.
+
 ## Questions for her (the brief cannot be finished without them)
 
 1. ~~**Which kind of growth?**~~ Decided above: (a). The choices were: (a) whole rows only: clean and free, but a row runs right across the space, so it is not
