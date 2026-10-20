@@ -1673,3 +1673,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   often than the other is a count on the saved products, not yet made. The energy treats left and right alike, so an
   excess would have to come from the history of the opening (its front), which is the published route too ([MRM12],
   abstract; Update 42).
+- 2026-10-20 (19 October, late), the owner: "Would a flaw stretch as space stretches?" *Ours:* in her picture space grows by
+  gaining points (Update 72), and a flaw is a fixed local wiring of a few points whose energy is a sum over its own links
+  (exact, O22), so new points between flaws move them apart without changing them: they thin with the volume, as matter
+  does, rather than stretch. Standard counterpart (general knowledge, to verify): bound objects and point-like defects do
+  not stretch with expansion, while extended defects (strings, walls) and light's wavelength do. That separates two
+  populations in her picture: the burp's frozen flaws and knots, fixed in number and thinning like matter (the
+  dark-matter reading), and the network's own missing squares at its coupling, made afresh in every new piece of space
+  and so constant per volume (the dark-energy reading, Update 70). Open: where new points appear; if inside a flaw, the
+  toy does not say what happens to it.
