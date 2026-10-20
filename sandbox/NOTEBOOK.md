@@ -1901,3 +1901,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   verify): in Einstein's gravity the curvature that makes the pull reaches into empty space, weakening as 1/r² but never
   stopping; the Sun pulls the Earth across empty space. A curve only near matter gives no pull across a void, which is
   what the toy's stiff space does (the halo look of 20 October).
+- 2026-10-20, the owner, on [T24]'s identification of 1/g with universal time: "because of the types of stores my toy cannot
+  use the 1/g clock." *Ours:* consistent with Update 70 (the network's g is fixed by the loop's total energy, so it cannot
+  run) and with her time coming from matter moving (Update 41) and clocks existing only inside a universe (Update 68); the
+  toy's own clock is the fair clock, a count of moves. What cools in her picture is the daughter's matter, not the network,
+  which is why a test of dark energy against a cooling universe needs the two-temperature kernel of Update 70.
