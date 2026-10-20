@@ -40,9 +40,19 @@ or the stores. That fits two of her positions at once: "no warm bath no flaws", 
 defects (Update 72). It also means local growth makes flaws as it goes, so how much dark energy (her defect density) a
 region has would be tied to how much it has grown.
 
+## Decided (20 October): whole rows only
+
+Her words: "A sounds right. Empty space, more through lines, growth approaches light speed." And of single pairs: "B
+seems like maybe it can happen but it's got to be hot and concentrated and in that setting it's more likely to curl than
+expand, so I think it's unlikely or a mechanism I don't understand." *Ours, exact by construction:* a row runs right
+across the space (in three directions a whole plane), so a row can be added only where its whole length is clear of
+curled links. Growth is then confined to empty corridors, and there are more of them as matter gathers into clumps: the
+growth of space is tied to how clumped the matter is. A row is free, so questions 3 (what pays) and 4 (do growth flaws
+heal) fall away; what is left is how far "clear" reaches round the row and how often a clear row is added.
+
 ## Questions for her (the brief cannot be finished without them)
 
-1. **Which kind of growth?** (a) whole rows only: clean and free, but a row runs right across the space, so it is not
+1. ~~**Which kind of growth?**~~ Decided above: (a). The choices were: (a) whole rows only: clean and free, but a row runs right across the space, so it is not
    local; (b) single pairs: local, but each costs about 42 and leaves a small flaw, paid from the stores; (c) both.
 2. **How far does "surrounding" reach?** The cut links of a valid addition span three steps, so the check that no link
    nearby is curled should reach at least three steps (ours: three).

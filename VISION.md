@@ -2235,6 +2235,13 @@ points; this says where, and it is a new rule of the toy under S1.
   point of each kind. A whole row is clean and free; a single pair added in one place is never free: with its cut links
   within three or four steps the cheapest adds 42 units and leaves 8 points off flat, and within two steps none is
   valid. So local growth needs something to pay for it and makes a small flaw as it goes.
+- **Her answer on the form (20 October, 10:08 UTC by the clock):** whole rows only. "A sounds right. Empty space, more
+  through lines, growth approaches light speed." Single pairs: "B seems like maybe it can happen but it's got to be hot
+  and concentrated and in that setting it's more likely to curl than expand, so I think it's unlikely or a mechanism I
+  don't understand." *Ours, exact by construction:* a row runs right across the space (in three directions, a whole
+  plane), so under her rule a row can be added only where its whole length is clear of curled links; growth is then
+  confined to empty corridors, more of them as matter gathers into clumps, which ties the growth of space to how
+  clumped the matter is. A row costs nothing, so no bath is needed; how often a clear row is added is the one knob left.
 - **The form is owed:** `docs/design/growth_rule_brief.md` asks which kind of growth (whole rows, single pairs, or both),
   how far "surrounding" reaches, what pays and how often, and whether growth flaws heal. Nothing is built or run before
   her answers. Merging this update is her acceptance of the wording.
