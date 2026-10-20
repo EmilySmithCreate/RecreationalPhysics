@@ -2229,7 +2229,8 @@ points; this says where, and it is a new rule of the toy under S1.
   negative there it grows." *Ours, general knowledge, to verify:* bound systems do not expand and voids expand faster
   than average; with her rule growth would be held back while matter fills space and speed up as voids come to fill most
   of the volume, decelerating then accelerating, as observed. The published relative (backreaction, Wiltshire's
-  timescape) is contested and is being read.
+  timescape) is contested; read the same day by an assistant agent (`docs/reading/notes/2026-10-20_backreaction_timescape.md`):
+  the shape is published and is a target, not a confirmation (rule 13).
 - *Ours, exact within a look of 20 October (`sandbox/pair_insertion_2d.py`):* the smallest addition is a linked pair, one
   point of each kind. A whole row is clean and free; a single pair added in one place is never free: with its cut links
   within three or four steps the cheapest adds 42 units and leaves 8 points off flat, and within two steps none is

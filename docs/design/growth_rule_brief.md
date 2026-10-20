@@ -25,6 +25,14 @@ surrounding links are flat or short a square, never next to curled ones - agreed
    cheapest adds **42 units and leaves 8 points off flat**; within four steps (L = 12), the same 42 and 8. So a local
    addition is never free: new space made in one small place arrives with a flaw.
 
+## The published relative (read 20 October; `docs/reading/notes/2026-10-20_backreaction_timescape.md`)
+
+Backreaction and Wiltshire's timescape: voids, negatively curved, expand faster than the flat walls around them, and the
+expansion decelerates and then appears to accelerate once voids fill most of the volume. Contested on two fronts: a
+theorem (Green and Wald) that small inhomogeneities cannot mimic dark energy, disputed as to whether it applies; and the
+data, where a 2025 supernova analysis favours timescape strongly overall but only moderately beyond the homogeneity
+scale, and the Dark Energy Survey finds it in tension once other data are added. A target for the rule, never evidence.
+
 ## What follows (ours, unverified)
 
 Growth in one place needs energy, about 42 units a pair, so in the toy it can happen only where something pays: a bath,
