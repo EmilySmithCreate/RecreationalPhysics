@@ -1906,3 +1906,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   run) and with her time coming from matter moving (Update 41) and clocks existing only inside a universe (Update 68); the
   toy's own clock is the fair clock, a count of moves. What cools in her picture is the daughter's matter, not the network,
   which is why a test of dark energy against a cooling universe needs the two-temperature kernel of Update 70.
+- 2026-10-20, the owner: "That is why eventually everything comes together even if the last few black holes are hundreds of
+  trillions of light years apart." *Ours (general knowledge, to verify; [KS07] read in full):* not with a constant dark
+  energy, which is her own prediction: its push grows with distance while gravity's pull falls as 1/r², so beyond a
+  distance set by the two only bound groups hold together, and everything else drifts apart for ever, galaxies outside the
+  Local Group leaving view in about 100 billion years ([KS07] Sec. 1). Under her growth rule the voids between bound
+  clumps keep growing too. So the last black holes of a universe sit in separate bound groups that never meet; her end
+  state (black holes dissolving, Update 72) does not need them to.
