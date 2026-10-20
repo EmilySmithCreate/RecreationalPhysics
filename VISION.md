@@ -2176,3 +2176,27 @@ when the stores hold the whole cost' is a threshold."
 - **What changes elsewhere.** Update 70's annotation of 19 October points here; Update 59's sentence is annotated; the
   programme page and draft, paper 12's statement of her hypothesis and the glossary say the same. Nothing runs.
   Merging this update is her acceptance of the wording.
+
+Update 73 (2026-10-20, 01:50 UTC by the clock; 19 October, evening, in Charlottesville): **DECISION (the author's,
+"Please proceed with both the same. And register"): energy reaches the curl through an edge with one maximum curling
+speed, the same cap on eating and on losing; and the toy's top speed is to be measured.** Why this page changes: under
+S1 a new ingredient needs her dated decision before any run, and two registrations follow from it (PREREGISTRATION T74,
+T75).
+
+- **The ingredient, in the form of the curling-energy brief (section "Proposed: energy that travels to the curl edge"):**
+  energy moves between the slab's stores and its surroundings across the curl edge, downhill in the mean energy per
+  store (the toy's g, Q12), at most c per sweep in either direction; c is a knob, scanned and never tuned. Her choice of
+  the three forms offered: (a), "both the same". The model with it is our family around the published one, never
+  combinatorial quantum gravity.
+- *Ours, exact by construction, said before any run:* with one cap both ways, a black hole stops losing energy between
+  meals only while its surroundings are at least as warm, per store, as its own edge; in colder surroundings it loses
+  energy as fast as it can eat, up to c a sweep. That is her Update 72 picture (it waits while it can be fed and
+  dissolves once its surroundings are colder) if a black hole between meals sits in surroundings warmer than its edge,
+  which is the standard situation of a star-sized black hole today (general knowledge, to verify). T74 measures it.
+- **The top speed (T75):** whether every disturbance in the toy's open space spreads no faster than one shared speed.
+  No new energy term; it needs a chain that runs two copies on the same random numbers, written and tested first.
+  *Ours, said before any run:* flat space in the toy is gapped (O60 (a)), so a disturbance is expected to stay where it
+  is at the couplings where space holds, for the same reason the toy has no pull at a distance; if so, open space in the
+  toy carries no signal but the fronts of a change, and a light cone, like a pull, would need the gapless quantity on
+  the points of Update 40.
+- Her predictions for both are owed before either is launched. Merging this update is her acceptance of the wording.

@@ -7128,3 +7128,161 @@ question; anything about the toy.
 1. No size claim. 2. Prior work: `docs/reading/notes/2026-10-19_causal_entropic_principle.md` (the diamond as a weight
 on an observer-time distribution is not a combination that note found published; the entropy paper weights entropy, not
 planets). 3. Not a milestone.
+
+
+## T74. Fed by meals through a curl edge with one maximum curling speed, does the slab burp, keep its energy between meals, and dissolve when its surroundings are colder? (pieces 5 and 11; VISION Updates 72 and 73; the curling-energy brief, section "Proposed: energy that travels to the curl edge"; DRAFT written 2026-10-20, 01:55 UTC by the clock, before any code or run)
+
+**Status:** registered on the owner's "register" (Update 73). The kernel is not written; the owner's prediction is owed
+before launch; nothing runs before both.
+
+### Why
+
+The author's picture of 19 October (Updates 72, 73): infall arrives in meals ("a star gets eaten that's a fast inflow,
+then there is time then another inflow"); the curl can take energy only so fast, and the same maximum curling speed caps
+what it can lose ("both the same"); the threshold is the slab's whole curling cost and does not move with g; between
+meals the energy waits, and a black hole dissolves only once its surroundings are colder.
+
+### Design (fixed now)
+
+- **The slab and its moves, as T71's model arm:** 4 × L × L under the layer form, layer moves plus the clean two-switch
+  move, gate g1 (a N_slab, a = 4(λ − 1), N_slab = 4L²), every release to the daughter ledger (Update 66). λ = 1.10, 1.25,
+  1.40; L = 8 and 12; **held-out L = 16** (rule 14), run after the two smaller sizes are read and its numbers written.
+  Nothing feeds the slab's stores directly.
+- **The surroundings:** one reservoir of n_out = N_slab stores beside the slab, holding E_out, with g_out = E_out / n_out.
+  Meals are added to E_out. The reservoir relaxes toward a background g_bg: each sweep a fraction ρ = 1/64 of
+  (E_out − n_out g_bg) moves to (or, if negative, from) a far-space ledger.
+- **The curl edge:** each sweep, after the feed and the relaxation and before the moves, energy moves between the
+  reservoir and the slab's stores, downhill in mean energy per store (g_out against g_in, the mean over the slab's
+  points), by the smaller of c and the amount that would make the two means equal, spread evenly over the slab's stores or
+  taken evenly from them. One cap, both directions (her (a)).
+- **Feeds, all with the same mean R = r N_slab per sweep, r = 1/16:** steady (R every sweep); small meals (16 R every 16
+  sweeps); large meals (256 R every 256 sweeps).
+- **Caps:** c = 2R (above the mean feed) and c = R/2 (below it).
+- **Two phases:** fed, for max(4,000, 40 a N_slab / min(c, R)) sweeps; then unfed (feeding stops) for as long again, with
+  the background warm (g_bg = 4a, above the 2a per point the pool beside the cut holds at the gate) or cold (g_bg = 0).
+- Cells: 3 λ × 2 L × 3 feeds × 2 caps × 2 backgrounds = 72; 16 replicas each (the layer proposals and clean switches
+  are random; the flows are not); seeds 20267401 onward, one per cell.
+
+### What is read, per cell
+
+The number of daughters and the energy of each against a N_slab; the period between births, its mean and its spread
+(coefficient of variation); the share of the energy fed that has entered the slab by the end of the fed phase; in the
+unfed phase, the slab's stored energy against time and its rate of loss against c.
+
+### Verdict words
+
+- Fed phase: **BURPS** if every replica makes at least one daughter and every daughter carries a N_slab within 10⁻⁹;
+  **NEVER BURPS** if none does; **MIXED** otherwise.
+- Unfed phase: **WAITS** if the slab's stored energy at the end is at least 95 % of its value when feeding stopped, in at
+  least 15 of 16 replicas; **DISSOLVES** if it has lost at least half of what c allows over the phase, in at least 15 of
+  16; **MIXED** otherwise.
+- Meals against steady, per (λ, L, c): **SAME TIMING** if the mean periods agree within 10 % and **SPREAD ONLY** if, in
+  addition, the meals' coefficient of variation is at least twice the steady one; **DIFFERENT TIMING** if the means
+  differ by more than 10 %.
+
+### What is exact before any run (ours)
+
+1. Inflow per sweep is at most c, so when c < R the reservoir fills like a disk outside the black hole and the slab is fed
+   at c: the mean period is about a N_slab / c, whatever the meal size. When c > R the slab is fed at R on average and
+   the period is about a N_slab / R; meals then bunch the inflow, and the timing spreads.
+2. The flow is spread evenly, so the gate's pool (the two layers beside the cut) reaches a N_slab when the slab's mean
+   store energy reaches 2a. The clean two-switch move spends from the stores and can only delay that.
+3. Unfed, warm background (g_bg = 4a > 2a): the reservoir relaxes to 4a and stays above the slab's mean, so nothing leaves
+   the slab: WAITS by construction (apart from what the clean switch spends). Unfed, cold background: the reservoir
+   drains to the far ledger and the slab then loses energy at up to c a sweep: DISSOLVES, as fast as it could eat.
+4. So with one cap both ways, whether a black hole keeps its energy between meals is set by its surroundings' warmth, not
+   by the cap.
+
+### Predictions
+
+- **Ours:** BURPS in every cell; SAME TIMING with SPREAD ONLY where c = 2R and the meals are large, SAME TIMING without
+  extra spread where c = R/2; WAITS under the warm background and DISSOLVES under the cold one, at every λ and size. Most
+  of this is arithmetic; the run checks the kernel, the clean switch's spending and the noise of the layer proposals.
+- **The owner's:** owed before launch.
+
+### Runner and tests (to be written before launch)
+
+An `outside` option for `graphity.layer_feed.run_layer_feed` (the reservoir, the relaxation and the edge flow above), with
+rule-6 tests: energy conserved to 10⁻⁹ (F + stores + daughters + E_out + far − fed = F0); with no outside the kernel is
+T71's draw for draw; the edge flow never exceeds c and always runs downhill; at c = 0 nothing crosses. A reader
+`scripts/analyse_t74.py` with its own test.
+
+### What this cannot show
+
+Anything about real black holes. The surroundings are put in by hand: nothing falls in by itself, since the toy has no
+pull (piece 8), and the thin, fast layer at a real black hole's edge is not represented. The cap is a knob. The toy's g
+is read off its stores and is not a horizon temperature.
+
+### Standing requirements of 8 October
+
+1. The size claim (the period per point independent of L) is scored at the held-out L = 16 only, against a number with a
+range written after L = 8 and 12 are read. 2. No "we have not found". 3. Not a milestone.
+
+
+## T75. Does a disturbance in the toy's open space spread, and if it does, at one speed shared by every kind? (piece 10; TASKS T13 rung 2, its second half; VISION Update 73; DRAFT written 2026-10-20, 02:00 UTC by the clock, before any code or run)
+
+**Status:** registered on the owner's "register" (Update 73). The coupled chain is not written; the owner's prediction
+is owed before launch.
+
+### Why
+
+The speed of light's defining property is that it is one top speed for everything. The toy's fronts keep a steady pace
+set by the medium, but not one shared by everything: a front speeds up where spare energy sits (T47, T50; O76, O93). This
+asks whether anything in the toy's open space carries a signal, and whether every kind travels at one speed.
+
+### Design (fixed now)
+
+- **Two copies of the four-link chain** (`graphity.cqg`, λ = 1.25, no cap, Metropolis), driven by the same random numbers:
+  a coupled kernel that draws the same fixed set of numbers at every attempt (two points, two slots, one uniform) whatever
+  the state, so the copies stay identical wherever their wiring agrees. One copy is disturbed at sweep 0 at one point:
+  (i) **a flaw**, one switch of two edges that share a square there; (ii) **a knot**, the four-point column of O107
+  written in there. The other copy is left flat.
+- A flat L × L torus, L = 16 and 24; **held-out L = 32** (rule 14). Couplings: three, from the cold sheet to the edge of
+  melting, read off the equilibrium curve already measured for the flat sheet at λ = 1.25 and fixed in an amendment
+  before launch (the coldest where T47's fronts were measured, the warmest the last coupling at which a flat start stays
+  at least 95 % flat over the run). 32 replicas per cell; time on the fair clock (O90), 2,000 fair sweeps.
+- **Damage:** the set of points whose neighbours differ between the copies. Read every fair sweep: its size, and its
+  radius R(t), the largest distance of a damaged point from the disturbance, measured on the starting torus.
+
+### Verdict words, per cell (kind, coupling, size)
+
+**HEALS** if the damage is gone by the end in at least 24 of 32 replicas; **CONFINED** if it persists with R never above
+3 in at least 24; **SPREADS** if R reaches L/4 in at least 24, with the speed the slope of R against fair time over the
+stretch from R = 3 to R = L/4; **JUMPS** if, in at least 8 replicas, damage appears farther than twice the radius of the
+connected damaged region before R reaches L/4 (the toy's switches can join any two edges, so a far link can carry damage
+without passing between); **MIXED** otherwise. Per (coupling, size): **ONE SPEED** if both kinds SPREAD with speeds within
+20 % of each other; **SEVERAL SPEEDS** if both spread and differ by more; **NO SIGNAL** if neither spreads.
+
+### What is known before any run (ours)
+
+Flat space in the toy is gapped: every move out of it costs at least 32 (O22), and a gapped medium passes on only
+influences that die off within a few steps (O60 (a), Hastings and Koma as read there). A disturbance can grow only where
+moves are accepted, and in a cold flat sheet almost none are.
+
+### Predictions
+
+- **Ours:** HEALS or CONFINED for both kinds at the two colder couplings, so NO SIGNAL; at the warmest, where the sheet
+  starts to come apart, SPREADS with JUMPS, the damage then being the melting itself rather than a signal. If so, the
+  toy's open space carries no signal but the fronts of a change, for the same reason it has no pull at a distance, and a
+  light cone would need the gapless quantity on the points (Update 40).
+- **The owner's:** owed before launch.
+
+### Runner and tests (to be written before launch)
+
+A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy
+alone reproduces the distribution of `cqg.run_chain` (exact averages at N = 16 and 18, as every sampler here is checked);
+detailed balance argued in the module docstring; incremental energy exact against recomputation. A reader
+`scripts/analyse_t75.py` with its own test. How damage spreads depends on how the copies share random numbers, not only on
+the energy (a known feature of damage spreading, general knowledge, to verify); the coupling above is fixed now so that
+the choice is not made after seeing results.
+
+### What this cannot show
+
+Relativity. A top speed shared by every disturbance is a necessary piece of it and not a sufficient one: relativity also
+needs that speed to be the same for every moving observer, which a network with one built-in clock cannot have exactly.
+Nothing here bears on how fast anything moves in the real universe.
+
+### Standing requirements of 8 October
+
+1. The size claim (a speed independent of L, if any kind spreads) is scored at the held-out L = 32 only, against a number
+with a range written after L = 16 and 24 are read. 2. No "we have not found". 3. Not a milestone.

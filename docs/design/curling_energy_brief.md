@@ -97,13 +97,14 @@ down. My intuition says it's something about max curling speed." Nothing below i
    cut), the flow per sweep is capped at c. Inside the cap the flow is as in 1. What it gives, by construction: a meal
    reaches the cut no faster than c (her intake limit); and when feeding stops, a black hole whose stores are fuller than
    its surroundings loses energy no faster than c, so it shrinks slowly, not at once.
-3. **Open, hers:** does the cap slow eating, shrinking, or both? (a) one cap both ways; (b) a cap on the way out only,
+3. **Decided (19 October, her "Please proceed with both the same"; VISION Update 73): (a), one cap both ways.** The
+   question was: does the cap slow eating, shrinking, or both? (a) one cap both ways; (b) a cap on the way out only,
    eating as fast as the flow allows; (c) two caps. *Ours, general knowledge, to verify:* real black holes are strongly
    one-sided: infall can be fast (limited near the Eddington rate) while evaporation is extremely slow, and a black hole
    colder than its surroundings does not lose energy at all; (b) or (c) is closer to that. *Ours, a candidate link:* the
    toy already has one speed set by the medium, the pace of an opening front (T47 part A, FIXED SPEED on the fair clock;
    O76); whether a maximum curling speed is that pace, for a curl instead of an opening, is a question the toy can ask.
-4. **What the first run would read** (T74, after she confirms 1 to 3): the slab under the layer form, a meal dropped at
+4. **What the first run reads** (registered as PREREGISTRATION T74; her prediction owed before launch): the slab under the layer form, a meal dropped at
    its outer layers as a burst, with gaps; whether and when the burp fires; how much of each meal reaches the cut; and,
    with feeding stopped, how fast the stores beside the cut empty, against c.
 

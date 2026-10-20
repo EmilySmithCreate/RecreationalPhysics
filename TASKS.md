@@ -970,3 +970,15 @@ shape moving the peak (O138); Amendment 2's observer-moment variant restores the
 **T73 drafted, her prediction recorded, run and read** (O139): the diamond weight makes every class but D LATE, MOVES;
 her "no word changes" and our "A, B, C stay TYPICAL" fail. Next on piece 12, hers to decide: which counting unit and
 which "how many places" weight the measure uses, now that each is measured; the full suite ran green before the commit.*
+
+## 19 October, evening: two registrations on the owner's "register"  ☐
+
+**Added 2026-10-19** (VISION Updates 72 and 73). Each needs its code and rule-6 tests first and the owner's prediction
+before launch.
+
+1. **T74**, the slab fed by meals through a curl edge with one maximum curling speed (her (a), the same cap both ways):
+   an `outside` option for `graphity.layer_feed` with tests, then 72 cells at L = 8 and 12, the held-out L = 16 after.
+2. **T75**, the toy's top speed: a coupled two-copy chain (`graphity.coupled`) with tests, then a flaw and a knot in a
+   flat sheet at three couplings fixed by amendment from the measured equilibrium curve, L = 16 and 24, held-out 32.
+3. **An exact test for the handle bound** (sandbox LOG, 19 October: handles ≥ 1 + D/24 for a four-link graph drawn on a
+   closed surface) in `tests/` before anything cites it.
