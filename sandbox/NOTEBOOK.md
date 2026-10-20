@@ -1620,3 +1620,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   surroundings absorbs more than it radiates, and evaporates only once the universe has cooled below its Hawking
   temperature, so it waits while it can be fed and dissolves at the end. Sign caution as in Update 70. What triggers the
   dissolve, and her confirmation of the reading, are owed before anything is registered.
+- 2026-10-19, the owner, evening, on the hot matter outside the horizon: "maybe at the edge it can go so fast it creates a
+  bit of a vacuum." *Ours (general knowledge, to verify):* the standard picture has such a gap: inside the innermost
+  stable orbit, a few horizon radii out, matter cannot orbit and plunges, moving faster and thinning out, so the disk has
+  an inner edge and a sparse plunging region below it. In her picture that thin, fast layer is where energy reaches the
+  curl edge, which bears on her intake limit. The toy has no geometry of infall.
