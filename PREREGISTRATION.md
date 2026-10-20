@@ -7200,7 +7200,7 @@ unfed phase, the slab's stored energy against time and its rate of loss against 
   of this is arithmetic; the run checks the kernel, the clean switch's spending and the noise of the layer proposals.
 - **The owner's:** owed before launch.
 
-*Amendment 1 (2026-10-20, about 02:15 UTC by the clock, before any code or run): the owner's prediction, verbatim:
+*Amendment 1 (2026-10-20, 02:05 UTC by the clock, before any code or run): the owner's prediction, verbatim:
 "T74, meals through the curl edge I agree with your assessment." So hers is ours in every word, and T74 tests a shared
 expectation; what it can still decide is whether the kernel and the clean switch's spending match the arithmetic, and the
 size claim at L = 16.*
@@ -7272,7 +7272,7 @@ moves are accepted, and in a cold flat sheet almost none are.
   light cone would need the gapless quantity on the points (Update 40).
 - **The owner's:** owed before launch.
 
-*Amendment 1 (2026-10-20, about 02:15 UTC by the clock, before any code or run): the owner's position and two open
+*Amendment 1 (2026-10-20, 02:05 UTC by the clock, before any code or run): the owner's position and two open
 questions of design.* Her words: "Flat space isn't stiff. So we need to allow for that. What kind of disturbance? How
 does the knot or flaw get in there? In the spiral? Does it matter when we make space not stiff?" *Ours:* the toy's flat
 space is stiff by its energy (exact, O22), and her statement is about reality; so T75 on the toy as it stands is the stiff
