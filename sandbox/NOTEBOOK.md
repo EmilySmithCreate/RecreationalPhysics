@@ -1606,3 +1606,6 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   one knob for both. Consequence: with no dissolve at all, a black hole short of the threshold that is never fed again
   never dissolves, and its universe's turn never ends. Standard counterpart of a slow dissolve: Hawking evaporation
   (general knowledge, to verify), extremely slow for large black holes. Which case is hers to choose.
+- 2026-10-19, the owner, evening: the threshold does not move with g, only how full the stores get, "because we found the
+  activation energy was the same at different g values" (VISION Update 72). *Ours:* the tube's wall of 12 fits six
+  couplings with nothing fitted; the layer form's gate is fixed by λ and size by construction.

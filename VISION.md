@@ -2138,6 +2138,12 @@ when the stores hold the whole cost' is a threshold."
   tips when full under a steady tap (T71's registered period, a N_slab / (r N), is that case), and where infall is
   uneven or the energy wanders between stores, when the stores first hold the cost is a chance. A test is the layer
   form under an uneven feed, reading how the spread of the waits grows with the unevenness; not designed.
+- **The threshold does not move with g; only how full the stores get does** (her answer, the same evening): "I think
+  only how full because we found the activation energy was the same at different g values." *Ours:* the evidence she
+  points to is the two-direction tube, where one wall of 12 at λ = 1.25 fits six couplings with nothing fitted and the
+  wait goes as exp(−12/g) (ASSUMPTIONS, "The wall measured against temperature", exploratory); a fitted barrier at
+  N = 144 lands on 12.07 ± 0.87. For the layer form the gate a N_slab is fixed by λ and the slab's size by construction
+  (Update 69), so there it is true by definition; what g changes is how soon the stores reach it.
 - **What changes elsewhere.** Update 70's annotation of 19 October points here; Update 59's sentence is annotated; the
   programme page and draft, paper 12's statement of her hypothesis and the glossary say the same. Nothing runs.
   Merging this update is her acceptance of the wording.
