@@ -1703,3 +1703,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   is a new ingredient (S1). Two tensions: the knots' layout is white noise, not the sky's seed pattern (the look of 18
   October), and dark matter released by knots flattening is a different reading from the knots being the dark matter
   (Update 52).
+- 2026-10-20 (19 October, late), the owner: "If it foams new points and those have flaws at a similar rate with some
+  randomness that explains the uniform but blotchy spread of dark matter." *Ours:* flaws made at random at a fixed rate
+  give exactly that pattern, smooth on average and speckled up close (shot noise; the knots' layout read on 18 October is
+  of this kind). Two conditions from standard cosmology (general knowledge, to verify): flaws made afresh in every new
+  piece of space keep a constant density, which is dark energy's signature, so a dark matter made this way has to be made
+  early and then only carried apart, thinning like matter; and today's clumps of dark matter grew by gravity from tiny
+  early seeds with a nearly scale-free pattern, while random speckle adds a different, flat pattern whose size
+  observations limit, more tightly the heavier and rarer the objects. So: flaws foamed at random while a daughter is
+  young, then frozen and carried apart, with the clumps grown later by a pull the toy does not yet have (piece 8).
