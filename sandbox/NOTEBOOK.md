@@ -1967,3 +1967,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   surface would make curvature defects come in pairs of opposite sign, bound when cold and freed when hot: the published
   physics of defects in two-dimensional crystals (Kosterlitz and Thouless; Halperin, Nelson and Young; general knowledge,
   to verify). VISION Update 76.
+- 2026-10-20, the owner: "What is a compression wave?" and "How much canceled vs remained after the big bang". *Ours
+  (general knowledge, to verify):* a compression wave squeezes and stretches the medium along its direction of travel
+  (sound; an earthquake's P wave), where a shear wave moves it sideways and changes shape, not volume (an earthquake's S
+  wave); gravitational waves are only the sideways, area-keeping kind. Nearly all matter and antimatter cancelled: today
+  there are about 1.6 billion photons of the cosmic background for each proton or neutron (baryon-to-photon ratio about
+  6 × 10⁻¹⁰), quarks and antiquarks cancelling about a millionth of a second in, electrons and positrons at about a
+  second.
