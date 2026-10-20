@@ -7449,3 +7449,89 @@ Nothing here bears on how fast anything moves in the real universe.
 
 1. The size claim (a speed independent of L, if any kind spreads) is scored at the held-out L = 32 only, against a number
 with a range written after L = 16 and 24 are read. 2. No "we have not found". 3. Not a milestone.
+
+
+## T76. As space grows by her rule, does the density of the network's missing squares stay constant (dark energy with w = −1)? (pieces 6 and 12; VISION Updates 70, 72, 75; `docs/design/growth_rule_brief.md`; `docs/design/measured_number_brief.md`; DRAFT written 2026-10-20, 11:25 UTC by the clock, before any code or run)
+
+**Status:** registered on the owner's "yes" (20 October). The growth code is not written; it is built and tested before
+any cell runs. Her prediction is recorded below.
+
+### Why
+
+Her picture: dark energy is the network's density of missing squares at its coupling (Update 70), and space grows by
+adding whole rows, two at a time, only where the corridor three steps either side of the row holds no curled link, each
+row offered once per fair sweep (Update 75). New rows arrive flat; the coupling then makes missing squares in them. If the
+density of missing squares per point stays constant while the space grows, the toy's dark energy behaves as a
+cosmological constant, w = −1. The measured value is w = −1.03 ± 0.03 (Planck 2018 with supernovae and BAO), with recent
+DESI analyses preferring a w that changes with time (general knowledge, both to verify at their sources before any
+comparison is written).
+
+### Design (fixed now)
+
+- **The toy:** four links per point (two directions), λ = 1.25, no cap, Metropolis at coupling g, time on the fair clock
+  (O90). Start: a flat L × L torus, L = 16 and 24; **held out L = 32** (rule 14).
+- **Settling:** 200 fair sweeps with growth off, so the missing squares reach their level at g. That level, ρ_eq (missing
+  squares per point, D/N with D = Σ_e max(0, 2 − S_e)), is read from the last 100.
+- **Growth:** then, every fair sweep, after the chain's block, every place a pair of rows could go (between coordinate
+  rows i and i + 1, along each of the two axes) is offered once, in an order drawn from the seeded stream. A pair of rows
+  is inserted there if (i) every point of row i is still linked to its partner in row i + 1 (the grid is intact across
+  that boundary) and (ii) no link within three steps of rows i and i + 1, anywhere along them, sits on more than two
+  squares. The two new rows are flat: straight links across, and links along them. Coordinates are relabelled after
+  each insertion.
+- **Stop:** when N reaches 8 times its starting value, or after 400 fair sweeps of growth, whichever is first.
+- **Couplings, by a rule fixed now:** the four couplings at which the settled flat 16 × 16 sheet has ρ_eq = 0.003, 0.01,
+  0.03 and 0.1, found by bisection on settling runs alone (growth off), fixed in an amendment before any growth runs. A
+  coupling with no missing squares would make "constant" true trivially, so none is used.
+- 16 replicas per (g, L); seeds 20267601 onward, one per cell.
+
+### What is read
+
+Every fair sweep: N, ρ = D/N, the share of links on more than two squares, and the rows added.
+
+### Verdict words, per (g, L)
+
+- **CONSTANT** if N at least doubles during growth and ρ over the second half of the growth (by points added) stays
+  within 10 % of its own mean, in at least 12 of 16 replicas.
+- **FALLING** if N at least doubles and ρ at the stop is below 90 % of ρ_eq, in at least 12 of 16.
+- **RISING** if N at least doubles and ρ at the stop is above 110 % of ρ_eq, in at least 12 of 16.
+- **STALLS** if N grows by less than a factor of two before the stop, in at least 12 of 16.
+- **MIXED** otherwise.
+
+### The translation to w (stated before the run)
+
+The toy is two-dimensional: its "volume" is the number of points, A. For a density of missing squares per point that
+varies as A^p over the second half of the growth, the toy's w is −1 − p, reading A as volume, as for a density that
+varies as V^−(1+w) in three dimensions. A constant density is w = −1 in any dimension; the size of a departure carries
+the dimension caveat and is reported with it.
+
+### Predictions
+
+- **The owner's:** "my prediction is that it is a constant": CONSTANT at every coupling, w = −1.
+- **Ours:** a row in a clean, cool sheet is almost always clear, so the number of rows can nearly double every fair
+  sweep, much faster than the coupling makes missing squares in the new rows: **FALLING at the two colder couplings**
+  (dark energy that fades as space grows, w above −1). At the warmest, missing squares and curls are common enough to
+  block most rows: **STALLS**. CONSTANT, if anywhere, only near the third. Exact item below.
+- *Ours, exact by construction:* a full row is clear only if all of about 7W points round it are free of curled links,
+  so the chance falls about as e^(−7fW) with the share f of points beside a curled link; at a fixed coupling, growth
+  slows as the space widens. This is why the held-out size matters.
+
+### Runner and tests (to be written before launch)
+
+A growth step for the four-link chain (`graphity.row_growth`, new) with rule-6 tests: an inserted pair keeps the graph
+valid (simple, two-sided, every point on four links, the hard-core rule); a pair inserted into a flat torus leaves it
+flat (D = 0, no link on more than two squares) and adds exactly 2W points; no insertion where the corridor holds a curled
+link or the grid is broken across the boundary; growth off reproduces `cqg.run_chain` on the same seed; same-seed
+reproducibility. A reader `scripts/analyse_t76.py` with its own test.
+
+### What this cannot show
+
+Anything about the real universe's dark energy: the toy's space is a sheet, its clock is not ours, and its coupling's
+value is not derived. It can show whether, under her rule, the network's defect density holds steady as space grows, and
+whether that depends on the coupling. The segment form of growth (a shorter pair of rows ending on two flaws already
+lined up, her words of 20 October) is not in this test; it is a second stage, after an exact look at whether such an
+insertion is clean.
+
+### Standing requirements of 8 October
+
+1. The size claim (the word, and ρ at the stop relative to ρ_eq, at every coupling) is scored at the held-out L = 32
+only, against numbers with ranges written after L = 16 and 24 are read. 2. No "we have not found". 3. Not a milestone.
