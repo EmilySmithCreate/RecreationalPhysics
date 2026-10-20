@@ -2144,6 +2144,17 @@ when the stores hold the whole cost' is a threshold."
   wait goes as exp(−12/g) (ASSUMPTIONS, "The wall measured against temperature", exploratory); a fitted barrier at
   N = 144 lands on 12.07 ± 0.87. For the layer form the gate a N_slab is fixed by λ and the slab's size by construction
   (Update 69), so there it is true by definition; what g changes is how soon the stores reach it.
+- **Black holes keep their energy until the end, then dissolve** (her answers, the same evening). Between meals the
+  energy waits ("so the next star feed has a good starting point"); a black hole does not dissolve just because it is not
+  eating ("black holes don't dissolve at the current space temperature just because they're not actively eating a star");
+  at the end it dissolves and "the curling energy reverses in the end state so the end state has the slight negative
+  curvature". *Ours, unverified:* her reason is the standard one (general knowledge, to verify): a black hole colder than
+  its surroundings takes in more than it radiates, every star-sized one is far colder than today's cosmic background, so
+  they evaporate only once the universe has cooled below their Hawking temperature. Her reasoning therefore points to
+  that trigger, the surroundings turning colder than the black hole; hers to confirm. The returned curling energy
+  becoming defects, which the published model reads as negative curvature and dark energy ([T22], [T24]), would make
+  Update 70's returned energy and its candidate dark energy one thing; rule 13 and Update 70's sign caution apply. The toy
+  has no dissolve rule; its form is a knob under S1, written before any run.
 - **What changes elsewhere.** Update 70's annotation of 19 October points here; Update 59's sentence is annotated; the
   programme page and draft, paper 12's statement of her hypothesis and the glossary say the same. Nothing runs.
   Merging this update is her acceptance of the wording.
