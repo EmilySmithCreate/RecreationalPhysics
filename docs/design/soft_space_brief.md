@@ -146,6 +146,15 @@ springs charge for stretch and so carry a compression wave; soft lengths whose e
 (Regge calculus, where the energy is the deficit angles and a uniformly stretched flat patch costs nothing) do not.
 So the soft lengths' springiness is springiness against curving, not against stretching.
 
+**Her question, the same evening: "If points aren't real does that help?"** *Ours, general knowledge, to verify:*
+yes, it is the principle behind the previous paragraph. In Einstein's gravity points have no identity apart from
+the geometry (the hole argument, 1915), and the toy's points are not fundamental either (VISION Update 59). In Regge
+calculus a point inside a flat region can be moved without changing any deficit angle, so it costs nothing: the
+discrete trace of that principle, exact only where space is flat (Dittrich's work on discrete diffeomorphisms; not
+read by us). A design question it raises for growth (Update 75): if points are not real, a new pair of rows makes
+more space only by bringing new length (new links at their natural length), not merely new points; a row that
+shared out existing length would only describe the same space more finely.
+
 ## Order of work once she has chosen
 
 1. The form written into VISION as a dated decision (S1), with κ and the source coupling as declared constants, scanned

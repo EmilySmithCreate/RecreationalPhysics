@@ -1986,3 +1986,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   (matter not antimatter is flowing into black hole that's (feed x time fed x time to exectute the snap in sweeps or
   moves because I think the energy releases at the end, or the inconsistently in temp means some had enough energy to
   curve and some didn't and it waited until it had total in all area?" VISION Update 76.
+- 2026-10-20, the owner: "If points aren't real does that help? To make the springy links not compress?" *Ours (general
+  knowledge, to verify):* yes; that is the principle. In Einstein's gravity points have no identity apart from the
+  geometry (his hole argument, 1915), so how densely they sit is not physical and no compression wave exists. Regge
+  calculus keeps a discrete trace of it: inside a flat region a point can be moved without changing any deficit angle,
+  so moving it costs nothing (exact only in flat regions; Dittrich's work on discrete diffeomorphisms, not read by us).
+  One consequence for her growth rule: if points are not real, a new row makes more space only if it brings new length,
+  not merely new points. Recorded in the soft-space brief.
