@@ -1840,3 +1840,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-20, the owner: three steps, "Agree"; on the rate: "I'm thinking it's like we learned in the outside of time
   situation, it matches the relevant sweep rate at the temp to give a probability function of expanding but instead of
   needing a hot spike it needs a cool spike." (The growth brief, "The rate".)
+- 2026-10-20, the owner: "On timescape's late-time solution, walls grow at two-thirds the rate of the voids - maybe that is
+  the proportion of through lines. It's similar to the proportion of energy that is currently dark energy, so maybe as
+  that increases so does the rate, toward void rate." *Ours:* the second half is timescape's own formula: the average
+  rate is H = f_v H_v + (1 − f_v) H_w, so as the void fraction f_v grows the average moves toward the void rate
+  ([Wil07b]); in her rule the share of clear through-lines plays f_v's part. The two thirds itself is exact arithmetic of
+  two textbook solutions (walls expanding as a matter-filled universe, H = 2/(3t); voids as an empty one, H = 1/t), not a
+  measured share, and constant; dark energy's 68 % is today's value of a share that changes with time. Rule 13: the
+  closeness is a coincidence until derived. The quantity in timescape that does the job of dark energy's share is the void
+  fraction, fitted at 0.737 ± 0.029 today ([Sei25]). In the toy, the growth test can measure the share of clear rows and
+  the wall-to-void ratio of growth as numbers the rule does not fix by construction.
