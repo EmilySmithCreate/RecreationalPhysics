@@ -7384,6 +7384,14 @@ than a plain flat torus (20 against 32 for the cheapest way out), though still g
    SPEED; 20 % relative to the larger speed; a cell's speed the mean over replicas that reached D/4) are fixed as written in
    `scripts/analyse_t75.py`; if exactly one placement spreads the cross word is UNSCORED, said so.*
 
+*Amendment 4 (2026-10-20, 02:47 UTC by the clock, before launch): beside a knot, without touching it.* Under Amendment 3
+only 2 of the 40 states at N = 1,024 give a placement beside a knot, because next to a knot the cheapest switch nearly
+always touches the knot itself. The rule becomes: **beside a knot, the flaw is the cheapest valid switch among those
+that touch no knot point**, at a starting point 1 or 2 steps from a knot point; far placements are unchanged. Counted
+from the saved states (counts only): near knots the cheapest flaw costs less (15, once 11) than far from them (20), so
+the two placements compared by ONE SPEED also differ in the flaw's cost, which is reported beside each word. *Ours,
+exact for these wirings:* the knots soften the space around them.*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy
