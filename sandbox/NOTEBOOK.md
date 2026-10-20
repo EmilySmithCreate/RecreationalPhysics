@@ -1850,3 +1850,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   closeness is a coincidence until derived. The quantity in timescape that does the job of dark energy's share is the void
   fraction, fitted at 0.737 ± 0.029 today ([Sei25]). In the toy, the growth test can measure the share of clear rows and
   the wall-to-void ratio of growth as numbers the rule does not fix by construction.
+- 2026-10-20, the owner, confirming the two-part history (VISION Update 75): "the hot early universe expanded fastest due to
+  the burps push. What that means is the uncurl 4 to 6 at the speed of light, then matter and light followed. So then space
+  was expanding and so was the part of space where matter exists. Where there is no growth. But we still had that initial
+  vacuum at least 2 but maybe more rows growing at vacuum rate at a growing edge and there was a point when the maximum
+  proportion of space had flaws and matter. Then the void overtook that at the 50/50 point about 4b years in." *Ours:*
+  the crossover is about 4 billion years ago, not 4 billion years in (general knowledge, to verify); a reply of the same
+  evening that said the speed-up began "about four billion years ago" was imprecise: the speed-up began about 5 to 6
+  billion years ago, and dark energy's density passed matter's about 4 billion years ago.

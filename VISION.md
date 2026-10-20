@@ -2247,7 +2247,15 @@ points; this says where, and it is a new rule of the toy under S1.
   the relevant sweep rate at the temp to give a probability function of expanding but instead of needing a hot spike it
   needs a cool spike"; *ours, the form it gives (hers once confirmed):* each row is offered once per fair sweep and added
   when, at that moment, its corridor is clear, so the rate is the offer rate times the chance of being clear, highest in
-  cold empty space, with no free knob (the brief, "The rate").
+  cold empty space, with no free knob (the brief, "The rate"). **Her two-part history, confirmed the same day:** "the hot
+  early universe expanded fastest due to the burps push. What that means is the uncurl 4 to 6 at the speed of light, then
+  matter and light followed. So then space was expanding and so was the part of space where matter exists. Where there is
+  no growth. But we still had that initial vacuum at least 2 but maybe more rows growing at vacuum rate at a growing edge
+  and there was a point when the maximum proportion of space had flaws and matter. Then the void overtook that at the
+  50/50 point." *Ours, general knowledge, to verify:* the measured crossover is later than her "about 4b years in": dark
+  energy's density passed matter's about 4 billion years ago, about 10 billion years after the Big Bang, and the expansion
+  began to speed up a little earlier, about 5 to 6 billion years ago; in timescape the apparent speed-up starts when voids
+  fill about 59 % of the volume ([Wil07b]).
 - **The form is owed:** `docs/design/growth_rule_brief.md` asks which kind of growth (whole rows, single pairs, or both),
   how far "surrounding" reaches, what pays and how often, and whether growth flaws heal. Nothing is built or run before
   her answers. Merging this update is her acceptance of the wording.
