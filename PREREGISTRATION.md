@@ -7200,6 +7200,11 @@ unfed phase, the slab's stored energy against time and its rate of loss against 
   of this is arithmetic; the run checks the kernel, the clean switch's spending and the noise of the layer proposals.
 - **The owner's:** owed before launch.
 
+*Amendment 1 (2026-10-20, about 02:15 UTC by the clock, before any code or run): the owner's prediction, verbatim:
+"T74, meals through the curl edge I agree with your assessment." So hers is ours in every word, and T74 tests a shared
+expectation; what it can still decide is whether the kernel and the clean switch's spending match the arithmetic, and the
+size claim at L = 16.*
+
 ### Runner and tests (to be written before launch)
 
 An `outside` option for `graphity.layer_feed.run_layer_feed` (the reservoir, the relaxation and the edge flow above), with
@@ -7266,6 +7271,16 @@ moves are accepted, and in a cold flat sheet almost none are.
   toy's open space carries no signal but the fronts of a change, for the same reason it has no pull at a distance, and a
   light cone would need the gapless quantity on the points (Update 40).
 - **The owner's:** owed before launch.
+
+*Amendment 1 (2026-10-20, about 02:15 UTC by the clock, before any code or run): the owner's position and two open
+questions of design.* Her words: "Flat space isn't stiff. So we need to allow for that. What kind of disturbance? How
+does the knot or flaw get in there? In the spiral? Does it matter when we make space not stiff?" *Ours:* the toy's flat
+space is stiff by its energy (exact, O22), and her statement is about reality; so T75 on the toy as it stands is the stiff
+baseline, and the same protocol is to be run again once a soft ingredient exists (the quantity on the points of Update 40,
+not yet designed), the comparison being the result. Open before launch, hers: (1) which space the disturbance sits in, the
+flat torus registered above or the product an opening actually makes (the tube six around with its seam shifted, which
+runs as spirals, O116), and whether a flaw is placed on the seam or away from it; (2) which second kind of disturbance,
+since a knot written in by hand into a flat torus is not how a knot arises. Her prediction stays owed.
 
 ### Runner and tests (to be written before launch)
 

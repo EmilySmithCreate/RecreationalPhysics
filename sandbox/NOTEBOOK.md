@@ -1660,3 +1660,6 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   stretched the distances between fixed points, the density per volume would thin and dark energy would not be
   constant. Her picture needs the first; hers to confirm.
 - 2026-10-19, the owner, evening: "First is good": a daughter's space grows by gaining points, not by stretching (VISION Update 72).
+- 2026-10-19, the owner, late evening: T74, "I agree with your assessment" (her prediction, as ours; PREREGISTRATION T74,
+  Amendment 1). On T75: "Flat space isn't stiff. So we need to allow for that. What kind of disturbance? How does the knot
+  or flaw get in there? In the spiral? Does it matter when we make space not stiff? Proceed w tests" (T75, Amendment 1).
