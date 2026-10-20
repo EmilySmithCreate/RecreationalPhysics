@@ -2588,7 +2588,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     Mercury's perihelion shift ([Giulini08], Secs. 1 to 3 read; the 25 September reading note, topic 4). Light bending
     is measured (1919; Cassini, to verify). So the author's condition that the quantity "matches Einstein wherever
     measured" cannot be met by a scalar alone; it needs space's curvature as well as time's rate, a tensor, or an
-    explicit restriction to slow matter stated as such. `docs/design/gravity_field_brief.md`, when written, opens with
+    explicit restriction to slow matter stated as such. `docs/design/gravity_field_brief.md` (*written 2026-10-20 as `docs/design/soft_space_brief.md`, VISION Update 76*), when written, opens with
     this and with what any such quantity must declare first: what it represents, why it belongs in the model, its
     symmetry, its dynamics, how matter couples to it, what continuum equation should emerge, and what falsifiable
     prediction distinguishes it (the third review's list; `docs/design/gravity_brief.md`, §7).

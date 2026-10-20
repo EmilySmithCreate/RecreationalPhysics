@@ -13,7 +13,7 @@ import pytest
 
 from graphity.cqg import NO_CAP, _switch, hamiltonian, is_valid, run_chain, surplus, torus, total_squares
 from graphity.row_growth import (GrowthState, can_insert, corridor_clear, curled_points, edge_census, grid_intact,
-                                 growth_step, insert_rows, row_points, run_growth, stream_seeds)
+                                 growth_step, insert_rows, row_points, run_growth, settle_graph, stream_seeds)
 
 LAM = 1.25
 
@@ -225,6 +225,20 @@ def test_growth_off_reproduces_run_chain(lx, ly, fair, sweeps):
     assert recs[-1]["S"] == s[-1] and recs[-1]["X"] == x[-1]
     assert [r["phase"] for r in recs] == ["start"] + ["settle"] * fair
     assert all(r["N"] == n and r["rows_added"] == 0 for r in recs)
+
+
+def test_settle_graph_is_run_growths_settling_on_a_torus():
+    """The unlabelled settling (for starts that are not a labelled torus) gives run_growth's settling readings and
+    final wiring on the same seed, field by field except the grid sizes."""
+    a = GrowthState.from_torus(16, 12)
+    ra = run_growth(a, 2.5, LAM, 7, 0, 8, seed=[5, 0, 3])
+    adj, part = torus(16, 12, cap=NO_CAP)
+    rb = settle_graph(adj, part, 2.5, LAM, 7, seed=[5, 0, 3])
+    assert np.array_equal(a.adj, adj)
+    drop = ("Lx", "Ly")
+    keep = [{k: v for k, v in r.items() if k not in drop} for r in ra]
+    assert keep == [{k: v for k, v in r.items() if k not in drop} for r in rb]
+    assert is_valid(adj, NO_CAP) and np.all(part[:, None] != part[adj])
 
 
 def test_fair_clock_carries_the_remainder():

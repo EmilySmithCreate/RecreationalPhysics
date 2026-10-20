@@ -1913,3 +1913,17 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   Local Group leaving view in about 100 billion years ([KS07] Sec. 1). Under her growth rule the voids between bound
   clumps keep growing too. So the last black holes of a universe sit in separate bound groups that never meet; her end
   state (black holes dissolving, Update 72) does not need them to.
+- 2026-10-20, the owner: "Okay so space keeps some energy matter even on top of the black hole dissolving when dark energy
+  matches or is greater than the gravity. Will what's left spread evenly and then stop or just stop? I think spread due to
+  the dark energy force?" *Ours (general knowledge, to verify):* it spreads and never quite stops. With a constant dark
+  energy, matter and light not bound into groups recede from each other for ever, thinning as the volume grows; light,
+  including the glow of dissolving black holes, thins faster, since it is also stretched and cooled. Dark energy is not a
+  push on the particles: it speeds up the growth of the space between unbound things, and inside bound things its effect is
+  negligible. The floor is empty de Sitter space at its Gibbons–Hawking temperature, about 10⁻³⁰ K for our dark energy.
+- 2026-10-20, the owner, on the end state needing no gathering: "got it thanks! It also makes sense it's not just one
+  black hole for all of space that didn't seem like enough even though dark energy is really small it's not one black hole
+  remnant per all of space small!" And on the two temperatures of the end state, the network's (set by the loop's total
+  energy, Update 70) and empty de Sitter space's (set by the dark energy): "My position is these are the same." VISION
+  Update 76.
+- 2026-10-20, the owner, on T76's three options (Amendment 3): "Yes we need soft space. It's time lol. But u can do 1 and
+  2 first if you like." T76 Amendment 4; VISION Update 76.

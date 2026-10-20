@@ -1,6 +1,9 @@
 """T76's verdicts, read from the runner's rows (scripts/run_t76.py). Usage, naming every run read:
 
-    python scripts/analyse_t76.py results/t76_l16_g2p5.csv results/t76_l24_g2p5.csv ...
+    python scripts/analyse_t76.py [--window W] results/t76_l16_g3p2_q16.csv results/t76_l24_g3p2_q16.csv ...
+
+Cells are (g, L, q), q the chance a clear offer is taken (Amendment 2; rows written before q was recorded read as
+q = 1). --window sets the settling window for rho_eq (100 as registered; 1,000 under Amendment 4).
 
 Implements the verdict words of PREREGISTRATION.md T76 and its translation to w. Per replica, from its readings:
 
@@ -44,7 +47,7 @@ import numpy as np
 QUORUM, WINDOW, MIN_HALF = 12, 100, 2
 STEADY, LOW, HIGH = 0.10, 0.90, 1.10
 WORDS = ("CONSTANT", "FALLING", "RISING", "STALLS")
-NUMERIC = ("g", "lam", "fair_sweep", "N", "Lx", "Ly", "S", "X", "D", "rho", "curled_share", "rows_added", "attempts")
+NUMERIC = ("g", "lam", "q", "fair_sweep", "N", "Lx", "Ly", "S", "X", "D", "rho", "curled_share", "rows_added", "attempts")
 
 
 def rho_eq(records, n_settle=None, window=WINDOW):
@@ -120,7 +123,7 @@ def w_of(readings, pooled_records=None):
 
 
 def read_rows(paths):
-    """{(g, L): {replica: [readings]}} from the runner's CSVs."""
+    """{(g, L, q): {replica: [readings]}} from the runner's CSVs (q = 1 where a row has none: the registered rate)."""
     cells = defaultdict(lambda: defaultdict(list))
     for path in paths:
         with open(path, newline="", encoding="utf-8") as fh:
@@ -128,15 +131,15 @@ def read_rows(paths):
                 r = dict(row)
                 for k in NUMERIC:
                     if k in r and r[k] != "":
-                        r[k] = float(r[k]) if k in ("g", "lam", "rho", "curled_share") else int(r[k])
-                cells[(r["g"], int(r["L"]))][int(r["replica"])].append(r)
+                        r[k] = float(r[k]) if k in ("g", "lam", "q", "rho", "curled_share") else int(r[k])
+                cells[(r["g"], int(r["L"]), float(r.get("q") or 1.0))][int(r["replica"])].append(r)
     return cells
 
 
 def analyse(cells, window=WINDOW):
-    """[(g, L, n replicas, word, counts, also, w dict, median rho_stop / rho_eq, median N_stop / N0)] per cell."""
+    """[(g, L, q, n replicas, word, counts, also, w dict, median rho_stop / rho_eq, median N_stop / N0)] per cell."""
     out = []
-    for (g, size), reps in sorted(cells.items()):
+    for (g, size, q), reps in sorted(cells.items()):
         readings = [replica_reading(recs, window) for _, recs in sorted(reps.items())]
         pooled = []
         for (_, recs), rd in zip(sorted(reps.items()), readings):
@@ -146,27 +149,31 @@ def analyse(cells, window=WINDOW):
         growth = float(np.median([r["N_stop"] / r["N0"] for r in readings]))
         w = w_of(readings, pooled)
         w["thin"] = sum(1 for r in readings if r["n_half"] < MIN_HALF)
-        out.append((g, size, len(readings), word, counts, also, w, ratio, growth))
+        out.append((g, size, q, len(readings), word, counts, also, w, ratio, growth))
     return out
 
 
-def main(paths):
-    rows = analyse(read_rows(paths))
+def main(paths, window=WINDOW):
+    rows = analyse(read_rows(paths), window)
     print("T76 (PREREGISTRATION.md): per (g, L), quorum %d; w = -1 - p for rho ~ N^p over the second half of growth "
           "(two-dimensional toy: the size of a departure carries the dimension caveat)." % QUORUM)
-    for g, size, n, word, counts, also, w, ratio, growth in rows:
+    for g, size, q, n, word, counts, also, w, ratio, growth in rows:
         flag = "" if n == 16 else "  [%d replicas, 16 registered]" % n
         if w.get("thin"):
             flag += "  [%d replicas with fewer than %d second-half readings]" % (w["thin"], MIN_HALF)
         extra = (" (also %s)" % ", ".join(also)) if also else ""
-        print("g = %-6g L = %-3d %-8s%s  counts %s  N_stop/N0 %.2f  rho_stop/rho_eq %.3f  p %.3f [%.3f, %.3f] "
+        print("g = %-6g L = %-3d q = 1/%-5d %-8s%s  counts %s  N_stop/N0 %.2f  rho_stop/rho_eq %.3f  p %.3f [%.3f, %.3f] "
               "(%d fits; pooled %.3f)  w %.3f%s"
-              % (g, size, word, extra, " ".join("%s %d" % (k[:4], v) for k, v in counts.items()), growth, ratio,
+              % (g, size, round(1 / q), word, extra, " ".join("%s %d" % (k[:4], v) for k, v in counts.items()), growth, ratio,
                  w["p"], w["q1"], w["q3"], w["n"], w["pooled_p"], w["w"], flag))
     return rows
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        sys.exit("name every T76 result read: python scripts/analyse_t76.py results/t76_....csv ...")
-    main(sys.argv[1:])
+    args = sys.argv[1:]
+    win = WINDOW
+    if args[:1] == ["--window"]:
+        win, args = int(args[1]), args[2:]
+    if not args:
+        sys.exit("name every T76 result read: python scripts/analyse_t76.py [--window W] results/t76_....csv ...")
+    main(args, win)

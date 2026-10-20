@@ -1,6 +1,11 @@
 """Write T76's configs (PREREGISTRATION T76, Design). Usage:
 
     python scripts/make_t76_configs.py --couplings G1 G2 G3 G4
+    python scripts/make_t76_configs.py --first-look G
+
+--first-look (Amendment 4, the owner's option 2 of 20 October): the registered coupling rule cannot be met (Amendment
+3, O141), so one coupling is run as a first look, at L = 16 and 24 and the four values of q, 8 cells, seeds from SEED0,
+with 2,000 fair sweeps of settling (Amendment 3 found 200 too short); rho_target is null.
 
 The four couplings are required and are not chosen here: T76 fixes them by a rule, the couplings at which the settled
 flat 16 x 16 sheet has rho_eq = 0.003, 0.01, 0.03 and 0.1, found by bisection on settling runs alone
@@ -44,6 +49,35 @@ def config(size, g, target, seed, q):
             "n_settle": 200, "n_growth": 4000, "cap_factor": 8, "n_ref": 96, "reach": 3, "seed": seed}
 
 
+FIRST_LOOK = ("PREREGISTRATION.md T76, Amendment 4 (the owner's option 2 of 20 October): a first look at one coupling, "
+              "g = %s, the one at which the settled flat 16 x 16 sheet holds a small patchy density without melting "
+              "(Amendment 3, O141), since no coupling meets the registered rule. As space grows by the owner's row "
+              "rule, each clear offer taken with chance q = 1/%d, does the density of missing squares per point stay "
+              "constant? L = %d. Not exploratory; labelled a first look. At lambda != 1 this is our family, not "
+              "combinatorial quantum gravity.")
+
+
+def first_look(g, out_dir=ROOT / "configs"):
+    """Amendment 4's eight cells at one coupling."""
+    g = float(g)
+    if g <= 0:
+        raise ValueError("couplings are positive")
+    written = []
+    for i, (size, q) in enumerate((s, q) for s in SIZES for q in Q_VALUES):
+        cfg = config(size, g, 0, SEED0 + i, q)
+        cfg["rho_target"] = None
+        cfg["_purpose"] = FIRST_LOOK % ("%g" % g, round(1 / q), size)
+        cfg["n_settle"] = 2000
+        path = Path(out_dir) / (cfg["name"] + ".json")
+        if path.exists():
+            print("exists, not rewritten:", path.name, file=sys.stderr)
+        else:
+            path.write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
+        written.append(path)
+        print("run_t76", cfg["name"])
+    return written
+
+
 def main(couplings, out_dir=ROOT / "configs"):
     couplings = [float(g) for g in couplings]
     if len(couplings) != len(TARGETS) or len(set(couplings)) != len(TARGETS):
@@ -69,6 +103,12 @@ def main(couplings, out_dir=ROOT / "configs"):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--couplings", type=float, nargs=4, required=True,
-                    help="the couplings for rho_eq = 0.003, 0.01, 0.03, 0.1, in that order, from the amendment")
-    main(ap.parse_args().couplings)
+    grp = ap.add_mutually_exclusive_group(required=True)
+    grp.add_argument("--couplings", type=float, nargs=4,
+                     help="the couplings for rho_eq = 0.003, 0.01, 0.03, 0.1, in that order, from the amendment")
+    grp.add_argument("--first-look", type=float, help="one coupling, Amendment 4")
+    args = ap.parse_args()
+    if args.first_look is not None:
+        first_look(args.first_look)
+    else:
+        main(args.couplings)

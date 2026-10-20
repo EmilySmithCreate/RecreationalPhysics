@@ -1050,7 +1050,7 @@ sources. This was option A of `docs/design/gravity_brief.md`, section 6.
   of space, not of X; how a dip spreads is set by space's own rule (the links between points); matter and energy set
   only where a dip starts and how deep, from their own energy, so the pull scales with energy; and the dip moves matter.
 - **Under S1** this is a new knob: its form, its coupling to the wiring and to energy, and its constants are to be fixed
-  in a design brief (`docs/design/gravity_field_brief.md`, not yet written) before any run, and every setting run is
+  in a design brief (`docs/design/gravity_field_brief.md`, not yet written; *written 2026-10-20 as `docs/design/soft_space_brief.md`, Update 76*) before any run, and every setting run is
   published. The model with it is our family, never CQG.
 - *Ours, unverified (general knowledge, to verify):* in Einstein's gravity, slow objects fall almost entirely because
   time runs at different rates in different places (the weak-field metric's time part carries Newton's potential);
@@ -2265,3 +2265,40 @@ points; this says where, and it is a new rule of the toy under S1.
 - **The form is owed:** `docs/design/growth_rule_brief.md` asks which kind of growth (whole rows, single pairs, or both),
   how far "surrounding" reaches, what pays and how often, and whether growth flaws heal. Nothing is built or run before
   her answers. Merging this update is her acceptance of the wording.
+
+Update 76 (2026-10-20, 14:53 UTC by the clock): **DECISION (the author's): soft space is next; and her position that the
+end state's two temperatures are one.** Why this page changes: three tests of 20 October found the toy's stiff space
+carrying no steady signal (T75, O140), no pull across a void (the halo look of 20 October) and no thin, steady density of
+missing squares (T76 Amendment 3, O141), and she chose the ingredient all three lack; and she answered the question left
+open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 October.
+
+- **DECISION: soft space.** Her words, on T76's three options: "Yes we need soft space. It's time lol. But u can do 1 and
+  2 first if you like." Soft space is Update 40's decision made concrete: a quantity on the points of space that can vary
+  smoothly, so that space has small, gapless fluctuations everywhere, on the condition that it matches curve-first
+  gravity. *Ours:* one ingredient is asked to do three jobs, a medium in which disturbances travel, a carrier for a pull,
+  and a home for a thin steady dark energy, and each is a separate prediction it can fail. Under S1 its form is fixed in a
+  design brief before anything is built (`docs/design/soft_space_brief.md`), which opens with the constraint recorded on
+  6 October (`docs/design/gravity_brief.md`, section 7): a single number per point gives Newton's pull but bends no light,
+  so it cannot match Einstein's numbers where light bending is measured; the brief must name either a quantity with more
+  structure or a stated restriction to slow matter. T76's options 1 and 2 run first (PREREGISTRATION T76, Amendment 4).
+  The model with it is our family, never CQG.
+- **Her position: the network's end temperature and empty de Sitter space's are the same number.** Her words: "My
+  position is these are the same: yours by the loop's total energy (Update 70), the standard one by the dark energy." So
+  the network's coupling at the end of a universe's turn is the Gibbons–Hawking temperature of that universe's empty end
+  state, set by its dark energy. With it, on dissolving where it sits (Update 72): "it's not just one black hole for all
+  of space that didn't seem like enough." *Ours, unverified:* (1) the toy's g has no units, so the identification fixes
+  the toy's scale rather than predicting a number by itself; and the Gibbons–Hawking temperature belongs to a daughter's
+  spacetime, while the network has no spacetime and no clock across universes (Update 68), so "the same" links the
+  network to each daughter's end state, and every daughter of one loop would then end with one dark energy. (2) Joined to
+  Update 70's hypothesis, dark energy as the defect density at the network's coupling, it gives one equation for one
+  unknown: the dark-energy density must equal the density of defects at the temperature that density itself sets. Rough
+  arithmetic (ours; assumptions: defects activated as in the toy, a density of about E e^(−E/T), one possible site per
+  Planck volume; inputs general knowledge, to verify): with dark energy about 1.1 × 10⁻¹²³ of the Planck density and the
+  end temperature about 2.2 × 10⁻³⁰ K (1.6 × 10⁻⁶² in Planck units), the equation is met when a defect costs about 146
+  times the end temperature, about 2 × 10⁻⁶⁰ of the Planck energy (3 × 10⁻³² eV). The answer depends on the site density
+  only through its logarithm (a ten-billion-fold change in either direction moves 146 to 123 or 169). So her position is
+  self-consistent, and what it asks is why a defect is so cheap, a price set at the scale of the cosmic horizon rather
+  than the Planck scale: the cosmological constant problem in her terms, restated rather than solved. In the toy, flaws
+  appear at couplings where they cost about eight to ten times g; at 146 times, a sheet of any simulable size holds none.
+  Rule 13 applies: a target, not a result.
+- Nothing here changes a verdict. Merging this update is her acceptance of the wording.

@@ -157,7 +157,7 @@ def test_runner_end_to_end(tmp_path):
     with pytest.raises(FileExistsError):              # append-only
         R.main(path, out)
     cells = A.read_rows([out / "t76_tiny.csv"])
-    rd = [A.replica_reading(recs, window=3) for recs in cells[(2.5, 8)].values()]
+    rd = [A.replica_reading(recs, window=3) for recs in cells[(2.5, 8, 1.0)].values()]
     assert all(r["N_stop"] >= r["N0"] == 64 for r in rd)
     again = tmp_path / "again"                        # the same config reproduces its rows
     R.main(path, again)
@@ -175,3 +175,58 @@ def test_settling_helper_end_to_end(tmp_path):
     assert all(float(r["rho_eq"]) >= 0 for r in rows)
     meta = json.loads((tmp_path / "t76_settle_tiny.meta.json").read_text())
     assert [s["g"] for s in meta["summary"]] == [2.0, 4.0]
+
+
+def test_settling_helper_from_saved_states(tmp_path):
+    """T76 Amendment 4: replicas start from saved end states in replica order, reused cyclically and recorded; the
+    density at the start and the excess the coupling added are reported."""
+    from graphity.cqg import NO_CAP, torus
+    d = tmp_path / "t51_fake_00_adj"
+    d.mkdir()
+    for rep in (0, 1):
+        adj, part = torus(8, 8, cap=NO_CAP)
+        np.savez(d / ("N64_rep%d_tc10.npz" % rep), adj=adj, part=part, replica=rep)
+    cfg = dict(name="t76_settle_prod_tiny", section="T76-settle", states_dir=str(tmp_path), states="t51_fake",
+               **{"lambda": 1.25}, couplings=[2.0], replicas=3, n_settle=10, window=5, n_ref=96, seed=20267697)
+    p = tmp_path / "s.json"
+    p.write_text(json.dumps(cfg))
+    S.main(p, tmp_path)
+    rows = list(csv.DictReader(open(tmp_path / "t76_settle_prod_tiny.csv", newline="")))
+    assert [r["state"] for r in rows] == ["N64_rep0_tc10.npz", "N64_rep1_tc10.npz", "N64_rep0_tc10.npz"]
+    assert [r["reuse"] for r in rows] == ["0", "0", "1"]
+    assert all(r["N"] == "64" and float(r["rho_start"]) == 0.0 for r in rows)
+    assert all(abs(float(r["excess"]) - float(r["rho_eq"])) < 1e-12 for r in rows)
+    bad = dict(cfg, L=8)
+    p.write_text(json.dumps(bad))
+    with pytest.raises(ValueError):                   # a start is either the torus or the states, not both
+        S.main(p, tmp_path / "x")
+
+
+def test_cells_with_different_q_stay_apart(tmp_path):
+    """Amendment 4's repair: the runner writes q and the reader keys cells by (g, L, q)."""
+    out = tmp_path / "results"
+    for name, q in (("t76_tiny_qa", 0.5), ("t76_tiny_qb", 0.25)):
+        p = tiny_config(tmp_path, name)
+        cfg = json.loads(p.read_text())
+        cfg["q"] = q
+        p.write_text(json.dumps(cfg))
+        R.main(p, out)
+    cells = A.read_rows([out / "t76_tiny_qa.csv", out / "t76_tiny_qb.csv"])
+    assert sorted(cells) == [(2.5, 8, 0.25), (2.5, 8, 0.5)]
+    rows = A.analyse(cells, window=3)
+    assert [r[2] for r in rows] == [0.25, 0.5] and all(r[3] == 2 for r in rows)
+
+
+def test_first_look_configs(tmp_path):
+    """Amendment 4: one coupling, L = 16 and 24, the four values of q, 2,000 fair sweeps of settling, no target."""
+    written = M.first_look(3.2, tmp_path)
+    cfgs = [json.loads(p.read_text()) for p in written]
+    assert [c["name"] for c in cfgs[:4]] == ["t76_l16_g3p2_q16", "t76_l16_g3p2_q64", "t76_l16_g3p2_q256",
+                                              "t76_l16_g3p2_q1024"]
+    assert [c["seed"] for c in cfgs] == list(range(20267601, 20267609))
+    assert [c["L"] for c in cfgs] == [16] * 4 + [24] * 4
+    assert all(c["g"] == 3.2 and c["rho_target"] is None and c["n_settle"] == 2000 and c["n_growth"] == 4000
+               and "Amendment 4" in c["_purpose"] for c in cfgs)
+    before = written[0].read_text()
+    M.first_look(3.2, tmp_path)                       # refuses to rewrite
+    assert written[0].read_text() == before

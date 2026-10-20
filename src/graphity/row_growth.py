@@ -372,3 +372,28 @@ def run_growth(state, g, lam, n_settle, n_growth, cap_factor, seed, n_ref=N_REF,
         if growing and state.n >= stop_at:
             break
     return out
+
+
+def settle_graph(adj, part, g, lam, n_settle, seed, n_ref=N_REF, cap=NO_CAP):
+    """The settling stage of run_growth on any four-link two-sided graph, in place, with no grid labels (for a start
+    such as a burp's product, which is not a labelled torus). The same chain, fair clock and stream as run_growth's
+    settling (on a labelled torus, the same readings, tested); Lx and Ly are reported as 0."""
+    adj = np.ascontiguousarray(adj, dtype=np.int64)
+    side_u = np.flatnonzero(np.asarray(part) == 0).astype(np.int64)
+    chain_seed, _ = stream_seeds(seed)
+    inv_g = 1.0 / float(g)
+    n = adj.shape[0]
+
+    def reading(t, k, acc):
+        d, curled, links = edge_census(adj)
+        return dict(fair_sweep=t, phase="start" if t == 0 else "settle", attempts=k,
+                    acceptance=(acc / k if k else None), N=n, Lx=0, Ly=0, S=int(total_squares(adj)),
+                    X=int(surplus(adj)), D=int(d), rho=d / n, curled_share=curled / links, rows_added=0)
+
+    carry = 0
+    out = [reading(0, 0, 0)]
+    for t in range(1, n_settle + 1):
+        k, carry = divmod(carry + 2 * n * n, n_ref)
+        acc = _attempts(adj, side_u, inv_g, int(k), chain_seed if t == 1 else -1, float(lam), int(cap))
+        out.append(reading(t, int(k), int(acc)))
+    return out

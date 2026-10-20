@@ -7608,3 +7608,40 @@ small patchy density at g = 3.2 (median 0.0066, spread 0 to 0.13, none melted), 
 between nearly flat and melted (2 of 16 melted at 3.4, 12 of 16 at 3.8, all from 4.1). So no coupling gives a steady
 density of 0.003 to 0.1: missing squares come in clusters that either stay rare or grow into a melt. Growth is not run
 until the owner decides how to proceed; the finding is ASSUMPTIONS O141.*
+
+*Amendment 4 (2026-10-20, 14:50 UTC by the clock, before any growth run and before either check below has run): the
+owner's choice, and two defects in the reader repaired.* Her words, on the three options of Amendment 3: "Yes we need soft
+space. It's time lol. But u can do 1 and 2 first if you like." So soft space (the quantity on the points of VISION
+Update 40) is to be designed next, and two checks run first:
+
+1. **Option 1, a calibration on the burp's product, not a registered verdict.** The settling stage alone (growth off),
+   started from the saved end states of T51 that T75 used (`t51_l128_10k`, N = 512, and `t51_l256_300k`, N = 1,024; the
+   spaces a burp actually makes, whose cheapest flaw costs 20 rather than 32, T75 Amendment 3), at g = 1.5, 2.0, 2.4, 2.6,
+   2.8, 3.0, 3.2 and 3.4, 16 replicas each (states taken in replica order and reused cyclically, each reuse recorded),
+   2,000 fair sweeps, the density read over the last 1,000 (`scripts/settle_t76.py` with `states`; configs
+   `t76_settle_p512`, `t76_settle_p1024`). The products already hold knots, whose missing squares count in D, so the
+   reading is the **excess**, the density settled minus the density at the start. A coupling holds **a steady thin
+   density** if, in at least 12 of 16 replicas, the excess lies between 0.003 and 0.1, the replica has not melted (ρ_eq
+   at most 1), and the density's spread over the window is less than half that replica's excess. *Ours, before the run:*
+   none does at either size. The softer flaw moves the onset to lower couplings, but flaws still gather (near the knots
+   first, where the cheapest switch costs 11 to 15) and either stay rare or run into a melt, as on the flat sheet (O141).
+   If one coupling does hold a steady thin density, T76's growth cannot yet run there: rows are defined by the grid labels
+   of a flat torus, and a product (the tube glued with a twist, O116) has none, so a row rule on a product would be a
+   design question for the owner first.
+2. **Option 2, T76 at one coupling as a first look.** g = 3.2 only, the one coupling at which the settled flat 16 × 16
+   sheet holds a small patchy density without melting (Amendment 3); L = 16 and 24, q = 1/16, 1/64, 1/256 and 1/1024, 16
+   replicas each, 8 cells, seeds 20267601 to 20267608 (`python scripts/make_t76_configs.py --first-look 3.2`). Settling
+   is lengthened to **2,000 fair sweeps, ρ_eq read over the last 1,000** (`analyse_t76.py --window 1000`), since
+   Amendment 3 found 200 too short; growth as in Amendment 2 (at most 4,000 fair sweeps, stop at 8 times the starting
+   size). The verdict words are as registered, scored per (L, q), and the write-up calls it a first look at one coupling,
+   since the registered rule for the couplings could not be met. Rule 14 stands: the held-out L = 32 runs only after its
+   numbers with ranges are written from L = 16 and 24. **The owner's prediction** (CONSTANT, w = −1) stands as registered.
+   **Ours, revised before any run:** at g = 3.2 the flat sheet's density is a few clusters, not a gas (median 0.0066,
+   replicas from 0 to 0.13). New rows arrive clean, clusters are not seen to spread (T75), and a growing sheet nucleates
+   more clusters and comes nearer melting, since larger sheets melt at lower couplings. So the replicas should split,
+   some falling as clean rows dilute their clusters and some rising as a cluster runs into a melt: **MIXED** in most
+   cells, CONSTANT in none, with w undefined where ρ_eq is zero. Cells go to the cloud.
+3. **Two defects in the reader, found while writing this, repaired before any growth run.** (a) The runner did not write
+   q into its rows, and the reader keyed cells by (g, L) only, so the four values of q at one coupling and size would have
+   been pooled as one cell. The runner now writes q and the reader keys cells by (g, L, q) (tested). (b) The reader's
+   settling window was fixed at 100 fair sweeps; it takes `--window` now, set to 1,000 here.

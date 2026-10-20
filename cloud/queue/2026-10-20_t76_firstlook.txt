@@ -1,0 +1,11 @@
+# T76 Amendment 4, option 2 (the owner's, 20 October): a first look at one coupling, g = 3.2, on the flat sheet, as space
+# grows by her row rule with each clear offer taken with chance q; L = 16 and 24, four values of q, 16 replicas each,
+# 2,000 fair sweeps of settling. The held-out L = 32 waits for its written numbers (rule 14).
+run_t76 t76_l16_g3p2_q16
+run_t76 t76_l16_g3p2_q64
+run_t76 t76_l16_g3p2_q256
+run_t76 t76_l16_g3p2_q1024
+run_t76 t76_l24_g3p2_q16
+run_t76 t76_l24_g3p2_q64
+run_t76 t76_l24_g3p2_q256
+run_t76 t76_l24_g3p2_q1024

@@ -74,7 +74,8 @@ def main(path, out_dir="results"):
         for rep in range(int(cfg["replicas"])):
             t0 = time.time()
             recs, state = run_replica(cfg, rep)
-            base = dict(g=float(cfg["g"]), lam=float(cfg["lambda"]), L=int(cfg["L"]), replica=rep)
+            base = dict(g=float(cfg["g"]), lam=float(cfg["lambda"]), L=int(cfg["L"]), q=float(cfg.get("q", 1.0)),
+                        replica=rep)
             for r in recs:
                 out.write(dict(**base, **r))
             finals.append(dict(replica=rep, N=state.n, Lx=state.lx, Ly=state.ly, fair_sweeps=recs[-1]["fair_sweep"]))
