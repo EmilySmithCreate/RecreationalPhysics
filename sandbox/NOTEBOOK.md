@@ -1597,3 +1597,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   between stores only through the moves' pooled payment, so a flow from bulk to edge is a new knob (S1). Caution (general
   knowledge, to verify): a black hole's Hawking temperature falls as its mass grows; her local g is the toy's interior
   excitation, not a horizon temperature, and the two must not be confused.
+- 2026-10-19, the owner, evening, on energy leaking away between stars: "just drains away in the gap it cannot go
+  anywhere can it? Maybe I'd resolves over the inverse curvature dark energy that can still affect it. Otherwise it waits
+  so the next star feed has a good starting point." *Ours:* right that it cannot vanish (claim 6): T71's leak is a
+  protocol knob, booked as "leaked", not a physical claim. Her two cases: no leak, so each star's energy waits and the
+  burp comes once enough stars have arrived in total, with no minimum star size; or a slow leak back into the network
+  (her "dissolves" into the dark-energy coupling), which would also be the dissolve rule Update 72 says the toy lacks,
+  one knob for both. Consequence: with no dissolve at all, a black hole short of the threshold that is never fed again
+  never dissolves, and its universe's turn never ends. Standard counterpart of a slow dissolve: Hawking evaporation
+  (general knowledge, to verify), extremely slow for large black holes. Which case is hers to choose.
