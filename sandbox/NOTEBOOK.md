@@ -1771,3 +1771,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   our space, which they do if our space is itself the edge (the growing surface of an opening). If every point can make
   new points at a fixed rate the growth is exponential, which is the behaviour of a cosmological constant; growth only at
   a boundary is slower. Dark energy speeds expansion up (in effect a push); matter's gravity slows it.
+- 2026-10-20, the owner, refining the quark idea: "Maybe not tangled maybe gathered, then the distance around a knot you
+  talked about is the spacing." *Ours:* in the toy two knots cannot sit closer than one flat point apart without becoming
+  one piece, and the only force between leftovers is a gain of 16 when they touch, none at a distance (exact, O22): a
+  short-range binding, the shape (not the strength or rules) of the force that holds quarks together. The softened ring
+  round a knot is two steps wide (the halo look of 20 October).
