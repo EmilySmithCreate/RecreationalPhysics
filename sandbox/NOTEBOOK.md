@@ -1877,3 +1877,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   own age, and so Earth's, is not scored under the measure, since its choices were made with these numbers known. In her
   picture one factor, matter gathering, drives both planet formation and void growth, but planet formation peaks about six
   billion years before the crossover, so a shared cause does not make them coincide.
+- 2026-10-20, the owner: "I still have a hard time doing mental math on relativity so I just use time since big bang in
+  earth years. What figure do you recommend?" *Ours, recommended and used from here for comparisons:* time since the Big
+  Bang on clocks like ours, in billions of years, with redshift beside it where a source gives z. In the standard model
+  that is cosmic time (13.8 billion years now), and an Earth clock agrees with it to better than a part in a million
+  (general knowledge, to verify). In timescape our clocks are wall clocks; the volume-average clock runs faster by the mean
+  lapse 1 + f_v/2 ([Wil07b]), about 1.37 at today's f_v, so a timescape curve is put on wall time before it is set beside
+  the standard one.
