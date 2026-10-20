@@ -1952,3 +1952,18 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   "One clock to check the code yes." *Ours:* the "one per three" was knots per seed, not per square (0.29 ± 0.04 per
   extra seed, T17; 0.35 columns per natural seed, T37). The sandbox look of the same afternoon: a pair added in one place
   leaves mostly missing squares (the uncurl kind) and at most a little curl. VISION Update 76.
+- 2026-10-20, the owner, on soft lengths: "the lengths need their own springiness, so ripples can cross empty space. Yes
+  let's think about". On the uncurl kind: "dark matter is the result of uncurling of the column and double column flaws
+  - extra square - open space makes more - heavier than curling as lambda>1 and uncurling cost is 1. So that could
+  explain why there is more matter than antimatter?, the particles canceled not there was more curl per point the
+  difference being related to lambda-1. I need to better understand quarks. Check me if I'm off track again, the knots
+  idea was not logically placed - when a square drops, imagine its diagonal points both do full curvature. The curl
+  points meet and cancel leaving a closed line (String) as well as the uncurl points touch and leave an antimatter string.
+  - the antimatter and matter cancel and blast! Light! - there was more curl than uncurl at the time and location that
+  spacetime opened. Same energy creates more curl". *Ours:* per square at λ = 1.25 an extra square costs 16(λ − 1) = 4 and
+  a missing one 16, so the same energy buys four times as much curl; but in the toy the cheapest flaw in flat space is
+  two missing squares and no curl (32, O22), so a square that drops leaves no curl partner, and the toy's total curvature
+  is not conserved (its moves can change the topology, the handle look of 19 October). A rule that kept the space a
+  surface would make curvature defects come in pairs of opposite sign, bound when cold and freed when hot: the published
+  physics of defects in two-dimensional crystals (Kosterlitz and Thouless; Halperin, Nelson and Young; general knowledge,
+  to verify). VISION Update 76.

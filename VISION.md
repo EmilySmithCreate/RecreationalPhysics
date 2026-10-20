@@ -2345,4 +2345,18 @@ open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 
   number that can change, a difference between the two kinds, and a moment out of balance. Her store flow at the opening
   is the third; the toy's unequal prices are a candidate for the second; whether anything in the toy counts as the first
   is open.
+- **Her ideas, 22:03 UTC by the clock, recorded for testing, not decided** (her words in `sandbox/NOTEBOOK.md`): soft
+  lengths with their own springiness ("Yes let's think about"); curl is the extra square and uncurl the missing one; the
+  same energy makes more curl than uncurl, since an extra square costs λ − 1 to a missing square's 1, which could be why
+  matter outnumbers antimatter; when a square drops, its curl points and its uncurl points each close up into a string,
+  one matter and one antimatter, which later cancel into light. *Ours:* (1) the arithmetic holds: per square at λ = 1.25
+  an extra square costs 16(λ − 1) = 4 and a missing one 16. (2) In the toy as built a square that drops leaves no curl
+  partner: the cheapest flaw in flat space is two missing squares and no curl (32, O22), and its moves can change the
+  topology (the handle look of 19 October), so total curvature is not conserved and defects need not come in pairs. A
+  rule that kept the space a surface would conserve it, and then curvature defects of opposite sign come in pairs, bound
+  when cold and freed when hot: the published physics of defects in two-dimensional crystals (Kosterlitz and Thouless;
+  Halperin, Nelson and Young; general knowledge, to verify), which is her "merge immediately when cold". (3) Real matter
+  and antimatter weigh exactly the same and the observed excess is about one part in a billion (general knowledge, to
+  verify), so a fourfold price difference would have to act only slightly, for example at a very high temperature, to be
+  consistent with it; that is a quantitative target, not yet a calculation.
 - Nothing here changes a verdict. Merging this update is her acceptance of the wording.
