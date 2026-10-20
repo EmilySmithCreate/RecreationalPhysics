@@ -7397,6 +7397,14 @@ under Amendment 4 found, at each size, one placement beside a knot whose cheapes
 that changes nothing in the energy, not a flaw. The flaw is therefore the cheapest valid switch **with a cost above
 zero** (beside a knot, among those that touch no knot point); a cost-free rewiring is never used.*
 
+*Amendment 6 (2026-10-20, 09:00 UTC by the clock, before launch): the owner's prediction made exact.* Asked whether the
+flaw spreads (the disturbed region grows) or travels (the flaw stays small and moves), her words: "By itself I don't
+think a flaw can move space curves it doesn't move. But the flaws effects can travel outwards as it settles or interacts
+with other spacial flaws (of types that can interact) and matter /energy." So her prediction is **SPREADS, not
+TRAVELS**: it holds where a cell reads SPREADS and fails where it reads TRAVELS (replacing Amendment 2 item 5's "either").
+Her reason also bears on the second kind of disturbance, still open: effects that travel when flaws interact point to a
+pair of flaws a few steps apart. Ours is unchanged.*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy

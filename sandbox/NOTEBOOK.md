@@ -1776,3 +1776,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   one piece, and the only force between leftovers is a gain of 16 when they touch, none at a distance (exact, O22): a
   short-range binding, the shape (not the strength or rules) of the force that holds quarks together. The softened ring
   round a knot is two steps wide (the halo look of 20 October).
+- 2026-10-20, the owner: "By itself I don't think a flaw can move space curves it doesn't move. But the flaws effects can
+  travel outwards as it settles or interacts with other spacial flaws (of types that can interact) and matter /energy" (T75,
+  Amendment 6: SPREADS, not TRAVELS). And on where new points appear: "At the edges more are made due to them just being
+  what happens: 2d to 3d creates energy, more dots on flat space just creates more space, empty." *Ours, exact in the toy:*
+  the opening releases the curling cost, and adding flat space costs nothing (every width from six around up has the same
+  energy, O116), so new flat points are empty space at no cost; the toy has no rule for where or how fast they appear.
+  Open: observed expansion is the same everywhere, with no edge in view, so an edge where points are made has to lie
+  beyond what we can see, or our whole space has to be that edge.
