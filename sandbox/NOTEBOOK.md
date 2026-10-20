@@ -1682,3 +1682,24 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   dark-matter reading), and the network's own missing squares at its coupling, made afresh in every new piece of space
   and so constant per volume (the dark-energy reading, Update 70). Open: where new points appear; if inside a flaw, the
   toy does not say what happens to it.
+- 2026-10-20 (19 October, late), the owner, on the two kinds of point (her words, unedited): "I hadn't thought about this but
+  what if one point is a curling type and the other an uncurling point. And the link between them energy goes so it's
+  closer to the curling point it's curled and to the uncurling point. Flaw is when the curling and uncurling points connect
+  to points that are not close to them, that's why there is a curling cost, the cost of moving energy from curling to
+  uncurling, it moves at the speed of light only so non curling energy needs to create a bath for it to do that: hotter
+  bath, the curling energy is hit more often. Right in the middle, space is flat. So the flaw is curled point that should be
+  flat (too much curling energy, makes curling matter, we could call it one or 2d space if it's the culumn, so it doesn't
+  interact with the uncurled matter.) the extra squares in there cost. When it cools and they flatten out they release
+  their curling energy and space springs back, adding a negative curvature and releasing the tiny burp of dark matter that
+  cancels out the curl side antimatter but leaves a difference which is net dark matter. and creating dark matter with that
+  change. The difference is dark matter gets created in the daughter universe and regular matter is created during the
+  release, with the store surplus. Then the dark energy flaw network expands to fill space and creates dense areas that
+  form the starting dense areas for galaxy formation. Makes sense curling side energy is denser. Positive and negative
+  charges attract. A flaw is" (the message ends there). *Ours, against the toy, in the reply of the same night:* every
+  link joins one point of each kind (exact, the toy is two-sided); a switch, the toy's flaw, joins points that were not
+  neighbours (exact); knots are where the local dimension is lower (exact, the census d(v)); a hotter bath crosses a wall
+  more often, as exp(-wall/g) (measured, the tube); healing knots release their energy and released energy breaks squares
+  (T51, O123). What the toy lacks: the two kinds are exactly symmetric in its energy, so a curling kind and an uncurling kind
+  is a new ingredient (S1). Two tensions: the knots' layout is white noise, not the sky's seed pattern (the look of 18
+  October), and dark matter released by knots flattening is a different reading from the knots being the dark matter
+  (Update 52).
