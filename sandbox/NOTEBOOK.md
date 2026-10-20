@@ -1888,3 +1888,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   constant. I think it's possible that a smaller segment can be tested, but it will only work if there's two existing flaws
   lined up so that the two row additions can take advantage of as the end points of the line segment otherwise it has to
   go across all of space. Yes 4 coupling is g right?" (Yes: g, the network's coupling.) VISION Update 75; T76.
+- 2026-10-20, the owner, on [T24]'s "more and more matter is transformed into space-time": "I don't think matter transforms
+  into spacetime? I think it goes into the black hole? Is his g the same as curvature? While we have 3 types of energy
+  stores: the elevated knot, the column, and the curve, where the negative curvature outside of time, in the network,
+  elevated knots are g, column energy is dark matter, and a curve in flat space is gravity, which has an effect near energy
+  and matter but not in the cold void of space." *Ours:* in his picture matter is the leftover random phase, which
+  converts to geometry as the coupling falls ([T25] VI.1); in hers matter's energy goes into black holes, and a black
+  hole's burp makes a daughter, so matter does end as new space, in another universe. g is the coupling, not the
+  curvature: the curvature is a function of it, K(g). Her three stores against the toy: flickering flaws whose density is
+  set by g alone (constant at a fixed coupling: the dark-energy reading); frozen knots fixed in number at the opening and
+  thinning as space grows (the dark-matter reading); and curvature round matter (gravity). Caution (general knowledge, to
+  verify): in Einstein's gravity the curvature that makes the pull reaches into empty space, weakening as 1/r² but never
+  stopping; the Sun pulls the Earth across empty space. A curve only near matter gives no pull across a void, which is
+  what the toy's stiff space does (the halo look of 20 October).
