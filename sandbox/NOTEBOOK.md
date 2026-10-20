@@ -1636,3 +1636,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   and hers is constant because she freezes the coupling; for D > 2 his finite curvature needs the coupling to run with
   size, which is open against her fixed coupling. Her "reverses" works in the toy's accounting: released curling energy
   breaks squares, and too few squares is negative curvature (T9; O123).
+- 2026-10-19, the owner, evening, on bringing infall into the toy: "Let's try one, my only concern leaning to 2 is that
+  black holes eat more get bigger, my theory would say if a black hole stops eating it gets smaller so as long as the
+  energy can be on a smooth path, something has to slow it down. My intuition says it's something about max curling
+  speed." *Ours:* option 1 is energy that travels from store to store to reach the cut; a flow that can carry energy in
+  can carry it out, so a cap is needed; her maximum curling speed is that cap. Written as a proposed form in
+  `docs/design/curling_energy_brief.md` for her decision: which way the cap acts is hers.
