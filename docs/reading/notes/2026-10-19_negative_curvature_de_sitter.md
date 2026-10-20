@@ -97,3 +97,7 @@ curvature." [T23] conclusion: "There are no singularities, no horizon".
    and the two should not be described as the same mechanism without that qualifier.
 6. For D > 2 his finite curvature needs the coupling to run with the network's size; how that bears on a coupling fixed
    by the loop's total energy is open (to verify with a physicist).
+   *The owner's answer, the same evening:* "in my picture the network doesn't grow it is eternal." *Ours:* his running
+   coupling keeps the curvature finite as N → ∞; a network that never grows never takes that limit, and with its total
+   energy fixed the coupling is fixed (Update 70), so the requirement does not arise in her picture. What it leaves to
+   say is where a daughter's growing space comes from (see the notebook, 19 October).

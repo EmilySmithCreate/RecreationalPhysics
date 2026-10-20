@@ -1651,3 +1651,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   total curvature is fixed by the number of handles, zero for a torus and negative for two or more, so a closed surface
   that is negatively curved must have at least two handles; whether the toy's graph curvature obeys the same count is to
   verify.
+- 2026-10-19, the owner, evening, on [T22]'s coupling that must shrink as the network grows: "in my picture the network
+  doesn't grow it is eternal." *Ours:* that removes the requirement, which exists only for the limit N → ∞; an eternal
+  network with a fixed total energy keeps one coupling (Update 70). The question it leaves: where does a daughter's
+  expanding space come from? Points are not fundamental (Update 59), and in the layer form the count of points changes as
+  layers split or compact (Updates 63, 65), so a daughter can grow by gaining points paid for by energy; new points at
+  the network's coupling carry the same defect density, so dark energy per volume stays constant. If expansion only
+  stretched the distances between fixed points, the density per volume would thin and dark energy would not be
+  constant. Her picture needs the first; hers to confirm.
