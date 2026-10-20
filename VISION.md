@@ -2310,7 +2310,7 @@ open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 
   against "things collect where clocks run slow", and it had not: the recommendation to start with one clock for both
   ends was about checking the kernel, not about the physics). *Ours, general knowledge, to verify:* one number per point
   cannot carry gravitational waves, whose two kinds squeeze one direction while stretching another; a length on each link
-  as its own variable can (linearized Regge calculus, being read). Her question, why a constant dark energy would come
+  as its own variable can (linearized Regge calculus, being read). *(Corrected the same day by that reading, `docs/reading/notes/2026-10-20_soft_space_prior_work.md`: on the toy's graph lengths on links alone are not enough; Regge calculus recovers the waves only with diagonals given lengths too ([Ham09]), here a length per square's diagonal. And the reading finds her choice of clocks and link lengths to be a published class, stratified scalar theories, which match light bending only for bodies at rest in their preferred frame and carry a preferred-frame effect, α₁ = −8, where pulsars measure below about 4 × 10⁻⁵ ([WN72], [SW12]); the brief records it as a named target. Her "things collect where clocks run slow" is published too ([Sme11]), and weak.)* Her question, why a constant dark energy would come
   from the growth rule and not from the negative-curvature remnant: the remnant (the network's defects) is the energy; the
   growth rule is what keeps its amount per volume fixed as space grows, since points that stretched apart would carry the
   same defects over more volume and thin them as matter thins. A reading of the published relatives (fields on

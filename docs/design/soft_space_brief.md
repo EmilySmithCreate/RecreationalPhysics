@@ -32,6 +32,26 @@ gravitational waves with their two polarizations, and the orbital decay of binar
 quadrupole formula to a fraction of a per cent (to verify). That needs a quantity on the links (a length per link), the
 discrete cousin of a metric.
 
+*Corrected 2026-10-20, the same day, by the reading `docs/reading/notes/2026-10-20_soft_space_prior_work.md` (an
+assistant agent's; every source read in part or in abstract, as the note records).* Three corrections to the paragraph
+above. (1) **The clocks-and-rulers scalar is a published class with a theorem against it.** It is a stratified theory
+with conformally flat space slices (Ni, 1972): with exponential clock and ruler factors it does give light bending, the
+delay of light and Mercury's perihelion (γ = β = 1; [BL18] Secs. 4.1 and 4.2), but only for bodies at rest in its own
+preferred frame. Every theory of this class has the preferred-frame parameter α₁ = −4(1 + γ) = −8 ([WN72] Sec. III.a,
+Eqs. 22 and 23), where binary pulsars measure |α₁| below about 4 × 10⁻⁵ ([SW12], abstract). The Sun moves through any
+such frame, so the class "disagrees violently with experiment" in Will and Nordtvedt's words. In her picture this is the
+same threat as the moving present's detectable rest frame (Update 36), now with a number, and the toy has a preferred
+frame built in (its update order). So option 1(b) can stand as a first step only for bodies at rest in the toy's frame,
+with α₁ as a named target the design has to answer. (2) **Orbital decay** matches the quadrupole formula to about 6 ×
+10⁻⁵ in the double pulsar ([Kra21] Eq. 48), not "a fraction of a per cent"; and with waves (her answer to question 3) the
+scalar's waves are breathing waves, which are disfavored as the carrier of observed gravitational waves (pure scalar
+against pure tensor, log₁₀ Bayes factor −4.24 ± 0.30 over GWTC-3; [LVC21] Table IX). They can serve piece 10 as a signal
+with one speed, not as gravitational waves. (3) **A length per link is not enough for gravitational waves on the toy's
+graph.** Linearized Regge calculus recovers Einstein's waves on a hypercubic lattice only once its diagonals are given
+lengths too ([Ham09], the section on the lattice weak-field expansion, citing Roček and Williams): a cube's three edges per
+point cannot hold the metric's six components, and the cross polarization is a shear. In the toy a face diagonal is a
+length per square, so the full version needs lengths on links and on squares' diagonals, or an equivalent.
+
 ## The seven declarations (gravity_brief, section 7)
 
 1. **What it represents.** One number φ on each point of space: how fast that point's clock runs, and, in the
@@ -107,13 +127,28 @@ but it is put in by the rule, and it should not be counted as the field predicti
 (b) waves ("Let's go waves, baby"); question 5, two-direction tests wherever they teach something. Questions 2 and 4
 are still open (VISION Update 76).
 
+**What the reading of 20 October adds to the questions** (ours, from the note; sources read in part by an assistant
+agent). Question 1: her choice (b) stands as a first step, with the preferred-frame limit above (α₁) as a named target,
+and (c) needs lengths on square diagonals as well as links. Question 4: (b) is published physics, the random-walk form of
+the Tolman–Ehrenfest relation ([Sme11] Eq. 26: with symmetric jumps and departure-point clocks, the walkers' steady
+density is proportional to e^(−φ)); it is correct for walkers in a gravitational field but weak, acting as if the walker's
+temperature were its rest energy, so it is not how a slow body falls; under waves, the refraction toward slow regions is
+the stronger effect. Signal test: on a regular lattice waves travel at one speed in every direction only at long
+wavelengths, so the signal job is scored on pulses several links wide. Pull: in Einstein's gravity stress gravitates too
+([BCFVW05] in the note), which a φ sourced only by curling energy leaves out; small for slow, sparse relics, said here.
+
 ## Order of work once she has chosen
 
 1. The form written into VISION as a dated decision (S1), with κ and the source coupling as declared constants, scanned
    and every value run published.
 2. The kernel, with rule-6 tests: correlations against g L⁺ at N = 16 and 18, the incremental energy against full
    recomputation, constraint preservation, same-seed reproducibility; at κ → ∞ (φ frozen flat) it must reproduce the
-   present chain draw for draw.
+   present chain draw for draw. Published numbers to match first (the note's ranked list): the infinite-lattice
+   resistances ([Cse00]: κ⟨(φ_p − φ_q)²⟩/g = 1/2 for four-link neighbors, 2/π across a square, 1/3 for six-link
+   neighbors, G(0) = 0.252731); equipartition, (N − 1)g/2 for the field's energy; the departure-clock density e^(−φ)
+   ([Sme11]); then the c = 1 barrier of [AGJZ12] (with more than one copy of the field the wiring collapses) in the
+   toy's terms. For rows on a burp's product: every flat four-link torus is a twisted grid, classified ([LZZ23]
+   Theorems 2.1 to 2.4; bipartite only if m and n + r are even), so its rows can be read from its wiring.
 3. Exact first: how the field shifts the walls of the ladder (an extension of O61's addendum) at the chosen form.
 4. Then, each pre-registered with her prediction and a held-out size (rule 14): T75 in the soft space; T76 in the soft
    space; the pull in six links.
