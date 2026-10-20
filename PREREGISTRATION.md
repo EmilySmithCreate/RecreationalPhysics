@@ -7535,3 +7535,17 @@ insertion is clean.
 
 1. The size claim (the word, and ρ at the stop relative to ρ_eq, at every coupling) is scored at the held-out L = 32
 only, against numbers with ranges written after L = 16 and 24 are read. 2. No "we have not found". 3. Not a milestone.
+
+*Amendment 1 (2026-10-20, 12:09 UTC by the clock, before any registered run; the owner's decision owed).* Writing the code
+showed that the rate as registered is far faster than the predictions assumed: with every boundary offered once per fair
+sweep, a clean sheet takes a pair of rows at every boundary, so each side triples and the number of points can grow nine
+times in one fair sweep (a timing probe at L = 12, g = 2.5, in the scratchpad and discarded: 144 to 1,156 points in the
+first growth sweep). The 8× stop then comes inside one sweep, before the coupling has had any time to make missing
+squares in the new rows. *Ours, by arithmetic:* under the rate as written the density falls about ninefold per sweep
+wherever rows are clear, so FALLING (or STALLS where flaws block the rows) follows without a run, and the registered
+CONSTANT can hold only where growth is slow compared with the coupling's refilling. Choices for her: (a) keep the rate
+and accept the arithmetic; (b) offer each boundary with a probability q per fair sweep and scan q downward, reading how
+1 + w depends on how slow growth is compared with the refilling; (c) another rate in her words. Also fixed now, ours:
+CONSTANT requires the density to be above zero; a second half with a single reading is never CONSTANT; where CONSTANT
+and FALLING or RISING both reach 12 of 16, CONSTANT is the word and the others are reported beside it. The reader's
+remaining choices are in `scripts/analyse_t76.py` and are recorded in ASSUMPTIONS Q25.*
