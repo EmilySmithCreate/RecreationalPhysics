@@ -1587,3 +1587,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   bookkeeping a store's energy is how g is read (Q12), so "the stores beside the cut hold the whole cost" already means
   "the local g is high enough"; with a leak, a burst too small to reach the threshold drains away in the gap. Published
   relatives (general knowledge, to verify): the Eddington limit on accretion; tidal disruption flares. Not yet a decision.
+- 2026-10-19, the owner, evening, clarifying which g she meant: "I wasn't thinking this is the networks temp dark energy I
+  was thinking a g increases because in the black hole there is a lot of compacted stuff that's not right on the curl
+  edge, is that reasonable?" *Ours:* two different g's, kept apart from here: the network's cold coupling of Update 70
+  (fixed by the loop, the candidate for dark energy) and a local excitation inside a black hole, raised by the compacted
+  energy in its bulk, away from the cut. In the toy g is read locally off the stores (Q12), so a warm bulk beside a cold
+  network is expressible; it is the two-system kernel Update 70 already names (a cold network beside a region at its
+  own temperature). How fast bulk energy reaches the cut would be her intake limit; the layer-form kernel moves energy
+  between stores only through the moves' pooled payment, so a flow from bulk to edge is a new knob (S1). Caution (general
+  knowledge, to verify): a black hole's Hawking temperature falls as its mass grows; her local g is the toy's interior
+  excitation, not a horizon temperature, and the two must not be confused.
