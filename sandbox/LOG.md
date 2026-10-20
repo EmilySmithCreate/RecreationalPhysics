@@ -442,3 +442,11 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   2,540 valid, the cheapest adding 42 and leaving 8 points off d = 2. R = 4 (L = 12): 41,664, 23,792 valid, the same 42
   and 8. A whole row is clean and free (O116). So local growth always leaves a flaw and costs energy. Exact within
   reach; a look. Written into `docs/design/growth_rule_brief.md`.
+- 2026-10-20. When a linked pair of points is added in one place in flat two-direction space, does it leave one curl
+  and one uncurl (the owner's idea: adding space makes a curl knot and an uncurl knot together)?
+  (`sandbox/pair_insertion_dipole.py`; λ = 1.25; the insertions of `pair_insertion_2d.py`, read for missing squares D and
+  curl X.) None leaves curl alone. At R = 3 (L = 10): 2,540 valid, 1,240 leave both and 1,300 leave missing squares only;
+  at R = 4 (L = 12): 23,792 valid, 7,220 both, 16,572 missing only. The cheapest (42) leaves 10 missing squares and 2
+  curled links; the cheapest with no curl costs 48 (12 missing). So added points leave mostly the uncurl kind, a
+  little curl at most: not a balanced pair. *Ours:* adding material to a flat sheet makes it ruffle like a saddle,
+  negative curvature, as in ordinary geometry. Exact within reach; a look.

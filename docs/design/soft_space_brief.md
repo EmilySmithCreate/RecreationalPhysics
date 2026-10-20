@@ -127,6 +127,7 @@ but it is put in by the rule, and it should not be counted as the field predicti
 (b) waves ("Let's go waves, baby"); question 5, two-direction tests wherever they teach something. Questions 2 and 4
 are still open (VISION Update 76). *Question 2 answered at 16:02 UTC: the sources are every frozen relic's energy, knots
 and scraps alike, and not the network's flickering missing squares, which she holds repel (VISION Update 76).*
+*Question 4 answered at 16:35 UTC: one clock for both ends first, to check the code; her departure-point clock second.*
 
 **What the reading of 20 October adds to the questions** (ours, from the note; sources read in part by an assistant
 agent). Question 1: her choice (b) stands as a first step, with the preferred-frame limit above (α₁) as a named target,

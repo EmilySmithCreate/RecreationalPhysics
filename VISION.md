@@ -2329,4 +2329,20 @@ open on the end state's temperature. Her words are in `sandbox/NOTEBOOK.md`, 20 
   per square, and the toy's curling cost already sits on links (4(λ − 1) per surplus square on a link). And a length
   computed from the energy present would be fixed wherever no energy is, while gravitational waves cross empty space;
   so the lengths need a life of their own that energy disturbs, not one that energy sets.
+- **Her answers, 16:35 UTC by the clock.** Question 4: "One clock to check the code yes": the kernel is built first with
+  one clock for both ends of a move, and her departure-point clock (things collect where clocks run slow, [Sme11]) is
+  the second knob, tested against it. And an idea, recorded for testing, not decided: as a diagonal across a curl
+  shortens it stores curl energy, and as an uncurl region's points draw closer they store uncurl energy; added space makes
+  a curl knot and an uncurl knot together, which merge at once when cold and stay apart only when hot; at the opening the
+  heat keeps the pairs apart for a while, they cancel as it completes, and the store flow and the flaws leave more matter
+  than antimatter. *Ours:* (1) a sandbox look (`sandbox/LOG.md`, 20 October) finds that a linked pair added in one place
+  leaves mostly missing squares, the uncurl kind, and at most a little curl (the cheapest, 42, leaves 10 missing squares
+  and 2 curled links): adding points makes saddle-like negative curvature, as in ordinary geometry, not a balanced pair.
+  Whole rows leave nothing (exact, tested). (2) Real antimatter has positive energy and exactly the mass of its matter
+  (general knowledge, to verify), and both of the toy's kinds cost energy too (zero is the floor, O20); but the toy prices
+  them differently (4 per missing square per link, 4λ per surplus square), so they are not mirror images. (3) Making more
+  matter than antimatter needs, in the standard account, three things (Sakharov, 1967; general knowledge, to verify): a
+  number that can change, a difference between the two kinds, and a moment out of balance. Her store flow at the opening
+  is the third; the toy's unequal prices are a candidate for the second; whether anything in the toy counts as the first
+  is open.
 - Nothing here changes a verdict. Merging this update is her acceptance of the wording.

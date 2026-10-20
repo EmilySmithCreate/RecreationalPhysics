@@ -1938,3 +1938,17 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   per point can only make everything swell or shrink together- would this be curling points and uncurling points and how
   much energy each holds? That would be used to calculate the link length. I think both knots and the dark matter which we
   think is flaws/ scraps would both induce gravity. Not the remnants dark energy that's diff and repels." VISION Update 76.
+- 2026-10-20, the owner, on link lengths and knots: "Could be, as the diagonal on the curl points curl gets shorter,
+  that's curl energy stored. If the uncurl points closer, uncurl energy / convex energy stored. If curl points touch, that
+  takes a lot of energy, they become one, but then the points collapse into a curl knot. We can also have reverse curl
+  knot, the other way, so dark matter could be a reverse curl knot, the spring back of a flaw (curling energy remaining in
+  a 2d section) and dark matter? 1 knot per 3 squares was it? I feel there could be geometry about knots forming when space
+  is added that has some fluctuation around 3. we add 2 rows, connected on with new links, as a curl and uncurl point split
+  off a flat space point. So a matter knot is 4x4x4 64 points and an antimatter knot is 64 points and they cancel. I think
+  one curl knot and one uncurl knot are created when a certain amount of new space is added, a byproduct of the add, but
+  they are only ever separated at high g, low: they merge immediately. So space opening at big bang would create the
+  matter and antimatter knot pairs and it's hot so there is time until that cancel, when the opening is complete, and
+  there is more matter than antimatter from the store flow and also the flaws." And on question 4 of the soft-space brief:
+  "One clock to check the code yes." *Ours:* the "one per three" was knots per seed, not per square (0.29 ± 0.04 per
+  extra seed, T17; 0.35 columns per natural seed, T37). The sandbox look of the same afternoon: a pair added in one place
+  leaves mostly missing squares (the uncurl kind) and at most a little curl. VISION Update 76.
