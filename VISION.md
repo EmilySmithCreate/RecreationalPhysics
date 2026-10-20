@@ -1712,7 +1712,9 @@ T1 to T8 are registrations here. Merging this update is her acceptance of the wo
   keeps the branching from running away, and it is the function piece 12 still has to write down.
 - **Standing positions, restated by her.** λ is a universal constant, the same in parent and daughter, not raised
   by infall (Update 23, extended across generations). What infall raises is g, the excitation; the chance of an
-  opening rises with it and there is no single threshold. *Exact, from the toy's machinery:* in a sealed box g is
+  opening rises with it and there is no single threshold. *(Annotated 2026-10-19: "no single threshold" replaced by
+  Update 69's gate, her answer in Update 72; the rising chance can stand as how the threshold looks from outside.)*
+  *Exact, from the toy's machinery:* in a sealed box g is
   read off the stores (Q12; O108), so a feed that raises the stores' energy raises g by construction; H2 of her list
   needs no derivation. Points are not fundamental, so a daughter need not be smaller than its parent: her answer
   to her own question of the morning (how the parent holds more than 640 points). *Ours:* the toy's count is fixed
@@ -2022,7 +2024,8 @@ the toy would need (S1), and both came out of her thinking on 19 October after h
 gitignored outreach folder). Merging this update is her acceptance of the wording. *(Annotated 2026-10-19, consistency
 audit: "a turn" here leans on the loop, which Update 59 keeps only as a candidate beside the daughter picture, and a
 turn is not defined once the whole-universe reset is not required; which frame this decision is in is open for the
-owner.)*
+owner.)* *(Resolved the same evening, Update 72: a turn is one universe's own life, and this decision is bookkeeping
+over the sealed loop, not a common moment.)*
 
 - **DECISION: the loop's coupling is derived, not chosen.** Her words: the matter is not in the network, "it is in each
   daughter universe. The network's cold coupling is the total entropy in the network"; energy that has left a daughter
@@ -2100,3 +2103,35 @@ Her words, from the same evening.
 - **What stands.** Updates 67 and 68 (per universe within a setting; by each universe's own age; no clock across
   universes); the observation window W(t) as her term; the hard-steps delay as the shape she agreed with (Update 70).
   The brief `docs/design/loop_measure_brief.md` carries the two definitions in its section 7.
+
+Update 72 (2026-10-19, 20:40 ET by the clock): **The author's two answers on the consistency audit of the same evening:
+a turn is one universe's own life; and the slab's opening fires at a threshold.** Why this page changes: the audit
+(`docs/reviews/consistency_audit_2026-10-19.md`, item 53) found Update 70's "end of a turn" undefined once the
+whole-universe reset is not required (Update 59), and its fixes found Update 59's "no single threshold" standing beside
+Update 69's gate. Her answers: "Proceed" on the first; on the second, "If they are both discussing 2 d to 3-D? 'fires
+when the stores hold the whole cost' is a threshold."
+
+- **A turn is one universe's own life**, from its burp to its last black hole dissolving, timed by its own clock: the
+  definition the glossary carries (19 October) and her words of the same day, "from the network temp perspective, the
+  last black hole is the end" (`sandbox/NOTEBOOK.md`, 19 October). *Ours:* no clock runs across universes (Update 68),
+  so there is no moment at which every turn ends together, and Update 70's decision is read as bookkeeping, not a
+  moment: the loop is sealed (claim 6), energy that has left a daughter is "in the network" (her words), and at the end
+  of each universe's turn that universe's energy has returned there. A sealed system's temperature is set by its total
+  energy and its count of arrangements (Q12; Update 11's test), so the network's coupling is the same at the end of
+  every turn. A turn of the whole loop at once would need a clock across universes, which Update 68 rules out; the loop
+  that turns as one stays a candidate (Update 59) and is not the frame of Update 70. **Open:** a turn ends only if its
+  last black hole dissolves. She allowed that a black hole short of the burp's threshold might sit frozen "forever,
+  unless there is a mechanism for it to dissolve" (notebook, 19 October); the toy has no dissolve rule, and adding one
+  is a knob under S1.
+- **The slab's opening fires at a threshold.** Update 59's rising chance and Update 69's gate are about the same change:
+  the slab's one curled direction opening, so that two open directions become three (the burp). Her answer: the rule
+  is the threshold of Update 69, the split firing when the stores beside the cut first hold the slab's whole curling
+  cost; Update 59's "there is no single threshold" is replaced. *Ours, unverified:* the two can be one rule seen at two
+  scales. In the fed toy the wait between re-forming and burping is set by the feed (about 2a/r sweeps, Update 69);
+  where the stores also fluctuate, as in a warm bath, when they first hold the cost is a matter of chance, and that
+  chance would rise with the excitation g, the stores' mean energy (Q12). So Update 59's "the chance of an opening
+  rises with the excitation" can stand as how the threshold looks from outside; only "no single threshold" goes. That
+  the chance rises with g is expected, not measured.
+- **What changes elsewhere.** Update 70's annotation of 19 October points here; Update 59's sentence is annotated; the
+  programme page and draft, paper 12's statement of her hypothesis and the glossary say the same. Nothing runs.
+  Merging this update is her acceptance of the wording.

@@ -158,7 +158,9 @@ annotations, except the removal of the private-call paraphrase (item 38). The pr
   with the tie marked withdrawn; the other banner extended. Item 73 was not a discrepancy (4.3 % and 4 % are two
   correct starting points).
 
-**Left for the owner:** whether the turn of Update 70 is defined now that the reset is not required (item 53); whether
+**Answered by the owner the same evening (VISION Update 72):** a turn is one universe's own life, from its burp to its
+last black hole dissolving (item 53); the slab's opening fires at the threshold of Update 69, which replaces Update 59's
+"no single threshold". **Left for the owner:** whether
 to rewrite git history, which still holds the private-call paraphrase; regenerating `docs/public/site/physics/` from
 the bannered page (`scripts/make_site_page.py`) and porting it. **Noticed, not fixed:** CLAUDE.md's "Known state" still
 gives the 12-unit spark without its λ, says "melts rather than folds", and calls the local spark the next thing to
