@@ -7438,6 +7438,35 @@ measured against temperature); **g = 2.6**, the warmest coupling of the temperin
 named as such. The cheapest flaw costs 20, so a flaw is offered acceptance at about e^(−20/g): 2 × 10⁻⁶ at 1.5, 5 × 10⁻⁵
 at 2.0 and 5 × 10⁻⁴ at 2.6 (arithmetic). Nothing at these couplings on the registered states has been run.*
 
+### Reading (2026-10-20, 14:15 UTC by the clock; `scripts/analyse_t75.py` on the 18 committed files, accepted unread, 8b571657)
+
+| N | g | single, far from knots | single, beside a knot | pair, far | cross word |
+|---|---|---|---|---|---|
+| 512 | 1.5 | CONFINED (27 of 32 confined) | MIXED | CONFINED | NO SIGNAL |
+| 512 | 2.0 | MIXED | MIXED | JUMPS | NO SIGNAL |
+| 512 | 2.6 | JUMPS (17 reached D/4, all by jumps) | JUMPS (23) | JUMPS (21) | NO SIGNAL |
+| 1,024 | 1.5 | CONFINED (27) | MIXED | CONFINED (31) | NO SIGNAL |
+| 1,024 | 2.0 | CONFINED (25) | JUMPS | CONFINED (24) | NO SIGNAL |
+| 1,024 | 2.6 | JUMPS (17) | JUMPS (22) | JUMPS (20) | NO SIGNAL |
+
+No cell reads HEALS, SPREADS or TRAVELS (one replica in 576 travelled). Where damage reached a quarter of the space's
+width it got there by jumps, appearing far beyond the damaged region joined to the flaw, and the speeds the reader
+computes for those cells scatter over a factor of a hundred (0.005 to 0.6 steps per fair sweep), so they are not one
+speed. **The owner's prediction (Amendment 6: SPREADS, not TRAVELS) fails**: no cell spreads. **Ours (HEALS or CONFINED
+at the two colder couplings; at the warmest SPREADS with JUMPS) holds at g = 1.5, holds in part at 2.0, and at 2.6 the
+word is JUMPS without SPREADS**, in a sheet that is not melting (the couplings were chosen where it holds).
+
+*Ours, unverified, what the jumps are:* the toy's switch can join any two links anywhere in the space, so a flaw changes
+which far-reaching switches are accepted, and the copies come to differ at the far end of such a switch without anything
+having travelled between. That is a property of the toy's moves, not of its space: a light cone needs moves that act
+only nearby as well as space that is not stiff. Rule 11, the owner's failed prediction: (1) it does not falsify her
+position, which is about real space ("flat space isn't stiff"), while the toy's space is stiff by its energy (exact,
+O22) and this run was registered as the stiff baseline; (2) the failure is the toy's stiffness and, newly, its far-reaching
+moves; (3) the cheaper test that tells them apart is the same protocol with switches restricted to nearby links, which
+removes jumps and leaves stiffness; (4) the branch is abandoned if a soft ingredient with local moves still gives no
+spreading at any coupling. The size claim (a speed independent of size, if anything spread) has nothing to score, so
+the held-out N = 2,048 is not run.
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy

@@ -4027,3 +4027,17 @@ author and should be disclosed as such in any submission. Physics estimates mark
     (3) The counting unit decides more than the stars do: once per civilization, every class is TYPICAL (O138);
     observer-moments, all stars are EARLY; diamond-weighted, every class but D is LATE. The published red-dwarf
     disagreement is in part a disagreement about which of these is being counted. Nothing here is about the toy.
+
+- **O140 T75, read (20 October 2026): in the toy's space no disturbance spreads at a steady pace; cold, a flaw stays
+  where it is; warmer, its effect turns up far away by jumps, not by a spreading front. Measured, pre-registered; the
+  owner's SPREADS fails, ours holds at the colder couplings.** (PREREGISTRATION T75 and its "Reading";
+  `scripts/analyse_t75.py`; `results/t75_*`, 18 laptop runs of 32 replicas, accepted unread, 8b571657.)
+  - **Measured.** In the burp's product (T51's end states at N = 512 and 1,024), with a flaw far from knots, beside a
+    knot, or a pair of flaws: CONFINED in 6 cells, MIXED in 4, JUMPS in 8; never HEALS, SPREADS or TRAVELS; the cross
+    word NO SIGNAL at every size and coupling. Where damage reached far, it arrived by jumps, at speeds scattered over a
+    factor of a hundred.
+  - *Ours, unverified:* the jumps come from the toy's switch, which can join any two links in the space, so differences
+    appear at the far end of a switch with nothing between. A light cone in the toy needs local moves as well as soft
+    space; the next test of it restricts switches to nearby links.
+  - **What it bears on.** Piece 10 (a top speed): the toy has none as it stands. Pieces 8 and 3: the stiffness that keeps
+    a disturbance in place is the same that gives no pull at a distance (O60). Nothing here is about real space.
