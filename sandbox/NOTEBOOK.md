@@ -1735,3 +1735,15 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   Stretches the link then it snaps back (curl). Yes make them diff types that repulse but if they touch they neutralize and
   the links on them connect with the closest free one of opposite type." Recorded as VISION Update 74; the form's
   questions are in `docs/design/two_type_points_brief.md`.
+- 2026-10-20, the owner, on gravity: "Mass has curling and uncurling energy. Both dark and regular, and dark matter has more
+  curling energy. And gravity curves (a partial curls) space in response to balancing the arrangement of space + matter so
+  that it is close to neutral. Curve first gravity. Then the matter rides the curved space to aggregate. Working toward the
+  fully flat space that would occur if all the matter were gone, set to curled, collapsing the points that split in the big
+  bang to make a curling and uncurling point, back to 2 points." *Ours:* (1) in the layer form the burp's split makes new
+  points in linked pairs, one of each kind, and compaction removes them in pairs (exact, by construction): her "split in the
+  big bang" and "collapsing back" in the toy's own terms. (2) A response that balances a curling excess where matter is
+  makes curvature only where the matter is; a pull outside needs the balancing curvature to spread as 1/r, as Newton's
+  potential does around a mass, and that needs a soft medium (general knowledge, to verify; O60 (a)): stiff space would
+  keep the balance local and give no pull. So her mechanism with soft space is a candidate for curve-first gravity, and
+  with the toy's stiff space it gives none. (3) A cheap exact look: does the curvature around the burp's knots already
+  show a balancing halo (T75's counts found flaws cheaper beside knots, 15 against 20)? Not yet made.
