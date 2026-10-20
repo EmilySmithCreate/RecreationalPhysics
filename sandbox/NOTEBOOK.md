@@ -1868,3 +1868,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   properties of matter: how much there is and how it thins (the first), how it gathers (the second); in her picture the
   second is how the knots gather, which needs a pull (piece 8). Caution: timescape's clocks run at different rates in
   walls and voids, so the two curves have to be set on a stated clock before they are compared.
+- 2026-10-20, the owner: "Wasn't that about the time earth formed, so it would have formed at the most probable version time.
+  The most likely type of planet we could find ourselves on?" *Ours (general knowledge, to verify; and the record):* Earth
+  formed about 4.5 billion years ago, about 9.3 billion years after the Big Bang, within about half a billion years of the
+  crossover of dark energy and matter; star and planet formation peaked much earlier, about 10 billion years ago (cosmic
+  noon), so most Earth-like planets are older than Earth. T72 (O138) under her unit: about 81 % of observers round sun-like
+  stars come before us, peak at a universe age of 7.9 billion years: typical, not at the peak. Rule 13 and Update 71: our
+  own age, and so Earth's, is not scored under the measure, since its choices were made with these numbers known. In her
+  picture one factor, matter gathering, drives both planet formation and void growth, but planet formation peaks about six
+  billion years before the crossover, so a shared cause does not make them coincide.
