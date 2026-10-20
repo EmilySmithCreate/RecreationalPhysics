@@ -1753,3 +1753,4 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   kinds (in graph terms, contracting the link), which the two-sided toy does not allow. So "back to one point" is a third
   state the toy does not have: a point of X before it divided into two kinds. Open, hers: whether X's points are
   undivided, with the two kinds appearing only when the burp splits them.
+- 2026-10-20, the owner: "Yes sharing more neighbors is a better description" (of curling than shortening a link). In the glossary.
