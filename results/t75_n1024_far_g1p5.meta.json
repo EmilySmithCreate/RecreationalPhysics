@@ -1,0 +1,545 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T75 with its Amendments 1 to 7: does a single flaw far from every knot (at least 6 steps) in the product of a burp (T51's end states, N = 1024) heal, stay, travel or spread, and at what speed? A flaw is the cheapest valid switch at a point costing more than zero, priced at lambda = 1.25 (beside a knot, the cheapest touching no knot point). Coupling g = 1.5, fixed by amendment before launch. Not exploratory. At lambda != 1 this is our family, not combinatorial quantum gravity.",
+    "name": "t75_n1024_far_g1p5",
+    "section": "T75",
+    "states_dir": "results",
+    "states": "t51_l256_300k",
+    "N": 1024,
+    "lambda": 1.25,
+    "g": 1.5,
+    "placement": "far",
+    "replicas": 32,
+    "fair_sweeps": 2000,
+    "record_every": 1,
+    "n_ref": 96,
+    "step": 2,
+    "flaw_reach": 3,
+    "seed": 20267510
+  },
+  "config_path": "configs/t75_n1024_far_g1p5.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "git_commit": "4d5193bcb1ccd93c30346584764ac970430506c4",
+  "git_dirty": false,
+  "git_untracked_count": 0,
+  "git_untracked": [],
+  "replicas_plan": [
+    {
+      "replica": 0,
+      "state": "results\\t51_l256_300k_00_adj\\N1024_rep0_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        117,
+        115,
+        111,
+        108
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 1,
+      "state": "results\\t51_l256_300k_01_adj\\N1024_rep1_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        118,
+        114,
+        105,
+        111
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 74
+    },
+    {
+      "replica": 2,
+      "state": "results\\t51_l256_300k_02_adj\\N1024_rep2_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        190,
+        184,
+        182,
+        181
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 3,
+      "state": "results\\t51_l256_300k_03_adj\\N1024_rep3_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        302,
+        296,
+        292,
+        293
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 4,
+      "state": "results\\t51_l256_300k_04_adj\\N1024_rep4_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        979,
+        975,
+        966,
+        970
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 114
+    },
+    {
+      "replica": 5,
+      "state": "results\\t51_l256_300k_05_adj\\N1024_rep5_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        339,
+        333,
+        326,
+        335
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 6,
+      "state": "results\\t51_l256_300k_06_adj\\N1024_rep6_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        231,
+        220,
+        221,
+        227
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 7,
+      "state": "results\\t51_l256_300k_07_adj\\N1024_rep7_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        235,
+        231,
+        225,
+        229
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 8,
+      "state": "results\\t51_l256_300k_08_adj\\N1024_rep8_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        373,
+        372,
+        367,
+        371
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 9,
+      "state": "results\\t51_l256_300k_09_adj\\N1024_rep9_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        81,
+        74,
+        70,
+        79
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 10,
+      "state": "results\\t51_l256_300k_10_adj\\N1024_rep10_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        9,
+        15,
+        4,
+        0
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 27
+    },
+    {
+      "replica": 11,
+      "state": "results\\t51_l256_300k_11_adj\\N1024_rep11_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        767,
+        763,
+        757,
+        766
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 12,
+      "state": "results\\t51_l256_300k_12_adj\\N1024_rep12_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        112,
+        108,
+        104,
+        107
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 21
+    },
+    {
+      "replica": 13,
+      "state": "results\\t51_l256_300k_13_adj\\N1024_rep13_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        349,
+        340,
+        341,
+        345
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 14,
+      "state": "results\\t51_l256_300k_14_adj\\N1024_rep14_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        318,
+        319,
+        310,
+        314
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 66
+    },
+    {
+      "replica": 15,
+      "state": "results\\t51_l256_300k_15_adj\\N1024_rep15_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        511,
+        499,
+        498,
+        507
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 40
+    },
+    {
+      "replica": 16,
+      "state": "results\\t51_l256_300k_16_adj\\N1024_rep16_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        357,
+        358,
+        349,
+        353
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 17,
+      "state": "results\\t51_l256_300k_17_adj\\N1024_rep17_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        77,
+        73,
+        64,
+        68
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 112
+    },
+    {
+      "replica": 18,
+      "state": "results\\t51_l256_300k_18_adj\\N1024_rep18_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        142,
+        141,
+        134,
+        136
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 19,
+      "state": "results\\t51_l256_300k_19_adj\\N1024_rep19_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        946,
+        942,
+        936,
+        947
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 66
+    },
+    {
+      "replica": 20,
+      "state": "results\\t51_l256_300k_20_adj\\N1024_rep20_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        406,
+        402,
+        398,
+        400
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 36
+    },
+    {
+      "replica": 21,
+      "state": "results\\t51_l256_300k_21_adj\\N1024_rep21_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        937,
+        935,
+        926,
+        933
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 22,
+      "state": "results\\t51_l256_300k_22_adj\\N1024_rep22_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        196,
+        205,
+        185,
+        194
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 82
+    },
+    {
+      "replica": 23,
+      "state": "results\\t51_l256_300k_23_adj\\N1024_rep23_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        109,
+        100,
+        103,
+        105
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 24,
+      "state": "results\\t51_l256_300k_24_adj\\N1024_rep24_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        994,
+        988,
+        986,
+        987
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 25,
+      "state": "results\\t51_l256_300k_25_adj\\N1024_rep25_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        582,
+        578,
+        572,
+        576
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 91
+    },
+    {
+      "replica": 26,
+      "state": "results\\t51_l256_300k_26_adj\\N1024_rep26_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        390,
+        384,
+        377,
+        383
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 27,
+      "state": "results\\t51_l256_300k_27_adj\\N1024_rep27_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        867,
+        856,
+        852,
+        861
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 51
+    },
+    {
+      "replica": 28,
+      "state": "results\\t51_l256_300k_28_adj\\N1024_rep28_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        576,
+        572,
+        565,
+        571
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": 103
+    },
+    {
+      "replica": 29,
+      "state": "results\\t51_l256_300k_29_adj\\N1024_rep29_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        209,
+        205,
+        198,
+        202
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 30,
+      "state": "results\\t51_l256_300k_30_adj\\N1024_rep30_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        580,
+        568,
+        571,
+        578
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    },
+    {
+      "replica": 31,
+      "state": "results\\t51_l256_300k_31_adj\\N1024_rep31_tc300000.npz",
+      "use": 0,
+      "flaw": [
+        525,
+        518,
+        527,
+        529
+      ],
+      "flaw_cost": 20.0,
+      "flaw_costs": [
+        20.0
+      ],
+      "knot_distance": -1
+    }
+  ],
+  "skipped_disconnected": [],
+  "preregistration": "PREREGISTRATION.md section T75, with its Amendments 1 to 7"
+}
