@@ -410,3 +410,16 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   it released at λ = 1.25 (both sizes), 28 % at λ = 1.10 (the torus wandered to width 8 and the feed piled up). So the
   excess is set by the gate, the rate and when one looks, not by the burp. The two kinds of point are equal at every
   sweep (108 and 108; 192 and 192): exact, by the degree rule, so no excess of one kind can exist in the toy. A look.
+- 2026-10-19, evening, the owner's question whether the toy's curvature obeys the handle count of Gauss-Bonnet
+  (`sandbox/handle_bound.py`, out `sandbox/out/handle_bound_2026-10-19.txt`). *Exact, ours, by Euler's formula, unreviewed:*
+  draw a four-link two-sided graph on a closed orientable surface with g handles; every face is an even cycle of length
+  at least 4, so 2 - 2g = F - N = -(1/4) x (sum over faces of length k > 4 of k - 4); each such face has k - 4 >= k/3,
+  and each edge with fewer than two squares borders at least that many sides of such faces, so D = sum over edges of
+  max(0, 2 - S_e), which is H/4 at lambda = 1, obeys D <= 24 (g - 1): **g >= 1 + D/24**. Corollaries: a graph drawn on
+  a torus has every face a square, so any edge with fewer than two squares forces at least two handles; and at a fixed
+  share of missing squares the handles grow in proportion to the size, as Gauss-Bonnet gives handles in proportion to
+  area for a fixed negative curvature. It is a bound, not an equality, and the positive side (a curl, an edge on three
+  squares) is not counted by it. The check: the flat 8 x 8 torus drawn naturally has g = 1 and D = 0 (equality); graphs
+  made by 1 to 128 random switches from it never broke the bound in 1,000 random drawings each. Random drawings have far
+  more handles than the fewest possible (slack 19 at least), so the check is weak and the proof carries the claim. Four
+  links only: six- and eight-link networks are not surfaces. A look; an exact test in `tests/` before anything cites it.
