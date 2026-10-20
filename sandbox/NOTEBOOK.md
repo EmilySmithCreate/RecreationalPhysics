@@ -1824,3 +1824,5 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   history; a published, contested relative attributes the acceleration to voids in this way (backreaction; Wiltshire's
   timescape; not read). In the toy adding flat space costs nothing and no rule says where points appear; hers would be
   one (points added only where the surrounding links are flat or short of squares), a new knob under S1.
+- 2026-10-20, the owner: "add points only where the surrounding links are flat or short a square, never next to curled ones -
+  agreed, proceed" (VISION Update 75; the brief `docs/design/growth_rule_brief.md`).

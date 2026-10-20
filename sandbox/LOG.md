@@ -436,3 +436,9 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   edge. **The ring is softer:** the cheapest flaw costs 15 within two steps of a knot and 20 from three steps on. Read
   with Update 73's expectation: in the toy's stiff space a knot's curling is balanced at its own edge and nothing reaches
   farther; a balance that spreads, as the owner's curve-first gravity needs, needs soft space. Not promoted.
+- 2026-10-20, the owner's growth rule (VISION Update 75): can points be added to flat two-direction space in one place
+  without a flaw? (`sandbox/pair_insertion_2d.py`; λ = 1.25; exhaustive over every choice of three cut links within R
+  steps of one point.) R = 2 (L = 10): 560 choices, 184 simple, none valid (the hard-core rule). R = 3 (L = 10): 7,140,
+  2,540 valid, the cheapest adding 42 and leaving 8 points off d = 2. R = 4 (L = 12): 41,664, 23,792 valid, the same 42
+  and 8. A whole row is clean and free (O116). So local growth always leaves a flaw and costs energy. Exact within
+  reach; a look. Written into `docs/design/growth_rule_brief.md`.

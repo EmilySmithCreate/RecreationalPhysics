@@ -2218,3 +2218,22 @@ opposite kinds that are not mirror images are what a net dark matter over dark a
   counts as touching, the rejoining rule, and where a healing knot's curling energy goes. Nothing is built or run before
   her answers. The model with it is our family around the published one, never combinatorial quantum gravity. Merging
   this update is her acceptance of the wording.
+
+Update 75 (2026-10-20, 09:30 UTC by the clock): **DECISION (the author's, "agreed, proceed"): space grows only where it is
+flat or slightly negatively curved, never next to curled regions: points are added only where the surrounding links are
+flat or short a square, never next to curled ones.** Why this page changes: Update 72 decided that space grows by gaining
+points; this says where, and it is a new rule of the toy under S1.
+
+- **Her reasons, in her words:** "growth can happen in any flat space not just edges"; "it can only grow where space is
+  flat so anything too close to matter can't grow freely but where there is enough space that curve is at least a little
+  negative there it grows." *Ours, general knowledge, to verify:* bound systems do not expand and voids expand faster
+  than average; with her rule growth would be held back while matter fills space and speed up as voids come to fill most
+  of the volume, decelerating then accelerating, as observed. The published relative (backreaction, Wiltshire's
+  timescape) is contested and is being read.
+- *Ours, exact within a look of 20 October (`sandbox/pair_insertion_2d.py`):* the smallest addition is a linked pair, one
+  point of each kind. A whole row is clean and free; a single pair added in one place is never free: with its cut links
+  within three or four steps the cheapest adds 42 units and leaves 8 points off flat, and within two steps none is
+  valid. So local growth needs something to pay for it and makes a small flaw as it goes.
+- **The form is owed:** `docs/design/growth_rule_brief.md` asks which kind of growth (whole rows, single pairs, or both),
+  how far "surrounding" reaches, what pays and how often, and whether growth flaws heal. Nothing is built or run before
+  her answers. Merging this update is her acceptance of the wording.
