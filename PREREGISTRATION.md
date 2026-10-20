@@ -7420,6 +7420,16 @@ exactly 4 steps from the first flaw and shares no point with it; it is not the c
 Counted from the saved states (counts only): the pair fills 32 replicas at both sizes, costing 20 and 20 in all but one
 replica (32 and 32 at N = 512).*
 
+*Amendment 9 (2026-10-20, 10:59 UTC by the clock, before launch): the three couplings.* The registered rule (the coldest
+where T47's fronts were measured; the warmest the last at which a flat start stays at least 95 % flat) cannot be applied
+as written: T47's fronts ran in sealed boxes, whose temperature is read off the stores, not set. The couplings are fixed
+instead from what is already measured at λ = 1.25: **g = 1.5**, the coupling of the tube's kinetic record (T7, the wall
+measured against temperature); **g = 2.6**, the warmest coupling of the tempering curve at λ = 1.25
+(`results/cqg_n64_lam125_tempering.csv`, a 16 × 4 tube) at which the squares per point stay above 0.95 in every replica
+(0.963 to 0.967; 0.94 at g = 2.9); and **g = 2.0** between them. That curve is a proxy for the burp's product and is
+named as such. The cheapest flaw costs 20, so a flaw is offered acceptance at about e^(−20/g): 2 × 10⁻⁶ at 1.5, 5 × 10⁻⁵
+at 2.0 and 5 × 10⁻⁴ at 2.6 (arithmetic). Nothing at these couplings on the registered states has been run.*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy
