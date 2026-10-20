@@ -4054,3 +4054,23 @@ author and should be disclosed as such in any submission. Physics estimates mark
     would be is not what this toy's flat sheet does at any coupling. Larger sheets melt at lower couplings (the drift of
     TASKS T9), so the window shrinks with size.
   - **What it bears on.** Piece 6 and Update 70's hypothesis, and T76, whose coupling rule cannot be met.
+- **O142 The burp's product is softer than the flat sheet, but it does not hold a steady thin density of missing
+  squares either (20 October 2026; T76 Amendment 4, option 1; calibration, not a registered verdict).**
+  (`results/t76_settle_p512` and `t76_settle_p1024`; T51's saved end states `t51_l128_10k` and `t51_l256_300k`, the
+  states T75 used; λ = 1.25; 2,000 fair sweeps, the density read over the last 1,000; 16 replicas per coupling.)
+  - **Measured, against the criterion written before the run** (excess over the start between 0.003 and 0.1, not
+    melted, and spread over the window below half the excess, in at least 12 of 16): **no coupling meets it at either
+    size**, as we predicted. The most that met it was 6 of 16 (N = 1,024, g = 2.6) and 5 of 16 (N = 512, g = 2.6).
+  - **What the product does instead.** Up to g = 2.0 the coupling adds essentially nothing (median excess 0.0000 at
+    N = 1,024; at N = 512 the knots' few missing squares heal slightly, median −0.0015). At g = 2.4 and 2.6 a thin
+    density does appear, the excess inside the band in 11 and 12 of 16 replicas at N = 1,024, but it is uneven: at
+    g = 2.6 it ranges tenfold between replicas (0.011 to 0.122) and swings within a replica by a third to more than the
+    excess itself over the window. At g = 2.8 it runs to about half a missing square per point; from g = 3.0 at
+    N = 1,024 every replica melted (at N = 512, 4 of 16 at 3.0, 13 at 3.2, all at 3.4).
+  - *Ours, unverified:* the product's cheaper flaw (20 against 32, T75 Amendment 3) moves the onset from about g = 3.2
+    on the flat sheet (O141) down to about 2.4, and the window between "almost none" and "melted" stays narrow, about
+    0.4 in g, and narrows with size. The flaws still come in patches that grow, not as an even gas. So the stiff toy has
+    no coupling at which Update 70's dark energy, a thin, even, steady density, sits still; soft space (VISION Update
+    76) is the ingredient designed for it.
+  - **What it bears on.** T76 (option 1 gives no coupling at which growth on the product would test a steady density),
+    piece 6, Update 70's hypothesis.

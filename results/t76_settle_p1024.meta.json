@@ -1,0 +1,104 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION T76 Amendment 4, option 1 (the owner's, 20 October): settling runs alone (growth off) on the burp's product, T51's saved end states t51_l256_300k (N = 1024, the states T75 used), to see whether the space a burp actually makes, whose cheapest flaw costs 20 rather than 32, holds a steady thin density of missing squares at any coupling. Calibration, not a growth run or a registered verdict; every coupling tried is kept. At lambda != 1 this is our family, not combinatorial quantum gravity.",
+    "name": "t76_settle_p1024",
+    "section": "T76-settle",
+    "states_dir": "results",
+    "states": "t51_l256_300k",
+    "lambda": 1.25,
+    "couplings": [
+      1.5,
+      2.0,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2,
+      3.4
+    ],
+    "replicas": 16,
+    "n_settle": 2000,
+    "window": 1000,
+    "n_ref": 96,
+    "seed": 20267695
+  },
+  "config_path": "configs/t76_settle_p1024.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "git_commit": "ded66df3171db21fcaf966daf784aadfdf97e051",
+  "git_dirty": true,
+  "git_untracked_count": 2,
+  "git_untracked": [
+    "results/t76_settle_p512.csv",
+    "results/t76_settle_p512.meta.json"
+  ],
+  "preregistration": "PREREGISTRATION.md section T76 (the couplings' bisection; Amendment 4 for a product start)",
+  "summary": [
+    {
+      "g": 1.5,
+      "rho_eq": 0.002199951171875,
+      "se": 0.0007333214283829377,
+      "excess": 2.6855468749999753e-06,
+      "excess_median": 0.0,
+      "melted": 0
+    },
+    {
+      "g": 2.0,
+      "rho_eq": 0.0034981689453125004,
+      "se": 0.0010919180791974742,
+      "excess": 0.0013009033203125,
+      "excess_median": 7.324218749999844e-06,
+      "melted": 0
+    },
+    {
+      "g": 2.4,
+      "rho_eq": 0.01062353515625,
+      "se": 0.0027140936399323076,
+      "excess": 0.00842626953125,
+      "excess_median": 0.00470263671875,
+      "melted": 0
+    },
+    {
+      "g": 2.6,
+      "rho_eq": 0.06564526367187501,
+      "se": 0.010481634737762159,
+      "excess": 0.06344799804687501,
+      "excess_median": 0.05199072265625,
+      "melted": 0
+    },
+    {
+      "g": 2.8,
+      "rho_eq": 0.4960568237304688,
+      "se": 0.069490802190579,
+      "excess": 0.4938595581054688,
+      "excess_median": 0.531892578125,
+      "melted": 0
+    },
+    {
+      "g": 3.0,
+      "rho_eq": 1.4094083251953125,
+      "se": 0.03125329019047169,
+      "excess": 1.4072110595703125,
+      "excess_median": 1.42330078125,
+      "melted": 16
+    },
+    {
+      "g": 3.2,
+      "rho_eq": 1.7219241943359376,
+      "se": 0.010524795364901588,
+      "excess": 1.7197269287109376,
+      "excess_median": 1.73109912109375,
+      "melted": 16
+    },
+    {
+      "g": 3.4,
+      "rho_eq": 1.90614013671875,
+      "se": 0.001252346341675199,
+      "excess": 1.90394287109375,
+      "excess_median": 1.9027099609375,
+      "melted": 16
+    }
+  ]
+}

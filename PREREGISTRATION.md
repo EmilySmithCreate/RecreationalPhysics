@@ -7645,3 +7645,9 @@ Update 40) is to be designed next, and two checks run first:
    q into its rows, and the reader keyed cells by (g, L) only, so the four values of q at one coupling and size would have
    been pooled as one cell. The runner now writes q and the reader keys cells by (g, L, q) (tested). (b) The reader's
    settling window was fixed at 100 fair sweeps; it takes `--window` now, set to 1,000 here.
+
+*Reading of Amendment 4, option 1 (2026-10-20, 19:21 UTC by the clock; ASSUMPTIONS O142).* No coupling holds a steady
+thin density on the burp's product at either size (at most 6 of 16 replicas meet the criterion, at g = 2.6 and
+N = 1,024, against 12 needed); ours held. A thin density appears at g = 2.4 to 2.6 but is uneven between replicas and
+in time, and the product melts from g = 2.8 to 3.0. Growth on the product is therefore not run. Option 2's cells are on
+Batch.*
