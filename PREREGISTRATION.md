@@ -7205,6 +7205,36 @@ unfed phase, the slab's stored energy against time and its rate of loss against 
 expectation; what it can still decide is whether the kernel and the clean switch's spending match the arithmetic, and the
 size claim at L = 16.*
 
+*Amendment 2 (2026-10-20, 02:25 UTC by the clock, before launch): the design repaired after writing the kernel showed two
+errors in it, and the owner's prediction to be confirmed again.* Writing `graphity.layer_outside` and one exploratory check
+of it (L = 6, λ = 1.25, steady feed, 600 + 600 sweeps, in memory only, not a registered cell; disclosed here) showed:
+(i) the fed phase's background was not stated, and if the reservoir relaxes toward a warm background from the start, the
+far ledger becomes a source: the slab is fed by its surroundings, keeps burping after the meals stop, and more energy
+enters it than the meals carried, so exact item 3 ("WAITS by construction") is wrong: **surroundings warmer than the
+slab's stores feed it**, which is what a warm universe does to a black hole (general knowledge, to verify); (ii) DISSOLVES
+as written (half of what c allows over the phase) can exceed what the slab holds and could never be met. The repairs:
+1. **Fed phase: the reservoir is isolated** (ρ = 0); the meals are its only input, so exact item 1 holds as written. The
+   fed phase lasts 4,096 sweeps in every cell, a multiple of 256, so the three feeds deliver the same energy.
+2. **Unfed phase: three backgrounds** in place of two: **cold** (g_bg = 0); **equal** (g_bg = the slab's mean store
+   energy at the moment feeding stops, read from the run); **warm** (g_bg = 4a). Cells: 3 λ × 2 L × 3 feeds × 2 caps ×
+   3 backgrounds = 108, 16 replicas each, seeds 20267401 to 20267508 in the order λ, L, feed, cap, background.
+3. **Unfed words, replacing WAITS and DISSOLVES:** **WAITS** if the slab's stored energy (the sum of its stores) ends
+   within 5 % of its value at the stop and no daughter is born, in at least 15 of 16 replicas; **DISSOLVES** if it ends
+   with at most half its value at the stop, in at least 15 of 16; **FED BY ITS SURROUNDINGS** if a daughter is born or the
+   stored energy rises by more than 5 %, in at least 15 of 16; **MIXED** otherwise.
+4. **Exact items 3 and 4, corrected (ours):** with one cap both ways a black hole between meals waits only when its
+   surroundings are exactly as warm per store as it is; colder surroundings drain it at up to c a sweep; warmer ones feed
+   it at up to c a sweep. So what it does between meals is set by the surroundings, and "waits" is the balanced case.
+5. **Our predictions, revised:** BURPS in every fed cell; SAME TIMING, with SPREAD ONLY where c = 2R and the meals are
+   large; unfed, WAITS under the equal background, DISSOLVES under the cold one, FED BY ITS SURROUNDINGS under the warm
+   one, at every λ and size.
+6. **The owner's prediction** (Amendment 1, "I agree with your assessment") was given to the predictions as first
+   written, one of which (WAITS when warm) was wrong by construction. She confirms or revises it against item 5 before
+   launch.
+7. The protocol's remaining choices (the reservoir starts empty; a meal arrives at the start of its period; a store is
+   never taken below zero, the remainder shared evenly; the stored energy read is the sum of the slab's stores) are ours
+   and are recorded in ASSUMPTIONS Q24.*
+
 ### Runner and tests (to be written before launch)
 
 An `outside` option for `graphity.layer_feed.run_layer_feed` (the reservoir, the relaxation and the edge flow above), with
