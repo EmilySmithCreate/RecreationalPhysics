@@ -7413,6 +7413,13 @@ nearest of all eight flaw points. Cells per size and coupling: the single flaw f
 knot, and the pair far from knots; **ONE SPEED** compares the single far flaw with the pair (the two kinds); the flaw beside
 a knot is reported beside them as a placement. Her prediction (Amendment 6) covers both kinds: their effects spread.*
 
+*Amendment 8 (2026-10-20, 09:12 UTC by the clock, before launch): the pair's second flaw, as built.* The second flaw is the
+cheapest positive-cost switch at its own starting point on the once-flawed state (starting points 4 to 7 steps from the
+first flaw and at least 6 from every knot, tried in the replica's seeded order), kept only if its nearest point lands
+exactly 4 steps from the first flaw and shares no point with it; it is not the cheapest of all switches keeping that gap.
+Counted from the saved states (counts only): the pair fills 32 replicas at both sizes, costing 20 and 20 in all but one
+replica (32 and 32 at N = 512).*
+
 ### Runner and tests (to be written before launch)
 
 A coupled chain (`graphity.coupled`, new) with rule-6 tests: two copies started equal stay equal draw for draw; one copy
