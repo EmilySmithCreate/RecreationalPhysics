@@ -76,7 +76,7 @@ shown.
   the two kinds, a moment out of balance.
 - **The author's two hypotheses.**
   1. The two kinds' unequal prices (λ − 1 against 1): the same energy makes more curl.
-  2. The excess is inherited: the black hole's stores hold eaten matter, and the part still uncurled when the snap fires
+  2. *Withdrawn by the author, 21 October (VISION Update 82).* The excess is inherited: the black hole's stores hold eaten matter, and the part still uncurled when the snap fires
      carries into the new space. With a steady feed, the excess is the snap's duration over the feeding time.
 - **Ours, unverified.** Hypothesis 2 puts the excess in black-hole timing, not particle physics. It needs a black hole's
   stores to remember that they hold matter, which standard physics doesn't expect (a black hole keeps only mass, charge
@@ -84,9 +84,9 @@ shown.
   known only to lie between about 4 MeV and about 10¹⁶ GeV.
 - **The test.** In the toy, the layer form fed unevenly: the spread of the regions' firing times.
 - **The author's further hypotheses (21 October), to test, not decided.**
-  3. **Overcurl at the snap:** the stores hold more than the wall when the split fires (the feed keeps arriving during
+  3. *Withdrawn, 21 October (Update 82).* **Overcurl at the snap:** the stores hold more than the wall when the split fires (the feed keeps arriving during
      the wait), and the part above the wall is what does not cancel.
-  4. **Uneven stores:** some stores hold more than their share of the wall at the snap; the unevenness is the excess.
+  4. *Withdrawn with it, 21 October (Update 82), unless she keeps it.* **Uneven stores:** some stores hold more than their share of the wall at the snap; the unevenness is the excess.
   5. **A background that tips the balance:** the network's negative curvature cancels a little more antimatter than
      matter (she notes this runs against her intuition). *Ours:* its published cousin is gravitational baryogenesis
      (Davoudiasl and others, 2004; not read by us, to verify), where an expanding space's changing curvature biases
@@ -116,7 +116,7 @@ shown.
   nothing else may. Her hypothesis needs the snap to be that something. In the toy, ordinary switches already change the
   difference freely, so the first step is a move set that keeps it (the surface-keeping rule of test 2), and then the
   question whether the snap breaks it.
-- **The excess in black-hole time (ours, arithmetic on general-knowledge inputs, to verify; a translation, not a
+- *Withdrawn with hypothesis 3, 21 October (Update 82).* **The excess in black-hole time (ours, arithmetic on general-knowledge inputs, to verify; a translation, not a
   match).** In hypothesis 3, with a steady feed, the overcurl is the feed during the delay between the stores reaching
   the wall and the split, so the excess as a share of the wall is (feed rate as a share of the wall) times (the delay).
   For a black hole growing at the fastest steady rate light allows (the Eddington rate, mass e-folding in about 50
@@ -179,13 +179,13 @@ to knots as particles.
 2. Exact: a surface-keeping move set, its ergodicity at small size, and whether its defects come in pairs.
 3. Exact: the energy of loop-like knots against their length (a tension?).
 4. Measured: pairs bound when cold and freed when hot, under the surface-keeping rule.
-5. Measured: the uneven-feed layer form's spread of firing times (the excess, hypothesis 2).
+5. *Withdrawn (Update 82).* Measured: the uneven-feed layer form's spread of firing times (the excess, hypothesis 2).
 6. Measured, soft space: two knots drifting together.
-7. Exact, from saved rows: the overcurl at T71's and T74's splits, the stores above the wall when the split fires,
+7. *Withdrawn (Update 82).* Exact, from saved rows: the overcurl at T71's and T74's splits, the stores above the wall when the split fires,
    against the wall (hypothesis 3). *Ours, before reading:* it is set by the feed per sweep against the curling cost
    and the wait for a proposal, so it is a few per cent per sweep of wait at the rates run, far above a billionth;
    a billionth would need a feed a billion times slower than the curling cost per sweep.
-8. Measured: the spread of the stores across the pool at the moment of the split (hypothesis 4), on fresh seeds.
+8. *Withdrawn (Update 82).* Measured: the spread of the stores across the pool at the moment of the split (hypothesis 4), on fresh seeds.
 9. Exact then measured: curls and uncurls in balance placed in a sheet with and without a background of missing squares,
    and which kind survives (hypothesis 5).
 10. Design: what in the toy plays light, so that pairs can be made from it and cancel into it (hypothesis 6); nothing

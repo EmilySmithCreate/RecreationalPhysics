@@ -2520,3 +2520,18 @@ claim's steps 3, 5 and 8 are reworded to carry them, ours in wording and hers on
   whole starting quantity, is 20 to 38 orders of magnitude more than any black hole's mass as seen from outside, which is
   what her bigger-inside reading has to supply. If the daughter grew first (inflation), the quantity before the growth was
   smaller and the comparison changes.
+
+Update 82 (2026-10-21, 16:59 UTC by the clock): **DECISION (the author's): the extra curl at the black hole's lip is
+dropped as a source of the matter excess.** Her words: "lets drop the whole extra curl on the black hole lip idea. it was
+never that good and the release happens faster than that it is the eqivalent of a MUCH bigger nuclear bomb."
+
+- **Withdrawn:** the excess as matter carried in from the parent's stores at the snap (Update 76; paper 18's hypothesis
+  2), as the overcurl above the wall when the split fires (Update 79; hypothesis 3), and, read as the same idea, as
+  uneven stores at the snap (hypothesis 4); with them the delay arithmetic of Update 80 and tests 5, 7 and 8 of paper
+  18's outline. Nothing scored rests on them. *Ours:* if she meant to keep the uneven stores, she says so and it comes
+  back.
+- **What stands for the excess, to test:** the two kinds' unequal prices (hypothesis 1, which must face the measured
+  equality of matter's and antimatter's masses), a background of the network's negative curvature tipping the balance
+  (hypothesis 5), and light turned into matter while it has nowhere to go (hypothesis 6, which by itself makes pairs).
+- **The release is fast (hers):** the burp is far quicker than a meal's timescale, a much bigger nuclear explosion. The
+  claim's step 3 is reworded.

@@ -2106,3 +2106,4 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   looks from outside: Wheeler's "bag of gold" spacetimes, and Frolov, Markov and Mukhanov (1989). -> yes, a black hole is
   bigger on the inside than it appears: it is the exact same size as its mother universe was at the mother's same Time
   since big bang. and so are all its siblings, and there are likely a lot of them." VISION Update 81.
+- 2026-10-21, the owner, on "A billionth would then need a delay of a few weeks of the parent's time": "lets drop the whole extra curl on the black hole lip idea. it was never that good and the release happens faster than that it is the eqivalent of a MUCH bigger nuclear bomb." VISION Update 82.

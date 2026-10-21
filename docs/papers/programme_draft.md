@@ -21,7 +21,7 @@ connected components are observables, not geometric certificates; mean store ene
 3. **The burp becomes the Big Bang's hot lump.**
    - The release is the hot lump: light, with matter and antimatter in almost equal amounts.
    - As it cooled, nearly every pair of matter and antimatter cancelled into more light, so light carried almost all of the energy.
-   - Every daughter starts with the same amount, the burp's release; this curling energy is released only then. The matter we are made of is the small excess that does not cancel, about one part in a billion: surplus curl at the snap, light turned into matter, or both, hypotheses to test.
+   - Every daughter starts with the same amount, the burp's release; this curling energy is released only then. The release is fast, a far bigger explosion than any bomb. The matter we are made of is the small excess that does not cancel, about one part in a billion: from light turned into matter, from the two kinds' unequal prices, or from the network's curvature tipping the balance, hypotheses to test.
    - While the light has nowhere to go it is pressed back into matter, and matter is curved space: tiny loops that are only a relationship, no points, metastable, which build quarks and then protons; once there is room, the light leaves instead.
 4. **The release leaves one way, and X re-forms.**
    - The release goes into the daughter; nothing passes from open space back into X.
