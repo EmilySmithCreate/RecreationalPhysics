@@ -7651,3 +7651,44 @@ thin density on the burp's product at either size (at most 6 of 16 replicas meet
 N = 1,024, against 12 needed); ours held. A thin density appears at g = 2.4 to 2.6 but is uneven between replicas and
 in time, and the product melts from g = 2.8 to 3.0. Growth on the product is therefore not run. Option 2's cells are on
 Batch.*
+
+
+## T77. Does a dark energy that fades open the causal diamond and make our age early? (piece 12; the comparison of paper 16 between the author's constant dark energy and the published model's falling one, [T24] Sec. IV; standard cosmology, not the toy; DRAFT written 2026-10-21, 00:33 UTC by the clock, on the owner's request of 20 October to compare the light-cone approach with the published model's picture; no code written, no number computed)
+
+**Status:** draft. The owner's prediction is owed before any number; the code is to be written and tested first.
+
+### Why
+
+T73 weighted each age by the comoving volume of the causal diamond, whose far edge is the past light cone of the
+universe's end; it assumed a constant dark energy (the author's, VISION Updates 70, 72, 76). In [T24] dark energy falls
+as the coupling runs, and the acceleration "tends to zero". For a dark energy with constant w the event horizon exists
+only if w < −1/3 (textbook; to verify); without it the diamond never closes and the weight rises with age. This test
+computes T72's classes under the diamond weight for declared stand-ins of a fading dark energy, since [T24] gives no law.
+
+### Design (fixed now)
+
+- Flat cosmology, Planck 2018 matter density and Hubble constant as in `scripts/observer_window.py`; dark energy with
+  constant w = −1 (the T73 control, which must reproduce T73's numbers to the printed digits), −0.9, −0.7 and −1/3, its
+  density today fixed by flatness; a(t) and η(t) by numerical integration of the Friedmann equation, checked against the
+  closed form at w = −1.
+- The star-formation history, mass function, lifetimes and classes A to D of T72, the fit converted to cosmic time under
+  each w; T72's exponential tail (e-fold 50 Gyr; 20 Gyr and none as sensitivities).
+- The weight V_c(t) = (4π/3) r(t)³, r = min(η, η_∞ − η), with r = η where η_∞ diverges (w = −1/3: diverges; w < −1/3:
+  finite).
+- The observation window: two variants, both reported, neither preferred: (a) T72's 100 Gyr cap at every w; (b) no cap.
+- Read per (class, w, window): the share F before our age and the peak; the verdict words of T72 (TYPICAL for
+  0.05 ≤ F ≤ 0.95, EARLY below, LATE above, INCONCLUSIVE when a class crosses a boundary under the tail sensitivities).
+
+### Predictions
+
+- **The owner's:** owed.
+- **Ours:** as w rises the diamond's peak moves later and every class's F falls; at w = −0.9 the words of T73 hold
+  (within a tail sensitivity); at w = −1/3 without the cap, every class is EARLY except class D, which is TYPICAL only
+  because its hard-steps delay puts its own peak late; with the cap, the words move less, since the cap bites before the
+  diamond's growth matters.
+
+### What this cannot show
+
+Which picture is right: that is the measured equation of state's job (w = −1.03 ± 0.03, [Planck18], to verify), not the
+measure's. It shows whether the light-cone measure separates a constant dark energy from a fading one, and by how much.
+Rule 13: our age is not scored (paper 16, Sec. VI).
