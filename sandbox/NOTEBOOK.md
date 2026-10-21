@@ -1996,3 +1996,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-20, the owner: "Regge calculus charges only for curvature brilliant", "Does science know the birth temp?",
   and "So a positive curvature defect can only appear together with a negative one: the pairs you wanted, for fre
   amazing. The caviates clarify the math, yes more complicated toy but moving toward testable model." VISION Update 77.
+- 2026-10-21, the owner: "What will it tell us or help us learn if we Start with the clocks and lengths? When was our
+  matter excess made? I thought right before the snap? I do think we're going to have a hot side estimate. My hope is
+  that quarks and their mass will get us there it's helpful to know what we started with we can find a conversion once we
+  better understand the energy and all of the snap". *Ours:* in her hypothesis the excess is inherited (the parent's
+  eaten matter still uncurled at the snap), not made at the snap; its size is set by the snap's timing, not by particle
+  physics. A proton's mass is about 1 % its quarks' masses and 99 % the energy of the field binding them (general
+  knowledge, to verify), so a conversion anchored on matter would more likely use the proton's mass or the string's
+  tension than the quark masses; rule 13 asks that one anchor be chosen before its predictions are seen.
