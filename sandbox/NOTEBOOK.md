@@ -2147,3 +2147,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   which stores energy like mass the cost of a full curl and 2 coming together create 2 photons. matter is a loop from 3d
   and dark matter is a loop from 2d. that's why we have dark versions of everything but they dont interact." VISION
   Update 84; a reading note is being written (`docs/reading/notes/2026-10-21_matter_as_loops.md`).
+- 2026-10-21, the owner, on Faddeev and Niemi's knots whose energy grows with their length: "This is interesting. A
+  ring can be longer if the space it was made of was bigger, the length of the hypotenuse freezes into the length of the
+  ring and different lengths make diff subatomic particles that hold the same energy. No edge link can but these are
+  hypotenuse links can. In this theory. It could have a twist in it like one point is facing the other direction (to be
+  turned away from its closest same type neighbor) so matter and antimatter would hold a twist in different directions"
+  VISION Update 85.

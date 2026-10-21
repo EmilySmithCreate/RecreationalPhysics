@@ -2589,3 +2589,30 @@ matter as the same loop one dimension down, and antimatter dispersing while matt
   form); (ii) a twist carried around a closed cycle of links, a number that only cutting the loop can change (the
   Skyrmion's form, and the conserved count the excess needs); (iii) a closed cycle whose points are compacted away by the
   layer form, leaving only its curl. Form (ii) would also supply the count that ordinary moves keep fixed.
+
+Update 85 (2026-10-21, 19:23 UTC by the clock): **the author's particle: a ring of diagonal links with a twist.** Her
+words are in `sandbox/NOTEBOOK.md` under that date. Recorded as her hypothesis to test; read as her choice, among the
+forms of Update 84, of the twist (form ii), carried on diagonal links. She confirms or corrects this reading.
+
+- **Hers.** A particle is a ring made of the diagonal ("hypotenuse") links of soft space's second stage, not of edge
+  links. The diagonal's length freezes into the ring's length, so a ring made where space was larger is longer, and
+  different lengths are different subatomic particles. The ring can carry a twist, one point turned away from its
+  nearest neighbor of the same kind, and matter and antimatter carry the twist in opposite directions.
+- **Exact (ours, from the toy's structure).** Every link of the toy joins two points of different kinds, but a square's
+  diagonal joins its two opposite corners, which are of the same kind. So an edge link can never close a ring of one
+  kind, and a diagonal can: on the flat sheet the diagonals of one kind form a second square lattice, turned 45° with
+  spacing √2. Her "no edge link can, hypotenuse links can" holds in the toy as built. A ring of k diagonals has length
+  k√2 in edge units on flat space; in stage B its length is whatever its diagonals' lengths are.
+- **Relatives (from the reading note of this day).** Opposite twists as particle and antiparticle are the Skyrmion's
+  opposite windings and Bilson-Thompson's twists of ±2π (each read as a charge of ±e/3); energy growing with a closed
+  tube's length is Faddeev and Niemi's knots and Buniy and Kephart's glueballs modeled as knotted flux tubes.
+- **What it must face (ours, general knowledge, to verify).** Every particle of one kind is identical: all electrons
+  have the same mass to many decimal places. So ring lengths cannot be set by how big the space happened to be where
+  each ring formed; they have to come in a fixed set of allowed lengths that the rules pick out. If they do, a fixed set
+  of lengths with the same twist could be a ladder of particles that differ only in mass, which is the pattern of the
+  three generations (electron, muon, tau: the same charge, masses of about 0.511, 106 and 1,777 MeV). That is a reading
+  to test, not a match.
+- **How it can be tested, once stage B's brief is written.** Exact first: (1) the energy of a ring of diagonals against
+  its length (a tension, linear, or something else, and whether only some lengths are stuck); (2) whether a twist,
+  defined on the ring, is kept by every local move that does not cut the ring (the count that only the snap may change);
+  (3) whether a ring with one twist and a ring with the opposite twist can meet and unwind, and where their energy goes.

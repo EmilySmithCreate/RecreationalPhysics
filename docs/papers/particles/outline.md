@@ -155,6 +155,13 @@ shown.
   that became our observable universe if the hot era began at 4 MeV, about 10⁷⁹ kg at 10¹⁶ GeV; matter today about
   10⁵⁴ kg.
 
+- **The author's particle (21 October; VISION Update 85): a ring of diagonal links with a twist.** Rings are made of
+  squares' diagonals, which join points of one kind (exact: edge links never can); the frozen diagonal length sets the
+  ring's length, different lengths are different particles, and matter and antimatter carry opposite twists. *Ours:*
+  lengths must come in an allowed set, since particles of one kind are identical; a set of lengths with one twist would
+  be the shape of the three generations. Tests (exact, after stage B's brief): ring energy against length; the twist kept
+  by every move that does not cut the ring; opposite twists meeting and unwinding.
+
 ## 7. Mass, and the conversion to physical units
 
 - **General knowledge, to verify.** Matter's mass is mostly bound field energy (section 1).
