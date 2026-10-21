@@ -2004,3 +2004,24 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   physics. A proton's mass is about 1 % its quarks' masses and 99 % the energy of the field binding them (general
   knowledge, to verify), so a conversion anchored on matter would more likely use the proton's mass or the string's
   tension than the quark masses; rule 13 asks that one anchor be chosen before its predictions are seen.
+- 2026-10-21, the owner, on the programme page's claim: "from its burp to its last black hole dissolving black holes"
+  and "which became the Big Bang's energy- part of it- the light part; the matter part was something additional as we
+  are seeing that the burp makes matter and antimatter pairs that exactly cancel right?" *Ours (standard cosmology,
+  general knowledge, to verify):* the hot lump held light and almost equal matter and antimatter; nearly every pair
+  turned into light as it cooled, and the matter left is an excess of about 6 × 10⁻¹⁰ baryons per photon. So the light
+  is most of the lump, and the matter we are made of is a sliver on top of it, which fits her hypothesis of 20 October
+  that the excess is carried in from the parent's stores at the snap. The toy has not shown that the burp makes pairs:
+  what is exact is that on a closed surface the total curvature is fixed by the number of handles (Gauss and Bonnet),
+  so curls and uncurls must balance; that they behave as matter and antimatter, and cancel into anything like light,
+  is her hypothesis, untested (paper 18). The claim is restated so.
+- 2026-10-21, the owner: "I think the opening a phase changing reality paragraph should be more a numbered list of steps
+  each with a bulleted list of what that means." Done on the programme page and in the draft.
+- 2026-10-21, the owner: "Is what carries curling energy still open I thought we are settling on the links and working
+  to describe those in detail?" VISION Update 78.
+- 2026-10-21, the owner: "The from counting worlds paper should include the point below it that uses the published
+  figures. I think this would make the step measured, but not matching initial hypothesis rather than one fail and one
+  exact math." Piece 13 folded into piece 9 on the page (VISION Update 78).
+- 2026-10-21, the owner: "It seems like we should be able to start building up an equation to represent the toy, which
+  would make it clear when different terms are added and their sources if pulled from published work. Can you add these
+  to the deep dive sections that explain where we are and next steps on each claim?" Done: a term-by-term table on the
+  programme page and in the draft, and a line per piece naming the terms it uses and the next one.

@@ -7706,3 +7706,15 @@ lowers F in every class, the gate EARLY at w = −1/3, A, B and C EARLY at w = �
 within a tail sensitivity): holds for the fall in F and the gate; fails for A, B and C at w = −1/3 (TYPICAL, F 0.62 to
 0.66) and for A's scored word at w = −0.9 (LATE to TYPICAL). The gate's peak at w = −1/3 (2,300 Gyr) lies at the far edge of
 the star history and is read as a limit. Nothing is scored against our age.
+
+### Reading of T71 (2026-10-21, 11:12 UTC by the clock; ASSUMPTIONS O144; `scripts/analyse_t71.py`, the control by `scripts/analyse_t68.py`'s rules)
+
+Read on L = 8 and 12 by the rules above. **The owner's prediction, scored by the move sets she named:** the model arm
+CYCLES at every curling cost (holds, 6 of 6 cells); layer moves alone CYCLES in every cell (her revision of Amendment 3;
+holds, 6 of 6); the clean switch "rarely" (holds: it fired in the two cells λ = 1.10, r = 1/16 only, never before the
+first split); the control does not cycle (holds: SITS in 6 of 6); one a N_slab per daughter (holds in layer moves alone
+everywhere and in the model arm in four of six λ, r settings; fails in the two cells where a clean switch fired, median
+0.99 and 0.89 of a N_slab). **Ours:** holds for arm B, the timing and f1; fails for the slab share at λ = 1.10, r = 1/16
+(0.37, not above one half), for "no clean switch move in any cell", and for arm C (SITS, not BREAKS). The four answers
+of rule 11 are in O144. The held-out size L = 16 does not run until its words and numbers are written here as a dated
+amendment, with her word.

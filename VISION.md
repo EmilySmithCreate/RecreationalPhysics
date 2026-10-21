@@ -2406,3 +2406,34 @@ this paragraph is corrected.
   derived. The model with it is our family, never CQG.
 - Nothing runs on the hypothesis until the kernel passes its rule-6 tests and the published numbers of the brief's
   "Order of work" (lattice resistances, equipartition). Merging this update is her acceptance of the wording.
+
+Update 78 (2026-10-21, 11:13 UTC by the clock): **the author's answers of 21 October: curling energy is carried by the
+links; piece 13 is folded into piece 9; the claim is written as steps; and T71 read.** Her words are in
+`sandbox/NOTEBOOK.md` under that date. Why this page changes: one open question of pieces 3 and 11 is answered, and the
+programme page is regrouped.
+
+- **What carries curling energy (hers):** "I thought we are settling on the links and working to describe those in
+  detail." *Ours:* read as her answer to the question left open on 17 October (each relic as its own stored curling
+  cost, stores at the relic filled from outside, or both): the curl's energy lives in the links around it, which is
+  stage B of Update 77, lengths on links and square diagonals with an energy that charges only for curvature, where a
+  curl's energy is the deficit angle at its hinges. Of the three options it is nearest the first, a relic carrying its
+  own cost, now held in its links' lengths rather than in a store. The curl-only store of 15 to 17 October stays as the
+  stiff toy's stand-in until stage B exists; nothing registered runs with either before stage B's brief is written. If
+  she meant something else she says so and this bullet is corrected.
+- **Piece 13 is folded into piece 9 (hers):** the quantum step reads as one piece, measured, its first version (counting
+  alone) not matching, with the published rule of amplitudes and records adopted and checked exactly in a small toy.
+  Paper 13 already covers both. Nothing scored is rescored.
+- **The claim as steps (hers):** the claim on the programme page and in the draft is written as numbered steps, each
+  with what it means. One sentence changes in substance, on her question: the burp became the hot lump of the Big Bang,
+  light with matter and antimatter in almost equal amounts that cancelled into more light, and the matter left, about
+  one part in a billion, is the excess her hypothesis of 20 October carries in from the parent's stores at the snap
+  (Update 76). *Ours:* the toy has not shown that the burp makes pairs; what is exact is that curvature on a closed
+  surface balances (Gauss and Bonnet), so curls and uncurls come in balancing sets; that they act as matter and
+  antimatter is hers to test (paper 18). The wording is ours and hers once she confirms it.
+- **The toy written as one equation, term by term (hers to ask, ours to write):** the published energy, the curling
+  cost, the tie, the stores and gate, the layer form, soft space's two stages and the amplitude rule, each with its
+  source and the pieces that use it, on the programme page and in the draft. It adds no term; it lists the ones decided.
+- **T71 read (O144):** under the layer form with her gate the slab cycles in every cell, each daughter carrying exactly
+  the slab's curling cost while the chain keeps pace with the feed; where the feed outran the chain's one layer
+  proposal a sweep, clean switch moves fired and daughters fell short. Her prediction held except on one item in two
+  cells of twelve; ours failed on three items, all traced to our own reading of the protocol (O144, rule 11).

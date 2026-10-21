@@ -4098,3 +4098,43 @@ author and should be disclosed as such in any submission. Physics estimates mark
     gate (planet-years) class and the late-class shares, not the verdicts of the stellar classes; under the stand-ins our
     own age stays typical in class D at every w tried. Nothing here is a comparison with data: which w holds is the
     measured equation of state's question, and our age is not scored (paper 16, Sec. VI).
+- **O144 T71, read (21 October 2026, 11:12 UTC by the clock; fetched into the inbox 19 October, 13:13 UTC, accepted
+  21 October, 11:07 UTC, all 12 runs matching their committed configs; `results/t71_*.csv`, `scripts/analyse_t71.py`;
+  the control read with `scripts/analyse_t68.py`'s rules on `t71_control_*`).** The untied slab 4 × L × L under the
+  layer form with the owner's gate g1 (VISION Update 69) and her daughter rule (Update 66), λ = 1.10, 1.25, 1.40,
+  L = 8 and 12, r = 1/64 and 1/16, 16 replicas a cell.
+  - **Layer moves alone (arm B), daughter rule:** CYCLES in all 12 cells, 16 of 16 replicas each. Every daughter carries
+    a N_slab to 1e-9. The first split falls at t_gate = 2a/r (12.8 to 204.8 sweeps across the six λ, r settings) plus
+    a wait: medians within 2 sweeps of it, every replica within 10, the same at L = 8 and 12. Daughters per replica 40 to 340; period 13 to 101 sweeps; slab share 0.77 to 0.96, except
+    λ = 1.10, r = 1/16 (0.37 at both sizes).
+  - **Reference (arm B, release kept in the parent's stores, f1):** OSCILLATES in all 12 cells, as predicted.
+  - **Model (arm A, layer moves plus the clean two-switch move):** CYCLES in all 12 cells. No clean switch move fired
+    in 10 cells. In the two cells λ = 1.10, r = 1/16 (L = 8 and 12) a clean switch move was paid in 12 and 13 replicas
+    of 16 (17 and 23 moves in all), never before the first split (SPENT FIRST 0 of 16), first between sweeps 335 and
+    1,703; there the median energy per daughter falls to 0.99 and 0.89 of a N_slab, and the end states carry rewired
+    patches (end energy above flat 128 to 528 at L = 12, with 24 to 84 points off the ladder in 11 replicas).
+    *Read from the rows (ours):* in those cells the feed brings one slab's cost every 2a/r = 6.4 sweeps, close to the
+    fastest the chain can convert (one layer proposal a sweep, a split and a refold per cycle; the measured period is 5),
+    so the stores pile up (to 25,000 to 95,000 at L = 12, about 30 to 110 per point) until a pool of eight ends holds
+    the 64 the first clean step needs. At every other setting the conversion keeps up and the stores never get there.
+  - **Control (single switch, T68's protocol, mode "all"):** SITS in all 12 cells, 16 of 16; no point broke.
+  - **The owner's prediction (Amendments 2 and 3), scored by the move sets she named:** model arm CYCLES at every
+    curling cost, holds; layer moves alone CYCLES in every cell (revised before any read), holds; the clean switch
+    "rarely", holds (two cells of twelve, after the first burp); the control "doesn't cycle", holds (it sits); one
+    a N_slab per daughter, holds in arm B in every cell and in arm A in ten cells of twelve, fails in the two cells
+    where a clean switch fired.
+  - **Ours, scored (rule 11):** arm B CYCLES with exactly a N_slab per daughter, holds; the first split at 2a/r plus a
+    short wait and the same sweeps at every size, holds; f1 OSCILLATES, holds; the slab share above one half under g1,
+    fails at λ = 1.10, r = 1/16 (0.37); arm A "no clean switch move in any cell", fails in two cells; arm C BREAKS,
+    fails (SITS everywhere). Four answers for the failures: (1) they do not touch the mechanism as stated (the slab
+    cycles and converts); (2) they are prediction errors of ours: arm C's BREAKS was carried over from T68's
+    one-store and one-point modes, while T68 in mode "all" at rates up to 1/4 already SAT; the slab-share and
+    clean-switch misses come from a feed that outruns the chain's one layer proposal a sweep, a clock choice of the
+    protocol (declared in T71's runner), not a property of the slab; (3) the cheaper test that tells clock from
+    mechanism is the same cells with more layer proposals a sweep, or a slower feed, where the conversion keeps up;
+    (4) the branch would be abandoned if, with the conversion keeping up, daughters stopped carrying a N_slab.
+  - **What it shows (ours):** under the layer form with her gate the slab is a converter: each slab's worth fed becomes
+    one daughter of exactly that energy, as long as the chain can keep pace with the feed; it is nearly arithmetic, as
+    the registration said. **Not shown:** anything about the switch model's slab, which no feed opened (T67, T68), or
+    about a front, a seam or a payment that cancels, which the layer form lacks. The held-out size L = 16 waits for its
+    words and numbers, written from these two sizes, and her word.
