@@ -1,0 +1,143 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION.md T76, Amendment 4 (the owner's option 2 of 20 October): a first look at one coupling, g = 3.2, the one at which the settled flat 16 x 16 sheet holds a small patchy density without melting (Amendment 3, O141), since no coupling meets the registered rule. As space grows by the owner's row rule, each clear offer taken with chance q = 1/1024, does the density of missing squares per point stay constant? L = 16. Not exploratory; labelled a first look. At lambda != 1 this is our family, not combinatorial quantum gravity.",
+    "name": "t76_l16_g3p2_q1024",
+    "section": "T76",
+    "L": 16,
+    "lambda": 1.25,
+    "g": 3.2,
+    "rho_target": null,
+    "q": 0.0009765625,
+    "replicas": 16,
+    "n_settle": 2000,
+    "n_growth": 4000,
+    "cap_factor": 8,
+    "n_ref": 96,
+    "reach": 3,
+    "seed": 20267604
+  },
+  "config_path": "configs/t76_l16_g3p2_q1024.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "git_commit": "unknown",
+  "git_dirty": null,
+  "git_untracked_count": null,
+  "git_untracked": null,
+  "preregistration": "PREREGISTRATION.md section T76",
+  "finals": [
+    {
+      "replica": 0,
+      "N": 2128,
+      "Lx": 38,
+      "Ly": 56,
+      "fair_sweeps": 2488
+    },
+    {
+      "replica": 1,
+      "N": 2080,
+      "Lx": 80,
+      "Ly": 26,
+      "fair_sweeps": 2591
+    },
+    {
+      "replica": 2,
+      "N": 2052,
+      "Lx": 54,
+      "Ly": 38,
+      "fair_sweeps": 2865
+    },
+    {
+      "replica": 3,
+      "N": 2080,
+      "Lx": 104,
+      "Ly": 20,
+      "fair_sweeps": 3166
+    },
+    {
+      "replica": 4,
+      "N": 2128,
+      "Lx": 38,
+      "Ly": 56,
+      "fair_sweeps": 2620
+    },
+    {
+      "replica": 5,
+      "N": 288,
+      "Lx": 16,
+      "Ly": 18,
+      "fair_sweeps": 6000
+    },
+    {
+      "replica": 6,
+      "N": 1980,
+      "Lx": 110,
+      "Ly": 18,
+      "fair_sweeps": 6000
+    },
+    {
+      "replica": 7,
+      "N": 2112,
+      "Lx": 44,
+      "Ly": 48,
+      "fair_sweeps": 2544
+    },
+    {
+      "replica": 8,
+      "N": 2100,
+      "Lx": 42,
+      "Ly": 50,
+      "fair_sweeps": 2415
+    },
+    {
+      "replica": 9,
+      "N": 2112,
+      "Lx": 44,
+      "Ly": 48,
+      "fair_sweeps": 2694
+    },
+    {
+      "replica": 10,
+      "N": 1312,
+      "Lx": 82,
+      "Ly": 16,
+      "fair_sweeps": 6000
+    },
+    {
+      "replica": 11,
+      "N": 1276,
+      "Lx": 58,
+      "Ly": 22,
+      "fair_sweeps": 6000
+    },
+    {
+      "replica": 12,
+      "N": 2100,
+      "Lx": 50,
+      "Ly": 42,
+      "fair_sweeps": 2820
+    },
+    {
+      "replica": 13,
+      "N": 2052,
+      "Lx": 38,
+      "Ly": 54,
+      "fair_sweeps": 2686
+    },
+    {
+      "replica": 14,
+      "N": 2100,
+      "Lx": 70,
+      "Ly": 30,
+      "fair_sweeps": 2663
+    },
+    {
+      "replica": 15,
+      "N": 2088,
+      "Lx": 36,
+      "Ly": 58,
+      "fair_sweeps": 2888
+    }
+  ]
+}
