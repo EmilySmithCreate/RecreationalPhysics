@@ -7692,3 +7692,8 @@ computes T72's classes under the diamond weight for declared stand-ins of a fadi
 Which picture is right: that is the measured equation of state's job (w = −1.03 ± 0.03, [Planck18], to verify), not the
 measure's. It shows whether the light-cone measure separates a constant dark energy from a fading one, and by how much.
 Rule 13: our age is not scored (paper 16, Sec. VI).
+
+*Owner's prediction for T77, recorded 2026-10-21, 00:55 UTC by the clock, before any number is computed (her word,
+"Constant", after the three options were set out): dark energy stays a constant, so the w = −1 control reproduces T73's
+verdicts, and that is her prediction for the family. The stand-ins below are run as declared; her prediction is scored
+against the w = −1 row (CONSTANT) only; the fading rows are scored against our prediction, written beside them.*
