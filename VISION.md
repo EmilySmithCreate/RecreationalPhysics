@@ -2457,3 +2457,26 @@ hypotheses about where the matter excess comes from are recorded for testing.
   it describes an energy of constant density, which in standard cosmology is what grows a universe (inflation) before
   turning into its light and matter; in this programme that is her dark-energy candidate, not the scrap. Nothing in the
   toy grows a daughter yet.
+
+Update 80 (2026-10-21, 15:04 UTC by the clock): **the author's hypotheses on which kind is matter, on how the excess is
+made, and on dark matter's web.** Her words are in `sandbox/NOTEBOOK.md` under that date; the analysis is in paper
+18's outline, section 6. Recorded as hypotheses to test, not decisions.
+
+- **Curl is matter, uncurl antimatter (hers).** Her reason: matter falling in excess into a black hole leaves its uncurl
+  in the hole, and what comes in offsets it. *Ours:* this must face the measured equality of matter's and antimatter's
+  masses, since the toy prices the two kinds one to four at λ = 1.25; it survives only if a particle's mass is not its
+  defect's raw price. An exact check comes before any run.
+- **The billionth (hers):** surplus curl at the snap, light turned into matter, a combination, or something else, with
+  the network's slight negative curvature possibly cancelling a little more. *Ours:* in the overcurl form the excess is
+  the feed's share of the wall during the snap's delay; at the Eddington rate a billionth needs a delay of a few weeks of
+  the parent's time (a translation of her hypothesis, not a match, rule 13).
+- **The daughter's growth (ours, a clarification asked for):** the daughter is our universe and always expanding, as
+  she says; the point was its contents. Ordinary expansion dilutes what a space holds and adds nothing, while a daughter
+  born from one black hole's energy has far less than our universe holds within its horizon. Getting from the one to the
+  other needs either a phase of constant-density energy that grows the total (inflation), or a daughter whose energy is
+  not limited by its black hole's mass as seen from outside (Wheeler's "bag of gold" spacetimes; Frolov, Markov and
+  Mukhanov 1989; not read by us, to verify). Which one her picture uses is open.
+- **Dark matter made as links are added, settling into a web like a brain's (hers).** *Ours:* the likeness between the
+  cosmic web and neuronal networks has been measured (Vazza and Feletti 2020, not read); the web's growth by gravity
+  matches her paths; dark matter thinning exactly as matter does since the microwave background rules out its steady
+  making since then, not before.

@@ -99,6 +99,44 @@ shown.
   λ = 1.25, equal only at λ = 2. So the energy has the "difference between the two kinds" Sakharov's second condition asks
   for, and the snap has his third (a moment out of balance). What it lacks is a rule that says which kind is matter, and a
   conserved count (his first condition read backwards: a count that the snap, and only the snap, can change).
+- **Which kind is matter (the author's hypothesis, 21 October, to test):** curl is matter and uncurl antimatter.
+  Her reason: the matter that falls into a black hole in excess leaves its uncurl behind in the hole, and the matter
+  coming in offsets it, its energy appearing as matter or as the light of its cancelling; concentrated light may be the
+  curling energy applied at the edge that fills the stores. The billionth that does not cancel may be surplus curl,
+  light turned into matter, a combination, or something else. **What this must face (ours, general knowledge, to
+  verify):** matter and antimatter are measured to have the same mass to about a part in 10¹¹ (the proton and
+  antiproton compared in a trap), while the toy prices a curl and an uncurl one to four at λ = 1.25. Read literally,
+  curl and uncurl as particle and antiparticle predict unequal masses, which is ruled out; the reading survives only if a
+  particle's mass is not the raw price of its defect (for a proton most of the mass is field energy, section 7), or if
+  each kind is a bound object whose total energies come out equal. This is an exact check to make before anything is
+  run on the reading.
+- **A count that only the snap can change (ours):** Sakharov's first condition, said plainly. If ordinary moves
+  always make or remove curls and uncurls in pairs, the difference (curls minus uncurls) never changes, and no excess
+  can ever appear; for an excess to exist, something must change that difference, and for it to survive afterwards,
+  nothing else may. Her hypothesis needs the snap to be that something. In the toy, ordinary switches already change the
+  difference freely, so the first step is a move set that keeps it (the surface-keeping rule of test 2), and then the
+  question whether the snap breaks it.
+- **The excess in black-hole time (ours, arithmetic on general-knowledge inputs, to verify; a translation, not a
+  match).** In hypothesis 3, with a steady feed, the overcurl is the feed during the delay between the stores reaching
+  the wall and the split, so the excess as a share of the wall is (feed rate as a share of the wall) times (the delay).
+  For a black hole growing at the fastest steady rate light allows (the Eddington rate, mass e-folding in about 50
+  million years for a radiative efficiency of a tenth), a share of a billionth needs a delay of about 50 million years
+  times 10⁻⁹, a few weeks of the parent's time. In the toy the same formula reads r × wait / 2a per pool point, so the
+  test is the scaling with the feed, not the value: the toy's feeds run far faster than any physical one. The billionth
+  is by number (baryons per photon); as a share of energy at birth it depends on the birth temperature (above).
+- **Dark matter as made with new links (the author's hypothesis, 21 October), and the web that looks like neurons.**
+  She proposes that dark matter's flaws are created as space adds links, in a regular sprinkling, and that the pattern
+  then settles as a brain's does: well-used paths thicken into filaments and nodes (galaxies), little-used ones fade
+  into empty, flat space, and as space expands between them the nodes pass less to each other, as an ageing brain
+  does. **Ours (general knowledge, to verify):** the likeness has been measured: a 2020 comparison of the cosmic web
+  and the brain's neuronal network found similar statistics of connections over a range of scales (Vazza and Feletti,
+  Frontiers in Physics, 2020; not read by us). In standard cosmology the web forms the way she describes the paths: small
+  ripples grow under gravity, matter drains out of the voids onto sheets and filaments and flows along them into the
+  nodes, and the voids empty further with time. One measurement bears on "created as links are added": dark matter's
+  density thins with the volume exactly as matter's does between the microwave background's time and today, so it was
+  not being made as space grew over that time (any steady making would show up as a density that thins more slowly).
+  A making early on, before that time, is not ruled out by this. The far-future part matches the standard picture of
+  isolated galaxies under accelerating expansion.
 - **The daughter's growth (ours, general knowledge, to verify).** With energy conserved across the change, a daughter
   starts with no more than its black hole converted, far less than our universe holds, so it must grow after the burp to
   match its mother. In standard cosmology growth comes from an energy of constant density (inflation), which then turns

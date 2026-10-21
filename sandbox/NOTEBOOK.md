@@ -2064,3 +2064,30 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   2004), where the changing curvature of an expanding space biases matter over antimatter; not read by us. (d) The end
   state: in a universe whose expansion accelerates, groups of galaxies are carried out of each other's reach, so the
   last black holes are many, each in its own region, each evaporating alone; the claim now says so.
+- 2026-10-21, the owner: "billionth of the stores that doesn't cancel, not the stores' whole size yes this was always what I meant. What that
+  billionth is could be surplus curl or light transformed to matter or a combination. Or something else. But the toy
+  then needs something that expands the daughter after the burp- what do you mean, the daughter is our universe always
+  expanding although the expansion rate varies. overshoot is a few percent, far above a billionth. Not sure I agree with
+  this but it would allow additional cancel from the slight negative curvature of the network. how fast the black hole
+  eats - can we convert this rate to sweeps? What the toy lacks is a rule saying which kind is matter I think curl is
+  matter and uncurl antimatter. This is because matter is what the resolved black holes would be- the matter that is
+  the extra into the hole leaves its uncurl back in the black hole. The matter needs to come in to offset, and it first
+  makes energy as the matter energy- or the light energy from that canceling of leftover with the antimatter part of
+  the newly fed matter. It could be that concentrated light is the curling energy that is applied at the edge to curl
+  and fills its stores. Dark matter doesn't stretch space- right I thought it was created in a similar pattern when new
+  links are added. This would explain the somewhat regular pattern of dark matter that seems to look like neurons in
+  spacetime. Imagine a brain with a regular distribution of neurons (flaws) . The neurons start to connect with each
+  other, and those with more used connections thicken certain paths, while others are eroded or used so infrequently
+  that they die off (settle to area of space that is flat lacking flaws). The strongest most used paths from big nodes
+  and pathways between the nodes. It settles into this pattern and in the brain the settled pathway set forms a
+  specific arrangement and the strengths and personality and their is such diversity in those things between humans
+  (dark matter energy forming the galactic scale arrangement of galaxies and energy paths. Each galaxy concentrating
+  area a well connected neuron) and even siblings and twins are different especially because of interactions with each
+  other. Triplets separated at birth were even more alike than triolets raised together. (May or may not have any
+  analogy in space) . Imagine the empty space between neurons gets some destructive byproducts, and the effect compounds
+  over time, leading to reduced plasticity and dimentia and similar symptoms and mental energy, which declines with age
+  I. Even the smartest individuals (the space expands where there is no matter and galaxies chains or nodes spread,
+  passing less information between as the light cone becomes less concentrated ie move towards the state where an
+  observer looks up from their planet away from their sun and sees only blackness) , and a count that only the snap can
+  change." VISION Update 80; paper 18's outline,
+  section 6.
