@@ -2107,3 +2107,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   bigger on the inside than it appears: it is the exact same size as its mother universe was at the mother's same Time
   since big bang. and so are all its siblings, and there are likely a lot of them." VISION Update 81.
 - 2026-10-21, the owner, on "A billionth would then need a delay of a few weeks of the parent's time": "lets drop the whole extra curl on the black hole lip idea. it was never that good and the release happens faster than that it is the eqivalent of a MUCH bigger nuclear bomb." VISION Update 82.
+- 2026-10-21, the owner: "please do: That can be checked exactly before anything runs. to about one part in 10¹¹ ->
+  could lambda be this small? a particle's mass isn't the raw price of its flaw -> yes, the loops are but most of the
+  mass isn't loops but the connecting energy ie the full metastable particle is a secondary force that comes to be
+  around how to turn a curl link loop (string) into a matter particle in 3d space. the quarks have diff spins, they
+  group in specific ways, etc. the only way you can turn light into matter is in a confined space, and only a new
+  space just opening containing all that birth energy can do the job. and even that, it needs to go through a bunch of
+  cycles to even get cool enough to form matter." The check: `sandbox/LOG.md`, 21 October. *Ours:* the 10⁻¹¹ is how
+  precisely the masses are measured equal, not a size for λ; a λ just above 1 makes curls nearly free and the two
+  prices more unequal, not less. Her mass reading matches the proton's (about 99 % binding energy). Light makes pairs
+  wherever two photons carry enough energy (laboratory beams, near pulsars), but they annihilate again; lasting bulk
+  matter and its excess need the hot early universe, where each photon is made into pairs and back many times while
+  the space cools, and matter forms in stages (protons at about ten microseconds, nuclei in minutes, atoms at about
+  380,000 years). General knowledge, to verify.

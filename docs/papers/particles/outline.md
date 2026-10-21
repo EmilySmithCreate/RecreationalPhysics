@@ -109,7 +109,7 @@ shown.
   curl and uncurl as particle and antiparticle predict unequal masses, which is ruled out; the reading survives only if a
   particle's mass is not the raw price of its defect (for a proton most of the mass is field energy, section 7), or if
   each kind is a bound object whose total energies come out equal. This is an exact check to make before anything is
-  run on the reading.
+  run on the reading. **Made 21 October (a look, `sandbox/LOG.md`):** the toy's energy is not symmetric under curl and uncurl at any λ (prices 1 : 4 at λ = 1.25, ranges two missing against one extra), and in flat space no defect within two switches carries curl alone: every curl sits inside a larger uncurl. So the raw defects cannot be a particle and its antiparticle of equal mass. **The author's answer (21 October):** the loops are not most of the mass; most is the connecting energy of the whole metastable particle, a secondary force that forms around turning a curled loop (a string) into a particle in three dimensions, with quarks of different spins grouping in specific ways. So the equal-mass test moves to bound objects, which need a binding energy the toy does not have yet (soft space is the candidate, section 9).
 - **A count that only the snap can change (ours):** Sakharov's first condition, said plainly. If ordinary moves
   always make or remove curls and uncurls in pairs, the difference (curls minus uncurls) never changes, and no excess
   can ever appear; for an excess to exist, something must change that difference, and for it to survive afterwards,

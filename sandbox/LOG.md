@@ -450,3 +450,15 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   curled links; the cheapest with no curl costs 48 (12 missing). So added points leave mostly the uncurl kind, a
   little curl at most: not a balanced pair. *Ours:* adding material to a flat sheet makes it ruffle like a saddle,
   negative curvature, as in ordinary geometry. Exact within reach; a look.
+- 2026-10-21. Does the toy treat a curl and an uncurl as mirror images, as matter and antimatter would need (the
+  owner's hypothesis of the same day, curl matter and uncurl antimatter, against their measured equal masses)?
+  (`sandbox/curl_uncurl_mirror.py`; output `sandbox/out/curl_uncurl_mirror_2026-10-21.txt`.) No, in two ways. (1)
+  Prices: written link by link, a missing square costs 4 and an extra square 4(λ − 1), 1 : 4 at λ = 1.25, equal only at
+  λ = 2; and a link can be missing two squares but carry only one extra (four against one with six links), so no λ
+  makes the energy symmetric. (2) Objects: of the 4,928 valid one-switch defects of a flat 8 × 8 torus and 4,968 valid
+  two-switch defects near one point, none carries curl alone; every curl comes with more missing squares than extra
+  ones (the curl-carrying classes run from D = 10, X = 2 upward), while missing squares alone are common (the cheapest
+  defect, 32, is D = 8, X = 0). So in flat space a curl appears only inside a larger uncurl, and the two kinds are not
+  mirror images by price or by what exists. *Ours:* read as particle and antiparticle, the raw defects would have
+  unequal masses; the reading survives only through what binds them (her answer of the same day: most of a particle's
+  mass is connecting energy, not the loop), which the toy does not have yet. Exact within reach; a look.
