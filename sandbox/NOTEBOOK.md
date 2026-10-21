@@ -2120,3 +2120,19 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   matter and its excess need the hot early universe, where each photon is made into pairs and back many times while
   the space cools, and matter forms in stages (protons at about ten microseconds, nuclei in minutes, atoms at about
   380,000 years). General knowledge, to verify.
+- 2026-10-21, the owner, on "the difference between them never changes": "at a cirtain specific temp, particles form,
+  gathering curl uncurl into a proton or nuetron, each captures the lightforce of a 1 unit atomic bomb. hydrogen forms,
+  then two of those is compacted to one helium. that's all the heleum we get, can't make more, but earth got some. and
+  the other atoms. and it explodes shooting all this stuff into a giant cloud that is host to more bombs and reverse
+  bombs, nuclei combining and separTING. then after that point when space is a little bigger and cooler, leaving suns
+  where those sort of reactions are still taking place for the lifetime of the sun, many of which can turn into a new
+  black hole when they explode or crash into another sun." *Ours (general knowledge, to verify):* the locking-in fits:
+  the count of protons and neutrons (baryon number) has never been seen to change since, and the proton outlives 10^34
+  years. The standard order: protons and neutrons at about ten microseconds; in the first few minutes they fuse into
+  helium nuclei (two protons and two neutrons each; about a quarter of the mass), a little deuterium and lithium, and
+  nothing heavier; neutral atoms only at about 380,000 years. The Big Bang is not an explosion into a cloud: space grows
+  everywhere. The clouds, and every element heavier than lithium, come later from stars, which also make more helium (the
+  Sun does now); the first stars burn out and explode in a few million years, seeding the clouds that make later stars.
+  Earth's helium is mostly from radioactive decay in its rocks. A proton's mass-energy is about 1.5 × 10⁻¹⁰ joules; a
+  nuclear bomb releases about a thousandth of the mass of its fuel, from vast numbers of nuclei. Stars above about 20
+  solar masses end as black holes, and neutron stars that collide can make one; the Sun will end as a white dwarf.
