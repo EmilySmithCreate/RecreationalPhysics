@@ -2535,3 +2535,28 @@ never that good and the release happens faster than that it is the eqivalent of 
   (hypothesis 5), and light turned into matter while it has nowhere to go (hypothesis 6, which by itself makes pairs).
 - **The release is fast (hers):** the burp is far quicker than a meal's timescale, a much bigger nuclear explosion. The
   claim's step 3 is reworded.
+
+Update 83 (2026-10-21, 17:25 UTC by the clock): **the author's hypothesis: dark energy settling toward its constant, not
+toward zero.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded as a hypothesis to test.
+
+- **Hers.** The uncurl left behind when matter formed added negative curvature to the network's own background. So dark
+  energy did change, early on, and some of that change is still visible within our light cone; but it is settling toward
+  the constant of the network's defect density (Update 70), not falling toward zero as in the published model's picture.
+- **What it connects to (ours).** (a) The toy already leans this way: in flat space every curl appears inside a larger
+  uncurl, so making the curl kind leaves extra uncurl behind (sandbox look of this day, `sandbox/LOG.md`). (b) Recent
+  galaxy surveys report a hint that dark energy has been weakening over the last few billion years (DESI, 2024 and 2025,
+  at about three to four standard deviations when combined with the microwave background and supernovae; general
+  knowledge, not read by us, to verify). (c) It is a third picture beside the two of paper 16: constant (hers until
+  now) and falling to zero (the published model's). Since it ends at a constant, the universe keeps its horizon and the
+  causal diamond closes, so T77's control reading still applies at late times.
+- **What it must face (ours).** (1) Extra uncurls of fixed number thin out with the volume exactly as matter does, and
+  anything that thins like matter is counted as matter in the fits, not as changing dark energy. To look like dark energy
+  settling, the excess has to fade by healing back toward the network's own density, with a healing time comparable to
+  the age of the universe. (2) The fits to the survey hint, as usually written, have dark energy stronger than a
+  constant at earlier times and weaker now; an excess that fades from above toward the constant gives one side of that
+  and not the other. Which part of the hint survives more data is open.
+- **How it can be tested.** In the toy, once soft space can hold a steady thin density of defects (piece 6): start it
+  with an excess of missing squares and measure how the excess fades, whether toward the steady density or toward none,
+  and how fast. Against the sky: her picture predicts dark energy approaching a constant from above, never reaching zero
+  and never stronger than the constant in the future; paper 7's dark-energy target sheet states the numbers that would
+  rule it out.

@@ -2136,3 +2136,7 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   Earth's helium is mostly from radioactive decay in its rocks. A proton's mass-energy is about 1.5 × 10⁻¹⁰ joules; a
   nuclear bomb releases about a thousandth of the mass of its fuel, from vast numbers of nuclei. Stars above about 20
   solar masses end as black holes, and neutron stars that collide can make one; the Sun will end as a white dwarf.
+- 2026-10-21, the owner: "the uncurl left when matter was created may have created an area of negative curviture, which
+  was added to the negative curviture of the background. so if people think it changed over time and is moving toward 0
+  it's because it did change in the beginning and some change can still be observed in our light cone 13.7B in, but it's
+  not moving to 0 it is moving to the dark energy constant." VISION Update 83.
