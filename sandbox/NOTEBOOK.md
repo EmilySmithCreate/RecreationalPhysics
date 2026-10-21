@@ -2153,3 +2153,18 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   hypotenuse links can. In this theory. It could have a twist in it like one point is facing the other direction (to be
   turned away from its closest same type neighbor) so matter and antimatter would hold a twist in different directions"
   VISION Update 85.
+- 2026-10-21, the owner: "I still recommend the twist carried around a closed loop of links, the Skyrmion's - yes I agree, but per the braids,
+  could be a combination. The matter antimatter twisted loop, they come together and become 2 untwisted loops and return
+  to flat space, with the twist energy released at the speed of light. an untwisted loop is a photon and and untwisted
+  loop loses energy over time like a photon. Reverberating, with the slight negative background curvature what is
+  canceling the photon energy. The photon is a particle microscopically but travels through space as a wave, so within
+  the wave there is no desernanle difference between the photons in the wave but if you can look at one by itself, that
+  narrows in on which daughter universe that photon is in, where it was in that. Macroscopicly they interfere, because
+  the information of which daughter in the network we are can only be learned if we drop the information of movement,
+  speed, wave- So a photon is a twist that can be undone and a matter or antimatter particle is a twist that cannot be
+  undone. And when photons are packed together and then spread some will have turned into matter and antimatter pairs.
+  They have identical mass because the energy is in the curl and exact not related to how stretched space was the length
+  has no impact on mass. Also what if lambda was only 1/1000000000 +1? One version even models helium as four bound
+  twists and gets its mass within 2%. Great we can use this. Particles are braids of three ribbons of the network that
+  space is made of. Like the 3 quark colors? Different particles could be different braids of matter and antimatter
+  loops of different lengths." VISION Update 86; `docs/design/regge_stage_b_brief.md`.

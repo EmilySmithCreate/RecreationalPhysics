@@ -2616,3 +2616,46 @@ forms of Update 84, of the twist (form ii), carried on diagonal links. She confi
   its length (a tension, linear, or something else, and whether only some lengths are stuck); (2) whether a twist,
   defined on the ring, is kept by every local move that does not cut the ring (the count that only the snap may change);
   (3) whether a ring with one twist and a ring with the opposite twist can meet and unwind, and where their energy goes.
+
+Update 86 (2026-10-21, 20:10 UTC by the clock): **DECISION (the author's): the toy's particle is a twist carried around a
+closed loop, possibly braided; and her picture of photons, masses and generations.** Her words are in
+`sandbox/NOTEBOOK.md` under that date. The decision is a form, not a build: it is designed in the stage-B brief
+(`docs/design/regge_stage_b_brief.md`, drafted the same day) and nothing runs before she has answered its questions.
+
+- **Decided:** the twist form of Update 84 (ii), on rings of diagonal links (Update 85), "but per the braids, could be a
+  combination": rings may also be braided together in threes, as in Bilson-Thompson's model.
+- **Her picture, to test.** A matter ring and an antimatter ring meet, become two untwisted rings, and space returns to
+  flat, the twist's energy leaving at the speed of light. An untwisted ring is a photon: a twist that can be undone,
+  where matter and antimatter are twists that cannot. Photons lose energy over time, the network's slight negative
+  curvature cancelling it. A photon is a particle up close and travels as a wave; within the wave the photons cannot be
+  told apart, and isolating one narrows which branch it is in, so interference and which-way knowledge exclude each
+  other. Packed photons, spreading, turn partly into pairs. Masses are identical because the energy is in the curl, not
+  in the ring's length (this replaces Update 85's "different lengths are different particles"); particles differ as
+  braids of matter and antimatter rings.
+- **Ours, general knowledge, to verify.** (a) "A twist that can be undone is light, one that cannot is matter" is the
+  published topological picture: Bilson-Thompson's photon is the unbraided state, and a Skyrmion's winding cannot be
+  undone without meeting its opposite. (b) Photons do not lose energy as they travel through static space; they lose it
+  because space stretches while they travel (cosmological redshift). A drain along the path ("tired light", Zwicky 1929)
+  is ruled out: distant supernovae flicker in slow motion by exactly the stretch factor, and the microwave background is
+  a perfect blackbody, neither of which a drain gives. Her curvature reading survives only if the curvature acts through
+  the expansion (the published model reads the network's negative curvature as the expansion's dark energy), not as a
+  drain. (c) Interference and which-way knowledge excluding each other is complementarity, and the published rule of
+  piece 9 (records) is its mathematics. One point for her: in her claim the quantum versions are branches within one
+  universe, counted whole (Update 68), and daughters are new universes from black holes; "which daughter universe that
+  photon is in" joins the two, which would be a new statement. (d) Light packed densely enough does make pairs, and in
+  the hot early universe it does so constantly. (e) Mass from the curl, not the length, needs the ring's energy to be one
+  fixed amount per ring; in the toy as built, energy is charged per link, so a longer curled ring costs more, and a
+  per-ring price would be a new rule. With it, length cannot tell particles apart, so the electron, muon and tau would
+  have to differ by braid or by twist, not length.
+- **λ = 1 + 10⁻⁹ (her question; ours, exact from the record).** A curl would then cost 4 × 10⁻⁹ per link against 4 for a
+  missing square, a ratio of one in a billion, the size of the matter excess; that is λ chosen to give the target
+  (rule 13), a fit unless something else fixes λ. Two consequences are exact: the burp per point becomes 4 × 10⁻⁹, almost
+  nothing; and with interchangeable points the counting drive to curl beats the curling cost below λ ≈ 1.02 (Update 27,
+  O55), so at λ this close to 1 flat space would curl up on its own. The tube's wall stays (about 16 in two
+  directions), so X would still be stuck for now.
+- **Helium as four bound twists (Manton and Wood, read in part):** usable as a benchmark of method, how bound twists'
+  energies are computed and compared with nuclei, not as evidence (rule 13); the Skyrme model fixes its own constants
+  from measured pion properties.
+- **Braids and the three colors (from the reading note):** in Bilson-Thompson's model each quark is itself a braid of
+  three ribbons, and its color is which of the three positions holds the odd ribbon; a proton is three such braids. So
+  the three colors are three arrangements inside one particle, not three ribbons as three quarks.

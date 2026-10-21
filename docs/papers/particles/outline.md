@@ -162,6 +162,13 @@ shown.
   be the shape of the three generations. Tests (exact, after stage B's brief): ring energy against length; the twist kept
   by every move that does not cut the ring; opposite twists meeting and unwinding.
 
+- **The author's decision and picture (21 October; VISION Update 86).** The particle is a twist carried around a closed
+  ring, possibly braided in threes. Matter and antimatter rings meet and become two untwisted rings, photons: light is a
+  twist that can be undone, matter one that cannot. Masses are equal because the energy is in the curl, not the length
+  (replacing the lengths-as-particles reading of Update 85), so particles differ by braid. *Ours:* a fixed price per
+  ring is a new rule (the toy charges per link); photons losing energy by a drain along the path is ruled out (tired
+  light), while losing it through the expansion is standard. Benchmarks for bound twists: Manton and Wood's helium.
+
 ## 7. Mass, and the conversion to physical units
 
 - **General knowledge, to verify.** Matter's mass is mostly bound field energy (section 1).
