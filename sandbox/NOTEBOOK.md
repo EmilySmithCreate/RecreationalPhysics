@@ -2140,3 +2140,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   was added to the negative curviture of the background. so if people think it changed over time and is moving toward 0
   it's because it did change in the beginning and some change can still be observed in our light cone 13.7B in, but it's
   not moving to 0 it is moving to the dark energy constant." VISION Update 83.
+- 2026-10-21, the owner: "Light thins faster than matter as space grows -> antimatter light too. Light makes pairs
+  evenly - what if due to lambda>1, the antimatter part dispurses while the matter part is trapped in atoms? The toy has
+  no pointless loop-could we add one? does any reading describe something like this? i can imaging the curve
+  completing, same type points canceling, and transforming the hypotenuce relationship from flat space into a circle
+  which stores energy like mass the cost of a full curl and 2 coming together create 2 photons. matter is a loop from 3d
+  and dark matter is a loop from 2d. that's why we have dark versions of everything but they dont interact." VISION
+  Update 84; a reading note is being written (`docs/reading/notes/2026-10-21_matter_as_loops.md`).

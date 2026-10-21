@@ -2560,3 +2560,32 @@ toward zero.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded 
   and how fast. Against the sky: her picture predicts dark energy approaching a constant from above, never reaching zero
   and never stronger than the constant in the future; paper 7's dark-energy target sheet states the numbers that would
   rule it out.
+
+Update 84 (2026-10-21, 17:36 UTC by the clock): **the author's hypotheses: matter as a closed loop with no points, dark
+matter as the same loop one dimension down, and antimatter dispersing while matter is trapped.** Her words are in
+`sandbox/NOTEBOOK.md` under that date. Recorded as hypotheses to test, not decisions.
+
+- **Hers.** A curl that completes closes into a loop with no points: same-kind points cancel and the flat relationship
+  becomes a circle that stores the cost of a full curl as mass; two loops meeting make two photons. Matter is a loop from
+  three dimensions, dark matter a loop from two, which is why there are dark versions of everything that do not interact
+  with ours. And because λ > 1, the antimatter part may disperse while the matter part is trapped in atoms.
+- **Ours, general knowledge, to verify (the reading note will replace this).** (a) Photons are their own antiparticles,
+  so there is no separate antimatter light: annihilation of either kind gives the same light, which thins as all light
+  does. (b) An electron and a positron meeting at rest make two photons, as she says. (c) Antimatter that dispersed into
+  regions of its own would glow in gamma rays where it met matter at the edges; none is seen, which limits antimatter
+  regions to sizes comparable to the observable universe (Cohen, De Rújula and Glashow, 1998). In the standard account
+  the antimatter did not leave: it met matter and turned into light, and the excess survived because nothing was left to
+  meet it. Her λ > 1 enters as candidate 1 (the two kinds' unequal prices). (d) The closest relative of a particle as a
+  loop or knot of a field is the Skyrmion (Skyrme, 1961): a baryon as a twist of a field whose winding number is the
+  baryon count, an antibaryon the opposite twist, the two annihilating into radiation, the mass mostly field energy. Others:
+  Kelvin's vortex atoms (1867), Faddeev and Niemi's knotted solitons (1997), Wheeler's geons and Misner and Wheeler's
+  "mass without mass" (1955, 1957), Bilson-Thompson's braided ribbons (2005), closed strings. (e) "Dark versions of
+  everything that do not interact" is mirror matter (Lee and Yang, 1956; Foot), and dark matter in a hidden dimension or
+  on another brane has a literature too; observations limit how strongly dark matter can push on itself and how much of it
+  could form dark disks.
+- **Could the toy have a pointless loop (ours).** Not as a link closing on its own point: links join two points of two
+  kinds. Three forms it could take, each a new ingredient for her to choose under S1 with a brief first: (i) a handle, a
+  short tunnel of the network joining two places, a loop of geometry with no point at its centre (Misner and Wheeler's
+  form); (ii) a twist carried around a closed cycle of links, a number that only cutting the loop can change (the
+  Skyrmion's form, and the conserved count the excess needs); (iii) a closed cycle whose points are compacted away by the
+  layer form, leaving only its curl. Form (ii) would also supply the count that ordinary moves keep fixed.
