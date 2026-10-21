@@ -4075,3 +4075,26 @@ author and should be disclosed as such in any submission. Physics estimates mark
     76) is the ingredient designed for it.
   - **What it bears on.** T76 (option 1 gives no coupling at which growth on the product would test a steady density),
     piece 6, Update 70's hypothesis.
+- **O143 T77, read (21 October 2026, 00:57 UTC by the clock; `results/t77_diamond_w.csv`, `scripts/run_t77.py`,
+  `scripts/cosmo_w.py`, `scripts/read_t77.py`; standard cosmology, not the toy; the owner's prediction, constant dark
+  energy, recorded 00:55 UTC before any number).** The diamond weight of T73 under constant dark-energy equations of
+  state, w = −1 (the control, T73's own closed forms), −0.9, −0.7 and −1/3, H0 refitted to a 13.8 Gyr age (66.4, 63.8 and
+  57.0 km/s/Mpc at the three stand-ins).
+  - **Control (w = −1):** the scored words reproduce T73: gate TYPICAL (F 0.797), A LATE (0.955), B LATE (0.976), C LATE
+    (0.955), D TYPICAL (0.532). The numeric cosmology (`Cosmo(−1)`) matches T73's analytic diamond to 0.3 % at 1 and
+    13.8 Gyr, with its peak at 4.05 Gyr against 4.06. **The owner's prediction (the control reproduces T73's verdicts)
+    holds on the scored rows.** T73's INCONCLUSIVE words for A and C come from the sensitivity rows, which read LATE and
+    TYPICAL here too.
+  - **Fading dark energy:** F falls with w in every class (gate 0.80, 0.72, 0.41, 0.00; D 0.53, 0.48, 0.38, 0.16), as
+    our prediction said. Scored words at w = −0.9: gate TYPICAL, A TYPICAL (T73's LATE in the scored row, now TYPICAL),
+    B LATE, C TYPICAL, D TYPICAL. At w = −0.7: gate TYPICAL, A, B, C, D TYPICAL. At w = −1/3 (the horizon's edge): gate
+    EARLY (F 0.000; its peak lies at 2,300 Gyr, at the far edge of the star history, so read it as a limit), A, B, C
+    TYPICAL (F 0.62, 0.66, 0.62), D TYPICAL (0.16).
+  - **Ours, scored against our prediction written before the run (rule 11):** the fall in F with w held, and the gate
+    went EARLY at w = −1/3, as predicted; the rest did not. We predicted A, B and C EARLY at w = −1/3 without the cap;
+    they stay TYPICAL. And at w = −0.9 we predicted T73's words would hold within a tail sensitivity; A's scored word
+    changed from LATE to TYPICAL. Failed in part: the diamond's pull on the late classes is weaker than we estimated.
+  - **What it shows, and not:** the light-cone measure separates a constant from a fading dark energy mainly through the
+    gate (planet-years) class and the late-class shares, not the verdicts of the stellar classes; under the stand-ins our
+    own age stays typical in class D at every w tried. Nothing here is a comparison with data: which w holds is the
+    measured equation of state's question, and our age is not scored (paper 16, Sec. VI).

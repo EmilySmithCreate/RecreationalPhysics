@@ -7697,3 +7697,12 @@ Rule 13: our age is not scored (paper 16, Sec. VI).
 "Constant", after the three options were set out): dark energy stays a constant, so the w = −1 control reproduces T73's
 verdicts, and that is her prediction for the family. The stand-ins below are run as declared; her prediction is scored
 against the w = −1 row (CONSTANT) only; the fading rows are scored against our prediction, written beside them.*
+
+### Reading of T77 (2026-10-21, 00:57 UTC by the clock; ASSUMPTIONS O143; `scripts/run_t77.py`, `scripts/read_t77.py`)
+
+Read on the file as written, with the registered classes and scoring rule of T73. **The owner's prediction (constant dark
+energy: the w = −1 control reproduces T73's verdicts): holds on the scored rows.** Our prediction (fading dark energy
+lowers F in every class, the gate EARLY at w = −1/3, A, B and C EARLY at w = −1/3, and T73's words holding at w = −0.9
+within a tail sensitivity): holds for the fall in F and the gate; fails for A, B and C at w = −1/3 (TYPICAL, F 0.62 to
+0.66) and for A's scored word at w = −0.9 (LATE to TYPICAL). The gate's peak at w = −1/3 (2,300 Gyr) lies at the far edge of
+the star history and is read as a limit. Nothing is scored against our age.
