@@ -2041,3 +2041,26 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   from a tiny patch: Farhi, Guth and Guven 1990, not read by us, to verify), so "identical" can mean the same rules and
   the same ratios, not the same total. That adds a requirement: something after the burp must expand the daughter,
   which nothing in the stiff toy does.
+- 2026-10-21, the owner, answering ours on the excess and the daughter's size: "Your excess would then have to be a
+  billionth of the stores that doesn't cancel- yes this is the overcurl during transition or variable curl across stores
+  with some holding more than their portion of the wall. It could be something else so if our checks disprove that I
+  can come up with more ideas to test. Extends the daughter after the burp. Dark matter does right, space creates flaws,
+  they release curling energy in proportion to the size of the expanding space. But that is dark matter not regular. I
+  can t think of a way more regular matter is created after the burp (although I'm creative so can come up with ideas if
+  needed) there could also be something where the negative curvature of the network somehow cancels some small amount of
+  antimatter leaving surplus matter… although this is a bit opposite of my intuition thinking light plus almost equal
+  matter and antimatter- can some light under pressure be transformed into some matter? That's another angle. until its
+  last black hole has dissolved given the end negative curvature cold void would draw the last black holes apart so the
+  end state is many resolved black holes not one." Recorded as hypotheses to test in paper 18's outline (section 6,
+  hypotheses 3 to 6; section 10, tests 7 to 10); the end state goes into the claim's step 8 (VISION Update 79).
+  *Ours (general knowledge, to verify):* (a) matter does not stretch space; it slows the stretch. What grows a tiny
+  patch into a large universe in standard cosmology is an energy with the same density everywhere, which does not thin
+  as space grows (inflation); at the end of it that energy turns into the hot lump (reheating), so all the light and
+  matter are made after the growth, and the excess after that. "Flaws in proportion to the size of the space" is that
+  kind of energy, which in this programme is her dark-energy candidate, not the scrap (whose number is set at the
+  opening). (b) Light does turn into matter under enough energy: two photons can make an electron and a positron
+  (Breit and Wheeler, 1934; seen in heavy-ion collisions in 2021), but always as a pair, one of each, so it makes no
+  excess by itself. (c) Her curvature route has a published cousin: gravitational baryogenesis (Davoudiasl and others,
+  2004), where the changing curvature of an expanding space biases matter over antimatter; not read by us. (d) The end
+  state: in a universe whose expansion accelerates, groups of galaxies are carried out of each other's reach, so the
+  last black holes are many, each in its own region, each evaporating alone; the claim now says so.

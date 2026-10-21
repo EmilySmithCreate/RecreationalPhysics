@@ -37,7 +37,7 @@ connected components are observables, not geometric certificates; mean store ene
 8. **Black holes curl space back, and each one births many daughters.**
    - Inside the space that forms, black holes are regions where the parent's own geometry re-curls, two directions still open and one curled tight.
    - A daughter space opens while the black hole remains in the parent, and every black hole births many new ones, so the tree of universes multiplies each generation.
-   - A turn is one universe's own life, from its burp until its last black hole has dissolved.
+   - A turn is one universe's own life, from its burp until the last of its black holes has dissolved; the end is many black holes, carried apart by the cold, expanding void, each dissolving alone.
 9. **Each universe keeps its own clock.**
    - Every universe runs an exact copy of one clock, from its own birth to its own heat death; no clock runs across universes.
    - Universes of one setting that differ only by a quantum outcome are counted each as a whole.

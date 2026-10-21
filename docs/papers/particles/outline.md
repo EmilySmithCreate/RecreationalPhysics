@@ -83,6 +83,28 @@ shown.
   and spin; general knowledge, to verify). As a share of energy, the target depends on the birth temperature, which is
   known only to lie between about 4 MeV and about 10¹⁶ GeV.
 - **The test.** In the toy, the layer form fed unevenly: the spread of the regions' firing times.
+- **The author's further hypotheses (21 October), to test, not decided.**
+  3. **Overcurl at the snap:** the stores hold more than the wall when the split fires (the feed keeps arriving during
+     the wait), and the part above the wall is what does not cancel.
+  4. **Uneven stores:** some stores hold more than their share of the wall at the snap; the unevenness is the excess.
+  5. **A background that tips the balance:** the network's negative curvature cancels a little more antimatter than
+     matter (she notes this runs against her intuition). *Ours:* its published cousin is gravitational baryogenesis
+     (Davoudiasl and others, 2004; not read by us, to verify), where an expanding space's changing curvature biases
+     matter over antimatter.
+  6. **Light into matter under pressure.** *Ours (general knowledge, to verify):* two photons with enough energy make a
+     particle and its antiparticle (Breit and Wheeler, 1934), always one of each, so this supplies pairs but needs one of
+     the routes above to leave an excess.
+- **Exact, ours, and it bears on all of them:** the toy already prices the two kinds differently. Written link by link
+  (VISION Update 5), a link on a third square costs 4(λ − 1) and a link on only one square costs 4: one to four at
+  λ = 1.25, equal only at λ = 2. So the energy has the "difference between the two kinds" Sakharov's second condition asks
+  for, and the snap has his third (a moment out of balance). What it lacks is a rule that says which kind is matter, and a
+  conserved count (his first condition read backwards: a count that the snap, and only the snap, can change).
+- **The daughter's growth (ours, general knowledge, to verify).** With energy conserved across the change, a daughter
+  starts with no more than its black hole converted, far less than our universe holds, so it must grow after the burp to
+  match its mother. In standard cosmology growth comes from an energy of constant density (inflation), which then turns
+  into light and matter (reheating), the excess being made after that; matter itself slows the stretch. So the excess
+  routes above have to work in the daughter's hot lump after its growth, or survive the growth, which dilutes everything
+  equally and leaves the ratio unchanged.
 
 ## 7. Mass, and the conversion to physical units
 
@@ -110,6 +132,15 @@ to knots as particles.
 4. Measured: pairs bound when cold and freed when hot, under the surface-keeping rule.
 5. Measured: the uneven-feed layer form's spread of firing times (the excess, hypothesis 2).
 6. Measured, soft space: two knots drifting together.
+7. Exact, from saved rows: the overcurl at T71's and T74's splits, the stores above the wall when the split fires,
+   against the wall (hypothesis 3). *Ours, before reading:* it is set by the feed per sweep against the curling cost
+   and the wait for a proposal, so it is a few per cent per sweep of wait at the rates run, far above a billionth;
+   a billionth would need a feed a billion times slower than the curling cost per sweep.
+8. Measured: the spread of the stores across the pool at the moment of the split (hypothesis 4), on fresh seeds.
+9. Exact then measured: curls and uncurls in balance placed in a sheet with and without a background of missing squares,
+   and which kind survives (hypothesis 5).
+10. Design: what in the toy plays light, so that pairs can be made from it and cancel into it (hypothesis 6); nothing
+    in the toy is light yet.
 
 ## Figures this paper will need
 

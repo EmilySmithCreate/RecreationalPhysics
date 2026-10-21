@@ -2437,3 +2437,23 @@ programme page is regrouped.
   the slab's curling cost while the chain keeps pace with the feed; where the feed outran the chain's one layer
   proposal a sweep, clean switch moves fired and daughters fell short. Her prediction held except on one item in two
   cells of twelve; ours failed on three items, all traced to our own reading of the protocol (O144, rule 11).
+
+Update 79 (2026-10-21, 12:48 UTC by the clock): **the author's answers on the excess and the end of a turn.** Her words
+are in `sandbox/NOTEBOOK.md` under that date. Why this page changes: one sentence of the claim changes, and four
+hypotheses about where the matter excess comes from are recorded for testing.
+
+- **The end of a turn (hers):** "the end negative curvature cold void would draw the last black holes apart so the end
+  state is many resolved black holes not one." The claim's step 8 now reads: a turn runs from its burp until the last of
+  its black holes has dissolved, the end being many black holes carried apart by the cold, expanding void, each
+  dissolving alone. *Ours (general knowledge, to verify):* in a universe whose expansion accelerates, groups of galaxies
+  are carried out of each other's reach, which is the standard picture of the far future.
+- **The excess (hers, to test, not decided):** what does not cancel is the overcurl at the snap, or the unevenness of the
+  stores, some holding more than their share of the wall; or a background of negative curvature cancelling a little more
+  antimatter; or light under pressure turned into matter. If the checks rule these out she will propose more. The
+  checks, cheapest first, are in paper 18's outline (section 10, tests 7 to 10). *Ours, exact:* the toy already prices
+  curls and uncurls differently (one to four per link at λ = 1.25), which is the kind of difference an excess needs.
+- **The daughter's growth (ours, unverified):** a daughter begins with no more energy than its black hole converted, so
+  it has to grow after the burp to match its mother. Her suggestion that flaws arising in proportion to the space supply
+  it describes an energy of constant density, which in standard cosmology is what grows a universe (inflation) before
+  turning into its light and matter; in this programme that is her dark-energy candidate, not the scrap. Nothing in the
+  toy grows a daughter yet.
