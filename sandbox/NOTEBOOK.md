@@ -2194,3 +2194,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   it's got to manuver. dark matter manuvers on square ends, not twisty, and is denser compared to the matter that moves
   through the diagonals. maybe there are more types of matter through different length hypotenuses (th 1x1x2 groups,
   the 1x1x3 groups), or maybe diagonal space is diagonal space whatever the angle." VISION Update 88.
+- 2026-10-21, the owner: "The extra uncurl has to heal, not just spread out. healing releases energy as matter. so maybe the neuron-like
+  paths are that energy dispursing and gravitating together, originally from radomly dispused flaws Your
+  negative-curvature idea survives if it works through the expansion. yes the end states look more and more alike and at
+  the macro level at some point, they will be indistinguishable and having a proportionally small area of influence, so
+  from within our cone (and by extention all of them), and so we are working toward an end state of ... maybe the negave
+  curviture is the reason for lambda being >1?" VISION Update 89.

@@ -2737,3 +2737,33 @@ test, beside piece 10 (time and the speed limit) and paper 18.
 - **How it can be tested.** Exact in the toy now: on stage A's waves, the speed along a link, a face diagonal and a body
   diagonal, against wavelength. With stage B: whether a twisted ring moves, and whether its speed is below the waves'
   with a top speed set by how often it must turn, as in the checkerboard.
+
+Update 89 (2026-10-21, 23:11 UTC by the clock): **the author's hypotheses: the web as healed uncurl, and λ > 1 caused by
+the network's negative curvature.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded as hypotheses to
+test, not decisions.
+
+- **Hers.** The extra uncurl left when matter formed heals, and healing releases energy as matter; the web of filaments
+  and nodes is that energy spreading and gathering under gravity, starting from flaws scattered at random. The ends of
+  all the universes look more and more alike, each with a small region of influence, until they cannot be told apart.
+  Perhaps the network's negative curvature is the reason λ is above 1.
+- **On the web (ours, general knowledge, to verify).** In the toy, healing a missing square releases its price, 16 per
+  square, into the stores, as warmth. Two limits apply to its becoming matter. (1) Flaws scattered at random give
+  seeds whose unevenness is the same at every scale in the wrong way: random placement is white noise, while the
+  measured seeds of structure are nearly equal in strength at every scale (the spectral tilt of the microwave background,
+  about 0.965); the record already found this for the scraps' own positions (piece 7, 18 October). (2) The count of
+  protons and neutrons has not changed since the first seconds, and dark matter has not been made since the microwave
+  background; so healing that makes matter has to finish early. Energy released later as warmth is allowed. So the
+  reading that survives is: healing early, energy gathering under gravity onto seeds with the measured spectrum.
+- **On the end (ours, general knowledge, to verify).** "The ends look alike" has a published form: an expanding universe
+  with a constant dark energy approaches empty de Sitter space whatever it started from (the cosmic no-hair theorem;
+  Wald 1983, not read). Every observer is then alone inside a horizon, with only the horizon's faint warmth, which the
+  record already ties to the network's end temperature (Update 76).
+- **On λ (ours).** In the toy λ is a constant put in by hand. Her reading would make it a consequence: the curling cost
+  as the network's background curvature seen by a curl. The toy has an exact handle on this: its energy is a sum over
+  links, and defects that share a square interact (16 where they touch, O22), so a curl placed in a background of
+  missing squares does not pay the bare price. The effective curling cost in a warm, slightly negatively curved
+  network differs from λ − 1. **A test, to be registered with her prediction:** at bare λ = 1, where curling is free in
+  flat space, measure the average price of a curl in warm networks of growing defect density; if it comes out above zero
+  and grows with the density, the background makes λ effectively above 1, and the relation between λ − 1 and the defect
+  density (her dark energy) is one equation tying two of the hypothesis's numbers. It counts only if the relation is not
+  tuned to a target (rule 13).
