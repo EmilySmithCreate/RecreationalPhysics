@@ -2659,3 +2659,48 @@ closed loop, possibly braided; and her picture of photons, masses and generation
 - **Braids and the three colors (from the reading note):** in Bilson-Thompson's model each quark is itself a braid of
   three ribbons, and its color is which of the three positions holds the odd ribbon; a proton is three such braids. So
   the three colors are three arrangements inside one particle, not three ribbons as three quarks.
+
+Update 87 (2026-10-21, 21:48 UTC by the clock): **the author's picture of quarks and dark matter as the diagonals and
+faces of the cube.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded as hypotheses to test, with the
+exact counts they rest on and the arithmetic they must meet.
+
+- **Hers.** The particle is a braid, not a closed curl: a cube's three diagonal twists form together and twist at once
+  into a braid, the three quark colors being the three orders of the strands; one of each color for matter and one of
+  each for antimatter; spin from the braids snapping, kept because nothing slows it. Larger boxes (1 × 1 × 2, 1 × 1 × 3)
+  give longer diagonals, by Pythagoras, perhaps more kinds of particle in proportion to their counts. Every ten billion
+  pairs leave about six extra matter quarks; space works in units of ten billion, perhaps the first number of squares per
+  seed. Dark matter is the curl and uncurl loops on the cube's square faces, which do not braid but double against the
+  neighbouring cube's wall: no spin, no charge, heavier (perhaps three times) because the loop is tighter; a dark proton
+  is two dark quarks; per two cubes, ten faces, five units.
+- **Exact (ours; the cubic lattice and the toy's two kinds of point).** A square's two diagonals join its opposite
+  corners, one diagonal joining two points of one kind and the other two of the other kind. A cube's four body diagonals
+  join opposite corners, which are of different kinds (three steps apart). In the lattice, where neighbouring cubes share
+  their faces, each cube owns one point, three links, three squares, **three face diagonals joining points of one kind,
+  three joining points of the other**, and four body diagonals inside it, not shared, each joining points of
+  different kinds (checked by brute force on a 4 × 4 × 4 lattice). So her "three per
+  cube" holds for the face diagonals of each kind, three for one kind and three for the other; read as one set of three
+  colors for matter and one for antimatter, that is a count, not a derivation (rule 13). A cube has six faces, but in the
+  lattice each face is shared, so three per cube; two cubes side by side have eleven faces, ten on the outside. Lengths, in
+  link lengths: face diagonal √2 ≈ 1.41, body diagonal √3 ≈ 1.73, the 1 × 1 × 2 box's long diagonal √6 ≈ 2.45, 1 × 2 × 2
+  gives 3, 1 × 1 × 3 gives √11 ≈ 3.32.
+- **Ours, general knowledge, to verify.** (a) Quark charges are +2/3 and −1/3; the proton (two up, one down) has +1, the
+  neutron (one up, two down) 0, the antiproton −1. So three quarks make one unit of charge or none, depending on the mix.
+  (b) A quark's spin is not a spinning motion that nothing slows: it is a fixed amount (one half) that every quark has
+  always; a proton's spin comes only about a third from its quarks' spins, the rest from the binding field and the motion
+  inside. (c) The measured excess is about 6 protons and neutrons per ten billion photons, so about 18 extra quarks, not
+  6. (d) Nothing in the toy sets ten billion: a seed there is a few hundred points, and about one scrap is left per three
+  seeds (piece 7). A base of ten billion would have to come out of the rules to count.
+- **The dark-matter budget (ours, arithmetic on measured inputs, to verify).** Today ordinary matter carries about 0.57 eV
+  of mass per photon (6.1 × 10⁻¹⁰ protons per photon × 938 MeV) and dark matter about 5.36 times that, 3.1 eV per photon.
+  If the face loops were made in about the numbers of the pairs, about one per photon, and all survived, each would weigh
+  about 3 eV, which makes it hot dark matter, ruled out as the main dark matter because it would smear out the small
+  galaxies. If instead each weighs about three proton masses, only about one per billion photons can survive, so the dark
+  loops must also mostly cancel, curl against uncurl, and leave an excess about 1.8 times the ordinary one. That is the
+  published shape called asymmetric dark matter, where equal excesses give a dark particle of about 5 GeV. Her "ten faces
+  for two cubes, five units" sets a count beside the measured 5.36; by rule 13 a count that lands near a measured number
+  is not a result until it is derived, and the record already holds that 5.36 compares two leftovers, not two releases
+  (Updates 41, 42).
+- **How it can be tested, in stage B (`docs/design/regge_stage_b_brief.md`).** The counts above are exact and in hand.
+  Next: whether three twists on a cube's face diagonals braid into one object that is stuck (every move out costs) while
+  a single twist is not; whether face loops pair against the neighbouring cube's wall; and the energies of each against
+  the diagonal and edge lengths.

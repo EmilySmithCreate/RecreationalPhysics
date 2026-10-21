@@ -2168,3 +2168,22 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   twists and gets its mass within 2%. Great we can use this. Particles are braids of three ribbons of the network that
   space is made of. Like the 3 quark colors? Different particles could be different braids of matter and antimatter
   loops of different lengths." VISION Update 86; `docs/design/regge_stage_b_brief.md`.
+- 2026-10-21, the owner: "these are braids, not closed curls - there are 3 diagonals in a cube so the 3 twists are made and immediately
+  twist together into a braid The three quark colors are the three ways to order the strands. Maybe space is organized
+  into 2 new points would touch 8 new cubes. 2 rows of pointsxL, per expansion. 8 square space, with 3 corner to corner
+  hypotenuse twists per cube, (2 extra hypotenuse twists per 8 1x1x2 box, an amount from each 1x1x3 box, etc, up until
+  any additional? Idk, more types of particles, fount in proportion to ratios of hypotenuse counts?), we can calculate
+  their comparative length to the side loops that are the with the Pythagorean theorem. and that makes 1 of each quark
+  color of matter, we'd need to look into how stable braids could come together and how the twisting together of
+  different braid patterns coming together with force and creates spin) and one of each color of antimatter, 3 quarks
+  to a 1 unit of positive or negative charge, based on the quark type, right? They have their spins because the
+  snapping of the braids creates the different rotations of the quark, and there is nothing to slow that rotation an
+  object in motion stays in motion. Evert 10 billion pairs gets an extra 6 matter quarks with nothing to cancel them.
+  When the 2 photons per are created for every billion matter there is an extra one matter. Space works in base
+  10billion, units of 10 billion, that was probably the initial number of squares per seed. 1 seed makes one of which
+  type of flaw in paper 1. dark matter could outweigh ordinary matter several times over- dark matter is the curls from
+  the square sides of the cube. Middle of the cube, 3 dimensional, gets a braid. Each side of the square gets a curl loop
+  and an uncurl loop. Each loop has the same mass as a single twist of the 3d braid quark. 6. They don't braid but they
+  double against their neighbor cube wall. No spin, no electric charge. More energy stored because it's a tighter loop.
+  So heavier. By maybe 3x? A dark matter proton has 2 dark quarks twisted. No spin no charge. Per 2cubes, 10 sides, 5
+  units The link length may matter against. the hypotenuses." VISION Update 87.

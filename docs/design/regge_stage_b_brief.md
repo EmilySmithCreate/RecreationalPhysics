@@ -43,6 +43,11 @@
    three face diagonals and the body diagonal gives 7 per point, one more than needed. Which of those 7 is redundant on
    the toy's own graph is the first exact calculation (item 6 of the reading note's list).
 
+4. **The cube's counts** (ours, exact; Update 87). In the lattice each cube owns one point, three links, three squares,
+   three face diagonals joining points of one kind and three joining the other, and four body diagonals inside it, not
+   shared, each joining points of different kinds (the rigid lattice of [Ham09] uses one of them per point). Lengths in link lengths: √2, √3, and for larger boxes √6, 3,
+   √11. Her braid of three diagonal twists per cube, and her dark loops on the faces, are built on these.
+
 ## The design, in pieces
 
 1. **Where the lengths live.** On each link, and on one or both diagonals of each square, and (three directions) one

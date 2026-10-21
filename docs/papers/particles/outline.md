@@ -169,6 +169,14 @@ shown.
   ring is a new rule (the toy charges per link); photons losing energy by a drain along the path is ruled out (tired
   light), while losing it through the expansion is standard. Benchmarks for bound twists: Manton and Wood's helium.
 
+- **Quarks and dark matter as the cube's diagonals and faces (the author's, 21 October; VISION Update 87).** Three
+  diagonal twists braid at once into a quark-like braid, colors as strand orders; dark matter as curl and uncurl loops
+  on the cube's faces, paired against the neighbouring wall, heavier, no spin or charge. *Exact:* in the cubic lattice each
+  cube owns three face diagonals joining points of one kind and three joining the other kind; body diagonals join
+  different kinds; lengths √2, √3, √6, 3, √11. *Ours:* the dark-matter budget is 3.1 eV per photon today, so dark loops
+  made one per photon would weigh about 3 eV (hot dark matter, ruled out) unless they too mostly cancel and leave an
+  excess (asymmetric dark matter). Counts set beside 5.36 are not results (rule 13).
+
 ## 7. Mass, and the conversion to physical units
 
 - **General knowledge, to verify.** Matter's mass is mostly bound field energy (section 1).
