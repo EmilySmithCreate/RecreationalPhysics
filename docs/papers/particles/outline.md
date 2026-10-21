@@ -144,6 +144,17 @@ shown.
   routes above have to work in the daughter's hot lump after its growth, or survive the growth, which dilutes everything
   equally and leaves the ratio unchanged.
 
+- **Matter as loops of curved space (the author's, 21 October; VISION Update 81).** The burp's light, with nowhere to
+  go, is pressed into matter; matter is tiny loops that are only a relationship, no points, metastable, building quarks
+  and then protons. *Ours:* relatives to read before this section is written: Wheeler's geons (1955), Kelvin's vortex
+  atoms (1867), Bilson-Thompson's braided ribbons (2005). Exact in the toy: a link joins two different points of two
+  kinds, so no link loops on its own point; the nearest object is a small closed cycle. A test: whether any small cycle
+  or knot of the toy is a dip that survives inside a sheet with its energy held (paper 2's knots are; the loop of four
+  is, but does not ring on its own, T15 rung 0b).
+- **The starting quantity (ours, arithmetic, to verify; VISION Update 81).** About 10⁶¹ kg of mass-energy in the patch
+  that became our observable universe if the hot era began at 4 MeV, about 10⁷⁹ kg at 10¹⁶ GeV; matter today about
+  10⁵⁴ kg.
+
 ## 7. Mass, and the conversion to physical units
 
 - **General knowledge, to verify.** Matter's mass is mostly bound field energy (section 1).

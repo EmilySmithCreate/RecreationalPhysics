@@ -21,12 +21,13 @@ connected components are observables, not geometric certificates; mean store ene
 3. **The burp becomes the Big Bang's hot lump.**
    - The release is the hot lump: light, with matter and antimatter in almost equal amounts.
    - As it cooled, nearly every pair of matter and antimatter cancelled into more light, so light carried almost all of the energy.
-   - The matter we are made of is the small excess left over, about one part in a billion: a hypothesis to test is that it was carried in from the parent's stores at the snap, on top of the burp.
+   - Every daughter starts with the same amount, the burp's release; this curling energy is released only then. The matter we are made of is the small excess that does not cancel, about one part in a billion: surplus curl at the snap, light turned into matter, or both, hypotheses to test.
+   - While the light has nowhere to go it is pressed back into matter, and matter is curved space: tiny loops that are only a relationship, no points, metastable, which build quarks and then protons; once there is room, the light leaves instead.
 4. **The release leaves one way, and X re-forms.**
    - The release goes into the daughter; nothing passes from open space back into X.
    - The slab re-forms and goes on accepting energy, so the black hole is a converter, not a store.
 5. **What did not convert is the scrap.**
-   - Small knots of fixed energy, their number set at the opening.
+   - Small knots of fixed energy, made while the new space is still hot enough to make flaws, then fixed.
    - The scrap is the best current guess for the dark matter; whether it is the dark matter is open.
 6. **Dark energy is the energy of space itself.**
    - A candidate source, adopted as a hypothesis to test: the network's own thermal defect density, the few defects any network carries at a coupling above zero.
@@ -36,7 +37,7 @@ connected components are observables, not geometric certificates; mean store ene
    - The rules of the two phases are their constants and do not change from one generation to the next.
 8. **Black holes curl space back, and each one births many daughters.**
    - Inside the space that forms, black holes are regions where the parent's own geometry re-curls, two directions still open and one curled tight.
-   - A daughter space opens while the black hole remains in the parent, and every black hole births many new ones, so the tree of universes multiplies each generation.
+   - A daughter space opens while the black hole remains in the parent, and every black hole births many new ones, so the tree of universes multiplies each generation. A black hole is bigger inside than it looks: each daughter is the size its mother was at the same time since its own birth.
    - A turn is one universe's own life, from its burp until the last of its black holes has dissolved; the end is many black holes, carried apart by the cold, expanding void, each dissolving alone.
 9. **Each universe keeps its own clock.**
    - Every universe runs an exact copy of one clock, from its own birth to its own heat death; no clock runs across universes.
@@ -45,7 +46,7 @@ connected components are observables, not geometric certificates; mean store ene
     - An arrangement's undetectably different versions all stand at once, until an interaction makes them distinguishable.
     - The versions are the branches of the many-worlds reading; the rule that lets them cancel is the published one: versions carry amplitudes, and a record in the surroundings keeps them apart.
 
-*Written as steps on 21 October at the author's request; step 3 sets apart the hot lump's light and matter on her question of that day (VISION Update 78). The wording is ours and hers once she confirms it. The paragraph it replaces, of 19 October, is in the history of this file.*
+*Written as steps on 21 October at the author's request; step 3 sets apart the hot lump's light and matter on her question of that day (VISION Update 78); steps 3, 5 and 8 carry her picture of the daughter's first moments and of a black hole bigger inside than it looks (Update 81). The wording is ours and hers once she confirms it. The paragraph it replaces, of 19 October, is in the history of this file.*
 
 ---
 

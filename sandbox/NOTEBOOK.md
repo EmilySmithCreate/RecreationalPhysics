@@ -2091,3 +2091,18 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   observer looks up from their planet away from their sun and sees only blackness) , and a count that only the snap can
   change." VISION Update 80; paper 18's outline,
   section 6.
+- 2026-10-21, the owner: "energy that keeps the same density as space grows, so the total rises -> this makes sense, that it would happen:
+  as the matter and antimatter cancel and their light has nowhere to go, the light concentrated is compressed into more
+  matter, until the light finally does have enough space to leave instead of transforming into matter, then it does. so
+  all daughter universes start with the same ammount, which is related to the energy released in the burp, and the
+  concentrated light curves more space, making matter, making matter made up of curved space, which is these tiny things
+  like loops, where it is just that relationship with no points (as when the link does a full loop, the "points"
+  mathematically disappear and the loop is metastable. then these loops form particles: quarks, quarks form protons, etc
+  etc. so the exact amount can be the released energy, we don't need to be continuing to feed or have any other ways to
+  create matter in excess of antimatter. that release is big: exactly what is that starting quantity in our daughter
+  universe and every daughter universe. at the start. but that is the only time that type of curling energy is released.
+  the other types of energy can continue to be made as space expands while space is hot enough that flaws are made (dark
+  matter) and stay constant in any area (the network energy / dark energy) A daughter bigger inside than its black hole
+  looks from outside: Wheeler's "bag of gold" spacetimes, and Frolov, Markov and Mukhanov (1989). -> yes, a black hole is
+  bigger on the inside than it appears: it is the exact same size as its mother universe was at the mother's same Time
+  since big bang. and so are all its siblings, and there are likely a lot of them." VISION Update 81.

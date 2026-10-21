@@ -2480,3 +2480,43 @@ made, and on dark matter's web.** Her words are in `sandbox/NOTEBOOK.md` under t
   cosmic web and neuronal networks has been measured (Vazza and Feletti 2020, not read); the web's growth by gravity
   matches her paths; dark matter thinning exactly as matter does since the microwave background rules out its steady
   making since then, not before.
+
+Update 81 (2026-10-21, 16:58 UTC by the clock): **the author's picture of the daughter's first moments, and how big a
+black hole is inside.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded as her hypotheses to test; the
+claim's steps 3, 5 and 8 are reworded to carry them, ours in wording and hers once she confirms.
+
+- **Her picture.** Every daughter starts with the same amount, the energy of the burp. Matter and antimatter cancel,
+  and while their light has nowhere to go it is compressed back into matter; when there is room, the light leaves
+  instead. The concentrated light curves space, and matter is curved space: tiny loops that are only a relationship,
+  with no points, metastable, which build quarks, which build protons. That is the only time this kind of curling energy
+  is released; while the new space is hot enough to make flaws it goes on making them (dark matter), and the network's
+  energy stays constant in any region (dark energy). A black hole is bigger inside than it looks from outside: each
+  daughter is the size its mother was at the same time since its own big bang, as are its many siblings.
+- **What fits, and its published relatives (ours, general knowledge, to verify).** (a) Every daughter carrying the same
+  energy is exact in the toy under the layer form: each daughter carries the slab's curling cost, a N_slab (T71, O144).
+  (b) Light turning into pairs and pairs back into light while the space is hot, until it is too cool to make them, is
+  standard: pair production freezes out as the temperature falls below the pairs' mass, and light leaves the matter
+  for good when atoms form, about 380,000 years in (the microwave background). In the standard account what stops the
+  making is the light growing too weak, not the space growing roomy. (c) Dark matter made while the space is hot and then
+  fixed is the shape of thermal freeze-out, the standard account of a relic's abundance, and fits the limit of Update 80
+  (no making since the microwave background). (d) Matter as loops of curved space has relatives: Wheeler's geons
+  (1955), Kelvin's vortex atoms (1867), and Bilson-Thompson's braids (2005), where twisted ribbons of a quantum geometry
+  give quarks and leptons; none read by us. (e) A black hole holding a whole universe is the "bag of gold" family.
+- **What it must face (ours).** (1) Light does not keep its density as space grows: it thins faster than matter, so a
+  space full of light loses energy as it grows. The growth by an energy of constant density (Update 80) needs something
+  that behaves like the network's own energy, not trapped light; in her terms, that is closer to her dark-energy
+  candidate at a high early value. (2) Light makes matter and antimatter in equal amounts, so compressing light does not
+  by itself leave an excess; the one-in-a-billion still needs an asymmetry (Update 80). (3) The toy's links join two
+  different points of two kinds, so a link cannot loop back on its own point: the nearest object to her pointless loop is
+  a small closed cycle, and the loop of four does not ring on its own inside a sheet (T15 rung 0b). (4) The toy's books say
+  each daughter's energy is what was fed in; her bigger-inside black hole needs the daughter's energy to exceed what the
+  parent sees fall in. In general relativity that is possible because gravity's own energy is negative (a closed
+  universe's total is zero); the toy has no gravitational energy (piece 8), so its books cannot hold this yet.
+- **The starting quantity (ours, arithmetic on general-knowledge inputs, to verify).** The energy that was in the patch
+  which became our observable universe, at temperature T, is about 0.75 T times its total entropy, about 10⁹⁰ in natural
+  units (2,900 per cubic centimetre of today's space over a sphere of 46 billion light-years). That is about 10⁶¹ kg
+  of mass-energy if the hot era began as late as allowed (about 4 MeV) and about 10⁷⁹ kg if it began at 10¹⁶ GeV,
+  against about 10⁵⁴ kg of matter today and about 10⁴¹ kg for the largest known black holes. So the burp, if it is the
+  whole starting quantity, is 20 to 38 orders of magnitude more than any black hole's mass as seen from outside, which is
+  what her bigger-inside reading has to supply. If the daughter grew first (inflation), the quantity before the growth was
+  smaller and the comparison changes.
