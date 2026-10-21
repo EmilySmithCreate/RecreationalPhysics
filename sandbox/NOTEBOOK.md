@@ -2187,3 +2187,10 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   double against their neighbor cube wall. No spin, no electric charge. More energy stored because it's a tighter loop.
   So heavier. By maybe 3x? A dark matter proton has 2 dark quarks twisted. No spin no charge. Per 2cubes, 10 sides, 5
   units The link length may matter against. the hypotenuses." VISION Update 87.
+- 2026-10-21, the owner: "light can only go one speed, it travels one space link/one time unit. it slows if a space link is longer.
+  everything else moving is moving in <1 spacelink per time unit, with the matter and dark matter exhibiting and
+  interacting with other forms of the force: the quark's spin's electromagnetic fields, essentially friction compared to
+  light's speed due to all the unescapable twists, it can't simpley move through space on any link equally like light,
+  it's got to manuver. dark matter manuvers on square ends, not twisty, and is denser compared to the matter that moves
+  through the diagonals. maybe there are more types of matter through different length hypotenuses (th 1x1x2 groups,
+  the 1x1x3 groups), or maybe diagonal space is diagonal space whatever the angle." VISION Update 88.

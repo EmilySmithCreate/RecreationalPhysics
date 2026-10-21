@@ -177,6 +177,12 @@ shown.
   made one per photon would weigh about 3 eV (hot dark matter, ruled out) unless they too mostly cancel and leave an
   excess (asymmetric dark matter). Counts set beside 5.36 are not results (rule 13).
 
+- **Speed (the author's, 21 October; VISION Update 88).** Light moves one link per tick; matter less, because its twists
+  must manoeuvre; dark matter along the edges, matter through the diagonals. *Ours:* Feynman's checkerboard is the
+  published form (light-speed hops with turns, mass as the turning rate); it must keep steady motion free of drag, the
+  same speed in every direction and at every wavelength to measured precision, and three generations, not a ladder of
+  diagonals.
+
 ## 7. Mass, and the conversion to physical units
 
 - **General knowledge, to verify.** Matter's mass is mostly bound field energy (section 1).

@@ -2704,3 +2704,36 @@ exact counts they rest on and the arithmetic they must meet.
   Next: whether three twists on a cube's face diagonals braid into one object that is stuck (every move out costs) while
   a single twist is not; whether face loops pair against the neighbouring cube's wall; and the energies of each against
   the diagonal and edge lengths.
+
+Update 88 (2026-10-21, 23:00 UTC by the clock): **the author's speed limit: light moves one link per tick, matter less
+because its twists must manoeuvre.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded as hypotheses to
+test, beside piece 10 (time and the speed limit) and paper 18.
+
+- **Hers.** Light has one speed, one link per tick, and slows where a link is longer. Everything else moves at less than
+  one link per tick: its inescapable twists cannot move on any link alike, so it has to manoeuvre, which acts like a
+  friction against light's speed. Dark matter manoeuvres along the squares' edges and is denser; matter moves through
+  the diagonals. Perhaps longer diagonals (the 1 × 1 × 2 and 1 × 1 × 3 boxes) carry more kinds of matter, or perhaps
+  diagonal space is all alike whatever the angle.
+- **Published relatives (ours, general knowledge, to verify).** (a) Light slowing where space is stretched is how
+  general relativity looks from far away: radar echoes passing the Sun arrive late (the Shapiro delay, measured), and
+  light near a mass behaves as if in a medium of refractive index above one. Stage A's field slows clocks and stretches
+  links in just this way (Q26; the reading note of 20 October). (b) Matter as something that moves at light's speed
+  between turns, its average speed lower because it keeps turning, is Feynman's checkerboard (Feynman and Hibbs, 1965):
+  on a lattice in one direction, paths that always hop at light speed and reverse with a weight set by the mass give the
+  equation of the electron. That is the published form of "it has to manoeuvre", with mass as the rate of turning.
+- **What it must face (ours, general knowledge, to verify).** (1) No friction on steady motion: a body moving at a
+  steady speed keeps it, and no experiment detects motion through space at a steady speed (Michelson and Morley and
+  their modern successors). A real drag against the network would slow everything down over time and single out the
+  network's rest frame. So manoeuvring may set how fast matter can go, never slow it when it is left alone; the
+  checkerboard has this property. (2) One speed in every direction: on a cubic lattice, one hop per tick reaches
+  farther along some directions than others (after n hops along links the reachable region is an octahedron, not a
+  sphere), while light's speed is measured to be the same in every direction to about one part in 10¹⁷. It must come
+  out the same at large scales, as waves on a lattice can at long wavelengths. (3) One speed at every wavelength: on a
+  lattice, short waves travel slower than long ones (stage A's own waves: ω² = κ(2 − 2 cos k)), while light from
+  distant gamma-ray bursts arrives at the same time across a huge range of energies, so any such spread must be tiny at
+  measured energies, which holds if the links are very short. (4) Kinds of matter come in exactly three generations
+  (the Z boson's decay width counts three light neutrinos, about 2.98 ± 0.01). If longer diagonals gave new kinds, the
+  ladder would have to stop at three; if diagonal space is all alike, the three must come from elsewhere.
+- **How it can be tested.** Exact in the toy now: on stage A's waves, the speed along a link, a face diagonal and a body
+  diagonal, against wavelength. With stage B: whether a twisted ring moves, and whether its speed is below the waves'
+  with a top speed set by how often it must turn, as in the checkerboard.
