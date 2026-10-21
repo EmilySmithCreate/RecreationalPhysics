@@ -2200,3 +2200,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   the macro level at some point, they will be indistinguishable and having a proportionally small area of influence, so
   from within our cone (and by extention all of them), and so we are working toward an end state of ... maybe the negave
   curviture is the reason for lambda being >1?" VISION Update 89.
+- 2026-10-21, the owner, on the stage-B brief: "A ring's energy against its length: does it grow steadily, and are only certain lengths stuck in place? let's
+  just focus on the 3 cube throughlines and the 6 cube side diagonals and assume the link limit is the 6 of 3 dimensions.
+  the square edge is shorter than the hypotenuse through the center of the cube. it holds more curl per link lenth, vs
+  the center lines. plus there is more of them, so they hold more energy than the diagonal links. more dense, no
+  diagonal spin. Does every move that doesn't cut the ring keep its twist? That would be the count only the snap can
+  change. -> yes Can two rings with opposite twists meet and unwind, and where does their energy go? -> opposite twist
+  is antimatter when they meet the twists desolve and 2 photons are created: untwisted loops travelinin one link per
+  unit of time, the speed of light." VISION Update 90; the brief's answers section.

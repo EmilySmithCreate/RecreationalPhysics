@@ -462,3 +462,11 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   mirror images by price or by what exists. *Ours:* read as particle and antiparticle, the raw defects would have
   unequal masses; the reading survives only through what binds them (her answer of the same day: most of a particle's
   mass is connecting energy, not the loop), which the toy does not have yet. Exact within reach; a look.
+- 2026-10-21. Which closed rings can face diagonals make in the six-link toy's flat space (the owner's twisted rings,
+  VISION Updates 85 to 90)? (`sandbox/diagonal_rings.py`, runs in 2 seconds.) Inside one cube, each kind of point has
+  four corners that are all one face diagonal apart: a regular tetrahedron of six face diagonals, one kind's tetrahedron
+  interlocking with the other's; the cube's four corner-to-corner diagonals all join the two kinds. Through one point,
+  rings of face diagonals: 24 of 3 diagonals (equilateral triangles, the tetrahedra's faces, length 3√2 ≈ 4.24), 116 of
+  4, 630 of 5, 4,038 of 6. Rings of edges: none of 3, 12 squares of 4 (length 4), none of 5, 132 of 6. So the smallest
+  ring of diagonals is a triangle of three, and the smallest ring of edges is the square, slightly shorter (4 against
+  4.24). Exact geometry of the flat lattice; no energy is involved.

@@ -2767,3 +2767,24 @@ test, not decisions.
   and grows with the density, the background makes λ effectively above 1, and the relation between λ − 1 and the defect
   density (her dark energy) is one equation tying two of the hypothesis's numbers. It counts only if the relation is not
   tuned to a target (rule 13).
+
+Update 90 (2026-10-21, 23:25 UTC by the clock): **the author's first answers to the stage-B brief, and her predictions for
+two of its exact tests.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Answers (hers).** Three directions, six links per point. The objects are the cube's corner-to-corner lines and the
+  six face diagonals. The square's edge loops are shorter, hold more curl per length and are more numerous, so they hold
+  more energy: dark matter, denser, with no diagonal spin.
+- **Her predictions, recorded before either test exists (tests 4 and 5 of the brief).** Every move that does not cut a
+  ring keeps its twist: yes. Two rings of opposite twist meet, the twists dissolve, and two photons are made, untwisted
+  rings travelling one link per tick.
+- **Exact (ours; `sandbox/diagonal_rings.py`, `sandbox/LOG.md`).** In one cube each kind of point's four corners are all
+  one face diagonal apart: a regular tetrahedron of six face diagonals, so "the six side diagonals" are one kind's
+  tetrahedron, interlocking with the other kind's. The smallest ring of face diagonals is a triangle of three (the
+  tetrahedron's faces; 24 through each point, length 3√2 ≈ 4.24), which gives "three twists made together" a definite
+  object. The smallest ring of edges is the square (12 through each point, length 4). A cube has four corner-to-corner
+  lines, not three, each joining the two kinds; if she meant three lines, the natural three are the lines through the
+  cube's centre joining opposite face centres, which belong to the dual lattice, not to the toy's points. Hers to say.
+- **Counts per cube in the lattice (exact, Update 87):** 3 edges, 3 squares, 6 face diagonals (3 of each kind, faces
+  being shared), 4 corner-to-corner lines. So edges are not more numerous than diagonals per cube; the square loops are
+  slightly shorter than the triangle rings (4 against 4.24). Which holds more energy depends on the price per ring,
+  question 4, still open.

@@ -98,6 +98,17 @@
 5. **The runaway remedy:** a squared-curvature term, a causal structure, or bounded lengths.
 6. **Braids:** single twisted rings first, braids of three after, or both from the start?
 
+## Her answers so far (21 October; VISION Update 90)
+
+- Question 1: three directions, six links per point.
+- Question 2: the objects are the cube's corner-to-corner lines and its face diagonals; the edges' square loops are the
+  dark kind, denser, with no spin. *Exact:* one kind's six face diagonals in a cube form a regular tetrahedron, whose
+  faces are the smallest diagonal rings, triangles of three; a cube has four corner-to-corner lines (her "three" to be
+  settled).
+- Her predictions: test 4, every move that does not cut a ring keeps its twist; test 5, opposite twists meet and
+  dissolve into two untwisted rings, photons, moving one link per tick.
+- Still open: questions 3 (the energy), 4 (the price per ring), 5 (the runaway remedy) and 6 (braids first or after).
+
 ## What it cannot show
 
 Anything about the real universe (VISION, "What no outcome can show"). A Regge energy on the toy's graph is our family,
