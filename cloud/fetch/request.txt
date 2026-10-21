@@ -63,3 +63,6 @@ t68_*_l16
 # 2026-10-18, 09:50 UTC by the clock: asking again for the six outstanding T68 held-out cells. Not read.
 # 2026-10-19, 01:30 UTC by the clock: T71 stage 1 (12 jobs). Not read.
 t71_*
+# 2026-10-21, 11:07 UTC by the clock: T74 stage 1 (108 jobs) and T76 Amendment 4 option 2, the first look at g = 3.2 (8 jobs). Neither has been read.
+t74_*
+t76_l*_g3p2_q*
