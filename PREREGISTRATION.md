@@ -7652,6 +7652,12 @@ N = 1,024, against 12 needed); ours held. A thin density appears at g = 2.4 to 2
 in time, and the product melts from g = 2.8 to 3.0. Growth on the product is therefore not run. Option 2's cells are on
 Batch.*
 
+*Reading of Amendment 4, option 2 (2026-10-21, 11:28 UTC by the clock; ASSUMPTIONS O146).* At g = 3.2 on the flat sheet:
+MIXED in 7 cells of 8, RISING in one (L = 24, q = 1/1024), CONSTANT in none. The owner's prediction (CONSTANT, w = −1)
+fails in every cell; ours (MIXED in most, CONSTANT in none) holds. A first look at one coupling in a medium that cannot
+hold a steady thin density (O141, O142); the test of her dark energy moves to soft space. The held-out L = 32 is not run
+on the stiff sheet.*
+
 
 ## T77. Does a dark energy that fades open the causal diamond and make our age early? (piece 12; the comparison of paper 16 between the author's constant dark energy and the published model's falling one, [T24] Sec. IV; standard cosmology, not the toy; DRAFT written 2026-10-21, 00:33 UTC by the clock, on the owner's request of 20 October to compare the light-cone approach with the published model's picture; no code written, no number computed)
 
@@ -7718,3 +7724,13 @@ everywhere and in the model arm in four of six λ, r settings; fails in the two 
 (0.37, not above one half), for "no clean switch move in any cell", and for arm C (SITS, not BREAKS). The four answers
 of rule 11 are in O144. The held-out size L = 16 does not run until its words and numbers are written here as a dated
 amendment, with her word.
+
+### Reading of T74 (2026-10-21, 11:28 UTC by the clock; ASSUMPTIONS O145; `scripts/analyse_t74.py`)
+
+Read on L = 8 and 12 by the rules above, the owner's prediction being ours (Amendment 5). Fed phase: BURPS in 102 cells
+of 108, MIXED in six at λ = 1.10, c = 2R, where clean switch moves fired in one or two replicas. Timing: SAME TIMING in 20
+of 24 settings; SPREAD ONLY in the four predicted at λ = 1.25 and 1.40; SAME TIMING at λ = 1.10 where SPREAD ONLY was
+predicted (2 settings). Unfed: cold DISSOLVES in 34 of 36 (two MIXED, both bars met); warm FED BY ITS SURROUNDINGS in 36
+of 36; equal WAITS in 6 of the 18 scored cells and MIXED in 12, with 18 SPLIT and not scored. **The shared prediction
+fails in part**, at the balance point and at the smallest curling cost; the four answers of rule 11 are in O145. The
+held-out size L = 16 does not run until its words and numbers are written here as a dated amendment, with her word.

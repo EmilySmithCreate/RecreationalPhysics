@@ -4138,3 +4138,53 @@ author and should be disclosed as such in any submission. Physics estimates mark
     the registration said. **Not shown:** anything about the switch model's slab, which no feed opened (T67, T68), or
     about a front, a seam or a payment that cancels, which the layer form lacks. The held-out size L = 16 waits for its
     words and numbers, written from these two sizes, and her word.
+- **O145 T74, read (21 October 2026, 11:28 UTC by the clock; fetched and accepted the same morning, 108 runs each
+  matching its committed config; `scripts/analyse_t74.py` on `results/t74_*.csv`).** The slab under the layer form, fed
+  by meals through a curl edge with one maximum curling speed c (VISION Updates 72, 73), λ = 1.10, 1.25, 1.40, L = 8 and
+  12, three feeds of one mean (steady, meals of 16 and of 256 sweeps' worth), c = 2R and R/2, then unfed against a cold,
+  an equal and a warm background, 16 replicas a cell. The owner's prediction is ours (Amendment 5).
+  - **Fed phase:** BURPS in 102 cells of 108; MIXED in six, all at λ = 1.10 with c = 2R (five with the large meals), where
+    a clean switch move was paid in one or two replicas (1 to 4 moves, first between sweeps 891 and 3,663) and a daughter
+    then fell short of a N_slab. The same cause as in T71 (O144): at the smallest curling cost the stores outrun the
+    chain's one layer proposal a sweep until a pool of eight ends can pay the first clean step.
+  - **Timing, meals against steady (backgrounds pooled, 48 replicas a feed):** SAME TIMING in 20 of 24 (λ, L, c, meal)
+    settings, the means within 2 %; SPREAD ONLY in the four with c = 2R and large meals at λ = 1.25 and 1.40 (the spread
+    2.7 to 3.3 times steady's). At λ = 1.10 with c = 2R and large meals the spread is only 1.3 times steady's: SAME
+    TIMING where SPREAD ONLY was predicted.
+  - **Unfed phase:** cold background DISSOLVES in 34 cells of 36, the other two MIXED (both bars met: the slab lost more
+    than half its stored energy and also burped once more after the meals stopped, at λ = 1.10, c = 2R); warm background
+    FED BY ITS SURROUNDINGS in 36 of 36; equal background, where the prediction is scored per cell only when every
+    replica's common mean lies on one side of 2a: 18 cells SPLIT and not scored, and of the 18 scored, WAITS as predicted
+    in 6 (c = 2R with the large meals at λ = 1.25 and 1.40, and with the small meals at 1.40) and MIXED in 12, where 2 to
+    12 replicas of 16 were fed by their surroundings although the common mean lay below the gate's 2a.
+  - **The shared prediction, scored (rule 11):** BURPS everywhere fails in six cells; the timing words fail in two;
+    cold DISSOLVES fails in two; warm holds everywhere; equal WAITS fails in 12 of 18 scored cells. Four answers. (1) The
+    mechanism as stated ("a black hole keeps its energy between meals only when its surroundings are not colder, and
+    dissolves only once they are") is not falsified: cold dissolves and warm feeds in 70 of 72 cells. (2) The failures
+    are of our arithmetic, which used means: the equal-background rule compared the common mean with 2a, while the gate
+    fires on the stores of the two layers beside the cut, and their fluctuation about the mean lets some replicas reach
+    it; the fed-phase and λ = 1.10 failures are the chain's pace (O144). (3) The cheaper test that tells fluctuation from
+    mechanism is exact: the distribution of the pool's stored energy at the common mean, against 2a, from the saved rows,
+    before any run; and for the pace, more layer proposals a sweep. (4) The branch would be abandoned if, in surroundings
+    clearly colder, the slab went on burping (it does not), or if, in surroundings clearly warmer, it dissolved.
+  - **What it shows (ours):** under the layer form, with one cap on how fast energy crosses its edge, whether a
+    black-hole stand-in keeps its energy between meals is set by its surroundings' warmth, as the registration's
+    arithmetic said, with noise at the balance point; meals bunch the timing only where the edge is wide and the meals
+    large. Nothing falls in by itself (no pull); the surroundings are put in by hand. The held-out L = 16 waits for its
+    written numbers and her word.
+- **O146 T76, Amendment 4 option 2, read: the first look at g = 3.2 (21 October 2026, 11:28 UTC by the clock; fetched
+  and accepted the same morning, 8 runs each matching its committed config; `scripts/analyse_t76.py --window 1000`).**
+  The flat sheet growing by her row rule, each clear offer taken with chance q, L = 16 and 24, q = 1/16 to 1/1024,
+  16 replicas a cell; a first look at one coupling, since the registered rule for the couplings could not be met (O141).
+  - **Words:** MIXED in 7 cells of 8, RISING in one (L = 24, q = 1/1024); CONSTANT in none. Replicas split between
+    falling (clean rows diluting a few clusters), rising (a cluster running toward a melt as the sheet grows) and, at
+    L = 16, a minority constant (3 to 8 of 16). The fitted slope of ln ρ against ln N scatters from −1 (the clusters
+    held fixed while the points grew) to large positive values (melting), so no w is read.
+  - **The owner's prediction (CONSTANT, w = −1): fails in every cell.** Ours (MIXED in most cells, CONSTANT in none,
+    revised before the run): holds. Four answers (rule 11). (1) This does not test her dark energy as stated: the stiff
+    toy cannot hold a thin steady density of defects at any coupling (O141, O142), so a growth test on it could only
+    have passed by chance; it was run as a first look on her choice. (2) The failure is of the medium: the stiff toy's
+    defects come in patches that either stay rare or grow into a melt. (3) The cheaper test is the one already chosen,
+    soft space (VISION Updates 76, 77): first whether a coupling holds a steady thin density there, then growth. (4) Her
+    reading of dark energy as a defect density is abandoned in this family if, with soft space, no coupling holds a
+    steady thin density either, or one does and growth does not keep it constant.

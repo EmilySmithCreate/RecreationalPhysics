@@ -2025,3 +2025,19 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   would make it clear when different terms are added and their sources if pulled from published work. Can you add these
   to the deep dive sections that explain where we are and next steps on each claim?" Done: a term-by-term table on the
   programme page and in the draft, and a line per piece naming the terms it uses and the next one.
+- 2026-10-21, the owner, on step 3 of the claim: "One potential issue is the amount in a black hole is already a small
+  proportion of that universe, then the 1/1000000000 of that net matter is more tiny, but the daughter and mother
+  universe are identical. Is that inconsistent or does it not matter for some reason like it is the relationships and
+  proportions that are meaningful not the amount/ size of matter at birth. What do u think?" *Ours, unverified:* two
+  parts. (1) The one-in-a-billion is a ratio inside the daughter (matter per unit of light at its birth), not a share
+  of the parent, so the black hole being a small part of its universe does not shrink it; what has to be the same in
+  every daughter is that ratio, which must then come out of the snap's own rules (in her hypothesis, how much of what
+  the stores carry in is unbalanced, against the burp). In the toy as built the gate fires when the stores beside the
+  cut hold the whole curling cost, so the stores at the snap are as large as the burp itself; the excess would need to
+  be a billionth part of them that is not cancelled, not the stores' size. (2) The amount does matter for one thing:
+  with energy conserved across the change (claim 6), a daughter starts with no more than its black hole converted,
+  far less than our universe holds within its horizon, so to look like its mother it has to grow after the burp.
+  General relativity allows that (an expanding space has no global energy book; inflation makes a large universe
+  from a tiny patch: Farhi, Guth and Guven 1990, not read by us, to verify), so "identical" can mean the same rules and
+  the same ratios, not the same total. That adds a requirement: something after the burp must expand the daughter,
+  which nothing in the stiff toy does.
