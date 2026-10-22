@@ -7939,3 +7939,56 @@ outside, so the curled starts doing its braiding and connecting of twists, and t
 is then more dense which is less entropic, because of their spin even?" Recorded in `sandbox/NOTEBOOK.md` with our
 reading: the density clause is the flat line's job; the toy's candidate for a penalty beyond it is the hard-core rule;
 braids, twists and spin have no object in the toy.
+
+### Reading, 22 October 2026 (replays run the same afternoon from commit d030fd9d, launched minutes before that commit; `results/t79_curl_family_n196_g{3300,3433,3550,3697}.csv`; `python scripts/analyse_t79.py results`): PENALTY ON CURL
+
+**Identity.** Every replayed snapshot equals T78's: ring count, 4 × 4 count and energy, row for row, in all four cells.
+
+**Measured.** Entropy lost per object, S_X = (E_X − F_X)/g, with sightings in brackets:
+
+| object | points | links | squares | g = 3.300 | 3.433 | 3.550 | 3.697 |
+|---|---|---|---|---|---|---|---|
+| ring3 (curled) | 12 | 20 | 9 | −14.87 (1,374) | −15.98 (1,056) | −16.88 (824) | −16.64 (576) |
+| ring2 (uncurled twin) | 12 | 16 | 5 | −4.51 | −4.66 | −5.02 | −5.14 |
+| flat 2 × 2 | 4 | 4 | 1 | −0.61 | −0.63 | −0.67 | −0.71 |
+| flat 2 × 3 | 6 | 7 | 2 | −0.81 | −0.83 | −0.93 | −0.97 |
+| flat 2 × 4 | 8 | 10 | 3 | −1.68 | −1.72 | −1.85 | −1.92 |
+| flat 3 × 3 | 9 | 12 | 4 | −4.57 | −4.80 | −5.12 | −5.16 |
+| flat 3 × 4 | 12 | 17 | 6 | −6.88 | −7.43 | −7.90 | −7.95 |
+| flat 3 × 5 | 15 | 22 | 8 | −9.80 | −10.80 | −11.30 | −11.56 |
+| flat 4 × 4 | 16 | 24 | 9 | −12.57 | −13.92 | −15.04 | −14.57 |
+| flat 4 × 5 | 20 | 31 | 12 | −16.63 | −19.17 | −19.57 | −20.66 |
+
+The flat line (S against links, eight grids, all with thousands of sightings): slope −0.63, −0.72, −0.75, −0.77 per
+link, intercept +3.3 to +4.2; every flat grid lies within ±1.9 of it. The ring's residual r = S_ring3 − S_fit(20):
+**−5.58 ± 0.50, −5.60 ± 0.81, −6.01 ± 0.85, −5.54 ± 0.75** (11, 7, 7 and 7 σ); fitting only the grids with ten or more
+links moves it by 0.2. The twin gap S_ring2 − S_ring3: +10.4 ± 0.5, +11.3 ± 0.8, +11.9 ± 0.8, +11.5 ± 0.8. Both bars
+met in every cell: **PENALTY ON CURL.**
+
+**Scored.** The owner's prediction holds: the curled ring loses more entropy than its uncurled twin and more than the
+flat family predicts for its tightness. Ours fails: the loss does not track links and squares alone; the ring is
+below every reference (the equal-square 4 × 4 by 1.8 to 2.3, T78's gap; the equal-point 3 × 4 by 8.0 to 9.0; the
+line by 5.5 to 6.0). The fits on points and on squares give the same sign and larger residuals (not scored).
+
+**Also measured, not scored.** The uncurled twin sits *above* the line by 2.3 to 2.9: a square whose links carry
+exactly two squares is commoner than its links alone predict, two being the typical link state at these couplings.
+The penalty on the ring beyond the line, per surplus square, is 1.4 to 1.5 units of entropy; written as our family's
+curling cost per surplus square it is λ_eff − 1 = +1.15, +1.20, +1.33, +1.28 at the four couplings, compared with
+nothing (rule 13). Read with T78: that penalty does not grow with the deficit over 0.92 to 1.13 per point.
+
+**Rule 11's four answers, on our failed prediction.** (1) It falsifies "density, not curl": tightness, measured as
+links, points or squares, does not account for the ring. (2) Not implementation (the replay is identical to T78; the
+estimators and the fit were registered; the other two fits agree in sign), not size or coupling as far as four
+couplings at N = 196 go; the mechanism is the open part. (3) The cheapest exact test of the mechanism the registration
+named, the hard-core rule: in a fixed graph, count the valid switches whose two links both lie within two steps of the
+object, for the ring, its twin and the 3 × 4 grid planted in a flat torus and in a saved warm graph; a link at three
+squares forbids every switch that would give it a fourth and every K_{2,3}, so if the ring's neighbourhood admits
+markedly fewer valid switches per link than the flat objects', the penalty is the hard-core rule's forbidden volume,
+countable with the existing switch enumerator and no run. (4) If that count shows no difference, the mechanism is
+unknown and the next step is a reading task, not a knob.
+
+**What this bears on (ours, unverified).** In the published model at λ = 1, in its warm background, a saturated link
+(three squares) is penalised by entropy beyond what its constraints cost: the background behaves, at these couplings,
+as if it charged a curling cost of order g per surplus square. That is the entropic form of the owner's Update 89
+hypothesis, confirmed in sign and size here, with T78's limit that the charge does not grow with the deficit, so it is
+not set by the curvature as such. What it is set by is the mechanism question of item 3.

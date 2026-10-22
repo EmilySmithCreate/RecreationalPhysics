@@ -4212,3 +4212,26 @@ author and should be disclosed as such in any submission. Physics estimates mark
     not in the energy (exact), not as an entropic cost that grows with the curvature (measured); what remains is a
     fixed penalty of unknown origin. λ stays a knob of ours, its value hers to set. A dated line under Update 89 is
     owed (VISION.md carries another session's uncommitted edits and is not touched here).
+
+- **O148 T79, read (22 October 2026): the curled ring's extra entropy loss is a penalty on curl, not the cost of a
+  denser object. PENALTY ON CURL. The owner's prediction holds; ours (DENSITY, NOT CURL) fails.** (PREREGISTRATION
+  T79 and its "Reading"; `scripts/analyse_t79.py`; `results/t79_curl_family_n196_g*.csv`, T78's chains replayed from the
+  same seeds and verified identical snapshot by snapshot.)
+  - **Measured.** Eight flat grids (4 to 31 links) give a line of entropy lost against links, slope −0.63 to −0.77
+    per link, every grid within ±1.9 of it. The curled ring (12 points, 20 links, 9 squares) lies 5.5 to 6.0 below the
+    line at every coupling (7 to 11 σ); its uncurled twin (the same square with exactly two squares on every link,
+    12 points, 16 links, 5 squares) lies 2.3 to 2.9 above it. Per surplus square the ring's penalty beyond the line is
+    1.4 to 1.5 units of entropy, or λ_eff − 1 = +1.15 to +1.33 in our family's units, compared with nothing (rule
+    13); with T78 (O147), it does not grow with the deficit.
+  - *Ours, unverified:* in the published model's warm background a link at three squares costs entropy beyond its
+    constraints; the candidate mechanism is the hard-core rule's forbidden volume (a saturated link admits no fourth
+    square and no K_{2,3}), countable exactly on the objects (rule 11, item 3 of the reading); a sandbox look the same
+    evening (`sandbox/LOG.md`, 22 October, forbidden volume) found the share of allowed switches round a curled ring
+    to be 12 to 13 % against 34 to 35 % round its uncurled twin at every coupling, consistent with that mechanism and
+    to be registered before it is cited. Braids, twists and spin,
+    the owner's own picture of why, have no object in the toy and are not tested either way.
+  - **What it bears on.** VISION Update 89's entropic form: the background does charge for curl, in sign and in size
+    (of order g per surplus square), but not in proportion to its curvature (O147). The owner's hypothesis is
+    therefore: confirmed that a curl is penalised beyond counting in his model at finite coupling; refuted that the
+    penalty is set by the background's negative curvature. A dated line under Update 89 is owed (VISION.md carries
+    another session's uncommitted edits).
