@@ -7734,3 +7734,100 @@ predicted (2 settings). Unfed: cold DISSOLVES in 34 of 36 (two MIXED, both bars 
 of 36; equal WAITS in 6 of the 18 scored cells and MIXED in 12, with 18 SPLIT and not scored. **The shared prediction
 fails in part**, at the balance point and at the smallest curling cost; the four answers of rule 11 are in O145. The
 held-out size L = 16 does not run until its words and numbers are written here as a dated amendment, with her word.
+
+
+## T78. In the published model's warm background, does a curled ring lose more entropy than a flat patch of the same nine squares, and does the gap grow with the background's deficit? (the owner's hypothesis of VISION Update 89, in the one form the finding of 22 October left alive: λ − 1 as an entropic surcharge on curl in a negatively curved background at a fixed coupling; `docs/outreach/finding_2026-10-22_background_curling_cost.md`, private; DRAFT written 2026-10-22 after the owner's prediction was given in chat and before any code or run; uncommitted until she says so)
+
+**Status:** drafted. Her prediction is recorded below in her words. No runner or analyzer exists yet; both are built
+with rule-6 tests before any cell runs. Nothing here is a result.
+
+### Why
+
+Her hypothesis (Update 89): the network's negative curvature at finite coupling may be the reason λ is above 1. The
+exact looks of 22 October (sandbox, `sandbox/background_curl_price.py`) closed two forms of it: at λ = 1 the energy is
+4 D exactly and charges nothing for a surplus square in any background, and a background of missing squares makes a
+curl *cheaper* (the cheapest curl-making switch costs 8 in the three-square tiling against 40 in flat space); and an
+entropic cost scales with g, so it cannot stand in for our λ > 1 runs at low coupling. The form left is this: in his
+model at λ = 1, held at a fixed finite coupling, a curled object loses more entropy than a flat object of the same
+square content, by a gap that grows with the deficit. Her question of the same day ("why can't it charge entropy?")
+supplied the reference that makes it measurable: the flat object. This test measures that gap.
+
+### Definitions (fixed now; named points, as in his simulations)
+
+- **The model:** four links per point, λ = 1, no cap, the hard-core rule, Metropolis, N = 196 = 4 · 7², from a melt
+  (T36 certified equilibrium at this size at g = 3.433 and 3.697 from both starts).
+- **The curled ring:** a square a-b-c-d each of whose four links carries three squares (the column of paper 2, in
+  kind). It touches nine squares (its own and two more through each link) on twelve points, and carries four surplus
+  squares (X = 4).
+- **The flat patch:** a 4 × 4 grid of sixteen distinct points with all 24 grid links present: nine squares in a 3 × 3
+  block, built cell by cell (the first row and column free walks, every other cell the unique common neighbour of its
+  two grid neighbours other than the diagonal one), ordered tuples divided by 8. The two objects share their square
+  content (nine) and differ in point count (12 against 16); that difference is a stated limit, not corrected for.
+- **Counts:** n_ring and n_patch per snapshot, by `sandbox/curl_vs_flat_feasibility.py`'s `rings` and `patches`
+  (to be moved into `src/graphity/` with tests: the flat 14 × 14 torus gives 0 rings and 196 patches; the curled
+  16 × 4 torus gives 16 rings; a hand-built graph with one ring and one patch gives 1 and 1).
+- **The deficit:** ρ = D/N, D = Σ_links max(0, 2 − S_e), the mean over the cell's snapshots.
+- **Free energy per object:** F_X = −g ln(⟨n_X⟩ / N), X ∈ {ring, patch}, with ⟨·⟩ over all snapshots of a cell.
+- **Energy per object:** E_X = ⟨H n_X⟩ / ⟨n_X⟩ − ⟨H⟩, the mean excess energy of the network when it holds the object
+  (a fluctuation estimator; correlations with the surroundings are inside it by design).
+- **Entropy lost per object:** S_X = (E_X − F_X) / g (negative means the object costs entropy).
+- **The gap:** Δ = S_patch − S_ring: the entropy the curl loses beyond what the flat patch loses. Its scale as a
+  curling cost: λ_eff − 1 = g Δ / (4 · 4), four surplus squares at 4 (λ − 1) each. Compared with nothing (rule 13).
+- **Errors:** by bootstrap over replicas (16 per cell, each replica one draw), 1,000 resamples; 2σ is the bar.
+
+### Design (fixed now)
+
+- **Couplings:** g = 3.30, 3.433, 3.55, 3.697, chosen to span the deficit from a partly melted sheet to his
+  three-squares-per-point regime (T36: ρ ≈ 1.0 at 3.433, ≈ 1.2 at 3.697). The gap is read against ρ, not g; g and ρ
+  are tied in his model and that is a stated limit.
+- **Chain:** 20,000 sweeps of equilibration from a melt, then 40,000 sweeps of measurement with a snapshot every 50
+  sweeps (800 per replica), 16 replicas per coupling, seeds 20267801 onward, one per cell. Every snapshot's n_ring,
+  n_patch, H and D are written; adjacency saved every 100th snapshot.
+- **Run as four configs, one per coupling** (`configs/t78_curl_vs_flat_n196_g{3300,3433,3550,3697}.json`,
+  `scripts/run_curl_vs_flat.py`), so they can run in parallel on the laptop; the seed of a cell depends only on the
+  base seed, N, g and the replica, so the split changes no chain. `scripts/analyse_t78.py` reads that named set of four
+  and refuses to read a partial set. Timing from a smoke run: about three to four minutes per replica.
+- **Sizing, from the feasibility look of 22 October** (`sandbox/LOG.md`): at g = 3.433 about one ring in 16 graphs and
+  1.5 patches per graph, so 12,800 snapshots give of order 800 ring sightings and 19,000 patches; at 3.697 no ring in 16
+  graphs, so that cell may be NOT READ.
+- **Not read:** a cell with fewer than 50 ring sightings or fewer than 50 patch sightings is reported NOT READ and takes
+  no part in the verdict.
+- **Size:** N = 196 only. The claim is about the deficit at fixed size, not about size; no held-out size under rule 14.
+  N = 484 is named as the follow-up if the verdict is CURL PENALISED, reported and not scored.
+
+### Verdict words
+
+- **CURL PENALISED, GROWING:** Δ > 0 by more than 2σ in every read cell, and Δ at the read cell of largest ρ exceeds Δ
+  at the read cell of smallest ρ by more than 2σ.
+- **CURL PENALISED, FLAT:** Δ > 0 by more than 2σ in every read cell, and the difference between largest and smallest
+  ρ is within 2σ of zero.
+- **NO GAP:** |Δ| within 2σ of zero in every read cell.
+- **CURL FAVOURED:** Δ < 0 by more than 2σ in every read cell.
+- **MIXED:** otherwise.
+- Fewer than two read cells: **NOT READ**, with the counts reported.
+
+### Predictions, recorded before any run
+
+- **The owner's (22 October 2026, her words):** "does the curled ring lose more entropy (number of ways things can be
+  arranged) than a flat patch of the same nine squares? Yes: an uncurled ring can be any degree of curved. a curled ring
+  is fully curved, so it cannot be all those other ways. its relationship with the other closed curls additionally
+  locks in what daughter universe we are in, with the movement of matter and its cone of influence." Scored as
+  **CURL PENALISED, GROWING** (the growth with the deficit is the content of Update 89; the second sentence is her
+  interpretation and is not scored).
+- **Ours:** **NO GAP**, or CURL PENALISED, FLAT. The energy is linear in missing squares and blind to surplus, and the
+  surroundings' entropy counts squares, not wraps; once square content is matched there is no term that singles out the
+  curl. A positive Δ that does not grow with ρ would be the two objects' different point counts (12 against 16), the
+  stated limit, and would be reported as that rather than as a penalty on curl.
+
+### Rule 11, written before the run
+
+If her prediction fails: the cheapest exact test that tells "no penalty on curl" from "the control is not matched" is a
+second control with twelve points and nine squares (a 3 × 4 grid has twelve points and six squares; a 4 × 4 grid with
+one corner square removed has fifteen; no flat object has twelve points and nine squares, so the nearest is reported
+and the mismatch stated). What would make us abandon the branch: NO GAP or CURL FAVOURED at every read coupling, after
+which λ stays a knob of ours with its value hers to set.
+
+### What this cannot show
+
+Anything on the infinite hyperbolic plane; anything about λ > 1 (no λ > 1 chain runs here); the sign of the surcharge
+at couplings where no ring is ever seen; anything about the real universe.
