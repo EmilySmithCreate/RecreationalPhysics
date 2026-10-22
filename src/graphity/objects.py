@@ -74,6 +74,117 @@ def count_rings(adj):
 
 
 @njit(cache=True)
+def count_ring2(adj):
+    """Squares whose four links each carry exactly two squares (the uncurled twin of the ring; T79), each once."""
+    n = adj.shape[0]
+    tuples = 0
+    for a in range(n):
+        for i in range(4):
+            b = adj[a, i]
+            if squares_on_edge(adj, a, b) != 2:
+                continue
+            for k in range(4):
+                d = adj[a, k]
+                if d == b or squares_on_edge(adj, a, d) != 2:
+                    continue
+                for j in range(4):
+                    c = adj[b, j]
+                    if c == a:
+                        continue
+                    linked = False
+                    for m in range(4):
+                        if adj[d, m] == c:
+                            linked = True
+                            break
+                    if not linked:
+                        continue
+                    if squares_on_edge(adj, b, c) == 2 and squares_on_edge(adj, c, d) == 2:
+                        tuples += 1
+    return tuples // 8
+
+
+@njit(cache=True)
+def count_grid(adj, a, b, flat_only):
+    """a x b grids of points (a rows, b columns, a, b >= 2) with all grid links present and, if flat_only, none of
+    those links carrying three squares; sixteen or fewer distinct points. Ordered tuples / 8 (a == b) or / 4 (T79)."""
+    n = adj.shape[0]
+    grid = np.empty((a, b), dtype=np.int64)
+    used = np.empty(a * b, dtype=np.int64)
+    # the free cells in fill order: first row (0, 1..b-1), first column (1..a-1, 0); then the interior row by row
+    nfree = (b - 1) + (a - 1)
+    choice = np.zeros(nfree, dtype=np.int64)
+    tuples = 0
+    for x00 in range(n):
+        grid[0, 0] = x00
+        # depth-first over the free cells with an explicit stack of neighbour indices
+        depth = 0
+        for t in range(nfree):
+            choice[t] = -1
+        while depth >= 0:
+            choice[depth] += 1
+            if choice[depth] >= 4:
+                choice[depth] = -1
+                depth -= 1
+                continue
+            if depth < b - 1:
+                r, c = 0, depth + 1
+                prev = grid[0, c - 1]
+            else:
+                r, c = depth - (b - 1) + 1, 0
+                prev = grid[r - 1, 0]
+            v = adj[prev, choice[depth]]
+            # distinct from every point placed so far (first row up to c-1, first column up to r-1)
+            dup = False
+            for cc in range(b):
+                if (r == 0 and cc >= c) or (r > 0 and cc > b - 1):
+                    break
+                if grid[0, cc] == v:
+                    dup = True
+                    break
+            if not dup and r > 0:
+                for rr in range(1, r):
+                    if grid[rr, 0] == v:
+                        dup = True
+                        break
+            if dup:
+                continue
+            grid[r, c] = v
+            if depth == nfree - 1:
+                # fill the interior
+                m = 0
+                for rr in range(a):
+                    used[m] = grid[rr, 0]
+                    m += 1
+                for cc in range(1, b):
+                    used[m] = grid[0, cc]
+                    m += 1
+                ok = True
+                for rr in range(1, a):
+                    for cc in range(1, b):
+                        cnt, w = _common_other(adj, grid[rr - 1, cc], grid[rr, cc - 1], grid[rr - 1, cc - 1])
+                        if cnt != 1 or _in(used, m, w):
+                            ok = False
+                            break
+                        grid[rr, cc] = w
+                        used[m] = w
+                        m += 1
+                    if not ok:
+                        break
+                if ok and flat_only:
+                    for rr in range(a):
+                        for cc in range(b):
+                            if cc + 1 < b and squares_on_edge(adj, grid[rr, cc], grid[rr, cc + 1]) > 2:
+                                ok = False
+                            if rr + 1 < a and squares_on_edge(adj, grid[rr, cc], grid[rr + 1, cc]) > 2:
+                                ok = False
+                if ok:
+                    tuples += 1
+            else:
+                depth += 1
+    return tuples // (8 if a == b else 4)
+
+
+@njit(cache=True)
 def _in(arr, m, v):
     for i in range(m):
         if arr[i] == v:

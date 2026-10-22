@@ -7872,3 +7872,70 @@ counting remains in his background, and λ stays a knob of ours with its value h
 
 **What this does not show.** Anything outside ρ = 0.92 to 1.13 or N = 196; anything with interchangeable points;
 anything about the real universe. The λ_eff − 1 column is a translation, not a measurement of our family.
+
+## T79. Is T78's fixed gap a penalty on curl, or the cost of a denser object? The curled ring against its uncurled twin and a family of flat grids, on the same snapshots (follows T78, O147; the owner's question of 22 October, "how can we confirm or further explore this?"; DRAFT written 2026-10-22 after her prediction was confirmed in chat ("yes I confirm what you inferred, proceed") and before any count)
+
+**Status:** registered on her word. Nothing new has been counted on the data before this was written.
+
+### Why
+
+T78 found that the curled ring loses about 2 units more entropy than a flat 4 × 4 patch of the same nine squares, at
+every coupling, with no growth in the deficit. The two objects differ in more than curl: the ring has 12 points, 20
+links and 9 squares (0.75 squares per point); the patch 16 points, 24 links and 9 squares (0.56 per point). A warm
+network may charge for dense order as such. This test separates the two by (a) a twin with the same points and the
+same shape but no curl, and (b) a family of flat objects of several sizes, to see what the entropy loss tracks.
+
+### Definitions (fixed now; named points; the published model, λ = 1, no cap)
+
+- **ring3:** T78's curled ring, a square whose four links each carry three squares (12 points, 20 links, 9 squares).
+- **ring2, the uncurled twin:** a square whose four links each carry exactly two squares (12 points, 16 links,
+  5 squares: the square and one neighbour through each link).
+- **Flat grids:** a × b grids of points (a rows, b columns) with all a(b − 1) + b(a − 1) grid links present and none
+  of those links carrying three squares, 16 distinct points or fewer: sizes 2 × 2, 2 × 3, 2 × 4, 3 × 3, 3 × 4, 3 × 5,
+  4 × 4 and 4 × 5, with (a − 1)(b − 1) squares. Ordered tuples divided by 8 (a = b) or 4 (a ≠ b). The 4 × 4 grid
+  without the no-three-squares condition is also counted and must equal T78's n_patch snapshot by snapshot.
+- **Replay:** T78's four configs with the same base seed, N, couplings, replicas and sweeps (`configs/t79_curl_family_n196_g*.json`,
+  `scripts/run_curl_family.py`). The kernel's same-seed reproducibility is a tested property; the replayed ring3
+  count must equal T78's n_ring on every snapshot, and the analyzer refuses to read if it does not.
+- **Per object X at coupling g:** F_X = −g ln(⟨n_X⟩/N), E_X = ⟨H n_X⟩/⟨n_X⟩ − ⟨H⟩, S_X = (E_X − F_X)/g, as in T78.
+  Objects with fewer than 50 sightings in a cell are dropped from that cell.
+- **The flat line:** ordinary least squares of S_X on the number of links of X, over the flat grids read in the cell
+  (at least four needed). Fits on points and on squares are reported beside it, not scored. The fit is the registered
+  reference because links are the constraints an object places on its surroundings.
+- **The residual:** r = S_ring3 − S_fit(20 links). **The twin gap:** Δ_twin = S_ring2 − S_ring3.
+- **Errors:** bootstrap over replicas, 1,000 resamples, seed 79, refitting the line in every resample; 2 σ is the bar.
+
+### Verdict words, over the read cells (a cell is read if ring3, ring2 and at least four flat grids are read)
+
+- **PENALTY ON CURL:** r < −2 σ and Δ_twin > 2 σ in every read cell.
+- **DENSITY, NOT CURL:** |r| ≤ 2 σ in every read cell.
+- **CURL FAVOURED:** r > 2 σ in every read cell.
+- **MIXED:** otherwise. Fewer than two read cells: **NOT READ**.
+
+### Predictions, recorded before any count
+
+- **The owner's (inferred by the assistant from her hypothesis and confirmed by her in chat, 22 October: "yes I confirm
+  what you inferred"):** the ring loses more entropy than its uncurled twin and more than the flat family predicts for
+  its size, because a fully curved ring cannot be the other ways: **PENALTY ON CURL**.
+- **Ours:** the entropy loss tracks links and squares, and the ring sits on the flat family's line: **DENSITY, NOT
+  CURL**. We expect Δ_twin > 0 regardless, since the twin has four fewer squares and four fewer links, which is why the
+  twin alone does not score and the line does.
+
+### Rule 11, written before the run
+
+If her prediction fails (the ring on the line), the surcharge on curl in his background is counting, and the branch of
+Update 89 is abandoned in this family: λ stays a knob of ours. If ours fails (the ring below the line), the penalty is
+specific to the third square on a link, and the next exact question is whether it is the hard-core rule's doing (a
+link at three squares forbids more neighbourhoods than a link at two), which is a count on the objects themselves and
+needs no run.
+
+### What this cannot show
+
+Anything outside ρ = 0.92 to 1.13 or N = 196; anything with interchangeable points; anything about the real universe.
+
+**Her words before the run (22 October, after the density option was explained to her; her prediction unchanged):**
+"yes I think this occuring, is this reasonable: possibly as the curl is the inside of the cube and the uncurl is the
+outside, so the curled starts doing its braiding and connecting of twists, and the uncurl. also the curl twist loops
+is then more dense which is less entropic, because of their spin even?" Recorded in `sandbox/NOTEBOOK.md` with our
+reading: the density clause is the flat line's job; the toy's candidate for a penalty beyond it is the hard-core rule;
+braids, twists and spin have no object in the toy.
