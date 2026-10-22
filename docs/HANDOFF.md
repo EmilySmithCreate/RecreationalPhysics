@@ -1,5 +1,7 @@
 # Start here: handoff for the next assistant (state as of 2026-10-09, 05:10 ET by the clock; dated addenda below)
 
+**Newer: `docs/HANDOFF_2026-10-22.md`** (the state at the end of 21 to 22 October, what the audit of that day found, the research tasks and the working rules proposed). Read it first; then the 19 October handoffs; then this page.
+
 **Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](papers/measurement_scope.md)
 before reusing the historical claims below. Square counts do not certify geometry or a unique
 front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is

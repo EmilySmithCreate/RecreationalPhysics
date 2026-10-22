@@ -36,7 +36,11 @@
    always add up to 2π times (2 minus twice the number of handles) (Gauss and Bonnet; textbook, to verify), whatever the
    lengths. So in a two-direction toy, Regge's energy is the same for every arrangement of one shape: it gives the
    balance of curl and uncurl for free (every positive curvature paid for by negative curvature elsewhere) and no
-   dynamics at all. Dynamics, waves and a pull need the three-direction toy (six links), or in two directions an extra
+   dynamics at all. *Corrected 22 October (VISION Update 92):* three directions with no time are three-dimensional
+   gravity, which also has no waves and no pull (every source-free region is flat; a point mass is a conical defect:
+   Deser, Jackiw and 't Hooft 1984, to read). Waves and a pull need time as a fourth direction of the lattice, or a
+   theory of the spatial metric with a preferred slicing. What three directions do give is the conical-defect particle,
+   the first thing to compute. ~~Dynamics, waves and a pull need the three-direction toy (six links), or in two directions an extra
    term in the square of the curvature.
 3. **Counting lengths in three directions** ([Ham09]'s count carried down a dimension; ours, to derive): a metric has 6
    numbers per point; the cubic lattice's 3 edges per point cannot hold it (they stretch but cannot shear); adding the
@@ -86,7 +90,7 @@
 ## Questions for the author
 
 1. **Two directions or three first?** Two is cheap and gives the curl-uncurl balance exactly, but no dynamics (exact
-   item 2). Three gives waves and a pull and is the aim. Our recommendation: write the deficit-angle code in two
+   item 2). ~~Three gives waves and a pull and is the aim.~~ *(Corrected 22 October: see exact item 2.)* Our recommendation: write the deficit-angle code in two
    directions for test 1, then go straight to three.
 2. **One diagonal per square or both?** One makes the squares into triangles, Regge's standard; both give a ring lattice
    for each kind of point (exact item 1). Her rings need the diagonals of one kind; if matter and antimatter are opposite
@@ -97,6 +101,24 @@
    whatever Regge's energy gives?
 5. **The runaway remedy:** a squared-curvature term, a causal structure, or bounded lengths.
 6. **Braids:** single twisted rings first, braids of three after, or both from the start?
+
+## Current definitions (kept up to date; read this box first)
+
+- **The particle (hers, Update 86, 21 October):** a twist carried around a closed ring of diagonal links, possibly
+  braided in threes. The smallest closed ring of face diagonals is the triangle of three (a face of one kind's
+  tetrahedron in a cube); a cube's four corner-to-corner lines join the two kinds and make no one-kind ring.
+- **Matter against antimatter:** open. Three rules are on the record (curl against uncurl, Update 80; opposite twists,
+  Updates 85 and 86; one kind's diagonals against the other's, Update 91). The third cannot carry an excess (the energy
+  and the lattice are symmetric under swapping the kinds; Update 92). Hers to choose.
+- **The ring's price:** open. Four statements stand (Updates 85, 86, 87, 91); a table for her is in the handoff of
+  22 October.
+- **The twist:** not yet defined on the graph. A frame carried round a ring is the twist Tw, which is not conserved
+  (Lk = Tw + Wr); the conserved count is a linking number, and it needs either an embedding or a framed-graph label.
+  Tests 4 and 5 are held until it is defined (Update 92).
+- **Light:** no object yet. Test 10 of paper 18 (what plays light) comes before test 5.
+- **Counts per cube in the lattice (exact):** 3 edges, 3 squares, 3 face diagonals of each kind, 4 corner-to-corner
+  lines; one diagonal per square chosen by kind cuts each cube into five tetrahedra with no body diagonal, 6 lengths
+  per point (the brief's earlier count of 7 was wrong).
 
 ## Her answers so far (21 October; VISION Update 90)
 

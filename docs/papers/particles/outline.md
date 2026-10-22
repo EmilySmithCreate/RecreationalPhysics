@@ -41,7 +41,7 @@ shown.
 ## 3. Curl and uncurl: two kinds of defect
 
 - **Exact.** The extra square (curl, a link on three squares) and the missing square (uncurl, a link on fewer than two)
-  are the toy's two kinds of curvature. Per square at λ = 1.25 the first costs 16(λ − 1) = 4, the second 16. Flat space
+  ~~are the toy's two kinds of curvature~~ are the toy's two kinds of defect, one curvature-like (the missing square) and one a wrap (the surplus square: the published curvature saturates at two squares per link, so a third adds none; corrected 22 October, VISION Update 92). Per square at λ = 1.25 the first costs 16(λ − 1) = 4, the second 16. Flat space
   is the floor: both cost energy, as both matter and antimatter carry positive energy.
 - **Exact (O22).** A square that drops in flat space leaves two missing squares and no curl: no partner.
 - **A sandbox look, 20 October.** Points added in one place leave mostly missing squares and at most a little curl.
@@ -96,7 +96,7 @@ shown.
      the routes above to leave an excess.
 - **Exact, ours, and it bears on all of them:** the toy already prices the two kinds differently. Written link by link
   (VISION Update 5), a link on a third square costs 4(λ − 1) and a link on only one square costs 4: one to four at
-  λ = 1.25, equal only at λ = 2. So the energy has the "difference between the two kinds" Sakharov's second condition asks
+  λ = 1.25, equal only at λ = 2. So the energy has a difference between the two kinds, but not the one Sakharov's second condition asks for: his is C and CP violation with equal masses, and an unequal price is a CPT-violating stand-in that the measured mass equality forbids (corrected 22 October, VISION Update 92). ~~So the energy has the "difference between the two kinds" Sakharov's second condition asks
   for, and the snap has his third (a moment out of balance). What it lacks is a rule that says which kind is matter, and a
   conserved count (his first condition read backwards: a count that the snap, and only the snap, can change).
 - **Which kind is matter (the author's hypothesis, 21 October, to test):** curl is matter and uncurl antimatter.

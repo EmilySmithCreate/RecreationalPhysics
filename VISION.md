@@ -2427,9 +2427,11 @@ programme page is regrouped.
   with what it means. One sentence changes in substance, on her question: the burp became the hot lump of the Big Bang,
   light with matter and antimatter in almost equal amounts that cancelled into more light, and the matter left, about
   one part in a billion, is the excess her hypothesis of 20 October carries in from the parent's stores at the snap
-  (Update 76). *Ours:* the toy has not shown that the burp makes pairs; what is exact is that curvature on a closed
-  surface balances (Gauss and Bonnet), so curls and uncurls come in balancing sets; that they act as matter and
-  antimatter is hers to test (paper 18). The wording is ours and hers once she confirms it.
+  (Update 76). *Ours:* the toy has not shown that the burp makes pairs; ~~what is exact is that curvature on a closed
+  surface balances (Gauss and Bonnet), so curls and uncurls come in balancing sets~~ *(withdrawn 22 October, Update 92: Gauss
+  and Bonnet fixes the total curvature only at fixed topology, the toy's switches change the handle count, and the toy's
+  surplus square is a wrap, not curvature, so its curls and uncurls do not balance; O22 and the looks of 19 and 21 October)*;
+  that they act as matter and antimatter is hers to test (paper 18). The wording is ours and hers once she confirms it.
 - **The toy written as one equation, term by term (hers to ask, ours to write):** the published energy, the curling
   cost, the tie, the stores and gate, the layer form, soft space's two stages and the amplitude rule, each with its
   source and the pieces that use it, on the programme page and in the draft. It adds no term; it lists the ones decided.
@@ -2511,7 +2513,9 @@ claim's steps 3, 5 and 8 are reworded to carry them, ours in wording and hers on
   a small closed cycle, and the loop of four does not ring on its own inside a sheet (T15 rung 0b). (4) The toy's books say
   each daughter's energy is what was fed in; her bigger-inside black hole needs the daughter's energy to exceed what the
   parent sees fall in. In general relativity that is possible because gravity's own energy is negative (a closed
-  universe's total is zero); the toy has no gravitational energy (piece 8), so its books cannot hold this yet.
+  universe's total is zero *(a contested statement, 22 October, Update 92: energy is not globally defined in general
+  relativity; the bag-of-gold geometry does not need it)*); the toy has no gravitational energy (piece 8), so its books
+  cannot hold this yet.
 - **The starting quantity (ours, arithmetic on general-knowledge inputs, to verify).** The energy that was in the patch
   which became our observable universe, at temperature T, is about 0.75 T times its total entropy, about 10⁹⁰ in natural
   units (2,900 per cubic centimetre of today's space over a sphere of 46 billion light-years). That is about 10⁶¹ kg
@@ -2542,8 +2546,12 @@ toward zero.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded 
 - **Hers.** The uncurl left behind when matter formed added negative curvature to the network's own background. So dark
   energy did change, early on, and some of that change is still visible within our light cone; but it is settling toward
   the constant of the network's defect density (Update 70), not falling toward zero as in the published model's picture.
-- **What it connects to (ours).** (a) The toy already leans this way: in flat space every curl appears inside a larger
-  uncurl, so making the curl kind leaves extra uncurl behind (sandbox look of this day, `sandbox/LOG.md`). (b) Recent
+- **What it connects to (ours).** (a) ~~The toy already leans this way: in flat space every curl appears inside a larger
+  uncurl, so making the curl kind leaves extra uncurl behind~~ *(corrected 22 October, Update 92: the look of 21 October
+  is a census of one- and two-switch defects of a flat sheet, in which none carries curl alone; it is a counting fact (a
+  point keeping two open directions has exactly four squares, so a link with three forces one with one) and not a process;
+  the curled tube is pure curl with no uncurl at all, so the sentence is false in general; whether making curl leaves
+  uncurl is untested)* (`sandbox/LOG.md`). (b) Recent
   galaxy surveys report a hint that dark energy has been weakening over the last few billion years (DESI, 2024 and 2025,
   at about three to four standard deviations when combined with the microwave background and supernovae; general
   knowledge, not read by us, to verify). (c) It is a third picture beside the two of paper 16: constant (hers until
@@ -2552,8 +2560,11 @@ toward zero.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded 
 - **What it must face (ours).** (1) Extra uncurls of fixed number thin out with the volume exactly as matter does, and
   anything that thins like matter is counted as matter in the fits, not as changing dark energy. To look like dark energy
   settling, the excess has to fade by healing back toward the network's own density, with a healing time comparable to
-  the age of the universe. (2) The fits to the survey hint, as usually written, have dark energy stronger than a
-  constant at earlier times and weaker now; an excess that fades from above toward the constant gives one side of that
+  the age of the universe. (2) ~~The fits to the survey hint, as usually written, have dark energy stronger than a
+  constant at earlier times and weaker now~~ *(corrected 22 October, Update 92: for the fitted w₀, wₐ the dark-energy density
+  is weaker than the constant both early and now and stronger only in a middle window; and a density settling to a
+  constant from above is "freezing" behaviour, the opposite of the "thawing" the hint prefers; to be redone against the
+  published curve)*; an excess that fades from above toward the constant gives one side of that
   and not the other. Which part of the hint survives more data is open.
 - **How it can be tested.** In the toy, once soft space can hold a steady thin density of defects (piece 6): start it
   with an excess of missing squares and measure how the excess fades, whether toward the steady density or toward none,
@@ -2648,14 +2659,16 @@ closed loop, possibly braided; and her picture of photons, masses and generation
   per-ring price would be a new rule. With it, length cannot tell particles apart, so the electron, muon and tau would
   have to differ by braid or by twist, not length.
 - **λ = 1 + 10⁻⁹ (her question; ours, exact from the record).** A curl would then cost 4 × 10⁻⁹ per link against 4 for a
-  missing square, a ratio of one in a billion, the size of the matter excess; that is λ chosen to give the target
-  (rule 13), a fit unless something else fixes λ. Two consequences are exact: the burp per point becomes 4 × 10⁻⁹, almost
+  missing square, a ratio of one in a billion. ~~The size of the matter excess~~ *(corrected 22 October, Update 92: the
+  ratio runs the wrong way; a curl a billion times cheaper than an uncurl would give a thermal population almost all
+  curl, not one extra in a billion; and the number lands on the target only by choosing λ, rule 13.)* Two consequences are exact: the burp per point becomes 4 × 10⁻⁹, almost
   nothing; and with interchangeable points the counting drive to curl beats the curling cost below λ ≈ 1.02 (Update 27,
   O55), so at λ this close to 1 flat space would curl up on its own. The tube's wall stays (about 16 in two
   directions), so X would still be stuck for now.
 - **Helium as four bound twists (Manton and Wood, read in part):** usable as a benchmark of method, how bound twists'
   energies are computed and compared with nuclei, not as evidence (rule 13); the Skyrme model fixes its own constants
-  from measured pion properties.
+  ~~from measured pion properties~~ *(corrected 22 October, Update 92: its two constants were fitted to the nucleon and
+  delta masses, and Manton and Wood recalibrated to lithium-6, so the helium-4 mass is a prediction after that fit)*.
 - **Braids and the three colors (from the reading note):** in Bilson-Thompson's model each quark is itself a braid of
   three ribbons, and its color is which of the three positions holds the odd ribbon; a proton is three such braids. So
   the three colors are three arrangements inside one particle, not three ribbons as three quarks.
@@ -2802,7 +2815,10 @@ Her words are in `sandbox/NOTEBOOK.md` under that date.
 - **Question 3, answered by an exact fact (ours).** She asked whether "curving only" and "the curling cost" differ, since
   more curve is curl. They differ: a tube curled tight around one direction is, as a surface, perfectly flat (rolling a
   sheet of paper into a tube does not stretch it), so its curvature is zero everywhere: the new code gives a largest
-  deficit of 10⁻¹⁵ on the curled 4 × 16 torus. The toy's curling cost charges the tightness of the wrap (links that end
+  deficit of 10⁻¹⁵ on the curled 4 × 16 torus *(corrected 22 October, Update 92: the code assigns flat lengths whatever
+  the wiring, so that zero is by construction and adds nothing; the fact is textbook geometry, a rolled sheet is a
+  developable surface with zero intrinsic curvature, and the sharper statement is that intrinsic lengths cannot encode a
+  wrap at all)*. The toy's curling cost charges the tightness of the wrap (links that end
   up on a third small square because the way around is short), which curvature does not see. So with curving only there
   is no burp: the curled slab and the open sheet would cost the same. Curvature is gravity's part; the curling cost is the
   burp's. Our recommendation, hers to decide: keep both.
@@ -2822,3 +2838,72 @@ Her words are in `sandbox/NOTEBOOK.md` under that date.
 - **The first piece of stage B is built** (`graphity.regge`, ASSUMPTIONS Q27): lengths on links and on one diagonal per
   square, the curvature at each point from them, with Gauss and Bonnet checked on a torus and a sphere. Next: the
   three-direction version, then the single edge loops (her dark kind) and their price.
+
+Update 92 (2026-10-22, 07:39 UTC by the clock): **corrections of the record of 21 October, from an audit of the day
+(ours).** Five readers went over Updates 78 to 91, the notebook, the looks, the brief, the outline and the reading note
+with different lenses (the assistant's physics; the owner's ideas; published models not yet cited; consistency; what the
+toy lacks) and returned 105 findings, 72 distinct. The adversarial check and the synthesis that were to follow did not
+run (the session's agent limit), so the judging below is the assistant's own, and the full list is in
+`docs/HANDOFF_2026-10-22.md`. Each correction is marked in place with this update's number.
+
+- **Withdrawn: "curls and uncurls come in balancing sets" (Update 78).** The toy's surplus square is a wrap, not
+  curvature: the published curvature saturates at two squares per link ([T25] Eq. 8), a third square adds none, and the
+  curling cost is a penalty beyond curvature (Update 23). Gauss and Bonnet fixes the total curvature only at fixed
+  topology, and the switches change the handle count (the look of 19 October). The toy has one curvature-like defect,
+  the missing square, and one wrap defect, the surplus square. Paper 18's section 3 ("two kinds of curvature") is
+  reworded, and its section 4 (pairs need a conservation law) has no exact support yet.
+- **Corrected: "every curl appears inside a larger uncurl" (Update 83; the page, pieces 6 and 7).** True of one- and
+  two-switch defects of a flat sheet, by counting; false in general (the curled tube is pure curl). Not a process, not a
+  lean toward her dark-energy hypothesis.
+- **Corrected: the λ = 1 + 10⁻⁹ bullet (Update 86)**: the price ratio runs the wrong way for an excess.
+- **Corrected: the curled tube's "zero deficit in code" (Update 91)**: by construction; the fact is geometry.
+- **Corrected: the DESI description (Update 83)**, and "settling from above" named as freezing behaviour.
+- **Corrected: the Skyrme model's calibration (Update 86)** and the "zero total energy" sentence (Update 81).
+- **Added to Update 88 (the speed limit), the bars the record already held:** the preferred-frame limit α₁ = −8 against
+  4 × 10⁻⁵ (Update 77) applies to one link per tick in the network's frame; Feynman's checkerboard is a one-direction
+  construction whose three-direction form is unresolved (Jacobson and Schulman 1984, to read); the lattice's dispersion
+  is quadratic, where the gamma-ray-burst bound is weak (about 10¹⁰ GeV, not the Planck scale); the Z width counts light
+  neutrinos (2.996 ± 0.007, the 2019 reanalysis) and the three-generation bar rests on more than it; one kind's diagonal
+  network is the face-centred cubic lattice, which has twelve preferred directions, so it does not make diagonal space
+  "all alike whatever the angle".
+- **Named, not yet corrected, the largest miss of the day (ours): stage B in three directions with an energy that
+  charges only for curving is three-dimensional gravity, which has no waves and no pull** (Deser, Jackiw and 't Hooft
+  1984; Witten 1988; to read). The brief's "three gives waves and a pull" carried a four-dimensional count down a
+  dimension without the condition. Waves and a pull need time as a fourth direction of the lattice, or a theory of a
+  spatial metric with a preferred slicing (the Hořava form), which brings back the preferred frame. What three
+  directions do give is the published particle of 2+1 gravity: a point mass as a conical defect, its mass the deficit
+  angle around a line, which fits "matter is curved space" and is the first thing stage B should compute. Also exact
+  and new: with one diagonal per square chosen by kind, a cube is cut into five tetrahedra (one regular, on one kind's
+  corners; four at the other kind's corners) using no body diagonal, giving 6 lengths per point, the metric's six
+  components, so nothing is redundant and the brief's count of 7 was wrong.
+- **Named: "twist" as the brief defines it (a frame carried round the ring) is not the conserved quantity.** For a framed
+  ring the invariant is the linking number, Lk = Tw + Wr (Călugăreanu 1959, White 1969, Fuller 1971; the mathematics of
+  DNA supercoiling), and twist trades with writhe. And knots, links and braids are properties of curves in a space, not
+  of an abstract graph; the toy keeps no embedding once a switch has fired. Tests 4 and 5 of the brief, and her
+  predictions for them, are held until the count is defined on the graph (a framed or ribbon graph, or lattice knots
+  with the moves that keep knot type, the BFACF algorithm; to read).
+- **Named: the kind rule cannot carry an excess.** "One kind's diagonals are matter's, the other's antimatter's" is a
+  labelling the energy and the lattice are exactly symmetric under (a translation by one link swaps the kinds), and the
+  two kinds are equal in number by the degree rule (the ledger look of 19 October); so an excess by kind is impossible
+  in principle, and `regge.py`'s kind-0 triangulation was a choice of ours (Q27), hers to confirm or replace.
+- **Named: light has no object in the toy.** Her photon is an untwisted ring moving one link per tick; stage A's
+  waves are a field on points; stage B's travelling lengths are gravity's. Nothing in the toy moves a ring. Test 5
+  cannot be scored until a carrier is declared (paper 18's test 10 comes before test 5).
+- **Named: "negative curvature" has been used as a synonym for dark energy** (Updates 79, 83, 89, 91). A positive
+  cosmological constant gives de Sitter space, whose curvature is positive, and the measured spatial curvature is zero
+  to about a per cent; the sign comes from [T22] and [T23]'s argument that the network's negative Ollivier curvature
+  behaves as de Sitter after a continuation. To be read at the source and stated plainly (ASSUMPTIONS, to add).
+- **Named: Sakharov's conditions.** An unequal price for the two kinds is a CPT-violating stand-in, not C or CP
+  violation; the CPT theorem makes particle and antiparticle masses equal in any local Lorentz-invariant theory, so
+  hypothesis 1 of paper 18 inherits the Lorentz-violation limits. Gravitational baryogenesis needs a changing curvature,
+  not a static background. Section 6 of the outline is reworded.
+- **Her ideas of 21 October that were recorded in the notebook and not on this page**, now hers here: a growth rule in
+  three directions (two new points touch eight new cubes, two rows of points by L per expansion) with the diagonals a
+  growth step adds as the source of particle kinds; her explanation of "counting in sixes" (two squares when two points
+  are added to an edge); her request to use the helium Skyrmion calculation as a method; the cube's corner-to-corner
+  lines as objects (dropped after the count was corrected, without her saying so); "the 4th dimension" (time, or a
+  fourth space direction, unasked); a nearby network with another λ (which Update 23 called unobservable; both stand
+  unreconciled). Her dark face loops have a match the record did not name: the column and double column of paper 2 are
+  curled loops of four edges on a square, measured (T51, T55), with energies 14 and 8.
+- **Her questions of the day answered in chat and not in the record** are answered in the handoff: what clocks and
+  lengths will teach; an eating rate in sweeps; the 3 eV per photon; whether the toy has progressed.

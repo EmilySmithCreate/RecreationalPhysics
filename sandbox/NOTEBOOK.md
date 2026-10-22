@@ -2012,7 +2012,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   is most of the lump, and the matter we are made of is a sliver on top of it, which fits her hypothesis of 20 October
   that the excess is carried in from the parent's stores at the snap. The toy has not shown that the burp makes pairs:
   what is exact is that on a closed surface the total curvature is fixed by the number of handles (Gauss and Bonnet),
-  so curls and uncurls must balance; that they behave as matter and antimatter, and cancel into anything like light,
+  ~~so curls and uncurls must balance~~ *(withdrawn 22 October, VISION Update 92: the toy's curl is a wrap, not
+  curvature, and its topology is not fixed)*; that they behave as matter and antimatter, and cancel into anything like light,
   is her hypothesis, untested (paper 18). The claim is restated so.
 - 2026-10-21, the owner: "I think the opening a phase changing reality paragraph should be more a numbered list of steps
   each with a bulleted list of what that means." Done on the programme page and in the draft.

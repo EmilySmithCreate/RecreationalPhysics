@@ -141,7 +141,7 @@ chain"; Hicks's difficulty was how atoms made of a very thin fluid could have th
   in three dimensions. In a plane it cannot cross itself to make a knot, and in four or more dimensions every knotted
   loop can be untied. That is why every model in this section is three-dimensional, and it is one concrete sense in
   which "a loop from 3d" can carry something a loop from 2d cannot.
-- *Close (ours, unverified, from [FN97]'s bound):* if the least energy grows like Q^(3/4), then one loop of charge 2
+- *Close (ours, unverified; corrected 22 October: [FN97]'s Q^(3/4) is a lower bound and says nothing about how the minimum grows; the binding of higher charges is a numerical result, [BS98], to be read for the numbers):* if the least energy grows like Q^(3/4), then one loop of charge 2
   costs less than two loops of charge 1, so loops tend to bind together; that is a published place where "the binding
   energy" of loops can be computed.
 - *Differs:* the loop is in a field (or, for Kelvin, a fluid) on a fixed space, not a curl of space. Kelvin's version
