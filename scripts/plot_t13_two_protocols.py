@@ -42,15 +42,15 @@ ax.set_facecolor(SURFACE)
 for rep, pts in sorted(p_cool.items()):
     xs, ys = zip(*pts)
     ax.plot(xs, ys, color=BLUE, lw=2.2, alpha=0.85, marker="o", ms=3.5, mec=SURFACE, mew=0.6, zorder=2,
-            label="his protocol, cooling from a random graph (%d chains)" % len(p_cool) if rep == "0" else None)
+            label="continuation protocol, cooling from a random graph (%d chains)" % len(p_cool) if rep == "0" else None)
 for rep, pts in sorted(p_heat.items()):
     xs, ys = zip(*pts)
     ax.plot(xs, ys, color=ORANGE, lw=1.8, alpha=0.9, marker="o", ms=3.5, mec=SURFACE, mew=0.6, zorder=3,
-            label="his protocol, heating from the lattice torus (%d chains)" % len(p_heat) if rep == "0" else None)
+            label="continuation protocol, heating from the lattice torus (%d chains)" % len(p_heat) if rep == "0" else None)
 for rep, pts in sorted(e_melt.items()):
     xs, ys = zip(*pts)
     ax.plot(xs, ys, color=BLACK, lw=0, marker="s", ms=6.5, mfc="none", mec=BLACK, mew=1.3, zorder=4,
-            label="replica exchange from a random graph (%d replicas; %d to %d round trips each)"
+            label="replica exchange from a random graph (%d replicas; %d to %d round trips per run)"
                   % (len(e_melt), trips[0], trips[-1]) if rep == "0" else None)
 
 ax.set_xscale("log")
@@ -77,12 +77,13 @@ ax.annotate("cooling, and replica exchange:\none smooth curve, no jump",
 leg = ax.legend(loc="lower left", frameon=True, fontsize=9.5, labelcolor=INK, borderpad=0.8)
 leg.get_frame().set_facecolor(SURFACE)
 leg.get_frame().set_edgecolor(GRID)
-ax.set_title("N = %d, full Hamiltonian, hard-core rule only: his protocol beside replica exchange" % n,
+ax.set_title("N = %d, full Hamiltonian, hard-core rule only: continuation beside replica exchange" % n,
              loc="left", fontsize=13, color=INK, fontweight="bold", pad=14)
 fig.text(0.04, 0.012,
-         "His protocol as described: 40 couplings from 12 to 1.5, each starting from the previous coupling's final graph,\n"
+         "Continuation protocol: 40 couplings from 12 to 1.5, each starting from the previous coupling's final graph,\n"
          "240 sweeps of warm-up and 10,000 measured sweeps per coupling. Replica exchange: 20 couplings from 9 to 2.2,\n"
-         "100,000 sweeps, swap rate 0.3 to 0.6. Files: results/t13_seq_n%d.csv, results/t13_temper_n%d_melt.csv; "
+         "20,000 equilibration + 100,000 measurement sweeps, swap rate 0.20 to 0.58.\n"
+         "Files: results/t13_seq_n%d.csv, results/t13_temper_n%d_melt.csv; "
          "seeds in configs/." % (n, n),
          fontsize=9, color=INK2, ha="left", va="bottom")
 fig.tight_layout(rect=(0, 0.09, 1, 1))
