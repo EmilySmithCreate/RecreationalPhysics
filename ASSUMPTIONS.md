@@ -4189,3 +4189,26 @@ author and should be disclosed as such in any submission. Physics estimates mark
     soft space (VISION Updates 76, 77): first whether a coupling holds a steady thin density there, then growth. (4) Her
     reading of dark energy as a defect density is abandoned in this family if, with soft space, no coupling holds a
     steady thin density either, or one does and growth does not keep it constant.
+
+- **O147 T78, read (22 October 2026): in the published model's warm background at λ = 1, a curled ring loses more
+  entropy than a flat patch of the same nine squares, by a fixed gap of about 2 that does not grow with the
+  background's deficit. CURL PENALISED, FLAT. The owner's GROWING fails on its growth clause; ours (NO GAP) fails on the
+  gap.** (PREREGISTRATION T78 and its "Reading"; `scripts/analyse_t78.py`; `results/t78_curl_vs_flat_n196_g*.csv`,
+  run from commit 6681eec6.)
+  - **Measured.** N = 196, g = 3.30, 3.433, 3.55, 3.697, deficit 0.92 to 1.13 missing squares per point, 16 replicas,
+    801 snapshots each, every replica melted: Δ = S_patch − S_ring = +2.09 ± 0.43, +1.86 ± 0.78, +1.66 ± 0.82,
+    +1.65 ± 0.74; largest minus smallest deficit −0.44 ± 0.85. Written as a curling cost per surplus square the gap is
+    λ_eff − 1 = 0.37 to 0.43 at every coupling (compared with nothing, rule 13).
+  - **Exact, the same day (sandbox, `sandbox/background_curl_price.py`), the two forms of Update 89 this run did not
+    need to test:** at λ = 1 the energy is 4 D and charges nothing for a surplus square, and a background of missing
+    squares makes a curl cheaper (the cheapest curl-making switch costs 8 in the three-square tiling against 40 in
+    flat space); an entropic cost scales with g, so our λ > 1 runs at low coupling are not an effective description
+    of λ = 1 in any background. The owner's questions of the day corrected the finding twice: a background can charge
+    entropy, and the reference for calling it a cost on curl is a flat object of the same square content (hers);
+    curl and uncurl are not swapped (checked). The private finding is `docs/outreach/finding_2026-10-22_background_curling_cost.md`.
+  - *Ours, unverified:* the fixed gap is most simply the objects' point counts (12 against 16), the limit the
+    registration stated; the point-matched control of rule 11's item 3 (a 3 × 4 grid on the saved graphs) decides it.
+  - **What it bears on.** VISION Update 89's "perhaps the network's negative curvature is the reason λ is above 1":
+    not in the energy (exact), not as an entropic cost that grows with the curvature (measured); what remains is a
+    fixed penalty of unknown origin. λ stays a knob of ours, its value hers to set. A dated line under Update 89 is
+    owed (VISION.md carries another session's uncommitted edits and is not touched here).

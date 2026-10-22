@@ -7831,3 +7831,44 @@ which λ stays a knob of ours with its value hers to set.
 
 Anything on the infinite hyperbolic plane; anything about λ > 1 (no λ > 1 chain runs here); the sign of the surcharge
 at couplings where no ring is ever seen; anything about the real universe.
+
+### Reading, 22 October 2026 (run the same day from commit 6681eec6; `results/t78_curl_vs_flat_n196_g{3300,3433,3550,3697}.csv`; `python scripts/analyse_t78.py results`): CURL PENALISED, FLAT
+
+**Measured.** Sixteen replicas per coupling, 801 snapshots each; every replica melted (D/N 0.90 to 1.13 at every
+coupling, the coldest included), and the ring sightings are spread evenly over replicas (24 to 106 per replica).
+
+| g | ρ = D/N | rings | patches | F_ring | E_ring | S_ring | F_patch | E_patch | S_patch | Δ = S_patch − S_ring | σ | λ_eff − 1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 3.300 | 0.918 | 1,374 | 34,609 | 24.79 | −24.29 | −14.87 | 14.14 | −28.04 | −12.78 | **+2.09** | 0.43 | +0.43 |
+| 3.433 | 0.992 | 1,056 | 24,041 | 26.69 | −28.18 | −15.98 | 15.96 | −32.52 | −14.12 | **+1.86** | 0.78 | +0.40 |
+| 3.550 | 1.052 | 824 | 18,025 | 28.48 | −31.44 | −16.88 | 17.53 | −36.49 | −15.22 | **+1.66** | 0.82 | +0.37 |
+| 3.697 | 1.128 | 576 | 12,035 | 30.98 | −30.53 | −16.64 | 19.75 | −35.67 | −14.99 | **+1.65** | 0.74 | +0.38 |
+
+Every cell is read (all sightings above 50). Δ > 0 by 4.9, 2.4, 2.0 and 2.2 σ (the third cell clears the bar by
+0.02 σ). Largest minus smallest deficit: −0.44 ± 0.85, within 2 σ of zero. **CURL PENALISED, FLAT.**
+
+**Scored.** The owner's prediction, CURL PENALISED, GROWING, **fails on its growth clause**: the ring does lose more
+entropy than the flat patch, by about 2 units at every coupling, but the gap does not grow as the background's deficit
+grows from 0.92 to 1.13 missing squares per point; if anything it falls, not significantly. Ours, NO GAP, **fails on
+the gap**: it is positive at every coupling. The alternative we named before the run, CURL PENALISED, FLAT read as the
+two objects' different point counts (12 against 16), is what came out; that reading is ours and unverified, and the
+registration said it would be reported as that rather than as a penalty on curl. The measured fact is a fixed gap.
+
+**Also measured, not scored.** Both objects sit in snapshots of lower energy than average (E of −24 to −36): they are
+cold-weather objects, the flat patch more so. Each costs 13 to 17 units of entropy at these couplings. The ring's free
+energy rises from 24.8 to 31.0 across the four couplings and the patch's from 14.1 to 19.7. λ_eff − 1, the gap written
+as a curling cost per surplus square, is 0.37 to 0.43 at every coupling; by rule 13 it is compared with nothing, and
+since it does not move with the deficit it is not a number the curvature sets.
+
+**Rule 11's four answers.** (1) The result falsifies the growth clause, which was the content of Update 89 (λ − 1 set
+by the background's curvature); a fixed gap of unknown origin is what is left. (2) The deficit spanned is narrow, 0.92
+to 1.13 per point, because at this size his model offers nothing else: colder, the sheet stays flat and holds no ring;
+warmer, it is random. That is a limit of the model at N = 196, not of the run. (3) The cheapest exact test that tells a
+penalty on curl from the point-count mismatch: count a flat 3 × 4 grid (twelve points, six squares) and the 4 × 4 grid
+on the saved graphs (512 at this run), and see whether the entropy lost by a flat object tracks its point count or its
+square count; if twelve flat points cost what the twelve-point ring costs, the gap is point count. Not run; a new
+registration. (4) Abandon the branch if the point-matched control shows the same gap; then no penalty on curl beyond
+counting remains in his background, and λ stays a knob of ours with its value hers to set.
+
+**What this does not show.** Anything outside ρ = 0.92 to 1.13 or N = 196; anything with interchangeable points;
+anything about the real universe. The λ_eff − 1 column is a translation, not a measurement of our family.
