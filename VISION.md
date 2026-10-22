@@ -2907,3 +2907,23 @@ run (the session's agent limit), so the judging below is the assistant's own, an
   curled loops of four edges on a square, measured (T51, T55), with energies 14 and 8.
 - **Her questions of the day answered in chat and not in the record** are answered in the handoff: what clocks and
   lengths will teach; an eating rate in sweeps; the 3 eV per photon; whether the toy has progressed.
+
+Update 93 (2026-10-22, 11:42 UTC by the clock): **DECISION (the author's): four working rules, and her statement of how
+she works and why predictions are the only route to readers.** Her words are in `sandbox/NOTEBOOK.md` under that
+date; the rules are CLAUDE.md 19 to 22, and her statement is written into CLAUDE.md's first section and rule 8.
+
+- **Why (hers).** Her messages stream ideas that match her intuition and her hobbyist's memory of physics, translated
+  from undetailed visuals and a pattern sense; they have gaps and need quick checking and correcting, so that the vision
+  converges on what the reading finds likely and on the published models that describe the concept. The team such work
+  would need does not exist and will not form; she has no standing in physics and will not spend a decade earning it;
+  the only route to readers is a sound model whose predictions are confirmed by observation.
+- **Rule 19:** exact look before memory paragraph; memory statements get a source within the week. **Rule 20:** one
+  object at a time; a "current definitions" box in every brief; her answers read back as one set. **Rule 21:** every
+  question of hers answered in the record; every idea pointed to; our terms defined. **Rule 22:** a fresh reader audits
+  any day with more than three updates, and its adversarial pass must run.
+- **What this changes at once (ours).** The stage-B brief's definitions box is the model for every brief. The handoff of
+  22 October (section 2) is the first "open list" of rule 19. The next session's first act is rule 22 on the audit of
+  21 October itself.
+- **A note on the model's author.** Her expectation, stated 22 October, is that he will not read paper 1; her words on
+  his reaction are kept out of the tracked record (CLAUDE.md, public-facing work). The page's "Waiting on: a reader"
+  line stands as written until she says what replaces it.

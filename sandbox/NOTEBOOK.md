@@ -2235,3 +2235,21 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   charge for curving only, or keep today's curling cost as well? are they different? I don't understand? more curve is
   curl. gravety is curve. Q4, a ring's price: a fixed amount per twist: yes, for each diff link length in relation to
   the other hypotenuse." (Quoted passages of ours shortened to "...".) VISION Update 91.
+- 2026-10-22, the owner, on the rules: "Please update the rules document to help us avoid some pitfalls moving forward. Yes when I have an exchange I am
+  looking to stream my ideas of what possible details seem to match my intuition and my very limited knowledge and memory
+  of actual math and physics. That knowledge and memory is that of an engaged hobbiest watching lectures recorded in
+  2017. I share them in writing, which is a translation process in itself, as my brain holds undetailed visuals and a
+  pattern recognition sense that is correlated with my "truth" sense, which is another word for the intuition.
+  Obviously, there are gaps in that set of ideas I write out. I need to have them quickly checked and corrected by you,
+  so we can work toward a vision that matches what your research can uncover as likely accurate or inaccurate, and find
+  other physicists mathematically models that can describe, or partially describe, the concept that we are exploring. A
+  human brain can only hold so much at the same time, and our work spans a huge diverse library of human knowledge, so
+  to do this we would need a huge team devoted to this research program. Especially since many of the models and ideas
+  we need are obscure not publicly accepted truth, this group does not exist and won't come together (for economic and
+  societal reasons. [One sentence on the model's author's reaction to paper 1 is kept out of the tracked record; her
+  expectation is that he will not read it.] I have no social capital in the physics space [...]. So that is why it is so
+  important for us to get to a sound model that can make accurate predictions. That is the cost of physics social
+  capital. The other way to earn the social capital readers and collaboration costs would be me, Emily, getting
+  admission to a physics phd program, working for a decade to get a PhD and a set of peer reviewed publications, and then
+  use that to get grants or directly hire people to work on the program. That is not a feasible or interesting path to
+  me, so the only way is us getting to that model, predictions that are confirmed by real observations." CLAUDE.md rules 19 to 22; VISION Update 93.
