@@ -2010,7 +2010,11 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 - **O83 T43, read: a planted allotrope at λ = 1 DISSOLVES at every coupling.** (2026-09-27, 09:35 ET; PREREGISTRATION T43;
   `analyse_t43.py`.) Every planted region, in every construction and at every coupling from 1.0 to 3.697, dissolved,
   before its background, within 10 to 155 sweeps (16 replicas each); the flat-torus controls held where expected. Ours
-  (DISSOLVES) holds; the owner's inferred prediction (ALLOTROPE LASTS) fails. Allotropes are parked
+  (DISSOLVES) holds; the owner's inferred prediction (ALLOTROPE LASTS) fails. *Addendum, 22 October 2026, found while
+  packaging the numbers for the model's author:* "within 10 to 155 sweeps" is the range of the smallest medians; by
+  `analyse_t43.py` the medians are 10 to 20 sweeps for the fold and the handle at every coupling, and 155 to 370 for
+  the flat analogue (its background's order lasting 655 sweeps to the whole run), every region before its background.
+  The verdict is unchanged; the sentence was loose for the flat analogue. Allotropes are parked
   (`docs/parked/allotropes.md`), and this is recorded there.
 
 - **O84 T38 complete: TWO POPULATIONS (supersedes O78's provisional UNCLEAR).** (2026-09-27, 09:35 ET; PREREGISTRATION
