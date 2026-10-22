@@ -2788,3 +2788,37 @@ two of its exact tests.** Her words are in `sandbox/NOTEBOOK.md` under that date
   being shared), 4 corner-to-corner lines. So edges are not more numerous than diagonals per cube; the square loops are
   slightly shorter than the triangle rings (4 against 4.24). Which holds more energy depends on the price per ring,
   question 4, still open.
+
+Update 91 (2026-10-22, 00:08 UTC by the clock): **the author's answers to the stage-B brief, and the first piece built.**
+Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Decided (hers).** Question 1: two directions first, as a check, then three. Question 2: one diagonal per square is
+  matter's; read with her "3 curl and 3 uncurl hypotenuses" per cube as one kind's diagonals for matter and the other
+  kind's for antimatter (she confirms or corrects this reading). Question 4: a fixed price per twist, set by the
+  diagonal's length in proportion to the others, steady in proportion to the cube's energy; each twist can cancel only a
+  twist of its own length; only the proportions are real, the points are not. Question 6: single rings first, the dark
+  kind on the squares' edges, which may or may not braid into different dark particles; matter's braids after.
+  Question 5 (the runaway remedy) is open.
+- **Question 3, answered by an exact fact (ours).** She asked whether "curving only" and "the curling cost" differ, since
+  more curve is curl. They differ: a tube curled tight around one direction is, as a surface, perfectly flat (rolling a
+  sheet of paper into a tube does not stretch it), so its curvature is zero everywhere: the new code gives a largest
+  deficit of 10⁻¹⁵ on the curled 4 × 16 torus. The toy's curling cost charges the tightness of the wrap (links that end
+  up on a third small square because the way around is short), which curvature does not see. So with curving only there
+  is no burp: the curled slab and the open sheet would cost the same. Curvature is gravity's part; the curling cost is the
+  burp's. Our recommendation, hers to decide: keep both.
+- **Her positions (to test, not decided).** The network's slight negative curvature is a fact, made by the loop, which
+  has no size and no beginning or end, all its versions stacked; we can know which version we are in at two levels, by
+  time or by a particle's spin, and not both at once. Perhaps the curvature came from a nearby network with its own λ,
+  its own explosions and antimatter, or from something in a fourth direction. "I still won't give you the god cop-out,
+  not while we can learn so much and end the day with curiosity rather than certainty." *Ours, general knowledge, to
+  verify:* a neighbouring universe leaving its mark on ours has published forms with a test: colliding bubbles in
+  eternal inflation would leave round disks in the microwave background (Aguirre and Johnson; searched by Feeney and
+  others, 2011, nothing found at the sensitivity then), and two colliding sheet-universes in a fourth direction are the
+  ekpyrotic picture (Khoury, Ovrut, Steinhardt and Turok, 2001).
+- **Spin and charge (her question; ours, general knowledge, to verify).** Spin does not make charge: the neutron spins
+  and has no charge, and the electron and its antiparticle spin alike with opposite charges; like charges repel whatever
+  way they spin. What spin does make is magnetism: a spinning charge is a small magnet, and two magnets attract or repel
+  depending on how they are turned, which is the part of her picture that matches.
+- **The first piece of stage B is built** (`graphity.regge`, ASSUMPTIONS Q27): lengths on links and on one diagonal per
+  square, the curvature at each point from them, with Gauss and Bonnet checked on a torus and a sphere. Next: the
+  three-direction version, then the single edge loops (her dark kind) and their price.

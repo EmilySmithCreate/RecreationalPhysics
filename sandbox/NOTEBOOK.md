@@ -2208,3 +2208,29 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   change. -> yes Can two rings with opposite twists meet and unwind, and where does their energy go? -> opposite twist
   is antimatter when they meet the twists desolve and 2 photons are created: untwisted loops travelinin one link per
   unit of time, the speed of light." VISION Update 90; the brief's answers section.
+- 2026-10-22 (00:00 UTC; 21 October in her day), the owner, answering the stage-B brief: "One diagonal per square, or both? Your rings need the diagonals that join one kind of point. -> one diagonal is
+  matter: negitive curviture is a fact. it was created by the loop which is without size, without beginning or end, all
+  their probabalistic versions stacked on top of eachother, distingushable at two distict levels, the one amount of
+  information we can have about which version we are in because we are in multitudes of them, and you can triangulate by
+  time or at particle /unit spin-level, you cannot see both simultaniously because then we wouldnt be the right number of
+  concentrated versions to make us, here, in our daughter, real. what created our slight negative curviture of network
+  and its strange loop of the largest infinity. maybe the strangeloop curviture of a nearby network, operating under a
+  different lambda and its onw huge explosions and antimatters. Even beyond, I still wont give you the god copout, not
+  while we can learn so much and end the day with curiousity rather than cirtainty. Two directions or three first? ... ->
+  yes A ring's price: ... whatever the link length the hypotenuce length as a proprtion of the lengths and steady in its
+  proportion to the mass / energy of the cube points 3 curl and 3 uncurl hypotenuses. each can only cancel it's own
+  length of hypotenuse. the actual link lenth is irrelevant only the relationships are real the points are not real.
+  Braids: single rings first > let's do the single rings the dark matter. they may or may not braid, different types of
+  dark matter particles. then do matter's equivalent. , one half -> but isn't rotating matter like a literally spinning
+  quark the thing that might make the charges? same types repulse because the spins oppose each other but opposites
+  would come together. imagine the quark spinning on the diagonal, and they ewere spinning on right angles. The excess:
+  ... -good correction i was spitballing from memory. ... 3 eV -> I don't understand this does it still represent your
+  understanding of what I am saying. ... I may have been counting in 6's , 2 squares, as that is what you get when you
+  add the 2 dots to the edge, one of each type. but we are saying the same thing. the network could have been flat 3d
+  space but it was a bit negatively curved. maybe something happened in the 4th dimension to give our comparitively
+  microscopic, information-wise, strange loop. ... facinating. my mental geometry is also struggling it's like i'm
+  circling around understanding but am making progress well I think. have we made progress to our predictive toy model?
+  what were the biggest steps? "Three throughlines": ... yes I counted wrong lol good correction ... Q3, the energy:
+  charge for curving only, or keep today's curling cost as well? are they different? I don't understand? more curve is
+  curl. gravety is curve. Q4, a ring's price: a fixed amount per twist: yes, for each diff link length in relation to
+  the other hypotenuse." (Quoted passages of ours shortened to "...".) VISION Update 91.

@@ -107,7 +107,13 @@
   settled).
 - Her predictions: test 4, every move that does not cut a ring keeps its twist; test 5, opposite twists meet and
   dissolve into two untwisted rings, photons, moving one link per tick.
-- Still open: questions 3 (the energy), 4 (the price per ring), 5 (the runaway remedy) and 6 (braids first or after).
+- Later the same day (Update 91): question 1, two directions first, then three; question 2, one diagonal per square is
+  matter's (the other kind's for antimatter, to confirm); question 4, a fixed price per twist set by the diagonal's length
+  in proportion to the others; question 6, single rings first, the dark edge loops, then matter's braids. Question 3:
+  curvature and the curling cost differ, since a tightly curled tube is flat as a surface (zero deficit, checked in
+  code), so curving only would give no burp; recommendation to keep both, hers to decide. Still open: question 5 (the
+  runaway remedy).
+- Built: `graphity.regge` (Q27), the two-direction curvature, test 1 of the list above passed.
 
 ## What it cannot show
 
