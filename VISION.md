@@ -3029,8 +3029,11 @@ observe, a different story to tell."
   Eq. (36), analytic), and the one measurement, at N = 2000, fits an intermediate value of 1.88 ± 0.08 with a form whose
   large-scale limit is 3 ([T22] Sec. IV, Eqs. (15) to (19); read in part). The building block's dimension does not fix
   the large-scale one ([Carlip17]).
-- **What it must face.** *Exact:* a flat lattice torus settles at dimension 2 (`graphity.dimension`, tested), and the
-  burp's product in two directions is a flat lattice torus (O116), so the burp itself does not reach 3; in his picture
+- **What it must face.** *Exact:* a ~~flat lattice torus settles at dimension 2 (`graphity.dimension`, tested), and the
+  burp's product in two directions is a flat lattice torus (O116)~~ wide flat lattice torus settles at dimension 2, and
+  the burp's product in two directions is a narrow flat torus, six around (O116), which reads 2 only below its width and
+  1 beyond it *(corrected the same evening, from a look on built shapes, `sandbox/LOG.md`)*, so the burp itself does
+  not reach 3; in his picture
   the rise toward 3 belongs to the warm, negatively curved network at finite coupling. So "the same spot" lives in the
   warm network, which is where T80's four-link half looks. *Ours:* a six-link result shows what happens once three
   dimensions are put in; it cannot by itself show what a two-dimensional base produces, so agreement between the two
