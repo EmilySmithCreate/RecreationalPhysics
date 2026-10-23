@@ -8023,6 +8023,41 @@ otherwise. **NOT READ** for any λ with fewer than eight read couplings in the t
 - *Ours:* the rise moves to larger g as λ falls, and λ = 1/2 lands **CLOSER**; REPRODUCED by λ = 1/2 is possible and
   we do not commit to it, because the cold end at λ < 1 may fold (φ above 1) where Fig. 3 shows about 1.0, which would
   be a second difference of a different kind and would say the code behind Fig. 3 is neither.
-- *The owner's:* owed before any result is read.
+- *The owner's (23 October 2026, given after the runs finished and before the files were opened; her words):* "Reproduced, or at
+  least closer if other factors make the reproduction not exact." Scored as **REPRODUCED**, with CLOSER as her stated fallback.
 
 **What it cannot show.** What his code actually did; only whether the printed Hamiltonian reproduces his figure.
+
+### Reading, 23 October 2026 (runs from commit c186596d, committed unread as 9248d09c, read after the owner's prediction was recorded; `python scripts/analyse_gateb3.py results`): NOT REPRODUCED
+
+**Measured.** Read couplings (legs within 0.03, τ_int below 200): 14 of 22 at λ = 0.25 (6 in the transition region, so
+**NOT READ** for the verdict there), 16 at 0.50 and 0.75, 20 at 1.00. Against the mean of Fig. 3's two series:
+
+| λ | largest difference | rms | crosses φ = 0.6 at g (cool / heat) | cold end at g = 2 (cool / heat) |
+|---|---|---|---|---|
+| 0.25 | 0.293 (6 read in 2..10) | 0.120 | 5.60 / 5.70 | 1.46 / 1.00 |
+| 0.50 | 0.335 | 0.169 | 5.45 / 5.45 | 1.35 / 1.00 |
+| 0.75 | 0.356 | 0.176 | 5.30 / 5.32 | 1.22 / 1.00 |
+| 1.00 (on the record) | 0.368 | 0.161 | 5.20 / 5.19 | 1.00 / 1.00 |
+| Fig. 3 | | | 7.0 / 6.2 | 0.97 / 1.00 |
+
+Coupling by coupling, the four curves lie within 0.03 of each other across the transition (at g = 6.31: 0.53, 0.52,
+0.52, 0.51 against Fig. 3's 0.69 cooling and 0.50 heating; at g = 5.01: 0.68, 0.65, 0.63, 0.62 against Fig. 3's 0.99
+and 0.98). Lowering the coefficient moves the crossing from 5.2 to 5.45 at λ = 1/2 and 5.6 at 1/4, a sixth of the
+way to Fig. 3's; and below g ≈ 4 the cooling leg at every λ < 1 folds (φ = 1.22 to 1.46 at g = 2) where Fig. 3 shows
+0.97 on cooling. **NOT REPRODUCED** at every λ; λ = 1/2's largest difference (0.335) is not below half of λ = 1's.
+
+**Scored.** The owner's prediction (REPRODUCED, or at least CLOSER) fails; ours (CLOSER at least) fails. Both
+predictions moved the same way as the data and by far too little.
+
+**Rule 11's four answers.** (1) It falsifies the reading "Fig. 3 is the printed Hamiltonian under this protocol":
+the printed coefficient shifts the transition by 0.25 in g, not by 1.5, and produces a folded cold end that Fig. 3
+does not show on cooling. (2) Not implementation (the λ = 1 curve reproduces Fig. 8a to 0.005 and the λ = 0 end is
+first order as published; the same kernel and protocol throughout); not size (N = 160 is Fig. 3's stated size);
+parameters: this protocol copies neither the number of sweeps nor the continuation of his runs, and O27 showed that
+continuation alone moves the ascent only below g ≈ 3.5. So the explanation of Fig. 3 is not in the coefficient, and
+the question to him stands as written: the coupling axis or the size of Fig. 3, or a protocol with a different
+ensemble. (3) The cheapest discriminator left is his answer. (4) Gate B stays open; no branch of ours depends on it.
+
+**What this does not show.** What his code did; only that the printed Hamiltonian, under our protocol, does not give
+his figure.

@@ -4240,3 +4240,14 @@ author and should be disclosed as such in any submission. Physics estimates mark
     therefore: confirmed that a curl is penalised beyond counting in his model at finite coupling; refuted that the
     penalty is set by the background's negative curvature. A dated line under Update 89 is owed (VISION.md carries
     another session's uncommitted edits).
+
+- **O149 Gate B‴, read (23 October 2026): the Hamiltonian as printed (our λ = 1/2) does not reproduce [T25] Fig. 3 at
+  N = 160; NOT REPRODUCED at λ = 1/4, 1/2 and 3/4. The owner's prediction (REPRODUCED or CLOSER) and ours (CLOSER)
+  both fail.** (PREREGISTRATION Gate B‴ and its "Reading"; `scripts/analyse_gateb3.py`; `results/gateb3_n160_lam*_vs_t25fig3.csv`.)
+  - **Measured.** Lowering the local coefficient from 1 to 1/2 and 1/4 moves the crossing of φ = 0.6 from g = 5.20 to
+    5.45 and 5.60, against Fig. 3's 6.2 (heating) and 7.0 (cooling); across the transition the four curves lie within
+    0.03 of each other and 0.3 to 0.4 below Fig. 3; below g ≈ 4 the cooling leg at every λ < 1 folds (φ up to 1.46 at
+    g = 2) where Fig. 3 shows 0.97. Largest differences 0.29 to 0.37.
+  - **What it bears on.** Q28's open question: if the code behind Fig. 3 carried the printed coefficient, it did so with
+    a protocol or ensemble that differs from ours in some other way; Gate B stays open and the question to him narrows
+    no further (coupling axis, size, or protocol and ensemble of Fig. 3). The λ = 1 kernel's standing is unchanged (Q28).
