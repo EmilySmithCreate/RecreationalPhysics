@@ -8061,3 +8061,63 @@ ensemble. (3) The cheapest discriminator left is his answer. (4) Gate B stays op
 
 **What this does not show.** What his code did; only that the printed Hamiltonian, under our protocol, does not give
 his figure.
+
+
+## T80 (DRAFT, 23 October 2026): the random-walk dimension of the toy, four-link and six-link, at each scale
+
+**Status: a draft, not a registration.** It becomes one when the owner's predictions are written into the blanks below
+and the estimator's tests pass; no run before then. Written after the model's author advised against the six-link model
+(23 October; private correspondence, sixth note) and after Carlip's 2017 review was read in full
+(`docs/reading/notes/2026-10-23_carlip_dimensional_reduction.md`): the review says dimension in every approach it
+covers is measured on the model by estimators, never read from the building block, and that the building block's
+dimension "does not necessarily determine the large scale spacetime dimension". So the question his advice raises is a
+measurement, and this is it. The owner's go-ahead for the measurement: "yes" (23 October); her predictions are owed.
+
+**What is measured** (known-physics plan, rung 1). On a saved or built graph: (i) the **spectral dimension** D_s(t), from
+the return probability of a simple random walk after t steps, P(t) ~ t^(−D_s/2), read as the local slope
+−2 d ln P / d ln t at each t; (ii) the **volume-growth dimension** D_v(r), from the number of points within graph
+distance r, read as the local slope d ln V / d ln r. Both are standard (Carlip 2017, Sec. 2; [T25] text around Eq. (24)),
+and both are functions of scale, which is the point: the short-scale value and the large-scale value are reported
+separately, with the scale at which the slope settles.
+
+**Gate (rule 2).** Before any toy number is read: the estimator reproduces, on a perfect L × L lattice torus, D_v = 2
+and D_s = 2 at scales between a few steps and L/4 (exact expectations); on a cycle, 1; on the 4-cube, the known
+hypercube return probability (exact, computable by hand); and the published statement for the model, [T25] text around
+Eq. (24) and its Fig. 6 (the random phase's dimension unbounded, the geometric phase's close to 2), read with the same
+tool on graphs made by our λ = 1 chain at N = 196 above and below the transition. If the published statement is not
+reproduced, stop and report; nothing below is read.
+
+**Objects** (saved end states and built graphs; named points; nothing new is run to make them):
+1. four links: the flat torus; the tube (4 × L); the T7 opened sheets with their relics; a melt;
+2. six links: the flat 4 × L × L lattice torus; the slab (one direction curled, T56/T71 end states); the rod; a
+   six-link melt (T53's warm end states);
+3. sizes as saved; a held-out size for any claim that a value holds as N grows (rule 14): named here before the run
+   as the largest saved size of each family, fitted on the smaller ones.
+
+**Predictions.**
+- The owner's: __________ (owed; at least: the large-scale D_s of the six-link flat torus; the short-scale D_s of
+  the same; whether the tube's D_s reads 1 or 2 at large scale; whether the slab's reads 2 or 3).
+- Ours, written before any run: flat four-link torus, 2 at every scale beyond a few steps (exact, by construction);
+  tube, 2 at short scales and 1 at scales beyond its circumference; six-link flat torus, 3 at every scale beyond a few
+  steps; the slab, 3 at short scales and 2 beyond the curled circumference; melts, a short-scale D_s well above the
+  lattice value and no settled large-scale value within the saved sizes (the published "unbounded"). We expect no
+  drop toward 2 at short scales in any ordered six-link state, because the toy has no short-scale structure below one
+  link: the dimensional reduction of Carlip's review is a property of theories with structure at every scale, which
+  this toy is not. **A measured short-scale D_s near 2 on the six-link flat torus would falsify that expectation and
+  would be the first point of contact between this toy and the review's hint.**
+
+**Verdict words.** BUILDING BLOCK (every ordered state's large-scale D_s equals its link count's dimension: 2 at four
+links, 3 at six); REDUCES (an ordered six-link state's short-scale D_s is within 0.3 of 2 while its large-scale value
+is within 0.3 of 3); NEITHER (anything else, reported in full). The tube and the slab are scored separately on
+whether the curled direction drops out of D_s at large scale (DROPS OUT / STAYS).
+
+**What it decides.** Not whether the six-link track is right; that is the owner's decision under S1. It decides
+whether "dimension" in this toy is a count of links (the building block) or a measured property that can differ from
+it, which is the premise of the model's author's advice and of the review's method. If BUILDING BLOCK, his
+"the third dimension is emergent" has no counterpart in this family at these sizes and the choice of graph degree is
+exactly a choice of dimension; if REDUCES, the six-link graph has an emergent two-dimensional short-scale regime and
+the advice and the toy agree.
+
+**Needs before registration:** the estimator (`src/graphity/dimension.py`, new functions `spectral_dimension(adj,
+t_max, walks, seed)` and `volume_growth(adj, r_max)`), with tests on the cycle, the lattice torus, the 4-cube and a
+known random-regular graph; the reproduction of [T25] Fig. 6's statement at N = 196; the owner's predictions.
