@@ -2978,7 +2978,10 @@ written in full once, in the entry named; this update records what they mean for
   has 2N side-preserving renamings and the square torus 4N, so neither named nor interchangeable counting picks a handled
   torus over a sheet (her inferred prediction failed); (b) at λ = 1 the tube (4 × L) has 2L valid single switches of
   zero cost and the lowest one-switch free energy of the tori at its N at every coupling tried (her prediction held;
-  first term of the expansion only). Their promotion to a tested exact script is handoff item 2.6. *Ours, general
+  first term of the expansion only). Their promotion to a tested exact script is handoff item 2.6 *(done the same day:
+  O150. The tube's zero-cost moves lead to a family of three equal-energy shapes, one of them the tube closed through a
+  reflection, a Klein bottle; the zero-cost part of the tube's advantage is g ln 4, not g ln(2L + 1); the sign of her
+  prediction stands)*. *Ours, general
   knowledge, to verify:* a timeless whole with time for internal observers is a published family (Page and Wootters
   1983; Barbour; the problem of time).
 - **His advice against the six-link model, and the reading (23 October).** He advised against the three-dimensional

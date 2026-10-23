@@ -4251,3 +4251,63 @@ author and should be disclosed as such in any submission. Physics estimates mark
   - **What it bears on.** Q28's open question: if the code behind Fig. 3 carried the printed coefficient, it did so with
     a protocol or ensemble that differs from ours in some other way; Gate B stays open and the question to him narrows
     no further (coupling axis, size, or protocol and ensemble of Fig. 3). The λ = 1 kernel's standing is unchanged (Q28).
+
+- **O150 EXACT: the lattice tori at λ = 1 counted two ways, every single switch out of each, and the tube's zero-cost
+  family read from its positions (23 October 2026).** Code: `scripts/exact_torus_counting.py`; tests:
+  `tests/test_exact_torus_counting.py` (35). Promoted under rule 16(c) from two sandbox looks of the same day
+  (`sandbox/torus_counting_two_ways.py`, `sandbox/torus_free_energy_one_switch.py`; `sandbox/LOG.md` and
+  `sandbox/NOTEBOOK.md`, 23 October); two looks came before this entry. Item 2.6 of the handoff of 23 October. The
+  reading from positions is `sandbox/out/torus_zero_cost_switches_2026-10-23.md` (untracked; every number in it comes
+  from the script's commands). Checked by an independent agent that rebuilt the graphs, the square counts, the hard-core
+  rule and the automorphism counts in networkx. A statement that names no test was computed by the script's commands
+  and is not pinned by a test.
+  - **Renaming counts (exact).** At N = 64, 96 and 144 every non-square rectangular lattice torus (a, b even, both at
+    least 4) has A = 2N side-preserving renamings and the square torus 4N
+    (`test_rectangles_have_2N_renamings_and_the_square_4N`; at N = 64 also by networkx on a separately built grid,
+    `test_the_renaming_counts_agree_with_networkx_at_64`). The tube's renamings are exactly the 2N lattice maps
+    (x, y) → (±x + i, ±y + j) with i + j even (`test_the_tube_renamings_are_the_lattice_maps`). So at λ = 1
+    interchangeable-point counting weighs every rectangle equally, and named-point counting only halves the square.
+  - **Single switches (exact).** Every valid switch is recorded with its (dS, dX), matched against an independent
+    networkx brute force at 4 × 12 and 6 × 8 (`test_switch_costs_match_a_networkx_brute_force`); the look's N = 144 table
+    is reproduced exactly (`test_the_look_at_144_is_reproduced`). The 6 × L tori have **3L** switches at cost 16 and none
+    cheaper, at L = 8, 16, 24 and 32 (tested at 8, 16, 24, `test_a_6_x_L_torus_has_3L_switches_at_16_and_none_cheaper`;
+    32 from the tables command); the sandbox notebook said 2L (corrected there).
+  - **The tube's zero-cost switches, read from positions (exact).** At every even L from 8 to 48 the 4 × L tube has
+    exactly 2L zero-cost switches, every one with dS = dX = 0, so each costs nothing at every λ (tested at L = 8, 10,
+    12, 16, 24, 36, 40, 48, `test_the_tube_has_2L_zero_cost_switches`; the other lengths from one `--reach` run on
+    23 October). Read at L = 8 and 12 (`test_each_zero_cost_switch_crosses_two_opposite_links_of_one_junction`): each
+    crosses the two links that join opposite points {a, a + 2} of ring y to ring y + 1, losing the four squares between
+    those two rings and gaining four new ones there. The 2L switches form one orbit under the tube's renamings. The
+    switched graph keeps every ring and is **the tube closed through a reflection of its ring** ("the reflected
+    closure"): A = N; straight lines along it of lengths L, L and 2L; its non-ring squares form a connected closed
+    surface with V − E + F = 0 that cannot be oriented, which by the classification of connected closed surfaces
+    (textbook, not re-read) is a Klein bottle.
+  - **The zero-cost family (exact).** Chains of zero-cost switches from the tube reach exactly three classes up to
+    side-keeping renaming, at every even L from 8 to 48 (cap 200, not hit): the tube (A = 2N); the reflected closure
+    (A = N; one switch); the half-turn closure (A = 2N; two switches), which is the lattice torus with wraps (4, 0) and
+    (2, L) and keeps the rings of four. The three have equal S and X and every zero-cost switch between them has
+    dS = dX = 0, so they tie, and are joined at no cost, at every λ (`test_the_zero_cost_family_of_the_tube_is_three_classes`,
+    at L = 8, 10, 12, 24, with the move counts 2L; L and L; 2L, agreeing from both ends). With named points their
+    labelled copies stand 1 : 2 : 1, so the family holds 4 times the tube's own count. At L = 6 a fourth class appears
+    (moves of kind dS = −2, dX = −8; the family is 10 times the tube's count; `test_the_short_tube_family_has_a_fourth_class`),
+    and at L = 4, the 4-cube, there are five classes (`test_the_4_cube_family_has_five_classes`), not read further. At
+    λ = 1.25 each of the three classes has the same 12L exits of cost 12, paper 1's wall (`--exits`; tested at L = 8
+    and 12), so the zero-cost wander does not change the exit count of Update 9. *Ours, unverified beyond the enumerated
+    L:* the family is the stacks of rings whose junctions are wired through the four side-keeping maps of the ring.
+  - **What it changes (exact).** The look's one-switch free energy counted the tube's 2L zero-cost neighbours as
+    excitations; they are ground states, and the full partition function counts each once. So for L ≥ 8 (every even L
+    from 8 to 48) the zero-cost part of the tube's low-coupling advantage is **g ln 4, not g ln(2L + 1)**, and it does
+    not grow with L (`test_the_family_free_energy_starts_at_minus_g_ln_4`, at L = 12); at L = 6 it is g ln 10. Counted
+    that way, the tube's family still has the lowest one-switch free energy against every other rectangle at every
+    coupling tried (g = 0.5 to 10, N = 144, 160, 192; tables command, not pinned beyond L = 12, g = 0.5 and 1): its
+    advantage is smaller than the look's at g ≤ 3 and larger at g = 5 and 10, where the expansion is no longer small.
+    Her prediction of 23 October (the tube wins at every finite coupling) holds in this form; the sandbox notebook's
+    "at least ln(2L + 1)" is corrected there.
+  - **Beside the record.** One-sided (Klein-bottle) flat end states were already read on 11 October (O116, last
+    addendum: 5 whole 64-point Klein bottles and 39 end states with a one-sided piece among the flat end states of T8,
+    T23, T24 and T60; O122: 2 among T60's 3,521). What this entry adds is that every tube has a one-sided zero-cost
+    neighbour, at every λ.
+  - **What it does not show.** The one-switch term of the expansion only; nothing about whether the chain moves between
+    tori; nothing about λ ≠ 1 for the comparison between tori (the reachable set at λ ≠ 1 was not enumerated); and not
+    the full ground state at λ = 1, since the other flat wrappings (O119), gases of 4-cubes and mixtures are not
+    counted, so it is not the equilibrium answer to which torus the network sits in.
