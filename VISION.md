@@ -98,7 +98,7 @@ Shared starting point: spacetime is a phase of graph-like degrees of freedom [Tr
 
 | Question | Trugenberger | This hypothesis |
 |---|---|---|
-| Order of the transition | Continuous; the critical point *is* the Big Bang and supplies the continuum limit [Trugenberger23 Sec. III] | ~~First order, with latent heat~~ A jump in energy: a bounded lump released (reworded 2026-10-11, Update 56; whether the change is first order is no longer part of the claim) |
+| Order of the transition | Continuous; the critical point *is* the Big Bang and supplies the continuum limit [Trugenberger23 Sec. III] *(Annotated 2026-10-23, Update 94: the Big Bang is a difference between the two pictures, not a shared premise. In his model it is effective, an appearance to an internal observer of a static network; in hers it is a literal event)* | ~~First order, with latent heat~~ A jump in energy: a bounded lump released (reworded 2026-10-11, Update 56; whether the change is first order is no longer part of the claim) |
 | Where matter comes from | Matter *is* leftover bubbles of the random phase; its energy is excess curvature [Trugenberger23 Sec. I] | Matter comes from the released energy; the leftover is a separate remainder (hot X or X2). *Decided 2026-09-23 (Update 19): the leftover is a structured defect of fixed size, never the melt* |
 | What drives expansion | Geometry alone: negative curvature behaves like de Sitter space [T22; T23]. Since 2024 he also describes an inflation-like burst at emergence ("topological inflation"), caused by very high curvature near the critical point, not by released energy [T24, Dark energy section] | Released energy (inflation-like epoch, then reheating) |
 | Time | An absolute universal time that is not geometric; the time of relativity emerges later, at large scales [T23] | Same choice, and the same split. **Corrected 2026-09-21 by the author: time is not created by the change.** X already has something time-like about it — an ordering, or a time-like direction arranged differently from ours — and the change *rearranges* it, exactly as it rearranges the spatial directions. That is claim 3 applied to time rather than to space. What emerges is the time of relativity, the one that mixes with space and runs at different rates; the bare ordering is assumed on both sides and derived by neither. Her illustration of 2026-09-20 already said this: X has a tiny time-like direction that *becomes* large. ~~our time is emergent~~ was the loose phrasing and is withdrawn |
@@ -2571,6 +2571,17 @@ toward zero.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded 
   and how fast. Against the sky: her picture predicts dark energy approaching a constant from above, never reaching zero
   and never stronger than the constant in the future; paper 7's dark-energy target sheet states the numbers that would
   rule it out.
+- **Her lean of 23 October, toward the opposite sign** (`sandbox/NOTEBOOK.md`, that date). Her words: "if the extra curl
+  goes into the blackhole to be taken into daughter universe, then the antimatter stays in sort of a shell outside the
+  edge, and when the black hole disolves, that adds to the backgound negative curviture, just the tiniest amount. this
+  could make the background curviture increase in the daughter over time." Asked which of the two drifts she holds:
+  "I'm still leaning toward today's idea." **Recorded as a lean, not a decision; both signs stand until she chooses.**
+  *Ours:* the lean has the background's negative curvature growing in size over a daughter's life, the opposite sign to
+  this update (settling from above) and to the published model's drift (shrinking toward zero as the coupling runs); the
+  2024 and 2025 survey hints lean toward a weakening dark energy (`docs/reading/notes/2026-10-23_dark_energy_time_dependence.md`,
+  read). It survives the surveys only if the shells' contribution is below what they can see, which her "just the
+  tiniest amount" allows. **Falsifier:** a confirmed weakening at a size the shell mechanism cannot avoid. What that size
+  is needs the toy to price a shell, which it cannot yet.
 
 Update 84 (2026-10-21, 17:36 UTC by the clock): **the author's hypotheses: matter as a closed loop with no points, dark
 matter as the same loop one dimension down, and antimatter dispersing while matter is trapped.** Her words are in
@@ -2780,6 +2791,18 @@ test, not decisions.
   and grows with the density, the background makes λ effectively above 1, and the relation between λ − 1 and the defect
   density (her dark energy) is one equation tying two of the hypothesis's numbers. It counts only if the relation is not
   tuned to a target (rule 13).
+- **Tested, 22 October (written in full in ASSUMPTIONS O147 and O148; this line recorded 23 October).** *Exact* (sandbox
+  look `background_curl_price.py`, a kill only): at λ = 1 the energy charges nothing for a surplus square, and a
+  background of missing squares makes a curl cheaper (8 against 40), so her reading cannot live in the energy.
+  *Measured:* T78, **CURL PENALISED, FLAT**: in the published model's warm background at λ = 1 a curled ring loses about
+  2 units more entropy than a flat patch of the same nine squares at every coupling, and the gap does not grow with the
+  background's deficit (her GROWING failed on its growth clause; ours, NO GAP, failed on the gap). T79, **PENALTY ON
+  CURL**: set against its uncurled twin and eight flat grids, the curled ring lies 5.5 to 6.0 below the flat grids'
+  line at every coupling, so the penalty is on curl and not on a denser object (her prediction held; ours, DENSITY, NOT
+  CURL, failed). So "λ above 1 because of the network's negative curvature" is settled in two of its three forms (not in
+  the energy; not a cost that grows with the curvature) and alive in the third: a fixed entropic surcharge on curl at a
+  fixed coupling, of unknown origin. A sandbox look points at the hard-core rule as its mechanism; it is to be registered
+  before it is cited (handoff of 23 October, item 2.5). λ stays a knob of ours, its value hers to set.
 
 Update 90 (2026-10-21, 23:25 UTC by the clock): **the author's first answers to the stage-B brief, and her predictions for
 two of its exact tests.** Her words are in `sandbox/NOTEBOOK.md` under that date.
@@ -2927,3 +2950,60 @@ date; the rules are CLAUDE.md 19 to 22, and her statement is written into CLAUDE
 - **A note on the model's author.** Her expectation, stated 22 October, is that he will not read paper 1; her words on
   his reaction are kept out of the tracked record (CLAUDE.md, public-facing work). The page's "Waiting on: a reader"
   line stands as written until she says what replaces it.
+
+Update 94 (2026-10-23; recorded the same day by a later session): **the model's author's correction and Gate B‴; his
+advice against the six-link model, set against the Carlip reading, with her decision owed; the Big Bang as a difference;
+the author's two-level picture; her questions of the day.** Why this page changes: the handoff of 23 October (item 2.8)
+lists these as owed here; until now `VISION.md` held another session's uncommitted edit and was not touched. Each fact is
+written in full once, in the entry named; this update records what they mean for the hypothesis.
+
+- **His correction (ASSUMPTIONS Q28).** The printed local term of [KTB19] Eq. (27) and [T25] Eq. (22) lacks a factor 2.
+  *Exact:* our kernel was derived from the bracketed curvature formula (Q1), so **our λ = 1 is his corrected
+  Hamiltonian** and the printed one is our λ = 1/2; nothing at λ = 1 in the record changes, and the naming condition
+  (only λ = 1 is the published model) stands. *Measured:* Gate B‴ (PREREGISTRATION; O149), registered before any run,
+  **NOT REPRODUCED**: λ = 1/4, 1/2 and 3/4 move the N = 160 crossing from g = 5.20 to at most 5.60 against [T25] Fig. 3's
+  6.2 to 7.0. Her prediction (REPRODUCED or CLOSER) and ours (CLOSER) both failed. Gate B stays open and is parked until
+  he says which form, size, axis or protocol Fig. 3's code used.
+- **The Big Bang is a difference, not a shared premise (hers).** His papers write that the critical point "is" the Big
+  Bang; on the call of 22 September he described it as effective, an appearance to an internal observer of a static
+  network (call record, point 3; private). Her claim 4 is a literal event within a daughter. The comparison table's first
+  row is annotated.
+- **Her two-level picture (hers; `sandbox/NOTEBOOK.md`, 23 October, her words in full there).** "The strange loop is his
+  many handled torus with probabilistic version counts"; "at that level, there is no causal order; all the large infinite
+  versions just are"; "Within each daughter, the big bang is the main event of the story, the beginning"; and "very large
+  curvature near the critical point -> plays out in 3d as the central big bang event running a 3d super large strange
+  loop." So two levels: the loop (timeless, no causal order, every version standing; his static network) and the
+  daughter (a literal beginning, time, the hot early universe). Recorded as her picture, not a decision. *Sandbox, exact
+  (two looks, `sandbox/LOG.md`, 23 October; a look can kill, not crown):* (a) at one N every rectangular lattice torus
+  has 2N side-preserving renamings and the square torus 4N, so neither named nor interchangeable counting picks a handled
+  torus over a sheet (her inferred prediction failed); (b) at λ = 1 the tube (4 × L) has 2L valid single switches of
+  zero cost and the lowest one-switch free energy of the tori at its N at every coupling tried (her prediction held;
+  first term of the expansion only). Their promotion to a tested exact script is handoff item 2.6. *Ours, general
+  knowledge, to verify:* a timeless whole with time for internal observers is a published family (Page and Wootters
+  1983; Barbour; the problem of time).
+- **His advice against the six-link model, and the reading (23 October).** He advised against the three-dimensional
+  (six-link) model (private correspondence, sixth note), on a ground the field widely shares: gravity's fundamental
+  degrees of freedom are often taken to be two-dimensional. *Published, read in full* ([Carlip17];
+  `docs/reading/notes/2026-10-23_carlip_dimensional_reduction.md`): dimensional reduction is a hint about the effective
+  dimension measured by random walks and volume growth, not a statement that the fundamental degrees of freedom are
+  two-dimensional; the building block's dimension does not fix the large-scale one; the review contains no holographic
+  argument. Her words after the reading: "i think i agree with all the bullet points", and "yes" to a registered
+  dimension measurement (PREREGISTRATION T80, a draft). *Ours:* every result in this project that held is
+  two-dimensional (the tube), and the three-direction results were negative. **Her decision under S1 on the six-link
+  track is owed:** park it (the stand-in for X returns to the tube, and three directions become a large-scale property
+  to measure), keep it with the consensus stated against it, or neither yet. Until she decides, nothing six-link is
+  launched.
+- **Her lean on the drift of the background's curvature** is recorded under Update 83, beside the hypothesis it reverses.
+- **Her words on the loop's balance and on zero coupling (`sandbox/NOTEBOOK.md`, 23 October, with the checks).** (1) "I
+  wonder if the net network accounting for the inflation curvature close to the big bang and antimatter overage at the
+  end, so at the network level matter and antimatter all cancel." Recorded as hers. *Exact, in the toy:* the switch does
+  not conserve curl minus uncurl, and the two cancel only in contact (O22), so a cancellation over the whole loop needs a
+  conserved charge the toy does not have, a new ingredient under S1. (2) "could a daughter go to coupling 0 after the
+  last black hole dissolves?" *Ours:* in her framework (Updates 44, 70) a turn ends when its energy has returned to the
+  network, at a coupling set by the loop's total energy and above zero, so the floor is hers by construction; in his,
+  the inverse coupling is time and a daughter runs toward zero coupling, a flat lattice and zero dark energy. That is a
+  difference of framework until the surveys settle the drift. (3) Her question "why was I talking about negative
+  curvature at the end as a certainty?" is answered: it came from two assumptions in the record (his finite-coupling
+  ground state is negatively curved; a constant dark energy ends in empty de Sitter space, which her decision of
+  19 October adopted), and it holds only if dark energy is a true constant. No measurement has dark energy ending at
+  zero, and the data allow zero and a nonzero floor alike (`docs/reading/notes/2026-10-23_dark_energy_time_dependence.md`).
