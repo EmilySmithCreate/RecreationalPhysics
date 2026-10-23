@@ -8095,8 +8095,12 @@ reproduced, stop and report; nothing below is read.
    as the largest saved size of each family, fitted on the smaller ones.
 
 **Predictions.**
-- The owner's: __________ (owed; at least: the large-scale D_s of the six-link flat torus; the short-scale D_s of
-  the same; whether the tube's D_s reads 1 or 2 at large scale; whether the slab's reads 2 or 3).
+- The owner's, **inferred by the assistant from her words of 23 October, evening, and marked inferred until she confirms or
+  replaces them** ("what would my prediction say do you think?"): from her reading of the review's hint as "2 open
+  directions, of the possible 3", the six-link flat torus reads 3 at large scale and 2 at short scale (REDUCES); from her
+  slab as X with two directions open, the slab reads 2 at large scale (the curled direction DROPS OUT) and the tube reads 1;
+  and the melts read above the lattice value. Where this differs from ours: the short-scale value of the six-link flat
+  torus (hers 2, ours 3), which is the one number that separates BUILDING BLOCK from REDUCES.
 - Ours, written before any run: flat four-link torus, 2 at every scale beyond a few steps (exact, by construction);
   tube, 2 at short scales and 1 at scales beyond its circumference; six-link flat torus, 3 at every scale beyond a few
   steps; the slab, 3 at short scales and 2 beyond the curled circumference; melts, a short-scale D_s well above the
