@@ -8125,3 +8125,467 @@ the advice and the toy agree.
 **Needs before registration:** the estimator (`src/graphity/dimension.py`, new functions `spectral_dimension(adj,
 t_max, walks, seed)` and `volume_growth(adj, r_max)`), with tests on the cycle, the lattice torus, the 4-cube and a
 known random-regular graph; the reproduction of [T25] Fig. 6's statement at N = 196; the owner's predictions.
+
+### T80 Design amendment 1 (DRAFT, 23 October 2026; written before any registration and before any toy state is read; decisions owed to the owner in section (i))
+
+**Status.** A draft, recorded here so the work is on the record; it becomes the amendment in force only after the
+owner's decisions in section (i), each dated. Drafted by an assistant agent and checked against the estimator's
+two adversarial checks of the same day. Nothing in `results/` was read for it. The only
+graphs computed on were two perfect built objects (the 4 x 64 tube and the 14 x 14 torus, with the estimator as it
+stands); every other exact number below is the first round's checker's, computed on built graphs with networkx, and
+is marked so. The owner's inferred predictions are quoted as they stand in the draft and are not changed.
+
+**Kinds of statement** (rule 10), marked at the start of each item: *Exact* (arithmetic or enumeration); *Measured*
+(a registered run and its verdict); *Published* (with read status; quotations are from HTML-to-text conversions of the
+arXiv versions and are to be checked against the PDFs before any goes into a tracked file); *Ours* (interpretation,
+unverified); *Hers* (the owner's, here always "inferred by the assistant" until she confirms).
+
+**Terms.** "The toy" is our family at any lambda. "The published model" is Trugenberger's at lambda = 1. The tube is
+the 4 x L lattice torus; the slab is 4 x L x L at six links (one direction curled); the rod is 4 x 4 x L. D_s is the
+discrete even-step spectral dimension of `spectral_dimension`; d_s is [T22]'s continuous-time heat-kernel spectral
+function of `heat_kernel_dimension`; D_v is the volume-growth dimension of `volume_growth`. "The first step" is the
+reading between t = 2 and 4 (D_s) or r = 1 and 2 (D_v).
+
+
+### (a) What the first round found wrong in the draft, with the evidence
+
+1. **The gate's "the geometric phase's close to 2" at N = 196.**
+   - *Published (read in part; [T25] Sec. IV.1, text around Eq. (24), Fig. 6 and its caption).* Fig. 6 plots the
+     Hausdorff dimension d_H against graph size N, from N = 100 to 2000, "deep within the geometric phase". Eq. (24)
+     defines d_H by how the diameter scales with N: diameter ~ N^(1/d_H). The text says d_H rises to "between 2.1 and
+     2.2" for sizes up to N = 1000 and is "approaching 2" only for "significantly larger graphs". No coupling is
+     stated. No per-N estimator is stated (Eq. (24) is a relation across N, not a rule for one N). Whether the diameter
+     is a maximum or a mean, the protocol, the sample count, bipartiteness, and which form of the Hamiltonian the code
+     used (Q28's question) are all absent from the text read.
+   - *Ours (pixel reads of the arXiv PNG, about +-0.01; not published numbers).* The eleven points read N = 100: 1.22;
+     200: 1.57; 300: 1.83; 400: 1.81; 500: 1.91; 600: 1.99; 700: 1.94; 800: 2.04; 900: 2.09; 1000: 2.14; 2000: 2.12.
+     At N about 200 the figure shows about 1.57, not "close to 2".
+   - *Exact.* Read as ln N / ln(diameter) at one N, d_H = 1.57 at N = 200 would need a diameter of about 29, and 1.22
+     at N = 100 one of about 44. Every a x b lattice torus with a, b >= 4 and ab = 100 has diameter floor(a/2) +
+     floor(b/2) <= 14; the 14 x 14 torus has diameter 14 and ln 196 / ln 14 = 2 exactly. So whatever per-N rule
+     produced Fig. 6's small-N points, it is not ln N / ln(diameter) on near-tori, and the draft cannot know what it
+     was.
+   - Correction: the gate must not score "close to 2" at N = 196 against Fig. 6.
+
+2. **"Read with the same tool."**
+   - *Ours.* A statement about how the diameter grows with N cannot be reproduced by any estimator applied at one N.
+     Our certified equilibrium reaches N = 196 (T13 protocol E; protocol E fails at 484 and above), so the across-N
+     statement is out of reach as a gate. Correction: Fig. 6 is reported beside, never scored (G3 below).
+
+3. **The spectral target in print is [T22], not [T25] around Eq. (24).**
+   - *Published (read in part; [T22] Sec. IV, Eqs. (15) to (19), Fig. 5 and the Fig. 6 caption).* The only measured
+     spectral dimension on graphs in this literature: a continuous-time heat kernel K(t) = tr exp(t Delta) (15), with
+     Delta = -I + A/(2D) (16), d_s(t) = -2 d ln K / d ln t (17), on D = 2 ground-state graphs at N = 2000. Fig. 5
+     shows d_s(t) against t for several couplings. The "violet curve", an average of three squares per vertex, is
+     fitted over "the intermediate regime between the minimum and the subsequent maximum" to Eq. (19), giving
+     d_s = 1.88 +- 0.08. The text says the large-scale regime "is realized only in a narrow diffusion time window on
+     such a small graph, squeezed between discreteness effects at small t and finite size effects at large t". A
+     scale factor in t "can be absorbed in a redefinition of the curvature".
+   - *Exact (algebra of ours on Eq. (19)).* At D = 2 the fit form is d_s(t) = 2 + x/(1 + x) + x/2 with x = H^2 t;
+     with D free it is D - (D - 3) x/(1 + x) + (D - 1)^2 x / 2.
+   - *Published ([T25] Sec. V.1, Eqs. (34) to (36); analytic, not a graph measurement).* In the geometric phase at
+     finite coupling the author's own formula has d_s rising from the topological dimension toward 3 at large scale,
+     not a plateau at 2. The gate's ordered-phase expectation must follow this shape, not "a plateau at 2".
+   - Correction: cite [T22] Eqs. (15) to (19) for the spectral estimator and its one published number; the published
+     model's Hamiltonian in [T22] is written only in the bracketed curvature form, which is our lambda = 1 (Q1, Q28).
+
+4. **The transition at N = 196 is at g = 5.90, not 5.2; and nothing saved at N = 196 lies above it.**
+   - *Measured (T13 protocol E, melt start, gates passed).* phi = 0.5 at g = 5.90 at N = 196 (PREREGISTRATION T13
+     reading: "phi = 0.5 at g about 5.9, 4.3, 3.9" at 196, 484, 676). T16 puts the chi peaks at g = 6.33 (protocol P)
+     and 7.21 (protocol E). The figure 5.2 is where our N = 160 curve crosses phi = 0.6 (TASKS, Gate B check).
+   - *Measured (inventory of saved adjacency, nothing read from it).* The saved lambda = 1 graphs at N = 196 are T36
+     (160 files; g = 3.433 and 3.697; melt and lattice starts) and T78 (576 files; g = 3.300 to 3.697; melt start),
+     all on the ordered side, at 4S/N about 3.11 and 2.96. T13 and T16 kept histograms, curves and diameters only.
+   - Correction: the draft's "graphs made by our lambda = 1 chain at N = 196 above and below the transition" needs a
+     new run for the "above" half (section (f)).
+
+5. **Object 2's "flat 4 x L x L lattice torus" at six links is the slab.**
+   - *Exact.* A side of length 4 is curled (d = 2 at every point on 4 x L x L; `local_dimension_d`; ASSUMPTIONS O41).
+     The saved six-link states, as far as the configs show, are slabs (4 x 8 x 8, 4 x 12 x 12; T56, T71) and rods
+     (4 x 4 x 18, 36, 72; T53). A flat six-link torus (L x L x L) exists only as a built perfect object; none is
+     saved. Correction: object 2 reads "the slab (T56/T71 end states)", and the flat six-link torus moves to the
+     exact references of section (c).
+
+6. **The signature.**
+   - *Exact (the code as it stands, uncommitted).* `spectral_dimension(adj, t_max)`: there are no `walks` and no
+     `seed`. P(t) is computed exactly from the eigenvalues of W = A/k; there is no sampled path, and the docstring
+     says why. `heat_kernel_dimension(adj, t)` has since been added for [T22]'s form; `volume_growth(adj, r_max)` is as
+     drafted. Correction: the registration names these three signatures.
+
+7. **The gate's windows and tolerances as written do not fit the estimator.**
+   - *Exact (checker; 32 x 32 torus).* "D_s = 2 at scales between a few steps and L/4": for D_s the scale is t, and
+     every reading with t <= L/4 = 8 is at most 1.86. D_s is within 0.05 of 2 for t_mid from 20 to L^2/8 = 128, which
+     is the window the test uses. D_v has no tolerance in the draft and reads about 2 - 1/r on the perfect lattice.
+     Correction: windows and tolerances are set in section (b) and every reference is a perfect object (section (c)).
+
+### (b) Estimator rules, fixed before any toy state is read
+
+- *Rule (ours).* **Two spectral forms, both reported.** The discrete even-step D_s (`spectral_dimension`) and [T22]'s
+  continuous-time d_s (`heat_kernel_dimension`) are both computed and both shown on every object. **The [T22] form is
+  the one scored for the gate**, because it is the published estimator. The two share the eigenvalues of W = A/k.
+  *Exact.* K(t) = sum_i exp(t (mu_i - 1)); d_s(t) = -2 t K'(t) / K(t), with no finite difference. At short t,
+  d_s is about 2t and rises from 0 (the "discreteness" bump of [T22] Fig. 5). The floor of the continuous form is
+  (number of connected pieces)/N; the discrete form's is (pieces + bipartite pieces)/N, 2/N for one connected
+  bipartite graph.
+- *Rule (ours).* **The first step is excluded from every verdict**, for both D_s and D_v, because it restates squares
+  per point and nothing else. *Exact (checker, verified on eight built graphs to 1e-6; the identity rederived here).*
+  For any simple k-regular graph, P(2) = 1/k and P(4) = (2k^2 - k + 2q)/k^4 with q = 4S/N the mean number of squares
+  per point, so D_s at t_mid = sqrt(8) is -2 log2[(2k^2 - k + 2q)/k^3]. For a bipartite graph obeying the hard-core
+  rule, V(1) = k + 1 and V(2) = k^2 + 1 - q, so D_v at r_mid = sqrt(2) is log2[(k^2 + 1 - q)/(k + 1)]. First-step D_s
+  values: flat sheet 1.660, tube 1.504 (verified here on 4 x 64), 4-cube 1.356, cubic lattice 2.526, slab 2.463,
+  rod 2.401, 6-cube 2.340, a random bipartite 4-regular graph 2.334 (tree value 2.386). The hard-core rule caps q at
+  C(k, 2), so at six links the first-step D_s is at least 2.340: REDUCES as drafted ("short-scale D_s within 0.3 of
+  2") cannot be met at the first step by arithmetic alone, and a four-link melt (about 2.33) and the 6-cube (2.340)
+  read the same there. For the continuous form, readings below t = 2 are reported and not scored: *exact*, the small-t
+  series K(t)/N = e^(-t) sum_m t^m P(m)/m! through the t^4 term depends only on k and q (P(0) = 1, P(odd) = 0,
+  P(2) = 1/k, P(4) as above); the t^6 term is the first that depends on more than q.
+- *Rule (ours, numbers proposed).* **Window rule.** A reading is inside the window while the floor's share of the
+  return probability is at most 0.3: for D_s, floor/P(t) at the earlier t of the pair; for d_s, pieces/K(t). *Exact
+  (checker; verified here on 14 x 14).* On the perfect objects the plain D_s stays near its plateau up to a share of
+  about 0.3 to 0.4 (32 x 32 within 0.05 of 2 up to share 0.44; 12^3 reads 2.86 at share 0.29 and 2.62 at 0.44;
+  14 x 14 reads 1.945 at share 0.30 and 1.922 at 0.42). For D_v, a reading is inside the window while V(r + 1) <= N/2.
+- *Rule (ours, numbers proposed).* **Plateau rule.** A value is "settled" only if at least three successive readings
+  inside the window, spanning a factor of at least 2 in t_mid (or in t for d_s, on a geometric grid of factor
+  2^(1/4)), agree within 0.10; the settled value is their mean, with the range beside it. Otherwise the object's
+  reading is **"no settled value"**, reported with the full curve. *Exact (checker).* This is needed because on its
+  way to the floor the finite-size fall passes through every value between d and 0: the 16^3 torus reads D_s = 2.00
+  at t_mid 101 (share 0.65), the 8^3 torus 2.32 at t_mid 21 (share 0.52), and the perfect 4 x 8 x 8 slab falls
+  2.51, 2.19, 1.91, 1.60 with no plateau, so a reading of 2 there is the fall, not DROPS OUT. A share cut alone is not
+  enough to call a value; both rules apply.
+- *Rule (ours).* **Largest piece, with the whole graph beside it.** The scored reading is taken on the largest
+  connected piece; the whole-graph reading is reported beside it; the number of connected pieces and the largest
+  piece's share of the points are reported next to every reading. *Exact.* P(t) and V(r) are averages over every start
+  point, so a detached knot or scrap is mixed into a whole-graph average: its floor is counted, but its short-time
+  return probability and its capped V(r) bias the curve at intermediate scales.
+- *Rule (ours).* The t grid for d_s is geometric, factor 2^(1/4), from t = 0.25 to where the window closes; D_s uses
+  every even t to t_max; D_v every r to r_max; the whole curve is saved with each reading, not only the settled value.
+- *Rule (ours).* Every reading is reported against the perfect object of section (c) at the same t or r, as a
+  difference, with the perfect object's own curve shown.
+
+### (c) Reference values: the perfect built object of the same shape and size, computed exactly
+
+- *Rule (ours).* No verdict compares a reading with the whole number d (1, 2 or 3). Every reference is the perfect
+  built object of the same shape and size (the 4 x L tube for a tube-track state at 4 x L; the L x L torus for a sheet
+  at L x L; the 4 x L x L slab for a slab; the 4 x 4 x L rod for a rod), computed exactly with the same estimator on
+  the same t and r grid, and reported curve against curve.
+- *Exact (why).* Even the perfect square lattice reads D_s = 1.660 at the first step, 1.91 at t_mid about 11 and
+  1.95 at t_mid about 21; the perfect cubic tori never come within 0.05 of 3 at the saved six-link sizes (maxima 2.84
+  at 8^3, 2.92 at 12^3, 2.93 at 16^3; checker). So the whole number is not what a perfect object reads at any size we
+  have, and a verdict word without a tolerance (BUILDING BLOCK as drafted) cannot be scored.
+- *Exact (the perfect objects, as known now; checker unless marked; to be pinned by tests before any is cited).*
+  Tube 4 x 64: D_s 1.504 at the first step, which is its maximum; 0.988, 0.984, 0.984, 0.986 from t_mid about 9 on
+  (verified here); the floor's share reaches 0.39 at t = 200. Rod 4 x 4 x 72: 1.000 from t_mid 41 to 641. Slabs
+  4 x 8 x 8 and 4 x 12 x 12: never above 2.508; 4 x 8 x 8 has no plateau before its fall. Cubic tori: as above.
+  Square tori: 32 x 32 within 0.05 of 2 for t_mid from 20 to 128; 14 x 14 within 0.08 of 2 for t_mid from 13 to 27
+  (verified here).
+- *Rule (ours).* **Predictions about perfect built objects are moot**, because their readings are exact arithmetic;
+  the gate's exact checks (G0) pin them, and nothing about them is a measurement. Only saved states with defects are
+  measurements: the T7 opened sheets with their relics, the T56/T71 slab end states, the T53 rod end states, the
+  melts. A prediction is therefore about the difference between a saved state's curve and its perfect object's.
+
+### (d) The gate, rewritten
+
+**G0. Exact checks (no published input; pass at rounding tolerance).**
+- *Exact.* Ring of m points: P(t) = C(t, t/2)/2^t for t < m; D_s within 0.025 of 1 for t_mid in [20, 600] at m = 400;
+  V(r) = 2r + 1. Square torus L x L: P(t) = [C(t, t/2)/2^t]^2 for t < L; D_s within 0.05 of 2 for t_mid in
+  [20, L^2/8] at L = 32; V(r) = 2r^2 + 2r + 1 for r <= L/2 - 1. 4-cube: P(t) = 2^-4 sum_k C(4, k) (1 - k/2)^t; the
+  heat kernel K(t) = (1 + e^(-t/2))^4. L x L torus heat kernel: K(t) = sum over (k1, k2) of
+  exp(-t [1 - (cos k1 + cos k2)/2]). Cubic torus 10 x 10 x 10: P(t) = (6, 90, 1860, 44730)/6^t at t = 2, 4, 6, 8
+  (the Z^3 return counts). The first-step identities of section (b) on every built object. Two separate tori: floor
+  = (pieces + bipartite pieces)/N.
+- *Exact (done the same day, the estimator's second pass; `tests/test_dimension.py`, 25 tests).* Tests for
+  `heat_kernel_dimension` (the 4-cube and L x L torus forms above, d_s against a finite difference, refusals),
+  the 10 x 10 x 10 cubic-torus test, a random bipartite 4-regular test, the first-step identities for D_s and
+  D_v, tolerances tightened to 1e-12, and input checks shared by every function (index range, symmetry,
+  self-loops, double links, fractional entries).
+
+**G1. The published estimator.** *Rule (ours).* The gate is scored on `heat_kernel_dimension` ([T22] Eqs. (15) to
+(17)); the discrete D_s is reported beside it and never in its place.
+
+**G2. [T22]'s shape statements, on lambda = 1 graphs matched by squares per vertex, never by g.**
+- (a) *Published shape, random phase.* d_s(t) has a single interior maximum and then falls toward 0, with no second
+  rise. *Rule (ours).* Pass if that shape appears on every random-phase graph read (N = 196, g >= 7.2; a new run,
+  section (f)) and its maximum exceeds the ordered curve's at the same N. The "about 6 near t about 5" read by eye
+  from Fig. 5 is at N = 2000 and is not transferred.
+- (b) *Published shape, ordered phase.* Three regimes: an early maximum, a minimum, a later second maximum, then the
+  finite-size decay. *Rule (ours).* On the T78 and T36 melt-start snapshots at g = 3.697 (4S/N about 2.96, the state
+  nearest [T22]'s three squares per vertex) and g = 3.433 (3.11): (i) the three regimes are present or not, reported
+  per snapshot; (ii) where present, fit Eq. (19) with D and H^2 free over the window from the minimum to the second
+  maximum; (iii) **pass** if |D_fit - 1.88| <= 2 sqrt(0.08^2 + sigma_fit^2) and the window spans at least a factor
+  W = 3 in t; **NOT READABLE at N = 196** if the three regimes are absent or the window is narrower than W, which is
+  not a FAIL; **FAIL** only if the window is wide enough and D_fit misses. *Exact (why N = 196 is tight).* On the flat
+  14 x 14 torus the smallest nonzero eigenvalue of -Delta is (1 - cos(2 pi/14))/2 = 0.0495, so the finite size is
+  felt from t of order 10 to 20 while the discreteness bump lasts to t about 3: under a decade. For the defected
+  lambda = 1 graphs the window is unknown. *Ours.* A pass at N = 196 is "consistent with" 1.88; a reproduction proper
+  needs N = 2000 graphs (section (f), optional).
+
+**G3. [T25] Eq. (24) and Fig. 6: reported beside, not scored.**
+- *Rule (ours).* Before any comparison, digitize [T25] Fig. 6 and [T22] Fig. 5 into `docs/published/` (proposed
+  names `T25_fig6_digitised.csv`, `T22_fig5_digitised.csv`), as Fig. 3 was (`docs/published/T25_fig3_digitised.csv`).
+  The first round's pixel reads are scratch and are not in the repository.
+- *Rule (ours).* What is reported beside: the diameter of each read graph, and, after the predictions are recorded,
+  the one across-N sentence the saved T16 diameters can test without a new run: the random phase's "distances that
+  scale logarithmically" ([T25] Sec. I). *Exact.* ln 676 / ln 196 = 1.235 against sqrt(676/196) = 1.857; compare
+  diameter(676)/diameter(196) at a fixed g above the crossover where protocols P and E agree. Reported, not scored.
+- *Ours.* One narrow question for the model's author, to join Q28's Fig. 3 question if the owner sends it: how was
+  d_H read at a single N in Fig. 6, at which coupling, with which form of the Hamiltonian; and were [T22]'s Fig. 5
+  graphs bipartite. Nothing is sent from here.
+
+**G4 (optional, reported).** *Published ([T25] Sec. VI.2).* k-regular random graphs are expanders; the sphere-to-ball
+ratio tends to (k - 2)/(k - 1) = 2/3 for k = 4. *Exact.* On the 4-regular tree the ratio is 0.800, 0.706, 0.679 at
+r = 1, 2, 3. *Ours.* At N = 196 only r <= 3 lies below saturation and the squares at finite g lower the ratio; report
+the ratio on the random-phase graphs, with no pass rule.
+
+**Stop rule (rule 2).** If G0 fails, nothing is read. If G2(a) or G2(b) FAILS, stop and report; no toy number is
+read. NOT READABLE at N = 196 is reported as such, and whether the four-link half may proceed on G0, G1 and G2(a)
+alone is the owner's call (section (i), item 4).
+
+### (e) The overlap risk, and the order of work
+
+- *Ours (the risk).* The gate's random-phase half (G2(a), G3's diameters, G4) reads random-phase graphs, and any melt
+  is a random-phase graph. Whatever it finds answers T80's melt predictions, hers ("the melts read above the lattice
+  value") and ours ("a short-scale D_s well above the lattice value and no settled large-scale value"). Changing N,
+  lambda or the family removes the literal overlap but not the information, because tree-like expander behaviour is
+  generic. A smaller leak: the ordered lambda = 1 graphs (20 to 28 % of points at two or fewer squares, O59) show how
+  a defected sheet reads, which bears on the T7 sheets with relics.
+- *Rule (ours).* **Order: the owner's predictions first, then the gate, then any reading.** The draft's "needs before
+  registration" order is amended to: (1) her confirmed or replaced predictions, in her words, written into the
+  registration; (2) G0 to G3 run, with G2(a)'s new graphs made for the gate only; (3) T80's objects read.
+- *Rule (ours).* **The four-link melt is a positive control, not a scored object.** Its expected behaviour is
+  published ([T25] Sec. I, "infinite Hausdorff dimension"; Sec. VI.2, "excellent expanders"), so a prediction about
+  it tests little, and the overlap becomes harmless. It is reported in full and scored on nothing. Candidates on disk
+  for the control, named without reading their wiring, with "melt" the registered verdict word: T27's sealed N = 144
+  end states at lambda = 1.25 (STAYS MELTED, O48; `results/t27_leak_n144_l0_adj`, 36 files) or T26's N = 256 end
+  states (MELTS, O47).
+- *Rule (ours).* **T80's scored objects come from families distinct from the gate's.** Gate: lambda = 1 canonical
+  samples at N = 196 (T36, T78 on the ordered side; the new run above g = 5.90). T80 four-link: the T7 opened sheets
+  with their relics (the tube track, lambda = 1.25, N = 64, 96, 144, 192; held-out size N = 192 under rule 14, fitted
+  on 64 to 144). T80 six-link, if it proceeds: the T56/T71 slab end states (held-out 4 x 12 x 12, from configs) and
+  the T53 rod end states (held-out 4 x 4 x 72, from configs). The built tube, torus, slab and rod are references
+  (section (c)), not objects.
+
+### (f) What needs a new run, and the smallest run that serves
+
+- *Measured (inventory).* No lambda = 1 graph at N = 196 above the transition is saved; no lambda = 1 graph at
+  N = 2000 is saved (Gate C' run B kept none).
+- *Ours (the smallest run for G2(a)).* One config for `scripts/run_allotrope_search.py`, which already saves adjacency
+  under `save_adjacency` and writes a `.meta.json` through `ResultWriter` (with the git hash the runners now record):
+  side [14, 14], lambda = 1, no cap, named points, couplings [7.2, 9.0] (T13's ladder rungs where protocols P and E
+  agree), starts melt and lattice (their agreement in phi within 0.03 is the equilibration check, as in T13), 8
+  replicas, T36's `n_equil` and `snap_every` kept so that nothing new is assumed about mixing on the hot side, a
+  handful of snapshots per replica 5,000 sweeps apart, `_purpose` "T80 gate G2(a); scored for the gate only; not a
+  T80 object". Proposed name `t80_gate_random_phase_n196`. Laptop-sized. *Ours.* Its graphs are not T80 objects and
+  are read only after the predictions are recorded.
+- *Ours (optional, for the 1.88 comparison).* lambda = 1 at N near 2000, matched to [T22] by squares per vertex
+  (4S/N about 3), with the caveats: our samplers do not certify equilibrium above N = 484 (T13 protocol E fails
+  there); [T22]'s own protocol is not stated; 2000 is not of the form 4p^2 (the nearest are 1444 and 2116), so the
+  ground-state uniqueness of Update 18 does not hold at 2000; the chain is cloud-sized, the eigendecomposition is
+  seconds. A pass there would be the reproduction proper; its absence leaves G2(b) "consistent with" at best.
+- **None of these is launched until the owner decides** (section (i), items 4 and 5). Nothing here is a config yet.
+
+### (g) The split: four links can proceed; six links waits
+
+- *Rule (ours).* **The four-link half may proceed** once the owner's predictions are in: its objects exist (T7 sheets;
+  the melt control), its references are exact (the 4 x L tube and the L x L torus), and its gate is the published
+  model at four links (G0 to G3).
+- *Rule (ours).* **The six-link half waits on the owner's decision on the six-link track** (handoff item 2.0; the
+  model's author's advice of 23 October, item 1.13). If she parks the track, the six-link half is parked with it. If
+  she keeps it, two facts are stated in its registration: (i) *published ([T22] Fig. 7, N = 500):* "the graph is much
+  too small for extracting numerically the large scale behaviour", so there is no published six-link dimension curve
+  to gate on, and the six-link half has only G0's exact checks as its gate; (ii) *exact:* its references (the perfect
+  slab and rod at the saved sizes) have no plateau at 4 x 8 x 8 and plateaus of 1.000 on the rods, so "no settled
+  value" is the likely reading on the slabs unless a larger slab exists. The six-link exact test of G0 (10^3 torus) is
+  owed in either case, because `local_dimension_d` already serves six links.
+
+### (h) Her inferred predictions as they stand, and what each is now
+
+The draft's text, unchanged: "from her reading of the review's hint as '2 open directions, of the possible 3', the
+six-link flat torus reads 3 at large scale and 2 at short scale (REDUCES); from her slab as X with two directions
+open, the slab reads 2 at large scale (the curled direction DROPS OUT) and the tube reads 1; and the melts read above
+the lattice value." All are *Hers (inferred by the assistant from her words of 23 October, evening)*; she must
+confirm or replace them. What each is now, *ours*:
+
+1. **"The six-link flat torus reads 3 at large scale and 2 at short scale (REDUCES)."** Moot as a prediction: the
+   flat six-link torus is a perfect built object, so its reading is exact arithmetic (section (c)): first step 2.526,
+   maxima 2.84 at 8^3, 2.92 at 12^3, 2.93 at 16^3, and a reading of 2 only in the finite-size fall (16^3 at share
+   0.65), which the window rule excludes. There is no saved flat six-link state on which it could be a measurement.
+   What remains hers to predict, if the six-link half proceeds, is the difference between a saved slab or rod end
+   state and its perfect object.
+2. **"The slab reads 2 at large scale (the curled direction DROPS OUT)."** Unobservable as worded at the saved sizes:
+   the perfect 4 x 8 x 8 slab has no plateau (2.51, 2.19, 1.91, 1.60, then the floor), so a reading of 2 there is
+   the fall. On a large enough slab the perfect object does settle at 2 beyond the curled circumference (exact
+   expectation; not shown at a saved size). Needs rewording as a difference from the perfect slab, or a larger slab.
+3. **"The tube reads 1."** Exact for the perfect tube (0.98 to 0.99 from t_mid about 9 on 4 x 64, verified here;
+   1.000 on the rod). Moot as a prediction about the built tube; a measurement only on a saved tube-like state with
+   defects, and T80 names none (the T7 states are opened sheets).
+4. **"The melts read above the lattice value."** Observable, but (i) "the lattice value" must be the perfect torus of
+   the same N at the same t, not 2; (ii) at the first step it is an exact identity (2.33 against 1.66 is the
+   difference in squares per point); and (iii) under section (e) the melt is a positive control, so this prediction
+   is reported and tests little. The published expectation is the same ([T25] Sec. I).
+
+Ours, for the record, since two of our own lines fail the same way: "tube, 2 at short scales and 1 beyond its
+circumference": the "2 at short scales" is unobservable; *exact (verified here)*, the perfect 4 x 64 tube's largest
+D_s is 1.504, at the first step only, then 0.98 to 0.99. "Six-link flat torus, 3 at every scale beyond a few steps":
+*exact*, never within 0.05 of 3 at the saved sizes. "The slab, 3 at short scales": *exact (checker)*, the perfect
+slabs never exceed 2.508. Our melt line stands, with the same three caveats as hers. Our expectation of "no drop
+toward 2 at short scales in any ordered six-link state" is restated as: a saved six-link state's d_s curve does not
+fall below its perfect object's by more than the tolerance of item (i).6 inside the window.
+
+### (i) Decisions owed to the owner
+
+1. **Her T80 predictions.** Options: (a) confirm the four inferred lines as her words, knowing items 1 to 3 of (h)
+   are moot or unobservable as worded; (b) replace them with predictions about differences from the perfect objects
+   (for example "the T7 sheets read within 0.1 of the perfect torus inside the window", or "below it near the
+   relics"); (c) predict only for the four-link half now and hold the six-link lines until item 5.
+2. **The order.** Options: (a) predictions first, then the gate, then reading (recommended, section (e)); (b) the gate
+   first, run blind: the PASS/FAIL predicate written and tested before the run, the script printing only the verdict,
+   the curves saved unread until the predictions are in.
+3. **The melt.** Options: (a) a positive control, reported and not scored (recommended); (b) a scored object, in
+   which case she names the family (T27 N = 144 or T26 N = 256) and accepts the overlap with the gate.
+4. **The random-phase gate run at N = 196.** Options: (a) yes, the config of section (f) is written and run on the
+   laptop before the gate; (b) no, G2(a) and G4 are dropped and the gate rests on G0, G1 and G2(b), with NOT READABLE
+   a possible outcome at N = 196 and her ruling on whether the four-link half may proceed on it.
+5. **The N near 2000 run** for the 1.88 comparison. Options: (a) yes, cloud, with the equilibrium and 4p^2 caveats
+   stated; (b) no, G2(b) is "consistent with" at best and says so; (c) later, after the author answers.
+6. **Verdict words and tolerances.** Options: (a) rewrite BUILDING BLOCK, REDUCES, DROPS OUT and STAYS relative to the
+   perfect object, with a tolerance she sets (proposed: a state "matches its perfect object" if |reading - perfect|
+   <= 0.10 at every t in the window; REDUCES if a six-link state's d_s inside the window sits more than 0.30 below
+   its perfect object's while its settled value is within 0.10 of the perfect object's at the largest window t;
+   DROPS OUT if a slab's settled value is within 0.10 of the perfect slab's settled value, where one exists); (b) keep
+   the whole-number words and accept that BUILDING BLOCK cannot be scored at the saved sizes.
+7. **The window and plateau numbers.** Options: (a) accept share cut 0.3, plateau of three successive readings within
+   0.10 spanning a factor 2, D_v while V(r + 1) <= N/2; (b) change any number, before any state is read.
+8. **Largest piece or whole graph** for the scored reading. Options: (a) largest piece, whole graph beside
+   (recommended); (b) whole graph, largest piece beside.
+9. **The six-link track** (handoff item 2.0). Options: park (the six-link half of T80 is parked; the stand-in for X
+   returns to the tube); keep, with the consensus and the no-published-gate fact stated in the registration; not yet,
+   in which case the four-link half proceeds alone.
+10. **The question to the model's author** (G3): whether the narrow question on Fig. 6's per-N estimator, coupling
+    and Hamiltonian form, and on [T22] Fig. 5's bipartiteness, joins Q28's Fig. 3 question. Options: yes, with the
+    next note; no; later. Nothing is sent from here.
+11. **Digitizing [T25] Fig. 6 and [T22] Fig. 5 into `docs/published/`** before G3 (recommended; small). Options: yes;
+    no (G3 is then reported from the pixel reads, labelled as such).
+
+**What this amendment does not do.** It registers nothing. It reads nothing in `results/`. It changes none of the
+owner's words. It is recorded here as a draft; the decisions above come first.
+
+## T81 (DRAFT, 23 October 2026, revised the same day after an adversarial check): does Eq. (45) of [T25] hold in form for the toy's ordered objects, with an independent curvature reading? The curled ring, its uncurled twin and the eight flat grids of T79, on T78's saved snapshots
+
+**Status: a draft, not a registration.** It becomes a registration when four things are done:
+- the owner's prediction is written into the blank below;
+- her answers to the open choices of the brief's box are collected: the rotation criterion, tie-break and consistency gate (item 1 (a), (b), (e)); the scored region and the sum (item 7); the background (item 8); the orientation convention and F's reference (item 9 (i), (ii));
+- her decision on stage 2 is taken in the same sitting, and all of these are read back to her as one set (rule 20);
+- the reader's tests pass (`graphity.geometrize`, the point-set and shell finders in `graphity.objects`, the background feasibility script, `scripts/analyse_t81.py`; brief, Sec. 10).
+
+No saved state is opened before then. The definitions are the "Current definitions" box of `docs/design/eq45_ratio_brief.md` (PROPOSED 23 October, revised the same day), items 1 to 11. A change to any of them is a dated amendment here and in the box.
+
+**Why.** The review's one bridge from the toy to a number is Eq. (45) (Sec. VI.1). It says a bubble's free-energy excess over its background is proportional to its curvature deficit, with constants (ℓ, n(g), G_N, c, the joule) that [T25] does not fix. Divided for two objects in the same background at the same coupling, every constant cancels (reading note of 22 October, Sec. 6).
+
+Each side still needs a zero: the background's curvature 4Λ₂, and the reference that F is "measured [...] with respect to". The toy's registered F has no zero Eq. (45) can use (box item 9: an orientation offset of g ln 2 between rectangular and square grids, and a reference at "X at every placement"). So what is tested is the part with no zero: whether F is linear in the curvature excess across objects with one sign per coupling, which is what ratios of differences test.
+
+The look of 22 October set the ratio form against T79's data using E_X/4 as the curvature. That is the energy side of the same free energy, so it tests nothing about curvature (brief, Sec. 6). This test reads the curvature independently, by the review's own Sec. IV.2 geometrization applied point by point (box, items 1 to 5). Its controls separate what the geometrization adds from what the energy's variables already carry (item 10).
+
+**The question.** The setting is the published model at λ = 1, N = 196, in its warm background (about three squares per point) at g = 3.300, 3.433, 3.550 and 3.697 (T78's cells). Three questions:
+1. Is the registered free energy F_X of an ordered object linear, with one slope of fixed sign per coupling, in how much more negative the curvature of its one-step shell is than the background's (summed over the shell), across the flat grids?
+2. Does the curled ring, held out, fall where the flat grids' line puts it?
+3. Does the curvature reading predict F beyond the square count alone?
+
+**The objects** (T78 and T79's definitions; box item 6):
+- ring3, the curled ring: a square each of whose four links carries three squares; twelve points.
+- ring2, its uncurled twin: each link carries exactly two squares; twelve points.
+- The flat a × b grids 2 × 2, 2 × 3, 2 × 4, 3 × 3, 3 × 4, 3 × 5, 4 × 4, 4 × 5: a·b points, no grid link at three squares.
+
+One sighting is one point set.
+
+**Definitions it uses** (the box):
+- Item 1: corner, corner cycle length and rotation, with the rule's listed choices. The criterion is smallest α, with a K-based rule run beside it. The tie-break prefers square faces. Cycles need not be chordless. Face consistency and the share of tied points are reported per cell.
+- Item 2: vertex type.
+- Item 3: α, ε and the Gauss–Bonnet sum.
+- Item 4: K at a point from Eq. (27), in units 1/ℓ², with K ≤ 0.
+- Item 5: points on three-square links or on five or six squares.
+- Item 6: point sets.
+- Item 7: ΔK_X, the mean over sightings of the sum over the one-step shell of (K_bg − K). Means over the shell and over the object's own points are reported.
+- Item 8: K_bg, the plain mean of K over all points of the cell's analyzed snapshots. The distance-2 background is reported with its size.
+- Item 9: F_X as registered in T78 and T79, with g ln o_X added (o_X = 2 for rectangular grids, 1 otherwise). The registered form is reported. The sign word is stated against the registered null (ii-a), one placement per point per orientation, and reported under (ii-b), F_X − F_2×2.
+- Item 10: the controls K_sq (square count only, filler ∞), K_len (arrangement kept, lengths removed) and the definition-only null, and the independence regression.
+- Item 11: the tested relation ΔK_X = κ_g F_X, with one unknown κ_g > 0 per coupling, scored only in its part with no zero.
+
+Scope (ours): Sec. IV.2's construction is stated for homogeneous maps in the limit N → ∞. Applying it point by point at N = 196 in the crossover cells is ours.
+
+**The computation.**
+- **Stage 1** (exact per snapshot, no new chain), on the named set of 576 saved T78 graphs (`results/t78_curl_vs_flat_n196_g*_adj/`, 144 per coupling):
+  - Find every sighting of the ten objects and its one-step shell.
+  - Compute at every point: K under the α rule and under the K-based rule, K_sq and K_len.
+  - Compute ΔK_X, ΔK_sq,X, ΔK_len,X, K_bg and the reported readings per cell.
+  - Take F_X per replica from T79's registered rows (`scripts/analyse_t79.py`; the same chains, verified identical), with g ln o_X added.
+
+  Per read cell:
+  - The least-squares line F = a + b ΔK over the read flat grids; a is free and not scored.
+  - Bootstrap over the 16 replicas, 1,000 resamples, seed 81. Each draw resamples the replicas once and recomputes both F_X (from the drawn replicas' T79 rows) and ΔK_X (from the same replicas' saved snapshots), and refits the line.
+  - z_b per cell, and the flat grids' residuals.
+  - The predicted F of ring2, and of ring3 where it is read, from the line at its ΔK, written out before it is compared with the measured F.
+  - The per-object sign tests and the independence regression.
+
+  Bars: the slope is combined over read cells (Z_b = Σ_c z_{b,c}/√m) at 2. The residual and sign families are held to Bonferroni bars: two-sided level 0.05/m_r, with m_r printed.
+- **Stage-1 read rule.** A cell is read on the grids when at least four flat grids each have ≥ 50 sightings in its 144 analyzed snapshots. ring2 is scored in a read cell if it has ≥ 50 sightings there. ring3 is reported with its count and scored only if it has ≥ 50; 6 to 15 are expected per cell, so it will not be scored in stage 1. The registration says so before the count.
+- **Stage 2**, only if the owner authorizes it in the same sitting as her prediction, before registration: replay T78's four configs from their seeds with K computed at every snapshot (12,816 per cell; `scripts/run_curl_curvature_replay.py`, with T79's identity check against T78's rows). It is a laptop job of some hours; the held-out ring is then scored. If stage 2 is not authorized, the held-out ring is reported and not scored, and the registration says so.
+- **Before code depends on the background:** the feasibility check of box item 8, which is each background's support per snapshot and per cell, counted on fresh chains of the four cells with new seeds.
+
+**The owner's prediction (to be written here in her words before any count):** ______________________________________________________________ (sign: as written in Eq. (45), or flipped, for the toy's ordered objects; form: the curled ring on the flat grids' line or off it; and the independence flag).
+
+**Our prediction, written before any count (23 October 2026), revised the same day with the definitions and still before any count.** The first version, under the earlier definitions, said: FLIPPED SIGN; NOT PROPORTIONAL, with an intercept more than 2σ from zero, the ring above the line by 10 to 25 units and the twin below it; and NOT INDEPENDENT. In the revised words:
+1. **OPPOSITE SIGN** for all ten objects in every read cell. The objects' shells are squarer than the warm background, so ΔK_X < 0, while F_X > 0 under (ii-a). This follows from the text (Sec. IV.2 with Eq. (45) gives the wrong sign for metastable domains denser than their background; brief Sec. 1), so it is recorded and not counted as a finding. It is carried over from the object's own points, where it was nearly definitional, to the shell, where it is less certain.
+2. **SLOPE FLIPPED** and **LINEAR** on the flat grids: larger grids have higher F and, we expect, a more negative ΔK. In stage 2, **RING OFF THE LINE**, above it by 10 to 25 units of free energy (T79's 5.5 to 6.0 units of entropy times g, if its shell sits near the line), because its extra free energy is entropy that no face length records. **TWIN OFF THE LINE**, below it. Composite: **NOT PROPORTIONAL**. In stage 1: SLOPE FLIPPED, LINEAR, twin below, ring not read.
+3. **NOT INDEPENDENT.** At these couplings the non-square faces are long and nearly uniform in length, so the geometrized K at a point is set by its square count and arrangement.
+
+**Verdict words, over the read cells.**
+
+Per object, per read cell:
+- **SAME SIGN / OPPOSITE SIGN / UNDECIDED:** the sign of ΔK_X against the sign of F_X under (ii-a), with (ii-b) reported. A sign counts as decided where both quantities differ from zero beyond the Bonferroni bar of the sign family. OPPOSITE SIGN for an ordered object follows from the text and is not a finding; SAME SIGN would be.
+
+For the flat grids' line:
+- **SLOPE AS WRITTEN:** Z_b > +2 and no read cell with z_b < −2.
+- **SLOPE FLIPPED:** Z_b < −2 and no read cell with z_b > +2.
+- **CELLS DISAGREE:** some read cell with z_b > +2 and another with z_b < −2.
+- **NO SLOPE:** |Z_b| ≤ 2 and the cells do not disagree.
+- **LINEAR / NOT LINEAR:** whether any read flat grid's residual exceeds the Bonferroni bar.
+- **RING ON / RING OFF THE LINE** (above or below) and **TWIN ON / TWIN OFF THE LINE:** the held-out residuals against the Bonferroni bar of the held-out family. The ring is tested only where it is read.
+
+Composite words:
+- **EQ. 45 IN FORM, UP TO F's ZERO:** SLOPE AS WRITTEN, LINEAR, and the ring and the twin on the line. Decides: the review's equation, read by its own geometrization, describes how F varies across ordered objects in this toy, apart from its zero, which this test does not fix. The next step is a fixed zero for F and a pair of objects with a known physical identification ([T25] proposes none and the record has none), then rule 13's checklist before any comparison.
+- **FLIPPED, LINEAR:** SLOPE FLIPPED, LINEAR, and the ring and the twin on the line. Decides: F varies with the curvature with the opposite sign to the review's, as Sec. IV.2 implies for denser objects. The thread stays open only with INDEPENDENT.
+- **NOT PROPORTIONAL:** SLOPE AS WRITTEN or SLOPE FLIPPED, with NOT LINEAR or a held-out object off the line. Decides: Eq. (45) in form does not hold across these objects. If the ring is the object off the line, the penalty on curl (O148) is not reflected in the Sec. IV.2 curvature of the ring's surroundings; its own points read K = 0 by the exact argument (brief Sec. 3).
+- **NO SLOPE:** the curvature reading does not track F across the grids. Eq. (45) is dropped as a route on these data.
+- **CELLS DISAGREE:** decides nothing about Eq. (45). It is reported, and its cause (a sign that depends on the coupling, or noise) is the next look.
+- **Stage 1 without stage 2:** the slope word and LINEAR / NOT LINEAR with the twin's word, marked "ring not read".
+- **NOT READ:** fewer than two cells read on the grids. Then the thread waits.
+- **Scored separately: INDEPENDENT / NOT INDEPENDENT.** In each read cell, F_X is regressed on ΔK_sq,X and ΔK_X together (with an intercept) over the read flat grids, refitted in every bootstrap draw, giving z_c for ΔK. INDEPENDENT if Σ_c z_c² exceeds the 95th percentile of χ² with m degrees of freedom, otherwise NOT INDEPENDENT. NOT INDEPENDENT means the geometrization added nothing that the square counts did not already carry, and the test showed nothing the 22 October look did not. Reported beside: ΔK beyond E_X; ΔK beyond ΔK_len (the face lengths); ΔK_len beyond ΔK_sq (the arrangement); ΔK beyond the definition-only null.
+
+**Rule 11, the cheapest decisive test, written before the run.** As first drafted, this test could not decide. Stage 1 could return only NOT READ, the sign was fixed by the text and by the first background, and NOT PROPORTIONAL was forced by multiplicity and F's convention. So the cheapest steps come first:
+1. The definitional fixes now in the box.
+2. The built-graph controls, which take seconds and are sandbox until pinned by tests of `graphity.geometrize`: the Fig. 7 tiling; the Fig. 9 positive control (the allotrope points read (4,4,6,6) and K = −0.926 against the tiling's −0.486); and the Gauss–Bonnet sums (+2π for the fold, +4π for a handle).
+3. A test with no chain in the review's unambiguous case: deficit objects in an ordered background at low g, where F is close to E (ours, a proposal, not designed; brief Sec. 9). It must face the exact constraint that a deficit with consistent faces on a torus changes the topology.
+4. The stage-2 decision, in the same sitting as her prediction.
+
+Already on the built graphs (sandbox until pinned): under the review's geometrization every point of the tube, the 4-cube and a ring built into a sheet reads K = 0, and integrated, a handle carries 4π whatever its length. Exact: ring3's own points read K = 0 at every sighting, by the hard-core rule. So Eq. (45) cannot see curl point by point at the ring, and whatever the ring's shell reads comes from its surroundings.
+
+If our prediction (1) fails (SAME SIGN for some objects), the cheapest next check is the per-object sign under K_sq and K_len. It tells apart "the long faces carry it", "the arrangement carries it" and "the square counts carry it", with no new data. If (2) fails (the ring on the line), the cheapest check is the ring's shell against the twin's, already computed, which tells whether the penalty on curl is mirrored in the curvature around the ring.
+
+**Rule 14.** There is no size claim: one size, N = 196. The held-out element is an object, the curled ring, whose F is predicted from the flat grids' line before the comparison. Said plainly: the free energies of all ten objects, ring3's included, are on the record (T79's reading), and the definitions (mean or sum, point set, background, F's convention) were chosen with them known. Only the curvature side is unseen, so the held-out discipline protects the curvature reading and nothing else. N = 484 is named as the follow-up if EQ. 45 IN FORM, UP TO F's ZERO or FLIPPED, LINEAR comes out, and is not part of this test.
+
+**What would make us drop the thread.** Any of three outcomes:
+- OPPOSITE SIGN for every ordered object in every read cell, together with NOT INDEPENDENT. OPPOSITE SIGN alone is expected from the text and drops nothing.
+- NO SLOPE.
+- SLOPE AS WRITTEN with the ring off the line under both K and K_sq.
+
+In each case Eq. (45) is not a route from the toy's free energies (O107's knots at 14, 20 to 30 and 8) to a number, and the entry says so.
+
+**Rule 13.** This is a comparison of differences between toy objects in one toy at one size, never a comparison with a measured mass. Any future identification of two toy objects with two physical things carries the full checklist, and needs a fixed zero for F first.
+
+**What this cannot show.**
+- Anything outside ρ = 0.92 to 1.13 missing squares per point or N = 196.
+- Anything at λ ≠ 1.
+- Anything with interchangeable points.
+- The zero of Eq. (45)'s F: the intercept is not tested.
+- Whether Sec. IV.2's construction, which is stated for homogeneous maps in the limit N → ∞, applies point by point to finite graphs in the crossover. That application is ours.
+- Anything about the real universe.
