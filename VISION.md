@@ -3010,3 +3010,30 @@ written in full once, in the entry named; this update records what they mean for
   ground state is negatively curved; a constant dark energy ends in empty de Sitter space, which her decision of
   19 October adopted), and it holds only if dark energy is a true constant. No measurement has dark energy ending at
   zero, and the data allow zero and a nonzero floor alike (`docs/reading/notes/2026-10-23_dark_energy_time_dependence.md`).
+
+Update 95 (2026-10-23): **DECISION (the author's): the six-link track is kept, as a model of three-dimensional space,
+with the field's consensus stated against it.** Why this page changes: the model's author advised against the six-link
+model (Update 94), and her decision under S1 was owed before any further six-link run. Her words, answering the three
+options she was given: "keep it for modeling 3d spacetime. emergent or not, it's helpful in describing phyics in our 3d
+universe. since 3d is emergent, the 2d should get us to the same spot, with a different set of visuals and patterns to
+observe, a different story to tell."
+
+- **What is decided.** The six-link toy stays in the programme as a model of three-dimensional space whose dimension is
+  put in by the graph's degree; the four-link toy stays as the route on which three dimensions would have to emerge.
+  Two stories of one physics, each with its own pictures. Every six-link result says, where it is reported, that the
+  model's author advised against that version and that the field's prior is a two-dimensional base with the third
+  dimension emergent ([Carlip17], read in full). Work held on this decision may proceed: the held-out sizes of T71 and
+  T74 (with her word on each), and T80's six-link half (once its design amendment's decisions are taken).
+- **What checks out (published).** "The 2d should get us to the same spot" is the published model's own picture: in
+  Trugenberger's two-dimensional network the spectral dimension rises from 2 toward 3 at large scales ([T25] Sec. V.1,
+  Eq. (36), analytic), and the one measurement, at N = 2000, fits an intermediate value of 1.88 ± 0.08 with a form whose
+  large-scale limit is 3 ([T22] Sec. IV, Eqs. (15) to (19); read in part). The building block's dimension does not fix
+  the large-scale one ([Carlip17]).
+- **What it must face.** *Exact:* a flat lattice torus settles at dimension 2 (`graphity.dimension`, tested), and the
+  burp's product in two directions is a flat lattice torus (O116), so the burp itself does not reach 3; in his picture
+  the rise toward 3 belongs to the warm, negatively curved network at finite coupling. So "the same spot" lives in the
+  warm network, which is where T80's four-link half looks. *Ours:* a six-link result shows what happens once three
+  dimensions are put in; it cannot by itself show what a two-dimensional base produces, so agreement between the two
+  stories is a claim to test, not a premise.
+- **The test that compares the two stories.** T80 (a draft): the four-link toy's dimension at each scale against the
+  six-link toy's, each against its perfect built shape.

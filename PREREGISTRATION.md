@@ -8459,7 +8459,9 @@ fall below its perfect object's by more than the tolerance of item (i).6 inside 
    (recommended); (b) whole graph, largest piece beside.
 9. **The six-link track** (handoff item 2.0). Options: park (the six-link half of T80 is parked; the stand-in for X
    returns to the tube); keep, with the consensus and the no-published-gate fact stated in the registration; not yet,
-   in which case the four-link half proceeds alone.
+   in which case the four-link half proceeds alone. *Decided 23 October (VISION Update 95): kept, as a model of
+   three-dimensional space, with the consensus stated against it; the six-link half proceeds once the other decisions
+   here are taken, and its registration states that no published six-link dimension curve exists to gate on.*
 10. **The question to the model's author** (G3): whether the narrow question on Fig. 6's per-N estimator, coupling
     and Hamiltonian form, and on [T22] Fig. 5's bipartiteness, joins Q28's Fig. 3 question. Options: yes, with the
     next note; no; later. Nothing is sent from here.
