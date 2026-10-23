@@ -114,7 +114,11 @@ is corrected. Each change is made in place; the list is Sec. 12.*
 >    carries exactly 4π of excess angle (Gauss–Bonnet, item 3), whatever its length:** the built handles of 3 and 5
 >    layers (X = 8 and 16) both read Σε = 4π, and the finite Fig. 9 allotropes read +2π (built with a cross-cap) and +4π
 >    (built with a handle) over the Fig. 7 tiling (sandbox, Sec. 2). So a curl is invisible point by point at the ring and
->    visible as a handle count, located at the splice; X does not follow it (the two handles have the same 4π).
+>    visible as a handle count, located at the splice; X does not follow it (the two handles have the same 4π). *(Note,
+>    23 October, from the twist check, `docs/design/twist_definition_2026-10-23.md` item 1(b): the 3-layer "handle" as
+>    built is spliced the same way at both ends, so its one closing completion is one-sided (V − E + F = −2): a
+>    cross-handle, not a handle; with one splice mirrored it is a two-sided handle. The 4π stands for both, since each
+>    lowers V − E + F by 2; the word "handle" for the built graph is corrected to "cross-handle" here.)*
 > 6. **An object's point set (from T78 and T79's registered definitions).** ring3, the curled ring: a square each of whose
 >    four links carries three squares; its points are the four of the square and the eight that its nine squares touch
 >    (twelve). ring2, the uncurled twin: a square each of whose links carries exactly two squares; the same twelve-point

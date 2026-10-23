@@ -115,6 +115,19 @@
 - **The twist:** not yet defined on the graph. A frame carried round a ring is the twist Tw, which is not conserved
   (Lk = Tw + Wr); the conserved count is a linking number, and it needs either an embedding or a framed-graph label.
   Tests 4 and 5 are held until it is defined (Update 92).
+  *Proposed 23 October (ours; read back to her, not yet confirmed, so the line above still stands; full text, sketches
+  and both adversarial checks in `docs/design/twist_definition_2026-10-23.md`; reading note
+  `docs/reading/notes/2026-10-23_twist_on_a_graph.md`):* with a named face rule (the curvature brief's: at each point
+  the rotation of four corners with the smallest angle sum; where it ties, every completion read region by region),
+  the wiring fixes two twist-like quantities and no more. (1) The **mod-2 orientation character** of a closed cycle on
+  the surface the squares make: flipped (a Möbius band round it) or not; no direction, no count. (2) The **seam shift**
+  of a lattice torus: a whole number with no sign, belonging to a whole lattice piece, not to a ring. Exact on built
+  graphs (a sandbox look until pinned by tests): the tube, its half-turn closure and flat tori are two-sided; the tube's
+  zero-cost neighbour closed through a reflection (O150) is a Klein bottle whose flipped cycles run along the tube, never
+  round the curl; flat Klein grids exist at zero energy; one-sided flat end states are already on the record (O116,
+  O122). The ring square's diagonal (her "3d hypotenuse" in two directions: ours, to confirm) is not on the surface under
+  this rule. Neither quantity carries a sign (matter against antimatter) or a count on a ring: those need a declared label
+  with rules for birth, death and which moves change it, or stage B's coordinates.
 - **Light:** no object yet. Test 10 of paper 18 (what plays light) comes before test 5.
 - **Counts per cube in the lattice (exact):** 3 edges, 3 squares, 3 face diagonals of each kind, 4 corner-to-corner
   lines; one diagonal per square chosen by kind cuts each cube into five tetrahedra with no body diagonal, 6 lengths
