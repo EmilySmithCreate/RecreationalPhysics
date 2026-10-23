@@ -4144,6 +4144,16 @@ author and should be disclosed as such in any submission. Physics estimates mark
     the registration said. **Not shown:** anything about the switch model's slab, which no feed opened (T67, T68), or
     about a front, a seam or a payment that cancels, which the layer form lacks. The held-out size L = 16 waits for its
     words and numbers, written from these two sizes, and her word.
+  - **Addendum (23 October 2026), found while drafting the held-out numbers and confirmed independently in code and
+    data: the control was not fed like the arms it controls.** Exact: T68's runner, which ran arm C, shares the feed
+    rate among every point it feeds (`scripts/run_slab_feed.py`, `stores[feed_idx] += (target - fed) / len(feed_idx)`,
+    every point in mode "all"), while the layer-feed runner gives each point the full rate (`graphity.layer_feed`,
+    `st.stores += rate`). So arm C received 1/N_slab as much per point as arms A and B, 1/256 to 1/576 at L = 8 and 12;
+    its saved rows confirm it (the stores' mean equals fed/N at the last row, and not one unit was spent). The
+    registration's design table says "r per point per sweep" for every arm. No stage-1 word changes as read, but the
+    control's SITS is arithmetic at that feed and says nothing about a single-switch slab fed as the arms were; the
+    rule-11 answers above did not see it. A matched control, or dropping the control from the held-out stage, is the
+    owner's choice before L = 16 runs.
 - **O145 T74, read (21 October 2026, 11:28 UTC by the clock; fetched and accepted the same morning, 108 runs each
   matching its committed config; `scripts/analyse_t74.py` on `results/t74_*.csv`).** The slab under the layer form, fed
   by meals through a curl edge with one maximum curling speed c (VISION Updates 72, 73), λ = 1.10, 1.25, 1.40, L = 8 and
