@@ -93,6 +93,8 @@ python scripts/run_sweep.py configs/smoke_test.json           # parked Konopka m
 
 Three facts of the same day, recorded in O116, O118 and O122 and not to be contradicted: T54's numbers are completed-patch energies, not barriers (O118, "Correction"); an end state with H = 0 is not thereby one torus, since it can be separate pieces and a piece can be one-sided (O116, last addendum; O122); and "the tube ends six around" is exact for the exactly flat end states only, 83 in 100, with about half of those that keep a leftover holding a stretch wider than six around (O116, addendum of 12 October).
 
+**Added 2026-10-23: the model's author reports a factor-2 error in the printed local term of [KTB19] Eq. (27) and [T25] Eq. (22) (ASSUMPTIONS Q28).** Our kernel was derived from the bracketed curvature formula, not the printed decomposition, so **our λ = 1 is his corrected Hamiltonian** and the Hamiltonian as printed is our λ = 1/2; nothing at λ = 1 in the record changes. Open: which form the code behind [T25] Fig. 3 used (Gate B‴, PREREGISTRATION).
+
 **Never call the model's hot phase "X"** (owner's correction, 2026-09-20; VISION Update 5). X is a specific, relatively stable arrangement; the model's hot side is a random graph, a stand-in at best. Write "the random phase". The hypothesis's own route is order → order (the tube; since 9 October the stand-in is the curled slab, VISION Updates 47, 58), and the disorder → order route is the published question (VISION Update 13).
 
 **Older notes and outside reviews may say "Omega"**: it is the name X had in an earlier version of the theory. The record writes X (glossary, `docs/papers/glossary.md`).

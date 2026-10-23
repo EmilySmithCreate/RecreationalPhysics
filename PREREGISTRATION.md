@@ -7992,3 +7992,37 @@ unknown and the next step is a reading task, not a knob.
 as if it charged a curling cost of order g per surplus square. That is the entropic form of the owner's Update 89
 hypothesis, confirmed in sign and size here, with T78's limit that the charge does not grow with the deficit, so it is
 not set by the curvature as such. What it is set by is the mechanism question of item 3.
+
+## Gate B‴. Is [T25] Fig. 3 the Hamiltonian as printed, which in our family is λ = 1/2? (written 2026-10-23, after the model's author's note of the same morning that the printed local term of [KTB19] Eq. (27) and [T25] Eq. (22) is missing a factor 2; ASSUMPTIONS Q28; before any run)
+
+**Why.** Gate B has never passed: our equilibrium curve at N = 160 matches [KTB19] Fig. 8a to rms 0.005 and sits up to 0.41
+below [T25] Fig. 3 between g ≈ 2 and 6.2 on both legs; trapping under continuation was tested and does not fit (O27).
+His note says the printed local coefficient is half the true one. Our kernel at λ = 1 is the corrected Hamiltonian
+(Q1, Q28); the Hamiltonian as printed is our λ = 1/2. If the code behind Fig. 3 carried the printed coefficient, Fig. 3
+is a λ = 1/2 run, in which folded configurations are cheaper and the rise should sit at a larger coupling, which is the
+direction of the discrepancy.
+
+**Design (fixed now).** The protocol of `configs/cqg_n160_lam1_nocap_vs_t25fig3.json` unchanged: N = 160 (16 × 10),
+Fig. 3's 22 couplings from 177.8 to 0.1, cooling from a melt and heating from the torus, 1,000 melt, 2,000 equilibration
+and 4,000 measurement sweeps per coupling, four independent replicas, Metropolis, no cap; at λ = 0.25, 0.50 and 0.75
+(`configs/gateb3_n160_lam{025,050,075}_vs_t25fig3.json`, `scripts/run_cqg_sweep.py`). The λ = 1 curve already on the record
+is the fourth point. Read by `scripts/analyse_gateb3.py`.
+
+**Reading (the Gate B criterion of 19 September, unchanged).** Only couplings where the two legs' replica means agree
+within 0.03 and τ_int is below n_meas / 20 are read. Against the 22 digitised points of Fig. 3 (`docs/published/T25_fig3_digitised.csv`,
+both series, interpolated linearly in ln g onto our couplings): the largest and the rms difference over the read
+couplings; and the coupling at which each curve crosses φ = 0.6 (Fig. 3 crosses at g ≈ 6.2 heating, about 7.0 cooling;
+Fig. 8a and our λ = 1 at 5.2).
+
+**Verdict words.** **REPRODUCED** if some λ has largest difference below 0.05 over its read couplings (the published dots
+scatter by about 0.02) and crosses 0.6 within 0.1 in ln g of Fig. 3's heating crossing. **CLOSER** if no λ reaches that but
+the λ = 1/2 curve's largest difference is below half of λ = 1's (0.41) over its read couplings. **NOT REPRODUCED**
+otherwise. **NOT READ** for any λ with fewer than eight read couplings in the transition region (g between 2 and 10).
+
+**Predictions, recorded before any run.**
+- *Ours:* the rise moves to larger g as λ falls, and λ = 1/2 lands **CLOSER**; REPRODUCED by λ = 1/2 is possible and
+  we do not commit to it, because the cold end at λ < 1 may fold (φ above 1) where Fig. 3 shows about 1.0, which would
+  be a second difference of a different kind and would say the code behind Fig. 3 is neither.
+- *The owner's:* owed before any result is read.
+
+**What it cannot show.** What his code actually did; only whether the printed Hamiltonian reproduces his figure.
