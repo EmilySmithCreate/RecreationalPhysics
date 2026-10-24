@@ -3146,4 +3146,19 @@ Exact looks first: `sandbox/strand_answers_look.py`.
   toward 0 as it expands infinitely. helps the total network return to 0 curviture max entropy."
 - **Gates.** Gate U1′ failed by one point; a diagnostic found the sampler mixing and the errors right; Gate U1″ (four
   times the sweeps, same acceptance) passed (TASKS), so results from the photon field with the winding move may be read.
+- **Her answers to the two open points, the same day (verbatim).** On charge: "Yes the charge comes from the photon
+  half curl combined with the mass." On the kinds: "No, the kinds separate regular and anti. The third vs half twists
+  separate matter from dark matter. Dark matter can’t hold a photon as spin so it doesn’t interact with us."
+  - *Read (to confirm):* the reading charge = −(signed thirds)/3 for a closed strand is withdrawn: a strand closed into
+    a full twist is neutral, and an electron's −1 is a bound photon half-curl with the strand's mass, its sign the
+    handedness. Open quark strands keep their fractional charges, so the proton's +1 is the sum of its quarks' (two
+    thirds plus two thirds less one third) and the neutron's 0 likewise; this is consistent with every row of the
+    table. Dark strands (halves) cannot hold a photon half-curl, so they carry no charge.
+  - *What it must face.* (1) The electron's −1 and the proton's +1 now come from different mechanisms (a bound curl
+    against a sum of thirds), so their exact equality is not automatic in the rule; measured, ordinary matter is
+    neutral to about one part in 10²¹ of e per atom (general knowledge, to verify; reading task). The rule has to say
+    why a bound half-curl carries exactly the charge of three quark thirds. (2) *Exact (brute force on a 4 × 4 × 4
+    block):* every body diagonal joins a point of each kind (512 of 512) and every face diagonal stays within one kind
+    (768 of 768). So the point kinds can label regular against anti for dark strands, which lie in one kind, but not
+    for matter strands, each of which touches both kinds; for matter the handedness would have to do it. Asked.
 

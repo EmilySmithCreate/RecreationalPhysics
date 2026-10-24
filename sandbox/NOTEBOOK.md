@@ -2306,4 +2306,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   one tension put back to her (a full twist neutral against the electron's −1 from three thirds). Her new idea in the
   comments: "curl energy with nothing to curl creates spin". Her statement of the programme's pattern is quoted in full
   in Update 97.
+- 2026-10-24 (later still), the owner, verbatim: "Yes the charge comes from the photon half curl combined with the
+  mass." And: "No, the kinds separate regular and anti. The third vs half twists separate matter from dark matter. Dark
+  matter can’t hold a photon as spin so it doesn’t interact with us." Recorded under VISION Update 97 with the reading
+  to confirm (closed full twist neutral; the electron's −1 a bound half-curl; quark strands keep fractional charges)
+  and the exact fact put back to her (a body diagonal always touches both kinds).
 

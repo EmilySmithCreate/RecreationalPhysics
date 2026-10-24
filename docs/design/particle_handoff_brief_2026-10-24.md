@@ -30,6 +30,15 @@ depends on it yet.
   October); the ring's price #-> an electron is 3 1/3 into 1 full twist, mobious strip. 3 coming together costs 1 photon# ; the twist's definition on the graph ("not yet defined", confirmed 23 October) #I thought we were defining it here?#; what 
   gluons carry (a bound half-curl or none; both kept) #None is my prediction#.
 
+**Confirmed later on 24 October (VISION Update 97; her comments are kept in the text below as she wrote them):** the
+twist is signed thirds on body diagonals (matter) and signed halves on face diagonals (dark matter); the electron is
+three thirds closed into a 360° two-sided band; a closed full twist is neutral and the electron's charge is a bound
+photon half-curl with its mass ("Yes the charge comes from the photon half curl combined with the mass"); dark strands
+cannot hold the half-curl and carry no charge; light travels on the edges, the twist on the diagonals; pairs close too;
+a lone third is confined; gluons, both readings kept, her prediction "none". Open: the point kinds separate regular
+from anti, but every body diagonal touches both kinds (exact), so for matter strands that job falls to handedness
+(asked).
+
 ## 1. What was decided on 24 October (hers; VISION Update 96)
 
 1. The handoff **refines** the ring picture; it does not replace it.
