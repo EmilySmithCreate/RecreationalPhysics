@@ -4322,3 +4322,28 @@ author and should be disclosed as such in any submission. Physics estimates mark
     tori; nothing about λ ≠ 1 for the comparison between tori (the reachable set at λ ≠ 1 was not enumerated); and not
     the full ground state at λ = 1, since the other flat wrappings (O119), gases of 4-cubes and mixtures are not
     counted, so it is not the equilibrium answer to which torus the network sits in.
+- **O151 EXACT: light in a curled direction of side 4 (24 October 2026).** The owner's prediction, given first, verbatim:
+  "Light moves same speed through curved space but bounces or slows through matter ie curled space with charge or
+  spin". Computed minutes after it, before anything was committed (the order is the conversation's; this entry is the
+  first record). Code: `graphity.u1` (Q29, Gate U1″ passed); test:
+  `tests/test_u1.py::test_light_polarised_along_a_curl_of_side_four_is_massive`; the Bloch spectra of the look
+  `sandbox/light_in_curled_space.py` (output `sandbox/out/light_in_curled_space_2026-10-24.txt`) agree.
+  - **Result (exact, tested).** On a torus with one direction of side 4 the ring round that direction is a 4-cycle, so
+    the field counts it as a square and pays for its holonomy. A transverse wave travelling along an open direction
+    then has two different polarisations: field lying in the open directions keeps ω² = 4 sin²(k/2), the flat-space
+    light exactly; field pointing along the curl has ω² = 4 + 4 sin²(k/2), a mass of 2 in lattice units (κ = 1, unit
+    inertia), so it is slower than light at every k and cannot travel at all below ω = 2. Sides 6 and 8 give no mass:
+    6 × 8 × 8 has the same spectrum as 8 × 8 × 8. Exact consequence (standard wave physics, ours): light of that
+    polarisation below ω = 2 arriving from flat space at a curled region cannot enter it and is reflected.
+  - **Her prediction, scored.** "Same speed through curved space" holds for the polarisation lying in the open
+    directions and fails for the one along the curl; "bounces or slows" happens in the toy without charge or spin, from
+    the curl alone, for that polarisation. A kill of the clause "only matter slows light" for curls of side 4 in this
+    toy; nothing here supports the rest.
+  - **What it rests on.** The toy's rule that every 4-cycle is a square (Q29, ours): a curl of side 4 is the only
+    curl the toy has, and it is the ring round it that carries the mass. *General knowledge, to verify:* in
+    Kaluza and Klein's treatment the field component along a small direction becomes a massless scalar in the large
+    directions, not a massive one; the mass here comes from the toy charging the ring itself. A curl that is not a
+    square (side 6 or more) behaves as flat space for light.
+  - **Not shown.** The reflection at a real boundary between curled and flat regions (no lattice torus has both; the
+    burp's half-opened end states do); anything with twist labels, which are defined (Update 97) and not built.
+

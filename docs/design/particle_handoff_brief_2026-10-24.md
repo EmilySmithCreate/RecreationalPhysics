@@ -166,7 +166,9 @@ results from Q29 with the winding move may now be read.
 2. Gate U1 run and read (`scripts/run_u1_gate.py`, `configs/gate_u1_2d.json`).
 3. The handoff's test A with the field in place, pre-registered with her prediction: a launched wave on the toy's
    flat six-link space and on a curled torus (does a curl, whose ring is a square the field sees, scatter or trap
-   light?).
+   light?). *Answered exactly the same day (O151), after her prediction: in a curl of side 4 one
+   polarisation keeps the flat speed and the one along the curl gains a mass (ω² = 4 + 4 sin²(k/2)), so it slows and,
+   below ω = 2, is reflected; sides 6 and up are flat for light. Next: the boundary itself, on a half-opened state.*
 4. Twist labels on strands (Z3 per face diagonal), switchable off, once question 1 is answered; then the handoff's
    tests B (closure census with dynamics) and E (pair creation only, on a closed space).
 5. The quantum gate (test C) stays a reading task until a state space is chosen: on link labels it fails by section

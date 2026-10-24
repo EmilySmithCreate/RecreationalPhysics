@@ -2311,4 +2311,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   matter can’t hold a photon as spin so it doesn’t interact with us." Recorded under VISION Update 97 with the reading
   to confirm (closed full twist neutral; the electron's −1 a bound half-curl; quark strands keep fractional charges)
   and the exact fact put back to her (a body diagonal always touches both kinds).
+- 2026-10-24 (evening), the owner, her prediction for light in curled space, verbatim: "Light moves same speed through
+  curved space but bounces or slows through matter ie curled space with charge or spin". Scored exactly in O151: holds
+  for one polarisation, fails for the one along a curl of side 4, which the curl alone makes massive. Asked of her
+  still: whether handedness marks regular against anti for matter strands (every body diagonal touches both kinds).
 
