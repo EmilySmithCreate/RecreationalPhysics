@@ -2329,4 +2329,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   √2 13.96 B, √5 8.83 B, √6 8.06 B; difference √2 − √5 = 5.13 B (ratio √(5/2)), √2 − √6 = 5.90 B (ratio √3). A √5
   line (1 × 2) joins two colours, like the body diagonal. With her twists (half on √2, third on √6) the twist energy
   ratio is 3.90 in units of a twisting stiffness. No number is set beside a measured ratio (rule 13).
+- 2026-10-24 (evening), the owner, verbatim: "√2 against √6 (your matter strand): 5.90 B more, √3 ≈ 1.73 times as much.
+  close to what i meant: (sqr rt (1^2+(sqr rt ( 1^2+2) )) = root(1+root3) vs root 2". *Checks, ours, arithmetic:*
+  √(1 + √3) = 1.653 is not a lattice distance (squared distances between lattice points are whole numbers); with the
+  inner root squared, as Pythagoras needs, √(1² + (√3)²) = 2, a straight line two edges long along an axis (same colour;
+  her 23 October "twist_2 = 1/3"). Bending a strip into a ring of its own length (2π²B/L): 1.653 gives 11.94 B (√2 holds
+  2.02 B more, ratio 1.17); 2 gives 9.87 B (4.09 B, ratio √2); √6 gives 8.06 B (5.90 B, ratio √3). Asked which line she
+  means for the matter strand.
 
