@@ -3162,3 +3162,27 @@ Exact looks first: `sandbox/strand_answers_look.py`.
     (768 of 768). So the point kinds can label regular against anti for dark strands, which lie in one kind, but not
     for matter strands, each of which touches both kinds; for matter the handedness would have to do it. Asked.
 
+Update 98 (2026-10-24, evening): **DECISION (the author's): matter strands move from body diagonals to 1 × 1 × 2
+diagonals; handedness marks matter against antimatter.** Why this page changes: Update 97 put matter's thirds on body
+diagonals, and every body diagonal joins the two colours of point (exact, 512 of 512), while her rule is that the
+colours separate regular from anti. Her words: "okay, body diagonals need to go from the model, the diagonals in space
+need to connect to same color, so we’ll need a 1x1x2 diagonal, to hold the 1/3 rule." And, on whether handedness marks
+regular against anti for matter: "Yes."
+
+- **What is decided.** Matter strands lie on 1 × 1 × 2 diagonals (corner to far corner of a box two cubes long,
+  length √6), carrying signed thirds; dark strands stay on face diagonals with signed halves (Update 97); body
+  diagonals leave the model. Matter against antimatter is the handedness of the thirds; for dark strands the colour of
+  their points marks dark against antidark. Update 97's "body diagonals (matter)" is replaced by this.
+- **What checks out (exact; `sandbox/diagonal_112_look.py`).** Every 1 × 1 × 2 diagonal joins one colour to the same
+  colour (48 of 48 in a 2 × 2 × 2 block of cubes, 80 of 80 in a 2 × 2 × 3 block); 12 pass through each point of the
+  unbounded lattice. It is the shortest same-colour line that leaves every coordinate plane (√6; next √12, which passes
+  through a point of the other colour, and √14). Three of them close into a triangle (24 through each point; 624
+  four-sided rings), so three matter strands can close into a ring, which body diagonals could not (no odd ring
+  exists). Each passes through the centre of one square, the face its two cubes share, where that square's two face
+  diagonals cross.
+- **What it must face (exact).** The lattice has no turn about a 1 × 1 × 2 line short of a full turn (rotations
+  tested), where it turns every 120° about a body diagonal and every 180° about a face diagonal. So on 1 × 1 × 2
+  diagonals the rule of thirds is a declared rule of the model, not a symmetry of the cube; halves on face diagonals
+  remain the cube's own two-fold turn. And whatever marks matter from antimatter must break the cube's mirror symmetry
+  to hold an excess (Update 97 (c)).
+

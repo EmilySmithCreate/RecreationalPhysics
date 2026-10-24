@@ -2315,4 +2315,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   curved space but bounces or slows through matter ie curled space with charge or spin". Scored exactly in O151: holds
   for one polarisation, fails for the one along a curl of side 4, which the curl alone makes massive. Asked of her
   still: whether handedness marks regular against anti for matter strands (every body diagonal touches both kinds).
+- 2026-10-24 (evening), the owner, verbatim: "okay, body diagonals need to go from the model, the diagonals in space need
+  to connect to same color, so we’ll need a 1x1x2 diagonal, to hold the 1/3 rule. How many are there in a 2x2x2 block
+  and a 2x2x3 block of cubes?" And on handedness marking regular against anti for matter strands: "Yes." Answered and
+  recorded as VISION Update 98 (48 and 80; no lattice symmetry about the line, so thirds there are a declared rule).
 
