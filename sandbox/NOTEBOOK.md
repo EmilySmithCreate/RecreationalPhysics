@@ -2377,4 +2377,16 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   9,865, five whole Klein bottles). (e) Light lowers the curling cost; it does not pay it: integrating out the field
   rewards squares (a free-energy discount from the field's room to arrange itself), and no energy changes hands; in this
   calculation light does not make curls.
+- 2026-10-24 (late night), the owner, verbatim: "1. Is that right? If so, I'll withdraw the "bound half-curl gives the
+  charge" reading. Correct." / "How else do people make sense of this stuff, knowing it has to all simplify to
+  information that can be held in 2 degrees of freedom?" / "2. Blac point strand can be +1/2 or +1 or +1.5 even if
+  that’s allowed. 1/2 or 1.5 is one sided strip, whole numbers is 2 sided strip. Negatives also come in multiples of
+  0.5, anti direction" / on the neutron: "k this makes sense, spin with no twist can be mildly magnetic but no charge." /
+  "Interesting. So the light doesn’t get spent, it could lower the curling cost to none or low enough it readily
+  collapses at normal g." / "Can that turn curve into curl, complete the circle of strips, and compact, and when they
+  can’t move, 3d spacetime no longer needed to describe them, so back to 2 degrees of freedom, the curled slab."
+  Recorded as VISION Update 101. Her question on two degrees of freedom answered in chat with the published families
+  (holography and the area law; dimensional reduction to two at short distances, [Carlip17], read in full; the
+  published model's own two-dimensional base; string worldsheets; tensor networks), all but [Carlip17] general
+  knowledge, to verify (reading task in the questions file).
 

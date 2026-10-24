@@ -50,6 +50,11 @@ effect a sign and a size before any run.
    (the known Arrhenius law, O13 and Update 9, gives a baseline with no fitted number); (b) where the metastable window
    closes in λ (T8's map); (c) the T78 and T79 surcharge on curl in the published model's warm graphs at λ = 1.
    *Ours:* (a), since the leading-order prediction is a number before anything runs.
+   (d) **Does a flat sheet refold when the field lowers the curling cost?** (her idea, Update 101: "Can that turn curve
+   into curl, complete the circle of strips, and compact ... back to 2 degrees of freedom, the curled slab"; her
+   prediction: it refolds). Every earlier refold test failed without a field (T34, T57). At leading order the curling
+   cost vanishes at λ = 1.25, g = 1.5 for β ≈ 4.3; the exact Z_U1 (step 1 below) says whether that survives.
+   *Ours:* the most informative test, run after (a) has checked the leading order against a known baseline.
 4. **Four links or six.** *Ours:* four first (the tube and sheet are understood exactly there; Update 95 keeps six as
    the three-dimensional story).
 5. **Her predictions** for whichever test she chooses, recorded before it runs, with a held-out size (rule 14).

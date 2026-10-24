@@ -3228,3 +3228,30 @@ writing the design brief for the field on the rewiring graph, "yes".
   cost by −(g/16) ln I₀(β) per point. The tube also carries 16 closed square surfaces at N = 64 (the sheet one), so the
   next terms are not small; computing them exactly is the brief's first step.
 
+Update 101 (2026-10-24, late night): **DECISION (the author's): charge is the net signed thirds for every strand, and
+anything free carries a whole number of twists; dark strands carry multiples of a half, odd multiples one-sided.** Her
+words: "Electron’s 1/3 curl 3 together is quark. Needs to be a whole number of twists to exist in 3d space." On the
+read-back (one rule for all, withdrawing the bound half-curl as the source of the electron's charge): "Correct." On dark
+strands: "Blac point strand can be +1/2 or +1 or +1.5 even if that’s allowed. 1/2 or 1.5 is one sided strip, whole
+numbers is 2 sided strip. Negatives also come in multiples of 0.5, anti direction". On the neutron: "spin with no twist
+can be mildly magnetic but no charge."
+
+- **What is decided.** (1) Charge = net signed thirds ÷ 3, one rule for every strand (electron −1, proton +1, neutron 0,
+  pion ±1; a lone quark cannot exist), so the electron and the proton are exactly equal and opposite by construction.
+  The reading of Update 97 that the electron's charge is a bound photon half-curl, and "a full twist is neutral", are
+  withdrawn; neutral means the twists cancel to zero. (2) Dark strands carry any multiple of a half; odd multiples close
+  one-sided (a Möbius strip), whole numbers two-sided; negatives are the anti direction. *Exact:* a strip closed after
+  n half turns is one-sided exactly when n is odd, so her rule is the topology of a twisted band. Whether colour and
+  sign must agree is read as yes (black points positive, white negative), to confirm. (3) The neutron spins with no
+  twist, mildly magnetic, with no charge (hers; the measured neutron has spin one half and a magnetic moment, general
+  knowledge, to verify).
+- **Her question on light, answered from the design brief's exact look.** Light lowers the curling cost; it is not
+  spent. At leading order the cost vanishes at λ = 1.25, g = 1.5 when ln I₀(β) = 16 × 0.25 / 1.5, β ≈ 4.3. Two
+  cautions: the leading order is least reliable at strong fields, where the tube's closed square surfaces add terms that
+  are not small; and a field that strong would favour curling wherever light is dense, the hot early universe included.
+- **Her idea, recorded as a test to run (her words):** "Can that turn curve into curl, complete the circle of strips,
+  and compact, and when they can’t move, 3d spacetime no longer needed to describe them, so back to 2 degrees of
+  freedom, the curled slab." Every earlier attempt to refold flat space failed (it melted or healed; T34, T57 and
+  others, all without a field). With the field lowering the curling cost, a flat sheet might refold: added to the
+  rewiring-graph brief as a test option, her prediction recorded (it refolds).
+

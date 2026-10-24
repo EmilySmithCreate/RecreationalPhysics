@@ -5,21 +5,17 @@ full text is. Answer in any order; items marked ★ unblock the most. Answered i
 
 ## Particles (the handoff of 24 October)
 
-1. ★ **Charge: one rule for all? (reading of her answer of 24 October, late night, to confirm).** "Needs to be a whole
-   number of twists to exist in 3d space": anything free carries a whole number of twists, and charge is the net
-   signed thirds divided by three (electron −1, proton +1, neutron 0, pion ±1; a lone quark cannot exist). This makes
-   the electron and the proton exactly equal and opposite by one rule, and replaces "a full twist is neutral" with
-   "neutral = the twists cancel to zero". Confirm, and say whether the bound half-curl reading of the electron's charge
-   (Update 97) is withdrawn.
-2. **Dark against antidark: must the colour and the sign agree?** A dark strand's "colour" is the checkerboard colour
-   of the points it sits on (a face diagonal joins two points of one colour; not quark colour). Both colour and sign
-   mark dark against antidark (Update 100). If they must agree, black-point strands always carry +½ and white-point
-   strands −½; if not, there are four kinds of dark strand. Which?
+1. ~~★ **Charge: one rule for all?**~~ *Answered 24 October, late night: "Correct." Charge = net signed thirds ÷ 3 for
+   every strand; the bound half-curl reading withdrawn (Update 101).*
+2. **Dark strands: colour and sign, as read (confirm).** Her answer: a black-point strand can be +½, +1, +1.5 ...;
+   odd multiples of ½ are one-sided strips, whole numbers two-sided; negatives are the anti direction. Read as: black
+   points carry positive multiples, white points negative (colour and sign agree). Confirm, or say whether a black-point
+   strand can also be negative.
 3. ~~**The neutron.**~~ *Answered 24 October, late night: +2/3, −1/3, −1/3, the twists cancel to flat, so there is no
    third to excite into spin (hers). Kept beside it: the measured neutron has spin one half and a magnetic moment
    (general knowledge, to verify).*
-3a. **Dark matter as a one-sided (Möbius) strip:** a single half twist closed on itself (one-sided) or two halves
-   (two-sided)? Both are allowed by the cube's 180° turn about a face diagonal; which is a dark particle?
+3a. ~~**Dark matter as a one-sided (Möbius) strip**~~ *Answered: both occur; odd multiples of ½ one-sided, whole
+   numbers two-sided (Update 101).*
 4. **Her boundary prediction, as read** (Update 100): light crosses a boundary between curled and flat space unchanged,
    since nothing there carries charge; and "maybe it moves on a different plane" refers to the field along the curl,
    which cannot enter a curl at low frequency. Confirm the reading before the run.
@@ -30,7 +26,7 @@ full text is. Answer in any order; items marked ★ unblock the most. Answered i
 6. ★ **The field's coupling:** its own constant β, or tied to the graph's temperature (β = κ/g).
 7. **The first observable:** the tube's waiting time (ours), the λ window, or the surcharge on curl.
 8. **Four links first, or six.**
-9. **Her prediction** for the chosen test, before it runs.
+9. **Her prediction** for the chosen test, before it runs. For option (d), refolding under the field, her prediction is recorded: it refolds.
 
 ## The loop-rule worksheet (`docs/design/loop_rule_worksheet_2026-10-23.md`; what her answers already settled is in its addenda)
 
@@ -42,6 +38,12 @@ full text is. Answer in any order; items marked ★ unblock the most. Answered i
 13. **X3, colour:** the three orders of a braid's strands, or movement and spin?
 14. **X1:** which segment "touches 12 cubes", and does 12 count cubes or directions?
 15. **X2:** "twist is always the same" — the same per strand, per loop, or per length?
+
+## Reading, for her question on two degrees of freedom (no answer needed; done by the assistant)
+
+R1. Holography and the area law ('t Hooft 1993; Susskind 1995; Maldacena 1997; Bekenstein and Hawking), dimensional
+    reduction to two at short distances ([Carlip17], read in full), string worldsheets, tensor networks (Swingle):
+    read on the prior-work template before any of it is cited.
 
 ## Older items (handoffs of 22 and 23 October)
 
