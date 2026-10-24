@@ -1021,6 +1021,15 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    1,000 sweeps); an earlier sandbox look with the move on fresh seeds read 0.93530 ± 0.00012 there. Stopped and
    reported; no third run without the owner's word. The cheapest next look: the winding's autocorrelation at β = 8
    on 10 × 10, and the same point with errors from the integrated autocorrelation time.
+   **Diagnostic, 24 October** (a sandbox look on fresh seeds, `sandbox/u1_gate_autocorr.py`): with the move, the
+   winding's autocorrelation time is about 50 sweeps, the time at each winding matches the expected shares, ⟨cos φ⟩ is
+   uncorrelated from sweep to sweep (block errors equal autocorrelation errors), and four chains read 0.4 to 1.7
+   errors from the exact value. So neither freezing nor small errors explains the 3.65; chance remains (about 1 in 300
+   across ten points).
+   **GATE U1″  ☐** (the owner's "proceed with the runs you can", 24 October). Config
+   `configs/gate_u1c_2d_winding_long.json`: Gate U1′ with four times the measured sweeps (160,000, 40 blocks), fresh
+   seeds, so a real bias would show at about twice the significance. **Acceptance unchanged:** (a), (b), (c) as Gate U1.
+   If it fails, stop: the sampler is biased, and the cause is looked for before anything else. All three runs are kept.
 3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat
    six-link space and on a curled torus (whose ring is a square the field sees).
 4. **Twist labels on strands** (a third per face diagonal, switchable off) after her answer to question 1; then tests B
