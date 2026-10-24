@@ -3213,45 +3213,123 @@ boundary between curled and flat space, "boundary is there is no charge. Maybe i
 writing the design brief for the field on the rewiring graph, "yes".
 
 - **What is decided.** (1) The antiparticle of a strand is its mirror image (as in [BT05]). (2) Dark strands carry
-  signed halves, + for dark and − for antidark, as matter strands carry signed thirds; the colours still mark dark
+  signed halves, ~~+ for dark and − for antidark~~ one sign for dark and the other for antidark (which is which is
+  our reading, to confirm) *(corrected 24 October by the rule-22 audit; VISION Update 102)*, as matter strands carry signed thirds; the colours still mark dark
   against antidark (to confirm whether colour and sign must agree; owner's questions file). (3) The design brief
   `docs/design/u1_rewiring_graph_brief_2026-10-24.md` is written; nothing runs until her decisions in it.
 - **Checks.** Her proton (+2/3, +2/3, −1/3) is the up, up, down of the quark model, with the down strand twisted the
   other way from the two up strands, which matches the reading charge = −(signed thirds)/3 for open strands. Her
   picture of the photon acting on a third does not yet say why the electron's −1, a bound half-curl, equals exactly
   three quark thirds; the question stays open in the questions file. Her boundary prediction is recorded before the
-  run: light crosses the boundary with no charge to stop it, and the field along the curl "maybe moves on a different
-  plane".
-- **The design brief's exact first look** (`sandbox/u1_graph_free_energy.py`): integrating out the field at fixed
-  wiring rewards every square by ln I₀(β) at leading order; the tube has a quarter of a square per point more than the
-  sheet (its rings round the curl), so the field favours the curled state, at leading order as a shift of the curling
-  cost by −(g/16) ln I₀(β) per point. The tube also carries 16 closed square surfaces at N = 64 (the sheet one), so the
+  run, in her words: "boundary is there is no charge. Maybe it moves on a different plane." ~~light crosses the
+  boundary with no charge to stop it, and the field along the curl "maybe moves on a different plane".~~ That light
+  crosses and that "it" is the field along the curl is our reading, to confirm *(corrected 24 October by the rule-22 audit; VISION Update 102)*. *Two checks added by the
+  audit (general knowledge, to verify):* the −1/3 strand she calls an "antiquark" is the down quark, a quark; and a
+  photon that flipped its twist would, under the charge rule of Update 101, turn −1/3 into +1/3 and the proton's +1
+  into +5/3, which a photon (no charge) cannot do without breaking charge conservation.
+- **The design brief's ~~exact~~ first look** (`sandbox/u1_graph_free_energy.py`; a look, with only its counts exact *(corrected 24 October by the rule-22 audit; VISION Update 102)*): integrating out the field at fixed
+  wiring rewards every square by ln I₀(β) at leading order *under the Wilson weight exp(β Σ cos φ); under Q29's own
+  energy κ Σ (1 − cos φ) each square gives e^(−β) I₀(β) < 1, a penalty, so the sign depends on the zero of a square's
+  energy, a choice not yet made (Update 102)*; the tube has a quarter of a square per point more than the
+  sheet (its rings round the curl), so ~~the field favours the curled state~~ under the Wilson weight the field favours the curled state, at leading
+  order as a shift of ~~the curling cost~~ λ by −(g/16) ln I₀(β) (the curling cost per point by −(g/4) ln I₀(β)) *(corrected 24 October by the rule-22 audit; VISION Update 102)*. The tube also carries 16 closed square surfaces at N = 64 (the sheet one), so the
   next terms are not small; computing them exactly is the brief's first step.
 
 Update 101 (2026-10-24, late night): **DECISION (the author's): charge is the net signed thirds for every strand, and
-anything free carries a whole number of twists; dark strands carry multiples of a half, odd multiples one-sided.** Her
+anything free carries a whole number of twists; dark strands carry multiples of a half, odd multiples one-sided.**
+*(Audit, Update 102: "anything free carries a whole number of twists" conflicts with free dark strands of ½ or 1.5;
+read here as a rule for matter strands until she says otherwise.)* Her
 words: "Electron’s 1/3 curl 3 together is quark. Needs to be a whole number of twists to exist in 3d space." On the
 read-back (one rule for all, withdrawing the bound half-curl as the source of the electron's charge): "Correct." On dark
 strands: "Blac point strand can be +1/2 or +1 or +1.5 even if that’s allowed. 1/2 or 1.5 is one sided strip, whole
 numbers is 2 sided strip. Negatives also come in multiples of 0.5, anti direction". On the neutron: "spin with no twist
 can be mildly magnetic but no charge."
 
-- **What is decided.** (1) Charge = net signed thirds ÷ 3, one rule for every strand (electron −1, proton +1, neutron 0,
+- **What is decided.** (1) Charge = ~~net signed thirds ÷ 3~~ −(net signed thirds) ÷ 3 (the sign convention of Update 97,
+  which the first version of this line dropped *(corrected 24 October by the rule-22 audit; VISION Update 102)*), one rule for every strand (electron −1, proton +1, neutron 0,
   pion ±1; a lone quark cannot exist), so the electron and the proton are exactly equal and opposite by construction.
   The reading of Update 97 that the electron's charge is a bound photon half-curl, and "a full twist is neutral", are
-  withdrawn; neutral means the twists cancel to zero. (2) Dark strands carry any multiple of a half; odd multiples close
+  withdrawn; neutral means the twists cancel to zero. *Stated by the audit and owed to her:* this rule gives every
+  third a charge of ±1/3, which reverses her handoff's idea 3 ("A one-third twist is not an electric charge of
+  ±1/3"); the reversal began at Update 97 and was not said; and under it an electron (three same-handed thirds) is
+  the same count as three down-quark thirds, with nothing yet separating a lepton from a baryon or saying why the
+  electron has no colour (the handoff's own question 5). Both are in the questions file. (2) Dark strands carry any multiple of a half; odd multiples close
   one-sided (a Möbius strip), whole numbers two-sided; negatives are the anti direction. *Exact:* a strip closed after
   n half turns is one-sided exactly when n is odd, so her rule is the topology of a twisted band. Whether colour and
-  sign must agree is read as yes (black points positive, white negative), to confirm. (3) The neutron spins with no
-  twist, mildly magnetic, with no charge (hers; the measured neutron has spin one half and a magnetic moment, general
+  sign must agree is read as yes (black points positive, white negative), to confirm. (3) The neutron ~~spins with no
+  twist~~: her two answers, in order: first "It would need a 1/third twist to excite and spin, but it’s not there because
+  the twists cancel to flat" (it does not spin); then "spin with no twist can be mildly magnetic but no charge" (it
+  spins, with no twist), the later her current position *(corrected 24 October by the rule-22 audit; VISION Update 102)*; mildly magnetic, with no charge (hers; the measured neutron has spin one half and a magnetic moment, general
   knowledge, to verify).
-- **Her question on light, answered from the design brief's exact look.** Light lowers the curling cost; it is not
-  spent. At leading order the cost vanishes at λ = 1.25, g = 1.5 when ln I₀(β) = 16 × 0.25 / 1.5, β ≈ 4.3. Two
-  cautions: the leading order is least reliable at strong fields, where the tube's closed square surfaces add terms that
-  are not small; and a field that strong would favour curling wherever light is dense, the hot early universe included.
+- **Her question on light, answered from the design brief's ~~exact~~ first look.** ~~Light lowers the curling cost; it is not
+  spent.~~ Light is not spent; whether it lowers or raises the curling cost depends on the zero of a square's energy
+  (Update 102) *(corrected 24 October by the rule-22 audit; VISION Update 102)*. Under the Wilson weight, at leading order the cost vanishes at λ = 1.25, g = 1.5 when ln I₀(β) = 16 × 0.25 / 1.5,
+  β ≈ 4.3 (exactly, β ≈ 3.59). ~~Two cautions: the leading order is least reliable at strong fields, where the tube's closed
+  square surfaces add terms that are not small; and a field that strong would favour curling wherever light is dense, the
+  hot early universe included.~~ *Corrected:* β is the field's stiffness (an inverse coupling, like an inverse
+  temperature), not light's density; large β is a stiff, weakly fluctuating field; the leading order is the small-β
+  expansion, least reliable at large β; and under β = κ/g a hotter graph has a smaller effect *(corrected 24 October by the rule-22 audit; VISION Update 102)*.
 - **Her idea, recorded as a test to run (her words):** "Can that turn curve into curl, complete the circle of strips,
   and compact, and when they can’t move, 3d spacetime no longer needed to describe them, so back to 2 degrees of
   freedom, the curled slab." Every earlier attempt to refold flat space failed (it melted or healed; T34, T57 and
   others, all without a field). With the field lowering the curling cost, a flat sheet might refold: added to the
-  rewiring-graph brief as a test option, her prediction recorded (it refolds).
+  rewiring-graph brief as a test option. ~~her prediction recorded (it refolds).~~ Her words are a question; "it refolds"
+  is our inferred prediction until she gives one *(corrected 24 October by the rule-22 audit; VISION Update 102)*.
+
+Update 102 (2026-10-24, night): **corrections of the record of 24 October, from the rule-22 audit (six updates in one
+day).** Why this page changes: a fresh reader (a new session of the same model, no history, read-only) audited Updates
+96 to 101 and the files around them, and a second fresh reader confirmed each finding; nothing it reported was
+refuted. Each error is corrected in place with a dated marker; this is the list. The full audit is ASSUMPTIONS O153. A
+separate Codex audit, blind to this one, is briefed at `docs/reviews/2026-10-24_codex_audit_brief.md`.
+
+1. **The sign of light's effect on curling is not exact** (the most serious). The record treated the Wilson weight
+   exp(β Σ cos φ) and Q29's energy κ Σ (1 − cos φ) as the same; they differ by a constant per square, and the number of
+   squares changes with the wiring. Under the first, light lowers the curling cost; under the second, it raises it
+   (`sandbox/u1_normalisation_look.py`: at λ = 1.25, g = 1.5, β = 2, 0.152 against 0.339). The answer given to the
+   owner, "light lowers the curling cost", was stated with more certainty than it had. Which zero is right is a new
+   decision for her (questions file, item 0). Updates 100 and 101, the rewiring brief and the notebook are corrected.
+2. **β misread as light's density.** β is the field's stiffness (an inverse coupling); large β is a stiff field. The
+   caution "a field that strong would favour curling wherever light is dense, the hot early universe included" is
+   withdrawn (Update 101).
+3. **A factor of four** in Update 100: −(g/16) ln I₀(β) shifts λ; the curling cost per point shifts by −(g/4) ln I₀(β).
+4. **A look presented as exact.** `sandbox/u1_graph_free_energy.py` was logged as a look and used as exact in Updates 100
+   and 101; only its counts are exact.
+5. **Her handoff idea 3 reversed without saying so.** Charge = −(net signed thirds) ÷ 3 gives every third ±1/3, the
+   opposite of her idea 3; and Update 101 dropped the minus sign of Update 97's convention. Both corrected; idea 3 put to
+   her (questions 0a).
+6. **Update 101 contradicted itself:** "anything free carries a whole number of twists" against free half-twist dark
+   strands. Read as a rule for matter strands; put to her (question 0c).
+7. **Two neutron answers recorded one in each place.** Both now in order in Update 101 and the questions file.
+8. **Stale lines** saying the electron's charge is a bound half-curl (the brief's box, the questions file's answered
+   list), "a third per face diagonal" (TASKS, the brief), and the worksheet's addenda; all corrected or brought up to
+   date. TASKS gains the rewiring brief's items and the U1″ caveat.
+9. **Her question recorded as her prediction.** "Can that turn curve into curl ...?" is a question; "it refolds" is our
+   inferred prediction (Update 101, the rewiring brief, the questions file).
+10. **Two readings of ours stated as hers** in Update 100 (which sign is dark; what "it moves on a different plane"
+    refers to): marked as readings to confirm.
+11. **Two checks missing** on her proton answer: the −1/3 strand is a down quark, not an antiquark; and a photon that
+    flipped it would break charge conservation under the charge rule (question 0d). And one "what it must face": under
+    the rule, the electron has the same count as three down quarks (question 0b).
+12. **Two general-knowledge statements unmarked** in the notebook; now marked.
+13. **Gate U1″'s authority**: a general "proceed" was taken as her word for a rerun after a near miss; recorded so, with
+    the 8-of-10 lean carried as a caveat on Q29.
+14. **The brief's speed sentence said the reverse** (short waves are slower along the axes, by 0.027 links per tick, 2.9 %);
+    and its test count was stale.
+15. **Ideas of hers dropped** (rule 21): handoff idea 10's spin-1 analogy, idea 9's discrete masses and the postponed
+    plasma question, her "Möbius" electron comment against her later 360° band, her photon mechanism, her first neutron
+    sentence. All now in the notebook.
+
+- **Two readings returned with the audit** (assistant agents; read status per source in each note). The prior work on
+  gauge fields on dynamical lattices (`docs/reading/notes/2026-10-24_prior_work_gauge_on_dynamical_graphs.md`): PARTLY
+  FOUND; in two-dimensional causal dynamical triangulations an integrated-out gauge field shifts the lattice's own
+  cosmological constant, the published relative of item 1, and the zero of the plaquette energy decides the direction
+  there too. The sources for her question on two degrees of freedom
+  (`docs/reading/notes/2026-10-24_two_degrees_of_freedom_reading.md`): the published statement is "a two-dimensional
+  surface's worth of degrees of freedom" (about one per Planck area), a very large number that grows with area, not
+  "two degrees of freedom"; the sources use "two" in four different senses that should not be merged; none has a third
+  dimension that opens and closes.
+- **New sandbox looks of the night** (`sandbox/LOG.md`): the exact field free energy (every surface term; checked by
+  Monte Carlo) and light at a curled-flat boundary (field along the curl reflected; light in the open directions passes;
+  no charge can appear by Gauss's law, so her "no charge" is not tested by it). Both scripts were lost when the session
+  that wrote them ended and were restored from the agents' transcripts; each reproduces its output exactly.
 

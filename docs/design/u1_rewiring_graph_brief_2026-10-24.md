@@ -19,7 +19,14 @@ A fresh red-team reader judged nothing on particles publishable today and named 
 dynamical graph, with a pre-registered effect on a quantity the toy already measures. The exact first look gives that
 effect a sign and a size before any run.
 
-## What is exact already (`sandbox/u1_graph_free_energy.py`; ours)
+## What is exact already (`sandbox/u1_graph_free_energy.py`, `sandbox/u1_exact_free_energy.py`; ours)
+
+*Corrected 24 October by the rule-22 audit (VISION Update 102):* only the counts and the expansions below are exact.
+The sign of the effect is not: it depends on the zero of a square's energy. Under the Wilson weight exp(β Σ cos φ)
+each square is rewarded by I₀(β); under Q29's own energy κ Σ (1 − cos φ) each square gives e^(−β) I₀(β) < 1, a
+penalty, and the field then favours the flat sheet (`sandbox/u1_normalisation_look.py`: at λ = 1.25, g = 1.5 and
+β = 2, λ_eff − 1 = 0.152 under the first, 0.339 under the second). Which zero is right is the owner's decision 0
+below. Items 1 and 2 hold under the Wilson weight only.
 
 1. **Integrating out the field rewards squares.** At fixed wiring, Z_U1(G) = Σ over integer fluxes n with Bᵀn = 0 of
    Π_p I_{n_p}(β) (the character expansion, as in Gate U1). Its leading term is I₀(β)^P, P the number of squares, so the
@@ -34,6 +41,12 @@ effect a sign and a size before any run.
    choose between flat tori at leading order; it only separates curled from flat.
 
 ## Decisions for the owner (S1)
+
+0. **The zero of a square's energy** (added 24 October, Update 102). Does a square with no twist of phase cost
+   nothing (Q29's energy, 1 − cos φ; then light favours fewer squares, the flat sheet) or does every square carry the
+   same negative energy (the Wilson weight, −cos φ; then light favours more squares, the curled tube)? It is the
+   toy's own version of a vacuum energy per piece of space (ours; the cosmological constant is the real-world relative,
+   general knowledge, to verify). Nothing else in this brief can be predicted before it.
 
 1. **How a phase rides a switch.** A switch removes links (u1, v1), (u2, v2) and makes (u1, v2), (u2, v1). Options:
    (a) the new links get fresh phases drawn uniformly, the old ones are forgotten (simplest; detailed balance holds with
@@ -51,8 +64,8 @@ effect a sign and a size before any run.
    closes in λ (T8's map); (c) the T78 and T79 surcharge on curl in the published model's warm graphs at λ = 1.
    *Ours:* (a), since the leading-order prediction is a number before anything runs.
    (d) **Does a flat sheet refold when the field lowers the curling cost?** (her idea, Update 101: "Can that turn curve
-   into curl, complete the circle of strips, and compact ... back to 2 degrees of freedom, the curled slab"; her
-   prediction: it refolds). Every earlier refold test failed without a field (T34, T57). At leading order the curling
+   into curl, complete the circle of strips, and compact ... back to 2 degrees of freedom, the curled slab"; ~~her
+   prediction: it refolds~~ her words are a question; "it refolds" is our inferred prediction until she gives one *(corrected 24 October by the rule-22 audit; VISION Update 102)*). Every earlier refold test failed without a field (T34, T57). At leading order the curling
    cost vanishes at λ = 1.25, g = 1.5 for β ≈ 4.3; the exact Z_U1 (step 1 below) says whether that survives.
    *Ours:* the most informative test, run after (a) has checked the leading order against a known baseline.
 4. **Four links or six.** *Ours:* four first (the tube and sheet are understood exactly there; Update 95 keeps six as

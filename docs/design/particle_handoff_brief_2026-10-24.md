@@ -14,7 +14,8 @@ refinement she chose on 24 October ("Refines it"), **proposed, to confirm as one
 depends on it yet.
 
 - **Strand (proposed):** ~~a face diagonal of a cube (her "tape" of 23 October)~~ one segment carrying a twist of one
-  third, one way or the other; which segment is open (worksheet Q1). A lone strand is neutral (handoff idea 3;
+  third, one way or the other; which segment is open (worksheet Q1). ~~A lone strand is neutral (handoff idea 3;~~ *(reversed by Update 101's charge rule, under which every third carries ±1/3;
+  the reversal of handoff idea 3 is put to her; Update 102)* (handoff idea 3;
   "charge is only spin", 23 October). *Corrected 24 October, after a check: her tape "run to its opposite corner,
   there are 4 tapes" is a cube's body diagonal, √3, joining the two kinds, not a face diagonal; and her later words
   of 23 October give the third to the longer length and the half to √2 ("short halfs and long thirds"), while her coin
@@ -34,8 +35,9 @@ depends on it yet.
 twist is signed thirds on body diagonals (matter; Update 98 moved them to 1 × 1 × 2 diagonals for one evening, and
 Update 99 brought them back and dropped the rule that a matter strand joins one colour; handedness marks matter
 against antimatter) and signed halves on face diagonals (dark matter); the electron is
-three thirds closed into a 360° two-sided band; a closed full twist is neutral and the electron's charge is a bound
-photon half-curl with its mass ("Yes the charge comes from the photon half curl combined with the mass"); dark strands
+three thirds closed into a 360° two-sided band; ~~a closed full twist is neutral and the electron's charge is a bound
+photon half-curl with its mass ("Yes the charge comes from the photon half curl combined with the mass");~~ *(withdrawn
+by Update 101: charge = −(net signed thirds) ÷ 3 for every strand)*; dark strands
 cannot hold the half-curl and carry no charge; light travels on the edges, the twist on the diagonals; pairs close too;
 a lone third is confined; gluons, both readings kept, her prediction "none". Open: the point kinds separate regular
 from anti, but every body diagonal touches both kinds (exact), so for matter strands that job falls to handedness
@@ -60,7 +62,8 @@ A sandbox look: it can narrow or kill, never support. Built lattices only.
    has. The rest are gauge modes (one per point, less one) and one holonomy per direction. Every frequency is
    2 √(Σ sin²(kᵢ/2)) to 10⁻¹⁴. The speed limit is one link per tick, reached only at long wavelengths, and is never
    exceeded; but it is one link per tick only because the field's inertia and κ were set equal (a choice, the
-   handoff's "speed chosen by fiat" flag), and short waves prefer the lattice's axes (2.7 % faster along a cube
+   handoff's "speed chosen by fiat" flag), and ~~short waves prefer the lattice's axes (2.7 % faster along a cube~~ short waves are slower along the lattice's axes
+   (0.027 links per tick, 2.9 %, slower than along a cube diagonal at |k| = 1) *(corrected 24 October by the rule-22 audit; VISION Update 102)* (struck: 2.7 % faster along a cube
    diagonal than along an axis at |k| = 1).
 2. **The three readings of half-curl under one energy.** A3: a half turn of phase round a square is the most
    expensive state a square can have (2κ), and a full turn costs exactly nothing, so only the turn modulo a whole
@@ -150,7 +153,7 @@ what this handoff and its looks move, slot by slot; read the two together in one
 the squares (every 4-cycle, so a curled direction's ring counts too); holonomies; Gauss's law; gauge
 transformations; the energy; the linear-wave matrix; velocity-Verlet evolution; Wilson-action Monte Carlo with the
 detailed-balance argument in the docstring; and the exact two-direction answer for the reproduction gate. Tests
-(`tests/test_u1.py`, 17): squares against networkx and `cqg_d.total_squares`; gauge invariance; charges on closed
+(`tests/test_u1.py`; 17 then, 15 test functions with parametrised cases now): squares against networkx and `cqg_d.total_squares`; gauge invariance; charges on closed
 graphs; the wave spectrum on flat tori in two and three directions; energy conservation; the local Monte Carlo update
 against full recomputation; wrapped phases and same-seed reproducibility; the exact answer's limits; a short gate.
 Not in this piece: the field riding on a graph whose wiring switches; twist labels; any coupling to the curling
@@ -171,7 +174,7 @@ results from Q29 with the winding move may now be read.
    light?). *Answered exactly the same day (O151, corrected the same night): light keeps the flat
    speed in a curl of side 4, as she predicted; the field component along the curl, a scalar seen from the open
    directions, gains a mass ω² = 4 + 4 sin²(k/2) from the toy's rule that the ring round the curl is a square.*
-4. Twist labels on strands (Z3 per face diagonal), switchable off, once question 1 is answered; then the handoff's
+4. Twist labels on strands (~~Z3 per face diagonal~~ signed thirds per body diagonal, signed halves per face diagonal *(corrected 24 October by the rule-22 audit; VISION Update 102)*), switchable off, once question 1 is answered; then the handoff's
    tests B (closure census with dynamics) and E (pair creation only, on a closed space).
 5. The quantum gate (test C) stays a reading task until a state space is chosen: on link labels it fails by section
    2, item 4.

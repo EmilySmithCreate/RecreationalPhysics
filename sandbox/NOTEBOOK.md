@@ -2367,14 +2367,15 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   curling cost?" *Checks and answers, ours.* (a) Read as one rule, to confirm: anything free carries a whole number of
   twists, and charge is the net signed thirds divided by three (electron 3 thirds, −1; proton 2/3 + 2/3 − 1/3, +1;
   neutron 2/3 − 1/3 − 1/3, 0; pion, ±1; a lone quark cannot exist); this makes the electron and proton exactly equal and
-  opposite by one rule, is the standard rule that free particles carry whole-number charge, and would replace "a full
+  opposite by one rule, is the standard rule that free particles carry whole-number charge (general knowledge, to verify), and would replace "a full
   twist is neutral" with "neutral = net zero"; her confirmation owed. (b) A dark strand's "colour" is the checkerboard
   colour of the points it sits on (a face diagonal joins two points of one colour), not quark colour. (c) Neutron
   recorded as hers; the measured neutron has spin one half and a magnetic moment (general knowledge, to verify). (d) A
   half twist closes a strip round a face diagonal as a Möbius band (the cube's 180° turn); in nature dark matter is seen
-  only through gravity, so its shape could show only indirectly (self-interaction, annihilation, number of kinds); in the
+  only through gravity (general knowledge, to verify), so its shape could show only indirectly (self-interaction, annihilation, number of kinds); in the
   toy one-sidedness is fixed by the wiring and one-sided pieces of space already occur in burp end states (O116: 39 of
-  9,865, five whole Klein bottles). (e) Light lowers the curling cost; it does not pay it: integrating out the field
+  9,865, five whole Klein bottles). (e) ~~Light lowers the curling cost; it does not pay it:~~ *(corrected by the audit, Update 102: lowers it under the Wilson
+  weight, raises it under Q29's own energy; the zero of a square's energy decides)* It does not pay it: integrating out the field
   rewards squares (a free-energy discount from the field's room to arrange itself), and no energy changes hands; in this
   calculation light does not make curls.
 - 2026-10-24 (late night), the owner, verbatim: "1. Is that right? If so, I'll withdraw the "bound half-curl gives the
@@ -2389,4 +2390,13 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   (holography and the area law; dimensional reduction to two at short distances, [Carlip17], read in full; the
   published model's own two-dimensional base; string worldsheets; tensor networks), all but [Carlip17] general
   knowledge, to verify (reading task in the questions file).
+- 2026-10-24 (night), ours, from the rule-22 audit (VISION Update 102): ideas of hers from the day that had reached neither
+  VISION nor this notebook, now recorded. (1) Handoff idea 10's second half: a 360° turn of a spin-1 object behaving like
+  an untwisted, zero net orientation, as a possible topological analogy (spin 0 and spin 1 stay different). (2) Handoff
+  idea 9's second half: she expects discrete particle-like mass values while knowing not all energy comes in identical
+  chunks, and asked to postpone the plasma question. (3) Her brief comment "an electron is 3 1/3 into 1 full twist,
+  mobious strip" against her later answer "Full 360°: two-sided band": the later answer is her current position (a
+  360° band is two-sided; a Möbius strip has a half turn). (4) Her mechanism "a photon can only apply spin to a 1/3
+  twist, or prefers to", with its charge-conservation check now in Update 100 and the questions file. (5) Both of her
+  neutron answers, in order, now in Update 101.
 

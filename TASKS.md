@@ -1026,7 +1026,8 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    uncorrelated from sweep to sweep (block errors equal autocorrelation errors), and four chains read 0.4 to 1.7
    errors from the exact value. So neither freezing nor small errors explains the 3.65; chance remains (about 1 in 300
    across ten points).
-   **GATE U1″  ☑ (passed 2026-10-24)** (the owner's "proceed with the runs you can", 24 October). Config
+   **GATE U1″  ☑ (passed 2026-10-24)** (the owner's "proceed with the runs you can", 24 October; *a general instruction
+   taken as her word for a rerun after a near miss, recorded as such by the rule-22 audit; the acceptance was unchanged*). Config
    `configs/gate_u1c_2d_winding_long.json`: Gate U1′ with four times the measured sweeps (160,000, 40 blocks), fresh
    seeds, so a real bias would show at about twice the significance. **Acceptance unchanged:** (a), (b), (c) as Gate U1.
    If it fails, stop: the sampler is biased, and the cause is looked for before anything else. All three runs are kept.
@@ -1040,8 +1041,16 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    results from `graphity.u1` with the winding move may be read; without the move they may not at large β.
 3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat
    six-link space and on a curled torus (whose ring is a square the field sees).
-4. **Twist labels on strands** (a third per face diagonal, switchable off) after her answer to question 1; then tests B
+4. **Twist labels on strands** (signed thirds per body diagonal, signed halves per face diagonal; corrected by Update 102; switchable off) after her answer to question 1; then tests B
    (closure with dynamics) and E (pairs only on a closed space).
 5. **Reading tasks** of the brief's section 6 (Wilson, Kogut; Tong; Finkelstein and Rubinstein; Landauer; centre
    vortices), on the prior-work template, before any of them is cited.
+6. **The U(1) field on the rewiring graph** (`docs/design/u1_rewiring_graph_brief_2026-10-24.md`; added 24 October, Update
+   102). Waits on her decision 0 (the zero of a square's energy) and decisions 1 to 4. Done, exact under each choice of
+   zero: Z_U1 for the sheet and the tube at N = 64 and 144 (`sandbox/u1_exact_free_energy.py`, a look, checked by an
+   independent rebuild; promote to a tested script before citing). Owed: the prior-work note is written
+   (`docs/reading/notes/2026-10-24_prior_work_gauge_on_dynamical_graphs.md`, PARTLY FOUND); then tests (a) to (d) as she
+   chooses, each pre-registered with her prediction and a held-out size.
+7. **The 8 of 10 lean in Gate U1″** (eight z-scores positive, about 2.6 errors combined): carried as a caveat on Q29 and
+   rechecked in the first run whose results are read.
 
