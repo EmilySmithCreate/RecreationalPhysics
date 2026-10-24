@@ -2336,4 +2336,12 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   her 23 October "twist_2 = 1/3"). Bending a strip into a ring of its own length (2π²B/L): 1.653 gives 11.94 B (√2 holds
   2.02 B more, ratio 1.17); 2 gives 9.87 B (4.09 B, ratio √2); √6 gives 8.06 B (5.90 B, ratio √3). Asked which line she
   means for the matter strand.
+- 2026-10-24 (evening), the owner, verbatim: "√(1 + 3) = 2, with the square i meant, compare loop of 2 to loop of root 2
+  energies" and, on "it lies in the lattice's flat planes, where the 1 × 1 × 2 doesn't": "explain this". Answered: a
+  strip closed into a ring of its own length, 2π²B/L: √2 13.96 B, 2 9.87 B, difference 4.09 B, ratio √2; with her twists
+  (half on √2, third on 2) twist energy 3.49 C against 1.10 C, ratio 3.18. Exact, for the explanation: a length-2 line
+  runs along one axis, lies in two coordinate planes and passes through a point of the other colour at its middle; the
+  lattice turns about it every 90° (quarters, not thirds), and a strip along it has two walls to lie against, 90° apart;
+  three length-2 steps never close (no triangle; the smallest ring is a square of four), while three 1 × 1 × 2
+  diagonals do (24 triangles per point). Asked again which line is the matter strand: 2 or √6.
 
