@@ -2359,4 +2359,22 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   as matter dark matter has the - twist and + twist" / "4- boundary is there is no charge. Maybe it moves on a different
   plane." / "5 yes" / "Please provide me with an updated link to the full list of outstanding questions needing answers
   from me to move forward". Recorded as VISION Update 100; the list is `docs/design/owner_questions_2026-10-24.md`.
+- 2026-10-24 (late night), the owner, verbatim: "Electron’s 1/3 curl 3 together is quark. Needs to be a whole number of
+  twists to exist in 3d space." / "Dark strands have color? What is it?" / "If that is what a nutron is, makes sense.
+  It would need a 1/third twist to excite and spin, but it’s not there because the twists cancel to flat." / "Dark
+  matter could also be one sided mobious strip shape which how could we observe something like that?" / "Nice, photons
+  are what apply curl, makes sense. Makes sense they are connected. So light lowers the curling cost or pays the
+  curling cost?" *Checks and answers, ours.* (a) Read as one rule, to confirm: anything free carries a whole number of
+  twists, and charge is the net signed thirds divided by three (electron 3 thirds, −1; proton 2/3 + 2/3 − 1/3, +1;
+  neutron 2/3 − 1/3 − 1/3, 0; pion, ±1; a lone quark cannot exist); this makes the electron and proton exactly equal and
+  opposite by one rule, is the standard rule that free particles carry whole-number charge, and would replace "a full
+  twist is neutral" with "neutral = net zero"; her confirmation owed. (b) A dark strand's "colour" is the checkerboard
+  colour of the points it sits on (a face diagonal joins two points of one colour), not quark colour. (c) Neutron
+  recorded as hers; the measured neutron has spin one half and a magnetic moment (general knowledge, to verify). (d) A
+  half twist closes a strip round a face diagonal as a Möbius band (the cube's 180° turn); in nature dark matter is seen
+  only through gravity, so its shape could show only indirectly (self-interaction, annihilation, number of kinds); in the
+  toy one-sidedness is fixed by the wiring and one-sided pieces of space already occur in burp end states (O116: 39 of
+  9,865, five whole Klein bottles). (e) Light lowers the curling cost; it does not pay it: integrating out the field
+  rewards squares (a free-energy discount from the field's room to arrange itself), and no energy changes hands; in this
+  calculation light does not make curls.
 

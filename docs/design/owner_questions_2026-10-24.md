@@ -5,17 +5,21 @@ full text is. Answer in any order; items marked ★ unblock the most. Answered i
 
 ## Particles (the handoff of 24 October)
 
-1. ★ **Charge: why the electron and the proton are exactly equal and opposite.** The electron's −1 is a bound photon
-   half-curl (her answer, Update 97); the proton's +1 is +2/3 + 2/3 − 1/3 from its strands (Update 100). Measured, the
-   two agree to about one part in 10²¹ (general knowledge, to verify). Her new idea: a photon can only apply spin to a
-   third, or prefers to. Question: does the electron's half-curl act on its three thirds so that its charge is also a
-   sum of thirds (one rule for all), or is there a second rule that makes a half-curl worth exactly three thirds?
-   (`docs/design/particle_handoff_brief_2026-10-24.md`, section 7.)
-2. **Dark against antidark: must the colour and the sign agree?** Both now mark it (Update 100). If they must agree,
-   every face diagonal on colour-0 points carries +½ and every one on colour-1 points −½. If they are independent there
-   are four kinds of dark strand. Which?
-3. **The neutron.** By the same rule it would be +2/3, −1/3, −1/3 (one up, two down strands). Confirm, and say whether
-   the neutron is "the same braid not spinning" (23 October) or this.
+1. ★ **Charge: one rule for all? (reading of her answer of 24 October, late night, to confirm).** "Needs to be a whole
+   number of twists to exist in 3d space": anything free carries a whole number of twists, and charge is the net
+   signed thirds divided by three (electron −1, proton +1, neutron 0, pion ±1; a lone quark cannot exist). This makes
+   the electron and the proton exactly equal and opposite by one rule, and replaces "a full twist is neutral" with
+   "neutral = the twists cancel to zero". Confirm, and say whether the bound half-curl reading of the electron's charge
+   (Update 97) is withdrawn.
+2. **Dark against antidark: must the colour and the sign agree?** A dark strand's "colour" is the checkerboard colour
+   of the points it sits on (a face diagonal joins two points of one colour; not quark colour). Both colour and sign
+   mark dark against antidark (Update 100). If they must agree, black-point strands always carry +½ and white-point
+   strands −½; if not, there are four kinds of dark strand. Which?
+3. ~~**The neutron.**~~ *Answered 24 October, late night: +2/3, −1/3, −1/3, the twists cancel to flat, so there is no
+   third to excite into spin (hers). Kept beside it: the measured neutron has spin one half and a magnetic moment
+   (general knowledge, to verify).*
+3a. **Dark matter as a one-sided (Möbius) strip:** a single half twist closed on itself (one-sided) or two halves
+   (two-sided)? Both are allowed by the cube's 180° turn about a face diagonal; which is a dark particle?
 4. **Her boundary prediction, as read** (Update 100): light crosses a boundary between curled and flat space unchanged,
    since nothing there carries charge; and "maybe it moves on a different plane" refers to the field along the curl,
    which cannot enter a curl at low frequency. Confirm the reading before the run.
