@@ -3186,3 +3186,20 @@ regular against anti for matter: "Yes."
   remain the cube's own two-fold turn. And whatever marks matter from antimatter must break the cube's mirror symmetry
   to hold an excess (Update 97 (c)).
 
+Update 99 (2026-10-24, night): **DECISION (the author's): body diagonals return as matter strands; the colour rule for
+matter is dropped.** Why this page changes: Update 98 moved matter to 1 × 1 × 2 diagonals to keep the rule that a
+matter strand joins one colour to the same colour, which cost the thirds their reason (the lattice has no turn about a
+1 × 1 × 2 line), and a length-2 line, considered after, gives quarters and closes no triangle. She said "maybe i was
+exploring patterns and this idea is going nowhere"; the assistant recommended keeping the rule the cube supplies and
+dropping the one it contradicts; her words: "proceed as you recommend."
+
+- **What is decided.** Matter strands are body diagonals carrying signed thirds; dark strands are face diagonals
+  carrying signed halves; handedness marks matter against antimatter (her "Yes" of the same evening). The rule that a
+  matter strand joins two points of one colour is withdrawn. Update 98's 1 × 1 × 2 diagonals are withdrawn with it.
+- **Why this version (exact).** Both counts are the cube's own turns: every 120° about a body diagonal, every 180°
+  about a face diagonal (Update 97); no number in the definition was chosen to fit.
+- **What it carries forward.** A body diagonal joins the two colours, so no closed ring of three body diagonals exists
+  (rings have four segments or more); three thirds make a braid, or one strand carrying three thirds (Update 97 (a)).
+  The colours of points no longer mark matter against antimatter; whether they still mark dark against antidark is
+  hers to say. The open items are listed in the brief's section 7.
+

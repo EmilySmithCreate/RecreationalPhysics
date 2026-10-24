@@ -31,9 +31,9 @@ depends on it yet.
   gluons carry (a bound half-curl or none; both kept) #None is my prediction#.
 
 **Confirmed later on 24 October (VISION Update 97; her comments are kept in the text below as she wrote them):** the
-twist is signed thirds on ~~body diagonals~~ 1 × 1 × 2 diagonals (matter; Update 98, the same evening: body diagonals
-join the two colours and leave the model; handedness marks matter against antimatter; the thirds there are a declared
-rule, since the lattice has no turn about that line) and signed halves on face diagonals (dark matter); the electron is
+twist is signed thirds on body diagonals (matter; Update 98 moved them to 1 × 1 × 2 diagonals for one evening, and
+Update 99 brought them back and dropped the rule that a matter strand joins one colour; handedness marks matter
+against antimatter) and signed halves on face diagonals (dark matter); the electron is
 three thirds closed into a 360° two-sided band; a closed full twist is neutral and the electron's charge is a bound
 photon half-curl with its mass ("Yes the charge comes from the photon half curl combined with the mass"); dark strands
 cannot hold the half-curl and carry no charge; light travels on the edges, the twist on the diagonals; pairs close too;

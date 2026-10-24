@@ -2344,4 +2344,8 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   lattice turns about it every 90° (quarters, not thirds), and a strip along it has two walls to lie against, 90° apart;
   three length-2 steps never close (no triangle; the smallest ring is a square of four), while three 1 × 1 × 2
   diagonals do (24 triangles per point). Asked again which line is the matter strand: 2 or √6.
+- 2026-10-24 (night), the owner, verbatim: "maybe i was exploring patterns and this idea is going nowhere." Then, on the
+  recommendation (keep body diagonals for thirds, drop the colour rule for matter): "proceed as you recommend. explain
+  any outstanding choices / predictions I have to make, and see if you can come up with something publishable on
+  particles." Recorded as VISION Update 99.
 
