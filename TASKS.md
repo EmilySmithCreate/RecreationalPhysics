@@ -982,3 +982,49 @@ before launch.
    flat sheet at three couplings fixed by amendment from the measured equilibrium curve, L = 16 and 24, held-out 32.
 3. **An exact test for the handle bound** (sandbox LOG, 19 October: handles ≥ 1 + D/24 for a four-link graph drawn on a
    closed surface) in `tests/` before anything cites it.
+
+## 24 October: the owner's particle handoff; the lattice photon built into the toy  ◑
+
+**Added 2026-10-24** (VISION Update 96; ASSUMPTIONS Q29; brief `docs/design/particle_handoff_brief_2026-10-24.md`;
+handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md`). In order:
+
+1. **Her answers to the brief's section 3** (the mapping onto the ring picture), read back as one set (rule 20).
+2. **GATE U1. Reproduce the exact average square of two-direction lattice gauge theory  ✗ (failed 2026-10-24; rerun owed).** A reproduction check of
+   `graphity.u1`'s sampler, not a test of the hypothesis. Config `configs/gate_u1_2d.json`, script
+   `scripts/run_u1_gate.py`: compact U(1) with the Wilson action on the flat 6 × 6 and 10 × 10 four-link tori, β = 0.5,
+   1, 2, 4, 8, 2,000 + 40,000 sweeps, errors from 40 blocks. **Acceptance, written before the run:** (a) at all ten
+   points the measured ⟨cos φ⟩ lies within 3.5 block errors of the exact torus value
+   (`graphity.u1.exact_mean_cos_2d`); (b) at 6 × 6, β = 8, where the torus's constraint matters, the measured value
+   differs from the infinite-lattice I₁/I₀ by more than 3.5 errors, so the gate sees the finite-torus term and not only
+   the bulk; (c) acceptance between 0.2 and 0.9 everywhere. If (a) or (b) fails, stop: the sampler or the formula is
+   wrong, and nothing from Q29 is read.
+   **Reading, 24 October** (`results/gate_u1_2d.csv`, commit 059b9741, clean tree): **FAILED on (a)**; (b) and (c)
+   pass. Eight points of ten lie within 1.7 errors; at β = 8 both tori read high, 6 × 6 by 3.9 errors (0.93716 against
+   0.93661) and 10 × 10 by 11.5 (0.93607 against 0.93526). Diagnosis (a sandbox look, `sandbox/u1_gate_topology.py`,
+   fresh seeds): the torus's winding number never left zero in 20,000 single-link sweeps at β = 8 on either torus, and
+   moved freely at β = 2; the exact value in the zero-winding sector alone is 0.93711 (6 × 6) and 0.93591 (10 × 10),
+   where the gate read 0.93716 and 0.93607. So the code and the formula agree and the sampler froze in one winding
+   sector (topological freezing, general knowledge, to verify). Fix built, not yet gated: an optional global move that
+   adds or removes one unit of winding each sweep (`Field.instanton`, `metropolis(..., instanton=...)`), with the chain
+   draw for draw unchanged when it is off (pinned by a test); on fresh seeds it gives 0.93688 ± 0.00019 (6 × 6) and
+   0.93530 ± 0.00012 (10 × 10) at β = 8. Owed, on the owner's word: Gate U1′, the same acceptance on a new config with
+   the move on, the failed run kept as it is.
+   **GATE U1′  ✗ (failed 2026-10-24 by the letter)** (the owner's "proceed", 24 October). Config `configs/gate_u1b_2d_winding.json`: Gate U1's tori,
+   couplings, sweep counts and blocks, fresh seeds, one winding move per sweep. **Acceptance, written before the run,
+   unchanged from Gate U1:** (a) all ten points within 3.5 block errors of the exact torus value; (b) at 6 × 6, β = 8,
+   more than 3.5 errors from I₁/I₀; (c) single-link acceptance between 0.2 and 0.9. If it fails, stop and report.
+   **Reading, 24 October** (`results/gate_u1b_2d_winding.csv`, commit 2903791c, clean tree): **FAILED on (a) by one
+   point**; (b) and (c) pass. Nine of ten points lie within 1.5 errors, including 6 × 6 at β = 8, which Gate U1 failed
+   (now −0.88 errors, 0.93650 against 0.93661); the winding now moves (final values −3 to 2). The tenth, 10 × 10 at
+   β = 8, reads 0.93553 ± 0.00007 against 0.93526, 3.65 errors against the limit of 3.5. Not explained yet: a
+   residual freezing on the larger torus, or block errors too small where the winding changes slowly (each block is
+   1,000 sweeps); an earlier sandbox look with the move on fresh seeds read 0.93530 ± 0.00012 there. Stopped and
+   reported; no third run without the owner's word. The cheapest next look: the winding's autocorrelation at β = 8
+   on 10 × 10, and the same point with errors from the integrated autocorrelation time.
+3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat
+   six-link space and on a curled torus (whose ring is a square the field sees).
+4. **Twist labels on strands** (a third per face diagonal, switchable off) after her answer to question 1; then tests B
+   (closure with dynamics) and E (pairs only on a closed space).
+5. **Reading tasks** of the brief's section 6 (Wilson, Kogut; Tong; Finkelstein and Rubinstein; Landauer; centre
+   vortices), on the prior-work template, before any of them is cited.
+
