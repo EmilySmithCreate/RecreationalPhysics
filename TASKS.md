@@ -982,3 +982,26 @@ before launch.
    flat sheet at three couplings fixed by amendment from the measured equilibrium curve, L = 16 and 24, held-out 32.
 3. **An exact test for the handle bound** (sandbox LOG, 19 October: handles ≥ 1 + D/24 for a four-link graph drawn on a
    closed surface) in `tests/` before anything cites it.
+
+## 24 October: the owner's particle handoff; the lattice photon built into the toy  ◑
+
+**Added 2026-10-24** (VISION Update 96; ASSUMPTIONS Q29; brief `docs/design/particle_handoff_brief_2026-10-24.md`;
+handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md`). In order:
+
+1. **Her answers to the brief's section 3** (the mapping onto the ring picture), read back as one set (rule 20).
+2. **GATE U1. Reproduce the exact average square of two-direction lattice gauge theory  ☐.** A reproduction check of
+   `graphity.u1`'s sampler, not a test of the hypothesis. Config `configs/gate_u1_2d.json`, script
+   `scripts/run_u1_gate.py`: compact U(1) with the Wilson action on the flat 6 × 6 and 10 × 10 four-link tori, β = 0.5,
+   1, 2, 4, 8, 2,000 + 40,000 sweeps, errors from 40 blocks. **Acceptance, written before the run:** (a) at all ten
+   points the measured ⟨cos φ⟩ lies within 3.5 block errors of the exact torus value
+   (`graphity.u1.exact_mean_cos_2d`); (b) at 6 × 6, β = 8, where the torus's constraint matters, the measured value
+   differs from the infinite-lattice I₁/I₀ by more than 3.5 errors, so the gate sees the finite-torus term and not only
+   the bulk; (c) acceptance between 0.2 and 0.9 everywhere. If (a) or (b) fails, stop: the sampler or the formula is
+   wrong, and nothing from Q29 is read.
+3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat
+   six-link space and on a curled torus (whose ring is a square the field sees).
+4. **Twist labels on strands** (a third per face diagonal, switchable off) after her answer to question 1; then tests B
+   (closure with dynamics) and E (pairs only on a closed space).
+5. **Reading tasks** of the brief's section 6 (Wilson, Kogut; Tong; Finkelstein and Rubinstein; Landauer; centre
+   vortices), on the prior-work template, before any of them is cited.
+
