@@ -31,7 +31,9 @@ Monte Carlo (Euclidean weight exp(beta sum_p cos phi_p), the standard Wilson act
   too. Ergodic: every link can reach every phase.
 
 Reproduction gate (TASKS, Gate U1): on a flat torus in two directions the average square is known exactly. Changing
-variables to the squares' holonomies, which on a torus obey one constraint (they sum to a multiple of 2 pi), gives
+variables to the squares' holonomies, which on a torus obey one constraint (summed with alternating signs e_p, because
+neighbouring squares are walked in opposite senses, they make a multiple of 2 pi; cos is even, so the signs drop out
+of the answer; corrected 24 October, the first version said a plain sum), gives
       Z = sum_n I_n(beta)^P,   <cos phi> = sum_n I_n^(P-1) (I_(n-1) + I_(n+1)) / 2  /  sum_n I_n^P,
 P the number of squares and I_n the modified Bessel functions (ours, exact; the character expansion of 2D lattice
 gauge theory, textbook, to verify at its source). `exact_mean_cos_2d` computes it.
@@ -156,12 +158,58 @@ class Field:
             vel += 0.5 * dt * f
         return theta, vel
 
-    def metropolis(self, theta, beta, step, n_equil, n_meas, seed):
-        """Wilson-action Monte Carlo. Returns (final theta, mean cos phi after each measured sweep, acceptance)."""
+    def square_signs(self):
+        """The signs e_p with sum_p e_p B_pl = 0 for every link, on a closed two-direction torus.
+
+        Squares are walked u0 -> v0 -> u1 -> v1 with links oriented by kind, so neighbouring squares run in opposite
+        senses; the signed sum of holonomies is identically zero, and with each holonomy wrapped into (-pi, pi] it is
+        2 pi times the winding number Q. Raises unless B^T has exactly one null direction (a closed orientable
+        surface).
+        """
+        u, s, vt = np.linalg.svd(self.B.toarray().T)
+        null = int(np.sum(s < 1e-9)) + (self.n_squares - len(s))
+        if null != 1:
+            raise ValueError(f"square signs need exactly one null direction of B^T, found {null}")
+        e = vt[-1] / np.abs(vt[-1]).max()
+        if not np.allclose(np.abs(e), 1.0, atol=1e-9):
+            raise ValueError("the null direction of B^T is not a sign vector")
+        return np.sign(e).astype(np.int64)
+
+    def winding(self, theta):
+        """Q = sum_p e_p wrap(phi_p) / (2 pi), a whole number on a closed two-direction torus."""
+        q = float(np.sum(self.square_signs() * (_wrap_array(self.B @ theta)))) / (2.0 * np.pi)
+        return int(round(q))
+
+    def instanton(self):
+        """A link field whose wrapped holonomies all equal 2 pi / P in the sense e_p (winding Q = 1).
+
+        Target holonomies h_p = e_p 2 pi / P on every square except square 0, which gets e_0 (2 pi / P - 2 pi), so
+        that sum_p e_p h_p = 0 and h lies in the range of B; solved by least squares and checked.
+        """
+        e = self.square_signs()
+        P = self.n_squares
+        h = e * (2.0 * np.pi / P)
+        h[0] -= e[0] * 2.0 * np.pi
+        x = np.linalg.lstsq(self.B.toarray(), h, rcond=None)[0]
+        if not np.allclose(self.B @ x, h, atol=1e-8):
+            raise ValueError("instanton target not reached")
+        return x
+
+    def metropolis(self, theta, beta, step, n_equil, n_meas, seed, instanton=None):
+        """Wilson-action Monte Carlo. Returns (final theta, mean cos phi after each measured sweep, acceptance).
+
+        With `instanton` (a link field from `Field.instanton`), each sweep ends with one global move
+        theta -> theta + s * instanton, s = +1 or -1 with equal chance, accepted by Metropolis on the whole action:
+        the proposal is symmetric (s and -s equally likely, and each undoes the other), so detailed balance holds,
+        and the move changes the winding by one. Without it the chain is draw for draw what it was before the
+        option existed. The returned acceptance counts single-link moves only.
+        """
         theta = np.asarray(theta, dtype=np.float64).copy()
         out = np.empty(n_meas, dtype=np.float64)
+        use = instanton is not None
+        inst = np.asarray(instanton, dtype=np.float64) if use else np.zeros(self.n_links)
         acc = _metropolis(theta, self.sq_links, self.sq_sign, self.link_sq, self.link_sgn,
-                          beta, step, n_equil, n_meas, seed, out)
+                          beta, step, n_equil, n_meas, seed, out, use, inst)
         return theta, out, acc
 
 
@@ -191,8 +239,13 @@ def _wrap(x):
     return x - 2.0 * np.pi * np.floor((x + np.pi) / (2.0 * np.pi))
 
 
+def _wrap_array(x):
+    return x - 2.0 * np.pi * np.floor((x + np.pi) / (2.0 * np.pi))
+
+
 @njit(cache=True)
-def _metropolis(theta, sq_links, sq_sign, link_sq, link_sgn, beta, step, n_equil, n_meas, seed, out):
+def _metropolis(theta, sq_links, sq_sign, link_sq, link_sgn, beta, step, n_equil, n_meas, seed, out,
+                use_instanton, inst):
     np.random.seed(seed)
     n_links = theta.shape[0]
     n_sq = sq_links.shape[0]
@@ -206,6 +259,18 @@ def _metropolis(theta, sq_links, sq_sign, link_sq, link_sgn, beta, step, n_equil
             if ds >= 0.0 or np.random.random() < np.exp(beta * ds):
                 theta[l] = _wrap(theta[l] + d)
                 accepted += 1
+        if use_instanton:
+            s = 1.0 if np.random.random() < 0.5 else -1.0
+            ds = 0.0
+            for p in range(n_sq):
+                h = _hol(theta, sq_links, sq_sign, p)
+                hi = 0.0
+                for j in range(4):
+                    hi += sq_sign[p, j] * inst[sq_links[p, j]]
+                ds += np.cos(h + s * hi) - np.cos(h)
+            if ds >= 0.0 or np.random.random() < np.exp(beta * ds):
+                for l in range(n_links):
+                    theta[l] = _wrap(theta[l] + s * inst[l])
         if sweep >= n_equil:
             s = 0.0
             for p in range(n_sq):

@@ -125,3 +125,40 @@ def test_gate_u1_short():
         err = blocks.std(ddof=1) / np.sqrt(len(blocks))
         assert abs(series.mean() - u1.exact_mean_cos_2d(beta, f.n_squares)) < 5 * err + 2e-3
         assert 0.2 < acc < 0.9
+
+
+def test_without_the_winding_move_the_chain_is_what_it_was():
+    # pinned to the module as committed in 059b9741, before the winding move existed
+    f = u1.Field(*cqg_d.torus((6, 6)))
+    th, s, a = f.metropolis(np.zeros(f.n_links), 2.0, 1.8, 10, 20, seed=77)
+    assert s.sum() == 13.741845517638462
+    assert th[:3].tolist() == [-2.003881788477, -2.3853592934992034, 0.5485423356494178]
+    assert a == 0.48657407407407405
+
+
+def test_square_signs_and_winding():
+    rng = np.random.default_rng(6)
+    for dims in [(6, 6), (6, 10)]:
+        f = u1.Field(*cqg_d.torus(dims))
+        e = f.square_signs()
+        assert np.abs(e @ f.B.toarray()).max() < 1e-9 and set(np.unique(e)) == {-1, 1}
+        inst = f.instanton()
+        h = (f.B @ inst + np.pi) % (2 * np.pi) - np.pi
+        assert np.allclose(e * h, 2 * np.pi / f.n_squares, atol=1e-8)
+        assert f.winding(inst) == 1 and f.winding(-inst) == -1
+        for _ in range(20):
+            th = rng.uniform(-np.pi, np.pi, f.n_links)
+            q = f.winding(th)
+            # adding the instanton raises the winding by one unless a holonomy is pushed across pi
+            hol = (f.B @ th + np.pi) % (2 * np.pi) - np.pi
+            if np.all(np.abs(hol + e * 2 * np.pi / f.n_squares) < np.pi - 1e-6) and np.all(np.abs(hol) < np.pi - 1e-6):
+                assert f.winding(th + inst) == q + 1
+
+
+def test_gate_u1_short_at_large_beta_with_the_winding_move():
+    f = u1.Field(*cqg_d.torus((6, 6)))
+    inst = f.instanton()
+    th, series, acc = f.metropolis(np.zeros(f.n_links), 8.0, 0.88, 500, 8000, seed=8, instanton=inst)
+    blocks = series.reshape(40, -1).mean(axis=1)
+    err = blocks.std(ddof=1) / np.sqrt(len(blocks))
+    assert abs(series.mean() - u1.exact_mean_cos_2d(8.0, f.n_squares)) < 5 * err + 2e-4

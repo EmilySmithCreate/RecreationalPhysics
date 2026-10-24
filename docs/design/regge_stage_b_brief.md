@@ -105,7 +105,8 @@
 ## Current definitions (kept up to date; read this box first)
 
 - **24 October:** the owner's particle handoff refines this box (her answer, "Refines it"); the proposed mapping
-  (a strand is a face diagonal with a third of a twist; a ring closes with three; light the untwisted travelling
+  (a strand is a segment, which one open, with a third of a twist (corrected the same day: her tape is the body
+  diagonal, not a face diagonal); a ring closes with three; light the untwisted travelling
   excitation) is in `docs/design/particle_handoff_brief_2026-10-24.md` and changes nothing here until she confirms it.
 
 - **The particle (hers, Update 86, 21 October):** a twist carried around a closed ring of diagonal links, possibly

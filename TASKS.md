@@ -989,7 +989,7 @@ before launch.
 handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md`). In order:
 
 1. **Her answers to the brief's section 3** (the mapping onto the ring picture), read back as one set (rule 20).
-2. **GATE U1. Reproduce the exact average square of two-direction lattice gauge theory  ☐.** A reproduction check of
+2. **GATE U1. Reproduce the exact average square of two-direction lattice gauge theory  ✗ (failed 2026-10-24; rerun owed).** A reproduction check of
    `graphity.u1`'s sampler, not a test of the hypothesis. Config `configs/gate_u1_2d.json`, script
    `scripts/run_u1_gate.py`: compact U(1) with the Wilson action on the flat 6 × 6 and 10 × 10 four-link tori, β = 0.5,
    1, 2, 4, 8, 2,000 + 40,000 sweeps, errors from 40 blocks. **Acceptance, written before the run:** (a) at all ten
@@ -998,6 +998,17 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    differs from the infinite-lattice I₁/I₀ by more than 3.5 errors, so the gate sees the finite-torus term and not only
    the bulk; (c) acceptance between 0.2 and 0.9 everywhere. If (a) or (b) fails, stop: the sampler or the formula is
    wrong, and nothing from Q29 is read.
+   **Reading, 24 October** (`results/gate_u1_2d.csv`, commit 059b9741, clean tree): **FAILED on (a)**; (b) and (c)
+   pass. Eight points of ten lie within 1.7 errors; at β = 8 both tori read high, 6 × 6 by 3.9 errors (0.93716 against
+   0.93661) and 10 × 10 by 11.5 (0.93607 against 0.93526). Diagnosis (a sandbox look, `sandbox/u1_gate_topology.py`,
+   fresh seeds): the torus's winding number never left zero in 20,000 single-link sweeps at β = 8 on either torus, and
+   moved freely at β = 2; the exact value in the zero-winding sector alone is 0.93711 (6 × 6) and 0.93591 (10 × 10),
+   where the gate read 0.93716 and 0.93607. So the code and the formula agree and the sampler froze in one winding
+   sector (topological freezing, general knowledge, to verify). Fix built, not yet gated: an optional global move that
+   adds or removes one unit of winding each sweep (`Field.instanton`, `metropolis(..., instanton=...)`), with the chain
+   draw for draw unchanged when it is off (pinned by a test); on fresh seeds it gives 0.93688 ± 0.00019 (6 × 6) and
+   0.93530 ± 0.00012 (10 × 10) at β = 8. Owed, on the owner's word: Gate U1′, the same acceptance on a new config with
+   the move on, the failed run kept as it is.
 3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat
    six-link space and on a curled torus (whose ring is a square the field sees).
 4. **Twist labels on strands** (a third per face diagonal, switchable off) after her answer to question 1; then tests B

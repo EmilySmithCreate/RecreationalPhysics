@@ -3048,7 +3048,9 @@ kept as received; her ideas are its section 1) and answered four questions on it
 ingredient under S1. Brief: `docs/design/particle_handoff_brief_2026-10-24.md`.
 
 - **What is decided.** (1) The handoff refines the twisted-ring particle of Update 86; it withdraws nothing. The
-  proposed mapping (a strand is a face diagonal carrying a third of a twist, her "tape" of 23 October; a ring closes
+  proposed mapping (a strand is ~~a face diagonal~~ a segment carrying a third of a twist, ~~her "tape" of 23
+  October~~ which segment left to the worksheet's Q1, *corrected the same day: her tape, "4 tapes" corner to corner,
+  is the body diagonal, √3*; a ring closes
   only with three; light is the untwisted travelling excitation) is read back to her as one set before any code
   depends on it (rule 20; brief, section 3). (2) The electron to test is three thirds, with her idea, verbatim: "the
   3 twists colapse 3 versions of arrangement. the entropy decrease of 1 becoming 3 is 1 photon." (3) **New
@@ -3060,8 +3062,10 @@ ingredient under S1. Brief: `docs/design/particle_handoff_brief_2026-10-24.md`.
   without a photon, which rides along them) is the published lattice photon, and on the toy's flat tori it has the
   right count: one polarisation with four links, two with six, every frequency 2 √(Σ sin²(kᵢ/2)), never faster than
   one link per tick. On any closed graph charges add to zero (Gauss's law), and mod 3 the only small sets allowed are
-  a pair and a same-way triple, the meson and baryon patterns; this is her own tape rule of 23 October (a loop needs a
-  whole twist to close) in Gauss's language. Three thirds per electron keeps the relation every observed particle obeys,
+  a pair and a same-way triple, the meson and baryon patterns; ~~this is her own tape rule of 23 October (a loop needs a
+  whole twist to close) in Gauss's language~~ *corrected the same day:* this is neutrality over the whole closed space,
+  not confinement (a lone third with its partner far away is allowed), and not her tape rule, which is about one
+  strand. Three thirds per electron keeps the relation every observed particle obeys,
   3Q + t ≡ 0 mod 3 (t = quarks minus antiquarks; published form: Tong 2017, abstract read), which one quark-third would
   break; it is the braid model's count ([BT05]). Her entropy idea has an exact count behind it: three equal twists have
   one placement, a set with one odd twist has three (the braid model's three colours), so closing loses ln 3, and the
@@ -3072,8 +3076,15 @@ ingredient under S1. Brief: `docs/design/particle_handoff_brief_2026-10-24.md`.
   pulse half a wave long travels but can carry any energy, so "half" fixes no unit. Any state built on link labels comes
   back with sign +1 after a full turn, so spin one half cannot come out of the toy as it stands; it must be put in, or
   come from a loop in the space of configurations (Finkelstein and Rubinstein 1968, general knowledge, to verify).
-  Landauer's price is a floor proportional to temperature, so it cannot set a photon's energy or the electron's mass,
-  and with interchangeable positions there is one placement for every set.
-- **Open, hers (brief, section 3):** whether a lone third that cannot close is meant as confinement; what conserved
+  Landauer's price is a ~~floor proportional to temperature, so it cannot set a photon's energy or the electron's
+  mass~~ minimum, not a value, even at a fixed formation temperature *(corrected the same day)*, and with
+  interchangeable positions there is one placement for every set. *Added the same day:* the three-placement triples
+  are not neutral mod 3, so three becoming one needs the labels to change on closing; energy leaving on closing would
+  make the unit lighter (a mass defect, general knowledge, to verify), against her 21 October "connecting energy";
+  and the photon edges were built on are edges she called "not real ... just helpful to visualize" on 23 October.
+- **Gate U1 failed the same day** at β = 8 (the sampler froze in one winding sector; TASKS, its reading); a winding
+  move is built and tested; Gate U1′ waits on her word, and nothing from Q29 is read until a gate passes.
+- **Open, hers (brief, section 3):** which segment is a strand; whether a ring also closes as a pair; whether a lone
+  third that cannot close is meant as confinement; whether edges carry light; what conserved
   count carries charge if charge is spin speed (23 October); matter against antimatter as opposite thirds, the
   square's two diagonals, or both; whether "1 becoming 3" means three becoming one; what gluons carry.

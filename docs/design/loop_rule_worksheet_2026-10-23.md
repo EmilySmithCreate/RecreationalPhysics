@@ -990,3 +990,106 @@ graph (the handoff of 23 October, item 2.2); any test in the toy does.
     beside it?
 14. **Q11** (generations). Do the three generations come from (a) longer hypotenuses; (b) braid patterns; (c) not this
     rule yet?
+
+---
+
+## Addendum, 24 October 2026: what the particle handoff and its looks move
+
+*Added by a later session; nothing above is edited. Sources: her handoff (`docs/geometric_particle_model_handoff_2026-10-24.md`,
+her ideas in its section 1), her four answers of 24 October (`sandbox/NOTEBOOK.md`, last two entries), the exact looks
+(`sandbox/out/particle_handoff_looks_2026-10-24.txt`), and `docs/design/particle_handoff_brief_2026-10-24.md`. Each line
+was mapped by one reader and checked by a second told to refute it; claims that did not survive are left out. Kinds as
+above. Three notebook lines of 23 October after this worksheet's read range bear on it and are cited by line: :2279
+(c) (edges "not real"), :2283 (a) ("short halfs and long thirds"), :2285 (the coin).*
+
+**Settled or narrowed by her own words of 24 October**
+- **Q4 (electron): (b) is out.** Her answer "3 thirds" removes one third on a strand that does not close. It does not
+  choose between (a) and (c), and it equals one whole twist only under Q2 (a); under Q2 (b) three thirds close a
+  one-sided loop. C7 is now between two statements of hers: the three-thirds electron (24 October) and the proton's "a
+  bunch of twists" (:2264); its kind line ("the record's reading against her words") is out of date.
+- **Q10 (light) gains a third description of hers, kept as three variants:** "a traveling half-curl" (handoff idea 2;
+  her answer "Keep all as variants"), beside the untwisted loop and the twist that can be undone. C6 is widened, not
+  settled.
+
+**Narrowed by exact results (each conditional where marked)**
+- **Slot 2, the twist's definition:** in the photon field built today a whole turn of phase round a square costs
+  exactly what no turn costs; only the turn modulo a whole turn is seen. So her twist (a closed loop needs a whole
+  twist; twist count is mass) cannot be that field's holonomy on one square; it has to be a separate label or a
+  winding counted over many squares (ours: a winding of n turns spread over A squares costs about (2πn)²/(2A)).
+- **Slot 8 and C3, spin one half:** four quarter turns of the cubic lattice return every link with its orientation, so
+  any state built on link labels (angles, thirds, twists, frames) comes back with sign +1 after a full turn. No
+  electron, proton or neutron of this toy carries spin one half unless it is put in or comes from a loop in the space
+  of configurations (Finkelstein and Rubinstein 1968, general knowledge, to verify). This bears on every Q8 option
+  alike and does not tell them apart; the neutron is no longer the only place spin and measurement meet.
+- **Slot 8, Q8 (d):** her handoff idea 3 (a one-third twist is not a charge) removes the reading in which each third
+  carries e/3; Bilson-Thompson's form (a whole twist per ribbon is e/3) and her own "a braid with one unit of charge,
+  one twist" remain.
+- **Slot 8 against the observed table (conditional on her thirds being the quarks' thirds):** every observed particle
+  obeys 3Q + t ≡ 0 mod 3, so whatever sets a "speed of spin" would have to give charges quantized and tied to the
+  count of thirds. Her three-thirds electron is compatible with −1; one quark-third is not.
+- **Slot 10, half-curl A2:** a 180° bend has no meaning for a field on fixed links (a path that turns back carries
+  holonomy zero). **A3:** a half turn round a square is that square's most expensive state, and a pulse launched with
+  it did not travel (a sandbox look, for that launch only).
+- **Slot 6, Q6 (b) and C4:** her entropy idea cannot be the binding that holds most of a proton's mass: Landauer's
+  bound is a minimum, not a value, and energy leaving on closing makes the closed unit lighter (a mass defect, general
+  knowledge, to verify), the opposite sign from her 21 October "connecting energy". Q6 (b) as worded asks only about a
+  binding that adds mass; if she means both, it needs a clause for a released closure energy.
+- **Slot 5, Q5 (b) (conditional):** if her dark half twist were a half turn of phase on one square, two halves joined
+  on that square would cost nothing, so her "exact mass" for the full dark unit could not come from this energy. Her
+  half twist sits on √2, which today's field does not carry, so her own reading is untouched.
+
+**New options the questions lack**
+- **Q1:** handoff idea 8's 1 × 1 × 4 line (length √18 = 3√2, one kind to the same kind, through no lattice point), as
+  "different jobs" under (e). The handoff ties it to gluons, not strands.
+- **Q2 (c):** a third as a third of a count (a three-valued label per strand, counted at the points), under which the
+  60° against 120° question does not arise; that it counts her twist is ours.
+- **Q4 (c) / Q6:** her entropy idea as a formation step: closing three twists gives up ln 3 and one photon. Exact
+  caveats: the three-placement triples (+ + 0, + + −) total 2 and 1 mod 3, so the labels must change on closing; and
+  one photon per electron formed has to be squared with her 23 October "exactly 2 photons, same as it took to create
+  them". Scale (general knowledge, to verify): about 1.6 × 10⁹ photons per baryon today, so closure photons cannot be
+  most of the light.
+- **Q7 (a):** the handoff's persistence rule (protected by a conservation law, with no allowed fast decay; spin one
+  half not required) as a definition, offered by the handoff's writer and endorsed by her only in general.
+- **Q7 (b):** whether a matter count obeys a whole-number Gauss law (so any surplus is balanced somewhere, though not
+  necessarily by antimatter of its kind) or a mod-3 one (so whole triples need no partner). The toy now has one
+  conserved Gauss-law charge, in the photon field, uncoupled to curl, uncurl or twist.
+- **Q8 (e):** charge as the Gauss's-law count of the photon field (charges then come in cancelling sets on a closed
+  space, which is her handoff idea 5). Caveat: a classical field's divergence is any real number, so "exactly −1 for
+  every copy" needs whole-number labels.
+- **Q9:** antimatter as the opposite third and the other kind's diagonal at once (the brief's proposal). Exact: the kind
+  swap and the cube's reflections are both symmetries, so this carries no excess either.
+- **Q10 (c):** the photon as an excitation riding existing links (handoff idea 1), now with a candidate carrier in code
+  (`graphity.u1`), which has not passed its reproduction gate (below).
+
+**Tensions created or sharpened**
+- **Slot 1 / C1 / C9 / Q1:** the brief of 24 October first labelled her tape a face diagonal; corrected the same day
+  (the tape is the body diagonal, "4 tapes"). Her own later statements pull Q1 both ways: :2283 (a) gives the third to
+  the longer length and the half to √2, and keeps "2", not √3, which weakens reading (d); :2285 puts matter and
+  antimatter on a square's two face diagonals, which would dissolve C9. :2279 (c) puts the curling cost in "same point
+  type to same point type" diagonals, "surface or internal", which holds both sides of C9 in one sentence.
+- **Slot 1 (e) / Q10:** the photon field was built on the toy's links, the edges; on 23 October (:2279 (c)) she called
+  the edges "not real in our model they are just helpful to visualize". One reconciliation (ours): edges carry light,
+  diagonals carry the twist. Brief, question 7.
+- **Slot 3 with Q4:** under the brief's proposed closure, a three-thirds electron and a three-strand proton braid are the
+  same object unless the strand kind, the spin speed or the curl energy separates them. Twist count alone gives a mass
+  ratio of 1 (Q3 (a)/(b)) or 3 (Q3 (c)) against about 1,836 (general knowledge, to verify).
+- **Slot 3, a two-strand unit:** the mod-3 count allows a pair (one third each way) as well as a same-way triple, and
+  handoff idea 6 wants a two-part route for mesons; whether +⅓ with −⅓ closes has to be stated (brief, question 1).
+- **Slot 9 (a) with three thirds:** under mod-3 labels three thirds one way and three the other both total 0, and as a
+  phase a whole turn equals none; so the sense of a closed three-third twist must be stored as a whole-number winding
+  or something else outside these labels for "reverse twist = antimatter" to work.
+- **Slot 10, her "one speed" (:2191):** the lattice photon never exceeds one link per tick, but that value is put in
+  (inertia and κ set equal), it is reached only for long waves, and short waves are slower and faster along a cube
+  diagonal than along an axis (2.7 % at |k| = 1, 10 % at |k| = 2). Her "an untwisted loop loses energy over time"
+  (:2158) has no counterpart for a small pulse in static space (energy drift 2 × 10⁻⁵).
+- **X3 / C8:** if colour is the three orders of the strands (a three-valued label), the toy can reproduce the meson and
+  baryon counting but not colour dynamics (the handoff's own warning: three-valued labels are not SU(3)).
+
+**Unchanged:** Q2 (what a third is a third of; "3 thirds" closes under (a) or (b)), Q3 (her words do not narrow it),
+Q5's options and its spin clause, Q7 (b) and C10 (nothing of hers today touches the lip or the excess), C12, X1, X2,
+Q11 (three thirds cannot tell the electron, muon and tau apart).
+
+**One state change to note.** Slot 8 (iii) and slot 10 (iii) say the toy has no clock but the count of moves and no
+object for light. Both are now out of date for the photon field (`graphity.u1` evolves in ticks), with one caveat:
+**Gate U1 failed on 24 October** at β = 8 (the sampler froze in one winding sector; TASKS, its reading), so nothing
+from that field is read until Gate U1′ passes.

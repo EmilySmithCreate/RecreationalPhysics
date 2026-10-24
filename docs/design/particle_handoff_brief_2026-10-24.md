@@ -13,8 +13,12 @@ The box of `docs/design/regge_stage_b_brief.md` stays the source of truth for th
 refinement she chose on 24 October ("Refines it"), **proposed, to confirm as one set (section 3)**. Nothing in code
 depends on it yet.
 
-- **Strand (proposed):** a face diagonal of a cube (her "tape" of 23 October) carrying a twist of one third, one way
-  or the other. A lone strand is neutral (handoff idea 3; "charge is only spin", 23 October).
+- **Strand (proposed):** ~~a face diagonal of a cube (her "tape" of 23 October)~~ one segment carrying a twist of one
+  third, one way or the other; which segment is open (worksheet Q1). A lone strand is neutral (handoff idea 3;
+  "charge is only spin", 23 October). *Corrected 24 October, after a check: her tape "run to its opposite corner,
+  there are 4 tapes" is a cube's body diagonal, √3, joining the two kinds, not a face diagonal; and her later words
+  of 23 October give the third to the longer length and the half to √2 ("short halfs and long thirds"), while her coin
+  puts matter and antimatter on a square's two face diagonals. Her own statements pull Q1 both ways.*
 - **Closure (proposed):** a ring closes only with a whole twist, so three thirds braid into one closed unit (her tape
   picture of 23 October; her answer of 24 October, "3 thirds"). The electron is three thirds closed, carrying a
   photon-like curl's energy (handoff idea 4).
@@ -59,9 +63,13 @@ A sandbox look: it can narrow or kill, never support. Built lattices only.
 3. **The charge ledger.** On any closed graph, each link adds to one point what it takes from another, so the charges
    (Gauss's law) add to zero: to 10⁻¹⁴ for real values, to 0 mod 3 for three-valued labels. Brute force over all
    531,441 three-valued labellings of a closed 2 × 3 grid: exactly the 243 source patterns with total 0 mod 3 occur,
-   and all of them do. So on a closed space a lone third cannot exist, and the smallest allowed sets are a pair (one
-   each way) and a same-way triple: the meson and baryon patterns, from the count alone. *Ours:* this is her tape
-   rule's "a loop needs a full twist to close", in the language of Gauss's law; both say a lone third is confined.
+   and all of them do. So a closed space cannot hold a net third, and the smallest allowed sets are a pair (one
+   each way) and a same-way triple: the meson and baryon patterns, from the count alone. ~~*Ours:* this is her tape
+   rule's "a loop needs a full twist to close", in the language of Gauss's law; both say a lone third is confined.~~
+   *Corrected 24 October, after a check:* this is neutrality over the whole closed space, not confinement: a single
+   third here with its partner far away is allowed. Confinement (a cost that grows with separation) would need an
+   energy, which the ledger does not supply. Her tape rule (a loop needs a whole twist to close) is a separate
+   statement about one strand, not this count.
 4. **The 2π gate.** A quarter turn of the cubic lattice, applied four times, returns every link to itself with its
    own orientation (checked; the energy is unchanged by one quarter turn). So any state built on link labels (angles,
    thirds, twists) comes back with sign +1 after a full turn: a spinor's −1 cannot come out of this state space.
@@ -84,18 +92,25 @@ A sandbox look: it can narrow or kill, never support. Built lattices only.
    Sec. II). So going from a coloured triple to an all-alike one gives up ln 3 = 1.099 of entropy (in units of k).
    *What checks out (general knowledge, to verify; Landauer 1961):* giving up ln 3 of entropy into surroundings at
    temperature T requires at least kT ln 3 of energy carried away, and one photon can carry it. *What does not:* that
-   price is a floor proportional to T, not a fixed energy, so it cannot by itself set a photon's energy or the
-   electron's mass; and with interchangeable positions every set has one placement, so the idea needs ordered strands
-   (the interchangeable-points rule). The literal words "1 becoming 3" would be a gain of entropy; read as 3 becoming
-   1, to confirm.
+   price is a ~~floor proportional to T, not a fixed energy, so it cannot by itself set a photon's energy or the
+   electron's mass~~ minimum, not a value: even at one formation temperature (her 21 October "at a cirtain specific
+   temp") it says how much at least, never how much *(corrected 24 October, after a check)*; and with interchangeable
+   positions every set has one placement, so the idea needs ordered strands (the interchangeable-points rule). The
+   literal words "1 becoming 3" would be a gain of entropy; read as 3 becoming 1, to confirm. *Added 24 October,
+   after a check (exact, from the same output):* the triples with three placements (+ + 0, + + −) total 2 and 1 mod 3,
+   so they are not neutral sets under item 3's count; three becoming one therefore needs the labels themselves to
+   change on closing, not only their order. Energy leaving on closing would make the closed unit lighter than its
+   parts (a mass defect, general knowledge, to verify), the opposite sign from her 21 October "connecting energy" that
+   holds most of a proton's mass. And one photon per electron formed has to be squared with her 23 October account, in
+   which a pair cancels into "exactly 2 photons, same as it took to create them".
 
 ## 3. The mapping onto the ring picture, read back as one set (her confirmation owed; rule 20)
 
 | Handoff (24 Oct) | Ring picture (Updates 85 to 91; notebook of 23 Oct) | Proposed reading |
 |---|---|---|
-| Flat links exist without a photon | The toy's links; stage A and B fields ride on them | Same: the field of `graphity.u1` lives on the toy's links |
+| Flat links exist without a photon | The toy's links; stage A and B fields ride on them; but 23 Oct: the edges "are not real in our model they are just helpful to visualize" | The field of `graphity.u1` lives on the toy's links (edges); **tension** with her 23 Oct line, question 7 |
 | Photon = travelling half-curl | "An untwisted ring is light" | Light is the untwisted travelling excitation; on a ring, a phase running round with no net third |
-| Neutral one-third twist | The tape on a face diagonal must twist ⅓ either way (23 Oct) | One strand = one face diagonal with ±⅓; neutral |
+| Neutral one-third twist | The tape ~~on a face diagonal~~ corner to corner (a body diagonal, √3; "4 tapes") must twist ⅓ either way (23 Oct; corrected 24 Oct) | One strand = one segment with ±⅓, neutral; which segment is worksheet Q1 |
 | Electron = third + photon-curl (now three thirds) | Three come together into a braid with one full twist (23 Oct) | Electron = three thirds closed, plus curl energy |
 | Charge from the whole configuration | "Charge is only spin, speed of spin matters" (23 Oct) | **Open:** which conserved quantity obeys Gauss's law and gives pairs; spin speed is not yet a count |
 | Mass as stored curl | "Twist count = curling energy = mass" (23 Oct) | Same |
@@ -103,12 +118,20 @@ A sandbox look: it can narrow or kill, never support. Built lattices only.
 | Gluon: confined, half-curl bound or absent | not in the ring picture | Both kept; published relative named in section 6 |
 
 Questions, to be answered in one sitting:
-1. Is a strand one face diagonal with a third of a twist, and does a ring close only with three?
-2. Is "a lone third cannot close" meant as the model's confinement (section 2, item 3)?
+1. Is a strand one segment with a third of a twist (which segment is worksheet Q1), and does a ring close only with
+   three, or also as a pair, one third each way (the two-part meson route of handoff idea 6)?
+2. Is "a lone third cannot close" meant as confinement, a cost that grows as a third is pulled away? (The charge
+   ledger gives neutrality over the whole space, not that cost.)
 3. Charge: if charge is spin speed, what in the model is counted so that charges come in cancelling pairs?
 4. Matter against antimatter: opposite thirds, the square's two diagonals, or the one as the other?
 5. The entropy idea: three arrangements becoming one, with ln 3 leaving as one photon?
 6. Gluons: keep both readings, or choose?
+7. Light on the edges: on 23 October the edges joining the two kinds "are not real in our model they are just helpful
+   to visualize"; on 24 October the photon field was built on them. Do edges carry light while diagonals carry the
+   twist (two jobs), or should the field ride on diagonals instead?
+
+The loop-rule worksheet of 23 October (`docs/design/loop_rule_worksheet_2026-10-23.md`) has a dated addendum listing
+what this handoff and its looks move, slot by slot; read the two together in one sitting.
 
 ## 4. What is built (ASSUMPTIONS Q29)
 
@@ -123,7 +146,8 @@ Not in this piece: the field riding on a graph whose wiring switches; twist labe
 cost.
 
 **Gate U1** (TASKS): the average square on the flat 6 × 6 and 10 × 10 four-link tori against the exact torus answer,
-at five couplings, with the acceptance written before the run.
+at five couplings, with the acceptance written before the run. **Failed on 24 October at β = 8** (the sampler froze in one winding sector;
+diagnosis and the winding move in TASKS, Gate U1's reading); Gate U1′ is owed, and nothing from Q29 is read until it passes.
 
 ## 5. Next, in order
 
