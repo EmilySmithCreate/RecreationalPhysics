@@ -1036,7 +1036,10 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    (c). All ten points within 2.5 errors of the exact torus value (largest 2.48, 10 × 10 at β = 2); 10 × 10 at β = 8,
    the point Gate U1′ failed, 0.93527 ± 0.00004 against 0.93526; 6 × 6 at β = 8 20.8 errors from I₁/I₀, so the
    finite-torus term is seen; acceptance 0.45 to 0.75. Reported beside it, not part of the rule: eight of ten points
-   lie above the exact value, about 2.6 errors combined; watched in later runs. The three gate runs stand together:
+   lie above the exact value, about 2.6 errors combined; watched in later runs. *Reading as framed by the Codex audit (O154):* passed on the third, longer test with the topology-changing sampler;
+   independent reliability remains to be assessed; U1″ does not turn U1 and U1′ into passes. The lean: eight positive
+   signs of ten occur 5.5 % of the time by chance, and the combined score +2.64 errors is nominally p ≈ 0.008 if the
+   errors are independent and calibrated (exploratory). The three gate runs stand together:
    U1 froze, U1′ failed one point by 0.15 of an error past the limit, U1″ passed at twice the precision. From here
    results from `graphity.u1` with the winding move may be read; without the move they may not at large β.
 3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat

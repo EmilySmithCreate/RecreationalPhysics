@@ -29,7 +29,7 @@ full text is. Answer in any order; items marked ★ unblock the most. Answered i
    strand can also be negative.
 3. ~~**The neutron.**~~ *Answered 24 October, late night, in two steps: +2/3, −1/3, −1/3, the twists cancel to flat, "It
    would need a 1/third twist to excite and spin, but it’s not there"; then "spin with no twist can be mildly magnetic
-   but no charge", her current position (Update 102). Kept beside it: the measured neutron has spin one half and a magnetic moment
+   but no charge", her current position (Update 102); whether "can be" means the neutron does spin is to confirm *(corrected 24 October after the Codex audit, O154)*. Kept beside it: the measured neutron has spin one half and a magnetic moment
    (general knowledge, to verify).*
 3a. ~~**Dark matter as a one-sided (Möbius) strip**~~ *Answered: both occur; odd multiples of ½ one-sided, whole
    numbers two-sided (Update 101).*

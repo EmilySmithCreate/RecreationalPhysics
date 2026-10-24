@@ -67,6 +67,21 @@ Checking agent: minimal moose plaquette Wilson loop pseudo-Goldstone; lattice sm
 
 (4) Gauge fields on emergent-geometry graphs. These exist in print, but not on combinatorial-quantum-gravity graphs. Quantum graphity (Konopka, Markopoulou and Smolin, hep-th/0611197) keeps 'loop operators with exactly four edges' on a regular cubic pattern, with a three-valued quantum link and no wrapping loops. Konopka, Markopoulou and Severini (0801.0861) claim an emergent U(1) from an even-cycle loop operator. They note that cycles winding round a tube about 8 edges round lower the graph energy, but they never discuss the gauge spectrum. Compact U(1) and SU(2) on 2D causal dynamical triangulations measure torelons but keep wrapping loops out of the action (Candido et al., 2010.15714, 2112.03157). Trugenberger's 2025 review (2512.17676, full text searched) and the other combinatorial-quantum-gravity papers (1610.05934, 1901.09870, 2311.17526, abstracts only) contain no gauge field or photon.
 
+## Added after the Codex audit (24 October, O154)
+
+Two works the searches missed, bibliographic data checked at Crossref on 24 October, abstracts checked by the Codex
+reviewer, not read by us:
+- R. L. Renken, S. M. Catterall and J. B. Kogut, "U(1) lattice gauge theory coupled to quantum gravity", Nucl. Phys.
+  B Proc. Suppl. 34, 730-732 (1994), doi:10.1016/0920-5632(94)90496-0: a U(1) field coupled to dynamical triangulations
+  in three dimensions, the direct precedent for a gauge field on fluctuating geometry, decades before 2010.15714.
+- M. Levin and X.-G. Wen, "Quantum ether: Photons and electrons from a rotor model", Phys. Rev. B 73, 035122 (2006),
+  arXiv:hep-th/0507118: a bosonic model on a cubic lattice whose low-energy limit has massless U(1) gauge modes and
+  Dirac fermions; the published model nearest the particle handoff's aim of photons and fermions from one lattice.
+
+Corrections: A. Romeo is a listed author of hep-ph/0107229 (Ferrer, de la Incera and Romeo; marked unverified above);
+arXiv:1003.4643 also lists M. Panero. The verdict stands; the sentence for a write-up should say only that these
+searches, on 24 October, did not locate the exact side-four, all-four-cycles combination.
+
 ## Verdict
 
 **PARTLY FOUND.** Every ingredient is published; the combination is not, as far as these searches reached.

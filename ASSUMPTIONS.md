@@ -4335,7 +4335,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
     then has two different polarisations: field lying in the open directions keeps ω² = 4 sin²(k/2), the flat-space
     light exactly; field pointing along the curl has ω² = 4 + 4 sin²(k/2), a mass of 2 in lattice units (κ = 1, unit
     inertia), so it is slower than light at every k and cannot travel at all below ω = 2. Sides 6 and 8 give no mass:
-    6 × 8 × 8 has the same spectrum as 8 × 8 × 8. Exact consequence (standard wave physics, ours): light of that
+    6 × 8 × 8 has the same dispersion relation as 8 × 8 × 8 (not the same spectrum: the sizes differ) *(corrected 24 October after the Codex audit, O154)*. Exact consequence (standard wave physics, ours): light of that
     polarisation below ω = 2 arriving from flat space at a curled region cannot enter it and is reflected.
   - ~~**Her prediction, scored.** "Same speed through curved space" holds for the polarisation lying in the open
     directions and fails for the one along the curl; "bounces or slows" happens in the toy without charge or spin, from
@@ -4413,4 +4413,34 @@ author and should be disclosed as such in any submission. Physics estimates mark
     restored from transcripts and reproduce their outputs exactly).
   - **The independent pass still owed:** a different model (Codex) on the same day, briefed blind to this one
     (`docs/reviews/2026-10-24_codex_audit_brief.md`, pinned to commit 39466620).
+- **O154 AUDIT (rule 12, a different model): Codex on the record of 24 October (24 October 2026).** The report is kept as
+  received at `docs/reviews/2026-10-24_codex_report.md`; briefed by `docs/reviews/2026-10-24_codex_audit_brief.md`,
+  pinned to commit 39466620, blind to the in-session audit (O153). The reviewer could not clone the repository, so it
+  did not run the repository's tests or scripts; it rebuilt the graphs, incidence matrices, character sums, the side-4
+  Bloch spectrum and a winding diagnostic in its own code, and read the rest from source and saved results.
+  - **What it found that O153 also found (two blind audits agreeing):** the stale "bound half-curl" line in the
+    questions file; the boundary reading credited to the owner; the first sandbox look on the field's free energy
+    promoted to a strong statement; the U1″ pass as conditional, with the eight-of-ten lean worth following up; the
+    particle definitions as assigned labels, not derived (charge, spin, statistics, confinement, C against P).
+  - **What it found that O153 did not:** (1) the winding move's docstring said it changes the winding by exactly one;
+    on random fields it does so only about a third of the time (183 and 187 of 500 on 6 × 6 and 10 × 10), though the
+    proposal stays symmetric and detailed-balanced; docstring corrected. (2) "Every correction term is positive, so the
+    leading order underestimates the effect", said to the owner in chat, does not follow: each graph's corrections are
+    positive, but the sign of the tube-minus-sheet difference needs its own proof. The exact calculation (Update 102)
+    does show the tube's corrections larger at every β tried, under the Wilson weight, so the conclusion held there,
+    but the argument given for it was invalid. (3) O151's "the same spectrum" for 6 × 8 × 8 and 8 × 8 × 8 should be
+    "the same dispersion relation"; corrected. (4) The 531,441-label census ran on a 2 × 3 grid that is not one of the
+    toy's valid graphs (a side of 2 doubles links, a side of 3 is not bipartite); its result is a general counting
+    identity (the rank of the incidence matrix over thirds on a connected graph), not a statement about the toy. (5)
+    Landauer's bound cannot select one photon; "ln 3 leaves as one photon" is her idea, and the bound only says a
+    photon could carry enough. (6) The neutron line "can be" was firmed into a definition; returned to her. (7) Two
+    missing works, Renken, Catterall and Kogut (1994) and Levin and Wen (2006), and two author corrections; added to
+    the prior-work note and the bibliography. (8) Framing for the gate and for the free energy: "passed on the third,
+    longer test; independent reliability remains to be assessed"; and "integrating out the compact U(1) field favours
+    graphs with more counted squares at leading order" in place of "light lowers the curling cost".
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. Its limits, stated by
+    itself: no execution of the repository's own code; its snapshot predates the in-session corrections, so its points
+    on stale lines were already fixed at commit ccb4c4ec; it did not see the zero-of-energy sign problem (O153's
+    largest finding), since that rests on Q29's two forms of the energy rather than on the algebra it checked, which it
+    confirmed correct under the Wilson weight.
 

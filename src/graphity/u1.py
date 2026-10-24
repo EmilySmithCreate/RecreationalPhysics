@@ -200,8 +200,9 @@ class Field:
 
         With `instanton` (a link field from `Field.instanton`), each sweep ends with one global move
         theta -> theta + s * instanton, s = +1 or -1 with equal chance, accepted by Metropolis on the whole action:
-        the proposal is symmetric (s and -s equally likely, and each undoes the other), so detailed balance holds,
-        and the move changes the winding by one. Without it the chain is draw for draw what it was before the
+        the proposal is symmetric (s and -s equally likely, and each undoes the other), so detailed balance holds.
+        It is a topology-changing proposal: it changes the winding by exactly one for smooth fields, but where square
+        holonomies sit near +-pi the wrapped count can change by another amount (Codex audit, 24 October, O154). Without it the chain is draw for draw what it was before the
         option existed. The returned acceptance counts single-link moves only.
         """
         theta = np.asarray(theta, dtype=np.float64).copy()

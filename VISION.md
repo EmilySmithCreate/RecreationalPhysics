@@ -3333,3 +3333,12 @@ separate Codex audit, blind to this one, is briefed at `docs/reviews/2026-10-24_
   no charge can appear by Gauss's law, so her "no charge" is not tested by it). Both scripts were lost when the session
   that wrote them ended and were restored from the agents' transcripts; each reproduces its output exactly.
 
+Update 103 (2026-10-24, night): **the Codex audit of 24 October, recorded (ASSUMPTIONS O154).** A different model,
+blind to the in-session audit, reviewed the same day's record at commit 39466620 and agreed with it on five points; its
+new findings are corrected in place: the winding move's docstring (a topology-changing proposal, not always exactly
+±1), O151's "same spectrum", the gate framed as passed on the third, longer test, the neutron's "can be" returned to
+the owner, and two missing published works (Renken, Catterall and Kogut 1994; Levin and Wen 2006). One statement made
+to the owner in chat is withdrawn as argued: positivity of each graph's corrections does not by itself fix the sign of
+the tube-minus-sheet difference (the exact calculation of Update 102 settles that sign case by case, under the Wilson
+weight).
+
