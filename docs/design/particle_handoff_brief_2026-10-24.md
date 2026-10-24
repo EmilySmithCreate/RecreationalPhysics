@@ -189,6 +189,9 @@ results from Q29 with the winding move may now be read.
 
 ## 7. What is owed by the owner, and what could be published (24 October, night)
 
+*Superseded as a list by `docs/design/owner_questions_2026-10-24.md` (kept current); the text below is as of
+the first night.*
+
 **Choices and predictions owed (each is hers; nothing here runs before her answer).**
 
 *From this handoff and its follow-ups:*

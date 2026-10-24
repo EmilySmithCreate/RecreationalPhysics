@@ -2352,4 +2352,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-24 (night), ours, after the workflow on publishability (O152): the 'light slows in a curl' reading was the
   assistant's error and is corrected in O151 (light keeps its speed; her prediction holds); a fresh red-team reader
   judged nothing on particles publishable today and named the one route it sees (below, and the brief's section 7).
+- 2026-10-24 (night), the owner, verbatim, answering the particle brief's section 7: "1. Proton has at least one
+  backward twist. double twist: 2/3,2/3,-1/3, if that antiquark excited by a photon maybe it twists in the other
+  direction, which makes sense if a photon can only apply spin to a 1/3 twist, or prefers to." / on the antiparticle as
+  the mirror image of its strand: "yes" / "Dark matter: do the point colours still mark dark against antidark? Yes same
+  as matter dark matter has the - twist and + twist" / "4- boundary is there is no charge. Maybe it moves on a different
+  plane." / "5 yes" / "Please provide me with an updated link to the full list of outstanding questions needing answers
+  from me to move forward". Recorded as VISION Update 100; the list is `docs/design/owner_questions_2026-10-24.md`.
 

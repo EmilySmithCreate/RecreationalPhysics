@@ -3203,3 +3203,28 @@ dropping the one it contradicts; her words: "proceed as you recommend."
   The colours of points no longer mark matter against antimatter; whether they still mark dark against antidark is
   hers to say. The open items are listed in the brief's section 7.
 
+Update 100 (2026-10-24, night): **DECISION (the author's): an antiparticle is the mirror image of its strand; dark and
+antidark matter carry + and − halves; a design brief for the U(1) field on the rewiring graph.** Her words, answering
+the brief's section 7: on charge, "Proton has at least one backward twist. double twist: 2/3,2/3,-1/3, if that
+antiquark excited by a photon maybe it twists in the other direction, which makes sense if a photon can only apply spin
+to a 1/3 twist, or prefers to."; on the antiparticle as the mirror image of its strand, "yes"; on whether the colours
+still mark dark against antidark, "Yes same as matter dark matter has the - twist and + twist"; her prediction for the
+boundary between curled and flat space, "boundary is there is no charge. Maybe it moves on a different plane."; on
+writing the design brief for the field on the rewiring graph, "yes".
+
+- **What is decided.** (1) The antiparticle of a strand is its mirror image (as in [BT05]). (2) Dark strands carry
+  signed halves, + for dark and − for antidark, as matter strands carry signed thirds; the colours still mark dark
+  against antidark (to confirm whether colour and sign must agree; owner's questions file). (3) The design brief
+  `docs/design/u1_rewiring_graph_brief_2026-10-24.md` is written; nothing runs until her decisions in it.
+- **Checks.** Her proton (+2/3, +2/3, −1/3) is the up, up, down of the quark model, with the down strand twisted the
+  other way from the two up strands, which matches the reading charge = −(signed thirds)/3 for open strands. Her
+  picture of the photon acting on a third does not yet say why the electron's −1, a bound half-curl, equals exactly
+  three quark thirds; the question stays open in the questions file. Her boundary prediction is recorded before the
+  run: light crosses the boundary with no charge to stop it, and the field along the curl "maybe moves on a different
+  plane".
+- **The design brief's exact first look** (`sandbox/u1_graph_free_energy.py`): integrating out the field at fixed
+  wiring rewards every square by ln I₀(β) at leading order; the tube has a quarter of a square per point more than the
+  sheet (its rings round the curl), so the field favours the curled state, at leading order as a shift of the curling
+  cost by −(g/16) ln I₀(β) per point. The tube also carries 16 closed square surfaces at N = 64 (the sheet one), so the
+  next terms are not small; computing them exactly is the brief's first step.
+
