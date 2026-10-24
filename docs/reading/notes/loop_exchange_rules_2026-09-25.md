@@ -119,7 +119,8 @@ Read: abstract, Sec. II.A to II.C (Eqs. 1 to 3), and Sec. III.A to III.C (Eqs. 6
   Q_I = (−1)^I Σ_legs L^z. The alternating sign is the bipartite (sublattice) sign.
 - J acts as a string tension and g as a string kinetic term. For g ≫ J the strings condense (Sec. II.B). The low-energy
   theory is compact U(1) gauge theory (Eq. 2): string fluctuations are **gapless photons** and string endpoints are gapped
-  charges. The "fine structure constant" is of order J/g and the speed of light of order gJa² (Sec. II.C). At large
+  charges. The "fine structure constant" is of order √(J/g) and the speed of light of order √(gJ)·a (Sec. II.C; the square roots
+  restored 24 October 2026 after checking the PDF text, which reads "of order √J/g" and "of order √gJa²"). At large
   coupling the theory confines and has no photons.
 - Sec. III: a **"twisted" plaquette term**, B̃_p = B_p × (−1)^(sum of L^z on the legs next to the plaquette) (Eq. 9),
   keeps the photons and turns the charges into **fermions**. *Bearing (ours):* this is the published way to put an

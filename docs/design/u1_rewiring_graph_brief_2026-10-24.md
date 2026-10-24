@@ -72,6 +72,26 @@ below. Items 1 and 2 hold under the Wilson weight only.
    the three-dimensional story).
 5. **Her predictions** for whichever test she chooses, recorded before it runs, with a held-out size (rule 14).
 
+## What the reads of 24 October supply (`docs/reading/notes/2026-10-24_gauge_on_dynamical_geometry_reads.md`,
+`2026-10-24_wilson_kogut_lattice_gauge.md`)
+
+- **Decision 0 is a published fork.** Renken, Catterall and Kogut ([RCK93], Eq. 2) weight plaquettes by λ Σ cos φ, so
+  integrating out the field rewards each triangle; Candido et al. ([CCDR21], Eq. 6) use β Σ (cos φ − 1), so it penalises
+  each unit of volume, λ_c(β) = log 2 − β/12. Both read the constant part of the plaquette energy as a shift of the
+  geometry's own coupling. In the toy a switch keeps the link count, so only the constant per square matters (ours,
+  exact). No source read discusses a lattice whose plaquette count changes at fixed size.
+- **Decision 1 gains a published fourth option, (d):** draw the new link's phase by heat bath from its local
+  distribution and put that distribution's normalisation into the switch's acceptance; phases on removed links are
+  forgotten, all others carried ([RCK93] Eqs. 12–16, 28, 43; [CCDR21] Eqs. A9–A11). Exact detailed balance with a local
+  acceptance and no global Z_U1. *Ours:* this replaces options (a) and (c) as the recommendation for runs.
+- **Methods to reuse:** about eight field sweeps per geometry sweep ([RCK93]); varying the move weights to check that
+  averages are stable ([CCDR21]); [CCDR21]'s Fig. 7 (the leading-order shift against measured critical values over a
+  range of β) as the template for test (a).
+- **A caution on what the field is (published, read in part).** A Monte Carlo of compact U(1) with no time direction is
+  a Euclidean statistical theory, and in three dimensions it confines at every β ([LBH02] Sec. II); so the six-link
+  toy's sampled field has no free-photon phase to find, and the four-link toy's even less. What the brief integrates out
+  is a statistical field on the graph, not a population of light (the Codex audit's naming point, O154).
+
 ## Exact steps before any run
 
 1. Z_U1(G) exactly for the sheet and the tube at N = 64 and 144, including the surface terms (a sum over the null

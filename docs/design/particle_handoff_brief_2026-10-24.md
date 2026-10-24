@@ -181,6 +181,11 @@ results from Q29 with the winding move may now be read.
 
 ## 6. Reading tasks (prior-work template; general-knowledge statements above)
 
+*Status 24 October, night: tasks 1 to 5 read by assistant agents, notes in `docs/reading/notes/2026-10-24_*`
+(`wilson_kogut_lattice_gauge`, `thirds_charge_centre_vortices`, `spin_from_loops_and_landauer`); Wilson, Kogut and
+Finkelstein-Rubinstein themselves only at abstract level or not at all (no open copies), their facts sourced at open
+papers listed in the notes. Also read: Levin and Wen (2006) in full (`levin_wen_quantum_ether`).*
+
 | # | Task | Settles | Sources (bibliographic data checked at Crossref 24 Oct where marked) |
 |---|---|---|---|
 | 1 | Wilson's lattice gauge theory and the 2D character expansion | Q29's model and the gate's formula at their source | Wilson, PRD 10, 2445 (1974) ✓; Kogut, RMP 51, 659 (1979) ✓ |

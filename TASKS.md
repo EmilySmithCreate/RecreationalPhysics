@@ -1046,8 +1046,10 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    six-link space and on a curled torus (whose ring is a square the field sees).
 4. **Twist labels on strands** (signed thirds per body diagonal, signed halves per face diagonal; corrected by Update 102; switchable off) after her answer to question 1; then tests B
    (closure with dynamics) and E (pairs only on a closed space).
-5. **Reading tasks** of the brief's section 6 (Wilson, Kogut; Tong; Finkelstein and Rubinstein; Landauer; centre
-   vortices), on the prior-work template, before any of them is cited.
+5. ~~**Reading tasks** of the brief's section 6 (Wilson, Kogut; Tong; Finkelstein and Rubinstein; Landauer; centre
+   vortices), on the prior-work template, before any of them is cited.~~ *Done 24 October, night (five notes,
+   `docs/reading/notes/2026-10-24_*`; Levin and Wen and the dynamical-geometry papers too). Wilson, Kogut and
+   Finkelstein-Rubinstein reached only at abstract level; their facts are sourced at open papers.*
 6. **The U(1) field on the rewiring graph** (`docs/design/u1_rewiring_graph_brief_2026-10-24.md`; added 24 October, Update
    102). Waits on her decision 0 (the zero of a square's energy) and decisions 1 to 4. Done, exact under each choice of
    zero: Z_U1 for the sheet and the tube at N = 64 and 144 (`sandbox/u1_exact_free_energy.py`, a look, checked by an

@@ -2399,4 +2399,15 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   360° band is two-sided; a Möbius strip has a half turn). (4) Her mechanism "a photon can only apply spin to a 1/3
   twist, or prefers to", with its charge-conservation check now in Update 100 and the questions file. (5) Both of her
   neutron answers, in order, now in Update 101.
+- 2026-10-24 (night), the owner: "Proceed with the paper reads". Five reads by assistant agents, notes in
+  `docs/reading/notes/2026-10-24_*`. What each supplies to her theory, in a line (ours; read the notes for sources):
+  Levin and Wen (2006), read in full, is her idea 1 exactly (links without a photon; the photon as the links' collective
+  wave) and gets fermions from bosonic links through a framing sign, but the twist that makes a fermion is a half turn,
+  never a third; thirds could be a charge count (triality), not an exchange phase. The dynamical-geometry papers make
+  decision 0 a published fork and give a fourth way to carry the field through a switch. Tong and the centre-vortex
+  literature: her "whole twists to exist" is the observed 3Q + t = 0 lock, whose status as a law is not settled by
+  experiment; a centre vortex is a published neutral one-third twist, but of the vacuum's gluon field, not matter; gluons
+  carry no thirds. Finkelstein and Rubinstein's route makes spin one half possible but chooses the sign by hand, and the
+  toy's labels cannot supply it as they stand. Landauer gives her ln 3 idea an exact floor (1.10 kT per merge) and says
+  nothing about photons.
 
