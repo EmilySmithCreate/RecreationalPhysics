@@ -115,9 +115,11 @@
 - **The twist:** not yet defined on the graph. A frame carried round a ring is the twist Tw, which is not conserved
   (Lk = Tw + Wr); the conserved count is a linking number, and it needs either an embedding or a framed-graph label.
   Tests 4 and 5 are held until it is defined (Update 92).
-  *Proposed 23 October (ours; read back to her, not yet confirmed, so the line above still stands; full text, sketches
-  and both adversarial checks in `docs/design/twist_definition_2026-10-23.md`; reading note
-  `docs/reading/notes/2026-10-23_twist_on_a_graph.md`):* with a named face rule (the curvature brief's: at each point
+  *Confirmed by her, 23 October ("confirmed"), with the line above kept: her twist, with handedness and a count on a
+  ring, is still not defined on the graph; what the wiring carries is defined here (ours, from the published
+  mathematics; full text, sketches and both adversarial checks in `docs/design/twist_definition_2026-10-23.md`; reading
+  note `docs/reading/notes/2026-10-23_twist_on_a_graph.md`). Her prediction for the unread end states is still owed, so
+  no saved state is opened for it:* with a named face rule (the curvature brief's: at each point
   the rotation of four corners with the smallest angle sum; where it ties, every completion read region by region),
   the wiring fixes two twist-like quantities and no more. (1) The **mod-2 orientation character** of a closed cycle on
   the surface the squares make: flipped (a Möbius band round it) or not; no direction, no count. (2) The **seam shift**

@@ -1,5 +1,12 @@
 # Draft entry "The twist" for the "Current definitions" box of `docs/design/regge_stage_b_brief.md`
 
+**Confirmed by her, 23 October 2026 ("I'll update the brief's definitions box, keeping the current "not yet defined" -
+confirmed"; `sandbox/NOTEBOOK.md`).** The brief's box records the entry as confirmed and keeps its standing line: her
+twist, with handedness and a count on a ring, is still not defined on the graph. The two readings marked "to confirm"
+below are not settled by that word: her words of the same evening ("discrete twists in short halfs and long thirds with
+handedness") give the dark half twist a handedness, which the mod-2 character cannot carry. Her prediction for the
+saved-state look is still owed, and no saved state is opened before it.
+
 *Written 23 October 2026 and revised twice the same day, after two adversarial checks by fresh read-only sessions: the
 first found twelve problems in the first version, the second thirteen in the revision; each correction was checked on
 built graphs or in the record before it was applied (both lists are at the end). A draft for the owner to confirm,
