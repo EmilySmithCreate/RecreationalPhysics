@@ -2312,8 +2312,9 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   to confirm (closed full twist neutral; the electron's −1 a bound half-curl; quark strands keep fractional charges)
   and the exact fact put back to her (a body diagonal always touches both kinds).
 - 2026-10-24 (evening), the owner, her prediction for light in curled space, verbatim: "Light moves same speed through
-  curved space but bounces or slows through matter ie curled space with charge or spin". Scored exactly in O151: holds
-  for one polarisation, fails for the one along a curl of side 4, which the curl alone makes massive. Asked of her
+  curved space but bounces or slows through matter ie curled space with charge or spin". ~~Scored exactly in O151: holds
+  for one polarisation, fails for the one along a curl of side 4, which the curl alone makes massive.~~ *Corrected the
+  same night (O151): the field along the curl is a scalar, not light; light keeps its speed, so her prediction holds.* Asked of her
   still: whether handedness marks regular against anti for matter strands (every body diagonal touches both kinds).
 - 2026-10-24 (evening), the owner, verbatim: "okay, body diagonals need to go from the model, the diagonals in space need
   to connect to same color, so we’ll need a 1x1x2 diagonal, to hold the 1/3 rule. How many are there in a 2x2x2 block
@@ -2348,4 +2349,7 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   recommendation (keep body diagonals for thirds, drop the colour rule for matter): "proceed as you recommend. explain
   any outstanding choices / predictions I have to make, and see if you can come up with something publishable on
   particles." Recorded as VISION Update 99.
+- 2026-10-24 (night), ours, after the workflow on publishability (O152): the 'light slows in a curl' reading was the
+  assistant's error and is corrected in O151 (light keeps its speed; her prediction holds); a fresh red-team reader
+  judged nothing on particles publishable today and named the one route it sees (below, and the brief's section 7).
 

@@ -192,3 +192,23 @@ def test_light_polarised_along_a_curl_of_side_four_is_massive(side, mass2):
         for pol, want in ((0, mass2 + 4 * np.sin(k / 2) ** 2), (2, 4 * np.sin(k / 2) ** 2)):
             v = _plane_wave(f, dims, pol, 1, k)
             assert np.allclose(M @ v, want * v, atol=1e-9)
+
+
+@pytest.mark.parametrize("dims", [(4, 8), (4, 4), (4, 6, 6), (4, 4, 6), (6, 6, 6), (4, 4, 4)])
+def test_bloch_formula_with_side_four_rings_gives_the_whole_spectrum(dims):
+    # exact (O151, generalised): with every 4-cycle a square, the linear-wave matrix in momentum space is
+    # M(k) = |K|^2 I - K K^T + 4 sum over side-4 axes a of delta(k_a, 0) e_a e_a^T, K_mu = 2 sin(k_mu / 2);
+    # zero modes: (N - 1) gauge plus one holonomy per direction that is not of side 4
+    f = u1.Field(*cqg_d.torus(dims))
+    ev = np.sort(np.linalg.eigvalsh(f.mode_matrix()))
+    d = len(dims)
+    want = []
+    for k in itertools.product(*[2 * np.pi * np.arange(s) / s for s in dims]):
+        K = 2 * np.sin(np.array(k) / 2)
+        M = np.dot(K, K) * np.eye(d) - np.outer(K, K)
+        for a in range(d):
+            if dims[a] == 4 and abs(np.sin(k[a] / 2)) < 1e-12:
+                M[a, a] += 4.0
+        want += list(np.linalg.eigvalsh(M))
+    assert np.allclose(np.sort(want), ev, atol=1e-9)
+    assert int(np.sum(ev < 1e-9)) == f.n - 1 + sum(1 for s in dims if s != 4)

@@ -168,9 +168,9 @@ results from Q29 with the winding move may now be read.
 2. Gate U1 run and read (`scripts/run_u1_gate.py`, `configs/gate_u1_2d.json`).
 3. The handoff's test A with the field in place, pre-registered with her prediction: a launched wave on the toy's
    flat six-link space and on a curled torus (does a curl, whose ring is a square the field sees, scatter or trap
-   light?). *Answered exactly the same day (O151), after her prediction: in a curl of side 4 one
-   polarisation keeps the flat speed and the one along the curl gains a mass (ω² = 4 + 4 sin²(k/2)), so it slows and,
-   below ω = 2, is reflected; sides 6 and up are flat for light. Next: the boundary itself, on a half-opened state.*
+   light?). *Answered exactly the same day (O151, corrected the same night): light keeps the flat
+   speed in a curl of side 4, as she predicted; the field component along the curl, a scalar seen from the open
+   directions, gains a mass ω² = 4 + 4 sin²(k/2) from the toy's rule that the ring round the curl is a square.*
 4. Twist labels on strands (Z3 per face diagonal), switchable off, once question 1 is answered; then the handoff's
    tests B (closure census with dynamics) and E (pair creation only, on a closed space).
 5. The quantum gate (test C) stays a reading task until a state space is chosen: on link labels it fails by section
@@ -186,3 +186,43 @@ results from Q29 with the winding move may now be read.
 | 4 | Landauer's bound | Her entropy idea's price | Landauer, IBM J. Res. Dev. 5, 183 (1961) ✓; Bennett's review (2003), to check |
 | 5 | Centre vortices: tubes of the gluon field carrying a third of a turn | The nearest published "one-third twist", neutral, belonging to the gluon field and tied to confinement; bears on her gluon question | 't Hooft (1978); Greensite's review (2003); to check |
 | 6 | The handoff's own reading list (section 6 there) | Its benchmark table's sources (PDG, CODATA) | as listed there |
+
+## 7. What is owed by the owner, and what could be published (24 October, night)
+
+**Choices and predictions owed (each is hers; nothing here runs before her answer).**
+
+*From this handoff and its follow-ups:*
+1. Whether the colours of points still mark dark against antidark (face diagonals stay in one colour), now that they no
+   longer mark matter against antimatter (Update 99).
+2. The electron's charge: under her answer it is a bound photon half-curl, while the proton's +1 is a sum of quark
+   thirds. What makes the two exactly equal and opposite (measured to about one part in 10²¹, general knowledge, to
+   verify)? Or does charge go back to the sum of thirds for every strand, as in Bilson-Thompson's braids?
+3. Matter against antimatter as handedness: the red-team reader notes this mixes two different symmetries of physics,
+   the mirror (P, handedness) and charge conjugation (C, particle against antiparticle). Does she mean that the
+   antiparticle of a strand is its mirror image? (Bilson-Thompson's antiparticle is the top-to-bottom mirror of the
+   braid, [BT05].)
+4. Gluons: her prediction "none" is recorded; both readings are kept.
+5. Her prediction for the boundary between curled and flat space (a scalar along the curl cannot enter below ω = 2;
+   light passes): needed before the half-opened-state run.
+
+*From the loop-rule worksheet, still open:* Q3 (is one braid a proton or a quark), Q6 (mass from twist count alone, or
+with a binding energy), Q7 (what the survival rule decides, and the routes to the matter excess), Q11 (where three
+generations come from), X1 (which segment "touches 12 cubes"), X2 (what "twist is always the same" holds fixed), X3
+(where colour comes from).
+
+*Older, from the handoffs of 22 and 23 October:* her word on the T71 and T74 held-out numbers at L = 16
+(`sandbox/heldout_2026-10-23/`); the runaway remedy for soft space (stage-B question 5: a squared-curvature term, a
+causal structure, or bounded lengths); her predictions for the λ-from-curvature test, the first soft-space runs, the
+Eq. (45) ratio test and the T80 decisions; which sign she holds for the drift of the background curvature; and the
+twisted-diagonal saved-state look, now that the twist is defined (Update 97 and 99).
+
+**What could be published (O152).** A fresh red-team reader, given the files and not the conclusions, judged that
+nothing on particles here is publishable today: the curl mass is the known Wilson-line mechanism put in by the toy's
+square rule (and is not light); the signed-thirds counting is Bilson-Thompson's with fitted quark charges; the cube's
+three-fold and two-fold axes are textbook. What it judged solid: the stuck knots of fixed energy whose number is set by
+seeds (paper 2, framed as defect formation, not particles), and a set of exact no-go constraints (no spin one half from
+link labels; no excess from exactly symmetric labellings; no long-range force at fixed wiring; no odd ring of body
+diagonals). The one route it sees to a publishable particle-sector result: put the U(1) field on the dynamical graph
+(riding the switches) and pre-register a measurable effect on the tube-to-sheet balance, the decay rate or the T78 and
+T79 surcharge on curl, with a held-out size and a prior-work note. That needs a design brief and her decision under S1.
+

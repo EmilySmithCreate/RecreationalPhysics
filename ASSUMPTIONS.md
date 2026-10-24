@@ -4322,7 +4322,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
     tori; nothing about λ ≠ 1 for the comparison between tori (the reachable set at λ ≠ 1 was not enumerated); and not
     the full ground state at λ = 1, since the other flat wrappings (O119), gases of 4-cubes and mixtures are not
     counted, so it is not the equilibrium answer to which torus the network sits in.
-- **O151 EXACT: light in a curled direction of side 4 (24 October 2026).** The owner's prediction, given first, verbatim:
+- **O151 EXACT: ~~light~~ the field along a curled direction of side 4 gains a mass; light keeps its speed (24 October 2026; heading and scoring corrected the same night, below).** The owner's prediction, given first, verbatim:
   "Light moves same speed through curved space but bounces or slows through matter ie curled space with charge or
   spin". Computed minutes after it, before anything was committed (the order is the conversation's; this entry is the
   first record). Code: `graphity.u1` (Q29, Gate U1″ passed); test:
@@ -4335,10 +4335,31 @@ author and should be disclosed as such in any submission. Physics estimates mark
     inertia), so it is slower than light at every k and cannot travel at all below ω = 2. Sides 6 and 8 give no mass:
     6 × 8 × 8 has the same spectrum as 8 × 8 × 8. Exact consequence (standard wave physics, ours): light of that
     polarisation below ω = 2 arriving from flat space at a curled region cannot enter it and is reflected.
-  - **Her prediction, scored.** "Same speed through curved space" holds for the polarisation lying in the open
+  - ~~**Her prediction, scored.** "Same speed through curved space" holds for the polarisation lying in the open
     directions and fails for the one along the curl; "bounces or slows" happens in the toy without charge or spin, from
     the curl alone, for that polarisation. A kill of the clause "only matter slows light" for curls of side 4 in this
-    toy; nothing here supports the rest.
+    toy; nothing here supports the rest.~~
+  - **Corrected the same night, after a fresh red-team reader and a checking agent (the assistant's error).** Seen from
+    the open directions, the field component pointing along a curl is not a polarisation of light: it is a separate
+    field with no direction in the open space (in Kaluza and Klein's language the Wilson-line scalar, A₅). Light is the
+    field lying in the open directions, and it keeps exactly the flat-space speed. **So her prediction, "Light moves
+    same speed through curved space", holds** for light in a curl of side 4; what gains a mass is the Wilson-line
+    scalar, and only because the toy counts the ring round a side-4 curl as a square. Her clause "bounces or slows
+    through matter" is untested (no matter object is built). Nothing here supports her picture; it fails to kill one
+    part of it. The words "slower than light" and "light of that polarisation ... is reflected" above are to be read as
+    "the scalar".
+  - **Generalised (exact, `sandbox/u1_curl_mass_general.py`, checked by an independent rebuild; promoted by tests):**
+    the linear-wave matrix is M(k) = |K|²I − KKᵀ + 4 Σₐ δ(kₐ, 0) eₐeₐᵀ over the side-4 axes a, with Kμ = 2 sin(kμ/2).
+    Along open directions, light has D_open − 1 polarisations, all massless; each side-4 axis gives one Wilson-line
+    scalar with ω² = 4 + |K|². So a strip (4 × L), a rod (4 × 4 × L) and the fully curled 4-cube and 6-cube carry no
+    light along their length at all. Zero modes: (N − 1) gauge plus (D − number of side-4 axes) holonomies. The ring
+    pins the Wilson line round the curl to one value (the fields with uniform A = 2πn/4 along the curl are gauge copies
+    of zero); a caveat first written that it leaves four vacua was wrong. The mass sits at the lattice cutoff
+    (m² = 4κ), the size of the highest Kaluza-Klein level on a circle of four.
+  - **Prior work (rule 15; `docs/reading/notes/2026-10-24_prior_work_u1_curl_mass.md`): PARTLY FOUND.** Every
+    ingredient is published (gauge theory on general graphs as a sum of loops, Filk; tree-level plaquettes filling
+    non-contractible cycles give the matching link scalars a mass, Gregoire and Wacker in theory space); the
+    combination on the toy's graphs was not found, and no gauge field on combinatorial-quantum-gravity graphs was found.
   - **What it rests on.** The toy's rule that every 4-cycle is a square (Q29, ours): a curl of side 4 is the only
     curl the toy has, and it is the ring round it that carries the mass. *General knowledge, to verify:* in
     Kaluza and Klein's treatment the field component along a small direction becomes a massless scalar in the large
@@ -4346,4 +4367,30 @@ author and should be disclosed as such in any submission. Physics estimates mark
     square (side 6 or more) behaves as flat space for light.
   - **Not shown.** The reflection at a real boundary between curled and flat regions (no lattice torus has both; the
     burp's half-opened end states do); anything with twist labels, which are defined (Update 97) and not built.
+- **O152 RED TEAM (rule 12): is anything on particles publishable? (24 October 2026).** A fresh reader in a workflow
+  of the assistant session (same model; no history; read-only; given the files, not the conclusions), with two
+  prior-work searches and two checking agents beside it. Its verdict: nothing on particles in the repository can
+  honestly be published as a short paper today.
+  - **What it found.** (1) O151 was mislabelled by the assistant: the field component along a curl is the Wilson-line
+    scalar seen from the open directions, not light, which keeps its speed; corrected in O151 the same night, and her
+    prediction "same speed through curved space" holds. Its mass comes from the toy counting the length-4 ring as a
+    plaquette, a tree-level Polyakov-loop term at the cutoff (prior work: PARTLY FOUND,
+    `docs/reading/notes/2026-10-24_prior_work_u1_curl_mass.md`). (2) The signed-thirds counting adds nothing to the
+    quark model: the two quark charges are fitted, and 3Q + t ≡ 0 mod 3 holds for every assignment reproducing the
+    Standard Model's charges; since her answer that a closed full twist is neutral, the electron's charge has no
+    reason to equal three quark thirds, which makes it weaker than [BT05]. Handedness as matter against antimatter
+    mixes P with C. (3) Thirds and halves as the cube's three-fold and two-fold axes are textbook, applied
+    selectively (by the same logic edges would carry quarters, yet light lives there as U(1)), and defined only on the
+    ideal lattice, not on the switching graph, which keeps no embedding. (4) Solid: paper 2's stuck knots set by seeds,
+    framed as defect formation; and the exact no-go list (spin one half, excess, long-range force, odd body-diagonal
+    rings). (5) The one route to a publishable result: the U(1) field on the dynamical graph with a pre-registered
+    effect on the toy's own measured quantities, held-out size, prior-work note.
+  - **What it got wrong or overstated (checked).** The generalisation agent's caveat that the ring leaves four vacua
+    (Z4) was wrong (the uniform fields 2πn/4 along the curl are gauge copies of zero; one vacuum), caught by the
+    checking agent, not by the red-team reader. One search's NOT FOUND was too strong (it missed Gregoire and Wacker's
+    theory-space plaquettes); corrected to PARTLY FOUND. The red-team reader's point (3) about edges carrying quarters
+    is a fair challenge, not a contradiction: light is a U(1) phase, whose turns are continuous, not a count of
+    quarters; whether the strands' counts must follow the axes at all is the owner's to say.
+  - **What follows.** Particle work is not written up; the brief's section 7 lists the owner's open choices and the
+    route above, which needs a design brief and her decision under S1.
 
