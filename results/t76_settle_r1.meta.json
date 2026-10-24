@@ -1,0 +1,91 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION T76, its coupling rule, round 1 of the bisection: settling runs alone (growth off) on the flat 16 x 16 sheet at lambda = 1.25, reading rho_eq at a coarse grid of couplings, to find those with rho_eq = 0.003, 0.01, 0.03 and 0.1. Calibration of the protocol, not a growth run; every coupling tried is kept.",
+    "name": "t76_settle_r1",
+    "section": "T76-settle",
+    "L": 16,
+    "lambda": 1.25,
+    "couplings": [
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "replicas": 4,
+    "n_settle": 200,
+    "window": 100,
+    "n_ref": 96,
+    "seed": 20267690
+  },
+  "config_path": "configs/t76_settle_r1.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "git_commit": "b6da8fe66ea95bec9527c5c90e6a3887fdc14c95",
+  "git_dirty": true,
+  "git_untracked_count": 37,
+  "git_untracked": [
+    "configs/t76_settle_r1.json",
+    "results/t75_n1024_beside_g1p5.csv",
+    "results/t75_n1024_beside_g1p5.meta.json",
+    "results/t75_n1024_beside_g2.csv",
+    "results/t75_n1024_beside_g2.meta.json",
+    "results/t75_n1024_beside_g2p6.csv",
+    "results/t75_n1024_beside_g2p6.meta.json",
+    "results/t75_n1024_far_g1p5.csv",
+    "results/t75_n1024_far_g1p5.meta.json",
+    "results/t75_n1024_far_g2.csv",
+    "results/t75_n1024_far_g2.meta.json",
+    "results/t75_n1024_far_g2p6.csv",
+    "results/t75_n1024_far_g2p6.meta.json",
+    "results/t75_n1024_pair_g1p5.csv",
+    "results/t75_n1024_pair_g1p5.meta.json",
+    "results/t75_n1024_pair_g2.csv",
+    "results/t75_n1024_pair_g2.meta.json",
+    "results/t75_n1024_pair_g2p6.csv",
+    "results/t75_n1024_pair_g2p6.meta.json",
+    "results/t75_n512_beside_g1p5.csv"
+  ],
+  "preregistration": "PREREGISTRATION.md section T76 (the couplings' bisection)",
+  "summary": [
+    {
+      "g": 2.0,
+      "rho_eq": 0.0,
+      "se": 0.0
+    },
+    {
+      "g": 2.5,
+      "rho_eq": 0.0,
+      "se": 0.0
+    },
+    {
+      "g": 3.0,
+      "rho_eq": 0.0,
+      "se": 0.0
+    },
+    {
+      "g": 3.5,
+      "rho_eq": 0.00078125,
+      "se": 0.0007812500000000002
+    },
+    {
+      "g": 4.0,
+      "rho_eq": 0.0265234375,
+      "se": 0.004025459645565077
+    },
+    {
+      "g": 5.0,
+      "rho_eq": 0.7409765625,
+      "se": 0.2381589967717508
+    },
+    {
+      "g": 6.0,
+      "rho_eq": 2.265283203125,
+      "se": 0.011807092952977204
+    }
+  ]
+}

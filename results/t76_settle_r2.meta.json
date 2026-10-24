@@ -1,0 +1,97 @@
+{
+  "config": {
+    "_purpose": "PREREGISTRATION T76, its coupling rule, round 2 of the bisection: settling runs alone (growth off) on the flat 16 x 16 sheet at lambda = 1.25, reading rho_eq at a finer grid between g = 3.5 and 4.5, where round 1 crossed the targets, to find those with rho_eq = 0.003, 0.01, 0.03 and 0.1. Calibration of the protocol, not a growth run; every coupling tried is kept.",
+    "name": "t76_settle_r2",
+    "section": "T76-settle",
+    "L": 16,
+    "lambda": 1.25,
+    "couplings": [
+      3.6,
+      3.7,
+      3.8,
+      3.9,
+      4.1,
+      4.2,
+      4.3,
+      4.5
+    ],
+    "replicas": 8,
+    "n_settle": 200,
+    "window": 100,
+    "n_ref": 96,
+    "seed": 20267691
+  },
+  "config_path": "configs/t76_settle_r2.json",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "git_commit": "b6da8fe66ea95bec9527c5c90e6a3887fdc14c95",
+  "git_dirty": true,
+  "git_untracked_count": 40,
+  "git_untracked": [
+    "configs/t76_settle_r1.json",
+    "configs/t76_settle_r2.json",
+    "results/t75_n1024_beside_g1p5.csv",
+    "results/t75_n1024_beside_g1p5.meta.json",
+    "results/t75_n1024_beside_g2.csv",
+    "results/t75_n1024_beside_g2.meta.json",
+    "results/t75_n1024_beside_g2p6.csv",
+    "results/t75_n1024_beside_g2p6.meta.json",
+    "results/t75_n1024_far_g1p5.csv",
+    "results/t75_n1024_far_g1p5.meta.json",
+    "results/t75_n1024_far_g2.csv",
+    "results/t75_n1024_far_g2.meta.json",
+    "results/t75_n1024_far_g2p6.csv",
+    "results/t75_n1024_far_g2p6.meta.json",
+    "results/t75_n1024_pair_g1p5.csv",
+    "results/t75_n1024_pair_g1p5.meta.json",
+    "results/t75_n1024_pair_g2.csv",
+    "results/t75_n1024_pair_g2.meta.json",
+    "results/t75_n1024_pair_g2p6.csv",
+    "results/t75_n1024_pair_g2p6.meta.json"
+  ],
+  "preregistration": "PREREGISTRATION.md section T76 (the couplings' bisection)",
+  "summary": [
+    {
+      "g": 3.6,
+      "rho_eq": 0.0207666015625,
+      "se": 0.0156607152109601
+    },
+    {
+      "g": 3.7,
+      "rho_eq": 0.003515625,
+      "se": 0.0032980807713810724
+    },
+    {
+      "g": 3.8,
+      "rho_eq": 0.0066796875,
+      "se": 0.005799301421089979
+    },
+    {
+      "g": 3.9,
+      "rho_eq": 0.0296337890625,
+      "se": 0.014537524554802731
+    },
+    {
+      "g": 4.1,
+      "rho_eq": 0.0358203125,
+      "se": 0.014861508409265216
+    },
+    {
+      "g": 4.2,
+      "rho_eq": 0.054658203125,
+      "se": 0.022850785946722206
+    },
+    {
+      "g": 4.3,
+      "rho_eq": 0.057719726562500004,
+      "se": 0.02156861773279528
+    },
+    {
+      "g": 4.5,
+      "rho_eq": 0.4427880859375,
+      "se": 0.22451664901513071
+    }
+  ]
+}

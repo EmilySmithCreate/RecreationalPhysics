@@ -70,7 +70,7 @@ def test_fixed_once_kernel_is_blind_to_the_mass_range():
     model = ow.Model(tail_gyr=50.0)
     a = model.density(0.8, 1.2, "fixed", delay=4.5)
     c = model.density(0.08, 3.0, "fixed", delay=4.5)
-    a, c = a / np.trapz(a, model.t), c / np.trapz(c, model.t)
+    a, c = a / ow.trapezoid(a, model.t), c / ow.trapezoid(c, model.t)
     assert np.max(np.abs(a - c)) < 1e-9 * np.max(a)
 
 

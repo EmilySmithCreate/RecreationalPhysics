@@ -78,6 +78,11 @@ Full statements and derivations are in the docstring of `src/graphity/cqg.py`.
 | Q21 | **The six-link (D = 3) model, as the papers define it.** Read on 2026-09-24 by an assistant agent from the arXiv HTML of [KTB19] v2, [T25] v2, [T17] v3 and [T22] v2, searching the text; the owner has not read these passages. **Sourced:** graphs are 2D-regular and bipartite, so 6 links at D = 3 ([KTB19] Secs. 3.1.2, 3.3 and 4). The hard-core rule does not change with D ([KTB19] Sec. 2.2: an edge qualifies iff any two short cycles on it share no other edges; [T22] Sec. II: it must be imposed for any D). The curvature per edge is −2(1 − 1/D)[1 − S_e/(2D − 2)]₊, flat from 2D − 2 = 4 squares ([KTB19], curvature equation). An edge carries at most 2D − 1 = 5 squares ([KTB19] Sec. 3.3.1; [T25]); [T17] disagrees for its diluted graphs. The ground state is the cubic torus with S = 3N ([T25]; [T22] Sec. III). **Ours, derived from [T25] Eqs. (8), (21) and (22) exactly as Q1:** H = 16(3N − S) + 4λX with X = Σ_e (S_e − 4)₊. The coefficient question is Q1's again: only 4 makes the papers' stated "cancel exactly" true. **Ours, unverified:** on bipartite graphs the rule is "no two points share more than two neighbours", the kernel's `MAX_CODEGREE = 2`; to be checked by brute force when the kernel is built. The 6-cube (64 points, 5 squares on every edge) fits [KTB19]'s baby-universe definition; no D = 3 baby universe is named in the papers. **To verify:** the coupling's N-scaling at D = 3 ([KTB19] Sec. 3.1.1 prints β̃ = ħg|V|^(2/D − 1), which conflicts with its own Fig. 8 axis; [T22] has ħg_cr ∝ N^(1 − 2/D)); the axes say only "log", and the natural log is inferred from the spacing of the points. **Reproduction targets (Gate C):** [T22] Fig. 3 (D = 3, N = 500, full curvature, no cap mentioned; y is squares per vertex, 12 at most) is the one that matches the model the author runs. [KTB19] Fig. 8b (N = 180 to 280) used the capped action that the author disputes (VISION Update 18). |
 | Q22 | **The local spark is a protocol, not a change to the energy: per-vertex stores, and a hot patch.** (2026-09-24; PREREGISTRATION T26 and T27; `graphity.spark`; `sealed.run_sealed_bath(by_vertex=True)`.) Two ways to put energy in one place. (i) **Per-vertex stores**: the bath of Q12 with one store per vertex, and a move pays from, or is paid into, the store of u1, the first vertex of the proposed switch, instead of a store drawn at random. Energy then stays where a move released it and can be spent only by a move made from that vertex; stores of side-1 vertices are never chosen and stay as given. H + stores is conserved exactly (tested), the shared-bath path is bit for bit what it was (pinned), and `seed < 0` now carries the stream on between blocks, as `run_chain` does (Q14). (ii) **A hot patch**: uphill switches whose four vertices all lie within a radius of a center are applied at random until the wiring near the center holds the budget, in exact units; the run then starts in a cold, empty bath. A **leak** drains every store by a fraction after each block (Q12's leak, applied to a bath). None of these touches the energy H, the moves, or the state space; they decide only where energy may sit and who may spend it, and are declared in the config before a run as S1 requires. One consequence worth knowing before reading a result: leaving the flat sheet costs 32 (O22), so a store holding less than 32 can never act, and energy spread thinly over per-vertex stores does nothing at all; the T26 energies are chosen with that in mind. | Ours. Creutz's demon [Creutz83] generalized to a store per vertex; the switch is the kernel's. | Ours, tested (`tests/test_sealed_local.py`, `tests/test_spark.py`, `tests/test_spark_runners.py`). |
 | Q23 | **Bianconi's discrete entropy action, as this project reads it.** Read on 2026-10-05 from the arXiv text of [Bia24] (its Secs. 2.5 and 3.1 to 3.3, read by the assistant from the text an agent had saved; the owner has not read them). On a complex of points, links and polygons with N cells in all, an unknown metric 𝒢 is coupled to an induced metric G by S± = σ Tr ln 𝒢 + Tr 𝒢 (ln 𝒢 ∓ ln G) − Tr 𝒢 (her Eqs. 41, 42). With no matter and no gauge field, G = I + c0 L (her Eq. 52), L being the Gauss-Bonnet Laplacian whose blocks are the Hodge Laplacians of points, links and polygons (her Eq. 40). In the vacuum, which she defines as G = I with c0 = 0, the metric obeys −𝒢 ln 𝒢 = σ I (her Eq. 65). The paper keeps the wiring fixed, "leaving the discussion about the possible implied dynamics of the network topology to future works". **Our choices, not hers:** every 4-cycle of the graph is taken as a polygon (the model's squares; on the curled tube that includes the rings round it); the action is evaluated at the identity metric and not at a metric solved for each wiring; links are pointed from side 0 to side 1. Whether the action is to be made large or small between wirings the paper does not say. | [Bia24] Eqs. (40) to (42), (52), (65) for the formulas. The faces, the identity metric and the comparison between wirings are ours. | Sourced for the formulas; Ours for the rest; used only in the exploratory O102 (`scripts/explore_bianconi_action.py`, `tests/test_bianconi_action.py`). |
+| Q24 | **The curl edge of T74: a reservoir beside the slab, and one maximum curling speed.** (2026-10-20; VISION Update 73; PREREGISTRATION T74 and its Amendment 2; `graphity.layer_outside`.) A protocol around T71's layer form, not a change to its energy: a reservoir of N_slab stores receives the meals; in the unfed phase it relaxes toward a background by 1/64 of its excess a sweep, to or from a far ledger; across the curl edge energy moves downhill in mean energy per store by the smaller of c and the amount that would equalize the two means, spread evenly over or taken evenly from the slab's stores. Choices that are ours: the reservoir starts empty; a meal arrives at the start of its period; a store is never taken below zero, the remainder shared evenly among the rest; the stored energy read is the sum of the slab's stores. Conserved to 1e-9 (F + stores + daughters + reservoir + far − fed = F0); with no reservoir it is T71's chain draw for draw (tests). No detailed balance is claimed. At λ ≠ 1 our family around the published model, never combinatorial quantum gravity. | PREREGISTRATION T74 and its Amendment 2; VISION Update 73 | Ours |
+| Q25 | **The growth rule of T76: pairs of rows, where the corridor is clear.** (2026-10-20; VISION Update 75; PREREGISTRATION T76 and its Amendment 1; `graphity.row_growth`.) Points carry grid labels that stay with them while the chain rewires links. A pair of rows may go between rows i and i + 1 if every point of row i is still linked to its partner in row i + 1 and no link with an endpoint within three steps of the two rows sits on more than two squares; the two new rows are flat. Choices that are ours: each boundary existing at the start of a growth step is offered once in that step, re-checked when offered, and boundaries made during the step wait for the next; the stop at 8 times the starting size is applied at once, mid-step if need be; the fair clock uses the size at the start of each block; the chain is seeded once and its stream carried on (Q14); the w fit leaves out readings with no missing squares. Growth off reproduces cqg.run_chain bit for bit (tests). No detailed balance is claimed for the growth step. At λ ≠ 1 our family, never combinatorial quantum gravity. | PREREGISTRATION T76; VISION Update 75 | Ours |
+| Q26 | **Soft space, stage A: a field on the points, with waves, sourced by the relics.** (2026-10-20; VISION Updates 76 and 77; `docs/design/soft_space_brief.md`; `graphity.soft_field`.) One real number φ per point, energy E_φ = (κ/2) Σ over links (φ_p − φ_q)² + q Σ_p e_p φ_p, with e_p the curling energy 4(λ − 1)(S_e − 2) of each link with S_e > 2 split equally between its two points; missing squares are not sources (the owner's answer). φ's mean is held at zero (momenta drawn and forces projected on that plane), the closed-space form of Poisson's equation. Sampling exp(−(H + E_φ)/g) by alternating cqg's switch with the field's change added (symmetric proposal, Metropolis on the full change) and hybrid Monte Carlo trajectories of the field at fixed wiring (leapfrog, reversible and volume-keeping; trajectory lengths drawn uniformly between half the maximum and the maximum, independently of the state). Choices that are ours: the split of a link's curling energy equally between its ends; the mean held at zero; one clock for both ends of a move (the owner's answer); κ and q declared per run. Checked (tests): with q = 0 and φ = 0 the switches are the present chain draw for draw; the summed energy change equals full recomputation; sources and field energy against networkx; leapfrog reversible; the sampled field's covariance (g/κ) L⁺, equipartition (N − 1) g / 2 and mean −(q/κ) L⁺(e − ē) on fixed wirings; the lattice resistances 1/2 and 2/π of [Cse00]; plane waves at the lattice dispersion ω² = κ(2 − 2 cos k). Stage A's class (clocks and rulers set by one scalar) is a stratified theory with α₁ = −8 ([WN72]), against pulsar limits of about 4 × 10⁻⁵ ([SW12]); it carries no gravitational waves. At λ ≠ 1 our family, never combinatorial quantum gravity. | VISION Updates 76, 77; `docs/reading/notes/2026-10-20_soft_space_prior_work.md` | Ours |
+| Q27 | **Soft space, stage B, first piece: lengths and the curvature they carry, in two directions.** (2026-10-21; VISION Updates 85 to 90; `docs/design/regge_stage_b_brief.md`; `graphity.regge`.) A closed surface is a list of flat triangles with a length on each side; angles by the law of cosines; the curvature at a point is its deficit angle, 2π minus the angles meeting there (Regge's hinge in two directions; [Ham09] Eq. 518 for the general form). The toy's flat four-link torus is cut into triangles by one diagonal per square, the one joining its two corners of kind 0 (the owner's answer of 21 October: one diagonal is matter's). Checked (tests): angles against coordinates for random plane triangles; flat lengths give zero curvature everywhere; the torus's Euler number is 0 and its links are the toy's own; deficits add to 2π × 0 on the torus and to 4π on the octahedron for random lengths (Gauss and Bonnet); a saddle at one point is paid for exactly by its neighbours. Exact consequence: in two directions an energy that charges only for curving is the same for every choice of lengths on one surface, so the two-direction code is a check and the three-direction form is the aim. Ours: the choice of diagonal and its kind; no energy, sampling or time is in this piece. At λ ≠ 1 our family, never combinatorial quantum gravity. | VISION Updates 85 to 90; [Ham09] | Ours |
+| Q28 | **The model's author's correction of 23 October 2026: the printed local term is half the true one.** He wrote (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`, fifth note; private) that Eq. (27) of [KTB19] is wrong, a factor 2 is missing in front of both local terms of the Hamiltonian, and the error propagated to [T25]. Read against the text ([KTB19] Sec. 3.3, bipartite case, A_MF = 8ND(D − 1)(1 − φ), the local sums over the edges with more than 2D − 2 squares; [T25] Eq. (22), two local sums over E₁ and E₂, which coincide for bipartite graphs): at D = 2 the printed local term is 2X per our count and the doubled one is 4X. **Our kernel has always been 4X**, because Q1 derived H from the bracketed curvature formula ([T25] Eq. (8); [KTB19] Sec. 2.2) and not from the printed decomposition, and Q1 recorded on 19 September that the printed coefficient would be 2 and that only 4 makes the paper's own 'cancel exactly' true. So: every run at λ = 1 in this repository (T6, T13, T16, T36, T43, T78, T79, the exact averages at N = 16 and 18, the package of 22 October) is the **corrected** Hamiltonian, and the Hamiltonian as printed is our **λ = 1/2**. The naming condition (only λ = 1 is combinatorial quantum gravity) stands. *Ours, to confirm with him:* which form the code behind [T25] Fig. 3 used. If the printed one, Fig. 3 is a λ = 1/2 run, which would put its sharp rise at a larger coupling than Fig. 8a's and could be Gate B's missing explanation (O27 ruled out trapping); the test is the N = 160 curve at λ = 1/2 against the digitised Fig. 3 (PREREGISTRATION, Gate B‴). The bipartite-specialised correction term of [KTB19] Sec. 3.3 as flattened by the HTML conversion read as 2(D − 1) Σ (φ − 1), which would be X at D = 2; that reading is unverified against the PDF and is not relied on. | his note of 23 October; [KTB19] Sec. 3.3; [T25] Eqs. (8), (21), (22); Q1 | Sourced (his correction); Ours (the mapping to λ) |
 
 ### First look (2026-09-19, `configs/cqg_first_look.json`; one replica, short runs, NOT publication quality)
 
@@ -2006,7 +2011,11 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
 - **O83 T43, read: a planted allotrope at λ = 1 DISSOLVES at every coupling.** (2026-09-27, 09:35 ET; PREREGISTRATION T43;
   `analyse_t43.py`.) Every planted region, in every construction and at every coupling from 1.0 to 3.697, dissolved,
   before its background, within 10 to 155 sweeps (16 replicas each); the flat-torus controls held where expected. Ours
-  (DISSOLVES) holds; the owner's inferred prediction (ALLOTROPE LASTS) fails. Allotropes are parked
+  (DISSOLVES) holds; the owner's inferred prediction (ALLOTROPE LASTS) fails. *Addendum, 22 October 2026, found while
+  packaging the numbers for the model's author:* "within 10 to 155 sweeps" is the range of the smallest medians; by
+  `analyse_t43.py` the medians are 10 to 20 sweeps for the fold and the handle at every coupling, and 155 to 370 for
+  the flat analogue (its background's order lasting 655 sweeps to the whole run), every region before its background.
+  The verdict is unchanged; the sentence was loose for the flat analogue. Allotropes are parked
   (`docs/parked/allotropes.md`), and this is recorded there.
 
 - **O84 T38 complete: TWO POPULATIONS (supersedes O78's provisional UNCLEAR).** (2026-09-27, 09:35 ET; PREREGISTRATION
@@ -2586,7 +2595,7 @@ Global term only, no cap, Metropolis. Each replica is melted, cooled through 18 
     Mercury's perihelion shift ([Giulini08], Secs. 1 to 3 read; the 25 September reading note, topic 4). Light bending
     is measured (1919; Cassini, to verify). So the author's condition that the quantity "matches Einstein wherever
     measured" cannot be met by a scalar alone; it needs space's curvature as well as time's rate, a tensor, or an
-    explicit restriction to slow matter stated as such. `docs/design/gravity_field_brief.md`, when written, opens with
+    explicit restriction to slow matter stated as such. `docs/design/gravity_field_brief.md` (*written 2026-10-20 as `docs/design/soft_space_brief.md`, VISION Update 76*), when written, opens with
     this and with what any such quantity must declare first: what it represents, why it belongs in the model, its
     symmetry, its dynamics, how matter couples to it, what continuum equation should emerge, and what falsifiable
     prediction distinguishes it (the third review's list; `docs/design/gravity_brief.md`, §7).
@@ -4025,3 +4034,290 @@ author and should be disclosed as such in any submission. Physics estimates mark
     (3) The counting unit decides more than the stars do: once per civilization, every class is TYPICAL (O138);
     observer-moments, all stars are EARLY; diamond-weighted, every class but D is LATE. The published red-dwarf
     disagreement is in part a disagreement about which of these is being counted. Nothing here is about the toy.
+
+- **O140 T75, read (20 October 2026): in the toy's space no disturbance spreads at a steady pace; cold, a flaw stays
+  where it is; warmer, its effect turns up far away by jumps, not by a spreading front. Measured, pre-registered; the
+  owner's SPREADS fails, ours holds at the colder couplings.** (PREREGISTRATION T75 and its "Reading";
+  `scripts/analyse_t75.py`; `results/t75_*`, 18 laptop runs of 32 replicas, accepted unread, 8b571657.)
+  - **Measured.** In the burp's product (T51's end states at N = 512 and 1,024), with a flaw far from knots, beside a
+    knot, or a pair of flaws: CONFINED in 6 cells, MIXED in 4, JUMPS in 8; never HEALS, SPREADS or TRAVELS; the cross
+    word NO SIGNAL at every size and coupling. Where damage reached far, it arrived by jumps, at speeds scattered over a
+    factor of a hundred.
+  - *Ours, unverified:* the jumps come from the toy's switch, which can join any two links in the space, so differences
+    appear at the far end of a switch with nothing between. A light cone in the toy needs local moves as well as soft
+    space; the next test of it restricts switches to nearby links.
+  - **What it bears on.** Piece 10 (a top speed): the toy has none as it stands. Pieces 8 and 3: the stiffness that keeps
+    a disturbance in place is the same that gives no pull at a distance (O60). Nothing here is about real space.
+
+- **O141 The flat sheet's missing squares at a fixed coupling come in clusters, not as a thin steady gas (20 October
+  2026; T76's coupling bisection, settling runs alone; calibration, not a registered verdict).** (`results/t76_settle_r1`
+  to `r4`; flat 16 × 16 sheet at λ = 1.25.)
+  - **Measured, in 2,000 fair sweeps, 16 replicas:** up to g = 3.1 essentially none (median 0 to 0.0001 missing squares
+    per point); at g = 3.2 a small patchy density (median 0.0066, replicas from 0 to 0.13, none melted); from g = 3.3 the
+    replicas split between nearly flat and melted (density near 1.3 to 1.7), the melted share rising to all by g = 4.1.
+    In 200 fair sweeps the density had not settled.
+  - *Ours, unverified:* a flaw in flat space costs at least 32, so flaws are rare, and once a few gather they make more,
+    so the sheet either stays nearly perfect or melts; the small, uniform, steady density that Update 70's dark energy
+    would be is not what this toy's flat sheet does at any coupling. Larger sheets melt at lower couplings (the drift of
+    TASKS T9), so the window shrinks with size.
+  - **What it bears on.** Piece 6 and Update 70's hypothesis, and T76, whose coupling rule cannot be met.
+- **O142 The burp's product is softer than the flat sheet, but it does not hold a steady thin density of missing
+  squares either (20 October 2026; T76 Amendment 4, option 1; calibration, not a registered verdict).**
+  (`results/t76_settle_p512` and `t76_settle_p1024`; T51's saved end states `t51_l128_10k` and `t51_l256_300k`, the
+  states T75 used; λ = 1.25; 2,000 fair sweeps, the density read over the last 1,000; 16 replicas per coupling.)
+  - **Measured, against the criterion written before the run** (excess over the start between 0.003 and 0.1, not
+    melted, and spread over the window below half the excess, in at least 12 of 16): **no coupling meets it at either
+    size**, as we predicted. The most that met it was 6 of 16 (N = 1,024, g = 2.6) and 5 of 16 (N = 512, g = 2.6).
+  - **What the product does instead.** Up to g = 2.0 the coupling adds essentially nothing (median excess 0.0000 at
+    N = 1,024; at N = 512 the knots' few missing squares heal slightly, median −0.0015). At g = 2.4 and 2.6 a thin
+    density does appear, the excess inside the band in 11 and 12 of 16 replicas at N = 1,024, but it is uneven: at
+    g = 2.6 it ranges tenfold between replicas (0.011 to 0.122) and swings within a replica by a fifth to more than the
+    excess itself over the window. At g = 2.8 it runs to about half a missing square per point; from g = 3.0 at
+    N = 1,024 every replica melted (at N = 512, 4 of 16 at 3.0, 13 at 3.2, all at 3.4).
+  - *Ours, unverified:* the product's cheaper flaw (20 against 32, T75 Amendment 3) moves the onset from about g = 3.2
+    on the flat sheet (O141) down to about 2.4, and the window between "almost none" and "melted" stays narrow, about
+    0.4 in g, and narrows with size. The flaws still come in patches that grow, not as an even gas. So the stiff toy has
+    no coupling at which Update 70's dark energy, a thin, even, steady density, sits still; soft space (VISION Update
+    76) is the ingredient designed for it.
+  - **What it bears on.** T76 (option 1 gives no coupling at which growth on the product would test a steady density),
+    piece 6, Update 70's hypothesis.
+- **O143 T77, read (21 October 2026, 00:57 UTC by the clock; `results/t77_diamond_w.csv`, `scripts/run_t77.py`,
+  `scripts/cosmo_w.py`, `scripts/read_t77.py`; standard cosmology, not the toy; the owner's prediction, constant dark
+  energy, recorded 00:55 UTC before any number).** The diamond weight of T73 under constant dark-energy equations of
+  state, w = −1 (the control, T73's own closed forms), −0.9, −0.7 and −1/3, H0 refitted to a 13.8 Gyr age (66.4, 63.8 and
+  57.0 km/s/Mpc at the three stand-ins).
+  - **Control (w = −1):** the scored words reproduce T73: gate TYPICAL (F 0.797), A LATE (0.955), B LATE (0.976), C LATE
+    (0.955), D TYPICAL (0.532). The numeric cosmology (`Cosmo(−1)`) matches T73's analytic diamond to 0.3 % at 1 and
+    13.8 Gyr, with its peak at 4.05 Gyr against 4.06. **The owner's prediction (the control reproduces T73's verdicts)
+    holds on the scored rows.** T73's INCONCLUSIVE words for A and C come from the sensitivity rows, which read LATE and
+    TYPICAL here too.
+  - **Fading dark energy:** F falls with w in every class (gate 0.80, 0.72, 0.41, 0.00; D 0.53, 0.48, 0.38, 0.16), as
+    our prediction said. Scored words at w = −0.9: gate TYPICAL, A TYPICAL (T73's LATE in the scored row, now TYPICAL),
+    B LATE, C TYPICAL, D TYPICAL. At w = −0.7: gate TYPICAL, A, B, C, D TYPICAL. At w = −1/3 (the horizon's edge): gate
+    EARLY (F 0.000; its peak lies at 2,300 Gyr, at the far edge of the star history, so read it as a limit), A, B, C
+    TYPICAL (F 0.62, 0.66, 0.62), D TYPICAL (0.16).
+  - **Ours, scored against our prediction written before the run (rule 11):** the fall in F with w held, and the gate
+    went EARLY at w = −1/3, as predicted; the rest did not. We predicted A, B and C EARLY at w = −1/3 without the cap;
+    they stay TYPICAL. And at w = −0.9 we predicted T73's words would hold within a tail sensitivity; A's scored word
+    changed from LATE to TYPICAL. Failed in part: the diamond's pull on the late classes is weaker than we estimated.
+  - **What it shows, and not:** the light-cone measure separates a constant from a fading dark energy mainly through the
+    gate (planet-years) class and the late-class shares, not the verdicts of the stellar classes; under the stand-ins our
+    own age stays typical in class D at every w tried. Nothing here is a comparison with data: which w holds is the
+    measured equation of state's question, and our age is not scored (paper 16, Sec. VI).
+- **O144 T71, read (21 October 2026, 11:12 UTC by the clock; fetched into the inbox 19 October, 13:13 UTC, accepted
+  21 October, 11:07 UTC, all 12 runs matching their committed configs; `results/t71_*.csv`, `scripts/analyse_t71.py`;
+  the control read with `scripts/analyse_t68.py`'s rules on `t71_control_*`).** The untied slab 4 × L × L under the
+  layer form with the owner's gate g1 (VISION Update 69) and her daughter rule (Update 66), λ = 1.10, 1.25, 1.40,
+  L = 8 and 12, r = 1/64 and 1/16, 16 replicas a cell.
+  - **Layer moves alone (arm B), daughter rule:** CYCLES in all 12 cells, 16 of 16 replicas each. Every daughter carries
+    a N_slab to 1e-9. The first split falls at t_gate = 2a/r (12.8 to 204.8 sweeps across the six λ, r settings) plus
+    a wait: medians within 2 sweeps of it, every replica within 10, the same at L = 8 and 12. Daughters per replica 40 to 340; period 13 to 101 sweeps; slab share 0.77 to 0.96, except
+    λ = 1.10, r = 1/16 (0.37 at both sizes).
+  - **Reference (arm B, release kept in the parent's stores, f1):** OSCILLATES in all 12 cells, as predicted.
+  - **Model (arm A, layer moves plus the clean two-switch move):** CYCLES in all 12 cells. No clean switch move fired
+    in 10 cells. In the two cells λ = 1.10, r = 1/16 (L = 8 and 12) a clean switch move was paid in 12 and 13 replicas
+    of 16 (17 and 23 moves in all), never before the first split (SPENT FIRST 0 of 16), first between sweeps 335 and
+    1,703; there the median energy per daughter falls to 0.99 and 0.89 of a N_slab, and the end states carry rewired
+    patches (end energy above flat 128 to 528 at L = 12, with 24 to 84 points off the ladder in 11 replicas).
+    *Read from the rows (ours):* in those cells the feed brings one slab's cost every 2a/r = 6.4 sweeps, close to the
+    fastest the chain can convert (one layer proposal a sweep, a split and a refold per cycle; the measured period is 5),
+    so the stores pile up (to 25,000 to 95,000 at L = 12, about 30 to 110 per point) until a pool of eight ends holds
+    the 64 the first clean step needs. At every other setting the conversion keeps up and the stores never get there.
+  - **Control (single switch, T68's protocol, mode "all"):** SITS in all 12 cells, 16 of 16; no point broke.
+  - **The owner's prediction (Amendments 2 and 3), scored by the move sets she named:** model arm CYCLES at every
+    curling cost, holds; layer moves alone CYCLES in every cell (revised before any read), holds; the clean switch
+    "rarely", holds (two cells of twelve, after the first burp); the control "doesn't cycle", holds (it sits); one
+    a N_slab per daughter, holds in arm B in every cell and in arm A in ten cells of twelve, fails in the two cells
+    where a clean switch fired.
+  - **Ours, scored (rule 11):** arm B CYCLES with exactly a N_slab per daughter, holds; the first split at 2a/r plus a
+    short wait and the same sweeps at every size, holds; f1 OSCILLATES, holds; the slab share above one half under g1,
+    fails at λ = 1.10, r = 1/16 (0.37); arm A "no clean switch move in any cell", fails in two cells; arm C BREAKS,
+    fails (SITS everywhere). Four answers for the failures: (1) they do not touch the mechanism as stated (the slab
+    cycles and converts); (2) they are prediction errors of ours: arm C's BREAKS was carried over from T68's
+    one-store and one-point modes, while T68 in mode "all" at rates up to 1/4 already SAT; the slab-share and
+    clean-switch misses come from a feed that outruns the chain's one layer proposal a sweep, a clock choice of the
+    protocol (declared in T71's runner), not a property of the slab; (3) the cheaper test that tells clock from
+    mechanism is the same cells with more layer proposals a sweep, or a slower feed, where the conversion keeps up;
+    (4) the branch would be abandoned if, with the conversion keeping up, daughters stopped carrying a N_slab.
+  - **What it shows (ours):** under the layer form with her gate the slab is a converter: each slab's worth fed becomes
+    one daughter of exactly that energy, as long as the chain can keep pace with the feed; it is nearly arithmetic, as
+    the registration said. **Not shown:** anything about the switch model's slab, which no feed opened (T67, T68), or
+    about a front, a seam or a payment that cancels, which the layer form lacks. The held-out size L = 16 waits for its
+    words and numbers, written from these two sizes, and her word.
+  - **Addendum (23 October 2026), found while drafting the held-out numbers and confirmed independently in code and
+    data: the control was not fed like the arms it controls.** Exact: T68's runner, which ran arm C, shares the feed
+    rate among every point it feeds (`scripts/run_slab_feed.py`, `stores[feed_idx] += (target - fed) / len(feed_idx)`,
+    every point in mode "all"), while the layer-feed runner gives each point the full rate (`graphity.layer_feed`,
+    `st.stores += rate`). So arm C received 1/N_slab as much per point as arms A and B, 1/256 to 1/576 at L = 8 and 12;
+    its saved rows confirm it (the stores' mean equals fed/N at the last row, and not one unit was spent). The
+    registration's design table says "r per point per sweep" for every arm. No stage-1 word changes as read, but the
+    control's SITS is arithmetic at that feed and says nothing about a single-switch slab fed as the arms were; the
+    rule-11 answers above did not see it. A matched control, or dropping the control from the held-out stage, is the
+    owner's choice before L = 16 runs.
+- **O145 T74, read (21 October 2026, 11:28 UTC by the clock; fetched and accepted the same morning, 108 runs each
+  matching its committed config; `scripts/analyse_t74.py` on `results/t74_*.csv`).** The slab under the layer form, fed
+  by meals through a curl edge with one maximum curling speed c (VISION Updates 72, 73), λ = 1.10, 1.25, 1.40, L = 8 and
+  12, three feeds of one mean (steady, meals of 16 and of 256 sweeps' worth), c = 2R and R/2, then unfed against a cold,
+  an equal and a warm background, 16 replicas a cell. The owner's prediction is ours (Amendment 5).
+  - **Fed phase:** BURPS in 102 cells of 108; MIXED in six, all at λ = 1.10 with c = 2R (five with the large meals), where
+    a clean switch move was paid in one or two replicas (1 to 4 moves, first between sweeps 891 and 3,663) and a daughter
+    then fell short of a N_slab. The same cause as in T71 (O144): at the smallest curling cost the stores outrun the
+    chain's one layer proposal a sweep until a pool of eight ends can pay the first clean step.
+  - **Timing, meals against steady (backgrounds pooled, 48 replicas a feed):** SAME TIMING in 20 of 24 (λ, L, c, meal)
+    settings, the means within 2 %; SPREAD ONLY in the four with c = 2R and large meals at λ = 1.25 and 1.40 (the spread
+    2.7 to 3.3 times steady's). At λ = 1.10 with c = 2R and large meals the spread is only 1.3 times steady's: SAME
+    TIMING where SPREAD ONLY was predicted.
+  - **Unfed phase:** cold background DISSOLVES in 34 cells of 36, the other two MIXED (both bars met: the slab lost more
+    than half its stored energy and also burped once more after the meals stopped, at λ = 1.10, c = 2R); warm background
+    FED BY ITS SURROUNDINGS in 36 of 36; equal background, where the prediction is scored per cell only when every
+    replica's common mean lies on one side of 2a: 18 cells SPLIT and not scored, and of the 18 scored, WAITS as predicted
+    in 6 (c = 2R with the large meals at λ = 1.25 and 1.40, and with the small meals at 1.40) and MIXED in 12, where 2 to
+    12 replicas of 16 were fed by their surroundings although the common mean lay below the gate's 2a.
+  - **The shared prediction, scored (rule 11):** BURPS everywhere fails in six cells; the timing words fail in two;
+    cold DISSOLVES fails in two; warm holds everywhere; equal WAITS fails in 12 of 18 scored cells. Four answers. (1) The
+    mechanism as stated ("a black hole keeps its energy between meals only when its surroundings are not colder, and
+    dissolves only once they are") is not falsified: cold dissolves and warm feeds in 70 of 72 cells. (2) The failures
+    are of our arithmetic, which used means: the equal-background rule compared the common mean with 2a, while the gate
+    fires on the stores of the two layers beside the cut, and their fluctuation about the mean lets some replicas reach
+    it; the fed-phase and λ = 1.10 failures are the chain's pace (O144). (3) The cheaper test that tells fluctuation from
+    mechanism is exact: the distribution of the pool's stored energy at the common mean, against 2a, from the saved rows,
+    before any run; and for the pace, more layer proposals a sweep. (4) The branch would be abandoned if, in surroundings
+    clearly colder, the slab went on burping (it does not), or if, in surroundings clearly warmer, it dissolved.
+  - **What it shows (ours):** under the layer form, with one cap on how fast energy crosses its edge, whether a
+    black-hole stand-in keeps its energy between meals is set by its surroundings' warmth, as the registration's
+    arithmetic said, with noise at the balance point; meals bunch the timing only where the edge is wide and the meals
+    large. Nothing falls in by itself (no pull); the surroundings are put in by hand. The held-out L = 16 waits for its
+    written numbers and her word.
+- **O146 T76, Amendment 4 option 2, read: the first look at g = 3.2 (21 October 2026, 11:28 UTC by the clock; fetched
+  and accepted the same morning, 8 runs each matching its committed config; `scripts/analyse_t76.py --window 1000`).**
+  The flat sheet growing by her row rule, each clear offer taken with chance q, L = 16 and 24, q = 1/16 to 1/1024,
+  16 replicas a cell; a first look at one coupling, since the registered rule for the couplings could not be met (O141).
+  - **Words:** MIXED in 7 cells of 8, RISING in one (L = 24, q = 1/1024); CONSTANT in none. Replicas split between
+    falling (clean rows diluting a few clusters), rising (a cluster running toward a melt as the sheet grows) and, at
+    L = 16, a minority constant (3 to 8 of 16). The fitted slope of ln ρ against ln N scatters from −1 (the clusters
+    held fixed while the points grew) to large positive values (melting), so no w is read.
+  - **The owner's prediction (CONSTANT, w = −1): fails in every cell.** Ours (MIXED in most cells, CONSTANT in none,
+    revised before the run): holds. Four answers (rule 11). (1) This does not test her dark energy as stated: the stiff
+    toy cannot hold a thin steady density of defects at any coupling (O141, O142), so a growth test on it could only
+    have passed by chance; it was run as a first look on her choice. (2) The failure is of the medium: the stiff toy's
+    defects come in patches that either stay rare or grow into a melt. (3) The cheaper test is the one already chosen,
+    soft space (VISION Updates 76, 77): first whether a coupling holds a steady thin density there, then growth. (4) Her
+    reading of dark energy as a defect density is abandoned in this family if, with soft space, no coupling holds a
+    steady thin density either, or one does and growth does not keep it constant.
+
+- **O147 T78, read (22 October 2026): in the published model's warm background at λ = 1, a curled ring loses more
+  entropy than a flat patch of the same nine squares, by a fixed gap of about 2 that does not grow with the
+  background's deficit. CURL PENALISED, FLAT. The owner's GROWING fails on its growth clause; ours (NO GAP) fails on the
+  gap.** (PREREGISTRATION T78 and its "Reading"; `scripts/analyse_t78.py`; `results/t78_curl_vs_flat_n196_g*.csv`,
+  run from commit 6681eec6.)
+  - **Measured.** N = 196, g = 3.30, 3.433, 3.55, 3.697, deficit 0.92 to 1.13 missing squares per point, 16 replicas,
+    801 snapshots each, every replica melted: Δ = S_patch − S_ring = +2.09 ± 0.43, +1.86 ± 0.78, +1.66 ± 0.82,
+    +1.65 ± 0.74; largest minus smallest deficit −0.44 ± 0.85. Written as a curling cost per surplus square the gap is
+    λ_eff − 1 = 0.37 to 0.43 at every coupling (compared with nothing, rule 13).
+  - **Exact, the same day (sandbox, `sandbox/background_curl_price.py`), the two forms of Update 89 this run did not
+    need to test:** at λ = 1 the energy is 4 D and charges nothing for a surplus square, and a background of missing
+    squares makes a curl cheaper (the cheapest curl-making switch costs 8 in the three-square tiling against 40 in
+    flat space); an entropic cost scales with g, so our λ > 1 runs at low coupling are not an effective description
+    of λ = 1 in any background. The owner's questions of the day corrected the finding twice: a background can charge
+    entropy, and the reference for calling it a cost on curl is a flat object of the same square content (hers);
+    curl and uncurl are not swapped (checked). The private finding is `docs/outreach/finding_2026-10-22_background_curling_cost.md`.
+  - *Ours, unverified:* the fixed gap is most simply the objects' point counts (12 against 16), the limit the
+    registration stated; the point-matched control of rule 11's item 3 (a 3 × 4 grid on the saved graphs) decides it.
+  - **What it bears on.** VISION Update 89's "perhaps the network's negative curvature is the reason λ is above 1":
+    not in the energy (exact), not as an entropic cost that grows with the curvature (measured); what remains is a
+    fixed penalty of unknown origin. λ stays a knob of ours, its value hers to set. A dated line under Update 89 is
+    owed (VISION.md carries another session's uncommitted edits and is not touched here).
+
+- **O148 T79, read (22 October 2026): the curled ring's extra entropy loss is a penalty on curl, not the cost of a
+  denser object. PENALTY ON CURL. The owner's prediction holds; ours (DENSITY, NOT CURL) fails.** (PREREGISTRATION
+  T79 and its "Reading"; `scripts/analyse_t79.py`; `results/t79_curl_family_n196_g*.csv`, T78's chains replayed from the
+  same seeds and verified identical snapshot by snapshot.)
+  - **Measured.** Eight flat grids (4 to 31 links) give a line of entropy lost against links, slope −0.63 to −0.77
+    per link, every grid within ±1.9 of it. The curled ring (12 points, 20 links, 9 squares) lies 5.5 to 6.0 below the
+    line at every coupling (7 to 11 σ); its uncurled twin (the same square with exactly two squares on every link,
+    12 points, 16 links, 5 squares) lies 2.3 to 2.9 above it. Per surplus square the ring's penalty beyond the line is
+    1.4 to 1.5 units of entropy, or λ_eff − 1 = +1.15 to +1.33 in our family's units, compared with nothing (rule
+    13); with T78 (O147), it does not grow with the deficit.
+  - *Ours, unverified:* in the published model's warm background a link at three squares costs entropy beyond its
+    constraints; the candidate mechanism is the hard-core rule's forbidden volume (a saturated link admits no fourth
+    square and no K_{2,3}), countable exactly on the objects (rule 11, item 3 of the reading); a sandbox look the same
+    evening (`sandbox/LOG.md`, 22 October, forbidden volume) found the share of allowed switches round a curled ring
+    to be 12 to 13 % against 34 to 35 % round its uncurled twin at every coupling, consistent with that mechanism and
+    to be registered before it is cited. Braids, twists and spin,
+    the owner's own picture of why, have no object in the toy and are not tested either way.
+  - **What it bears on.** VISION Update 89's entropic form: the background does charge for curl, in sign and in size
+    (of order g per surplus square), but not in proportion to its curvature (O147). The owner's hypothesis is
+    therefore: confirmed that a curl is penalised beyond counting in his model at finite coupling; refuted that the
+    penalty is set by the background's negative curvature. A dated line under Update 89 is owed (VISION.md carries
+    another session's uncommitted edits).
+
+- **O149 Gate B‴, read (23 October 2026): the Hamiltonian as printed (our λ = 1/2) does not reproduce [T25] Fig. 3 at
+  N = 160; NOT REPRODUCED at λ = 1/4, 1/2 and 3/4. The owner's prediction (REPRODUCED or CLOSER) and ours (CLOSER)
+  both fail.** (PREREGISTRATION Gate B‴ and its "Reading"; `scripts/analyse_gateb3.py`; `results/gateb3_n160_lam*_vs_t25fig3.csv`.)
+  - **Measured.** Lowering the local coefficient from 1 to 1/2 and 1/4 moves the crossing of φ = 0.6 from g = 5.20 to
+    5.45 and 5.60, against Fig. 3's 6.2 (heating) and 7.0 (cooling); across the transition the four curves lie within
+    0.03 of each other and 0.3 to 0.4 below Fig. 3; below g ≈ 4 the cooling leg at every λ < 1 folds (φ up to 1.46 at
+    g = 2) where Fig. 3 shows 0.97. Largest differences 0.29 to 0.37.
+  - **What it bears on.** Q28's open question: if the code behind Fig. 3 carried the printed coefficient, it did so with
+    a protocol or ensemble that differs from ours in some other way; Gate B stays open and the question to him narrows
+    no further (coupling axis, size, or protocol and ensemble of Fig. 3). The λ = 1 kernel's standing is unchanged (Q28).
+
+- **O150 EXACT: the lattice tori at λ = 1 counted two ways, every single switch out of each, and the tube's zero-cost
+  family read from its positions (23 October 2026).** Code: `scripts/exact_torus_counting.py`; tests:
+  `tests/test_exact_torus_counting.py` (35). Promoted under rule 16(c) from two sandbox looks of the same day
+  (`sandbox/torus_counting_two_ways.py`, `sandbox/torus_free_energy_one_switch.py`; `sandbox/LOG.md` and
+  `sandbox/NOTEBOOK.md`, 23 October); two looks came before this entry. Item 2.6 of the handoff of 23 October. The
+  reading from positions is `sandbox/out/torus_zero_cost_switches_2026-10-23.md` (untracked; every number in it comes
+  from the script's commands). Checked by an independent agent that rebuilt the graphs, the square counts, the hard-core
+  rule and the automorphism counts in networkx. A statement that names no test was computed by the script's commands
+  and is not pinned by a test.
+  - **Renaming counts (exact).** At N = 64, 96 and 144 every non-square rectangular lattice torus (a, b even, both at
+    least 4) has A = 2N side-preserving renamings and the square torus 4N
+    (`test_rectangles_have_2N_renamings_and_the_square_4N`; at N = 64 also by networkx on a separately built grid,
+    `test_the_renaming_counts_agree_with_networkx_at_64`). The tube's renamings are exactly the 2N lattice maps
+    (x, y) → (±x + i, ±y + j) with i + j even (`test_the_tube_renamings_are_the_lattice_maps`). So at λ = 1
+    interchangeable-point counting weighs every rectangle equally, and named-point counting only halves the square.
+  - **Single switches (exact).** Every valid switch is recorded with its (dS, dX), matched against an independent
+    networkx brute force at 4 × 12 and 6 × 8 (`test_switch_costs_match_a_networkx_brute_force`); the look's N = 144 table
+    is reproduced exactly (`test_the_look_at_144_is_reproduced`). The 6 × L tori have **3L** switches at cost 16 and none
+    cheaper, at L = 8, 16, 24 and 32 (tested at 8, 16, 24, `test_a_6_x_L_torus_has_3L_switches_at_16_and_none_cheaper`;
+    32 from the tables command); the sandbox notebook said 2L (corrected there).
+  - **The tube's zero-cost switches, read from positions (exact).** At every even L from 8 to 48 the 4 × L tube has
+    exactly 2L zero-cost switches, every one with dS = dX = 0, so each costs nothing at every λ (tested at L = 8, 10,
+    12, 16, 24, 36, 40, 48, `test_the_tube_has_2L_zero_cost_switches`; the other lengths from one `--reach` run on
+    23 October). Read at L = 8 and 12 (`test_each_zero_cost_switch_crosses_two_opposite_links_of_one_junction`): each
+    crosses the two links that join opposite points {a, a + 2} of ring y to ring y + 1, losing the four squares between
+    those two rings and gaining four new ones there. The 2L switches form one orbit under the tube's renamings. The
+    switched graph keeps every ring and is **the tube closed through a reflection of its ring** ("the reflected
+    closure"): A = N; straight lines along it of lengths L, L and 2L; its non-ring squares form a connected closed
+    surface with V − E + F = 0 that cannot be oriented, which by the classification of connected closed surfaces
+    (textbook, not re-read) is a Klein bottle.
+  - **The zero-cost family (exact).** Chains of zero-cost switches from the tube reach exactly three classes up to
+    side-keeping renaming, at every even L from 8 to 48 (cap 200, not hit): the tube (A = 2N); the reflected closure
+    (A = N; one switch); the half-turn closure (A = 2N; two switches), which is the lattice torus with wraps (4, 0) and
+    (2, L) and keeps the rings of four. The three have equal S and X and every zero-cost switch between them has
+    dS = dX = 0, so they tie, and are joined at no cost, at every λ (`test_the_zero_cost_family_of_the_tube_is_three_classes`,
+    at L = 8, 10, 12, 24, with the move counts 2L; L and L; 2L, agreeing from both ends). With named points their
+    labelled copies stand 1 : 2 : 1, so the family holds 4 times the tube's own count. At L = 6 a fourth class appears
+    (moves of kind dS = −2, dX = −8; the family is 10 times the tube's count; `test_the_short_tube_family_has_a_fourth_class`),
+    and at L = 4, the 4-cube, there are five classes (`test_the_4_cube_family_has_five_classes`), not read further. At
+    λ = 1.25 each of the three classes has the same 12L exits of cost 12, paper 1's wall (`--exits`; tested at L = 8
+    and 12), so the zero-cost wander does not change the exit count of Update 9. *Ours, unverified beyond the enumerated
+    L:* the family is the stacks of rings whose junctions are wired through the four side-keeping maps of the ring.
+  - **What it changes (exact).** The look's one-switch free energy counted the tube's 2L zero-cost neighbours as
+    excitations; they are ground states, and the full partition function counts each once. So for L ≥ 8 (every even L
+    from 8 to 48) the zero-cost part of the tube's low-coupling advantage is **g ln 4, not g ln(2L + 1)**, and it does
+    not grow with L (`test_the_family_free_energy_starts_at_minus_g_ln_4`, at L = 12); at L = 6 it is g ln 10. Counted
+    that way, the tube's family still has the lowest one-switch free energy against every other rectangle at every
+    coupling tried (g = 0.5 to 10, N = 144, 160, 192; tables command, not pinned beyond L = 12, g = 0.5 and 1): its
+    advantage is smaller than the look's at g ≤ 3 and larger at g = 5 and 10, where the expansion is no longer small.
+    Her prediction of 23 October (the tube wins at every finite coupling) holds in this form; the sandbox notebook's
+    "at least ln(2L + 1)" is corrected there.
+  - **Beside the record.** One-sided (Klein-bottle) flat end states were already read on 11 October (O116, last
+    addendum: 5 whole 64-point Klein bottles and 39 end states with a one-sided piece among the flat end states of T8,
+    T23, T24 and T60; O122: 2 among T60's 3,521). What this entry adds is that every tube has a one-sided zero-cost
+    neighbour, at every λ.
+  - **What it does not show.** The one-switch term of the expansion only; nothing about whether the chain moves between
+    tori; nothing about λ ≠ 1 for the comparison between tori (the reachable set at λ ≠ 1 was not enumerated); and not
+    the full ground state at λ = 1, since the other flat wrappings (O119), gases of 4-cubes and mixtures are not
+    counted, so it is not the equilibrium answer to which torus the network sits in.

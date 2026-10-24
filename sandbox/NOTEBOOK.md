@@ -1573,3 +1573,714 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-19, the owner, on Carter's hard-steps reading that Earth's intelligence is a selected fast case: "yes this seems right, seems like evolution to intelligent life went about as fast as it could have everything kinda came together for us!" And on the observer-window classes: test three, "and we can add a 4th that factors more of the things in and preregister that too." (PREREGISTRATION T72, class D.) Her decisions of the evening are VISION Update 70.
 - 2026-10-19, the owner, her T73 prediction and reason, in her words: "whether the diamond weight moves the peaks - yes it will"; it "lifts the share before now, especially because equal energy 50/50 has already passed and that is where the cone concentrates." Her decision on T72's gate: "Take the gate as passed on the share plus the paper's loose wording, and read the four classes from the committed file as registered." Read: O138, O139. *Ours:* the one class that keeps our age typical under both the plain and the diamond weight is hers (sun-like stars with Carter's hard steps); the counting unit decides more than the stars; which unit and which weight the measure uses is now her choice with the consequences measured.
 - 2026-10-19, the owner, late, her decisions on piece 12's measure (VISION Update 71), in her words: "let's go once per civilization"; the causal diamond as the weight "because I believe in the strange loop and the version probability mattering"; "an observer is a civilization where at least one intelligent being asks this particular question. so much interaction and uncontrolled stuff otherwise. like how long does a being last, how do they learn / share / pass information, what is the lifecycle, how violent / destructive is said civilization. things asking the question itself can affect." And on D landing at the median under the diamond: "is it just me or is this amazing!" *Ours:* recorded with rule 13's disclosure that the numbers were known when she chose; our age is not scored under the measure from here.
+- 2026-10-19, the owner, evening, on the consistency audit (VISION Update 72): "Proceed" on a turn being one universe's
+  own life; on Update 59 against Update 69, "If they are both discussing 2 d to 3-D? 'fires when the stores hold the whole
+  cost' is a threshold"; and then "whether the opening is probabilistic - hmm would g still have an impact? Then there is
+  probability if g isn't consistent and stable within the black hole." *Ours:* the threshold is the rule and the
+  probability comes from how unevenly the energy reaches the stores: a steady, even feed tips the bucket on schedule
+  (T71's case), uneven infall makes the moment a chance that rises with g. Test: the layer form under an uneven feed.
+- 2026-10-19, the owner, evening, on the uneven feed: "I think that what the curl can take how fast has a limit and unless
+  g is high enough it probably can't curl. And a star gets eaten that's a fast inflow, then there is time then another
+  inflow. I think the amount the curl will hold depends on g so if the space is cold the curld lxlx4 torus is metastable."
+  *Ours:* three statements: an intake limit on how fast the curled region takes energy; infall as bursts with quiet gaps
+  (a star eaten, then time, then another); and a capacity that rises with g, so a cold slab is stuck for now. In the toy's
+  bookkeeping a store's energy is how g is read (Q12), so "the stores beside the cut hold the whole cost" already means
+  "the local g is high enough"; with a leak, a burst too small to reach the threshold drains away in the gap. Published
+  relatives (general knowledge, to verify): the Eddington limit on accretion; tidal disruption flares. Not yet a decision.
+- 2026-10-19, the owner, evening, clarifying which g she meant: "I wasn't thinking this is the networks temp dark energy I
+  was thinking a g increases because in the black hole there is a lot of compacted stuff that's not right on the curl
+  edge, is that reasonable?" *Ours:* two different g's, kept apart from here: the network's cold coupling of Update 70
+  (fixed by the loop, the candidate for dark energy) and a local excitation inside a black hole, raised by the compacted
+  energy in its bulk, away from the cut. In the toy g is read locally off the stores (Q12), so a warm bulk beside a cold
+  network is expressible; it is the two-system kernel Update 70 already names (a cold network beside a region at its
+  own temperature). How fast bulk energy reaches the cut would be her intake limit; the layer-form kernel moves energy
+  between stores only through the moves' pooled payment, so a flow from bulk to edge is a new knob (S1). Caution (general
+  knowledge, to verify): a black hole's Hawking temperature falls as its mass grows; her local g is the toy's interior
+  excitation, not a horizon temperature, and the two must not be confused.
+- 2026-10-19, the owner, evening, on energy leaking away between stars: "just drains away in the gap it cannot go
+  anywhere can it? Maybe I'd resolves over the inverse curvature dark energy that can still affect it. Otherwise it waits
+  so the next star feed has a good starting point." *Ours:* right that it cannot vanish (claim 6): T71's leak is a
+  protocol knob, booked as "leaked", not a physical claim. Her two cases: no leak, so each star's energy waits and the
+  burp comes once enough stars have arrived in total, with no minimum star size; or a slow leak back into the network
+  (her "dissolves" into the dark-energy coupling), which would also be the dissolve rule Update 72 says the toy lacks,
+  one knob for both. Consequence: with no dissolve at all, a black hole short of the threshold that is never fed again
+  never dissolves, and its universe's turn never ends. Standard counterpart of a slow dissolve: Hawking evaporation
+  (general knowledge, to verify), extremely slow for large black holes. Which case is hers to choose.
+- 2026-10-19, the owner, evening: the threshold does not move with g, only how full the stores get, "because we found the
+  activation energy was the same at different g values" (VISION Update 72). *Ours:* the tube's wall of 12 fits six
+  couplings with nothing fitted; the layer form's gate is fixed by λ and size by construction.
+- 2026-10-19, the owner, evening, on the end state: "so its universe's turn never ends. Yes not really end there is
+  curling energy inside still that is there in each in its end state. Then I think the black hole dissolves and the
+  curling energy reverses in the end state so the end state has the slight negative curvature." *Ours, unverified:* read
+  with her earlier answer ("otherwise it waits"), energy waits between stars and the black hole dissolves at the end; its
+  curling energy, returned to open space, becomes defects, which the published model reads as negative curvature and dark
+  energy ([T22], [T24]); that would make Update 70's "energy returned to the network" and its candidate dark energy the
+  same thing, the dissolved black holes' curling energy. In the toy, released energy left in a sealed space does stay as
+  scattered defects (T9; O123). Standard relative (general knowledge, to verify): a black hole colder than its
+  surroundings absorbs more than it radiates, and evaporates only once the universe has cooled below its Hawking
+  temperature, so it waits while it can be fed and dissolves at the end. Sign caution as in Update 70. What triggers the
+  dissolve, and her confirmation of the reading, are owed before anything is registered.
+- 2026-10-19, the owner, evening, on the hot matter outside the horizon: "maybe at the edge it can go so fast it creates a
+  bit of a vacuum." *Ours (general knowledge, to verify):* the standard picture has such a gap: inside the innermost
+  stable orbit, a few horizon radii out, matter cannot orbit and plunges, moving faster and thinning out, so the disk has
+  an inner edge and a sparse plunging region below it. In her picture that thin, fast layer is where energy reaches the
+  curl edge, which bears on her intake limit. The toy has no geometry of infall.
+- 2026-10-19, the owner, evening: "This is important you should dig in my logic is internally consistent with the
+  [space] being negative hyperbolic curvature." Read the same evening ([T22] to [T25];
+  `docs/reading/notes/2026-10-19_negative_curvature_de_sitter.md`). *Ours:* the "sign caution" above (and in VISION
+  Update 70) was our misreading: his negative curvature belongs to a timeless geometry and becomes de Sitter's positive
+  curvature by reversing time and curvature together, with space flat or closed. Her chain holds together: a slightly
+  negatively curved network at the end is, in spacetime terms, a small positive cosmological constant, the empty de
+  Sitter end of standard cosmology. Three things to keep straight: today's dark energy is the network's, set by the
+  loop's total energy, not our own black holes' (they have not dissolved); his dark energy falls as the coupling runs
+  and hers is constant because she freezes the coupling; for D > 2 his finite curvature needs the coupling to run with
+  size, which is open against her fixed coupling. Her "reverses" works in the toy's accounting: released curling energy
+  breaks squares, and too few squares is negative curvature (T9; O123).
+- 2026-10-19, the owner, evening, on bringing infall into the toy: "Let's try one, my only concern leaning to 2 is that
+  black holes eat more get bigger, my theory would say if a black hole stops eating it gets smaller so as long as the
+  energy can be on a smooth path, something has to slow it down. My intuition says it's something about max curling
+  speed." *Ours:* option 1 is energy that travels from store to store to reach the cut; a flow that can carry energy in
+  can carry it out, so a cap is needed; her maximum curling speed is that cap. Written as a proposed form in
+  `docs/design/curling_energy_brief.md` for her decision: which way the cap acts is hers.
+- 2026-10-19, the owner, evening, on the reading of [T22] to [T25]: "it seems like we did get to it with different
+  pictures with the multi handle Taurus and mine with the strange loop." *Ours:* both pictures put no time at the
+  fundamental level: in print his network is a timeless, negatively curved geometry from which time emerges in the
+  effective description ([T22] Sec. V; [T23]); hers is a loop seen from outside with every turn at once, X having order
+  but not time and clocks only inside a universe (Updates 41, 44, 68). They part on how many times there are: one
+  universal time for him, one clock per universe for her. Exact for smooth closed surfaces (Gauss-Bonnet, textbook):
+  total curvature is fixed by the number of handles, zero for a torus and negative for two or more, so a closed surface
+  that is negatively curved must have at least two handles; whether the toy's graph curvature obeys the same count is to
+  verify.
+- 2026-10-19, the owner, evening, on [T22]'s coupling that must shrink as the network grows: "in my picture the network
+  doesn't grow it is eternal." *Ours:* that removes the requirement, which exists only for the limit N → ∞; an eternal
+  network with a fixed total energy keeps one coupling (Update 70). The question it leaves: where does a daughter's
+  expanding space come from? Points are not fundamental (Update 59), and in the layer form the count of points changes as
+  layers split or compact (Updates 63, 65), so a daughter can grow by gaining points paid for by energy; new points at
+  the network's coupling carry the same defect density, so dark energy per volume stays constant. If expansion only
+  stretched the distances between fixed points, the density per volume would thin and dark energy would not be
+  constant. Her picture needs the first; hers to confirm.
+- 2026-10-19, the owner, evening: "First is good": a daughter's space grows by gaining points, not by stretching (VISION Update 72).
+- 2026-10-19, the owner, late evening: T74, "I agree with your assessment" (her prediction, as ours; PREREGISTRATION T74,
+  Amendment 1). On T75: "Flat space isn't stiff. So we need to allow for that. What kind of disturbance? How does the knot
+  or flaw get in there? In the spiral? Does it matter when we make space not stiff? Proceed w tests" (T75, Amendment 1).
+- 2026-10-20 (19 October, late, in Charlottesville), the owner: T75's space, "Burps product w spiral seam"; her
+  prediction, "If the flaw was a precursor to dark matter, would the flaw spread? Yes as dark matter does" (T75,
+  Amendment 2); and "If there is dark antimatter and dark matter the big bang could convert the flaw to those and the net
+  is net dark matter." *Ours:* that is asymmetric dark matter in her terms, a published family ([KLZ09], [PV13], abstracts
+  only; Update 42), which needs something that comes in two opposite kinds and an imbalance between them. In the toy the
+  two kinds of point are equal by the degree rule (exact; LOG, 19 October), but the product's twist has a handedness, left
+  or right, and the knot of two kinds of point (O107) has two orientations; whether the burp makes one handedness more
+  often than the other is a count on the saved products, not yet made. The energy treats left and right alike, so an
+  excess would have to come from the history of the opening (its front), which is the published route too ([MRM12],
+  abstract; Update 42).
+- 2026-10-20 (19 October, late), the owner: "Would a flaw stretch as space stretches?" *Ours:* in her picture space grows by
+  gaining points (Update 72), and a flaw is a fixed local wiring of a few points whose energy is a sum over its own links
+  (exact, O22), so new points between flaws move them apart without changing them: they thin with the volume, as matter
+  does, rather than stretch. Standard counterpart (general knowledge, to verify): bound objects and point-like defects do
+  not stretch with expansion, while extended defects (strings, walls) and light's wavelength do. That separates two
+  populations in her picture: the burp's frozen flaws and knots, fixed in number and thinning like matter (the
+  dark-matter reading), and the network's own missing squares at its coupling, made afresh in every new piece of space
+  and so constant per volume (the dark-energy reading, Update 70). Open: where new points appear; if inside a flaw, the
+  toy does not say what happens to it.
+- 2026-10-20 (19 October, late), the owner, on the two kinds of point (her words, unedited): "I hadn't thought about this but
+  what if one point is a curling type and the other an uncurling point. And the link between them energy goes so it's
+  closer to the curling point it's curled and to the uncurling point. Flaw is when the curling and uncurling points connect
+  to points that are not close to them, that's why there is a curling cost, the cost of moving energy from curling to
+  uncurling, it moves at the speed of light only so non curling energy needs to create a bath for it to do that: hotter
+  bath, the curling energy is hit more often. Right in the middle, space is flat. So the flaw is curled point that should be
+  flat (too much curling energy, makes curling matter, we could call it one or 2d space if it's the culumn, so it doesn't
+  interact with the uncurled matter.) the extra squares in there cost. When it cools and they flatten out they release
+  their curling energy and space springs back, adding a negative curvature and releasing the tiny burp of dark matter that
+  cancels out the curl side antimatter but leaves a difference which is net dark matter. and creating dark matter with that
+  change. The difference is dark matter gets created in the daughter universe and regular matter is created during the
+  release, with the store surplus. Then the dark energy flaw network expands to fill space and creates dense areas that
+  form the starting dense areas for galaxy formation. Makes sense curling side energy is denser. Positive and negative
+  charges attract. A flaw is" (the message ends there). *Ours, against the toy, in the reply of the same night:* every
+  link joins one point of each kind (exact, the toy is two-sided); a switch, the toy's flaw, joins points that were not
+  neighbours (exact); knots are where the local dimension is lower (exact, the census d(v)); a hotter bath crosses a wall
+  more often, as exp(-wall/g) (measured, the tube); healing knots release their energy and released energy breaks squares
+  (T51, O123). What the toy lacks: the two kinds are exactly symmetric in its energy, so a curling kind and an uncurling kind
+  is a new ingredient (S1). Two tensions: the knots' layout is white noise, not the sky's seed pattern (the look of 18
+  October), and dark matter released by knots flattening is a different reading from the knots being the dark matter
+  (Update 52).
+- 2026-10-20 (19 October, late), the owner: "If it foams new points and those have flaws at a similar rate with some
+  randomness that explains the uniform but blotchy spread of dark matter." *Ours:* flaws made at random at a fixed rate
+  give exactly that pattern, smooth on average and speckled up close (shot noise; the knots' layout read on 18 October is
+  of this kind). Two conditions from standard cosmology (general knowledge, to verify): flaws made afresh in every new
+  piece of space keep a constant density, which is dark energy's signature, so a dark matter made this way has to be made
+  early and then only carried apart, thinning like matter; and today's clumps of dark matter grew by gravity from tiny
+  early seeds with a nearly scale-free pattern, while random speckle adds a different, flat pattern whose size
+  observations limit, more tightly the heavier and rarer the objects. So: flaws foamed at random while a daughter is
+  young, then frozen and carried apart, with the clumps grown later by a pull the toy does not yet have (piece 8).
+- 2026-10-20 (19 October, late), the owner: "The extra square costs because it forces a Less than optimal setup of the dot
+  arrangement. It wants to be intersecting to xyz. Some repulse on being too close to too much of your own dot type. As it
+  curls it also gets too close to its own dot type, but then the 2 types of points become one and neutralize." *Ours,
+  against the toy:* a square is two points of one kind sharing two neighbours of the other, so the square count is the
+  number of close same-kind pairs (exact, with the hard-core rule's limit of two shared neighbours, Q2); flat space is the
+  grid her "xyz" names (the cubic lattice with six links); curling makes same-kind points closer than flat (a tube's points
+  share neighbours with partners across the curl), and the curling cost charges for that crowding, while the hard-core
+  rule forbids crowding beyond two shared neighbours outright. In the layer form, compaction removes points in linked
+  pairs, one of each kind (exact, by construction), which is her "the 2 types become one and neutralize" in the toy's own
+  terms. Standard relatives (general knowledge, to verify): like charges repel; exclusion keeps like particles apart.
+- 2026-10-20 (19 October, late), the owner: "If curling is like moving the curling dot close shortening the link between
+  and uncurling is stretching the link and moving the dots away from each other so both lxlxl lxlx4 are both stable."
+  *Ours, against the toy:* both are stable in its terms (exact): flat space is the lowest state at λ > 1, and the slab is
+  stuck for now for 1 < λ < 2, every single move out of it costing (O41), with a wall between: two dips. Links have no
+  length in the toy; closeness is shared neighbours, and four around is the tightest a curl can be (two-sided links allow
+  no shorter loop), with the hard-core rule stopping more crowding. Between four around and flat the toy has no spring:
+  every width from six around up costs the same, which is why an opened tube stays six around (O116). Her stretching is a
+  force the toy lacks; the nearest thing it has had is the price on loops of six (Update 56), under which tubes widened
+  (T62, T64). Whether that price is her stretching is hers to say.
+- 2026-10-20 (19 October, late), the owner: "They release curling energy when they heal as connecting to a not close point
+  Stretches the link then it snaps back (curl). Yes make them diff types that repulse but if they touch they neutralize and
+  the links on them connect with the closest free one of opposite type." Recorded as VISION Update 74; the form's
+  questions are in `docs/design/two_type_points_brief.md`.
+- 2026-10-20, the owner, on gravity: "Mass has curling and uncurling energy. Both dark and regular, and dark matter has more
+  curling energy. And gravity curves (a partial curls) space in response to balancing the arrangement of space + matter so
+  that it is close to neutral. Curve first gravity. Then the matter rides the curved space to aggregate. Working toward the
+  fully flat space that would occur if all the matter were gone, set to curled, collapsing the points that split in the big
+  bang to make a curling and uncurling point, back to 2 points." *Ours:* (1) in the layer form the burp's split makes new
+  points in linked pairs, one of each kind, and compaction removes them in pairs (exact, by construction): her "split in the
+  big bang" and "collapsing back" in the toy's own terms. (2) A response that balances a curling excess where matter is
+  makes curvature only where the matter is; a pull outside needs the balancing curvature to spread as 1/r, as Newton's
+  potential does around a mass, and that needs a soft medium (general knowledge, to verify; O60 (a)): stiff space would
+  keep the balance local and give no pull. So her mechanism with soft space is a candidate for curve-first gravity, and
+  with the toy's stiff space it gives none. (3) A cheap exact look: does the curvature around the burp's knots already
+  show a balancing halo (T75's counts found flaws cheaper beside knots, 15 against 20)? Not yet made.
+- 2026-10-20, the owner, correcting the entry above: "Back to one point I mean." *Ours:* the pair that split from one point
+  collapses back into one point. In the toy points come and go in linked pairs, two to none, because the two kinds must
+  stay equal in number (exact, the degree rule); merging a linked pair into one point would give a point linked to both
+  kinds (in graph terms, contracting the link), which the two-sided toy does not allow. So "back to one point" is a third
+  state the toy does not have: a point of X before it divided into two kinds. Open, hers: whether X's points are
+  undivided, with the two kinds appearing only when the burp splits them.
+- 2026-10-20, the owner: "Yes sharing more neighbors is a better description" (of curling than shortening a link). In the glossary.
+- 2026-10-20, the owner (her words, unedited): "Could a quark be like a group of knots (0d), or a set of knots all tangled due
+  to balancing electromagnetism. The smallest object. Can that be what they call strings? The quark spins on an axis
+  according to its type or color. There are rules about how quark colors makeup other subatomic particles. Other
+  subatomic particles could be from rarer flaw/scrap/relics . But there are a huge number of points, they keep splitting at
+  the edge which is how space gets bigger. It starts growing at a really fast pace, fastest possible, close to or at speed
+  of light. Then that balances towards the slight negitive curvature of space. So it's accelerating because there is more
+  surface area on the edge of space, but decelerating due to the effect of the big bang wearing out. So the speed at which
+  space is growing has to do with the interaction between volume growth and the push pressure of big bang and pull
+  pressure of dark energy." *Ours (general knowledge, none of it read, to verify):* particles as knotted or braided
+  structures have a long line of relatives: Kelvin's vortex atoms (1867), knotted solitons (Faddeev and Niemi), and braided
+  ribbons in a network that reproduce the charges of quarks and leptons (Bilson-Thompson 2005; with Markopoulou and Smolin,
+  in the quantum-graphity family the toy descends from). Strings in string theory are one-dimensional vibrating objects,
+  not knots. Color is a charge, not a direction of spin; the rule is that only color-neutral combinations are seen.
+  Expansion is observed to be the same everywhere with no edge or centre, so new points would have to appear throughout
+  our space, which they do if our space is itself the edge (the growing surface of an opening). If every point can make
+  new points at a fixed rate the growth is exponential, which is the behaviour of a cosmological constant; growth only at
+  a boundary is slower. Dark energy speeds expansion up (in effect a push); matter's gravity slows it.
+- 2026-10-20, the owner, refining the quark idea: "Maybe not tangled maybe gathered, then the distance around a knot you
+  talked about is the spacing." *Ours:* in the toy two knots cannot sit closer than one flat point apart without becoming
+  one piece, and the only force between leftovers is a gain of 16 when they touch, none at a distance (exact, O22): a
+  short-range binding, the shape (not the strength or rules) of the force that holds quarks together. The softened ring
+  round a knot is two steps wide (the halo look of 20 October).
+- 2026-10-20, the owner: "By itself I don't think a flaw can move space curves it doesn't move. But the flaws effects can
+  travel outwards as it settles or interacts with other spacial flaws (of types that can interact) and matter /energy" (T75,
+  Amendment 6: SPREADS, not TRAVELS). And on where new points appear: "At the edges more are made due to them just being
+  what happens: 2d to 3d creates energy, more dots on flat space just creates more space, empty." *Ours, exact in the toy:*
+  the opening releases the curling cost, and adding flat space costs nothing (every width from six around up has the same
+  energy, O116), so new flat points are empty space at no cost; the toy has no rule for where or how fast they appear.
+  Open: observed expansion is the same everywhere, with no edge in view, so an edge where points are made has to lie
+  beyond what we can see, or our whole space has to be that edge.
+- 2026-10-20, the owner: "I'm thinking something about the bath creates flaws, no warm bath no flaws." *Ours, against the
+  record:* so it is in the toy. A flaw costs energy (20 at least in the burp's product, 32 in a plain flat torus), so a bath
+  makes them at a rate that falls as exp(−cost/g) and a cold one makes none (measured for the tube's wall, which follows
+  that law with nothing fitted). Three routes to flaws, all warmth: the network's own missing squares at a coupling above
+  zero (Update 70's dark-energy candidate); the knots an opening leaves, more of them the more seeds warmth starts (T37);
+  and the burp's own heat, which leaves flaws when the surroundings cannot absorb it (T9, T61), so even a cold box gets a
+  bath from the burp. Slow cooling heals some of them (the columns, T51). Standard counterpart (general knowledge, to
+  verify): thermal relic dark matter, whose abundance is set by the temperature at which it stops being made and
+  destroyed (freeze-out).
+- 2026-10-20, the owner: the second kind of disturbance for T75 is the pair of flaws ("Yes"; T75, Amendment 7). And on
+  the edge where points are made: "I mean its beyond what we can see, it's been moving outward at the speed of light since
+  the big bang, before light, so of course we can't see it." *Ours (general knowledge, to verify):* an edge beyond the
+  farthest light we can receive cannot be seen, so observation does not rule it out, provided we are far from it. But
+  growth at a far edge alone would not move galaxies apart here: Hubble's law says the space between us and every galaxy
+  is growing, in proportion to the distance. Under Update 72 (space grows by gaining points, not by stretching), that
+  needs new points throughout our space as well as at the edge. Also, the speed limit is local: in standard cosmology
+  distant regions recede faster than light without breaking it.
+- 2026-10-20, the owner: "about one per three seeds - this seems important. Could there be some mechanism in the (expanded,
+  getting close to full) toy that sets the value?" *Ours:* the record's numbers: one seed leaves about one scrap (T10, 1.10
+  per tube in T17); each extra planted seed adds 0.29 ± 0.04 (T17); natural seeds in long tubes leave 0.35 columns per
+  seed (T37, twelve tubes at L = 1024, besides 15 other small pieces per tube). The published mechanism that sets defects
+  per seed is Kibble's (general knowledge, to verify; Kibble 1976, Zurek 1985): separately started regions each choose
+  one of a few equivalent ways to form, and where neighbours chose differently they cannot join cleanly, so the number of
+  defects per region is set by counting the ways, not by tuning. In the toy a tube opens into six around with its seam
+  shifted, which can happen in more than one way; whether the knots sit where neighbouring patches chose differently,
+  and what the count of ways predicts per seed, is an exact question on saved end states (T17, T37). Rule 13: the 0.29
+  and 0.35 are known, so a count that gives one third is a postdiction unless it also predicts a setting not yet run
+  (another λ, or the slab's opening in three directions).
+- 2026-10-20, the owner: on "the amount of dark matter is set by how warm things were when the flaws stopped forming",
+  "Yep." And: "Hmm so growth can happen in any flat space not just edges. It can't be growing at the speed of light that is
+  observationally too fast right? Maybe it can only grow where space is flat so anything too close to matter can't grow
+  freely but where there is enough space that curve is at least a little negative there it grows." *Ours (general
+  knowledge, to verify):* today's expansion is slow locally, about 7 % per billion years (the Hubble rate, about 70 km/s
+  per megaparsec), so growth at light speed everywhere would be far too fast. Bound systems (atoms, planets, galaxies) do
+  not expand, and in standard cosmology emptier regions, the voids, expand faster than average, behaving like little open
+  universes with slightly negative curvature: her rule's shape. With it, growth would be held back while matter fills
+  space and speed up as voids come to fill most of the volume, decelerating then accelerating, which is the observed
+  history; a published, contested relative attributes the acceleration to voids in this way (backreaction; Wiltshire's
+  timescape; not read). In the toy adding flat space costs nothing and no rule says where points appear; hers would be
+  one (points added only where the surrounding links are flat or short of squares), a new knob under S1.
+- 2026-10-20, the owner: "add points only where the surrounding links are flat or short a square, never next to curled ones -
+  agreed, proceed" (VISION Update 75; the brief `docs/design/growth_rule_brief.md`).
+- 2026-10-20, the owner, on the growth rule's form: "A sounds right. Empty space, more through lines, growth approaches light
+  speed. ... B seems like maybe it can happen but it's got to be hot and concentrated and in that setting it's more likely
+  to curl than expand, so I think it's unlikely or a mechanism I don't understand." (VISION Update 75; the brief.)
+- 2026-10-20, the owner: three steps for "clear" ("I agree"); "Let's ignore the pairs thing and come back if we need it
+  later"; "I think they heal if the temp is high enough otherwise freeze in."
+- 2026-10-20, the owner: "I mean maybe there is a couple through lines of flat space that can grow near matter, if that's
+  what the research shows." *Ours:* it does: in timescape the flat walls expand, on the late-time solution at two thirds
+  of the voids' rate (H_w/H_v = 2/3, [Wil07b], read in full), and only bound systems do not expand. Her rule as decided
+  gives that shape without change: where knots are sparse enough some rows pass clear within three steps, fewer than in
+  a void, so walls grow more slowly; inside a clump none do. The first growth test can read the rate in voids, walls and
+  clumps; two thirds is a target (rule 13), not something to tune toward.
+- 2026-10-20, the owner: three steps, "Agree"; on the rate: "I'm thinking it's like we learned in the outside of time
+  situation, it matches the relevant sweep rate at the temp to give a probability function of expanding but instead of
+  needing a hot spike it needs a cool spike." (The growth brief, "The rate".)
+- 2026-10-20, the owner: "On timescape's late-time solution, walls grow at two-thirds the rate of the voids - maybe that is
+  the proportion of through lines. It's similar to the proportion of energy that is currently dark energy, so maybe as
+  that increases so does the rate, toward void rate." *Ours:* the second half is timescape's own formula: the average
+  rate is H = f_v H_v + (1 − f_v) H_w, so as the void fraction f_v grows the average moves toward the void rate
+  ([Wil07b]); in her rule the share of clear through-lines plays f_v's part. The two thirds itself is exact arithmetic of
+  two textbook solutions (walls expanding as a matter-filled universe, H = 2/(3t); voids as an empty one, H = 1/t), not a
+  measured share, and constant; dark energy's 68 % is today's value of a share that changes with time. Rule 13: the
+  closeness is a coincidence until derived. The quantity in timescape that does the job of dark energy's share is the void
+  fraction, fitted at 0.737 ± 0.029 today ([Sei25]). In the toy, the growth test can measure the share of clear rows and
+  the wall-to-void ratio of growth as numbers the rule does not fix by construction.
+- 2026-10-20, the owner, confirming the two-part history (VISION Update 75): "the hot early universe expanded fastest due to
+  the burps push. What that means is the uncurl 4 to 6 at the speed of light, then matter and light followed. So then space
+  was expanding and so was the part of space where matter exists. Where there is no growth. But we still had that initial
+  vacuum at least 2 but maybe more rows growing at vacuum rate at a growing edge and there was a point when the maximum
+  proportion of space had flaws and matter. Then the void overtook that at the 50/50 point about 4b years in." *Ours:*
+  the crossover is about 4 billion years ago, not 4 billion years in (general knowledge, to verify); a reply of the same
+  evening that said the speed-up began "about four billion years ago" was imprecise: the speed-up began about 5 to 6
+  billion years ago, and dark energy's density passed matter's about 4 billion years ago.
+- 2026-10-20, the owner: "A constant moving number happening to be closed today doesn't tie them together, sometimes it's
+  worth exploring in case a single factor could be impacting them both, but I don't think that's the case here. ... The
+  74% and 68 % are both mowing to 100 and the difference in their rates and the shape of growth to get there can tell us
+  something important about matter." *Ours:* in the standard model dark energy's share rises as matter thins with the
+  volume, 1/(1 + (Ω_m/Ω_Λ) a^-3) with today's 0.315 and 0.685 (Planck 2018 as used in O89): 0.03 at z = 3, 0.21 at
+  z = 1, 0.50 at z = 0.3, 0.69 now, 0.95 when the universe is twice today's size (arithmetic). In timescape the void
+  fraction rises as matter clumps, so its curve is set by how fast structure forms. So the two curves read two different
+  properties of matter: how much there is and how it thins (the first), how it gathers (the second); in her picture the
+  second is how the knots gather, which needs a pull (piece 8). Caution: timescape's clocks run at different rates in
+  walls and voids, so the two curves have to be set on a stated clock before they are compared.
+- 2026-10-20, the owner: "Wasn't that about the time earth formed, so it would have formed at the most probable version time.
+  The most likely type of planet we could find ourselves on?" *Ours (general knowledge, to verify; and the record):* Earth
+  formed about 4.5 billion years ago, about 9.3 billion years after the Big Bang, within about half a billion years of the
+  crossover of dark energy and matter; star and planet formation peaked much earlier, about 10 billion years ago (cosmic
+  noon), so most Earth-like planets are older than Earth. T72 (O138) under her unit: about 81 % of observers round sun-like
+  stars come before us, peak at a universe age of 7.9 billion years: typical, not at the peak. Rule 13 and Update 71: our
+  own age, and so Earth's, is not scored under the measure, since its choices were made with these numbers known. In her
+  picture one factor, matter gathering, drives both planet formation and void growth, but planet formation peaks about six
+  billion years before the crossover, so a shared cause does not make them coincide.
+- 2026-10-20, the owner: "I still have a hard time doing mental math on relativity so I just use time since big bang in
+  earth years. What figure do you recommend?" *Ours, recommended and used from here for comparisons:* time since the Big
+  Bang on clocks like ours, in billions of years, with redshift beside it where a source gives z. In the standard model
+  that is cosmic time (13.8 billion years now), and an Earth clock agrees with it to better than a part in a million
+  (general knowledge, to verify). In timescape our clocks are wall clocks; the volume-average clock runs faster by the mean
+  lapse 1 + f_v/2 ([Wil07b]), about 1.37 at today's f_v, so a timescape curve is put on wall time before it is set beside
+  the standard one.
+- 2026-10-20, the owner: "Yes, they come two at a time. Good note on Rows cleared. To yes my prediction is that it is a
+  constant. I think it's possible that a smaller segment can be tested, but it will only work if there's two existing flaws
+  lined up so that the two row additions can take advantage of as the end points of the line segment otherwise it has to
+  go across all of space. Yes 4 coupling is g right?" (Yes: g, the network's coupling.) VISION Update 75; T76.
+- 2026-10-20, the owner, on [T24]'s "more and more matter is transformed into space-time": "I don't think matter transforms
+  into spacetime? I think it goes into the black hole? Is his g the same as curvature? While we have 3 types of energy
+  stores: the elevated knot, the column, and the curve, where the negative curvature outside of time, in the network,
+  elevated knots are g, column energy is dark matter, and a curve in flat space is gravity, which has an effect near energy
+  and matter but not in the cold void of space." *Ours:* in his picture matter is the leftover random phase, which
+  converts to geometry as the coupling falls ([T25] VI.1); in hers matter's energy goes into black holes, and a black
+  hole's burp makes a daughter, so matter does end as new space, in another universe. g is the coupling, not the
+  curvature: the curvature is a function of it, K(g). Her three stores against the toy: flickering flaws whose density is
+  set by g alone (constant at a fixed coupling: the dark-energy reading); frozen knots fixed in number at the opening and
+  thinning as space grows (the dark-matter reading); and curvature round matter (gravity). Caution (general knowledge, to
+  verify): in Einstein's gravity the curvature that makes the pull reaches into empty space, weakening as 1/r² but never
+  stopping; the Sun pulls the Earth across empty space. A curve only near matter gives no pull across a void, which is
+  what the toy's stiff space does (the halo look of 20 October).
+- 2026-10-20, the owner, on [T24]'s identification of 1/g with universal time: "because of the types of stores my toy cannot
+  use the 1/g clock." *Ours:* consistent with Update 70 (the network's g is fixed by the loop's total energy, so it cannot
+  run) and with her time coming from matter moving (Update 41) and clocks existing only inside a universe (Update 68); the
+  toy's own clock is the fair clock, a count of moves. What cools in her picture is the daughter's matter, not the network,
+  which is why a test of dark energy against a cooling universe needs the two-temperature kernel of Update 70.
+- 2026-10-20, the owner: "That is why eventually everything comes together even if the last few black holes are hundreds of
+  trillions of light years apart." *Ours (general knowledge, to verify; [KS07] read in full):* not with a constant dark
+  energy, which is her own prediction: its push grows with distance while gravity's pull falls as 1/r², so beyond a
+  distance set by the two only bound groups hold together, and everything else drifts apart for ever, galaxies outside the
+  Local Group leaving view in about 100 billion years ([KS07] Sec. 1). Under her growth rule the voids between bound
+  clumps keep growing too. So the last black holes of a universe sit in separate bound groups that never meet; her end
+  state (black holes dissolving, Update 72) does not need them to.
+- 2026-10-20, the owner: "Okay so space keeps some energy matter even on top of the black hole dissolving when dark energy
+  matches or is greater than the gravity. Will what's left spread evenly and then stop or just stop? I think spread due to
+  the dark energy force?" *Ours (general knowledge, to verify):* it spreads and never quite stops. With a constant dark
+  energy, matter and light not bound into groups recede from each other for ever, thinning as the volume grows; light,
+  including the glow of dissolving black holes, thins faster, since it is also stretched and cooled. Dark energy is not a
+  push on the particles: it speeds up the growth of the space between unbound things, and inside bound things its effect is
+  negligible. The floor is empty de Sitter space at its Gibbons–Hawking temperature, about 10⁻³⁰ K for our dark energy.
+- 2026-10-20, the owner, on the end state needing no gathering: "got it thanks! It also makes sense it's not just one
+  black hole for all of space that didn't seem like enough even though dark energy is really small it's not one black hole
+  remnant per all of space small!" And on the two temperatures of the end state, the network's (set by the loop's total
+  energy, Update 70) and empty de Sitter space's (set by the dark energy): "My position is these are the same." VISION
+  Update 76.
+- 2026-10-20, the owner, on T76's three options (Amendment 3): "Yes we need soft space. It's time lol. But u can do 1 and
+  2 first if you like." T76 Amendment 4; VISION Update 76.
+- 2026-10-20, the owner, on the soft-space brief: "Any existing math or physics using a soft type space? That we can
+  examine and replicate to confirm the approach? Or a twisted grid? 1 Clocks and link lengths I agree. Can't get
+  gravitational waves huh? What creates soft space? I don't understand how a knot creates soft space pls explain. 3. Let's
+  go waves, baby. 4 things collect where clocks run slow- you didn't rebut this idea though? I thought you might have had
+  good reasoning but that may have just been a change in terminology. 5 if 2 d test are still useful to help us learn u
+  can use them. growth-by-adding-points rule, not from the new field. Why this and not the negative curvature remnant?"
+  VISION Update 76, her answers.
+- 2026-10-20, the owner: "A gravitational wave squeezes space one way while stretching it the other, and a single number
+  per point can only make everything swell or shrink together- would this be curling points and uncurling points and how
+  much energy each holds? That would be used to calculate the link length. I think both knots and the dark matter which we
+  think is flaws/ scraps would both induce gravity. Not the remnants dark energy that's diff and repels." VISION Update 76.
+- 2026-10-20, the owner, on link lengths and knots: "Could be, as the diagonal on the curl points curl gets shorter,
+  that's curl energy stored. If the uncurl points closer, uncurl energy / convex energy stored. If curl points touch, that
+  takes a lot of energy, they become one, but then the points collapse into a curl knot. We can also have reverse curl
+  knot, the other way, so dark matter could be a reverse curl knot, the spring back of a flaw (curling energy remaining in
+  a 2d section) and dark matter? 1 knot per 3 squares was it? I feel there could be geometry about knots forming when space
+  is added that has some fluctuation around 3. we add 2 rows, connected on with new links, as a curl and uncurl point split
+  off a flat space point. So a matter knot is 4x4x4 64 points and an antimatter knot is 64 points and they cancel. I think
+  one curl knot and one uncurl knot are created when a certain amount of new space is added, a byproduct of the add, but
+  they are only ever separated at high g, low: they merge immediately. So space opening at big bang would create the
+  matter and antimatter knot pairs and it's hot so there is time until that cancel, when the opening is complete, and
+  there is more matter than antimatter from the store flow and also the flaws." And on question 4 of the soft-space brief:
+  "One clock to check the code yes." *Ours:* the "one per three" was knots per seed, not per square (0.29 ± 0.04 per
+  extra seed, T17; 0.35 columns per natural seed, T37). The sandbox look of the same afternoon: a pair added in one place
+  leaves mostly missing squares (the uncurl kind) and at most a little curl. VISION Update 76.
+- 2026-10-20, the owner, on soft lengths: "the lengths need their own springiness, so ripples can cross empty space. Yes
+  let's think about". On the uncurl kind: "dark matter is the result of uncurling of the column and double column flaws
+  - extra square - open space makes more - heavier than curling as lambda>1 and uncurling cost is 1. So that could
+  explain why there is more matter than antimatter?, the particles canceled not there was more curl per point the
+  difference being related to lambda-1. I need to better understand quarks. Check me if I'm off track again, the knots
+  idea was not logically placed - when a square drops, imagine its diagonal points both do full curvature. The curl
+  points meet and cancel leaving a closed line (String) as well as the uncurl points touch and leave an antimatter string.
+  - the antimatter and matter cancel and blast! Light! - there was more curl than uncurl at the time and location that
+  spacetime opened. Same energy creates more curl". *Ours:* per square at λ = 1.25 an extra square costs 16(λ − 1) = 4 and
+  a missing one 16, so the same energy buys four times as much curl; but in the toy the cheapest flaw in flat space is
+  two missing squares and no curl (32, O22), so a square that drops leaves no curl partner, and the toy's total curvature
+  is not conserved (its moves can change the topology, the handle look of 19 October). A rule that kept the space a
+  surface would make curvature defects come in pairs of opposite sign, bound when cold and freed when hot: the published
+  physics of defects in two-dimensional crystals (Kosterlitz and Thouless; Halperin, Nelson and Young; general knowledge,
+  to verify). VISION Update 76.
+- 2026-10-20, the owner: "What is a compression wave?" and "How much canceled vs remained after the big bang". *Ours
+  (general knowledge, to verify):* a compression wave squeezes and stretches the medium along its direction of travel
+  (sound; an earthquake's P wave), where a shear wave moves it sideways and changes shape, not volume (an earthquake's S
+  wave); gravitational waves are only the sideways, area-keeping kind. Nearly all matter and antimatter cancelled: today
+  there are about 1.6 billion photons of the cosmic background for each proton or neutron (baryon-to-photon ratio about
+  6 × 10⁻¹⁰), quarks and antiquarks cancelling about a millionth of a second in, electrons and positrons at about a
+  second.
+- 2026-10-20, the owner: "For gravity, what would be getting pushed t compress? Space is curving not pushing". *Ours
+  (general knowledge, to verify):* nothing; that is why gravity has no compression wave. In Einstein's gravity moving the
+  points of space around without bending it changes nothing physical, so a "squeeze" that is only a reshuffling of points
+  is not a wave at all, and of the geometry's ten numbers only two can travel. Springs give a compression wave because
+  they charge for stretch; an energy that charges only for curvature (Regge calculus: the deficit angles) does not.
+  Recorded in the soft-space brief.
+- 2026-10-20, the owner: "So the other hypothesis is that it was the matter pushed into the curve while it opened space,
+  the rate of space energy … so the release which would turn into just matter and antimatter and the flash, except
+  1/1000000000 of the activation curve energy was in the stores and fed into the space, that was all the matter part
+  (matter not antimatter is flowing into black hole that's (feed x time fed x time to exectute the snap in sweeps or
+  moves because I think the energy releases at the end, or the inconsistently in temp means some had enough energy to
+  curve and some didn't and it waited until it had total in all area?" VISION Update 76.
+- 2026-10-20, the owner: "If points aren't real does that help? To make the springy links not compress?" *Ours (general
+  knowledge, to verify):* yes; that is the principle. In Einstein's gravity points have no identity apart from the
+  geometry (his hole argument, 1915), so how densely they sit is not physical and no compression wave exists. Regge
+  calculus keeps a discrete trace of it: inside a flat region a point can be moved without changing any deficit angle,
+  so moving it costs nothing (exact only in flat regions; Dittrich's work on discrete diffeomorphisms, not read by us).
+  One consequence for her growth rule: if points are not real, a new row makes more space only if it brings new length,
+  not merely new points. Recorded in the soft-space brief.
+- 2026-10-20, the owner: "Regge calculus charges only for curvature brilliant", "Does science know the birth temp?",
+  and "So a positive curvature defect can only appear together with a negative one: the pairs you wanted, for fre
+  amazing. The caviates clarify the math, yes more complicated toy but moving toward testable model." VISION Update 77.
+- 2026-10-21, the owner: "What will it tell us or help us learn if we Start with the clocks and lengths? When was our
+  matter excess made? I thought right before the snap? I do think we're going to have a hot side estimate. My hope is
+  that quarks and their mass will get us there it's helpful to know what we started with we can find a conversion once we
+  better understand the energy and all of the snap". *Ours:* in her hypothesis the excess is inherited (the parent's
+  eaten matter still uncurled at the snap), not made at the snap; its size is set by the snap's timing, not by particle
+  physics. A proton's mass is about 1 % its quarks' masses and 99 % the energy of the field binding them (general
+  knowledge, to verify), so a conversion anchored on matter would more likely use the proton's mass or the string's
+  tension than the quark masses; rule 13 asks that one anchor be chosen before its predictions are seen.
+- 2026-10-21, the owner, on the programme page's claim: "from its burp to its last black hole dissolving black holes"
+  and "which became the Big Bang's energy- part of it- the light part; the matter part was something additional as we
+  are seeing that the burp makes matter and antimatter pairs that exactly cancel right?" *Ours (standard cosmology,
+  general knowledge, to verify):* the hot lump held light and almost equal matter and antimatter; nearly every pair
+  turned into light as it cooled, and the matter left is an excess of about 6 × 10⁻¹⁰ baryons per photon. So the light
+  is most of the lump, and the matter we are made of is a sliver on top of it, which fits her hypothesis of 20 October
+  that the excess is carried in from the parent's stores at the snap. The toy has not shown that the burp makes pairs:
+  what is exact is that on a closed surface the total curvature is fixed by the number of handles (Gauss and Bonnet),
+  ~~so curls and uncurls must balance~~ *(withdrawn 22 October, VISION Update 92: the toy's curl is a wrap, not
+  curvature, and its topology is not fixed)*; that they behave as matter and antimatter, and cancel into anything like light,
+  is her hypothesis, untested (paper 18). The claim is restated so.
+- 2026-10-21, the owner: "I think the opening a phase changing reality paragraph should be more a numbered list of steps
+  each with a bulleted list of what that means." Done on the programme page and in the draft.
+- 2026-10-21, the owner: "Is what carries curling energy still open I thought we are settling on the links and working
+  to describe those in detail?" VISION Update 78.
+- 2026-10-21, the owner: "The from counting worlds paper should include the point below it that uses the published
+  figures. I think this would make the step measured, but not matching initial hypothesis rather than one fail and one
+  exact math." Piece 13 folded into piece 9 on the page (VISION Update 78).
+- 2026-10-21, the owner: "It seems like we should be able to start building up an equation to represent the toy, which
+  would make it clear when different terms are added and their sources if pulled from published work. Can you add these
+  to the deep dive sections that explain where we are and next steps on each claim?" Done: a term-by-term table on the
+  programme page and in the draft, and a line per piece naming the terms it uses and the next one.
+- 2026-10-21, the owner, on step 3 of the claim: "One potential issue is the amount in a black hole is already a small
+  proportion of that universe, then the 1/1000000000 of that net matter is more tiny, but the daughter and mother
+  universe are identical. Is that inconsistent or does it not matter for some reason like it is the relationships and
+  proportions that are meaningful not the amount/ size of matter at birth. What do u think?" *Ours, unverified:* two
+  parts. (1) The one-in-a-billion is a ratio inside the daughter (matter per unit of light at its birth), not a share
+  of the parent, so the black hole being a small part of its universe does not shrink it; what has to be the same in
+  every daughter is that ratio, which must then come out of the snap's own rules (in her hypothesis, how much of what
+  the stores carry in is unbalanced, against the burp). In the toy as built the gate fires when the stores beside the
+  cut hold the whole curling cost, so the stores at the snap are as large as the burp itself; the excess would need to
+  be a billionth part of them that is not cancelled, not the stores' size. (2) The amount does matter for one thing:
+  with energy conserved across the change (claim 6), a daughter starts with no more than its black hole converted,
+  far less than our universe holds within its horizon, so to look like its mother it has to grow after the burp.
+  General relativity allows that (an expanding space has no global energy book; inflation makes a large universe
+  from a tiny patch: Farhi, Guth and Guven 1990, not read by us, to verify), so "identical" can mean the same rules and
+  the same ratios, not the same total. That adds a requirement: something after the burp must expand the daughter,
+  which nothing in the stiff toy does.
+- 2026-10-21, the owner, answering ours on the excess and the daughter's size: "Your excess would then have to be a
+  billionth of the stores that doesn't cancel- yes this is the overcurl during transition or variable curl across stores
+  with some holding more than their portion of the wall. It could be something else so if our checks disprove that I
+  can come up with more ideas to test. Extends the daughter after the burp. Dark matter does right, space creates flaws,
+  they release curling energy in proportion to the size of the expanding space. But that is dark matter not regular. I
+  can t think of a way more regular matter is created after the burp (although I'm creative so can come up with ideas if
+  needed) there could also be something where the negative curvature of the network somehow cancels some small amount of
+  antimatter leaving surplus matter… although this is a bit opposite of my intuition thinking light plus almost equal
+  matter and antimatter- can some light under pressure be transformed into some matter? That's another angle. until its
+  last black hole has dissolved given the end negative curvature cold void would draw the last black holes apart so the
+  end state is many resolved black holes not one." Recorded as hypotheses to test in paper 18's outline (section 6,
+  hypotheses 3 to 6; section 10, tests 7 to 10); the end state goes into the claim's step 8 (VISION Update 79).
+  *Ours (general knowledge, to verify):* (a) matter does not stretch space; it slows the stretch. What grows a tiny
+  patch into a large universe in standard cosmology is an energy with the same density everywhere, which does not thin
+  as space grows (inflation); at the end of it that energy turns into the hot lump (reheating), so all the light and
+  matter are made after the growth, and the excess after that. "Flaws in proportion to the size of the space" is that
+  kind of energy, which in this programme is her dark-energy candidate, not the scrap (whose number is set at the
+  opening). (b) Light does turn into matter under enough energy: two photons can make an electron and a positron
+  (Breit and Wheeler, 1934; seen in heavy-ion collisions in 2021), but always as a pair, one of each, so it makes no
+  excess by itself. (c) Her curvature route has a published cousin: gravitational baryogenesis (Davoudiasl and others,
+  2004), where the changing curvature of an expanding space biases matter over antimatter; not read by us. (d) The end
+  state: in a universe whose expansion accelerates, groups of galaxies are carried out of each other's reach, so the
+  last black holes are many, each in its own region, each evaporating alone; the claim now says so.
+- 2026-10-21, the owner: "billionth of the stores that doesn't cancel, not the stores' whole size yes this was always what I meant. What that
+  billionth is could be surplus curl or light transformed to matter or a combination. Or something else. But the toy
+  then needs something that expands the daughter after the burp- what do you mean, the daughter is our universe always
+  expanding although the expansion rate varies. overshoot is a few percent, far above a billionth. Not sure I agree with
+  this but it would allow additional cancel from the slight negative curvature of the network. how fast the black hole
+  eats - can we convert this rate to sweeps? What the toy lacks is a rule saying which kind is matter I think curl is
+  matter and uncurl antimatter. This is because matter is what the resolved black holes would be- the matter that is
+  the extra into the hole leaves its uncurl back in the black hole. The matter needs to come in to offset, and it first
+  makes energy as the matter energy- or the light energy from that canceling of leftover with the antimatter part of
+  the newly fed matter. It could be that concentrated light is the curling energy that is applied at the edge to curl
+  and fills its stores. Dark matter doesn't stretch space- right I thought it was created in a similar pattern when new
+  links are added. This would explain the somewhat regular pattern of dark matter that seems to look like neurons in
+  spacetime. Imagine a brain with a regular distribution of neurons (flaws) . The neurons start to connect with each
+  other, and those with more used connections thicken certain paths, while others are eroded or used so infrequently
+  that they die off (settle to area of space that is flat lacking flaws). The strongest most used paths from big nodes
+  and pathways between the nodes. It settles into this pattern and in the brain the settled pathway set forms a
+  specific arrangement and the strengths and personality and their is such diversity in those things between humans
+  (dark matter energy forming the galactic scale arrangement of galaxies and energy paths. Each galaxy concentrating
+  area a well connected neuron) and even siblings and twins are different especially because of interactions with each
+  other. Triplets separated at birth were even more alike than triolets raised together. (May or may not have any
+  analogy in space) . Imagine the empty space between neurons gets some destructive byproducts, and the effect compounds
+  over time, leading to reduced plasticity and dimentia and similar symptoms and mental energy, which declines with age
+  I. Even the smartest individuals (the space expands where there is no matter and galaxies chains or nodes spread,
+  passing less information between as the light cone becomes less concentrated ie move towards the state where an
+  observer looks up from their planet away from their sun and sees only blackness) , and a count that only the snap can
+  change." VISION Update 80; paper 18's outline,
+  section 6.
+- 2026-10-21, the owner: "energy that keeps the same density as space grows, so the total rises -> this makes sense, that it would happen:
+  as the matter and antimatter cancel and their light has nowhere to go, the light concentrated is compressed into more
+  matter, until the light finally does have enough space to leave instead of transforming into matter, then it does. so
+  all daughter universes start with the same ammount, which is related to the energy released in the burp, and the
+  concentrated light curves more space, making matter, making matter made up of curved space, which is these tiny things
+  like loops, where it is just that relationship with no points (as when the link does a full loop, the "points"
+  mathematically disappear and the loop is metastable. then these loops form particles: quarks, quarks form protons, etc
+  etc. so the exact amount can be the released energy, we don't need to be continuing to feed or have any other ways to
+  create matter in excess of antimatter. that release is big: exactly what is that starting quantity in our daughter
+  universe and every daughter universe. at the start. but that is the only time that type of curling energy is released.
+  the other types of energy can continue to be made as space expands while space is hot enough that flaws are made (dark
+  matter) and stay constant in any area (the network energy / dark energy) A daughter bigger inside than its black hole
+  looks from outside: Wheeler's "bag of gold" spacetimes, and Frolov, Markov and Mukhanov (1989). -> yes, a black hole is
+  bigger on the inside than it appears: it is the exact same size as its mother universe was at the mother's same Time
+  since big bang. and so are all its siblings, and there are likely a lot of them." VISION Update 81.
+- 2026-10-21, the owner, on "A billionth would then need a delay of a few weeks of the parent's time": "lets drop the whole extra curl on the black hole lip idea. it was never that good and the release happens faster than that it is the eqivalent of a MUCH bigger nuclear bomb." VISION Update 82.
+- 2026-10-21, the owner: "please do: That can be checked exactly before anything runs. to about one part in 10¹¹ ->
+  could lambda be this small? a particle's mass isn't the raw price of its flaw -> yes, the loops are but most of the
+  mass isn't loops but the connecting energy ie the full metastable particle is a secondary force that comes to be
+  around how to turn a curl link loop (string) into a matter particle in 3d space. the quarks have diff spins, they
+  group in specific ways, etc. the only way you can turn light into matter is in a confined space, and only a new
+  space just opening containing all that birth energy can do the job. and even that, it needs to go through a bunch of
+  cycles to even get cool enough to form matter." The check: `sandbox/LOG.md`, 21 October. *Ours:* the 10⁻¹¹ is how
+  precisely the masses are measured equal, not a size for λ; a λ just above 1 makes curls nearly free and the two
+  prices more unequal, not less. Her mass reading matches the proton's (about 99 % binding energy). Light makes pairs
+  wherever two photons carry enough energy (laboratory beams, near pulsars), but they annihilate again; lasting bulk
+  matter and its excess need the hot early universe, where each photon is made into pairs and back many times while
+  the space cools, and matter forms in stages (protons at about ten microseconds, nuclei in minutes, atoms at about
+  380,000 years). General knowledge, to verify.
+- 2026-10-21, the owner, on "the difference between them never changes": "at a cirtain specific temp, particles form,
+  gathering curl uncurl into a proton or nuetron, each captures the lightforce of a 1 unit atomic bomb. hydrogen forms,
+  then two of those is compacted to one helium. that's all the heleum we get, can't make more, but earth got some. and
+  the other atoms. and it explodes shooting all this stuff into a giant cloud that is host to more bombs and reverse
+  bombs, nuclei combining and separTING. then after that point when space is a little bigger and cooler, leaving suns
+  where those sort of reactions are still taking place for the lifetime of the sun, many of which can turn into a new
+  black hole when they explode or crash into another sun." *Ours (general knowledge, to verify):* the locking-in fits:
+  the count of protons and neutrons (baryon number) has never been seen to change since, and the proton outlives 10^34
+  years. The standard order: protons and neutrons at about ten microseconds; in the first few minutes they fuse into
+  helium nuclei (two protons and two neutrons each; about a quarter of the mass), a little deuterium and lithium, and
+  nothing heavier; neutral atoms only at about 380,000 years. The Big Bang is not an explosion into a cloud: space grows
+  everywhere. The clouds, and every element heavier than lithium, come later from stars, which also make more helium (the
+  Sun does now); the first stars burn out and explode in a few million years, seeding the clouds that make later stars.
+  Earth's helium is mostly from radioactive decay in its rocks. A proton's mass-energy is about 1.5 × 10⁻¹⁰ joules; a
+  nuclear bomb releases about a thousandth of the mass of its fuel, from vast numbers of nuclei. Stars above about 20
+  solar masses end as black holes, and neutron stars that collide can make one; the Sun will end as a white dwarf.
+- 2026-10-21, the owner: "the uncurl left when matter was created may have created an area of negative curviture, which
+  was added to the negative curviture of the background. so if people think it changed over time and is moving toward 0
+  it's because it did change in the beginning and some change can still be observed in our light cone 13.7B in, but it's
+  not moving to 0 it is moving to the dark energy constant." VISION Update 83.
+- 2026-10-21, the owner: "Light thins faster than matter as space grows -> antimatter light too. Light makes pairs
+  evenly - what if due to lambda>1, the antimatter part dispurses while the matter part is trapped in atoms? The toy has
+  no pointless loop-could we add one? does any reading describe something like this? i can imaging the curve
+  completing, same type points canceling, and transforming the hypotenuce relationship from flat space into a circle
+  which stores energy like mass the cost of a full curl and 2 coming together create 2 photons. matter is a loop from 3d
+  and dark matter is a loop from 2d. that's why we have dark versions of everything but they dont interact." VISION
+  Update 84; a reading note is being written (`docs/reading/notes/2026-10-21_matter_as_loops.md`).
+- 2026-10-21, the owner, on Faddeev and Niemi's knots whose energy grows with their length: "This is interesting. A
+  ring can be longer if the space it was made of was bigger, the length of the hypotenuse freezes into the length of the
+  ring and different lengths make diff subatomic particles that hold the same energy. No edge link can but these are
+  hypotenuse links can. In this theory. It could have a twist in it like one point is facing the other direction (to be
+  turned away from its closest same type neighbor) so matter and antimatter would hold a twist in different directions"
+  VISION Update 85.
+- 2026-10-21, the owner: "I still recommend the twist carried around a closed loop of links, the Skyrmion's - yes I agree, but per the braids,
+  could be a combination. The matter antimatter twisted loop, they come together and become 2 untwisted loops and return
+  to flat space, with the twist energy released at the speed of light. an untwisted loop is a photon and and untwisted
+  loop loses energy over time like a photon. Reverberating, with the slight negative background curvature what is
+  canceling the photon energy. The photon is a particle microscopically but travels through space as a wave, so within
+  the wave there is no desernanle difference between the photons in the wave but if you can look at one by itself, that
+  narrows in on which daughter universe that photon is in, where it was in that. Macroscopicly they interfere, because
+  the information of which daughter in the network we are can only be learned if we drop the information of movement,
+  speed, wave- So a photon is a twist that can be undone and a matter or antimatter particle is a twist that cannot be
+  undone. And when photons are packed together and then spread some will have turned into matter and antimatter pairs.
+  They have identical mass because the energy is in the curl and exact not related to how stretched space was the length
+  has no impact on mass. Also what if lambda was only 1/1000000000 +1? One version even models helium as four bound
+  twists and gets its mass within 2%. Great we can use this. Particles are braids of three ribbons of the network that
+  space is made of. Like the 3 quark colors? Different particles could be different braids of matter and antimatter
+  loops of different lengths." VISION Update 86; `docs/design/regge_stage_b_brief.md`.
+- 2026-10-21, the owner: "these are braids, not closed curls - there are 3 diagonals in a cube so the 3 twists are made and immediately
+  twist together into a braid The three quark colors are the three ways to order the strands. Maybe space is organized
+  into 2 new points would touch 8 new cubes. 2 rows of pointsxL, per expansion. 8 square space, with 3 corner to corner
+  hypotenuse twists per cube, (2 extra hypotenuse twists per 8 1x1x2 box, an amount from each 1x1x3 box, etc, up until
+  any additional? Idk, more types of particles, fount in proportion to ratios of hypotenuse counts?), we can calculate
+  their comparative length to the side loops that are the with the Pythagorean theorem. and that makes 1 of each quark
+  color of matter, we'd need to look into how stable braids could come together and how the twisting together of
+  different braid patterns coming together with force and creates spin) and one of each color of antimatter, 3 quarks
+  to a 1 unit of positive or negative charge, based on the quark type, right? They have their spins because the
+  snapping of the braids creates the different rotations of the quark, and there is nothing to slow that rotation an
+  object in motion stays in motion. Evert 10 billion pairs gets an extra 6 matter quarks with nothing to cancel them.
+  When the 2 photons per are created for every billion matter there is an extra one matter. Space works in base
+  10billion, units of 10 billion, that was probably the initial number of squares per seed. 1 seed makes one of which
+  type of flaw in paper 1. dark matter could outweigh ordinary matter several times over- dark matter is the curls from
+  the square sides of the cube. Middle of the cube, 3 dimensional, gets a braid. Each side of the square gets a curl loop
+  and an uncurl loop. Each loop has the same mass as a single twist of the 3d braid quark. 6. They don't braid but they
+  double against their neighbor cube wall. No spin, no electric charge. More energy stored because it's a tighter loop.
+  So heavier. By maybe 3x? A dark matter proton has 2 dark quarks twisted. No spin no charge. Per 2cubes, 10 sides, 5
+  units The link length may matter against. the hypotenuses." VISION Update 87.
+- 2026-10-21, the owner: "light can only go one speed, it travels one space link/one time unit. it slows if a space link is longer.
+  everything else moving is moving in <1 spacelink per time unit, with the matter and dark matter exhibiting and
+  interacting with other forms of the force: the quark's spin's electromagnetic fields, essentially friction compared to
+  light's speed due to all the unescapable twists, it can't simpley move through space on any link equally like light,
+  it's got to manuver. dark matter manuvers on square ends, not twisty, and is denser compared to the matter that moves
+  through the diagonals. maybe there are more types of matter through different length hypotenuses (th 1x1x2 groups,
+  the 1x1x3 groups), or maybe diagonal space is diagonal space whatever the angle." VISION Update 88.
+- 2026-10-21, the owner: "The extra uncurl has to heal, not just spread out. healing releases energy as matter. so maybe the neuron-like
+  paths are that energy dispursing and gravitating together, originally from radomly dispused flaws Your
+  negative-curvature idea survives if it works through the expansion. yes the end states look more and more alike and at
+  the macro level at some point, they will be indistinguishable and having a proportionally small area of influence, so
+  from within our cone (and by extention all of them), and so we are working toward an end state of ... maybe the negave
+  curviture is the reason for lambda being >1?" VISION Update 89.
+- 2026-10-21, the owner, on the stage-B brief: "A ring's energy against its length: does it grow steadily, and are only certain lengths stuck in place? let's
+  just focus on the 3 cube throughlines and the 6 cube side diagonals and assume the link limit is the 6 of 3 dimensions.
+  the square edge is shorter than the hypotenuse through the center of the cube. it holds more curl per link lenth, vs
+  the center lines. plus there is more of them, so they hold more energy than the diagonal links. more dense, no
+  diagonal spin. Does every move that doesn't cut the ring keep its twist? That would be the count only the snap can
+  change. -> yes Can two rings with opposite twists meet and unwind, and where does their energy go? -> opposite twist
+  is antimatter when they meet the twists desolve and 2 photons are created: untwisted loops travelinin one link per
+  unit of time, the speed of light." VISION Update 90; the brief's answers section.
+- 2026-10-22 (00:00 UTC; 21 October in her day), the owner, answering the stage-B brief: "One diagonal per square, or both? Your rings need the diagonals that join one kind of point. -> one diagonal is
+  matter: negitive curviture is a fact. it was created by the loop which is without size, without beginning or end, all
+  their probabalistic versions stacked on top of eachother, distingushable at two distict levels, the one amount of
+  information we can have about which version we are in because we are in multitudes of them, and you can triangulate by
+  time or at particle /unit spin-level, you cannot see both simultaniously because then we wouldnt be the right number of
+  concentrated versions to make us, here, in our daughter, real. what created our slight negative curviture of network
+  and its strange loop of the largest infinity. maybe the strangeloop curviture of a nearby network, operating under a
+  different lambda and its onw huge explosions and antimatters. Even beyond, I still wont give you the god copout, not
+  while we can learn so much and end the day with curiousity rather than cirtainty. Two directions or three first? ... ->
+  yes A ring's price: ... whatever the link length the hypotenuce length as a proprtion of the lengths and steady in its
+  proportion to the mass / energy of the cube points 3 curl and 3 uncurl hypotenuses. each can only cancel it's own
+  length of hypotenuse. the actual link lenth is irrelevant only the relationships are real the points are not real.
+  Braids: single rings first > let's do the single rings the dark matter. they may or may not braid, different types of
+  dark matter particles. then do matter's equivalent. , one half -> but isn't rotating matter like a literally spinning
+  quark the thing that might make the charges? same types repulse because the spins oppose each other but opposites
+  would come together. imagine the quark spinning on the diagonal, and they ewere spinning on right angles. The excess:
+  ... -good correction i was spitballing from memory. ... 3 eV -> I don't understand this does it still represent your
+  understanding of what I am saying. ... I may have been counting in 6's , 2 squares, as that is what you get when you
+  add the 2 dots to the edge, one of each type. but we are saying the same thing. the network could have been flat 3d
+  space but it was a bit negatively curved. maybe something happened in the 4th dimension to give our comparitively
+  microscopic, information-wise, strange loop. ... facinating. my mental geometry is also struggling it's like i'm
+  circling around understanding but am making progress well I think. have we made progress to our predictive toy model?
+  what were the biggest steps? "Three throughlines": ... yes I counted wrong lol good correction ... Q3, the energy:
+  charge for curving only, or keep today's curling cost as well? are they different? I don't understand? more curve is
+  curl. gravety is curve. Q4, a ring's price: a fixed amount per twist: yes, for each diff link length in relation to
+  the other hypotenuse." (Quoted passages of ours shortened to "...".) VISION Update 91.
+- 2026-10-22, the owner, on the rules: "Please update the rules document to help us avoid some pitfalls moving forward. Yes when I have an exchange I am
+  looking to stream my ideas of what possible details seem to match my intuition and my very limited knowledge and memory
+  of actual math and physics. That knowledge and memory is that of an engaged hobbiest watching lectures recorded in
+  2017. I share them in writing, which is a translation process in itself, as my brain holds undetailed visuals and a
+  pattern recognition sense that is correlated with my "truth" sense, which is another word for the intuition.
+  Obviously, there are gaps in that set of ideas I write out. I need to have them quickly checked and corrected by you,
+  so we can work toward a vision that matches what your research can uncover as likely accurate or inaccurate, and find
+  other physicists mathematically models that can describe, or partially describe, the concept that we are exploring. A
+  human brain can only hold so much at the same time, and our work spans a huge diverse library of human knowledge, so
+  to do this we would need a huge team devoted to this research program. Especially since many of the models and ideas
+  we need are obscure not publicly accepted truth, this group does not exist and won't come together (for economic and
+  societal reasons. [One sentence on the model's author's reaction to paper 1 is kept out of the tracked record; her
+  expectation is that he will not read it.] I have no social capital in the physics space [...]. So that is why it is so
+  important for us to get to a sound model that can make accurate predictions. That is the cost of physics social
+  capital. The other way to earn the social capital readers and collaboration costs would be me, Emily, getting
+  admission to a physics phd program, working for a decade to get a PhD and a set of peer reviewed publications, and then
+  use that to get grants or directly hire people to work on the program. That is not a feasible or interesting path to
+  me, so the only way is us getting to that model, predictions that are confirmed by real observations." CLAUDE.md rules 19 to 22; VISION Update 93.
+- 2026-10-22, the owner: "do you think curl shape is connected to the golden ratio?" *Ours:* the exact look is in LOG under this date; published places where the golden ratio does appear (the shadow of a 6-cube in icosahedral quasicrystals, a measured golden mass ratio in a magnet, braids whose weight is the golden ratio) are general knowledge, to verify, and listed as research task 21 in the handoff of 22 October. VISION Update 85, dated line.
+- 2026-10-22, the owner, her prediction for the curl-against-flat test (the entropy lost by holding a curled ring against a flat patch of the same nine squares, in the published model's warm background at λ = 1; the finding of the same day in `docs/outreach/finding_2026-10-22_background_curling_cost.md`, private): "does the curled ring lose more entropy (number of ways things can be arranged) than a flat patch of the same nine squares? Yes: an uncurled ring can be any degree of curved. a curled ring is fully curved, so it cannot be all those other ways. its relationship with the other closed curls additionally locks in what daughter universe we are in, with the movement of matter and its cone of influence." Earlier the same day, at her questions, the finding was corrected twice: a background can charge entropy, and the reference for calling it a cost on curl is a flat object of the same square content (her question); curl and uncurl are not swapped (checked). Registered as the test below her prediction in PREREGISTRATION (curl against flat), uncommitted until she says so.
+- 2026-10-22, the owner, on T79 before its run, keeping her prediction (PENALTY ON CURL) and giving her picture: "yes I think this occuring, is this reasonable: possibly as the curl is the inside of the cube and the uncurl is the outside, so the curled starts doing its braiding and connecting of twists, and the uncurl. also the curl twist loops is then more dense which is less entropic, because of their spin even?" Earlier the same hour she had asked about the density option ("that could be the driver, that is a frequent pattern") and then kept curl. *Ours:* "denser is less entropic" is exact in the toy (ring 0.75 squares per point, twin 0.42, patch 0.56) and is the density reading, which the flat line absorbs; the toy's own candidate for a penalty beyond density is the hard-core rule (a link at three squares forbids more neighbourhoods than one at two); inside/outside, braids, twists and spin have no object in the toy (Update 92); in standard physics spin adds states and so entropy, not the reverse (general knowledge, to verify). PREREGISTRATION T79.
+- 2026-10-22, the owner, three questions while T79 runs: (1) "could we introduce this [inside/outside, braiding, twists, spin] to the toy?" (2) "spin adds entropy rather than removing it -> but it is not detectable at the macro level, so it doesnt add macro level entropy? Macro gets matter movement instead, time." (3) "explain how spin makes it denser?" *Answered in chat, ours (general knowledge, to verify):* (1) yes by published constructions: twist and braiding on a ribbon graph (linking number = twist + writhe; the 22 October handoff's research task 2, with Pachner and BFACF moves), inside/outside by keeping a surface (same task), spin by spin networks (Penrose; loop quantum gravity), each a new ingredient under S1 with its own brief, after stage B; (2) spin entropy is measured macroscopically (adiabatic demagnetization; ortho/para hydrogen heat capacity; Pauli paramagnetism), locked spins carry less, the toy has none; (3) nothing makes the ring dense but the hard-core maximum of three squares per link; in physics spin's effect on density runs both ways (exclusion pressure against Bose condensation). Reading task owed: the three spin facts at their sources.
+- 2026-10-22 (night), the owner, on the dark-to-ordinary ratio from loops: "consider how many twisted loops a subatomic particle contains and how many made per square. How would they come together, w or without spin? Compare the amount of energy held in a 4 unit ring and a 4.24 unit ring if made of same material. I think 10 billion that pair their antimatter give 2 extra squares/ 6 matter (3 throu each cube) and 6 dark matter (each ssquare shares each side), maybe with dark matter accelerating faster because it moves on the edges not the diagonals and is t electrically charged". Answered in chat with the exact per-cube counts (3 edges, 3 faces, 6 face diagonals (3 of each kind), 4 body diagonals per cube) and the ring-energy comparison (4 against 4.24: within 6 % under tension or bending, in opposite directions); the counts give dark : matter of 1 to 2.3 under every simple law, not 5.36; nearest published model: Bilson-Thompson's braids of three ribbons, whose untwisted (neutral) braid is the neutrino; "dark matter accelerates faster" runs against the measured equal free fall of dark and ordinary matter (general knowledge, to verify). Rule 13: the counting look of the same night (`sandbox/spring_ratio_look.py`) says a formula that hits 5.36 needs a second number it was not built for.
+- 2026-10-22 (night), the owner: "Where does standard [physics] leave open questions or appearing inconsistencies". Answered in chat (general knowledge, to verify; a reading task if any of it is cited): the Standard Model and standard cosmology are internally consistent as tested; what they leave is unexplained ingredients and input numbers (about 19 free parameters; three generations; charge quantization, the aim of preon and braid models; neutrino masses; the strong CP problem; the hierarchy problem; no gravity; the measurement problem; dark matter; the cosmological constant's size and the why-now coincidence; the baryon asymmetry; the inflaton and the measure problem; the low initial entropy) and three genuine tensions with data where a number could live (the Hubble tension, about 67 against 73; the lithium-7 problem, about a factor of three; DESI's hint of weakening dark energy). Her programme speaks to the unexplained-ingredient items and to none of the tensions yet; the nearest target with a number is dark energy's time dependence.
+- 2026-10-23, the owner, continuing the loops thread: "curvature squared 12 % more- one this happens and there is enough space to bend between, the difference could bend that space and create attraction from the closest matter to its closest the dark matter, and because of the twisted internal loops billing outward they get locked into twist braids that spin on an axis (or don't) which creates electromagnetism which slows the movement of the quark through space, compared to the dark matter as the flat sides. Less acceleration compounds the lower energy." Answered in chat: in the toy an energy difference between two objects bends nothing between them (O22: defects' energies add unless they touch; O60: flat space is gapped; T75: no disturbance spreads), so the attraction needs the carrier of piece 8 (Update 40, brief unwritten); electromagnetism comes from charge, not spin, and a spinning charge is a magnet (general knowledge, to verify); the direction of "ordinary matter is slowed, dark matter is not" is the published cooling story (ordinary matter radiates and sinks, dark matter cannot and stays in halos), already in the record (Update 33), while free fall under gravity is measured equal for both; nearest published model for twist-as-charge: Bilson-Thompson's braids.
+- 2026-10-23, the owner, filling the loop rule (chat worksheet: strand, twist, braid, electron, dark loop, energy law, survival): slot 2, "charge is the twist count and the twist count spins". Read as: charge = twist count (thirds, three twists = charge 1, as in the braid model), spin goes with twist, so an untwisted dark loop has neither. Consequence noted to her: an electron and a proton both carry net three twists, so slot 4 and the energy law must separate them by shape or binding. Slots 1, 3, 4, 5, 6, 7 open.
+- 2026-10-23, the owner, filling the loop rule (her words, in full): "if we don't need the weird space bending idea great. When there is any flat space, it can curve, the matter moves through space straight or on zig zag diagonals (or it just moves on a 45 degree diagonal, or moves on a diagonal parallel to the surface loop dark matter if space we calculate as square is actually spheres or torus or a many handled torus network. Thirds. So imagine a piece of tape that can be stuck to the corner of the cube. But it needs to be angled flat on a cube wall in order to stick. This tape run to its opposite corner, there are 4 tapes. The tape also needs to stick to its opposite corner. If it connects with no twist, it's not as far as it can be from its matched point, so rule says it must twist, either 1/3 clockwise or counterclockwise. But in order for the loop to close on itself it needs a full twist. So 3 coming together somehow, 3 come together add their twists into a braid with one unit of charge, one twist. But is it a clockwise or counter clockwise twist? Looking at a set of 12 cubes, there is no difference, and we have to let go of the information about things moving, as a segment toughing 2 dot types touches 12 cubes that is all the directions it can move. A single change in a sweep. So you need to put several cubes together to have all the spins, then u get a full set. And at the macro level, there is no difference between looking at a set of cubes and a shifted 1 step set of cubes. Movement and time requires we view a set. When we observe anything moving, we need to be looking at more than one cube because moving and time is matter moving through flat and curved (not curled) flat space. Dark matter carries a half twist, so 2 loops are needed for a dark matter Full twist. A 12 set makes 4 matter units, and 12 is the minimum it takes to make matter because they must combine to whole numbers. A 12 set makes 3x12 dark matter units, each has 6 faces shared by 2, 36. 9x as many. An electron as a single twisted strand, spinning so over time it exists looking like a sphere. Dark electron is the same but the single side twist. Its spin is energy turning it to a magnet with enough heat to gives it one negative charge in terms of its effect on other particles. The proton is a braid, full twist, spins much slower, so it needs a bunch of twists, spinning together making protons and not spinning neutrons, to balance the 1 unit of charge in each electron. If a twist is excited by a photon, it continues to spin and generates a negative electric charge and if an antimatter/reverse uncurl twist one does we get an anti electron, they would cancel out and release exactly 2 photons, same as it took to create them. Same with dark matter electrons and dark matter anti electrons. Let's see where this would take the energy law, and continue to refine. Protons weigh how much in relation to an electron? Much more. Need to think through. Protons usually need a button to stabally be +1 and balance an electron. Why? 7. So, let's think about the geometry when it emerges, similar to the lip idea we dropped but not exactly. So say we have the curls slab. The pinched edge is 10 billion long and 4 wide and L high. In that edge bumps out to 6, as each pair of curl/uncul points releases one new curl /uncurl point. 2 new cubes (on average) with one cube still connected to the original one that is still getting the energy feed. So what if that rate was such that for every 10 b edge squares, an extra 2 cubes, 4 3-braids of matter, and the equivalent or one square's, the connected one's, the curl goes into the daughter universe and the uncurl stays with the mother black hole. The negative curvature is in the black hole, and needs to be curled to flat before building to the wall in the stores. How many extra cubes and sides are there in the flaws? How many per seed? How many per area of space at a specific coupling (if u can tell me without breaking the rules)?" Answered in chat (23 October): exact, a tape along a body diagonal can lie flat only in one of the three planes through that diagonal, 60 degrees apart, so one segment twists by a sixth of a turn, which is a third of a flat tape's own period (180 degrees): her thirds have an exact home; three such make a half turn and the loop closes one-sided (a Mobius band), six make a full turn; an edge touches 4 cubes, a point 8, a body diagonal 1, a face diagonal 2 (not 12); per 12 cubes there are 36 faces (her 36 checks) and her 4 matter units per 12 are unexplained; her count ratio 9 with a half-twist dark unit gives 4.5, not 5.36; two definitions of charge in one message (twist count; spin plus heat); a lone proton is stable, neutrons are needed only in nuclei with more than one proton; pair annihilation to two photons matches physics. The measured flaw numbers quoted: O107 (about one knot per three seeds; the column 14, the knot of two kinds 20 to 30, the double column 8), O141 (at lambda = 1.25 the flat sheet holds essentially no missing squares up to g = 3.1, 0.0066 per point at 3.2, and melts above 3.3), T78 (at lambda = 1, g = 3.3 to 3.7: 0.92 to 1.13 missing squares and 0.04 to 0.15 surplus squares per point; 2 to 7 % of links at three squares); in three directions the extra cubes per seed are not measured.
+- 2026-10-23, the owner, revising the loop rule's slots: "Charge is only spin, speed of spin matters. The heat is the frozen magnet analogy. A higher twist count holds more curling energy and has more mass, not more charge. Thanks for the neutron clarification. The neutron helps make the protons not repel so much. 1 knot of fixed energy in flaws per 3 seeds in 2d. How many extra cubes per seed in 3d. It should be less than in 2d, as it needs to be more messed up to not self correct with 6 squares vs 4." And on the slab's edge: "curl to the daughter, uncurl to the mother needs the slab's edge to break that symmetry; that is a measurable property of the opening ... the first thing to check on the saved T71 graphs before the rule is used. Yes." Slots now: charge = spin (its speed), not twist; twist count = curling energy = mass. Her prediction, recorded before any count: fewer extra cubes per seed in three directions than knots per seed in two (one per three seeds, O107), because a six-square point self-corrects more readily than a four-square one. Her instruction: check the curl/uncurl asymmetry of the opening on the saved T71 graphs first.
+- 2026-10-23, the owner, on the slab edge and the matter excess: "the fed slab cycles and the record ends after a refold - does this allow for flexible links? I think that is needed to model this. The idea is at the edge, the curl moves into space and uncurl can't access it to cancel. Curl closes into the cube, uncurl is by definition away from the inside of the cube that made it. This could just be on a flaw at the lip not the whole lip. It just in the tiniest fraction." Answered in chat: T71 is the stiff toy (links present or absent, no lengths); flexible links exist only as stage B's first piece (graphity.regge, Q27), with no move set yet; in the stiff toy a curl and an uncurl can cancel only in contact (O22), so one step of separation already prevents it, while "the curl moves into space" needs a carrier of motion that neither toy has (T75). The look of the same morning found the uncurl at the seams and joints, never inside the mother or the open region, which fits her "uncurl stays at the lip"; the curl's place is unread because T53's rods never reached the open rung. Proposed, with her prediction as stated (curl objects inside the open space, uncurl at the lip): the same census on T56's slab end states, which may hold fully open regions.
+- 2026-10-23, the owner, correcting the object of the curl-in-open-space look: "curled rings (a square with five squares on each of its four links, all four points fully open) - I meant a twist, a 3d hypotenuse, not this whole thing. Maybe an electron, maybe a quark". So the look of this morning (`sandbox/curl_in_open_space.py`) tested the stiff toy's only curl (a link with an extra square) and not her claim; the twisted hypotenuse has no object in the stiff toy and no twist yet in stage B (Update 92; handoff task 2). What survives of the look for her picture: the uncurl at the lip and the joints, never inside the mother or the open space. Her claim waits on a twist defined on the graph (framed or ribbon graph; linking number), then an exact test of whether any opening move carries a twisted diagonal across the lip.
+- 2026-10-23, the owner, on how his static network and her picture fit, after the call record's point 3 (no literal Big Bang in his model, an effective one for an internal observer): "I am thinking he is merging my 2 pictures: the view of the strange loop, so the strange loop is his many handled torus with probabilistic version counts. In aggregate, the daughter universes have negative curvature and if he has a good explanation for that, if it is analogous to ours but different, that is good to know. So at that level, there is no causal order; all the large infinite versions just are. It's also a tiny event from the network's perspective, lasting fractions of a second of a daughter universe's hundreds of trillions of years of time. So he thinks this is impossible to test, match to any observable, because by definition it is. We cannot see the strange loop, but we can observe some strange things that tell us something about what that strange loop looks like. Within each daughter, the big bang is the main event of the story, the beginning, the thing that got matter moving and led to interference between the 12 grouped cubes in our macro perspective, and a bunch more; led to us. The event we need to understand to understand how background radiation and more matter than antimatter (in progress), how subatomic particles formed and then destructed and then formed, the makeup of the early universe, the neuron picture of space at the greatest scales." Hers: two levels, the loop (timeless, no causal order, all versions standing, his static network) and the daughter (a literal beginning, time, the hot early universe). *Ours, unverified:* (1) a timeless whole with time for internal observers is a published family (Page and Wootters 1983; Barbour; the problem of time of Wheeler and DeWitt; general knowledge, to verify), so the merge is not strange in itself; what it costs is that the event is then observer-relative at the loop level while real inside the daughter, the same two-level time the comparison table already carries (absolute ordering at the base, relativity's time emerging). (2) His explanation of the negative curvature is on the record and is entropic: at finite coupling the free-energy minimum is hyperbolic because there are more slightly defective networks than perfect ones (call, point 4; [T22], [T23]); T78 and T79 measured that background's cost on a curl in the same model. Her aggregate negative curvature of the daughters has no fixed explanation in the record (Update 83 settles dark energy toward a constant; Update 89's curvature-caused λ > 1 is killed in two of three forms). (3) "His many-handled torus with probabilistic version counts": at λ = 1 every torus at a given N ties in energy (the degeneracy he named on the call), so which torus the static network sits in is decided by counting alone; with interchangeable points that count is the renaming count (Q15, Q20), exact on any built torus. Cheap exact look, not run: the renaming counts of the square torus and the 4 × L tori at one N, to see which shape the counting favors. (4) The within-daughter list is standard hot-Big-Bang territory (background radiation, nucleosynthesis, freeze-out), where the toy has nothing yet; the matter excess is the open one (Update 42: made at a front is the published route). Recorded as her picture, not a decision.
+- 2026-10-23, the owner: "proceed" on the exact look of the same afternoon: at one N every lattice torus ties in energy at λ = 1, so which torus the static network sits in is decided by counting; the look weighs the rectangular tori at N = 144, 160, 192 and 196 under named points (his ensemble: labelled copies, (n!)²/A) and under interchangeable points (her knob: each shape once). Her prediction, inferred from her picture of the same day ("his many-handled torus with probabilistic version counts") and marked inferred: the counting favors the handled tori (the 4 × L tube over the square torus) under interchangeable points. Ours, before the run: under interchangeable points every torus at a given N has the same weight (A is a count of renamings, and each shape counts once whatever A is), so no counting at λ = 1 favors any torus; under named points the torus with the fewest renamings wins, which should be the least symmetric rectangle, not the tube. `sandbox/torus_counting_two_ways.py` → `sandbox/out/torus_counting_two_ways_2026-10-23.txt`.
+- 2026-10-23, read (`sandbox/out/torus_counting_two_ways_2026-10-23.txt`, exact): the counting of renamings cannot choose between the lattice tori at one N. Every rectangular torus has A = 2N side-preserving renamings (the lattice's own translations, the half-turn and the two flips) and the square torus 4N; the tube (4 × L) has exactly as many as any other rectangle, since its extra squares add no renaming. So under interchangeable points every torus at a given N has the same weight, and under named points the only preference is a factor 2 against the square torus where one exists (N = 144, 196) and none at all at 160 or 192. Her inferred prediction (the counting favors the handled tori) fails; ours held on the tie and was wrong on the named side, where "the least symmetric rectangle wins" is a factor 2 at most and never singles out the tube. What the look says about her picture: "probabilistic version counts" are not what distinguishes a handled torus from a sheet at λ = 1; the versions of a whole torus are its own translations and flips (as O28 found for defected sheets), the same for every shape. What could distinguish them is his free energy at finite coupling, through the excitations each torus admits: the sheet's cheapest move out costs 32 and the tube's 32 − 16λ = 16 at λ = 1 (Update 9's wall), so at finite g the tube has the cheaper excitations and, if it has enough of them, the lower free energy. *Proposed, not run (needs her prediction first):* enumerate every single switch out of each torus at one N with its cost, exact, and compare the low-temperature free energies F = −g ln Σ e^{−ΔH/g} over single switches; ours would be that the tube wins at every finite g at λ = 1, which would make his "highly degenerate ground state" lift toward the handled tori by entropy, the same mechanism as his hyperbolic background.
+- 2026-10-23, the owner, "agreed, proceed" on the one-switch free-energy look: her prediction, adopted from ours and recorded before the run, is that the tube (4 × L) wins at every finite coupling at λ = 1, by having the cheaper excitations (16 against the sheet's 32). `sandbox/torus_free_energy_one_switch.py` enumerates every valid single switch out of each lattice torus at N = 144, 160, 192 and compares F(g) = −g ln(1 + Σ e^{−ΔH/g}), the ground state plus its one-switch neighbours; it is the first term of the expansion, not the full free energy, and says nothing about the chain moving between tori.
+- 2026-10-23, read (`sandbox/out/torus_free_energy_one_switch_2026-10-23.txt`, exact, one-switch expansion): her prediction holds at every coupling tried (g = 0.5 to 10) and every N (144, 160, 192): F(tube) − F(other torus) runs from −2.1 at g = 0.5 to −22 at g = 10, negative throughout. The reason is not the 16-cost moves: the tube has 2L valid single switches that cost nothing at λ = 1 (72 at 4 × 36, 80 at 4 × 40, 96 at 4 × 48; two per ring of the tube; unread from their positions, not named), so at λ = 1 the tube is not an isolated state but one of a connected set of equal-energy arrangements, and its sector carries an entropy of ~~at least ln(2L + 1)~~ that the sheet's does not (the 6 × L tori have ~~2L~~ moves at cost 16 and none at zero; the wider rectangles start at 32). *(Corrected 23 October, on promotion, O150: the 2L zero-cost neighbours are ground states, which the partition function counts once, not excitations; they lead to a family of three equal-energy classes (the tube, the tube closed through a reflection of its ring, the tube closed through a half turn) holding 4 times the tube's count, so the zero-cost part of the entropy is ln 4 for L ≥ 8, not ln(2L + 1), and does not grow with L; the 6 × L tori have 3L moves at cost 16, not 2L. The sign of her prediction stands.)* So his degeneracy at N ≠ 4p² (call, point 8) is lifted by entropy toward the handled torus at every finite coupling, by an amount that grows with g; at N = 4p² the handled torus does not exist and the question does not arise. *Ours, unverified:* this is her picture of the morning (the loop as his handled torus) with the counting that actually does the work being excitation entropy, his free-energy mechanism, not version counts. Caveats: the first term of the expansion only; deeper excitations and the full degenerate sector are uncounted (the zero-cost moves say the sector is larger than one state, so the tube's advantage is a lower bound on that account but the sheet's deeper excitations are uncounted too); nothing here says the chain moves between tori; a look under rule 16, not a claim. To promote: an O entry with the counts pinned by a test, and the zero-cost moves read from the wiring.
+- 2026-10-23, the owner, after the Carlip reading ("i think i agree with all the bullet points"): "yes: how much curl in the hypotenuse loop and whether it forms a side length loop or a 45degree inner square that 3d opens up." Recorded as her question for the twist work (handoff item 2.2) and as her go-ahead for a registered dimension measurement (T80, draft; her predictions owed). *Exact, in the stiff toy (no lengths):* a hypotenuse joins two points of the same kind across a square, and such a pair always shares exactly two neighbours, the square's other two corners; that is the same sharing a tightly curled straight pair has (glossary, "curled"), so in the stiff toy a hypotenuse carries one fixed amount of "curl" and cannot carry more or less; "how much curl" becomes a number only in stage B, where a diagonal has a length and the flat value is √2 times the side (shorter is curled, longer is uncurled). *Exact, which loop:* in two dimensions the four hypotenuses of the four squares round a point join that point's four neighbours into a square turned by 45°, side √2, the inner square she names; it is the smallest ring of hypotenuses in two dimensions (four of them) and has four-fold symmetry, so it gives quarters, not thirds. In three dimensions the six face hypotenuses of one kind in a cube form a regular tetrahedron (Update 87, exact), whose smallest ring is a triangle of three; so the thing "3D opens up" is the 45° square becoming a tetrahedron, and her thirds (the three planes through the body diagonal at 60°, 22 October) exist only there. A ring of side-length links is the ordinary square and is not a hypotenuse loop. *Ours, unverified:* under the field's reading (Carlip, read today) three directions are a large-scale, measured property, so if her particle needs the tetrahedron it is an object of the emergent geometry, not of a six-link graph; whether the toy can carry a twist on a hypotenuse at all is handoff item 2.2 and comes before any test of this.
+- 2026-10-23, the owner, on the Carlip reading and her picture, verbatim in order. (a) "near the Planck scale becomes effectively two-dimensional -> 2 open directions, of the possible 3". (b) On the hypotenuse's fixed curl: "yes this aligns with my thinking. the energy in a curl is curl energy and it is packaged in dark and regular matter each with an exact mass." (c) "A ring of side-length links is the ordinary square -> my idea is that this does not exist, only the hypotenuses exist fundamentally: sqrt2 and 2 ((sqrt2)^2+(sqrt2)^2=c^2 , c=2 , twist_2 = 1/3, twist_sqrt2 = 1/2, twist is always the same), and they are either flat 3d space or they are looped on themselves and therefore matter which being energy held in space curves (not curl) space, gravitational waves, as the stretchy space acts as a fluid and the link stretch and curves through it in wave form?" (d) "three directions are a large-scale measured property: yes, at a small scale, we can; it is only when which type of quark, which photon, we are looking at that 2 degree of freedom space: twist count and clockwise/counterclockwise, and hypotenuse length (matter/dark matter) (angle/direction/color come from movement/spin). not 2 spacial dimensions. in the highly compact center of a black hole, we have high g, but movement stops because there is no space for anything to go, so many twists are compacted and then twist so tight that the fifth and sixth points of the LxLx6 have colapsed into the third and fouth points all but a LxLx4". (e) "when matter is introduced, extra curviture, consider all the possible organizations of that matter. less entropy. exact same matter and antimatter is maximum entropy, matter introduces rules, affects other matter's charge and movement. that is less entropic. Nature loves entropy and abhors a vacuum." (f) "if the extra curl goes into the blackhole to be taken into daughter universe, then the antimatter stays in sort of a shell outside the edge, and when the black hole disolves, that adds to the backgound negative curviture, just the tiniest amount. this could make the background curviture increase in the daughter over time."
+  *Checks, ours.* (a) Exact, and it runs the other way: a curled direction is seen by a random walk at scales smaller than its circumference and drops out at scales larger (the tube reads 2 at short range and 1 at long; Kaluza-Klein's small direction is invisible only from far away), while Carlip's reduction loses dimensions at short scales and keeps them at large. So "two open of three" is not what the review's estimators would see on the slab; T80 scores exactly this (DROPS OUT / STAYS). A graph that reads fewer dimensions at short range than at long would need local structure thinner than the whole, strands or chains that fill space only when assembled, which is nearer her spaghetti X (Update 42) and her "only the hypotenuses exist" than the slab. (c) Arithmetic: the two lengths are the face diagonal, √2, and the straight two-step distance, 2, the diagonal of the 45° inner square; her twists, a half on √2 and a third on 2, are in the ratio 3 : 2, while the lengths are in the ratio 1 : 1.41, so "twist is always the same" is neither twist per unit length nor the same total twist; what is held fixed is a slot of the rule to settle in one sitting (handoff item 2.4). "Looped on themselves = matter; energy held in space curves space; waves through stretchy space" is stage B's picture (term 8, lengths on links and diagonals charging only for curving), recorded as hers. (d) Her two-dimensional small-scale space is an internal space of two parameters (twist count and handedness, plus the hypotenuse length), not two spatial directions; Carlip's estimators are spatial random walks and would not see it, so her reading and the review's hint are different claims that do not contradict each other. Its published relative is Kaluza-Klein's internal directions, where charge is motion round a small curled one (general knowledge, to verify). The black hole's center as L×L×6 collapsing to L×L×4 is the layer form's contraction (Update 65, exact: the step from width 6 to 4 costs 4(λ − 1) per surviving point), now described by her as twists packing tight; recorded as her mechanism for it. (e) In the toy, measured: a curled ring costs more entropy than flat space of the same squares (T79, PENALTY ON CURL), which is her "matter is less entropic" in the one place it has been measured; the published route to a matter excess needs a departure from equilibrium (Sakharov's conditions, general knowledge, to verify), which is "matter introduces rules" in standard words. (f) Two things. First, the lip look of 23 October found the uncurl at the seams and joints and never inside the open or curled regions, which is the shell she describes, so far as the stiff toy can show one; curl and uncurl cancel only in contact (O22), so a shell one step out survives. Second, a sign to watch: this hypothesis has the background's negative curvature, her dark energy, increasing over a daughter's life, while Update 83 (21 October) has it settling toward its constant from above, decreasing; the recent survey hints lean toward weakening. The two are her hypotheses with opposite signs for the same drift, and one measurement decides between them; both stand as recorded until she chooses.
+- 2026-10-23, the owner, on the two signs for the drift of the background curvature (her settling hypothesis of 21 October against the antimatter shell of today): "I'm still leaning toward today's idea". Recorded as her lean, not a decision: over a daughter's life the network's negative curvature grows in size (more negative), as dissolving black holes leave their uncurl shells behind; in the published model's reading that is a positive dark energy that slowly strengthens. *Ours:* the published model has the opposite drift (large negative at birth, shrinking toward zero as the coupling runs; his topological inflation is the large start), and the recent survey hints lean toward weakening; so her lean predicts the opposite sign to both, and it survives the surveys only if the shells' contribution is below what they can see, which her "just the tiniest amount" allows. Falsifier, stated now: a confirmed weakening of dark energy at a size the shell mechanism cannot avoid would kill it; what size that is needs the toy to price a shell, which it cannot yet.
+- 2026-10-23, the owner, verbatim: (a) "very large curvature near the critical point -> plays out in 3d as the central big bang event running a 3d super large strange loop." (b) "why was I talking about negative curvature at the end as a certainty?" (c) "I wonder if the net network accounting for the inflation curvature close to the big bang and antimatter overage at the end, so at the network level matter and antimatter all cancel. it's canceling with an entire huge strange loop of every possible version of spacetime reality in between, if you look at it from w/in a daughter universe." (d) "but if science is pretty sure that it ends at 0 w/in the daughter universe I'm interested in learning more." (e) "at any coupling above zero, the ground state has too few squares and is negatively curved -> and I think it always has that, or could a daughter go to coupling 0 after the last black hole dissolves?"
+  *Checks, ours.* (b) The certainty came from two places in the record, both assumptions: the published model's finite-coupling ground state is negatively curved (his), and standard cosmology with a constant dark energy ends as empty de Sitter space whatever it started from (the cosmic no-hair theorem; VISION, 19 to 20 October), which her 19 October decision adopted when it set the network's end temperature equal to empty space's. It is a certainty only if dark energy is a true constant; his model has it going to zero, and the survey hints of weakening would move the end away from de Sitter. (c) Recorded as hers: a global balance over the whole loop between the curvature at birth and the uncurl shells at the end, which looks like a separation across a daughter's whole history from inside. In the toy, exact: the total energy with its stores and daughters is conserved (claim 6, every sealed run), but the difference between surplus and deficit (curl minus uncurl) is not conserved by the switch, and curl and uncurl cancel only in contact (O22); so "matter and antimatter all cancel at the network level" needs a conserved difference the toy does not have, a new ingredient (a conserved charge) under S1. Published relative, general knowledge, to verify: cosmologies with equal matter and antimatter separated into domains (Omnes, Alfven) were ruled out by the gamma rays annihilation at the domain walls would make; a shell of antimatter round a black hole would face the same bound. (d) Standard cosmology is not sure it ends at zero: the standard model has a constant that never changes (the de Sitter end); his model has it falling to zero; the 2024 to 2025 survey hints are of slow weakening, not settled. A reading note is commissioned. (e) In her own framework (Updates 44 and 70) a daughter does not persist to zero coupling: the turn ends when its energy has returned to the network, whose coupling is set by the loop's total energy and is above zero; so the floor is hers by construction. In his, 1/g is time, so the daughter runs toward zero coupling, a flat lattice and zero dark energy at infinite time. That is the whole difference between "a floor" and "to zero", and it is a difference of framework, not of measurement, until the surveys settle the drift.
+- 2026-10-23, the owner, on the programme page's equation, verbatim. (a) On "+ Σpoints f(d) term 4: the tie (tied runs only)": "why is this term still in A phase-changing reality artifact? it is old." (b) "where is layer form in the math equation?" (c) On the term table's sentence "The author places curling energy in the links (21 Oct); an energy that charges only for curving cannot see a tight wrap, so the curling cost stays as term 3 beside it, her decision owed (22 Oct)": "-> the curling cost in the diaconal hypotenuse of the cubes surface or internal, same point type to same point type; link implies the cubes edges, connecting the 2 different points, the matter point with the antimatter point. which are not real in our model they are just helpful to visualize"
+  *Checks, ours.* (a) Right: the tie was withdrawn on 16 October at her word (VISION Update 58, "I think it's time to remove the tie then"); it belongs only to T56 and T57, both read. The page's equation is corrected; the table keeps the number 4 marked withdrawn so the other terms keep their numbers. (b) Right: the layer form is in the table (term 6) but was missing from the equation. In the code it is F = H + μ_N N (`graphity.layer_feed`), a price μ_N per point, set to zero so far, with N now able to change; the page's equation gains that line. (c) Recorded as her clarification of Update 78 ("curling energy is carried by the links"): by "links" she meant the same-kind diagonals, the hypotenuses, not the cube's edges. *Exact (arithmetic; a point's kind is the parity of its coordinates' sum):* a face diagonal (the hypotenuse of a cube's face, √2) joins two points of one kind, as she says; a cube's internal corner-to-corner diagonal (√3) joins the two kinds, so "internal, same type to same type" is not a diagonal of one cube; the shortest same-kind segment through a cube's interior runs through two cubes (√6), and the straight two-step line (2) passes through a point, not a cube. *Exact, and a consequence to settle:* every same-kind segment keeps the kind, so if only same-kind hypotenuses are real, the matter points and the antimatter points form two separate networks that never touch (in two directions two square lattices turned 45°, spacing √2; in three each kind's face diagonals form a face-centred cubic lattice, 12 neighbours per point); something has to join them for matter and antimatter to meet and cancel, and in her picture the edges that would do it are only a visual aid. *Ours:* in the toy as it stands the links (edges joining the two kinds) are the only variables: the switch moves links, squares are made of links, and a diagonal exists only where a square does; so "links are not real" describes her picture and stage B's design, not the toy, whose variables are the published model's. Calling the two kinds "the matter point" and "the antimatter point" is the third matter-against-antimatter rule on the record (Update 91, marked to confirm; the definitions box notes that the energy and the lattice are symmetric under swapping the kinds, so this rule alone cannot carry an excess). Both readings are marked to confirm (rule 20) before the stage-B brief's box changes.
+- 2026-10-23, the owner, deciding the six-link track (handoff of 23 October, item 2.0), on the option "keep it with the consensus stated against it": "keep it for modeling 3d spacetime. emergent or not, it's helpful in describing phyics in our 3d universe. since 3d is emergent, the 2d should get us to the same spot, with a different set of visuals and patterns to observe, a different story to tell." Recorded as a decision, VISION Update 95, with the checks beside it there: her "same spot" is the published model's own picture (in his two-dimensional network the walk dimension rises from 2 toward 3 at large scales, [T25] Sec. V.1; [T22] measured 1.88 ± 0.08 at N = 2000 in the intermediate regime); exact, a ~~flat lattice torus settles at 2 and the burp's product in two directions is one~~ wide flat lattice torus settles at 2, and the burp's product in two directions is a narrow flat torus that reads 2 below its width and 1 beyond it *(corrected the same evening, the look below)*, so the rise toward 3 would have to come from the warm, curved network, which T80's four-link half measures.
+- 2026-10-23, the owner, on "settles at dimension 2", verbatim: "without movement space has just 2 degrees of freedom, and that is what happens in the cold flat end." Recorded as her idea, to test. *Exact, a look on built shapes (`sandbox/cold_flat_dimension_look.py`, discrete walk, T80's draft window, first step excluded):* still, cold, perfect lattices read the dimension their wiring builds in, not one set by stillness: a wide flat sheet (24 × 24) 1.89 to 1.97, toward 2; a narrow flat torus like the burp's product (6 × 96) 1.57, then 1.00 beyond its width; the tube (4 × 96) 1.00; the six-link cubic lattice (12³) 2.84 to 2.91, toward 3. So in the toy a cold, still space reads 2 only when its wiring is a wide sheet; the six-link lattice, equally still, reads near 3. *Published, read in part ([T25] Sec. V.1, Eq. (36), quoted in the gate inventory of 23 October):* in the published model the third dimension comes from motion on a curved surface: on the negatively curved two-dimensional network a diffusing defect's motion turns ballistic in the radial direction, which he ties to the universal time, and the spectral dimension rises from 2 to 3 at scales beyond the curvature radius, d_s(t) = 2 + vJt/(1 + vJt). *Exact, arithmetic on his formula:* as the network flattens (J → 0, his zero-coupling end) d_s = 2 at every finite scale; the third dimension recedes to infinite scale. So her sentence matches his model's own cold flat limit: on a flat surface there is no drift and only two directions. *Ours, two things to face.* (1) In her own framework the end is not at zero coupling: the loop's coupling is fixed above zero (Update 70) and the end network keeps its defects and curvature, her dark energy; in his formula a finite curvature radius keeps the rise toward 3 at scales beyond it. So "the cold flat end reads 2" holds in his zero-coupling end, not in hers, unless she now holds that the end is truly flat. (2) General knowledge, to verify: in standard cosmology the far-future end (empty de Sitter space) is still three-dimensional space, and the dimension of space is not observed to depend on motion; in the emergent-dimension literature dimension is what a random walk measures ([Carlip17], read), and the walk is itself a motion.
+- 2026-10-23, the owner, verbatim, on the cooled-slab draft's remnant column, then on the twist read-back. (a) "he "remnant column" it meant to count may… need to be on 2d/ surfaces not cubes- what are the remnants with our idea of non spacial dimensions: 1) discrete twists in short halfs and long thirds with handedness, 2) curl energy : amount and sphere/antisphere, from the sqrt 2 length 2d with scraps and 2 short and long. How could we describe this shape. Then we want all the options are mapped. Arranged probabilisticly. A big bang is the mechanism played or in 3d of cirtain fluctuations that collapse squares. In the network, sweeps and g, how flexible the lengths of the links are, representing impacting how much entropy it takes to curl a full loop. Idk. Just trying to boil everything to 2 degrees of freedom and understanding what they look like. You can take several steps in each direction, but you meet back at the original in a loop. A loop could curve, curl, collapse, reopen from nothing, and uncurling- and when the curl happens so does the uncurl, that shape could be like a saddle-shaped 2sided plane." (b) "I'll update the brief's definitions box, keeping the current "not yet defined" - confirmed". Recorded: (b) as her confirmation of the twist definition, with the standing line kept (her twist with handedness and a count on a ring is still not defined); the brief's box and `docs/design/twist_definition_2026-10-23.md` say so; her prediction for the saved-state look is still owed. (a) as her idea, to test.
+  *Checks, ours; the numbers are from today's built-graph looks (`sandbox/eq45_geometrize_check.py`, `sandbox/twist_character_check.py`; sandbox until pinned by tests) and arithmetic.* What checks out. (1) Exact, Gauss and Bonnet: a closed surface you can walk around both ways and come back, a torus, has total curvature zero, so any curl on it comes with an equal uncurl; on a doughnut in space the outside is sphere-like and the inside saddle-like. (2) In the toy, under the review's own way of making the graph a surface: a curled ring spliced into a flat sheet reads flat at its own points but makes the sheet into a surface with a handle, and the splice carries exactly 4π of saddle, whatever the curl's size (the built handles with 8 and 16 surplus squares both carry 4π). So in the toy a curl does come with a fixed uncurl, as a saddle, which is her "when the curl happens so does the uncurl". (3) The splice can be two-sided (a handle) or one-sided (a cross-handle), depending on how its ends are joined; her "saddle-shaped 2sided plane" picks the handle. (4) Measured: in the published model's warm background a curled ring costs about 1.4 to 1.5 units of entropy per surplus square beyond flat space (T79, O148), which is "how much entropy it takes to curl", in the toy's stiff form. What does not. (5) Exact: the toy has no sphere at any point: its graph has two kinds of point, so no face is shorter than a square, and every point reads flat or saddle (K ≤ 0). On a torus with no handle every point is then flat. Her "sphere" side lives only as topology in the stiff toy, and as a positive deficit angle in stage B. (6) Exact: in two directions a twist has a home only in halves (the yes-or-no character, confirmed today) and quarters; thirds need the three planes through a body diagonal, which only three directions have; handedness needs a declared label or stage B's coordinates (the confirmed definition). (7) The 2D remnants already measured are three knots of fixed energy (O107: the column, 14; the double column, 8; the knot of two kinds, 20 to 30); their saddle and sidedness are unread, since the saved sheets are held for the twist test's registered version. *Published relative:* in the published model the network's negative (saddle) curvature reads as positive in its Lorentzian picture, "a form of Wick equivalence arising between the two signs of curvature" ([T25] Sec. V.1, read in part): the nearest published form of her sphere/antisphere pair. Open, hers: what "collapse squares" means (squares lost, toward the random phase, or squares folded into curls, as the layer form's compaction); and whether the map of options is to be built on the two-direction knots (built by hand) or on the cooled slab.
+- 2026-10-23, the owner, verbatim, answering what joins matter points to antimatter points: "It’s they are sides of the same coin. One square can have one value of curve approaching -1 , a meta stable state, and +1 a metastable state. They share a point and an absolute value of curve, like a sqare connecting its 2 opposite corners, and the opposite antimatter corners have the same distance apart, so energy does both at the same time, making the 2 particles that cancel and release that energy at a photon. Typically anything only lasts a few sweeps higher than a few g. The mismatches leaving extra matter is what made everything more complicated" And: "Let’s start by observing the 1 column and 2 column?" Recorded as her picture, to test: one square is the coin; its two diagonals, one joining each kind's opposite corners, are matter and antimatter, of equal length, made together by energy and cancelling into light; a mismatch leaves the excess. Her expectation, recorded before the look: at couplings above a few, anything lasts only a few sweeps.
+  *Planned look (rule 16), before it runs:* (a) exact arithmetic on one square: whether one diagonal shortening forces the other to lengthen (her "energy does both at the same time"), `sandbox/square_diagonals_check.py`; (b) the column and the double column, the two-direction remnants of fixed energy (O107: 14 and 8 at λ = 1.25), built by hand from the record's description of their wiring and checked against the record's own detector before anything is read (O16: the remnant lies along the tube, not round it), then observed: energy, whether every single move out costs, saddle and sidedness under the face rule, and how long each survives at a few couplings. No saved state is opened (the T51 sheets stay held for the twist test until her prediction is in).
