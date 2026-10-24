@@ -147,7 +147,8 @@ cost.
 
 **Gate U1** (TASKS): the average square on the flat 6 × 6 and 10 × 10 four-link tori against the exact torus answer,
 at five couplings, with the acceptance written before the run. **Failed on 24 October at β = 8** (the sampler froze in one winding sector;
-diagnosis and the winding move in TASKS, Gate U1's reading); Gate U1′ is owed, and nothing from Q29 is read until it passes.
+diagnosis and the winding move in TASKS, Gate U1's reading); Gate U1′, with a winding move, failed the same day by one point (10 × 10, β = 8,
+3.65 errors against 3.5); nothing from Q29 is read until a gate passes.
 
 ## 5. Next, in order
 

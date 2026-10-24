@@ -1009,10 +1009,18 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    draw for draw unchanged when it is off (pinned by a test); on fresh seeds it gives 0.93688 ± 0.00019 (6 × 6) and
    0.93530 ± 0.00012 (10 × 10) at β = 8. Owed, on the owner's word: Gate U1′, the same acceptance on a new config with
    the move on, the failed run kept as it is.
-   **GATE U1′  ☐** (the owner's "proceed", 24 October). Config `configs/gate_u1b_2d_winding.json`: Gate U1's tori,
+   **GATE U1′  ✗ (failed 2026-10-24 by the letter)** (the owner's "proceed", 24 October). Config `configs/gate_u1b_2d_winding.json`: Gate U1's tori,
    couplings, sweep counts and blocks, fresh seeds, one winding move per sweep. **Acceptance, written before the run,
    unchanged from Gate U1:** (a) all ten points within 3.5 block errors of the exact torus value; (b) at 6 × 6, β = 8,
    more than 3.5 errors from I₁/I₀; (c) single-link acceptance between 0.2 and 0.9. If it fails, stop and report.
+   **Reading, 24 October** (`results/gate_u1b_2d_winding.csv`, commit 2903791c, clean tree): **FAILED on (a) by one
+   point**; (b) and (c) pass. Nine of ten points lie within 1.5 errors, including 6 × 6 at β = 8, which Gate U1 failed
+   (now −0.88 errors, 0.93650 against 0.93661); the winding now moves (final values −3 to 2). The tenth, 10 × 10 at
+   β = 8, reads 0.93553 ± 0.00007 against 0.93526, 3.65 errors against the limit of 3.5. Not explained yet: a
+   residual freezing on the larger torus, or block errors too small where the winding changes slowly (each block is
+   1,000 sweeps); an earlier sandbox look with the move on fresh seeds read 0.93530 ± 0.00012 there. Stopped and
+   reported; no third run without the owner's word. The cheapest next look: the winding's autocorrelation at β = 8
+   on 10 × 10, and the same point with errors from the integrated autocorrelation time.
 3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat
    six-link space and on a curled torus (whose ring is a square the field sees).
 4. **Twist labels on strands** (a third per face diagonal, switchable off) after her answer to question 1; then tests B
