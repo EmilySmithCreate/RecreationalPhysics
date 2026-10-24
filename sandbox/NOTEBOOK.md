@@ -2319,4 +2319,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   to connect to same color, so we’ll need a 1x1x2 diagonal, to hold the 1/3 rule. How many are there in a 2x2x2 block
   and a 2x2x3 block of cubes?" And on handedness marking regular against anti for matter strands: "Yes." Answered and
   recorded as VISION Update 98 (48 and 80; no lattice symmetry about the line, so thirds there are a declared rule).
+- 2026-10-24 (evening), the owner, verbatim: "thirds still apply becase the corners are still 3 sides the strip could
+  align to." And: "what is the difference in energy between a loop that wants to be flat length sqrrt 2 and sqrrt5?"
+  *Checks, ours* (`sandbox/strip_corner_and_ring_energy.py`, exact arithmetic): a strip along a 1 × 1 × 2 diagonal has
+  three positions (one per cube edge at its corner), as she says, but 50.8°, 50.8° and 78.5° apart, not equal thirds of
+  a turn (the body diagonal's were 60° each); a face diagonal has two positions, 90° apart, which fits her halves. So
+  thirds survive as a count of positions, not as equal steps. Energy: a strip that would lie straight, closed into a
+  circle of its own length, costs 2π²B/L to bend (elastica, textbook, to verify; B its stiffness, unknown in the toy):
+  √2 13.96 B, √5 8.83 B, √6 8.06 B; difference √2 − √5 = 5.13 B (ratio √(5/2)), √2 − √6 = 5.90 B (ratio √3). A √5
+  line (1 × 2) joins two colours, like the body diagonal. With her twists (half on √2, third on √6) the twist energy
+  ratio is 3.90 in units of a twisting stiffness. No number is set beside a measured ratio (rule 13).
 
