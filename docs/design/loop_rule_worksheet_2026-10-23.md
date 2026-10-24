@@ -1093,3 +1093,12 @@ Q11 (three thirds cannot tell the electron, muon and tau apart).
 object for light. Both are now out of date for the photon field (`graphity.u1` evolves in ticks), with one caveat:
 **Gate U1 failed on 24 October** at β = 8 (the sampler froze in one winding sector; TASKS, its reading), so nothing
 from that field is read until Gate U1′ passes.
+
+**Her answers of 24 October, later (VISION Update 97; her comments in the particle brief).** Q1: (e), with jobs:
+matter strands are body diagonals, dark strands face diagonals. Q2: (a), a third is 120°, three make a full 360°
+two-sided band. Q4: three thirds closed (a). Q5: (b), a face diagonal with a half twist. Q8: charge back to the thirds
+and their handedness, read as charge = −(signed thirds)/3, with one tension open (a full twist neutral against the
+electron's −1). Q9: matter against antimatter is handedness on body diagonals; dark against antidark the face
+diagonals. Q10: light travels on the edges, the twist on the diagonals. Confinement of a lone third: yes. Pairs close
+too, more rarely. Still open from this worksheet: Q3, Q6, Q7, Q11, X1, X2, X3.
+

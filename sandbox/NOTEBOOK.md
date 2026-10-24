@@ -2299,4 +2299,11 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   photon "Yes, on the toy's graph"; half-curl "Keep all as variants". *Checks, ours:* the brief, section 2, item 7
   (exact count: one placement against three; Landauer's floor kT ln 3; a floor, not a fixed energy; needs ordered
   strands). Her answers to the brief's six questions are owed.
+- 2026-10-24 (later), the owner, her comments between # marks in `docs/design/particle_handoff_brief_2026-10-24.md`
+  (kept there as she wrote them; read in full there), and four answers after them: the electron "Full 360°: two-sided
+  band"; charge "Yes to both: canceled pair and full twist neutral"; the twist "Adopt, but halves on dark"; dark matter
+  "Yes, halves on dark". Recorded as VISION Update 97 with the exact looks (`sandbox/strand_answers_look.py`) and the
+  one tension put back to her (a full twist neutral against the electron's −1 from three thirds). Her new idea in the
+  comments: "curl energy with nothing to curl creates spin". Her statement of the programme's pattern is quoted in full
+  in Update 97.
 

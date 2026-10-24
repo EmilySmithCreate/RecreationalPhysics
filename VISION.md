@@ -3088,3 +3088,62 @@ ingredient under S1. Brief: `docs/design/particle_handoff_brief_2026-10-24.md`.
   third that cannot close is meant as confinement; whether edges carry light; what conserved
   count carries charge if charge is spin speed (23 October); matter against antimatter as opposite thirds, the
   square's two diagonals, or both; whether "1 becoming 3" means three becoming one; what gluons carry.
+
+Update 97 (2026-10-24, later): **DECISION (the author's): the twist is defined on the graph: signed thirds on body
+diagonals (matter), signed halves on face diagonals (dark matter); and her answers to the particle brief's questions.**
+Why this page changes: the stage-B brief's box said "the twist: not yet defined on the graph"; she asked "I thought we
+were defining it here?" and adopted a definition, and answered the particle brief in writing (her comments between #
+marks in `docs/design/particle_handoff_brief_2026-10-24.md`, kept as she wrote them) and four questions after it.
+Exact looks first: `sandbox/strand_answers_look.py`.
+
+- **What is decided (hers).** (1) **The twist:** every body diagonal (matter) may carry a signed whole number of
+  thirds and every face diagonal (dark matter) a signed whole number of halves; the sign is the handedness; a strand's
+  count is kept by every move that does not cut it ("Adopt, but halves on dark"; "Yes, halves on dark"). (2) **Matter
+  and antimatter are the body diagonals, dark and antidark matter the face diagonals** ("No, dark matter and antidark
+  matter are the face diagonals, matter and antimatter are the body diagoanals"); matter against antimatter is the
+  handedness of the thirds ("+1/3 and -1/3 are different handed and cancel"). (3) **The electron** is three thirds
+  closed into one full 360° twist, a two-sided band ("Full 360°: two-sided band"), carrying a photon-like curl's energy
+  ("Correct"); three coming together costs one photon; her entropy reading confirmed ("yes"). (4) **Light** is the
+  travelling excitation on the edges, and diagonals carry the twist: two jobs ("yes"), so the photon field of
+  `graphity.u1` stays on the edges. Half-curl: "I think yes to all, but good to test independently". (5) **Pairs** close
+  too, one third each way, more rarely than triples ("yes this is helpful to my picture and aligns"). (6) **A lone third
+  is confined** ("a confinement"). (7) **Charge:** "1 1/3 is negative, 2/3 is positive, 1 is nuetral. 3 (-1/3) + photon
+  is anti electron, 3 (1/3) + photon is electron", read back as charge = −(signed thirds)/3, and "1 is neutral" as both
+  a cancelled pair and a full twist ("Yes to both"). (8) **Gluons:** keep both readings; her prediction is that they
+  carry no half-curl ("None is my prediction").
+- **What checks out (exact).** The cube turns into itself every 120° about a body diagonal and every 180° about a face
+  diagonal (rotations tested against the lattice), so thirds on body diagonals and halves on face diagonals are the
+  cube's own three-fold and two-fold turns, not a choice. The lattice's planes through a body diagonal lie 60° apart,
+  so her third (120°) is two lattice steps and her electron's 360° is six. The charge reading fits every row of the
+  observed table (electron, positron, neutrino, photon, up and down quarks, proton, neutron, three pions) with the up
+  quark as two thirds of the handedness opposite the electron's and the down quark one third of the electron's; those
+  two quark assignments were chosen to fit, so only the composites follow, by addition (rule 13). The relation 3Q +
+  (signed thirds) = 0 then holds exactly. It is the braid model's counting ([BT05]), with a third of a turn where that
+  model has a whole twist per ribbon.
+- **What it must face (exact unless marked).** (a) A body diagonal joins the two kinds of point, so a closed ring of
+  them has an even number of segments: none of three exists, the smallest has four (48 through each point), the next
+  six (888). The electron's three thirds are therefore a braid of three strands or one strand carrying three thirds,
+  not a closed triangle of body diagonals; face diagonals do make triangles (24 through each point). (b) **Charge,
+  open:** "a full twist is neutral" and "three same-handed thirds make the electron's −1" cannot both hold for the
+  thirds alone; if a full twist is neutral, the electron's charge comes from its photon-curl and a closed proton (net
+  three thirds) would be neutral too. Hers to settle. (c) Dark against antidark as the two kinds' face diagonals, and
+  matter against antimatter as handedness, are both exact symmetries of the energy and the lattice (the kind swap; the
+  cube's reflections), so neither sector can hold an excess without an added ingredient. (d) On 23 October she called
+  the two kinds of point "the matter point with the antimatter point"; under today's answer the kinds separate dark
+  from antidark (each kind's face diagonals), and every matter strand joins one point of each kind. To confirm which
+  stands. (e) "Curl energy with nothing to curl creates spin" (her words) is a candidate for the ingredient the 2π gate
+  asks for: no state built on link labels carries spin one half (Update 96); reading task, Finkelstein and Rubinstein.
+- **Her statement of the pattern (verbatim, recorded as hers):** "this is the pattern we are following, trying to
+  build up the rules of a 2 degree of freedom non-geospacial phase into the rules we know about the universe ie
+  spacetime. All the rules we observe should be able to emerge from the idea that every organization of the 2d network
+  exists and energy can spontaniously curl -return realitty to the perspective of 2 degrees of freedom, to needing 3d
+  space to  and uncurl to store extra energy, the over-curve that can occur in the network.energy. from inside that
+  change, it looks like a big bang, a daughter universe. an area of excess curvature in the 2d forms, because
+  everything forms, all the versions, with amplitude. it looks like what happens when surplus mass plays out in space.
+  from the snap at t=0 = big bang, through when the 2 dimensions show all the information there. it desolves back out
+  to the network through the black holes, leaving something in the new space, a small about of negative curviture,
+  which we can measure our univese moving toward, although our universe will expand so that open empty space moves
+  toward 0 as it expands infinitely. helps the total network return to 0 curviture max entropy."
+- **Gates.** Gate U1′ failed by one point; a diagnostic found the sampler mixing and the errors right; Gate U1″ (four
+  times the sweeps, same acceptance) passed (TASKS), so results from the photon field with the winding move may be read.
+
