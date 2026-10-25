@@ -3692,3 +3692,35 @@ looks.** Her notes are in `sandbox/NOTEBOOK.md` verbatim; the questions file is 
   curl (519 positive, 80 zero, 1 negative; mean +9.2, falling with slower cooling). The toy reason for "ours negative"
   is killed; her other reasons stand and none is the toy's.
 
+Update 109 (2026-10-25): **DECISION (the author's): the 60° spin-twist is the strand's own twist angle; and her idea of
+light backed up in an uncurl shell at the front.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **DECISION ("okay, proceed").** Each third carries 120° of charge-twist as a turn of the grid (a true symmetry of the
+  cube that keeps each point's kind, exact) and 60° of spin-twist as the strand's own twist angle, one of the two base
+  degrees of freedom; three spin-twists make a 180° half turn with no mirror. *Ours:* the toy's labels carry no such
+  angle today (they give whole-number spin only, exact, 24 October), so a twist angle on strands is a new ingredient;
+  its form is fixed in writing before anything is built, and its published counterpart is Levin and Wen's half-turn
+  framing rule (read in full, 24 October).
+- **Her idea, put in order.** Light can back up: it arrives faster than new daughter universes can take it and piles up
+  in a charged shell around the front. The shell is uncurl, the surplus uncurl that applies the curl energy at the front;
+  it can carry spin and charge and pulls curl back from the front, so the front needs λ > 1, a surplus, to reach the
+  barrier. When the barrier is hit and the front snaps, the energy stored at λ = 1 and its opposite is released; the
+  surplus cannot be cancelled because it stays in the black hole, in the mother universe's space, and nothing passes
+  between. *Ours:* it gives her store mechanism of Update 108 (H8) a place, the shell, and a cause, backed-up light.
+- **What it touches** (*ours*). (1) *Exact, the toy* (`sandbox/u1_boundary_look.py`, 24 October): at a boundary between
+  curled and flat space, the part of the light field lying along the curl cannot enter the curl at low frequency and is
+  reflected, while light in the open directions passes. So in the toy one polarisation of light does back up at a
+  curled front, and reflected light pushes on what reflects it. (2) *Exact, the toy* (Gauss's law, same look): light by
+  itself cannot make a net charge anywhere; a charged shell needs charged matter (pairs made from the dense light, which
+  sum to zero) and something to separate them (the handed sorter of Update 104). (3) *Exact, the rule:* under the hard
+  zero-total rule a curled front must come with equal uncurl, so an uncurl shell around the front is what the rule
+  requires. (4) *Published, general knowledge, to verify:* in first-order phase transitions, light-like particles that
+  gain mass when they cross the bubble wall push back on it, and that push grows with the wall's speed and limits it
+  (Bödeker and Moore, 2009 and 2017). That is her "the shell pulls curl back from the front, so the front needs a
+  surplus" in published form, and it is the same physics as (1): light that gains mass inside the curl. (5) The surplus
+  staying in the mother's space is H8 and Birkhoff's theorem (Update 104).
+- **What can be computed** (exact, no run): the push of the reflected light on the curled-flat boundary in the toy's
+  field, against the field's stiffness β, and its direction (whether it holds the front back or pushes it on), which
+  depends on which side the light comes from. And whether the light sitting unevenly near a front changes the curling
+  cost there, which is the "how the squares are arranged" effect named under item 0 (Update 108).
+

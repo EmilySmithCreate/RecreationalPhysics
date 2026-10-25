@@ -45,18 +45,17 @@ H8. **Your mechanism for the burp's matter** *(new, 25 October; your words in th
 
 ## Open, after your second pass
 
-S1. ★ **The 60° spin-twist as a turn of the grid** *(you chose "turn of the grid makes more sense")*. Exact
-    (`sandbox/cube_sixty_degree_look.py`): as grid turns, the 120° is a true symmetry of the cube and keeps each point's
-    kind, but the 60° turn is a symmetry only with a mirror, and it swaps every point's kind. A third doing both (120°
-    then 60°) is three 60° steps, which is the point flip through the cube's centre: the mirror image, with the kinds
-    swapped. So as grid turns, your spin-twist carries the mirror with it. Choose one:
-    - (a) keep it: the 60° spin-twist is a mirrored step, and spin is then tied to the mirror (antimatter) in the toy's
-      grid; or
-    - (b) make the spin-twist the strand's own twist angle (one of the two base degrees of freedom), so no mirror arises,
-      and keep the 120° charge-twist as the grid turn; or
-    - (c) a different grid in which a 60° turn is a plain symmetry (a triangular or hexagonal one has it), which is a
-      new model, decided before any run.
-    *Assistant's recommendation: (b). It keeps your 120°/60° split and needs no new grid.*
+S1. ~~**The 60° spin-twist as a turn of the grid.**~~ *Answered 25 October: "okay, proceed" with (b): the 60°
+    spin-twist is the strand's own twist angle, the 120° charge-twist a turn of the grid (VISION Update 109). A twist
+    angle on strands is a new ingredient; its form is written before anything is built.*
+L1. ★ **Light backed up at the front** *(your idea, Update 109)*. Which side does the backed-up light come from: the
+    curled side (the black hole, the mother's space) arriving at the front, or the opening daughter's side? It decides
+    the direction of the push: in the toy, light along the curl is reflected at a curled-flat boundary (exact), and the
+    reflected light pushes on the boundary; whether that push holds the front back (your "pulls curl back") or helps
+    it open depends on the side. The push is exact and cheap to compute once you say.
+L2. **The shell's charge.** Light alone cannot make net charge (Gauss's law, exact in the toy). Is the shell's charge
+    made of pairs from the dense light, sorted by the hole's spin (H4), so it is charged on the mother's side and its
+    partner charge goes with the daughter's surplus?
 S2. **Pair creation, as you now have it** *(you agreed one photon gives the electron and the positron; and "2 photons
     carry 360, but it is split against the 3 1/3 twists and the 3 -1/3 antitwists")*. On your question "why not? 1
     photon is a half curl / 180 degrees": a photon carries one whole unit of spin, whatever picture we draw it with, and
