@@ -52,10 +52,7 @@ L1. ~~**Light backed up at the front: which side?**~~ *Answered 25 October: from
     the mother's space). Computed (Update 110, exploratory): in the toy's field that light pushes the front toward the
     curl, helping it open, at every frequency; it does not pull curl back.*
 L2. ~~**The shell's charge.**~~ *Answered 25 October: confirmed, pairs sorted by the hole's spin.*
-L3. **The hold-back as charge, not light** *(Update 110)*. Since light's push helps the front open, the hold-back in
-    your picture would be the shell's charge: one charge on the mother's side, the opposite with the daughter's surplus,
-    attracting across the front until a surplus breaks through. Its published form is the bubble-wall picture of
-    making the matter excess (handed bounces off the wall build a charge in front of it). Adopt this reading?
+L3. ~~**The hold-back as charge, not light.**~~ *Answered 25 October: "Adopt" (VISION Update 111).*
 S2. **Pair creation, as you now have it** *(you agreed one photon gives the electron and the positron; and "2 photons
     carry 360, but it is split against the 3 1/3 twists and the 3 -1/3 antitwists")*. On your question "why not? 1
     photon is a half curl / 180 degrees": a photon carries one whole unit of spin, whatever picture we draw it with, and

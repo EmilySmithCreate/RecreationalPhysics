@@ -3749,3 +3749,25 @@ the shell's charge.** Her words are in `sandbox/NOTEBOOK.md` under that date.
   is turned into a matter excess (Cohen, Kaplan and Nelson, 1990s). Her shell, her sorter and her surplus are that
   picture's three parts.
 
+Update 111 (2026-10-25): **DECISION (the author's): the hold-back at the front is the shell's charge (L3); and her
+picture of the strange loop as a fractal.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **DECISION ("Adopt at l3").** The front is held back by the shell's charge, one sign on the mother's side and the
+  opposite with the daughter's surplus, attracting across the front until a surplus breaks through; not by the light's
+  push, which helps the front open (Update 110). Published form, to read before citing: charge built in front of a
+  bubble wall by handed bounces, turned into a matter excess (Cohen, Kaplan and Nelson).
+- **Her picture, put in order.** Very simple rules give complex patterns, as z → z² + c gives the Mandelbrot set. The base
+  has two degrees of freedom, and its outcome can be described in many more variables, like a thing and its warped image
+  making patterns in a video loop. A strange loop is the network where enough energy is concentrated to uncurl and have
+  all these interactions; from inside we see the patterns as surplus matter influences itself; and the whole pattern
+  comes from a higher coupling and more curl than usual.
+- **What it touches** (*ours; general knowledge, to verify*). (1) The video loop is Hofstadter's own illustration of a
+  strange loop (a camera filming its own screen, in *I Am a Strange Loop*, 2007). (2) In the toy, "the whole pattern from
+  the coupling and the amount of curl" is exact in form: the rule has two knobs, the coupling g and the curling cost λ,
+  and every outcome is a function of them (with the size); the (D, λ) map of Update 26 is the map of what each setting
+  yields. (3) In z → z² + c the intricate pattern lives at the boundary between points that stay bounded and points that
+  escape; the published counterpart in physics is that rich structure appears near a critical point, on the edge between
+  two phases, which is where the published model's author places the continuum (and where the toy's sharp front sits).
+  *Ours, unverified:* her picture predicts that the pattern-rich settings are the ones near the edge of the λ window
+  where X is barely stable, which the (D, λ) map can show.
+
