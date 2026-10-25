@@ -2456,4 +2456,7 @@ Is "net flat" an average over the loop's stacked versions, or a total over one j
 So g is a constant in the 2d view. Represents how likely a network is to birth a 3d space. How many sweeps. The time equivalent. Then curl and twist are the 2 degrees of freedom, they are related by some g and soft space’s number. Is that a front?
 
 (A) . So we have to set g and if we set it wrong it many not explain the spacetime we observe."
+- 2026-10-25, the owner (verbatim; VISION Update 120): "Yes each big bang makes two daughters then, the other one matching but with antimatter surplus. Then the black hole itself stays neutral.
+
+space. In the toy, a sharp change in soft space's number would make a front.- let’s keep investigating this then."
 

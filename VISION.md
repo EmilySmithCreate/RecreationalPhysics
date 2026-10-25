@@ -4032,3 +4032,30 @@ freedom are curl and twist.** Her words are in `sandbox/NOTEBOOK.md` under that 
   a daughter's could run backward: every universe's arrow points away from its own burp, so the exact mirror's time
   reversal may come for free. Recorded as a reading, not a result.
 
+Update 120 (2026-10-25): **the author's idea: each Big Bang makes two daughters, one with a matter surplus and one with
+the matching antimatter surplus, so the black hole stays neutral; and the first look at a front in soft space.** Her
+words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Hers.** Each Big Bang makes two daughters, alike except that one has the matter surplus and the other the matching
+  antimatter surplus; the black hole itself stays neutral. *Ours:* (1) it replaces H4 and H8's parent that keeps the
+  antimatter surplus (to confirm), and it is closer to Boyle, Finn and Turok's pair (one bang, two mirror branches,
+  Update 119). (2) Two readings to confirm: whether "all daughters of one mother share a direction" (Update 118) now
+  means each burp's pair, one of each; and whether each twin carries the full curling cost (T71's daughters each carry
+  exactly one) or half of it.
+- **The front in soft space, a look** (`sandbox/soft_front_look.py`; exact for what it computes). (1) **Term 7 as built
+  makes no sharp front.** At rest its field solves Poisson's equation, so its stiffness and charge set only the depth,
+  and the shape is fixed by where the curled points sit: across a band of curled points on a flat torus the field
+  changes over the whole gap, a width of about a third of the space (7 links at L = 24, 13 to 15 at L = 48), growing
+  with the space and not with anything local. The field bends where the curled region ends; it does not jump. (2) **A
+  field with two preferred values does.** With an added double well, a (phi^2 - 1)^2 per point (not in the toy), the
+  wall between a region at one value and a region at the other is 2 to 6 links wide at every length tried, set by
+  sqrt(kappa / a), and costs a fixed energy per unit of wall, its tension, matching the published (4/3) sqrt(2 kappa a)
+  as the wall widens (general knowledge: the kink of phi^4 theory, the domain wall). *Ours, unverified:* that is her
+  neutral layer with tension (Update 113) in a form the toy could hold: the two values would be curled and open, the
+  wall the front, its tension the hold-back that makes the curl need a surplus. It would be a new ingredient under S1
+  (a potential for soft space's number), and the obvious way to tie the field to curl and twist, her relation between
+  the two degrees of freedom (Update 119).
+- **What can be done next, cheaply** (*ours*): put the double well on the toy's own flat torus with the field coupled to
+  curl, and ask whether the wall sits where the wiring's curled region ends, and whether its tension gives a critical
+  patch size like T54's. A look first; a registered test only after she chooses the form.
+
