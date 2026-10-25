@@ -3861,3 +3861,20 @@ curl facing in and uncurl facing out.** Her words are in `sandbox/NOTEBOOK.md` u
   tension that sets the barrier in the decay of a stable-for-now state ([C77]). Test, once the hard-rule kernel exists:
   where the uncurl that balances a front's curl sits.
 
+Update 114 (2026-10-25): **the author's word for T71's held-out size, and her reading of the clean move.** Her words are
+in `sandbox/NOTEBOOK.md` under that date; the sheet is `docs/design/predictions_sheet_2026-10-25.md`.
+
+- **Her word.** Her stage-1 prediction stands for L = 16, and the jobs go ahead. The control: option (c), a properly fed
+  control (the arms' feed per point) as a new cell with its own prediction; it is not a held-out test, since it has no
+  stage-1 sizes to fit from, and it waits for her prediction before it is registered or run. The original control is
+  left out of the held-out stage.
+- **Her question.** The clean two-switch move that fires at the smallest curling cost and the faster feed: could it be a
+  move driven by backed-up charge and the handed force, giving the daughter a surplus of matter or antimatter?
+  - *Ours.* The toy has no charge, no handedness and no matter, so nothing in it can make a surplus of either kind; what
+    the record says the move is (O144, O145): at the smallest curling cost the feed fills the stores faster than the
+    chain's one layer proposal a sweep can spend it, until a pool of eight link ends can pay the first clean switch, and
+    the daughters that follow fall short of the curling cost because some energy went into rewiring the parent. *Ours,
+    unverified:* that is energy backing up because the opening cannot keep pace with what arrives, the same shape as her
+    backed-up light at the front (Update 109), and the pile-up then finds a second channel. It is an analogy of shape, not
+    a mechanism for matter. What L = 16 can add: whether the backed-up energy and the clean moves grow with the slab.
+
