@@ -3350,7 +3350,10 @@ idea to test, not a decision; she has not yet given her predictions of 24 Octobe
   burp. When two black holes merge and a burp fires, the outer one (the parent, around us) keeps a surplus of antimatter
   curls and the inner one (the daughter) a surplus of matter curls, so neither can cancel its own kind fully. That gives
   the matter excess without the lip's extra curl (dropped in Update 82) or any opening-speed mechanism. The space around
-  us and long-lived matter universes like ours each carry a slight curvature, and the two together are net flat.
+  us and long-lived matter universes like ours each carry a slight curvature, and the two together are net flat. Her
+  sign, in her words: the black hole around us "has slight negative curvature" and universes like ours "are in a slight
+  negative curvature space", negative for both, which sits uneasily with "net flat"; she later agreed to ours negative
+  and the parent positive (Update 108) *(corrected 25 October after the rule-22 audit, O155)*.
 - **What it connects to (ours; general knowledge, not read by us, to verify).** (a) A universe and anti-universe pair
   with the whole symmetric: Boyle, Finn and Turok's CPT-symmetric universe (2018); and Popławski's universe inside a black
   hole, with an asymmetry from torsion (2011). (b) Matter and antimatter sorted into separate regions is an old idea,
@@ -3365,7 +3368,7 @@ idea to test, not a decision; she has not yet given her predictions of 24 Octobe
   leave curvature of the same sign; two universes of opposite matter kind cannot get opposite curvatures from the
   mirroring alone. Something handed is needed, and the handed quantity in geometry is torsion (twist), not curvature.
   (2) *General knowledge, to verify:* antihydrogen falls down like hydrogen (ALPHA-g, 2023), so an antimatter universe
-  weighs as a matter one does. (3) *GR, Birkhoff's theorem:* what happens inside a horizon does not change the mass seen
+  weighs as a matter one does. (3) *GR, Birkhoff's theorem (general knowledge, to verify; strictly for a spherical hole):* what happens inside a horizon does not change the mass seen
   outside, so a burp into a daughter is invisible to LIGO; the waves of GW150914 are accounted for by the orbit (about
   three solar masses radiated, general knowledge, to verify). If a burp did take energy out of our side, LIGO's published
   consistency test (final mass read from the early and late parts of the signal) bounds it, and many quick burps would
@@ -3375,7 +3378,8 @@ idea to test, not a decision; she has not yet given her predictions of 24 Octobe
 - **What it predicts that can be checked (ours, unverified).** Our space's curvature is small and of one sign, not zero;
   measured today as flat to within a fraction of a per cent, with slight curvature of either sign allowed (Planck 2018
   with BAO, to verify). The sign she gives is the prediction.
-- **Asked of her:** which sign goes to which universe (our space slightly negative and the parent slightly positive?);
+- **Asked of her:** which sign goes to which universe, since she had given negative for both (our space slightly
+  negative and the parent slightly positive?) *(corrected 25 October after the rule-22 audit, O155)*;
   what sorts the strands; and the sense of "together".
 - **Her answer on the sorter, the same day** (words in the notebook). The hole's spin sorts, through electromagnetism:
   matter and antimatter twists have opposite spin, which usually draws them together to annihilate into light; a hole
@@ -3427,7 +3431,8 @@ idea to test, not a decision; she has not yet given her predictions of 24 Octobe
     with the charge flipped (the CP pairing, general knowledge, to verify).
 - **Her answer on the opposite sign, the same day:** "the surface's total must stay zero." The partner is curved the
   other way because the loop's surface has a fixed total curvature of zero.
-  - *Ours.* (1) *General knowledge, to verify:* a fixed total is a theorem only for a two-dimensional surface
+  - *Ours.* (1) *General knowledge, to verify:* a fixed total of the ordinary (scalar) curvature is a theorem only for a two-dimensional surface (in every even
+    dimension a different, squared-curvature integral is fixed, the Chern-Gauss-Bonnet theorem *(corrected 25 October after the rule-22 audit, O155)*)
     (Gauss-Bonnet: the total is set by the surface's shape, zero for a torus). In three dimensions nothing fixes the total
     of the ordinary curvature, so the claim needs the versions to be regions of one two-dimensional surface, which is her
     curled slab and two degrees of freedom (Update 101), not two separate three-dimensional spaces. (2) *Exact (a short
@@ -3525,7 +3530,8 @@ list and needs its own dated decision under S1.
   when every link has two squares), so adding flat cells costs nothing: "no cost" is already true of the toy's energy.
   A flat cell adds one point and one square, so it keeps Update 105's rule (S = N). Growth that keeps space flat is
   allowed by both.
-- **What it connects to** (*ours; general knowledge, not read by us, to verify*). (1) Claim 3 already names the
+- **What it connects to** (*ours; general knowledge, not read by us, to verify; but timescape had been read on 20
+  October, `docs/reading/notes/2026-10-20_backreaction_timescape.md` *(corrected 25 October after the rule-22 audit, O155)**). (1) Claim 3 already names the
   published form: in dynamical triangulations the number of building blocks varies and the cost per block plays the role
   of the cosmological constant. A zero cost per point is the toy's cosmological term set to zero, which fits "dark energy
   nets almost zero" (Update 41); the small observed dark energy would be a small cost or gain per point, still to be
@@ -3555,7 +3561,8 @@ list and needs its own dated decision under S1.
     at the speed of light,** as the toy's opening front does (T47 part A: fronts at a steady speed): then the size grows
     in step with time, R = ct, not exponentially. That is a published minority cosmology, the coasting or "R_h = ct"
     universe (Milne; Melia and Shevchuk 2012; general knowledge, to verify), whose rate is one over the age. Measured, H0
-    times the age is 0.95 to 1.03 depending on which H0 is used, close to the coasting value of 1, a coincidence the
+    times the age is 0.95 with Planck's H0 and its model age (the 1.03 paired the local H0 of 73 with Planck's model age,
+    which do not go together *(corrected 25 October after the rule-22 audit, O155)*), close to the coasting value of 1, a coincidence the
     literature knows; by rule 13 a close number is not a result. Coasting is disfavoured by the measured history
     (supernovae, the spacing of galaxy clusters and the microwave background fit a slowing then speeding expansion
     better), which it would have to face. (c) **"A curve moves through space at c"** is measured: gravitational waves
@@ -3623,14 +3630,19 @@ coheres clearly to her yet and asks that both be kept.
   right angles (each a square) and 3 are straight; this is the six-link toy's flat value (four squares on each link,
   S = 3N, Update 105). (2) About a body diagonal, a 60-degree turn alone is not a symmetry of the cube, and neither is a
   180-degree turn; the 120-degree turn is, and keeps each point's kind. **A 60-degree turn together with a mirror is a
-  symmetry, and it swaps every point's kind (black to white).** Two such steps make the 120-degree turn and keep the
-  kinds; three make inversion through the cube's centre, which swaps them, and their turns add to 180 degrees.
+  symmetry; about a cube's centre it swaps every point's kind (black to white), but about a lattice point it keeps every
+  kind.** *(corrected 25 October after the rule-22 audit, O155)* Two such steps make the 120-degree turn and keep the
+  kinds; three make inversion through the cube's centre, which swaps them (inversion through a lattice point keeps them), and their turns add to 180 degrees.
 - *Ours, unverified; a reading for her to accept or refuse.* Her 60-degree pieces exist on the cube only as handed steps
   (each carries a mirror) that change a point's kind, and three of them make 180 degrees, the half turn that is what
   makes an electron-like particle in Levin and Wen's model (Update 104's reads). She has said the kinds separate regular
   from anti (24 October). Under that reading an odd number of steps changes kind and an even number keeps it, and a lone
   step is never a plain rotation of the cube. Whether this maps onto charges of one and two thirds is not shown and is not
   claimed; it is the first place where "thirds" and "halves" meet in exact geometry, which is why it is recorded.
+  *Corrected 25 October after the rule-22 audit (O155): the kind swap holds only for turns about a cube's centre;
+  about a lattice point, which is her picture (the point that touches 12 squares), no step changes a point's kind, so
+  the link to matter and antimatter through the kinds is withdrawn. What stands about any centre: a 60-degree grid step
+  carries a mirror. Levin and Wen were read on 24 October (commit d385c61e), not in Update 104.*
 - **Flat means empty: the match with timescape holds** (Update 106 reading). Her flat-and-empty regions are timescape's
   voids, which grow fastest; matter's regions (the walls) grow slowest. *Ours:* a word to keep straight on the pages:
   the toy's "flat" is empty, while in cosmology an empty, expanding void has negative curvature in space, so the same
@@ -3643,7 +3655,8 @@ coheres clearly to her yet and asks that both be kept.
     turn about a body diagonal is not a symmetry of the cube at all. *General knowledge, to verify:* in physics, spin one
     half is about plain rotations (a 360-degree turn gives a minus sign, 720 returns), while a point flip is parity, the
     operation that relates a particle to its mirror image. So on the cube her three 60s land on parity together with a
-    swap of the two kinds of point, which is close to her "an antiparticle is the mirror image of its strand", and not on
+    swap of the two kinds of point (about a cube's centre only; about a lattice point the kinds are kept *(corrected 25 October after the rule-22 audit, O155)*), which is
+    close to her "an antiparticle is the mirror image of its strand", and not on
     spin. For three 60s to make the spin half, the mirror would have to be removable, which the cube does not allow; a
     lattice or a twist rule that does allow it would be a different model, to be decided under S1.
 - **Her notes on the questions file, the same day** (verbatim in the notebook). (1) **The base is two degrees of freedom,
@@ -3676,7 +3689,7 @@ looks.** Her notes are in `sandbox/NOTEBOOK.md` verbatim; the questions file is 
   (6); the tube's waiting time first (7); four links first (8); ours slightly negative, the parent positive (H5).
 - **Her matter picture** (H3 of the file): every strand, matter and dark, of three thirds tying the 12 right angles of
   three planes; each third 120° of charge-twist and 60° of spin-twist, as grid turns; the three together are what can be
-  written as three-dimensional space and move. *Ours, exact:* as grid turns the 60° carries a mirror and swaps the kinds,
+  written as three-dimensional space and move. *Ours, exact:* as grid turns the 60° carries a mirror (it swaps the kinds only about a cube's centre *(corrected 25 October after the rule-22 audit, O155)*),
   and 120° then 60° is the point flip (S1 offers three ways forward; recommended: the spin-twist as the strand's own
   twist angle).
 - **Her mechanism for the burp's matter** (H8): the positive parent pulls away our surplus antimatter; without it curl
@@ -3687,10 +3700,15 @@ looks.** Her notes are in `sandbox/NOTEBOOK.md` verbatim; the questions file is 
 - **Light under the hard rule** (*ours, exact at leading order*): the field's leading reward is the same per square, and
   every allowed arrangement has the same number of squares, so at leading order light neither lowers nor raises the
   curling cost under the rule, and decision 0's fork disappears there; higher-order terms remain to compute. Her "light
-  lowers it" is therefore not supplied at leading order.
+  lowers it" is therefore not supplied at leading order. *Range, added after the rule-22 audit (O155): the per-square
+  factor ln I₀(β) is the strong-coupling expansion (small β), where the field is not yet free light; at the β where
+  O151's light exists the arrangement-dependent terms are not small, so this is a strong-coupling statement and does
+  not rule out her idea at large β.*
 - **The curvature-sign look** (exploratory, `sandbox/opened_space_curvature_sign.py`): T51's 600 opened sheets keep net
   curl (519 positive, 80 zero, 1 negative; mean +9.2, falling with slower cooling). The toy reason for "ours negative"
-  is killed; her other reasons stand and none is the toy's.
+  is killed in the toy without the rule (under the hard rule the net is zero by construction); the fall with slower
+  cooling is at one size (L = 256: +10.0, +4.3, +2.3), and +21 is a larger tube (L = 512), not the fastest cooling *(corrected 25 October after the rule-22 audit, O155)*;
+  her other reasons stand and none is the toy's.
 
 Update 109 (2026-10-25): **DECISION (the author's): the 60° spin-twist is the strand's own twist angle; and her idea of
 light backed up in an uncurl shell at the front.** Her words are in `sandbox/NOTEBOOK.md` under that date.
@@ -3712,12 +3730,16 @@ light backed up in an uncurl shell at the front.** Her words are in `sandbox/NOT
   reflected, while light in the open directions passes. So in the toy one polarisation of light does back up at a
   curled front, and reflected light pushes on what reflects it. (2) *Exact, the toy* (Gauss's law, same look): light by
   itself cannot make a net charge anywhere; a charged shell needs charged matter (pairs made from the dense light, which
-  sum to zero) and something to separate them (the handed sorter of Update 104). (3) *Exact, the rule:* under the hard
-  zero-total rule a curled front must come with equal uncurl, so an uncurl shell around the front is what the rule
-  requires. (4) *Published, general knowledge, to verify:* in first-order phase transitions, light-like particles that
+  sum to zero) and something to separate them (the handed sorter of Update 104). (3) *Ours, unverified (the rule fixes only the global total, not where the uncurl sits *(corrected 25 October after the rule-22 audit, O155)*):* under the
+  hard zero-total rule a curled front must come with equal uncurl somewhere, and a shell around the front is one place
+  it could sit. (4) *Published, general knowledge, to verify:* in first-order phase transitions, light-like particles that
   gain mass when they cross the bubble wall push back on it, and that push grows with the wall's speed and limits it
   (Bödeker and Moore, 2009 and 2017). That is her "the shell pulls curl back from the front, so the front needs a
-  surplus" in published form, and it is the same physics as (1): light that gains mass inside the curl. (5) The surplus
+  surplus" in published form, and it is the same physics as (1): light that gains mass inside the curl. *Corrected 25 October after the rule-22 audit (O155): in Bödeker and Moore's
+  2009 paper the push from particles gaining mass levels off with the wall's speed; the push that grows with speed is
+  the 2017 one, from light-like particles radiated at the wall. And there the expanding phase is the massive one, while
+  in the toy the opening side is massless, so the analogy runs backwards, which is why Update 110 finds the push does
+  not hold the front back. It is not her hold-back's published form.* (5) The surplus
   staying in the mother's space is H8 and Birkhoff's theorem (Update 104).
 - **What can be computed** (exact, no run): the push of the reflected light on the curled-flat boundary in the toy's
   field, against the field's stiffness β, and its direction (whether it holds the front back or pushes it on), which
@@ -3725,7 +3747,7 @@ light backed up in an uncurl shell at the front.** Her words are in `sandbox/NOT
   cost there, which is the "how the squares are arranged" effect named under item 0 (Update 108).
 
 Update 110 (2026-10-25): **the author's answers on the backed-up light: it comes from the curled side, the black hole;
-the shell's charge is pairs sorted by the hole's spin. The light's push helps the front open; the hold-back would be
+the shell's charge is pairs sorted by the hole's spin. In a continuum stand-in the light's push does not hold the front back *(corrected 25 October after the rule-22 audit, O155)*; the hold-back would be
 the shell's charge.** Her words are in `sandbox/NOTEBOOK.md` under that date.
 
 - **Hers.** L1: the backed-up light comes from the curled side (the black hole, in the mother's space) and arrives at the
@@ -3736,8 +3758,9 @@ the shell's charge.** Her words are in `sandbox/NOTEBOOK.md` under that date.
   massless. Per quantum arriving from the curled side, the push on the front is -2a(1 - a)/(1 + a) in units of its
   momentum on the open side, a being the ratio of its momentum inside the curl to outside: **never toward the open
   side.** A quantum crossing out of the curl gains momentum, so the front recoils toward the curl, which is the
-  direction in which the front moves as space opens. **So in the toy's field, light arriving from the black hole's side
-  helps the front open; it does not pull curl back.** (A gas of light on both sides at one temperature gives the same
+  direction in which the front moves as space opens. **So in the continuum stand-in, light arriving from the black hole's side
+  pushes toward the curl; it does not pull curl back.** *(Rule 16, after the rule-22 audit, O155: the look kills the
+  light's push as the hold-back; it does not establish that light helps the front open in the toy itself.)* (A gas of light on both sides at one temperature gives the same
   sign: the massless side has the higher pressure.) The continuum step is a stand-in for the lattice junction; the
   lattice's own reflection would change the numbers, and the sign holds while the reflected share stays below
   (k_open - k_curled)/(k_open + k_curled), which the junction's measured reflection can check.
@@ -3747,15 +3770,20 @@ the shell's charge.** Her words are in `sandbox/NOTEBOOK.md` under that date.
   published form is the standard picture of making the matter excess at a bubble wall: particles bounce off the moving
   wall with a probability that depends on their handedness, which builds a charge in front of the wall, and that charge
   is turned into a matter excess (Cohen, Kaplan and Nelson, 1990s). Her shell, her sorter and her surplus are that
-  picture's three parts.
+  picture's three parts. *Narrowed 25 October after the rule-22 audit (O155): Cohen, Kaplan and Nelson make a charge in
+  front of a wall that feeds the matter excess; nothing in it holds the wall back, so it is the published form of the
+  charge-making only, not of the hold-back. Which charge the shell carries also matters: electric charge sorted across
+  universes would leave each universe charged, which ours is not (Update 104); a handed, weak-type charge avoids that.
+  Asked of her.*
 
 Update 111 (2026-10-25): **DECISION (the author's): the hold-back at the front is the shell's charge (L3); and her
 picture of the strange loop as a fractal.** Her words are in `sandbox/NOTEBOOK.md` under that date.
 
 - **DECISION ("Adopt at l3").** The front is held back by the shell's charge, one sign on the mother's side and the
   opposite with the daughter's surplus, attracting across the front until a surplus breaks through; not by the light's
-  push, which helps the front open (Update 110). Published form, to read before citing: charge built in front of a
-  bubble wall by handed bounces, turned into a matter excess (Cohen, Kaplan and Nelson).
+  push, which in the continuum stand-in does not hold it back (Update 110 *(corrected 25 October after the rule-22 audit, O155)*). Published form, to read before citing: charge built in front of a
+  bubble wall by handed bounces, turned into a matter excess (Cohen, Kaplan and Nelson), the published form of the charge-making only, not of the
+  hold-back *(corrected 25 October after the rule-22 audit, O155)*.
 - **Her picture, put in order.** Very simple rules give complex patterns, as z → z² + c gives the Mandelbrot set. The base
   has two degrees of freedom, and its outcome can be described in many more variables, like a thing and its warped image
   making patterns in a video loop. A strange loop is the network where enough energy is concentrated to uncurl and have
@@ -3770,4 +3798,31 @@ picture of the strange loop as a fractal.** Her words are in `sandbox/NOTEBOOK.m
   two phases, which is where the published model's author places the continuum (and where the toy's sharp front sits).
   *Ours, unverified:* her picture predicts that the pattern-rich settings are the ones near the edge of the λ window
   where X is barely stable, which the (D, λ) map can show.
+
+Update 112 (2026-10-25): **corrections of the record of 25 October, from the rule-22 audit (eight updates in one day).**
+A fresh reader (a new session of the same model, no history, read-only, given the files and a list of what to look for,
+not the conclusions) audited Updates 104 to 111, the four sandbox scripts and the questions file, and re-ran the scripts.
+Each finding is corrected in place with a dated marker; the full audit is ASSUMPTIONS O155.
+
+1. **The cube's kind swap depends on the centre of the turn** (the most serious). About a cube's centre a 60-degree turn
+   with a mirror swaps every point's kind; about a lattice point, her picture, it keeps every kind, and so do its square
+   and cube (`sandbox/cube_sixty_degree_look.py`, now checking both). The link from three 60s to matter and antimatter
+   through the kinds is withdrawn. What stands about any centre: a 60-degree grid step carries a mirror, and three make a
+   point flip. Her decision of Update 109 (the spin-twist as the strand's own twist angle) was recommended on the mirror,
+   which stands; it is put back to her with the corrected premise.
+2. **Her curvature sign** was dropped in Update 104 (she gave negative for both the hole around us and our universe) and
+   then asked as if she had not given one; quoted in place.
+3. **Bödeker and Moore misdescribed**: the 2009 push levels off with speed, the 2017 one grows; the analogy runs backwards
+   (their expanding phase is massive, the toy's opening side massless). Not the published form of her hold-back.
+4. **The curvature-sign numbers**: +21 is a larger tube, not the fastest cooling; the fall with cooling holds at one size;
+   the look speaks only to the toy without the rule.
+5. **A sandbox look promoted to settled fact**: the continuum step kills light's push as the hold-back; it does not
+   establish that light helps the front open in the toy (Updates 110 and 111 reworded).
+6. **An interpretation labelled exact**: the hard rule fixes the global total, not where the uncurl sits.
+7. **The shell's charge**: which charge it is (handed or electric) is now asked, because electric charge sorted across
+   universes would leave them charged; Cohen, Kaplan and Nelson narrowed to the charge-making.
+8. **Light under the hard rule**: a strong-coupling (small β) statement, not a statement about free light.
+9. **Smaller items**: timescape was read on 20 October; Levin and Wen's reads date; the 1.03 paired mismatched inputs;
+   Birkhoff marked; Chern-Gauss-Bonnet named; the questions file's H3, header, C1′, item 0 and answered list brought into
+   line; the reading list completed.
 

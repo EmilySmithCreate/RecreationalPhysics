@@ -4445,4 +4445,23 @@ author and should be disclosed as such in any submission. Physics estimates mark
     on stale lines were already fixed at commit ccb4c4ec; it did not see the zero-of-energy sign problem (O153's
     largest finding), since that rests on Q29's two forms of the energy rather than on the algebra it checked, which it
     confirmed correct under the Wilson weight.
+- **O155 AUDIT (rule 22): the record of 25 October (25 October 2026).** A fresh reader (a new session of the same model,
+  no history, read-only; given the files and a list of what to look for, not the conclusions) audited VISION Updates 104
+  to 111, the notebook entries of the day, the questions file, the four sandbox scripts (re-run) and the timescape note.
+  Corrections listed in VISION Update 112 and made in place.
+  - **What it found.** The cube's kind swap holds only about a cube's centre (confirmed by the assistant on every point of
+    a 5 x 5 x 5 block: about a lattice point the 60-degree turn with mirror, its square and its cube all keep the kinds);
+    her curvature sign dropped then re-asked; Bödeker and Moore's 2009 and 2017 results merged and the analogy's direction
+    reversed; the curvature look's +21 a size effect; a continuum look promoted to settled fact; an interpretation
+    labelled exact; the shell's charge against Update 104's neutrality objection, and Cohen, Kaplan and Nelson stretched
+    to the hold-back; the light-under-the-rule statement's range unstated; H3 contradicting Update 109; a sign confirmed in
+    one place and asked in another; small dating, pairing and labelling items; an assistant conclusion listed among her
+    answers.
+  - **What it checked and found correct.** Curl minus uncurl = 4(S - N); S = 3N at six links; 12 squares per point; the
+    combinatorial Gauss-Bonnet bound (it needs a cellular embedding, now to be stated); the front-push closed form and
+    sign; the cube facts about the centre; the Hubble arithmetic; spin addition; the N = 18 reach; the 519/80/1 count; her
+    quotes verbatim apart from the dropped sign.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. It did not open the N = 16
+    listing, check the timescape quotes against PDFs, or check the general-knowledge sources.
+  - **The independent pass still owed:** a different model (Codex), if the owner wants one.
 

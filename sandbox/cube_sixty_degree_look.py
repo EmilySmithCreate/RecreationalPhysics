@@ -52,3 +52,26 @@ describe("60 deg turn + mirror (S6), x1", S6)
 describe("S6 x2", S6 @ S6)
 describe("S6 x3", S6 @ S6 @ S6)
 print("S6 x3 equals inversion through the centre:", np.allclose(S6 @ S6 @ S6, -np.eye(3)))
+
+# Added after the rule-22 audit of 25 October: the same turns about a lattice point (the owner's "point that touches 12
+# squares") instead of about a cube's centre. Checked on every lattice point of a 4 x 4 x 4 block around the origin.
+print("\nabout a lattice point (the origin):")
+pts = [np.array(p, float) for p in itertools.product(range(-2, 3), repeat=3)]
+
+
+def describe_point(name, M):
+    images = [M @ p for p in pts]
+    if not all(np.allclose(q, np.round(q)) for q in images):
+        print(f"{name:32s} symmetry of the lattice: no")
+        return
+    swaps = [int(p.sum()) % 2 != int(np.round(q).sum()) % 2 for p, q in zip(pts, images)]
+    kind = "swaps every point's kind" if all(swaps) else ("keeps every kind" if not any(swaps) else "mixed")
+    print(f"{name:32s} symmetry of the lattice: yes; {kind}")
+
+
+describe_point("60 deg turn alone", rot(60))
+describe_point("120 deg turn alone", rot(120))
+describe_point("180 deg turn alone", rot(180))
+describe_point("60 deg turn + mirror (S6), x1", S6)
+describe_point("S6 x2", S6 @ S6)
+describe_point("S6 x3 (inversion)", S6 @ S6 @ S6)

@@ -3,7 +3,7 @@
 *One list of everything that needs her answer before the work can move. Each item says what it decides and where the
 full text is. Answer in any order; items marked ★ unblock the most. Answered items are moved to the end with the date.
 Her words of 25 October are in `sandbox/NOTEBOOK.md` under that date (her two passes of `#` notes on this file kept
-verbatim there); the record is VISION Updates 104 to 108.*
+verbatim there); the record is VISION Updates 104 to 112.*
 
 ## Your hypothesis as it stands (25 October): confirm, correct or strike each line
 
@@ -19,7 +19,8 @@ H2. **Light** is the links' collective wave; it keeps its speed in open directio
     gets mass. *(Exact in the toy, O151; published counterpart Levin and Wen 2006.)*
 H3. **Matter, as you now state it** *(25 October, second pass; the 120°/60° split is yours, the cube facts exact)*. Every
     strand, matter and dark, is built of three thirds, tying the 12 right angles of three intersecting planes. Each third
-    carries 120° of charge-twist and 60° of spin-twist, as turns of the grid. The three together are what can be written
+    carries 120° of charge-twist, a turn of the grid, and 60° of spin-twist, the strand's own twist angle (your decision,
+    Update 109; see S1′). The three together are what can be written
     as three-dimensional space and move; looking at one apart loses degrees of freedom (to see which quark, we give up
     the information of three-dimensional movement). Electric charge is the count of signed thirds and needs mass present,
     not an amount. Handedness marks matter against antimatter and carries its own charge, separate from electric charge
@@ -68,7 +69,8 @@ Z2. **Your prediction under the hard rule** *(H8 is your mechanism; the predicti
 0. **Light and the curling cost under your hard rule** *(you think light lowers it, so a lower g can pay it, and asked
    whether that is consistent with your hard answer)*. *Ours, exact at leading order:* the light field's reward is the
    same amount per square (ln I₀(β) at leading order), and under the hard rule every allowed arrangement has the same
-   number of squares (squares = points). So **at leading order light neither lowers nor raises the curling cost under
+   number of squares (squares = points). So **at leading order, in the strong-coupling (small β) expansion where the
+   field is not yet free light, light neither lowers nor raises the curling cost under
    your rule**; both zero choices agree, and item 0's fork disappears. Any effect comes from higher-order terms that
    depend on how the squares are arranged, which can be computed exactly (the method of Update 102). Your "lowered by
    the missing antimatter" is a separate route (H8) that the light field does not supply. **To decide:** compute the
@@ -106,12 +108,15 @@ Z2. **Your prediction under the hard rule** *(H8 is your mechanism; the predicti
 C1′. **The sandbox look you asked for came back against the toy reading of "ours negative"** (exploratory;
     `sandbox/opened_space_curvature_sign.py`). In 600 saved four-link sheets that opened by themselves from a curled
     tube while cooling (T51), curl minus uncurl is net **positive** (curl left over) in 519, zero in 80, negative in 1;
-    mean +9.2 links' worth, smaller the slower the cooling (+21 at the fastest, +2.3 at the slowest). So in the toy, a
+    mean +9.2 links' worth; at one tube size (L = 256) smaller the slower the cooling (+10.0, +4.3, +2.3; the +21 earlier
+    quoted is a larger tube, corrected after the audit). So in the toy without your rule, a
     space that opened from a curl keeps leftover curl that heals toward flat; it does not end net uncurled. That kills
     the toy reason for "ours negative" (the other three reasons, your own words, Update 83 and timescape, stand, and none
     of them is the toy). It does not crown "ours positive" either: the leftover is unhealed curl from the curled start,
-    and the toy has no matter, so it says nothing about uncurl made by matter. **To decide:** keep "ours slightly
-    negative" on your other reasons, or hold the sign open.
+    and the toy has no matter, so it says nothing about uncurl made by matter; under your hard rule the net is zero by
+    construction. **You agreed: ours slightly negative, the parent positive (H5).** Your first words (Update 104) gave
+    negative for both the hole around us and our universe; the agreement is your later answer. Nothing more to decide
+    unless you want the sign open.
 C1″. **"Matter as uncurl?"** *(your question)*. In your own picture (Update 83: the uncurl left when matter formed adds
     negative curvature), matter goes with uncurl around it: the matter is the curled strand, the uncurl the space it was
     taken from. *Ours, unverified.* Under your hard rule each curl must come with equal uncurl, so "matter is curl, its
@@ -131,9 +136,18 @@ E1′. **When to update the toy** *(you agreed to adding points; asked when to m
     (item 0's higher-order terms, exact, no run). (3) adding points (E1) under the rule: do empty regions grow while
     curled ones keep their size (your E2: yes to both)? (4) matter labels (thirds and handedness) last. **To decide:**
     this order, or another.
+S1′. **Your Update 109 decision, with a corrected premise** *(rule-22 audit, Update 112)*. The cube look turned about a
+    cube's centre, where a 60° turn with a mirror swaps the kinds. About a lattice point, your picture, it keeps every
+    kind. So three 60s give the mirror image (a point flip) but no swap of kinds, and the link to matter and antimatter
+    through the kinds is withdrawn. Your decision (the 60° spin-twist as the strand's own twist angle) was recommended
+    because a 60° grid step carries a mirror about any centre, which still holds. **Keep the decision?**
+L4. **Which charge the shell carries** *(audit, Update 112)*: electric charge sorted across universes would leave each
+    universe charged, and ours is neutral to very high precision; a handed, weak-type charge (your reading (a) of
+    Update 104) avoids that. Which is it?
 R1, R2. **Reading owed by the assistant** (no answer needed): holography and the area law, dimensional reduction,
-    worldsheets, tensor networks (bears on H1); Boyle–Finn–Turok, Popławski, Vilenkin, Fukugita–Yanagida; the timescape
-    quotes against their PDFs.
+    worldsheets, tensor networks (bears on H1); Boyle–Finn–Turok, Popławski, Vilenkin, Fukugita–Yanagida; Bödeker and
+    Moore (2009, 2017); Cohen, Kaplan and Nelson; Wald and Blandford–Znajek; Cohen, De Rújula and Glashow; Melia and
+    Shevchuk; ALPHA-g (2023); Hofstadter (2007); the timescape quotes against their PDFs.
 
 ## Older items (handoffs of 22 and 23 October), unchanged
 
@@ -164,7 +178,8 @@ R1, R2. **Reading owed by the assistant** (no answer needed): holography and the
 
 ## Answered on 25 October, first pass
 
-LIGO's signals are not burps (Update 104); the sorter is the hole's spin through a handedness with its own charge; net
+her idea moved from LIGO's burps to the merger split (Update 104; that LIGO's signals are not burps was the
+assistant's conclusion, not her answer); the sorter is the hole's spin through a handedness with its own charge; net
 flat is over the loop's stacked versions; the partner's sign is opposite because the total stays zero; charge depends on
 having mass, not how much; three halves can release a photon when spins realign; the zero-total rule agreed (Update
 105); expansion in empty space at light's speed with the eras from the empty share (Update 106); three 60s make the half
