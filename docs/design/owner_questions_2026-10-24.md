@@ -209,3 +209,28 @@ one-sided strip, both occur. (VISION Updates 96 to 102.)
   rule about where the uncurl sits. Ours: keep it as your added rule. # #
 - **RB5. Growth.** Points come in pairs (exact). Is space growing by pairs, or by whole rows, all right with you? # #
 
+### Answers on the read-backs (25 October; VISION Update 118)
+
+- RB1: what alternates is matter against antimatter, set by the black hole's spin; all daughters of one mother share it,
+  granddaughters take the grandmother's; neutral over versions, over each front, and combining amplitudes. The parent's
+  curvature sign is not restated. RB2: one joined surface; the surface is the relation between two degrees of freedom.
+  RB5: whole rows, no local pair (a look agrees). RB3 and RB4 still open.
+
+## G1. Growth's rule (asked for help, 25 October)
+
+Growth adds whole double rows where a ring of space is empty. Three ways to decide when a row is added:
+
+- **(a) A clock (recommended).** Each fair sweep, every empty ring gains a double row with a fixed chance p: the speed
+  knob, your front at c. Rows are never removed. It breaks equilibrium on purpose: expansion runs one way, like time.
+  The rate is put in by hand, so the test is not whether space grows but what growth does to matter: do curled and
+  matter-holding regions keep their size, and does matter gather where empty regions meet (your E2)?
+- **(b) A price.** Rows are added and removed with a price per point (term 6's μ), accepted by the toy's usual rule, with
+  the count of places a row can go in the weight. This is equilibrium: space settles at a size, or grows without end if
+  the price is zero, at a pace set by counting, not by a speed.
+- **(c) A trigger.** A row is added only when something pays for it, for example energy reaching an empty ring from a
+  burp. Growth then follows energy, not a clock.
+
+Ours: (a), because it is your picture (growth at a fixed speed wherever space is empty) and the only one with a speed
+in it; (b) answers the audit's point about counting but gives a size, not an expansion; (c) ties growth to energy, which
+your "no cost" rules out. # #
+

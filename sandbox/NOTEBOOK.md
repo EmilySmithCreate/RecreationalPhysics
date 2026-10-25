@@ -2441,4 +2441,14 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
 - 2026-10-25, the owner, her prediction for the properly fed control of T71 (verbatim; VISION Update 116): "Open into 3d space but all matter cancels so quickly that the length of time from big bang to everything is disbursed enough to be described with 2 degrees of freedom. Only a big black hole with an influx of matter building up to create handedness pull gets the whole fractal daughter universe to be so detailed and complex and dense with opportunities for evolution of observers"
 - 2026-10-25, the owner (verbatim; VISION Update 116): "The published single-switch that's fair I didn't realize this was single switch. The number of switches in an area that happen, and how many subsequent switches they can influence and prior switches they can be influenced by. That's related to the speed of light in 3d."
 - 2026-10-25, the owner (verbatim; VISION Update 116): "Proceed with 1-3. / I am changing to match yours, if it is not to late"
+- 2026-10-25, the owner, on the read-backs RB1, RB2 and RB5 (verbatim; VISION Update 118): "Your first words had both our universe and the parent black hole slightly negative, but the record later wrote the parent as positive. Which do you mean?
+that the anti daugher universe would be identical in everything except which direction the black hole spins. only told apart from its mirror looking at quarks - although they would have named the force of the heavy + charge proton and their positrons an electron. because they are the same in everything, the net difference would look like the same molecules in anti form. so the rule is that they switch back and forth, that all the daughter universes birthed by the same mother have the same . the wirlpool shape of the folded slab is spin or negative spin, but all effects are the same. any daughter birthed by a backed up black holde in that daughter will be the direction of her hrandmother universe. another quality of the loop that keeps it balanced at the network level. and accross the mother-daughter front. over all the stacked versions, yes, nuetral. over each fromt nutral. combining version amplitudes, nuetral.
+
+A whole double row of a torus can certainly be added. Whether a small local pair can be added without bending space hasn't been checked. -> I don't think it can. looking for whole rows.
+
+"No cost" was true of the energy only. Growing also changes how many arrangements are possible, so growth needs its own rule, which you would decide. -> help me decide this.
+
+surface is like the relationship between the 2 degrees of freedom. g could be one and twist-curl the other, their relationship can be self-referential, which creates fractals when examined from within, including the strange loop we observers find ourselves in.
+
+Is "net flat" an average over the loop's stacked versions, or a total over one joined surface? - over 1 joined surface."
 

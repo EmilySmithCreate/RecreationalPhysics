@@ -3975,3 +3975,36 @@ ASSUMPTIONS O156. Corrections made in place carry "*(corrected 25 October after 
   1966, thin-shell junctions; Farhi and Guth 1987 and Farhi, Guth and Guven 1990, child universes; Sakharov 1967;
   Vilenkin 1978.
 
+Update 118 (2026-10-25): **the author's answers to three read-backs: the sign that alternates is the spin, net flat is
+over one joined surface, growth is by whole rows; and her picture of the surface as the relation between two degrees of
+freedom.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **RB1, hers.** A daughter and her anti-daughter are identical in everything except which way the black hole spins (the
+  folded slab's whirlpool, one way or the other, with the same effects); they could be told apart only by looking at
+  quarks, and each would call its own surplus matter. All daughters of one mother share a direction; a daughter's own
+  daughters take the grandmother's direction. Neutral over all the stacked versions, neutral over each front, neutral when
+  the versions' amplitudes are combined. *Read (to confirm):* what alternates is matter against antimatter, set by the
+  spin direction; the curvature sign she gave first (both slightly negative) is not restated, and she says net flat over
+  one joined surface, so whether the parent's side is positive stays hers to say if it matters.
+  - *Ours; general knowledge, to verify.* A mirror image that swaps matter for antimatter and reverses handedness (the
+    operation called CP) is not quite a symmetry of nature: the weak force breaks it (kaon and B-meson decays), so a CP
+    mirror of our universe would run under slightly different laws, against her rule that the rules hold across
+    generations (claim step 7). The operation that is an exact symmetry also reverses time (CPT), so the anti-daughter
+    that obeys our laws exactly is our mirror with time running the other way, which is Boyle, Finn and Turok's
+    universe and anti-universe pair (2018, to read). And "told apart only by quarks" is nearly right in standard physics:
+    the observed matter-antimatter difference lives in the weak force, in quark mixing (and possibly neutrinos).
+- **RB2, hers: net flat is a total over one joined surface.** Her picture of the surface: the relationship between two
+  degrees of freedom, perhaps g as one and twist-curl as the other, self-referential, which seen from within makes
+  fractals, the strange loop included. *Ours:* (1) for the total to be fixed as Gauss-Bonnet fixes it, the surface needs
+  faces and an Euler number (O156), so what the faces of her surface are is the next thing to define. (2) In the toy g is
+  a setting, the same everywhere, not a degree of freedom; letting it vary from place to place would make it a field on
+  the points, close to soft space's number per point (term 7), which already sets a local clock rate. (3) On 25 October
+  her two degrees of freedom were twist and curl (H1); here twist-curl is one and g the other. Which pair is hers to say.
+- **RB5, hers: growth by whole rows; no local pair.** *A look, exact on what it covers*
+  (`sandbox/local_pair_insertion_look.py`): of 407,371 one-pair insertions with minimal rewiring near one point of a
+  flat 10 x 10 torus, none leaves every link on two squares. *Ours, unverified:* a flat patch is fixed by its boundary,
+  so a local change cannot add points without a flaw (a dislocation pair); growth that stays flat has to cross the
+  whole space, a double row wrapping the torus. On the torus that means a row grows only if its whole ring is empty.
+- **Growth's rule: she asked for help deciding.** Options and a recommendation are in the questions file (G1); nothing
+  is built until she chooses.
+
