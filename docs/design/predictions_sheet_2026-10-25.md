@@ -157,3 +157,39 @@ vanish in pairs; the uncurl sits in a layer beside the front's curl (your L4).
 The cube look turned about a cube's centre, where a 60° turn with a mirror swaps the two kinds of point; about a lattice
 point, your picture, it keeps them. Your decision (the 60° spin-twist is the strand's own twist angle) rested on the
 mirror, which holds about any centre. **Keep the decision?** # #
+
+---
+
+## 7. The twin gate (piece 5 and piece 11: one gate, double the bill)
+
+**What it asks.** Your decision (VISION Update 120): the parent waits until the stores beside the cut hold twice the
+curling cost, then releases both twins at once. In the toy that is T71's slab and layer form with a new gate: two layers
+open together, one into each twin's ledger. Same settings as T71 (λ = 1.10, 1.25, 1.40; feed r = 1/64 and 1/16; L = 8
+and 12 first, L = 16 held out; 16 replicas a cell), layer moves alone and with the clean two-switch move.
+
+**What the toy cannot test.** Which twin has matter and which antimatter: the toy has no matter. In the toy the twins
+are two equal ledgers, so the test is the energy books and the timing of your twin birth, not the surplus.
+
+**Known (measured, T71 with the single gate; O144).**
+- Every daughter carries exactly one curling cost (to nine decimals) wherever the chain keeps pace with the feed.
+- The first split comes when the stores first hold one cost, the same number of sweeps at every size.
+- At λ = 1.10 with the fast feed the stores pile up faster than the slab converts, a clean two-switch move fires, and
+  daughters fall short (0.99 and 0.89 of the cost).
+
+**Predicted (ours, before any build).**
+1. CYCLES in every cell: pairs of twins, the slab re-forming between births.
+2. Each twin carries exactly one curling cost and the two are equal, wherever the conversion keeps pace.
+3. The first birth comes when the stores first hold twice the cost: twice T71's first-split time, the same at every
+   size; the time between births about twice T71's.
+4. At λ = 1.10 with the fast feed, more pile-up than under the single gate (the stores hold more for longer), so the
+   clean move fires at least as often and twins fall short at least as often.
+5. The size claim, scored at L = 16 with numbers written from L = 8 and 12 first: the time between births, in sweeps,
+   is the same at every size.
+
+**Asked of you** (answer each, or "same as yours"):
+1. Does the slab cycle with twin births: cycles, settles into holding its energy (oscillates), sits, or breaks? # #
+2. Is each twin exactly one curling cost, and are the two always equal? # #
+3. Does the time to a birth double compared with the single gate, or something else? # #
+4. In the fast cell (λ = 1.10, fast feed): more short twins than the single gate, fewer, or the same? # #
+5. Agree to L = 16 as the held-out size for the timing claim? # #
+
