@@ -3724,3 +3724,28 @@ light backed up in an uncurl shell at the front.** Her words are in `sandbox/NOT
   depends on which side the light comes from. And whether the light sitting unevenly near a front changes the curling
   cost there, which is the "how the squares are arranged" effect named under item 0 (Update 108).
 
+Update 110 (2026-10-25): **the author's answers on the backed-up light: it comes from the curled side, the black hole;
+the shell's charge is pairs sorted by the hole's spin. The light's push helps the front open; the hold-back would be
+the shell's charge.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Hers.** L1: the backed-up light comes from the curled side (the black hole, in the mother's space) and arrives at the
+  front. L2, confirmed: the shell's charge is pairs made from the dense light, sorted by the hole's spin, one charge
+  staying on the mother's side and its partner going with the daughter's surplus.
+- **The push, computed** (*ours; exploratory, `sandbox/front_push_step.py`*). In the toy's field only light lying along a
+  curl feels the front: massive inside the curl, massless outside. Model: a wave crossing a step from massive to
+  massless. Per quantum arriving from the curled side, the push on the front is -2a(1 - a)/(1 + a) in units of its
+  momentum on the open side, a being the ratio of its momentum inside the curl to outside: **never toward the open
+  side.** A quantum crossing out of the curl gains momentum, so the front recoils toward the curl, which is the
+  direction in which the front moves as space opens. **So in the toy's field, light arriving from the black hole's side
+  helps the front open; it does not pull curl back.** (A gas of light on both sides at one temperature gives the same
+  sign: the massless side has the higher pressure.) The continuum step is a stand-in for the lattice junction; the
+  lattice's own reflection would change the numbers, and the sign holds while the reflected share stays below
+  (k_open - k_curled)/(k_open + k_curled), which the junction's measured reflection can check.
+- **What survives of her hold-back** (*ours, unverified*). The shell's charge (L2). Pairs sorted across the front leave
+  one charge on the mother's side and the opposite charge with the daughter's surplus, and opposite charges attract
+  across the front, a tension that holds it back until a surplus breaks through. *General knowledge, to verify:* its
+  published form is the standard picture of making the matter excess at a bubble wall: particles bounce off the moving
+  wall with a probability that depends on their handedness, which builds a charge in front of the wall, and that charge
+  is turned into a matter excess (Cohen, Kaplan and Nelson, 1990s). Her shell, her sorter and her surplus are that
+  picture's three parts.
+

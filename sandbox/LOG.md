@@ -502,4 +502,5 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
 - 2026-10-25 `cube_sixty_degree_look.py`: the owner's 60-degree pieces and 12 squares at a point; exact (finite geometry); output `out/cube_sixty_degree_look.txt`. Kills nothing; crowns nothing.
 - 2026-10-25 `opened_space_curvature_sign.py`: net curl minus uncurl in T51's 600 saved opened sheets; out `out/opened_space_curvature_sign.txt`. Kills the toy reason for C1's "ours negative"; crowns nothing.
 - 2026-10-25 `zero_total_rule_reach_n18.py`: exact; the hard zero-total rule's moves join all 9 allowed classes at N = 18; out `out/zero_total_rule_reach_n18.txt`.
+- 2026-10-25 `front_push_step.py`: push on a curled-flat front from light arriving from the curled side, continuum mass-step model; out `out/front_push_step.txt`. Never toward the open side. Kills light's push as the hold-back; crowns nothing.
 

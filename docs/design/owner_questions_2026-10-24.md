@@ -48,14 +48,14 @@ H8. **Your mechanism for the burp's matter** *(new, 25 October; your words in th
 S1. ~~**The 60° spin-twist as a turn of the grid.**~~ *Answered 25 October: "okay, proceed" with (b): the 60°
     spin-twist is the strand's own twist angle, the 120° charge-twist a turn of the grid (VISION Update 109). A twist
     angle on strands is a new ingredient; its form is written before anything is built.*
-L1. ★ **Light backed up at the front** *(your idea, Update 109)*. Which side does the backed-up light come from: the
-    curled side (the black hole, the mother's space) arriving at the front, or the opening daughter's side? It decides
-    the direction of the push: in the toy, light along the curl is reflected at a curled-flat boundary (exact), and the
-    reflected light pushes on the boundary; whether that push holds the front back (your "pulls curl back") or helps
-    it open depends on the side. The push is exact and cheap to compute once you say.
-L2. **The shell's charge.** Light alone cannot make net charge (Gauss's law, exact in the toy). Is the shell's charge
-    made of pairs from the dense light, sorted by the hole's spin (H4), so it is charged on the mother's side and its
-    partner charge goes with the daughter's surplus?
+L1. ~~**Light backed up at the front: which side?**~~ *Answered 25 October: from the curled side (the black hole, in
+    the mother's space). Computed (Update 110, exploratory): in the toy's field that light pushes the front toward the
+    curl, helping it open, at every frequency; it does not pull curl back.*
+L2. ~~**The shell's charge.**~~ *Answered 25 October: confirmed, pairs sorted by the hole's spin.*
+L3. **The hold-back as charge, not light** *(Update 110)*. Since light's push helps the front open, the hold-back in
+    your picture would be the shell's charge: one charge on the mother's side, the opposite with the daughter's surplus,
+    attracting across the front until a surplus breaks through. Its published form is the bubble-wall picture of
+    making the matter excess (handed bounces off the wall build a charge in front of it). Adopt this reading?
 S2. **Pair creation, as you now have it** *(you agreed one photon gives the electron and the positron; and "2 photons
     carry 360, but it is split against the 3 1/3 twists and the 3 -1/3 antitwists")*. On your question "why not? 1
     photon is a half curl / 180 degrees": a photon carries one whole unit of spin, whatever picture we draw it with, and
