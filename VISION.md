@@ -4008,3 +4008,27 @@ freedom.** Her words are in `sandbox/NOTEBOOK.md` under that date.
 - **Growth's rule: she asked for help deciding.** Options and a recommendation are in the questions file (G1); nothing
   is built until she chooses.
 
+Update 119 (2026-10-25): **DECISION (the author's): growth by a clock (G1 (a)); her reading of g; the two degrees of
+freedom are curl and twist.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **DECISION ("(A)").** Growth adds a double row to every empty ring with a fixed chance per fair sweep, never removed: a
+  one-way clock whose chance is the speed knob. Under S1 its exact form (what counts as an empty ring, the knob's
+  values, how a row is inserted) is written in a brief before anything is built; every value run is published. *Ours:*
+  the knob is set by hand, so the run cannot explain the speed; what it can test is a shape that should hold across the
+  knob's range (curled and matter-holding regions keep their size; matter gathers where empty regions meet, her E2). A
+  shape that held only in a narrow range would be a fit, not a result.
+- **Hers.** The two degrees of freedom are curl and twist (H1 restated), related through g and soft space's number. g is a
+  constant in the two-dimensional view and says how likely the network is to birth a three-dimensional space: how many
+  sweeps, the time equivalent. *Ours, exact in the toy:* g works like a temperature; it sets how often an uphill move is
+  taken, so the waiting time before a burp, counted in sweeps, depends on it (about e^(12/g) for the tube, Update 9). So
+  g sets the pace of births on the network's clock; the clock itself is the count of sweeps. Her question, "is that a
+  front?": *ours,* a relation between the two degrees of freedom is a rule, true everywhere; a front is a place, where
+  the balance the rule sets tips from curled to open across space. Where soft space's number changes sharply, the
+  toy would have a front.
+- **Her question on time running the other way, answered** (*ours; general knowledge, to verify*). In Boyle, Finn and
+  Turok's picture a universe and its anti-universe meet at the Big Bang like the two bulbs of an hourglass at its waist;
+  each side's inhabitants feel time run forward, away from the bang, and see the other side's as backward. Under her
+  claim step 9 (each universe keeps its own clock, no clock runs across universes) there is no shared time against which
+  a daughter's could run backward: every universe's arrow points away from its own burp, so the exact mirror's time
+  reversal may come for free. Recorded as a reading, not a result.
+

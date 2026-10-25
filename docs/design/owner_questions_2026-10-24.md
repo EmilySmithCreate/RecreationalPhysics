@@ -234,3 +234,5 @@ Ours: (a), because it is your picture (growth at a fixed speed wherever space is
 in it; (b) answers the audit's point about counting but gives a size, not an expansion; (c) ties growth to energy, which
 your "no cost" rules out. # #
 
+G1 answered 25 October: (a), the clock (VISION Update 119). Her pair of degrees of freedom: curl and twist.
+

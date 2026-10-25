@@ -2451,4 +2451,9 @@ A whole double row of a torus can certainly be added. Whether a small local pair
 surface is like the relationship between the 2 degrees of freedom. g could be one and twist-curl the other, their relationship can be self-referential, which creates fractals when examined from within, including the strange loop we observers find ourselves in.
 
 Is "net flat" an average over the loop's stacked versions, or a total over one joined surface? - over 1 joined surface."
+- 2026-10-25, the owner (verbatim; VISION Update 119): "with time running the other way- what would this look or be like? Analogy?
+
+So g is a constant in the 2d view. Represents how likely a network is to birth a 3d space. How many sweeps. The time equivalent. Then curl and twist are the 2 degrees of freedom, they are related by some g and soft space’s number. Is that a front?
+
+(A) . So we have to set g and if we set it wrong it many not explain the spacetime we observe."
 
