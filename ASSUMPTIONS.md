@@ -4496,4 +4496,29 @@ author and should be disclosed as such in any submission. Physics estimates mark
     curvature-sign look (the T51 archives were not available to it), so the 519/80/1 count rests on O155's rerun. (4)
     Its paper-specific numbers for timescape and the Delta's rate are its own recall, to verify. Nothing else it
     reported was found wrong on checking.
+- **O157 AUDIT (rule 22): the later record of 25 October (25 October 2026).** A fresh reader (a new session of the same
+  model, no history, read-only; given the files and a list of what to look for, not the conclusions) audited VISION
+  Updates 113 to 120, the notebook entries from "Does handed behave like electric" on, the read-backs, predictions sheet
+  section 7, PREREGISTRATION T82 with its analyzer, the twin code and tests, and the three sandbox looks (two rerun).
+  Corrections in VISION Update 121.
+  - **What it found.** (1) The twin gate as built (one opening's release to one twin, the other drawn from the stores)
+    did not match the words she answered ("two layers open together"); the words were ours and wrong, since the curl
+    gives one curling cost per opening; T82 held until she answers. (2) T82 overstated her agreement: she agreed to
+    words, the thresholds are ours, and the first-birth window and period band were written after a scratch run; the
+    assistant then found the scratch ratio had been misreported (2.4; it is 2.27). (3) The switch-influence reading
+    JUMPS does not follow (frozen or melted, one chain sweep holding hundreds of switches): withdrawn, no test. (4)
+    Update 118's "direction" was a fill-in, two of her points dropped, the heading unmarked. (5) Update 113 overstated a
+    long-range handed force in the hot plasma. (6) Update 119 recorded her caveat as ours. (7) Lieb-Robinson's scope;
+    the twins reopen RB3. (8) A test that could not fail; the analyzer did not score; a contraction release unaddressed.
+    (9) A duplicated output line.
+  - **What it checked and found correct.** Energy is conserved under twins and the gate guarantees the second twin can
+    be paid; 4a/r from a two-layer pool; the runner's string settings; T71's comparators from its results files; both
+    sandbox looks rerun identically (407,371 insertions, none flat; the soft-front numbers); the kink tension; CP against
+    CPT, the weak force's reach, Coleman's wall tension, the vibrated-rod and causal-set citations; her quotes in Updates
+    113 to 117 and 119 to 120; the Wilson-line scalar not used as light again.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. It did not rerun the
+    switch-influence look, could not know whether the owner had seen the scratch run (she had not), and did not check
+    Boyle, Finn and Turok, Vilenkin or the Codex report itself. Not done from its list: a test that the second twin is
+    drawn from the pool beside the cut rather than elsewhere (the split renumbers points, so it needs the layer code's
+    index map); the replacement test checks instead that the stores paid exactly the refolds and the second twins.
 

@@ -2465,4 +2465,13 @@ All daughters of one mother share a direction": does that now mean each burp giv
 
 Energy: does each twin carry the full curling cost, as each T71 daughter does, or half of it? Full, the same release from space opening up that turns to light and fully cancels"
 - 2026-10-25, the owner (verbatim; VISION Update 120): "One gate, double the bill. The parent waits until its stores hold twice the curling cost, then releases both twins at once."
+- 2026-10-25, the owner, her predictions for the twin gate (verbatim; PREREGISTRATION T82): "Does the slab keep cycling with twin births? It might keep cycling, hold its energy and swing back and forth without releasing it, sit still, or break. Keep cycling with twins.
+Ours: it cycles in every setting. agree.
+Is each twin exactly one curling cost, and are the two always equal?
+Ours: yes, wherever the slab keeps up with the feed. yes. agree.
+Does the wait for a birth double compared with the single version? yes. 
+Ours: yes. The first birth comes at twice T71's time, the same at every size, and births are spaced about twice as far apart. agree. 
+In the fast setting (cheapest cost, fast feed), are there more short twins than in T71, fewer, or the same?
+Ours: more or at least as many. The stores hold more energy for longer, so the pile-up is worse. agreed.
+Do you agree to L = 16 as the held-back size for the claim that the time between births doesn't change with size? yes"
 

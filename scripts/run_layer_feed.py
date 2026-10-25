@@ -9,7 +9,8 @@ untied, with one store per point; each sweep the feed adds `rate` to every store
 "model"; none for "layer"; the clean check off for "breaking"), then one layer proposal (split or contract) paid from
 the pooled stores of the layers it touches, with the `gate` applied to any move that costs nothing. A release goes to
 the stores beside the cut (`release_to` "stores") or leaves one way into a daughter ledger ("daughter", the owner's
-decision of 18 October, VISION Update 66), in which case the slab reforms when the stores can pay for it. The
+decision of 18 October, VISION Update 66), in which case the slab reforms when the stores can pay for it; or to two twins
+at once ("twins", her decision of 25 October, VISION Update 120; PREREGISTRATION T82), the second paid from the pool. The
 single-switch control (arm C of T71) is T68's runner, `scripts/run_slab_feed.py`, not this one.
 
 Config keys: name, section, written, lambdas (list), sizes (list of L), rates (list, per point per sweep), gate,
@@ -31,7 +32,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from graphity import __version__                                          # noqa: E402
 from graphity.contraction import build                                     # noqa: E402
-from graphity.layer_feed import MOVE_SETS, RELEASE_TO, run_layer_feed      # noqa: E402
+from graphity.layer_feed import FEED_RELEASES, MOVE_SETS, run_layer_feed   # noqa: E402
 from graphity.results import ResultWriter, provenance                      # noqa: E402
 
 
@@ -50,7 +51,7 @@ def main(path, out_dir="results"):
     cfg = json.loads(Path(path).read_text())
     move_set = cfg.get("move_set", "model")
     release_to = cfg.get("release_to", "stores")
-    assert move_set in MOVE_SETS and release_to in RELEASE_TO
+    assert move_set in MOVE_SETS and release_to in FEED_RELEASES
     meta = dict(config=cfg, config_path=str(path), package=__version__, python=platform.python_version(),
                 numpy=np.__version__, numba=numba.__version__, **provenance(),
                 preregistration="PREREGISTRATION.md section %s, written %s" % (cfg.get("section", "T71"), cfg.get("written", "2026-10-18")))

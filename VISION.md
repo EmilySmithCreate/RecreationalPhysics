@@ -3835,8 +3835,9 @@ curl facing in and uncurl facing out.** Her words are in `sandbox/NOTEBOOK.md` u
 - **Her question answered** (*ours; general knowledge, not read by us, to verify*). Yes in form: the weak force is carried,
   as electromagnetism is, by particles of spin one, and with such carriers opposite charges attract. But today its
   carriers (the W and Z) are heavy, so the force reaches only about 10^-18 m. Above the electroweak temperature (about
-  10^15 K, a hundred billion electron-volts or more, which a hot burp would exceed) the carriers are massless and the
-  handed charge acts at long range like electric charge. In a hot plasma any charge is also screened within a short
+  10^15 K, a hundred billion electron-volts or more, which a hot burp would exceed) the carriers are massless at the simplest level, but in the hot plasma the weak fields are screened within a short
+  distance and gain a magnetic mass, so there is no long-range handed force; only hypercharge magnetism reaches far,
+  and the change near 160 GeV is a crossover *(corrected 25 October after the rule-22 audit, O157)*. In a hot plasma any charge is also screened within a short
   distance by the charges around it, so a net charge cannot hold a front back over a long range.
 - **Her layers, and what they touch** (*ours; general knowledge, to verify*). (1) Shaken rods line up in layers: that is
   published granular physics (vibrated rods ordering into aligned, nematic patterns; for example Narayan, Ramaswamy and
@@ -3931,7 +3932,7 @@ rich.** Her words are in `sandbox/NOTEBOOK.md` under that date.
     comes after switch A if A changed a link that B uses. Update 41 held the causal order read from the opening front
     because, as defined then, it put the light cone in by hand, and said it would come back "if an order can be defined
     from the dynamics alone"; hers is such an order. (2) Published relatives: in any system whose interactions are local,
-    influence spreads no faster than a fixed speed, up to small leaks (the Lieb-Robinson bound, 1972); causal sets, where
+    influence spreads no faster than a fixed speed, up to small leaks (the Lieb-Robinson bound, 1972, proved for quantum lattice systems with bounded short-range interactions *(corrected 25 October after the rule-22 audit, O157)*); causal sets, where
     spacetime is a set of events with only an order (Bombelli, Lee, Meyer and Sorkin, 1987); and the causal graph of
     update events in rewriting models (Wolfram's physics project, 2020), where light cones are read from which events
     depend on which. (3) A cheap look the toy allows: run a short chain on a flat torus with each accepted switch logged,
@@ -3975,13 +3976,17 @@ ASSUMPTIONS O156. Corrections made in place carry "*(corrected 25 October after 
   1966, thin-shell junctions; Farhi and Guth 1987 and Farhi, Guth and Guven 1990, child universes; Sakharov 1967;
   Vilenkin 1978.
 
-Update 118 (2026-10-25): **the author's answers to three read-backs: the sign that alternates is the spin, net flat is
+Update 118 (2026-10-25): **the author's answers to three read-backs: the sign that alternates is the spin (to confirm), net flat is
 over one joined surface, growth is by whole rows; and her picture of the surface as the relation between two degrees of
 freedom.** Her words are in `sandbox/NOTEBOOK.md` under that date.
 
 - **RB1, hers.** A daughter and her anti-daughter are identical in everything except which way the black hole spins (the
   folded slab's whirlpool, one way or the other, with the same effects); they could be told apart only by looking at
-  quarks, and each would call its own surplus matter. All daughters of one mother share a direction; a daughter's own
+  quarks, and each would call its own surplus matter (they would have named the heavy positive proton and their
+  positrons the other way round, an electron); she called the alternation another quality of the loop that keeps it
+  balanced at the network level and across the mother-daughter front *(corrected 25 October after the rule-22 audit, O157)*. All daughters of one mother share a
+  direction *(her sentence ends "have the same ."; "direction" is our fill-in, superseded by Update 120's twins, one of
+  each per burp; O157)*; a daughter's own
   daughters take the grandmother's direction. Neutral over all the stacked versions, neutral over each front, neutral when
   the versions' amplitudes are combined. *Read (to confirm):* what alternates is matter against antimatter, set by the
   spin direction; the curvature sign she gave first (both slightly negative) is not restated, and she says net flat over
@@ -4013,7 +4018,8 @@ freedom are curl and twist.** Her words are in `sandbox/NOTEBOOK.md` under that 
 
 - **DECISION ("(A)").** Growth adds a double row to every empty ring with a fixed chance per fair sweep, never removed: a
   one-way clock whose chance is the speed knob. Under S1 its exact form (what counts as an empty ring, the knob's
-  values, how a row is inserted) is written in a brief before anything is built; every value run is published. *Ours:*
+  values, how a row is inserted) is written in a brief before anything is built; every value run is published. *Hers:* "we have to set g and if we set it wrong it many not explain the spacetime we observe" (the knob of (A) is the
+  growth chance, not g, which was said to her in reply) *(corrected 25 October after the rule-22 audit, O157)*. *Ours:*
   the knob is set by hand, so the run cannot explain the speed; what it can test is a shape that should hold across the
   knob's range (curled and matter-holding regions keep their size; matter gathers where empty regions meet, her E2). A
   shape that held only in a narrow range would be a fit, not a result.
@@ -4065,7 +4071,7 @@ words are in `sandbox/NOTEBOOK.md` under that date.
   **JUMPS** in the warm toy, nothing at all in the cold one. *Ours:* the published move can join any two links anywhere,
   so it has no light cone to find. Her idea needs moves that act only nearby (a switch confined to one square's
   neighbourhood) or soft space, whose waves already have one speed. It kills a speed from the published move, not her
-  idea.
+  idea. *(Withdrawn 25 October after the rule-22 audit, O157: JUMPS does not follow. No coupling had both motion and a flat sheet: below g = 6 nothing moves, from g = 6 the graph is melted and its width, about 7, is all the reach ever got; and the reach was read once per chain sweep, which holds hundreds of switches in sequence, so purely local steps could cross 7 links within one sweep. The look is no test, frozen or melted. That the published move is non-local is exact from its definition, not shown here; and its clock was chain sweeps, not the fair sweeps Update 116 asked for.)*
 - **Her confirmations, the same day.** (1) The twins replace H4 and H8: the parent black hole no longer keeps the
   antimatter surplus; it stays neutral. (2) Each burp gives a pair, one of each kind. (3) Each twin carries the full
   curling cost, "the same release from space opening up that turns to light and fully cancels"; the surplus matter (or
@@ -4074,9 +4080,37 @@ words are in `sandbox/NOTEBOOK.md` under that date.
   or each twin is the opening of its own layer, paid separately. In the toy as run (T71) one opening pays one daughter.
   Which she means is asked.
 - **DECISION (the author's): one gate, double the bill.** The parent waits until its stores hold twice the curling cost,
-  then releases both twins at once. *Ours, for the toy:* a layer's opening releases one curling cost, so a twin birth is
-  two layers opening together, one into each twin's ledger, once the stores beside the cut hold twice the cost. That is a
+  then releases both twins at once. *Ours, for the toy:* ~~a layer's opening releases one curling cost, so a twin birth is
+  two layers opening together, one into each twin's ledger~~ *(corrected 25 October after the rule-22 audit, O157: the slab's curl gives one curling cost per opening, so the second can only come from the stores. As built for T82, one opening's release goes to one twin and an equal amount is drawn from the stores beside the cut into the other, both at once, once those stores hold twice the cost: the double bill paid from the feed. "Two layers opening together" described something the toy does not do. Whether this is what she means is asked before T82 runs.)* That is a
   new gate under the layer form, written down before anything is built. T71 and T74, registered and running with the
   single gate, are unchanged: they test the single gate's arithmetic at a third size, and a twin-gate cell would be a new
   registration with its own prediction.
+- **The twin gate registered (PREREGISTRATION T82) with her predictions, which match ours:** the slab keeps cycling with
+  twin births, each twin exactly one curling cost, the first birth at twice T71's time and births about twice as far
+  apart, at least as many short twins in the fastest cell, L = 16 held out for the timing claim. Built in
+  `graphity.layer_feed` (release_to "twins") with its tests; stage 1, six cloud jobs. A two-replica scratch check made
+  before the registration was written, and our doubt about the fastest cell, are disclosed there.
+
+Update 121 (2026-10-25): **corrections of the later record of 25 October, from the rule-22 audit (O157).** A fresh reader
+(a new session of the same model, no history, read-only, given the files and a list of what to look for, not the
+conclusions) audited Updates 113 to 120, T82, the twin code and the three sandbox looks. Corrected in place with dated
+markers; the full audit is ASSUMPTIONS O157.
+
+1. **The twin gate as built did not match the words she answered** (the most serious): Update 120 and the predictions
+   sheet said "two layers open together"; the code gives one opening's release to one twin and draws the other from the
+   stores, because the slab's curl releases one curling cost per opening. The wording is corrected and the question put
+   to her; **T82 does not launch until she answers.**
+2. **T82's numbers are ours.** She agreed to the worded predictions; the thresholds (15 of 16, the first-birth window,
+   the period band, the tolerance, P4's comparators) were written by us, and the first-birth window and the period band
+   after a two-replica scratch run, whose period ratio was first misreported as 2.4 (it is 2.27, inside the band). She
+   answered before the scratch run existed. All of this is now in T82's disclosures.
+3. **The switch-influence reading JUMPS is withdrawn**: no coupling had both motion and a flat sheet, and one chain sweep
+   holds hundreds of switches; no test.
+4. **Update 118's attribution**: "direction" was our fill-in, superseded by the twins; two of her points restored; the
+   heading marked to confirm.
+5. **Update 113's hot plasma**: no long-range handed force; the weak fields are screened.
+6. **Update 119**: her own caveat about setting the knob restored as hers.
+7. **Smaller:** Lieb-Robinson's scope; twins with matter and antimatter surpluses reopen RB3 (if the sorted count is
+   electric charge, each twin is charged); a test that could not fail replaced by one that can; the T82 analyzer now
+   scores P1 to P4; a duplicated line in the soft-front look.
 

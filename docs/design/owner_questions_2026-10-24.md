@@ -239,3 +239,13 @@ G1 answered 25 October: (a), the clock (VISION Update 119). Her pair of degrees 
 Twins confirmed 25 October (Update 120): they replace H4 and H8; each burp gives a pair; each twin carries the full curling cost. **Asked:** one Big Bang then carries two curling costs. Does the parent's gate wait for twice the cost, or is each twin its own layer opening, paid separately? # #
 Answered 25 October: one gate, double the bill; both twins released at once (Update 120).
 
+### After the audit of the later record (25 October; VISION Update 121, ASSUMPTIONS O157)
+
+- RB1's "all daughters of one mother share a direction" was our fill-in of an unfinished sentence; superseded by the
+  twins (one of each per burp).
+- **T1. The twin mechanism as built.** The slab's curl releases one curling cost per opening. So in the toy one opening's
+  release goes to one twin, and the second twin's equal share is drawn from the parent's stores at the same moment (the
+  double bill paid from what was fed). Is that your picture, or must each twin be its own opening of space (then the
+  parent refolds and opens again within the same instant, paid the same way, and the toy needs that built)? # #
+- **RB3 reopened by the twins.** If what the spin sorts is electric charge, each twin would be charged. Which count is it? # #
+

@@ -38,7 +38,7 @@ def part1():
             for q in adj[p]:
                 lap[p, int(q)] -= 1.0
         lp = np.linalg.pinv(lap)
-        for w in (2, 6, L // 4):
+        for w in sorted({2, 6, L // 4}):
             e = np.array([1.0 if (p % L) < w else 0.0 for p in range(n)])
             phi = -lp @ (e - e.mean())          # kappa = q = 1; other values only rescale
             row = phi[:L]                        # phi along x (it does not depend on y)

@@ -17,7 +17,11 @@ Where a release goes is `release_to`: "stores" credits it evenly to the two laye
 fold back); "daughter" is the owner's decision of 18 October (VISION Update 66): the lump leaves one way into a
 daughter ledger that nothing in the parent can draw on, the parent keeps its geometry and its stores, and the slab
 reforms when the stores can pay the contraction. Every downhill move's release is counted there; a release above zero
-is one daughter. Energy is conserved exactly: F + sum(stores) + daughter - fed + leaked = F0 with F = H + mu_N N
+is one daughter. "twins" is the owner's decision of 25 October (VISION Update 120: one gate, double the bill): a
+downhill move's release goes to one twin, and an equal amount is drawn from the move's pool, the stores beside the cut,
+into the other, both at once; the gate the registration sets (twice the curling cost) guarantees the pool can pay it, and
+a pool that cannot pay refuses the move. The two twins of a birth are equal by construction. Energy is conserved exactly:
+F + sum(stores) + daughter - fed + leaked = F0 with F = H + mu_N N
 (tests, 1e-9). The protocol claims no detailed balance; conservation is its invariant. At lambda != 1, and with a varying count of points, this is
 our family around the published model, never combinatorial quantum gravity.
 """
@@ -29,12 +33,14 @@ from .dimension import local_dimension_d
 
 MOVE_SETS = ("model", "layer", "breaking")
 RELEASE_TO = ("stores", "daughter")
+FEED_RELEASES = RELEASE_TO + ("twins",)                 # twins: this protocol only (T82)
 
 
 def propose_layer_move(st, f, lam, mu_n, rng, axes, max_width, gate, release_to="stores"):
     """One layer proposal on `st` (energy f). Returns (new_state, new_f, kind, released) with kind in {None, "split",
     "contract"}; None when nothing happened. `released` is the energy a downhill move gave off: credited to the
-    stores beside the cut under release_to "stores", or handed to the caller's daughter ledger under "daughter"."""
+    stores beside the cut under release_to "stores", or handed to the caller's daughter ledger under "daughter". Under
+    "twins" `released` is one twin's energy; the move has also drawn the same amount from its pool for the other twin."""
     axis = int(axes[rng.integers(len(axes))])
     x0 = int(rng.integers(st.dims[axis]))
     contract = bool(rng.integers(2))
@@ -57,6 +63,12 @@ def propose_layer_move(st, f, lam, mu_n, rng, axes, max_width, gate, release_to=
         if release_to == "stores":
             rec = receiving_mask(cand, axis, x0, contract)
             cand.stores[rec] += (-df) / int(rec.sum())
+        elif release_to == "twins" and -df > 1e-9:
+            if pool + 1e-12 < -df:
+                return st, f, None, 0.0
+            st = st.copy()
+            st.stores[mask] -= st.stores[mask] * ((-df) / pool)
+            cand = contract_layers(st, axis, x0) if contract else split_layers(st, axis, x0, max_width)
     return cand, f_new, ("contract" if contract else "split"), max(-df, 0.0)
 
 
@@ -81,7 +93,7 @@ def run_layer_feed(state, lam, rate, n_sweeps, seed, gate=0.0, leak=0.0, feed_st
     sweep. Added 2026-10-19 before T71 launched, so that its files stay small while the release at every split and
     the sweep of every birth are exact.
     """
-    assert move_set in MOVE_SETS and release_to in RELEASE_TO
+    assert move_set in MOVE_SETS and release_to in FEED_RELEASES
     rng = np.random.default_rng(seed)
     np.random.seed(int(rng.integers(2**31 - 1)))
     CM.seed_numba(int(rng.integers(2**31 - 1)))
@@ -118,6 +130,9 @@ def run_layer_feed(state, lam, rate, n_sweeps, seed, gate=0.0, leak=0.0, feed_st
             if release_to == "daughter" and released > 1e-9:
                 daughters += 1
                 daughter_energy += released
+            elif release_to == "twins" and released > 1e-9:
+                daughters += 2
+                daughter_energy += 2.0 * released
             side0 = np.flatnonzero(st.part == 0).astype(np.int64)
             if kind == "split":
                 n_split += 1

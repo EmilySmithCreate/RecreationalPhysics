@@ -8969,3 +8969,59 @@ In each case Eq. (45) is not a route from the toy's free energies (O107's knots 
 - The zero of Eq. (45)'s F: the intercept is not tested.
 - Whether Sec. IV.2's construction, which is stated for homogeneous maps in the limit N → ∞, applies point by point to finite graphs in the crossover. That application is ours.
 - Anything about the real universe.
+
+## T82. The twin gate: one gate, double the bill. Does the slab cycle with twin births, each twin exactly one curling cost, at twice the single gate's wait? (pieces 5 and 11; written 25 October 2026, before any registered run)
+
+**Why.** The owner's decisions of 25 October (VISION Update 120): each Big Bang makes two daughters, one with the
+matter surplus and one with the matching antimatter surplus, so the black hole stays neutral; each twin carries the full
+curling cost; and the parent waits until its stores hold twice the curling cost, then releases both twins at once. T71
+tested the single gate (one daughter per opening). This tests the twin gate on the same slab. **What it cannot test:**
+which twin has matter and which antimatter; the toy has no matter, so the twins are two equal ledgers. Every six-link
+result carries VISION Update 24's caveat and Update 95's statement that the published model's author advised against
+the six-link model.
+
+**Protocol.** T71's, with one change (`graphity.layer_feed`, release_to "twins", tested in
+`tests/test_layer_feed.py`): a downhill layer move fires only when the pool of the layers it touches holds the gate,
+2 a N_slab (a = 4(λ − 1), N_slab = 4L²), not spent; its release goes to one twin, and an equal amount is drawn from the
+same pool into the other twin, both in the same move; a pool that cannot pay the second twin refuses the move. Energy is
+conserved exactly with both ledgers counted. The slab 4 × L × L, untied, fed r per point per sweep at every point;
+λ = 1.10, 1.25, 1.40; r = 1/64 and 1/16; arm A the model (layer moves plus the clean two-switch move), arm B layer
+moves alone; 16 replicas a cell; max(2000, 80 a / r) sweeps (twice T71's, for twice the period); stage 1 at L = 8 and 12;
+held-out size L = 16 (rule 14). Configs `configs/t82_{model,layer}_lam{110,125,140}.json`, seeds 20268201 to 20268206;
+read with `scripts/analyse_t82.py`. *Ours, said plainly:* that the two twins of a birth are equal is true by
+construction (the second is drawn to match the first), so it is not scored.
+
+**Words per replica.** CYCLES (two or more births, each birth two twins, and at least one refold after the first),
+ONE BIRTH, NEVER SPLITS.
+
+**Predictions.** The owner's, given 25 October before any registered run, in her words beside each question of
+`docs/design/predictions_sheet_2026-10-25.md`, section 7 ("Keep cycling with twins"; "yes. agree."; "yes ... agree.";
+"agreed."; "yes"), and ours, which she agreed with in those words. The numbers below are ours, written to score the words, and were not shown to her *(corrected 25 October after the rule-22 audit, O157)*:
+- **P1.** CYCLES in at least 15 of 16 replicas in every cell.
+- **P2.** The median energy per twin is a N_slab to 1e-6 (relative) in every arm-B cell, and in every arm-A cell where no
+  clean move fired.
+- **P3.** The median first birth falls between 4a/r and 4a/r + 10 sweeps in every cell, at both sizes (T71's was 2a/r
+  plus at most a few sweeps). The median period between births is 1.7 to 2.3 times T71's median period in the same cell
+  (λ, L, r, arm), in every cell except λ = 1.10, r = 1/16, where T71's period was set by the chain's pace, not the feed.
+- **P4.** At λ = 1.10, r = 1/16, arm A: a clean move fires in at least as many replicas as in T71 (12 and 13 of 16 at
+  L = 8 and 12), and the median energy per twin, as a share of a N_slab, is at most T71's per daughter (0.987 and 0.895).
+- **P5 (held out).** The first birth and the period in sweeps do not change with size: the numbers and ranges for L = 16
+  are written as a dated amendment from L = 8 and 12 alone, before L = 16 runs.
+
+**Disclosures, written before any registered run.** (1) A scratch run to check the code (λ = 1.25, L = 8, r = 1/16,
+arm B, two replicas, not a result and not kept) was made before this section was written: first births at 67 and 70
+sweeps (4a/r = 64), 40 births each, median periods 29 and 30 against T71's 13 in that cell, a ratio of about 2.27.
+*Corrected after the rule-22 audit (O157):* the first version of this disclosure said "a period near 31, a ratio near
+2.4, outside P3's band", a rough reading from the totals; read with the analyzer the ratio is 2.27, inside the band
+by a hair. P3's first-birth window (+10 sweeps) and its period band were written after this scratch run, so neither
+is blind: T71's first births sat within 3 sweeps of their gate time, and a tighter window would have been the blind
+choice. The owner gave her predictions before the scratch run existed and has not seen it. A contraction never
+releases energy in this protocol (it re-curls a layer and raises F by a N_slab at μ_N = 0), so every birth is a split.
+(1b) **Hold:** T82 does not launch until the owner confirms the twin mechanism as built (the second twin drawn from
+the stores, not a second opening; O157). (2) *Ours, a doubt about P4:* a twin
+birth takes twice the energy out per layer move, so at λ = 1.10, r = 1/16 the time between births the feed allows
+(2a/r = 12.8 sweeps) is longer than the chain's measured pace (about 5), and the stores may stop piling up; P4 would then
+fail. It stays as she and we agreed it.
+
+**What would count against the twin gate.** CYCLES failing in cells where T71 cycled; twins short of a N_slab where no
+clean move fired; a first birth far from 4a/r. Four answers under rule 11 before any change.
