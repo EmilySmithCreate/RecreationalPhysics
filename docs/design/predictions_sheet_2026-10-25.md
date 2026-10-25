@@ -65,7 +65,8 @@ stage 1's rates, failures included. The numbers most at risk are the rare clean 
 **What you said before.** "I agree with your t74 predictions" (Amendment 5), which already says "at every λ and size".
 
 **Asked of you:**
-1. Confirm the reading of "the period per point" as the period between births in sweeps, the same at every L. # #
+1. Confirm the reading of "the period per point" as the period between births in sweeps, the same at every L.
+   *Answered 25 October: "yes but the surplus matter . Confirm." (Update 115).*
 2. Go-ahead for the cloud jobs. # #
 3. Optional: a prediction of your own for L = 16 (if none, the registered one is scored). # #
 
@@ -98,7 +99,8 @@ calls a failure. That tension is worth deciding before the run.
 
 **Asked of you:**
 1. Your prediction: (a) one speed for everything; (b) the field's waves at one speed, flaws slower (your piece 10 words);
-   (c) no steady speed. # #
+   (c) no steady speed. *Answered 25 October: "One speed for all flat space. If flaws create curl or curve they can
+   slow things." (Update 115).*
 2. Agree to a held-out size (rule 14): fit on two sizes, predict the third. # #
 
 ---
@@ -125,7 +127,10 @@ energies. It fails if the rewiring screens it or it scales with the wiring.
 wherever Einstein's account has been measured, yours must give the same numbers.
 
 **Asked of you:**
-1. Your prediction: attract or not; falls as 1/r² or otherwise; grows with energy or with something else. # #
+1. Your prediction: attract or not; falls as 1/r² or otherwise; grows with energy or with something else.
+   *Answered 25 October: "Pull, only at very short distances. Distance at high g can be greater but still very
+   short." It differs from ours (long-range 1/r²), so the test can separate them. Asked: about the toy, or about
+   reality, where gravity reaches across galaxies? (Update 115).*
 2. Agree to a held-out separation range or size (rule 14). # #
 
 ---

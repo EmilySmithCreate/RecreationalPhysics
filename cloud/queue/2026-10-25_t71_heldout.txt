@@ -1,0 +1,19 @@
+# T71 held-out size L = 16 (PREREGISTRATION T71, Amendment 4: the numbers written 2026-10-23 from L = 8 and 12 alone,
+# CLAUDE.md rule 14, committed 2026-10-25 with the owner's word before this launch). Her word of 2026-10-25 (VISION Update
+# 114): her stage-1 prediction stands for L = 16, and the jobs go ahead; the control is her option (c), so the original
+# control (arm C, run_slab_feed) is left out of the held-out stage and a properly fed control is a new cell, registered
+# separately once her prediction for it is recorded (not in this manifest). The owner's untied slab 4 x 16 x 16 under the
+# layer form, fed r = 1/64 and 1/16 per point per sweep at every point, curling costs 1.10, 1.25 and 1.40; arm A the model
+# (layer moves + the clean two-switch move), arm B the reference (layer moves alone), arm B with the release to the parent's
+# stores (f1); 16 replicas; max(2000, 40 a / r) sweeps. Each config is its stage-1 config with name, sizes, seed, _purpose
+# and written changed. 9 jobs. Seeds = stage-1 seed + 12: 20267113 to 20267123 (the control's 20267116, 20267120 and
+# 20267124 unused). Scored against configs/t71_heldout_prediction.csv.
+run_layer_feed t71_model_lam110_l16
+run_layer_feed t71_layer_lam110_l16
+run_layer_feed t71_layerref_lam110_l16
+run_layer_feed t71_model_lam125_l16
+run_layer_feed t71_layer_lam125_l16
+run_layer_feed t71_layerref_lam125_l16
+run_layer_feed t71_model_lam140_l16
+run_layer_feed t71_layer_lam140_l16
+run_layer_feed t71_layerref_lam140_l16

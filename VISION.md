@@ -3878,3 +3878,69 @@ in `sandbox/NOTEBOOK.md` under that date; the sheet is `docs/design/predictions_
     backed-up light at the front (Update 109), and the pile-up then finds a second channel. It is an analogy of shape, not
     a mechanism for matter. What L = 16 can add: whether the backed-up energy and the clean moves grow with the slab.
 
+Update 115 (2026-10-25): **the author's word on T74's held-out size, her predictions for the speed and pull tests, and
+her idea that the matter sign alternates by generation.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **T74.** She confirms the size claim (the time between births, in sweeps, the same at every size) and the go-ahead,
+  "but the surplus matter": *ours, read as her caveat that the claim may not hold where energy piles up and pays the clean
+  move (the cells at λ = 1.10), which is where the registered numbers are most at risk.* Her registered prediction
+  ("I agree with your t74 predictions") stands for L = 16.
+- **Her prediction for the speed test (piece 10), given before registration:** one speed for all flat space; flaws that
+  create curl or curve can slow things. *Ours:* the same in flat space; her second clause adds a prediction the brief did
+  not have, that a disturbance slows where it crosses a flaw, which the registration should score (it is also her rule of
+  26 September, "slower where matter sits").
+- **Her prediction for the pull test (piece 8), given before registration:** a pull only at very short distances; at
+  high coupling g the range can be greater but still very short. *Ours:* this is the screened outcome the brief listed as
+  the way the test fails (ours predicted a long-range 1/r² pull); her prediction and ours now differ, so the test can tell
+  them apart. *Said plainly:* in reality gravity reaches across galaxies with its 1/r² law measured far beyond the Solar
+  System (general knowledge, to verify), so if her prediction holds in the toy, the toy's pull would not be gravity's,
+  which sits against her piece 8 requirement that her account give Einstein's numbers wherever measured. Asked of her:
+  is the prediction about the toy, or about reality?
+- **Her idea: the sign alternates by generation.** Matter and antimatter are mirror images, the same, so every daughter
+  calls her own surplus matter, although the signs reverse every generation. *Ours; general knowledge, to verify:* it
+  fits H4 (the parent keeps the antimatter surplus, the daughter the matter) applied down the tree, a two-step cycle; and
+  it is close to the CPT-symmetric picture of a universe and anti-universe pair (Boyle, Finn and Turok 2018, to read). One
+  check it must face: matter and antimatter are not quite the same, because the weak force tells them apart (CP
+  violation, seen in kaon and B-meson decays), so inhabitants could in principle tell which kind they are made of by an
+  experiment, not only by convention; with the mirror image taken fully (charge, handedness and time reversed together,
+  CPT) the two are exactly equivalent.
+- *Not read as a statement:* her line "colder surroundings in 34 of 36 - colder surroundings" is recorded verbatim and
+  taken as her reading of T74's result.
+
+Update 116 (2026-10-25): **the author's prediction for the properly fed control, and her idea of what makes a daughter
+rich.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Her prediction for the properly fed control** (the slab fed as the arms are, per point, but with only the published
+  single-switch move; asked: stays put, breaks, or opens): **it opens into three-dimensional space**, but all matter
+  cancels so quickly that the time from the Big Bang to everything is spread out enough to be described with two degrees
+  of freedom. *Ours:* in the toy the testable part is the word, OPENS; the toy has no matter, so the cancelling is not
+  tested. Our prediction is BREAKS (the published move never opened the slab from any feed tried, T65, T67, T68, and at
+  this feed we expect damage). Her prediction and ours differ, so the cell can separate them. It is a new cell with no
+  stage-1 sizes, not a held-out test.
+- **Her idea.** Only a big black hole with an influx of matter, building up to create the handedness pull, gets the whole
+  fractal daughter universe to be detailed, complex and dense with opportunities for observers to evolve. *Ours:* it ties
+  her hold-back (the neutral layer of Update 113), her sorter (Update 104) and her measure (observers who evolved, Updates
+  26 and 43) into one statement: a rich daughter needs a large, well-fed parent hole; a plain opening with no handedness
+  gives a daughter whose matter cancels. In the toy, the nearest measurable piece is whether the fed slab under the layer
+  form (her mechanism) and the properly fed control (no layer form) end differently, which this cell tests.
+- **Her follow-up, the same day.** "The published single-switch that's fair, I didn't realize this was single switch."
+  *Whether she keeps OPENS for the properly fed control or moves to ours is asked; until she says, OPENS stands as hers.*
+  And her idea: the number of switches that happen in an area, how many later switches each can influence and how many
+  earlier ones can influence it, is related to the speed of light in three dimensions.
+  - *Ours; general knowledge, not read by us, to verify.* (1) This is an order defined from the dynamics alone: switch B
+    comes after switch A if A changed a link that B uses. Update 41 held the causal order read from the opening front
+    because, as defined then, it put the light cone in by hand, and said it would come back "if an order can be defined
+    from the dynamics alone"; hers is such an order. (2) Published relatives: in any system whose interactions are local,
+    influence spreads no faster than a fixed speed, up to small leaks (the Lieb-Robinson bound, 1972); causal sets, where
+    spacetime is a set of events with only an order (Bombelli, Lee, Meyer and Sorkin, 1987); and the causal graph of
+    update events in rewriting models (Wolfram's physics project, 2020), where light cones are read from which events
+    depend on which. (3) A cheap look the toy allows: run a short chain on a flat torus with each accepted switch logged,
+    build the graph of which switch depends on which, and measure how fast one switch's cone of influence spreads per fair
+    sweep. A steady spread would be a speed in the toy that nobody put in. It can kill the idea (no steady spread), not
+    crown it.
+- **Her prediction for the properly fed control, changed before registration** ("I am changing to match yours, if it is
+  not too late"): BREAKS, as ours, after learning that the control has only the published single-switch move. Her first
+  word, OPENS, stays above as given. Not too late: the cell had not been registered, built or run. So the cell no longer
+  separates her picture from ours; it tests a shared expectation. And her go-ahead for the switch-influence look ("Proceed
+  with 1-3").
+
