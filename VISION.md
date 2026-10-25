@@ -4073,4 +4073,10 @@ words are in `sandbox/NOTEBOOK.md` under that date.
   energy books (claim step 7) need the parent to supply both: either the gate waits until the stores hold twice the cost,
   or each twin is the opening of its own layer, paid separately. In the toy as run (T71) one opening pays one daughter.
   Which she means is asked.
+- **DECISION (the author's): one gate, double the bill.** The parent waits until its stores hold twice the curling cost,
+  then releases both twins at once. *Ours, for the toy:* a layer's opening releases one curling cost, so a twin birth is
+  two layers opening together, one into each twin's ledger, once the stores beside the cut hold twice the cost. That is a
+  new gate under the layer form, written down before anything is built. T71 and T74, registered and running with the
+  single gate, are unchanged: they test the single gate's arithmetic at a third size, and a twin-gate cell would be a new
+  registration with its own prediction.
 

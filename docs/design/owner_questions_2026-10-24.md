@@ -237,4 +237,5 @@ your "no cost" rules out. # #
 G1 answered 25 October: (a), the clock (VISION Update 119). Her pair of degrees of freedom: curl and twist.
 
 Twins confirmed 25 October (Update 120): they replace H4 and H8; each burp gives a pair; each twin carries the full curling cost. **Asked:** one Big Bang then carries two curling costs. Does the parent's gate wait for twice the cost, or is each twin its own layer opening, paid separately? # #
+Answered 25 October: one gate, double the bill; both twins released at once (Update 120).
 

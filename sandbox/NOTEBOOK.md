@@ -2464,4 +2464,5 @@ space. In the toy, a sharp change in soft space's number would make a front.- le
 All daughters of one mother share a direction": does that now mean each burp gives a pair, one of each? Yes
 
 Energy: does each twin carry the full curling cost, as each T71 daughter does, or half of it? Full, the same release from space opening up that turns to light and fully cancels"
+- 2026-10-25, the owner (verbatim; VISION Update 120): "One gate, double the bill. The parent waits until its stores hold twice the curling cost, then releases both twins at once."
 
