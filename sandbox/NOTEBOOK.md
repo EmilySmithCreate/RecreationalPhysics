@@ -2459,4 +2459,9 @@ So g is a constant in the 2d view. Represents how likely a network is to birth a
 - 2026-10-25, the owner (verbatim; VISION Update 120): "Yes each big bang makes two daughters then, the other one matching but with antimatter surplus. Then the black hole itself stays neutral.
 
 space. In the toy, a sharp change in soft space's number would make a front.- let’s keep investigating this then."
+- 2026-10-25, the owner, confirming the twin daughters (verbatim; VISION Update 120): "1.	Does this replace your earlier version? That was the one where the parent black hole keeps the antimatter surplus. Yes.
+
+All daughters of one mother share a direction": does that now mean each burp gives a pair, one of each? Yes
+
+Energy: does each twin carry the full curling cost, as each T71 daughter does, or half of it? Full, the same release from space opening up that turns to light and fully cancels"
 

@@ -4066,4 +4066,11 @@ words are in `sandbox/NOTEBOOK.md` under that date.
   so it has no light cone to find. Her idea needs moves that act only nearby (a switch confined to one square's
   neighbourhood) or soft space, whose waves already have one speed. It kills a speed from the published move, not her
   idea.
+- **Her confirmations, the same day.** (1) The twins replace H4 and H8: the parent black hole no longer keeps the
+  antimatter surplus; it stays neutral. (2) Each burp gives a pair, one of each kind. (3) Each twin carries the full
+  curling cost, "the same release from space opening up that turns to light and fully cancels"; the surplus matter (or
+  antimatter) is the small excess beside it. *Ours, arithmetic:* then one Big Bang carries two curling costs, so the
+  energy books (claim step 7) need the parent to supply both: either the gate waits until the stores hold twice the cost,
+  or each twin is the opening of its own layer, paid separately. In the toy as run (T71) one opening pays one daughter.
+  Which she means is asked.
 
