@@ -29,7 +29,7 @@ H3. **Matter, as you now state it** *(25 October, second pass; the 120°/60° sp
 H4. **The burp splits matter from antimatter.** When two black holes merge and burp, the spinning hole sorts handed
     strands (through the weak force), the parent keeps a surplus of antimatter and the daughter a surplus of matter, and
     the total over the pair is zero. *(Yours; sorter as the weak force, the assistant's correction; published relatives
-    Vilenkin 1979, leptogenesis, Boyle–Finn–Turok 2018, to read.)*
+    Vilenkin 1978, leptogenesis, Boyle–Finn–Turok 2018, to read.)*
 H5. **The pair's curvatures balance** *(confirmed)*: each universe slightly curved, opposite in sign, net flat over the loop
     with every version stacked, because the total over twist and curl stays zero. Your sign: **ours slightly negative,
     the parent slightly positive** (you agreed, and asked for the sandbox look, which follows in C1).
@@ -194,3 +194,18 @@ third is confined; gluons, her prediction "none"; the proton +2/3, +2/3, −1/3;
 light prediction holds (O151); the design brief for the field on the rewiring graph; charge one rule for all; the neutron
 +2/3, −1/3, −1/3, twists cancel to flat, "spin with no twist can be mildly magnetic but no charge"; dark matter as a
 one-sided strip, both occur. (VISION Updates 96 to 102.)
+
+## Read-backs after the Codex audit (25 October; VISION Update 117, ASSUMPTIONS O156)
+
+- **RB1. The parent's sign.** Your first words: "the black hole that is technically around us has slight negative
+  curvature and long lived matter universes like ours are in a slight negative curvature space, but when the 2 are
+  viewed together it is net flat." The record later wrote ours negative and the parent positive. Which do you mean? # #
+- **RB2. Net flat over what.** Over the loop's stacked versions (your answer), or over one joined surface (the
+  Gauss-Bonnet reading, which needs a surface the toy does not supply)? # #
+- **RB3. The sorter's ledger.** Electric charge, baryon number (protons against antiprotons), lepton number (electrons
+  and neutrinos against their opposites) and the strands' handedness are four separate counts. Which does the hole's
+  spin move? Moving only positrons would leave our side charged. # #
+- **RB4. The layer.** The zero total fixes only the overall balance; the neutral layer at the front (L4) is an added
+  rule about where the uncurl sits. Ours: keep it as your added rule. # #
+- **RB5. Growth.** Points come in pairs (exact). Is space growing by pairs, or by whole rows, all right with you? # #
+

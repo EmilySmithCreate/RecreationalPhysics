@@ -3369,7 +3369,7 @@ idea to test, not a decision; she has not yet given her predictions of 24 Octobe
   mirroring alone. Something handed is needed, and the handed quantity in geometry is torsion (twist), not curvature.
   (2) *General knowledge, to verify:* antihydrogen falls down like hydrogen (ALPHA-g, 2023), so an antimatter universe
   weighs as a matter one does. (3) *GR, Birkhoff's theorem (general knowledge, to verify; strictly for a spherical hole):* what happens inside a horizon does not change the mass seen
-  outside, so a burp into a daughter is invisible to LIGO; the waves of GW150914 are accounted for by the orbit (about
+  outside *(corrected 25 October after the Codex audit, O156: the reason is the horizon's causal structure, nothing inside can signal out; Birkhoff's theorem covers only spherical vacuum, not a spinning merger)*, so a burp into a daughter is invisible to LIGO; the waves of GW150914 are accounted for by the orbit (about
   three solar masses radiated, general knowledge, to verify). If a burp did take energy out of our side, LIGO's published
   consistency test (final mass read from the early and late parts of the signal) bounds it, and many quick burps would
   leave structure after the ringdown, which the published searches for "echoes" look for without a confirmed detection.
@@ -3391,10 +3391,10 @@ idea to test, not a decision; she has not yet given her predictions of 24 Octobe
     are electrically charged and still half antimatter, and ours is neutral to very high precision. What draws an
     electron and a positron together is mainly their opposite charge; their spins are both one half and only decide how
     they annihilate (two photons or three). (3) The force that tells matter from antimatter by handedness is the weak
-    force (only left-handed particles feel it), and a published mechanism joins it to a spinning hole: a rotating hole
-    emits neutrinos preferentially along one direction of its axis and antineutrinos along the other (Vilenkin 1979).
+    force (only left-handed particles feel its charged part; its neutral part also acts on right-handed charged particles *(corrected 25 October after the Codex audit, O156)*), and a published mechanism joins it to a spinning hole: a rotating hole
+    emits neutrinos preferentially along one direction of its axis and antineutrinos along the other (Vilenkin 1978, with a 1979 erratum and follow-up *(corrected 25 October after the Codex audit, O156)*).
     Separating neutrinos from antineutrinos makes a lepton excess, and in standard physics a lepton excess is turned into
-    the matter excess by known processes (leptogenesis, Fukugita and Yanagida 1986). So her chain survives with the weak
+    the matter excess by known processes (leptogenesis, Fukugita and Yanagida 1986). *(Corrected 25 October after the Codex audit, O156: the separation makes a local excess only, net zero overall, which is her picture; leptogenesis proper creates the excess in heavy-neutrino decays, a different source, and shares only the conversion step. Electric charge, baryon number, lepton number and the strands' handedness are four separate ledgers, and the mechanism has to say which each step moves.)* So her chain survives with the weak
     force as the sorter in place of electromagnetism: spin, then handed neutrino sorting, then matter.
   - **Asked of her:** whether the sorter can be the weak force rather than electromagnetism; and whether "the twists have
     spin" means spin in the particle sense (one half) or the handedness of the strand, which is what sorting by the weak
@@ -3413,7 +3413,7 @@ idea to test, not a decision; she has not yet given her predictions of 24 Octobe
     pieces of one connected two-dimensional surface rather than separate spaces, net flat is automatic on a doughnut
     shape: the Gauss-Bonnet theorem fixes a closed surface's total curvature by its shape (zero for a torus, the toy's
     own surface), so curving one region positively forces negative curvature elsewhere. That would make "net flat" a
-    theorem rather than a coincidence, and it connects to her two-dimensional slab. Still open from earlier in this
+    theorem rather than a coincidence, and it connects to her two-dimensional slab. *(Corrected 25 October after the Codex audit, O156: only if the toy's squares are the faces of a surface drawn without crossings (a cellular embedding), which an abstract graph does not supply; and her clarification (Update 107) makes the surface two degrees of freedom, twist and curl, which by themselves define no faces or Euler number. An analogy, not a theorem about the toy. And averaging over stacked versions is not adding curvatures: it needs a stated state, quantity and weight.)* Still open from earlier in this
     update: a mirror image does not flip curvature, so why the partner's sign is opposite needs its own reason.
 - **Her answer on what spins, the same day:** "Charged handedness of the strands". What the hole sorts is the strands'
   handedness, and that handedness carries a charge.
@@ -3480,11 +3480,11 @@ anything is built or run; every setting run is published; the toy with it is our
   above the flat two (S_e > 2) and uncurl a square below (S_e < 2). Each square has four links and there are 2N links,
   so the total of curl minus uncurl is the sum over links of (S_e - 2) = 4S - 4N = 4(S - N). **The rule is S = N: the
   number of squares is held at the flat value.** With six links (flat at four squares a link, 3N links) it is S = 3N.
-- **What follows at once** (*ours; arithmetic*). (1) The published model's main term, 16(N - S), becomes a constant, so
+- **What follows at once** (*ours; arithmetic*). (1) The published model's main term, 16(N - S), becomes zero *(corrected 25 October after the Codex audit, O156)*, so
   under the rule the energy is the curling cost 4λX alone, together with how many arrangements there are. (2) *General
   knowledge, to verify:* this is the discrete form of a published fact: in two dimensions the total curvature of a closed
   surface is fixed by its shape (Gauss-Bonnet), so Einstein's action has no dynamics there. The published model's
-  curvature on graphs is not fixed that way; the rule makes it so. (3) The perfect tube (S = 1.25N), the 4-cube
+  curvature on graphs is not fixed that way; the rule makes it so. *(Corrected 25 October after the Codex audit, O156: a resemblance in one respect, not an equivalence: the rule fixes a count of squares, not a curvature integral, and nothing shows the curl is geometric curvature or that no dynamics remain. The rule makes a new model, not the published one; and in the capped family (at most two squares a link) it forces X = 0, so H = 0 for every allowed state: the rule keeps an energy only where links may carry a third square.)* (3) The perfect tube (S = 1.25N), the 4-cube
   (S = 1.5N) and the random phase (about 0.13N squares at large size) all break the rule. A curled X under the rule has
   to carry uncurl equal to its curl, which is the "curl inside a larger uncurl" picture of Update 83 (as corrected in
   Update 92), now as a requirement. (4) When such an X opens, curl and uncurl must vanish together, in equal amounts:
@@ -3509,10 +3509,10 @@ anything is built or run; every setting run is published; the toy with it is our
   - *Ours; general knowledge, to verify.* (1) **Passes the checks.** Every charged particle observed has mass, and the
     charge is the same whatever the mass (electron, muon, tau). Mass is necessary, not sufficient: the neutron, the Z and
     the neutrinos have mass and no charge, which her rule allows. In the standard account electric charge as we know it
-    and the masses of the particles both appear at the same step, when the Higgs field settles. (2) **Needs one change.**
+    and the masses of the particles both appear at the same step, when the Higgs field settles. *(Corrected 25 October after the Codex audit, O156: misleading. The charge is in the theory before the field settles (Q = T₃ + Y); the settling picks out electromagnetism as the force that stays unbroken and gives particular particles their masses. Charge is not caused by mass.)* (2) **Needs one change.**
     Three halves always total a half or three halves, never a whole number: an odd count of halves stays a half-integer
     (exact). What three halves can do is realign from three halves to one half and give off a photon, which is observed:
-    the Delta baryon, three quarks aligned to spin three halves, can decay to a proton (spin one half) and a photon. A
+    the positive Delta baryon (Δ⁺), three quarks aligned to spin three halves, can decay to a proton (spin one half) and a photon, rarely (about 0.6 % of decays; nearly all go to a nucleon and a pion; the Δ⁻ cannot, by charge) *(corrected 25 October after the Codex audit, O156)*. A
     total does reach a whole number for an even count: an electron and a proton realigning in hydrogen (spin 1 to spin 0)
     give off the 21-centimetre photon, and an electron and a positron (spin 0 or 1) annihilate into photons. So "a photon
     is released when the spins realign" is observed physics; "when the net spin goes to a whole number" holds for pairs,
@@ -3529,7 +3529,7 @@ list and needs its own dated decision under S1.
 - **What is exact in the toy** (*ours; arithmetic*). Flat space has energy zero at every size (16(N - S) + 4λX = 0
   when every link has two squares), so adding flat cells costs nothing: "no cost" is already true of the toy's energy.
   A flat cell adds one point and one square, so it keeps Update 105's rule (S = N). Growth that keeps space flat is
-  allowed by both.
+  allowed by both. *(Withdrawn 25 October after the Codex audit, O156. Exact: points come in pairs, one of each kind, because with four links a point and two kinds 4|B| = 4|W|; no single point can be added. A flat step certainly allowed is a whole double row of a torus (2L points and 2L squares); whether a local pair insertion that keeps every link at two squares exists is not checked. And zero energy is not zero cost: the number of arrangements changes with N, so growth needs its own move and weights, a decision under S1.)*
 - **What it connects to** (*ours; general knowledge, not read by us, to verify; but timescape had been read on 20
   October, `docs/reading/notes/2026-10-20_backreaction_timescape.md` *(corrected 25 October after the rule-22 audit, O155)**). (1) Claim 3 already names the
   published form: in dynamical triangulations the number of building blocks varies and the cost per block plays the role
@@ -3572,7 +3572,7 @@ list and needs its own dated decision under S1.
 - **Her choice and her "why now", the same day:** reading (b), space added at a front moving at light's speed; and the
   slowing and speeding eras cancelling today is not happenstance: it is the period of greatest entropy and most versions,
   where an observer is most likely to be, give or take.
-  - *Ours.* (1) **Her "why now" is published, read in full** (`docs/reading/notes/2026-10-19_causal_entropic_principle.md`,
+  - *Ours.* (1) **Her "why now" has a published relative, read in full** *(corrected 25 October after the Codex audit, O156: the principle weighs observers by entropy produced in a causal region; it does not show an observer must appear when two eras cancel, so hers is a proposed reading of it, not its result)* (`docs/reading/notes/2026-10-19_causal_entropic_principle.md`,
     section 6; [BHKP07], the causal entropic principle): "typical observers will exist when most of the entropy
     production in the causal diamond occurs", which falls "during the era when the matter and vacuum energy densities are
     comparable". What it derives is that the two times fall within a factor of a few of each other (0.23 and 0.59 of the
@@ -3667,7 +3667,7 @@ coheres clearly to her yet and asks that both be kept.
   empty space grows. *Ours:* (3) raises whether the 60° is the strand's own twist angle (then the cube's mirror does not
   arise) or a turn of the cube's grid (then it does), and whether the electron is three 120° thirds (her 360° band of 24
   October) or three 60° pieces; both are asked in the questions file (S1). Under the hard zero-total rule, growth in
-  empty space keeps the balance if points may be added (each flat cell brings one point and one square), so Update 105's
+  empty space keeps the balance if points may be added (each flat step brings as many squares as points, the points in pairs *(corrected 25 October after the Codex audit, O156)*), so Update 105's
   rule and Update 106's growth fit together.
 
 Update 108 (2026-10-25): **the author's second pass on the questions file: the hard zero-total rule confirmed; adding
@@ -3703,7 +3703,7 @@ looks.** Her notes are in `sandbox/NOTEBOOK.md` verbatim; the questions file is 
   lowers it" is therefore not supplied at leading order. *Range, added after the rule-22 audit (O155): the per-square
   factor ln I₀(β) is the strong-coupling expansion (small β), where the field is not yet free light; at the β where
   O151's light exists the arrangement-dependent terms are not small, so this is a strong-coupling statement and does
-  not rule out her idea at large β.*
+  not rule out her idea at large β.* *Sharpened after the Codex audit (O156), exact: decision 0's fork (the Wilson weight against Q29's energy) disappears under the hard rule at every β, not only at leading order: the two weights differ by e^(−β) a square, so by e^(−βN) for every allowed arrangement alike. What stays open is the arrangement-dependent part of the field's weight, the same under either.*
 - **The curvature-sign look** (exploratory, `sandbox/opened_space_curvature_sign.py`): T51's 600 opened sheets keep net
   curl (519 positive, 80 zero, 1 negative; mean +9.2, falling with slower cooling). The toy reason for "ours negative"
   is killed in the toy without the rule (under the hard rule the net is zero by construction); the fall with slower
@@ -3727,8 +3727,8 @@ light backed up in an uncurl shell at the front.** Her words are in `sandbox/NOT
   between. *Ours:* it gives her store mechanism of Update 108 (H8) a place, the shell, and a cause, backed-up light.
 - **What it touches** (*ours*). (1) *Exact, the toy* (`sandbox/u1_boundary_look.py`, 24 October): at a boundary between
   curled and flat space, the part of the light field lying along the curl cannot enter the curl at low frequency and is
-  reflected, while light in the open directions passes. So in the toy one polarisation of light does back up at a
-  curled front, and reflected light pushes on what reflects it. (2) *Exact, the toy* (Gauss's law, same look): light by
+  reflected, while light in the open directions passes. So in the toy one part of the field does back up at a
+  curled front, and what is reflected pushes on what reflects it. *(Corrected 25 October after the Codex audit, O156: the part along the curl is the Wilson-line scalar, not light (O151, corrected 24 October); light in the open directions keeps the flat speed and passes. What backs up in the toy is the scalar, so this is not a photon pressure.)* (2) *Exact, the toy* (Gauss's law, same look): light by
   itself cannot make a net charge anywhere; a charged shell needs charged matter (pairs made from the dense light, which
   sum to zero) and something to separate them (the handed sorter of Update 104). (3) *Ours, unverified (the rule fixes only the global total, not where the uncurl sits *(corrected 25 October after the rule-22 audit, O155)*):* under the
   hard zero-total rule a curled front must come with equal uncurl somewhere, and a shell around the front is one place
@@ -3740,7 +3740,7 @@ light backed up in an uncurl shell at the front.** Her words are in `sandbox/NOT
   the 2017 one, from light-like particles radiated at the wall. And there the expanding phase is the massive one, while
   in the toy the opening side is massless, so the analogy runs backwards, which is why Update 110 finds the push does
   not hold the front back. It is not her hold-back's published form.* (5) The surplus
-  staying in the mother's space is H8 and Birkhoff's theorem (Update 104).
+  staying in the mother's space is H8 and the horizon's causal structure (Update 104; not Birkhoff's theorem *(corrected 25 October after the Codex audit, O156)*).
 - **What can be computed** (exact, no run): the push of the reflected light on the curled-flat boundary in the toy's
   field, against the field's stiffness β, and its direction (whether it holds the front back or pushes it on), which
   depends on which side the light comes from. And whether the light sitting unevenly near a front changes the curling
@@ -3753,8 +3753,8 @@ the shell's charge.** Her words are in `sandbox/NOTEBOOK.md` under that date.
 - **Hers.** L1: the backed-up light comes from the curled side (the black hole, in the mother's space) and arrives at the
   front. L2, confirmed: the shell's charge is pairs made from the dense light, sorted by the hole's spin, one charge
   staying on the mother's side and its partner going with the daughter's surplus.
-- **The push, computed** (*ours; exploratory, `sandbox/front_push_step.py`*). In the toy's field only light lying along a
-  curl feels the front: massive inside the curl, massless outside. Model: a wave crossing a step from massive to
+- **The push, computed** (*ours; exploratory, `sandbox/front_push_step.py`*). In the toy's field only the part lying along a
+  curl (the Wilson-line scalar, not light *(corrected 25 October after the Codex audit, O156)*) feels the front: massive inside the curl, massless outside. Model: a wave crossing a step from massive to
   massless. Per quantum arriving from the curled side, the push on the front is -2a(1 - a)/(1 + a) in units of its
   momentum on the open side, a being the ratio of its momentum inside the curl to outside: **never toward the open
   side.** A quantum crossing out of the curl gains momentum, so the front recoils toward the curl, which is the
@@ -3943,4 +3943,35 @@ rich.** Her words are in `sandbox/NOTEBOOK.md` under that date.
   word, OPENS, stays above as given. Not too late: the cell had not been registered, built or run. So the cell no longer
   separates her picture from ours; it tests a shared expectation. And her go-ahead for the switch-influence look ("Proceed
   with 1-3").
+
+Update 117 (2026-10-25): **the independent audit by a different model (Codex), recorded, and the corrections it
+asked for.** Why this page changes: rule 12's red-team pass for the record of 25 October, owed since O155 (which was the
+same model), arrived; its report is `docs/reviews/2026-10-25_codex_report.md`, what it found and what it got wrong is
+ASSUMPTIONS O156. Corrections made in place carry "*(corrected 25 October after the Codex audit, O156)*".
+
+- **Withdrawn:** that a flat cell adds one point and one square (Update 106; Update 107's matching line). Exact: points
+  come in pairs. And "no cost" is true of the energy only; growth needs its own move and weights.
+- **Corrected in place:** the light that backs up at a curled front is, in the toy, the Wilson-line scalar, not light
+  (Updates 109, 110; it was corrected on 24 October and then used as light the next day). The push computed in Update
+  110 is the scalar's, on a fixed continuum step, and says nothing yet about a moving, rewiring front. The Gauss-Bonnet
+  reading (Updates 104, 105) is an analogy, not a theorem about the toy. The Higgs sentence, the Delta decay's charge
+  and rate, the weak force's handedness, Vilenkin's date (1978), leptogenesis, Birkhoff, and "why now" as the causal
+  entropic principle's result.
+- **Sharpened, exact:** under the hard rule the field's normalisation fork disappears at every β, not only at leading
+  order (Update 108).
+- **Stated plainly, not new decisions:** (1) the hard rule fixes the global total only; the neutral layer at the front
+  (Update 113, L4) is her added rule about where the uncurl sits, not a consequence of the total. (2) The curvature-sign
+  look read the old dynamics, not the rule; its signs are combinatorial, not cosmological curvature. (3) In timescape,
+  walls are spatially flat and voids negatively curved; her "flat means empty" names the voids, which timescape calls
+  curved, so the words differ and the geometry is not the same. (4) "Proceed, as you suggest" and "Adopt at L3" are her
+  go-ahead and her choice of answer; the assistant's calculations behind them are not thereby hers or validated. (5)
+  "Nothing passes between" and a charged pull across the front need a coupling that has not been defined. (6) The
+  sorter has to keep four ledgers apart: electric charge, baryon number, lepton number, the strands' handedness.
+- **Asked of her (read-backs, in the questions file):** the parent's sign (her first words said ours and the hole's
+  both slightly negative; the record later wrote the parent positive); whether net flat is over stacked versions or one
+  joined surface; which ledger the sorter moves; whether the layer is an added rule (ours: yes).
+- **Reading added (none read yet):** Regge 1961; Banchoff 1967; Forman 2003; Nielsen and Ninomiya 1981, the lattice
+  fermion no-go theorem, which any handed-strand electron must face; Coleman 1977 and Coleman and De Luccia 1980; Israel
+  1966, thin-shell junctions; Farhi and Guth 1987 and Farhi, Guth and Guven 1990, child universes; Sakharov 1967;
+  Vilenkin 1978.
 

@@ -4464,4 +4464,36 @@ author and should be disclosed as such in any submission. Physics estimates mark
   - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. It did not open the N = 16
     listing, check the timescape quotes against PDFs, or check the general-knowledge sources.
   - **The independent pass still owed:** a different model (Codex), if the owner wants one.
+- **O156 AUDIT (rule 12, a different model): Codex on the record of 25 October (25 October 2026).** Brief
+  `docs/reviews/2026-10-25_codex_audit_brief.md`, pinned to commit 247da44e and blind to O155; report
+  `docs/reviews/2026-10-25_codex_report.md`, pasted in by the owner. It could not clone the repository (network), read
+  files at the pinned commit, and rebuilt the computations independently. Corrections in VISION Update 117.
+  - **What it found that O155 had not.** (a) **The growth step is impossible as written** (exact; checked by the
+    assistant): a four-link graph with two kinds has |B| = |W|, so points come in pairs; "a flat cell adds one point and
+    one square" is withdrawn. (b) **The backed-up "light" is the Wilson-line scalar** (checked: `sandbox/LOG.md`, 24
+    October, corrects O151; Update 109 then used it as light). (c) Zero energy at each N is not zero-cost growth (the
+    count of arrangements changes). (d) In the capped family the hard rule forces X = 0, so H = 0 for every allowed
+    state. (e) The field's normalisation fork cancels exactly at every β under the hard rule (checked: the weights
+    differ by e^(−β) a square, a factor e^(−βN) common to every arrangement), sharper than "leading order". (f) The
+    Higgs sentence (charge is not caused by mass; Q = T₃ + Y precedes the settling); the Delta decay needs Δ⁺ and is
+    rare; the weak force's neutral part couples to right-handed charged fermions; Vilenkin's paper is 1978; the
+    separation of neutrinos is not leptogenesis. (g) The record's ledgers (charge, baryon, lepton, handedness) switch
+    within the sorter; a pull across a boundary nothing passes through has no coupling; stacked amplitudes are not
+    summed curvatures; "Proceed" was read as acceptance of each component. (h) The global rule does not require a
+    local shell (O155 had corrected the "exact" label; Codex adds that the layer is a new locality rule). (i) Ten works
+    missing from the day's reading (listed in Update 117).
+  - **What it found that O155 also found.** The cube's kind swap depends on the centre; Bödeker and Moore merged;
+    Gauss-Bonnet needs an embedding; Birkhoff overextended; the curvature sign unresolved; "LIGO's signals are not
+    burps" listed among her answers (already moved by O155 when the report arrived); H3 against Update 109; Cohen,
+    Kaplan and Nelson stretched.
+  - **What it checked and found correct.** Curl minus uncurl = 4(S − N) and S = 3N at six links; the N = 18 reach (26
+    classes, 9 allowed, X = 0, 0, 0, 2, 4, 4, 6, 8, 9, one connected piece), rebuilt independently; the cube table; the
+    front-push closed form and values; the Hubble arithmetic; the particle checks (pair creation needs a recoil; two
+    photons from annihilation at rest; Δ⁻ = ddd; muon and tau charge; the 21-cm line).
+  - **What it got wrong or could not do.** (1) Its finding 13 (cooling dependence is not a size effect) answers a claim
+    the record did not make: Update 108 said the mean falls with slower cooling, and O155 had already said the fall is
+    at one size. (2) Its reading list names "Stephen Coleman (1977)"; it is Sidney Coleman. (3) It could not rerun the
+    curvature-sign look (the T51 archives were not available to it), so the 519/80/1 count rests on O155's rerun. (4)
+    Its paper-specific numbers for timescape and the Delta's rate are its own recall, to verify. Nothing else it
+    reported was found wrong on checking.
 
