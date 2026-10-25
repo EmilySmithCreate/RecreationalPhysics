@@ -141,12 +141,17 @@ S1′. **Your Update 109 decision, with a corrected premise** *(rule-22 audit, U
     kind. So three 60s give the mirror image (a point flip) but no swap of kinds, and the link to matter and antimatter
     through the kinds is withdrawn. Your decision (the 60° spin-twist as the strand's own twist angle) was recommended
     because a 60° grid step carries a mirror about any centre, which still holds. **Keep the decision?**
-L4. **Which charge the shell carries** *(audit, Update 112)*: electric charge sorted across universes would leave each
-    universe charged, and ours is neutral to very high precision; a handed, weak-type charge (your reading (a) of
-    Update 104) avoids that. Which is it?
+L4. **Which charge, or a neutral layer?** *(your question and picture, Update 113)*. Your question answered: the handed
+    (weak) charge does attract opposites like electric charge, but today only over about 10⁻¹⁸ m; in a hot burp, above
+    about 10¹⁵ K, it acts at long range like electric charge; and in a hot plasma any net charge is screened over a short
+    distance. Your layers (curl facing in, uncurl facing out, like toothpicks in a shaken box) are the shape of a double
+    layer or a membrane: neutral overall, with a surface tension. In published decay theory the wall's tension is what
+    makes the barrier (Coleman 1977), and the toy already shows a critical patch size (T54). **Adopt: the hold-back is
+    the tension of a neutral layer of paired curl and uncurl at the front, in place of a net charge?** It removes the
+    neutrality problem. Under the hard rule the toy can test where the balancing uncurl sits (added to Z2).
 R1, R2. **Reading owed by the assistant** (no answer needed): holography and the area law, dimensional reduction,
     worldsheets, tensor networks (bears on H1); Boyle–Finn–Turok, Popławski, Vilenkin, Fukugita–Yanagida; Bödeker and
-    Moore (2009, 2017); Cohen, Kaplan and Nelson; Wald and Blandford–Znajek; Cohen, De Rújula and Glashow; Melia and
+    Moore (2009, 2017); Coleman (1977, [C77]); Narayan, Ramaswamy and Menon (2007); Cohen, Kaplan and Nelson; Wald and Blandford–Znajek; Cohen, De Rújula and Glashow; Melia and
     Shevchuk; ALPHA-g (2023); Hofstadter (2007); the timescape quotes against their PDFs.
 
 ## Older items (handoffs of 22 and 23 October), unchanged

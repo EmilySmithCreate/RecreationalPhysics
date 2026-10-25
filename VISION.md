@@ -3826,3 +3826,33 @@ Each finding is corrected in place with a dated marker; the full audit is ASSUMP
    Birkhoff marked; Chern-Gauss-Bonnet named; the questions file's H3, header, C1′, item 0 and answered list brought into
    line; the reading list completed.
 
+Update 113 (2026-10-25): **the author's question on the handed charge, and her picture of the front as tight layers,
+curl facing in and uncurl facing out.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Hers.** Does the handed charge behave like electric charge, opposites attracting? Maybe the curls organize in tight
+  lines, as toothpicks do in a shaken box, giving two tight layers with the curl facing the centre and the uncurl facing
+  away, which puts the force into making the curl take more curl to snap three-dimensional space open at the front.
+- **Her question answered** (*ours; general knowledge, not read by us, to verify*). Yes in form: the weak force is carried,
+  as electromagnetism is, by particles of spin one, and with such carriers opposite charges attract. But today its
+  carriers (the W and Z) are heavy, so the force reaches only about 10^-18 m. Above the electroweak temperature (about
+  10^15 K, a hundred billion electron-volts or more, which a hot burp would exceed) the carriers are massless and the
+  handed charge acts at long range like electric charge. In a hot plasma any charge is also screened within a short
+  distance by the charges around it, so a net charge cannot hold a front back over a long range.
+- **Her layers, and what they touch** (*ours; general knowledge, to verify*). (1) Shaken rods line up in layers: that is
+  published granular physics (vibrated rods ordering into aligned, nematic patterns; for example Narayan, Ramaswamy and
+  Menon 2007). (2) Two layers with one side facing in and the other out is the shape of a double layer, or of a cell
+  membrane's bilayer (heads out, tails in). Such a layer can be **neutral overall** and still have a **surface tension**,
+  an energy per area that resists stretching. (3) In the published theory of how a stable-for-now state decays, it is
+  exactly the wall's surface tension that makes the barrier: a bubble of the new phase must be large enough that its
+  bulk gain beats its wall cost (Coleman 1977, [C77]). So "the layers make the curl take more curl to snap open" reads,
+  in published terms, as the wall's tension setting the barrier, and the surplus needed (λ > 1) as the bulk gain needed
+  to pay it. (4) *Exact in the toy already:* T54 found a critical patch size for the opening (Update 49), the signature of
+  a wall cost against a bulk gain.
+- **What it changes** (*ours, unverified*). A neutral double layer with tension holds the front back without any net
+  charge, which removes the neutrality problem of Update 112 (charges sorted across universes would leave them
+  charged). The charge picture of L3 then becomes the layer picture: curl and uncurl paired across the front, as the hard
+  rule asks, with the pairing's tension as the hold-back.
+- **What the toy can test, once the hard-rule kernel exists:** at a curled-flat front under the rule, where does the
+  uncurl that balances the front's curl sit: in a layer beside the curl, as she pictures, or spread out? It is an
+  observable to add to the Z2 test.
+
