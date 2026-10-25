@@ -3855,4 +3855,9 @@ curl facing in and uncurl facing out.** Her words are in `sandbox/NOTEBOOK.md` u
 - **What the toy can test, once the hard-rule kernel exists:** at a curled-flat front under the rule, where does the
   uncurl that balances the front's curl sit: in a layer beside the curl, as she pictures, or spread out? It is an
   observable to add to the Z2 test.
+- **DECISION (the author's, the same day: "I agree with l4").** The hold-back at the opening front is the tension of a
+  neutral layer of paired curl and uncurl, curl facing in and uncurl facing out, in place of a net charge; this replaces
+  the charge reading of L3 (Update 111). She agrees the handed charge's reach today is tiny. Published form: the wall
+  tension that sets the barrier in the decay of a stable-for-now state ([C77]). Test, once the hard-rule kernel exists:
+  where the uncurl that balances a front's curl sits.
 
