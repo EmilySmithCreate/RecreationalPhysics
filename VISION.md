@@ -3342,3 +3342,353 @@ to the owner in chat is withdrawn as argued: positivity of each graph's correcti
 the tube-minus-sheet difference (the exact calculation of Update 102 settles that sign case by case, under the Wilson
 weight).
 
+Update 104 (2026-10-25): **the author's idea: a merger's burp splits matter from antimatter between two universes, net
+zero, each with a small curvature, net flat.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded as an
+idea to test, not a decision; she has not yet given her predictions of 24 October.
+
+- **Hers, put in order.** LIGO's merger signals might come from the black holes' mass dropping in quick burps or one big
+  burp. When two black holes merge and a burp fires, the outer one (the parent, around us) keeps a surplus of antimatter
+  curls and the inner one (the daughter) a surplus of matter curls, so neither can cancel its own kind fully. That gives
+  the matter excess without the lip's extra curl (dropped in Update 82) or any opening-speed mechanism. The space around
+  us and long-lived matter universes like ours each carry a slight curvature, and the two together are net flat.
+- **What it connects to (ours; general knowledge, not read by us, to verify).** (a) A universe and anti-universe pair
+  with the whole symmetric: Boyle, Finn and Turok's CPT-symmetric universe (2018); and Popławski's universe inside a black
+  hole, with an asymmetry from torsion (2011). (b) Matter and antimatter sorted into separate regions is an old idea,
+  ruled out *inside* our observable universe by the gamma rays their borders would give off (Cohen, De Rújula and
+  Glashow, 1998); separate universes escape that bound. (c) It replaces Sakharov's first condition (the count of matter
+  must change) with separation, since the count is conserved over the pair; it still needs a handed sorter (something
+  that tells a strand from its mirror image and sends each its own way) and a one-way step, which the burp supplies. In
+  her particle picture matter and antimatter are mirror-image strands (Update 97), so the sorter must be handed; the
+  merged hole's spin is a candidate, *ours, unverified*. (d) It turns hypothesis 5 of Update 82 around: the curvature is
+  made with the excess, rather than tipping it.
+- **What it must face.** (1) *Exact (geometry):* curvature is unchanged by a mirror reflection, so mirror-image strands
+  leave curvature of the same sign; two universes of opposite matter kind cannot get opposite curvatures from the
+  mirroring alone. Something handed is needed, and the handed quantity in geometry is torsion (twist), not curvature.
+  (2) *General knowledge, to verify:* antihydrogen falls down like hydrogen (ALPHA-g, 2023), so an antimatter universe
+  weighs as a matter one does. (3) *GR, Birkhoff's theorem:* what happens inside a horizon does not change the mass seen
+  outside, so a burp into a daughter is invisible to LIGO; the waves of GW150914 are accounted for by the orbit (about
+  three solar masses radiated, general knowledge, to verify). If a burp did take energy out of our side, LIGO's published
+  consistency test (final mass read from the early and late parts of the signal) bounds it, and many quick burps would
+  leave structure after the ringdown, which the published searches for "echoes" look for without a confirmed detection.
+  (4) Two separate spaces have no shared place where their curvatures add; "net flat together" needs a stated sense in
+  which the pair is one thing (in X, or over the loop).
+- **What it predicts that can be checked (ours, unverified).** Our space's curvature is small and of one sign, not zero;
+  measured today as flat to within a fraction of a per cent, with slight curvature of either sign allowed (Planck 2018
+  with BAO, to verify). The sign she gives is the prediction.
+- **Asked of her:** which sign goes to which universe (our space slightly negative and the parent slightly positive?);
+  what sorts the strands; and the sense of "together".
+- **Her answer on the sorter, the same day** (words in the notebook). The hole's spin sorts, through electromagnetism:
+  matter and antimatter twists have opposite spin, which usually draws them together to annihilate into light; a hole
+  spinning one way pulls the positrons out and leaves our universe extra electrons (or the reverse).
+  - *Ours; general knowledge, not read by us, to verify.* (1) A spinning hole does sort charges: in a magnetic field it
+    makes an electric field that pulls electrons and positrons apart (Wald 1974; Blandford and Znajek 1977, the standard
+    account of how spinning holes power jets). (2) But an electric field sorts by **charge**, not by matter against
+    antimatter: electrons go with antiprotons, positrons with protons. So the sorter as stated gives two universes that
+    are electrically charged and still half antimatter, and ours is neutral to very high precision. What draws an
+    electron and a positron together is mainly their opposite charge; their spins are both one half and only decide how
+    they annihilate (two photons or three). (3) The force that tells matter from antimatter by handedness is the weak
+    force (only left-handed particles feel it), and a published mechanism joins it to a spinning hole: a rotating hole
+    emits neutrinos preferentially along one direction of its axis and antineutrinos along the other (Vilenkin 1979).
+    Separating neutrinos from antineutrinos makes a lepton excess, and in standard physics a lepton excess is turned into
+    the matter excess by known processes (leptogenesis, Fukugita and Yanagida 1986). So her chain survives with the weak
+    force as the sorter in place of electromagnetism: spin, then handed neutrino sorting, then matter.
+  - **Asked of her:** whether the sorter can be the weak force rather than electromagnetism; and whether "the twists have
+    spin" means spin in the particle sense (one half) or the handedness of the strand, which is what sorting by the weak
+    force needs.
+- **Her answer on "together", the same day:** "the loop, all the amplitude stacked versions together". Net flat is a
+  statement about the loop, with every version stacked by its amplitude, not about any one universe.
+  - *Ours.* (1) *Exact, given her setup:* if versions are weighted by probability, the average curvature is the weighted
+    sum of each version's curvature, so a negatively curved matter universe and a positively curved partner of equal
+    weight average to exactly flat, while each one is curved. (2) An observer inside one version sees that version's
+    curvature, not the average, so the checkable prediction stays the sign of our own space's curvature. (3) *General
+    knowledge, to verify:* summing over curved geometries with amplitudes is how quantum cosmology is written (the
+    Hartle-Hawking wave function of the universe); there the average of a quantity can vanish while every geometry in
+    the sum has it. (4) "Amplitude" needs the wave rule the author held on 23 September (Update 21): counting versions
+    alone gives weights but no amplitudes (T15 rung 3a). Averaging curvature needs only weights, so this idea does not
+    need the wave rule unless the versions are to interfere. (5) *General knowledge, to verify:* if the versions are
+    pieces of one connected two-dimensional surface rather than separate spaces, net flat is automatic on a doughnut
+    shape: the Gauss-Bonnet theorem fixes a closed surface's total curvature by its shape (zero for a torus, the toy's
+    own surface), so curving one region positively forces negative curvature elsewhere. That would make "net flat" a
+    theorem rather than a coincidence, and it connects to her two-dimensional slab. Still open from earlier in this
+    update: a mirror image does not flip curvature, so why the partner's sign is opposite needs its own reason.
+- **Her answer on what spins, the same day:** "Charged handedness of the strands". What the hole sorts is the strands'
+  handedness, and that handedness carries a charge.
+  - *Ours.* Two readings, and they lead to different places. (a) **The handedness carries a charge of its own**, separate
+    from electric charge. That is how the weak force is built (general knowledge, to verify): its charge, weak isospin,
+    is carried only by left-handed particles and the matching right-handed antiparticles, so it is literally a charged
+    handedness, and it is the force that tells matter from antimatter. Under this reading her sorter is the weak force,
+    and the chain of the previous answer (spin, then handed neutrino sorting, then the matter excess) applies as it
+    stands. (b) **Handedness and electric charge are one thing.** Then sorting by handedness is sorting by electric
+    charge, and the problem of the previous answer returns: two charged universes, each still half antimatter. It would
+    also clash with her own definitions (Update 97 and after), where handedness marks matter against antimatter and
+    charge is the net count of signed thirds, two separate labels. *Ours:* reading (a) is the one that survives the
+    checks; which she means is hers to say. Either way it is consistent with her "an antiparticle is the mirror image of
+    its strand": in standard physics the partner of a left-handed electron is a right-handed positron, the mirror image
+    with the charge flipped (the CP pairing, general knowledge, to verify).
+- **Her answer on the opposite sign, the same day:** "the surface's total must stay zero." The partner is curved the
+  other way because the loop's surface has a fixed total curvature of zero.
+  - *Ours.* (1) *General knowledge, to verify:* a fixed total is a theorem only for a two-dimensional surface
+    (Gauss-Bonnet: the total is set by the surface's shape, zero for a torus). In three dimensions nothing fixes the total
+    of the ordinary curvature, so the claim needs the versions to be regions of one two-dimensional surface, which is her
+    curled slab and two degrees of freedom (Update 101), not two separate three-dimensional spaces. (2) *Exact (a short
+    proof, ours, unreviewed):* in the toy's own surface the balance cannot be met by curving. Draw a four-link bipartite
+    graph on a surface and give each point the combinatorial curvature 1 - d/2 + sum of 1/(face length) over its faces;
+    these add up to the surface's Euler number (zero for a torus). Bipartite faces have even length and a simple graph
+    has none of length 2, so every face has length at least 4, and with four links every point's curvature is at most
+    1 - 2 + 4 x 1/4 = 0. Nothing on such a surface is positively curved, so on a torus the total of zero forces every
+    point flat: a negative region cannot be balanced by a positive one. (3) Where the toy does have positive curvature
+    is in its own curvature measure, which counts every loop of four, including the rings round a direction curled to
+    four: that is positive exactly where a direction is curled. So in the toy, "a negative region balanced by a positive
+    one" can only mean uncurl balanced by curl, and the toy's curvature measure has no fixed total. Whether a rule that
+    keeps the total of curl and uncurl at zero belongs in the model would be a new ingredient, decided under S1 before
+    any run.
+- **Her choice and her mechanism, the same day.** She chose reading (a): the handedness carries a charge of its own,
+  separate from electric charge (the weak force's shape). And for electric charge: three one-third strands together
+  accept one photon and get spin one half; the three strands' mass together with the half-curl energy the photon gives
+  makes the charge. *Ours:* it restates her answer of 24 October (the electron's charge from the photon's half-curl
+  combined with the mass), now with spin one half added.
+  - *Ours; exact conservation laws, general knowledge, to verify.* (1) **Spin adds, and one photon cannot make spin one
+    half.** A photon has spin 1. States built on the toy's link labels have whole-number spin (they return to themselves
+    after a full turn; exact, from 24 October). Whole numbers plus 1 stay whole numbers, so three such strands plus one
+    photon cannot reach one half. More generally, the number of spin-one-half particles changes only by two at a time,
+    so light alone never makes a single electron. (2) **What one photon can do is make a pair:** a photon with enough
+    energy near a nucleus becomes an electron and a positron, two spin-one-half particles together, charges +1 and -1
+    summing to zero. In her words that would be one photon's curl shared between two triples, half to each: an electron
+    and its mirror image. That form satisfies both laws, and her "3 coming together costs 1 photon" is the same process
+    run backwards (an electron and a positron meeting give off light). (3) The other route to spin one half is the
+    proton's: each of three parts already carries one half, and three halves can total one half. Under it her thirds
+    would each be spin one half, no photon needed for the spin. (4) **Charge cannot depend on the amount of mass.** The
+    muon and the tau are heavier copies of the electron (about 207 and 3,477 times its mass) with exactly its charge, and
+    the electron's and proton's charges match to about one part in 10^21 despite a mass ratio of 1,836. So the charge
+    has to come from a count (her thirds, or the half-curl) and not from how much mass is there; her charge rule of 24
+    October, minus the net signed thirds over three, is already a count and passes this check.
+  - **Asked of her:** whether the photon's curl is shared between two triples (pair creation), or each third carries its
+    own half; and whether "mass" in her sentence can be read as "the three strands being present" rather than an
+    amount.
+
+Update 105 (2026-10-25): **DECISION (the author's, in principle): the toy gets a rule that keeps the total of curl and
+uncurl at zero.** Her words: "yes I agree with this rule" (notebook, same date), following Update 104's "the surface's
+total must stay zero". Under S1 this is a new ingredient. Its form is fixed in writing, below, and chosen by her before
+anything is built or run; every setting run is published; the toy with it is our family, never CQG.
+
+- **What the rule is in the toy, exactly** (*ours; arithmetic*). With four links per point, curl on a link is a square
+  above the flat two (S_e > 2) and uncurl a square below (S_e < 2). Each square has four links and there are 2N links,
+  so the total of curl minus uncurl is the sum over links of (S_e - 2) = 4S - 4N = 4(S - N). **The rule is S = N: the
+  number of squares is held at the flat value.** With six links (flat at four squares a link, 3N links) it is S = 3N.
+- **What follows at once** (*ours; arithmetic*). (1) The published model's main term, 16(N - S), becomes a constant, so
+  under the rule the energy is the curling cost 4λX alone, together with how many arrangements there are. (2) *General
+  knowledge, to verify:* this is the discrete form of a published fact: in two dimensions the total curvature of a closed
+  surface is fixed by its shape (Gauss-Bonnet), so Einstein's action has no dynamics there. The published model's
+  curvature on graphs is not fixed that way; the rule makes it so. (3) The perfect tube (S = 1.25N), the 4-cube
+  (S = 1.5N) and the random phase (about 0.13N squares at large size) all break the rule. A curled X under the rule has
+  to carry uncurl equal to its curl, which is the "curl inside a larger uncurl" picture of Update 83 (as corrected in
+  Update 92), now as a requirement. (4) When such an X opens, curl and uncurl must vanish together, in equal amounts:
+  they appear and disappear in pairs, as matter and antimatter do. *Ours, unverified:* this is the toy's form of her
+  Update 104.
+- **Exact at the smallest sizes** (`results/ergodicity_small.csv`, the complete listing of T4). At N = 16 no valid
+  arrangement keeps the rule (every one has S between 20 and 24). At N = 18, 9 of 26 classes have S = 18: three perfectly
+  flat (no curl at all) and six with curl balanced by uncurl (surplus 2 to 9). Whether the moves join these nine without
+  leaving S = 18 is not in the listing and is the first thing to check.
+- **The two forms for her choice.** (i) **Hard:** S is held at N exactly, and a move is allowed only if it leaves S
+  unchanged (or moves are paired so that S returns). This is "must stay zero" literally; it needs its own proof that the
+  restricted moves still reach every allowed arrangement, checked by exhaustive listing at N = 18 as Q9 and Q16 were.
+  (ii) **Soft:** an energy μ(S - N)^2 that makes a departure costly but possible, with μ a new constant scanned and
+  published. *Ours:* (i) is her words; (ii) is easier to build. The sealed machinery (Q12) holds energy fixed the same
+  way (i) would hold squares fixed.
+- **What it must be able to fail** (*ours*; a run waits for a pre-registration). Under the rule, does a balanced curled X
+  still open with a sharp, bounded release, and do curl and uncurl vanish in pairs as it opens, or does the rule freeze
+  it (no allowed path out) or let it melt? The prediction is hers to give once she has chosen the form.
+- **Her answers on the charge mechanism, the same day** (added after Update 105; words in the notebook). (1) Charge
+  depends on having mass, not on how much. (2) If each third carries a half, the three can release a photon when the net
+  spin goes to a whole number.
+  - *Ours; general knowledge, to verify.* (1) **Passes the checks.** Every charged particle observed has mass, and the
+    charge is the same whatever the mass (electron, muon, tau). Mass is necessary, not sufficient: the neutron, the Z and
+    the neutrinos have mass and no charge, which her rule allows. In the standard account electric charge as we know it
+    and the masses of the particles both appear at the same step, when the Higgs field settles. (2) **Needs one change.**
+    Three halves always total a half or three halves, never a whole number: an odd count of halves stays a half-integer
+    (exact). What three halves can do is realign from three halves to one half and give off a photon, which is observed:
+    the Delta baryon, three quarks aligned to spin three halves, can decay to a proton (spin one half) and a photon. A
+    total does reach a whole number for an even count: an electron and a proton realigning in hydrogen (spin 1 to spin 0)
+    give off the 21-centimetre photon, and an electron and a positron (spin 0 or 1) annihilate into photons. So "a photon
+    is released when the spins realign" is observed physics; "when the net spin goes to a whole number" holds for pairs,
+    not for three thirds.
+
+Update 106 (2026-10-25): **the author's idea: new points and links are added to flat space at no cost, and that is the
+expansion.** Her words are in `sandbox/NOTEBOOK.md` under that date (with her reaction to Update 105's Gauss-Bonnet
+reading: "love it. Great."). Recorded as an idea to test, not a decision: a varying count of points is on the parked
+list and needs its own dated decision under S1.
+
+- **Hers, put in order.** New points and black-white links can be, and are, added to flat space at no cost. That
+  explains the expanding universe, space growing between galaxies, and matter gathered at the nodes where galaxies
+  concentrate.
+- **What is exact in the toy** (*ours; arithmetic*). Flat space has energy zero at every size (16(N - S) + 4λX = 0
+  when every link has two squares), so adding flat cells costs nothing: "no cost" is already true of the toy's energy.
+  A flat cell adds one point and one square, so it keeps Update 105's rule (S = N). Growth that keeps space flat is
+  allowed by both.
+- **What it connects to** (*ours; general knowledge, not read by us, to verify*). (1) Claim 3 already names the
+  published form: in dynamical triangulations the number of building blocks varies and the cost per block plays the role
+  of the cosmological constant. A zero cost per point is the toy's cosmological term set to zero, which fits "dark energy
+  nets almost zero" (Update 41); the small observed dark energy would be a small cost or gain per point, still to be
+  explained. (2) Claim 6 already allows it: once spacetime exists and expands there is no global energy bookkeeping, as
+  in general relativity. (3) **Added only where space is flat** matches what is observed: galaxies and clusters, held
+  together by their own gravity, do not expand; the space between them does, and the emptiest regions (voids) expand
+  fastest, sweeping matter onto the walls, filaments and nodes of the cosmic web. (4) If growth happens only where space
+  is flat, the overall rate depends on how much space is flat, and so changes as structure forms. That is a published
+  minority idea, that clumping changes the measured expansion (backreaction; Wiltshire's timescape cosmology), and it
+  bears on the recent survey hints that dark energy may change with time (DESI, 2024 to 2025).
+- **What it must face.** (1) Costless and favoured by counting (more points, more arrangements), growth has no natural
+  rate: something must set how fast points are added, and a fixed rate per flat point gives steady exponential growth,
+  which is what a cosmological constant does. (2) Points must not be added inside atoms, bodies or planets; "flat only"
+  does that if those are curved enough in the toy's sense, which has to be shown. (3) The expansion's measured history
+  (slowing while matter dominated, speeding up in the last few billion years) has to come out.
+- **What the toy could test** (after a decision under S1). A move that inserts a flat cell, allowed only where the
+  neighbourhood is flat, at no energy cost, under Update 105's rule: do curled or matter-holding regions stay the same
+  size while flat regions grow, and does matter end up gathered where flat regions meet? Her prediction first.
+- **Her answer on the rate, the same day:** the rate is the speed of light, the same rate at which a curve moves through
+  space.
+  - *Ours.* A speed is a length per time and an expansion rate is a fraction per time, so a length is needed to turn one
+    into the other; which length decides everything. Arithmetic with Planck's time 5.39e-44 s, an age of 13.79 billion
+    years and H0 = 67.4 to 73 km/s/Mpc (general knowledge, to verify): (a) **Each point adds a point every time light
+    crosses one link,** with the link at the Planck length: a rate of about 10^43 per second, against a measured
+    expansion rate of about 2.2e-18 per second, too fast by about 10^61 (H0 times Planck's time = 1.2e-61). That is the
+    cosmological-constant problem in her terms (10^61 squared is the famous 10^122). (b) **Space grows at a front moving
+    at the speed of light,** as the toy's opening front does (T47 part A: fronts at a steady speed): then the size grows
+    in step with time, R = ct, not exponentially. That is a published minority cosmology, the coasting or "R_h = ct"
+    universe (Milne; Melia and Shevchuk 2012; general knowledge, to verify), whose rate is one over the age. Measured, H0
+    times the age is 0.95 to 1.03 depending on which H0 is used, close to the coasting value of 1, a coincidence the
+    literature knows; by rule 13 a close number is not a result. Coasting is disfavoured by the measured history
+    (supernovae, the spacing of galaxy clusters and the microwave background fit a slowing then speeding expansion
+    better), which it would have to face. (c) **"A curve moves through space at c"** is measured: gravitational waves
+    arrived with their light from a neutron-star merger in 2017, sharing c to about one part in 10^15.
+  - **Asked of her:** reading (a), each point adding points at light's pace across one link; or (b), space added at a
+    front that moves at light's speed.
+- **Her choice and her "why now", the same day:** reading (b), space added at a front moving at light's speed; and the
+  slowing and speeding eras cancelling today is not happenstance: it is the period of greatest entropy and most versions,
+  where an observer is most likely to be, give or take.
+  - *Ours.* (1) **Her "why now" is published, read in full** (`docs/reading/notes/2026-10-19_causal_entropic_principle.md`,
+    section 6; [BHKP07], the causal entropic principle): "typical observers will exist when most of the entropy
+    production in the causal diamond occurs", which falls "during the era when the matter and vacuum energy densities are
+    comparable". What it derives is that the two times fall within a factor of a few of each other (0.23 and 0.59 of the
+    vacuum time scale), not the exact moment; her "give or take" is the same width. It weighs observers by entropy
+    *produced* (mostly starlight warming dust), not by entropy at its maximum, and her measure of Updates 26 and 43
+    counts observers who evolved; the reading note sets those side by side. (2) **The two halves of her answer pull
+    apart, and she has to choose or join them.** In pure reading (b), the coasting universe, the rate times the age is
+    exactly one at every moment: there are no slowing and speeding eras, so nothing cancels and there is no coincidence
+    to explain. The eras and their cancelling belong to the standard model, where the causal entropic principle is
+    what explains "now". A join that would keep both (*ours, unverified*): growth at light's speed only where space is
+    flat (Update 106), so the overall rate follows how much space is flat, slowing while matter clumps and speeding as
+    voids take over, which is the timescape shape.
+  - **Asked of her:** coasting at every moment (pure b), or b only in flat space with the eras coming from how much space
+    is flat.
+- **Her choice, the same day ("Proceed, as you suggest"): growth at light's speed only where space is flat, with the
+  slowing and speeding eras coming from how much space is flat.** Adopted as her hypothesis about reality (not a toy
+  rule: a move that adds points is still on the parked list and needs its own decision under S1). In one line: space
+  grows at a front moving at c wherever it is flat; matter clumping shrinks the flat share and the overall rate slows;
+  voids taking over grow it and the rate speeds up; observers are most likely in between, where entropy production
+  peaks ([BHKP07]).
+  - *Read (assistant agents; `docs/reading/notes/2026-10-25_timescape_reading.md`, building on
+    `docs/reading/notes/2026-10-20_backreaction_timescape.md`; read through a page reader, quotes to check against the
+    PDFs; read status per source in the notes).* Its quantitative published relative is Wiltshire's timescape cosmology
+    ([Wil07a], [Wil07b]): voids expand faster than walls and their clocks tick faster; the walls are spatially flat and
+    the voids negatively curved; the acceleration is apparent (seen by an observer in a wall reading wall clocks) while
+    the volume average slows at all times. The void fraction grows toward 1 (about 0.74 to 0.76 today); the apparent
+    turn from slowing to speeding comes when it passes about 0.59 (redshift 0.9, wall-clock age 7.1 billion years); the
+    speeding is weak; the model ends coasting, size in step with time. H0 times the age moves from 2/3 toward 1 (about
+    0.93 today, from its equations). Evidence: supernova fits from 2007 to 2025 favour it (Seifert and others 2025,
+    strongly on the full sample, weakly above redshift 0.075); against, the verdict has depended on the light-curve
+    fitter (Kwan, Francis and Lewis 2009), a 2024 survey found its supernovae and BAO in tension under timescape, and
+    none of the papers read tests it against the full microwave-background spectrum.
+  - **Where it matches her hypothesis and where it is backwards** (*ours, unverified*). It matches the shape: the
+    overall rate follows the share of fast-growing space, it slows then speeds as structure forms, bound regions stay
+    fixed, and it ends coasting (her reading (b)). It differs four ways: (1) **in timescape the flat regions (walls,
+    where matter is) are the slow ones and the negatively curved voids the fast ones**, the reverse of "growth only where
+    flat", unless her "flat" means empty; (2) no front at c; (3) no points are added; (4) the acceleration is apparent,
+    not a speeding-up of the whole. Point (1) bears on her Update 83: the uncurl left when matter formed adds negative
+    curvature, which in timescape's terms would be what makes voids grow fastest.
+  - **What it must face, from the earlier bullets:** the measured history (when the slowing turned to speeding, about
+    five to six billion years ago, general knowledge, to verify); the microwave background, which fixes the early
+    universe's contents; and showing that bound regions (atoms to galaxies) count as curved in the toy's sense.
+
+  - **Asked of her:** whether her "flat" means empty space (then it is timescape's void and the match holds), or flat in the curvature sense (then timescape has growth backwards from hers, and the voids' negative curvature, her Update 83 uncurl, is where growth is fastest).
+
+Update 107 (2026-10-25): **the author's two pictures of thirds and halves at a cube's corner, and her answer that flat
+means empty.** Her words are in `sandbox/NOTEBOOK.md` under that date. Recorded as ideas to test; she says neither
+coheres clearly to her yet and asks that both be kept.
+
+- **Hers.** (1) A point touches 12 squares: four squares at right angles in each of three planes. (2) Where three cubes
+  come together, the 180 degrees splits into three pieces with a 60-degree twist each, which is not the 180 she had been
+  talking about. (3) Flat is empty: matter curves space and makes it less than flat, and a whole front must be open,
+  flat, for space to expand.
+- **Exact** (`sandbox/cube_sixty_degree_look.py`, finite geometry). (1) Holds: of a point's six links, 12 pairs are at
+  right angles (each a square) and 3 are straight; this is the six-link toy's flat value (four squares on each link,
+  S = 3N, Update 105). (2) About a body diagonal, a 60-degree turn alone is not a symmetry of the cube, and neither is a
+  180-degree turn; the 120-degree turn is, and keeps each point's kind. **A 60-degree turn together with a mirror is a
+  symmetry, and it swaps every point's kind (black to white).** Two such steps make the 120-degree turn and keep the
+  kinds; three make inversion through the cube's centre, which swaps them, and their turns add to 180 degrees.
+- *Ours, unverified; a reading for her to accept or refuse.* Her 60-degree pieces exist on the cube only as handed steps
+  (each carries a mirror) that change a point's kind, and three of them make 180 degrees, the half turn that is what
+  makes an electron-like particle in Levin and Wen's model (Update 104's reads). She has said the kinds separate regular
+  from anti (24 October). Under that reading an odd number of steps changes kind and an even number keeps it, and a lone
+  step is never a plain rotation of the cube. Whether this maps onto charges of one and two thirds is not shown and is not
+  claimed; it is the first place where "thirds" and "halves" meet in exact geometry, which is why it is recorded.
+- **Flat means empty: the match with timescape holds** (Update 106 reading). Her flat-and-empty regions are timescape's
+  voids, which grow fastest; matter's regions (the walls) grow slowest. *Ours:* a word to keep straight on the pages:
+  the toy's "flat" is empty, while in cosmology an empty, expanding void has negative curvature in space, so the same
+  region is "flat" in her and the toy's sense and "negatively curved" in timescape's. Her "a full front must be open" is
+  the condition that growth crosses only empty space.
+- **Her clarification, the same day:** "3 60's make the half we see in the physics is the idea." Three 60-degree pieces
+  make the spin one half of physics.
+  - *Ours.* Exact (the look above): on the cube, three steps add to 180 degrees of turning but carry one mirror with
+    them, so what they make is a point flip through the centre (inversion), not a plain half turn; a plain 180-degree
+    turn about a body diagonal is not a symmetry of the cube at all. *General knowledge, to verify:* in physics, spin one
+    half is about plain rotations (a 360-degree turn gives a minus sign, 720 returns), while a point flip is parity, the
+    operation that relates a particle to its mirror image. So on the cube her three 60s land on parity together with a
+    swap of the two kinds of point, which is close to her "an antiparticle is the mirror image of its strand", and not on
+    spin. For three 60s to make the spin half, the mirror would have to be removable, which the cube does not allow; a
+    lattice or a twist rule that does allow it would be a different model, to be decided under S1.
+- **Her notes on the questions file, the same day** (verbatim in the notebook). (1) **The base is two degrees of freedom,
+  twist and curl**; points and links are not part of it, but a useful way to describe the three-dimensional spacetime
+  that emerges from them. (2) The "surface" whose total stays zero (Update 104) is not a surface in space but those two
+  degrees of freedom; the math is to be done and the analogies written both ways. (3) Three strands of 60° make 180°,
+  her answer on where spin one half comes from. (4) Yes: atoms, planets and galaxies must count as curved so that only
+  empty space grows. *Ours:* (3) raises whether the 60° is the strand's own twist angle (then the cube's mirror does not
+  arise) or a turn of the cube's grid (then it does), and whether the electron is three 120° thirds (her 360° band of 24
+  October) or three 60° pieces; both are asked in the questions file (S1). Under the hard zero-total rule, growth in
+  empty space keeps the balance if points may be added (each flat cell brings one point and one square), so Update 105's
+  rule and Update 106's growth fit together.
+
+Update 108 (2026-10-25): **the author's second pass on the questions file: the hard zero-total rule confirmed; adding
+points to empty space decided in principle; her matter picture and her mechanism for the burp's matter; two sandbox
+looks.** Her notes are in `sandbox/NOTEBOOK.md` verbatim; the questions file is rewritten around them.
+
+- **DECISION (the author's): the zero-total rule takes its hard form** ("okay then I confirm"): curl minus uncurl is held
+  at exactly zero, squares = points with four links. *Exact, the same day* (`sandbox/zero_total_rule_reach_n18.py`): at
+  N = 18 the moves under the rule join all 9 allowed classes in one piece; at N = 16 none exists. Under the rule the
+  published hot phase is forbidden (it has far fewer squares); warmth varies where curl and uncurl sit, not their total.
+- **DECISION (the author's, in principle): the toy may add points to empty space at no cost** ("agree"), lifting the
+  parked "varying base-level count" for that one move; her prediction (E2): curled and matter-holding regions keep their
+  size while empty regions grow, and matter gathers where empty regions meet. When it is built is to be decided with the
+  order of changes proposed in the questions file (E1′); nothing is built yet.
+- **Confirmed:** the base is two degrees of freedom, twist and curl, with points and links as the description of the
+  emergent spacetime (H1); the surface of the curvature balance is twist and curl (H5); the charge rule (0a); the
+  whole-twist rule for matter strands only, dark matter possibly all one-sided strips with no charge (0c); dark strands'
+  colour and sign agree (2); the boundary prediction as read (4); the field's coupling tied to the graph's temperature
+  (6); the tube's waiting time first (7); four links first (8); ours slightly negative, the parent positive (H5).
+- **Her matter picture** (H3 of the file): every strand, matter and dark, of three thirds tying the 12 right angles of
+  three planes; each third 120° of charge-twist and 60° of spin-twist, as grid turns; the three together are what can be
+  written as three-dimensional space and move. *Ours, exact:* as grid turns the 60° carries a mirror and swaps the kinds,
+  and 120° then 60° is the point flip (S1 offers three ways forward; recommended: the spin-twist as the strand's own
+  twist angle).
+- **Her mechanism for the burp's matter** (H8): the positive parent pulls away our surplus antimatter; without it curl
+  costs more than uncurl (λ > 1); at the snap the store's energy comes out as matter and antimatter that cancel (λ = 1)
+  except one burp of surplus matter, which without the missing antimatter would all be light. Her prediction under the
+  hard rule, read from it (inferred until she confirms): a balanced X opens with one sharp, bounded burp, curl and uncurl
+  vanishing in pairs.
+- **Light under the hard rule** (*ours, exact at leading order*): the field's leading reward is the same per square, and
+  every allowed arrangement has the same number of squares, so at leading order light neither lowers nor raises the
+  curling cost under the rule, and decision 0's fork disappears there; higher-order terms remain to compute. Her "light
+  lowers it" is therefore not supplied at leading order.
+- **The curvature-sign look** (exploratory, `sandbox/opened_space_curvature_sign.py`): T51's 600 opened sheets keep net
+  curl (519 positive, 80 zero, 1 negative; mean +9.2, falling with slower cooling). The toy reason for "ours negative"
+  is killed; her other reasons stand and none is the toy's.
+
