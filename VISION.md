@@ -4058,4 +4058,12 @@ words are in `sandbox/NOTEBOOK.md` under that date.
 - **What can be done next, cheaply** (*ours*): put the double well on the toy's own flat torus with the field coupled to
   curl, and ask whether the wall sits where the wiring's curled region ends, and whether its tension gives a critical
   patch size like T54's. A look first; a registered test only after she chooses the form.
+- **The switch-influence look, read** (her idea of Update 116; `sandbox/switch_influence_cone.py`, a look). On a flat
+  32 x 32 torus at lambda = 1.25: at g = 2, 4 and 5 the sheet takes 0, 1 and 12 switches in 305 sweeps, so influence
+  cannot spread; from g = 6 the sheet melts, and one switch's influence reaches all 1,024 points within 1 to 10 sweeps,
+  jumping up to 7 links in a sweep, until it stops at about 7 links, the width of the melted graph. Verdict as declared:
+  **JUMPS** in the warm toy, nothing at all in the cold one. *Ours:* the published move can join any two links anywhere,
+  so it has no light cone to find. Her idea needs moves that act only nearby (a switch confined to one square's
+  neighbourhood) or soft space, whose waves already have one speed. It kills a speed from the published move, not her
+  idea.
 
