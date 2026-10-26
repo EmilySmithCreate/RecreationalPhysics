@@ -249,3 +249,15 @@ Answered 25 October: one gate, double the bill; both twins released at once (Upd
   parent refolds and opens again within the same instant, paid the same way, and the toy needs that built)? # #
 - **RB3 reopened by the twins.** If what the spin sorts is electric charge, each twin would be charged. Which count is it? # #
 
+### Read-back of her answer to T1 (25 October; VISION Update 122)
+
+- **T1a. The twins' X.** Each twin comes from its own curled direction, so the twin X has two curled directions (in the
+  toy, the rod 4 x 4 x L, one direction open), not the slab (one curled). Right? # #
+- **T1b. The cascade.** Both wait for the stores to exceed the barrier; the first opens, the hold-back drops, and the
+  second opens at once. In the toy that means the first opening must lower the second's barrier. Right? # #
+- **T1c. Energy.** "Each side gets half the curl energy" against "each twin carries the full curling cost" (earlier
+  today). Which? # #
+- **T1d. T82.** It tests the second twin drawn from the stores, which is not your mechanism. Withdraw it (kept on the
+  record, never run) and design the cascade test instead? Ours: yes. # #
+- **RB3, via poles.** Is what the spin sorts the direction of a dipole (north up or down), each twin neutral? # #
+

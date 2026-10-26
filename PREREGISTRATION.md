@@ -9025,3 +9025,9 @@ fail. It stays as she and we agreed it.
 
 **What would count against the twin gate.** CYCLES failing in cells where T71 cycled; twins short of a N_slab where no
 clean move fired; a first birth far from 4a/r. Four answers under rule 11 before any change.
+
+**T82, status (25 October 2026, before any run).** Not launched. The owner's answer to the twin-mechanism question (VISION
+Update 122) describes each twin as its own opening of its own curled direction, the second triggered by the first; T82
+tests the second twin drawn from the stores, which is not her mechanism. Whether to withdraw T82 is asked; until then it
+stays registered and unrun.
+

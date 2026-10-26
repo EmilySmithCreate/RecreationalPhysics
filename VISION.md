@@ -4114,3 +4114,37 @@ markers; the full audit is ASSUMPTIONS O157.
    electric charge, each twin is charged); a test that could not fail replaced by one that can; the T82 analyzer now
    scores P1 to P4; a duplicated line in the soft-front look.
 
+Update 122 (2026-10-25): **the author's answer on how the twins are made: two curled directions, curled together and
+handed opposite, open in a cascade, the first releasing the hold-back on the second; and her question whether a trapped
+knot can have a north and a south pole.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Hers, put in order (read back before anything is built).** The two curls are always made together, and curling a
+  direction costs the same whether one or two are curled. Twist and curl are pressed together at the front like a lipid
+  membrane, curl on the inside and anticurl on the outside. Both need the stores to exceed the barrier; then the first
+  snaps, the force that raised λ (the hold-back) drops out at once, and the second twin's Big Bang follows. Two
+  three-dimensional spaces emerge, one from each curled direction, one curled right-handed and one left-handed, which
+  is why they always ride together; each side gets half the curl energy, which gives the photon release pattern and
+  becomes matter and antimatter. The flat space seen from inside is the fractal of the two degrees of freedom; the
+  vacuum's fleeting matter-antimatter flashes are the same pattern at the smallest scale.
+- **What it answers (T1, read):** each twin is its own opening, of its own curled direction, the second triggered by the
+  first; not the second twin drawn from the stores. **So T82 as registered tests a mechanism that is not hers**, and is
+  not launched; whether to withdraw it is asked.
+- **What it touches** (*ours*). (1) *Measured, earlier:* in the toy, a torus with two curled directions opened one and
+  stopped (T30, read as registered NEVER OPENS, O64; T48 ADVANCES ONLY at λ = 1.25, both opened in 5 of 16 at λ = 1.40,
+  O91). Her mechanism names what is missing there: something holding the second back that lets go when the first opens.
+  The double-well wall of Update 120 (a wall with tension) is a candidate way to build that hold-back. (2) "Each side
+  gets half the curl energy" sits against her answer of earlier today that each twin carries the full curling cost
+  (Update 120); asked. (3) *General knowledge, to verify:* the vacuum's fleeting pairs are virtual particles; they do not
+  each release a real photon (energy would not balance), and they show up indirectly (the Lamb shift, the Casimir force).
+  A universe as a vacuum fluctuation with zero total energy is published (Tryon, Nature, 1973, to read), a relative of
+  her fractal picture.
+- **Her question: can a knot of closed space trapped in a shell of curled slab have a north and a south pole?**
+  *Ours; general knowledge, to verify.* A north and a south pole together is a magnetic dipole, and a dipole is neutral
+  overall, so twins sorted by which way their dipoles point would each stay neutral, which would answer RB3's charge
+  problem; the neutron is the familiar case (no charge, a magnetic moment; her answer of 24 October). A lone pole is a
+  magnetic monopole: allowed in theory (Dirac 1931; 't Hooft and Polyakov 1974 in unified theories), never observed
+  despite long searches. In the toy, the lattice light (term 10) is the kind of field in which monopoles exist as
+  defects: the net flux through a closed surface of squares counts the poles inside (compact lattice electromagnetism,
+  DeGrand and Toussaint 1980, to read). So a trapped knot could carry a dipole, or a pole, in the toy's field; whether it
+  does is a look, not yet run.
+
