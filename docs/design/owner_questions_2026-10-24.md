@@ -85,8 +85,7 @@ describe". Nothing can be built until you describe it.
 pricing broken points would penalize the very thing your rule requires. **Recommended:** keep it held until a
 rule-obeying X has been pushed (Q2). Say if you disagree.
 
-**Older items still open, in order of what they unblock** (full text further down): ★16, your word on the held-out runs
-of T71 and T74 at L = 16; H3, H4 and H8 of the hypothesis below, not yet confirmed; items 17 to 25.
+**Older items still open** (full text further down): H3, H4 and H8 of the hypothesis below, not yet confirmed; items 17 to 25.
 
 ## Your hypothesis as it stands (25 October): confirm, correct or strike each line
 
@@ -234,7 +233,10 @@ R1, R2. **Reading owed by the assistant** (no answer needed): holography and the
 
 ## Older items (handoffs of 22 and 23 October), unchanged
 
-16. ★ **Her word on the held-out runs** of T71 and T74 at L = 16 (`sandbox/heldout_2026-10-23/`).
+16. ~~**Her word on the held-out runs** of T71 and T74 at L = 16 (`sandbox/heldout_2026-10-23/`).~~ *Answered 25 October
+    (VISION Updates 114 and 115): both go ahead on her registered predictions. Listed here as open by mistake until 26
+    October. What remains is ours: T71's L = 16 jobs were queued on 25 October and their results are not yet fetched;
+    T74's L = 16 amendment and jobs have not been written or queued.*
 17. **The runaway remedy for soft space** (`docs/design/regge_stage_b_brief.md`, question 5).
 18. **Her prediction for the λ-from-curvature test** (Update 89).
 19. **Her predictions for the first soft-space runs** (a disturbance's speed; two knots' pull).
