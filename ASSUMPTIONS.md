@@ -4673,3 +4673,21 @@ author and should be disclosed as such in any submission. Physics estimates mark
     predictions sheet the go-ahead line was left blank. Her explicit go-ahead is of 26 October ("Yes please"); the
     questions file had also kept item 16 open after she answered it. Both corrected.
 
+- **O161 T74 AT THE HELD-OUT SIZE L = 16: HOLDS, AND REPEATS STAGE 1 (26 October 2026, 23:02 UTC by the clock; read by
+  Claude Fable 5.1 without the owner).** The 54 L = 16 jobs of T74 Amendment 6 (launched 20:13 UTC) were fetched and
+  accepted the same evening (54 of 54 pass `accept_inbox.py`, none failed on Batch, 16 replicas a cell) and scored by
+  `scripts/t74_heldout_score.py` against `configs/t74_heldout_prediction.json`, written from L = 8 and 12 alone before
+  any L = 16 run existed (rule 14); neither file was touched after the data landed. **HOLDS AT L = 16:** all 18 pooled
+  fed-phase periods inside their ranges. The three cells of her caveat (λ = 1.10, c = 2R) read 6.425, 6.435 and 6.616
+  sweeps against fits of 6.430, 6.451 and 6.496; the last, with meals of 256, is 1.8 % above its fit and 3.4 % above the
+  exact 6.40, inside its range (6.311 to 6.749). **The three secondary reads REPEATS STAGE 1:** fed (51 BURPS, 3 MIXED,
+  the λ = 1.10, c = 2R, meals-of-256 cells, the same rate as both stage-1 sizes; no NEVER BURPS); timing (all 12 words as
+  written); unfed (33 of 33 repeat; 19 of the other 21 on their most likely word, range 14 to 21). The shared prediction
+  (Amendment 5), reported per cell: cold 16 of 18, warm 18 of 18, equal 3 of 9 scored and 9 SPLIT. Books residual at
+  most 7.8 × 10⁻⁹. Reading in PREREGISTRATION T74, after Amendment 6. *What it shows (ours):* with the feed, cap and gate
+  all proportional to N_slab and one layer proposal a sweep, the period is arithmetic by construction, and a third size
+  confirms it with the rare clean move's rate unchanged; it tests a shared expectation and cannot separate her picture
+  from ours. Whether the burp is anything beyond the ledger is item 4 of the 26 October program (owner's agreement
+  22:42 UTC), whose L = 16 part can now run. The `layer_feed` affordability guard fix (O158 (b), (d)) is unblocked: both
+  held-out stages are read.
+

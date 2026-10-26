@@ -4423,3 +4423,20 @@ with her word of 25 October (Updates 114 and 115), which had been left open on o
 - **Corrected:** Update 115 read her "Confirm" of 25 October as the T74 go-ahead; the go-ahead line on her sheet was
   blank, and her explicit go-ahead is of 26 October.
 
+Update 131 (2026-10-26, 23:02 UTC by the clock; written by Claude Fable 5.1 without the author): **T74 at its held-out
+size reads HOLDS AT L = 16, and its fed, timing and unfed reads repeat stage 1.** The 54 cells launched under Amendment 6
+landed the same evening, all accepted, and were scored against the numbers written from L = 8 and 12 before any L = 16
+run existed (ASSUMPTIONS O161).
+
+- **Measured (rule 14).** All 18 periods between births lie inside their ranges; the three cells of her caveat ("but the
+  surplus matter": λ = 1.10, c = 2R) are inside too, the large-meal one 1.8 % above its fit where the rare clean move
+  takes energy from a few daughters. Fed: BURPS in 51 of 54 and MIXED in the same three large-meal cells at λ = 1.10 as
+  at both smaller sizes. Timing: all twelve words as written. Unfed: every cell that had to repeat its word did, and 19
+  of the other 21 gave their most likely word. *Ours:* the feed, the cap and the gate all scale with the slab, so the
+  period is arithmetic by construction; a third size confirms that arithmetic and shows the clean move's rate did not
+  grow with the points. Her prediction is ours (Amendment 5), so the run cannot separate her picture from ours.
+- **What follows.** Both held-out stages are read, so the `layer_feed` guard fix (O158) is unblocked. Whether the fed
+  slab's burp is anything beyond the ledger's bookkeeping is item 4 of `docs/design/next_experiments_2026-10-26.md`,
+  which she agreed to at 22:42 UTC; its L = 16 part can now run. Whether piece 5's status on the programme page moves,
+  and the page's republication, are hers.
+

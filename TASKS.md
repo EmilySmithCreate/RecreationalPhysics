@@ -1093,5 +1093,8 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
 `scripts/t71_heldout_score.py`).* T74's L = 16 registered and launched: PREREGISTRATION T74
 Amendment 6, 54 jobs (`cloud/queue/2026-10-26_t74_heldout.txt`); to read: add `t74_*_L16_*` to
 `cloud/fetch/request.txt`, accept, then `PYTHONPATH="src;scripts" python scripts/t74_heldout_score.py`. After both are
-read: the `layer_feed` guard fix of the O158 section, with its test.
+read: the `layer_feed` guard fix of the O158 section, with its test. *T74 read 2026-10-26 (23:02 UTC, by Fable without the owner): HOLDS AT L = 16,
+all 18 periods inside, her caveat's three cells included; fed, timing and unfed REPEATS STAGE 1 (O161; the reading in
+PREREGISTRATION after Amendment 6). The guard fix is now unblocked and is the next code change; item 4 of the 26 October
+program (the ledger checks) can read the L = 16 files.*
 
