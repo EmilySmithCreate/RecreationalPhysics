@@ -268,3 +268,5 @@ Answered 25 October (Update 123): T1d withdraw T82; RB3 the dipole's direction, 
   direction tie withdrawn on 16 October ("all at the last"), now between the twin pair's two directions. Bring it back
   for the pair? # #
 
+Answered 25 October (Update 124): T1a′ yes; T1e yes, the tie for the pair, its form f = (0, 0, a, 0) as read (to confirm); proceed toward a signed twist.
+

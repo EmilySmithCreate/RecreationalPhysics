@@ -2486,4 +2486,11 @@ each side gets half the curl energy… can it happen any other way? I think ener
 Withdraw t82
 
 RB3, restated: is what the spin sorts the direction of a dipole, north up or north down, with each twin neutral. Confirming"
+- 2026-10-25, the owner (verbatim; VISION Update 124): "If each curled direction carries its own curling cost yes… do we bring back the tie with the adjustment that it applies to two, two spacial dimensions collapse. Leaving a knot. Which bulds up curl until it snaps to 2 new 3 directional spacetimes. One at the North Pole and one at the South Pole, with the center holding mismatched amounts of curl and anticurl due to moving through a soft body to the handedness opposite pole.
+
+y "a rod between two curled slabs," do you mean two curled slabs of opposite handedness joined by a rod, each slab opening into one twin?  Yes
+
+The toy can’t yet tell right-handed from left-handed. That needs the signed twist label from 24 October, or soft space’s second stage. Let’s keep proceeding towards this goal. 
+
+2.	T1e: Bring back a tie for the pair, so that curling two directions costs the same as curling one? Yes, anything we can check sandbox before pivoting?"
 

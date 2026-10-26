@@ -4168,3 +4168,33 @@ energy.** Her words are in `sandbox/NOTEBOOK.md` under that date.
   opening releases everything, earlier ones nothing; Update 47, O106), and the tie was withdrawn on 16 October; so the
   pair would need a tie between its two directions, a decision under S1. Asked.
 
+Update 124 (2026-10-25): **DECISIONS (the author's): the tie returns for the twin pair; the twin X is two curled slabs of
+opposite handedness joined by a rod; proceed toward a twist the toy can tell right from left. A first exact look: under
+the pair tie, opening the first direction lowers the second's wall from λ of about 1.2 up.** Her words are in
+`sandbox/NOTEBOOK.md` under that date.
+
+- **Hers.** Yes, each curled direction carries its own curling cost; and the tie comes back, adjusted to apply to two:
+  two space directions collapse together, leaving a knot, which builds up curl until it snaps into two new
+  three-direction spacetimes, one at the north pole and one at the south pole, the centre keeping mismatched curl and
+  anticurl because it moves through a soft body to the opposite-handed pole. T1a′: yes, two curled slabs of opposite
+  handedness joined by a rod, each slab opening into one twin. Keep proceeding toward a twist the toy can tell right from
+  left (the signed label of Update 97, or soft space's second stage).
+- **The pair tie, its form fixed here before any run** (*ours, her decision; to confirm*): a point with exactly one of the
+  pair's two curled directions open pays a, the curling cost of one direction; f = (0, 0, a, 0) per point by the number
+  of open directions d = 0, 1, 2, 3 (a = 4(λ − 1); a broken point counts 0). Then the rod (two curled) and the slab (one
+  curled) both sit 2a per point above flat: curling two costs the same as curling one, and each direction still carries
+  its own cost. Opening the first releases nothing; opening the second releases 2a per point, one curling cost for each
+  twin, half each, as she said. The model with it is our family, never CQG.
+- **The exact look** (`out/pair_tie_walls.txt`; the cheapest single switch out of each shape, the method of O106). Rod
+  against slab: 30.4 against 36.8 at λ = 1.10, 29.6 against 31.2 at 1.15, 28.8 against 25.6 at 1.20, 28.0 against 20.0
+  at 1.25, 25.6 against 3.2 at 1.40; flat space 64 throughout. Untied the slab's wall is always the higher (36.0 against
+  16.0 at 1.25), which is why the second direction never followed in T30, T48 and T53. **Under the pair tie, from λ of
+  about 1.2 up, the second wall is lower than the first: once the first direction opens, the second goes more easily,
+  her cascade, at the level of single moves; and the rod's own wall rises, so the twin X is more stuck for now.** Below
+  about 1.17 it is the other way. *Said plainly:* single-move walls are not the true barrier (T54 found critical patch
+  sizes); this kills nothing and crowns nothing.
+- **What can be checked next in the sandbox, before any pivot** (*ours*): (1) the true barrier under the pair tie, by
+  T54's patch method on the rod, against λ; (2) a short warm-bath look at the rod under the pair tie at λ = 1.20 to 1.40:
+  does one crossing open both directions, as the walls suggest? Both are cheap and use built code. The handedness of the
+  two slabs, and her north and south poles, need the signed twist first.
+
