@@ -1098,3 +1098,14 @@ all 18 periods inside, her caveat's three cells included; fed, timing and unfed 
 PREREGISTRATION after Amendment 6). The guard fix is now unblocked and is the next code change; item 4 of the 26 October
 program (the ledger checks) can read the L = 16 files.*
 
+
+## 26 October, evening: the program of `docs/design/next_experiments_2026-10-26.md`, items started on the owner's word  ◑
+
+**Added 2026-10-26, 23:23 UTC by the clock (Fable).** Her words of the evening are in `sandbox/NOTEBOOK.md` (22:37, 22:41,
+22:42 UTC). Done, each a look or an exact reading, committed with its LOG line or O entry: item 3 (a) at three switches
+(zero at six links; the four-link seam move reread by 3 (c) as a wrap effect), 3 (b) with the vertex-link count (the
+stacked-sphere point occurs), 3 (c) with held-out L = 12 HELD; item 4 on stage 1 and both held-out sizes (O162). Running
+or owed: the four-switch count at six links (3 (a), her agreement with Fable's hypothesis of 22:37 UTC); the
+two-stories brief; the `layer_feed` guard fix (unblocked by O161); the gate null and the L = 24 size claim of item 4
+(wait on her prediction); the programme page's piece 3 sentence on the seam move, to be softened (a wrap effect), and
+piece 5 after T74, both at the next republish.

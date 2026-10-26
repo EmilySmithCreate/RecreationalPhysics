@@ -4691,3 +4691,52 @@ author and should be disclosed as such in any submission. Physics estimates mark
   22:42 UTC), whose L = 16 part can now run. The `layer_feed` affordability guard fix (O158 (b), (d)) is unblocked: both
   held-out stages are read.
 
+- **O162 EXACT: IS THE FED SLAB'S BURP ANYTHING BEYOND THE LEDGER? Item 4 of the 26 October program, read on T71, T74
+  stage 1 and both held-out sizes (26 October 2026, 23:23 UTC by the clock; read by Claude Fable 5.1 without the owner; her
+  word on the item's prediction, 22:42 UTC: "Agre with your hypothesis").** An exact reading of registered files, no
+  run; it crowns nothing. Reader `scripts/t71_t74_ledger_checks.py` (named files, no glob; `--null` runs the bucket;
+  nine tests in `tests/test_t71_t74_ledger_checks.py`, among them the bucket against `run_layer_outside` with wiring
+  moves off, draw for draw). Files: T71's model and layer arms at L = 8, 12 and 16; T74's 108 stage-1 files and the 54
+  held-out L = 16 files. Definitions in the script's docstring; the item's words scored as written.
+  - **(a) IDENTITY HOLDS in every cell** (T71 24 cells, T74 162): energy in since the last birth − ΔF − the daughter's
+    energy − the stores carried = 0 to 1e-9 at every fed-phase birth (about a million). The item's form without the
+    carry is off by the stores the slab carries between births: mean 0.005 to 0.8 a N_slab, up to 22, so the carry is
+    part of the identity and not a rounding term.
+  - **(c) WIRING-FREE SHARE above 90 % in every cell**: above 0.99 everywhere and exactly 1.000 in 124 of 144 stage-1
+    cells and 51 of 54 at L = 16; the exceptions are the λ = 1.10, c = 2R cells with clean moves (0.9992 to 0.9998 at
+    L = 16). Widenings (6 → 8, no daughter) are thousands per c = 2R cell.
+  - **(b) The bucket null, done:** a graph-free model with the reservoir, meals, relaxation, `edge_flow` with the cap,
+    even inflow, water-filling outflow, the pool and the gate on the two layers beside the cut, the same generator
+    draws in the same order and each replica's own seed. It reproduces **1,708 of 1,728 stage-1 T74 replicas and 793 of
+    864 at L = 16 birth for birth** (sweep and energy to 1e-9). Every replica it does not reproduce is either one in
+    which a fed-phase clean move fired (8 at stage 1, 9 at L = 16, all at λ = 1.10, c = 2R, meals of 256) or an exact
+    pool-equals-gate tie that the registered code's per-point floating sum resolved on the refusing side of its 1e-12
+    tolerance (12 at stage 1, one checked by replay; 62 at L = 16, all in the nine λ = 1.25, c = 2R cells, 26 of 26
+    checked by replay, the other 36 read the same way, ours). A tie delays one birth by a sweep or two and leaves the
+    mean period equal to the null's to 0.02 %. **The null's period residuals equal the log's** (to the third decimal
+    at stage 1, the second at L = 16) in every setting without clean moves, including the whole RESIDUAL PATTERN
+    (meals of 256 with c = 2R: −1.8 to −2.2 % at λ = 1.25 and 1.40), so that pattern is the cap's and the gate's, not
+    the wiring's. The one setting the bucket does not reproduce is the one the graph touches: λ = 1.10, c = 2R, meals
+    of 256, where the clean moves lift the period residual to +2.06 (bucket +0.42), +0.94 (+0.11) and +3.38 % (+0.33)
+    at L = 8, 12, 16.
+  - **(d) at λ = 1.10, c = 2R:** the shortfall births are SEED-LINKED by construction (one clean move damages the
+    lattice and every later birth of that replica can be off: 235 of 367 fed births in one stage-1 replica, at 8
+    distinct energies from 0.094 to 1.25 a N_slab, the split's release depending on where the cut falls against the
+    damage); the clean moves, the events, are MEMORYLESS in T71 (p 0.67 to 0.93) and at L = 16 (14 moves in 9 of 48
+    replicas, p 0.064), borderline on 6 and 7 moves at stage 1 (p 0.046, 0.029: no power). Declared test: per-replica
+    counts against a binomial or Poisson null, 20,000 draws, seed 20261026, SEED-LINKED below 0.05.
+  - **(e) PER-BIRTH SWITCHES against N:** T71 at λ = 1.10, r = 1/16 gives w = 0.62 (0.22 to 1.05)
+    on 17, 23 and 37 moves at L = 8, 12, 16, ∝ N by the declared rule and against FIXED at 95 %, weak; T74 at λ = 1.10,
+    c = 2R, meals of 256 gives 6, 7 and 14 moves over about 30,000 births at each size (2.0, 2.3, 4.7 × 10⁻⁴ per
+    birth), w = 0.67 (−0.03 to 1.43), UNDECIDED. The stage-1 pair (7, 7) of Amendment 6 is reproduced; ∝ N would have
+    put L = 16 near 12 to 16 and it gave 14. The L = 24 held-out claim of the item stays the test; nothing is launched.
+  - **Reading (ours, as the item's Ours said and the owner agreed):** at three sizes T71 and T74 show the ledger and
+    the cap working as registered and **no graph mechanism for the burp**: the births, their timing and their energies
+    are the bucket's, and what the wiring adds is a rare clean move at the smallest curling cost and the widest cap,
+    whose rate with size the counts cannot yet fix. A kill of a reading, not of her picture. The size claim's verdict
+    is the registered scorer's (O161, HOLDS AT L = 16), not this reading's. One exact note from the code, to verify:
+    `contract_layers` at x0 = w − 1 renames by +1 and sets x0 = w − 2, so the pair removed is the old (w − 3, w − 2)
+    while `pool_mask` charged the layers around the old (w − 1, 0); geometry unchanged, stores not; the null copies it.
+  - Not done: the gate null (gate 0.5 and 2 a N_slab) and the L = 24 size claim are registered follow-ups that wait on
+    her prediction. The programme page sentence the item asks for is hers to put on the page.
+
