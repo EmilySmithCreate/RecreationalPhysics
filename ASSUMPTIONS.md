@@ -4521,4 +4521,59 @@ author and should be disclosed as such in any submission. Physics estimates mark
     Boyle, Finn and Turok, Vilenkin or the Codex report itself. Not done from its list: a test that the second twin is
     drawn from the pool beside the cut rather than elsewhere (the split renumbers points, so it needs the layer code's
     index map); the replacement test checks instead that the stores paid exactly the refolds and the second twins.
-
+- **O158 AUDIT (rule 12, a different model): Codex on the later record of 25 October (26 October 2026).** Brief
+  `docs/reviews/2026-10-25b_codex_audit_brief.md`, pinned to commit f0802dfa and blind to O157 and Update 121; report
+  `docs/reviews/2026-10-25b_codex_report.md`, pasted in by the owner on 26 October. It could not clone the repository
+  (network), read the files at the pinned commit, ran none of the repository's code, and made its own scratch checks.
+  Its commit comes before Updates 122 to 125, so it did not know that T82 had been withdrawn before any run (Update 123)
+  or that RB3 had been decided. Corrections in VISION Update 126.
+  - **What it found that O157 had not.** (a) **Two reader defects, in T71's reader as well as T82's** (checked:
+    `scripts/analyse_t71.py` shares both). CYCLES counts the refolds from the first split to the end of the file, not
+    between births; and the energy per daughter is a running average over a replica's births, which can hide short
+    ones. *Exact, read from T71's files (384 replicas in the six daughter-ledger files):* every CYCLES replica has a
+    refold between each pair of consecutive births, and every birth adds exactly one daughter, so no T71 word changes.
+    In the ten cells scored at exactly a N_slab per daughter, every single birth is exactly a N_slab. In the two cells
+    where a clean switch fired (λ = 1.10, r = 1/16), the medians 0.99 and 0.89 hide a spread: 390 of 5,132 births at
+    L = 8 and 1,066 of 4,604 at L = 12 fall below 0.99 a N_slab, the shortest 0.094 and 0.069. O144 scored those cells
+    as failing the one-a-N_slab prediction, and that stands; the per-birth numbers are added here. (b) **The
+    affordability guard** `pool + 1e-12 >= bill` (`graphity.layer_feed`) lets a pool up to 1e-12 short pay, leaving a
+    store slightly negative (exact from the code; Codex's example leaves -5e-13). It applies in every release mode, so
+    to T71 and T74 too. Checked on T71's files: no logged store total is below zero. Not fixed yet: the module runs the
+    registered held-out stages of T71 and T74, so the fix waits until they are read, and comes with a test. (c) **Moves
+    that release nothing are gated and counted as splits** (exact from the code): a flat slab widening from 6 to 8 at
+    μ_n = 0 changes no energy, waits for the gate, and counts as a split with no daughter; and with μ_n > 2a a contraction
+    from 6 to 4 would be downhill and counted as a birth. No registered config sets μ_n (checked). T71's split counts
+    therefore include widenings that release nothing; its births come from the daughter ledger, which these do not
+    touch. (d) **"Energy is conserved exactly"** (the module's docstring) describes an accounting identity of a chosen
+    ledger, held to 1e-9 in the tests. It is not physical energy conservation between universes. (e) **T82's reader
+    had further gaps**: no check that 16 complete replicas exist; no check that each birth adds two; ONE BIRTH for any
+    run that does not cycle; P3 unscored, not failed, when the baseline is missing; P4 counts replicas, not moves; and
+    "more short twins" is a frequency that a median of averages cannot score. Moot, since T82 was withdrawn before any
+    run; a twin cell registered again needs a reader built on the sequence of individual births. (f) **Update 113**:
+    "with spin-one carriers opposite charges attract" holds for static charges of a force like electromagnetism, not for
+    the weak force. Corrected in place. (g) **Updates 118 and 120 ran CP, CPT and Boyle, Finn and Turok together.** An
+    antimatter-rich twin obeys the same laws as a matter-rich one (a different state, not different laws), so claim
+    step 7 is not threatened; CP violation only makes the two histories not exact mirrors. CPT symmetry of the laws
+    does not make the anti-twin a time-reversed copy, and BFT's two branches lie before and after one Big Bang, not
+    side by side from one black hole. Corrected in place. (h) **The pair-insertion look's scope** (Update 118, RB5):
+    two new points joined to the ends of three or four cut links within four steps of one point; no other rewiring, no
+    larger region. It rules out minimal rewiring only. Marked in place. (i) **Nine works missing from the
+    bibliography**: Boyle, Finn and Turok 2018; Farhi and Guth 1987; Farhi, Guth and Guven 1990; Popławski 2010;
+    Rideout and Sorkin 1999; Ambjørn, Jurkiewicz and Loll 2004; Kibble 1976; Callan and Coleman 1977; Lieb and Robinson
+    1972. All are now in `REFERENCES.bib`, unread, with details checked against Crossref.
+  - **What it found that O157 also found.** The twin gate as built did not match her words (O157 (1)); T82's numbers
+    were ours, two written after a scratch run (O157 (2)); JUMPS does not follow (it agrees with the withdrawal);
+    "direction" was our fill-in; Lieb-Robinson's scope; the tests established less than their descriptions said
+    (O157 (8)).
+  - **What it checked and found correct.** The twin ledger's algebra (F + stores + daughters fixed, the second twin
+    drawn once); 4a/r as the lower bound on the first wait; the insertion count, 407,371 = 32,216 joined + 375,155 not
+    joined, rebuilt independently; the field's resting widths, 7 at L = 24 and 13 to 15 at L = 48; the kink's width
+    and tension formulas; T71's same cell as the right comparator for T82.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. Four of its points were
+    already in the record: the timescape reversal (walls flat and slow, voids curved and fast; Update 106, "unless her
+    flat means empty"); RB1 as an alternation and not the curvature sign, and RB2 as needing faces and an Euler number
+    (Update 118); her caveat on the surplus marked as our reading, and OPENS then BREAKS kept in order (Updates 115,
+    116); and her two degrees of freedom, which the record gives as she said them, g and twist-curl first and curl and
+    twist after (Updates 118, 119). Two were out of date at the current commit: T82 is withdrawn and RB3 is decided (the
+    spin sorts a dipole's direction, each twin neutral; Update 123). It ran no repository code, so its test-coverage
+    findings come from reading.

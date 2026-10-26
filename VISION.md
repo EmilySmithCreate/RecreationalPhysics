@@ -3833,7 +3833,9 @@ curl facing in and uncurl facing out.** Her words are in `sandbox/NOTEBOOK.md` u
   lines, as toothpicks do in a shaken box, giving two tight layers with the curl facing the centre and the uncurl facing
   away, which puts the force into making the curl take more curl to snap three-dimensional space open at the front.
 - **Her question answered** (*ours; general knowledge, not read by us, to verify*). Yes in form: the weak force is carried,
-  as electromagnetism is, by particles of spin one, and with such carriers opposite charges attract. But today its
+  as electromagnetism is, by particles of spin one, and with such carriers opposite charges attract *(corrected 26 October
+  after the Codex audit, O158: that is the rule for static charges of a force like electromagnetism, with one kind of
+  charge; the weak force has several kinds and acts on one handedness, and no rule that simple holds for it)*. But today its
   carriers (the W and Z) are heavy, so the force reaches only about 10^-18 m. Above the electroweak temperature (about
   10^15 K, a hundred billion electron-volts or more, which a hot burp would exceed) the carriers are massless at the simplest level, but in the hot plasma the weak fields are screened within a short
   distance and gain a magnetic mass, so there is no long-range handed force; only hypercharge magnetism reaches far,
@@ -3992,11 +3994,17 @@ freedom.** Her words are in `sandbox/NOTEBOOK.md` under that date.
   spin direction; the curvature sign she gave first (both slightly negative) is not restated, and she says net flat over
   one joined surface, so whether the parent's side is positive stays hers to say if it matters.
   - *Ours; general knowledge, to verify.* A mirror image that swaps matter for antimatter and reverses handedness (the
-    operation called CP) is not quite a symmetry of nature: the weak force breaks it (kaon and B-meson decays), so a CP
+    operation called CP) is not quite a symmetry of nature: the weak force breaks it (kaon and B-meson decays), ~~so a CP
     mirror of our universe would run under slightly different laws, against her rule that the rules hold across
     generations (claim step 7). The operation that is an exact symmetry also reverses time (CPT), so the anti-daughter
     that obeys our laws exactly is our mirror with time running the other way, which is Boyle, Finn and Turok's
-    universe and anti-universe pair (2018, to read). And "told apart only by quarks" is nearly right in standard physics:
+    universe and anti-universe pair (2018, to read).~~ *(corrected 26 October after the Codex audit, O158: an
+    antimatter-rich daughter running forward in time obeys the same laws as a matter-rich one; it is a different state
+    under the same laws, so claim step 7 is not threatened. What CP violation does is make the two histories not exact
+    mirrors of each other, so "identical except for the spin" holds only approximately. CPT symmetry of the laws does not
+    make the anti-daughter a time-reversed copy of ours. Boyle, Finn and Turok's pair ([BFT18], unread) is two branches
+    before and after one Big Bang, not two daughters of one black hole: a cousin of her picture, not the same mechanism.)*
+    And "told apart only by quarks" is nearly right in standard physics:
     the observed matter-antimatter difference lives in the weak force, in quark mixing (and possibly neutrinos).
 - **RB2, hers: net flat is a total over one joined surface.** Her picture of the surface: the relationship between two
   degrees of freedom, perhaps g as one and twist-curl as the other, self-referential, which seen from within makes
@@ -4007,7 +4015,10 @@ freedom.** Her words are in `sandbox/NOTEBOOK.md` under that date.
   her two degrees of freedom were twist and curl (H1); here twist-curl is one and g the other. Which pair is hers to say.
 - **RB5, hers: growth by whole rows; no local pair.** *A look, exact on what it covers*
   (`sandbox/local_pair_insertion_look.py`): of 407,371 one-pair insertions with minimal rewiring near one point of a
-  flat 10 x 10 torus, none leaves every link on two squares. *Ours, unverified:* a flat patch is fixed by its boundary,
+  flat 10 x 10 torus, none leaves every link on two squares *(scope stated 26 October after the Codex audit, O158: the two
+  new points are joined to the ends of three or four cut links that lie within four steps of one point; no other old
+  links are rewired and no larger region is tried, so this rules out minimal rewiring only, not every local growth
+  rule)*. *Ours, unverified:* a flat patch is fixed by its boundary,
   so a local change cannot add points without a flaw (a dislocation pair); growth that stays flat has to cross the
   whole space, a double row wrapping the torus. On the torus that means a row grows only if its whole ring is empty.
 - **Growth's rule: she asked for help deciding.** Options and a recommendation are in the questions file (G1); nothing
@@ -4045,7 +4056,8 @@ words are in `sandbox/NOTEBOOK.md` under that date.
 - **Hers.** Each Big Bang makes two daughters, alike except that one has the matter surplus and the other the matching
   antimatter surplus; the black hole itself stays neutral. *Ours:* (1) it replaces H4 and H8's parent that keeps the
   antimatter surplus (to confirm), and it is closer to Boyle, Finn and Turok's pair (one bang, two mirror branches,
-  Update 119). (2) Two readings to confirm: whether "all daughters of one mother share a direction" (Update 118) now
+  Update 119) *(26 October, O158: their branches lie before and after one Big Bang, not side by side as two daughters of
+  one black hole; a cousin, not the same mechanism)*. (2) Two readings to confirm: whether "all daughters of one mother share a direction" (Update 118) now
   means each burp's pair, one of each; and whether each twin carries the full curling cost (T71's daughters each carry
   exactly one) or half of it.
 - **The front in soft space, a look** (`sandbox/soft_front_look.py`; exact for what it computes). (1) **Term 7 as built
@@ -4231,4 +4243,30 @@ exploring later we can do 2").
   replica at the end with the bath look's words (BOTH OPEN, FIRST ONLY, STAYS, BREAKS), declared in the script before
   the run. *Inferred from her picture, not given by her:* BOTH OPEN once the push pays the first opening. Option 2, a
   tie entry for broken points, is held (S1: a new energy choice, hers).
+
+Update 126 (2026-10-26): **the independent audit by a different model (Codex) of the later record of 25 October,
+recorded, and the corrections it asked for.** Why this page changes: rule 12's red-team pass for Updates 113 to 120,
+owed since O157 (the same model), arrived; its report is `docs/reviews/2026-10-25b_codex_report.md`, and what it found
+and what it got wrong is ASSUMPTIONS O158. It read a commit from before Update 122, so its first finding, that T82 should
+not run until she confirmed the mechanism, had already been settled: she withdrew T82 (Update 123). Corrections made in
+place carry "O158".
+
+- **Corrected in place.** Update 113: opposite charges attracting is the rule for a force like electromagnetism, not
+  for the weak force. Update 118: an antimatter-rich twin obeys the same laws as a matter-rich one, so claim step 7 is
+  not threatened; CP violation only makes the two histories not exact mirrors, and Boyle, Finn and Turok's pair is a
+  cousin (two branches of one Big Bang), not the same mechanism; Update 120 likewise. Update 118's insertion look rules
+  out minimal rewiring near one point, not every local growth rule.
+- **Checked on T71's results** (*exact*). T71's reader shares two defects that Codex found in T82's: it counts refolds to
+  the end of the file rather than between births, and it averages each replica's births. Neither changes a T71 word:
+  every cycling replica refolds between each pair of births, and in the ten cells scored at one curling cost per
+  daughter every single birth carries exactly one. In the two cells where a clean switch fired (λ = 1.10, fastest feed),
+  which O144 already scored as failing that prediction, the averages hid a spread: about one birth in thirteen at L = 8
+  and one in four at L = 12 fell short, the shortest at 0.07 of a curling cost.
+- **Owed** (TASKS): T71's held-out reading reports each birth's energy beside the registered median; the layer code's
+  affordability guard is fixed with a test once the held-out stages of T71 and T74 are read; the module's docstring
+  says "an accounting identity, to 1e-9", not "conserved exactly". Any twin cell registered again gets a reader built
+  on the sequence of individual births.
+- **Its reading list.** Nine works it named are now in the bibliography, unread. Popławski's universe inside a black
+  hole and Farhi, Guth and Guven's attempt to make a universe by tunnelling bear most directly on her parent-hole
+  picture and come first if any is read.
 

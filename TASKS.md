@@ -1059,3 +1059,14 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
 7. **The 8 of 10 lean in Gate U1″** (eight z-scores positive, about 2.6 errors combined): carried as a caveat on Q29 and
    rechecked in the first run whose results are read.
 
+## 26 October: the second Codex audit of 25 October (ASSUMPTIONS O158)  ☐
+
+1. **T71's held-out reading** reports each birth's energy (the rise in `daughter_energy` at each logged birth, as
+   `analyse_t74.py` does) and checks a refold between consecutive births, beside the registered median, which stays the
+   score. Accept: the per-birth shortfall reported per cell at L = 16.
+2. **The affordability guard in `graphity.layer_feed`** (`pool + 1e-12 < bill` lets a pool up to 1e-12 short pay):
+   after T71's and T74's held-out stages are read, change it so no store goes negative, with a test at a pool just
+   below, at and above the bill; and reword the docstring's "conserved exactly" as an accounting identity to 1e-9.
+3. **Reading, before any citation**: [Pop10] and [FGG90] first (a universe inside a black hole; making one by
+   tunnelling), then [BFT18]; read status in `REFERENCES.bib`.
+
