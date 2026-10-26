@@ -1,17 +1,42 @@
-# Batch queue and results bucket, as of 2026-10-12 23:56 UTC (commit 066e183)
+# Batch queue and results bucket, as of 2026-10-26 21:28 UTC (commit 1f67639)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- t64_mu0000_n384-5a5c2b2  created 10-12 21:30  started 10-12 21:31  stopped 
-- t64_mu0025_n384-5a5c2b2  created 10-12 21:30  started 10-12 21:31  stopped 
-- t64_mu0050_n384-5a5c2b2  created 10-12 21:30  started 10-12 21:31  stopped 
-- t64_mu0100_n384-5a5c2b2  created 10-12 21:30  started 10-12 21:31  stopped 
-- t64_mu0200_n384-5a5c2b2  created 10-12 21:30  started 10-12 21:31  stopped 
+- t74_lam110_L16_steady_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 
+- t74_lam110_L16_steady_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 
+- t74_lam110_L16_meals16_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
+- t74_lam110_L16_meals16_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 
+- t74_lam110_L16_meals256_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
+- t74_lam110_L16_meals256_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
+- t74_lam110_L16_meals256_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
+- t74_lam125_L16_meals256_c2R_cold-a1f9f72  created 10-26 20:14  started 10-26 20:59  stopped 
+- t74_lam125_L16_meals256_c2R_equal-a1f9f72  created 10-26 20:14  started 10-26 20:59  stopped 
+- t74_lam125_L16_meals256_c2R_warm-a1f9f72  created 10-26 20:14  started 10-26 21:00  stopped 
+- t74_lam125_L16_meals256_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 21:01  stopped 
+- t74_lam125_L16_meals256_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 21:04  stopped 
+- t74_lam125_L16_meals256_cRhalf_warm-a1f9f72  created 10-26 20:14  started 10-26 21:06  stopped 
+- t74_lam140_L16_steady_c2R_cold-a1f9f72  created 10-26 20:14  started 10-26 21:14  stopped 
+- t74_lam140_L16_steady_c2R_equal-a1f9f72  created 10-26 20:14  started 10-26 21:14  stopped 
+- t74_lam140_L16_steady_c2R_warm-a1f9f72  created 10-26 20:14  started 10-26 21:15  stopped 
+- t74_lam140_L16_steady_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 21:16  stopped 
+- t74_lam140_L16_steady_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 21:16  stopped 
+- t74_lam140_L16_steady_cRhalf_warm-a1f9f72  created 10-26 20:14  started 10-26 21:17  stopped 
+- t74_lam140_L16_meals16_c2R_cold-a1f9f72  created 10-26 20:14  started 10-26 21:17  stopped 
+- t74_lam140_L16_meals16_c2R_equal-a1f9f72  created 10-26 20:14  started 10-26 21:17  stopped 
+- t74_lam140_L16_meals16_c2R_warm-a1f9f72  created 10-26 20:14  started 10-26 21:18  stopped 
+- t74_lam140_L16_meals16_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 21:19  stopped 
+- t74_lam140_L16_meals16_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 21:19  stopped 
+- t74_lam140_L16_meals16_cRhalf_warm-a1f9f72  created 10-26 20:14  started 10-26 21:19  stopped 
+- t74_lam140_L16_meals256_c2R_cold-a1f9f72  created 10-26 20:14  started 10-26 21:20  stopped 
+- t74_lam140_L16_meals256_c2R_equal-a1f9f72  created 10-26 20:14  started 10-26 21:20  stopped 
+- t74_lam140_L16_meals256_c2R_warm-a1f9f72  created 10-26 20:14  started 10-26 21:21  stopped 
+- t74_lam140_L16_meals256_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 21:24  stopped 
+- t74_lam140_L16_meals256_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 21:25  stopped 
 
 ## RUNNABLE
-- none
+- t74_lam140_L16_meals256_cRhalf_warm-a1f9f72  created 10-26 20:14  started   stopped 
 
 ## STARTING
 - none
@@ -23,210 +48,157 @@ until a person downloads, checks and commits them.
 - none
 
 ## SUCCEEDED
-- t51_l256_100k_11-aa6b835  created 10-05 09:56  started 10-05 15:44  stopped 10-06 00:13
-- t51_l256_100k_12-aa6b835  created 10-05 09:56  started 10-05 16:01  stopped 10-06 00:37
-- t51_l256_100k_13-aa6b835  created 10-05 09:56  started 10-05 16:22  stopped 10-06 02:24
-- t51_l256_100k_14-aa6b835  created 10-05 09:56  started 10-05 16:30  stopped 10-06 03:42
-- t51_l256_100k_15-aa6b835  created 10-05 09:56  started 10-05 16:30  stopped 10-06 02:59
-- t51_l256_100k_16-aa6b835  created 10-05 09:56  started 10-05 16:30  stopped 10-06 03:14
-- t51_l256_100k_17-aa6b835  created 10-05 09:56  started 10-05 16:36  stopped 10-06 03:44
-- t51_l256_100k_18-aa6b835  created 10-05 09:56  started 10-05 16:38  stopped 10-06 02:33
-- t51_l256_100k_19-aa6b835  created 10-05 09:57  started 10-05 16:46  stopped 10-06 02:52
-- t51_l256_300k_00-aa6b835  created 10-05 09:57  started 10-05 16:47  stopped 10-06 00:14
-- t51_l256_300k_01-aa6b835  created 10-05 09:57  started 10-05 16:50  stopped 10-06 00:38
-- t51_l256_300k_02-aa6b835  created 10-05 09:57  started 10-05 16:54  stopped 10-06 00:11
-- t51_l256_300k_04-aa6b835  created 10-05 09:57  started 10-05 17:01  stopped 10-06 00:27
-- t51_l256_300k_05-aa6b835  created 10-05 09:57  started 10-05 17:05  stopped 10-06 00:23
-- t51_l256_300k_06-aa6b835  created 10-05 09:57  started 10-05 17:10  stopped 10-06 00:17
-- t51_l256_300k_07-aa6b835  created 10-05 09:57  started 10-05 17:13  stopped 10-06 00:37
-- t51_l256_300k_08-aa6b835  created 10-05 09:57  started 10-05 17:18  stopped 10-06 01:09
-- t51_l256_300k_09-aa6b835  created 10-05 09:57  started 10-05 17:34  stopped 10-06 00:51
-- t51_l256_300k_10-aa6b835  created 10-05 09:57  started 10-05 17:37  stopped 10-06 00:36
-- t51_l256_300k_11-aa6b835  created 10-05 09:57  started 10-05 19:25  stopped 10-06 02:26
-- t51_l256_300k_12-aa6b835  created 10-05 09:57  started 10-05 19:52  stopped 10-06 03:04
-- t51_l256_300k_13-aa6b835  created 10-05 09:57  started 10-05 19:56  stopped 10-06 04:00
-- t51_l256_300k_14-aa6b835  created 10-05 09:57  started 10-05 19:56  stopped 10-06 03:04
-- t51_l256_300k_15-aa6b835  created 10-05 09:57  started 10-05 20:13  stopped 10-06 03:17
-- t51_l256_300k_16-aa6b835  created 10-05 09:57  started 10-05 20:14  stopped 10-06 02:16
-- t51_l256_300k_17-aa6b835  created 10-05 09:57  started 10-05 20:43  stopped 10-06 04:21
-- t51_l256_300k_18-aa6b835  created 10-05 09:57  started 10-05 21:09  stopped 10-06 04:08
-- t51_l256_300k_19-aa6b835  created 10-05 09:57  started 10-05 21:17  stopped 10-06 04:46
-- t51_l256_300k_20-aa6b835  created 10-05 09:57  started 10-05 21:31  stopped 10-06 05:10
-- t51_l256_300k_21-aa6b835  created 10-05 09:57  started 10-05 23:02  stopped 10-06 06:25
-- t51_l256_300k_22-aa6b835  created 10-05 09:57  started 10-06 00:11  stopped 10-06 07:36
-- t51_l256_300k_23-aa6b835  created 10-05 09:57  started 10-06 00:14  stopped 10-06 07:14
-- t51_l256_300k_24-aa6b835  created 10-05 09:57  started 10-06 00:14  stopped 10-06 06:14
-- t51_l256_300k_25-aa6b835  created 10-05 09:57  started 10-06 00:18  stopped 10-06 07:30
-- t51_l256_300k_26-aa6b835  created 10-05 09:57  started 10-06 00:24  stopped 10-06 07:40
-- t51_l256_300k_27-aa6b835  created 10-05 09:57  started 10-06 00:27  stopped 10-06 07:27
-- t51_l256_300k_28-aa6b835  created 10-05 09:57  started 10-06 00:37  stopped 10-06 07:41
-- t51_l256_300k_29-aa6b835  created 10-05 09:57  started 10-06 00:38  stopped 10-06 07:44
-- t51_l256_300k_30-aa6b835  created 10-05 09:57  started 10-06 00:38  stopped 10-06 08:05
-- t51_l256_300k_31-aa6b835  created 10-05 09:57  started 10-06 00:39  stopped 10-06 08:11
-- t51_l256_300k_32-aa6b835  created 10-05 09:57  started 10-06 00:51  stopped 10-06 07:54
-- t51_l256_300k_33-aa6b835  created 10-05 09:57  started 10-06 01:10  stopped 10-06 08:09
-- t51_l256_300k_34-aa6b835  created 10-05 09:57  started 10-06 02:16  stopped 10-06 09:35
-- t51_l256_300k_35-aa6b835  created 10-05 09:57  started 10-06 02:24  stopped 10-06 09:38
-- t51_l256_300k_36-aa6b835  created 10-05 09:57  started 10-06 02:26  stopped 10-06 10:30
-- t51_l256_300k_37-aa6b835  created 10-05 09:57  started 10-06 02:33  stopped 10-06 09:51
-- t51_l256_300k_38-aa6b835  created 10-05 09:58  started 10-06 02:53  stopped 10-06 07:30
-- t51_l256_300k_39-aa6b835  created 10-05 09:58  started 10-06 03:00  stopped 10-06 09:05
-- t51_l128_10k_00-aa6b835  created 10-05 09:58  started 10-06 03:04  stopped 10-06 07:04
-- t51_l512_10k_00-aa6b835  created 10-05 09:58  started 10-06 03:04  stopped 10-06 09:53
-- t51_l512_10k_01-aa6b835  created 10-05 09:58  started 10-06 03:14  stopped 10-06 09:55
-- t51_l512_10k_02-aa6b835  created 10-05 09:58  started 10-06 03:17  stopped 10-06 10:37
-- t51_l512_10k_03-aa6b835  created 10-05 09:58  started 10-06 03:42  stopped 10-06 10:59
-- t51_l512_10k_04-aa6b835  created 10-05 09:58  started 10-06 03:44  stopped 10-06 11:36
-- t51_l512_10k_05-aa6b835  created 10-05 09:58  started 10-06 04:01  stopped 10-06 11:13
-- t51_l512_10k_06-aa6b835  created 10-05 09:58  started 10-06 04:08  stopped 10-06 11:28
-- t51_l512_10k_07-aa6b835  created 10-05 09:58  started 10-06 04:22  stopped 10-06 11:35
-- t51_l512_10k_08-aa6b835  created 10-05 09:58  started 10-06 04:46  stopped 10-06 11:52
-- t51_l512_10k_09-aa6b835  created 10-05 09:58  started 10-06 05:10  stopped 10-06 09:21
-- t53_l18_lam125_g15-4eb5afa  created 10-05 19:19  started 10-06 06:15  stopped 10-06 08:20
-- t53_l18_lam125_g20-4eb5afa  created 10-05 19:19  started 10-06 06:26  stopped 10-06 08:30
-- t53_l18_lam125_g25-4eb5afa  created 10-05 19:19  started 10-06 07:05  stopped 10-06 09:47
-- t53_l18_lam125_g30-4eb5afa  created 10-05 19:19  started 10-06 07:15  stopped 10-06 10:00
-- t53_l18_lam125_g35-4eb5afa  created 10-05 19:19  started 10-06 07:28  stopped 10-06 10:30
-- t53_l18_lam140_g15-4eb5afa  created 10-05 19:19  started 10-06 07:30  stopped 10-06 09:10
-- t53_l18_lam140_g20-4eb5afa  created 10-05 19:20  started 10-06 07:31  stopped 10-06 10:03
-- t53_l18_lam140_g25-4eb5afa  created 10-05 19:20  started 10-06 07:37  stopped 10-06 10:09
-- t53_l18_lam140_g30-4eb5afa  created 10-05 19:20  started 10-06 07:41  stopped 10-06 10:31
-- t53_l18_lam140_g35-4eb5afa  created 10-05 19:20  started 10-06 07:41  stopped 10-06 10:48
-- t53_l36_lam125_g15-4eb5afa  created 10-05 19:20  started 10-06 07:44  stopped 10-06 12:27
-- t53_l36_lam125_g20-4eb5afa  created 10-05 19:20  started 10-06 07:55  stopped 10-06 13:33
-- t53_l36_lam125_g25-4eb5afa  created 10-05 19:20  started 10-06 08:05  stopped 10-06 13:45
-- t53_l36_lam125_g30-4eb5afa  created 10-05 19:20  started 10-06 08:10  stopped 10-06 14:59
-- t53_l36_lam125_g35-4eb5afa  created 10-05 19:20  started 10-06 08:11  stopped 10-06 14:35
-- t53_l36_lam140_g15-4eb5afa  created 10-05 19:20  started 10-06 08:20  stopped 10-06 13:50
-- t53_l36_lam140_g20-4eb5afa  created 10-05 19:20  started 10-06 08:31  stopped 10-06 14:09
-- t53_l36_lam140_g25-4eb5afa  created 10-05 19:20  started 10-06 09:05  stopped 10-06 14:49
-- t53_l36_lam140_g30-4eb5afa  created 10-05 19:20  started 10-06 09:11  stopped 10-06 13:32
-- t53_l36_lam140_g35-4eb5afa  created 10-05 19:20  started 10-06 09:22  stopped 10-06 15:11
-- t53_l72_lam125_g15-4eb5afa  created 10-05 19:20  started 10-06 09:35  stopped 10-06 19:26
-- t53_l72_lam125_g20-4eb5afa  created 10-05 19:20  started 10-06 09:39  stopped 10-06 22:32
-- t53_l72_lam125_g25-4eb5afa  created 10-05 19:20  started 10-06 09:47  stopped 10-06 21:51
-- t53_l72_lam125_g35-4eb5afa  created 10-05 19:20  started 10-06 09:53  stopped 10-06 22:43
-- t53_l72_lam140_g15-4eb5afa  created 10-05 19:20  started 10-06 09:54  stopped 10-06 21:20
-- t53_l72_lam140_g20-4eb5afa  created 10-05 19:20  started 10-06 09:56  stopped 10-06 18:02
-- t53_l72_lam140_g25-4eb5afa  created 10-05 19:20  started 10-06 10:01  stopped 10-06 23:37
-- t53_l72_lam140_g30-4eb5afa  created 10-05 19:20  started 10-06 10:04  stopped 10-06 22:58
-- t53_l72_lam140_g35-4eb5afa  created 10-05 19:20  started 10-06 10:09  stopped 10-06 23:41
-- t53_l72_lam125_g30-72fef92  created 10-09 08:55  started 10-09 08:56  stopped 10-09 20:13
-- t56_slab_l8_lam110_g15-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:18
-- t56_slab_l8_lam110_g20-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:08
-- t56_slab_l8_lam110_g25-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:08
-- t56_slab_l8_lam110_g30-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:09
-- t56_slab_l8_lam115_g15-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:31
-- t56_slab_l8_lam115_g20-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:32
-- t56_slab_l8_lam115_g25-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:18
-- t56_slab_l8_lam115_g30-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 13:41
-- t56_slab_l8_lam120_g15-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 15:12
-- t56_slab_l8_lam120_g20-b41d6c5  created 10-09 10:44  started 10-09 10:45  stopped 10-09 14:29
-- t56_slab_l8_lam120_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 15:44
-- t56_slab_l8_lam120_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 15:21
-- t56_slab_l8_lam125_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 14:32
-- t56_slab_l8_lam125_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 15:14
-- t56_slab_l8_lam125_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 13:51
-- t56_slab_l8_lam125_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 13:28
-- t56_slab_l12_lam110_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 21:04
-- t56_slab_l12_lam110_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:09
-- t56_slab_l12_lam110_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 19:03
-- t56_slab_l12_lam110_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 22:55
-- t56_slab_l12_lam115_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:49
-- t56_slab_l12_lam115_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-10 00:06
-- t56_slab_l12_lam115_g25-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:25
-- t56_slab_l12_lam115_g30-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 21:10
-- t56_slab_l12_lam120_g15-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 21:04
-- t56_slab_l12_lam120_g20-b41d6c5  created 10-09 10:45  started 10-09 10:45  stopped 10-09 23:17
-- t56_slab_l12_lam120_g25-b41d6c5  created 10-09 10:45  started 10-09 10:46  stopped 10-09 23:18
-- t56_slab_l12_lam120_g30-b41d6c5  created 10-09 10:45  started 10-09 10:46  stopped 10-09 23:39
-- t56_slab_l12_lam125_g15-b41d6c5  created 10-09 10:45  started 10-09 10:46  stopped 10-09 23:27
-- t56_slab_l12_lam125_g20-b41d6c5  created 10-09 10:45  started 10-09 13:29  stopped 10-10 02:15
-- t56_slab_l12_lam125_g25-b41d6c5  created 10-09 10:45  started 10-09 13:42  stopped 10-09 21:02
-- t56_slab_l12_lam125_g30-b41d6c5  created 10-09 10:45  started 10-09 13:51  stopped 10-10 02:47
-- t56_rod_l18_lam110_g15-b41d6c5  created 10-09 10:45  started 10-09 14:30  stopped 10-09 19:19
-- t56_rod_l18_lam110_g20-b41d6c5  created 10-09 10:45  started 10-09 14:33  stopped 10-09 19:22
-- t56_rod_l18_lam110_g25-b41d6c5  created 10-09 10:45  started 10-09 15:09  stopped 10-09 20:52
-- t56_rod_l18_lam110_g30-b41d6c5  created 10-09 10:45  started 10-09 15:09  stopped 10-09 19:20
-- t56_rod_l18_lam115_g15-b41d6c5  created 10-09 10:45  started 10-09 15:10  stopped 10-09 21:07
-- t56_rod_l18_lam115_g20-b41d6c5  created 10-09 10:45  started 10-09 15:13  stopped 10-09 20:53
-- t56_rod_l18_lam115_g25-b41d6c5  created 10-09 10:45  started 10-09 15:15  stopped 10-09 20:27
-- t56_rod_l18_lam115_g30-b41d6c5  created 10-09 10:45  started 10-09 15:19  stopped 10-09 22:04
-- t56_rod_l18_lam120_g15-b41d6c5  created 10-09 10:45  started 10-09 15:19  stopped 10-09 21:13
-- t56_rod_l18_lam120_g20-b41d6c5  created 10-09 10:45  started 10-09 15:21  stopped 10-09 21:02
-- t56_rod_l18_lam120_g25-b41d6c5  created 10-09 10:45  started 10-09 15:32  stopped 10-09 21:55
-- t56_rod_l18_lam120_g30-b41d6c5  created 10-09 10:45  started 10-09 15:32  stopped 10-09 22:02
-- t56_rod_l18_lam125_g15-b41d6c5  created 10-09 10:45  started 10-09 15:45  stopped 10-09 21:22
-- t56_rod_l18_lam125_g20-b41d6c5  created 10-09 10:45  started 10-09 19:04  stopped 10-10 01:22
-- t56_rod_l18_lam125_g25-b41d6c5  created 10-09 10:45  started 10-09 19:19  stopped 10-10 00:08
-- t56_rod_l18_lam125_g30-b41d6c5  created 10-09 10:45  started 10-09 19:20  stopped 10-10 01:44
-- t56_rod_l36_lam110_g15-b41d6c5  created 10-09 10:45  started 10-09 19:22  stopped 10-10 06:19
-- t56_rod_l36_lam110_g20-b41d6c5  created 10-09 10:45  started 10-09 20:15  stopped 10-10 07:11
-- t56_rod_l36_lam110_g25-b41d6c5  created 10-09 10:46  started 10-09 20:29  stopped 10-10 10:38
-- t56_rod_l36_lam110_g30-b41d6c5  created 10-09 10:46  started 10-09 20:52  stopped 10-10 11:08
-- t56_rod_l36_lam115_g15-b41d6c5  created 10-09 10:46  started 10-09 20:54  stopped 10-10 10:41
-- t56_rod_l36_lam115_g20-b41d6c5  created 10-09 10:46  started 10-09 21:03  stopped 10-10 09:59
-- t56_rod_l36_lam115_g25-b41d6c5  created 10-09 10:46  started 10-09 21:03  stopped 10-10 09:55
-- t56_rod_l36_lam115_g30-b41d6c5  created 10-09 10:46  started 10-09 21:04  stopped 10-10 08:36
-- t56_rod_l36_lam120_g15-b41d6c5  created 10-09 10:46  started 10-09 21:05  stopped 10-10 11:23
-- t56_rod_l36_lam120_g20-b41d6c5  created 10-09 10:46  started 10-09 21:08  stopped 10-10 09:59
-- t56_rod_l36_lam120_g25-b41d6c5  created 10-09 10:46  started 10-09 21:11  stopped 10-10 08:15
-- t56_rod_l36_lam120_g30-b41d6c5  created 10-09 10:46  started 10-09 21:14  stopped 10-10 12:13
-- t56_rod_l36_lam125_g15-b41d6c5  created 10-09 10:46  started 10-09 21:23  stopped 10-10 10:53
-- t56_rod_l36_lam125_g20-b41d6c5  created 10-09 10:46  started 10-09 21:55  stopped 10-10 11:13
-- t56_rod_l36_lam125_g25-b41d6c5  created 10-09 10:46  started 10-09 22:03  stopped 10-10 10:50
-- t56_rod_l36_lam125_g30-b41d6c5  created 10-09 10:46  started 10-09 22:04  stopped 10-10 12:51
-- t56_slab_l8_lam120_g20_untied-b41d6c5  created 10-09 10:46  started 10-09 22:56  stopped 10-10 03:42
-- t56_slab_l8_lam120_g25_untied-b41d6c5  created 10-09 10:46  started 10-09 23:10  stopped 10-10 03:48
-- t56_slab_l12_lam120_g20_untied-b41d6c5  created 10-09 10:46  started 10-09 23:18  stopped 10-10 12:14
-- t56_slab_l12_lam120_g25_untied-b41d6c5  created 10-09 10:46  started 10-09 23:19  stopped 10-10 11:55
-- t57_tied_packed_lam110_n216-624a5dd  created 10-09 11:27  started 10-09 23:25  stopped 10-10 04:15
-- t57_tied_packed_lam110_n512-624a5dd  created 10-09 11:27  started 10-09 23:27  stopped 10-10 14:12
-- t57_tied_spread_lam110_n216-624a5dd  created 10-09 11:27  started 10-09 23:40  stopped 10-10 04:13
-- t57_tied_spread_lam110_n512-624a5dd  created 10-09 11:27  started 10-09 23:50  stopped 10-10 14:19
-- t57_tied_packed_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 00:06  stopped 10-10 04:47
-- t57_tied_packed_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 00:09  stopped 10-10 13:07
-- t57_tied_spread_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 01:23  stopped 10-10 05:26
-- t57_tied_spread_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 01:45  stopped 10-10 16:42
-- t57_untied_packed_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 02:15  stopped 10-10 04:14
-- t57_untied_packed_lam110_n512-624a5dd  created 10-09 11:27  started 10-10 02:48  stopped 10-10 08:50
-- t57_untied_spread_lam110_n216-624a5dd  created 10-09 11:27  started 10-10 03:42  stopped 10-10 05:41
-- t57_untied_spread_lam110_n512-624a5dd  created 10-09 11:27  started 10-10 03:49  stopped 10-10 09:59
-- t57_untied_packed_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 04:14  stopped 10-10 06:18
-- t57_untied_packed_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 04:15  stopped 10-10 10:39
-- t57_untied_spread_lam125_n216-624a5dd  created 10-09 11:27  started 10-10 04:15  stopped 10-10 06:11
-- t57_untied_spread_lam125_n512-624a5dd  created 10-09 11:27  started 10-10 04:48  stopped 10-10 11:01
-- t60_lam105_n64-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-10 23:37
-- t60_lam105_n96-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-10 23:53
-- t60_lam105_n144-db632d7  created 10-10 23:15  started 10-10 23:15  stopped 10-11 00:27
-- t60_lam105_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:49
-- t60_lam110_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:28
-- t60_lam110_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:37
-- t60_lam110_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:04
-- t60_lam110_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:33
-- t60_lam115_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:25
-- t60_lam115_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:35
-- t60_lam115_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:50
-- t60_lam115_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:24
-- t60_lam120_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:27
-- t60_lam120_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:39
-- t60_lam120_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:48
-- t60_lam120_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:07
-- t60_lam125_n64-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:27
-- t60_lam125_n96-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-10 23:43
-- t60_lam125_n144-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:04
-- t60_lam125_n192-db632d7  created 10-10 23:15  started 10-10 23:16  stopped 10-11 00:31
-- t60_lam130_n64-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-10 23:38
-- t60_lam130_n96-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 00:05
-- t60_lam130_n144-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 00:30
-- t60_lam130_n192-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 01:25
-- t60_lam135_n64-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-10 23:46
-- t60_lam135_n96-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 00:37
-- t60_lam135_n144-db632d7  created 10-10 23:16  started 10-10 23:16  stopped 10-11 01:35
-- None  created 01-01 00:00  started 01-01 00:00  stopped 01-01 00:00
+- t74_lam110_L08_meals16_c2R_cold-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:53
+- t74_lam110_L08_meals16_c2R_equal-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:52
+- t74_lam110_L08_meals16_c2R_warm-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:54
+- t74_lam110_L08_meals16_cRhalf_cold-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:57
+- t74_lam110_L08_meals16_cRhalf_equal-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:59
+- t74_lam110_L08_meals16_cRhalf_warm-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:58
+- t74_lam110_L08_meals256_c2R_cold-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:54
+- t74_lam110_L08_meals256_c2R_equal-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:52
+- t74_lam110_L08_meals256_c2R_warm-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:54
+- t74_lam110_L08_meals256_cRhalf_cold-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 12:58
+- t74_lam110_L08_meals256_cRhalf_equal-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:57
+- t74_lam110_L08_meals256_cRhalf_warm-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:00
+- t74_lam110_L08_steady_c2R_cold-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:44
+- t74_lam110_L08_steady_c2R_equal-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:53
+- t74_lam110_L08_steady_c2R_warm-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:54
+- t74_lam110_L08_steady_cRhalf_cold-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 13:00
+- t74_lam110_L08_steady_cRhalf_equal-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 12:57
+- t74_lam110_L08_steady_cRhalf_warm-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 12:59
+- t74_lam110_L12_meals16_c2R_cold-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 13:11
+- t74_lam110_L12_meals16_c2R_equal-f680737  created 10-20 12:35  started 10-20 12:35  stopped 10-20 13:17
+- t74_lam110_L12_meals16_c2R_warm-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:14
+- t74_lam110_L12_meals16_cRhalf_cold-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:24
+- t74_lam110_L12_meals16_cRhalf_equal-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:23
+- t74_lam110_L12_meals16_cRhalf_warm-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:28
+- t74_lam110_L12_meals256_c2R_cold-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:11
+- t74_lam110_L12_meals256_c2R_equal-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:14
+- t74_lam110_L12_meals256_c2R_warm-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:20
+- t74_lam110_L12_meals256_cRhalf_cold-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:25
+- t74_lam110_L12_meals256_cRhalf_equal-f680737  created 10-20 12:35  started 10-20 12:44  stopped 10-20 13:30
+- t74_lam110_L12_meals256_cRhalf_warm-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:23
+- t74_lam110_L12_steady_c2R_cold-f680737  created 10-20 12:35  started 10-20 12:53  stopped 10-20 13:32
+- t74_lam110_L12_steady_c2R_equal-f680737  created 10-20 12:35  started 10-20 12:53  stopped 10-20 13:35
+- t74_lam110_L12_steady_c2R_warm-f680737  created 10-20 12:35  started 10-20 12:36  stopped 10-20 13:16
+- t74_lam110_L12_steady_cRhalf_cold-f680737  created 10-20 12:35  started 10-20 12:54  stopped 10-20 13:40
+- t74_lam110_L12_steady_cRhalf_equal-f680737  created 10-20 12:35  started 10-20 12:54  stopped 10-20 13:39
+- t74_lam110_L12_steady_cRhalf_warm-f680737  created 10-20 12:35  started 10-20 12:54  stopped 10-20 13:47
+- t74_lam125_L08_meals16_c2R_cold-f680737  created 10-20 12:35  started 10-20 12:54  stopped 10-20 13:07
+- t74_lam125_L08_meals16_c2R_equal-f680737  created 10-20 12:35  started 10-20 12:55  stopped 10-20 13:07
+- t74_lam125_L08_meals16_c2R_warm-f680737  created 10-20 12:35  started 10-20 12:55  stopped 10-20 13:11
+- t74_lam125_L08_meals16_cRhalf_cold-f680737  created 10-20 12:35  started 10-20 12:57  stopped 10-20 13:14
+- t74_lam125_L08_meals16_cRhalf_equal-f680737  created 10-20 12:35  started 10-20 12:58  stopped 10-20 13:18
+- t74_lam125_L08_meals16_cRhalf_warm-f680737  created 10-20 12:35  started 10-20 12:58  stopped 10-20 13:18
+- t74_lam125_L08_meals256_c2R_cold-f680737  created 10-20 12:36  started 10-20 12:58  stopped 10-20 13:13
+- t74_lam125_L08_meals256_c2R_equal-f680737  created 10-20 12:36  started 10-20 12:59  stopped 10-20 13:14
+- t74_lam125_L08_meals256_c2R_warm-f680737  created 10-20 12:36  started 10-20 12:59  stopped 10-20 13:14
+- t74_lam125_L08_meals256_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:00  stopped 10-20 13:14
+- t74_lam125_L08_meals256_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:00  stopped 10-20 13:20
+- t74_lam125_L08_meals256_cRhalf_warm-f680737  created 10-20 12:36  started 10-20 13:00  stopped 10-20 13:18
+- t74_lam125_L08_steady_c2R_cold-f680737  created 10-20 12:36  started 10-20 13:08  stopped 10-20 13:20
+- t74_lam125_L08_steady_c2R_equal-f680737  created 10-20 12:36  started 10-20 13:08  stopped 10-20 13:23
+- t74_lam125_L08_steady_c2R_warm-f680737  created 10-20 12:36  started 10-20 13:11  stopped 10-20 13:26
+- t74_lam125_L08_steady_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:11  stopped 10-20 13:30
+- t74_lam125_L08_steady_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:12  stopped 10-20 13:31
+- t74_lam125_L08_steady_cRhalf_warm-f680737  created 10-20 12:36  started 10-20 13:13  stopped 10-20 13:32
+- t74_lam125_L12_meals16_c2R_cold-f680737  created 10-20 12:36  started 10-20 13:14  stopped 10-20 13:40
+- t74_lam125_L12_meals16_c2R_equal-f680737  created 10-20 12:36  started 10-20 13:14  stopped 10-20 13:40
+- t74_lam125_L12_meals16_c2R_warm-f680737  created 10-20 12:36  started 10-20 13:14  stopped 10-20 13:43
+- t74_lam125_L12_meals16_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:15  stopped 10-20 13:44
+- t74_lam125_L12_meals16_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:15  stopped 10-20 13:56
+- t74_lam125_L12_meals16_cRhalf_warm-f680737  created 10-20 12:36  started 10-20 13:15  stopped 10-20 13:55
+- t74_lam125_L12_meals256_c2R_cold-f680737  created 10-20 12:36  started 10-20 13:16  stopped 10-20 13:45
+- t74_lam125_L12_meals256_c2R_equal-f680737  created 10-20 12:36  started 10-20 13:17  stopped 10-20 13:46
+- t74_lam125_L12_meals256_c2R_warm-f680737  created 10-20 12:36  started 10-20 13:18  stopped 10-20 13:47
+- t74_lam125_L12_meals256_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:18  stopped 10-20 13:56
+- t74_lam125_L12_meals256_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:19  stopped 10-20 13:54
+- t74_lam125_L12_meals256_cRhalf_warm-f680737  created 10-20 12:36  started 10-20 13:20  stopped 10-20 14:03
+- t74_lam125_L12_steady_c2R_cold-f680737  created 10-20 12:36  started 10-20 13:21  stopped 10-20 13:46
+- t74_lam125_L12_steady_c2R_equal-f680737  created 10-20 12:36  started 10-20 13:21  stopped 10-20 13:51
+- t74_lam125_L12_steady_c2R_warm-f680737  created 10-20 12:36  started 10-20 13:23  stopped 10-20 13:55
+- t74_lam125_L12_steady_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:24  stopped 10-20 14:02
+- t74_lam125_L12_steady_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:24  stopped 10-20 14:01
+- t74_lam125_L12_steady_cRhalf_warm-f680737  created 10-20 12:36  started 10-20 13:24  stopped 10-20 13:56
+- t74_lam140_L08_meals16_c2R_cold-f680737  created 10-20 12:36  started 10-20 13:26  stopped 10-20 13:35
+- t74_lam140_L08_meals16_c2R_equal-f680737  created 10-20 12:36  started 10-20 13:27  stopped 10-20 13:40
+- t74_lam140_L08_meals16_c2R_warm-f680737  created 10-20 12:36  started 10-20 13:29  stopped 10-20 13:42
+- t74_lam140_L08_meals16_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:31  stopped 10-20 13:48
+- t74_lam140_L08_meals16_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:31  stopped 10-20 13:44
+- t74_lam140_L08_meals16_cRhalf_warm-f680737  created 10-20 12:36  started 10-20 13:32  stopped 10-20 13:53
+- t74_lam140_L08_meals256_c2R_cold-f680737  created 10-20 12:36  started 10-20 13:33  stopped 10-20 13:45
+- t74_lam140_L08_meals256_c2R_equal-f680737  created 10-20 12:36  started 10-20 13:33  stopped 10-20 13:45
+- t74_lam140_L08_meals256_c2R_warm-f680737  created 10-20 12:36  started 10-20 13:36  stopped 10-20 13:49
+- t74_lam140_L08_meals256_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:36  stopped 10-20 13:54
+- t74_lam140_L08_meals256_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:39  stopped 10-20 13:56
+- t74_lam140_L08_meals256_cRhalf_warm-f680737  created 10-20 12:36  started 10-20 13:40  stopped 10-20 13:59
+- t74_lam140_L08_steady_c2R_cold-f680737  created 10-20 12:36  started 10-20 13:40  stopped 10-20 13:53
+- t74_lam140_L08_steady_c2R_equal-f680737  created 10-20 12:36  started 10-20 13:40  stopped 10-20 13:52
+- t74_lam140_L08_steady_c2R_warm-f680737  created 10-20 12:36  started 10-20 13:40  stopped 10-20 13:48
+- t74_lam140_L08_steady_cRhalf_cold-f680737  created 10-20 12:36  started 10-20 13:42  stopped 10-20 14:00
+- t74_lam140_L08_steady_cRhalf_equal-f680737  created 10-20 12:36  started 10-20 13:44  stopped 10-20 14:02
+- t74_lam140_L08_steady_cRhalf_warm-f680737  created 10-20 12:37  started 10-20 13:45  stopped 10-20 14:04
+- t74_lam140_L12_meals16_c2R_cold-f680737  created 10-20 12:37  started 10-20 13:45  stopped 10-20 14:05
+- t74_lam140_L12_meals16_c2R_equal-f680737  created 10-20 12:37  started 10-20 13:45  stopped 10-20 14:05
+- t74_lam140_L12_meals16_c2R_warm-f680737  created 10-20 12:37  started 10-20 13:45  stopped 10-20 14:16
+- t74_lam140_L12_meals16_cRhalf_cold-f680737  created 10-20 12:37  started 10-20 13:46  stopped 10-20 14:20
+- t74_lam140_L12_meals16_cRhalf_equal-f680737  created 10-20 12:37  started 10-20 13:46  stopped 10-20 14:22
+- t74_lam140_L12_meals16_cRhalf_warm-f680737  created 10-20 12:37  started 10-20 13:47  stopped 10-20 14:23
+- t74_lam140_L12_meals256_c2R_cold-f680737  created 10-20 12:37  started 10-20 13:47  stopped 10-20 14:12
+- t74_lam140_L12_meals256_c2R_equal-f680737  created 10-20 12:37  started 10-20 13:47  stopped 10-20 14:15
+- t74_lam140_L12_meals256_c2R_warm-f680737  created 10-20 12:37  started 10-20 13:48  stopped 10-20 14:15
+- t74_lam140_L12_meals256_cRhalf_cold-f680737  created 10-20 12:37  started 10-20 13:49  stopped 10-20 14:21
+- t74_lam140_L12_meals256_cRhalf_equal-f680737  created 10-20 12:37  started 10-20 13:49  stopped 10-20 14:24
+- t74_lam140_L12_meals256_cRhalf_warm-f680737  created 10-20 12:37  started 10-20 13:52  stopped 10-20 14:28
+- t74_lam140_L12_steady_c2R_cold-f680737  created 10-20 12:37  started 10-20 13:52  stopped 10-20 14:17
+- t74_lam140_L12_steady_c2R_equal-f680737  created 10-20 12:37  started 10-20 13:53  stopped 10-20 14:16
+- t74_lam140_L12_steady_c2R_warm-f680737  created 10-20 12:37  started 10-20 13:54  stopped 10-20 14:21
+- t74_lam140_L12_steady_cRhalf_cold-f680737  created 10-20 12:37  started 10-20 13:54  stopped 10-20 14:35
+- t74_lam140_L12_steady_cRhalf_equal-f680737  created 10-20 12:37  started 10-20 13:55  stopped 10-20 14:31
+- t74_lam140_L12_steady_cRhalf_warm-f680737  created 10-20 12:37  started 10-20 13:54  stopped 10-20 14:32
+- t76_l16_g3p2_q16-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 15:09
+- t76_l16_g3p2_q64-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 15:09
+- t76_l16_g3p2_q256-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 15:17
+- t76_l16_g3p2_q1024-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 15:43
+- t76_l24_g3p2_q16-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 15:17
+- t76_l24_g3p2_q64-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 15:27
+- t76_l24_g3p2_q256-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 15:50
+- t76_l24_g3p2_q1024-507af2b  created 10-20 15:06  started 10-20 15:07  stopped 10-20 18:05
+- t71_model_lam110_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:24
+- t71_layer_lam110_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:16
+- t71_layerref_lam110_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:26
+- t71_model_lam125_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:18
+- t71_layer_lam125_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:10
+- t71_layerref_lam125_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:29
+- t71_model_lam140_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:15
+- t71_layer_lam140_l16-a31adf6  created 10-25 19:49  started 10-25 19:50  stopped 10-25 20:11
+- t71_layerref_lam140_l16-a31adf6  created 10-25 19:50  started 10-25 19:50  stopped 10-25 20:43
+- t74_lam110_L16_steady_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:14
+- t74_lam110_L16_steady_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:20
+- t74_lam110_L16_steady_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:18
+- t74_lam110_L16_steady_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:17
+- t74_lam110_L16_meals16_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:15
+- t74_lam110_L16_meals16_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:16
+- t74_lam110_L16_meals16_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:19
+- t74_lam110_L16_meals16_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:18
+- t74_lam110_L16_meals256_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:14
+- t74_lam110_L16_meals256_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:19
+- t74_lam110_L16_meals256_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:25
+- t74_lam125_L16_steady_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 20:59
+- t74_lam125_L16_steady_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 20:58
+- t74_lam125_L16_steady_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:04
+- t74_lam125_L16_steady_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:24
+- t74_lam125_L16_steady_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:18
+- t74_lam125_L16_steady_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:21
+- t74_lam125_L16_meals16_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:00
+- t74_lam125_L16_meals16_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:00
+- t74_lam125_L16_meals16_c2R_warm-a1f9f72  created 10-26 20:14  started 10-26 20:14  stopped 10-26 21:05
+- t74_lam125_L16_meals16_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 20:14  stopped 10-26 21:16
+- t74_lam125_L16_meals16_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 20:14  stopped 10-26 21:16
+- t74_lam125_L16_meals16_cRhalf_warm-a1f9f72  created 10-26 20:14  started 10-26 20:14  stopped 10-26 21:17
 
 ## FAILED
-- t53_l72_lam125_g30-4eb5afa  created 10-05 19:20  started   stopped 10-06 09:52
+- none
 
 ## finished results in the bucket (config.csv present)
 - gatec2_2d_n2000_a/gatec2_2d_n2000_a.csv  (2026-09-25 02:27:30, 6803 bytes)
@@ -786,14 +758,273 @@ until a person downloads, checks and commits them.
 - t63_mu0200_n192/t63_mu0200_n192.csv  (2026-10-12 19:24:14, 4436 bytes)
 - t63_mu0200_n96/t63_mu0200_n96.csv  (2026-10-12 18:48:38, 4261 bytes)
 - t64_mu0000_n192/t64_mu0000_n192.csv  (2026-10-12 20:50:19, 4201 bytes)
+- t64_mu0000_n384/t64_mu0000_n384.csv  (2026-10-13 01:01:27, 4297 bytes)
 - t64_mu0000_n96/t64_mu0000_n96.csv  (2026-10-12 20:23:23, 3973 bytes)
 - t64_mu0025_n192/t64_mu0025_n192.csv  (2026-10-12 20:52:22, 4474 bytes)
+- t64_mu0025_n384/t64_mu0025_n384.csv  (2026-10-13 00:28:24, 4621 bytes)
 - t64_mu0025_n96/t64_mu0025_n96.csv  (2026-10-12 20:23:38, 4190 bytes)
 - t64_mu0050_n192/t64_mu0050_n192.csv  (2026-10-12 20:51:21, 4517 bytes)
+- t64_mu0050_n384/t64_mu0050_n384.csv  (2026-10-13 01:05:49, 4585 bytes)
 - t64_mu0050_n96/t64_mu0050_n96.csv  (2026-10-12 20:25:08, 4329 bytes)
 - t64_mu0100_n192/t64_mu0100_n192.csv  (2026-10-12 20:51:12, 4471 bytes)
+- t64_mu0100_n384/t64_mu0100_n384.csv  (2026-10-13 01:40:23, 4554 bytes)
 - t64_mu0100_n96/t64_mu0100_n96.csv  (2026-10-12 20:20:08, 4257 bytes)
 - t64_mu0200_n192/t64_mu0200_n192.csv  (2026-10-12 20:54:31, 4444 bytes)
+- t64_mu0200_n384/t64_mu0200_n384.csv  (2026-10-13 01:32:54, 4533 bytes)
 - t64_mu0200_n96/t64_mu0200_n96.csv  (2026-10-12 20:26:33, 4250 bytes)
+- t65_a_lam120_l12/t65_a_lam120_l12.csv  (2026-10-16 16:42:51, 909887 bytes)
+- t65_a_lam120_l8/t65_a_lam120_l8.csv  (2026-10-16 06:11:59, 886657 bytes)
+- t65_a_lam125_l12/t65_a_lam125_l12.csv  (2026-10-16 16:11:52, 763876 bytes)
+- t65_a_lam125_l8/t65_a_lam125_l8.csv  (2026-10-16 06:18:26, 660515 bytes)
+- t65_b_lam125_l12/t65_b_lam125_l12.csv  (2026-10-16 08:18:48, 408578 bytes)
+- t65_b_lam125_l8/t65_b_lam125_l8.csv  (2026-10-16 03:52:37, 347683 bytes)
+- t65_control_lam125_l12/t65_control_lam125_l12.csv  (2026-10-16 02:30:59, 117184 bytes)
+- t65_control_lam125_l16/t65_control_lam125_l16.csv  (2026-10-17 02:10:07, 111540 bytes)
+- t65_control_lam125_l8/t65_control_lam125_l8.csv  (2026-10-16 01:46:17, 102012 bytes)
+- t66_d2_n216/t66_d2_n216.csv  (2026-10-16 08:54:42, 1981107 bytes)
+- t66_d2_n512/t66_d2_n512.csv  (2026-10-16 09:12:25, 1877247 bytes)
+- t66_d3_n216/t66_d3_n216.csv  (2026-10-16 09:15:19, 1934939 bytes)
+- t66_d3_n512/t66_d3_n512.csv  (2026-10-16 10:34:27, 1784978 bytes)
+- t67_shared_c4n_l12/t67_shared_c4n_l12.csv  (2026-10-17 00:58:29, 402838 bytes)
+- t67_shared_c4n_l16/t67_shared_c4n_l16.csv  (2026-10-17 06:40:14, 495866 bytes)
+- t67_shared_c4n_l8/t67_shared_c4n_l8.csv  (2026-10-16 23:26:31, 185267 bytes)
+- t67_shared_cn_l12/t67_shared_cn_l12.csv  (2026-10-17 00:47:19, 372877 bytes)
+- t67_shared_cn_l16/t67_shared_cn_l16.csv  (2026-10-17 06:03:43, 430512 bytes)
+- t67_shared_cn_l8/t67_shared_cn_l8.csv  (2026-10-16 23:24:56, 133870 bytes)
+- t67_spot_l12/t67_spot_l12.csv  (2026-10-17 00:26:35, 286041 bytes)
+- t67_spot_l16/t67_spot_l16.csv  (2026-10-17 05:48:49, 388468 bytes)
+- t67_spot_l8/t67_spot_l8.csv  (2026-10-16 23:22:51, 112550 bytes)
+- t68_fixed_all_lam125/t68_fixed_all_lam125.csv  (2026-10-17 20:19:45, 1700107 bytes)
+- t68_fixed_all_lam125_l16/t68_fixed_all_lam125_l16.csv  (2026-10-18 05:24:22, 867511 bytes)
+- t68_fixed_all_lam140/t68_fixed_all_lam140.csv  (2026-10-17 19:51:30, 1605389 bytes)
+- t68_fixed_all_lam140_l16/t68_fixed_all_lam140_l16.csv  (2026-10-18 05:26:26, 862903 bytes)
+- t68_fixed_all_lam160/t68_fixed_all_lam160.csv  (2026-10-17 19:33:31, 1478325 bytes)
+- t68_fixed_all_lam160_l16/t68_fixed_all_lam160_l16.csv  (2026-10-18 04:15:10, 862180 bytes)
+- t68_fixed_shared_lam125/t68_fixed_shared_lam125.csv  (2026-10-17 17:10:56, 537435 bytes)
+- t68_fixed_shared_lam125_l16/t68_fixed_shared_lam125_l16.csv  (2026-10-18 01:43:30, 471790 bytes)
+- t68_fixed_shared_lam140/t68_fixed_shared_lam140.csv  (2026-10-17 16:57:25, 537932 bytes)
+- t68_fixed_shared_lam140_l16/t68_fixed_shared_lam140_l16.csv  (2026-10-18 02:00:57, 500780 bytes)
+- t68_fixed_shared_lam160/t68_fixed_shared_lam160.csv  (2026-10-17 16:24:23, 306205 bytes)
+- t68_fixed_shared_lam160_l16/t68_fixed_shared_lam160_l16.csv  (2026-10-18 02:12:50, 453432 bytes)
+- t68_fixed_spot_lam125/t68_fixed_spot_lam125.csv  (2026-10-17 16:57:35, 432053 bytes)
+- t68_fixed_spot_lam125_l16/t68_fixed_spot_lam125_l16.csv  (2026-10-18 02:10:06, 427777 bytes)
+- t68_fixed_spot_lam140/t68_fixed_spot_lam140.csv  (2026-10-17 16:31:06, 393082 bytes)
+- t68_fixed_spot_lam140_l16/t68_fixed_spot_lam140_l16.csv  (2026-10-18 01:24:24, 471356 bytes)
+- t68_fixed_spot_lam160/t68_fixed_spot_lam160.csv  (2026-10-17 16:25:13, 292809 bytes)
+- t68_fixed_spot_lam160_l16/t68_fixed_spot_lam160_l16.csv  (2026-10-18 01:26:56, 403751 bytes)
+- t68_fixed_spots_lam125/t68_fixed_spots_lam125.csv  (2026-10-17 17:49:16, 685470 bytes)
+- t68_fixed_spots_lam125_l16/t68_fixed_spots_lam125_l16.csv  (2026-10-18 02:22:48, 575374 bytes)
+- t68_fixed_spots_lam140/t68_fixed_spots_lam140.csv  (2026-10-17 17:33:24, 644744 bytes)
+- t68_fixed_spots_lam140_l16/t68_fixed_spots_lam140_l16.csv  (2026-10-18 03:00:38, 595914 bytes)
+- t68_fixed_spots_lam160/t68_fixed_spots_lam160.csv  (2026-10-17 17:03:47, 494335 bytes)
+- t68_fixed_spots_lam160_l16/t68_fixed_spots_lam160_l16.csv  (2026-10-18 02:26:26, 508109 bytes)
+- t68_pulse_all_lam125/t68_pulse_all_lam125.csv  (2026-10-17 19:59:16, 1575115 bytes)
+- t68_pulse_all_lam125_l16/t68_pulse_all_lam125_l16.csv  (2026-10-18 05:36:06, 788151 bytes)
+- t68_pulse_all_lam140/t68_pulse_all_lam140.csv  (2026-10-17 20:07:11, 1482604 bytes)
+- t68_pulse_all_lam140_l16/t68_pulse_all_lam140_l16.csv  (2026-10-18 05:31:44, 783239 bytes)
+- t68_pulse_all_lam160/t68_pulse_all_lam160.csv  (2026-10-17 21:21:28, 1368110 bytes)
+- t68_pulse_all_lam160_l16/t68_pulse_all_lam160_l16.csv  (2026-10-18 08:56:15, 784225 bytes)
+- t68_pulse_shared_lam125/t68_pulse_shared_lam125.csv  (2026-10-17 17:31:34, 593703 bytes)
+- t68_pulse_shared_lam125_l16/t68_pulse_shared_lam125_l16.csv  (2026-10-18 02:30:07, 452308 bytes)
+- t68_pulse_shared_lam140/t68_pulse_shared_lam140.csv  (2026-10-17 17:19:28, 580773 bytes)
+- t68_pulse_shared_lam140_l16/t68_pulse_shared_lam140_l16.csv  (2026-10-18 01:35:40, 490117 bytes)
+- t68_pulse_shared_lam160/t68_pulse_shared_lam160.csv  (2026-10-17 17:55:15, 418412 bytes)
+- t68_pulse_shared_lam160_l16/t68_pulse_shared_lam160_l16.csv  (2026-10-18 04:51:53, 455662 bytes)
+- t68_pulse_spot_lam125/t68_pulse_spot_lam125.csv  (2026-10-17 17:25:22, 490205 bytes)
+- t68_pulse_spot_lam125_l16/t68_pulse_spot_lam125_l16.csv  (2026-10-18 02:00:12, 417281 bytes)
+- t68_pulse_spot_lam140/t68_pulse_spot_lam140.csv  (2026-10-17 17:05:18, 475428 bytes)
+- t68_pulse_spot_lam140_l16/t68_pulse_spot_lam140_l16.csv  (2026-10-18 01:59:15, 464473 bytes)
+- t68_pulse_spot_lam160/t68_pulse_spot_lam160.csv  (2026-10-17 18:01:25, 318557 bytes)
+- t68_pulse_spot_lam160_l16/t68_pulse_spot_lam160_l16.csv  (2026-10-18 04:54:29, 421935 bytes)
+- t68_pulse_spots_lam125/t68_pulse_spots_lam125.csv  (2026-10-17 17:37:20, 670055 bytes)
+- t68_pulse_spots_lam125_l16/t68_pulse_spots_lam125_l16.csv  (2026-10-18 03:00:40, 530791 bytes)
+- t68_pulse_spots_lam140/t68_pulse_spots_lam140.csv  (2026-10-17 17:33:08, 625854 bytes)
+- t68_pulse_spots_lam140_l16/t68_pulse_spots_lam140_l16.csv  (2026-10-18 02:50:49, 528890 bytes)
+- t68_pulse_spots_lam160/t68_pulse_spots_lam160.csv  (2026-10-17 18:32:47, 493345 bytes)
+- t68_pulse_spots_lam160_l16/t68_pulse_spots_lam160_l16.csv  (2026-10-18 05:48:05, 486866 bytes)
+- t68_ramp_all_lam125/t68_ramp_all_lam125.csv  (2026-10-17 19:20:30, 1639325 bytes)
+- t68_ramp_all_lam125_l16/t68_ramp_all_lam125_l16.csv  (2026-10-18 06:00:45, 902327 bytes)
+- t68_ramp_all_lam140/t68_ramp_all_lam140.csv  (2026-10-17 20:07:31, 1589752 bytes)
+- t68_ramp_all_lam140_l16/t68_ramp_all_lam140_l16.csv  (2026-10-18 05:49:38, 895591 bytes)
+- t68_ramp_all_lam160/t68_ramp_all_lam160.csv  (2026-10-17 20:37:45, 1512201 bytes)
+- t68_ramp_all_lam160_l16/t68_ramp_all_lam160_l16.csv  (2026-10-18 07:56:41, 896475 bytes)
+- t68_ramp_shared_lam125/t68_ramp_shared_lam125.csv  (2026-10-17 18:11:48, 850887 bytes)
+- t68_ramp_shared_lam125_l16/t68_ramp_shared_lam125_l16.csv  (2026-10-18 03:10:48, 612215 bytes)
+- t68_ramp_shared_lam140/t68_ramp_shared_lam140.csv  (2026-10-17 18:02:28, 861658 bytes)
+- t68_ramp_shared_lam140_l16/t68_ramp_shared_lam140_l16.csv  (2026-10-18 03:11:02, 662572 bytes)
+- t68_ramp_shared_lam160/t68_ramp_shared_lam160.csv  (2026-10-17 17:21:36, 645306 bytes)
+- t68_ramp_shared_lam160_l16/t68_ramp_shared_lam160_l16.csv  (2026-10-18 03:05:51, 591756 bytes)
+- t68_ramp_spot_lam125/t68_ramp_spot_lam125.csv  (2026-10-17 17:53:06, 720835 bytes)
+- t68_ramp_spot_lam125_l16/t68_ramp_spot_lam125_l16.csv  (2026-10-18 03:11:27, 561840 bytes)
+- t68_ramp_spot_lam140/t68_ramp_spot_lam140.csv  (2026-10-17 17:28:18, 744830 bytes)
+- t68_ramp_spot_lam140_l16/t68_ramp_spot_lam140_l16.csv  (2026-10-18 02:55:23, 616781 bytes)
+- t68_ramp_spot_lam160/t68_ramp_spot_lam160.csv  (2026-10-17 17:54:23, 626456 bytes)
+- t68_ramp_spot_lam160_l16/t68_ramp_spot_lam160_l16.csv  (2026-10-18 02:41:29, 554801 bytes)
+- t68_ramp_spots_lam125/t68_ramp_spots_lam125.csv  (2026-10-17 18:21:15, 999665 bytes)
+- t68_ramp_spots_lam125_l16/t68_ramp_spots_lam125_l16.csv  (2026-10-18 03:59:16, 726890 bytes)
+- t68_ramp_spots_lam140/t68_ramp_spots_lam140.csv  (2026-10-17 18:15:43, 951993 bytes)
+- t68_ramp_spots_lam140_l16/t68_ramp_spots_lam140_l16.csv  (2026-10-18 02:45:16, 677819 bytes)
+- t68_ramp_spots_lam160/t68_ramp_spots_lam160.csv  (2026-10-17 17:48:17, 795252 bytes)
+- t68_ramp_spots_lam160_l16/t68_ramp_spots_lam160_l16.csv  (2026-10-18 05:51:03, 641139 bytes)
+- t71_control_lam110/t71_control_lam110.csv  (2026-10-19 02:11:50, 239431 bytes)
+- t71_control_lam125/t71_control_lam125.csv  (2026-10-19 02:23:06, 308879 bytes)
+- t71_control_lam140/t71_control_lam140.csv  (2026-10-19 02:35:35, 492463 bytes)
+- t71_layer_lam110/t71_layer_lam110.csv  (2026-10-19 01:58:22, 8799728 bytes)
+- t71_layer_lam110_l16/t71_layer_lam110_l16.csv  (2026-10-25 20:15:52, 4469125 bytes)
+- t71_layer_lam125/t71_layer_lam125.csv  (2026-10-19 01:47:08, 2466943 bytes)
+- t71_layer_lam125_l16/t71_layer_lam125_l16.csv  (2026-10-25 20:09:52, 1313392 bytes)
+- t71_layer_lam140/t71_layer_lam140.csv  (2026-10-19 01:48:27, 2441836 bytes)
+- t71_layer_lam140_l16/t71_layer_lam140_l16.csv  (2026-10-25 20:11:06, 1264797 bytes)
+- t71_layerref_lam110/t71_layerref_lam110.csv  (2026-10-19 02:01:33, 13394991 bytes)
+- t71_layerref_lam110_l16/t71_layerref_lam110_l16.csv  (2026-10-25 20:26:10, 6955468 bytes)
+- t71_layerref_lam125/t71_layerref_lam125.csv  (2026-10-19 02:04:54, 13075994 bytes)
+- t71_layerref_lam125_l16/t71_layerref_lam125_l16.csv  (2026-10-25 20:29:09, 6778761 bytes)
+- t71_layerref_lam140/t71_layerref_lam140.csv  (2026-10-19 02:17:20, 19579328 bytes)
+- t71_layerref_lam140_l16/t71_layerref_lam140_l16.csv  (2026-10-25 20:42:47, 10118375 bytes)
+- t71_model_lam110/t71_model_lam110.csv  (2026-10-19 02:00:18, 8150057 bytes)
+- t71_model_lam110_l16/t71_model_lam110_l16.csv  (2026-10-25 20:23:47, 4067639 bytes)
+- t71_model_lam125/t71_model_lam125.csv  (2026-10-19 01:53:08, 2456286 bytes)
+- t71_model_lam125_l16/t71_model_lam125_l16.csv  (2026-10-25 20:18:16, 1317513 bytes)
+- t71_model_lam140/t71_model_lam140.csv  (2026-10-19 01:52:13, 2430897 bytes)
+- t71_model_lam140_l16/t71_model_lam140_l16.csv  (2026-10-25 20:15:20, 1261968 bytes)
+- t74_lam110_L08_meals16_c2R_cold/t74_lam110_L08_meals16_c2R_cold.csv  (2026-10-20 12:53:18, 14837842 bytes)
+- t74_lam110_L08_meals16_c2R_equal/t74_lam110_L08_meals16_c2R_equal.csv  (2026-10-20 12:52:18, 16052455 bytes)
+- t74_lam110_L08_meals16_c2R_warm/t74_lam110_L08_meals16_c2R_warm.csv  (2026-10-20 12:54:07, 18565448 bytes)
+- t74_lam110_L08_meals16_cRhalf_cold/t74_lam110_L08_meals16_cRhalf_cold.csv  (2026-10-20 12:57:28, 11464791 bytes)
+- t74_lam110_L08_meals16_cRhalf_equal/t74_lam110_L08_meals16_cRhalf_equal.csv  (2026-10-20 12:59:23, 11811561 bytes)
+- t74_lam110_L08_meals16_cRhalf_warm/t74_lam110_L08_meals16_cRhalf_warm.csv  (2026-10-20 12:57:58, 14575569 bytes)
+- t74_lam110_L08_meals256_c2R_cold/t74_lam110_L08_meals256_c2R_cold.csv  (2026-10-20 12:53:51, 14969235 bytes)
+- t74_lam110_L08_meals256_c2R_equal/t74_lam110_L08_meals256_c2R_equal.csv  (2026-10-20 12:52:21, 17111601 bytes)
+- t74_lam110_L08_meals256_c2R_warm/t74_lam110_L08_meals256_c2R_warm.csv  (2026-10-20 12:54:11, 19132674 bytes)
+- t74_lam110_L08_meals256_cRhalf_cold/t74_lam110_L08_meals256_cRhalf_cold.csv  (2026-10-20 12:58:28, 11508974 bytes)
+- t74_lam110_L08_meals256_cRhalf_equal/t74_lam110_L08_meals256_cRhalf_equal.csv  (2026-10-20 12:56:43, 11887415 bytes)
+- t74_lam110_L08_meals256_cRhalf_warm/t74_lam110_L08_meals256_cRhalf_warm.csv  (2026-10-20 12:59:38, 14698721 bytes)
+- t74_lam110_L08_steady_c2R_cold/t74_lam110_L08_steady_c2R_cold.csv  (2026-10-20 12:43:42, 14692268 bytes)
+- t74_lam110_L08_steady_c2R_equal/t74_lam110_L08_steady_c2R_equal.csv  (2026-10-20 12:52:59, 16633261 bytes)
+- t74_lam110_L08_steady_c2R_warm/t74_lam110_L08_steady_c2R_warm.csv  (2026-10-20 12:54:17, 17819286 bytes)
+- t74_lam110_L08_steady_cRhalf_cold/t74_lam110_L08_steady_cRhalf_cold.csv  (2026-10-20 12:59:52, 11362262 bytes)
+- t74_lam110_L08_steady_cRhalf_equal/t74_lam110_L08_steady_cRhalf_equal.csv  (2026-10-20 12:57:12, 11685688 bytes)
+- t74_lam110_L08_steady_cRhalf_warm/t74_lam110_L08_steady_cRhalf_warm.csv  (2026-10-20 12:58:35, 14428650 bytes)
+- t74_lam110_L12_meals16_c2R_cold/t74_lam110_L12_meals16_c2R_cold.csv  (2026-10-20 13:11:20, 14896243 bytes)
+- t74_lam110_L12_meals16_c2R_equal/t74_lam110_L12_meals16_c2R_equal.csv  (2026-10-20 13:16:49, 16783727 bytes)
+- t74_lam110_L12_meals16_c2R_warm/t74_lam110_L12_meals16_c2R_warm.csv  (2026-10-20 13:13:57, 18100911 bytes)
+- t74_lam110_L12_meals16_cRhalf_cold/t74_lam110_L12_meals16_cRhalf_cold.csv  (2026-10-20 13:24:08, 11734707 bytes)
+- t74_lam110_L12_meals16_cRhalf_equal/t74_lam110_L12_meals16_cRhalf_equal.csv  (2026-10-20 13:23:33, 11827873 bytes)
+- t74_lam110_L12_meals16_cRhalf_warm/t74_lam110_L12_meals16_cRhalf_warm.csv  (2026-10-20 13:28:26, 14602510 bytes)
+- t74_lam110_L12_meals256_c2R_cold/t74_lam110_L12_meals256_c2R_cold.csv  (2026-10-20 13:10:48, 15614063 bytes)
+- t74_lam110_L12_meals256_c2R_equal/t74_lam110_L12_meals256_c2R_equal.csv  (2026-10-20 13:14:13, 16304984 bytes)
+- t74_lam110_L12_meals256_c2R_warm/t74_lam110_L12_meals256_c2R_warm.csv  (2026-10-20 13:19:57, 18917211 bytes)
+- t74_lam110_L12_meals256_cRhalf_cold/t74_lam110_L12_meals256_cRhalf_cold.csv  (2026-10-20 13:25:10, 11667505 bytes)
+- t74_lam110_L12_meals256_cRhalf_equal/t74_lam110_L12_meals256_cRhalf_equal.csv  (2026-10-20 13:30:19, 12046915 bytes)
+- t74_lam110_L12_meals256_cRhalf_warm/t74_lam110_L12_meals256_cRhalf_warm.csv  (2026-10-20 13:23:21, 14858591 bytes)
+- t74_lam110_L12_steady_c2R_cold/t74_lam110_L12_steady_c2R_cold.csv  (2026-10-20 13:32:34, 14537889 bytes)
+- t74_lam110_L12_steady_c2R_equal/t74_lam110_L12_steady_c2R_equal.csv  (2026-10-20 13:35:18, 16109144 bytes)
+- t74_lam110_L12_steady_c2R_warm/t74_lam110_L12_steady_c2R_warm.csv  (2026-10-20 13:15:59, 18260268 bytes)
+- t74_lam110_L12_steady_cRhalf_cold/t74_lam110_L12_steady_cRhalf_cold.csv  (2026-10-20 13:39:54, 11567072 bytes)
+- t74_lam110_L12_steady_cRhalf_equal/t74_lam110_L12_steady_cRhalf_equal.csv  (2026-10-20 13:38:38, 12065777 bytes)
+- t74_lam110_L12_steady_cRhalf_warm/t74_lam110_L12_steady_cRhalf_warm.csv  (2026-10-20 13:46:45, 14710735 bytes)
+- t74_lam110_L16_meals16_c2R_cold/t74_lam110_L16_meals16_c2R_cold.csv  (2026-10-26 21:15:01, 15090774 bytes)
+- t74_lam110_L16_meals16_c2R_equal/t74_lam110_L16_meals16_c2R_equal.csv  (2026-10-26 21:15:44, 16639343 bytes)
+- t74_lam110_L16_meals16_c2R_warm/t74_lam110_L16_meals16_c2R_warm.csv  (2026-10-26 21:19:25, 18526659 bytes)
+- t74_lam110_L16_meals16_cRhalf_cold/t74_lam110_L16_meals16_cRhalf_cold.csv  (2026-10-26 21:17:54, 11859110 bytes)
+- t74_lam110_L16_meals256_c2R_cold/t74_lam110_L16_meals256_c2R_cold.csv  (2026-10-26 21:13:43, 15483601 bytes)
+- t74_lam110_L16_meals256_c2R_equal/t74_lam110_L16_meals256_c2R_equal.csv  (2026-10-26 21:18:58, 16993620 bytes)
+- t74_lam110_L16_meals256_c2R_warm/t74_lam110_L16_meals256_c2R_warm.csv  (2026-10-26 21:24:43, 19600763 bytes)
+- t74_lam110_L16_steady_c2R_cold/t74_lam110_L16_steady_c2R_cold.csv  (2026-10-26 21:14:03, 14560489 bytes)
+- t74_lam110_L16_steady_c2R_equal/t74_lam110_L16_steady_c2R_equal.csv  (2026-10-26 21:19:49, 16891359 bytes)
+- t74_lam110_L16_steady_c2R_warm/t74_lam110_L16_steady_c2R_warm.csv  (2026-10-26 21:18:27, 18411983 bytes)
+- t74_lam110_L16_steady_cRhalf_cold/t74_lam110_L16_steady_cRhalf_cold.csv  (2026-10-26 21:16:54, 11745434 bytes)
+- t74_lam125_L08_meals16_c2R_cold/t74_lam125_L08_meals16_c2R_cold.csv  (2026-10-20 13:07:27, 4488954 bytes)
+- t74_lam125_L08_meals16_c2R_equal/t74_lam125_L08_meals16_c2R_equal.csv  (2026-10-20 13:07:11, 4550659 bytes)
+- t74_lam125_L08_meals16_c2R_warm/t74_lam125_L08_meals16_c2R_warm.csv  (2026-10-20 13:11:00, 6949212 bytes)
+- t74_lam125_L08_meals16_cRhalf_cold/t74_lam125_L08_meals16_cRhalf_cold.csv  (2026-10-20 13:14:17, 4532211 bytes)
+- t74_lam125_L08_meals16_cRhalf_equal/t74_lam125_L08_meals16_cRhalf_equal.csv  (2026-10-20 13:18:20, 4509874 bytes)
+- t74_lam125_L08_meals16_cRhalf_warm/t74_lam125_L08_meals16_cRhalf_warm.csv  (2026-10-20 13:18:05, 6252638 bytes)
+- t74_lam125_L08_meals256_c2R_cold/t74_lam125_L08_meals256_c2R_cold.csv  (2026-10-20 13:12:45, 4825050 bytes)
+- t74_lam125_L08_meals256_c2R_equal/t74_lam125_L08_meals256_c2R_equal.csv  (2026-10-20 13:13:36, 4830191 bytes)
+- t74_lam125_L08_meals256_c2R_warm/t74_lam125_L08_meals256_c2R_warm.csv  (2026-10-20 13:14:25, 7132736 bytes)
+- t74_lam125_L08_meals256_cRhalf_cold/t74_lam125_L08_meals256_cRhalf_cold.csv  (2026-10-20 13:14:04, 4545360 bytes)
+- t74_lam125_L08_meals256_cRhalf_equal/t74_lam125_L08_meals256_cRhalf_equal.csv  (2026-10-20 13:20:18, 4673032 bytes)
+- t74_lam125_L08_meals256_cRhalf_warm/t74_lam125_L08_meals256_cRhalf_warm.csv  (2026-10-20 13:17:42, 6354436 bytes)
+- t74_lam125_L08_steady_c2R_cold/t74_lam125_L08_steady_c2R_cold.csv  (2026-10-20 13:20:17, 4559850 bytes)
+- t74_lam125_L08_steady_c2R_equal/t74_lam125_L08_steady_c2R_equal.csv  (2026-10-20 13:23:08, 4696713 bytes)
+- t74_lam125_L08_steady_c2R_warm/t74_lam125_L08_steady_c2R_warm.csv  (2026-10-20 13:26:35, 6898449 bytes)
+- t74_lam125_L08_steady_cRhalf_cold/t74_lam125_L08_steady_cRhalf_cold.csv  (2026-10-20 13:30:23, 4495786 bytes)
+- t74_lam125_L08_steady_cRhalf_equal/t74_lam125_L08_steady_cRhalf_equal.csv  (2026-10-20 13:31:09, 4563116 bytes)
+- t74_lam125_L08_steady_cRhalf_warm/t74_lam125_L08_steady_cRhalf_warm.csv  (2026-10-20 13:32:24, 6251861 bytes)
+- t74_lam125_L12_meals16_c2R_cold/t74_lam125_L12_meals16_c2R_cold.csv  (2026-10-20 13:40:03, 4692125 bytes)
+- t74_lam125_L12_meals16_c2R_equal/t74_lam125_L12_meals16_c2R_equal.csv  (2026-10-20 13:39:44, 4693646 bytes)
+- t74_lam125_L12_meals16_c2R_warm/t74_lam125_L12_meals16_c2R_warm.csv  (2026-10-20 13:43:09, 7073868 bytes)
+- t74_lam125_L12_meals16_cRhalf_cold/t74_lam125_L12_meals16_cRhalf_cold.csv  (2026-10-20 13:44:36, 4609878 bytes)
+- t74_lam125_L12_meals16_cRhalf_equal/t74_lam125_L12_meals16_cRhalf_equal.csv  (2026-10-20 13:55:42, 4637573 bytes)
+- t74_lam125_L12_meals16_cRhalf_warm/t74_lam125_L12_meals16_cRhalf_warm.csv  (2026-10-20 13:54:37, 6411225 bytes)
+- t74_lam125_L12_meals256_c2R_cold/t74_lam125_L12_meals256_c2R_cold.csv  (2026-10-20 13:45:05, 5061107 bytes)
+- t74_lam125_L12_meals256_c2R_equal/t74_lam125_L12_meals256_c2R_equal.csv  (2026-10-20 13:45:39, 5044961 bytes)
+- t74_lam125_L12_meals256_c2R_warm/t74_lam125_L12_meals256_c2R_warm.csv  (2026-10-20 13:47:05, 7379108 bytes)
+- t74_lam125_L12_meals256_cRhalf_cold/t74_lam125_L12_meals256_cRhalf_cold.csv  (2026-10-20 13:55:58, 4662887 bytes)
+- t74_lam125_L12_meals256_cRhalf_equal/t74_lam125_L12_meals256_cRhalf_equal.csv  (2026-10-20 13:53:59, 4680409 bytes)
+- t74_lam125_L12_meals256_cRhalf_warm/t74_lam125_L12_meals256_cRhalf_warm.csv  (2026-10-20 14:02:40, 6464187 bytes)
+- t74_lam125_L12_steady_c2R_cold/t74_lam125_L12_steady_c2R_cold.csv  (2026-10-20 13:46:11, 4654998 bytes)
+- t74_lam125_L12_steady_c2R_equal/t74_lam125_L12_steady_c2R_equal.csv  (2026-10-20 13:51:24, 4816037 bytes)
+- t74_lam125_L12_steady_c2R_warm/t74_lam125_L12_steady_c2R_warm.csv  (2026-10-20 13:55:22, 7107028 bytes)
+- t74_lam125_L12_steady_cRhalf_cold/t74_lam125_L12_steady_cRhalf_cold.csv  (2026-10-20 14:01:36, 4557984 bytes)
+- t74_lam125_L12_steady_cRhalf_equal/t74_lam125_L12_steady_cRhalf_equal.csv  (2026-10-20 14:01:32, 4633515 bytes)
+- t74_lam125_L12_steady_cRhalf_warm/t74_lam125_L12_steady_cRhalf_warm.csv  (2026-10-20 13:56:16, 6342906 bytes)
+- t74_lam125_L16_meals16_c2R_cold/t74_lam125_L16_meals16_c2R_cold.csv  (2026-10-26 20:59:41, 4917250 bytes)
+- t74_lam125_L16_meals16_c2R_equal/t74_lam125_L16_meals16_c2R_equal.csv  (2026-10-26 21:00:26, 4953238 bytes)
+- t74_lam125_L16_meals16_c2R_warm/t74_lam125_L16_meals16_c2R_warm.csv  (2026-10-26 21:05:25, 7371139 bytes)
+- t74_lam125_L16_meals16_cRhalf_cold/t74_lam125_L16_meals16_cRhalf_cold.csv  (2026-10-26 21:16:01, 4692641 bytes)
+- t74_lam125_L16_meals16_cRhalf_equal/t74_lam125_L16_meals16_cRhalf_equal.csv  (2026-10-26 21:16:32, 4849523 bytes)
+- t74_lam125_L16_meals16_cRhalf_warm/t74_lam125_L16_meals16_cRhalf_warm.csv  (2026-10-26 21:16:47, 6512525 bytes)
+- t74_lam125_L16_steady_c2R_cold/t74_lam125_L16_steady_c2R_cold.csv  (2026-10-26 20:58:45, 4910911 bytes)
+- t74_lam125_L16_steady_c2R_equal/t74_lam125_L16_steady_c2R_equal.csv  (2026-10-26 20:58:34, 5094323 bytes)
+- t74_lam125_L16_steady_c2R_warm/t74_lam125_L16_steady_c2R_warm.csv  (2026-10-26 21:04:00, 7360482 bytes)
+- t74_lam125_L16_steady_cRhalf_cold/t74_lam125_L16_steady_cRhalf_cold.csv  (2026-10-26 21:23:37, 4681260 bytes)
+- t74_lam125_L16_steady_cRhalf_equal/t74_lam125_L16_steady_cRhalf_equal.csv  (2026-10-26 21:18:23, 4703059 bytes)
+- t74_lam125_L16_steady_cRhalf_warm/t74_lam125_L16_steady_cRhalf_warm.csv  (2026-10-26 21:20:56, 6456989 bytes)
+- t74_lam140_L08_meals16_c2R_cold/t74_lam140_L08_meals16_c2R_cold.csv  (2026-10-20 13:35:29, 3529570 bytes)
+- t74_lam140_L08_meals16_c2R_equal/t74_lam140_L08_meals16_c2R_equal.csv  (2026-10-20 13:39:38, 3524615 bytes)
+- t74_lam140_L08_meals16_c2R_warm/t74_lam140_L08_meals16_c2R_warm.csv  (2026-10-20 13:42:01, 6226183 bytes)
+- t74_lam140_L08_meals16_cRhalf_cold/t74_lam140_L08_meals16_cRhalf_cold.csv  (2026-10-20 13:47:51, 3739982 bytes)
+- t74_lam140_L08_meals16_cRhalf_equal/t74_lam140_L08_meals16_cRhalf_equal.csv  (2026-10-20 13:44:32, 3761380 bytes)
+- t74_lam140_L08_meals16_cRhalf_warm/t74_lam140_L08_meals16_cRhalf_warm.csv  (2026-10-20 13:53:02, 5060024 bytes)
+- t74_lam140_L08_meals256_c2R_cold/t74_lam140_L08_meals256_c2R_cold.csv  (2026-10-20 13:44:32, 3723937 bytes)
+- t74_lam140_L08_meals256_c2R_equal/t74_lam140_L08_meals256_c2R_equal.csv  (2026-10-20 13:45:28, 3696061 bytes)
+- t74_lam140_L08_meals256_c2R_warm/t74_lam140_L08_meals256_c2R_warm.csv  (2026-10-20 13:48:32, 6501309 bytes)
+- t74_lam140_L08_meals256_cRhalf_cold/t74_lam140_L08_meals256_cRhalf_cold.csv  (2026-10-20 13:53:55, 3756137 bytes)
+- t74_lam140_L08_meals256_cRhalf_equal/t74_lam140_L08_meals256_cRhalf_equal.csv  (2026-10-20 13:56:23, 3825151 bytes)
+- t74_lam140_L08_meals256_cRhalf_warm/t74_lam140_L08_meals256_cRhalf_warm.csv  (2026-10-20 13:58:53, 5100678 bytes)
+- t74_lam140_L08_steady_c2R_cold/t74_lam140_L08_steady_c2R_cold.csv  (2026-10-20 13:53:14, 3548014 bytes)
+- t74_lam140_L08_steady_c2R_equal/t74_lam140_L08_steady_c2R_equal.csv  (2026-10-20 13:51:51, 3565533 bytes)
+- t74_lam140_L08_steady_c2R_warm/t74_lam140_L08_steady_c2R_warm.csv  (2026-10-20 13:48:14, 6220020 bytes)
+- t74_lam140_L08_steady_cRhalf_cold/t74_lam140_L08_steady_cRhalf_cold.csv  (2026-10-20 14:00:29, 3699913 bytes)
+- t74_lam140_L08_steady_cRhalf_equal/t74_lam140_L08_steady_cRhalf_equal.csv  (2026-10-20 14:02:00, 3850680 bytes)
+- t74_lam140_L08_steady_cRhalf_warm/t74_lam140_L08_steady_cRhalf_warm.csv  (2026-10-20 14:04:19, 5030962 bytes)
+- t74_lam140_L12_meals16_c2R_cold/t74_lam140_L12_meals16_c2R_cold.csv  (2026-10-20 14:05:02, 3562383 bytes)
+- t74_lam140_L12_meals16_c2R_equal/t74_lam140_L12_meals16_c2R_equal.csv  (2026-10-20 14:05:16, 3561082 bytes)
+- t74_lam140_L12_meals16_c2R_warm/t74_lam140_L12_meals16_c2R_warm.csv  (2026-10-20 14:15:41, 6355854 bytes)
+- t74_lam140_L12_meals16_cRhalf_cold/t74_lam140_L12_meals16_cRhalf_cold.csv  (2026-10-20 14:20:31, 3785320 bytes)
+- t74_lam140_L12_meals16_cRhalf_equal/t74_lam140_L12_meals16_cRhalf_equal.csv  (2026-10-20 14:22:09, 3824664 bytes)
+- t74_lam140_L12_meals16_cRhalf_warm/t74_lam140_L12_meals16_cRhalf_warm.csv  (2026-10-20 14:22:43, 5175385 bytes)
+- t74_lam140_L12_meals256_c2R_cold/t74_lam140_L12_meals256_c2R_cold.csv  (2026-10-20 14:12:06, 3750048 bytes)
+- t74_lam140_L12_meals256_c2R_equal/t74_lam140_L12_meals256_c2R_equal.csv  (2026-10-20 14:15:19, 3736421 bytes)
+- t74_lam140_L12_meals256_c2R_warm/t74_lam140_L12_meals256_c2R_warm.csv  (2026-10-20 14:15:28, 6499267 bytes)
+- t74_lam140_L12_meals256_cRhalf_cold/t74_lam140_L12_meals256_cRhalf_cold.csv  (2026-10-20 14:21:35, 3866491 bytes)
+- t74_lam140_L12_meals256_cRhalf_equal/t74_lam140_L12_meals256_cRhalf_equal.csv  (2026-10-20 14:24:15, 3848818 bytes)
+- t74_lam140_L12_meals256_cRhalf_warm/t74_lam140_L12_meals256_cRhalf_warm.csv  (2026-10-20 14:28:24, 5213417 bytes)
+- t74_lam140_L12_steady_c2R_cold/t74_lam140_L12_steady_c2R_cold.csv  (2026-10-20 14:16:43, 3521553 bytes)
+- t74_lam140_L12_steady_c2R_equal/t74_lam140_L12_steady_c2R_equal.csv  (2026-10-20 14:16:34, 3540133 bytes)
+- t74_lam140_L12_steady_c2R_warm/t74_lam140_L12_steady_c2R_warm.csv  (2026-10-20 14:21:06, 6278723 bytes)
+- t74_lam140_L12_steady_cRhalf_cold/t74_lam140_L12_steady_cRhalf_cold.csv  (2026-10-20 14:35:27, 3790136 bytes)
+- t74_lam140_L12_steady_cRhalf_equal/t74_lam140_L12_steady_cRhalf_equal.csv  (2026-10-20 14:30:55, 3798950 bytes)
+- t74_lam140_L12_steady_cRhalf_warm/t74_lam140_L12_steady_cRhalf_warm.csv  (2026-10-20 14:32:01, 5123041 bytes)
+- t76_l16_g3p2_q1024/t76_l16_g3p2_q1024.csv  (2026-10-20 15:42:44, 5208282 bytes)
+- t76_l16_g3p2_q16/t76_l16_g3p2_q16.csv  (2026-10-20 15:09:28, 2754889 bytes)
+- t76_l16_g3p2_q256/t76_l16_g3p2_q256.csv  (2026-10-20 15:17:02, 4151531 bytes)
+- t76_l16_g3p2_q64/t76_l16_g3p2_q64.csv  (2026-10-20 15:09:25, 2426650 bytes)
+- t76_l24_g3p2_q1024/t76_l24_g3p2_q1024.csv  (2026-10-20 18:04:49, 7698500 bytes)
+- t76_l24_g3p2_q16/t76_l24_g3p2_q16.csv  (2026-10-20 15:17:00, 2454634 bytes)
+- t76_l24_g3p2_q256/t76_l24_g3p2_q256.csv  (2026-10-20 15:50:07, 3566329 bytes)
+- t76_l24_g3p2_q64/t76_l24_g3p2_q64.csv  (2026-10-20 15:26:47, 3640005 bytes)
 
 ## scratch from runs that died (partial/)
