@@ -236,7 +236,8 @@ R1, R2. **Reading owed by the assistant** (no answer needed): holography and the
 16. ~~**Her word on the held-out runs** of T71 and T74 at L = 16 (`sandbox/heldout_2026-10-23/`).~~ *Answered 25 October
     (VISION Updates 114 and 115): both go ahead on her registered predictions. Listed here as open by mistake until 26
     October. What remains is ours: T71's L = 16 jobs were queued on 25 October and their results are not yet fetched;
-    T74's L = 16 amendment and jobs have not been written or queued.*
+    T74's L = 16 amendment and jobs had not been written or queued; written and launched 26 October on her "Yes please"
+    (PREREGISTRATION T74, Amendment 6).*
 17. **The runaway remedy for soft space** (`docs/design/regge_stage_b_brief.md`, question 5).
 18. **Her prediction for the λ-from-curvature test** (Update 89).
 19. **Her predictions for the first soft-space runs** (a disturbance's speed; two knots' pull).

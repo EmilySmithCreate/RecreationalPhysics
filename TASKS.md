@@ -1086,3 +1086,12 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    alongside item 1 of the O158 section, with the reader committed this time.
 5. Low: the push look's skip-if-done should compare the config, not only the file name (F10).
 
+## 26 October: the held-out stages of T71 and T74  ◑
+
+**Added 2026-10-26** (the owner's "Yes please"). T71's L = 16 jobs (queued 25 October) requested from the bucket
+(`cloud/fetch/request.txt`); to read: accept with `scripts/accept_inbox.py --move`, then score against
+`configs/t71_heldout_prediction.csv` (Amendment 4). T74's L = 16 registered and launched: PREREGISTRATION T74
+Amendment 6, 54 jobs (`cloud/queue/2026-10-26_t74_heldout.txt`); to read: add `t74_*_L16_*` to
+`cloud/fetch/request.txt`, accept, then `PYTHONPATH="src;scripts" python scripts/t74_heldout_score.py`. After both are
+read: the `layer_feed` guard fix of the O158 section, with its test.
+
