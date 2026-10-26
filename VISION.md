@@ -4197,4 +4197,14 @@ the pair tie, opening the first direction lowers the second's wall from λ of ab
   T54's patch method on the rod, against λ; (2) a short warm-bath look at the rod under the pair tie at λ = 1.20 to 1.40:
   does one crossing open both directions, as the walls suggest? Both are cheap and use built code. The handedness of the
   two slabs, and her north and south poles, need the signed twist first.
+- **The true barrier under the pair tie, a look** (`sandbox/pair_tie_patch_look.py`, exact energies of growing opened
+  patches, T54's method). **The second opening (the slab's) has a critical patch with a barrier of 154, 102, 72 and 26 at
+  λ = 1.15, 1.20, 1.25 and 1.40**, against 288 to 488 or more untied below 1.40 (128 at 1.40). **The first opening
+  (the rod's)** costs a seam of about 176 to 192 and then a level plateau: under the pair tie each further row releases
+  nothing, so nothing drives the first opening on once it has started, until the last row closes the seam. So by these
+  patches the second barrier is below the first at every λ tried, 1.15 included (the single moves had put the crossover
+  near 1.2): once the first direction has opened, the second is the easier of the two, her cascade. *Said plainly:* two
+  different patch shapes, neither shown to be the cheapest path; the plateau means the first opening must cross the
+  whole rod with no push from its own release; and the tie charges a broken point nothing, which let T56's tied slab
+  break instead of opening (O115). A warm-bath look on the rod is running.
 
