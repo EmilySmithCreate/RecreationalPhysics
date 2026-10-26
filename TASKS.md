@@ -1083,7 +1083,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    then Bowick and Giomi 2009 on paired defects, Chatterjee and Diaconis 2013 on fixed subgraph counts, DeGrand and
    Toussaint 1980, and Jaffe 2005 on the Casimir force.
 4. **T71's per-birth recount** (F31): confirm the 16 extra births per cell and the births above one curling cost
-   alongside item 1 of the O158 section, with the reader committed this time.
+   alongside item 1 of the O158 section, with the reader committed this time. *Done 2026-10-26 (`scripts/read_t71_births.py`, tested): 5,148 and 4,620 confirmed; the 24 births above a N_slab at L = 8 are contractions of a damaged state booked as births; O158 addendum.*
 5. Low: the push look's skip-if-done should compare the config, not only the file name (F10).
 
 ## 26 October: the held-out stages of T71 and T74  ◑
