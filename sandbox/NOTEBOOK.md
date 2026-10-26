@@ -2494,4 +2494,7 @@ The toy can’t yet tell right-handed from left-handed. That needs the signed tw
 
 2.	T1e: Bring back a tie for the pair, so that curling two directions costs the same as curling one? Yes, anything we can check sandbox before pivoting?"
 - 2026-10-26, the owner (verbatim; VISION Update 125): "We need to do 1. If it seems worth exploring later we can do 2"
+- 2026-10-26, the owner (verbatim; VISION Update 127; her message was cut off by an interrupt and is recorded as it arrived): "Into its waves and travel away from the spot - where do the waved go in the black hole? what happens to them?
+
+My unchecked reading is that a broken point is space bent the wrong way around that point -> the wrong way around is a anticurl to its curl and they always come in pairs. so maybe "breakage" is actually more opening?"
 

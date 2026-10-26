@@ -4283,3 +4283,35 @@ place carry "O158".
   hole and Farhi, Guth and Guven's attempt to make a universe by tunnelling bear most directly on her parent-hole
   picture and come first if any is read.
 
+Update 127 (2026-10-26): **the author's two questions on the push look: where would soft space's waves go inside a black
+hole, and is "breakage" anticurl, more opening?** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **Hers.** If the push leaks into soft space's waves, where do the waves go in the black hole? And: space bent the wrong
+  way around a point is an anticurl to its curl, and the two always come in pairs, so maybe breakage is really more
+  opening.
+- **The waves** (*ours*). In the toy the rod is sealed and closed, so waves leaving the spot travel round it and come
+  back; nothing leaves, and in time they spread into an even warmth of the field over the whole rod. Read in her
+  picture, where the rod is the inside of the hole, they stay in the hole as stored energy, available to the burp. *General
+  knowledge, to verify:* in general relativity nothing that is inside a horizon gets out; a hole sheds outside
+  disturbances by ringing down in gravitational waves (the ringdown LIGO sees); the only leak from inside is Hawking
+  radiation, extremely slow for any large hole. Stage A's waves are of one number per point, not gravitational waves
+  (Update 77).
+- **Breakage and anticurl, a look** (`sandbox/breakage_anticurl_look.py`; the push look's saved end states, no new
+  run; exact counts). (1) **A broken point is where the anticurl sits:** 85 to 100 % of all anticurl is on links touching
+  a broken point. And by its count a broken point has more open directions than flat space, so in that sense breakage
+  is opening past flat, as she says. (2) **But it is not free and it is not paired in place.** By the toy's energy,
+  H = 4 × anticurl + 4(λ − 1) × curl (exact: the published term 16(3N − S) is 4 × (anticurl − curl)), so a unit of
+  anticurl costs 4 while a unit of curl costs 1.6 at λ = 1.40: going past flat is uphill, paid by the push. The
+  curl that remains is not gathered beside the broken points; it sits there a little less often than chance. (3) **The
+  total moves toward her rule.** The rod starts with curl 576 and no anticurl; in the runs that broke most, curl and
+  anticurl end near 200 each, with curl minus anticurl between −20 and 40, close to the zero her hard rule holds
+  (Update 105). In the runs that broke least it stays at 200 to 430.
+- **What this suggests** (*ours, unverified*). Under her hard rule (decided 25 October, not yet built for six links) the
+  rod as run is not an allowed X: a curled X must carry anticurl equal to its curl from the start (Update 105, (3)). Every
+  sandbox look on the rod used the kernel without the rule, so its X held curl with nothing to balance it, and the push
+  made the anticurl along the way, as damage. In an X that obeys the rule the anticurl is part of X from the beginning,
+  and an opening must cancel curl and anticurl together, which is her "they always come in pairs". So whether the
+  breakage is damage or her pair may depend on running under her own rule; the rod runs cannot tell. *Said plainly:* a
+  sandbox look on 100 end states; it kills "the leftover curl sits paired beside the anticurl" for these runs and
+  crowns nothing.
+
