@@ -4654,4 +4654,21 @@ author and should be disclosed as such in any submission. Physics estimates mark
     Sakharov 1967 and Cohen, De Rújula and Glashow 1998 on matter and antimatter; lattice monopoles (DeGrand and
     Toussaint 1980; Banks, Myerson and Kogut 1977; Polyakov 1975; Guth 1980). Added to `REFERENCES.bib` only after a
     Crossref check (TASKS).
+- **O160 T71 AT THE HELD-OUT SIZE L = 16: AS PREDICTED (26 October 2026); T74's held-out stage launched.** The nine L = 16
+  jobs of T71 Amendment 4 (queued 25 October) were fetched and accepted on 26 October and scored by
+  `scripts/t71_heldout_score.py` against `configs/t71_heldout_prediction.csv`, written from L = 8 and 12 alone (rule 14).
+  All 152 scored rows hold; 18 cells, 16 replicas each. In the one cell where size can matter (the model arm, λ = 1.10,
+  r = 1/16), rule D's three numbers lie inside their ranges (energy per daughter 0.912 a N_slab, daughters 307.5, slab
+  share 0.312), with 37 clean moves (written 4 to 50.4, reported). Her one-a-N_slab-per-daughter prediction and our two
+  fail again in that cell and nowhere else, as the amendment said. Reading in PREREGISTRATION T71, after Amendment 4.
+  *What it shows (ours):* the slab cycles under the layer form at three sizes with the numbers fixed in advance; in 17
+  cells that is the kernel's arithmetic at a third size, and in the clean-move cell the effect did not grow with the
+  slab within what two sizes allowed. It tests a shared expectation; it cannot separate her picture from ours.
+  - **T74's held-out stage, registered and launched the same day** (PREREGISTRATION T74, Amendment 6): the numbers
+    drafted on 23 October from L = 8 and 12 alone, rerun with identical output; 54 jobs. Two checks before launch: the
+    code T74 runs is stage 1's (a stage-1 replica rerun from its config reproduced its 2,482 rows in every column), and
+    a cell of 16 replicas takes about 67 minutes on the laptop against Batch's 24-hour ceiling.
+  - **A correction to the record of 25 October:** Update 115 read her "Confirm" as covering the T74 go-ahead; on the
+    predictions sheet the go-ahead line was left blank. Her explicit go-ahead is of 26 October ("Yes please"); the
+    questions file had also kept item 16 open after she answered it. Both corrected.
 

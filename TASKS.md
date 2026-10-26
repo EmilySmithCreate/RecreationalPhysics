@@ -1089,8 +1089,8 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
 ## 26 October: the held-out stages of T71 and T74  ◑
 
 **Added 2026-10-26** (the owner's "Yes please"). T71's L = 16 jobs (queued 25 October) requested from the bucket
-(`cloud/fetch/request.txt`); to read: accept with `scripts/accept_inbox.py --move`, then score against
-`configs/t71_heldout_prediction.csv` (Amendment 4). T74's L = 16 registered and launched: PREREGISTRATION T74
+(`cloud/fetch/request.txt`). *Read 26 October: AS PREDICTED, 152 of 152 (O160;
+`scripts/t71_heldout_score.py`).* T74's L = 16 registered and launched: PREREGISTRATION T74
 Amendment 6, 54 jobs (`cloud/queue/2026-10-26_t74_heldout.txt`); to read: add `t74_*_L16_*` to
 `cloud/fetch/request.txt`, accept, then `PYTHONPATH="src;scripts" python scripts/t74_heldout_score.py`. After both are
 read: the `layer_feed` guard fix of the O158 section, with its test.

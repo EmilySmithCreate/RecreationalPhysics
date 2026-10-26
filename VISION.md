@@ -4408,3 +4408,18 @@ in Updates 124, 125, 127 and 128 (marked "O159").** Brief `docs/reviews/2026-10-
   Her choice among Update 128's options (a) to (c) stands open, with (a)'s description corrected and the frozen result
   narrowed to the large flat torus.
 
+Update 130 (2026-10-26): **T71 at its held-out size reads AS PREDICTED; T74's held-out stage is launched.** At the
+author's "Yes please" (asked whether to fetch T71's L = 16 results and register and launch T74's), the record caught up
+with her word of 25 October (Updates 114 and 115), which had been left open on our side.
+
+- **T71, measured (rule 14; ASSUMPTIONS O160).** At L = 16 every one of 152 numbers and words written beforehand from
+  L = 8 and 12 holds. The slab under the layer form cycles at three sizes, with the release, the timing and the number of
+  daughters where the two smaller sizes put them. In the one cell where the clean move fires (λ = 1.10, the fast feed),
+  her one-curling-cost-per-daughter and our two predictions fail again, exactly as the registration said they would,
+  and nowhere else. *Ours:* in 17 cells this checks arithmetic that does not depend on size; it tests a shared
+  expectation and cannot separate her picture from ours. Whether piece 5's status on the programme page moves is hers.
+- **T74, launched** (PREREGISTRATION T74, Amendment 6): 54 cells at L = 16, scored against numbers written before the
+  run. Her caveat ("but the surplus matter") marks where the numbers are most at risk.
+- **Corrected:** Update 115 read her "Confirm" of 25 October as the T74 go-ahead; the go-ahead line on her sheet was
+  blank, and her explicit go-ahead is of 26 October.
+

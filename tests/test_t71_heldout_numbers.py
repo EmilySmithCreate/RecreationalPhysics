@@ -85,3 +85,22 @@ def test_the_held_out_configs_change_only_name_sizes_seed_purpose_and_written():
     manifest = (ROOT / "cloud" / "queue" / "2026-10-25_t71_heldout.txt").read_text().splitlines()
     jobs = [ln.split() for ln in manifest if ln.strip() and not ln.lstrip().startswith("#")]
     assert jobs == [["run_layer_feed", "t71_%s_lam%d_l16" % (arm, lam)] for lam in LAMS for arm in ARMS]
+
+
+def test_the_held_out_scorer_rules():
+    import t71_heldout_score as S
+    word = dict(rule="word", predicted="CYCLES", low="", high="")
+    assert S.holds(word, "CYCLES") is True and S.holds(word, "ONE BURP") is False
+    num = dict(rule="A", predicted="5", low="4", high="6")
+    assert S.holds(num, 6.0) is True and S.holds(num, 6.1) is False and S.holds(num, None) is None
+    exact = dict(rule="C", predicted="1", low="1", high="1")
+    assert S.holds(exact, 1.0 + 1e-12) is True and S.holds(exact, 0.99) is False
+    upper = dict(rule="B", predicted="", low="52", high="65")
+    assert S.holds(upper, 65) is True and S.holds(upper, 66) is False
+    reps = [dict(word="CYCLES", first_split=13, spent_first=False, clean_total=2, period=None),
+            dict(word="CYCLES", first_split=21, spent_first=False, clean_total=0, period=5.0),
+            dict(word="ONE BURP", first_split=None, spent_first=True, clean_total=1, period=4.0)]
+    assert S.value("majority word", reps) == "CYCLES"
+    assert (S.value("first split, earliest replica", reps), S.value("first split, latest replica", reps)) == (13, 21)
+    assert S.value("period, median", reps) == 4.5 and S.value("SPENT FIRST count", reps) == 1
+    assert S.value("clean moves in all", reps) == 3 and S.value("replicas with a clean move", reps) == 2

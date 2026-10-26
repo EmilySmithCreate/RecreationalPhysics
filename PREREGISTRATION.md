@@ -8103,6 +8103,31 @@ What it means, as recorded in VISION Update 114:
    recorded. It is not a held-out test.
 3. The go-ahead for the held-out jobs: the nine of section 8.
 
+### Reading of T71 at the held-out size L = 16 (2026-10-26; ASSUMPTIONS O160; `scripts/t71_heldout_score.py`)
+
+The nine jobs of Amendment 4, section 8 (queued 25 October), fetched and accepted on 26 October: every file passed
+`scripts/accept_inbox.py` (its config as committed), and every one of the 18 arm cells has 16 replicas. Scored against
+`configs/t71_heldout_prediction.csv` by `scripts/t71_heldout_score.py` (added 26 October, with a test; it reads each
+replica with `t71_heldout_numbers.per_replica`, the reading the numbers were written from).
+
+**AS PREDICTED** (section 6): all 152 scored rows hold, none misses, none unread. Every majority word is CYCLES as
+predicted; every first split lies in its range under rule B; every release at the first split, every energy per
+daughter under rule C and every SPENT FIRST count are exact where rule C says so.
+
+**The one cell where size can matter** (the model arm at λ = 1.10, r = 1/16; Table 2b), under rule D: energy per
+daughter 0.912 of a N_slab (range 0.287 to 1), daughters 307.5 (206.4 to 386.5), slab share 0.312 (0.052 to 0.472).
+Reported, not scored: 37 clean moves in all (4 to 50.4 written), in all 16 replicas; the median end energy 0.3125 a N_slab
+(128), the open state with patches as written, not the slab.
+
+**The three predictions of section 6, as they fall:** hers (one a N_slab per daughter in every cell) fails again in that
+one cell, at 0.912; ours ("the slab share above one half under g1") fails again there, at 0.312; ours ("no clean switch
+move in any cell") fails again there, with 37. Each fails where the amendment said it would, and nowhere else.
+
+What this does and does not show: in 17 of the 18 arm cells nothing in the code depends on L (section 2), so there the
+held-out size confirms the kernel's arithmetic at a third size; in the clean-move cell the rate of clean moves and its
+effect on the daughters did not grow past what L = 8 and 12 allowed. It tests a shared expectation; it cannot tell her
+picture from ours (section 6).
+
 ### Reading of T74 (2026-10-21, 11:28 UTC by the clock; ASSUMPTIONS O145; `scripts/analyse_t74.py`)
 
 Read on L = 8 and 12 by the rules above, the owner's prediction being ours (Amendment 5). Fed phase: BURPS in 102 cells
