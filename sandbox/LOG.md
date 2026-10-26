@@ -410,6 +410,18 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
   it released at λ = 1.25 (both sizes), 28 % at λ = 1.10 (the torus wandered to width 8 and the feed piled up). So the
   excess is set by the gate, the rate and when one looks, not by the burp. The two kinds of point are equal at every
   sweep (108 and 108; 192 and 192): exact, by the degree rule, so no excess of one kind can exist in the toy. A look.
+- 2026-10-19. Inflow rate against density (the owner's handoff of 19 October; `sandbox/inflow_density.py`;
+  `sandbox/out/inflow_density_2026-10-19.txt`). Layer form, slab 4 × 16 × 16, λ = 1.25, gate g1, the split made with the
+  kernel: a uniform feed, steady or in bursts, reaches the gate with contrast exactly 0; random deposits of size q give
+  sqrt(q/m) per point (q = 1: 0.69 to 0.74 against 0.71; q = 4: 1.41 to 1.47; q = 0.01: 0.07), the same at four times the
+  rate, white (over 4 × 4 columns 0.06 to 0.08); the release is a N_slab to the unit every time; under f1 the field after
+  the split is 4, 0, 0, 4, 2, 2 per layer (the width is its scale). Front form, the 2D tube 4 × 128 with a store at every
+  point: a uniform feed trips every point's wall in the same sweep (81 to 103 columns open in one block: a flash, not a
+  front); random deposits seed 1 to 17 columns early and a front runs; in both the stores hold 4 to 8 per point before
+  the first seed can go and the product is largely broken; the energy per column at the end is white under every feed
+  (contrast 0.24 to 0.35, falling as 1/sqrt(b), slopes about 0, no correlation with the opening sweep, −0.07 to 0.15).
+  A look; it supports nothing. What it narrows: in this toy an inflow hands on its own grain and nothing else; the rate
+  sets only how much arrives, never a pattern; and under Updates 65, 66 and 69 the daughter has no spatial field at all.
 - 2026-10-19, evening, the owner's question whether the toy's curvature obeys the handle count of Gauss-Bonnet
   (`sandbox/handle_bound.py`, out `sandbox/out/handle_bound_2026-10-19.txt`). *Exact, ours, by Euler's formula, unreviewed:*
   draw a four-link two-sided graph on a closed orientable surface with g handles; every face is an even cycle of length
