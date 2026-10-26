@@ -1078,7 +1078,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    starting with the next one. Every look of 25 to 26 October ran on a rod her hard rule forbids (F37).
 2. **Her choice among Update 128's options**, with (a)'s description corrected, and her description of the starting X
    that obeys the rule (her "proceed" left it to her).
-3. **Reading, with a Crossref check before any `REFERENCES.bib` entry:** kinetically constrained models (Fredrickson and
+3. *Done in part 26 October: three notes, `docs/reading/notes/2026-10-26_*.md` (constrained moves; subgraph-count ensembles; paired defects), by assistant agents; questions Q1 to Q4 written from them in `docs/design/owner_questions_2026-10-24.md`. Still owed: DeGrand and Toussaint, Jaffe, and the bibliography entries.* **Reading, with a Crossref check before any `REFERENCES.bib` entry:** kinetically constrained models (Fredrickson and
    Andersen 1984; Ritort and Sollich 2003) and Kawasaki 1966, first, since they bear on her pending choice;
    then Bowick and Giomi 2009 on paired defects, Chatterjee and Diaconis 2013 on fixed subgraph counts, DeGrand and
    Toussaint 1980, and Jaffe 2005 on the Casimir force.

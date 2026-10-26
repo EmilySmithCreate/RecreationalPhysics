@@ -1,9 +1,92 @@
-# Questions waiting on the owner (kept current; updated 25 October 2026, second pass)
+# Questions waiting on the owner (kept current; updated 26 October 2026)
 
 *One list of everything that needs her answer before the work can move. Each item says what it decides and where the
 full text is. Answer in any order; items marked ★ unblock the most. Answered items are moved to the end with the date.
 Her words of 25 October are in `sandbox/NOTEBOOK.md` under that date (her two passes of `#` notes on this file kept
 verbatim there); the record is VISION Updates 104 to 112.*
+
+## Open, 26 October: the hard rule and the twin X (start here)
+
+*After the third Codex audit (ASSUMPTIONS O159, VISION Update 129) and three readings of the same day
+(`docs/reading/notes/2026-10-26_constrained_moves_kcm.md`, `2026-10-26_subgraph_count_ensembles.md`,
+`2026-10-26_paired_defects_gauss_bonnet.md`; read by assistant agents, quotations to check against the PDFs). For each
+question: what the runs and the reading say, the assistant's recommendation, and what your answer lets us test. Labels:
+exact (arithmetic or complete enumeration), look (a sandbox look: can kill, never crown), published (read, with the
+note), ours (an interpretation, unverified).*
+
+**Q1 ★ Your hard rule freezes clean space. Keep it as is, extend the moves, or soften it?**
+You confirmed the hard form on 25 October (squares held at exactly 3N; a move allowed only if it keeps the count).
+
+- *Exact (Update 128, as corrected by O159).* Out of flat six-link space (the 6 × 6 × 8 torus) no single switch keeps
+  the count, and no pair of switches within two links of each other does, except undoing the first. In damaged states a
+  few switches keep it (42 in 274,248; 57 in 272,560; 14 in 282,861). So under the rule clean space cannot move at all
+  and damaged space moves rarely.
+- *Published.* This is the known behavior of systems where only moves that keep a total are allowed (kinetically
+  constrained models, Ritort and Sollich 2003): order freezes and only defects move, and an ordered state can sit in a
+  sealed-off compartment of its own that no allowed move enters or leaves. Closest to the toy: Nishimura 2017 (already in
+  our bibliography as [Swap17]) shows that graphs with fixed degrees *and* a fixed triangle count can be cut into
+  separate compartments unless a move rewires 8 or more links at once, which is four switches. A soft penalty restores
+  the connections, and at a large enough strength it gives the same results as the hard rule (Costeniuc et al. 2006,
+  provided the entropy curve has no corner there).
+- *Ours, from the reading.* The soft form μ(S − 3N)² grows with the square of the system's size, so the scan has to fix
+  in advance whether μ stays fixed or shrinks with size. At large μ a flat start stays frozen for the same reason as
+  under the hard rule, so every soft run must start from both sides (flat, and damaged) and show that the two meet.
+- **The options.** (a) The soft form, μ scanned, runs from both sides. (b) The hard rule with compound moves: first an
+  exact count of three- and four-switch moves out of flat space (cheap, no decision of physics). (c) The hard rule, X
+  built from damaged states: results may depend on where they start.
+- **Recommended:** (b)'s exact count first, because it costs nothing and decides whether the hard rule can work at all;
+  then (a) if it finds nothing.
+- **What your answer lets us test.** Whether any X that obeys your rule can open into space at all. If four-switch moves
+  out of flat space also find nothing and the soft form only ever leaves flat space by damage, the rule as stated
+  forbids the clean opening, and that is a result about the rule. If either finds a clean path, the push look can be run
+  on the right family for the first time.
+
+**Q2 ★ What does a curled X that obeys your rule look like: where does its anticurl sit?**
+Your "proceed" of 26 October answered a suggestion that ended "the shape of that starting X would be yours to
+describe". Nothing can be built until you describe it.
+
+- *Exact (ours, arithmetic from the defects note; the check on the toy's states is not yet run).* If every square in the
+  six-link toy is a face of a little cube and the cubes close up into a space with no edges, the square count is exactly
+  3N automatically: your rule says space is made of whole cubes. The rod breaks it because its tight curl adds squares
+  that wrap around the short direction (curl 576). So a curled X that obeys the rule must be *missing* squares somewhere
+  to balance those: links where the cubes do not close up.
+- *Published.* On a closed surface curvature defects must balance (Gauss-Bonnet; Bowick and Giomi 2009): a curved-in cap
+  is carried by a curved-out skirt around it, and on their example surface "disclinations must appear in pairs". That is
+  your "curl inside a larger uncurl" (Updates 83, 92) with a picture. *Caution:* in the literature unpaired defects are
+  expensive because of long-range strain; the toy's energy is a sum over links with no long-range strain, so that reason
+  does not carry over; and the theorems apply only once the toy's squares are read as faces.
+- *Look (Update 127, corrected).* In the push runs the anticurl appeared as damage, mostly at broken points (79 states of
+  100), on an X that did not obey the rule.
+- **The choices, for you to pick or replace.** (i) A collar: the anticurl in a ring around the curled rod, in the space
+  around it. (ii) Spread thinly through the surrounding space. (iii) Inside: a hollow or broken core in the rod. (iv)
+  In the two slabs, balancing the rod between them (your twin X).
+- **What your answer lets us test.** We build that X exactly, check that it is stuck for now (every single move out
+  costs), then give it the push. That tests your "they always come in pairs": does opening cancel curl and anticurl
+  together, leaving clean space, or does it leave breakage? And it settles whether breakage is damage or your pair, which
+  the rod runs could not (Update 127).
+
+**Q3 The pair tie f = (0, 0, a, 0), still marked "to confirm", with three things the audit found.**
+
+- *Exact.* Under it the first opening releases nothing and the second releases 2a per point, so it gives your total and
+  your order (first nothing, second everything) but not half to each twin: "half each" would split the second release
+  by our choice. The gas of 6-cubes (three directions curled) costs 3a under it, so "curling two costs the same as one"
+  holds for one and two only. A slab that was never a rod costs 2a where it cost a.
+- *Your words.* Your answer was a conditional, "If each curled direction carries its own curling cost yes…"; we had
+  recorded it as a plain yes (corrected, O159).
+- *Look.* In the push runs the tie made the second direction follow the first more often, but every opening broke a
+  fifth to a third of the points; those runs were on the rule-breaking rod, and under your rule the curling energy is 4λ
+  a unit, not 4(λ − 1), so their numbers do not carry over.
+- **Asked.** Confirm the tie as written; or say what "half each" should mean in the toy (for instance, each twin's slab
+  releasing its own curling cost as it opens, which needs the two slabs to open separately).
+- **What your answer lets us test.** Fixes the energy of the rule-obeying X before its push (Q2), so that "the second
+  direction follows the first" and "each twin gets half" are tested as written instead of read off afterwards.
+
+**Q4 Pricing broken points (option 2 of Update 125, held).** *Ours:* under your rule the anticurl belongs in X, so
+pricing broken points would penalize the very thing your rule requires. **Recommended:** keep it held until a
+rule-obeying X has been pushed (Q2). Say if you disagree.
+
+**Older items still open, in order of what they unblock** (full text further down): ★16, your word on the held-out runs
+of T71 and T74 at L = 16; H3, H4 and H8 of the hypothesis below, not yet confirmed; items 17 to 25.
 
 ## Your hypothesis as it stands (25 October): confirm, correct or strike each line
 
