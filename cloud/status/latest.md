@@ -1,18 +1,10 @@
-# Batch queue and results bucket, as of 2026-10-26 21:28 UTC (commit 1f67639)
+# Batch queue and results bucket, as of 2026-10-26 21:46 UTC (commit f31aeac)
 
 Written by the queue_status workflow; read only. A finished job's files sit under the bucket's <config>/ prefix
 until a person downloads, checks and commits them.
 
 ## RUNNING
-- t74_lam110_L16_steady_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 
-- t74_lam110_L16_steady_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 
-- t74_lam110_L16_meals16_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
-- t74_lam110_L16_meals16_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 
-- t74_lam110_L16_meals256_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
-- t74_lam110_L16_meals256_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
-- t74_lam110_L16_meals256_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 
 - t74_lam125_L16_meals256_c2R_cold-a1f9f72  created 10-26 20:14  started 10-26 20:59  stopped 
-- t74_lam125_L16_meals256_c2R_equal-a1f9f72  created 10-26 20:14  started 10-26 20:59  stopped 
 - t74_lam125_L16_meals256_c2R_warm-a1f9f72  created 10-26 20:14  started 10-26 21:00  stopped 
 - t74_lam125_L16_meals256_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 21:01  stopped 
 - t74_lam125_L16_meals256_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 21:04  stopped 
@@ -34,9 +26,10 @@ until a person downloads, checks and commits them.
 - t74_lam140_L16_meals256_c2R_warm-a1f9f72  created 10-26 20:14  started 10-26 21:21  stopped 
 - t74_lam140_L16_meals256_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 21:24  stopped 
 - t74_lam140_L16_meals256_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 21:25  stopped 
+- t74_lam140_L16_meals256_cRhalf_warm-a1f9f72  created 10-26 20:14  started 10-26 21:31  stopped 
 
 ## RUNNABLE
-- t74_lam140_L16_meals256_cRhalf_warm-a1f9f72  created 10-26 20:14  started   stopped 
+- none
 
 ## STARTING
 - none
@@ -177,13 +170,20 @@ until a person downloads, checks and commits them.
 - t74_lam110_L16_steady_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:20
 - t74_lam110_L16_steady_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:18
 - t74_lam110_L16_steady_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:17
+- t74_lam110_L16_steady_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:33
+- t74_lam110_L16_steady_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:35
 - t74_lam110_L16_meals16_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:15
 - t74_lam110_L16_meals16_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:16
 - t74_lam110_L16_meals16_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:19
 - t74_lam110_L16_meals16_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:18
+- t74_lam110_L16_meals16_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:32
+- t74_lam110_L16_meals16_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:32
 - t74_lam110_L16_meals256_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:13  stopped 10-26 21:14
 - t74_lam110_L16_meals256_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:19
 - t74_lam110_L16_meals256_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:25
+- t74_lam110_L16_meals256_cRhalf_cold-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:31
+- t74_lam110_L16_meals256_cRhalf_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:38
+- t74_lam110_L16_meals256_cRhalf_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:36
 - t74_lam125_L16_steady_c2R_cold-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 20:59
 - t74_lam125_L16_steady_c2R_equal-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 20:58
 - t74_lam125_L16_steady_c2R_warm-a1f9f72  created 10-26 20:13  started 10-26 20:14  stopped 10-26 21:04
@@ -196,6 +196,7 @@ until a person downloads, checks and commits them.
 - t74_lam125_L16_meals16_cRhalf_cold-a1f9f72  created 10-26 20:14  started 10-26 20:14  stopped 10-26 21:16
 - t74_lam125_L16_meals16_cRhalf_equal-a1f9f72  created 10-26 20:14  started 10-26 20:14  stopped 10-26 21:16
 - t74_lam125_L16_meals16_cRhalf_warm-a1f9f72  created 10-26 20:14  started 10-26 20:14  stopped 10-26 21:17
+- t74_lam125_L16_meals256_c2R_equal-a1f9f72  created 10-26 20:14  started 10-26 20:59  stopped 10-26 21:44
 
 ## FAILED
 - none
@@ -927,13 +928,20 @@ until a person downloads, checks and commits them.
 - t74_lam110_L16_meals16_c2R_equal/t74_lam110_L16_meals16_c2R_equal.csv  (2026-10-26 21:15:44, 16639343 bytes)
 - t74_lam110_L16_meals16_c2R_warm/t74_lam110_L16_meals16_c2R_warm.csv  (2026-10-26 21:19:25, 18526659 bytes)
 - t74_lam110_L16_meals16_cRhalf_cold/t74_lam110_L16_meals16_cRhalf_cold.csv  (2026-10-26 21:17:54, 11859110 bytes)
+- t74_lam110_L16_meals16_cRhalf_equal/t74_lam110_L16_meals16_cRhalf_equal.csv  (2026-10-26 21:31:59, 12120712 bytes)
+- t74_lam110_L16_meals16_cRhalf_warm/t74_lam110_L16_meals16_cRhalf_warm.csv  (2026-10-26 21:31:45, 14989227 bytes)
 - t74_lam110_L16_meals256_c2R_cold/t74_lam110_L16_meals256_c2R_cold.csv  (2026-10-26 21:13:43, 15483601 bytes)
 - t74_lam110_L16_meals256_c2R_equal/t74_lam110_L16_meals256_c2R_equal.csv  (2026-10-26 21:18:58, 16993620 bytes)
 - t74_lam110_L16_meals256_c2R_warm/t74_lam110_L16_meals256_c2R_warm.csv  (2026-10-26 21:24:43, 19600763 bytes)
+- t74_lam110_L16_meals256_cRhalf_cold/t74_lam110_L16_meals256_cRhalf_cold.csv  (2026-10-26 21:31:01, 11921972 bytes)
+- t74_lam110_L16_meals256_cRhalf_equal/t74_lam110_L16_meals256_cRhalf_equal.csv  (2026-10-26 21:37:55, 12282589 bytes)
+- t74_lam110_L16_meals256_cRhalf_warm/t74_lam110_L16_meals256_cRhalf_warm.csv  (2026-10-26 21:35:53, 15004001 bytes)
 - t74_lam110_L16_steady_c2R_cold/t74_lam110_L16_steady_c2R_cold.csv  (2026-10-26 21:14:03, 14560489 bytes)
 - t74_lam110_L16_steady_c2R_equal/t74_lam110_L16_steady_c2R_equal.csv  (2026-10-26 21:19:49, 16891359 bytes)
 - t74_lam110_L16_steady_c2R_warm/t74_lam110_L16_steady_c2R_warm.csv  (2026-10-26 21:18:27, 18411983 bytes)
 - t74_lam110_L16_steady_cRhalf_cold/t74_lam110_L16_steady_cRhalf_cold.csv  (2026-10-26 21:16:54, 11745434 bytes)
+- t74_lam110_L16_steady_cRhalf_equal/t74_lam110_L16_steady_cRhalf_equal.csv  (2026-10-26 21:33:31, 12066681 bytes)
+- t74_lam110_L16_steady_cRhalf_warm/t74_lam110_L16_steady_cRhalf_warm.csv  (2026-10-26 21:34:37, 14869318 bytes)
 - t74_lam125_L08_meals16_c2R_cold/t74_lam125_L08_meals16_c2R_cold.csv  (2026-10-20 13:07:27, 4488954 bytes)
 - t74_lam125_L08_meals16_c2R_equal/t74_lam125_L08_meals16_c2R_equal.csv  (2026-10-20 13:07:11, 4550659 bytes)
 - t74_lam125_L08_meals16_c2R_warm/t74_lam125_L08_meals16_c2R_warm.csv  (2026-10-20 13:11:00, 6949212 bytes)
@@ -976,6 +984,7 @@ until a person downloads, checks and commits them.
 - t74_lam125_L16_meals16_cRhalf_cold/t74_lam125_L16_meals16_cRhalf_cold.csv  (2026-10-26 21:16:01, 4692641 bytes)
 - t74_lam125_L16_meals16_cRhalf_equal/t74_lam125_L16_meals16_cRhalf_equal.csv  (2026-10-26 21:16:32, 4849523 bytes)
 - t74_lam125_L16_meals16_cRhalf_warm/t74_lam125_L16_meals16_cRhalf_warm.csv  (2026-10-26 21:16:47, 6512525 bytes)
+- t74_lam125_L16_meals256_c2R_equal/t74_lam125_L16_meals256_c2R_equal.csv  (2026-10-26 21:44:00, 5244149 bytes)
 - t74_lam125_L16_steady_c2R_cold/t74_lam125_L16_steady_c2R_cold.csv  (2026-10-26 20:58:45, 4910911 bytes)
 - t74_lam125_L16_steady_c2R_equal/t74_lam125_L16_steady_c2R_equal.csv  (2026-10-26 20:58:34, 5094323 bytes)
 - t74_lam125_L16_steady_c2R_warm/t74_lam125_L16_steady_c2R_warm.csv  (2026-10-26 21:04:00, 7360482 bytes)
