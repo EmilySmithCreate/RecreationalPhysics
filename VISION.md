@@ -4148,3 +4148,23 @@ knot can have a north and a south pole.** Her words are in `sandbox/NOTEBOOK.md`
   DeGrand and Toussaint 1980, to read). So a trapped knot could carry a dipole, or a pole, in the toy's field; whether it
   does is a look, not yet run.
 
+Update 123 (2026-10-25): **DECISIONS (the author's): T82 withdrawn; what the spin sorts is a dipole's direction, each
+twin neutral; the twin X is a rod between two curled slabs whirling opposite ways; each twin gets half the curl
+energy.** Her words are in `sandbox/NOTEBOOK.md` under that date.
+
+- **T82 withdrawn** ("Withdraw t82"): registered and never run; the record keeps it.
+- **RB3 decided** ("Confirming"): the black hole's spin sorts the direction of a dipole, north up or north down; each
+  twin is neutral. *Ours:* this removes the charged-twin problem (Updates 112, 121); the twins then differ in the
+  orientation of their dipoles and in handedness, not in net electric charge.
+- **The twin X (hers):** a rod between two curled slabs, a right-handed and a left-handed whirlpool. *Read, to confirm:*
+  two curled slabs of opposite handedness joined by a rod, each slab opening into one twin. *Ours:* the toy's wiring
+  carries no signed twist (a flip with no direction only, Update 97), so "right" and "left" need the declared twist label
+  of Update 97 or soft space's second stage before the toy can tell the two slabs apart.
+- **Half the curl energy each (hers), with her reason, "I think energy is conserved."** *Ours, arithmetic:* conservation
+  fixes the total, not the split. If each curled direction costs its own curling cost, opening two releases two, and
+  each twin gets a full one. If curling two directions costs the same as curling one (her words of the same day: "it's
+  the same amount of energy to curl one dimension at 2"), the pair releases one curling cost and each twin gets half.
+  Her two statements together pick the second. That is the shape of a direction tie ("all at the last": the last
+  opening releases everything, earlier ones nothing; Update 47, O106), and the tie was withdrawn on 16 October; so the
+  pair would need a tie between its two directions, a decision under S1. Asked.
+

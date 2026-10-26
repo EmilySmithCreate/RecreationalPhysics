@@ -2479,4 +2479,11 @@ Do you agree to L = 16 as the held-back size for the claim that the time between
 When the first direction curls, the second is free. Then 2 3d spaces emerge, one from each curled direction, one of which curled right handed and one left handed and they collapsed together as it’s a rule they always ride together. compacted twist and curl, so each side gets half the curl energy, which gives it the photon release pattern, transforms into anti and matter. And 3d spaces emerge from a specific twist curl setup, a d they that can be represented as flat space for each of the energies to release into. The flat 3d space and observation from inside, this type of twin big bang, is what the fractal of the 2 degrees of freedom in the network. Spontaneous variations from vacuum, like flashes of light taking so few instants they barely count, matter and antimatter being made and collapsing to release a photon.
 
 hole's spin sorts is electric charge, each twin would carry a net charge. Which count is it? - could a knot of closed space trapped in a shell of curled slab, can it have a north and South Pole?"
+- 2026-10-25, the owner (verbatim; VISION Update 123): "A rod between 2 curled slabs, a right hand and left hand whirlpool.
+
+each side gets half the curl energy… can it happen any other way? I think energy is conserved.
+
+Withdraw t82
+
+RB3, restated: is what the spin sorts the direction of a dipole, north up or north down, with each twin neutral. Confirming"
 

@@ -261,3 +261,10 @@ Answered 25 October: one gate, double the bill; both twins released at once (Upd
   record, never run) and design the cascade test instead? Ours: yes. # #
 - **RB3, via poles.** Is what the spin sorts the direction of a dipole (north up or down), each twin neutral? # #
 
+Answered 25 October (Update 123): T1d withdraw T82; RB3 the dipole's direction, each twin neutral; T1c half each.
+- **T1a′. The twin X.** "A rod between 2 curled slabs, a right hand and left hand whirlpool": two curled slabs of opposite
+  handedness joined by a rod, each slab opening into one twin. Right? # #
+- **T1e. A tie for the pair.** Half each needs curling two directions to cost the same as curling one, which is the
+  direction tie withdrawn on 16 October ("all at the last"), now between the twin pair's two directions. Bring it back
+  for the pair? # #
+

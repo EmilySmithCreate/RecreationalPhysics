@@ -9031,3 +9031,8 @@ Update 122) describes each twin as its own opening of its own curled direction, 
 tests the second twin drawn from the stores, which is not her mechanism. Whether to withdraw T82 is asked; until then it
 stays registered and unrun.
 
+**T82 WITHDRAWN (25 October 2026, the owner's word, "Withdraw t82"; VISION Update 123), before any run.** Its mechanism
+(the second twin drawn from the stores) is not hers; her twins are two openings in a cascade (Update 122). The configs,
+analyzer and code stay as written; nothing was launched, and the queue manifest drafted for it was never committed or
+pushed and is deleted.
+
