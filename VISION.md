@@ -4385,7 +4385,7 @@ starting X would be yours to describe". The looks below are an exact check befor
   none. (c) **The hard rule kept, X built from the push look's damaged states**, which nearly obey it; they move, but
   they are not a clean X.
 
-Update 129 (2026-10-26): **the third independent audit by a different model (Codex), of the record of 25 to 26 October:
+Update 129 (2026-10-26): **the ~~third~~ fourth independent audit by a different model (Codex; corrected 26 October: O154, O156, O158 and O159 are four), of the record of 25 to 26 October:
 one result described a bug, one look's wall was a break, and the anticurl readings were overstated. Corrected in place
 in Updates 124, 125, 127 and 128 (marked "O159").** Brief `docs/reviews/2026-10-26_codex_audit_brief.md`, pinned to
 29afa5c9; report `docs/reviews/2026-10-26_codex_report.md`; the record is ASSUMPTIONS O159.

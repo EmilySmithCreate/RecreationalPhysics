@@ -1070,7 +1070,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
 3. **Reading, before any citation**: [Pop10] and [FGG90] first (a universe inside a black hole; making one by
    tunnelling), then [BFT18]; read status in `REFERENCES.bib`.
 
-## 26 October: the third Codex audit (O159)  ☐
+## 26 October: the fourth Codex audit (O159)  ☐
 
 **Added 2026-10-26** (ASSUMPTIONS O159; VISION Update 129). Corrections made in place; what is owed:
 

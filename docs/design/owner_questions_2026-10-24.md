@@ -7,7 +7,7 @@ verbatim there); the record is VISION Updates 104 to 112.*
 
 ## Open, 26 October: the hard rule and the twin X (start here)
 
-*After the third Codex audit (ASSUMPTIONS O159, VISION Update 129) and three readings of the same day
+*After the fourth Codex audit (ASSUMPTIONS O159, VISION Update 129) and three readings of the same day
 (`docs/reading/notes/2026-10-26_constrained_moves_kcm.md`, `2026-10-26_subgraph_count_ensembles.md`,
 `2026-10-26_paired_defects_gauss_bonnet.md`; read by assistant agents, quotations to check against the PDFs). For each
 question: what the runs and the reading say, the assistant's recommendation, and what your answer lets us test. Labels:
