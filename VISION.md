@@ -4206,5 +4206,17 @@ the pair tie, opening the first direction lowers the second's wall from λ of ab
   near 1.2): once the first direction has opened, the second is the easier of the two, her cascade. *Said plainly:* two
   different patch shapes, neither shown to be the cheapest path; the plateau means the first opening must cross the
   whole rod with no push from its own release; and the tie charges a broken point nothing, which let T56's tied slab
-  break instead of opening (O115). A warm-bath look on the rod is running.
+  break instead of opening (O115).
+- **The warm-bath look** (`sandbox/pair_tie_bath_look.py`; the rod 4 × 4 × 18 under the pair tie in T56's tied bath,
+  λ = 1.20, 1.25, 1.40, g = 1.5, 2.0, 2.5, four replicas each, 20,000 sweeps). **STAYS in 35 replicas of 36**: the first
+  direction never opened; blips of up to 20 points of 288 opened and healed. *Ours:* that is what the walls said, since
+  the pair tie raises the rod's cheapest way out (19.2 to 28.8 at λ = 1.20, 4.8 to 25.6 at 1.40) and its first opening
+  pays a seam of about 180 with nothing to drive it on; a steady bath is not the trigger her picture names (the black
+  hole's push is). **One replica, λ = 1.40, g = 2.5, BREAKS by the declared rule:** it sat unchanged to sweep 15,000,
+  then within 3,000 sweeps reached 68 points fully open (d = 3), 26 with one direction open, and 74 broken, and rested
+  there. So where an opening did start, the second direction followed the first quickly, her cascade in kind, and the
+  breakage kept pace with it, as in T56's tied slab: the tie charges a broken point nothing (O115). *Said plainly:* one
+  replica, a sandbox look; it kills the steady bath as the trigger at these settings and crowns nothing. What her
+  mechanism names next is a concentrated push into the rod (the local spark, Q22), with breaking priced (a tie entry for
+  d > 3) as the question the breakage raises.
 
