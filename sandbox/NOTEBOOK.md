@@ -1503,6 +1503,76 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   counting alone could not give (T15 rung 3a); and "the next moment locks us in" holds only where that moment leaves a
   record, since a version change that leaves no record can still be undone (piece 13's toy, O125). What the toy still
   lacks is the object: which arrangement in it carries the versions (the loop of four is not a resonator; O30).
+- 2026-10-19, the owner, a handoff of hers on the inflow and the primordial density differences (drafted in another
+  conversation of hers, a spoken exploration, and passed on; kept as received in
+  `docs/theory/omega_opening_inflow_density_handoff_2026-10-19.md`; it calls the hypothesis Omega). Her choices from it, as
+  that assistant put them in order: the question is the primordial density differences of standard cosmology, not the
+  toy's seeds of an opening, and the matter-antimatter excess is parked as a separate track; her candidate is that
+  "additional energy continues to flow into the black-hole-associated curled region during the short interval in which
+  its opening transition is underway", "spread throughout the curled structure, not injected through a single doorway or
+  location", a contribution that "may be tiny compared with the larger stored energy released at opening", and the
+  question is "whether slightly asynchronous entry and conversion could leave spatial variations in the daughter's
+  initial energy or later matter distribution". Her order of events: one direction curled inside the black hole; what
+  falls in is stored and "does not retain its particle identity"; "lambda is a universal model coefficient, not
+  something that rises with energy"; the opening begins and "further energy continues arriving while the transition is
+  still in progress", the region "opening almost all at once" with "a brief transition interval" allowed; "the entire
+  curled region opens first", then pairs are made and annihilate in the daughter; the daughter is a finite space whose
+  expansion is "stretching existing relationships, not additional spatial regions continually uncurling"; her "roughly
+  one-in-a-billion" was said of the matter excess and is "a conceptual suggestion, not a calculated energy fraction".
+  The document's own program: a symmetry control first (a uniform inflow must give zero contrast), then the spatial
+  response to a uniform, a time-varying and a spatially variable inflow at the same total, then stretching, then the
+  sky's criteria; and its first question back to her: after the opening, does every region stretch equally, or do the
+  rules already allow different rates in different places?
+  *Ours, against the record, with one look (`sandbox/inflow_density.py`; LOG, 19 October).* (1) **Where her sequence
+  already is the toy.** Under the layer form she chose (Update 65) with the gate g1 (Update 69) the whole region opens
+  in one move: "the entire curled region opens first" is what the toy does, the "transition interval" has no length,
+  and the late inflow is exactly what the stores hold beyond a N_slab at the instant of the split, which the ledger look
+  of this morning already read (0.3 % of the release at λ = 1.25, 28 % at 1.10; set by the gate, the rate and the
+  moment). Under Update 66 none of it reaches the daughter: the daughter is a ledger entry of exactly a N_slab with no
+  geometry, so **in the toy as decided the daughter has no spatial field at all**, and her question cannot be put to it.
+  Two things would have to change, both hers under S1: something of the parent's stores would have to travel with the
+  lump (Update 66 forbids the other direction and does not decide this one; the same door the CP entry of this morning
+  found), and the daughter's space would have to be represented, which it is not. (2) **The symmetry control (her
+  document's Stage 1), run on the kernel.** The slab 4 × 16 × 16 at λ = 1.25 fed uniformly, or uniformly in space and in
+  bursts in time, reaches the gate with every store equal; the field's contrast is exactly zero and the split releases
+  a N_slab to the unit. The layer form passes the control: symmetric inputs give a symmetric output. (3) **The grain,
+  not the rate (Stages 2 and 3; exact arithmetic, confirmed by the kernel).** A feed arriving in deposits of size q at
+  random points is a Poisson sprinkle: when the stores hold m per point the contrast per point is sqrt(q/m), over b
+  points sqrt(q/(m b)), and the spectrum is flat. At the gate m = 2a, so at λ = 1.25 deposits of 1 give 0.71 per point
+  (measured 0.69 to 0.74), deposits of 4 give 1.41 (1.41 to 1.47), deposits of 0.01 give 0.071 (0.069 to 0.073), and at
+  four times the rate 0.67 to 0.73: **the rate does not enter.** A contrast of one part in 10^5 at the gate would need a
+  grain of 2 × 10^-10 of a unit. The field is white: averaged over 4 × 4 columns it falls from 0.7 to 0.06 to 0.08, as
+  1/sqrt(b) says. So a grainy inflow hands on its own grain, as her document warns, and the toy adds that the grain is
+  the only thing it hands on. Under the reference rule f1 (the release credited to the two layers beside the cut, the
+  new layers empty) the field after the split reads 4, 0, 0, 4, 2, 2 per layer: a pattern with the width as its scale,
+  the "built-in size" her document cautions against, made by the move and not by the inflow. (4) **The front form (the
+  2D tube 4 × 128 with a store at every point: the local form she did not choose, kept as the control), where the lump
+  lands where the front made it.** Fed uniformly, every store reaches the wall of 12 in the same sweep and the tube goes
+  everywhere at once (81 to 103 of 128 columns in one block of 50 sweeps): a uniform feed makes a flash, not a front,
+  because the wall is a gate at every point and uniformity trips them all together. Fed in random deposits the Poisson
+  tail trips a few points early (1 to 17 columns in the first block, at sweep 150 to 700 against 1,250), and a front
+  runs from them. In both the product is hot and largely broken: 4 to 8 units per point are fed before the first seed
+  can go, against a release of 1, because with one store per point nothing can start until the stores hold the wall,
+  which is twelve times the lump; the inflow before the opening is never a sliver in this form (T9's "too little room"
+  seen from the other side). The energy per column at the end has a contrast of 0.24 to 0.35 under every feed, uniform
+  included, falls as 1/sqrt(b) (about 0.15 over 4 columns, 0.06 over 16, 0.03 over 32), has a flat spectrum (fitted
+  slopes between −0.6 and +0.5, about zero) and no correlation with when the column opened (−0.07 to 0.15). So in the
+  front form the control does not give zero, because the chain's own randomness (which point moves next) is an input
+  her document's Stage 1 did not list, and what it gives is white noise with no scale beyond the column: the
+  "microscopic fluctuations" candidate, in the toy, is the sampler, and it makes the same spectrum as the knots (the
+  look of 18 October). (5) **What the toy cannot do (Stage 4).** Nothing stretches: the only move that adds space is
+  the split, deterministic and uniform; stores exchange energy only through moves, so a deposited pattern neither
+  mixes nor grows; there is no pull to amplify it and no expansion to carry it to large scales. Her first question
+  (does every region stretch equally?) has no counterpart in the toy, and is hers to answer before anything is built.
+  (6) **The rate's one role, exact.** In the front form the late inflow per point is r × T_front, the rate times the
+  crossing time, against a release of a; "tiny" means r far below a / T_front. The crossing time grows with the tube
+  (the speed per chain sweep halves as the length doubles, O93; fixed per fair sweep), so the admissible rate falls with
+  the size of the daughter. The rate sets the size of the late sliver, never its pattern. (7) **Said plainly.** The
+  inflow's unevenness, if any, is what the toy hands on; the toy makes no unevenness of its own except white noise
+  from its sampler and its knots; and under the decisions in force the daughter has no field to hold any of it. The
+  sky's pattern (nearly equal strength at every scale, in step across regions never in contact) is not white noise,
+  and no feed can make it so here. Idea, reading and a look; no knob; nothing registered. Asked of her: the stretching
+  question, and whether anything of the stores may travel with the lump.
 - 2026-10-19, the owner, afternoon and evening, after her video call with the model's author (the call itself is
   private correspondence and is recorded only in the gitignored outreach folder; what follows is her own thinking,
   in her words where quoted). On the point that the physically relevant network at finite coupling is negatively
@@ -2299,4 +2369,203 @@ and 16). Earlier ideas are in `VISION.md`, Updates 16 to 54.
   photon "Yes, on the toy's graph"; half-curl "Keep all as variants". *Checks, ours:* the brief, section 2, item 7
   (exact count: one placement against three; Landauer's floor kT ln 3; a floor, not a fixed energy; needs ordered
   strands). Her answers to the brief's six questions are owed.
+- 2026-10-24 (later), the owner, her comments between # marks in `docs/design/particle_handoff_brief_2026-10-24.md`
+  (kept there as she wrote them; read in full there), and four answers after them: the electron "Full 360°: two-sided
+  band"; charge "Yes to both: canceled pair and full twist neutral"; the twist "Adopt, but halves on dark"; dark matter
+  "Yes, halves on dark". Recorded as VISION Update 97 with the exact looks (`sandbox/strand_answers_look.py`) and the
+  one tension put back to her (a full twist neutral against the electron's −1 from three thirds). Her new idea in the
+  comments: "curl energy with nothing to curl creates spin". Her statement of the programme's pattern is quoted in full
+  in Update 97.
+- 2026-10-24 (later still), the owner, verbatim: "Yes the charge comes from the photon half curl combined with the
+  mass." And: "No, the kinds separate regular and anti. The third vs half twists separate matter from dark matter. Dark
+  matter can’t hold a photon as spin so it doesn’t interact with us." Recorded under VISION Update 97 with the reading
+  to confirm (closed full twist neutral; the electron's −1 a bound half-curl; quark strands keep fractional charges)
+  and the exact fact put back to her (a body diagonal always touches both kinds).
+- 2026-10-24 (evening), the owner, her prediction for light in curled space, verbatim: "Light moves same speed through
+  curved space but bounces or slows through matter ie curled space with charge or spin". ~~Scored exactly in O151: holds
+  for one polarisation, fails for the one along a curl of side 4, which the curl alone makes massive.~~ *Corrected the
+  same night (O151): the field along the curl is a scalar, not light; light keeps its speed, so her prediction holds.* Asked of her
+  still: whether handedness marks regular against anti for matter strands (every body diagonal touches both kinds).
+- 2026-10-24 (evening), the owner, verbatim: "okay, body diagonals need to go from the model, the diagonals in space need
+  to connect to same color, so we’ll need a 1x1x2 diagonal, to hold the 1/3 rule. How many are there in a 2x2x2 block
+  and a 2x2x3 block of cubes?" And on handedness marking regular against anti for matter strands: "Yes." Answered and
+  recorded as VISION Update 98 (48 and 80; no lattice symmetry about the line, so thirds there are a declared rule).
+- 2026-10-24 (evening), the owner, verbatim: "thirds still apply becase the corners are still 3 sides the strip could
+  align to." And: "what is the difference in energy between a loop that wants to be flat length sqrrt 2 and sqrrt5?"
+  *Checks, ours* (`sandbox/strip_corner_and_ring_energy.py`, exact arithmetic): a strip along a 1 × 1 × 2 diagonal has
+  three positions (one per cube edge at its corner), as she says, but 50.8°, 50.8° and 78.5° apart, not equal thirds of
+  a turn (the body diagonal's were 60° each); a face diagonal has two positions, 90° apart, which fits her halves. So
+  thirds survive as a count of positions, not as equal steps. Energy: a strip that would lie straight, closed into a
+  circle of its own length, costs 2π²B/L to bend (elastica, textbook, to verify; B its stiffness, unknown in the toy):
+  √2 13.96 B, √5 8.83 B, √6 8.06 B; difference √2 − √5 = 5.13 B (ratio √(5/2)), √2 − √6 = 5.90 B (ratio √3). A √5
+  line (1 × 2) joins two colours, like the body diagonal. With her twists (half on √2, third on √6) the twist energy
+  ratio is 3.90 in units of a twisting stiffness. No number is set beside a measured ratio (rule 13).
+- 2026-10-24 (evening), the owner, verbatim: "√2 against √6 (your matter strand): 5.90 B more, √3 ≈ 1.73 times as much.
+  close to what i meant: (sqr rt (1^2+(sqr rt ( 1^2+2) )) = root(1+root3) vs root 2". *Checks, ours, arithmetic:*
+  √(1 + √3) = 1.653 is not a lattice distance (squared distances between lattice points are whole numbers); with the
+  inner root squared, as Pythagoras needs, √(1² + (√3)²) = 2, a straight line two edges long along an axis (same colour;
+  her 23 October "twist_2 = 1/3"). Bending a strip into a ring of its own length (2π²B/L): 1.653 gives 11.94 B (√2 holds
+  2.02 B more, ratio 1.17); 2 gives 9.87 B (4.09 B, ratio √2); √6 gives 8.06 B (5.90 B, ratio √3). Asked which line she
+  means for the matter strand.
+- 2026-10-24 (evening), the owner, verbatim: "√(1 + 3) = 2, with the square i meant, compare loop of 2 to loop of root 2
+  energies" and, on "it lies in the lattice's flat planes, where the 1 × 1 × 2 doesn't": "explain this". Answered: a
+  strip closed into a ring of its own length, 2π²B/L: √2 13.96 B, 2 9.87 B, difference 4.09 B, ratio √2; with her twists
+  (half on √2, third on 2) twist energy 3.49 C against 1.10 C, ratio 3.18. Exact, for the explanation: a length-2 line
+  runs along one axis, lies in two coordinate planes and passes through a point of the other colour at its middle; the
+  lattice turns about it every 90° (quarters, not thirds), and a strip along it has two walls to lie against, 90° apart;
+  three length-2 steps never close (no triangle; the smallest ring is a square of four), while three 1 × 1 × 2
+  diagonals do (24 triangles per point). Asked again which line is the matter strand: 2 or √6.
+- 2026-10-24 (night), the owner, verbatim: "maybe i was exploring patterns and this idea is going nowhere." Then, on the
+  recommendation (keep body diagonals for thirds, drop the colour rule for matter): "proceed as you recommend. explain
+  any outstanding choices / predictions I have to make, and see if you can come up with something publishable on
+  particles." Recorded as VISION Update 99.
+- 2026-10-24 (night), ours, after the workflow on publishability (O152): the 'light slows in a curl' reading was the
+  assistant's error and is corrected in O151 (light keeps its speed; her prediction holds); a fresh red-team reader
+  judged nothing on particles publishable today and named the one route it sees (below, and the brief's section 7).
+- 2026-10-24 (night), the owner, verbatim, answering the particle brief's section 7: "1. Proton has at least one
+  backward twist. double twist: 2/3,2/3,-1/3, if that antiquark excited by a photon maybe it twists in the other
+  direction, which makes sense if a photon can only apply spin to a 1/3 twist, or prefers to." / on the antiparticle as
+  the mirror image of its strand: "yes" / "Dark matter: do the point colours still mark dark against antidark? Yes same
+  as matter dark matter has the - twist and + twist" / "4- boundary is there is no charge. Maybe it moves on a different
+  plane." / "5 yes" / "Please provide me with an updated link to the full list of outstanding questions needing answers
+  from me to move forward". Recorded as VISION Update 100; the list is `docs/design/owner_questions_2026-10-24.md`.
+- 2026-10-24 (late night), the owner, verbatim: "Electron’s 1/3 curl 3 together is quark. Needs to be a whole number of
+  twists to exist in 3d space." / "Dark strands have color? What is it?" / "If that is what a nutron is, makes sense.
+  It would need a 1/third twist to excite and spin, but it’s not there because the twists cancel to flat." / "Dark
+  matter could also be one sided mobious strip shape which how could we observe something like that?" / "Nice, photons
+  are what apply curl, makes sense. Makes sense they are connected. So light lowers the curling cost or pays the
+  curling cost?" *Checks and answers, ours.* (a) Read as one rule, to confirm: anything free carries a whole number of
+  twists, and charge is the net signed thirds divided by three (electron 3 thirds, −1; proton 2/3 + 2/3 − 1/3, +1;
+  neutron 2/3 − 1/3 − 1/3, 0; pion, ±1; a lone quark cannot exist); this makes the electron and proton exactly equal and
+  opposite by one rule, is the standard rule that free particles carry whole-number charge (general knowledge, to verify), and would replace "a full
+  twist is neutral" with "neutral = net zero"; her confirmation owed. (b) A dark strand's "colour" is the checkerboard
+  colour of the points it sits on (a face diagonal joins two points of one colour), not quark colour. (c) Neutron
+  recorded as hers; the measured neutron has spin one half and a magnetic moment (general knowledge, to verify). (d) A
+  half twist closes a strip round a face diagonal as a Möbius band (the cube's 180° turn); in nature dark matter is seen
+  only through gravity (general knowledge, to verify), so its shape could show only indirectly (self-interaction, annihilation, number of kinds); in the
+  toy one-sidedness is fixed by the wiring and one-sided pieces of space already occur in burp end states (O116: 39 of
+  9,865, five whole Klein bottles). (e) ~~Light lowers the curling cost; it does not pay it:~~ *(corrected by the audit, Update 102: lowers it under the Wilson
+  weight, raises it under Q29's own energy; the zero of a square's energy decides)* It does not pay it: integrating out the field
+  rewards squares (a free-energy discount from the field's room to arrange itself), and no energy changes hands; in this
+  calculation light does not make curls.
+- 2026-10-24 (late night), the owner, verbatim: "1. Is that right? If so, I'll withdraw the "bound half-curl gives the
+  charge" reading. Correct." / "How else do people make sense of this stuff, knowing it has to all simplify to
+  information that can be held in 2 degrees of freedom?" / "2. Blac point strand can be +1/2 or +1 or +1.5 even if
+  that’s allowed. 1/2 or 1.5 is one sided strip, whole numbers is 2 sided strip. Negatives also come in multiples of
+  0.5, anti direction" / on the neutron: "k this makes sense, spin with no twist can be mildly magnetic but no charge." /
+  "Interesting. So the light doesn’t get spent, it could lower the curling cost to none or low enough it readily
+  collapses at normal g." / "Can that turn curve into curl, complete the circle of strips, and compact, and when they
+  can’t move, 3d spacetime no longer needed to describe them, so back to 2 degrees of freedom, the curled slab."
+  Recorded as VISION Update 101. Her question on two degrees of freedom answered in chat with the published families
+  (holography and the area law; dimensional reduction to two at short distances, [Carlip17], read in full; the
+  published model's own two-dimensional base; string worldsheets; tensor networks), all but [Carlip17] general
+  knowledge, to verify (reading task in the questions file).
+- 2026-10-24 (night), ours, from the rule-22 audit (VISION Update 102): ideas of hers from the day that had reached neither
+  VISION nor this notebook, now recorded. (1) Handoff idea 10's second half: a 360° turn of a spin-1 object behaving like
+  an untwisted, zero net orientation, as a possible topological analogy (spin 0 and spin 1 stay different). (2) Handoff
+  idea 9's second half: she expects discrete particle-like mass values while knowing not all energy comes in identical
+  chunks, and asked to postpone the plasma question. (3) Her brief comment "an electron is 3 1/3 into 1 full twist,
+  mobious strip" against her later answer "Full 360°: two-sided band": the later answer is her current position (a
+  360° band is two-sided; a Möbius strip has a half turn). (4) Her mechanism "a photon can only apply spin to a 1/3
+  twist, or prefers to", with its charge-conservation check now in Update 100 and the questions file. (5) Both of her
+  neutron answers, in order, now in Update 101.
+- 2026-10-24 (night), the owner: "Proceed with the paper reads". Five reads by assistant agents, notes in
+  `docs/reading/notes/2026-10-24_*`. What each supplies to her theory, in a line (ours; read the notes for sources):
+  Levin and Wen (2006), read in full, is her idea 1 exactly (links without a photon; the photon as the links' collective
+  wave) and gets fermions from bosonic links through a framing sign, but the twist that makes a fermion is a half turn,
+  never a third; thirds could be a charge count (triality), not an exchange phase. The dynamical-geometry papers make
+  decision 0 a published fork and give a fourth way to carry the field through a switch. Tong and the centre-vortex
+  literature: her "whole twists to exist" is the observed 3Q + t = 0 lock, whose status as a law is not settled by
+  experiment; a centre vortex is a published neutral one-third twist, but of the vacuum's gluon field, not matter; gluons
+  carry no thirds. Finkelstein and Rubinstein's route makes spin one half possible but chooses the sign by hand, and the
+  toy's labels cannot supply it as they stand. Landauer gives her ln 3 idea an exact floor (1.10 kT per merge) and says
+  nothing about photons.
+- 2026-10-25, the owner (her words, verbatim; recorded as VISION Update 104): "So they observed gravitational waves from ligo, when 2 black holes met. I wonder if that was from their mass suddenly decreasing with a bunch of quick burps or a big burp. So what if when 2 black holes collapse, and a burp happens simultaneously, the outer black hole gets surplus antimatter curls and the inner one gets surplus matter curls, so in each daughter universe they cannot fully cancel out their type. This would explain the lip thing we talked about without assuming it happens due to opening speed or some other mechanism that feels a bit forced. So the black hole that is technically around us has slight negative curvature and long lived matter universes like ours are in a slight negative curvature space, but when the 2 are viewed together it is net flat."
+- 2026-10-25, the owner, answering the sorter question of VISION Update 104 (verbatim): "black hole's spin could do the sorting. - yes, likely through electromagnetism: the twists have spin, the antimatter and matter opposite, which typically attracts and brings them back together to collapse and release the photons. But the spin, say, is negative, and it pulls the positrons out giving our universe extra electrons (or opposite)"
+- 2026-10-25, the owner, answering "in what sense are the two universes viewed together" (VISION Update 104), verbatim: "the loop, all the amplitude stacked versions together"
+- 2026-10-25, the owner, answering "does 'the twists have spin' mean particle spin or the strand's handedness" (VISION Update 104), verbatim: "Charged handedness of the strands"
+- 2026-10-25, the owner, answering "why is the partner universe's curvature opposite" (VISION Update 104), verbatim: "the surface's total must stay zero."
+- 2026-10-25, the owner, choosing reading (a) of "charged handedness" (VISION Update 104), verbatim: "the handedness carries a charge of its own, separate from electric charge"; and, the same message: "I think it is more like 3 1/3 strands together accept one photon and get 1/2 spin. The combination of the 3 strands mass and the 1/2 curve energy a photon gives makes the charge"
+- 2026-10-25, the owner, on "a new rule that keeps the total of curl and uncurl at zero" (VISION Update 105), verbatim: "yes I agree with this rule"
+- 2026-10-25, the owner, answering the two questions on her charge mechanism (VISION Update 104), verbatim: "can't depend on how much mass is there. - it depends on having mass, not how much thre is. / If your thirds each carried a half, no photon would be needed for the spin. - then it can release a photon when the net spin goes to a whole number."
+- 2026-10-25, the owner (verbatim; VISION Update 106): "on a closed two-dimensional surface the total curvature is fixed by the surface's shape, which is why Einstein's gravity does nothing in two dimensions. Your rule gives the toy that same property. - love it. Great. / 1. I diving think that new points and black-white links can and are added to flat space with no cost. Explains expanding universe and expanding space between galaxies and massive galaxy concentration nodes."
+- 2026-10-25, the owner, on the rate of growth (VISION Update 106), verbatim: "Adding points at a fixed rate gives steady exponential growth. I think the rate is the speed of light. Same rate at which a curve moves through space."
+- 2026-10-25, the owner, choosing reading (b) of the rate and explaining "why now" (VISION Update 106), verbatim: "B. But the speeding up era and slowing era canceling isn't happenstance. It's the max entropy many version period and where an observer is most likely to be, give or take."
+- 2026-10-25, the owner, on "coasting at every moment, or b only in flat space with the eras from how much space is flat" (VISION Update 106), verbatim: "Proceed, as you suggest"
+- 2026-10-25, the owner (verbatim; VISION Update 107): "idea on thirds. and halfs. a point on a side actually touches 12 squares, the intersection connecting 4 quares 90degree anglles in 3 planes. the 180 of the coming together point of 3 cubes also creates 3 pieces each w a 60degrea twist, not the 180 id meen talking about. still consider both, neither really cohere to me clearly. / unless your "flat" means empty- yes flat is empty, matter curves space, makes it less than flat. a full front must be open/flat for space to expand."
+- 2026-10-25, ours: `sandbox/cube_sixty_degree_look.py` (output `sandbox/out/cube_sixty_degree_look.txt`), exact on the cube: 12 squares meet at a point (3 straight pairs of the 6 links); about a body diagonal a 60-degree turn alone and a 180-degree turn alone are not symmetries, a 120-degree turn is and keeps each point's kind; a 60-degree turn with the mirror across the perpendicular plane (S6) is a symmetry and swaps every point's kind; two such steps keep the kinds (they are the 120-degree turn); three swap them and equal inversion through the cube's centre.
+- 2026-10-25, the owner, clarifying Update 107 (verbatim): "(3 60's make the half we see in the physics is the idea)"
+- 2026-10-25, the owner's # notes on `docs/design/owner_questions_2026-10-24.md` (verbatim, by item): H1: "points and links are not part of the base 2 degrees of freedom, but they are a useful way to describe our 3d spacetime that emerges from the 2 degress of freedom"; S1: "3 strands of 60degrees make 180degrees"; C1: "can we get more informaation to help with this decision from general knowledge or sandbox runss?"; C2: "yes, but surface isn't spacial serface, it is the 2 basic degrees of freedom, twist and curl. we can do the math and write analogies thinking about it both ways and this will help things cohere"; C3: "yes"; Z1: "does this allow square count to increase in full fronts at zero cost in enpty space?". Folded into the file the same day.
+- 2026-10-25, the owner's second pass of # notes on `docs/design/owner_questions_2026-10-24.md` (verbatim, by item; the file as she left it is kept in this entry because the file was then rewritten): S1: "I'm now thiniking they also carry 3 1/3rds, tying the 12 90degree angles of 3 intercescting planes" / "in sets of 3" / "then I guess turn of the grid makes more sense" / "120° of charge-twist and 60° of spin-twist, needs 3 together to be written as 3d space and "move". looking at them apart reduces the degrees of freedom to see. ie if we need to see qhich quark we sacrifice the information of 3d movement"; S2: "why not? 1 photon is a half curl / 180degrees" / "Is the photon's curl shared between two groups of three (pair creation), or does each third carry its own half? (Update 104.)"; C1: "interesting, so I need to start thinking of matter as uncurl?" / "proceed with this" / "I'm agreeing, doesnt hurt to add the sandbox run for more cirtainty?"; C2: "confirmed"; Z1: "would hard mean there is no variability in higher g spaces?" / "okay then I confirm" / "toy is needing some updates, agreed. juat need to figure out when to make the adjustment to learn about each component"; Z2: "so the positive background pulls away our surplus antimatter. without that surplus antimatter, curl cost > than uncurl cost, lambda >1. So then when the space snaps would totally open, it releases th energy in that store as matter and antimatter, that energy perfectly cancels out, lambda =1, but there is a single burp of surplus matter, and that behaves as it does as space cools and expands. which, without that missing antimatter, would just be light."; E1: "agree"; E2: "yes to both"; 0: "I think light lowers it so a lower g can pay it.if every square carries the same negative energy-it would cost nothing but because of the missing antimatter in our daughter universe... is this consistent w my hard answer from earlier?"; 0a: "confirmed"; 0b: "idk, what follows from the logic? no color, no twist, unstable forms held precariously or hypothetically in spacetime"; 0c: "yes, I think so. especially if all dark matter is one sided mobious strips that dont carry charge..."; 0d: "flip needs to happen on a group of twists summing to an integer, to be represented in spacetime"; 2: "confirm"; 4: "i confirm"; 5: "having a hard time picturing this. fresh phase with wiring in a heatbath? not sure about integrated out as my math is rusty"; 6: "tied to the graph's temperature i thnk"; 7: "agree sweeps count first, the lambda window and surcharge on curl would be tied to the charge of the outside ov the new space which can vary, creating different daughter univers matter starting points, although I expect behavior is similar and from a particular vantage point in space we mat not know the exact mass or lambda we started with"; 8: "whichever is the better accepted math where we can copy most existing models and approaches. then the alternitive. sounds like most are working ing the 4 link 2 degree of freedom space?"; 9: "agree".
+- 2026-10-25, ours: two sandbox looks after her second pass. (1) `opened_space_curvature_sign.py`: in 600 saved T51 sheets that opened from a curled tube, curl minus uncurl is net positive in 519, zero in 80, negative in 1 (mean +9.2, falling with slower cooling); kills the toy reason for "ours negative", crowns nothing. (2) `zero_total_rule_reach_n18.py`, exact: under the hard rule the moves join all 9 rule-keeping classes at N = 18 in one piece.
+
+- 2026-10-25, the owner's second-pass notes on S2 missed by the extraction above (verbatim): "gives the electron and positron, you're right, the actual function includes the anti particles too." / "2 photons carry 360, but it is split against the 3 1/3 twists and the 3 -1/3 antitwists."
+- 2026-10-25, the owner (verbatim; VISION Update 109): "what if light can get backed up? light flow coming in at a rate much higher than the pace where new daughter universes can take it, it sort of piles up in a charged shell aroung the front. say that shell is uncurl, because it is the surplos uncurl that is applying the curl energy at the front. that shell can carry spin / charge, and pull curl back from the front, so the front needs lambda >1, a surplus, to meet the barrier. then when the barrier is hit and pace snaps, all the energy actually stored in a snap where lambda would equal 1 and its opposite is released, and the surplus cannot be canceled because it is in the black hole which is in the mother universes space, not the daughter universes space, and nothing can pass between." And: "okay, proceed." (to treating the 60° spin-twist as the strand's own twist angle)
+- 2026-10-25, the owner, answering L1 and L2 (verbatim; VISION Update 110): "From the curled side (the black hole, in the mother's space), arriving at the front. L2 - confirmed"
+- 2026-10-25, ours: `front_push_step.py` (continuum stand-in for the lattice junction): light along the curl arriving from the curled side pushes the front toward the curled side at every frequency, -2a(1 - a)/(1 + a) per quantum in units of its open-side momentum; it helps the front open rather than holding it back. Kills the light's push as the hold-back in her shell picture; the shell's charge (L2) is left as the candidate.
+- 2026-10-25, the owner (verbatim; VISION Update 111): "Fractals. Z=Z^2+c / Very simple rules can deliver complex patterns. We start with just 2 variables, degrees of freedom, and then can describe the outcome in many more variables. Like the thing and its warped representation making patterns in a video loop. So a strange loop is a representation of the network where there is enough energy concentrated to uncurl and have all these interactions, viewed from inside we see all these incredible patterns, as surplus matter influences itself. And the whole of that pattern is just from higher coupling and a more than usual amount of curl. / Adopt at l3 ."
+- 2026-10-25, the owner, on L4 (verbatim; VISION Update 113): "L4: is the shell's charge electric, or the handed (weak-type) charge? - does handed behave like electric, and opposites attract? Maybe curls organize in tight lines like shaking a toothpick box, giving the 2 in tight layers with the curl facing the center and the uncurl facing away, putting the force on making the curl take more curl to snap open 3d space at the front."
+- 2026-10-25, the owner, on L4 (verbatim; VISION Update 113): "The distance is tiny. Agreed . / I agree with l4."
+- 2026-10-25, the owner, on the predictions sheet, section 1 (verbatim; VISION Update 114): "Comparing: set up a properly fed one. / a different kind of move sometimes fire- could this be a move with backed up charge and handed force making the daughter universe have surplus matter or antimatter. / Earlier one stands, proceed with jobs."
+- 2026-10-25, the owner, on the predictions sheet (verbatim; VISION Update 115): "colder surroundings in 34 of 36 - colder surroundings / The size claim: the time between births stays the same at every size.- yes but the surplus matter . Confirm. / Matter and antimatter are mirror image, the same, so every daughter would call her surplus matter, although her signs reverse every generation / One speed for all flat space. If flaws create curl or curve they can slow things. / Pull, only at very short distances. Distance at high g can be greater but still very short."
+- 2026-10-25, the owner, her prediction for the properly fed control of T71 (verbatim; VISION Update 116): "Open into 3d space but all matter cancels so quickly that the length of time from big bang to everything is disbursed enough to be described with 2 degrees of freedom. Only a big black hole with an influx of matter building up to create handedness pull gets the whole fractal daughter universe to be so detailed and complex and dense with opportunities for evolution of observers"
+- 2026-10-25, the owner (verbatim; VISION Update 116): "The published single-switch that's fair I didn't realize this was single switch. The number of switches in an area that happen, and how many subsequent switches they can influence and prior switches they can be influenced by. That's related to the speed of light in 3d."
+- 2026-10-25, the owner (verbatim; VISION Update 116): "Proceed with 1-3. / I am changing to match yours, if it is not to late"
+- 2026-10-25, the owner, on the read-backs RB1, RB2 and RB5 (verbatim; VISION Update 118): "Your first words had both our universe and the parent black hole slightly negative, but the record later wrote the parent as positive. Which do you mean?
+that the anti daugher universe would be identical in everything except which direction the black hole spins. only told apart from its mirror looking at quarks - although they would have named the force of the heavy + charge proton and their positrons an electron. because they are the same in everything, the net difference would look like the same molecules in anti form. so the rule is that they switch back and forth, that all the daughter universes birthed by the same mother have the same . the wirlpool shape of the folded slab is spin or negative spin, but all effects are the same. any daughter birthed by a backed up black holde in that daughter will be the direction of her hrandmother universe. another quality of the loop that keeps it balanced at the network level. and accross the mother-daughter front. over all the stacked versions, yes, nuetral. over each fromt nutral. combining version amplitudes, nuetral.
+
+A whole double row of a torus can certainly be added. Whether a small local pair can be added without bending space hasn't been checked. -> I don't think it can. looking for whole rows.
+
+"No cost" was true of the energy only. Growing also changes how many arrangements are possible, so growth needs its own rule, which you would decide. -> help me decide this.
+
+surface is like the relationship between the 2 degrees of freedom. g could be one and twist-curl the other, their relationship can be self-referential, which creates fractals when examined from within, including the strange loop we observers find ourselves in.
+
+Is "net flat" an average over the loop's stacked versions, or a total over one joined surface? - over 1 joined surface."
+- 2026-10-25, the owner (verbatim; VISION Update 119): "with time running the other way- what would this look or be like? Analogy?
+
+So g is a constant in the 2d view. Represents how likely a network is to birth a 3d space. How many sweeps. The time equivalent. Then curl and twist are the 2 degrees of freedom, they are related by some g and soft space’s number. Is that a front?
+
+(A) . So we have to set g and if we set it wrong it many not explain the spacetime we observe."
+- 2026-10-25, the owner (verbatim; VISION Update 120): "Yes each big bang makes two daughters then, the other one matching but with antimatter surplus. Then the black hole itself stays neutral.
+
+space. In the toy, a sharp change in soft space's number would make a front.- let’s keep investigating this then."
+- 2026-10-25, the owner, confirming the twin daughters (verbatim; VISION Update 120): "1.	Does this replace your earlier version? That was the one where the parent black hole keeps the antimatter surplus. Yes.
+
+All daughters of one mother share a direction": does that now mean each burp gives a pair, one of each? Yes
+
+Energy: does each twin carry the full curling cost, as each T71 daughter does, or half of it? Full, the same release from space opening up that turns to light and fully cancels"
+- 2026-10-25, the owner (verbatim; VISION Update 120): "One gate, double the bill. The parent waits until its stores hold twice the curling cost, then releases both twins at once."
+- 2026-10-25, the owner, her predictions for the twin gate (verbatim; PREREGISTRATION T82): "Does the slab keep cycling with twin births? It might keep cycling, hold its energy and swing back and forth without releasing it, sit still, or break. Keep cycling with twins.
+Ours: it cycles in every setting. agree.
+Is each twin exactly one curling cost, and are the two always equal?
+Ours: yes, wherever the slab keeps up with the feed. yes. agree.
+Does the wait for a birth double compared with the single version? yes. 
+Ours: yes. The first birth comes at twice T71's time, the same at every size, and births are spaced about twice as far apart. agree. 
+In the fast setting (cheapest cost, fast feed), are there more short twins than in T71, fewer, or the same?
+Ours: more or at least as many. The stores hold more energy for longer, so the pile-up is worse. agreed.
+Do you agree to L = 16 as the held-back size for the claim that the time between births doesn't change with size? yes"
+- 2026-10-25, the owner, answering T1 and RB3 (verbatim; VISION Update 122): "The two curls are always created at the same time, and it’s the same amount of energy to curl one dimension at 2. So the twist and curl become one thing, lined up at the front and pressed together, sort of like a lipid membrane, and more curl on the inside and anticurl on the outside. They both need the energy in stores to exceed the barrier before they snap in a one 2. The first goes then immediately its magnet force elevating the lambda drops out, and the second twin’s big bang happen.
+
+When the first direction curls, the second is free. Then 2 3d spaces emerge, one from each curled direction, one of which curled right handed and one left handed and they collapsed together as it’s a rule they always ride together. compacted twist and curl, so each side gets half the curl energy, which gives it the photon release pattern, transforms into anti and matter. And 3d spaces emerge from a specific twist curl setup, a d they that can be represented as flat space for each of the energies to release into. The flat 3d space and observation from inside, this type of twin big bang, is what the fractal of the 2 degrees of freedom in the network. Spontaneous variations from vacuum, like flashes of light taking so few instants they barely count, matter and antimatter being made and collapsing to release a photon.
+
+hole's spin sorts is electric charge, each twin would carry a net charge. Which count is it? - could a knot of closed space trapped in a shell of curled slab, can it have a north and South Pole?"
+- 2026-10-25, the owner (verbatim; VISION Update 123): "A rod between 2 curled slabs, a right hand and left hand whirlpool.
+
+each side gets half the curl energy… can it happen any other way? I think energy is conserved.
+
+Withdraw t82
+
+RB3, restated: is what the spin sorts the direction of a dipole, north up or north down, with each twin neutral. Confirming"
+- 2026-10-25, the owner (verbatim; VISION Update 124): "If each curled direction carries its own curling cost yes… do we bring back the tie with the adjustment that it applies to two, two spacial dimensions collapse. Leaving a knot. Which bulds up curl until it snaps to 2 new 3 directional spacetimes. One at the North Pole and one at the South Pole, with the center holding mismatched amounts of curl and anticurl due to moving through a soft body to the handedness opposite pole.
+
+y "a rod between two curled slabs," do you mean two curled slabs of opposite handedness joined by a rod, each slab opening into one twin?  Yes
+
+The toy can’t yet tell right-handed from left-handed. That needs the signed twist label from 24 October, or soft space’s second stage. Let’s keep proceeding towards this goal. 
+
+2.	T1e: Bring back a tie for the pair, so that curling two directions costs the same as curling one? Yes, anything we can check sandbox before pivoting?"
+- 2026-10-26, the owner (verbatim; VISION Update 125): "We need to do 1. If it seems worth exploring later we can do 2"
+- 2026-10-26, the owner (verbatim; VISION Update 127; her message was cut off by an interrupt and is recorded as it arrived): "Into its waves and travel away from the spot - where do the waved go in the black hole? what happens to them?
+
+My unchecked reading is that a broken point is space bent the wrong way around that point -> the wrong way around is a anticurl to its curl and they always come in pairs. so maybe "breakage" is actually more opening?"
+- 2026-10-26, the owner (verbatim; VISION Update 128): "proceed"
 

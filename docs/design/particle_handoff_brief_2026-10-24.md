@@ -14,30 +14,43 @@ refinement she chose on 24 October ("Refines it"), **proposed, to confirm as one
 depends on it yet.
 
 - **Strand (proposed):** ~~a face diagonal of a cube (her "tape" of 23 October)~~ one segment carrying a twist of one
-  third, one way or the other; which segment is open (worksheet Q1). A lone strand is neutral (handoff idea 3;
+  third, one way or the other; which segment is open (worksheet Q1). ~~A lone strand is neutral (handoff idea 3;~~ *(reversed by Update 101's charge rule, under which every third carries ±1/3;
+  the reversal of handoff idea 3 is put to her; Update 102)* (handoff idea 3;
   "charge is only spin", 23 October). *Corrected 24 October, after a check: her tape "run to its opposite corner,
   there are 4 tapes" is a cube's body diagonal, √3, joining the two kinds, not a face diagonal; and her later words
   of 23 October give the third to the longer length and the half to √2 ("short halfs and long thirds"), while her coin
-  puts matter and antimatter on a square's two face diagonals. Her own statements pull Q1 both ways.*
+  puts matter and antimatter on a square's two face diagonals. #No, dark matter and antidark matter are the face diagonals, matter and antimatter are the body diagoanals# Her own statements pull Q1 both ways.*
 - **Closure (proposed):** a ring closes only with a whole twist, so three thirds braid into one closed unit (her tape
   picture of 23 October; her answer of 24 October, "3 thirds"). The electron is three thirds closed, carrying a
-  photon-like curl's energy (handoff idea 4).
+  photon-like curl's energy (handoff idea 4). #Correct#
 - **Light (proposed):** the untwisted excitation travelling along links that already exist (handoff ideas 1 and 2),
-  in the toy the wave of the phase field of `graphity.u1`. This refines "an untwisted ring is light" (Update 86).
-  What "half-curl" means stays three variants (her answer of 24 October): A1 a pulse half a wave long, A2 a 180°
-  bend, A3 a half turn of phase round a loop.
-- **Unchanged and still open:** matter against antimatter (opposite thirds, or the two diagonals of one square, 23
-  October); the ring's price; the twist's definition on the graph ("not yet defined", confirmed 23 October); what
-  gluons carry (a bound half-curl or none; both kept).
+  in the toy the wave of the phase field of `graphity.u1`. This refines "an untwisted ring is light" (Update 86). 
+  What "half-curl" means stays three variants (her answer of 24 October): A1 a pulse half a wave long, A2 a 180° 
+  bend, A3 a half turn of phase round a loop. #I think yes to all, but good to test independently#
+- **Unchanged and still open:** matter against antimatter (opposite thirds, or the two diagonals of one square, 23 #dark matter and antidark matter are the face diagonals, matter and antimatter are the body diagoanals# 
+  October); the ring's price #-> an electron is 3 1/3 into 1 full twist, mobious strip. 3 coming together costs 1 photon# ; the twist's definition on the graph ("not yet defined", confirmed 23 October) #I thought we were defining it here?#; what 
+  gluons carry (a bound half-curl or none; both kept) #None is my prediction#.
+
+**Confirmed later on 24 October (VISION Update 97; her comments are kept in the text below as she wrote them):** the
+twist is signed thirds on body diagonals (matter; Update 98 moved them to 1 × 1 × 2 diagonals for one evening, and
+Update 99 brought them back and dropped the rule that a matter strand joins one colour; handedness marks matter
+against antimatter) and signed halves on face diagonals (dark matter); the electron is
+three thirds closed into a 360° two-sided band; ~~a closed full twist is neutral and the electron's charge is a bound
+photon half-curl with its mass ("Yes the charge comes from the photon half curl combined with the mass");~~ *(withdrawn
+by Update 101: charge = −(net signed thirds) ÷ 3 for every strand)*; dark strands
+cannot hold the half-curl and carry no charge; light travels on the edges, the twist on the diagonals; pairs close too;
+a lone third is confined; gluons, both readings kept, her prediction "none". Open: the point kinds separate regular
+from anti, but every body diagonal touches both kinds (exact), so for matter strands that job falls to handedness
+(asked).
 
 ## 1. What was decided on 24 October (hers; VISION Update 96)
 
 1. The handoff **refines** the ring picture; it does not replace it.
 2. The electron to test is **three thirds**, with her added idea: *"the 3 twists colapse 3 versions of arrangement.
    the entropy decrease of 1 becoming 3 is 1 photon."* Read (to confirm): when three strands close into an electron,
-   three distinguishable arrangements become one, and the entropy given up leaves as one photon.
+   three distinguishable arrangements become one, and the entropy given up leaves as one photon. #yes#
 3. **Build the published lattice photon into the toy** (a phase on every link; the squares as its loops): a new
-   ingredient under S1, `graphity.u1`, ASSUMPTIONS Q29, with its own reproduction gate before any result is read.
+   ingredient under S1, `graphity.u1`, ASSUMPTIONS Q29, with its own reproduction gate before any result is read. #this is the pattern we are following, trying to build up the rules of a 2 degree of freedom non-geospacial phase into the rules we know about the universe ie spacetime. All the rules we observe should be able to emerge from the idea that every organization of the 2d network exists and energy can spontaniously curl -return realitty to the perspective of 2 degrees of freedom, to needing 3d space to  and uncurl to store extra energy, the over-curve that can occur in the network.energy. from inside that change, it looks like a big bang, a daughter universe. an area of excess curvature in the 2d forms, because everything forms, all the versions, with amplitude. it looks like what happens when surplus mass plays out in space. from the snap at t=0 = big bang, through when the 2 dimensions show all the information there. it desolves back out to the network through the black holes, leaving something in the new space, a small about of negative curviture, which we can measure our univese moving toward, although our universe will expand so that open empty space moves toward 0 as it expands infinitely. helps the total network return to 0 curviture max entropy.# 
 4. **Half-curl stays three variants.**
 
 ## 2. The exact looks (`sandbox/particle_handoff_looks.py`, about 20 s; output `sandbox/out/particle_handoff_looks_2026-10-24.txt`)
@@ -49,7 +62,8 @@ A sandbox look: it can narrow or kill, never support. Built lattices only.
    has. The rest are gauge modes (one per point, less one) and one holonomy per direction. Every frequency is
    2 √(Σ sin²(kᵢ/2)) to 10⁻¹⁴. The speed limit is one link per tick, reached only at long wavelengths, and is never
    exceeded; but it is one link per tick only because the field's inertia and κ were set equal (a choice, the
-   handoff's "speed chosen by fiat" flag), and short waves prefer the lattice's axes (2.7 % faster along a cube
+   handoff's "speed chosen by fiat" flag), and ~~short waves prefer the lattice's axes (2.7 % faster along a cube~~ short waves are slower along the lattice's axes
+   (0.027 links per tick, 2.9 %, slower than along a cube diagonal at |k| = 1) *(corrected 24 October by the rule-22 audit; VISION Update 102)* (struck: 2.7 % faster along a cube
    diagonal than along an axis at |k| = 1).
 2. **The three readings of half-curl under one energy.** A3: a half turn of phase round a square is the most
    expensive state a square can have (2κ), and a full turn costs exactly nothing, so only the turn modulo a whole
@@ -111,24 +125,24 @@ A sandbox look: it can narrow or kill, never support. Built lattices only.
 | Flat links exist without a photon | The toy's links; stage A and B fields ride on them; but 23 Oct: the edges "are not real in our model they are just helpful to visualize" | The field of `graphity.u1` lives on the toy's links (edges); **tension** with her 23 Oct line, question 7 |
 | Photon = travelling half-curl | "An untwisted ring is light" | Light is the untwisted travelling excitation; on a ring, a phase running round with no net third |
 | Neutral one-third twist | The tape ~~on a face diagonal~~ corner to corner (a body diagonal, √3; "4 tapes") must twist ⅓ either way (23 Oct; corrected 24 Oct) | One strand = one segment with ±⅓, neutral; which segment is worksheet Q1 |
-| Electron = third + photon-curl (now three thirds) | Three come together into a braid with one full twist (23 Oct) | Electron = three thirds closed, plus curl energy |
+| Electron = third + photon-curl (now three thirds) | Three come together into a braid with one full twist (23 Oct) | Electron = three thirds closed, plus curl energy #curl energy with nothing to curl creates spin# |
 | Charge from the whole configuration | "Charge is only spin, speed of spin matters" (23 Oct) | **Open:** which conserved quantity obeys Gauss's law and gives pairs; spin speed is not yet a count |
 | Mass as stored curl | "Twist count = curling energy = mass" (23 Oct) | Same |
 | Opposite twists cancel into waves | Two diagonals of one square, the coin (23 Oct) | **Open:** ⅓ clockwise against anticlockwise, or one kind's diagonal against the other's, or both |
 | Gluon: confined, half-curl bound or absent | not in the ring picture | Both kept; published relative named in section 6 |
 
 Questions, to be answered in one sitting:
-1. Is a strand one segment with a third of a twist (which segment is worksheet Q1), and does a ring close only with
-   three, or also as a pair, one third each way (the two-part meson route of handoff idea 6)?
+1. Is a strand one segment with a third of a twist (which segment is worksheet Q1) #yes#, and does a ring close only with
+   three, or also as a pair, one third each way (the two-part meson route of handoff idea 6 -  #yes this is helpful to my picture and aligns, I didn't know this was a thing)yes other particles can form, probably more rarely#?
 2. Is "a lone third cannot close" meant as confinement, a cost that grows as a third is pulled away? (The charge
-   ledger gives neutrality over the whole space, not that cost.)
-3. Charge: if charge is spin speed, what in the model is counted so that charges come in cancelling pairs?
-4. Matter against antimatter: opposite thirds, the square's two diagonals, or the one as the other?
-5. The entropy idea: three arrangements becoming one, with ln 3 leaving as one photon?
-6. Gluons: keep both readings, or choose?
-7. Light on the edges: on 23 October the edges joining the two kinds "are not real in our model they are just helpful
-   to visualize"; on 24 October the photon field was built on them. Do edges carry light while diagonals carry the
-   twist (two jobs), or should the field ride on diagonals instead?
+   ledger gives neutrality over the whole space, not that cost.) # a confinement#
+3. Charge: if charge is spin speed, what in the model is counted so that charges come in cancelling pairs? #1 1/3 is negative, 2/3 is positive, 1 is nuetral. 3 (-1/3) + photon is anti electron, 3 (1/3) + photon is electron, negative vs positive is handedness of curl too so +1/3 and -1/3 are different handed and cancel#
+4. Matter against antimatter: opposite thirds, the square's two diagonals, or the one as the other? #yes#
+5. The entropy idea: three arrangements becoming one, with ln 3 leaving as one photon? #yes#
+6. Gluons: keep both readings, or choose? #keep both#
+7. Light on the edges: on 23 October the edges joining the two kinds "are not real in our model they are just helpful 
+   to visualize"; on 24 October the photon field was built on them. Do edges carry light while diagonals carry the 
+   twist (two jobs) #yes#, or should the field ride on diagonals instead?
 
 The loop-rule worksheet of 23 October (`docs/design/loop_rule_worksheet_2026-10-23.md`) has a dated addendum listing
 what this handoff and its looks move, slot by slot; read the two together in one sitting.
@@ -139,7 +153,7 @@ what this handoff and its looks move, slot by slot; read the two together in one
 the squares (every 4-cycle, so a curled direction's ring counts too); holonomies; Gauss's law; gauge
 transformations; the energy; the linear-wave matrix; velocity-Verlet evolution; Wilson-action Monte Carlo with the
 detailed-balance argument in the docstring; and the exact two-direction answer for the reproduction gate. Tests
-(`tests/test_u1.py`, 17): squares against networkx and `cqg_d.total_squares`; gauge invariance; charges on closed
+(`tests/test_u1.py`; 17 then, 15 test functions with parametrised cases now): squares against networkx and `cqg_d.total_squares`; gauge invariance; charges on closed
 graphs; the wave spectrum on flat tori in two and three directions; energy conservation; the local Monte Carlo update
 against full recomputation; wrapped phases and same-seed reproducibility; the exact answer's limits; a short gate.
 Not in this piece: the field riding on a graph whose wiring switches; twist labels; any coupling to the curling
@@ -148,7 +162,8 @@ cost.
 **Gate U1** (TASKS): the average square on the flat 6 × 6 and 10 × 10 four-link tori against the exact torus answer,
 at five couplings, with the acceptance written before the run. **Failed on 24 October at β = 8** (the sampler froze in one winding sector;
 diagnosis and the winding move in TASKS, Gate U1's reading); Gate U1′, with a winding move, failed the same day by one point (10 × 10, β = 8,
-3.65 errors against 3.5); nothing from Q29 is read until a gate passes.
+3.65 errors against 3.5). **Gate U1″, four times the sweeps and the same acceptance, passed** (TASKS);
+results from Q29 with the winding move may now be read.
 
 ## 5. Next, in order
 
@@ -156,13 +171,20 @@ diagnosis and the winding move in TASKS, Gate U1's reading); Gate U1′, with a 
 2. Gate U1 run and read (`scripts/run_u1_gate.py`, `configs/gate_u1_2d.json`).
 3. The handoff's test A with the field in place, pre-registered with her prediction: a launched wave on the toy's
    flat six-link space and on a curled torus (does a curl, whose ring is a square the field sees, scatter or trap
-   light?).
-4. Twist labels on strands (Z3 per face diagonal), switchable off, once question 1 is answered; then the handoff's
+   light?). *Answered exactly the same day (O151, corrected the same night): light keeps the flat
+   speed in a curl of side 4, as she predicted; the field component along the curl, a scalar seen from the open
+   directions, gains a mass ω² = 4 + 4 sin²(k/2) from the toy's rule that the ring round the curl is a square.*
+4. Twist labels on strands (~~Z3 per face diagonal~~ signed thirds per body diagonal, signed halves per face diagonal *(corrected 24 October by the rule-22 audit; VISION Update 102)*), switchable off, once question 1 is answered; then the handoff's
    tests B (closure census with dynamics) and E (pair creation only, on a closed space).
 5. The quantum gate (test C) stays a reading task until a state space is chosen: on link labels it fails by section
    2, item 4.
 
 ## 6. Reading tasks (prior-work template; general-knowledge statements above)
+
+*Status 24 October, night: tasks 1 to 5 read by assistant agents, notes in `docs/reading/notes/2026-10-24_*`
+(`wilson_kogut_lattice_gauge`, `thirds_charge_centre_vortices`, `spin_from_loops_and_landauer`); Wilson, Kogut and
+Finkelstein-Rubinstein themselves only at abstract level or not at all (no open copies), their facts sourced at open
+papers listed in the notes. Also read: Levin and Wen (2006) in full (`levin_wen_quantum_ether`).*
 
 | # | Task | Settles | Sources (bibliographic data checked at Crossref 24 Oct where marked) |
 |---|---|---|---|
@@ -172,3 +194,46 @@ diagnosis and the winding move in TASKS, Gate U1's reading); Gate U1′, with a 
 | 4 | Landauer's bound | Her entropy idea's price | Landauer, IBM J. Res. Dev. 5, 183 (1961) ✓; Bennett's review (2003), to check |
 | 5 | Centre vortices: tubes of the gluon field carrying a third of a turn | The nearest published "one-third twist", neutral, belonging to the gluon field and tied to confinement; bears on her gluon question | 't Hooft (1978); Greensite's review (2003); to check |
 | 6 | The handoff's own reading list (section 6 there) | Its benchmark table's sources (PDG, CODATA) | as listed there |
+
+## 7. What is owed by the owner, and what could be published (24 October, night)
+
+*Superseded as a list by `docs/design/owner_questions_2026-10-24.md` (kept current); the text below is as of
+the first night.*
+
+**Choices and predictions owed (each is hers; nothing here runs before her answer).**
+
+*From this handoff and its follow-ups:*
+1. Whether the colours of points still mark dark against antidark (face diagonals stay in one colour), now that they no
+   longer mark matter against antimatter (Update 99).
+2. The electron's charge: under her answer it is a bound photon half-curl, while the proton's +1 is a sum of quark
+   thirds. What makes the two exactly equal and opposite (measured to about one part in 10²¹, general knowledge, to
+   verify)? Or does charge go back to the sum of thirds for every strand, as in Bilson-Thompson's braids?
+3. Matter against antimatter as handedness: the red-team reader notes this mixes two different symmetries of physics,
+   the mirror (P, handedness) and charge conjugation (C, particle against antiparticle). Does she mean that the
+   antiparticle of a strand is its mirror image? (Bilson-Thompson's antiparticle is the top-to-bottom mirror of the
+   braid, [BT05].)
+4. Gluons: her prediction "none" is recorded; both readings are kept.
+5. Her prediction for the boundary between curled and flat space (a scalar along the curl cannot enter below ω = 2;
+   light passes): needed before the half-opened-state run.
+
+*From the loop-rule worksheet, still open:* Q3 (is one braid a proton or a quark), Q6 (mass from twist count alone, or
+with a binding energy), Q7 (what the survival rule decides, and the routes to the matter excess), Q11 (where three
+generations come from), X1 (which segment "touches 12 cubes"), X2 (what "twist is always the same" holds fixed), X3
+(where colour comes from).
+
+*Older, from the handoffs of 22 and 23 October:* her word on the T71 and T74 held-out numbers at L = 16
+(`sandbox/heldout_2026-10-23/`); the runaway remedy for soft space (stage-B question 5: a squared-curvature term, a
+causal structure, or bounded lengths); her predictions for the λ-from-curvature test, the first soft-space runs, the
+Eq. (45) ratio test and the T80 decisions; which sign she holds for the drift of the background curvature; and the
+twisted-diagonal saved-state look, now that the twist is defined (Update 97 and 99).
+
+**What could be published (O152).** A fresh red-team reader, given the files and not the conclusions, judged that
+nothing on particles here is publishable today: the curl mass is the known Wilson-line mechanism put in by the toy's
+square rule (and is not light); the signed-thirds counting is Bilson-Thompson's with fitted quark charges; the cube's
+three-fold and two-fold axes are textbook. What it judged solid: the stuck knots of fixed energy whose number is set by
+seeds (paper 2, framed as defect formation, not particles), and a set of exact no-go constraints (no spin one half from
+link labels; no excess from exactly symmetric labellings; no long-range force at fixed wiring; no odd ring of body
+diagonals). The one route it sees to a publishable particle-sector result: put the U(1) field on the dynamical graph
+(riding the switches) and pre-register a measurable effect on the tube-to-sheet balance, the decay rate or the T78 and
+T79 surcharge on curl, with a held-out size and a prior-work note. That needs a design brief and her decision under S1.
+

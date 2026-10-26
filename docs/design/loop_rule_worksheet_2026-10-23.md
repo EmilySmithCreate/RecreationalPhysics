@@ -1093,3 +1093,22 @@ Q11 (three thirds cannot tell the electron, muon and tau apart).
 object for light. Both are now out of date for the photon field (`graphity.u1` evolves in ticks), with one caveat:
 **Gate U1 failed on 24 October** at β = 8 (the sampler froze in one winding sector; TASKS, its reading), so nothing
 from that field is read until Gate U1′ passes.
+
+**Her answers of 24 October, later (VISION Update 97; her comments in the particle brief).** Q1: (e), with jobs:
+matter strands are body diagonals, dark strands face diagonals. Q2: (a), a third is 120°, three make a full 360°
+two-sided band. Q4: three thirds closed (a). Q5: (b), a face diagonal with a half twist. Q8: charge back to the thirds
+and their handedness, read as charge = −(signed thirds)/3, with one tension open (a full twist neutral against the
+electron's −1). Q9: matter against antimatter is handedness on body diagonals; dark against antidark the face
+diagonals. Q10: light travels on the edges, the twist on the diagonals. Confinement of a lone third: yes. Pairs close
+too, more rarely. Still open from this worksheet: Q3, Q6, Q7, Q11, X1, X2, X3.
+
+**Later on 24 October (VISION Updates 97 to 102), what moved since the addendum above.** Q1: matter strands are body
+diagonals (Update 99, after an evening on 1 × 1 × 2 diagonals, Update 98); dark strands face diagonals. Q4 and Q8:
+charge is −(net signed thirds) ÷ 3 for every strand and anything free carries a whole number of twists (Update 101);
+the bound half-curl reading of Update 97 is withdrawn; this reverses handoff idea 3 (asked). Q5: dark strands carry
+multiples of a half, odd ones one-sided (Möbius), whole ones two-sided (Update 101). Q9: an antiparticle is the mirror
+image of its strand; handedness marks matter against antimatter (Updates 99, 100). Q3: the proton is +2/3, +2/3, −1/3
+(Update 100), so a braid of three strands is a proton and each strand a quark; the neutron +2/3, −1/3, −1/3. Light:
+Gate U1″ passed; light keeps its speed in a curl (O151, corrected). Still open here: Q6, Q7, Q11, X1, X2, X3; new
+questions 0 to 0d in `docs/design/owner_questions_2026-10-24.md`.
+

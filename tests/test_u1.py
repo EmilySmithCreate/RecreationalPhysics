@@ -162,3 +162,53 @@ def test_gate_u1_short_at_large_beta_with_the_winding_move():
     blocks = series.reshape(40, -1).mean(axis=1)
     err = blocks.std(ddof=1) / np.sqrt(len(blocks))
     assert abs(series.mean() - u1.exact_mean_cos_2d(8.0, f.n_squares)) < 5 * err + 2e-4
+
+
+def _plane_wave(f, dims, pol, prop, k):
+    """theta for a field pointing along axis `pol`, varying as cos(k y) along axis `prop`, uniform otherwise"""
+    coords = np.array(np.unravel_index(np.arange(f.n), dims)).T
+    th = np.zeros(f.n_links)
+    for l in range(f.n_links):
+        a, b = coords[f.tail[l]], coords[f.head[l]]
+        step = (b - a + np.array(dims) // 2) % np.array(dims) - np.array(dims) // 2
+        axis = int(np.flatnonzero(step)[0])
+        if axis != pol:
+            continue
+        lo = a if step[axis] > 0 else b                     # the link's lower end along its axis
+        th[l] = np.sign(step[axis]) * np.cos(k * (lo[prop] + 0.5 * (prop == axis)))
+    return th
+
+
+@pytest.mark.parametrize("side, mass2", [(4, 4.0), (6, 0.0), (8, 0.0)])
+def test_light_polarised_along_a_curl_of_side_four_is_massive(side, mass2):
+    # exact: on a side-4 direction the ring round it is a square, so a field along that direction pays for its
+    # holonomy; a transverse wave along an open direction with that polarisation has omega^2 = mass2 + 4 sin^2(k/2),
+    # while the polarisation lying in the open directions keeps omega^2 = 4 sin^2(k/2)
+    dims = (side, 8, 8)
+    f = u1.Field(*cqg_d.torus(dims))
+    M = f.mode_matrix()
+    for m in (1, 2, 3):
+        k = 2 * np.pi * m / 8
+        for pol, want in ((0, mass2 + 4 * np.sin(k / 2) ** 2), (2, 4 * np.sin(k / 2) ** 2)):
+            v = _plane_wave(f, dims, pol, 1, k)
+            assert np.allclose(M @ v, want * v, atol=1e-9)
+
+
+@pytest.mark.parametrize("dims", [(4, 8), (4, 4), (4, 6, 6), (4, 4, 6), (6, 6, 6), (4, 4, 4)])
+def test_bloch_formula_with_side_four_rings_gives_the_whole_spectrum(dims):
+    # exact (O151, generalised): with every 4-cycle a square, the linear-wave matrix in momentum space is
+    # M(k) = |K|^2 I - K K^T + 4 sum over side-4 axes a of delta(k_a, 0) e_a e_a^T, K_mu = 2 sin(k_mu / 2);
+    # zero modes: (N - 1) gauge plus one holonomy per direction that is not of side 4
+    f = u1.Field(*cqg_d.torus(dims))
+    ev = np.sort(np.linalg.eigvalsh(f.mode_matrix()))
+    d = len(dims)
+    want = []
+    for k in itertools.product(*[2 * np.pi * np.arange(s) / s for s in dims]):
+        K = 2 * np.sin(np.array(k) / 2)
+        M = np.dot(K, K) * np.eye(d) - np.outer(K, K)
+        for a in range(d):
+            if dims[a] == 4 and abs(np.sin(k[a] / 2)) < 1e-12:
+                M[a, a] += 4.0
+        want += list(np.linalg.eigvalsh(M))
+    assert np.allclose(np.sort(want), ev, atol=1e-9)
+    assert int(np.sum(ev < 1e-9)) == f.n - 1 + sum(1 for s in dims if s != 4)

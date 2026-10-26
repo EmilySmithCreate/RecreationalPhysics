@@ -1,13 +1,1 @@
-# Push a change to this file to have the queue_status workflow write cloud/status/latest.md.
-requested 2026-09-27 03:57 EDT
-2026-10-05 11:20 ET: status of the T51 jobs submitted from aa6b835
-2026-10-11 09:26 ET: is t60_lam135_n288 (stage 2, submitted from c484d2ec) still running?
-2026-10-12: status of the 20 T62 stage-1 jobs submitted from dc61b3b2
-2026-10-12: status of the T62 and T63 stage-1 jobs (30 in all)
-2026-10-12: status of T63's last four stage-1 cells and of the ten T62 held-out jobs
-2026-10-12: status of the ten T64 stage-1 jobs and the ten T62 held-out jobs
-2026-10-12, later: status of T64 stage 1 and T62's held-out jobs
-2026-10-12, 20:40 UTC: status of T64 stage 1 and T62's held-out jobs
-2026-10-12, 21:00 UTC: status of T64's N = 192 cells and T62's held-out jobs
-2026-10-12, 21:10 UTC: status again (the request above was skipped)
-2026-10-12, evening: status of the T62 and T64 held-out jobs
+2026-10-26 21:45 UTC

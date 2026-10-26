@@ -83,7 +83,11 @@ Full statements and derivations are in the docstring of `src/graphity/cqg.py`.
 | Q26 | **Soft space, stage A: a field on the points, with waves, sourced by the relics.** (2026-10-20; VISION Updates 76 and 77; `docs/design/soft_space_brief.md`; `graphity.soft_field`.) One real number φ per point, energy E_φ = (κ/2) Σ over links (φ_p − φ_q)² + q Σ_p e_p φ_p, with e_p the curling energy 4(λ − 1)(S_e − 2) of each link with S_e > 2 split equally between its two points; missing squares are not sources (the owner's answer). φ's mean is held at zero (momenta drawn and forces projected on that plane), the closed-space form of Poisson's equation. Sampling exp(−(H + E_φ)/g) by alternating cqg's switch with the field's change added (symmetric proposal, Metropolis on the full change) and hybrid Monte Carlo trajectories of the field at fixed wiring (leapfrog, reversible and volume-keeping; trajectory lengths drawn uniformly between half the maximum and the maximum, independently of the state). Choices that are ours: the split of a link's curling energy equally between its ends; the mean held at zero; one clock for both ends of a move (the owner's answer); κ and q declared per run. Checked (tests): with q = 0 and φ = 0 the switches are the present chain draw for draw; the summed energy change equals full recomputation; sources and field energy against networkx; leapfrog reversible; the sampled field's covariance (g/κ) L⁺, equipartition (N − 1) g / 2 and mean −(q/κ) L⁺(e − ē) on fixed wirings; the lattice resistances 1/2 and 2/π of [Cse00]; plane waves at the lattice dispersion ω² = κ(2 − 2 cos k). Stage A's class (clocks and rulers set by one scalar) is a stratified theory with α₁ = −8 ([WN72]), against pulsar limits of about 4 × 10⁻⁵ ([SW12]); it carries no gravitational waves. At λ ≠ 1 our family, never combinatorial quantum gravity. | VISION Updates 76, 77; `docs/reading/notes/2026-10-20_soft_space_prior_work.md` | Ours |
 | Q27 | **Soft space, stage B, first piece: lengths and the curvature they carry, in two directions.** (2026-10-21; VISION Updates 85 to 90; `docs/design/regge_stage_b_brief.md`; `graphity.regge`.) A closed surface is a list of flat triangles with a length on each side; angles by the law of cosines; the curvature at a point is its deficit angle, 2π minus the angles meeting there (Regge's hinge in two directions; [Ham09] Eq. 518 for the general form). The toy's flat four-link torus is cut into triangles by one diagonal per square, the one joining its two corners of kind 0 (the owner's answer of 21 October: one diagonal is matter's). Checked (tests): angles against coordinates for random plane triangles; flat lengths give zero curvature everywhere; the torus's Euler number is 0 and its links are the toy's own; deficits add to 2π × 0 on the torus and to 4π on the octahedron for random lengths (Gauss and Bonnet); a saddle at one point is paid for exactly by its neighbours. Exact consequence: in two directions an energy that charges only for curving is the same for every choice of lengths on one surface, so the two-direction code is a check and the three-direction form is the aim. Ours: the choice of diagonal and its kind; no energy, sampling or time is in this piece. At λ ≠ 1 our family, never combinatorial quantum gravity. | VISION Updates 85 to 90; [Ham09] | Ours |
 | Q28 | **The model's author's correction of 23 October 2026: the printed local term is half the true one.** He wrote (paraphrased in `docs/outreach/correspondence_2026-09-22_trugenberger.md`, fifth note; private) that Eq. (27) of [KTB19] is wrong, a factor 2 is missing in front of both local terms of the Hamiltonian, and the error propagated to [T25]. Read against the text ([KTB19] Sec. 3.3, bipartite case, A_MF = 8ND(D − 1)(1 − φ), the local sums over the edges with more than 2D − 2 squares; [T25] Eq. (22), two local sums over E₁ and E₂, which coincide for bipartite graphs): at D = 2 the printed local term is 2X per our count and the doubled one is 4X. **Our kernel has always been 4X**, because Q1 derived H from the bracketed curvature formula ([T25] Eq. (8); [KTB19] Sec. 2.2) and not from the printed decomposition, and Q1 recorded on 19 September that the printed coefficient would be 2 and that only 4 makes the paper's own 'cancel exactly' true. So: every run at λ = 1 in this repository (T6, T13, T16, T36, T43, T78, T79, the exact averages at N = 16 and 18, the package of 22 October) is the **corrected** Hamiltonian, and the Hamiltonian as printed is our **λ = 1/2**. The naming condition (only λ = 1 is combinatorial quantum gravity) stands. *Ours, to confirm with him:* which form the code behind [T25] Fig. 3 used. If the printed one, Fig. 3 is a λ = 1/2 run, which would put its sharp rise at a larger coupling than Fig. 8a's and could be Gate B's missing explanation (O27 ruled out trapping); the test is the N = 160 curve at λ = 1/2 against the digitised Fig. 3 (PREREGISTRATION, Gate B‴). The bipartite-specialised correction term of [KTB19] Sec. 3.3 as flattened by the HTML conversion read as 2(D − 1) Σ (φ − 1), which would be X at D = 2; that reading is unverified against the PDF and is not relied on. | his note of 23 October; [KTB19] Sec. 3.3; [T25] Eqs. (8), (21), (22); Q1 | Sourced (his correction); Ours (the mapping to λ) |
-| Q29 | **A phase on every link of the toy's graph: the published lattice photon (compact U(1) lattice gauge theory).** (2026-10-24; VISION Update 96; `graphity.u1`; brief `docs/design/particle_handoff_brief_2026-10-24.md`.) Each link carries a phase θ in the direction from its point of kind 0 to its point of kind 1; the loops are the toy's squares (every 4-cycle, so the ring round a curled direction of side 4 counts too); the square u0→v0→u1→v1 has holonomy θ(u0v0) − θ(u1v0) + θ(u1v1) − θ(u0v1); energy Σ θ̇²/2 + κ Σ (1 − cos φ) (unit inertia per link; with κ = 1 the waves travel at most one link per tick, a choice); charge by Gauss's law; Monte Carlo with the Wilson weight exp(β Σ cos φ), single-link Metropolis, detailed balance in the docstring. Checked (tests/test_u1.py): squares against networkx and cqg_d.total_squares; gauge invariance; charges on closed graphs add to zero, real and mod 3; the linear-wave spectrum on flat tori in two and three directions (polarisations d − 1; gauge and holonomy zero modes); energy conservation; local update against full recomputation; same-seed reproducibility. Gate U1 against the exact two-direction torus answer (character expansion, ours, textbook to verify). Not in this piece: the field on a graph whose wiring switches, twist labels, any coupling to the curling cost. Sourced: Wilson, PRD 10, 2445 (1974) and Kogut, RMP 51, 659 (1979), both not read (general knowledge). Ours: the orientation by kind, squares as every 4-cycle, the inertia. *Addendum, 24 October:* with links oriented by kind, neighbouring squares are walked in opposite senses, so the torus's one constraint is on the holonomies summed with alternating signs (`Field.square_signs`), not on their plain sum as first written (the exact answer is unchanged, cos being even). Gate U1 failed at β = 8 by freezing in the zero-winding sector (TASKS, its reading); an optional winding move (`Field.instanton`) is built and tested. Gate U1′ (the move on) failed the same day by one point, 10 × 10 at β = 8, 3.65 errors against 3.5 (TASKS, its reading); nothing from Q29 is read yet. | VISION Update 96; [Wil74]; [Kog79] | Ours |
+| Q29 | **A phase on every link of the toy's graph: the published lattice photon (compact U(1) lattice gauge theory).** (2026-10-24; VISION Update 96; `graphity.u1`; brief `docs/design/particle_handoff_brief_2026-10-24.md`.) Each link carries a phase θ in the direction from its point of kind 0 to its point of kind 1; the loops are the toy's squares (every 4-cycle, so the ring round a curled direction of side 4 counts too); the square u0→v0→u1→v1 has holonomy θ(u0v0) − θ(u1v0) + θ(u1v1) − θ(u0v1); energy Σ θ̇²/2 + κ Σ (1 − cos φ) (unit inertia per link; with κ = 1 the waves travel at most one link per tick, a choice); charge by Gauss's law; Monte Carlo with the Wilson weight exp(β Σ cos φ), single-link Metropolis, detailed balance in the docstring. Checked (tests/test_u1.py): squares against networkx and cqg_d.total_squares; gauge invariance; charges on closed graphs add to zero, real and mod 3; the linear-wave spectrum on flat tori in two and three directions (polarisations d − 1; gauge and holonomy zero modes); energy conservation; local update against full recomputation; same-seed reproducibility. Gate U1 against the exact two-direction torus answer (character expansion; *sourced 24 October*: [AHRR21] Eq. 7 term for
+  term and [GKM15] Eq. 23, read by an assistant agent, docs/reading/notes/2026-10-24_wilson_kogut_lattice_gauge.md; not covered there: a graph with a
+  side-4 ring). Not in this piece: the field on a graph whose wiring switches, twist labels, any coupling to the curling cost. Sourced: Wilson, PRD 10, 2445 (1974) and Kogut, RMP 51, 659 (1979), both not read (general knowledge). Ours: the orientation by kind, squares as every 4-cycle, the inertia. *Addendum, 24 October:* with links oriented by kind, neighbouring squares are walked in opposite senses, so the torus's one constraint is on the holonomies summed with alternating signs (`Field.square_signs`), not on their plain sum as first written (the exact answer is unchanged, cos being even). Gate U1 failed at β = 8 by freezing in the zero-winding sector (TASKS, its reading); an optional winding move (`Field.instanton`) is built and tested. Gate U1′ (the move on) failed the same day by one point, 10 × 10 at β = 8, 3.65 errors against 3.5 (TASKS, its reading). Gate U1″ (four times the sweeps, same acceptance) passed the same day; results from Q29 with the winding move may be read from here, with the caveat that eight of U1″'s ten points read
+high (about 2.6 errors combined), to be rechecked in the first run read; and the zero of a square's energy is not
+fixed (Update 102). | VISION Update 96; [Wil74]; [Kog79] | Ours |
 
 ### First look (2026-09-19, `configs/cqg_first_look.json`; one replica, short runs, NOT publication quality)
 
@@ -4322,3 +4326,349 @@ author and should be disclosed as such in any submission. Physics estimates mark
     tori; nothing about λ ≠ 1 for the comparison between tori (the reachable set at λ ≠ 1 was not enumerated); and not
     the full ground state at λ = 1, since the other flat wrappings (O119), gases of 4-cubes and mixtures are not
     counted, so it is not the equilibrium answer to which torus the network sits in.
+- **O151 EXACT: ~~light~~ the field along a curled direction of side 4 gains a mass; light keeps its speed (24 October 2026; heading and scoring corrected the same night, below).** The owner's prediction, given first, verbatim:
+  "Light moves same speed through curved space but bounces or slows through matter ie curled space with charge or
+  spin". Computed minutes after it, before anything was committed (the order is the conversation's; this entry is the
+  first record). Code: `graphity.u1` (Q29, Gate U1″ passed); test:
+  `tests/test_u1.py::test_light_polarised_along_a_curl_of_side_four_is_massive`; the Bloch spectra of the look
+  `sandbox/light_in_curled_space.py` (output `sandbox/out/light_in_curled_space_2026-10-24.txt`) agree.
+  - **Result (exact, tested).** On a torus with one direction of side 4 the ring round that direction is a 4-cycle, so
+    the field counts it as a square and pays for its holonomy. A transverse wave travelling along an open direction
+    then has two different polarisations: field lying in the open directions keeps ω² = 4 sin²(k/2), the flat-space
+    light exactly; field pointing along the curl has ω² = 4 + 4 sin²(k/2), a mass of 2 in lattice units (κ = 1, unit
+    inertia), so it is slower than light at every k and cannot travel at all below ω = 2. Sides 6 and 8 give no mass:
+    6 × 8 × 8 has the same dispersion relation as 8 × 8 × 8 (not the same spectrum: the sizes differ) *(corrected 24 October after the Codex audit, O154)*. Exact consequence (standard wave physics, ours): light of that
+    polarisation below ω = 2 arriving from flat space at a curled region cannot enter it and is reflected.
+  - ~~**Her prediction, scored.** "Same speed through curved space" holds for the polarisation lying in the open
+    directions and fails for the one along the curl; "bounces or slows" happens in the toy without charge or spin, from
+    the curl alone, for that polarisation. A kill of the clause "only matter slows light" for curls of side 4 in this
+    toy; nothing here supports the rest.~~
+  - **Corrected the same night, after a fresh red-team reader and a checking agent (the assistant's error).** Seen from
+    the open directions, the field component pointing along a curl is not a polarisation of light: it is a separate
+    field with no direction in the open space (in Kaluza and Klein's language the Wilson-line scalar, A₅). Light is the
+    field lying in the open directions, and it keeps exactly the flat-space speed. **So her prediction, "Light moves
+    same speed through curved space", holds** for light in a curl of side 4; what gains a mass is the Wilson-line
+    scalar, and only because the toy counts the ring round a side-4 curl as a square. Her clause "bounces or slows
+    through matter" is untested (no matter object is built). Nothing here supports her picture; it fails to kill one
+    part of it. The words "slower than light" and "light of that polarisation ... is reflected" above are to be read as
+    "the scalar".
+  - **Generalised (exact, `sandbox/u1_curl_mass_general.py`, checked by an independent rebuild; promoted by tests):**
+    the linear-wave matrix is M(k) = |K|²I − KKᵀ + 4 Σₐ δ(kₐ, 0) eₐeₐᵀ over the side-4 axes a, with Kμ = 2 sin(kμ/2).
+    Along open directions, light has D_open − 1 polarisations, all massless; each side-4 axis gives one Wilson-line
+    scalar with ω² = 4 + |K|². So a strip (4 × L), a rod (4 × 4 × L) and the fully curled 4-cube and 6-cube carry no
+    light along their length at all. Zero modes: (N − 1) gauge plus (D − number of side-4 axes) holonomies. The ring
+    pins the Wilson line round the curl to one value (the fields with uniform A = 2πn/4 along the curl are gauge copies
+    of zero); a caveat first written that it leaves four vacua was wrong. The mass sits at the lattice cutoff
+    (m² = 4κ), the size of the highest Kaluza-Klein level on a circle of four.
+  - **Prior work (rule 15; `docs/reading/notes/2026-10-24_prior_work_u1_curl_mass.md`): PARTLY FOUND.** Every
+    ingredient is published (gauge theory on general graphs as a sum of loops, Filk; tree-level plaquettes filling
+    non-contractible cycles give the matching link scalars a mass, Gregoire and Wacker in theory space); the
+    combination on the toy's graphs was not found, and no gauge field on combinatorial-quantum-gravity graphs was found.
+  - **What it rests on.** The toy's rule that every 4-cycle is a square (Q29, ours): a curl of side 4 is the only
+    curl the toy has, and it is the ring round it that carries the mass. *General knowledge, to verify:* in
+    Kaluza and Klein's treatment the field component along a small direction becomes a massless scalar in the large
+    directions, not a massive one; the mass here comes from the toy charging the ring itself. A curl that is not a
+    square (side 6 or more) behaves as flat space for light.
+  - **Not shown.** The reflection at a real boundary between curled and flat regions (no lattice torus has both; the
+    burp's half-opened end states do); anything with twist labels, which are defined (Update 97) and not built.
+- **O152 RED TEAM (rule 12): is anything on particles publishable? (24 October 2026).** A fresh reader in a workflow
+  of the assistant session (same model; no history; read-only; given the files, not the conclusions), with two
+  prior-work searches and two checking agents beside it. Its verdict: nothing on particles in the repository can
+  honestly be published as a short paper today.
+  - **What it found.** (1) O151 was mislabelled by the assistant: the field component along a curl is the Wilson-line
+    scalar seen from the open directions, not light, which keeps its speed; corrected in O151 the same night, and her
+    prediction "same speed through curved space" holds. Its mass comes from the toy counting the length-4 ring as a
+    plaquette, a tree-level Polyakov-loop term at the cutoff (prior work: PARTLY FOUND,
+    `docs/reading/notes/2026-10-24_prior_work_u1_curl_mass.md`). (2) The signed-thirds counting adds nothing to the
+    quark model: the two quark charges are fitted, and 3Q + t ≡ 0 mod 3 holds for every assignment reproducing the
+    Standard Model's charges; since her answer that a closed full twist is neutral, the electron's charge has no
+    reason to equal three quark thirds, which makes it weaker than [BT05]. Handedness as matter against antimatter
+    mixes P with C. (3) Thirds and halves as the cube's three-fold and two-fold axes are textbook, applied
+    selectively (by the same logic edges would carry quarters, yet light lives there as U(1)), and defined only on the
+    ideal lattice, not on the switching graph, which keeps no embedding. (4) Solid: paper 2's stuck knots set by seeds,
+    framed as defect formation; and the exact no-go list (spin one half, excess, long-range force, odd body-diagonal
+    rings). (5) The one route to a publishable result: the U(1) field on the dynamical graph with a pre-registered
+    effect on the toy's own measured quantities, held-out size, prior-work note.
+  - **What it got wrong or overstated (checked).** The generalisation agent's caveat that the ring leaves four vacua
+    (Z4) was wrong (the uniform fields 2πn/4 along the curl are gauge copies of zero; one vacuum), caught by the
+    checking agent, not by the red-team reader. One search's NOT FOUND was too strong (it missed Gregoire and Wacker's
+    theory-space plaquettes); corrected to PARTLY FOUND. The red-team reader's point (3) about edges carrying quarters
+    is a fair challenge, not a contradiction: light is a U(1) phase, whose turns are continuous, not a count of
+    quarters; whether the strands' counts must follow the axes at all is the owner's to say.
+  - **What follows.** Particle work is not written up; the brief's section 7 lists the owner's open choices and the
+    route above, which needs a design brief and her decision under S1.
+- **O153 AUDIT (rules 12 and 22): the record of 24 October (24 October 2026).** A fresh reader (a new session of the
+  same model in a workflow of the assistant session; no history; read-only; given the files and a list of what to look
+  for, not the conclusions), then a second fresh reader who checked each finding at its cited place. The second reader
+  confirmed every finding and added none of substance. Corrections listed in VISION Update 102 and made in place.
+  - **What it found.** The sign of the light field's effect on curling depends on an undeclared constant per square
+    (the most serious; the answer given to the owner was overstated); β misread as light's density; a factor of four;
+    a sandbox look presented as exact; her handoff idea 3 reversed without saying so, and a dropped minus sign; a
+    self-contradiction between whole twists and half-twist dark strands; two neutron answers split across files; stale
+    lines in four files; her question recorded as her prediction; two of our readings stated as hers; two missing
+    checks (the down quark called an antiquark; a photon flip breaking charge conservation) and one unfaced consequence
+    (electron = three down thirds under the rule); unmarked general knowledge; a general instruction taken as her word
+    for a gate rerun; a reversed sentence about wave speeds; five ideas of hers dropped.
+  - **What it did not find, and what it got wrong.** Nothing it reported was refuted. Its checks on arithmetic held
+    (ring counts, angles, Bessel values, gate tables, 29 of 29 tests). It did not re-run the boundary look or the exact
+    free energy (they were checked separately by two other agents, who found both scripts missing from disk; they were
+    restored from transcripts and reproduce their outputs exactly).
+  - **The independent pass still owed:** a different model (Codex) on the same day, briefed blind to this one
+    (`docs/reviews/2026-10-24_codex_audit_brief.md`, pinned to commit 39466620).
+- **O154 AUDIT (rule 12, a different model): Codex on the record of 24 October (24 October 2026).** The report is kept as
+  received at `docs/reviews/2026-10-24_codex_report.md`; briefed by `docs/reviews/2026-10-24_codex_audit_brief.md`,
+  pinned to commit 39466620, blind to the in-session audit (O153). The reviewer could not clone the repository, so it
+  did not run the repository's tests or scripts; it rebuilt the graphs, incidence matrices, character sums, the side-4
+  Bloch spectrum and a winding diagnostic in its own code, and read the rest from source and saved results.
+  - **What it found that O153 also found (two blind audits agreeing):** the stale "bound half-curl" line in the
+    questions file; the boundary reading credited to the owner; the first sandbox look on the field's free energy
+    promoted to a strong statement; the U1″ pass as conditional, with the eight-of-ten lean worth following up; the
+    particle definitions as assigned labels, not derived (charge, spin, statistics, confinement, C against P).
+  - **What it found that O153 did not:** (1) the winding move's docstring said it changes the winding by exactly one;
+    on random fields it does so only about a third of the time (183 and 187 of 500 on 6 × 6 and 10 × 10), though the
+    proposal stays symmetric and detailed-balanced; docstring corrected. (2) "Every correction term is positive, so the
+    leading order underestimates the effect", said to the owner in chat, does not follow: each graph's corrections are
+    positive, but the sign of the tube-minus-sheet difference needs its own proof. The exact calculation (Update 102)
+    does show the tube's corrections larger at every β tried, under the Wilson weight, so the conclusion held there,
+    but the argument given for it was invalid. (3) O151's "the same spectrum" for 6 × 8 × 8 and 8 × 8 × 8 should be
+    "the same dispersion relation"; corrected. (4) The 531,441-label census ran on a 2 × 3 grid that is not one of the
+    toy's valid graphs (a side of 2 doubles links, a side of 3 is not bipartite); its result is a general counting
+    identity (the rank of the incidence matrix over thirds on a connected graph), not a statement about the toy. (5)
+    Landauer's bound cannot select one photon; "ln 3 leaves as one photon" is her idea, and the bound only says a
+    photon could carry enough. (6) The neutron line "can be" was firmed into a definition; returned to her. (7) Two
+    missing works, Renken, Catterall and Kogut (1994) and Levin and Wen (2006), and two author corrections; added to
+    the prior-work note and the bibliography. (8) Framing for the gate and for the free energy: "passed on the third,
+    longer test; independent reliability remains to be assessed"; and "integrating out the compact U(1) field favours
+    graphs with more counted squares at leading order" in place of "light lowers the curling cost".
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. Its limits, stated by
+    itself: no execution of the repository's own code; its snapshot predates the in-session corrections, so its points
+    on stale lines were already fixed at commit ccb4c4ec; it did not see the zero-of-energy sign problem (O153's
+    largest finding), since that rests on Q29's two forms of the energy rather than on the algebra it checked, which it
+    confirmed correct under the Wilson weight.
+- **O155 AUDIT (rule 22): the record of 25 October (25 October 2026).** A fresh reader (a new session of the same model,
+  no history, read-only; given the files and a list of what to look for, not the conclusions) audited VISION Updates 104
+  to 111, the notebook entries of the day, the questions file, the four sandbox scripts (re-run) and the timescape note.
+  Corrections listed in VISION Update 112 and made in place.
+  - **What it found.** The cube's kind swap holds only about a cube's centre (confirmed by the assistant on every point of
+    a 5 x 5 x 5 block: about a lattice point the 60-degree turn with mirror, its square and its cube all keep the kinds);
+    her curvature sign dropped then re-asked; Bödeker and Moore's 2009 and 2017 results merged and the analogy's direction
+    reversed; the curvature look's +21 a size effect; a continuum look promoted to settled fact; an interpretation
+    labelled exact; the shell's charge against Update 104's neutrality objection, and Cohen, Kaplan and Nelson stretched
+    to the hold-back; the light-under-the-rule statement's range unstated; H3 contradicting Update 109; a sign confirmed in
+    one place and asked in another; small dating, pairing and labelling items; an assistant conclusion listed among her
+    answers.
+  - **What it checked and found correct.** Curl minus uncurl = 4(S - N); S = 3N at six links; 12 squares per point; the
+    combinatorial Gauss-Bonnet bound (it needs a cellular embedding, now to be stated); the front-push closed form and
+    sign; the cube facts about the centre; the Hubble arithmetic; spin addition; the N = 18 reach; the 519/80/1 count; her
+    quotes verbatim apart from the dropped sign.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. It did not open the N = 16
+    listing, check the timescape quotes against PDFs, or check the general-knowledge sources.
+  - **The independent pass still owed:** a different model (Codex), if the owner wants one.
+- **O156 AUDIT (rule 12, a different model): Codex on the record of 25 October (25 October 2026).** Brief
+  `docs/reviews/2026-10-25_codex_audit_brief.md`, pinned to commit 247da44e and blind to O155; report
+  `docs/reviews/2026-10-25_codex_report.md`, pasted in by the owner. It could not clone the repository (network), read
+  files at the pinned commit, and rebuilt the computations independently. Corrections in VISION Update 117.
+  - **What it found that O155 had not.** (a) **The growth step is impossible as written** (exact; checked by the
+    assistant): a four-link graph with two kinds has |B| = |W|, so points come in pairs; "a flat cell adds one point and
+    one square" is withdrawn. (b) **The backed-up "light" is the Wilson-line scalar** (checked: `sandbox/LOG.md`, 24
+    October, corrects O151; Update 109 then used it as light). (c) Zero energy at each N is not zero-cost growth (the
+    count of arrangements changes). (d) In the capped family the hard rule forces X = 0, so H = 0 for every allowed
+    state. (e) The field's normalisation fork cancels exactly at every β under the hard rule (checked: the weights
+    differ by e^(−β) a square, a factor e^(−βN) common to every arrangement), sharper than "leading order". (f) The
+    Higgs sentence (charge is not caused by mass; Q = T₃ + Y precedes the settling); the Delta decay needs Δ⁺ and is
+    rare; the weak force's neutral part couples to right-handed charged fermions; Vilenkin's paper is 1978; the
+    separation of neutrinos is not leptogenesis. (g) The record's ledgers (charge, baryon, lepton, handedness) switch
+    within the sorter; a pull across a boundary nothing passes through has no coupling; stacked amplitudes are not
+    summed curvatures; "Proceed" was read as acceptance of each component. (h) The global rule does not require a
+    local shell (O155 had corrected the "exact" label; Codex adds that the layer is a new locality rule). (i) Ten works
+    missing from the day's reading (listed in Update 117).
+  - **What it found that O155 also found.** The cube's kind swap depends on the centre; Bödeker and Moore merged;
+    Gauss-Bonnet needs an embedding; Birkhoff overextended; the curvature sign unresolved; "LIGO's signals are not
+    burps" listed among her answers (already moved by O155 when the report arrived); H3 against Update 109; Cohen,
+    Kaplan and Nelson stretched.
+  - **What it checked and found correct.** Curl minus uncurl = 4(S − N) and S = 3N at six links; the N = 18 reach (26
+    classes, 9 allowed, X = 0, 0, 0, 2, 4, 4, 6, 8, 9, one connected piece), rebuilt independently; the cube table; the
+    front-push closed form and values; the Hubble arithmetic; the particle checks (pair creation needs a recoil; two
+    photons from annihilation at rest; Δ⁻ = ddd; muon and tau charge; the 21-cm line).
+  - **What it got wrong or could not do.** (1) Its finding 13 (cooling dependence is not a size effect) answers a claim
+    the record did not make: Update 108 said the mean falls with slower cooling, and O155 had already said the fall is
+    at one size. (2) Its reading list names "Stephen Coleman (1977)"; it is Sidney Coleman. (3) It could not rerun the
+    curvature-sign look (the T51 archives were not available to it), so the 519/80/1 count rests on O155's rerun. (4)
+    Its paper-specific numbers for timescape and the Delta's rate are its own recall, to verify. Nothing else it
+    reported was found wrong on checking.
+- **O157 AUDIT (rule 22): the later record of 25 October (25 October 2026).** A fresh reader (a new session of the same
+  model, no history, read-only; given the files and a list of what to look for, not the conclusions) audited VISION
+  Updates 113 to 120, the notebook entries from "Does handed behave like electric" on, the read-backs, predictions sheet
+  section 7, PREREGISTRATION T82 with its analyzer, the twin code and tests, and the three sandbox looks (two rerun).
+  Corrections in VISION Update 121.
+  - **What it found.** (1) The twin gate as built (one opening's release to one twin, the other drawn from the stores)
+    did not match the words she answered ("two layers open together"); the words were ours and wrong, since the curl
+    gives one curling cost per opening; T82 held until she answers. (2) T82 overstated her agreement: she agreed to
+    words, the thresholds are ours, and the first-birth window and period band were written after a scratch run; the
+    assistant then found the scratch ratio had been misreported (2.4; it is 2.27). (3) The switch-influence reading
+    JUMPS does not follow (frozen or melted, one chain sweep holding hundreds of switches): withdrawn, no test. (4)
+    Update 118's "direction" was a fill-in, two of her points dropped, the heading unmarked. (5) Update 113 overstated a
+    long-range handed force in the hot plasma. (6) Update 119 recorded her caveat as ours. (7) Lieb-Robinson's scope;
+    the twins reopen RB3. (8) A test that could not fail; the analyzer did not score; a contraction release unaddressed.
+    (9) A duplicated output line.
+  - **What it checked and found correct.** Energy is conserved under twins and the gate guarantees the second twin can
+    be paid; 4a/r from a two-layer pool; the runner's string settings; T71's comparators from its results files; both
+    sandbox looks rerun identically (407,371 insertions, none flat; the soft-front numbers); the kink tension; CP against
+    CPT, the weak force's reach, Coleman's wall tension, the vibrated-rod and causal-set citations; her quotes in Updates
+    113 to 117 and 119 to 120; the Wilson-line scalar not used as light again.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. It did not rerun the
+    switch-influence look, could not know whether the owner had seen the scratch run (she had not), and did not check
+    Boyle, Finn and Turok, Vilenkin or the Codex report itself. Not done from its list: a test that the second twin is
+    drawn from the pool beside the cut rather than elsewhere (the split renumbers points, so it needs the layer code's
+    index map); the replacement test checks instead that the stores paid exactly the refolds and the second twins.
+- **O158 AUDIT (rule 12, a different model): Codex on the later record of 25 October (26 October 2026).** Brief
+  `docs/reviews/2026-10-25b_codex_audit_brief.md`, pinned to commit f0802dfa and blind to O157 and Update 121; report
+  `docs/reviews/2026-10-25b_codex_report.md`, pasted in by the owner on 26 October. It could not clone the repository
+  (network), read the files at the pinned commit, ran none of the repository's code, and made its own scratch checks.
+  Its commit comes before Updates 122 to 125, so it did not know that T82 had been withdrawn before any run (Update 123)
+  or that RB3 had been decided. Corrections in VISION Update 126.
+  - **What it found that O157 had not.** (a) **Two reader defects, in T71's reader as well as T82's** (checked:
+    `scripts/analyse_t71.py` shares both). CYCLES counts the refolds from the first split to the end of the file, not
+    between births; and the energy per daughter is a running average over a replica's births, which can hide short
+    ones. *Exact, read from T71's files (384 replicas in the six daughter-ledger files):* every CYCLES replica has a
+    refold between each pair of consecutive births, and every birth adds exactly one daughter, so no T71 word changes.
+    In the ten cells scored at exactly a N_slab per daughter, every single birth is exactly a N_slab. In the two cells
+    where a clean switch fired (λ = 1.10, r = 1/16), the medians 0.99 and 0.89 hide a spread: 390 of 5,132 births at
+    L = 8 and 1,066 of 4,604 at L = 12 fall below 0.99 a N_slab, the shortest 0.094 and 0.069. O144 scored those cells
+    as failing the one-a-N_slab prediction, and that stands; the per-birth numbers are added here. (b) **The
+    affordability guard** `pool + 1e-12 >= bill` (`graphity.layer_feed`) lets a pool up to 1e-12 short pay, leaving a
+    store slightly negative (exact from the code; Codex's example leaves -5e-13). It applies in every release mode, so
+    to T71 and T74 too. Checked on T71's files: no logged store total is below zero. Not fixed yet: the module runs the
+    registered held-out stages of T71 and T74, so the fix waits until they are read, and comes with a test. (c) **Moves
+    that release nothing are gated and counted as splits** (exact from the code): a flat slab widening from 6 to 8 at
+    μ_n = 0 changes no energy, waits for the gate, and counts as a split with no daughter; and with μ_n > 2a a contraction
+    from 6 to 4 would be downhill and counted as a birth. No registered config sets μ_n (checked). T71's split counts
+    therefore include widenings that release nothing; its births come from the daughter ledger, which these do not
+    touch. (d) **"Energy is conserved exactly"** (the module's docstring) describes an accounting identity of a chosen
+    ledger, held to 1e-9 in the tests. It is not physical energy conservation between universes. (e) **T82's reader
+    had further gaps**: no check that 16 complete replicas exist; no check that each birth adds two; ONE BIRTH for any
+    run that does not cycle; P3 unscored, not failed, when the baseline is missing; P4 counts replicas, not moves; and
+    "more short twins" is a frequency that a median of averages cannot score. Moot, since T82 was withdrawn before any
+    run; a twin cell registered again needs a reader built on the sequence of individual births. (f) **Update 113**:
+    "with spin-one carriers opposite charges attract" holds for static charges of a force like electromagnetism, not for
+    the weak force. Corrected in place. (g) **Updates 118 and 120 ran CP, CPT and Boyle, Finn and Turok together.** An
+    antimatter-rich twin obeys the same laws as a matter-rich one (a different state, not different laws), so claim
+    step 7 is not threatened; CP violation only makes the two histories not exact mirrors. CPT symmetry of the laws
+    does not make the anti-twin a time-reversed copy, and BFT's two branches lie before and after one Big Bang, not
+    side by side from one black hole. Corrected in place. (h) **The pair-insertion look's scope** (Update 118, RB5):
+    two new points joined to the ends of three or four cut links within four steps of one point; no other rewiring, no
+    larger region. It rules out minimal rewiring only. Marked in place. (i) **Nine works missing from the
+    bibliography**: Boyle, Finn and Turok 2018; Farhi and Guth 1987; Farhi, Guth and Guven 1990; Popławski 2010;
+    Rideout and Sorkin 1999; Ambjørn, Jurkiewicz and Loll 2004; Kibble 1976; Callan and Coleman 1977; Lieb and Robinson
+    1972. All are now in `REFERENCES.bib`, unread, with details checked against Crossref.
+  - **What it found that O157 also found.** The twin gate as built did not match her words (O157 (1)); T82's numbers
+    were ours, two written after a scratch run (O157 (2)); JUMPS does not follow (it agrees with the withdrawal);
+    "direction" was our fill-in; Lieb-Robinson's scope; the tests established less than their descriptions said
+    (O157 (8)).
+  - **What it checked and found correct.** The twin ledger's algebra (F + stores + daughters fixed, the second twin
+    drawn once); 4a/r as the lower bound on the first wait; the insertion count, 407,371 = 32,216 joined + 375,155 not
+    joined, rebuilt independently; the field's resting widths, 7 at L = 24 and 13 to 15 at L = 48; the kink's width
+    and tension formulas; T71's same cell as the right comparator for T82.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. Four of its points were
+    already in the record: the timescape reversal (walls flat and slow, voids curved and fast; Update 106, "unless her
+    flat means empty"); RB1 as an alternation and not the curvature sign, and RB2 as needing faces and an Euler number
+    (Update 118); her caveat on the surplus marked as our reading, and OPENS then BREAKS kept in order (Updates 115,
+    116); and her two degrees of freedom, which the record gives as she said them, g and twist-curl first and curl and
+    twist after (Updates 118, 119). Two were out of date at the current commit: T82 is withdrawn and RB3 is decided (the
+    spin sorts a dipole's direction, each twin neutral; Update 123). It ran no repository code, so its test-coverage
+    findings come from reading.
+- **O159 AUDIT (rule 12, a different model): Codex on the record of 25 to 26 October (26 October 2026).** Brief
+  `docs/reviews/2026-10-26_codex_audit_brief.md`, pinned to 29afa5c9; report `docs/reviews/2026-10-26_codex_report.md`,
+  pasted in by the owner the same day. It read the pinned commit in a detached worktree, ran the exact looks and four
+  test files (71 passed), read the bath and push looks' saved outputs instead of re-running them, and wrote its own
+  findings before reading O157, O158 or the earlier reports. Corrections in place in VISION Updates 124, 125, 127 and
+  128, marked "O159"; summary in Update 129.
+  - **What it found, rechecked here** (each by a run of this session; `sandbox/hard_rule_pairs_look.py` as corrected,
+    and a scratch script for the rest).
+    (a) **The pair search's undo exclusion was wrong (F21).** `second_moves` excluded the undo only in the form
+    (u1, v2, u2, v1); the same undo written from the other side, (v2, u1, v1, u2), was not excluded, and every one of
+    the 3,514 "restoring pairs" was it. Corrected (both forms excluded) and rerun: 0 restoring pairs at radius 1 and
+    at radius 2. The script now also compares edge sets, which the LOG's "(checked by edge set)" named and the committed
+    script did not do (that check was a scratch script). Update 128's bottom line stands in a stronger form.
+    (b) **Update 128's damaged-state counts came from an uncommitted scratch script and were each counted twice (F22).**
+    A switch written from side 0 is the same switch written from side 1. Now committed
+    (`hard_rule_pairs_look.py damaged <end state>`), counted once: untied λ = 1.40, E = 512, replica 0 (curl 202,
+    anticurl 206): 42 of 274,248 legal switches keep the count; pair tie λ = 1.40, E = 512, replica 2 (185 / 205): 57 of
+    272,560; pair tie λ = 1.25, E = 512, replica 0 (493 / 61): 14 of 282,861. Codex had the first and third.
+    (c) **The rod's wall under the pair tie is a break (F5).** The cheapest switch from point 0, 28.0 at λ = 1.25 and
+    25.6 at 1.40 (24 switches), leaves the census d1 / d2 / d3 / broken = 272 / 12 / 0 / 4, the end state of 17 push
+    replicas; the cheapest clean opening, 276 / 8 / 4 / 0, costs 32.0 at both λ (12 switches).
+    (d) **Update 127's anticurl shares (F15, F16, F17).** Over the 95 end states with a broken point and anticurl, the
+    share of anticurl on links touching a broken point is below 0.85 in 16, minimum 0.27; four states (pair tie,
+    λ = 1.20, E = 64 and 128) carry anticurl of 8 to 16 with no broken point. The links within one link of a broken
+    point are 63 to 99 % of all links in the runs that broke, so "beside the broken points" has almost no contrast;
+    the curl's share there over the links' share is 0.90 to 1.01 untied at λ = 1.40, 0.69 to 0.96 untied at 1.25, 0.42
+    to 0.94 tied (Codex's untied 1.40 range, 0.95 to 1.01, used a slightly different cut; same reading). The runs that
+    moved least end at curl minus anticurl 552, not 200 to 430.
+    (e) **The bath look's one BREAKS state lies below the rod (F7):** 3.05 a point with the tie counted against 3.20
+    (the CSV's `h_per_vertex` column leaves the tie out). Under the pair tie at λ = 1.40 the rod is unstable toward
+    breaking in a warm bath, only slow.
+    (f) **The slab's pair-tie series at λ = 1.40 is FIXED WALL** by the script's own word (26, 26, 0, ...), not a
+    critical patch (F6). And at N = 18 in two dimensions the rule-keeping classes are joined by count-keeping single
+    switches (`sandbox/out/zero_total_rule_reach_n18.txt`), so "frozen" belongs to the large flat torus, not to the rule
+    (F23).
+  - **What it found by reading, accepted.** (g) Her answer of 25 October (T1e) was a conditional, "If each curled
+    direction carries its own curling cost yes…"; Update 124 had it as an affirmation (F6 of the summary; F25). (h) The
+    pair tie releases nothing at the first opening and 2a at the second, so "half each" is a split by fiat (F3); the gas
+    of 6-cubes costs 3a under it (F2); a slab that was never a rod now costs 2a (F2). (i) Every rod look ran on a state
+    her hard rule forbids, and under the rule the energy of curling is 4λ a unit (F19, F37). (j) The soft form does not
+    allow excursions of any length; it prices them by roughly the square of their depth (F24). (k) Tied and untied
+    push cells differ in seed by 1,000, and under the tie the follow-on is the tie's energy acting (F11); "one push"
+    is one point's store, spent only by that point (F13). (l) Update 127's "soft space's waves" was our fill-in, and the
+    answer was about a field the push look does not run (F28). (m) The bath seed collision (F12), no consequence.
+    (n) The push look keys its skip-if-done on the file name only, so a smoke run could have replaced a full cell; it
+    did not (F10).
+  - **Her "proceed" (F27).** The sentence she answered, from the assistant's reply of 26 October: "Pricing broken
+    points (option 2) would penalize the very anticurl your rule says belongs there. I'd instead build the hard rule for
+    six links first, build a rod that carries anticurl equal to its curl from the start, and give that one the push.
+    Your call, and the shape of that starting X would be yours to describe." The hard-rule looks are an exact check
+    before that build, and the shape of the starting X is still hers to describe.
+  - **On O158 (F30, F31, F33).** Two details added, Codex's readings, not rechecked here: its recount of T71 finds 16
+    more births in each clean-switch cell (5,148 and 4,620; one per replica, probably the first logged row, which our
+    scratch script skipped), with the same shortfall counts; and some births exceed one curling cost (1.25 at L = 8).
+    O158 left out the second Codex report's remark that `tests/test_layer_feed.py:93` checks a seed-dependent property
+    as if universal. When T71's and T74's held-out stages are read, the record names the commit they ran (TASKS, 6
+    October section, item 5, the hash in `.meta.json`, is still owed).
+  - **What it checked and found correct.** The pair tie's arithmetic; every wall and patch energy, to the digit; the
+    bath and push readings against their files, every cell complete, drift at most 6.8e-13; the words declared before
+    the runs; the identity H = 4 anticurl + 4(λ − 1) curl; the single-switch counts and vertex-transitivity on both
+    sides; the in-place corrections of O158; the nine bibliography entries; the physics from memory, with one caution
+    added: the Casimir force has a derivation that does not use vacuum energy (Jaffe 2005, to verify), so it is weaker
+    evidence for fleeting pairs than the Lamb shift.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. One range differs slightly
+    from ours by the cut used ((d)). It did not run the bath or push looks (it read their outputs), did not reach
+    Crossref, and did not run the 185 / 205 damaged state.
+  - **Published work it names, to read** (none read; all "to verify"): Kawasaki 1966 and kinetically constrained models
+    (Fredrickson and Andersen 1984; Ritort and Sollich 2003) for moves that keep a global count, where ordered regions
+    freeze and only defects move; exponential random graphs with a fixed subgraph count (Strauss 1986; Park and Newman
+    2004; Chatterjee and Diaconis 2013), known to degenerate into very ordered or very disordered graphs; disclinations
+    and dislocations (Kosterlitz and Thouless 1973; Halperin and Nelson 1978; Young 1979; Nelson 2002; Bowick and Giomi
+    2009; Seung and Nelson 1988), where on a torus positive and negative defects must balance, the closest published
+    form of her "curl and anticurl always come in pairs" (O156's caution applies: the toy has no surface); universes
+    from black holes (Frolov, Markov and Mukhanov 1989, 1990; Easson and Brandenberger 2001; Smolin 1992; Pathria 1972);
+    Sakharov 1967 and Cohen, De Rújula and Glashow 1998 on matter and antimatter; lattice monopoles (DeGrand and
+    Toussaint 1980; Banks, Myerson and Kogut 1977; Polyakov 1975; Guth 1980). Added to `REFERENCES.bib` only after a
+    Crossref check (TASKS).
+- **O160 T71 AT THE HELD-OUT SIZE L = 16: AS PREDICTED (26 October 2026); T74's held-out stage launched.** The nine L = 16
+  jobs of T71 Amendment 4 (queued 25 October) were fetched and accepted on 26 October and scored by
+  `scripts/t71_heldout_score.py` against `configs/t71_heldout_prediction.csv`, written from L = 8 and 12 alone (rule 14).
+  All 152 scored rows hold; 18 cells, 16 replicas each. In the one cell where size can matter (the model arm, λ = 1.10,
+  r = 1/16), rule D's three numbers lie inside their ranges (energy per daughter 0.912 a N_slab, daughters 307.5, slab
+  share 0.312), with 37 clean moves (written 4 to 50.4, reported). Her one-a-N_slab-per-daughter prediction and our two
+  fail again in that cell and nowhere else, as the amendment said. Reading in PREREGISTRATION T71, after Amendment 4.
+  *What it shows (ours):* the slab cycles under the layer form at three sizes with the numbers fixed in advance; in 17
+  cells that is the kernel's arithmetic at a third size, and in the clean-move cell the effect did not grow with the
+  slab within what two sizes allowed. It tests a shared expectation; it cannot separate her picture from ours.
+  - **T74's held-out stage, registered and launched the same day** (PREREGISTRATION T74, Amendment 6): the numbers
+    drafted on 23 October from L = 8 and 12 alone, rerun with identical output; 54 jobs. Two checks before launch: the
+    code T74 runs is stage 1's (a stage-1 replica rerun from its config reproduced its 2,482 rows in every column), and
+    a cell of 16 replicas takes about 67 minutes on the laptop against Batch's 24-hour ceiling.
+  - **A correction to the record of 25 October:** Update 115 read her "Confirm" as covering the T74 go-ahead; on the
+    predictions sheet the go-ahead line was left blank. Her explicit go-ahead is of 26 October ("Yes please"); the
+    questions file had also kept item 16 open after she answered it. Both corrected.
+

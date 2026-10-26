@@ -7725,6 +7725,409 @@ everywhere and in the model arm in four of six λ, r settings; fails in the two 
 of rule 11 are in O144. The held-out size L = 16 does not run until its words and numbers are written here as a dated
 amendment, with her word.
 
+### Amendment 4 to T71 (25 October 2026, before L = 16 runs): the held-out numbers, and the owner's word
+
+*Written 23 October 2026 (the draft is kept as `sandbox/heldout_2026-10-23/t71_heldout_amendment_draft_2026-10-23.md`),
+revised the same day after an independent check, and committed 25 October 2026 with the owner's word of that day
+(section 9; VISION Update 114). Between the two dates the only changes are the ones her word decides: the control's
+option (section 7), the list of configs and the manifest (section 8), the compute figures for nine jobs, and the paths of
+the committed script and table. No number is changed. Nothing at L = 16 had been run, built or looked at when this was
+committed.*
+
+The owner's decision of 23 October (VISION Update 95: the six-link track is kept as a model of three-dimensional space)
+released this work. Every number below is written from L = 8 and 12 alone, as rule 14 requires. The source is the nine
+stage-1 arm files `results/t71_{model,layer,layerref}_lam{110,125,140}.csv`, with the three control files
+`results/t71_control_lam{110,125,140}.csv` for Table 4, fetched 19 October and read and scored 21 October (O144). Every
+six-link result carries VISION Update 24's caveat. It also carries Update 95's: the model's author advised against the
+six-link version, and the field's prior is a two-dimensional base with the third dimension emergent. At λ ≠ 1, and with a
+count of points that varies, this is our family around the published model, never combinatorial quantum gravity.
+
+**Commands.** The registered reader, at the stage-1 sizes:
+`python3 scripts/analyse_t71.py results/t71_model_lam*.csv results/t71_layer_lam*.csv results/t71_layerref_lam*.csv`.
+The predicted numbers and their ranges come from `PYTHONPATH="src;scripts" python3 scripts/t71_heldout_numbers.py`
+(tested in `tests/test_t71_heldout_numbers.py`), which prints the table and writes one row per predicted number to
+`configs/t71_heldout_prediction.csv`, as T68 did. It is the second version of the numbers script, moved from
+`sandbox/heldout_2026-10-23/t71_heldout_numbers_v2.py` with its logic unchanged; it replaces the first version,
+`sandbox/heldout_2026-10-23/t71_heldout_numbers.py`, which is kept; a check found that version's bands too narrow
+(section 3). Which stage-1 statistics fall outside the cross-check in section 3 comes from
+`PYTHONPATH="src;scripts" python3 sandbox/heldout_2026-10-23/t71_heldout_crosscheck_misses.py`. The per-replica details
+(gate offsets, stores per point, clean moves, end states, and the control read by `analyse_t68`'s rules) come from
+`PYTHONPATH="src;scripts" python3 sandbox/heldout_2026-10-23/t71_heldout_look.py`. The cost comes from
+`python3 sandbox/heldout_2026-10-23/t71_heldout_size.py` (it still counts the control's three jobs; section 8 gives the
+figures for nine). The three sandbox scripts print to the terminal; their output is not kept.
+
+#### 1. What in T71 is a claim about size
+
+- **The size claim** (Definitions, "The size claim (rule 14)"): every per-cell word and median at L = 16 is written
+  from L = 8 and 12; AS PREDICTED if they hold. The per-cell readings are:
+  - the majority word;
+  - the median first split, with its range across replicas;
+  - the release against a N_slab;
+  - the median energy above flat at the end;
+  - the SPENT FIRST count.
+
+  Under the daughter rule, four more readings sit beside the word: the median number of daughters, the energy per
+  daughter, the period and the slab share.
+- **Ours, f1 reference:** "t_gate = a N_slab / (2L² r) = 2a / r sweeps exactly ..., the same at every size."
+- **Ours, daughter rule:** "since every threshold and the feed are per point, the daughters are born at the same
+  sweeps at every L for the same seed (the held-out size then tests only this)."
+  - As registered, a replica's seed includes N_slab (`scripts/run_layer_feed.py`, `seed_for`). So no L = 16 replica
+    shares a seed with a stage-1 replica.
+  - At L = 16 this claim can therefore be tested only in its weaker form: the same distribution at every size.
+- **Exact, items 1 and 4 and the ledger:**
+  - The split releases a N_slab, which at L = 16 is 409.6, 1,024 and 1,638.4 at λ = 1.10, 1.25 and 1.40.
+  - Under layer moves alone, every daughter carries a N_slab to 1e-9.
+  - The gate is 2a per pool point at every L.
+  - The first clean switch step costs 64 (item 4, at λ = 1.10 and 1.25) and needs 8 per point in its pool of eight
+    ends, at every L.
+- **The one place where the count of points can matter:** the clean switch move. The model arm makes N attempts a
+  sweep. At stage 1 the move fired only at λ = 1.10, r = 1/16, at both sizes (O144).
+
+#### 2. Why most of it should not change with L (ours, from reading the code; not pinned by a test)
+
+When no clean move fires, the layer moves do not depend on L, for five reasons:
+
+- The proposal draws an axis, a position across the current width, and split or contract. None of these involves L.
+- The feed is per point.
+- A payment is drawn in proportion over whole layers.
+- New layers start empty.
+- A release and the gate both scale with L².
+
+So given the same random draws, the history of widths and of stores per point is the same at every L, up to floating
+rounding at exact ties. That covers arm B, the f1 reference, and the model arm in every cell but λ = 1.10, r = 1/16.
+The stage-1 differences between L = 8 and 12 in those cells are therefore differences between seeds.
+
+Two pieces of measured support:
+
+- The kernel's exploratory check of 18 October found the births at the same sweeps at L = 6 and 8 for the same seed.
+- At stage 1, the rows a replica logs do not grow with L: 415,694 rows in the nine layer-feed files, 207,204 of them
+  at L = 12.
+
+*Owed, not a condition:* a test in `tests/test_layer_feed.py` that runs layer moves alone at L = 6 and 8 with one seed
+and asserts identical width histories and stores per point. That would make this paragraph exact for the kernel, and
+it runs no held-out size.
+
+#### 3. How each number and its range are set (declared before L = 16 exists; ours)
+
+**What is scored.** Only the registered per-cell readings of section 1. Clean-move totals, the number of replicas with a
+clean move, the f1 open share and refolds, and the control's median stop and energy fed are not among them; they are
+written below and marked "reported, not scored". A range that covers every value its quantity can take cannot fail; it
+is marked "reported, cannot fail" and left out of the scored count. Nine end-energy ranges are of that kind (Tables 1 to
+3). The end energy of the model arm at λ = 1.10, r = 1/16 is reported by class and not scored (Table 2b says why).
+
+**The level.** The scored numbers that a sample can miss are 42 under rule A, 3 under rule D, and 36 under rule B (a
+median and a latest replica in each of 18 cells): 81 in all. Each gets a two-sided level of α = 0.10 / 81 = 0.00123, so
+that the chance of any miss by sampling alone, if every rule's premise holds, is at most 0.10 (a Bonferroni bound).
+
+- **Rule A, the cells with no clean move.** L = 16 is taken as a fresh sample from the same distribution as L = 8 and
+  12.
+  - The number is the median of the 32 pooled stage-1 replicas.
+  - The range is predictive: the number, plus the α/2 and 1 − α/2 quantiles of (the median of 16 replicas drawn with
+    replacement from the 32) minus (the median of 32 drawn the same way), 200,000 resamples, seed 20261023. So it
+    carries the spread of the new median and the spread of the pooled one.
+  - The range is stretched where needed to hold both stage-1 medians, and clipped to what the quantity can take.
+- **Rule B, the first split.** The first split is t_gate plus a wait.
+  - t_gate is the first sweep at which a pool of two layers holds a N_slab: 52, 13, 128, 32, 205 and 52 sweeps for
+    (λ, r) = (1.10, 1/64), (1.10, 1/16), (1.25, 1/64), (1.25, 1/16), (1.40, 1/64), (1.40, 1/16). It is the same at
+    L = 8, 12 and 16.
+  - The wait is one coin flip a sweep, because a contraction is refused at width 4.
+  - The 576 stage-1 replicas match this law: waits of 0, 1, 2 and 3 sweeps were seen 279, 155, 68 and 38 times,
+    against 288, 144, 72 and 36 expected.
+  - From that law (10⁶ simulated sets of 16 replicas): the median is t_gate + 0.5, with range t_gate to t_gate + 2
+    (a miss has probability 0.00025 per cell).
+  - Across replicas, the earliest split is at t_gate (a miss has probability 1.5 × 10⁻⁵ per cell) and the latest at
+    most t_gate + 13 (a miss has probability 0.00098 per cell).
+- **Rule C, exact.**
+  - The release at the first split is a N_slab in every cell. No clean move can be paid before it: until then every
+    store holds exactly r t, so a pool of eight ends holds 8 r t. That reaches the first clean step's 64 only at
+    t = 8 / r, which is 76 to 460 sweeps after t_gate (the script prints the margin per cell). The price of 64 is
+    item 4's, at λ = 1.10 and 1.25. At 1.40 it is our reading, not checked, and stage 1 saw no clean move there.
+  - By the same arithmetic, SPENT FIRST is 0 of 16 in every model cell.
+  - Every daughter carries a N_slab wherever no clean move fires.
+- **Rule D, the cell where clean moves fire** (the model arm at λ = 1.10, r = 1/16). No form is registered, and two
+  sizes cannot fix one. Ours:
+  - The number is the line in L through the two stage-1 medians.
+  - The range runs from L = 12's median (the trend stops) to the farthest of two forms in which the trend goes on: the
+    line in N_slab at 1,024 points, and a power law in N_slab for the shortfall from the value with no clean move. That
+    value is a N_slab for the energy per daughter, and arm B's pooled median for the other two (339.5 daughters, slab
+    share 0.3716).
+  - The two stage-1 points fit both forms equally well. The power law goes furthest for the energy per daughter: its
+    shortfall from a N_slab grew 8.1 times (0.0130 to 0.1052) while N_slab grew 2.25 times, an exponent of 2.58,
+    which gives 0.535 of a N_slab (219.2) at L = 16. For the daughters (281.4) and the slab share (0.208) the power
+    law falls inside the other two forms' span.
+  - The range is widened on each side by the predictive half-widths at the same level, from the L = 12 replicas alone
+    (a new median of 16 against L = 12's), and clipped to what the quantity can take.
+  - The range still assumes the shortfall grows no faster than that power law. A value below it would read: the
+    clean-move effect accelerates with size faster than the two points suggest.
+  - The period, which did not change, takes rule A.
+
+**What chance alone can do.** The first version of these bands was too narrow. Between L = 8 and 12, which share one
+distribution in these cells, 6 of 136 stage-1 statistics fell outside a nominal 99 % band built from the other size
+alone (4.4 %; the same 6 at bootstrap seeds 1, 2, 3 and 20261023), because that band left out the spread of the
+reference median. At the level above, the chance of any miss by sampling alone is at most 0.078: 0.056 from the 45
+numbers under rules A and D, and 0.022 from rule B. So if every rule's premise holds, AS PREDICTED has a probability of
+at least 0.92, and a miss is evidence, not expected noise. The same predictive construction, run between L = 8 and 12
+(16 replicas against 16), puts 2 of 136 statistics outside at this level, and the same 2 at a per-number level of 1 %.
+Neither is a number scored here:
+
+- the f1 end energy at λ = 1.10, r = 1/64, where 9 of 16 replicas ended as the slab at L = 8 and 2 of 16 at L = 12 (its
+  pooled range at L = 16 runs from 0 to a N_slab and cannot fail);
+- an f1 open share at λ = 1.10, r = 1/16 (not scored).
+
+Two limits, said now. The resampling can only spread what the replicas show, so a sample with few of one class, as at
+L = 12 in the first case, still gives too narrow a band; that is why every L = 16 range is built from the 32 pooled
+replicas. And the count leaves out clean moves in the five model cells of Table 2a. A few of them at L = 16 would be
+consistent with stage 1 (Table 2a). They would leave the median energy per daughter and the median end energy where
+they are unless they reached about half the replicas, but they could move a slab share or a daughter count. A miss in
+such a cell, in a run where clean moves fired there, is read as clean moves reaching the cell at the larger size, not
+as chance.
+
+#### 4. The words at L = 16 (the registered words, unchanged)
+
+Sections 4 and 5 are our predictions (the assistant's), written by the rules above. The owner's is in section 9: her
+stage-1 prediction stands.
+
+- **CYCLES**, 16 of 16, in all twelve daughter-rule cells (the model arm and layer moves alone).
+- **OSCILLATES**, 16 of 16, in all six f1 cells.
+- **SPENT FIRST**, 0 of 16, in all six model cells.
+- No ONE BURP, NEVER SPLITS, OPENS AND STAYS, OPENS, FRONT or BREAKS anywhere.
+- The control's SITS (16 of 16 in all six control cells, Table 4) is not run at L = 16: the original control is left
+  out of the held-out stage (section 7).
+
+#### 5. The numbers
+
+Each entry reads "L = 8, L = 12 → **L = 16** (range)". The energy per daughter and the release are a N_slab exactly
+(rule C) in every cell of Tables 1 to 3, except the model cell at λ = 1.10, r = 1/16 (Table 2b). The same numbers, one
+row each, are in `configs/t71_heldout_prediction.csv`, where quantities against a N_slab are written as fractions of it.
+
+**Table 1. Layer moves alone, daughter rule (arm B); rules A and B.**
+
+| λ, r | first split (median's range; replicas' range) | daughters | period (sweeps) | slab share | end energy above flat |
+|---|---|---|---|---|---|
+| 1.10, 1/64 | 52, 53 → **52.5** (52 to 54; 52 to ≤ 65) | 83, 83 → **83** (82 to 84) | 23.5, 23.5 → **23.5** (22.25 to 25) | 0.8617, 0.8596 → **0.8611** (0.8439 to 0.8818) | **409.6** (409.6 to 409.6) |
+| 1.10, 1/16 | 13, 13.5 → **13.5** (13 to 15; 13 to ≤ 26) | 340.5, 339 → **339.5** (322.5 to 354.5) | 4.75, 5 → **5** (4 to 6) | 0.3716, 0.3716 → **0.3716** (0.3509 to 0.3977) | **0** (0 to 409.6; reported, cannot fail) |
+| 1.25, 1/64 | 129.5, 128.5 → **128.5** (128 to 130; 128 to ≤ 141) | 40, 40 → **40** (40 to 41) | 62, 61 → **62** (58.75 to 65.25) | 0.9393, 0.9400 → **0.9400** (0.9293 to 0.9531) | **1,024** (1,024 to 1,024) |
+| 1.25, 1/16 | 32.5, 33 → **32.5** (32 to 34; 32 to ≤ 45) | 141, 140.5 → **141** (139 to 143) | 13, 13 → **13** (12 to 14) | 0.7709, 0.7738 → **0.7717** (0.7457 to 0.7907) | **1,024** (0 to 1,024; reported, cannot fail) |
+| 1.40, 1/64 | 206, 205 → **205.5** (205 to 207; 205 to ≤ 218) | 40, 40 → **40** (39 to 40) | 101, 101.5 → **101** (97.5 to 104) | 0.9586, 0.9639 → **0.9622** (0.9519 to 0.9708) | **1,638.4** (1,638.4 to 1,638.4) |
+| 1.40, 1/16 | 53, 54 → **52.5** (52 to 54; 52 to ≤ 65) | 83, 83 → **83** (82 to 84) | 23, 23 → **23** (22 to 24) | 0.8673, 0.8592 → **0.8640** (0.8427 to 0.8824) | **1,638.4** (1,638.4 to 1,638.4) |
+
+**Table 2a. The model arm (arm A), the five cells with no clean move at stage 1; rules A to C.** The clean moves are
+reported, not scored: they are not a registered per-cell reading. Stage 1 saw none in any of the 32 replicas of each
+cell. In these cells the largest store per point (averaged over the points) in any replica was 1.07 to 6.62, below the
+8 a pool of eight ends needs on average. That is about the average only: stores are not uniform across layers (new
+layers start empty, and payments are drawn in proportion), so a pool of eight ends could hold 64 while the average is
+below 8. Zero in 32 replicas (13,312 point-replicas) allows up to 3.7 clean moves a cell at L = 16, at 95 % (the rule of
+three), if the rate per point does not depend on L, because at width 4 L = 16 makes 1,024 attempts a sweep where L = 8
+and 12 made 256 and 576. So a few clean moves here at L = 16 would be consistent with that rate; only a count well
+above it would point to an effect of size beyond the larger number of attempts.
+
+| λ, r | first split (median's range; replicas' range) | daughters | period (sweeps) | slab share | end energy above flat |
+|---|---|---|---|---|---|
+| 1.10, 1/64 | 52, 52.5 → **52.5** (52 to 54; 52 to ≤ 65) | 83, 83 → **83** (82 to 84) | 23, 24 → **23.75** (22.25 to 24.75) | 0.8627, 0.8688 → **0.8678** (0.8471 to 0.8850) | **409.6** (204.8 to 409.6) |
+| 1.25, 1/64 | 129, 128 → **128.5** (128 to 130; 128 to ≤ 141) | 40, 40 → **40** (40 to 41) | 61, 62 → **61.5** (58 to 65) | 0.9321, 0.9367 → **0.9348** (0.9256 to 0.9430) | **1,024** (1,024 to 1,024) |
+| 1.25, 1/16 | 33, 32.5 → **32.5** (32 to 34; 32 to ≤ 45) | 140, 140 → **140** (137 to 143.5) | 13.5, 13.75 → **13.75** (12.75 to 14.75) | 0.7784, 0.7750 → **0.7769** (0.7451 to 0.8104) | **1,024** (0 to 1,024; reported, cannot fail) |
+| 1.40, 1/64 | 206, 205 → **205.5** (205 to 207; 205 to ≤ 218) | 40, 40 → **40** (39 to 41) | 101, 101.25 → **101** (98 to 104) | 0.9597, 0.9581 → **0.9586** (0.9519 to 0.9671) | **1,638.4** (1,638.4 to 1,638.4) |
+| 1.40, 1/16 | 52, 53 → **52.5** (52 to 54; 52 to ≤ 65) | 83, 83 → **83** (81.5 to 84.5) | 23, 23 → **23** (22 to 24) | 0.8558, 0.8549 → **0.8558** (0.8370 to 0.8754) | **1,638.4** (1,638.4 to 1,638.4) |
+
+**Table 2b. The model arm at λ = 1.10, r = 1/16, where clean moves fire; rule D, except where noted.** Measured at
+stage 1: clean moves in 12 and 13 replicas of 16 (17 and 23 moves in all), first between sweeps 335 and 1,703, never
+before the first split.
+
+- **Word:** CYCLES, 16 of 16. **SPENT FIRST:** 0 of 16 (rule C).
+- **First split** (rule B): 13, 13 → **13.5** (13 to 15; replicas 13 to ≤ 26). **Release:** 409.6 exactly (rule C).
+- **Energy per daughter:** 101.1, 206.2 (0.987 and 0.895 of a N_slab) → **328.7, that is 0.80 of a N_slab** (117.4
+  to 409.6, that is 0.29 to 1).
+- **Daughters:** 329.5, 311.5 → **293.5** (206.4 to 386.5).
+- **Slab share:** 0.3597, 0.3166 → **0.2736** (0.0516 to 0.4723).
+- **Period** (rule A): 5, 5 → **5** (4 to 6).
+- **End energy above flat: reported by class, not scored.**
+  - It is a snapshot that takes a few classes: the slab (a N_slab: 102.4 at L = 8, 230.4 at L = 12, 409.6 at L = 16),
+    open and flat (0), or open with rewired patches, whose energies are local and do not grow with L.
+  - At L = 8: 7 slabs, 6 open at 0, and 3 with patches (128, 192, 240); median 102.4, the slab.
+  - At L = 12: 1 slab, 4 open at 0, and 11 with patches (128 six times, 192 three times, 240, 528); median 128.
+  - Expected at L = 16: the median replica ends open, at 0 or with patches of 128 or more, not as the slab (409.6).
+  - Not scored, because its classes change with L and two sizes give no declared range that keeps them apart. This is
+    the one registered median left unscored, and it is said before L = 16 runs.
+- **Clean moves in all** (reported, not scored): 17, 23 → 29 (4 to 50.4).
+- **Replicas with a clean move** (reported, not scored): 12, 13 → a majority expected. At the pooled share of 0.78,
+  8 or fewer of 16 has probability 0.012.
+
+What the scored ranges can fail on:
+
+- An energy per daughter below 117.4 (0.29 of a N_slab). At this level it can no longer fail at a N_slab: a new
+  median of 16 against L = 12's can reach a N_slab by sampling alone.
+- Daughters below 206.4 or above 386.5.
+- A slab share below 0.0516 or above 0.4723.
+- A period outside 4 to 6.
+
+The ranges are wide because two sizes cannot fix a form and the 16 replicas of this cell spread widely. So at L = 16
+this cell can show only a large change. That weakness is the honest state of the size claim in this one cell.
+
+**Table 3. Layer moves alone, release kept in the stores (the f1 reference); rules A to C.**
+
+- **Word:** OSCILLATES, 16 of 16.
+- **Release:** a N_slab exactly.
+- **End energy above flat:** **0**, with range 0 to a N_slab, in all six cells: reported, cannot fail. It is a
+  snapshot of cells that spend 0.62 to 0.65 of their time open (the open shares below).
+- The open share and the refolds are not per-cell readings in the registration. They are reported, not scored.
+
+| λ, r | first split (median's range; replicas' range) | end energy (stage 1) | open share (not scored) | refolds (not scored) |
+|---|---|---|---|---|
+| 1.10, 1/64 | 53, 52.5 → **52.5** (52 to 54; 52 to ≤ 65) | 102.4, 0 | 0.6183, 0.6187 → 0.6183 (0.5978 to 0.6412) | 566, 563.5 → 565.5 (549.5 to 584) |
+| 1.10, 1/16 | 13, 13 → **13.5** (13 to 15; 13 to ≤ 26) | 0, 0 | 0.6486, 0.6305 → 0.6436 (0.6210 to 0.6629) | 611, 603.5 → 609 (593 to 622.5) |
+| 1.25, 1/64 | 129, 128 → **128.5** (128 to 130; 128 to ≤ 141) | 0, 0 | 0.6286, 0.6249 → 0.6272 (0.6120 to 0.6433) | 697.5, 698.5 → 698.5 (681 to 717) |
+| 1.25, 1/16 | 33, 32 → **32.5** (32 to 34; 32 to ≤ 45) | 0, 0 | 0.6253, 0.6243 → 0.6243 (0.6034 to 0.6457) | 580, 588.5 → 585 (569 to 603) |
+| 1.40, 1/64 | 206, 205.5 → **205.5** (205 to 207; 205 to ≤ 218) | 0, 0 | 0.6188, 0.6160 → 0.6186 (0.6027 to 0.6348) | 1,115.5, 1,119.5 → 1,117 (1,095.5 to 1,137) |
+| 1.40, 1/16 | 53, 52 → **52.5** (52 to 54; 52 to ≤ 65) | 0, 0 | 0.6261, 0.6231 → 0.6246 (0.6037 to 0.6501) | 575, 570 → 572.5 (556.5 to 588.5) |
+
+**Table 4. The control (arm C), as configured; T68's runner, read by T67's words through `analyse_t68`. Not run at
+L = 16** (section 7: the owner chose (c), and the original control is left out of the held-out stage). What follows is
+what it would have shown, written on 23 October before her choice, and kept as the record of why leaving it out loses
+nothing: its claim at this feed is settled by arithmetic at any size.
+
+- **Word:** SITS, 16 of 16, in every cell. No point opens and no point breaks.
+- **Median stop** (the last record; reported, not scored): 2,000, 2,550 and 4,050 sweeps at λ = 1.10, 1.25 and 1.40.
+- **Median energy fed** (reported, not scored): 31.25 and 125.00 at λ = 1.10; 39.84 and 159.38 at 1.25; 63.28 and
+  253.12 at 1.40 (r = 1/64 and 1/16). That is the rate times the last record's sweep, as at stage 1, where every cell
+  matched it.
+- **Per point at N = 1,024:** 0.0305 to 0.2472.
+  - At stage 1 the most any cell received was 0.9888 per point (λ = 1.40, r = 1/16, N = 256), and no point opened or
+    broke anywhere.
+  - So SITS at L = 16 would be arithmetic on a measured fact.
+- T67's per-size word reads MIXED at every (λ, N), as it did at stage 1, because nothing opens and not every cell
+  breaks. It is reported, not part of T71's claim.
+
+#### 6. The verdict at L = 16 (scored there alone)
+
+- **AS PREDICTED** if every word in section 4 and every scored number in Tables 1 to 3 holds (Table 4 is not run).
+- Otherwise **not AS PREDICTED**. Each miss is named with its rule.
+  - A miss in a number under rule A, B or D is evidence: if every rule's premise holds, the chance of any such miss is
+    at most 0.078 (section 3).
+  - A miss in rule C, a word or SPENT FIRST is a failure of something exact or structural.
+  - A miss in a model cell of Table 2a, in a run where clean moves fired in that cell, is read as clean moves reaching
+    the cell at the larger size (section 3).
+
+As Amendment 3 recorded, her words and ours now coincide in every arm, so L = 16 cannot tell her picture from ours: it
+tests a shared expectation and the size claim. In 17 of the 18 arm cells nothing in the code depends on L (section 2),
+and the route to the opened state is put in by hand (the layer split), so there L = 16 checks the kernel's arithmetic
+at a third size. The one cell where size can matter is the model arm at λ = 1.10, r = 1/16, and there only a large
+change would miss (Table 2b). The owner weighed the jobs against that and gave the go-ahead (section 9).
+
+The three predictions, set against these numbers:
+
+- **The owner's, at stage 1** (Amendments 2 and 3), which stands for L = 16 by her word (section 9). Every word of hers
+  for the arms is in section 4; her word for the control is not tested at L = 16 (section 7). Her prediction of one
+  a N_slab per daughter is predicted to fail again in one cell, the model arm at λ = 1.10, r = 1/16, where Table 2b
+  puts the energy per daughter at 0.80 of a N_slab (0.29 to 1).
+- **Ours, "the slab share above one half under g1".** Predicted to fail again at λ = 1.10, r = 1/16 (0.3716 in arm B,
+  0.2736 in arm A).
+- **Ours, "no clean switch move in any cell".** Predicted to fail again in that one cell.
+
+#### 7. Found while writing this amendment (exact, from the stage-1 rows; nothing changed), and the owner's choice
+
+The control was fed far less per point than the arms it controls.
+
+- **The mismatch.**
+  - T68's runner treats the rate as the total per sweep, shared by every point. In its files, fed = r × sweep:
+    31.25 at sweep 2,000 for r = 1/64. At L = 8 that is 0.12 per point.
+  - The layer-feed runner gives r to every point every sweep, which is 31.25 to 125 per point over the run.
+  - So per point the control received 1/N_slab of the other arms' feed: 1/256 at L = 8, 1/576 at L = 12, and 1/1,024
+    at L = 16 if it ran as configured.
+  - The design table says "r per point per sweep into every point's store" for the feed. The control's line names T68's
+    runner, whose rate is a total.
+- **What it changes.**
+  - No stage-1 word changes as read.
+  - Arm C's SITS, her prediction that the control does not cycle (holds) and our "BREAKS" (fails) all rest on a feed
+    256 to 576 times weaker per point than the model's. So what the control showed is narrower than O144 first said.
+  - This is on the record: an addendum to ASSUMPTIONS O144, committed 23 October.
+- **The options set out on 23 October:**
+  - (a) run the control at L = 16 as configured, for continuity with stage 1, where it SITS by arithmetic;
+  - (b) leave the control out of the held-out stage, since at this feed its claim is settled by arithmetic at any size;
+  - (c) register a matched control (the same per-point feed as the arms) as a new cell with its own prediction. It has
+    no stage-1 sizes to fit from, so it cannot be a held-out test, and it asks a new question: do single switches
+    break the slab under the arms' feed?
+
+  Ours was (a) or (b).
+- **The owner's choice, 25 October: (c)** (section 9). The original control is left out of the held-out stage: no
+  control config is written and no control job is queued here. The properly fed control, with the arms' feed per
+  point, is a new cell. It is not a held-out test, since it has no stage-1 sizes to fit from; it is registered
+  separately, with its own prediction, and waits for her prediction before it is registered or run.
+
+#### 8. The L = 16 runs
+
+- **Configs:** nine, `configs/t71_{model,layer,layerref}_lam{110,125,140}_l16.json`. Each is identical to its stage-1
+  config except for five keys:
+  - `"name"`, with `_l16` appended;
+  - `"sizes": [16]`;
+  - `"seed"`, the stage-1 seed + 12. In the stage-1 manifest's order (model, layer, layerref, control at λ = 1.10,
+    then 1.25, then 1.40) that rule gives 20267113 to 20267124; the control's three, 20267116, 20267120 and 20267124,
+    are unused. So the seeds are: model 20267113, 20267117, 20267121; layer 20267114, 20267118, 20267122; layerref
+    20267115, 20267119, 20267123 (at λ = 1.10, 1.25, 1.40). None of these seeds is used in any other config.
+  - `"_purpose"` and `"written"`, naming this amendment and 25 October 2026, the date of her word.
+
+  Each config has 16 replicas, r = 1/64 and 1/16, and its stage-1 length rule: max(2,000, 40 a / r) sweeps.
+- **Seeds:** the runner's own rule, SeedSequence([seed, N_slab, λ index, rate index, replica]). It includes the count of
+  points, so the streams are new even apart from the new bases.
+- **Queue:** one manifest, `cloud/queue/2026-10-25_t71_heldout.txt`, with nine `run_layer_feed` lines in stage 1's
+  order (model, layer, layerref at λ = 1.10, then 1.25, then 1.40). That is within one batch of the 96-job capacity.
+- **Compute:**
+  - 703,488 replica-sweeps in all (978,688 with the control's three jobs, as written on 23 October).
+  - At width 4 that is 7.2 × 10⁸ point-sweeps, against 5.9 × 10⁸ for the same nine jobs at stage 1. Each L = 16 job is
+    1.23 times its stage-1 job, if the cost of a sweep grows with the number of points, as the kernels' loops suggest
+    (ours, not measured).
+  - Stage 1's wall times are not recorded in the repository.
+  - Output: about 207,000 rows and 36 MB for the nine layer-feed files, if the rows a replica logs do not depend on L
+    (they did not at stage 1).
+- **To read:**
+  1. Put `t71_*_l16` into `cloud/fetch/request.txt`, then accept and commit unread.
+  2. Run the registered reader on the nine named layer-feed files only:
+     `python3 scripts/analyse_t71.py results/t71_{model,layer,layerref}_lam{110,125,140}_l16.csv`. Not a glob over every
+     `t71_*` file: the control's stage-1 files, which T68's runner writes without the columns `L` and `gate`, would stop
+     the reader (checked: on `results/t71_control_lam110.csv` it raises `KeyError: 'L'`).
+  3. Score against `configs/t71_heldout_prediction.csv` and this amendment.
+
+#### 9. The owner's word
+
+She was asked for three things: her prediction for L = 16, or her word that her stage-1 prediction stands for it; her
+choice on the control, (a), (b) or (c) of section 7; and the go-ahead for the jobs.
+
+Her word, 25 October 2026, on the predictions sheet (`docs/design/predictions_sheet_2026-10-25.md`; verbatim in
+`sandbox/NOTEBOOK.md` and VISION Update 114): "Comparing: set up a properly fed one. ... Earlier one stands, proceed with
+jobs."
+
+What it means, as recorded in VISION Update 114:
+
+1. Her stage-1 prediction (Amendments 2 and 3) stands for L = 16.
+2. The control: option (c). The original control is left out of the held-out stage, and a properly fed control (the
+   arms' feed per point) is a new cell with its own prediction, registered separately once her prediction for it is
+   recorded. It is not a held-out test.
+3. The go-ahead for the held-out jobs: the nine of section 8.
+
+### Reading of T71 at the held-out size L = 16 (2026-10-26; ASSUMPTIONS O160; `scripts/t71_heldout_score.py`)
+
+The nine jobs of Amendment 4, section 8 (queued 25 October), fetched and accepted on 26 October: every file passed
+`scripts/accept_inbox.py` (its config as committed), and every one of the 18 arm cells has 16 replicas. Scored against
+`configs/t71_heldout_prediction.csv` by `scripts/t71_heldout_score.py` (added 26 October, with a test; it reads each
+replica with `t71_heldout_numbers.per_replica`, the reading the numbers were written from).
+
+**AS PREDICTED** (section 6): all 152 scored rows hold, none misses, none unread. Every majority word is CYCLES as
+predicted; every first split lies in its range under rule B; every release at the first split, every energy per
+daughter under rule C and every SPENT FIRST count are exact where rule C says so.
+
+**The one cell where size can matter** (the model arm at λ = 1.10, r = 1/16; Table 2b), under rule D: energy per
+daughter 0.912 of a N_slab (range 0.287 to 1), daughters 307.5 (206.4 to 386.5), slab share 0.312 (0.052 to 0.472).
+Reported, not scored: 37 clean moves in all (4 to 50.4 written), in all 16 replicas; the median end energy 0.3125 a N_slab
+(128), the open state with patches as written, not the slab.
+
+**The three predictions of section 6, as they fall:** hers (one a N_slab per daughter in every cell) fails again in that
+one cell, at 0.912; ours ("the slab share above one half under g1") fails again there, at 0.312; ours ("no clean switch
+move in any cell") fails again there, with 37. Each fails where the amendment said it would, and nowhere else.
+
+What this does and does not show: in 17 of the 18 arm cells nothing in the code depends on L (section 2), so there the
+held-out size confirms the kernel's arithmetic at a third size; in the clean-move cell the rate of clean moves and its
+effect on the daughters did not grow past what L = 8 and 12 allowed. It tests a shared expectation; it cannot tell her
+picture from ours (section 6).
+
 ### Reading of T74 (2026-10-21, 11:28 UTC by the clock; ASSUMPTIONS O145; `scripts/analyse_t74.py`)
 
 Read on L = 8 and 12 by the rules above, the owner's prediction being ours (Amendment 5). Fed phase: BURPS in 102 cells
@@ -7735,6 +8138,260 @@ of 36; equal WAITS in 6 of the 18 scored cells and MIXED in 12, with 18 SPLIT an
 fails in part**, at the balance point and at the smallest curling cost; the four answers of rule 11 are in O145. The
 held-out size L = 16 does not run until its words and numbers are written here as a dated amendment, with her word.
 
+
+### Amendment 6 to T74 (26 October 2026, before L = 16 runs): the held-out numbers, and the owner's word
+
+Rule 14 and T74's Standing requirement 1 ask for a number with a range for the held-out size L = 16, written from the
+two stage-1 sizes before L = 16 runs. This amendment writes them from the 108 stage-1 files alone (L = 8 and 12, read
+21 October, O145). They were drafted on 23 October (`sandbox/heldout_2026-10-23/`, kept as drafted) and the scripts were
+rerun on 26 October with identical output; the committed copy is `configs/t74_heldout_prediction.json`. No L = 16
+config, job or result existed when they were written. The six-link track is kept by her decision of 23 October (VISION
+Update 95), which released this work.
+
+**What in T74 is a claim about size.** One registered claim, and three reads of whether stage 1 repeats:
+
+1. **The period between births does not change with L** (Standing requirement 1, the registered size claim, and the
+   only one the size verdict scores). T74 calls it "the period per point". The feed R, the cap c and the gate
+   a N_slab are all proportional to N_slab, so the period in sweeps is the quantity that exact item 1 says does not
+   depend on L: a N_slab / min(c, R), which is 16a at c = 2R and 32a at c = R/2. It is also what
+   `scripts/analyse_t74.py` reads (the mean period over fed-phase births). *Confirmed by the owner, 25 October: "The
+   size claim: the time between births stays the same at every size. - yes but the surplus matter . Confirm."*
+2. **The fed word.** The shared prediction says BURPS in every fed cell, at every λ and size (Amendment 2, item 5;
+   Amendment 5). At stage 1 it failed in 6 cells of 108 (O145). What is read at L = 16 is whether the stage-1 rate
+   repeats, failures included.
+3. **The timing words.** The shared prediction says SAME TIMING, with SPREAD ONLY where c = 2R and the meals are large.
+   At stage 1 it failed in the two λ = 1.10 settings of that kind (O145). Read the same way.
+4. **The unfed words.** The shared prediction says cold DISSOLVES; warm FED BY ITS SURROUNDINGS; equal by the side of
+   2a. At stage 1 it failed in 2 cold cells of 36 and in 12 of the 18 equal cells it could score (O145). Read the same
+   way.
+
+The other reads (the share of the feed that entered the slab, the loss rate against c, the length of digestion, the
+residual) make no claim about size. They are reported at L = 16 as at stage 1 and are not scored.
+
+**The fit and the range (ours; T74 names neither).** Every claim and read above says that something stays the same as
+L grows. So the fit is a constant: L = 8 and 12 pooled. The range answers one question: what would L = 16 show if the
+claim holds? Under that claim, stage 1 and L = 16 are two samples of replicas from one population, so the range has to
+carry the error of both: the scatter of the L = 16 sample and the fit's own error. We drew both 10,000 times from the
+stage-1 replicas themselves, with replacement (numpy seed 20261023): in each draw a fresh stage 1, as many replicas as
+stage 1 had, and a fresh L = 16, as many as L = 16 will have. A number's range is its stage-1 value plus the middle
+99.7 % of (fresh L = 16 value − fresh stage-1 value). For a word, the fresh L = 16 replicas are drawn from the fresh
+stage 1, so the stage-1 rate itself varies from draw to draw. The sizes:
+
+- Period and timing: per (λ, c, feed), a fresh 96 and a fresh 48 from the 96 of stage 1. The reservoir is isolated
+  while fed, so the background does not touch the fed phase, and the analyzer pools the three backgrounds the same way.
+- Fed word: per (λ, feed, c), a fresh 96 from its 96, then 16 per cell from those. Digestion is isolated too.
+- Unfed word: per cell, a fresh 32 from the cell's 32 at L = 8 and 12, then 16 from those.
+
+So the width of each period range is the spread of a 48-replica mean, plus the fit's own error, and nothing else. A
+change with L larger than that is what a miss would show.
+
+*A check of the rule, on data already read (not a prediction):* the same rules fitted on L = 8 alone put every L = 12
+number inside: 18 of 18 periods, 12 of 12 timing words, all 48 fed cells that had to BURPS, all 32 unfed cells that had
+to repeat, and 19 of the other 22 unfed cells on their most likely word (range 15 to 22). That is weak evidence. A rule
+that leaves out the fit's own error, and so is too narrow (each period range covering about 96 % when a fit of 48
+replicas predicts 48, and 89 and 91 % at λ = 1.10, c = 2R with meals), would still put all 18 periods inside about
+four times in ten (0.43 by resampling). So the check shows the rule is not grossly wrong, not that it holds its stated
+99.7 %.
+
+*Said plainly:* the size verdict below reads 18 ranges at once. If the claim is true, at least one misses by chance
+about one time in seventeen: 0.060, measured with a separate two-level draw of 40,000, in which each range missed 0.25
+to 0.48 % of the time against 0.3 % nominal (1 − 0.997¹⁸ = 0.053). A single miss is reported as a miss, by name, and
+then examined (rule 11).
+
+**1. The period between fed-phase births, in sweeps, at L = 16** (48 replicas, the three backgrounds pooled; stage-1
+values measured; fit and range ours; a N_slab / min(c, R) exact):
+
+| λ | c | feed | L = 8 | L = 12 | **L = 16: fit (range)** | a N_slab / min(c, R) |
+|---|---|---|---|---|---|---|
+| 1.10 | 2R | steady | 6.428 | 6.431 | **6.430 (6.415 to 6.445)** | 6.40 |
+| 1.10 | 2R | meals of 16 | 6.463 | 6.438 | **6.451 (6.405 to 6.512)** | 6.40 |
+| 1.10 | 2R | meals of 256 | 6.532 | 6.460 | **6.496 (6.311 to 6.749)** | 6.40 |
+| 1.10 | R/2 | steady | 12.787 | 12.783 | **12.785 (12.778 to 12.792)** | 12.80 |
+| 1.10 | R/2 | meals of 16 | 12.785 | 12.787 | **12.786 (12.779 to 12.793)** | 12.80 |
+| 1.10 | R/2 | meals of 256 | 12.784 | 12.787 | **12.786 (12.777 to 12.794)** | 12.80 |
+| 1.25 | 2R | steady | 15.953 | 15.956 | **15.954 (15.940 to 15.968)** | 16.00 |
+| 1.25 | 2R | meals of 16 | 15.969 | 15.965 | **15.967 (15.954 to 15.980)** | 16.00 |
+| 1.25 | 2R | meals of 256 | 15.651 | 15.659 | **15.655 (15.637 to 15.674)** | 16.00 |
+| 1.25 | R/2 | steady | 31.880 | 31.871 | **31.875 (31.845 to 31.905)** | 32.00 |
+| 1.25 | R/2 | meals of 16 | 31.904 | 31.897 | **31.901 (31.870 to 31.931)** | 32.00 |
+| 1.25 | R/2 | meals of 256 | 31.885 | 31.879 | **31.882 (31.847 to 31.915)** | 32.00 |
+| 1.40 | 2R | steady | 25.452 | 25.468 | **25.460 (25.422 to 25.498)** | 25.60 |
+| 1.40 | 2R | meals of 16 | 25.431 | 25.437 | **25.434 (25.407 to 25.463)** | 25.60 |
+| 1.40 | 2R | meals of 256 | 25.124 | 25.139 | **25.132 (25.103 to 25.162)** | 25.60 |
+| 1.40 | R/2 | steady | 50.877 | 50.907 | **50.892 (50.816 to 50.969)** | 51.20 |
+| 1.40 | R/2 | meals of 16 | 50.896 | 50.900 | **50.898 (50.832 to 50.967)** | 51.20 |
+| 1.40 | R/2 | meals of 256 | 50.896 | 50.933 | **50.915 (50.839 to 50.988)** | 51.20 |
+
+The ranges reach no more than 0.15 % from the fit everywhere except at λ = 1.10, c = 2R. There they reach up to 0.25,
+0.96 and 3.90 % from the fit, because rare clean switch moves (O144, O145) take energy from a few daughters. Every fit
+lies within 2.2 % of exact item 1's a N_slab / min(c, R). That number is the same at every L by arithmetic; it is
+shown, not scored, and it is not a floor: 15 of the 18 fits lie below it. Every range also lies well inside ±10 % of
+its fit, the registration's own tolerance for "the same mean period" (SAME TIMING). So a period that misses its range
+but stays within 10 % is reported as MISSES, with that said beside it.
+
+*Verdict word:* T74 names none for its size claim. Ours, used here: **HOLDS** if the L = 16 period lies in its range
+and **MISSES** if not, as in T54 and T56.
+
+**2. The fed word at L = 16.** Its words are unchanged: BURPS / NEVER BURPS / MIXED per cell, read by
+`scripts/analyse_t74.py` as at stage 1.
+
+- *Measured:* 51 of 54 cells BURPS at L = 8 and 51 of 54 at L = 12. Of the 96 replicas of each (λ, feed, c), 16 of
+  the 18 settings had every replica's fed daughters exact. The exceptions are at λ = 1.10, c = 2R: 7 of 96 replicas
+  short with the large meals and 1 of 96 with the small, each after a clean switch move in the fed phase. That is 4 of
+  144 such replicas at L = 8 and 4 of 144 at L = 12 (7 moves at each): too few to tell a constant rate from one that
+  grows with the points. A rise at L = 16 would show as MIXED where stage 1 had none, or as more MIXED among the six
+  cells below, which their allowance cannot detect.
+- **L = 16, read cell by cell:** the 48 cells of the 16 settings in which every stage-1 replica was exact must BURPS;
+  every draw gives BURPS there. The six λ = 1.10, c = 2R meal cells BURPS in about 0.86 of the draws with the small
+  meals and 0.33 with the large, once the stage-1 rate's own error is counted. Any mix of BURPS and MIXED among those
+  six lies inside their 99.7 % range (0 to 6 of 6 BURPS), so they are reported, and they change the read only by
+  NEVER BURPS, which no draw gives (every stage-1 replica made at least 156 fed daughters).
+
+**3. The timing words at L = 16.** Its words are unchanged: SAME TIMING / SPREAD ONLY / DIFFERENT TIMING, the
+backgrounds pooled.
+
+- **The same word as at both stage-1 sizes in all 12 settings.** SPREAD ONLY applies to c = 2R with the large meals
+  at λ = 1.25 and 1.40. SAME TIMING applies to the other 10, including λ = 1.10, c = 2R, large meals, where SPREAD
+  ONLY was first predicted. Every one of the 10,000 draws gave these words.
+- Written beside the words, and not part of the verdict (ours): the ratios with their 99.7 % ranges. For c = 2R and
+  large meals:
+
+| λ | mean ratio | cv ratio |
+|---|---|---|
+| 1.10 | 1.010 (0.982 to 1.048) | 1.30 (1.22 to 1.40) |
+| 1.25 | 0.981 (0.980 to 0.983) | 3.26 (3.19 to 3.33) |
+| 1.40 | 0.987 (0.985 to 0.989) | 2.66 (2.58 to 2.74) |
+
+  In the other nine settings the ranges of the mean ratio lie within 0.9954 to 1.0129, and those of the cv ratio
+  within 0.87 to 1.10.
+
+**4. The unfed words at L = 16** (18 cells per background). The words are unchanged: WAITS / DISSOLVES / FED BY ITS
+SURROUNDINGS / MIXED. For the equal background, the shared prediction is still SPLIT and not scored where replicas
+lie on both sides of 2a (Amendment 4, item 3).
+
+- **Read cell by cell. 33 cells must repeat their stage-1 word**, the one word given at both L = 8 and 12 and in at
+  least 99.7 % of the draws:
+  - cold, DISSOLVES: 14 cells, all but λ = 1.10 with c = 2R (steady and small meals) and λ = 1.10 with c = R/2
+    (steady and large meals);
+  - warm, FED BY ITS SURROUNDINGS: 16 cells, all but λ = 1.10 with c = 2R (steady and small meals);
+  - equal: λ = 1.10, small meals, c = R/2, MIXED; λ = 1.25 and 1.40, large meals, c = 2R, WAITS.
+- **The other 21 cells are read together:** the number of them that give their most likely word at L = 16 lies in
+  **14 to 21** (median 19). Their most likely words:
+
+| background | cells | most likely word at L = 16 (share of draws) |
+|---|---|---|
+| cold | λ = 1.10, c = 2R, steady and small meals | MIXED, both bars (0.58, 0.57); stage 1 gave DISSOLVES at one size and MIXED, both bars, at the other |
+| cold | λ = 1.10, c = R/2, steady and large meals | DISSOLVES (0.995, 0.994) |
+| warm | λ = 1.10, c = 2R, steady and small meals | FED BY ITS SURROUNDINGS (0.99, 0.98) |
+| equal | λ = 1.10, c = 2R, steady | FED BY ITS SURROUNDINGS (0.73) |
+| equal | λ = 1.10, c = 2R, small meals | FED BY ITS SURROUNDINGS (0.58); stage 1 gave MIXED at L = 8 and FED BY ITS SURROUNDINGS at L = 12 |
+| equal | λ = 1.40, c = 2R, small meals | WAITS (0.73) |
+| equal | the other 12: λ = 1.10, steady with c = R/2 and large meals with either cap; λ = 1.25, steady and small meals with either cap and large meals with c = R/2; λ = 1.40, steady with either cap and small and large meals with c = R/2 | MIXED (0.84 to 0.996) |
+
+- If the stage-1 rates hold, this read repeats stage 1 in 0.997 of the draws.
+- *Reported, not scored:* the tallies per background, and the number of equal cells the SPLIT rule leaves scorable.
+
+| background | count | L = 8 | L = 12 | L = 16: median of the draws (range) |
+|---|---|---|---|---|
+| cold | DISSOLVES | 17 | 17 | 17 (15 to 18); the rest MIXED, both bars met |
+| warm | FED BY ITS SURROUNDINGS | 18 | 18 | 18 (17 to 18) |
+| equal | cells scored (not SPLIT) | 8 | 10 | 10 (7 to 14) |
+| equal | WAITS | 3 | 3 | 3 (2 to 6) |
+| equal | MIXED | 14 | 13 | 13 (10 to 16) |
+| equal | FED BY ITS SURROUNDINGS | 1 | 2 | 1 (0 to 3) |
+
+The shared prediction (Amendment 5) is scored per cell at L = 16 exactly as at stage 1 and reported. At stage 1 the
+equal-background prediction held in 3 scored cells at each size; the draws put it at 3 (2 to 6) for L = 16, reported.
+
+**The verdicts at L = 16** (ours, with the words above; scored by `scripts/t74_heldout_score.py`):
+
+- **The size verdict** (the registered claim, Standing requirement 1, scored alone): **HOLDS AT L = 16** if all 18
+  periods lie in their ranges; **MISSES AT L = 16** otherwise, naming every period outside its range. A miss is
+  followed by rule 11's four answers before any new run.
+- **Three secondary reads,** reported beside the size verdict and not part of it: fed, timing and unfed, each
+  **REPEATS STAGE 1** if every cell or setting meets its rule above (fed: the 48 cells BURPS and none of the six NEVER
+  BURPS; timing: all 12 words as written; unfed: the 33 cells repeat and the count of the other 21 lies in 14 to 21),
+  and **CHANGES** otherwise, naming each cell. If the stage-1 rates hold, the fed and timing reads repeat in every
+  draw and the unfed read in 0.997 of them.
+- What is scored for items 2 to 4 is the stage-1 rate, including the failures of O145, not the shared prediction,
+  which is scored per cell and reported separately.
+- **NOT READ** for any number whose cell is missing, failed, or has fewer than 16 replicas, with the reason. The ranges
+  assume 16 replicas a cell.
+- An unfed MIXED is scored as the word MIXED; which bars it met is reported beside it, as at stage 1.
+
+The per-cell words, the shared prediction, the tallies and the reads that make no size claim are reported beside the
+verdicts. They do not enter them.
+
+**What runs** (written and launched with this amendment):
+
+- **54 configs**, `configs/t74_lam{110,125,140}_L16_{steady,meals16,meals256}_{c2R,cRhalf}_{cold,equal,warm}.json`,
+  from `scripts/make_t74_configs.py --held-out` (tested in `tests/test_t74_heldout.py`, which also checks that every key
+  but the name, L, the seed, `written` and `_purpose` is as in stage 1). The `_purpose` carries VISION Update 24's caveat
+  and Update 95's statement: the model's author advised against the six-link version, and the field's prior is a
+  two-dimensional base with the third dimension emergent. `--held-out` refuses to write until the prediction file
+  exists.
+- **Each cell** (`scripts/run_layer_outside.py`): N_slab = 1,024, R = 64, c = 128 or 32, gate a N_slab = 409.6, 1,024
+  or 1,638.4, n_out = 1,024. The meals are 64 every sweep, 1,024 every 16 sweeps or 16,384 every 256 sweeps. The warm
+  background is 4a = 1.6, 4 or 6.4. 16 replicas: fed 4,096 sweeps, then digestion of up to 4,096, then unfed 4,096.
+- **Seeds 20267901 to 20267954, one per cell,** in the order λ, feed, c, background; replica seeds SeedSequence([seed,
+  replica]) as in stage 1. The block is used by no other config (checked 26 October). The generator's stage-1 block
+  (20267401 on) and the block after it (shared with T75 from 20267509) are avoided.
+- **The prediction file and the scorer:** `configs/t74_heldout_prediction.json` (the 18 periods with their ranges, the
+  12 timing words, the 48 fed cells that must BURPS and the six that must not NEVER BURPS, the 33 unfed cells that must
+  repeat with their words, and the 21 read together with their most likely words and the range 14 to 21) and
+  `scripts/t74_heldout_score.py`, which reads the 54 L = 16 files by name with the stage-1 reader unchanged.
+- **The manifest:** `cloud/queue/2026-10-26_t74_heldout.txt`, 54 jobs, one wave.
+- **The code is stage 1's** (checked 26 October). Since the stage-1 launch (f680737a), the modules T74 imports changed
+  only by additions T74 does not use: `layer_feed.py` gained T82's "twins" release (a separate branch), `dimension.py`
+  new functions; `layer_outside.py`, `contraction.py`, `clean_move.py`, `cqg_d.py` and the runner are unchanged. Replica
+  0 of `t74_lam110_L12_meals256_c2R_equal`, rerun on 26 October from its config, reproduces the stage-1 file's 2,482
+  rows in every column. The affordability guard in `layer_feed` (O158 (b)) is deliberately left as it was, so that L = 16
+  runs on the code that made L = 8 and 12 (O159, Codex F33); it is fixed, with a test, after this stage is read.
+  `.meta.json` does not yet record the commit (TASKS, 6 October section, item 5), so it is named here: the launch commit
+  is the one that adds this amendment.
+- **The Batch ceiling** (86,400 s, one attempt; the draft's open check). Timed on the laptop on 26 October, one replica
+  of `lam110 meals256 c2R equal`, the two sizes run side by side: 150 s at L = 12 and 250 s at L = 16. A cell of 16
+  replicas is therefore about 67 minutes at L = 16 on the laptop, against a ceiling of 24 hours; a Batch vCPU would have
+  to be about twenty times slower to reach it. No split of the replicas is needed.
+
+**Disclosed.**
+
+- Stage 1 already shares eight seeds with T75: 20267501 to 20267508 are T74's last eight L = 12 cells at λ = 1.40
+  and T75's first eight cells. The two use different kernels and different experiments and are never compared, so
+  nothing scored changes. The overlap is recorded here so that it is not repeated.
+- O145's answer (3) puts an exact look before any run: the distribution of the pool's stored energy at the common
+  mean, against 2a, from the saved rows. The saved rows cannot give it: they log the slab's total stores (`stores`),
+  the common mean (`g_common`) and the slab's mean before the flow (`g_in_before`), with no column for the two layers
+  beside the cut. Making the look needs a run that logs the pool. Whether L = 16, the registered held-out run and not
+  a new mechanism, goes ahead before that look is for her word.
+- The rule for the ranges (the two-level draw), the 99.7 %, the cell-by-cell rules, the seed block, and the words
+  HOLDS / MISSES and REPEATS STAGE 1 / CHANGES are ours. They were written after stage 1 was read and before anything
+  at L = 16 existed.
+- O145's exact look (the pool's stored energy against 2a, which the saved rows cannot give) is not made before this
+  run; L = 16 is the registered held-out stage, not a new mechanism, and her go-ahead below is for it as written.
+
+**Our expectation (ours):** HOLDS AT L = 16, and REPEATS STAGE 1 for the three secondary reads. With the feed, the cap
+and the gate all proportional to N_slab, and one layer proposal a sweep whatever L is, the period is arithmetic by
+construction. The numbers most at risk are the ones set by rare clean switch moves at λ = 1.10, c = 2R, whose rate (4
+of 144 replicas at both L = 8 and 12) is too poorly known to say whether it grows with the points.
+
+Her prediction is ours (Amendment 5); L = 16 cannot separate them. What it tests is whether the kernel reproduces the
+stage-1 rates at a larger slab. The registered prediction she agreed to ("I agree with your t74 predictions",
+Amendment 5) already says "at every λ and size" (Amendment 2, item 5), and it is scored per cell at L = 16 as at
+stage 1.
+
+**Her word.** On the predictions sheet of 25 October (VISION Update 115; `sandbox/NOTEBOOK.md`): the size claim
+confirmed, "yes but the surplus matter . Confirm.", read as her caveat that the claim may not hold where energy piles up
+and pays the clean move (λ = 1.10, c = 2R), which is where the numbers above are most at risk. The sheet's separate line
+for the go-ahead was left blank; Update 115 read her "Confirm" as covering it. **The explicit go-ahead is of 26
+October**: asked whether to register and launch T74's held-out runs now, she answered "Yes please". No prediction of her
+own for L = 16 was given, so the registered prediction she agreed to (Amendment 5) is scored per cell as at stage 1, and
+the numbers above are the stage-1 fit, neither her prediction nor ours.
+
+*Sources:* the commands of the draft (`sandbox/heldout_2026-10-23/t74_heldout_amendment_draft_2026-10-23.md`, "Sources"),
+rerun 26 October: `t74_heldout_resample_2026-10-23.py`, `t74_heldout_twolevel_2026-10-23.py`,
+`t74_heldout_cells_2026-10-23.py`, `t74_l16_cells_2026-10-23.py` and `t74_seed_map_2026-10-23.py`, each reading the
+stage-1 files by name; their output matched the draft in every number quoted here.
 
 ## T78. In the published model's warm background, does a curled ring lose more entropy than a flat patch of the same nine squares, and does the gap grow with the background's deficit? (the owner's hypothesis of VISION Update 89, in the one form the finding of 22 October left alive: λ − 1 as an entropic surcharge on curl in a negatively curved background at a fixed coupling; `docs/outreach/finding_2026-10-22_background_curling_cost.md`, private; DRAFT written 2026-10-22 after the owner's prediction was given in chat and before any code or run; uncommitted until she says so)
 
@@ -8591,3 +9248,70 @@ In each case Eq. (45) is not a route from the toy's free energies (O107's knots 
 - The zero of Eq. (45)'s F: the intercept is not tested.
 - Whether Sec. IV.2's construction, which is stated for homogeneous maps in the limit N → ∞, applies point by point to finite graphs in the crossover. That application is ours.
 - Anything about the real universe.
+
+## T82. The twin gate: one gate, double the bill. Does the slab cycle with twin births, each twin exactly one curling cost, at twice the single gate's wait? (pieces 5 and 11; written 25 October 2026, before any registered run)
+
+**Why.** The owner's decisions of 25 October (VISION Update 120): each Big Bang makes two daughters, one with the
+matter surplus and one with the matching antimatter surplus, so the black hole stays neutral; each twin carries the full
+curling cost; and the parent waits until its stores hold twice the curling cost, then releases both twins at once. T71
+tested the single gate (one daughter per opening). This tests the twin gate on the same slab. **What it cannot test:**
+which twin has matter and which antimatter; the toy has no matter, so the twins are two equal ledgers. Every six-link
+result carries VISION Update 24's caveat and Update 95's statement that the published model's author advised against
+the six-link model.
+
+**Protocol.** T71's, with one change (`graphity.layer_feed`, release_to "twins", tested in
+`tests/test_layer_feed.py`): a downhill layer move fires only when the pool of the layers it touches holds the gate,
+2 a N_slab (a = 4(λ − 1), N_slab = 4L²), not spent; its release goes to one twin, and an equal amount is drawn from the
+same pool into the other twin, both in the same move; a pool that cannot pay the second twin refuses the move. Energy is
+conserved exactly with both ledgers counted. The slab 4 × L × L, untied, fed r per point per sweep at every point;
+λ = 1.10, 1.25, 1.40; r = 1/64 and 1/16; arm A the model (layer moves plus the clean two-switch move), arm B layer
+moves alone; 16 replicas a cell; max(2000, 80 a / r) sweeps (twice T71's, for twice the period); stage 1 at L = 8 and 12;
+held-out size L = 16 (rule 14). Configs `configs/t82_{model,layer}_lam{110,125,140}.json`, seeds 20268201 to 20268206;
+read with `scripts/analyse_t82.py`. *Ours, said plainly:* that the two twins of a birth are equal is true by
+construction (the second is drawn to match the first), so it is not scored.
+
+**Words per replica.** CYCLES (two or more births, each birth two twins, and at least one refold after the first),
+ONE BIRTH, NEVER SPLITS.
+
+**Predictions.** The owner's, given 25 October before any registered run, in her words beside each question of
+`docs/design/predictions_sheet_2026-10-25.md`, section 7 ("Keep cycling with twins"; "yes. agree."; "yes ... agree.";
+"agreed."; "yes"), and ours, which she agreed with in those words. The numbers below are ours, written to score the words, and were not shown to her *(corrected 25 October after the rule-22 audit, O157)*:
+- **P1.** CYCLES in at least 15 of 16 replicas in every cell.
+- **P2.** The median energy per twin is a N_slab to 1e-6 (relative) in every arm-B cell, and in every arm-A cell where no
+  clean move fired.
+- **P3.** The median first birth falls between 4a/r and 4a/r + 10 sweeps in every cell, at both sizes (T71's was 2a/r
+  plus at most a few sweeps). The median period between births is 1.7 to 2.3 times T71's median period in the same cell
+  (λ, L, r, arm), in every cell except λ = 1.10, r = 1/16, where T71's period was set by the chain's pace, not the feed.
+- **P4.** At λ = 1.10, r = 1/16, arm A: a clean move fires in at least as many replicas as in T71 (12 and 13 of 16 at
+  L = 8 and 12), and the median energy per twin, as a share of a N_slab, is at most T71's per daughter (0.987 and 0.895).
+- **P5 (held out).** The first birth and the period in sweeps do not change with size: the numbers and ranges for L = 16
+  are written as a dated amendment from L = 8 and 12 alone, before L = 16 runs.
+
+**Disclosures, written before any registered run.** (1) A scratch run to check the code (λ = 1.25, L = 8, r = 1/16,
+arm B, two replicas, not a result and not kept) was made before this section was written: first births at 67 and 70
+sweeps (4a/r = 64), 40 births each, median periods 29 and 30 against T71's 13 in that cell, a ratio of about 2.27.
+*Corrected after the rule-22 audit (O157):* the first version of this disclosure said "a period near 31, a ratio near
+2.4, outside P3's band", a rough reading from the totals; read with the analyzer the ratio is 2.27, inside the band
+by a hair. P3's first-birth window (+10 sweeps) and its period band were written after this scratch run, so neither
+is blind: T71's first births sat within 3 sweeps of their gate time, and a tighter window would have been the blind
+choice. The owner gave her predictions before the scratch run existed and has not seen it. A contraction never
+releases energy in this protocol (it re-curls a layer and raises F by a N_slab at μ_N = 0), so every birth is a split.
+(1b) **Hold:** T82 does not launch until the owner confirms the twin mechanism as built (the second twin drawn from
+the stores, not a second opening; O157). (2) *Ours, a doubt about P4:* a twin
+birth takes twice the energy out per layer move, so at λ = 1.10, r = 1/16 the time between births the feed allows
+(2a/r = 12.8 sweeps) is longer than the chain's measured pace (about 5), and the stores may stop piling up; P4 would then
+fail. It stays as she and we agreed it.
+
+**What would count against the twin gate.** CYCLES failing in cells where T71 cycled; twins short of a N_slab where no
+clean move fired; a first birth far from 4a/r. Four answers under rule 11 before any change.
+
+**T82, status (25 October 2026, before any run).** Not launched. The owner's answer to the twin-mechanism question (VISION
+Update 122) describes each twin as its own opening of its own curled direction, the second triggered by the first; T82
+tests the second twin drawn from the stores, which is not her mechanism. Whether to withdraw T82 is asked; until then it
+stays registered and unrun.
+
+**T82 WITHDRAWN (25 October 2026, the owner's word, "Withdraw t82"; VISION Update 123), before any run.** Its mechanism
+(the second twin drawn from the stores) is not hers; her twins are two openings in a cascade (Update 122). The configs,
+analyzer and code stay as written; nothing was launched, and the queue manifest drafted for it was never committed or
+pushed and is deleted.
+

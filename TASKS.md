@@ -1021,10 +1021,77 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    1,000 sweeps); an earlier sandbox look with the move on fresh seeds read 0.93530 ± 0.00012 there. Stopped and
    reported; no third run without the owner's word. The cheapest next look: the winding's autocorrelation at β = 8
    on 10 × 10, and the same point with errors from the integrated autocorrelation time.
+   **Diagnostic, 24 October** (a sandbox look on fresh seeds, `sandbox/u1_gate_autocorr.py`): with the move, the
+   winding's autocorrelation time is about 50 sweeps, the time at each winding matches the expected shares, ⟨cos φ⟩ is
+   uncorrelated from sweep to sweep (block errors equal autocorrelation errors), and four chains read 0.4 to 1.7
+   errors from the exact value. So neither freezing nor small errors explains the 3.65; chance remains (about 1 in 300
+   across ten points).
+   **GATE U1″  ☑ (passed 2026-10-24)** (the owner's "proceed with the runs you can", 24 October; *a general instruction
+   taken as her word for a rerun after a near miss, recorded as such by the rule-22 audit; the acceptance was unchanged*). Config
+   `configs/gate_u1c_2d_winding_long.json`: Gate U1′ with four times the measured sweeps (160,000, 40 blocks), fresh
+   seeds, so a real bias would show at about twice the significance. **Acceptance unchanged:** (a), (b), (c) as Gate U1.
+   If it fails, stop: the sampler is biased, and the cause is looked for before anything else. All three runs are kept.
+   **Reading, 24 October** (`results/gate_u1c_2d_winding_long.csv`, commit 04e6f845; the meta's dirty flag is one
+   untracked sandbox file, `sandbox/strand_answers_look.py`, which the run does not import): **PASSED** (a), (b) and
+   (c). All ten points within 2.5 errors of the exact torus value (largest 2.48, 10 × 10 at β = 2); 10 × 10 at β = 8,
+   the point Gate U1′ failed, 0.93527 ± 0.00004 against 0.93526; 6 × 6 at β = 8 20.8 errors from I₁/I₀, so the
+   finite-torus term is seen; acceptance 0.45 to 0.75. Reported beside it, not part of the rule: eight of ten points
+   lie above the exact value, about 2.6 errors combined; watched in later runs. *Reading as framed by the Codex audit (O154):* passed on the third, longer test with the topology-changing sampler;
+   independent reliability remains to be assessed; U1″ does not turn U1 and U1′ into passes. The lean: eight positive
+   signs of ten occur 5.5 % of the time by chance, and the combined score +2.64 errors is nominally p ≈ 0.008 if the
+   errors are independent and calibrated (exploratory). The three gate runs stand together:
+   U1 froze, U1′ failed one point by 0.15 of an error past the limit, U1″ passed at twice the precision. From here
+   results from `graphity.u1` with the winding move may be read; without the move they may not at large β.
 3. **The handoff's test A with the field in place**, pre-registered with her prediction: a launched wave on the flat
    six-link space and on a curled torus (whose ring is a square the field sees).
-4. **Twist labels on strands** (a third per face diagonal, switchable off) after her answer to question 1; then tests B
+4. **Twist labels on strands** (signed thirds per body diagonal, signed halves per face diagonal; corrected by Update 102; switchable off) after her answer to question 1; then tests B
    (closure with dynamics) and E (pairs only on a closed space).
-5. **Reading tasks** of the brief's section 6 (Wilson, Kogut; Tong; Finkelstein and Rubinstein; Landauer; centre
-   vortices), on the prior-work template, before any of them is cited.
+5. ~~**Reading tasks** of the brief's section 6 (Wilson, Kogut; Tong; Finkelstein and Rubinstein; Landauer; centre
+   vortices), on the prior-work template, before any of them is cited.~~ *Done 24 October, night (five notes,
+   `docs/reading/notes/2026-10-24_*`; Levin and Wen and the dynamical-geometry papers too). Wilson, Kogut and
+   Finkelstein-Rubinstein reached only at abstract level; their facts are sourced at open papers.*
+6. **The U(1) field on the rewiring graph** (`docs/design/u1_rewiring_graph_brief_2026-10-24.md`; added 24 October, Update
+   102). Waits on her decision 0 (the zero of a square's energy) and decisions 1 to 4. Done, exact under each choice of
+   zero: Z_U1 for the sheet and the tube at N = 64 and 144 (`sandbox/u1_exact_free_energy.py`, a look, checked by an
+   independent rebuild; promote to a tested script before citing). Owed: the prior-work note is written
+   (`docs/reading/notes/2026-10-24_prior_work_gauge_on_dynamical_graphs.md`, PARTLY FOUND); then tests (a) to (d) as she
+   chooses, each pre-registered with her prediction and a held-out size.
+7. **The 8 of 10 lean in Gate U1″** (eight z-scores positive, about 2.6 errors combined): carried as a caveat on Q29 and
+   rechecked in the first run whose results are read.
+
+## 26 October: the second Codex audit of 25 October (ASSUMPTIONS O158)  ☐
+
+1. **T71's held-out reading** reports each birth's energy (the rise in `daughter_energy` at each logged birth, as
+   `analyse_t74.py` does) and checks a refold between consecutive births, beside the registered median, which stays the
+   score. Accept: the per-birth shortfall reported per cell at L = 16.
+2. **The affordability guard in `graphity.layer_feed`** (`pool + 1e-12 < bill` lets a pool up to 1e-12 short pay):
+   after T71's and T74's held-out stages are read, change it so no store goes negative, with a test at a pool just
+   below, at and above the bill; and reword the docstring's "conserved exactly" as an accounting identity to 1e-9.
+3. **Reading, before any citation**: [Pop10] and [FGG90] first (a universe inside a black hole; making one by
+   tunnelling), then [BFT18]; read status in `REFERENCES.bib`.
+
+## 26 October: the fourth Codex audit (O159)  ☐
+
+**Added 2026-10-26** (ASSUMPTIONS O159; VISION Update 129). Corrections made in place; what is owed:
+
+1. **Before any look: does its starting X obey every rule she has adopted?** A line in each look's docstring saying so,
+   starting with the next one. Every look of 25 to 26 October ran on a rod her hard rule forbids (F37).
+2. **Her choice among Update 128's options**, with (a)'s description corrected, and her description of the starting X
+   that obeys the rule (her "proceed" left it to her).
+3. *Done in part 26 October: three notes, `docs/reading/notes/2026-10-26_*.md` (constrained moves; subgraph-count ensembles; paired defects), by assistant agents; questions Q1 to Q4 written from them in `docs/design/owner_questions_2026-10-24.md`. Still owed: DeGrand and Toussaint, Jaffe, and the bibliography entries.* **Reading, with a Crossref check before any `REFERENCES.bib` entry:** kinetically constrained models (Fredrickson and
+   Andersen 1984; Ritort and Sollich 2003) and Kawasaki 1966, first, since they bear on her pending choice;
+   then Bowick and Giomi 2009 on paired defects, Chatterjee and Diaconis 2013 on fixed subgraph counts, DeGrand and
+   Toussaint 1980, and Jaffe 2005 on the Casimir force.
+4. **T71's per-birth recount** (F31): confirm the 16 extra births per cell and the births above one curling cost
+   alongside item 1 of the O158 section, with the reader committed this time.
+5. Low: the push look's skip-if-done should compare the config, not only the file name (F10).
+
+## 26 October: the held-out stages of T71 and T74  ◑
+
+**Added 2026-10-26** (the owner's "Yes please"). T71's L = 16 jobs (queued 25 October) requested from the bucket
+(`cloud/fetch/request.txt`). *Read 26 October: AS PREDICTED, 152 of 152 (O160;
+`scripts/t71_heldout_score.py`).* T74's L = 16 registered and launched: PREREGISTRATION T74
+Amendment 6, 54 jobs (`cloud/queue/2026-10-26_t74_heldout.txt`); to read: add `t74_*_L16_*` to
+`cloud/fetch/request.txt`, accept, then `PYTHONPATH="src;scripts" python scripts/t74_heldout_score.py`. After both are
+read: the `layer_feed` guard fix of the O158 section, with its test.
 

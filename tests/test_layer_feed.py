@@ -76,3 +76,44 @@ def test_the_lump_leaves_one_way_into_a_daughter_and_the_slab_reforms():
     for row in rows:
         assert row[3] + row[4] <= first["f0"] + row[5] + 1e-9
     brute_ok(final)
+
+
+def test_twins_one_gate_double_the_bill():
+    """VISION Update 120: the gate waits for twice the curling cost, then both twins leave at once, each exactly a N_slab,
+    the second paid from the pool beside the cut. Conservation with both ledgers, births in pairs in one sweep, the
+    first birth no earlier than 4a / r, same-seed reproducibility, a valid end state."""
+    st = C.build((4, 6, 6))
+    lam = 1.25
+    a = 4.0 * (lam - 1.0)
+    rate = 1.0 / 16
+    args = dict(rate=rate, n_sweeps=400, seed=3, gate=2 * a * st.n, leak=0.0, move_set="layer", max_width=8,
+                release_to="twins", log_every=1)
+    final, rows, first = LF.run_layer_feed(st, lam, **args)
+    again, rows_b, first_b = LF.run_layer_feed(st, lam, **args)
+    assert rows == rows_b and first == first_b
+    for res, row in zip(LF.conservation_residuals(first["f0"], rows), rows):
+        assert abs(res) < 1e-9 * max(1.0, row[5])
+    last = rows[-1]
+    assert last[13] >= 4 and last[13] % 2 == 0 and last[8] >= 1      # two births or more, a refold between
+    assert last[14] == pytest.approx(last[13] * a * st.n)            # every twin is exactly a N_slab
+    assert last[13] == 2 * last[7]                                     # every birth is a split, two twins each
+    total_stores_drawn = last[5] - last[6] - last[4]                  # fed - leaked - stores left
+    assert total_stores_drawn == pytest.approx(last[8] * a * st.n + (last[13] // 2) * a * st.n, abs=1e-6)
+    # the stores paid each refold (a N_slab) and each second twin (a N_slab), nothing else
+    assert first["first_split"] >= 4 * a / rate                       # the pool of two layers holds 2 a N_slab
+    brute_ok(final)
+
+
+def test_twins_refuse_a_birth_the_pool_cannot_pay():
+    """With no gate, a twin birth still needs the pool to pay the second twin: the first split waits until the two
+    layers beside the cut hold a N_slab (2a / r sweeps), where a single daughter would split at once."""
+    st = C.build((4, 6, 6))
+    lam = 1.25
+    a = 4.0 * (lam - 1.0)
+    rate = 1.0 / 16
+    common = dict(rate=rate, n_sweeps=120, seed=5, gate=0.0, leak=0.0, move_set="layer", max_width=8, log_every=1)
+    _, _, single = LF.run_layer_feed(st, lam, release_to="daughter", **common)
+    _, rows, twins = LF.run_layer_feed(st, lam, release_to="twins", **common)
+    assert single["first_split"] < 2 * a / rate <= twins["first_split"]
+    for res, row in zip(LF.conservation_residuals(twins["f0"], rows), rows):
+        assert abs(res) < 1e-9 * max(1.0, row[5])
