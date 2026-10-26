@@ -2493,4 +2493,5 @@ y "a rod between two curled slabs," do you mean two curled slabs of opposite han
 The toy can’t yet tell right-handed from left-handed. That needs the signed twist label from 24 October, or soft space’s second stage. Let’s keep proceeding towards this goal. 
 
 2.	T1e: Bring back a tie for the pair, so that curling two directions costs the same as curling one? Yes, anything we can check sandbox before pivoting?"
+- 2026-10-26, the owner (verbatim; VISION Update 125): "We need to do 1. If it seems worth exploring later we can do 2"
 

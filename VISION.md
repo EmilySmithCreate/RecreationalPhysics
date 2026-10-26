@@ -4220,3 +4220,15 @@ the pair tie, opening the first direction lowers the second's wall from λ of ab
   mechanism names next is a concentrated push into the rod (the local spark, Q22), with breaking priced (a tie entry for
   d > 3) as the question the breakage raises.
 
+Update 125 (2026-10-26): **DECISION (the author's): the push look first; pricing broken points in the tie only if it
+later seems worth it.** Her words are in `sandbox/NOTEBOOK.md` under that date ("We need to do 1. If it seems worth
+exploring later we can do 2").
+
+- **The push look** (`sandbox/pair_tie_push_look.py`, a sandbox look, rule 16): the rod 4 × 4 × 18 sealed, one push of
+  E = 32, 64, 128, 256 or 512 packed into one point's store under the per-vertex bath, so released energy stays where it
+  is released; the pair tie at λ = 1.20, 1.25, 1.40, untied controls at 1.25 and 1.40; four replicas, 10,000 sweeps.
+  The push sizes bracket the tied single-move wall (about 26 to 29) and the first opening's seam (about 180). Read per
+  replica at the end with the bath look's words (BOTH OPEN, FIRST ONLY, STAYS, BREAKS), declared in the script before
+  the run. *Inferred from her picture, not given by her:* BOTH OPEN once the push pays the first opening. Option 2, a
+  tie entry for broken points, is held (S1: a new energy choice, hers).
+
