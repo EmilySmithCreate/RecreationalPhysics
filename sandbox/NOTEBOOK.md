@@ -2497,4 +2497,5 @@ The toy can’t yet tell right-handed from left-handed. That needs the signed tw
 - 2026-10-26, the owner (verbatim; VISION Update 127; her message was cut off by an interrupt and is recorded as it arrived): "Into its waves and travel away from the spot - where do the waved go in the black hole? what happens to them?
 
 My unchecked reading is that a broken point is space bent the wrong way around that point -> the wrong way around is a anticurl to its curl and they always come in pairs. so maybe "breakage" is actually more opening?"
+- 2026-10-26, the owner (verbatim; VISION Update 128): "proceed"
 

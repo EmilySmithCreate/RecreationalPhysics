@@ -4315,3 +4315,27 @@ hole, and is "breakage" anticurl, more opening?** Her words are in `sandbox/NOTE
   sandbox look on 100 end states; it kills "the leftover curl sits paired beside the anticurl" for these runs and
   crowns nothing.
 
+Update 128 (2026-10-26): **the author's "proceed": her hard rule at six links, looked at exactly before any X is built
+under it. The published move cannot move clean space under it.** Her word is in `sandbox/NOTEBOOK.md` under that date;
+it took up the suggestion of Update 127 (build the hard rule for six links, then a rod carrying anticurl equal to its
+curl, then the push).
+
+- **Exact** (`sandbox/hard_rule_moves_look.py`, `sandbox/hard_rule_pairs_look.py`; complete over what they cover).
+  (1) Out of flat six-link space (the 6 × 6 × 8 torus) no single switch keeps the number of squares: every one of the
+  3,514 from a point loses 4 to 8. Out of the rod, the same: 4 to 10. (2) The hard rule as decided also allows moves
+  paired so that the count returns (Update 105). Every pair out of flat space whose second switch lies within two links
+  of the first and restores the count puts the space back exactly as it was. (3) In the push look's damaged end states
+  (curl and anticurl both near 200) a few switches keep the count, 84 to 114 in about 550,000, so under the rule a
+  damaged state moves, rarely, and a clean one not at all.
+- **What it means** (*ours*). Under the hard rule with the published move, perfectly ordered arrangements, flat or
+  curled, are frozen: nothing can start in them, and an X that obeys the rule can move only where it is already
+  irregular. Opening X into flat space under the rule needs a move that goes through intermediate states with a
+  different count and comes back, longer than two switches, or a rule that lets the count wander and pulls it back. Not
+  shown: that no three-or-more-switch move exists; the search stopped at two.
+- **Asked of her, before anything is built** (*the options, ours*). (a) **The soft form** (Update 105 (ii)): an energy
+  μ(S − 3N)² that makes leaving the zero total costly but possible, μ scanned. With μ large it behaves like the hard rule
+  with excursions of any length allowed, which is what "paired so that S returns" needs when the pair must be long.
+  (b) **The hard rule with longer compound moves**: an exact search for three-switch moves first; costly, and it may find
+  none. (c) **The hard rule kept, X built from the push look's damaged states**, which nearly obey it; they move, but
+  they are not a clean X.
+
