@@ -4243,6 +4243,19 @@ exploring later we can do 2").
   replica at the end with the bath look's words (BOTH OPEN, FIRST ONLY, STAYS, BREAKS), declared in the script before
   the run. *Inferred from her picture, not given by her:* BOTH OPEN once the push pays the first opening. Option 2, a
   tie entry for broken points, is held (S1: a new energy choice, hers).
+- **The push look, read.** **No replica of 100 ended BOTH OPEN; her inferred BOTH OPEN fails at every setting run.**
+  Under the pair tie the rod STAYS at λ = 1.20 (every push, every replica) and at 1.25 (one BREAKS, at the largest push,
+  512); at λ = 1.40 it STAYS up to a push of 64, BREAKS in one replica of four at 128 and in all eight at 256 and 512.
+  Untied it BREAKS at λ = 1.40 from the smallest push (32), in all twenty, and at 1.25 in about half, all four at 512.
+  Energy balanced to 7e-13 in every run. *Ours, from the counts:* (1) the tie does what the walls and patches said:
+  untied, the first opening releases a curling cost a point and feeds itself, so even a push of 32 runs away at
+  λ = 1.40; under the tie the first opening releases nothing (the plateau), so the push alone must carry it, and below
+  about 256 it does not. (2) Where the tied rod did open, the second direction followed more often: among opened points
+  41 to 71 % reached both directions open, against about a third untied at the same λ, her cascade in kind. (3) But a
+  fifth to a third of all points broke in every run that opened, tied or untied, so the space that opens is a damaged
+  one. *Said plainly:* a sandbox look (rule 16). It kills, at these settings, "one concentrated push opens both
+  directions cleanly under the pair tie", and crowns nothing; what stands in the way every time is the breakage the tie
+  does not price, which is the held option 2 (a tie entry for broken points), hers to decide.
 
 Update 126 (2026-10-26): **the independent audit by a different model (Codex) of the later record of 25 October,
 recorded, and the corrections it asked for.** Why this page changes: rule 12's red-team pass for Updates 113 to 120,
