@@ -9,6 +9,10 @@ the first's four points, that brings the square count back exactly, and is not t
 the way must obey the hard-core rule. For each pair: the change in curl, in anticurl, and dH at lambda = 1.25
 (H = 4 anticurl + 4 (lambda - 1) curl, exact). Read: does the rule allow any paired move out of flat space, and does
 it make curl and anticurl together, as her picture asks.
+
+    python sandbox/hard_rule_pairs_look.py damaged <end-state .npz>
+
+counts the count-keeping single switches in a saved end state of the push look.
 """
 import sys
 from collections import Counter
@@ -68,9 +72,14 @@ def second_moves(adj, ball, part, need, f_u1, f_v1, f_u2, f_v2, out):
                     ok, ds = try_switch(adj, a1, b1, a2, b2)
                     if not ok:
                         continue
-                    # undoing the first switch exactly is (u1, v2, u2, v1) in either order
+                    # undoing the first switch removes (u1, v2) and (u2, v1); written from the u side it is
+                    # (u1, v2, u2, v1) in either order, from the v side (v2, u1, v1, u2) in either order.
+                    # Corrected 26 October (O159; Codex F21): the v-side form was missing, so every "restoring
+                    # pair" the first version found was the undo.
                     undo = ((a1 == f_u1 and b1 == f_v2 and a2 == f_u2 and b2 == f_v1) or
-                            (a1 == f_u2 and b1 == f_v1 and a2 == f_u1 and b2 == f_v2))
+                            (a1 == f_u2 and b1 == f_v1 and a2 == f_u1 and b2 == f_v2) or
+                            (a1 == f_v2 and b1 == f_u1 and a2 == f_v1 and b2 == f_u2) or
+                            (a1 == f_v1 and b1 == f_u2 and a2 == f_v2 and b2 == f_u1))
                     if ds == need and not undo and m < out.shape[0]:
                         out[m, 0] = a1
                         out[m, 1] = b1
@@ -113,6 +122,10 @@ def ball_of(adj, seeds, radius):
     return np.array(sorted(seen), dtype=np.int64)
 
 
+def edge_set(adj):
+    return {(min(u, int(v)), max(u, int(v))) for u in range(adj.shape[0]) for v in adj[u]}
+
+
 def survey(name, dims, radius):
     adj0, part = torus(dims)
     part = np.asarray(part, dtype=np.int64)
@@ -121,6 +134,8 @@ def survey(name, dims, radius):
     out = np.empty((200000, 4), dtype=np.int64)
     found = Counter()
     firsts = Counter()
+    e0 = edge_set(adj0)
+    back = 0
     n_first = 0
     for v1 in adj0[0]:
         for u2 in side:
@@ -137,15 +152,54 @@ def survey(name, dims, radius):
                 for r in range(m):
                     b = adj.copy()
                     try_switch(b, *[int(x) for x in out[r]])
+                    back += edge_set(b) == e0
                     c, a = curl_anti(b)
                     found[(c - c0, a - a0, round(4 * (a - a0) + 4 * (LAM - 1) * (c - c0), 2))] += 1
     print(f"{name} {dims}, radius {radius}: {n_first} first switches from point 0; "
           f"{sum(firsts.values())} of them have a second switch that restores the count")
+    print(f"  restoring pairs found: {sum(found.values())}, of which {back} return the starting edge set exactly")
     print(f"  first switches with a partner, by their dS: {dict(sorted(firsts.items()))}")
     for k, n in sorted(found.items(), key=lambda kv: kv[0][2])[:25]:
         print(f"    (change in curl, change in anticurl, dH at lambda 1.25) {k}: {n} ordered pairs")
 
 
+def damaged(path):
+    """Count-keeping single switches in a saved end state, each switch counted once (u1 < u2). Added 26 October (O159;
+    Codex F22): Update 128's counts of 84, 114 and 28 came from an uncommitted scratch script that counted each switch
+    four times (both orders, and both sides of the bipartition)."""
+    z = np.load(path)
+    adj0 = np.asarray(z["adj"], dtype=np.int64)
+    part = np.asarray(z["part"], dtype=np.int64)
+    c0, a0 = curl_anti(adj0)
+    lam = float(z["lam"]) if "lam" in z else LAM
+    legal = keep = 0
+    dh = Counter()
+    n = adj0.shape[0]
+    # a switch written from side 0 is the same switch written from side 1, so side 0 only, u1 < u2
+    for u1 in range(n):
+        if part[u1] != 0:
+            continue
+        for u2 in range(u1 + 1, n):
+            if part[u2] != 0:
+                continue
+            for v1 in adj0[u1]:
+                for v2 in adj0[u2]:
+                    adj = adj0.copy()
+                    ok, ds = try_switch(adj, u1, int(v1), u2, int(v2))
+                    if not ok:
+                        continue
+                    legal += 1
+                    if ds == 0:
+                        keep += 1
+                        c, a = curl_anti(adj)
+                        dh[round(4 * (a - a0) + 4 * (lam - 1) * (c - c0), 2)] += 1
+    print(f"{path}: curl {c0}, anticurl {a0}; {legal} legal switches, {keep} keep the count "
+          f"(each counted once); dH at lambda {lam}: {dict(sorted(dh.items()))}")
+
+
 if __name__ == "__main__":
-    r = int(sys.argv[1]) if len(sys.argv) > 1 else 2
-    survey("flat", [6, 6, 8], r)
+    if len(sys.argv) > 1 and sys.argv[1] == "damaged":
+        damaged(sys.argv[2])
+    else:
+        r = int(sys.argv[1]) if len(sys.argv) > 1 else 2
+        survey("flat", [6, 6, 8], r)

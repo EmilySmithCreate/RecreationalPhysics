@@ -4577,3 +4577,81 @@ author and should be disclosed as such in any submission. Physics estimates mark
     twist after (Updates 118, 119). Two were out of date at the current commit: T82 is withdrawn and RB3 is decided (the
     spin sorts a dipole's direction, each twin neutral; Update 123). It ran no repository code, so its test-coverage
     findings come from reading.
+- **O159 AUDIT (rule 12, a different model): Codex on the record of 25 to 26 October (26 October 2026).** Brief
+  `docs/reviews/2026-10-26_codex_audit_brief.md`, pinned to 29afa5c9; report `docs/reviews/2026-10-26_codex_report.md`,
+  pasted in by the owner the same day. It read the pinned commit in a detached worktree, ran the exact looks and four
+  test files (71 passed), read the bath and push looks' saved outputs instead of re-running them, and wrote its own
+  findings before reading O157, O158 or the earlier reports. Corrections in place in VISION Updates 124, 125, 127 and
+  128, marked "O159"; summary in Update 129.
+  - **What it found, rechecked here** (each by a run of this session; `sandbox/hard_rule_pairs_look.py` as corrected,
+    and a scratch script for the rest).
+    (a) **The pair search's undo exclusion was wrong (F21).** `second_moves` excluded the undo only in the form
+    (u1, v2, u2, v1); the same undo written from the other side, (v2, u1, v1, u2), was not excluded, and every one of
+    the 3,514 "restoring pairs" was it. Corrected (both forms excluded) and rerun: 0 restoring pairs at radius 1 and
+    at radius 2. The script now also compares edge sets, which the LOG's "(checked by edge set)" named and the committed
+    script did not do (that check was a scratch script). Update 128's bottom line stands in a stronger form.
+    (b) **Update 128's damaged-state counts came from an uncommitted scratch script and were each counted twice (F22).**
+    A switch written from side 0 is the same switch written from side 1. Now committed
+    (`hard_rule_pairs_look.py damaged <end state>`), counted once: untied λ = 1.40, E = 512, replica 0 (curl 202,
+    anticurl 206): 42 of 274,248 legal switches keep the count; pair tie λ = 1.40, E = 512, replica 2 (185 / 205): 57 of
+    272,560; pair tie λ = 1.25, E = 512, replica 0 (493 / 61): 14 of 282,861. Codex had the first and third.
+    (c) **The rod's wall under the pair tie is a break (F5).** The cheapest switch from point 0, 28.0 at λ = 1.25 and
+    25.6 at 1.40 (24 switches), leaves the census d1 / d2 / d3 / broken = 272 / 12 / 0 / 4, the end state of 17 push
+    replicas; the cheapest clean opening, 276 / 8 / 4 / 0, costs 32.0 at both λ (12 switches).
+    (d) **Update 127's anticurl shares (F15, F16, F17).** Over the 95 end states with a broken point and anticurl, the
+    share of anticurl on links touching a broken point is below 0.85 in 16, minimum 0.27; four states (pair tie,
+    λ = 1.20, E = 64 and 128) carry anticurl of 8 to 16 with no broken point. The links within one link of a broken
+    point are 63 to 99 % of all links in the runs that broke, so "beside the broken points" has almost no contrast;
+    the curl's share there over the links' share is 0.90 to 1.01 untied at λ = 1.40, 0.69 to 0.96 untied at 1.25, 0.42
+    to 0.94 tied (Codex's untied 1.40 range, 0.95 to 1.01, used a slightly different cut; same reading). The runs that
+    moved least end at curl minus anticurl 552, not 200 to 430.
+    (e) **The bath look's one BREAKS state lies below the rod (F7):** 3.05 a point with the tie counted against 3.20
+    (the CSV's `h_per_vertex` column leaves the tie out). Under the pair tie at λ = 1.40 the rod is unstable toward
+    breaking in a warm bath, only slow.
+    (f) **The slab's pair-tie series at λ = 1.40 is FIXED WALL** by the script's own word (26, 26, 0, ...), not a
+    critical patch (F6). And at N = 18 in two dimensions the rule-keeping classes are joined by count-keeping single
+    switches (`sandbox/out/zero_total_rule_reach_n18.txt`), so "frozen" belongs to the large flat torus, not to the rule
+    (F23).
+  - **What it found by reading, accepted.** (g) Her answer of 25 October (T1e) was a conditional, "If each curled
+    direction carries its own curling cost yes…"; Update 124 had it as an affirmation (F6 of the summary; F25). (h) The
+    pair tie releases nothing at the first opening and 2a at the second, so "half each" is a split by fiat (F3); the gas
+    of 6-cubes costs 3a under it (F2); a slab that was never a rod now costs 2a (F2). (i) Every rod look ran on a state
+    her hard rule forbids, and under the rule the energy of curling is 4λ a unit (F19, F37). (j) The soft form does not
+    allow excursions of any length; it prices them by roughly the square of their depth (F24). (k) Tied and untied
+    push cells differ in seed by 1,000, and under the tie the follow-on is the tie's energy acting (F11); "one push"
+    is one point's store, spent only by that point (F13). (l) Update 127's "soft space's waves" was our fill-in, and the
+    answer was about a field the push look does not run (F28). (m) The bath seed collision (F12), no consequence.
+    (n) The push look keys its skip-if-done on the file name only, so a smoke run could have replaced a full cell; it
+    did not (F10).
+  - **Her "proceed" (F27).** The sentence she answered, from the assistant's reply of 26 October: "Pricing broken
+    points (option 2) would penalize the very anticurl your rule says belongs there. I'd instead build the hard rule for
+    six links first, build a rod that carries anticurl equal to its curl from the start, and give that one the push.
+    Your call, and the shape of that starting X would be yours to describe." The hard-rule looks are an exact check
+    before that build, and the shape of the starting X is still hers to describe.
+  - **On O158 (F30, F31, F33).** Two details added, Codex's readings, not rechecked here: its recount of T71 finds 16
+    more births in each clean-switch cell (5,148 and 4,620; one per replica, probably the first logged row, which our
+    scratch script skipped), with the same shortfall counts; and some births exceed one curling cost (1.25 at L = 8).
+    O158 left out the second Codex report's remark that `tests/test_layer_feed.py:93` checks a seed-dependent property
+    as if universal. When T71's and T74's held-out stages are read, the record names the commit they ran (TASKS, 6
+    October section, item 5, the hash in `.meta.json`, is still owed).
+  - **What it checked and found correct.** The pair tie's arithmetic; every wall and patch energy, to the digit; the
+    bath and push readings against their files, every cell complete, drift at most 6.8e-13; the words declared before
+    the runs; the identity H = 4 anticurl + 4(λ − 1) curl; the single-switch counts and vertex-transitivity on both
+    sides; the in-place corrections of O158; the nine bibliography entries; the physics from memory, with one caution
+    added: the Casimir force has a derivation that does not use vacuum energy (Jaffe 2005, to verify), so it is weaker
+    evidence for fleeting pairs than the Lamb shift.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. One range differs slightly
+    from ours by the cut used ((d)). It did not run the bath or push looks (it read their outputs), did not reach
+    Crossref, and did not run the 185 / 205 damaged state.
+  - **Published work it names, to read** (none read; all "to verify"): Kawasaki 1966 and kinetically constrained models
+    (Fredrickson and Andersen 1984; Ritort and Sollich 2003) for moves that keep a global count, where ordered regions
+    freeze and only defects move; exponential random graphs with a fixed subgraph count (Strauss 1986; Park and Newman
+    2004; Chatterjee and Diaconis 2013), known to degenerate into very ordered or very disordered graphs; disclinations
+    and dislocations (Kosterlitz and Thouless 1973; Halperin and Nelson 1978; Young 1979; Nelson 2002; Bowick and Giomi
+    2009; Seung and Nelson 1988), where on a torus positive and negative defects must balance, the closest published
+    form of her "curl and anticurl always come in pairs" (O156's caution applies: the toy has no surface); universes
+    from black holes (Frolov, Markov and Mukhanov 1989, 1990; Easson and Brandenberger 2001; Smolin 1992; Pathria 1972);
+    Sakharov 1967 and Cohen, De Rújula and Glashow 1998 on matter and antimatter; lattice monopoles (DeGrand and
+    Toussaint 1980; Banks, Myerson and Kogut 1977; Polyakov 1975; Guth 1980). Added to `REFERENCES.bib` only after a
+    Crossref check (TASKS).
+

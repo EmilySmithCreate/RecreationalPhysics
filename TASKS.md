@@ -1070,3 +1070,19 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
 3. **Reading, before any citation**: [Pop10] and [FGG90] first (a universe inside a black hole; making one by
    tunnelling), then [BFT18]; read status in `REFERENCES.bib`.
 
+## 26 October: the third Codex audit (O159)  ☐
+
+**Added 2026-10-26** (ASSUMPTIONS O159; VISION Update 129). Corrections made in place; what is owed:
+
+1. **Before any look: does its starting X obey every rule she has adopted?** A line in each look's docstring saying so,
+   starting with the next one. Every look of 25 to 26 October ran on a rod her hard rule forbids (F37).
+2. **Her choice among Update 128's options**, with (a)'s description corrected, and her description of the starting X
+   that obeys the rule (her "proceed" left it to her).
+3. **Reading, with a Crossref check before any `REFERENCES.bib` entry:** kinetically constrained models (Fredrickson and
+   Andersen 1984; Ritort and Sollich 2003) and Kawasaki 1966, first, since they bear on her pending choice;
+   then Bowick and Giomi 2009 on paired defects, Chatterjee and Diaconis 2013 on fixed subgraph counts, DeGrand and
+   Toussaint 1980, and Jaffe 2005 on the Casimir force.
+4. **T71's per-birth recount** (F31): confirm the 16 extra births per cell and the births above one curling cost
+   alongside item 1 of the O158 section, with the reader committed this time.
+5. Low: the push look's skip-if-done should compare the config, not only the file name (F10).
+

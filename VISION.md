@@ -4185,24 +4185,33 @@ opposite handedness joined by a rod; proceed toward a twist the toy can tell rig
 the pair tie, opening the first direction lowers the second's wall from λ of about 1.2 up.** Her words are in
 `sandbox/NOTEBOOK.md` under that date.
 
-- **Hers.** Yes, each curled direction carries its own curling cost; and the tie comes back, adjusted to apply to two:
+- **Hers.** If each curled direction carries its own curling cost, yes; and the tie comes back, adjusted to apply to two:
   two space directions collapse together, leaving a knot, which builds up curl until it snaps into two new
   three-direction spacetimes, one at the north pole and one at the south pole, the centre keeping mismatched curl and
   anticurl because it moves through a soft body to the opposite-handed pole. T1a′: yes, two curled slabs of opposite
   handedness joined by a rod, each slab opening into one twin. Keep proceeding toward a twist the toy can tell right from
-  left (the signed label of Update 97, or soft space's second stage).
+  left (the signed label of Update 97, or soft space's second stage). *(Corrected 26 October, O159: her words are a
+  conditional, "If each curled direction carries its own curling cost yes…"; that each direction does carry its own
+  cost is the assistant's reading of the condition, not her statement.)*
 - **The pair tie, its form fixed here before any run** (*ours, her decision; to confirm*): a point with exactly one of the
   pair's two curled directions open pays a, the curling cost of one direction; f = (0, 0, a, 0) per point by the number
   of open directions d = 0, 1, 2, 3 (a = 4(λ − 1); a broken point counts 0). Then the rod (two curled) and the slab (one
   curled) both sit 2a per point above flat: curling two costs the same as curling one, and each direction still carries
   its own cost. Opening the first releases nothing; opening the second releases 2a per point, one curling cost for each
-  twin, half each, as she said. The model with it is our family, never CQG.
+  twin, half each, as she said. The model with it is our family, never CQG. *(Corrected 26 October, O159: the tie
+  gives her total and her ordering, not a release per twin. The first opening releases nothing to anyone and the
+  second all 2a, so "half each" splits the second release by fiat; a release per twin would need something the toy
+  does not have. "Curling two costs the same as one" holds for one and two only: the gas of 6-cubes, three curled,
+  costs 3a. And under this tie a slab that was never a rod (T56's X) costs 2a a point where it cost a.)*
 - **The exact look** (`out/pair_tie_walls.txt`; the cheapest single switch out of each shape, the method of O106). Rod
   against slab: 30.4 against 36.8 at λ = 1.10, 29.6 against 31.2 at 1.15, 28.8 against 25.6 at 1.20, 28.0 against 20.0
   at 1.25, 25.6 against 3.2 at 1.40; flat space 64 throughout. Untied the slab's wall is always the higher (36.0 against
   16.0 at 1.25), which is why the second direction never followed in T30, T48 and T53. **Under the pair tie, from λ of
   about 1.2 up, the second wall is lower than the first: once the first direction opens, the second goes more easily,
-  her cascade, at the level of single moves; and the rod's own wall rises, so the twin X is more stuck for now.** Below
+  her cascade, at the level of single moves; and the rod's own wall rises, so the twin X is more stuck for now.**
+  *(Corrected 26 October, O159, exact: the rod's cheapest switch is a break, not an opening. At 28.0 (λ = 1.25; 25.6
+  at 1.40) it leaves 4 broken points and 12 with one direction open, the state 17 of the push look's 100 replicas
+  ended in. The cheapest clean opening, four points fully open and none broken, costs 32.0 at both λ.)* Below
   about 1.17 it is the other way. *Said plainly:* single-move walls are not the true barrier (T54 found critical patch
   sizes); this kills nothing and crowns nothing.
 - **What can be checked next in the sandbox, before any pivot** (*ours*): (1) the true barrier under the pair tie, by
@@ -4214,7 +4223,10 @@ the pair tie, opening the first direction lowers the second's wall from λ of ab
   λ = 1.15, 1.20, 1.25 and 1.40**, against 288 to 488 or more untied below 1.40 (128 at 1.40). **The first opening
   (the rod's)** costs a seam of about 176 to 192 and then a level plateau: under the pair tie each further row releases
   nothing, so nothing drives the first opening on once it has started, until the last row closes the seam. So by these
-  patches the second barrier is below the first at every λ tried, 1.15 included (the single moves had put the crossover
+  patches the second barrier is below the first at every λ tried, 1.15 included *(O159: at 1.40 the script's own word
+  for the slab is FIXED WALL, 26 at one and two columns, not a critical patch; and the comparison is between a
+  k × k patch and whole rows, neither shown to be the cheapest path, and completed-patch energies are not barriers,
+  O118)* (the single moves had put the crossover
   near 1.2): once the first direction has opened, the second is the easier of the two, her cascade. *Said plainly:* two
   different patch shapes, neither shown to be the cheapest path; the plateau means the first opening must cross the
   whole rod with no push from its own release; and the tie charges a broken point nothing, which let T56's tied slab
@@ -4226,7 +4238,10 @@ the pair tie, opening the first direction lowers the second's wall from λ of ab
   pays a seam of about 180 with nothing to drive it on; a steady bath is not the trigger her picture names (the black
   hole's push is). **One replica, λ = 1.40, g = 2.5, BREAKS by the declared rule:** it sat unchanged to sweep 15,000,
   then within 3,000 sweeps reached 68 points fully open (d = 3), 26 with one direction open, and 74 broken, and rested
-  there. So where an opening did start, the second direction followed the first quickly, her cascade in kind, and the
+  there. *(O159: that state ends at 3.05 a point with the tie counted, below the rod's 3.20, so under the pair tie at
+  λ = 1.40 the rod is not stuck for now against a warm bath, only slow. The bath look's seed formula also gave
+  λ = 1.20, g = 2.5 and λ = 1.40, g = 1.5 the same seed; both cells STAY, no consequence.)* So where an opening did
+  start, the second direction followed the first quickly, her cascade in kind, and the
   breakage kept pace with it, as in T56's tied slab: the tie charges a broken point nothing (O115). *Said plainly:* one
   replica, a sandbox look; it kills the steady bath as the trigger at these settings and crowns nothing. What her
   mechanism names next is a concentrated push into the rod (the local spark, Q22), with breaking priced (a tie entry for
@@ -4251,9 +4266,14 @@ exploring later we can do 2").
   untied, the first opening releases a curling cost a point and feeds itself, so even a push of 32 runs away at
   λ = 1.40; under the tie the first opening releases nothing (the plateau), so the push alone must carry it, and below
   about 256 it does not. (2) Where the tied rod did open, the second direction followed more often: among opened points
-  41 to 71 % reached both directions open, against about a third untied at the same λ, her cascade in kind. (3) But a
+  41 to 71 % reached both directions open, against about a third untied at the same λ, her cascade in kind.
+  *(O159: the tied and untied cells used seeds 1,000 apart, so they match in λ and push, not in random stream; and
+  under the pair tie a point with one direction open pays a that a fully open point does not, so the follow-on is
+  the tie's own energy acting, not an independent sign.)* (3) But a
   fifth to a third of all points broke in every run that opened, tied or untied, so the space that opens is a damaged
-  one. *Said plainly:* a sandbox look (rule 16). It kills, at these settings, "one concentrated push opens both
+  one. *(O159: "one push into the rod" is one push into one point of one side, which only that point can spend
+  (Q22); its cheapest move is the same every time, a break (Update 124, corrected), which is why 17 replicas ended in
+  the identical state. The breakage is already in the first move.)* *Said plainly:* a sandbox look (rule 16). It kills, at these settings, "one concentrated push opens both
   directions cleanly under the pair tie", and crowns nothing; what stands in the way every time is the breakage the tie
   does not price, which is the held option 2 (a tie entry for broken points), hers to decide.
 
@@ -4286,7 +4306,9 @@ place carry "O158".
 Update 127 (2026-10-26): **the author's two questions on the push look: where would soft space's waves go inside a black
 hole, and is "breakage" anticurl, more opening?** Her words are in `sandbox/NOTEBOOK.md` under that date.
 
-- **Hers.** If the push leaks into soft space's waves, where do the waves go in the black hole? And: space bent the wrong
+- **Hers.** If the push leaks into soft space's waves, where do the waves go in the black hole? *(O159: "soft
+  space's" is our fill-in; her fragment begins "Into its waves and travel away from the spot". The answer below is
+  about soft space's field, which the push look does not run.)* And: space bent the wrong
   way around a point is an anticurl to its curl, and the two always come in pairs, so maybe breakage is really more
   opening.
 - **The waves** (*ours*). In the toy the rod is sealed and closed, so waves leaving the spot travel round it and come
@@ -4298,44 +4320,91 @@ hole, and is "breakage" anticurl, more opening?** Her words are in `sandbox/NOTE
   (Update 77).
 - **Breakage and anticurl, a look** (`sandbox/breakage_anticurl_look.py`; the push look's saved end states, no new
   run; exact counts). (1) **A broken point is where the anticurl sits:** 85 to 100 % of all anticurl is on links touching
-  a broken point. And by its count a broken point has more open directions than flat space, so in that sense breakage
+  a broken point. *(Corrected 26 October, O159, rechecked over all 100 end states: so in 79; below 85 % in 16, down to
+  27 %; and four states carry anticurl, 8 to 16, with no broken point at all, at points with two or three directions
+  open. Anticurl is mostly, not only, where d > 3.)* And by its count a broken point has more open directions than flat space, so in that sense breakage
   is opening past flat, as she says. (2) **But it is not free and it is not paired in place.** By the toy's energy,
   H = 4 × anticurl + 4(λ − 1) × curl (exact: the published term 16(3N − S) is 4 × (anticurl − curl)), so a unit of
   anticurl costs 4 while a unit of curl costs 1.6 at λ = 1.40: going past flat is uphill, paid by the push. The
-  curl that remains is not gathered beside the broken points; it sits there a little less often than chance. (3) **The
+  curl that remains is not gathered beside the broken points; it sits there a little less often than chance.
+  *(Corrected 26 October, O159: wrong, and the test has little power. The links within one link of a broken point are
+  63 to 99 % of all links in the runs that broke. Against that share the curl sits there at chance untied at λ = 1.40
+  (ratios 0.90 to 1.01), less often untied at 1.25 (0.69 to 0.96) and tied (0.42 to 0.94).)* (3) **The
   total moves toward her rule.** The rod starts with curl 576 and no anticurl; in the runs that broke most, curl and
   anticurl end near 200 each, with curl minus anticurl between −20 and 40, close to the zero her hard rule holds
-  (Update 105). In the runs that broke least it stays at 200 to 430.
+  (Update 105). In the runs that broke least it stays at 200 to 430. *(Corrected 26 October, O159: wrong as written;
+  the runs that moved least stay at 552, curl 560 and anticurl 8. And curl minus anticurl is 4(S − 3N), a square
+  count: near zero says the count passed near flat on the way to damage, not that the state resembles an X that
+  obeys her rule.)*
 - **What this suggests** (*ours, unverified*). Under her hard rule (decided 25 October, not yet built for six links) the
   rod as run is not an allowed X: a curled X must carry anticurl equal to its curl from the start (Update 105, (3)). Every
   sandbox look on the rod used the kernel without the rule, so its X held curl with nothing to balance it, and the push
   made the anticurl along the way, as damage. In an X that obeys the rule the anticurl is part of X from the beginning,
   and an opening must cancel curl and anticurl together, which is her "they always come in pairs". So whether the
-  breakage is damage or her pair may depend on running under her own rule; the rod runs cannot tell. *Said plainly:* a
+  breakage is damage or her pair may depend on running under her own rule; the rod runs cannot tell. *(O159: and the
+  numbers would change: with anticurl equal to curl the energy is 4λ × curl, not 4(λ − 1) × curl, so curling is not
+  free at λ = 1, and none of the walls, patch energies or releases of Updates 124 and 125 carries over to an X that
+  obeys the rule.)* *Said plainly:* a
   sandbox look on 100 end states; it kills "the leftover curl sits paired beside the anticurl" for these runs and
   crowns nothing.
 
 Update 128 (2026-10-26): **the author's "proceed": her hard rule at six links, looked at exactly before any X is built
 under it. The published move cannot move clean space under it.** Her word is in `sandbox/NOTEBOOK.md` under that date;
 it took up the suggestion of Update 127 (build the hard rule for six links, then a rod carrying anticurl equal to its
-curl, then the push).
+curl, then the push). *(O159: the sentence she answered is quoted in ASSUMPTIONS O159; it ended "the shape of that
+starting X would be yours to describe". The looks below are an exact check before that build, not the build.)*
 
 - **Exact** (`sandbox/hard_rule_moves_look.py`, `sandbox/hard_rule_pairs_look.py`; complete over what they cover).
   (1) Out of flat six-link space (the 6 × 6 × 8 torus) no single switch keeps the number of squares: every one of the
   3,514 from a point loses 4 to 8. Out of the rod, the same: 4 to 10. (2) The hard rule as decided also allows moves
-  paired so that the count returns (Update 105). Every pair out of flat space whose second switch lies within two links
-  of the first and restores the count puts the space back exactly as it was. (3) In the push look's damaged end states
-  (curl and anticurl both near 200) a few switches keep the count, 84 to 114 in about 550,000, so under the rule a
+  paired so that the count returns (Update 105). ~~Every pair out of flat space whose second switch lies within two links
+  of the first and restores the count puts the space back exactly as it was.~~ *Corrected 26 October (O159; Codex
+  F21): that sentence described a bug. The search missed the undo written from the other side of the bipartition, so
+  every pair it found was the first switch undone. Corrected, it finds none: no second switch within one or two links
+  of the first restores the count, except the undo.* (3) In the push look's damaged end states
+  (curl and anticurl both near 200) a few switches keep the count, 84 to 114 in about 550,000 *(O159: from an
+  uncommitted scratch script that counted each switch twice; counted once, by the committed
+  `hard_rule_pairs_look.py damaged`, 42 of 274,248, 57 of 272,560 and 14 of 282,861)*, so under the rule a
   damaged state moves, rarely, and a clean one not at all.
 - **What it means** (*ours*). Under the hard rule with the published move, perfectly ordered arrangements, flat or
-  curled, are frozen: nothing can start in them, and an X that obeys the rule can move only where it is already
+  curled, are frozen *(O159: "or curled" does not follow. The rod does not obey the rule, and no curled X that does has
+  been built. At N = 18 in two dimensions (`sandbox/zero_total_rule_reach_n18.py`) the nine rule-keeping classes,
+  three of them flat, are joined by single switches that keep the count. So "frozen" is shown for the large flat
+  torus, to two switches within two links, and not for the rule; pairs farther apart are not shown either)*: nothing
+  can start in them, and an X that obeys the rule can move only where it is already
   irregular. Opening X into flat space under the rule needs a move that goes through intermediate states with a
   different count and comes back, longer than two switches, or a rule that lets the count wander and pulls it back. Not
   shown: that no three-or-more-switch move exists; the search stopped at two.
 - **Asked of her, before anything is built** (*the options, ours*). (a) **The soft form** (Update 105 (ii)): an energy
-  μ(S − 3N)² that makes leaving the zero total costly but possible, μ scanned. With μ large it behaves like the hard rule
-  with excursions of any length allowed, which is what "paired so that S returns" needs when the pair must be long.
+  μ(S − 3N)² that makes leaving the zero total costly but possible, μ scanned. ~~With μ large it behaves like the hard rule
+  with excursions of any length allowed, which is what "paired so that S returns" needs when the pair must be long.~~
+  *Corrected 26 October (O159): with μ large an excursion costs about μ times the square of how far the count has
+  strayed, so long, deep excursions are suppressed, not allowed. The soft form makes the rule's violations costly
+  instead of forbidden: a way back exists at any length, at a price.*
   (b) **The hard rule with longer compound moves**: an exact search for three-switch moves first; costly, and it may find
   none. (c) **The hard rule kept, X built from the push look's damaged states**, which nearly obey it; they move, but
   they are not a clean X.
+
+Update 129 (2026-10-26): **the third independent audit by a different model (Codex), of the record of 25 to 26 October:
+one result described a bug, one look's wall was a break, and the anticurl readings were overstated. Corrected in place
+in Updates 124, 125, 127 and 128 (marked "O159").** Brief `docs/reviews/2026-10-26_codex_audit_brief.md`, pinned to
+29afa5c9; report `docs/reviews/2026-10-26_codex_report.md`; the record is ASSUMPTIONS O159.
+
+- **What changes** (*exact, each rechecked here before it was written*). (1) Update 128's "every count-restoring pair
+  puts the space back" was the pair search's bug: it missed the undo written from the other side. Fixed, there is no
+  count-restoring pair within two links out of flat space, a stronger form of the same bottom line. (2) Update 128's
+  counts in damaged states were each counted twice, by a script that was not committed; the committed count is 42, 57
+  and 14. (3) The rod's single-move wall under the pair tie (Update 124) is a move that breaks four points; the
+  cheapest clean opening is 32. (4) Update 127's "85 to 100 % of the anticurl on broken points" holds in 79 states of
+  100, and "the curl sits beside them a little less often than chance" is wrong at both ends. (5) The pair tie gives
+  her total and her ordering, not half to each twin. (6) Her answer to the tie question was a conditional; "each
+  direction carries its own cost" was our reading.
+- **What stands.** The pair tie's arithmetic, every wall and patch energy, the readings of the bath and push looks
+  against their files, energy balance in every run, the identity H = 4 anticurl + 4(λ − 1) curl, the single-switch
+  counts, and no clean push opening both directions.
+- **What it makes plain** (*ours*). Every look of 25 to 26 October ran on a rod that her hard rule, adopted the day
+  before, forbids, and under the rule the energy of curling is 4λ a unit, not 4(λ − 1); so the pair-tie numbers are for
+  a family her rule excludes. From here a look checks its starting X against every rule she has adopted before it runs.
+  Her choice among Update 128's options (a) to (c) stands open, with (a)'s description corrected and the frozen result
+  narrowed to the large flat torus.
 
