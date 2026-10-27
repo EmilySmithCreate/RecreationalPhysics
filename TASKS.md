@@ -1066,7 +1066,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    score. Accept: the per-birth shortfall reported per cell at L = 16.
 2. **The affordability guard in `graphity.layer_feed`** (`pool + 1e-12 < bill` lets a pool up to 1e-12 short pay):
    after T71's and T74's held-out stages are read, change it so no store goes negative, with a test at a pool just
-   below, at and above the bill; and reword the docstring's "conserved exactly" as an accounting identity to 1e-9.
+   below, at and above the bill; and reword the docstring's "conserved exactly" as an accounting identity to 1e-9. *Done 2026-10-27 (01:22 UTC): `can_pay` with no tolerance in `layer_feed` (paid moves and the twins' draw; the gate threshold keeps its 1e-12, never spent), the same in `contraction.run_feed`, the docstring reworded, four tests in `tests/test_layer_feed_guard.py`; O158 addendum of 27 October.*
 3. **Reading, before any citation**: [Pop10] and [FGG90] first (a universe inside a black hole; making one by
    tunnelling), then [BFT18]; read status in `REFERENCES.bib`.
 
@@ -1083,8 +1083,24 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    then Bowick and Giomi 2009 on paired defects, Chatterjee and Diaconis 2013 on fixed subgraph counts, DeGrand and
    Toussaint 1980, and Jaffe 2005 on the Casimir force.
 4. **T71's per-birth recount** (F31): confirm the 16 extra births per cell and the births above one curling cost
-   alongside item 1 of the O158 section, with the reader committed this time.
+   alongside item 1 of the O158 section, with the reader committed this time. *Done 2026-10-26 (`scripts/read_t71_births.py`, tested): 5,148 and 4,620 confirmed; the 24 births above a N_slab at L = 8 are contractions of a damaged state booked as births; O158 addendum.*
 5. Low: the push look's skip-if-done should compare the config, not only the file name (F10).
+6. ☑ (recorded 2026-10-27, ASSUMPTIONS O163; VISION Update 132) **The fifth audit (rules 12 and 22), brief written 2026-10-27 (11:59 UTC):** `docs/reviews/2026-10-27_codex_audit_brief.md`, pinned to `9f43c2a4`, covering Updates 129 to 131, O159 to O162, the
+   looks of 26 and 27 October, the row-segment look and the guard fix; Part A blind (the five questions of the
+   next-experiments brief's item 12). To do: the owner runs it in a fresh Codex session and saves the report as
+   `docs/reviews/2026-10-27_codex_report.md`; the next session records it as **O163** (item 12 said O162, which the
+   ledger reading took) and corrects in place with a dated marker.
+7. **From O163 (27 October, 14:45 UTC):** (a) the four-switch count at six links, redone with the corrected stage-2 bound
+   (`sandbox/hard_rule_quads_look.py --restricted`, and `--full` for the exhaustive word): priced by the corrected
+   `--estimate` (running; `--sum sandbox/out/hard_rule_quads/estimate_corrected`), both hers to buy; the classifier
+   reads the rows as before. (b) `contraction.contract_layers` at x0 = L - 1 removes the old layers L - 3 and L - 2
+   while `pool_mask` charges L - 2, L - 1, 0 and 1 (O163 (f); a registered kernel T71's layer arm ran under): a
+   regression test with marker stores, then the owner's decision whether to fix it (rotate by -1) and rerun the layer
+   cells, or record the form as run; no result changes until then. (c) One list of the Q2 placements (the handoff says
+   five, the two-stories brief six). (d) The O159 bibliography debt gains O163's names: Nishimura 2017; Tabourier,
+   Roth and Cointet 2011; Costeniuc, Ellis, Touchette and Turkington 2006; Bower section 5.8; Hirth and Lothe 1982;
+   Gerstner, Kistler, Naud and Paninski 2014. Crossref before `REFERENCES.bib`. (e) The fourth report's F40 (the
+   Coleman and causal-set cautions) still to be put into O158 or Update 126 with a marker.
 
 ## 26 October: the held-out stages of T71 and T74  ◑
 
@@ -1093,5 +1109,19 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
 `scripts/t71_heldout_score.py`).* T74's L = 16 registered and launched: PREREGISTRATION T74
 Amendment 6, 54 jobs (`cloud/queue/2026-10-26_t74_heldout.txt`); to read: add `t74_*_L16_*` to
 `cloud/fetch/request.txt`, accept, then `PYTHONPATH="src;scripts" python scripts/t74_heldout_score.py`. After both are
-read: the `layer_feed` guard fix of the O158 section, with its test.
+read: the `layer_feed` guard fix of the O158 section, with its test. *T74 read 2026-10-26 (23:02 UTC, by Fable without the owner): HOLDS AT L = 16,
+all 18 periods inside, her caveat's three cells included; fed, timing and unfed REPEATS STAGE 1 (O161; the reading in
+PREREGISTRATION after Amendment 6). The guard fix is now unblocked and is the next code change; item 4 of the 26 October
+program (the ledger checks) can read the L = 16 files.*
 
+
+## 26 October, evening: the program of `docs/design/next_experiments_2026-10-26.md`, items started on the owner's word  ◑
+
+**Added 2026-10-26, 23:23 UTC by the clock (Fable).** Her words of the evening are in `sandbox/NOTEBOOK.md` (22:37, 22:41,
+22:42 UTC). Done, each a look or an exact reading, committed with its LOG line or O entry: item 3 (a) at three switches
+(zero at six links; the four-link seam move reread by 3 (c) as a wrap effect), 3 (b) with the vertex-link count (the
+stacked-sphere point occurs), 3 (c) with held-out L = 12 HELD; item 4 on stage 1 and both held-out sizes (O162). Running
+or owed: the four-switch count at six links (3 (a), her agreement with Fable's hypothesis of 22:37 UTC); the
+two-stories brief; the `layer_feed` guard fix (unblocked by O161); the gate null and the L = 24 size claim of item 4
+(wait on her prediction); the programme page's piece 3 sentence on the seam move, to be softened (a wrap effect), and
+piece 5 after T74, both at the next republish.

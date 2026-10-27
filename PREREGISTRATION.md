@@ -8393,6 +8393,50 @@ rerun 26 October: `t74_heldout_resample_2026-10-23.py`, `t74_heldout_twolevel_20
 `t74_heldout_cells_2026-10-23.py`, `t74_l16_cells_2026-10-23.py` and `t74_seed_map_2026-10-23.py`, each reading the
 stage-1 files by name; their output matched the draft in every number quoted here.
 
+### Reading of T74 at the held-out size L = 16 (2026-10-26, 23:02 UTC by the clock; ASSUMPTIONS O161; `scripts/t74_heldout_score.py`)
+
+The 54 jobs of Amendment 6 (launched 26 October, 20:13 UTC) were fetched and accepted the same evening: every file
+passed `scripts/accept_inbox.py` (its config as committed), none failed on Batch, and every cell has 16 replicas. Scored
+against `configs/t74_heldout_prediction.json` by `scripts/t74_heldout_score.py`, neither touched after the data landed,
+with the stage-1 reader `scripts/analyse_t74.py` unchanged *[O163, 27 October: the 54 generated L = 16 configs' `_purpose` attributes the go-ahead to the owner's word of 25 October (Update 115); the go-ahead is of 26 October (O160, Update 130); the configs are not rewritten. Commit order: the page snapshot naming this verdict at 23:21:51 UTC, the data at 23:23:03, this reading at 23:23:27; the reading was made from the accepted local files before the commits]*. Read by Claude Fable 5.1 in a session the owner did not
+direct; the owner's part of the reading is owed (whether piece 5's status moves).
+
+**The size verdict: HOLDS AT L = 16.** All 18 pooled fed-phase periods lie inside their ranges (Amendment 6, table 1).
+The three cells of her caveat ("but the surplus matter": λ = 1.10, c = 2R) read 6.425 (steady; fit 6.430, range 6.415
+to 6.445), 6.435 (meals of 16; 6.451, 6.405 to 6.512) and 6.616 (meals of 256; 6.496, 6.311 to 6.749): the last is 1.8 %
+above its fit and 3.4 % above the exact a N_slab / min(c, R) = 6.40, inside its range and well inside the registration's
+10 %. The other 15 periods lie within 0.1 % of their fits. No miss, so rule 11's four answers are not called for.
+
+**The three secondary reads: REPEATS STAGE 1, all three.**
+
+- *Fed:* BURPS in 51 cells of 54; MIXED in the three λ = 1.10, c = 2R cells with meals of 256 (cold, equal, warm), where
+  clean switch moves in a few replicas leave daughters short, and BURPS in the three with meals of 16. The 48 cells that
+  had to BURPS all do; none of the six is NEVER BURPS. The rate matches stage 1 (3 MIXED per 54 at L = 8, at L = 12 and
+  at L = 16). The number of short replicas per cell is not printed by the reader and is owed.
+- *Timing:* all 12 words as written: SAME TIMING in 10 settings, SPREAD ONLY at λ = 1.25 and 1.40 with c = 2R and
+  meals of 256 (cv ratios 3.28 and 2.65; mean ratios 0.982 and 0.988). At λ = 1.10, c = 2R, meals of 256: SAME TIMING,
+  mean ratio 1.030, cv ratio 1.39 (its written range 1.22 to 1.40).
+- *Unfed:* the 33 cells that had to repeat their stage-1 word all do; of the other 21, 19 give their most likely word
+  (written range 14 to 21, median 19). Tallies, reported: cold DISSOLVES in 16 of 18 (written 17, range 15 to 18), the
+  two others MIXED with both bars met (λ = 1.10, c = 2R, steady and meals of 16, as their most likely word said); warm
+  FED BY ITS SURROUNDINGS in 18 of 18; equal, 9 cells scored and 9 SPLIT (written 10, range 7 to 14), WAITS 3 (3, 2 to
+  6), MIXED 13 (13, 10 to 16), FED BY ITS SURROUNDINGS 2 (1, 0 to 3).
+
+**The shared prediction (Amendment 5), scored per cell and reported:** cold DISSOLVES holds in 16 of 18 (fails in the
+two MIXED cells, as at one stage-1 size); warm holds in 18 of 18; equal holds in 3 of the 9 scored cells (the three WAITS
+at λ = 1.25 and 1.40 with c = 2R) and fails in 6, as it did in 3 of 8 and 3 of 10 at stage 1 (draws: 3, range 2 to 6).
+
+**Reads that make no size claim, reported:** the residual of the books is at most 7.8 × 10⁻⁹ in every cell; the share
+of the feed that entered the slab is 0.99 to 1.00 at c = 2R and exactly 0.5 at c = R/2, as at stage 1; the digestion
+runs the full 4,019 to 4,077 sweeps at c = R/2 and ends at once at c = 2R, as at stage 1.
+
+What this does and does not show: the feed, the cap and the gate are all proportional to N_slab and one layer proposal
+is made a sweep whatever L is, so the period is arithmetic by construction, and L = 16 confirms that arithmetic at a
+third size with the stage-1 rates of the rare clean move repeated (3 MIXED cells per size). It tests a shared
+expectation (her prediction is ours, Amendment 5) and cannot separate her picture from ours. Whether the burp here is
+anything beyond the ledger is the question of the exact checks of `docs/design/next_experiments_2026-10-26.md`, item 4,
+which the owner agreed to at 22:42 UTC; the T74 held-out part of those checks can now be run.
+
 ## T78. In the published model's warm background, does a curled ring lose more entropy than a flat patch of the same nine squares, and does the gap grow with the background's deficit? (the owner's hypothesis of VISION Update 89, in the one form the finding of 22 October left alive: λ − 1 as an entropic surcharge on curl in a negatively curved background at a fixed coupling; `docs/outreach/finding_2026-10-22_background_curling_cost.md`, private; DRAFT written 2026-10-22 after the owner's prediction was given in chat and before any code or run; uncommitted until she says so)
 
 **Status:** drafted. Her prediction is recorded below in her words. No runner or analyzer exists yet; both are built

@@ -68,3 +68,7 @@ t74_*
 t76_l*_g3p2_q*
 # 2026-10-26, 20:02 UTC by the clock: T71 held-out size L = 16 (9 jobs, queued 2026-10-25). Not read.
 t71_*_l16
+# 2026-10-26, 22:12 UTC by the clock: T74 held-out L = 16 (54 jobs, launched 20:13 UTC); 31 done at 21:46 UTC, the rest due by about 22:31 UTC. Fetch again if any are missing.
+t74_*_L16_*
+# 2026-10-26, 22:31 by the clock: 44 of 54 T74 L16 runs fetched; the last 10 were still running at 21:46 UTC. Fetch again.
+t74_*_L16_*

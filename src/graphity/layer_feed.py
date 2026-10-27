@@ -20,9 +20,12 @@ reforms when the stores can pay the contraction. Every downhill move's release i
 is one daughter. "twins" is the owner's decision of 25 October (VISION Update 120: one gate, double the bill): a
 downhill move's release goes to one twin, and an equal amount is drawn from the move's pool, the stores beside the cut,
 into the other, both at once; the gate the registration sets (twice the curling cost) guarantees the pool can pay it, and
-a pool that cannot pay refuses the move. The two twins of a birth are equal by construction. Energy is conserved exactly:
+a pool that cannot pay refuses the move. The two twins of a birth are equal by construction. The ledger's identity
 F + sum(stores) + daughter - fed + leaked = F0 with F = H + mu_N N
-(tests, 1e-9). The protocol claims no detailed balance; conservation is its invariant. At lambda != 1, and with a varying count of points, this is
+holds to 1e-9 in the tests: an accounting identity of this chosen ledger, not physical energy conservation (ASSUMPTIONS
+O158 (d)). The protocol claims no detailed balance; the identity is its invariant. A move that costs energy is paid only
+when its pool holds the whole bill (`can_pay`), so no store ever goes below zero; until 27 October 2026 the guard
+allowed a pool up to 1e-12 short (O158 (b)), which T71 and T74 ran under (no logged store total went negative there). At lambda != 1, and with a varying count of points, this is
 our family around the published model, never combinatorial quantum gravity.
 """
 import numpy as np
@@ -36,14 +39,24 @@ RELEASE_TO = ("stores", "daughter")
 FEED_RELEASES = RELEASE_TO + ("twins",)                 # twins: this protocol only (T82)
 
 
-def propose_layer_move(st, f, lam, mu_n, rng, axes, max_width, gate, release_to="stores"):
+def can_pay(pool, bill):
+    """Whether a pool of stores can pay a bill: the whole bill, with no tolerance, so that paying it (each store
+    scaled by 1 - bill / pool) leaves every store at or above zero. Exact comparison of floats on purpose."""
+    return pool >= bill
+
+
+def propose_layer_move(st, f, lam, mu_n, rng, axes, max_width, gate, release_to="stores", proposal=None):
     """One layer proposal on `st` (energy f). Returns (new_state, new_f, kind, released) with kind in {None, "split",
     "contract"}; None when nothing happened. `released` is the energy a downhill move gave off: credited to the
     stores beside the cut under release_to "stores", or handed to the caller's daughter ledger under "daughter". Under
-    "twins" `released` is one twin's energy; the move has also drawn the same amount from its pool for the other twin."""
-    axis = int(axes[rng.integers(len(axes))])
-    x0 = int(rng.integers(st.dims[axis]))
-    contract = bool(rng.integers(2))
+    "twins" `released` is one twin's energy; the move has also drawn the same amount from its pool for the other twin.
+    `proposal`, if given, is (axis, x0, contract) and replaces the three draws from `rng` (for tests)."""
+    if proposal is None:
+        axis = int(axes[rng.integers(len(axes))])
+        x0 = int(rng.integers(st.dims[axis]))
+        contract = bool(rng.integers(2))
+    else:
+        axis, x0, contract = int(proposal[0]), int(proposal[1]), bool(proposal[2])
     cand = contract_layers(st, axis, x0) if contract else split_layers(st, axis, x0, max_width)
     if cand is None:
         return st, f, None, 0.0
@@ -52,19 +65,19 @@ def propose_layer_move(st, f, lam, mu_n, rng, axes, max_width, gate, release_to=
     mask = pool_mask(st, axis, x0, contract)
     pool = float(st.stores[mask].sum())
     if df > 0:
-        if pool + 1e-12 < df:
+        if not can_pay(pool, df):
             return st, f, None, 0.0
         st = st.copy()
         st.stores[mask] -= st.stores[mask] * (df / pool)
         cand = contract_layers(st, axis, x0) if contract else split_layers(st, axis, x0, max_width)
     else:
-        if pool + 1e-12 < gate:
-            return st, f, None, 0.0
+        if pool + 1e-12 < gate:  # a threshold, not a payment: the gate is never spent, so the 1e-12 cannot make a store
+            return st, f, None, 0.0  # negative; kept so the sweep a birth fires in stays what T71 and T74 ran under
         if release_to == "stores":
             rec = receiving_mask(cand, axis, x0, contract)
             cand.stores[rec] += (-df) / int(rec.sum())
         elif release_to == "twins" and -df > 1e-9:
-            if pool + 1e-12 < -df:
+            if not can_pay(pool, -df):
                 return st, f, None, 0.0
             st = st.copy()
             st.stores[mask] -= st.stores[mask] * ((-df) / pool)
