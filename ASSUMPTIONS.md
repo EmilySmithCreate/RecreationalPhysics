@@ -4864,3 +4864,6 @@ author and should be disclosed as such in any submission. Physics estimates mark
   **Addendum, 17:41 UTC:** her answers fix μ = μ₀/N and price anticurl at 4λ a unit like curl (A2). *Exact:* H_A =
   4λ·uncurl + 4(λ − 1)·curl = λ·H(2 − 1/λ), using uncurl = curl − 4(S − S0); so her energy at (λ, g, μ) is the toy at
   λ′ = 2 − 1/λ, coupling g/λ, penalty μ/λ, and `soft_d` runs it unchanged (`test_anticurl_at_lambda_is_the_toy_at_a_shifted_lambda`).
+  **Addendum, 20:04 UTC:** she replaced that pricing with curl and anticurl both 4(λ − 1) a unit (VISION Update 134).
+  *Exact:* 4(λ − 1)(curl + uncurl) = (λ − 1)·H(2), so her energy at (λ, g, μ) is the toy at λ′ = 2, coupling g/(λ − 1),
+  penalty μ/(λ − 1); `soft_d` runs it unchanged. Earlier sandbox looks of the day used the superseded pricing.

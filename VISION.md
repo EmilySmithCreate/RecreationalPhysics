@@ -1850,6 +1850,13 @@ disorder, and under her pricing the two sides cost differently). Of the two rout
   natural selection and [BFT18].
 - **Before anything is built:** her answers T1 to T4, and question 5 (how a phase rides a switch). The light field runs
   on a fixed graph today; riding it on switching wiring is new code with rule-6 tests. Nothing is run before that.
+- **DECISION (the author's, 20:04 UTC the same day): curl and anticurl cost the same, 4(λ − 1) a unit**, a pair
+  always made together at twice that; "λ stops shaping anything ... this is fine". This replaces her pricing of 17:41
+  UTC (Update 133, A2). *Exact:* the toy's energy becomes (λ − 1)·H(2), the existing toy at λ′ = 2 with λ − 1 as the
+  energy unit; at λ′ = 2 no curled X of the toy is stuck for now (O13, O41, O49). So **what holds X, if anything, must
+  come from the twist rules** (twist raising the cost of curl and anticurl, and the pair rule on the moves), not from
+  λ. That is the first exact check once the twist rules are fixed. Her answers of 19:12 to 19:50 UTC and the rules as
+  equalities are in `docs/design/twist_curl_rules_2026-10-27.md`.
 
 ## The target ("the spot")
 

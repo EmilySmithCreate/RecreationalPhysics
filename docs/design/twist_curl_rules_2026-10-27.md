@@ -21,7 +21,7 @@ whatever it says is not a result; the results are what follows from the rules to
 
 1. **Balance** (hers, 25 October; soft form 27 October): Σ_e c_e = 4(S − 3N), held near zero by the penalty
    (μ₀/N)(S − 3N)².
-2. **Prices** (hers; **open**, two versions on the record). A pair is always made together and costs the sum of its two
+2. **Prices** (hers; **version B chosen**, 20:04 UTC: "this is fine"; two versions on the record). A pair is always made together and costs the sum of its two
    prices (19:50 UTC: "curl costs double, but you always get both"). Version A (17:41 UTC): curl 4(λ − 1), anticurl 4λ;
    *exact:* λ·H(λ′) with λ′ = 2 − 1/λ, a pair costs 8λ − 4. Version B (19:50 UTC, "I may not be thinking of this
    right"): both 4(λ − 1); *exact:* (λ − 1)·H(2), the toy at λ′ = 2 and coupling g/(λ − 1), a pair costs 8(λ − 1). Under
@@ -101,7 +101,7 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
 ## Still to decide before any build (hers)
 
 1. ~~Rule 3: κ on curl only, or on anticurl too.~~ Both (19:50 UTC).
-2. Rule 7: what the spin sum is. And rule 2: price version A or B. And the twist: phase, count, or both.
+2. Rule 7: what the spin sum is. And the twist: phase, count, or both. (Rule 2: version B, chosen.)
 3. Question 5: how the twist moves when a link is rewired (fresh, carried, averaged out, drawn to suit its neighbours).
 4. Rule 4 as written makes every move conserve twist and balance curl at once; whether the toy's single switch can ever
    satisfy it is an exact count to run first (ours: it may need two switches at once, as the hard rule did).
