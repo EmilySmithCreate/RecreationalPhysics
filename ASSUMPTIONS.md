@@ -4846,3 +4846,18 @@ author and should be disclosed as such in any submission. Physics estimates mark
     Touchette and Turkington 2006 (Gaussian ensemble equivalence, with its conditions), Bower, Applied Mechanics of Solids
     section 5.8 (dislocation loops), Hirth and Lothe 1982, Gerstner, Kistler, Naud and Paninski 2014 section 1.3
     (integrate-and-fire: accumulate, threshold, reset, a construction-set period). Joined to the O159 bibliography debt.
+
+- **O164 THE SOFT FORM OF THE OWNER'S SQUARE-COUNT RULE, BUILT (27 October 2026; her decision of 16:42 UTC, VISION Update
+  133).** Status: **Ours** for the form, the owner's for the choice to soften. `graphity.soft_d`: H_soft = H + μ (S − S0)²,
+  S0 = D(D − 1)/2 N (N at four links, 3N at six), H being `cqg_d`'s energy unchanged; the move is `cqg_d`'s switch; the
+  penalty depends on the state alone, so its change μ dS (2 (S − S0) + dS) is exact and detailed balance holds by the
+  argument of `cqg.py`'s docstring. `cqg_d.py` is untouched. Checked (`tests/test_soft_d.py`, 17 tests, rule 6): at μ = 0
+  the chain is `cqg_d.run_chain` draw for draw at four and six links, both acceptance rules; with the penalty on, the
+  chain reproduces the exact N = 18 average from the complete list of states (λ = 1, g = 4, μ = 2: exact ⟨S⟩ 18.59,
+  against 20.48 without the penalty, so the test can fail), both acceptance rules; tracked S and X equal recomputation and
+  networkx; hard-core rule, degrees and sides kept; same seed, same run. **Exact, on the six-link ladder at N = 512:** H =
+  4 uncurl + 4 (λ − 1) curl and S − S0 = (curl − uncurl)/4; the slab carries curl N and the rod 2N with no uncurl, so an
+  unbalanced rod pays μN²/4 and a slab μN²/16, and the rod's two openings release aN + 3μN²/16 and aN + μN²/16 (a =
+  4(λ − 1)): unequal halves under the penalty, equal at μ = 0 (her per-direction cost, Update 133). **Not fixed here,
+  each fixed in its registration:** μ held fixed or μ₀/N (A1), what the shell's anticurl costs (A2), the starting X
+  (A3), her prediction (A4); nothing has been run with μ > 0 beyond the tests.
