@@ -10,18 +10,26 @@ whatever it says is not a result; the results are what follows from the rules to
 
 - **Curl** on a link e: c_e = S_e − 4 (six links; flat space has 4 squares on every link). c_e > 0 is curl, c_e < 0 is
   anticurl. *Exact:* the hard-core rule bounds it, −4 ≤ c_e ≤ +1, so the toy's curl is lopsided (O164; Update 134).
-- **Twist** on a square p: τ_p, the light field's phase round the square, measured in turns, −½ < τ_p ≤ ½ (`graphity.u1`).
-  *Exact:* +τ and −τ cost the same, so twist is a true mirror pair.
+- **Twist** on a square p: τ_p, measured in turns. Her values (19:50 UTC): −⅔, −⅓, 0 (gluons), ⅓, ⅔ for matter, ±½ for
+  dark. **Open, phase or count:** as a phase (the light field, `graphity.u1`, defined mod 1) the five matter values are
+  three, 0, ⅓ and ⅔, since +⅔ and −⅓ are the same turn; that is the published triality (quarks 1, antiquarks 2, gluons
+  0, the ℤ₃ centre of colour), and a half turn is its own mirror (+½ is −½), which matches dark twist being one-sided.
+  As a count (whole thirds, not mod 1) all five are distinct and carry electric charge. Physics uses both: charge as a
+  count, triality as a phase.
 
 ## The rules
 
 1. **Balance** (hers, 25 October; soft form 27 October): Σ_e c_e = 4(S − 3N), held near zero by the penalty
    (μ₀/N)(S − 3N)².
-2. **Prices** (hers, A2): a unit of curl costs 4(λ − 1), a unit of anticurl 4λ; one λ everywhere.
-   *Exact:* this is λ times the toy's energy at λ′ = 2 − 1/λ (O164 addendum).
+2. **Prices** (hers; **open**, two versions on the record). A pair is always made together and costs the sum of its two
+   prices (19:50 UTC: "curl costs double, but you always get both"). Version A (17:41 UTC): curl 4(λ − 1), anticurl 4λ;
+   *exact:* λ·H(λ′) with λ′ = 2 − 1/λ, a pair costs 8λ − 4. Version B (19:50 UTC, "I may not be thinking of this
+   right"): both 4(λ − 1); *exact:* (λ − 1)·H(2), the toy at λ′ = 2 and coupling g/(λ − 1), a pair costs 8(λ − 1). Under
+   B, λ sets only the energy unit, and at λ′ = 2 no curled X of the toy is stuck for now (2D dips end near 1.6, the
+   rod's window at 1.5, the slab's at 2: O13, O41, O49), so B leaves the toy no X to hold.
 3. **Twist makes curling dearer** (hers, T1; the form ours, open): each unit of curl on a link costs κ·T_e more, with
    T_e = Σ over the link's squares of (1 − cos 2πτ_p): 0 with no twist, 2 at a half turn, the same for ±τ.
-   **Open:** does κ act on curl only, or on anticurl too?
+   Acts on anticurl too (hers, 19:50 UTC): the extra cost is κ·T_e·|c_e|.
 4. **Pairs** (hers, T3, imposed on the moves; reading (a) chosen 19:39 UTC): a move may make curl only together with an
    equal amount of anticurl, the curl carrying twist +θ and the anticurl −θ:
    Δ(curl) = Δ(anticurl) and τ(curl) + τ(anticurl) = 0.
@@ -92,8 +100,8 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
 
 ## Still to decide before any build (hers)
 
-1. Rule 3: κ on curl only, or on anticurl too.
-2. Rule 7: what the spin sum is.
+1. ~~Rule 3: κ on curl only, or on anticurl too.~~ Both (19:50 UTC).
+2. Rule 7: what the spin sum is. And rule 2: price version A or B. And the twist: phase, count, or both.
 3. Question 5: how the twist moves when a link is rewired (fresh, carried, averaged out, drawn to suit its neighbours).
 4. Rule 4 as written makes every move conserve twist and balance curl at once; whether the toy's single switch can ever
    satisfy it is an exact count to run first (ours: it may need two switches at once, as the hard rule did).
