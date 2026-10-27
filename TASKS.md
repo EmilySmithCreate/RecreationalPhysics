@@ -1101,6 +1101,12 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    Roth and Cointet 2011; Costeniuc, Ellis, Touchette and Turkington 2006; Bower section 5.8; Hirth and Lothe 1982;
    Gerstner, Kistler, Naud and Paninski 2014. Crossref before `REFERENCES.bib`. (e) The fourth report's F40 (the
    Coleman and causal-set cautions) still to be put into O158 or Update 126 with a marker.
+8. **The soft rule (VISION Update 133, the owner's "proceed w soften", 27 October 16:42 UTC):** (a) the term
+   μ (S − 3N)² in the six-link kernel, with rule-6 tests (networkx brute force, incremental exactness, constraint
+   preservation, same seed; μ = 0 draw for draw with the unpenalized chain). (b) Her answers A1 to A4 in
+   `docs/design/owner_questions_2026-10-24.md` (μ's scaling, what the shell's anticurl costs, the shell in the toy, her
+   prediction). (c) Then program item 10 of `docs/design/next_experiments_2026-10-26.md` pre-registered and run. The
+   four-switch count (item 7 (a)) is no longer on her path; its corrected estimate finishes for the record only.
 
 ## 26 October: the held-out stages of T71 and T74  ◑
 

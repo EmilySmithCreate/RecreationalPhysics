@@ -1760,6 +1760,52 @@ record is ASSUMPTIONS O163.
   check its built states too. The wrap contraction defect noted in O162 is confirmed and is now a model-code issue in a
   registered kernel (TASKS). Q1 to Q3 stay hers; nothing in the audit decides them.
 
+Update 133 (2026-10-27, 16:42 UTC by the clock): **DECISION (the author's): the hard rule is softened; and her picture of
+the twin X, with each curled direction carrying its own curling cost.** Her words are in `sandbox/NOTEBOOK.md` under this
+time, verbatim. Why this page changes: Q1 (Update 128, O159, O163) asked whether to keep her hard rule (squares held at
+exactly 3N), extend the moves, or soften it; under the hard rule no count-keeping move out of clean space has been found
+at up to three switches, and the four-switch count is open again (O163). She chose to soften. Her description answers Q2
+in her terms and restates Q3.
+
+- **DECISION: the soft form.** "proceed w soften": the hard rule becomes a penalty, H_soft = H + μ (S - 3N)^2, so the
+  square count may drift from 3N at a price that grows with the drift. Under S1 this is a new term; μ is scanned, never
+  tuned, and every value run is published. Still to fix before any run (program item 10 of
+  `docs/design/next_experiments_2026-10-26.md`): whether μ is held fixed or scales as μ0/N (one, fixed in advance; the
+  scan must not choose afterward), her prediction, her clock word, and the starting X. The row segment between two flaws
+  (her idea of 20 October) is admitted by the soft form at a fixed price, 4 μ in two directions and 144 μ for the
+  six-link strip, with lengthening free (*exact arithmetic* from O163's deficits): a seed paid once that then grows for
+  nothing, to be watched for in the soft runs, not assumed.
+- **Her picture (hers).** The rod sits at the center of a shell; one feed line runs from the center to the shell's north
+  pole and one to its south pole; the handedness of matter and antimatter twists is concentrated at one pole or the other.
+  When the rod on either side reaches capacity it opens a new space that carries the whole barrier and brings its surplus
+  of right- or left-handed twists; as soon as the first side goes, so does the other, making the opposite daughter. Both
+  open from the same rod, in a shell of two degrees of freedom with two whirlpool poles and the one-degree-of-freedom rod
+  like a collar between them; the two twins carry the halves that become a surplus in each. Each curled direction carries
+  its own curling cost, 4(λ - 1) on each side, with the shell's polarization represented in the difference between
+  λ and one.
+- **What is exact about it** (*ours, checked on flat, slab and rod at N = 512*). (1) Each curled direction carrying its
+  own cost is the untied ladder (O41, O49): slab a, rod 2a per point, a = 4(λ - 1); each opening releases exactly a
+  per point, so "half each" holds with nothing chosen by us. This replaces the pair tie f = (0, 0, a, 0) of Q3, which did
+  not give half each (O159 (h)). (2) The toy's energy is H = 4 uncurl + 4(λ - 1) curl and S - 3N = (curl - uncurl)/4.
+  So her 4(λ - 1) a side is exactly what the toy charges for curl that nothing balances. Under the soft penalty an
+  unbalanced rod also pays μ N^2/4 and a slab μ N^2/16, so the first opening releases aN + 3 μ N^2/16 and the second
+  aN + μ N^2/16: the halves are unequal by μ N^2/8 (with μ = μ0/N, by μ0 N/8, a fixed amount per point). (3) If the
+  shell carries anticurl that balances the rod's curl, the penalty vanishes, but in the toy each unit of anticurl costs 4,
+  so a side costs 4 λ per unit of curl, not 4(λ - 1). Her formula and a balanced X agree only if the shell's
+  anticurl is priced at nothing, which is a new term and hers to decide (S1); "the polarization in λ - 1" may be
+  exactly that, and is asked.
+- **What it is up against** (*measured, on the rule-breaking rod, no soft penalty*). Untied, the first direction opens
+  and the second does not follow: NEVER OPENS (T30, O64), ADVANCES ONLY (T48 at 1.25, O91; T53, O105). "As soon as the
+  first side goes, so does the other" has not been seen in this family without a tie; under the soft form it is untested.
+- **What the toy cannot hold yet.** Signed twist (Update 97's label is declared, not built), so the matter/antimatter
+  surplus at the poles and the opposite daughters cannot be tested; a shell with two poles has not been built in the
+  toy, whose spaces are tori. *Published relative (general knowledge, to verify):* a flow on a sphere must have
+  whirlpools whose indices add to 2 (Poincare-Hopf, the hairy-ball theorem), so two whirlpools at the poles is the
+  simplest such flow; the twin universes of opposite kind are [BFT18] (unread).
+- **What runs next.** The soft term in the six-link kernel with rule-6 tests (networkx brute force, incremental
+  exactness, constraint preservation, same seed); then program item 10 is pre-registered with her prediction once μ's
+  scaling and the starting X are fixed. Nothing is run before that.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
