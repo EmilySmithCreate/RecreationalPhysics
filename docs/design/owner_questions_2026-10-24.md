@@ -11,6 +11,10 @@ verbatim there); the record is VISION Updates 104 to 112.*
 Your picture answers Q2 in your terms and restates Q3 as each curled direction carrying its own curling cost, which gives
 each twin exactly half (exact). Four things are asked before the soft runs can be registered.*
 
+*Answered 27 October, 17:41 UTC (verbatim in the notebook; VISION Update 133 addendum): A1 μ₀/N; A2 anticurl costs λ as
+curl does (exact: the toy at λ′ = 2 − 1/λ and coupling g/λ); A3 curl toward the north pole, anticurl toward the south;
+A4 the space opens with the twin daughters. One thing left: is λ the same everywhere, or above 1 only near the poles?*
+
 **A1 ★ The soft penalty's scaling.** μ (S − 3N)² with μ held fixed, or μ = μ₀/N? One is fixed before any run. *Exact:*
 with μ fixed, an unbalanced rod of N points pays μN²/4, growing with the square of the size; with μ₀/N it pays μ₀N/4, a
 fixed amount per point like every other energy in the toy. **Recommended:** μ₀/N, for that reason.

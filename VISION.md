@@ -1805,6 +1805,19 @@ in her terms and restates Q3.
 - **What runs next.** The soft term in the six-link kernel with rule-6 tests (networkx brute force, incremental
   exactness, constraint preservation, same seed); then program item 10 is pre-registered with her prediction once μ's
   scaling and the starting X are fixed. Nothing is run before that.
+- **Her answers, 17:41 UTC the same day** (verbatim in the notebook). (A1) **μ = μ₀/N**: the penalty is a fixed amount per
+  point, like every other energy in the toy. (A2) **Anticurl costs λ, as curling does**, "would be 1 except for the
+  handedness concentrating closer to poles": each unit of anticurl costs 4λ in place of the toy's 4, so H_A = 4λ·uncurl +
+  4(λ − 1)·curl, the toy's own energy at λ = 1. *Exact (arithmetic; checked to 10⁻¹³ on curled and melted six-link
+  states):* H_A = λ·H(λ′) with λ′ = 2 − 1/λ. So her pricing at (λ, g) is the existing toy at λ′ and coupling g/λ, and the
+  soft penalty becomes μ/λ: no new kernel, and every result already on the λ line is a result of her energy at λ =
+  1/(2 − λ′) (the tube's window 1 < λ′ < 1.5 is her 1 < λ < 2; T7's λ′ = 1.25 is her λ = 4/3). A balanced X, curl and
+  anticurl equal, costs (8λ − 4) per unit of curl under it. Asked: one λ everywhere, or λ above 1 only near the poles?
+  (A3) The shell holds curl and anticurl; matter becomes curl where it has no room to move, more curl (matter) toward the
+  north pole and more anticurl (antimatter) toward the south. *In the toy (ours):* curling a region makes curl and melting
+  one makes anticurl (melted six-link states carry uncurl and no curl), so the nearest buildable X is the rod with a
+  curled cap on one side and a melted cap on the other, balanced so S = 3N; the toy has no handedness, so matter and
+  antimatter are not in it. (A4) **Her prediction: the soft runs make the space open with the twin daughters.**
 
 ## The target ("the spot")
 

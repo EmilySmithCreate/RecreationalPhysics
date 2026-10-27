@@ -112,3 +112,19 @@ def test_the_per_link_identity_on_the_ladder(dims, curled):
         for mu in (0.0, 1.0, 1 / n):                            # an unbalanced rod pays mu N^2 / 4, a slab mu N^2 / 16
             pen = soft_d.hamiltonian_soft(adj, lam, mu) - cqg_d.hamiltonian(adj, lam)
             assert abs(pen - mu * (curled * n / 4) ** 2) < 1e-6
+
+
+@pytest.mark.parametrize("dims", [(6, 6, 6), (4, 4, 8)])
+def test_anticurl_at_lambda_is_the_toy_at_a_shifted_lambda(dims):
+    """The owner's A2 (27 October): anticurl priced at 4 lam a unit, like curl, is lam H(2 - 1/lam) (VISION Update 133)."""
+    adj, part = cqg_d.torus(dims)
+    side = np.flatnonzero(part == 0)
+    seen_curl = seen_uncurl = False
+    for k in range(4):
+        soft_d.run_chain(adj, side, 0.0 if k % 2 else 1 / 0.8, 1, 0, 20 + k)
+        _, curl, uncurl = per_link(adj)
+        seen_curl |= curl > 0
+        seen_uncurl |= uncurl > 0
+        for lam in (1.1, 1.25, 1.4):
+            assert abs(4 * lam * uncurl + 4 * (lam - 1) * curl - lam * cqg_d.hamiltonian(adj, 2 - 1 / lam)) < 1e-9
+    assert seen_uncurl

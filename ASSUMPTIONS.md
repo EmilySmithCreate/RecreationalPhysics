@@ -4861,3 +4861,6 @@ author and should be disclosed as such in any submission. Physics estimates mark
   4(λ − 1)): unequal halves under the penalty, equal at μ = 0 (her per-direction cost, Update 133). **Not fixed here,
   each fixed in its registration:** μ held fixed or μ₀/N (A1), what the shell's anticurl costs (A2), the starting X
   (A3), her prediction (A4); nothing has been run with μ > 0 beyond the tests.
+  **Addendum, 17:41 UTC:** her answers fix μ = μ₀/N and price anticurl at 4λ a unit like curl (A2). *Exact:* H_A =
+  4λ·uncurl + 4(λ − 1)·curl = λ·H(2 − 1/λ), using uncurl = curl − 4(S − S0); so her energy at (λ, g, μ) is the toy at
+  λ′ = 2 − 1/λ, coupling g/λ, penalty μ/λ, and `soft_d` runs it unchanged (`test_anticurl_at_lambda_is_the_toy_at_a_shifted_lambda`).
