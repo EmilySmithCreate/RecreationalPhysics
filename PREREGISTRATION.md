@@ -8398,7 +8398,7 @@ stage-1 files by name; their output matched the draft in every number quoted her
 The 54 jobs of Amendment 6 (launched 26 October, 20:13 UTC) were fetched and accepted the same evening: every file
 passed `scripts/accept_inbox.py` (its config as committed), none failed on Batch, and every cell has 16 replicas. Scored
 against `configs/t74_heldout_prediction.json` by `scripts/t74_heldout_score.py`, neither touched after the data landed,
-with the stage-1 reader `scripts/analyse_t74.py` unchanged. Read by Claude Fable 5.1 in a session the owner did not
+with the stage-1 reader `scripts/analyse_t74.py` unchanged *[O163, 27 October: the 54 generated L = 16 configs' `_purpose` attributes the go-ahead to the owner's word of 25 October (Update 115); the go-ahead is of 26 October (O160, Update 130); the configs are not rewritten. Commit order: the page snapshot naming this verdict at 23:21:51 UTC, the data at 23:23:03, this reading at 23:23:27; the reading was made from the accepted local files before the commits]*. Read by Claude Fable 5.1 in a session the owner did not
 direct; the owner's part of the reading is owed (whether piece 5's status moves).
 
 **The size verdict: HOLDS AT L = 16.** All 18 pooled fed-phase periods lie inside their ranges (Amendment 6, table 1).

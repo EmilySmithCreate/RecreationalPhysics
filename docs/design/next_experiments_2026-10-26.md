@@ -337,7 +337,7 @@ do not, read anyway and marked).
   shaped the prediction file (the hash helper of item 2 makes this checkable from the next run on; until then,
   timestamps against `sandbox/heldout_2026-10-23/`); are the ranges' coverage claims consistent with the observed miss
   rate; does the per-birth reader count the first logged row; is the guard fix complete across all release modes.
-  Recorded as O162 with what it found and what it got wrong.
+  Recorded as ~~O162~~ O163 (27 October: O162 was taken by the ledger reading) with what it found and what it got wrong.
 - **Prior-work notes (rule 15), drafts for her approval where they touch a paper (her feedback rules apply to every
   draft; TASKS 6 October item 9 (a) marks the paper-1 rewording as hers):** link
   `docs/reading/notes/2026-10-10_prior_work_lambda_above_one.md` from `fertile_window/paper.tex:73` and

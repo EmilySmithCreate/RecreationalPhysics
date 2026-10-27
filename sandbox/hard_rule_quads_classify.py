@@ -13,7 +13,11 @@ same flat torus and says what its end state is, in this order of tests:
 
 Words declared before running: the four-switch count's restricted word is ZERO REAL MOVES if every found form is BACK,
 TRANSPOSITION or RENAMING, and FOUND REAL otherwise, with the real sequences listed. The words are about the restricted
-count (every switch's points within one link of the first switch's four), not the exhaustive one.
+count (each later switch's two same-side ends within one link of the first switch's four points; their partners may
+lie one link further out; stated as searched, corrected 27 October, O163 F13), not the exhaustive one. CORRECTED 27
+October (O163 F11): the restricted count this reader classified searched only the pairs with dS1 + dS2 >= -10, about
+4 % of the legal pairs (the look's stage-2 bound was one switch's, not two), so ZERO REAL MOVES there is a word about
+the forms searched, not a complete count of the restricted word.
 
 Inputs: `--seq <slice_*.txt ...>` reads the SEQ lines printed by the look (six per kind per slice, representatives);
 `--rows <rows_*.npy ...>` reads the saved rows (22 columns: 16 switch ends, 4 dS, curl, anticurl), which hold every

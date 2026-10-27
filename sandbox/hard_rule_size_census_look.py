@@ -85,8 +85,7 @@ import hard_rule_pairs_look as P  # noqa: E402
 import hard_rule_triples_look as T  # noqa: E402
 
 LAM = 1.25
-OUT_DIR = Path(r"C:\Users\emily\AppData\Local\Temp\claude\c--Users-emily-Documents-GitHub-RecreationalPhysics"
-              r"\a8c5221d-c8c9-4874-a4a6-222c6d947581\scratchpad")
+OUT_DIR = ROOT / "sandbox" / "out" / "hard_rule_size_census"   # corrected 27 October (O163 F28): was a Windows scratchpad path
 
 # Rule 14: filled in by hand after L = 6, 8, 10 were read and before L = 12 ran. None = not yet written.
 # Each entry is (low, high), inclusive, for the count at L = 12; "formula" says how it was derived.

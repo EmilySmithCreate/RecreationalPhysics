@@ -1,6 +1,14 @@
 """Sandbox look, 27 October 2026: is a row segment inserted between two existing flaws clean? (Rule 16: a look can kill,
 never crown. Words declared here before anything ran.)
 
+CORRECTED 27 October 2026 (ASSUMPTIONS O163, the fifth Codex audit, F18): the segment states built here do NOT obey the
+owner's hard rule (S = N at four links, S = 3N at six). Only the starting flat tori were checked against it. A segment
+between its two canonical end flaws carries anticurl at the ends: S = N - 2 at four links (k = 5 on 16 x 10: N = 170,
+S = 168), S = 3N - 12 for the six-link strip (k = 5 on 12 x 6 x 8: N = 636, S = 1,896 against 1,908). Lengthening keeps
+that deficit (the increment is zero), so the exact statement is "lengthening costs nothing and makes no new flaw", not
+"a permitted route under the hard rule": under the rule the two end flaws themselves are not allowed states. The table
+now prints S and its deficit against the rule at every k.
+
 The owner's idea (20 October, VISION Update 75, her words): growth is by whole rows, and "a smaller segment ... will only
 work if there's two existing flaws lined up so that the two row additions can take advantage of as the end points of the
 line segment otherwise it has to go across all of space." Her prediction for this look, 27 October, 03:02 UTC: CLEAN
@@ -147,7 +155,10 @@ def read(adj, part, D, lam=LAM):
                 s = int(cqg_d.squares_on_edge(adj, u, int(v)))
                 squares[s] += 1
                 mins = min(mins, s)
-    return dict(valid=valid, H=h, off=off, squares=dict(sorted(squares.items())), min_sq=mins, dim=d)
+    S = sum(s * c for s, c in squares.items()) // 4
+    rule = (2 * D - 2) * (2 * D) * adj.shape[0] // 8   # the hard rule: S = N at four links, 3N at six
+    return dict(valid=valid, H=h, off=off, squares=dict(sorted(squares.items())), min_sq=mins, dim=d, S=S,
+                deficit=S - rule)
 
 
 def flaw_wiring(adj, d, info, D):
@@ -180,7 +191,8 @@ def segment_table(dims, axis, k_max, label, strip_axes=None):
         inc = None if prev is None else r["H"] - prev
         tag = " (one short of the whole row: the special closure)" if info["special"] else ""
         tag = " (the whole row)" if k == k_max else tag
-        print(f"  k = {k:2d}: N = {adj.shape[0]}, valid {r['valid']}, H = {r['H']:7.1f}, increment "
+        print(f"  k = {k:2d}: N = {adj.shape[0]}, S = {r['S']} (rule {r['S'] - r['deficit']}, deficit {r['deficit']:+d}), "
+              f"valid {r['valid']}, H = {r['H']:7.1f}, increment "
               f"{'   -  ' if inc is None else f'{inc:+6.1f}'}, off-flat points {r['off']:3d}, squares per link "
               f"{r['squares']}{tag}")
         rows.append((k, r["H"], inc, r["off"], info["special"], r["valid"]))
@@ -298,7 +310,7 @@ def patch_table(dims, axis):
         adj, part, info = res
         r = read(adj, part, D)
         per = 2 * (a + b)
-        print(f"  patch {a} x {b}: valid {r['valid']}, H = {r['H']:7.1f}, perimeter {per}, H / perimeter "
+        print(f"  patch {a} x {b}: S deficit {r['deficit']:+d}, valid {r['valid']}, H = {r['H']:7.1f}, perimeter {per}, H / perimeter "
               f"{r['H'] / per:6.2f}, off-flat points {r['off']}, squares per link {r['squares']}")
 
 

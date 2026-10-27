@@ -1729,6 +1729,37 @@ T1 to T8 are registrations here. Merging this update is her acceptance of the wo
   T56, T65, the feed look). And "melts into disorder" is withdrawn by O123; with too little room the product is
   damaged, not melted.
 
+Update 132 (2026-10-27, 14:45 UTC by the clock; written by Claude Fable 5.1 without the author): **the fifth independent
+audit by a different model (Codex), of the record of 26 to 27 October: the four-switch count was not complete, the row
+segment breaks the hard rule, and three readings were overstated. Corrected in place (marked "O163").** Brief
+`docs/reviews/2026-10-27_codex_audit_brief.md`, pinned to 9f43c2a4; report `docs/reviews/2026-10-27_codex_report.md`; the
+record is ASSUMPTIONS O163.
+
+- **What changes** (*exact, each rechecked here before it was written*). (1) The restricted four-switch count of 27
+  October searched only the pairs of switches that lose at most ten squares, about 4 % of the pairs two further switches
+  could recover, because its prune bound was one switch's and not two; its 9,216 relabelings and "zero real moves within
+  the restricted word" are exact for what it searched and certify nothing beyond it. The look is corrected, its cost is
+  being re-estimated, and the ninety-billion price of the exhaustive count is withdrawn with it. Fable's four-switch
+  hypothesis, which the author agreed with on 26 October, is untested again within the restricted word. (2) The
+  two-direction seam move lifted into three directions loses 12 squares, not 17: the first lift aliased two rows. The
+  statement that it fails the count stands. (3) The segment between two existing flaws (her idea of 20 October, her
+  CLEAN SEGMENT of 03:02 UTC) carries a square deficit at its end flaws, two squares in two directions and twelve for a
+  strip, so under her hard rule the end flaws are not allowed states; lengthening still costs exactly nothing, and the
+  page's "the one local route left" is withdrawn. (4) "The clean move's rate did not grow with the points" (Update 131)
+  is withdrawn: 6, 7 and 14 moves at three sizes leave it undecided, as O162 already read. (5) O162's small slips: one
+  of the eight stage-1 replicas with a clean move had meals of 16, not 256; T71 has 36 cells with L = 16; two stage-1
+  cells are SEED-LINKED by the declared rule. (6) O159's "nothing it reported was found wrong" is withdrawn: the fourth
+  report's Casimir-against-Lamb-shift caution is not Jaffe's position (to verify), and one of its findings was left
+  unresolved.
+- **What stands.** Both held-out readings (T71 AS PREDICTED, 152 of 152; T74 HOLDS AT L = 16, 18 of 18, every secondary
+  read), their provenance, the ledger identity and the bucket's matches, the guard fix, the three-switch and four-link
+  census counts, the cube-face and vertex-link numbers, the segment's zero increment and 21 a position, and her words as
+  recorded.
+- **What it makes plain** (*ours*). A prune copied from a shallower search is the kind of defect a complete count hides
+  until a fresh reader replays a discarded sequence; and a look that checks its starting state against her rule must
+  check its built states too. The wrap contraction defect noted in O162 is confirmed and is now a model-code issue in a
+  registered kernel (TASKS). Q1 to Q3 stay hers; nothing in the audit decides them.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
@@ -4434,7 +4465,7 @@ run existed (ASSUMPTIONS O161).
   at both smaller sizes. Timing: all twelve words as written. Unfed: every cell that had to repeat its word did, and 19
   of the other 21 gave their most likely word. *Ours:* the feed, the cap and the gate all scale with the slab, so the
   period is arithmetic by construction; a third size confirms that arithmetic and shows the clean move's rate did not
-  grow with the points. Her prediction is ours (Amendment 5), so the run cannot separate her picture from ours.
+  grow with the points *[corrected 27 October, O163 (g): the counts 6, 7 and 14 leave the rate UNDECIDED (O162 (e)); "did not grow" is withdrawn]*. Her prediction is ours (Amendment 5), so the run cannot separate her picture from ours.
 - **What follows.** Both held-out stages are read, so the `layer_feed` guard fix (O158) is unblocked. Whether the fed
   slab's burp is anything beyond the ledger's bookkeeping is item 4 of `docs/design/next_experiments_2026-10-26.md`,
   which she agreed to at 22:42 UTC; its L = 16 part can now run. Whether piece 5's status on the programme page moves,

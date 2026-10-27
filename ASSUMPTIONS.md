@@ -4642,7 +4642,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
     sides; the in-place corrections of O158; the nine bibliography entries; the physics from memory, with one caution
     added: the Casimir force has a derivation that does not use vacuum energy (Jaffe 2005, to verify), so it is weaker
     evidence for fleeting pairs than the Lamb shift.
-  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking. One range differs slightly
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking *[O163, 27 October: withdrawn; three points of that report were wrong or left open, O163 (h): the Casimir-against-Lamb-shift caution is not Jaffe's position; the generic degeneracy claim for subgraph-count ensembles is narrowed by the reading note; its F40 was not resolved here]*. One range differs slightly
     from ours by the cut used ((d)). It did not run the bath or push looks (it read their outputs), did not reach
     Crossref, and did not run the 185 / 205 damaged state.
   - **Published work it names, to read** (none read; all "to verify"): Kawasaki 1966 and kinetically constrained models
@@ -4687,7 +4687,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
   (Amendment 5), reported per cell: cold 16 of 18, warm 18 of 18, equal 3 of 9 scored and 9 SPLIT. Books residual at
   most 7.8 × 10⁻⁹. Reading in PREREGISTRATION T74, after Amendment 6. *What it shows (ours):* with the feed, cap and gate
   all proportional to N_slab and one layer proposal a sweep, the period is arithmetic by construction, and a third size
-  confirms it with the rare clean move's rate unchanged; it tests a shared expectation and cannot separate her picture
+  confirms it with the rare clean move's rate unchanged *[O163, 27 October: overstated; O162 (e) reads w = 0.67 (-0.03 to 1.43), UNDECIDED, on 6, 7 and 14 moves, so the counts fix no rate. And the commit order: the page snapshot naming this verdict was committed at 23:21:51 UTC, the data at 23:23:03, this reading at 23:23:27; the reading was done from the accepted local files before the commits (O163 (i))]*; it tests a shared expectation and cannot separate her picture
   from ours. Whether the burp is anything beyond the ledger is item 4 of the 26 October program (owner's agreement
   22:42 UTC), whose L = 16 part can now run. The `layer_feed` affordability guard fix (O158 (b), (d)) is unblocked: both
   held-out stages are read.
@@ -4699,18 +4699,18 @@ author and should be disclosed as such in any submission. Physics estimates mark
   nine tests in `tests/test_t71_t74_ledger_checks.py`, among them the bucket against `run_layer_outside` with wiring
   moves off, draw for draw). Files: T71's model and layer arms at L = 8, 12 and 16; T74's 108 stage-1 files and the 54
   held-out L = 16 files. Definitions in the script's docstring; the item's words scored as written.
-  - **(a) IDENTITY HOLDS in every cell** (T71 24 cells, T74 162): energy in since the last birth − ΔF − the daughter's
+  - **(a) IDENTITY HOLDS in every cell** (T71 24 cells *[O163, 27 October: the stage-1 cells; with L = 16 the twelve files hold 36, O163 (e)]*, T74 162): energy in since the last birth − ΔF − the daughter's
     energy − the stores carried = 0 to 1e-9 at every fed-phase birth (about a million). The item's form without the
     carry is off by the stores the slab carries between births: mean 0.005 to 0.8 a N_slab, up to 22, so the carry is
     part of the identity and not a rounding term.
-  - **(c) WIRING-FREE SHARE above 90 % in every cell**: above 0.99 everywhere and exactly 1.000 in 124 of 144 stage-1
+  - **(c) WIRING-FREE SHARE above 90 % in every cell** *[O163, 27 October: the "144 stage-1 cells" below are T74's 108 and T71's 36 with its L = 16 cells, O163 (e); and the share counts birth intervals with no new clean move, so damage from an earlier move persists inside it, O163 (g)]*: above 0.99 everywhere and exactly 1.000 in 124 of 144 stage-1
     cells and 51 of 54 at L = 16; the exceptions are the λ = 1.10, c = 2R cells with clean moves (0.9992 to 0.9998 at
     L = 16). Widenings (6 → 8, no daughter) are thousands per c = 2R cell.
   - **(b) The bucket null, done:** a graph-free model with the reservoir, meals, relaxation, `edge_flow` with the cap,
     even inflow, water-filling outflow, the pool and the gate on the two layers beside the cut, the same generator
     draws in the same order and each replica's own seed. It reproduces **1,708 of 1,728 stage-1 T74 replicas and 793 of
     864 at L = 16 birth for birth** (sweep and energy to 1e-9). Every replica it does not reproduce is either one in
-    which a fed-phase clean move fired (8 at stage 1, 9 at L = 16, all at λ = 1.10, c = 2R, meals of 256) or an exact
+    which a fed-phase clean move fired (8 at stage 1, 9 at L = 16, all at λ = 1.10, c = 2R, meals of 256 *[O163, 27 October: one of the 8 is a meals-of-16 replica: L = 8, cold, replica 14, seed 2489427319, one fed-phase clean move at sweep 3,124; the aggregate stands, "all meals of 256" does not, O163 (d)]*) or an exact
     pool-equals-gate tie that the registered code's per-point floating sum resolved on the refusing side of its 1e-12
     tolerance (12 at stage 1, one checked by replay; 62 at L = 16, all in the nine λ = 1.25, c = 2R cells, 26 of 26
     checked by replay, the other 36 read the same way, ours). A tie delays one birth by a sweep or two and leaves the
@@ -4724,7 +4724,7 @@ author and should be disclosed as such in any submission. Physics estimates mark
     lattice and every later birth of that replica can be off: 235 of 367 fed births in one stage-1 replica, at 8
     distinct energies from 0.094 to 1.25 a N_slab, the split's release depending on where the cut falls against the
     damage); the clean moves, the events, are MEMORYLESS in T71 (p 0.67 to 0.93) and at L = 16 (14 moves in 9 of 48
-    replicas, p 0.064), borderline on 6 and 7 moves at stage 1 (p 0.046, 0.029: no power). Declared test: per-replica
+    replicas, p 0.064), borderline on 6 and 7 moves at stage 1 (p 0.046, 0.029: no power *[O163, 27 October: both below the declared 0.05, so SEED-LINKED by the letter in those two cells; "no power" was a gloss, O163 (g)]*). Declared test: per-replica
     counts against a binomial or Poisson null, 20,000 draws, seed 20261026, SEED-LINKED below 0.05.
   - **(e) PER-BIRTH SWITCHES against N:** T71 at λ = 1.10, r = 1/16 gives w = 0.62 (0.22 to 1.05)
     on 17, 23 and 37 moves at L = 8, 12, 16, ∝ N by the declared rule and against FIXED at 95 %, weak; T74 at λ = 1.10,
@@ -4737,7 +4737,112 @@ author and should be disclosed as such in any submission. Physics estimates mark
     whose rate with size the counts cannot yet fix. A kill of a reading, not of her picture. The size claim's verdict
     is the registered scorer's (O161, HOLDS AT L = 16), not this reading's. One exact note from the code, to verify:
     `contract_layers` at x0 = w − 1 renames by +1 and sets x0 = w − 2, so the pair removed is the old (w − 3, w − 2)
-    while `pool_mask` charged the layers around the old (w − 1, 0); geometry unchanged, stores not; the null copies it.
+    while `pool_mask` charged the layers around the old (w − 1, 0); geometry unchanged, stores not; the null copies it *[O163, 27 October: confirmed with marker stores on a 4 x 4 x 6 torus, x0 = 5: the layers removed are the old 3 and 4, the pool charged 0, 1, 4 and 5; a model-code issue in TASKS, not fixed, O163 (f)]*.
   - Not done: the gate null (gate 0.5 and 2 a N_slab) and the L = 24 size claim are registered follow-ups that wait on
     her prediction. The programme page sentence the item asks for is hers to put on the page.
 
+
+- **O163 AUDIT (rule 12, a different model): Codex on the record of 26 to 27 October (27 October 2026, 14:45 UTC by the
+  clock; recorded by Claude Fable 5.1 without the owner, who passed the report in).** Brief
+  `docs/reviews/2026-10-27_codex_audit_brief.md`, pinned to 9f43c2a4; report `docs/reviews/2026-10-27_codex_report.md`,
+  32 findings (F1 to F32) and five blind answers (Part A, whose own disclosure says the first fetch exposed appended
+  handoff snippets before the blind instruction was read; the five answers stand as written before the readings were
+  opened). Corrections in place marked "O163": O159, O161, O162, VISION Update 131, the LOG lines of 26 and 27 October,
+  `docs/HANDOFF_2026-10-26.md`, the programme page, PREREGISTRATION T74's reading, four sandbox scripts. Summary in
+  Update 132. Rule 12's question, "what did it find and what did it get wrong", is answered below after each finding was
+  rechecked by a run or a reading of this session.
+  - **(a) The four-switch count was not complete, and its ZERO is withdrawn as a count of the restricted word (F11, F12,
+    F13).** `sandbox/hard_rule_quads_look.py` kept a pair of switches for stages 3 and 4 only if dS1 + dS2 >= -10, the
+    exact bound on one switch's gain, copied from the triples look where one switch remained; after two switches two
+    remain and the bound is 20. Confirmed by reading the code and by replaying Codex's sequence on the flat 6 x 6 x 8
+    torus: (0,48,2,50), (1,49,3,51), (0,50,2,48), (1,51,3,49) is legal at every step, dS -6, -5, +5, +6, back to the start,
+    and its prefix (-11) was discarded. Scale, ours (a scratch count over the first 60 first switches from point 0,
+    second switches in the radius-1 ball): 4,925 kept, 126,476 discarded with need in 11 to 20, none beyond 20: the count
+    searched about 4 % of the pairs two further switches could recover, which is the 2.4 % "kept pairs" of the record
+    (197,712 of 8,356,716). So the 26 and 27 October numbers (15.6 billion fourth switches, 9,216 forms, all
+    transpositions) are exact for the pairs searched and certify no ZERO for the restricted word; the three-switch
+    counts (one switch left, bound 10) and the seam-window searches of part 1 (pruned on the switches left; checked) are
+    unaffected. The look is corrected (stage-2 bound 2 gmax, dated in its docstring); a corrected cost estimate is
+    running (twelve slices, `sandbox/out/hard_rule_quads/estimate_corrected/`) and its numbers are appended below when
+    read; whether to buy the corrected restricted count or the exhaustive one is hers (F12: the 9 x 10^10 estimate was
+    counted under the same prune and is withdrawn too). The restricted word is stated as searched (F13): each later
+    switch's two same-side ends within one link of the first switch's four points, their partners one link further;
+    corrected in the classifier's docstring and in the LOG. Rule 11 is not called: nothing was pre-registered; the
+    hypothesis the count was to kill (Fable's, 22:37 UTC on 26 October, which she agreed with) is back to untested
+    within the restricted word, killed only for the direct lifting and the seam windows.
+  - **(b) The 3D lift aliased two rows (F14).** `idx` has no range check, so the 16 x 10 seam sequences' rows y = 8 and 9
+    went to (x + 1, y - 8) in the 8 x 8 x 8 torus; "-6, -7, -4, total -17" was for a sequence that is not the lifted
+    move. Corrected to the 16 x 10 x 8 torus and rerun (`seam_part1_corrected.txt`): -6, -4, -2, total -12 in one plane
+    (S 3,828 against 3,840; curl +4, anticurl +52), -12 in planes 0 and 1, -24 in planes 0 and 2 or 0 and 4; the
+    second written form -8, -2, -2. The qualitative statement stands (the direct lifting does not keep the count); the
+    17 is withdrawn.
+  - **(c) The row segment violates the hard rule (F18, F19, F20).** The segment states of `sandbox/row_segment_look.py`
+    carry a square deficit at their end flaws: S = N - 2 at four links (k = 5 on 16 x 10: N = 170, S = 168; the same -2
+    at every k from 2 to 13 at both sizes) and S = 3N - 12 for the six-link strip (12 x 6 x 8, k = 2 to 8: N = 636 and
+    S = 1,896 at k = 5); the whole row and plane have no deficit, and the lone pair k = 1 has none but is invalid. Only
+    the starting tori had been checked against the rule; the look now prints S and the deficit at every k. What stands,
+    exact: lengthening a segment between its two end flaws costs nothing and makes no new flaw, 21 a position at
+    lambda 1.25 (16 + 4 lambda per end, F19), the canonical closure the cheapest single cut tried. What is withdrawn: the
+    handoff's and the page's reading of it as "the one local route left" under the rule. Under the hard rule the two end
+    flaws are not allowed states, so a segment between existing flaws is a route only in a rule that admits such flaws;
+    whether her rule does is hers (Q1). Rule 16 (F20): the look's declared word was FLAWED and is kept; the LOG's "in
+    substance exact" names a conditional arithmetic fact and is not a promotion; the page's sentences were a promotion
+    without a tested script and are corrected. The "dislocation" is a geometric reading, no Burgers circuit computed.
+  - **(d) A small-meal clean move (F7).** `results/t74_lam110_L08_meals16_c2R_cold.csv`, replica 14, seed 2489427319,
+    one fed-phase clean move at sweep 3,124 (checked). O162 (b)'s "all at ... meals of 256" is wrong for that one replica
+    of the 8; the aggregate 1,708 of 1,728 stands. Clean events: 1 in small meals (L = 8), 6, 7, 14 in large meals at
+    L = 8, 12, 16.
+  - **(e) The cell counts (F6).** T71's twelve named files hold 36 cells by (arm, lambda, r, L), 12 a size; O162 (a)'s
+    "24 cells" are the stage-1 ones, and its "144 stage-1 cells" in (c) are T74's 108 plus T71's 36 with L = 16
+    included. The identity numbers are unchanged.
+  - **(f) The wrap contraction (F10), confirmed with marker stores.** `contraction.contract_layers` at x0 = L - 1 rotates
+    by +1 and sets x0 = L - 2, so on a 4 x 4 x 6 torus with layer x carrying 10^x per store, x0 = 5 removes the old
+    layers 3 and 4 (their halves land on the old 2 and 5) while `pool_mask` charged the old 0, 1, 4 and 5; x0 = 1 removes
+    1 and 2 as intended. O162 had noted it "to verify"; it is a model-code issue (TASKS), in a registered kernel that
+    T71's layer arm ran under, not fixed here: a fix needs a test, a rerun decision and a note on every T71 layer cell.
+    The null copies the defect, so O162's bucket matches stand as matches of the code as run.
+  - **(g) "The clean move's rate did not grow" is withdrawn (F2, F3).** O162 (e)'s own reading is w = 0.67 (-0.03 to
+    1.43) on 6, 7, 14 moves, UNDECIDED; O161's "rate unchanged" and Update 131's "did not grow with the points" overstated
+    it and carry markers. What stands: the periods held despite the moves. O162 (d) (F9): p = 0.046 and 0.029 are below
+    the declared 0.05, so those two stage-1 cells are SEED-LINKED by the letter of the declared rule; "no power" was a
+    gloss and is marked. F8: "wiring-free share" counts birth intervals with no new clean move; damage from an earlier
+    move persists (397 of 414 altered births at L = 8 have no new move in their interval); the page's sentence is
+    reworded and the bucket, not the share, is the evidence about graph-free timing.
+  - **(h) O159's record of the fourth audit (F24, F25, F32).** "Nothing it reported was found wrong on checking" is
+    withdrawn: the fourth report's caution that the Casimir force is weaker evidence than the Lamb shift for fleeting
+    pairs is not Jaffe's position (his introduction, read by Codex and not by us, to verify: Casimir gives no greater and
+    no lesser support for vacuum energy than other one-loop effects, naming the Lamb shift's vacuum polarization); its
+    generic degeneracy claim for subgraph-count ensembles is narrowed by `docs/reading/notes` (sparse, fixed-degree
+    scope); its F40 (the Coleman and causal-set cautions missing from O158 and Update 126) was not resolved by O159; the
+    fifth brief said "F1 to F37" where that report runs to F40. Marked in O159.
+  - **(i) Process (F22, F26, F27, F28).** The T74 L = 16 configs' `_purpose` says the go-ahead was of 25 October; it was of
+    26 October (O160); the configs are not rewritten, PREREGISTRATION carries a marker. The T74 reading's "23:02 UTC by
+    the clock" was `date`; the page snapshot was committed at 23:21:51 UTC, the data at 23:23:03 and the reading at
+    23:23:27, so the reading was done from accepted local files before the commits, and the commit order is what the
+    record can prove (rule 17). The census and the row look entered git with their predictions and results together
+    (self-reported times only; the four-switch source entered with readings): true, and nothing more can be shown. The
+    census look wrote to a hard-coded Windows scratchpad path (corrected to `sandbox/out/hard_rule_size_census/`). The
+    audit's own number drifted from O162 to O163 (marked in the next-experiments brief); the Q2 placements are counted
+    five in the handoff and six in the two-stories brief (the vertex-link point); one list is owed (TASKS).
+  - **What it checked and found correct.** The registered scores (152 of 152; 18 of 18 with every secondary read; the
+    per-cell reader's 51 BURPS, 3 MIXED, residual 7.8 x 10^-9); T74's provenance (prediction and scorer at a1f9f723,
+    20:11:47 UTC, the data at e91a1e7a, 23:23:03, neither changed before the pin; the 23 October resampling regenerates the
+    bounds); the guard fix (144 of 144 rows of a stage-1 layer replica equal under it; three of the four tests fail under
+    the old guard, the identity test passes, which the addendum never claimed otherwise); the per-birth reader's 5,148 and
+    4,620 with the first row; the ledger identity to 1.6 x 10^-10 and the bucket's 1,708 and 793; the three-switch and
+    four-link census counts, all nine; the cube-face and vertex-link numbers on the tori; the row look's energies; her
+    words of 22:37, 22:41, 22:42, 02:51 and 03:02 as recorded, with their consequences overstated by us, not by her; the
+    reading notes' scope on kinetically constrained models, defects and ensemble equivalence.
+  - **What it got wrong or could not do.** Nothing it reported was found wrong on checking; two points are framing: its
+    counterexample is a BACK sequence, as it says itself, so it shows the omission and not a real move; and its 36 T71
+    cells and our 18 (by arm, lambda, L) are both true counts, O162's 24 being the stage-1 count. It did not rerun the
+    restricted count under the corrected bound (the bound was corrected here, after its report), did not reproduce the
+    full 15.6-billion count or the 9,216 rows (192 of one first switch, all transpositions), did not run the saved push
+    states (absent), and did not replay the 74 clean-free bucket mismatches. Its Part A was not strictly blind (its
+    disclosure).
+  - **Published work it names, to read** (none read by us; all "to verify"): Nishimura 2017 (swap connectivity under
+    triangle constraints; its k-edge swap is one cyclic permutation, not k switches through valid states; its eight-edge
+    example is no bound for this toy), Tabourier, Roth and Cointet 2011 (multiple edge switches), Costeniuc, Ellis,
+    Touchette and Turkington 2006 (Gaussian ensemble equivalence, with its conditions), Bower, Applied Mechanics of Solids
+    section 5.8 (dislocation loops), Hirth and Lothe 1982, Gerstner, Kistler, Naud and Paninski 2014 section 1.3
+    (integrate-and-fire: accumulate, threshold, reset, a construction-set period). Joined to the O159 bibliography debt.

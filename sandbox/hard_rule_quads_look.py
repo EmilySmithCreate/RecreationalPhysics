@@ -1,5 +1,20 @@
 """Sandbox look (exploratory; rule 16), 26 October 2026: four switches under the owner's hard rule. Usage:
 
+CORRECTED 27 October 2026 (ASSUMPTIONS O163, the fifth Codex audit, F11 and F14; two defects of the 26 October version,
+both the assistant's). (1) The stage-2 prune kept a pair of switches only if dS1 + dS2 >= -gmax (gmax = 10, the exact
+bound on ONE switch's gain), copied from the triples look, where one switch remained. Here two remain, so the exact
+bound is 2 gmax = 20, and the 26 October counts (restricted mode: FOUND 9,216, all transpositions, "ZERO REAL MOVES
+within the restricted word") searched only the pairs with dS1 + dS2 >= -10, about 4 % of the legal pairs in the
+radius-1 ball (a scratch count over 60 first switches: 4,925 kept, 126,476 discarded with need3 in 11..20, none beyond
+20); a legal sequence in the discarded region exists (6 x 6 x 8: (0,48,2,50), (1,49,3,51), (0,50,2,48), (1,51,3,49),
+dS -6, -5, +5, +6, back to the start). So those counts are NOT a complete count of the restricted word and certify no
+ZERO; they stand as counts of the pairs they searched. The stage-2 bound is now 2 gmax for the four-switch stages
+(`--estimate`, `--full`, `--restricted`); the stage-3 bound (one switch left) stays gmax; the triples look is untouched.
+(2) Part 1 (iii) lifted the 16 x 10 seam move into the 8 x 8 x 8 torus with `idx`, which has no range check, so rows
+y = 8 and 9 were silently mapped to (x + 1, y - 8): the printed "-6, -7, -4, total -17" is for a sequence that is not
+the lifted move. The lift now goes into the 16 x 10 x 8 torus, which holds every 2D coordinate. The window searches
+(i), (ii), (iv) did not use the lift and are unchanged.
+
     python sandbox/hard_rule_quads_look.py --seam                     # part 1: the seam move by hand, 2D then 3D liftings
     python sandbox/hard_rule_quads_look.py --estimate --slice k/m     # part 2: stages 1-3, count what stage 4 would cost
     python sandbox/hard_rule_quads_look.py --full --slice k/m [--prune 8]        # stage 4 over the radius-1 ball of 12
@@ -44,7 +59,8 @@ window search on the 6 x 6 x 8 torus (rows y all 6, z in {0, 1, 2}), depth 4. Ea
 PART 2, exhaustive, estimate first. The triples look's stages 1 to 3, then a fourth switch whose u's lie within one link
 of the twelve points of the first three, pruned on the running change after three switches: dS1 + dS2 + dS3 >= -10 (the
 exact bound; a switch gains at most 2(deg - 1)) and, reported separately as a tighter prune on a seen number, >= -8 (the
-largest third-switch gain seen on 26 October). `--estimate` counts the triples that survive each prune and the fourth-stage
+largest third-switch gain seen on 26 October). After two switches the prune is dS1 + dS2 >= -20 (corrected 27 October;
+two switches remain). `--estimate` counts the triples that survive each prune and the fourth-stage
 try_switch calls they imply (same-side pairs of the radius-1 ball of 12 points, times 36; and the same for the restricted
 ball of the FIRST switch's four points), with the measured rate.
 
@@ -175,7 +191,7 @@ def side_pairs(part, ball, nb):
 # ----------------------------------------------------------------------------------------------------------------------
 
 @njit(cache=True)
-def run_first_q(adj0, part, f_u1, f_v1, f_u2, f_v2, ds1, gmax, prune4, flat, mode,
+def run_first_q(adj0, part, f_u1, f_v1, f_u2, f_v2, ds1, gmax, gmax2, prune4, flat, mode,
                 mark, stamp, ball, ball2, ball3, rows, nrows, e0, out):
     """Stages 2 to 4 for one first switch. mode 0: estimate (stages 2, 3; stage-4 cost counted); mode 1: full stage 4
     over the ball of the twelve points; mode 2: restricted (stages 3 and 4 over the ball of the FIRST switch's points).
@@ -218,7 +234,7 @@ def run_first_q(adj0, part, f_u1, f_v1, f_u2, f_v2, ds1, gmax, prune4, flat, mod
                         if ds2 > out[14]:
                             out[14] = ds2
                         need3 = -(ds1 + ds2)
-                        if need3 <= gmax:
+                        if need3 <= gmax2:
                             out[1] += 1
                             seeds[4] = a1
                             seeds[5] = b1
@@ -361,7 +377,7 @@ def exhaustive(dims, mode, sl, prune4, rows_path=None):
                     continue
                 n_mine += 1
                 firsts[ds1] += 1
-                nrows, stamp = run_first_q(adj0, part, 0, int(v1), int(u2), int(v2), ds1, gmax, prune4, flat, mode,
+                nrows, stamp = run_first_q(adj0, part, 0, int(v1), int(u2), int(v2), ds1, gmax, 2 * gmax, prune4, flat, mode,
                                            mark, stamp, ball, ball2, ball3, rows, nrows, adj0, out)
     dt = time.time() - t0
     res = {k: int(out[i]) for i, k in enumerate(KEYS)}
@@ -369,7 +385,7 @@ def exhaustive(dims, mode, sl, prune4, rows_path=None):
     print(f"stage 1: {n_first} legal first switches from point 0 ({n_mine} in this slice), by dS: "
           f"{dict(sorted(firsts.items()))}")
     print(f"stage 2: {res['second']} legal non-undo second switches; max dS2 {res['max_ds2']} (bound {gmax}); "
-          f"pairs kept {res['kept_pairs']}")
+          f"pairs kept {res['kept_pairs']} (dS1 + dS2 >= -{2 * gmax}, two switches left; corrected 27 October)")
     print(f"stage 3: {res['third']} third switches tried; max dS3 {res['max_ds3']}; restoring triples that leave the "
           f"start {res['restoring_triples']}; back {res['back_triples']}")
     print(f"  triples surviving for stage 4: {res['surv3_10']} (need4 <= {gmax}), {res['surv3_8']} (need4 <= 8)")
@@ -557,12 +573,13 @@ def part1():
     # (ii) the six-link 8 x 8 x 8 window: all 8 rows, planes z in {0, 1}
     seam_dfs((8, 8, 8), 0, [(0, y, z) for y in range(8) for z in (0, 1)], 4,
              "(ii) six links, 8 x 8 x 8, rows y all 8, planes z in {0, 1}")
-    # (iii) the two-direction move lifted explicitly
-    dims3 = (8, 8, 8)
+    # (iii) the two-direction move lifted explicitly, into a torus that holds every 16 x 10 coordinate (corrected 27 October)
+    dims3 = (16, 10, 8)
     adj3, part3 = torus(dims3)
     adj3 = np.asarray(adj3, dtype=np.int64)
     part3 = np.asarray(part3, dtype=np.int64)
-    print("\n(iii) the two-direction seam move lifted into the 8 x 8 x 8 torus")
+    print("\n(iii) the two-direction seam move lifted into the 16 x 10 x 8 torus (corrected 27 October; the 26 October run lifted\n"
+          "      into 8 x 8 x 8 with rows 8 and 9 silently aliased, O163 F14)")
     done = set()
     for (seq, _, dc, da) in found2d:
         if len(seq) != 3 or (dc, da) == (0, 0):
