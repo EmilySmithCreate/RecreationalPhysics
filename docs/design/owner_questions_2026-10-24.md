@@ -7,6 +7,14 @@ verbatim there); the record is VISION Updates 104 to 112.*
 
 ## Open, 27 October evening: the twist rules (start here)
 
+*Answered 27 October, 19:12 UTC (verbatim in the notebook): **T2 yes**, one charge costs 2(λ − 1) and sits where a full
+turn of twist closes; **T3: the moves must obey it** (imposed). Still open: T1, T4, question 5, and T3′ below.*
+
+**T3′ What is "the opposite angle" in the toy?** The moves must make a curl and its anticurl at opposite angles. Two
+readings: (a) by twist: a curl carrying twist +θ is made only together with an anticurl carrying −θ; (b) by place: the
+anticurl is made on the far side of the curl, across a point or across the space. (a) can be checked on every move from
+the twist alone; (b) needs a rule for "far side" on wiring that has no fixed geometry. Which, or both?
+
 *Your words of 19:00 UTC are in the notebook verbatim; the record is VISION Update 134. Each question turns one of your
 rules into a form the toy can run. The twist is the light field's phase: round each square it runs from −π to π, and
 plus and minus cost the same.*
