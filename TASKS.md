@@ -1085,6 +1085,11 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
 4. **T71's per-birth recount** (F31): confirm the 16 extra births per cell and the births above one curling cost
    alongside item 1 of the O158 section, with the reader committed this time. *Done 2026-10-26 (`scripts/read_t71_births.py`, tested): 5,148 and 4,620 confirmed; the 24 births above a N_slab at L = 8 are contractions of a damaged state booked as births; O158 addendum.*
 5. Low: the push look's skip-if-done should compare the config, not only the file name (F10).
+6. **The fifth audit (rules 12 and 22), brief written 2026-10-27 (11:59 UTC):** `docs/reviews/2026-10-27_codex_audit_brief.md`, pinned to `9f43c2a4`, covering Updates 129 to 131, O159 to O162, the
+   looks of 26 and 27 October, the row-segment look and the guard fix; Part A blind (the five questions of the
+   next-experiments brief's item 12). To do: the owner runs it in a fresh Codex session and saves the report as
+   `docs/reviews/2026-10-27_codex_report.md`; the next session records it as **O163** (item 12 said O162, which the
+   ledger reading took) and corrects in place with a dated marker.
 
 ## 26 October: the held-out stages of T71 and T74  ◑
 
