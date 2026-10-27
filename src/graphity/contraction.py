@@ -272,7 +272,7 @@ def run_feed(state, lam, rate, n_sweeps, seed, mu_n=0.0, gate=0.0, leak=0.0, pro
             mask = pool_mask(st, axis, x0, contract)
             pool = float(st.stores[mask].sum())
             if df > 0:
-                if pool + 1e-12 < df:
+                if pool < df:  # the whole bill, no tolerance, so no store goes negative (O158 (b), fixed 27 October 2026)
                     continue
                 st.stores[mask] -= st.stores[mask] * (df / pool)
                 cand = contract_layers(st, axis, x0) if contract else split_layers(st, axis, x0, max_width)

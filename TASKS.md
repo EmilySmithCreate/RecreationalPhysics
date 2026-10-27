@@ -1066,7 +1066,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    score. Accept: the per-birth shortfall reported per cell at L = 16.
 2. **The affordability guard in `graphity.layer_feed`** (`pool + 1e-12 < bill` lets a pool up to 1e-12 short pay):
    after T71's and T74's held-out stages are read, change it so no store goes negative, with a test at a pool just
-   below, at and above the bill; and reword the docstring's "conserved exactly" as an accounting identity to 1e-9.
+   below, at and above the bill; and reword the docstring's "conserved exactly" as an accounting identity to 1e-9. *Done 2026-10-27 (01:22 UTC): `can_pay` with no tolerance in `layer_feed` (paid moves and the twins' draw; the gate threshold keeps its 1e-12, never spent), the same in `contraction.run_feed`, the docstring reworded, four tests in `tests/test_layer_feed_guard.py`; O158 addendum of 27 October.*
 3. **Reading, before any citation**: [Pop10] and [FGG90] first (a universe inside a black hole; making one by
    tunnelling), then [BFT18]; read status in `REFERENCES.bib`.
 
