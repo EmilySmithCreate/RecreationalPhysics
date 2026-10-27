@@ -1092,7 +1092,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    ledger reading took) and corrects in place with a dated marker.
 7. **From O163 (27 October, 14:45 UTC):** (a) the four-switch count at six links, redone with the corrected stage-2 bound
    (`sandbox/hard_rule_quads_look.py --restricted`, and `--full` for the exhaustive word): priced by the corrected
-   `--estimate` (running; `--sum sandbox/out/hard_rule_quads/estimate_corrected`), both hers to buy; the classifier
+   `--estimate` (read 27 October 19:06 UTC: about 21 hours restricted, 2 days exhaustive on the laptop, O163), both hers to buy and off her path since the soft rule; the classifier
    reads the rows as before. (b) `contraction.contract_layers` at x0 = L - 1 removes the old layers L - 3 and L - 2
    while `pool_mask` charges L - 2, L - 1, 0 and 1 (O163 (f); a registered kernel T71's layer arm ran under): a
    regression test with marker stores, then the owner's decision whether to fix it (rotate by -1) and rerun the layer
