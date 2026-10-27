@@ -5,7 +5,33 @@ full text is. Answer in any order; items marked ★ unblock the most. Answered i
 Her words of 25 October are in `sandbox/NOTEBOOK.md` under that date (her two passes of `#` notes on this file kept
 verbatim there); the record is VISION Updates 104 to 112.*
 
-## Open, 27 October, after your answers (start here)
+## Open, 27 October evening: the twist rules (start here)
+
+*Your words of 19:00 UTC are in the notebook verbatim; the record is VISION Update 134. Each question turns one of your
+rules into a form the toy can run. The twist is the light field's phase: round each square it runs from −π to π, and
+plus and minus cost the same.*
+
+**T1 ★ How much does twist raise the curling cost?** Candidate: each unit of curl on a link costs its usual amount plus κ
+times the twist on that link's squares, measured by size, not sign (1 − cos of the twist: 0 untwisted, 2 at a half
+turn). κ is a new constant, scanned, never tuned. Confirm, or say how it should grow with twist.
+
+**T2 "A half curl energy on a whole twist makes a whole charge."** In the light field a whole twist is a full turn (2π)
+round a loop, and a charge is where the field's lines start or end. Candidate reading: one whole charge costs half a unit
+of curling energy, 2(λ − 1) in the toy's units, and sits where a full turn of twist closes. Is that it, or is the half
+curl spent to make the charge?
+
+**T3 "A curl always forms at the opposite angle of its anticurl."** A rule the moves must obey (only moves that make the
+pair at opposite angles are allowed), or something you expect to happen by itself? *Ours:* the second is testable; the
+first is put in.
+
+**T4 Curl spreads at one link per tick, slower near twist.** The light field already moves at most one link per tick
+(tested). For curl, is the slowing a rule we write in (a rate that falls with the twist nearby), or what you expect T1 to
+cause by itself? *Ours:* the second is testable.
+
+**Still open: question 5 below**, how the twist moves when the wiring switches (fresh, carried, averaged out, or drawn to
+suit its neighbours).
+
+## Open, 27 October, after your answers
 
 *Your words of 16:42 UTC are in `sandbox/NOTEBOOK.md` verbatim; the record is VISION Update 133. Q1 is answered (soften).
 Your picture answers Q2 in your terms and restates Q3 as each curled direction carrying its own curling cost, which gives

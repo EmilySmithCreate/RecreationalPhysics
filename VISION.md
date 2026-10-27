@@ -1819,6 +1819,38 @@ in her terms and restates Q3.
   curled cap on one side and a melted cap on the other, balanced so S = 3N; the toy has no handedness, so matter and
   antimatter are not in it. (A4) **Her prediction: the soft runs make the space open with the twin daughters.**
 
+Update 134 (2026-10-27, 19:00 UTC by the clock): **the author's direction: toward the twist rules, with spacetime
+emerging from twist and curl.** Her words are in `sandbox/NOTEBOOK.md` under this time, verbatim. Why this page
+changes: two sandbox looks of the same afternoon (LOG) found that her soft rule couples the curled north and the
+anticurled south of her X, but that the south's anticurl, made by melting, heals by itself and the north then breaks
+rather than opens. She asked whether curl and anticurl could be mirror images, as a signed twist is, rather than curl
+and melt (*exact:* in the toy they are not; a link's curl runs from +1 to −4, the negative side mostly reached by
+disorder, and under her pricing the two sides cost differently). Of the two routes offered she chose the twist.
+
+- **Her direction.** Spacetime should emerge from two degrees of freedom, twist and curl (her H1 of 25 October). Twist
+  makes curling more expensive, because it can polarize handedness; so much twist means curl is harder, the surplus is
+  passed to the daughter universes, and the loop goes on, a new pair of universes for every black hole, which we
+  experience as just our universe. Every combination of twist and curl exists; where many are packed together they form
+  the first daughter pair; from inside that two-dimensional space we experience a three-dimensional world, a strange
+  loop like a video camera recording the screen it projects onto, complex and emergent as a video player's design.
+- **Her rules, as candidate forms for her to confirm** (questions T1 to T4 in `docs/design/owner_questions_2026-10-24.md`;
+  *ours*, the translation): (1) twist raises the curling cost by an amount set by the twist's size, not its sign; (2) a
+  whole twist with half a unit of curling energy is one whole charge; (3) a curl forms at the opposite angle from its
+  anticurl; (4) curl spreads at one link per tick, slower near twist. The twist is the phase of the light field already
+  built (`graphity.u1`, Update 96): its twist round each square runs from −π to π and costs the same either way, so plus
+  and minus are mirror images by construction.
+- **What is put in and what could be found** (*ours*). Rule (1) makes "lots of twist means curl is harder" true by
+  construction; it is not a result. What a run could show is what follows: whether the release then goes where she says,
+  whether a front slows near twist (her rule (4) and Update 36's pace rule predict it), and whether a curl and its
+  anticurl form at opposite angles without that being imposed.
+- **Published relatives** (general knowledge, none read by us, to verify): a 3D world experienced from a 2D one is the
+  holographic principle ('t Hooft; Susskind), and the published model's own programme rests on a 2D holographic screen
+  ([T23], [T24], read); the camera filming its own screen is Hofstadter's image of a strange loop; "every combination
+  exists" is Tegmark's mathematical universe; a pair of universes from every black hole is near Smolin's cosmological
+  natural selection and [BFT18].
+- **Before anything is built:** her answers T1 to T4, and question 5 (how a phase rides a switch). The light field runs
+  on a fixed graph today; riding it on switching wiring is new code with rule-6 tests. Nothing is run before that.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
