@@ -5,6 +5,7 @@
     python sandbox/hard_rule_quads_look.py --full --slice k/m [--prune 8]        # stage 4 over the radius-1 ball of 12
     python sandbox/hard_rule_quads_look.py --restricted --slice k/m [--prune 8]  # stage 4, every u within one link of the FIRST
     python sandbox/hard_rule_quads_look.py --sum sandbox/out/hard_rule_quads/full   # add up the slices' JSON lines
+    ... --restricted --slice k/12 --rows <file.npy>   # also save every recorded FOUND row (the 22-column rows: 16 switch ends, 4 dS, curl, anticurl), 2,000 at most per slice
 
 Extends `hard_rule_triples_look.py` (not modified; its 26 October run: 0 restoring triples out of the flat 6 x 6 x 8 torus,
 715,453,184 third switches tried in 8 slices of about 280 s, max gain seen +2 for a second and +8 for a third switch,
@@ -320,7 +321,7 @@ KEYS = ["second", "kept_pairs", "third", "restoring_triples", "back_triples", "s
         "max_ds2", "max_ds3", "max_ds4"]
 
 
-def exhaustive(dims, mode, sl, prune4):
+def exhaustive(dims, mode, sl, prune4, rows_path=None):
     adj0, part = torus(dims)
     adj0 = np.asarray(adj0, dtype=np.int64)
     part = np.asarray(part, dtype=np.int64)
@@ -400,6 +401,9 @@ def exhaustive(dims, mode, sl, prune4):
                   f"({x[12]},{x[13]},{x[14]},{x[15]}) dS {x[16]:+d},{x[17]:+d},{x[18]:+d},{x[19]:+d}; "
                   f"curl {x[20]}, anticurl {x[21]}")
     print(f"  wall time {dt:.1f} s")
+    if rows_path is not None:
+        np.save(rows_path, rows[:nrows])
+        print(f"rows saved: {nrows} of {res['FOUND']} FOUND forms to {rows_path}")
     print("JSON " + json.dumps(res))
 
 
@@ -601,6 +605,7 @@ if __name__ == "__main__":
     if "--prune" in argv:
         prune4 = int(argv[argv.index("--prune") + 1])
     mode = 0 if "--estimate" in argv else (2 if "--restricted" in argv else 1)
-    args = [a for a in argv if not a.startswith("--") and not a.replace("/", "").isdigit()]
+    rows_path = argv[argv.index("--rows") + 1] if "--rows" in argv else None
+    args = [a for a in argv if not a.startswith("--") and not a.replace("/", "").isdigit() and a != rows_path]
     dims = [int(x) for x in args[0].split(",")] if args else [6, 6, 8]
-    exhaustive(dims, mode, sl, prune4)
+    exhaustive(dims, mode, sl, prune4, rows_path)
