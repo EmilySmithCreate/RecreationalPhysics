@@ -9493,3 +9493,15 @@ scale rule are decisions; a one-switch knot is not a particle in her sense; noth
 
 **Disclosure.** `graphity.diagonals` and its tests, and this script, were written tonight before any γ number existed;
 no γ number has been seen at any setting.
+
+**Amendment 1 (the held-out number), 2026-10-28, 23:45 UTC, written from stage 1 alone, before L = 32 runs.** Stage 1
+(`results/t85_gamma_L16_s20268501.csv`, `_L16_s20268502.csv`, `_L24_s20268501.csv`): knot 1 (charges 8, 8, 8; E_knot 96)
+gives α* = −0.31, −0.44, −0.34 at b = 2, 4, 6 on L = 16 and −0.28, −0.40, −0.52, −0.79, −0.24 at b = 2 to 10 on L = 24
+(the last b at each size sits within reach of the torus's image); knot 2 (12, 8, 12; E_knot 128) gives −0.53, −1.06,
+−2.38 on L = 16. **Words at stage 1: DRIFTS ACROSS b and DRIFTS ACROSS KNOTS**; D > 0 at every b (no NO DELAY).
+**Prediction for L = 32, seed 20268501 (knot 1):** α*(b) = −0.28 ± 0.05, −0.40 ± 0.06, −0.52 ± 0.08, −0.70 ± 0.15,
+−0.90 ± 0.30, −1.1 ± 0.5 at b = 2, 4, 6, 8, 10, 12, and the b = 14 value turned back toward −0.3 by the torus; the
+word DRIFTS ACROSS b. *Ours, on why it drifts (to be checked after the run, not before):* D is the delay of the
+shortest-tick path, which is free to zigzag round the lumpy halo, while P is taken along the straight line; the two
+sample the halo differently, and the difference grows with b as the path gains room. A consistent form, both along one
+path, is a proposed amendment for fresh data and does not rescore this test.
