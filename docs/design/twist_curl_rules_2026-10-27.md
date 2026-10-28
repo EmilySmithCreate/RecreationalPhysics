@@ -131,6 +131,9 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    photon is the full-curl unit of half twist on a face diagonal that joins two Möbius strips (hers). *Exact:* each square
    carries 2 face diagonals (one black, one white) and is pierced at its centre by 4 box centre diagonals (2 black,
    2 white); per point, 6 face and 12 box diagonals.
+   **DECISION (2026-10-28, 06:12 UTC): what is whole is the total twist around a closed loop; links are not real (hers),
+   the toy counts curl on them as bookkeeping. DECISION: twist can hold a photon's half curl, as charge.** Ours, the
+   form: τ_d = s_d [round(n_d C_p)/n_d + h_d/2], h_d the photons diagonal d holds; energy term ε Σ|h_d|, ε open.
    **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
    energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
    one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
