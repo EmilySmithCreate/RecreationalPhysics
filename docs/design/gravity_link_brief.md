@@ -1,5 +1,7 @@
 # Design brief: gravity carried on the links
 
+**Audited 2026-10-28, 15:51 UTC (Codex, O166; VISION Update 137).** Two faults stand before anything in sections 4 and 5 runs: the energy of section 3 has no finite minimum under uniform scaling (the curvature is scale-free, the source term is not; the computed model imposes a zero-mean constraint that nothing derives), and the diagonals are not yet variables. The results below are the arithmetic of the constrained model; their physical readings are conditional.
+
 **Confirmed by the author, 2026-10-28, 13:53 UTC by the clock** ("I confirm the brief. We can start with the simpler version as the brief suggests"): the response rule is the simpler one of section 3, and both arms, Regge and the smoothing control, are computed and set against Newton's shape. *Read by fetch the same hour ([T25] Sec. II.2):* the published measure is the uniform measure on the sphere of neighbours (non-lazy), W by Eq. (5), κ by Eq. (4); the hand check reproduces Eq. (8) at S = 0, 1, 2 in two dimensions, so section 4's H_curv is: that measure, with shortest-path distances taken over the link lengths.
 
 Written 2026-10-28 at the author's decisions of that day (VISION Update 136 and its addenda; her words verbatim in
