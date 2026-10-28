@@ -119,7 +119,13 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    What breaks it (hers, 00:32 UTC): the shape, the sphere-shell form of the curled slab seen from the rod. *Exact:*
    a closed shell of squares has Σ(4 − squares at a point) = 8 (Euler), so it carries fixed poles whose cost does not
    grow with size; one rotation reads clockwise at one pole and anticlockwise at the other. *Ours:* the toy has no
-   motion, so the whirlpool's sense must be in the starting arrangement. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
+   motion, so the whirlpool's sense must be in the starting arrangement.
+   Conversion (hers, 00:48 UTC): a full turn is 3/3 along a box diagonal or 2/2 along a face diagonal; half a curl is
+   180° in one direction. A square's two face diagonals are a left and a right half twist and cancel (net 0); a net-0
+   pair takes a photon without charge or spin, or closes as a Möbius band, or loops on itself holding one twist, charged
+   and spinning, another kind of quark. *Exact:* an open 2 × 2 × 2 block has 12 boxes of 1 × 1 × 2 and 48 centre
+   diagonals; 36 squares (24 on its surface), 72 face diagonals. On a Möbius band a diagonal's slant flips going once
+   round and its colour does not. **Open:** what one whole curl is in the toy's count. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
    follows Update 97, which put thirds on cube body diagonals and halves on face diagonals. A face diagonal crosses one
    square and a body diagonal crosses a cube, so the two can be joined (a square's twist read along its diagonal; a
    cube's from its six faces), but how is a choice: hers.
