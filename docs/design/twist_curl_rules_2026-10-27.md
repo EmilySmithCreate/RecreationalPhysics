@@ -124,7 +124,7 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    180° in one direction. A square's two face diagonals are a left and a right half twist and cancel (net 0); a net-0
    pair takes a photon without charge or spin, or closes as a Möbius band, or loops on itself holding one twist, charged
    and spinning, another kind of quark. *Exact:* an open 2 × 2 × 2 block has 12 boxes of 1 × 1 × 2 and 48 centre
-   diagonals; 36 squares (24 on its surface), 72 face diagonals. On a Möbius band a diagonal's slant flips going once
+   diagonals; 36 squares (24 on its surface; her 24 counts these, each square one cancelling ±½ pair, confirmed 00:50 UTC), 72 face diagonals. On a Möbius band a diagonal's slant flips going once
    round and its colour does not. **Open:** what one whole curl is in the toy's count. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
    follows Update 97, which put thirds on cube body diagonals and halves on face diagonals. A face diagonal crosses one
    square and a body diagonal crosses a cube, so the two can be joined (a square's twist read along its diagonal; a
