@@ -1927,6 +1927,14 @@ Update 137 (2026-10-28, 15:51 UTC by the clock): **a fresh red-team audit (Codex
 - **The spin rule, killed as written (O166 (2)).** Rule 11's form: previous claim, spin angle = ½ × net twist angle with charge = net twist (hers in parts, the ½ × net reading ours and confirmed by her); failed because spin would be a function of charge, and the neutron (0, ½), the charged pion (1, 0) and the photon (0, 1) all break it; replacement, hers to propose; new test, those three particles. What survives: thirds, colour sign, the loop total, the pyramid.
 - **Also accepted:** the isotropy look compares distance conventions, not the derived field, so its "must hide its directions" applies to the link-count weighting only; the diagonals are not yet variables in `graphity.lengths`, so the owner's geometry is untested there; T84 Amendment 1's mechanics are the assistant's at her instruction, awaiting her confirmation, with her original prediction and rule kept; T83's next form conditions on the source and reads the connected response outside its footprint, on fresh data, after first asking whether a stationary warm sheet with many defects exists at all.
 
+Update 138 (2026-10-28, 15:59 UTC by the clock): **the author's answers to Update 137: the scale rule, her spin replacement, the scrap's mechanism, the twins in the claim.** Her words are in `sandbox/NOTEBOOK.md` at this time.
+
+- **DECISION: "the total length of the links is fixed near matter."** This is the constraint the solver already imposes, so the constrained model of Update 136 is hers; O166 (1) is answered by a decision. A local form of the rule is not built.
+- **Her spin replacement: "the photon applies energy to the net twist which together gives charge."** *Ours, as read:* charge counts the twist and the photons held; spin reads the twist alone. The neutron and the charged pion then pass; the photon alone does not (it would carry charge 1 and spin ½), so the free photon needs its own reading, hers.
+- **The scrap, hers:** what did not convert in each daughter, held back by the handedness pull of the shell; energy beyond the curling cost, stored by the force of the other pole. *Ours:* the toy's shell has exact poles (Update 134's addenda); whether its knots sit near them is a look to make.
+- **The claim:** step 4 names the twin daughters and the surplus by separation; step 5 carries her scrap mechanism.
+- **Tests:** her "is that enough to proceed" is read as the go-ahead and as confirming T84's mechanics; first the audit's question whether a stationary warm six-link space with many defects exists (a look, running), then T84 registered.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
