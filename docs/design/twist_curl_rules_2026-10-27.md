@@ -152,6 +152,10 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    number per cube; only whole charges couple to a closed loop, the proton's three thirds passing as one loop; a
    carrier with 180° steps cannot tell +1 from −1, so the carrier needs finer steps than a half curl (60° steps
    separate −2 to 2). Her "2-length diagonal": the body diagonal plus an edge is the (1,1,2) box diagonal, √6.
+   **DECISIONS (2026-10-28, 08:02 UTC): the lattice's lengths are used (√6); the carrier has 60° steps; each ⅓ twist
+   carries 60° of spin, three together 180° on the closed net-1 loop.** *Exact:* spin angle = ½ × net twist angle round
+   the loop; net 1 gives 180°, an odd half turn, spin ½ and charge 1; net 2 gives spin whole; net 0 two-sided gives
+   spin 0. *Ours:* "net", not "absolute", is the reading taken (with |twist| the proton's 5/3 would not give a half).
    **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
    energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
    one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
