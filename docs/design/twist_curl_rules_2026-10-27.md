@@ -134,6 +134,12 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    **DECISION (2026-10-28, 06:12 UTC): what is whole is the total twist around a closed loop; links are not real (hers),
    the toy counts curl on them as bookkeeping. DECISION: twist can hold a photon's half curl, as charge.** Ours, the
    form: τ_d = s_d [round(n_d C_p)/n_d + h_d/2], h_d the photons diagonal d holds; energy term ε Σ|h_d|, ε open.
+   **Requirement (hers, 2026-10-28, 07:12 UTC): the toy must allow electromagnetism in 3D spacetime.** Charge exists on the
+   sheet (whole twist round a loop); a force between charges at a distance does not (O22). A new ingredient under S1;
+   needs a dated VISION decision before it is built. Candidate, published: Wilson's lattice form (a phase per link,
+   energy from the phases round each square; general knowledge, not read). Hers also, 2026-10-28: a gluon is untwisted curl,
+   a loop folds when curl cannot pay a twist. *Ours:* loop total = twist + fold (Călugăreanu), charge from twist, mass
+   from |twist| + |fold|; a neutral spin-½ loop only as a one-sided (Möbius) closure.
    **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
    energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
    one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
