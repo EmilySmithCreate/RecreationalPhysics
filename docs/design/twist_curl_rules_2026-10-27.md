@@ -102,10 +102,16 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
 
 1. ~~Rule 3: κ on curl only, or on anticurl too.~~ Both (19:50 UTC).
 2. Rule 7: what the spin sum is. And the twist: phase, count, or both. (Rule 2: version B, chosen.)
-3. Question 5: how the twist moves when a link is rewired (fresh, carried, averaged out, drawn to suit its neighbours).
+3. ~~Question 5: how the twist moves when a link is rewired.~~ Falls away (00:14 UTC, 28 October): twist is what curl
+   does to the diagonals, read from the wiring, not a separate field ("Without a curl there is no twist. They are
+   defined by each other"). In discrete increments, so a count, not a free phase.
 4. Rule 4 as written makes every move conserve twist and balance curl at once; whether the toy's single switch can ever
    satisfy it is an exact count to run first (ours: it may need two switches at once, as the hard rule did).
-5. Where the twist lives. Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
+5. ~~Where the twist lives.~~ Answered (00:14 UTC, 28 October): dark, ±½ on the face diagonals of the squares;
+   matter, in thirds on the centre diagonals of 1 × 1 × 2 boxes (replacing Update 97's cube body diagonals). Cost:
+   "1 photon per spin unit on a net 1 twist particle"; what one photon is in energy units is open. *Exact:* the
+   wiring alone has no handedness (a graph and its mirror image are the same graph), so a signed twist read from it
+   needs an orientation from outside, such as the starting lattice's coordinates. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
    follows Update 97, which put thirds on cube body diagonals and halves on face diagonals. A face diagonal crosses one
    square and a body diagonal crosses a cube, so the two can be joined (a square's twist read along its diagonal; a
    cube's from its six faces), but how is a choice: hers.
