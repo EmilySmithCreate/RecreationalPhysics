@@ -9359,3 +9359,39 @@ stays registered and unrun.
 analyzer and code stay as written; nothing was launched, and the queue manifest drafted for it was never committed or
 pushed and is deleted.
 
+## T83. Is curl on a warm two-dimensional sheet felt at a distance? (written 2026-10-28, 13:42 UTC, after the owner's prediction and before any registered run)
+
+**Why.** The gravity brief (VISION Update 136) needs a pull at a distance, and the owner's source rule, a link's value set
+by its own curl, has no reach at fixed wiring (O22, exact). One route by which reach could emerge from the two-dimensional
+equation rather than be put in: on a warm sheet the wiring is not fixed, and curl on one link might be felt on links some
+distance away through the fluctuations. TASKS (6 October) item 4 asked for this correlation length and it was never
+measured at λ > 1. T16 measured the same quantity in the published model (λ = 1) across the transition at N = 196 to 676:
+C(r) fell to about zero within two steps at every coupling (O31). This asks the same question at the hypothesis's λ and
+in the sheet phase. The owner asked for the test on 28 October ("Agree short, please test").
+
+**Protocol.** `scripts/run_t83_curl_correlation.py`, `configs/t83_curl_corr_stage1.json`, seed 20268301. Four links per
+point, no cap, Metropolis; a perfect flat torus at each cell; λ = 1.02 and 1.25; g = 2, 3, 4, 5, 6, 8 (the flat sheet's
+cheapest move costs 32, so below g = 2 nothing moves in the run's length; the crossover sits near g = 5); 2,000 sweeps of
+warm-up and 2,000 measured in blocks of 100 with a snapshot after each; two replicas a cell. From each snapshot the
+per-edge field S_e / 2 and its correlation by graph distance C(r), exactly T16's quantity (`graphity.correlation`,
+Q19), and the share of flat edges (S_e = 2). Stage 1: 16 × 16 and 32 × 32. Held-out size (rule 14): 64 × 64, in a
+separate config written after stage 1 is read, with a number for C(3) and its range written as a dated amendment first.
+
+**Scored cells.** A cell is scored only if the sheet survives and fluctuates: minimum flat share over the snapshots at
+least 0.5, and C defined (some edge not flat). Cells where no move was accepted (C undefined) and cells that melted
+(flat share below 0.5) are reported, not scored.
+
+**Words.** SHORT: in every scored cell, |C(r)| ≤ 0.05 for every r from 3 to 6, within the snapshot standard error.
+LONG: some scored cell has |C(3)| > 0.05 by more than twice its standard error. MIXED: neither.
+
+**Predictions.** The owner's, 28 October, before this section was written: **SHORT** ("Agree short, please test").
+Ours: SHORT, by T16's result at λ = 1; and the number: |C(2)| below 0.2 and |C(3)| below 0.05 in every scored cell at
+both λ, with C(1) positive. **Held out (P2):** the 64 × 64 numbers are written as a dated amendment from stage 1 alone.
+
+**What each word means for the brief.** SHORT closes the route "reach emerges from the two-dimensional equation" at
+these couplings, and the brief's reach must come from the links in three dimensions (Regge's equation, the owner's
+choice) with the smoothing rule as the control arm. LONG reopens it and the correlation length becomes the first
+candidate for the halo.
+
+**Disclosure.** A scratch smoke run of the runner (8 × 8, 150 sweeps, g = 1 and 3, in the scratchpad, not kept)
+accepted no move; the couplings above were chosen after it. No C(r) at any registered setting has been seen.
