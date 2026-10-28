@@ -115,7 +115,11 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    Hers (00:19 UTC): clockwise from the starting lattice; black and white points never switch; a mirror world swaps
    left and right and matter and antimatter. *Exact:* every diagonal named above joins two points of one colour, so
    each carries a fixed colour; *proposed, hers to confirm:* twist on a black diagonal +, on a white one −. Swapping
-   the colours everywhere is an exact symmetry of the energy. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
+   the colours everywhere is an exact symmetry of the energy.
+   What breaks it (hers, 00:32 UTC): the shape, the sphere-shell form of the curled slab seen from the rod. *Exact:*
+   a closed shell of squares has Σ(4 − squares at a point) = 8 (Euler), so it carries fixed poles whose cost does not
+   grow with size; one rotation reads clockwise at one pole and anticlockwise at the other. *Ours:* the toy has no
+   motion, so the whirlpool's sense must be in the starting arrangement. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
    follows Update 97, which put thirds on cube body diagonals and halves on face diagonals. A face diagonal crosses one
    square and a body diagonal crosses a cube, so the two can be joined (a square's twist read along its diagonal; a
    cube's from its six faces), but how is a choice: hers.
