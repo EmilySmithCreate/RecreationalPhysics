@@ -1858,6 +1858,49 @@ disorder, and under her pricing the two sides cost differently). Of the two rout
   λ. That is the first exact check once the twist rules are fixed. Her answers of 19:12 to 19:50 UTC and the rules as
   equalities are in `docs/design/twist_curl_rules_2026-10-27.md`.
 
+Update 135 (2026-10-28, 08:06 UTC by the clock): **DECISIONS (the author's, 28 October, 06:07 to 08:02 UTC): what is
+whole is the total round a closed loop; links are scaffolding in 3D and absent in 2D; the light field on the links is
+the carrier of electromagnetism, in 60° steps; one-sided loops use the published Möbius formula; the count stays
+fixed.** Her words are in `sandbox/NOTEBOOK.md` under those times, verbatim; the rules as they stand are in
+`docs/design/twist_curl_rules_2026-10-27.md`. Why this page changes: Update 134 left the twist rules as candidate forms;
+a morning of her answers fixed several, two readings of the published mathematics were done
+(`docs/reading/notes/2026-10-28_skyrmion_spin.md`, `..._linking_twist_writhe.md`), and one exact look decided the
+carrier's step. Nothing here has been run as a test; the one look is in the sandbox lane (LOG, 28 October).
+
+- **Her decisions, in order.** (1) The whole number is the total twist round a closed loop, not the twist on each
+  piece (Călugăreanu's linking number; Dirac's whole number). (2) Twist can hold a photon's half curl, as charge; a
+  +½ needs its −½, each half holds a photon, and the pair carries no charge; mass counts twist by size, charge by
+  sign. (3) A gluon is an untwisted diagonal holding curl; a loop that cannot pay for a twist folds instead (*ours:*
+  her fold is the published writhe, loop total = twist + fold; charge from twist, mass from |twist| + |fold|). (4)
+  One-sided loops use the published Möbius form, linking = twist + 2 × fold, linking odd (Denne–Larsen 2023, read in
+  part, proof to verify); so a neutral spin-½ object is a dark Möbius pair (*ours*). (5) The toy must allow
+  electromagnetism in 3D: a carrier on the lattice, on the links, which are not real but are scaffolding in 3D
+  spacetime and absent in 2D, where only twist and curl exist; a link is the unit of movement and the link count is
+  distance. (6) The count stays fixed: "count is stable near mass". (7) The lattice's lengths are used (the box
+  diagonal is √6). (8) The carrier's step is 60°; each ⅓ twist carries 60° of spin, three together 180° on the closed
+  net-1 loop. (9) Gravity is curve in the same links (her 07:36 UTC), which is not yet reconciled with Update 40's
+  quantity on the points; hers to settle before the gravity brief.
+- **What exists already.** The carrier is the light field of Update 96 (`graphity.u1`, Q29): Wilson's phase on every
+  link of a fixed graph, with its reproduction gate. Her 60° step restricts its phases to multiples of π/3; that is a
+  change to make, with rule-6 tests, before any run with it. Riding the field on switching wiring is still unbuilt.
+- **Exact, from the look** (`sandbox/link_carrier_dirac_wilson.py`): with an angle on every link of the 6 × 6 × 6
+  torus, the flux out of every cube is 2π × a whole number (DeGrand–Toussaint); only whole charges couple to a closed
+  loop single-valuedly, the proton's ⅔ + ⅔ − ⅓ = 1 passing as one loop (Dirac's rule, her (1)); a carrier with 180°
+  steps cannot tell +1 from −1, so a half-curl carrier is blind to the sign of charge, while 60° steps separate −2 to
+  2. *Exact (arithmetic):* three thirds of twist carry 3 × 60° = 180° of spin, one odd half turn, so by the ribbon
+  rule the closed net-1 loop has spin ½ and charge 1; spin angle = ½ × net twist angle. *Exact, from the rules:* a
+  loop of box diagonals closes with whole charge only when its thirds sum to a multiple of three (the published
+  triality rule), allowing (⅔, ⅔, −⅓) = 1 and (⅔, −⅓, −⅓) = 0 and the meson pairs; a lone third never closes. *Ours:*
+  the sheet's twist cost κ(1 − cos 2πτ) has Wilson's form, so the field on the links may be that term.
+- **What fails or is silent, said plainly.** Mass by |twist| alone gives proton : electron = 5/3 against 1836, so
+  almost all of the proton's mass must be fold (gluons), a number to compute (a look is running); chemistry needs the
+  force the carrier would give and nothing follows yet; light on diagonals is slower than on axes (face √2/2, body
+  √3/3, box √6/4 of the axis speed if a diagonal takes its link count in ticks), and a direction-dependent speed must
+  be hidden to one part in 10¹⁷ (general knowledge, to verify).
+- **Published relatives used** (read status in the two notes): Călugăreanu 1961 (read in part); Dirac 1931 (read in
+  part); Dennis and Hannay 2005 (read in full); Denne–Larsen 2023 and Dagrosa et al. 2015 (read in part); Skyrme,
+  Finkelstein–Rubinstein, Witten 1983 (abstract only or through reviews). Targets, never confirmations (rule 13).
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
