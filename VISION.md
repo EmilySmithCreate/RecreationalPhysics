@@ -1943,6 +1943,8 @@ Update 139 (2026-10-28, 19:35 UTC by the clock): **DECISION (the author's): the 
 - **The first exact check it sets:** whether a compact lattice loop can hold 1,835 units of writhe. The loops counted so far (`sandbox/proton_loop_fold.py`) hold at most 0.26 per diagonal, so a proton loop would need some 7,000 diagonals, a coil about 19 links across if packed; whether writhe grows with length on a packed coil of lattice diagonals is the question, exact and cheap.
 - **Still hers before a measurement is predicted:** how light couples to the lengths (the γ test of Update 138's answer), the free photon's reading, and a six-link knot that is a dip.
 
+- **Addendum, 21:24 UTC: the coil (exact, `sandbox/coil_writhe.py`, her "start the coil").** Fold grows exactly in proportion to a coil's turns, 0.507 per turn on the tightest lattice helix (four box diagonals a turn) and 0.571 on the next (eight a turn), so at best about 0.13 per diagonal; our written number held. A proton of 1,835 units of fold is therefore possible and long: about 14,500 diagonals on the tightest coil, some 35,000 links of strand, a ball about 24 links across if packed. *Ours:* under her unit the proton is a long packed coil and the electron a loop of three; whether the toy's energy holds such a coil, and at what cost in curl, is the next exact question, after she says whether fold weighs as twist does.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
