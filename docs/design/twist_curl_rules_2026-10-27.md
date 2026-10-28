@@ -111,7 +111,11 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    matter, in thirds on the centre diagonals of 1 × 1 × 2 boxes (replacing Update 97's cube body diagonals). Cost:
    "1 photon per spin unit on a net 1 twist particle"; what one photon is in energy units is open. *Exact:* the
    wiring alone has no handedness (a graph and its mirror image are the same graph), so a signed twist read from it
-   needs an orientation from outside, such as the starting lattice's coordinates. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
+   needs an orientation from outside, such as the starting lattice's coordinates.
+   Hers (00:19 UTC): clockwise from the starting lattice; black and white points never switch; a mirror world swaps
+   left and right and matter and antimatter. *Exact:* every diagonal named above joins two points of one colour, so
+   each carries a fixed colour; *proposed, hers to confirm:* twist on a black diagonal +, on a white one −. Swapping
+   the colours everywhere is an exact symmetry of the energy. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
    follows Update 97, which put thirds on cube body diagonals and halves on face diagonals. A face diagonal crosses one
    square and a body diagonal crosses a cube, so the two can be joined (a square's twist read along its diagonal; a
    cube's from its six faces), but how is a choice: hers.
