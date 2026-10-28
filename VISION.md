@@ -1914,6 +1914,8 @@ Update 136 (2026-10-28, 13:05 UTC by the clock): **DECISIONS (the author's, 13:0
 
 - **Third addendum, 13:42 UTC (her answers).** One constant α (length = lattice length × (1 + α|curl|)), scanned and published, not tuned. Regge's route first; the nearest-neighbour smoothing rule only as a control arm with a known answer (Newton's shape, O61) for checking the two-relic apparatus. Her predictions, recorded before anything is written or run: the gap between two relics CLOSES; curl on a warm two-dimensional sheet is felt only a SHORT way (PREREGISTRATION T83, written with her prediction and started on the laptop the same hour; held-out size 64 × 64).
 
+- **Fourth addendum, 13:53 UTC.** The gravity brief (`docs/design/gravity_link_brief.md`) is confirmed by her, with the simpler response rule, both arms set against Newton's shape. **T83 read (O165): LONG by the letter**, in three 32 × 32 cells at g = 3 to 4 where the sheet survived; exact the same hour, one switch on a perfect sheet gives C(3) = 0.14 by itself, so those cells measure a defect's own footprint and a melt nucleating, and every melted cell is SHORT. Her prediction SHORT fails by the letter through the assistant's scoring gate; an amendment is proposed and not enacted; the held-out stage waits. Reach through flat sheet is not opened by this run; the brief's reach stays with Regge's step.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

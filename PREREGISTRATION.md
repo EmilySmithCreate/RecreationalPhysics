@@ -9395,3 +9395,5 @@ candidate for the halo.
 
 **Disclosure.** A scratch smoke run of the runner (8 × 8, 150 sweeps, g = 1 and 3, in the scratchpad, not kept)
 accepted no move; the couplings above were chosen after it. No C(r) at any registered setting has been seen.
+
+**Read, 2026-10-28, 13:53 UTC (stage 1; O165).** LONG by the words above: three scored 32 × 32 cells with C(3) = 0.08 to 0.15 (more than twice their errors). Every melted cell is SHORT (C(3) = 0.000 ± 0.001). Exact, the same hour: one random switch on a perfect sheet gives C(3) = 0.14 by itself, so the LONG cells are a defect's own footprint and two of them are melts nucleating inside the run. The owner's prediction, SHORT, fails by the letter; the scoring gate was the assistant's error (it admitted near-perfect and non-stationary sheets). Proposed amendment, not enacted: score only stationary cells with at least 20 defects, reporting C(r) less the one-defect footprint. The held-out stage waits on the owner's decision.

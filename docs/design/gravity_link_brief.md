@@ -1,5 +1,7 @@
 # Design brief: gravity carried on the links
 
+**Confirmed by the author, 2026-10-28, 13:53 UTC by the clock** ("I confirm the brief. We can start with the simpler version as the brief suggests"): the response rule is the simpler one of section 3, and both arms, Regge and the smoothing control, are computed and set against Newton's shape. *Read by fetch the same hour ([T25] Sec. II.2):* the published measure is the uniform measure on the sphere of neighbours (non-lazy), W by Eq. (5), κ by Eq. (4); the hand check reproduces Eq. (8) at S = 0, 1, 2 in two dimensions, so section 4's H_curv is: that measure, with shortest-path distances taken over the link lengths.
+
 Written 2026-10-28 at the author's decisions of that day (VISION Update 136 and its addenda; her words verbatim in
 `sandbox/NOTEBOOK.md`, 13:03 to 13:40 UTC). It replaces, for the carrier, option A of `gravity_brief.md` section 6
 (a quantity on the points, Update 40); the condition of Update 40 carries over: whatever carries the pull must match
