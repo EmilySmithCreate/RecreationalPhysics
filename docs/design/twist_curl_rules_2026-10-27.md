@@ -140,6 +140,13 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    energy from the phases round each square; general knowledge, not read). Hers also, 2026-10-28: a gluon is untwisted curl,
    a loop folds when curl cannot pay a twist. *Ours:* loop total = twist + fold (Călugăreanu), charge from twist, mass
    from |twist| + |fold|; a neutral spin-½ loop only as a one-sided (Möbius) closure.
+   **DECISIONS (2026-10-28, 07:26 UTC):** (1) one-sided loops use the published Möbius formula, linking = twist + 2 fold
+   with linking odd (Denne–Larsen 2023, read in part, proof to verify); (2) the toy gets a carrier for electromagnetism;
+   (3) it lives on links, which are scaffolding in 3D spacetime and absent in 2D, where only twist and curl exist; a
+   link is the unit of movement and the link count is distance. Hers: in flat spacetime points and links are added
+   freely, in rows, at the speed of light. *Ours:* that is a varying count (parked, VISION claim 3) and needs its own
+   decision; the carrier is Wilson's form and needs a VISION update before it is built. Open: whether the slowed
+   diagonal is the face (√2 in 3 ticks, 0.47) or the body diagonal (√3 in 3 ticks, 0.58).
    **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
    energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
    one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
