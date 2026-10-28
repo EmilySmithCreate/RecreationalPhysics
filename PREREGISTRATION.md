@@ -9430,3 +9430,28 @@ single sign gives both CLOSES and DELAYED under this rule, and the pair (α < 0,
 direction dependence (axis against face-diagonal separations) is reported, not scored.
 
 **Amendment 1, 2026-10-28, 15:19 UTC (the owner: "adjust my prediction to align with general knowledge and be internally consistent"). *Relabelled 15:51 UTC after the audit (O166 (12)): the mechanics below (α < 0, the total-energy rule, CLOSES and DELAYED) were formulated by the assistant at her instruction and are not separately confirmed by her; her original prediction (CLOSES, 13:40 UTC) and her original response rule ("a loop shifts toward a shorter path") stand in the record. T84 does not run until she confirms or replaces them and settles the scale rule of Update 137.* *15:59 UTC: the scale rule is hers ("the total length of the links is fixed near matter", the constraint the solver uses), and her "is that enough to proceed with some tests?" is read as confirming the mechanics; she may strike that reading. Before T84 is registered, the audit's first question (does a stationary warm six-link space with many defects exist) is asked in the sandbox, and the relic question (no six-link dip is known, O56) is faced in the protocol.* α < 0; the response rule is "a move is judged by the total energy with the lengths relaxed" (exact; it contains "toward a longer path" for α < 0); her prediction is **CLOSES and DELAYED**. The exact landscape (`sandbox/relaxed_lengths_pull.py`, the brief) already shows attraction of Newton's shape for either sign and the delay for α < 0, so T84's open question narrows to whether relics *move* down that landscape against their own walls: the words CLOSES/OPENS/FLAT are scored on the chain's P(r), not on the landscape. α is scanned over three magnitudes, published; the +α cells stay as the control that the pull does not depend on the sign.
+
+**Amendment 2, 2026-10-28, 16:02 UTC: T84 registered in the one form that can be scored in this family; the chain form withdrawn.**
+Two facts fix the form. (a) No six-link knot is a dip (O58, exact): every one- and two-switch object undoes itself
+downhill, so at any coupling where a knot can move its first move is to dissolve, and "do knots drift together" cannot be
+asked of a thermal chain. (b) There is no stationary warm six-link space with many defects (`sandbox/warm_space_window_d.py`,
+28 October: frozen to g = 8, the random phase from g = 10, nothing between, at L = 8). So the chain stage is withdrawn
+until a six-link knot that is a dip exists (the cheapest step toward one is O58's search extended to three-switch
+constructions, not yet bought). What T84 scores is the **exact landscape of the constrained model** (the scale rule of
+Update 138, the total length fixed), with a held-out size.
+
+**Protocol.** `scripts/t84_landscape.py L ALPHA SEED`, α = −0.5 (hers: negative), seed 20268401; the knot is one random
+valid switch near the origin, copied by translation; for r = 2 to L/2 along an axis and along a face diagonal, the pair
+energy E_int(r) against the same solver's two-unit-point-source energy on family 0, their ratio, and the light path over
+six links past the knot against the same path far from it. Stage 1: L = 16 (`results/t84_landscape_L16_am050.csv`; the
+sandbox look of 15:17 UTC at this size, with a different seed, gave ratios 290 to 346 on the axis and 305 to 359 on the
+face diagonal at r = 2 to 8, and light 6.30 against 5.97). **Held-out size (rule 14): L = 24**, run only after this
+amendment is committed. **Prediction for L = 24, written now:** the ratio E_int/E_ref lies between 300 and 360 at every r
+from 3 to 9 on the axis, and the face-diagonal ratio at each r lies within 15 % of the axis ratio at the same r; E_int is
+negative at every r from 2 to 9; the light path past the knot exceeds the far path (DELAYED). The family charges of the
+knot are reported; if the seed's knot has charges other than (12, 12, 8) the band is scaled by (Σq²)/352.
+
+**Words at the held-out size.** AS PREDICTED (every clause), SHAPE ONLY (the sign and the delay hold, a ratio outside the
+band), FAILS (a positive E_int at r ≤ 6, or an early light path). The owner's CLOSES and DELAYED (Amendment 1) are scored
+as: CLOSES ↔ E_int negative and falling in size with r over 2 to 6; DELAYED ↔ the light clause. **What no outcome shows:**
+that knots move; that the constraint is physical; anything about reality.
