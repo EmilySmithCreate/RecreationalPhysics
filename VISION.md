@@ -1935,6 +1935,8 @@ Update 138 (2026-10-28, 15:59 UTC by the clock): **the author's answers to Updat
 - **The claim:** step 4 names the twin daughters and the surplus by separation; step 5 carries her scrap mechanism.
 - **Tests:** her "is that enough to proceed" is read as the go-ahead and as confirming T84's mechanics; first the audit's question whether a stationary warm six-link space with many defects exists (a look, running), then T84 registered.
 
+- **Addendum, 16:04 UTC: T84 read at its held-out size (O167).** The chain form was withdrawn first (Amendment 2: no six-link knot is a dip, O58; no stationary warm six-link space exists between frozen and melted, a look of this hour), and T84 registered as the exact landscape of the constrained model with L = 24 held out and the prediction written before the run. Result: **SHAPE ONLY** for ours (the sign of the pull and the light delay hold; the ratio band, written for an isotropic knot, misses at two of seven points and the face-diagonal clause fails outright), and **her CLOSES and DELAYED hold** as scored. Conditional as Update 137 says: a decided constraint, axis links only, nothing moves, nothing about reality.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

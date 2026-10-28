@@ -1,0 +1,30 @@
+{
+  "L": 24,
+  "alpha": -0.5,
+  "seed": 20268401,
+  "knot_switch": [
+    24,
+    25,
+    13823,
+    13799
+  ],
+  "family_charges": [
+    8.0,
+    16.0,
+    8.0
+  ],
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T84, Amendment 2",
+  "provenance": {
+    "git_commit": "eda2df22257884e08d80cbe4f568a2d6df329dec",
+    "git_dirty": true,
+    "git_untracked_count": 2,
+    "git_untracked": [
+      "results/t84_landscape_L16_am050.csv",
+      "results/t84_landscape_L16_am050.meta.json"
+    ]
+  }
+}
