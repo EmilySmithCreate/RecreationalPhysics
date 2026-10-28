@@ -1,0 +1,104 @@
+# Design brief: gravity carried on the links
+
+Written 2026-10-28 at the author's decisions of that day (VISION Update 136 and its addenda; her words verbatim in
+`sandbox/NOTEBOOK.md`, 13:03 to 13:40 UTC). It replaces, for the carrier, option A of `gravity_brief.md` section 6
+(a quantity on the points, Update 40); the condition of Update 40 carries over: whatever carries the pull must match
+curve-first gravity where Einstein's account has been measured. Everything not marked hers is *ours, unverified*; nothing
+here has been run. The model with any of it is our family around the published model, never combinatorial quantum
+gravity (Update 22's naming condition).
+
+## 1. Her decisions, which fix the shape
+
+1. **The carrier is on the links**, three-dimensional only; gravity "comes with moving matter, which is only a thing in
+   3d". In 2D there are no links to carry it (Update 135).
+2. **The links carry the lattice's lengths**: 1 on an axis, √2 on a face diagonal, √3 on a body diagonal, √6 on the
+   box diagonal (Regge's lengths, the 0.92 row of `sandbox/gravity_carrier_isotropy.py`). The diagonals making the
+   lattice rigid is "a feature".
+3. **Source: a link's value is set by its own energy, its curl.**
+4. **What spreads is the length**, at no energy cost, while twist counts and charges stay fixed ("the value spreads").
+5. **Response: a loop shifts toward a shorter path.**
+6. **One constant, α, scanned and published**, not tuned.
+7. **Regge's route first**; the nearest-neighbour smoothing rule is the control arm only.
+8. **The wiring is not fixed; the point count is constant in curved space** and grows only where curl meets flat space.
+9. Her predictions, recorded before anything is built: two relics' gap **CLOSES**; the warm sheet's correlation is
+   **SHORT** (PREREGISTRATION T83, running).
+
+## 2. What is exact already, and what it forbids
+
+- At fixed wiring the toy's energy is a sum of per-link terms, so two relics sharing no square are exactly additive and
+  nothing pulls at a distance (O22). A length set by a link's *own* curl inherits this: the lengthened links are only
+  where the relic is, so decision 3 alone has no reach. Reach has to come from decision 4: the lengths around a relic
+  are *solved*, with the relic's curl as the source.
+- Counting links at the owner's weights makes every diagonal tie with its edge path (the distance is Manhattan) and the
+  pull differs by direction by 1/√2 and 1/√3 at every range; Regge's lengths leave 0.92 in the worst direction, not
+  shrinking with range (`sandbox/gravity_carrier_isotropy.py`, 28 October). The measured pull is the same in every
+  direction to far better than that (*general knowledge, to verify*), so a link carrier that is the gravity we see must
+  hide its directions. This is the brief's standing problem, not solved here.
+- A smooth quantity on the points, sourced by relics, gives Newton's shape on the cubic lattice (O61). That is the
+  control arm's known answer.
+
+## 3. The form, fixed before any run (ours; hers once she confirms or edits)
+
+State: the wiring (as now) plus a positive length ℓ_e on every link and diagonal of the six-link lattice, starting at the
+lattice's lengths ℓ⁰_e. Energy:
+
+    H[wiring, ℓ] = H_curv[wiring, ℓ] + 4(λ − 1) Σ_e |c_e| + α Σ_e |c_e| (ℓ_e − ℓ⁰_e) / ℓ⁰_e
+
+- H_curv is the published curvature sum with lengths in it: Ollivier's curvature is defined on weighted graphs
+  (transport cost over shortest-path distances, the mass at a point spread over its neighbours), and at ℓ = ℓ⁰ on the
+  flat lattice it is the toy's energy exactly, 16(3N − S) + 4X. This is the part Regge varies.
+- The second term is the curling cost as now.
+- The third is the only new ingredient: a relic's curl couples to the length of its own links with strength α (decision
+  3: "set by its energy, its curve"). One constant. α = 0 is the toy as it stands.
+
+**Regge's step (decision 7).** With the wiring held, the lengths relax to a stationary point of H in ℓ. Whether that
+stationary point has a halo round a relic, and of what shape, is a property of H_curv's second variation at the flat
+lattice, which is the exact question of section 4. **The smoothing control:** replace H_curv's dependence on ℓ by
+½ k Σ_{e~f} (ℓ_e − ℓ_f)² over neighbouring links (a rule put in by hand); its stationary point is Poisson's equation on
+links sourced by α|c_e|, Newton's shape by O61's calculation moved onto links. Same relics, same observable, known answer:
+it checks the apparatus, not the hypothesis.
+
+**Response (decision 5).** With the lengths held, a loop's moves are accepted as now, with the change in the summed
+length of the loop's links added to ΔH at weight 1 (a loop shifts toward a shorter path). *Ours:* a cleaner form, and
+the one that matches Update 40's clock reading, is to offer a point's moves at a rate set by the lengths of its links;
+either is a knob and the first is simpler. Hers to choose.
+
+## 4. The exact question that decides whether reach emerges (step 1, no run)
+
+Compute, on a flat 6 × 6 × 6 (then 8 × 8 × 8) six-link torus with its diagonals at Regge's lengths, the matrix of
+second derivatives of H_curv with respect to the lengths at ℓ = ℓ⁰ (Ollivier's transport cost per edge is a small linear
+programme, so each entry is exact), and its spectrum and Green's function.
+
+- **If the matrix has zero modes with a continuous band above them (gapless)**, a point source gives a halo falling
+  as a power of distance, and reach emerges from the curvature itself with no rule put in; the continuum relative is
+  that the second variation of the Einstein–Hilbert action about flat space is the massless graviton's kinetic term
+  (*general knowledge, to verify*). Then compare the halo's shape with O61's 1/r.
+- **If the matrix is gapped**, every halo falls off exponentially and Regge's route gives no gravity in this family;
+  the brief falls back to the control arm as the model, and says so.
+- **If H_curv does not depend on the lengths at all at the flat point** (possible: Ollivier's curvature on a lattice can
+  be locally constant in the lengths), the question is moot and the answer is the same as gapped.
+
+A number to write before computing: *ours*, the lowest non-zero eigenvalue at L = 6 and 8, with the claim that it falls
+toward zero with L if gapless and stays fixed if gapped; L = 10 held out (rule 14).
+
+## 5. The first test (step 2, pre-registered after step 1 reads)
+
+Two relics (O56's curled line of four, or whatever step 1 of `gravity_brief.md` finds to be a dip) on a flat six-link
+torus, named points, sealed, lengths relaxed from their curl by the model (Regge) and by the control (smoothing), each
+loop allowed to shift toward a shorter path; the observable is `gravity_brief.md`'s potential of mean force F(r).
+**Her prediction: CLOSES.** Ours is written after step 1. Held-out size under rule 14.
+
+## 6. What this cannot do, said plainly
+
+- It cannot hide the lattice's directions; the 8 % anisotropy of Regge's lengths is in the carrier from the start.
+- It cannot give time dilation: the toy has no time. The nearest it offers is Update 40's clock reading of the response
+  rule, which is a candidate, not a result.
+- It cannot say what α is; α is scanned and published, and a value that reproduces a measured number is not a result
+  until rule 13's checks are done.
+
+## 7. Published relatives (none read in full; read status to be recorded in REFERENCES.bib before any is cited)
+
+Regge (1961), gravity on a lattice of edge lengths; Hamber's reviews of simplicial quantum gravity; Ollivier (2009),
+Ricci curvature of Markov chains on metric spaces, which defines the curvature on weighted graphs; Lin, Lu and Yau
+(2011) for the graph form; Kaluza–Klein for a length and a phase on one object. The light carrier already built
+(`graphity.u1`, Update 96) is Wilson's.
