@@ -125,7 +125,12 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    pair takes a photon without charge or spin, or closes as a Möbius band, or loops on itself holding one twist, charged
    and spinning, another kind of quark. *Exact:* an open 2 × 2 × 2 block has 12 boxes of 1 × 1 × 2 and 48 centre
    diagonals; 36 squares (24 on its surface; her 24 counts these, each square one cancelling ±½ pair, confirmed 00:50 UTC), 72 face diagonals. On a Möbius band a diagonal's slant flips going once
-   round and its colour does not. **Open:** what one whole curl is in the toy's count. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
+   round and its colour does not. **Open:** what one whole curl is in the toy's count.
+   **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
+   energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
+   one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
+   curl, and is smaller. *Exact:* per point of a cubic lattice, 6 face diagonals and 12 box centre diagonals, so 3 and 4
+   turns of twist at full size, 3 : 4. The rest of the original item: Rules 3 to 5 put it on squares (the light field's phase, built, a true mirror pair); rule 6
    follows Update 97, which put thirds on cube body diagonals and halves on face diagonals. A face diagonal crosses one
    square and a body diagonal crosses a cube, so the two can be joined (a square's twist read along its diagonal; a
    cube's from its six faces), but how is a choice: hers.
