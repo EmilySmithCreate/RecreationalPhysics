@@ -9397,3 +9397,36 @@ candidate for the halo.
 accepted no move; the couplings above were chosen after it. No C(r) at any registered setting has been seen.
 
 **Read, 2026-10-28, 13:53 UTC (stage 1; O165).** LONG by the words above: three scored 32 × 32 cells with C(3) = 0.08 to 0.15 (more than twice their errors). Every melted cell is SHORT (C(3) = 0.000 ± 0.001). Exact, the same hour: one random switch on a perfect sheet gives C(3) = 0.14 by itself, so the LONG cells are a defect's own footprint and two of them are melts nucleating inside the run. The owner's prediction, SHORT, fails by the letter; the scoring gate was the assistant's error (it admitted near-perfect and non-stationary sheets). Proposed amendment, not enacted: score only stationary cells with at least 20 defects, reporting C(r) less the one-defect footprint. The held-out stage waits on the owner's decision.
+
+## T84 (DRAFT, 2026-10-28, 15:09 UTC; the owner's CLOSES recorded 13:40 UTC, before the draft): do two relics in a flat six-link space pull together when the link lengths relax from their curl, and is light through the halo delayed? (the gravity link brief, step 2)
+
+**Why.** Step 1 (the brief, section 4; `sandbox/regge_step1_stiffness.py`) found that the published curvature over link
+lengths is quadratic at flat with stiffness 4 × the cubic Laplacian on each axis family of links, gapless, at L = 6, 8
+and the held-out 10. So a relic's curl, coupled to the length of its own links by α, makes a halo of lengths with
+Newton's shape. This tests the two things the brief must give: a pull between relics, and the sign of light's delay.
+
+**Machinery to build first (rule 6 tests before any run).** (1) `graphity.lengths`: given a six-link wiring and α, the
+per-link curl c_e = S_e − 4 and the relaxed lengths ℓ = ℓ⁰ + δ with K δ = −α|c| per axis family, K = 4(6I − A), solved
+exactly by FFT on the torus with the zero mode (uniform scaling) fixed to zero mean; tests: the single-link and pair
+responses of step 1 reproduced by the solver; a point source's halo equal to the lattice Green's function. (2) A sealed
+six-link chain option in which a move's ΔH gains the change in the summed length of the links it rewires, with the
+lengths re-relaxed after every accepted move (the lengths are a function of the wiring, so energy is conserved as
+before plus this term); tests: ΔH exact against full recomputation, same-seed reproducibility, α = 0 bit for bit the
+present chain. (3) The light delay: the shortest-path length between two far points on opposite sides of a relic,
+through the halo, against the same path on the flat torus.
+
+**Protocol.** Two copies of the smallest six-link relic that is a dip (O56's curled line of four, or what `gravity_brief.md`
+step 1 finds), placed at separations r = 2 to L/2 along an axis and along a face diagonal, on a flat L × L × L torus,
+named points, sealed at the relics' own energy, λ = 1.25; α = +a and −a with a scanned over three values (published,
+not tuned), and the smoothing control arm at the same a; the observable F(r) = −g ln P(r) from the time spent at each
+separation, as `gravity_brief.md` defines it; stage 1 L = 8 and 10, held-out L = 12 with the numbers written first (rule 14).
+
+**Words.** CLOSES (F falls as r falls, monotone over the scanned range, by more than its error), OPENS (rises), FLAT.
+Separately, DELAYED or ADVANCED for the light path through the halo.
+
+**Predictions.** The owner's, 13:40 UTC: **CLOSES**. Ours, written here: under the confirmed rule (toward a shorter path),
+CLOSES for α > 0 and OPENS for α < 0, with the same magnitude; light DELAYED for α < 0 and ADVANCED for α > 0; so no
+single sign gives both CLOSES and DELAYED under this rule, and the pair (α < 0, toward a longer path) would. The
+direction dependence (axis against face-diagonal separations) is reported, not scored.
+
+**Not yet decided by the owner:** the sign of α, or whether the response rule becomes "toward a longer path".

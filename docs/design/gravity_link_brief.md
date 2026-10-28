@@ -92,6 +92,8 @@ torus, named points, sealed, lengths relaxed from their curl by the model (Regge
 loop allowed to shift toward a shorter path; the observable is `gravity_brief.md`'s potential of mean force F(r).
 **Her prediction: CLOSES.** Ours is written after step 1. Held-out size under rule 14.
 
+**The sign of α, put to the author 2026-10-28, 15:09 UTC** (*ours; general knowledge, to verify*). Two measured facts fix two signs. (i) Light passing near mass arrives later (the Shapiro delay, measured to 2 × 10⁻⁵ by Cassini), and the toy's travel time is the summed length along the shortest route, so the halo must *lengthen* links near matter: α < 0 on the axis links. A diagonal taken as a shortcut only near matter would make light *faster* there, the wrong sign, unless it is counted at her link weight (4 ticks for √6), which is slower than its Euclidean length (4 ticks against 2.45) and so a delay. (ii) Matter attracts. In Einstein's gravity a free body follows the path of *longest* proper time, not shortest length; both facts come from one field with one sign. The confirmed response rule, "a loop shifts toward a shorter path", is the opposite convention, so with α < 0 it gives *repulsion*. CLOSES therefore needs (α > 0, shorter) or (α < 0, longer); only the second also delays light. **Her decision of the same message: step 2 runs with the families uncoupled and reports the direction dependence first.** T84 (draft) runs both signs of α under the confirmed rule and reads the light delay through the halo exactly, so that both facts are scored whichever she chooses.
+
 ## 6. What this cannot do, said plainly
 
 - It cannot hide the lattice's directions; the 8 % anisotropy of Regge's lengths is in the carrier from the start.
