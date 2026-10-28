@@ -9429,4 +9429,4 @@ CLOSES for α > 0 and OPENS for α < 0, with the same magnitude; light DELAYED f
 single sign gives both CLOSES and DELAYED under this rule, and the pair (α < 0, toward a longer path) would. The
 direction dependence (axis against face-diagonal separations) is reported, not scored.
 
-**Not yet decided by the owner:** the sign of α, or whether the response rule becomes "toward a longer path".
+**Amendment 1, 2026-10-28, 15:19 UTC (the owner: "adjust my prediction to align with general knowledge and be internally consistent").** α < 0; the response rule is "a move is judged by the total energy with the lengths relaxed" (exact; it contains "toward a longer path" for α < 0); her prediction is **CLOSES and DELAYED**. The exact landscape (`sandbox/relaxed_lengths_pull.py`, the brief) already shows attraction of Newton's shape for either sign and the delay for α < 0, so T84's open question narrows to whether relics *move* down that landscape against their own walls: the words CLOSES/OPENS/FLAT are scored on the chain's P(r), not on the landscape. α is scanned over three magnitudes, published; the +α cells stay as the control that the pull does not depend on the sign.
