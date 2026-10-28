@@ -9457,3 +9457,39 @@ as: CLOSES ↔ E_int negative and falling in size with r over 2 to 6; DELAYED �
 that knots move; that the constraint is physical; anything about reality.
 
 **Reading of T84 at the held-out size L = 24, 2026-10-28, 16:04 UTC (read by Claude Fable 5.1 without the owner; `results/t84_landscape_L24_am050.csv`, stage 1 `..._L16_am050.csv`, both seed 20268401, α = −0.5).** The registered seed's knot has family charges (8, 16, 8), so the band scales by 384/352 to 327–393. **Clause by clause.** Axis ratio E_int/E_ref at r = 3 to 9: 314, 332, 342, 347, 348, 343, 323: inside the scaled band at r = 4 to 8, below it at r = 3 and 9 (inside the unscaled 300–360 at every r): **fails as written**. Face-diagonal ratio within 15 % of the axis: 425 to 503 against 314 to 348, 30 to 45 % above: **fails**. E_int negative at every r from 2 to 9: on the axis yes (to r = 10; positive from r = 11, near half the box, the torus's own sign change); on the face diagonal negative to r = 6 (Euclidean 8.5) and +0.003 at r = 7 (Euclidean 9.9): **fails if both kinds are meant, holds for the axis**. Light over six links past the knot 6.173 against 5.988 far from it: **DELAYED, holds** (stage 1: 6.146 against 5.983). **Word: SHAPE ONLY** (the sign to r = 6 and the delay hold; ratios outside the band; no positive E_int at r ≤ 6). **The owner's CLOSES and DELAYED, scored as Amendment 2 says:** E_int negative and falling in size over r = 2 to 6 on both the axis (−0.60 to −0.10) and the face diagonal (−0.46 to −0.02): CLOSES holds; DELAYED holds. **Why ours missed (ours):** the band was written for an isotropic knot and the registered knot is lopsided (twice the curl on one family), so its halo is not a single family's point-source law scaled; the face-diagonal comparison against a one-family point pair was never like for like, and the 15 % clause was the assistant's guess. What the run shows that the prediction did not ask: on the larger torus the axis ratio is flatter (332 to 348 from r = 4 to 8 against 252 to 306 at L = 16), as a torus effect shrinking with L should be. **What no outcome shows** stands as registered: that knots move, that the constraint is physical, anything about reality.
+
+## T85. The γ test: does one α make the toy's light delay and its pull agree as Einstein's γ = 1 does, across impact parameters and knots? (written 2026-10-28, 23:44 UTC, with the owner's prediction, before any registered run)
+
+**Why.** `docs/design/diagonals_brief_2026-10-28.md`, section 3. Under her decisions (gravity on the cube edges with the
+total length fixed, VISION Updates 136 to 138; light on the body diagonals whose lengths are derived from their cube's
+edges by geometry, Updates 142, 143), the halo of edge lengths round a knot does two things with one constant α: it
+delays light through the derived diagonals (first order in α) and lowers a second knot's energy (second order in α).
+Einstein's one potential does both with a fixed ratio, γ = 1 (the Shapiro delay against the Newtonian potential along the
+path; Cassini, 2 × 10⁻⁵; general knowledge, to verify). Requiring that ratio pins α. The test: is the α so pinned one
+number, across impact parameters and across knots?
+
+**Protocol (exact, no chain).** `scripts/t85_gamma.py L SEED`, α_used = −0.5, λ = 1.25. The knot is one random valid
+switch near the origin (its family charges q and its energy above flat E_knot are reported). For each impact parameter
+b = 2, 4, ... < L/2 − 1: D(b), the extra ticks of light along body diagonals from (−L/4, b, 0) to (L/4, b, 0) over the
+same displacement far from the knot; P(b), the line integral along that path of |U|, U(x) = E_int(x)/E_knot with E_int
+the exact pair energy of a copy of the knot at x (T84's quantity), step √3 per point; α*(b) = α_used · D/(2P), the α at
+which D = 2P (the weak-field relation with γ = 1; D is linear in α, P quadratic). Stage 1: L = 16 with seeds 20268501
+and 20268502 (two knots), L = 24 with seed 20268501. **Held-out size (rule 14): L = 32, seed 20268501**, run only after
+the number for it is written as a dated amendment from stage 1.
+
+**Words.** ONE α: α*(b) agrees across every b at every size and across the two knots within ±10 % of its mean. DRIFTS
+ACROSS b: the spread over b exceeds ±10 % at some size. DRIFTS ACROSS KNOTS: the two knots' means differ by more than
+10 %. NO DELAY: D ≤ 0 at any b.
+
+**Predictions.** The owner's, 28 October, before this section was written: **ONE α** ("the α fixed by γ agrees across
+impact parameters and knot sizes"). Ours: ONE α ACROSS b, since D and P sample the same halo along the same path, and
+DRIFTS ACROSS KNOTS for wiring knots, because to first order α* = E_knot / (c · q) with c a geometric constant, and
+E_knot/q differs between switches; her particles would not drift, since under Update 140 mass counts looped diagonals
+with one curl each, so E/q is the same for all of them by construction. **If ONE α holds for wiring knots too, our
+reading of the first-order structure is wrong and is to be rederived.**
+
+**What no outcome shows.** The toy has no clocks, so nothing here is time dilation; the derived-diagonal rule and the
+scale rule are decisions; a one-switch knot is not a particle in her sense; nothing is about reality.
+
+**Disclosure.** `graphity.diagonals` and its tests, and this script, were written tonight before any γ number existed;
+no γ number has been seen at any setting.
