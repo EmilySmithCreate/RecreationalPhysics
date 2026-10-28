@@ -127,6 +127,10 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    diagonals; 36 squares (24 on its surface; her 24 counts these, each square one cancelling ±½ pair, confirmed 00:50 UTC), 72 face diagonals. On a Möbius band a diagonal's slant flips going once
    round and its colour does not. **DECISION (01:35 UTC): one extra square on a link is one whole curl,
    360°**; it gives a face diagonal two half twists and a box diagonal three third twists.
+   **DECISION (02:05 UTC): a photon is half a curl on one diagonal**; a second gives the antimatter half curl. The dark
+   photon is the full-curl unit of half twist on a face diagonal that joins two Möbius strips (hers). *Exact:* each square
+   carries 2 face diagonals (one black, one white) and is pierced at its centre by 4 box centre diagonals (2 black,
+   2 white); per point, 6 face and 12 box diagonals.
    **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
    energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
    one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
