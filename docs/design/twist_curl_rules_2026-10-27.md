@@ -147,6 +147,11 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    freely, in rows, at the speed of light. *Ours:* that is a varying count (parked, VISION claim 3) and needs its own
    decision; the carrier is Wilson's form and needs a VISION update before it is built. Open: whether the slowed
    diagonal is the face (√2 in 3 ticks, 0.47) or the body diagonal (√3 in 3 ticks, 0.58).
+   **DECISIONS (2026-10-28, 07:43 UTC): the carrier lives on the links; the count stays fixed** ("count is stable near
+   mass"). *Exact (sandbox look, `sandbox/link_carrier_dirac_wilson.py`):* an angle per link gives a whole monopole
+   number per cube; only whole charges couple to a closed loop, the proton's three thirds passing as one loop; a
+   carrier with 180° steps cannot tell +1 from −1, so the carrier needs finer steps than a half curl (60° steps
+   separate −2 to 2). Her "2-length diagonal": the body diagonal plus an edge is the (1,1,2) box diagonal, √6.
    **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
    energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
    one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
