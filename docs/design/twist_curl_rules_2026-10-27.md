@@ -125,7 +125,8 @@ point: Barbour, Koslowski and Mercati 2014. Observers where entropy production p
    pair takes a photon without charge or spin, or closes as a Möbius band, or loops on itself holding one twist, charged
    and spinning, another kind of quark. *Exact:* an open 2 × 2 × 2 block has 12 boxes of 1 × 1 × 2 and 48 centre
    diagonals; 36 squares (24 on its surface; her 24 counts these, each square one cancelling ±½ pair, confirmed 00:50 UTC), 72 face diagonals. On a Möbius band a diagonal's slant flips going once
-   round and its colour does not. **Open:** what one whole curl is in the toy's count.
+   round and its colour does not. **DECISION (01:35 UTC): one extra square on a link is one whole curl,
+   360°**; it gives a face diagonal two half twists and a box diagonal three third twists.
    **DECISION (01:28 UTC): the sign is the colour of the diagonal, black +, white −.** The photon is its own unit of
    energy, not tied to λ (hers: λ − 1 measures the daughter's surplus); one photon gives a loop of net twist 1 spin ½ and
    one charge; spin comes only in halves; a dark (face-diagonal) pair takes no charge or spin, holds a full or double
