@@ -1,5 +1,7 @@
 # Twist and curl: the rules as equalities and inequalities (draft, 27 October 2026)
 
+> **History only, from 2026-10-29.** The standing rules are `twist_curl_rules_current.md` (VISION Update 146). This file holds every dated decision and withdrawn version as they were written and is not edited further.
+
 *Written at the owner's request of 19:39 UTC ("I want us to write the math of this relationship in a simple
 equality/inequalities"), from her answers of 16:42 to 19:39 UTC (verbatim in `sandbox/NOTEBOOK.md`; VISION Updates 133
 and 134). Each line says whose it is: **hers** (her rule, her words put in order), **exact** (arithmetic), **ours** (our
