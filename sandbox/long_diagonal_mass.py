@@ -128,35 +128,36 @@ def vertices(seq):
     return np.array(V)
 
 
-print("short steps:", len(SHORT), " long steps:", len(LONG), " colour-safe:",
-      all(sum(s) % 2 == 0 for s in SHORT + LONG))
-print("masses in units of one short diagonal: count = shorts + longs; length = shorts + sqrt(3) x longs")
-print()
-nmax = int(sys.argv[1]) if len(sys.argv) > 1 else 5
-ladder_count = defaultdict(set)
-ladder_length = defaultdict(set)
-for n in range(3, nmax + 1):
-    loops = closed_loops(n)
-    rows = defaultdict(list)
-    for seq in loops:
-        V = vertices(list(seq))
-        if not is_simple(V):
-            continue
-        nl = sum(k for _, k in seq)
-        ns = n - nl
-        rows[(ns, nl)].append(abs(writhe(V)))
-    print("length %d: %d closed loops up to symmetry, %d simple" % (n, len(loops), sum(len(r) for r in rows.values())))
-    for (ns, nl), ws in sorted(rows.items()):
-        mc = ns + nl
-        ml = ns + np.sqrt(3) * nl
-        charge = "whole charge possible" if ns % 3 == 0 and ns > 0 else ("neutral only" if ns == 0 else "fractional only")
-        print("   shorts %d longs %d: %6d simple loops; mass count %d, mass length %.3f; %s; |coil| %.3f to %.3f"
-              % (ns, nl, len(ws), mc, ml, charge, min(ws), max(ws)))
-        kind = "charged" if ns % 3 == 0 and ns > 0 else ("neutral" if ns == 0 else "fractional")
-        ladder_count[kind].add(mc)
-        ladder_length[kind].add(round(ml, 3))
+if __name__ == "__main__":
+    print("short steps:", len(SHORT), " long steps:", len(LONG), " colour-safe:",
+          all(sum(s) % 2 == 0 for s in SHORT + LONG))
+    print("masses in units of one short diagonal: count = shorts + longs; length = shorts + sqrt(3) x longs")
     print()
-print("mass ladders up to %d steps (units of one short diagonal):" % nmax)
-for kind in ("charged", "neutral", "fractional"):
-    print("  %-10s count rule:  %s" % (kind, sorted(ladder_count[kind])))
-    print("  %-10s length rule: %s" % (kind, [float(x) for x in sorted(ladder_length[kind])]))
+    nmax = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+    ladder_count = defaultdict(set)
+    ladder_length = defaultdict(set)
+    for n in range(3, nmax + 1):
+        loops = closed_loops(n)
+        rows = defaultdict(list)
+        for seq in loops:
+            V = vertices(list(seq))
+            if not is_simple(V):
+                continue
+            nl = sum(k for _, k in seq)
+            ns = n - nl
+            rows[(ns, nl)].append(abs(writhe(V)))
+        print("length %d: %d closed loops up to symmetry, %d simple" % (n, len(loops), sum(len(r) for r in rows.values())))
+        for (ns, nl), ws in sorted(rows.items()):
+            mc = ns + nl
+            ml = ns + np.sqrt(3) * nl
+            charge = "whole charge possible" if ns % 3 == 0 and ns > 0 else ("neutral only" if ns == 0 else "fractional only")
+            print("   shorts %d longs %d: %6d simple loops; mass count %d, mass length %.3f; %s; |coil| %.3f to %.3f"
+                  % (ns, nl, len(ws), mc, ml, charge, min(ws), max(ws)))
+            kind = "charged" if ns % 3 == 0 and ns > 0 else ("neutral" if ns == 0 else "fractional")
+            ladder_count[kind].add(mc)
+            ladder_length[kind].add(round(ml, 3))
+        print()
+    print("mass ladders up to %d steps (units of one short diagonal):" % nmax)
+    for kind in ("charged", "neutral", "fractional"):
+        print("  %-10s count rule:  %s" % (kind, sorted(ladder_count[kind])))
+        print("  %-10s length rule: %s" % (kind, [float(x) for x in sorted(ladder_length[kind])]))
