@@ -30,7 +30,7 @@ angles a third of a turn apart. In her parts: a constant part and a signed part 
 | G6 | the quarks | nothing: the form is for leptons | whether quark loops obey it; published: it holds only approximately for some quark triplets (to verify) | reading owed; then the integer-style test with quark masses and their scheme errors | measurement |
 | G7 | spin | absent; all three leptons spin ½ | her "spin must cancel mass somehow" is replaced, for the leptons, by the angle; whether spin enters at all is invisible until a spin-0 object (the pion) is in the system | G4's pion test | theory structure |
 | G8 | what √m is | the amplitude that adds (and, since 2026-10-30, does not add across loops) | which emergent quantity the root of mass is in her parts (the thing with a positive and a negative part); energies combine as squares in standard physics (to verify), which is the same shape | hers to name from the options below; no test until named | theory structure |
-| G9 | reading from a wiring | nothing | the parts (loops, runs k, twists) read from a saved toy wiring; curl and counts read today, twist has no reading rule | the diagonals build (relations document §6, item 3) | theory structure |
+| G9 | reading from a wiring | nothing (2026-10-30: a loop's sign is readable, the bipartition's, T87/O170; no object carries a wave, T86/O169) | the parts (loops, runs k, twists) read from a saved toy wiring; curl and counts read today, twist has no reading rule | the diagonals build (relations document §6, item 3) | theory structure |
 
 ## G8, the options for what root-mass is (written 2026-10-30 for the owner's decision)
 
