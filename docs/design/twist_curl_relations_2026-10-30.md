@@ -96,7 +96,7 @@ is the gluons per run under R8 if the object were three thirds equally spaced.
 |---|---|---|---|---|---|---|
 | electron | 0.510999 | −3 | ½ | 3.00 | 0 | lepton |
 | muon | 105.658 | −3 | ½ | 620.30 | — | lepton |
-| tau | 1776.86 | −3 | ½ | 10,431.7 | — | lepton |
+| tau | 1776.93 (PDG 2025; 1776.86 before 30 Oct) | −3 | ½ | 10,431.7 | — | lepton |
 | neutrino | < 8 × 10⁻⁷ | 0 | ½ | < 0.005 | — | lepton |
 | photon | 0 | 0 | 1 | 0 | 0 | boson |
 | π⁺ | 139.570 | +3 | 0 | 819.40 | — | u anti-d |
@@ -225,7 +225,7 @@ and tests only the additive form.
 - **E-A, published, already her shape** (Koide in Brannen's form; `sandbox/koide_brannen_look.py`):
   √m_g = A (1 + √2 cos(δ + 2πg/3)), g = 0, 1, 2 for tau, electron, muon. A constant part A and a signed part at an
   angle, the three leptons a third of a turn apart. Two constants, three masses, one prediction. Fitted on the electron and
-  muon alone, the held-out tau comes out 1776.97 MeV against 1776.86 ± 0.12 (0.9 σ), and δ = 0.222222 rad, which is 2/9
+  muon alone, the held-out tau comes out 1776.97 MeV against 1776.93 ± 0.09 (0.4 σ; PDG 2025, corrected 2026-10-30 from 1776.86 ± 0.12), and δ = 0.222222 rad, which is 2/9
   to six digits (Brannen 2006, not read; to verify). In her terms: the electron is light because its two parts nearly
   cancel (17.72 − 17.00); exact cancellation is at 3/8 of a turn and the electron sits 0.006 turn from it. **So in this
   shape a massless spin-½ loop is a loop at the cancelling angle**, a place for the neutrino that needs no cancelling of

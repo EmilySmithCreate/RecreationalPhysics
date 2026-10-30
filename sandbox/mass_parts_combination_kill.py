@@ -12,7 +12,7 @@ beyond chance would be a candidate for how the parts combine and would then meet
 that match). Kills: 'the parts combine as plain squares or plain square roots with one unit' if chance. Crowns nothing.
 """
 M_E = 0.51099895000
-MASSES = {"muon": (105.6583755, 2.3e-6), "proton": (938.27208816, 2.9e-7), "neutron": (939.56542052, 5.4e-7), "tau": (1776.86, 0.12)}
+MASSES = {"muon": (105.6583755, 2.3e-6), "proton": (938.27208816, 2.9e-7), "neutron": (939.56542052, 5.4e-7), "tau": (1776.93, 0.09)}  # PDG 2025; was 1776.86 +- 0.12 when first run
 
 
 def run(power, n_max=5000, sigma=3.0):

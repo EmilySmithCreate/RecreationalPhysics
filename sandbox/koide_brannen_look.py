@@ -11,7 +11,7 @@ third of a turn apart from the others, and the electron is the one where the two
 
 What this script does, with its expectations written first:
   (1) Fit A and delta from the electron and muon only; predict the tau (held out) and compare with the measured value.
-      Expectation (published): the prediction lands within about 0.2 MeV of 1776.86, i.e. Koide holds.
+      Expectation (published): the prediction lands within about 0.2 MeV of the measured tau, i.e. Koide holds.
   (2) Report delta in turns, the three cos values, and the angle at which the signed part cancels the constant part
       exactly (cos phi = -1/sqrt(2), phi = 3/8 turn): a loop at that angle is massless. Expectation: the electron sits
       within a few hundredths of a turn of it.
@@ -25,7 +25,7 @@ Kills (4) if no combination lands; records what the published form gives and whe
 from itertools import combinations_with_replacement, product
 import math
 
-M = {"electron": 0.51099895, "muon": 105.6583755, "tau": (1776.86, 0.12)}
+M = {"electron": 0.51099895, "muon": 105.6583755, "tau": (1776.93, 0.09)}  # PDG 2025 (rpp2025-sum-leptons); 1776.86 +- 0.12 was the older value used before 30 Oct 12:40 UTC
 
 
 def fit_from_e_mu():

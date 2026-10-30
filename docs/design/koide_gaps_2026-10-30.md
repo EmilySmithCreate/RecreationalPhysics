@@ -14,7 +14,7 @@ For the three charged leptons (hers, adopted; the form is published):
     √m_g = A (1 + √2 cos φ_g),   φ_g = δ + g/3 turn,   g = 0 (tau), 1 (electron), 2 (muon)
 
 with A = 17.716 √MeV and δ = 0.222222 rad fitted on the electron and muon, the tau then predicted at 1776.97 MeV
-(measured 1776.86 ± 0.12). Equivalent as a constraint, which is how the system holds it: (Σ√m)² = (3/2) Σm, plus the three
+(measured 1776.93 ± 0.09, PDG 2025; the 1776.86 ± 0.12 first written here was the older value, corrected 2026-10-30). Equivalent as a constraint, which is how the system holds it: (Σ√m)² = (3/2) Σm, plus the three
 angles a third of a turn apart. In her parts: a constant part and a signed part per loop, the electron the near-cancellation
 (17.72 − 17.00), a loop at 3/8 turn massless.
 
@@ -40,7 +40,15 @@ angles a third of a turn apart. In her parts: a constant part and a signed part 
 - Koide's own 1983 paper derived the relation inside a composite model of quarks and leptons (abstract only), which is the
   same family as her loops; reading it in full is the first reading owed.
 
-## Readings owed before any citation
+## Readings done (2026-10-30; three fresh agents, from the sources; notes in `docs/reading/notes/`)
 
-Koide 1983 and 1990 in full; Brannen 2006 (the form and the neutrino prediction); the published attempts to derive δ and
-the quark-triplet tests (authors to be found by search, recorded on the prior-work template).
+| gap | reading | verdict |
+|---|---|---|
+| G2, the phase | `2026-10-30_koide_originals.md`; `2026-10-30_koide_quarks_phase.md` | **NOT DERIVED.** 2/9 is within 1σ with PDG 2025 masses (δ_L = 0.2222248 ± 0.000006); Brannen found it in 2005 and calls it a coincidence; Koide calls it "an amazing coincidence ... there is no reason for the relation" and advises against taking it seriously; Żenczykowski assumes it; the one 2026 model reaching it sets a free coefficient to 1. Also: Koide exact and δ = 2/9 exact are incompatible at the 10⁻⁶ level (two tau predictions, 1776.9689 and 1776.9664, both inside the error) |
+| G3, the scale | same | the pole-against-running fact: K and δ hold for pole masses (10⁻⁵) and drift by 0.2 and 0.5 % at m_Z; Koide: "a serious theoretical problem"; Sumino's family gauge symmetry is the one published repair. A rule at the deepest level has to survive down to the measured masses, not up |
+| G5, the neutrinos | `2026-10-30_brannen_neutrinos.md` | **READ.** Not a massless loop at 3/8 turn: the same form with one root negative, the scale 3¹¹ smaller and the phase 1/24 turn further (δ_ν = 2/9 + π/12). Stage 1 is a two-constant fit to two splittings; stage 2 reads two integers off that fit. Against today's data the splittings sit 2 to 3σ high (inside 3σ), the sum 0.060 eV is allowed (DESI's bound 0.072 is near), and Brannen moved his own scale in 2010. Not refuted, not "dead center" |
+| G6, the quarks | `2026-10-30_koide_quarks_phase.md`; `sandbox/quark_koide_look.py` | **VERIFIED as "roughly", with the number.** No quark triplet is at K = 1 within its errors; (c, b, t) is half a per cent off and whether it passes depends on which of the top mass's three definitions (10 GeV apart) is used; (s, c, b) is the farthest; the six-quark ratio crosses Koide at some scale between 2 GeV and m_Z (Kartavtsev). Phases: up near 2/27, down near 1/9 at 2 GeV (Żenczykowski's 4/27 needs m_s ≈ 160 MeV). Koide's own reason: "the gluon cloud" |
+| G8, what √m is | `2026-10-30_koide_originals.md` | the published ancestor: √m is a VEV (1990) or a coupling to a heavier partner (1982), and the mass is its square; a signed quantity, which Brannen's negative neutrino root uses |
+
+Still owed: the 1982 Lett. Nuovo Cim. text itself (paywalled; its two constraints read only through Koide's restatements);
+Rosen 2007 in full; a common-scale running of the six quark masses with current inputs.
