@@ -28,7 +28,9 @@ combinatorial quantum gravity.*
 
 - **A particle** (hers): a closed loop of box diagonals, or several, with one curl of energy per loop or full coil.
   **Mass counts looped diagonals**, twisted or not; the coil (the loop's writhe, called 'fold' before 29 October) is a shape,
-  not a mass. **A long diagonal** (hers, 29 October) is a curl held along one untwisted diagonal longer than 1 × 1 × 2, such
+  not a mass. **Refined (hers, 30 October):** mass has separate parts, twist, spin, charge and loop, each in its own unit, and
+  MeV is the measured total only; the parts need not add like one unit, and spin takes mass away where the twists cancel
+  (`twist_curl_relations_2026-10-30.md`, §5). **A long diagonal** (hers, 29 October) is a curl held along one untwisted diagonal longer than 1 × 1 × 2, such
   as a 1 × 1 × 4 (√18): her gluon as a lattice object, mass and curl with no twist, charge or coil. **Decided (hers, 29 October, Update 148):** it counts
   one of mass, not its length (`sandbox/long_diagonal_mass.py` has both ladders).
 - **The unit** (hers): the closed loop of three white thirds (−⅓, −⅓, −⅓), net twist −1, is the electron: charge −1,

@@ -182,7 +182,41 @@ Two consequences the table makes visible (ours, exact from the rules):
 ∈ {−2, −1, 0, +1}; its (1,1) diagonal joins like colours and three of them cannot close; every closed loop of its
 diagonals is planar. None of this is about the two-degree-of-freedom phase.
 
-## 5. Open after this document (hers to decide, in order)
+## 5. Mass as separate parts, each in its own unit (her instruction of 30 October)
+
+Her words: "Spin must cancel mass somehow, so we need to separate out the twist spin charge and loop parts of mass and stop
+using MeV for all parts because they may not add and subtract cleanly like a single unit." So from here the record keeps
+the parts apart and writes MeV only for the measured total.
+
+| part | symbol | counted how | unit | whose |
+|---|---|---|---|---|
+| loop (curl) | L | number of closed loops, one curl each | u_L | hers |
+| diagonals | n | looped box diagonals, twisted or not (the long diagonal counts one) | u_n | hers (R6 as it stood) |
+| twist present | τ⁺ | sum of the magnitudes of the twists on the loops | u_τ | hers |
+| charge | T | net twist, Σ of the signed twists | u_T | hers |
+| spin | s | ½ per loop with twist present; 0 for a coil with none | u_s | hers (R5, R9 narrowed) |
+| measured mass | m | — | MeV | measured |
+
+The combination m = F(L, n, τ⁺, T, s) is **open**. What is fixed about it (hers): spin takes mass away ("spin must cancel
+mass somehow"), so F falls with s where the twists cancel; the neutrino (n ≥ 3, τ⁺ = 2θ, T = 0, s = ½) weighs almost
+nothing and the neutron (three loops, τ⁺ = 4/3, T = 0, s = ½) weighs 939.57 MeV, so the cancelling has to act loop by loop
+and not on the object (§4, the neutron row).
+
+What is already published and bears (general knowledge, to verify before any citation): (a) masses do not add in standard
+physics; a proton's quarks carry a few MeV of its 938, and the rest is the energy of the field between them, which is her
+"gluon runs" with their own unit; (b) rest mass and motion combine as squares, E² = m² + p², so a part held as motion
+would enter F under a square root; (c) Koide's relation ([Koide83], [Koide90]) is exact in square roots of the three
+charged-lepton masses, and Brannen's form of it writes √m as one constant plus a cosine at three phases a third of a turn
+apart (Brannen, 2006, not read; to verify), the first published place thirds appear in a mass formula. These are good
+news in her sense: existing math to apply, not to invent.
+
+Kill tests on the way, each with its expectation written first and none crowning anything: additive one unit, killed
+(§3); count plus one curl's energy per loop, killed (`mass_ledger_kill.py`); whole counts in √m with one unit, killed, and
+in m², unreadable from the tau's error (`mass_parts_combination_kill.py`). What is left is what she asks for: parts in
+their own units, combined by a rule to be stated, and the first such rule to test is the Koide–Brannen one, since it is
+published, exact to six figures for the leptons, and built on thirds.
+
+## 6. Open after this document (hers to decide, in order)
 
 1. R6 in its one-unit form fails the integer test (§3). Keep mass as a count plus a second ledger, or replace it.
 2. The neutrino's mass: hers of 30 October places it as a loop with cancelling twists (spin from twist present), which answers
