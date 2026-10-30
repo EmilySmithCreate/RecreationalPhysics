@@ -159,7 +159,8 @@ that join them, and not a place.
 | ½ | 0 | 1 | the photon: free curl, travelling, with the quarter twist and anti-twist beside it that cancel | R5, §3 of the rules sheet |
 | ½ | ≠ 0 | — | not allowed as it stands: a photon carries no net twist | hers (photon rules) |
 | 1 | ±⅓, ±⅔, ±1, … (thirds) | ½ | a matter loop: charge T, spin ½ in the direction of its twist; free only when T ∈ ℤ | R2, R4, R5 |
-| 1 | 0 | ½ | **not seen**: an uncharged coil takes no spin (the neutrino has to live elsewhere) | R9 |
+| 1 | 0, with twists ±θ present that cancel | ½ | the neutrino (hers, 30 October): no net twist so no charge, spin because twist is present; **open: its mass**, since a loop of three or more diagonals at the electron's unit weighs 0.51 MeV or more against a bound below 10⁻⁶ MeV | R9 narrowed |
+| 1 | 0, no twist at all | ½ | **not seen**: an uncharged coil takes no spin | R9 |
 | 1 | 0 | 0 | an uncharged coil, a long diagonal: curl with no twist, no spin, no charge (her gluon) | hers, Update 147 |
 | 1 + 1 | T₁ + T₂ | 0 | two loops spinning against each other, each with its twist (the pion) | hers |
 | n loops | Σ T | ½ or 0 | the proton ring and the hadrons: twist and anti-twist held apart by gluon runs | hers |
@@ -183,7 +184,9 @@ diagonals is planar. None of this is about the two-degree-of-freedom phase.
 ## 5. Open after this document (hers to decide, in order)
 
 1. R6 in its one-unit form fails the integer test (§3). Keep mass as a count plus a second ledger, or replace it.
-2. R9 and the neutrino (`2026-10-30_helon_model_full_read.md`, item 4): where an uncharged spin-½ object lives.
+2. The neutrino's mass: hers of 30 October places it as a loop with cancelling twists (spin from twist present), which answers
+   the helon objection; the mass bound (below 10⁻⁶ MeV against 0.51 MeV for any loop at the electron's unit) is still a
+   measurement against it. Also hers: whether 'sign by colour' gives, since she accepts twists of both signs on one loop.
 3. Whether R10 is to be built as P6 (net twist conserved diagonal by diagonal under the toy's moves): the first exact
    piece of the diagonals build, no constant.
 4. Whether a framing (a ribbon with two edges) is given to her loops so that P1 applies, or the coil stays a shape.

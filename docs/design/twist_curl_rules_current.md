@@ -43,7 +43,10 @@ combinatorial quantum gravity.*
 - **Spin** (hers, 29 October, "precise"): full spin on half a curl (the photon, spin 1); half spin on a full curl
   (matter, spin ½). A photon's half curl is spent on a loop's |⅓| segment, the only size a photon can act on; the
   photon's curl stops and the loop spins ½ in the direction of that twist. With spin a loop can hold its twist stably in
-  less mass; an uncharged coil takes no spin, so no uncharged electron is ever seen. **Spin with no twist is a second
+  less mass; an uncharged coil takes no spin, so no uncharged electron is ever seen. **Narrowed (hers, 30 October):** spin
+  needs twist *present*, not net twist: the neutrino is a loop whose twists are plus and minus of the same increment,
+  cancelling to no charge, and it spins. Open: its mass under the count rule (a three-loop weighs 0.51 MeV at the unit;
+  the bound is below 10⁻⁶ MeV). **Spin with no twist is a second
   kind of force**, probably the one that holds protons and neutrons together.
 - **Exact, the four test particles** (O166 and the free electron): electron (−1, ½): one twist, one spin. Neutron
   (0, ½): twists net 0, spins net ½. Photon (0, 1): spin, no twist. Charged pion (1, 0): twists ⅔ + ⅓, spins opposed
