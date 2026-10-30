@@ -98,7 +98,7 @@ alternating link by link. The meeting with matter is not built.
 
 **Her annihilation ledger** (hers): A (+1 twist, 1 loop, ½ spin) and B (−1 twist, −1 loop, ½ spin) make C (+½ loop,
 spin 1, no twist) and D (−½ loop, the opposite direction, spin 1, no twist). Built as `annihilate`, with `ledger` summing
-net twist, curl and signed spin over particles and photons. **Two consequences, built and hers to confirm:** curl is now a
+net twist, curl and signed spin over particles and photons. **Two consequences, built and confirmed by her (19:33 UTC):** curl is now a
 signed non-zero integer (her B), and `mirror` reverses curl as well as twist and spin; and the ledger balances (0 = 0 in
 twist, curl and spin) only with B's spin −½ and the photons' spins opposite, which is how it is built. **Not balanced by
 her ledger:** the count of diagonals (6 before, 8 after at length four); left open, not fixed. Section 2's "curl ≥ 1" and
