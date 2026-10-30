@@ -65,3 +65,22 @@ def test_pair_creation_conserves_net_twist():
     e = triangle(L)
     assert net_twist([Particle("e-", [e]), Particle("e+", [mirror(e)])]) == 0
     assert net_twist([Particle("e-", [e])]) == -1
+
+
+def test_writhe_is_zero_for_the_flat_triangle_and_flips_with_the_mirror_image():
+    from graphity.twist import twist_energy, writhe
+    assert abs(writhe(triangle(L))) < 1e-9
+    turn = [(2, 1, 1), (-1, 2, 1), (-2, -1, 1), (1, -2, 1)]
+    helix = turn + [(2, 1, 1), (2, 1, -1)] + [tuple(-x for x in s) for s in reversed(turn)] + [(-2, -1, -1), (-2, -1, 1)]
+    # sandbox/coil_writhe.py's coil: a turn rising 4, a bridge, the turn traversed backwards (same handedness), the bridge back
+    coil = Loop(L, (0, 0, 0), helix, [0] * len(helix))
+    mirror_coil = Loop(L, (0, 0, 0), [(-a, b, c) for a, b, c in helix], [0] * len(helix))
+    w, wm = writhe(coil), writhe(mirror_coil)
+    assert abs(w) > 0.05 and abs(w + wm) < 1e-9
+    assert twist_energy(triangle(L), eps=1.0, eps_w=0.0) == pytest.approx(1 / 3)       # three equal thirds: elastic only
+    assert twist_energy(triangle(L, twists=(2 * THIRD, THIRD, 0)), eps=1.0, eps_w=0.0) == pytest.approx(5 / 9 + 6 / 9)
+
+
+def test_a_winding_loop_has_no_writhe():
+    from graphity.twist import writhe
+    assert writhe(Loop(L, (0, 0, 0), [(1, 1, 4), (-1, -1, 4)], [0, 0])) is None

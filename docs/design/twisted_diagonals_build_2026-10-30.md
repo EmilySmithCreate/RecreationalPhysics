@@ -48,7 +48,26 @@ its twist (the electron's size n, item 3); whether twisted diagonals may cross o
 
 ## 4. The energy
 
-None is added. The sheet's section 4 stands: the state carries curl as a count per loop (one curl of energy each) and no
+*Revised 2026-10-30 on her decisions of that afternoon.* The twist term adopted as the working form (hers: "it's okay to work with
+this, just carry the note. we'll see if we can derive later"), with the writhe term she asked for ("writhe seems like a
+great idea and already has available math"):
+
+    E_twist(loop) = ε [ Σ_i τ_i² + Σ_i (τ_{i+1} − τ_i)² ]  +  ε_w Wr²
+
+elastic plus mismatch on the diagonals (E4 of `sandbox/twist_energy_options.py`), and the coil's own cost through the
+writhe Wr of the loop as a closed polygon (the Gauss double integral; the Călugăreanu–White–Fuller theorem Lk = Tw + Wr
+and the elastic-rod and DNA models are the published math, general knowledge, to verify). Two constants, ε and ε_w;
+neither pinned yet. **Rule-13 note, carried:** E4 was chosen because its rankings of her test particles were the ones
+she wanted; it is not derived. **Her requirement on the term (hers, this day):** a charge of 2 or more on one loop must
+cost more than two separate particles, since like twists repel and a free particle carries a whole twist; under E4 alone
+charge 2 on six diagonals costs exactly two electrons, so a repulsion piece is still owed (the simplest, ours, in the
+look: a per-loop cost in the net twist squared). **Her correction on the periodic form:** periodic in a loop's net
+twist (whole charge free, fractions costing) is her "a full twist is a requirement" as an energy, the confinement of
+thirds, and is not what was decisive against; the per-diagonal form was. Proposed for her, not adopted: that term
+beside E4. **The question the writhe term raises (ours):** the conserved quantity of a closed ribbon is Lk = Tw + Wr,
+so twist can turn into coil; if charge is the net twist it is not conserved under coiling; the published reading would
+make charge the linking number, twist held plus coil. Hers to decide. Previously here: "None is added." (the sheet's
+section 4 stood until this afternoon). The sheet's section 4 stands: the state carries curl as a count per loop (one curl of energy each) and no
 twist term (the κ form was ours and is not adopted). So the first thing the state can do is score the sheet's own
 particles exactly, and conserve net twist; what it cannot yet do is move.
 

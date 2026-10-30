@@ -164,3 +164,63 @@ def triangle(L, start=(0, 0, 0), twists=(-THIRD, -THIRD, -THIRD), spin=HALF, cur
 def mirror(loop):
     """The same loop with every twist and its spin reversed: the anti-particle's loop (pairs: +theta with -theta)."""
     return Loop(loop.L, loop.start, list(loop.steps), [-t for t in loop.twists], curl=loop.curl, spin=-loop.spin)
+
+
+# ---------------------------------------------------------------- the coil's writhe, and the energy of twist (30 October, her decisions)
+
+_PIECES = 8
+_gx, _gw = np.polynomial.legendre.leggauss(16)
+_GX = np.concatenate([(k + (_gx + 1) / 2) / _PIECES for k in range(_PIECES)])
+_GW = np.concatenate([_gw / 2 / _PIECES for _ in range(_PIECES)])
+
+
+def unwrapped_points(loop):
+    """The loop's corners in the plane's own coordinates, unwrapped (cumulative steps from the start); None if the loop
+    winds round the torus, since the writhe of a winding loop is not that of a closed curve in space."""
+    total = np.sum(np.array(loop.steps, dtype=int), axis=0)
+    if any(int(t) != 0 for t in total):
+        return None
+    pts = [np.array(loop.start, dtype=float)]
+    for s in loop.steps[:-1]:
+        pts.append(pts[-1] + np.array(s, dtype=float))
+    return np.array(pts)
+
+
+def writhe(loop):
+    """The writhe of the loop as a closed polygon in space: the Gauss double integral over non-adjacent segment pairs,
+    each segment split into 8 pieces with 16-point Gauss-Legendre (the routine of sandbox/coil_writhe.py). Exact to the
+    quadrature; 0 for a planar loop; its sign flips with the loop's mirror image. None for a loop that winds the torus."""
+    V = unwrapped_points(loop)
+    if V is None:
+        return None
+    n = len(V)
+    T = np.roll(V, -1, axis=0) - V
+    R = V[:, None, :] + _GX[None, :, None] * T[:, None, :]
+    total = 0.0
+    for i in range(n):
+        js = [j for j in range(n) if j != i and (i + 1) % n != j and (j + 1) % n != i]
+        if not js:
+            continue
+        cr = np.cross(T[i], T[js])
+        d = R[i][:, None, None, :] - R[js][None, :, :, :]
+        num = np.einsum("qjpk,jk->qjp", d, cr)
+        den = np.linalg.norm(d, axis=3) ** 3
+        total += np.einsum("q,p,qjp->", _GW, _GW, num / den)
+    return float(total / (4 * np.pi))
+
+
+def twist_energy(loop, eps=1.0, eps_w=1.0):
+    """E4 plus writhe: eps [sum tau^2 + sum (tau_next - tau)^2] + eps_w Wr^2 (the build document, section 4). A winding
+    loop has no writhe and pays eps_w * 0."""
+    taus = loop.twists
+    n = len(taus)
+    elastic = float(sum(t * t for t in taus))
+    mismatch = float(sum((taus[(i + 1) % n] - taus[i]) ** 2 for i in range(n)))
+    if eps_w == 0.0:
+        return eps * (elastic + mismatch)
+    wr = writhe(loop)
+    return eps * (elastic + mismatch) + eps_w * (0.0 if wr is None else wr * wr)
+
+
+def particle_energy(particle, eps=1.0, eps_w=1.0):
+    return sum(twist_energy(lp, eps, eps_w) for lp in particle.loops)
