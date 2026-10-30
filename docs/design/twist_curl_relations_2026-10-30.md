@@ -240,6 +240,13 @@ and tests only the additive form.
   tested: it has at least two constants and the leptons alone (three masses) cannot separate it from E-A; the nucleons
   and the pion would. Hers whether to write it out.
 
+**Form (hers, 30 October): a set of equations and inequalities, possibly recursive.** "It can be a set of equations/
+inequalities. They may not immediately combine to one line without being recursive, which is a feature not a bug." So the
+target is a system, not a formula. Already in that form: R1 to R10 (selection rules and inequalities, §2); Koide as a
+constraint on three masses at once, (Σ√m)² = (3/2) Σm, with the thirds-of-a-turn spacing a second constraint rather than a
+closed formula; and R8's equal spacing, (S L^k)³ with n = 3(k + 1), which is recursive in k. A recursive rule is also what a
+simulation runs: one rule applied to its own output. Candidates below are read as members of such a system.
+
 What the first precise equation would be for (hers): the starting point for the simulations, which means the parts
 (L, n, τ⁺, T, s) must be readable from a saved wiring; today the toy reads curl and the counts, and twist has no reading
 rule yet (§6, item 3).
