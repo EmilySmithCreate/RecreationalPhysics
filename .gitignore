@@ -30,3 +30,6 @@ docs/outreach/
 
 # Sandbox output is scratch (CLAUDE.md rule 16); the log and the notebook are tracked.
 sandbox/out/
+
+# The private final test of the GeneralizedIntelligence plans (owner, 30 Oct 2026): never committed
+docs/design/gi/private/

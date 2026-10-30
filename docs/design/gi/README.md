@@ -66,4 +66,9 @@ The three plans, read against that:
 1. ~~"Inequities" read as inequalities (constraints)?~~ *Answered 30 October: yes, inequalities.*
 2. ~~Quarters in G1, or λ as an input?~~ *Answered 30 October: quarters admitted; λ is a continuous input, separate
    from the particle work, and she thinks it varies with slab size and swap count (`grammar_g1.md`, her answer).*
-3. ⚑ Should the question bank be regenerated with a private seed and kept out of git, as the plan's privacy asks?
+3. ~~Should the question bank be regenerated with a private seed and kept out of git?~~ *Answered 30 October: yes;
+   her reason, "I want more independent creative ideas". Done: `docs/design/gi/private/` is gitignored and holds 40
+   world-family cases (10 per kind) with their hidden halves in a separate file, generated from a fresh seed recorded
+   only there. The twelve F questions in `framework_axioms.md` are public and are therefore **templates**: before the
+   private test their numbers are re-rolled by hand into the same private folder, and the public ones are never used
+   to score.*
