@@ -216,6 +216,34 @@ in m², unreadable from the tau's error (`mass_parts_combination_kill.py`). What
 their own units, combined by a rule to be stated, and the first such rule to test is the Koide–Brannen one, since it is
 published, exact to six figures for the leptons, and built on thirds.
 
+**Candidate equations** (her request of 30 October, later: "how might it be a more complex equation involving positive and
+negative twists in available values, spin, loops (with and without twists), ratios of different emergent values ... we need
+that equation to equal the measured masses"). Each shape below says how many constants it has, how many masses it meets and
+what it predicts (rule 13). The withdrawn step: "2.531 electron masses" for the neutron–proton difference assumed addition
+and tests only the additive form.
+
+- **E-A, published, already her shape** (Koide in Brannen's form; `sandbox/koide_brannen_look.py`):
+  √m_g = A (1 + √2 cos(δ + 2πg/3)), g = 0, 1, 2 for tau, electron, muon. A constant part A and a signed part at an
+  angle, the three leptons a third of a turn apart. Two constants, three masses, one prediction. Fitted on the electron and
+  muon alone, the held-out tau comes out 1776.97 MeV against 1776.86 ± 0.12 (0.9 σ), and δ = 0.222222 rad, which is 2/9
+  to six digits (Brannen 2006, not read; to verify). In her terms: the electron is light because its two parts nearly
+  cancel (17.72 − 17.00); exact cancellation is at 3/8 of a turn and the electron sits 0.006 turn from it. **So in this
+  shape a massless spin-½ loop is a loop at the cancelling angle**, a place for the neutrino that needs no cancelling of
+  "mass" by spin: the angle does it. What it lacks: a rule that reads the angle from a loop's twists (thirds of a turn
+  from thirds of twist is the obvious candidate and is not derived), and a rule for several loops.
+- **E-B, hers to state, the loop sum:** √m = Σ_loops a_ℓ, with a_ℓ = A (1 + √2 cos φ_ℓ) and φ_ℓ read from the loop's
+  twists, loops without twist (gluon runs) entering as their own term. *Exact (`koide_brannen_look.py`, part 4):* with no
+  new constant, three signed lepton amplitudes added never give the proton or neutron; the nearest is three loops at the
+  muon's angle, 950.9 MeV, 1.3 % high. So the nucleons need either their own angles or a term for the runs. Killed in its
+  no-constant form; open with one.
+- **E-C, the spin term:** her "spin must cancel mass somehow" as a signed part, √m = u_n n − u_s s + …, loop by loop. Not
+  tested: it has at least two constants and the leptons alone (three masses) cannot separate it from E-A; the nucleons
+  and the pion would. Hers whether to write it out.
+
+What the first precise equation would be for (hers): the starting point for the simulations, which means the parts
+(L, n, τ⁺, T, s) must be readable from a saved wiring; today the toy reads curl and the counts, and twist has no reading
+rule yet (§6, item 3).
+
 ## 6. Open after this document (hers to decide, in order)
 
 1. R6 in its one-unit form fails the integer test (§3). Keep mass as a count plus a second ledger, or replace it.
