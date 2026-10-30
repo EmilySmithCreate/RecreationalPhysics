@@ -182,8 +182,8 @@ class Photon:
     links; on meeting matter it hands on its spin and its curl (not built: the meeting). An open path of `length` body
     diagonals, all the same step `direction`, from `start`, advanced by `position` links. curl is +1/2 or -1/2 (the sign is
     the sense of the curl; her annihilation ledger makes the two photons opposite), spin +1 or -1 (the two photons' spins
-    are opposite in direction). Nothing is derived; the values are the rules. Her "root 2" for this diagonal is recorded as
-    said; the two-colour diagonal has length sqrt 3 (to confirm with her)."""
+    are opposite in direction). Nothing is derived; the values are the rules. The two-colour diagonal has length sqrt 3 (she
+    wrote root 2 and corrected it to root 3, 30 October)."""
     L: int
     start: tuple
     direction: tuple

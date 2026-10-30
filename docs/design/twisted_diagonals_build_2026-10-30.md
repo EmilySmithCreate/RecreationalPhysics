@@ -90,7 +90,7 @@ alternating link by link. The meeting with matter is not built.
 
 | quantity | values | whose |
 |---|---|---|
-| diagonal | body, (1, 1, 1) signed; two-colour; length √3 (her "root 2" recorded, to confirm) | hers |
+| diagonal | body, (1, 1, 1) signed; two-colour; length √3 (she wrote "root 2" and corrected it to √3 at 19:34 UTC) | hers |
 | curl | +½ or −½ | hers |
 | spin | +1 or −1 | hers; the sign reading ours, from her ledger |
 | twist, charge | 0 | hers |
