@@ -48,6 +48,22 @@ depending on size, not λ itself. "Squares per point on a plane" means the count
 plane of the 3D toy (four right-angle pairs per plane, Update 107, exact); it is a statement about the emergent space,
 and by her instruction the base is never drawn as a plane.
 
+**The owner's statement on continuity, 30 October (13:51 ET by the clock), her words put in order.** Curl is continuous in
+3D, and twist can be incorporated into longer loops with coiled gluons. So continuity is emergent, from the
+self-referential nature of curl and twist in the 2D base: the discrete numbers are there, but most numbers that come
+out of 3D observations and measurements are continuous. Some things stay discrete: the smallest package of matter,
+the rules of twist combination that define a finite set of particles, and spin coming in halves and wholes.
+
+*What that fixes for the grammars (ours).* The prior G1 is a prior on the **state rule** (the base), where she says
+the numbers are discrete, and not on the **reading map** (the 3D observations), where she says they are continuous.
+So the world family should carry a discrete rule with G1 constants and a reading map with continuous hidden
+parameters (a scale, a length), and the G0-against-G1 test should score the two parts separately: G1 ought to win on
+the rule and be indifferent on the readings. Today's curl-store world has rational readings only (its reading map is
+the exact ladder); a continuous reading map is the next change and is not built. "Coiled gluons" is an idea of hers
+first recorded here: the twist carried by longer loops; nothing in the toy has it. The finite particle set from twist
+rules is Updates 97 to 101; spin in halves is Update 109. ⚑ One line from her: is the "smallest package of matter" the
+three-thirds strand?
+
 A fourth possibility: the quarters are an artifact of the toy's curl length 4 (a direction curled to length 4 adds
 one square per four points). In the base, where no length exists, the preference may hold. That is hers to say, and
 it is why the G0-against-G1 test on worlds "not built to suit" G1 is the right test: if G1 wins there, the quarters
