@@ -5,12 +5,15 @@ wiring's knots are the scrap. Nothing here is derived; the rules are put in and 
 
 The lattice: points of an L x L x L torus, coloured by the parity of x + y + z. A box diagonal is a signed permutation of
 (1, 1, 2) (24 steps, sqrt 6, same colour); a long diagonal (1, 1, 2m), m >= 2 (holds curl, no twist); a face diagonal a
-signed permutation of (1, 1, 0) (12 steps, sqrt 2, dark twist in halves). Body diagonals (1, 1, 1) change colour and are
-not part of this state.
+signed permutation of (1, 1, 0) (12 steps, sqrt 2, dark twist in halves). Body diagonals (1, 1, 1) change colour (8 steps,
+sqrt 3) and carry the photon (her first form of 30 October, evening): not a loop but an open path along one body diagonal,
+with half a curl, spin 1, no twist, moving one link per sweep, the angle of its curl turning a quarter turn per link so
+that it repeats every four links. Its readers: charge 0, net twist 0, curl +1/2 or -1/2, spin +1 or -1.
 
 A Loop: closed on the torus, one step kind, twist on each diagonal (thirds on box, halves on face, zero on long), an
-integer curl >= 1, and a spin in {-1/2, 0, +1/2} that may be non-zero only if some twist is present (her rule of
-30 October: spin needs twist present, not net twist). A Particle is a named set of loops. Readers: charge = sum of twist;
+non-zero integer curl (signed from 30 October, evening: the anti-particle's loop has the opposite curl, so that a
+particle's curl can net zero, her neutrino), and a spin in {-1/2, 0, +1/2} that may be non-zero only if some twist is
+present (her rule of 30 October: spin needs twist present, not net twist). A Particle is a named set of loops. Readers: charge = sum of twist;
 spin = |sum of loop spins|; mass_count = number of looped diagonals (a long diagonal counts one); parts = (L, n, tau+, T,
 s, C); net_twist over a set of particles, the quantity pair creation conserves.
 
@@ -57,7 +60,7 @@ def colour(point):
 @dataclass
 class Loop:
     """points: the loop's points in order (the step from the last back to the first closes it); steps are given as
-    displacements so that the torus wrap is explicit. twists: one Fraction per step. curl: integer >= 1. spin: Fraction."""
+    displacements so that the torus wrap is explicit. twists: one Fraction per step. curl: non-zero integer. spin: Fraction."""
     L: int
     start: tuple
     steps: list
@@ -87,8 +90,8 @@ class Loop:
             if inc is not None and (t / inc).denominator != 1:
                 raise ValueError("twist %s is not a multiple of %s on a %s diagonal" % (t, inc, self.kind))
         self.twists = [Fraction(t) for t in self.twists]
-        if int(self.curl) < 1 or int(self.curl) != self.curl:
-            raise ValueError("one curl of energy per loop at least; curl must be a positive integer")
+        if int(self.curl) == 0 or int(self.curl) != self.curl:
+            raise ValueError("one curl of energy per loop at least; curl must be a non-zero integer (signed from 30 October)")
         self.spin = Fraction(self.spin)
         if self.spin not in (Fraction(0), HALF, -HALF):
             raise ValueError("a loop's spin is -1/2, 0 or +1/2")
@@ -162,8 +165,101 @@ def triangle(L, start=(0, 0, 0), twists=(-THIRD, -THIRD, -THIRD), spin=HALF, cur
 
 
 def mirror(loop):
-    """The same loop with every twist and its spin reversed: the anti-particle's loop (pairs: +theta with -theta)."""
-    return Loop(loop.L, loop.start, list(loop.steps), [-t for t in loop.twists], curl=loop.curl, spin=-loop.spin)
+    """The same loop with every twist, its curl and its spin reversed: the anti-particle's loop (pairs: +theta with -theta;
+    her ledger of 30 October, evening: the positron is -1 twist, -1 loop)."""
+    return Loop(loop.L, loop.start, list(loop.steps), [-t for t in loop.twists], curl=-loop.curl, spin=-loop.spin)
+
+
+# ---------------------------------------------------------------- the photon, first form (her decision of 30 October, evening)
+
+BODY_STEPS = {tuple(s) for s in product((1, -1), repeat=3)}
+
+
+@dataclass
+class Photon:
+    """Her first form of the photon, put in as she stated it: a curve on the two-colour (body) diagonal, half a curl, spin 1,
+    no twist, carried one link per sweep by its spin; the angle its curl sits at turns as it moves and repeats every four
+    links; on meeting matter it hands on its spin and its curl (not built: the meeting). An open path of `length` body
+    diagonals, all the same step `direction`, from `start`, advanced by `position` links. curl is +1/2 or -1/2 (the sign is
+    the sense of the curl; her annihilation ledger makes the two photons opposite), spin +1 or -1 (the two photons' spins
+    are opposite in direction). Nothing is derived; the values are the rules. Her "root 2" for this diagonal is recorded as
+    said; the two-colour diagonal has length sqrt 3 (to confirm with her)."""
+    L: int
+    start: tuple
+    direction: tuple
+    length: int = 4
+    curl: Fraction = HALF
+    spin: Fraction = Fraction(1)
+    position: int = 0
+
+    def __post_init__(self):
+        if tuple(self.direction) not in BODY_STEPS:
+            raise ValueError("a photon runs along a body diagonal (1, 1, 1) in some signed form; got %s" % (self.direction,))
+        self.curl, self.spin = Fraction(self.curl), Fraction(self.spin)
+        if self.curl not in (HALF, -HALF):
+            raise ValueError("a photon carries half a curl, +1/2 or -1/2")
+        if self.spin not in (Fraction(1), Fraction(-1)):
+            raise ValueError("a photon carries spin 1, in one direction or the other")
+        if self.length < 1:
+            raise ValueError("a photon has at least one link")
+
+    @property
+    def charge(self):
+        return Fraction(0)
+
+    net_twist = charge
+
+    @property
+    def twist_present(self):
+        return Fraction(0)
+
+    @property
+    def mass_count(self):
+        return self.length
+
+    @property
+    def head(self):
+        p = np.array(self.start, dtype=int) + self.position * np.array(self.direction, dtype=int)
+        return tuple(int(x) % self.L for x in p)
+
+    @property
+    def colour(self):
+        return colour(self.head)
+
+    @property
+    def angle_degrees(self):
+        """The angle the half curl sits at: a quarter turn per link, repeating every four (her picture)."""
+        return 90 * (self.position % 4)
+
+    @property
+    def parts(self):
+        return dict(L=0, n=self.length, tau_plus=Fraction(0), T=Fraction(0), s=self.spin, C=self.curl)
+
+    def advance(self, sweeps=1):
+        """One link per sweep, carried by its spin."""
+        return Photon(self.L, self.start, self.direction, self.length, self.curl, self.spin, self.position + int(sweeps))
+
+
+def annihilate(particle, antiparticle, direction=(1, 1, 1), length=4):
+    """Her ledger of 30 October, evening: an electron (+1 twist, 1 loop, 1/2 spin) and its anti-particle (-1 twist, -1 loop,
+    1/2 spin) make two photons, C (+1/2 loop, spin 1, no twist) and D (-1/2 loop in the opposite direction, spin 1, no
+    twist). Built with the photons' spins opposite (+1, -1), the only reading under which the signed spin balances given
+    that `mirror` reverses the loop's spin. The photons leave from the particle's first point along `direction` and its
+    reverse. Returns (C, D). What is conserved is read by `ledger`."""
+    start = particle.loops[0].start
+    back = tuple(-x for x in direction)
+    return (Photon(particle.loops[0].L, start, direction, length, HALF, Fraction(1)),
+            Photon(particle.loops[0].L, start, back, length, -HALF, Fraction(-1)))
+
+
+def ledger(objects):
+    """The sums her ledger balances: net twist, curl and signed spin, over particles and photons alike, and the mass count."""
+    tw = cu = sp = Fraction(0)
+    n = 0
+    for o in objects:
+        pr = o.parts
+        tw, cu, sp, n = tw + pr["T"], cu + pr["C"], sp + pr["s"], n + pr["n"]
+    return dict(T=tw, C=cu, s=sp, n=n)
 
 
 # ---------------------------------------------------------------- the coil's writhe, and the energy of twist (30 October, her decisions)

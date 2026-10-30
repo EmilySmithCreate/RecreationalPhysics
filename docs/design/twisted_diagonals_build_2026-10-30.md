@@ -79,6 +79,31 @@ sheet reads it, "twists ⅔ + ⅓, spins opposed"): charge +1, spin 0. Neutron (
 ½): charge 0, spin ½. Neutrino (one loop, +⅓ and −⅓, spin ½): charge 0, spin ½, twist present ⅔. A pair (loop with T and
 its mirror with −T): net twist 0. The photon is excluded (not a loop of box diagonals).
 
+## 7. The photon, first form (her decision of 2026-10-30, 19:19 UTC: "proceed, add")
+
+Her words of that evening, put in order: the photon is a curve on the two-colour body diagonal; it carries half a curl
+and spin 1 and no twist; its spin carries it one link per sweep; the angle its curl sits at changes as it moves and
+repeats every four links, an oscillation along a line of cubes joined corner to corner; when it meets matter it hands on
+its spin and its curl. Built as `Photon` in `graphity.twist`: an open path of `length` body diagonals (1, 1, 1) in one
+signed form, `position` links advanced, curl ±½, spin ±1, charge 0, `angle_degrees` = 90° × (position mod 4), colour
+alternating link by link. The meeting with matter is not built.
+
+| quantity | values | whose |
+|---|---|---|
+| diagonal | body, (1, 1, 1) signed; two-colour; length √3 (her "root 2" recorded, to confirm) | hers |
+| curl | +½ or −½ | hers |
+| spin | +1 or −1 | hers; the sign reading ours, from her ledger |
+| twist, charge | 0 | hers |
+| motion | one link per sweep; the curl's angle a quarter turn per link, period four | hers |
+
+**Her annihilation ledger** (hers): A (+1 twist, 1 loop, ½ spin) and B (−1 twist, −1 loop, ½ spin) make C (+½ loop,
+spin 1, no twist) and D (−½ loop, the opposite direction, spin 1, no twist). Built as `annihilate`, with `ledger` summing
+net twist, curl and signed spin over particles and photons. **Two consequences, built and hers to confirm:** curl is now a
+signed non-zero integer (her B), and `mirror` reverses curl as well as twist and spin; and the ledger balances (0 = 0 in
+twist, curl and spin) only with B's spin −½ and the photons' spins opposite, which is how it is built. **Not balanced by
+her ledger:** the count of diagonals (6 before, 8 after at length four); left open, not fixed. Section 2's "curl ≥ 1" and
+section 3's "the photon stays unbuilt" are superseded by this section.
+
 ## 6. What this build does not claim
 
 That any of these loops is stable, that the counts are masses in MeV, or that the lattice is space. It is the first

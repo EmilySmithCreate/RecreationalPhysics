@@ -84,3 +84,33 @@ def test_writhe_is_zero_for_the_flat_triangle_and_flips_with_the_mirror_image():
 def test_a_winding_loop_has_no_writhe():
     from graphity.twist import writhe
     assert writhe(Loop(L, (0, 0, 0), [(1, 1, 4), (-1, -1, 4)], [0, 0])) is None
+
+
+def test_the_photon_as_she_stated_it_and_her_annihilation_ledger():
+    from graphity.twist import Photon, annihilate, ledger
+    with pytest.raises(ValueError):                                   # not a body diagonal
+        Photon(L, (0, 0, 0), (1, 1, 2))
+    with pytest.raises(ValueError):                                   # a whole curl is a loop's, not a photon's
+        Photon(L, (0, 0, 0), (1, 1, 1), curl=1)
+    with pytest.raises(ValueError):                                   # spin 1 only
+        Photon(L, (0, 0, 0), (1, 1, 1), spin=HALF)
+    c = Photon(L, (0, 0, 0), (1, 1, 1))
+    assert (c.charge, c.net_twist, c.twist_present, c.curl, c.spin, c.mass_count) == (0, 0, 0, HALF, 1, 4)
+    assert [c.advance(k).angle_degrees for k in range(6)] == [0, 90, 180, 270, 0, 90]      # repeats every four links
+    assert [c.advance(k).colour for k in range(4)] == ["black", "white", "black", "white"]  # the two-colour diagonal
+    assert c.advance(3).head == (3, 3, 3)
+    e = triangle(L, twists=(THIRD, THIRD, THIRD), spin=HALF)                                  # her ledger's A: +1 twist, +1 loop, 1/2 spin
+    electron, positron = Particle("A", [e]), Particle("B", [mirror(e)])
+    assert positron.parts["T"] == -1 and positron.parts["C"] == -1                            # B: -1 twist, -1 loop
+    before = ledger([electron, positron])
+    after = ledger(annihilate(electron, positron))
+    assert before["T"] == after["T"] == 0 and before["C"] == after["C"] == 0 and before["s"] == after["s"] == 0
+    assert (before["n"], after["n"]) == (6, 8)                                               # the count is not balanced by the ledger as written
+
+
+def test_signed_curl_lets_a_particle_net_zero_curl():
+    nu = Particle("her neutrino", [triangle(L, twists=(THIRD, -THIRD, 0), spin=HALF, curl=1),
+                                    triangle(L, (2, 2, 0), (THIRD, -THIRD, 0), spin=0, curl=-1)])
+    assert (nu.charge, nu.spin, nu.parts["C"]) == (0, HALF, 0)
+    with pytest.raises(ValueError):
+        triangle(L, curl=0)
