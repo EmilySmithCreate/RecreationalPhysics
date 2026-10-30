@@ -134,28 +134,51 @@ is the gluons per run under R8 if the object were three thirds equally spaced.
 - P8 (Koide) survives the change of units unchanged, so any mass rule for the leptons has to reproduce 2/3 to six
   figures; a count rule does so only if the counts themselves do.
 
-## 4. What the 3D relations mean for the 2D phase (the paper 1 toy, four links a point)
+## 4. The 2D phase: the two degrees of freedom, twist and curl, as a discrete set of values
 
-Exact, ours, from the lattice:
+*Corrected 2026-10-30 at the owner's words: "Don't think about 2d as a flat sheet it is not. It is the 2 degrees of
+freedom twist and curl and their rules. They are not in space, or where they are doesn't matter ... not a plane: a set of
+discrete values ... handedness ... a twist that can be charged creating a new force. Curl can be free in space, travel
+like a photon." The first version of this section read "2D" as the paper 1 four-link sheet; that reading is withdrawn.
+What was exact about that sheet is kept at the end, marked as facts about that toy and nothing else.*
 
-    (2D-1)  curl range:  c_e = S_e − 2 ∈ {−2, −1, 0, +1};  one extra square is still one whole curl
-    (2D-2)  colour:  the (1,1) diagonal (length √2) joins like colours and is the only "box diagonal" the square sheet has;
-            the (1,0) step is a link; there is no black-to-white diagonal at all, so light's body-diagonal path does not exist in 2D:
-            in the 2D phase light would have to run on the links, at the link speed (one link a tick), which is what T47 measured for fronts
-    (2D-3)  the smallest closed loop of (±1,±1) diagonals has 4 steps: three cannot close (their x-sum is odd).
-            So the electron as a loop of three thirds does not exist in 2D; the smallest charged loop under R8 is 6 (three thirds, three gluon runs) or a 4-loop with one diagonal untwisted, which breaks R8.
-    (2D-4)  every closed loop of (1,1) diagonals is planar:  Wr = 0 for all;  the coil does not exist in 2D (P1 collapses to Lk = Tw)
-    (2D-5)  X in 2D (the tube) is c_e = +1 on every link along the curled direction: one whole curl on every link, so by R1 twist could sit anywhere on it;
-            the burp (T7, T9) takes that curl away everywhere except in the scraps (the four-point column, the knots of O107), which is where R1 then allows twist
+**The value set** (hers; exact where marked): the phase is the set of pairs (τ, c) a carrier may hold, with the rules
+that join them, and not a place.
 
-Ours, unverified, what follows: (a) the 2D phase holds no electron and no coil, so her particle rules are three-
-dimensional rules, and the burp from two to three open directions is where particles become possible, which fits
-her "everything but twist and curl emergent" and Update 19 (matter is the structured leftover). (b) The order of
-events her rules then imply: curl everywhere in X (one per link) → the burp removes it → curl survives only in knots
-→ R1 says twist, and so charge and matter, can sit only there → the amount of matter is set by the scrap count at the
-opening, which O107 found fixed by the seeds and not by the cooling. That is claim 5 written in the particle rules.
-(c) In 2D the dark twist (halves on face diagonals) has no carrier either, since (1,1) is the only diagonal and it is
-already the matter carrier; a 2D phase would have one kind of twist at most.
+| degree of freedom | carrier | allowed values | handedness | whose |
+|---|---|---|---|---|
+| curl c | a link (what is real is the total round a loop, C) | c_e ∈ {−4, …, 0, +1} on a link; C = ½ (free curl, the photon) or whole (a loop) | sign | hers; range exact |
+| twist τ | a diagonal, and only where there is curl | matter: {−⅓, 0, +⅓} on box diagonals; dark: {−½, 0, +½} on face diagonals | the sign, "what we call handedness" | hers |
+
+**The allowed combinations, from R1 to R10** (ours, exact from the rules; T = net twist, C = curl of the object, s = spin):
+
+| C | T | s | what it is | rule |
+|---|---|---|---|---|
+| 0 | 0 | 0 | flat space; no curl, so no twist | R1 |
+| 0 | ≠ 0 | — | **forbidden** | R1 |
+| ½ | 0 | 1 | the photon: free curl, travelling, with the quarter twist and anti-twist beside it that cancel | R5, §3 of the rules sheet |
+| ½ | ≠ 0 | — | not allowed as it stands: a photon carries no net twist | hers (photon rules) |
+| 1 | ±⅓, ±⅔, ±1, … (thirds) | ½ | a matter loop: charge T, spin ½ in the direction of its twist; free only when T ∈ ℤ | R2, R4, R5 |
+| 1 | 0 | ½ | **not seen**: an uncharged coil takes no spin (the neutrino has to live elsewhere) | R9 |
+| 1 | 0 | 0 | an uncharged coil, a long diagonal: curl with no twist, no spin, no charge (her gluon) | hers, Update 147 |
+| 1 + 1 | T₁ + T₂ | 0 | two loops spinning against each other, each with its twist (the pion) | hers |
+| n loops | Σ T | ½ or 0 | the proton ring and the hadrons: twist and anti-twist held apart by gluon runs | hers |
+
+Two consequences the table makes visible (ours, exact from the rules):
+
+- **Curl is the carrier and twist is the passenger.** Every row with twist has curl; the rows with curl and no twist are
+  the photon and the gluon, which is why those two are the force carriers in her picture and matter is not: "a twist that
+  can be charged creating a new force" is the C = 1, T ≠ 0 row, and "curl can be free in space, travel like a photon" is
+  the C = ½, T = 0 row.
+- **A tension inside the rules, flagged, hers to resolve.** R2 says a twist's sign is the colour of its diagonal's ends
+  (black +, white −), and E1 says every closed loop of box diagonals is one colour. Together they give any one loop
+  twists of one sign only. The proton ring (⅔, ⅔, −⅓ in one loop) contradicts that, and so does "a positive particle goes
+  over 1 and twists back". One of the two statements has to give: either the sign is not fixed by the colour (then what
+  fixes it is open), or the proton is not one ring. Kind: theory structure of her own rules; no measurement bears.
+
+**Facts about the paper 1 four-link sheet, kept only as facts about that toy** (exact): its curl range is c_e = S_e − 2
+∈ {−2, −1, 0, +1}; its (1,1) diagonal joins like colours and three of them cannot close; every closed loop of its
+diagonals is planar. None of this is about the two-degree-of-freedom phase.
 
 ## 5. Open after this document (hers to decide, in order)
 
