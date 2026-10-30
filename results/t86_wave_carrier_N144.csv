@@ -1,0 +1,11 @@
+source,label,kind,piece_size,object_size,points,mode,mode_piece,stay_half,stay_pi,stay_piece_half
+results\t7d_lam125_n144_adj\N144_rep3.npz,object,column,4,12,12 13 14 15,0.163316,0.055556,0.254575,0.138735,0.092563
+results\t7d_lam125_n144_adj\N144_rep3.npz,object,column,4,12,79 85 86 91,0.163316,0.055556,0.254575,0.138735,0.092563
+results\t7d_lam125_n144_adj\N144_rep3.npz,control,column,4,13,64 65 111 115,0.130911,0.045139,0.171265,0.072277,0.042918
+results\t7d_lam125_n144_adj\N144_rep3.npz,control,column,4,13,32 41 42 139,0.130911,0.045139,0.171265,0.072277,0.042918
+results\t7d_lam125_n144_adj\N144_rep3.npz,control,column,4,12,78 90 95 97,0.133964,0.048611,0.187244,0.268599,0.034141
+results\t7d_lam125_n144_adj\N144_rep5.npz,object,column,4,12,115 131 141 143,0.493289,0.255555,0.186182,0.220101,0.037507
+results\t7d_lam125_n144_adj\N144_rep5.npz,object,column,4,12,121 127 128 140,0.493289,0.255555,0.186182,0.220101,0.037507
+results\t7d_lam125_n144_adj\N144_rep5.npz,control,column,4,13,6 9 10 15,0.116071,0.035714,0.424291,0.159556,0.121169
+results\t7d_lam125_n144_adj\N144_rep5.npz,control,column,4,12,7 107 108 111,0.107143,0.035714,0.375747,0.151018,0.046277
+results\t7d_lam125_n144_adj\N144_rep5.npz,control,column,4,13,129 135 136 139,0.456297,0.206259,0.27101,0.236581,0.072453

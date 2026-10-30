@@ -1,0 +1,31 @@
+{
+  "task": "T87",
+  "N": 144,
+  "files": [
+    "results\\t7d_lam125_n144_adj\\N144_rep3.npz",
+    "results\\t7d_lam125_n144_adj\\N144_rep5.npz"
+  ],
+  "radii": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "verdict_radius": 3,
+  "graphity": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "networkx": "3.6.1",
+  "git_commit": "2c4008296d5f344b7f9faaeb69971404981a1985",
+  "git_dirty": true,
+  "git_untracked_count": 6,
+  "git_untracked": [
+    "results/t86_wave_carrier_N1024.csv",
+    "results/t86_wave_carrier_N1024.meta.json",
+    "results/t86_wave_carrier_N144.csv",
+    "results/t86_wave_carrier_N144.meta.json",
+    "results/t86_wave_carrier_N512.csv",
+    "results/t86_wave_carrier_N512.meta.json"
+  ]
+}
