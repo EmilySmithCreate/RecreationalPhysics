@@ -1,0 +1,67 @@
+"""The twisted-diagonal state against the owner's sheet: her four test particles, the checks the form promises, and net
+twist under pair creation (docs/design/twisted_diagonals_build_2026-10-30.md, sections 3 and 5)."""
+from fractions import Fraction
+
+import pytest
+
+from graphity.twist import BOX_STEPS, FACE_STEPS, HALF, THIRD, Loop, Particle, mirror, net_twist, step_kind, triangle
+
+L = 8
+
+
+def test_the_step_kinds_are_what_the_sheet_says():
+    assert len(BOX_STEPS) == 24 and len(FACE_STEPS) == 12
+    assert step_kind((1, 1, 2)) == "box" and step_kind((-2, 1, -1)) == "box"
+    assert step_kind((1, -1, 0)) == "face"
+    assert step_kind((1, 1, 4)) == "long" and step_kind((4, -1, 1)) == "long"
+    assert step_kind((1, 1, 1)) is None and step_kind((1, 1, 3)) is None and step_kind((2, 2, 0)) is None
+
+
+def test_a_triangle_of_three_box_diagonals_closes_and_is_one_colour():
+    e = triangle(L)
+    assert e.kind == "box" and len(e.points) == 3
+    assert len({sum(p) % 2 for p in e.points}) == 1
+
+
+def test_her_four_test_particles():
+    electron = Particle("electron", [triangle(L)])
+    assert (electron.charge, electron.spin, electron.mass_count) == (Fraction(-1), HALF, 3)
+    assert electron.check_whole_charge()
+    pion = Particle("pion+", [triangle(L, (0, 0, 0), (2 * THIRD, 0, 0), spin=HALF),
+                              triangle(L, (2, 2, 0), (THIRD, 0, 0), spin=-HALF)])
+    assert (pion.charge, pion.spin) == (Fraction(1), Fraction(0))
+    neutron = Particle("neutron", [triangle(L, (0, 0, 0), (-THIRD, 0, 0), spin=HALF),
+                                   triangle(L, (2, 2, 0), (-THIRD, 0, 0), spin=-HALF),
+                                   triangle(L, (4, 4, 0), (2 * THIRD, 0, 0), spin=HALF)])
+    assert (neutron.charge, neutron.spin) == (Fraction(0), HALF)
+    neutrino = Particle("neutrino", [triangle(L, (0, 0, 0), (THIRD, -THIRD, 0), spin=HALF)])
+    assert (neutrino.charge, neutrino.spin, neutrino.parts["tau_plus"]) == (Fraction(0), HALF, 2 * THIRD)
+    assert electron.parts == dict(L=1, n=3, tau_plus=Fraction(1), T=Fraction(-1), s=HALF, C=1)
+
+
+def test_the_checks_the_form_promises():
+    with pytest.raises(ValueError):                                   # not a diagonal
+        Loop(L, (0, 0, 0), [(1, 1, 1), (-1, -1, -1)], [0, 0])
+    with pytest.raises(ValueError):                                   # does not close
+        Loop(L, (0, 0, 0), [(1, 1, 2), (1, 1, 2)], [0, 0])
+    with pytest.raises(ValueError):                                   # twist not in thirds
+        triangle(L, twists=(HALF, 0, 0))
+    with pytest.raises(ValueError):                                   # twist on a long diagonal
+        Loop(L, (0, 0, 0), [(1, 1, 4), (-1, -1, -4)], [THIRD, 0])
+    with pytest.raises(ValueError):                                   # spin without twist present
+        triangle(L, twists=(0, 0, 0), spin=HALF)
+    with pytest.raises(ValueError):                                   # mixed kinds
+        Loop(L, (0, 0, 0), [(1, 1, 2), (1, -1, 0), (-2, 0, -2)], [0, 0, 0])
+    with pytest.raises(ValueError):                                   # a third of charge is not a particle on its own
+        Particle("quark", [triangle(L, twists=(THIRD, 0, 0), spin=HALF)]).check_whole_charge()
+
+
+def test_a_long_diagonal_counts_one_of_mass_and_a_loop_closes_on_the_torus():
+    gluon = Loop(L, (0, 0, 0), [(1, 1, 4), (-1, -1, 4)], [0, 0])     # closes through the wrap: (0, 0, 8) = 0 mod 8
+    assert gluon.kind == "long" and gluon.mass_count == 2 and gluon.spin == 0
+
+
+def test_pair_creation_conserves_net_twist():
+    e = triangle(L)
+    assert net_twist([Particle("e-", [e]), Particle("e+", [mirror(e)])]) == 0
+    assert net_twist([Particle("e-", [e])]) == -1

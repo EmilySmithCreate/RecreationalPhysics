@@ -95,7 +95,7 @@ twist as a conserved quantity; the second force of spin without twist.
 3. **The electron's size n**, and what pins it (the gluon fold on a tight loop).
 4. **The rho meson**: the pion with spins parallel, 775 MeV; the rules do not yet make a spin flip cost diagonals.
 5. **Where a photon's energy lives** (the spiral's pitch), and where the other half unit of spin goes.
-6. **Net twist defined and conserved** in the toy: the first exact piece of the diagonals build, no constant.
+6. **Net twist defined and conserved** in the toy: the first exact piece of the diagonals build, no constant. *Built 2026-10-30: `graphity.twist`, net twist = the sum of twist over a set of particles, conserved by construction under pair creation (`tests/test_twist.py`); the state is `twisted_diagonals_build_2026-10-30.md`.*
 
 ## Withdrawn, by name (do not build on these)
 
