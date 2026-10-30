@@ -1125,3 +1125,16 @@ or owed: the four-switch count at six links (3 (a), her agreement with Fable's h
 two-stories brief; the `layer_feed` guard fix (unblocked by O161); the gate null and the L = 24 size claim of item 4
 (wait on her prediction); the programme page's piece 3 sentence on the seam move, to be softened (a wrap effect), and
 piece 5 after T74, both at the next republish.
+
+## 30 October: resources for the three GeneralizedIntelligence plans  ☑ (built; nothing run as a test)
+
+**Added 2026-10-30** (the owner's request: resources from the three plans of the sister repository, PR #28 there:
+framework eval, fine-tune, math-only model, read against her statement of the loop and the two-degree-of-freedom base).
+`docs/design/gi/README.md` is the map. Built: her framework as twelve labelled axioms with a twelve-question bank
+(exact answers, textbook-habit foils); the curl-store world family (`scripts/gi_world_family.py`, tested), a
+two-state world with three readings whose hidden rule is the exact ladder and its walls, with foils that need a third
+variable and foils with no rule; the G1 grammar prior grounded in the record, with the finding that the toy's own λ
+values and its quarter-square per curled direction fall outside "whole, half, third"; the imports glossary (her words,
+the toy's variables, the textbook words, and nine reversions this project already made and corrected); eight conflict
+items with two controls. Three one-line questions for her are at the end of the README (her word "inequities";
+quarters in G1; whether the question bank is regenerated privately). Nothing is decided or registered.
