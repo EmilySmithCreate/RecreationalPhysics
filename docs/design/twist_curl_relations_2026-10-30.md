@@ -159,7 +159,8 @@ that join them, and not a place.
 | ½ | 0 | 1 | the photon: free curl, travelling, with the quarter twist and anti-twist beside it that cancel | R5, §3 of the rules sheet |
 | ½ | ≠ 0 | — | not allowed as it stands: a photon carries no net twist | hers (photon rules) |
 | 1 | ±⅓, ±⅔, ±1, … (thirds) | ½ | a matter loop: charge T, spin ½ in the direction of its twist; free only when T ∈ ℤ | R2, R4, R5 |
-| 1 | 0, with twists ±θ present that cancel | ½ | the neutrino (hers, 30 October): no net twist so no charge, spin because twist is present; **open: its mass**, since a loop of three or more diagonals at the electron's unit weighs 0.51 MeV or more against a bound below 10⁻⁶ MeV | R9 narrowed |
+| 1 | 0, with twists ±θ present that cancel | ½ | the neutrino (hers, 30 October): no net twist so no charge, spin because twist is present; **its mass, her idea of the same day:** a loop whose twists cancel weighs nothing ("a ½ spin cancels mass when there is no twist"), which at the loop level survives the neutron (below) and at the object level does not; to test | R9 narrowed; idea, hers |
+| 3 loops | −⅓ −⅓ +⅔ = 0 | ½ | **the neutron** (added at her request): three loops each with net twist, held by gluon runs, net charge 0, spin ½, 939.57 MeV; its loops do not cancel one by one, so under the loop-level reading it keeps its mass while the neutrino loses its own; *exact:* it differs from the proton (+⅔ +⅔ −⅓) by one loop's sign, and their mass difference is 2.531 electron masses, 7.59 units at n_e = 3, not whole (`sandbox/neutron_spin_mass_kill.py`) | hers; arithmetic ours |
 | 1 | 0, no twist at all | ½ | **not seen**: an uncharged coil takes no spin | R9 |
 | 1 | 0 | 0 | an uncharged coil, a long diagonal: curl with no twist, no spin, no charge (her gluon) | hers, Update 147 |
 | 1 + 1 | T₁ + T₂ | 0 | two loops spinning against each other, each with its twist (the pion) | hers |
@@ -186,7 +187,11 @@ diagonals is planar. None of this is about the two-degree-of-freedom phase.
 1. R6 in its one-unit form fails the integer test (§3). Keep mass as a count plus a second ledger, or replace it.
 2. The neutrino's mass: hers of 30 October places it as a loop with cancelling twists (spin from twist present), which answers
    the helon objection; the mass bound (below 10⁻⁶ MeV against 0.51 MeV for any loop at the electron's unit) is still a
-   measurement against it. Also hers: whether 'sign by colour' gives, since she accepts twists of both signs on one loop.
+   measurement against it. Her answer of the same day, to test: a loop whose twists cancel weighs nothing. At the loop level
+   the neutron does not kill it; at the object level it does (`sandbox/neutron_spin_mass_kill.py`). Still open under it: the
+   three neutrino masses differ by about 10⁻⁸ MeV, so the three kinds cannot differ by whole counts of any unit near the
+   electron's (measurement); and whether a loop with cancelling twists can be pulled apart or always stays whole.
+   Also hers: whether 'sign by colour' gives, since she accepts twists of both signs on one loop.
 3. Whether R10 is to be built as P6 (net twist conserved diagonal by diagonal under the toy's moves): the first exact
    piece of the diagonals build, no constant.
 4. Whether a framing (a ribbon with two edges) is given to her loops so that P1 applies, or the coil stays a shape.
