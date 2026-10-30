@@ -79,18 +79,19 @@ def coil(m, turn, bridge_out, bridge_back):
     return V
 
 
-ms = [int(a) for a in sys.argv[1:]] or [1, 2, 3, 4, 6, 8, 12, 16]
-for name, turn, out, back in (("tight (4 diagonals a turn, rise 4)", TURN, [(2, 1, 1), (2, 1, -1)], [(-2, -1, -1), (-2, -1, 1)]),
-                              ("wide (8 diagonals a turn, rise 8)", WIDE, [(2, 1, 1), (2, 1, -1), (2, 1, 1), (2, 1, -1)],
-                               [(-2, -1, -1), (-2, -1, 1), (-2, -1, -1), (-2, -1, 1)])):
-    print(name)
-    prev = None
-    for m in ms:
-        V = coil(m, turn, out, back)
-        gap = min_gap(V)
-        w = writhe(V)
-        n = len(V)
-        inc = "" if prev is None else "  (+%.3f per added turn)" % ((w - prev[0]) / (m - prev[1]))
-        print("  m = %2d turns, %3d diagonals: writhe %+.3f, per turn %.3f, per diagonal %.4f, min gap %.2f%s" % (
-            m, n, w, w / (2 * m), w / n, gap, inc), flush=True)
-        prev = (w, m)
+if __name__ == "__main__":   # guarded 30 October so that anchor_muon_tau.py can import coil and writhe
+    ms = [int(a) for a in sys.argv[1:]] or [1, 2, 3, 4, 6, 8, 12, 16]
+    for name, turn, out, back in (    ("tight (4 diagonals a turn, rise 4)", TURN, [(2, 1, 1), (2, 1, -1)], [(-2, -1, -1), (-2, -1, 1)]),
+                                  ("wide (8 diagonals a turn, rise 8)", WIDE, [(2, 1, 1), (2, 1, -1), (2, 1, 1), (2, 1, -1)],
+                                   [(-2, -1, -1), (-2, -1, 1), (-2, -1, -1), (-2, -1, 1)])):
+        print(name)
+        prev = None
+        for m in ms:
+            V = coil(m, turn, out, back)
+            gap = min_gap(V)
+            w = writhe(V)
+            n = len(V)
+            inc = "" if prev is None else "  (+%.3f per added turn)" % ((w - prev[0]) / (m - prev[1]))
+            print("  m = %2d turns, %3d diagonals: writhe %+.3f, per turn %.3f, per diagonal %.4f, min gap %.2f%s" % (
+                m, n, w, w / (2 * m), w / n, gap, inc), flush=True)
+            prev = (w, m)

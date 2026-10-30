@@ -112,6 +112,25 @@ absorb then emit leaves every sum unchanged. Not decided: which loop may absorb 
 one) and the energy of a level. Section 2's "curl ≥ 1" and
 section 3's "the photon stays unbuilt" are superseded by this section.
 
+## 8. The twist constant by kind; the second anchor (her decisions of 2026-10-30, 22:00 UTC)
+
+**DECISION (hers, "agreed, proceed"): the twist constant may differ by kind of diagonal**: ε on box and long diagonals,
+ε_face on face diagonals (`twist_energy(..., eps_face=None)`; one constant for both when it is not given). *Exact,
+predicted then enumerated (`sandbox/neutrino_by_kind.py`):* the two-loop neutrino under signed curl is cheapest with the
+twist cancelling across its loops (+⅓ on one, −⅓ on the other; or ±½ on face diagonals), box pair 2/3, face pair 3/2 at
+every length from three, no size selected; her dark (face) pair wins iff ε_face/ε_box < 4/9, the same threshold whether
+the twist cancels across the loops or within each. Signed curl costs nothing in the term. ε_face is pinned by nothing
+yet.
+
+**The second anchor** (her "proceed"; `sandbox/anchor_muon_tau.py`; exact; published ratios to verify). The electron costs
+ε/3. The flat pion as built costs 7ε/9, ratio 7/3 against 273 measured, with no constant free: **the flat pion cannot
+anchor** (killed). The muon as her coil of minimum size pins ε_w/ε = (206.768/3 − 5/9)/Wr_μ²: 118.4 (tight one-turn
+coil, Wr 0.760) or 79.9 (wide, 0.925). The tau as the next coil of the same family lands nowhere within 1 per cent (the
+ladder goes as Wr², steps of 25 to 100 per cent; nearest −21 and +5.4 per cent). One of 48 cross-family combinations
+lands at −0.45 per cent (wide one-turn muon, tight four-turn tau), predicted to occur by chance at that spacing and, under
+rule 13, not a result: neighbours −46 and +60 per cent, no rule selecting the coils. What would make it one: a stability
+rule that picks the coil (her candidates of 29 October), then the tau held out (rule 14).
+
 ## 6. What this build does not claim
 
 That any of these loops is stable, that the counts are masses in MeV, or that the lattice is space. It is the first

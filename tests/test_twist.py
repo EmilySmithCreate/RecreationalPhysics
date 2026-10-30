@@ -134,3 +134,20 @@ def test_an_excited_electron_holds_the_photon_and_gives_it_back():
     with pytest.raises(ValueError):                                                # an excitation holds a photon's values only
         triangle(L, held=[(1, 1)]) if False else Loop(L, (0, 0, 0), list(triangle(L).steps), [-THIRD] * 3, spin=HALF, held=[(1, 1)])
     assert mirror(ex.loops[0]).held == [(-HALF, -1)]
+
+
+def test_the_twist_constant_may_differ_by_kind_and_the_dark_pair_wins_below_four_ninths():
+    from fractions import Fraction
+    from graphity.twist import loop_kind, particle_energy, twist_energy
+    face = Loop(L, (0, 0, 0), [(1, 1, 0), (-1, 0, 1), (0, -1, -1)], [Fraction(1, 2), 0, 0], curl=1, spin=HALF)   # three faces of one cube
+    box = triangle(L, twists=(THIRD, 0, 0), spin=HALF)
+    assert (loop_kind(face), loop_kind(box)) == ("face", "box")
+    assert twist_energy(face, eps=1.0, eps_w=0.0) == 0.75 and twist_energy(box, eps=1.0, eps_w=0.0) == pytest.approx(1 / 3)
+    assert twist_energy(face, eps=1.0, eps_w=0.0, eps_face=0.1) == pytest.approx(0.075)
+    assert twist_energy(box, eps=1.0, eps_w=0.0, eps_face=0.1) == pytest.approx(1 / 3)            # the box constant is untouched
+    dark = Particle("dark pair", [face, mirror(face)])
+    light = Particle("box pair", [box, mirror(box)])
+    assert (dark.charge, dark.parts["C"], light.charge, light.parts["C"]) == (0, 0, 0, 0)
+    for ratio, wins in ((0.4, True), (4 / 9, False), (0.5, False)):
+        d = particle_energy(dark, eps=1.0, eps_w=0.0, eps_face=ratio)
+        assert (d < particle_energy(light, eps=1.0, eps_w=0.0) - 1e-12) is wins

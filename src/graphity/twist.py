@@ -351,9 +351,19 @@ def writhe(loop):
     return float(total / (4 * np.pi))
 
 
-def twist_energy(loop, eps=1.0, eps_w=1.0):
+def loop_kind(loop):
+    """"face" if every step is a face diagonal, else "box" (box and long diagonals share the box constant)."""
+    return "face" if all(step_kind(s) == "face" for s in loop.steps) else "box"
+
+
+def twist_energy(loop, eps=1.0, eps_w=1.0, eps_face=None):
     """E4 plus writhe: eps [sum tau^2 + sum (tau_next - tau)^2] + eps_w Wr^2 (the build document, section 4). A winding
-    loop has no writhe and pays eps_w * 0."""
+    loop has no writhe and pays eps_w * 0. DECISION (hers, 30 October, "agreed, proceed"): the twist constant may differ
+    by kind of diagonal: eps on box (and long) diagonals, eps_face on face diagonals; eps_face=None means one constant for
+    both. Exact (sandbox/neutrino_by_kind.py): her dark two-loop neutrino on face diagonals is cheaper than the box one
+    iff eps_face < 4/9 eps, whichever way its twist cancels."""
+    if eps_face is not None and loop_kind(loop) == "face":
+        eps = eps_face
     taus = loop.twists
     n = len(taus)
     elastic = float(sum(t * t for t in taus))
@@ -364,5 +374,5 @@ def twist_energy(loop, eps=1.0, eps_w=1.0):
     return eps * (elastic + mismatch) + eps_w * (0.0 if wr is None else wr * wr)
 
 
-def particle_energy(particle, eps=1.0, eps_w=1.0):
-    return sum(twist_energy(lp, eps, eps_w) for lp in particle.loops)
+def particle_energy(particle, eps=1.0, eps_w=1.0, eps_face=None):
+    return sum(twist_energy(lp, eps, eps_w, eps_face) for lp in particle.loops)
