@@ -7,6 +7,8 @@ is not read (general knowledge, to verify); both are owed before any of this is 
 
 ## The member adopted
 
+*Status line, 2026-10-30:* G1 adopted by the owner the same day; the readings for G2, G5 and G6 ordered by her ("Read.", "Verify.", "complete the listed readings") and recorded below under "Readings done".
+
 For the three charged leptons (hers, adopted; the form is published):
 
     √m_g = A (1 + √2 cos φ_g),   φ_g = δ + g/3 turn,   g = 0 (tau), 1 (electron), 2 (muon)
@@ -20,7 +22,7 @@ angles a third of a turn apart. In her parts: a constant part and a signed part 
 
 | # | gap | what the form gives | what the system still lacks | test or kill | kind |
 |---|---|---|---|---|---|
-| G1 | the angle from the loop | three angles a third of a turn apart | a rule reading φ from the loop's parts; the leptons share one twist content (−⅓, −⅓, −⅓), so φ cannot come from the twists; it has to come from what differs, the runs k of R8 | *exact, no constant (ours):* φ = δ + (k + 1)/3 turn mod 1 with k = 0, 1, 2 for electron, muon, tau reproduces the ordering the fit gives (tau, electron, muon round the circle); adopt or replace, hers | theory structure |
+| G1 | the angle from the loop | three angles a third of a turn apart | a rule reading φ from the loop's parts; the leptons share one twist content (−⅓, −⅓, −⅓), so φ cannot come from the twists; it has to come from what differs, the runs k of R8 | *exact, no constant (ours):* φ = δ + (k + 1)/3 turn mod 1 with k = 0, 1, 2 for electron, muon, tau reproduces the ordering the fit gives (tau, electron, muon round the circle). **ADOPTED by the owner, 2026-10-30 ("Adopt.")**; what it predicts beyond the three leptons is nothing yet, since k is read from the lepton's name and not from a wiring (G9) | theory structure |
 | G2 | the phase δ | 0.222222 rad = 2/9 to six digits (Brannen's observation, to verify) | why 2/9 rad; in turns it is 1/(9π), not a fraction of a turn, so it is not "thirds of thirds" of a turn | reading owed: published attempts to derive δ; then whether any count in her parts gives 2/9 rad | theory structure |
 | G3 | the scale A | A² = 313.86 MeV | which part sets A; *noted, rule 13 applied, not a result:* 3A² = 941.6 MeV is 0.35 % above the proton and 0.21 % above the neutron, with measured errors a million times smaller, so it is a near miss and a known one (the "constituent quark mass" of about m_p/3; general knowledge, to verify) | a derivation of A from the nucleon that lands inside the errors, or none; count the other combinations that come as close (rule 13) | measurement |
 | G4 | several loops | one loop at a time | how amplitudes combine for the nucleons and mesons; three signed lepton amplitudes added never give the nucleons (nearest 950.9 MeV, 1.3 % high) | E-B with one constant, or each quark loop with its own δ; test on proton, neutron, pion together (three masses, so at most two constants) | theory structure |
