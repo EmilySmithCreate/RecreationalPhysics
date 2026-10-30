@@ -13,9 +13,14 @@ that it repeats every four links. Its readers: charge 0, net twist 0, curl +1/2 
 A Loop: closed on the torus, one step kind, twist on each diagonal (thirds on box, halves on face, zero on long), an
 non-zero integer curl (signed from 30 October, evening: the anti-particle's loop has the opposite curl, so that a
 particle's curl can net zero, her neutrino), and a spin in {-1/2, 0, +1/2} that may be non-zero only if some twist is
-present (her rule of 30 October: spin needs twist present, not net twist). A Particle is a named set of loops. Readers: charge = sum of twist;
-spin = |sum of loop spins|; mass_count = number of looped diagonals (a long diagonal counts one); parts = (L, n, tau+, T,
-s, C); net_twist over a set of particles, the quantity pair creation conserves.
+present (her rule of 30 October: spin needs twist present, not net twist). A loop may also hold an excitation (her
+decision of 30 October, evening): the photons it has absorbed, each holding its half curl and its spin 1 on the loop until
+the loop re-emits a photon; the absorbed spin is carried as orbital motion (a part of its own, `orb`), not as the loop's
+spin, following the published fact that an electron's spin stays 1/2 when it moves up a level. A Particle is a named set
+of loops. Readers: charge = sum of twist; spin = |sum of loop spins|; mass_count = number of looped diagonals (a long
+diagonal counts one); parts = (L, n, tau+, T, s, C, orb), with C including the held half curls and orb the held spins;
+net_twist over a set of particles, the quantity pair creation conserves; ledger over particles and photons sums T, C, s,
+orb, J = s + orb and n.
 
 Twist values are kept as Fractions so that thirds and halves are exact.
 """
@@ -67,6 +72,7 @@ class Loop:
     twists: list
     curl: int = 1
     spin: Fraction = Fraction(0)
+    held: list = field(default_factory=list)       # the excitation: (curl, spin) of each photon absorbed, in order
     kind: str = field(init=False)
     points: list = field(init=False)
 
@@ -97,6 +103,10 @@ class Loop:
             raise ValueError("a loop's spin is -1/2, 0 or +1/2")
         if self.spin != 0 and all(t == 0 for t in self.twists):
             raise ValueError("spin needs twist present (her rule of 30 October)")
+        self.held = [(Fraction(c), Fraction(s)) for c, s in self.held]
+        for c, s in self.held:
+            if c not in (HALF, -HALF) or s not in (Fraction(1), Fraction(-1)):
+                raise ValueError("an excitation holds a photon's half curl and spin 1; got %s" % ((c, s),))
         p = np.array(self.start, dtype=int)
         pts = [tuple(int(x) % self.L for x in p)]
         for s in self.steps[:-1]:
@@ -119,6 +129,19 @@ class Loop:
     @property
     def mass_count(self):
         return len(self.steps)
+
+    @property
+    def held_curl(self):
+        return sum((c for c, s in self.held), Fraction(0))
+
+    @property
+    def orbital(self):
+        """The spin the loop has absorbed, carried as orbital motion (her request of 30 October: represent it as its own kind)."""
+        return sum((s for c, s in self.held), Fraction(0))
+
+    @property
+    def total_curl(self):
+        return self.curl + self.held_curl
 
 
 @dataclass
@@ -143,7 +166,8 @@ class Particle:
         return dict(L=len(self.loops), n=self.mass_count,
                     tau_plus=sum((lp.twist_present for lp in self.loops), Fraction(0)),
                     T=self.charge, s=sum((lp.spin for lp in self.loops), Fraction(0)),
-                    C=sum(lp.curl for lp in self.loops))
+                    C=sum((lp.total_curl for lp in self.loops), Fraction(0)),
+                    orb=sum((lp.orbital for lp in self.loops), Fraction(0)))
 
     def check_whole_charge(self):
         if self.charge.denominator != 1:
@@ -167,7 +191,8 @@ def triangle(L, start=(0, 0, 0), twists=(-THIRD, -THIRD, -THIRD), spin=HALF, cur
 def mirror(loop):
     """The same loop with every twist, its curl and its spin reversed: the anti-particle's loop (pairs: +theta with -theta;
     her ledger of 30 October, evening: the positron is -1 twist, -1 loop)."""
-    return Loop(loop.L, loop.start, list(loop.steps), [-t for t in loop.twists], curl=-loop.curl, spin=-loop.spin)
+    return Loop(loop.L, loop.start, list(loop.steps), [-t for t in loop.twists], curl=-loop.curl, spin=-loop.spin,
+                held=[(-c, -s) for c, s in loop.held])
 
 
 # ---------------------------------------------------------------- the photon, first form (her decision of 30 October, evening)
@@ -235,7 +260,7 @@ class Photon:
 
     @property
     def parts(self):
-        return dict(L=0, n=0, tau_plus=Fraction(0), T=Fraction(0), s=self.spin, C=self.curl)
+        return dict(L=0, n=0, tau_plus=Fraction(0), T=Fraction(0), s=self.spin, C=self.curl, orb=Fraction(0))
 
     def advance(self, sweeps=1):
         """One link per sweep, carried by its spin."""
@@ -254,14 +279,33 @@ def annihilate(particle, antiparticle, direction=(1, 1, 1), length=4):
             Photon(particle.loops[0].L, start, back, length, -HALF, Fraction(-1)))
 
 
+def absorb(loop, photon):
+    """The meeting with matter (her decision of 30 October, evening: "the electron on a higher energy level"): the loop takes
+    the photon's half curl and its spin 1 and holds them as an excitation until it re-emits. The loop's own spin stays as
+    it was; the absorbed spin is orbital. Which loop takes it, and whether it may (a free electron cannot, in published
+    physics), is not decided here: this is the bookkeeping of one absorption."""
+    return Loop(loop.L, loop.start, list(loop.steps), list(loop.twists), curl=loop.curl, spin=loop.spin,
+                held=list(loop.held) + [(photon.curl, photon.spin)])
+
+
+def emit(loop, direction=(1, 1, 1), length=4):
+    """The loop re-emits its most recently held photon along `direction`. Returns (loop, photon)."""
+    if not loop.held:
+        raise ValueError("nothing held: the loop is not excited")
+    c, s = loop.held[-1]
+    lp = Loop(loop.L, loop.start, list(loop.steps), list(loop.twists), curl=loop.curl, spin=loop.spin, held=list(loop.held[:-1]))
+    return lp, Photon(loop.L, loop.start, direction, length, c, s)
+
+
 def ledger(objects):
-    """The sums her ledger balances: net twist, curl and signed spin, over particles and photons alike, and the mass count."""
-    tw = cu = sp = Fraction(0)
+    """The sums her ledger balances, over particles and photons alike: net twist T, curl C (held half curls included),
+    the loops' own spin s, orbital orb (held photon spins), J = s + orb, and the mass count n."""
+    tw = cu = sp = ob = Fraction(0)
     n = 0
     for o in objects:
         pr = o.parts
-        tw, cu, sp, n = tw + pr["T"], cu + pr["C"], sp + pr["s"], n + pr["n"]
-    return dict(T=tw, C=cu, s=sp, n=n)
+        tw, cu, sp, ob, n = tw + pr["T"], cu + pr["C"], sp + pr["s"], ob + pr["orb"], n + pr["n"]
+    return dict(T=tw, C=cu, s=sp, orb=ob, J=sp + ob, n=n)
 
 
 # ---------------------------------------------------------------- the coil's writhe, and the energy of twist (30 October, her decisions)

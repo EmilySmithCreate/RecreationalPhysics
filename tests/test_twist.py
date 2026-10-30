@@ -36,7 +36,7 @@ def test_her_four_test_particles():
     assert (neutron.charge, neutron.spin) == (Fraction(0), HALF)
     neutrino = Particle("neutrino", [triangle(L, (0, 0, 0), (THIRD, -THIRD, 0), spin=HALF)])
     assert (neutrino.charge, neutrino.spin, neutrino.parts["tau_plus"]) == (Fraction(0), HALF, 2 * THIRD)
-    assert electron.parts == dict(L=1, n=3, tau_plus=Fraction(1), T=Fraction(-1), s=HALF, C=1)
+    assert electron.parts == dict(L=1, n=3, tau_plus=Fraction(1), T=Fraction(-1), s=HALF, C=1, orb=0)
 
 
 def test_the_checks_the_form_promises():
@@ -114,3 +114,23 @@ def test_signed_curl_lets_a_particle_net_zero_curl():
     assert (nu.charge, nu.spin, nu.parts["C"]) == (0, HALF, 0)
     with pytest.raises(ValueError):
         triangle(L, curl=0)
+
+
+def test_an_excited_electron_holds_the_photon_and_gives_it_back():
+    from graphity.twist import Photon, absorb, emit, ledger
+    e = Particle("e-", [triangle(L)])
+    photon = Photon(L, (0, 0, 0), (1, 1, 1))
+    before = ledger([e, photon])
+    ex = Particle("e-*", [absorb(e.loops[0], photon)])
+    assert (ex.spin, ex.parts["orb"], ex.parts["C"], ex.charge, ex.mass_count) == (HALF, 1, Fraction(3, 2), -1, 3)
+    during = ledger([ex])
+    keep = lambda d: {k: d[k] for k in ("T", "C", "J", "n")}                      # the photon's spin became orbital: s and orb trade, J holds
+    assert keep(during) == keep(before) and (before["s"], before["orb"], during["s"], during["orb"]) == (Fraction(3, 2), 0, HALF, 1)
+    lp, out = emit(ex.loops[0], direction=(-1, -1, 1))
+    after = ledger([Particle("e-", [lp]), out])
+    assert after == before and lp.held == [] and (out.curl, out.spin) == (HALF, 1)
+    with pytest.raises(ValueError):
+        emit(lp)
+    with pytest.raises(ValueError):                                                # an excitation holds a photon's values only
+        triangle(L, held=[(1, 1)]) if False else Loop(L, (0, 0, 0), list(triangle(L).steps), [-THIRD] * 3, spin=HALF, held=[(1, 1)])
+    assert mirror(ex.loops[0]).held == [(-HALF, -1)]

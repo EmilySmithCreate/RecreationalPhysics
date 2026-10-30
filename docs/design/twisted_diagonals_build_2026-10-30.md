@@ -35,7 +35,9 @@ A **particle** is a named set of loops. Its readers (exact, from the sheet's sec
 - **spin** = |Σ s_ℓ| over its loops (spins can cancel while twists add: the pion);
 - **mass as a count** = the number of looped diagonals, a long diagonal counting one (Update 148);
 - **the parts, each its own quantity** (30 October, §5 of the relations document): L = loops, n = diagonals, τ⁺ = Σ|τ_i|,
-  T = Σ τ_i, s = Σ s_ℓ, C = Σ curl. No rule combines them into MeV here; MeV is the measured total only.
+  T = Σ τ_i, s = Σ s_ℓ, C = Σ curl (held half curls included), **orb** = the spin a loop has absorbed from photons, carried
+  as orbital motion (her decision, 2026-10-30, 20:06 UTC: "we need to represent this in the list of energy types"). No rule
+  combines them into MeV here; MeV is the measured total only.
 - **net twist** of a set of particles = Σ T, the quantity pair creation conserves (the sheet, "Pairs and annihilation";
   the sheet's open item 6, defined here for the first time).
 
@@ -103,7 +105,11 @@ signed non-zero integer (her B), and `mirror` reverses curl as well as twist and
 twist, curl and spin) only with B's spin −½ and the photons' spins opposite, which is how it is built. **The count of diagonals** (her decision, 19:54 UTC): a photon's two-colour diagonals are not matter's and
 count no mass, so the count reads 6 before and 0 after; the 4 is the photon's period, not a size. **Her hypothesis for the
 meeting, not built:** the loop that takes the photon's spin and curl is an electron, which goes to a higher energy level; the
-excited state's values (a half curl and a spin 1 held on a loop) are not in the sheet's table and are to be written first. Section 2's "curl ≥ 1" and
+excited state's values (a half curl and a spin 1 held on a loop) are not in the sheet's table and are to be written first. **Written, 20:06 UTC (her "yes write it"):** a loop holds an excitation, the list of photons it has absorbed, each
+as (half curl, spin 1), until it re-emits one (`Loop.held`, `absorb`, `emit`); the loop's own spin stays as it was and the
+absorbed spin is `orb`; `total_curl` adds the held half curls; the ledger sums T, C, s, orb, J = s + orb and n, and
+absorb then emit leaves every sum unchanged. Not decided: which loop may absorb (published: a bound electron, not a free
+one) and the energy of a level. Section 2's "curl ≥ 1" and
 section 3's "the photon stays unbuilt" are superseded by this section.
 
 ## 6. What this build does not claim
