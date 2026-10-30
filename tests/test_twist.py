@@ -95,7 +95,7 @@ def test_the_photon_as_she_stated_it_and_her_annihilation_ledger():
     with pytest.raises(ValueError):                                   # spin 1 only
         Photon(L, (0, 0, 0), (1, 1, 1), spin=HALF)
     c = Photon(L, (0, 0, 0), (1, 1, 1))
-    assert (c.charge, c.net_twist, c.twist_present, c.curl, c.spin, c.mass_count) == (0, 0, 0, HALF, 1, 4)
+    assert (c.charge, c.net_twist, c.twist_present, c.curl, c.spin, c.mass_count) == (0, 0, 0, HALF, 1, 0)   # massless: its diagonals are not matter's
     assert [c.advance(k).angle_degrees for k in range(6)] == [0, 90, 180, 270, 0, 90]      # repeats every four links
     assert [c.advance(k).colour for k in range(4)] == ["black", "white", "black", "white"]  # the two-colour diagonal
     assert c.advance(3).head == (3, 3, 3)
@@ -105,7 +105,7 @@ def test_the_photon_as_she_stated_it_and_her_annihilation_ledger():
     before = ledger([electron, positron])
     after = ledger(annihilate(electron, positron))
     assert before["T"] == after["T"] == 0 and before["C"] == after["C"] == 0 and before["s"] == after["s"] == 0
-    assert (before["n"], after["n"]) == (6, 8)                                               # the count is not balanced by the ledger as written
+    assert (before["n"], after["n"]) == (6, 0)                                               # the mass count becomes the spin and curl the photons carry
 
 
 def test_signed_curl_lets_a_particle_net_zero_curl():

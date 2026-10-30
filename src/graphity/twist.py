@@ -215,7 +215,9 @@ class Photon:
 
     @property
     def mass_count(self):
-        return self.length
+        """Zero: a photon's diagonals are two-colour, not matter's one-colour box diagonals, so they are not counted as mass
+        (her decision, 30 October, evening); `length` is the path it is drawn on and 4 is its period."""
+        return 0
 
     @property
     def head(self):
@@ -233,7 +235,7 @@ class Photon:
 
     @property
     def parts(self):
-        return dict(L=0, n=self.length, tau_plus=Fraction(0), T=Fraction(0), s=self.spin, C=self.curl)
+        return dict(L=0, n=0, tau_plus=Fraction(0), T=Fraction(0), s=self.spin, C=self.curl)
 
     def advance(self, sweeps=1):
         """One link per sweep, carried by its spin."""

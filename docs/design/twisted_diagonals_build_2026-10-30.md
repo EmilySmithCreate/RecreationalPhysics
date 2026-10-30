@@ -100,8 +100,10 @@ alternating link by link. The meeting with matter is not built.
 spin 1, no twist) and D (−½ loop, the opposite direction, spin 1, no twist). Built as `annihilate`, with `ledger` summing
 net twist, curl and signed spin over particles and photons. **Two consequences, built and confirmed by her (19:33 UTC):** curl is now a
 signed non-zero integer (her B), and `mirror` reverses curl as well as twist and spin; and the ledger balances (0 = 0 in
-twist, curl and spin) only with B's spin −½ and the photons' spins opposite, which is how it is built. **Not balanced by
-her ledger:** the count of diagonals (6 before, 8 after at length four); left open, not fixed. Section 2's "curl ≥ 1" and
+twist, curl and spin) only with B's spin −½ and the photons' spins opposite, which is how it is built. **The count of diagonals** (her decision, 19:54 UTC): a photon's two-colour diagonals are not matter's and
+count no mass, so the count reads 6 before and 0 after; the 4 is the photon's period, not a size. **Her hypothesis for the
+meeting, not built:** the loop that takes the photon's spin and curl is an electron, which goes to a higher energy level; the
+excited state's values (a half curl and a spin 1 held on a loop) are not in the sheet's table and are to be written first. Section 2's "curl ≥ 1" and
 section 3's "the photon stays unbuilt" are superseded by this section.
 
 ## 6. What this build does not claim
