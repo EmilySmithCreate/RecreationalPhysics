@@ -12,7 +12,7 @@ The owner's one-paragraph statement of 30 October, in her words: spacetime is on
 the pattern is simulated by an underlying two-degree-of-freedom state ("2d": not a plane, not time); the set of
 inequities is self-referential, forming looping patterns like a video of a screen showing the video; observers can
 evolve within the 3D spacetime simulated by the 2D state. *(I read "inequities" as inequalities: the constraints the
-base must satisfy, such as the zero-total rule and "store at least the wall". ⚑ To confirm.)*
+base must satisfy, such as the zero-total rule and "store at least the wall". Confirmed by her, 30 October: inequalities.)*
 
 Where each sentence already sits in the record:
 
@@ -63,7 +63,7 @@ The three plans, read against that:
 
 ## 4. What is asked of the owner (one line each)
 
-1. ⚑ "Inequities" read as inequalities (constraints): right, or did you mean something else?
-2. ⚑ In the G1 grammar, are quarters allowed (the toy's λ = 5/4 and its c/4 squares per point need them), or is λ an
-   input number rather than a grammar constant?
+1. ~~"Inequities" read as inequalities (constraints)?~~ *Answered 30 October: yes, inequalities.*
+2. ~~Quarters in G1, or λ as an input?~~ *Answered 30 October: quarters admitted; λ is a continuous input, separate
+   from the particle work, and she thinks it varies with slab size and swap count (`grammar_g1.md`, her answer).*
 3. ⚑ Should the question bank be regenerated with a private seed and kept out of git, as the plan's privacy asks?

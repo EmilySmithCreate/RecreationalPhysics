@@ -20,7 +20,7 @@ a list of facts and not a taste; and one finding that the plan should know befor
 Every registered run uses a curling cost λ from {1.02, 1.10, 1.15, 1.20, 1.25, 1.30, 1.40, 1.50}. Of these only 1.5 is
 a half; 1.25 is a quarter; the rest are tenths and twentieths. And the ladder's square count per point rises by
 **a quarter** per curled direction (exact: S/N = D(D − 1)/2 + c/4). So a G1 restricted to whole numbers, halves and
-thirds cannot write the toy's own rule in its own units. Three ways out, for the owner to choose (⚑):
+thirds cannot write the toy's own rule in its own units. Three ways out were put to the owner; her answer follows them:
 
 1. **λ is an input, not a constant**: the grammar reads λ as a stated number, as the open world reads N and L, and
    the constants the model may write stay whole, half or third. Then the rule needs only 4 and 1/4.
@@ -28,6 +28,25 @@ thirds cannot write the toy's own rule in its own units. Three ways out, for the
    preference was "small denominators", and that should be said.
 3. **Rescale the units**: count squares per four points and energy per quarter-unit, so that every constant in the
    rule is a whole number. That is a choice of unit, which the plan's G0-against-G1 comparison must then declare.
+
+**The owner's answer, 30 October (13:40 ET by the clock), her words put in order.** Quarters are admitted "as an
+interesting subject". λ is separate from the particle work: she thinks it is continuous, and that it varies with the
+size of the curled slabs around the rod and with the amount of swaps that happen between the twists while they are in
+the liquid-globe shell form and the burp. In the particle work she has not seen a quarter come out, other than the 12
+diagonals of the 1 × 1 × 2 box, the 4 sets of 3, and the squares per point on a plane in 3D space. And the 2D reality
+is not to be written or visualized as a plane.
+
+*What that settles for G1 (ours).* Option 1 is adopted in effect: λ is a continuous **input** the grammar reads, never a
+constant the model writes, so the toy's tenths and twentieths are no longer a grammar problem. Quarters are allowed
+among the constants (G1 becomes whole numbers, halves, thirds, quarters, sign), and the comparison should say that
+the preference is "small denominators up to 4". Her λ hypothesis (continuous, set by slab size and swap count) is a
+new idea of hers, recorded here and not decided: in every toy run λ is a fixed knob; a λ that depends on the state
+would be a new ingredient under S1 and needs its form written before any run. Where the record already has a
+λ-against-size statement: with interchangeable points the counting drive to curl beats the curling cost only within
+about 2 % of λ = 1 at 512 points, and the threshold moves with the number of cells (O55, O72), which is a drive
+depending on size, not λ itself. "Squares per point on a plane" means the count at a point within one coordinate
+plane of the 3D toy (four right-angle pairs per plane, Update 107, exact); it is a statement about the emergent space,
+and by her instruction the base is never drawn as a plane.
 
 A fourth possibility: the quarters are an artifact of the toy's curl length 4 (a direction curled to length 4 adds
 one square per four points). In the base, where no length exists, the preference may hold. That is hers to say, and
