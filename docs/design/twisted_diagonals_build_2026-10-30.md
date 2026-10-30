@@ -66,7 +66,7 @@ twist (whole charge free, fractions costing) is her "a full twist is a requireme
 thirds, and is not what was decisive against; the per-diagonal form was. Proposed for her, not adopted: that term
 beside E4. **The question the writhe term raises (ours):** the conserved quantity of a closed ribbon is Lk = Tw + Wr,
 so twist can turn into coil; if charge is the net twist it is not conserved under coiling; the published reading would
-make charge the linking number, twist held plus coil. Hers to decide. Previously here: "None is added." (the sheet's
+make charge the linking number, twist held plus coil. Hers to decide. *Checked 2026-10-30 on her question (exact; `sandbox/linking_number_check.py`): charge as Lk is not consistent with the state as built, since a closed ribbon's Lk is a whole number, so a loop alone could not carry a third, and the writhe of a closed pentagon of box diagonals is a generic real, so the twist held could not stay in thirds; it would give her the whole-twist requirement for free on planar loops. Charge as net twist, with writhe a shape cost outside charge, is consistent; the theorem's conservation law is then not used, and that note is carried. Hers.* Previously here: "None is added." (the sheet's
 section 4 stood until this afternoon). The sheet's section 4 stands: the state carries curl as a count per loop (one curl of energy each) and no
 twist term (the κ form was ours and is not adopted). So the first thing the state can do is score the sheet's own
 particles exactly, and conserve net twist; what it cannot yet do is move.
