@@ -9507,3 +9507,65 @@ sample the halo differently, and the difference grows with b as the path gains r
 path, is a proposed amendment for fresh data and does not rescore this test.
 
 **Reading of T85 at the held-out size L = 32, 2026-10-28, 23:48 UTC (read by Claude Fable 5.1 without the owner; `results/t85_gamma_L32_s20268501.csv`).** α*(b) = −0.254, −0.354, −0.451, −0.570, −0.804, −1.007 at b = 2 to 12 and −0.147 at b = 14: every value inside Amendment 1's range (−0.28 ± 0.05, −0.40 ± 0.06, −0.52 ± 0.08, −0.70 ± 0.15, −0.90 ± 0.30, −1.1 ± 0.5) and the turn-back at b = 14 as written: **the held-out prediction held in every clause.** D > 0 at every b through 14. **Verdict, by the registered words: DRIFTS ACROSS b** (the spread over b is a factor of four at every size), **and DRIFTS ACROSS KNOTS** (stage 1, knot 2). **The owner's ONE α fails by the letter.** Ours held in both clauses. **Rule 11, the cheapest discriminating calculation, done the same hour** (`sandbox/t85_drift_cause.py`): D recomputed along a fixed zigzag path (the straight line's analogue on body diagonals) instead of the fastest path. For the isotropic knot (8, 8, 8) at L = 24, α*_straight = −1.38, −1.50, −1.58, −1.57 at b = 2 to 8: flat within ±8 % of its mean until the torus at b = 10, where the registered α* drifts by a factor of 2.8 over the same b. So for this knot the drift across b is the test's own definition, D on the fastest path (which skirts the halo: D_straight is five times D_fastest at b = 2) against P on the straight line, and with both on one path there is one α across b. For the lopsided knot (12, 8, 12) at L = 16 the straight form still drifts (−2.8, −3.8, −5.3 at b = 2, 4, 6, the last within the torus's reach), and its values sit far from the isotropic knot's: a halo whose families are unequal is sampled differently by light and by the copy's charges, and the drift across knots is in the physics of this family as it stands. **What this means, said plainly:** the test as registered is scored and stands; the consistent form (both quantities along one path) is a proposed amendment for fresh data; under it, her ONE α holds across b for an isotropic knot (a look, not a verdict) and fails across knots unless the knots' halos are alike, which for her particles (mass counting looped diagonals with one curl each) would hold by construction and for wiring knots does not. The α pinned for the isotropic knot in the consistent form is about −1.5 in the toy's units at α_used = −0.5 (a number of the sandbox, not crowned).
+
+## T86. Which of the toy's objects carries a wave under the adopted rule? (written 2026-10-30, 13:28 UTC, on the owner's "proceed with runs that test our current best guess", before any registered computation; her predictions inferred and marked so)
+
+**Why.** The owner adopted the wave rule this day (VISION addendum of 2026-10-30; `docs/design/amplitude_rule_brief.md`,
+section 3): a complex amplitude on every point, evolving by the Laplacian of the whole arrangement, probability its
+square. The current best guess (hers, as the record stands) is that a particle is a small closed object in the sheet that
+carries a wave. The sandbox look of this afternoon (`sandbox/wave_rule_sheet_look.py`) found the bare loop of four in its
+sheet does not: the crossing probability peaks at 0.14 against 1 on the isolated loop. The strict-lane question is which
+object, if any, does, over every kind the toy makes by itself: the curled column (the loop of four, with its collar), the
+quarter of the knot of two kinds, and the double column (T55, O107).
+
+**Protocol (exact, no chain).** `scripts/t86_wave_carrier.py N <saved graphs>`. The saved final graphs of T7 at N = 144
+(`results/t7d_lam125_n144_adj/*.npz`) and of T51 at N = 512 (`t51_l128_10k_00_adj`), 1024 (`t51_l256_*_adj`, 80 graphs)
+and 2048 (`t51_l512_10k_*_adj`, 10 graphs). For every connected piece of points off the sheet, the object is the piece
+plus its collar; its kind is the piece's size (2, 4, 8, other). Two measures from one eigendecomposition per graph: MODE,
+the largest share of any eigenspace's weight on the object (1 for a mode living on it, |object|/N for one spread evenly);
+STAY, the probability still on the object at t = π/2 and at t = π after starting on one point of the piece (averaged over
+the piece's points; the isolated loop keeps 1 at every t). Three random connected sheet sets of the same size per graph
+are controls (seed 20261030).
+
+**Words,** per kind at a size: CARRIES if the majority of instances have MODE ≥ 0.5 and STAY(π/2) ≥ 0.5; LEAKS if the
+majority have STAY(π/2) < 0.5; else MIXED. **Held-out size (rule 14): N = 2048**, run only after a number for it is
+written as a dated amendment from N = 144, 512 and 1024.
+
+**Predictions.** The owner's, inferred by the assistant from her positions (matter is the structured leftover, Update 19;
+waves in the toy, this day) and marked inferred until she confirms or replaces it: **CARRIES for the quarter-knot and the
+column**. Ours: **LEAKS for every kind**: the arrangement is four-regular everywhere, every link has the same weight, so
+nothing confines an amplitude, and rung 0b found no mode on the loop (O30); the medians of STAY(π/2) will sit within a
+factor of two of the controls'. **If any kind CARRIES, our reading that the toy has no confinement is wrong**, and that
+kind is the first candidate for her particle under the rule.
+
+**What no outcome shows.** The rule is put in (Hardy's axiom as a postulate), so nothing here derives quantum behaviour;
+the Laplacian clock is not time; nothing is about reality.
+
+## T87. Does a curled loop of four have a sign of its own, read from its surroundings? (written 2026-10-30, 13:28 UTC, before any registered computation; the owner's prediction inferred and marked so)
+
+**Why.** Her correction of this day: "Why can't a size be negative? This is the 2d equation set not a plane." An oriented
+loop has a signed area, and if the toy's loops are oriented by their curl, a negative root-mass is a loop curled the other
+way (option O5 of `docs/design/koide_gaps_2026-10-30.md`), which is where Brannen's negative neutrino root and the
+neutrino's one-handedness would live. The open question of 29 October, whether a loop's curl has a sign of its own, is
+exact on saved wirings: a loop has two ways round, and they are the same arrangement seen in a mirror unless the loop's
+surroundings tell them apart.
+
+**Protocol (exact, no chain).** `scripts/t87_curl_sign.py N <saved graphs>`, the same saved graphs as T86. For every
+column (a piece of four points off the sheet, all at local dimension 1, T55's column) and for r = 2, 3, 4 and 6: the ball
+of radius r round the loop; the loop is MIRROR at r if some renaming of the ball, preserving every link among its points,
+every point's distance from the loop and each point's side, sends the loop (a, b, c, d) to (a, d, c, b) or to
+(c, b, a, d); otherwise SIGNED at r.
+
+**Words,** per size, over all columns: SIGNED if the majority are SIGNED at r = 3; MIRROR if the majority are MIRROR at
+r = 3; else MIXED; the other radii reported beside. **Held-out size (rule 14): N = 2048**, run after the amendment.
+
+**Predictions.** The owner's, inferred from her correction and marked so: **SIGNED** (a loop's curl has a sign; the
+neutrino's handedness). Ours: **MIRROR at r = 2 and 3** for nearly every column, because the column is a segment of the
+tube left curled in a flat sheet and the tube is mirror-symmetric, and SIGNED only at the largest radius, where the ball
+reaches other defects; in words, the column's sign, if any, is lent by its neighbours and is not its own. **If the
+majority are SIGNED at r = 3, our reading that the column is mirror-symmetric is wrong** and the sign is the column's own.
+
+**What no outcome shows.** A sign that exists in the toy is a graph fact; nothing ties it to handedness in reality.
+
+**Disclosure.** Both scripts and their tests (`tests/test_t86_t87.py`) were written this hour before any saved graph was
+read by them; the sandbox look read N = 144 only, for the bare loop and the crossing probability, not the measures above.
