@@ -25,7 +25,7 @@ diagonals (one kind per loop; a loop of box diagonals is matter, of face diagona
 | quantity | values | rule it encodes | whose |
 |---|---|---|---|
 | twist τ_i on each diagonal i | multiples of ⅓ on box diagonals; multiples of ½ on face diagonals; **0 on a long diagonal** | twist in thirds (matter) and halves (dark); the long diagonal holds curl with no twist | hers |
-| sign of τ_i | either sign on any diagonal | a positive particle goes over 1 (⅔, ⅔) and twists back (−⅓); the neutrino holds +θ and −θ; so the colour sets which sign is "matter" and does not forbid the other | hers (the sheet); the reading that colour does not constrain the sign is **ours** |
+| sign of τ_i | either sign on any diagonal | a positive particle goes over 1 (⅔, ⅔) and twists back (−⅓); the neutrino holds +θ and −θ; so the colour sets which sign is "matter" and does not forbid the other | hers (the sheet); the reading that colour does not constrain the sign was ours and is **hers from 2026-10-30** ("agree") |
 | curl per loop | an integer ≥ 1 | one curl of energy per loop | hers |
 | spin s per loop | −½, 0, +½; **non-zero only if some τ_i ≠ 0** | half spin on a full curl; spin needs twist present, not net twist (30 October) | hers |
 
@@ -44,8 +44,7 @@ A **particle** is a named set of loops. Its readers (exact, from the sheet's sec
 Checked by the module (and raised as an error): a step that is not an allowed diagonal; a loop that does not close on
 the torus; a twist not a multiple of its kind's increment; twist on a long diagonal; spin without twist present; mixed
 step kinds in one loop. **Not checked, open:** the stability rule (sheet, open item 1); whether a loop of three can hold
-its twist (the electron's size n, item 3); whether twisted diagonals may cross or share points (ours: allowed for now,
-since the sheet says nothing); the photon (not a loop of box diagonals; it stays unbuilt).
+its twist (the electron's size n, item 3); whether twisted diagonals may cross or share points (allowed for now; ours, and hers from 2026-10-30, "agree"); the photon (not a loop of box diagonals; it stays unbuilt).
 
 ## 4. The energy
 
