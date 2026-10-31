@@ -105,8 +105,8 @@ class Loop:
             raise ValueError("spin needs twist present (her rule of 30 October)")
         self.held = [(Fraction(c), Fraction(s)) for c, s in self.held]
         for c, s in self.held:
-            if c not in (HALF, -HALF) or s not in (Fraction(1), Fraction(-1)):
-                raise ValueError("an excitation holds a photon's half curl and spin 1; got %s" % ((c, s),))
+            if not photon_curl_allowed(c) or s not in (Fraction(1), Fraction(-1)):
+                raise ValueError("an excitation holds a photon's curl per link, +-2/n for a whole period n >= 4, and its spin 1; got %s" % ((c, s),))
         p = np.array(self.start, dtype=int)
         pts = [tuple(int(x) % self.L for x in p)]
         for s in self.steps[:-1]:
@@ -200,6 +200,16 @@ def mirror(loop):
 BODY_STEPS = {tuple(s) for s in product((1, -1), repeat=3)}
 
 
+def photon_curl_allowed(c):
+    """DECISION (hers, 31 October): a photon's curl angle may turn less than a quarter turn per link, so its repeat (its
+    wavelength) is any whole number of links n >= 4, and its curl per link is 2/n: 1/2, 2/5, 1/3, 2/7, 1/4, ... (exact: a
+    quarter turn per link is the half curl's n = 4; returning exactly to the start needs a whole n). Its energy is its curl
+    per link, set by its wavelength ("the one that matches measurement": per-packet energy goes with frequency, the
+    photoelectric effect, general knowledge, to verify), not curl times length; the length is the pulse."""
+    c = Fraction(c)
+    return c != 0 and (2 / abs(c)).denominator == 1 and 2 / abs(c) >= 4
+
+
 @dataclass
 class Photon:
     """Her first form of the photon, put in as she stated it: a curve on the two-colour (body) diagonal, half a curl, spin 1,
@@ -208,7 +218,8 @@ class Photon:
     diagonals, all the same step `direction`, from `start`, advanced by `position` links. curl is +1/2 or -1/2 (the sign is
     the sense of the curl; her annihilation ledger makes the two photons opposite), spin +1 or -1 (the two photons' spins
     are opposite in direction). Nothing is derived; the values are the rules. The two-colour diagonal has length sqrt 3 (she
-    wrote root 2 and corrected it to root 3, 30 October)."""
+    wrote root 2 and corrected it to root 3, 30 October). **31 October (hers):** the repeat `period` is any whole n >= 4
+    and the curl per link is +-2/n (`photon_curl_allowed`); `curl` given as +-1/2 keeps period 4; `energy` is |curl|."""
     L: int
     start: tuple
     direction: tuple
@@ -216,13 +227,24 @@ class Photon:
     curl: Fraction = HALF
     spin: Fraction = Fraction(1)
     position: int = 0
+    period: int = None
 
     def __post_init__(self):
         if tuple(self.direction) not in BODY_STEPS:
             raise ValueError("a photon runs along a body diagonal (1, 1, 1) in some signed form; got %s" % (self.direction,))
         self.curl, self.spin = Fraction(self.curl), Fraction(self.spin)
-        if self.curl not in (HALF, -HALF):
-            raise ValueError("a photon carries half a curl, +1/2 or -1/2")
+        if self.period is None:
+            if not photon_curl_allowed(self.curl):
+                raise ValueError("a photon's curl per link is +-2/n for a whole period n >= 4 (31 October); got %s" % (self.curl,))
+            self.period = int(2 / abs(self.curl))
+        else:
+            self.period = int(self.period)
+            if self.period < 4:
+                raise ValueError("a photon's repeat is at least four links (her shortest wavelength); got %d" % self.period)
+            sign = 1 if self.curl > 0 else -1
+            if abs(self.curl) not in (HALF, Fraction(2, self.period)):
+                raise ValueError("a photon of period %d carries curl per link +-2/%d; got %s" % (self.period, self.period, self.curl))
+            self.curl = sign * Fraction(2, self.period)
         if self.spin not in (Fraction(1), Fraction(-1)):
             raise ValueError("a photon carries spin 1, in one direction or the other")
         if self.length < 1:
@@ -235,13 +257,18 @@ class Photon:
     net_twist = charge
 
     @property
+    def energy(self):
+        """Her decision of 31 October: the energy is the curl per link, 2/period, set by the wavelength and not by the length."""
+        return abs(self.curl)
+
+    @property
     def twist_present(self):
         return Fraction(0)
 
     @property
     def mass_count(self):
         """Zero: a photon's diagonals are two-colour, not matter's one-colour box diagonals, so they are not counted as mass
-        (her decision, 30 October, evening); `length` is the path it is drawn on and 4 is its period."""
+        (her decision, 30 October, evening); `length` is the path it is drawn on and `period` its repeat (4 for the half curl)."""
         return 0
 
     @property
@@ -255,8 +282,9 @@ class Photon:
 
     @property
     def angle_degrees(self):
-        """The angle the half curl sits at: a quarter turn per link, repeating every four (her picture)."""
-        return 90 * (self.position % 4)
+        """The angle the curl sits at: 360/period degrees per link, repeating every `period` links (her picture; a quarter turn
+        for the half curl)."""
+        return Fraction(360, self.period) * (self.position % self.period)
 
     @property
     def parts(self):
@@ -264,19 +292,22 @@ class Photon:
 
     def advance(self, sweeps=1):
         """One link per sweep, carried by its spin."""
-        return Photon(self.L, self.start, self.direction, self.length, self.curl, self.spin, self.position + int(sweeps))
+        return Photon(self.L, self.start, self.direction, self.length, self.curl, self.spin, self.position + int(sweeps), self.period)
 
 
-def annihilate(particle, antiparticle, direction=(1, 1, 1), length=4):
+def annihilate(particle, antiparticle, direction=(1, 1, 1), length=4, period=4):
     """Her ledger of 30 October, evening: an electron (+1 twist, 1 loop, 1/2 spin) and its anti-particle (-1 twist, -1 loop,
     1/2 spin) make two photons, C (+1/2 loop, spin 1, no twist) and D (-1/2 loop in the opposite direction, spin 1, no
     twist). Built with the photons' spins opposite (+1, -1), the only reading under which the signed spin balances given
     that `mirror` reverses the loop's spin. The photons leave from the particle's first point along `direction` and its
-    reverse. Returns (C, D). What is conserved is read by `ledger`."""
+    reverse. Returns (C, D). What is conserved is read by `ledger`. 31 October: the two photons' period (their wavelength)
+    is `period`, 4 by default; which period annihilation makes is pinned by nothing in the toy yet (measured, general
+    knowledge, to verify: two photons of 511 keV each from a pair at rest, one definite wavelength)."""
     start = particle.loops[0].start
     back = tuple(-x for x in direction)
-    return (Photon(particle.loops[0].L, start, direction, length, HALF, Fraction(1)),
-            Photon(particle.loops[0].L, start, back, length, -HALF, Fraction(-1)))
+    c = Fraction(2, period)
+    return (Photon(particle.loops[0].L, start, direction, length, c, Fraction(1), period=period),
+            Photon(particle.loops[0].L, start, back, length, -c, Fraction(-1), period=period))
 
 
 def absorb(loop, photon):
@@ -294,7 +325,7 @@ def emit(loop, direction=(1, 1, 1), length=4):
         raise ValueError("nothing held: the loop is not excited")
     c, s = loop.held[-1]
     lp = Loop(loop.L, loop.start, list(loop.steps), list(loop.twists), curl=loop.curl, spin=loop.spin, held=list(loop.held[:-1]))
-    return lp, Photon(loop.L, loop.start, direction, length, c, s)
+    return lp, Photon(loop.L, loop.start, direction, length, c, s, period=int(2 / abs(c)))
 
 
 def ledger(objects):

@@ -151,3 +151,42 @@ def test_the_twist_constant_may_differ_by_kind_and_the_dark_pair_wins_below_four
     for ratio, wins in ((0.4, True), (4 / 9, False), (0.5, False)):
         d = particle_energy(dark, eps=1.0, eps_w=0.0, eps_face=ratio)
         assert (d < particle_energy(light, eps=1.0, eps_w=0.0) - 1e-12) is wins
+
+
+def test_the_photon_ladder_of_31_october_repeat_n_curl_two_over_n_energy_as_frequency():
+    """Her decision of 31 October: the curl angle may turn less than a quarter turn per link, so the repeat is any whole
+    n >= 4 and the curl per link is 2/n; the energy is the curl per link (the reading that matches measurement), not curl
+    times length; the ledger and the excitation carry the period through."""
+    from graphity.twist import Photon, Loop, absorb, emit, annihilate, ledger, photon_curl_allowed, triangle
+    L = 6
+    four = Photon(L, (0, 0, 0), (1, 1, 1))
+    assert four.period == 4 and four.curl == HALF and four.energy == HALF and four.angle_degrees == 0
+    assert four.advance(3).angle_degrees == 270 and four.advance(4).angle_degrees == 0
+    eight = Photon(L, (0, 0, 0), (1, 1, 1), period=8)
+    assert eight.curl == Fraction(1, 4) and eight.energy == Fraction(1, 4)
+    assert eight.advance(4).angle_degrees == 180 and eight.advance(8).angle_degrees == 0
+    five = Photon(L, (0, 0, 0), (1, 1, 1), curl=Fraction(-2, 5))
+    assert five.period == 5 and five.energy == Fraction(2, 5)
+    # a flatter photon of twice the length carries less energy, not the same: energy is per link
+    assert Photon(L, (0, 0, 0), (1, 1, 1), length=8, period=8).energy < four.energy
+    for bad in (Fraction(3, 4), Fraction(1), Fraction(2, 3), Fraction(3, 7)):   # 2/n for no whole n >= 4
+        assert not photon_curl_allowed(bad)
+    assert photon_curl_allowed(Fraction(1, 3)) and photon_curl_allowed(Fraction(1, 5)) and photon_curl_allowed(Fraction(-2, 7))
+    with pytest.raises(ValueError):
+        Photon(L, (0, 0, 0), (1, 1, 1), period=3)
+    with pytest.raises(ValueError):
+        Photon(L, (0, 0, 0), (1, 1, 1), curl=Fraction(3, 4))
+    e = triangle(L)
+    held = absorb(e, eight)
+    assert held.held == [(Fraction(1, 4), Fraction(1))]
+    back, out = emit(held)
+    assert out.period == 8 and out.energy == Fraction(1, 4) and back.held == []
+    with pytest.raises(ValueError):
+        Loop(L, (0, 0, 0), list(e.steps), list(e.twists), held=[(Fraction(3, 4), Fraction(1))])
+    from graphity.twist import Particle, mirror
+    el = Particle("electron", [e]); po = Particle("positron", [mirror(e)])
+    c, d = annihilate(el, po, period=10)
+    assert c.period == d.period == 10 and c.curl == -d.curl == Fraction(1, 5)
+    before, after = ledger([el, po]), ledger([c, d])
+    assert before["T"] == after["T"] == 0 and before["C"] == after["C"] == 0 and before["J"] == after["J"]
+

@@ -131,6 +131,31 @@ lands at −0.45 per cent (wide one-turn muon, tight four-turn tau), predicted t
 rule 13, not a result: neighbours −46 and +60 per cent, no rule selecting the coils. What would make it one: a stability
 rule that picks the coil (her candidates of 29 October), then the tau held out (rule 14).
 
+## 9. The photon ladder: energy as curl per link (her decision of 2026-10-31, 16:25 UTC)
+
+**Her picture (2026-10-31):** the photon's curl angle may turn less than a quarter turn per link, so it takes more than four
+links to return to its start; the repeat is the wavelength and 4 links is the shortest. **DECISION (hers): the photon's
+energy is its curl per link, set by its wavelength**, "the one that matches measurement" (per-packet energy goes with
+frequency, the photoelectric effect; general knowledge, to verify), not curl times length; the length is the pulse.
+
+*Exact:* returning exactly to the start needs a whole repeat n ≥ 4, so the curl per link is 2/n: ½, ⅖, ⅓, 2/7, ¼, ...
+a discrete ladder with no extra rule. Built: `Photon(period=n)`, `energy = |curl| = 2/n`, `angle_degrees = 360/n` per
+link; `Loop.held` and `emit` carry the period; `annihilate(period=4)`. What it changes (ours, exact): the excitation
+ladder is the photon ladder (the level is the held photon); a held 2/n splits into two ladder photons only where
+1/n = 1/k + 1/j has whole solutions (n = 4: 6 + 12 or 8 + 8; n = 5: 10 + 10 only); annihilation's two photons have a
+wavelength nothing in the toy pins (measured: one definite one, 511 keV each); the electron's energy under the twist
+term (ε/3) and a photon's (2/n) are different currencies until a rule ties them (rules page, open item 2). No color can
+be named for 4 links: the toy has no length unit; if the link were the Planck length (not decided) 4 links is about
+6 × 10⁻³⁵ m and green light repeats every ~10²⁸ links.
+
+**Gravity waves on the edges** (`sandbox/edge_wave_look.py`; predictions written first, all held). The carrier is the
+edges' stiffness K = 4(6I − A) per axis family (gravity_link_brief, step 1). Given an inertia (the look's assumption;
+the toy has no time): one speed for every long wave, ω = 2|k| (1.95 at 8 links, 1.80 at 4, 1.27 at 2), as the world's
+gravitational waves share c with light; the shortest edge wave is 2 links, not 4, because a stretch has no turning
+angle; the "+" polarization (x-links lengthen where y-links shorten) is carried by the axis edges exactly, the families
+never coupling; the "×" polarization changes the cubes' angles and would need the face diagonals (ours, geometric, not
+computed); spin 2 is not in the toy. So the edges carry no ladder like 2/n.
+
 ## 6. What this build does not claim
 
 That any of these loops is stable, that the counts are masses in MeV, or that the lattice is space. It is the first

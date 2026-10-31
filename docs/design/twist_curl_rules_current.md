@@ -69,8 +69,11 @@ combinatorial quantum gravity.*
 - (hers) Half a curl with one unit of spin, moving along the body diagonals as a smooth spiral round a four-cube loop at
   one link per tick (the speed of light, the speed at which flat space opens), costing nothing to pass. The diagonals
   beside it take about a quarter twist and anti-twist, uncharged, gone once the photon is two links on.
-- (ours, not built) A photon's energy in the world is continuous; half a curl is one amount in the toy, so the energy
-  would have to sit in the spiral's pitch. One unit of spin in and a half out on the loop leaves a half to be placed.
+- ~~(ours, not built) A photon's energy in the world is continuous; half a curl is one amount in the toy, so the energy
+  would have to sit in the spiral's pitch.~~ **Decided (hers, 31 October):** the curl angle may turn less than a quarter
+  turn per link, so the repeat (the wavelength) is any whole n ≥ 4 and the curl per link is 2/n; the photon's energy is
+  its curl per link, set by its wavelength, the reading that matches measurement (`graphity.twist.Photon(period=n)`;
+  build document §9). One unit of spin in and a half out on the loop still leaves a half to be placed.
 
 ## 4. The energy, as it stands
 
