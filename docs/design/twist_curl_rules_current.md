@@ -24,7 +24,13 @@ combinatorial quantum gravity.*
   from the cube's edges by geometry with no new constant. The pyramid of face diagonals with the body diagonals as its
   axes is for score-keeping and for light to pass through; it holds no box diagonals and so no mass.
 - **The sectors (hers, 31 October, a position, not yet a decision):** the box diagonals carry ordinary matter; the
-  face diagonals carry dark matter and the neutrinos; the waves, gravity and light, run on the black-to-white lines, the
+  face diagonals carry dark matter and the neutrinos (**her correction, 21:16 UTC: neutrinos are not the dark matter;
+  the neutrino is two-sided, two half-twist loops of opposite hand; dark matter is a one-sided loop of surplus curl, a flaw
+  left when space opened, which meets gravity and not light.** *Exact:* no loop of box diagonals is one-sided in thirds, so
+  the one-sided loop lives on the face diagonals; it costs 3/4, exactly half the neutrino's 3/2, under the term as built;
+  its net half twist is charge 1/2 under charge = net twist, which the whole-charge rule refuses, so it needs the dark
+  charge of Update 34 or a per-sheet reading: hers; `sandbox/one_sided_loop_look.py`); the waves, gravity and light, run
+  on the black-to-white lines, the
   edges and the body diagonals. *Exact:* a step changes colour exactly when its coordinate sum is odd, so edges (1) and
   body diagonals (3) change colour and face (2) and box (4) diagonals do not: one-colour loops carry twist and mass,
   colour-changing lines carry waves, with the sign (black +, white -) alternating every step on them. Owed: how a
