@@ -17,7 +17,8 @@ present (her rule of 30 October: spin needs twist present, not net twist). A loo
 decision of 30 October, evening): the photons it has absorbed, each holding its half curl and its spin 1 on the loop until
 the loop re-emits a photon; the absorbed spin is carried as orbital motion (a part of its own, `orb`), not as the loop's
 spin, following the published fact that an electron's spin stays 1/2 when it moves up a level. A Particle is a named set
-of loops. Readers: charge = sum of twist; spin = |sum of loop spins|; mass_count = number of looped diagonals (a long
+of loops. Readers: charge = sum of net twist over box-diagonal loops only (her rule of 31 October: a charge needs two
+sides and is carried only on thirds; a face loop's half twist is not charge); spin = |sum of loop spins|; mass_count = number of looped diagonals (a long
 diagonal counts one); parts = (L, n, tau+, T, s, C, orb), with C including the held half curls and orb the held spins;
 net_twist over a set of particles, the quantity pair creation conserves; ledger over particles and photons sums T, C, s,
 orb, J = s + orb and n.
@@ -151,7 +152,8 @@ class Particle:
 
     @property
     def charge(self):
-        return sum((lp.net_twist for lp in self.loops), Fraction(0))
+        # her rule of 31 October: a charge needs two sides and is carried only on thirds, so face loops (halves) count 0
+        return sum((lp.net_twist for lp in self.loops if loop_kind(lp) == "box"), Fraction(0))
 
     @property
     def spin(self):

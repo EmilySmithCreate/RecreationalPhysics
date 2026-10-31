@@ -28,8 +28,8 @@ combinatorial quantum gravity.*
   the neutrino is two-sided, two half-twist loops of opposite hand; dark matter is a one-sided loop of surplus curl, a flaw
   left when space opened, which meets gravity and not light.** *Exact:* no loop of box diagonals is one-sided in thirds, so
   the one-sided loop lives on the face diagonals; it costs 3/4, exactly half the neutrino's 3/2, under the term as built;
-  its net half twist is charge 1/2 under charge = net twist, which the whole-charge rule refuses, so it needs the dark
-  charge of Update 34 or a per-sheet reading: hers; `sandbox/one_sided_loop_look.py`); the waves, gravity and light, run
+  its net half twist is not charge, by her rule of 23:26 UTC below, so the whole-charge rule has nothing to refuse;
+  `sandbox/one_sided_loop_look.py`); the waves, gravity and light, run
   on the black-to-white lines, the
   edges and the body diagonals. *Exact:* a step changes colour exactly when its coordinate sum is odd, so edges (1) and
   body diagonals (3) change colour and face (2) and box (4) diagonals do not: one-colour loops carry twist and mass,
@@ -55,6 +55,10 @@ combinatorial quantum gravity.*
 - **Charge** (hers, 29 October): charge is twist carried by spin; spins can cancel while twists add. A loop's charge is
   its net twist, a whole number of thirds summed round the loop. A positive particle goes over 1 (⅔, ⅔) and twists back
   (−⅓) to net a whole number; gluon folds keep the opposed twists apart.
+  **Narrowed (hers, 31 October, 23:26 UTC): "a charge needs 2 sides and can only be applied on thirds."** Charge is
+  the net twist of two-sided loops of box diagonals only; a face diagonal's half twist is twist, not charge, so a
+  one-sided face loop has charge 0 and meets no light. Built: `Particle.charge` sums box loops only. Open (hers):
+  whether the face half twist is a dark charge of its own kind (Update 34) or no charge at all; as built, none.
 - **Spin** (hers, 29 October, "precise"): full spin on half a curl (the photon, spin 1); half spin on a full curl
   (matter, spin ½). A photon's half curl is spent on a loop's |⅓| segment, the only size a photon can act on; the
   photon's curl stops and the loop spins ½ in the direction of that twist. With spin a loop can hold its twist stably in

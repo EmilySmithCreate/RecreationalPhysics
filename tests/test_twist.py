@@ -190,3 +190,14 @@ def test_the_photon_ladder_of_31_october_repeat_n_curl_two_over_n_energy_as_freq
     before, after = ledger([el, po]), ledger([c, d])
     assert before["T"] == after["T"] == 0 and before["C"] == after["C"] == 0 and before["J"] == after["J"]
 
+
+def test_charge_is_carried_only_on_thirds():
+    """Her rule of 31 October: a charge needs two sides and can only be applied on thirds. A lone one-sided face loop
+    (one half twist) has charge 0 and is a particle on its own; the same lone third on a box loop is still refused."""
+    from fractions import Fraction
+    one_sided = Loop(L, (0, 0, 0), [(1, 1, 0), (-1, 0, 1), (0, -1, -1)], [Fraction(1, 2), 0, 0], curl=1, spin=HALF)
+    dark = Particle("one-sided dark loop", [one_sided])
+    assert one_sided.net_twist == Fraction(1, 2) and dark.charge == 0 and dark.parts["T"] == 0
+    assert dark.check_whole_charge()
+    with pytest.raises(ValueError):
+        Particle("quark", [triangle(L, twists=(THIRD, 0, 0), spin=HALF)]).check_whole_charge()

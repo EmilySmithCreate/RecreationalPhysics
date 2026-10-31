@@ -44,7 +44,11 @@ when the diagonal is not a lattice step (interpolation or a per-link delay).
 ## 3. Recommendation (ours)
 
 B first, with m = 4 pinned by her one c, then C on top of the halo B gives at rest. A alone answers nothing she has
-asked. Her decisions needed, in order: (1) the clock is one sweep = one link of light (B and C both need it); (2) m is
+asked. Her decisions needed, in order: (1) the clock is one sweep = one link of light (B and C both need it). *Her
+question of 31 October, 23:27 UTC, "Can we write time as links per sweep?", is read as taking this: time in sweeps,
+speeds in links per sweep, c = 1 link per sweep; INFERRED until she confirms. Still to name: which sweep, the chain's
+(2N attempts) or the fair sweep of O90 (N/96 chain sweeps); ours, the chain sweep for a wave on a fixed lattice, the
+fair sweep where the wave runs beside the chain.* (2) m is
 pinned by one c, not scanned; (3) whether the face diagonals carry a second length field (the "×" polarization) now or
 later; (4) C's step rule for a photon on a non-lattice diagonal.
 
