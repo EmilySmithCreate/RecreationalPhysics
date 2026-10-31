@@ -23,6 +23,13 @@ combinatorial quantum gravity.*
   one constant α, the total length fixed near matter); light travels through the body diagonals, whose length is derived
   from the cube's edges by geometry with no new constant. The pyramid of face diagonals with the body diagonals as its
   axes is for score-keeping and for light to pass through; it holds no box diagonals and so no mass.
+- **The sectors (hers, 31 October, a position, not yet a decision):** the box diagonals carry ordinary matter; the
+  face diagonals carry dark matter and the neutrinos; the waves, gravity and light, run on the black-to-white lines, the
+  edges and the body diagonals. *Exact:* a step changes colour exactly when its coordinate sum is odd, so edges (1) and
+  body diagonals (3) change colour and face (2) and box (4) diagonals do not: one-colour loops carry twist and mass,
+  colour-changing lines carry waves, with the sign (black +, white -) alternating every step on them. Owed: how a
+  face-diagonal neutrino couples to ordinary matter (it is detected through it in the world). Published relative
+  (general knowledge, to verify): sterile-neutrino dark matter.
 
 ## 2. Particles
 
