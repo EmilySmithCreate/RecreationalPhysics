@@ -59,6 +59,8 @@ noticing and not yet worth believing.
 
 ## 3. The proposed rule (for the author to decide; nothing runs against it until she does)
 
+*Status, 2026-10-30: **ADOPTED by the author as the first form** ("We definitely need waves in the toy"; VISION addendum of this date). Section 5 was run on 23 September (T15 rung 0b: the loop of four's modes dissolve in the sheet, O30), which bears on prediction (ii) of section 4. Next: section 4 pre-registered with her prediction, isolated loop first (exact: sin⁴ t), then the loop in its sheet on the saved states (`sandbox/wave_rule_sheet_look.py` is the sandbox look).*
+
 **Rule.** The state of a small closed loop is a complex amplitude on each of its points (its versions).
 Amplitudes evolve by i dψ/dt = Lψ, where L is the loop's Laplacian, the operator whose eigenvalues rung
 0 already computed. The probability of finding the loop's excitation at a point is |ψ|². A measurement,

@@ -9359,3 +9359,223 @@ stays registered and unrun.
 analyzer and code stay as written; nothing was launched, and the queue manifest drafted for it was never committed or
 pushed and is deleted.
 
+## T83. Is curl on a warm two-dimensional sheet felt at a distance? (written 2026-10-28, 13:42 UTC, after the owner's prediction and before any registered run)
+
+**Why.** The gravity brief (VISION Update 136) needs a pull at a distance, and the owner's source rule, a link's value set
+by its own curl, has no reach at fixed wiring (O22, exact). One route by which reach could emerge from the two-dimensional
+equation rather than be put in: on a warm sheet the wiring is not fixed, and curl on one link might be felt on links some
+distance away through the fluctuations. TASKS (6 October) item 4 asked for this correlation length and it was never
+measured at λ > 1. T16 measured the same quantity in the published model (λ = 1) across the transition at N = 196 to 676:
+C(r) fell to about zero within two steps at every coupling (O31). This asks the same question at the hypothesis's λ and
+in the sheet phase. The owner asked for the test on 28 October ("Agree short, please test").
+
+**Protocol.** `scripts/run_t83_curl_correlation.py`, `configs/t83_curl_corr_stage1.json`, seed 20268301. Four links per
+point, no cap, Metropolis; a perfect flat torus at each cell; λ = 1.02 and 1.25; g = 2, 3, 4, 5, 6, 8 (the flat sheet's
+cheapest move costs 32, so below g = 2 nothing moves in the run's length; the crossover sits near g = 5); 2,000 sweeps of
+warm-up and 2,000 measured in blocks of 100 with a snapshot after each; two replicas a cell. From each snapshot the
+per-edge field S_e / 2 and its correlation by graph distance C(r), exactly T16's quantity (`graphity.correlation`,
+Q19), and the share of flat edges (S_e = 2). Stage 1: 16 × 16 and 32 × 32. Held-out size (rule 14): 64 × 64, in a
+separate config written after stage 1 is read, with a number for C(3) and its range written as a dated amendment first.
+
+**Scored cells.** A cell is scored only if the sheet survives and fluctuates: minimum flat share over the snapshots at
+least 0.5, and C defined (some edge not flat). Cells where no move was accepted (C undefined) and cells that melted
+(flat share below 0.5) are reported, not scored.
+
+**Words.** SHORT: in every scored cell, |C(r)| ≤ 0.05 for every r from 3 to 6, within the snapshot standard error.
+LONG: some scored cell has |C(3)| > 0.05 by more than twice its standard error. MIXED: neither.
+
+**Predictions.** The owner's, 28 October, before this section was written: **SHORT** ("Agree short, please test").
+Ours: SHORT, by T16's result at λ = 1; and the number: |C(2)| below 0.2 and |C(3)| below 0.05 in every scored cell at
+both λ, with C(1) positive. **Held out (P2):** the 64 × 64 numbers are written as a dated amendment from stage 1 alone.
+
+**What each word means for the brief.** SHORT closes the route "reach emerges from the two-dimensional equation" at
+these couplings, and the brief's reach must come from the links in three dimensions (Regge's equation, the owner's
+choice) with the smoothing rule as the control arm. LONG reopens it and the correlation length becomes the first
+candidate for the halo.
+
+**Disclosure.** A scratch smoke run of the runner (8 × 8, 150 sweeps, g = 1 and 3, in the scratchpad, not kept)
+accepted no move; the couplings above were chosen after it. No C(r) at any registered setting has been seen.
+
+**Read, 2026-10-28, 13:53 UTC (stage 1; O165).** LONG by the words above: three scored 32 × 32 cells with C(3) = 0.08 to 0.15 (more than twice their errors). Every melted cell is SHORT (C(3) = 0.000 ± 0.001). Exact, the same hour: one random switch on a perfect sheet gives C(3) = 0.14 by itself, so the LONG cells are a defect's own footprint and two of them are melts nucleating inside the run. The owner's prediction, SHORT, fails by the letter; the scoring gate was the assistant's error (it admitted near-perfect and non-stationary sheets). Proposed amendment, not enacted: score only stationary cells with at least 20 defects, reporting C(r) less the one-defect footprint. The held-out stage waits on the owner's decision.
+
+## T84 (DRAFT, 2026-10-28, 15:09 UTC; the owner's CLOSES recorded 13:40 UTC, before the draft): do two relics in a flat six-link space pull together when the link lengths relax from their curl, and is light through the halo delayed? (the gravity link brief, step 2)
+
+**Why.** Step 1 (the brief, section 4; `sandbox/regge_step1_stiffness.py`) found that the published curvature over link
+lengths is quadratic at flat with stiffness 4 × the cubic Laplacian on each axis family of links, gapless, at L = 6, 8
+and the held-out 10. So a relic's curl, coupled to the length of its own links by α, makes a halo of lengths with
+Newton's shape. This tests the two things the brief must give: a pull between relics, and the sign of light's delay.
+
+**Machinery to build first (rule 6 tests before any run).** (1) `graphity.lengths`: given a six-link wiring and α, the
+per-link curl c_e = S_e − 4 and the relaxed lengths ℓ = ℓ⁰ + δ with K δ = −α|c| per axis family, K = 4(6I − A), solved
+exactly by FFT on the torus with the zero mode (uniform scaling) fixed to zero mean; tests: the single-link and pair
+responses of step 1 reproduced by the solver; a point source's halo equal to the lattice Green's function. (2) A sealed
+six-link chain option in which a move's ΔH gains the change in the summed length of the links it rewires, with the
+lengths re-relaxed after every accepted move (the lengths are a function of the wiring, so energy is conserved as
+before plus this term); tests: ΔH exact against full recomputation, same-seed reproducibility, α = 0 bit for bit the
+present chain. (3) The light delay: the shortest-path length between two far points on opposite sides of a relic,
+through the halo, against the same path on the flat torus.
+
+**Protocol.** Two copies of the smallest six-link relic that is a dip (O56's curled line of four, or what `gravity_brief.md`
+step 1 finds), placed at separations r = 2 to L/2 along an axis and along a face diagonal, on a flat L × L × L torus,
+named points, sealed at the relics' own energy, λ = 1.25; α = +a and −a with a scanned over three values (published,
+not tuned), and the smoothing control arm at the same a; the observable F(r) = −g ln P(r) from the time spent at each
+separation, as `gravity_brief.md` defines it; stage 1 L = 8 and 10, held-out L = 12 with the numbers written first (rule 14).
+
+**Words.** CLOSES (F falls as r falls, monotone over the scanned range, by more than its error), OPENS (rises), FLAT.
+Separately, DELAYED or ADVANCED for the light path through the halo.
+
+**Predictions.** The owner's, 13:40 UTC: **CLOSES**. Ours, written here: under the confirmed rule (toward a shorter path),
+CLOSES for α > 0 and OPENS for α < 0, with the same magnitude; light DELAYED for α < 0 and ADVANCED for α > 0; so no
+single sign gives both CLOSES and DELAYED under this rule, and the pair (α < 0, toward a longer path) would. The
+direction dependence (axis against face-diagonal separations) is reported, not scored.
+
+**Amendment 1, 2026-10-28, 15:19 UTC (the owner: "adjust my prediction to align with general knowledge and be internally consistent"). *Relabelled 15:51 UTC after the audit (O166 (12)): the mechanics below (α < 0, the total-energy rule, CLOSES and DELAYED) were formulated by the assistant at her instruction and are not separately confirmed by her; her original prediction (CLOSES, 13:40 UTC) and her original response rule ("a loop shifts toward a shorter path") stand in the record. T84 does not run until she confirms or replaces them and settles the scale rule of Update 137.* *15:59 UTC: the scale rule is hers ("the total length of the links is fixed near matter", the constraint the solver uses), and her "is that enough to proceed with some tests?" is read as confirming the mechanics; she may strike that reading. Before T84 is registered, the audit's first question (does a stationary warm six-link space with many defects exist) is asked in the sandbox, and the relic question (no six-link dip is known, O56) is faced in the protocol.* α < 0; the response rule is "a move is judged by the total energy with the lengths relaxed" (exact; it contains "toward a longer path" for α < 0); her prediction is **CLOSES and DELAYED**. The exact landscape (`sandbox/relaxed_lengths_pull.py`, the brief) already shows attraction of Newton's shape for either sign and the delay for α < 0, so T84's open question narrows to whether relics *move* down that landscape against their own walls: the words CLOSES/OPENS/FLAT are scored on the chain's P(r), not on the landscape. α is scanned over three magnitudes, published; the +α cells stay as the control that the pull does not depend on the sign.
+
+**Amendment 2, 2026-10-28, 16:02 UTC: T84 registered in the one form that can be scored in this family; the chain form withdrawn.**
+Two facts fix the form. (a) No six-link knot is a dip (O58, exact): every one- and two-switch object undoes itself
+downhill, so at any coupling where a knot can move its first move is to dissolve, and "do knots drift together" cannot be
+asked of a thermal chain. (b) There is no stationary warm six-link space with many defects (`sandbox/warm_space_window_d.py`,
+28 October: frozen to g = 8, the random phase from g = 10, nothing between, at L = 8). So the chain stage is withdrawn
+until a six-link knot that is a dip exists (the cheapest step toward one is O58's search extended to three-switch
+constructions, not yet bought). What T84 scores is the **exact landscape of the constrained model** (the scale rule of
+Update 138, the total length fixed), with a held-out size.
+
+**Protocol.** `scripts/t84_landscape.py L ALPHA SEED`, α = −0.5 (hers: negative), seed 20268401; the knot is one random
+valid switch near the origin, copied by translation; for r = 2 to L/2 along an axis and along a face diagonal, the pair
+energy E_int(r) against the same solver's two-unit-point-source energy on family 0, their ratio, and the light path over
+six links past the knot against the same path far from it. Stage 1: L = 16 (`results/t84_landscape_L16_am050.csv`; the
+sandbox look of 15:17 UTC at this size, with a different seed, gave ratios 290 to 346 on the axis and 305 to 359 on the
+face diagonal at r = 2 to 8, and light 6.30 against 5.97). **Held-out size (rule 14): L = 24**, run only after this
+amendment is committed. **Prediction for L = 24, written now:** the ratio E_int/E_ref lies between 300 and 360 at every r
+from 3 to 9 on the axis, and the face-diagonal ratio at each r lies within 15 % of the axis ratio at the same r; E_int is
+negative at every r from 2 to 9; the light path past the knot exceeds the far path (DELAYED). The family charges of the
+knot are reported; if the seed's knot has charges other than (12, 12, 8) the band is scaled by (Σq²)/352.
+
+**Words at the held-out size.** AS PREDICTED (every clause), SHAPE ONLY (the sign and the delay hold, a ratio outside the
+band), FAILS (a positive E_int at r ≤ 6, or an early light path). The owner's CLOSES and DELAYED (Amendment 1) are scored
+as: CLOSES ↔ E_int negative and falling in size with r over 2 to 6; DELAYED ↔ the light clause. **What no outcome shows:**
+that knots move; that the constraint is physical; anything about reality.
+
+**Reading of T84 at the held-out size L = 24, 2026-10-28, 16:04 UTC (read by Claude Fable 5.1 without the owner; `results/t84_landscape_L24_am050.csv`, stage 1 `..._L16_am050.csv`, both seed 20268401, α = −0.5).** The registered seed's knot has family charges (8, 16, 8), so the band scales by 384/352 to 327–393. **Clause by clause.** Axis ratio E_int/E_ref at r = 3 to 9: 314, 332, 342, 347, 348, 343, 323: inside the scaled band at r = 4 to 8, below it at r = 3 and 9 (inside the unscaled 300–360 at every r): **fails as written**. Face-diagonal ratio within 15 % of the axis: 425 to 503 against 314 to 348, 30 to 45 % above: **fails**. E_int negative at every r from 2 to 9: on the axis yes (to r = 10; positive from r = 11, near half the box, the torus's own sign change); on the face diagonal negative to r = 6 (Euclidean 8.5) and +0.003 at r = 7 (Euclidean 9.9): **fails if both kinds are meant, holds for the axis**. Light over six links past the knot 6.173 against 5.988 far from it: **DELAYED, holds** (stage 1: 6.146 against 5.983). **Word: SHAPE ONLY** (the sign to r = 6 and the delay hold; ratios outside the band; no positive E_int at r ≤ 6). **The owner's CLOSES and DELAYED, scored as Amendment 2 says:** E_int negative and falling in size over r = 2 to 6 on both the axis (−0.60 to −0.10) and the face diagonal (−0.46 to −0.02): CLOSES holds; DELAYED holds. **Why ours missed (ours):** the band was written for an isotropic knot and the registered knot is lopsided (twice the curl on one family), so its halo is not a single family's point-source law scaled; the face-diagonal comparison against a one-family point pair was never like for like, and the 15 % clause was the assistant's guess. What the run shows that the prediction did not ask: on the larger torus the axis ratio is flatter (332 to 348 from r = 4 to 8 against 252 to 306 at L = 16), as a torus effect shrinking with L should be. **What no outcome shows** stands as registered: that knots move, that the constraint is physical, anything about reality.
+
+## T85. The γ test: does one α make the toy's light delay and its pull agree as Einstein's γ = 1 does, across impact parameters and knots? (written 2026-10-28, 23:44 UTC, with the owner's prediction, before any registered run)
+
+**Why.** `docs/design/diagonals_brief_2026-10-28.md`, section 3. Under her decisions (gravity on the cube edges with the
+total length fixed, VISION Updates 136 to 138; light on the body diagonals whose lengths are derived from their cube's
+edges by geometry, Updates 142, 143), the halo of edge lengths round a knot does two things with one constant α: it
+delays light through the derived diagonals (first order in α) and lowers a second knot's energy (second order in α).
+Einstein's one potential does both with a fixed ratio, γ = 1 (the Shapiro delay against the Newtonian potential along the
+path; Cassini, 2 × 10⁻⁵; general knowledge, to verify). Requiring that ratio pins α. The test: is the α so pinned one
+number, across impact parameters and across knots?
+
+**Protocol (exact, no chain).** `scripts/t85_gamma.py L SEED`, α_used = −0.5, λ = 1.25. The knot is one random valid
+switch near the origin (its family charges q and its energy above flat E_knot are reported). For each impact parameter
+b = 2, 4, ... < L/2 − 1: D(b), the extra ticks of light along body diagonals from (−L/4, b, 0) to (L/4, b, 0) over the
+same displacement far from the knot; P(b), the line integral along that path of |U|, U(x) = E_int(x)/E_knot with E_int
+the exact pair energy of a copy of the knot at x (T84's quantity), step √3 per point; α*(b) = α_used · D/(2P), the α at
+which D = 2P (the weak-field relation with γ = 1; D is linear in α, P quadratic). Stage 1: L = 16 with seeds 20268501
+and 20268502 (two knots), L = 24 with seed 20268501. **Held-out size (rule 14): L = 32, seed 20268501**, run only after
+the number for it is written as a dated amendment from stage 1.
+
+**Words.** ONE α: α*(b) agrees across every b at every size and across the two knots within ±10 % of its mean. DRIFTS
+ACROSS b: the spread over b exceeds ±10 % at some size. DRIFTS ACROSS KNOTS: the two knots' means differ by more than
+10 %. NO DELAY: D ≤ 0 at any b.
+
+**Predictions.** The owner's, 28 October, before this section was written: **ONE α** ("the α fixed by γ agrees across
+impact parameters and knot sizes"). Ours: ONE α ACROSS b, since D and P sample the same halo along the same path, and
+DRIFTS ACROSS KNOTS for wiring knots, because to first order α* = E_knot / (c · q) with c a geometric constant, and
+E_knot/q differs between switches; her particles would not drift, since under Update 140 mass counts looped diagonals
+with one curl each, so E/q is the same for all of them by construction. **If ONE α holds for wiring knots too, our
+reading of the first-order structure is wrong and is to be rederived.**
+
+**What no outcome shows.** The toy has no clocks, so nothing here is time dilation; the derived-diagonal rule and the
+scale rule are decisions; a one-switch knot is not a particle in her sense; nothing is about reality.
+
+**Disclosure.** `graphity.diagonals` and its tests, and this script, were written tonight before any γ number existed;
+no γ number has been seen at any setting.
+
+**Amendment 1 (the held-out number), 2026-10-28, 23:45 UTC, written from stage 1 alone, before L = 32 runs.** Stage 1
+(`results/t85_gamma_L16_s20268501.csv`, `_L16_s20268502.csv`, `_L24_s20268501.csv`): knot 1 (charges 8, 8, 8; E_knot 96)
+gives α* = −0.31, −0.44, −0.34 at b = 2, 4, 6 on L = 16 and −0.28, −0.40, −0.52, −0.79, −0.24 at b = 2 to 10 on L = 24
+(the last b at each size sits within reach of the torus's image); knot 2 (12, 8, 12; E_knot 128) gives −0.53, −1.06,
+−2.38 on L = 16. **Words at stage 1: DRIFTS ACROSS b and DRIFTS ACROSS KNOTS**; D > 0 at every b (no NO DELAY).
+**Prediction for L = 32, seed 20268501 (knot 1):** α*(b) = −0.28 ± 0.05, −0.40 ± 0.06, −0.52 ± 0.08, −0.70 ± 0.15,
+−0.90 ± 0.30, −1.1 ± 0.5 at b = 2, 4, 6, 8, 10, 12, and the b = 14 value turned back toward −0.3 by the torus; the
+word DRIFTS ACROSS b. *Ours, on why it drifts (to be checked after the run, not before):* D is the delay of the
+shortest-tick path, which is free to zigzag round the lumpy halo, while P is taken along the straight line; the two
+sample the halo differently, and the difference grows with b as the path gains room. A consistent form, both along one
+path, is a proposed amendment for fresh data and does not rescore this test.
+
+**Reading of T85 at the held-out size L = 32, 2026-10-28, 23:48 UTC (read by Claude Fable 5.1 without the owner; `results/t85_gamma_L32_s20268501.csv`).** α*(b) = −0.254, −0.354, −0.451, −0.570, −0.804, −1.007 at b = 2 to 12 and −0.147 at b = 14: every value inside Amendment 1's range (−0.28 ± 0.05, −0.40 ± 0.06, −0.52 ± 0.08, −0.70 ± 0.15, −0.90 ± 0.30, −1.1 ± 0.5) and the turn-back at b = 14 as written: **the held-out prediction held in every clause.** D > 0 at every b through 14. **Verdict, by the registered words: DRIFTS ACROSS b** (the spread over b is a factor of four at every size), **and DRIFTS ACROSS KNOTS** (stage 1, knot 2). **The owner's ONE α fails by the letter.** Ours held in both clauses. **Rule 11, the cheapest discriminating calculation, done the same hour** (`sandbox/t85_drift_cause.py`): D recomputed along a fixed zigzag path (the straight line's analogue on body diagonals) instead of the fastest path. For the isotropic knot (8, 8, 8) at L = 24, α*_straight = −1.38, −1.50, −1.58, −1.57 at b = 2 to 8: flat within ±8 % of its mean until the torus at b = 10, where the registered α* drifts by a factor of 2.8 over the same b. So for this knot the drift across b is the test's own definition, D on the fastest path (which skirts the halo: D_straight is five times D_fastest at b = 2) against P on the straight line, and with both on one path there is one α across b. For the lopsided knot (12, 8, 12) at L = 16 the straight form still drifts (−2.8, −3.8, −5.3 at b = 2, 4, 6, the last within the torus's reach), and its values sit far from the isotropic knot's: a halo whose families are unequal is sampled differently by light and by the copy's charges, and the drift across knots is in the physics of this family as it stands. **What this means, said plainly:** the test as registered is scored and stands; the consistent form (both quantities along one path) is a proposed amendment for fresh data; under it, her ONE α holds across b for an isotropic knot (a look, not a verdict) and fails across knots unless the knots' halos are alike, which for her particles (mass counting looped diagonals with one curl each) would hold by construction and for wiring knots does not. The α pinned for the isotropic knot in the consistent form is about −1.5 in the toy's units at α_used = −0.5 (a number of the sandbox, not crowned).
+
+## T86. Which of the toy's objects carries a wave under the adopted rule? (written 2026-10-30, 13:28 UTC, on the owner's "proceed with runs that test our current best guess", before any registered computation; her predictions inferred and marked so)
+
+**Why.** The owner adopted the wave rule this day (VISION addendum of 2026-10-30; `docs/design/amplitude_rule_brief.md`,
+section 3): a complex amplitude on every point, evolving by the Laplacian of the whole arrangement, probability its
+square. The current best guess (hers, as the record stands) is that a particle is a small closed object in the sheet that
+carries a wave. The sandbox look of this afternoon (`sandbox/wave_rule_sheet_look.py`) found the bare loop of four in its
+sheet does not: the crossing probability peaks at 0.14 against 1 on the isolated loop. The strict-lane question is which
+object, if any, does, over every kind the toy makes by itself: the curled column (the loop of four, with its collar), the
+quarter of the knot of two kinds, and the double column (T55, O107).
+
+**Protocol (exact, no chain).** `scripts/t86_wave_carrier.py N <saved graphs>`. The saved final graphs of T7 at N = 144
+(`results/t7d_lam125_n144_adj/*.npz`) and of T51 at N = 512 (`t51_l128_10k_00_adj`), 1024 (`t51_l256_*_adj`, 80 graphs)
+and 2048 (`t51_l512_10k_*_adj`, 10 graphs). For every connected piece of points off the sheet, the object is the piece
+plus its collar; its kind is the piece's size (2, 4, 8, other). Two measures from one eigendecomposition per graph: MODE,
+the largest share of any eigenspace's weight on the object (1 for a mode living on it, |object|/N for one spread evenly);
+STAY, the probability still on the object at t = π/2 and at t = π after starting on one point of the piece (averaged over
+the piece's points; the isolated loop keeps 1 at every t). Three random connected sheet sets of the same size per graph
+are controls (seed 20261030).
+
+**Words,** per kind at a size: CARRIES if the majority of instances have MODE ≥ 0.5 and STAY(π/2) ≥ 0.5; LEAKS if the
+majority have STAY(π/2) < 0.5; else MIXED. **Held-out size (rule 14): N = 2048**, run only after a number for it is
+written as a dated amendment from N = 144, 512 and 1024.
+
+**Predictions.** The owner's, inferred by the assistant from her positions (matter is the structured leftover, Update 19;
+waves in the toy, this day) and marked inferred until she confirms or replaces it: **CARRIES for the quarter-knot and the
+column**. Ours: **LEAKS for every kind**: the arrangement is four-regular everywhere, every link has the same weight, so
+nothing confines an amplitude, and rung 0b found no mode on the loop (O30); the medians of STAY(π/2) will sit within a
+factor of two of the controls'. **If any kind CARRIES, our reading that the toy has no confinement is wrong**, and that
+kind is the first candidate for her particle under the rule.
+
+**What no outcome shows.** The rule is put in (Hardy's axiom as a postulate), so nothing here derives quantum behaviour;
+the Laplacian clock is not time; nothing is about reality.
+
+## T87. Does a curled loop of four have a sign of its own, read from its surroundings? (written 2026-10-30, 13:28 UTC, before any registered computation; the owner's prediction inferred and marked so)
+
+**Why.** Her correction of this day: "Why can't a size be negative? This is the 2d equation set not a plane." An oriented
+loop has a signed area, and if the toy's loops are oriented by their curl, a negative root-mass is a loop curled the other
+way (option O5 of `docs/design/koide_gaps_2026-10-30.md`), which is where Brannen's negative neutrino root and the
+neutrino's one-handedness would live. The open question of 29 October, whether a loop's curl has a sign of its own, is
+exact on saved wirings: a loop has two ways round, and they are the same arrangement seen in a mirror unless the loop's
+surroundings tell them apart.
+
+**Protocol (exact, no chain).** `scripts/t87_curl_sign.py N <saved graphs>`, the same saved graphs as T86. For every
+column (a piece of four points off the sheet, all at local dimension 1, T55's column) and for r = 2, 3, 4 and 6: the ball
+of radius r round the loop; the loop is MIRROR at r if some renaming of the ball, preserving every link among its points,
+every point's distance from the loop and each point's side, sends the loop (a, b, c, d) to (a, d, c, b) or to
+(c, b, a, d); otherwise SIGNED at r.
+
+**Words,** per size, over all columns: SIGNED if the majority are SIGNED at r = 3; MIRROR if the majority are MIRROR at
+r = 3; else MIXED; the other radii reported beside. **Held-out size (rule 14): N = 2048**, run after the amendment.
+
+**Predictions.** The owner's, inferred from her correction and marked so: **SIGNED** (a loop's curl has a sign; the
+neutrino's handedness). Ours: **MIRROR at r = 2 and 3** for nearly every column, because the column is a segment of the
+tube left curled in a flat sheet and the tube is mirror-symmetric, and SIGNED only at the largest radius, where the ball
+reaches other defects; in words, the column's sign, if any, is lent by its neighbours and is not its own. **If the
+majority are SIGNED at r = 3, our reading that the column is mirror-symmetric is wrong** and the sign is the column's own.
+
+**What no outcome shows.** A sign that exists in the toy is a graph fact; nothing ties it to handedness in reality.
+
+**Disclosure.** Both scripts and their tests (`tests/test_t86_t87.py`) were written this hour before any saved graph was
+read by them; the sandbox look read N = 144 only, for the bare loop and the crossing probability, not the measures above.
+
+**T86 and T87, Amendment 1 (the held-out numbers), 2026-10-30, 13:38 UTC, written from stage 1 alone (N = 144, 512, 1024; `results/t86_wave_carrier_N{144,512,1024}.csv`, `results/t87_curl_sign_N{144,512,1024}.csv`), before N = 2048 runs.**
+Stage 1 of T86: every kind LEAKS at every size. Medians at N = 1024 (controls in brackets): quarter-knot MODE 0.094 (0.030), STAY(π/2) 0.076 (0.085); column 0.184 (0.042), 0.157 (0.314); double column 0.299 (0.066), 0.482 (0.535); other 0.161 (0.044), 0.096 (0.228). N = 512 gives the same column and double-column medians to three figures (the measures are local). **Prediction for N = 2048:** LEAKS for every kind; column MODE median 0.18 ± 0.03 and STAY(π/2) 0.16 ± 0.03; quarter-knot 0.09 ± 0.03 and 0.08 ± 0.03; double column 0.30 ± 0.08 and 0.48 ± 0.08 (fewer instances); no instance of any kind with MODE ≥ 0.5 and STAY(π/2) ≥ 0.5 in more than 5 % of its kind.
+Stage 1 of T87: SIGNED at every radius at N = 512 (51 of 55 at r = 3) and N = 1024 (858 of 916 at r = 3, 94 %); MIXED at N = 144 (2 of 4). Our MIRROR prediction fails at stage 1. **Prediction for N = 2048:** SIGNED, with 90 to 97 % of columns SIGNED at r = 3 and the share at r = 2 within 3 points of it. *Recorded with the amendment, from a sandbox check of the test's own logic (`sandbox/t87_sign_cause.py`), which does not change the words or the prediction:* a ring on a hand-built perfect 4 × 12 tube is MIRROR at every radius, so the test does what it says; and every one of the 53 SIGNED columns at N = 144 and 512 has a reversal that swaps the two sides, which the registered test does not count. So the sign found is the bipartition's: the loop's two ways round differ only in which kind of point sits where, and are mirror images once the two kinds are exchanged. Whether that counts as the loop's own sign is the toy's standing convention (Q15 counts renamings within a side) and is reported, not rescored.
+
+**Reading of T86 and T87 at the held-out size N = 2048, 2026-10-30, 13:46 UTC (read by Claude Fable 5.1 without the owner; `results/t86_wave_carrier_N2048.csv`, `results/t87_curl_sign_N2048.csv`, 10 saved T51 graphs).**
+T86: LEAKS for every kind. Medians: column MODE 0.178, STAY(π/2) 0.157 (predicted 0.18 ± 0.03, 0.16 ± 0.03: inside); quarter-knot 0.083, 0.077 (0.09 ± 0.03, 0.08 ± 0.03: inside); double column 0.219, 0.482 (0.30 ± 0.08, 0.48 ± 0.08: STAY inside, MODE 0.001 below the range's edge on 14 instances); no instance of any kind carries (0 of 78, 199, 14, 14; at N = 1024, 3 of 103 double columns did, under the 5 % clause). **Verdict, by the registered words: LEAKS for every kind.** The owner's inferred CARRIES (quarter-knot, column) fails; ours holds in every clause but the double column's MODE median, which missed its range by a thousandth. The held-out size claim (rule 14) held. Beside the words: every kind's MODE median sits three to four times above its controls' (column 0.178 against 0.056), so the objects do shape the modes a little, far below the bar.
+T87: SIGNED at every radius: 183 of 191 columns at r = 2 and r = 3 (95.8 %, predicted 90 to 97 %, r = 2 within 3 points: inside), 184 at r = 4, 186 at r = 6. **Verdict: SIGNED.** The owner's inferred SIGNED holds; our MIRROR fails at every size. The cause, from the sandbox check recorded in Amendment 1 and not rescored: every signed column has a reversal that swaps the two sides, so the loop's two ways round are mirror images once the two kinds of point are exchanged; under the toy's standing convention (renamings within a side, Q15) that is a sign, and it is the bipartition's.
+
+**T86 and T87, the owner's confirmation, 2026-10-30, 14:32 UTC (after the readings): "agree with your infrences". The inferred predictions (T86 CARRIES for the quarter-knot and the column; T87 SIGNED) are hers. The verdicts stand as read: her T86 prediction fails, her T87 prediction holds.**

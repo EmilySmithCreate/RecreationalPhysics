@@ -1,11 +1,78 @@
-# Questions waiting on the owner (kept current; updated 26 October 2026)
+# Questions waiting on the owner (kept current; updated 27 October 2026)
 
 *One list of everything that needs her answer before the work can move. Each item says what it decides and where the
 full text is. Answer in any order; items marked ★ unblock the most. Answered items are moved to the end with the date.
 Her words of 25 October are in `sandbox/NOTEBOOK.md` under that date (her two passes of `#` notes on this file kept
 verbatim there); the record is VISION Updates 104 to 112.*
 
-## Open, 26 October: the hard rule and the twin X (start here)
+## Open, 27 October evening: the twist rules (start here)
+
+*Answered 27 October, 19:12 UTC (verbatim in the notebook): **T2 yes**, one charge costs 2(λ − 1) and sits where a full
+turn of twist closes; **T3: the moves must obey it** (imposed). Still open: T1, T4, question 5, and T3′ below.*
+
+**T3′ What is "the opposite angle" in the toy?** The moves must make a curl and its anticurl at opposite angles. Two
+readings: (a) by twist: a curl carrying twist +θ is made only together with an anticurl carrying −θ; (b) by place: the
+anticurl is made on the far side of the curl, across a point or across the space. (a) can be checked on every move from
+the twist alone; (b) needs a rule for "far side" on wiring that has no fixed geometry. Which, or both?
+
+*Your words of 19:00 UTC are in the notebook verbatim; the record is VISION Update 134. Each question turns one of your
+rules into a form the toy can run. The twist is the light field's phase: round each square it runs from −π to π, and
+plus and minus cost the same.*
+
+**T1 ★ How much does twist raise the curling cost?** Candidate: each unit of curl on a link costs its usual amount plus κ
+times the twist on that link's squares, measured by size, not sign (1 − cos of the twist: 0 untwisted, 2 at a half
+turn). κ is a new constant, scanned, never tuned. Confirm, or say how it should grow with twist.
+
+**T2 "A half curl energy on a whole twist makes a whole charge."** In the light field a whole twist is a full turn (2π)
+round a loop, and a charge is where the field's lines start or end. Candidate reading: one whole charge costs half a unit
+of curling energy, 2(λ − 1) in the toy's units, and sits where a full turn of twist closes. Is that it, or is the half
+curl spent to make the charge?
+
+**T3 "A curl always forms at the opposite angle of its anticurl."** A rule the moves must obey (only moves that make the
+pair at opposite angles are allowed), or something you expect to happen by itself? *Ours:* the second is testable; the
+first is put in.
+
+**T4 Curl spreads at one link per tick, slower near twist.** The light field already moves at most one link per tick
+(tested). For curl, is the slowing a rule we write in (a rate that falls with the twist nearby), or what you expect T1 to
+cause by itself? *Ours:* the second is testable.
+
+**Still open: question 5 below**, how the twist moves when the wiring switches (fresh, carried, averaged out, or drawn to
+suit its neighbours).
+
+## Open, 27 October, after your answers
+
+*Your words of 16:42 UTC are in `sandbox/NOTEBOOK.md` verbatim; the record is VISION Update 133. Q1 is answered (soften).
+Your picture answers Q2 in your terms and restates Q3 as each curled direction carrying its own curling cost, which gives
+each twin exactly half (exact). Four things are asked before the soft runs can be registered.*
+
+*Answered 27 October, 17:41 UTC (verbatim in the notebook; VISION Update 133 addendum): A1 μ₀/N; A2 anticurl costs λ as
+curl does (exact: the toy at λ′ = 2 − 1/λ and coupling g/λ); A3 curl toward the north pole, anticurl toward the south;
+A4 the space opens with the twin daughters. One thing left: is λ the same everywhere, or above 1 only near the poles?*
+
+**A1 ★ The soft penalty's scaling.** μ (S − 3N)² with μ held fixed, or μ = μ₀/N? One is fixed before any run. *Exact:*
+with μ fixed, an unbalanced rod of N points pays μN²/4, growing with the square of the size; with μ₀/N it pays μ₀N/4, a
+fixed amount per point like every other energy in the toy. **Recommended:** μ₀/N, for that reason.
+
+**A2 ★ What the shell's anticurl costs.** In the toy the energy is 4·uncurl + 4(λ − 1)·curl (exact, checked). So your
+"4(λ − 1) on each side" is what the toy charges for the rod's curl when nothing balances it. Two readings:
+(a) **The rod is unbalanced and the soft penalty pays for it.** Your formula holds as the toy stands, but the penalty
+makes the first opening release more than the second, by μN²/8 (by μ₀N/8 with μ₀/N): the halves are not equal.
+(b) **The shell carries anticurl that balances the rod.** The penalty vanishes, and the halves stay equal, but each unit
+of anticurl costs 4, so a side costs 4λ, not 4(λ − 1), unless the shell's anticurl is priced at nothing. Is that what
+"the polarization of the sphere represented in the difference between λ and one" means? If so, it is a new term,
+yours to decide (S1).
+
+**A3 The shell in the toy.** The toy's spaces are tori. A shell with two whirlpool poles, the rod at its center as a
+collar between them, and a feed line to each pole has to be built from links. Which part of it is the anticurl, if (b):
+the poles, the feed lines, or the whole shell? *Published relative (general knowledge, to verify):* a flow on a sphere
+must have whirlpools whose indices add to 2 (Poincaré–Hopf, the hairy-ball theorem), so two poles is the simplest one.
+
+**A4 Your prediction for the soft runs** (program item 10: flat and damaged starts, and your X once built; words MEET /
+DO NOT MEET, FROZEN / ACTIVATED, DAMAGED). What it is up against (measured, on the rule-breaking rod with no penalty):
+untied, the first direction opens and the second does not follow (T30, T48, T53). The matter/antimatter surplus at the
+poles cannot be tested until signed twist is built (Update 97).
+
+## Open, 26 October: the hard rule and the twin X
 
 *After the fourth Codex audit (ASSUMPTIONS O159, VISION Update 129) and three readings of the same day
 (`docs/reading/notes/2026-10-26_constrained_moves_kcm.md`, `2026-10-26_subgraph_count_ensembles.md`,
@@ -14,7 +81,8 @@ question: what the runs and the reading say, the assistant's recommendation, and
 exact (arithmetic or complete enumeration), look (a sandbox look: can kill, never crown), published (read, with the
 note), ours (an interpretation, unverified).*
 
-**Q1 ★ Your hard rule freezes clean space. Keep it as is, extend the moves, or soften it?**
+**Q1 ★ Your hard rule freezes clean space. Keep it as is, extend the moves, or soften it?** *Answered 27 October,
+16:42 UTC: "proceed w soften" (VISION Update 133). Kept below for its reasons.*
 You confirmed the hard form on 25 October (squares held at exactly 3N; a move allowed only if it keeps the count).
 
 - *Exact (Update 128, as corrected by O159).* Out of flat six-link space (the 6 × 6 × 8 torus) no single switch keeps
@@ -41,7 +109,8 @@ You confirmed the hard form on 25 October (squares held at exactly 3N; a move al
   forbids the clean opening, and that is a result about the rule. If either finds a clean path, the push look can be run
   on the right family for the first time.
 
-**Q2 ★ What does a curled X that obeys your rule look like: where does its anticurl sit?**
+**Q2 ★ What does a curled X that obeys your rule look like: where does its anticurl sit?** *Answered in your terms 27
+October (the shell with two poles, the rod a collar between them); A2 and A3 above ask what it is in the toy.*
 Your "proceed" of 26 October answered a suggestion that ended "the shape of that starting X would be yours to
 describe". Nothing can be built until you describe it.
 
@@ -65,7 +134,9 @@ describe". Nothing can be built until you describe it.
   together, leaving clean space, or does it leave breakage? And it settles whether breakage is damage or your pair, which
   the rod runs could not (Update 127).
 
-**Q3 The pair tie f = (0, 0, a, 0), still marked "to confirm", with three things the audit found.**
+**Q3 The pair tie f = (0, 0, a, 0), still marked "to confirm", with three things the audit found.** *Restated 27
+October: each curled direction carries its own curling cost (the untied ladder), which gives each opening exactly a
+per point (Update 133); the pair tie is not adopted.*
 
 - *Exact.* Under it the first opening releases nothing and the second releases 2a per point, so it gives your total and
   your order (first nothing, second everything) but not half to each twin: "half each" would split the second release

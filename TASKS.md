@@ -1092,7 +1092,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    ledger reading took) and corrects in place with a dated marker.
 7. **From O163 (27 October, 14:45 UTC):** (a) the four-switch count at six links, redone with the corrected stage-2 bound
    (`sandbox/hard_rule_quads_look.py --restricted`, and `--full` for the exhaustive word): priced by the corrected
-   `--estimate` (running; `--sum sandbox/out/hard_rule_quads/estimate_corrected`), both hers to buy; the classifier
+   `--estimate` (read 27 October 19:06 UTC: about 21 hours restricted, 2 days exhaustive on the laptop, O163), both hers to buy and off her path since the soft rule; the classifier
    reads the rows as before. (b) `contraction.contract_layers` at x0 = L - 1 removes the old layers L - 3 and L - 2
    while `pool_mask` charges L - 2, L - 1, 0 and 1 (O163 (f); a registered kernel T71's layer arm ran under): a
    regression test with marker stores, then the owner's decision whether to fix it (rotate by -1) and rerun the layer
@@ -1101,6 +1101,12 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    Roth and Cointet 2011; Costeniuc, Ellis, Touchette and Turkington 2006; Bower section 5.8; Hirth and Lothe 1982;
    Gerstner, Kistler, Naud and Paninski 2014. Crossref before `REFERENCES.bib`. (e) The fourth report's F40 (the
    Coleman and causal-set cautions) still to be put into O158 or Update 126 with a marker.
+8. **The soft rule (VISION Update 133, the owner's "proceed w soften", 27 October 16:42 UTC):** (a) the term
+   μ (S − 3N)² in the six-link kernel, with rule-6 tests (networkx brute force, incremental exactness, constraint
+   preservation, same seed; μ = 0 draw for draw with the unpenalized chain). (b) Her answers A1 to A4 in
+   `docs/design/owner_questions_2026-10-24.md` (μ's scaling, what the shell's anticurl costs, the shell in the toy, her
+   prediction). (c) Then program item 10 of `docs/design/next_experiments_2026-10-26.md` pre-registered and run. The
+   four-switch count (item 7 (a)) is no longer on her path; its corrected estimate finishes for the record only.
 
 ## 26 October: the held-out stages of T71 and T74  ◑
 
@@ -1125,3 +1131,18 @@ or owed: the four-switch count at six links (3 (a), her agreement with Fable's h
 two-stories brief; the `layer_feed` guard fix (unblocked by O161); the gate null and the L = 24 size claim of item 4
 (wait on her prediction); the programme page's piece 3 sentence on the seam move, to be softened (a wrap effect), and
 piece 5 after T74, both at the next republish.
+
+## 30 October: the Koide member, the readings, and the first runs under the wave rule  ◑
+
+**Added 2026-10-30** (VISION addenda of this day; ASSUMPTIONS O169, O170; `docs/design/koide_gaps_2026-10-30.md`;
+`docs/reading/notes/2026-10-30_*.md`). Done this day: her decision that the Koide form is the first member of the mass
+system and its nine gaps; G1 adopted; the readings (Koide's originals, Brannen's neutrinos and hadrons, the quark
+triplets) with verdicts for G2, G5, G6, G8; G4 killed three ways; her decision "waves in the toy" (the amplitude rule
+adopted); T86 (LEAKS for every object) and T87 (SIGNED, the bipartition's sign) read at their held-out size.
+
+Owed by the owner: her confirmation or replacement of the inferred predictions of T86 (CARRIES) and T87 (SIGNED);
+what root-mass is (G8; the options stand together, the fork withdrawn); whether the sides' sign is her twist (O170).
+Next, in order, each pre-registered before it runs: (1) a wave carrier needs a new ingredient (links of unequal weight
+or a point term; O169's rule 11 answer), which is a decision under S1 before anything is built; (2) G9, reading the
+runs k from a wiring, which the angle rule needs before it predicts anything; (3) the strict-lane interference test of
+the brief's section 4 on whatever carrier (1) gives.

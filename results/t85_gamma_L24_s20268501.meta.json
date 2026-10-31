@@ -1,0 +1,33 @@
+{
+  "L": 24,
+  "seed": 20268501,
+  "alpha_used": -0.5,
+  "lam": 1.25,
+  "knot_switch": [
+    1129,
+    553,
+    13823,
+    13800
+  ],
+  "charges": [
+    8.0,
+    8.0,
+    8.0
+  ],
+  "e_knot": 96.0,
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "preregistration": "PREREGISTRATION.md section T85",
+  "provenance": {
+    "git_commit": "66ec80114d3023845c9d3ef95ddc653b85a5b415",
+    "git_dirty": true,
+    "git_untracked_count": 4,
+    "git_untracked": [
+      "results/t85_gamma_L16_s20268501.csv",
+      "results/t85_gamma_L16_s20268501.meta.json",
+      "results/t85_gamma_L16_s20268502.csv",
+      "results/t85_gamma_L16_s20268502.meta.json"
+    ]
+  }
+}
