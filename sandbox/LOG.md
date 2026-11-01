@@ -582,3 +582,4 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
 - 2026-11-01, 02:25 UTC: her whiteboard and picture of X as stacked one-sided dark matter (VISION Update 149); the programme claim updated (steps 1, 2, 3, 5, 8); waves decision (3) inferred taken; the face-diagonal stiffness is the next exact look.
 - 2026-11-01, 02:44 UTC: the claim confirmed; T88 (the pole test) pre-registered, exact rod wall 24.0 / 25.6 under the tie; stage 1 launched on the laptop; outreach draft (local) and paper draft started.
 - 2026-11-01, 03:00 UTC: the programme artifact (28 Oct) was stale; rebuilt from it with the 29-30 Oct particle rules, Update 149 and T88; republished.
+- 2026-11-01, 03:20 UTC: T88 stage 1 read (O171, Update 150); held-out prediction for L = 16 written; stage 2 launched.

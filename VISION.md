@@ -2076,6 +2076,28 @@ brought up to date from it, hers once she confirms the wording.
   get through" needs form C's step rule for a photon on a curled slab's diagonals, not written. (vii) "Matter breaches
   first" has nothing to test yet: the toy's twist has no dynamics. Nothing here is a result.
 
+Update 150 (2026-11-01, 03:20 UTC by the clock): **T88, the pole test, read at stage 1: the opening starts where the
+energy is and spreads from there, paid by the fed stores and not by what it releases; at the highest energy the longer rod
+seeds a second region; what opens is damaged.** Why this page changes: the first registered six-link run in which where
+the opening starts is the verdict (Update 149's "a big bang at one pole of the rod"), with her prediction ONE FRONT
+inferred and ours beside it. Details: ASSUMPTIONS O171; PREREGISTRATION T88, Amendment 1 (the L = 16 prediction, written
+before L = 16 runs).
+
+- **Measured.** Below the rod's exact wall nothing moves (NOTHING OPENS, 16 of 16). At 30 a store the word is ONE FRONT in
+  every cell: the opening starts at the fed layer in every replica and spreads both ways along the rod, then stalls. At
+  60 a store the short rod reads ONE FRONT and the longer rod SEVERAL, a second region ahead of the front. Her inferred
+  prediction holds in four opening cells of six and fails at the highest energy on the longer rod; ours fails there too.
+- **Exact, and the plain reading (ours).** One opened point releases 3a = 2.4 to 3.0; the next move costs 24 to 25.6. A
+  front that pays for itself out of its own release is impossible here by a factor of eight to ten. The energy that
+  advanced the front was the fed stores', and much of what it bought was damage (points with more than three open
+  directions: up to 60 % of the rod at the highest energy). So the toy says: energy placed at one place does start the
+  opening there, as her picture has it; it does not say that the opening then runs on its own, and under her tie it
+  cannot, because the release per point is small beside the wall.
+- **What this asks of her.** Whether the rod's opening in her picture is paid by the photons' stored curl energy all the
+  way (the fed stores, which is what ran) or is meant to feed itself once started (which this family forbids at these
+  settings); and whether a shared-bath form, where the release pools, is the next registered run. L = 16 runs now on the
+  rule's prediction.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

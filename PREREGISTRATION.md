@@ -9648,3 +9648,27 @@ front, the far side last; it says nothing about poles, which the toy has not got
 fed end" in this family: energy placed at one place still seeds the rod elsewhere. NOTHING OPENS at every E says the
 rod under the tie needs more than 60 a store at one end, and the energies are raised in a new registration, not here.
 Nothing here is about the real universe.
+
+**Amendment 1 (the held-out size), 2026-11-01, 03:20 UTC, written from stage 1 alone, before any L = 16 run.** Stage 1
+read (`python scripts/analyse_t88.py results --held-out`; twelve cells, 48 replicas, every one complete, energy conserved
+in every row). Cell words: E = 120, NOTHING OPENS at both λ and both L (4 of 4 each); E = 240, ONE FRONT at both λ and
+both L (4 of 4; 3 of 4; 3 of 4; 3 of 4); E = 480, ONE FRONT at L = 8 (3 of 4 at λ = 1.20; 4 of 4 at 1.25) and SEVERAL at
+L = 12 (3 of 4 at both λ). Every SEVERAL but one is a second open region ahead of the front before the far side opened;
+one (λ = 1.25, E = 480, L = 12, replica 3) did not start at the fed end. t_far cell means: λ = 1.20, E = 480: 2,733 (L = 8,
+3 reached), 5,000 (L = 12, 3); λ = 1.25, E = 240: 7,550 (L = 8, 2), 8,900 (L = 12, 1); λ = 1.25, E = 480: 900 (L = 8, 3),
+2,525 (L = 12, 4); the other cells never reached the far side in 10,000 sweeps.
+
+**The prediction for L = 16, by the rule fixed above (the straight-line extrapolation; the word the two sizes share):**
+E = 120, NOTHING OPENS; E = 240, ONE FRONT at both λ, t_far at λ = 1.25 10,250 (range 7,750 to 12,750), at λ = 1.20 no
+fit (never reached at either size); E = 480, UNDECIDED by the rule (the two sizes differ), t_far 7,267 (3,710 to 10,824)
+at λ = 1.20 and 4,150 (2,394 to 5,906) at λ = 1.25. *Ours, beside the rule and not scored:* at E = 480 the trend with L
+says SEVERAL at L = 16. The size claim is scored at L = 16 alone; stage 2 (`scripts/make_t88_configs.py --held-out`,
+6 cells) runs after this amendment is committed.
+
+**Disclosed with the reading (exact, arithmetic on the registered numbers).** The release of one opened point under the
+tie is 3a = 2.4 (λ = 1.20) or 3.0 (λ = 1.25), and the rod's cheapest move out costs 25.6 or 24.0, so a per-vertex store
+fed only by its own point's release can never pay the next move: a self-sustaining front, paid by what it releases, is
+impossible in this protocol by a factor of eight to ten. What advanced from the fed end was paid by the fed stores, and
+the opened region is heavily damaged (points with d > 3: 14 to 26 of 128 at E = 240, λ = 1.20; 44 to 79 of 128 at
+E = 480), so "front" here is the registered word for where the opening started and spread, not a clean opening into
+flat space. This is recorded before stage 2 and does not change its rule.
