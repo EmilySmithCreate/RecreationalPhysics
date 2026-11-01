@@ -187,6 +187,8 @@ Questions: at which λ does the order change? Is there any λ with a first-order
 
 ## T9. Unexplained drift  ☐
 
+**Status, 2026-11-01.** Being completed as PREREGISTRATION T89: the seven λ = 1 sizes already on the record (36 to 676) give 1/g(φ*) = a + b ln N with 16 b = 1.10 to 1.21; [Kelly22] Eq. (4.65) derives β(N) = β̃ log N from the N log N entropy of regular graphs and says it contradicts [KTB19]'s N-independence; N = 1156 is held out, predicted before it ran (g(0.5) = 3.43 ± 0.13, g(0.65) = 2.79 ± 0.11), running on the laptop. The owner's prediction is owed before it is read.
+
 **Status, 2026-09-22.** Not attempted since. Kelly's thesis abstract ("the critical temperature appears to be asymptotically nonfinite") is the one published statement that bears on it; the thesis PDF is now in `docs/reading/` locally (PDFs are gitignored) and has not been read.
 
 **Correction, 2026-09-21: the supporting citation is withdrawn.** [DQM25] was recorded as reporting the transition moving with ln N; it was read in full by the owner and **it does not say that.** The claim came from a third-party review page, not the paper. The drift is now supported by our own measurement and by the non-collapse visible in [KTB19] Fig. 8a, and by nothing else.
