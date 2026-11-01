@@ -589,3 +589,4 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
 - 2026-11-01, 15:48 UTC: T89 N = 1156 read: UNSCORED by the gate; cooling-leg crossings inside their ranges; O172, Update 151, T9 half-ticked.
 - 2026-11-01, 16:39 UTC: her nine-item message recorded (one passage kept local); four readings launched as a verified workflow; the routes note corrected on opposite kinds and on the observer window.
 - 2026-11-01, 17:19 UTC: four verified reading notes committed with 29 bibliography entries; TASKS item 6 of the 6 October reviews updated; GI resources brought to 1 November on their own branch (e19ae93f, CI green).
+- 2026-11-01, 18:04 UTC: T89 Amendment 1 enacted (LOGARITHMIC DRIFT on the cooling leg, post hoc), Amendment 2 written and stage 3 launched; her nine-item message recorded.
