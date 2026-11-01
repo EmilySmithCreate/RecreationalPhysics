@@ -19,6 +19,11 @@
 %     number of seeds (T10, T17, T37); the T51 cooling result (columns, excess energy and pieces of each kind
 %     against t_cool); the wiring of the three kinds (the plain edition's drawings). Draw 1 and 2 by script
 %     from results/, as paper 1's are.
+% (6) Sec. VIII (added 1 November 2026) recasts what the paper already measures in the form the gravitational-wave
+%     groups use for a first-order transition. No new run; every number there is on the record (O76, O77, O88, O93,
+%     O104, O105, O107, O171) or is arithmetic on the saved T37 rows (seed means; first-seed times). The reading
+%     behind it is docs/reading/notes/2026-11-01_gravitational_waves_first_order_transition.md. The six-link
+%     results quoted there (T53, T88) carry VISION Update 24's caveat: the reproduction gate is open.
 
 \begin{document}
 
@@ -29,7 +34,7 @@ kinds, their number, and how long they last}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 14 October 2026}
+\date{DRAFT, 1 November 2026}
 
 \begin{abstract}
 In a companion paper a $4 \times L$ torus with one direction curled was shown to be metastable, and to convert
@@ -301,6 +306,96 @@ columns sooner. \emph{The count per length does not depend on size} at the one c
 $0.0083$ and $0.0093$ columns per column of torus at $L = 128$, 256 and 512, each pair within two standard
 errors. At $L = 512$, 7 of 40 products ended as two separate pieces.
 
+\section{Completion statistics in the form used for gravitational waves from a first-order transition}
+\label{sec:gw}
+
+Predictions of the gravitational-wave spectrum of a cosmological first-order transition are written in terms of
+four numbers evaluated at the transition \cite{CapriniEtAl16,CapriniEtAl20,HLLP21,Athron23}: the temperature $T_*$;
+the strength $\alpha$, the energy released over the thermal energy of the old phase (Ref.~\cite{CapriniEtAl16},
+Eq.~(4); Ref.~\cite{Athron23}, Eq.~(5.23)); the inverse duration $\beta/H_*$, which fixes the mean bubble separation
+through what Ref.~\cite{HLLP21} (its Eq.~(7.21)) writes as
+\begin{equation}
+  n_{\rm bubble} = \frac{\beta^3}{8\pi v_w^3} = \frac{1}{R_*^3};
+  \label{eq:nbubble}
+\end{equation}
+and the wall speed $v_w$; with efficiency factors $\kappa$ that split the release among the walls, bulk motion of
+the fluid and heat (Ref.~\cite{CapriniEtAl16}, Sec.~2.2). That literature is a target for the form of this report,
+not evidence for anything in it. This section recasts what the paper already measures as pure numbers in the model's
+own units, so that a reader from those groups sees at once what could be used and what could not. No run was made
+for it, no number elsewhere in the paper changes, and nothing here predicts a signal: the model has no fluid, and
+the conversion is the decay of a metastable arrangement under fixed rules, not a thermal transition in a cooling
+bath.
+
+\emph{(a) Completion mode (measured; four links, $\lambda = 1.25$, $4 \times L$ tori unless said).} Started at one
+place, isolated, the conversion completes as one domain with two fronts, at $N = 64$ to 288 (Sec.~\ref{sec:one}) and
+at $L = 96$, 192 and 384 (T47, every replica of 48 converting fully). In an external bath at fixed $g$ it completes
+by several seeds whose domains coalesce, on average in every cell of T37 (Sec.~\ref{sec:count}; the counts are in
+item (b)) and of T51 (Sec.~\ref{sec:cooling}); at $L = 512$, 7 of 40 products of T51 ended as two separate pieces, and the warm long tubes
+of T37 melted instead of completing. Two results from the six-link version of the model (three directions; a
+different setting, carrying the open reproduction-gate caveat of the project record, VISION Update 24) read the
+same distinction: a connected $4 \times 4 \times L$ torus with two directions curled, in a bath at fixed $g$, opened
+its first direction from several places, a median of 2 open regions (1 to 6) at $L = 72$ and 1 at $L = 18$ when a
+tenth of its vertices had opened (T53, SEVERAL); the same torus under the ``all at the last'' tie, isolated and
+fed at one end with 30 units in each of eight stores, opened as one front from the fed end at $L = 8$, 12 and 16,
+and from several places at 60 units a store from $L = 12$ up (T88, ONE FRONT and SEVERAL), with nothing opening at 15
+a store, below the exact wall of 24 to 25.6. In T88 the front was paid by the fed stores and never by its own release
+(exact: one opened vertex releases 2.4 or 3.0 against that wall), and the opened region was heavily damaged, so
+``front'' there names where the opening started and spread, not a clean product.
+
+\emph{(b) Seed density per unit length (measured; the model's one-dimensional form of Eq.~\eqref{eq:nbubble}).}
+Means of the registered seed count over the saved T37 rows: at $g = 1.25$, $20.6 \pm 0.9$ seeds in a torus of 1,024
+columns, one per 50 columns; at $g = 1.5$, $1.93$, $4.50$, $9.20$, $19.0$ and $33.1$ seeds at $L = 64$, 128, 256,
+512 and 1,024, one per 27 to 33 columns; at $g = 1.75$, $3.05$, $6.78$, $13.1$, $22.3$ and $38.5$, one per 19 to 27
+columns (standard errors 0.14 to 0.98). The growth exponents 0.92 and 0.78 are in Sec.~\ref{sec:count}. The
+nucleation rate by T37's registered definition, $I = 1/(L\,\bar t_1)$ with $\bar t_1$ the mean sweep of the first
+seed, is about $7 \times 10^{-6}$, $3$ to $5 \times 10^{-5}$ and $1.0$ to $1.5 \times 10^{-4}$ seeds per column per
+size-fair sweep at $g = 1.25$, 1.5 and 1.75 (arithmetic on the saved first-seed times; on the chain's own sweep
+it falls as $1/L$, Sec.~\ref{sec:cooling}). At fixed $g$ this rate is constant in time, and with a front speed $v$ the
+one-dimensional count is $k = (L/2)\sqrt{\pi I / v}$ \cite{KJMA}, the form T37's third prediction used; the
+cosmological rate instead grows as $e^{\beta t}$ as the universe cools (Ref.~\cite{CapriniEtAl16}, Eqs.~(1) to
+(3)), so a bath at fixed $g$ has no $\beta$. The relics follow the seeds: one column per 100 to 120 columns of torus
+at $g = 1.25$ (T51), and in T37's cell at that coupling about one column per three seeds (Sec.~\ref{sec:count}).
+
+\emph{(c) The share of the release left in defects (measured; exact for each graph read).} The release is
+$4(\lambda - 1) = 1$ per vertex. After the opening and a quench, $4.3\%$ of it is held in defects; after cooling
+over 300,000 size-fair sweeps, $1.3 \pm 0.3\%$, falling as $t_{\rm cool}^{-0.34 \pm 0.06}$ from 10,000 upward
+(Table~\ref{tab:t51}). What holds it at the slowest cooling is a fixed population: per 1,024-vertex product about
+0.33 knots of two kinds (20 to 30 units), 0.2 double columns (8 units) and 0.13 columns (14 units), about one knot
+and one double column per three to five products and one column per eight, each a local minimum
+(Sec.~\ref{sec:kinds}), the number of knots and double columns set at the opening and not by the cooling. A single 14-unit column holds $(24\lambda - 16)/[4(\lambda - 1)N]$ of the
+release, 22\% at $N = 64$ and falling as $1/N$ (exact).
+
+\emph{(d) The front's speed (measured, isolated, four links).} The front's pace is steady: the pace ratio of T47
+(1 for a fixed speed, 2 for diffusive spreading) has medians 0.85 to 1.28 at $L = 96$, 192 and 384 in both reservoirs.
+Its speed per chain sweep halves as $L$ doubles (0.0078, 0.0041, 0.0021 columns per sweep with a shared reservoir
+of $2N$ stores; 0.0054, 0.0028, 0.0013 with one store per vertex) because the chain offers any one local pair of
+edges about $2/N$ times a sweep; on the size-fair clock the speed is 0.031 to 0.034 columns per fair sweep with the
+shared reservoir and 0.020 to 0.022 with local stores, within 8\% of their means across sizes. The speed depends on
+the energy stored ahead of the front: in a $4 \times 192$ tube with one store per vertex, a band of 16 columns given
+$e$ units per vertex (all below the 12 that would let the band open by itself) was crossed in a median 6,170 sweeps
+at $e = 0$, 3,310 at $e = 6$ and 2,750 at $e = 10$; the crossing time relative to the bare stretch on the other side
+of the seed was 1.13, 0.97, 0.80 and 0.71 at $e = 1$, 3, 6 and 10 (T50: no effect at 1 and 3, faster at 6 and 10).
+
+\emph{What each stands in for, and what cannot be supplied (our reading, unverified).} $T_*$: nothing. The coupling
+$g$ plays the part of a temperature in the acceptance rule, in the model's own units, and the openings above
+happened at $g = 1.25$ to 1.75; there is no kelvin and no $g_*$. $\alpha$: the numerator is exact, $4(\lambda - 1)$
+per vertex; the denominator, the thermal excess energy of the curled phase at the opening coupling, is not measured
+in this paper, so $\alpha$ is not supplied here, and in the formulas it enters only through $\kappa\alpha/(1 +
+\alpha)$, the share that becomes bulk motion, which has no counterpart in a model without a fluid. $\beta/H_*$: item
+(b) is the model's $n_{\rm bubble}$ in one dimension, seeds per column and a rate per column per fair sweep; it
+becomes $\beta/H_*$ only with a length for a column and a Hubble time, neither of which the model has, and at fixed
+$g$ the rate has no $\beta$ at all. $v_w$: item (d) is a fixed speed in columns per fair sweep, with a measured
+dependence on stored energy; there is no speed of light to divide by and no sound speed has been defined for the
+open phase, so $v_w$ is not supplied. $\kappa$: item (c) is a defect-energy fraction of the release, about 1\% at
+the slowest cooling and set by the seeds; the walls' share $\kappa_\phi$ radiates during collisions and the heat
+share thins with expansion, while these knots neither move nor radiate and, being a fixed number of objects, would
+thin as matter does, so the fraction has no place in that energy budget and is reported as what it is. There is no
+$K$, no $\bar U_f$ and nothing for turbulence. Of the four inputs, then, the model offers a qualitative version of
+one (the completion mode and seed density behind $\beta/H_*$), a shape without a scale for another ($v_w$), the
+numerator of a third ($\alpha$) and nothing for the fourth ($T_*$); every amplitude in the literature needs the
+kinetic energy fraction of a plasma, and the model has no plasma. A map from the sweep to a unit of time, if one is
+ever decided, is what would be needed before any of these numbers became a frequency or an amplitude.
+
 \section{Discussion}
 \label{sec:discussion}
 
@@ -341,8 +436,16 @@ the relics followed in Secs.~\ref{sec:lifetime} and \ref{sec:cooling} were, has 
 differing short period joined at defects are also the majority outcome of the companion paper's isolated runs
 when the reservoir is small or the curling cost larger \cite{paper1}.
 
+\emph{Later results, and what they mean for this paper.} After the measurements above, the six-link rod fed at one
+end was found to open as one front from the fed end at 30 units a store and from several places at 60 (T88,
+1 November 2026; Sec.~\ref{sec:gw}), and the completion statistics of this paper were cast in the form the
+gravitational-wave groups use (Sec.~\ref{sec:gw}). Neither changes a number here. The second says what a reader
+from those groups could take (the completion mode, the seed density per length, the defect fraction of the release,
+a front of fixed speed that runs faster where energy is stored) and what no result of this model can give them (any
+quantity with a unit, and so any frequency or amplitude).
+
 \emph{Not claimed:} anything about the real universe; a relation between the model's sweep and a cosmological
-clock; that the knots and double columns never anneal; that the list of kinds is complete; a law for the fall
+clock; a gravitational-wave signal of any kind; that the knots and double columns never anneal; that the list of kinds is complete; a law for the fall
 with cooling time; or that a relic in three dimensions, or with the model's vertices treated as
 interchangeable, behaves the same way. Under a rule that also charges for loops of six, tested since, the
 product widens and holds flaws throughout; there the defects are the main obstacle to a clean product and not
@@ -380,6 +483,19 @@ symmetry breaking, Int. J. Mod. Phys. A 29, 1430018 (2014); arXiv:1310.1600. (Re
 verify.)
 \bibitem{BBJC26} A. Bora, S. S. Bakshi, H. Jang and G.-W. Chern, Cooperative domain-wall dynamics in a
 two-dimensional quasiclassical Holstein model, arXiv:2609.28436 (2026). (Read in part.)
+\bibitem{CapriniEtAl16} C. Caprini, M. Hindmarsh, S. Huber, T. Konstandin, J. Kozaczuk, G. Nardini, J. M. No,
+A. Petiteau, P. Schwaller, G. Servant and D. J. Weir, Science with the space-based interferometer eLISA. II:
+Gravitational waves from cosmological phase transitions, JCAP 04, 001 (2016); arXiv:1512.06239. (Read in part:
+Secs. 1.1, 2.1 and 2.2.)
+\bibitem{CapriniEtAl20} C. Caprini, M. Chala, G. C. Dorsch, M. Hindmarsh, S. J. Huber, T. Konstandin, J. Kozaczuk,
+G. Nardini, J. M. No, K. Rummukainen, P. Schwaller, G. Servant, A. Tranberg and D. J. Weir, Detecting gravitational
+waves from cosmological phase transitions with LISA: an update, JCAP 03, 024 (2020); arXiv:1910.13125. (Read in
+part: Secs. 2.1 to 2.3 and 3.)
+\bibitem{HLLP21} M. B. Hindmarsh, M. L\"uben, J. Lumma and M. Pauly, Phase transitions in the early universe, SciPost
+Phys. Lect. Notes 24 (2021); arXiv:2008.09136. (Read in part: Secs. 7 and 8.2.)
+\bibitem{Athron23} P. Athron, C. Bal\'azs, A. Fowlie, L. Morris and L. Wu, Cosmological phase transitions: from
+perturbative particle physics to gravitational waves, Prog. Part. Nucl. Phys. 135, 104094 (2024); arXiv:2305.02357.
+(Read in part: Secs. 5.1, 5.3, 5.4 and 6.2 to 6.5.)
 \end{thebibliography}
 
 \end{document}
