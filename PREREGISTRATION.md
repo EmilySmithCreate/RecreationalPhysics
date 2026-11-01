@@ -9579,3 +9579,72 @@ T86: LEAKS for every kind. Medians: column MODE 0.178, STAY(π/2) 0.157 (predict
 T87: SIGNED at every radius: 183 of 191 columns at r = 2 and r = 3 (95.8 %, predicted 90 to 97 %, r = 2 within 3 points: inside), 184 at r = 4, 186 at r = 6. **Verdict: SIGNED.** The owner's inferred SIGNED holds; our MIRROR fails at every size. The cause, from the sandbox check recorded in Amendment 1 and not rescored: every signed column has a reversal that swaps the two sides, so the loop's two ways round are mirror images once the two kinds of point are exchanged; under the toy's standing convention (renamings within a side, Q15) that is a sign, and it is the bipartition's.
 
 **T86 and T87, the owner's confirmation, 2026-10-30, 14:32 UTC (after the readings): "agree with your infrences". The inferred predictions (T86 CARRIES for the quarter-knot and the column; T87 SIGNED) are hers. The verdicts stand as read: her T86 prediction fails, her T87 prediction holds.**
+
+## T88. The pole test: does a rod fed at one end open as one front from that end? (piece 5; VISION Update 149; written 2026-11-01, before any run; the owner's prediction inferred from her picture of the same day and marked so)
+
+### Why
+
+The owner's picture of 1 November (Update 149): the curled slab is stacked one-sided dark matter; at its center the
+rod encloses a zero-dimensional space; photons cannot pass the slab but apply their curl energy, "and when there is
+enough a big bang happens at one pole of the rod", from which a new spacetime is born. The toy cannot build a rod
+with ends (every valid state is six-regular) and has no photons that push; what it can test is the part of her claim
+that is about the opening itself: energy delivered at one place on the rod, does the opening start there and advance
+along the rod as one front, or does it start in several places? In a bath, where energy arrives everywhere, the rod
+opened in several places (T53, SEVERAL; T56 under the tie, OPENS in a minority of cells); the two-dimensional tube
+given energy at one place opened as one front (T48's control, ONE SPACE at λ = 1.25). This is the first six-link run
+in which where the opening starts is the verdict.
+
+**Disclosed.** Known before writing: T53 and T56 as read (O105 and the T56 entries); the slab's tied barriers of T54
+(27 at λ = 1.25, 45 at 1.20, for the one-curled slab, not the rod); that under the tie a damaged point costs 0
+(O106's caution), so the energy may break the fed end rather than open it. Computed today before the energies were
+chosen (exact, every switch of the 4 × 4 × 8 rod): the rod's cheapest single move out under the tie costs 24.0 at
+λ = 1.25 and 25.6 at 1.20 (1,536 such moves), the next 28.0 and 28.8. A per-vertex store must hold the whole cost of
+a move, so the energies below are set as multiples of that wall per store: 15 (below it, a control), 30 and 60. A
+first version of this section, never run, spread E = 60 to 240 over 16 stores, and its test showed nothing could
+move. No run of this protocol exists. The runner, the analyser and their tests were written today and run on nothing
+but the exact rod.
+
+### What will be run
+
+`scripts/run_rod_pole.py` (tests in `tests/test_t88.py`): the exact rod 4 × 4 × L, six links, named points, under
+the tie "all at the last", f = (0, a, 2a, 0), a = 4(λ − 1); sealed, per-vertex stores (`sealed_tie_d.run_sealed_bath_table_d`,
+by_vertex), no leak; the whole energy E placed at the start in the side-0 stores of the first layer along the open
+direction (8 stores, E / 8 each), nothing elsewhere. λ ∈ {1.20, 1.25}; E ∈ {120, 240, 480} (15, 30 and 60 a store
+against the wall of 24 to 25.6); 4 replicas a cell;
+10,000 chain sweeps read every 100; final graphs saved. Seeds from 20268801 in the order `scripts/make_t88_configs.py`
+writes them. Time is the chain's own sweeps.
+
+- **Stage 1 (12 cells, on the laptop):** L = 8 and 12 (N = 128, 192).
+- **Stage 2, the held-out size (rule 14; 6 cells):** L = 16 (N = 256). Nothing at L = 16 runs until stage 1 has been
+  read and the prediction for it is committed as a dated amendment.
+
+### Definitions, fixed now (`scripts/analyse_t88.py`, written and tested before any run)
+
+- A point is **open** when d = 3 (`local_dimension_d`: both curled directions open there); **damaged** when d > 3.
+- **opened:** some reading has a connected region of at least 16 open points. **t_first:** its sweep.
+- **from the end:** at t_first the fed layer z = 0 holds at least one open point.
+- **t_far:** the first sweep at which the far layer z = L / 2 holds at least 8 of its 16 points open; none if never.
+- **ONE FRONT:** opened, from the end, and at most one open region at every reading up to t_far (to the end if never).
+- **SEVERAL:** opened, but not from the end, or two open regions at some reading before t_far.
+- **NOTHING OPENS:** not opened.
+- A cell's word is its replicas' majority word; a tie goes to SEVERAL. Damage is reported beside, not scored.
+
+### Predictions
+
+- **The owner's (inferred from Update 149, "a big bang happens at one pole of the rod", and her front of claim 2;
+  marked inferred until she confirms): ONE FRONT** in every cell that opens.
+- **Ours:** NOTHING OPENS at E = 120 at both λ (15 a store, below the wall; nothing can move); ONE FRONT at E = 240 and
+  480 at λ = 1.25, where the release of 3a = 3 per point feeds the front and the stores keep it local; at λ = 1.20 ONE
+  FRONT at 480 and a mix at 240, since one store there holds 30 against a wall of 25.6 and the release is 2.4 a point. SEVERAL would need a second seed ahead of the front, which per-vertex stores starve. Damage
+  at the fed end at E = 240 in some replicas.
+- **Held-out (rule 14):** after stage 1, the L = 16 cell words and the t_far means with ranges are written as a dated
+  amendment from the straight-line extrapolation of L = 8 and 12 (a front at a fixed speed makes t_far grow with the
+  distance to the far side); the size claim is scored at L = 16 alone.
+
+### What each outcome means
+
+ONE FRONT where it opens is the shape her picture asks for, in the toy: one seed where the energy is, one advancing
+front, the far side last; it says nothing about poles, which the toy has not got. SEVERAL kills "one front from the
+fed end" in this family: energy placed at one place still seeds the rod elsewhere. NOTHING OPENS at every E says the
+rod under the tie needs more than 60 a store at one end, and the energies are raised in a new registration, not here.
+Nothing here is about the real universe.
