@@ -62,9 +62,15 @@ topics, two can reach that door in this toy, one needs an ingredient the toy lac
   5 GeV. That is her guess of 5 October in published form, with a number attached.
 - **What would be a prediction.** Asymmetric dark matter already predicts the mass scale; a model that gives the *same*
   asymmetry mechanism to both would predict the ratio of the two number densities, and then the dark mass. Her picture
-  (the front of a sharp change makes the excess, Update 42) would have to say what sets the two excesses. The toy has
-  nothing that comes in opposite kinds, so this is a design question, not a run. Dark energy as "the energy of space"
-  carries the cosmological-constant problem openly (Update 41) and predicts nothing until a size is derived.
+  (the front of a sharp change makes the excess, Update 42) would have to say what sets the two excesses. *Corrected
+  the same evening, after the owner's objection:* the toy does have something that comes in opposite kinds. A curled
+  loop's two ways round differ by which kind of point sits where, so every curl carries a colour sign (exact, T87
+  SIGNED, O170), and her picture puts the two colours at the two poles of the shell (Updates 133, 149). What the record
+  does not yet have is a measurement in which anything sorts the two colours apart: the shell has exact poles as a
+  shape (Update 134's addenda), the sorting is her claim, and signed twist cannot yet be read from a wiring (G9). So the
+  design question is narrower than first written: not "what comes in two kinds" but "what moves one kind toward one
+  pole", and that is a run to design once twist can be read. Dark energy as "the energy of space" carries the
+  cosmological-constant problem openly (Update 41) and predicts nothing until a size is derived.
 - **Cheapest next step.** A reading, not a run: the asymmetric dark matter reviews in full, to list what a mechanism
   must specify and which of those the hypothesis already fixes.
 - **Collaboration.** This is a theory community reachable by a note that asks one question: whether a single
@@ -75,12 +81,24 @@ topics, two can reach that door in this toy, one needs an ingredient the toy lac
 - **Nearest community.** The measure problem of eternal inflation and anthropic reasoning (Bousso's causal entropic
   principle, Freivogel's review, Hartle and Srednicki; read 12 to 19 October, `2026-10-19_causal_entropic_principle.md`,
   `2026-10-19_observer_window_endpoints.md`); Smolin's cosmological natural selection.
-- **What would be a prediction.** Measures predict distributions over constants, and the one observable they have ever
-  touched is the cosmological constant's value (Weinberg's argument). Hers would have to say which constant it ranks
-  and give the distribution. The toy's counterpart, the (D, λ) map, counts no observers. Said plainly: this topic cannot
-  produce an observation in this programme as it stands, and the published community says the same of its own measures.
-- **Cheapest next step.** None that leads to data. It stays what Update 44 made it: her philosophy, written down with its
-  published relatives named.
+- **What would be a prediction.** *Corrected the same evening, after the owner's objection; the first version said this
+  topic cannot produce an observation, which overstated it.* The programme already has the loop-measure paper
+  (`docs/papers/loop_measure/paper.tex`; T72, O138): her measure stated (per universe, by its own age, once per
+  civilization, weighted by the comoving volume of the causal diamond), computed in standard cosmology with rules written
+  before the numbers. What it found: under her counting unit every stellar class is typical and the published "we are
+  early by a thousandfold" returns only under units that weight a planet by how long it lives; the one input that moves
+  the peak is Carter's hard-steps delay. What it predicts that was not put in: the paper names candidates, and one is
+  observational and independent of any observer. The diamond's far edge is the past light cone of the universe's end,
+  so the weight depends on how dark energy behaves late. A true constant closes the diamond and keeps our age typical;
+  the published model's dark energy, falling as its coupling runs, never closes it and would make our age early. The
+  measured equation of state of dark energy (DESI's w, its drift with redshift) therefore separates the two pictures.
+  That is a real observable, and it is the measure's one genuine test so far. What the paper also says, and what the
+  "fudge" objection cuts both ways on: her own class (sun-like stars with the hard-steps delay) was built from our case
+  with the numbers known, so "typical" there is a declared assumption holding together, not a finding.
+- **Cheapest next step.** Write the dark-energy fork as a pre-registered prediction with a number: which range of w
+  and dw/dz keeps the diamond closed, scored against the next DESI release. That turns the paper's last paragraph into
+  the measure's first held-out test. The hard-steps delay and the dinosaur extinction's timing are inputs to the delay
+  distribution, not to the fork.
 - **Collaboration.** Philosophers of physics and the FQxI essay circuit read this kind of argument; that is attention of
   a different kind, and it does not need a run.
 
