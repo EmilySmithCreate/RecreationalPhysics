@@ -2,7 +2,8 @@
 
 **Why this exists.** The owner wrote on 31 October 2026: "We need the toy to include waves." Under S1 a new ingredient's
 form is fixed in writing by her before it is built. This page lays out what a wave needs that the toy lacks, three forms,
-and one recommendation. Nothing here is built. Kinds are labeled: exact, built, ours, hers.
+and one recommendation. Form B is built (section 3a); nothing has been run on the toy's states. Kinds are labeled:
+exact, built, ours, hers.
 
 ## 1. What the toy has and lacks (exact, built)
 
@@ -46,11 +47,21 @@ when the diagonal is not a lattice step (interpolation or a per-link delay).
 B first, with m = 4 pinned by her one c, then C on top of the halo B gives at rest. A alone answers nothing she has
 asked. Her decisions needed, in order: (1) the clock is one sweep = one link of light (B and C both need it). *Her
 question of 31 October, 23:27 UTC, "Can we write time as links per sweep?", is read as taking this: time in sweeps,
-speeds in links per sweep, c = 1 link per sweep; INFERRED until she confirms. Still to name: which sweep, the chain's
-(2N attempts) or the fair sweep of O90 (N/96 chain sweeps); ours, the chain sweep for a wave on a fixed lattice, the
-fair sweep where the wave runs beside the chain.* (2) m is
-pinned by one c, not scanned; (3) whether the face diagonals carry a second length field (the "×" polarization) now or
-later; (4) C's step rule for a photon on a non-lattice diagonal.
+speeds in links per sweep, c = 1 link per sweep. **CONFIRMED by her, 2026-11-01, 01:45 UTC ("Yes proceed"), with the
+sweep as written: the chain's sweep (2N attempts) for a wave on a fixed lattice, the fair sweep of O90 (N/96 chain
+sweeps) where the wave runs beside the chain.** (2) m is
+pinned by one c, not scanned: *read as taken with her "proceed", which answers the recommendation naming it; INFERRED
+until she objects.* (3) whether the face diagonals carry a second length field (the "×" polarization) now or
+later: open. (4) C's step rule for a photon on a non-lattice diagonal: open.
+
+## 3a. Built (2026-11-01)
+
+Form B is built: `src/graphity/edge_wave.py`, tests in `tests/test_edge_wave.py` (rule 6: the stiffness against an
+independently built dense matrix, the plane-wave frequency exactly, energy conserved without drift, the travelling
+wave at one link per sweep, families independent, same seed bit for bit). Exact: ω² = (4/m) Σ 2(1 − cos kᵢ), long-wave
+speed 2/√m, so m = 4 gives c = 1 link per sweep; band top ω² = 12; leapfrog dt = 0.05 sweeps. Not built: the face-diagonal
+field (decision (3)) and form C (decision (4)). Nothing has been run on a state of the toy; the first use, a "+" pulse
+beside the halo of a relic, waits on a pre-registration with her prediction.
 
 ## 4. What no form can show
 
