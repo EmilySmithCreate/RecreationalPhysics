@@ -9672,3 +9672,17 @@ impossible in this protocol by a factor of eight to ten. What advanced from the 
 the opened region is heavily damaged (points with d > 3: 14 to 26 of 128 at E = 240, λ = 1.20; 44 to 79 of 128 at
 E = 480), so "front" here is the registered word for where the opening started and spread, not a clean opening into
 flat space. This is recorded before stage 2 and does not change its rule.
+
+**Amendment 2 (the held-out size read), 2026-11-01, 03:54 UTC.** L = 16, six cells, 24 replicas, every one complete,
+energy conserved in every row (`results/t88_rod_l16_*.csv`). **Words, scored against Amendment 1:** E = 120, NOTHING OPENS
+at both λ (4 of 4 each): AS PREDICTED. E = 240, ONE FRONT at both λ (4 of 4 at 1.20; 3 of 4 at 1.25): AS PREDICTED. E = 480,
+SEVERAL at both λ by the tie rule (2 ONE FRONT, 2 SEVERAL in each cell): the rule's word was UNDECIDED, so this cell is
+not scored; our unscored guess, SEVERAL, is what the rule returns. **Numbers:** λ = 1.25, E = 480: t_far 2,767 (3 of 4
+reached), inside the range 2,394 to 5,906: AS PREDICTED. λ = 1.20, E = 480: no replica reached the far side in 10,000
+sweeps, where the range was 3,710 to 10,824; λ = 1.25, E = 240: none reached it, where the range was 7,750 to 12,750. Both
+ranges run past the run's length, so neither is confirmed nor refuted within the window: UNSCORED BY THE WINDOW, and said
+so rather than counted either way. **The size claim's verdict (rule 14):** the words hold at the held-out size in every
+scorable cell; the one scorable number holds; the two others could not be scored in 10,000 sweeps. The trend with length at
+E = 480 (ONE FRONT at L = 8, SEVERAL at 12 and 16) stands. Damage at the end: 18 to 40 of 256 points at E = 240, 39 to 79 at
+E = 480. **Verdict of T88:** ONE FRONT at 30 a store at every size; SEVERAL at 60 a store from L = 12 up; NOTHING OPENS
+below the wall; the front is paid by the fed stores and cannot pay for itself (Amendment 1, exact).

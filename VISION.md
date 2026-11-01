@@ -2095,8 +2095,11 @@ before L = 16 runs).
   cannot, because the release per point is small beside the wall.
 - **What this asks of her.** Whether the rod's opening in her picture is paid by the photons' stored curl energy all the
   way (the fed stores, which is what ran) or is meant to feed itself once started (which this family forbids at these
-  settings); and whether a shared-bath form, where the release pools, is the next registered run. L = 16 runs now on the
-  rule's prediction.
+  settings); and whether a shared-bath form, where the release pools, is the next registered run.
+- **The held-out size, read 03:54 UTC (Amendment 2; O171).** At L = 16 every scorable word held: nothing below the
+  wall, ONE FRONT at 30 a store at both curling costs; at 60 a store the word is SEVERAL, as the trend said and as our
+  unscored guess had it. The one far-side time the window could score held; two ranges ran past the window and are
+  unscored. T88's verdict stands as above, at three sizes with the largest held out.
 
 ## The target ("the spot")
 
