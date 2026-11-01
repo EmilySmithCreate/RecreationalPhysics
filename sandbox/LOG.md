@@ -581,3 +581,4 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
 - 2026-11-01, 01:45 UTC: her 'Yes proceed': waves brief decision (1) confirmed (time in sweeps, c = 1 link per sweep, chain sweep on a fixed lattice); form B built in the strict lane (`graphity.edge_wave`, 8 tests); decision (2) inferred from 'proceed'; (3) and (4) open.
 - 2026-11-01, 02:25 UTC: her whiteboard and picture of X as stacked one-sided dark matter (VISION Update 149); the programme claim updated (steps 1, 2, 3, 5, 8); waves decision (3) inferred taken; the face-diagonal stiffness is the next exact look.
 - 2026-11-01, 02:44 UTC: the claim confirmed; T88 (the pole test) pre-registered, exact rod wall 24.0 / 25.6 under the tie; stage 1 launched on the laptop; outreach draft (local) and paper draft started.
+- 2026-11-01, 03:00 UTC: the programme artifact (28 Oct) was stale; rebuilt from it with the 29-30 Oct particle rules, Update 149 and T88; republished.
