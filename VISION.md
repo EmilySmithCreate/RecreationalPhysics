@@ -2043,6 +2043,39 @@ Update 148 (2026-10-29, 23:36 UTC by the clock): **DECISION (the author's): mass
 - **Addendum, 2026-10-30, 22:00 UTC: DECISION (the author's, "agreed, proceed"): the twist constant may differ by kind of diagonal, box against face; the second anchor looked at.** *Exact, predicted then enumerated:* her dark two-loop neutrino (face diagonals, ±½ cancelling across the loops, curl +1 and −1 netting zero) is cheaper than the box one iff ε_face/ε_box < 4/9, whichever way the twist cancels; no size is selected; the second constant is pinned by nothing yet. *Exact, on her "proceed":* the flat pion as built sits at 7/3 of the electron's cost against 273 measured, with no constant free, so it cannot be the second anchor; the muon as her coil of minimum size pins the writhe constant (118 or 80 times the twist constant for the tight or wide one-turn coil); the tau as the next coil of the muon's own family lands nowhere within one per cent, and the one cross-family match in 48 (−0.45 per cent) was predicted to occur by chance and is not a result (rule 13). A stability rule that selects the coil, then the tau held out, is what would make it one. Build document, section 8; `sandbox/neutrino_by_kind.py`, `sandbox/anchor_muon_tau.py`.
 - **Addendum, 2026-10-31, 16:25 UTC: DECISION (the author's): a photon's energy is its curl per link, set by its wavelength.** Her picture of this day: the curl angle may turn less than a quarter turn per link, so the repeat, which is the wavelength, is any whole number of links from 4 up; she chose the reading that matches measurement (energy with frequency, the photoelectric effect; general knowledge, to verify) over energy as curl times length. *Exact:* the curl per link is 2/n for a whole repeat n ≥ 4, a discrete ladder with no rule added; the excitation ladder is the same ladder; a held photon splits into two only where 1/n = 1/k + 1/j; annihilation's wavelength is unpinned. *Exact, on her question about gravity waves:* on the cube edges the carrier is the lengths' stiffness already computed; its long waves have one speed, its shortest wave is 2 links, the '+' polarization rides the axis edges alone and the '×' one would need the face diagonals; a stretch has no angle to turn, so the edges carry no ladder. Built with a test; build document, section 9; `sandbox/edge_wave_look.py`.
 
+Update 149 (2026-11-01, 02:25 UTC by the clock): **the author's picture of X as stacked dark matter, with a whiteboard**
+(`docs/figures/whiteboard_2026-11-01/whole_board.jpg`; her words verbatim in `sandbox/NOTEBOOK.md`). Her words, put in order.
+Why this page changes: it says what the curled slab is made of, where the zero-dimensional space sits, what builds the
+energy for a big bang and where it fires, and it takes decision (3) of the waves brief. The claim on the programme page is
+brought up to date from it, hers once she confirms the wording.
+
+- **The face diagonals carry the second length field** (the "×" polarization of the waves brief, decision (3)), and they
+  are the dark matter and the dark antimatter. *Read as her decision; INFERRED until she confirms. Building the field
+  waits on the face diagonals' stiffness at the flat point, which the step-1 look computed for the axis edges only.*
+- **The curled slab is made of tightly lined-up dark matter**: many one-sided objects of the same handedness stacked
+  together. In it there is only twist and curl and no space, because nothing can move; matter cannot get through.
+- **The rod and the zero-dimensional space.** Surplus dark matter is crushed by gravity; the loops' empty sides orient
+  together into a shell around a zero-dimensional space, at the center of the two-dimensional slab: the rod. The shell's
+  outside is spacetime, with matter still moving but very slowly, until at a point it stops.
+- **How the energy builds, and where it fires.** Photons cannot get through the slab, but unlike usual dark matter they
+  apply their curl energy to it, and when there is enough, a big bang happens at one pole of the rod.
+- **The births.** The pole releases that energy together with surplus matter from the pole effect; the matter handedness
+  breaches first, and a new three-dimensional spacetime is born in the zero-dimensional space. Then another with the
+  surplus antimatter: twins. Then a gap, then another set of twins when there are enough curls again; they keep opening as
+  each new two-dimensional space encloses a zero-dimensional singularity to open a new spacetime into.
+- *Ours, set against the record, each line labeled.* (i) Exact: a one-sided loop exists only on the face diagonals (no
+  loop of thirds is one-sided), and under her rule of 31 October it carries no charge, so "meets gravity and not light" is
+  what the twist state already says. (ii) Exact: under her tie curling two directions costs the same as one (O106). (iii)
+  Exact: the toy's fully curled piece is the cube and a fully curled X larger than a cube is a gas of cubes (O85); the
+  nearest stand-in for her zero-dimensional space is one cube with the slab around it, and no such shell has been built.
+  (iv) Measured: in a bath the rod opened from several places along its length, not at an end (T53, SEVERAL); "a big bang
+  at one pole" is a prediction, testable by feeding one end of a rod, and it would be the first run in which where the
+  opening starts is the verdict. (v) A change in kind: claim 8 said the parent's own geometry re-curls; this says surplus
+  dark matter is crushed and lined up. The five fold tests that found nothing curled (T34, T57 and their relatives) folded
+  the lattice; none had loops to stack, so they do not bear on the new reading, which is untested. (vi) "Photons cannot
+  get through" needs form C's step rule for a photon on a curled slab's diagonals, not written. (vii) "Matter breaches
+  first" has nothing to test yet: the toy's twist has no dynamics. Nothing here is a result.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:

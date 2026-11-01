@@ -52,7 +52,9 @@ sweep as written: the chain's sweep (2N attempts) for a wave on a fixed lattice,
 sweeps) where the wave runs beside the chain.** (2) m is
 pinned by one c, not scanned: *read as taken with her "proceed", which answers the recommendation naming it; INFERRED
 until she objects.* (3) whether the face diagonals carry a second length field (the "×" polarization) now or
-later: open. (4) C's step rule for a photon on a non-lattice diagonal: open.
+later: *taken by her message of 2026-11-01 ("The face-diagonal length field for the ×' polarization. So face
+diagonals are the dark matter and dark antimatter."; VISION Update 149): the face diagonals carry the second field; INFERRED.
+Building it waits on the face diagonals' stiffness at the flat point, exact and owed.* (4) C's step rule for a photon on a non-lattice diagonal: open.
 
 ## 3a. Built (2026-11-01)
 
