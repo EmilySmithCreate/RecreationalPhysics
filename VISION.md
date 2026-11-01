@@ -2101,6 +2101,25 @@ before L = 16 runs).
   unscored guess had it. The one far-side time the window could score held; two ranges ran past the window and are
   unscored. T88's verdict stands as above, at three sizes with the largest held out.
 
+Update 151 (2026-11-01, 15:48 UTC by the clock): **the drift of the crossover coupling with ln N (TASKS T9), measured at eight sizes
+with the largest held out: the held-out crossings land inside the ranges predicted before the run, but the registered verdict is UNSCORED
+because the gate asked the heating leg to agree and that leg carries the lattice branch; and the model's first author derived the
+scaling in the 2022 thesis.** Why this page changes: the drift has been on this page since Update 3 as 'a discrepancy to investigate'
+against the published N-independence. Details: ASSUMPTIONS O172; PREREGISTRATION T89 and its reading.
+
+- **Measured.** Over N = 64 to 676, 1/g at which the network is half ordered is a straight line in ln N with slope 1.1 to 1.2 times the
+  plain count. At the held-out N = 1156 the cooling leg (two replicas agreeing to 0.003) crosses φ = 0.5 at g = 3.46 and φ = 0.65 at
+  2.87, inside the predicted 3.30 to 3.56 and 2.68 to 2.90. The heating leg from a flat torus stayed on the lattice branch down to
+  g = 3.1, so the two-leg gate failed and the word is UNSCORED; an amendment reading the cooling leg alone is proposed and is hers to enact.
+- **Published, read today** ([Kelly22] Eq. (4.65), pp. 138 to 139): β(N) = β̃ log N from the N log N entropy of regular graphs, with the
+  thesis's own note that this contradicts the N-independence its author had argued in [KTB19]. So the drift is not a discrepancy with
+  the model: it is what the model's counting says, and the published claim it contradicted has been set aside by its author in print.
+- **What it changes here** (*ours*). Update 11's reading stands: at a fixed coupling a growing network leaves the geometric phase, and
+  the published remedies exist to prevent that. Every warm run at a fixed coupling carries the size caveat. The hypothesis's own route
+  (the tube, at low coupling) is untouched.
+- **For the model's authors.** Their analytic expectation measured at eight sizes on one axis. A note to Christy Kelly is drafted
+  locally and waits on a current address; the owner sends.
+
 ## The target ("the spot")
 
 What a simulated geometric phase is scored against. Measurable on a graph today:
