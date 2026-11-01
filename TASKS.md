@@ -604,6 +604,7 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
 6. **Reading, before any citation:** Pathria (1972), Popławski (the universe inside a black hole), and the Fife paper
    the third review cites (its reference to be obtained from the owner), as the benchmark lineage for piece 11; read
    status recorded in `REFERENCES.bib` (rule 1). Benchmarks, never evidence (rule 13).
+   *Popławski's lineage read 2026-11-01 by an assistant agent and verified by a second (`docs/reading/notes/2026-11-01_universe_inside_black_hole_lineage.md`; 12 entries in REFERENCES.bib with read status): Popławski 2010 to 2023 read in full or in part; Frolov, Markov and Mukhanov (1989 PLB; 1990 PRD) and Pathria (1972, paywalled) still unread beyond abstracts; the Fife reference still owed from the owner. Three sibling readings the same day: gravitational waves from a first-order transition, asymmetric dark matter, units for the toy (`docs/reading/notes/2026-11-01_*.md`).*
 7. **A red-team pass at each milestone** (rule 12), recorded as an O entry; the first is O103 (i).
 8. **Low priority: an independent reimplementation** of the four-link energy and one verdict (T7 at λ = 1.25) by a
    second person or a second agent working from paper 1 alone.
