@@ -83,3 +83,38 @@ insists on an attraction.
 Nothing about the loop (A12) has an exact consequence a question can score; nothing about twist has a rule yet
 (A8 is a count, not a dynamics). The world family (`world_family_curl_store.md`) carries the dynamics the record
 actually has: feeds, walls, releases, cascades.
+
+## Updates since 30 October (written 2026-11-01, Fable; each line carries its kind and its place in the record)
+
+The twelve axioms above are left as written on 30 October. What the record added between then and 1 November, by axiom:
+
+- **A1, the sign of curl (exact, T87 SIGNED, O170, 30 October 13:46 UTC).** A curled loop's two ways round are related by a
+  renaming of its surroundings in only 4 to 8 % of columns at N = 512 to 2048; every signed column has a reversal that swaps
+  the two kinds of point. So the toy's curl carries a colour sign, the bipartition's. Her answer the same day: related to
+  twist, not the same thing; the record keeps "colour sign" for this and "twist" for the signed value on a diagonal.
+- **A6, the speed limit as a count (exact, built 1 November; waves brief decision (1), confirmed by her 01:45 UTC).** The
+  dynamical link-length field (`graphity.edge_wave`) has long-wave speed 2/√m links per sweep, so one c pins m = 4 and light
+  moves one link per sweep in code as well as by rule. The habit "a speed limit from a count" is now instantiated by a
+  tested field, not only by the photon's step rule.
+- **A7, charge and the one-sided loop (hers, 31 October; `docs/design/twist_curl_rules_current.md`).** Charge needs two
+  sides and rides only on thirds (the box diagonals); the coil is a shape, not a charge. Dark matter is a one-sided loop of
+  surplus curl on the face diagonals, a flaw left when space opened; it carries no charge. Exact: a loop is one-sided when
+  its total twist is an odd number of halves, so no loop of thirds is one-sided; the cheapest one-sided loop costs 3/4 of
+  the unit at every length, half the two-sided neutrino's 3/2.
+- **A8, replaced (hers, 29 and 30 October; O166's audit and its replacement).** The 28 October rule (spin as half the net
+  twist) failed on the neutron, the charged pion and the photon. Her replacement: spin times curl is one half (full spin on
+  half a curl, the photon; half spin on a full curl, matter), and spin needs twist present, so the neutrino, whose twists
+  cancel, spins. The electron, neutron, photon and charged pion all pass (exact). **Mass is a count** of the looped
+  diagonals, a long diagonal counting one (hers, Update 148, decided). Any question in the bank that reads spin from a
+  loop must use the replacement; the bank's spin item as written on 30 October is the failed rule and is retired.
+- **A9, the twins' order and the shape of X (hers, Update 149, 1 November, confirmed).** X is a rod between two curled slabs,
+  each slab made of stacked one-sided dark loops of one handedness; photons' curl energy builds in the slab until a big bang
+  happens at one pole of the rod; the matter handedness breaches first, then the antimatter twin opens; twins, a gap, twins.
+  Measured in the toy the same day (T88, O171): energy fed at one end of the rod starts the opening there (ONE FRONT at 30
+  units a store at every length), at 60 a store on longer rods a second region opens ahead of the front (SEVERAL), and
+  exactly, the release per opened point (3a) is one eighth to one tenth of the wall, so a front cannot pay for itself
+  under the tie. `conflict_items.md` item 9.
+- **A12, an observable for the measure (the loop-measure paper, T72, O138).** Under her counting unit every stellar class
+  is typical; the one quantity the measure predicts that was not put in is the fork on dark energy's late behaviour: a true
+  constant closes the causal diamond and keeps our age typical, the published model's falling dark energy never closes it
+  and would make our age early. The measured equation of state of dark energy decides, independently of any observer.

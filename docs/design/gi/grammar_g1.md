@@ -75,3 +75,17 @@ The plan asks for a written simplicity measure. The record has one already, impl
 number of distinct constants and the number of statements (the open world's limits are 12 numbers, 160 tokens,
 depth 6). Proposed, not decided: cost = tokens + 4·(number of constants outside G1) under G1, tokens alone under G0.
 The 4 is a knob and should be scanned, or the comparison is a fit.
+
+## Addendum, 2026-11-01: a logarithm in the published model's own law
+
+The record now holds a size law in the published model itself (T89, O172): the coupling at which the network is half
+ordered obeys 1/g = a + b ln N over N = 64 to 1156, and the model's first author derived that form in the 2022 thesis
+(β(N) = β̃ log N, [Kelly22] Eq. (4.65)) from the N log N count of regular graphs. Two things for G1. (1) G1 as written is a
+prior on **constants**; a logarithm is a functional form, and the plan has to say whether ln and exp are admitted
+operations in the state rule or belong to the reading map, where she places continuity (her statement of 30 October).
+Here the logarithm comes from counting arrangements, which is the base's own arithmetic, so it belongs to the rule, not
+the reading. (2) The measured slope, written as 16 b, is 1.0 to 1.2 with the largest size included, against a whole
+number 1 from the plain count ([K08] Eq. (43)); the thesis calls β̃ "a (nonphysical?) parameter". That is the shape of a
+G1 win in a published model: the whole-number constant is the analytic expectation and the data agree within their error.
+It is also a caution: 1.1 is not a small-denominator number, and a grammar that forced it to 1 would be fitting, not
+reading. The measured number carries an error and the grammar should carry one too.

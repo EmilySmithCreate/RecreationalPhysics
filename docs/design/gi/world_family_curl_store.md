@@ -96,3 +96,17 @@ records this and asks the owner.
 
 `--private` writes the hidden halves to a separate file so that the public half can be shared and the hidden half
 kept out of git; the plan's privacy condition for the owner's framework. The output is deterministic in the seed.
+
+## Addendum, 2026-11-01: the family's store is the shared-bath form, and the toy has now run the other one
+
+The rule above pays each release into **one** store (v = v + a·N), so a release anywhere can pay the next wall anywhere:
+the shared-bath form, which the record names as the untested case (O171, rule 11's item 3). T88 (1 November, O171) ran the
+**per-vertex** form in the toy: energy fed into eight stores at one end of the rod, a release of 3a per opened point under the
+tie "all at the last", a wall of 24 to 25.6, so no store fed by its own point's release can ever pay the next move
+(exact), and the measured words were NOTHING OPENS below the wall, ONE FRONT at 30 a store, SEVERAL at 60 a store on the
+longer rods. Two consequences for the family. (1) The cascade arithmetic above is a statement about the shared-bath
+form and the toy's registered runs of that form do not exist yet; the discrepancy named in the rule section stays a
+C-family item (items 2 and 9). (2) A per-vertex variant of the family (a store per point; the release stays where it is
+made; a wall paid only from the stores within reach) stalls by construction whenever a < wall / points-in-reach, which is a
+second two-state world with a different hidden law and the same three readings: a candidate for the D family's
+"two worlds, same readings, different rules" and for an N-foil. Not built.

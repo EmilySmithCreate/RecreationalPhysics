@@ -72,3 +72,13 @@ The three plans, read against that:
    only there. The twelve F questions in `framework_axioms.md` are public and are therefore **templates**: before the
    private test their numbers are re-rolled by hand into the same private folder, and the public ones are never used
    to score.*
+
+## 5. Updates of 2026-11-01 (Fable)
+
+Each file carries a dated addendum at its end (or, for the conflict items, dated rows): `framework_axioms.md` (the sign
+of curl, the speed limit as a tested field, the 31 October charge rule and the one-sided loop, the spin replacement and
+mass as a count, the twins' order and the pole, an observable for the measure); `conflict_items.md` (items 9 and 10, the
+pole front and gravity from counting; controls C3 and C4, the second of a third kind, a gate that failed); `grammar_g1.md`
+(a logarithm in the published model's own law); `imports_glossary.md` (two reversions of the assistant's, caught by the
+owner; six words for the counter); `world_family_curl_store.md` (the family is the shared-bath form; the toy ran the
+per-vertex form in T88). The private folder is untouched.

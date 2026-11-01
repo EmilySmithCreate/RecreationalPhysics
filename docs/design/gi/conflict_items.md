@@ -19,6 +19,14 @@ first two steps are given, because the third is hers.
 | 7 | Superposition is the set of undetectably different versions of a fixed arrangement, read by a measurement (hers, Update 17) | A renaming of a fixed arrangement is a complete instruction set, so GHZ is classical and CHSH gives S ≤ 2 for any arrangement (exact argument, O29) | Flag: counting versions of one arrangement cannot violate Bell; what survives is the object-level counting and the interference rung, which needs a dynamical rule. |
 | 8 | A particle is an allowed vibration of a small closed loop of the substrate (hers, Update 17) | In six states of seven no mode of the whole arrangement keeps more than a quarter of its weight on the loop; the loop's frequencies dissolve into the sheet's (exact, O30) | Flag: the loop of four is not a resonator inside a sheet; where anything resonates it is the cap. |
 
+
+**Added 2026-11-01 (Fable), from the record of 30 October to 1 November:**
+
+| # | Framework statement | Observation that contradicts it | Faithful response (what a model should write) |
+|---|---|---|---|
+| 9 | A big bang happens at one pole of the rod and the new space opens from there as one front (hers, Update 149, 1 November; her prediction for T88 inferred as ONE FRONT and marked so) | At 30 units a store ONE FRONT at every length (as predicted); at 60 a store on rods of 12 and 16 layers a second region opens ahead of the front, SEVERAL (measured, T88, O171); and exactly, one opened point releases 3a = 2.4 to 3.0 against a wall of 24 to 25.6, so a front paid by its own release is impossible under the tie by a factor of eight to ten | Flag: the opening does start where the energy is, and it is paid by the fed energy, never by its own release; the "one front" half fails at the highest energy on longer rods. Do not rewrite "a big bang at the pole" as "the pole seeds several bangs", and do not hide that the front is fed. |
+| 10 | Gravity is a pull from counting what we cannot see: an entropic force carried by the warm surroundings (hers, piece 7's name; Update 40's "tested first because it needs no new knob") | The warm background's square-density correlations fall to about zero within two links at every coupling and every size from 196 to 676 (measured, O31); two curled relics built into flat space have fewer moves available together than apart within five steps and exactly the same beyond, with the energy exactly additive (exact one-step look, 1 November, `sandbox/pair_handles_look.py`; a look, not registered) | Flag: in the warm published model the counting gives a contact-range interaction, repulsive at the one-step order, and nothing at a distance; a pull needs a carrier, which is Update 40's decision and is not built. Do not rewrite "gravity from counting" as "gravity from counting at contact". |
+
 ## Two items that are *not* conflicts, kept as controls
 
 A C batch needs matched cases where the observation does **not** contradict the framework, so that a model that
@@ -28,6 +36,14 @@ flags everything is caught. From the record:
 |---|---|---|---|
 | C1 | The activation to start the tube's opening does not grow with size (hers, S2′ (iv)) | 12 units at every N from 48 to 192, 320 runs (measured, Update 9) | No conflict: as predicted. |
 | C2 | The fed slab's split fires at 2a/r plus a short wait, the same at every size (hers, T71) | HOLDS at the held-out L = 16, 152 of 152 (measured, O160) | No conflict: as predicted at the held-out size. |
+
+
+**Added 2026-11-01 (Fable): two more controls, one of them of a third kind.**
+
+| # | Framework statement | Observation | Right response |
+|---|---|---|---|
+| C3 | A curled loop in the opened sheet has a sign at every radius, and the sign is the two kinds of point (hers, 30 October, her correction "why can't a size be negative?") | SIGNED at N = 144 to 2048, 183 of 191 columns at the largest size (exact, T87, O170) | No conflict: as predicted at the held-out size. |
+| C4 | The coupling at which the network is half ordered falls as 1/(a + b ln N); predicted at N = 1156 before the run as g = 3.43 (3.30 to 3.56) and 2.79 (2.68 to 2.90) (ours, T89) | The cooling leg crossed at 3.46 and 2.87, inside both ranges; the registered gate asked the heating leg to agree and it held the lattice branch down to g = 3.1, so the verdict is UNSCORED (measured, O172) | Neither conflict nor confirmation: the gate failed, not the prediction; say so, report the cooling-leg numbers as unscored, and do not promote them. A model that writes "confirmed" or "refuted" here has missed the third state. |
 
 ## How the items are used
 

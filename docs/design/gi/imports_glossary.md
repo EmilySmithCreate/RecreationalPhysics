@@ -47,3 +47,15 @@ vacuum energy, bubble, inflation, graviton, Newton, inverse square.
 
 These nine are the material for the reversion foils that no generator can invent: they are the pulls this subject
 matter actually exerts on a model, recorded with the fix.
+
+## Added 2026-11-01 (Fable): two more reversions, both of the assistant's, caught by the owner the same day
+
+| What was written | The pull | Corrected where |
+|---|---|---|
+| "the toy has nothing that comes in opposite kinds" (written 1 November from O100 of 5 October) | a statement carried past the result that changed it (T87 SIGNED, 30 October: every curl carries a colour sign) | `docs/design/routes_to_attention_2026-11-01.md`, corrected in place |
+| "this topic cannot produce an observation" (the loop measure, 1 November) | a programme-level judgment made without rereading the programme's own paper, which names the dark-energy fork as an observable | the same file, corrected in place |
+
+Words to add to the counter's list now that the readings of 1 November bring them in: gravitational wave, GeV, cross
+section, equation of state, Planck length, Planck time. Each is a textbook word that a translation to units imports; the
+units note (`docs/reading/notes/2026-11-01_units_for_the_toy.md`) says which identifications are conventional in the field
+and which are the toy's own choice.
