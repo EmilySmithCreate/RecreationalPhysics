@@ -9686,3 +9686,51 @@ scorable cell; the one scorable number holds; the two others could not be scored
 E = 480 (ONE FRONT at L = 8, SEVERAL at 12 and 16) stands. Damage at the end: 18 to 40 of 256 points at E = 240, 39 to 79 at
 E = 480. **Verdict of T88:** ONE FRONT at 30 a store at every size; SEVERAL at 60 a store from L = 12 up; NOTHING OPENS
 below the wall; the front is paid by the fed stores and cannot pay for itself (Amendment 1, exact).
+
+## T89. The drift of the crossover coupling with ln N at λ = 1, completed with a held-out size (TASKS T9; written 2026-11-01, 12:10 UTC, before the N = 1156 run; the fit below uses runs already on the record)
+
+### Why this test, now
+
+TASKS T9 has been open since 19 September: the capped first look saw the coupling at which the network is half ordered move with ln N, and the published statement that the D = 2 critical coupling does not depend on N is an argument, not a measurement ([KTB19] Sec. 3.1.1; ASSUMPTIONS section D). Since then seven sizes at λ = 1 without the cap have been run for other tests and never put on one axis. And the first author's thesis, read today from the PDF the owner supplied ([Kelly22], Sec. 4.2.3.1, Eq. (4.65), pp. 138 to 139), **derives the drift**: the entropy of d-regular graphs grows as N log N while the action grows as N, so energy and entropy balance only if the coupling scales as β(N) = β̃ log N, with β̃ "a (nonphysical?) parameter"; the thesis notes that this "contradicts conclusions drawn in Ref. [181] by the author on the basis of numerical studies" (that is [KTB19]'s N-independence). So the measurement has a published analytic expectation to be compared with, and the comparison is the thing to do (rule 13: a target, not a confirmation).
+
+### What is reused (runs already on the record, none re-run)
+
+The replica-mean φ(g) curves at λ = 1, no cap, hard-core rule, named points: N = 36 (`t16_temper_n36_rep*`), 64 and 100 (`t6c_lam1_n64`, `t6c_lam1_n100`), 160 (`cqg_n160_lam1_nocap_tempering`), 196, 484, 676 (`t13_temper_n{196,484,676}_melt`). All are tempering runs. The 484 and 676 runs failed T13's round-trip gate (0 round trips) but their melt and torus starts agree within 0.001 across the crossover, which is T13's equilibrium-agreement definition; they are used here with that said.
+
+### Definitions, fixed now
+
+- **The crossing g(φ*)**: the coupling at which the replica-mean φ(g) crosses φ* = 0.5 (primary; T13's definition of the crossover) and φ* = 0.65 (secondary, because it is bracketed at six sizes where 0.5 is bracketed at four), interpolating linearly in ln g between the two neighbouring couplings of the curve. A size whose curve does not bracket the level is left out of that level's fit.
+- **The fit**: 1/g(φ*) = a + b ln N by least squares over every size with a crossing, equal weights. The plain count ([K08] Eq. (43); [Kelly22] Eq. (4.65)) says b > 0 with 16 b of order 1.
+- **The held-out size (rule 14)**: N = 1156 = 4 × 17², the author's form N = 4p² (VISION Update 18), run only after this section is committed (`configs/t89_drift_n1156_lam1.json`, `scripts/run_cqg_sweep.py`: cooling from a melt and heating from a fresh flat torus over 14 couplings from 4.6 to 2.05, two replicas, 10,000 + 20,000 sweeps per coupling). Its crossings are predicted below from the seven smaller sizes and scored at 1156 alone.
+- **Gate at 1156**: at the couplings that bracket a crossing, the cooling and heating legs agree within 0.03 in φ and `tau_int` is below n_meas / 20 on both. A level whose bracket fails the gate is UNSCORED.
+
+### The fit on the seven sizes (computed 2026-11-01, before the N = 1156 run)
+
+| φ* | sizes with a crossing | crossings g | a | b | rms in 1/g | 16 b | predicted g at N = 1156 |
+|---|---|---|---|---|---|---|---|
+| 0.5 | 196, 484, 676 | 5.90, 4.30, 3.93 | −0.1943 | 0.0690 | 0.0004 | 1.10 | **3.43** |
+| 0.65 | 64, 100, 160, 196, 484, 676 | 7.50, 5.71, 4.69, 4.38, 3.42, 3.18 | −0.1746 | 0.0756 | 0.0039 | 1.21 | **2.79** |
+
+(The 0.5 level has three points, so its rms is not a measure of anything; the 0.65 level's six points scatter by 0.004 in 1/g, about 0.04 in g at these couplings.)
+
+### Predictions, written before the run
+
+1. **Crossings at N = 1156** (scored): g(0.5) = 3.43, range 3.30 to 3.56; g(0.65) = 2.79, range 2.68 to 2.90. The ranges are ± 0.13 and ± 0.11 in g: twice the spread the two levels' slopes would give each other's crossing, which is wider than the fit's own scatter and is the honest uncertainty of a three- or six-point line.
+2. **The slope** (reported, not scored at 1156): with 1156 added, 16 b stays between 1.0 and 1.3 at both levels. The plain count's 1.0 is the published analytic expectation; the first look's 1.12 (capped, one replica) is the only earlier number.
+3. **Equilibrium**: cooling and heating agree within 0.03 at g ≥ 2.8 (the hot side of the crossover equilibrates in a single chain, O10); below about 2.6 the heating leg, started from the flat torus, may sit above the cooling leg (the lattice branch of T13), which is reported and not scored.
+
+**The owner's prediction:** owed before the run is read; none is inferred.
+
+### Verdicts
+
+- **LOGARITHMIC DRIFT**: both scorable crossings at 1156 inside their ranges. Consequence: TASKS T9 is closed as "characterised": the crossover coupling falls as 1/(a + b ln N) over N = 64 to 1156, in the direction and of the size the counting argument gives; the published N-independence is not what the model does at these sizes; every warm run at a fixed coupling carries the size caveat (a larger network melts at a lower coupling).
+- **FASTER** / **SLOWER**: both crossings below / above their ranges. Consequence: the drift is real but not the straight line in ln N over this range; the curvature is reported and T9 stays open on the form.
+- **MIXED** or **UNSCORED**: one inside and one outside, or the gate fails; reported as such.
+
+### Disclosed
+
+(1) The N = 676 crossing was in `t13_temper_n676_melt.csv` since 23 September and had been looked at in this session before this fit was written, so 676 is not a held-out size; 1156 is the held-out size, and nothing at 1156 exists at this writing. (2) T13's prediction 1, written 22 September before those runs, forecast the φ = 0.5 crossing at 5.4, 4.3 and 3.9 ± 0.5 for 196, 484 and 676 from the capped drift line; measured 5.90, 4.30 and 3.93: all three inside, the first at the edge. That forecast is the one genuinely blind test of the drift so far and is recorded here as such. (3) The choice of φ* = 0.65 as the secondary level was made after seeing which levels the existing curves bracket; it adds sizes, not freedom in the verdict, since both levels are scored.
+
+### What this cannot show
+
+Whether the drift continues without bound (seven sizes over a factor of 32 in N and one decade of ln N); the order of the transition (T6's business); anything at λ ≠ 1; anything about the real universe. *Nothing here is about the real universe.*
