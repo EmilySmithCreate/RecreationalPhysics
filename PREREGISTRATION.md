@@ -9755,7 +9755,7 @@ Whether the drift continues without bound (seven sizes over a factor of 32 in N 
 - **The slope with N = 1156 included:** 16 b = 1.07 (φ* = 0.5, four sizes) and 1.03 (φ* = 0.65, seven sizes); the plain count's 1 is inside the scatter of the seven-point line (rms 0.004 in 1/g).
 - **T9 closes.** The crossover coupling at λ = 1 falls as 1/(a + b ln N) over N = 64 to 1156, in the direction and of the size the counting argument gives ([K08] Eq. (43); [Kelly22] Eq. (4.65)); the published N-independence ([KTB19] Sec. 3.1.1) is not what the model does at these sizes, and its first author's thesis says so too.
 
-## T90. The quantum toy on the smallest class spaces, exact: does the construction behave? (docs/design/quantum_toy_brief.md, step 1; written 2026-11-02, 18:20 UTC, before any registered computation)
+## T90. The quantum toy on the smallest class spaces, exact: does the construction behave? (docs/design/quantum_toy_brief.md, step 1; written 2026-11-02, 18:00 UTC by the clock, before any registered computation; the time first written, 18:20, was a guess and is corrected)
 
 ### Why this test, now
 
