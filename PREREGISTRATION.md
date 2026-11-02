@@ -9754,3 +9754,56 @@ Whether the drift continues without bound (seven sizes over a factor of 32 in N 
 - **Prediction 3 of Amendment 2** (the continued heating leg may sit below cooling at the coldest couplings): not seen; the two legs agree to 0.009 down to g = 2.2. Reported, not scored.
 - **The slope with N = 1156 included:** 16 b = 1.07 (φ* = 0.5, four sizes) and 1.03 (φ* = 0.65, seven sizes); the plain count's 1 is inside the scatter of the seven-point line (rms 0.004 in 1/g).
 - **T9 closes.** The crossover coupling at λ = 1 falls as 1/(a + b ln N) over N = 64 to 1156, in the direction and of the size the counting argument gives ([K08] Eq. (43); [Kelly22] Eq. (4.65)); the published N-independence ([KTB19] Sec. 3.1.1) is not what the model does at these sizes, and its first author's thesis says so too.
+
+## T90. The quantum toy on the smallest class spaces, exact: does the construction behave? (docs/design/quantum_toy_brief.md, step 1; written 2026-11-02, 18:20 UTC, before any registered computation)
+
+### Why this test, now
+
+The owner asked for the cheap test after the reading (her words of 2 November: "Proceed then run cheap test"). The
+readings of the same day (`docs/reading/notes/2026-11-02_quantum_graphity_reading.md`,
+`2026-11-02_jacobson_entanglement_equilibrium.md`) settle what it can and cannot show: it tests the construction (a
+stoquastic Hamiltonian whose classical limit is the toy), not Carroll's or Jacobson's reader, because the class space
+has no subsystems and the named-point ground state is invariant under renaming. Exploratory with respect to the
+hypothesis; registered so that its words are fixed before the numbers.
+
+### What will be computed (`scripts/quantum_toy_classes.py`; tests `tests/test_quantum_toy_classes.py`)
+
+H = H0 + H1 on the symmetric sector of the labeled wirings at N = 16 (5 classes) and N = 18 (26 classes); H0 the toy's
+energy 16(N − S) + 4λX; H1 = −Γ times the toy's own switch (any two links, the move the classical chain proposes).
+λ ∈ {0, 0.5, 1, 1.25}; Γ ∈ {0, 0.01, 0.1, 0.3, 1, 3, 10, 100}. Per cell: ground energy, gap, ⟨S⟩/N, ⟨X⟩/N, and every
+class's weight |ψ_C|². Classes, sizes and energies are those of `results/ergodicity_small.csv` (T4).
+
+**Disclosed before the run.** The construction tests computed the N = 16 class space and checked properties (symmetric
+matrix, Γ = 0 limit, positive ground state, weights summing to one) at λ ∈ {0, 0.5, 1, 1.25} and Γ ∈ {0.3, 0.7, 1};
+no weight or energy was printed or read. The class energies above were read from T4's file to write these predictions.
+At λ = 1 every class at N = 16 has H0 = 0 (exact, from that file), and at N = 18 five classes do (classes 0, 1, 25 flat
+with X = 0; 17 and 20 curled with S − N = X/4).
+
+### Predictions (ours; the owner's not given before the run)
+
+- **P1 (N = 16, λ = 1).** Because H0 is the same for every class, the ground state is the same at every Γ > 0 (exact
+  consequence) and equals the top eigenvector of the switch matrix. Its class weights equal the labeled shares tilted
+  by each class's number of valid switches (exact algebra: ψ_C ∝ √|C| would be exact if every class had the same
+  number). **Predicted:** every class within a factor of 3 of its labeled share; the 4-cube (class 0, the most
+  saturated wiring, so the fewest valid switches) **below** its labeled share of 1.3 %.
+- **P2 (N = 16, λ = 0).** At small Γ the ground state is the 4-cube (lowest H0); its weight falls monotonically with
+  Γ and crosses 1/2 at a Γ_c between 3 and 100.
+- **P3 (large Γ).** At Γ = 100, at every λ and both sizes, the class weights lie within 0.05 of the λ = 1 weights at the
+  same size (the switch term dominates).
+- **P4 (N = 18, held out, λ = 1.25).** At Γ ≤ 0.1 the three flat classes (0, 1, 25) hold more than 0.9 of the weight;
+  by Γ = 10 they hold less than 0.5.
+- **Construction gates (must hold, else the run is void):** the switch counts balance exactly (|C| n(C→C') =
+  |C'| n(C'→C)); Σ|C| equals T4's labeled count at each size; at Γ = 0 the ground energy is the classical minimum; at
+  every Γ > 0 every amplitude is positive.
+
+### Words
+
+**BEHAVES** if the gates pass and P1 to P4 hold; **BEHAVES, PREDICTIONS MISSED** if the gates pass and any prediction
+fails (each reported); **VOID** if a gate fails. A move-set choice is flagged, not scored: the switch reaches any two
+links, so the number of switches grows as N² against an energy of order N, and the Γ at which quantum effects matter
+should fall with size (the quantum graphity note, finding 3); the run reports Γ_c at both sizes.
+
+### What this cannot show
+
+Anything about entanglement geometry or Einstein's equation (no subsystems); anything about real time (ground states
+only); anything at sizes where a sheet, a tube and a knot can be told apart. *Nothing here is about the real universe.*
