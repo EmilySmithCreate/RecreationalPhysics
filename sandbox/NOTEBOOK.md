@@ -3030,3 +3030,4 @@ The net release doesn't need to be from lambda is greater than 1 in network. Net
 
 Where does the curled tube come in? Only the rod. The end of a curled tube. It could be as soon as it forms it opens right away."
 - 2026-11-02, 19:00 UTC, Fable. Recorded under Update 153. T92 keeps running as registered; its curled basin (the four-link tube) is the record's stand-in for X since Update 13, and she now places the tube only at the rod's end, which may open as soon as it forms. The tension with claims 1 and 4 ('stable for now') is stated and left to her.
+- 2026-11-02, 19:29 UTC, Fable. T92 read at both sizes (O176): CURL FAVORED inside the window; her 'open favored at the warm end' fails there; the held-out window end missed (1.4, not 1.8); above the window the tube breaks into damage while flat space holds.

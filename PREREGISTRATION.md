@@ -9945,3 +9945,10 @@ burp (at λ = 1 the release in the network is zero by construction). *Nothing he
 - **Seen, not scored.** Above the window the curled tube does leave its shape at g ≥ 2.0 while flat space holds to 2.5, so warmth does break the curl there; but what it goes to is a damaged, higher-energy state, not flat space, and this method cannot give a free energy where the basin does not hold.
 
 **Amendment 1, the held-out prediction for N = 192** (the 4 × 48 tube against the 12 × 16 flat torus, degeneracy ln 4), from stage 1 alone, before N = 192 runs: the window ends at g = 1.8 again (the curled tube holds at 1.8 and not at 2.0); ΔF < 0 at every coupling in it (CURL FAVORED); at g = 1.8 the excitation part scales with N, so ΔF / g = -1.643 (range -1.771 to -1.515, the excitation part within a factor of 1.5).
+
+#### The held-out size read, 2026-11-02, 19:29 UTC by the clock (`results/t92_curled_x_free_energy_heldout.csv`; against Amendment 1)
+
+- **The window: MISSED.** Predicted to end at g = 1.8; it ends at 1.4. At N = 192 the curled tube leaves its shape in at least one replica at g = 1.5 (lowest X / N 0.61), holds at 1.6 (0.93), and leaves again at 1.8 to 2.5 (0.65 to 0.21), while flat space holds to 2.5. *Ours:* the longer tube has proportionally more ways out, so it leaves at a lower warmth, which the prediction did not allow for.
+- **The number at g = 1.8: UNSCORED**, because the curled basin does not hold there.
+- **The word: CURL FAVORED holds at the held-out size.** ΔF < 0 at every coupling in the window, ΔF / g = −1.386 (= −ln 4) up to 1.3 and −1.398 at 1.4.
+- **Verdict of T92: CURL FAVORED at both sizes inside the window; the owner's prediction (open favored at the warm end) fails there; the window shrinks with size (1.8 at N = 144, 1.4 at N = 192), and above it the tube breaks into damaged, higher-energy states while flat space holds.** Inside the window, entropy holds the curl; above it, warmth breaks the curl but does not make flat space. *Nothing here is about the real universe.*
