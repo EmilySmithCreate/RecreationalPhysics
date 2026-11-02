@@ -9807,3 +9807,14 @@ should fall with size (the quantum graphity note, finding 3); the run reports Γ
 
 Anything about entanglement geometry or Einstein's equation (no subsystems); anything about real time (ground states
 only); anything at sizes where a sheet, a tube and a knot can be told apart. *Nothing here is about the real universe.*
+
+#### Reading, 2026-11-02, 18:03 UTC (`results/quantum_toy_classes_n16.csv`, `_n18.csv`; read under the rules above, unchanged)
+
+- **Gates: all pass.** The switch counts balance exactly at both sizes; the class sizes add to T4's labeled counts (635,040,000 at N = 16; 1,785,021,235,200 at N = 18); at Γ = 0 the ground energy is the classical minimum at every λ (−128, −64, 0, 16 at N = 16; −64, −32, 0, 0 at N = 18); every amplitude is positive at every Γ > 0.
+- **P1 (N = 16, λ = 1): FAILS.** The ground state is the same at every Γ > 0, as the algebra said. Its weights against the labeled shares: 4-cube 0.065 against 0.013 (five times larger, outside the factor of 3, and above its share where the prediction said below); the other four classes 0.30 / 0.16, 0.32 / 0.43, 0.12 / 0.08, 0.20 / 0.32, all within a factor of 2. **The cause, read after the run:** the prediction assumed the most saturated wiring has the fewest valid switches. It has the most: 48 valid switches from a 4-cube, against 40, 24, 40 and 24 from the other four classes (none stays inside its class). A wiring with more ways to move gains more from quantum switching, so the cube is favored.
+- **P2 (N = 16, λ = 0): FAILS on its range.** The cube's weight falls monotonically with Γ (1.000, 1.000, 0.998, 0.983, 0.803, 0.261, 0.101, 0.068 at the registered Γ) and crosses 1/2 between Γ = 1 and 3, below the predicted range of 3 to 100.
+- **P3 (large Γ): HOLDS.** At Γ = 100 the class weights at every λ lie within 0.005 (N = 16) and 0.002 (N = 18) of the λ = 1 weights.
+- **P4 (N = 18, held out, λ = 1.25): HOLDS.** The three flat classes hold 0.9999 of the weight at Γ = 0.01 and 0.992 at Γ = 0.1, and 0.010 at Γ = 10.
+- **Word: BEHAVES, PREDICTIONS MISSED** (P1 and P2).
+- **Seen, not scored.** At N = 18 and λ = 1, where five classes tie at zero energy (three flat, two curled), a small Γ puts all the weight on the three flat ones (0.25, 0.50, 0.25 at Γ = 0.01) and none on the two curled ones: quantum switching breaks the published model's classical tie in favor of flat space at that size. At N = 16, where no flat wiring exists, it favors the 4-cube. The Γ at which quantum effects take over is between 1 and 3 at both sizes in the cells read; whether it falls with N, as the global switch suggests, cannot be read from two sizes with different gaps.
+- **Rule 11, briefly.** P1 failed on an assumption about switch counts that one count disproves; the construction is sound by every gate. No branch is abandoned. *Nothing here is about the real universe.*
