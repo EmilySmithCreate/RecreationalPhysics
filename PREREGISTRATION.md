@@ -9867,3 +9867,14 @@ prediction is scored separately. The held-out size's number is scored in its ame
 Anything about a quantum state: the mutual information here is a constant put on the links, not computed from a state.
 It reads geometry from wiring through Carroll's estimator; whether any quantum state has this information graph is the
 paper's open question. *Nothing here is about the real universe.*
+
+#### Stage 1 read, and Amendment 1 (the held-out prediction), 2026-11-02, 18:19 UTC by the clock (`results/t91_carroll_reader_stage1.csv`; read under the rules above, unchanged; R = 10 not yet computed)
+
+- **P0 (cube): HOLDS.** D_MDS = 4 at every R (the toy: d = 0).
+- **P1 (flat sheet): FAILS.** D_MDS = 4, 4, 4, 3 at R = 2, 3, 4, 6. Spectra (λ1 to λ5): R = 4: 205, 205, 81, 21, 15; R = 6: 892, 892, 333, 77, 62. The third eigenvalue is 0.40 and 0.37 of the largest: the graph distance on a square lattice is a taxicab distance, not a Euclidean one, and multidimensional scaling turns the mismatch into extra directions.
+- **P2 (tube): HOLDS on the ranking, FAILS on the size.** D_MDS(tube) = 3 against the sheet's 4 at R = 4 and 3 against 3 at R = 6. The curled direction's pair relative to the largest is 0.309 and 0.196 at R = 4 and 6, against the predicted 0.074 and 0.036 (outside the factor of 2). It falls with R faster than the sheet's spurious third eigenvalue does (0.396 to 0.373), but at these radii it is counted.
+- **P3 (opened sheets): FAILS at R = 2 only** (modal D_MDS 5 against the flat sheet's 4; equal at R = 3, 4, 6). The opened sheets' windows are not isotropic (λ2/λ1 of 0.50 at R = 2, against 1.00 for the square sheet): the burp's product is a narrow torus (Update 95), and the window sees it.
+- **P4 (melts): HOLDS** (D_MDS ≥ 5 at 778 of 784 centers at R = 3).
+- **Word for stage 1: MIXED.**
+
+**Amendment 1, the held-out prediction for R = 10**, fitted on R = 4 and 6 only as power laws in the window's width 2R + 1, before R = 10 is computed: the tube's curled pair relative to the largest, 0.108 (exponent 1.24; range ±30 %: 0.076 to 0.141); the flat sheet's third eigenvalue relative to the largest, 0.345 (range 0.241 to 0.448); the sheet's fourth, 0.071. **Predicted words at R = 10:** flat sheet D_MDS = 3; tube D_MDS = 3 (its ratio 0.108 sits just above the 0.1 threshold, so 1 is possible within the range and is said in advance); cube 4. The held-out verdict on P2's size claim is whether the tube's ratio falls inside its range at R = 10.
