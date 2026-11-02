@@ -118,3 +118,24 @@ The twelve axioms above are left as written on 30 October. What the record added
   is typical; the one quantity the measure predicts that was not put in is the fork on dark energy's late behaviour: a true
   constant closes the causal diamond and keeps our age typical, the published model's falling dark energy never closes it
   and would make our age early. The measured equation of state of dark energy decides, independently of any observer.
+
+## Addendum, 2026-11-02: the owner's answer on the smallest package of matter
+
+**Hers, put in order** (her message of 2 November, 07:55 ET by the clock, in reply to the question of 30 October). The smallest package, by
+length, is dark matter: a half twist on a loop of length 1. It is undetectable because it is one-sided, but it is
+everywhere that gravity is stronger than regular matter alone would make it: it interacts with gravity, not light.
+During the cooling after the Big Bang, probably after matter had solidified, the net dark matter from the surplus froze
+in. More is made all the time, but it cancels out, likely as a tensor: a loop of length 2 with no twist, two-sided, made
+of the anti-dark-matter and dark-matter side diagonals.
+
+*What it touches in the record (ours).* (1) It restates H3's dark strand (one-sided, Möbius, no charge) with a size: the
+shortest loop, half a twist. That is a candidate axiom A13 for the F family once she confirms it; the questions it
+would answer exactly are "what is the smallest allowed loop" (1) and "what twist does it carry" (1/2), both G1 numbers.
+(2) "Froze in during the cooling" is the measured shape of the scrap in the toy: FREEZES IN (T25) and the CLIFF against
+cooling time (T51, O104), where what remains after slow cooling is knots of fixed energy whose number is set at the
+opening (O107). Whether those knots are her half-twist loops is not read; the toy's twist label (Update 97) is declared
+and not built. (3) "Made all the time and cancels out" is new: a pair, dark and anti-dark, joined as a two-sided loop of
+length 2 with the twists cancelling. Nothing in the toy makes pairs. (4) ⚑ "Likely as a tensor": in physics a tensor is a
+quantity with directions attached (stress, curvature); if she means the paired, two-sided object, the word fits as a
+picture and not yet as a definition. One line from her on what "tensor" means here. (5) "Gravity, not light" is the
+standard property of dark matter (general knowledge, to verify) and her reason for it, one-sidedness, is hers.

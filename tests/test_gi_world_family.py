@@ -48,7 +48,7 @@ def test_batch_has_matched_foils_and_leaks_nothing():
     prompts, hiddens = gw.build(seed=7, per_kind=3)
     labels = [h["label"] for h in hiddens]
     assert labels.count("not reducible to two") == 3 and labels.count("no rule found") == 3
-    assert labels.count("rule") == 6
+    assert labels.count("rule") == 9          # fed, spark, local
     for pr in prompts:
         text = json.dumps(pr)
         for word in ("lam", "lambda", "kind", "label", "wall", "u0", "v0", "kappa", "drop_chance", "truth"):
@@ -94,3 +94,29 @@ def test_every_rule_case_shows_a_drop_in_or_after_its_window():
         # the drop count never exceeds the start's curled directions and the dimension never falls
         assert all(x <= y for x, y in zip(d, d[1:]))
         assert d[-1] - d[0] <= p["u0"]
+
+
+def test_local_form_releases_only_within_reach():
+    # the per-vertex form (1 November addendum): a release pays only from the k points in reach, so the rod's first
+    # opening at lambda = 1.25 releases a*k = 4 or 8, below the slab's wall of 36: a stall where the shared bath cascades
+    kinds = gw.load_walls()
+    base = dict(kind="local", D=3, lam=1.25, N=288, f=0, u0=2, v0=16, kappa=0, f2=0, reach=4, drop_chance=0.0,
+                noise_seed=0)
+    assert [t[2] for t in gw.simulate(kinds, base, 3)] == [1, 2, 2, 2]
+    assert [t[2] for t in gw.simulate(kinds, dict(base, kind="spark"), 3)] == [1, 2, 3, 3]
+    # with reach 16 the release 16 + 16 = 32 is still below 36; only a reach of 24 or more cascades
+    assert [t[2] for t in gw.simulate(kinds, dict(base, reach=16), 3)] == [1, 2, 2, 2]
+    assert [t[2] for t in gw.simulate(kinds, dict(base, reach=24), 3)] == [1, 2, 3, 3]
+
+
+def test_continuous_readout_scales_r1_r2_and_keeps_r3_a_count():
+    assert gw.readings(3, 2, 1.25, scale=1.5, length=0.5) == (3.0, 1.75, 1)
+    prompts, hiddens = gw.build(seed=9, per_kind=2, readout="continuous")
+    for pr, hi in zip(prompts, hiddens):
+        assert hi["readout"]["kind"] == "continuous"
+        assert 0.5 <= hi["readout"]["scale"] < 2.0 and 0.5 <= hi["readout"]["length"] < 2.0
+        assert all(float(w["r3"]).is_integer() for w in pr["window"])
+        text = json.dumps(pr)
+        assert "scale" not in text and "length" not in text
+    exact, _ = gw.build(seed=9, per_kind=2)
+    assert [p["window"][0]["r3"] for p in exact] == [p["window"][0]["r3"] for p in prompts]

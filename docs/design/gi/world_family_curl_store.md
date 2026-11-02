@@ -110,3 +110,19 @@ C-family item (items 2 and 9). (2) A per-vertex variant of the family (a store p
 made; a wall paid only from the stores within reach) stalls by construction whenever a < wall / points-in-reach, which is a
 second two-state world with a different hidden law and the same three readings: a candidate for the D family's
 "two worlds, same readings, different rules" and for an N-foil. Not built.
+
+## Addendum, 2026-11-02: both "not built" items are built
+
+- **The per-vertex form is the kind `local`.** A hidden reach k ∈ {4, 8, 16}: a release pays only from the k points
+  within reach, so v rises by a·k, not a·N, at each opening. Exact in the generator and pinned by a test: on the rod at
+  λ = 5/4 with a spark of 16, the shared bath cascades to flat (288 released against the slab's wall of 36) while the
+  local form with reach 4, 8 or 16 stalls on the one-curled rung (16 + 16 = 32 is still below 36); reach 24 is the first
+  that cascades. Same three readings, a different hidden law: the "two worlds, same readings, different rules" case.
+  The record's T88 (O171) ran this form in the toy and read NOTHING OPENS below the wall, ONE FRONT and SEVERAL above it.
+- **The continuous readout is `--readout continuous`** (the owner's statement of 30 October: discrete base, continuous
+  3D readings). r1 is multiplied by a hidden energy unit and r2 by a hidden length unit, each drawn continuously in
+  [0.5, 2); r3, a count, stays discrete. The hidden half records the rule and the readout separately, so the
+  G0-against-G1 comparison can score the rule (where G1 should win) apart from the readout (where it should be
+  indifferent). The units are the world's, not the draw's: fresh parameter sets keep them.
+- The private folder now holds two sets from the same private seed: the exact readout (50 cases, 10 per kind) and the
+  continuous one under `private/continuous/`.

@@ -15,6 +15,13 @@ The twisted draw is kept only if the twist condition actually delays at least on
 Output: <out>/cases.json with each case's prompt half (what a model may see) and, unless --private, its hidden half
 beside it; with --private the hidden halves go to <out>/hidden.json so the public file can be shared. Deterministic
 in the seed. Nothing here is a run of the hypothesis; it is a resource for the sister repository's plans.
+
+Added 2 Nov 2026: the kind local (the per-vertex store form of the 1 November addendum: a release stays where it is
+made, so only the k points within reach pay the next wall and the release is a*k, not a*N; k hidden; the same three
+readings under a different law, the D family's "two worlds, same readings, different rules"); and --readout continuous,
+the owner's statement of 30 October that the base rule is discrete and the 3D readings continuous: r1 and r2 carry
+hidden continuous units (an energy scale, a length) while r3, a count, stays discrete. The hidden half records the rule
+and the readout separately so the G0-against-G1 comparison can score them apart.
 """
 from __future__ import annotations
 
@@ -27,8 +34,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LADDER = ROOT / "docs" / "figures" / "ladder_kinds.json"
 
-KINDS = ("fed", "spark", "twisted", "noisy")
-LABELS = {"fed": "rule", "spark": "rule", "twisted": "not reducible to two", "noisy": "no rule found"}
+KINDS = ("fed", "spark", "local", "twisted", "noisy")
+LABELS = {"fed": "rule", "spark": "rule", "local": "rule", "twisted": "not reducible to two", "noisy": "no rule found"}
 LAMBDAS = (1.1, 1.25, 1.5)
 PROBE_OFFSETS = (1, 3, 5, 10, 15)
 FRESH_SETS = 3
@@ -50,16 +57,20 @@ def wall(kinds: dict, D: int, u: int, lam: float) -> float:
     return min(-16 * ds + 4 * lam * dx for ds, dx in kinds[(D, u)])
 
 
-def readings(D: int, u: int, lam: float) -> tuple[float, float, int]:
+def readings(D: int, u: int, lam: float, scale: float = 1.0, length: float = 1.0) -> tuple[float, float, int]:
+    """The three readings of the rung: energy per point, squares per point, local dimension. With the continuous
+    readout, r1 is in a hidden energy unit (times scale) and r2 in a hidden length unit (times length); r3 is a count."""
     a = 4 * (lam - 1)
-    return round(a * u, 6), round(D * (D - 1) / 2 + u / 4, 6), D - u
+    return round(scale * a * u, 6), round(length * (D * (D - 1) / 2 + u / 4), 6), D - u
 
 
 def simulate(kinds: dict, p: dict, steps: int) -> list[tuple[float, float, int]]:
     """Readings at steps 0..steps under the hidden rule of the kind."""
     D, lam, N, f, u, v = p["D"], p["lam"], p["N"], p["f"], p["u0"], float(p["v0"])
     a = 4 * (lam - 1)
-    out = [readings(D, u, lam)]
+    paid = p["reach"] if p["kind"] == "local" else N      # points whose release can pay the next wall
+    scale, length = p.get("scale", 1.0), p.get("length", 1.0)
+    out = [readings(D, u, lam, scale, length)]
     y = 0.0                      # the twist store (twisted kind only); 0 and never binding otherwise
     rng = random.Random(p.get("noise_seed", 0))
     for _ in range(steps):
@@ -72,9 +83,9 @@ def simulate(kinds: dict, p: dict, steps: int) -> list[tuple[float, float, int]]
             twisted_ok = p["kind"] != "twisted" or y >= p["kappa"]
             if u > 0 and twisted_ok and v >= wall(kinds, D, u, lam):
                 u -= 1
-                v += a * N
+                v += a * paid
                 y = 0.0
-        out.append(readings(D, u, lam))
+        out.append(readings(D, u, lam, scale, length))
     return out
 
 
@@ -82,15 +93,23 @@ def drop_steps(trace: list[tuple[float, float, int]]) -> list[int]:
     return [t for t in range(1, len(trace)) if trace[t][2] != trace[t - 1][2]]
 
 
-def draw_params(rng: random.Random, kind: str, kinds: dict) -> dict:
+def draw_params(rng: random.Random, kind: str, kinds: dict, readout: str = "exact") -> dict:
     """One world. The window T is chosen so that at least one drop falls inside it and, for rule kinds, the rule
     still has something to show after it (a later drop, or a plateau that an extrapolation of the drops gets wrong)."""
     D = rng.choice((2, 3, 4))
     lam = rng.choice(LAMBDAS)
     N = 4 * rng.randint(8, 64)
     u0 = rng.randint(1, D)
-    p = dict(kind=kind, D=D, lam=lam, N=N, u0=u0, kappa=0, f2=0, drop_chance=0.0, noise_seed=0)
-    if kind == "spark":
+    p = dict(kind=kind, D=D, lam=lam, N=N, u0=u0, kappa=0, f2=0, reach=0, drop_chance=0.0, noise_seed=0)
+    if readout == "continuous":
+        p["scale"] = round(rng.uniform(0.5, 2.0), 4)
+        p["length"] = round(rng.uniform(0.5, 2.0), 4)
+    if kind == "local":
+        p["reach"] = rng.choice((4, 8, 16))
+        # a sealed spark at the first wall: with a*reach below the next wall the cascade stalls by construction
+        p["f"] = 0
+        p["v0"] = wall(kinds, D, u0, lam) + rng.choice((0, 4, 12))
+    elif kind == "spark":
         p["f"] = 0
         # a spark between the first wall and well above it, so cascades and stalls both occur
         w1 = wall(kinds, D, u0, lam)
@@ -120,7 +139,9 @@ def draw_params(rng: random.Random, kind: str, kinds: dict) -> dict:
 def fresh_params(rng: random.Random, p: dict) -> dict:
     q = dict(p)
     q["N"] = 4 * rng.randint(8, 64)
-    if p["kind"] == "spark":
+    if p["kind"] == "local":
+        q["v0"] = p["v0"] + rng.choice((0, 4))      # the reach and the units stay: they are the world's, not the draw's
+    elif p["kind"] == "spark":
         q["v0"] = max(0.0, p["v0"] + rng.choice((-8, 0, 8)))
     else:
         q["f"] = rng.randint(1, 6)
@@ -130,9 +151,9 @@ def fresh_params(rng: random.Random, p: dict) -> dict:
     return q
 
 
-def make_case(seed: int, kind: str, index: int, kinds: dict) -> tuple[dict, dict]:
+def make_case(seed: int, kind: str, index: int, kinds: dict, readout: str = "exact") -> tuple[dict, dict]:
     rng = make_rng(seed, kind, index)
-    p = draw_params(rng, kind, kinds)
+    p = draw_params(rng, kind, kinds, readout)
     T = p["T"]
     trace = simulate(kinds, p, T + PROBE_OFFSETS[-1])
     case_id = f"gi-{seed}-{kind}-{index:03d}"
@@ -156,18 +177,20 @@ def make_case(seed: int, kind: str, index: int, kinds: dict) -> tuple[dict, dict
         "probe_truth": [trace[T + k] for k in PROBE_OFFSETS],
         "fresh": [{"params": q, "probe_truth": [simulate(kinds, q, q["T"] + PROBE_OFFSETS[-1])[q["T"] + k]
                                                for k in PROBE_OFFSETS]} for q in fresh],
-        "rule": ("v = v + f; if u > 0 and v >= wall(u) { u = u - 1; v = v + 4 (lambda - 1) N }; "
-                 "r1 = 4 (lambda - 1) u; r2 = D (D - 1) / 2 + u / 4; r3 = D - u"),
+        "rule": ("v = v + f; if u > 0 and v >= wall(u) { u = u - 1; v = v + 4 (lambda - 1) "
+                 + ("reach" if kind == "local" else "N") + " }"),
+        "readout": {"form": "r1 = scale * 4 (lambda - 1) u; r2 = length * (D (D - 1) / 2 + u / 4); r3 = D - u",
+                    "scale": p.get("scale", 1.0), "length": p.get("length", 1.0), "kind": readout},
     }
     return prompt, hidden
 
 
-def build(seed: int, per_kind: int, kinds: dict | None = None) -> tuple[list[dict], list[dict]]:
+def build(seed: int, per_kind: int, kinds: dict | None = None, readout: str = "exact") -> tuple[list[dict], list[dict]]:
     kinds = kinds or load_walls()
     prompts, hiddens = [], []
     for kind in KINDS:
         for i in range(per_kind):
-            pr, hi = make_case(seed, kind, i, kinds)
+            pr, hi = make_case(seed, kind, i, kinds, readout)
             prompts.append(pr)
             hiddens.append(hi)
     return prompts, hiddens
@@ -179,8 +202,10 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--per-kind", type=int, default=6)
     ap.add_argument("--out", default="out/gi_world")
     ap.add_argument("--private", action="store_true", help="write hidden halves to a separate file")
+    ap.add_argument("--readout", choices=("exact", "continuous"), default="exact",
+                    help="exact: the ladder's own units; continuous: hidden energy and length units on r1 and r2")
     args = ap.parse_args(argv)
-    prompts, hiddens = build(args.seed, args.per_kind)
+    prompts, hiddens = build(args.seed, args.per_kind, readout=args.readout)
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     if args.private:
