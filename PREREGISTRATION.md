@@ -9819,7 +9819,7 @@ only); anything at sizes where a sheet, a tube and a knot can be told apart. *No
 - **Seen, not scored.** At N = 18 and λ = 1, where five classes tie at zero energy (three flat, two curled), a small Γ puts all the weight on the three flat ones (0.25, 0.50, 0.25 at Γ = 0.01) and none on the two curled ones: quantum switching breaks the published model's classical tie in favor of flat space at that size. At N = 16, where no flat wiring exists, it favors the 4-cube. The Γ at which quantum effects take over is between 1 and 3 at both sizes in the cells read; whether it falls with N, as the global switch suggests, cannot be read from two sizes with different gaps.
 - **Rule 11, briefly.** P1 failed on an assumption about switch counts that one count disproves; the construction is sound by every gate. No branch is abandoned. *Nothing here is about the real universe.*
 
-## T91. The toy's states read through Carroll's mutual-information geometry, on windows (VISION Update 152, the owner's decision (e); written 2026-11-02, 18:25 UTC by the clock, before any registered computation)
+## T91. The toy's states read through Carroll's mutual-information geometry, on windows (VISION Update 152, the owner's decision (e); written 2026-11-02, 18:17 UTC by the clock, before any registered computation; 18:25 was first written before the clock was read)
 
 ### Why this test, now
 
