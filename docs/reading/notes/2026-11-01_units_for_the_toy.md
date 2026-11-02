@@ -284,3 +284,22 @@ choice.
   said so, it should cite HMPS09's c = √(2gJ) instead, or the toy's own rule.
 - Nothing here is about the real universe. A unit attached to a count makes the count easier to picture; it does not make
   the toy a measurement of anything.
+
+## 8. Addendum, 2026-11-02: the owner's anchor (her idea; the arithmetic ours)
+
+Her question of this day, in her words: we know the speed of light in meters per second and we are calling it one link per sweep, so can we calculate the link in meters? And her candidate anchor: dark matter is one link and ordinary matter three or more; a loop may not be able to close without gluons; the tiny particle beginning with T may have the length of one link.
+
+**The arithmetic (ours, exact).** c = 1 link per sweep is one equation in two unknowns, the length of a link and the duration of a sweep; a measured c in meters per second fixes their ratio and neither of them. One more declaration closes it, and each candidate gives a different world:
+
+| If one link is declared to be | link length ℓ (m) | one sweep τ = ℓ/c (s) |
+|---|---|---|
+| one Planck length (the causal-set and graphity convention) | 1.62e-35 | 5.39e-44 |
+| the top quark's reduced Compton wavelength, hbar/(m c), m c^2 = 172.57 GeV | 1.14e-18 | 3.81e-27 |
+| the tau's reduced Compton wavelength, m c^2 = 1776.9 MeV | 1.11e-16 | 3.70e-25 |
+| the electron's reduced Compton wavelength, m c^2 = 0.511 MeV | 3.86e-13 | 1.29e-21 |
+
+(Planck length from CODATA; the masses from the Particle Data Group, general knowledge, to verify; the reduced Compton wavelength is the standard length a particle's mass sets, ħ/(mc).) Any row is a declaration, not a derivation; rule 13 then asks for a second number the declaration was not fitted to.
+
+**The check that bears on her anchor (ours, unverified).** Under the rules, mass counts looped diagonals, so a heavier particle is a longer loop in links. The length a mass sets in the world runs the other way: the top quark's Compton length is a million times shorter than the electron's while its mass is 340,000 times larger. So 'a particle's length in links' cannot be its Compton length; if the top is one link, the electron is not three links but a loop whose links are, in that world, each far longer than the electron's own Compton length. That does not kill the anchor; it says what the anchor is: a choice of the smallest scale, with the particles' world sizes then set by their masses through ħ/(mc) as usual, and the toy's counts set only their mass ratios.
+
+**Her 'a loop cannot close without gluons' (hers, recorded).** *Ours, unverified; general knowledge, to verify:* the top quark is the one quark that never forms a bound state, because it decays (lifetime about 5 × 10⁻²⁵ s) before the strong force can bind it (hadronization takes about 10⁻²⁴ s). A rule in which the top is a twist that cannot close into a loop would have that fact as a target to reproduce (rule 13), never as evidence for it; nothing in the toy has a top quark or a gluon today.
