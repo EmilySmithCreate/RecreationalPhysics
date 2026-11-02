@@ -9889,3 +9889,50 @@ paper's open question. *Nothing here is about the real universe.*
 #### Addendum, 2026-11-02, 18:33 UTC by the clock: the sheet's held-out miss is the window wrapping the torus (a check made after the reading; not rescored)
 
 Found while drafting the paper (`docs/papers/carroll_reader/window_wrap_check.py`) and rechecked by the session: a radius-10 ball on the 32 × 32 torus holds pairs 20 apart, more than half of 32, so some of its shortest paths wrap round the torus. The registered design broke the reading note's own rule (a window smaller than half the torus in each direction). On a 64 × 64 torus the same window reads D_MDS = 3 with λ3/λ1 = 0.362 and λ4/λ1 = 0.081, as Amendment 1 predicted; the tube reads the same at 4 × 128 as at 4 × 64 (its curled share 0.112 either way). The registered verdict stands as scored (the flat word at R = 10 MISSED, the size claim HOLDS); the cause of the miss is the design, said here and in the paper. The opened T51 sheets' D_MDS = 1 at R = 10 is a wrap of the same kind on purpose: their short direction is the curled direction of the burp's product, which the window is meant to see.
+
+## T92. Does a curled X pay an entropy penalty against flat space at λ = 1? (VISION Update 153; written 2026-11-02, 18:56 UTC by the clock, before any registered computation)
+
+### Why this test, now
+
+The owner asked for it ("Whether a curled X charges the same penalty has not been measured. Do this."). Her account of the
+burp (Update 153) has warm X opening because entropy favors open space, with no energy gap in the network (λ = 1). The
+record holds two results that point in opposite directions: a curl inside a warm melted network pays an entropy penalty
+(T78, T79; O147, O148), and, counting one switch out, the curled tube has the lowest free energy of the lattice tori at
+every coupling (O150). This measures the free energy of a curled X against flat space beyond one switch.
+
+### What will be computed (`scripts/curled_x_free_energy.py`; tests `tests/test_curled_x_free_energy.py`)
+
+The published model at λ = 1, named points, no cap, the hard-core rule, Metropolis. Two basins at equal N: the curled tube
+and a flat torus, both at energy zero. At each coupling g in 0.4 to 2.5 (17 values), 4 replicas, each from the built torus,
+2,000 sweeps to settle and 10,000 measured; ⟨H⟩, ⟨S⟩/N, ⟨X⟩/N. Then ΔF(g) = F_curled − F_flat by thermodynamic integration
+from the coldest coupling (the identity and the degeneracy term in the script's docstring; the degeneracy ratio ln 8 at
+N = 144 is exact from O150, and checked before this registration: the 12 × 12 and 12 × 16 flat tori have no zero-cost
+switches, the cheapest costing 32, and the 4 × 36 tube has 72 = 2L). **Stage 1:** the 4 × 36 tube against the 12 × 12
+flat torus (N = 144). **Held out (rule 14):** the 4 × 48 tube against the 12 × 16 flat torus (N = 192), run after an
+amendment writes its prediction.
+
+**The window.** A basin holds while its replicas' mean X / N stays at or above 0.8 (curled) or at or below 0.2 (flat). ΔF
+is read only at couplings where both basins hold in every replica; the warmest such coupling is "the warm end".
+
+**Disclosed before the run.** The switch-cost count above was computed to check the degeneracy term (curled: 72 at cost 0,
+432 at 16, 288 at 24; flat 12 × 12: 864 at 32, 864 at 40, 576 at 52). It is why our prediction is what it is. No chain
+has been run.
+
+### Predictions
+
+- **The owner's (her words of 2 November, "Warm x prefers to open"):** at the warm end, ΔF > 0: open space has the lower
+  free energy.
+- **Ours:** ΔF < 0 at every coupling in the window, and ΔF < −g ln 8 throughout (the curled basin's cheaper and more
+  numerous excitations add to its degeneracy advantage). O150's one-switch count says the same.
+
+### Words
+
+**CURL FAVORED** if ΔF < 0 at every coupling in the window; **OPEN FAVORED** if ΔF > 0 at the warm end; **CROSSES** if
+ΔF changes sign inside the window and is ≤ 0 at the warm end. The size of ΔF per point at the warm end is reported and is
+the held-out quantity.
+
+### What this cannot show
+
+Anything above the warm end, where one of the basins no longer holds (so not the hottest interior of a black hole in
+her picture); anything about a curled X other than the 4 × L tube at four links; anything at λ ≠ 1; and the energy of a
+burp (at λ = 1 the release in the network is zero by construction). *Nothing here is about the real universe.*
