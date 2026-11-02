@@ -9818,3 +9818,52 @@ only); anything at sizes where a sheet, a tube and a knot can be told apart. *No
 - **Word: BEHAVES, PREDICTIONS MISSED** (P1 and P2).
 - **Seen, not scored.** At N = 18 and λ = 1, where five classes tie at zero energy (three flat, two curled), a small Γ puts all the weight on the three flat ones (0.25, 0.50, 0.25 at Γ = 0.01) and none on the two curled ones: quantum switching breaks the published model's classical tie in favor of flat space at that size. At N = 16, where no flat wiring exists, it favors the 4-cube. The Γ at which quantum effects take over is between 1 and 3 at both sizes in the cells read; whether it falls with N, as the global switch suggests, cannot be read from two sizes with different gaps.
 - **Rule 11, briefly.** P1 failed on an assumption about switch counts that one count disproves; the construction is sound by every gate. No branch is abandoned. *Nothing here is about the real universe.*
+
+## T91. The toy's states read through Carroll's mutual-information geometry, on windows (VISION Update 152, the owner's decision (e); written 2026-11-02, 18:25 UTC by the clock, before any registered computation)
+
+### Why this test, now
+
+The owner chose Carroll's route over Jacobson's and asked for a paper drafted in his mathematics before a question is
+chosen for him. That paper needs one exact computation: his dimension estimator ([CCM16] Secs. III.B and III.C, classical
+multidimensional scaling on mutual-information distances) applied to the toy's states. With a constant mutual information
+per link, his distance is the graph distance (the reading note of 2 November, section 7, as corrected by its verifier).
+On whole tori every shape reads four, because each wrapped cycle takes two large eigenvalues (exact, recomputed); so the
+reader is applied to windows, balls of graph radius R. Exploratory with respect to the hypothesis; the question is whether
+the published reader and the toy's own local dimension count agree.
+
+### What will be computed (`scripts/carroll_reader.py`; tests `tests/test_carroll_reader.py`)
+
+For every window: the multidimensional-scaling eigenvalues λ1 ≥ λ2 ≥ ..., their reading rule ε_D, and the registered
+count D_MDS = the number of eigenvalues at least 0.1 λ1; beside it the toy's local dimension d at the center. States:
+the flat 32 × 32 torus, the 4 × 64 tube, the 4-cube; the first wiring of each of the first four slowest-cooled T51 runs
+(1,024-point opened sheets with their knots; every eighth point a center); four warm T78 melts (N = 196, g = 3.3,
+snapshot 800; every point a center). **Stage 1:** R = 2, 3, 4, 6. **Held out (rule 14):** R = 10, run only after an
+amendment writes its prediction from stage 1.
+
+**Disclosed before the run.** The 4-cube's whole-graph spectrum (16, 16, 16, 16, then zero and −4), the 8 × 8 torus's
+and the 4 × 16 tube's were computed on 2 November by the verifier of the reading note and rechecked by the session; they
+are whole graphs, not windows, and are the reason windows are used. No window has been computed.
+
+### Predictions (ours; the owner's not given)
+
+- **P0 (control, exact).** The 4-cube: for R ≥ 4 the window is the whole cube, and D_MDS = 4, against the toy's d = 0.
+- **P1 (flat sheet).** D_MDS = 2 at R = 3, 4 and 6 (the graph-distance ball is not exactly Euclidean, but its extra
+  eigenvalues stay below 0.1 λ1).
+- **P2 (tube).** D_MDS(tube) ≤ D_MDS(sheet) at R = 4 and 6, and the curled direction's eigenvalue relative to the
+  largest falls with R, close to 6/(2R + 1)² (ours: a segment of length 2R + 1 times a 4-cycle with additive variances,
+  the cross term ignored), within a factor of 2: 0.074 at R = 4, 0.036 at R = 6. So at R ≥ 4 the reader, like the
+  toy, does **not** count the curled direction.
+- **P3 (opened sheets with knots).** At every R the most common D_MDS over the centers equals the flat sheet's.
+- **P4 (melts).** D_MDS ≥ 4 at R = 3 at most centers.
+
+### Words
+
+**LADDER READ** if the reader at R ≥ 4 ranks sheet above tube (P1, P2 hold) and disagrees on the cube as P0 says;
+**LADDER NOT READ** if the tube reads as many dimensions as the sheet at R = 4 and 6; **MIXED** otherwise. Each
+prediction is scored separately. The held-out size's number is scored in its amendment.
+
+### What this cannot show
+
+Anything about a quantum state: the mutual information here is a constant put on the links, not computed from a state.
+It reads geometry from wiring through Carroll's estimator; whether any quantum state has this information graph is the
+paper's open question. *Nothing here is about the real universe.*
