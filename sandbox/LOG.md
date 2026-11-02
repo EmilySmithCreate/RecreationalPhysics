@@ -595,3 +595,4 @@ One line per look: the date, the question, what was seen. Nothing here is cited,
 - 2026-11-02, 16:21 UTC: constructor-theory reading note (verified), eleven bib entries, Marletto letter drafted locally.
 - 2026-11-02, 17:29 UTC: Carroll inventory and four verified reading notes; 17 bibliography entries; quantum-toy brief; the MDS correction.
 - 2026-11-02, 18:03 UTC: T90 run and read; O173; Update 152.
+- 2026-11-02, 18:20 UTC: T91 stage 1 and held-out read; O174.
