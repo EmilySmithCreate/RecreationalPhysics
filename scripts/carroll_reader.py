@@ -12,7 +12,7 @@ between the points of a window, then classical multidimensional scaling (their E
 WINDOWS. The reader is applied to a ball of graph radius R round a center point, using full-graph shortest-path
 distances between the ball's points (whole tori read four for every shape because each wrapped cycle takes two large
 eigenvalues; the note's section 7 as corrected). For each window: the eigenvalues of B = −J D² J / 2 in decreasing order,
-λ1 ≥ λ2 ≥ ..., their reading rule ε_D = 1 − Σ_{i≤D} |λ_i| / Σ |λ_i|, and the registered count
+λ1 ≥ λ2 ≥ ..., their reading rule ε_D = 1 − Σ_{i≤D} |λ_i| / Σ |λ_i| (unnumbered in [CCM16]; their Eq. 26 is the stress), and the registered count
 
     D_MDS = the number of eigenvalues at least 0.1 λ1.
 
@@ -67,7 +67,7 @@ def d_mds(w, threshold=THRESHOLD):
 
 
 def eps(w, d):
-    """Their reading rule ε_D ([CCM16] Eq. 26)."""
+    """Their reading rule ε_D ([CCM16] Sec. III.C, unnumbered; Eq. 26 is the stress function)."""
     a = np.abs(w)
     return float(1 - a[:d].sum() / a.sum()) if a.sum() > 0 else float("nan")
 
