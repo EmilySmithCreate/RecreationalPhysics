@@ -1,0 +1,22 @@
+{
+  "script": "scripts/run_rod_cell.py",
+  "stage": "stage1",
+  "L": 16,
+  "lam": 1.25,
+  "e_store": 30.0,
+  "replicas": 16,
+  "n_sweeps": 10000,
+  "record_every": 50,
+  "seed": 20269301,
+  "kinds": [
+    "cell",
+    "rodpiece",
+    "plain"
+  ],
+  "tie": "all_at_the_last",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "numba": "0.67.0",
+  "preregistration": "PREREGISTRATION.md section T93"
+}

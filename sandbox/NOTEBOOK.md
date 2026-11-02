@@ -3035,3 +3035,8 @@ Where does the curled tube come in? Only the rod. The end of a curled tube. It c
 
 paid for by the fed photon energy. Yes the dark matter and photon energy keep adding and there is no space for them so they organize around 0 d space. One sided loops can't take photon energy they can only organize and orient themselves and whirl until they become totally still, and their non side is where new space opens"
 - 2026-11-02, 19:32 UTC, Fable. Recorded as hers in VISION Update 154, with what the toy already holds that touches it (O150: the tube's zero-cost relatives include a one-sided closure, and those relatives are what favor the curl in T92) and a test proposed, not run: does a fed opening start at a one-sided seam.
+- 2026-11-02, 20:27 UTC (recorded), the owner, verbatim: "any update?"
+- 2026-11-02, 20:27 UTC, Fable. T93 stage 1 partway: the cell kind finished with 2 of 16 replicas opening, neither at the cell, so the registered word was already fixed (NOTHING OPENS).
+- 2026-11-02, 20:35 UTC (recorded), the owner, verbatim: "so if it doesnt open into 0d space, where does it open?"
+- 2026-11-02, 20:35 UTC, Fable. Answered from the partial run: in the rod itself, at about the distances chance gives, with too few openings to say more; noted that an even feed gives energy no reason to gather at the cell, which her picture needs.
+- 2026-11-02, 21:10 UTC, Fable. T93 read (O177): NOTHING OPENS by the words, and the reason is the assistant's design error. Feeding every rod store at T88's 30 units was sixteen times T88's total, every store above the wall, and the rod melted within 50 sweeps and destroyed the cell. Where an opening starts was not measured; her prediction and ours are both untested. The held-out size is not run.

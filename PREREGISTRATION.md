@@ -10001,3 +10001,30 @@ control; **DEFECT DRAWS IT** if both joined kinds start at the junction in at le
 That a zero-dimensional cell exists in the real interior of a black hole; anything at λ ≤ 1 (the opening needs an energy
 gap or a feed, and the comparison with T88 needs its setting); what her "non-side" is (no definition in the wiring yet);
 anything at four links. *Nothing here is about the real universe.*
+
+### Reading of stage 1 (2026-11-02, 21:10 UTC by the clock; `results/t93_rod_cell_stage1.csv`)
+
+**By the words: NOTHING OPENS.** Open regions formed in 2 of 16 cell replicas (first at 3.3 and 5.4 layers from the
+junction), 2 of 16 rodpiece replicas (2.7 and 7.3) and 0 of 16 plain rods; none started at the junction. Energy is
+conserved to 0.0 in all 9,600 rows.
+
+**What actually happened: the rod melted, and the design is the cause (the assistant's error).** Within 50 sweeps 221 to
+275 points of every state are damaged (d > 3), and by the end 251 to 256 of the plain rod's 256 points; the cell's 44
+points at d = 0 are gone by sweep 100 in every cell replica (mean 0.7 at sweep 50, 0.0 at 100). The open regions that
+were counted are small transient patches inside a melted rod (largest region at the end: none in any replica). The
+section above calls this "T88's setting"; it is T88's energy per store, not T88's feed. T88 fed one layer (8 stores at 30,
+240 units in all); this run fed every side-0 rod store at 30 (128 stores, 3,840 units), sixteen times as much, with every
+store above the rod's single-move wall of 24.0 at λ = 1.25. So every point could pay its own wall at once.
+
+**Rule 11's four answers.** (1) It does not test the prediction, hers or ours: no clean opening formed anywhere, so where
+openings start was not measured. (2) The failure is the protocol's parameters (the total energy), not the mechanism or
+the size. (3) The cheaper check is exact: with per-vertex stores, an even feed is either below the wall at every store
+(nothing moves, as at T88's 15 a store) or above it at every store (everything moves at once, as here), so an even feed
+with per-vertex stores cannot ask where an opening starts. A test of the question needs energy that can gather (a shared
+bath at a fixed warmth inside the window where the rod opens without melting, or stores that pass energy along) or a
+feed that is not even, and either is a new design. (4) The question is abandoned for this toy only if a design in which
+energy can gather and the rod opens cleanly still shows no preference for the junction.
+
+**The held-out size (L = 24) is not run.** It would repeat the melt. Any next design is a new pre-registration with her
+prediction, not an amendment to this one.
+
