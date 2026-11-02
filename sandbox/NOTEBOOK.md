@@ -3026,3 +3026,7 @@ Warm x prefers to open that is what it did in the early universe.
 
 The net release doesn't need to be from lambda is greater than 1 in network. Net matter comes from the overage. The matter antimatter pairs and early universe photons , that cancel or disburse while matter forms atoms and stays."
 - 2026-11-02, 18:54 UTC, Fable. Recorded as hers in VISION Update 153. The measurement she asks for (does a curled X charge the entropy penalty) is pre-registered as T92 before it runs, with her prediction taken from her own words ('warm X prefers to open'), and ours from O150 (the tube's one-switch free energy is lowest at every coupling at λ = 1).
+- 2026-11-02, 19:00 UTC (recorded), the owner, verbatim: "curled state far more thermal fluctuation options, curled state does not need to be stable for now.
+
+Where does the curled tube come in? Only the rod. The end of a curled tube. It could be as soon as it forms it opens right away."
+- 2026-11-02, 19:00 UTC, Fable. Recorded under Update 153. T92 keeps running as registered; its curled basin (the four-link tube) is the record's stand-in for X since Update 13, and she now places the tube only at the rod's end, which may open as soon as it forms. The tension with claims 1 and 4 ('stable for now') is stated and left to her.
