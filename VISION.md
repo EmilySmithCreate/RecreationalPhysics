@@ -2119,6 +2119,11 @@ against the published N-independence. Details: ASSUMPTIONS O172; PREREGISTRATION
   (the tube, at low coupling) is untouched.
 - **For the model's authors.** Their analytic expectation measured at eight sizes on one axis. A note to Christy Kelly is drafted
   locally and waits on a current address; the owner sends.
+- **Stage 3, read 00:30 UTC (the owner's choice of 1 November, option C with A alongside).** A third replica with the heating leg
+  continued from the cooled state instead of a fresh torus: the two legs agree within 0.003 at the crossings, the original
+  two-leg gate passes, and the crossings (3.46 and 2.88) fall inside both ranges written before any N = 1156 run.
+  **LOGARITHMIC DRIFT by the registered rule, with no post-hoc reading needed; TASKS T9 is closed.** The slope with the
+  held-out size included is 1.03 to 1.07 times the plain count.
 
 ## The target ("the spot")
 

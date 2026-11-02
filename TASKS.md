@@ -185,7 +185,7 @@ Write `PREREGISTRATION.md`: λ ∈ {0, 0.25, 0.5, 0.75, 1}; sizes; observables (
 
 Questions: at which λ does the order change? Is there any λ with a first-order transition **and** a connected space (VISION S2 and S4 together)? Then fixed-total (sealed) runs as in VISION step 3.
 
-## T9. Unexplained drift  ◑ (2026-11-01: T89 read at N = 1156, UNSCORED by the two-leg gate; the cooling leg's crossings inside their predicted ranges; amendment proposed, the owner's call; O172)
+## T9. Unexplained drift  ☑ (2026-11-02: LOGARITHMIC DRIFT at the held-out N = 1156 by the registered two-leg rule on a replica whose heating leg was continued from the cooled state; PREREGISTRATION T89, stage 3; O172)
 
 **Status, 2026-11-01.** Being completed as PREREGISTRATION T89: the seven λ = 1 sizes already on the record (36 to 676) give 1/g(φ*) = a + b ln N with 16 b = 1.10 to 1.21; [Kelly22] Eq. (4.65) derives β(N) = β̃ log N from the N log N entropy of regular graphs and says it contradicts [KTB19]'s N-independence; N = 1156 is held out, predicted before it ran (g(0.5) = 3.43 ± 0.13, g(0.65) = 2.79 ± 0.11), running on the laptop. The owner's prediction is owed before it is read.
 
