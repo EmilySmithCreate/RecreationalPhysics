@@ -9936,3 +9936,12 @@ the held-out quantity.
 Anything above the warm end, where one of the basins no longer holds (so not the hottest interior of a black hole in
 her picture); anything about a curled X other than the 4 × L tube at four links; anything at λ ≠ 1; and the energy of a
 burp (at λ = 1 the release in the network is zero by construction). *Nothing here is about the real universe.*
+
+#### Stage 1 read, and Amendment 1 (the held-out prediction), 2026-11-02, 19:10 UTC by the clock (`results/t92_curled_x_free_energy_stage1.csv`; read under the rules above, unchanged)
+
+- **The window.** Both basins hold from g = 0.4 to 1.8 in every replica. At g = 2.0, 2.2 and 2.5 the curled tube does not hold (lowest replica X / N 0.29, 0.36, 0.21; S / N falls to 1.14, 1.10, 1.01; ⟨H⟩ rises to 15, 31, 164): it leaves its shape into damaged states of higher energy, not into flat space. The flat torus stays perfect (⟨H⟩ = 0, X = 0) to g = 2.5.
+- **ΔF in the window (N = 144).** ΔF / g = −2.079 (= −ln 8 exactly) from g = 0.4 to 1.3, −2.080 at 1.4, −2.081 at 1.5, −2.107 at 1.6, −2.272 at 1.8; ΔF per point −0.006 at g = 0.4 to −0.028 at 1.8. **Disclosed:** below g = 1.6 almost no move was accepted in either basin (every move out costs at least 16 from the tube and 32 from flat space), so ⟨H⟩ reads zero there; the true value is small (about 0.16 at g = 1.5 for the tube, by counting the 432 moves of cost 16), so the integral is dominated by the exact degeneracy term until g = 1.6, and the measured excitation part comes from 1.6 and 1.8.
+- **Scored.** The owner's prediction (open space favored at the warm end, g = 1.8): **FAILS** within the window (ΔF = −4.09 at 1.8). Ours (ΔF < 0 everywhere): **HOLDS**; its strict part (ΔF < −g ln 8) holds from g = 1.4 up and is equality below, where nothing was excited. **Word: CURL FAVORED.**
+- **Seen, not scored.** Above the window the curled tube does leave its shape at g ≥ 2.0 while flat space holds to 2.5, so warmth does break the curl there; but what it goes to is a damaged, higher-energy state, not flat space, and this method cannot give a free energy where the basin does not hold.
+
+**Amendment 1, the held-out prediction for N = 192** (the 4 × 48 tube against the 12 × 16 flat torus, degeneracy ln 4), from stage 1 alone, before N = 192 runs: the window ends at g = 1.8 again (the curled tube holds at 1.8 and not at 2.0); ΔF < 0 at every coupling in it (CURL FAVORED); at g = 1.8 the excitation part scales with N, so ΔF / g = -1.643 (range -1.771 to -1.515, the excitation part within a factor of 1.5).
