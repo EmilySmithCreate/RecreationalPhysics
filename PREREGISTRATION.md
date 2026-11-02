@@ -9952,3 +9952,52 @@ burp (at λ = 1 the release in the network is zero by construction). *Nothing he
 - **The number at g = 1.8: UNSCORED**, because the curled basin does not hold there.
 - **The word: CURL FAVORED holds at the held-out size.** ΔF < 0 at every coupling in the window, ΔF / g = −1.386 (= −ln 4) up to 1.3 and −1.398 at 1.4.
 - **Verdict of T92: CURL FAVORED at both sizes inside the window; the owner's prediction (open favored at the warm end) fails there; the window shrinks with size (1.8 at N = 144, 1.4 at N = 192), and above it the tube breaks into damaged, higher-energy states while flat space holds.** Inside the window, entropy holds the curl; above it, warmth breaks the curl but does not make flat space. *Nothing here is about the real universe.*
+
+## T93. A zero-dimensional cell inside the rod: does the opening start there? (VISION Update 154; written 2026-11-02, 19:37 UTC by the clock, before any run)
+
+### Why this test, now
+
+The owner's picture (Update 154): dark matter and photon energy keep adding with no space for them, organize around a
+zero-dimensional cell inside the rod, and new space opens there. Her instruction of the same evening: "But no run has
+placed one inside a rod. Proceed".
+
+### What will be run (`scripts/run_rod_cell.py`; tests `tests/test_rod_cell.py`)
+
+Six links, named points, sealed, her tie "all at the last", λ = 1.25, per-vertex stores: T88's setting. Three kinds of
+state, 16 replicas each, 10,000 sweeps, read every 50:
+- **cell:** the rod 4 × 4 × L with a 6-cube (every point at d = 0) joined at the middle layer by two switches;
+- **rodpiece (the defect control):** the same rod joined the same way to a 4 × 4 × 8 rod piece (d = 1);
+- **plain:** the rod alone.
+Every side-0 rod point's store gets 30 units (T88's opening energy per store); the attached piece gets nothing.
+
+**Exact, before the run (built states, checked by the tests and printed once):** both joined states are valid, six-regular,
+bipartite and connected; the joins disturb the rod identically in the two joined kinds (236 of 256 rod points at d = 1,
+12 at d = 2, 4 at d = 3, 4 at d = 6); 44 of the cell's 64 points stay at d = 0 (20 disturbed by the joins); the plain rod
+has all 256 at d = 1. Energies at λ = 1.25: cell 764, rodpiece 868, plain 512.
+
+**The observable.** The first record at which the rod holds an open region (connected d = 3 points, at least MIN_REGION);
+its circular mean layer and its circular distance in layers to the junction layer L/2. "At the junction" means within 2
+layers. By chance alone, 5 of 16 layers are within 2 of the junction (31 %).
+
+**Stage 1:** L = 16. **Held out (rule 14):** L = 24, run after an amendment writes its prediction.
+
+### Predictions
+
+- **The owner's, INFERRED from her words of 2 November (Update 154) and marked so:** in the cell kind the opening starts at
+  the junction in a majority of replicas, and more often than in the rodpiece control.
+- **Ours:** the joins are defects with lower local walls, identical in the two joined kinds, so the opening starts at the
+  junction about equally often in both (within 3 replicas of each other), and the zero-dimensional cell adds nothing beyond
+  the defect; in the plain rod it starts anywhere (at the junction layer in about a third, by chance).
+
+### Words (stage 1, per kind counts out of 16)
+
+**CELL DRAWS IT** if the cell kind starts at the junction in at least 9 replicas and in at least 4 more than the rodpiece
+control; **DEFECT DRAWS IT** if both joined kinds start at the junction in at least 9 and within 3 of each other;
+**NOTHING DRAWS IT** if the cell kind starts at the junction in at most 8 and at most 3 more than the plain rod;
+**NOTHING OPENS** if fewer than 8 cell replicas form an open region; otherwise **MIXED**.
+
+### What this cannot show
+
+That a zero-dimensional cell exists in the real interior of a black hole; anything at λ ≤ 1 (the opening needs an energy
+gap or a feed, and the comparison with T88 needs its setting); what her "non-side" is (no definition in the wiring yet);
+anything at four links. *Nothing here is about the real universe.*
