@@ -10371,3 +10371,53 @@ Both fresh knots happen to have the same charges (8, 16, 8) and the same energy 
 α*(b) = −2.13, −2.13, −2.35, −2.75, −3.73 at b = 2 to 10: **every value inside Amendment 2's range** (−2.2 ± 0.3, −2.3 ± 0.3, −2.6 ± 0.5, −3.2 ± 1.0, −4 ± 2). At b = 12, −3.62 (the turn-back toward −1 predicted for 12 and 14 came only at 14, −0.55: **one clause missed by half**). D > 0 through b = 14 (predicted for b ≤ 10: holds and more). Within the torus's reach (b ≤ 12) the spread is −2.13 to −3.73, ±30 % of the mean: **DRIFTS ACROSS b, as predicted.**
 
 **Verdict of T100: DRIFTS ACROSS b, DRIFTS ACROSS KNOTS, NO DELAY at one point of the second knot.** The owner's inferred ONE α fails by the letter, as T85's did. The consistent form removes most of T85's drift (a factor of four to about ±30 %) but not all of it, and the knot drift is not explained by E_knot/q, since both knots share those numbers. **Rule 11's four answers.** (1) It falsifies ONE α for one-switch wiring knots under the derived-diagonal and fixed-total rules; it says nothing about her particles, which are not wiring knots. (2) The remaining drift across b grows with b where the path's sample of the halo thins (P falls by a factor of 40 from b = 2 to 12 while D falls by 20), so it is the halo's shape against the path, not the protocol's inconsistency, which the consistent form removed. (3) The cheaper discriminating check: the same computation with an isotropic halo put in by hand (U falling as 1/r), where ONE α must hold exactly if the reader is right; if it drifts there, the reader is at fault. Not run. (4) The branch is abandoned for wiring knots if the isotropic check holds and real halos still drift; her particles, when built, are the object to test. *Nothing here is about the real universe.*
+
+#### T99 read, 2026-11-03, 21:51 UTC by the clock (`results/t99_l64_lam110_00.csv`, `_lam125_`, `_lam135_`; read under the words above, unchanged)
+
+All 24 tubes opened (at λ = 1.10 after 24,000 to 138,000 sweeps, at 1.35 after 1,800 to 7,800) and all 24 finals are kept (flat share ≥ 0.98). The energy left at the end of the hold over the release 4(λ − 1)N: medians **0.051, 0.055, 0.099** at λ = 1.10, 1.25, 1.35 (per replica: 0 or one column's worth at 1.10 and 1.25; at 1.35 one or two columns plus up to five other pieces in five of eight). End to end the medians differ by a factor of 1.94.
+
+- **Word: λ-FREE by the letter** (all three medians within a factor of 2), at the edge of the word: the share is the same at 1.10 and 1.25 and nearly doubles at 1.35, where the hotter opening leaves more pieces, not larger ones.
+- **The inferred reading of the owner's position (λ-SET, rising): fails by the letter;** its direction, rising, is what the third cell shows. **Ours (λ-FREE): holds by the letter;** our added expectation that the share would fall with λ fails, since the number of knots rises with the release's warmth and a column's own energy scales as (λ − 1) exactly as the release does, so the share counts knots and nothing else.
+- **Exact, ours:** a column's energy is proportional to (λ − 1), as the release is, so the share of the release held in columns is the number of columns per point, λ-free by construction; only the count of pieces can move it, and the count rose at 1.35 (others 0 to 5 against 0 at the lower λ).
+
+**Verdict of T99: λ-FREE at the edge; the share is a count of knots set at the opening, and λ moves it only through the opening's warmth.** No λ in this range brings it near a billionth (the smallest share is 5 %; the zero rows are tubes that healed completely). *Nothing here is about the real universe.*
+
+## T101. Each point's own clock: does the toy's dynamics run slower or faster near a knot? (option A of the clock addendum to VISION Update 156; the owner's "a first proceed", 21:55 UTC; written 2026-11-03, 21:55 UTC by the clock, before any run)
+
+**Why.** The γ reader lacks the half of Einstein's gravity that is time running slow (O182; the isotropic-halo look). The
+toy's one clock is the sweep count, a global one. A local clock needs a rate per point. Before any rule is put in (option
+B), this asks whether the toy's own dynamics already carries one: a point's count of accepted moves is its own clock
+beside the sweep count, and the question is whether that clock runs slower or faster near the knots the opening leaves.
+
+**What will be run** (`scripts/run_clock_count.py`, `configs/t101_clock_l64_lam125_00.json`; the counter is
+`cqg.run_chain(..., moves=)`, which uses no random numbers, `tests/test_clock_count.py`). T99's λ = 1.25 cell, same
+seeds, same protocol (a 64 × 4 tube opens by itself at g = 1.25, cools to 0.25 over 10,000 fair sweeps, holds 5,000),
+eight replicas: so every tube opens and cools exactly as in T99 and the final energy must equal T99's row for row (a check,
+not a prediction). Counted: each point's accepted moves over the opening and over the cooling and hold. Read at the end:
+the leftover points are those not at d = 2; every point's graph distance to the nearest leftover point; NEAR is distance
+0 or 1, MID 2 or 3, FAR 4 or more; per replica the mean moves per point in each band, opening and cooling separately. A
+replica with no leftover has no NEAR band and is reported, not scored. No size claim, no held-out size.
+
+**Words, on the cooling and hold (the clock near matter at rest):** SLOWER NEAR KNOTS if NEAR's mean is below FAR's in
+every scored replica; FASTER NEAR KNOTS if above in every scored replica; MIXED otherwise. The opening phase is reported
+beside it, not scored (there the front's passage is what is counted, O93).
+
+**Predictions.** The owner's, **inferred** from her rule of 26 September (the pace of the present is slower where matter
+sits) and marked so: SLOWER NEAR KNOTS. Ours: FASTER NEAR KNOTS, because a knot's surroundings are where the flat sheet
+has moves to make at all (the flickering swapped pair of O82; at g = 0.25 a perfect sheet accepts nothing,
+`test_a_frozen_sheet_counts_nothing`), so a knot is where the toy's clock ticks and empty space is where it stands still.
+*Said in advance:* if FASTER holds, the toy's own clock runs the opposite way to clocks near mass, as the front's pace did
+(O93), and option B would have to put the sign in by hand; if SLOWER holds, the toy already carries the sign Einstein's
+time half needs and B has something to build on.
+
+**What this cannot show.** That a count of moves is time (O103 does not assume it); anything about clocks in reality.
+*Nothing here is about the real universe.*
+
+#### T101 read, 2026-11-03, 22:19 UTC by the clock (`results/t101_clock_l64_lam125_00.csv` and `_adj/`; read under the words above, unchanged)
+
+**The paired check holds:** every replica's final energy equals T99's row for row (14, 0, 14, 14, 0, 38, 14, 14), so the counter changed nothing in the chain. Two replicas healed completely (no leftover) and are not scored; six are scored (five with one four-point column, one with four pieces of sixteen points).
+
+- **Cooling and hold (scored): FASTER NEAR KNOTS**, in every scored replica. Mean accepted moves per point, NEAR / MID / FAR: 1.08 / 0.19 / 0.00, 0.33 / 0.00 / 0.00, 1.17 / 0.12 / 0.00, 1.07 / 0.44 / 0.00, 0.33 / 0.00 / 0.00, 2.08 / 0.19 / 0.00. FAR is exactly zero in all six over 40,020 sweeps: away from a knot the cooling sheet accepts no move at all, and the toy's clock ticks only within three steps of the knot.
+- **Opening (reported):** NEAR ≥ FAR in all six (38.6 / 40.9 / 32.6; 146.8 / 149.5 / 134.2; 32.2 / 27.9 / 19.9; 60.1 / 67.3 / 53.6; 58.5 / 52.5 / 37.1; 89.2 / 89.1 / 76.0), by 10 to 60 %: the places that end up holding a knot were also where the front made the most moves.
+
+**Verdict of T101: FASTER NEAR KNOTS.** The owner's inferred SLOWER NEAR KNOTS fails; ours holds. As said in advance: the toy's own clock, read as the count of moves, runs the opposite way to clocks near mass, as the front's pace did (O93), so option B would have to put the sign in by hand. *Ours, unverified:* the count of moves is a count of change, and in this toy change happens only where the arrangement is imperfect; a clock that runs faster where matter sits is a clock of activity, not of proper time, which is a reason to doubt that the count of moves is the toy's time (O103's caution) rather than a reason to doubt her rule. *Nothing here is about the real universe.*
