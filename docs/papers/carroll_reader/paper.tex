@@ -46,7 +46,7 @@ Michalakis applied to the wirings of a graph model of emergent geometry}
 \email{emilysmithcreate@gmail.com}
 \affiliation{Independent researcher, Charlottesville, Virginia, USA}
 
-\date{DRAFT, 2 November 2026}
+\date{DRAFT, 3 November 2026}
 
 \begin{abstract}
 Two published routes build space from a network. In combinatorial quantum gravity (CQG) the network is a classical
@@ -92,9 +92,13 @@ failed.
 \emph{Why the author asks (her hypothesis, stated once).} The author holds that our space is a stable phase of a
 deeper, specific arrangement that is curled, and that space arose when it opened, releasing a bounded amount of
 energy. On the parameter used below she holds that $\lambda$ is 1 or below everywhere when the network is taken as a
-whole, the curled object seen one part at a time being the exception; that the two sides of the bipartite graph are
-two distinct kinds of point, every point within a kind the same; and that points belong to the two-dimensional
-description only, the foundational degrees of freedom being twist and curl. Whether a curled direction reads as a
+whole, the exception being the two-dimensional inner shell of a black hole seen one part at a time, where the
+arrangement sets a barrier above 1; that the two sides of the bipartite graph are two distinct kinds of point, every
+point within a kind the same; that points belong to the two-dimensional description only, the foundational degrees of
+freedom being twist and curl, with rules of their own relating them; that the converted tori are the model's end state and
+not a stage of her change, three dimensions being in her picture a projection from the two-dimensional arrangement; and
+that photons travel a cube's body diagonals and gravity its edges, both between points of different sides, for which the
+model's links stand, while matter, energy and twist are stored between points of the same side, which are never linked. Whether a curled direction reads as a
 dimension is the question her picture of opening rests on, and that is why the reader's answer matters to her. None
 of this is assumed below.
 
@@ -184,7 +188,10 @@ description (Sec.~I), this is a reading of that description, not of the degrees 
 foundational.
 
 \emph{A mutual information per link.} The model says only whether two vertices are linked; all links are alike. So
-take $I(A_p:A_q)/I_0=x_0$ on every link, for one constant $0<x_0<1$, and zero otherwise.
+take $I(A_p:A_q)/I_0=x_0$ on every link, for one constant $0<x_0<1$, and zero otherwise. (Under the author's
+position of Sec.~I this places the mutual information where her waves travel and none where her matter is stored; a
+nonzero mutual information on same-side pairs at graph distance two stands for stored matter and is the second reading
+of Sec.~\ref{sec:matter}, registered separately with her prediction before it was computed.)
 
 \emph{Exact.} Then every edge has the same length $w=\ell_{\rm RC}(-\ln x_0)$, Eq.~(14) gives $d(p,q)=w\,\delta(p,q)$
 with $\delta$ the graph distance, and $B$ is $w^2$ times the matrix built from $\delta$. Its eigenvalues scale by $w^2$,
@@ -424,6 +431,24 @@ for this, that is, is there a natural state for each wiring whose reader curvatu
 and (40)) tracks the wiring's Ollivier curvature?
 \end{enumerate}
 
+\section{A second reading: a window with stored matter}
+\label{sec:matter}
+
+Registered as T94 with the author's prediction (a window holding stored matter reads differently from an empty one)
+and computed on 3 November 2026~\cite{prereg}. On the flat $32\times32$ torus a \emph{stored pair} is a same-side
+pair at graph distance two with two common neighbours (the diagonals of a square). A stored pair carrying mutual
+information $x_m$ has reader distance $\alpha=\ln x_m/\ln x_0$ in link units; the window is the unweighted ball of
+radius $R$ in every case, so only the distances change, and distances are shortest weighted paths. With every stored
+pair at $\alpha=1$ (a diagonal shares as much as a link) the window's metric is the Chebyshev distance and the sheet reads
+nearer to two dimensions: $D_{\rm MDS}=4,3,3$ at $R=3,4,6$ against $4,4,3$ with links only, with $\lambda_3/\lambda_1$
+falling from $0.43,0.40,0.37$ to $0.14$ at every radius. At $\alpha=0.5$ the fit worsens ($D_{\rm MDS}=4,5,5$). One
+stored unit at the center (the eight diagonals of the four squares meeting there, $\alpha=1$) adds an eigenvalue of its
+own: $D_{\rm MDS}=5$ at every radius, $\lambda_4/\lambda_1=0.25,0.23,0.16$ against $0.12,0.10,0.09$; the held-out
+$R=6$ value sits inside the range fitted on $R=3,4$ for that eigenvalue ($0.076$ in $0.066$ to $0.198$) and outside it
+for the third eigenvalue, where the amendment said in advance the fit was bad. Her prediction holds in every case at
+every radius; of ours, one clause and one prediction fail by the letter (the reading in Ref.~\cite{prereg}). The
+shares are placed by hand as her rule says, and no quantum state has been shown to carry them.
+
 \section{What this paper does not show}
 
 No quantum state of the model is computed. The mutual information used is a constant put on the links; the one
@@ -431,7 +456,9 @@ explicit state used is built from the wiring and serves only as a calibration. T
 threshold, which is ours, and the flat sheet's count sits on it at two radii; at $R=10$ the registered sheet window
 also wrapped round its torus. The converted tori come from runs at
 $\lambda=1.25$, outside CQG; the random graphs are of the published model at $\lambda=1$; the built states are
-geometry only. Agreement or disagreement between the reader and the model's count is a relation between two
+geometry only. The wirings carry none of the degrees of freedom the author takes as foundational (twist and curl), so
+nothing quantum in her hypothesis is tested; the quantum content of Ref.~\cite{CCM16} enters only through the state,
+and a wiring stood in for it here. Agreement or disagreement between the reader and the model's count is a relation between two
 definitions on the same graphs, not evidence about either route's account of space, and nothing here is about the
 real universe.
 
@@ -456,9 +483,10 @@ equation in Hilbert space, Phys. Rev. D \textbf{97}, 086003 (2018), arXiv:1712.0
 quasi-classical dynamics, Phys. Rev. A \textbf{103}, 022213 (2021), arXiv:2005.12938.
 \bibitem{paper1} E.~Smith, The curled torus burps: activated escape and conversion in a graph model of emergent
 geometry, technical manuscript (2026), \texttt{docs/papers/curled\_torus/} in the repository below.
-\bibitem{prereg} E.~Smith, \texttt{PREREGISTRATION.md}, section T91 with Amendment 1, and \texttt{ASSUMPTIONS.md},
-entry O174, in the repository below (2 November 2026); computation \texttt{scripts/carroll\_reader.py}, results
-\texttt{results/t91\_carroll\_reader\_stage1.csv} and \texttt{\_heldout.csv}.
+\bibitem{prereg} E.~Smith, \texttt{PREREGISTRATION.md}, sections T91 (with Amendment 1) and T94 (with Amendment 1),
+and \texttt{ASSUMPTIONS.md}, entries O174 and O178, in the repository below (2 and 3 November 2026); computations
+\texttt{scripts/carroll\_reader.py} and \texttt{scripts/carroll\_matter\_window.py}, results
+\texttt{results/t91\_carroll\_reader\_*.csv} and \texttt{results/t94\_matter\_window\_*.csv}.
 \bibitem{DT17} M.~C. Diamantini and C.~A. Trugenberger, Topological network entanglement as order parameter for the
 emergence of geometry, New J. Phys. (2017), doi:10.1088/1367-2630/aa8f08, arXiv:1710.00221.
 \bibitem{Carlip17} S.~Carlip, Dimension and dimensional reduction in quantum gravity, Class. Quantum Grav.

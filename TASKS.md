@@ -1149,3 +1149,22 @@ Next, in order, each pre-registered before it runs: (1) a wave carrier needs a n
 or a point term; O169's rule 11 answer), which is a decision under S1 before anything is built; (2) G9, reading the
 runs k from a wiring, which the angle rule needs before it predicts anything; (3) the strict-lane interference test of
 the brief's section 4 on whatever carrier (1) gives.
+
+## 3 November: the Carroll reader paper aligned with the hypothesis; two cheap exact tests run; three computational relatives read  ◑
+
+**Added 2026-11-03, 15:52 UTC by the clock (Fable).** Her words of the day are in `sandbox/NOTEBOOK.md` (14:15, 15:10,
+15:34 UTC); her positions are VISION Update 155. Done: both editions of the Carroll reader paper brought into line with
+her picture (the opened tubes as the toy's end state; the λ > 1 region as the inner shell; waves on black-to-white
+connections, matter stored black-to-black; the quantum part of Carroll's method entering only through the state) and
+rebuilt; T94 pre-registered with her prediction and run to its held-out radius (O178; READS DIFFERENTLY, her prediction
+holds); T95 pre-registered and run (O179; NEITHER, paths and renamings anti-correlated); Gorard, Lloyd and 't Hooft read
+against the programme's steps (`docs/reading/notes/2026-11-03_computational_relatives.md`; [Lloyd05] added, [tHooft14]
+read in part); the programme page, its draft and the series plan (paper 19 proposed) updated. Nothing committed by
+Fable; the owner commits with `-o <paths>`.
+
+Owed by the owner: which count "all the options" is (paths or renamings) and amplitudes or probabilities on them;
+whether Update 155's wording stands in the claim; whether a design brief for a state built from the twist-curl rules is
+written (the computation Carroll's reader would read); the reader paper's number. Next, in order, each pre-registered
+before it runs: (1) that design brief, then the reader on the state it defines; (2) the taxicab fix (a share falling
+with straight-line distance), the reader paper's first question, which can also be tried; (3) the questions to Carroll
+once a built state is in hand.

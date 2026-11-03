@@ -10028,3 +10028,179 @@ energy can gather and the rod opens cleanly still shows no preference for the ju
 **The held-out size (L = 24) is not run.** It would repeat the melt. Any next design is a new pre-registration with her
 prediction, not an amendment to this one.
 
+
+## T94. A window with stored matter in it, read through Carroll's reader (the Carroll reader paper, "What is next on our side", item 1; the owner's prediction of 3 November; written 2026-11-03, 15:38 UTC by the clock, before any code or computation)
+
+### Why this test, now
+
+The owner's storage rule (VISION Update 155; the notebook, 3 November): matter, energy and twist are stored between points
+of the same kind, which are never linked; photons and gravitational waves travel between points of different kinds. T91
+put the shared information on the links only, which under her rule is a window of empty space. A share on same-kind pairs
+is her stored matter, and the question is whether Carroll's reader ([CCM16] Secs. III.B and III.C) sees it: does a window
+holding stored matter read differently from a window of empty space? Exact; exploratory with respect to the hypothesis.
+
+### What will be computed (`scripts/carroll_matter_window.py`; tests `tests/test_carroll_matter_window.py`)
+
+The flat 32 × 32 four-link torus. **Stored pairs** are defined from the wiring alone: two points at graph distance two
+with at least two common neighbours, which on the flat sheet are exactly the two diagonals of each square (a straight
+pair two steps along a row shares one neighbour and is not a stored pair). A share on a stored pair is given as its
+reader distance in link units: a link has distance 1 (its share is x₀); a stored pair carrying a share has distance
+α = (−ln x_m)/(−ln x₀), so α = 1 means the pair shares as much as a link and α = 0.5 means more. With no share its
+distance is the shortest path through links, 2. Distances between the points of a window are the shortest weighted paths
+in the whole graph (links of weight 1, stored pairs carrying a share of weight α). **The window is the same point set in
+every case**: the unweighted ball of graph radius R round one point, so that only the distances change. For each window
+the multidimensional-scaling eigenvalues and the registered count D_MDS (eigenvalues at least 0.1 λ₁), as in T91.
+
+Cases: **EMPTY** (no stored pair carries a share; T91's reading, recomputed); **UNIFORM** (every stored pair of the torus
+carries a share; α = 1 and α = 0.5); **PATCH** (only the eight stored pairs of the four squares that meet at the center
+point carry a share: one unit of stored matter at the center; α = 1 and α = 0.5). **Stage 1:** R = 3 and 4. **Held out
+(rule 14):** R = 6, run only after an amendment writes its prediction from stage 1.
+
+**Check, exact, in the tests:** a stored pair at α = 2 is the same distance as the path through links, so every α = 2
+case must reproduce EMPTY to rounding.
+
+### The words
+
+For a case at a radius, **READS DIFFERENTLY** if its D_MDS differs from EMPTY's at that radius, or if any of λ₂/λ₁,
+λ₃/λ₁, λ₄/λ₁ differs from EMPTY's by at least 0.05; otherwise **SAME**.
+
+### Predictions
+
+- **The owner's, recorded 3 November, 15:10 UTC, before any design:** a window with matter in it READS DIFFERENTLY from
+  a window of empty space. (She did not specify a case or a radius; it is scored on UNIFORM at α = 1, the plainest
+  reading of "a window with matter in it", and reported for every case.)
+- **Ours.** P1: UNIFORM at α = 1 and α = 0.5 READS DIFFERENTLY at R = 3 and 4 (the shortcut across every square changes
+  the shape of the ball's metric, so λ₃/λ₁ moves by more than 0.05; which way is not predicted). P2: PATCH at α = 1 READS
+  DIFFERENTLY at R = 3 (eight shortened pairs among 25 points) and its shift in λ₃/λ₁ falls with R. P3: at α = 0.5 every
+  shift is larger than at α = 1. **Size claim (rule 14):** P2's "falls with R" is scored at the held-out radius only: the
+  amendment fits PATCH α = 1's |Δ(λ₃/λ₁)| at R = 3 and 4 as a power of the window's width 2R + 1 and writes the R = 6
+  number with a range of ±50 % before R = 6 is computed. Our expectation, said now and not scored: PATCH at α = 1 reads
+  SAME at R = 6.
+
+### What this cannot show
+
+Whether any quantum state has these shares, and whether same-kind shares are matter: the shares are put on by hand as
+the owner's rule says, and the reader is Carroll's estimator on a classical table of distances. *Nothing here is about
+the real universe.*
+
+## T95. Do the paths of the toy's move count the same thing as its renamings? Exact, on the complete class spaces (the reading note of 3 November on Gorard, Lloyd and 't Hooft, item 1; written 2026-11-03, 15:38 UTC by the clock, before any code or computation)
+
+### Why this test, now
+
+The owner's phrase of 3 November, "the simulation plays out all the options in probabilities", is in Gorard's model a
+count over paths (every rewriting order followed at once, probabilities from path weights; [Gorard20] eq. 29). Update 17's
+versions are a count over renamings (an arrangement's side-preserving symmetries). The reading note asks whether the two
+counts agree on the toy. On the complete class spaces at N = 16 and 18 (T4; `small_graphs.py`) both are exact.
+
+### What will be computed (`scripts/multiway_paths.py`; tests `tests/test_multiway_paths.py`)
+
+At n = 8 and 9 a side (N = 16, 18), no cap. From the circulant start state the walk by switches is explored to every class
+(T4 found 5 and 26). For each class k, a representative's valid switches are listed and each is classified, giving the
+count matrix M[k][j] of labelled moves from any state of class k into class j (by symmetry the same for every state of
+the class). The number of k-step paths from the start state that end in class j is the start row of M^k; its share over
+classes is the **path share** at k, for k = 1 to 40, and the average of the shares at k = 39 and 40 is the **long-path
+share** (the move graph may be two-periodic). Beside it, per class: the **renaming count** A_j (`ClassList.symmetries`),
+the **labelled-state count** L_j = (n!)²/A_j, and the **move count** deg_j = Σ_i M[j][i].
+
+### The words
+
+**VERSIONS** if every class's long-path share is within 10 % of A_j/ΣA (paths count renamings);
+**LABELLED** if every class's long-path share is within 10 % of L_j deg_j / Σ L deg (paths count labelled states, weighted
+by their moves); **NEITHER** otherwise. Also reported: the sign of Spearman's rank correlation between the long-path share
+and A_j, at each n.
+
+### Predictions
+
+- **Ours:** LABELLED at both sizes (the walk on labelled states has stationary law proportional to a state's number of
+  moves; standard, exact), and the correlation with A_j is negative at n = 9 (L_j = (n!)²/A_j, so the classes with most
+  renamings have fewest labelled versions). So paths and renamings count different things, inversely. At small k the
+  start state's own class dominates the share.
+- **The owner's:** not given; the question was raised by the reading note this morning and this is written before she has
+  seen it. Her phrase is scored only in the sense that it decides which published relative her picture is nearest
+  (Gorard's paths or Update 17's renamings), and that decision is hers.
+
+### What this cannot show
+
+Anything quantum: both counts are positive weights that only add (Update 20). Which of the two the hypothesis means by
+"the options" is a decision of the owner's, not a result. *Nothing here is about the real universe.*
+
+#### Stage 1 read, and Amendment 1 (the held-out prediction), 2026-11-03, 15:43 UTC by the clock (`results/t94_matter_window_stage1.csv`; read under the rules above, unchanged; R = 6 not yet computed)
+
+Stage 1, 25 points at R = 3 and 41 at R = 4. EMPTY reproduces T91's flat sheet (D_MDS = 4 at both radii; λ₃/λ₁ = 0.428
+and 0.396; λ₄/λ₁ = 0.123 and 0.101).
+
+- **The owner's prediction (UNIFORM, α = 1): HOLDS at both radii.** λ₃/λ₁ falls from 0.428 to 0.143 at R = 3 and from
+  0.396 to 0.143 at R = 4, and D_MDS falls from 4 to 3 at R = 4. A share on every square's diagonals makes the flat sheet
+  read closer to two dimensions, not further: with every diagonal as short as a link the window's distance is the
+  chessboard-king distance, whose mismatch with a straight-line distance is smaller than the taxicab's. *Ours, unverified,
+  a reading made after the result:* under her rule, a sheet with matter stored everywhere is a better-behaved two-dimensional
+  map for Carroll's reader than empty space is.
+- **P1 (UNIFORM at both α READS DIFFERENTLY at both radii): HOLDS.** At α = 0.5 the shift runs the other way (λ₃/λ₁ up to
+  0.650 and 0.511; D_MDS 4 and 5): a diagonal shorter than a link makes the map worse.
+- **P2 (PATCH α = 1 READS DIFFERENTLY at R = 3): HOLDS** (D_MDS 5 against 4; λ₄/λ₁ = 0.253 against 0.123). **Its clause
+  "the shift in λ₃/λ₁ falls with R" fails on stage 1 itself:** the shift is −0.023 at R = 3 and +0.069 at R = 4. The patch
+  does not move the third eigenvalue; it adds a fourth (λ₄/λ₁ = 0.253 and 0.232 against EMPTY's 0.123 and 0.101, a shift of
+  +0.130 and +0.131), a direction of its own that the window carries whole at both radii.
+- **P3 (every shift larger at α = 0.5 than at α = 1): FAILS by the letter.** True of PATCH (λ₄/λ₁ shifts 0.489 and 0.300
+  against 0.130 and 0.131) and false of UNIFORM's λ₃/λ₁ (shifts of 0.222 and 0.115 against 0.285 and 0.253, in the other
+  direction).
+
+**Amendment 1, the held-out prediction for R = 6**, fitted on R = 3 and 4 only as power laws in the width 2R + 1, written
+before R = 6 is computed. (a) The registered quantity, PATCH α = 1's |Δ(λ₃/λ₁)|: the fit (exponent 4.4) gives 0.35, range
+0.17 to 0.52; it is written because the registration requires it, and said in advance to be a bad fit, since the shift
+changed sign between R = 3 and 4 and the patch's effect is not in λ₃. (b) The quantity that carries the patch, its
+Δ(λ₄/λ₁): the fit (exponent 0.03) gives 0.132, range 0.066 to 0.198. **Predicted words at R = 6:** PATCH α = 1 READS
+DIFFERENTLY (D_MDS 5 against EMPTY's 3 or 4, by λ₄); UNIFORM α = 1 READS DIFFERENTLY with D_MDS 3 or 2 and λ₃/λ₁ near
+0.14; the expectation of the registration, that PATCH reads SAME at R = 6, is withdrawn by stage 1 and said so here. The
+held-out verdict on P2's size claim is whether (a) falls inside its range; (b) is reported beside it.
+
+#### The held-out radius read, 2026-11-03, 15:44 UTC by the clock (`results/t94_matter_window_heldout.csv`; against Amendment 1)
+
+85 points at R = 6. EMPTY: D_MDS = 3, λ₃/λ₁ = 0.373, λ₄/λ₁ = 0.087 (T91's value at this radius).
+
+- **The owner's prediction (UNIFORM, α = 1): HOLDS** at the held-out radius too. D_MDS = 3 with λ₃/λ₁ = 0.145 (predicted
+  "3 or 2, near 0.14"), λ₄/λ₁ = 0.094 (EMPTY 0.087). READS DIFFERENTLY by λ₃ at every radius tried.
+- **PATCH α = 1: READS DIFFERENTLY (AS PREDICTED):** D_MDS = 5 against EMPTY's 3; λ₄/λ₁ = 0.162 against 0.087, a shift of
+  +0.076; λ₃/λ₁ = 0.467 against 0.373, +0.094. **The size claim (rule 14):** (a) the registered quantity, |Δ(λ₃/λ₁)| =
+  0.094 against the fitted 0.35 (0.17 to 0.52): **MISSED**, as Amendment 1 said in advance it would be. (b) Δ(λ₄/λ₁) =
+  0.076 against 0.132 (0.066 to 0.198): **inside the range**, at its low end; the stored unit's own direction, 0.130 and
+  0.131 of the largest at R = 3 and 4, has begun to fade at R = 6, but is still counted.
+- UNIFORM α = 0.5: D_MDS = 5, λ₃/λ₁ = 0.356, λ₄/λ₁ = 0.152 (READS DIFFERENTLY by D_MDS and λ₄). PATCH α = 0.5: D_MDS = 5,
+  λ₃/λ₁ = 0.571, λ₄/λ₁ = 0.202 (READS DIFFERENTLY).
+
+**Verdict of T94: READS DIFFERENTLY in every case at every radius.** The owner's prediction holds. Of ours: P1 holds; P2
+holds on the word and fails on its size clause as registered (the patch adds a fourth direction rather than moving the
+third); P3 fails by the letter. **Rule 11's four answers for the failed clauses.** (1) They falsify our guesses about which
+eigenvalue a stored unit moves, nothing about the hypothesis. (2) The failures are the prediction's arithmetic: a short cut
+between eight pairs among 25 to 85 points is a localised distortion, which multidimensional scaling carries as a direction
+of its own (λ₄), and a shorter diagonal does not shrink a distortion that the taxicab geometry already makes. (3) The exact
+check is the one made: the fourth eigenvalue beside the third. (4) Nothing to abandon; the computation is exploratory.
+*Ours, unverified, said once:* under the owner's storage rule a flat sheet with matter stored on every square reads nearer
+to two dimensions than empty space does, because equal shares on links and diagonals give the window a chessboard-king
+distance, which fits a flat map better than the taxicab distance; and one stored unit is seen by the reader as a direction
+of its own at every window up to 13 points wide. Whether same-kind shares are matter, the toy cannot say. *Nothing here is
+about the real universe.*
+
+#### T95 read, 2026-11-03, 15:52 UTC by the clock (`results/t95_multiway_paths.csv`; read under the rules above, unchanged)
+
+N = 16: 5 classes, renaming counts 6 to 192. N = 18: 26 classes, renaming counts 1 to 72. The circulant start is the class
+with 6 renamings at N = 16 (its share at k = 1 is 0.667, falling to 0.37) and a class with 1 renaming at N = 18.
+
+- **Word: NEITHER at both sizes.** The long-path share is within 31 % (N = 16) and 45 % (N = 18) of the labelled target
+  and within a factor of 15 of the versions target; the registered 10 % is met by neither.
+- **Spearman's correlation between the long-path share and the renaming count: −1.00 at N = 16, −0.95 at N = 18.** The
+  classes with the most renamings collect the fewest paths, as predicted: the 4-cube's class (192 renamings, 76 % of the
+  versions target at N = 16) takes 3 % of the paths.
+- **Our prediction LABELLED fails, and the cause is exact** (checked after the reading in `sandbox/t95_perron_check.py`,
+  not rescored): the share of k-step paths ending in each class converges, as k grows, to the left Perron eigenvector of
+  the move-count matrix M (equal to it to 10⁻¹⁴ at N = 18 by k = 400; to 2.5 % at N = 16, whose move graph has period
+  two), not to the stationary law of the random walk. Counting every path once weights a state by how many paths reach
+  it (eigenvector centrality), which equals the walk's law, labelled states times moves, only when every state has the
+  same number of moves; here the move counts run from 24 to 48 at N = 16. **Rule 11's four answers.** (1) The failure
+  falsifies our arithmetic, not a mechanism. (2) It is the prediction: a path count is a matrix power, a random walk is a
+  normalised one. (3) The exact check is the Perron vector, made. (4) Nothing to abandon.
+
+**Verdict of T95: NEITHER.** Paths and renamings are two different counts on the toy, and they run opposite ways. *Ours,
+unverified:* so "the simulation plays out all the options" (Gorard's paths) and "undetectably different versions"
+(Update 17's renamings) cannot both be the same count on this toy, and which the hypothesis means is a decision of the
+owner's. Neither is quantum (Update 20). *Nothing here is about the real universe.*
