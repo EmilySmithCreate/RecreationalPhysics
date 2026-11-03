@@ -113,3 +113,52 @@ class CurlState:
         if kind == ANTIMATTER:
             return [white for (_, white), v in zip(self.sq, self.c) if v < 0]
         raise ValueError(kind)
+
+
+def daughter_front(L, R, lam, unit=1.0):
+    """T97's first form of the owner's pair rules (PREREGISTRATION T97; VISION Update 156 and its addenda). Exact.
+
+    A flat sheet of squares L wide (y) and R rows deep (x = 0..R-1) is the daughter; row R is outside it. A square holds
+    one curl value. Its budget is b = 4 (lam - 1) in units where one full curl is `unit`; it makes one pair of size
+    s = min(b / (2 unit), 1), and any budget beyond a full curl leaves as light at once. The front passes one row at a
+    time: pairs standing across the link between rows x - 1 (matter, +s) and x (antimatter, -s) cancel into two photons
+    if either square has an empty link-neighbour, else freeze; then every empty square of row x puts +s on itself (its
+    black diagonal) and -s on the square ahead across their shared link, (x + 1, y). Row R - 1's antimatter lands on
+    row R, outside, where nothing cancels it. Returns the ledger.
+    """
+    budget = 4.0 * (lam - 1.0)
+    s = min(budget / (2.0 * unit), 1.0)
+    light_per_square = max(0.0, budget - 2.0 * s * unit)
+    c = {}                                                    # (x, y) -> curl value; absent is empty
+    pairs = []                                                # (matter square, antimatter square, size)
+    frozen = photons = 0
+    photon_energy = light = 0.0
+
+    def empty_neighbour(sq):
+        x, y = sq
+        for nb in ((x + 1, y), (x - 1, y), (x, (y + 1) % L), (x, (y - 1) % L)):
+            if nb not in c and 0 <= nb[0] <= R:
+                return True
+        return False
+
+    for x in range(R):
+        for (m, a, size) in [p for p in pairs if p[1][0] == x]:
+            if c.get(m) == size and c.get(a) == -size:
+                if empty_neighbour(m) or empty_neighbour(a):
+                    del c[m]; del c[a]
+                    photons += 2; photon_energy += 2.0 * size * unit
+                else:
+                    frozen += 1
+        for y in range(L):
+            light += light_per_square
+            if (x, y) in c or (x + 1, y) in c:
+                continue
+            c[(x, y)] = s; c[(x + 1, y)] = -s
+            pairs.append(((x, y), (x + 1, y), s))
+    inside = [v for (x, y), v in c.items() if x < R]
+    surplus_curl = float(sum(inside))
+    surplus_energy = float(sum(abs(v) for v in inside if v > 0) * unit)
+    gross = float(sum(p[2] for p in pairs) * unit)
+    return dict(L=L, R=R, lam=lam, pair_size=s, pairs_made=len(pairs), surplus_curl=surplus_curl,
+                surplus_energy=surplus_energy, gross=gross, surplus_fraction=surplus_energy / gross if gross else 0.0,
+                frozen=frozen, photons=photons, photon_energy=photon_energy, light=light)

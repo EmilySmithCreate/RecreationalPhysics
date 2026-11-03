@@ -34,7 +34,7 @@ from graphity import __version__                     # noqa: E402
 from graphity.cqg import NO_CAP, torus                 # noqa: E402
 import carroll_reader as cr                           # noqa: E402
 
-STAGES = {"stage1": (3, 4), "heldout": (6,)}
+STAGES = {"stage1": (3, 4), "heldout": (6,), "matter": (3, 4, 6)}
 ALPHAS = (1.0, 0.5)
 
 
@@ -74,9 +74,19 @@ def window_weighted(g, w, center, radius):
     return pts, dist
 
 
-def cases(g, center):
+def cases(g, center, part=None, matter_only=False):
     pairs = stored_pairs(g)
     patch = pairs_at_center(pairs, g, center)
+    if matter_only:
+        # T98: the owner's matter sits on the black diagonals alone (Update 156); part == 0 is black
+        black = [(a, b) for a, b in pairs if part[a] == 0 and part[b] == 0]
+        black_patch = [(a, b) for a, b in patch if part[a] == 0 and part[b] == 0]
+        yield "EMPTY", 0.0, []
+        yield "UNIFORM", 1.0, pairs
+        yield "UNIFORM_MATTER", 1.0, black
+        yield "PATCH", 1.0, patch
+        yield "PATCH_MATTER", 1.0, black_patch
+        return
     yield "EMPTY", 0.0, []
     for alpha in ALPHAS:
         yield "UNIFORM", alpha, pairs
@@ -84,10 +94,10 @@ def cases(g, center):
         yield "PATCH", alpha, patch
 
 
-def read(adj, center, radii):
+def read(adj, center, radii, part=None, matter_only=False):
     g = cr.graph_of(adj)
     rows = []
-    for name, alpha, pairs in cases(g, center):
+    for name, alpha, pairs in cases(g, center, part, matter_only):
         w = weighted_graph(g, pairs, alpha) if pairs else weighted_graph(g, [], 1.0)
         for r in radii:
             pts, dist = window_weighted(g, w, center, r)
@@ -100,19 +110,19 @@ def read(adj, center, radii):
 
 def main(stage, out_dir="results"):
     radii = STAGES[stage]
-    name = "t94_matter_window_" + stage
+    name = ("t98_matter_only" if stage == "matter" else "t94_matter_window_" + stage)
     path = Path(out_dir) / (name + ".csv")
     if path.exists():
         raise SystemExit("refusing to overwrite " + str(path))
-    adj = torus(32, 32, NO_CAP)[0]
-    rows = read(adj, 0, radii)
+    adj, part = torus(32, 32, NO_CAP)
+    rows = read(adj, 0, radii, part, matter_only=(stage == "matter"))
     with open(path, "w", newline="") as f:
         wr = csv.DictWriter(f, fieldnames=list(rows[0]))
         wr.writeheader()
         wr.writerows(rows)
     meta = dict(script="scripts/carroll_matter_window.py", stage=stage, radii=radii, alphas=ALPHAS, state="flat 32x32 torus",
                 threshold=cr.THRESHOLD, package=__version__, python=platform.python_version(), numpy=np.__version__,
-                networkx=nx.__version__, preregistration="PREREGISTRATION.md section T94")
+                networkx=nx.__version__, preregistration="PREREGISTRATION.md section " + ("T98" if stage == "matter" else "T94"))
     (Path(out_dir) / (name + ".meta.json")).write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
     for row in rows:
         print(row)

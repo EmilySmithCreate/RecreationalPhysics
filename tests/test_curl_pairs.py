@@ -3,7 +3,7 @@ on, and its readers against hand cases."""
 import pytest
 
 from graphity.cqg import NO_CAP, torus
-from graphity.curl_pairs import ANTIMATTER, MATTER, CurlState, squares, wiring_is_paired
+from graphity.curl_pairs import ANTIMATTER, MATTER, CurlState, daughter_front, squares, wiring_is_paired
 
 
 def test_every_square_of_the_flat_torus_has_one_black_and_one_white_diagonal():
@@ -47,3 +47,20 @@ def test_the_rules_are_enforced():
         s.set_pair(0, 1, 1.5)
     with pytest.raises(ValueError):
         s.set_curl(0, -2.0)
+
+
+def test_daughter_front_matches_the_arithmetic_written_before_it():
+    for lam, s in ((1.10, 0.2), (1.25, 0.5), (1.50, 1.0), (1.75, 1.0)):
+        r = daughter_front(L=8, R=4, lam=lam)
+        assert abs(r["pair_size"] - s) < 1e-12
+        assert r["pairs_made"] == 8 * 4 and r["frozen"] == 0
+        assert abs(r["surplus_energy"] - s * 8) < 1e-12 and abs(r["gross"] - s * 8 * 4) < 1e-12
+        assert abs(r["surplus_fraction"] - 1 / 4) < 1e-12
+        assert r["photons"] == 2 * 8 * 3 and abs(r["photon_energy"] - 2 * s * 8 * 3) < 1e-12
+    assert abs(daughter_front(8, 4, 1.75)["light"] - 8 * 4 * (4 * 0.75 - 2.0)) < 1e-12
+    assert daughter_front(8, 4, 1.25)["light"] == 0.0
+
+
+def test_daughter_front_surplus_is_the_boundary_row_only():
+    r = daughter_front(L=16, R=8, lam=1.25)
+    assert abs(r["surplus_curl"] - 0.5 * 16) < 1e-12          # the inside nets the last row's matter alone

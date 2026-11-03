@@ -10204,3 +10204,170 @@ with 6 renamings at N = 16 (its share at k = 1 is 0.667, falling to 0.37) and a 
 unverified:* so "the simulation plays out all the options" (Gorard's paths) and "undetectably different versions"
 (Update 17's renamings) cannot both be the same count on this toy, and which the hypothesis means is a decision of the
 owner's. Neither is quantum (Update 20). *Nothing here is about the real universe.*
+
+## T97. The curl-pair daughter: a front that makes pairs across shared links, in the first form of the owner's rules (VISION Update 156 and its addenda; written 2026-11-03, 19:33 UTC by the clock, before any code for the dynamics and before any computation)
+
+### Why this test, now
+
+The owner's rules of 3 November for the two kinds (Update 156): a pair is made across a shared side, matter on one square
+and antimatter on the next; a cancelling pair leaves as two photons when there is room; λ sets how many pairs an opening
+makes and the freeze sets the surplus; the edge of a row may hold only the matter curl, so separated sides carry separated
+surpluses. Her prediction, recorded at 19:29 UTC before this was written: **A SURPLUS GROWS WITH λ.** This is the first
+form of those rules as a dynamics, written down here before it is coded (S1). It is a toy of the toy: the opening front
+is a row sweep, not the chain, and the release per point is the exact 4(λ − 1) of the four-link tube (paper 1).
+
+### The form (ours, from her rules; `graphity.curl_pairs.daughter_front`; tests `tests/test_curl_pairs.py`)
+
+A flat sheet of squares, L wide (y) and R rows deep (x = 0 to R − 1) is the daughter; row R lies outside it (the other
+side, her twin). The front passes one row at a time. A square holds one curl value c in [−1, 1] (Update 156). Units
+(ours): one full curl is one toy energy unit, so a square's budget is b = 4(λ − 1) and a pair of size s costs 2s; a
+square makes one pair, of size s = min(b/2, 1), and any budget beyond a full curl leaves as light at once.
+
+When the front passes row x: first, every pair standing across the link between rows x − 1 (matter, +s) and x
+(antimatter, −s) cancels if either square has an empty link-neighbour (her "if there is room"), leaving as two photons of
+energy 2s together; otherwise it freezes in place. Then every empty square of row x makes a pair: +s on itself (its black
+diagonal, matter) and −s on the square ahead across their shared link, (x + 1, y) (its white diagonal, antimatter). Row
+R − 1's pairs put their antimatter on row R, outside the daughter, where nothing ever cancels it.
+
+Readers at the end: the daughter's **surplus curl** Σc over rows 0 to R − 1 and its **surplus energy** Σ|c| over the
+surplus; the **gross** matter made, Σ over all pairs of s; the **surplus fraction**, surplus energy over gross; **frozen
+pairs**; **photons** and their energy; **light** from excess budget.
+
+**Written before the code, and a reason the run is a check of arithmetic (ours):** at a sweeping front the row ahead is
+always empty when a pair comes to cancel, so under this room rule every inner pair cancels and none freezes; the surplus
+is then exactly row R − 1's matter, s L, the gross is s L R, and the fraction is 1/R whatever λ. If the code gives
+anything else the form was not implemented as written.
+
+### What will be computed
+
+λ = 1.10, 1.25, 1.50, 1.75; L = 32; **stage 1:** R = 8 and 16. **Held out (rule 14):** R = 32, run after an amendment
+writes its prediction from stage 1.
+
+### The words and the predictions
+
+- **The owner's: A SURPLUS GROWS WITH λ.** Scored on the surplus energy across the four λ at each R: GROWS if it rises
+  from each λ to the next; GROWS THEN FLAT if it rises and then stays; FLAT otherwise.
+- **Ours:** GROWS THEN FLAT (the pair size s rises as 2(λ − 1) to the full curl at λ = 1.5 and is capped there); the
+  surplus fraction is 1/R at every λ (so λ sets the gross and the size of the surplus, not its share, under this form);
+  frozen pairs are zero at every setting (a front in open space always has room ahead, so her Klein store, the frozen
+  pair, needs a region with no room, which a sweep never makes); the held-out R = 32 has fraction 1/32.
+
+### What this cannot show
+
+It is her rules written as the plainest dynamics on a flat sheet, not the chain; the opening is a sweep; the units are
+ours. It says what the rules imply, not whether they hold. Under this form the billion-to-one surplus needs a daughter
+about 10⁹ rows deep (the boundary share of a region), which is said here so it can be set against her picture of where
+the surplus comes from. *Nothing here is about the real universe.*
+
+## T98. Carroll's reader on a window of matter alone: shares on the black diagonals only (T94's follow-up; written 2026-11-03, 19:33 UTC by the clock, before any computation)
+
+T94 put a share on both diagonals of every square, which in the state of Update 156 is a cancelled pair in every square.
+Her rule places matter on the black diagonals alone. Same script and windows as T94 (`scripts/carroll_matter_window.py`,
+stage `matter`): cases **UNIFORM_MATTER** (every black diagonal of the torus carries a share, α = 1) and **PATCH_MATTER**
+(the black diagonals of the four squares meeting at the center, α = 1), beside EMPTY and UNIFORM (both diagonals) at
+R = 3, 4, 6, computed together since no size claim is made. Exact (ours): on the flat sheet every black point has all
+four diagonal steps available and no white point has any, so matter alone makes the two kinds of point distinguishable in
+the map, which pairs did not.
+
+**Words:** as T94's (READS DIFFERENTLY from EMPTY by D_MDS or by a shift of 0.05 in λ₂/λ₁, λ₃/λ₁ or λ₄/λ₁).
+
+**Predictions.** The owner's, carried from T94 (a window with matter reads differently from empty space): READS
+DIFFERENTLY. Ours: UNIFORM_MATTER READS DIFFERENTLY with λ₃/λ₁ between EMPTY's (0.37 to 0.43) and UNIFORM's (0.14) at
+every radius, since half the points gain the shortcuts; PATCH_MATTER READS DIFFERENTLY by λ₄ with a shift between a half
+and the whole of PATCH's (0.13 at R = 3 and 4, 0.08 at R = 6), since it holds four of PATCH's eight pairs.
+
+## T99. The leftover's share of the release against λ, in tubes that open by themselves and cool slowly (her question of 18:43 UTC; written 2026-11-03, 19:33 UTC by the clock, before any run)
+
+**Why.** Her question: what λ leaves the billion-to-one? By Update 19 the toy's matter is its structured leftover, the
+knots, and T51 measured their energy share of the release at one λ (1.25): 4 % to 1.3 %, falling with the cooling time
+and set by the seeds (O104, O107). This asks whether λ moves that share at all.
+
+**What will be run** (`scripts/run_scrap_freeze.py`, T51's protocol unchanged: a 64 × 4 tube opens by itself at g = 1.25
+until 90 % of its points are flat and no stretch of tube longer than eight points remains, then cools to g = 0.25 over
+10,000 fair sweeps and holds 5,000; `configs/t99_l64_lam110_00.json`, `_lam125_`, `_lam135_`; replicas 0 to 7; seed
+20261103). λ = 1.10, 1.25, 1.35. Read: the energy left at the end of the hold, h₁, over the release 4(λ − 1) N, per replica
+kept (final flat share at least 90 %), as T51 reads it. On the laptop, in the background. No size claim, so no held-out
+size; one cooling time, so no clock claim.
+
+**Words.** λ-SET if the median share rises or falls monotonically across the three λ by more than a factor of 2 from end
+to end; λ-FREE if the three medians lie within a factor of 2 of one another; MIXED otherwise.
+
+**Predictions.** The owner's: not given for this run; her position is that λ determines the net matter (18:43 UTC),
+which here reads as λ-SET with the share rising with λ, and is marked **inferred**. Ours: λ-FREE, because the knots'
+number is fixed at the opening by the seeds (O107) and the release in the denominator grows with λ while the knots'
+fixed energies do not, so if anything the share falls with λ (the opposite of the inferred reading) and the billionth is
+reached at no λ. A tube at λ = 1.10 may not open within the cap (its release is small); a cell with fewer than four opened
+replicas is reported and not scored.
+
+## T100. The γ test in its consistent form, on fresh data: light's delay and the potential along one path (T85's proposed amendment; the owner's "proceed" of 19:29 UTC; written 2026-11-03, 19:33 UTC by the clock, before any computation)
+
+**Why.** T85 read DRIFTS ACROSS b and DRIFTS ACROSS KNOTS, and her ONE α failed by the letter (O168). The rule-11 check
+made the same hour found the drift's cause in the protocol: D was the delay of the fastest path, free to zigzag round
+the halo, while P was taken along the straight line, and with both on one path α* was flat within ±8 % for the isotropic
+knot until the torus's reach (`sandbox/t85_drift_cause.py`). That check used T85's own data, so it does not rescore T85.
+This is the consistent form on fresh data, as T85's Amendment 1 proposed. She chose tonight that gravity's carrier is the
+edge lengths (Update 155, 18:43 UTC), so this is the test of her carrier.
+
+**Protocol** (`scripts/t100_gamma_consistent.py L SEED`; exact, no chain; everything else as T85: α_used = −0.5,
+λ = 1.25, one random valid switch near the origin as the knot, the edge lengths relaxed with the total fixed, the body
+diagonals derived). For each impact parameter b: the path is the fixed zigzag along body diagonals from (−R, b, 0),
+alternating (1, 1, 1) and (1, −1, −1), 2R steps, R = L/4. **D(b)** is its ticks minus the same path's ticks far from the
+knot (shifted by L/2 in y and z). **P(b)** is the sum of |U| over the 2R + 1 lattice points that path visits, times √3,
+U(x) = E_int(x)/E_knot as in T85. α*(b) = α_used · D/(2P). **Fresh data:** seeds 20268503 and 20268504 (two new knots)
+at L = 16, seed 20268503 at L = 24. **Held out (rule 14):** L = 32, seed 20268503, run after the amendment writes its
+numbers from stage 1.
+
+**Words** (T85's): ONE α if α*(b) agrees across every b at every size and across the two knots within ±10 % of its mean,
+b within the torus's reach excluded (b ≤ L/2 − 4); DRIFTS ACROSS b; DRIFTS ACROSS KNOTS; NO DELAY if D ≤ 0 at any b.
+
+**Predictions.** The owner's, carried from T85 and marked **inferred**: ONE α. Ours: ONE α ACROSS b for each knot, and
+DRIFTS ACROSS KNOTS, for T85's reason (to first order α* goes as E_knot/q, which differs between switches; her particles,
+alike by construction, would not drift). **If ONE α holds across knots too, our first-order reading is wrong and is to be
+rederived.**
+
+**What no outcome shows.** No clocks, so no time dilation; the derived-diagonal rule and the scale rule are decisions; a
+one-switch knot is not her particle; nothing is about reality.
+
+#### T97 stage 1 read, and Amendment 1 (the held-out prediction), 2026-11-03, 19:37 UTC by the clock (`results/t97_curl_pair_daughter_stage1.csv`; R = 32 not yet computed)
+
+Stage 1 is the arithmetic written above, to rounding: pair size 0.2, 0.5, 1.0, 1.0 at λ = 1.10, 1.25, 1.50, 1.75; surplus energy 6.4, 16, 32, 32 at both R; gross 51.2, 128, 256, 256 at R = 8 and twice that at R = 16; surplus fraction 0.125 at R = 8 and 0.0625 at R = 16 at every λ; frozen pairs 0 everywhere; light 0 until λ = 1.75, where 256 and 512 units leave at once.
+
+- **The owner's prediction (A SURPLUS GROWS WITH λ): GROWS THEN FLAT** at both R. It rises from 1.10 to 1.50 and is capped by the full curl beyond. Scored on the registered words, her GROWS holds up to the full curl and not past it.
+- **Ours: GROWS THEN FLAT holds; the fraction 1/R at every λ holds; frozen pairs zero holds.**
+
+**Amendment 1, the held-out prediction for R = 32, written before it is computed:** surplus energy 6.4, 16, 32, 32; gross 204.8, 512, 1024, 1024; surplus fraction 0.03125 at every λ; frozen 0; photons 1,984 (2 × 32 × 31). Any departure means the code does not implement the form as written.
+
+#### T97 held out read, 2026-11-03, 19:37 UTC by the clock (`results/t97_curl_pair_daughter_heldout.csv`; against Amendment 1)
+
+R = 32: surplus energy 6.4, 16, 32, 32; gross 204.8, 512, 1024, 1024; fraction 0.03125 at every λ; frozen 0; photons 1,984. **Every number as predicted.** **Verdict of T97: GROWS THEN FLAT; the surplus fraction is the boundary share 1/R at every λ; no pair freezes at a sweeping front.** *What this says, ours and exact under the first form:* her rules as written make λ set the size of the pairs and so the size of the surplus, up to the full curl, while the surplus's share of what was made is geometry alone, the boundary of the daughter over its bulk; the frozen pair, her Klein store, cannot form where a front sweeps open space, because the row ahead is always empty, so it needs a closed region with no room, the black hole's inner shell and not the daughter. Under this form a surplus of one part in a billion needs a daughter about a billion rows deep. Her billion-to-one question therefore does not pick out a λ; it picks out a size, or a different rule for where pairs are made. *Nothing here is about the real universe.*
+
+#### T98 read, 2026-11-03, 19:37 UTC by the clock (`results/t98_matter_only.csv`; read under the words above)
+
+- **The owner's (READS DIFFERENTLY): HOLDS** for UNIFORM_MATTER and PATCH_MATTER at every radius.
+- **UNIFORM_MATTER (shares on the black diagonals only, α = 1): D_MDS = 2, 3, 3 at R = 3, 4, 6 with λ₃/λ₁ = 0.080, 0.136, 0.139** against EMPTY's 0.428, 0.396, 0.373 and UNIFORM's 0.143, 0.143, 0.145. **Our prediction (between EMPTY's and UNIFORM's) FAILS:** matter alone reads better than pairs on both diagonals at every radius, and at R = 3 the flat sheet reads exactly two dimensions, the first flat window in this programme to do so under Carroll's reader. λ₄/λ₁ = 0.066, 0.093, 0.088 (EMPTY 0.123, 0.101, 0.087).
+- **PATCH_MATTER (the four black diagonals at the center): READS DIFFERENTLY by λ₄, with the whole of PATCH's shift** (λ₄/λ₁ = 0.253, 0.232, 0.162, equal to PATCH's to four figures): **our "between a half and the whole" holds at its upper end.** D_MDS = 5, 4, 4 against PATCH's 5, 5, 5; λ₃/λ₁ = 0.711, 0.616, 0.519, far above PATCH's 0.405, 0.465, 0.467: four shortcuts from one black point distort the map more than eight pairs do.
+- **Verdict of T98: READS DIFFERENTLY; matter alone reads nearer to two dimensions than pairs.** *Ours, unverified, a reading made after the result:* with shortcuts from black points only, half the points carry a chessboard-king metric and the white points sit between them at unit distance, which fits a flat map better than shortcuts everywhere; and the two kinds of point are now distinguishable in the map, as her picture has them. *Nothing here is about the real universe.*
+
+#### T100 Amendment 1 (protocol), 2026-11-03, 19:38 UTC by the clock, after the L = 16 run of seed 20268504 stopped and before it is rerun
+
+The second knot's run stopped at a path point where a copy of the knot, placed with its origin there, is not a valid
+wiring (the copy overlaps the knot itself; T85 skipped only the exact coincidence). Such points are skipped in P and their
+number is reported in the row (`skipped`), as the exact coincidence already was. The first knot's rows (seed 20268503,
+L = 16 and 24) had no such point and stand. Written before the rerun; no number of the second knot has been seen.
+
+#### T100 stage 1 read, and Amendment 2 (the held-out prediction), 2026-11-03, 19:39 UTC by the clock (`results/t100_gamma_L16_s20268503.csv`, `_L16_s20268504.csv`, `_L24_s20268503.csv`; L = 32 not yet computed)
+
+Both fresh knots happen to have the same charges (8, 16, 8) and the same energy above flat (128). Knot 1 (seed 20268503): α* = −2.31, −2.60, −2.26 at b = 2, 4, 6 on L = 16, and −2.19, −2.24, −2.73, −3.75, −1.10 at b = 2 to 10 on L = 24. Knot 2 (seed 20268504): −1.66, −1.13 at b = 2, 4 on L = 16, and D < 0 at b = 6.
+
+- **Across b, within the torus's reach (b ≤ L/2 − 4):** knot 1 on L = 16 (b = 2, 4) agrees within ±6 % of its mean; on L = 24 (b = 2 to 8) the spread is +37 % at b = 8. **DRIFTS ACROSS b** by the letter. The drift is smaller than T85's (a factor of four) and sits at the largest b kept, where the zigzag path's halo sample is thinnest; it is not the flatness the sandbox check found for an isotropic knot.
+- **Across knots:** means −2.46 and −1.40 on L = 16. **DRIFTS ACROSS KNOTS.** *Our stated reason fails:* the two knots have the same E_knot and the same charges, so "α* goes as E_knot/q" cannot be why they differ; the halo's shape (the switch's orientation relative to the path) must enter, and our first-order reading is to be rederived as the registration said.
+- **NO DELAY** at knot 2, b = 6 on L = 16 (D = −0.005, at the torus's reach).
+- **The owner's inferred ONE α: FAILS by the letter**, on all three words. Ours: the words hold, the reason given for the drift across knots does not.
+
+**Amendment 2, the held-out prediction for L = 32, seed 20268503 (knot 1), written from stage 1 before it runs:** α*(b) = −2.2 ± 0.3, −2.3 ± 0.3, −2.6 ± 0.5, −3.2 ± 1.0, −4 ± 2 at b = 2, 4, 6, 8, 10, and |α*| turned back toward −1 at b = 12 and 14 by the torus; the word DRIFTS ACROSS b; D > 0 for b ≤ 10.
+
+#### T100 held out read, 2026-11-03, 19:42 UTC by the clock (`results/t100_gamma_L32_s20268503.csv`; against Amendment 2)
+
+α*(b) = −2.13, −2.13, −2.35, −2.75, −3.73 at b = 2 to 10: **every value inside Amendment 2's range** (−2.2 ± 0.3, −2.3 ± 0.3, −2.6 ± 0.5, −3.2 ± 1.0, −4 ± 2). At b = 12, −3.62 (the turn-back toward −1 predicted for 12 and 14 came only at 14, −0.55: **one clause missed by half**). D > 0 through b = 14 (predicted for b ≤ 10: holds and more). Within the torus's reach (b ≤ 12) the spread is −2.13 to −3.73, ±30 % of the mean: **DRIFTS ACROSS b, as predicted.**
+
+**Verdict of T100: DRIFTS ACROSS b, DRIFTS ACROSS KNOTS, NO DELAY at one point of the second knot.** The owner's inferred ONE α fails by the letter, as T85's did. The consistent form removes most of T85's drift (a factor of four to about ±30 %) but not all of it, and the knot drift is not explained by E_knot/q, since both knots share those numbers. **Rule 11's four answers.** (1) It falsifies ONE α for one-switch wiring knots under the derived-diagonal and fixed-total rules; it says nothing about her particles, which are not wiring knots. (2) The remaining drift across b grows with b where the path's sample of the halo thins (P falls by a factor of 40 from b = 2 to 12 while D falls by 20), so it is the halo's shape against the path, not the protocol's inconsistency, which the consistent form removed. (3) The cheaper discriminating check: the same computation with an isotropic halo put in by hand (U falling as 1/r), where ONE α must hold exactly if the reader is right; if it drifts there, the reader is at fault. Not run. (4) The branch is abandoned for wiring knots if the isotropic check holds and real halos still drift; her particles, when built, are the object to test. *Nothing here is about the real universe.*

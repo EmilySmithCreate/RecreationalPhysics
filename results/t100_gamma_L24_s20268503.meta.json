@@ -1,0 +1,41 @@
+{
+  "L": 24,
+  "seed": 20268503,
+  "alpha_used": -0.5,
+  "lam": 1.25,
+  "knot_switch": [
+    1128,
+    576,
+    623,
+    600
+  ],
+  "charges": [
+    8.0,
+    16.0,
+    8.0
+  ],
+  "e_knot": 128.0,
+  "path": "fixed zigzag (1,1,1)/(1,-1,-1) along body diagonals; D and P on the same path",
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "preregistration": "PREREGISTRATION.md section T100",
+  "provenance": {
+    "git_commit": "e285acc29c811d39ac5a77c03b4da4be33ebf435",
+    "git_dirty": true,
+    "git_untracked_count": 11,
+    "git_untracked": [
+      "configs/t99_l64_lam110_00.json",
+      "configs/t99_l64_lam125_00.json",
+      "configs/t99_l64_lam135_00.json",
+      "results/t100_gamma_L16_s20268503.csv",
+      "results/t100_gamma_L16_s20268503.meta.json",
+      "results/t97_curl_pair_daughter_stage1.csv",
+      "results/t97_curl_pair_daughter_stage1.meta.json",
+      "results/t98_matter_only.csv",
+      "results/t98_matter_only.meta.json",
+      "scripts/curl_pair_daughter.py",
+      "scripts/t100_gamma_consistent.py"
+    ]
+  }
+}
