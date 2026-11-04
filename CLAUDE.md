@@ -1,5 +1,11 @@
 # Project memory for Claude Code
 
+**From 4 November 2026 this repository is the archive.** The working copy, holding only what stands today (the
+claim, the current definitions, the withdrawn list, the state, the results table, the code), is the sibling
+repository `PhaseChangingReality` (the folder beside this one under `Documents/GitHub`). New sessions start
+there; this repository is for looking up a detail, and for the cloud queue, the paper drafts, the public pages
+and `results/`, which were not copied.
+
 **Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
 before reusing the historical claims below. Square counts do not certify geometry or a unique
 front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
