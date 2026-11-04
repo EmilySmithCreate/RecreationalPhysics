@@ -1162,9 +1162,24 @@ against the programme's steps (`docs/reading/notes/2026-11-03_computational_rela
 read in part); the programme page, its draft and the series plan (paper 19 proposed) updated. Nothing committed by
 Fable; the owner commits with `-o <paths>`.
 
-Owed by the owner: which count "all the options" is (paths or renamings) and amplitudes or probabilities on them;
+Owed by the owner: ~~which count "all the options" is~~ (decided 3 Nov: copies, Update 155) and amplitudes or probabilities on them;
 whether Update 155's wording stands in the claim; whether a design brief for a state built from the twist-curl rules is
 written (the computation Carroll's reader would read); the reader paper's number. Next, in order, each pre-registered
 before it runs: (1) that design brief, then the reader on the state it defines; (2) the taxicab fix (a share falling
 with straight-line distance), the reader paper's first question, which can also be tried; (3) the questions to Carroll
 once a built state is in hand.
+
+## 4 November: gravity's carrier decided; her seam picture set against the record  ◑
+
+**Added 2026-11-04, 00:17 UTC by the clock (Fable).** Her words are in `sandbox/NOTEBOOK.md` at this time; VISION Update
+157. Decided: gravity's carrier is the edge lengths (Update 40's quantity on the points withdrawn as the carrier);
+confirmed, the options are copies. Done on 3 November, after the 3 November section above: T97, T98, T99, T100 and
+T101 pre-registered and read (O180 to O184); the per-point move counter built into the four-link chain
+(`cqg.run_chain(..., moves=)`, bit for bit unchanged otherwise). Two sandbox looks tonight, expectations first and met:
+the toy's Klein relative is paired like the torus and carries exactly one double column's energy, 32(λ − 1), at every
+length; the cube's segment ratios to the face diagonal are tabulated and none is 5.36.
+
+Owed by the owner: the dynamics of the two kinds as moves (Update 156's list), with a twist state on the squares in
+halves for the Klein store; which proportion the diagonal ratios set; option B's form or none; her yes on (a) the
+Klein relative as a store (a dip? its wall? what it releases?) and (b) the λ = 1 clock cell with a planted knot. Next,
+each pre-registered before it runs, in that order once she answers.
