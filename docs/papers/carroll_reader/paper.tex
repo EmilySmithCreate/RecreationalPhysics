@@ -1,0 +1,496 @@
+% ============================================================================================================
+% BEFORE THIS DRAFT IS SHARED, CHECK (working list, not part of the paper; drafted 2 November 2026):
+% (1) Every number against results/t91_carroll_reader_stage1.csv and _heldout.csv, PREREGISTRATION.md T91 with
+%     Amendment 1 and its held-out reading, and ASSUMPTIONS.md O174. Table I and the modal counts of Table II were
+%     regenerated from the two CSVs when this draft was written; recheck once.
+% (2) Equation numbers of [CCM16] and [CC17] are those of the arXiv PDFs (1606.08444v3, 1712.02803v1) as recorded
+%     in docs/reading/notes/2026-11-02_carroll_space_from_entanglement.md; check them against the journal versions.
+%     The reading rule epsilon_D is unnumbered in the arXiv text (it sits between Eqs. (25) and (26)); the
+%     docstring of scripts/carroll_reader.py calls it "Eq. 26", which is the stress function. Fix the docstring.
+% (3) The [DT17] numbers of Sec. III.C come from dt17_calibration_check.py in this folder (log beside it), not from
+%     the record's code. The reading note on Trugenberger's papers gives 4.0e-3 bits for pairs at distance 2 within
+%     a copy; the exact values are 1.78e-3 (one shared neighbor) and 6.26e-3 (two), whose mean is 4.0e-3. The
+%     result that the background-kept information graph has diameter 8.63 is new. Enter both in the record (an O
+%     entry) before sharing.
+% (3b) Sec. IV and V report a check made after the held-out reading (window_wrap_check.py, log beside it): the
+%     registered R = 10 window on the 32 x 32 sheet wraps round the torus (pairs 20 apart > 16); on 64 x 64 it reads
+%     3 (0.362, 0.081), as Amendment 1 predicted. Not in the record; PREREGISTRATION T91 and O174 should get a dated
+%     note (the verdict as scored does not change). The reading note's section 7.2 rule "smaller than half the torus"
+%     was not met at R = 10.
+% (4) REFERENCES.bib: [DT17] still says "abstract only" while the reading note of 2 November reads it in full (the
+%     note's replacement line is owed); its volume and page are to verify. [T17]'s note says not read; the same
+%     reading note reads it in full. [CC17] and [CS20] journal references are from the arXiv listing; verify.
+% (5) The owner's paragraph in Sec. I (her hypothesis and her positions of VISION Update 152): her wording to be
+%     confirmed by her.
+% (6) The registered threshold (0.1 of the largest eigenvalue) is ours; the flat sheet's fourth eigenvalue sits at
+%     0.101 of the largest at R = 4 and 10, on the threshold. Say so wherever a count is quoted.
+% (7) Figures this draft will need (drawn by script from results/t91_*.csv, none invented): (a) eigenvalue shares
+%     against window width 2R + 1, log-log, for the flat sheet (third and fourth) and the tube (curled pair), with
+%     the R = 4, 6 fit and the held-out R = 10 point and its range; (b) the distribution of D_MDS over centers by R
+%     for the opened sheets and the melts.
+% (8) A fresh red-team pass (CLAUDE.md rule 12) and a check that no sentence says "not studied" without a note
+%     (rule 15). No physicist has read this.
+% ============================================================================================================
+\documentclass[aps,pre,10pt,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Does entanglement geometry see the same space? The mutual-information reader of Cao, Carroll and
+Michalakis applied to the wirings of a graph model of emergent geometry}
+
+\author{Emily Smith}
+\email{emilysmithcreate@gmail.com}
+\affiliation{Independent researcher, Charlottesville, Virginia, USA}
+
+\date{DRAFT, 3 November 2026}
+
+\begin{abstract}
+Two published routes build space from a network. In combinatorial quantum gravity (CQG) the network is a classical
+wiring weighted by a discrete curvature; in the program of Cao, Carroll and Michalakis it is a quantum state on a
+factored Hilbert space, and distances come from the mutual information between factors. We ask what the second
+route's reader reports when it is pointed at the first route's wirings. With one factor per vertex and the same
+mutual information on every link, their distance ansatz with $\Phi=-\ln$ and its shortest-path completion give the
+graph distance up to a constant (exact), so their dimension estimator becomes classical multidimensional scaling
+(MDS) of graph-distance windows. Whole tori cannot be read: each wrapped direction takes a pair of large
+eigenvalues (exact). On balls of graph radius $R=2$ to 10, with a count fixed before the computation (eigenvalues at
+least 0.1 of the largest) and $R=10$ held out: the 4-cube, which the model's local count calls zero-dimensional,
+reads four; a flat square lattice reads three to four, not two, because its graph distance is a taxicab distance; a
+direction curled to four sites is counted at small windows and its share falls as $(2R+1)^{-1.24}$, a law fitted at
+$R=4,6$ and confirmed at $R=10$ ($0.112$ against a predicted $0.076$ to $0.141$); and the narrow tori that the
+model's conversion produces read one at $R=10$. Three of five registered predictions failed at one or more radii.
+No quantum state of the model is computed; one published state built from a wiring is used as a calibration.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+There are at least two published ways to get space out of a network. In combinatorial quantum gravity (CQG)
+\cite{T17,KTB19,T25} the network is a classical graph and its energy is the total Ollivier curvature of the wiring;
+at low coupling the favored graphs are lattice-like and a geometry is read from the wiring itself. In the program
+of Cao, Carroll and Michalakis \cite{CCM16,CC17} the network is derived: a quantum state on a Hilbert space factored
+into many pieces defines a weighted graph whose weights are the mutual informations between pieces, a distance is
+assigned to each weight, and a dimension is read by embedding the distances in Euclidean space. Ref.~\cite{CCM16}
+says plainly that it assumes no Hamiltonian and that the factorization is given; Ref.~\cite{CS20} asks how a
+factorization could be chosen.
+
+The two routes meet at one point: both end with a weighted graph and ask what space it describes. This paper asks a
+narrow question at that point. \emph{When the second route's reader is given the first route's wirings, does it see
+the same space?} In particular, does it agree with the local count of dimension that a square-counting model uses,
+on a flat sheet, on a sheet curled in one direction, and on a fully curled object?
+
+The wirings come from a family of energies next to CQG, studied in a companion paper \cite{paper1} (Sec.~\ref{sec:toy}).
+The reader is the one of Ref.~\cite{CCM16} without change, except for one choice that applying it to a classical
+wiring requires (Sec.~\ref{sec:reader}). The computation was registered before it was run, with its predictions
+and one size held out \cite{prereg}; Sec.~\ref{sec:results} reports it as registered, including the predictions that
+failed.
+
+\emph{Why the author asks (her hypothesis, stated once).} The author holds that our space is a stable phase of a
+deeper, specific arrangement that is curled, and that space arose when it opened, releasing a bounded amount of
+energy. On the parameter used below she holds that $\lambda$ is 1 or below everywhere when the network is taken as a
+whole, the exception being the two-dimensional inner shell of a black hole seen one part at a time, where the
+arrangement sets a barrier above 1; that the two sides of the bipartite graph are two distinct kinds of point, every
+point within a kind the same; that points belong to the two-dimensional description only, the foundational degrees of
+freedom being twist and curl, with rules of their own relating them; that the converted tori are the model's end state and
+not a stage of her change, three dimensions being in her picture a projection from the two-dimensional arrangement; and
+that photons travel a cube's body diagonals and gravity its edges, both between points of different sides, for which the
+model's links stand, while matter, energy and twist are stored between points of the same side, which are never linked. Whether a curled direction reads as a
+dimension is the question her picture of opening rests on, and that is why the reader's answer matters to her. None
+of this is assumed below.
+
+\emph{Kinds of statement.} Each result is marked as exact (arithmetic or complete enumeration), measured (a computed
+reading registered before it was made, with its verdict), or ours and unverified (an interpretation). Nothing in
+this paper is about the real universe.
+
+\section{The model, briefly}
+\label{sec:toy}
+
+A state is a four-regular bipartite graph on $N$ vertices obeying the hard-core rule (no two vertices share more than
+two neighbors) \cite{KTB19,T25}. With $S$ the number of squares (four-cycles), $S_e$ the number on edge $e$, and
+$X=\sum_e(S_e-2)_+$, the energy is
+\begin{equation}
+H = 16\,(N - S) + 4\lambda X .
+\label{eq:H}
+\end{equation}
+At $\lambda=1$ this is the CQG curvature action, which Ref.~\cite{T25} (its Eq.~(21)) writes as
+\[
+H=-4\sum_v\sum_{w\sim v}\kappa(v,w),
+\]
+with $\kappa$ the Ollivier curvature of the link. Only $\lambda=1$ is CQG; every other value is our family around it
+\cite{paper1}.
+
+\emph{The local count (exact).} A vertex has six pairs of incident edges; under the hard-core rule a pair closes at
+most one square. Let $d(v)$ be the number of pairs that close none. On the flat lattice torus $d=2$; on the
+$4\times L$ torus, one direction curled to a single square, $d=1$; on the $4\times4$ torus, which is the 4-cube,
+$d=0$ \cite{paper1}. This is a count of square-free directions at one vertex, not a certified geometric dimension.
+For $\lambda>1$ the curled torus lies $4(\lambda-1)$ per vertex above the flat one, and after activation it converts
+with that release; the converted states measured so far are narrow tori whose shortest loop around the short
+direction is six edges \cite{paper1}.
+
+\section{The reader}
+\label{sec:reader}
+
+\subsection{Definitions, as published}
+
+Ref.~\cite{CCM16} factors the Hilbert space into finite-dimensional pieces, $\mathcal H=\bigotimes_p\mathcal H_p$,
+and uses the mutual information of two pieces,
+\[
+I(A_p:A_q)=S(A_p)+S(A_q)-S(A_pA_q).
+\]
+A state is redundancy-constrained when the entropy of every union $B$ of pieces is a cut sum, which
+Ref.~\cite{CCM16} (its Eq.~(9)) writes as
+\[
+S(B)=\tfrac12\sum_{p\in B,\;q\notin B}I(A_p:A_q).
+\]
+Each pair with nonzero mutual information gets an edge of length, in their Eq.~(13),
+\begin{equation*}
+w(p,q)=\ell_{\rm RC}\,\Phi\!\left(\frac{I(A_p:A_q)}{I_0}\right),
+\end{equation*}
+with $\Phi(1)=0$, $\Phi(x)\to\infty$ as $x\to0$, $\Phi$ decreasing, and $I_0$ the mutual information of a maximally
+entangled pair; their examples use $\Phi=-\ln$. No edge is drawn where $I=0$. The distance is the shortest path,
+their Eq.~(14),
+\begin{equation*}
+d(p,q)=\min_{P}\sum_{n}w(p_n,p_{n+1}).
+\end{equation*}
+
+The dimension is read by classical multidimensional scaling (their Sec.~III.C). For $n$ points with distances
+$d(p,q)$ the centered matrix of their Eq.~(23) is
+\begin{equation*}
+\begin{aligned}
+B_{pq}=-\tfrac12\Bigl[\,&d(p,q)^2-\tfrac1n\sum_l d(p,l)^2\\
+&-\tfrac1n\sum_l d(l,q)^2+\tfrac1{n^2}\sum_{l,m}d(l,m)^2\Bigr],
+\end{aligned}
+\end{equation*}
+diagonalized as $B=V\Lambda V^{\mathsf T}$ with eigenvalues $\lambda_1\ge\lambda_2\ge\dots$ (their Eq.~(24)); the
+embedding in $D$ dimensions uses the top $D$ eigenvectors scaled by $\sqrt{\lambda_i}$ (their Eq.~(25)). If the
+distances are exactly Euclidean in $D$ dimensions, $B$ has exactly $D$ positive eigenvalues and the rest zero. If not,
+they read the dimension from the spectrum with the rule, stated after their Eq.~(25),
+\begin{equation*}
+\varepsilon_D=1-\frac{\sum_{i=1}^{D}|\lambda_i|}{\sum_{i=1}^{n}|\lambda_i|},
+\end{equation*}
+an embedding in $D$ dimensions being ``approximately valid'' when $\varepsilon_D$ is small. Their own two examples
+give a scale for ``small'': a spin-1 Heisenberg chain of 100 sites, $\varepsilon_1=0.0167$, and a coarse-grained
+toric-code patch, $\varepsilon_2=0.41$, called evidently two-dimensional \cite{CCM16}.
+
+\subsection{The one choice: a factor per vertex, the same mutual information on every link}
+
+To apply the reader to a classical wiring two things must be chosen.
+
+\emph{A factor per vertex.} Their factors are the vertices of the information graph and the mutual informations are
+its edges. The model's vertices are what its links join, so the reading that changes least is one factor per vertex
+and a nonzero mutual information exactly on the links. A factor per link would read the line graph instead and give
+different distances; it is not done here. With the author's position that points belong only to a two-dimensional
+description (Sec.~I), this is a reading of that description, not of the degrees of freedom she takes as
+foundational.
+
+\emph{A mutual information per link.} The model says only whether two vertices are linked; all links are alike. So
+take $I(A_p:A_q)/I_0=x_0$ on every link, for one constant $0<x_0<1$, and zero otherwise. (Under the author's
+position of Sec.~I this places the mutual information where her waves travel and none where her matter is stored; a
+nonzero mutual information on same-side pairs at graph distance two stands for stored matter and is the second reading
+of Sec.~\ref{sec:matter}, registered separately with her prediction before it was computed.)
+
+\emph{Exact.} Then every edge has the same length $w=\ell_{\rm RC}(-\ln x_0)$, Eq.~(14) gives $d(p,q)=w\,\delta(p,q)$
+with $\delta$ the graph distance, and $B$ is $w^2$ times the matrix built from $\delta$. Its eigenvalues scale by $w^2$,
+so their ratios, $\varepsilon_D$ and any count of eigenvalues relative to the largest do not depend on $x_0$,
+$\ell_{\rm RC}$ or $I_0$. ($x_0=1$ is excluded: it gives $w=0$ and every point at one place.) The reader of a wiring
+is therefore classical MDS of graph distances. Their toric-code example is close to this case: there the mutual
+information on each link of a uniform coarse-graining is a boundary length up to a constant \cite{CCM16}.
+
+A choice that weights each link by its square count would put the model's energy into the lengths; that is a second,
+different reading and is not made here.
+
+\subsection{One explicit state whose mutual information follows a wiring}
+
+The constant above is put in by hand. To show that a quantum state with such mutual information exists, and to see
+what else such a state brings, we use the one state in the CQG literature built from a wiring. Ref.~\cite{DT17} (its
+Eq.~(4)) turns the adjacency matrix $w_{ij}$ of a graph into a pure state on two copies of an $N$-level register,
+\begin{equation*}
+|w\rangle=\frac{1}{\lVert w\rVert_F}\sum_{i,j}w_{ij}\,|i\rangle|j\rangle ,
+\end{equation*}
+which it reads equivalently as two registers of $N$ qubits, each with exactly one excitation. Ref.~\cite{DT17}
+cites Ref.~\cite{CCM16} for reading space as an entanglement pattern, but it computes one spectral number per
+graph, not a geometry.
+
+\emph{Exact (our computation, 8 $\times$ 8 flat torus, one factor per qubit, $2N=128$ factors).} Between qubit $i$ of
+one copy and qubit $j$ of the other the mutual information is $1.17\times10^{-2}$ bits when $i$ and $j$ are linked and
+$3.58\times10^{-4}$ bits otherwise. Within one copy it is $1.78\times10^{-3}$ bits for vertices sharing one neighbor,
+$6.26\times10^{-3}$ for vertices sharing two, and $3.58\times10^{-4}$ for all other pairs. So the mutual information
+follows the wiring across the copies, and its distance-two graph within each.
+
+\emph{Exact (same state).} The uniform background is nonzero, so Eq.~(13) draws an edge between every pair. With
+$\Phi=-\ln$ and $I_0=2$ bits, a link has length $5.14\,\ell_{\rm RC}$ and a background edge $8.63\,\ell_{\rm RC}$,
+less than two links. The shortest path therefore never uses more than one background edge, every distance is at most
+$8.63\,\ell_{\rm RC}$, and MDS of all 128 factors gives one eigenvalue and then five equal ones at 0.76 of it: no
+low-dimensional geometry. With the background removed the graph splits into two pieces of 64 factors, each with
+the torus's wiring (bipartite, so the two copies pair one side of one copy with the other side of the other) plus
+the distance-two edges, and each reads like a whole torus (four equal eigenvalues; Sec.~\ref{sec:windows}).
+
+\emph{Ours, unverified.} The state shows that the mutual information of a quantum state can follow a wiring, and it
+shows that it does so only up to a background that, read literally, erases the geometry. It is built from the wiring,
+so it calibrates the reader and tests nothing about how a geometry could arise. Whether it is redundancy-constrained
+was not checked.
+
+\section{Why whole tori cannot be read, and windows}
+\label{sec:windows}
+
+\emph{Exact.} On a torus the distance matrix is unchanged by translations, so $B$'s eigenvectors are Fourier modes,
+which come in equal pairs, a cosine and a sine. Each wrapped direction's longest mode takes one such pair. The
+$8\times8$ torus gives four equal eigenvalues, 218.5, then four at 37.5; the $4\times16$ curled torus gives 525.5,
+525.5 (the long direction), then 160, 160 (the curled one, 0.30 of the first and growing with the length of the
+torus), then 64.8, 64.8; the 4-cube gives exactly four eigenvalues of 16, the others 0 or $-4$. Even a single square,
+the curled direction's cross-section, is not Euclidean under graph distance (opposite corners at 2, not $\sqrt2$),
+and its spectrum is $2,2,0,-1$. So on whole tori the sheet, the curled torus and the 4-cube all show four large
+eigenvalues, distinguished by ratios that depend on the torus's size rather than its wiring. Ref.~\cite{CCM16}
+reads open patches only (a chain and a toric-code patch).
+
+\emph{Windows.} The reader is applied to a ball of graph radius $R$ around a center vertex, using the whole graph's
+shortest-path distances between the ball's vertices. On the flat $32\times32$ torus no path inside the ball wraps
+for $R\le8$; at $R=10$ the ball holds pairs 20 apart along one axis, more than half of 32, and some of their shortest
+paths wrap (this was not noticed when the computation was registered; Sec.~\ref{sec:results}). The curled direction
+of the tube wraps inside any ball with $R\ge2$, and so does the short direction of the converted narrow tori (six
+around) for $R\ge3$; there the wrap cannot be cut out and is part of what is read.
+
+\emph{The registered count.} Ref.~\cite{CCM16} leaves ``small'' open. Before the computation we fixed
+\[
+D_{\rm MDS}=\#\{\,i:\lambda_i\ge0.1\,\lambda_1\,\}
+\]
+and record $\varepsilon_1$ to $\varepsilon_4$ beside it. The threshold is ours.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{What was registered}
+
+The states \cite{prereg}: built (exact, no sampling) the flat $32\times32$ torus, the $4\times64$ curled torus and the
+4-cube, each read from one center (every center is equivalent); measured states saved by earlier runs, namely four
+converted narrow tori of 1,024 vertices from the slowest-cooled runs at $\lambda=1.25$ (every eighth vertex a center,
+512 windows per radius) and four warm random graphs of the published model ($\lambda=1$, $N=196$, $g=3.3$; every vertex
+a center, 784 windows). Radii $R=2,3,4,6$; $R=10$ held out, to be computed only after a written prediction from the
+smaller radii. The predictions were ours (the author gave none):
+\begin{itemize}
+\item P0, the 4-cube reads $D_{\rm MDS}=4$ for $R\ge4$, against $d=0$;
+\item P1, the flat sheet reads 2 at $R=3,4,6$;
+\item P2, the curled torus reads no more than the sheet at $R=4,6$, and its curled pair's share
+$\lambda_2/\lambda_1$ is near $6/(2R+1)^2$ within a factor of two (0.074 at $R=4$, 0.036 at $R=6$), so that at
+$R\ge4$ the curled direction is not counted;
+\item P3, the converted tori's most common count equals the flat sheet's at every $R$;
+\item P4, the random graphs read at least 4 at $R=3$ at most centers.
+\end{itemize}
+
+\begin{table}[t]
+\caption{Built states, exact. Eigenvalues of $B$ relative to the largest, the registered count and the reading rule,
+by window radius. The toy's local count is $d=2$ (sheet), 1 (curled torus), 0 (4-cube) at every vertex. For
+$R\ge4$ the 4-cube window is the whole cube.}
+\label{tab:built}
+\begin{ruledtabular}
+\begin{tabular}{lrrccccr}
+State & $R$ & $n$ & $\lambda_2/\lambda_1$ & $\lambda_3/\lambda_1$ & $\lambda_4/\lambda_1$ & $\varepsilon_2$ &
+$D_{\rm MDS}$\\
+\hline
+Sheet & 2 & 13 & 1.000 & 0.521 & 0.164 & 0.38 & 4\\
+ & 3 & 25 & 1.000 & 0.428 & 0.123 & 0.41 & 4\\
+ & 4 & 41 & 1.000 & 0.396 & 0.101 & 0.42 & 4\\
+ & 6 & 85 & 1.000 & 0.373 & 0.087 & 0.43 & 3\\
+ & 10 & 221 & 1.000 & 0.408 & 0.101 & 0.47 & 4\\
+Curled & 2 & 12 & 0.607 & 0.594 & 0.093 & 0.44 & 3\\
+ & 3 & 20 & 0.426 & 0.395 & 0.062 & 0.42 & 3\\
+ & 4 & 28 & 0.309 & 0.291 & 0.053 & 0.39 & 3\\
+ & 6 & 44 & 0.196 & 0.189 & 0.041 & 0.33 & 3\\
+ & 10 & 76 & 0.112 & 0.110 & 0.027 & 0.25 & 3\\
+4-cube & 2 & 11 & 1.000 & 1.000 & 0.252 & 0.54 & 4\\
+ & 3 & 15 & 1.000 & 1.000 & 0.702 & 0.61 & 4\\
+ & 4+ & 16 & 1.000 & 1.000 & 1.000 & 0.64 & 4\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\subsection{The smaller radii (measured)}
+
+The built states are in Table~\ref{tab:built}.
+
+\emph{P0 holds.} The 4-cube reads four at every radius; the model's count reads zero.
+
+\emph{P1 fails.} The flat sheet reads 4, 4, 4, 3 at $R=2,3,4,6$. Its third eigenvalue is 0.37 to 0.52 of the
+largest, and its fourth sits near the threshold (0.101 at $R=4$). Its $\varepsilon_2$ is 0.38 to 0.43, the same
+level as the toric-code patch that Ref.~\cite{CCM16} calls two-dimensional; the registered count, not the spectrum's
+overall spread, is what calls it three or four.
+
+\emph{P2 holds on the ranking and fails on the size.} The curled torus reads 3 against the sheet's 4 at $R=4$ and 3
+against 3 at $R=6$. Its curled pair is 0.309 and 0.196 of the largest at $R=4$ and 6, four and five times the
+predicted 0.074 and 0.036, so at these radii the curled direction is counted.
+
+\emph{P3 fails at $R=2$ only.} The converted tori read 5 at $R=2$ (508 of 512 windows) against the sheet's 4, and the
+sheet's count at $R=3,4,6$ (4, 4, 3 in at least 507 of 512). Their windows are not isotropic ($\lambda_2/\lambda_1$
+averages 0.50 at $R=2$, against 1.00 for the square sheet): the narrow torus shows.
+
+\emph{P4 holds.} The random graphs read at least 5 at 778 of 784 centers at $R=3$, and the count grows with $R$
+(5 to 16 at $R=4$; 9 to 17 at $R=6$).
+
+\subsection{The held-out radius}
+
+\emph{Prediction, written before $R=10$ was computed} \cite{prereg}. Fitting power laws in the window's width
+$2R+1$ to $R=4$ and 6 only: the curled pair's share at $R=10$ would be 0.108 (exponent 1.24), with a range of
+$\pm30\%$, 0.076 to 0.141; the sheet's third eigenvalue 0.345 (0.241 to 0.448) and fourth 0.071. Predicted counts:
+sheet 3, curled torus 3 (its 0.108 sits just above the threshold, so 1 was named as possible), 4-cube 4.
+
+\emph{Measured.} The curled pair is 0.112 and 0.110 of the largest, inside the predicted range: the size claim holds
+at the held-out radius. Extrapolating the fit (not computed), the share crosses 0.1 at windows about 22 sites wide.
+The curled torus reads 3 and the 4-cube 4, as predicted. The sheet reads 4, not the predicted 3: its third eigenvalue,
+0.408, is inside its range, and its fourth, 0.101, is above the predicted 0.071 and on the threshold. \emph{A check
+made after this reading, not registered (exact):} the same window on a $64\times64$ torus, where no path inside it
+wraps, gives 0.362 and 0.081 and reads 3, while the curled torus reads the same at $4\times128$ as at $4\times64$. So
+the sheet's miss at $R=10$ comes from paths wrapping round the $32\times32$ torus, a flaw of the registered design;
+the registered verdict stands as scored.
+
+\emph{Seen, not predicted for this radius.} The converted narrow tori read 1 at 506 of 512 centers at $R=10$
+(Table~\ref{tab:saved}): their windows wrap the short direction, as the curled torus's windows wrap its curled one,
+and at this scale the reader calls them one-dimensional. P3 therefore fails at $R=10$ as well.
+
+\begin{table}[t]
+\caption{Saved states, measured. Most common $D_{\rm MDS}$ over the centers (with its share), by radius. Converted
+tori: four 1,024-vertex products of the slowest-cooled runs at $\lambda=1.25$, 512 windows per radius; the model's
+count is $d=2$ at 509 of 512 centers. Random graphs: four warm states of the published model, $N=196$, 784 windows;
+at $R=10$ each window is the whole graph.}
+\label{tab:saved}
+\begin{ruledtabular}
+\begin{tabular}{rcc}
+$R$ & Converted tori & Random graphs (range)\\
+\hline
+2 & 5 (508/512) & 4 (439/784; 3 to 6)\\
+3 & 4 (509/512) & 6 and 7 (260 each; 4 to 9)\\
+4 & 4 (507/512) & 9 (176/784; 5 to 16)\\
+6 & 3 (507/512) & 13 (200/784; 9 to 17)\\
+10 & 1 (506/512) & 13 (392/784; 13 to 16)\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\emph{Verdict.} By the registered words, MIXED: P0 and P4 hold; P1 fails; P2 holds on the ranking, fails on the size
+at $R=4,6$, and its held-out size claim holds at $R=10$; P3 fails at $R=2$ and $R=10$.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\emph{The taxicab artifact.} \emph{Exact:} on a square lattice the graph distance between vertices separated by
+$(\Delta x,\Delta y)$ is $|\Delta x|+|\Delta y|$, so
+\[
+\delta^2=\Delta x^2+\Delta y^2+2|\Delta x||\Delta y| .
+\]
+The first two terms give the two eigenvalues of a plane; the last is not of the form that MDS can absorb into two
+coordinates, and it produces the extra eigenvalues. \emph{Measured:} the third eigenvalue stays between 0.36 and 0.43 of
+the largest from $R=3$ to 10 (0.362 at $R=10$ on the larger torus) and does not fade, and at $R=4$ and 6 negative
+eigenvalues carry about a fifth of $\sum|\lambda_i|$. So
+under a constant mutual information per link the reader does not call a square lattice two-dimensional at any
+window tried, and this says more about the distance assigned to the lattice than about the model. \emph{Exact
+arithmetic:} if instead every pair had $I/I_0=e^{-r_{pq}/\xi}$ with $r_{pq}$ the Euclidean distance between lattice
+sites, then $w=(\ell_{\rm RC}/\xi)\,r_{pq}$, which already satisfies the triangle inequality, so Eq.~(14) returns it
+unchanged and $B$ has exactly two positive eigenvalues on any patch of the plane. \emph{Ours, unverified:} a state
+with that property needs mutual information between unlinked pairs that knows the Euclidean distance, which the
+wiring alone does not supply; whether natural states on a lattice (gapped ground states, for which Ref.~\cite{CCM16}
+suggests $\Phi=-\ln$) come close enough is the question.
+
+\emph{A short curled direction depends on scale.} The curled direction's share falls as $(2R+1)^{-1.24}$ (measured,
+confirmed at the held-out radius), more slowly than the $(2R+1)^{-2}$ of P2's estimate, which treated the four-site
+loop as a fixed small circle beside a growing line. \emph{Ours, unverified:} in this reader a direction curled to
+four sites counts at windows narrower than about twenty sites and stops counting beyond, which is the Kaluza-Klein
+picture of a small direction that is invisible at large scale. The reader's dimension is then a function of scale,
+like the spectral dimension reviewed in Ref.~\cite{Carlip17}, while the model's count $d$ is a one-step count that
+calls the tube one-dimensional at every scale.
+
+\emph{Fully curled reads four.} The 4-cube, which the model's count calls zero-dimensional, embeds with four equal
+eigenvalues at every radius (exact). The two conventions part here by definition: the model counts the directions
+along which no square closes, and the reader counts the independent directions of a distance embedding. A fully
+curled object has many directions, all short.
+
+\emph{The conversion's product reads one at large windows.} The converted tori are six sites around (Sec.~\ref{sec:toy}).
+Their windows read 5, 4, 4 and 3 at $R=2$ to 6 and 1 at $R=10$, while the model's count reads 2 at nearly every
+vertex. \emph{Ours, unverified:} by the reader's scale-dependent reading these products are one-dimensional at large
+scale, with a short closed direction, which agrees with the companion paper's finding that the conversion does not
+produce two large directions \cite{paper1}.
+
+\section{Questions for the program}
+\label{sec:questions}
+
+\begin{enumerate}
+\item How should the estimator treat a lattice whose graph distance is not Euclidean, as the square lattice's is not?
+Is the intended reading the registered count, $\varepsilon_D$ against an example's value, or a change in $\Phi$ or in
+the mutual information assigned to unlinked pairs? And does a direction curled to a few sites count as a dimension at
+a given scale, or is the entropy-of-a-ball exponent of Ref.~\cite{CCM16} (its Eq.~(15)), which does not grow along
+such a direction, the estimator the program intends when small closed directions are present?
+\item Which factorization should be used for a classical wiring: one factor per vertex, one per link, or one chosen
+by a dynamics as in Ref.~\cite{CS20}? And which weighted graphs are the information graphs of some
+redundancy-constrained state, given that the one state built from a wiring here carries a background that, read
+literally, removes the geometry?
+\item Ref.~\cite{CC17} suggests that lattice models might be ``gravitized'' by emerging their geometry from a state's
+entanglement rather than from the lattice. Is a classical wiring with a curvature energy, such as CQG, a candidate
+for this, that is, is there a natural state for each wiring whose reader curvature (Ref.~\cite{CCM16}, its Eqs.~(36)
+and (40)) tracks the wiring's Ollivier curvature?
+\end{enumerate}
+
+\section{A second reading: a window with stored matter}
+\label{sec:matter}
+
+Registered as T94 with the author's prediction (a window holding stored matter reads differently from an empty one)
+and computed on 3 November 2026~\cite{prereg}. On the flat $32\times32$ torus a \emph{stored pair} is a same-side
+pair at graph distance two with two common neighbours (the diagonals of a square). A stored pair carrying mutual
+information $x_m$ has reader distance $\alpha=\ln x_m/\ln x_0$ in link units; the window is the unweighted ball of
+radius $R$ in every case, so only the distances change, and distances are shortest weighted paths. With every stored
+pair at $\alpha=1$ (a diagonal shares as much as a link) the window's metric is the Chebyshev distance and the sheet reads
+nearer to two dimensions: $D_{\rm MDS}=4,3,3$ at $R=3,4,6$ against $4,4,3$ with links only, with $\lambda_3/\lambda_1$
+falling from $0.43,0.40,0.37$ to $0.14$ at every radius. At $\alpha=0.5$ the fit worsens ($D_{\rm MDS}=4,5,5$). One
+stored unit at the center (the eight diagonals of the four squares meeting there, $\alpha=1$) adds an eigenvalue of its
+own: $D_{\rm MDS}=5$ at every radius, $\lambda_4/\lambda_1=0.25,0.23,0.16$ against $0.12,0.10,0.09$; the held-out
+$R=6$ value sits inside the range fitted on $R=3,4$ for that eigenvalue ($0.076$ in $0.066$ to $0.198$) and outside it
+for the third eigenvalue, where the amendment said in advance the fit was bad. Her prediction holds in every case at
+every radius; of ours, one clause and one prediction fail by the letter (the reading in Ref.~\cite{prereg}). The
+shares are placed by hand as her rule says, and no quantum state has been shown to carry them.
+
+\section{What this paper does not show}
+
+No quantum state of the model is computed. The mutual information used is a constant put on the links; the one
+explicit state used is built from the wiring and serves only as a calibration. The readings depend on the registered
+threshold, which is ours, and the flat sheet's count sits on it at two radii; at $R=10$ the registered sheet window
+also wrapped round its torus. The converted tori come from runs at
+$\lambda=1.25$, outside CQG; the random graphs are of the published model at $\lambda=1$; the built states are
+geometry only. The wirings carry none of the degrees of freedom the author takes as foundational (twist and curl), so
+nothing quantum in her hypothesis is tested; the quantum content of Ref.~\cite{CCM16} enters only through the state,
+and a wiring stood in for it here. Agreement or disagreement between the reader and the model's count is a relation between two
+definitions on the same graphs, not evidence about either route's account of space, and nothing here is about the
+real universe.
+
+\begin{acknowledgments}
+The analysis, code and text were drafted with Claude (Anthropic), in conversation with the author, who directed and
+checked the work. No physicist has reviewed it. The repository holds the computation, its registered predictions and
+results: \url{https://github.com/EmilySmithCreate/RecreationalPhysics}.
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+\bibitem{T17} C.~A. Trugenberger, Combinatorial quantum gravity: geometry from random bits, JHEP \textbf{09}, 045
+(2017), arXiv:1610.05934.
+\bibitem{KTB19} C.~Kelly, C.~A. Trugenberger, and F.~Biancalana, Self-assembly of geometric space from random graphs,
+Class. Quantum Grav. \textbf{36}, 125012 (2019), arXiv:1901.09870.
+\bibitem{T25} C.~A. Trugenberger, Networks as the fundamental constituents of the universe, J. Phys. Complex.
+\textbf{6}, 042001 (2025), arXiv:2512.17676.
+\bibitem{CCM16} C.~Cao, S.~M. Carroll, and S.~Michalakis, Space from Hilbert space: recovering geometry from bulk
+entanglement, Phys. Rev. D \textbf{95}, 024031 (2017), arXiv:1606.08444.
+\bibitem{CC17} C.~Cao and S.~M. Carroll, Bulk entanglement gravity without a boundary: towards finding Einstein's
+equation in Hilbert space, Phys. Rev. D \textbf{97}, 086003 (2018), arXiv:1712.02803.
+\bibitem{CS20} S.~M. Carroll and A.~Singh, Quantum mereology: factorizing Hilbert space into subsystems with
+quasi-classical dynamics, Phys. Rev. A \textbf{103}, 022213 (2021), arXiv:2005.12938.
+\bibitem{paper1} E.~Smith, The curled torus burps: activated escape and conversion in a graph model of emergent
+geometry, technical manuscript (2026), \texttt{docs/papers/curled\_torus/} in the repository below.
+\bibitem{prereg} E.~Smith, \texttt{PREREGISTRATION.md}, sections T91 (with Amendment 1) and T94 (with Amendment 1),
+and \texttt{ASSUMPTIONS.md}, entries O174 and O178, in the repository below (2 and 3 November 2026); computations
+\texttt{scripts/carroll\_reader.py} and \texttt{scripts/carroll\_matter\_window.py}, results
+\texttt{results/t91\_carroll\_reader\_*.csv} and \texttt{results/t94\_matter\_window\_*.csv}.
+\bibitem{DT17} M.~C. Diamantini and C.~A. Trugenberger, Topological network entanglement as order parameter for the
+emergence of geometry, New J. Phys. (2017), doi:10.1088/1367-2630/aa8f08, arXiv:1710.00221.
+\bibitem{Carlip17} S.~Carlip, Dimension and dimensional reduction in quantum gravity, Class. Quantum Grav.
+\textbf{34}, 193001 (2017), arXiv:1705.05417.
+\end{thebibliography}
+
+\end{document}

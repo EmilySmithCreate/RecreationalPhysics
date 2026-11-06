@@ -1,0 +1,20 @@
+{
+  "script": "scripts/carroll_matter_window.py",
+  "stage": "matter",
+  "radii": [
+    3,
+    4,
+    6
+  ],
+  "alphas": [
+    1.0,
+    0.5
+  ],
+  "state": "flat 32x32 torus",
+  "threshold": 0.1,
+  "package": "0.1.0",
+  "python": "3.12.10",
+  "numpy": "2.0.0",
+  "networkx": "3.6.1",
+  "preregistration": "PREREGISTRATION.md section T98"
+}

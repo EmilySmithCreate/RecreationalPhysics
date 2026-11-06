@@ -1,0 +1,4 @@
+across copies, by graph distance: {0: [np.float64(0.0003578)], 1: [np.float64(0.0117233)], 2: [np.float64(0.0003578)], 3: [np.float64(0.0003578)], 4: [np.float64(0.0003578)], 5: [np.float64(0.0003578)], 6: [np.float64(0.0003578)], 7: [np.float64(0.0003578)], 8: [np.float64(0.0003578)]}
+within a copy, by (graph distance, common neighbors): {(1, 0): [np.float64(0.0003578)], (2, 1): [np.float64(0.0017818)], (2, 2): [np.float64(0.0062554)], (3, 0): [np.float64(0.0003578)], (4, 0): [np.float64(0.0003578)], (5, 0): [np.float64(0.0003578)], (6, 0): [np.float64(0.0003578)], (7, 0): [np.float64(0.0003578)], (8, 0): [np.float64(0.0003578)]}
+background kept | pieces [128] | largest distance 8.629 | top eigenvalues / largest [1.    0.762 0.762 0.762 0.762 0.762]
+background removed | pieces [64, 64] | largest distance 23.07 | top eigenvalues / largest [1.    1.    1.    1.    0.37  0.195]

@@ -185,7 +185,9 @@ Write `PREREGISTRATION.md`: λ ∈ {0, 0.25, 0.5, 0.75, 1}; sizes; observables (
 
 Questions: at which λ does the order change? Is there any λ with a first-order transition **and** a connected space (VISION S2 and S4 together)? Then fixed-total (sealed) runs as in VISION step 3.
 
-## T9. Unexplained drift  ☐
+## T9. Unexplained drift  ☑ (2026-11-02: LOGARITHMIC DRIFT at the held-out N = 1156 by the registered two-leg rule on a replica whose heating leg was continued from the cooled state; PREREGISTRATION T89, stage 3; O172)
+
+**Status, 2026-11-01.** Being completed as PREREGISTRATION T89: the seven λ = 1 sizes already on the record (36 to 676) give 1/g(φ*) = a + b ln N with 16 b = 1.10 to 1.21; [Kelly22] Eq. (4.65) derives β(N) = β̃ log N from the N log N entropy of regular graphs and says it contradicts [KTB19]'s N-independence; N = 1156 is held out, predicted before it ran (g(0.5) = 3.43 ± 0.13, g(0.65) = 2.79 ± 0.11), running on the laptop. The owner's prediction is owed before it is read.
 
 **Status, 2026-09-22.** Not attempted since. Kelly's thesis abstract ("the critical temperature appears to be asymptotically nonfinite") is the one published statement that bears on it; the thesis PDF is now in `docs/reading/` locally (PDFs are gitignored) and has not been read.
 
@@ -602,6 +604,7 @@ there (the warm-bath pull) gains a prerequisite. Each item below is pre-register
 6. **Reading, before any citation:** Pathria (1972), Popławski (the universe inside a black hole), and the Fife paper
    the third review cites (its reference to be obtained from the owner), as the benchmark lineage for piece 11; read
    status recorded in `REFERENCES.bib` (rule 1). Benchmarks, never evidence (rule 13).
+   *Popławski's lineage read 2026-11-01 by an assistant agent and verified by a second (`docs/reading/notes/2026-11-01_universe_inside_black_hole_lineage.md`; 12 entries in REFERENCES.bib with read status): Popławski 2010 to 2023 read in full or in part; Frolov, Markov and Mukhanov (1989 PLB; 1990 PRD) and Pathria (1972, paywalled) still unread beyond abstracts; the Fife reference still owed from the owner. Three sibling readings the same day: gravitational waves from a first-order transition, asymmetric dark matter, units for the toy (`docs/reading/notes/2026-11-01_*.md`).*
 7. **A red-team pass at each milestone** (rule 12), recorded as an O entry; the first is O103 (i).
 8. **Low priority: an independent reimplementation** of the four-link energy and one verdict (T7 at λ = 1.25) by a
    second person or a second agent working from paper 1 alone.
@@ -1092,7 +1095,7 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    ledger reading took) and corrects in place with a dated marker.
 7. **From O163 (27 October, 14:45 UTC):** (a) the four-switch count at six links, redone with the corrected stage-2 bound
    (`sandbox/hard_rule_quads_look.py --restricted`, and `--full` for the exhaustive word): priced by the corrected
-   `--estimate` (running; `--sum sandbox/out/hard_rule_quads/estimate_corrected`), both hers to buy; the classifier
+   `--estimate` (read 27 October 19:06 UTC: about 21 hours restricted, 2 days exhaustive on the laptop, O163), both hers to buy and off her path since the soft rule; the classifier
    reads the rows as before. (b) `contraction.contract_layers` at x0 = L - 1 removes the old layers L - 3 and L - 2
    while `pool_mask` charges L - 2, L - 1, 0 and 1 (O163 (f); a registered kernel T71's layer arm ran under): a
    regression test with marker stores, then the owner's decision whether to fix it (rotate by -1) and rerun the layer
@@ -1101,6 +1104,12 @@ handoff kept as received at `docs/geometric_particle_model_handoff_2026-10-24.md
    Roth and Cointet 2011; Costeniuc, Ellis, Touchette and Turkington 2006; Bower section 5.8; Hirth and Lothe 1982;
    Gerstner, Kistler, Naud and Paninski 2014. Crossref before `REFERENCES.bib`. (e) The fourth report's F40 (the
    Coleman and causal-set cautions) still to be put into O158 or Update 126 with a marker.
+8. **The soft rule (VISION Update 133, the owner's "proceed w soften", 27 October 16:42 UTC):** (a) the term
+   μ (S − 3N)² in the six-link kernel, with rule-6 tests (networkx brute force, incremental exactness, constraint
+   preservation, same seed; μ = 0 draw for draw with the unpenalized chain). (b) Her answers A1 to A4 in
+   `docs/design/owner_questions_2026-10-24.md` (μ's scaling, what the shell's anticurl costs, the shell in the toy, her
+   prediction). (c) Then program item 10 of `docs/design/next_experiments_2026-10-26.md` pre-registered and run. The
+   four-switch count (item 7 (a)) is no longer on her path; its corrected estimate finishes for the record only.
 
 ## 26 October: the held-out stages of T71 and T74  ◑
 
@@ -1125,3 +1134,52 @@ or owed: the four-switch count at six links (3 (a), her agreement with Fable's h
 two-stories brief; the `layer_feed` guard fix (unblocked by O161); the gate null and the L = 24 size claim of item 4
 (wait on her prediction); the programme page's piece 3 sentence on the seam move, to be softened (a wrap effect), and
 piece 5 after T74, both at the next republish.
+
+## 30 October: the Koide member, the readings, and the first runs under the wave rule  ◑
+
+**Added 2026-10-30** (VISION addenda of this day; ASSUMPTIONS O169, O170; `docs/design/koide_gaps_2026-10-30.md`;
+`docs/reading/notes/2026-10-30_*.md`). Done this day: her decision that the Koide form is the first member of the mass
+system and its nine gaps; G1 adopted; the readings (Koide's originals, Brannen's neutrinos and hadrons, the quark
+triplets) with verdicts for G2, G5, G6, G8; G4 killed three ways; her decision "waves in the toy" (the amplitude rule
+adopted); T86 (LEAKS for every object) and T87 (SIGNED, the bipartition's sign) read at their held-out size.
+
+Owed by the owner: her confirmation or replacement of the inferred predictions of T86 (CARRIES) and T87 (SIGNED);
+what root-mass is (G8; the options stand together, the fork withdrawn); whether the sides' sign is her twist (O170).
+Next, in order, each pre-registered before it runs: (1) a wave carrier needs a new ingredient (links of unequal weight
+or a point term; O169's rule 11 answer), which is a decision under S1 before anything is built; (2) G9, reading the
+runs k from a wiring, which the angle rule needs before it predicts anything; (3) the strict-lane interference test of
+the brief's section 4 on whatever carrier (1) gives.
+
+## 3 November: the Carroll reader paper aligned with the hypothesis; two cheap exact tests run; three computational relatives read  ◑
+
+**Added 2026-11-03, 15:52 UTC by the clock (Fable).** Her words of the day are in `sandbox/NOTEBOOK.md` (14:15, 15:10,
+15:34 UTC); her positions are VISION Update 155. Done: both editions of the Carroll reader paper brought into line with
+her picture (the opened tubes as the toy's end state; the λ > 1 region as the inner shell; waves on black-to-white
+connections, matter stored black-to-black; the quantum part of Carroll's method entering only through the state) and
+rebuilt; T94 pre-registered with her prediction and run to its held-out radius (O178; READS DIFFERENTLY, her prediction
+holds); T95 pre-registered and run (O179; NEITHER, paths and renamings anti-correlated); Gorard, Lloyd and 't Hooft read
+against the programme's steps (`docs/reading/notes/2026-11-03_computational_relatives.md`; [Lloyd05] added, [tHooft14]
+read in part); the programme page, its draft and the series plan (paper 19 proposed) updated. Nothing committed by
+Fable; the owner commits with `-o <paths>`.
+
+Owed by the owner: ~~which count "all the options" is~~ (decided 3 Nov: copies, Update 155) and amplitudes or probabilities on them;
+whether Update 155's wording stands in the claim; whether a design brief for a state built from the twist-curl rules is
+written (the computation Carroll's reader would read); the reader paper's number. Next, in order, each pre-registered
+before it runs: (1) that design brief, then the reader on the state it defines; (2) the taxicab fix (a share falling
+with straight-line distance), the reader paper's first question, which can also be tried; (3) the questions to Carroll
+once a built state is in hand.
+
+## 4 November: gravity's carrier decided; her seam picture set against the record  ◑
+
+**Added 2026-11-04, 00:17 UTC by the clock (Fable).** Her words are in `sandbox/NOTEBOOK.md` at this time; VISION Update
+157. Decided: gravity's carrier is the edge lengths (Update 40's quantity on the points withdrawn as the carrier);
+confirmed, the options are copies. Done on 3 November, after the 3 November section above: T97, T98, T99, T100 and
+T101 pre-registered and read (O180 to O184); the per-point move counter built into the four-link chain
+(`cqg.run_chain(..., moves=)`, bit for bit unchanged otherwise). Two sandbox looks tonight, expectations first and met:
+the toy's Klein relative is paired like the torus and carries exactly one double column's energy, 32(λ − 1), at every
+length; the cube's segment ratios to the face diagonal are tabulated and none is 5.36.
+
+Owed by the owner: the dynamics of the two kinds as moves (Update 156's list), with a twist state on the squares in
+halves for the Klein store; which proportion the diagonal ratios set; option B's form or none; her yes on (a) the
+Klein relative as a store (a dip? its wall? what it releases?) and (b) the λ = 1 clock cell with a planted knot. Next,
+each pre-registered before it runs, in that order once she answers.

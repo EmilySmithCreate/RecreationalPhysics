@@ -264,7 +264,7 @@ def _surplus_on(adj, edges, n):
 
 
 @njit(cache=True)
-def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glauber=False, conn=None):
+def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glauber=False, conn=None, moves=None):
     """Markov chain at coupling g = 1 / inv_g. Modifies adj in place.
 
     side_u  : array of the vertices in one half of the bipartition.
@@ -275,6 +275,10 @@ def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glaub
               measurement sweep i, the four numbers of connectivity.connectivity:
               pieces, size of the largest, vertices in baby universes, 4-cubes.
               Looking uses no random numbers, so the chain is the same either way.
+    moves   : optional (N,) integer array (T101, option A of VISION Update 156's clock addendum). If given,
+              every accepted switch adds one to each of its four points, over every sweep of the call,
+              equilibration included. A point's count is its own clock beside the sweep count. Counting
+              uses no random numbers, so the chain is the same either way.
     seed    : seeds the random stream. **seed < 0 carries on the stream from the
               previous call instead.** Anything that calls this repeatedly in short
               blocks must use that, because re-seeding often makes the chain worse:
@@ -344,6 +348,11 @@ def run_chain(adj, side_u, inv_g, n_equil, n_meas, seed, lam=1.0, cap=CAP, glaub
                 s += d_s
                 x += d_x
                 accepted += 1
+                if moves is not None:
+                    moves[u1] += 1
+                    moves[v1] += 1
+                    moves[u2] += 1
+                    moves[v2] += 1
             else:
                 _switch(adj, u1, v2, u2, v1)
         if sweep >= n_equil:

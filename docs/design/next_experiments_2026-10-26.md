@@ -289,6 +289,9 @@ do not, read anyway and marked).
 
 ### Item 10. The soft form μ(S − 3N)² from both sides (measured; Q1 option (a); needs her dated decision; held behind it in the order)
 
+*[27 October, 16:42 UTC: her dated decision is given, "proceed w soften" (VISION Update 133). Still owed: μ's
+scaling, her prediction, her clock word and the starting X (questions A1 to A4).]*
+
 - **Kills:** "the soft rule lets clean space open without damage"; "hard and soft forms agree" at the toy's sizes.
 - **Runs, cell count written out:** μ ∈ {0.25, 1, 4, 16} × **one scaling fixed in the registration** (μ held fixed, or
   μ₀/N; the reading of Q1 says the scan must fix one in advance, and running both and choosing afterward is the rule-13

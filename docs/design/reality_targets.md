@@ -122,3 +122,15 @@ record; the current statement is Update 41 and the constraints below.
     derive it independently if possible; propagate the input uncertainty; check whether the inputs already contain the
     target through standard cosmological assumptions (the fit to 5.36 of O74 did, O89); test neighbouring parameter
     values; count how many other arbitrary combinations would match as well.
+
+## Constraint added 3 November 2026 (the owner asked whether the LHCb announcement of that day can help)
+
+13. **Rare weak decays, once the particle rules give any rate.** On 3 November 2026 the LHCb collaboration announced
+    first evidence (3.2 sigma, not yet peer-reviewed, press release only, to verify against the paper) for the decay
+    B⁰ → μ⁺μ⁻ at about one in ten billion beauty mesons, and improved measurements of B⁰ₛ → μ⁺μ⁻, both agreeing with the
+    Standard Model. For this programme it is a target in rule 13's sense and nothing more: the owner's particle rules
+    (paper 18) have no flavours, no weak interaction and no decay rates yet, so they can neither match nor miss it. Once
+    they give a rate for anything, this is among the numbers they must not contradict, and any new particle they imply
+    at the zeptometre scale is bounded by the Standard Model agreement reported. The one-in-ten-billion rarity is a
+    decay fraction and the billion-to-one matter surplus is an abundance; they are different quantities and are not to
+    be read together.
