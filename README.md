@@ -17,6 +17,7 @@ Nothing here is a claim about the real universe. The plain-language version of t
 | [`VISION.md`](VISION.md) | the six claims, the success conditions (S1–S5, S2′), how this differs from the published programme, and every decision with its date |
 | [`PREREGISTRATION.md`](PREREGISTRATION.md) | what each test would measure and what each outcome would mean, committed before its runs, with dated amendments |
 | [`ASSUMPTIONS.md`](ASSUMPTIONS.md) | every assumption with a source or marked "Ours"; the observation log and dated corrections with the numbers |
+| [`REPRODUCTION.md`](REPRODUCTION.md) | which published results were matched and which were not, with the exact files and one command |
 | [`TASKS.md`](TASKS.md) | what is next, with acceptance tests and the two reproduction gates |
 | [`docs/design/known_physics_plan.md`](docs/design/known_physics_plan.md) | the ladder towards claim 2: dimension, a speed limit, defect interaction |
 | [`REFERENCES.bib`](REFERENCES.bib) | sources, each marked read-in-full / abstract-only / unread |
