@@ -1,5 +1,13 @@
 # Project memory for Claude Code
 
+**This repository is the archive (owner's decision, 16 November 2026).** Its one job is to hold the full dated
+record and the evidence behind paper 1 (`REPRODUCTION.md`, `results/`, `docs/papers/curled_torus/`). The
+hypothesis as it stands, the current definitions and the list of withdrawn ideas live in the working copy,
+`github.com/EmilySmithCreate/PhaseChangingReality` (locally `../PhaseChangingReality`): read its `HYPOTHESIS.md`
+and `WITHDRAWN.md` before saying what the owner currently holds, and never take a claim from `VISION.md` here as
+current without checking it there. New tests, new ideas and new toy code go in the working copy. Work here is
+limited to paper 1, its reproduction evidence, corrections to the record, and outreach.
+
 **Current interpretation, 9 October 2026:** read [the curled-torus measurement scope](docs/papers/measurement_scope.md)
 before reusing the historical claims below. Square counts do not certify geometry or a unique
 front; `bath_T` is mean store energy; the seed scan measures escape; the persistence edge is
