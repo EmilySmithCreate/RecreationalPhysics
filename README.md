@@ -1,5 +1,11 @@
 # Does space form in a sharp change?
 
+> **This repository is the archive and the evidence for paper 1.** It keeps every dated decision, every
+> registered test with its reading, every result file and every idea that did not survive, including many that
+> were later withdrawn. The hypothesis as it stands today, and the list of what was withdrawn, live in the
+> working copy: [PhaseChangingReality](https://github.com/EmilySmithCreate/PhaseChangingReality). For what was
+> matched against the published work, see [`REPRODUCTION.md`](REPRODUCTION.md).
+
 Monte Carlo experiments on a published model of emergent geometry, testing one link in a personal
 hypothesis: that our spacetime is a settled arrangement of something else, and that the change which
 produced it was sharp, with a jump in energy: a bounded lump released. In the model it is the decay of a
