@@ -23,8 +23,12 @@ Nothing here is a claim about the real universe. The plain-language version of t
 | [`REFERENCES.bib`](REFERENCES.bib) | sources, each marked read-in-full / abstract-only / unread |
 | [`CLAUDE.md`](CLAUDE.md) | working rules for AI-assisted sessions |
 
-The current [reader manuscript](docs/papers/curled_torus/paper.pdf) and
-[supplement](docs/papers/curled_torus/supplement.md) are unpublished. The
+The current [reader manuscript](docs/papers/curled_torus/paper.pdf) and its
+[plain-language edition](docs/papers/curled_torus/paper_plain_language.pdf) are deposited on Zenodo as a preprint,
+with a copy of [`REPRODUCTION.md`](REPRODUCTION.md): [doi:10.5281/zenodo.24310341](https://doi.org/10.5281/zenodo.24310341)
+(17 November 2026). A preprint is not peer reviewed, and no physicist has yet reviewed the results. The
+[supplement](docs/papers/curled_torus/supplement.md) is in this repository only. To cite the work, see
+[`CITATION.cff`](CITATION.cff). The
 [measurement scope](docs/papers/measurement_scope.md) explains the limits shared by all summaries.
 
 ## The model

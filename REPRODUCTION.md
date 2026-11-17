@@ -4,6 +4,9 @@ One page, so that nobody has to search the repository. Every path is relative to
 "The published model" is combinatorial quantum gravity as simulated in the papers below; the code here is an
 independent implementation, written with an AI assistant (see the README's disclosure).
 
+A copy of this page as it stood on 17 November 2026 is deposited with the paper on Zenodo
+(https://doi.org/10.5281/zenodo.24310341). This page is the current one.
+
 Sources: [KTB19] Kelly, Trugenberger and Biancalana (2019); [T22] Trugenberger (2022); [T25] Trugenberger (2025).
 Full references are in `REFERENCES.bib`.
 

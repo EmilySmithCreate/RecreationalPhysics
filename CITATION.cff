@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the preprint below."
+title: "RecreationalPhysics: code, configurations and results for the curled-torus paper"
+type: software
+authors:
+  - family-names: Smith
+    given-names: Emily
+    orcid: "https://orcid.org/0009-0005-2230-7817"
+repository-code: "https://github.com/EmilySmithCreate/RecreationalPhysics"
+license: MIT
+preferred-citation:
+  type: article
+  title: "The curled torus burps: activated escape and conversion in a graph model of emergent geometry"
+  authors:
+    - family-names: Smith
+      given-names: Emily
+      orcid: "https://orcid.org/0009-0005-2230-7817"
+  year: 2026
+  month: 11
+  status: preprint
+  publisher:
+    name: Zenodo
+  doi: "10.5281/zenodo.24310341"
+  url: "https://doi.org/10.5281/zenodo.24310341"
